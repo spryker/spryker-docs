@@ -40,7 +40,7 @@ Code buckets provide an easy way to execute different business logic in runtime 
 
 1. Define the desired stores in `config/Shared/stores.php`. In the following example, DE and AT stores are defined:
 
-<details><summary markdown='span'>config/Shared/stores.php</summary>
+<details><summary>config/Shared/stores.php</summary>
 
 ```php
 <?php

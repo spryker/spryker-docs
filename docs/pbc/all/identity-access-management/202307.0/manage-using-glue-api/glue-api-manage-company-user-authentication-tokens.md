@@ -69,7 +69,7 @@ Request sample: refresh a company user authentication token
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: refresh a company user authentication token</summary>
+<summary>Response sample: refresh a company user authentication token</summary>
 
 ```json
 {

@@ -72,7 +72,7 @@ Request sample: authenticate as a company user
 
 
 <details>
-<summary markdown='span'>Response sample: authenticate as a company user</summary>
+<summary>Response sample: authenticate as a company user</summary>
 
 ```json
 {

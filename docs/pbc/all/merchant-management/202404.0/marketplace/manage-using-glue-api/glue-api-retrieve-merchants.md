@@ -47,7 +47,7 @@ This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.ver
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve all merchants</summary>
+<details><summary>Response sample: retrieve all merchants</summary>
 
 ```json
 {
@@ -204,7 +204,7 @@ This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.ver
 
 
 
-<details><summary markdown='span'>Response sample: retrieve merchants by category keys</summary>
+<details><summary>Response sample: retrieve merchants by category keys</summary>
 
 ```json
 {
@@ -357,7 +357,7 @@ This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.ver
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve the merchant</summary>
+<details><summary>Response sample: retrieve the merchant</summary>
 
 ```json
 {
@@ -404,7 +404,7 @@ This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.ver
 </details>
 
 
-<details><summary markdown='span'>Response sample: retrieve a merchant with merchant addresses and opening hours included</summary>
+<details><summary>Response sample: retrieve a merchant with merchant addresses and opening hours included</summary>
 
 ```json
 {

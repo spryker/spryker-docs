@@ -67,7 +67,7 @@ Request sample: retrieve customers
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve customers</summary>
+<details><summary>Response sample: retrieve customers</summary>
 
 ```json
 {
@@ -126,7 +126,7 @@ Request sample: Retrieve a customer
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve a customer</summary>
+<details><summary>Response sample: retrieve a customer</summary>
 
 ```json
 {
@@ -199,7 +199,7 @@ Request sample: edit a customer
 
 ### Response
 
-<details><summary markdown='span'>Response sample: edit a customer</summary>
+<details><summary>Response sample: edit a customer</summary>
 
 ```json
 {
@@ -284,7 +284,7 @@ Request sample: retrieve subscriptions to availability notifications
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve subscriptions to availability notifications</summary>
+<details><summary>Response sample: retrieve subscriptions to availability notifications</summary>
 
 ```json
 {

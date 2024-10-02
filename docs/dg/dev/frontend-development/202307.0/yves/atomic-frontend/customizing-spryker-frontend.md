@@ -48,7 +48,7 @@ After integrating the Spryker Shop application into your project, all UI compone
 
 To extend an existing component template, you need to copy the whole Twig you are extending to the project level, and then add your own code to the project-level file. For instance, if you need to add a new component to the main layout of the whole Shop Suite, copy the layout to your project level, and then make changes to the project-level file. To do this, copy file `page-layout-main.twig` to your project level to `src/Pyz/Yves/ShopUi/Theme/default/templates/page-layout-main/page-layout-main.twig`. Then, make changes as follows:
 
-<details><summary markdown='span'>page-layout-main.twig</summary>
+<details><summary>page-layout-main.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends template('page-blank') {% raw %}%}{% endraw %}
@@ -150,7 +150,7 @@ Let's see how to extend the Twig template of a molecule. By default, the front p
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-<details><summary markdown='span'>Resulting Twig file</summary>
+<details><summary>Resulting Twig file</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends molecule('card') {% raw %}%}{% endraw %}

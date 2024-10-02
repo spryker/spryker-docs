@@ -440,7 +440,7 @@ Make sure the following modules have been installed:
 
 Append glossary according to your configuration:
 
-<details open><summary markdown='span'>src/data/import/glossary.csv</summary>
+<details><summary>src/data/import/glossary.csv</summary>
 
 ```yaml
 quote_request_widget.request_for_quote,Request for Quote,en_US

@@ -144,7 +144,7 @@ Example: In the project, the cart needs approval when the cart total exceeds €
 Company users can perform the following actions using the CommentsQuotation process & RFQ feature on the Storefront:
 
 <details>
-<summary markdown='span'>Create an RFQ</summary>
+<summary>Create an RFQ</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -155,7 +155,7 @@ Company users can perform the following actions using the CommentsQuotation proc
 </details>
 
 <details>
-<summary markdown='span'>Add an address and shipping method to the RFQ</summary>
+<summary>Add an address and shipping method to the RFQ</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -167,7 +167,7 @@ Company users can perform the following actions using the CommentsQuotation proc
 </details>
 
 <details>
-<summary markdown='span'>Edit RFQ items</summary>
+<summary>Edit RFQ items</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -179,7 +179,7 @@ Company users can perform the following actions using the CommentsQuotation proc
 
 </details>
 
-<details><summary markdown='span'>Cancel an RFQ or send an RFQ to an agent </summary>
+<details><summary>Cancel an RFQ or send an RFQ to an agent </summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -190,7 +190,7 @@ Company users can perform the following actions using the CommentsQuotation proc
 
 </details>
 
-<details><summary markdown='span'>Convert an RFQ to the cart</summary>
+<details><summary>Convert an RFQ to the cart</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -203,7 +203,7 @@ Company users can perform the following actions using the CommentsQuotation proc
 
 Agents can perform the same actions (on company users' behalf) as company users. However, besides the actions mentioned above, agents can also do the following:
 
-<details><summary markdown='span'>Revise an RFQ and send it back to the buyer</summary>
+<details><summary>Revise an RFQ and send it back to the buyer</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>

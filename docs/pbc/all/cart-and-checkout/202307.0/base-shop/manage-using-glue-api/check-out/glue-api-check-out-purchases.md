@@ -62,7 +62,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 
 <details>
-<summary markdown='span'>Request sample: check out with one shipment</summary>
+<summary>Request sample: check out with one shipment</summary>
 
 `POST https://glue.mysprykershop.com/checkout`
 
@@ -127,7 +127,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 </details>
 
 <details>
-<summary markdown='span'>Request sample: check out with a split shipment</summary>
+<summary>Request sample: check out with a split shipment</summary>
 
 `POST https://glue.mysprykershop.com/checkout?include=orders`
 
@@ -214,7 +214,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 
 <details>
-<summary markdown='span'>Request sample: check out with one shipment, order information, and shipment information</summary>
+<summary>Request sample: check out with one shipment, order information, and shipment information</summary>
 
 `POST https://glue.mysprykershop.com/checkout?include=orders,order-shipments`
 
@@ -282,7 +282,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 
 <details>
-<summary markdown='span'>Request sample: check out with a split shipment and addresses passed as IDs</summary>
+<summary>Request sample: check out with a split shipment and addresses passed as IDs</summary>
 
 `POST https://glue.mysprykershop.com/checkout`
 
@@ -344,7 +344,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 
 <details>
-<summary markdown='span'>Response sample: check out with one shipment</summary>
+<summary>Response sample: check out with one shipment</summary>
 
 ```json
 {
@@ -365,7 +365,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 </details>
 
 <details>
-<summary markdown='span'>Response sample: check out with a split shipment</summary>
+<summary>Response sample: check out with a split shipment</summary>
 
 ```json
 {
@@ -386,7 +386,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 </details>
 
 <details>
-<summary markdown='span'>Response sample: check out with a split shipment, order information, and shipment information</summary>
+<summary>Response sample: check out with a split shipment, order information, and shipment information</summary>
 
 ```json
 {
@@ -603,7 +603,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 </details>
 
 <details>
-<summary markdown='span'>Response sample: check out with configurable bundles</summary>
+<summary>Response sample: check out with configurable bundles</summary>
 
 ```json
 {

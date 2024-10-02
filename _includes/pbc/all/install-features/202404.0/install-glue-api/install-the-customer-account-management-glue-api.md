@@ -419,7 +419,7 @@ For information on how to protect resources, see [Security and authentication](/
 | ScopeCacheCollectorConsole                             | Creates a cache file for collecting all existing scopes.                                                                             |                                                | Spryker\Zed\Oauth\Communication\Console                            |
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -531,7 +531,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php

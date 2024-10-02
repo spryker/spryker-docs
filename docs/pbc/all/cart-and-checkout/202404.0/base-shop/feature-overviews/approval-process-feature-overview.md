@@ -171,7 +171,7 @@ When the `isLocked` parameter is set to true, then:
 Company users can perform the following actions using the Approval Process feature on the Storefront:
 
 <details>
-<summary markdown='span'>Create the Approver role and configure the Approve up to grand total permission</summary>
+<summary>Create the Approver role and configure the Approve up to grand total permission</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -185,7 +185,7 @@ Company users can perform the following actions using the Approval Process featu
 </details>
 
 <details>
-<summary markdown='span'>Create the Buyer with Limits role and configure the Buy up to grand total permission</summary>
+<summary>Create the Buyer with Limits role and configure the Buy up to grand total permission</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -198,7 +198,7 @@ Company users can perform the following actions using the Approval Process featu
 </details>
 
 <details>
-<summary markdown='span'>Submit a request for approval</summary>
+<summary>Submit a request for approval</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -211,7 +211,7 @@ Company users can perform the following actions using the Approval Process featu
 </details>
 
 <details>
-<summary markdown='span'>Approve the request for approval</summary>
+<summary>Approve the request for approval</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>

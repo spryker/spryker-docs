@@ -27,7 +27,7 @@ Request sample: `POST http://glue-backend.mysprykershop.com/warehouse-tokens`
 
 ### Response
 
-<details><summary markdown='span'>Response sample: authenticate as a warehouse user</summary>
+<details><summary>Response sample: authenticate as a warehouse user</summary>
 
 ```json
 [

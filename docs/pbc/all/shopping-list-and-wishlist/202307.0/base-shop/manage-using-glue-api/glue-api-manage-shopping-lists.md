@@ -65,7 +65,7 @@ Request sample: create a shopping list
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: create a shopping list</summary>
+<summary>Response sample: create a shopping list</summary>
 
 ```json
 {
@@ -128,7 +128,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: no shopping lists are retrieved</summary>
+<summary>Response sample: no shopping lists are retrieved</summary>
 
 ```json
   {
@@ -142,7 +142,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 
 
 <details>
-<summary markdown='span'>Response sample: Retrieve own and shared shopping lists</summary>
+<summary>Response sample: Retrieve own and shared shopping lists</summary>
 
 ```json
 {
@@ -198,7 +198,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve shopping lists with the details on its items and concrete products</summary>
+<summary>Response sample: retrieve shopping lists with the details on its items and concrete products</summary>
 
 ```json
 {
@@ -381,7 +381,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve a shopping list</summary>
+<summary>Response sample: retrieve a shopping list</summary>
 
 ```json
 {
@@ -405,7 +405,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>   
 
 <details>
-<summary markdown='span'>Response sample: retrieve a shopping list with the details on the shopping list items</summary>
+<summary>Response sample: retrieve a shopping list with the details on the shopping list items</summary>
 
 ```json
 {
@@ -458,7 +458,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a shopping list with the details on the shopping list items and concrete products</summary>
+<summary>Response sample: retrieve a shopping list with the details on the shopping list items and concrete products</summary>
 
 ```json
 {
@@ -654,7 +654,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 
 ### Response
 <details>
-<summary markdown='span'>Response sample: edit a shopping list</summary>
+<summary>Response sample: edit a shopping list</summary>
 
 ```json
 {
@@ -677,7 +677,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>
 
 <details>
-<summary markdown='span'>Response sample: edit a shopping list with the details on its items and concrete products</summary>
+<summary>Response sample: edit a shopping list with the details on its items and concrete products</summary>
 
 ```json
 "data": {

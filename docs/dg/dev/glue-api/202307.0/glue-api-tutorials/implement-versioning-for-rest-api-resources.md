@@ -50,7 +50,7 @@ For more information on route plugins, see the [Resource routing](/docs/dg/dev/g
 
 Consider the following implementation of a route plugin:
 
-<details><summary markdown='span'>CustomerRestorePasswordResourceRoutePlugin.php</summary>
+<details><summary>CustomerRestorePasswordResourceRoutePlugin.php</summary>
 
 ```php
 <?php

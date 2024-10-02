@@ -41,7 +41,7 @@ Request sample: retrieve merchant opening hours
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve merchant opening hours</summary>
+<details><summary>Response sample: retrieve merchant opening hours</summary>
 
 ```json
 {

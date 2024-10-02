@@ -72,7 +72,7 @@ Besides, this new `QueryInterface ` instance has to implement `Spryker\Client\Se
 
 
 <details>
-<summary markdown='span'>Query</summary>
+<summary>Query</summary>
 
 ```php
 <?php
@@ -344,7 +344,7 @@ Keep in mind that for existing indexes, changing the analyzers is not possible, 
 {% endinfo_block %}
 
 <details>
-<summary markdown='span'>src/Pyz/Shared/Search/Schema/page.json</summary>
+<summary>src/Pyz/Shared/Search/Schema/page.json</summary>
 
 ```json
 {
@@ -401,7 +401,7 @@ To create one, extend `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatte
 It's also possible to not provide any result formatters; in this case, the raw response is returned at the end.
 
 <details>
-<summary markdown='span'>Pyz\Client\Catalog\Plugin\ResultFormatter</summary>
+<summary>Pyz\Client\Catalog\Plugin\ResultFormatter</summary>
 
 ```php
 <?php

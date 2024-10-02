@@ -53,7 +53,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: no carts</summary>
+<summary>Response sample: no carts</summary>
 
 ```json
 {
@@ -67,7 +67,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary>Response sample with cart rules</summary>
 
 ```json
 {
@@ -201,7 +201,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 <details>
-<summary markdown='span'>Response sample with vouchers</summary>
+<summary>Response sample with vouchers</summary>
 
 ```json
 {
@@ -273,7 +273,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 <details>
-<summary markdown='span'>Response sample with a promotional item</summary>
+<summary>Response sample with a promotional item</summary>
 
 ```json
 {
@@ -390,7 +390,7 @@ To retrieve a particular cart, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary>Response sample with cart rules</summary>
 
 ```json
 {
@@ -459,7 +459,7 @@ To retrieve a particular cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with a promotional item</summary>
+<summary>Response sample with a promotional item</summary>
 
 ```json
 {
@@ -520,7 +520,7 @@ To retrieve a particular cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with vouchers</summary>
+<summary>Response sample with vouchers</summary>
 
 ```json
 {

@@ -65,7 +65,7 @@ Set up plugins to load additional relations in the shopping list items resource:
 | ProductOffersByProductOfferReferenceResourceRelationshipPlugin | Adds `product offers` resources as relationship by the product offer reference.               |   | Spryker\Glue\ProductOffersRestApi\Plugin\GlueApplication |
 | ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin | Adds `product offer prices` resources as relationship the by the product offer reference.         |   | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
 
-<details><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details><summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -153,7 +153,7 @@ Response sample:
 
 2. Make sure that product offers, product concrete availabilities, product offers' availabilities and merchants are loaded by sending the `GET` request to `https://glue.mysprykershop.com/shopping-lists/{shoppingListReference}?include=concrete-products,shopping-list-items,product-offers,product-offer-availabilities,concrete-product-availabilities,merchants`
 
-<details><summary markdown='span'>Response data sample with the included concrete products, shopping list items, product offers, product offer availabilities, concrete product availabilities, and merchants</summary>
+<details><summary>Response data sample with the included concrete products, shopping list items, product offers, product offer availabilities, concrete product availabilities, and merchants</summary>
 
 ```json
 {

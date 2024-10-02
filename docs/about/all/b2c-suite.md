@@ -15,7 +15,7 @@ related:
 The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. Of course, every B2С project has its own set of features that meet its business needs and B2B features can be used as well, but the most common features for B2C commerce are as follows.
 
 <details>
-<summary markdown='span'>B2C feature list</summary>
+<summary>B2C feature list</summary>
 
 - [Configurable Product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html)
 - [Return Management](/docs/pbc/all/return-management/{{site.version}}/marketplace/marketplace-return-management-feature-overview.html)

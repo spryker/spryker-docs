@@ -1,5 +1,5 @@
 ---
-title: Managing marketplace concrete products
+title: Edit marketplace concrete products
 last_updated: May 05, 2022
 description: This document describes how to modify marketplace concrete products in the Merchant Portal.
 template: back-office-user-guide-template

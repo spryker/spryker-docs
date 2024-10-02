@@ -19,14 +19,14 @@ For example, a customer changes their mind about an item in an order they have p
 
 A customer can cancel orders on the **Order History** and **Order Details** pages.
 
-<details open><summary markdown='span'>Order cancellation representation - Order History Page</summary>
+<details><summary>Order cancellation representation - Order History Page</summary>
 
 
 ![order-history-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Order+Cancellation/Order+Cancellation+Feature+Overview/order-history-page.png)
 
 </details>
 
-<details open><summary markdown='span'>Order cancellation representation - Order Details Page</summary>
+<details><summary>Order cancellation representation - Order Details Page</summary>
 
 ![order-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Order+Cancellation/Order+Cancellation+Feature+Overview/order-details-page.png)
 
@@ -58,7 +58,12 @@ To learn how a Back Office user can skip timeout or cancel an order by changing 
 ## Order cancellation on the Storefront
 This is how the Order Cancellation feature works on the Spryker Demo Shop Storefront:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/order-cancellation-overview.md/shop-guide-cancelling-orders.mp4)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/order-cancellation-overview.md/shop-guide-cancelling-orders.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 ## Related Business User documents
 

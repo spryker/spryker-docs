@@ -4,7 +4,7 @@ We use the default Markdown syntax, however, in some cases, it is not enough or 
 For code samples with more than 38 lines, use dropdowns with this syntax: 
 
 <details>
-<summary markdown='span'>{namespace}</summary>
+<summary>{namespace}</summary>
 
 ```php
 {code}

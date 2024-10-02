@@ -19,14 +19,14 @@ For example, a customer changes their mind about an item in an order they have p
 
 A customer can cancel orders on the **Order History** and **Order Details** pages.
 
-<details open><summary markdown='span'>Order cancellation representation - Order History Page</summary>
+<details><summary>Order cancellation representation - Order History Page</summary>
 
 
 ![order-history-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Order+Cancellation/Order+Cancellation+Feature+Overview/order-history-page.png)
 
 </details>
 
-<details open><summary markdown='span'>Order cancellation representation - Order Details Page</summary>
+<details><summary>Order cancellation representation - Order Details Page</summary>
 
 ![order-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Order+Cancellation/Order+Cancellation+Feature+Overview/order-details-page.png)
 

@@ -1,7 +1,7 @@
 ---
 title: Install and configure Stripe prerequisites for Marketplace
 description: Learn how to prepare your Marketplace project for Stripe
-last_updated: Jul 1, 2024
+last_updated: Oct 2, 2024
 template: howto-guide-template
 ---
 

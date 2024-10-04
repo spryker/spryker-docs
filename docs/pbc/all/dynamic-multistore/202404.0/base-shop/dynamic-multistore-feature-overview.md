@@ -81,7 +81,12 @@ The following image shows the ability to call API endpoints with the exemplary "
 
 ![storefront-api](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/storefront-api.png)
 
-## Adding of a new store via data import
+## Adding stores using data import
+
+
+You can add a new store using data import or in the Back Office. Adding a store in the Back Office is easier and faster, but you have to add this store across all environments.
+
+Using data import, you can configure a new store once and deploy it across all environments.
 
 Example for DE store configuration:
 
@@ -93,17 +98,14 @@ DE
 AT
 ```
 
-| Column     | REQUIRED | Data Type | Data Example | Data Explanation |
+| COLUMN     | REQUIRED | Data Type | Data Example | Data Explanation |
 |------------| --- | --- | --- | --- |
-|name        |mandatory |string | DE | Define store name. |
+|name        | v | string | DE | Define store name. |
 
 Configure a new store as described here: [Import configuration for store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#import-data)
 
 
-Adding a new store via the Back Office is easier and faster, but in this case, you should add this store across all environments.
-Data import allows you to add and configure a new store once and deploy it across all environments.
-
-Note that when you add a new store you should also assign all store-related entities to it for enabling them for customers:
+When you add a new store you should also assign all store-related entities to it for enabling them for customers:
 - Products
 - Categories
 - CMS entities
@@ -124,16 +126,16 @@ In represented examples below there are two regions: EU and US.
 EU region has two stores: DE and AT. US region has one store: US.
 
 - Urls for Yves, Back Office, Merchant Portal and Glue contain region instead of store name.
-  
+
   Example for local environment: https://backoffice.eu.mysprykershop.com instead of https://backoffice.de.mysprykershop.com
 
 - RabbitMQ virtual hosts contain region instead of store.
-  
+
   For example eu-docker instead of de-docker.
   ![rabbitmq-virtual-hosts-non-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/rabbitmq-virtual-hosts-non-dms.png)
   ![rabbitmq-virtual-hosts-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/rabbitmq-virtual-hosts-dms.png)
 
-- Jenkins job names contain region instead of store. 
+- Jenkins job names contain region instead of store.
 
   For example EU_queue-worker-start instead of DE_queue-worker-start.
   ![jenkins-jobs-non-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/jenkins-jobs-non-dms.png)
@@ -160,8 +162,8 @@ Take into account data import request body limit when you import data for many s
 
 - [Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html)
 
-- [Import minimum set of data for store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/import-stores.html) 
+- [Import minimum set of data for store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/import-stores.html)
 
-- [Install the Dynamic Multistore Glue API](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-the-dynamic-multistore-glue-api.html) 
+- [Install the Dynamic Multistore Glue API](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-the-dynamic-multistore-glue-api.html)
 
 - [Install Dynamic Multistore + the Marketplace MerchantPortal Core feature](/docs/pbc/all/dynamic-multistore/{{page.version}}/marketplace/install-dynamic-multistore-the-marketplace-merchant-portal-core.html)

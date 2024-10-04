@@ -10,13 +10,10 @@ This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynami
 
 Follow the steps below to install the Dynamic Multistore feature core.
 
-### 1) Prerequisites
+### Prerequisites for projects below version 202404.0
 
 {% info_block warningBox "Shop version" %}
-If your shop is already running version 202404.0 or later skip ahead to the step 2. Enable the dynamic store feature
- section - that's all you need to get started with Dynamic Multistore.
-
-For shops on older versions, follow the detailed steps below to prepare for the upgrade.
+If your project is of version 202404.0 or later, go to [Enable the dynamic store feature]
 {% endinfo_block %}
 
 1. Upgrade the following modules:
@@ -60,7 +57,7 @@ Make sure the following modules have been installed:
 {% endinfo_block %}
 
 
-### 2 ) Enable the dynamic store feature
+### Enable the dynamic store feature
 
 To use the new region configuration, create a new deployment file, like `deploy.dynamic-store.yml` or `deploy.dev.dynamic-store.yml`. Example of file with region configuration:
 
@@ -184,7 +181,7 @@ In this configuration, region is used for entities like services, endpoints, or 
 
 
 
-### 2) Set up configuration
+### Set up configuration
 
 Before the introduction of dynamic multistore, configuration was managed in `config/Shared/stores.php`. With dynamic multistore, configuration is managed in the database. `config/Shared/stores.php` and `config/Shared/default_store.php` are now obsolete.
 
@@ -203,7 +200,9 @@ We recommend making `de.mysprykershop.com` a mirror of `eu.mysprykershop.com` to
 {% endinfo_block %}
 
 
-#### Configure application:
+#### Configure the application
+
+1. Add the following configuration:
 
 | CONFIGURATION        | SPECIFICATION | NAMESPACE |
 |----------------------|---------------| --- |

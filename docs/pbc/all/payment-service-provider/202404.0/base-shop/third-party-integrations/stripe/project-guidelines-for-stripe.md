@@ -131,23 +131,24 @@ Install or upgrade the modules to the specified or higher versions:
   * Only for marketplaces: AccountId
 6. Stripe Elements is rendered on the order summary page. See [Example](#example) for rendering Stripe Elements.
 6. The customer selects a payment method in Stripe Elements and submits the data.
-7. The customer is redirected to the provided `return_url`, which makes another Glue API request (`glue.mysprykershop.com/checkout`) to persist the order in the Back Office.
+7. The customer is redirected to the provided `return_url`, which makes a Glue API request to persist the order in the Back Office: `glue.mysprykershop.com/checkout`.
 8. The customer is redirected to the success page of your application.
-9. Through the `\Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin` plugin, the PreOrder payment is confirmed on the Stripe App side. The `order_reference` is passed to the StripeApp to be connected with the `transaction_id`.
-10. After the payment is processed on the Stripe App side, a `PaymentUpdated` message is sent to Spryker; the message contains additional data, which you can see in the Back Office.
+9. Through the `\Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin` plugin, the PreOrder payment is confirmed on the Stripe App side. The `order_reference` is passed to the Stripe app to be connected with `transaction_id`.
+10. After the payment is processed on the Stripe App side, a `PaymentUpdated` message is sent to Spryker.
+  The message contains additional data, which you can see in the Back Office.
+11. Depending on payment status, one of the following messages is returned through an asynchronous API, which moves the order to the next state in OMS:
+  *  When the payment is successful, a `PaymentAuthorized` message is returned.
+  *  When the payment is failed, a `PaymentAuthorizationFailed` message is returned.
+12. Further on, the order is processed through the OMS.
 
-*  When the payment is successful, a `PaymentAuthorized` message is returned through an asynchronous API, which moves the order to the next state in OMS.
-*  When the payment is failed, a `PaymentAuthorizationFailed` message is returned through an asynchronous API, which moves the order to the next state in OMS.
 
 All payment related messages are handled by `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin`, which is registered in `MessageBrokerDependencyProvider`.
-
-From here on the normal order processing through the OMS will take place.
 
 To check out how the integration works, see this [example application](https://github.com/spryker-projects/spa-checkout-glue-with-stripe).
 
 Before the customer is redirected to the summary page, all required data is collected: customer data, addresses, and selected shipment method. When the customer goes to the summary page, to get the data required for rendering the Stripe Elements, you need to call the `InitializePreOrderPayment` Glue API endpoint.
 
-#### Example
+#### Example of rendering Stripe Elements on the summary page
 
 ```JS
 

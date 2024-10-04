@@ -129,7 +129,7 @@ Install or upgrade the modules to the specified or higher versions:
   * ClientSecret
   * PublishableKey
   * Only for marketplaces: AccountId
-- Use the example JavaScript to render Stripe Elements on the order summary page.
+6. Stripe Elements is rendered on the order summary page. See [Example](#example) for rendering Stripe Elements.
 6. The customer selects a payment method in Stripe Elements and submits the data.
 7. The customer is redirected to the provided `return_url`, which makes another Glue API request (`glue.mysprykershop.com/checkout`) to persist the order in the Back Office.
 8. The customer is redirected to the success page of your application.

@@ -11,4 +11,4 @@ New Relic APM delivers detailed traces that track the flow of requests through y
 
 For more information about New Relic APM, see [Improve your app performance with APM](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-apm/).
 
-To get access to New Relic, you need a paid New Relic subscription for your organization. The paid license can be purchased through Spryker. Contact your CSM to further explore this option!
+To be able to access New Relic APM, you need to get at least one (1) New Relic user license for your organization. Contact [Support](https://spryker.force.com/support/s/) to further explore this option!

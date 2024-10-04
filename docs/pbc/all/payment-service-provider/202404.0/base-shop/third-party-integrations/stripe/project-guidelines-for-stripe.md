@@ -122,7 +122,8 @@ Install or upgrade the modules to the specified or higher versions:
   * Payment amount
   * Quote data
 3. Zed makes the API call to the Stripe App, including required authorization.
-4. On the Stripe App side, the payment with the given data is persisted, and an API call to Stripe is made to get `ClientSecret` and `PublishableKey` keys.
+4. The payment with the given data is persisted On the Stripe App side.
+5. An API call to Stripe is made to get `ClientSecret` and `PublishableKey` keys.
 5. Stripe returns a JSON response with the following parameters:
   * TransactionId
   * ClientSecret

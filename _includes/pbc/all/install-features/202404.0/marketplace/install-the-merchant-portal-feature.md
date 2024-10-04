@@ -110,7 +110,7 @@ By default, all newly created merchants and merchant users automatically have a 
 
 To check the available list of packages for the Merchant Portal, in the Srpyker Git Hub repository, search for [`merchant-portal-gui`](https://github.com/spryker/?q=merchant-portal-gui).
 
-<details><summary markdown='span'>src/Pyz/Zed/Acl/AclConfig.php</summary>
+<details><summary>src/Pyz/Zed/Acl/AclConfig.php</summary>
 
 ```php
 <?php
@@ -228,7 +228,7 @@ As an example of the `AclEntityMetadataCollection` configuration, use `\Spryker\
 
 1. To configure the Merchant Portal sidebar, add installed MP GUI modules to `config/Zed/navigation.xml`.
 
-<details><summary markdown='span'>config/Zed/navigation.xml</summary>
+<details><summary>config/Zed/navigation.xml</summary>
 
 ```xml
 <?xml version="1.0"?>

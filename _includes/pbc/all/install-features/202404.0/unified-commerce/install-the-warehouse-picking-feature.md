@@ -274,7 +274,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 
 2. Add the `DummyPicking` subprocess to the `DummyPayment01` process as an example. Consider OMS configuration using the `DummyPayment01` process as an example.
 
-<details><summary markdown='span'>config/Zed/oms/DummyPayment01.xml</summary>
+<details><summary>config/Zed/oms/DummyPayment01.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -495,7 +495,7 @@ console data:import glossary
 | PushNotificationPickingListPostUpdatePlugin              | Creates a push notification after updating a picking list.                           |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList      |
 | WarehouseUserPushNotificationSubscriptionValidatorPlugin | Validates whether a user has a warehouse assignment.                               |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PushNotification |
 
-<details open><summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
 ```php
 <?php

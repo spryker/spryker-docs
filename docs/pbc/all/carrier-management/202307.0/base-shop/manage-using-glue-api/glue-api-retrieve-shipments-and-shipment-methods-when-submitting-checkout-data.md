@@ -51,7 +51,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 
 <details>
-<summary markdown='span'>Request sample: submit checkout data with a split shipment</summary>
+<summary>Request sample: submit checkout data with a split shipment</summary>
 
 ```json
 {
@@ -141,7 +141,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: submit checkout data with a split shipment</summary>
+<summary>Response sample: submit checkout data with a split shipment</summary>
 
 ```json
 {
@@ -269,7 +269,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 </details>
 
 <details>
-<summary markdown='span'>Response sample: submit checkout data with a split shipment, shipments, and shipment methods</summary>
+<summary>Response sample: submit checkout data with a split shipment, shipments, and shipment methods</summary>
 
 ```json
 {

@@ -18,7 +18,7 @@ redirect_from:
 *App Configuration Translation* represents a JSON file that contains all translations for all entities from the [application configuration file](/docs/dg/dev/acp/develop-an-app/app-configuration.html).
 Translations for all configurations in all locales are contained in the same file. The default path for the translation file is: `/config/app/translation.json`.
 
-<details open>
+<details>
 <summary>App configuration translation example</summary>
 
 ```json

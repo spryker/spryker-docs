@@ -52,28 +52,28 @@ Specifically, the customer can do the following:
 
 Buyers can do the following actions using the Wishlists feature:
 <details>
-<summary markdown='span'>Create, rename, and edit a wishlist </summary>
+<summary>Create, rename, and edit a wishlist </summary>
 
 ![create-rename-delete-wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/create-rename-delete-wishlist.gif)
 
 </details>
 
 <details>
-<summary markdown='span'>Add a product from the product details page to a wishlist</summary>
+<summary>Add a product from the product details page to a wishlist</summary>
 
 ![add-product-from-product-details-page-to-wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/add-product-from-product-details-page-to-wishlist.gif)
 
 </details>
 
 <details>
-<summary markdown='span'>View a wishlist's details, remove products from the wishlist, and add all products from the wishlist to the cart</summary>
+<summary>View a wishlist's details, remove products from the wishlist, and add all products from the wishlist to the cart</summary>
 
 ![view-details-remove-products-and-add-all-products-from-wishlist-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/view-details-remove-products-and-add-all-products-from-wishlist-to-cart.gif)
 
 </details>
 
 <details>
-<summary markdown='span'>Add selected products from the wishlist to the cart</summary>
+<summary>Add selected products from the wishlist to the cart</summary>
 
 ![add-selected-products-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/add-selected-items-to-cart.gif)
 

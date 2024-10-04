@@ -142,7 +142,7 @@ Register the following plugins:
 | FilterItemsWithoutPricePlugin               | Removes quote items without price.                                                                             | None          | Spryker\Zed\PriceCartConnector\Communication\Plugin      |
 | SanitizeSourcePricesQuoteLockPreResetPlugin | Sanitizes source prices in quote items.                                                                        | None          | Spryker\Zed\PriceCartConnector\Communication\Plugin\Cart |
 
-<details><summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php

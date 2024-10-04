@@ -24,23 +24,23 @@ Keep in mind that the custom order references are available only for logged-in u
 
 In the Storefront, you, as a buyer, can add a custom order reference to the order or edit it (if needed) on the **Cart** page and then view it on the **Summary** page. Once the order has been placed, the reference becomes non-editable and is displayed on the **Order Details** page in your customer account.
 
-<details open>
-<summary markdown='span'>Cart page</summary>
+<details>
+<summary>Cart page</summary>
 
 ![add-custom-order-reference](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/add-custom-order-reference.gif)
 
 </details>
 
-<details open>
-<summary markdown='span'>Summary page</summary>
+<details>
+<summary>Summary page</summary>
 
 ![custom-order-reference-summary-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/custom-order-reference-summary-page.png)
 
 </details>
 
-<details open>
+<details>
 
-<summary markdown='span'>Order Details page </summary>
+<summary>Order Details page </summary>
 
 ![custom-order-reference-order-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/custom-order-reference-order-details-page.gif)
 

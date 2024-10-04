@@ -43,7 +43,7 @@ Request sample: retrieve subscriptions to availability notifications
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve subscriptions to availability notifications</summary>
+<details><summary>Response sample: retrieve subscriptions to availability notifications</summary>
 
 ```json
 {

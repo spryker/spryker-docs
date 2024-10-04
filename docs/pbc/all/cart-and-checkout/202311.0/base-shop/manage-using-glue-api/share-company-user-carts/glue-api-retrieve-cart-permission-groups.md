@@ -43,7 +43,7 @@ Request sample : `GET http://glue.mysprykershop.com/cart-permission-groups`
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary>Response sample</summary>
 
 ```json
 {

@@ -33,7 +33,6 @@ Make sure the following modules have been installed:
 | SalesMerchantCommission                            | vendor/spryker/sales-merchant-commission                                |
 | SalesMerchantCommissionExtension                   | vendor/spryker/sales-merchant-commission-extension                      |
 | MerchantSalesOrderSalesMerchantCommission          | vendor/spryker/merchant-sales-order-sales-merchant-commission           |
-| MerchantSalesOrderSalesMerchantCommissionExtension | vendor/spryker/merchant-sales-order-sales-merchant-commission-extension |
 | SalesPaymentMerchantSalesMerchantCommission        | vendor/spryker/sales-payment-merchant-sales-merchant-commission         |
 
 {% endinfo_block %}
@@ -42,12 +41,12 @@ Make sure the following modules have been installed:
 
 1. Add the following configuration:
 
-| CONFIGURATION                                                      | SPECIFICATION                                                      | NAMESPACE                  |
-|--------------------------------------------------------------------|--------------------------------------------------------------------|----------------------------|
-| MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE | Commission price mode configuration for stores in the system.      | Pyz\Zed\MerchantCommission |
-| MerchantCommissionConfig::EXCLUDED_MERCHANTS_FROM_COMMISSION       | The list of merchants who aren't subject to commissions.           | Pyz\Zed\MerchantCommission |
-| RefundConfig::shouldCleanupRecalculationMessagesAfterRefund()      | Sanitizes recalculation messages after refund if set to true.      | Pyz\Zed\Refund             |
-| SalesConfig::shouldPersistModifiedOrderItemProperties()            | Returns true if order items should be updated during order update. | Pyz\Zed\Sales              |
+| CONFIGURATION                                                                       | SPECIFICATION                                                                                                                                                                                                                                                  | NAMESPACE                  |
+|-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
+| MerchantCommissionConfig::isMerchantCommissionPriceModeForStoreCalculationEnabled() | Specifies if `MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE` configuration should be used for merchant commission calculation. Using `MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE` for calculation is deprecated. | Pyz\Zed\MerchantCommission |
+| MerchantCommissionConfig::EXCLUDED_MERCHANTS_FROM_COMMISSION                        | The list of merchants who aren't subject to commissions.                                                                                                                                                                                                       | Pyz\Zed\MerchantCommission |
+| RefundConfig::shouldCleanupRecalculationMessagesAfterRefund()                       | Sanitizes recalculation messages after refund if set to true.                                                                                                                                                                                                  | Pyz\Zed\Refund             |
+| SalesConfig::shouldPersistModifiedOrderItemProperties()                             | Returns true if order items should be updated during order update.                                                                                                                                                                                             | Pyz\Zed\Sales              |
 
 2. Configure the merchant commission price mode per store and the excluded merchants from the commission:
 
@@ -63,42 +62,26 @@ use Spryker\Zed\MerchantCommission\MerchantCommissionConfig as SprykerMerchantCo
 class MerchantCommissionConfig extends SprykerMerchantCommissionConfig
 {
     /**
-     * @uses \Spryker\Shared\Calculation\CalculationPriceMode::PRICE_MODE_NET
-     *
-     * @var string
-     */
-    protected const PRICE_MODE_NET = 'NET_MODE';
-
-    /**
-     * @uses \Spryker\Shared\Calculation\CalculationPriceMode::PRICE_MODE_GROSS
-     *
-     * @var string
-     */
-    protected const PRICE_MODE_GROSS = 'GROSS_MODE';
-
-    /**
-     * @var array<string, string>
-     */
-    protected const MERCHANT_COMMISSION_PRICE_MODE_PER_STORE = [
-        'DE' => self::PRICE_MODE_GROSS,
-        'AT' => self::PRICE_MODE_NET,
-        'US' => self::PRICE_MODE_GROSS,
-    ];
-
-    /**
      * @var list<string>
      */
     protected const EXCLUDED_MERCHANTS_FROM_COMMISSION = [
         'MER000001',
     ];
+
+    /**
+     * @return bool
+     */
+    public function isMerchantCommissionPriceModeForStoreCalculationEnabled(): bool
+    {
+        return false;
+    }
 }
 ```
 
 {% info_block warningBox "Verification" %}
 
-To verify that the price modes are properly defined for the stores that will be charging commission from the merchant in
-the marketplace, set the `MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE` configuration.
-The price mode must be set for the stores charging commission from the merchant.
+To verify that the price modes per store configuration is disabled, place an order and trigger the merchant commission calculation step in OMS.
+Merchant commission should be calculated according to the price mode of the order.
 
 To verify that the merchants who aren't subject to commissions are properly defined, set
 the `MerchantCommissionConfig::EXCLUDED_MERCHANTS_FROM_COMMISSION` configuration.
@@ -553,8 +536,16 @@ mc4,AT
 
 ```csv
 merchant_commission_key,store_name
+mc1,DE
+mc1,AT
+mc2,DE
+mc2,AT
+mc3,DE
+mc3,AT
 mc4,DE
 mc4,AT
+mc5,DE
+mc5,AT
 ```
 
 | COLUMN                  | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                       |
@@ -1117,7 +1108,6 @@ Make sure the following modules have been installed:
 | SalesMerchantCommission                            | vendor/spryker/sales-merchant-commission                                |
 | SalesMerchantCommissionExtension                   | vendor/spryker/sales-merchant-commission-extension                      |
 | MerchantSalesOrderSalesMerchantCommission          | vendor/spryker/merchant-sales-order-sales-merchant-commission           |
-| MerchantSalesOrderSalesMerchantCommissionExtension | vendor/spryker/merchant-sales-order-sales-merchant-commission-extension |
 | SalesPaymentMerchantSalesMerchantCommission        | vendor/spryker/sales-payment-merchant-sales-merchant-commission         |
 
 {% endinfo_block %}
@@ -1555,6 +1545,17 @@ To import data follow the steps in the following sections.
 
 ### Import merchant commission data
 
+{% info_block warningBox "" %}
+
+Some of the commission rule expressions provided in the following examples are based on optional feature extensions. For commissions to work properly, these extensions need to be enabled:
+
+* `item-price`: the condition for the order item from the [Install the Marketplace Merchant Commission + Prices feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-prices-feature.html).
+* `category`: the condition for the order item from the [Install the Marketplace Merchant Commission + Category Management feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-category-management-feature.html).
+
+All related extensions are listed in [Install related features](#install-related-features).
+
+{% endinfo_block %}
+
 1. Prepare merchant commission data according to your requirements using the demo data:
 
 **data/import/common/common/marketplace/merchant_commission.csv**
@@ -1582,11 +1583,6 @@ mc5,Merchant Commission 5,,2024-01-01,2029-06-01,1,,fixed,secondary,4,,"price-mo
 | priority                      | ✓        | int       | 1                                                 | Priority of the merchant commission.            |
 | item_condition                |          | string    | item-price >= '500' AND category IS IN 'computer' | Condition for the item.                         |
 | order_condition               |          | string    | price-mode = ""GROSS_MODE""                     | Condition for the order.                        |
-
-
-
-
-
 
 
 2. Prepare the merchant commission group data according to your requirements using the demo data:
@@ -2242,7 +2238,7 @@ Make sure the configured plugins have been registered and are working as expecte
             <merchant-commission-gui>
                 <label>Merchant Commission</label>
                 <title>Merchant Commission</title>
-                <bundle>merchant_commission-gui</bundle>
+                <bundle>merchant-commission-gui</bundle>
                 <controller>list</controller>
                 <action>index</action>
             </merchant-commission-gui>
@@ -2262,3 +2258,12 @@ console navigation:build-cache
 In the Back Office, make sure the **Marketplace** > **Merchant Commissions** navigation menu item is displayed.
 
 {% endinfo_block %}
+
+
+## Install related features
+
+| FEATURE                                                                   | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                                                                                    |
+|---------------------------------------------------------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Install the Marketplace Merchant Commission + Category Management feature | {{page.version}}                 | [Install the Marketplace Merchant Commission + Category Management feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-category-management-feature.html) |
+| Install the Marketplace Merchant Commission + Prices feature              | {{page.version}}                 | [Install the Marketplace Merchant Commission + Prices feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-prices-feature.html)                           |
+| Install the Marketplace Merchant Commission + Product feature             | {{page.version}}                 | [Install the Marketplace Merchant Commission + Product feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-product-feature.html)                         |

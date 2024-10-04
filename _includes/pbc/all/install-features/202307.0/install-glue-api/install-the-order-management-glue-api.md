@@ -81,8 +81,8 @@ Activate the following plugins:
 | CustomerOrdersResourceRoutePlugin       | Adds the configuration for resource routing, mapping of HTTP methods to controller actions and defines if actions are protected. | None          | Spryker\Glue\OrdersRestApi\Plugin |
 
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -152,8 +152,8 @@ To verify that `CustomerOrdersResourceRoutePlugin` is set up correctly, make sur
 
 To verify that `OrderRelationshipByOrderReferencePlugin` is set up correctly, make sure that the `orders` relationship is returned after sending the following request:
 
-<details open>
-<summary markdown='span'>POST https://glue.mysprykershop.comm/checkout?include=orders</summary>
+<details>
+<summary>POST https://glue.mysprykershop.comm/checkout?include=orders</summary>
 
 ```json
 {

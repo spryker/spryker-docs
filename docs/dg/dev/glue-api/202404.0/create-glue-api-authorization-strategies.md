@@ -18,7 +18,7 @@ Integrate authorization following the [Integrating Authorization Enabler](/docs/
 
 The first step is creating a strategy that is a plugin responsible for performing the authorization:
 
-<details><summary markdown='span'>AuthorizationStrategyPluginInterface</summary>
+<details><summary>AuthorizationStrategyPluginInterface</summary>
 
 ```php
 <?php

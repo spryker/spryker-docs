@@ -16,12 +16,22 @@
     h1, h2, h3, h4, h5, h6 {
         color: $grey-dark;
         font-weight: 800;
-        margin: 0 0 16px;
+        margin: 0 0 2px;
     }
 
     h2, h3, h4, h5, h6 {
         margin-top: 40px;
     }
+
+
+    h2, h3, h4, h5 {
+      &:has(+ ul),
+      &:has(+ p) {
+        margin-bottom: -15px;
+      }
+    }
+
+
 
     h1 {
         font-size: 38px;

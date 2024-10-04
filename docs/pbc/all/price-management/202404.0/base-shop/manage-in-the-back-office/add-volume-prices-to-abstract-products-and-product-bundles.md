@@ -51,4 +51,8 @@ This document describes how to add volume prices to abstract products.
 
 Let's say you have a product that you want to sell with a special price if a user wants to buy a specific number of the same product. For example, a Smartphone with  flash memory of 16GB costs 25 Euros per item, but you defined that if a user buys three items, the price is 23 Euros instead of 25.
 
-![Volume prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Products:+Reference+Information/Volume-prices.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/price-management/base-shop/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.md/Volume-prices.mp4" type="video/mp4">
+  </video>
+</figure>

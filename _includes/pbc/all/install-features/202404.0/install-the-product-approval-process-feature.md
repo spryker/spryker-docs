@@ -293,7 +293,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -448,7 +448,7 @@ Follow the steps to import product approval data:
 1. Prepare data according to your requirements using the following demo data:
 
 <details>
-<summary markdown='span'>data/import/common/common/product_abstract_approval_status.csv</summary>
+<summary>data/import/common/common/product_abstract_approval_status.csv</summary>
 
 ```yaml
 sku,approval_status

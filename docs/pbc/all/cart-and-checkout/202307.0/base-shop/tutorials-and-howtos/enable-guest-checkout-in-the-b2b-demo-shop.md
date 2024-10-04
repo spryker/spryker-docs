@@ -34,7 +34,7 @@ The implementation described in this document is exemplary and may require addit
 
 4. In the `CheckoutPage` module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`:
 
-<details><summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig</summary>
+<details><summary>src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}

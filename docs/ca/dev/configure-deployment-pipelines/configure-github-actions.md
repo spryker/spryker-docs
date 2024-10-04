@@ -40,7 +40,7 @@ Set up the job that performs the basic validation like the following:
 * Database schema
 
 
-<details open>
+<details>
 <summary>Example of .github/workflows/{project_name}.yml</summary>
 
 ```yaml
@@ -449,7 +449,7 @@ Set up the job that performs the basic validation like the following:
 * Database schema
 
 
-<details open>
+<details>
 <summary>Example of .github/workflows/{project_name}.yml</summary>
 
 ```yaml
@@ -853,7 +853,7 @@ Set up the job that performs the basic validation like:
 * Database schema
 
 
-<details open>
+<details>
     <summary>Example of .github/workflows/{project_name}.yml</summary>
 
 ```yaml

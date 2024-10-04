@@ -254,7 +254,7 @@ class PriceProductScheduleDataImportConfig extends SprykerPriceProductScheduleDa
 }
 ```
 
-<details open><summary markdown='span'>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
 
 ```php
 <?php

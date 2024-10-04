@@ -218,6 +218,51 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 ```
 
+5. Enable order expenses for the merchant payout:
+
+**src/Pyz/Zed/SalesPaymentMerchant/SalesPaymentMerchantConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SalesPaymentMerchant;
+
+use Spryker\Shared\Shipment\ShipmentConfig;
+use Spryker\Zed\SalesPaymentMerchant\SalesPaymentMerchantConfig as SprykerSalesPaymentMerchantConfig;
+
+class SalesPaymentMerchantConfig extends SprykerSalesPaymentMerchantConfig
+{
+    /**
+     * @var bool
+     */
+    protected const ORDER_EXPENSE_INCLUDED_IN_PAYMENT_PROCESS = true;
+
+    /**
+     * @var array<string, list<string>>
+     */
+    protected const EXCLUDED_EXPENSE_TYPES_FOR_STORE = [
+        'YOUR_STORE_NAME' => [ShipmentConfig::SHIPMENT_EXPENSE_TYPE],
+    ];
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Verify that the order expenses are included in the merchant payout process:
+
+1. Place an order with products from different merchants.
+2. Pass the merchant payout stage for the order.
+  In the `spy_sales_payment_merchant_payout` database table, make sure the merchant payout amounts have been applied to each merchant product in your order. The order expenses should be included in the merchant payout process as a separate entry in the `spy_sales_payment_merchant_payout` database table.
+3. Refund the order.
+  In the `spy_sales_payment_merchant_payout_reversal` database table, make sure the refunded merchant payout amounts have been applied to each merchant product in your order. If there're no merchant order items left for the refund, the refunded order expenses should be included in the merchant payout process as a separate entry in the `spy_sales_payment_merchant_payout_reversal` database table.
+
+4. Repeat steps 1-3 for a store with excluded expense types and make sure the following applies:
+* The order expenses with the excluded expense types are not included in the merchant payout process.
+* The order expenses are not included in the merchant payout process as a separate entry in the `spy_sales_payment_merchant_payout` database table.
+* The refunded order expenses are not included in the merchant reverse payout process as a separate entry in the `spy_sales_payment_merchant_payout_reversal` database table.
+
+{% endinfo_block %}
+
 ### 4) Add Zed translations
 
 Generate new translation cache for Zed:
@@ -311,7 +356,7 @@ Make sure the following applies:
 
 {% endinfo_block %}
 
-<details><summary markdown='span'>src/Pyz/Zed/MerchantGui/MerchantGuiDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/MerchantGui/MerchantGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -406,7 +451,7 @@ Make sure that the `merchantName` global Twig variable is available.
 
 {% endinfo_block %}
 
-<details><summary markdown='span'>src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -430,7 +475,7 @@ class KernelAppDependencyProvider extends SprykerKernelAppDependencyProvider
 }
 ```
 
-<details><summary markdown='span'>src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -457,7 +502,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 }
 ```
 
-<details><summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -669,7 +714,7 @@ To import data follow the steps in the following sections.
 1. Prepare merchant profile data according to your requirements using the demo data:
 
 <details>
-<summary markdown='span'>/data/import/common/common/marketplace/merchant_profile.csv</summary>
+<summary>/data/import/common/common/marketplace/merchant_profile.csv</summary>
 
 ```csv
 merchant_reference,contact_person_role,contact_person_title,contact_person_first_name,contact_person_last_name,contact_person_phone,banner_url,logo_url,public_email,public_phone,description_glossary_key.en_US,description_glossary_key.de_DE,banner_url_glossary_key.en_US,banner_url_glossary_key.de_DE,delivery_time_glossary_key.en_US,delivery_time_glossary_key.de_DE,terms_conditions_glossary_key.en_US,terms_conditions_glossary_key.de_DE,cancellation_policy_glossary_key.en_US,cancellation_policy_glossary_key.de_DE,imprint_glossary_key.en_US,imprint_glossary_key.de_DE,data_privacy_glossary_key.en_US,data_privacy_glossary_key.de_DE,is_active,fax_number
@@ -800,7 +845,7 @@ MER000006,michele@sony-experts.com
 2. Create the Step model for writing merchant user data:
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/DataImport/Business/Model/MerchantUser/MerchantUserWriterStep.php</summary>
+<summary>src/Pyz/Zed/DataImport/Business/Model/MerchantUser/MerchantUserWriterStep.php</summary>
 
 ```php
 <?php
@@ -939,7 +984,7 @@ class DataImportConfig extends SprykerDataImportConfig
 4. Enable the merchant user data import command:
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php</summary>
+<summary>src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php</summary>
 
 ```php
 <?php

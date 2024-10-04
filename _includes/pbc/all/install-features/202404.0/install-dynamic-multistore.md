@@ -57,7 +57,7 @@ Make sure the following modules have been installed:
 {% endinfo_block %}
 
 
-### Enable the dynamic store feature
+### 1) Enable the dynamic store feature
 
 To use the new region configuration, create a new deployment file, like `deploy.dynamic-store.yml` or `deploy.dev.dynamic-store.yml`. Example of file with region configuration:
 
@@ -181,7 +181,7 @@ In this configuration, region is used for entities like services, endpoints, or 
 
 
 
-### Set up configuration
+### 2) Set up configuration
 
 Before the introduction of dynamic multistore, configuration was managed in `config/Shared/stores.php`. With dynamic multistore, configuration is managed in the database. `config/Shared/stores.php` and `config/Shared/default_store.php` are now obsolete.
 
@@ -214,10 +214,10 @@ We recommend making `de.mysprykershop.com` a mirror of `eu.mysprykershop.com` to
 | StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE | Configures the sync queue name to be used for processing store messages. | Pyz\Zed\StoreStorage |
 
 
-
+2. Update the configuration:
 **config/Shared/config_default.php**
 
-Original code block:
+Original confiugration:
 ```php
 <?php
 
@@ -233,8 +233,7 @@ foreach ($rabbitConnections as $key => $connection) {
 }
 ```
 
-Update the prior code snippet to the following:
-
+Updated configuration: 
 ```php
 $config[RabbitMqEnv::RABBITMQ_CONNECTIONS] = [];
 $connectionKeys = array_keys($rabbitConnections);

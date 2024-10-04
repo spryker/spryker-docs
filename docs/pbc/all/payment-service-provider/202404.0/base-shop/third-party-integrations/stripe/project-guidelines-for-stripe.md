@@ -1,6 +1,6 @@
 ---
-title: Project guidelines for the Stripe app
-description: Find out about the SCCOS modules needed for the Stripe App to function and their configuration
+title: Project guidelines for Stripe
+description: Learn how to implement Stripe using ACP
 last_updated: Jul 22, 2024
 template: howto-guide-template
 related:
@@ -15,19 +15,22 @@ redirect_from:
 
 This document provides guidelines for projects using the Stripe app.
 
-## OMS configuration for the project
+## OMS configuration
 
 The complete default payment OMS configuration is available at `vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`.
 
-The payment flow of the default OMS involves authorizing the initial payment, which means that the amount is temporarily blocked when the payment method permits. Then, the OMS sends requests to capture, that is, transfer of the previously blocked amount from the customer's account to the store account.
+The payment flow of the default OMS involves authorizing the initial payment. The amount is temporarily blocked when the payment method permits. Then, the OMS sends requests to capture, that is, transfer of the previously blocked amount from the customer's account to the store account.
 
-The `Payment/Capture` command initiates the capture action. By default, this command is initiated when a Back office user clicks **Ship** on the *Order Overview* page.
+The `Payment/Capture` command initiates the capture action. By default, this command is initiated when a Back Office user clicks **Ship** on the **Order Overview** page.
 
 Optionally, you can change and configure your own payment OMS based on `ForeignPaymentStateMachine01.xml` from the core package and change this behavior according to your business flow. See [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) for more information about the OMS feature and its configuration.
 
-To configure your payment OMS based on `ForeignPaymentStateMachine01.xml`, copy `ForeignPaymentStateMachine01.xml` with `Subprocess` folder to the project root `config/Zed/oms`. Then, change the file's name and the value of `<process name=` in the file.
+To configure your payment OMS based on `ForeignPaymentStateMachine01.xml`, copy `ForeignPaymentStateMachine01.xml` with the `Subprocess` folder to the project root `config/Zed/oms`. Then, change the file's name and the value of `<process name=` in the file.
 
-This example demonstrates how to configure the order state machine transition from `ready for dispatch` to `payment capture pending`:
+The following example shows how to configure the order state machine transition from `ready for dispatch` to `payment capture pending`:
+
+<details>
+  <summary>State machine example</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -80,57 +83,72 @@ This example demonstrates how to configure the order state machine transition fr
 </statemachine>
 ```
 
-By default, the timeout for the payment authorization action is set to 7 days. This means that if the order is in the `payment authorization pending` state, the OMS will wait for a day and then change the order state to `payment authorization failed`. Another day later, the order is automatically transitioned to the `payment authorization canceled` state. Therefore,
-if you need to decrease or increase timeouts or change the states, modify the `config/Zed/oms/Subprocess/PaymentAuthorization01.xml` file according to your requirements.
+</details>
 
-For more information about ACP payment methods integration with your project OMS configuration, see [Integrate ACP payment apps with Spryker OMS configuration](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html).
+By default, the timeout for the payment authorization action is set to seven days. This means that if the order is in the `payment authorization pending` state, the OMS waits for a day and then changes the order state to `payment authorization failed`. Another day later, the order is automatically transitioned to the `payment authorization canceled` state.
+
+To decrease or increase timeouts or change the states, update `config/Zed/oms/Subprocess/PaymentAuthorization01.xml`.
+
+For more information on the integration of ACP payment methods with OMS configuration, see [Integrate ACP payment apps with Spryker OMS configuration](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html).
 
 ## Checkout payment step
 
-Implementing the Payment Provider Stripe into your project can be done in many different ways.
+There're multiple ways to implement Stripe. Some of the options:
 
-- You can add it in your headless frontend application using the Glue application.
+- Add Stripe to a headless frontend application using Glue API.
+- Add it as a hosted payment page which redirect the customer after submitting an order.
 
-[//]: # (- You can use the default implementation in the Payment selection page using Yves which shows the Payment Elements then later on the summary page.)
-- You can add it as a hosted payment page which uses a redirect after your customer submits the order.
 
-### Headless implementation
+<!--- You can use the default implementation in the Payment selection page using Yves which shows the Payment Elements then later on the summary page.) -->
 
-This approach should be used when your project is a headless project without an Yves application. Make sure you have the following modules installed in the specified or newer versions:
 
-#### Modules
+### Implement Stripe in a headless application
 
+Use this approach for headless applications with third-party frontends.
+
+#### Install modules
+
+Install or upgrade the modules to the specified or higher versions:
 - `spryker/kernel-app:1.2.0`
 - `spryker/payment:5.24.0`
 - `spryker/payments-rest-api:1.3.0`
 
-#### PreOrder payment flow in a Nutshell
+#### PreOrder payment flow
 
-- The customer either selects Stripe as the payment method or he gets only Stripe Elements presented.
-- When Stripe gets selected the `InitializePreOrderPayment` Glue API endpoint (glue.your-website.com/payments) is called with the Payment Provider name (Stripe), the Payment Method name (Stripe), payment amount, and the Quote data. See example below.
-- Zed now makes the API call to the Stripe App including required authorization.
-- On the Stripe App side the Payment with the given data is persisted and an API call to Stripe is made to get the ClientSecret and the PublishableKey.
-- You will get back a JSON response with the TransactionId, ClientSecret, and the PublishableKey. In a marketplace context you will also get the AccountId.
-- Use the example JavaScript to render the Stripe Elements on the order summary page of your application.
-- Then the customer can select the Payment Method in the Stripe Elements and submits the data.
-- The customer will then be redirected to the provided `return_url` which must make another Glue request (glue.your-website.com/checkout) to persist the order in the backoffice.
-- After this the customer should be redirected to the success page of your application.
-- Through the `\Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin` plugin the PreOrder payment will be confirmed on the Stripe App side. This means that the now know `order_reference` is passed to the StripeApp and will be connected with the `transaction_id`.
-- When the payment was processed on the Stripe App side a `PaymentUpdated` message will be sent to your SCOS application which will contain additional data you can see in the Backoffice.
-- When the Payment is successful you will get a `PaymentAuthorized` AsyncAPI message which will move the order inside the OMS to the next state.
-- When the Payment has failed you will get a `PaymentAuthorizationFailed` AsyncAPI message which will move the order inside the OMS to the next state.
+1. The customer either selects Stripe as the payment method or Stripe Elements is loaded by default.
+2. When Stripe is selected, the `InitializePreOrderPayment` Glue API endpoint (`glue.mysprykershop.com/payments`) is called with the following parameters:
+  * Payment provider name: Stripe
+  * Payment method name: Stripe
+  * Payment amount
+  * Quote data
+3. Zed makes the API call to the Stripe App, including required authorization.
+4. On the Stripe App side, the payment with the given data is persisted, and an API call to Stripe is made to get `ClientSecret` and `PublishableKey` keys.
+5. Stripe returns a JSON response with the following parameters:
+  * TransactionId
+  * ClientSecret
+  * PublishableKey
+  * Only for marketplaces: AccountId
+- Use the example JavaScript to render Stripe Elements on the order summary page.
+6. The customer selects a payment method in Stripe Elements and submits the data.
+7. The customer is redirected to the provided `return_url`, which makes another Glue API request (`glue.mysprykershop.com/checkout`) to persist the order in the Back Office.
+8. The customer is redirected to the success page of your application.
+9. Through the `\Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin` plugin, the PreOrder payment is confirmed on the Stripe App side. The `order_reference` is passed to the StripeApp to be connected with the `transaction_id`.
+10. After the payment is processed on the Stripe App side, a `PaymentUpdated` message is sent to Spryker; the message contains additional data, which you can see in the Back Office.
 
-All Payment related messages will be handled by the `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` which is registered in the `MessageBrokerDependencyProvider`.
+*  When the payment is successful, a `PaymentAuthorized` message is returned through an asynchronous API, which moves the order to the next state in OMS.
+*  When the payment is failed, a `PaymentAuthorizationFailed` message is returned through an asynchronous API, which moves the order to the next state in OMS.
+
+All payment related messages are handled by `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin`, which is registered in `MessageBrokerDependencyProvider`.
 
 From here on the normal order processing through the OMS will take place.
 
-We prepared an example application you can download and use to see how the integration works. You can find the example application [here](https://github.com/spryker-projects/spa-checkout-glue-with-stripe).
+To check out how the integration works, see this [example application](https://github.com/spryker-projects/spa-checkout-glue-with-stripe).
 
-Before you send your customer to the summary page you collect all required data as usual. This includes: customer data, addresses, and selecting a shipment method. When the customer goes to the summary page, you have to call the `InitializePreOrderPayment` Glue API endpoint to get the required data to render the Stripe Elements.
+Before the customer is redirected to the summary page, all required data is collected: customer data, addresses, and selected shipment method. When the customer goes to the summary page, to get the data required for rendering the Stripe Elements, you need to call the `InitializePreOrderPayment` Glue API endpoint.
 
 #### Example
 
-```JAVASCRIPT
+```JS
 
 async initializePreOrderPayment() {
     const requestData = {
@@ -144,7 +162,7 @@ async initializePreOrderPayment() {
             paymentProviderName: 'stripe',  // taken from /checkout-data?include=payment-methods
           },
           preOrderPaymentData: {
-            "transactionId": this.transactionId, // This is empty in the first request but has to be used in further requests 
+            "transactionId": this.transactionId, // This is empty in the first request but has to be used in further requests
           },
         },
       },
@@ -170,9 +188,9 @@ async initializePreOrderPayment() {
 
 ```
 
-Note: Instead of using the `Authorization` also the `X-Anonymous-Customer-Unique-Id` header can be used to identify the customer.
+To identify the customer, you can use the `Authorization` and `X-Anonymous-Customer-Unique-Id` headers.
 
-This creates a Payment on the Stripe App side after the PaymentIntent was created via the Stripe API. The response will look like this:
+After the `PaymentIntent` was created via the Stripe API, a payment is created on the Stripe app side. The response looks as follows:
 
 ```JSON
 {
@@ -191,8 +209,8 @@ This creates a Payment on the Stripe App side after the PaymentIntent was create
 }
 ```
 
-The preOrderPaymentData will be used to render the Stripe Elements on the summary page of your application. Here is the example for this:
-    
+The `preOrderPaymentData` is used to render Stripe Elements on the summary page. Example:
+
 ```JAVASCRIPT
 async setupStripe() {
     const paymentElementOptions = {
@@ -228,14 +246,16 @@ async setupStripe() {
   }
 ```
 
-This sets up the Stripe Elements on the summary page of your application. The customer can now select the Payment Method in the Stripe Elements and submit the data. The customer will then be redirected to the provided `return_url` which must make another Glue request to persist the order in the backoffice. After this the customer should see the success page of your application.
+This sets up Stripe Elements on the summary page of your application. The customer can now select the Payment Method in Stripe Elements and submit the data. Then, the customer is redirected to the provided `return_url`, which makes another Glue API request to persist the order in the Back Office. After this, the customer should see the success page.
 
-When the customer submits the order now, the payment relevant data is sent to Stripe directly. Stripe may redirect to another page e.g. for PayPal or redirect the customer to your specified `return_url`.
+When the customer submits the order, the payment data is sent to Stripe directly. Stripe may redirect them to another page, for example—PayPal, or redirect the customer to the specified `return_url`.
 
 !!! Important
 
-At this point you must make another API call to Glue to persist the order in the backoffice. This is important because the order is not persisted in the backoffice until you make this request. This is because the order is persisted in the backoffice after the payment was successful. An example for this request is:
+Because an order can be persisted in the Back Office only after a successful payment, at this point, another API call must be sent to Glue.
 
+<details>
+  <summary>Request example</summary>
 
 ```JAVASCRIPT
 app.get('/return-url', async (req, res) => {
@@ -290,15 +310,22 @@ app.get('/return-url', async (req, res) => {
 });
 ```
 
-After this the customer should see the success page of your application.
+</details>
+
+After this, the customer should see the success page.
 
 Some remarks:
-- When the customer reloads the summary page which renders the PaymentElements you can either prevent the second request to initiate the preOrder Payment on your end already by e.g. checking if relevant data has changed.
-  - When you are not prevent this, you will make unnecessary API calls. In any case, the Stripe App can handle this properly.
-- When the customer leaves the summary page after the Payment was created on Stripe App side and on Stripe side you will have stale payment without an order in the backoffice.
-- In cases where you want to give the customer the ability to abort the payment process you can cancel the Payment via the Glue API.
+- When the customer reloads the summary page, which renders `PaymentElements`, you can either prevent the second request to initiate the `preOrder Payment` on your end already by e.g. checking if relevant data has changed.
+  - If you don't prevent this, you will make unnecessary API calls. In any case, the Stripe App can handle this properly.
+- When the customer leaves the summary page, the payment is created on the side of Stripe App and Stripe. However, in the Back Office, there is a stale payment without an order.
+- To enable the customer to abort the payment process, you can cancel the Payment using the Glue API.
 
-### Cancel a Payment via Glue API
+
+
+The following request cancels the PaymentIntent on the Stripe side and shows a `canceled` PaymentIntent in the Stripe Dashboard.
+
+<details>
+  <summary>Cancel a Payment using Glue API</summary>
 
 ```JAVASCRIPT
 async cancelPreOrderPayment() {
@@ -342,7 +369,9 @@ async cancelPreOrderPayment() {
   }
 ```
 
-This will cancel the PaymentIntent on the Stripe side and you will a `canceled` PaymentIntent in th Stripe UI.
+</details>
+
+<!--
 
 [//]: # (### Yves integration into Summary Page)
 
@@ -384,7 +413,7 @@ This will cancel the PaymentIntent on the Stripe side and you will a `canceled` 
 
 [//]: # (- When the Payment is successful you will get a `PaymentConfirmed` AsyncAPI message which will move the order inside the OMS to the next state.)
 
-[//]: # (- When the Payment has failed you will get a `PaymentFailed` AsyncAPI message which will move the order inside the OMS to the next state.)
+[//]: # (- When the Payment has failed you will get a `PaymentFailed` AsyncAPI message which will move the order inside the OMS to the next state.) -->
 
 ### Hosted Payment Page
 

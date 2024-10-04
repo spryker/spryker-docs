@@ -268,9 +268,9 @@ use SprykerShop\Yves\PaymentPage\Plugin\PaymentPage\PaymentForeignPaymentCollect
 
 ```
 
-## Configure Glue Application to add new API endpoints
+## Configure Glue application to add new API endpoints
 
-1. In `src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php`, add or update the following plugins:
+In `src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php`, add or update the following plugins:
 
 ```php
 use Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication\PaymentCancellationsResourceRoutePlugin;
@@ -288,7 +288,7 @@ use Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication\PaymentsResourceRoutePlu
             new PaymentsResourceRoutePlugin(),
             new PaymentCancellationsResourceRoutePlugin(),
         ];
-    } 
+    }
 
 ```
 

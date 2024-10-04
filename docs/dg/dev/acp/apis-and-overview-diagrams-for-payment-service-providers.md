@@ -1,81 +1,89 @@
 ---
 title: APIs and overview diagrams for payment service providers
-description: See all APIs and overview diagrams for the Stripe payment service provider integration.
+description: Overview of PSP APIs
 last_updated: Sep 27, 2024
-template: howto-guide-template
+template: concept-topic-template
 related:
    - title: Stripe
      link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/stripe.html
-redirect_from:
-   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
-   - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/install-stripe.html
-   - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/integrate-stripe.html
-
 ---
 
-This document provides an overview of the APIs. All Payment Service Provider (PSP) use a synchronous API together with an asynchronous API.
+This document provides an overview of Payment Service Provider (PSP) APIs. All PSPs use both synchronous and asynchronous APIs.
 
-The following diagram explains the configuration and disconnect flow for a Payment App.
+The following diagram explains the configuration and disconnect flows for a payment app.
 
-PLACE OVERVIEW IMAGE FOR CONFIGURATION/DISCONNECTION FLOW HERE
+![configure-and-disconnect-flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.md/configure-and-disconnect-flows.png)
 
-The optional elements here are the `AddPaymentMethod`, `UpdatePaymentMethod`, `DeletePaymentMethod`, and the `ReadyForMerchantAppOnboarding` messages. The Payment Method related messages are used to manage payment methods in the SCOS. Those messages are only sent when a Payment method configuration changes or when the available payment methods are changed. The `ReadyForMerchantAppOnboarding` message is used to inform SCOS that the App is ready to onboard merchants, this message is send when the App is used in the Marketplace business model.
+The following messages are optional:
+* `AddPaymentMethod`
+* `UpdatePaymentMethod`
+* `DeletePaymentMethod`
+* `ReadyForMerchantAppOnboarding`
 
-The following diagram explains the flow of an Order in the OMS together with an App.
+The Payment Method related messages are used to manage payment methods in Spryker. These messages are sent only when a payment method configuration changes or when the list of available payment methods changes.
 
-PLACE OVERVIEW IMAGE FOR OMS FLOW HERE
+The `ReadyForMerchantAppOnboarding` message is used to inform Spryker that the app is ready to onboard merchants. This message is sent only when the app is used in a marketplace.
 
-The optional elements here are the request to do transfers `/payments/transfers` which is only used in a Marketplace business model, the `CancelPayment` message which is only used when a payment needs to be canceled, and the `RefundPayment` message which is only used when the refund process is triggered for one or more order items.
+The following diagram shows the flow of an order in the OMS together with an app.
 
-The following diagram explains the Hosted Payment Page Flow.
+![oms-payment-flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.md/oms-payment-flow.png)
 
-PLACE OVERVIEW IMAGE FOR HOSTED PAYMENT PAGE HERE
+Optional elements:
+* `/payments/transfers` transfers request: used only in marketplaces.
+* `CancelPayment` message: used only when a payment needs to be canceled.
+* `RefundPayment` message: used only when the refund process is triggered for one or more order items.
 
-The following diagram explains the Headless Payment Page Flow using Glue.
+The following diagram explains the hosted payment page flow.
 
-PLACE OVERVIEW IMAGE FOR HEADLESS PAYMENT PAGE HERE
+![hosted-payment-page-flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.md/hosted-payment-page-flow.png)
 
-The optional element here is the `CancelPreOrderPayment` which can be used to cancel a payment that was created before the order was persisted. This can be used in cases where the customer clicks cancel or in cases where the headless implementation sees the need for canceling.
+The following diagram explains the flow of a headless payment page based on Glue API.
 
-You can find information about endpoints and messages down below.
+![headless-payment-flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.md/headless-payment-flow.png)
 
-[//]: # (Original diagrams can be found here https://miro.com/app/board/uXjVLZYKfE4=/)
+`CancelPreOrderPayment` is an optional element. It's used to cancel a payment that was created before an order was persisted. This can happen when a customer clicks cancel or when the headless implementation requires a cancellation.
+
+For information about endpoints and messages, see the following sections.
 
 ## Asynchronous API
 
-All Payment Service Provider (PSP) integrations are based on the asynchronous API. The asynchronous API is used to process payments and refunds. The following asynchronous messages are used:
+All PSP integrations are based on a asynchronous API. The asynchronous API is used to process payments and refunds. The following asynchronous messages are used:
 
-* `AddPaymentMethod`: Sent from the App when a new payment method is added.
-* `UpdatePaymentMethod`: Sent from the App to SCOS when a payment method is updated.
-* `DeletePaymentMethod`: Sent from the App when a payment method is deleted.
-* `CancelPayment`: Sent from SCOS to initiate the payment cancellation.
-* `CapturePayment`: Sent from SCOS to initiate the payment capture.
-* `RefundPayment`: Sent from SCOS to initiate the payment refund.
-* `PaymentAuthorized`: Sent from the App when the payment is authorized.
-* `PaymentAuthorizationFailed`: Sent from the App when the payment authorization fails.
-* `PaymentCaptured`: Sent from the App when the payment is captured.
-* `PaymentCaptureFailed`: Sent from the App when the payment capture fails.
-* `PaymentRefunded`: Sent from the App when the payment is refunded.
-* `PaymentRefundFailed`: Sent from the App when the payment refund fails.
-* `PaymentCanceled`: Sent from the App when the payment is canceled.
-* `PaymentCancellationFailed`: Sent from the App when the payment cancellation fails.
-* `PaymentCreated`: Sent from the App when the payment is created.
-* `PaymentUpdated`: Sent from the App when the payment is updated.
-* `ReadyForMerchantAppOnboarding`: Sent from the App when the App is ready to onboard merchants.
-* `MerchantAppOnboardingStatusChanged`: Sent from the App when the merchant app onboarding status changes.
-* `AppConfigUpdated`: Sent from the App when the App configuration is updated.
+Sent from the app:
+* `AddPaymentMethod`: A new payment method is added.
+* `UpdatePaymentMethod`: A payment method is updated.
+* `DeletePaymentMethod`: A payment method is deleted.
+* `PaymentAuthorized`: A payment is authorized.
+* `PaymentAuthorizationFailed`: Payment authorization fails.
+* `PaymentCaptured`: Payment is captured.
+* `PaymentCaptureFailed`: Payment capture fails.
+* `PaymentRefunded`: A payment is refunded.
+* `PaymentRefundFailed`: Payment refund fails.
+* `PaymentCanceled`: A payment is canceled.
+* `PaymentCancellationFailed`: Payment cancellation fails.
+* `PaymentCreated`: A payment is created.
+* `PaymentUpdated`: A payment is updated.
+* `ReadyForMerchantAppOnboarding`: App is ready to onboard merchants.
+* `MerchantAppOnboardingStatusChanged`: Merchant app onboarding status changes.
+* `AppConfigUpdated`: App configuration is updated.
+
+Sent from Spryker:
+* `CancelPayment`: Initiates payment cancellation.
+* `CapturePayment`: Initiates payment capture.
+* `RefundPayment`: Initiates payment refund.
+
 
 ## Synchronous API
 
-All Payment Service Provider (PSP) integrations are based on the synchronous API. The synchronous API is used to process payments and refunds. The following endpoints are used:
+All PSP integrations are based on a synchronous API. A synchronous API is used to process payments and refunds. The following endpoints are used:
 
-+ `/configure`: Used from the ACP App Catalog to configure an App.
-+ `/disconnect`: Used from the ACP App Catalog to disconnect an App.
-+ `/initialize-payment`: Used from the SCOS back-end after an order was created and before the hosted payment page is shown to the customer. This will initialize the payment in the PSP App and the PSP App will return the URL to the hosted payment page.
-+ `/payments`: Glue endpoint to initialize the Payment.
-+ `/payment-cancellations`: Glue endpoint to cancel a previous created the Payment.
-+ `/confirm-pre-order-payment`: Used from the SCOS back-end after an order was created in a headless approach where the payment gets created before the order persists. This will connect a previously created (preOrder) Payment on the App side with the order on the Zed side.
-+ `/cancel-pre-order-payment`: Used from the Glue application in a headless approach where a customer clicks cancel or in cases where the headless implementation sees the need for canceling. This will cancel the Payment on the PSP side.
-+ `/payments/transfers`: Used from the Back office/OMS with the App being used in a Marketplace business model. This initiates the transfer of money from the Marketplace to the Merchant.
-+ `/webhooks`: Used from external applications to send requests to an App.
-+ `/webhooks/test`: Used from external applications in test mode to send requests to an App.
+* `/configure`: Used from the ACP app catalog to configure an app.
+* `/disconnect`: Used from the ACP app catalog to disconnect an app.
+* `/initialize-payment`: Used from the Spryker backend after an order was created and before the hosted payment page is shown to the customer. Initialize the payment in the PSP app, and the PSP app returns the URL to the hosted payment page.
+* `/payments`: Glue API endpoint to initialize a payment.
+* `/payment-cancellations`: Glue API endpoint to cancel a previously created payment.
+* `/confirm-pre-order-payment`: Used from the Spryker backend after an order was created using a headless approach where the payment gets created before the order persists. This connects a previously created (preOrder) payment on the app side with the order on the Zed side.
+* `/cancel-pre-order-payment`: Used from the Glue API application in a headless approach when a customer clicks cancel or in case the headless implementation requires a cancellation. This cancels the payment on the PSP side.
+* `/payments/transfers`: Used from the Back Office or OMS with the app being used in a marketplace. This initiates the transfer of money from the marketplace to the merchant.
+* `/webhooks`: Used from external applications to send requests to an app.
+* `/webhooks/test`: Used from external applications in test mode to send requests to an app.

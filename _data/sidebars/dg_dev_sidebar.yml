@@ -1595,6 +1595,8 @@ entries:
         url: /docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html
       - title: Retaining ACP apps when running destructive deployments
         url: /docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html
+      - title: APIs and overview diagrams for payment service providers
+        url: /docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.html        
 #      - title: Develop an app
 #        url: /docs/dg/dev/acp/develop-an-app/develop-an-app.html
 #        nested:

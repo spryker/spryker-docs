@@ -41,12 +41,12 @@ Make sure the following modules have been installed:
 
 1. Add the following configuration:
 
-| CONFIGURATION                                                      | SPECIFICATION                                                      | NAMESPACE                  |
-|--------------------------------------------------------------------|--------------------------------------------------------------------|----------------------------|
-| MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE | Commission price mode configuration for stores in the system.      | Pyz\Zed\MerchantCommission |
-| MerchantCommissionConfig::EXCLUDED_MERCHANTS_FROM_COMMISSION       | The list of merchants who aren't subject to commissions.           | Pyz\Zed\MerchantCommission |
-| RefundConfig::shouldCleanupRecalculationMessagesAfterRefund()      | Sanitizes recalculation messages after refund if set to true.      | Pyz\Zed\Refund             |
-| SalesConfig::shouldPersistModifiedOrderItemProperties()            | Returns true if order items should be updated during order update. | Pyz\Zed\Sales              |
+| CONFIGURATION                                                                       | SPECIFICATION                                                                                                                                                                                                                                                  | NAMESPACE                  |
+|-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
+| MerchantCommissionConfig::isMerchantCommissionPriceModeForStoreCalculationEnabled() | Specifies if `MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE` config should be used for merchant commission calculation. For now using `MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE` for calculation is deprecated. | Pyz\Zed\MerchantCommission |
+| MerchantCommissionConfig::EXCLUDED_MERCHANTS_FROM_COMMISSION                        | The list of merchants who aren't subject to commissions.                                                                                                                                                                                                       | Pyz\Zed\MerchantCommission |
+| RefundConfig::shouldCleanupRecalculationMessagesAfterRefund()                       | Sanitizes recalculation messages after refund if set to true.                                                                                                                                                                                                  | Pyz\Zed\Refund             |
+| SalesConfig::shouldPersistModifiedOrderItemProperties()                             | Returns true if order items should be updated during order update.                                                                                                                                                                                             | Pyz\Zed\Sales              |
 
 2. Configure the merchant commission price mode per store and the excluded merchants from the commission:
 
@@ -62,42 +62,26 @@ use Spryker\Zed\MerchantCommission\MerchantCommissionConfig as SprykerMerchantCo
 class MerchantCommissionConfig extends SprykerMerchantCommissionConfig
 {
     /**
-     * @uses \Spryker\Shared\Calculation\CalculationPriceMode::PRICE_MODE_NET
-     *
-     * @var string
-     */
-    protected const PRICE_MODE_NET = 'NET_MODE';
-
-    /**
-     * @uses \Spryker\Shared\Calculation\CalculationPriceMode::PRICE_MODE_GROSS
-     *
-     * @var string
-     */
-    protected const PRICE_MODE_GROSS = 'GROSS_MODE';
-
-    /**
-     * @var array<string, string>
-     */
-    protected const MERCHANT_COMMISSION_PRICE_MODE_PER_STORE = [
-        'DE' => self::PRICE_MODE_GROSS,
-        'AT' => self::PRICE_MODE_NET,
-        'US' => self::PRICE_MODE_GROSS,
-    ];
-
-    /**
      * @var list<string>
      */
     protected const EXCLUDED_MERCHANTS_FROM_COMMISSION = [
         'MER000001',
     ];
+
+    /**
+     * @return bool
+     */
+    public function isMerchantCommissionPriceModeForStoreCalculationEnabled(): bool
+    {
+        return false;
+    }
 }
 ```
 
 {% info_block warningBox "Verification" %}
 
-To verify that the price modes are properly defined for the stores that will be charging commission from the merchant in
-the marketplace, set the `MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE` configuration.
-The price mode must be set for the stores charging commission from the merchant.
+To verify that the price modes per store configuration is disabled, place an order and trigger the merchant commission calculation step in OMS.
+Merchant commission should be calculated according to the price mode of the order.
 
 To verify that the merchants who aren't subject to commissions are properly defined, set
 the `MerchantCommissionConfig::EXCLUDED_MERCHANTS_FROM_COMMISSION` configuration.

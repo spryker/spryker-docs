@@ -139,6 +139,15 @@ $config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_A
 
 ```
 
+{% info_block warningBox "Verification" %}
+
+After finishing the installation, make sure the following applies:
+* Entries without a translation for a language with a configured fallback are translated into the fallback language.
+* The translation cache is stored under the configured directory.
+* Translations are found based on the configured path pattern.
+
+{% endinfo_block %}
+
 ### Set up an authentication strategy
 
 The following authentication strategies are available by default:
@@ -168,14 +177,7 @@ class SecurityOauthUserConfig extends SprykerSecurityOauthUserConfig
 }
 ```
 
-{% info_block warningBox "Verification" %}
 
-After finishing the installation, make sure the following applies:
-* Entries without a translation for a language with a configured fallback are translated into the fallback language.
-* The translation cache is stored under the configured directory.
-* Translations are found based on the configured path pattern.
-
-{% endinfo_block %}
 
 ### Configure navigation
 
@@ -240,7 +242,7 @@ class UserConfig extends SprykerUserConfig
 
 Set up the following behaviors.
 
-### Set up the admin user login to the Back Office
+### 4.1 Set up the admin user login to the Back Office
 
 1. Activate the following security plugins:
 
@@ -451,13 +453,12 @@ Make sure the following applies:
 
 {% endinfo_block %}
 
-### Set up translation across the Back Office
+### 4.2 Set up translation across the Back Office
 
 1. Activate the following plugins for translation:
 
 | PLUGIN                        | SPECIFICATION                                                                        | PREREQUISITES                                                                                                                                                      | NAMESPACE                                             |
 |-------------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| TranslatorInstallerPlugin     | Regenerates new translation caches for all locales of the current store.             |                                                                                                                                                                | Spryker\Zed\Translator\Communication\Plugin           |
 | TranslationPlugin             | Translates the flash messages provided by the Messenger module.                          |                                                                                                                                                                | Spryker\Zed\Translator\Communication\Plugin\Messenger |
 | TranslatorTwigPlugin          | Extends Twig with Symfony's translation extension and Spryker's translator logic.    |                                                                                                                                                                | Spryker\Zed\Translator\Communication\Plugin\Twig      |
 | UserLocaleLocalePlugin        | Provides the locale of a logged-in user as a current locale.                             | Enable `\Spryker\Zed\Locale\Communication\Plugin\Application\LocaleApplicationPlugin` that sets the locale of the application based on the provided locale plugin. | Spryker\Zed\UserLocale\Communication\Plugin\Locale    |
@@ -465,28 +466,6 @@ Make sure the following applies:
 | LocaleUserExpanderPlugin      | Expands `UserTransfer` with a locale ID and name after reading it from the database. |                                                                                                                                                                | Spryker\Zed\UserLocale\Communication\Plugin\User      |
 | UserLocaleFormExpanderPlugin  | Expands the edit user profile form with a locale field.                              |                                                                                                                                                                | Spryker\Zed\UserLocaleGui\Communication\Plugin        |
 
-**src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
-```php
-<?php
-
-namespace Pyz\Zed\Installer;
-
-use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
-use Spryker\Zed\Translator\Communication\Plugin\TranslatorInstallerPlugin;
-
-class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
-{
-    /**
-     * @return list<\Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface>
-     */
-    public function getInstallerPlugins()
-    {
-        return [
-     		new TranslatorInstallerPlugin(),
-        ];
-    }
-}
-```
 
 2. Execute the registered installer plugins and install infrastructural data:
 
@@ -641,7 +620,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 {% endinfo_block %}
 
-### Add translations
+### 4.3 Add translations
 
 Append the glossary according to your configuration:
 
@@ -652,7 +631,7 @@ security_blocker_backoffice_gui.error.account_blocked,"Too many log in attempts 
 security_blocker_backoffice_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
 ```
 
-### Set up audit logging
+### 4.4 Set up audit logging
 
 1. Activate the following plugins:
 
@@ -701,7 +680,7 @@ user UUID from a current request.
 
 {% endinfo_block %}
 
-### Set up console commands for managing the translation cache
+### 4.5 Set up console commands for managing the translation cache
 
 1. Set up the following console commands:
 
@@ -754,3 +733,45 @@ Ensure that the command has done the following:
 * Generated translator cache files like `catalogue.{YOUR_LOCALE}.{RANDOM_STRING}.php` and `catalogue.{YOUR_LOCALE}.{RANDOM_STRING}.php.meta` in the translation folder, which is `data/{YOUR_STORE}/cache/Zed/translation` by default.
 
 {% endinfo_block %}
+
+## 5) Setup Installer
+
+Installer is a one-time runner that helps to provide initial installation of a Spryker product suit. Usually they run a single time and on a secondary run they might rewrite already set parameters. We should NOT mix it with data importers, that can be run multiple times with incremental results.
+
+In this case installers help to setup required DB data and configuration for the Backoffice function. This is especially helpful for dev and local installations, where a from-scratch installation might happen on a regular basis. For example we want to have a standard admin credentials for dev installations.
+
+Installer plugins should be installed to `src/Pyz/Zed/Installer/InstallerDependencyProvider.php`.
+
+**src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
+```php
+<?php
+
+namespace Pyz\Zed\Installer;
+
+use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
+use Spryker\Zed\Translator\Communication\Plugin\TranslatorInstallerPlugin;
+
+class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface>
+     */
+    public function getInstallerPlugins()
+    {
+        return [
+     		new TranslatorInstallerPlugin(),
+        ];
+    }
+}
+```
+
+Here is the list of helpful installers
+
+| PLUGIN                                 | SPECIFICATION                                                         | PREREQUISITES | NAMESPACE                                  |
+|----------------------------------------|-----------------------------------------------------------------------|---------------|--------------------------------------------|
+| TranslatorInstallerPlugin  | Regenerates new translation caches for all locales of the current store. |           | Spryker\Zed\Translator\Communication\Plugin  |
+| UserInstallerPlugin 	     | Provides default users to Backoffice access (eg admin@spryker.com)                              |           | Spryker\Zed\User\Communication\Plugin  |
+| AclInstallerPlugin  | Installs default groups, roles and promotes default Backoffice user to root group (from UserInstallerPlugin)  |           | Spryker\Zed\Acl\Communication\Plugin  |
+
+UserInstallerPlugin provides a default dev user `admin@spryker.com` with `change123` password.
+

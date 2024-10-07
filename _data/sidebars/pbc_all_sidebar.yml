@@ -1126,6 +1126,10 @@ entries:
                         url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html
                       - title: Install the Promotions & Discounts Glue API
                         url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html
+                      - title: Install the Promotions & Discounts + Order Management feature
+                        url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-order-managemet-feature.html
+                        include_versions:
+                        - "202407.0"
                       - title: Install the Product labels + Promotions & Discounts feature
                         url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-product-labels-feature.html
                       - title: Install the Category Management + Promotions & Discounts feature
@@ -2662,7 +2666,7 @@ entries:
                   - title: Onboard to Stripe in the Merchant Portal
                     url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html
                   - title: OMS configuration
-                    url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/stripe-oms-configuration-in-marketplaces.html                    
+                    url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/stripe-oms-configuration-in-marketplaces.html
 
       - title: Price Management
         url: /docs/pbc/all/price-management/price-management.html
@@ -3426,8 +3430,8 @@ entries:
                     nested:
                       - title: Create marketplace concrete products
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/concrete-products/create-marketplace-concrete-products.html
-                      - title: Manage marketplace concrete products
-                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products.html
+                      - title: Edit marketplace concrete products
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html
                       - title: Manage marketplace concrete product prices
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html
                       - title: Manage marketplace concrete product image sets

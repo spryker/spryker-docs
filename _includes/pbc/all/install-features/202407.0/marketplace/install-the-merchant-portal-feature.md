@@ -2,7 +2,7 @@
 
 {% info_block infoBox "" %}
 
-See [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) to install the Marketplace Merchant Portal Core feature.
+Prerequisite: Before installing this feature, ensure that the Marketplace Merchant Portal Core feature is already installed. For installation instructions, see [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
 
 {% endinfo_block %}
 
@@ -34,7 +34,7 @@ $ npm run mp:build:production
 
 ## Install feature backend
 
-Install the needed packages for the Merchant Portal with dependencies. For available list, in the Srpyker Git Hub repository, search for [`merchant-portal-gui`](https://github.com/spryker/?q=merchant-portal-gui).
+Install the needed packages for the Merchant Portal with dependencies. For available list, in the Spryker Git Hub repository, search for [`merchant-portal-gui`](https://github.com/spryker/?q=merchant-portal-gui).
 
 | NAME                             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                                     |
 |----------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -108,7 +108,7 @@ By default, all newly created merchants and merchant users automatically have a 
   * Give access to merchant users
   * Optional: Deny access for admin roles
 
-To check the available list of packages for the Merchant Portal, in the Srpyker Git Hub repository, search for [`merchant-portal-gui`](https://github.com/spryker/?q=merchant-portal-gui).
+To check the available list of packages for the Merchant Portal, in the Spryker Git Hub repository, search for [`merchant-portal-gui`](https://github.com/spryker/?q=merchant-portal-gui).
 
 <details><summary markdown='span'>src/Pyz/Zed/Acl/AclConfig.php</summary>
 
@@ -359,7 +359,7 @@ composer require spryker/security-gui:"^1.0.0" spryker/security-merchant-portal-
 | User         | vendor/spryker/user          |
 | ZedUi        | vendor/spryker/zed-ui        |
 
-5. Apply changes from https://github.com/spryker-shop/suite/pull/681/files to setup a separate login for Merchant Portal user.
+3. Apply changes from https://github.com/spryker-shop/suite/pull/681/files to integrate the project related code required for Merchant Portal user login.
 
 
 {% info_block warningBox "Verification" %}

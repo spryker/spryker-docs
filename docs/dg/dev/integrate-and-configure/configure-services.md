@@ -469,13 +469,15 @@ It is not obligatory to pass all the details as environment variables or define 
 
 {% endinfo_block %}
 
-## New Relic
+## New Relic APM
 
-[New Relic](https://newrelic.com/) is a tool used to track the performance of services and the environment to quickly find and fix issues.
+[New Relic APM](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-apm/) is a tool used to track the performance of all your applications and microservices to quickly find and fix issues.
 
 The solution consists of a client and a server. The client is used to collect data about applications in an environment and send it to the server for further analysis and presentation. The server is used to aggregate, analyse, and present the data.
 
 ### Prerequisites
+> [!NOTE]
+> To be able to access New Relic APM, you need to get at least one (1) New Relic user license for your organization. Contact [Support](https://spryker.force.com/support/s/) to further explore this option!
 
 * [New Relic license key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/): `NEWRELIC_LICENSE`
 * NewRelic account ID: `NEWRELIC_ACCOUNT_ID`

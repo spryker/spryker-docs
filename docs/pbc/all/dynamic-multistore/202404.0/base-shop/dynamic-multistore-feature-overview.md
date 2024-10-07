@@ -138,16 +138,13 @@ EU region has two stores: DE and AT. US region has one store: US.
 
 - Redis keys contain store as a part of the key name for Dynamic Multistore enabled and disabled modes.
 
-- When Dynamic Multistore is enabled customer can switch between available stores for a region.
+- When Dynamic Multistore is enabled, customers can switch between available stores for a region. When a customer changes a store, it's set to the `_store` query parameter. Using the query parameter, the store is added to session under the `current_store` key. It's used for fetching store-related data.
 
-  When customer changes a store it's set to a query param `_store`.
-
-  Store is read from query param `_store` and set to session under the key `current_store`. It's used for fetching store-related data.
-  ![yves-store-switcher](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/yves-store-switcher.png)
+![yves-store-switcher](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/yves-store-switcher.png)
 
 ## Performance
 
-The number of stores affects data import speed: the more stores you have the slower data import is.
+The number of stores affects data import speed: the more stores you have, the slower data import is.
 
 Take into account data import request body limit when you import data for many stores.
 

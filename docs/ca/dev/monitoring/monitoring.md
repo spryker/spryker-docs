@@ -10,4 +10,5 @@ redirect_from:
 This section explains monitoring via New Relic APM or Headless APM, and describes how to customize AWS CloudWatch dashboards:  
 
 * [Performance and availability monitoring via New Relic](/docs/ca/dev/monitoring/performance-and-availability-monitoring-via-new-relic.html)
+* [Extend Spryker Cloud monitoring via Headless APM](docs/ca/dev/monitoring/extend-spryker-cloud-monitoring-via-headless-apm.md)
 * [Customize AWS CloudWatch dashboards](/docs/ca/dev/monitoring/customize-aws-cloudwatch-dashboards.html)

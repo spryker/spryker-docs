@@ -14,3 +14,5 @@ The **Headless APM** allows you to:
 - **Personalize Application Monitoring**: Seamlessly integrate Spryker into your monitoring platform for a tailored, customized monitoring experience.
 - **Gain Comprehensive Tracing and Health Check Metrics**: Forward traces and health check metrics from both your application and Spryker services to enable precise performance analysis and faster anomaly detection, reducing downtime and improving operational efficiency
 - **Unify Monitoring**: Consolidate all performance data into your existing monitoring platform, ensuring full visibility across your entire eCommerce workflow for accurate end-to-end tracing and faster issue resolution.
+
+To enable the Spryker Monitoring Integration, please contact [Spryker Support](https://spryker.force.com/support/s/).

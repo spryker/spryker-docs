@@ -37,7 +37,26 @@ Add translations as follows:
 1. Append glossary for the feature:
 
 ```
-TODO Add glossary
+product_comparison_page.page_title,Artikel vergleichen,de_DE
+product_comparison_page.page_title,Compare products,en_US
+product_comparison_page.empty_comparison,Vergleichsliste ist leer.,de_DE
+product_comparison_page.empty_comparison,Comparison list is empty.,en_US
+product_comparison_page.clear-compare-list,Vergleichsliste leeren,de_DE
+product_comparison_page.clear-compare-list,Clear the comparison list,en_US
+product_comparison_widget.add_to_comparison.success,Zum Vergleich hinzugefügt,de_DE
+product_comparison_widget.add_to_comparison.success,Added to comparison,en_US
+product_comparison_widget.add_to_comparison.error.max,Das Limit ist bereits erreicht,de_DE
+product_comparison_widget.add_to_comparison.error.max,The limit has already been reached,en_US
+product_comparison_page.add_to_comparison.error.exists,Existiert bereits,de_DE
+product_comparison_page.add_to_comparison.error.exists,Already exist,en_US
+product_comparison_widget.removed_from_the_list,Artikel wurde aus der Vergleichsliste entfernt.,de_DE
+product_comparison_widget.removed_from_the_list,Product was removed from the comparison list.,en_US
+product_comparison_widget.add_to_comparison-list,Vergleichen,de_DE
+product_comparison_widget.add_to_comparison-list,Compare,en_US
+product_comparison_widget.remove_from_comparison-list,Aus Vergleich entfernen,de_DE
+product_comparison_widget.remove_from_comparison-list,Remove from Compare,en_US
+product_comparison_widget.list_link,Artikelvergleich,de_DE
+product_comparison_widget.list_link,Product comparison,en_US
 ```
 
 2. Import data:
@@ -97,10 +116,10 @@ Set up widgets as follows:
 
 1. Register the following plugins to enable widgets:
 
-| PLUGIN                             | SPECIFICATION                                                                | PREREQUISITES | NAMESPACE                                       |
-|------------------------------------|------------------------------------------------------------------------------|---------------|-------------------------------------------------|
-| AddToProductComparisonListWidget   | Displays the `Compare` button for adding product to product comparison list. |               | SprykerShop\Yves\ProductComparisonWidget\Widget |
-| LinkToProductComparisonListWidget  | Displays link to Product Comparison page.                                    |               | SprykerShop\Yves\ProductComparisonWidget\Widget |
+| PLUGIN                                       | SPECIFICATION                                                                                                                  | PREREQUISITES | NAMESPACE                                       |
+|----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------|
+| ComparisonProductTogglerComparisonListWidget | Displays the `Compare` button for adding product to comparison list or `Remove from Compare` button to remove product from it. |               | SprykerShop\Yves\ProductComparisonWidget\Widget |
+| LinkToProductComparisonListWidget            | Displays link to Product Comparison page.                                                                                      |               | SprykerShop\Yves\ProductComparisonWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -109,7 +128,7 @@ Set up widgets as follows:
 
 namespace Pyz\Yves\ShopApplication;
 
-use SprykerShop\Yves\ProductComparisonWidget\Widget\AddToProductComparisonListWidget;
+use SprykerShop\Yves\ProductComparisonWidget\Widget\ComparisonProductTogglerComparisonListWidget;
 use SprykerShop\Yves\ProductComparisonWidget\Widget\LinkToProductComparisonListWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
@@ -121,7 +140,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     protected function getGlobalWidgets(): array
     {
         return [
-            AddToProductComparisonListWidget::class,
+            ComparisonProductTogglerComparisonListWidget::class,
             LinkToProductComparisonListWidget::class,
         ];
     }
@@ -138,9 +157,9 @@ console frontend:yves:build
 
 Verify that the following widgets have been registered by adding the respective code snippets to a Twig template:
 
-| WIDGET                            | VERIFICATION                                                                   |
-|-----------------------------------|--------------------------------------------------------------------------------|
-| AddToProductComparisonListWidget  | Go to the product details page and add a product to a product comparison list. |
-| LinkToProductComparisonListWidget | In top navigation menu make sure that you see `Product comparison` menu item.  |
+| WIDGET                                       | VERIFICATION                                                                   |
+|----------------------------------------------|--------------------------------------------------------------------------------|
+| ComparisonProductTogglerComparisonListWidget | Go to the product details page and add a product to a product comparison list. |
+| LinkToProductComparisonListWidget            | In top navigation menu make sure that you see `Product comparison` menu item.  |
 
 {% endinfo_block %}

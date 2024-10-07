@@ -6,18 +6,18 @@ template: howto-guide-template
 last_updated: Oct 1, 2024
 ---
 
-This document describes how to import a store with related entities.
-
 {% info_block warningBox %}
 
 Dynamic Multistore is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
 {% endinfo_block %}
 
-This document outlines the minimum data set required for a new store, enabling customers to place orders.
+This document describes how to import a store with related entities. This is the minimum data set required for a store to enable customers to place orders.
 
 To add a new store DE for region {REGION} perform data import for the following entities:
-# Store configuration
+
+## Store configuration
+
 - store
 
 **data/import/common/{REGION}/store.csv**
@@ -28,41 +28,41 @@ DE
 AT
 ```
 - country-store
-  
+
 **data/import/common/DE/country_store.csv**
 
 ```csv
 store_name,country
 DE,DE
 ```
-  
+
 - currency-store
-  
+
 **data/import/common/DE/currency_store.csv**
-  
+
 ```csv
 currency_code,store_name,is_default
 EUR,DE,1
 ```
-  
+
 - locale-store
-  
+
 **data/import/common/DE/locale_store.csv**
-  
+
 ```csv
 locale_name,store_name
 en_US,DE
 ```
-  
+
 - default-locale-store
-  
+
 **data/import/common/DE/default_locale_store.csv**
-  
+
 ```csv
 locale_name,store_name
 en_US,DE
 ```
-# CMS entities
+## CMS entities
 
 - cms-block-store
 
@@ -86,7 +86,7 @@ cms-page--2,DE
 cms-page--3,DE
 ```
 
-# Catalog entities
+## Catalog entities
 
 - data/import/common/DE/category_store.csv
 
@@ -135,7 +135,7 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,price_
 002,,DEFAULT,DE,EUR,8999,9999,
 003,,DEFAULT,DE,EUR,5850,6500,
 ```
-# Shipment
+## Shipment
 
 - shipment-type-store
 
@@ -164,7 +164,7 @@ shipment_method_key,store,currency,value_net,value_gross
 spryker_dummy_shipment-standard,DE,EUR,390,490
 spryker_dummy_shipment-express,DE,EUR,490,590
 ```
-# Payment
+## Payment
 
 - payment-method-store
 

@@ -3,6 +3,15 @@ title: Dynamic Multistore
 description: Dynamic Multistore lets you create and manage multiple online stores from the Back Office.
 last_updated: Sep 25, 2024
 template: concept-topic-template
+related:
+   - title: Install Dynamic Multistore
+     link: docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
+   - title: Import minimum set of data for store
+     link: docs/pbc/all/dynamic-multistore/base-shop/import-stores.html
+   - title: Install the Dynamic Multistore Glue API
+     link: docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-the-dynamic-multistore-glue-api.html
+   - title: Install Dynamic Multistore + the Marketplace MerchantPortal Core feature
+     link: docs/pbc/all/dynamic-multistore/marketplace/install-dynamic-multistore-the-marketplace-merchant-portal-core.html    
 ---
 
 The *Dynamic Multistore* feature lets you create and manage multiple stores within the same region in the Back Office. It streamlines the setup and maintenance of distinct stores tailored to various customer segments, regions, or product categories.
@@ -147,13 +156,3 @@ EU region has two stores: DE and AT. US region has one store: US.
 The number of stores affects data import speed: the more stores you have, the slower data import is.
 
 Take into account data import request body limit when you import data for many stores.
-
-## Related documents
-
-- [Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html)
-
-- [Import minimum set of data for store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/import-stores.html)
-
-- [Install the Dynamic Multistore Glue API](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-the-dynamic-multistore-glue-api.html)
-
-- [Install Dynamic Multistore + the Marketplace MerchantPortal Core feature](/docs/pbc/all/dynamic-multistore/{{page.version}}/marketplace/install-dynamic-multistore-the-marketplace-merchant-portal-core.html)

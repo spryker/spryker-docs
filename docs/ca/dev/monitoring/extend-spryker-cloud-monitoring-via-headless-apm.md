@@ -1,3 +1,12 @@
+---
+title: Extend Spryker Cloud Monitoring via Headless APM
+description:
+template: concept-topic-template
+last_updated: Oct 7, 2024
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/performance-and-availability-monitoring-via-new-relic.html
+---
+
 The **Spryker Monitoring Integration**, our Headless APM, integrates Spryker’s monitoring data into your existing APM platform based on the Spryker implementation of the **OpenTelemetry framework**.
 It allows you to unify Spryker’s insights with your monitoring ecosystem, ensuring full visibility across eCommerce workflows, faster issue detection, and alignment with your monitoring best practices.
 

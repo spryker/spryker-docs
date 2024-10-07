@@ -105,14 +105,13 @@ AT
 Configure a new store as described here: [Import configuration for store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#import-data)
 
 
-When you add a new store you should also assign all store-related entities to it for enabling them for customers:
+When you add a new store, to enable store-related entities for customers, you need to assign them to the store. Some of the store related entities:
 - Products
 - Categories
 - CMS entities
 - Prices
-- etc.
 
-To avoid manual assignment of entities in Back Office to the store you can use the data import for store-related entities as well.
+To avoid manually assigning entities in the Back Office, you can assign them using data import. For more details, see
 
 See: [Import minimum set of data for store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/import-stores.html)
 
@@ -121,25 +120,19 @@ See: [Import minimum set of data for store](/docs/pbc/all/dynamic-multistore/{{p
 
 Dynamic Multistore enables the following changes to the project:
 
-In represented examples below there are two regions: EU and US.
+EU and US regions are used as an example.
 
 EU region has two stores: DE and AT. US region has one store: US.
 
-- Urls for Yves, Back Office, Merchant Portal and Glue contain region instead of store name.
+- URLs for Storefront, Back Office, Merchant Portal and Glue API contain region instead of store name. For example–the URL of the Back Office is `https://backoffice.eu.mysprykershop.com` instead of `https://backoffice.de.mysprykershop.com`.
 
-  Example for local environment: https://backoffice.eu.mysprykershop.com instead of https://backoffice.de.mysprykershop.com
+- RabbitMQ virtual hosts contain region instead of store. For example–`eu-docker` instead of `de-docker`.
+![rabbitmq-virtual-hosts-non-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/rabbitmq-virtual-hosts-non-dms.png)
+![rabbitmq-virtual-hosts-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/rabbitmq-virtual-hosts-dms.png)
 
-- RabbitMQ virtual hosts contain region instead of store.
-
-  For example eu-docker instead of de-docker.
-  ![rabbitmq-virtual-hosts-non-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/rabbitmq-virtual-hosts-non-dms.png)
-  ![rabbitmq-virtual-hosts-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/rabbitmq-virtual-hosts-dms.png)
-
-- Jenkins job names contain region instead of store.
-
-  For example EU_queue-worker-start instead of DE_queue-worker-start.
-  ![jenkins-jobs-non-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/jenkins-jobs-non-dms.png)
-  ![jenkins-jobs-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/jenkins-jobs-dms.png)
+- Jenkins job names contain region instead of store. For example–`EU_queue-worker-start` instead of `DE_queue-worker-start`.
+![jenkins-jobs-non-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/jenkins-jobs-non-dms.png)
+![jenkins-jobs-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/jenkins-jobs-dms.png)
 
 - Elasticsearch indexes contain store as a part of the index name for Dynamic Multistore enabled and disabled modes.
 

@@ -734,13 +734,13 @@ Ensure that the command has done the following:
 
 {% endinfo_block %}
 
-## 5) Setup Installer
+## 5) Set up installers
 
-Installer is a one-time runner that helps to provide initial installation of a Spryker product suit. Usually they run a single time and on a secondary run they might rewrite already set parameters. We should NOT mix it with data importers, that can be run multiple times with incremental results.
+An installer is a one-time runner that installs essential elements of an application. Usually, they're run a single time because they can rewrite parameters on subsequent runs. Installers shouldn't be confused with data importers, which can be run multiple times with incremental results.
 
-In this case installers help to setup required DB data and configuration for the Backoffice function. This is especially helpful for dev and local installations, where a from-scratch installation might happen on a regular basis. For example we want to have a standard admin credentials for dev installations.
+In this case, installers set up required database data and Back Office configuration. This is mostly helpful for development and local installations, which are regularly installed from scratch. For example, you might want a default Back Office user to be able to access Back Office after a new project installation.
 
-Installer plugins should be installed to `src/Pyz/Zed/Installer/InstallerDependencyProvider.php`.
+Installer plugins should be added to `src/Pyz/Zed/Installer/InstallerDependencyProvider.php`.
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 ```php
@@ -765,13 +765,10 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-Here is the list of helpful installers
+List of helpful installers:
 
 | PLUGIN                                 | SPECIFICATION                                                         | PREREQUISITES | NAMESPACE                                  |
 |----------------------------------------|-----------------------------------------------------------------------|---------------|--------------------------------------------|
-| TranslatorInstallerPlugin  | Regenerates new translation caches for all locales of the current store. |           | Spryker\Zed\Translator\Communication\Plugin  |
-| UserInstallerPlugin 	     | Provides default users to Backoffice access (eg admin@spryker.com)                              |           | Spryker\Zed\User\Communication\Plugin  |
-| AclInstallerPlugin  | Installs default groups, roles and promotes default Backoffice user to root group (from UserInstallerPlugin)  |           | Spryker\Zed\Acl\Communication\Plugin  |
-
-UserInstallerPlugin provides a default dev user `admin@spryker.com` with `change123` password.
-
+| TranslatorInstallerPlugin  | Regenerates translation caches for all locales of a current store. |           | Spryker\Zed\Translator\Communication\Plugin  |
+| UserInstallerPlugin 	     | Provides default users for the Back Office access. Username: `admin@spryker.com`. Password: `change123`.|           | Spryker\Zed\User\Communication\Plugin  |
+| AclInstallerPlugin  | Installs default groups and roles and promotes the default Back Office user to the root group from `UserInstallerPlugin`.  |           | Spryker\Zed\Acl\Communication\Plugin  |

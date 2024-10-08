@@ -96,7 +96,7 @@ For more information on the integration of ACP payment methods with OMS configur
 There're multiple ways to implement Stripe. Some of the options:
 
 - Add Stripe to a headless frontend application using Glue API.
-- Add it as a hosted payment page which redirect the customer after submitting an order.
+- Add it as a hosted payment page which redirects the customer after submitting an order.
 
 
 <!--- You can use the default implementation in the Payment selection page using Yves which shows the Payment Elements then later on the summary page.) -->
@@ -108,7 +108,7 @@ Use this approach for headless applications with third-party frontends.
 
 #### Install modules
 
-Install or upgrade the modules to the specified or higher versions:
+Install or upgrade the modules to the specified or later versions:
 - `spryker/kernel-app:1.2.0`
 - `spryker/payment:5.24.0`
 - `spryker/payments-rest-api:1.3.0`
@@ -121,37 +121,37 @@ Install or upgrade the modules to the specified or higher versions:
   * Payment method name: Stripe
   * Payment amount
   * Quote data
-3. From the Back Office an API call to the Stripe App is executed. It includes the quote data and the payment amount.
-4. The payment with the given data is persisted On the Stripe App side.
-5. An API call from the Stripe App to Stripe is made to get `ClientSecret` and `PublishableKey` keys.
-5. Stripe returns a JSON response with the following parameters:
+3. Back Office sends the quote data and the payment amount to Stripe app through an API.
+4. The payment with the given data is persisted in the Stripe app.
+5. Stripe app requests `ClientSecret` and `PublishableKey` keys from Stripe through an API.
+6. Stripe returns a JSON response with the following parameters:
   * TransactionId
   * ClientSecret
   * PublishableKey
   * Only for marketplaces: AccountId
-6. Stripe Elements is rendered on the order summary page. See [Example](#example) for rendering Stripe Elements.
-6. The customer selects a payment method in Stripe Elements and submits the data.
-7. The customer is redirected to the provided `return_url`, which makes a Glue API request to persist the order in the Back Office: `glue.mysprykershop.com/checkout`.
-8. The customer is redirected to the success page of your application.
-9. Through the `\Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin` plugin, the PreOrder payment is confirmed on the Stripe App side. The `order_reference` is passed to the Stripe app to be connected with `transaction_id`.
-10. After the payment is processed on the Stripe App side, a `PaymentUpdated` message is sent to Spryker.
+7. Stripe Elements is rendered on the order summary page. See [Example of rendering Stripe Elements on the summary page](#example-of-rendering-stripe-elements-on-the-summary-page) for rendering Stripe Elements.
+8. The customer selects a payment method in Stripe Elements and submits the data.
+9. The customer is redirected to the configured `return_url`, which makes an API request to persist the order in the Back Office: `glue.mysprykershop.com/checkout`.
+10. The customer is redirected to the application's success page.
+11. Stripe app confirms the PreOrder payment using the plugin: `\Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin`.
+  The `order_reference` is passed to the Stripe app to be connected with `transaction_id`.
+12. Stripe app processes the payment and sends a `PaymentUpdated` message to Spryker.
   The message contains additional data, which you can see in the Back Office.
-11. Depending on payment status, one of the following messages is returned through an asynchronous API, which moves the order to the next state in OMS:
-  *  When the payment is successful, a `PaymentAuthorized` message is returned.
-  *  When the payment is failed, a `PaymentAuthorizationFailed` message is returned.
-12. Further on, the order is processed through the OMS.
+13. Depending on payment status, one of the following messages is returned through an asynchronous API:
+  *  Payment is successful: `PaymentAuthorized` message.
+  *  Payment is failed: `PaymentAuthorizationFailed` message.
+14. Further on, the order is processed through the OMS.
 
-All payment related messages mentioned above are handled by the `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin`, which is registered in the `MessageBrokerDependencyProvider`.
+All payment related messages mentioned above are handled by `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin`, which is registered in `MessageBrokerDependencyProvider`.
 
 [//]: # (### Example integration)
 
 [//]: # ()
 [//]: # (To check out how the integration works, see this [example application]&#40;https://github.com/spryker-projects/spa-checkout-glue-with-stripe&#41;.)
 
-[//]: # ()
-[//]: # (Before the customer is redirected to the summary page, all required data is collected: customer data, addresses, and selected shipment method. When the customer goes to the summary page, to get the data required for rendering the Stripe Elements, you need to call the `InitializePreOrderPayment` Glue API endpoint.)
-
 ### Example of the headless checkout with Stripe
+
+Before the customer is redirected to the summary page, all required data is collected: customer data, addresses, and selected shipment method. When the customer goes to the summary page, to get the data required for rendering the Stripe Elements, the application needs to call the `InitializePreOrderPayment` Glue API endpoint.
 
 #### Initialize the PreOrder payment
 
@@ -197,7 +197,7 @@ async initializePreOrderPayment() {
 
 To identify the customer, you can use the `Authorization` and `X-Anonymous-Customer-Unique-Id` headers. You will use the authorization token of a logged in customer or the anonymous customer unique ID for an anonymous customer. This is needed to be able to do the Glue requests.
 
-After the `PaymentIntent` was created via the Stripe API, a payment is created on the Stripe app side. The response looks as follows:
+After a `PaymentIntent` is created using the Stripe API, a payment is created in the Stripe app. The response looks as follows:
 
 ```JSON
 {
@@ -257,7 +257,7 @@ async setupStripe() {
 
 This sets up Stripe Elements on the summary page of your application. The customer can now select the Payment Method in Stripe Elements and submit the data. Then, the customer is redirected to the provided `return_url`, which makes another Glue API request to persist the order in the Back Office. After this, the customer should see the success page.
 
-When the customer submits the order, the payment data is sent to Stripe directly. Stripe may redirect them to another page, for example—PayPal, or redirect the customer to the specified `return_url`. The `return_url` must make another Glue API request to persist the order in the Back Office.
+When the customer submits the order, the payment data is sent to Stripe. Stripe may redirect them to another page, for example — PayPal, or redirect the customer to the specified `return_url`. The `return_url` must make another Glue API request to persist the order in the Back Office.
 
 #### Return URL
 

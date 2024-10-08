@@ -1,7 +1,7 @@
 ---
 title: Install and configure Stripe prerequisites
 description: Learn how to prepare your project for Stripe
-last_updated: Mar 20, 2024
+last_updated: Oct 02, 2024
 template: howto-guide-template
 redirect_from:
 - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
@@ -62,11 +62,11 @@ $config[OmsConstants::PROCESS_LOCATION] = [
 ];
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     //...
-    'ForeignPaymentStateMachine01', # this line must be added or add your modified version of this OMS
+    'ForeignPaymentB2CStateMachine01', # this line must be added or add your modified version of this OMS
 ];
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     //...
-    PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentStateMachine01', # this line must be added or add your modified version of this OMS
+    PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentB2CStateMachine01', # this line must be added or add your modified version of this OMS
 ];
 
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
@@ -292,9 +292,9 @@ use Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication\PaymentsResourceRoutePlu
 
 ```
 
-## Enable CORS
+## Headless application: Enable CORS
 
-When using the headless approach, it is required to configure CORS for the Glue application. You can get more information about this in the [CORS configuration](/docs/pbc/all/miscellaneous/202404.0/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html#configure-cors) article.
+If your application follows a headless design, enable CORS. For instructions, see [Configure CORS](/docs/pbc/all/miscellaneous/202404.0/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html#configure-cors).
 
 
 ## Next step

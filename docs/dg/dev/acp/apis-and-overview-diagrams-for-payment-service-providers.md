@@ -22,7 +22,7 @@ The following messages are optional:
 
 The Payment Method related messages are used to manage payment methods in Spryker. These messages are sent only when a payment method configuration changes or when the list of available payment methods changes.
 
-The `ReadyForMerchantAppOnboarding` message is used to inform Spryker that the app is ready to onboard merchants. This message is sent only when the app is used in a marketplace.
+The `ReadyForMerchantAppOnboarding` message is used to inform Spryker that the app is ready to onboard merchants; used only for marketplace projects.
 
 The following diagram shows the flow of an order in the OMS together with an app.
 
@@ -41,7 +41,7 @@ The following diagram explains the flow of a headless payment page based on Glue
 
 ![headless-payment-flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.md/headless-payment-flow.png)
 
-`CancelPreOrderPayment` is an optional element. It's used to cancel a payment that was created before an order was persisted. This can happen when a customer clicks cancel or when the headless implementation requires a cancellation.
+`CancelPreOrderPayment` is an optional element. It's used to cancel a payment that had been created before an order was persisted. This can happen when a customer clicks cancel or when the headless implementation requires a cancellation.
 
 For information about endpoints and messages, see the following sections.
 

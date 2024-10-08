@@ -108,7 +108,7 @@ Activate the following plugins:
 | CustomerUpdateSessionPostImpersonationPlugin               | Updates customer's session data in storage if a given customer is valid after the session impersonation is started. | None          | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\AgentPage  |
 | UpdateAgentTokenAfterCustomerAuthenticationSuccessPlugin   | Updates agent token after customer authentication success.                                                          | None          | SprykerShop\Yves\AgentPage\Plugin\Security                       |
 
-<details><summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php

@@ -59,7 +59,7 @@ To execute the search and search suggestion requests, follow these steps:
 2. Create a query model—for example, `FactFinderQuery`. The basic version can look like this:
 
 <details>
-<summary markdown='span'>Code sample</summary>
+<summary>Code sample</summary>
 
 ```php
 class FactFinderQuery implements QueryInterface, SearchContextAwareQueryInterface
@@ -142,7 +142,7 @@ To handle search requests through a different source, you need your own model im
 The following is a template for this model:
 
 <details>
-<summary markdown='span'>Code sample:</summary>
+<summary>Code sample:</summary>
 
 ```php
 class FFSearchAdapterPlugin implements SearchAdapterPluginInterface
@@ -260,7 +260,7 @@ The FACT-Finder module provides a response in `FactFinderSdkSearchResponse`, but
 It means that in order to use the FACT-Finder response, you have to comply with the response structure produced there. This will be changed in the future, but for now, you have to implement mapping to the similar response Elasticsearch modules provides.
 You have to respond with an object, supporting an array-based or `get`-based index—for example, creating a JSON object or a transfer object.
 
-<details><summary markdown='span'>Code sample of a response from the search provider:</summary>
+<details><summary>Code sample of a response from the search provider:</summary>
 
 ```json
 {

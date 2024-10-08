@@ -11,7 +11,7 @@ The Stripe integration in Spryker is part of the App Composition Platform and su
 
 ## Supported business models
 
-The Stripe App supports B2B and B2C models.
+The Stripe App supports B2B, B2C, and Marketplace models.
 
 ## Stripe features
 
@@ -43,7 +43,9 @@ However, our team only tested the following payment methods:
 
 ## Current limitations
 
-The Stripe App has limited or no support for multi-capture. Partial capture of payment for orders with multiple items isn't covered. So, payments can’t be partially canceled. One payment intent is created per order, and the payment for the order can either be authorized, captured, or cancelled from Stripe's perespective.
+* The Stripe App has limited or no support for multi-capture. Partial capture of payment for orders with multiple items isn't covered. So, payments can’t be partially canceled. One payment intent is created per order, and the payment for the order can either be authorized, captured, or cancelled from Stripe's side.
+* Payments can be properly canceled only from the the Back Office and not from the Stripe Dashboard. 
+
 
 ## Next step
 

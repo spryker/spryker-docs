@@ -44,7 +44,7 @@ Make sure that the following modules have been installed:
 Add all the payment methods available in the shop to `CheckoutRestApiConfig`—for example:
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
+<summary>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
 
 ```php
 <?php
@@ -149,7 +149,7 @@ For the `checkout-data` endpoint to keep returning shipment methods, keep `Pyz\G
 If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` is true, make sure the shipping method attributes are returned in the `shipmentMethods` after sending the `POST https://glue.mysprykershop.com/checkout-data` request:
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary>Response sample</summary>
 
 ```json
 {
@@ -223,7 +223,7 @@ For the `checkout-data` endpoint to keep returning payment methods, keep `Checko
 If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` is true, make sure the payment methods attributes are returned in the `paymentProviders `attribute after sending the `POST https://glue.mysprykershop.com/checkout-data` request:
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary>Response sample</summary>
 
 ```json
 {
@@ -349,7 +349,7 @@ Activate the following plugins:
 | GuestCartByRestCheckoutDataResourceRelationshipPlugin | Adds `guest-carts` resource as the relationship by `RestCheckoutDataTransfer.quote`. Applies only for guest customers. | None          | Spryker\Glue\CartsRestApi\Plugin\GlueApplication    |
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

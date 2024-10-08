@@ -221,7 +221,7 @@ console propel:install
 1. Extend `DataImportConfig`:
 
 <details>
-<summary markdown='span'>./src/Pyz/Zed/DataImport/DataImportConfig.php</summary>
+<summary>./src/Pyz/Zed/DataImport/DataImportConfig.php</summary>
 
 ```php
 <?php
@@ -265,7 +265,7 @@ class DataImportConfig extends SprykerDataImportConfig
 2. Extend `ConsoleDependencyProvider`:
 
 <details>
-<summary markdown='span'>./src/Pyz/Zed/DataImport/DataImportConfig.php</summary>
+<summary>./src/Pyz/Zed/DataImport/DataImportConfig.php</summary>
 
 ```php
 <?php

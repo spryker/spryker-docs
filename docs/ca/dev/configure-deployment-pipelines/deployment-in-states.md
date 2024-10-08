@@ -48,7 +48,11 @@ The following sections describe the potential issues applications can encounter 
 
 When no pipeline is running, a working application behaves as follows:
 
-![Working application](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/working-application.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.md/working-application.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Build_and_Prepare
 
@@ -56,11 +60,17 @@ In this step, AWS builds the containers for the services that are going to be de
 
 ![Build and Prepare step](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/build-and-prepare-step.jpg)
 
+
 ## Configure_RabbitMQ_Vhosts_and_Permissions
 
 In this step, Rabbit MQ vhosts, users, and permissions are updated. Usually, they are updated rarely, but if they are, while they are being updated, the following may happen:
 
-![Configure RabbitMQ Vhosts and Permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/configure-rabbitmq-step.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.md/configure-rabbitmq-step.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Run_pre-deploy_hook
 
@@ -72,7 +82,12 @@ In this step, the following happens:
 
 While the scripts you defined are running and the scheduler finishes the currently running jobs, requests keep coming in. For this duration, all the services that are in an updated state may respond incorrectly to requests:
 
-![Run pre deploy hook](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/pre-deploy-step.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.md/pre-deploy-step.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Deploy_Scheduler
 
@@ -88,7 +103,11 @@ Scheduler is based on the Zed container, as it uses the codebase of Zed.
 
 During this step, all the services in an updated state may still respond to requests incorrectly:
 
-![Deploy Scheduler step](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/deploy-scheduler-step.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.md/deploy-scheduler-step.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Run_install
 
@@ -107,11 +126,20 @@ vendor/bin/console scheduler:setup -vvv --no-ansi
 
 The scheduler restarts queue workers and updates search and Redis.
 
-![Update search and Redis](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/update-search-and-redis.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.md/update-search-and-redis.mp4" type="video/mp4">
+  </video>
+</figure>
 
 Depending on the amount of data that needs to be processed, this process may take a while. While Redis and search are being updated, they may process requests incorrectly:
 
-![Install step](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/install-step.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.md/install-step.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Deploy_Spryker_services
 
@@ -127,7 +155,11 @@ The services are deployed as follows:
 
 Since this process is uncontrollable, there is a potential timeframe in which the application may run services of V1 and V2 in random combinations. When a service of V1 communicates with a service of V2 or the other way around, it may result in an error.
 
-![Deploy Spryker services step](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/deploy-services-step.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.md/deploy-services-step.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Run_post-deploy_hook
 
@@ -142,4 +174,4 @@ Another powerful technique we recommend is feature flags. They let you enable up
 ## Next steps
 
 
-*   [Deploying in a staging environemnt](/docs/ca/dev/deploy-in-a-staging-environment.html)
+[Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)

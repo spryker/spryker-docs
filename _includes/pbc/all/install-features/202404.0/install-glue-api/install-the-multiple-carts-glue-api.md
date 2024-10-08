@@ -55,8 +55,8 @@ On a project level, install the following plugins:
 | --- | --- | --- | --- |
 | `QuoteCreatorPlugin` | Creates a quote for a customer. | None | `Spryker\Zed\PersistentCart\Communication\Plugin\CartsRestApi` |
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php

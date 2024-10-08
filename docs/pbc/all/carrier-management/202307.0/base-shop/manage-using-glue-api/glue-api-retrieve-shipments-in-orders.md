@@ -46,7 +46,7 @@ To retrieve detailed information about an order, send the following request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve an order with order shipments included</summary>
+<summary>Response sample: retrieve an order with order shipments included</summary>
 
 ```json
 {

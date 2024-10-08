@@ -5,6 +5,15 @@ template: concept-topic-template
 last_updated: Feb 07, 2024
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/monitoring.html
+  - /docs/customizing-aws-cloudwatch-dashboards
+  - /docs/en/customizing-aws-cloudwatch-dashboards
+  - /docs/cloud/dev/spryker-cloud-commerce-os/customizing-aws-cloudwatch-dashboards.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/customize-aws-cloudwatch-dashboards.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/performance-and-availability-monitoring-via-new-relic.html
+  - /docs/ca/dev/monitoring/monitoring.html
+  - /docs/ca/dev/monitoring/performance-and-availability-monitoring-via-new-relic.html
+  - /docs/ca/dev/monitoring/customize-aws-cloudwatch-dashboards.html  
 ---
 
 Every Spryker cloud environment is monitored by the monitoring systems and a dedicated 24/7 team that ensures that environments run stable. If an issue occurs, this team takes action autonomously and informs you about any further actions needed on their or your side. This document explains how monitoring and alerting works.

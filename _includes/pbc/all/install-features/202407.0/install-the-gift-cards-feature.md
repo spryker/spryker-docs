@@ -473,7 +473,7 @@ The `DummyPayment` order state machine example:
 
 
 
-<details><summary markdown='span'>config/Zed/oms/GiftCardSubprocess/CreateGiftCard01.xml</summary>
+<details><summary>config/Zed/oms/GiftCardSubprocess/CreateGiftCard01.xml</summary>
 
 ```html
 <?xml version="1.0"?>
@@ -567,7 +567,7 @@ In this step, you customize your order state machine to place orders with zero p
 
 The `NoPayment` order state machine example:
 
-<details><summary markdown='span'>config/Zed/oms/Nopayment01.xml</summary>
+<details><summary>config/Zed/oms/Nopayment01.xml</summary>
 
 ```html
 <?xml version="1.0"?>
@@ -721,7 +721,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 }
 ```
 
-<details open><summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -827,7 +827,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 }
 ```
 
-<details open><summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1003,7 +1003,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 }
 ```
 
-<details open><summary markdown='span'>src/Pyz/Zed/GiftCard/GiftCardDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/GiftCard/GiftCardDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1153,7 +1153,7 @@ Follow the steps below to install the Gift Cards feature frontend.
 
 Install the required features:
 
-| NAME   | VERSION | INTEGRATE GUIDE |
+| NAME   | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|

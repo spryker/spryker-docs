@@ -46,7 +46,7 @@ A new console command looks as follows:
 
 <details>
 
-<summary markdown='span'>Pyz\Yves\YourModule\Plugin\Console</summary>
+<summary>Pyz\Yves\YourModule\Plugin\Console</summary>
 
 ```php
 <?php

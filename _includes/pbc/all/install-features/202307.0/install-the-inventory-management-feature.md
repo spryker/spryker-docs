@@ -477,7 +477,7 @@ Register the following plugins for warehouse address management:
 | StockAddressStockPostUpdatePlugin | Creates a warehouse address if it's attached to a warehouse update request. <br> Removes an existing warehouse address if it's not attached to a warehouse update request. |  | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
 | StockAddressStockCollectionExpanderPlugin | Expands a warehouse collection with related addresses. |  | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
 
-<details open><summary markdown='span'>Zed/Stock/StockDependencyProvider.php</summary>
+<details><summary>Zed/Stock/StockDependencyProvider.php</summary>
 
 ```php
 <?php

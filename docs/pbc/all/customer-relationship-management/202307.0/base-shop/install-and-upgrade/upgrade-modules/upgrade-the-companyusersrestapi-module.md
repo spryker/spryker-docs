@@ -1,5 +1,5 @@
 ---
-title: Migration guide - CompanyUsersRestApi
+title: Upgrade the CompanyUsersRestApi module
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/companyusersrestapi-migration-guide

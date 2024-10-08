@@ -6,10 +6,6 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-category-filters
 originalArticleId: abf8a3db-7cb2-4220-8d26-995c270b0ff9
 redirect_from:
-  - /2021080/docs/managing-category-filters
-  - /2021080/docs/en/managing-category-filters
-  - /docs/managing-category-filters
-  - /docs/en/managing-category-filters
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-and-filters/managing-category-filters.html
   - /docs/pbc/all/search/202311.0/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/category-filters/assign-and-deassign-filters-from-categories.html
@@ -52,12 +48,26 @@ This topic describes how to assign and deassign filters from categories in the B
 3. Deassign filters via one of the following ways:
     * Deassign all filters by clicking **Remove all**.
     * Next to the filters you want to deassign, click *Remove* <span class="inline-img">![category filter remove icon](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/category-filters/assign-and-deassign-filters-from-categories.md/category-filter-remove-icon.png)</span>.
-![Removing a single filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/remove-single-filter.gif)    
-        This moves the filters to the **INACTIVE FILTERS** section.
+    This moves the filters to the **INACTIVE FILTERS** section.
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.md/remove-single-filter.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
+
 4. Click **Save**.    
     This refreshes the page with a success message displayed.    
 
 
 **Tips and tricks**
 To reassign a filter you've just deassigned, in the **INACTIVE FILTERS** pane, click *reassign* next to the needed filter.
-![Add a removed filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/add-removed-filter.gif)
+
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.md/add-removed-filter.mp4" type="video/mp4">
+  </video>
+</figure>

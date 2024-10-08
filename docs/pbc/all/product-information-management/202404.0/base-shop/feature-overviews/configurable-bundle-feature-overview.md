@@ -227,7 +227,7 @@ The product splitting logic does not support [packaging units](/docs/pbc/all/pro
 ## Configurable Bundle on the Storefront
 
 The Configurable Bundle feature looks as follows on the Storefront:
-![Configuring a bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configuring-a-bundle.gif)
+![Configuring a bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/feature-overviews/configurable-bundle-feature-overview.md/configuring-a-bundle.mp4)
 
 ### Current constraints
 
@@ -259,7 +259,7 @@ The feature has the following functional constraints which are going to be resol
 |---------|---------|---------|---------|
 | [Install the Configurable Bundle feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html) | [ConfigurableBundle migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-configurablebundle-module.html) | [Retrieving configurable bundle templates](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html) | [HowTo: Render configurable bundle templates in the Storefront](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html)  |
 | [Install the Merchant Product Restrictions feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html) | [ConfigurableBundleStorage migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-configurablebundlestorage-module.html) |   |   |
-| [Product Lists + Catalog feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html)  | [ProductListGui migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlistgui-module.html) |   |   |
+| [Install the Product Lists + Catalog feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html)  | [ProductListGui migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlistgui-module.html) |   |   |
 | [Install the Prices feature](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)  | [MerchantRelationshipProductListGui migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-merchantrelationshipproductlistgui-module.html)  |   |   |
 | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |   |   |   |
 | [Install the Product Images + Configurable Bundle feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html)  |   |   |   |

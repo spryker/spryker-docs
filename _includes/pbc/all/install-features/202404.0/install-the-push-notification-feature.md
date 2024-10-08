@@ -159,7 +159,7 @@ $config[PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY] = getenv('SPRYKE
 $config[PushNotificationWebPushPhpConstants::VAPID_SUJECT] = getenv('SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_SUBJECT');
 ```
 
-3. Add the VAPID keys to the needed deploy file:
+3. Add the VAPID keys to the needed local deploy file:
 
 ```yml
 
@@ -187,6 +187,8 @@ web-push generate-vapid-keys --json
 ```
 
 {% endinfo_block %}
+
+4. Add the variables you've added in step 3 to Parameter Store. For instructions, see [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html)
 
 ### 4) Add translations
 
@@ -238,7 +240,7 @@ console data:import glossary
 | PushNotificationWebPushPhpPushNotificationSenderPlugin                 | Sends the push notification collection.               |               | Spryker\Zed\PushNotificationWebPushPhp\Communication\Plugin\PushNotification |
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/PushNotification/PushNotificationDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/PushNotification/PushNotificationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -426,8 +428,8 @@ mkdir push_notification_spa
 </html>
 ```
 
-<details open>
-<summary markdown='span'>.../push_notification_spa/app.js</summary>
+<details>
+<summary>.../push_notification_spa/app.js</summary>
 
 ```js
 document.addEventListener('DOMContentLoaded', () => {

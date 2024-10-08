@@ -101,7 +101,7 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
 2. Add all the payment methods available in the shop to `CheckoutRestApiConfig`—for example:
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
+<summary>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
 
 ```php
 <?php
@@ -207,7 +207,7 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
 If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` is true, make sure the `checkout-data` endpoint returns shipping methods in the `shipmentMethods` attribute.
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary>Response sample</summary>
 
 ```json
 {
@@ -281,7 +281,7 @@ For the `checkout-data` endpoint to keep returning payment methods, keep `Checko
 If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` is true, make sure the `checkout-data` endpoint returns payment methods in the `paymentProviders` attribute.
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary>Response sample</summary>
 
 ```json
 {
@@ -407,7 +407,7 @@ Activate the following plugins:
 | GuestCartByRestCheckoutDataResourceRelationshipPlugin | Adds `guest-carts` resource as the relationship by `RestCheckoutDataTransfer.quote`. Applies only to guest customers. | None          | Spryker\Glue\CartsRestApi\Plugin\GlueApplication    |
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

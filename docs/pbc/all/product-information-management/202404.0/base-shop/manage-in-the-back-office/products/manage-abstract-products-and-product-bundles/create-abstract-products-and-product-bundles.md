@@ -18,7 +18,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html
   - /docs/scos/user/back-office-user-guides/202108.0/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html  
-  - /docs/scos/user/back-office-user-guides/202108.0/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html 
+  - /docs/scos/user/back-office-user-guides/202108.0/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html
   - /docs/marketplace/user/back-office-user-guides/202204.0/catalog/products/abstract-products/creating-abstract-products.html
 related:
   - title: Creating Product Variants
@@ -92,7 +92,12 @@ On the **Price & Tax** tab, do the following:
 
 If you want to display the difference in price in order to show what the price was before and how it changed, you add both default and original prices.
 The default prices are displayed in the online store as a current price, while the original one is displayed as a strikethrough.
-![Default and Original prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Products:+Reference+Information/default-and-original-prices.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.md/default-and-original-prices.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Define product variants
 
@@ -113,7 +118,11 @@ On the **Variants** tab, depending on the product type, do one of the following:
     3. Repeat the previous step until you select at least one value for each selected super attribute.  
     4. Click **Next >** and follow [Define meta information](#optional-define-meta-information).
 
-    ![Defining product variants](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+user+guide/Catalog/Products/Abstract+products/Creating+abstract+products/defining-product-variants.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.md/defining-product-variants.mp4" type="video/mp4">
+  </video>
+</figure>    
 
 ### Reference information: Define product variants
 

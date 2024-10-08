@@ -202,8 +202,6 @@ entries:
       - title: Get an overview of the used plugins
         url: /docs/dg/dev/backend-development/plugins/get-an-overview-of-the-used-plugins.html
 
-    - title: Session handlers
-      url: /docs/dg/dev/backend-development/session-handlers.html
     - title: Session management
       url: /docs/dg/dev/backend-development/session-management.html
     - title: Running production
@@ -357,13 +355,21 @@ entries:
           url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/spryker-os-module-customisation.html
           nested:
           - title: Extend a core module that is used by another
-            url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
+            url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another-module.html
           - title: Extend the core
             url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
           - title: Extend the Spryker Core functionality
             url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
           - title: Install module structure and configuration
             url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/install-module-structure-and-configuration.html
+
+    - title: Audit logs
+      url: /docs/dg/dev/backend-development/audit-logs/audit-logs.html
+      nested:
+        - title: Add audit log types
+          url: /docs/dg/dev/backend-development/audit-logs/add-audit-log-types.html
+        - title: Extend the audit log structure
+          url: /docs/dg/dev/backend-development/audit-logs/extend-the-audit-log-structure.html
 
     - title: Zed UI tables
       url: /docs/dg/dev/backend-development/zed-ui-tables/zed-ui-tables.html
@@ -1142,6 +1148,10 @@ entries:
       url: /docs/dg/dev/data-import/data-import-optimization-guidelines.html
     - title: Implementing data installers
       url: /docs/dg/dev/data-import/implementing-data-installers.html
+    - title: Implement incremental installers
+      url: /docs/dg/dev/data-import/implement-incremental-installers.html
+      include_versions:
+      - "202404.0"
 
   - title: Guidelines
     url: /docs/dg/dev/guidelines/guidelines.html
@@ -1573,16 +1583,18 @@ entries:
   - title: App Composition Platform
     url: /docs/dg/dev/acp/app-composition-platform.html
     nested:
-      - title: ACP security assessment
-        url: /docs/dg/dev/acp/aop-security-assessment.html
-      - title: ACP security tips
+      - title: Security assessment
+        url: /docs/dg/dev/acp/acp-security-assessment.html
+      - title: Security tips
         url: /docs/dg/dev/acp/acp-security-tips.html
-      - title: SCCOS dependencies required for the ACP
-        url: /docs/dg/dev/acp/sccos-dependencies-required-for-the-acp.html
-      - title: Receive ACP messages in SCCOS
+      - title: Install prerequisites and enable ACP
+        url: /docs/dg/dev/acp/install-prerequisites-and-enable-acp.html
+      - title: Receive ACP messages
         url: /docs/dg/dev/acp/receive-acp-messages.html
       - title: Integrate ACP payment apps with Spryker OMS configuration
         url: /docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html
+      - title: Retaining ACP apps when running destructive deployments
+        url: /docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html
 #      - title: Develop an app
 #        url: /docs/dg/dev/acp/develop-an-app/develop-an-app.html
 #        nested:
@@ -1623,6 +1635,23 @@ entries:
 
   - title: Code contribution guide
     url: /docs/dg/dev/code-contribution-guide.html
+  - title: Developing standalone modules
+    url: /docs/dg/dev/developing-standalone-modules/developing-standalone-modules.html
+    nested:
+      - title: Prepare
+        url: /docs/dg/dev/developing-standalone-modules/prepare-for-standalone-module-development.html
+      - title: Create
+        url: /docs/dg/dev/developing-standalone-modules/create-standalone-modules.html
+      - title: Ensuring quality
+        url: /docs/dg/dev/developing-standalone-modules/ensuring-quality-in-standalone-modules.html
+      - title: Publish on GitHub
+        url: /docs/dg/dev/developing-standalone-modules/publish-standalone-modules-on-github.html
+      - title: Test the compatibility
+        url: /docs/dg/dev/developing-standalone-modules/test-the-compatibility-of-standalone-modules.html
+      - title: Drive usage
+        url: /docs/dg/dev/developing-standalone-modules/driving-the-usage-of-standalone-modules.html
+      - title: Publish on Packagist
+        url: /docs/dg/dev/developing-standalone-modules/publish-standalone-modules-on-packagist.html
   - title: Code generator
     url: /docs/dg/dev/code-generator.html
   - title: Example modules

@@ -1,5 +1,5 @@
 ---
-title: Product Bundles feature integration
+title: Install the Product Bundles feature
 description: Learn how to integrate the Product bundles feature into a Spryker project.
 last_updated: Jun 17, 2021
 template: feature-integration-guide-template
@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/product-bundles-feature-integration.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html
 related:
-  - title: Glue API - Product Bundles feature integration
+  - title: Install the Product Bundles Glue API
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html
 ---
 

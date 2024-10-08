@@ -255,8 +255,8 @@ Activate the following plugins:
 |ConcreteProductsProductImageSetsResourceRelationshipPlugin |Adds the `concrete-product-image-sets` resource as a relationship to the `concrete-products` resource. |None |Spryker\Glue\ProductImageSetsRestApi\Plugin\Relationship|
 
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -337,8 +337,8 @@ Activate the following plugins:
 
 
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```json
 <?php
@@ -454,8 +454,8 @@ Ensure that the relationship has been registered correctly:
 
 2.  The response should contain the `category-nodes` resource as a relationship.
 
-<details open>
-<summary markdown='span'>Response sample</summary>
+<details>
+<summary>Response sample</summary>
 
 ```json
 {  

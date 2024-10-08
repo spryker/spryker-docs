@@ -60,7 +60,7 @@ To search by customers, send the request:
 
 ### Response
 
-<details><summary markdown='span'>Response sample: return the list of all customers</summary>
+<details><summary>Response sample: return the list of all customers</summary>
 
 ```json
 {
@@ -147,7 +147,7 @@ To search by customers, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: search for a customer with page limit and page offset</summary>
+<details><summary>Response sample: search for a customer with page limit and page offset</summary>
 
 ```json
 {
@@ -205,7 +205,7 @@ To search by customers, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: search for a customer by email address</summary>
+<details><summary>Response sample: search for a customer by email address</summary>
 
 ```json
 {
@@ -237,7 +237,7 @@ To search by customers, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: search for a customer by name</summary>
+<details><summary>Response sample: search for a customer by name</summary>
 
 ```json
  {
@@ -269,7 +269,7 @@ To search by customers, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: search for a customer by customer reference</summary>
+<details><summary>Response sample: search for a customer by customer reference</summary>
 
 ```json
 {

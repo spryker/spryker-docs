@@ -20,6 +20,8 @@ Install the required features:
 
 ### 1) Install the required modules
 
+Install the required modules using Composer:
+
 ```bash
 composer require spryker-feature/marketplace-merchantportal-core:"{{page.version}}" --update-with-dependencies
 composer require spryker/security-merchant-portal-gui-extension
@@ -238,7 +240,7 @@ Set up the following behaviors.
 | BooleanToStringTwigPlugin                                        | Adds a Twig function for converting Boolean to String.                                                                  |               | Spryker\Zed\ZedUi\Communication\Plugin\Twig                                      |
 | ZedUiNavigationTwigPlugin                                        | Adds a Twig function for rendering the navigation using web components.                                                 |               | Spryker\Zed\ZedUi\Communication\Plugin                                           |
 | MerchantNavigationTypeTwigPlugin                                 | Adds `mainMerchantNavigationType` and `secondaryMerchantNavigationType` Twig global variables.                          |               | Spryker\Zed\MerchantPortalApplication\Communication\Plugin\Twig                  |
-| GuiTableApplicationPlugin                                        | Enables the GuiTable infrastructure for Zed.                                                                            |               | Spryker\Zed\GuiTable\Communication\Plugin\Application                            |
+| GuiTableApplicationPlugin                                        | Enables the GuiTable infrastructure for the Back Office.                                                                            |               | Spryker\Zed\GuiTable\Communication\Plugin\Application                            |
 | GuiTableConfigurationTwigPlugin                                  | Adds a Twig function for rendering `GuiTableConfiguration` for the `GuiTable` web component.                            |               | Spryker\Zed\GuiTable\Communication\Plugin\Twig                                   |
 | MerchantUserSecurityTokenUpdateMerchantUserPostChangePlugin      | Rewrites the Symfony security token for merchant users with `MerchantUser` and without `IS_IMPERSONATOR` roles granted. |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui |
 | MerchantPortalConfigurationAclEntityMetadataConfigExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with event behavior composite data.                      |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity                     |
@@ -354,7 +356,7 @@ class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that merchant users or users whose ACL group does't have a Back Office allowed ACL group reference can't log into the Back Office.
+Make sure that merchant users and users whose ACL group doesn't have a Back Office allowed ACL group reference can't log into the Back Office.
 
 {% endinfo_block %}
 
@@ -534,7 +536,7 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
 | PropelApplicationPlugin               | Initializes `PropelOrm` to be used in Zed.                                                                                                |               | Spryker\Zed\Propel\Communication\Plugin\Application          |
 | MerchantPortalRouterApplicationPlugin | Adds the `Router` service.                                                                                                                    |               | Spryker\Zed\Router\Communication\Plugin\Application          |
 | HttpApplicationPlugin                 | Sets the trusted proxies and host. Sets the `cookies` service identifier. Adds `HttpKernel`, `RequestStack`, and `RequestContext` to the container. |               | Spryker\Zed\Http\Communication\Plugin\Application            |
-| ErrorHandlerApplicationPlugin         | Register the `Whoops` error handler which provides a pretty error interface when enabled.                                                 |               | Spryker\Zed\ErrorHandler\Communication\Plugin\Application    |
+| ErrorHandlerApplicationPlugin         | Register the `Whoops` error handler, which provides a pretty error interface when enabled.                                                 |               | Spryker\Zed\ErrorHandler\Communication\Plugin\Application    |
 | FormApplicationPlugin                 | Adds the `form.factory` service, `form.csrf_provider` service, and the global `FORM_FACTORY` service as an alias for `form.factory`.                    |               | Spryker\Zed\Form\Communication\Plugin\Application            |
 | ValidatorApplicationPlugin            | Adds the `validator` service.                                                                                                                   |               | Spryker\Zed\Validator\Communication\Plugin\Application       |
 | GuiTableApplicationPlugin             | Enables the `GuiTable` infrastructure for Zed.                                                                                                    |               | Spryker\Zed\GuiTable\Communication\Plugin\Application        |
@@ -906,14 +908,14 @@ wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/ma
 wget -O tsconfig.json https://raw.githubusercontent.com/spryker-shop/suite/master/tsconfig.json
 ```
 
-3. In `tslint.json`, add the following to the exclude option:
-* `src/Pyz/Zed/*/Presentation/Components/**`
-* `vendor/**`
-* `**/node_modules/**`
+3. In `tslint.json`, add the following paths to exclude:
+  * `src/Pyz/Zed/*/Presentation/Components/**`
+  * `vendor/**`
+  * `**/node_modules/**`
 
 4. Add the `.eslintrc.mp.json` file:
 
-```bash
+```json
 wget -O .eslintrc.mp.json https://raw.githubusercontent.com/spryker-shop/suite/master/.eslintrc.mp.json
 ```
 
@@ -989,16 +991,17 @@ Run `ng --version` and make sure the version is 15.0.3.
 npm install
 ```
 
-{% info_block infoBox "" %}
+{% info_block infoBox "Troubleshooting" %}
 
-If you're getting `Missing write access to node_modules/mp-profile`, delete the `node_modules/mp-profile` file and create a *folder* with the same name.
+* Error: `Missing write access to node_modules/mp-profile`
+* Solution: Delete the `node_modules/mp-profile` file and create a *folder* with the same name.
 
 {% endinfo_block %}
 
 
 {% info_block warningBox "Verification" %}
 
-Check if the marketplace packages are located in the `node_modules/@spryker` folder—for example, utils.
+Check if the marketplace packages are located in the `node_modules/@spryker` folder—for example, `utils`.
 
 {% endinfo_block %}
 
@@ -1201,7 +1204,7 @@ rm -rf node_modules && npm cache clean --force && npm install && npm run mp:buil
 
 To configure the deployment configuration to automatically install and build the Merchant Portal, change frontend dependencies and installation commands in the needed deployment file:
 
-1. Remove the following Yves dependency installation commands: `dependencies-install` and `yves-isntall-dependencies`.
+1. Remove Yves dependency installation commands: `dependencies-install` and `yves-isntall-dependencies`.
 2. Add the following console commands:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
@@ -1626,7 +1629,8 @@ To adjust environment infrastructure, take the following steps.
 
 * To set up a docker container, update the needed deploy file. Example:
 
-**deploy.dev.yml**
+<details>
+  <summary>deploy.dev.yml</summary>
 
 ```yaml
 ...
@@ -1670,9 +1674,12 @@ groups:
                                 namespace: 9
 ```
 
+</details>
+
 ### 2) Create a database user for the Merchant Portal
 
-Grant only default CRUD operations: `INSERT`, `DELETE`, `UPDATE`, and `SELECT`. Don't grant `ALL PRIVILEGES`, `GRANT OPTION`, `DROP`, `CREATE`, and other admin-related grants.
+* Grant only default CRUD operations: `INSERT`, `DELETE`, `UPDATE`, and `SELECT`.
+* Don't grant `ALL PRIVILEGES`, `GRANT OPTION`, `DROP`, `CREATE`, and other admin-related grants.
 
 Create a user for a MySQL database:
 
@@ -1749,7 +1756,9 @@ $config[PropelConstants::ZED_DB_PASSWORD] = getenv('SPRYKER_DB_PASSWORD');
 
 * The Merchant Portal login page is available at `https://your-merchant-portal.domain/security-merchant-portal-gui/login`.
 
-* The following pages *are not* available: `https://your-merchant-portal.domain/security-gui/login` and `https://your-merchant-portal.domain/`.
+* The following pages *are not* available:
+  * `https://your-merchant-portal.domain/security-gui/login`
+  * `https://your-merchant-portal.domain/`.
 
 {% endinfo_block %}
 

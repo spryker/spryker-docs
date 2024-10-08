@@ -1,18 +1,15 @@
 
 
-{% info_block infoBox "" %}
+## Prerequisites
 
-Prerequisite: Before installing this feature, ensure that the Marketplace Merchant Portal Core feature is already installed. For installation instructions, see [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
-
-{% endinfo_block %}
-
-
-## Environment requirements
-
+Environment requirements:
 - [Node.js](https://nodejs.org/en/download/) version 18 or higher.
 - [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) version 9 or higher.
 - Spryker supported PHP version 8.0
 - Host for Zed application
+
+Application requirement: [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
+
 
 ## Install frontend dependencies
 
@@ -108,7 +105,7 @@ By default, all newly created merchants and merchant users automatically have a 
   * Give access to merchant users
   * Optional: Deny access for admin roles
 
-To check the available list of packages for the Merchant Portal, in the Spryker Git Hub repository, search for [`merchant-portal-gui`](https://github.com/spryker/?q=merchant-portal-gui).
+To check the available list of packages for the Merchant Portal, in the Spryker GitHub repository, search for [`merchant-portal-gui`](https://github.com/spryker/?q=merchant-portal-gui).
 
 <details><summary markdown='span'>src/Pyz/Zed/Acl/AclConfig.php</summary>
 
@@ -359,7 +356,7 @@ composer require spryker/security-gui:"^1.0.0" spryker/security-merchant-portal-
 | User         | vendor/spryker/user          |
 | ZedUi        | vendor/spryker/zed-ui        |
 
-3. Apply changes from https://github.com/spryker-shop/suite/pull/681/files to integrate the project related code required for Merchant Portal user login.
+3. To integrate the project related code required for Merchant Portal user login, apply the changes from [MR-222 nonsplit to split merge](https://github.com/spryker-shop/suite/pull/681/files).
 
 
 {% info_block warningBox "Verification" %}

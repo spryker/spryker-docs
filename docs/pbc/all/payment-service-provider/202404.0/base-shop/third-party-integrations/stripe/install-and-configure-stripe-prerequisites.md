@@ -1,7 +1,7 @@
 ---
 title: Install and configure Stripe prerequisites
 description: Learn how to prepare your project for Stripe
-last_updated: Mar 20, 2024
+last_updated: Oct 02, 2024
 template: howto-guide-template
 redirect_from:
 - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
@@ -62,11 +62,11 @@ $config[OmsConstants::PROCESS_LOCATION] = [
 ];
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     //...
-    'ForeignPaymentStateMachine01', # this line must be added or add your modified version of this OMS
+    'ForeignPaymentB2CStateMachine01', # this line must be added or add your modified version of this OMS
 ];
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     //...
-    PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentStateMachine01', # this line must be added or add your modified version of this OMS
+    PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentB2CStateMachine01', # this line must be added or add your modified version of this OMS
 ];
 
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [

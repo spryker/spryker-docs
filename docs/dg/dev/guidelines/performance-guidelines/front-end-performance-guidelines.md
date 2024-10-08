@@ -8,7 +8,6 @@ originalArticleId: 1fbe7f78-9c86-4d16-8537-8de11f742f1c
 redirect_from:
   - /docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
   - /docs/scos/dev/guidelines/front-end-performance-guidelines.html
-  - /docs/scos/dev/tuning-up-performance/202204.0/performance-guidelines.html#frontend-performance
 related:
   - title: General performance guidelines
     link: docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html

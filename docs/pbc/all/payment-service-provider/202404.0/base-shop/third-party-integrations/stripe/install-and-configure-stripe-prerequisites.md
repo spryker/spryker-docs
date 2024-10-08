@@ -292,6 +292,10 @@ use Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication\PaymentsResourceRoutePlu
 
 ```
 
+## Enable CORS
+
+When using the headless approach, it is required to configure CORS for the Glue application. You can get more information about this in the [CORS configuration](/docs/pbc/all/miscellaneous/202404.0/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html#configure-cors) article.
+
 
 ## Next step
 

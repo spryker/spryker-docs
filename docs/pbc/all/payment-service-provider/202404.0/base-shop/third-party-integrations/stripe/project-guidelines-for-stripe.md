@@ -121,9 +121,9 @@ Install or upgrade the modules to the specified or higher versions:
   * Payment method name: Stripe
   * Payment amount
   * Quote data
-3. Zed makes the API call to the Stripe App, including required authorization.
+3. From the Back Office an API call to the Stripe App is executed. It includes the quote data and the payment amount.
 4. The payment with the given data is persisted On the Stripe App side.
-5. An API call to Stripe is made to get `ClientSecret` and `PublishableKey` keys.
+5. An API call from the Stripe App to Stripe is made to get `ClientSecret` and `PublishableKey` keys.
 5. Stripe returns a JSON response with the following parameters:
   * TransactionId
   * ClientSecret
@@ -141,8 +141,9 @@ Install or upgrade the modules to the specified or higher versions:
   *  When the payment is failed, a `PaymentAuthorizationFailed` message is returned.
 12. Further on, the order is processed through the OMS.
 
+All payment related messages mentioned above are handled by the `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin`, which is registered in the `MessageBrokerDependencyProvider`.
 
-All payment related messages are handled by `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin`, which is registered in `MessageBrokerDependencyProvider`.
+### Example integration
 
 To check out how the integration works, see this [example application](https://github.com/spryker-projects/spa-checkout-glue-with-stripe).
 

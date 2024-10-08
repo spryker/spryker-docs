@@ -145,13 +145,17 @@ When Stripe is integrated into a headless application, orders are processed usin
 
 All payment related messages mentioned above are handled by `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin`, which is registered in `MessageBrokerDependencyProvider`.
 
-#### Example integration
+[//]: # (### Example integration)
 
-To check out how the integration works, see this [example application](https://github.com/spryker-projects/spa-checkout-glue-with-stripe).
+[//]: # ()
+[//]: # (To check out how the integration works, see this [example application]&#40;https://github.com/spryker-projects/spa-checkout-glue-with-stripe&#41;.)
+
+### Example of the headless checkout with Stripe
 
 Before the customer is redirected to the summary page, all required data is collected: customer data, addresses, and selected shipment method. When the customer goes to the summary page, to get the data required for rendering the Stripe Elements, the application needs to call the `InitializePreOrderPayment` Glue API endpoint.
 
-Example of rendering Stripe Elements on the summary page:
+#### Initialize the PreOrder payment
+
 ```JS
 
 async initializePreOrderPayment() {
@@ -192,7 +196,7 @@ async initializePreOrderPayment() {
 
 ```
 
-To identify the customer, you can use the `Authorization` and `X-Anonymous-Customer-Unique-Id` headers.
+To identify the customer, you can use the `Authorization` and `X-Anonymous-Customer-Unique-Id` headers. You will use the authorization token of a logged in customer or the anonymous customer unique ID for an anonymous customer. This is needed to be able to do the Glue requests.
 
 After a `PaymentIntent` is created using the Stripe API, a payment is created in the Stripe app. The response looks as follows:
 
@@ -213,7 +217,9 @@ After a `PaymentIntent` is created using the Stripe API, a payment is created in
 }
 ```
 
-`preOrderPaymentData` is used to render Stripe Elements on the summary page. Example:
+#### Render the Stripe Elements on the summary page
+
+The `preOrderPaymentData` from the previous example is used to render Stripe Elements on the summary page:
 
 ```JAVASCRIPT
 async setupStripe() {
@@ -252,11 +258,11 @@ async setupStripe() {
 
 This sets up Stripe Elements on the summary page of your application. The customer can now select the Payment Method in Stripe Elements and submit the data. Then, the customer is redirected to the provided `return_url`, which makes another Glue API request to persist the order in the Back Office. After this, the customer should see the success page.
 
-When the customer submits the order, the payment data is sent to Stripe. Stripe may redirect them to another page, for example—PayPal, or redirect the customer to the specified `return_url`.
+When the customer submits the order, the payment data is sent to Stripe. Stripe may redirect them to another page, for example — PayPal, or redirect the customer to the specified `return_url`. The `return_url` must make another Glue API request to persist the order in the Back Office.
 
-{% info_block warningBox "" %}
+#### Return URL
 
-Because an order can be persisted in the Back Office only after a successful payment, at this point, another API call must be sent to Glue.
+Because an order can be persisted in the Back Office only after a successful payment, at this point, another API call must be sent to Glue. Your application must handle the `return_url` and make a request to the Glue API to persist the order in the Back Office.
 
 <details>
   <summary>Request example</summary>
@@ -316,9 +322,7 @@ app.get('/return-url', async (req, res) => {
 
 </details>
 
-{% endinfo_block %}
-
-After this, the customer should see the success page.
+After this, the customer should be redirected to the success page or in case of a failure to an error page.
 
 Some remarks:
 - When the customer reloads the summary page, which renders `PaymentElements`, you can either prevent the second request to initiate the `preOrder Payment` on your end already by e.g. checking if relevant data has changed.
@@ -326,9 +330,9 @@ Some remarks:
 - When the customer leaves the summary page, the payment is created on the side of Stripe App and Stripe. However, in the Back Office, there is a stale payment without an order.
 - To enable the customer to abort the payment process, you can cancel the Payment using the Glue API.
 
+#### Cancelling a Payment using Glue API
 
-
-The following request cancels the PaymentIntent on the Stripe side and shows a `canceled` PaymentIntent in the Stripe Dashboard.
+The following request cancels the PaymentIntent on the Stripe side and shows a `canceled` PaymentIntent in the Stripe Dashboard. You can implement this in your application to enable the customer to cancel the payment process.
 
 <details>
   <summary>Cancel a Payment using Glue API</summary>

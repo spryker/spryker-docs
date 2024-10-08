@@ -145,16 +145,12 @@ When Stripe is integrated into a headless application, orders are processed usin
 
 All payment related messages mentioned above are handled by `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin`, which is registered in `MessageBrokerDependencyProvider`.
 
-[//]: # (### Example integration)
 
-[//]: # ()
-[//]: # (To check out how the integration works, see this [example application]&#40;https://github.com/spryker-projects/spa-checkout-glue-with-stripe&#41;.)
-
-### Example of the headless checkout with Stripe
+#### Example of the headless checkout with Stripe
 
 Before the customer is redirected to the summary page, all required data is collected: customer data, addresses, and selected shipment method. When the customer goes to the summary page, to get the data required for rendering the Stripe Elements, the application needs to call the `InitializePreOrderPayment` Glue API endpoint.
 
-#### Initialize the PreOrder payment
+#### Initialize the pre-order payment
 
 ```JS
 
@@ -196,7 +192,7 @@ async initializePreOrderPayment() {
 
 ```
 
-To identify the customer, you can use the `Authorization` and `X-Anonymous-Customer-Unique-Id` headers. You will use the authorization token of a logged in customer or the anonymous customer unique ID for an anonymous customer. This is needed to be able to do the Glue requests.
+To identify the customer when initiating a request using Glue API, use the `Authorization` header for a logged-in customer and `X-Anonymous-Customer-Unique-Id` for a guest user.
 
 After a `PaymentIntent` is created using the Stripe API, a payment is created in the Stripe app. The response looks as follows:
 
@@ -256,13 +252,13 @@ async setupStripe() {
   }
 ```
 
-This sets up Stripe Elements on the summary page of your application. The customer can now select the Payment Method in Stripe Elements and submit the data. Then, the customer is redirected to the provided `return_url`, which makes another Glue API request to persist the order in the Back Office. After this, the customer should see the success page.
+This sets up Stripe Elements on the summary page of your application. The customer can now select the Payment Method in Stripe Elements and submit the data. Then, the customer is redirected to the configured `return_url`, which makes another Glue API request to persist the order in the Back Office. After this, the customer should see the success page.
 
 When the customer submits the order, the payment data is sent to Stripe. Stripe may redirect them to another page, for example — PayPal, or redirect the customer to the specified `return_url`. The `return_url` must make another Glue API request to persist the order in the Back Office.
 
 #### Return URL
 
-Because an order can be persisted in the Back Office only after a successful payment, at this point, another API call must be sent to Glue. Your application must handle the `return_url` and make a request to the Glue API to persist the order in the Back Office.
+Because an order can be persisted in the Back Office only after a successful payment, the application needs to handle the `return_url` and make a request to the Glue API to persist the order.
 
 <details>
   <summary>Request example</summary>
@@ -324,18 +320,22 @@ app.get('/return-url', async (req, res) => {
 
 After this, the customer should be redirected to the success page or in case of a failure to an error page.
 
-Some remarks:
-- When the customer reloads the summary page, which renders `PaymentElements`, you can either prevent the second request to initiate the `preOrder Payment` on your end already by e.g. checking if relevant data has changed.
-  - If you don't prevent this, you will make unnecessary API calls. In any case, the Stripe App can handle this properly.
-- When the customer leaves the summary page, the payment is created on the side of Stripe App and Stripe. However, in the Back Office, there is a stale payment without an order.
-- To enable the customer to abort the payment process, you can cancel the Payment using the Glue API.
 
-#### Cancelling a Payment using Glue API
+{% info_block infoBox %}
+- When the customer reloads the summary page, which renders `PaymentElements`, an extra unnecessary API request is sent to initiate `preOrder Payment`. Stripe can handle these without issues. However, you can also prevent unnecessary API calls from being sent on the application side by, for example, checking if relevant data has changed.
+- When the customer leaves the summary page, the payment is created in Stripe app and Stripe. However, in the Back Office, there is a stale payment without an order.
+- To enable the customer to abort the payment process, you can implement the cancellation of payments through Glue API.
 
-The following request cancels the PaymentIntent on the Stripe side and shows a `canceled` PaymentIntent in the Stripe Dashboard. You can implement this in your application to enable the customer to cancel the payment process.
+{% endinfo_block %}
+
+
+
+#### Cancelling payment through Glue API
+
+The following request cancels a PaymentIntent on the Stripe side and shows a `canceled` PaymentIntent in the Stripe Dashboard. You can implement this in your application to enable the customer to cancel the payment process.
 
 <details>
-  <summary>Cancel a Payment using Glue API</summary>
+  <summary>Cancel a payment through Glue API</summary>
 
 ```JAVASCRIPT
 async cancelPreOrderPayment() {
@@ -381,51 +381,8 @@ async cancelPreOrderPayment() {
 
 </details>
 
-<!--
 
-[//]: # (### Yves integration into Summary Page)
-
-[//]: # ()
-[//]: # (The same as in the headless approach, this integration is using the PreOrder payment flow as described above with some slight differences.)
-
-[//]: # ()
-[//]: # (While GLue does not have access to a session Yves does. Because of this, the process flow is slightly different.)
-
-[//]: # ()
-[//]: # (Depending on your Yves implementation the flow may be slightly different than explained below.)
-
-[//]: # ()
-[//]: # (- On the Payment selection page you will see Stripe as selectable payment option.)
-
-[//]: # (- When the customer selects Stripe as payment option and enters the summary page the `InitializePreOrderPayment` RPC call to Zed is made through the `\SprykerShop\Yves\PaymentPage\Controller\PreOrderPaymentController`.)
-
-[//]: # (- The required data will be collected from the Yves session, and you don't need to take care about this.)
-
-[//]: # (- Zed now makes the API call to the Stripe App including required authorization.)
-
-[//]: # (- On the Stripe App side the Payment with the given data is persisted and an API call to Stripe is made to get the ClientSecret and the PublishableKey.)
-
-[//]: # (- !!! This part requires an update after HEADLESS and Yves frontend is prepared)
-
-[//]: # (- The provided example JavaScript uses the returned data and renders the Stripe Elements on the summary page of your application.)
-
-[//]: # (- !!!)
-
-[//]: # (- Then the customer can select the Payment Method in the Stripe Elements and submits the data.)
-
-[//]: # (- The customer will then be redirected to the provided `return_url` which must make another placeOrder request to persist the order in the backoffice.)
-
-[//]: # (- After this the customer should see the success page of the application.)
-
-[//]: # (- Through the `\Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin` plugin the PreOrder payment will be confirmed on the Stripe App side.)
-
-[//]: # (- When the payment was processed on the Stripe App side a `PaymentUpdated` message will be sent to your SCOS application which will contain additional data you can see in the Backoffice.)
-
-[//]: # (- When the Payment is successful you will get a `PaymentConfirmed` AsyncAPI message which will move the order inside the OMS to the next state.)
-
-[//]: # (- When the Payment has failed you will get a `PaymentFailed` AsyncAPI message which will move the order inside the OMS to the next state.) -->
-
-### Hosted Payment Page
+### Implementing Stripe as a hosted payment page
 
 If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project level, do the following:
 

@@ -43,20 +43,18 @@ product_comparison_page.empty_comparison,Vergleichsliste ist leer.,de_DE
 product_comparison_page.empty_comparison,Comparison list is empty.,en_US
 product_comparison_page.clear-compare-list,Vergleichsliste leeren,de_DE
 product_comparison_page.clear-compare-list,Clear the comparison list,en_US
-product_comparison_widget.add_to_comparison.success,Zum Vergleich hinzugefügt,de_DE
-product_comparison_widget.add_to_comparison.success,Added to comparison,en_US
-product_comparison_widget.add_to_comparison.error.max,Das Limit ist bereits erreicht,de_DE
-product_comparison_widget.add_to_comparison.error.max,The limit has already been reached,en_US
-product_comparison_page.add_to_comparison.error.exists,Existiert bereits,de_DE
-product_comparison_page.add_to_comparison.error.exists,Already exist,en_US
-product_comparison_widget.removed_from_the_list,Artikel wurde aus der Vergleichsliste entfernt.,de_DE
-product_comparison_widget.removed_from_the_list,Product was removed from the comparison list.,en_US
-product_comparison_widget.add_to_comparison-list,Vergleichen,de_DE
-product_comparison_widget.add_to_comparison-list,Compare,en_US
-product_comparison_widget.remove_from_comparison-list,Aus Vergleich entfernen,de_DE
-product_comparison_widget.remove_from_comparison-list,Remove from Compare,en_US
-product_comparison_widget.list_link,Artikelvergleich,de_DE
-product_comparison_widget.list_link,Product comparison,en_US
+product_comparison_page.add_to_comparison-list,Vergleichen,de_DE
+product_comparison_page.add_to_comparison-list,Compare,en_US
+product_comparison_page.remove_from_comparison-list,Aus Vergleich entfernen,de_DE
+product_comparison_page.remove_from_comparison-list,Remove from Compare,en_US
+product_comparison_page.list_link,Artikelvergleich,de_DE
+product_comparison_page.list_link,Product comparison,en_US
+product_comparison_page.add_to_comparison.success,Zum Vergleich hinzugefügt,de_DE
+product_comparison_page.add_to_comparison.success,Added to comparison,en_US
+product_comparison_page.add_to_comparison.error.max,Das Limit ist bereits erreicht,de_DE
+product_comparison_page.add_to_comparison.error.max,The limit has already been reached,en_US
+product_comparison_page.removed_from_the_list,Artikel wurde aus der Vergleichsliste entfernt.,de_DE
+product_comparison_page.removed_from_the_list,Product was removed from the comparison list.,en_US
 ```
 
 2. Import data:

@@ -147,6 +147,7 @@ versioned_categories:
       - glue-api
   pbc:
     all:
+      - ai-integrations
       - back-office
       - cart-and-checkout
       - carrier-management

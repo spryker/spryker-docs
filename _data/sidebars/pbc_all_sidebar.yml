@@ -2966,6 +2966,10 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html
                       - title: Product Sets
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-sets-feature.html
+                      - title: Product Comparison
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-comparison-feature.html
+                        include_versions:
+                        - "202407.0"                          
 
                   - title: Install Glue API
                     nested:

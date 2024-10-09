@@ -148,6 +148,8 @@ All payment related messages mentioned above are handled by `\Spryker\Zed\Paymen
 
 #### Example of the headless checkout with Stripe
 
+The Payment selection in this example will be used on the Summary page. The following examples show how to implement the Stripe Payment App in a headless application.
+
 Before the customer is redirected to the summary page, all required data is collected: customer data, addresses, and selected shipment method. When the customer goes to the summary page, to get the data required for rendering the Stripe Elements, the application needs to call the `InitializePreOrderPayment` Glue API endpoint.
 
 #### Initialize the pre-order payment

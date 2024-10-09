@@ -1,3 +1,6 @@
+This document describes how to install the Product Comparison feature.
+
+
 ## Install feature frontend
 
 Follow the steps below to install the Product Comparison feature frontend.
@@ -104,7 +107,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure product comparison page is available at `https://mysprykershop.com/product-comparison`.
+Make sure the product comparison page is available at `https://mysprykershop.com/product-comparison`.
 
 {% endinfo_block %}
 
@@ -116,8 +119,8 @@ Set up widgets as follows:
 
 | PLUGIN                                       | SPECIFICATION                                                                                                                  | PREREQUISITES | NAMESPACE                                       |
 |----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------|
-| ComparisonProductTogglerComparisonListWidget | Displays the `Compare` button for adding product to comparison list or `Remove from Compare` button to remove product from it. |               | SprykerShop\Yves\ProductComparisonWidget\Widget |
-| LinkToProductComparisonListWidget            | Displays link to Product Comparison page.                                                                                      |               | SprykerShop\Yves\ProductComparisonWidget\Widget |
+| ComparisonProductTogglerComparisonListWidget | Displays the **Compare** and **Remove from Compare** buttons for adding and removing a product from the comparison list. |               | SprykerShop\Yves\ProductComparisonWidget\Widget |
+| LinkToProductComparisonListWidget            | Displays a link to the Product Comparison page.                                                                                      |               | SprykerShop\Yves\ProductComparisonWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -157,7 +160,7 @@ Verify that the following widgets have been registered by adding the respective 
 
 | WIDGET                                       | VERIFICATION                                                                   |
 |----------------------------------------------|--------------------------------------------------------------------------------|
-| ComparisonProductTogglerComparisonListWidget | Go to the product details page and add a product to a product comparison list. |
-| LinkToProductComparisonListWidget            | In top navigation menu make sure that you see `Product comparison` menu item.  |
+| ComparisonProductTogglerComparisonListWidget | Make sure that, on the product details page, you can add a product to a product comparison list. |
+| LinkToProductComparisonListWidget            | Make sure that the `Product comparison` menu item is displayed in the menu bar.  |
 
 {% endinfo_block %}

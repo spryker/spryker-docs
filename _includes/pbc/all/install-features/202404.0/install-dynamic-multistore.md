@@ -13,7 +13,7 @@ Follow the steps below to install the Dynamic Multistore feature core.
 ### Prerequisites for projects below version 202404.0
 
 {% info_block warningBox "Shop version" %}
-If your project is of version 202404.0 or later, go to [Enable the dynamic store feature]
+If your project is of version 202311.0 or later, go to [Enable the dynamic store feature]
 {% endinfo_block %}
 
 1. Upgrade the following modules:
@@ -178,9 +178,30 @@ docker:
 </details>
 
 In this configuration, region is used for entities like services, endpoints, or applications. The `SPRYKER_DYNAMIC_STORE_MODE`  variable enables the dynamic multistore feature. Make sure store is not used in the new configuration to avoid deployment failures.
+If you have deployment hooks in deployment file modify installers: remove store mentions and use region instead.
+For example if your installer file looks like 
 
+```
+env:
+    NEW_RELIC_ENABLED: 0
 
+stores:
+    - DE
+    - AT
 
+sections:
+    .....
+```
+remove stores section and add region to environment variables
+
+```
+env:
+    NEW_RELIC_ENABLED: 0
+    SPRYKER_CURRENT_REGION: EU
+
+sections:
+    .....
+```
 ### 2) Set up configuration
 
 Before the introduction of dynamic multistore, configuration was managed in `config/Shared/stores.php`. With dynamic multistore, configuration is managed in the database. `config/Shared/stores.php` and `config/Shared/default_store.php` are now obsolete.
@@ -661,6 +682,30 @@ Import locale, store, and country data:
 1.  Prepare your data according to your requirements using our demo data:
 
 Example of locales configuration for the DE store:
+
+**data/import/common/{REGION}/store.csv**
+```csv
+name
+DE
+AT
+
+```
+
+| COLUMN     | REQUIRED | Data Type | Data Example | Data Explanation |
+|------------| --- | --- | --- | --- |
+|name        | v | string | DE | Define store name. |
+
+**data/import/common/{REGION}/store.csv**
+```csv
+name
+DE
+AT
+
+```
+
+| Column     | REQUIRED | Data Type | Data Example | Data Explanation |
+|------------| --- | --- | --- | --- |
+|name        |mandatory |string | DE | Define store name. |
 
 **data/import/common/DE/locale_store.csv**
 ```csv

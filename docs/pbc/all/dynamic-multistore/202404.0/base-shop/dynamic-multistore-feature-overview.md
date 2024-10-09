@@ -97,22 +97,7 @@ You can add a new store using data import or in the Back Office. Adding a store 
 
 Using data import, you can configure a new store once and deploy it across all environments.
 
-Example for DE store configuration:
-
-**data/import/common/{REGION}/store.csv**
-
-```csv
-name
-DE
-AT
-```
-
-| COLUMN     | REQUIRED | Data Type | Data Example | Data Explanation |
-|------------| --- | --- | --- | --- |
-|name        | v | string | DE | Define store name. |
-
 Configure a new store as described here: [Import configuration for store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#import-data)
-
 
 When you add a new store, to enable store-related entities for customers, you need to assign them to the store. Some of the store related entities:
 - Products

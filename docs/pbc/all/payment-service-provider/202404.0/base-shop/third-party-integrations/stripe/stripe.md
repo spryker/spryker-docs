@@ -39,7 +39,7 @@ However, our team only tested the following payment methods:
 - Link
 - Przelewy24
 - Giropay
-- AfterPay (for United States, Canada, United Kingdom, Australia, New Zealand)
+- US, UK, CA, AU, NZ: AfterPay
 
 
 ## Current limitations

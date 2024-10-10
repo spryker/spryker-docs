@@ -12,3 +12,4 @@ This section describes how to access AWS Management Console as an Identity and A
 * [Accessing AWS Management Console](/docs/ca/dev/access/access-the-aws-management-console.html)
 * [Locating service credentials](/docs/ca/dev/access/locate-service-credentials.html)
 * [Connecting to services via SSH](/docs/ca/dev/access/connect-to-services-via-ssh.html)
+* [Connecting to services via AWS Systems Manager & the docker-sdk](/docs/ca/dev/access/connect-to-services-via-aws-and-docker-sdk.html)

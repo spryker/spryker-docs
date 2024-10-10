@@ -64,8 +64,8 @@ Every concrete product is linked to an abstract one via the `abstract_sku` field
 
 | FILE | DESCRIPTION |
 | --- | --- |
-| [product_concrete.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/Template+product_concrete.csv) | Product Exemplary import file with headers only. |
-| [product_concrete.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/product_concrete.csv) | Exemplary import file with Demo Shop data. |
+| [product_concrete.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-concrete.csv.md/product_concrete.csv) | Product Exemplary import file with headers only. |
+| [product_concrete.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-concrete.csv.md/Template_product_concrete.csv) | Exemplary import file with Demo Shop data. |
 
 ## Import command
 

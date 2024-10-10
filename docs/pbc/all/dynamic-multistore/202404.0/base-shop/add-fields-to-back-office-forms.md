@@ -242,7 +242,7 @@ In the **Settings** tab, make sure the following applies:
 
 This section explains how to extend `StoreTransfer` and extract a field using a plugin to access `contactEmail` field directly from the `StoreTransfer`. The contact email field is used as an example.
 
-1. Adjust `StoreTransfer` to add the `contactEmail` field:
+1. Add the `contactEmail` field to `StoreTransfer`:
 
 **src/Pyz/Shared/StoreContextStorage/Transfer/store_context_storage.transfer.xml**
 

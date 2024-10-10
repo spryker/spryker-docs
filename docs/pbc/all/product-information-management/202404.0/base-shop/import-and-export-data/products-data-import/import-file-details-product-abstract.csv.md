@@ -73,8 +73,8 @@ The amount of attributes is not limited.
 
 | FILE | DESCRIPTION |
 | --- | --- |
-| [template_product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/202109.0/Template_product_abstract.csv) | Import file template with headers only. |
-| [product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/202109.0/product_abstract.csv) | Exemplary import file with the Demo Shop data. |
+| [template_product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-abstract.csv.md/Template_product_abstract.csv) | Import file template with headers only. |
+| [product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-abstract.csv.md/product_abstract.csv) | Exemplary import file with the Demo Shop data. |
 
 ## Import command
 

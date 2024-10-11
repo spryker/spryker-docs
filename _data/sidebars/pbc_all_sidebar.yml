@@ -1244,8 +1244,12 @@ entries:
                   - title: Install the Dynamic Multistore Glue API
                     url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-the-dynamic-multistore-glue-api.html
 
+              - title: Add fields to Back Office forms
+                url: /docs/pbc/all/dynamic-multistore/base-shop/add-fields-to-back-office-forms.html
               - title: Delete stores
                 url: /docs/pbc/all/dynamic-multistore/base-shop/delete-stores.html
+
+
 
           - title: Marketplace
             nested:
@@ -2966,6 +2970,10 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html
                       - title: Product Sets
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-sets-feature.html
+                      - title: Product Comparison
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-comparison-feature.html
+                        include_versions:
+                        - "202407.0"                          
 
                   - title: Install Glue API
                     nested:

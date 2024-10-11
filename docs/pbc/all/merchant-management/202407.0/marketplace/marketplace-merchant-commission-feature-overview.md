@@ -157,23 +157,10 @@ If an order item fulfills the conditions of all the commissions in the prior exa
 
 ## Apply commissions to GROSS or NET price
 
-The price mode used to apply commissions is defined separately from the order price mode and applies to the whole store. This price mode configuration controls which prices are used as a basis to calculate commission: gross or net price. The item gross price and net price is configured in the backend, including volume pricing, and doesn't include any discounts applied in the shopping cart afterwards.
 
-Price mode is defined in `MERCHANT_COMMISSION_PRICE_MODE_PER_STORE`. For details, see [Install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
+The price mode used to apply commissions is defined by the order price mode. This price mode configuration controls which prices are used as a basis to calculate commission: gross or net price. The item gross price and net price is configured in the backend, including volume pricing, and doesn’t include any discounts applied in the shopping cart afterwards.
 
-
-
-## Current limitations
-
-Price Mode switcher is not supported. The Merchant Commission Price Mode must match the default price mode of the store that sets it for the sales order as a result. Otherwise, the percentage commission will be set to 0 for all items in the order.
-
-Supported configuration:
-
-| Order Price Mode | Merchant Commission Price Mode |
-| - | - |
-| GROSS_MODE | GROSS_MODE |
-| NET_MODE | NET_MODE |
-
+For information on setting up commission percentages per price mode, see [Price mode based commissions](#price-mode-based-commissions).
 
 
 ## Applying merchant commissions to the sum item total price to pay after discounts with additions

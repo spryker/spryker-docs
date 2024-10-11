@@ -1,6 +1,6 @@
 ---
 title: Install the ACL feature
-last_updated: Jub 24, 2024
+last_updated: Sep 10, 2024
 description: This integration guide provides steps on how to integrate the ACL feature into a Spryker project.
 template: feature-integration-guide-template
 redirect_from:

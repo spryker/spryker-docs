@@ -32,7 +32,7 @@ If you do not have this information, then request additional data from the perso
 You are free to choose any profiling tool you want.
 The ones that we prefer are [New Relic](https://docs.newrelic.com/docs/new-relic-solutions/get-started/intro-new-relic/) and [Blackfire](https://blackfire.io/docs/introduction).
 
-### New Relic
+### New Relic APM
 
 To profile with New Relic, do the following:
 
@@ -42,7 +42,7 @@ To profile with New Relic, do the following:
 Note the following:
 - It takes [some time for the New Relic to show the profiling](https://docs.newrelic.com/docs/new-relic-solutions/solve-common-issues/troubleshooting/not-seeing-data/#:~:text=Solution,to%20automatically%20identify%20common%20issues.).
 - If the request is not meeting the criteria, it will not appear in New Relic.
-Read more on the [official New Relic website](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/troubleshooting-not-seeing-transaction-traces/).
+Read more on the [official New Relic APM website](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/troubleshooting-not-seeing-transaction-traces/).
 
 3. Review the profiling.
 For example, if the problem is with “place-order“ with 25 product items, do the following:

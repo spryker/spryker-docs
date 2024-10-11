@@ -16,7 +16,7 @@ This document describes how to view merchants in the Back Office.
 
 ## Prerequisites
 
-1. Go **Marketplace&nbsp;<span aria-label="and then">></span> Merchants**.
+1. Go **Marketplace&nbsp;<span aria-label="and then">&gt;</span> Merchants**.
 2. Next to the merchant you want to view, click **View**.
     This opens the **View Merchant: {MERCHANT_ID}** page.
 
@@ -78,6 +78,16 @@ This section contains legal information about the merchant.
 ## Users
 
 This section displays a list of users associated with the merchant and provides options to Edit, Deactivate, or Delete the users directly from the list.
+
+## Actions Available in the Detailed Merchant View
+
+On the detailed view page, you can perform the following actions:
+
+ - Edit: Click this button to modify the merchant’s details.
+ - Activate: Activate the merchant, making them active in the system.
+ - Deactivate: Temporarily deactivate the merchant, making them inactive in the system.
+ - Deny Access: Prevent the merchant from accessing their account or managing their products.
+ - Approve Access (only if the merchant is not yet approved): Grant access to a merchant that is currently waiting for approval.
 
 ## Managing merchant users
 

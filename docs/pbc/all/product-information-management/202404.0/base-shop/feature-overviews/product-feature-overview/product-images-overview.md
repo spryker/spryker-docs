@@ -26,6 +26,7 @@ You can enjoy the following benefits of the feature:
 
 * One product can have several names and localized sets of images
 * Small and large images
+* Alt text for small and large images
 * Adjustable sort order of images in a set
 * Possibility to create different image sets for different use cases on different pages per product
 * Possibility to define the order of images to be displayed on frontend

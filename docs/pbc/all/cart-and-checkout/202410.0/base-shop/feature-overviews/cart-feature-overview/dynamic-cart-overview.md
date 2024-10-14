@@ -19,10 +19,10 @@ The following video shows how a user can interact with different elements of a c
 
 | INSTALLATION GUIDES |
 |---------|
-| [Install the Cart feature](/docs/pbc/all/cart-and-checkout/202407.0/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
-| [Install the Comments feature](/docs/pbc/all/cart-and-checkout/202407.0/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html) |
-| [Install the Configurable Bundle feature](/docs/pbc/all/product-information-management/202407.0/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html) |
-| [Install the Gift Cards feature](/docs/pbc/all/gift-cards/202407.0/install-and-upgrade/install-the-gift-cards-feature.html) |
-| [Install the Multiple Carts feature](/docs/pbc/all/cart-and-checkout/202407.0/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html) |
-| [Install the Order Management feature](/docs/pbc/all/order-management-system/202407.0/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
-| [Install the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/202407.0/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html) |
+| [Install the Cart feature](/docs/pbc/all/cart-and-checkout/202410.0/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| [Install the Comments feature](/docs/pbc/all/cart-and-checkout/202410.0/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html) |
+| [Install the Configurable Bundle feature](/docs/pbc/all/product-information-management/202410.0/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html) |
+| [Install the Gift Cards feature](/docs/pbc/all/gift-cards/202410.0/install-and-upgrade/install-the-gift-cards-feature.html) |
+| [Install the Multiple Carts feature](/docs/pbc/all/cart-and-checkout/202410.0/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html) |
+| [Install the Order Management feature](/docs/pbc/all/order-management-system/202410.0/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
+| [Install the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/202410.0/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html) |

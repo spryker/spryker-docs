@@ -225,7 +225,7 @@ entries:
                       - title: Dynamic cart
                         url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/cart-feature-overview/dynamic-cart-overview.html
                         include_versions:
-                        - "202407.0"
+                        - "202410.0"
                       - title: Quick order from the catalog page
                         url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
 
@@ -1082,7 +1082,7 @@ entries:
           - title: Create post plugins for Data Exchange API
             url: /docs/pbc/all/data-exchange/create-post-plugins-for-data-exchange-api.html
             include_versions:
-            - "202407.0"
+            - "202410.0"
           - title: Spryker Middleware powered by Alumio
             url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html
             nested:
@@ -1129,7 +1129,7 @@ entries:
                       - title: Install the Promotions & Discounts + Order Management feature
                         url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-order-managemet-feature.html
                         include_versions:
-                        - "202407.0"
+                        - "202410.0"
                       - title: Install the Product labels + Promotions & Discounts feature
                         url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-product-labels-feature.html
                       - title: Install the Category Management + Promotions & Discounts feature
@@ -1445,7 +1445,7 @@ entries:
               - title: Marketplace Merchant Commission feature overview
                 url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-commission-feature-overview.html
                 include_versions:
-                - "202407.0"
+                - "202410.0"
               - title: Merchant Opening Hours feature overview
                 url: /docs/pbc/all/merchant-management/marketplace/merchant-opening-hours-feature-overview.html
               - title: Marketplace Merchant Portal Core feature overview
@@ -1481,19 +1481,19 @@ entries:
                       - title: Marketplace Merchant Commission
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html
                         include_versions:
-                        - "202407.0"
+                        - "202410.0"
                       - title: Marketplace Merchant Commission + Category Management
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-category-management-feature.html
                         include_versions:
-                        - "202407.0"
+                        - "202410.0"
                       - title: Marketplace Merchant Commission + Prices
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-prices-feature.html
                         include_versions:
-                        - "202407.0"
+                        - "202410.0"
                       - title: Marketplace Merchant Commission + Product
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-product-feature.html
                         include_versions:
-                        - "202407.0"
+                        - "202410.0"
                       - title: Marketplace Merchant Portal Core
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html
                       - title: Marketplace Merchant Portal Core + Dynamic Multistore
@@ -1561,7 +1561,7 @@ entries:
                   - title: Import merchant commissions
                     url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant-comission.csv.html
                     include_versions:
-                      - "202407.0"
+                      - "202410.0"
                     nested:
                       - title: "Import file details: merchant_commission_amount.csv"
                         url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_amount.csv.html
@@ -1603,7 +1603,7 @@ entries:
                   - title: Import merchant commissions
                     url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/manage-in-the-back-office/back-office-import-merchant-commissions.html
                     include_versions:
-                      - "202407.0"
+                      - "202410.0"
 
               - title: Manage in the Merchant Portal
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchants-in-the-merchant-portal.html
@@ -1650,11 +1650,11 @@ entries:
                   - title: Create merchant commission calculator type plugins
                     url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/create-merchant-commission-calculator-type-plugins.html
                     include_versions:
-                    - "202407.0"
+                    - "202410.0"
                   - title: Create merchant commission collector rules
                     url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/create-merchant-commission-collector-rule.html
                     include_versions:
-                    - "202407.0"
+                    - "202410.0"
 
               - title: Domain model and relationships
                 nested:
@@ -2801,7 +2801,7 @@ entries:
                       - title: Prices + Marketplace Merchant Commission
                         url: /docs/pbc/all/price-management/marketplace/install-and-upgrade/install-features/install-the-prices-marketplace-merchant-commission-feature.html
                         include_versions:
-                        - "202407.0"
+                        - "202410.0"
 
                   - title: Install Glue API
                     nested:
@@ -2973,7 +2973,7 @@ entries:
                       - title: Product Comparison
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-comparison-feature.html
                         include_versions:
-                        - "202407.0"                          
+                        - "202410.0"
 
                   - title: Install Glue API
                     nested:
@@ -3394,11 +3394,11 @@ entries:
                       - title: Category Management + Marketplace Merchant Commission
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-category-management-marketplace-merchant-commission.html
                         include_versions:
-                        - "202407.0"
+                        - "202410.0"
                       - title: Product + Marketplace Merchant Commission
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-product-marketplace-merchant-commission-feature.html
                         include_versions:
-                        - "202407.0"
+                        - "202410.0"
 
                   - title: Install Glue API
                     nested:

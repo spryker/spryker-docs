@@ -14,4 +14,4 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html
 ---
 
-{% include pbc/all/install-features/202407.0/install-the-comments-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202407.0/install-the-comments-feature.md -->
+{% include pbc/all/install-features/202410.0/install-the-comments-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202410.0/install-the-comments-feature.md -->

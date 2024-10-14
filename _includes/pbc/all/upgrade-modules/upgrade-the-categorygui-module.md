@@ -46,8 +46,8 @@ composer require spryker/category-image-gui:"^1.3.0" spryker/cms-block-category-
 
 7. On the project level, register the new plugins:  
 
-<details open>
-<summary markdown='span'>\Pyz\Zed\CategoryGui\CategoryGuiDependencyProvider</summary>
+<details>
+<summary>\Pyz\Zed\CategoryGui\CategoryGuiDependencyProvider</summary>
 
 ```php    
 <?php

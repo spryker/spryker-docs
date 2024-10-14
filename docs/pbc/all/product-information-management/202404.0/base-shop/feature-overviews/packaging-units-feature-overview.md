@@ -198,7 +198,7 @@ You have a product in your shop—a pen. And there exists a packaging unit for a
 
 ## Related Developer documents
 
-| INSTALLATION GUIDES | UPGRADE GUIDES| TUTORIALS AND HOWTOS |
-|---------|---------|---------|
-| [Product Packaging Unit feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html)  | [Decimal Stock migration concept](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/decimal-stock-migration-concept.html) | [HowTo: Import packaging units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-import-packaging-units.html) |
-|   |   | [HowTo: Integrate and use precise decimal numbers](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html)  |
+| INSTALLATION GUIDES | UPGRADE GUIDES | DATA IMPORT  | TUTORIALS AND HOWTOS |
+|---------|---------|---------|----|
+| [Install the Product Packaging Unit feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html)  | [Decimal Stock migration concept](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/decimal-stock-migration-concept.html)  |   [product_packaging_unit_type.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-packaging-unit-type.csv.html)         |[HowTo: Integrate and use precise decimal numbers](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html)   |
+|   |   |  [product_packaging_unit.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.html) | |

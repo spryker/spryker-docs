@@ -52,7 +52,7 @@ Request sample: retrieve sales units
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve sales units</summary>
+<summary>Response sample: retrieve sales units</summary>
 
 ```json
 {

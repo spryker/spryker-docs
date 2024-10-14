@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductSearch
+title: Upgrade the ProductSearch module
 description: Use the guide to learn how to update the ProductSearch module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,9 +31,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productsearch.html
   - /docs/scos/dev/module-migration-guides/migration-guide-productsearch.html
 related:
-  - title: Migration guide - Product
+  - title: Upgrade the Product module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
-  - title: Migration guide - Product Set GUI
+  - title: Upgrade the ProductSetGUI module
     link: docs/scos/dev/module-migration-guides/migration-guide-productsetgui.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-productsearch-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productsearch-module.md -->

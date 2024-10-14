@@ -50,7 +50,7 @@ Request sample: retrieve product ratings and reviews: `GET http://glue.myspryker
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve product reviews</summary>
+<summary>Response sample: retrieve product reviews</summary>
 
 ```json
 {

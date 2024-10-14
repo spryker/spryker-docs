@@ -1087,7 +1087,7 @@ Make sure the plugins work correctly:
 | ProductConfigurationWishlistItemPriceProductExpanderPlugin         | Expands the collection of product price transfers with product configuration prices taken from `ProductViewTransfer`. | None           | Spryker\Client\ProductConfigurationWishlist\Plugin\PriceProductStorage |
 
 
-<details><summary markdown='span'>src/Pyz/Zed/Wishlist/WishlistDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Wishlist/WishlistDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1262,7 +1262,7 @@ Make sure that the wishlist plugins work correctly:
 | ProductConfigurationShoppingListItemCollectionExpanderPlugin | Expands `ShoppingListItemTransfer` transfer object with product configuration data.                   | None           | Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList |
 | ItemProductConfigurationItemToShoppingListItemMapperPlugin   | Copies product configuration from a cart item to a shopping list item.                                | None           | Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList |
 
-<details><summary markdown='span'>src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php</summary>
+<details><summary>src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1311,7 +1311,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 
 </details>
 
-<details><summary markdown='span'>src/Pyz/Zed/ShoppingList/ShoppingListDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ShoppingList/ShoppingListDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1644,7 +1644,7 @@ Make sure that the reorder expander plugin works:
 | ShoppingListPageProductConfiguratorResponseStrategyPlugin                 | Maps the product configurator check sum response, validates it and replaces configuration for a given product in the shopping list item.                                                                  | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Plugin\ProductConfiguratorGatewayPage |
 | ShoppingListPageProductConfiguratorRequestDataFormExpanderStrategyPlugin  | Extends the product configurator request form with the `shoppingListItemUuid` and `quantity` fields to support configuration for a shopping list item on the Shopping List page.                          | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Plugin\ProductConfiguratorGatewayPage |
 
-<details><summary markdown='span'>src/Pyz/Yves/ProductConfiguratorGatewayPage/ProductConfiguratorGatewayPageDependencyProvider.php</summary>
+<details><summary>src/Pyz/Yves/ProductConfiguratorGatewayPage/ProductConfiguratorGatewayPageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1735,7 +1735,7 @@ Make sure that the plugins are set up correctly:
 | ProductConfigurationShoppingListPageButtonWidget  | Displays the product configuration button for configurable shopping list items.                | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Widget  |
 
 
-<details><summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<details><summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

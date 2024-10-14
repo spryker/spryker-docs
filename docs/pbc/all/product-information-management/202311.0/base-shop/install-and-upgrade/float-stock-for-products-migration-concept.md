@@ -79,7 +79,7 @@ console transfer:generate
 
 You can find the affected modules of the float stock update in the following list.
 
-<details open><summary markdown='span'>Affected modules</summary>
+<details><summary>Affected modules</summary>
 
 
 | OPERATOR | OPERATOR FOR PLAIN QUERY | MIGRATION GUIDE |
@@ -92,50 +92,50 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/cart-extension | 3.0.0 | [Upgrade the CartExtension module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cartextension-module.html) |
 | spryker/carts-rest-api | 4.0.0 | [Upgrade the CartsRestApi module](/docs/scos/dev/module-migration-guides/glue-api/cartsrestapi-migration-guide.html) |
 | spryker/checkout | 5.0.0 | [Upgrade the Checkout module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html) |
-| spryker/discount | 8.0.0 | [Migration Guide - Discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discount-module.html) |
-| spryker/discount-promotion | 2.0.0 | [Migration Guide - DiscountPromotion](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountpromotion-module.html) |
+| spryker/discount | 8.0.0 | [Upgrade the Discount module](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discount-module.html) |
+| spryker/discount-promotion | 2.0.0 | [Upgrade the DiscountPromotion module](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountpromotion-module.html) |
 | spryker/manual-order-entry-gui | 0.6.0 | [Migration Guide - ManualOrderEntryGui](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-manualorderentrygui-module.html) |
-| spryker/offer | 0.2.0 | [Migration Guide - Offer](/docs/pbc/all/offer-management/{{page.version}}/base-shop/upgrade-modules/upgrade-the-offer-module.html) |
-| spryker/offer-gui | 0.2.0 | [Migration Guide - OfferGui](/docs/pbc/all/offer-management/{{page.version}}/base-shop/upgrade-modules/upgrade-the-offergui-module.html) |
-| spryker/oms | 9.0.0 | [Migration Guide - Oms](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-oms-module.html) |
-| spryker/orders-rest-api | 2.0.0 | [Migration Guide - OrdersRestApi](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html) |
+| spryker/offer | 0.2.0 | [Upgrade the Offer module](/docs/pbc/all/offer-management/{{page.version}}/base-shop/upgrade-modules/upgrade-the-offer-module.html) |
+| spryker/offer-gui | 0.2.0 | [Upgrade the OfferGui module](/docs/pbc/all/offer-management/{{page.version}}/base-shop/upgrade-modules/upgrade-the-offergui-module.html) |
+| spryker/oms | 9.0.0 | [Upgrade the Oms module](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-oms-module.html) |
+| spryker/orders-rest-api | 2.0.0 | [Upgrade the OrdersRestApi module](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html) |
 | spryker/persistent-cart | 2.0.0 | [Migration Guide - PersistentCart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-persistentcart-module.html) |
-| spryker/price-cart-connector | 5.0.0 | [Migration Guide - PriceCartConnector](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-pricecartconnector-module.html) |
-| spryker/price-product | 3.0.0 | [Migration Guide - PriceProduct](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html) |
-| spryker/price-product-storage | 3.0.0 | [Migration Guide - PriceProductStorage](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductstorage-module.html) |
-| spryker/price-product-volume | 2.0.0 | [Migration Guide - PriceProductVolume](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolume-module.html) |
-| spryker/price-product-volume-gui | 2.0.0 | [Migration Guide - PriceProductVolumeGui](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolumegui-module.html) |
-| spryker/product-availabilities-rest-api | 2.0.0 | [Migration Guide - ProductAvailabilitiesRestApi](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productavailabilitiesrestapi-module.html) |
-| spryker/product-bundle | 5.0.0 | [Migration Guide - ProductBundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html) |
-| spryker/product-discount-connector | 4.0.0 | [Migration Guide - ProductDiscountConnector](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productdiscountconnector-module.html) |
+| spryker/price-cart-connector | 5.0.0 | [Upgrade the PriceCartConnector module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-pricecartconnector-module.html) |
+| spryker/price-product | 3.0.0 | [Upgrade the PriceProduct module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html) |
+| spryker/price-product-storage | 3.0.0 | [Upgrade the PriceProductStorage module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductstorage-module.html) |
+| spryker/price-product-volume | 2.0.0 | [Upgrade the PriceProductVolume module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolume-module.html) |
+| spryker/price-product-volume-gui | 2.0.0 | [Upgrade the PriceProductVolumeGui module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolumegui-module.html) |
+| spryker/product-availabilities-rest-api | 2.0.0 | [MUpgrade the ProductAvailabilitiesRestApi module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productavailabilitiesrestapi-module.html) |
+| spryker/product-bundle | 5.0.0 | [Upgrade the ProductBundle module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html) |
+| spryker/product-discount-connector | 4.0.0 | [Upgrade the ProductDiscountConnector module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productdiscountconnector-module.html) |
 | spryker/product-label-discount-connector | 2.0.0 | [Upgrade the ProductLabelDiscountConnector module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabeldiscountconnector-module.html) |
 | spryker/product-management | 0.17.0 | [Upgrade the ProductManagement module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html) |
-| spryker/product-measurement-unit | 3.0.0 | [Migration Guide - ProductMeasurementUnit](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmeasurementunit-module.html) |
-| spryker/product-option | 7.0.0 | [Migration Guide - ProductOption](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoption-module.html) |
+| spryker/product-measurement-unit | 3.0.0 | [Upgrade the ProductMeasurementUnit module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmeasurementunit-module.html) |
+| spryker/product-option | 7.0.0 | [Upgrade the ProductOption module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoption-module.html) |
 | spryker/product-option-cart-connector | 6.0.0 | [Upgrade the ProductOptionCartConnector module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptioncartconnector-module.html) |
-| spryker/product-packaging-unit | 2.0.0 | [Migration Guide - ProductPackagingUnit](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunit-module.html) |
-| spryker/product-packaging-unit-storage | 3.0.0 | [Migration Guide - ProductPackagingUnitStorage](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitstorage-module.html) |
-| spryker/product-quantity | 2.0.0 | [Migration Guide - ProductQuantity](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productquantity-module.html) |
-| spryker/product-quantity-data-import | 2.0.0 | [Migration Guide - ProductQuantityDataImport](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productquantitydataimport-module.html) |
-| spryker/product-quantity-storage | 2.0.0 | [Migration Guide - ProductQuantityStorage](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productquantitystorage-module.html) |
-| spryker/quick-order | 2.0.0 | [Migration Guide - QuickOrder](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html) |
-| spryker/sales | 9.0.0 | [Migration Guide - Sales](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html) |
-| spryker/sales-quantity | 2.0.0 | [Migration Guide - SalesQuantity](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salesquantity-module.html) |
-| spryker/sales-split | 4.0.0 | [Migration Guide - SalesSplit](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salessplit-module.html) |
-| spryker/shipment-discount-connector | 2.0.0 | [Migration Guide - ShipmentDiscountConnector](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentdiscountconnector-module.html) |
+| spryker/product-packaging-unit | 2.0.0 | [Upgrade the ProductPackagingUnit module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunit-module.html) |
+| spryker/product-packaging-unit-storage | 3.0.0 | [Upgrade the ProductPackagingUnitStorage module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitstorage-module.html) |
+| spryker/product-quantity | 2.0.0 | [Upgrade the ProductQuantity module](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productquantity-module.html) |
+| spryker/product-quantity-data-import | 2.0.0 | [Upgrade the ProductQuantityDataImport module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productquantitydataimport-module.html) |
+| spryker/product-quantity-storage | 2.0.0 | [Upgrade the ProductQuantityStorage module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productquantitystorage-module.html) |
+| spryker/quick-order | 2.0.0 | [Upgrade the QuickOrder module](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html) |
+| spryker/sales | 9.0.0 | [Upgrade the Sales module](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html) |
+| spryker/sales-quantity | 2.0.0 | [Upgrade the SalesQuantity module](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salesquantity-module.html) |
+| spryker/sales-split | 4.0.0 | [Upgrade the SalesSplit module](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salessplit-module.html) |
+| spryker/shipment-discount-connector | 2.0.0 | [Upgrade the ShipmentDiscountConnector module](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentdiscountconnector-module.html) |
 | spryker/shopping-list | 3.0.0 | [Migration Guide - ShoppingList](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglistwidget-module.html) |
-| spryker/stock | 6.0.0 | [Migration Guide - Stock](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stock-module.html) |
+| spryker/stock | 6.0.0 | [Upgrade the Stock module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stock-module.html) |
 | spryker/stock-sales-connector | 4.0.0 |  |
-| spryker/wishlist | 7.0.0 | [Migration Guide - WishList](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-wishlist-module.html) |
+| spryker/wishlist | 7.0.0 | [Upgrade the WishList module](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-wishlist-module.html) |
 | spryker-shop/cart-page | 2.0.0 | [Upgrade the CartPage module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cartpage-module.html) |
-| spryker-shop/customer-reorder-widget | 5.0.0 | [Migration Guide - CustomerReorderWidget](/docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html) |
-| spryker-shop/discount-promotion-widget | 2.0.0 | [Migration Guide - DiscountPromotionWidget](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountpromotionwidget-module.html) |
-| spryker-shop/product-detail-page | 2.0.0 | [Migration Guide - ProductDetailPage](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productdetailpage-module.html) |
-| spryker-shop/product-measurement-unit-widget | 0.7.0 | [Migration Guide - ProductMeasurementUnitWidget](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmeasurementunitwidget-module.html) |
-| spryker-shop/product-packaging-unit-widget | 0.3.0 | [Migration Guide - ProductPackagingUnitWidget](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitwidget-module.html) |
-| spryker-shop/product-search-widget | 2.0.0 | [Migration Guide - ProductSearchWidget](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsearchwidget-module.html) |
+| spryker-shop/customer-reorder-widget | 5.0.0 | [Upgrade the CustomerReorderWidget module](/docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html) |
+| spryker-shop/discount-promotion-widget | 2.0.0 | [Upgrade the DiscountPromotionWidget module](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountpromotionwidget-module.html) |
+| spryker-shop/product-detail-page | 2.0.0 | [Upgrade the ProductDetailPage module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productdetailpage-module.html) |
+| spryker-shop/product-measurement-unit-widget | 0.7.0 | [Upgrade the ProductMeasurementUnit moduleWidget](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmeasurementunitwidget-module.html) |
+| spryker-shop/product-packaging-unit-widget | 0.3.0 | [Upgrade the ProductPackagingUnitWidget module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitwidget-module.html) |
+| spryker-shop/product-search-widget | 2.0.0 | [Upgrade the ProductSearchWidget module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsearchwidget-module.html) |
 | spryker-shop/quick-order-page | 3.0.0 | [Upgrade the QuickOrderPage module](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html) |
 | spryker-shop/shopping-list-page | 0.7.0 | [Migration Guide - ShoppingListPage](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglistpage-module.html) |
-| spryker-shop/shopping-list-widget | 0.5.0 | [Migration Guide - ShoppingListWidget](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglistwidget-module.html) |
+| spryker-shop/shopping-list-widget | 0.5.0 | [Upgrade the ShoppingListWidget module](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglistwidget-module.html) |
 
 </details>   

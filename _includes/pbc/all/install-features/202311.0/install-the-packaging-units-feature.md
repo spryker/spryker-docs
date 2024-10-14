@@ -573,7 +573,7 @@ Enable the following behaviors by registering the plugins:
 | ProductPackagingUnitPickingListCollectionExpanderPlugin              | Expands `PickingListCollectionTransfer.pickingList.pickingListItem.orderItem` transfer objects with `amountSalesUnit` property.                                         |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\PickingList          |
 | ProductPackagingUnitPickingListItemsBackendApiAttributesMapperPlugin | Maps amount sales unit from `PickingListItemTransfer.orderItem.amountSalesUnit` to `ApiPickingListItemsAttributesTransfer.orderItem.amountSalesUnit` transfer property. | Expects the `uuid` and `orderItem.amountSalesUnit.productMeasurementUnit` fields to be set in `PickingListItemTransfer`. Expects the `uuid` field to be set in `ApiPickingListItemsAttributesTransfer` as well. | Spryker\Glue\ProductPackagingUnitsBackendApi\Plugin\PickingListsBackendApi |                                                                         |
 
-<details open>
+<details>
 <summary>src/Pyz/Client/Cart/CartDependencyProvider.php</summary>
 
 ```php
@@ -752,7 +752,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 }
 ```
 
-<details open>
+<details>
 <summary>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
 
 ```php

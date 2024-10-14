@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202307.0/manage-using-glue-api/retrieve-navigation-trees.html
   - /docs/pbc/all/content-management-system/202307.0/base-shop/manage-using-glue-api/retrieve-navigation-trees.html
 related:
-  - title: Migration Guide - NavigationsRestApi
+  - title: Upgrade the NavigationsRestApi module
     link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationsrestapi-module.html
   - title: Retrieving category trees
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
@@ -56,7 +56,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary>Response sample</summary>
 
 ```json
 {
@@ -120,7 +120,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 </details>
 
 <details>
-<summary markdown='span'>Response sample with category nodes</summary>
+<summary>Response sample with category nodes</summary>
 
 ```json
 {

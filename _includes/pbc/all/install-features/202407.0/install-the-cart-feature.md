@@ -98,11 +98,12 @@ Make sure the following modules have been installed:
 
 Set up the following configuration:
 
-| CONFIGURATION                                                  | SPECIFICATION                                    | NAMESPACE                 |
-|----------------------------------------------------------------|--------------------------------------------------|---------------------------|
-| CartPageConfig::IS_CART_CART_ITEMS_VIA_AJAX_LOAD_ENABLED       | Enables the loading of cart items via AJAX.         | SprykerShop\Yves\CartPage |
-| CartPageConfig::IS_LOADING_UPSELLING_PRODUCTS_VIA_AJAX_ENABLED | Enables the loading of upselling products via AJAX. | SprykerShop\Yves\CartPage |
-| CartPageConfig::IS_CART_ACTIONS_ASYNC_MODE_ENABLED             | Enables the performing of cart actions via AJAX.    | SprykerShop\Yves\CartPage |
+| CONFIGURATION                                                  | SPECIFICATION                                                        | NAMESPACE                    |
+|----------------------------------------------------------------|----------------------------------------------------------------------|------------------------------|
+| CartPageConfig::IS_CART_CART_ITEMS_VIA_AJAX_LOAD_ENABLED       | Enables cart items to be loaded via AJAX.                          | SprykerShop\Yves\CartPage    |
+| CartPageConfig::IS_LOADING_UPSELLING_PRODUCTS_VIA_AJAX_ENABLED | Enables upselling products to be loaded via AJAX.                  | SprykerShop\Yves\CartPage    |
+| CartPageConfig::IS_CART_ACTIONS_ASYNC_MODE_ENABLED             | Enables cart actions to be performed via AJAX.                     | SprykerShop\Yves\CartPage    |
+| CatalogPageConfig::IS_MINI_CART_ASYNC_MODE_ENABLED             | Enables mini cart to be rendered async during the AJAX add to cart action. | SprykerShop\Yves\CatalogPage |
 
 **src/Pyz/Yves/CartPage/CartPageConfig.php**
 
@@ -130,15 +131,38 @@ class CartPageConfig extends SprykerCartPageConfig
      */
     protected const IS_CART_ACTIONS_ASYNC_MODE_ENABLED = true;
 }
-
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following applies:
+Make sure the following applies on the **Cart** page:
 - Cart items are loaded via AJAX.
 - Upselling products are loaded via AJAX.
 - Cart actions, like changing item quantity or removing an item, are performed via AJAX.
+
+{% endinfo_block %}
+
+**src/Pyz/Yves/CatalogPage/CatalogPageConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\CatalogPage;
+
+use SprykerShop\Yves\CatalogPage\CatalogPageConfig as SprykerCatalogPageConfig;
+
+class CatalogPageConfig extends SprykerCatalogPageConfig
+{
+    /**
+     * @var bool
+     */
+    protected const IS_MINI_CART_ASYNC_MODE_ENABLED = true;
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, on the **Catalog** page, cart actions, like changing item quantity or removing an item, are performed via AJAX.
 
 {% endinfo_block %}
 
@@ -199,7 +223,66 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% endinfo_block %}
 
-### 4) Set up widgets
+### 4) Set up behavior
+
+1. Activate the following plugins:
+
+| PLUGIN                               | SPECIFICATION                                                    | PREREQUISITES | NAMESPACE                                 |
+|--------------------------------------|------------------------------------------------------------------|---------------|-------------------------------------------|
+| CartBlockMiniCartViewExpanderPlugin  | Expands the provided `MiniCartView.content` with a mini cart view. |           | SprykerShop\Yves\CartPage\Plugin\CartPage |
+
+**src/Pyz/Yves/Router/RouterDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\CartPage;
+
+use SprykerShop\Yves\CartPage\CartPageDependencyProvider as SprykerCartPageDependencyProvider;
+use SprykerShop\Yves\CartPage\Plugin\CartPage\CartBlockMiniCartViewExpanderPlugin;
+
+class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\CartPageExtension\Dependency\Plugin\MiniCartViewExpanderPluginInterface>
+     */
+    protected function getMiniCartViewExpanderPlugins(): array
+    {
+        return [
+            new CartBlockMiniCartViewExpanderPlugin(),
+        ];
+    }
+}
+```
+
+
+2. B2C Shop: Add the following configuration:
+
+**src/Pyz/Yves/CartPage/CartPageConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\CartPage;
+
+use SprykerShop\Yves\CartPage\CartPageConfig as SprykerCartPageConfig;
+
+class CartPageConfig extends SprykerCartPageConfig
+{
+    /**
+     * @var string
+     */
+    protected const CART_BLOCK_MINI_CART_VIEW_TEMPLATE_PATH = '@ShopUi/components/organisms/navigation-top-async/navigation-top-async.twig';
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, on the **Cart** page, cart actions, like changing item quantity or removing an item, are reflected in the mini cart.
+
+{% endinfo_block %}
+
+### 5) Set up widgets
 
 1. Register the following widgets:
 

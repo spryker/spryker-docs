@@ -44,7 +44,7 @@ To retrieve general information about a concrete product, send the request:
 ### Response
 
 
-<details><summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the concrete product prices</summary>
+<details><summary>Response sample: retrieve information about a concrete product with the details on the concrete product prices</summary>
 
 ```json
 {
@@ -134,7 +134,7 @@ To retrieve general information about a concrete product, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the default and volume prices</summary>
+<details><summary>Response sample: retrieve information about a concrete product with the details on the default and volume prices</summary>
 
 ```json
 {

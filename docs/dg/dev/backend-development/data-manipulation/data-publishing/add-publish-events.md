@@ -173,4 +173,35 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
+5. If you need original values or an additional data set in `EventEntityTransfer`, provide the configuration in the Entity class. `getOriginalValueColumnNames` is called only on a save event.
+```php
+<?php
+
+...
+
+namespace Orm\Zed\Glossary\Persistence;
+
+use Orm\Zed\Glossary\Persistence\Map\SpyGlossaryTableMap;
+use Spryker\Zed\Glossary\Persistence\Propel\AbstractSpyGlossary as BaseSpyGlossary;
+
+class SpyGlossary extends BaseSpyGlossary
+{
+    protected function getAdditionalValueColumnNames(): array
+    {
+        return [
+            SpyGlossaryTableMap::COL_IS_ACTIVE,
+            ...
+        ];
+    }
+
+    protected function getOriginalValueColumnNames(): array
+    {
+        return [
+            SpyGlossaryTableMap::COL_SOME_COLUMN,
+            ...
+        ];
+    }
+}
+```
+
 Now, you can track the changes in the `Glossary` entity. When it is created, updated, or deleted, an event is created and posted to the specified RabbitMQ publish queue (`publish.translation`).

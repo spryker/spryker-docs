@@ -197,8 +197,8 @@ Remove the following Propel classes (from all namespaces) which were deleted fro
 ### 4. Introduced product plugins
 Add product reader, creator and updater plugins in `Pyz\Zed\Product\ProductDependencyProvider`. The example below comes from the Spryker Demoshop and the used plugins are responsible for stock, price and image handling of the products. To hook in any of the read, create or update processes of abstract and concrete products you should use these extension points if the future.
 
-<details open>
-<summary markdown='span'>Code sample</summary>
+<details>
+<summary>Code sample</summary>
 
 ```php
 <?php
@@ -373,4 +373,4 @@ For all other issues that you might encounter after migration, please refer to t
 
 ## Upgrading from version 2.* to version 3.*
 
-The Product module does not provide the tax functionality anymore. Upgrade [Migration Guide - Tax](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-tax-module.html).
+The Product module does not provide the tax functionality anymore. Upgrade [Upgrade the Tax module](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-tax-module.html).

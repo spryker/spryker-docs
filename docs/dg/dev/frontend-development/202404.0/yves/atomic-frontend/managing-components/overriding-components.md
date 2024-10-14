@@ -45,8 +45,8 @@ Since the new component will be used everywhere instead of the global one, it is
 
 As we are not going to change the component template, let us copy the whole of the source twig implementation (`vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/components/molecules/simple-carousel/simple-carousel.twig`) to the project level (`src/Pyz/Yves/ShopUi/Theme/default/components/molecules/simple-carousel.twig`). The Twig file will look as follows:
 
-<details open>
-<summary markdown='span'>simple-carousel.twig</summary>
+<details>
+<summary>simple-carousel.twig</summary>
 
 ```
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}

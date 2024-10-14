@@ -44,7 +44,7 @@ To add items to a cart, send the request:
 
 
 <details>
-<summary markdown='span'>Request sample with cart rules</summary>
+<summary>Request sample with cart rules</summary>
 
 `POST https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=cart-rules`
 
@@ -62,7 +62,7 @@ To add items to a cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample with vouchers</summary>
+<summary>Request sample with vouchers</summary>
 
 `POST https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=vouchers`
 
@@ -80,7 +80,7 @@ To add items to a cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample with a promotional item and cart rules</summary>
+<summary>Request sample with a promotional item and cart rules</summary>
 
 {% info_block infoBox "Cart rules" %}
 
@@ -120,7 +120,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary>Response sample with cart rules</summary>
 
 ```json
 {
@@ -222,7 +222,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details>
-<summary markdown='span'>Response sample with vouchers</summary>
+<summary>Response sample with vouchers</summary>
 
 ```json
 {
@@ -365,7 +365,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details>
-<summary markdown='span'>Response sample: adding a promotional item without cart-rules relationship</summary>
+<summary>Response sample: adding a promotional item without cart-rules relationship</summary>
 
 ```json
 {
@@ -408,7 +408,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details>
-<summary markdown='span'>Response sample: adding a promotional item with cart-rules relationship</summary>
+<summary>Response sample: adding a promotional item with cart-rules relationship</summary>
 
 ```json
 {

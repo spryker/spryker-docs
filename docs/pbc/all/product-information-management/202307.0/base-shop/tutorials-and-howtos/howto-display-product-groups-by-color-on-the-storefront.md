@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Display product groups by color on the Storefront"
+title: "Display product groups by color on the Storefront"
 description: Procedure to display a product group on Storefront.
 last_updated: Jun 16, 2021
 template: howto-guide-template

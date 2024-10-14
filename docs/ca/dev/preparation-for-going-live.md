@@ -10,9 +10,9 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/preparation-for-going-live.html
 ---
 
-{% info_block warningBox "Do not risk your Go-Live!" %}
+{% info_block warningBox "Don't risk your go-live" %}
 
-The preparation steps listed here are mandatory as they are crucial for the success of your go-live. We strongly encourage you to complete these steps if they are applicable to your project, as we won't be able to resolve issues related to steps not completed in time. Make sure that your project plan contains the tasks related to the go-live checklist and allocates enough time for their completion.
+The preparation steps listed here are mandatory because they're crucial for the success of your go-live. We strongly encourage you to complete these steps where applicable because we won't be able to resolve issues related to steps not completed in time. Make sure that your project plan contains the tasks related to the go-live checklist and allocates enough time for their completion.
 
 {% endinfo_block %}
 
@@ -23,13 +23,9 @@ We've divided the preparation into approximate timeframes, and you can adjust th
 
 ## Eight weeks before go-live
 
-Make sure you've addressed all the items from the following checklists.
+* Let us know all the details of your go-live plan. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for Domain Name System (DNS) switching and the hypercare phase we provide before and after your go-live.
 
-{% info_block warningBox "Inform us" %}
-
-Let us know all the details of your go-live plan. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for Domain Name System (DNS) switching and the hypercare phase we provide before and after your go-live.
-
-{% endinfo_block %}
+* Make sure you've addressed all the items from the following checklists.
 
 ### Cloud environments
 
@@ -76,6 +72,8 @@ After pointing the domain name to your Spryker project, some of your customers m
 - Perform compliance and legal checks. To ensure the platform complies with relevant legal and regulatory requirements, especially for international operations, consult your legal team. Make sure to check [Guidelines for GDPR compliance](/docs/about/all/support/gdpr-compliance-guidelines.html).
 - Make sure that the Back Office Access Control List (ACL) setup is configured correctly to manage user permissions and access rights within the system's administrative interface. For instructions on how to configure ACL, see [Users and rights overview](/docs/pbc/all/user-management/{{site.version}}/base-shop/user-and-rights-overview.html).
 - If your application is writing logs into your database, develop a strategy on how these logs can be regularly rotated or truncated to avoid large table sizes that can affect the application's performance. By default, the `spy_oms_transition_log` is used to log state machine transitions and can get very large if not [truncated](/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html) regularly.
+- If possible, check if you can implement payment options in a redundant way so that, if one payment provider has an outage, customers can still pay using another one.
+- Secrets, like API tokens, should be rotated regularly. Outline and test rotation strategies to make sure they're not going to cause issues during live operation.
 
 ### Testing
 
@@ -101,7 +99,7 @@ Make sure you've addressed all the items from the following checklists.
 
 ### Cloud
 
-- We highly recommend you to set up an Application Performance Monitoring (APM). The APM tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
+- We highly recommend you to set up an Application Performance Monitoring (APM). The APM tools help you identify performance bottlenecks in your application.
 - To watch the system's performance and configure alerting mechanisms, establish a robust post-launch monitoring plan. To ensure effective investigation in case of security incidents, we recommend configuring logs to gather in a centralized SIEM system.
 - Verify that your deploy file is set up correctly and aligns with your project needs. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
 - Deploy the production environment regularly. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html). Make sure to test all [recipes](/docs/dg/dev/sdks/the-docker-sdk/installation-recipes-of-deployment-pipelines.html#staging-and-production-environment-recipes).

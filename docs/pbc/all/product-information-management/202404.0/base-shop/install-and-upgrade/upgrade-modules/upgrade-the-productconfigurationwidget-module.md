@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductConfigurationWidget
+title: Upgrade the ProductConfigurationWidget module
 description: Learn how to upgrade the ProductConfigurationWidget module to a newer version.
 template: module-migration-guide-template
 redirect_from:

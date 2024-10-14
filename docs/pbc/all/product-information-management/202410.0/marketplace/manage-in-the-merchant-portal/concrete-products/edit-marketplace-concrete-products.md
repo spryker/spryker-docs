@@ -19,13 +19,9 @@ This document describes how to edit concrete products in the Merchant Portal.
 
 1. In the Merchant Portal, go to **Variants**.
 2. On the **Variants** page, click on the concrete product you want to edit.
-  This opens the pane with the concrete product's details.
-3. Click the **Concrete Products** tab.
-4. Select the concrete product to edit.
-  This opens the pane with the concrete product's details.
-5. Update the needed fields.
+3. Update the needed fields.
   For information on the fields, see [Reference information: Edit concrete products](#reference-information-edit-concrete-products).
-6. To save the changes, click **Save**.
+4. To save the changes, click **Save**.
   This closes the pane and shows a success message.
 
 ## Edit multiple concrete products in bulk

@@ -133,9 +133,9 @@ defaults:
       role: "all"
 
 versions:
-  '202307.0': '202307.0'
   '202311.0': '202311.0'
   '202404.0': '202404.0'
+  '202410.0': '202410.0'  
 
 # versioned categories - these must match corresponding directories
 versioned_categories:

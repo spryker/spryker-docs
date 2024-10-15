@@ -37,7 +37,7 @@ Request sample: `GET https://glue-backend.de.b2c.demo-spryker.com/push-notificat
 ### Response
 
 <details>
-<summary markdown='span'>Retrieve push notification providers</summary>
+<summary>Retrieve push notification providers</summary>
 
 ```json
 {

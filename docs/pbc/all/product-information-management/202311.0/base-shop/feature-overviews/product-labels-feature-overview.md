@@ -26,13 +26,13 @@ A *product label* is a sales-related piece of information conveying a message ab
 
 The product labels are applied to products to be displayed on their product cards and product details pages.
 
-<details><summary markdown='span'>Product label on a product card—Storefront</summary>
+<details><summary>Product label on a product card—Storefront</summary>
 
 ![product label on product card](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/product-label-on-product-card.png)
 
 </details>
 
-<details><summary markdown='span'>Product label on a product details page—Storefront</summary>
+<details><summary>Product label on a product details page—Storefront</summary>
 
 ![product label on product details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/product-label-on-product-details-page.png)
 
@@ -72,31 +72,31 @@ An original price is displayed as a strikethrough to identify that the value of 
 A Back Office user can select the design and the position of the product label on a product card. The following label designs are shipped by default:
 
 <details>
-<summary markdown='span'>Alternative</summary>
+<summary>Alternative</summary>
 
 ![alternative product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/alternatives-available-product-label-design.png)
 
 </details>
 
-<details><summary markdown='span'>Discontinued</summary>
+<details><summary>Discontinued</summary>
 
 ![discontinued product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/discontinued-product-label-design.png)
 
 </details>
 
-<details><summary markdown='span'>Top</summary>
+<details><summary>Top</summary>
 
 ![top product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/top-product-label-design.png)
 
 </details>
 
-<details><summary markdown='span'>New</summary>
+<details><summary>New</summary>
 
 ![new product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/new-product-label-design.png)
 
 </details>
 
-<details><summary markdown='span'>Sale</summary>
+<details><summary>Sale</summary>
 
 ![sale product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/sale-product-label-design.png)
 

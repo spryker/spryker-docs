@@ -107,7 +107,7 @@ For details, see [Update payment data](/docs/pbc/all/cart-and-checkout/{{page.ve
 
 {% endinfo_block %}
 
-<details><summary markdown='span'>Sample implementation</summary>
+<details><summary>Sample implementation</summary>
 
 ```php
 <?php

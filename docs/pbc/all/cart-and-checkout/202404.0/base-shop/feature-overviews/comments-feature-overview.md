@@ -49,27 +49,27 @@ Every comment may be tagged. *Tags* are keywords associated with the comments. T
 ## Comments on the Storefront
 Company users can perform the following actions using the Comments widget on the Storefront:
 <details>
-<summary markdown='span'>Create and edit comments</summary>
+<summary>Create and edit comments</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/creating-and-editing-comments.gif)
 
 </details>
 
 <details>
-<summary markdown='span'>Remove comments</summary>
+<summary>Remove comments</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/removing-comments.gif)
 </details>
 
 <details>
-<summary markdown='span'>Tag comments</summary>
+<summary>Tag comments</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/adding-tags.gif)
 
 </details>
 
 <details>
-<summary markdown='span'>Filter comments by tags</summary>
+<summary>Filter comments by tags</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/filtering-tags.gif)
 </details>

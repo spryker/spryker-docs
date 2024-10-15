@@ -63,7 +63,15 @@ If the product added to the shopping list or wishlist is marked as discontinued,
 This section explains what happens on the Storefront after discontinuing a product.
 Let's say the Smartphone with a flash memory equals 16GB is no longer popular, and it is more efficient for you to discontinue it. However, you need to propose some replacements for it to make sure that the user journey will be successful.
 You will discontinue this product variant and set up other products to be displayed as alternatives.
-![Discontinued and alternatives](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Products:+Reference+Information/Discontinued-and-Alternative.gif)
+
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.md/discontinued-and-alternative.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
 
 ## Next steps
 

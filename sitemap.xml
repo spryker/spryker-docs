@@ -8,16 +8,16 @@ search: exclude
   {% for post in site.posts %}
   {% unless post.search == "exclude" %}
   <url>
-    <loc>{{site.url}}{{post.url}}</loc>
+    <loc>{{site.url}}{{post.url | escape}}</loc>
   </url>
+
   {% endunless %}
   {% endfor %}
-
-
+  
   {% for page in site.pages %}
   {% unless page.search == "exclude" %}
   <url>
-    <loc>{{site.url}}{{ page.url}}</loc>
+    <loc>{{site.url}}{{ page.url| escape}}</loc>
   </url>
   {% endunless %}
   {% endfor %}

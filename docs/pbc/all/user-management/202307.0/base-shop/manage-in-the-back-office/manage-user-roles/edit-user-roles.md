@@ -55,8 +55,8 @@ Alternatively, you can look up **BUNDLE**, **CONTROLLER**, and **ACTION** values
 
 See the example of the `navigation.xml` file of the `AvailabilityGui` module:
 
-<details open>
-<summary markdown='span'>navigation.xml</summary>
+<details>
+<summary>navigation.xml</summary>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

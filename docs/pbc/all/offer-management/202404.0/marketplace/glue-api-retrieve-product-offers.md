@@ -53,7 +53,7 @@ To retrieve the product offers, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve an offer</summary>
+<summary>Response sample: retrieve an offer</summary>
 
 ```json
 {
@@ -74,7 +74,7 @@ To retrieve the product offers, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve an offer with product offer prices included</summary>
+<summary>Response sample: retrieve an offer with product offer prices included</summary>
 
 ```json
 {
@@ -137,7 +137,7 @@ To retrieve the product offers, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve an offer with product offer availabilities included</summary>
+<summary>Response sample: retrieve an offer with product offer availabilities included</summary>
 
 ```json
 {
@@ -183,7 +183,7 @@ To retrieve the product offers, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve an offer with merchant information included</summary>
+<summary>Response sample: retrieve an offer with merchant information included</summary>
 
 ```json
 {

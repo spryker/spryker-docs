@@ -1,5 +1,5 @@
 ---
-title: Migration guide - StockGui
+title: Upgrade the StockGui module
 description: Use the guide to learn how to update the StockGui module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

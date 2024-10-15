@@ -114,14 +114,23 @@ The decision of whether the product offer can be purchased depends on the offer 
 
 All available product offers are listed in the *Sold by* area of the product details page. The offers are sorted by price from the lowest to the highest. An offer with the lowest price is selected by default if there are multiple offers for the product.
 
-![Product offers on product details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Products+and+offers/Product+offer+feature+overview/product-offers-on-pdp.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.md/product-offers-on-pdp.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 ### Product offers on the cart page
 
 Offers from different merchants are added as separate cart items, each with its quantity. You can add a note to the offer on the cart page.
 A customer can review the merchant information by clicking the link in the *Sold By* hint.
 
-![Product offers in cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Products+and+offers/Product+offer+feature+overview/add-offers-to-cart.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.md/add-offers-to-cart.mp4" type="video/mp4">
+  </video>
+</figure>
 
 On the **Cart** page, a customer can also add product offers from the **Quick Add to Cart** section. In the search field of the section, they enter a product offer name or SKU and select one of the available options. If there are several merchants selling the selected product offer, a drop-down with such merchants appears. Then, the customer selects a preferable merchant, enters the quantity, and adds the item to cart. Note that the drop-down with merchants is not visible until the product or offer is selected.
 
@@ -131,25 +140,41 @@ Note that the drop-down with merchants is not visible until the product offer is
 
 {% endinfo_block %}
 
-![quick-add-to-cart-from-cart-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Product+Offer/quick-add-to-cart-from-cart-page.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.md/quick-add-to-cart-from-cart-page.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ### Product offers during checkout
 
 During the checkout, offers from the same merchant are grouped for delivery so that the customer can always know how many shipments to expect and the merchants can smoothly fulfill the orders.
 
-![Product offers during checkout](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Products+and+offers/Product+offer+feature+overview/product-offers-during-checkout.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.md/product-offers-during-checkout.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ### Product offers on the wishlist page
 
 Customers can add product offers to a wishlist for future purchase. Merchant information is kept for the offer when it is added to a wishlist. Further, customers can add the offer from the wishlist to cart.
 
-![Product offers in wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Products+and+offers/Product+offer+feature+overview/add-product-offer-to-wl-and-from-wl-to-cart.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.md/add-product-offer-to-wl-and-from-wl-to-cart.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ### Product offers on the Quick Order page
 
 On the **Quick Order** page, customers can add product offers to cart by entering their names or SKUs. Also, in the **Merchants** drop-down, they can specify merchants who they want to buy from. If customers select specific merchants in the **Merchants** drop-down, only the product offers of those merchants are available for selection when they enter **SKU or Name** of the product. Buyers who select the **All Merchants** option can add offers from all merchants. If customers change the merchant of the already selected item, some values of its fields may change. For example, the prices of different merchants may vary, so when you change a merchant, the **Price** value may change as well. For information about the Quick Order feature, see [Quick Add to Cart feature overview](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/quick-add-to-cart-feature-overview.html).
 
-![quick-order-from-quick-order-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Product+Offer/quick-order-from-quick-order-page.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.md/quick-order-from-quick-order-page.mp4" type="video/mp4">
+  </video>
+</figure>
 
 
 ### Product offers on the shopping list page
@@ -162,7 +187,11 @@ Note that the drop-down with merchants is not visible until the product offer is
 
 {% endinfo_block %}
 
-![quick-add-to-cart-from-shopping-list-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Product+Offer/quick-add-to-cart-from-shopping-list-page.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.md/quick-add-to-cart-from-shopping-list-page.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Current constraints
 

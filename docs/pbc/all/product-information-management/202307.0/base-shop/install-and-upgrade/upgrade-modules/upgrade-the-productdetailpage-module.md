@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductDetailPage
+title: Upgrade the ProductDetailPage module
 description: Use the guide to learn how to update the ProductDetailPage module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

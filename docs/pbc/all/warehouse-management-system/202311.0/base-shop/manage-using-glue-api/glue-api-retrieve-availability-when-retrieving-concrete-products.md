@@ -43,7 +43,7 @@ To retrieve general information about a concrete product, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on product availability</summary>
+<summary>Response sample: retrieve information about a concrete product with the details on product availability</summary>
 
 ```json
 {

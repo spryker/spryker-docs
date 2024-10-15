@@ -10,7 +10,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 ## Upgrading from version 4.* to version 5.*
 
-1. Update `spryker/product-option` to at least version 6.0.0. See [Migration Guide - Product Option](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoption-module.html).
+1. Update `spryker/product-option` to at least version 6.0.0. See [Upgrade the ProductOption module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoption-module.html).
 2. Install/Update `spryker/price` to at least version 5.0.0. You can find additional information to price module upgrade: here.
 3. Update `spryker/product-option-cart-connector` to version 5.0.0.
 4. Optionally add `ProductOptionValuePriceExistsCartPreCheckPlugin` to your `CartPreCheckPlugin` list to pre-check product option value price if it exists before switching currency.

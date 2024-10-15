@@ -207,8 +207,8 @@ Database structure is as follows:
     The number of the `spy_shipment_method_price` rows per shipment method should match the number    of store and currency pair set up in the configuration.
     Depending on your requirements, you can set `gross/net` prices as `0`/`null`/`any integer` value as cents.
 
-<details open>
-<summary markdown='span'>Example migration</summary>
+<details>
+<summary>Example migration</summary>
 
 ```php
 <?php

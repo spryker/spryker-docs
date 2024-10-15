@@ -67,7 +67,7 @@ Activate the following plugins:
 | BundleItemQuoteItemReadValidatorPlugin |Checks if `CartItemRequestTransfer` is a bundle item in `QuoteTransfer` before performing update or delete operations on it. |None |Spryker\Zed\ProductBundleCartsRestApi\Communication\Plugin|
 
 
-<details open><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details><summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

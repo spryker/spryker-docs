@@ -71,7 +71,7 @@ Request sample: impersonate a customer
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: impersonate a customer</summary>
+<summary>Response sample: impersonate a customer</summary>
 
 ```json
 {

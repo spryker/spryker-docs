@@ -93,7 +93,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 ### Response
 
-<details><summary markdown='span'>Response sample: no carts are found</summary>
+<details><summary>Response sample: no carts are found</summary>
 
 ```json
 {
@@ -105,7 +105,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve multiple customer's carts</summary>
+<details><summary>Response sample: retrieve multiple customer's carts</summary>
 
 ```json
 {
@@ -168,7 +168,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with their items included</summary>
+<details><summary>Response sample: retrieve customer's carts with their items included</summary>
 
 ```json
 {
@@ -460,7 +460,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with cart permission groups included</summary>
+<details><summary>Response sample: retrieve customer's carts with cart permission groups included</summary>
 
 ```json
 {
@@ -595,7 +595,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with the information on shared carts included</summary>
+<details><summary>Response sample: retrieve customer's carts with the information on shared carts included</summary>
 
 ```json
 {
@@ -730,7 +730,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with shared carts and include information about company users they are shared with</summary>
+<details><summary>Response sample: retrieve customer's carts with shared carts and include information about company users they are shared with</summary>
 
 ```json
 {
@@ -833,7 +833,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with the cart rules included</summary>
+<details><summary>Response sample: retrieve customer's carts with the cart rules included</summary>
 
 ```json
 {
@@ -963,7 +963,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with the information on vouchers included</summary>
+<details><summary>Response sample: retrieve customer's carts with the information on vouchers included</summary>
 
 ```json
 {
@@ -1032,7 +1032,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts withe the information on  promotional items included</summary>
+<details><summary>Response sample: retrieve customer's carts withe the information on  promotional items included</summary>
 
 ```json
 {
@@ -1097,7 +1097,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with the information on the gift cards applied</summary>
+<details><summary>Response sample: retrieve customer's carts with the information on the gift cards applied</summary>
 
 ```json
 {
@@ -1166,7 +1166,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts and include information on items, concrete products, and product options</summary>
+<details><summary>Response sample: retrieve customer's carts and include information on items, concrete products, and product options</summary>
 
 ```json
 {
@@ -1418,7 +1418,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with the information on product labels included</summary>
+<details><summary>Response sample: retrieve customer's carts with the information on product labels included</summary>
 
 ```json
 {

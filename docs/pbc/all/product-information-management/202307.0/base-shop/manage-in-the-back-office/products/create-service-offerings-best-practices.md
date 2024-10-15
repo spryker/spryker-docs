@@ -34,7 +34,7 @@ To create the product, do the following:
     1. In the list of products in the **Catalog&nbsp;<span aria-label="and then">></span> Products** section, find your product and click **Edit** in the *Actions* column for it.
     2. In the **Variants** tab, click **Edit** for the product(s) you want to make active.
     3. On the *Edit Concrete Product* page, click **Activate**. The abstract product will now also become active.
-5. Make sure your product is visible and searchable in the Storefront by going through the checklist in the HowTo - [Make a Product Searchable and Shown on the Storefront](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html) article.
+5. Make sure your product is visible and searchable in the Storefront by going through the checklist in the HowTo - [Make a Product Searchable and Shown on the Storefront](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/make-products-searchable-and-shown-on-the-storefront.html) article.
 
 Now that you have the product, you can proceed with offering services to it.
 

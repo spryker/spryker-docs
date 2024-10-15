@@ -64,7 +64,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve a guest cart with cart rules included</summary>
+<summary>Response sample: retrieve a guest cart with cart rules included</summary>
 
 ```json
 {
@@ -138,7 +138,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve a guest cart with a cart rule and a discount voucher</summary>
+<summary>Response sample: retrieve a guest cart with a cart rule and a discount voucher</summary>
 
 ```json
 {

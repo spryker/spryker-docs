@@ -31,7 +31,7 @@ tag: 'dev'
 
 environment: docker.dev
 image:
-  tag: spryker/php:8.1
+  tag: spryker/php:8.3
   php:
     enabled-extensions:
       - xhprof

@@ -245,7 +245,7 @@ You can switch the language in the **Back Office > User Control > User section >
 | CmsBlockProductStorageEventSubscriber | Registers listeners that are responsible for publishing product to CMS block relations to storage when a related entity changes (optional) | None | Spryker\Zed\CmsBlockProductStorage\Communication\Plugin\Event\Subscriber |
 
 <details>
-<summary markdown='span'>Pyz\Zed\Event\EventDependencyProvider</summary>
+<summary>Pyz\Zed\Event\EventDependencyProvider</summary>
 
 ```php
 <?php
@@ -518,8 +518,8 @@ Make sure that all the CMS entity changes performed manually in the Back Office 
 
 {% endinfo_block %}
 
-<details open>
-<summary markdown='span'>Example Expected Data Fragment: Redis, CmsBlock</summary>
+<details>
+<summary>Example Expected Data Fragment: Redis, CmsBlock</summary>
 
 ```json
 {
@@ -769,7 +769,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 1. Prepare your pages data according to your requirements using our demo data:
 
 <details>
-<summary markdown='span'>vendor/spryker/cms-page-data-import/data/import/cms_page.csv</summary>
+<summary>vendor/spryker/cms-page-data-import/data/import/cms_page.csv</summary>
 
 ```yaml
 page_key,template_name,is_searchable,is_active,publish,url.de_DE,url.en_US,name.de_DE,name.en_US,meta_title.de_DE,meta_title.en_US,meta_keywords.de_DE,meta_keywords.en_US,meta_description.de_DE,meta_description.en_US,placeholder.title.de_DE,placeholder.title.en_US,placeholder.content.de_DE,placeholder.content.en_US
@@ -832,7 +832,7 @@ cms-page--7,US
 | store_name | ✓ | string | DE | Unique store identifier. |
 
 <details>
-<summary markdown='span'>vendor/spryker/cms-slot-data-import/data/import/cms_block.csv</summary>
+<summary>vendor/spryker/cms-slot-data-import/data/import/cms_block.csv</summary>
 
 ```yaml
 block_key,block_name,template_name,template_path,active,placeholder.title.de_DE,placeholder.title.en_US,placeholder.description.de_DE,placeholder.description.en_US,placeholder.link.de_DE,placeholder.link.en_US,placeholder.content.de_DE,placeholder.content.en_US

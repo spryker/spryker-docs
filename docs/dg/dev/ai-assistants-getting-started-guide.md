@@ -112,6 +112,8 @@ You can interact with GitHub Copilot using prompts. An example is in the screens
 Alternatively, tests can be generated using the Qodo tool (formerly Codium). Qodo offers more flexible configuration options and a wider range of test scenarios compared to GitHub Copilot.
 The example is in the screenshot below:
 
+
+
 ### Code generation using Cursor
 
 Cursor AI excels at offering context-aware suggestions by considering the bigger picture within the codebase. This enables it to deliver more accurate and well-structured recommendations, in contrast to GitHub Copilot, which mainly focuses on real-time suggestions based on the specific line of code you're working on.

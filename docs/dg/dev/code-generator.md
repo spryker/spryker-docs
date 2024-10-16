@@ -17,7 +17,7 @@ related:
   - title: Cronjob scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html
   - title: Data import
-    link: docs/scos/dev/sdk/data-import.html
+    link: docs/dg/dev/data-import/{{site.version}}/data-import.html
   - title: Development virtual machine, docker containers & console
     link: docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
   - title: Twig and TwigExtension

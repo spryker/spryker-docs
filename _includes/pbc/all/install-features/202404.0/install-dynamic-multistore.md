@@ -10,10 +10,10 @@ This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynami
 
 Follow the steps below to install the Dynamic Multistore feature core.
 
-### Prerequisites for projects below version 202404.0
+### Prerequisites for projects below version 202307.0
 
 {% info_block warningBox "Shop version" %}
-If your project is of version 202311.0 or later, go to [Enable the dynamic store feature]
+If your project is of version 202307.0 or later, go to [Enable the dynamic store feature]
 {% endinfo_block %}
 
 1. Upgrade the following modules:
@@ -56,6 +56,9 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
+{% info_block warningBox "Dependencies issues" %}
+You might need to update or install related dependencies. For more details on how to update modules, see [Updating Spryker](/docs/dg/dev/updating-spryker/updating-spryker.html#spryker-product-structure).
+{% endinfo_block %}
 
 ### 1) Enable the dynamic store feature
 
@@ -178,8 +181,17 @@ docker:
 </details>
 
 In this configuration, region is used for entities like services, endpoints, or applications. The `SPRYKER_DYNAMIC_STORE_MODE`  variable enables the dynamic multistore feature. Make sure store is not used in the new configuration to avoid deployment failures.
-If you have deployment hooks in deployment file modify installers: remove store mentions and use region instead.
-For example if your installer file looks like 
+
+If you have deployment hooks in deployment file you have to remove stores from recipe files.
+For example, if you have the following hooks in your deployment file:
+
+```
+SPRYKER_HOOK_BEFORE_DEPLOY: 'vendor/bin/install -r pre-deploy -vvv'
+SPRYKER_HOOK_AFTER_DEPLOY: 'true'
+SPRYKER_HOOK_INSTALL: 'vendor/bin/install -r production --no-ansi -vvv'
+SPRYKER_HOOK_DESTRUCTIVE_INSTALL: 'vendor/bin/install -r destructive --no-ansi -vvv'
+```
+and recipe files contain stores section like:
 
 ```
 env:
@@ -192,7 +204,7 @@ stores:
 sections:
     .....
 ```
-remove stores section and add region to environment variables
+remove stores section and add region to environment variables:
 
 ```
 env:

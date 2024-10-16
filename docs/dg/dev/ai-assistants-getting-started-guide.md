@@ -14,7 +14,7 @@ Before using any AI-related tool, please consult with the legal department of yo
 
 Spryker Commerce OS could be used with a lot of different tools, however our team recommends to start with the following AI Assistants:
 - GitHub Copilot
-- Qodo
+- Qodo (formerly Codium)
 - Cursor
 
 ### Install GitHub Copilot
@@ -30,7 +30,7 @@ To start using GitHub Copilot, you need to perform few steps:
 And after these small steps, you will be able to use the GitHub Copilot.
 
 ### Install Qodo
-
+Qodo is an AI-powered tool that helps developers to generate code, tests, and documentation. It is a great tool for developers who want to save time and improve the quality of their code.
 The setup of the Qodo tool is straightforward. All you need to do is install the following [plugin](https://plugins.jetbrains.com/plugin/21206-qodo-gen-formerly-codiumate-). If the installation was correct, you could check that the plugin works. An example is in the screenshot below.
 
 
@@ -56,62 +56,60 @@ There are several ways, how you can utilize AI Assistants in your daily work. He
 - Simplify the selected code fragment.
 - Generate tests for the selected code fragment.
 - IO interaction.
+- Code generation.
 
-### Code completion tool
+### Code completion tool using GitHub Copilot
 
 GitHub Copilot can generate suggestions based on the existing code inside your project.
-The video screenshot will show how it works:
+The screenshot below will show how it works:
 
 
 
 
-### Describe the selected code fragment
+### Describe the selected code fragment using GitHub Copilot
 
 GitHub Copilot can explain the code fragment. The screenshot below will show this in action:
 
 
 
 
-### Generate doc blocks for the selected code fragment
+### Generate doc blocks for the selected code fragment using GitHub Copilot
 
 GitHub Copilot can generate doc blocks for a method, as well as add comments to the code. The screenshot below will show this in action.
 
 
 
 
-### Fix syntax bugs for the selected code fragment
+### Fix syntax bugs for the selected code fragment using GitHub Copilot
 
 GitHub Copilot can suggest how to fix syntax bugs in the method. The screenshot below will show an example:
 
 
 
 
-### Simplify the selected code fragment
+### Simplify the selected code fragment using GitHub Copilot
 
 GitHub Copilot can refactor a code fragment. The screenshot below will show this in action:
 
 
 
 
-### Generate tests for the selected code fragment
+### Generate tests for the selected code fragment using GitHub Copilot
 
-GitHub Copilot can generate tests for the selected code fragment. Video below will show the example:
-
-
+GitHub Copilot can generate tests for the selected code fragment. The screenshot below will show the example:
 
 
-### IO interaction
+
+
+### IO interaction using GitHub Copilot
 
 You can interact with GitHub Copilot using prompts. An example is in the screenshot below.
-
-In the next example, you'll see how to generate transfer definition XML code using GitHub Copilot IO interaction mode.
-
 
 
 
 ### Generate tests using Qodo
 
-Alternatively, tests can be generated using the Qodo tool (formerly CodiumAI). Qodo offers more flexible configuration options and a wider range of test scenarios compared to GitHub Copilot.
+Alternatively, tests can be generated using the Qodo tool (formerly Codium). Qodo offers more flexible configuration options and a wider range of test scenarios compared to GitHub Copilot.
 The example is in the screenshot below:
 
 ### Code generation using Cursor

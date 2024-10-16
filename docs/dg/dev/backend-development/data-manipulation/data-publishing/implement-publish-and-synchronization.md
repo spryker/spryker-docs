@@ -133,7 +133,7 @@ All mirror tables must implement the *Synchronization* behavior that is used to 
 Sample Redis synchronization table (see `data/shop/development/current/src/Orm/Propel/DE/Schema/spy_product_storage.schema.xml`):
 
 ```xml
-    <table name="spy_product_abstract_storage">
+    <table name="spy_product_abstract_storage" identifierQuoting="true">
         <column name="id_product_abstract_storage" type="integer" autoIncrement="true" primaryKey="true"/>
         <column name="fk_product_abstract" type="INTEGER" required="true"/>
         <id-method-parameter value="spy_product_abstract_storage_pk_seq"/>
@@ -151,7 +151,7 @@ Sample Redis synchronization table (see `data/shop/development/current/src/Orm/P
 Sample Elasticsearch synchronization table (see `data/shop/development/current/src/Orm/Propel/DE/Schema/spy_cms_page_search.schema.xml`):
 
 ```xml
-    <table name="spy_cms_page_search">
+    <table name="spy_cms_page_search" identifierQuoting="true">
         <column name="id_cms_page_search" type="INTEGER" autoIncrement="true" primaryKey="true"/>
         <column name="fk_cms_page" type="INTEGER" required="true"/>
         <!-- "structured_data" column contains the result from database query while "data" column contains mapped data for the search engine -->

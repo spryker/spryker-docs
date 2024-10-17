@@ -5,6 +5,8 @@ entries:
   nested:
   - title: Developer getting started guide
     url: /docs/dg/dev/development-getting-started-guide.html
+  - title: AI coding assistants
+    url: /docs/dg/dev/ai-coding-assistants.html
   - title: Set up locally
     url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:

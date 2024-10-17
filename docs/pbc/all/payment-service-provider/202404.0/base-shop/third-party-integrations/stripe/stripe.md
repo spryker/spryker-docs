@@ -1,7 +1,7 @@
 ---
 title: Stripe
 description: Stripe technology partner
-last_updated: Mar 24, 2024
+last_updated: Oct 10, 2024
 template: concept-topic-template
 ---
 
@@ -39,6 +39,7 @@ However, our team only tested the following payment methods:
 - Link
 - Przelewy24
 - Giropay
+- US, UK, CA, AU, NZ: AfterPay
 
 
 ## Current limitations

@@ -5,6 +5,8 @@ entries:
   nested:
   - title: Developer getting started guide
     url: /docs/dg/dev/development-getting-started-guide.html
+  - title: AI coding assistants
+    url: /docs/dg/dev/ai-coding-assistants.html
   - title: Set up locally
     url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:
@@ -1152,6 +1154,7 @@ entries:
       url: /docs/dg/dev/data-import/implement-incremental-installers.html
       include_versions:
       - "202404.0"
+      - "202410.0"
 
   - title: Guidelines
     url: /docs/dg/dev/guidelines/guidelines.html
@@ -1444,14 +1447,9 @@ entries:
       nested:
       - title: Backend API Marketplace B2B Demo Shop reference
         url: /docs/dg/dev/glue-api/backend-glue-infrastructure/backend-api-marketplace-b2b-demo-shop-reference.html
-        include_versions:
-          - "202311.0"
-          - "202304.0"
       - title: Backend API Marketplace B2C Demo Shop reference
         url: /docs/dg/dev/glue-api/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html
-        include_versions:
-          - "202311.0"
-          - "202304.0"
+
     - title: Old Glue infrastructure
       nested:
       - title: Glue API authentication and authorization
@@ -1462,10 +1460,6 @@ entries:
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/glue-rest-api.html
       - title: Glue infrastructure
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/glue-infrastructure.html
-      - title: Resolve search engine friendly URLs
-        url: /docs/dg/dev/glue-api/old-glue-infrastructure/resolving-search-engine-friendly-urls.html
-        include_versions:
-        - "202307.0"
       - title: Handling concurrent REST requests and caching with entity tags
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
       - title: "Marketplace: Resolve search engine friendly URLs"
@@ -1595,6 +1589,8 @@ entries:
         url: /docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html
       - title: Retaining ACP apps when running destructive deployments
         url: /docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html
+      - title: APIs and overview diagrams for payment service providers
+        url: /docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.html
 #      - title: Develop an app
 #        url: /docs/dg/dev/acp/develop-an-app/develop-an-app.html
 #        nested:

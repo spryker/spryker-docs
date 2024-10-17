@@ -317,7 +317,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 ```
 
 <details>
-<summary>Additionally you can create a separate queue for publish events issued by your new domain object</summary>
+<summary>How high-performance domains you can create a separate queue for publish events issued by your new domain object</summary>
+High-performance domains have special requirements to publishing performance. Such domains have high number of items (eg prices) or large size of a single object.
+In this case it's better to separate their queue for faster, more predictable processing and easy debugging.
+ 
 3.1 Create a publish queue in which, during the publishing process, an event or multiple events are posted.
 
 ```php

@@ -1,6 +1,6 @@
 ---
-title: Product Comparison feature integration
-description: Learn how to integrate the Product comparison feature into a Spryker project.
+title: Install the Product Comparison feature
+description: Learn how to install the Product comparison feature.
 last_updated: Oct 7, 2024
 template: feature-integration-guide-template
 ---

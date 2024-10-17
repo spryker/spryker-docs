@@ -206,18 +206,23 @@ docker:
 
 In this configuration, region is used for entities like services, endpoints, or applications. The `SPRYKER_DYNAMIC_STORE_MODE`  variable enables the dynamic multistore feature. Make sure store is not used in the new configuration to avoid deployment failures.
 
-If you have deployment hooks in deployment file you have to remove stores from recipe files.
-For example, if you have the following hooks in your deployment file:
 
-```
+#### Configure deployment recipe files
+
+
+If you have deployment hooks in the deployment file, you need to remove stores from the recipe files.
+
+Here's how a deployment files with hooks looks like deployment file:
+
+```yml
 SPRYKER_HOOK_BEFORE_DEPLOY: 'vendor/bin/install -r pre-deploy -vvv'
 SPRYKER_HOOK_AFTER_DEPLOY: 'true'
 SPRYKER_HOOK_INSTALL: 'vendor/bin/install -r production --no-ansi -vvv'
 SPRYKER_HOOK_DESTRUCTIVE_INSTALL: 'vendor/bin/install -r destructive --no-ansi -vvv'
 ```
-and recipe files contain stores section like:
+And here's a recipe file with stores:
 
-```
+```yml
 env:
     NEW_RELIC_ENABLED: 0
 
@@ -228,9 +233,10 @@ stores:
 sections:
     .....
 ```
-remove stores section and add region to environment variables:
 
-```
+Remove the stores section and add a region to environment variables:
+
+```yml
 env:
     NEW_RELIC_ENABLED: 0
     SPRYKER_CURRENT_REGION: EU
@@ -238,6 +244,7 @@ env:
 sections:
     .....
 ```
+
 ### 2) Set up configuration
 
 Before the introduction of dynamic multistore, configuration was managed in `config/Shared/stores.php`. With dynamic multistore, configuration is managed in the database. `config/Shared/stores.php` and `config/Shared/default_store.php` are now obsolete.
@@ -766,7 +773,7 @@ AT
 
 | COLUMN     | REQUIRED | Data Type | Data Example | Data Explanation |
 |------------| --- | --- | --- | --- |
-|name        | v | string | DE | Define store name. |
+|name        | ✓ | string | DE | Define store name. |
 
 **data/import/common/{REGION}/store.csv**
 ```csv
@@ -778,7 +785,7 @@ AT
 
 | Column     | REQUIRED | Data Type | Data Example | Data Explanation |
 |------------| --- | --- | --- | --- |
-|name        |mandatory |string | DE | Define store name. |
+|name        | ✓ |string | DE | Define store name. |
 
 **data/import/common/DE/locale_store.csv**
 ```csv

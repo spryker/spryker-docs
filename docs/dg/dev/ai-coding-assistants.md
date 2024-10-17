@@ -66,7 +66,7 @@ Most features of GitHub Copilot can be used as follows:
 
 Generate suggestions based on the existing code in your project:
 
-[github-copilot-suggestion](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-coding-assistants.md/github-copilot-suggestion.png)
+![github-copilot-suggestion](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-coding-assistants.md/github-copilot-suggestion.png)
 
 Explain a code fragment:
 

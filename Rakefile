@@ -14,6 +14,9 @@ require 'html-proofer'
 
 # Method to run HTMLProofer with retries
 def run_htmlproofer_with_retry(directory, options, max_retries = 3, delay = 5)
+  options[:typhoeus] ||= {}
+  options[:typhoeus][:timeout] = 60
+
   retries = max_retries
   begin
     HTMLProofer.check_directory(directory, options).run

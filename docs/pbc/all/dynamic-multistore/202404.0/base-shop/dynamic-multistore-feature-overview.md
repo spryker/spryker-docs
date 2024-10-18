@@ -100,11 +100,9 @@ The following image shows the ability to call API endpoints with the exemplary "
 ## Adding stores using data import
 
 
-You can add a new store using data import or in the Back Office. Adding a store in the Back Office is easier and faster, but you have to add this store across all environments.
+You can add a new store using data import or in the Back Office. Adding a store in the Back Office is easier and faster, but you have to add each store across all environments.
 
-Using data import, you can configure a new store once and deploy it across all environments.
-
-Configure a new store as described here: [Import configuration for store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#import-data)
+Using data import, you can configure a new store once and deploy it across all environments. For instructions on importing stores, see [Import data](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#import-data).
 
 When you add a new store, to enable store-related entities for customers, you need to assign them to the store. Some of the store related entities:
 - Products
@@ -112,12 +110,10 @@ When you add a new store, to enable store-related entities for customers, you ne
 - CMS entities
 - Prices
 
-To avoid manually assigning entities in the Back Office, you can assign them using data import. For more details, see
-
-See: [Import minimum set of data for store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/import-stores.html)
+To avoid manually assigning entities in the Back Office, you can assign them using data import. For more details, [Import stores](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/import-stores.html).
 
 
-## What is changed when Dynamic Multistore is enabled?
+## How Dynamic Multistore affects a project
 
 Dynamic Multistore enables the following changes to the project:
 

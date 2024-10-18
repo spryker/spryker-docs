@@ -241,13 +241,11 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 </table>
 ```
 
-**Environment Limitations**
+#### Environment limitations related to DMS
 
-**Disabled Dynamic Multi-Store (DMS) environment:**
-
-When the **DMS** feature is turned off, the Direct Sync feature has the following limitations:  
-- **Single-store configuration**: The feature is only supported for configurations with a single store.
-- **Multi-store configuration with namespace consistency**: For configurations with multiple stores, all stores must use the same Storage and Search namespaces.
+When Dynamic Multi-Store (DMS) is disabled, the Direct Sync feature has the following limitations:  
+- Single-store configuration: The feature is only supported for configurations with a single store.
+- Multi-store configuration with namespace consistency: For configurations with multiple stores, all stores must use the same Storage and Search namespaces.
 
 Example configuration for multiple stores:
 
@@ -271,9 +269,7 @@ stores:
                 namespace: search
 ```
 
-**Enabled Dynamic Multi-Store environment:**
-
-There are no environment limitations for the Direct Sync feature when the Dynamic Multi-Store feature is enabled. 
+When DMS is enabled, there're no environment limitations for the Direct Sync feature.
 
 
 ### Data Architecture

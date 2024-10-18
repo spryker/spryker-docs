@@ -82,7 +82,7 @@ With dynamic multistore, you can define region or store using domains or headers
 
 We recommend making `de.mysprykershop.com` a mirror of `eu.mysprykershop.com` to preserve the availability of old links in search engines.
 
-
+{% endinfo_block %}
 
 ### 1) Enable the dynamic store feature
 
@@ -274,7 +274,7 @@ We recommend making `de.mysprykershop.com` a mirror of `eu.mysprykershop.com` to
 | RabbitMqConfig::getQueuePools() | Configures queue pools for regions. | Pyz\Client\RabbitMq |
 | RabbitMqConfig::getDefaultLocaleCode() | Returns the default locale code. | Pyz\Client\RabbitMq |
 | RabbitMqConfig::getSynchronizationQueueConfiguration() | Adds `1StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE1` to configure the sync queue. | Pyz\Client\RabbitMq |
-|  Setup cron jobs: `config/Zed/cronjobs/jobs.php`.  | Adjust all cron jobs to use the new configuration. |  |
+| Setup cron jobs: `config/Zed/cronjobs/jenkins.php`.  | Adjust all cron jobs to use the new configuration. |  |
 | StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE | Configures the sync queue name to be used for processing store messages. | Pyz\Zed\StoreStorage |
 
 
@@ -762,14 +762,6 @@ Import locale, store, and country data:
 1.  Prepare your data according to your requirements using our demo data:
 
 Example of locales configuration for the DE store:
-
-**data/import/common/{REGION}/store.csv**
-```csv
-name
-DE
-AT
-
-```
 
 | COLUMN     | REQUIRED | Data Type | Data Example | Data Explanation |
 |------------| --- | --- | --- | --- |

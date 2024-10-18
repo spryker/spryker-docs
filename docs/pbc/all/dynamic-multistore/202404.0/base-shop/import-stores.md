@@ -177,11 +177,14 @@ dummyPaymentCreditCard,DE
 dummyMarketplacePaymentInvoice,DE
 ```
 
+## Enable new imports
 
 Add entities to the following import action files:
 - `data/import/common/commerce_setup_import_config_{REGION\STORE}.yml`
 - `data/import/local/full\_{REGION\STORE}.yml`
 - `data/import/production/full\_{SPRYKER\STORE}.yml`
+
+Insert the following code snippet to the import action files:
 
 ```yaml
 data_import:
@@ -217,3 +220,12 @@ data_import:
       source: data/import/common/DE/shipment_price.csv
     - data_entity: payment-method-store
       source: data/import/common/DE/payment_method_store.csv
+
+```
+## Import data
+
+Run the following command to import the data:
+
+```bash
+vendor/bin/console data:import
+```

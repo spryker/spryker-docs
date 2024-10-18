@@ -150,5 +150,3 @@ EU region has two stores: DE and AT. US region has one store: US.
 ## Performance
 
 The number of stores affects data import speed: the more stores you have, the slower data import is.
-
-Take into account data import request body limit when you import data for many stores.

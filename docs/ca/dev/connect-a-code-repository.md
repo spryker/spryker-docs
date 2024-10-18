@@ -57,7 +57,7 @@ We connect the code repository shortly after you provide the details.
 
 ## Connect a Bitbucket code repository
 
-Currently, only GitHub is integrated into AWS CodeBuild. To use a Bitbucket code repository, configure [AWS CodeStar](https://docs.aws.amazon.com/codestar/latest/userguide/welcome.html) by following the steps below.
+Currently, only GitHub is integrated into AWS CodeBuild. To use a Bitbucket code repository, configure AWS CodeStar by following the steps below.
 
 
 ### Prerequisites

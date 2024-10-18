@@ -44,7 +44,7 @@ jobs:
             - name: Setup PHP
               uses: shivammathur/setup-php@v2
               with:
-                  php-version: '8.2'
+                  php-version: '8.3'
                   extensions: mbstring, intl, bcmath
                   coverage: none
 
@@ -65,7 +65,7 @@ jobs:
             - name: Setup PHP
               uses: shivammathur/setup-php@v2
               with:
-                  php-version: '8.1'
+                  php-version: '8.2'
                   extensions: mbstring, intl, bcmath
                   coverage: none
 

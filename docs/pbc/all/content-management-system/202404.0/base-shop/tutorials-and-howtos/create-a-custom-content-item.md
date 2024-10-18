@@ -199,11 +199,13 @@ The **CMS Block Glossary Edit** and **Placeholder Edit** pages contain the WYSIW
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Feature+HowTos/HowTo+-+Create+a+New+Custom+Content+Item/content-item-menu.png)
 
-To add the new content item to that list, in `src/Zed/ContentFooGui`, implement a new plugin using `\Spryker\Zed\ContentGuiExtension\Dependency\Plugin\ContentGuiEditorPluginInterface`—for example,  `ContentFooContentGuiEditorPlugin`.
-The following are the method descriptions:
-* `getType()`: Returns a string displaying the content type—for example, Foo.
-* `getTemplates()`: Returns an array of templates supported by your Twig plugin created in the previous section. If there are no supported templates defined, returns an empty array.
-* `getTwigFunctionTemplate()`: Returns a Twig expression that is added into the content.
+To add the new content item to that list, do the following:
+
+1. In `src/Zed/ContentFooGui`, implement a plugin using `\Spryker\Zed\ContentGuiExtension\Dependency\Plugin\ContentGuiEditorPluginInterface`,for example–`ContentFooContentGuiEditorPlugin`.
+Method descriptions:
+  * `getType()`: Returns a string displaying the content type—for example, Foo.
+  * `getTemplates()`: Returns an array of templates supported by your Twig plugin created in the previous section. If there are no supported templates defined, returns an empty array.
+  * `getTwigFunctionTemplate()`: Returns a Twig expression that is added into the content.
 
 ```php
 <?php
@@ -247,6 +249,27 @@ class ContentFooContentGuiEditorPlugin extends AbstractPlugin implements Content
     public function getTwigFunctionTemplate(): string
     {
         return "{% raw %}{{{% endraw %} content_foo('%KEY%', '%TEMPLATE%') {% raw %}}}{% endraw %}";
+    }
+}
+```
+
+2. Extend `\Pyz\Zed\CmsContentWidgetCmsContentWidgetDependencyProvider::getCmsContentWidgetParameterMapperPlugins()` to map Twig function name with the item key mapper plugin. Example:
+```php 
+class CmsContentWidgetDependencyProvider extends SprykerCmsContentWidgetDependencyProvider
+{
+    /**
+     * {@inheritDoc}
+     *
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\CmsContentWidget\Dependency\Plugin\CmsContentWidgetParameterMapperPluginInterface>
+     */
+    protected function getCmsContentWidgetParameterMapperPlugins(Container $container)
+    {
+        return [
+            ...
+            'content_foo' => new CmsContentItemKeyMapperPlugin(),
+        ];
     }
 }
 ```

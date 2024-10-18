@@ -17,7 +17,7 @@ There are two primary methods to extend data in audit logs:
 
 ## Prerequisites
 
-[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202407.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
+[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202410.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
 
 
 ## Extend the audit log structure by introducing processor plugins

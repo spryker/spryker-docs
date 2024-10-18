@@ -12,6 +12,24 @@ end
 
 require 'html-proofer'
 
+# Method to run HTMLProofer with retries
+def run_htmlproofer_with_retry(directory, options, max_retries = 3, delay = 5)
+  retries = max_retries
+  begin
+    HTMLProofer.check_directory(directory, options).run
+  rescue HTMLProofer::Error => e
+    retries -= 1
+    if retries > 0
+      puts "Retrying... (#{max_retries - retries}/#{max_retries} attempts)"
+      sleep(delay) # Wait before retrying
+      retry
+    else
+      puts "HTMLProofer failed after #{max_retries} retries."
+      raise e
+    end
+  end
+end
+
 commonOptions = {
   :allow_hash_href => true,
   :ignore_urls => [
@@ -98,7 +116,7 @@ task :check_ca do
     /docs\/dg\/.+/,
     /docs\/acp\/.+/
   ]
-  HTMLProofer.check_directory("./_site", options).run
+  run_htmlproofer_with_retry("./_site", options)
 end
 
 task :check_about do
@@ -111,7 +129,7 @@ task :check_about do
     /docs\/pbc\/.+/,
     /docs\/dg\/.+/
   ]
-  HTMLProofer.check_directory("./_site", options).run
+  run_htmlproofer_with_retry("./_site", options)
 end
 
 task :check_pbc do
@@ -128,7 +146,7 @@ task :check_pbc do
     /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202410\.0\/.+/
   ]
-  HTMLProofer.check_directory("./_site", options).run
+  run_htmlproofer_with_retry("./_site", options)
 end
 
 
@@ -146,5 +164,5 @@ task :check_dg do
     /docs\/dg\/\w+\/[\w-]+\/202410\.0\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202411\.0\/.+/
   ]
-  HTMLProofer.check_directory("./_site", options).run
+  run_htmlproofer_with_retry("./_site", options)
 end

@@ -20,7 +20,7 @@ def run_htmlproofer_with_retry(directory, options, max_retries = 3, delay = 5)
   retries = max_retries
   begin
     HTMLProofer.check_directory(directory, options).run
-  rescue HTMLProofer::Error => e
+  rescue SystemExit => e
     retries -= 1
     if retries > 0
       puts "Retrying... (#{max_retries - retries}/#{max_retries} attempts)"

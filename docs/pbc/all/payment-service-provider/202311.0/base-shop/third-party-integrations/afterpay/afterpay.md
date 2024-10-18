@@ -15,7 +15,7 @@ related:
 
 ## Partner Information
 
-[ABOUT AFTERPAY](https://www.afterpay.de/)
+[ABOUT AFTERPAY](https://www.afterpay.com/)
 
 Available since 2017, AfterPay provides invoice solutions as an unitary brand in nine European countries. By integrating into the Spryker Commerce OS AfterPay can now be consumed by all Spryker clients as a cross-border Pay-after-delivery solution. AfterPay depicts local consumer and market requirements as well as simplifies international expansion.AfterPay gives you back control of your customer relationship and takes it to the next level. It provides your customers with all the payment flexibility they want while you stay in charge of and extend the branded checkout experience. And it sharpens your competitive edge by sharing their purchasing data with you, so you know who your best customers are and how to retarget them.
 

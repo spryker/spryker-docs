@@ -19,6 +19,8 @@ On this page, products are compared based on the attributes they have. The custo
 
 A maximum of three products can be displayed by default.
 
+<!-- this value can be changed, update this paragraph once this info is added to the installation guide -->
+
 ## Related Developer documents
 
 |INSTALLATION GUIDES  |

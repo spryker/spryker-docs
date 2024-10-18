@@ -96,7 +96,9 @@ commonOptions = {
     /code.visualstudio.com\/[\.\w\-\/\?]+/,
     /www.jetbrains.com\/[\.\w\-\/\?]+/,
     /docs.spring.io\/[\.\w\-\/\?]+/,
-    'http://redisdesktop.com/',
+    "http://redisdesktop.com/",
+    "https://developer.computop.com/display/EN/Test+Cards",
+    "https://www.centralbank.cy/"
   ],
   :ignore_files => [],
   :typhoeus => {

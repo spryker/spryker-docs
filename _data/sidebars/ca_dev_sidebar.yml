@@ -17,7 +17,8 @@ entries:
             url: /docs/ca/dev/access/locate-service-credentials.html
           - title: Connect to services via SSH
             url: /docs/ca/dev/access/connect-to-services-via-ssh.html
-
+          - title: Connect to services via AWS Systems Manager & the docker-sdk
+            url: /docs/ca/dev/access/connect-to-services-via-aws-and-docker-sdk.html
       - title: Connecting the Docker SDK
         url: /docs/ca/dev/connecting-the-docker-sdk.html
       - title: Connect a code repository

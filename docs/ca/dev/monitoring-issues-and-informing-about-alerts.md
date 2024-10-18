@@ -137,7 +137,3 @@ Most alerts we receive are temporary states and aren't a real problem. However, 
 If there is an alert, the monitoring team looks for a likely explanation, like a temporary deployment error. If the team needs to take an action, they decide if it requires consent or cooperation from your side. If cooperation or consent is needed, they will contact the responsible person by opening an alert case. If a Solution Partner is responsible, you can track the status of these alert cases and the tickets in the Partner Portal. We update them on a daily basis in the **Case Detail** view under **Ticket Status**.
 
 If it's possible to resolve an issue on our own, we'll do it. In case of a downtime or severe service degradation, we inform you about the incident via a case and a Root Cause Analysis [RCA] report.
-
-## Want more insights?
-
-We offer New Relic APM, so you can also monitor applications and configure alerts and monitoring to fulfill your needs. To request an offer for New Relic APM, [contact support](https://support.spryker.com) via **Create Case** - **Get Help**.

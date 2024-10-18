@@ -2830,6 +2830,10 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-barcode-feature-overview.html
                   - title: Product Bundles
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-bundles-feature-overview.html
+                  - title: Product Comparison
+                    url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-comparison-feature-overview.html
+                    include_versions:
+                    - "202410.0"                    
                   - title: Product Groups
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-groups-feature-overview.html
                   - title: Product Labels

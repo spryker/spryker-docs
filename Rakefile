@@ -1,5 +1,13 @@
 task "assets:precompile" do
-  exec("jekyll build --config=_config.yml,_config_production.yml")
+  deploy_env = ENV['DEPLOY_ENV'] || 'production'
+
+  if deploy_env == 'production'
+    puts "Running Production Build"
+    exec("jekyll build --config=_config.yml,_config_production.yml")
+  else
+    puts "Running Staging Build"
+    exec("jekyll build --config=_config.yml,_config_staging.yml")
+  end
 end
 
 require 'html-proofer'

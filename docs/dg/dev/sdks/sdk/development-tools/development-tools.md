@@ -18,3 +18,4 @@ This section explains how to use the following development tools when working wi
 * [Formatter](/docs/dg/dev/sdks/sdk/development-tools/formatter.html)
 * [SCSS linter](/docs/dg/dev/sdks/sdk/development-tools/scss-linter.html)
 * [TS linter](/docs/dg/dev/sdks/sdk/development-tools/ts-linter.html)
+* [PHPStorm Support](/docs/dg/dev/sdks/sdk/development-tools/phpstorm-support.html)

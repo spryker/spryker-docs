@@ -932,6 +932,9 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 ```
 
+Execute ```console queue:setup``` to update the queue setup with the new sync queue, so it will appear in RabbitMq.
+Error queue will be added automatically with .error postfix.
+
 3. Add `MessageProcessor` for the queue to `\Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins()`.
 
 ```php

@@ -8,7 +8,7 @@ redirect_from:
 last_updated: Oct 23, 2023
 ---
 
-Oryx is a frontend framework designed to help developers build web applications using modern technologies and leveraging [Spryker API](https://docs.spryker.com/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html).
+Oryx is a frontend framework designed to help developers build web applications using modern technologies and leveraging [Spryker API](/docs/dg/dev/glue-api/{{page.version}}/decoupled-glue-api.html).
 
 Wherever possible, Oryx leverages standard technology, frameworks, and tools provided by the web platform and the community.  It emphasizes utilizing the capabilities of the web and minimizing the reliance on build tools. During development, Oryx primarily employs JavaScript (JS) but aims to reduce the need for executing JS in the browser. It prioritizes HTML and CSS for delivering a fast-loading experience across various screen sizes.
 

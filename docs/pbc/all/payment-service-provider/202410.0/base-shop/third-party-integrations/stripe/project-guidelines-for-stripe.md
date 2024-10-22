@@ -435,7 +435,7 @@ In the default OMS configuration, seven days are allocated to Stripe to complete
 
 ## Retrieving and using payment details from Stripe
 
-For instructions on using payment details, like the payment reference, from Stripe, see [Retrieve and use payment details from third-party PSPs](https://docs.spryker.com/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html)
+For instructions on using payment details, like the payment reference, from Stripe, see [Retrieve and use payment details from third-party PSPs](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html)
 
 ## Embed the Stripe payment page using iframe
 

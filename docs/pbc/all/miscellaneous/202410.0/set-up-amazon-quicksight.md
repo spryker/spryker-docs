@@ -18,7 +18,11 @@ This document describes how to set up Amazon QuickSight.
 
 The user who enables analytics is assigned as an owner of all the default assets, such as data sets, analyses, and dashboards. You can transfer ownership later.
 
+Also, this user is automatically assigned the Author role.
+
 
 {% endinfo_block %}  
 
-5. 
+5.
+
+The user

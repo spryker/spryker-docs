@@ -42,7 +42,9 @@ Review the [reference information](#reference-information-editing-users) before 
 
 {% info_block warningBox "" %}
 
-Take note of how many users have access to analytics. The number of users with access shouldn't exceed the number of users in your contract. If you need access for more users, reach out to your Customer Success Manager.
+* Take note of how many users have access to analytics. The number of users with access shouldn't exceed the number of users in your contract. If you need access for more users, reach out to your Customer Success Manager.
+* The analytics role can't be changed later.
+
 
 {% endinfo_block %}
 

@@ -112,7 +112,7 @@ When Stripe is integrated into a headless application, orders are processed usin
   * Payment provider name: Stripe
   * Payment method name: Stripe
   * Payment amount
-  * Quote data
+  * Quote data (must include the grandTotal and should be as complete as possible)
 3. Back Office sends the quote data and the payment amount to Stripe app through an API.
 4. The payment with the given data is persisted in the Stripe app.
 5. Stripe app requests `ClientSecret` and `PublishableKey` keys from Stripe through an API.
@@ -151,7 +151,7 @@ async initializePreOrderPayment() {
       data: {
         type: 'payments',
         attributes: {
-          quote: QUOTE_DATA,
+          quote: QUOTE_DATA, // Must contain the `grandTotal` field and should be as complete as possible
           payment: {
             amount: GRAND_TOTAL, // You will get it through the `/checkout-data?include=carts` endpoint
             paymentMethodName: 'stripe', // taken from /checkout-data?include=payment-methods

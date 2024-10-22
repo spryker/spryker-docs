@@ -40,7 +40,7 @@ Configure services and a basic validation of:
 * security
 * database schema
 
-<details open>
+<details>
     <summary>Example of bitbucket-pipelines.yml</summary>
 
 ```yaml

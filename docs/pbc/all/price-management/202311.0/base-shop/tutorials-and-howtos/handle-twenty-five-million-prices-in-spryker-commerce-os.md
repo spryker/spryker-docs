@@ -209,7 +209,7 @@ The following solutions were evaluated:
 
 [Postgresql CTE](https://www.postgresqltutorial.com/postgresql-cte/) allows managing bulk inserts and updates of huge data amounts, which speeds up the execution of PHP processes.
 
-<details open><summary markdown='span'>SQL query example</summary>
+<details><summary>SQL query example</summary>
 
 ```sql
 WITH records AS

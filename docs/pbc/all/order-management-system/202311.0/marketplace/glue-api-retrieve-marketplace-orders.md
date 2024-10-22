@@ -54,7 +54,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve all orders</summary>
+<summary>Response sample: retrieve all orders</summary>
 
 ```json
 {
@@ -201,7 +201,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all orders with the merchants included</summary>
+<summary>Response sample: retrieve all orders with the merchants included</summary>
 
 ```json
 {
@@ -565,7 +565,7 @@ To retrieve detailed information about an order, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about the order</summary>
+<summary>Response sample: retrieve information about the order</summary>
 
 ```json
 {
@@ -785,7 +785,7 @@ To retrieve detailed information about an order, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about the order with order shipments included</summary>
+<summary>Response sample: retrieve information about the order with order shipments included</summary>
 
 ```json
 {
@@ -1023,7 +1023,7 @@ To retrieve detailed information about an order, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve an with the merchants included</summary>
+<summary>Response sample: retrieve an with the merchants included</summary>
 
 ```json
 {

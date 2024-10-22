@@ -198,6 +198,7 @@ This section contains additional information for defining decision rules.
 |customer-group|String| Any value, use a customer group name for an exact match. |
 
 
+
 |RELATION OPERATOR|IN PLAIN QUERY|VALUE TYPE|DESCRIPTION|
 |-|-|-|-|
 |Contains|CONTAINS|String, Number| Checks if the value is contained in the field. |

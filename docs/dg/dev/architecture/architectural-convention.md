@@ -48,6 +48,7 @@ Spryker organizes responsibilities and functionalities over a set of [applicatio
 The application layers are aggregations of [layers](https://docs.spryker.com/docs/dg/dev/architecture/modules-and-application-layers.html). Some application layers are multi-layered with components organized in layer directories, while others are flat-layered with components merged in the same directory.
 
 | APPLICATION LAYER | LAYERING | LAYER |
+|-|-|
 | Glue |  flat-layered | Communication layer |
 | Client |  flat-layered | Communication layer |
 | Service |  flat-layered | Overarching Business layer |

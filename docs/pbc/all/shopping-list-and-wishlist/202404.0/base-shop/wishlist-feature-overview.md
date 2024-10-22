@@ -46,36 +46,61 @@ Specifically, the customer can do the following:
 * Add all the products from the wishlist to the cart by clicking **Add all available products to the cart**.
 * Add selected items from the wishlist to the cart by selecting the **Add to Cart** option for a specific item.
 
-<!--- ![Multiple wishlists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/multiple_wishlists.gif)-->
+<!---
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/shopping-list-and-wishlist/base-shop/wishlist-feature-overview.md/multiple_wishlists.mp4
+" type="video/mp4">
+  </video>
+</figure>
+-->
+
 
 ## The Wishlist feature on the Storefront
 
 Buyers can do the following actions using the Wishlists feature:
 <details>
-<summary markdown='span'>Create, rename, and edit a wishlist </summary>
+<summary>Create, rename, and edit a wishlist </summary>
 
-![create-rename-delete-wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/create-rename-delete-wishlist.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/shopping-list-and-wishlist/base-shop/wishlist-feature-overview.md/create-rename-delete-wishlist.mp4" type="video/mp4">
+  </video>
+</figure>
 
-</details>
-
-<details>
-<summary markdown='span'>Add a product from the product details page to a wishlist</summary>
-
-![add-product-from-product-details-page-to-wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/add-product-from-product-details-page-to-wishlist.gif)
 
 </details>
 
 <details>
-<summary markdown='span'>View a wishlist's details, remove products from the wishlist, and add all products from the wishlist to the cart</summary>
+<summary>Add a product from the product details page to a wishlist</summary>
 
-![view-details-remove-products-and-add-all-products-from-wishlist-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/view-details-remove-products-and-add-all-products-from-wishlist-to-cart.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/shopping-list-and-wishlist/base-shop/wishlist-feature-overview.md/add-product-from-product-details-page-to-wishlist.mp4" type="video/mp4">
+  </video>
+</figure>
 
 </details>
 
 <details>
-<summary markdown='span'>Add selected products from the wishlist to the cart</summary>
+<summary>View a wishlist's details, remove products from the wishlist, and add all products from the wishlist to the cart</summary>
 
-![add-selected-products-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/add-selected-items-to-cart.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/shopping-list-and-wishlist/base-shop/wishlist-feature-overview.md/view-details-remove-products-and-add-all-products-from-wishlist-to-cart.mp4" type="video/mp4">
+  </video>
+</figure>
+
+</details>
+
+<details>
+<summary>Add selected products from the wishlist to the cart</summary>
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/shopping-list-and-wishlist/base-shop/wishlist-feature-overview.md/add-selected-items-to-cart.mp4" type="video/mp4">
+  </video>
+</figure>
 
 </details>
 

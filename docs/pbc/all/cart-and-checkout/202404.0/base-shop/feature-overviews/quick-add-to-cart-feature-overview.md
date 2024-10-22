@@ -130,7 +130,12 @@ Using the Quick Order feature on the Storefront, company users can do the follow
 * Add a quick order to a shopping cart.
 
 The following figure shows how to perform these actions:
-![create-quick-order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/create-quick-order.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/quick-add-to-cart-feature-overview.md/create-quick-order.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Related Developer documents
 
@@ -141,4 +146,4 @@ The following figure shows how to perform these actions:
 | [Install the Quick Add to Cart + Discontinued Products feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-discontinued-products-feature.html) | [QuickOrderPage migration guide](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html) |
 | [Install the Quick Add to Cart + Measurement Units feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-measurement-units-feature.html) |  |
 | [Install the Quick Add to Cart + Non-splittable Products feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html) |  |
-| [Quick Add to Cart + Packaging Units feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-packaging-units-feature.html) |  |
+| [Install the Quick Add to Cart + Packaging Units feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-packaging-units-feature.html) |  |

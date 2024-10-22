@@ -156,7 +156,7 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
 
 1. Optional: To set the default configuration data, create a configuration file:
 
-<details open><summary markdown='span'>src/Pyz/Zed/DynamicEntity/data/installer/configuration.json</summary>
+<details><summary>src/Pyz/Zed/DynamicEntity/data/installer/configuration.json</summary>
 
 ##### Example:
 
@@ -246,12 +246,12 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
 
 | Name                                                      | Imported to                                                                     | Description                                                                                                                                                                                                                                                                                     |
 |-----------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| tableName                                                 | spy_dynamic_entity_configuration.table_name                                     | For details see [How to configure Data Exchange API](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
-| tableAlias                                                | spy_dynamic_entity_configuration.table_alias                                    | For details see [How to configure Data Exchange API](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
-| isActive                                                  | spy_dynamic_entity_configuration.is_active                                      | For details see [How to configure Data Exchange API](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
-| definition                                                | spy_dynamic_entity_configuration.definition                                     | For details see [How to configure Data Exchange API](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
-| childRelations                                            | spy_dynamic_entity_configuration_relation                                       | Relation between two Data Exchange API configurations. Allows to execute complex requests to retrieve or save data together with relations. See details [How to send request in data exchange API](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html) |
-| childRelations.name                                       | spy_dynamic_entity_configuration_relation.name                                  | Name of the relation, used to include relations as part of Data Exchange API requests, see details [How to send request in data exchange API](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html)                                                      |
+| tableName                                                 | spy_dynamic_entity_configuration.table_name                                     | For details see [How to configure Data Exchange API](/docs/pbc/all/data-exchange/202311.0/configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
+| tableAlias                                                | spy_dynamic_entity_configuration.table_alias                                    | For details see [How to configure Data Exchange API](/docs/pbc/all/data-exchange/202311.0/configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
+| isActive                                                  | spy_dynamic_entity_configuration.is_active                                      | For details see [How to configure Data Exchange API](/docs/pbc/all/data-exchange/202311.0/configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
+| definition                                                | spy_dynamic_entity_configuration.definition                                     | For details see [How to configure Data Exchange API](/docs/pbc/all/data-exchange/202311.0/configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
+| childRelations                                            | spy_dynamic_entity_configuration_relation                                       | Relation between two Data Exchange API configurations. Allows to execute complex requests to retrieve or save data together with relations. See details [How to send request in data exchange API](/docs/pbc/all/data-exchange/202311.0/sending-requests-with-data-exchange-api.html) |
+| childRelations.name                                       | spy_dynamic_entity_configuration_relation.name                                  | Name of the relation, used to include relations as part of Data Exchange API requests, see details [How to send request in data exchange API](/docs/pbc/all/data-exchange/202311.0/sending-requests-with-data-exchange-api.html)                                                      |
 | childRelations.isEditable                                 | spy_dynamic_entity_configuration_relation.is_editable                           | If set to `false` limits relation functionality to only GET requests, POST/PATCH/PUT requests are restricted.                                                                                                                                                                                   |
 | childRelations.childDynamicEntityConfiguration.tableAlias | spy_dynamic_entity_configuration_relation.fk_child_dynamic_entity_configuration | The alias of the child Data Exchange API configuration for the relation, parent configuration details are determined based on the configuration where the child relations added.                                                                                                                |
 | childRelations.relationFieldMapping                       | spy_dynamic_entity_configuration_relation_field_mapping                         | Details about how child and parent configuration of the relations are connected.                                                                                                                                                                                                                |
@@ -475,8 +475,8 @@ Enable the following behaviors by registering the plugins:
 | DynamicEntityRouteProviderPlugin | Adds routes for the provided dynamic entity to the RouteCollection. | Spryker\Glue\DynamicEntityBackendApi\Plugin |
 | DynamicEntityProtectedPathCollectionExpanderPlugin | Expands the list of protected endpoints with dynamic entity endpoints. | Spryker\Glue\DynamicEntityBackendApi\Plugin\GlueBackendApiApplicationAuthorizationConnector |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/Console/ConsoleDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/Console/ConsoleDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -506,8 +506,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 ```
 </details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/DocumentationGeneratorApi/DocumentationGeneratorApiDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/DocumentationGeneratorApi/DocumentationGeneratorApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -556,8 +556,8 @@ If the documentation cache is not invalidated, the documentation will not be upd
 
 {% endinfo_block %}
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/DocumentationGeneratorOpenApi/DocumentationGeneratorOpenApiDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/DocumentationGeneratorOpenApi/DocumentationGeneratorOpenApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -582,8 +582,8 @@ class DocumentationGeneratorOpenApiDependencyProvider extends SprykerDocumentati
 ```
 </details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -610,7 +610,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-Make sure you can operate data. For instructions, see [Requesting data using the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html)
+Make sure you can operate data. For instructions, see [Requesting data using the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html)
 
 {% endinfo_block %}
 
@@ -639,7 +639,7 @@ vendor/bin/console scheduler:resume
 
 {% info_block warningBox "Verification" %}
 
-1. Configure at least one entity in `spy_dynamic_entity_configuration`. For instructions, see [How to configure Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/tutorials-and-howtos/how-to-configure-data-exchange-api.html).
+1. Configure at least one entity in `spy_dynamic_entity_configuration`. For instructions, see [How to configure Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/configure-data-exchange-api.html).
 2. Make sure `src\Generated\GlueBackend\Specification\spryker_backend_api.schema.yml` has been generated and contains the corresponding endpoint with correct configurations.
 
 {% endinfo_block %}

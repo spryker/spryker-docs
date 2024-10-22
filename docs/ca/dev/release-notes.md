@@ -34,7 +34,7 @@ Flexibility. You can change environment variables according to a needed schedule
 
 #### Documentation
 
-[Define parameter and secret values in SCCOS environments](/docs/ca/dev/managing-parameters-in-the-parameter-store.html)
+[Define parameter and secret values in SCCOS environments](/docs/ca/dev/add-variables-in-the-parameter-store.html)
 
 
 ### Maintenance mode <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>

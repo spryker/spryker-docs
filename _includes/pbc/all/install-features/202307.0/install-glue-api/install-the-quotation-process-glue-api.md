@@ -194,7 +194,7 @@ Enable the following behaviors by registering the plugins:
 | DiscountsRestQuoteRequestAttributesExpanderPlugin  | Expands `RestQuoteRequestsAttributesTransfer` with discount data.                                   |               | Spryker\Glue\DiscountsRestApi\Plugin\QuoteRequestsRestApi    |
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -329,7 +329,7 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
   - data[].attributes.shownVersion.cart.shipments
 
   <details>
-  <summary markdown='span'>Example</summary>
+  <summary>Example</summary>
 
   ```json
   {
@@ -1134,7 +1134,7 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
 * To verify that the `QuoteRequestAgentsResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents` endpoint is available for authenticated agent.
 
   <details>
-  <summary markdown='span'>Example</summary>
+  <summary>Example</summary>
 
   ```json
   {

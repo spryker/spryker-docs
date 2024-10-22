@@ -17,7 +17,7 @@ redirect_from:
   - /module_migration_guides/mg-product-option-cart-connector.htm
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptioncartconnector-module.html
 related:
-  - title: Migration guide - ProductOption
+  - title: Upgrade the ProductOption module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoption-module.html
 ---
 

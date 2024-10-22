@@ -98,7 +98,12 @@ On the **Variants** tab, define product variants:
 4. Select **Save** and follow [Defining meta information](#defining-meta-information).
   The page refreshes with the created product variants displayed in the table.
 
-![Defining product variants](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+user+guide/Catalog/Products/Abstract+products/Creating+abstract+products/defining-product-variants.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/products/abstract-products/create-abstract-products.md/defining-product-variants.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ### Reference information: Defining product variants
 

@@ -26,7 +26,7 @@ This document describes how to integrate invoice payment into the checkout.
 In `PaymentMethods/Dependency/Injector`, in Yves, add `CheckoutDependencyInjector` that injects the invoice form and handler into the `Checkout` module:
 
 <details>
-<summary markdown='span'>Code sample:</summary>
+<summary>Code sample:</summary>
 
 ```php
 <?php

@@ -32,7 +32,7 @@ In your development, the endpoints help to:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Alternative products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Alternative Products Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html).
 
 
 ## Check if a product is discontinued
@@ -74,7 +74,7 @@ To retrieve abstract alternative products, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve abstract product alternatives of the product</summary>
+<summary>Response sample: retrieve abstract product alternatives of the product</summary>
 
 ```json
 {
@@ -138,7 +138,7 @@ To retrieve abstract alternative products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve abstract product alternatives of the product with the details on the product labels</summary>
+<summary>Response sample: retrieve abstract product alternatives of the product with the details on the product labels</summary>
 
 ```json
 {
@@ -254,7 +254,7 @@ To retrieve concrete alternative products, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve concrete product alternatives of the product</summary>
+<summary>Response sample: retrieve concrete product alternatives of the product</summary>
 
 ```json
 {
@@ -297,7 +297,7 @@ To retrieve concrete alternative products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve concrete product alternatives of the product with the details on the product labels</summary>
+<summary>Response sample: retrieve concrete product alternatives of the product with the details on the product labels</summary>
 
 ```json
 {

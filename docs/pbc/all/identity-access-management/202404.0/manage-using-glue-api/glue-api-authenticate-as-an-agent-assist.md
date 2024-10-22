@@ -69,7 +69,7 @@ Note that depending on the Login feature configuration for your project, too man
 
 ### Response
 
-<details><summary markdown='span'>Response sample: authenticate as an agent assist</summary>
+<details><summary>Response sample: authenticate as an agent assist</summary>
 
 ```json
 {

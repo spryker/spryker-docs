@@ -39,7 +39,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 
 2. Add your OMS schema for PayPal payment or use the following example:
 
-<details><summary markdown='span'>config/Zed/oms/UnzerPayPal01.xml</summary>
+<details><summary>config/Zed/oms/UnzerPayPal01.xml</summary>
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -176,7 +176,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 
 5. Introduce `PayPalFormDataProvider`:
 
-<details><summary markdown='span'>src/Pyz/Yves/Unzer/Form/DataProvider/PayPalFormDataProvider.php</summary>
+<details><summary>src/Pyz/Yves/Unzer/Form/DataProvider/PayPalFormDataProvider.php</summary>
 
 ```php
 <?php
@@ -230,7 +230,7 @@ class PayPalFormDataProvider extends AbstractFormDataProvider
 
 6. Introduce `PayPalSubform`:
 
-<details><summary markdown='span'>src/Pyz/Yves/Unzer/Form/PayPalSubform.php</summary>
+<details><summary>src/Pyz/Yves/Unzer/Form/PayPalSubform.php</summary>
 
 ```php
 <?php
@@ -293,7 +293,7 @@ class PayPalSubform extends AbstractUnzerSubForm
 
 7. Introduce `UnzerPayPalSubFormPlugin`:
 
-<details><summary markdown='span'>src/Pyz/Yves/Unzer/Plugin/StepEngine/UnzerPayPalSubFormPlugin.php</summary>
+<details><summary>src/Pyz/Yves/Unzer/Plugin/StepEngine/UnzerPayPalSubFormPlugin.php</summary>
 
 ```php
 <?php
@@ -348,7 +348,7 @@ class UnzerPayPalSubFormPlugin extends AbstractPlugin implements SubFormPluginIn
 
 8. Add `CheckoutPage` plugins to the plugin stack:
 
-<details><summary markdown='span'>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
+<details><summary>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
 
 ```php
 ...
@@ -392,7 +392,7 @@ use Pyz\Yves\Unzer\Plugin\StepEngine\UnzerPayPalSubFormPlugin;
 
 9. To introduce new methods in the `Yves` layer, override `UnzerFactory`:
 
-<details><summary markdown='span'>src/Pyz/Yves/Unzer/UnzerFactory.php</summary>
+<details><summary>src/Pyz/Yves/Unzer/UnzerFactory.php</summary>
 
 ```php
 <?php
@@ -436,7 +436,7 @@ class UnzerFactory extends EcoUnzerFactory
 
 10.  Introduce `PayPalPaymentProcessor`:
 
-<details><summary markdown='span'>src/Pyz/Zed/Unzer/Business/Payment/Processor/PayPalPaymentProcessor.php</summary>
+<details><summary>src/Pyz/Zed/Unzer/Business/Payment/Processor/PayPalPaymentProcessor.php</summary>
 
 ```php
 <?php
@@ -590,7 +590,7 @@ class PayPalPaymentProcessor implements UnzerChargeablePaymentProcessorInterface
 
 11. To introduce new methods on the `Zed` layer, override `UnzerBusinessFactory`:
 
-<details><summary markdown='span'>src/Pyz/Zed/Unzer/Business/UnzerBusinessFactory.php</summary>
+<details><summary>src/Pyz/Zed/Unzer/Business/UnzerBusinessFactory.php</summary>
 
 ```php
 <?php
@@ -647,7 +647,7 @@ class UnzerBusinessFactory extends EcoUnzerBusinessFactory
 </details>
 
 12. To add PayPal to authorizable payment methods, override `UnzerConfig`:
-<details><summary markdown='span'>src/Pyz/Zed/Unzer/UnzerConfig.php</summary>
+<details><summary>src/Pyz/Zed/Unzer/UnzerConfig.php</summary>
 
 ```php
 <?php
@@ -680,31 +680,31 @@ class UnzerConfig extends EcoUnzerConfig
 
 The following is an example of how the implemented payment method Unzer looks on the Storefront during the checkout.
 
-<details><summary markdown='span'>Order checkout from Guest shopping cart</summary>
+<details><summary>Order checkout from Guest shopping cart</summary>
 
 ![storefront-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/storefront-1.jpeg)
 
 </details>
 
-<details><summary markdown='span'>Selecting the Unzer PayPal payment method</summary>
+<details><summary>Selecting the Unzer PayPal payment method</summary>
 
 ![storefront-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/storefront-2.jpeg)
 
 </details>
 
-<details><summary markdown='span'>Loggin in PayPal</summary>
+<details><summary>Loggin in PayPal</summary>
 
 ![storefront-3](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/storefront-3.jpeg)
 
 </details>
 
-<details><summary markdown='span'>Paying with PayPal</summary>
+<details><summary>Paying with PayPal</summary>
 
 ![storefront-4](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/storefront-4.jpeg)
 
 </details>
 
-<details><summary markdown='span'>Successful order placement</summary>
+<details><summary>Successful order placement</summary>
 
 ![storefront-5](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/storefront-5.jpeg)
 
@@ -714,19 +714,19 @@ The following is an example of how the implemented payment method Unzer looks on
 
 The following are examples of the shipment state changes when the order paid with the implemented payment method is processed in the Back Office.
 
-<details><summary markdown='span'>Triggering the charge state</summary>
+<details><summary>Triggering the charge state</summary>
 
 ![back-office-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/back-office-1.jpeg)
 
 </details>
 
-<details><summary markdown='span'>Triggering the refund state</summary>
+<details><summary>Triggering the refund state</summary>
 
 ![back-office-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/back-office-2.jpeg)
 
 </details>
 
-<details><summary markdown='span'>The shipment is refunded</summary>
+<details><summary>The shipment is refunded</summary>
 
 ![back-office-3](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/back-office-3.jpeg)
 

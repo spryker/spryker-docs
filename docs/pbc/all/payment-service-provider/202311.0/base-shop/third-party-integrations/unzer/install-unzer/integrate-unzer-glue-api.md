@@ -232,7 +232,7 @@ Ensure that the request body differs for each Unzer payment method:
 
 {% endinfo_block %}
 
-<details><summary markdown='span'>Response example:</summary>
+<details><summary>Response example:</summary>
 
 ```json
 {

@@ -12,9 +12,9 @@ Performance testing is an integral part of the development and deployment proces
 
 Since the staging environment isn't designed to be as performant as the production environment, we recommend using a subset of the data and extrapolate the results.
 
-If you want to execute a full load test on a production-like dataset and traffic, use a production environment. This could be your actual production environment if it is not yet live, or you can order an additional environment by contacting you Account Executive. Testing with real or at least mock data provides significantly better and more reliable results than testing with a small data set. To conduct effective performance tests, it is recommended to use the same amount of data that will be used in the production environment.
+If you want to execute a full load test on a production-like dataset and traffic, use a production environment. If you production isn't live yet, you can use directly in that environment. Otherwise, you can order an additional environment by contacting you Account Executive. Testing with real or at least mock data provides significantly better and more reliable results than testing with a small data set. To conduct effective performance tests, we recommend the same data that you're going to use use in the live production environment.
 
-If you are unable to use real data for your load tests, you can use the [test data](https://drive.google.com/drive/folders/1QvwDp2wGz6C4aqGI1O9nK7G9Q_U8UUS-?usp=sharing) for an expanding amount of use cases. Additional support ins't provided for this data.
+If you are unable to use real data for your load tests, you can use the [test data](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/performance-testing-in-staging-enivronments.md/performance-testing-data.zip) for an expanding amount of use cases. Additional support ins't provided for this data.
 
 Based on our experience, the [Load testing tool](https://github.com/spryker-sdk/load-testing) can greatly assist you in conducting more effective load tests.
 
@@ -294,10 +294,10 @@ You should have the fixtures loaded into the databases and can now exit the CLI 
 Jenkins is the default scheduler which ships with Spryker. It is an automation service which helps to automate tasks within Spryker. If you would like an alternative way to generate fixtures for your local environment, Jenkins can be used to schedule the necessary tasks you need for the data preparation step.
 
 1. From the Dashboard, select `New Item`.
-![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTzW2A-gkFX6PC1YiG4r0EUQX5S2xWDRQWq4hkgzKn889xva_FwrEaDo-lYl2i3CWgXiMqebPA=w1920-h919)
+![new-item](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/performance-testing-in-staging-enivronments.md/new-item.png)
 
 2. Enter an item name for the new job and select `Freestyle project`. Once you have done that, you can move to the next step with `OK`.
-![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmR2mN1q7_Du2JZPTw_CFqi9hjYnEqi8XvjXpgidcmcEeIEvUYwiEFX2GAAeLU105pz53guDHqI=w1920-h919)
+![freestyle-project](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/performance-testing-in-staging-enivronments.md/freestyle-project.png)
 
 3. The next step will allow up to input the commands we need to run. While a description is optional, you can choose to set one here. There are also additional settings, such as a display name, which may also be toggled. As you only need the commands to run once, you can move down to the `Build` section to add the three build steps needed.
 
@@ -324,13 +324,13 @@ From here, you can either add another build step to toggle the queue worker to r
 ```bash
 APPLICATION_STORE="DE" COMMAND="$PHP_BIN vendor/bin/console queue:worker:start -s " bash /usr/bin/spryker.sh
 ```
-![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTeb8OPIZwA65e57LNg8fq_t7DnQ2T_okTLFBxcljKIXgqXcjWyt9yiCFiPKX50_Nb2LyE__Ao=w1920-h919)
+![workers](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/performance-testing-in-staging-enivronments.md/workers.png)
 
 4. Once the build steps have been added, you can `Save` to be taken to the project status page for the newly-created job. As this is a job that you only need to run once and no schedule was set, you can select the `Build Now` option.
-![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmRTLzDFMolgcaZ_xE-nKMNBEiIDXkSjwEiInkEIJL3ZbMbIY5ygKXqc-7eE_H5N2X-m7ap1l8s=w1920-h919)
+![build-now](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/performance-testing-in-staging-enivronments.md/build-now.png)
 
 5. With the job set to build and run, it will build a new workspace for the tasks and run each build step that you specified. Once the build has successfully completed, you can review the `Console Output` and then remove the project with `Delete Project` once you are finished, if you no longer need it.
-![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmSJmYXg2MyBlTWGbCU6BtzL4ye4y2YOiKNFSobALdDrnescyH8wgIIOzF84QfWQAeSVEmz5HnI=w1920-h919)
+![console-output](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/performance-testing-in-staging-enivronments.md/console-output.png)
 
 {% info_block infoBox %}
 

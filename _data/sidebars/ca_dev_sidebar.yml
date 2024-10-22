@@ -61,14 +61,6 @@ entries:
           - title: Configure access to applications in maintenance mode
             url: /docs/ca/dev/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html
 
-      - title: Monitoring
-        url: /docs/ca/dev/monitoring/monitoring.html
-        nested:
-          - title: Performance and availability monitoring via New Relic
-            url: /docs/ca/dev/monitoring/performance-and-availability-monitoring-via-new-relic.html
-          - title: Customize AWS CloudWatch dashboards
-            url: /docs/ca/dev/monitoring/customize-aws-cloudwatch-dashboards.html
-
       - title: Security
         url: /docs/ca/dev/security/security.html
         nested:
@@ -114,13 +106,13 @@ entries:
             url: /docs/ca/dev/email-service/email-quota-restrictions.html
           - title: Verify email addresses
             url: /docs/ca/dev/verify-email-addresses.html
+          - title: Email Deliverability
+            url: /docs/ca/dev/email-service/email-deliverability.html
 
       - title: Set up notifications for 5xx errors
         url: /docs/ca/dev/set-up-notifications-for-5xx-errors.html
       - title: Performance testing in staging environments
         url: /docs/ca/dev/performance-testing-in-staging-enivronments.html
-      - title: Managing parameters in the Parameter Store
-        url: /docs/ca/dev/managing-parameters-in-the-parameter-store.html
       - title: Environment scaling
         url: /docs/ca/dev/environment-scaling.html
       - title: Monitoring issues and informing about alerts

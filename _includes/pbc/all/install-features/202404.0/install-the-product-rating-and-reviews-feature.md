@@ -375,7 +375,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 | ProductReviewPageDataLoaderPlugin        | Expands the provided object with review details.                  | None          | Spryker\Zed\ProductReviewSearch\Communication\Plugin\PageDataLoader                  |
 | ProductReviewMapExpanderPlugin           | Adds product review data related to product abstract search data. | None          | Spryker\Zed\ProductReviewSearch\Communication\Plugin\ProductPageSearch\Elasticsearch |
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -717,7 +717,7 @@ Make sure that the following endpoints are available:
 `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews`
 
 <details>
-<summary markdown='span'>Example</summary>
+<summary>Example</summary>
 
 ```json
 {
@@ -800,7 +800,7 @@ Make sure that the following endpoints are available:
 `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews/{% raw %}{{{% endraw %}review_id{% raw %}}}{% endraw %}`
 
 <details>
-<summary markdown='span'>Example</summary>
+<summary>Example</summary>
 
 ```json
 {
@@ -915,7 +915,7 @@ Make sure that the response contains product-reviews as a relationship and produ
 
 Make sure that `averageRating` and `reviewCount` attributes are present in `concrete-products` and `abstract-products` resources attributes section.
 
-<details><summary markdown='span'>Example</summary>
+<details><summary>Example</summary>
 
 ```json
 {
@@ -1068,7 +1068,7 @@ Make a request to `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{
 Make sure that the response contains product-reviews as a relationship and product-reviews data included.
 
 <details>
-<summary markdown='span'>Example</summary>
+<summary>Example</summary>
 
 ```json
 {

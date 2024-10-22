@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductDiscountConnector
+title: Upgrade the ProductDiscountConnector module
 description: Use the guide to learn how to update the ProductDiscountConnector module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

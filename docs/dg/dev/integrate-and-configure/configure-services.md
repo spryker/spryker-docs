@@ -1,7 +1,7 @@
 ---
 title: Configure services
 description: Learn how to configure services.
-last_updated: Nov 4, 2022
+last_updated: May 8, 2024
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-services
 originalArticleId: 5b51acd3-1f5c-477d-995a-d821e88fd5f8
@@ -73,38 +73,41 @@ git clone https://github.com/spryker/docker-sdk.git ./docker
 
 When configuring a service, you need to define its version. The Docker SDK supports the following service versions:
 
-| SERVICE | ENGINE  | VERSIONS | ARM SUPPORT | NOTE |
-|----|----|----|----|---|
-| datab | postgres | 9.6*         | &check;     |    |
-|       |          | 10           | &check;     |    |
-|       |          | 11           | &check;     |    |
-|       |          | 12           | &check;     |    |
-|       | mysql    | 5.7          |             |    |
-|       |          | mariadb-10.2 | &check;     |    |
-|       |          | mariadb-10.3 | &check;     |    |
-|       |          | mariadb-10.4 | &check;     |    |
-|       |          | mariadb-10.5 | &check;     |    |
-| broke | rabbitmq | 3.7          |             |    |
-|       |          | 3.8          | &check;     |    |
-|       |          | 3.9          | &check;     |    |
-| session         | redis    | 5.0          | &check;     |    |
-| key_value_store | redis    | 5.0          | &check;     |    |
-| search          | elastic  | 5.6*         | &check;     | https://www.elastic.co/support/eol |
-|                 |          | 6.8          | &check;     | https://www.elastic.co/support/eol |
-|                 |          | 7.6          | &check;     |    |
-|                 |          | 7.10         | &check;     |    |
-| scheduler       | jenkins  | 2.176        |             |    |
-|                 |          | 2.305        | &check;     |    |
-|                 |          | 2.324        | &check;     |    |
-| webdriver       | phantomjs| latest*      |             |    |
-|                 | chromedriver | latest   | &check;      |    |
-| mail_catcher    | mailhog  | 1.0          | &check;     |    |
-| swagger         | swagger-ui   | v3.24    | &check;      |    |
-| kibana          | kibana   | 5.6*         | &check;     | https://www.elastic.co/support/eol |
-|                 |          | 6.8          | &check;     | https://www.elastic.co/support/eol |
-|                 |          | 7.6          | &check;     |    |
-|                 |          | 7.10         | &check;     |    |
-| blackfire       | blackfire  | latest   | &check;      |      |
+| SERVICE | ENGINE  | VERSIONS      | ARM SUPPORT | NOTE |
+|----|----|---------------|----|---|
+| datab | postgres | 17            | &check;     |    |
+|       |          | 10            | &check;     |    |
+|       |          | 11            | &check;     |    |
+|       |          | 12            | &check;     |    |
+|       | mysql    | 5.7           |             |    |
+|       |          | mariadb-10.2  | &check;     |    |
+|       |          | mariadb-10.3  | &check;     |    |
+|       |          | mariadb-10.4  | &check;     |    |
+|       |          | mariadb-10.5  | &check;     |    |
+|       |          | mariadb-10.6  | &check;     |    |
+|       |          | mariadb-10.11 | &check;     |    |
+| broke | rabbitmq | 3.7           |             |    |
+|       |          | 3.8           | &check;     |    |
+|       |          | 3.9           | &check;     |    |
+| session         | redis    | 5.0           | &check;     |    |
+| key_value_store | redis    | 5.0           | &check;     |    |
+| search          | elastic  | 5.6*          | &check;     | https://www.elastic.co/support/eol |
+|                 |          | 6.8           | &check;     | https://www.elastic.co/support/eol |
+|                 |          | 7.6           | &check;     |    |
+|                 |          | 7.10          | &check;     |    |
+|                 | opensearch | 1.3           | &check;     |    |
+| scheduler       | jenkins  | 2.176         |             |    |
+|                 |          | 2.305         | &check;     |    |
+|                 |          | 2.324         | &check;     |    |
+| webdriver       | phantomjs| latest*       |             |    |
+|                 | chromedriver | latest        | &check;      |    |
+| mail_catcher    | mailhog  | 1.0           | &check;     |    |
+| swagger         | swagger-ui   | v3.24         | &check;      |    |
+| kibana          | kibana   | 5.6*          | &check;     | https://www.elastic.co/support/eol |
+|                 |          | 6.8           | &check;     | https://www.elastic.co/support/eol |
+|                 |          | 7.6           | &check;     |    |
+|                 |          | 7.10          | &check;     |    |
+| blackfire       | blackfire  | latest        | &check;      |      |
 
 
 ## Database services
@@ -200,6 +203,7 @@ To switch the database engine to PostgreSQL, follow these steps:
 services:
     database:
         engine: postgres
+        version: 17
         ...
         endpoints:
             localhost:5432:
@@ -474,11 +478,10 @@ The solution consists of a client and a server. The client is used to collect da
 
 ### Prerequisites
 
-* Access to New Relic with an APM account.
-* Local: [New Relic license key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/).
+* [New Relic license key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/): `NEWRELIC_LICENSE`
+* NewRelic account ID: `NEWRELIC_ACCOUNT_ID`
+* NewRelic insights key: `NEWRELIC_INSIGHTS_KEY`
 * The New Relic module.
-
-Spryker provides its own New Relic licenses for use with its PaaS environments. A New Relic license key is only required if you wish to set up your own local monitoring.
 
 ### Install the New Relic module
 
@@ -512,8 +515,10 @@ image:
 
 
 
-3. Submit an infrastructure change request via the [Support Portal](/docs/about/all/support/using-the-support-portal.html).
-  We will confirm that a New Relic APM account is available for you and ensure that the correct application naming convention is set up to cascade to the appropriate APM.
+3. Submit an infrastructure change request via the [Support Portal](/docs/about/all/support/using-the-support-portal.html). Set up a Change Request for existing Parameter Store values and request your values to be set for the following parameters:
+  * NEWRELIC_LICENSE
+  * NEWRELIC_ACCOUNT_ID
+  * NEWRELIC_INSIGHTS_KEY
 
 Once New Relic is enabled, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name setup in the configuration files.
 
@@ -672,7 +677,7 @@ From now on you can use the record deployment functionality built-in in the cons
 vendor/bin/console newrelic:record-deployment <AppName>
 ```
 where `AppName` corresponds to the preconfigured in NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY.
-For more details, see [Migration guide - Monitoring](/docs/scos/dev/module-migration-guides/migration-guide-monitoring.html)
+For more details, see [Upgrade the Monitoring module](/docs/scos/dev/module-migration-guides/migration-guide-monitoring.html)
 
 ## Webdriver
 

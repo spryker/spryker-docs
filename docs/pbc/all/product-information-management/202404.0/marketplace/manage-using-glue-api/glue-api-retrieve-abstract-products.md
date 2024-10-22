@@ -72,7 +72,7 @@ To retrieve general information about an abstract product, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about the abstract product with SKU `001`</summary>
+<summary>Response sample: retrieve information about the abstract product with SKU `001`</summary>
 
 ```json
 {
@@ -134,7 +134,7 @@ To retrieve general information about an abstract product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about the abstract product with its image sets</summary>
+<summary>Response sample: retrieve information about the abstract product with its image sets</summary>
 
 ```json
 {
@@ -229,7 +229,7 @@ To retrieve general information about an abstract product, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about the abstract product with its availability</summary>
+<summary>Response sample: retrieve information about the abstract product with its availability</summary>
 
 ```json
 {
@@ -315,7 +315,7 @@ To retrieve general information about an abstract product, send the request:
 
 
 
-<details> <summary markdown='span'>Response sample: retrieve information about the abstract product with its default prices</summary>
+<details> <summary>Response sample: retrieve information about the abstract product with its default prices</summary>
 
 ```json
 {
@@ -420,7 +420,7 @@ To retrieve general information about an abstract product, send the request:
 ```
 </details>
 
-<details> <summary markdown='span'>Response sample: retrieve information about the abstract product with its default and volume prices</summary>
+<details> <summary>Response sample: retrieve information about the abstract product with its default and volume prices</summary>
 
 ```json
 {
@@ -535,7 +535,7 @@ To retrieve general information about an abstract product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about the abstract product with the category nodes it belongs to</summary>
+<summary>Response sample: retrieve information about the abstract product with the category nodes it belongs to</summary>
 
 ```json
 {
@@ -716,7 +716,7 @@ To retrieve general information about an abstract product, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about the abstract product with its tax sets</summary>
+<summary>Response sample: retrieve information about the abstract product with its tax sets</summary>
 
 ```json
 {
@@ -878,7 +878,7 @@ To retrieve general information about an abstract product, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about the abstract product with the assigned product labels</summary>
+<summary>Response sample: retrieve information about the abstract product with the assigned product labels</summary>
 
 ```json
 {
@@ -936,7 +936,7 @@ To retrieve general information about an abstract product, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about the abstract product with its concrete products</summary>
+<summary>Response sample: retrieve information about the abstract product with its concrete products</summary>
 
 ```json
 {
@@ -1049,7 +1049,7 @@ To retrieve general information about an abstract product, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about the abstract product with its product options</summary>
+<summary>Response sample: retrieve information about the abstract product with its product options</summary>
 
 ```json
 {
@@ -1157,7 +1157,7 @@ To retrieve general information about an abstract product, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about the abstract product with its product reviews</summary>
+<summary>Response sample: retrieve information about the abstract product with its product reviews</summary>
 
 ```json
 {
@@ -1279,7 +1279,7 @@ To retrieve general information about an abstract product, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve the merchant product</summary>
+<summary>Response sample: retrieve the merchant product</summary>
 
 ```json
 {
@@ -1343,7 +1343,7 @@ To retrieve general information about an abstract product, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve the marketplace product including the merchant information</summary>
+<summary>Response sample: retrieve the marketplace product including the merchant information</summary>
 
 ```json
 {

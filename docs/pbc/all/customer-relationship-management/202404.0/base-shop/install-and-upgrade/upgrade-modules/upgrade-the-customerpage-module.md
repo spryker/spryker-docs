@@ -1,5 +1,5 @@
 ---
-title: Migration guide - CustomerPage
+title: Upgrade the CustomerPage module
 description: Use the guide to update versions to the newer ones of the CustomerPage module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

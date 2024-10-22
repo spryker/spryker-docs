@@ -171,30 +171,55 @@ When the `isLocked` parameter is set to true, then:
 Company users can perform the following actions using the Approval Process feature on the Storefront:
 
 <details>
-<summary markdown='span'>Create the Approver role and configure the Approve up to grand total permission</summary>
+<summary>Create the Approver role and configure the Approve up to grand total permission</summary>
 
-![create-and-configure-approver-role](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Approval+Process/Approval+Process+Feature+Overview/create-and-configure-approver-role.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/approval-process-feature-overview.md/create-and-configure-approver-role.mp4" type="video/mp4">
+  </video>
+</figure>
 
-</details>
 
-<details>
-<summary markdown='span'>Create the Buyer with Limits role and configure the Buy up to grand total permission</summary>
 
-![create-and-configure-buyer-with-limit-role](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Approval+Process/Approval+Process+Feature+Overview/create-and-configure-buyer-with-limit-role.gif)
-
-</details>
-
-<details>
-<summary markdown='span'>Submit a request for approval</summary>
-
-![submit-request-for-approval](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Approval+Process/Approval+Process+Feature+Overview/submit-request-for-approval.gif)
 
 </details>
 
 <details>
-<summary markdown='span'>Approve the request for approval</summary>
+<summary>Create the Buyer with Limits role and configure the Buy up to grand total permission</summary>
 
-![review-request-for-approval](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Approval+Process/Approval+Process+Feature+Overview/review-request-for-approval.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/approval-process-feature-overview.md/create-and-configure-buyer-with-limit-role.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
+
+</details>
+
+<details>
+<summary>Submit a request for approval</summary>
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/approval-process-feature-overview.md/submit-request-for-approval.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
+
+</details>
+
+<details>
+<summary>Approve the request for approval</summary>
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/approval-process-feature-overview.md/review-request-for-approval.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
 
 </details>
 

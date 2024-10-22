@@ -23,7 +23,7 @@ For detailed information on the modules that provide the API functionality and r
 |-|-|-|-|
 | Content-Type | application/x-www-form-urlencoded | &check; | `x-www-form-urlencoded` is a URL encoded form. This is the default value if the encrypted attribute is not set to anything. The keys and values are encoded in key-value tuples separated by `&`, with a `=` between the key and the value. Non-alphanumeric characters in both keys and values are percent encoded. |
 
-<details><summary markdown='span'>Request sample: authenticate as a Back Office user</summary>
+<details><summary>Request sample: authenticate as a Back Office user</summary>
 
 | REQUEST BODY KEY | VALUE |
 |-|-|
@@ -36,12 +36,12 @@ For detailed information on the modules that provide the API functionality and r
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
 | grant_type | password | &check; | Method through which the application can gain Access Tokens and by which you grant limited access to the resources to another entity without exposing credentials. |
-| username | String | &check; | Back Office user's username. You define it when [creating](/docs/pbc/all/user-management/202307.0/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [editing users](/docs/pbc/all/user-management/202307.0/base-shop/manage-in-the-back-office/manage-users/edit-users.html). |
-| password | String | &check; | Back Office user's password. You define it when [creating](/docs/pbc/all/user-management/202307.0/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [editing users](/docs/pbc/all/user-management/202307.0/base-shop/manage-in-the-back-office/manage-users/edit-users.html). |
+| username | String | &check; | Back Office user's username. You define it when [creating](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [editing users](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html). |
+| password | String | &check; | Back Office user's password. You define it when [creating](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [editing users](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html). |
 
 ### Response
 
-<details><summary markdown='span'>Response sample: authenticate as a Back Office user</summary>
+<details><summary>Response sample: authenticate as a Back Office user</summary>
 
 ```json
 {

@@ -3797,6 +3797,8 @@ entries:
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/configure-algolia.html
                     - title: Disconnect Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/disconnect-algolia.html
+                    - title: Getting access to Algolia dashboard
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/getting-access-to-algolia-dashboard.html
 
               - title: Best practices
                 url: /docs/pbc/all/search/base-shop/best-practices/search-best-practices.html

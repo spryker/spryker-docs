@@ -45,6 +45,8 @@ use Generated\Shared\Transfer\DeletePaymentMethodTransfer;
 use Generated\Shared\Transfer\PaymentAuthorizationFailedTransfer;
 use Generated\Shared\Transfer\PaymentAuthorizedTransfer;
 use Spryker\Shared\MessageBroker\MessageBrokerConstants;
+use Spryker\Shared\KernelApp\KernelAppConstants;
+use Spryker\Shared\OauthClient\OauthClientConstants;
 use Spryker\Shared\Oms\OmsConstants;
 use Spryker\Shared\Payment\PaymentConstants;
 use Spryker\Shared\Sales\SalesConstants;
@@ -54,11 +56,16 @@ use Spryker\Zed\Payment\PaymentConfig;
 
 //...
 $config[PaymentConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
+$config[KernelAppConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
+
+$config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_ACP] = OauthAuth0Config::PROVIDER_NAME;
+$config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_ACP] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
+$config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_ACP] = 'aop-app'
 
 $config[OmsConstants::PROCESS_LOCATION] = [
     //...
     OmsConfig::DEFAULT_PROCESS_LOCATION,
-    APPLICATION_ROOT_DIR . '/vendor/spryker/sales-payment/config/Zed/Oms', # this line must be added if your use unmodified ForeignPaymentStateMachine01.xml
+    APPLICATION_ROOT_DIR . '/vendor/spryker/sales-payment/config/Zed/Oms', # this line must be added if you use unmodified ForeignPaymentStateMachine01.xml
 ];
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     //...

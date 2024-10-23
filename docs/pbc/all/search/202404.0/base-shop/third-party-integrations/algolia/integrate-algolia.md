@@ -79,6 +79,9 @@ Configure modules and add the necessary dependencies according to these guidelin
 
 Add the following code to `src/Pyz/Client/Catalog/CatalogDependencyProvider.php`:
 
+<details>
+  <summary>src/Pyz/Client/Catalog/CatalogDependencyProvider.php</summary>
+
 ```php
 //...
 
@@ -229,6 +232,8 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 }
 ```
 
+</details>
+
 #### Adjust RabbitMq configuration in `Client`
 
 Add the following code to `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`:
@@ -304,6 +309,9 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
 
 Add the following code to `src/Pyz/Client/SearchHttp/SearchHttpDependencyProvider.php`:
 
+<details>
+  <summary>src/Pyz/Client/SearchHttp/SearchHttpDependencyProvider.php</summary>
+
 ```php
 <?php
 
@@ -355,6 +363,8 @@ class SearchHttpDependencyProvider extends SprykerSearchHttpDependencyProvider
     }
 }
 ```
+
+</details>
 
 #### Configure MessageBroker dependencies in `Zed`
 

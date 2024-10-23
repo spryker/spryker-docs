@@ -45,6 +45,8 @@ use Generated\Shared\Transfer\DeletePaymentMethodTransfer;
 use Generated\Shared\Transfer\PaymentAuthorizationFailedTransfer;
 use Generated\Shared\Transfer\PaymentAuthorizedTransfer;
 use Spryker\Shared\MessageBroker\MessageBrokerConstants;
+use Spryker\Shared\KernelApp\KernelAppConstants;
+use Spryker\Shared\OauthClient\OauthClientConstants;
 use Spryker\Shared\Oms\OmsConstants;
 use Spryker\Shared\Payment\PaymentConstants;
 use Spryker\Shared\Sales\SalesConstants;

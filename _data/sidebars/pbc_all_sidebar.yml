@@ -4133,7 +4133,7 @@ entries:
                     url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex.html
                     nested:
                       - title: Install
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex.html
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html
                         nested:
                           - title: Integrate the connector module
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html

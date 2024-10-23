@@ -68,18 +68,18 @@ To import offers to shipment type assignments, see [Import file details: product
 ## 6. Assign product offers to services
 
 
-To import offers to services assignments, see [Import file details: product_offer_service.csv](https://docs.spryker.com/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/import-file-details-product-offer-service.csv.html).
+To import offers to services assignments, see [Import file details: product_offer_service.csv](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/import-file-details-product-offer-service.csv.html).
 
 
 ## Recommended customizations for Click & Collect
 
 Since the product catalog and the product details page (PDP) do not support Click & Collect, we recommend customizing the PDP as follows:
 
-1. To display a specific offer in the first position of the offers section, implement the Default Product Offer Reference Strategy. For more details, see [Install the Marketplace Product Offer feature](https://docs.spryker.com/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html#set-up-behavior).
+1. To display a specific offer in the first position of the offers section, implement the Default Product Offer Reference Strategy. For more details, see [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html#set-up-behavior).
 
 2. To show only one product offer in the offers section, override the Merchant Product Offer Widget behavior with a filter. This filter should display one product offer with an empty service and shipment type set to _empty_ or _Delivery_. When adding products to cart, the delivery shipment type applies by default, and the customer can change it to pickup during checkout if needed. For more details on the product offers widget, see [Render merchant product offers on the Storefront](/docs/pbc/all/offer-management/{{page.version}}/marketplace/render-merchant-product-offers-on-the-storefront.html).
 
-3. To show information about product availability in the service point locations, add the Service Point Widget to the PDP. For instructions, see [Install the Service Points feature](https://docs.spryker.com/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html).
+3. To show information about product availability in the service point locations, add the Service Point Widget to the PDP. For instructions, see [Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html).
 
 As a result, customers have the following user journey with Click & Collect:
 1. Go to the PDP.

@@ -184,7 +184,7 @@ In our example, the following conditions are met:
 
 ## Current constraints
 
-* In the Spryker Commerce OS, you cannot define packaging units for products in the Back Office. They are imported to the database manually. See [HowTo: Import Packaging Units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-import-packaging-units.html) for more details.
+* In the Spryker Commerce OS, you cannot define packaging units for products in the Back Office. They are imported to the database manually. See [HowTo: Import Packaging Units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.html) for more details.
 * We strive to shift all business logic to our backend, however, with Packaging Units, calculations are performed on Yves.
 * On the shopping cart as well as the shopping list page, products do not have a drop-down to change the packaging units. You can select a packaging unit on the product details page only.
 * A shopper cannot reorder the items with the selected packaging units as they are not added automatically. They must be added manually on the product details page.

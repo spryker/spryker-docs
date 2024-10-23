@@ -17,6 +17,8 @@ This feature supports data from Spryker projects and third-party systems. When y
 
 !QuickSight-datasets
 
+For more details on data sources, see Supported data sources https://docs.aws.amazon.com/quicksight/latest/user/supported-data-sources.html
+
 
 ## Analyses and dashboards
 In Amazon QuickSight, you are going to work with analyses and dashboards.

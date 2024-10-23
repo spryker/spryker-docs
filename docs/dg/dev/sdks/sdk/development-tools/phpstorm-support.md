@@ -24,4 +24,6 @@ The following commands are included:
 - `console code:sniff:architecture`: Checks for architecture rule violations.
 Each of these commands can be run at either the module or project level.
 
+
+
 Within PHPStorm, they are accessible via the External Tools panel, which allows for execution directly from the project directory tree by right-clicking on the desired directory.

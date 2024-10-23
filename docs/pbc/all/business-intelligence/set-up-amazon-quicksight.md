@@ -13,16 +13,22 @@ This document describes how to set up Amazon QuickSight.
   After the contract is signed, we provision Amazon Quicksight for your project.
 3. In the Back Office, go to **Analytics**.
 4. On the **Analytics** page, click **Enable Analytics**.
-  This opens the **Enable Analytics** page.
+
 {% info_block warningBox "" %}
 
-The user who enables analytics is assigned as an owner of all the default assets, such as data sets, analyses, and dashboards. You can transfer ownership later.
+* The user who enables analytics is assigned as an owner of all the default assets, such as data sets, analyses, and dashboards. You can transfer ownership later.
 
-Also, this user is automatically assigned the Author role.
+* The user who enables analytics is automatically assigned with the Author role.
 
 
 {% endinfo_block %}  
 
-5.
+5. On the **Enable Analytics** page, click **Enable Analytics**.
+  This opens the **Analytics** page with a progress message displayed.
 
-The user
+6. Wait for the estimated amount of time and refresh the page.
+  This should display the analytics interface. Now, you can start working with data.
+
+## Next steps
+
+[Best practices: Analyzing shop data]()  

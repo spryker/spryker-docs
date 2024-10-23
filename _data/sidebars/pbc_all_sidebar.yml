@@ -35,6 +35,10 @@ entries:
                     url: /docs/pbc/all/back-office/unified-commerce/install-and-upgrade/install-the-spryker-core-back-office-warehouse-user-management-feature.html
 
 
+      - title: Business Intelligence
+        url: 
+        nested:
+
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:

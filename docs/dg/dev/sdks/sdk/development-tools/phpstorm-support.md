@@ -22,7 +22,7 @@ The following commands are included:
 - `console code:sniff:style -f`: Performs style fixes.
 - `console code:phpstan`: Executes static analysis.
 - `console code:sniff:architecture`: Checks for architecture rule violations.
-Each of these commands can be run at either the module or project level.
+Each of these commands can be run at module level.
 
 
 

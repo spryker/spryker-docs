@@ -19,6 +19,28 @@ This feature supports data from Spryker projects and third-party systems. When y
 
 For more details on data sources, see Supported data sources https://docs.aws.amazon.com/quicksight/latest/user/supported-data-sources.html
 
+### Extending project data for analytics
+
+By looking at datasets, you can see what data from your project is available for adding to analytics. By default, for each dataset, only the data that can be useful for analytics is available from a respective database table. For example, the Customer dataset doesn't include customer passwords.
+
+You can extend the data available to datasets on the project level. For more details, see  
+
+
+
+### Refreshing data
+
+To make datasets up to date, you need to refresh them by resyncing data from your project or third-party systems.
+
+You can refresh data manually or automatically by setting up a schedule per data set.
+
+
+![refresh-dataset]
+
+For instructions, see [Refresh analytics datasets]()
+
+
+
+
 ## User management and permissions
 
 
@@ -48,6 +70,16 @@ A dashboard is a representation of data prepared in an analysis. It serves as a 
 ![QuickSight-dashboard]
 
 
-Both analyses and dashboards are shareable so you can both share a complete dashboard or collaborate on an analysis. You can share dashboards with authors and readers, and analyses – only with authors.
+Both analyses and dashboards are shareable, you can share a complete dashboard or collaborate on an analysis.
 
 ! QuickSight sharing
+
+You can share dashboards with authors and readers, and analyses – only with authors.
+
+
+## Resetting analytics
+
+
+Sometimes you might want to start from scratch and get a fresh analytics account. Resetting analytics removes all assets and returns your account to the default state.
+
+!reset-analytics

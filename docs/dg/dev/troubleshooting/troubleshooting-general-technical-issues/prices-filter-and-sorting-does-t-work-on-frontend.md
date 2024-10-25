@@ -9,7 +9,7 @@ Prices filter and sorting doesn't work on Frontend.
 
 ## Solution
 
-1. Most probably, you have enabled the [Customer Access feature](/docs/pbc/all/customer-relationship-management/{{site,version}}/base-shop/customer-access-feature-overview.html) and the configuration was reset.
+1. Most probably, you have enabled the [Customer Access feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/customer-access-feature-overview.html) and the configuration was reset.
 Go to the Back Office and adjust the configuration.
 2. If you don't want to use this feature, then it's recommended to remove plugin `SeePricePermissionPlugin`.
 

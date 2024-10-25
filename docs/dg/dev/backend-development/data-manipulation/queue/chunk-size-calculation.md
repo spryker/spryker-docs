@@ -72,9 +72,3 @@ Find more details on the [Expert Chunk Size Calculation](#docs/dg/dev/backend-de
 ### Summary
 
 The **Chunk Size Calculator** provides developers with a powerful tool for optimizing their system’s resource consumption. Each level of the calculator is designed to address different use cases, from simple out-of-the-box configurations to highly customized, complex environments. Developers are encouraged to start with the **Basic Chunk Size Calculator** and, if necessary, progress to the **Advanced** or **Expert** calculators as the complexity of their system grows.
-
-#### Access the Calculators
-
-- [Basic Chunk Size Calculator](#)
-- [Advanced Chunk Size Calculator](#)
-- [Expert Chunk Size Calculator](#)

@@ -39,7 +39,7 @@ With the Basic calculator, developers only need to provide a minimal set of inpu
 
 **When to use**: This is the default starting point for any project. If your system has not been heavily customized, this calculator will give you the necessary chunk sizes with minimal effort.
 
-Find more details on the [Basic Chunk Size Calculation](#docs/dg/dev/backend-development/data-manipulation/queue/basic-chunk-size-calculation.html) page.
+Find more details on the [Basic Chunk Size Calculation](https://docs.spryker.com/docs/dg/dev/backend-development/data-manipulation/queue/basic-chunk-size-calculation.html) page.
 
 #### 2. Advanced Chunk Size Calculator
 
@@ -55,7 +55,7 @@ The Advanced calculator allows developers to select from AWS container types and
 
 **When to use**: The Advanced calculator is suited for systems that have been moderately customized or when developers need more precise control over performance and resource usage.
 
-Find more details on the [Advanced Chunk Size Calculation](#docs/dg/dev/backend-development/data-manipulation/queue/advanced-chunk-size-calculation.html) page.
+Find more details on the [Advanced Chunk Size Calculation](https://docs.spryker.com/docs/dg/dev/backend-development/data-manipulation/queue/advanced-chunk-size-calculation.html) page.
 
 #### 3. Expert Chunk Size Calculator
 
@@ -67,7 +67,7 @@ Despite the complexity, the calculator still ensures that the entire system rema
 
 **When to use**: The Expert calculator is reserved for production environments with complex, heavily customized setups that require fine-tuning of every performance metric.
 
-Find more details on the [Expert Chunk Size Calculation](#docs/dg/dev/backend-development/data-manipulation/queue/expert-chunk-size-calculation.html) page.
+Find more details on the [Expert Chunk Size Calculation](https://docs.spryker.com/docs/dg/dev/backend-development/data-manipulation/queue/expert-chunk-size-calculation.html) page.
 
 ### Summary
 

@@ -19,6 +19,9 @@ related:
 
 The **Basic Chunk Size Calculator** is designed to help developers configure the correct chunk sizes for their Spryker Commerce Operating System based on the traffic and data patterns in their system. This tool simplifies the setup process for out-of-the-box webshops that use the **publish and synchronize**, ensuring that the system can handle high-traffic entities efficiently without over-consuming resources.
 
+### The Basic Chunk Size Calculator
+The **Basic Chunk Size Calculator** is available [here](link to google spreadsheet).
+
 ### Problem Overview
 
 In an e-commerce environment, certain business entities generate a large volume of update events due to frequent refreshes and high data volume. These **high traffic entities** account for the majority of the traffic within the **publish and synchronize**. Misconfiguring chunk sizes for these entities can lead to inefficient resource consumption, system lags, or overloads. The **Basic Chunk Size Calculator** offers a straightforward way to address this by determining the appropriate chunk size for each queue based on the production environment’s data profile.

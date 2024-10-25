@@ -184,7 +184,7 @@ In our example, the following conditions are met:
 
 ## Current constraints
 
-* In the Spryker Commerce OS, you cannot define packaging units for products in the Back Office. They are imported to the database manually. See [HowTo: Import Packaging Units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-import-packaging-units.html) for more details.
+* In the Spryker Commerce OS, you cannot define packaging units for products in the Back Office. They are imported to the database manually. See [HowTo: Import Packaging Units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.html) for more details.
 * We strive to shift all business logic to our backend, however, with Packaging Units, calculations are performed on Yves.
 * On the shopping cart as well as the shopping list page, products do not have a drop-down to change the packaging units. You can select a packaging unit on the product details page only.
 * A shopper cannot reorder the items with the selected packaging units as they are not added automatically. They must be added manually on the product details page.
@@ -200,5 +200,5 @@ You have a product in your shop—a pen. And there exists a packaging unit for a
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| TUTORIALS AND HOWTOS |
 |---------|---------|---------|
-| [Install the Product Packaging Unit feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html)  | [Decimal Stock migration concept](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/decimal-stock-migration-concept.html) | [HowTo: Import packaging units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-import-packaging-units.html) |
+| [Install the Product Packaging Unit feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html)  | [Decimal Stock migration concept](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/decimal-stock-migration-concept.html) | [HowTo: Import packaging units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.html) |
 |   |   | [HowTo: Integrate and use precise decimal numbers](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html)  |

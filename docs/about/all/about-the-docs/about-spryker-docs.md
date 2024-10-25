@@ -3,6 +3,8 @@ title: About Spryker docs
 description: One-stop hub for everything about Spryker
 last_updated: Mar 4, 2024
 template: concept-topic-template
+redirect_from:
+  - /docs/about/all/about-the-docs/docs-updates.html
 ---
 
 Spryker docs are your one-stop hub for all the information about Spryker Cloud Commerce OS.

@@ -14,16 +14,24 @@ related:
 ---
 
 ## PHPStorm Support
-To integrate Spryker development tools into PHPStorm, developers may execute the `vendor/bin/install-phpstorm-tools.sh` command, which is provided by the `spryker/development` module. This command specifically adds or updates an XML configuration file in PHPStorm's settings directory that is dedicated exclusively to Spryker-related configurations, without making adjustments to any other configuration files within PHPStorm.
-Currently, the installation script is supported only on Mac and Linux systems.
-It is recommended to rerun this command periodically to ensure that the latest updates are applied.
+Spryker provides support for tools that perform code style fixes, static analysis, and architecture checks, each accessible within PHPStorm’s External Tools panel. These tools are available at both module and project levels and can be executed directly by right-clicking within the project directory tree.
 
-The following commands are included:
-- `console code:sniff:style -f`: Performs style fixes.
-- `console code:phpstan`: Executes static analysis.
-- `console code:sniff:architecture`: Checks for architecture rule violations.
-Each of these commands can be run at module or project level.
+The following tools are included:
+- `console code:sniff:style -f`: Applies coding style fixes.
+- `console code:phpstan`: Runs static analysis.
+- `console code:sniff:architecture`: Detects architecture rule violations.
 
+### Installation
+To install the Spryker development tools configuration in PHPStorm:
+1. Install the `spryker/development` module.
+2. Open a terminal on your local machine.
+3. Navigate to your project directory.
+4. Run the following command in your project root:
 
+```bash Copy code
+vendor/bin/install-phpstorm-tools.sh
+```
 
-Within PHPStorm, they are accessible via the External Tools panel, which allows for execution directly from the project directory tree by right-clicking on the desired directory.
+This command adds or updates an XML configuration file in PHPStorm’s settings directory, dedicated exclusively to Spryker-related configurations, without altering any other settings. The script currently supports Mac and Linux systems only.
+
+It is recommended to rerun this command periodically to apply the latest updates.

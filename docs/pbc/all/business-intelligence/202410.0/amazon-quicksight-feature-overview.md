@@ -76,6 +76,45 @@ Both analyses and dashboards are shareable, you can share a complete dashboard o
 
 You can share dashboards with authors and readers, and analyses – only with authors.
 
+### Default dashboards
+
+For those new to Amazon QuickSight analytics, while you're learning how to create your own dashboards, you can start using the default dashboards right away.
+
+The feature is shipped with the following dashboards
+
+#### Sales dashboard
+
+* Track sales performance over time
+* Gain insights into orders and return rate
+* Monitor discounts, product categories, brands
+* Monitor the usage of payment and shipping methods
+
+! sales-dashboard
+
+#### Products dashboard
+
+* Track performance of products
+* Monitor availability and returns
+* Analyze top-selling items, category distribution, and trends in shopping lists and customer carts
+
+! Products-dashboard
+
+#### Customers dashboard
+
+Track the following customer metrics:
+* Order number and value
+* Registration trends
+* Locations
+* Demographics
+
+! Customers-dashboard
+
+#### Marketplace dashboard
+* Track marketplace performance with insights into merchant status and commission
+* Get an overview of merchant orders, products, and offers
+
+! Marketplace-dashboard
+
 
 ## Resetting analytics
 

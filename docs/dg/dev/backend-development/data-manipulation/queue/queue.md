@@ -151,7 +151,7 @@ $config[QueueConstants::QUEUE_MESSAGE_CHUNK_SIZE_MAP] = [
 ];
 ?>
 ```
-For more detailed information on the Chunk Size Calculator and how it optimzes system performance, [see further details here](#docs/dg/dev/backend-development/data-manipulation/queue/chunk-size-calculation.html).
+For more detailed information on the Chunk Size Calculator and how it optimzes system performance, [see further details here](https://docs.spryker.com/docs/dg/dev/backend-development/data-manipulation/queue/chunk-size-calculation.html).
 
 2. Register the plugin in `QueueDependencyProvider::getProcessorMessagePlugins()`:
 

@@ -12,6 +12,8 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html
   - title: Upgrade the RabbitMQ module
     link: docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
+  - title: Chunk Size Calculation
+    link: docs/dg/dev/backend-development/data-manipulation/queue/chunk-size-calculation.html
 ---
 
 ## Concepts

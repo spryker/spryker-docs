@@ -14,7 +14,7 @@ related:
 ---
 
 ## PHPStorm Support
-To integrate Spryker development tools into PHPStorm, developers may execute the `vendor/bin/install-phpstorm-tools.sh` command, which is provided by the `spryker/development` module. This command adds or updates an XML configuration file in PHPStorm's settings directory.
+To integrate Spryker development tools into PHPStorm, developers may execute the `vendor/bin/install-phpstorm-tools.sh` command, which is provided by the `spryker/development` module. This command specifically adds or updates an XML configuration file in PHPStorm's settings directory that is dedicated exclusively to Spryker-related configurations, without making adjustments to any other configuration files within PHPStorm.
 Currently, the installation script is supported only on Mac and Linux systems.
 It is recommended to rerun this command periodically to ensure that the latest updates are applied.
 
@@ -22,7 +22,7 @@ The following commands are included:
 - `console code:sniff:style -f`: Performs style fixes.
 - `console code:phpstan`: Executes static analysis.
 - `console code:sniff:architecture`: Checks for architecture rule violations.
-Each of these commands can be run at module level.
+Each of these commands can be run at module or project level.
 
 
 

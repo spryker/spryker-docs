@@ -19,12 +19,27 @@ related:
 
 The **Advanced Chunk Size Calculator** builds upon the Basic level by allowing to fine-tune chunk sizes based on custom hardware limitations and custom performance metrics.
 
-### Additional Fine Tuning Configuration
+### The Advanced Chunk Size Calculator
+The **Advanced Chunk Size Calculator** is available [here](link to google spreadsheet).
 
-- This tool is ideal for scenarios where your system's resource consumption and performance vary from the standard configurations provided by the e-commerce framework. For example, if your **scheduler setup** differs from the default—such as running multiple containers or distributing workers differently within containers.
-- Additionally, the **Advanced Calculator** is essential when you are working with a customized hardware environment. If you're using different instance types or have specific memory and CPU limits for your services (Persistence, Storage, Search, or Message Broker) the Advanced Calculator enables you to fine-tune the chunk sizes based on the actual hardware configuration.
-- Beyond hardware, this calculator is also useful if your system processes events at a rate that deviates from the default settings. For example, if you need to adjust the rate at which messages are triggered into queues, or if your application has a custom warm-up time, you can modify these parameters to better reflect your system’s real-world performance.
-- This tool is also ideal for fine-tuning memory and CPU allocation for tasks, especially in environments where specific performance thresholds are important. For instance, you can control how much of the scheduler’s resources are dedicated to processing tasks versus how much is reserved for the scheduler’s core operations. If your tasks are more resource-intensive than the default configuration assumes, this calculator allows you to ensure that the chunk size is set to avoid overwhelming system resources while still maximizing throughput.
+### Problem Overview
+
+While the **Basic Chunk Size Calculator** offers a starting point, it doesn’t account for the nuances of resource allocations (like container sizes, CPU, and memory limits) or performance-sensitive variables such as application warm-up time and event message size. The **Advanced Chunk Size Calculator** addresses these issues by incorporating these additional metrics, enabling a more precise configuration that enhances stability and performance in production environments.
+
+### Input Parameters
+
+To calculate the correct queue chunk sizes, developers must provide the following information based on their specific production environment:
+- **Scheduler and Worker Setup**: Provide details on any non-standard configurations, such as environments with multiple containers or distinct worker distributions within containers, if your scheduler setup differs from the boilerplate defaults.
+- **Resource Configuration**: Provide information on your hardware setup, including instance types, CPU, and memory limits for services like Persistence, Storage, Search, or Message Broker, to allow the **Advanced Calculator** to optimize chunk sizes based on actual resource availability.
+- **Detailed Product Configuration**: Provide specific metrics related to products, the highest-traffic entity. This supports more precise chunk sizing for products without requiring an in-depth understanding of Publish & Synchronize.
+- **Event and Message Processing Metrics**: Provide expected event processing metrics, including deviations from default settings such as message trigger rates, custom application warm-up times, event size limits, and data division rate multipliers, to enable configuration adjustments that align with real-world performance.
+
+### Output
+
+Once the required data is entered into the **Basic Chunk Size Calculator** and **Advanced Chunk Size Calculator**, it will compute the optimal queue chunk sizes for each queue. Developers will need to configure these queue chunk sizes in their project to align with the calculated values.
+
+> For instructions on how to set up chunk sizes for the queues, [click here](https://docs.spryker.com/docs/dg/dev/backend-development/data-manipulation/queue/queue.html#configuration-for-chunk-size).
+
 
 ### Important Notes
 

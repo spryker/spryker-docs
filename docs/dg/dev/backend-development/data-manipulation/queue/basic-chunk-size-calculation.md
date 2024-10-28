@@ -17,7 +17,7 @@ related:
 
 ## Basic Chunk Size Calculation
 
-The **Basic Chunk Size Calculator** is designed to help developers configure the correct chunk sizes for their Spryker Commerce Operating System based on the traffic and data patterns in their system. This tool simplifies the setup process for out-of-the-box and low-customised webshops, ensuring that the system can handle high-traffic entities efficiently without over-consuming resources.
+The **Basic Chunk Size Calculator** is designed to help developers configure the correct chunk sizes for the project based on the traffic and data patterns in the system. This tool simplifies the setup process for out-of-the-box and low-customised webshops, ensuring that the system can handle high-traffic entities efficiently without over-consuming resources.
 
 The **Basic Chunk Size Calculator** is available [here](link to google spreadsheet).
 

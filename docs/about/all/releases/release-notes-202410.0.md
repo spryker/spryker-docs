@@ -87,10 +87,8 @@ https://docs.spryker.com/docs/pbc/all/install-features/202410.0/install-the-prod
 
 ## Discount condition: number of orders<span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Discounts can now be applied based on the number of order a customer placed before. Using the `customer-order-count` discount condition, you can define how many orders a customer should have placed to qualify for the discount.
+Discounts can now be applied based on the total number of order a customer placed. Using the `customer-order-count` discount condition, you can define how many orders a customer should have placed to qualify for the discount.
 
-
- By leveraging their order history, it allows for personalized promotions targeting first-time buyers or loyal customers, offering flexibility to drive both acquisition and retention.
 
 ![discount-condition]()
 
@@ -108,7 +106,7 @@ Discounts can now be applied based on the number of order a customer placed befo
 
 ## Marketplace Commissions<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Commissions are a key way for operators to monetize their marketplaces. Our Commission Engine makes defining, calculating, and managing commissions streamlined and transparent for operators and merchants. The engine integrates seamlessly with third-party ERP systems and payment service providers like Stripe.
+Commissions are a key way for operators to monetize their marketplaces. Spryker Commission Engine makes defining, calculating, and managing commissions streamlined and transparent for operators and merchants. The engine integrates seamlessly with third-party ERP systems and payment service providers like Stripe.
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>

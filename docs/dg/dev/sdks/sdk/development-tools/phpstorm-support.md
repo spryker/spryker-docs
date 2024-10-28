@@ -32,7 +32,7 @@ To install the Spryker development tools configuration in PHPStorm:
 4. Run the following command in your project root:
 
 ```bash Copy code
-vendor/bin/install-phpstorm-tools.sh
+vendor/bin/phpstorm-tools.sh
 ```
 
 This command adds or updates an XML configuration file in PHPStorm’s settings directory, dedicated exclusively to Spryker-related configurations, without altering any other settings. The script currently supports Mac and Linux systems only.

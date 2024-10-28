@@ -40,9 +40,7 @@ To calculate the correct queue chunk sizes, developers must provide the followin
 
 ### Output
 
-Once the required data is entered into the **Basic Chunk Size Calculator**, it will compute the optimal chunk sizes for each queue used by the system. These queues handle different business entities, and setting the right chunk size ensures efficient processing and resource allocation.
-
-The result will be a **chunk size for each queue** that is provided out-of-the-box with the Spryker Commerce Operating System. Developers will need to configure these chunk sizes in their system to align with the calculated values.
+Once the required data is entered into the **Basic Chunk Size Calculator**, it will compute the optimal chunk sizes for each queue used by the system. These queues handle different business entities, and setting the right queue chunk size ensures efficient processing and resource allocation. Developers will need to configure these queue chunk sizes.
 
 > For instructions on how to set up chunk sizes for the queues, [click here](https://docs.spryker.com/docs/dg/dev/backend-development/data-manipulation/queue/queue.html#configuration-for-chunk-size).
 

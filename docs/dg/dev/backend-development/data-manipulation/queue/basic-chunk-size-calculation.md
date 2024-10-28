@@ -19,7 +19,6 @@ related:
 
 The **Basic Chunk Size Calculator** is designed to help developers configure the correct chunk sizes for their Spryker Commerce Operating System based on the traffic and data patterns in their system. This tool simplifies the setup process for out-of-the-box and low-customised webshops, ensuring that the system can handle high-traffic entities efficiently without over-consuming resources.
 
-### The Basic Chunk Size Calculator
 The **Basic Chunk Size Calculator** is available [here](link to google spreadsheet).
 
 ### Problem Overview
@@ -33,9 +32,9 @@ To calculate the correct queue chunk sizes, developers must provide the followin
 - **High Traffic Entities**: Provide the total count of each high-traffic entity (e.g., products, prices, offers) across all stores, and estimate the daily refresh rate (percentage or count of entities updated daily) for ongoing system operations.
 - **Stores and Locales**: Provide the total number of stores in the system and the maximum number of supported locales across all stores, as these factors impact chunk size calculation for data distribution.
   > For more information on stores and locales in our system, [click here](https://docs.spryker.com/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview.html).
-- **Publish and Synchronize Setup**: The **publish and synchronize** processes entity data updates, and the worker setup plays a crucial role in determining how this is managed. Developers need to specify how their workers are set up in relation to stores.
+- **Publish and Synchronize Setup**: The **publish and synchronize** processes entity data updates, and the worker setup plays a crucial role in determining how this is managed. Developers need to specify how project workers are set up in relation to stores.
   > For more information on workers, tasks, and how they are related to stores, [click here](https://docs.spryker.com/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview.html).
-- **Number of Tasks Per Worker**: Developers are required to provide the **number of tasks per worker**. This value is essential to calculating how resources are distributed among tasks. Note that there is no additional help or explanation for determining this number, as it is specific to each setup.
+- **Number of Tasks Per Worker**: Provide the **number of tasks per worker**. This value is essential to calculating how resources are distributed among tasks. Note that there is no additional help or explanation for determining this number, as it is specific to each setup.
   > For more information on workers, tasks, and how they are related to stores, [click here](https://docs.spryker.com/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview.html).
 
 ### Output

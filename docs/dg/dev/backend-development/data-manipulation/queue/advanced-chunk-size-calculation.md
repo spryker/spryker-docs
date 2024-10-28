@@ -19,7 +19,6 @@ related:
 
 The **Advanced Chunk Size Calculator** builds upon the Basic level by allowing to fine-tune chunk sizes based on custom hardware limitations and custom performance metrics.
 
-### The Advanced Chunk Size Calculator
 The **Advanced Chunk Size Calculator** is available [here](link to google spreadsheet).
 
 ### Problem Overview
@@ -36,7 +35,7 @@ To calculate the correct queue chunk sizes, developers must provide the followin
 
 ### Output
 
-Once the required data is entered into the **Basic Chunk Size Calculator** and **Advanced Chunk Size Calculator**, it will compute the optimal queue chunk sizes for each queue. Developers will need to configure these queue chunk sizes in their project to align with the calculated values.
+Once the required data is entered into the **Basic Chunk Size Calculator** and **Advanced Chunk Size Calculator**, it will compute the optimal queue chunk sizes for each queue. Developers will need to configure these queue chunk sizes in the project to align with the calculated values.
 
 > For instructions on how to set up chunk sizes for the queues, [click here](https://docs.spryker.com/docs/dg/dev/backend-development/data-manipulation/queue/queue.html#configuration-for-chunk-size).
 

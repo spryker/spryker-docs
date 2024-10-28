@@ -22,6 +22,9 @@ The following tools are included:
 - `console code:sniff:architecture`: Detects architecture rule violations.
 
 ### Installation
+
+**Prerequisite**: Ensure that `awk` is installed on your local machine, as it is required to run the commands directly from PHPStorm.
+
 To install the Spryker development tools configuration in PHPStorm:
 1. Install the `spryker/development` module.
 2. Open a terminal on your local machine.

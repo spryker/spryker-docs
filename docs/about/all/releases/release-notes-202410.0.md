@@ -126,3 +126,28 @@ Commissions are a key way for operators to monetize their marketplaces. Spryker 
 
 **Documentation:**   
 [Marketplace Merchant Commission feature overview](https://docs.spryker.com/docs/pbc/all/merchant-management/202407.0/marketplace/marketplace-merchant-commission-feature-overview.html)
+
+
+
+
+## Payone ACP app update
+
+The Payone app now supports more payment methods. On top of credit card and Paypal, we have added the following payment methods:
+
+- **Prepayment**: Order items are shipped after the customer provides a payment receipt.  
+- **Klarna**: As a leading global payments and shopping service, Krana supports direct payments, pay-after-delivery options, and installment plans. For customers, these options are a seamless one-click purchase experience that empowers them to pay when and how they choose.
+
+**Business benefits:**
+
+* Increases customer satisfaction by providing more payment methods and options.  
+* Configure your Order Management System to capture payments based on your specific business logic.  
+* Feel secure that the payments follow international standards through fraud prevention and integrated risk management.
+
+**Labels:** Feature
+
+**Documentation:** [https://docs.spryker.com/docs/pbc/all/payment-service-provider/202404.0/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html](https://docs.spryker.com/docs/pbc/all/payment-service-provider/202404.0/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html)
+
+**Technical prerequisites:**
+
+1. [App Composition Platform](https://docs.spryker.com/docs/dg/dev/acp/app-composition-platform-installation.html)  
+2. [SCCOS Prerequisites](https://docs.spryker.com/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/sccos-prerequisites-for-the-stripe-app.html#required-packages)

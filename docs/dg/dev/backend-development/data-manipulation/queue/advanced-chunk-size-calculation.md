@@ -27,7 +27,7 @@ While the **Basic Chunk Size Calculator** offers a starting point, it doesn’t 
 
 ### Input Parameters
 
-To calculate the correct queue chunk sizes, developers must provide the following information based on their specific production environment:
+To calculate the correct queue chunk sizes, developers must provide the following information based on the specific production environment:
 - **Scheduler and Worker Setup**: Provide details on any non-standard configurations, such as environments with multiple containers or distinct worker distributions within containers, if your scheduler setup differs from the boilerplate defaults.
 - **Resource Configuration**: Provide information on your hardware setup, including instance types, CPU, and memory limits for services like Persistence, Storage, Search, or Message Broker, to allow the **Advanced Calculator** to optimize chunk sizes based on actual resource availability.
 - **Detailed Product Configuration**: Provide specific metrics related to products, the highest-traffic entity. This supports more precise chunk sizing for products without requiring an in-depth understanding of Publish & Synchronize.

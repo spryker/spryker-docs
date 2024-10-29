@@ -21,10 +21,10 @@ Business benefits:
 ![analytics-analysis](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/analytics-analysis.png)
 
 
-Documentation:
+### Documentation
 Link TBA
 
-Technical prerequisites:
+### Technical prerequisites
 List or links to docs
 
 
@@ -37,12 +37,12 @@ The new Variants section in Merchant Portal streamlines the management of concre
 ![mp-variants](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/mp-variants.png)
 
 
-Business benefits:
+### Business benefits
 * Reduces the complexity of managing concrete products
 * Improves operational efficiency
 
 
-Documentation:
+### Documentation
 Edit marketplace concrete products
 Install the Merchant Portal - Marketplace Product feature
 
@@ -51,10 +51,10 @@ Install the Merchant Portal - Marketplace Product feature
 
 AI features implemented by connecting to third-party APIs:
 
-* **AI-Powered visual search**: Enables users to search across the product catalog by uploading an image.  
-* **AI-Powered product category suggestions**: Automates product categorization in the Back Office.  
-* **AI-Powered product translation**: Automates the translation of product information in the Back Office.  
-* **AI-Powered generation of product image alt text**: Generates alt text for product images in the Back Office to improve accessibility and SEO.
+* AI-Powered visual search: Enables users to search across the product catalog by uploading an image.  
+* AI-Powered product category suggestions: Automates product categorization in the Back Office.  
+* AI-Powered product translation: Automates the translation of product information in the Back Office.  
+* AI-Powered generation of product image alt text: Generates alt text for product images in the Back Office to improve accessibility and SEO.
 
 These AI features leverage Open AI and are provided under the following conditions:
 
@@ -80,9 +80,9 @@ These AI features leverage Open AI and are provided under the following conditio
 
 **Description:** We introduce three Spryker GPTs powered by OpenAI LLMs to help developers automate crucial areas of software development \- quality and performance. These GPTs increase developer efficiency without sacrificing high standards in QA or performance benchmarking:
 
-* **Spryker DevQA Assistant** \- Assists in DevQA tasks by providing comprehensive QA checklists and insights into feature and module mappings and dependencies.  
-* **Spryker Cypress E2E Assistant** \- Assists with integration and use of the Cypress E2E testing framework; provides guidance, best practices, and real examples.  
-* **Spryker K6 Performance Assistant** \- Assists with generating K6 performance test scripts from provided API endpoints.
+* Spryker DevQA Assistant \- Assists in DevQA tasks by providing comprehensive QA checklists and insights into feature and module mappings and dependencies.  
+* Spryker Cypress E2E Assistant \- Assists with integration and use of the Cypress E2E testing framework; provides guidance, best practices, and real examples.  
+* Spryker K6 Performance Assistant \- Assists with generating K6 performance test scripts from provided API endpoints.
 
 These GPTs leverage Open AI and are provided under the following conditions:
 
@@ -104,6 +104,8 @@ These GPTs leverage Open AI and are provided under the following conditions:
 
 
 
+
+## Dynamic Multistore
 
 
 
@@ -129,6 +131,32 @@ Audit logs improve security monitoring and transparency by letting you track all
 
 * [Audit logs](/docs/dg/dev/backend-development/audit-logs/audit-logs.html)
 * [Working with logs](/docs/ca/dev/working-with-logs.html)
+
+
+
+
+
+
+## Dynamic Multistore<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+
+Previously in open access, Dynamic Multistore is integrated into the core product in this release.
+
+Dynamic Multistore is an enhanced version of the multi-store capability. This feature enables Back Office users to create new stores without engineering support or having to redeploy the application. With this feature, multiple stores can also operate under the same domain.
+
+![dynamic-multistore](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/managing-stores.png)
+
+Business benefits:
+* Empowers you to make changes faster.
+* Provides flexibility in managing stores.
+* Reduces complexity.
+
+
+Documentation:
+[Dynamic Multistore feature overview](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview.html)
+
+Technical prerequisites: [Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html)
+
+
 
 
 ## Product Comparison<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
@@ -197,8 +225,8 @@ Commissions are a key way for operators to monetize their marketplaces. Spryker 
 
 The Payone app now supports more payment methods. On top of credit card and Paypal, we have added the following payment methods:
 
-- **Prepayment**: Order items are shipped after the customer provides a payment receipt.  
-- **Klarna**: As a leading global payments and shopping service, Krana supports direct payments, pay-after-delivery options, and installment plans. For customers, these options are a seamless one-click purchase experience that empowers them to pay when and how they choose.
+- Prepayment: Order items are shipped after the customer provides a payment receipt.  
+- Klarna: As a leading global payments and shopping service, Krana supports direct payments, pay-after-delivery options, and installment plans. For customers, these options are a seamless one-click purchase experience that empowers them to pay when and how they choose.
 
 **Business benefits:**
 
@@ -228,6 +256,23 @@ Documentation:
 To be added
 
 
+
+
+
+## Back Office accessibility improvements
+
+Back Office is now more accessible to everyone, enabling all types of users to interact and navigate the system. We have implemented the following accessibility improvements:
+
+* Navigation: Users can navigate drawer content and content behind drawers using the **Tab** key.
+* Keyboard control: Users can interact with form elements and links using the keyboard.
+* Colors and contrast: Improved color contrast and added text as an alternative source of information besides color.
+
+
+Labels: Improvement
+
+
+
+
 ## Dynamic Cart<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Dynamic cart improves user experience by providing instant, smooth, and uninterrupted feedback to cart changes. Based on AJAX, dynamic cart is updated without a reload for actions like adjusting item quantity, removing an item, or redeeming a discount code. Cart and shopping list widgets in the header also show changes without a page reload.
@@ -252,8 +297,8 @@ Dynamic cart improves user experience by providing instant, smooth, and uninterr
 
 This update introduces the following UX improvements to the Category Tree in the Storefront:
 
-- **Collapsible categories:** Customers can now expand and collapse categories, making it easier to navigate product categories.   
-- **Hidden empty categories:** Categories with no available products are automatically hidden, providing a cleaner and more focused shopping experience.
+- Collapsible categories: Customers can now expand and collapse categories, making it easier to navigate product categories.   
+- Hidden empty categories: Categories with no available products are automatically hidden, providing a cleaner and more focused shopping experience.
 
 ![category-tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/category-tree.png)
 
@@ -302,10 +347,10 @@ Reduces the risk of errors when providing and restricting access.
 
 Publish and Sync (P\&S) process has been improved as follows:
 
-- **Performance optimization through direct sync:** Synchronization queues can be enabled and disabled on the project level. When disabled, synchronization proceeds directly to the synchronize step without intermediate queuing, resulting in faster and more streamlined system performance.   
-- **Custom queue chunk size configuration:** Developers can define custom message chunk sizes per queue. This allows for fine-tuned control over how many messages are processed per queue, like publishing, synchronization, or data import. The docs provide detailed guidance on when to increase or decrease chunk sizes for improved performance.  
-- **Improved event logger behavior:** The event logger now consumes less resources.  
-- **System health check notifications for P\&S limits:** Provides developers with notifications when processed data is reaching system limits. Notifications are sent in the following cases:  
+- Performance optimization through direct sync: Synchronization queues can be enabled and disabled on the project level. When disabled, synchronization proceeds directly to the synchronize step without intermediate queuing, resulting in faster and more streamlined system performance.   
+- Custom queue chunk size configuration: Developers can define custom message chunk sizes per queue. This allows for fine-tuned control over how many messages are processed per queue, like publishing, synchronization, or data import. The docs provide detailed guidance on when to increase or decrease chunk sizes for improved performance.  
+- Improved event logger behavior: The event logger now consumes less resources.  
+- System health check notifications for P\&S limits: Provides developers with notifications when processed data is reaching system limits. Notifications are sent in the following cases:  
   - A worker exceeds 75% of its available memory.  
   - Event message size surpasses 256KB: this protects the message broker.  
   - The size of a request during entity publishing exceeds 1MB: this ensures compatibility with persistence capabilities.
@@ -323,32 +368,55 @@ Publish and Sync (P\&S) process has been improved as follows:
 [https://docs.spryker.com/docs/dg/dev/backend-development/data-manipulation/queue/queue.html](https://docs.spryker.com/docs/dg/dev/backend-development/data-manipulation/queue/queue.html)
 
 
-## Stripe ACP app for Marketplace
+## Tech update<span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-The Stripe ACP app now fully supports the marketplace business model with the following options:
+The following components have been updated to ensure compatibility with the latest technologies and optimize performance:
 
-* **Marketplace or admin onboarding:** Admin is onboarded and configures the Stripe ACP app.   
-* **Merchant onboarding and KYC:** Each merchant is onboarded into the Marketplace and submits a KYC with Stripe.   
-* **Customer payment collection:** Collects funds from customers through various payment methods, like credit cards, digital wallets, or bank transfers.  
-* **Authorization and processing:** Authorization from the customer’s bank or payment provider ensures that the funds are available and the transaction is legitimate.  
-* **Payment reconciliation:** Confirmed payments and refunds are ingested through an API: payment and refund confirmations, pay-in reports, settlement funds. Funds are reconciled, including splits between 1P and 3P.   
-* **Seamless merchant payout:** When directed, funds are released to the merchant, leveraging the preconfigured billing cycle rules, order status, and commission rules. This is often in near real-time. The capability can also connect with the Spryker Commission Engine to apply commissions.   
-* **Merchants withdraw funds:** Merchants can transfer earnings into a local bank account in preferred currency.  
-* **Optimized payment flow:** Redirect customers to a Stripe Elements page or integrate and customize it accordingly through a headless solution.
+- PHP 8.3 is now supported; support for PHP 8.1 is discontinued.  
+- Jenkins has been upgraded to the latest LTS version. All new cloud environments are now deployed with this version by default. For local development, the new version of Jenkins requires Docker SDK version 1.61.0 or higher.   
+- Improved Jenkins’ resource management by adding SWAP memory on the infrastructure level. This addresses memory-related issues causing job failures and instability.  
+- The Angular framework has been updated to version 17, providing faster performance and smaller asset sizes for the merchant portal.   
+- PHPStan has been upgraded to version 1.10, significantly improving code analysis speed.
 
 **Business benefits:**
 
-* **Reach global markets**: One payment provider covers 135 currencies, 45+ countries, 100+ payment methods accessible.  
-* **Increase conversion:** Accelerate checkout. Calculated 10.5% revenue uplift with the use of Stripe Elements.
+* Reduced security risks  
+* Reduced maintenance efforts   
+*  scaling and more reliable operati
 
-**Labels:** Feature
+**Documentation:**
 
-**Documentation:** [https://docs.spryker.com/docs/pbc/all/payment-service-provider/202404.0/base-shop/third-party-integrations/stripe/stripe.html](https://docs.spryker.com/docs/pbc/all/payment-service-provider/202404.0/base-shop/third-party-integrations/stripe/stripe.html)
+* [https://docs.spryker.com/docs/dg/dev/supported-versions-of-php.html](https://docs.spryker.com/docs/dg/dev/supported-versions-of-php.html)  
+* [https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-upgrade-the-php-version.html](https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-upgrade-the-php-version.html)  
+* [https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html](https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html)
+
+
+## Stripe ACP app for Marketplace<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+
+The Stripe ACP app now fully supports the marketplace business model with the following options:
+
+* Marketplace or admin onboarding: Admin is onboarded and configures the Stripe ACP app.   
+* Merchant onboarding and KYC: Each merchant is onboarded into the Marketplace and submits a KYC with Stripe.   
+* Customer payment collection: Collects funds from customers through various payment methods, like credit cards, digital wallets, or bank transfers.  
+* Authorization and processing: Authorization from the customer’s bank or payment provider ensures that the funds are available and the transaction is legitimate.  
+* Payment reconciliation: Confirmed payments and refunds are ingested through an API: payment and refund confirmations, pay-in reports, settlement funds. Funds are reconciled, including splits between 1P and 3P.   
+* Seamless merchant payout: When directed, funds are released to the merchant, leveraging the preconfigured billing cycle rules, order status, and commission rules. This is often in near real-time. The capability can also connect with the Spryker Commission Engine to apply commissions.   
+* Merchants withdraw funds: Merchants can transfer earnings into a local bank account in preferred currency.  
+* Optimized payment flow: Redirect customers to a Stripe Elements page or integrate and customize it accordingly through a headless solution.
+
+**Business benefits:**
+
+* Reach global markets: One payment provider covers 135 currencies, 45+ countries, 100+ payment methods accessible.  
+* Increase conversion: Accelerate checkout. Calculated 10.5% revenue uplift with the use of Stripe Elements.
+
+
+
+**Documentation:** [Stripe](/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/stripe/stripe.html)
 
 **Technical prerequisites:**
 
-1. [App Composition Platform](https://docs.spryker.com/docs/dg/dev/acp/app-composition-platform-installation.html)  
-2. [SCCOS Prerequisites](https://docs.spryker.com/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/sccos-prerequisites-for-the-stripe-app.html#required-packages)
+1. [Install prerequisites and enable ACP](/docs/dg/dev/acp/install-prerequisites-and-enable-acp.html)  
+2. [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
 
 
 
@@ -357,9 +425,9 @@ The Stripe ACP app now fully supports the marketplace business model with the fo
 
 ## Stripe metadata<span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-**Description:** Spryker projects running the Stripe ACP app can now send custom metadata to Stripe.
+Spryker projects running the Stripe ACP app can now send custom metadata to Stripe.
 
-Documentation: https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe.html\#sending-additional-data-to-stripe
+Documentation: [Sending additional data to Stripe](/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe.html#sending-additional-data-to-stripe)
 
 
 
@@ -372,7 +440,7 @@ The following updated and new developer guides have been released:
 * A guide on [AI coding assistants](https://docs.spryker.com/docs/dg/dev/ai-coding-assistants.html) offers insights into how engineers can improve and optimize their workflows with AI.  
 * [Project development guidelines](https://docs.spryker.com/docs/dg/dev/guidelines/project-development-guidelines.html) have been refreshed, providing clarification on shortcuts and sharing tips and tricks for simplifying development processes.
 
-**Business benefits:** More efficient software development.
+Business benefits: More efficient software development.
 
 
 
@@ -390,6 +458,6 @@ This release introduces performance optimizations, bug fixes, and feature improv
   * Improved the sorting behavior in the Merchant Portal  
 * Bug fixes and other minor improvements
 
-Big thanks for your valuable contributions\!
+Big thanks for your valuable contributions!
 
-**Business benefits:** Enhanced performance and stability
+Business benefits: Enhanced performance and stability.

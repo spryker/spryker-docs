@@ -23,7 +23,9 @@ The following tools are included:
 
 ### Installation
 
-**Prerequisite**: Ensure that `awk` is installed on your local machine, as it is required to run the commands directly from PHPStorm.
+**Prerequisite**:
+- Ensure that `awk` is installed on your local machine, as it is required to run the commands directly from PHPStorm.
+- Confirm that the development tools (e.g., `vendor/bin/console code:sniff:style`, `vendor/bin/console code:phpstan`, and `vendor/bin/console code:sniff:architecture`) are already installed and runnable on your locale machine, as the installer only configures these tools in PHPStorm.
 
 To install the Spryker development tools configuration in PHPStorm:
 1. Install the `spryker/development` module.

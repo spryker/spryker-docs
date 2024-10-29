@@ -38,17 +38,7 @@ Review the [reference information](#reference-information-editing-users) before 
 6. Optional: Select or clear the **THIS USER IS A WAREHOUSE USER** checkbox.
 7. Select an **INTERFACE LANGUAGE**.
 8. Select a **STATUS**.
-9. Optional: To give the user access to analytics, for **ANALYTICS**, select **Author** or **Reader** to give them respective permissions.
-
-{% info_block warningBox "" %}
-
-* Take note of how many users have access to analytics. The number of users with access shouldn't exceed the number of users in your contract. If you need access for more users, reach out to your Customer Success Manager.
-* The analytics role can't be changed later.
-
-
-{% endinfo_block %}
-
-10. Click **Update**.
+9. Click **Update**.
     This opens the **Users** page with the success message displayed.
 
 ## Reference information: Edit users
@@ -65,4 +55,3 @@ Review the [reference information](#reference-information-editing-users) before 
 | WAREHOUSE USER| Defines if this user works in a warehouse to [fulfill orders](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app-overview.html). |
 | INTERFACE LANGUAGE | Defines the interface language of the Back Office for this user. |
 | STATUS | Defines if the user can access the Back Office. |
-| ANALYTICS | Defines if a user has access to [Amazon QuickSight analytics] and their permissions.  |

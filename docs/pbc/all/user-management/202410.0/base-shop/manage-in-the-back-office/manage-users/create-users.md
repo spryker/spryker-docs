@@ -41,17 +41,7 @@ This document describes how to create users in the Back Office.
 9. Optional: To make this user an agent, select **THIS USER IS AN AGENT IN STOREFRONT**.
 10. Optional: To make the user a warehouse user, select **WAREHOUSE USER**.
 11. For **INTERFACE LANGUAGE**, select a language suitable for the user.
-12. Optional: To give the user access to analytics, for **ANALYTICS**, select **Author** or **Reader** to give them respective permissions.
-
-{% info_block warningBox "" %}
-
-* Take note of how many users have access to analytics. The number of users with access shouldn't exceed the number of users in your contract. If you need access for more users, reach out to your Customer Success Manager.
-* The analytics role can't be changed later.
-
-{% endinfo_block %}
-
-
-13. Click **Create**.
+12. Click **Create**.
 
 This opens the **Users** page with the success message displayed. The created user is displayed in the list.
 
@@ -68,4 +58,3 @@ This opens the **Users** page with the success message displayed. The created us
 | AGENT | Defines if this user is an [agent assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) |
 | WAREHOUSE USER| Defines if this user works in a warehouse to [fulfill orders](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app-overview.html). |
 | INTERFACE LANGUAGE | Defines the interface language of the Back Office for this user. |
-| ANALYTICS | Defines if a user has access to [Amazon QuickSight analytics] and their permissions.  |

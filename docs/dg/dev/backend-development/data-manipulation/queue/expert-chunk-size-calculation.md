@@ -54,10 +54,7 @@ The result of the **Expert Chunk Size Calculator** is a set of optimized queue c
 
 To effectively use the **Expert Chunk Size Calculator**, developers must have a strong grasp of several key concepts related to resource management and system architecture.
 
-#### 1. Container-Worker-Task Resource Relationship
+#### Container-Worker-Task Resource Relationship
 
-This section will cover how resources (memory, CPU, etc.) are allocated between containers, workers, and tasks. It will explain how container boundaries are defined and the importance of understanding how these resources are distributed across the system to maintain healthy processing.
 
-#### 2. Publish and Synchronize Queues
 
-This section will explain how queues work in the publish and synchronize middleware, how they process multiple entities, and how factors like entity size and denormalization times impact CPU and memory consumption. Understanding these relationships is key to optimizing each queue’s performance through the expert calculator.

@@ -186,15 +186,15 @@ Ensure that the following changes have been triggered in transfer objects:
 
 | PLUGIN                                              | SPECIFICATION                                                                                                                                                          | PREREQUISITES | NAMESPACE |
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------| --- | --- |
-| ProductLabelLocalizedAttributesWritePublisherPlugin | Updates the localized attributes of the product label in the storage when triggered by the provided product label storage events.                                      | None | Spryker\Zed\ProductLabel\Communication\Plugin\Publisher |
-| ProductLabelWritePublisherPlugin                    | Updates the label data of the product page search when triggered by the provided product label events.                                                                 | None | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabel |
-| ProductLabelProductAbstractWritePublisherPlugin     | Updates the label data of the product page search when triggered by the provided product label product abstract relation events.                                       | None | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabelProductAbstract |
-| ProductLabelStoreWritePublisherPlugin               | Updates the product abstract data in the search engine when triggered by the provided publish and unpublish events of the product label and product abstract relation. | None | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabelStore |
-| ProductAbstractLabelWritePublisherPlugin            | Updates product abstract data in the storage when triggered by the provided publish and unpublish events of the product label and product abstract relation.           | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductAbstractLabel |
-| ProductLabelDictionaryWritePublisherPlugin          | Updates the data of the product label dictionary in the storage when triggered by the provided product label storage events.                                           | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelDictionary |
-| ProductLabelProductAbstractWritePublisherPlugin     | Updates the product abstract data in the storage when triggered by the provided events of product label and product abstract relation.                                 | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelProductAbstract |
-| ProductLabelDictionaryDeletePublisherPlugin         | Removes all the data of the product label dictionary storage when triggered by the provided product label dictionary events.                                           | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelDictionary |
-| ProductLabelSearchPublisherTriggerPlugin            | Allows publishing or re-publishing product label search data manually.                                                                                                 | None | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher |
+| ProductLabelLocalizedAttributesWritePublisherPlugin | Updates the localized attributes of the product label in the storage when triggered by the provided product label storage events.                                      |  | Spryker\Zed\ProductLabel\Communication\Plugin\Publisher |
+| ProductLabelWritePublisherPlugin                    | Updates the label data of the product page search when triggered by the provided product label events.                                                                 |  | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabel |
+| ProductLabelProductAbstractWritePublisherPlugin     | Updates the label data of the product page search when triggered by the provided product label product abstract relation events.                                       |  | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabelProductAbstract |
+| ProductLabelStoreWritePublisherPlugin               | Updates the product abstract data in the search engine when triggered by the provided publish and unpublish events of the product label and product abstract relation. |  | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabelStore |
+| ProductAbstractLabelWritePublisherPlugin            | Updates product abstract data in the storage when triggered by the provided publish and unpublish events of the product label and product abstract relation.           |  | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductAbstractLabel |
+| ProductLabelDictionaryWritePublisherPlugin          | Updates the data of the product label dictionary in the storage when triggered by the provided product label storage events.                                           |  | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelDictionary |
+| ProductLabelProductAbstractWritePublisherPlugin     | Updates the product abstract data in the storage when triggered by the provided events of product label and product abstract relation.                                 |  | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelProductAbstract |
+| ProductLabelDictionaryDeletePublisherPlugin         | Removes all the data of the product label dictionary storage when triggered by the provided product label dictionary events.                                           |  | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelDictionary |
+| ProductLabelSearchPublisherTriggerPlugin            | Allows publishing and republishing product label search data manually.                                                                                                 |  | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher |
 
 <details><summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
@@ -279,11 +279,11 @@ Ensure that following applies:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductAbstractLabelPublisherTriggerPlugin | Triggers publish events for the product label data. | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher |
-| ProductLabelDictionaryPublisherTriggerPlugin | Triggers publish events for the product label dictionary data. | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher |
-| ProductAbstractLabelSynchronizationDataRepositoryPlugin | Allows synchronizing the content of the entire `spy_product_abstract_label_storage` table into the storage. | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Synchronization |
-| ProductLabelDictionarySynchronizationDataRepositoryPlugin | Allows synchronizing the content of the entire `spy_product_label_dictionary_storage` table content into the storage. | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Synchronization |
-| ProductNewLabelUpdaterPlugin | Returns the list of relations of product labels to abstract products to assign or deassign product labels for. The results are used to persist product label relation changes into the database. The plugin is called by the ProductLabelRelationUpdaterConsolecommand. | None | Spryker\Zed\ProductNew\Communication\Plugin |
+| ProductAbstractLabelPublisherTriggerPlugin | Triggers publish events for the product label data. |  | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher |
+| ProductLabelDictionaryPublisherTriggerPlugin | Triggers publish events for the product label dictionary data. |  | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher |
+| ProductAbstractLabelSynchronizationDataRepositoryPlugin | Allows synchronizing the content of the entire `spy_product_abstract_label_storage` table into the storage. |  | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Synchronization |
+| ProductLabelDictionarySynchronizationDataRepositoryPlugin | Allows synchronizing the content of the entire `spy_product_label_dictionary_storage` table content into the storage. |  | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Synchronization |
+| ProductNewLabelUpdaterPlugin | Returns the list of relations of product labels to abstract products to assign or deassign product labels for. The results are used to persist product label relation changes into the database. The plugin is called by the `ProductLabelRelationUpdaterConsole` command. |  | Spryker\Zed\ProductNew\Communication\Plugin |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -450,13 +450,13 @@ class ProductLabelDependencyProvider extends SprykerProductLabelDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the product label new works:
+Ensure that the product label `new` works:
 
 1. In the Back Office, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 2. To create a product, click **Create a Product**.
 3. In the **NEW FROM** and **NEW TO** fields, enter dates so that the current date is between the entered ones.
 4. Clisk **Save**.
-5. On the Storefront, check that the product is displayed with the new product label.
+5. On the Storefront, check that the product is displayed with the `new` product label.
 
 {% endinfo_block %}
 
@@ -512,8 +512,8 @@ Label 3,DE
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductLabelDataImportPlugin | Imports product label data into the database. | None | Spryker\Zed\ProductLabelDataImport\Communication\Plugin |
-| ProductLabelStoreDataImportPlugin | Imports product label store data into the database. | None | Spryker\Zed\ProductLabelDataImport\Communication\Plugin |
+| ProductLabelDataImportPlugin | Imports product label data into the database. |  | Spryker\Zed\ProductLabelDataImport\Communication\Plugin |
+| ProductLabelStoreDataImportPlugin | Imports product label store data into the database. |  | Spryker\Zed\ProductLabelDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -589,7 +589,7 @@ Make sure the following modules have been installed:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductAbstractLabelWidget | Displays the product label assigned to a product. | None | SprykerShop\Yves\ProductLabelWidget\Widget |
+| ProductAbstractLabelWidget | Displays the product label assigned to a product. |  | SprykerShop\Yves\ProductLabelWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 

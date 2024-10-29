@@ -1,16 +1,19 @@
 ---
 title: Release notes 202410.0
-description: Release notes for the Spryker Cloud Commerce OS version 202410.0
+description: Release notes for Spryker Cloud Commerce OS version 202410.0
 last_updated: Oct 24, 2024
 template: concept-topic-template
 ---
 
+Spryker Cloud Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and improvements.
+
+For information about installing Spryker, see [Getting started guide](/docs/dg/dev/development-getting-started-guide.html).
+
 ## Business intelligence powered by Amazon QuickSight<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Amazon Quicksight is a business analytics tool now available in the Back Office. This brings powerful analytics capabilities directly into the platform, enabling users to visualize data, create customizable dashboards, and perform deep analytics on sales, product performance, customer behaviors, and marketplace KPIs. By leveraging analytics, you will unlock new monetization opportunities and make more informed business decisions.
+Amazon QuickSight is a business analytics tool integrated directly into the Back Office. This feature enables users to visualize data, create customizable dashboards, and perform deep analytics on sales, product performance, customer behaviors, and marketplace KPIs. By leveraging analytics, you can unlock new monetization opportunities and make more informed business decisions.
 
 ![analytics-dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/analytics-dashboard.png)
-
 
 Business benefits:
 
@@ -22,15 +25,17 @@ Business benefits:
 
 
 ### Documentation
-Link TBA
+
+Coming soon.
 
 ### Technical prerequisites
-List or links to docs
+
+Coming soon.
 
 
 
 
-## Variants section in the Merchant Portal<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Variants section in the Merchant Portal <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 The new Variants section in Merchant Portal streamlines the management of concrete products. You can now view, sort, filter, and bulk-edit concrete products belonging to different abstract products.
 
@@ -43,46 +48,56 @@ The new Variants section in Merchant Portal streamlines the management of concre
 
 
 ### Documentation
-Edit marketplace concrete products
-Install the Merchant Portal - Marketplace Product feature
+
+* [Edit marketplace concrete products](/docs/pbc/all/product-information-management/202410.0/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html)
+* [Install the Merchant Portal - Marketplace Product feature](/docs/pbc/all/merchant-management/202410.0/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-feature.html)
 
 
-## [Early Access] AI Features
+## [Early Access] AI Features <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-AI features implemented by connecting to third-party APIs:
+AI-powered features implemented by connecting to third-party APIs:
 
-* AI-Powered visual search: Enables users to search across the product catalog by uploading an image.  
-* AI-Powered product category suggestions: Automates product categorization in the Back Office.  
-* AI-Powered product translation: Automates the translation of product information in the Back Office.  
-* AI-Powered generation of product image alt text: Generates alt text for product images in the Back Office to improve accessibility and SEO.
+* Visual search: Enables users to search across the product catalog by uploading an image.  
+* Product category suggestions: Automates product categorization in the Back Office.  
+* Product translation: Automates the translation of product information in the Back Office.  
+* Generation of product image alt text: Generates alt text for product images in the Back Office to improve accessibility and SEO.
 
-These AI features leverage Open AI and are provided under the following conditions:
-
-* ChatGPT Plus, Team, or Enterprise license from OpenAI is required.  
-* Provided as an Early Access release . Early Access releases are subject to specific legal terms. They’re unsupported and don’t provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.  
-* Available as an opt-in and are not automatically integrated into the core product with this release.  
-* Projects take full responsibility for using AI.
-
-**Business benefits:**
+### Business benefits
 
 - Offload routine tasks to AI.  
 - Speed up your workflows.
 
-**Labels:** Feature
+### AI prerequisites
 
-**Technical prerequisites:**   
+The AI features leverage Open AI and are provided under the following conditions:
+
+* ChatGPT Plus, Team, or Enterprise license from OpenAI is required.  
+* Provided as an Early Access release. Early Access releases are subject to specific legal terms. They’re unsupported and don’t provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.  
+* Available as an opt-in and are not automatically integrated into the core product with this release.  
+* Projects take full responsibility for using AI.
+
+
+### Technical prerequisites   
 [https://docs.spryker.com/docs/pbc/all/install-features/202410.0/install-the-product-management-ai-feature.html](https://docs.spryker.com/docs/pbc/all/install-features/202410.0/install-the-product-management-ai-feature.html)   
 [https://docs.spryker.com/docs/pbc/all/install-features/202410.0/install-the-open-ai-feature.md](https://docs.spryker.com/docs/pbc/all/install-features/202410.0/install-the-open-ai-feature.md)   
 [https://docs.spryker.com/docs/pbc/all/install-features/202410.0/install-the-image-search-ai-feature.md](https://docs.spryker.com/docs/pbc/all/install-features/202410.0/install-the-image-search-ai-feature.md)
 
 
-## [Early Access] Spryker GPTs
+## [Early Access] Spryker GPTs <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-**Description:** We introduce three Spryker GPTs powered by OpenAI LLMs to help developers automate crucial areas of software development \- quality and performance. These GPTs increase developer efficiency without sacrificing high standards in QA or performance benchmarking:
+Spryker GPTs powered by OpenAI LLMs help developers automate crucial areas of software development: quality and performance. These GPTs increase developer efficiency without sacrificing high standards in QA and performance benchmarking:
 
-* Spryker DevQA Assistant \- Assists in DevQA tasks by providing comprehensive QA checklists and insights into feature and module mappings and dependencies.  
-* Spryker Cypress E2E Assistant \- Assists with integration and use of the Cypress E2E testing framework; provides guidance, best practices, and real examples.  
-* Spryker K6 Performance Assistant \- Assists with generating K6 performance test scripts from provided API endpoints.
+* Spryker DevQA Assistant: Assists in DevQA tasks by providing comprehensive QA checklists and insights into feature and module mappings and dependencies.  
+* Spryker Cypress E2E Assistant: Assists with integration and use of the Cypress E2E testing framework; provides guidance, best practices, and real examples.  
+* Spryker K6 Performance Assistant: Assists with generating K6 performance test scripts from provided API endpoints.
+
+
+### Business benefits
+
+* Automate or accelerate repetitive tasks related to quality assurance and performance.   
+* Achieve high-quality results while freeing up developer resources to pursue higher-value tasks for your business.
+
+### AI prerequisites
 
 These GPTs leverage Open AI and are provided under the following conditions:
 
@@ -91,36 +106,20 @@ These GPTs leverage Open AI and are provided under the following conditions:
 * Available as an opt-in and are not automatically integrated into the core product with this release.  
 * Projects take full responsibility for using AI.
 
-**Business benefits:**
+### Documentation
 
-* Automate or accelerate repetitive tasks related to quality assurance and performance.   
-* Achieve high-quality results while freeing up developer resources to pursue higher-value tasks for your business.
-
-**Labels:** New Products
-
-**Documentation:** These GPTs are all self-documenting. Have a conversation with them to understand what they can do, and how to use their features. Example prompt you could use: “List your features, and for each feature you list provide guidance on how you would use the feature in a generic way. Provide examples of how I would use each feature”
+These GPTs are all self-documenting. Have a conversation with them to understand what they can do, and how to use their features. Example prompt you could use: “List your features, and for each feature you list provide guidance on how you would use the feature in a generic way. Provide examples of how I would use each feature”.
 
 
 
-
-
-
-## Dynamic Multistore
-
-
-
-
-
-
-
-
-## Audit logs<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Audit logs <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Audit logs improve security monitoring and transparency by letting you track all security actions performed by users in all applications: Storefront, Back Office, Merchant Portal, and Glue API. Audit logs cover login related activities, including agent assist impersonation sessions.
 
 ![audit-logs](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/audit-logs.png)
 
 ### Business benefits
+
 * Enhanced security monitoring: Track and review key user actions, such as login and password changes, across all platform areas.
 * Compliance support: Automatic deletion schedules let you comply with legal and data privacy standards.
 * Customizable logging: Adjust logging preferences to focus on specific events or applications, ensuring relevant activities are tracked.
@@ -137,7 +136,7 @@ Audit logs improve security monitoring and transparency by letting you track all
 
 
 
-## Dynamic Multistore<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Dynamic Multistore <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Previously in open access, Dynamic Multistore is integrated into the core product in this release.
 
@@ -151,15 +150,17 @@ Business benefits:
 * Reduces complexity.
 
 
-Documentation:
+### Documentation
 [Dynamic Multistore feature overview](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview.html)
 
-Technical prerequisites: [Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html)
+### Technical prerequisites
+
+[Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html)
 
 
 
 
-## Product Comparison<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Product Comparison <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Product comparison enables customers to easily compare products on mobile and desktop devices. Customers can make more informed purchase decisions by viewing side-by-side comparisons of key product specifications and attributes.
 
@@ -178,26 +179,26 @@ https://docs.spryker.com/docs/pbc/all/install-features/202410.0/install-the-prod
 
 
 
-## Discount condition: number of orders<span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Discount condition: number of orders <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Discounts can now be applied based on the total number of order a customer placed. Using the `customer-order-count` discount condition, you can define how many orders a customer should have placed to qualify for the discount.
 
 
 ![discount-condition](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/discount-condition.png)
 
-**Business benefits:**
+### Business benefits
 
 - Personalized promotions: Enable tailored discounts based on customers' order history, improving engagement with new and returning customers.  
 - Boost customer acquisition: Offer specific discounts to first-time buyers, encouraging new customer sign-ups and conversions.  
 - Strengthen customer retention: Reward repeat buyers with discounts, fostering loyalty and increasing the likelihood of future purchases.
 
 
-**Documentation:**   
+### Documentation   
 [Decision rules: Attributes and operators](/docs/pbc/all/discount-management/202410.0/base-shop/manage-in-the-back-office/create-discounts.html#decision-rules-attributes-and-operators)  
 [Install the Promotions & Discounts + Order Management feature](/docs/pbc/all/discount-management/202410.0/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-order-managemet-feature.html)
 
 
-## Marketplace Commissions<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Marketplace Commissions <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Commissions are a key way for operators to monetize their marketplaces. Spryker Commission Engine makes defining, calculating, and managing commissions streamlined and transparent for operators and merchants. The engine integrates seamlessly with third-party ERP systems and payment service providers like Stripe.
 
@@ -209,13 +210,13 @@ Commissions are a key way for operators to monetize their marketplaces. Spryker 
 
 
 
-**Business benefits:**
+### Business benefits
 
 - Streamline commission management through automated calculation and application, reducing manual effort and errors.  
 - Adapt commission structures to evolving business needs seamlessly, supporting marketplace growth and expansion.   
 - Connect with third-party systems to generate invoices and facilitate payouts, ensuring operational efficiency and financial accuracy.
 
-**Documentation:**   
+### Documentation   
 [Marketplace Merchant Commission feature overview](https://docs.spryker.com/docs/pbc/all/merchant-management/202407.0/marketplace/marketplace-merchant-commission-feature-overview.html)
 
 
@@ -228,38 +229,34 @@ The Payone app now supports more payment methods. On top of credit card and Payp
 - Prepayment: Order items are shipped after the customer provides a payment receipt.  
 - Klarna: As a leading global payments and shopping service, Krana supports direct payments, pay-after-delivery options, and installment plans. For customers, these options are a seamless one-click purchase experience that empowers them to pay when and how they choose.
 
-**Business benefits:**
+### Business benefits
 
 * Increases customer satisfaction by providing more payment methods and options.  
 * Configure your Order Management System to capture payments based on your specific business logic.  
 * Feel secure that the payments follow international standards through fraud prevention and integrated risk management.
 
-**Documentation:** [Payone ACP app](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html)
+### Documentation
 
-Technical prerequisites: [Install prerequisites and enable ACP](/docs/dg/dev/acp/install-prerequisites-and-enable-acp.html)  
+[Payone ACP app](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html)
+
+### Technical prerequisites
+
+[Install prerequisites and enable ACP](/docs/dg/dev/acp/install-prerequisites-and-enable-acp.html)  
 
 
 
-## View Merchant page in the Back Office<span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## View Merchant page in the Back Office <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Back Office users can now view all relevant merchant information at a glance without entering the edit mode. Merchant details are consolidated into one comprehensive page, streamlining the process of accessing and reviewing merchant data.
 
 ![view-merchant-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/view-merchant-page.png)
 
-Business benefits:
-Simplifies data review processes by consolidating key merchant information in a single, non-editable page.
-Eliminates accidental changes when viewing merchant information.
+### Business benefits
+* Simplifies data review processes by consolidating key merchant information in a single, non-editable page.
+* Eliminates accidental changes when viewing merchant information.
 
 
-
-Documentation:
-To be added
-
-
-
-
-
-## Back Office accessibility improvements
+## Back Office accessibility improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Back Office is now more accessible to everyone, enabling all types of users to interact and navigate the system. We have implemented the following accessibility improvements:
 
@@ -268,12 +265,7 @@ Back Office is now more accessible to everyone, enabling all types of users to i
 * Colors and contrast: Improved color contrast and added text as an alternative source of information besides color.
 
 
-Labels: Improvement
-
-
-
-
-## Dynamic Cart<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Dynamic Cart <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Dynamic cart improves user experience by providing instant, smooth, and uninterrupted feedback to cart changes. Based on AJAX, dynamic cart is updated without a reload for actions like adjusting item quantity, removing an item, or redeeming a discount code. Cart and shopping list widgets in the header also show changes without a page reload.
 
@@ -283,16 +275,16 @@ Dynamic cart improves user experience by providing instant, smooth, and uninterr
   </video>
 </figure>
 
-**Business benefits:**
+### Business benefits
 
 - Enhanced user experience: Making changes in cart without reloading the page allows for an uninterrupted shopping experience. This leads to higher satisfaction and smoother interactions, especially on mobile devices.  
 - Increased cart conversion rates: Eliminating page reloads reduces friction in the shopping journey, resulting in higher conversion rates and ultimately driving revenue growth.
 
-**Documentation:**   
+### Documentation   
 [Dynamic cart overview](https://docs.spryker.com/docs/pbc/all/cart-and-checkout/202407.0/base-shop/feature-overviews/cart-feature-overview/dynamic-cart-overview.html)
 
 
-## Category tree improvements  <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Category tree improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 
 This update introduces the following UX improvements to the Category Tree in the Storefront:
@@ -302,12 +294,13 @@ This update introduces the following UX improvements to the Category Tree in the
 
 ![category-tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/category-tree.png)
 
-Business benefits:
+### Business benefits
+
 Customers make faster buying decisions based on better navigation and more focused content delivery.
 
 
 
-## Multi-value product attributes<span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Multi-value product attributes <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 
 This feature enables product attributes to have multiple values. For example, a "Charging" attribute could have the following values:
@@ -322,24 +315,24 @@ Such attributes are displayed with all of their values across the platform, incl
 
 ![storefront-multi-value-attribute](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/storefront-multi-value-product-attribute.png)
 
-Business benefits:
-Customers get a complete picture of products by all values being presented per attribute.
-Enhanced product filtering: Customers can search and filter products based on multiple attribute values and combinations, enabling them to find products faster and with specific requirements.
-Efficient data management: Back Office users can organize complex products more efficiently.
+### Business benefits
+* Customers get a complete picture of products by all values being presented per attribute.
+* Enhanced product filtering: Customers can search and filter products based on multiple attribute values and combinations, enabling them to find products faster and with specific requirements.
+* Efficient data management: Back Office users can organize complex products more efficiently.
 
-Documentation:
-To be added
+## Documentation
+
+[Create product attributes](/docs/pbc/all/product-information-management/202410.0/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html)
 
 
 
-
-## Improved management of user roles in the Back Office<span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Improved management of user roles in the Back Office <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Back Office areas and actions are now predefined. When managing access of user roles, you can select areas and actions instead of manually entering them.
 
-Business benefits:
-Simplifies the management of user access.
-Reduces the risk of errors when providing and restricting access.
+### Business benefits
+* Simplifies the management of user access.
+* Reduces the risk of errors when providing and restricting access.
 
 
 
@@ -355,7 +348,7 @@ Publish and Sync (P\&S) process has been improved as follows:
   - Event message size surpasses 256KB: this protects the message broker.  
   - The size of a request during entity publishing exceeds 1MB: this ensures compatibility with persistence capabilities.
 
-**Business benefits:**
+### Business benefits
 
 * More fine-tuned control over the system.  
 * Optimized performance through flexibility.  
@@ -363,12 +356,12 @@ Publish and Sync (P\&S) process has been improved as follows:
 * Get more actionable insights into system behavior.  
 * Prevent performance issues and system overload by proactively addressing potential bottlenecks.
 
-**Documentation:**   
-[https://docs.spryker.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html](https://docs.spryker.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html)  
-[https://docs.spryker.com/docs/dg/dev/backend-development/data-manipulation/queue/queue.html](https://docs.spryker.com/docs/dg/dev/backend-development/data-manipulation/queue/queue.html)
+### Documentation   
+* [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html)
+* [Queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html)
 
 
-## Tech update<span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Tech update <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 The following components have been updated to ensure compatibility with the latest technologies and optimize performance:
 
@@ -378,20 +371,20 @@ The following components have been updated to ensure compatibility with the late
 - The Angular framework has been updated to version 17, providing faster performance and smaller asset sizes for the merchant portal.   
 - PHPStan has been upgraded to version 1.10, significantly improving code analysis speed.
 
-**Business benefits:**
+### Business benefits
 
 * Reduced security risks  
 * Reduced maintenance efforts   
-*  scaling and more reliable operati
+* Scaling and more reliable operation
 
-**Documentation:**
+### Documentation
 
-* [https://docs.spryker.com/docs/dg/dev/supported-versions-of-php.html](https://docs.spryker.com/docs/dg/dev/supported-versions-of-php.html)  
-* [https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-upgrade-the-php-version.html](https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-upgrade-the-php-version.html)  
-* [https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html](https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html)
+* [Supported versions of PHP](/docs/dg/dev/supported-versions-of-php.html)  
+* [PHPStan](/docs/dg/dev/sdks/sdk/development-tools/phpstan.html)
+* [Upgrade to Angular 17](/docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html)
 
 
-## Stripe ACP app for Marketplace<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Stripe ACP app for Marketplace <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 The Stripe ACP app now fully supports the marketplace business model with the following options:
 
@@ -404,35 +397,37 @@ The Stripe ACP app now fully supports the marketplace business model with the fo
 * Merchants withdraw funds: Merchants can transfer earnings into a local bank account in preferred currency.  
 * Optimized payment flow: Redirect customers to a Stripe Elements page or integrate and customize it accordingly through a headless solution.
 
-**Business benefits:**
+### Business benefits
 
 * Reach global markets: One payment provider covers 135 currencies, 45+ countries, 100+ payment methods accessible.  
 * Increase conversion: Accelerate checkout. Calculated 10.5% revenue uplift with the use of Stripe Elements.
 
 
 
-**Documentation:** [Stripe](/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/stripe/stripe.html)
+### Documentation
 
-**Technical prerequisites:**
+[Stripe](/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/stripe/stripe.html)
 
-1. [Install prerequisites and enable ACP](/docs/dg/dev/acp/install-prerequisites-and-enable-acp.html)  
-2. [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
+### Technical prerequisites
 
-
-
+[Install prerequisites and enable ACP](/docs/dg/dev/acp/install-prerequisites-and-enable-acp.html)  
 
 
 
-## Stripe metadata<span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+
+## Stripe metadata <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Spryker projects running the Stripe ACP app can now send custom metadata to Stripe.
 
-Documentation: [Sending additional data to Stripe](/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe.html#sending-additional-data-to-stripe)
+### Documentation
+
+[Sending additional data to Stripe](/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe.html#sending-additional-data-to-stripe)
 
 
 
 
-## Developer guides<span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Developer guides <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 The following updated and new developer guides have been released:
 
@@ -440,11 +435,9 @@ The following updated and new developer guides have been released:
 * A guide on [AI coding assistants](https://docs.spryker.com/docs/dg/dev/ai-coding-assistants.html) offers insights into how engineers can improve and optimize their workflows with AI.  
 * [Project development guidelines](https://docs.spryker.com/docs/dg/dev/guidelines/project-development-guidelines.html) have been refreshed, providing clarification on shortcuts and sharing tips and tricks for simplifying development processes.
 
-Business benefits: More efficient software development.
 
 
-
-## Community Contributions<span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Community Contributions <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 This release introduces performance optimizations, bug fixes, and feature improvements contributed by the external community. These improvements address issues like memory consumption in product publishing, slow page searches, and various bug fixes.
 
@@ -459,5 +452,3 @@ This release introduces performance optimizations, bug fixes, and feature improv
 * Bug fixes and other minor improvements
 
 Big thanks for your valuable contributions!
-
-Business benefits: Enhanced performance and stability.

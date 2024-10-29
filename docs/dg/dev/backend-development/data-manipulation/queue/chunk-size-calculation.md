@@ -119,10 +119,3 @@ The result of the **Expert Chunk Size Calculator** is a set of optimized queue c
 
 - The **Expert Chunk Size Calculator** is intended for projects with significant customizations at the entity level. For more standard setups, consider using the **Basic** or **Advanced Chunk Size Calculators**.
 - This calculator requires an in-depth understanding of how system components interact, including containerization, message brokers, search and storage, and resource distribution across workers and tasks.
-
-##### Additional Knowledge Required
-
-To effectively use the **Expert Chunk Size Calculator**, developers must have a strong grasp of key concepts related to resource management and system architecture, including:
-
-###### Container-Worker-Task Resource Relationship
-TBD

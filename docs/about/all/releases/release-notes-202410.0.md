@@ -172,10 +172,10 @@ Product comparison enables customers to easily compare products on mobile and de
 
 
 ### Documentation
-https://docs.spryker.com/docs/pbc/all/product-information-management/202410.0/base-shop/feature-overviews/product-comparison-feature-overview.html
+[Product Comparison feature overview](/docs/pbc/all/product-information-management/202410.0/base-shop/feature-overviews/product-comparison-feature-overview.html)
 
 ### Technical prerequisites
-https://docs.spryker.com/docs/pbc/all/install-features/202410.0/install-the-product-comparison-feature.html
+[Install the Product Comparison feature](/docs/pbc/all/install-features/202410.0/install-the-product-comparison-feature.html)
 
 
 

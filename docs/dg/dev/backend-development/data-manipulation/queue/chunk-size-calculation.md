@@ -6,8 +6,6 @@ template: concept-topic-template
 redirect_from:
   - /docs/dg/dev/backend-development/data-manipulation/queue/queue.html#concepts
 related:
-  - title: Expert Chunk Size Calculation
-    link: docs/dg/dev/backend-development/data-manipulation/queue/expert-chunk-size-calculation.html
 
 ---
 

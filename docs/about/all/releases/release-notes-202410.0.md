@@ -9,13 +9,13 @@ Spryker Cloud Commerce OS is an end-to-end solution for digital commerce. This d
 
 For information about installing Spryker, see [Getting started guide](/docs/dg/dev/development-getting-started-guide.html).
 
-## Business intelligence powered by Amazon QuickSight<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Business intelligence powered by Amazon QuickSight <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Amazon QuickSight is a business analytics tool integrated directly into the Back Office. This feature enables users to visualize data, create customizable dashboards, and perform deep analytics on sales, product performance, customer behaviors, and marketplace KPIs. By leveraging analytics, you can unlock new monetization opportunities and make more informed business decisions.
 
 ![analytics-dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/analytics-dashboard.png)
 
-Business benefits:
+### Business benefits
 
 * Immediate access to data analytics with editing, sharing, and viewing tools integrated directly into the Back Office.
 * With high customizability and numerous editing and sharing options, you can tailor your analyses to focus on the most important data.
@@ -144,7 +144,7 @@ Dynamic Multistore is an enhanced version of the multi-store capability. This fe
 
 ![dynamic-multistore](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/managing-stores.png)
 
-Business benefits:
+### Business benefits
 * Empowers you to make changes faster.
 * Provides flexibility in managing stores.
 * Reduces complexity.

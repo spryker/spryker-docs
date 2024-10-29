@@ -28,7 +28,7 @@ The following tools are included:
 To install the Spryker development tools configuration in PHPStorm:
 1. Install the `spryker/development` module.
 2. Open a terminal on your local machine.
-3. Navigate to your project directory.
+3. Navigate to the root project directory.
 4. Run the following command in your project root:
 
 ```bash Copy code

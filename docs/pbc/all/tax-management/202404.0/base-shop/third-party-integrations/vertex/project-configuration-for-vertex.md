@@ -24,11 +24,11 @@ By default, the following data is sent to Vertex for tax calculation:
  - Discounts
  - Shipping costs
 
-You can send additional data to Vertex, like a Customer Exemption Certificate, using plugins and the `taxMetadata` fields. You can add more data to request any specific information that's not available in Spryker by default. For example, this could be data from ERP, other systems, and customized Spryker instances. For the implementation details, see [Install Vertex](https://docs.spryker.com/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html#implement-vertex-specific-metadata-extender-plugins).
+You can send additional data to Vertex, like a Customer Exemption Certificate, using plugins and the `taxMetadata` fields. You can add more data to request any specific information that's not available in Spryker by default. For example, this could be data from ERP, other systems, and customized Spryker instances. For the implementation details, see [Install Vertex](https://docs.spryker.com/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html#implement-vertex-specific-metadata-extender-plugins).
 
 ## Additional configuration options for Vertex
 
-* You can configure the Vertex app for invoices to be saved in Vertex. However, we recommend to send invoice requests only for paid orders, as specified in [Vertex installation](https://docs.spryker.com/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html#optional-if-you-plan-to-send-invoices-to-vertex-through-oms-configure-your-payment-oms). The current implementation works asynchronously, so no response is saved in Spryker.
+* You can configure the Vertex app for invoices to be saved in Vertex. However, we recommend to send invoice requests only for paid orders, as specified in [Vertex installation](https://docs.spryker.com/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html#optional-if-you-plan-to-send-invoices-to-vertex-through-oms-configure-your-payment-oms). The current implementation works asynchronously, so no response is saved in Spryker.
 
 * The default Spryker functionality uses tax rates to manage taxes. When using Vertex for tax determination, Vertex doesn't provide any tax rates to Spryker. To avoid confusion, we recommend removing the default Spryker tax rates. In the Back Office, you can delete them in **Administration** > **Tax Rates**.
 

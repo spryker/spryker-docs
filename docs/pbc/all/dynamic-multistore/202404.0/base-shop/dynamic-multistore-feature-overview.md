@@ -49,8 +49,6 @@ To define which currencies the customers can you use, you can assign them to the
 To define additional store settings in the **Settings** tab.
 When creating a store, you can assign timezone per application or specify a default one.
 
-![configure-store-settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/store-settings.png)
-
 ## Publishing and synchronizing
 
 When the new queue infrastructure is published, the store becomes visible on the Storefront.

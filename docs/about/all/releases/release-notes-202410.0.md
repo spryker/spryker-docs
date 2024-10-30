@@ -108,7 +108,7 @@ These GPTs leverage Open AI and are provided under the following conditions:
 
 ### Documentation
 
-These GPTs are all self-documenting. Have a conversation with them to understand what they can do, and how to use their features. Example prompt you could use: “List your features, and for each feature you list provide guidance on how you would use the feature in a generic way. Provide examples of how I would use each feature”.
+These GPTs are self-documenting. Have a conversation with them to understand what they can do and how to use their features. Example prompt you could use: “List your features, and for each feature you list provide guidance on how you would use the feature in a generic way. Provide examples of how I would use each feature”.
 
 
 
@@ -151,11 +151,9 @@ Dynamic Multistore is an enhanced version of the multi-store capability. This fe
 
 
 ### Documentation
-[Dynamic Multistore feature overview](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview.html)
 
-### Technical prerequisites
-
-[Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html)
+* [Dynamic Multistore feature overview](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview.html)
+* [Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html)
 
 
 

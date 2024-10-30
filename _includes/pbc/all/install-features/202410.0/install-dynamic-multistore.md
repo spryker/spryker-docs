@@ -60,7 +60,7 @@ You might need to update or install related dependencies. For more details on ho
 
 {% endinfo_block %}
 
-### 3) Set up configuration
+#### Set up configuration
 
 Before the introduction of dynamic multistore, configuration was managed in `config/Shared/stores.php`. With dynamic multistore, configuration is managed in the database. `config/Shared/stores.php` and `config/Shared/default_store.php` are now obsolete.
 
@@ -70,7 +70,7 @@ Take the following steps to set up configuration.
 
 #### Define the region stores context by domain
 
-With dynamic multistore, you can define region or store using domains or headers. We recommend defining region using domains.
+With dynamic multistore, you can define regions and stores using domains or headers. We recommend defining regions using domains.
 
 {% info_block infoBox "Changing the domain name" %}
 
@@ -198,7 +198,7 @@ docker:
 
 </details>
 
-In this configuration, region is used for entities like services, endpoints, or applications. The `SPRYKER_DYNAMIC_STORE_MODE`  variable enables the dynamic multistore feature. Make sure store is not used in the new configuration to avoid deployment failures.
+In this configuration, region is used for entities like services, endpoints, or applications. The `SPRYKER_DYNAMIC_STORE_MODE` variable enables the dynamic multistore feature. Make sure stores are not used in the new configuration to avoid deployment failures.
 
 
 #### Configure deployment recipe files
@@ -206,7 +206,7 @@ In this configuration, region is used for entities like services, endpoints, or 
 
 If you have deployment hooks in the deployment file, you need to remove stores from the recipe files.
 
-Here's how a deployment files with hooks looks like deployment file:
+Here's how a deployment files with hooks looks like:
 
 ```yml
 SPRYKER_HOOK_BEFORE_DEPLOY: 'vendor/bin/install -r pre-deploy -vvv'
@@ -214,6 +214,7 @@ SPRYKER_HOOK_AFTER_DEPLOY: 'true'
 SPRYKER_HOOK_INSTALL: 'vendor/bin/install -r production --no-ansi -vvv'
 SPRYKER_HOOK_DESTRUCTIVE_INSTALL: 'vendor/bin/install -r destructive --no-ansi -vvv'
 ```
+
 And here's a recipe file with stores:
 
 ```yml

@@ -77,10 +77,10 @@ The AI features leverage Open AI and are provided under the following conditions
 * Projects take full responsibility for using AI.
 
 
-### Technical prerequisites   
-[https://docs.spryker.com/docs/pbc/all/install-features/202410.0/install-the-product-management-ai-feature.html](https://docs.spryker.com/docs/pbc/all/install-features/202410.0/install-the-product-management-ai-feature.html)   
-[https://docs.spryker.com/docs/pbc/all/install-features/202410.0/install-the-open-ai-feature.md](https://docs.spryker.com/docs/pbc/all/install-features/202410.0/install-the-open-ai-feature.md)   
-[https://docs.spryker.com/docs/pbc/all/install-features/202410.0/install-the-image-search-ai-feature.md](https://docs.spryker.com/docs/pbc/all/install-features/202410.0/install-the-image-search-ai-feature.md)
+### Documentation
+
+Coming soon.
+
 
 
 ## [Early Access] Spryker GPTs <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
@@ -172,10 +172,11 @@ Product comparison enables customers to easily compare products on mobile and de
 
 
 ### Documentation
-[Product Comparison feature overview](/docs/pbc/all/product-information-management/202410.0/base-shop/feature-overviews/product-comparison-feature-overview.html)
 
-### Technical prerequisites
-[Install the Product Comparison feature](/docs/pbc/all/install-features/202410.0/install-the-product-comparison-feature.html)
+* [Product Comparison feature overview](/docs/pbc/all/product-information-management/202410.0/base-shop/feature-overviews/product-comparison-feature-overview.html)
+* [Install the Product Comparison feature](/docs/pbc/all/product-information-management/202410.0/base-shop/install-and-upgrade/install-features/install-the-product-comparison-feature.html)
+
+
 
 
 
@@ -217,7 +218,7 @@ Commissions are a key way for operators to monetize their marketplaces. Spryker 
 - Connect with third-party systems to generate invoices and facilitate payouts, ensuring operational efficiency and financial accuracy.
 
 ### Documentation   
-[Marketplace Merchant Commission feature overview](https://docs.spryker.com/docs/pbc/all/merchant-management/202407.0/marketplace/marketplace-merchant-commission-feature-overview.html)
+[Marketplace Merchant Commission feature overview](/docs/pbc/all/merchant-management/202410.0/marketplace/marketplace-merchant-commission-feature-overview.html)
 
 
 
@@ -281,7 +282,7 @@ Dynamic cart improves user experience by providing instant, smooth, and uninterr
 - Increased cart conversion rates: Eliminating page reloads reduces friction in the shopping journey, resulting in higher conversion rates and ultimately driving revenue growth.
 
 ### Documentation   
-[Dynamic cart overview](https://docs.spryker.com/docs/pbc/all/cart-and-checkout/202407.0/base-shop/feature-overviews/cart-feature-overview/dynamic-cart-overview.html)
+[Dynamic cart overview](/docs/pbc/all/cart-and-checkout/202410.0/base-shop/feature-overviews/cart-feature-overview/dynamic-cart-overview.html)
 
 
 ## Category tree improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>

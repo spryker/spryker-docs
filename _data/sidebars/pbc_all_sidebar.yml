@@ -1410,6 +1410,10 @@ entries:
                     include_versions:
                     - "202404.0"
                     - "202410.0"
+                  - title: View merchants
+                    url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/view-merchants.html
+                    include_versions:
+                    - "202410.0"
 
               - title: Domain model and relationships
                 nested:

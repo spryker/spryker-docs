@@ -12,9 +12,7 @@ related:
     link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 ---
 
-This document describes how to view merchants in the Back Office.
-
-## Prerequisites
+To view merchant details in the Back Office, follow the steps:
 
 1. Go **Marketplace&nbsp;<span aria-label="and then">&gt;</span> Merchants**.
 2. Next to the merchant you want to view, click **View**.
@@ -26,8 +24,8 @@ The detailed view page displays all relevant information about the selected merc
 
 | ATTRIBUTE       | DESCRIPTION                                           |
 |-----------------|-------------------------------------------------------|
-| Status          | Indicates whether the merchant is active or inactive. |
-| Approval Status | Shows whether the merchant is approved or denied.     |
+| Status          | Indicates if the merchant is active or inactive. |
+| Approval Status | Indicates whether the merchant is approved or denied.     |
 
 ## General Information
 
@@ -37,57 +35,45 @@ The detailed view page displays all relevant information about the selected merc
 | Registration Number  | The merchant’s official registration number.       |
 | Merchant Reference   | A unique identifier for the merchant.              |
 | Email                | The contact email address of the merchant.         |
-| Store Relation       | Lists the stores the merchant is associated with.  |
-| Merchant URL         | The URL link to the merchant’s page.               |
-| Warehouses           | Lists any warehouses associated with the merchant. |
+| Store Relation       | The stores the merchant is associated with.  |
+| Merchant URL         | URL of the merchant’s profile.               |
+| Warehouses           | Warehouses used by the merchant. |
 
 ## Contact Person
 
 | ATTRIBUTE  | DESCRIPTION                                           |
 |------------|-------------------------------------------------------|
-| Role       | The role of the contact person (e.g., Brand Manager). |
+| Role       | Role, for example–Brand Manager. |
 | Title      | The title of the contact person.                      |
-| First Name | The contact person’s first name.                      |
-| Last Name  | The contact person’s last name.                       |
-| Phone      | The contact person’s phone number.                    |
+| First Name | First name.                      |
+| Last Name  | Last name.                       |
+| Phone      | Phone number.                    |
 
 ## Merchant Profile
 
-This section contains detailed information about the merchant’s public profile.
-
 | ATTRIBUTE       | DESCRIPTION                                                              |
 |-----------------|--------------------------------------------------------------------------|
-| Description     | A brief description of the merchant.                                     |
-| Public Email    | The public email address of the merchant.                                |
-| Public Phone    | The public phone number.                                                 |
-| Fax Number      | The fax number.                                                          |
+| Description     | Description provided by the merchant.                                     |
+| Public Email    | Public email address.                                |
+| Public Phone    | Public phone number.                                                 |
+| Fax Number      | Fax number.                                                          |
 | Logo URL        | The link to the merchant’s logo.                                         |
-| Address Details | Includes the country, street, zip code, city, latitude, and longitude.   |
+| Address Details | Merchant's address.   |
 
 ## Legal Information
 
-This section contains legal information about the merchant.
+Merchant's legal information:
 
 | ATTRIBUTE            | DESCRIPTION                                                |
 |----------------------|------------------------------------------------------------|
-| Cancellation policy  | The merchant’s cancellation policy.                        |
-| Terms and conditions | The merchant’s terms and conditions.                       |
-| Data Privacy         | Information regarding data privacy for different locales.  |
-| Imprint              | Legal imprint information for different locales.           |
+| Cancellation policy  | Cancellation policy.                        |
+| Terms and conditions | Terms and conditions.                       |
+| Data Privacy         | Data privacy per locale.  |
+| Imprint              | Legal imprint per locale.           |
 
 ## Users
 
 This section displays a list of users associated with the merchant and provides options to Edit, Deactivate, or Delete the users directly from the list.
-
-## Actions Available in the Detailed Merchant View
-
-On the detailed view page, you can perform the following actions:
-
- - Edit: Click this button to modify the merchant’s details.
- - Activate: Activate the merchant, making them active in the system.
- - Deactivate: Temporarily deactivate the merchant, making them inactive in the system.
- - Deny Access: Prevent the merchant from accessing their account or managing their products.
- - Approve Access (only if the merchant is not yet approved): Grant access to a merchant that is currently waiting for approval.
 
 ## Managing merchant users
 

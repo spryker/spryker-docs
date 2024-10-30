@@ -26,7 +26,7 @@ If your project is of version 202307.0 or later, go to [Enable the dynamic store
 |Spryker Core  | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 
-2. Install the required modules:
+3. Install the required modules:
 
 Install the required modules using Composer:
 
@@ -60,23 +60,6 @@ You might need to update or install related dependencies. For more details on ho
 
 {% endinfo_block %}
 
-#### Set up configuration
-
-Before the introduction of dynamic multistore, configuration was managed in `config/Shared/stores.php`. With dynamic multistore, configuration is managed in the database. `config/Shared/stores.php` and `config/Shared/default_store.php` are now obsolete.
-
-The default configuration is imported using data import modules, such as StoreDataImport, LocaleDataImport, CountryDataImport, and StoreContextDataImport. These modules populate the store configuration in the database.
-
-Take the following steps to set up configuration.
-
-#### Define the region stores context by domain
-
-With dynamic multistore, you can define regions and stores using domains or headers. We recommend defining regions using domains.
-
-{% info_block infoBox "Changing the domain name" %}
-
-We recommend making `de.mysprykershop.com` a mirror of `eu.mysprykershop.com` to preserve the availability of old links in search engines.
-
-{% endinfo_block %}
 
 ### 1) Enable the dynamic store feature
 

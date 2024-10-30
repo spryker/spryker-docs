@@ -44,4 +44,4 @@ vendor/bin/phpstorm-command-line-tools.sh --platform=local
 
 This command adds or updates an XML configuration file in PHPStorm’s settings directory, dedicated exclusively to Spryker-related configurations, without altering any other settings. The script currently supports Mac and Linux systems only.
 
-It is recommended to rerun this command periodically to apply the latest updates.
+It is recommended to rerun this command after updating the `spryker/development` module, to ensure the latest configurations and updates are applied.

@@ -1428,7 +1428,7 @@ entries:
                   - title: Merchant users overview
                     url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html
               - title: Marketplace Merchant Commission feature overview
-                url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-commission-feature-overview.html
+                url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-commission-feature-overview.html
                 include_versions:
                 - "202410.0"
               - title: Merchant Opening Hours feature overview
@@ -1547,18 +1547,18 @@ entries:
                   - title: "File details: merchant_user.csv"
                     url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/import-file-details-merchant-user.csv.html
                   - title: Import merchant commissions
-                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant-comission.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant-comission.csv.html
                     include_versions:
                       - "202410.0"
                     nested:
                       - title: "Import file details: merchant_commission_amount.csv"
-                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_amount.csv.html
+                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant_commission_amount.csv.html
                       - title: "Import file details: merchant_commission_group.csv"
-                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_group.csv.html
+                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant_commission_group.csv.html
                       - title: "Import file details: merchant_commission_merchant.csv"
-                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_merchant.csv.html
+                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant_commission_merchant.csv.html
                       - title: "Import file details: merchant_commission_store.csv"
-                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_store.csv.html
+                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant_commission_store.csv.html
 
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
@@ -1590,7 +1590,7 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-relations/manage-merchant-relation-requests.html
 
                   - title: Import merchant commissions
-                    url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/manage-in-the-back-office/back-office-import-merchant-commissions.html
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/back-office-import-merchant-commissions.html
                     include_versions:
                       - "202410.0"
 
@@ -2833,7 +2833,7 @@ entries:
                   - title: Product Comparison
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-comparison-feature-overview.html
                     include_versions:
-                    - "202410.0"                    
+                    - "202410.0"
                   - title: Product Groups
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-groups-feature-overview.html
                   - title: Product Labels
@@ -3797,6 +3797,8 @@ entries:
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/configure-algolia.html
                     - title: Disconnect Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/disconnect-algolia.html
+                    - title: Getting access to Algolia dashboard
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/getting-access-to-algolia-dashboard.html
 
               - title: Best practices
                 url: /docs/pbc/all/search/base-shop/best-practices/search-best-practices.html
@@ -4131,7 +4133,7 @@ entries:
                     url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex.html
                     nested:
                       - title: Install
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex.html
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html
                         nested:
                           - title: Integrate the connector module
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html

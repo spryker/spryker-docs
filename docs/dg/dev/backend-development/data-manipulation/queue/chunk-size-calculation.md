@@ -29,7 +29,7 @@ The **Chunk Size Calculator** is a powerful tool for optimizing Publish and Sync
 
 #### 1. Basic Chunk Size Calculator
 
-The **Basic Chunk Size Calculator** is a tool designed to help developers configure optimal queue chunk sizes for small to medium B2C projects with low customization with minimal configuration effort. It ensures efficient processing by aligning queue chunk sizes with traffic and data distribution. Ideal for out-of-the-box or minimally customized setups, it is available for use [here](link to Google spreadsheet).
+The **Basic Chunk Size Calculator** is a tool designed to help developers configure optimal queue chunk sizes for small to medium B2C projects with low customization with minimal configuration effort. It ensures efficient processing by aligning queue chunk sizes with traffic and data distribution. Ideal for out-of-the-box or minimally customized setups, it is available for use [here](link to Google spreadsheet); please make a copy of the spreadsheet to experiment with and adjust the settings as needed for your project.
 
 ##### Purpose and Use Case
 
@@ -61,7 +61,7 @@ After entering the required data, the **Basic Chunk Size Calculator** will deter
 
 #### 2. Advanced Chunk Size Calculator
 
-The **Advanced Chunk Size Calculator** builds upon the **Basic Chunk Size Calculator**, requiring developers to have a deeper understanding of the services that make up the project. It is available for use [here](link to Google spreadsheet).
+The **Advanced Chunk Size Calculator** builds upon the **Basic Chunk Size Calculator**, requiring developers to have a deeper understanding of the services that make up the project. It is available for use [here](link to Google spreadsheet); please make a copy of the spreadsheet to experiment with and adjust the settings as needed for your project.
 
 ##### Purpose and Use Case
 
@@ -94,7 +94,7 @@ The **Expert Chunk Size Calculator** is designed for developers working with hea
 
 As the complexity of an entity increases, so does the denormalization time, which can slow down the entire system. Developers using the **Expert Chunk Size Calculator** must have a solid understanding of how containerization works in the project, including the distribution of resources like memory and CPU among containers, workers, and tasks. Additionally, understanding the limitations of the receiving side services (such as search and storage) and provider systems (like the database) is crucial. The message broker, which delivers messages and imposes throughput limits, is also a critical component of the overall system architecture that needs to be considered.
 
-The **Expert Chunk Size Calculator** is available [here](link to google spreadsheet).
+The **Expert Chunk Size Calculator** is available [here](link to google spreadsheet); please make a copy of the spreadsheet to experiment with and adjust the settings as needed for your project.
 
 ##### Purpose and Use Case
 

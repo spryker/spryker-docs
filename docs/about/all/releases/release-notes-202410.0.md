@@ -213,7 +213,7 @@ Audit logs improve security monitoring and transparency by letting you track all
 
 ## Dynamic Multistore <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Previously in open access, Dynamic Multistore is integrated into the core product in this release.
+Previously in early access, Dynamic Multistore is integrated into the core product in this release.
 
 Dynamic Multistore is an enhanced version of the multi-store capability. This feature enables Back Office users to create new stores without engineering support or having to redeploy the application. With this feature, multiple stores can also operate under the same domain.
 

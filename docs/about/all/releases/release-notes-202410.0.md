@@ -9,6 +9,29 @@ Spryker Cloud Commerce OS is an end-to-end solution for digital commerce. This d
 
 For information about installing Spryker, see [Getting started guide](/docs/dg/dev/development-getting-started-guide.html).
 
+## Marketplace Commissions <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+
+Commissions are a key way for operators to monetize their marketplaces. Spryker Commission Engine makes defining, calculating, and managing commissions streamlined and transparent for operators and merchants. The engine integrates seamlessly with third-party ERP systems and payment service providers like Stripe.
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/marketplace-merchant-commission.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
+
+### Business benefits
+
+- Streamline commission management through automated calculation and application, reducing manual effort and errors.  
+- Adapt commission structures to evolving business needs seamlessly, supporting marketplace growth and expansion.   
+- Connect with third-party systems to generate invoices and facilitate payouts, ensuring operational efficiency and financial accuracy.
+
+### Documentation   
+
+[Marketplace Merchant Commission feature overview](/docs/pbc/all/merchant-management/202410.0/marketplace/marketplace-merchant-commission-feature-overview.html)
+
+
 ## Business intelligence powered by Amazon QuickSight <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Amazon QuickSight is a business analytics tool integrated directly into the Back Office. This feature enables users to visualize data, create customizable dashboards, and perform deep analytics on sales, product performance, customer behaviors, and marketplace KPIs. By leveraging analytics, you can unlock new monetization opportunities and make more informed business decisions.
@@ -80,6 +103,58 @@ The AI features leverage Open AI and are provided under the following conditions
 ### Documentation
 
 Coming soon.
+
+
+## Payone ACP app update <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+
+The Payone app now supports more payment methods. On top of credit card and Paypal, we have added the following payment methods:
+
+- Prepayment: Order items are shipped after the customer provides a payment receipt.  
+- Klarna: As a leading global payments and shopping service, Krana supports direct payments, pay-after-delivery options, and installment plans. For customers, these options are a seamless one-click purchase experience that empowers them to pay when and how they choose.
+
+### Business benefits
+
+* Increases customer satisfaction by providing more payment methods and options.  
+* Configure your Order Management System to capture payments based on your specific business logic.  
+* Feel secure that the payments follow international standards through fraud prevention and integrated risk management.
+
+### Documentation
+
+[Payone ACP app](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html)
+
+### Technical prerequisites
+
+[Install prerequisites and enable ACP](/docs/dg/dev/acp/install-prerequisites-and-enable-acp.html)  
+
+
+
+## Stripe ACP app for Marketplace <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+
+The Stripe ACP app now fully supports the marketplace business model with the following options:
+
+* Marketplace or admin onboarding: Admin is onboarded and configures the Stripe ACP app.   
+* Merchant onboarding and KYC: Each merchant is onboarded into the Marketplace and submits a KYC with Stripe.   
+* Customer payment collection: Collects funds from customers through various payment methods, like credit cards, digital wallets, or bank transfers.  
+* Authorization and processing: Authorization from the customer’s bank or payment provider ensures that the funds are available and the transaction is legitimate.  
+* Payment reconciliation: Confirmed payments and refunds are ingested through an API: payment and refund confirmations, pay-in reports, settlement funds. Funds are reconciled, including splits between 1P and 3P.   
+* Seamless merchant payout: When directed, funds are released to the merchant, leveraging the preconfigured billing cycle rules, order status, and commission rules. This is often in near real-time. The capability can also connect with the Spryker Commission Engine to apply commissions.   
+* Merchants withdraw funds: Merchants can transfer earnings into a local bank account in preferred currency.  
+* Optimized payment flow: Redirect customers to a Stripe Elements page or integrate and customize it accordingly through a headless solution.
+
+### Business benefits
+
+* Reach global markets: One payment provider covers 135 currencies, 45+ countries, 100+ payment methods accessible.  
+* Increase conversion: Accelerate checkout. Calculated 10.5% revenue uplift with the use of Stripe Elements.
+
+
+### Documentation
+
+[Stripe](/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/stripe/stripe.html)
+
+### Technical prerequisites
+
+[Install prerequisites and enable ACP](/docs/dg/dev/acp/install-prerequisites-and-enable-acp.html)  
+
 
 
 
@@ -176,6 +251,25 @@ Product comparison enables customers to easily compare products on mobile and de
 
 
 
+## Dynamic Cart <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+
+Dynamic cart improves user experience by providing instant, smooth, and uninterrupted feedback to cart changes. Based on AJAX, dynamic cart is updated without a reload for actions like adjusting item quantity, removing an item, or redeeming a discount code. Cart and shopping list widgets in the header also show changes without a page reload.
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/dynamic-cart-video.mp4" type="video/mp4">
+  </video>
+</figure>
+
+### Business benefits
+
+- Enhanced user experience: Making changes in cart without reloading the page allows for an uninterrupted shopping experience. This leads to higher satisfaction and smoother interactions, especially on mobile devices.  
+- Increased cart conversion rates: Eliminating page reloads reduces friction in the shopping journey, resulting in higher conversion rates and ultimately driving revenue growth.
+
+### Documentation   
+[Dynamic cart overview](/docs/pbc/all/cart-and-checkout/202410.0/base-shop/feature-overviews/cart-feature-overview/dynamic-cart-overview.html)
+
+
 
 
 ## Discount condition: number of orders <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
@@ -197,91 +291,6 @@ Discounts can now be applied based on the total number of order a customer place
 [Install the Promotions & Discounts + Order Management feature](/docs/pbc/all/discount-management/202410.0/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-order-managemet-feature.html)
 
 
-## Marketplace Commissions <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
-
-Commissions are a key way for operators to monetize their marketplaces. Spryker Commission Engine makes defining, calculating, and managing commissions streamlined and transparent for operators and merchants. The engine integrates seamlessly with third-party ERP systems and payment service providers like Stripe.
-
-<figure class="video_container">
-    <video width="100%" height="auto" controls>
-    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/marketplace-merchant-commission.mp4" type="video/mp4">
-  </video>
-</figure>
-
-
-
-### Business benefits
-
-- Streamline commission management through automated calculation and application, reducing manual effort and errors.  
-- Adapt commission structures to evolving business needs seamlessly, supporting marketplace growth and expansion.   
-- Connect with third-party systems to generate invoices and facilitate payouts, ensuring operational efficiency and financial accuracy.
-
-### Documentation   
-[Marketplace Merchant Commission feature overview](/docs/pbc/all/merchant-management/202410.0/marketplace/marketplace-merchant-commission-feature-overview.html)
-
-
-
-
-## Payone ACP app update <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
-
-The Payone app now supports more payment methods. On top of credit card and Paypal, we have added the following payment methods:
-
-- Prepayment: Order items are shipped after the customer provides a payment receipt.  
-- Klarna: As a leading global payments and shopping service, Krana supports direct payments, pay-after-delivery options, and installment plans. For customers, these options are a seamless one-click purchase experience that empowers them to pay when and how they choose.
-
-### Business benefits
-
-* Increases customer satisfaction by providing more payment methods and options.  
-* Configure your Order Management System to capture payments based on your specific business logic.  
-* Feel secure that the payments follow international standards through fraud prevention and integrated risk management.
-
-### Documentation
-
-[Payone ACP app](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html)
-
-### Technical prerequisites
-
-[Install prerequisites and enable ACP](/docs/dg/dev/acp/install-prerequisites-and-enable-acp.html)  
-
-
-
-## View Merchant page in the Back Office <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
-
-Back Office users can now view all relevant merchant information at a glance without entering the edit mode. Merchant details are consolidated into one comprehensive page, streamlining the process of accessing and reviewing merchant data.
-
-![view-merchant-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/view-merchant-page.png)
-
-### Business benefits
-* Simplifies data review processes by consolidating key merchant information in a single, non-editable page.
-* Eliminates accidental changes when viewing merchant information.
-
-
-## Back Office accessibility improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
-
-Back Office is now more accessible to everyone, enabling all types of users to interact and navigate the system. We have implemented the following accessibility improvements:
-
-* Navigation: Users can navigate drawer content and content behind drawers using the **Tab** key.
-* Keyboard control: Users can interact with form elements and links using the keyboard.
-* Colors and contrast: Improved color contrast and added text as an alternative source of information besides color.
-
-
-## Dynamic Cart <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
-
-Dynamic cart improves user experience by providing instant, smooth, and uninterrupted feedback to cart changes. Based on AJAX, dynamic cart is updated without a reload for actions like adjusting item quantity, removing an item, or redeeming a discount code. Cart and shopping list widgets in the header also show changes without a page reload.
-
-<figure class="video_container">
-    <video width="100%" height="auto" controls>
-    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/dynamic-cart-video.mp4" type="video/mp4">
-  </video>
-</figure>
-
-### Business benefits
-
-- Enhanced user experience: Making changes in cart without reloading the page allows for an uninterrupted shopping experience. This leads to higher satisfaction and smoother interactions, especially on mobile devices.  
-- Increased cart conversion rates: Eliminating page reloads reduces friction in the shopping journey, resulting in higher conversion rates and ultimately driving revenue growth.
-
-### Documentation   
-[Dynamic cart overview](/docs/pbc/all/cart-and-checkout/202410.0/base-shop/feature-overviews/cart-feature-overview/dynamic-cart-overview.html)
-
 
 ## Category tree improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -296,6 +305,7 @@ This update introduces the following UX improvements to the Category Tree in the
 ### Business benefits
 
 Customers make faster buying decisions based on better navigation and more focused content delivery.
+
 
 
 
@@ -322,6 +332,29 @@ Such attributes are displayed with all of their values across the platform, incl
 ## Documentation
 
 [Create product attributes](/docs/pbc/all/product-information-management/202410.0/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html)
+
+
+
+
+## View Merchant page in the Back Office <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+Back Office users can now view all relevant merchant information at a glance without entering the edit mode. Merchant details are consolidated into one comprehensive page, streamlining the process of accessing and reviewing merchant data.
+
+![view-merchant-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/view-merchant-page.png)
+
+### Business benefits
+* Simplifies data review processes by consolidating key merchant information in a single, non-editable page.
+* Eliminates accidental changes when viewing merchant information.
+
+
+## Back Office accessibility improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+Back Office is now more accessible to everyone, enabling all types of users to interact and navigate the system. We have implemented the following accessibility improvements:
+
+* Navigation: Users can navigate drawer content and content behind drawers using the **Tab** key.
+* Keyboard control: Users can interact with form elements and links using the keyboard.
+* Colors and contrast: Improved color contrast and added text as an alternative source of information besides color.
+
 
 
 
@@ -381,37 +414,6 @@ The following components have been updated to ensure compatibility with the late
 * [Supported versions of PHP](/docs/dg/dev/supported-versions-of-php.html)  
 * [PHPStan](/docs/dg/dev/sdks/sdk/development-tools/phpstan.html)
 * [Upgrade to Angular 17](/docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html)
-
-
-## Stripe ACP app for Marketplace <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
-
-The Stripe ACP app now fully supports the marketplace business model with the following options:
-
-* Marketplace or admin onboarding: Admin is onboarded and configures the Stripe ACP app.   
-* Merchant onboarding and KYC: Each merchant is onboarded into the Marketplace and submits a KYC with Stripe.   
-* Customer payment collection: Collects funds from customers through various payment methods, like credit cards, digital wallets, or bank transfers.  
-* Authorization and processing: Authorization from the customer’s bank or payment provider ensures that the funds are available and the transaction is legitimate.  
-* Payment reconciliation: Confirmed payments and refunds are ingested through an API: payment and refund confirmations, pay-in reports, settlement funds. Funds are reconciled, including splits between 1P and 3P.   
-* Seamless merchant payout: When directed, funds are released to the merchant, leveraging the preconfigured billing cycle rules, order status, and commission rules. This is often in near real-time. The capability can also connect with the Spryker Commission Engine to apply commissions.   
-* Merchants withdraw funds: Merchants can transfer earnings into a local bank account in preferred currency.  
-* Optimized payment flow: Redirect customers to a Stripe Elements page or integrate and customize it accordingly through a headless solution.
-
-### Business benefits
-
-* Reach global markets: One payment provider covers 135 currencies, 45+ countries, 100+ payment methods accessible.  
-* Increase conversion: Accelerate checkout. Calculated 10.5% revenue uplift with the use of Stripe Elements.
-
-
-
-### Documentation
-
-[Stripe](/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/stripe/stripe.html)
-
-### Technical prerequisites
-
-[Install prerequisites and enable ACP](/docs/dg/dev/acp/install-prerequisites-and-enable-acp.html)  
-
-
 
 
 

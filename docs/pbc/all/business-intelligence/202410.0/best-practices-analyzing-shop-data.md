@@ -43,7 +43,7 @@ Now the data is fresh and you can use it to create an anlysis.
 
 ## Create an analysis
 
-Analysis is basically a visualzation of data in your datasets. To create one, follow the steps:
+Analysis is basically a visualization of data in your datasets. To create one, follow the steps:
 
 1. On the **Analytics** page, go to **Analyses**.
 2. In the **Analyses** section, click **New analysis**.
@@ -54,17 +54,41 @@ Analysis is basically a visualzation of data in your datasets. To create one, fo
 
 ### Edit the visual
 
-In this example, you're going to create a grand total visual. Your shop needs to have sales data to
+In this example, you're going to create a product availability visual:
 
-5. To select the visual, click on it.
-6. In the **Data** pane, click on **grand_total**.
-  This hilights the field and adds its data to the visual.
-7. To format the data, hover over the **grand_total** field, and select the three dots.
-8. In the context menu, go to **Format: 1,234.57** > **More formatting options...**.
-  This opens a **Format data** pane.
-8. For **Data type**, select currency.
-9. For **Symbol**, select **Euro**.
-10.
+1. To select the visual, click on it.
+2. In the **Data** pane, click on **Availability**.
+  This highlights the field and adds its data to the visual.
+3. In **Visuals** select the pie chart.
+  This shows the data as a pie chart.
+
+![concrete-product-availability]  
+
+
+### Add one more visual
+
+1. Hover over **Data** and select **Add Dataset**.
+2. In the **Choose dataset to add** window, click on **Category + Localized Product Abstract**.
+3. Click **Select**
+  This shows a success message and the **Datasets in this analysis** window. Click **Close** to close the window.
+4. In the toolbar, for **ADD:**, click on visual and select a horizontal bar chart.
+This adds an empty visual to the sheet.
+
+![add-visual]()
+
+5. Click on the visual you've added.
+6. In the **Data** pane, for **Dataset**, select **Category + Localized Product Abstract**.
+7. Add the **name[spy_category_attribute]** as a dimension to the **Y AXIS** section.
+8. Add the **sku** field as a measure to the **VALUE** field.
+
+![Visual values] values highlighted
+
+9. Name of the visual is inherited from the fields you've added. To make it presentable, double-click the name.
+10. In the **Edit title** window, enter a name for the visual. For example, `Products per category`.
+11. To apply the change, click **Save**.
+This closes the the window and the new name of the visual is displayed.
+
+
 
 
 ## Share the analysis

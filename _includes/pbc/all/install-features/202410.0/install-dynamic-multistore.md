@@ -1,16 +1,14 @@
-{% info_block warningBox %}
-
-Dynamic Multistore is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and don't provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
-
 This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html).
 
 ## Install feature core
 
 Follow the steps below to install the Dynamic Multistore feature core.
 
-### Prerequisites
+### Prerequisites for projects below version 202307.0
+
+{% info_block warningBox "Project version" %}
+If your project is of version 202307.0 or later, go to [Enable the dynamic store feature].
+{% endinfo_block %}
 
 1. Upgrade the following modules:
 
@@ -28,7 +26,7 @@ Follow the steps below to install the Dynamic Multistore feature core.
 |Spryker Core  | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 
-### 2) Install the required modules
+2. Install the required modules:
 
 Install the required modules using Composer:
 
@@ -56,6 +54,11 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
+{% info_block warningBox "Dependencies issues" %}
+
+You might need to update or install related dependencies. For more details on how to update modules, see [Updating Spryker](/docs/dg/dev/updating-spryker/updating-spryker.html#spryker-product-structure).
+
+{% endinfo_block %}
 
 ### 3) Set up configuration
 
@@ -75,8 +78,7 @@ We recommend making `de.mysprykershop.com` a mirror of `eu.mysprykershop.com` to
 
 {% endinfo_block %}
 
-
-#### Enable the dynamic store feature
+### 1) Enable the dynamic store feature
 
 To use the new region configuration, create a new deployment file, like `deploy.dynamic-store.yml` or `deploy.dev.dynamic-store.yml`. Example of file with region configuration:
 
@@ -199,22 +201,81 @@ docker:
 In this configuration, region is used for entities like services, endpoints, or applications. The `SPRYKER_DYNAMIC_STORE_MODE`  variable enables the dynamic multistore feature. Make sure store is not used in the new configuration to avoid deployment failures.
 
 
-3. Add the following configuration:
+#### Configure deployment recipe files
+
+
+If you have deployment hooks in the deployment file, you need to remove stores from the recipe files.
+
+Here's how a deployment files with hooks looks like deployment file:
+
+```yml
+SPRYKER_HOOK_BEFORE_DEPLOY: 'vendor/bin/install -r pre-deploy -vvv'
+SPRYKER_HOOK_AFTER_DEPLOY: 'true'
+SPRYKER_HOOK_INSTALL: 'vendor/bin/install -r production --no-ansi -vvv'
+SPRYKER_HOOK_DESTRUCTIVE_INSTALL: 'vendor/bin/install -r destructive --no-ansi -vvv'
+```
+And here's a recipe file with stores:
+
+```yml
+env:
+    NEW_RELIC_ENABLED: 0
+
+stores:
+    - DE
+    - AT
+
+sections:
+    .....
+```
+
+Remove the stores section and add a region to environment variables:
+
+```yml
+env:
+    NEW_RELIC_ENABLED: 0
+    SPRYKER_CURRENT_REGION: EU
+
+sections:
+    .....
+```
+
+### 2) Set up configuration
+
+Before the introduction of dynamic multistore, configuration was managed in `config/Shared/stores.php`. With dynamic multistore, configuration is managed in the database. `config/Shared/stores.php` and `config/Shared/default_store.php` are now obsolete.
+
+The default configuration is imported using data import modules, such as StoreDataImport, LocaleDataImport, CountryDataImport, and other feature-related imports, like CurrencyDataImport.
+
+Take the following steps to set up configuration.
+
+#### Define the region stores context by domain
+
+With dynamic multistore, you can define region or store using domains or headers. We recommend defining region using domains.
+
+{% info_block infoBox "Changing the domain name" %}
+
+We recommend making `de.mysprykershop.com` a mirror of `eu.mysprykershop.com` to preserve the availability of old links in search engines.
+
+{% endinfo_block %}
+
+
+#### Configure the application
+
+1. Add the following configuration:
 
 | CONFIGURATION        | SPECIFICATION | NAMESPACE |
 |----------------------|---------------| --- |
-| Default RabbitMQ connection: `config/Shared/config_default.php`. | Enables the connection for queues to be set dynamically. Use the `SPRYKER_CURRENT_REGION` environment variable to set the configuration for queues. |  |
+|  Default RabbitMQ connection configuration: `config/Shared/config_default.php`. | Enables the connection for queues to be set dynamically. Use the `SPRYKER_CURRENT_REGION` environment variable to set the configuration for queues. |  |
 | RabbitMqConfig::getQueuePools() | Configures queue pools for regions. | Pyz\Client\RabbitMq |
 | RabbitMqConfig::getDefaultLocaleCode() | Returns the default locale code. | Pyz\Client\RabbitMq |
 | RabbitMqConfig::getSynchronizationQueueConfiguration() | Adds `1StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE1` to configure the sync queue. | Pyz\Client\RabbitMq |
-| Setup cron jobs: `config/Zed/cronjobs/jobs.php`.  | Adjust all cron jobs to use the new configuration. |  |
+| Setup cron jobs: `config/Zed/cronjobs/jenkins.php`.  | Adjust all cron jobs to use the new configuration. |  |
 | StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE | Configures the sync queue name to be used for processing store messages. | Pyz\Zed\StoreStorage |
 
 
-
+2. Update the configuration:
 **config/Shared/config_default.php**
 
-Original code block:
+Original confiugration:
 ```php
 <?php
 
@@ -230,8 +291,7 @@ foreach ($rabbitConnections as $key => $connection) {
 }
 ```
 
-Update the prior code snippet to the following:
-
+Updated configuration:
 ```php
 $config[RabbitMqEnv::RABBITMQ_CONNECTIONS] = [];
 $connectionKeys = array_keys($rabbitConnections);
@@ -435,7 +495,7 @@ Make sure the `sync.storage.store` queue exists in RabbitMQ.
 
 
 
-### 2) Set up the database schema and transfer objects
+### 3) Set up the database schema and transfer objects
 
 1. Adjust the schema definition so entity change triggers events:
 
@@ -570,7 +630,7 @@ Make sure the following changes have been applied in transfer objects:
 {% endinfo_block %}
 
 
-### 3) Configure export to Storage
+### 4) Configure export to Storage
 
 1.  Set up publisher plugins and trigger plugins:
 
@@ -689,13 +749,29 @@ Example expected data fragment:
 
 {% endinfo_block %}
 
-### 4) Import data
+### 5) Import data
 
 Import locale, store, and country data:
 
 1.  Prepare your data according to your requirements using our demo data:
 
 Example of locales configuration for the DE store:
+
+| COLUMN     | REQUIRED | Data Type | Data Example | Data Explanation |
+|------------| --- | --- | --- | --- |
+|name        | ✓ | string | DE | Define store name. |
+
+**data/import/common/{REGION}/store.csv**
+```csv
+name
+DE
+AT
+
+```
+
+| Column     | REQUIRED | Data Type | Data Example | Data Explanation |
+|------------| --- | --- | --- | --- |
+|name        | ✓ |string | DE | Define store name. |
 
 **data/import/common/DE/locale_store.csv**
 ```csv
@@ -726,7 +802,7 @@ en_US,DE
 | store_name |✓ |string | DE | Store name. |
 
 
-Example of coutry-store configuration for the DE store:
+Example of country-store configuration for the DE store:
 
 **data/import/common/DE/country_store.csv**
 
@@ -906,7 +982,7 @@ Make sure the data for locale-store and country-store relationships have been ad
 
 {% endinfo_block %}
 
-### 5) Set up behavior
+### 6) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -1360,7 +1436,7 @@ Make sure that, in the database, the configured data has been added to the `spy_
 {% endinfo_block %}
 
 
-### 2) Set up configuration
+### 3) Set up configuration
 
 Add the following configuration to your project:
 
@@ -1405,7 +1481,7 @@ class RouterConfig extends SprykerRouterConfig
 }
 ```
 
-### 3) Set up widgets
+### 4) Set up widgets
 
 Register the following plugins to enable widgets:
 
@@ -1436,7 +1512,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-### 4) Set up behavior
+### 5) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 

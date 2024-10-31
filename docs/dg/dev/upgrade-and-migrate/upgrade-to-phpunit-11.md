@@ -40,7 +40,7 @@ To ensure compatibility and take advantage of the latest features, you need to u
 1. Update PHPUnit and Codeception packages using a single `composer update` command:
 
 ```bash
-composer update "phpunit/phpunit":"11.4.0" "codeception/codeception":"~5.1.2" "codeception/lib-innerbrowser":"^4.0.3" "codeception/module-webdriver":"^4.0.1" --with-dependencies
+composer update "phpunit/phpunit":"11.4.0" "codeception/codeception":"~5.1.0" "codeception/lib-innerbrowser":"^4.0.0" "codeception/module-webdriver":"^4.0.0" --with-dependencies
 ```
 
 {% info_block warningBox "Resolve Dependency Conflicts" %}

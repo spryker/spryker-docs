@@ -1230,6 +1230,8 @@ entries:
                 url: /docs/pbc/all/dynamic-multistore/base-shop/delete-stores.html
               - title: Import stores
                 url: /docs/pbc/all/dynamic-multistore/base-shop/import-stores.html
+                include_versions:
+                - "202410.0"  
 
           - title: Marketplace
             nested:

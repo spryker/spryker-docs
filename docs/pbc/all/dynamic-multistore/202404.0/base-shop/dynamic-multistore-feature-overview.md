@@ -1,17 +1,8 @@
 ---
 title: Dynamic Multistore feature overview
 description: Dynamic Multistore lets you create and manage multiple online stores from the Back Office.
-last_updated: Sep 25, 2024
+last_updated: July 31, 2023
 template: concept-topic-template
-related:
-   - title: Install Dynamic Multistore
-     link: docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
-   - title: Import minimum set of data for store
-     link: docs/pbc/all/dynamic-multistore/base-shop/import-stores.html
-   - title: Install the Dynamic Multistore Glue API
-     link: docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-the-dynamic-multistore-glue-api.html
-   - title: Install Dynamic Multistore + the Marketplace MerchantPortal Core feature
-     link: docs/pbc/all/dynamic-multistore/marketplace/install-dynamic-multistore-the-marketplace-merchant-portal-core.html    
 ---
 
 The *Dynamic Multistore* feature lets you create and manage multiple stores within the same region in the Back Office. It streamlines the setup and maintenance of distinct stores tailored to various customer segments, regions, or product categories.
@@ -94,57 +85,3 @@ Normal storefront APIs can be used to fetch data from stores using the Store HTT
 The following image shows the ability to call API endpoints with the exemplary "SECOND" store selected in the API call itself.
 
 ![storefront-api](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/storefront-api.png)
-
-## Adding stores using data import
-
-
-You can add a new store using data import or in the Back Office. Adding a store in the Back Office is easier and faster, but you have to add each store across all environments.
-
-Using data import, you can configure a new store once and deploy it across all environments. For instructions on importing stores, see [Import data](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#import-data).
-
-When you add a new store, to enable store-related entities for customers, you need to assign them to the store. Some of the store related entities:
-- Products
-- Categories
-- CMS entities
-- Prices
-
-To avoid manually assigning entities in the Back Office, you can assign them using data import. For more details, [Import stores](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/import-stores.html).
-
-
-## How Dynamic Multistore affects a project
-
-Dynamic Multistore enables the following changes to the project:
-
-EU and US regions are used as an example.
-
-EU region has two stores: DE and AT. US region has one store: US.
-
-- URLs for Storefront, Back Office, Merchant Portal and Glue API contain region instead of store name. For example–the URL of the Back Office is `https://backoffice.eu.mysprykershop.com` instead of `https://backoffice.de.mysprykershop.com`.
-
-- RabbitMQ virtual hosts contain region instead of store. For example–`eu-docker` instead of `de-docker`.
-
-![rabbitmq-virtual-hosts-non-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/rabbitmq-virtual-hosts-non-dms.png)
-
-![rabbitmq-virtual-hosts-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/rabbitmq-virtual-hosts-dms.png)
-
-- Jenkins job names contain region instead of store. For example–`EU_queue-worker-start` instead of `DE_queue-worker-start`.
-
-![jenkins-jobs-non-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/jenkins-jobs-non-dms.png)
-
-![jenkins-jobs-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/jenkins-jobs-dms.png)
-
-- Elasticsearch indexes contain store as a part of the index name for Dynamic Multistore enabled and disabled modes.
-
-![elasticsearch-indexes-non-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/elasticsearch-indexes-non-dms.png)
-
-![elasticsearch-indexes-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/elasticsearch-indexes-dms.png)
-
-- Redis keys contain store as a part of the key name for Dynamic Multistore enabled and disabled modes.
-
-- When Dynamic Multistore is enabled, customers can switch between available stores for a region. When a customer changes a store, it's set to the `_store` query parameter. Using the query parameter, the store is added to session under the `current_store` key. It's used for fetching store-related data.
-
-![storefront-store-switcher](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/storefront-store-switcher.png)
-
-## Performance
-
-The number of stores affects data import speed: the more stores you have, the slower data import is.

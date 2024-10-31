@@ -237,7 +237,7 @@ With dynamic multistore, you can define region or store using domains or headers
 
 {% info_block infoBox "Changing the domain name" %}
 
-We recommend making `de.mysprykershop.com` a mirror of `eu.mysprykershop.com` to preserve the availability of old links in search engines.
+To preserve the availability of old links in search engines, we recommend making `de.mysprykershop.com` a mirror of `eu.mysprykershop.com`.
 
 {% endinfo_block %}
 
@@ -252,14 +252,13 @@ We recommend making `de.mysprykershop.com` a mirror of `eu.mysprykershop.com` to
 | RabbitMqConfig::getQueuePools() | Configures queue pools for regions. | Pyz\Client\RabbitMq |
 | RabbitMqConfig::getDefaultLocaleCode() | Returns the default locale code. | Pyz\Client\RabbitMq |
 | RabbitMqConfig::getSynchronizationQueueConfiguration() | Adds `1StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE1` to configure the sync queue. | Pyz\Client\RabbitMq |
-| Setup cron jobs: `config/Zed/cronjobs/jenkins.php`.  | Adjust all cron jobs to use the new configuration. |  |
 | StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE | Configures the sync queue name to be used for processing store messages. | Pyz\Zed\StoreStorage |
 
 
 2. Update the configuration:
 **config/Shared/config_default.php**
 
-Original confiugration:
+Original configuration:
 ```php
 <?php
 
@@ -401,7 +400,7 @@ $allStores = array_keys($stores);
 ```
 
 
-3. Add the following code to the end of the jobs configuration file:
+3. Add the following to the end of the jobs configuration file:
 
 ```php
 
@@ -465,13 +464,14 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-{% info_block warningBox "Verification" %}
 
-Set up the queue infrastructure:
+5. Set up the queue infrastructure:
 
 ```bash
 vendor/bin/console queue:setup
 ```
+
+{% info_block warningBox "Verification" %}
 
 Make sure the `sync.storage.store` queue exists in RabbitMQ.
 
@@ -819,8 +819,8 @@ DE,"[{""application"": null, ""timezone"": ""Europe/Berlin""}]"
 
 Make sure the following applies:
 
-*  For each `store_name` entry in the imported csv files, a respective `name` entry has been added to the `spy_store` database table.
-*  For each `locale_name` entry in the imported csv files, a respective `locale_name` entry has been added to the `spy_locale` database table.
+*  For each `store_name` entry in the imported CSV files, a respective `name` entry has been added to the `spy_store` database table.
+*  For each `locale_name` entry in the imported CSV files, a respective `locale_name` entry has been added to the `spy_locale` database table.
 
 {% endinfo_block %}
 
@@ -869,7 +869,7 @@ class DataImportConfig extends SprykerDataImportConfig
 
 | PLUGIN | SPECIFICATION                                            | PREREQUISITES | NAMESPACE |
 | --- |----------------------------------------------------------| --- | --- |
-| StockDataImportPlugin | Imports Store. |  | \Spryker\Zed\StoreDataImport\Communication\Plugin\DataImport |
+| StoreDataImportPlugin | Imports stores. |  | \Spryker\Zed\StoreDataImport\Communication\Plugin\DataImport |
 | CountryStoreDataImportPlugin | Imports country to store relations. |  | \Spryker\Zed\CountryDataImport\Communication\Plugin\DataImport |
 | LocaleStoreDataImportPlugin | Imports locale to store relations. |  | \Spryker\Zed\LocaleDataImport\Communication\Plugin\DataImport |
 | DefaultLocaleStoreDataImportPlugin | Imports default locale to store relations. |  | \Spryker\Zed\LocaleDataImport\Communication\Plugin\DataImport |
@@ -906,7 +906,8 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 
 4. Enable behaviors by registering the console commands:
 
-**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+<details>
+  <summary>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -949,6 +950,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 }
 ```
+
+</details>
 
 
 5. Import data:
@@ -1348,7 +1351,6 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Steps to verify:
 - Make sure the locale selection fields are displayed on the Store form.
 - Make sure the country selection fields are displayed on the Store form.
 - Make sure the rendered locale tabs and tables are displayed on the Store form.
@@ -1400,8 +1402,6 @@ Make sure the following modules have been installed:
 1. Append the glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
-
-
 ```csv
 store_widget.switcher.store,Store:,en_US
 store_widget.switcher.store,Shop:,de_DE
@@ -1422,7 +1422,7 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 ### 3) Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION                       | SPECIFICATION | NAMESPACE |
 |-------------------------------------| --- | --- |
@@ -1530,7 +1530,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ## Launch and set up environment
 
-Rebuild the application with assets and activete new endpoints:
+Rebuild the application with assets and activate new endpoints:
 
 ```bash
 docker/sdk boot && docker/sdk up --assets

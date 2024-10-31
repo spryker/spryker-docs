@@ -182,7 +182,7 @@ dummyPaymentCreditCard,DE
 dummyMarketplacePaymentInvoice,DE
 ```
 
-## Enable new imports
+## Enable imports and import data
 
 1. Add entities to the following import action files:
 - `data/import/common/commerce_setup_import_config_{REGION\STORE}.yml`
@@ -229,9 +229,7 @@ data_import:
 ```
 
 
-## Import data
-
-Run the following command to import the data:
+3. Import data:
 
 ```bash
 vendor/bin/console data:import

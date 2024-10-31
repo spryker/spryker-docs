@@ -137,4 +137,4 @@ In this example, EU region has DE and AT stores. US region has a US store. Dynam
 
 ## Data import performance
 
-The number of stores affects data import speed: the more stores you have, the slower data import is.
+The number of stores affects data import speed: the more stores you have, the slower the data import. Importing products for 40 stores takes approximately 5 times longer than for 8 stores.

@@ -13,24 +13,24 @@ end
 require 'html-proofer'
 
 # Method to run HTMLProofer with retries
-def run_htmlproofer_with_retry(directory, options, max_retries = 3, delay = 5)
+def run_htmlproofer_with_retry(directory, options, max_tries = 3, delay = 5)
   options[:typhoeus] ||= {}
   options[:typhoeus][:timeout] = 60
   options[:typhoeus][:headers] = {
     "User-Agent" => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
   }
 
-  retries = max_retries
+  retries = max_tries
   begin
     HTMLProofer.check_directory(directory, options).run
   rescue SystemExit => e
     retries -= 1
-    if retries > 0
-      puts "Retrying... (#{max_retries - retries}/#{max_retries} attempts)"
+    if retries >= 0
+      puts "Retrying... (#{max_tries - retries}/#{max_tries} attempts)"
       sleep(delay) # Wait before retrying
       retry
     else
-      puts "HTMLProofer failed after #{max_retries} retries."
+      puts "HTMLProofer failed after #{max_tries} retries."
       raise e
     end
   end

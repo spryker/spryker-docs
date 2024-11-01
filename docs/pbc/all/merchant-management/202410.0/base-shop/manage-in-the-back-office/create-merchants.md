@@ -64,5 +64,4 @@ Review the [reference information](#reference-information-create-a-merchant) bef
 ## Next steps
 
 [Edit merchants](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchants.html)
-[View merchants](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/view-merchants.html)
 [Create merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html)

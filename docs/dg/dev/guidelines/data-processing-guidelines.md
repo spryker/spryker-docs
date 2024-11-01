@@ -79,7 +79,7 @@ We recommend collecting import statistics and logs to identify new reasons for d
 
 ### Common table expressions
 
-[Common Table Expressions, or CTE](https://www.postgresqltutorial.com/postgresql-cte/), is a preferable way to write operations.
+[Common Table Expressions, or CTE](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-cte/), is a preferable way to write operations.
 
 CTE requires additional qualification and could look complex from the first view. So by default Spryker Products are configured with per-entity Propel data importer and P&S writers. To enable the out-of-the-box CTE writers, you need to configure them in Data Import Factory. When a project brings its own data structures or changes the existing ones, CTE provided by Spryker should be enhanced with new tables and fields.
 

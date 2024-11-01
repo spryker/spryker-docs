@@ -28,6 +28,8 @@ Spryker Cloud Commerce OS supports the following version control systems:
 * [Bitbucket](https://bitbucket.org/)
 * [GitLab](https://gitlab.com/)
 
+Spryker Cloud also offers support for all the Git repositories that support AWS CodeCommit push mirroring. Similar to the GitLab setup, you can configure all the commits from your version control system to be mirrored to Spryker Cloud and consumed by our pipelines to build and deploy your system.
+
 We recommend mapping your branches to environments as follows:
 
 | Environment | Branch |
@@ -55,7 +57,7 @@ We connect the code repository shortly after you provide the details.
 
 ## Connect a Bitbucket code repository
 
-Currently, only GitHub is integrated into AWS CodeBuild. To use a Bitbucket code repository, configure [AWS CodeStar](https://docs.aws.amazon.com/codestar/latest/userguide/welcome.html) by following the steps below.
+Currently, only GitHub is integrated into AWS CodeBuild. To use a Bitbucket code repository, configure AWS CodeStar by following the steps below.
 
 
 ### Prerequisites

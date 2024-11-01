@@ -11,11 +11,11 @@ Install the required features:
 | NAME | VERSION | INSTALLATION GUIDE |
 | --------------- | ------- | ---------- |
 | Spryker Core         | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Product Options      | {{page.version}} | [Product Options feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/903151851/EMPTY+Product+Options+Feature+Integration+-+ongoing) |  
+| Product Options      | {{page.version}} | [Install the Product Options feature](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/903151851/EMPTY+Product+Options+Feature+Integration+-+ongoing) |  
 | Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/marketplace-product-options:"{{page.version}}" --update-with-dependencies
@@ -250,7 +250,7 @@ Enable the following behaviors by registering the plugins:
 
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/ProductOption/ProductOptionDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/ProductOption/ProductOptionDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -322,7 +322,7 @@ class ProductOptionStorageDependencyProvider extends SprykerProductOptionStorage
 ```
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -382,5 +382,5 @@ Make sure the following is true:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
-| Marketplace Product Options + Cart | | [Marketplace Product Options + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-cart-feature-integration.html) |
-| Marketplace Product Options + Checkout | | [Marketplace Product Options + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-checkout-feature-integration.html) |
+| Marketplace Product Options + Cart | | [Install the Marketplace Product Options + Cart feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-cart-feature.html) |
+| Marketplace Product Options + Checkout | | [Install the Marketplace Product Options + Checkout feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-checkout-feature.html) |

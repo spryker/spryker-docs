@@ -11,9 +11,9 @@ Install the required features:
 | Comment | {{page.version}} |
 | Order Management | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/comment-sales-connector:"^1.0.0" --update-with-dependencies
@@ -21,7 +21,7 @@ composer require spryker/comment-sales-connector:"^1.0.0" --update-with-dependen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -69,7 +69,7 @@ Make sure that the Order detail page in Zed contains a block with comments.
 
 ### 3) Set up transfer objects
 
-Run the following commands to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -77,7 +77,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |

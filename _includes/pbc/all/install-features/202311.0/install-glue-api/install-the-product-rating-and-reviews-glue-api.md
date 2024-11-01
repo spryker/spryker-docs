@@ -16,7 +16,7 @@ To start feature integration, integrate the required features and Glue APIs:
 | Spryker Core Glue API | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 | Product Rating & Reviews  | {{page.version}} | [Install the Product Rating and Reviews feature](/docs/pbc/all/ratings-reviews/{{page.version}}/install-and-upgrade/install-the-product-rating-and-reviews-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker/product-reviews-rest-api:"^1.1.0" --update-with-dependencies
@@ -115,7 +115,7 @@ Make sure that the following endpoints are available:
 * `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews`
 
 <details>
-<summary markdown='span'>Example</summary>
+<summary>Example</summary>
 
 ```json
 {
@@ -198,7 +198,7 @@ Make sure that the following endpoints are available:
 * `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews/{% raw %}{{{% endraw %}review_id{% raw %}}}{% endraw %}`
 
 <details>
-<summary markdown='span'>Example</summary>
+<summary>Example</summary>
 
 ```json
 {
@@ -313,7 +313,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
 3. Make sure that `averageRating` and `reviewCount` attributes are present in concrete-products and abstract-products resources attributes section.
 
 <details>
-<summary markdown='span'>Example</summary>
+<summary>Example</summary>
 
 ```json
 {
@@ -467,7 +467,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
 5. Make sure that the response contains `product-reviews` as a relationship and `product-reviews` data included.
 
 <details>
-<summary markdown='span'>Example</summary>
+<summary>Example</summary>
 
 ```json
 {

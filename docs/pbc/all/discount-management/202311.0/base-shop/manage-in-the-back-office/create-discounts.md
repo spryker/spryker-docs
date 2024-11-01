@@ -183,7 +183,7 @@ This section contains additional information for defining decision rules.
 
 
 | ATTRIBUTE | VALUE TYPE | DESCRIPTION |
-|-|-|-|-|
+|-|-|-|
 |calendar-week|Number| The number of a week in a year: 1-52. |
 |day-of-week|Number| The day of week: 1-7. |
 |grand-total| Decimal number | The sum of all totals. |

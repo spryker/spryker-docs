@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductOptionExporter
+title: Upgrade the ProductOptionExporter module
 description: Use the guide to learn how to update the ProductOptionExporter module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -32,15 +32,15 @@ redirect_from:
   - /docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoption-moduleexporter.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptionexporter-module.html
 related:
-  - title: Migration guide - Product
+  - title: Upgrade the Product module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
-  - title: Migration guide - ProductLabel
+  - title: Upgrade the ProductLabel module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabel-module.html
-  - title: Migration guide - ProductBundle
+  - title: Upgrade the ProductBundle module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html
-  - title: Migration guide - ProductLabelGui
+  - title: Upgrade the ProductLabelGui module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html
-  - title: Migration guide - ProductOptionDiscountConnector
+  - title: Upgrade the ProductOptionDiscountConnector module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptiondiscountconnector-module.html
 ---
 

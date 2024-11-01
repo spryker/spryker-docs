@@ -7,32 +7,27 @@ entries:
     - title: Releases
       url: /docs/about/all/releases/product-and-code-releases.html
       nested:
+      - title: Release notes 202410.0
+        url: /docs/about/all/releases/release-notes-202410.0.html
+      - title: Security release notes 202409.0
+        url: /docs/about/all/releases/security-release-notes-202409.0.html
+      - title: Release notes 202404.0
+        url: /docs/about/all/releases/release-notes-202404.0.html
+      - title: Security release notes 202403.0
+        url: /docs/about/all/releases/security-release-notes-202403.0.html
       - title: Security release notes 202312.0
         url: /docs/about/all/releases/security-release-notes-202312.0.html
       - title: Release notes 202311.0
         url: /docs/about/all/releases/release-notes-202311.0.html
       - title: Security release notes 202309.0
         url: /docs/about/all/releases/security-release-notes-202309.0.html
-      - title: Release notes 202307.0
-        url: /docs/about/all/releases/release-notes-202307.0/release-notes-202307.0.html
-        nested:
-        - title: Security release notes 202307.0
-          url: /docs/about/all/releases/release-notes-202307.0/security-release-notes-202307.0.html
+
       - title: Security release notes 202306.0
         url: /docs/about/all/releases/security-release-notes-202306.0.html
       - title: Security release notes 202304.0
         url: /docs/about/all/releases/security-release-notes-202304.0.html
       - title: Security release notes 202302.0
         url: /docs/about/all/releases/security-release-notes-202302.0.html
-      - title: Release notes 202212.0
-        url: /docs/about/all/releases/release-notes-202212.0/release-notes-202212.0.html
-        nested:
-        - title: Patch releases 202212.0
-          url: /docs/about/all/releases/release-notes-202212.0/patch-release-notes-202212.0.html
-        - title: Security release notes 202212.0
-          url: /docs/about/all/releases/release-notes-202212.0/security-release-notes-202212.0.html
-      - title: Release notes 202211.0
-        url: /docs/about/all/releases/release-notes-202211.0.html
 
     - title: Security audit reports
       nested:
@@ -58,8 +53,8 @@ entries:
         url: /docs/about/all/support/support-ticket-statuses.html
       - title: Handling security issues
         url: /docs/about/all/support/reporting-and-handling-security-issues.html
-      - title: Guidelines for GDPR compliance
-        url: /docs/about/all/support/guidelines-for-gdpr-compliance.html
+      - title: GDPR compliance guidelines
+        url: /docs/about/all/support/gdpr-compliance-guidelines.html
       - title: Getting the most out of Spryker Support
         url: /docs/about/all/support/getting-the-most-out-of-spryker-support.html
       - title: Understand SLAs
@@ -103,8 +98,6 @@ entries:
     - title: About the docs
       url: /docs/about/all/about-the-docs/about-spryker-docs.html
       nested:
-      - title: Docs updates
-        url: /docs/about/all/about-the-docs/docs-updates.html
       - title: Contribute
         url: /docs/about/all/about-the-docs/contribute-to-the-docs/contribute-to-the-docs.html
         nested:
@@ -114,6 +107,8 @@ entries:
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-locally.html
           - title: Add and edit diagrams
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-and-edit-diagrams-in-the-docs.html
+          - title: Add images and other media
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-images-and-other-media-to-the-docs.html
           - title: Report issues
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/report-docs-issues.html
           - title: Review pull requests
@@ -122,6 +117,8 @@ entries:
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-global-sections-to-the-docs.html
           - title: Install recommended VS Code extensions
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/install-recommended-vs-code-extensions.html
+          - title: Merge pull requests
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/merge-docs-pull-requests.html
 
       - title: Style guide
         url: /docs/about/all/about-the-docs/style-guide/spryker-docs-style-guide.html

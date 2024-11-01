@@ -14,12 +14,12 @@ Install the required features:
 |--------------------------|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core             | {{page.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                         |
 | Marketplace Product      | {{page.version}}   | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)           |
-| Product Approval Process | {{page.version}}   | [Product Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-approval-process-feature-integration.html) |
+| Product Approval Process | {{page.version}}   | [Install the Product Approval Process feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html) |
 
 
 ### 1) Install the required modules using Сomposer
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/marketplace-product-approval-process:"{{page.version}}" --update-with-dependencies

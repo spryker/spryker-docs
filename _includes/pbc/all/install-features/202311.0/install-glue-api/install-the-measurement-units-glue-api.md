@@ -9,7 +9,7 @@ To start the feature integration, overview and install the necessary features:
 | NAME | VERSION | LINK |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)  |
-| Product Measurement Units | {{page.version}} | [Product Measurement Units feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
+| Product Measurement Units | {{page.version}} | [Install the Product Measurement Units feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
 
 ## 1)  Install the required modules using Composer
 
@@ -106,8 +106,8 @@ Activate the following plugins:
 | SalesUnitsByCartItemResourceRelationshipPlugin | Adds the `sales-units` resource as relationship of the `item` resource. | None | Spryker\Glue\ProductMeasurementUnitsApi\Plugin\GlueApplication |
 
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -208,8 +208,8 @@ Make sure that the `SalesUnitsResourceRoutePlugin` and `ProductMeasurementUnitsB
 
 2. You should get a valid response, similar to the following:
 
-<details open>
-<summary markdown='span'>Response sample</summary>
+<details>
+<summary>Response sample</summary>
 
 ```json
 {
@@ -269,8 +269,8 @@ Make sure that the `ProductMeasurementUnitsByProductConcreteResourceRelationship
 
 2. You should get a valid response, similar to the following:
 
-<details open>
-<summary markdown='span'>Response sample</summary>
+<details>
+<summary>Response sample</summary>
 
 ```json
 {
@@ -415,8 +415,8 @@ Make sure that the `SalesUnitsByCartItemResourceRelationshipPlugin` relationship
 
 2. You should get a valid response, similar to the following:
 
-<details open>
-<summary markdown='span'>Response sample</summary>
+<details>
+<summary>Response sample</summary>
 
 ```json
 {

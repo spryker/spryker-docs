@@ -28,7 +28,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-To access data rapidly, the Shop App client uses Redis as a key-value storage and Elasticsearch as a search engine for data sources. The client does not have direct access to the [SQL database](/docs/dg/dev/backend-development/zed/persistence-layer/persistence-layer.html) used by the back end. Therefore, to ensure that client data sources are always up-to-date, all changes made in the back end must be propagated to the frontend data sources. To achieve this, Spryker implements a two-step process called Publish and Synchronize:
+To access data rapidly, the Shop App client uses Redis as a key-value storage and Elasticsearch as a search engine for data sources. The client does not have direct access to the [SQL database](/docs/dg/dev/backend-development/zed/persistence-layer/persistence-layer.html) used by the back end. Therefore, to ensure that client data sources are always up-to-date, all changes made in the back end must be propagated to the frontend data sources. To achieve this, Spryker implements a two-step process called Publish and Synchronize (aka P&S):
 
 1. Publish:
    1. An event that describes a change is generated.
@@ -177,3 +177,130 @@ When a change happens in the mirror table, its *synchronization behavior* sends 
 	}
 }
 ```
+
+#### Direct synchronize
+
+To optimize performance and flexibility, you can enable direct synchronization on the project level. This approach uses in-memory storage to retain all synchronization events instead of sending them to the queue. With this setup, you can control if entities are synchronized directly or through the traditional queue-based method.
+
+To enable direct synchronization, do the following:
+1. Add `DirectSynchronizationConsolePlugin` to `ConsoleDependencyProvider::getEventSubscriber()`.
+2. Enable the `SynchronizationBehaviorConfig::isDirectSynchronizationEnabled()` configuration.
+
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\Synchronization\Communication\Plugin\Console\DirectSynchronizationConsolePlugin;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Symfony\Component\EventDispatcher\EventSubscriberInterface>
+     */
+    public function getEventSubscriber(Container $container): array
+    {
+        return [
+            new DirectSynchronizationConsolePlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SynchronizationBehavior;
+
+use Spryker\Zed\SynchronizationBehavior\SynchronizationBehaviorConfig as SprykerSynchronizationBehaviorConfig;
+
+class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
+{
+    public function isDirectSynchronizationEnabled(): bool
+    {
+        return true;
+    }
+}
+```
+
+3. Optional: This configuration enables direct synchronization for all entities with synchronization behavior. If needed, you can disable direct synchronization for specific entities by adding an additional parameter in the Propel schema:
+
+```xml
+<table name="spy_table_storage" identifierQuoting="true">
+    <behavior name="synchronization">
+        <parameter name="direct_sync_disabled"/>
+    </behavior>
+</table>
+```
+
+#### Environment limitations related to DMS
+
+When Dynamic Multi-Store (DMS) is disabled, the Direct Sync feature has the following limitations:  
+- Single-store configuration: The feature is only supported for configurations with a single store.
+- Multi-store configuration with namespace consistency: For configurations with multiple stores, all stores must use the same Storage and Search namespaces.
+
+Example configuration for multiple stores:
+
+```yaml
+stores:
+    DE:
+        services:
+            broker:
+                namespace: de-docker
+            key_value_store:
+                namespace: 1
+            search:
+                namespace: search
+    AT:
+        services:
+            broker:
+                namespace: at-docker
+            key_value_store:
+                namespace: 1
+            search:
+                namespace: search
+```
+
+When DMS is enabled, there're no environment limitations for the Direct Sync feature.
+
+
+### Data Architecture
+
+P&S plays a major role in data denormalization and distribution to Spryker storefronts and API. Denormalization procedure aims for preparing data in the form it will be consumed by data clients. Distribution procedure aims to distribute the data closer to the end users, so that they feel like accessing a local storage.
+
+{% info_block infoBox "Project Example"%}
+
+Some of Spryker partners applied P&S features to distribute data over picking devices (barcode scanners) in a warehouse. The picking devices accessed the Spryker catalog as their local one, enabling them to properly function with low quality or missing network access.
+
+In other cases, P&S enabled customer projects to keep their main backend systems with customer data in one region (eg Germany), while distributing local catalogs over the world. This enabled them on one hand to keep customer data under data privacy constraints, and on other hand their buyers in Brazil can browse their catalogs (as "local") with blazing fast response times.
+
+P&S inspires intelligent solutions and smart architecture designs!
+{% endinfo_block %}
+
+When designing a solution using P&S we need to consider the following concerns in our applications
+- eventual consistency for data available in storefronts
+- horizontal scalability of publish process (native) and sync process (requires development)
+- data object limitations
+
+#### Data Object Limitations
+
+In order to build a healthy commerce system, we need to make sure that P&S process is healthy at all times. And first we start with healthy NFRs for P&S.
+- storage sync message size should not be over 256Kb - this prevents us from problems in data processing, but even more important in data comsumption, when an API consumer might experience failure when reviceing an aggregated object of a high size.
+- do not exceed the request limitations for the storage (eg. Redis) and search (eg. OpenSearch) systems, while sending data in sync process
+
+{% info_block infoBox "Are these really limitations?"%}
+
+As every non-functional requirement (NFR) each of these limitations might be changed and adjusted to the project needs.
+However that might require an additional implementation or refactorring of Spryker OOTB functionallities.
+
+For examples if your business requirements include sending objects above 10MB via API, which is not typical for e-commerce projects, that is still possible with Spryker. However it might require a review of the business logic attached to the API endpoint, and be adjusted to the new requirements. In this case the default requirement of 256KB for a sync message size is not applicable anymore.
+
+{% endinfo_block %}

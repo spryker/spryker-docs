@@ -11,9 +11,9 @@ Install the required features:
 | Spryker Core | {{page.version}} |
 | Order Management | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/return-management:"{{page.version}}" spryker/barcode:"^1.1.1" --update-with-dependencies
@@ -246,7 +246,7 @@ Make sure that the following changes have been applied in the database:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -292,7 +292,7 @@ return.return_reasons.no_longer_needed.name,No longer needed,en_US
 return.return_reasons.no_longer_needed.name,Nicht mehr benötigt,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -300,7 +300,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -760,15 +760,15 @@ Follow the steps below to install the feature front end.
 
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration step.
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/return-management:"{{page.version}}" spryker-shop/barcode-widget:"^1.0.0" --update-with-dependencies
@@ -791,7 +791,7 @@ Add translations as follows:
 
 1. Append glossary according to your configuration:
 
-<details open><summary markdown='span'>data/import/common/common/glossary.csv</summary>
+<details><summary>data/import/common/common/glossary.csv</summary>
 
 ```yaml
 customer.order.remunerationTotal,Remuneration Total,en_US

@@ -1,5 +1,13 @@
 task "assets:precompile" do
-  exec("jekyll build --config=_config.yml,_config_production.yml")
+  deploy_env = ENV['DEPLOY_ENV'] || 'production'
+
+  if deploy_env == 'production'
+    puts "Running Production Build"
+    exec("jekyll build --config=_config.yml,_config_production.yml")
+  else
+    puts "Running Staging Build"
+    exec("jekyll build --config=_config.yml,_config_staging.yml")
+  end
 end
 
 require 'html-proofer'
@@ -115,12 +123,9 @@ task :check_pbc do
     /docs\/fes\/.+/,
     /docs\/acp\/.+/,
     /docs\/dg\/.+/,
-    /docs\/pbc\/\w+\/[\w-]+\/202204\.0\/.+/,
-    /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202307\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202403\.0\/.+/,
-    /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/,
-    /docs\/pbc\/\w+\/[\w-]+\/202404\.0\/.+/
+    /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -136,7 +141,8 @@ task :check_dg do
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202212\.0\/.+/,
-    /docs\/dg\/\w+\/[\w-]+\/202307\.0\/.+/
+    /docs\/dg\/\w+\/[\w-]+\/202307\.0\/.+/,
+    /docs\/dg\/\w+\/[\w-]+\/202411\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

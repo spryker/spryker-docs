@@ -156,7 +156,7 @@ class AuthenticationDependencyProvider extends SprykerAuthenticationDependencyPr
 ```
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.****php</summary>
+<summary>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.****php</summary>
 
 ```php
 <?php
@@ -206,7 +206,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 </details>
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php</summary>
+<summary>src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -306,7 +306,7 @@ class AuthenticationDependencyProvider extends SprykerAuthenticationDependencyPr
 ```
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php

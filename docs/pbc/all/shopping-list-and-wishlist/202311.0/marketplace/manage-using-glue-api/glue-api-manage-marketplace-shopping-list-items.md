@@ -13,8 +13,8 @@ This endpoint allows managing marketplace shopping list items.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
-* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
+* [Install the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 * [Install the Marketplace Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html)
 
 ## Add items to a shopping list
@@ -42,7 +42,7 @@ To add items to a shopping list, send the request:
 
 
 <details>
-<summary markdown='span'>Request sample: add items to the shopping list</summary>
+<summary>Request sample: add items to the shopping list</summary>
 
 `POST https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items`
 
@@ -61,7 +61,7 @@ To add items to a shopping list, send the request:
 
 
 <details>
-<summary markdown='span'>Request sample: add items to the shopping list, and include information about the concrete products</summary>
+<summary>Request sample: add items to the shopping list, and include information about the concrete products</summary>
 
 `POST https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items?include=concrete-products`
 
@@ -80,7 +80,7 @@ To add items to a shopping list, send the request:
 
 
 <details>
-<summary markdown='span'>Request sample: add marketplace products to the shopping list</summary>
+<summary>Request sample: add marketplace products to the shopping list</summary>
 
 `POST https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items?include=shopping-list-items`
 
@@ -99,7 +99,7 @@ To add items to a shopping list, send the request:
 
 
 <details>
-<summary markdown='span'>Request sample: add product offers to the shopping list</summary>
+<summary>Request sample: add product offers to the shopping list</summary>
 
 `POST https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items?include=shopping-list-items`
 
@@ -127,7 +127,7 @@ To add items to a shopping list, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: add items to the shopping list</summary>
+<summary>Response sample: add items to the shopping list</summary>
 
 ```json
   {
@@ -147,7 +147,7 @@ To add items to a shopping list, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: add items to the shopping list, and include information about the concrete products</summary>
+<summary>Response sample: add items to the shopping list, and include information about the concrete products</summary>
 
 ```json
     {
@@ -218,7 +218,7 @@ To add items to a shopping list, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: add marketplace products to the shopping list</summary>
+<summary>Response sample: add marketplace products to the shopping list</summary>
 
 ```json
 {
@@ -240,7 +240,7 @@ To add items to a shopping list, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: add product offers to the shopping list</summary>
+<summary>Response sample: add product offers to the shopping list</summary>
 
 ```json
 {
@@ -270,7 +270,7 @@ To add items to a shopping list, send the request:
 | productOfferReference | String | Unique identifier of the product offer.   |
 | merchantReference | String | Unique identifier of the merchant.   |
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
 
 ## Change item quantity in a shopping list
@@ -297,7 +297,7 @@ To change the item quantity in a shopping list, send the request:
 | include | Adds resource relationships to the request. | concrete-products|
 
 <details>
-<summary markdown='span'>Request sample: change the quantity of the items in the shopping list</summary>
+<summary>Request sample: change the quantity of the items in the shopping list</summary>
 
 `PATCH https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08`
 
@@ -315,7 +315,7 @@ To change the item quantity in a shopping list, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: change the quantity of the items in the shopping list, and include concrete products</summary>
+<summary>Request sample: change the quantity of the items in the shopping list, and include concrete products</summary>
 
 `PATCH https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08?include=concrete-products`
 
@@ -333,7 +333,7 @@ To change the item quantity in a shopping list, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: change the quantity of marketplace products in the shopping list</summary>
+<summary>Request sample: change the quantity of marketplace products in the shopping list</summary>
 
 `PATCH https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/29f1d940-00b6-5492-abf3-d2b5ff15f0b2`
 
@@ -351,7 +351,7 @@ To change the item quantity in a shopping list, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: change the quantity of product offers in the shopping list</summary>
+<summary>Request sample: change the quantity of product offers in the shopping list</summary>
 
 `PATCH https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/946451d1-3c40-559e-95c7-ebda2d12bebf`
 
@@ -376,7 +376,7 @@ To change the item quantity in a shopping list, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: change the quantity of the items in the shopping list</summary>
+<summary>Response sample: change the quantity of the items in the shopping list</summary>
 
 ```json
     {
@@ -396,7 +396,7 @@ To change the item quantity in a shopping list, send the request:
 </details>     
 
 <details>
-<summary markdown='span'>Response sample: change the quantity of the items in the shopping list, and include concrete products</summary>
+<summary>Response sample: change the quantity of the items in the shopping list, and include concrete products</summary>
 
 ```json
 {
@@ -462,7 +462,7 @@ To change the item quantity in a shopping list, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: change the quantity of marketplace products in the shopping list</summary>
+<summary>Response sample: change the quantity of marketplace products in the shopping list</summary>
 
 ```json
 {
@@ -484,7 +484,7 @@ To change the item quantity in a shopping list, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: change the quantity of product offers in the shopping list</summary>
+<summary>Response sample: change the quantity of product offers in the shopping list</summary>
 
 ```json
 {
@@ -505,7 +505,7 @@ To change the item quantity in a shopping list, send the request:
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
 
 For response attributes, see [Add items to a shopping list](#shopping-list-items-response-attributes).

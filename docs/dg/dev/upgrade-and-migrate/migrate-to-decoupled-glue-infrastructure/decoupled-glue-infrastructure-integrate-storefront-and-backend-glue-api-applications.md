@@ -22,11 +22,11 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Glue Application | {{page.version}} | [Glue API - Glue Application feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Glue Application | {{page.version}} | [Glue API - Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/glue-storefront-api-application:"^1.0.0" spryker/glue-backend-api-application:"^1.0.0" --update-with-dependencies
@@ -326,8 +326,8 @@ Enable the following behaviors by registering the plugins:
 | BackendRouterProviderPlugin | Gets route collection from current Glue Backend API Application for route debug console command. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
 | ControllerCacheCollectorPlugin | Returns controllers configuration for GlueStorefrontApiApplication/GlueBackendApiApplication applications. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\GlueApplication and Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/****GlueApplicationDependencyProvider****.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/****GlueApplicationDependencyProvider****.php</summary>
 
 ```php
 <?php
@@ -454,8 +454,8 @@ If the console commands are setup correctly, the following commands are availabl
 * `vendor/bin/glue router:debug [application_name]`
 * `vendor/bin/glue api:router:cache:warm-up [application_name]`
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -551,8 +551,8 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 ```
 </details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

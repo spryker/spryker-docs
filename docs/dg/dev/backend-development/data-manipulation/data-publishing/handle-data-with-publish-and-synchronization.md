@@ -171,7 +171,7 @@ Do the following:
 1. Create a writer plugin that handles the creation and changes of the `spy_hello_world_message` entity.  
 
 <details>
-<summary markdown='span'>\Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher\HelloWorldWritePublisherPlugin</summary>
+<summary>\Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher\HelloWorldWritePublisherPlugin</summary>
 
 ```php
 <?php
@@ -225,7 +225,7 @@ class HelloWorldWritePublisherPlugin extends AbstractPlugin implements Publisher
 2. Create a plugin that handles the deletion of the `spy_hello_world_message` entity.
 
 <details>
-<summary markdown='span'>\Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher\HelloWorldDeletePublisherPlugin</summary>
+<summary>\Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher\HelloWorldDeletePublisherPlugin</summary>
 
 ```php
 <?php
@@ -276,7 +276,7 @@ class HelloWorldDeletePublisherPlugin extends AbstractPlugin implements Publishe
 
 </details>
 
-1. Create a publish queue in which, during the publishing process, an event or multiple events are posted.
+3. Create a publish queue in which, during the publishing process, an event or multiple events are posted.
 
 ```php
 <?php
@@ -1225,7 +1225,7 @@ interface MessageStorageReaderInterface
     public function getMessageById(int $idMessage): HelloWorldStorageTransfer;
 }
 ```
-8. Add the `Pyz\Client\HelloWorldStorage\MessageStorageReader.php` class.
+8. Add the `Pyz\Client\HelloWorldStorage\Reader\MessageStorageReader.php` class.
 
 ```php
 <?php

@@ -10,8 +10,8 @@ Install the required features:
 | Product | 201903.0 |Feature API |
 | Tax | 201903.0 | |
 
-### 1) Install the required modules using Composer
-Run the following command(s) to install the required modules:
+### 1) Install the required modules
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/product-tax-sets-rest-api:"^1.0.6" spryker/products-product-tax-sets-resource-relationship:"^1.0.0" --update-with-dependencies
@@ -26,7 +26,7 @@ Make sure that the following modules have been installed:
 |`ProductsProductTaxSetsResourceRelationship`  | `vendor/spryker/products-product-tax-sets-resource-relationship` |
 </div></section>
 
-### 2) Set up Database Schema and Transfer Objects
+### 2) Set up database schema and transfer objects
 Run the following command to apply database changes and generate entity and transfer changes:
 
 ```bash
@@ -44,7 +44,7 @@ Make sure that the following changes have been applied by checking your database
 </div></section>
 
 <section contenteditable="false" class="warningBox"><div class="content">
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
@@ -74,8 +74,8 @@ Activate the following plugin:
 | `ProductTaxSetsResourceRoutePlugin` | Registers product tax resource. | None | `Spryker\Glue\ProductTaxSetsRestApi\Plugin` |
 | `ProductsProductTaxSetsResourceRelationshipPlugin` | Adds product tax sets resource as a relationship to abstract product resource. | None | `Spryker\Glue\ProductsProductTaxSetsResourceRelationship\Plugin` |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

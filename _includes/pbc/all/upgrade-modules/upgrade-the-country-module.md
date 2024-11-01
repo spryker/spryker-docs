@@ -1,6 +1,10 @@
 This document describes how to upgrade the Country module.
 
-## Upgrading from version 3.* to version 4.0.0
+## Prerequisites
+
+[Upgrade to PHP 8.2](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html)
+
+## Upgrade from version 3.* to version 4.0.0
 
 {% info_block warningBox %}
 

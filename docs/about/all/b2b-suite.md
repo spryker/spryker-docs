@@ -15,18 +15,18 @@ related:
 The Spryker B2B Suite is a collection of ready-to-use B2B-specific features:
 
 <details>
-<summary markdown='span'>B2B feature list</summary>
+<summary>B2B feature list</summary>
 
-- [Configurable Product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/configurable-product-feature-overview/configurable-product-feature-overview.html)
+- [Configurable Product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html)
 - [Return Management](/docs/pbc/all/return-management/{{site.version}}/marketplace/marketplace-return-management-feature-overview.html)
 - [Configurable Bundle](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html)
 - [Comments](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/comments-feature-overview.html)
 - [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/persistent-cart-sharing-feature-overview.html)
 - [Resource Sharing](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/resource-sharing-feature-overview.html)
-- [Quotation Process](/docs/scos/user/features/{{site.version}}/quotation-process-feature-overview.html)
+- [Quotation Process](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html)
 - [Scheduled Prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/scheduled-prices-feature-overview.html)
 - [Approval process](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/approval-process-feature-overview.html)
-- [Availability Notification](/docs/scos/user/features/{{site.version}}/availability-notification-feature-overview.html)
+- [Availability Notification](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/availability-notification-feature-overview.html)
 - [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
 - [Customer Access](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/customer-access-feature-overview.html)
 - [Company Account](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/company-account-feature-overview/company-account-feature-overview.html)
@@ -35,20 +35,20 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features:
 - [Reclamations](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/reclamations-feature-overview.html)
 - [State Machine](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html)
 - [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/inventory-management-feature-overview.html)
-- [Spryker Core Back Office](/docs/pbc/all/back-office/{{site.version}}/spryker-core-back-office-feature-overview.html)
+- [Spryker Core Back Office](/docs/pbc/all/back-office/{{site.version}}/base-shop/spryker-core-back-office-feature-overview.html)
 <!---- [Development tools]()-->
 <!---- [Deployment tools]()-->
 - [Shopping Lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html)
 <!---- [Merchant]()-->
 - [Merchant Product restrictions](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html)
-- [Merchant B2B Contracts](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-feature-overview.html)
+- [Merchant B2B Contracts](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html)
 - [Merchant Custom Prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html)
-- [Merchant Order Threshold](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html)
+- [Merchant Order Threshold](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html)
 - [Prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/prices-feature-overview.html)
-- [Tax](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)
-- [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
-- [Cart](/docs/scos/user/features/{{site.version}}/cart-feature-overview/cart-feature-overview.html)
-- [Multiple carts](/docs/scos/user/features/{{site.version}}/multiple-carts-feature-overview.html)
+- [Tax](/docs/pbc/all/tax-management/{{site.version}}/base-shop/tax-feature-overview.html)
+- [Promotions & Discounts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/promotions-discounts-feature-overview.html)
+- [Cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/cart-feature-overview/cart-feature-overview.html)
+- [Multiple carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/multiple-carts-feature-overview.html)
 - [Quick add to cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/quick-add-to-cart-feature-overview.html)
 - [Shared carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/shared-carts-feature-overview.html)
 - [Reorder](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/reorder-feature-overview.html)
@@ -56,7 +56,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features:
 - [Agent Assist](/docs/pbc/all/user-management/{{site.version}}/base-shop/agent-assist-feature-overview.html)
 - [Payments](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/payments-feature-overview.html)
 <!---- [Invoice]()-->
-- [Checkout](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html)
+- [Checkout](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html)
 - [Mailing & Notifications](/docs/pbc/all/emails/{{site.version}}/emails.html)
 - [Spryker Core](/docs/pbc/all/miscellaneous/{{site.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html)
 - [Product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html)
@@ -70,15 +70,15 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features:
 - [Product Barcode](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-barcode-feature-overview.html)
 - [Product Bundles](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html)
 <!---- [Product Customer Restrictions]()-->
-- [Product Rating & Reviews](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html)
+- [Product Rating & Reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/ratings-and-reviews.html)
 - [Product Labels](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-labels-feature-overview.html)
 - [Product Lists](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-lists-feature-overview.html)
 - [Non-splittable Products](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/non-splittable-products-feature-overview.html)
-- [Catalog](/docs/scos/user/features/{{site.version}}/catalog-feature-overview.html)
+- [Catalog](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/catalog-feature-overview.html)
 - [Category Management](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/category-management-feature-overview.html)
-- [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
+- [Navigation](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/navigation-feature-overview.html)
 - [Search](/docs/pbc/all/search/{{site.version}}/base-shop/search-feature-overview/search-feature-overview.html)
-- [CMS](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html)
+- [CMS](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/cms-feature-overview/cms-feature-overview.html)
 
 <br>
 </details>

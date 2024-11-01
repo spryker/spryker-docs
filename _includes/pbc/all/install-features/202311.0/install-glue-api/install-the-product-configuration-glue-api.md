@@ -1,6 +1,6 @@
 
 
-This document describes how to install the [Product Configuration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/configurable-product-feature-overview/configurable-product-feature-overview.html) feature API.
+This document describes how to install the [Product Configuration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html) feature API.
 
 ## Install feature core
 
@@ -13,16 +13,16 @@ To start feature integration, integrate the required features and Glue APIs:
 | NAME                  | VERSION          | INSTALLATION GUIDE                                                                                                                                                        |
 |-----------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core API      | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)         |
-| Product API           | {{page.version}} | [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)                  |
-| Cart API              | {{page.version}} | [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)                                  |
+| Product API           | {{page.version}} | [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)                  |
+| Cart API              | {{page.version}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                                  |
 | Wishlist API          | {{page.version}} | [Install the Wishlist Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-wishlist-glue-api.html)                              |
-| Shopping List API     | {{page.version}} | [Glue API: Shopping lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)     |
+| Shopping List API     | {{page.version}} | [Install the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)     |
 | Order Management API  | {{page.version}} | [Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |
-| Product Configuration | {{page.version}} | [Product Configuration feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                   |
+| Product Configuration | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                   |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer install spryker/product-configurations-rest-api:"^1.0.0" spryker/product-configurations-price-product-volumes-rest-api:"^1.0.0" spryker/product-configuration-wishlists-rest-api:"^1.0.0" spryker/product-configuration-shopping-lists-rest-api:"^1.0.0" --update-with-dependencies
@@ -138,7 +138,7 @@ Make sure that the `https://glue.mysprykershop.com/concrete-products/{% raw %}{{
 Make sure that the `concrete-products` resource is expanded with the product configuration properties. For an example, see the following response to the `GET https://glue.mysprykershop.com/concrete-products/093_24495843` request.
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary>Response sample</summary>
 
 ```json
 {
@@ -331,7 +331,7 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 Make sure that the `orders` resource is expanded with the product configuration properties. For an example, see the following response to the `GET https://glue.mysprykershop.com/orders/DE--2` request:
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary>Response sample</summary>
 
 ```json
 {
@@ -588,7 +588,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Make sure that the `items` resource is expanded with the product configuration properties. For an example, see the following response to the `POST https://glue.mysprykershop.com/carts/2f0a0b59-b988-5829-8fd3-6d636fc8ea33/items?include=items` request:
 
 <details>
-<summary markdown='span'>Request sample</summary>
+<summary>Request sample</summary>
 
 ```json
 {
@@ -641,7 +641,7 @@ Make sure that the `items` resource is expanded with the product configuration p
 </details>
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary>Response sample</summary>
 
 ```json
 {

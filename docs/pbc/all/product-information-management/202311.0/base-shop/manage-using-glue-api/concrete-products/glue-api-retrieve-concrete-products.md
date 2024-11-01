@@ -27,12 +27,12 @@ This endpoint allows retrieving general information about concrete products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see the docs:
-* [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 * [Glue API: Measurement Units Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
-* [Glue API: Product Options Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
-* [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html)
-* [Glue API: Product Bundles feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
-* [Glue API: Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
+* [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
+* [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html)
+* [Install the Product Bundles Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
+* [Install the Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-the-product-price-glue-api.html)
 * [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)
 * [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/{{page.version}}/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)
 
@@ -83,7 +83,7 @@ To retrieve general information about a concrete product, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product by SKU</summary>
+<summary>Response sample: retrieve information about a concrete product by SKU</summary>
 
 ```json
 {
@@ -130,7 +130,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the sales units and product measurement units</summary>
+<summary>Response sample: retrieve information about a concrete product with the details on the sales units and product measurement units</summary>
 
 ```json
 {
@@ -222,7 +222,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on product labels</summary>
+<summary>Response sample: retrieve information about a concrete product with the details on product labels</summary>
 
 ```json
 {
@@ -269,7 +269,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the product image sets</summary>
+<summary>Response sample: retrieve information about a concrete product with the details on the product image sets</summary>
 
 ```json
 {
@@ -348,7 +348,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on product availability</summary>
+<summary>Response sample: retrieve information about a concrete product with the details on product availability</summary>
 
 ```json
 {
@@ -418,7 +418,7 @@ To retrieve general information about a concrete product, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the default product prices</summary>
+<details><summary>Response sample: retrieve information about a concrete product with the details on the default product prices</summary>
 
 ```json
 {
@@ -508,7 +508,7 @@ To retrieve general information about a concrete product, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the default and volume prices</summary>
+<details><summary>Response sample: retrieve information about a concrete product with the details on the default and volume prices</summary>
 
 ```json
 {
@@ -608,7 +608,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the product options</summary>
+<summary>Response sample: retrieve information about a concrete product with the details on the product options</summary>
 
 ```json
 {
@@ -699,7 +699,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on product reviews</summary>
+<summary>Response sample: retrieve information about a concrete product with the details on product reviews</summary>
 
 ```json
 {
@@ -805,7 +805,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the bundled products included</summary>
+<summary>Response sample: retrieve information about a concrete product with the details on the bundled products included</summary>
 
 ```json
 {
@@ -1017,7 +1017,7 @@ To retrieve general information about a concrete product, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the detais on bundled products, concrete products, and abstract products</summary>
+<summary>Response sample: retrieve information about a concrete product with the detais on bundled products, concrete products, and abstract products</summary>
 
 ```json
 {
@@ -1621,10 +1621,11 @@ To retrieve general information about a concrete product, send the request:
 
 
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-product-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-product-availabilities-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-product-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-product-availabilities-response-attributes.md -->
 
+{% include /pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md -->
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|
@@ -1642,7 +1643,7 @@ For other attributes of the included resources, see:
 
 * [Retrieve prices of a concrete product](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html#response)
 * [Retrieve a product label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
-* [Retrieve product ratings and reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/manage-using-glue-api/glue-api-manage-product-reviews.html#product-reviews-response-attributes)
+
 
 
 ## Possible errors

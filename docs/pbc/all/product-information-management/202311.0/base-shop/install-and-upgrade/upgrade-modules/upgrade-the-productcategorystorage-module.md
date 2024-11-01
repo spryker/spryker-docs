@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductCategoryStorage
+title: Upgrade the ProductCategoryStorage module
 description: Learn how to update the ProductCategoryStorage module.
 last_updated: Jun 23, 2021
 template: module-migration-guide-template

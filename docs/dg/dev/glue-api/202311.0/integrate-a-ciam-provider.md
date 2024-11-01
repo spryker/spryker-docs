@@ -24,7 +24,7 @@ There is a ready PHP-based library that provides JWT decoding such as [firebase/
 
 ## Install the required modules using Composer
 
-Install the required modules:
+Install the required modules using Composer:
 
 {% info_block infoBox %}
 
@@ -66,8 +66,8 @@ Create a separate CIAM provider Client layer with the following structure:
   ...
 ```
 
-<details open>
-<summary markdown='span'>The following code example shows what the CIAM token decoding logic looks like:</summary>
+<details>
+<summary>The following code example shows what the CIAM token decoding logic looks like:</summary>
 
 ```php
 class CiamTokenDecoder implements CiamTokenDecoderInterface
@@ -154,7 +154,7 @@ interface CiamProviderServiceInterface
 ```
 
 <details>
-<summary markdown='span'>The following is an example of standard CIAM token parsing logic:</summary>
+<summary>The following is an example of standard CIAM token parsing logic:</summary>
 
 ```php
 class CiamTokenParser implements CiamtokenParserInterface

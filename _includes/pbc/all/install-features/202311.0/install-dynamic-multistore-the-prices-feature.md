@@ -52,7 +52,7 @@ The `Currency` module is responsible for extending store data and configuring it
 
 ```
 
-2. Run the following commands to apply database changes and generate entity and transfer changes:
+2. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -73,7 +73,7 @@ Make sure that the following changes have been applied in the database:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |

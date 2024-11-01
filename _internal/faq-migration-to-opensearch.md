@@ -28,7 +28,7 @@ Yes, you can enable OpenSearch until version 1.2 on-premises because OpenSearch 
 
 ## If my SCCOS project is running Elasticsearch, do I need to prepare for the migration from Elasticsearch to OpenSearch?
 
-If you are running Elasticsearch version 6.8 or above, no action is required on your part. We will handle the migration from Elasticsearch to OpenSearch. For the projects running lower versions of Elasticsearch, before migrating, we recommend updating Elasticsearch to version 6.8. If you need technical guidance for updating Elasticsearch, [contact our Support team](https://spryker.my.site.com/support/s/).
+If you are running Elasticsearch version 6.8 or above, no action is required on your part. We will handle the migration from Elasticsearch to OpenSearch. For the projects running lower versions of Elasticsearch, before migrating, we recommend updating Elasticsearch to version 6.8. If you need technical guidance for updating Elasticsearch, [contact our Support team](https://support.spryker.com).
 
 ## How long does it take to migrate from Elasticsearch to OpenSearch?
 
@@ -84,7 +84,7 @@ Also, as OpenSearch continues to evolve and new versions are released, for the u
 
 ## Does OpenSearch support all the plugins that I used with Elasticsearch?
 
-OpenSearch supports most plugins compatible with Elasticsearch 7.10.2. However, make sure to check the compatibility of specific plugins in the OpenSearch documentation or with a particular plugin's provider. Some cases require plugins to be updated or replaced with OpenSearch-compatible versions. To get the list of the plugins you are currently using,  [contact our Support team](https://spryker.my.site.com/support/s/). Before the production environment is migrated, we will migrate your development and staging environments, so you can test backward compatibility.
+OpenSearch supports most plugins compatible with Elasticsearch 7.10.2. However, make sure to check the compatibility of specific plugins in the OpenSearch documentation or with a particular plugin's provider. Some cases require plugins to be updated or replaced with OpenSearch-compatible versions. To get the list of the plugins you are currently using,  [contact our Support team](https://support.spryker.com). Before the production environment is migrated, we will migrate your development and staging environments, so you can test backward compatibility.
 
 ## How will the migration affect my configuration and settings?
 

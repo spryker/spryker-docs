@@ -35,7 +35,7 @@ Spryker\Client\Search\Plugin\Elasticsearch\ResultFormatter\SuggestionByTypeResul
 2. Enable the replacement plugins:
 
 <details>
-<summary markdown='span'>Pyz\Client\Catalog</summary>
+<summary>Pyz\Client\Catalog</summary>
 
 ```php
 <?php

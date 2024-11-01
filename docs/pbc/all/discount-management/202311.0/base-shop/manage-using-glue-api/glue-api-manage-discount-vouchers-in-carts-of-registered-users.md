@@ -21,7 +21,7 @@ This endpoint allows managing discount vouchers in carts of registered users.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html).
 
 ## Apply a discount voucher to a cart of a registered user
 
@@ -46,7 +46,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
 | Include | Adds resource relationships to the request.	 | vouchers |
 
 <details>
-<summary markdown='span'>Request sample: apply a discount voucher to a cart of a registered user</summary>
+<summary>Request sample: apply a discount voucher to a cart of a registered user</summary>
 
 `POST https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers`
 
@@ -63,7 +63,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: apply a discount voucher to a cart of a registered user with details on discount voucher information</summary>
+<summary>Request sample: apply a discount voucher to a cart of a registered user with details on discount voucher information</summary>
 
 `POST https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers?include=vouchers`
 
@@ -86,7 +86,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: apply a discount voucher to a cart of a registered user</summary>
+<summary>Response sample: apply a discount voucher to a cart of a registered user</summary>
 
 ```json
 {
@@ -123,7 +123,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: apply a discount voucher to a cart of a registered user with details on discount voucher information</summary>
+<summary>Response sample: apply a discount voucher to a cart of a registered user with details on discount voucher information</summary>
 
 ```json
 {

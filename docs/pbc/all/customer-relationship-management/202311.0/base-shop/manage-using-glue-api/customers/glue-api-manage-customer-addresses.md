@@ -22,7 +22,7 @@ related:
   - title: Customer Accounts
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
+    link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration
@@ -113,7 +113,7 @@ Request sample: add an address
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: add an address</summary>
+<summary>Response sample: add an address</summary>
 
 ```json
 {
@@ -184,7 +184,7 @@ Request sample: edit an address
 `PATCH` http://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b
 
 <details>
-<summary markdown='span'>Request sample body</summary>
+<summary>Request sample body</summary>
 
 </details>
 
@@ -208,7 +208,7 @@ Request sample: edit an address
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: edit an address</summary>
+<summary>Response sample: edit an address</summary>
 
 ```json
 {
@@ -264,7 +264,7 @@ Request sample: retrieve customer's addresses
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve customer's addresses</summary>
+<summary>Response sample: retrieve customer's addresses</summary>
 
 ```json
 {
@@ -363,7 +363,7 @@ Request sample: retrieve an address
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve an address</summary>
+<summary>Response sample: retrieve an address</summary>
 
 </details>
 

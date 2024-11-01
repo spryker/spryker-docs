@@ -10,7 +10,7 @@ redirect_from:
 related:
   - title: Queue pool
     link: docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html
-  - title: Migration Guide - RabbitMQ
+  - title: Upgrade the RabbitMQ module
     link: docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
 ---
 
@@ -39,7 +39,7 @@ Here is the list of the Queue System's benefits:
 
 ## Spryker Queue module
 
-The Spryker Queue module provides a set of high-level standard APIs for communicating with queues. Moreover, the Queue module is also a gateway for other modules to interact with queues and messages. The Queue module is an abstract adapter implementation, which provides a standard API for other modules. This API internally calls their queue engine's API and translates to their own communication language. There are multiple 3rd-party queue engines to choose from such as RabbitMQ or AmazonSQS.
+The Spryker Queue module provides a set of high-level standard APIs for communicating with queues. Moreover, the Queue module is also a gateway for other modules to interact with queues and messages. The Queue module is an abstract adapter implementation, which provides a standard API for other modules. This API internally calls their queue engine's API and translates to their own communication language. There are multiple third-party queue engines to choose from such as RabbitMQ or AmazonSQS.
 
 To start working with the Queue module, you need at least one Queue Engine and one Queue Adapter. This module also comes with a set of simple commands for listening to the queues and processing messages by the stack of the corresponding plugins.
 
@@ -129,7 +129,29 @@ class SampleQueueMessageProcessorPlugin implements QueueMessageProcessorPluginIn
 ?>
 ```
 
-Register the plugin in `QueueDependencyProvider::getProcessorMessagePlugins()`:
+### Configuration for chunk size
+
+Instead of relying on the `getChunkSize()` method in the plugin, you can use project-level configuration to define a more flexible chunk size for any queue. This configuration takes precedence over the `getChunkSize()` method. If a chunk size is defined for a queue in `QUEUE_MESSAGE_CHUNK_SIZE_MAP`, that size is used. Otherwise, the chunk size falls back to the value returned by the `getChunkSize()` method of the `QueueMessageProcessorPluginInterface`.
+
+To define a flexible chunk size, follow the steps:
+
+1. Configure chunk size using `QueueConstants::QUEUE_MESSAGE_CHUNK_SIZE_MAP`:
+
+```php
+<?php
+
+use Spryker\Shared\Queue\QueueConstants;
+
+$config[QueueConstants::QUEUE_MESSAGE_CHUNK_SIZE_MAP] = [
+    'publish' => 2000,
+    'event' => 1000,
+    'sync.search.product' => 100
+];
+?>
+```
+
+
+2. Register the plugin in `QueueDependencyProvider::getProcessorMessagePlugins()`:
 
 ```php
 <?php

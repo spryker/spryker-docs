@@ -22,9 +22,9 @@ Install the required features:
 | Spryker Core                 | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                                                                                                                |
 | Glue Backend API Application | {{page.version}} | [Integrate Storefront and Backend Glue API applications](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 commposer require spryker/api-key-authorization-connector:"^1.0.0" \
@@ -91,8 +91,8 @@ Add the configuration to your project:
 |------------------------------------------------------------|------------------------------------------------------------------| --- |
 | AuthorizationConfig::isMultistrategyAuthorizationAllowed() | Returns true if the multiple strategies authorization is allowed. | Pyz\Zed\Authorization\AuthorizationConfig |
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Authorization/AuthorizationConfig.php</summary>
+<details>
+<summary>src/Pyz/Zed/Authorization/AuthorizationConfig.php</summary>
 
 ```php
 <?php
@@ -125,8 +125,8 @@ namespace Pyz\Zed\Authorization;
 | ApiKeyAuthorizationRequestExpanderPlugin | Expands the request by the API Key provided. | Spryker\Glue\ApiKeyAuthorizationConnector\Plugin\GlueBackendApiApplicationAuthorizationConnector |
 | ApiKeyAuthorizationStrategyPlugin | Executes the API Key verification process.         | Spryker\Zed\ApiKeyAuthorizationConnector\Communication\Plugin\Authorization |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -152,8 +152,8 @@ class GlueBackendApiApplicationAuthorizationConnectorDependencyProvider extends 
 ```
 </details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Authorization/AuthorizationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/Authorization/AuthorizationDependencyProvider.php</summary>
 
 ```php  
 <?php

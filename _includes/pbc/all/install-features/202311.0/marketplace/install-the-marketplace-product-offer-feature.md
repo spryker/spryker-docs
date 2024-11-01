@@ -14,9 +14,9 @@ Install the required features:
 |----------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core         | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                          |
 | Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
-| Product              | {{page.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)                                                                    |
+| Product              | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                                                    |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/marketplace-product-offer:"{{page.version}}" --update-with-dependencies
@@ -24,7 +24,7 @@ composer require spryker-feature/marketplace-product-offer:"{{page.version}}" --
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE                               | EXPECTED DIRECTORY                               |
 |--------------------------------------|--------------------------------------------------|
@@ -159,7 +159,7 @@ To configure export to Redis and Elasticsearch, take the following steps:
 | ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update, and delete product offer store events.                                                                                                                        |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore            |
 | MerchantProductOfferProductConcreteExpanderPlugin       | Expands product concrete collection with offers.                                                                                                                                                            |               | \Spryker\Zed\MerchantProductOffer\Communication\Plugin\Product                                     |
 
-<details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -491,7 +491,7 @@ Make sure that when the following entities get updated through the ORM, the corr
 
 1. Prepare your data according to your requirements using the demo data:
 
-<details><summary markdown='span'>data/import/common/common/marketplace/merchant_product_offer.csv</summary>
+<details><summary>data/import/common/common/marketplace/merchant_product_offer.csv</summary>
 
 ```csv
 product_offer_reference,concrete_sku,merchant_reference,merchant_sku,is_active,approval_status
@@ -641,7 +641,7 @@ offer418,112_312526172,MER000002,,1,approved
 | is_active               |          | boolean   | 1             | Product offer status, defaults to 1.                                                                                                                                                                                                                                                                                                                                  |
 | approval_status         |          | string    | approved      | (*Waiting for Approval*&nbsp;> *Approved*&nbsp;> *Denied*). *Denied* and *Waiting for Approval* statuses mean that the offer is not visible on PDP regardless of Product Offer → Active = true. This can be configured (along with the transition between statuses in `ProductOfferConfig`). If not supplied, `ProductOfferConfig`&nbsp;> `getDefaultStatus` is applied. |
 
-<details><summary markdown='span'>data/import/common/common/marketplace/merchant_product_offer_store.csv</summary>
+<details><summary>data/import/common/common/marketplace/merchant_product_offer_store.csv</summary>
 
 ```csv
 product_offer_reference,store_name
@@ -1279,7 +1279,7 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
 }
 ```
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1328,7 +1328,7 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 ```
 </details>
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1440,7 +1440,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1629,7 +1629,7 @@ To start feature integration, integrate the following features:
 | Spryker Core         | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                          |
 | Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 If already installed, skip this step.
 
@@ -1804,12 +1804,12 @@ class ProductSearchWidgetDependencyProvider extends SprykerProductSearchWidgetDe
 
 | FEATURE                                              | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                                                                                            |
 |------------------------------------------------------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Combined Product Offer Import                        |                                  | [Combined Product Offer Import integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/combined-product-offer-import-feature-integration.html)                                                                                        |
+| Combined Product Offer Import                        |                                  | [Combined Product Offer Import integration](/docs/dg/dev/integrate-and-configure/integrate-combined-product-offer-import.html)                                                                                     |
 | Marketplace Product Offer Prices                     |                                  | [Install the Marketplace Product Offer Prices feature](/docs/pbc/all/price-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html)                                                                          |
-| Marketplace Merchant Portal Product Offer Management |                                  | [Marketplace Product Offer Management feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html)                                                  |
+| Marketplace Merchant Portal Product Offer Management |                                  | [Install the Marketplace Product Offer Management feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html)                                                  |
 | Marketplace Product Offer API                        |                                  | [Install the Marketplace Product Offer Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)                                                                         |
 | Marketplace Product + Marketplace Product Offer      |                                  | [Install the Marketplace Product + Marketplace Product Offer feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-marketplace-product-offer-feature.html) |
-| Marketplace Product Offer + Cart                     |                                  | [Marketplace Product Offer + Cart feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-cart-feature.html)                                                                            |
-| Marketplace Product Offer + Checkout                 |                                  | [Marketplace Product Offer + Checkout feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-checkout-feature.html)                                                                    |
-| Marketplace Product Offer + Prices                   |                                  | [Marketplace Product Offer + Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html)                                                                        |
-| Marketplace Product Offer + Quick Add to Cart        |                                  | [Marketplace Product Offer + Quick Add to Cart feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-quick-add-to-cart-feature.html)                                                  |
+| Marketplace Product Offer + Cart                     |                                  | [Install the Marketplace Product Offer + Cart feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-cart-feature.html)                                                                            |
+| Marketplace Product Offer + Checkout                 |                                  | [Install the Marketplace Product Offer + Checkout feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-checkout-feature.html)                                                                    |
+| Marketplace Product Offer + Prices                   |                                  | [Install the Marketplace Product Offer + Prices feature](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html)                                                                        |
+| Marketplace Product Offer + Quick Add to Cart        |                                  | [Install the Marketplace Product Offer + Quick Add to Cart feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-quick-add-to-cart-feature.html)                                                  |

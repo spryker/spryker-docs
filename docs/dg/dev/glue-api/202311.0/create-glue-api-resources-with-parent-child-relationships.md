@@ -40,7 +40,7 @@ class ModuleRestApiConfig extends AbstractBundleConfig
 
 3. Create `BarResource` that implements `ResourceWithParentPluginInterface`:
 
-<details><summary markdown='span'>src\Pyz\Glue\ModuleRestApi\Plugin\BarResource.php</summary>
+<details><summary>src\Pyz\Glue\ModuleRestApi\Plugin\BarResource.php</summary>
 
 ```php
 <?php

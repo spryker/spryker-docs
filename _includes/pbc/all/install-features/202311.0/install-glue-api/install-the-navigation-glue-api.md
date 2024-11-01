@@ -17,9 +17,9 @@ Install the required features:
 | Spryker Core | {{page.version}} |
 | Navigation | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/navigations-rest-api:"^2.0.0" spryker/navigations-category-nodes-resource-relationship:"^1.0.0" --update-with-dependencies
@@ -27,7 +27,7 @@ composer require spryker/navigations-rest-api:"^2.0.0" spryker/navigations-categ
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -38,7 +38,7 @@ Make sure that the following modules were installed:
 
 ### 2) Set up transfer objects
 
-Run the following commands to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -46,7 +46,7 @@ console transfer:generate
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -165,8 +165,8 @@ Send a request to *https://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?in
 
 Make sure that the response contains `category-nodes` as a relationship and `category-nodes` data included.
 
-<details open>
-<summary markdown='span'>https://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes</summary>
+<details>
+<summary>https://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes</summary>
 
 ```json
 {

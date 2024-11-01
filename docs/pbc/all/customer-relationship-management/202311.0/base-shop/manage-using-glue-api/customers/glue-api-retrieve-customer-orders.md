@@ -14,7 +14,7 @@ related:
   - title: Retrieving orders
     link: docs/pbc/all/order-management-system/page.version/base-shop/glue-api-retrieve-orders.html
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
+    link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration
@@ -72,7 +72,7 @@ Alternatively, you can retrieve all orders made by a customer through the **/ord
 
 ### Response
 
-<details><summary markdown='span'>Response sample: Retrieve a customer’s order</summary>
+<details><summary>Response sample: Retrieve a customer’s order</summary>
 
 ```json
 {

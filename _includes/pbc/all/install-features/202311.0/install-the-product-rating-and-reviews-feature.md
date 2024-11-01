@@ -8,14 +8,14 @@ Follow the steps below to install the Product Rating and Reviews feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                                            |
 |--------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                  |
 | Product      | {{page.version}} | [Install Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/product-rating-reviews:"{{page.version}}" --update-with-dependencies
@@ -88,7 +88,7 @@ Make sure that propel entities have been generated successfully by checking thei
 | \Orm\Zed\ProductReviewSearch\Persistence\SpyProductReviewSearch                | \Spryker\Zed\ProductReviewSearch\Persistence\Propel\AbstractSpyProductReviewSearch                |
 | \Orm\Zed\ProductReviewSearch\Persistence\SpyProductReviewSearchQuery           | \Spryker\Zed\ProductReviewSearch\Persistence\Propel\AbstractSpyProductReviewSearchQuery           |
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                       | TYPE  | EVENT   | PATH                                                                 |
 |--------------------------------|-------|---------|----------------------------------------------------------------------|
@@ -375,7 +375,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 | ProductReviewPageDataLoaderPlugin        | Expands the provided object with review details.                  | None          | Spryker\Zed\ProductReviewSearch\Communication\Plugin\PageDataLoader                  |
 | ProductReviewMapExpanderPlugin           | Adds product review data related to product abstract search data. | None          | Spryker\Zed\ProductReviewSearch\Communication\Plugin\ProductPageSearch\Elasticsearch |
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -717,7 +717,7 @@ Make sure that the following endpoints are available:
 `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews`
 
 <details>
-<summary markdown='span'>Example</summary>
+<summary>Example</summary>
 
 ```json
 {
@@ -800,7 +800,7 @@ Make sure that the following endpoints are available:
 `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews/{% raw %}{{{% endraw %}review_id{% raw %}}}{% endraw %}`
 
 <details>
-<summary markdown='span'>Example</summary>
+<summary>Example</summary>
 
 ```json
 {
@@ -915,7 +915,7 @@ Make sure that the response contains product-reviews as a relationship and produ
 
 Make sure that `averageRating` and `reviewCount` attributes are present in `concrete-products` and `abstract-products` resources attributes section.
 
-<details><summary markdown='span'>Example</summary>
+<details><summary>Example</summary>
 
 ```json
 {
@@ -1068,7 +1068,7 @@ Make a request to `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{
 Make sure that the response contains product-reviews as a relationship and product-reviews data included.
 
 <details>
-<summary markdown='span'>Example</summary>
+<summary>Example</summary>
 
 ```json
 {

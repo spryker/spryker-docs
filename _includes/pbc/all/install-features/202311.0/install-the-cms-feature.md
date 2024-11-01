@@ -1,6 +1,6 @@
 
 
-This document describes how to install the [CMS](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-feature-overview.html) feature.
+This document describes how to install the [CMS](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -12,7 +12,7 @@ Install the required features:
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/cms:"{{page.version}}" --update-with-dependencies
@@ -245,7 +245,7 @@ You can switch the language in the **Back Office > User Control > User section >
 | CmsBlockProductStorageEventSubscriber | Registers listeners that are responsible for publishing product to CMS block relations to storage when a related entity changes (optional) | None | Spryker\Zed\CmsBlockProductStorage\Communication\Plugin\Event\Subscriber |
 
 <details>
-<summary markdown='span'>Pyz\Zed\Event\EventDependencyProvider</summary>
+<summary>Pyz\Zed\Event\EventDependencyProvider</summary>
 
 ```php
 <?php
@@ -518,8 +518,8 @@ Make sure that all the CMS entity changes performed manually in the Back Office 
 
 {% endinfo_block %}
 
-<details open>
-<summary markdown='span'>Example Expected Data Fragment: Redis, CmsBlock</summary>
+<details>
+<summary>Example Expected Data Fragment: Redis, CmsBlock</summary>
 
 ```json
 {
@@ -769,7 +769,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 1. Prepare your pages data according to your requirements using our demo data:
 
 <details>
-<summary markdown='span'>vendor/spryker/cms-page-data-import/data/import/cms_page.csv</summary>
+<summary>vendor/spryker/cms-page-data-import/data/import/cms_page.csv</summary>
 
 ```yaml
 page_key,template_name,is_searchable,is_active,publish,url.de_DE,url.en_US,name.de_DE,name.en_US,meta_title.de_DE,meta_title.en_US,meta_keywords.de_DE,meta_keywords.en_US,meta_description.de_DE,meta_description.en_US,placeholder.title.de_DE,placeholder.title.en_US,placeholder.content.de_DE,placeholder.content.en_US
@@ -832,7 +832,7 @@ cms-page--7,US
 | store_name | ✓ | string | DE | Unique store identifier. |
 
 <details>
-<summary markdown='span'>vendor/spryker/cms-slot-data-import/data/import/cms_block.csv</summary>
+<summary>vendor/spryker/cms-slot-data-import/data/import/cms_block.csv</summary>
 
 ```yaml
 block_key,block_name,template_name,template_path,active,placeholder.title.de_DE,placeholder.title.en_US,placeholder.description.de_DE,placeholder.description.en_US,placeholder.link.de_DE,placeholder.link.en_US,placeholder.content.de_DE,placeholder.content.en_US
@@ -1194,7 +1194,7 @@ Make sure the following:
 
 Follow the steps below to install the CMS feature frontend.
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/cms:"{{page.version}}" --update-with-dependencies
@@ -1539,7 +1539,7 @@ Verify the changes by adding a slot widget to a page. See [Templates & Slots Fea
 Follow the further steps only if you are going to use the [visibility conidtions](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
 {% endinfo_block %}
 
-#### 1) Install the required modules using Composer
+#### 1) Install the required modules
 
 ```bash
 composer require spryker/cms-slot-block-product-category-connector:"^1.0.0" sspryker/cms-slot-block-product-category-gui:"^1.0.0" spryker/cms-slot-block-category-connector:"^1.0.0" sspryker/cms-slot-block-category-gui:"^1.0.0" spryker/cms-slot-block-cms-connector:"^1.0.0" spryker/cms-slot-block-cms-gui:"^1.0.0" --update-with-dependencies

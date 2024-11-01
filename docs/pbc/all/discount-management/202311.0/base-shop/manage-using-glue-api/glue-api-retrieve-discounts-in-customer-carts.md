@@ -14,8 +14,8 @@ This document describes how to retrieve cart rules, vouchers, and promotional it
 ## Installation
 
 For details on the modules that provide the API functionality and how to install them, see the following docs:
-* [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)
-* [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
 
 
 ## Retrieve customer’s carts
@@ -55,7 +55,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with the cart rules included</summary>
+<details><summary>Response sample: retrieve customer's carts with the cart rules included</summary>
 
 ```json
 {
@@ -185,7 +185,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with the information on vouchers included</summary>
+<details><summary>Response sample: retrieve customer's carts with the information on vouchers included</summary>
 
 ```json
 {
@@ -254,7 +254,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts withe the information on promotional items included</summary>
+<details><summary>Response sample: retrieve customer's carts withe the information on promotional items included</summary>
 
 ```json
 {
@@ -320,7 +320,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 
-{% include pbc/all/glue-api-guides/202311.0/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|

@@ -13,10 +13,10 @@ Install the required features:
 | NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
-| Category Management | {{site.version}} | [Install the Category Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
-| Product             | {{site.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)                         |
+| Category Management | {{site.version}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
+| Product             | {{site.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                         |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/product:"{{site.version}}" --update-with-dependencies
@@ -162,7 +162,7 @@ Configure tables to be published to the `spy_product_abstract_category_storage` 
 | ProductCategoryWritePublisherPlugin                    | Publishes product category data by the`SpyProductCategory` entity events.                     |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\ProductCategory   |
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -376,8 +376,8 @@ When a category product assignment is changed through ORM, make sure it is expor
 }
 ```
 
-<details open>
-<summary markdown='span'>An expected data fragment example: `product_category_filter:8`</summary>
+<details>
+<summary>An expected data fragment example: `product_category_filter:8`</summary>
 
 ```json
 {
@@ -457,8 +457,8 @@ Add the following plugins to your project:
 | ProductUpdateEventTriggerCategoryRelationUpdatePlugin                   | Triggers product update events for products that are assigned to the given category and its child categories. |               | Spryker\Zed\ProductCategory\Communication\Plugin\Category                              |
 | ParentCategoryIdsProductAbstractCategoryStorageCollectionExpanderPlugin | Expands product categories with their parent category IDs.                                                    |               | Spryker\Client\CategoryStorage\Plugin\ProductCategoryStorage                           |
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -665,11 +665,11 @@ Install the required features:
 | NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
-| Category Management | {{site.version}} | [Install the Category Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
-| Product             | {{site.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                         |
+| Category Management | {{site.version}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
+| Product             | {{site.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                         |
 
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/product:"{{site.version}}" --update-with-dependencies
@@ -729,8 +729,8 @@ Integrate the following related features:
 
 | FEATURE                       | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                                 |
 |-------------------------------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Category Management Feature   | &check;                                | [Install the Category Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html)                                                |
-| Product Management Feature    | &check;                                | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                        |
-| Glue API: Category Management |                                  | [Glue API: Category management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-category-management-feature-integration.html)                    |
+| Category Management Feature   | &check;                                | [Install the Category Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html)                                                |
+| Product Management Feature    | &check;                                | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                                                        |
+| Glue API: Category Management |                                  | [Install the Category Management Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-category-management-glue-api.html)                    |
 | Catalog + Category Management |                                  | [Install the Catalog + Category Management feature](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html) |
 | CMS + Category Management     |                                  | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)   |

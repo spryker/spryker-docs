@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Product Lists feature](/docs/scos/user/features/{{site.version}}/product-lists-feature-overview.html).
+This document describes how to install the [Product Lists feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-lists-feature-overview.html).
 
 ## Install feature core
 
@@ -13,11 +13,11 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
-| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Product | {{site.version}}  | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
-| Category Management | {{site.version}} | [Install the Category Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
+| Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Product | {{site.version}}  | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Category Management | {{site.version}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/product-lists:"{{site.version}}" --update-with-dependencies
@@ -328,8 +328,8 @@ Add the following plugins to your project:
 |ProductConcreteProductListPageDataExpanderPlugin|Expands `ProductConcretePageSearchTransfer` with product lists data and returns the modified object.|None|Spryker\Zed\ProductListSearch\Communication\Plugin\ProductPageSearch|
 |ProductConcreteProductListPageMapExpanderPlugin|Maps product list data related to concrete products to Elasticsearch document structure.|Product list data must be available. Suggestion: use `ProductConcreteProductListPageDataExpanderPlugin` (see the preceding one).|Spryker\Zed\ProductListSearch\Communication\Plugin\ProductPageSearch|
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -600,7 +600,7 @@ Make sure that the configured data has been added to the `spy_product_list_categ
 1. Prepare your data according to your requirements using our demo data:
 
 <details>
-<summary markdown='span'>vendor/spryker/product-list-data-import/data/import/product_list_to_concrete_product.csv</summary>
+<summary>vendor/spryker/product-list-data-import/data/import/product_list_to_concrete_product.csv</summary>
 
 ```yaml
 product_list_key,concrete_sku
@@ -709,7 +709,7 @@ Add the following plugins to your project:
 | ProductConcreteListStorageRestrictionFilterPlugin| Responsible for filtering concrete product IDs based on allowlists and denylists. | None | Spryker\Client\ProductListStorage\Plugin\ProductStorageExtension|
 
 <details>
-<summary markdown='span'>src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php</summary>
+<summary>src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -841,6 +841,6 @@ Make sure that no restricted products can be added to a cart, and if they were a
 
 After completing the integration of this feature, you need to extend it further to provide one or many owner types for product lists to be able to assign them. A product list can only be fully functional when a user, who browses the catalog, gets product lists assigned, and this can be fulfilled by providing owners with product lists.
 
-To add this functionality for merchant relationships, see  [Merchant Product Restrictions feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/merchant-product-restrictions-feature-integration.html).
+To add this functionality for merchant relationships, see  [Install the Merchant Product Restrictions feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html).
 
 {% endinfo_block %}

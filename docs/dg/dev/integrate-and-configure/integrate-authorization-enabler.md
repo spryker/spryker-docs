@@ -22,9 +22,9 @@ To start the integration, review and install the necessary features:
 | ----------- | ------ |
 | Spryker Core | {{page.version}}  |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-1. Install the required modules:
+1. Install the required modules using Composer:
 
 ```bash
 composer require spryker/authorization spryker/glue-application-authorization-connector --update-with-dependencies
@@ -60,7 +60,7 @@ console transfer:generate
 
 {% info_block warningBox "Verificaiton" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER   | TYPE  | EVENT   | PATH   |
 | ------------------ | ---- | ------ | ------------------- |
@@ -88,7 +88,7 @@ Activate the following plugins:
 | AuthorizationRouterParameterExpanderPlugin                   | Expands a route with additional parameters.                  | Spryker\Glue\GlueApplicationAuthorizationConnector\Plugin\GlueApplication |
 
 <details>
-<summary markdown='span'>src/Pyz/Client/Authorization/AuthorizationDependencyProvider.php</summary>
+<summary>src/Pyz/Client/Authorization/AuthorizationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -114,7 +114,7 @@ class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProv
 </details>
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

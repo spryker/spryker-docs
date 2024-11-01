@@ -16,7 +16,7 @@ related:
   - title: Manage carts of registered users
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
+    link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration
@@ -94,7 +94,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 ### Response
 
-<details><summary markdown='span'>Response sample: no carts are found</summary>
+<details><summary>Response sample: no carts are found</summary>
 
 ```json
 {
@@ -106,7 +106,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve multiple customer's carts</summary>
+<details><summary>Response sample: retrieve multiple customer's carts</summary>
 
 ```json
 {
@@ -169,7 +169,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with their items included</summary>
+<details><summary>Response sample: retrieve customer's carts with their items included</summary>
 
 ```json
 {
@@ -461,7 +461,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with cart permission groups included</summary>
+<details><summary>Response sample: retrieve customer's carts with cart permission groups included</summary>
 
 ```json
 {
@@ -596,7 +596,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with the information on shared carts included</summary>
+<details><summary>Response sample: retrieve customer's carts with the information on shared carts included</summary>
 
 ```json
 {
@@ -731,7 +731,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with shared carts and include information about company users they are shared with</summary>
+<details><summary>Response sample: retrieve customer's carts with shared carts and include information about company users they are shared with</summary>
 
 ```json
 {
@@ -834,7 +834,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with the cart rules included</summary>
+<details><summary>Response sample: retrieve customer's carts with the cart rules included</summary>
 
 ```json
 {
@@ -964,7 +964,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with the information on vouchers included</summary>
+<details><summary>Response sample: retrieve customer's carts with the information on vouchers included</summary>
 
 ```json
 {
@@ -1033,7 +1033,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts withe the information on  promotional items included</summary>
+<details><summary>Response sample: retrieve customer's carts withe the information on  promotional items included</summary>
 
 ```json
 {
@@ -1098,7 +1098,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with the information on the gift cards applied</summary>
+<details><summary>Response sample: retrieve customer's carts with the information on the gift cards applied</summary>
 
 ```json
 {
@@ -1167,7 +1167,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts and include information on items, concrete products, and product options</summary>
+<details><summary>Response sample: retrieve customer's carts and include information on items, concrete products, and product options</summary>
 
 ```json
 {
@@ -1419,7 +1419,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with the information on product labels included</summary>
+<details><summary>Response sample: retrieve customer's carts with the information on product labels included</summary>
 
 ```json
 {
@@ -1577,15 +1577,15 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/202311.0/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/product-options-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
 
 
 
@@ -1605,7 +1605,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 For the attributes of the included resources, see:
 
 * [Manage gift cards of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html)
-* [Retrieving product labels](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
+* [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
 
 ## Possible errors
 

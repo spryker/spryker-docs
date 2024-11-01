@@ -9,12 +9,12 @@ Install the required features:
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Product | {{page.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
-| Promotions & Discounts | {{page.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/promotions-and-discounts-feature-integration.html) |
+| Product | {{page.version}} | [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
+| Promotions & Discounts | {{page.version}} | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/product-labels-rest-api:"^1.1.0" --update-with-dependencies
@@ -36,7 +36,7 @@ Make sure that the following modules have been installed:
 
 ## 2) Set up database schema and transfer objects
 
-Run the following commands to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console propel:install
@@ -166,8 +166,8 @@ Activate the following plugin:
 | PromotionItemByQuoteTransferResourceRelationshipPlugin | Adds the `promotional-items` resource as a relationship to the carts and `guest-carts` resources. | None | Spryker\Glue\DiscountPromotionsRestApi\Plugin\GlueApplication |
 | ProductAbstractBySkuResourceRelationshipPlugin | Adds the `abstract-products` resource as a relationship to the `promotional-items` resource. | None | Spryker\Glue\ProductsRestApi\Plugin\GlueApplication |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -472,8 +472,8 @@ To verify installation of `CartRuleByQuoteResourceRelationshipPlugin` and `Vouch
 
 * `https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
 
-<details open>
-<summary markdown='span'>Example response</summary>
+<details>
+<summary>Example response</summary>
 
 ```json
 {
@@ -576,8 +576,8 @@ Make sure that the cart-rules and vouchers relationships are also available for 
 
 * `https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest-cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
 
-<details open>
-<summary markdown='span'>Example response</summary>
+<details>
+<summary>Example response</summary>
 
 ```json
 {
@@ -705,8 +705,8 @@ Make sure that the following relations are available:
 
 * `promotional-items with abstract-products`
 
-<details open>
-<summary markdown='span'>Example of Response</summary>
+<details>
+<summary>Example of Response</summary>
 
 ```json
 {
@@ -873,8 +873,8 @@ Add the selected promotional product to the cart and check the cart in the respo
 }
 ```
 
-<details open>
-<summary markdown='span'>Example of Response</summary>
+<details>
+<summary>Example of Response</summary>
 
 ```json
 {

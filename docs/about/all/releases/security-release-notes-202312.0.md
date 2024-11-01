@@ -150,7 +150,7 @@ Other modules that belong to the merchant context might require an update as wel
 
 ```bash
 composer require spryker/user-password-reset:"~1.5.0"
-composer show spryker/user-password- # Verify the version
+composer show spryker/user-password-reset # Verify the version
 ```
 
 * If your platform is based on PHP 8.0, you can use version 1.4.1 of the `user-password-reset` module:

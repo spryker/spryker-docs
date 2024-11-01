@@ -21,22 +21,38 @@ The Merchant Portal includes the following pages:
 
 - [My account](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/manage-merchant-account-details-and-settings.html)
 - [Dashboard](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/manage-merchants-performance-data.html)
-- [Profile](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/profile/editing-merchants-profile-details.html)
-- [Offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/manage-product-offers.html)
+- [Profile](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/edit-merchant-profiles.html)
+- [Offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/manage-merchant-product-offers.html)
 - [Products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html)
 - [Orders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/manage-merchant-orders.html)
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Merchant+Portal/merchant-portal.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/spryker-marketplace/merchant-portal.md/merchant-portal.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 ## Merchant Portal tables
 
 In the Merchant Portal, tables are designed to fit the needs of any Merchant Portal user.
-You can encounter tables in the [Offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/manage-product-offers.html), [Products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html), and [Orders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/manage-merchant-orders.html) sections of the Merchant Portal.
+You can encounter tables in the [Offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/manage-merchant-product-offers.html), [Products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html), and [Orders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/manage-merchant-orders.html) sections of the Merchant Portal.
 Merchant Portal tables are adjustable. You can configure the table to display only the details that you need, for example, show or hide the unnecessary columns, rearrange them or reset the table view to the default state.
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Merchant+Portal/merchant-portal-table-view.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/spryker-marketplace/merchant-portal.md/merchant-portal-table-view.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 ### Table filters
 In addition to the convenient view, tables in the Merchant Portal have handy filter view options. They let you find the relevant data much faster.
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Merchant+Portal/merchant-portal-table-filter.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/spryker-marketplace/merchant-portal.md/merchant-portal-table-filter.mp4" type="video/mp4">
+  </video>
+</figure>

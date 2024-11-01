@@ -26,13 +26,13 @@ A *product label* is a sales-related piece of information conveying a message ab
 
 The product labels are applied to products to be displayed on their product cards and product details pages.
 
-<details><summary markdown='span'>Product label on a product card—Storefront</summary>
+<details><summary>Product label on a product card—Storefront</summary>
 
 ![product label on product card](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/product-label-on-product-card.png)
 
 </details>
 
-<details><summary markdown='span'>Product label on a product details page—Storefront</summary>
+<details><summary>Product label on a product details page—Storefront</summary>
 
 ![product label on product details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/product-label-on-product-details-page.png)
 
@@ -72,31 +72,31 @@ An original price is displayed as a strikethrough to identify that the value of 
 A Back Office user can select the design and the position of the product label on a product card. The following label designs are shipped by default:
 
 <details>
-<summary markdown='span'>Alternative</summary>
+<summary>Alternative</summary>
 
 ![alternative product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/alternatives-available-product-label-design.png)
 
 </details>
 
-<details><summary markdown='span'>Discontinued</summary>
+<details><summary>Discontinued</summary>
 
 ![discontinued product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/discontinued-product-label-design.png)
 
 </details>
 
-<details><summary markdown='span'>Top</summary>
+<details><summary>Top</summary>
 
 ![top product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/top-product-label-design.png)
 
 </details>
 
-<details><summary markdown='span'>New</summary>
+<details><summary>New</summary>
 
 ![new product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/new-product-label-design.png)
 
 </details>
 
-<details><summary markdown='span'>Sale</summary>
+<details><summary>Sale</summary>
 
 ![sale product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/sale-product-label-design.png)
 
@@ -162,7 +162,7 @@ Shop users can view product cards with labels on any Storefront page. Also, they
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES |
 |---|---|---|
-| [Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html) | [ProductLabel migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabel-module.html) | [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html) |
-| [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html) | [ProductLabelGui migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html) |  |
-|  | [ProductLabelSearch migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html |  |
-|  | [ProductLabelStorage migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelstorage-module.html |  |
+| [Install the Discontinued Products feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html) | [ProductLabel migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabel-module.html) | [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html) |
+| [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html) | [ProductLabelGui migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html) |  |
+|  | [Upgrade the ProductLabelSearch module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html |  |
+|  | [Upgrade the ProductLabelStorage module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelstorage-module.html |  |

@@ -10,12 +10,12 @@ To start feature integration, overview and install the following features and Gl
 | NAME |  VERSION |  INTEGRATION GUIDE |
 | - |  - |  -  |
 | Glue API: Spryker Core | {{page.version}}  | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Cart |  {{page.version}} | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
-| Uuid generation console | {{page.version}} | [Uuid Generation Console feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/uuid-generation-console-feature-integration.html) |
+| Cart |  {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| Uuid generation console | {{page.version}} | [Install the Uuid Generation Console feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature.html) |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/shared-carts-rest-api:"^1.2.0" spryker/cart-permission-groups-rest-api:"^1.2.0" --update-with-dependencies
@@ -47,7 +47,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE | EVENT | PATH |
 | -  | - | - | - |
@@ -195,7 +195,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 </details>
 
-<details open>
+<details>
   <summary>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
 ```php

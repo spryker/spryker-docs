@@ -135,11 +135,18 @@ Reduce time-to-market with a flexible integration to Akeneo PIM, keeping new pro
 - To use your Akeneo PIM Integration App, you need to have the Spryker Middleware powered by Alumio.
 - The Akeneo PIM Integration App works with B2C or B2B business models of Spryker Cloud Commerce. Currently, it doesn't cover the Marketplace business models.
 
-## <span class="inline-img">![cloud](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Cloud_128.png)</span> Log forwarding and Metric streaming to Dynatrace <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## <span class="inline-img">![cloud](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Cloud_128.png)</span> Log forwarding and metric streaming to Dynatrace <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+
+
+{% info_block warningBox "Improved version of Dynatrace" %}
+
+We're going to release a refactored version of the Dynatrace integration. This version will be more robust and future-proof. For most projects, we recommend waiting for the new version.
+
+{% endinfo_block %}
 
 We are delighted to announce our newest integration - Dynatrace with Log Forwarding and Metrics Streaming from Spryker PaaS+! This integration is a key step in our journey to support more monitoring platforms compatible with Open Telemetry.
 
-This integration significantly enhances our current monitoring capabilities by extending the coverage of metrics and logs across crucial services such as Amazon ECS, RDS, OpenSearch Service, ElastiCache (Redis), PHP Traces, and RabbitMQ. Previously, the scope of these services was more limited, but with this enhancement, a broader and more precise range of metrics for tracking, debugging, and optimization is achieved. These monitoring improvements will also be available in New Relic and CloudWatch at no additional cost.
+This integration significantly enhances our current monitoring capabilities by extending the coverage of metrics and logs across crucial services such as Amazon ECS, RDS, OpenSearch Service, ElastiCache (Redis), PHP Exceptions, and RabbitMQ. Previously, the scope of these services was more limited, but with this enhancement, a broader and more precise range of metrics for tracking, debugging, and optimization is achieved. These monitoring improvements will also be available in New Relic and CloudWatch at no additional cost.
 
 This feature is ideal for customer DevOps/SREs seeking enhanced, flexible monitoring solutions.
 

@@ -11,7 +11,7 @@ The following video shows how a user can interact with different elements of a c
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
-    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/dynamic-cart-overview.md/dynamic-cart.mp4" type="video/mp4">
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/dynamic-cart-video.mp4" type="video/mp4">
   </video>
 </figure>
 

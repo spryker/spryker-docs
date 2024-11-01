@@ -24,6 +24,8 @@ The following tools are included:
 ### Installation
 The installed commands within PHPStorm can be registered to run either as local machine commands or Spryker Docker SDK commands, depending on your configuration choice during installation. Consequently, ensure the appropriate environment is available (e.g., Spryker Docker SDK running for `docker` platform commands, or required tools installed locally for `local` platform commands).
 
+The script currently supports Mac systems only.
+
 **Prerequisite**:
 Ensure that `awk` is installed on your local machine, as it is required to run the commands directly from PHPStorm.
 
@@ -42,6 +44,6 @@ vendor/bin/phpstorm-command-line-tools.sh --platform=local
 
 5. Restart PhpStorm for the changes to take effect.
 
-This command adds or updates an XML configuration file in PHPStorm’s settings directory, dedicated exclusively to Spryker-related configurations, without altering any other settings. The script currently supports Mac and Linux systems only.
+This command adds or updates an XML configuration file in PHPStorm’s settings directory, dedicated exclusively to Spryker-related configurations, without altering any other settings.
 
 It is recommended to rerun this command after updating the `spryker/development` module, to ensure the latest configurations and updates are applied.

@@ -99,7 +99,7 @@ commonOptions = {
     "http://redisdesktop.com/",
     "https://developer.computop.com/display/EN/Test+Cards",
     "https://www.centralbank.cy/",
-    "https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/store-settings.png"
+    "https://www.facebook.com/Spryker/"
   ],
   :ignore_files => [],
   :typhoeus => {

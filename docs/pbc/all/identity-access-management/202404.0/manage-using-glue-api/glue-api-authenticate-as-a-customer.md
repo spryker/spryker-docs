@@ -13,7 +13,7 @@ redirect_from:
   - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
 related:
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
+    link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration
@@ -92,7 +92,7 @@ Note that depending on the Login feature configuration for your project, too man
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: authenticate as a customer</summary>
+<summary>Response sample: authenticate as a customer</summary>
 
 ```json
 {

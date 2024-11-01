@@ -26,7 +26,7 @@ Enable the following behaviors by registering the plugins:
 | FilterInactiveProductOfferPreReloadItemsPlugin | Removes an inactive product offer from cart when reloading it.   |  | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php

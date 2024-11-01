@@ -97,18 +97,18 @@ On the storefront, company users can perform the following actions by using the 
 <a name="multiple-carts-per-user-on-the-storefront"></a>
 
 <details>
-<summary markdown='span'>Create a cart</summary>
+<summary>Create a cart</summary>
 
 ![Create a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/create-a-cart.gif)
 </details>
 
 <details>
-<summary markdown='span'>Edit and delete a cart</summary>
+<summary>Edit and delete a cart</summary>
 
 ![Edit and delete a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/manage-a-shopping-cart.gif)
 </details>
 <details>
-<summary markdown='span'>Dismiss and duplicate a cart</summary>
+<summary>Dismiss and duplicate a cart</summary>
 
 ![Dismiss and duplicate a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/dismiss-and-duplicate-a-shopping-cart.gif)
 </details>

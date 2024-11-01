@@ -71,7 +71,7 @@ Make sure the `concrete-products` and `concrete-product-image-sets` resources ar
 
 `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}?include=picking-list-items,concrete-products,concrete-product-image-sets`
 <details>
-  <summary markdown='span'>Response sample</summary>
+  <summary>Response sample</summary>
 ```json
 {
     "data": [

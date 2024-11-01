@@ -56,7 +56,7 @@ Request sample: retrieve company users
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve company users</summary>
+<summary>Response sample: retrieve company users</summary>
 
 ```json
 {
@@ -148,7 +148,7 @@ To retrieve information about a company user, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve a company user with the unique identifier</summary>
+<summary>Response sample: retrieve a company user with the unique identifier</summary>
 
 ```json
 {
@@ -168,7 +168,7 @@ To retrieve information about a company user, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: Retrieve company users and related companies, business units, and roles</summary>
+<summary>Response sample: Retrieve company users and related companies, business units, and roles</summary>
 
 ```json
 {

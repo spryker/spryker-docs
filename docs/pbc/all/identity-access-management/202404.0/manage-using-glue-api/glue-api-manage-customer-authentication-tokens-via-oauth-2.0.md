@@ -9,7 +9,7 @@ redirect_from:
 - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
 related:
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
+    link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration
@@ -51,7 +51,7 @@ To authenticate as a customer, send the request:
 |-|-|-|-|
 | Content-Type | application/x-www-form-urlencoded | &check; | `x-www-form-urlencoded` is a URL encoded form. This is the default value if the encrypted attribute is not set to anything. The keys and values are encoded in key-value tuples separated by `&`, with a `=` between the key and the value. Non-alphanumeric characters in both keys and values are percent encoded. |
 
-<details><summary markdown='span'>Request sample: authenticate as a customer</summary>
+<details><summary>Request sample: authenticate as a customer</summary>
 
 | REQUEST BODY KEY | VALUE |
 |-|-|
@@ -69,7 +69,7 @@ To authenticate as a customer, send the request:
 
 ### Response
 
-<details><summary markdown='span'>Response sample: authenticate as a customer</summary>
+<details><summary>Response sample: authenticate as a customer</summary>
 
 ```json
 {
@@ -103,7 +103,7 @@ To refresh an authentication token, send the request:
 |-|-|-|-|
 | Content-Type | x-www-form-urlencoded | &check; | `x-www-form-urlencoded` represents a URL encoded form. This is the default value if the encrypted attribute is not set to anything. The keys and values are encoded in key-value tuples separated by `&`, with a `=` between the key and the value. Non-alphanumeric characters in both keys and values are percent encoded. |
 
-<details><summary markdown='span'>Request sample: refresh an authentication token</summary>
+<details><summary>Request sample: refresh an authentication token</summary>
 
 | REQUEST BODY KEY | VALUE |
 |-|-|
@@ -119,7 +119,7 @@ To refresh an authentication token, send the request:
 
 ### Response
 
-<details><summary markdown='span'>Response sample: refresh an authentication token</summary>
+<details><summary>Response sample: refresh an authentication token</summary>
 
 ```json
 {

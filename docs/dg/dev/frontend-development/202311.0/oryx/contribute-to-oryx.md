@@ -13,7 +13,7 @@ This document describes how you can contribute to the development of the Oryx fr
 
 ## Semantic versioning
 
-Oryx follows semantic versioning. We release patch versions for critical bug fixes, minor versions for new features or non-essential changes, and major versions for any breaking changes. When we make breaking changes, we also introduce deprecation warnings in a minor version so that our users learn about the upcoming changes and migrate their code in advance. For more details, see [Oryx versioning](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/oryx-versioning.html).
+Oryx follows semantic versioning. We release patch versions for critical bug fixes, minor versions for new features or non-essential changes, and major versions for any breaking changes. When we make breaking changes, we also introduce deprecation warnings in a minor version so that our users learn about the upcoming changes and migrate their code in advance. For more details, see [Oryx versioning](/docs/dg/dev/frontend-development/{{page.version}}/oryx/getting-started/oryx-versioning.html).
 
 ## Branch organization
 

@@ -341,7 +341,7 @@ Enable the following behaviors by registering the plugins:
 | CustomerAccessPermissionStoragePlugin | Provides ability to fetch customer access permissions on customer login |               | Spryker\Client\CustomerAccessPermission\Plugin |
 
 <details>
-<summary markdown='span'>src/Pyz/Client/Permission/PermissionDependencyProvider.php</summary>
+<summary>src/Pyz/Client/Permission/PermissionDependencyProvider.php</summary>
 
 ```php
 <?php

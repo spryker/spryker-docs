@@ -54,7 +54,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 
 <details>
-<summary markdown='span'>Request sample: check out with one shipment, order information, and shipment information</summary>
+<summary>Request sample: check out with one shipment, order information, and shipment information</summary>
 
 `POST https://glue.mysprykershop.com/checkout?include=orders,order-shipments`
 
@@ -128,7 +128,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: check out with a split shipment, order information, and shipment information</summary>
+<summary>Response sample: check out with a split shipment, order information, and shipment information</summary>
 
 ```json
 {

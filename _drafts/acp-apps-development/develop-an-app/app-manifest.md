@@ -14,7 +14,7 @@ For the manifest, make sure to follow these conditions:
 - For each locale, a separate manifest file must be created. The file name must be the same as the locale name, for example, *en_US.json*. 
 - The default directory for all the manifest files (all locales) is `/config/app/manifest`.
 
-<details open>
+<details>
 <summary>Manifest example</summary>
 
 ```json

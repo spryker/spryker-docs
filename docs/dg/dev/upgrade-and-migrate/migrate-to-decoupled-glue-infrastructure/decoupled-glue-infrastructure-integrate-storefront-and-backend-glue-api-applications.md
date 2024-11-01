@@ -326,8 +326,8 @@ Enable the following behaviors by registering the plugins:
 | BackendRouterProviderPlugin | Gets route collection from current Glue Backend API Application for route debug console command. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
 | ControllerCacheCollectorPlugin | Returns controllers configuration for GlueStorefrontApiApplication/GlueBackendApiApplication applications. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\GlueApplication and Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/****GlueApplicationDependencyProvider****.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/****GlueApplicationDependencyProvider****.php</summary>
 
 ```php
 <?php
@@ -454,8 +454,8 @@ If the console commands are setup correctly, the following commands are availabl
 * `vendor/bin/glue router:debug [application_name]`
 * `vendor/bin/glue api:router:cache:warm-up [application_name]`
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -551,8 +551,8 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 ```
 </details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

@@ -114,7 +114,7 @@ For more information about improving data import performance, see [Data importer
 
 Features affected by the ORM approach:
 
-- [Data import](/docs/scos/dev/sdk/data-import.html)
+- [Data import](/docs/dg/dev/data-import/{{site.version}}/data-import.html)
 - [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html)
 
 ### Database query optimization

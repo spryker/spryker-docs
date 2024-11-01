@@ -132,7 +132,7 @@ The following diagram shows an example of a simple State Machine workflow, where
 The following steps are taken by the operator:
 
 1. Do a final check of the merchant's public profile, products, and offer quality.
-2. [Activate merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html) and [approve products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products.html#activating-and-deactivating-a-concrete-product) and [offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/manage-merchant-product-offers.html#approving-or-denying-offers) in the Back Office.
+2. [Activate merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html) and approve products and [offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/manage-merchant-product-offers.html#approving-or-denying-offers) in the Back Office.
 3. Optional: Activate and approve products and offers through the data importer.
 4. Optional: To optimize the product and offer approval process, define specific rules per merchant.
 

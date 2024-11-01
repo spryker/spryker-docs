@@ -184,8 +184,8 @@ Name is represented by a slugified version of a name for default locale, e.g.: C
 
 Append glossary according to your configuration:
 
-<details open>
-<summary markdown='span'>src/data/import/glossary.csv</summary>
+<details>
+<summary>src/data/import/glossary.csv</summary>
 
 ```yaml
 configured_bundle.quantity,Quantity:,en_US
@@ -408,8 +408,8 @@ use Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Event\Subscrib
 use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
 use Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event\Subscriber\ConfigurableBundleStorageEventSubscriber;
 
-<details open>
-<summary markdown='span'></summary>
+<details>
+<summary></summary>
 Your text
 <br>
 </details>
@@ -995,8 +995,8 @@ Make sure an error occurs while deleting a product list that was assigned to a s
 | ProductConcreteRelationConfigurableBundleTemplateSlotEditTablesProviderPlugin | Provides tables for the Assign Products tab. | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
 
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/ConfigurableBundleGui/ConfigurableBundleGuiDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/ConfigurableBundleGui/ConfigurableBundleGuiDependencyProvider.php</summary>
 
 ```php
 <?php

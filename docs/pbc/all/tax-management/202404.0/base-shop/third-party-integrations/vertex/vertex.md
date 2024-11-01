@@ -59,4 +59,4 @@ The following diagram demonstrates the flow of the Vertex app integration:
 
 ## Next steps
 
-[Install Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html)
+[Install Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html)

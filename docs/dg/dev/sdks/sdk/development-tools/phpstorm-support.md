@@ -34,11 +34,11 @@ To install the Spryker development tools configuration in PHPStorm:
 2. Open a terminal on your local machine.
 3. Navigate to the root project directory.
 4. Run the following command in your project root:
-```bash Copy code
+```
 vendor/bin/phpstorm-command-line-tools.sh
 ```
 By default, the command installs with `--platform=docker`, configuring PHPStorm tools to run with the Spryker Docker SDK. To configure tools for local machine usage instead, specify `--platform=local`:
-```bash Copy code
+```
 vendor/bin/phpstorm-command-line-tools.sh --platform=local
 ```
 

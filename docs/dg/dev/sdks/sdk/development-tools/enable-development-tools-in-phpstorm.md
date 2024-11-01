@@ -12,7 +12,7 @@ related:
 ---
 
 
-This document describes how to enable and use development tools, like PHPStan or Code sniffer, directly in PHPStorm’s External Tools panel. These tools are available at both module and project levels and can be executed by right-clicking within the project directory tree.
+This document describes how to enable and use development tools, like PHPStan or Code sniffer, directly in PHPStorm’s External Tools panel. These tools are available at both module and project levels and can be executed from the context menu within the project directory tree.
 
 The following tools are supported and can be used for module folders:
 - `console code:sniff:style -f`: applies coding style fixes.

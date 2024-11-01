@@ -1041,7 +1041,7 @@ entries:
         - title: VCS connector
           url: /docs/dg/dev/sdks/sdk/vcs-connector.html
         - title: Enable development tools in PHPStorm
-          url: /docs/dg/dev/sdks/sdk/enable-development-tools-in-phpstorm.html
+          url: /docs/dg/dev/sdks/sdk/development-tools/enable-development-tools-in-phpstorm.html
 
       - title: Troubleshooting
         nested:

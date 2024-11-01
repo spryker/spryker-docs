@@ -25,7 +25,9 @@ This document describes how to create merchants in the Back Office.
 
 {% info_block infoBox "" %}
 
-In a non-marketplace environment, a merchant is a record of the company which sells goods and is the only one in the system.
+In a non-marketplace environment:
+- In B2B: Multiple merchants may exist, representing different companies selling goods.
+- In B2C: There are no merchants, as the system is focused on direct sales from the business to the consumer.
 
 {% endinfo_block %}
 

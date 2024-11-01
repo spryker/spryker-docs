@@ -1201,7 +1201,7 @@ entries:
                 nested:
                   - title: Install features
                     nested:
-                      - title: Dynamic Multistore
+                      - title: Install Dynamic Multistore
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
                       - title: Dynamic Multistore + Availability Notification
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-availability-notification-feature.html
@@ -1215,8 +1215,6 @@ entries:
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-prices-feature.html
                       - title: Dynamic Multistore + Product
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-product-feature.html
-                      - title: Install Dynamic Multistore
-                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
 
                   - title: Upgrade modules
                     nested:
@@ -1234,8 +1232,10 @@ entries:
                 url: /docs/pbc/all/dynamic-multistore/base-shop/add-fields-to-back-office-forms.html
               - title: Delete stores
                 url: /docs/pbc/all/dynamic-multistore/base-shop/delete-stores.html
-
-
+              - title: Import stores
+                url: /docs/pbc/all/dynamic-multistore/base-shop/import-stores.html
+                include_versions:
+                - "202410.0"  
 
           - title: Marketplace
             nested:
@@ -1573,6 +1573,10 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html
                       - title: Edit merchants
                         url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html
+                      - title: View merchants
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/view-merchants.html
+                        include_versions:
+                        - "202410.0"                        
 
                   - title: Manage merchant users
                     nested:

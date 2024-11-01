@@ -29,7 +29,7 @@ In case of updates, the goal of automated tests is not a 100% code coverage, but
 ## Code analysis tools
 
 We find the following static code analysis tools the most helpful and strongly recommend using them:
-* [PhpStan](https://github.com/phpstan/phpstan):  helps you find incompatible interface signatures, undefined method calls, missing classes, use of deprecated methods (phpstan-deprecation-rules), and many more. For information about installing and using the tool, see [PHPStan](/docs/scos/dev/sdk/development-tools/phpstan.html).
+* [PhpStan](https://github.com/phpstan/phpstan):  helps you find incompatible interface signatures, undefined method calls, missing classes, use of deprecated methods (phpstan-deprecation-rules), and many more. For information about installing and using the tool, see [PHPStan](/docs/dg/dev/sdks/sdk/development-tools/phpstan.html).
 * [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer): keeps the code clean and consistent after updates. For information about installing and using the tool, see [Code Sniffer](/docs/scos/dev/sdk/development-tools/code-sniffer.html).
 * [Architecture Sniffer](https://github.com/spryker/architecture-sniffer): helps you maintain the quality of the architecture. For information about installing and using the tool, see [Architecture Sniffer](/docs/scos/dev/sdk/development-tools/architecture-sniffer.html).
 

@@ -56,9 +56,9 @@ Make sure the following modules have been installed:
 
 Set up the following configuration.
 
-#### Set up Router
+#### Optional: Set up Router
 
-Optional: To user router cache, add the following configuration:
+To user router cache, add the following configuration:
 
 ```php
 <?php

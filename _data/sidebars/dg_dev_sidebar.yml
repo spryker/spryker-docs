@@ -1040,6 +1040,8 @@ entries:
           url: /docs/dg/dev/sdks/sdk/development-tools/ts-linter.html
         - title: VCS connector
           url: /docs/dg/dev/sdks/sdk/vcs-connector.html
+        - title: Enable development tools in PHPStorm
+          url: /docs/dg/dev/sdks/sdk/enable-development-tools-in-phpstorm.html
 
       - title: Troubleshooting
         nested:

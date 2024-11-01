@@ -31,7 +31,7 @@ The PHP version in your deploy files should correspond to the PHP version declar
   "description": "Spryker B2C Demo Shop",
   "license": "proprietary",
   "require": {
-    "php": ">=8.0",
+    "php": ">=8.2",
     ...
   }
 }
@@ -42,7 +42,7 @@ The PHP version in your deploy files should correspond to the PHP version declar
 ```yaml
 ...
 image:
-    tag: spryker/php:8.2-alpine3.12
+    tag: spryker/php:8.3
     php:
         ini:
             "opcache.revalidate_freq": 0
@@ -113,7 +113,7 @@ Message: Not all the targets have the same PHP versions
 Target:  Current php version $phpVersion: php7.2
          tests/Acceptance/_data/InvalidProject/composer.json: -
          tests/Acceptance/_data/InvalidProject/deploy**.yml: -
-         SDK php versions: php7.2, php8.2
+         SDK php versions: php7.2, php8.3
 ```
 
 The `composer.json` file uses PHP version `7.2`:
@@ -130,12 +130,12 @@ The `composer.json` file uses PHP version `7.2`:
 }
 ```
 
-The `deploy.yml` file uses PHP version `8.2`:
+The `deploy.yml` file uses PHP version `8.3`:
 
 ```yaml
 ...
 image:
-    tag: spryker/php:8.2
+    tag: spryker/php:8.3
     php:
         ini:
             "opcache.revalidate_freq": 0

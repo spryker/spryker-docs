@@ -40,7 +40,7 @@ For any questions about Spryker. We want the knowledge about Spryker to be avail
 
 Report problems with Alumio, request its provisioning for your environments, or schedule an appointment with Alumio Support.
 
-### Infrstructure Change Request and Access Management
+### Infrastructure Change Request and Access Management
 
 Request all currently supported standard changes, such as requesting changes to non-production environments sizing, IAM users and environment provisioning.
 
@@ -64,6 +64,10 @@ This category offers a selection of professional services we are offering. For e
 
 Request help with the Upgrader. These requests are processed by our Upgrader experts.
 
+### Announce High Traffic/Load
+
+Let us know about events or time periods in which you expect a higher than usual load on your production enviornments. We can use this information to check auto scaling settings and evaluate if they need to be adjusted to meet your demands.
+
 ### Emergencies
 
 Emergencies are reserved for problems that have significant business impact now or very soon. Emergency cases regularly start an [escalation](/docs/about/all/support/support-case-escalations.html). This category shouldn't be used to speed up requests or problem reports. Emergencies need to be associated with significant risk or business impact, like revenue, security, or go-lives.
@@ -81,3 +85,35 @@ Due to contractual reasons, only customers can request new environments or acces
 ## Manage cases
 
 Clicking on **Our Cases** opens the list of cases you've opened. To take a look at the details of a particular case, click on the case number. On the page of a case, you can take a look at the communication history, view the status of the case and associated Jira ticket, or ask to reevaluate the assigned priority.
+
+### Case receipts and notifications
+
+When creating a case, or when there are meaningful updates to your case, like a status change or new comments, you will receive email notifications. Notifications are sent to the email address associated with the Support Portal account that was used to create a case; optionally notifications are also sent to the email address specified as "Additional Contact to notify" in the Case Assistant.
+
+If you are managing multiple projects or have a high volume of cases and communication with us, knowing the structure of our notifications and receipts can help you prepare forwarding or labelling rules in your email client:
+
+
+* Case confirmation emails are sent when you create a case or when its status is updated. Subject pattern:
+```bash
+Case Receipt - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} - Status: {STATUS}. {TRACKING ID}
+```
+
+* Change request confirmation emails are sent when you create a change request. Subject pattern:
+```bash
+Change Request Receipt - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} - Status: {STATUS}. {TRACKING ID}
+```
+
+* ETA update notification emails are sent when the ETA on your case is updated. Subject pattern:
+```bash
+Case ETA Update - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME}} - ETA: {ETA}. {TRACKING ID}
+```
+
+* Emergency case emails are sent when you declare an emergency or your emergency case's status is updated. Subject pattern:
+```bash
+Emergency {STATUS} - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} {TRACKING ID}
+```
+
+* Case comment notification emails are sent when there is a new comment in your case. Subject pattern:
+```bash
+Case Comment Notification - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} - Status: {STATUS} {Tracking ID}
+```

@@ -8,7 +8,7 @@ There are two steps to the two migration process.
 * The first is to migrate all your orders to the new structure and drop use of `SalesAggregator`.
 * The second is to migrate your code to support the `old Aggregators`.
 
-To learn how to migrate to the new structure, see [Migration Guide - Calculation](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html).
+To learn how to migrate to the new structure, see [Upgrade the Calculation module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html).
 
 ### Enable the `SalesAggregator` in your project
 
@@ -138,7 +138,7 @@ The payment methods have changed accordingly to use `SalesFacade` instead of `Sa
 
 ## Upgrading from version 2.* to version 3.*
 
-The tax plugins are using the version 3.* of the Tax module. See [Migration Guide - Tax](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-tax-module.html) for more details.
+The tax plugins are using the version 3.* of the Tax module. See [Upgrade the Tax module](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-tax-module.html) for more details.
 
 ### SalesAggregator migration console command
 

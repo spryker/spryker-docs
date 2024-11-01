@@ -369,6 +369,6 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 
 {% info_block infoBox %}
 
-See  [Migration Guide - PriceProduct](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html) for information on how to migrate to a newer version of the `PriceProduct` module with price dimensions support.
+See  [Upgrade the PriceProduct module](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html) for information on how to migrate to a newer version of the `PriceProduct` module with price dimensions support.
 
 {% endinfo_block %}

@@ -9,12 +9,12 @@ Install the required features:
 
 | NAME                                    | VERSION          | INSTALLATION GUIDE                                                                                                                                                                  |
 |-----------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Warehouse User Management               | {{page.version}} | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app/install-and-upgrade/install-features/install-the-warehouse-user-management-feature.html)                     |
+| Warehouse User Management               | {{page.version}} | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html)                     |
 | Order Management     | {{site.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)
-| Inventory Management | {{site.version}} | [Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+| Inventory Management | {{site.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 | Shipment                                | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                       |
 | Push Notification                       | {{page.version}} | [Install the Push Notification feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-push-notification-feature.html)                                     |
-| Spryker Core Back Office                | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-spryker-core-back-office-feature.html)                        |
+| Spryker Core Back Office                | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)                        |
 
 ## 1) Install the required modules
 
@@ -274,7 +274,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 
 2. Add the `DummyPicking` subprocess to the `DummyPayment01` process as an example. Consider OMS configuration using the `DummyPayment01` process as an example.
 
-<details><summary markdown='span'>config/Zed/oms/DummyPayment01.xml</summary>
+<details><summary>config/Zed/oms/DummyPayment01.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -495,7 +495,7 @@ console data:import glossary
 | PushNotificationPickingListPostUpdatePlugin              | Creates a push notification after updating a picking list.                           |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList      |
 | WarehouseUserPushNotificationSubscriptionValidatorPlugin | Validates whether a user has a warehouse assignment.                               |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PushNotification |
 
-<details open><summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
 ```php
 <?php

@@ -24,7 +24,7 @@ Only preset attributes are retrieved. So if an attribute allows custom input ( `
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 <a name="{all-attributes}"></a>
 
@@ -44,7 +44,7 @@ Request sample: retrieve all product attributes
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve all product attributes</summary>
+<summary>Response sample: retrieve all product attributes</summary>
 
 ```json
 {
@@ -182,7 +182,7 @@ Request sample: retrieve a product attribute
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve a product attribute</summary>
+<summary>Response sample: retrieve a product attribute</summary>
 
 ```json
 {

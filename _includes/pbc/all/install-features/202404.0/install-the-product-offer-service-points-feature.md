@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME           | VERSION          | INSTALLATION GUIDE                                                                                                                                                                        |
 |----------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Product Offer  | {{page.version}} | [Product Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
-| Service Points | {{page.version}} | [Service Points feature integration](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)                                                 |
+| Product Offer  | {{page.version}} | [Install the Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
+| Service Points | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)                                                 |
 
 ### 1) Install the required modules
 
@@ -360,8 +360,8 @@ class ProductOfferServicePointStorageConfig extends SprykerProductOfferServicePo
 | ServicePointStoreWritePublisherPlugin            | Publishes product offer services data by `SpyServicePointStore` entity events.                        |               | Spryker\Zed\ProductOfferServicePointStorage\Communication\Plugin\Publisher\ServicePointStore   |
 | ProductOfferServicePublisherTriggerPlugin        | Allows to populate product offer service storage table with data and trigger further export to Redis. |               | Spryker\Zed\ProductOfferServicePointStorage\Communication\Plugin\Publisher                     |
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -490,8 +490,8 @@ To expand product offers with services, register the plugins:
 | ServiceProductOfferStorageExpanderPlugin | Expands product offer storage transfers with services from the storage. |               | Spryker\Client\ProductOfferServicePointStorage\Plugin\ProductOfferStorage    |
 | ServiceProductOfferViewSectionPlugin     | Expands the product offer view section with services.                   |               | Spryker\Zed\ProductOfferServicePointGui\Communication\Plugin\ProductOfferGui |
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
 
 ```php
 <?php

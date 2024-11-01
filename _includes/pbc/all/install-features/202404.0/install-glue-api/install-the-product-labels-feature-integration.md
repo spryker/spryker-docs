@@ -7,8 +7,8 @@ Install the required features:
 
 | NAME | VERSION | REQUIRED SUB-FEATURE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Product Management | {{page.version}} | [Products API feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Product Management | {{page.version}} | [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
 | Product Label | {{page.version}} | |
 
 
@@ -61,8 +61,8 @@ Activate the following plugin:
 | ProductLabelsRelationshipByResourceIdPlugin | Adds the product labels resource as a relationship to the abstract product resource. | None | Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsRelationshipByResourceIdPlugin |
 | ProductLabelsResourceRoutePlugin |Registers the product labels resource.  | None | Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsResourceRoutePlugin |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

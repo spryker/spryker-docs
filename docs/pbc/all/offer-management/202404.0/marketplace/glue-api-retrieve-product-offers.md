@@ -20,7 +20,7 @@ For detailed information about the modules that provide the API functionality an
 
 * [Install the Marketplace Product Offer Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
 * [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
-* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
+* [Install the Marketplace Product Offer Volume Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
 
 ## Retrieve a product offer
 
@@ -53,7 +53,7 @@ To retrieve the product offers, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve an offer</summary>
+<summary>Response sample: retrieve an offer</summary>
 
 ```json
 {
@@ -74,7 +74,7 @@ To retrieve the product offers, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve an offer with product offer prices included</summary>
+<summary>Response sample: retrieve an offer with product offer prices included</summary>
 
 ```json
 {
@@ -137,7 +137,7 @@ To retrieve the product offers, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve an offer with product offer availabilities included</summary>
+<summary>Response sample: retrieve an offer with product offer availabilities included</summary>
 
 ```json
 {
@@ -183,7 +183,7 @@ To retrieve the product offers, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve an offer with merchant information included</summary>
+<summary>Response sample: retrieve an offer with merchant information included</summary>
 
 ```json
 {

@@ -24,7 +24,7 @@ This endpoint allows retrieving detailed information about the prices of abstrac
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 
 ## Retrieve prices of an abstract product
 
@@ -52,7 +52,7 @@ To retrieve prices of an abstract product, send the request:
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve default prices of an abstract product</summary>
+<details><summary>Response sample: retrieve default prices of an abstract product</summary>
 
 ```json
 {
@@ -98,7 +98,7 @@ To retrieve prices of an abstract product, send the request:
 </details>
 
 <details>  
-<summary markdown='span'>Response sample: retrieve default and volume prices of an abstract product</summary>
+<summary>Response sample: retrieve default and volume prices of an abstract product</summary>
 
 ```json    
 {
@@ -150,7 +150,7 @@ To retrieve prices of an abstract product, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve a gross price in Swiss Franc of an abstract product</summary>
+<details><summary>Response sample: retrieve a gross price in Swiss Franc of an abstract product</summary>
 
  ```json
     {

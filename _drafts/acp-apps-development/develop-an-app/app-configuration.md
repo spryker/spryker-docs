@@ -140,7 +140,7 @@ Common properties of a widget are:
 ```
 </details>
 
-<details open>
+<details>
 <summary>notification example</summary>
 
 ```json

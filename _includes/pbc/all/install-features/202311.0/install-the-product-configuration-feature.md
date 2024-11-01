@@ -1,6 +1,6 @@
 
 
-This document describes how to install the [Product Configuration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/configurable-product-feature-overview/configurable-product-feature-overview.html) feature.
+This document describes how to install the [Product Configuration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html) feature.
 
 
 ## Install feature core
@@ -15,13 +15,13 @@ Install the required features:
 |----------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core         | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                 |
 | Product              | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                           |
-| Cart                 | {{page.version}} | [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                 |
+| Cart                 | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                 |
 | Order Management     | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)         |
-| Checkout             | {{page.version}} | [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)                         |
-| Prices               | {{page.version}} | [Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                    |
-| Inventory Management | {{page.version}} | [Inventory management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+| Checkout             | {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)                         |
+| Prices               | {{page.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                    |
+| Inventory Management | {{page.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 | Wishlist             | {{page.version}} ||
-| ShoppingList         | {{page.version}} | [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html)             |
+| ShoppingList         | {{page.version}} | [Install the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html)             |
 
 ### 1) Install the required modules
 
@@ -1087,7 +1087,7 @@ Make sure the plugins work correctly:
 | ProductConfigurationWishlistItemPriceProductExpanderPlugin         | Expands the collection of product price transfers with product configuration prices taken from `ProductViewTransfer`. | None           | Spryker\Client\ProductConfigurationWishlist\Plugin\PriceProductStorage |
 
 
-<details><summary markdown='span'>src/Pyz/Zed/Wishlist/WishlistDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Wishlist/WishlistDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1262,7 +1262,7 @@ Make sure that the wishlist plugins work correctly:
 | ProductConfigurationShoppingListItemCollectionExpanderPlugin | Expands `ShoppingListItemTransfer` transfer object with product configuration data.                   | None           | Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList |
 | ItemProductConfigurationItemToShoppingListItemMapperPlugin   | Copies product configuration from a cart item to a shopping list item.                                | None           | Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList |
 
-<details><summary markdown='span'>src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php</summary>
+<details><summary>src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1311,7 +1311,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 
 </details>
 
-<details><summary markdown='span'>src/Pyz/Zed/ShoppingList/ShoppingListDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ShoppingList/ShoppingListDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1644,7 +1644,7 @@ Make sure that the reorder expander plugin works:
 | ShoppingListPageProductConfiguratorResponseStrategyPlugin                 | Maps the product configurator check sum response, validates it and replaces configuration for a given product in the shopping list item.                                                                  | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Plugin\ProductConfiguratorGatewayPage |
 | ShoppingListPageProductConfiguratorRequestDataFormExpanderStrategyPlugin  | Extends the product configurator request form with the `shoppingListItemUuid` and `quantity` fields to support configuration for a shopping list item on the Shopping List page.                          | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Plugin\ProductConfiguratorGatewayPage |
 
-<details><summary markdown='span'>src/Pyz/Yves/ProductConfiguratorGatewayPage/ProductConfiguratorGatewayPageDependencyProvider.php</summary>
+<details><summary>src/Pyz/Yves/ProductConfiguratorGatewayPage/ProductConfiguratorGatewayPageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1735,7 +1735,7 @@ Make sure that the plugins are set up correctly:
 | ProductConfigurationShoppingListPageButtonWidget  | Displays the product configuration button for configurable shopping list items.                | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Widget  |
 
 
-<details><summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+<details><summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

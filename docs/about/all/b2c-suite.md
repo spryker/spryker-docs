@@ -15,7 +15,7 @@ related:
 The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. Of course, every B2С project has its own set of features that meet its business needs and B2B features can be used as well, but the most common features for B2C commerce are as follows.
 
 <details>
-<summary markdown='span'>B2C feature list</summary>
+<summary>B2C feature list</summary>
 
 - [Configurable Product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html)
 - [Return Management](/docs/pbc/all/return-management/{{site.version}}/marketplace/marketplace-return-management-feature-overview.html)
@@ -72,7 +72,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 ## B2C Demo Shop
 To demonstrate the B2C features in a live implementation, we use a B2C Demo Shop. The B2C Demo Shop is a showcase that is preloaded with a combination of modules and functionalities best suited for B2C commerce. This Demo Shop is our recommended starting point for all standard B2C commerce projects. New features for the B2C Demo Shop are released every several months.
 
-{% wistia 7ibj2uavig 960 720 %}
+{% wistia iqrkesbawu 960 720 %}
 
 To download the B2C Demo Shop, visit the following GitHub repository: [https://github.com/spryker-shop/b2c-demo-shop](https://github.com/spryker-shop/b2c-demo-shop).
 

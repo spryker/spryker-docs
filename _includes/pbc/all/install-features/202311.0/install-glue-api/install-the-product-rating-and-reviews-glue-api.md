@@ -115,7 +115,7 @@ Make sure that the following endpoints are available:
 * `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews`
 
 <details>
-<summary markdown='span'>Example</summary>
+<summary>Example</summary>
 
 ```json
 {
@@ -198,7 +198,7 @@ Make sure that the following endpoints are available:
 * `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews/{% raw %}{{{% endraw %}review_id{% raw %}}}{% endraw %}`
 
 <details>
-<summary markdown='span'>Example</summary>
+<summary>Example</summary>
 
 ```json
 {
@@ -313,7 +313,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
 3. Make sure that `averageRating` and `reviewCount` attributes are present in concrete-products and abstract-products resources attributes section.
 
 <details>
-<summary markdown='span'>Example</summary>
+<summary>Example</summary>
 
 ```json
 {
@@ -467,7 +467,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
 5. Make sure that the response contains `product-reviews` as a relationship and `product-reviews` data included.
 
 <details>
-<summary markdown='span'>Example</summary>
+<summary>Example</summary>
 
 ```json
 {

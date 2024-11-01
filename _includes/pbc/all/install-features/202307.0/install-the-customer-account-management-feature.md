@@ -1,6 +1,6 @@
 
 
-This document describes how to install the [Customer Account Management](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature.
+This document describes how to install the [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature.
 
 {% info_block errorBox "Included features" %}
 
@@ -337,8 +337,8 @@ Ensure that the following changes have been applied in the transfer objects:
 | DeleteExpiredCustomerInvalidatedRecordsConsole                 | Deletes all expired customer invalidated storage records.                                                                                                                                                    | None          | Spryker\Zed\CustomerStorage\Communication\Console                   |
 
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1205,4 +1205,4 @@ class SessionCustomerValidationPageDependencyProvider extends SprykerSessionCust
 | NAME                                           | INSTALLATION GUIDE                                                                                                                                                                                      |
 |------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Customer API	                                  | [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html)       |
-| Customer Account Management + Order Management | [Install the Customer Account Management + Order Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-order-management-feature-integration.html) |
+| Customer Account Management + Order Management | [Install the Customer Account Management + Order Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html) |

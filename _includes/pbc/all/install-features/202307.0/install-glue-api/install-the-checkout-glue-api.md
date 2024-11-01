@@ -16,7 +16,7 @@ Install the required features:
 | Glue API: Spryker Core                 | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                                 |
 | Glue API: Cart                         | {{page.version}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                                                             |
 | Glue API: Customer Account Management  | {{page.version}} | [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
-| Glue API: Payments                     | {{page.version}} | [Glue API: Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-glue-api.html)                                         |
+| Glue API: Payments                     | {{page.version}} | [Install the Payments Glue API](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-glue-api.html)                                         |
 | Glue API: Shipment                     | {{page.version}} | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                            |
 
 ### 1) Install the required modules
@@ -44,7 +44,7 @@ Make sure that the following modules have been installed:
 Add all the payment methods available in the shop to `CheckoutRestApiConfig`—for example:
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
+<summary>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
 
 ```php
 <?php
@@ -149,7 +149,7 @@ For the `checkout-data` endpoint to keep returning shipment methods, keep `Pyz\G
 If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` is true, make sure the shipping method attributes are returned in the `shipmentMethods` after sending the `POST https://glue.mysprykershop.com/checkout-data` request:
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary>Response sample</summary>
 
 ```json
 {
@@ -223,7 +223,7 @@ For the `checkout-data` endpoint to keep returning payment methods, keep `Checko
 If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` is true, make sure the payment methods attributes are returned in the `paymentProviders `attribute after sending the `POST https://glue.mysprykershop.com/checkout-data` request:
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary>Response sample</summary>
 
 ```json
 {
@@ -349,7 +349,7 @@ Activate the following plugins:
 | GuestCartByRestCheckoutDataResourceRelationshipPlugin | Adds `guest-carts` resource as the relationship by `RestCheckoutDataTransfer.quote`. Applies only for guest customers. | None          | Spryker\Glue\CartsRestApi\Plugin\GlueApplication    |
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -879,4 +879,4 @@ Integrate the following related features.
 | FEATURE   | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE    |
 | -------- | ----------------- | ---------------------- |
 | Glue API: Shipment  | ✓                                | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)  |
-| Glue API: Payments   | ✓                                | [Glue API: Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-glue-api.html) |
+| Glue API: Payments   | ✓                                | [Install the Payments Glue API](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-glue-api.html) |

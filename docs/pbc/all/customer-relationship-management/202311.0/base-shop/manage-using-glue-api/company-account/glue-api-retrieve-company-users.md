@@ -26,14 +26,14 @@ related:
   - title: Retrieving business unit addresses
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html
   - title: Company Accounts overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-accounts-overview.html
 ---
 
 This endpoint allows retrieving information about company users.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 
 ## Retrieve company users
 
@@ -56,7 +56,7 @@ Request sample: retrieve company users
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve company users</summary>
+<summary>Response sample: retrieve company users</summary>
 
 ```json
 {
@@ -148,7 +148,7 @@ To retrieve information about a company user, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve a company user with the unique identifier</summary>
+<summary>Response sample: retrieve a company user with the unique identifier</summary>
 
 ```json
 {
@@ -168,7 +168,7 @@ To retrieve information about a company user, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: Retrieve company users and related companies, business units, and roles</summary>
+<summary>Response sample: Retrieve company users and related companies, business units, and roles</summary>
 
 ```json
 {

@@ -53,7 +53,7 @@ Request sample: retrieve abstract products in an abstract product list
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve abstract products in an abstract product list</summary>
+<summary>Response sample: retrieve abstract products in an abstract product list</summary>
 
 ```json
 {

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-infrastructure.html
 related:
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
+    link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-api-authentication-and-authorization.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
@@ -251,7 +251,7 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
 `GET http://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6?include=wishlist-items,concrete-products`
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary>Response sample</summary>
 
 ```json
 {

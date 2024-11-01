@@ -13,7 +13,7 @@ Install the required features:
 | NAME      | VERSION  | INSTALLATION GUIDE |
 | --------- | -------- | ------------------|
 | Marketplace Product Offer | {{page.version}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)
-| Cart | {{page.version}}   | [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)
+| Cart | {{page.version}}   | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)
 
 ### Set up behavior
 
@@ -26,7 +26,7 @@ Enable the following behaviors by registering the plugins:
 | FilterInactiveProductOfferPreReloadItemsPlugin | Removes an inactive product offer from cart when reloading it.   |  | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -99,7 +99,7 @@ To start feature integration, overview, and install the necessary features:
 | NAME        | VERSION    | INSTALLATION GUIDE |
 | ----------- | ---------- | ------------------|
 | Marketplace Product Offer | {{page.version}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
-| Cart                      | {{page.version}}   | [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| Cart                      | {{page.version}}   | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 
 ### Set up behavior
 
@@ -143,4 +143,4 @@ Make sure that the product offer reference (and sold by merchant) is added to th
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | - | - | - |
-| Marketplace Product Offer + Cart API | | [Glue API: Marketplace Product Offer + Cart feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-cart-glue-api.html) |
+| Marketplace Product Offer + Cart API | | [Install the Marketplace Product Offer + Cart Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-cart-glue-api.html) |

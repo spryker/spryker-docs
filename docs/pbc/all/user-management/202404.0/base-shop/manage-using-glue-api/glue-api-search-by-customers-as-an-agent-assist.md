@@ -25,8 +25,8 @@ Search by customers to find out information about them. This endpoint is mostly 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)
-* [Customer Account Management + Agent Assist feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html)
+* [Install the Agent Assist Glue API](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)
+* [Install the Customer Account Management + Agent Assist feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html)
 * [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)
 
 ## Search by customers
@@ -61,7 +61,7 @@ To search by customers, send the request:
 
 ### Response
 
-<details><summary markdown='span'>Response sample: return the list of all customers</summary>
+<details><summary>Response sample: return the list of all customers</summary>
 
 ```json
 {
@@ -148,7 +148,7 @@ To search by customers, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: search for a customer with page limit and page offset</summary>
+<details><summary>Response sample: search for a customer with page limit and page offset</summary>
 
 ```json
 {
@@ -206,7 +206,7 @@ To search by customers, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: search for a customer by email address</summary>
+<details><summary>Response sample: search for a customer by email address</summary>
 
 ```json
 {
@@ -238,7 +238,7 @@ To search by customers, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: search for a customer by name</summary>
+<details><summary>Response sample: search for a customer by name</summary>
 
 ```json
  {
@@ -270,7 +270,7 @@ To search by customers, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: search for a customer by customer reference</summary>
+<details><summary>Response sample: search for a customer by customer reference</summary>
 
 ```json
 {

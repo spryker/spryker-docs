@@ -13,9 +13,9 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --------------- | ------- | ---------- |
-| Spryker Core                 | {{page.version}} | [Spryker Core Feature Integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Return Management            | {{page.version}} | [Return Management Feature Integration](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-feature.html) |
-| Marketplace Order Management | {{page.version}} | [Marketplace Order Management Feature Integration](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
+| Spryker Core                 | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Return Management            | {{page.version}} | [Install the Return Management feature](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-feature.html) |
+| Marketplace Order Management | {{page.version}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
 
 ### 1) Install required modules using Composer
 
@@ -129,8 +129,8 @@ Add the following configuration:
 </statemachine>
 ```
 
-<details open>
-<summary markdown='span'>config/Zed/StateMachine/Merchant/Subprocess/MerchantReturn.xml</summary>
+<details>
+<summary>config/Zed/StateMachine/Merchant/Subprocess/MerchantReturn.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -256,8 +256,8 @@ Add the following configuration:
 </statemachine>
 ```
 
-<details open>
-<summary markdown='span'>config/Zed/oms/MarketplaceSubprocess/MarketplaceReturn01.xml</summary>
+<details>
+<summary>config/Zed/oms/MarketplaceSubprocess/MarketplaceReturn01.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -438,8 +438,8 @@ class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
 }
 ```
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/AbstractTriggerOmsEventCommandPlugin.php</summary>
+<details>
+<summary>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/AbstractTriggerOmsEventCommandPlugin.php</summary>
 
 ```php
 <?php
@@ -589,8 +589,8 @@ class RefundMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCom
 
 ```
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ReturnMerchantOrderItemCommandPlugin.php</summary>
+<details>
+<summary>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ReturnMerchantOrderItemCommandPlugin.php</summary>
 
 ```php
 <?php
@@ -685,8 +685,8 @@ class ShipReturnMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEven
 
 ```
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/MerchantOmsDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/MerchantOms/MerchantOmsDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -747,8 +747,8 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
 ```
 </details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
 ```php
 <?php

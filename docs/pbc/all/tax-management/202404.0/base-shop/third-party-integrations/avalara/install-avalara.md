@@ -25,7 +25,7 @@ To enable the Avalara partner integration, use the [spryker-eco/avalara-tax](htt
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | master | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-|Cart | master | [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+|Cart | master | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 |Product  | master | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 |Tax  | master | |
 | Inventory Management | master | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
@@ -182,7 +182,7 @@ Make sure that the following changes have been applied in transfer objects:
 | AvalaraReadCheckoutDataValidatorPlugin | Validates the shipping address data. | None |SprykerEco\Zed\AvalaraTax\Communication\Plugin\CheckoutRestApi |
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Calculation/CalculationDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Calculation/CalculationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -233,7 +233,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -286,7 +286,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 {% endinfo_block %}
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Product/ProductDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Product/ProductDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -474,7 +474,7 @@ Make sure the data has been imported to `spy_product_abstract` and `spy_product`
 
 | INSTALLATION | REQUIRED FOR THE CURRENT INSTALLATION | INSTALLATION GUIDE |
 | ---  |---  |---  |
-|Avalara Tax + Product Option  |✓| [Avalara Tax + Product Options feature integration](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara-product-options.html) |
+|Avalara Tax + Product Option  |✓| [Install the Avalara Tax + Product Options feature](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara-product-options.html) |
 |Avalara Tax + Shipment |✓ |[Install Avalara Tax + the Shipment feature](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara-shipment.html) |
 
 ## Next steps

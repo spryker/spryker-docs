@@ -16,7 +16,7 @@ This document describes how to add items with discounts to carts of registered u
 For detailed information on the modules that provide the API's functionality and related installation instructions, see:
 
 * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Glue API: Promotions & Discounts feature integration](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
 
 ## Add items to a registered user's cart
 
@@ -45,7 +45,7 @@ To add items to a cart, send the request:
 
 
 <details>
-<summary markdown='span'>Request sample with cart rules</summary>
+<summary>Request sample with cart rules</summary>
 
 `POST https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=cart-rules`
 
@@ -63,7 +63,7 @@ To add items to a cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample with vouchers</summary>
+<summary>Request sample with vouchers</summary>
 
 `POST https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=vouchers`
 
@@ -81,7 +81,7 @@ To add items to a cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample with a promotional item and cart rules</summary>
+<summary>Request sample with a promotional item and cart rules</summary>
 
 {% info_block infoBox "Cart rules" %}
 
@@ -121,7 +121,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary>Response sample with cart rules</summary>
 
 ```json
 {
@@ -223,7 +223,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details>
-<summary markdown='span'>Response sample with vouchers</summary>
+<summary>Response sample with vouchers</summary>
 
 ```json
 {
@@ -366,7 +366,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details>
-<summary markdown='span'>Response sample: adding a promotional item without cart-rules relationship</summary>
+<summary>Response sample: adding a promotional item without cart-rules relationship</summary>
 
 ```json
 {
@@ -409,7 +409,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details>
-<summary markdown='span'>Response sample: adding a promotional item with cart-rules relationship</summary>
+<summary>Response sample: adding a promotional item with cart-rules relationship</summary>
 
 ```json
 {

@@ -102,25 +102,25 @@ A content item template defines how a content item is displayed on the Storefron
 * *Tree structure*—all the levels of navigation nodes are displayed as a list.
 
 
-<details open><summary markdown='span'>"Tree structure after the first level" template representation*—Storefront</summary>
+<details><summary>"Tree structure after the first level" template representation*—Storefront</summary>
 
 ![tree-structure-after-the-first-level](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/tree-structure-after-the-first-level.png)
 
 </details>
 
-<details open><summary markdown='span'>"Inline navigation" template representation*—Storefront</summary>
+<details><summary>"Inline navigation" template representation*—Storefront</summary>
 
 ![inline-navigation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/inline-navigation.png)
 
 </details>
 
-<details open><summary markdown='span'>"List navigation" template representation*—Storefront</summary>
+<details><summary>"List navigation" template representation*—Storefront</summary>
 
 ![list-navigation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/list-navigation.png)
 
 </details>
 
-<details open><summary markdown='span'>"Tree structure" template representation*—Storefront</summary>
+<details><summary>"Tree structure" template representation*—Storefront</summary>
 
 ![tree-structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/tree-structure.png)
 
@@ -145,6 +145,6 @@ For more details about navigation, check the video:
 
 | INSTALLATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
 |---|---|---|---|
-| [Install the Navigation feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/navigation-feature-integration.html) | [Retrieve navigation trees](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-navigation-trees.html) | [File details: navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-navigation.csv.html) | [Navigation module: Reference information](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/extend-and-customize/navigation-module-reference-information.html) |
+| [Install the Navigation feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html) | [Retrieve navigation trees](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-navigation-trees.html) | [File details: navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-navigation.csv.html) | [Navigation module: Reference information](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/extend-and-customize/navigation-module-reference-information.html) |
 | [Glue API: Navigation feature integration](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html) |  | [File details: navigation_node.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-navigation-node.csv.html) | |
 | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |  |  |  |

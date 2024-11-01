@@ -28,7 +28,7 @@ In your development, the API can help you:
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-glue-api.html)
+For details on the modules that provide the API functionality and how to install them, see [Install the Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-glue-api.html)
 
 ## Create a return
 
@@ -83,7 +83,7 @@ Request sample: create a return
 
 ### Response
 
-<details><summary markdown='span'>Response sample: create a return</summary>
+<details><summary>Response sample: create a return</summary>
 
 ```json
 {
@@ -267,7 +267,7 @@ Request sample: retrieve returns
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve returns</summary>
+<summary>Response sample: retrieve returns</summary>
 
 ```json
 {
@@ -367,7 +367,7 @@ Request sample: retrieve a return
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve a return</summary>
+<summary>Response sample: retrieve a return</summary>
 
 ```json
 {

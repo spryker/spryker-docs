@@ -29,7 +29,7 @@ console transfer:generate
 5.  From `Pyz\EventBehavior\EventBehaviorDependencyProvider`, remove the deprecated plugin:`ProductCategoryEventResourceQueryContainerPlugin` .
 6.  Add the new plugins:
 
-<details open><summary markdown='span'>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
+<details><summary>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
 
 ```php    
 <?php

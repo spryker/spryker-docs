@@ -11,9 +11,9 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 ## Upgrading from version 5.* to version 6.*
 
 1. Update `spryker/product-option` to at least version 6.0.0.
-2. Install/Update `spryker/currency` to at least version 3.0.0. See [Migration Guide - Currency](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html) for more details.
-3. Install/Update `spryker/price` to at least version 5.0.0. See [Migration Guide - Price](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html) for more details.
-4. Update `spryker/product-option-cart-connector` to at least version 5.0.0 (if you have this module already installed). See [Migration Guide - Product Option Cart Connector](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptioncartconnector-module.html) for more details.
+2. Install/Update `spryker/currency` to at least version 3.0.0. See [Upgrade the Currency module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html) for more details.
+3. Install/Update `spryker/price` to at least version 5.0.0. See [Upgrade the Price module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html) for more details.
+4. Update `spryker/product-option-cart-connector` to at least version 5.0.0 (if you have this module already installed). See [Upgrade the ProductOptionCartConnector module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptioncartconnector-module.html) for more details.
 5. Install the new database tables by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
 6. Run `vendor/bin/console propel:migrate` to apply the database changes.
 7. Generate ORM models by running `vendor/bin/console propel:model:build`.
@@ -49,8 +49,8 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
 
 11. Migrate prices from `spy_product_option_value.price` field to `spy_product_option_value_price` table. Each `spy_product_option_value` row must have at least 1 `spy_product_option_value_price` row connected. A `ProductOptionValue` entity can have multiple `ProductOptionValuePrices` connected. You can define different gross/net price per currency per store by populating the `fk_currency` and `fk_store` fields accordingly. When either `gross_price` or `net_price` database field is left as `null`, that option will not be available for customers in that exact currency, store, price mode trio. If you set a price field as 0, the option is available for customers and it means it is free of charge.
 
-<details open>
-<summary markdown='span'>Example of the migration</summary>
+<details>
+<summary>Example of the migration</summary>
 
 ```php
 <?php
@@ -449,4 +449,4 @@ class ProductOptionCollector extends Spryker\Zed\Collector\Business\Collector\St
 
 In version 5 Product Options were updated to work with the new calculator concept. Therefore, the `SalesAggregator` plugin was moved to the `SalesAggregator` module `SubtotalWithProductOptionsAggregatorPlugin`.
 The sales option database tables received new columns for storing calculated values.
-To learn how to migrate to new structure, see the [Upgrading from version 3.* to version 4.*](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html#upgrading-from-version-3-to-version-4) section in *Migration Guide - Calculation*.
+To learn how to migrate to new structure, see the [Upgrading from version 3.* to version 4.*](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html#upgrading-from-version-3-to-version-4) section in *Upgrade the Calculation module*.

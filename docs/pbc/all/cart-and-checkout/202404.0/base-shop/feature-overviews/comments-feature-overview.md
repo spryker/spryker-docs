@@ -49,27 +49,27 @@ Every comment may be tagged. *Tags* are keywords associated with the comments. T
 ## Comments on the Storefront
 Company users can perform the following actions using the Comments widget on the Storefront:
 <details>
-<summary markdown='span'>Create and edit comments</summary>
+<summary>Create and edit comments</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/creating-and-editing-comments.gif)
 
 </details>
 
 <details>
-<summary markdown='span'>Remove comments</summary>
+<summary>Remove comments</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/removing-comments.gif)
 </details>
 
 <details>
-<summary markdown='span'>Tag comments</summary>
+<summary>Tag comments</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/adding-tags.gif)
 
 </details>
 
 <details>
-<summary markdown='span'>Filter comments by tags</summary>
+<summary>Filter comments by tags</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/filtering-tags.gif)
 </details>
@@ -79,5 +79,5 @@ Company users can perform the following actions using the Comments widget on the
 |INSTALLATION GUIDES  | DATA IMPORT |
 |---------|---------|
 | [Install the Comments feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html)  | [File details: comment.csv](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/import-and-export-data/import-file-details-comment.csv.html)  |
-| [Comments + persistent cart feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-persistent-cart-feature.html) |
-| [Comments + order management feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-order-management-feature.html) |
+| [Install the Comments + Persistent Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-persistent-cart-feature.html) |
+| [Install the Comments + Order Management feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-order-management-feature.html) |

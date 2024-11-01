@@ -12,7 +12,7 @@ Install the required features:
 
 | NAME             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                       |
 |------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Service Points   | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-points/{{page.version}}/install-and-upgrade/install-the-service-points-feature.html)                                         |
+| Service Points   | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)                                         |
 | Order Management | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
 
 ### Set up behavior
@@ -185,7 +185,7 @@ Verify the `checkout-data` Glue API endpoint supports service points:
 
 `POST https://glue.mysprykershop.com/checkout-data`
 <details>
-  <summary markdown='span'>Request body example</summary>
+  <summary>Request body example</summary>
 ```json
 {
     "data": {
@@ -207,7 +207,7 @@ Verify the `checkout-data` Glue API endpoint supports service points:
 Make sure you receive a valid response:
 
 <details>
-  <summary markdown='span'>Response body example</summary>
+  <summary>Response body example</summary>
 ```json
 {
     "data": {
@@ -245,7 +245,7 @@ Verify the `checkout` Glue API endpoint supports service points:
 1. Add a product offer with a service point relation to cart.
 - `POST https://glue.mysprykershop.com/checkout`
 <details>
-  <summary markdown='span'>Request body example</summary>
+  <summary>Request body example</summary>
 ```json
 {
     "data": {

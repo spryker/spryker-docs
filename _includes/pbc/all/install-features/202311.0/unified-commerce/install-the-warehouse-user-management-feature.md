@@ -9,7 +9,7 @@ Install the required features:
 | NAME                     | VERSION          | INSTALLATION GUIDE                                                                                                                                                                         |
 |--------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core             | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |  |
-| Spryker Core Back Office | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html)                              |
+| Spryker Core Back Office | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                              |
 | Inventory Management     | {{page.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 
 ## 1) Install the required modules
@@ -267,8 +267,8 @@ Make sure the plugins work correctly:
 | WarehouseAuthorizationRequestExpanderPlugin               | Expands `AuthorizationRequestTransfer.entity` with `GlueRequestWarehouseTransfer`.                                                                                                                                    |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplicationAuthorizationConnector |
 | WarehouseUserRequestValidationPreCheckerPlugin            | Checks if `GlueRequestTransfer` has `GlueRequestWarehouseTransfer`. If true, sets `GlueRequestValidationTransfer` as valid.                                                                                       |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\OauthBackendApi                                 |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -418,8 +418,8 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -521,8 +521,8 @@ Content-Length: 165
 |-----------------------------------------------|-------------------------------------------------------|---------------|------------------------------------------------------------------------|
 | WarehouseUserAssignmentsBackendResourcePlugin | Registers the `warehouse-user-assignments` resource.  |               | Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueBackendApiApplication |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

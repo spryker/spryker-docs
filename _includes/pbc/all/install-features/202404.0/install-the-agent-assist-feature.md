@@ -14,7 +14,7 @@ Install the required features:
 |--------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                            |
 | Product      | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
-| Cart         | {{site.version}} | [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)                                  |
+| Cart         | {{site.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)                                  |
 
 ### 1) Install the required modules
 
@@ -76,7 +76,7 @@ Enable the following behaviors by registering the plugins:
 | UserAgentTableConfigExpanderPlugin                                            | In te Back Office, adds the **AGENT** column to the **USERS LIST** table.                                                     | None                                                     | Spryker\Zed\AgentGui\Communication\Plugin               |
 | UserAgentTableDataExpanderPlugin                                              | In the Back Office, in the **USERS LIST** table, fills the **AGENT** column.                                                    | Expects the **THIS USER IN AS AN AGENT** checkbox on the **Create new User** and **Edit User** pages of the Back Office. | Spryker\Zed\AgentGui\Communication\Plugin               |
 
-<details><summary markdown='span'>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
 
 ```php
 <?php

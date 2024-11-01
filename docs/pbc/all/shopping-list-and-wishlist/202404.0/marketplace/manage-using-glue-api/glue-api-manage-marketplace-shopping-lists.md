@@ -18,8 +18,8 @@ In your development, the resources can help you to enable the shopping list func
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
-* [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+* [Install the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 * [Install the Marketplace Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html)
 
 
@@ -120,7 +120,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve all shopping lists</summary>
+<summary>Response sample: retrieve all shopping lists</summary>
 
 ```json
   {
@@ -133,7 +133,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>    
 
 <details>
-<summary markdown='span'>Response sample: retrieve own and shared shopping lists</summary>
+<summary>Response sample: retrieve own and shared shopping lists</summary>
 
 ```json
 {
@@ -189,7 +189,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all shopping lists with its items and respective concrete products</summary>
+<summary>Response sample: retrieve all shopping lists with its items and respective concrete products</summary>
 
 ```json
 {
@@ -380,7 +380,7 @@ To retrieve product offers in a shopping list, include `shopping-list-items` and
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve a shopping list</summary>
+<summary>Response sample: retrieve a shopping list</summary>
 
 ```json
 {
@@ -403,7 +403,7 @@ To retrieve product offers in a shopping list, include `shopping-list-items` and
 </details>   
 
 <details>
-<summary markdown='span'>Response sample: retrieve a shopping list with its items</summary>
+<summary>Response sample: retrieve a shopping list with its items</summary>
 
 ```json
 {
@@ -456,7 +456,7 @@ To retrieve product offers in a shopping list, include `shopping-list-items` and
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a shopping list with its items and concrete products</summary>
+<summary>Response sample: retrieve a shopping list with its items and concrete products</summary>
 
 ```json
 {
@@ -596,7 +596,7 @@ To retrieve product offers in a shopping list, include `shopping-list-items` and
 </details>  
 
 <details>
-<summary markdown='span'>Response sample: retrieve a shopping list with its items and merchants</summary>
+<summary>Response sample: retrieve a shopping list with its items and merchants</summary>
 
 ```json
 {
@@ -711,7 +711,7 @@ To retrieve product offers in a shopping list, include `shopping-list-items` and
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a shopping list with its items, product offers and product offer availabilities</summary>
+<summary>Response sample: retrieve a shopping list with its items, product offers and product offer availabilities</summary>
 
 ```json
 {
@@ -859,7 +859,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: edit the shopping list</summary>
+<summary>Response sample: edit the shopping list</summary>
 
 ```json
 {
@@ -882,7 +882,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>
 
 <details>
-<summary markdown='span'>Response sample: edit the shopping list with its items and respective concrete products</summary>
+<summary>Response sample: edit the shopping list with its items and respective concrete products</summary>
 
 ```json
 "data": {

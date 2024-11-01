@@ -147,7 +147,7 @@ $bootstrap
 
 2. Add the following error pages:
 
-<details><summary markdown='span'>public/Backoffice/errorpage/4xx.html</summary>
+<details><summary>public/Backoffice/errorpage/4xx.html</summary>
 
 ```html
 <!DOCTYPE html>
@@ -191,7 +191,7 @@ $bootstrap
 ```
 </details>
 
-<details><summary markdown='span'>public/Backoffice/errorpage/5xx.html</summary>
+<details><summary>public/Backoffice/errorpage/5xx.html</summary>
 
 ```html
 <!DOCTYPE html>
@@ -310,7 +310,7 @@ The maintenance page is not yet compatible with Spryker Cloud.
 2. Add the following methods:
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Application/ApplicationDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Application/ApplicationDependencyProvider.php</summary>
 
 ```php
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
@@ -519,7 +519,7 @@ sections:
 1. Configure the Back Office error page, default port, and the ACL rule for the rest endpoint:
 
 <details>
-<summary markdown='span'>config/Shared/config_default.php</summary>
+<summary>config/Shared/config_default.php</summary>
 
 ```php
 // >>> ERROR HANDLING
@@ -595,7 +595,7 @@ Make sure to do this at least 5 working days prior to the planned change.
 2. In the needed deploy files, replace the `zed` application with `backoffice`, `backend-gateway` and `backend-api` as follows.
 
 <details>
-<summary markdown='span'>Example of replacing the application name</summary>
+<summary>Example of replacing the application name</summary>
 
 ```yaml
 // One "zed" application.

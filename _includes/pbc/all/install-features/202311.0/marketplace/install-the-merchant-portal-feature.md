@@ -2,7 +2,7 @@
 
 {% info_block infoBox "Info" %}
 
-See [Marketplace Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
+See [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
 
 {% endinfo_block %}
 
@@ -39,7 +39,7 @@ Install the needed packages for the Merchant Portal with dependencies. For avail
 | NAME                             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                                     |
 |----------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core                     | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                                  |
-| Marketplace Merchant Portal Core | {{page.version}} | [Marketplace Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
+| Marketplace Merchant Portal Core | {{page.version}} | [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
 
 ### Merchant Portal users
 
@@ -110,7 +110,7 @@ By default, all newly created merchants and merchant users automatically have a 
 
 To check the available list of packages for the Merchant Portal, in the Srpyker Git Hub repository, search for [`merchant-portal-gui`](https://github.com/spryker/?q=merchant-portal-gui).
 
-<details><summary markdown='span'>src/Pyz/Zed/Acl/AclConfig.php</summary>
+<details><summary>src/Pyz/Zed/Acl/AclConfig.php</summary>
 
 ```php
 <?php
@@ -228,7 +228,7 @@ As an example of the `AclEntityMetadataCollection` configuration, use `\Spryker\
 
 1. To configure the Merchant Portal sidebar, add installed MP GUI modules to `config/Zed/navigation.xml`.
 
-<details><summary markdown='span'>config/Zed/navigation.xml</summary>
+<details><summary>config/Zed/navigation.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -380,7 +380,7 @@ Integrate the following related features:
 | Merchant Portal - Marketplace Merchant                                                                    |                                  | [Install the Merchant Portal - Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-feature.html)                                                                                                   |
 | Merchant Portal - Marketplace Product                                                                     |                                  | [Install the Merchant Portal - Marketplace Product feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-feature.html)                                                                                                                                       |
 | Merchant Portal - Marketplace Order Management                                                            |                                  | [Install the Merchant Portal - Marketplace Order Management feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-order-management-feature.html)                                                                                                                     |
-| Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management |                                  | [Install the Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |
-| Merchant Portal - Marketplace Product + Inventory Management                                              |                                  | [Merchant Portal - Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-inventory-management-feature-integration.html)                                                                                           |
+| Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management |                                  | [Install the Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature.html) |
+| Merchant Portal - Marketplace Product + Inventory Management                                              |                                  | [Merchant Portal - Install the Marketplace Product + Inventory Management feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-inventory-management-feature.html)                                                                                           |
 | Merchant Portal - Marketplace Product Options Management                                                  |                                  | [Merchant Portal - Marketplace Product Options Management integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-options-feature.html)                                                                                                         |
-| Merchant Portal - Marketplace Product + Tax                                                               |                                  | [Merchant Portal - Marketplace Product + Tax feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-tax-feature-integration.html)                                                                                                                             |
+| Merchant Portal - Marketplace Product + Tax                                                               |                                  | [Install the Merchant Portal - Marketplace Product + Tax feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-tax-feature.html)                                                                                                                             |

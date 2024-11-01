@@ -644,7 +644,7 @@ MER000006,Sony Experts MER000006 Warehouse 1
 **data/import/common/common/marketplace/product_offer_stock.csv**
 
 <details>
-<summary markdown='span'>Prepare your data according to your requirements using the demo data:</summary>
+<summary>Prepare your data according to your requirements using the demo data:</summary>
 
 ```
 product_offer_reference,stock_name,quantity,is_never_out_of_stock
@@ -850,6 +850,6 @@ Make sure that the imported data is added to the `spy_merchant_stock` and `spy_p
 
 | FEATURE                                             | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                                                       |
 |-----------------------------------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Inventory Management + Order Management |                           | [Marketplace Inventory Management + Order Management feature Integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-packaging-units-feature.html) |
-| Marketplace Inventory Management + Packaging Units  |                                  | [Marketplace Inventory Management + Packaging Units feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-packaging-units-feature.html)   |
-| Marketplace Product + Inventory Management          |                                  | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html)                   |
+| Marketplace Inventory Management + Order Management |                           | [Install the Marketplace Inventory Management + Order Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-packaging-units-feature.html) |
+| Marketplace Inventory Management + Packaging Units  |                                  | [Install the Marketplace Inventory Management + Packaging Units feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-packaging-units-feature.html)   |
+| Marketplace Product + Inventory Management          |                                  | [Install the Marketplace Product + Inventory Management feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-inventory-management-feature.html)                   |

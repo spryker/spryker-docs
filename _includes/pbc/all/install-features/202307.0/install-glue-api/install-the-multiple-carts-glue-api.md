@@ -7,9 +7,9 @@ Install the required features:
 
 | Name | Version | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | Glue Application feature integration |
+| Spryker Core | {{page.version}} | Install the Spryker Core Glue API |
 | Multiple Carts | {{page.version}} | Install the Multiple Carts feature |
-| Cart | {{page.version}} | Cart feature integration |
+| Cart | {{page.version}} | Install the Cart feature |
 
 ## 1) Install the required modules
 
@@ -55,8 +55,8 @@ On a project level, install the following plugins:
 | --- | --- | --- | --- |
 | `QuoteCreatorPlugin` | Creates a quote for a customer. | None | `Spryker\Zed\PersistentCart\Communication\Plugin\CartsRestApi` |
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php

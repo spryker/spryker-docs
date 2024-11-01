@@ -12,7 +12,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/create-a-visibility-condition-for-cms-blocks.html
 related:
   - title: Templates & Slots overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/templates-and-slots-overview.html
   - title: Managing slots
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/manage-slots.html
 ---
@@ -113,7 +113,7 @@ To show the procedure, the following steps walk you through the creation of the 
 
 1. Implement the following plugin for the Back Office using `\Spryker\Zed\CmsSlotBlockGuiExtension\Communication\Plugin\CmsSlotBlockGuiConditionFormPluginInterface`:
 
-<details><summary markdown='span'>CustomerSlotBlockConditionFormPlugin</summary>
+<details><summary>CustomerSlotBlockConditionFormPlugin</summary>
 
 ```php
 namespace Pyz\Zed\CmsSlotBlockCustomerGui\Communication\Plugin\CmsSlotBlockGui;
@@ -237,7 +237,7 @@ In this case, the created form has five elements:
 
 1. Implement the following plugin using `\Spryker\Client\CmsSlotBlockExtension\Dependency\Plugin\CmsSlotBlockVisibilityResolverPluginInterface`:
 
-<details><summary markdown='span'>CustomerSlotBlockConditionResolverPlugin</summary>
+<details><summary>CustomerSlotBlockConditionResolverPlugin</summary>
 
 ```php
 

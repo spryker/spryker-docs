@@ -195,7 +195,7 @@ Ensure that the following changes have been triggered in transfer objects:
 | ProductLabelDictionaryDeletePublisherPlugin     | Removes all the data of the product label dictionary storage when triggered by the provided product label dictionary events.                                           | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelDictionary |
 | ProductLabelSearchPublisherTriggerPlugin        | Allows publishing or re-publishing product label search data manually.                                                                                                 | None | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher |
 
-<details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php

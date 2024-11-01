@@ -13,8 +13,8 @@ This document describes how to retrieve prices when retrieving concrete products
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see the docs:
-* [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
-* [Glue API: Prices feature integration](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-the-product-price-glue-api.html)
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+* [Install the Prices Glue API](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-the-product-price-glue-api.html)
 
 
 ## Retrieve a concrete product
@@ -45,7 +45,7 @@ To retrieve general information about a concrete product, send the request:
 ### Response
 
 
-<details><summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the concrete product prices</summary>
+<details><summary>Response sample: retrieve information about a concrete product with the details on the concrete product prices</summary>
 
 ```json
 {
@@ -135,7 +135,7 @@ To retrieve general information about a concrete product, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the default and volume prices</summary>
+<details><summary>Response sample: retrieve information about a concrete product with the details on the default and volume prices</summary>
 
 ```json
 {

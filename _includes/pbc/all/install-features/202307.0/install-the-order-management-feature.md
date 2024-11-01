@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html) feature.
+This document describes how to install the [Order Management](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/order-management-feature-overview.html) feature.
 
 {% info_block warningBox "Included features" %}
 
@@ -104,7 +104,7 @@ Set up the following configuration.
 1. Create the OMS sub-process file:
 
 <details>
-    <summary markdown='span'>config/Zed/oms/DummySubprocess/DummyInvoice01.xml</summary>
+    <summary>config/Zed/oms/DummySubprocess/DummyInvoice01.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -150,7 +150,7 @@ Verify the invoice state machine configuration in the following step.
 
 2. Using the following process as an example, adjust your OMS state-machine configuration according to your project's requirements.
 
-<details><summary markdown='span'>config/Zed/oms/DummyPayment01.xml</summary>
+<details><summary>config/Zed/oms/DummyPayment01.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -371,7 +371,7 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
 
 2. Using the example below, add an order invoice Twig template according to your project's requirements:
 
-<details><summary markdown='span'>src/Pyz/Zed/SalesInvoice/Presentation/Invoice/Invoice.twig</summary>
+<details><summary>src/Pyz/Zed/SalesInvoice/Presentation/Invoice/Invoice.twig</summary>
 
 ```twig
 {%- raw -%}
@@ -625,7 +625,7 @@ By default, in state machine names, the following applies:
 {% endinfo_block %}
 
 1. Append glossary according to your configuration:
-<details><summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
 
 **src/data/import/glossary.csv**
 ```csv
@@ -698,7 +698,7 @@ Set up the following behaviors.
 | OrderAggregatedItemStateSearchOrderExpanderPlugin | Expands orders with aggregated item states.    |               | Spryker\Zed\Oms\Communication\Plugin\Sales   |
 
 
-<details><summary markdown='span'>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -756,7 +756,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 | IsCancellableSearchOrderExpanderPlugin | Checks if each order item has the cancellable flag. |               | Spryker\Zed\Oms\Communication\Plugin\Sales   |
 
 
-<details><summary markdown='span'>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -817,7 +817,7 @@ Set up the following plugin:
 | OrderInvoiceMailTypePlugin | Email type that prepares an invoice email for an order. |               | Spryker\Zed\SalesInvoice\Communication\Plugin\Mail |
 
 
-<details><summary markdown='span'>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -864,7 +864,7 @@ Set up the following plugin:
 | GenerateOrderInvoiceCommandPlugin | A command in the OMS state machine that generates an invoice for an order. |               | Spryker\Zed\SalesInvoice\Communication\Plugin\Oms |
 
 
-<details><summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1307,10 +1307,10 @@ Integrate the following related features:
 | FEATURE                                                            | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                                                      |
 |--------------------------------------------------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Install the Comments + Order Management feature                    |                                  | [Install the Comments + Order Management feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-order-management-feature.html)                  |
-| Install the Order Management Glue API                     |                                  | [Install the Order Management Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)                                               |
-| Install the Company Account + Order Management feature             |                                  | [Install the Company Account + Order Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-order-management-feature-integration.html)                                         |
+| Install the Order Management Glue API                     |                                  | [Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)                                               |
+| Install the Company Account + Order Management feature             |                                  | [Install the Company Account + Order Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html)                                         |
 | Install the Product + Order Management feature                     |                                  | [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html)                 |
-| Install the Customer Account Management + Order Management feature |                                  | [Install the Customer Account Management + Order Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-order-management-feature-integration.html)                 |
-| Packaging Units feature integration                                |                                  | [Packaging Units feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html)                                     |
+| Install the Customer Account Management + Order Management feature |                                  | [Install the Customer Account Management + Order Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html)                 |
+| Install the Packaging Units feature                                |                                  | [Install the Packaging Units feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html)                                     |
 | Install the Product + Order Management feature                     |                                  | [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html)                 |
 | Install the Product Options + Order Management feature             |                                  | [Install the Product Options + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html) |

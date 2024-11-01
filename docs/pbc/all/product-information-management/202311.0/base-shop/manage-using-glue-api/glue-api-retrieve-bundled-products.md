@@ -19,10 +19,10 @@ This endpoint allows retrieving the products that belong to a bundle.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Product Bundles feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
-* [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+* [Install the Product Bundles Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Glue API: Product Bundle + Cart feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html)
+* [Install the Product Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html)
 
 ## Retrieve bundled products
 
@@ -58,7 +58,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve bundled products of the product bundle</summary>
+<summary>Response sample: retrieve bundled products of the product bundle</summary>
 
 ```json
 {
@@ -105,7 +105,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve bundled products of the product bundle with the details on the concrete products</summary>
+<summary>Response sample: retrieve bundled products of the product bundle with the details on the concrete products</summary>
 
 ```json
 {
@@ -304,7 +304,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve bundled products of the product bundle with the details on the concrete and abstract products</summary>
+<summary>Response sample: retrieve bundled products of the product bundle with the details on the concrete and abstract products</summary>
 
 ```json
 {

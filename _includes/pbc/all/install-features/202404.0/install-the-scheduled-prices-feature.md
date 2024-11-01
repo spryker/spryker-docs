@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Product Lists feature](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html).
+This document describes how to install the [Product Lists feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-lists-feature-overview.html).
 
 ## Install feature core
 
@@ -254,7 +254,7 @@ class PriceProductScheduleDataImportConfig extends SprykerPriceProductScheduleDa
 }
 ```
 
-<details open><summary markdown='span'>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
 
 ```php
 <?php

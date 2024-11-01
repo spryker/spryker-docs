@@ -13,7 +13,7 @@ This document describes how to retrieve prices when retrieving abstract products
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 * [Install the Prices Glue API](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-the-product-price-glue-api.html)
 
 
@@ -39,7 +39,7 @@ To retrieve general information about an abstract product, send the request:
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve information about an abstract product with the details about abstract product prices</summary>
+<details><summary>Response sample: retrieve information about an abstract product with the details about abstract product prices</summary>
 
 ```json
 {
@@ -144,7 +144,7 @@ To retrieve general information about an abstract product, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve information about an abstract product with the details about the default and volume prices included</summary>
+<details><summary>Response sample: retrieve information about an abstract product with the details about the default and volume prices included</summary>
 
 ```json
 {

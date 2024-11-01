@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-customers/managing-customers.html
 related:
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
+    link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration
@@ -67,7 +67,7 @@ Request sample: retrieve customers
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve customers</summary>
+<details><summary>Response sample: retrieve customers</summary>
 
 ```json
 {
@@ -126,7 +126,7 @@ Request sample: Retrieve a customer
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve a customer</summary>
+<details><summary>Response sample: retrieve a customer</summary>
 
 ```json
 {
@@ -199,7 +199,7 @@ Request sample: edit a customer
 
 ### Response
 
-<details><summary markdown='span'>Response sample: edit a customer</summary>
+<details><summary>Response sample: edit a customer</summary>
 
 ```json
 {
@@ -284,7 +284,7 @@ Request sample: retrieve subscriptions to availability notifications
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve subscriptions to availability notifications</summary>
+<details><summary>Response sample: retrieve subscriptions to availability notifications</summary>
 
 ```json
 {

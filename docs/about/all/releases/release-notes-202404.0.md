@@ -10,7 +10,7 @@ Spryker Cloud Commerce OS is an end-to-end solution for digital commerce. This d
 For information about installing Spryker, see [Getting started guide](/docs/dg/dev/development-getting-started-guide.html).
 
 
-## Stripe app<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Stripe app <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 The Stripe app is a new ACP app in the payment category. The initial version of the Stripe app offers a seamless and secure payment service for B2B and B2C transactions. With its global reach and adherence to regulatory standards, it ensures hassle-free electronic transactions while meeting compliance requirements.
 
@@ -163,7 +163,7 @@ In this release, we added the support of CRUD for combined entities allowing to 
 ### Technical prerequisites
 
 * [Data Exchange API integration](/docs/pbc/all/data-exchange/{{site.version}}/install-and-upgrade/install-the-data-exchange-api.html#prerequisites)
-* [Data Exchange API + Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api-inventory-management-feature.html)
+* [Data Exchange API + Install the Inventory Management feature](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api-inventory-management-feature.html)
 
 
 ## Symfony 6.4 LTS support <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>

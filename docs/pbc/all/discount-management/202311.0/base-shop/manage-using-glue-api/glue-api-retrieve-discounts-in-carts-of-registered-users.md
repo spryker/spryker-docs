@@ -17,7 +17,7 @@ For detailed information on the modules that provide the API functionality and r
 
 * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
 
-* [Glue API: Promotions & Discounts feature integration](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
 
 
 ## Retrieve registered user's carts
@@ -54,7 +54,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: no carts</summary>
+<summary>Response sample: no carts</summary>
 
 ```json
 {
@@ -68,7 +68,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary>Response sample with cart rules</summary>
 
 ```json
 {
@@ -202,7 +202,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 <details>
-<summary markdown='span'>Response sample with vouchers</summary>
+<summary>Response sample with vouchers</summary>
 
 ```json
 {
@@ -274,7 +274,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 <details>
-<summary markdown='span'>Response sample with a promotional item</summary>
+<summary>Response sample with a promotional item</summary>
 
 ```json
 {
@@ -391,7 +391,7 @@ To retrieve a particular cart, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary>Response sample with cart rules</summary>
 
 ```json
 {
@@ -460,7 +460,7 @@ To retrieve a particular cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with a promotional item</summary>
+<summary>Response sample with a promotional item</summary>
 
 ```json
 {
@@ -521,7 +521,7 @@ To retrieve a particular cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with vouchers</summary>
+<summary>Response sample with vouchers</summary>
 
 ```json
 {

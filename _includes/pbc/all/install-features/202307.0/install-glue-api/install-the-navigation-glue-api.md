@@ -165,8 +165,8 @@ Send a request to *https://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?in
 
 Make sure that the response contains `category-nodes` as a relationship and `category-nodes` data included.
 
-<details open>
-<summary markdown='span'>https://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes</summary>
+<details>
+<summary>https://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes</summary>
 
 ```json
 {

@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductPackagingUnitStorage
+title: Upgrade the ProductPackagingUnitStorage module
 description: Use the guide to migrate to a newer version of the ProductPackagingUnitStorage module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

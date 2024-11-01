@@ -14,8 +14,8 @@ Install the required features:
 |--------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product      | {{page.version}}   | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)           |
-| Cart         | {{page.version}}   | [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                 |
-| Checkout     | {{page.version}}   | [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)         |
+| Cart         | {{page.version}}   | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                 |
+| Checkout     | {{page.version}}   | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)         |
 
 
 ### 1) Install the required modules using Сomposer
@@ -293,7 +293,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -448,7 +448,7 @@ Follow the steps to import product approval data:
 1. Prepare data according to your requirements using the following demo data:
 
 <details>
-<summary markdown='span'>data/import/common/common/product_abstract_approval_status.csv</summary>
+<summary>data/import/common/common/product_abstract_approval_status.csv</summary>
 
 ```yaml
 sku,approval_status

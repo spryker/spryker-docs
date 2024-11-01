@@ -477,7 +477,7 @@ Register the following plugins for warehouse address management:
 | StockAddressStockPostUpdatePlugin | Creates a warehouse address if it's attached to a warehouse update request. <br> Removes an existing warehouse address if it's not attached to a warehouse update request. |  | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
 | StockAddressStockCollectionExpanderPlugin | Expands a warehouse collection with related addresses. |  | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
 
-<details open><summary markdown='span'>Zed/Stock/StockDependencyProvider.php</summary>
+<details><summary>Zed/Stock/StockDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -541,4 +541,4 @@ Make sure that the warehouse address management works:
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 |--- | --- | --- |
 | Inventory Management API | | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html) |
-| Alternative Products | | [Alternative Products + Inventory Management feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-inventory-management-feature-integration.html)|
+| Alternative Products | | [Install the Alternative Products + Inventory Management feature - ongoing](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html)|

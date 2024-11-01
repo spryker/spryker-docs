@@ -12,8 +12,8 @@ To start feature integration, integrate the required features and Glue APIs:
 |---------------------|------------------|--------------------|
 | Spryker Core API    | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)       |
 | Cart API            | {{page.version}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                       |
-| Company Account API | {{page.version}} | [Glue API: Company Account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html) |
-| Agent Assist API    | {{page.version}} | [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)       |
+| Company Account API | {{page.version}} | [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html) |
+| Agent Assist API    | {{page.version}} | [Install the Agent Assist Glue API](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)       |
 | Quotation Process   | {{page.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{page.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html)                         |
 
 
@@ -194,7 +194,7 @@ Enable the following behaviors by registering the plugins:
 | DiscountsRestQuoteRequestAttributesExpanderPlugin  | Expands `RestQuoteRequestsAttributesTransfer` with discount data.                                   |               | Spryker\Glue\DiscountsRestApi\Plugin\QuoteRequestsRestApi    |
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -329,7 +329,7 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
   - data[].attributes.shownVersion.cart.shipments
 
   <details>
-  <summary markdown='span'>Example</summary>
+  <summary>Example</summary>
 
   ```json
   {
@@ -1134,7 +1134,7 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
 * To verify that the `QuoteRequestAgentsResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents` endpoint is available for authenticated agent.
 
   <details>
-  <summary markdown='span'>Example</summary>
+  <summary>Example</summary>
 
   ```json
   {

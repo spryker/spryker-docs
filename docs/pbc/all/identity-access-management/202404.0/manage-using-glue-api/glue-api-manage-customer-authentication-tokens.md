@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
 related:
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
+    link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration
@@ -55,7 +55,7 @@ To refresh an authentication token, send the request:
 ### Request
 
 <details>
-<summary markdown='span'>Request sample: refresh an authentication token</summary>
+<summary>Request sample: refresh an authentication token</summary>
 
 `POST http://glue.mysprykershop.com/refresh-tokens`
 
@@ -78,7 +78,7 @@ To refresh an authentication token, send the request:
 
 ### Response
 
-<details><summary markdown='span'>Response sample: refresh an authentication token</summary>
+<details><summary>Response sample: refresh an authentication token</summary>
 
 ```json
 {

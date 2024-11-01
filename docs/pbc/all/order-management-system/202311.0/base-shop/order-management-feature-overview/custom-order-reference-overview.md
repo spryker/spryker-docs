@@ -24,23 +24,23 @@ Keep in mind that the custom order references are available only for logged-in u
 
 In the Storefront, you, as a buyer, can add a custom order reference to the order or edit it (if needed) on the **Cart** page and then view it on the **Summary** page. Once the order has been placed, the reference becomes non-editable and is displayed on the **Order Details** page in your customer account.
 
-<details open>
-<summary markdown='span'>Cart page</summary>
+<details>
+<summary>Cart page</summary>
 
 ![add-custom-order-reference](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/add-custom-order-reference.gif)
 
 </details>
 
-<details open>
-<summary markdown='span'>Summary page</summary>
+<details>
+<summary>Summary page</summary>
 
 ![custom-order-reference-summary-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/custom-order-reference-summary-page.png)
 
 </details>
 
-<details open>
+<details>
 
-<summary markdown='span'>Order Details page </summary>
+<summary>Order Details page </summary>
 
 ![custom-order-reference-order-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/custom-order-reference-order-details-page.gif)
 
@@ -51,7 +51,7 @@ When working with the order in the Back Office, you, as a Back Office user, can 
 ![zed-custom-order-ref-new](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/zed-change-custom-order-reference.gif)
 
 ## Custom Order Reference with the RFQ, approval process, and share cart by a link
-If you submit a [quote request](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) and then convert it to the shopping cart, the cart gets locked. However, you still can add and update the customer order reference for the locked cart.
+If you submit a [quote request](/docs/pbc/all/request-for-quote/{{page.version}}/request-for-quote.html) and then convert it to the shopping cart, the cart gets locked. However, you still can add and update the customer order reference for the locked cart.
 
 In the [Approval Process](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/approval-process-feature-overview.html) scenarios, both an approver and buyer can add or edit the custom order reference during the checkout.
 

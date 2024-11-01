@@ -16,13 +16,13 @@ This endpoint allows retrieving general information about concrete products.
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
-* [Glue API: Measurement Units feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
-* [Glue API: Product Options feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
-* [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html)
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+* [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
+* [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
+* [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html)
 * [Install the Marketplace Product Offer Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
 * [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
-* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html
+* [Install the Marketplace Product Offer Volume Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
 
 
 ## Retrieve a concrete product
@@ -78,7 +78,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product</summary>
+<summary>Response sample: retrieve information about a concrete product</summary>
 
 ```json
 {
@@ -125,7 +125,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with its image sets</summary>
+<summary>Response sample: retrieve information about a concrete product with its image sets</summary>
 
 ```json
 {
@@ -205,7 +205,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with its availability</summary>
+<summary>Response sample: retrieve information about a concrete product with its availability</summary>
 
 ```json
 {
@@ -276,7 +276,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 </details>
 
 
-<details><summary markdown='span'>Response sample: retrieve information about a concrete product with its default prices</summary>
+<details><summary>Response sample: retrieve information about a concrete product with its default prices</summary>
 
 ```php
 {
@@ -367,7 +367,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 </details>
 
 
-<details><summary markdown='span'>Response sample: retrieve information about a concrete product with its default and volume prices</summary>
+<details><summary>Response sample: retrieve information about a concrete product with its default and volume prices</summary>
 
 ```json
 {
@@ -467,7 +467,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with its product options</summary>
+<summary>Response sample: retrieve information about a concrete product with its product options</summary>
 
 ```json
 {
@@ -558,7 +558,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with product reviews</summary>
+<summary>Response sample: retrieve information about a concrete product with product reviews</summary>
 
 ```json
 {
@@ -664,7 +664,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on its sales units and product measurement units</summary>
+<summary>Response sample: retrieve information about a concrete product with the details on its sales units and product measurement units</summary>
 
 ```json
 {
@@ -757,7 +757,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with its product labels</summary>
+<summary>Response sample: retrieve information about a concrete product with its product labels</summary>
 
 ```json
 {
@@ -804,7 +804,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product and its product offers included</summary>
+<summary>Response sample: retrieve information about a concrete product and its product offers included</summary>
 
 ```json
 {
@@ -876,7 +876,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product and its product offers and product offer prices included</summary>
+<summary>Response sample: retrieve information about a concrete product and its product offers and product offer prices included</summary>
 
 ```json
 {
@@ -990,7 +990,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product, an abstract product it belongs to, and the merchant who sells the concrete product</summary>
+<summary>Response sample: retrieve information about a concrete product, an abstract product it belongs to, and the merchant who sells the concrete product</summary>
 
 ```json
 {

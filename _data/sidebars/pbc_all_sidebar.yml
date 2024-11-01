@@ -1569,6 +1569,10 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html
                       - title: Edit merchants
                         url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html
+                      - title: View merchants
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/view-merchants.html
+                        include_versions:
+                        - "202410.0"                        
 
                   - title: Manage merchant users
                     nested:

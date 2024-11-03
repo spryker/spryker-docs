@@ -10,7 +10,7 @@ For more insights into creating analyses and dashboards, see [Author Workshop](h
 
 ## Optional: Back up the default analysis
 
-The Analytics feature is shipped with a default analises that can be useful while you're learning how to create your own. If you need to play around with an existing analisis, we recommend duplicating the default one as follows:
+The Analytics feature is shipped with a default analysis that can be useful while you're learning how to create your own. If you need to play around with the existing analysis, we recommend duplicating the default one as follows:
 
 1. In the Back Office, go to **Analytics**.
 2. On the **Analytics** page, click **Analyses**.
@@ -67,38 +67,85 @@ In this example, you're going to create a product availability visual:
 
 ### Add one more visual
 
-1. Hover over **Data** and select **Add Dataset**.
+1. Go to **Data** > **Add Dataset**.
 2. In the **Choose dataset to add** window, click on **Category + Localized Product Abstract**.
 3. Click **Select**
   This shows a success message and the **Datasets in this analysis** window. Click **Close** to close the window.
-4. In the toolbar, for **ADD:**, click on visual and select a horizontal bar chart.
+4. In the **Visuals** pane, click **+ADD**.
 This adds an empty visual to the sheet.
-
-![add-visual]()
-
 5. Click on the visual you've added.
 6. In the **Data** pane, for **Dataset**, select **Category + Localized Product Abstract**.
 7. Add the **name[spy_category_attribute]** as a dimension to the **Y AXIS** section.
 8. Add the **sku** field as a measure to the **VALUE** field.
 
-![Visual values] values highlighted
+![product-per-category]()
 
 9. Name of the visual is inherited from the fields you've added. To make it presentable, double-click the name.
 10. In the **Edit title** window, enter a name for the visual. For example, `Products per category`.
 11. To apply the change, click **Save**.
+
 This closes the the window and the new name of the visual is displayed.
 
+Now you know how to add data and format it in different ways. For more information on how to create analyses, see [Author Workshop](https://catalog.workshops.aws/quicksight/en-US/author-workshop).
 
+
+## Add filters
+
+1. In the toolbar, click the filter button.
+
+2. In the **Filters** pane, click **+ ADD** and select **store**.
+  This adds the filter to the pane.
+3. To edit the filter, click on it.
+4. To apply the filter to all the visual in the sheet, for **Applied to**, select **Single sheet**.
+5. To add filter controls, click the three dots next to the filter and select **Add control**>**Top of this sheet**.
+  This adds the filter controls to the top of the sheet.
+
+![store-filter]()  
 
 
 ## Share the analysis
 
+If you want another author to collaborate with you on the analysis, you can share it.
+
+To share an analysis, follow the steps:
+
+1. On the page of the analysis, go to **File** > **Share**.
+2. In the **Share analysis**, enter and select the email address of the author to share the analysis with.
+  This displays the user in the table.
+3. Repeat the previous step until you've added all the authors you want to share the analysis with.
+4. Click **Share**
+  This closes the window. The added users can now edit the analysis.
+
+{% info_block infoBox "Manage permissions" %}
+
+You can check and manage permissions of all users to an analysis in **File**>**Share**>**Manage analysis permissions**.
+
+{% endinfo_block %}
 
 
-## Publish analysis as a dashboard
 
 
+## Publish analysis as a dashboard and share
 
-## Share a dashboard
+Most of your analytics users will have view permissions. When you're ready to share the analysis with a wider audience, you need to publish it as a dashboard. Users with view permissions can access only dashboards.
 
-## Using filters
+To publish and share a dashboard, follow the steps:
+
+1. To publish a dashboard, on the page of an analysis click **PUBLISH**.
+2. For **Publish new dashboard as**, enter a name for the dashboard.
+3. To confirm, click **Publish dashboard**.
+  This publisher the dashboard and opens its page.
+
+![published-dashboard]
+
+4. To share the dashboard, in the top-right corner, click the share icon and select **Share dashboard**.
+  This opens the **Share dashboard** page.
+5. In the **Invite users and groups to dashboard** pane, start entering the email address of a user.
+  This shows users with matching email addresses as you're typing.
+6. Next to the needed user, click **ADD** and select the permissions to assign to them.
+  This shows the user in the **Manage permissions** pane with the permissions you've assigned.
+
+
+## Conclusion
+
+In this guide, you've followed a typical user journey of creating, collaborating, and presenting data in a meaningful way. Now you can play around with these tools or learn by following [Author Workshop](https://catalog.workshops.aws/quicksight/en-US/author-workshop).

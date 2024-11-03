@@ -48,7 +48,10 @@ When working with analytics, users can have the following roles:
 * Author: can view, create, and edit assets.
 * Reader: can view assets.
 
+<!--
 To give a Back Office user access to analytics, you need to assign one of these roles to them. For instructions, see [Create users]() and [Edit users]().
+
+-->
 
 The analytics roles are derived from Amazon QuickSight and are separate from the [Back Office user roles](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
 
@@ -80,7 +83,7 @@ You can share dashboards with authors and readers, and analyses – only with au
 
 For those new to Amazon QuickSight analytics, while you're learning how to create your own dashboards, you can start using the default dashboards right away.
 
-The feature is shipped with the following dashboards
+The feature is shipped with the following dashboards.
 
 #### Sales dashboard
 

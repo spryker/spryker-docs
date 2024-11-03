@@ -25,7 +25,7 @@ related:
   - title: Performance audit tool- Benchmark
     link: docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
   - title: PHPStan
-    link: docs/scos/dev/sdk/development-tools/phpstan.html
+    link: docs/dg/dev/sdks/sdk/development-tools/phpstan.html
   - title: SCSS linter
     link: docs/scos/dev/sdk/development-tools/scss-linter.html
   - title: TS linter

@@ -59,7 +59,7 @@ use Spryker\Shared\KernelApp\KernelAppConstants;
 $config[KernelAppConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
 ```
 
-2. Add trusted hosts for stripe.
+3. Add trusted hosts for stripe:
 
 **config/Shared/config_default.php**
 

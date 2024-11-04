@@ -405,6 +405,16 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
             new MerchantUserViewMerchantUpdateFormViewExpanderPlugin(),
         ];
     }
+    
+    /**
+     * @return array<\Spryker\Zed\MerchantGuiExtension\Dependency\Plugin\MerchantUpdateFormViewExpanderPluginInterface>
+     */
+    protected function getMerchantViewFormViewExpanderPlugins(): array
+    {
+        return [
+            new MerchantUserViewMerchantUpdateFormViewExpanderPlugin(),
+        ];
+    }
 
 }
 
@@ -414,7 +424,7 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, on the **Edit Merchant: `merchant_id`** page in the Back Office, you can see the following tabs:
+Make sure that, on the **Edit Merchant: `merchant_id`** and **View Merchant: `merchant_id`** pages in the Back Office, you can see the following tabs:
 
 * **Contact Person**
 * **Merchant Profile**

@@ -827,7 +827,7 @@ entries:
           - title: WebProfiler
             url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-webprofiler-module.html
 
-    - title: Angular Upgrades
+    - title: Upgrade Angular
       nested:
         - title: Upgrade to Angular 12
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-12.html

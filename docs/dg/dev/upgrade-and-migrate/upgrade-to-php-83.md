@@ -1,16 +1,15 @@
 ---
 title: 'Upgrade to PHP 8.3'
-description: End of October 2024, Spryker has released a new version of its Demo Shops supporting PHP 8.3.
+description: Starting from Nov 2024, Demo Shops support PHP 8.3.
 template: concept-topic-template
 last_updated: Nov 1, 2024
 ---
 
-This guide provides step-by-step instructions to upgrade your project to use PHP 8.3 in both your Docker environment and `composer.json`. 
-By setting the minimum PHP version requirement to 8.3, you ensure that your project fully utilizes the latest features and improvements of PHP 8.3. 
+This document describes how to upgrade PHP to version 8.3. This upgrades the version in Docker environment and `composer.json`.
 
 ## 1. Check project code for PHP compatibility using PHPCompatibility
 
-To ensure your project is compatible with PHP 8.3, perform the following steps:
+To make sure your project is compatible with PHP 8.3, follow the steps:
 
 1. Require the `php-compatibility` package:
 
@@ -31,9 +30,9 @@ vendor/bin/phpcs -p src/ --standard=PHPCompatibility  --runtime-set testVersion 
 
 This returns the code that's not compatible with PHP 8.3.
 
-4. Fix all discovered incompatibilities.
+4. Fix all the discovered incompatibilities.
 
-## 2. Check for Incompatible Dependencies
+## 2. Check for incompatible dependencies
 
 Identify any dependencies that are not compatible with PHP 8.3:
 
@@ -51,7 +50,7 @@ Modify your `composer.json` file to reflect the new PHP version requirements.
     "require": {
       "php": ">=8.3",
     }
-``` 
+```
 
 2. Ensure Composer resolves dependencies compatible with PHP 8.3:
 

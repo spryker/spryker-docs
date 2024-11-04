@@ -1,7 +1,7 @@
 ---
 title: Install and configure Stripe prerequisites for Marketplace
 description: Learn how to prepare your Marketplace project for Stripe
-last_updated: Nov 1, 2024
+last_updated: Oct 2, 2024
 template: howto-guide-template
 ---
 
@@ -59,25 +59,6 @@ use Spryker\Shared\KernelApp\KernelAppConstants;
 $config[KernelAppConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
 ```
 
-3. Add trusted hosts for stripe:
-
-**config/Shared/config_default.php**
-
-```php
-
-$trustedHosts
-    = $config[HttpConstants::ZED_TRUSTED_HOSTS]
-    = $config[HttpConstants::YVES_TRUSTED_HOSTS]
-    = array_filter(explode(',', getenv('SPRYKER_TRUSTED_HOSTS') ?: ''));
-
-$config[KernelConstants::DOMAIN_WHITELIST] = array_merge($trustedHosts, [
-    $sprykerBackendHost,
-    $sprykerFrontendHost,
-    //...
-    'connect.stripe.com',
-]);
-```
-
 ## Add AsynchronousAPI message configuration
 
 Update `config_default.php` as follows:
@@ -100,7 +81,6 @@ $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     ...
     'merchant-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
     'merchant-app-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-    'app-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 ```
 

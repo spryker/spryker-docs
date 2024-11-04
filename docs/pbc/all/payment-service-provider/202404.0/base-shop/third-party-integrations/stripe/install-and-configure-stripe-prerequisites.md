@@ -1,7 +1,7 @@
 ---
 title: Install and configure Stripe prerequisites
 description: Learn how to prepare your project for Stripe
-last_updated: Nov 1, 2024
+last_updated: Oct 02, 2024
 template: howto-guide-template
 redirect_from:
 - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
@@ -53,21 +53,7 @@ use Spryker\Zed\Oms\OmsConfig;
 use Spryker\Zed\Payment\PaymentConfig;
 
 //...
-$trustedHosts
-    = $config[HttpConstants::ZED_TRUSTED_HOSTS]
-    = $config[HttpConstants::YVES_TRUSTED_HOSTS]
-    = array_filter(explode(',', getenv('SPRYKER_TRUSTED_HOSTS') ?: ''));
-
-$config[KernelConstants::DOMAIN_WHITELIST] = array_merge($trustedHosts, [
-    $sprykerBackendHost,
-    $sprykerFrontendHost,
-    //...
-    'connect.stripe.com',
-]);
-
-$config[PaymentConstants::TENANT_IDENTIFIER]
-    = $config[KernelAppConstants::TENANT_IDENTIFIER]
-    = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
+$config[PaymentConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
 
 $config[OmsConstants::PROCESS_LOCATION] = [
     //...
@@ -102,8 +88,7 @@ $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
 
     # [Optional] This message can be received from your project when you want to use details of the Stripe App used payment.
     PaymentCreatedTransfer::class => 'payment-events',
-    PaymentUpdatedTransfer::class => 'payment-events',
-    AppConfigUpdatedTransfer::class => 'app-events',
+    PaymentUpdatedTransfer::class => 'payment-events'
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
@@ -278,28 +263,6 @@ use SprykerShop\Yves\PaymentPage\Plugin\PaymentPage\PaymentForeignPaymentCollect
     {
         return [
             new PaymentForeignPaymentCollectionExtenderPlugin(),
-        ];
-    }
-
-```
-
-9. In `src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php`, add or update the following plugins:
-
-
-```php
-// ...
-
-use Spryker\Zed\OauthClient\Communication\Plugin\KernelApp\OAuthRequestExpanderPlugin;
-
-    // ...
-
-    /**
-     * @return array<\Spryker\Shared\KernelAppExtension\RequestExpanderPluginInterface>
-     */
-    public function getRequestExpanderPlugins(): array
-    {
-        return [
-            new OAuthRequestExpanderPlugin(),
         ];
     }
 

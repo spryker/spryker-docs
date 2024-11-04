@@ -1,6 +1,6 @@
 ---
 title: 'Upgrade to PHP 8.3'
-description: End of October 2024, Spryker will release a new version of its Demo Shops supporting PHP 8.3.
+description: End of October 2024, Spryker has released a new version of its Demo Shops supporting PHP 8.3.
 template: concept-topic-template
 last_updated: Nov 1, 2024
 ---
@@ -63,11 +63,13 @@ Modify your `composer.json` file to reflect the new PHP version requirements.
     },
 ```
 
-3. Run the following command to update the `composer.lock` file:
+3. Update dependencies:
 
 ```bash
-  composer update --lock
+  composer update
 ```
+
+This command will update your dependencies to the latest versions that are compatible with PHP 8.3
 
 ## 4. Update Docker Configuration
 

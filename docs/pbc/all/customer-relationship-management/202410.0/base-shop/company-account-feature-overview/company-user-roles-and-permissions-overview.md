@@ -132,6 +132,13 @@ Every company role includes a set of permissions that can be enabled/disabled ac
   - **Invite users**—allows inviting company users. With this permission enabled, a user has the **Invite Users** button on the **Company Users** page.
   - **Enable / Disable company users**—allows enabling and disabling company users. With this permission enabled, a user can switch a toggle in the **Enable** column on the **Company Users** page.
   - **See Company Menu**—allows access to the company menu. With this permission enabled, a user can navigate to a company menu from the header of the shop interface.
+  - **Create company roles**—allows to create company roles. 
+  - **Edit company roles**—allows to edit company roles.
+  - **Delete company roles**—allows to delete company roles.
+  - **See company roles**—allows to see company roles.
+  - **Delete company users**—allows to delete company users.
+  - **Edit company users**—allows to edit company users.
+  - **Add company users**—allows to add company users.
   - **Add item to cart**—allows adding products to the cart. Without this permission, the user gets the "This action is forbidden" error when trying to add the product to the cart.
   - **Change item in cart**—allows changing products in the cart (changing the quantity or adding notes).
   - **Remove item from cart**—allows deleting the products from the cart.

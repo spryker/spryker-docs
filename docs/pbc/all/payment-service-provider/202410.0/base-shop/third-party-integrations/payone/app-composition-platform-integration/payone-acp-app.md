@@ -131,7 +131,7 @@ When PayOne PayPal Express is integrated into a headless application, orders are
 *  Payment is failed: `PaymentAuthorizationFailed` message.
 14. Further on, the order is processed through the OMS.
 
-All payment related messages mentioned above are handled by `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin`, which is registered in `MessageBrokerDependencyProvider`.
+All payment related messages mentioned above are handled by `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin`, which is registered in `MessageBrokerDependencyProvider::getMessageHandlerPlugins()`.
 
 
 ### Example of the headless checkout with PayOne

@@ -2,7 +2,7 @@
 title: Integrate Payone
 description: Learn how you can integrate the Payone app into your Spryker shop
 template: howto-guide-template
-last_updated: Aug 31, 2024
+last_updated: Nov 1, 2024
 redirect_from:
   - /docs/pbc/all/payment-service-providers/payone/integrate-payone.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html
@@ -42,7 +42,22 @@ use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
 use Spryker\Zed\Payment\PaymentConfig;
 
 //...
-$config[PaymentConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
+$trustedHosts
+    = $config[HttpConstants::ZED_TRUSTED_HOSTS]
+    = $config[HttpConstants::YVES_TRUSTED_HOSTS]
+    = array_filter(explode(',', getenv('SPRYKER_TRUSTED_HOSTS') ?: ''));
+
+$config[KernelConstants::DOMAIN_WHITELIST] = array_merge($trustedHosts, [
+    $sprykerBackendHost,
+    $sprykerFrontendHost,
+    //...
+    'threedssvc.pay1.de', // trusted Payone domain
+    'www.sofort.com', // trusted Payone domain
+
+]);
+$config[PaymentConstants::TENANT_IDENTIFIER]
+    = $config[KernelAppConstants::TENANT_IDENTIFIER]
+    = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
 
 $config[OmsConstants::PROCESS_LOCATION] = [
     //...
@@ -75,6 +90,7 @@ $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     PaymentCancellationFailedTransfer::class => 'payment-events',
     PaymentCreatedTransfer::class => 'payment-events',
     PaymentUpdatedTransfer::class => 'payment-events',
+    AppConfigUpdatedTransfer::class => 'app-events',
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
@@ -329,8 +345,29 @@ protected function extendCommandPlugins(Container $container): Container
     });
 }
 ```
+9. In `src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php`, add or update the following plugins:
 
-9. [Integrate Payone into OMS](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html#configuring-oms-for-your-project).
+
+```php
+// ...
+
+use Spryker\Zed\OauthClient\Communication\Plugin\KernelApp\OAuthRequestExpanderPlugin;
+
+    // ...
+
+    /**
+     * @return array<\Spryker\Shared\KernelAppExtension\RequestExpanderPluginInterface>
+     */
+    public function getRequestExpanderPlugins(): array
+    {
+        return [
+            new OAuthRequestExpanderPlugin(),
+        ];
+    }
+
+```
+
+10. [Integrate Payone into OMS](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html#configuring-oms-for-your-project).
 
 ### Introduce template changes in `CheckoutPage`
 

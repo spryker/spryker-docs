@@ -67,6 +67,55 @@ The `scripts` array contains the URLs to the scripts that are needed to display 
 
 The `payment_service_provider_data` contains the data that can be used by projects to configure the Payment Method. Those value may differ for each different Payment Method.
 
+### Query Params for Scripts
+
+It is important to understand who is responsible for what. The App itself knows only which query params (keys) are needed. The Shop knows which values are needed and where to get them from.  
+
+For example the script must be like `https://example.com/js?currency=EUR`. The App knows that the `currency` is needed but can't know which one is used in the Shop. The Shop knows that the used `currency` is `EUR`.
+
+The App defines a Scrtipt like this
+
+```json
+{
+   "scripts": [
+      {
+         "url": "https://example.com/js",
+         "query_params": {
+            "currency": "currencyName"
+         }
+      }
+   ]
+}
+```
+
+The Shop loads this information and parses the `currencyName` to `EUR` and the final URL is `https://example.com/js?currency=EUR`.
+
+Why not simpler and only using a key? The answer is easy aURL could look like `https://example.com/js?c=EUR` where the key can't be used anymore to determine what the value should be.
+
+In this example the App would define the script like this
+
+```json
+{
+   "scripts": [
+      {
+         "url": "https://example.com/js",
+         "query_params": {
+            "c": "currencyName"
+         }
+      }
+   ]
+}
+```
+
+So that the Shop can understand that `c` has to be used as param key in the URL and the value is the name of the currency `currencyName`.
+
+Current on SCOS side supported query params:
+
+- `currencyName`
+- `localeName`
+
+This list may extend over time when new query params are needed.
+
 ## Hosted Payment Page Flow
 
 The default checkout guides a customer through various steps such as the cart, the address, the shipment, and the payment step. After that the customer is shown the Summary Page where he submits the Order. After the order is successfully placed in the Back Office, the Customer is redirected to a Hosted Payment Page where he completes the Payment.

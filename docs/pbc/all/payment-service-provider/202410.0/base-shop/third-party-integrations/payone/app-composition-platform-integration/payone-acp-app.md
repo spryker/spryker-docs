@@ -168,7 +168,7 @@ async initializePreOrderPayment() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ACCESS_TOKEN`,
+        Authorization: `Bearer ACCESS_TOKEN`, // taken from /access-tokens
       },
       body: JSON.stringify(requestData),
     });
@@ -207,7 +207,7 @@ After making a request to the PayOne API, the payment is created in the PayOne a
 
 After the customer clicks "Complete Purchase" in the PayPal Express modal he should be redirected to the summary page. 
 
-Since we skipped some important checkout steps here (addresses, shipment method, etc) another request needs tpo be made to get the customer data.
+Since we skipped some important checkout steps here (addresses, shipment method, etc) another request needs to be made to get the customer data.
 
 #### Getting the customer data
 
@@ -250,6 +250,13 @@ This data must be used to fill the quote with the missing data of the custer.
 When the customer submits the order, the payment data is sent to PayOne.
 
 After this, the customer should be redirected to the success page or in case of a failure to an error page.
+
+
+## Current limitations
+
+- Payments can be properly canceled only from the the Back Office and not from the Payone PMI.
+- Payments can't be partially canceled. One payment intent is created per order and it can either be authorized or fully cancelled.
+- When an item is canceled on the order details page, all order items are canceled.
 
 ## Next steps
 

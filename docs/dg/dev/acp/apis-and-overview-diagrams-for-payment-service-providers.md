@@ -49,7 +49,7 @@ The following diagram explains the flow of a headless payment page with an expre
 
 ![headless-express-checkout-flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.md/headless-express-checkout-flow.png)
 
-The main difference here is that the customer skips most of the default checkout steps and goes directly to the payment step. The payment is created before the order is persisted. The data a customer usually enters during the checkout steps will be retrieved via another API call to get the customer's data. This data can then be used on SCOS side to update e.g. addresses.
+The main difference here is that the customer skips most of the default checkout steps such as enter addresses and goes directly to the payment step. The payment is created before the order is persisted. The data a customer usually enters during the checkout steps will be retrieved via the Glue `/payment-customer` API call. The returned data can then be used on SCOS side to update e.g. addresses.
 
 ## Asynchronous API
 

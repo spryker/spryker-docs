@@ -851,6 +851,8 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html
     - title: Upgrade to PHP 8.3
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-83.html
+    - title: Upgrade to PHPUnit 11
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-phpunit-11.html      
     - title: Upgrade to Symfony 5
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html
     - title: Upgrade to Symfony 6

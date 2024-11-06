@@ -69,7 +69,7 @@ In this example, you're going to create a product availability visual:
 3. In **Visuals** select the pie chart.
   This shows the data as a pie chart.
 
-![concrete-product-availability]  
+![concrete-product-availability](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/best-practices-analyzing-shop-data.md/concrete-product-availability.png)
 
 
 ### Add one more visual
@@ -85,7 +85,7 @@ This adds an empty visual to the sheet.
 7. Add the **name[spy_category_attribute]** as a dimension to the **Y AXIS** section.
 8. Add the **sku** field as a measure to the **VALUE** field.
 
-![product-per-category]()
+![product-per-category](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/best-practices-analyzing-shop-data.md/product-per-category.png)
 
 9. Name of the visual is inherited from the fields you've added. To make it presentable, double-click the name.
 10. In the **Edit title** window, enter a name for the visual. For example, `Products per category`.
@@ -107,7 +107,7 @@ Now you know how to add data and format it in different ways. For more informati
 5. To add filter controls, click the three dots next to the filter and select **Add control**>**Top of this sheet**.
   This adds the filter controls to the top of the sheet.
 
-![store-filter]()  
+![store-filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/best-practices-analyzing-shop-data.md/store-filter.png)  
 
 
 ## Share the analysis
@@ -143,7 +143,7 @@ To publish and share a dashboard, follow the steps:
 3. To confirm, click **Publish dashboard**.
   This publisher the dashboard and opens its page.
 
-![published-dashboard]
+![published-dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/best-practices-analyzing-shop-data.md/published-dashboard.png)
 
 4. To share the dashboard, in the top-right corner, click the share icon and select **Share dashboard**.
   This opens the **Share dashboard** page.

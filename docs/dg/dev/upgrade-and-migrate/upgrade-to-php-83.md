@@ -32,18 +32,20 @@ This returns the code that's not compatible with PHP 8.3.
 
 4. Fix all the discovered incompatibilities.
 
-## 2. Check for incompatible dependencies
+## 2. Check and resolve incompatible dependencies
 
-Identify any dependencies that are not compatible with PHP 8.3:
+1. Identify any dependencies that are not compatible with PHP 8.3:
 
 ```bash
 composer why-not php 8.3
 ```
 
-1. **Review the Output**: The command will list dependencies that are not compatible with PHP 8.3, along with the reasons why they cannot be upgraded.
-2. **Update Dependencies**: Check if there are newer versions of these dependencies that support PHP 8.3. You can do this by visiting the package's repository or checking its documentation.
+1. Review the output. The command listed dependencies that are not compatible with PHP 8.3, along with the reasons why they can't be upgraded.
+
+2. Update dependencies. Check if there are newer versions of these dependencies that support PHP 8.3. You can do this by visiting the package's repository or checking its documentation.
 If updates are available, update your `composer.json` file to require these newer versions.
-3. **Resolve Conflicts**: If there are no newer versions available, you may need to find alternative packages that are compatible with PHP 8.3. You can search for alternative packages on Packagist or other package repositories.
+
+3. Resolve conflicts. If newer versions are not available, you may need to find alternative packages that are compatible with PHP 8.3. Search for alternative packages on Packagist or other package repositories.
 
 ## 3. Update composer.json
 
@@ -57,7 +59,7 @@ Modify your `composer.json` file to reflect the new PHP version requirements.
     }
 ```
 
-2. Specify PHP 8.3 as the platform version for dependency resolution:
+2. Define PHP 8.3 as the platform version for dependency resolution:
 
 ```bash
   "config": {

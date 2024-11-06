@@ -13,13 +13,13 @@ This feature supports data from Spryker projects and third-party systems. When y
 
 ![QuickSight-datasets](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/qs-data-sets.png)
 
-For more details on data sources, see Supported data sources https://docs.aws.amazon.com/quicksight/latest/user/supported-data-sources.html
+For more details on data sources, see [Supported data sources](https://docs.aws.amazon.com/quicksight/latest/user/supported-data-sources.html).
 
 ### Extending project data for analytics
 
 By looking at datasets, you can see what data from your project is available for adding to analytics. By default, for each dataset, only the data that can be useful for analytics is available from a respective database table. For example, the Customer dataset doesn't include customer passwords.
 
-You can extend the data available to datasets on the project level. For more details, see  
+You can extend the data available to datasets on the project level. For more details, see [Install Amazon QuickSight]().
 
 
 
@@ -32,7 +32,7 @@ You can refresh data manually or automatically by setting up a schedule per data
 
 ![refresh-dataset](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/refresh-dataset.png)
 
-For instructions, see [Refresh analytics datasets](/docs/pbc/all/business-intelligence/202410.0/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html)
+For instructions, see [Refresh analytics datasets](/docs/pbc/all/business-intelligence/202410.0/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html).
 
 
 

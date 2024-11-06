@@ -36,8 +36,19 @@ entries:
 
 
       - title: Business Intelligence
-        url: 
+        url: /docs/pbc/all/business-intelligence/business-intelligence.html
+        include_versions:
+        - "202410.0"
         nested:
+          - title: Amazon QuickSight third-party integration
+            url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.html
+            nested:
+              - title: Set up Amazon QuickSight
+                url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/set-up-amazon-quicksight.html
+              - title: "Best practices: Analyzing shop data"
+                url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/best-practices-analyzing-shop-data.html
+              - title: Refresh analytics datasets
+                url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html
 
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
@@ -1235,7 +1246,7 @@ entries:
               - title: Import stores
                 url: /docs/pbc/all/dynamic-multistore/base-shop/import-stores.html
                 include_versions:
-                - "202410.0"  
+                - "202410.0"
 
           - title: Marketplace
             nested:
@@ -1576,7 +1587,7 @@ entries:
                       - title: View merchants
                         url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/view-merchants.html
                         include_versions:
-                        - "202410.0"                        
+                        - "202410.0"
 
                   - title: Manage merchant users
                     nested:

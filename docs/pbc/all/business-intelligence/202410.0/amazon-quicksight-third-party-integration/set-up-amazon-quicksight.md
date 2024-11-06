@@ -7,7 +7,7 @@ last_updated: Oct 24, 2024
 
 This document describes how to set up Amazon QuickSight.
 
-1. [Install the Amazon QuickSight feature].
+1. [Install the Amazon QuickSight feature]().
   At this stage, the **Analytics** section is displayed in the Back Office, but the functionality is not available.
 2. To request Amazon QuickSight analytics, contact your Customer Success Manager.
   After the contract is signed, we provision Amazon Quicksight for your project.
@@ -31,4 +31,4 @@ This document describes how to set up Amazon QuickSight.
 
 ## Next steps
 
-[Best practices: Analyzing shop data]()  
+[Best practices: Analyzing shop data](/docs/pbc/all/business-intelligence/202410.0/amazon-quicksight-third-party-integration/best-practices-analyzing-shop-data.html)  

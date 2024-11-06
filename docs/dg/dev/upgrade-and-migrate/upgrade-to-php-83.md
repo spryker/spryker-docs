@@ -42,9 +42,7 @@ composer why-not php 8.3
 
 ## 3. Update composer.json
 
-Modify your `composer.json` file to reflect the new PHP version requirements.
-
-1. Set the minimum required PHP version to 8.3.
+1. Set the minimum required PHP version to 8.3:
 
 ```bash
     "require": {
@@ -68,11 +66,11 @@ Modify your `composer.json` file to reflect the new PHP version requirements.
   composer update
 ```
 
-This command will update your dependencies to the latest versions that are compatible with PHP 8.3
+This updates the dependencies to the latest versions that are compatible with PHP 8.3
 
-## 4. Update Docker Configuration
+## 4. Update Docker configuration
 
-1. In every `deploy.yml` file, specify the new PHP image:
+1. In all `deploy.yml` files, update the PHP image:
 
 ```bash
 image:
@@ -80,16 +78,16 @@ image:
     environment:
 ```
 
-2. Run the application:
+2. Apply the changes by restarting the application:
 
 ```bash
 docker/sdk boot && docker/sdk up --build
 ```
 
-## 5. Test Your Application
+## 5. Test the upgrade
 
-Thoroughly test your application to identify any issues due to the PHP version upgrade.
+Thoroughly test your application to identify any issues due to the PHP version upgrade:
 
- - **Automated Tests**: Run unit, integration, and functional tests.
- - **Manual Testing**: Test critical application functionality.
- - **Monitor for Deprecations**: Check for deprecation notices or warnings that may arise from running on PHP 8.3.
+ - Automated tests: Run unit, integration, and functional tests.
+ - Manual testing: Test critical application functionality.
+ - Monitor for deprecations: Check for deprecation notices or warnings that may arise from running on PHP 8.3.

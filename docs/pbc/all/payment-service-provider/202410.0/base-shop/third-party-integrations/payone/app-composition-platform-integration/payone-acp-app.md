@@ -213,7 +213,7 @@ Since we skipped some important checkout steps here (addresses, shipment method,
 
 ```JAVASCRIPT
 async getCustomerData() {
-  const url = `${this.SCOS_BASE_URL}/payment-customer`;
+  const url = `${this.GLUE_BASE_URL}/payment-customer`;
 
   const requestData = {
     data: {

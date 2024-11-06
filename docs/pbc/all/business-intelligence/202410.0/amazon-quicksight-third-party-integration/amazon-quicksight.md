@@ -1,21 +1,17 @@
 ---
-title: Amazon QuickSight getting started guide
-description: First steps to set up Amazon QuickSight
+title: Amazon QuickSight
+description: Amazon QuickSight overview
 template: concept-topic-template
 last_updated: Oct 24, 2024
 ---
 
-
-
-
-
-The Amazon QuickSight feature brings customizable and powerful business intelligence tools to the Back Office.
+Amazon QuickSight brings customizable and powerful business intelligence tools to the Back Office.
 
 ## Data sources and data sets
 
 This feature supports data from Spryker projects and third-party systems. When you set up Amazon QuickSight, the data from your project is available by default, and you can add other data sources if needed.
 
-!QuickSight-datasets
+![QuickSight-datasets](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/qs-data-sets.png)
 
 For more details on data sources, see Supported data sources https://docs.aws.amazon.com/quicksight/latest/user/supported-data-sources.html
 
@@ -34,9 +30,9 @@ To make datasets up to date, you need to refresh them by resyncing data from you
 You can refresh data manually or automatically by setting up a schedule per data set.
 
 
-![refresh-dataset]
+![refresh-dataset](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/refresh-dataset.png)
 
-For instructions, see [Refresh analytics datasets]()
+For instructions, see [Refresh analytics datasets](/docs/pbc/all/business-intelligence/202410.0/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html)
 
 
 
@@ -65,17 +61,17 @@ An analysis is a customizable visual representation of data. Using the provided 
 Each analysis can contain multiple data visualizations, which can be rearranged and customized.
 
 
-![QuickSight-analyses]
+![QuickSight-analyses](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/qs-analysis.png)
 
 
 A dashboard is a representation of data prepared in an analysis. It serves as a published version of data analysis, which can be shared with other users.
 
-![QuickSight-dashboard]
+![QuickSight-dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/qs-dashboard.png)
 
 
 Both analyses and dashboards are shareable, you can share a complete dashboard or collaborate on an analysis.
 
-! QuickSight sharing
+![QuickSight-sharing](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/qs-sharing.png)
 
 You can share dashboards with authors and readers, and analyses – only with authors.
 
@@ -92,15 +88,12 @@ The feature is shipped with the following dashboards.
 * Monitor discounts, product categories, brands
 * Monitor the usage of payment and shipping methods
 
-! sales-dashboard
-
 #### Products dashboard
 
 * Track performance of products
 * Monitor availability and returns
 * Analyze top-selling items, category distribution, and trends in shopping lists and customer carts
 
-! Products-dashboard
 
 #### Customers dashboard
 
@@ -110,13 +103,11 @@ Track the following customer metrics:
 * Locations
 * Demographics
 
-! Customers-dashboard
 
 #### Marketplace dashboard
 * Track marketplace performance with insights into merchant status and commission
 * Get an overview of merchant orders, products, and offers
 
-! Marketplace-dashboard
 
 
 ## Resetting analytics
@@ -124,4 +115,4 @@ Track the following customer metrics:
 
 Sometimes you might want to start from scratch and get a fresh analytics account. Resetting analytics removes all assets and returns your account to the default state.
 
-!reset-analytics
+![reset-analytics](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/reset-analytics.png)

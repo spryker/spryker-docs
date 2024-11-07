@@ -87,7 +87,7 @@ composer update spryker-shop/customer-page
 composer show spryker-shop/customer-page # Verify the version
 ```
 
-2. In `src/Pyz/Yves/CustomerPage/CustomerPageConfig.php`, add the following method in case you cannot update the `spryker-shop/customer-page` module to version 2.54.0 or higher:
+2. In `src/Pyz/Yves/CustomerPage/CustomerPageConfig.php`, add the following method:
 
 ```bash
 /**

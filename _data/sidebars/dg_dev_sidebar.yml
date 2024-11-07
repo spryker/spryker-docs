@@ -827,37 +827,47 @@ entries:
           - title: WebProfiler
             url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-webprofiler-module.html
 
-      - title: Upgrade to Angular 12
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-12.html
-      - title: Upgrade to Angular 15
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html
-      - title: Upgrade to Angular 17
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html
-      - title: Upgrade to PHP 8.1
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html
-      - title: Upgrade to Symfony 5
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html
-      - title: Upgrade to Symfony 6
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html
-      - title: Upgrade to Webpack v5
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
-      - title: Upgrade to Stylelint 16 and css-loader 6
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-stylelint-16-and-css-loader-6.html
-      - title: Upgrade Node.js to v18 and npm to v9
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html
-      - title: Migrate from TSLint to ESLint
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-from-tslint-to-eslint.html
-      - title: Migrate from Yarn to npm
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-from-yarn-to-npm.html
-      - title: Upgrade Publish and Sync
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-publish-and-sync.html
-      - title: Upgrade to Marketplace
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-marketplace.html
-      - title: Migrate to Docker
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html
-        nested:
-          - title: Adjust Jenkins for a Docker environment
-            url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
+    - title: Upgrade Angular
+      nested:
+        - title: Upgrade to Angular 12
+          url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-12.html
+        - title: Upgrade to Angular 15
+          url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html
+        - title: Upgrade to Angular 17
+          url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html
+
+    - title: Upgrade to Webpack v5
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
+    - title: Upgrade to Stylelint 16 and css-loader 6
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-stylelint-16-and-css-loader-6.html
+    - title: Migrate from TSLint to ESLint
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-from-tslint-to-eslint.html
+    - title: Upgrade Node.js to v18 and npm to v9
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html
+    - title: Migrate from Yarn to npm
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-from-yarn-to-npm.html
+
+    - title: Upgrade to PHP 8.1
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html
+    - title: Upgrade to PHP 8.3
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-83.html
+    - title: Upgrade to PHPUnit 11
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-phpunit-11.html      
+    - title: Upgrade to Symfony 5
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html
+    - title: Upgrade to Symfony 6
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html
+
+    - title: Upgrade Publish and Sync
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-publish-and-sync.html
+    - title: Upgrade to Marketplace
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-marketplace.html
+
+    - title: Migrate to Docker
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html
+      nested:
+        - title: Adjust Jenkins for a Docker environment
+          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
 
     - title: Update environemnt configuration
       url: /docs/dg/dev/upgrade-and-migrate/update-environment-configuration.html
@@ -1040,6 +1050,8 @@ entries:
           url: /docs/dg/dev/sdks/sdk/development-tools/ts-linter.html
         - title: VCS connector
           url: /docs/dg/dev/sdks/sdk/vcs-connector.html
+        - title: Enable development tools in PHPStorm
+          url: /docs/dg/dev/sdks/sdk/development-tools/enable-development-tools-in-phpstorm.html
 
       - title: Troubleshooting
         nested:

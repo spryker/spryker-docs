@@ -36,6 +36,7 @@ Make sure the following modules have been installed:
 | LogExtension                      | vendor/spryker/log-extension                        |
 | UtilEncryption                    | vendor/spryker/util-encryption                      |
 | Vault                             | vendor/spryker/vault                                |
+| Router                            | vendor/spryker/router                               |
 | SessionExtension                  | vendor/spryker/session-extension                    |
 | SessionRedis                      | vendor/spryker/session-redis                        |
 | SessionFile                       | vendor/spryker/session-redis                        |
@@ -54,6 +55,29 @@ Make sure the following modules have been installed:
 ### 2) Set up configuration
 
 Set up the following configuration.
+
+#### Optional: Set up Router
+
+To user router cache, add the following configuration:
+
+```php
+<?php
+
+namespace Pyz\Zed\Router;
+
+use Spryker\Zed\Router\RouterConfig as SprykerRouterConfig;
+
+class RouterConfig extends SprykerRouterConfig
+{
+    /**
+     * @return bool
+     */
+    public function isRoutingCacheEnabled(): bool
+    {
+        return true;
+    }
+}
+```
 
 #### Set up SecuritySystemUser
 

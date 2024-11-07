@@ -28,23 +28,25 @@ To configure Algolia, do the following:
 
 7. From the **Your API Keys** tab, copy the following keys:
     - Application ID
-    - Search-Only API Key
+    - Search API Key
     - Admin API Key
 8. Go back to your store's Back Office, to the Algolia app details page.
 9. In the top right corner of the Algolia app details page, click **Configure**.
-10. In the **Configure** pane, fill in the **APPLICATION ID**, **SEARCH-ONLY API KEY**, and **ADMIN API KEY** fields with the values from step 7.
+10. In the **Configure** pane, fill in the **APPLICATION ID**, **SEARCH API KEY**, and **ADMIN KEY** fields with the values from step 7.
 
 ![algolia-settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-settings.png)
 
-11. Click **Save**.
+12. "Use Algolia instead of Elasticsearch" checkbox enables Algolia search on your frontends (Yves or Glue API-based application).
+You can postpone checking it until all your products are synchronized with Algolia. 
+13. Click **Save**.
 
 The Algolia app is now added to your store and starts exporting your product data automatically.
 
 {% info_block infoBox "Info" %}
 
-You need to wait for a few minutes until Algolia finishes the product export.
-The more products you have, the longer you have to wait.
-The average export speed is around *100 products per minute*.
+You need to wait some time until Algolia finishes the product export.
+The more products you have, the longer you have to wait (from few minutes to several hours).
+The average export speed is around *300 products per minute*.
 
 {% endinfo_block %}
 
@@ -80,9 +82,13 @@ Algolia's **Searchable attributes** configuration determines which attributes ar
 
 Default fields for searchable attributes are the following:
 - `sku`
+- `product_abstract_sku`
 - `name`
+- `abstract_name`
+- `category` 
 - `description`
 - `keywords`
+- `attributes.brand`
 
 ### Adjust the searchable attributes list in Algolia
 
@@ -95,7 +101,7 @@ Default fields for searchable attributes are the following:
 
 ### Send additional fields to Algolia
 
-Spryker's Algolia PBC integration allows adding additional data to exported products.
+Spryker's Algolia App integration allows adding additional data to exported products.
 This is achieved using the pre-configured `searchMetadata` field on ProductConcrete and ProductAbstract transfers.
 
 #### Filling in the `searchMetadata` field
@@ -164,6 +170,12 @@ The `prices` attribute is an object with nested fields. Algolia creates facets f
 
 #### Facet configuration
 
+##### Facet display
+
+All configured index Facets will be displayed in the list of filter on Yves or via Glue API `/catalog-search`.
+Also, Spryker's Algolia app supports `renderingContent` feature, which can be found in an index "Configuration > Facet display".
+Here you can configure the order of facets and add only relevant for end-users facets.
+
 ##### Searchable
 
 Attributes defined as searchable may be used while calling Algolia's `searchForFacetValues` method, which can be used for the Storefront integration. This method is necessary to display catalog page facets if many values are possible for each facet—in this case, only 100 of those values are displayed by default. Accessing other values requires searching for them using the `searchForFacetValues` method. Select this option if you plan on having a large number of different values for this facet, and if you use the Spryker Storefront.
@@ -180,15 +192,21 @@ Setting an attribute as `filter only` prevents it from showing in the facets lis
 
 ##### Not searchable
 
-Default option. This facet configuration enables aggregation of search results by facet values. `searchForFacetValues` method can't be used with facets configured this way. Use this option when you have limited facet values or plan on using something other than the Spryker Storefront.
+Default option. This facet configuration enables aggregation of search results by facet values.
+`searchForFacetValues` method can't be used with facets configured this way.
+Use this option when you have limited facet values or plan on using something other than the Spryker Storefront.
 
 ##### After distinct checkbox
 
-This checkbox is checked by default. Clearing this checkbox changes the calculation method for facet aggregation for the given field. By default, facet aggregation is calculated after search results for a given query are processed by deduplication or grouping process. It is not recommended to turn this checkbox off.
+This checkbox is checked by default. Clearing this checkbox changes the calculation method for facet aggregation for the given field.
+By default, facet aggregation is calculated after search results for a given query are processed by deduplication or grouping process.
+It is not recommended to turn this checkbox off.
 
-#### Algolia and Glue API facets interaction
+#### Spryker Filter Preferences and Algolia app
 
-When used with Algolia PBC, Spryker facets configuration is ignored and Algolia facets configuration is used instead. This means that Glue API response fields `"valueFacets"` and `"rangeFacets"` include facets configured in Algolia. Be wary that setting any Algolia facet to `"filter only"` mode removes it from the corresponding field in Glue API response.
+When used with Algolia ACP, Spryker facets configuration is ignored and Algolia facets configuration is used instead
+Use "Configuration > Facet display" to configure the list of filter.
+Be wary that setting any Algolia facet to `"filter only"` mode removes it from the list of visible filters.
 
 ### Add new attributes for faceting
 
@@ -203,7 +221,8 @@ When used with Algolia PBC, Spryker facets configuration is ignored and Algolia 
 
 ![algolia-ranking](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/configure-algolia/algolia-ranking.png)
 
-Algolia's **Ranking and sorting** configuration determines which products can be shown before others when customers search your catalog. Learn more about Custom Ranking and Sorting in the [Algolia documentation](https://www.algolia.com/doc/guides/managing-results/must-do/custom-ranking/).
+Algolia's **Ranking and sorting** configuration determines which products can be shown before others when customers search your catalog.
+Learn more about Custom Ranking and Sorting in the [Algolia documentation](https://www.algolia.com/doc/guides/managing-results/must-do/custom-ranking/).
 
 ## Retain Algolia configuration after a destructive deployment
 

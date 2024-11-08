@@ -96,22 +96,22 @@ These values are referred to as *Company Role Permissions*.
 
 {% endinfo_block %}
 
-Permission can also be *Yves-side* and *Zed-side*.
+Permission can also be *Storefront-side* and *Backoffice-side*.
 
-* Yves permissions do not need to get any data from the database. They refer to key-value storage or search to check the right for actions.
+* Storefront permissions do not need to get any data from the database. They refer to key-value storage or search to check the right for actions.
 
 {% info_block infoBox %}
 
-For example, the permission to view a product, page, or permission to place an order, permission to place an order with grand total less than X would be Yves-side permissions.
+For example, the permission to view a product, page, or permission to place an order, permission to place an order with grand total less than X would be Storefront-side permissions.
 
 {% endinfo_block %}
 
-* Permissions that require some data from the database or additional business logic on top to check the rights for actions are referred to as Zed permissions.
+* Permissions that require some data from the database or additional business logic on top to check the rights for actions are referred to as Backoffice permissions.
 
 {% info_block infoBox %}
 
-For example, the permission to add to cart up to X [order value] is a Zed-side permission. In this case, the process of permissions check is as follows:
-1. After the user clicks **Add to cart**, the request comes to Zed, and the prechecks are made following the "add to cart" request.
+For example, the permission to add to cart up to X [order value] is a Backoffice-side permission. In this case, the process of permissions check is as follows:
+1. After the user clicks **Add to cart**, the request comes to Backoffice, and the prechecks are made following the "add to cart" request.
 2. Then, the calculations are run. The calculations apply discounts per items, and then per cart (total). The logic behind this is simple: a user might have a discount for a specific item and a discount for an order starting from a specific order value. The order value is calculated taking the discount per items into account, and therefore the discount per cart is applied after all discounts per items have been calculated.
 3. After the calculations have been made, the cart is saved.
 

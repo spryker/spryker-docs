@@ -11,7 +11,7 @@ Once you have [integrated the Algolia app](/docs/pbc/all/search/{{page.version}}
 
 ## Prerequisites
 
-To start using Algolia for your shop, you need an account with Algolia. You can create the account on the [Algolia website](https://www.algolia.com).
+To start using Algolia for your shop, you need an account with Algolia. Please contact the Spryker sales team for sign up today.
 
 ## Configure Algolia
 

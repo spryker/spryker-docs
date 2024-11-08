@@ -1,5 +1,5 @@
 ---
-title: Project guidelines for Stripe
+title: Project guidelines for Stripe - Hosted Payment Page
 description: Learn how to implement Stripe using ACP
 last_updated: Nov 8, 2024
 template: howto-guide-template
@@ -13,20 +13,56 @@ redirect_from:
 
 ---
 
-This document provides comprehensive guidelines for integrating and utilizing Stripe in your projects through the Stripe App. 
+### Implementing Stripe checkout as a hosted payment page
 
-Whether you are looking to implement Stripe for checkout in a headless application, as a hosted payment page, or using an iframe, this guide has you covered. 
+If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project level, do the following:
 
-Additionally, you will find detailed instructions on sending additional data to Stripe, retrieving and using payment details, and configuring the Order Management System (OMS). 
+1. Make sure that a form molecule uses the following code for the payment selection choices:
 
-Each section is designed to help you maximize the potential of Stripe in your projects. Explore the links below to dive into the detailed guides and enhance your Stripe implementation with best practices and advanced techniques. 
+```twig
+{% raw %}
 
+{% for name, choices in data.form.paymentSelection.vars.choices %}
+    ...
+    {% embed molecule('form') with {
+        data: {
+            form: data.form[data.form.paymentSelection[key].vars.name],
+            ...
+        }
+    {% endembed %}
+{% endfor %}
+{% endraw %}       
+```
+
+2. If you want to change the default payment provider or method names, do the following:
+   1. Make sure the names are translated in your payment step template:
+
+```twig
+{% raw %}
+{% for name, choices in data.form.paymentSelection.vars.choices %}
+    ...
+    <h5>{{ name | trans }}</h5>
+{% endfor %}
+{% endraw %}
+```
+
+    2. Add translations to your glossary data import file:
+
+```csv
+...
+Stripe,Pay Online with Stripe,en_US
+```
+    3. Run the data import command for the glossary:
+
+```bash
+console data:import glossary
+```
+
+### Further reading
 
 * [OMS configuration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/oms.html)
 * [Implementing Stripe for checkout in a headless application](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/headless.html)
-* [Implementing Stripe checkout as a hosted payment page](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/hosted-payment-page.html)
 * [Implementing Stripe payment page using an iframe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/iframe.html)
 * [Refund handling with Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/refund.html)
 * [Retrieving and using payment details from Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/payment-details.html)
 * [Sending additional data to Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/send-additional-data-to-stripe.html)
-* [Retrieve and use payment details from third-party PSPs](https://docs.spryker.com/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html)

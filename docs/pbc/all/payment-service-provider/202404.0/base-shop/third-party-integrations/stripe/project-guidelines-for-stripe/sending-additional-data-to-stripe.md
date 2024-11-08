@@ -13,14 +13,61 @@ redirect_from:
 
 ---
 
-This document provides comprehensive guidelines for integrating and utilizing Stripe in your projects through the Stripe App. 
+## Sending additional data to Stripe
 
-Whether you are looking to implement Stripe for checkout in a headless application, as a hosted payment page, or using an iframe, this guide has you covered. 
+Stripe accepts metadata passed using API calls. To send additional data to Stripe, the `QuoteTransfer::PAYMENT::ADDITIONAL_PAYMENT_DATA` field is used; the field is a key-value array. When sending requests using Glue API, pass the `additionalPaymentData` field in the `POST /checkout` request.
 
-Additionally, you will find detailed instructions on sending additional data to Stripe, retrieving and using payment details, and configuring the Order Management System (OMS). 
+```text
+POST https://api.your-site.com/checkout
+Content-Type: application/json
+Accept-Language: en-US
+Authorization: Bearer {{access_token}}
 
-Each section is designed to help you maximize the potential of Stripe in your projects. Explore the links below to dive into the detailed guides and enhance your Stripe implementation with best practices and advanced techniques. 
+{
+    "data": {
+        "type": "checkout",
+        "attributes": {
+            "customer": {
+                ...
+            },
+            "idCart": "{{idCart}}",
+            "billingAddress": {  
+                ...
+            },
+            "shippingAddress": {
+                ...
+            },
+            "payments": [
+                {
+                    "paymentMethodName": "Stripe",
+                    "paymentProviderName": "Stripe",
+                    "additionalPaymentData": {
+                         "custom-field-1": "my custom value 1",
+                         "custom-field-2": "my custom value 2"
+                    }
+                }
+            ],
+            "shipment": {
+                "idShipmentMethod": {{idMethod}}
+            }
+        }    
+    }
+}
+```
 
+The metadata sent using the field must meet the following criteria:
+
+| ATTRIBUTE | MAXIMUM VALUE |
+| - | - |
+| Key length | 40 characters |
+| Value length | 500 characters |
+| Key-value pairs | 50 pairs |
+
+When you pass metadata to Stripe, it's stored in the payment object and can be retrieved later. For example, this way you can pass an external ID to Stripe.
+
+When a `PaymentIntent` is created on the Stripe side, you can see your passed `additionalPaymentData` in the Stripe Dashboard.
+
+### Further reading
 
 * [OMS configuration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/oms.html)
 * [Implementing Stripe for checkout in a headless application](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/headless.html)

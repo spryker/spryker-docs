@@ -1,7 +1,7 @@
 ---
 title: Configure Algolia
 description: Find out how you can configure Algolia in your Spryker shop
-last_updated: Feb 21 2023
+last_updated: Nov 24, 2024
 template: howto-guide-template
 redirect_from:
   - /docs/pbc/all/search/202311.0/third-party-integrations/configure-algolia.html  -
@@ -165,6 +165,7 @@ Default attributes for faceting are as follows:
 - `label`
 - `prices`
 - `rating`
+- `merchant_name` (for Marketplace shops)
 
 The `prices` attribute is an object with nested fields. Algolia creates facets for each nested field and creates facets for all the currencies and pricing modes available in product entities.
 
@@ -175,6 +176,9 @@ The `prices` attribute is an object with nested fields. Algolia creates facets f
 All configured index Facets will be displayed in the list of filter on Yves or via Glue API `/catalog-search`.
 Also, Spryker's Algolia app supports `renderingContent` feature, which can be found in an index "Configuration > Facet display".
 Here you can configure the order of facets and add only relevant for end-users facets.
+
+Please pay attention that Spryker has additional UI configuration for filters in the Backoffice > Merchandising > Filter Preferences,
+where you can change a filter type: single-select, multi-select or range. That will be applied also for Algolia search results.  
 
 ##### Searchable
 

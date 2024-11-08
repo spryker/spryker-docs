@@ -1,7 +1,7 @@
 ---
 title: Algolia
 description: Algolia empowers Builders with Search and Recommendation services to create world-class digital experiences.
-last_updated: June 26 2023
+last_updated: Nov 24, 2024
 template: howto-guide-template
 redirect_from:
   - /docs/pbc/all/search/202311.0/third-party-integrations/algolia.html  -
@@ -29,6 +29,7 @@ Your users can search for active concrete products by the following attributes:
 - Name
 - Description
 - Keywords
+- or any other attribute that your products have (when it's configured in Algolia Dashboard)
 
 {% info_block infoBox "Note" %}
 

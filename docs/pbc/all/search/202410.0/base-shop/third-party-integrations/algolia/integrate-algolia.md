@@ -2,7 +2,7 @@
 title: Integrate Algolia
 description: Find out how you can integrate Algolia into your Spryker shop
 template: howto-guide-template
-last_updated: Jan 09, 2024
+last_updated: Nov 24, 2024
 redirect_from:
 - /docs/pbc/all/search/202400.0/base-shop/third-party-integrations/integrate-algolia.html
 - /docs/pbc/all/search/202311.0/base-shop/third-party-integrations/integrate-algolia.html
@@ -18,6 +18,9 @@ Before integrating Algolia, ensure the following prerequisites are met:
 - Make sure your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
 
 - The Algolia app catalog page lists specific packages that must be installed or upgraded before you can use the Algolia app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Algolia**.
+
+Example:
+
 ![list-of-algolia-modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/integrate-algolia/list-of-algolia-modules.png)
 
 ## Integrate Algolia
@@ -363,7 +366,6 @@ Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProv
 ```php
 //...
 
-use Spryker\Zed\Merchant\Communication\Plugin\MessageBroker\MerchantMessageHandlerPlugin;
 use Spryker\Zed\Product\Communication\Plugin\MessageBroker\InitializeProductExportMessageHandlerPlugin;
 use Spryker\Zed\SearchHttp\Communication\Plugin\MessageBroker\SearchEndpointAvailableMessageHandlerPlugin;
 use Spryker\Zed\SearchHttp\Communication\Plugin\MessageBroker\SearchEndpointRemovedMessageHandlerPlugin;
@@ -383,7 +385,6 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
           //...
           new ProductExportMessageHandlerPlugin(),
           new SearchEndpointMessageHandlerPlugin(),
-          new MerchantMessageHandlerPlugin(), # for marketplace only
       ];
   }
 
@@ -517,24 +518,19 @@ To trigger custom events in Spryker, use the `EventFacade::trigger('event-name',
 {% endinfo_block %}
 
 
-#### Configure product dependencies in `Zed`
+#### Configure Product dependencies in `Zed`
 
 Add the following code to `src/Pyz/Zed/Product/ProductDependencyProvider.php`:
 
 ```php
-//...
 
-# MerchantProductOffer is used only for Marketplace
 use Spryker\Zed\MerchantProductOffer\Communication\Plugin\Product\MerchantProductOfferProductConcreteExpanderPlugin;
-//...
 use Spryker\Zed\PriceProduct\Communication\Plugin\Product\PriceProductConcreteMergerPlugin;
 use Spryker\Zed\ProductCategory\Communication\Plugin\Product\ProductConcreteCategoriesExpanderPlugin;
 use Spryker\Zed\ProductImage\Communication\Plugin\Product\ImageSetProductConcreteMergerPlugin;
 use Spryker\Zed\ProductReview\Communication\Plugin\Product\ProductReviewProductConcreteExpanderPlugin;
 use Spryker\Zed\ProductApproval\Communication\Plugin\Product\ApprovalStatusProductConcreteMergerPlugin;
 use Spryker\Zed\ProductLabel\Communication\Plugin\Product\ProductLabelProductConcreteExpanderPlugin;
-
-//...
 
 class ProductDependencyProvider extends SprykerProductDependencyProvider
 {
@@ -708,21 +704,16 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-### Receive ACP messages
-
-Now, you can start receiving ACP messages in SCOS. See [Receive messages](/docs/acp/user/receive-acp-messages.html) for details on how to do that.
-
 ## Additional information on Algolia integration
 
 When integrating Algolia, you should keep in mind some peculiarities of the SearchHTTP plugins setup and differences of the default facets.
 
 ### SearchHTTP plugins setup
 
-Spryker's `SearchHTTP` module transfers Glue search requests to external search providers, one of which is Algolia. The `SearchHTTP` query is built using the `QueryExpanderPlugin` classes. Their order is defined in the `CatalogDependencyProvider::createCatalogSearchQueryExpanderPluginVariants()` method. The order of execution of those plugins might be customized on the project level. By default, all module-specific query builder plugins will be executed before parsing `GET` query parameters, so any `GET` query parameters may overwrite search query parameters set before.
-
-### Default facets differences
-
-There is a difference in how default facets behave on Algolia and on the default Spryker installation using Elasticsearch. Some default Spryker facets like `brand` only accept one value as a filter, so it is impossible to specify multiple brands to filter on in one search request. This is not the case with Algolia, as multiple brands can be specified in the same search requests. This also applies to other configured facets.
+Spryker's `SearchHTTP` module transfers Glue search requests to external search providers, one of which is Algolia.
+The `SearchHTTP` query is built using the `QueryExpanderPlugin` classes. Their order is defined in the `CatalogDependencyProvider::createCatalogSearchQueryExpanderPluginVariants()` method.
+The order of execution of those plugins might be customized on the project level.
+By default, all module-specific query builder plugins will be executed before parsing `GET` query parameters, so any `GET` query parameters may overwrite search query parameters set before.
 
 ## Next steps
 

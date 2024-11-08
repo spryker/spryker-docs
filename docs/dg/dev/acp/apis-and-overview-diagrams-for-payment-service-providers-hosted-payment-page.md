@@ -1,19 +1,20 @@
 ---
-title: APIs and overview diagrams for payment service providers
-description: Overview of PSP APIs
-last_updated: Sep 27, 2024
+title: API and overview diagram the Hosted payment page flow for payment service providers
+description: Overview of the Hosted payment page flow
+last_updated: Now 08, 2024
 template: concept-topic-template
 related:
-   - title: Stripe
-     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/stripe.html
+   - title: APIs and overview diagrams for payment service providers
+     link: docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.html
 ---
 
-This document provides an overview of Payment Service Provider (PSP) APIs. All PSPs use both synchronous and asynchronous APIs.
+The following diagram explains the hosted payment page flow.
 
-The following pages contain detailed information about the PSP APIs:
+![hosted-payment-page-flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.md/hosted-payment-page-flow.png)
+
+### Further reading
 
 * `Configure and disconnect` - [Learn about the configure and disconnect flow used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-configure-and-disconnect.html)
-* `Hosted payment page` - [Learn about the Hosted payment page flow used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-hosted-payment-page.html)
 * `Headless payment implementation` - [Learn about the Headless payment flow used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-headless.html)
 * `Headless payment with express-checkout payment methods` - [Learn about the Headless payment flow with express-checkout payment methods used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-headless-express-checkout.html)
 * `OMS payment flow` - [Learn about the OMS payment flow used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-oms-payment-flow.html)

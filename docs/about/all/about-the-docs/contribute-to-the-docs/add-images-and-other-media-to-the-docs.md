@@ -1,6 +1,6 @@
 ---
 title: Add images and other media to the docs
-description: Add media when contributing to Spryker docs
+description: Enrich your contributions to Spryker Documentation by adding media, this article explains exactly how you can add media to the Spryker docs articles.
 last_updated: Jul 18, 2022
 template: howto-guide-template
 ---

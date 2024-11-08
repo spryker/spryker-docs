@@ -29,7 +29,7 @@ To start the integration of the feature, overview and install the necessary feat
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/documentation-generator-api:"^1.0.0" spryker/documentation-generator-open-api:"^1.0.0" --update-with-dependencies
+composer require spryker/documentation-generator-api:"^1.0.0" spryker/documentation-generator-open-api:"^1.0.0" composer require spryker/glue-storefront-api-application-glue-json-api-convention-connector:"1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

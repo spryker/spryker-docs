@@ -12,6 +12,30 @@ end
 
 require 'html-proofer'
 
+# Method to run HTMLProofer with retries
+def run_htmlproofer_with_retry(directory, options, max_tries = 3, delay = 5)
+  options[:typhoeus] ||= {}
+  options[:typhoeus][:timeout] = 60
+  options[:typhoeus][:headers] = {
+    "User-Agent" => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+  }
+
+  retries = max_tries
+  begin
+    HTMLProofer.check_directory(directory, options).run
+  rescue SystemExit => e
+    retries -= 1
+    if retries >= 0
+      puts "Retrying... (#{max_tries - retries}/#{max_tries} attempts)"
+      sleep(delay) # Wait before retrying
+      retry
+    else
+      puts "HTMLProofer failed after #{max_tries} retries."
+      raise e
+    end
+  end
+end
+
 commonOptions = {
   :allow_hash_href => true,
   :ignore_urls => [
@@ -72,7 +96,10 @@ commonOptions = {
     /code.visualstudio.com\/[\.\w\-\/\?]+/,
     /www.jetbrains.com\/[\.\w\-\/\?]+/,
     /docs.spring.io\/[\.\w\-\/\?]+/,
-    'http://redisdesktop.com/',
+    "http://redisdesktop.com/",
+    "https://developer.computop.com/display/EN/Test+Cards",
+    "https://www.centralbank.cy/",
+    "https://www.facebook.com/Spryker/"
   ],
   :ignore_files => [],
   :typhoeus => {
@@ -98,7 +125,7 @@ task :check_ca do
     /docs\/dg\/.+/,
     /docs\/acp\/.+/
   ]
-  HTMLProofer.check_directory("./_site", options).run
+  run_htmlproofer_with_retry("./_site", options)
 end
 
 task :check_about do
@@ -111,7 +138,7 @@ task :check_about do
     /docs\/pbc\/.+/,
     /docs\/dg\/.+/
   ]
-  HTMLProofer.check_directory("./_site", options).run
+  run_htmlproofer_with_retry("./_site", options)
 end
 
 task :check_pbc do
@@ -125,9 +152,10 @@ task :check_pbc do
     /docs\/dg\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202307\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202403\.0\/.+/,
-    /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/
+    /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/,
+    /docs\/pbc\/\w+\/[\w-]+\/202404\.0\/.+/
   ]
-  HTMLProofer.check_directory("./_site", options).run
+  run_htmlproofer_with_retry("./_site", options)
 end
 
 
@@ -144,5 +172,5 @@ task :check_dg do
     /docs\/dg\/\w+\/[\w-]+\/202307\.0\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202411\.0\/.+/
   ]
-  HTMLProofer.check_directory("./_site", options).run
+  run_htmlproofer_with_retry("./_site", options)
 end

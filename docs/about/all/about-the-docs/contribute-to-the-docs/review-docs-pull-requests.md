@@ -1,6 +1,6 @@
 ---
 title: Review pull requests
-description: Learn how you can propose your changes to a pull request
+description: Learn how you can review a pull request that has been submitted to Spryker Documentation
 last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: Spryker docs style guide
-description:
+description: Understanding the Spryker Documentation Style Guide and how to write for Spryker based topics.
 last_updated: Mar 23, 2023
 template: concept-topic-template
 redirect_from:

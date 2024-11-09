@@ -1,6 +1,6 @@
 ---
 title: Edit the docs using a web browser
-description: Learn how you can propose changes to the Spryker docs
+description: Learn how you can contribute and propose changes to the Spryker documentation through the web browser
 last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:

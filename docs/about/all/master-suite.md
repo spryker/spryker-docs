@@ -1,5 +1,6 @@
 ---
 title: Master Suite
+description: The Spryker Master Suite is a showcase that demonstrates ready-to-use B2C-specific and B2B-specific Spryker features in a live implementation.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/master-suite

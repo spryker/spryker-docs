@@ -1,6 +1,6 @@
 ---
 title: Contribute to the docs
-description: Learn how you can contribute to the Spryker docs.
+description: Add your expertise and knowledge, this article explains how you can contribute to Spryker Documentation .
 last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: GDPR compliance guidelines
-description: GDPR contains rules relating to the protection and control of personal data.
+description: A helpful guide on making your Spryker project compliant with the General Data Protection Regulation (GDPR).
 last_updated: March 1, 2024
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/guidelines-for-new-gdpr-rules

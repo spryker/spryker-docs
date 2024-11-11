@@ -32,7 +32,7 @@ To configure Algolia, do the following:
     - Admin API Key
 8. Go back to your store's Back Office, to the Algolia app details page.
 9. In the top right corner of the Algolia app details page, click **Configure**.
-10. In the **Configure** pane, fill in the **APPLICATION ID**, **SEARCH API KEY**, and **ADMIN KEY** fields with the values from step 7.
+10. In the **Configure** pane, fill in the **APPLICATION ID**, **SEARCH API KEY**, and **ADMIN API KEY** fields with the values from step 7.
 
 ![algolia-settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-settings.png)
 
@@ -208,7 +208,7 @@ It is not recommended to turn this checkbox off.
 
 #### Spryker Filter Preferences and Algolia app
 
-When used with Algolia ACP, Spryker facets configuration is ignored and Algolia facets configuration is used instead
+When used with Algolia app, Spryker facets configuration is ignored and Algolia facets configuration is used instead.
 Use "Configuration > Facet display" to configure the list of filter.
 Be wary that setting any Algolia facet to `"filter only"` mode removes it from the list of visible filters.
 

@@ -8,15 +8,15 @@ template: howto-guide-template
 {% info_block infoBox "Info" %}
 
 Default Spryker setup supports Algolia personalization only with YVES frontend.
-If you plan to use it with customer headless frontend or mobile application follow [this guide](#todo) 
+If your plan is Algolia personalization usage in headless frontend or mobile application follow [this guide](#todo) 
 
 {% endinfo_block %}
 
 ## Prerequisites
 
 Your shop already has [integrated](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html) 
-and [configured](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html) ACP Algolia App
-and your Algolia search indexes have some products. 
+and [configured](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/configure-algolia.html) ACP Algolia App
+and your Algolia search indexes have products. 
 
 ## Update Spryker Shop
 
@@ -63,7 +63,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-3. The plugin that will generate an anonymous token for guest users in the session.   
+3. The plugin that will generate an anonymous token for guest users in the session.
 ```php
 // src/Pyz/Yves/EventDispatcher/EventDispatcherDependencyProvider.php
 
@@ -79,11 +79,15 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-4. Build a new javascript for Yves `npm ci && npm run yves` or `console frontend:project:install-dependencies && console frontend:yves:build`.
-   Usually it's executed automatically during Spryker Cloud deployment pipeline. But it's better to check this command on local development environment.
+4. Build a new javascript assets for Yves `npm ci && npm run yves` or `console frontend:project:install-dependencies && console frontend:yves:build`.
+   Usually it's executed automatically during Spryker Cloud deployment pipeline. But it's better to check this command on local development environment first.
 
 
-5Check project Yves compatibility and customizations
+5. Check Yves's compatibility 
+
+In case of customizations your codebase could have updated Yves templates on project level (src/Pyz/Yves/).
+It could be a reason that some events won't be triggered or triggered with incorrect data.
+To check it you need to run
 
 * TODO: updated after the implementation of debugger.
 `TraceableEventWidgetConfig::getIsDebugEnabled()` set to `true`.
@@ -102,13 +106,12 @@ Test the correctness of data in the triggered events in the browser console:
 
 ### Add consent for your site users
 
-You have to update the text of your site agreement and ask for a user's consent that they agree that their site interactions will be tracked and sent  
+You have to update the text of your site agreement and ask for a user's consent that they agree that their site interactions will be tracked and sent.
 
 ### Test it
 
-Deploy to testing environment. Go to 
-
-## Last checks
+1. Deploy to testing environment.
+2. Make sure that Algolia is connected and configured in the Backoffice > Apps.
 
 {% warning_block warningBox "Make sure" %}
 
@@ -116,3 +119,6 @@ If you previously had ACP Algolia App connected and used, you will need to disco
 This action will update your Spryker shop config to be able to send events to Algolia.
 
 {% endinfo_block %}
+
+3. Open Yves, act as a guest and logged-in user, do searches, filter results, open product pages after search, add products to cart, do order placement.
+4. Go to Algolia and 

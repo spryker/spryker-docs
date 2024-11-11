@@ -7,8 +7,17 @@ template: howto-guide-template
 
 {% info_block infoBox "Info" %}
 
-Default Spryker setup supports Algolia personalization only for YVES frontend.
-If you plan to use Algolia personalization in headless frontend or mobile application follow [this guide](#todo). 
+Default Spryker installation supports Algolia personalization only for YVES frontend.
+If you plan to use Algolia personalization in headless frontend or mobile application follow [this guide](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia-personalization-headless.html). 
+
+This feature also enables other Algolia premium features:
+
+- Personalization
+- Dynamic Re-Ranking
+- Query Categorization
+- Search analytics
+- Revenue analytics
+- A/B Testing
 
 {% endinfo_block %}
 
@@ -82,14 +91,12 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 4. Build a new javascript assets for Yves `npm ci && npm run yves` or `console frontend:project:install-dependencies && console frontend:yves:build`.
    Usually it's executed automatically during Spryker Cloud deployment pipeline. But it's better to check this command on local development environment first.
 
-
 5. Check your Yves's compatibility with the feature:
 
 In case of customizations your codebase could have updated Yves templates on project level (src/Pyz/Yves/).
 It could be a reason that some events won't be triggered or triggered with incorrect data.
 
-
-* TODO: updated after the implementation of debugger.
+// TODO (@matweew/@supproduction): updated after the implementation of debugger.
 `TraceableEventWidgetConfig::getIsDebugEnabled()` set to `true`.
   
 * Run the project locally or deploy to testing environment.
@@ -121,12 +128,11 @@ If you find some events are not triggered or data in the event payload is incorr
 Find the original template in the core `/vendor/spryker/spryker-shop/...` and check what selectors are used in `{% block eventTracker %}`,
 adjust the block code in your project templates when needed.
 
-//TODO: example will be helpful here. 
+// TODO (@supproduction): example will be helpful here. 
 
+### Update website agreement text
 
-### Update site's agreement text
-
-You should update the site agreement text and ask for user consent to have their interactions with the site tracked and sent to Algolia.
+You should update the website agreement text and ask for user consent to have their interactions with the website tracked and sent to Algolia.
 
 ### Test it
 
@@ -142,4 +148,4 @@ This action will update your Spryker shop config to be able to send events to Al
 
 3. Open Yves, act as a guest and logged-in user, do searches, filter results, open product pages after search, add products to cart, do order placement.
 4. Go to [Algolia Dashboard](https://dashboard.algolia.com/) and open Events from Data Sources section - `https://dashboard.algolia.com/apps/$APP_ID$/events/debugger`.
-5. Check that you see events from your site here.
+5. Check that you see events from your website here.

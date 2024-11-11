@@ -34,90 +34,82 @@ To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/pa
 <details>
   <summary>config/Shared/config_default.php</summary>
 
-```php
-//...
+  ```php
+  //...
 
-use Generated\Shared\Transfer\PaymentCaptureFailedTransfer;
-use Generated\Shared\Transfer\CapturePaymentTransfer;
-use Generated\Shared\Transfer\PaymentCapturedTransfer;
-use Generated\Shared\Transfer\AddPaymentMethodTransfer;
-use Generated\Shared\Transfer\DeletePaymentMethodTransfer;
-use Generated\Shared\Transfer\PaymentAuthorizationFailedTransfer;
-use Generated\Shared\Transfer\PaymentAuthorizedTransfer;
-use Spryker\Shared\MessageBroker\MessageBrokerConstants;
-use Spryker\Shared\Oms\OmsConstants;
-use Spryker\Shared\Payment\PaymentConstants;
-use Spryker\Shared\Sales\SalesConstants;
-use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
-use Spryker\Zed\Oms\OmsConfig;
-use Spryker\Zed\Payment\PaymentConfig;
+  use Generated\Shared\Transfer\PaymentCaptureFailedTransfer;
+  use Generated\Shared\Transfer\CapturePaymentTransfer;
+  use Generated\Shared\Transfer\PaymentCapturedTransfer;
+  use Generated\Shared\Transfer\AddPaymentMethodTransfer;
+  use Generated\Shared\Transfer\DeletePaymentMethodTransfer;
+  use Generated\Shared\Transfer\PaymentAuthorizationFailedTransfer;
+  use Generated\Shared\Transfer\PaymentAuthorizedTransfer;
+  use Spryker\Shared\MessageBroker\MessageBrokerConstants;
+  use Spryker\Shared\KernelApp\KernelAppConstants;
+  use Spryker\Shared\OauthClient\OauthClientConstants;
+  use Spryker\Shared\Oms\OmsConstants;
+  use Spryker\Shared\Payment\PaymentConstants;
+  use Spryker\Shared\Sales\SalesConstants;
+  use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
+  use Spryker\Zed\Oms\OmsConfig;
+  use Spryker\Zed\Payment\PaymentConfig;
 
-//...
-$trustedHosts
-    = $config[HttpConstants::ZED_TRUSTED_HOSTS]
-    = $config[HttpConstants::YVES_TRUSTED_HOSTS]
-    = array_filter(explode(',', getenv('SPRYKER_TRUSTED_HOSTS') ?: ''));
+  //...
+  $config[PaymentConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
+  $config[KernelAppConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
 
-$config[KernelConstants::DOMAIN_WHITELIST] = array_merge($trustedHosts, [
-    $sprykerBackendHost,
-    $sprykerFrontendHost,
-    //...
-    'connect.stripe.com',
-]);
+  $config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_ACP] = OauthAuth0Config::PROVIDER_NAME;
+  $config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_ACP] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
+  $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_ACP] = 'aop-app'
 
-$config[PaymentConstants::TENANT_IDENTIFIER]
-    = $config[KernelAppConstants::TENANT_IDENTIFIER]
-    = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
+  $config[OmsConstants::PROCESS_LOCATION] = [
+      //...
+      OmsConfig::DEFAULT_PROCESS_LOCATION,
+      APPLICATION_ROOT_DIR . '/vendor/spryker/sales-payment/config/Zed/Oms', # this line must be added if you use unmodified ForeignPaymentStateMachine01.xml
+  ];
+  $config[OmsConstants::ACTIVE_PROCESSES] = [
+      //...
+      'ForeignPaymentB2CStateMachine01', # this line must be added or add your modified version of this OMS
+  ];
+  $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
+      //...
+      PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentB2CStateMachine01', # this line must be added or add your modified version of this OMS
+  ];
 
-$config[OmsConstants::PROCESS_LOCATION] = [
-    //...
-    OmsConfig::DEFAULT_PROCESS_LOCATION,
-    APPLICATION_ROOT_DIR . '/vendor/spryker/sales-payment/config/Zed/Oms', # this line must be added if your use unmodified ForeignPaymentStateMachine01.xml
-];
-$config[OmsConstants::ACTIVE_PROCESSES] = [
-    //...
-    'ForeignPaymentB2CStateMachine01', # this line must be added or add your modified version of this OMS
-];
-$config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
-    //...
-    PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentB2CStateMachine01', # this line must be added or add your modified version of this OMS
-];
+  $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
+      //...
+      AddPaymentMethodTransfer::class => 'payment-method-commands',
+      UpdatePaymentMethodTransfer::class => 'payment-method-commands'
+      DeletePaymentMethodTransfer::class => 'payment-method-commands',
+      CancelPaymentTransfer::class => 'payment-commands',
+      CapturePaymentTransfer::class => 'payment-commands',
+      RefundPaymentTransfer::class => 'payment-commands',
+      PaymentAuthorizedTransfer::class => 'payment-events',
+      PaymentAuthorizationFailedTransfer::class => 'payment-events',
+      PaymentCapturedTransfer::class => 'payment-events',
+      PaymentCaptureFailedTransfer::class => 'payment-events',
+      PaymentRefundedTransfer::class => 'payment-events',
+      PaymentRefundFailedTransfer::class => 'payment-events',
+      PaymentCanceledTransfer::class => 'payment-events',
+      PaymentCancellationFailedTransfer::class => 'payment-events',
 
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
-    //...
-    AddPaymentMethodTransfer::class => 'payment-method-commands',
-    UpdatePaymentMethodTransfer::class => 'payment-method-commands'
-    DeletePaymentMethodTransfer::class => 'payment-method-commands',
-    CancelPaymentTransfer::class => 'payment-commands',
-    CapturePaymentTransfer::class => 'payment-commands',
-    RefundPaymentTransfer::class => 'payment-commands',
-    PaymentAuthorizedTransfer::class => 'payment-events',
-    PaymentAuthorizationFailedTransfer::class => 'payment-events',
-    PaymentCapturedTransfer::class => 'payment-events',
-    PaymentCaptureFailedTransfer::class => 'payment-events',
-    PaymentRefundedTransfer::class => 'payment-events',
-    PaymentRefundFailedTransfer::class => 'payment-events',
-    PaymentCanceledTransfer::class => 'payment-events',
-    PaymentCancellationFailedTransfer::class => 'payment-events',
+      # [Optional] This message can be received from your project when you want to use details of the Stripe App used payment.
+      PaymentCreatedTransfer::class => 'payment-events',
+      PaymentUpdatedTransfer::class => 'payment-events'
+  ];
 
-    # [Optional] This message can be received from your project when you want to use details of the Stripe App used payment.
-    PaymentCreatedTransfer::class => 'payment-events',
-    PaymentUpdatedTransfer::class => 'payment-events',
-    AppConfigUpdatedTransfer::class => 'app-events',
-];
+  $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
+      //...
+      'payment-method-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+      'payment-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+  ];
 
-$config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
-    //...
-    'payment-method-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-    'payment-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-];
+  $config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
+      //...
+      'payment-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+  ];
 
-$config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
-    //...
-    'payment-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-];
-
-```
+  ```
 
 </details>
 

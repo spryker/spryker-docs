@@ -1,6 +1,6 @@
 ---
 title: "Style guide: Spelling"
-description: Guidance for spelling in Spryker documentation
+description: Guidance and advice for language and spelling in Spryker documentation
 last_updated: Mar 23, 2023
 template: concept-topic-template
 redirect_from:

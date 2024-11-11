@@ -9,4 +9,4 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/unzer/extend-and-customize/customize-the-credit-card-display-in-your-payment-step.html
 ---
 
-To use Unzer UI component and customize the credit card display in your payment step, see [Accept card with UI components](https://docs.unzer.com/payment-methods/card/accept-card-ui-component/) in the Unzer official documentation.
+To use Unzer UI component and customize the credit card display in your payment step, see [Integrate using UI components (v2)](https://docs.unzer.com/online-payments/ui-component-v2) in the Unzer official documentation.

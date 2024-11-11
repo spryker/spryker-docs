@@ -38,7 +38,7 @@ There is no need to install core features.
 Adjust the following files:
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Business/MerchantProductOfferDataImportBusinessFactory.php</summary>
+<summary>src/Pyz/Zed/MerchantProductOfferDataImport/Business/MerchantProductOfferDataImportBusinessFactory.php</summary>
 
 ```php
 <?php
@@ -787,7 +787,7 @@ class CombinedStoreToIdStoreStep extends StoreToIdStoreStep
 ```
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/PriceProductOfferDataImportBusinessFactory.php</summary>
+<summary>src/Pyz/Zed/PriceProductOfferDataImport/Business/PriceProductOfferDataImportBusinessFactory.php</summary>
 
 ```php
 <?php
@@ -1193,7 +1193,7 @@ class CombinedStockNameToIdStockStep extends StockNameToIdStockStep
 
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Business/ProductOfferStockDataImportBusinessFactory.php</summary>
+<summary>src/Pyz/Zed/ProductOfferStockDataImport/Business/ProductOfferStockDataImportBusinessFactory.php</summary>
 
 ```php
 <?php
@@ -1522,7 +1522,7 @@ class CombinedProductOfferValidityWriterStep extends ProductOfferValidityWriterS
 ```
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferValidityDataImport/Business/ProductOfferValidityDataImportBusinessFactory.php</summary>
+<summary>src/Pyz/Zed/ProductOfferValidityDataImport/Business/ProductOfferValidityDataImportBusinessFactory.php</summary>
 
 ```php
 <?php

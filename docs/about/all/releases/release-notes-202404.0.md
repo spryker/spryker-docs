@@ -10,7 +10,7 @@ Spryker Cloud Commerce OS is an end-to-end solution for digital commerce. This d
 For information about installing Spryker, see [Getting started guide](/docs/dg/dev/development-getting-started-guide.html).
 
 
-## Stripe app<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Stripe app <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 The Stripe app is a new ACP app in the payment category. The initial version of the Stripe app offers a seamless and secure payment service for B2B and B2C transactions. With its global reach and adherence to regulatory standards, it ensures hassle-free electronic transactions while meeting compliance requirements.
 

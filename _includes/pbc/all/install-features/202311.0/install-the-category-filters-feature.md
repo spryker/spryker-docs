@@ -44,8 +44,8 @@ vendor/bin/console transfer:generate
 
 6. Activate the product category filters collector. For this, add `ProductCategoryFilterCollectorPlugin` to the Storage Collector plugin stack.
 
-<details open>
-<summary markdown='span'>Example: collector plugin list extension</summary>
+<details>
+<summary>Example: collector plugin list extension</summary>
 
 ```php
 <?php

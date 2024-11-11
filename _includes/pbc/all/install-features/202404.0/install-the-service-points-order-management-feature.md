@@ -185,7 +185,7 @@ Verify the `checkout-data` Glue API endpoint supports service points:
 
 `POST https://glue.mysprykershop.com/checkout-data`
 <details>
-  <summary markdown='span'>Request body example</summary>
+  <summary>Request body example</summary>
 ```json
 {
     "data": {
@@ -207,7 +207,7 @@ Verify the `checkout-data` Glue API endpoint supports service points:
 Make sure you receive a valid response:
 
 <details>
-  <summary markdown='span'>Response body example</summary>
+  <summary>Response body example</summary>
 ```json
 {
     "data": {
@@ -245,7 +245,7 @@ Verify the `checkout` Glue API endpoint supports service points:
 1. Add a product offer with a service point relation to cart.
 - `POST https://glue.mysprykershop.com/checkout`
 <details>
-  <summary markdown='span'>Request body example</summary>
+  <summary>Request body example</summary>
 ```json
 {
     "data": {

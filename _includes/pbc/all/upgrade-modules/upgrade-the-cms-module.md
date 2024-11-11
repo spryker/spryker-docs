@@ -235,7 +235,7 @@ Move CMS Block templates to the `src/Pyz/Shared/CmsBlock/Theme/default/template/
 
 For quick and smooth migration, we have prepared a migration script. You can find it below.
 
-<details><summary markdown='span'>Code sample</summary>
+<details><summary>Code sample</summary>
 
 ```php
 <?php

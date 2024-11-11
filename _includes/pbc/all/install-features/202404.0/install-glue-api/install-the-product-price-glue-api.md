@@ -66,8 +66,8 @@ Activate the following plugins:
 |ConcreteProductsProductPricesResourceRelationshipPlugin |Adds the `concrete-product-prices` resource as a relationship to the `concrete-products` resource. |None |Spryker\Glue\ProductsProductPricesResourceRelationship\Plugin|
 |PriceProductVolumeRestProductPricesAttributesMapperPlugin |Adds volume price data to `abstract-product-prices`  and `concrete-product-prices` resources. |None| Spryker\Glue\PriceProductVolumesRestApi\Plugin\ProductPriceRestApi|
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

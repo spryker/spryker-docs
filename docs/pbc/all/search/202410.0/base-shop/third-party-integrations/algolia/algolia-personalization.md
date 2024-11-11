@@ -7,8 +7,8 @@ template: howto-guide-template
 
 {% info_block infoBox "Info" %}
 
-Default Spryker setup supports Algolia personalization only with YVES frontend.
-If your plan is Algolia personalization usage in headless frontend or mobile application follow [this guide](#todo) 
+Default Spryker setup supports Algolia personalization only for YVES frontend.
+If you plan to use Algolia personalization in headless frontend or mobile application follow [this guide](#todo). 
 
 {% endinfo_block %}
 
@@ -35,10 +35,10 @@ spryker-shop/shop-ui spryker-shop/catalog-page spryker-shop/cart-page spryker-sh
 spryker-shop/product-detail-page spryker-shop/product-group-widget spryker-shop/product-set-detail-page spryker-shop/quick-order-page
 ```
 
-if the command does now work, try with `--with-all-dependencies` instead. 
+if the command does now work, try it with `--with-all-dependencies` flag instead. 
 
 ### Enabled new features
-1. Update project config
+1. Update project config:
 ```php
 // config_default.php
 
@@ -47,7 +47,7 @@ $config[KernelAppConstants::TENANT_IDENTIFIER]
     = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
 ```
 
-2. New widget will trigger events for user actions, that will be sent to [Algolia Insights](https://www.algolia.com/doc/guides/sending-events/getting-started/) 
+2. Enable new widget, that will trigger events for user actions and send them to [Algolia Insights](https://www.algolia.com/doc/guides/sending-events/getting-started/): 
 ```php
 // src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
 
@@ -63,7 +63,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-3. The plugin that will generate an anonymous token for guest users in the session.
+3. Enabled the plugin that will generate an anonymous token for guest users in the session:
 ```php
 // src/Pyz/Yves/EventDispatcher/EventDispatcherDependencyProvider.php
 
@@ -83,30 +83,50 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
    Usually it's executed automatically during Spryker Cloud deployment pipeline. But it's better to check this command on local development environment first.
 
 
-5. Check Yves's compatibility 
+5. Check your Yves's compatibility with the feature:
 
 In case of customizations your codebase could have updated Yves templates on project level (src/Pyz/Yves/).
 It could be a reason that some events won't be triggered or triggered with incorrect data.
-To check it you need to run
+
 
 * TODO: updated after the implementation of debugger.
 `TraceableEventWidgetConfig::getIsDebugEnabled()` set to `true`.
   
 * Run the project locally or deploy to testing environment.
-* Open your Shop storefront home page
+* Open your Shop Storefront home page.
 * Open browser's development console and check "Preserve log" in the settings.
 
 Test the correctness of data in the triggered events in the browser console:
-* (if applicable) Click on a product on the home page - PRODUCT_CLICK
-* (if applicable) Click on a product add to cart button on the home page - ADD_TO_CART
-* Open product details page (PDP) - PAGE_LOAD
-  * ADD_TO_CART
-  * ADD_TO_SHOPPING_LIST
-  * ADD_TO_WISHLIST
+* Open Home page
+  * (if applicable) Click on a product - `PRODUCT_CLICK`
+  * (if applicable) Click on a product add to cart button - `ADD_TO_CART`
+* Open product detail page (PDP), you should see events for actions: 
+  * `PAGE_LOAD`
+  * `ADD_TO_CART`
+  * `ADD_TO_SHOPPING_LIST`
+  * `ADD_TO_WISHLIST`
+* Open any Category page or Search results page:
+  * `PAGE_LOAD` with displayed products SKUs and displayed search filters
+  * `PRODUCT_CLICK` when user clicks on results
+  * `ADD_TO_CART` with product SKU, currency and price, when user clicks Add to cart from the catalog page.
+* Open Cart page
+  * (if applicable) add a new product from add to cart widget `ADD_TO_CART`
+  * (if applicable) save cart items to a shopping list `ADD_TO_SHOPPING_LIST`
+* Open Quick Order page
+  * (if applicable) add a new product from add to cart widget `ADD_TO_CART`
+  * (if applicable) save cart items to a shopping list `ADD_TO_SHOPPING_LIST`
 
-### Add consent for your site users
 
-You have to update the text of your site agreement and ask for a user's consent that they agree that their site interactions will be tracked and sent.
+If you find some events are not triggered or data in the event payload is incorrect check your updated Yves templates on project level (src/Pyz/Yves/).
+Find the original template in the core `/vendor/spryker/spryker-shop/...` and check what selectors are used in `{% block eventTracker %}`,
+adjust the block code in your project templates when needed.
+
+//TODO: example will be helpful here. 
+
+
+### Update site's agreement text
+
+You should update the site agreement text and ask for user consent to have their interactions with the site tracked and sent to Algolia.
 
 ### Test it
 
@@ -121,4 +141,5 @@ This action will update your Spryker shop config to be able to send events to Al
 {% endinfo_block %}
 
 3. Open Yves, act as a guest and logged-in user, do searches, filter results, open product pages after search, add products to cart, do order placement.
-4. Go to Algolia and 
+4. Go to [Algolia Dashboard](https://dashboard.algolia.com/) and open Events from Data Sources section - `https://dashboard.algolia.com/apps/$APP_ID$/events/debugger`.
+5. Check that you see events from your site here.

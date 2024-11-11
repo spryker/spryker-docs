@@ -1,6 +1,6 @@
 ---
 title: Report docs issues
-description: Learn how to report an issue with Spryker docs.
+description: Found an issue in one of our Spryker Documentation Articles? Learn how to report an issue with Spryker docs.
 last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:

@@ -3,16 +3,10 @@ title: Delete stores
 description: This document shows how to delete a store
 past_updated: Jun 26, 2023
 template: howto-guide-template
-last_updated: Nov 17, 2023
+last_updated: Nov 12, 2024
 ---
 
 This document describes how to delete stores.
-
-{% info_block warningBox %}
-
-Dynamic Multistore is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
 
 {% info_block warningBox %}
 

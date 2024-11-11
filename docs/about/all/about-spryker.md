@@ -24,14 +24,14 @@ redirect_from:
 
 
 
-Spryker Cloud Commerce OS (SCCOS) is a completely modular e-commerce technology. With the modular design and API-based integration with all possible touchpoints, Spryker supports most business models: B2B, B2C, and marketplace.
+*Spryker Cloud Commerce OS (Spryker)* is an e-commerce platform-as-a-service solution designed to provide businesses with the flexibility and efficiency needed to create a unique digital commerce experience. Built on a modular and layered architecture, it increases operational efficiency and lowers the total cost of ownership. With the modular design and API-based integration with all possible touchpoints, Spryker supports most business models: B2B, B2C, and marketplace. This document provides an overview of the key features and benefits of Spryker.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/Spryker-OS-Overview-RGB-JULY19_Spryker-OS-Overview.png)
 
 
 ## Modular architecture
 
-Modular architecture or modularity means that the system is composed of small parts called modules. A module is the smalles functionality unit in Spryker. Some modules are required to run Spryker, but many are optional and  provide certain functionality or connectivity to internal or external systems. Spryker consists of over 750 modules.
+Modular architecture or modularity means that the system is composed of small parts called modules. A module is the smalles functionality unit in Spryker. Some modules are required to run Spryker, but many are optional and provide certain functionality or connectivity to internal or external systems. Spryker consists of over 750 modules.
 
 Modules combine into features and have limited dependencies. Limited dependencies result in less development effort, increasing your return on investment and lowering the total cost of ownership.
 
@@ -41,10 +41,10 @@ For a complete list of modules, see the [Spryker repository](https://github.com/
 
 ### Benefits of the modular architecture
 
-* You take only the modules or features needed for your project, without overloading it with redundant code and investing effort into something you don’t need.
-* You can easily grow your project by adding new modules at any time.
-* You can add, delete, and test new features without worrying about breaking or pausing your live shop.
-* Thanks to the atomic release approach, each module is released independently, has its own version, and is backward compatible. You can install and update the needed modules right after they are released without having to update any other installed modules.
+* *Selectivity*: Use only the modules you need, reducing redundant code.
+* *Scalability*: Grow your project with the wide selection of available modules.
+* *Flexibility*: Add, delete, and test new features without hindering your live shop.
+* *Atomic release approach*: Each module is developed and released independently, ensuring backward compatibility.
 
 ## Layered architecture
 

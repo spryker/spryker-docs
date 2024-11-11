@@ -5,7 +5,7 @@ last_updated: Aug 17, 2023
 template: concept-topic-template
 ---
 
-*Spryker Cloud Commerce OS (SCCOS or Spryker)* is an e-commerce platform-as-a-service solution designed to provide businesses with the flexibility and efficiency needed to create a unique digital commerce experience. Built on a modular and layered architecture, it increases operational efficiency and lowers the total cost of ownership. This document provides an overview of the key features and benefits of Spryker.
+*Spryker Cloud Commerce OS (Spryker)* is an e-commerce platform-as-a-service solution designed to provide businesses with the flexibility and efficiency needed to create a unique digital commerce experience. Built on a modular and layered architecture, it increases operational efficiency and lowers the total cost of ownership. This document provides an overview of the key features and benefits of Spryker.
 
 ## Modular architecture
 

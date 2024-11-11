@@ -11,7 +11,15 @@ redirect_from:
 
 This section describes common issues and solutions related to installing Spryker locally.
 
-## Topics
+<details>
+<summary>unable to bring up Mutagen Compose sidecar service: Error response from daemon: network  is ambiguous (X matches found based on ID prefix)</summary>
+The issue appears in Mutagen v0.18. In order to fix it, you need to downgrade Mutagen to v0.17. To do this, run the following commands:
+```
+brew unlink mutagen && brew unlink mutagen-compose && brew install mutagen-io/mutagen/mutagen@0.17 mutagen-io/mutagen/mutagen-compose@0.17
+```
+</details>
+
+## More Troubleshooting Guides
 
 Troubleshooting [Docker installation](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html):
 * [An error during front end setup](/docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html)

@@ -67,7 +67,8 @@ entries:
       url: /docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
     - title: Redis configuration
       url: /docs/dg/dev/set-up-spryker-locally/redis-configuration.html
-    - title: Troubleshooting
+    - title: Troubleshooting Installation
+      url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html
       nested:
       - title: An error during frontend setup
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html

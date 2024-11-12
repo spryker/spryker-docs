@@ -93,7 +93,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 5. Check your Yves's compatibility with the feature:
 
-In case of customizations your codebase could have updated Yves templates on project level (src/Pyz/Yves/).
+In case of customizations, your codebase could have updated Yves templates on the project level (src/Pyz/Yves/).
 It could be a reason that some events won't be triggered or triggered with incorrect data.
 
 // TODO (@matweew/@supproduction): updated after the implementation of debugger.

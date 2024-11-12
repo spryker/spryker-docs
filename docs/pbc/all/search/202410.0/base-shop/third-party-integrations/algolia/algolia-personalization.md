@@ -107,7 +107,7 @@ Test the correctness of data in the triggered events in the browser console:
 * Open Home page
   * (if applicable) Click on a product - `PRODUCT_CLICK`
   * (if applicable) Click on a product add to cart button - `ADD_TO_CART`
-* Open product detail page (PDP), you should see events for actions: 
+* Open the product detail page (PDP), you should see events for the actions: 
   * `PAGE_LOAD`
   * `ADD_TO_CART`
   * `ADD_TO_SHOPPING_LIST`

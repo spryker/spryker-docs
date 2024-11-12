@@ -21,7 +21,7 @@ The events from your site/application are required to enable Algolia premium fea
 - A/B Testing
 
 
-For custom frontends or mobile application it's recommended to use Algolia SDK for specific framework or platform and use built-in Algolia UI components.
+For custom frontends or mobile applications, it's recommended to use the Algolia SDK for a specific framework or platform and the built-in Algolia UI components.
 They already support event tracking for most of the required events.
 
 For Web

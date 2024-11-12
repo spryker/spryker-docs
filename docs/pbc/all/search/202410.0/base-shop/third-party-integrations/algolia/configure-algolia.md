@@ -178,7 +178,9 @@ Also, Spryker's Algolia app supports `renderingContent` feature, which can be fo
 Here you can configure the order of facets and add only for end-users relevant facets.
 
 Please pay attention that Spryker has additional UI configuration for filters in the Backoffice > Merchandising > Filter Preferences,
-where you can change a filter type: single-select, multi-select or range. That will be applied also for Algolia search results.  
+where you can change a filter type: single-select, multi-select or range. That will be applied to Catalog/Search pages filters UI.
+E.g. you can set the "Brand" type to single or multi-select, both options are supported by Algolia.
+Default type is multi-select for all facets provided in the Algolia.
 
 ##### Searchable
 

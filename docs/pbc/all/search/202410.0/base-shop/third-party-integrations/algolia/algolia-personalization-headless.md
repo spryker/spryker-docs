@@ -13,7 +13,6 @@ Default Spryker installation supports Algolia personalization only for YVES fron
 
 The events from your site/application are required to enable Algolia premium features such as
 
-- Personalization
 - Dynamic Re-Ranking
 - Query Categorization
 - Search analytics

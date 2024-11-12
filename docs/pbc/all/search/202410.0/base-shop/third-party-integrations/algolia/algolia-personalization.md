@@ -12,7 +12,6 @@ If you plan to use Algolia personalization in headless frontend or mobile applic
 
 This feature also enables other Algolia premium features:
 
-- Personalization
 - Dynamic Re-Ranking
 - Query Categorization
 - Search analytics
@@ -105,16 +104,17 @@ It could be a reason that some events won't be triggered or triggered with incor
 
 Test the correctness of data in the triggered events in the browser console:
 * Open Home page
-  * (if applicable) Click on a product - `PRODUCT_CLICK`
-  * (if applicable) Click on a product add to cart button - `ADD_TO_CART`
-* Open the product detail page (PDP), you should see events for the actions: 
+  * (if home page has products) Click on a product - `PRODUCT_CLICK`
+  * (if home page has the add to cart button) Click on a product add to cart button - `ADD_TO_CART`
+* Open any product detail page (PDP), you should see events for the actions: 
   * `PAGE_LOAD`
   * `ADD_TO_CART`
   * `ADD_TO_SHOPPING_LIST`
   * `ADD_TO_WISHLIST`
 * Open any Category page or Search results page:
-  * `PAGE_LOAD` with displayed products SKUs and displayed search filters
-  * `PRODUCT_CLICK` when user clicks on results
+  * `QueryID` should be present in the event payload on this page type.
+  * `PAGE_LOAD` with displayed products SKUs and displayed search filters.
+  * `PRODUCT_CLICK` when user clicks on results.
   * `ADD_TO_CART` with product SKU, currency and price, when user clicks Add to cart from the catalog page.
 * Open Cart page
   * (if applicable) add a new product from add to cart widget `ADD_TO_CART`

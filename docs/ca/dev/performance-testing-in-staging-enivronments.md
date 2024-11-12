@@ -1,6 +1,6 @@
 ---
 title: Performance testing in staging environments
-description: Learn about performance testing for the Spryker Cloud Commerce OS
+description: Learn how to efficiently conduct performance testing in Spryker Cloud Commerce OS staging environments, ensuring scalability and high-quality performance before production.
 last_updated: Sep 15, 2022
 template: concept-topic-template
 redirect_from:

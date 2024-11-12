@@ -208,7 +208,7 @@ It is not recommended to turn this checkbox off.
 
 #### Spryker Filter Preferences and Algolia app
 
-When used with Algolia app, Spryker facets configuration is ignored and Algolia facets configuration is used instead.
+When used with the Algolia app, the Spryker facets configuration is ignored and the Algolia facets configuration is used instead.
 Use "Configuration > Facet display" to configure the list of filter.
 Be wary that setting any Algolia facet to `"filter only"` mode removes it from the list of visible filters.
 

@@ -133,6 +133,12 @@ adjust the block code in your project templates when needed.
 ### Update website agreement text
 
 You should update the website agreement text and ask for user consent to have their interactions with the website tracked and sent to Algolia.
+Something similar to
+
+> **User Data analytics**
+> 
+> To enhance your experience, we use data and analytics to understand how you interact with our site.
+> By accepting, you allow us to capture anonymous events for personalization, analysis, and continuous improvement of your experience on our platform.
 
 ### Test it
 

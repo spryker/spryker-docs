@@ -42,6 +42,7 @@ composer update --with-dependencies spryker/search-http spryker/customer \
 spryker-shop/shop-ui spryker-shop/catalog-page spryker-shop/cart-page spryker-shop/checkout-page spryker-shop/home-page \
 spryker-shop/product-detail-page spryker-shop/product-group-widget spryker-shop/product-set-detail-page spryker-shop/quick-order-page
 ```
+TODO: the list should be revalidated after final code review.
 
 if the command does now work, try it with `--with-all-dependencies` flag instead. 
 

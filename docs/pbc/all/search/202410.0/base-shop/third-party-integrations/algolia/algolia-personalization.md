@@ -89,7 +89,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 ```
 
 4. Build the JavaScript assets for Yves `npm ci && npm run yves` or `console frontend:project:install-dependencies && console frontend:yves:build`.
-   Usually it's executed automatically during Spryker Cloud deployment pipeline. But it's better to check this command on local development environment first.
+   Usually, it's executed automatically during the Spryker Cloud deployment pipeline. But it's better to check this command on the local development environment first.
 
 5. Check your Yves's compatibility with the feature:
 

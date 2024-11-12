@@ -175,7 +175,7 @@ The `prices` attribute is an object with nested fields. Algolia creates facets f
 
 All configured index Facets will be displayed in the list of filter on Yves or via Glue API `/catalog-search`.
 Also, Spryker's Algolia app supports `renderingContent` feature, which can be found in an index "Configuration > Facet display".
-Here you can configure the order of facets and add only relevant for end-users facets.
+Here you can configure the order of facets and add only for end-users relevant facets.
 
 Please pay attention that Spryker has additional UI configuration for filters in the Backoffice > Merchandising > Filter Preferences,
 where you can change a filter type: single-select, multi-select or range. That will be applied also for Algolia search results.  

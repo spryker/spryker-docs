@@ -1,6 +1,6 @@
 ---
 title: Share secrets with the Spryker Support Team
-description: Learn Share secrets with the Spryker Support Team
+description: Learn the secure steps for sharing secrets or credentials with the Spryker Support Team, ensuring sensitive information is handled safely and appropriately.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-share-secrets-with-the-spryker-support-team

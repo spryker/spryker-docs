@@ -42,5 +42,5 @@ For mobile applications:
 * iOS https://www.algolia.com/doc/guides/building-search-ui/getting-started/ios/
 
 
-For additional "conversion" events such as "Add to Cart", "Add to Shopping List", or "Add to Wishlist" use Insights API client for your framework/platform
+For additional "conversion" events such as "Add to Cart", "Add to Shopping List", or "Add to Wishlist" use the Insights API client for your framework/platform
 and the methods from this page https://www.algolia.com/doc/api-client/methods/insights/.

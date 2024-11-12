@@ -164,4 +164,4 @@ functional-tests:
 
 ## See also
 
-For more configuration options of GitLab pipelines, see [The .gitlab-ci.yml file](https://docs.gitlab.com/ee/ci/yaml/gitlab_ci_yaml.html).
+For more configuration options of GitLab pipelines, see [CI/CD YAML syntax reference](https://docs.gitlab.com/ee/ci/yaml/).

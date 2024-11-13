@@ -96,8 +96,8 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 In case of customizations, your codebase could have updated Yves templates on the project level (src/Pyz/Yves/).
 It could be a reason that some events won't be triggered or triggered with incorrect data.
 
-// TODO (@matweew/@supproduction): updated after the implementation of debugger.
-`TraceableEventWidgetConfig::getIsDebugEnabled()` set to `true`.
+// TODO (@matweew/@supproduction)
+`TraceableEventWidgetConfig::isDebugEnabled()` set to `true`.
   
 * Run the project locally or deploy to testing environment.
 * Open your Shop Storefront home page.

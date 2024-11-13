@@ -1,3 +1,5 @@
+| RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
+| --- | --- | --- | --- |
 | shipments | Items | Array | A list of items in the shipment. |
 | shipments | requestedDeliveryDate | Date | The desired delivery date. |
 | shipments | shippingAddress | Object | The address to which this shipment will be delivered. |

@@ -105,7 +105,7 @@ entries:
           - title: Email quota restrictions
             url: /docs/ca/dev/email-service/email-quota-restrictions.html
           - title: Verify email addresses
-            url: /docs/ca/dev/verify-email-addresses.html
+            url: /docs/ca/dev/email-service/verify-email-addresses.html
           - title: Email Deliverability
             url: /docs/ca/dev/email-service/email-deliverability.html
 

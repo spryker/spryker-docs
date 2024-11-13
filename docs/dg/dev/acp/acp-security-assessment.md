@@ -1,6 +1,6 @@
 ---
 title: ACP security assessment
-Descriptions: This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker’s app catalog.
+Descriptions: Ensure robust security for your Spryker ACP environment with our comprehensive guide on assessments, compliance, and protection best practices.
 template: howto-guide-template
 last_updated: Aug 30, 2023
 redirect_from:

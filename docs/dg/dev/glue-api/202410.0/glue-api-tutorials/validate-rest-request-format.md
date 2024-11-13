@@ -26,7 +26,7 @@ To enable validation of REST requests, install the `RestRequestValidation` modul
 
 ## Use default validation schema
 
-Spryker Glue API comes with a default validation schema. The schema provides default validation rules for the REST APIs shipped with Spryker. You can find it in `vendor/spryker/spryker/Bundles/RestRequestValidator/config/validation.dist.yaml`. Use the schema as a sample and reference for your own validation implementations.
+Spryker Glue API comes with a default validation schema. The schema provides default validation rules for the REST APIs shipped with Spryker. You can find it in `vendor/spryker/rest-request-validator/config/dist.validation.yaml`. Use the schema as a sample and reference for your own validation implementations.
 
 By default, the schema is not applied.
 

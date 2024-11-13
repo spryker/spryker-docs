@@ -6,12 +6,6 @@ This document describes how to upgrade the Country module.
 
 ## Upgrade from version 3.* to version 4.0.0
 
-{% info_block warningBox %}
-
-Dynamic Multistore is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
-
 In this version of the `Country` module, we have enabled the configuration of currencies per store in the database. The `Country` module version 4 introduces the `spy_country_store` database table to persist stores-countries in Zed. You can find more details about the changes on the [Country module release page](https://github.com/spryker/country/releases).
 
 *Estimated migration time: 5 min*

@@ -1,5 +1,6 @@
 ---
 title: Getting the most out of Spryker Support
+description: Find help and guidance on how to get the most out of Spryker Support, including tips on issue reporting, contacting support, and maximizing resources.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-get-the-most-out-of-spryker-support

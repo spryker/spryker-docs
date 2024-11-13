@@ -1848,6 +1848,13 @@ entries:
                   - title: Mindlab
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/mindlab.html
 
+              - title: OpenAI
+                nested:
+                  - title: Install and upgrade
+                    nested:
+                      - title: Install the OpenAI module
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/open-ai/install-and-upgrade/install-the-open-ai-module.html
+
               - title: Operational tools, monitoring, legal
                 nested:
                 - title: PlusServer
@@ -3277,6 +3284,12 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html
                   - title: Xentral
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/xentral.html
+                  - title: OpenAI
+                    nested:
+                      - title: Install and upgrade
+                        nested:
+                          - title: Install the ProductManagementAi module
+                            url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/open-ai/install-and-upgrade/install-the-product-management-ai-module.html
 
               - title: Tutorials and HowTos
                 nested:
@@ -3803,6 +3816,12 @@ entries:
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/disconnect-algolia.html
                     - title: Getting access to Algolia dashboard
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/getting-access-to-algolia-dashboard.html
+                - title: OpenAI
+                  nested:
+                    - title: Install and upgrade
+                      nested:
+                        - title: Install the ImageSearchAi module
+                          url: /docs/pbc/all/search/base-shop/third-party-integrations/open-ai/install-and-upgrade/install-the-image-search-ai-module.html
 
               - title: Best practices
                 url: /docs/pbc/all/search/base-shop/best-practices/search-best-practices.html

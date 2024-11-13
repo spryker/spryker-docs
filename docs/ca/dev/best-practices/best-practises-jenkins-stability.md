@@ -1,6 +1,6 @@
 ---
 title: "Best practices: Jenkins stability"
-description: Improve the stability of the scheduler component.
+description: Follow best practices for Jenkins in Spryker Cloud Commerce OS, focusing on stable configurations, efficient resource usage, and optimized build performance.
 template: best-practices-guide-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html

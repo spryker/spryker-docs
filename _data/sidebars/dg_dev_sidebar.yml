@@ -1107,8 +1107,8 @@ entries:
       url: /docs/dg/dev/architecture/conceptual-overview.html
     - title: Modules and application layers
       url: /docs/dg/dev/architecture/modules-and-application-layers.html
-    - title: Architectural Convention Reference
-      url: /docs/dg/dev/architecture/architectural-convention-reference.html
+    - title: Architectural Convention
+      url: /docs/dg/dev/architecture/architectural-convention.html
     - title: Module API
       url: /docs/dg/dev/architecture/module-api/module-api.html
       nested:
@@ -1552,10 +1552,10 @@ entries:
     - title: Project implementation - Zed API
       url: /docs/dg/dev/zed-api/zed-api-project-implementation.html
     - title: Integrate Zed API
-      url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api.html
+      url: /docs/dg/dev/zed-api/integrate-zed-api/integrate-zed-api.html
       nested:
         - title: Integrate Zed API for merchant relationships
-          url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
+          url: /docs/dg/dev/zed-api/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
 
     - title: Zed API configuration
       url: /docs/dg/dev/zed-api/zed-api-configuration.html
@@ -1568,7 +1568,7 @@ entries:
     - title: Zed API resources
       url: /docs/dg/dev/zed-api/zed-api-resources.html
     - title: Zed API (BETA)
-      url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html
+      url: /docs/dg/dev/zed-api/zed-api-beta.html
 
 
   - title: Updating Spryker

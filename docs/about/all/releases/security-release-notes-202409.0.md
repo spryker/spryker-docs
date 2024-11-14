@@ -87,7 +87,7 @@ composer update spryker-shop/customer-page
 composer show spryker-shop/customer-page # Verify the version
 ```
 
-2. In `src/Pyz/Zed/Product/ProductConfig.php`, add the following method:
+2. In `src/Pyz/Yves/CustomerPage/CustomerPageConfig.php`, add the following method:
 
 ```bash
 /**

@@ -1,5 +1,6 @@
 ---
 title: Using the Support Portal
+description: How to navigate Spryker's Support Portal to create, track, and manage support cases efficiently for seamless issue resolution
 last_updated: Sep 28, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-use-the-support-portal

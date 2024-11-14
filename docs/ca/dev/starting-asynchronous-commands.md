@@ -1,6 +1,6 @@
 ---
 title: Starting asynchronous commands
-description: Learn how to run asynchronous commands
+description: Learn how to manage asynchronous console commands in Spryker using Jenkins, ensuring efficient background job execution.
 last_updated: May 24, 2022
 template: howto-guide-template
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: General rules and guidance for adding docs
-description: Learn how to style and format your docs.
+description: Understand the core fundamentals of contributing to the Spryker Documentation site and our general rules and guidance for adding articles.
 last_updated: Jul 18, 2022
 template: concept-topic-template
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: Setting up a custom SSL certificate
-description: Set up a third-party SSL certificate for an application
+description: Set up a custom SSL certificate for your Spryker Cloud Commerce OS production environment, including steps for certificate registration and configuration for secure connections.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/setting-up-a-custom-ssl-certificate

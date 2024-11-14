@@ -1,5 +1,6 @@
 ---
 title: Preparing for heavy loads and traffic
+description: Guidance and tips on how to prepare your shop for higher traffic volume during busy trading seasons.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/special-prepare-for-a-busy-season

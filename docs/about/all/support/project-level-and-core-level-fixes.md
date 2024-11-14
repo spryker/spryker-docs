@@ -1,5 +1,6 @@
 ---
 title: Project-level and core-level fixes
+description: Understand Spryker's approach to project-level and core-level fixes, addressing urgent issues quickly while ensuring quality through core fixes for long-term stability.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/understanding-project-and-core-level-fixes

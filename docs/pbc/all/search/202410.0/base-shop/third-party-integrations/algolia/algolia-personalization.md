@@ -130,63 +130,171 @@ Test the correctness of data in the triggered events in the browser console:
 * Open Order Success page
   * `PAGE_LOAD` with currency, order total, skus, prices, quantities  of purchased products.
 
-If you find some events are not triggered or data in the event payload is incorrect check your updated Yves templates on project level (src/Pyz/Yves/).
-Find the original template in the core `/vendor/spryker/spryker-shop/...` and check what selectors are used in `{% block eventTracker %}`,
-adjust the block code in your project templates when needed.
+To view a full list of available events, refer to the `traceable-events-algolia` [Readme file](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-algolia/README.md).
 
-You can find API description and event configuration example in `traceable-events-orchestrator` [Readme file](spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md)
-The full list of events you can find in `traceable-events-algolia` [Readme file](spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-algolia/README.md)
+When debug mode is enabled, you can see event logs in the console to help with inspection.
 
-### Algolia Adapter Extending
-If you need to extend existing events with custom logic or/and add new event you can extend adapter on project level.
+#### Common Issues and Solutions
 
-```typescript
-declare global {
-    interface SPRYKER_EVENTS {
-        NEW_EVENT: undefined;
-    }
-}
+##### Prerequisites
 
-interface EventData extends EventsHandlerData<EventName> {
-    // Add params for specific event
-}
+If you need to add, modify, or fix events at the project level, start with these two steps:
 
-export default class ProjectEventsAdapter extends TraceableEventsAlgolia {
-    override getHandlers(): Partial<TraceableEventHandlers> {
-        const events = super.getHandlers();
+- Locate the page template or view that is used for the current page.
+- Override the `{% block eventTracker %}` block in your project’s template at the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/202410.0/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level).
 
-        return {
-            ...events,
-            PRODUCT_CLICK: [...events['PRODUCT_CLICK'], this.additionalLogicClickEvent],
-            NEW_EVENT: [this.projectEvent],
-        };
-    }
+For comprehensive details about the **event configuration API**, visit the [traceable-events-orchestrator README](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
 
-    protected projectEvent(data: EventData): void {
-        // Custom handler for new event
-    }
+##### Issue: Event Not Triggering on User Action
 
-    protected additionalLogicClickEvent(data: ProductEventData): void {
-       // Custom handler for product click event
-    }
-}
-```
+If an event is not firing, verify that the desired action (e.g., 'click', 'change') is configured for the specific event (e.g., `PRODUCT_CLICK`).
 
-Then you can add it to twig events configuration.
+1. Check the Configuration
+
+Spryker provides default configurations for built-in components. For new components, you need to add the appropriate event configuration.
 
 ```twig
 {% block eventTracker %}
     {% set events = {
-        list: events.list | merge([{
-            event: 'NEW_EVENT',
-            name: event handler name,
-            triggers: [...event triggers],
-        }]),
+        list: events.list | merge([
+            {
+                event: 'NEEDED_EVENT_NAME', // e.g., PRODUCT_CLICK
+                name: 'NEEDED_EVENT_LISTENER', // e.g., click/change
+                triggers: [...event triggers data],
+            },
+        ]),
         data: events.data,
     } %}
 
     {{ parent() }}
 {% endblock %}
+```
+
+Refer to the [API documentation](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md) for more details.
+
+2. Check Event Selector
+
+Spryker includes default CSS selectors. If selectors have changed, update the configuration accordingly.
+
+```twig
+{% block eventTracker %}
+    {% set events = {
+        list: events.list | merge([
+            {
+                event: 'NEEDED_EVENT_NAME', // e.g., PRODUCT_CLICK
+                name: 'NEEDED_EVENT_LISTENER', // e.g., click/change/load
+                triggers: [
+                    {
+                        selector: 'new_css_selector_path', // The element selector to monitor
+                        /* event data configuration */
+                    },
+                ],
+            },
+        ]),
+        data: events.data,
+    } %}
+
+    {{ parent() }}
+{% endblock %}
+
+```
+
+##### Issue: Incorrect Event Payload
+
+You can view the event payload in the console under `Adapter Data:`. If the payload is incorrect, check the static and dynamic data configurations.
+
+1. Static Data
+
+Adjust static data in the eventTracker block as needed:
+
+```twig
+{% block eventTracker %}
+    {% set events = {
+        list: events.list,
+        data: events.data | merge({
+          existing_key_to_override: New Data,
+          new_key: New Data,
+        }),
+    } %}
+
+    {{ parent() }}
+{% endblock %}
+```
+
+1. Dynamic Data
+
+For adding dynamic data, refer to the [API documentation](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md). Adjust the configuration as needed for specific triggers.
+
+```twig
+{% set events = {
+    list: events.list | merge([{
+        event: 'EVENT_EXAMPLE',
+        name: 'click',
+        triggers: [
+            {
+                selector: '.js-related-products',
+                groupAs: {
+                    key: 'relatedProducts', // Group data under the 'relatedProducts' key
+                    toArray: true, // Convert the grouped data into an array format
+                },
+                data: {
+                    details: {
+                        selector: 'self', // Look for the 'details' attribute within the current element
+                        flatten: true, // Flatten the structure of the object to simplify it
+                    },
+                    name: {
+                        selector: '.product-name', // Search for an element with the 'product-name' class within the monitored element
+                        attribute: 'price', // Use the 'price' attribute as the value; if absent, fallback to the element's text content
+                    },
+                    price: {
+                        value: 'static value', // Assign a fixed value to the 'price' attribute
+                    },
+                    attributes: {
+                        selector: '.attribute-selector',
+                        multi: true, // Collect all matching elements and return their data as an array
+                    },
+                    metadata: {
+                        multi: true,
+                        selector: '.metadata-row',
+                        composed: { // Create nested structures for more detailed data gathering and start searching elements from `.metadata-row` selector.
+                            brand: {
+                                selector: '.product-brand',
+                                attribute: 'textContent'
+                            },
+                            category: {
+                                selector: '.product-category',
+                            },
+                        },
+                    },
+                },
+            },
+        ],
+    }]),
+    data: events.data,
+} %}
+
+{# Expected transformed data format in the console:
+  {
+      ...global data/event metadata,
+      relatedProducts: {
+          // Flattened data from the 'details' attribute
+          name: VALUE, // The value taken from the 'name' selector or attribute
+          price: 'static value', // The fixed 'price' value
+          attributes: [VALUE, VALUE, VALUE, ...], // Array of values collected from elements matching '.attribute-selector'
+          metadata: [
+              {
+                  brand: VALUE, // 'brand' data extracted from the '.metadata-row .product-brand' element
+                  category: VALUE, // 'category' data from the '.metadata-row .product-category' element
+              },
+              {
+                  brand: VALUE, // 'brand' data extracted from the '.metadata-row .product-brand' element
+                  category: VALUE, // 'category' data from the '.metadata-row .product-category' element
+              },
+              ...
+          ]
+      }
+  }
+#}
 ```
 
 ### Update website agreement text

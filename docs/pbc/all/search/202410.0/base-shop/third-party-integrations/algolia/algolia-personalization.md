@@ -93,7 +93,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 4. Build the JavaScript assets for Yves `npm ci && npm run yves` or `console frontend:project:install-dependencies && console frontend:yves:build`.
    Usually, it's executed automatically during the Spryker Cloud deployment pipeline. But it's better to check this command on the local development environment first.
    
-  Check that required modulule`npm list search-insights` if you have `└── (empty)` result it means that you have to install `search-insights` manually `npm i search-insights`.
+  Check that required dependency is installed `npm list search-insights` if you have `└── (empty)` result it means that you have to install `search-insights` manually `npm i search-insights`.
 
 
 ### Check your Yves's compatibility with new functionality

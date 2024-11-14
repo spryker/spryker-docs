@@ -1,13 +1,8 @@
 ---
-title: Vendor folder synchronization error
-description: Learn how to fix the vendor folder synchronization error
-last_updated: Jun 16, 2021
+title: Unable to bring up Mutagen Compose sidecar service
+description: Learn how to fix the Mutagen Compose sidecar service error
+last_updated: Nov 24, 2024
 template: troubleshooting-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/vendor-folder-synchronization-error
-originalArticleId: 375db95b-7144-4fb0-ac97-2ebec018f9d2
-redirect_from:
-  - /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
-  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-installation/vendor-folder-synchronization-error.html
 related:
   - title: An error during front end setups
     link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html
@@ -25,12 +20,12 @@ related:
     link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
 ---
 
-You get an error similar to `vendor/bin/console: not found`.
+Error: `unable to bring up Mutagen Compose sidecar service: Error response from daemon: network  is ambiguous (X matches found based on ID prefix)`
 
-## Solution
+The issue appears in Mutagen v0.18.
 
-Re-build basic images, assets, and codebase:
+To fix it, downgrade Mutagen to v0.17:
 
 ```bash
-docker/sdk up --build --assets
+brew unlink mutagen && brew unlink mutagen-compose && brew install mutagen-io/mutagen/mutagen@0.17 mutagen-io/mutagen/mutagen-compose@0.17
 ```

@@ -1,6 +1,6 @@
 ---
 title: Configure data import from an S3 bucket via Flysystem
-description: Learn how to import data via an S3 bucket.  
+description: Set up data imports from an S3 bucket in Spryker using Flysystem, with detailed configuration steps for structured, cloud-based data management.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 redirect_from:

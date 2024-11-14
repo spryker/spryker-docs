@@ -39,8 +39,10 @@ composer install spryker-shop/traceable-event-widget
 
 ```bash
 composer update --with-dependencies spryker/search-http spryker/customer \
-spryker-shop/shop-ui spryker-shop/catalog-page spryker-shop/cart-page spryker-shop/checkout-page spryker-shop/home-page \
-spryker-shop/product-detail-page spryker-shop/product-group-widget spryker-shop/product-set-detail-page spryker-shop/quick-order-page
+spryker-shop/cart-page spryker-shop/catalog-page spryker-shop/checkout-page spryker-shop/payment-page spryker-shop/home-page \
+spryker-shop/price-product-volume-widget spryker-shop/product-detail-page  spryker-shop/product-group-widget \
+spryker-shop/product-review-widget spryker-shop/product-set-detail-page spryker-shop/quick-order-page \
+spryker-shop/shop-ui
 ```
 TODO: the list should be revalidated after final code review.
 
@@ -92,11 +94,12 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
    Usually, it's executed automatically during the Spryker Cloud deployment pipeline. But it's better to check this command on the local development environment first.
 
 5. Check your Yves's compatibility with the feature:
+`npm list search-insights` if you have `└── (empty)` result it means that you have to install `search-insights` manually `npm i search-insights`.
+
 
 In case of customizations, your codebase could have updated Yves templates on the project level (src/Pyz/Yves/).
 It could be a reason that some events won't be triggered or triggered with incorrect data.
 
-// TODO (@matweew/@supproduction)
 `TraceableEventWidgetConfig::isDebugEnabled()` set to `true`.
   
 * Run the project locally or deploy to testing environment.
@@ -108,28 +111,83 @@ Test the correctness of data in the triggered events in the browser console:
   * (if home page has products) Click on a product - `PRODUCT_CLICK`
   * (if home page has the add to cart button) Click on a product add to cart button - `ADD_TO_CART`
 * Open any product detail page (PDP), you should see events for the actions: 
-  * `PAGE_LOAD`
-  * `ADD_TO_CART`
-  * `ADD_TO_SHOPPING_LIST`
-  * `ADD_TO_WISHLIST`
+  * `PAGE_LOAD` with sku of viewed product.
+  * `ADD_TO_CART` with product SKU, currency, price and quantity, when user clicks Add to cart.
+  * `ADD_TO_SHOPPING_LIST` with product SKU when user clicks Add to shopping list.
+  * `ADD_TO_WISHLIST` with product SKU when user clicks Add to wishlist list.
 * Open any Category page or Search results page:
   * `QueryID` should be present in the event payload on this page type.
   * `PAGE_LOAD` with displayed products SKUs and displayed search filters.
   * `PRODUCT_CLICK` when user clicks on results.
   * `ADD_TO_CART` with product SKU, currency and price, when user clicks Add to cart from the catalog page.
+  * `FILTER_CLICK` with filters list, when user clicks any filter from the filter section.
 * Open Cart page
   * (if applicable) add a new product from add to cart widget `ADD_TO_CART`
   * (if applicable) save cart items to a shopping list `ADD_TO_SHOPPING_LIST`
 * Open Quick Order page
   * (if applicable) add a new product from add to cart widget `ADD_TO_CART`
   * (if applicable) save cart items to a shopping list `ADD_TO_SHOPPING_LIST`
-
+* Open Order Success page
+  * `PAGE_LOAD` with currency, order total, skus, prices, quantities  of purchased products.
 
 If you find some events are not triggered or data in the event payload is incorrect check your updated Yves templates on project level (src/Pyz/Yves/).
 Find the original template in the core `/vendor/spryker/spryker-shop/...` and check what selectors are used in `{% block eventTracker %}`,
 adjust the block code in your project templates when needed.
 
-// TODO (@supproduction): example will be helpful here. 
+You can find API description and event configuration example in `traceable-events-orchestrator` [Readme file](spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md)
+The full list of events you can find in `traceable-events-algolia` [Readme file](spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-algolia/README.md)
+
+### Algolia Adapter Extending
+If you need to extend existing events with custom logic or/and add new event you can extend adapter on project level.
+
+```typescript
+declare global {
+    interface SPRYKER_EVENTS {
+        NEW_EVENT: undefined;
+    }
+}
+
+interface EventData extends EventsHandlerData<EventName> {
+    // Add params for specific event
+}
+
+export default class ProjectEventsAdapter extends TraceableEventsAlgolia {
+    override getHandlers(): Partial<TraceableEventHandlers> {
+        const events = super.getHandlers();
+
+        return {
+            ...events,
+            PRODUCT_CLICK: [...events['PRODUCT_CLICK'], this.additionalLogicClickEvent],
+            NEW_EVENT: [this.projectEvent],
+        };
+    }
+
+    protected projectEvent(data: EventData): void {
+        // Custom handler for new event
+    }
+
+    protected additionalLogicClickEvent(data: ProductEventData): void {
+       // Custom handler for product click event
+    }
+}
+```
+
+Then you can add it to twig events configuration.
+
+```twig
+{% block eventTracker %}
+    {% set events = {
+        list: events.list | merge([{
+            event: 'NEW_EVENT',
+            name: event handler name,
+            triggers: [...event triggers],
+        }]),
+        data: events.data,
+    } %}
+
+    {{ parent() }}
+{% endblock %}
+```
 
 ### Update website agreement text
 

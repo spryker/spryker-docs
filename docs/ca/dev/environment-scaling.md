@@ -1,6 +1,6 @@
 ---
 title: Environment scaling
-description: Scaling in Spryker cloud environments.
+description: Learn how Spryker's environment scaling adjusts resources dynamically to meet load demands, with strategies for vertical and horizontal scaling to ensure performance.
 last_updated: MAy 23, 2024
 template: concept-topic-template
 ---

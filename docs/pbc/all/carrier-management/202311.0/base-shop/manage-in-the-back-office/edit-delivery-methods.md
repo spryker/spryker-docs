@@ -50,6 +50,7 @@ This doc describes how to edit delivery methods.
 
 ## Reference information: Edit delivery methods
 
+<div class="width-100">
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
@@ -62,3 +63,5 @@ This doc describes how to edit delivery methods.
 | IS ACTIVE | Defines if customers can choose the delivery method on the Storefront. |
 | TAX SET | The tax set used for the price of the method. To create tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{page.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html).
 | AVAILABLE IN THE FOLLOWING STORE(S) | Defines for which stores customers can choose the method. |
+
+</div>

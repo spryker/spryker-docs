@@ -1,6 +1,6 @@
 ---
 title: Set up DNS
-description: Learn how to set up DNS for your SCCOS project
+description: Set up DNS for your Spryker Cloud Commerce OS application by adding CNAME or A records, ensuring proper domain routing and TLS certificate configuration.
 template: concept-topic-template
 last_updated: Dec 18, 2023
 ---

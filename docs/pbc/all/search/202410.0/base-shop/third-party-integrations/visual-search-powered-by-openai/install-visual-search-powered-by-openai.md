@@ -17,7 +17,7 @@ Install the required features:
 
 | NAME    | VERSION          | INSTALLATION GUIDE                                                                                                                                              |
 |---------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| OpenAi  | {{page.version}} | [Install the OpenAi feature](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/open-ai/install-and-upgrade/install-the-open-ai-module.html) |
+| OpenAi  | {{page.version}} | [Install the OpenAi feature](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/open-ai/integrate-openai.html) |
 | Catalog | {{page.version}} |                                                                                                                                                                 |
 
 ### 1) Install the required modules

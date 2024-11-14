@@ -3813,7 +3813,7 @@ entries:
                     - title: Getting access to Algolia dashboard
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/getting-access-to-algolia-dashboard.html
                 - title: Visual Search powered by OpenAI
-                  url: /docs/pbc/all/search/base-shop/third-party-integrations/visual-search-powered-by-openai/install-the-image-search-ai-module.html
+                  url: /docs/pbc/all/search/base-shop/third-party-integrations/visual-search-powered-by-openai/install-visual-search-powered-by-openai.html
                   include_versions:
                   - "202410.0"
 

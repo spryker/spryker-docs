@@ -55,9 +55,9 @@ search.with.your-images.no-results,"Keine Ergebnisse gefunden. Bitte versuchen S
 
 Register the following route providers on the Storefront:
 
-| PROVIDER                              | NAMESPACE                                   |
-|---------------------------------------|---------------------------------------------|
-| ServicePointWidgetRouteProviderPlugin | SprykerEco\Yves\ImageSearchAi\Plugin\Router |
+| PROVIDER                         | NAMESPACE                                   |
+|----------------------------------|---------------------------------------------|
+| ImageSearchAiRouteProviderPlugin | SprykerEco\Yves\ImageSearchAi\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 

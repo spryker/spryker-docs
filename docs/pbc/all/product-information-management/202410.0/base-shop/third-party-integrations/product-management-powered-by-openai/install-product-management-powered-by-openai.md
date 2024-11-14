@@ -1,5 +1,17 @@
+---
+title: Install Product Management powered by OpenAI
+description: Learn how to integrate the ProductManagementAi module into a Spryker project.
+last_updated: Nov 12, 2024
+template: feature-integration-guide-template
+---
 
-This document describes how to install the ProductManagementAi module.
+AI-powered product management adds the following functionality to the Back Office:
+* Automates product categorization in the Back Office.  
+* Automates the translation of product information in the Back Office.  
+* Generates alt text for product images in the Back Office to improve accessibility and SEO.
+
+
+This document describes how to install Product Management powered by OpenAI.
 
 ## Install feature core
 
@@ -98,7 +110,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
             new ProductCategoryProductAbstractPostCreatePlugin(),
         ];
     }
-    
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -138,7 +150,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
             new ImageAltTextProductConcreteEditFormExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractFormExpanderPluginInterface>
      */
@@ -149,7 +161,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
             new ImageAltTextProductAbstractFormExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteFormExpanderPluginInterface>
      */
@@ -160,7 +172,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
         ];
     }
 }
-    
+
 ```
 
 {% info_block warningBox "Verification" %}

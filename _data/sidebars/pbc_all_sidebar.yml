@@ -1231,7 +1231,7 @@ entries:
               - title: Import stores
                 url: /docs/pbc/all/dynamic-multistore/base-shop/import-stores.html
                 include_versions:
-                - "202410.0"  
+                - "202410.0"
 
           - title: Marketplace
             nested:
@@ -1572,7 +1572,7 @@ entries:
                       - title: View merchants
                         url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/view-merchants.html
                         include_versions:
-                        - "202410.0"                        
+                        - "202410.0"
 
                   - title: Manage merchant users
                     nested:
@@ -1849,11 +1849,9 @@ entries:
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/mindlab.html
 
               - title: OpenAI
-                nested:
-                  - title: Install and upgrade
-                    nested:
-                      - title: Install the OpenAI module
-                        url: /docs/pbc/all/miscellaneous/third-party-integrations/open-ai/install-and-upgrade/install-the-open-ai-module.html
+                url: /docs/pbc/all/miscellaneous/third-party-integrations/open-ai/integrate-openai.html
+                include_versions:
+                - "202410.0"
 
               - title: Operational tools, monitoring, legal
                 nested:
@@ -3284,12 +3282,10 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html
                   - title: Xentral
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/xentral.html
-                  - title: OpenAI
-                    nested:
-                      - title: Install and upgrade
-                        nested:
-                          - title: Install the ProductManagementAi module
-                            url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/open-ai/install-and-upgrade/install-the-product-management-ai-module.html
+                  - title: Product Management powered by OpenAI
+                    url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai.html
+                    include_versions:
+                    - "202410.0"
 
               - title: Tutorials and HowTos
                 nested:
@@ -3816,12 +3812,10 @@ entries:
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/disconnect-algolia.html
                     - title: Getting access to Algolia dashboard
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/getting-access-to-algolia-dashboard.html
-                - title: OpenAI
-                  nested:
-                    - title: Install and upgrade
-                      nested:
-                        - title: Install the ImageSearchAi module
-                          url: /docs/pbc/all/search/base-shop/third-party-integrations/open-ai/install-and-upgrade/install-the-image-search-ai-module.html
+                - title: Visual Search powered by OpenAI
+                  url: /docs/pbc/all/search/base-shop/third-party-integrations/visual-search-powered-by-openai/install-the-image-search-ai-module.html
+                  include_versions:
+                  - "202410.0"
 
               - title: Best practices
                 url: /docs/pbc/all/search/base-shop/best-practices/search-best-practices.html

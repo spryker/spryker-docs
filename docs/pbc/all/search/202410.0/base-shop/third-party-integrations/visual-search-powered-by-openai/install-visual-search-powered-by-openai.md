@@ -1,4 +1,11 @@
-This document describes how to install the ImageSearchAi module.
+---
+title: Install Visual Search powered by OpenAI
+description: Learn how to integrate the ImageSearchAi module into a Spryker project.
+last_updated: Nov 12, 2024
+template: feature-integration-guide-template
+---
+
+Visual Search enables users to search across the product catalog by uploading an image. This document describes how to install Visual Search.
 
 ## Install feature frontend
 

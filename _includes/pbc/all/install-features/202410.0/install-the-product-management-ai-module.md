@@ -58,6 +58,7 @@ Make sure the following changes have been applied in transfer objects:
 | AiTranslatorResponseTransfer | class    | created | src/Generated/Shared/Transfer/AiTranslatorResponseTransfer |
 | ProductImage.altText         | property | created | src/Generated/Shared/Transfer/ProductImageTransfer         |
 | ProductImageStorage.altText  | property | created | src/Generated/Shared/Transfer/ProductImageStorageTransfer  |
+| ProductAbstract.categoryIds  | property | created | src/Generated/Shared/Transfer/ProductAbstract Transfer     |
 
 {% endinfo_block %}
 

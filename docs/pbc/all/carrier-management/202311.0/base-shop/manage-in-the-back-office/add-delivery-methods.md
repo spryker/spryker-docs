@@ -52,6 +52,9 @@ This doc describes how to add delivery methods in the Back Office.
 
 ## Reference information: Add delivery methods
 
+
+<div class="width-100">
+
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | DELIVERY METHOD KEY | The unique identifier of the delivery method. |
@@ -63,3 +66,6 @@ This doc describes how to add delivery methods in the Back Office.
 | IS ACTIVE | Defines if customers will be able to choose the delivery method on the Storefront. |
 | TAX SET | The tax set to apply to the price of the method. To create tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{page.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html).
 | AVAILABLE IN THE FOLLOWING STORE(S) | Defines which stores the method will be available for. |
+
+
+</div>

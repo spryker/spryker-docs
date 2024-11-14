@@ -1,7 +1,7 @@
 ---
 title: Upgrade the Country module
 description: Use the guide to update versions to the newer ones of the Country module.
-last_updated: Jun 24, 2022
+last_updated: Nov 12, 2024
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-country
 originalArticleId: 9f4fb3f2-3ab9-42fd-9fd0-dda4131e8555

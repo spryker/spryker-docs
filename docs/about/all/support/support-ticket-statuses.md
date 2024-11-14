@@ -1,5 +1,6 @@
 ---
 title: Support ticket statuses
+description: Discover Spryker's support ticket statuses to track your issues effectively, from reporting through resolution, with clear updates at each stage.
 last_updated: Oct 8, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/understanding-ticket-status

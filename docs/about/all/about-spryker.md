@@ -1,6 +1,6 @@
 ---
 title: About Spryker
-description: High-level overview of Spryker Cloud Commerce OS
+description: Learn about Spryker's modular architecture, designed for flexible, scalable e-commerce solutions. This page covers its layered structure, customizable modules, and how it supports agile updates, reduced dependencies, and cost-efficient management for B2B, B2C, and marketplaces.
 last_updated: Sep 9, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-spryker
@@ -95,10 +95,10 @@ Demo Shops are fully functional shops with collections of features that match di
 
 If you want to check out how Spryker works, Demo Shops also quick to install on your machine. The following Demo Shops are available:
 
-* [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html)
-* [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html)
-* [Marketplace B2B](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2b-suite.html)
-* [Marketplace B2C](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2c-suite.html)
+* [B2B](/docs/about/all/b2b-suite.html)
+* [B2C](/docs/about/all/b2c-suite.html)
+* [Marketplace B2B](/docs/about/all/spryker-marketplace/marketplace-b2b-suite.html)
+* [Marketplace B2C](/docs/about/all/spryker-marketplace/marketplace-b2c-suite.html)
 
 Demo Shops are covered by the same commercial license and the same support and long-term support rules as individual modules.
 

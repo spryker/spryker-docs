@@ -1,7 +1,7 @@
 ---
 title: Install Dynamic Multistore + Product feature
 description: Learn how to integrate the Dynamic multiple stores & Product feature into a Spryker project.
-last_updated: Apr 25, 2023
+last_updated: Nov 12, 2024
 template: feature-integration-guide-template
 ---
 

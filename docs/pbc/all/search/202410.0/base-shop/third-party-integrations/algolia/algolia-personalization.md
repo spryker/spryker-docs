@@ -92,21 +92,26 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 4. Build the JavaScript assets for Yves `npm ci && npm run yves` or `console frontend:project:install-dependencies && console frontend:yves:build`.
    Usually, it's executed automatically during the Spryker Cloud deployment pipeline. But it's better to check this command on the local development environment first.
+   
+  Check that required modulule`npm list search-insights` if you have `└── (empty)` result it means that you have to install `search-insights` manually `npm i search-insights`.
 
-5. Check your Yves's compatibility with the feature:
-`npm list search-insights` if you have `└── (empty)` result it means that you have to install `search-insights` manually `npm i search-insights`.
 
+### Check your Yves's compatibility with new functionality
 
-In case of customizations, your codebase could have updated Yves templates on the project level (src/Pyz/Yves/).
+In case of customizations, your codebase could have updated Yves templates on the project level (`src/Pyz/Yves/`).
 It could be a reason that some events won't be triggered or triggered with incorrect data.
 
-`TraceableEventWidgetConfig::isDebugEnabled()` set to `true`.
-  
+#### Run the project
+* Set `TraceableEventWidgetConfig::isDebugEnabled()` set to `true`.  
 * Run the project locally or deploy to testing environment.
 * Open your Shop Storefront home page.
 * Open browser's development console and check "Preserve log" in the settings.
 
-Test the correctness of data in the triggered events in the browser console:
+#### Check triggered events and their payload
+
+When debug mode is enabled, you can see event logs in the console to help with inspection.
+
+Monitor the browser's console and execute following cases:
 * Open Home page
   * (if home page has products) Click on a product - `PRODUCT_CLICK`
   * (if home page has the add to cart button) Click on a product add to cart button - `ADD_TO_CART`
@@ -132,7 +137,6 @@ Test the correctness of data in the triggered events in the browser console:
 
 To view a full list of available events, refer to the `traceable-events-algolia` [Readme file](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-algolia/README.md).
 
-When debug mode is enabled, you can see event logs in the console to help with inspection.
 
 #### Common Issues and Solutions
 
@@ -151,7 +155,7 @@ If an event is not firing, verify that the desired action (e.g., 'click', 'chang
 
 1. Check the Configuration
 
-Spryker provides default configurations for built-in components. For new components, you need to add the appropriate event configuration.
+Spryker provides default configurations for built-in components. For new or modified components, you need to add the appropriate event configuration.
 
 ```twig
 {% block eventTracker %}
@@ -205,7 +209,7 @@ You can view the event payload in the console under `Adapter Data:`. If the payl
 
 1. Static Data
 
-Adjust static data in the eventTracker block as needed:
+Adjust static data in the `eventTracker` block as needed:
 
 ```twig
 {% block eventTracker %}
@@ -221,7 +225,7 @@ Adjust static data in the eventTracker block as needed:
 {% endblock %}
 ```
 
-1. Dynamic Data
+2. Dynamic Data
 
 For adding dynamic data, refer to the [API documentation](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md). Adjust the configuration as needed for specific triggers.
 

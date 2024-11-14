@@ -1,6 +1,6 @@
 ---
 title: Changing a source branch fails
-description: Solution to a failed source branch change while saving pipeline settings
+description: Resolve issues when changing a source branch in Spryker by adjusting pipeline settings with our troubleshooting guide to prevent branch update errors
 template: troubleshooting-guide-template
 last_updated: Oct 6, 2023
 redirect_from:

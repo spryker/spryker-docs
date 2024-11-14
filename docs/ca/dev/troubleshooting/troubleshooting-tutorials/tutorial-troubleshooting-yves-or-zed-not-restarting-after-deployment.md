@@ -1,6 +1,6 @@
 ---
 title: Tutorial — Troubleshooting Yves or Zed not restarting after deployment
-description: Learn how to troubleshoot Yves or Zed not restarting after deployment
+description: Troubleshoot Yves or Zed not restarting after deployment in Spryker by checking ECS service status, task logs, and errors to identify and resolve issues.
 template: troubleshooting-guide-template
 last_updated: Oct 6, 2023
 redirect_from:

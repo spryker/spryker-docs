@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting tutorials
-description: Learn how to troubleshoot common issues in Spryker Cloud Commerce OS
+description: Access Spryker Commerce Cloud OS troubleshooting tutorials to resolve common issues, from failed deployments to authentication errors
 template: concept-topic-template
 last_updated: Oct 6, 2023
 redirect_from:

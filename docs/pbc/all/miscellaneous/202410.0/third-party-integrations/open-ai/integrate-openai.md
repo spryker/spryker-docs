@@ -39,7 +39,7 @@ Make sure the following modules have been installed:
 
 Using the data from your OpenAI account, make sure the `OPEN_AI_API_TOKEN` env variable contains the OpenAI secret key and add the following configuration:
 
-**config/Shared/config_default.php**
+**config/Shared/config_default.php***
 
 ```php
 

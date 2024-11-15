@@ -6,13 +6,10 @@ template: feature-integration-guide-template
 ---
 
 
-This document describes how to install the OpenAI. This integration enables other functionalities to use AI.
+This document describes how to integrate OpenAI. This integration enables other functionalities to use AI.
 
-## Install feature core
 
-Follow the steps below to install the OpenAi module core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -20,9 +17,9 @@ Install the required features:
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules
+## 1) Install the required modules
 
-Run the following command to install the required module:
+Install the required module:
 
 ```bash
 composer require spryker-eco/open-ai:"^0.1.1" --update-with-dependencies
@@ -38,7 +35,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up the configuration
+## 2) Set up the configuration
 
 Using the data from your OpenAI account, make sure the `OPEN_AI_API_TOKEN` env variable contains the OpenAI secret key and add the following configuration:
 
@@ -52,7 +49,7 @@ $config[OpenAiConstants::API_TOKEN] = getenv('OPEN_AI_API_TOKEN');
 
 ```
 
-### 3) Set up transfer objects
+## 3) Set up transfer objects
 
 Run the following command to generate transfer changes:
 

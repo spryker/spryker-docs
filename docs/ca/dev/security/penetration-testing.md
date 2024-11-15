@@ -1,6 +1,6 @@
 ---
 title: Penetration testing
-description: Guidance on Penetration and Security testing of your Application
+description: Prepare and conduct penetration tests for your Spryker Cloud Commerce OS environment by following guidelines, informing Spryker, and adhering to testing policies.
 template: howto-guide-template
 last_updated: Apr 8, 2024
 ---

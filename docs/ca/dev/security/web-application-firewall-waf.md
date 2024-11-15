@@ -1,6 +1,6 @@
 ---
 title: Web Application Firewall (WAF)
-description: WAF protects your SCCOS applications from web exploits and bots.
+description: Learn how to protect your Spryker applications with AWS Web Application Firewall (WAF), blocking common web exploits and improving security.
 template: concept-topic-template
 last_updated: Oct 6, 2023
 redirect_from:

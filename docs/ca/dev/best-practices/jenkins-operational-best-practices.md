@@ -1,6 +1,6 @@
 ---
 title: Jenkins operational best practices
-description: Checklist for improved Jenkins stability
+description: Optimize Jenkins performance in Spryker Cloud Commerce OS with best practices for memory management, CPU settings, and stable job configurations.
 template: best-practices-guide-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html
@@ -98,9 +98,9 @@ Import jobs, as well as Publish and Sync-related processes, can be taxing on the
 Imports and certain Publish and Sync processes can lead to high computational costs, such as permutation calculations for filters. Therefore, it is crucial to implement [RAM-aware batch processing](/docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html#integrate-ram-aware-batch-processing) and [queue chunk sizes](/docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html#chunk-size) that are suitable for the complexity of your data. The former helps prevent loading all import data into RAM, while the latter prevents RabbitMQ pipe timeouts due to lengthy processing times. A chunk or batch size that is too large may result in memory-related exceptions or messages being stuck in queues (with logs indicating RabbitMQ broken pipe exceptions), whereas a chunk or batch size that is too small may lead to subpar import and P&S performance. There is no one-size-fits-all solution, but with profiling, you can find a good balance between stability and performance.
 
 While fine-tuning your chunk size, check out the following articles:
-- [Messages are moved to error queues](https://docs.spryker.com/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-moved-to-error-queues.html)
-- [Messages are stuck in UNACK state](https://docs.spryker.com/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-stuck-in-the-unacked-state.html)
-- [Message are stuck without error notification](https://docs.spryker.com/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-stuck-without-error-notifications.html)
+- [Messages are moved to error queues](https://docs.spryker.com/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-moved-to-error-queues.html)
+- [Messages are stuck in UNACK state](https://docs.spryker.com/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-stuck-in-the-unacked-state.html)
+- [Message are stuck without error notification](https://docs.spryker.com/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-stuck-without-error-notifications.html)
 
 A valuable general recommendation is to [split up publishing queues](https://docs.spryker.com/docs/dg/dev/integrate-and-configure/integrate-multi-queue-publish-structure.html#set-up-a-publish-queue-for-a-publisher-plugin) for improved performance and precise control. You will observe varying memory and CPU demands for different messages in your queues, and by dividing the queues to accommodate various events, you can establish appropriate chunk sizes for each of them.
 

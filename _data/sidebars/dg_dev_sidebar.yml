@@ -67,7 +67,8 @@ entries:
       url: /docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
     - title: Redis configuration
       url: /docs/dg/dev/set-up-spryker-locally/redis-configuration.html
-    - title: Troubleshooting
+    - title: Troubleshooting installation
+      url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html
       nested:
       - title: An error during frontend setup
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html
@@ -83,6 +84,8 @@ entries:
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/node-saas-does-not-yet-support-your-current-environment.html
       - title: Setup of new indexes throws an exception
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
+      - title: Unable to bring up Mutagen Compose sidecar service
+        url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/unable-to-bring-up-mutagen-compose-sidecar-service.html        
       - title: Vendor folder synchronization error
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
 
@@ -852,7 +855,7 @@ entries:
     - title: Upgrade to PHP 8.3
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-83.html
     - title: Upgrade to PHPUnit 11
-      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-phpunit-11.html      
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-phpunit-11.html
     - title: Upgrade to Symfony 5
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html
     - title: Upgrade to Symfony 6
@@ -1104,8 +1107,8 @@ entries:
       url: /docs/dg/dev/architecture/conceptual-overview.html
     - title: Modules and application layers
       url: /docs/dg/dev/architecture/modules-and-application-layers.html
-    - title: Architectural Convention Reference
-      url: /docs/dg/dev/architecture/architectural-convention-reference.html
+    - title: Architectural Convention
+      url: /docs/dg/dev/architecture/architectural-convention.html
     - title: Module API
       url: /docs/dg/dev/architecture/module-api/module-api.html
       nested:
@@ -1549,10 +1552,10 @@ entries:
     - title: Project implementation - Zed API
       url: /docs/dg/dev/zed-api/zed-api-project-implementation.html
     - title: Integrate Zed API
-      url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api.html
+      url: /docs/dg/dev/zed-api/integrate-zed-api/integrate-zed-api.html
       nested:
         - title: Integrate Zed API for merchant relationships
-          url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
+          url: /docs/dg/dev/zed-api/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
 
     - title: Zed API configuration
       url: /docs/dg/dev/zed-api/zed-api-configuration.html
@@ -1565,7 +1568,7 @@ entries:
     - title: Zed API resources
       url: /docs/dg/dev/zed-api/zed-api-resources.html
     - title: Zed API (BETA)
-      url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html
+      url: /docs/dg/dev/zed-api/zed-api-beta.html
 
 
   - title: Updating Spryker

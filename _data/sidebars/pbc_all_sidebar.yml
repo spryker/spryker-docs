@@ -1863,6 +1863,11 @@ entries:
                   - title: Mindlab
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/mindlab.html
 
+              - title: OpenAI
+                url: /docs/pbc/all/miscellaneous/third-party-integrations/open-ai/integrate-openai.html
+                include_versions:
+                - "202410.0"
+
               - title: Operational tools, monitoring, legal
                 nested:
                 - title: PlusServer
@@ -3292,6 +3297,10 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html
                   - title: Xentral
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/xentral.html
+                  - title: Product Management powered by OpenAI
+                    url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai.html
+                    include_versions:
+                    - "202410.0"
 
               - title: Tutorials and HowTos
                 nested:
@@ -3818,6 +3827,10 @@ entries:
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/disconnect-algolia.html
                     - title: Getting access to Algolia dashboard
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/getting-access-to-algolia-dashboard.html
+                - title: Visual Search powered by OpenAI
+                  url: /docs/pbc/all/search/base-shop/third-party-integrations/visual-search-powered-by-openai/install-visual-search-powered-by-openai.html
+                  include_versions:
+                  - "202410.0"
 
               - title: Best practices
                 url: /docs/pbc/all/search/base-shop/best-practices/search-best-practices.html

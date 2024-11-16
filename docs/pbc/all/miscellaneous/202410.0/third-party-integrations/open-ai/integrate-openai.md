@@ -51,7 +51,7 @@ $config[OpenAiConstants::API_TOKEN] = getenv('OPEN_AI_API_TOKEN');
 
 ## 3) Set up transfer objects
 
-Run the following command to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -70,7 +70,7 @@ Make sure the following changes have been applied in transfer objects:
 
 {% info_block warningBox "Verification" %}
 
-To validate the whole integration add and run the following code in your application, the `$openAiChatResponseTransfer` should contain the OpenAI response:
+Add and run the following code in your application:
 
 ```php
 
@@ -83,5 +83,7 @@ $openAiClient = new OpenAiClient();
 $openAiChatResponseTransfer = $openAiClient->chat((new OpenAiChatRequestTransfer())->setMessage('Hello'));
 
 ```
+
+Make sure `$openAiChatResponseTransfer` contains the OpenAI response.
 
 {% endinfo_block %}

@@ -1,6 +1,6 @@
 ---
 title: Tutorial — Troubleshooting a failed deployment
-description: Learn how to troubleshoot a failed deployment
+description: Troubleshoot failed deployments in Spryker by following detailed steps to identify issues in build, pre-deploy, and service deployment stages.
 template: troubleshooting-guide-template
 last_updated: Oct 6, 2023
 redirect_from:

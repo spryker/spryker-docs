@@ -1,6 +1,6 @@
 ---
 title: Customize deployment pipelines
-description: Learn how to customize deployment pipelines.
+description: Customize deployment pipelines in Spryker Cloud Commerce OS by adding different commands using YAML files and shell scripts.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/customizing-deployment-pipelines

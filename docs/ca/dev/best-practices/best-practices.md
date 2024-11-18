@@ -1,6 +1,6 @@
 ---
 title: Best practices
-description: Best practices for developers working on Spryker Cloud Commerce OS
+description: Explore essential best practices for developing, deploying, and maintaining Spryker Cloud Commerce OS environments.
 template: concept-topic-template
 last_updated: Oct 6, 2023
 redirect_from:

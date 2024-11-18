@@ -29,7 +29,7 @@ This document describes the prerequisites for installing Spryker on Windows.
 | CPU SLAT-capable feature | Enabled   |  SLAT is CPU related feature. It is called Rapid Virtualization Indexing (RVI). |
 | Docker | 18.09.1 or higher |
 | Docker Compose | 2.0 or higher      |  
-| RAM  | 32GB or more       |
+| RAM  | 16GB or more       |
 | Swap  | 4GB or more       |
 
 ## Install and configure the required software

@@ -1,6 +1,6 @@
 ---
 title: Set up multi-factor authentication
-description: Increase account security
+description: Follow this guide to set up multi-factor authentication on Spryker, improving your security with detailed MFA device and configuration steps.
 template: howto-guide-template
 last_updated: Apr 22, 2024
 ---

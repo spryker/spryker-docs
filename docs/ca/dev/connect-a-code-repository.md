@@ -43,11 +43,11 @@ We recommend mapping your branches to environments as follows:
 To connect a GitHub code repository:
 
 1. Configure a GitHub code repository.
-2. Provide the following details via [support](https://spryker.force.com/support/s/):
+2. Provide the following details via [support]((https://support.spryker.com/)). (Infrastructure Change Request>Change to existing Parameter Store Variable):
 
 * **URL**
 * **Branch**
-* **Access token**
+* **Access token** (please share this information [securily](https://support.spryker.com/) with us after creating the case)
 
 
 We connect the code repository shortly after you provide the details.

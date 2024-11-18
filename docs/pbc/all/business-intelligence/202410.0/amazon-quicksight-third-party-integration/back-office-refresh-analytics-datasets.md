@@ -23,7 +23,7 @@ This document describes how to refresh datasets manually and on a schedule.
   This refreshes the page. A new refresh entry is displayed in the **History** pane. You can check the status of the refresh in the **Status** column.
 
 
-## Set up a schedule to refresh an analytics data set automatically
+## Set up a schedule to refresh an analytics dataset automatically
 
 1. In the Back Office, go to **Analytics**.
 2. On the **Analytics** page, go to **Datasets**.

@@ -5,9 +5,17 @@ template: concept-topic-template
 last_updated: Oct 24, 2024
 ---
 
-Amazon QuickSight brings customizable and powerful business intelligence tools to the Back Office.
+Amazon QuickSight brings customizable and powerful business intelligence tools to the Back Office. This feature lets you visualize data, create customizable dashboards, and perform deep analytics on sales, product performance, customer behaviors, and marketplace KPIs. By leveraging analytics, you can unlock new monetization opportunities and make more informed business decisions.
 
-## Data sources and data sets
+Highlights:
+
+* Default dashboards let you start using the feature right away
+* Direct access within the Back Office
+* Data from your Spryker projects is connected by default
+* Highly customizable, offering multiple options to tailor reports & analytics workflows
+* Aggregate data across various systems
+
+## Data sources and datasets
 
 This feature supports data from Spryker projects and third-party systems. When you set up Amazon QuickSight, the data from your project is available by default, and you can add other data sources if needed.
 
@@ -35,23 +43,6 @@ You can refresh data manually or automatically by setting up a schedule per data
 For instructions, see [Refresh analytics datasets](/docs/pbc/all/business-intelligence/202410.0/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html).
 
 
-
-
-## User management and permissions
-
-
-When working with analytics, users can have the following roles:
-* Author: can view, create, and edit assets.
-* Reader: can view assets.
-
-<!--
-To give a Back Office user access to analytics, you need to assign one of these roles to them. For instructions, see [Create users]() and [Edit users]().
-
--->
-
-The analytics roles are derived from Amazon QuickSight and are separate from the [Back Office user roles](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
-
-
 ## Analyses and dashboards
 
 In Amazon QuickSight, you are going to work with analyses and dashboards.
@@ -75,38 +66,170 @@ Both analyses and dashboards are shareable, you can share a complete dashboard o
 
 You can share dashboards with authors and readers, and analyses – only with authors.
 
-### Default dashboards
 
-For those new to Amazon QuickSight analytics, while you're learning how to create your own dashboards, you can start using the default dashboards right away.
 
-The feature is shipped with the following dashboards.
+## User management and permissions
 
-#### Sales dashboard
+User roles define what assets a user has access to. Amazon QuickSight recognizes the following assets:
+* Analyses
+* Dashboards
+* Datasets
+* Datasrouces
+* Shared folders
+
+When working with analytics, users can have the following roles:
+* Author: can view, create, and edit assets.
+* Reader: can view assets.
+
+<!--
+To give a Back Office user access to analytics, you need to assign one of these roles to them. For instructions, see [Create users]() and [Edit users]().
+
+-->
+
+The analytics roles are derived from Amazon QuickSight and are separate from the [Back Office user roles](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
+
+
+
+### Default dashboard
+
+While you're learning how to create your own dashboards, you can start using the default dashboard right away.
+
+The default dashboard contains the following sheets.
+
+#### Sales sheet
 
 * Track sales performance over time
 * Gain insights into orders and return rate
 * Monitor discounts, product categories, brands
 * Monitor the usage of payment and shipping methods
 
-#### Products dashboard
+Visuals in the sales sheet
+
+| Visual                              | Visual Type    |
+| ----------------------------------- | -------------- |
+| Total Sales                         | KPI            |
+| Total Orders                        | Table          |
+| Total Canceled                      | KPI            |
+| Cancelation Rate                    | Donut chart    |
+| Return Rate                         | Donut chart    |
+| "Waiting for Return" Order Items    | KPI            |
+| Average Fulllment Time in Hours     | KPI            |
+| Order Items by Status               | Donut chart    |
+| Number of Orders                    | Line chart     |
+| Order Value and Discounts           | Bar chart      |
+| Average Order Value                 | Bar chart      |
+| Average Order Size                  | Bar chart      |
+| Applied Discount Value              | Table          |
+| Payment Methods                     | Pie chart      |
+| Shipping Methods                    | Pie chart      |
+| Sales by Top Brands                 | Tree map chart |
+| Sales by Product Category           | Donut chart    |
+| Sales over time by Product Category | Line chart     |
+| Order Item Status by Customer       | Table          |
+| Order Items by Status               | Table          |
+
+
+#### Products sheet
 
 * Track performance of products
 * Monitor availability and returns
 * Analyze top-selling items, category distribution, and trends in shopping lists and customer carts
 
+| Visual                                      | Visual Type |
+| ------------------------------------------- | ----------- |
+| Ratio of Active Concrete Products           | Gauge       |
+| Product Availability                        | Pie chart   |
+| Top Products Sold by Quantity               | Bar chart   |
+| Top Products Sold by Revenue incl. Discount | Bar chart   |
+| Top Products Returned by Quantity           | Bar chart   |
+| Products per Category                       | Bar chart   |
+| Not Active Abstract Products per Category   | Donut chart |
+| Top Products in Orders                      | Table       |
+| Top Product in Carts of Logged-in Customers | Table       |
+| Top Product in Shopping Lists               | Table       |
+| Not Available Products                      | Table       |
+| Concrete Products                           | Table       |
 
-#### Customers dashboard
+
+#### Customers sheet
 
 Track the following customer metrics:
-* Order number and value
+* Order number and value per customer and B2B company
 * Registration trends
-* Locations
-* Demographics
+* Locations with the most customers
 
+| Visual                         | Visual Type |
+| ------------------------------ | ----------- |
+| Number of Customers            | KPI         |
+| Customers by Gender            | Pie chart   |
+| Number of Active Companies     | Gauge       |
+| Customers by Order Value       | Bar chart   |
+| Customers by Number of Orders  | Bar chart   |
+| Customers by Location          | Map         |
+| Customers by Registration Date | Line chart  |
+| Companies by Order Value       | Bar chart   |
+| Companies by Number of Orders  | Bar chart   |
+| Number of Merchants            | KPI         |
 
-#### Marketplace dashboard
+#### Marketplace sheet
+
 * Track marketplace performance with insights into merchant status and commission
 * Get an overview of merchant orders, products, and offers
+
+| Visual                                   | Visual Type |
+| ---------------------------------------- | ----------- |
+| Merchants Waiting for Approval           | Table       |
+| Merchant Online Status                   | Pie chart   |
+| Total Commissions                        | KPI         |
+| Merchants by Order Value                 | Bar chart   |
+| Merchants by Number of Orders            | Bar chart   |
+| Merchants by Number of Abstract Products | Bar chart   |
+| Merchants by Number of Product Offers    | Bar chart   |
+| Merchant Product Approval Status         | Donut chart |
+| Merchant Product Offer Approval Status   | Donut chart |
+| Commission by Merchant                   | Bar chart   |
+| Commission by Product Category           | Bar chart   |
+| Commission Value                         | Table       |
+| Merchant Order Items by Status           | Pie chart   |
+| Merchants by Registration Date           | Line chart  |
+
+
+## Exporting data
+
+
+When you need to share analytics data with users outside of Back Office, you can share individual visuals or whole analyses.
+
+For instructions, see the following docs:
+
+* [Exporting data from visuals](https://docs.aws.amazon.com/quicksight/latest/user/exporting-data.html)
+* [Exporting Amazon QuickSight analyses or dashboards as PDFs](https://docs.aws.amazon.com/quicksight/latest/user/export-dashboard-to-pdf.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -115,4 +238,11 @@ Track the following customer metrics:
 
 Sometimes you might want to start from scratch and get a fresh analytics account. Resetting analytics removes all assets and returns your account to the default state.
 
-![reset-analytics](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/reset-analytics.png)
+Sometimes you might want to start from scratch and get a fresh analytics account.
+
+{% info_block warningBox %}
+
+Resetting analytics returns all default assets to the default state, erasing your changes. This recreates the default assets from scratch.
+The user initiating the reset becomes the ownes of the default assets, with all other users losing access to them. All custom assets created by other authors will remain in their ownership.
+
+{% endinfo_block %}

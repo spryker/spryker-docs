@@ -1,6 +1,6 @@
 ---
 title: 'Fatal error: Allowed memory size of x bytes exhausted'
-description: Solution to the error about exhausted memory
+description: Fix Allowed memory size exhausted errors in Spryker by adjusting PHP memory limits for smoother performance during high-memory tasks.
 template: troubleshooting-guide-template
 last_updated: Oct 6, 2023
 redirect_from:

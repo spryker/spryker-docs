@@ -1,6 +1,6 @@
 ---
 title: Tutorial — Troubleshooting unavailable Yves or Glue
-description: Learn how to troubleshoot unavailable Yves or Glue
+description: Troubleshoot unavailable Yves or Glue in Spryker by checking logs, ECS services, Redis, and ElasticSearch to identify and resolve issues quickly.
 template: troubleshooting-guide-template
 last_updated: Oct 6, 2023
 redirect_from:

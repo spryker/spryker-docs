@@ -47,7 +47,7 @@ To connect a GitHub code repository:
 
 * **URL**
 * **Branch**
-* **Access token** (please share this information [securily](https://support.spryker.com/) with us after creating the case)
+* **Access token** (please share this information [securily](https://docs.spryker.com/docs/about/all/support/share-secrets-with-the-spryker-support-team.html#process-for-sharing-the-secrets) with us after creating the case)
 
 
 We connect the code repository shortly after you provide the details.

@@ -103,7 +103,8 @@ The default dashboard contains the following sheets.
 * Monitor discounts, product categories, brands
 * Monitor the usage of payment and shipping methods
 
-Visuals in the sales sheet
+<details>
+  <summary>Visuals in the sales sheet</summary>
 
 | Visual                              | Visual Type    |
 | ----------------------------------- | -------------- |
@@ -128,12 +129,17 @@ Visuals in the sales sheet
 | Order Item Status by Customer       | Table          |
 | Order Items by Status               | Table          |
 
+</details>
+
 
 #### Products sheet
 
 * Track performance of products
 * Monitor availability and returns
 * Analyze top-selling items, category distribution, and trends in shopping lists and customer carts
+
+<details>
+  <summary>Visuals in the products sheet</summary>
 
 | Visual                                      | Visual Type |
 | ------------------------------------------- | ----------- |
@@ -151,12 +157,19 @@ Visuals in the sales sheet
 | Concrete Products                           | Table       |
 
 
+</details>
+
+
 #### Customers sheet
 
 Track the following customer metrics:
 * Order number and value per customer and B2B company
 * Registration trends
 * Locations with the most customers
+
+
+<details>
+  <summary>Visuals in the customers sheet</summary>
 
 | Visual                         | Visual Type |
 | ------------------------------ | ----------- |
@@ -171,10 +184,16 @@ Track the following customer metrics:
 | Companies by Number of Orders  | Bar chart   |
 | Number of Merchants            | KPI         |
 
+
+</details>
+
 #### Marketplace sheet
 
 * Track marketplace performance with insights into merchant status and commission
 * Get an overview of merchant orders, products, and offers
+
+<details>
+  <summary>Visuals in the marketplace sheet</summary>
 
 | Visual                                   | Visual Type |
 | ---------------------------------------- | ----------- |
@@ -192,6 +211,8 @@ Track the following customer metrics:
 | Commission Value                         | Table       |
 | Merchant Order Items by Status           | Pie chart   |
 | Merchants by Registration Date           | Line chart  |
+
+</details>
 
 
 ## Exporting data

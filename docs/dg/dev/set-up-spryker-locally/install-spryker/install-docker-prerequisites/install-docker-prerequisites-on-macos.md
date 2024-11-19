@@ -31,8 +31,8 @@ Review the system and software requirements in the table and configure them usin
 | Docker | 18.09.1 or higher |
 | Docker Compose | 2.0 or higher |  
 | vCPU | 4 or more |
-| RAM  | 4GB or more |
-| Swap  | 2GB or more |
+| RAM  | 16GB or more |
+| Swap  | 4GB or more |
 
 
 ## Install and configure a Docker manager
@@ -60,8 +60,8 @@ Signup for Docker Hub is not required.
 
     1. Go to **Resources** > **ADVANCED**.
     2. Set **CPUs:** to "4" or higher.
-    3. Set **Memory:** to "4.00 GB" or higher.
-    4. Set **Swap:** to "2.00 GB" or higher.
+    3. Set **Memory:** to "16.00 GB" or higher.
+    4. Set **Swap:** to "4.00 GB" or higher.
     5. Set the desired **Disk image size:**.
     6. Select the desired **Disk image location**.
     7. Select **Apply & Restart**.

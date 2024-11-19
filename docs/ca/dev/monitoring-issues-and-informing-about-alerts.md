@@ -1,6 +1,6 @@
 ---
 title: Monitoring issues and informing about alerts
-DESCRIPTION: Learn how issues with environments are monitored and how customers are informed about alerts on SCCOS
+DESCRIPTION: Monitor and manage Spryker Cloud environments with automatic alerts for system health, performance, and critical issues, ensuring proactive issue resolution.
 template: concept-topic-template
 last_updated: Feb 07, 2024
 redirect_from:

@@ -3,7 +3,7 @@
 ## Prerequisites
 
 Environment requirements:
-- [Node.js](https://nodejs.org/en/download/) version 18 or higher.
+- [Node.js](https://nodejs.org/en/download/package-manager) version 18 or higher.
 - [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) version 9 or higher.
 - Spryker supported PHP version 8.0
 - Host for Zed application

@@ -1,6 +1,6 @@
 ---
 title: Deploy in a staging environment
-description: Deploy an application in a staging environment.
+description: Deploy applications in a Spryker staging environment with step-by-step guidance, including version management, pipeline setup, and rollback procedures.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/deploying-in-a-staging-environment

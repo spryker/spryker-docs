@@ -1,6 +1,6 @@
 ---
 title: Tutorial — Troubleshooting 403 error
-description: Learn how to troubleshoot 403 error
+description: Troubleshoot 403 errors in Spryker by identifying triggered WAF rules, with steps to analyze logs and resolve access restrictions efficiently.
 template: troubleshooting-guide-template
 last_updated: Oct 6, 2023
 redirect_from:

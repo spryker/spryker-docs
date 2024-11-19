@@ -1,7 +1,7 @@
 ---
 title: Install and configure Stripe prerequisites
 description: Learn how to prepare your project for Stripe
-last_updated: Oct 02, 2024
+last_updated: Nov 1, 2024
 template: howto-guide-template
 redirect_from:
 - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
@@ -34,75 +34,82 @@ To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/pa
 <details>
   <summary>config/Shared/config_default.php</summary>
 
-```php
-//...
+  ```php
+  //...
 
-use Generated\Shared\Transfer\PaymentCaptureFailedTransfer;
-use Generated\Shared\Transfer\CapturePaymentTransfer;
-use Generated\Shared\Transfer\PaymentCapturedTransfer;
-use Generated\Shared\Transfer\AddPaymentMethodTransfer;
-use Generated\Shared\Transfer\DeletePaymentMethodTransfer;
-use Generated\Shared\Transfer\PaymentAuthorizationFailedTransfer;
-use Generated\Shared\Transfer\PaymentAuthorizedTransfer;
-use Spryker\Shared\MessageBroker\MessageBrokerConstants;
-use Spryker\Shared\Oms\OmsConstants;
-use Spryker\Shared\Payment\PaymentConstants;
-use Spryker\Shared\Sales\SalesConstants;
-use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
-use Spryker\Zed\Oms\OmsConfig;
-use Spryker\Zed\Payment\PaymentConfig;
+  use Generated\Shared\Transfer\PaymentCaptureFailedTransfer;
+  use Generated\Shared\Transfer\CapturePaymentTransfer;
+  use Generated\Shared\Transfer\PaymentCapturedTransfer;
+  use Generated\Shared\Transfer\AddPaymentMethodTransfer;
+  use Generated\Shared\Transfer\DeletePaymentMethodTransfer;
+  use Generated\Shared\Transfer\PaymentAuthorizationFailedTransfer;
+  use Generated\Shared\Transfer\PaymentAuthorizedTransfer;
+  use Spryker\Shared\MessageBroker\MessageBrokerConstants;
+  use Spryker\Shared\KernelApp\KernelAppConstants;
+  use Spryker\Shared\OauthClient\OauthClientConstants;
+  use Spryker\Shared\Oms\OmsConstants;
+  use Spryker\Shared\Payment\PaymentConstants;
+  use Spryker\Shared\Sales\SalesConstants;
+  use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
+  use Spryker\Zed\Oms\OmsConfig;
+  use Spryker\Zed\Payment\PaymentConfig;
 
-//...
-$config[PaymentConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
+  //...
+  $config[PaymentConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
+  $config[KernelAppConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
 
-$config[OmsConstants::PROCESS_LOCATION] = [
-    //...
-    OmsConfig::DEFAULT_PROCESS_LOCATION,
-    APPLICATION_ROOT_DIR . '/vendor/spryker/sales-payment/config/Zed/Oms', # this line must be added if your use unmodified ForeignPaymentStateMachine01.xml
-];
-$config[OmsConstants::ACTIVE_PROCESSES] = [
-    //...
-    'ForeignPaymentB2CStateMachine01', # this line must be added or add your modified version of this OMS
-];
-$config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
-    //...
-    PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentB2CStateMachine01', # this line must be added or add your modified version of this OMS
-];
+  $config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_ACP] = OauthAuth0Config::PROVIDER_NAME;
+  $config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_ACP] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
+  $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_ACP] = 'aop-app'
 
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
-    //...
-    AddPaymentMethodTransfer::class => 'payment-method-commands',
-    UpdatePaymentMethodTransfer::class => 'payment-method-commands'
-    DeletePaymentMethodTransfer::class => 'payment-method-commands',
-    CancelPaymentTransfer::class => 'payment-commands',
-    CapturePaymentTransfer::class => 'payment-commands',
-    RefundPaymentTransfer::class => 'payment-commands',
-    PaymentAuthorizedTransfer::class => 'payment-events',
-    PaymentAuthorizationFailedTransfer::class => 'payment-events',
-    PaymentCapturedTransfer::class => 'payment-events',
-    PaymentCaptureFailedTransfer::class => 'payment-events',
-    PaymentRefundedTransfer::class => 'payment-events',
-    PaymentRefundFailedTransfer::class => 'payment-events',
-    PaymentCanceledTransfer::class => 'payment-events',
-    PaymentCancellationFailedTransfer::class => 'payment-events',
+  $config[OmsConstants::PROCESS_LOCATION] = [
+      //...
+      OmsConfig::DEFAULT_PROCESS_LOCATION,
+      APPLICATION_ROOT_DIR . '/vendor/spryker/sales-payment/config/Zed/Oms', # this line must be added if you use unmodified ForeignPaymentStateMachine01.xml
+  ];
+  $config[OmsConstants::ACTIVE_PROCESSES] = [
+      //...
+      'ForeignPaymentB2CStateMachine01', # this line must be added or add your modified version of this OMS
+  ];
+  $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
+      //...
+      PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentB2CStateMachine01', # this line must be added or add your modified version of this OMS
+  ];
 
-    # [Optional] This message can be received from your project when you want to use details of the Stripe App used payment.
-    PaymentCreatedTransfer::class => 'payment-events',
-    PaymentUpdatedTransfer::class => 'payment-events'
-];
+  $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
+      //...
+      AddPaymentMethodTransfer::class => 'payment-method-commands',
+      UpdatePaymentMethodTransfer::class => 'payment-method-commands'
+      DeletePaymentMethodTransfer::class => 'payment-method-commands',
+      CancelPaymentTransfer::class => 'payment-commands',
+      CapturePaymentTransfer::class => 'payment-commands',
+      RefundPaymentTransfer::class => 'payment-commands',
+      PaymentAuthorizedTransfer::class => 'payment-events',
+      PaymentAuthorizationFailedTransfer::class => 'payment-events',
+      PaymentCapturedTransfer::class => 'payment-events',
+      PaymentCaptureFailedTransfer::class => 'payment-events',
+      PaymentRefundedTransfer::class => 'payment-events',
+      PaymentRefundFailedTransfer::class => 'payment-events',
+      PaymentCanceledTransfer::class => 'payment-events',
+      PaymentCancellationFailedTransfer::class => 'payment-events',
 
-$config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
-    //...
-    'payment-method-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-    'payment-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-];
+      # [Optional] This message can be received from your project when you want to use details of the Stripe App used payment.
+      PaymentCreatedTransfer::class => 'payment-events',
+      PaymentUpdatedTransfer::class => 'payment-events'
+  ];
 
-$config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
-    //...
-    'payment-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-];
+  $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
+      //...
+      'payment-method-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+      'payment-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+  ];
 
-```
+  $config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
+      //...
+      'payment-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+  ];
+
+  ```
 
 </details>
 
@@ -115,7 +122,7 @@ namespace Pyz\Zed\MessageBroker;
 use Spryker\Zed\MessageBroker\MessageBrokerDependencyProvider as SprykerMessageBrokerDependencyProvider;
 use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin;
 use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentMethodMessageHandlerPlugin;
-use Spryker\Zed\SalesPaymentDetail\Communication\Plugin\MessageBroker\PaymentCreatedMessageHandlerPlugin;
+use Spryker\Zed\SalesPaymentDetail\Communication\Plugin\MessageBroker\SalesPaymentDetailMessageHandlerPlugin;
 
 class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
 {
@@ -126,11 +133,11 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     {
         return [
             //...
-            # These plugins are handling messages sent from Stripe app to your project.
+            # These plugins are handling messages sent from the Stripe app to your project.
             new PaymentOperationsMessageHandlerPlugin(),
             new PaymentMethodMessageHandlerPlugin(),
 
-            # [Optional] This plugin is handling the `PaymentCreated` and `PaymentUpdated` messages sent from Stripe App.
+            # [Optional] This plugin handles the `PaymentCreated` and `PaymentUpdated` messages sent from the Stripe App.
             new SalesPaymentDetailMessageHandlerPlugin(),
         ];
     }
@@ -138,7 +145,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 ```
 
-4. In `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`, add or updated the channels config in the message broker config:
+4. In `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`, add or update the channels config in the message broker config:
 
 ```php
 namespace Pyz\Zed\MessageBroker;
@@ -263,6 +270,28 @@ use SprykerShop\Yves\PaymentPage\Plugin\PaymentPage\PaymentForeignPaymentCollect
     {
         return [
             new PaymentForeignPaymentCollectionExtenderPlugin(),
+        ];
+    }
+
+```
+
+9. In `src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php`, add or update the following plugins:
+
+
+```php
+// ...
+
+use Spryker\Zed\OauthClient\Communication\Plugin\KernelApp\OAuthRequestExpanderPlugin;
+
+    // ...
+
+    /**
+     * @return array<\Spryker\Shared\KernelAppExtension\RequestExpanderPluginInterface>
+     */
+    public function getRequestExpanderPlugins(): array
+    {
+        return [
+            new OAuthRequestExpanderPlugin(),
         ];
     }
 

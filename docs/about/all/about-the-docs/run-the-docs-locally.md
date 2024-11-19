@@ -1,6 +1,6 @@
 ---
 title: Run the docs locally
-description: Find out how you can build the Spryker documentation site
+description: Learn how to Build and run Spryker Documentation directly on your local machine with this guide.
 last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:

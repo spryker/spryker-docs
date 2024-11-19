@@ -619,6 +619,8 @@ Deactivate one of the shipment types and send a request with the corresponding s
 
 1. Adjust the schema definition so entity changes trigger events.
 
+<div class="width-100">
+
 | AFFECTED ENTITY           | TRIGGERED EVENTS                                                                                                        |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | spy_shipment_type         | Entity.spy_shipment_type.create<br>Entity.spy_shipment_type.update<br>Entity.spy_shipment_type.delete                   |
@@ -626,6 +628,9 @@ Deactivate one of the shipment types and send a request with the corresponding s
 | spy_shipment_carrier      | Entity.spy_shipment_carrier.create<br>Entity.spy_shipment_carrier.update<br>Entity.spy_shipment_carrier.delete |
 | spy_shipment_method       | Entity.spy_shipment_method.create<br>Entity.spy_shipment_method.update<br>Entity.spy_shipment_method.delete |
 | spy_shipment_method_store | Entity.spy_shipment_method_store.create<br>Entity.spy_shipment_method_store.update<br>Entity.spy_shipment_method_store.delete |
+
+
+</div>
 
 
 **src/Pyz/Zed/ShipmentType/Persistence/Propel/Schema/spy_shipment_type.schema.xml**

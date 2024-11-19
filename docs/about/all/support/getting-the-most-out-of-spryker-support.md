@@ -14,11 +14,15 @@ related:
     link: docs/about/all/support/using-the-support-portal.html
 ---
 
-We are very proud to have outstanding First Response Times (currently, they average around 35 minutes in busy weeks). However, a first response seldom immediately includes the solution to your problem. So how can we shorten Case Resolution Time?
 
-There are many of factors influencing [case resolution time](/docs/about/all/support/how-spryker-support-works.html#case-resolution-time). Some of them are determined by internal Spryker factor conditions, like availability of developer and engineering resources; others are external. One of these external factors is the question whether a case is immediately actionable. If a case contains all the information necessary for us to get working on it, it will be solved faster. How can you help us in this regard? Let's take a look at the form that is used to open a case with us:
-
-We are very proud to have outstanding [first response times](/docs/about/all/support/how-spryker-support-works.html#first-response-time) (currently they average at around 35 Minutes in busy weeks), however, a first response does seldom immediately include the solution to your problem. So how can we shorten case resolution Time?
+## Use of Portals and Accesses
+The [Support Portal](https://support.spryker.com/s/) is Spryker's main platform for submitting Support Requests. Spryker Customers have 3 (Standard Success) or 10 (Premier Success) licenses for the Support Portal. Access to the portal can be requested using this [form](https://www.surveymonkey.com/r/XYK5R26).
+### Best Practises for Partners and SI
+Historically, Spryker Partners and SIs have had the option to create support cases and change requests via the Spryker Partner Portal. This option is now deprecated and will no longer receive updates or new features.
+Using the Support Portal over the Partner Portal has the following important advantages:
+* Perfect visibility of support cases between Partners and Customers. Both parties can see cases created and can collaborate on them
+* Upcoming Support for MFA
+* Advanced relation between change requests/support cases and infrastructure environments. Prevent human error by picking from a selection of environments you own.
 
 ## Whitelist our email addresses
 

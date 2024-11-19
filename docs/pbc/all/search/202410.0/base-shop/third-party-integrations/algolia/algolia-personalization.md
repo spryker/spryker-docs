@@ -39,12 +39,10 @@ composer install spryker-shop/traceable-event-widget
 
 ```bash
 composer update --with-dependencies spryker/search-http spryker/customer \
-spryker-shop/cart-page spryker-shop/catalog-page spryker-shop/checkout-page spryker-shop/payment-page spryker-shop/home-page \
-spryker-shop/price-product-volume-widget spryker-shop/product-detail-page  spryker-shop/product-group-widget \
-spryker-shop/product-review-widget spryker-shop/product-set-detail-page spryker-shop/quick-order-page \
-spryker-shop/shop-ui
+spryker-shop/cart-page spryker-shop/catalog-page spryker-shop/checkout-page spryker-shop/home-page spryker-shop/payment-page \
+spryker-shop/product-detail-page spryker-shop/product-group-widget spryker-shop/product-review-widget \
+spryker-shop/product-set-detail-page spryker-shop/quick-order-page spryker-shop/shop-ui
 ```
-TODO: the list should be revalidated after final code review.
 
 if the command does now work, try it with `--with-all-dependencies` flag instead. 
 
@@ -326,3 +324,13 @@ This action will update your Spryker shop config to be able to send events to Al
 3. Open Yves, act as a guest and logged-in user, do searches, filter results, open product pages after search, add products to cart, do order placement.
 4. Go to [Algolia Dashboard](https://dashboard.algolia.com/) and open Events from Data Sources section - `https://dashboard.algolia.com/apps/$APP_ID$/events/debugger`.
 5. Check that you see events from your website here.
+
+
+### Configure Algolia Features
+
+When your indexes will have enough data (unique searches, events), you can check it in Analytics and Events Debugger tabs on Algolia Dashaboard. 
+Then you can start configuration of Personalization, Dynamic Re-Ranking and Query Categorization features (find Algolia docs and guides on their website).
+
+**It's important** that you need to first create A/B tests with new personalized configuration of your search (A/B Testing tab in Algolia Dashboard).
+It will allow you to see how new features influence your site conversion rate only for some limit audience of your site. When the results are good,
+you can change the settings globally in the indexes configuration, so it will work for all users. 

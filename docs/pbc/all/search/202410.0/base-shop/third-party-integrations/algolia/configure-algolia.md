@@ -11,7 +11,7 @@ Once you have [integrated the Algolia app](/docs/pbc/all/search/{{page.version}}
 
 ## Prerequisites
 
-To start using Algolia for your shop, you need an account with Algolia. Please contact the Spryker sales team for sign up today.
+To sign up for Algolia, contact our sales team.
 
 ## Configure Algolia
 
@@ -26,27 +26,25 @@ To configure Algolia, do the following:
 
 ![algolia-keys](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-keys.png)
 
-7. From the **Your API Keys** tab, copy the following keys:
-    - Application ID
-    - Search API Key
-    - Admin API Key
-8. Go back to your store's Back Office, to the Algolia app details page.
+7. In the **Your API Keys** tab, take note of following keys:
+    - **Application ID**
+    - **Search API Key**
+    - **Admin API Key**
+8. In the Back Office, go to the Algolia app details page.
 9. In the top right corner of the Algolia app details page, click **Configure**.
-10. In the **Configure** pane, fill in the **APPLICATION ID**, **SEARCH API KEY**, and **ADMIN API KEY** fields with the values from step 7.
+10. In the **Configure** pane, for **APPLICATION ID**, **SEARCH API KEY**, and **ADMIN API KEY**, enter the values you've retrieved in step 7.
 
 ![algolia-settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-settings.png)
 
-12. "Use Algolia instead of Elasticsearch" checkbox enables Algolia search on your frontends (Yves or Glue API-based application).
-You can postpone checking it until all your products are synchronized with Algolia. 
+12. To enable Algolia, select **Use Algolia instead of Elasticsearch**.
+After you save the settings, this enables Algolia search on your frontends: Yves or Glue API-based application. You can also enable it later , for example–after all your products are synced with Algolia.
 13. Click **Save**.
 
 The Algolia app is now added to your store and starts exporting your product data automatically.
 
 {% info_block infoBox "Info" %}
 
-You need to wait some time until Algolia finishes the product export.
-The more products you have, the longer you have to wait (from few minutes to several hours).
-The average export speed is around *300 products per minute*.
+Depending on the size of your product catalog, Algolia can take from few minutes to several hours to export it. The average export speed is around 300 products per minute.
 
 {% endinfo_block %}
 
@@ -85,7 +83,7 @@ Default fields for searchable attributes are the following:
 - `product_abstract_sku`
 - `name`
 - `abstract_name`
-- `category` 
+- `category`
 - `description`
 - `keywords`
 - `attributes.brand`
@@ -101,10 +99,10 @@ Default fields for searchable attributes are the following:
 
 ### Send additional fields to Algolia
 
-Spryker's Algolia App integration allows adding additional data to exported products.
-This is achieved using the pre-configured `searchMetadata` field on ProductConcrete and ProductAbstract transfers.
+You can add additional data to exported products using the pre-configured `searchMetadata` field on `ProductConcrete` and `ProductAbstract` transfers.
 
 #### Filling in the `searchMetadata` field
+
 There're multiple ways of adding search metadata. For the sake of an example, we'll implement `ProductConcreteExpanderPlugin`.
 
 Create a new plugin implementing `ProductConcreteExpanderPluginInterface`. Then you can add any logic inside that plugin's `expand` method to add necessary metadata to ProductConcrete transfers:
@@ -165,7 +163,7 @@ Default attributes for faceting are as follows:
 - `label`
 - `prices`
 - `rating`
-- `merchant_name` (for Marketplace shops)
+- Only for marketplaces: `merchant_name`
 
 The `prices` attribute is an object with nested fields. Algolia creates facets for each nested field and creates facets for all the currencies and pricing modes available in product entities.
 

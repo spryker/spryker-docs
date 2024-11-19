@@ -35,7 +35,7 @@ You can extend the data available to datasets on the project level. For more det
 
 To make datasets up to date, you need to refresh them by resyncing data from your project or third-party systems.
 
-You can refresh data manually or automatically by setting up a schedule per data set.
+You can refresh data manually or automatically by setting up a schedule per data set. We recommend configuring an automatic refresh shortly after you set up Amazon QuickSight.
 
 
 ![refresh-dataset](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/refresh-dataset.png)
@@ -70,16 +70,15 @@ You can share dashboards with authors and readers, and analyses – only with au
 
 ## User management and permissions
 
-User roles define what assets a user has access to. Amazon QuickSight recognizes the following assets:
+User roles define what assets a user has access to, including the following:
 * Analyses
 * Dashboards
 * Datasets
-* Datasrouces
-* Shared folders
+* Datasources
 
 When working with analytics, users can have the following roles:
 * Author: can view, create, and edit assets.
-* Reader: can view assets.
+* Reader: can view dashboards.
 
 <!--
 To give a Back Office user access to analytics, you need to assign one of these roles to them. For instructions, see [Create users]() and [Edit users]().

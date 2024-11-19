@@ -16,19 +16,19 @@ related:
     link: docs/scos/dev/guidelines/project-development-guidelines.html
 ---
 
-This document describes the data security guidelines you need to implement on the  application level. Infrastructure security measures are not described, because they are implemented by default cloud environments.
+This document describes the data security guidelines you need to follow on the application level. In cloud environments, infrastructure security measures are implemented by default, so they're not described.
 
 ## Passwords
 
-The most important about password security is to not save it in plain text. Therefore, Spryker uses BCrypt based on Blowfish to hash passwords and add a random salt to each hash, preventing rainbow table attacks. To prevent dictionary and brute force attacks, you can force users to use special characters by adding validation rules to needed forms. For even higher security, use 2-factor authentication and CAPTCHA.
+The most important about password security is to not save passwords in plain text. Therefore, Spryker uses BCrypt based on Blowfish to hash passwords and add a random salt to each hash, preventing rainbow table attacks. To prevent dictionary and brute force attacks, you can force users to use special characters by adding validation rules to needed forms. For even higher security, use two-factor authentication and CAPTCHA.
 
 ## Secrets
 
-Store a secret in a secrets management system. See [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html) for more information about secrets and parameters.
+Store secrets in a secrets management system. For more information about secrets and parameters, see [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html). We recommend establishing a regular cadence of rotating secrets. For recommendations on establishing a secrets rotation policy, see [Operational Best Practices for CIS AWS Foundations Benchmark v1.4 Level 1 1.14](https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_1.html).
 
 ## Encrypted communication
 
-As HTTP is a textual protocol having no built-in encryption, passwords and customer personal data are transferred to shops in plain text. So, a good practice is to configure and implement transport layer security (TLS), which is widely known to most users as HTTPS.
+Because HTTP is a textual protocol having no built-in encryption, passwords and customer personal data are transferred to shops in plain text. So, a good practice is to configure and implement transport layer security (TLS), which is widely known to most users as HTTPS.
 
 In most cases, it prevents eavesdropping on traffic of users in local public networks like free Wi-Fi hotspots. Besides, it can be used to authenticate users using third-party integrations by requiring a client certificate to be trusted.
 
@@ -48,14 +48,11 @@ The Back Office and Merchant Portal applications serve as administration panels.
 
 We highly recommend allowlisting the IP Addresses of third-party systems, such as ERP or WMS. To request allowlisting, provide the IP addresses or CIDR by [creating a support case](https://support.spryker.com)
 
-## Security Headers
+## Security headers
 
-Security headers are directives used by web applications to configure security defenses in web browsers.
-Based on these directives, browsers can make it harder to exploit client-side vulnerabilities such as Cross-Site Scripting or Clickjacking.
-Headers can also be used to configure the browser to only allow valid TLS communication and enforce valid certificates,
-or even enforce using a specific server certificate.
+Security headers are directives used by web applications to configure security defenses in web browsers. Based on these directives, browsers can make it harder to exploit client-side vulnerabilities such as Cross-Site Scripting or Clickjacking. Headers can also be used to configure the browser to only allow valid TLS communication and enforce valid certificates, or even enforce using a specific server certificate.
 
-The sections below detail configure places for various security headers. You can change them at the project level.
+The following sections describe the configuration places for various security headers. You can change them on the project level.
 
 ### X-Content-Type-Options, X-Frame-Options, X-XSS-Protection, Content-Security-Policy
 

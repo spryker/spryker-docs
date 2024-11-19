@@ -1,6 +1,6 @@
 ---
 title: Preparation for going live
-description: This instruction explains how to prepare a Spryker project for going live.
+description: Prepare your Spryker Cloud Commerce OS environment for a successful launch with essential pre-live checks, testing, and configuration steps to ensure smooth deployment.
 last_updated: Jan 23, 2023
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/preparation-for-going-live
@@ -10,9 +10,9 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/preparation-for-going-live.html
 ---
 
-{% info_block warningBox "Do not risk your Go-Live!" %}
+{% info_block warningBox "Don't risk your go-live" %}
 
-The preparation steps listed here are mandatory as they are crucial for the success of your go-live. We strongly encourage you to complete these steps if they are applicable to your project, as we won't be able to resolve issues related to steps not completed in time. Make sure that your project plan contains the tasks related to the go-live checklist and allocates enough time for their completion.
+The preparation steps listed here are mandatory because they're crucial for the success of your go-live. We strongly encourage you to complete these steps where applicable because we won't be able to resolve issues related to steps not completed in time. Make sure that your project plan contains the tasks related to the go-live checklist and allocates enough time for their completion.
 
 {% endinfo_block %}
 
@@ -23,13 +23,9 @@ We've divided the preparation into approximate timeframes, and you can adjust th
 
 ## Eight weeks before go-live
 
-Make sure you've addressed all the items from the following checklists.
+* Let us know all the details of your go-live plan. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for Domain Name System (DNS) switching and the hypercare phase we provide before and after your go-live.
 
-{% info_block warningBox "Inform us" %}
-
-Let us know all the details of your go-live plan. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for Domain Name System (DNS) switching and the hypercare phase we provide before and after your go-live.
-
-{% endinfo_block %}
+* Make sure you've addressed all the items from the following checklists.
 
 ### Cloud environments
 
@@ -54,7 +50,7 @@ After pointing the domain name to your Spryker project, some of your customers m
 - Upgrade your project's code to the [latest Demo Shop release](/docs/about/all/releases/product-and-code-releases.html). Or at least upgrade to a release that fully supports the Docker SDK (202009.0 and later).
 - Update `spryker/twig` to version 3.15.2 or later because this and later versions have important stability improvements over version 3.15.1.
 - Migrate the project's database to MariaDB.
-- Split the project's Zed endpoints as described in [Integrating separate endpoint bootstraps](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html).
+- Split the project's Zed endpoints as described in [Integrating separate endpoint bootstraps](/docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html).
 - Verify that your project's service naming scheme exactly matches the examples in the [sample deploy-spryker-b2c-staging.yml file](https://github.com/spryker-shop/b2c-demo-shop/blob/202204.0-p2/deploy.spryker-b2c-staging.yml).
 - Create [deploy files](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file.html) for each of your environments. File names must follow the naming convention: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
 - [Define a Docker SDK version](/docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html).
@@ -64,19 +60,20 @@ After pointing the domain name to your Spryker project, some of your customers m
   - Connect Staging S3 bucket to a staging environment.
   - If you're using CSV imports, make sure they're imported from S3 buckets.
 - Implement the following performance tips:
-  - Implement approaches described in all the [performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html).
+  - Implement approaches described in all the [performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html).
   - Implement [Jenekins operational best practices](/docs/ca/dev/best-practices/jenkins-operational-best-practices.html)
   - Implement the [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management) where applicable.
 - Implement the security tips:
-  - Apply Spryker [security guidelines](/docs/scos/dev/guidelines/security-guidelines.html).
+  - Apply Spryker [security guidelines](/docs/dg/dev/guidelines/security-guidelines.html).
   - Make sure that you don't have any plain-text passwords, private keys, or API secrets in config files or Git repositories.
   - Minimize the use of personal credentials and choose work-specific accounts based on each environment (production, staging, testing). We highly recommend employing Centralized Credential Management to securely store and manage these credentials.
   - Install all the [security updates](/docs/about/all/releases/product-and-code-releases.html) from all Spryker packages.
-  - Install all the security updates from all the external packages. To check if your project modules require security updates, you can use the [Security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html).
+  - Install all the security updates from all the external packages. To check if your project modules require security updates, you can use the [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html).
 - Perform compliance and legal checks. To ensure the platform complies with relevant legal and regulatory requirements, especially for international operations, consult your legal team. Make sure to check [Guidelines for GDPR compliance](/docs/about/all/support/gdpr-compliance-guidelines.html).
 - Make sure that the Back Office Access Control List (ACL) setup is configured correctly to manage user permissions and access rights within the system's administrative interface. For instructions on how to configure ACL, see [Users and rights overview](/docs/pbc/all/user-management/{{site.version}}/base-shop/user-and-rights-overview.html).
 - If your application is writing logs into your database, develop a strategy on how these logs can be regularly rotated or truncated to avoid large table sizes that can affect the application's performance. By default, the `spy_oms_transition_log` is used to log state machine transitions and can get very large if not [truncated](/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html) regularly.
 - If possible, check if you can implement payment options in a redundant way so that, if one payment provider has an outage, customers can still pay using another one.
+- Secrets, like API tokens, should be rotated regularly. Outline and test rotation strategies to make sure they're not going to cause issues during live operation.
 
 ### Testing
 
@@ -88,7 +85,7 @@ After pointing the domain name to your Spryker project, some of your customers m
 
 - Make sure the SEO strategy and plan are defined. Do the following:
   - Set up redirects. If you are migrating from another shop or project to Spryker, that is, the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results.
-  - Review and implement the best practices where applicable. For details, see [Basic SEO techniques to use in your project](/docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html).
+  - Review and implement the best practices where applicable. For details, see [Basic SEO techniques to use in your project](/docs/dg/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html).
 
 ### Training
 

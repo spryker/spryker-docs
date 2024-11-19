@@ -1,7 +1,7 @@
 ---
 title: Publish and Synchronization
 description: Publish and Synchronization process synchronizes all changes made on the backend need to be propagated to the client data stores.
-last_updated: Jun 16, 2021
+last_updated: Oct 18, 2024
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization
 originalArticleId: 58721bca-2881-4583-a9fa-59d698e8b9bb
@@ -240,6 +240,36 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
     </behavior>
 </table>
 ```
+
+#### Environment limitations related to DMS
+
+When Dynamic Multi-Store (DMS) is disabled, the Direct Sync feature has the following limitations:  
+- Single-store configuration: The feature is only supported for configurations with a single store.
+- Multi-store configuration with namespace consistency: For configurations with multiple stores, all stores must use the same Storage and Search namespaces.
+
+Example configuration for multiple stores:
+
+```yaml
+stores:
+    DE:
+        services:
+            broker:
+                namespace: de-docker
+            key_value_store:
+                namespace: 1
+            search:
+                namespace: search
+    AT:
+        services:
+            broker:
+                namespace: at-docker
+            key_value_store:
+                namespace: 1
+            search:
+                namespace: search
+```
+
+When DMS is enabled, there're no environment limitations for the Direct Sync feature.
 
 
 ### Data Architecture

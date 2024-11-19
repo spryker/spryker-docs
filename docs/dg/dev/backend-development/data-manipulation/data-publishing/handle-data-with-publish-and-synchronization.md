@@ -276,7 +276,52 @@ class HelloWorldDeletePublisherPlugin extends AbstractPlugin implements Publishe
 
 </details>
 
-3. Create a publish queue in which, during the publishing process, an event or multiple events are posted.
+Now publish events issued by your domain object will appear to `publish` queue per default, together with other publish events.
+
+3. In `Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins():array`, register the `HelloWorldStorage` publisher plugins.
+
+```php
+<?php
+
+namespace Pyz\Zed\Publisher;
+
+...
+use Pyz\Shared\HelloWorldStorage\HelloWorldStorageConfig;
+use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
+...
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
+     */
+    protected function getPublisherPlugins(): array
+    {
+        return array_merge(
+            ......,
+            $this->getHelloWorldStoragePlugins()
+        );
+    }
+
+    /**
+     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
+     */
+    protected function getHelloWorldStoragePlugins(): array
+    {
+        return [
+		new HelloWorldWritePublisherPlugin(),
+                new HelloWorldDeletePublisherPlugin(),
+        ];
+    }
+}
+```
+
+<details>
+<summary>How high-performance domains you can create a separate queue for publish events issued by your new domain object</summary>
+High-performance domains have special requirements to publishing performance. Such domains have high number of items (eg prices) or large size of a single object.
+In this case it's better to separate their queue for faster, more predictable processing and easy debugging.
+ 
+3.1 Create a publish queue in which, during the publishing process, an event or multiple events are posted.
 
 ```php
 <?php
@@ -296,7 +341,7 @@ class HelloWorldStorageConfig extends AbstractBundleConfig
 }
 ```
 
-4. Adjust the RabbitMQ configuration with the newly introduced queue.
+3.2. Adjust the RabbitMQ configuration with the newly introduced queue.
 
 ```php
 <?php
@@ -326,7 +371,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-5. In `Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins():array`, register the `HelloWorldStorage` publisher plugins and define the publish queue.
+3.3. In `Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins():array`, register the `HelloWorldStorage` publisher plugins and define the publish queue.
 
 ```php
 <?php
@@ -365,6 +410,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+</details>
 
 ## 5. Usage
 
@@ -411,7 +457,7 @@ Ensure that the event has been created:
 
 Ensure that the triggered event has the correct structure:
 
-1. Open the message in the `publish.hello_world` queue. You should see a message like this one:
+1. Open the message in the `publish` queue. You should see a message like this one:
 
 ```xml
 {% raw %}
@@ -931,6 +977,9 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
         ];
     }
 ```
+
+Execute ```console queue:setup``` to update the queue setup with the new sync queue, so it will appear in RabbitMq.
+Error queue will be added automatically with .error postfix.
 
 3. Add `MessageProcessor` for the queue to `\Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins()`.
 

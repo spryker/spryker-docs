@@ -5,6 +5,8 @@ entries:
   nested:
   - title: Developer getting started guide
     url: /docs/dg/dev/development-getting-started-guide.html
+  - title: AI coding assistants
+    url: /docs/dg/dev/ai-coding-assistants.html
   - title: Set up locally
     url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:
@@ -65,7 +67,8 @@ entries:
       url: /docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
     - title: Redis configuration
       url: /docs/dg/dev/set-up-spryker-locally/redis-configuration.html
-    - title: Troubleshooting
+    - title: Troubleshooting installation
+      url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html
       nested:
       - title: An error during frontend setup
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html
@@ -81,6 +84,8 @@ entries:
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/node-saas-does-not-yet-support-your-current-environment.html
       - title: Setup of new indexes throws an exception
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
+      - title: Unable to bring up Mutagen Compose sidecar service
+        url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/unable-to-bring-up-mutagen-compose-sidecar-service.html        
       - title: Vendor folder synchronization error
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
 
@@ -825,37 +830,47 @@ entries:
           - title: WebProfiler
             url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-webprofiler-module.html
 
-      - title: Upgrade to Angular 12
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-12.html
-      - title: Upgrade to Angular 15
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html
-      - title: Upgrade to Angular 17
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html
-      - title: Upgrade to PHP 8.1
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html
-      - title: Upgrade to Symfony 5
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html
-      - title: Upgrade to Symfony 6
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html
-      - title: Upgrade to Webpack v5
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
-      - title: Upgrade to Stylelint 16 and css-loader 6
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-stylelint-16-and-css-loader-6.html
-      - title: Upgrade Node.js to v18 and npm to v9
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html
-      - title: Migrate from TSLint to ESLint
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-from-tslint-to-eslint.html
-      - title: Migrate from Yarn to npm
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-from-yarn-to-npm.html
-      - title: Upgrade Publish and Sync
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-publish-and-sync.html
-      - title: Upgrade to Marketplace
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-marketplace.html
-      - title: Migrate to Docker
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html
-        nested:
-          - title: Adjust Jenkins for a Docker environment
-            url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
+    - title: Upgrade Angular
+      nested:
+        - title: Upgrade to Angular 12
+          url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-12.html
+        - title: Upgrade to Angular 15
+          url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html
+        - title: Upgrade to Angular 17
+          url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html
+
+    - title: Upgrade to Webpack v5
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
+    - title: Upgrade to Stylelint 16 and css-loader 6
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-stylelint-16-and-css-loader-6.html
+    - title: Migrate from TSLint to ESLint
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-from-tslint-to-eslint.html
+    - title: Upgrade Node.js to v18 and npm to v9
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html
+    - title: Migrate from Yarn to npm
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-from-yarn-to-npm.html
+
+    - title: Upgrade to PHP 8.1
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html
+    - title: Upgrade to PHP 8.3
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-83.html
+    - title: Upgrade to PHPUnit 11
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-phpunit-11.html
+    - title: Upgrade to Symfony 5
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html
+    - title: Upgrade to Symfony 6
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html
+
+    - title: Upgrade Publish and Sync
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-publish-and-sync.html
+    - title: Upgrade to Marketplace
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-marketplace.html
+
+    - title: Migrate to Docker
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html
+      nested:
+        - title: Adjust Jenkins for a Docker environment
+          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
 
     - title: Update environemnt configuration
       url: /docs/dg/dev/upgrade-and-migrate/update-environment-configuration.html
@@ -1038,6 +1053,8 @@ entries:
           url: /docs/dg/dev/sdks/sdk/development-tools/ts-linter.html
         - title: VCS connector
           url: /docs/dg/dev/sdks/sdk/vcs-connector.html
+        - title: Enable development tools in PHPStorm
+          url: /docs/dg/dev/sdks/sdk/development-tools/enable-development-tools-in-phpstorm.html
 
       - title: Troubleshooting
         nested:
@@ -1090,8 +1107,8 @@ entries:
       url: /docs/dg/dev/architecture/conceptual-overview.html
     - title: Modules and application layers
       url: /docs/dg/dev/architecture/modules-and-application-layers.html
-    - title: Architectural Convention Reference
-      url: /docs/dg/dev/architecture/architectural-convention-reference.html
+    - title: Architectural Convention
+      url: /docs/dg/dev/architecture/architectural-convention.html
     - title: Module API
       url: /docs/dg/dev/architecture/module-api/module-api.html
       nested:
@@ -1152,6 +1169,7 @@ entries:
       url: /docs/dg/dev/data-import/implement-incremental-installers.html
       include_versions:
       - "202404.0"
+      - "202410.0"
 
   - title: Guidelines
     url: /docs/dg/dev/guidelines/guidelines.html
@@ -1382,7 +1400,7 @@ entries:
       - title: Not optimized Composer on the production environment
         url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/not-optimised-composer-on-the-production-environment.html
       - title: Redis session lock
-        url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock-excpetions.html
+        url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock.html
       - title: Slow Publish and Synchronization
         url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/slow-publish-and-synchronization.html
       - title: Technology restrictions
@@ -1444,14 +1462,9 @@ entries:
       nested:
       - title: Backend API Marketplace B2B Demo Shop reference
         url: /docs/dg/dev/glue-api/backend-glue-infrastructure/backend-api-marketplace-b2b-demo-shop-reference.html
-        include_versions:
-          - "202311.0"
-          - "202304.0"
       - title: Backend API Marketplace B2C Demo Shop reference
         url: /docs/dg/dev/glue-api/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html
-        include_versions:
-          - "202311.0"
-          - "202304.0"
+
     - title: Old Glue infrastructure
       nested:
       - title: Glue API authentication and authorization
@@ -1462,10 +1475,6 @@ entries:
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/glue-rest-api.html
       - title: Glue infrastructure
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/glue-infrastructure.html
-      - title: Resolve search engine friendly URLs
-        url: /docs/dg/dev/glue-api/old-glue-infrastructure/resolving-search-engine-friendly-urls.html
-        include_versions:
-        - "202307.0"
       - title: Handling concurrent REST requests and caching with entity tags
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
       - title: "Marketplace: Resolve search engine friendly URLs"
@@ -1543,10 +1552,10 @@ entries:
     - title: Project implementation - Zed API
       url: /docs/dg/dev/zed-api/zed-api-project-implementation.html
     - title: Integrate Zed API
-      url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api.html
+      url: /docs/dg/dev/zed-api/integrate-zed-api/integrate-zed-api.html
       nested:
         - title: Integrate Zed API for merchant relationships
-          url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
+          url: /docs/dg/dev/zed-api/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
 
     - title: Zed API configuration
       url: /docs/dg/dev/zed-api/zed-api-configuration.html
@@ -1559,7 +1568,7 @@ entries:
     - title: Zed API resources
       url: /docs/dg/dev/zed-api/zed-api-resources.html
     - title: Zed API (BETA)
-      url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html
+      url: /docs/dg/dev/zed-api/zed-api-beta.html
 
 
   - title: Updating Spryker
@@ -1583,16 +1592,20 @@ entries:
   - title: App Composition Platform
     url: /docs/dg/dev/acp/app-composition-platform.html
     nested:
-      - title: ACP security assessment
-        url: /docs/dg/dev/acp/aop-security-assessment.html
-      - title: ACP security tips
+      - title: Security assessment
+        url: /docs/dg/dev/acp/acp-security-assessment.html
+      - title: Security tips
         url: /docs/dg/dev/acp/acp-security-tips.html
-      - title: SCCOS dependencies required for the ACP
+      - title: Install prerequisites and enable ACP
         url: /docs/dg/dev/acp/install-prerequisites-and-enable-acp.html
-      - title: Receive ACP messages in SCCOS
+      - title: Receive ACP messages
         url: /docs/dg/dev/acp/receive-acp-messages.html
       - title: Integrate ACP payment apps with Spryker OMS configuration
         url: /docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html
+      - title: Retaining ACP apps when running destructive deployments
+        url: /docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html
+      - title: APIs and overview diagrams for payment service providers
+        url: /docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.html
 #      - title: Develop an app
 #        url: /docs/dg/dev/acp/develop-an-app/develop-an-app.html
 #        nested:

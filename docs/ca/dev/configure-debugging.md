@@ -1,6 +1,6 @@
 ---
 title: Configure debugging
-description: Enable extended logs for an application to debug it.
+description: Configure debugging in Spryker by enabling extended logs and setting up environment-specific parameters for efficient troubleshooting
 template: howto-guide-template
 last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/debugging

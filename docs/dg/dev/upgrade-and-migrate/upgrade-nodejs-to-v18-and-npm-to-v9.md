@@ -139,7 +139,7 @@ npm -v
 
 To update the versions, use official documentation:
 
-- [Node.js](https://nodejs.org/en/download/package-manager)
+- [Node.js](https://nodejs.org/en/download/package-managerpackage-manager)
 - [npm](https://docs.npmjs.com/try-the-latest-stable-version-of-npm)
 
 {% endinfo_block %}

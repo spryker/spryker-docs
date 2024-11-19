@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting general issues
-description: Solutions to common issues
+description: Find solutions to general Spryker issues, from memory errors to unverified emails, with troubleshooting steps to resolve common application challenges.
 template: concept-topic-template
 last_updated: Oct 6, 2023
 redirect_from:

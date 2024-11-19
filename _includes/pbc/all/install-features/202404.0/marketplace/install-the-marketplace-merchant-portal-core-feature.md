@@ -750,7 +750,7 @@ Follow the steps below to install the Merchant Portal Core feature frontend.
 
 Environment requirements:
 
-- [Node.js](https://nodejs.org/en/download/) version 18 or higher.
+- [Node.js](https://nodejs.org/en/download/package-manager) version 18 or higher.
 - [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) version 9 or higher.
 
 Application requirements: if you want to integrate the builder, update the following packages.

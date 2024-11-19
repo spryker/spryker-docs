@@ -1,10 +1,19 @@
 ---
 title: Monitoring issues and informing about alerts
-DESCRIPTION: Learn how issues with environments are monitored and how customers are informed about alerts on SCCOS
+DESCRIPTION: Monitor and manage Spryker Cloud environments with automatic alerts for system health, performance, and critical issues, ensuring proactive issue resolution.
 template: concept-topic-template
 last_updated: Feb 07, 2024
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/monitoring.html
+  - /docs/customizing-aws-cloudwatch-dashboards
+  - /docs/en/customizing-aws-cloudwatch-dashboards
+  - /docs/cloud/dev/spryker-cloud-commerce-os/customizing-aws-cloudwatch-dashboards.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/customize-aws-cloudwatch-dashboards.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/performance-and-availability-monitoring-via-new-relic.html
+  - /docs/ca/dev/monitoring/monitoring.html
+  - /docs/ca/dev/monitoring/performance-and-availability-monitoring-via-new-relic.html
+  - /docs/ca/dev/monitoring/customize-aws-cloudwatch-dashboards.html  
 ---
 
 Every Spryker cloud environment is monitored by the monitoring systems and a dedicated 24/7 team that ensures that environments run stable. If an issue occurs, this team takes action autonomously and informs you about any further actions needed on their or your side. This document explains how monitoring and alerting works.
@@ -128,7 +137,3 @@ Most alerts we receive are temporary states and aren't a real problem. However, 
 If there is an alert, the monitoring team looks for a likely explanation, like a temporary deployment error. If the team needs to take an action, they decide if it requires consent or cooperation from your side. If cooperation or consent is needed, they will contact the responsible person by opening an alert case. If a Solution Partner is responsible, you can track the status of these alert cases and the tickets in the Partner Portal. We update them on a daily basis in the **Case Detail** view under **Ticket Status**.
 
 If it's possible to resolve an issue on our own, we'll do it. In case of a downtime or severe service degradation, we inform you about the incident via a case and a Root Cause Analysis [RCA] report.
-
-## Want more insights?
-
-We offer New Relic APM, so you can also monitor applications and configure alerts and monitoring to fulfill your needs. To request an offer for New Relic APM, [contact support](https://support.spryker.com) via **Create Case** - **Get Help**.

@@ -1,6 +1,6 @@
 ---
 title: Tutorial — Troubleshooting failing Yves authentication
-description: Learn what to do when Yves authentication fails
+description: Troubleshoot Yves authentication failures in Spryker by reviewing Yves and Zed logs, and follow the steps to identify and resolve issues
 template: troubleshooting-guide-template
 last_updated: Oct 6, 2023
 redirect_from:

@@ -7,7 +7,7 @@ Follow the steps below to install the Dynamic Multistore feature core.
 ### Prerequisites for projects below version 202307.0
 
 {% info_block warningBox "Project version" %}
-If your project is of version 202307.0 or later, go to [Enable the dynamic store feature].
+If your project is of version 202307.0 or later you can skip steps below and go directly to [enabling process]([here](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/enable-dynamic-multistore.html)).
 {% endinfo_block %}
 
 1. Upgrade the following modules:
@@ -1528,7 +1528,12 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-## Launch and set up environment
+
+## Launch and set up environment (locally)
+
+{% info_block warningBox "Project version" %}
+For enabling Dynamic Multistore on production environment please read [enabling process]([here](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/enable-dynamic-multistore.html)).
+{% endinfo_block %}
 
 Rebuild the application with assets and activate new endpoints:
 

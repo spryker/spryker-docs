@@ -21,7 +21,7 @@ redirect_from:
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/en/download/): minimum version is 18.
+- [Node.js](https://nodejs.org/en/download/package-manager): minimum version is 18.
 - [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/): minimum version is 9.
 
 {% info_block infoBox "Note" %}

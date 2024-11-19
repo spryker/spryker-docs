@@ -154,7 +154,7 @@ npm -v
 
 To update the versions, use official documentation:
 
-- [Node.js](https://nodejs.org/en/download)
+- [Node.js](https://nodejs.org/en/download/package-manager)
 - [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 {% endinfo_block %}

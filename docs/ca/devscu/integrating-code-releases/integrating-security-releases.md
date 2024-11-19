@@ -1,6 +1,6 @@
 ---
 title: Integrating security releases
-description: Spryker Code Upgrader prioritizes security releases over regular releases
+description: Integrate Spryker security releases to mitigate vulnerabilities, enhance protection, and maintain compliance by applying critical security updates via the Spryker Code Upgrader.
 template: concept-topic-template
 last_updated: Dec 20, 2023
 ---

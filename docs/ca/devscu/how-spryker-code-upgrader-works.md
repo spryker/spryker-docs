@@ -1,6 +1,6 @@
 ---
 title: How Spryker Code Upgrader works
-description: Spryker Code Upgrader overview
+description: Learn how Spryker Code Upgrader works, from identifying module updates and applying security releases to creating Git branches, committing changes, and submitting PRs for seamless upgrades.
 template: concept-topic-template
 last_updated: Aug 22, 2023
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Seven Senders — Mappers
+description: Learn how to configure Seven Senders mappers in Spryker Cloud Commerce OS to efficiently map shipping data for integration with your Spryker project.
 template: concept-topic-template
 last_updated: Nov 17, 2023
 redirect_from:

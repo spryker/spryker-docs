@@ -1,5 +1,6 @@
 ---
 title: Integrate Seven Senders
+description: Learn how to integrate Seven Senders with Spryker Cloud Commerce OS to enhance shipping options within your Spryker project.
 template: howto-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

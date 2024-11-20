@@ -1,6 +1,6 @@
 ---
 title: Email deliverability
-description: Explanation and tips on email deliverability
+description: Ensure high email deliverability in Spryker Cloud Commerce OS by configuring SPF, DKIM, and DMARC DNS records
 last_updated: Jun 19, 2024
 template: concept-topic-template
 ---

@@ -1,6 +1,6 @@
 ---
 title: Multi-store setups
-description: Types of multi-store setups in Spryker Cloud Commerce OS
+description: Learn about multi-store setups in Spryker Cloud Commerce OS, including shared and separated configurations for flexible store management, deployment, and data handling.
 template: concept-topic-template
 last_updated: Oct 6, 2023
 redirect_from:

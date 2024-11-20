@@ -1,6 +1,6 @@
 ---
 title: Multi-store setup options
-description: Learn about all the setup options you have for a multi-store environment.
+description: Explore various multi-store setup options in Spryker, including shared, isolated, and separate infrastructure, to best fit your business requirements.
 template: howto-guide-template
 last_updated: Nov 15, 2023
 redirect_from:

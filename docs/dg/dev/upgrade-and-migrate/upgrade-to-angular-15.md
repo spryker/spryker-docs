@@ -72,7 +72,7 @@ Before starting the migration, make sure that Webpack is v5; if it's v4, the [We
 
 {% info_block infoBox "Info" %}
 
-Make sure you are using [Node.js 18 or later](https://nodejs.org/en/download).
+Make sure you are using [Node.js 18 or later](https://nodejs.org/en/download/package-manager).
 
 {% endinfo_block %}
 

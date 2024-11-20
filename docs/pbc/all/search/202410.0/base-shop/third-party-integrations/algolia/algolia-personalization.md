@@ -331,6 +331,7 @@ This action will update your Spryker shop config to be able to send events to Al
 When your indexes will have enough data (unique searches, events), you can check it in Analytics and Events Debugger tabs on Algolia Dashaboard. 
 Then you can start configuration of Personalization, Dynamic Re-Ranking and Query Categorization features (find Algolia docs and guides on their website).
 
-**It's important** that you need to first create A/B tests with new personalized configuration of your search (A/B Testing tab in Algolia Dashboard).
-It will allow you to see how new features influence your site conversion rate only for some limit audience of your site. When the results are good,
+**It's important** that you need to first create [A/B tests](https://academy.algolia.com/training/00f72f14-0713-11ef-b9fe-0617d5264223/overview) 
+with new personalized configuration of your search ("A/B Testing" page in Algolia Dashboard).
+It will allow you to see how new features influence your search conversion rate only for some limit audience of your site. When the results are good,
 you can change the settings globally in the indexes configuration, so it will work for all users. 

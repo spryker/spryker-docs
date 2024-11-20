@@ -40,15 +40,13 @@ We recommend mapping your branches to environments as follows:
 
 
 ## Connect a GitHub code repository
-To connect a GitHub code repository:
+
 
 1. Configure a GitHub code repository.
-2. Provide the following details via [support]((https://support.spryker.com/)). (Infrastructure Change Request>Change to existing Parameter Store Variable):
-
-* **URL**
-* **Branch**
-* **Access token** (please share this information [securily](https://docs.spryker.com/docs/about/all/support/share-secrets-with-the-spryker-support-team.html#process-for-sharing-the-secrets) with us after creating the case)
-
+2. On the [support portal](https://support.spryker.com/) in the Infrastructure Change Request category, create a Change to existing Parameter Store Variable case and provide the following details:
+  * **URL**
+  * **Branch**
+3. Provide the **Access token** by following [Share a secret](/docs/about/all/support/share-secrets-with-the-spryker-support-team.html#share-a-secret).
 
 We connect the code repository shortly after you provide the details.
 

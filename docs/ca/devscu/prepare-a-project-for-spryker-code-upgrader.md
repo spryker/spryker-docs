@@ -1,7 +1,7 @@
 ---
 title: Prepare a project for Spryker Code Upgrader
 last_updated: Sep 4, 2023
-description: Get your project ready to start using Spryker Code Upgrader
+description: Prepare your project for Spryker Code Upgrader by ensuring code compliance, updating modules, and meeting technical requirements for a smooth upgrade process.
 template: concept-topic-template
 redirect_from:
   - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html

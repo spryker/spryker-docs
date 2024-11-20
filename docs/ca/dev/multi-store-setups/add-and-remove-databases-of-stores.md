@@ -1,6 +1,6 @@
 ---
 title: Add and remove databases of stores
-description: Learn how to add and remove databases of stores
+description: Learn how to add and remove store-specific databases in Spryker Cloud Commerce OS, including configuration and deployment steps for multi-store setups.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 redirect_from:

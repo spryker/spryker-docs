@@ -730,7 +730,7 @@ Follow the steps below to install the Merchant Portal Core feature frontend.
 ### Prerequisites
 
 Environment requirements:
-- [Node.js](https://nodejs.org/en/download/): minimum version is 18.
+- [Node.js](https://nodejs.org/en/download/package-manager): minimum version is 18.
 - [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/): minimum version is 9.
 
 Spryker requirements:

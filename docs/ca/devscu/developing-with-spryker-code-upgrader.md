@@ -43,7 +43,7 @@ Following your usual development process, the development team deploys the updat
 
 * Cover customizations with automated tests.
 
-* Cover the Upgrader PRs with tests. For information about different kinds of tests, see [Testing updates](//docs/dg/dev/updating-spryker/testing-updates.html).
+* Cover the Upgrader PRs with tests. For information about different kinds of tests, see [Testing updates](/docs/dg/dev/updating-spryker/testing-updates.html).
 
 * Apply major upgrades manually.
 

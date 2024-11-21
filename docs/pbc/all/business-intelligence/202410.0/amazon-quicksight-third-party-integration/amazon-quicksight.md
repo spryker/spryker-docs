@@ -25,7 +25,7 @@ For more details on data sources, see [Supported data sources](https://docs.aws.
 
 ### Extending project data for analytics
 
-By looking at datasets, you can see what data from your project is available for adding to analytics. By default, for each dataset, only the data that can be useful for analytics is available from a respective database table. For example, the Customer dataset doesn't include customer passwords.
+By looking at datasets, you can see what data from your project is available for analytics. By default, for each dataset, only secure data that can be useful for analytics and is available from a respective database table. For example, the Customer dataset doesn't include customer names or passwords.
 
 You can extend the data available to datasets on the project level. For more details, see [Install Amazon QuickSight]().
 
@@ -80,13 +80,11 @@ When working with analytics, users can have the following roles:
 * Author: can view, create, and edit assets.
 * Reader: can view dashboards.
 
-<!--
-To give a Back Office user access to analytics, you need to assign one of these roles to them. For instructions, see [Create users]() and [Edit users]().
-
--->
-
 The analytics roles are derived from Amazon QuickSight and are separate from the [Back Office user roles](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
 
+The number of users with different roles depends on your contract.
+
+<!-- To request new users or roles to be updated, contact your Customer Success Manager at [the analytics contact page](https://now.spryker.com/contact-analytics). -->
 
 
 ### Default dashboard

@@ -135,6 +135,8 @@ In this example, EU region has DE and AT stores. US region has a US store. Dynam
 
 ![storefront-store-switcher](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/storefront-store-switcher.png)
 
+See more details [here](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/difference-between-modes.html).
+
 ## Data import performance
 
 The number of stores affects data import speed: the more stores you have, the slower the data import. Importing products for 40 stores takes approximately 5 times longer than for 8 stores.

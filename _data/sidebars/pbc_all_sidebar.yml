@@ -1694,6 +1694,10 @@ entries:
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html
                   - title: Push Notification
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-push-notification-feature.html
+                  - title: Analytics
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-analytics-feature.html
+                  - title: Amazon Quicksight
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-amazon-quicksight-module.html
 
               - title: Upgrade modules
                 nested:

@@ -1,6 +1,6 @@
 ---
 title: A PHP extension is missing from your system
-description: Learn how to resolve missing PHP extensions
+description: Learn how to resolve missing PHP extension errors in Spryker Code Upgrader by installing necessary extensions for smooth operation.
 template: concept-topic-template
 last_updated: Nov 9, 2023
 redirect_from:

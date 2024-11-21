@@ -1,6 +1,6 @@
 ---
 title: Invite users to a Spryker Code Upgrader workspace
-description: Learn how to invite users to the Upgrader workspace
+description: Invite users to your Spryker Code Upgrader workspace by assigning roles and permissions, allowing for efficient collaboration on project upgrades and management.
 template: howto-guide-template
 last_updated: Mar 8, 2023
 redirect_from:

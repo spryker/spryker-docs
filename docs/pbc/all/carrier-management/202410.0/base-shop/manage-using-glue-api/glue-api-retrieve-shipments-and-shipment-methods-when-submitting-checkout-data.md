@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve shipments and shipment methods when submitting checkout data"
-description: Learn how to submit check out data with shipment and shipment methods.
+description: Discover how to use Glue API to retrieve shipments and shipment methods when submitting checkout data in Spryker Cloud Commerce OS
 last_updated: Jul 28, 2022
 template: glue-api-storefront-guide-template
 redirect_from:

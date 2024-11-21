@@ -1,6 +1,6 @@
 ---
 title: The process exceeded the timeout
-description: What to do if you get the timeout error in Spryker Code Upgrader
+description: Learn what to do if you get the Process exceeded the timeout error in Spryker and how to resolve this issue.
 template: concept-topic-template
 last_updated: May 8, 2023
 redirect_from:

@@ -104,38 +104,9 @@ When you add a new store, to enable store-related entities for customers, you ne
 
 To avoid manually assigning entities in the Back Office, you can assign them using data import. For more details, see [Import stores](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/import-stores.html).
 
+## Differences in modes
 
-## How Dynamic Multistore affects a project
-
-In this example, EU region has DE and AT stores. US region has a US store. Dynamic Multistore introduces the following changes in this setup:
-
-- URLs for Storefront, Back Office, Merchant Portal, and Glue API contain region instead of store name. For example–the URL of the Back Office is `https://backoffice.eu.mysprykershop.com` instead of `https://backoffice.de.mysprykershop.com`.
-
-- RabbitMQ virtual hosts contain region instead of store. For example–`eu-docker` instead of `de-docker`.
-
-![rabbitmq-virtual-hosts-non-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/rabbitmq-virtual-hosts-non-dms.png)
-
-![rabbitmq-virtual-hosts-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/rabbitmq-virtual-hosts-dms.png)
-
-- Jenkins job names contain region instead of store. For example–`EU_queue-worker-start` instead of `DE_queue-worker-start`.
-
-![jenkins-jobs-non-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/jenkins-jobs-non-dms.png)
-
-![jenkins-jobs-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/jenkins-jobs-dms.png)
-
-- Elasticsearch indexes contain store as a part of the index name for Dynamic Multistore enabled and disabled modes.
-
-![elasticsearch-indexes-non-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/elasticsearch-indexes-non-dms.png)
-
-![elasticsearch-indexes-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/elasticsearch-indexes-dms.png)
-
-- Redis keys contain store as a part of the key name for Dynamic Multistore enabled and disabled modes.
-
-- When Dynamic Multistore is enabled, customers can switch between available stores for a region. When a customer changes a store, it's set to the `_store` query parameter. Using the query parameter, the store is added to session under the `current_store` key. It's used for fetching store-related data.
-
-![storefront-store-switcher](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/storefront-store-switcher.png)
-
-See more details [here](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/difference-between-modes.html).
+[Dynamic Multistore mode ON and OFF difference](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/difference-between-modes.html).
 
 ## Data import performance
 

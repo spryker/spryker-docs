@@ -1,6 +1,6 @@
 ---
 title: Install the Quick Add to Cart + Non-splittable Products feature
-description: Install the Quick Add to Cart and Non-splittable Products features in your project.
+description: Install the Spryker Cloud Commerce OS Quick Add to Cart and Non-splittable Products features in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/quick-order-non-splittable-products-feature-integration

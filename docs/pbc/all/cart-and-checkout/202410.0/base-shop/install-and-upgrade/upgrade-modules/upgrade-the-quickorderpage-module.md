@@ -1,5 +1,6 @@
 ---
 title: Upgrade the QuickOrderPage module
+description: A guide on how to upgrade and migrate the Spryker quick order page module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quick-order-page

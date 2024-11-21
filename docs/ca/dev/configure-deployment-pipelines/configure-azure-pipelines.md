@@ -2,7 +2,7 @@
 title: Configure Azure Pipelines
 description: Set up Azure Pipelines for CI/CD in Spryker Cloud Commerce OS, with steps for YAML configuration, testing, and connecting to an AWS repository.
 template: howto-guide-template
-last_updated: Oct 6, 2023
+last_updated: Nov 21, 2024
 originalLink: https://cloud.spryker.com/docs/configuring-azure-pipelines
 originalArticleId: df3448d4-34a8-43a8-bc58-f37ea8b6cd8d
 redirect_from:
@@ -71,29 +71,42 @@ steps:
 ## Connecting Azure Pipelines to your project
 
 To connect Azure Pipelines with your AWS repository:
-1. Request your AWS repository URL and credentials from [support](https://spryker.force.com/support/s/).
+1. Request your AWS repository URL and credentials from our [Support Team](https://support.spryker.com). Please navigate to **Infrastructure Change Request/Access Management>Change** to existing Parameter Store Variable for the request and mention that you would like to receive the AWS repository URL and credentials. Please link this documentation page with your request.
 
 2. Add the following to the end of `azure-pipelines.yml`:
 ```yaml
 ...
+- job: repo_mirror
+  displayName: "Mirror repository to the AWS"
+  variables:
+    - group: AWS_repo_credentials #there possible to store credentials and use them in the different pipelines
+  pool:
+    vmImage: ubuntu-latest
+  steps:
+    - checkout: none
     - script: |
-          git clone --mirror ${source-repo.url} ${source-repo.name}
-          cd ${source-repo.name} && ls -la
-          git remote add sync git remote add sync https://${target-repo.username}:${target-repo.password}@${target-repo.url}
-          git push sync --mirror
-    displayName: 'Sync with Target repo'
+        # Install urlencode function to encode reserved characters in passwords
+        sudo apt-get install gridsite-clients
+
+        mkdir repo-mirror
+        # Create local mirror of Azure DevOps repository
+        git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" clone --mirror $(AZURE_REPO_URL) repo-mirror
+
+        # Sync AWS CodeCommit repository
+        cd repo-mirror
+        git push --mirror https://$(AWS_GIT_USERNAME):$(urlencode $(AWS_GIT_PASSWORD))@$(AWS_REPO_URL)
+
+      displayName: 'Sync repository with AWS CodeCommit'
 ```
+For security reasons recommended not to hardcode variables, but to place them into the Azure DevOps group variables. In the example above create a group with the name `AWS_repo_credentials`:
 
-Values to replace:
+`$(AZURE_REPO_URL)`: URL of your Azure repository.
 
-`{source-repo.url}`: URL of your Azure repository.
+`$(AWS_REPO_URL)`: URL of the AWS repository you’ve received from support.
 
-`{source-repo.name}`: name of the directory from which the repository will be mirrored.
+`$(AWS_GIT_USERNAME)` and `$(AWS_GIT_PASSWORD)`: credentials you’ve received from support.
 
-`{aws.mirror-repo.url}`: URL of the AWS repository you’ve received from support.
-
-`{target-repo.username}` and `{target-repo.password}`: credentials you’ve received from support.
-
+`$(System.AccessToken)`: Azure devops internal variable to access current repo, it's also possible to use other auth, see azure devops documentation for additional information.
 
 
 You’ve configured Azure pipelines.

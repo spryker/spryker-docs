@@ -1,5 +1,6 @@
 ---
 title: Cart feature overview
+description: Explore the Cart feature in Spryker Cloud Commerce OS, offering robust cart management, multi-cart functionality, and customizable options.
 last_updated: Jul 20, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/cart

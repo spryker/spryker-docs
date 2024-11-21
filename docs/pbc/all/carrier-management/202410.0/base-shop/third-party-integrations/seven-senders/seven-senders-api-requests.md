@@ -1,5 +1,6 @@
 ---
 title: Seven Senders — API requests
+description: Learn how to manage Seven Senders API requests in Spryker Cloud Commerce OS to streamline shipping integrations and optimize logistics workflows.
 template: concept-topic-template
 last_updated: Nov 17, 2023
 redirect_from:

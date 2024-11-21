@@ -1,5 +1,6 @@
 ---
 title: Seven Senders — Persistence layer
+description: Learn how to manage Seven Senders persistence layer in Spryker Cloud Commerce OS for effective data storage and seamless integration with third-party shipping services.
 template: concept-topic-template
 last_updated: Nov 17, 2023
 date: May 25, 2022

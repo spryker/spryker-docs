@@ -132,7 +132,7 @@ class AmazonQuicksightConfig extends SprykerEcoAmazonQuicksightConfig
     /**
      * @var string
      */
-    protected const DEFAULT_ASSET_BUNDLE_IMPORT_JOB_ID = 'SprykerB2BMPDefaultDataSource';
+    protected const DEFAULT_DATA_SOURCE_ID = 'SprykerB2BMPDefaultDataSource';
 }
 ```
 </details>
@@ -180,7 +180,7 @@ class AmazonQuicksightConfig extends SprykerEcoAmazonQuicksightConfig
     /**
      * @var string
      */
-    protected const DEFAULT_ASSET_BUNDLE_IMPORT_JOB_ID = 'SprykerB2BDefaultDataSource';
+    protected const DEFAULT_DATA_SOURCE_ID = 'SprykerB2BDefaultDataSource';
 }
 ```
 </details>
@@ -231,7 +231,7 @@ class AmazonQuicksightConfig extends SprykerEcoAmazonQuicksightConfig
     /**
      * @var string
      */
-    protected const DEFAULT_ASSET_BUNDLE_IMPORT_JOB_ID = 'SprykerB2CMPDefaultDataSource';
+    protected const DEFAULT_DATA_SOURCE_ID = 'SprykerB2CMPDefaultDataSource';
 }
 ```
 </details>
@@ -275,7 +275,7 @@ class AmazonQuicksightConfig extends SprykerEcoAmazonQuicksightConfig
     /**
      * @var string
      */
-    protected const DEFAULT_ASSET_BUNDLE_IMPORT_JOB_ID = 'SprykerB2CDefaultDataSource';
+    protected const DEFAULT_DATA_SOURCE_ID = 'SprykerB2CDefaultDataSource';
 }
 ```
 </details>
@@ -495,7 +495,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-- Verify `QuicksightAnalyticsCollectionExpanderPlugin`: go to `http://mysprykershop.com/analytics-gui/analytics` and make sure the page is expanded by Quicksight analytics, by default you should see the `No Analytics permission has been granted to the current user` message.
+- Verify `QuicksightAnalyticsCollectionExpanderPlugin`: go to `https://mysprykershop.com/analytics-gui/analytics` and make sure the page is expanded by Quicksight analytics, by default you should see the `No Analytics permission has been granted to the current user` message.
 - Verify `QuicksightUserExpanderPlugin`: create a new Quicksight user in the `spy_quicksight_user` DB table, call `UserFacade::getUserCollection()` for a user used for newly created Quicksight user and make sure the `UserCollection.user.quicksightUser` is expanded.
 - Verify `DeleteQuicksightUserPostUpdatePlugin`: log in to Back Office, go to the **Users** -> **Users** section, deactivate a user used for newly created Quicksight user and make sure the corresponding row is deleted in the `spy_quicksight_user` DB table.
 
@@ -562,6 +562,20 @@ sections:
 
 {% endinfo_block %}
 
+3. Clear router cache:
+
+Execute the following command to clear the router cache:
+
+```bash
+console router:cache:warm-up:backoffice
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure you can open the `https://mysprykershop.com/amazon-quicksight/analytics/enable` page.
+
+{% endinfo_block %}
+
 ## Install feature frontend
 
 Follow the steps below to install the Amazon Quicksight module frontend.
@@ -591,6 +605,13 @@ Install the required features:
 
 ```bash
 npm install
-console frontend:project:install-dependencies
 console frontend:zed:build
 ```
+
+{% info_block warningBox "Verification" %}
+
+After finishing the installation and enabling the analytics:
+- go to `https://mysprykershop.com/analytics-gui/analytics`, the iframe with the Quicksight embed URL should be displayed.
+- there should not be any errors in the browser developer console.
+
+{% endinfo_block %}

@@ -15,10 +15,13 @@ related:
 ---
 
 
-## Use of Portals and Accesses
-The [Support Portal](https://support.spryker.com/s/) is Spryker's main platform for submitting Support Requests. Spryker Customers have 3 (Standard Success) or 10 (Premier Success) licenses for the Support Portal. Access to the portal can be requested using this [form](https://www.surveymonkey.com/r/XYK5R26).
-### Best Practises for Partners and SI
-Historically, Spryker Partners and SIs have had the option to create support cases and change requests via the Spryker Partner Portal. This option is now deprecated and will no longer receive updates or new features.
+
+[Spryker Support Portal](https://support.spryker.com/s/) is the main portal for interacting with Spryker support. Spryker Customers have 3 (Standard Success) or 10 (Premier Success) licenses for the Support Portal. You can get access to the support portal by [filling out the form form](https://www.surveymonkey.com/r/XYK5R26).
+
+## Best practices for Partners and SI
+
+Spryker Partners and SIs had been able to create support cases and change requests via the Spryker Partner Portal. This option is now deprecated and will no longer receive updates or new features.
+
 Using the Support Portal over the Partner Portal has the following important advantages:
 * Perfect visibility of support cases between Partners and Customers. Both parties can see cases created and can collaborate on them
 * Upcoming Support for MFA

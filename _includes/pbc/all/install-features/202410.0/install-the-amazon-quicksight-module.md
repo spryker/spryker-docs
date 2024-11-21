@@ -20,7 +20,7 @@ Install the required features:
 Run the following command to install the required module:
 
 ```bash
-composer require spryker-eco/amazon-quicksight: "^2.0.0" --update-with-dependencies
+composer require spryker-eco/amazon-quicksight:"^2.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

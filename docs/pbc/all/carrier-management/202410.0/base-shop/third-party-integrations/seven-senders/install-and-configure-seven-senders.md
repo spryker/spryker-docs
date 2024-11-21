@@ -1,5 +1,6 @@
 ---
 title: Install and configure Seven Senders
+description: Learn how to install and configure Seven Senders for Spryker Cloud Commerce OS to enhance shipping capabilities and integrate with third-party logistics services.
 template: howto-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

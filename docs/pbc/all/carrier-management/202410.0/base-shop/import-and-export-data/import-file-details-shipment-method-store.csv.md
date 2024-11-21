@@ -1,5 +1,6 @@
 ---
 title: "Import file details: shipment_method_store.csv"
+description: Learn how to import shipment method store data using the shipment-method-store.csv file in Spryker, streamlining your carrier management processes
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-shipment-method-storecsv

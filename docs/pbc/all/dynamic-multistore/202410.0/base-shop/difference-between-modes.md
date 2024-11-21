@@ -11,13 +11,6 @@ This document describes the difference between Dynamic Multistore ON and OFF mod
 
 ## Deployment file difference
 
-### What is the difference of how Storefront and GlueStorefront (as well as Glue) vs Backoffice and Merchant Portal works in Dynamic Multistore mode?
-
-In both cases, the applications works with the several stores within the one region, but:
-* Backoffice, MerchantPortal operates with data from all the stores within the specific region without requirement to provide the specific store.
-* Storefront and GlueStorefront (as well as Glue) requires store to operate, and operates within only one provided store. (If store is not provided explicitly, the default one is used.)
-
-
 ### Environment variable section
 
 ```yaml

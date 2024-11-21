@@ -18,9 +18,13 @@ This document contains frequently asked questions about Dynamic Multistore featu
 - Navigate to
   http://backoffice.eu.spryker.local/store-gui/list, verify if `Edit` button is available on each store on the page.
 
-### What is the difference between Dynamic Multistore ON and OFF modes.
+### What is the difference of how Storefront and GlueStorefront (as well as Glue) vs Backoffice and Merchant Portal works in Dynamic Multistore mode?
 
-[See details](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/difference-between-modes.html).
+In both cases, the applications works with the several stores within the one region, but:
+* Backoffice, MerchantPortal operates with data from all the stores within the specific region without requirement to provide the specific store.
+* Storefront and GlueStorefront (as well as Glue) requires store to operate, and operates within only one provided store. (If store is not provided explicitly, the default one is used.)
+
+[See more details](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/difference-between-modes.html).
 
 ### Infrastructure in PaaS: is there anything that needs to be done in PaaS?
 

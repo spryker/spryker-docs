@@ -1,7 +1,7 @@
 ---
 title: Calculation data structure
 last_updated: Aug 12, 2021
-description: This document describes calculation data structure
+description: Understand the calculation data structure in Spryker Cloud Commerce OS, exploring its role and the way things are calculated within your store. 
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/cart-feature-walkthrough/calculation-data-structure.html

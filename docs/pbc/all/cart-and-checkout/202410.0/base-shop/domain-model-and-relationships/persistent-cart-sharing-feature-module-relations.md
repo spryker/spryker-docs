@@ -1,5 +1,6 @@
 ---
 title: "Persistent Cart Sharing feature: module relations"
+description: Discover how the persistent cart sharing feature relates and integrates with Spryker Cloud Commerce OS modules
 template: feature-walkthrough-template
 last_updated: Nov 17, 2023
 redirect_from:

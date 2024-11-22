@@ -1,6 +1,6 @@
 ---
 title: Import Cart and Checkout data
-description: Details about the data importers for Cart and Checkout
+description: Learn how to import and export cart and checkout data in Spryker Cloud Commerce OS using data importers. Simplifying data management and streamlining processes.
 last_updated: Jun 23, 2023
 template: concept-topic-template
 redirect_from:

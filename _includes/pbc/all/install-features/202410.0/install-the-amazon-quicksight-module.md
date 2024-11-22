@@ -552,7 +552,7 @@ console quicksight-user:sync:create
 In order users to be synchronized automatically during deployment, you can configure the installation stage of the pipeline, for example the `destructive` pipeline. Add the following command to the end of the `demodata` section:
 
 **config/install/destructive.yml**
-```json
+```yaml
 sections:
     demodata:
 #       ...other commands

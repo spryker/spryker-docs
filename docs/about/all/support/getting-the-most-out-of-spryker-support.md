@@ -17,7 +17,7 @@ related:
 
 [Spryker Support Portal](https://support.spryker.com/s/) is the main portal for interacting with Spryker support. In the portal, you can have  3 (Standard Success) or 10 (Premier Success) licenses. To get access to the support portal [fill out the form](https://www.surveymonkey.com/r/XYK5R26).
 
-## Best practices for Partners and SI
+## Best practices for Partners and SIs
 
 
 Spryker Partners and SIs should create support cases in Spryker Support Portal.

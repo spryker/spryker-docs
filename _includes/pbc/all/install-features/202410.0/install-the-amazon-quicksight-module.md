@@ -562,7 +562,7 @@ sections:
 
 {% endinfo_block %}
 
-3. Clear router cache:
+4. Clear router cache:
 
 Execute the following command to clear the router cache:
 
@@ -572,7 +572,7 @@ console router:cache:warm-up:backoffice
 
 {% info_block warningBox "Verification" %}
 
-Make sure you can open the `https://mysprykershop.com/amazon-quicksight/analytics/enable` page.
+Log in to Back Office and make sure you can open the `https://backoffice.mysprykershop.com/amazon-quicksight/analytics/enable` page.
 
 {% endinfo_block %}
 
@@ -611,7 +611,7 @@ console frontend:zed:build
 {% info_block warningBox "Verification" %}
 
 After finishing the installation and enabling the analytics:
-- go to `https://mysprykershop.com/analytics-gui/analytics`, the iframe with the Quicksight embed URL should be displayed.
+- log in to Back Office and go to `https://backoffice.mysprykershop.com/analytics-gui/analytics`, the iframe with the Quicksight embed URL should be displayed.
 - there should not be any errors in the browser developer console.
 
 {% endinfo_block %}

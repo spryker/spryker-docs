@@ -12,6 +12,12 @@ In a multi-store environment, you can manage relationships between warehouses, s
 
 ## Scenario 1: Separate warehouses and databases
 
+{% info_block warningBox %}
+
+In case if Dynamic Multistore feature is enabled, this scenario is only possible when stores belong to the different regions. (See [details](#What is the difference between Multi-store vs Dynamic Multistore))
+
+{% endinfo_block %}
+
 {% info_block infoBox "" %}
 
 To enable this scenario for your project, a developer needs to configure it.
@@ -27,6 +33,12 @@ In this case, each store can have its own warehouse and a separate database. Sto
 This scenario is appropriate for big businesses managed from various locations, with worldwide deliveries. These stores do not depend on each other in any way and do not require additional communication or synchronization.
 
 ## Scenario 2: A shared warehouse but separate databases
+
+{% info_block warningBox %}
+
+In case if Dynamic Multistore feature is enabled, this scenario is only possible when stores belong to the different regions. (See [details](#What is the difference between Multi-store vs Dynamic Multistore))
+
+{% endinfo_block %}
 
 {% info_block infoBox "" %}
 

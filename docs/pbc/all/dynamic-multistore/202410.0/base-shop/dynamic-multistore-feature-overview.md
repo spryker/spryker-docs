@@ -15,6 +15,7 @@ related:
 ---
 
 The *Dynamic Multistore* feature lets you create and manage multiple stores within the same region in the Back Office. It streamlines the setup and maintenance of distinct stores tailored to various customer segments, regions, or product categories.
+Technically, it is an extension for the [Multi-store feature](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview.md) with some limitations, [See limitations](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview#What is the difference between Multi-store vs Dynamic Multistore).
 
 In the Back Office, in the **Administration&nbsp;<span aria-label="and then">></span> Stores**, you can view the list of stores in the current region. The **Stores** page shows all the stores within a specific region.
 

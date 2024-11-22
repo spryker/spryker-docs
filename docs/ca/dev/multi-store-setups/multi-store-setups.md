@@ -41,6 +41,11 @@ With the separated setup, store share the same codebase but have dedicated datab
 
 ![separated setup diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/multi-store-setups.md/separated-setup.png)
 
+{% info_block warningBox %}
+
+In case if Dynamic Multistore feature is enabled, separated setup only possible when stores belong to the different regions. (See [details](#What is the difference between Multi-store vs Dynamic Multistore))
+
+{% endinfo_block %}
 
 ### Separated setup: When to use
 
@@ -68,3 +73,12 @@ With the separated setup, store share the same codebase but have dedicated datab
 ### Separated setup: Integration
 
 New projects are shipped with a shared setup by default. To switch to a separated setup, reach out to your sales representative.
+
+
+### What is the difference between Multi-store vs Dynamic Multistore
+
+Dynamic Multistore extends Multi-store feature with an ability to have several stores within one domain (region based).
+In case if Dynamic Multistore feature is enabled, separated setup only possible when stores belongs to the different regions.
+
+[More info](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview.md)
+

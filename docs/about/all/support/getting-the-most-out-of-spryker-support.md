@@ -15,27 +15,34 @@ related:
 ---
 
 
-
-[Spryker Support Portal](https://support.spryker.com/s/) is the main portal for interacting with Spryker support. Spryker Customers have 3 (Standard Success) or 10 (Premier Success) licenses for the Support Portal. You can get access to the support portal by [filling out the form form](https://www.surveymonkey.com/r/XYK5R26).
+[Spryker Support Portal](https://support.spryker.com/s/) is the main portal for interacting with Spryker support. In the portal, you can have  3 (Standard Success) or 10 (Premier Success) licenses. To get access to the support portal [fill out the form](https://www.surveymonkey.com/r/XYK5R26).
 
 ## Best practices for Partners and SI
 
-Spryker Partners and SIs had been able to create support cases and change requests via the Spryker Partner Portal. This option is now deprecated and will no longer receive updates or new features.
 
-Using the Support Portal over the Partner Portal has the following important advantages:
-* Perfect visibility of support cases between Partners and Customers. Both parties can see cases created and can collaborate on them
-* Upcoming Support for MFA
-* Advanced relation between change requests/support cases and infrastructure environments. Prevent human error by picking from a selection of environments you own.
+Spryker Partners and SIs should create support cases in Spryker Support Portal.
+
+{% info_block infoBox %}
+The functionality of creating support cases in the Spryker Partner Portal is deprecated.
+{% endinfo_block %}
+
+
+Using the Support Portal over the Partner Portal has the following advantages:
+* Partners and customers can see their cases and collaborate on them.
+* Advanced relation between change requests, support cases, and infrastructure environments.
+* When creating a case, you can select a needed environment from a list of owned environments, preventing human errors.
+
+* <!-- Upcoming support for MFA -->
 
 ## Whitelist our email addresses
 
-Quick response and resolution times are not worth much if our messages cannot reach you. Spam Filters are useful; however, sometimes, they are too aggressive. Be on the save side and whitelist the following email addresses that we use to get in touch or to send notifications your way
+To make sure our quick responses don't end up in spam and reach you, whitelist the email addresses we're using to provide updates on your cases:
 
-    support@spryker.com
+* support@spryker.com
 
-    noreply@spryker.com
+* noreply@spryker.com
 
-If you are not sure how you can whitelist these email addresses, forward this request to your IT department or help desk. They will know how it can be done.
+If you need help with whitelisting the email addresses, forward this request to your IT department or help desk.
 
 <!--
 ![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28136%29.png)
@@ -46,11 +53,9 @@ If you are not sure how you can whitelist these email addresses, forward this re
 
 ## Provide all the information
 
-The goal of every ambitious support team is to increase the number of tickets that can be solved with the first engagement. The ideal support case is opened with all the information needed to assess, reproduce, and solve the problem. The first response can then already include the solution to the problem.
+Our goal is to increase the number of tickets that are solved with the first engagement. This is more likely to happen when a support case is opened with all the information needed to assess, reproduce, and solve the problem. Such cases may be resolved with the first response.
 
-For a product as complex as Spryker and our ecosystem, this is tremendously difficult to achieve for any but the most basic questions or known issues. Nevertheless, we strive to reduce the interactions necessary to solve a case. We do this to avoid taking too much of your time writing emails back and forth. To be successful in reducing the interactions necessary to solve a case, we need your help.
-
-When you include all the information we regularly need to assess a case, we are on to a good start. Here are the most important pieces of information that should go into any ticket you open with us.
+Even though this is hard to achieve with a complex product like Spryker, we strive to reduce the interactions necessary to solve a case. To reduce the interactions necessary to solve a case, we need your help. Here are the most important pieces of information that should go into any ticket you open with us.
 
 | INFORMATION | QUESTIONS THAT HELP YOU | EXPLANATION |
 | --- | --- | --- |
@@ -66,17 +71,15 @@ If you include all of the above, your chances of getting a fast resolution of yo
 
 ## Avoid out-of-band communication
 
-We know the temptation and we mostly have done the same from time to time. If you have a pressing measure, the temptation is great to reach out to several people at the same time, over different channels, to make sure that your message is heard.
+With pressing measures, it might seem like a good idea to reach out to as many people as possible to make sure a message is heard. However, the undoubtedly engaged, highly motivated people you messaged will scramble and try to get things done for you without clear coordination. Solutions will get implemented on top of each other and things will be done multiple times, creating confusion and more issues.
 
-The bad news is that much more often than not, this will achieve quite the opposite of what you are going for. The undoubtedly engaged, highly motivated people you messaged will scramble and try to get things done for you without clear coordination. Things will be done multiple times, wasting time and energy and creating confusion.
-
-With Spryker Support, it is not necessary to send a message to multiple people by various channels, because we will do that for you. We have clearly defined escalation rules (for an overview, look here) that make sure that every important stakeholder is informed. Raising a case with us also ensures SLA coverage, orderly tracking of all communication in a central, audited, and secure place. By only using our official points of contact to raise cases with us, you are doing us and yourself a big favor.
+Regardless of your issue, the only channel you need to communicate to is Spryker Support. With clearly defined [escalation rules], we will contact all the people that need to be involved in solving an issue. Raising a case with support also ensures SLA coverage, orderly tracking of all communication in a central, audited, and secure place.
 
 ## Provide feedback
 <!--
 ![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28135%29.png)
 *Photo by [athree23](https://pixabay.com/de/users/athree23-6195572/)*
 -->
-We want to measure ourselves to your high standards and exceed expectations. One important step towards our goal of providing the best support experience in the industry is receiving feedback. When we close a case with you, the notification email includes a link to a short survey. Please provide honest, stern feedback. Tell us how satisfied you are with our service and how easy or hard for you to work together with us. Do you have additional comments? Great! The survey also includes a comment field so you can include your feedback there.
+We want to measure ourselves to your high standards and exceed expectations. One important step towards our goal of providing the best support experience in the industry is receiving feedback. When we close a case with you, the notification email includes a link to a short survey. Provide an honest, stern feedback. Tell us how unsatisfied or satisfied you are with our service and how easy or hard it's for you to work with us. If you have any thoughts, make sure to add them to the comments section.
 
 We take your feedback very seriously. Our Support Lead will read and follow up on your feedback.

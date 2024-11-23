@@ -30,6 +30,15 @@ By looking at datasets, you can see what data from your project is available for
 You can extend the data available to datasets on the project level. For more details, see [Install Amazon QuickSight]().
 
 
+### SPICE data
+
+SPICE (Super-fast, Parallel, In-memory Calculation Engine) is a robust in-memory engine used by Amazon QuickSight to calculate and serve data. All data in datasets is store as SPICE data, which has the following advantages:
+
+* Your analytical queries process faster.
+* You don't need to wait for a direct query to process.
+* Data stored in SPICE can be reused multiple times without incurring additional costs. If you use a data source that charges per query, you're charged for querying the data when you first create the dataset and later when you refresh the dataset.
+
+For more details on SPICE data, see [Importing data into SPICE](https://docs.aws.amazon.com/quicksight/latest/user/spice.html).
 
 ### Refreshing data
 

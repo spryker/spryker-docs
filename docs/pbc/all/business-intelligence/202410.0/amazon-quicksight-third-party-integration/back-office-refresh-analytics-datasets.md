@@ -8,19 +8,13 @@ related:
 
 This document describes how to refresh datasets manually and on a schedule.
 
+{% info_block infoBox %}
 
-## Refresh an analytics dataset
+* You can refresh data only with an author role.
+* To always keep your analyses up to date, we recommend setting up an automatic data refresh.
 
-1. In the Back Office, go to **Analytics**.
-2. On the **Analytics** page, go to **Datasets**.
-  This opens the **Datasets** section.
-3. Click the dataset you want to refresh data for.
-   This opens the dataset's details.
-4. Click the **Refresh** tab.
-5. Click **REFRESH NOW**.
-6. In the **Refresh type** window, select **Full refresh**.
-7. In the **Confirm refresh** window, click **REFRESH**
-  This refreshes the page. A new refresh entry is displayed in the **History** pane. You can check the status of the refresh in the **Status** column.
+{% endinfo_block %}
+
 
 
 ## Set up a schedule to refresh an analytics dataset automatically
@@ -38,3 +32,16 @@ This document describes how to refresh datasets manually and on a schedule.
 10. If you selected **Weekly** or **Monthly** in the previous step, for **Refresh on**, select a day to refresh the dataset on.
 11. Click **Save**.
   This closes the window and displays the added refresh schedule in the **Schedules** pane.
+
+## Refresh an analytics dataset
+
+1. In the Back Office, go to **Analytics**.
+2. On the **Analytics** page, go to **Datasets**.
+  This opens the **Datasets** section.
+3. Click the dataset you want to refresh data for.
+   This opens the dataset's details.
+4. Click the **Refresh** tab.
+5. Click **REFRESH NOW**.
+6. In the **Refresh type** window, select **Full refresh**.
+7. In the **Confirm refresh** window, click **REFRESH**
+  This refreshes the page. A new refresh entry is displayed in the **History** pane. You can check the status of the refresh in the **Status** column.

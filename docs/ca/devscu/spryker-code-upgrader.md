@@ -1,6 +1,6 @@
 ---
 title: Spryker Code Upgrader
-description: Spryker Code Upgrader is a key to easy upgrades
+description: Spryker Code Upgrader automates code analysis, applies updates, and ensures compatibility with the latest releases, streamlining upgrades and improving project efficiency.
 template: concept-topic-template
 last_updated: Dec 13, 2023
 redirect_from:

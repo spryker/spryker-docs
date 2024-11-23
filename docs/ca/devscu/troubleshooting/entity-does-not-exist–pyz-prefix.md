@@ -1,6 +1,6 @@
 ---
 title: "Entity does not exist: Pyz prefix"
-description: How to solve the issue related to an entity prefixed with pyz
+description: Learn how to resolve the Entity does not exist error by adjusting configurations, updating database schemas, and ensuring proper entity management for Spryker compatibility.
 template: concept-topic-template
 last_updated: Oct 16, 2023
 ---

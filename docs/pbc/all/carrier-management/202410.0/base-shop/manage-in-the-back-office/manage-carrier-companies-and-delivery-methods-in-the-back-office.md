@@ -1,6 +1,6 @@
 ---
 title: Manage carrier companies and delivery methods Back Office
-description: Learn how to log into the Back Office.
+description: Helpful guides to help you Learn how to manage carrier companies and delivery methods in Spryker Cloud Commerce OS Back Office
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:

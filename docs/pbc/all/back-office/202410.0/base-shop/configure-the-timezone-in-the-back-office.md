@@ -1,6 +1,6 @@
 ---
 title: Configure the timezone in the Back Office
-description: Configure the time-zone used to display date time in the Back Office UI.
+description: Learn how to configure the timezone in the Spryker Cloud Commerce OS Back Office to display the right time and date.
 template: howto-guide-template
 last_updated: Sep 13, 2023
 ---

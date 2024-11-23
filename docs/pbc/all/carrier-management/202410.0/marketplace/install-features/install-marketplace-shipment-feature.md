@@ -1,7 +1,7 @@
 ---
 title: Install the Marketplace Shipment feature
 last_updated: Jul 05, 2021
-description: This document describes the process how to integrate Marketplace Shipment feature into your project
+description: This document describes the process how to integrate Marketplace Shipment feature into your Spyrker Marketplace project
 template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202311.0/marketplace-shipment-feature-integration.html

@@ -1,6 +1,6 @@
 ---
 title: Upgrade the Chart module
-description: Use the guide to learn how to update the Chart module to a newer version.
+description: Learn how to upgrade the Chart module in Spryker Cloud Commerce OS, enhancing data visualization capabilities within your Back Office for improved analytics.
 last_updated: Sep 18, 2023
 template: module-migration-guide-template
 redirect_from:

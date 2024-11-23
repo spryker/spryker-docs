@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting deployment issues
-description: Solutions to common deployment issues
+description: Find solutions to common Spryker deployment issues, including troubleshooting Docker, Jenkins, and AWS-related deployment errors.
 template: concept-topic-template
 last_updated: Oct 17, 2023
 redirect_from:

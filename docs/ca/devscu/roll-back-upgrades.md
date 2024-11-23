@@ -1,6 +1,6 @@
 ---
 title: Roll back upgrades
-description: How to revert changes provided by Spryker Code Upgrader
+description: Learn how to roll back Spryker Code Upgrader upgrades by deploying previous versions of the application and using GitHub, GitLab, or Git strategies to revert changes.
 template: concept-topic-template
 last_updated: Oct 6, 2023
 redirect_from:

@@ -1,7 +1,7 @@
 ---
 title: "Checkout feature: module relations"
 last_updated: Aug 13, 2021
-description: Module relations of the Checkout feature
+description: Discover how the Checkout feature relates and integrates with Spryker Cloud Commerce OS modules
 template: concept-topic-template
 redirect_from:
 - /docs/pbc/all/cart-and-checkout/base-shop/domain-model-and-relationships/checkout-feature-module-relations.html

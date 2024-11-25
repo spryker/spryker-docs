@@ -1,6 +1,6 @@
 ---
 title: Implement event trigger publisher plugins
-description: Learn how to implement event trigger publisher plugins.
+description: Implement event-trigger publisher plugins in Spryker to automate data publishing. Enhance backend functionality with this comprehensive guide on event handling.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-implement-event-trigger-publisher-plugins

@@ -1,6 +1,6 @@
 ---
 title: Direct Debit payment
-description: how to implement Direct Debit payment in Spryker SCOS
+description: Discover how to implement Direct Debit payments in Spryker, offering a seamless payment method integration for your eCommerce platform.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/direct-debit-payment.html

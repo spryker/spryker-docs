@@ -102,7 +102,7 @@ To have payment methods available for the checkout,  extend `RestPaymentTransfer
 ```
 
 
-Run the following command to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate

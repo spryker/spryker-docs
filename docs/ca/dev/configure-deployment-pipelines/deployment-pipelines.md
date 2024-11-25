@@ -1,6 +1,6 @@
 ---
 title: Deployment pipelines
-description: Deployment pipelines consist of three configurable stages.
+description: Configure and manage deployment pipelines in Spryker Cloud Commerce OS, with support for different deploy types, stages, and custom configuration via AWS
 template: howto-guide-template
 last_updated: Nov 30, 2023
 originalLink: https://cloud.spryker.com/docs/deployment-pipelines

@@ -1,6 +1,6 @@
 ---
 title: Install the Spryker Core Back Office feature
-description: Learn how to integrate the Spryker Core Back Office feature into a Spryker project.
+description: A guide on how to integrate the Spryker Core Back Office feature into a Spryker project.
 last_updated: Aug 30, 2022
 template: feature-integration-guide-template
 redirect_from:

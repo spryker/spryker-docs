@@ -1,6 +1,6 @@
 ---
 title: Import Carrier Management data
-description: Details about the data importers for Carrier Management
+description: Learn about the data importers for carrier management in Spryker Cloud Commerce OS, ensuring seamless integration of shipping and carrier information
 last_updated: Jun 23, 2023
 template: concept-topic-template
 redirect_from:

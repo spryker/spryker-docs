@@ -26,7 +26,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up transfer objects
 
-1. Run the following command to generate transfer changes:
+1. Generate transfer changes:
 
 ```bash
 vendor/bin/console transfer:generate

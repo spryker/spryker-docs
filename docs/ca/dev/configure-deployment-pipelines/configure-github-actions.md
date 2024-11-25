@@ -1,7 +1,7 @@
 ---
 title: Configuring GitHub Actions
 last_updated: May 15, 2023
-description: Learn how to configure continuous integration for Spryker Cloud Commerce OS with GitHub Actions.
+description: Set up GitHub Actions for continuous integration and delivery in Spryker Cloud Commerce OS, with detailed guidance on workflow configuration, running tests, and automating deployments.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/configuring-github-actions
 originalArticleId: ad8a174f-1372-4cae-b530-fa77a9cd5479

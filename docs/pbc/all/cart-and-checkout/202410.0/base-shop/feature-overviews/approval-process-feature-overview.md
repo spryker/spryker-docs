@@ -1,6 +1,6 @@
 ---
 title: Approval Process feature overview
-description: This topic provides a detailed overview of the Approval Process feature.
+description: Learn about the Approval Process feature in Spryker Cloud Commerce OS with this detailed overview, including its concept and configuration.
 last_updated: June 26, 2023
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/approval-process-feature-overview

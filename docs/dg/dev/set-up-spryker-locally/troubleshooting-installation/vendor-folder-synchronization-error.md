@@ -25,8 +25,6 @@ related:
     link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
 ---
 
-## Description
-
 You get an error similar to `vendor/bin/console: not found`.
 
 ## Solution

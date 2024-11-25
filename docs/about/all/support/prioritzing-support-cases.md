@@ -1,5 +1,6 @@
 ---
 title: Prioritizing support cases
+description: Learn how Spryker prioritizes support cases based on business impact and urgency to ensure timely assistance and effective solutions for critical issues.
 last_updated: Sep 6, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html#how-are-bug-tickets-prioritized

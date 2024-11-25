@@ -61,7 +61,7 @@ A major upgrade may require significant code changes that may be incompatible wi
 
 ## Public API
 
-Oryx consists of a range of packages, applications, and tools. To avoid inadvertent use of private APIs and get a clear understanding of what's included or excluded from the private API, see public API](//TODO: add link).-->
+Oryx consists of a range of packages, applications, and tools. To avoid inadvertent use of private APIs and get a clear understanding of what's included or excluded from the private API, see public API](/TODO: add link).-->
 
 ## Backward compatibility
 

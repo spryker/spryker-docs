@@ -1,6 +1,6 @@
 ---
 title: "Declaration of module APIs: Public and private"
-description: This document declares what public and private APIs are
+description: Learn how to define and manage public and private APIs for Spryker modules to ensure efficient integration and security in your ecommerce platform.
 last_updated: Sep 27, 2021
 originalLink: https://documentation.spryker.com/2021080/docs/definition-api
 originalArticleId: d86471b1-719e-4ab5-b5eb-b5e915f0a837

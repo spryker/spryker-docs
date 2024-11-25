@@ -1,5 +1,6 @@
 ---
 title: Getting support
+description: This article explains how to request through Spryker support for bugs, issues with the product, security and where to post your general questions.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/getting-support

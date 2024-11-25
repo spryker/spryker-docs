@@ -1,6 +1,6 @@
 ---
 title: Shipment + Cart feature overview
-description: This feature adds delivery type to the cart Glue APIs
+description: Explore the Shipment Cart feature overview in Spryker Cloud Commerce OS to optimize shipping and cart management.
 last_updated: Nov 23, 2023
 template: concept-topic-template
 redirect_from:

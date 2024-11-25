@@ -1,6 +1,6 @@
 ---
 title: Configure Bitbucket Pipelines
-description: Learn how to configure continuous integration for Spryker Cloud Commerce OS with GitHub Actions.
+description: Set up Bitbucket Pipelines for continuous integration and delivery in Spryker Cloud Commerce OS, with steps for configuring YAML files, validation, and test grouping.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/configuring-bitbucket-pipelines

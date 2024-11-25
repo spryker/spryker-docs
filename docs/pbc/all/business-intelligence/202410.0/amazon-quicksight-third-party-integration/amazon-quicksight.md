@@ -38,6 +38,10 @@ SPICE (Super-fast, Parallel, In-memory Calculation Engine) is a robust in-memory
 * You don't need to wait for a direct query to process.
 * Data stored in SPICE can be reused multiple times without incurring additional costs. If you use a data source that charges per query, you're charged for querying the data when you first create the dataset and later when you refresh the dataset.
 
+You can check your SPICE storage capacity in the Back Office > **Analytics** > **Datasets** > **New dataset**.
+
+![sprice-storage](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/sprice-storage.png)
+
 For more details on SPICE data, see [Importing data into SPICE](https://docs.aws.amazon.com/quicksight/latest/user/spice.html).
 
 ### Refreshing data
@@ -49,7 +53,7 @@ You can refresh data manually or automatically by setting up a schedule per data
 
 ![refresh-dataset](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/refresh-dataset.png)
 
-For instructions, see [Refresh analytics datasets](/docs/pbc/all/business-intelligence/202410.0/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html).
+For instructions, see [Refresh analytics datasets](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html).
 
 
 ## Analyses and dashboards
@@ -233,33 +237,6 @@ For instructions, see the following docs:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Resetting analytics
 
 
@@ -273,3 +250,7 @@ Resetting analytics returns all default assets to the default state, erasing you
 The user initiating the reset becomes the ownes of the default assets, with all other users losing access to them. All custom assets created by other authors will remain in their ownership.
 
 {% endinfo_block %}
+
+## Next step
+
+[Best practices: working with analytics](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/best-practices-working-with-analytics.html)

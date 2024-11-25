@@ -1,5 +1,5 @@
 ---
-title: "Best practices: Analyzing shop data"
+title: "Best practices: working with analytics"
 description: Learn how to analyze and present shop data.
 last_updated: Oct 24, 2024
 template: back-office-user-guide-template

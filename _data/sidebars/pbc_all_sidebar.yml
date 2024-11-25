@@ -45,10 +45,12 @@ entries:
             nested:
               - title: Set up Amazon QuickSight
                 url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/set-up-amazon-quicksight.html
-              - title: "Best practices: Analyzing shop data"
-                url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/best-practices-analyzing-shop-data.html
+              - title: "Best practices: working with analytics"
+                url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/best-practices-working-with-analytics.html
               - title: Refresh analytics datasets
                 url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html
+              - title: Manage analytics users and roles
+                url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/manage-analytics-users-and-roles.html
 
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html

@@ -49,7 +49,7 @@ Amazon QuickSight is a business analytics tool integrated directly into the Back
 
 ### Documentation
 
-Coming soon.
+[Amazon QuickSight](/docs.spryker.com/docs/pbc/all/business-intelligence/202410.0/amazon-quicksight-third-party-integration/amazon-quicksight.html)
 
 ### Technical prerequisites
 

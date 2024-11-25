@@ -1,13 +1,18 @@
+---
+title: Install Amazon Quicksight
+description: Learn how to integrate the Amazon Quicksight module into your project
+last_updated: Nov 21, 2024
+template: feature-integration-guide-template
+---
 
+This document describes how to install Amazon Quicksight.
 
+## Install feature core
 
-This document describes how to install the Amazon Quicksight module.
-
-## Install feature core 
-
-Follow the steps below to install the Amazon Quicksight module core.
+Follow the steps below to install the Amazon Quicksight core.
 
 ### Prerequisites
+
 Install the required features:
 
 | NAME                     | VERSION          | INSTALLATION GUIDE                                                                                                                                                              |
@@ -17,7 +22,7 @@ Install the required features:
 
 ### 1) Install the required modules
 
-Run the following command to install the required module:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-eco/amazon-quicksight:"^2.0.0" --update-with-dependencies
@@ -35,22 +40,17 @@ Make sure the following modules have been installed:
 
 ### 2) Set up the configuration
 
-Add your Quicksight asset bundle to to one of the directories, for example `src/Pyz/Zed/AmazonQuicksight/data/asset-bundle.zip`.
+1. Add one of the following Quicksight asset bundles to one of the directories, for example–`src/Pyz/Zed/AmazonQuicksight/data/asset-bundle.zip`.
 
-You can find the preconfigured asset bundles based on the corresponding demoshops by the following links:
+Preconfigured asset bundles per demo shop:
 
-- B2B Marketplace
-- B2B
-- B2C Marketplace
-- B2C
+- [B2B Marketplace](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2b-mp-asset-bundle.zip)
+- [B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2b-asset-bundle.zip)
+- [B2C Marketplace](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-mp-asset-bundle.zip)
+- [B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-asset-bundle.zip)
 
-{% info_block warningBox "Asset bundles" %}
 
-It is supposed that the basic features are in place for the corresponding demoshops, otherwise some of the visuals may not be displayed correctly.
-
-{% endinfo_block %}
-
-Configure the path to the asset bundle:
+2. Configure the path to the asset bundle:
 
 **src/Pyz/Zed/AmazonQuicksight/AmazonQuicksightConfig.php**
 
@@ -78,7 +78,7 @@ class AmazonQuicksightConfig extends SprykerEcoAmazonQuicksightConfig
 }
 ```
 
-In order the asset bundle import is executed properly it is required to configure the data sets and data source IDs from the asset bundle files. Add the following configuration:
+3. To enable asset bundle import, configure the data sets and data source IDs from the asset bundle files:
 
 **src/Pyz/Zed/AmazonQuicksight/AmazonQuicksightConfig.php**
 
@@ -289,14 +289,14 @@ After finishing the whole integration try to enable the Analytics from Backoffic
 
 {% endinfo_block %}
 
-Add environment configuration:
+4. Add the following environment configuration:
 
 | CONFIGURATION                                                     | SPECIFICATION                                                                                   | NAMESPACE                          |
 |-------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|------------------------------------|
-| AmazonQuicksightConstants::AWS_ACCOUNT_ID                         | The ID for the AWS account that contains your Amazon QuickSight account.                        | SprykerEco\Shared\AmazonQuicksight |
-| AmazonQuicksightConstants::AWS_REGION                             | The AWS region that you use for the Amazon QuickSight account.                                  | SprykerEco\Shared\AmazonQuicksight |
-| AmazonQuicksightConstants::AWS_QUICKSIGHT_NAMESPACE               | The name of the Quicksight namespace.                                                           | SprykerEco\Shared\AmazonQuicksight |
-| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_USERNAME           | The default data source username.                                                               | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::AWS_ACCOUNT_ID                         | ID of the AWS account holding your Amazon QuickSight account.                        | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::AWS_REGION                             | AWS region of your Amazon QuickSight account.                                  | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::AWS_QUICKSIGHT_NAMESPACE               | Name of the Quicksight namespace.                                                           | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_USERNAME           | Username of the default data source.                                                               | SprykerEco\Shared\AmazonQuicksight |
 | AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_PASSWORD           | The default data source password.                                                               | SprykerEco\Shared\AmazonQuicksight |
 | AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_DATABASE_NAME      | The default data source database name.                                                          | SprykerEco\Shared\AmazonQuicksight |
 | AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_DATABASE_HOST      | The default data source database host.                                                          | SprykerEco\Shared\AmazonQuicksight |
@@ -601,7 +601,7 @@ Install the required features:
 }
 ```
 
-2. Run the following command to enable Javascript and CSS changes: 
+2. Run the following command to enable Javascript and CSS changes:
 
 ```bash
 npm install

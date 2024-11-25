@@ -1,6 +1,6 @@
 ---
 title: Architecture
-description: Spryker architecture is based on strict modularity and separation.
+description: Explore Spryker’s architectural principles, detailing the technical foundation for a scalable, modular ecommerce platform tailored to complex digital ecosystems.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-the-architecture-guide

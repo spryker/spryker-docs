@@ -1,5 +1,6 @@
 ---
 title: Event
+description: Learn how to implement event-driven architecture in Spryker's backend, enabling efficient data manipulation and event handling for your ecommerce platform.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/event

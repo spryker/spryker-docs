@@ -23,13 +23,13 @@ Install the required features:
 
 | NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                   |
 |---------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| OpenAi              | {{page.version}} | [Install the OpenAi feature](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/open-ai/integrate-openai.html)                                      |
+| OpenAI              | {{page.version}} | [Integrate OpenAI](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/open-ai/integrate-openai.html)                                      |
 | Product             | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                         |
 | Category Management | {{page.version}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
 
 ### 1) Install the required modules
 
-Run the following command to install the required module:
+Install the required module:
 
 ```bash
 composer require spryker-eco/product-management-ai:"^0.1.1" --update-with-dependencies
@@ -80,15 +80,16 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                            | SPECIFICATION                                                                     | PREREQUISITES | NAMESPACE                                                                 |
 |---------------------------------------------------|-----------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------------|
-| ProductCategoryProductAbstractPostCreatePlugin    | Assigns categories to the product abstract after the product abstract is created. |               | SprykerEco\Zed\ProductManagementAi\Communication\Plugin\Product           |
-| ProductCategoryProductAbstractAfterUpdatePlugin   | Assigns categories to the product abstract after the product abstract is updated. |               | SprykerEco\Zed\ProductManagementAi\Communication\Plugin\Product           |
-| ProductCategoryAbstractFormExpanderPlugin         | Expands ProductAbstract form with `categoryIds` field.                            |               | SprykerEco\Zed\ProductManagementAi\Communication\Plugin\ProductManagement |
-| ImageAltTextProductConcreteEditFormExpanderPlugin | Expands ProductConcrete edit form with `alt_text` field.                          |               | SprykerEco\Zed\ProductManagementAi\Communication\Plugin\ProductManagement |
-| ImageAltTextProductConcreteFormExpanderPlugin     | Expands ProductConcrete form with `alt_text` field.                               |               | SprykerEco\Zed\ProductManagementAi\Communication\Plugin\ProductManagement |
-| ImageAltTextProductAbstractFormExpanderPlugin     | Expands ProductAbstract form with `alt_text` field.                               |               | SprykerEco\Zed\ProductManagementAi\Communication\Plugin\ProductManagement |
+| ProductCategoryProductAbstractPostCreatePlugin    | Assigns categories to a product abstract after the product abstract is created. |               | SprykerEco\Zed\ProductManagementAi\Communication\Plugin\Product           |
+| ProductCategoryProductAbstractAfterUpdatePlugin   | Assigns categories to a product abstract after the product abstract is updated. |               | SprykerEco\Zed\ProductManagementAi\Communication\Plugin\Product           |
+| ProductCategoryAbstractFormExpanderPlugin         | Expands the `ProductAbstract` form with `categoryIds` field.                            |               | SprykerEco\Zed\ProductManagementAi\Communication\Plugin\ProductManagement |
+| ImageAltTextProductConcreteEditFormExpanderPlugin | Expands the `ProductConcrete` edit form with the `alt_text` field.                          |               | SprykerEco\Zed\ProductManagementAi\Communication\Plugin\ProductManagement |
+| ImageAltTextProductConcreteFormExpanderPlugin     | Expands the `ProductConcrete` form with the `alt_text` field.                               |               | SprykerEco\Zed\ProductManagementAi\Communication\Plugin\ProductManagement |
+| ImageAltTextProductAbstractFormExpanderPlugin     | Expands the `ProductAbstract` form with the `alt_text` field.                               |               | SprykerEco\Zed\ProductManagementAi\Communication\Plugin\ProductManagement |
 
 
-**src/Pyz/Zed/Product/ProductDependencyProvider.php**
+<details>
+  <summary>src/Pyz/Zed/Product/ProductDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -126,7 +127,12 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 
 ```
 
-**src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
+</details>
+
+
+<details>
+  <summary>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
+
 
 ```php
 <?php
@@ -175,25 +181,29 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 ```
 
+</details>
+
 {% info_block warningBox "Verification" %}
 
-- Verify `ProductCategoryAbstractFormExpanderPlugin` by checking that edit and create abstract product forms contain `categoryIds` fields.
-- Verify `ProductCategoryProductAbstractAfterUpdatePlugin` by checking that after updating an abstract product, the categories from `categoryIds` field are assigned to the corresponding abstract product.
-- Verify `ProductCategoryProductAbstractPostCreatePlugin` by checking that after creating an abstract product, the categories from `categoryIds` field are assigned to the corresponding abstract product.
-- Verify `ImageAltTextProductAbstractFormExpanderPlugin` by checking that edit abstract product form contains `alt_text` field  for each image and after saving the form the value is saved to `spy_product_image.alt_text` DB column.
-- Verify `ImageAltTextProductConcreteEditFormExpanderPlugin` and `ImageAltTextProductConcreteEditFormExpanderPlugin` by checking that edit concrete product form contains `alt_text` field  for each image and after saving the form the value is saved to `spy_product_image.alt_text` DB column.
+| PLUGIN | VERIFICATION |
+| - | - |
+| `ProductCategoryAbstractFormExpanderPlugin` |  Edit and create abstract product forms contain `categoryIds` field.
+| `ProductCategoryProductAbstractAfterUpdatePlugin` |  After updating an abstract product, the categories from `categoryIds` field are assigned to the corresponding abstract product. |
+| `ProductCategoryProductAbstractPostCreatePlugin` |  After creating an abstract product, the categories from `categoryIds` field are assigned to the corresponding abstract product. |
+| `ImageAltTextProductAbstractFormExpanderPlugin` | The edit abstract product form contains the `alt_text` field for each image. After saving the form, the value is saved to the `spy_product_image.alt_text` database column. |
+| `ImageAltTextProductConcreteEditFormExpanderPlugin` and `ImageAltTextProductConcreteEditFormExpanderPlugin` | The edit concrete product form contains the `alt_text` field for each image. After saving the form, the value is saved to the `spy_product_image.alt_text` database column. |
 
 {% endinfo_block %}
 
 ## Install feature frontend
 
-See backoffice related code in the demoshops PRs as an example of how to integrate the ProductManagementAi module frontend into your project:
+1. Integrate the frontend part using the example integration in Demo Shops:
 - B2B: https://github.com/spryker-shop/b2b-demo-shop/pull/491/files
 - B2C: https://github.com/spryker-shop/b2c-demo-shop/pull/544/files
 - B2B-MP: https://github.com/spryker-shop/b2b-demo-marketplace/pull/438/files
 - B2C-MP: https://github.com/spryker-shop/b2c-demo-marketplace/pull/422/files
 
-Run the following commands to apply the frontend changes:
+2. Apply the frontend changes:
 
 ```bash
 npm install
@@ -203,6 +213,6 @@ console frontend:zed:build
 
 {% info_block warningBox "Verification" %}
 
-Login to backoffice, go to product abstract create/update page and make sure that `name`, `description`, `categories`, `alt text` fields have new icon to open an AI Assistant popup.
+In the Back Office, make sure that, on the product abstract create and update pages, and AI assistant icon is displayed next to `name`, `description`, `categories`, and `alt text` fields.
 
 {% endinfo_block %}

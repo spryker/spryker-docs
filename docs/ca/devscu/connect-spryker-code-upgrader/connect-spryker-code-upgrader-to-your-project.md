@@ -1,7 +1,7 @@
 ---
 title: Connect Spryker Code Upgrader to your project
 last_updated: Jan 24, 2024
-description: Supported version control systems
+description: A list of supported Spryker Code Upgrader connections to GitHub, GitLab, and Azure Managed Projects, with integration steps for seamless upgrade automation.
 template: concept-topic-template
 redirect_from:
   - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html

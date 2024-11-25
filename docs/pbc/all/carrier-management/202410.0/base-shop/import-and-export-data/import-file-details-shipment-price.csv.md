@@ -1,5 +1,6 @@
 ---
 title: "Import file details: shipment_price.csv"
+description: Learn how to import shipment price data using the shipment-price.csv file in Spryker, optimizing carrier management and ensuring accurate shipping cost integration.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-shipment-pricecsv

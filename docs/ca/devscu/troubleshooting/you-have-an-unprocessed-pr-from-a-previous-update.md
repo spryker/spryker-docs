@@ -1,6 +1,6 @@
 ---
 title: You have an unprocessed PR from a previous update
-description: How to decline the changes done by Spryker Code Upgrader
+description: Learn about the Unprocessed PR from a previous update issue in Spryker Code Upgrader and how it can impact the upgrade process.
 template: concept-topic-template
 last_updated: Mar 2, 2023
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: Shipment + Service Points feature overview
-description: This feature assigns service types to delivery types
+description: Discover the Shipment Service Points feature in Spryker Cloud Commerce OS, this feature assigns service types to delivery types
 last_updated: Nov 23, 2023
 template: concept-topic-template
 ---

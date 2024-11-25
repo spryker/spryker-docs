@@ -1,6 +1,6 @@
 ---
 title: Edit delivery methods
-description: Learn how to edit delivery methods in the Back Office.
+description: Learn how to edit the delivery methods that have been configured in Spryker Cloud Commerce OS Back Office
 last_updated: May 31, 2022
 template: back-office-user-guide-template
 redirect_from:

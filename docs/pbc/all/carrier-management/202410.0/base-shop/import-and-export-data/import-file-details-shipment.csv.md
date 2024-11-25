@@ -1,5 +1,6 @@
 ---
 title: "Import file details: shipment.csv"
+description: Learn how to import shipment data using the shipment.csv file in Spryker, facilitating smooth integration of shipping information for efficient carrier management.
 last_updated: Jun 23, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-shipmentcsv

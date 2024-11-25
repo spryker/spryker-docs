@@ -1,5 +1,6 @@
 ---
 title: "Shipment method entities in the database: reference information"
+description: Learn about the shipment method entities in Spryker Cloud Commerce OS, and explore how they are stored and related in the database for efficient carrier management.
 last_updated: Jun 16, 2021
 template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/docs/reference-information-shipment-method-entities-in-the-database

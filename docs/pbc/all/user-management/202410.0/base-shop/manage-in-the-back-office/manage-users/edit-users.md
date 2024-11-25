@@ -41,9 +41,7 @@ Review the [reference information](#reference-information-editing-users) before 
 9. Click **Update**.
     This opens the **Users** page with the success message displayed.
 
-## Reference information: Editing users
-
-The following table describes the attributes you enter and select when editing users:
+## Reference information: Edit users
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |

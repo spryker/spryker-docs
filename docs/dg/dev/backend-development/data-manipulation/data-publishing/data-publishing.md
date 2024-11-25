@@ -1,6 +1,6 @@
 ---
 title: Data publishing
-description: This page lists documents inside the Data publishing section
+description: Discover how to manage and publish data efficiently in Spryker. Explore best practices for seamless data publishing in backend development.
 last_updated: Apr 25, 2023
 template: howto-guide-template
 redirect_from:

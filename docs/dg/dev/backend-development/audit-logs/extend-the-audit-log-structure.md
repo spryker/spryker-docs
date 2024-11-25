@@ -1,6 +1,6 @@
 ---
 title: Extend the audit log structure
-description: Learn how to enhance your audit log structure
+description: Extend the structure of your Spryker audit logs to include additional data fields, providing more detailed tracking of backend activities and enhancing system monitoring capabilities.
 template: howto-guide-template
 last_updated: Jun 16, 2024
 related:

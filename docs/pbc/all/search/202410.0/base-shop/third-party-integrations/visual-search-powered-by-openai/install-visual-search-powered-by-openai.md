@@ -7,9 +7,10 @@ template: feature-integration-guide-template
 
 Visual Search enables users to search across the product catalog by uploading an image. This document describes how to install Visual Search.
 
-## Install feature frontend
 
-Follow the steps below to install the ImageSearchAi module frontend.
+## Install the feature core
+
+Follow the steps in the following sections to install the Visual Search feature core.
 
 ### Prerequisites
 
@@ -17,12 +18,12 @@ Install the required features:
 
 | NAME    | VERSION          | INSTALLATION GUIDE                                                                                                                                              |
 |---------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| OpenAi  | {{page.version}} | [Install the OpenAi feature](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/open-ai/integrate-openai.html) |
+| OpenAi  | {{page.version}} | [Integrate OpenAi](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/open-ai/integrate-openai.html) |
 | Catalog | {{page.version}} |                                                                                                                                                                 |
 
 ### 1) Install the required modules
 
-Run the following command to install the required module:
+Install the required module:
 
 ```bash
 composer require spryker-eco/image-search-ai:"^0.1.1" --update-with-dependencies
@@ -38,7 +39,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-## 2) Add translations
+### 2) Add translations
 
 1. Append the glossary according to your configuration:
 
@@ -92,7 +93,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To validate the route provider send an empty POST request to https://mysprykershop.com/search-ai/image, you should obtain the `{"success": false}` JSON response with 400 code.
+To validate the route provider, send an empty POST request to `https://mysprykershop.com/search-ai/image` and make sure the `{"success": false}` JSON response with 400 code is returned.
 
 {% endinfo_block %}
 
@@ -128,13 +129,15 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-See storefront related code in the demoshops PRs as an example of how to integrate the ImageSearchAi module frontend into your project:
-- B2B: https://github.com/spryker-shop/b2b-demo-shop/pull/491/files
-- B2C: https://github.com/spryker-shop/b2c-demo-shop/pull/544/files
-- B2B-MP: https://github.com/spryker-shop/b2b-demo-marketplace/pull/438/files
-- B2C-MP: https://github.com/spryker-shop/b2c-demo-marketplace/pull/422/files
+## Integrate the feature frontend
 
-Run the following commands to apply the frontend changes:
+1. Integrate the frontend part using the example integration in Demo Shops:
+- [B2B](https://github.com/spryker-shop/b2b-demo-shop/pull/491/files)
+- [B2C](https://github.com/spryker-shop/b2c-demo-shop/pull/544/files)
+- [B2B Marketplace](https://github.com/spryker-shop/b2b-demo-marketplace/pull/438/files)
+- [B2C Marketplace](https://github.com/spryker-shop/b2c-demo-marketplace/pull/422/files)
+
+2. Apply the frontend changes:
 
 ```bash
 npm install
@@ -144,6 +147,6 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Go to storefront and make sure the image uploader button is displayed, after clicking on it you should be able to upload an image with a product and obtain a product URL if the corresponding product is found.
+On Storefront, make sure that you can upload a product image and obtain a product URL if the corresponding product is found.
 
 {% endinfo_block %}

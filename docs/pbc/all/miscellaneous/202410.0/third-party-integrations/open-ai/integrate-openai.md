@@ -37,7 +37,9 @@ Make sure the following modules have been installed:
 
 ## 2) Set up the configuration
 
-Using the data from your OpenAI account, make sure the `OPEN_AI_API_TOKEN` env variable contains the OpenAI secret key and add the following configuration:
+1. Using the data from your OpenAI account, add the OpenAI secret key as a `OPEN_AI_API_TOKEN` env variable to the needed configuration file. For an example, see [Migrate to cloud: Define environment variables](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-define-environment-variables.html)
+
+2. Add the following configuration:
 
 | CONFIGURATION               | SPECIFICATION                   | NAMESPACE                |
 |-----------------------------|---------------------------------|--------------------------|

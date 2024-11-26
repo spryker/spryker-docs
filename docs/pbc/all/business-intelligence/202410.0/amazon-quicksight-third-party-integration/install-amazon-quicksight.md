@@ -297,12 +297,12 @@ After finishing the whole integration try to enable the Analytics from Backoffic
 | AmazonQuicksightConstants::AWS_REGION                             | AWS region of your Amazon QuickSight account.                                  | SprykerEco\Shared\AmazonQuicksight |
 | AmazonQuicksightConstants::AWS_QUICKSIGHT_NAMESPACE               | Name of the Quicksight namespace.                                                           | SprykerEco\Shared\AmazonQuicksight |
 | AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_USERNAME           | Username of the default data source.                                                               | SprykerEco\Shared\AmazonQuicksight |
-| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_PASSWORD           | The default data source password.                                                               | SprykerEco\Shared\AmazonQuicksight |
-| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_DATABASE_NAME      | The default data source database name.                                                          | SprykerEco\Shared\AmazonQuicksight |
-| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_DATABASE_HOST      | The default data source database host.                                                          | SprykerEco\Shared\AmazonQuicksight |
-| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_DATABASE_PORT      | The default data source database port.                                                          | SprykerEco\Shared\AmazonQuicksight |
-| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_VPC_CONNECTION_ARN | The default data source VPC connection ARN.                                                     | SprykerEco\Shared\AmazonQuicksight |
-| AmazonQuicksightConstants::GENERATE_EMBED_URL_ALLOWED_DOMAINS     | The list of domains allowed for generating embed URLs.                                          | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_PASSWORD           | Default data source password.                                                               | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_DATABASE_NAME      | Default data source database name.                                                          | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_DATABASE_HOST      | Default data source database host.                                                          | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_DATABASE_PORT      | Default data source database port.                                                          | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_VPC_CONNECTION_ARN | Default data source VPC connection ARN.                                                     | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::GENERATE_EMBED_URL_ALLOWED_DOMAINS     | List of domains allowed for generating embed URLs.                                          | SprykerEco\Shared\AmazonQuicksight |
 | AmazonQuicksightConstants::QUICKSIGHT_ASSUMED_ROLE_ARN            | The role ARN used by `Aws\Sts\StsClient` to assume a role used for all API calls to Quicksight. | SprykerEco\Shared\AmazonQuicksight |
 
 **config/Shared/config_default.php**

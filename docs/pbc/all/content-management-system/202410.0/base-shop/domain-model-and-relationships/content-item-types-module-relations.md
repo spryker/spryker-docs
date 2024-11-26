@@ -1,6 +1,6 @@
 ---
 title: "Content item types: module relations"
-description: Learn about all the content item types and module relations used for them.
+description: Learn about all the content item types and module relations used for them within the Spryker Cloud Commerce OS CMS Module.
 last_updated: Jun 16, 2021
 template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/2021080/docs/content-item-types-module-relations

@@ -71,7 +71,7 @@ steps:
 ## Connecting Azure Pipelines to your project
 
 To connect Azure Pipelines with your AWS repository:
-1. Request your AWS repository URL and credentials from our [Support Team](https://support.spryker.com). Please navigate to **Infrastructure Change Request/Access Management>Change** to existing Parameter Store Variable for the request and mention that you would like to receive the AWS repository URL and credentials. Please link this documentation page with your request.
+1. On the [Support Portal](https://support.spryker.com), create a **Infrastructure Change Request/Access Management>Change** request. Request your AWS repository URL and credentials. to existing Parameter Store Variable for the request and mention that you would like to receive the AWS repository URL and credentials. Please link this documentation page with your request.
 
 2. Add the following to the end of `azure-pipelines.yml`:
 ```yaml

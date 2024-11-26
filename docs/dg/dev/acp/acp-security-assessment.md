@@ -1,6 +1,6 @@
 ---
 title: ACP security assessment
-Descriptions: Ensure your Spryker ACP setup meets security standards with our comprehensive security assessment guide for robust protection.
+Description: Ensure robust security for your Spryker ACP environment with our comprehensive guide on assessments, compliance, and protection best practices.
 template: howto-guide-template
 last_updated: Aug 30, 2023
 redirect_from:

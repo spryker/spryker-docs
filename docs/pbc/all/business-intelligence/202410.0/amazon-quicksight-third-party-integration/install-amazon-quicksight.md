@@ -282,10 +282,7 @@ class AmazonQuicksightConfig extends SprykerEcoAmazonQuicksightConfig
 
 {% info_block warningBox "Verification" %}
 
-After finishing the whole integration try to enable the Analytics from Backoffice UI. If the integration is successful:
-- the asset bundle import will be started;
-- after the import is completed the data sets and data sources with the corresponding IDs will be created;
-- after the analytics reset the specified datasets will be deleted and then reimported.
+These changes are verified in a later step.
 
 {% endinfo_block %}
 
@@ -610,8 +607,11 @@ console frontend:zed:build
 
 {% info_block warningBox "Verification" %}
 
-After finishing the installation and enabling the analytics:
-- log in to Back Office and go to `https://backoffice.mysprykershop.com/analytics-gui/analytics`, the iframe with the Quicksight embed URL should be displayed.
-- there should not be any errors in the browser developer console.
+- log in to Back Office and go to `https://backoffice.mysprykershop.com/analytics-gui/analytics`;
+- try to enable the Analytics, the asset bundle import should be started;
+- after the import is completed the iframe with the Quicksight embed URL should be displayed;
+- there should not be any errors in the browser developer console;
+- the data sets and data sources with the corresponding IDs should be created;
+- after the analytics reset the specified datasets should be deleted and then reimported.
 
 {% endinfo_block %}

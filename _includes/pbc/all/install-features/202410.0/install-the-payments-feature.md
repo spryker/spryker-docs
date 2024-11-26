@@ -542,9 +542,9 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 Enable the default shipment method for the payment app express checkout flow.
 
-| PLUGIN                                               | SPECIFICATION                                                         | PREREQUISITES | NAMESPACE                                           |
-|------------------------------------------------------|-----------------------------------------------------------------------|---------------|-----------------------------------------------------|
-| ShipmentExpressCheckoutPaymentRequestProcessorPlugin | Provides the shipment method for the express checkout payment request.| None          | Spryker\Zed\PaymentAppShipment\Communication\Plugin |
+| PLUGIN                                               | SPECIFICATION                                                         | PREREQUISITES | NAMESPACE                                                      |
+|------------------------------------------------------|-----------------------------------------------------------------------|---------------|----------------------------------------------------------------|
+| ShipmentExpressCheckoutPaymentRequestProcessorPlugin | Provides the shipment method for the express checkout payment request.| None          | Spryker\Zed\PaymentAppShipment\Communication\Plugin\PaymentApp |
 
 **src/Pyz/Zed/PaymentApp/PaymentAppDependencyProvider.php**
 
@@ -554,7 +554,7 @@ Enable the default shipment method for the payment app express checkout flow.
 namespace Pyz\Zed\PaymentApp;
 
 use Spryker\Zed\PaymentApp\PaymentAppDependencyProvider as SprykerPaymentAppDependencyProvider;
-use Spryker\Zed\PaymentAppShipment\Communication\Plugin\ShipmentExpressCheckoutPaymentRequestProcessorPlugin;
+use Spryker\Zed\PaymentAppShipment\Communication\Plugin\PaymentApp\ShipmentExpressCheckoutPaymentRequestProcessorPlugin;
 
 class PaymentAppDependencyProvider extends SprykerPaymentAppDependencyProvider
 {

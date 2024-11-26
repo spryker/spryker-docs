@@ -74,7 +74,7 @@ In this example, you're going to create a product availability visual:
 
 ### Add one more visual
 
-1. Go to **Data** > **Add Dataset**.
+1. Click **Data** > **Add Dataset**.
 2. In the **Choose dataset to add** window, click on **Category + Localized Product Abstract**.
 3. Click **Select**
   This shows a success message and the **Datasets in this analysis** window. Click **Close** to close the window.
@@ -116,7 +116,7 @@ If you want another author to collaborate with you on the analysis, you can shar
 
 To share an analysis, follow the steps:
 
-1. On the page of the analysis, go to **File** > **Share**.
+1. On the page of the analysis, click **File** > **Share**.
 2. In the **Share analysis**, enter and select the email address of the author to share the analysis with.
   This displays the user in the table.
 3. Repeat the previous step until you've added all the authors you want to share the analysis with.

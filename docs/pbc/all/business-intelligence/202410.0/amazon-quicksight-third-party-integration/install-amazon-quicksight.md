@@ -1,15 +1,15 @@
 ---
-title: Install Amazon Quicksight
-description: Learn how to integrate the Amazon Quicksight module into your project
+title: Install Amazon QuickSight
+description: Learn how to integrate the Amazon QuickSight into your project
 last_updated: Nov 21, 2024
 template: feature-integration-guide-template
 ---
 
-This document describes how to install Amazon Quicksight.
+This document describes how to install Amazon QuickSight.
 
 ## Install feature core
 
-Follow the steps below to install the Amazon Quicksight core.
+Follow the steps below to install the Amazon QuickSight core.
 
 ### Prerequisites
 
@@ -40,17 +40,15 @@ Make sure the following modules have been installed:
 
 ### 2) Set up the configuration
 
-1. Add one of the following Quicksight asset bundles to one of the directories, for example–`src/Pyz/Zed/AmazonQuicksight/data/asset-bundle.zip`.
-
+1. Add one of the following QuickSight asset bundles to the project level, for example–to `src/Pyz/Zed/AmazonQuicksight/data/asset-bundle.zip`.
 Preconfigured asset bundles per demo shop:
+  - [B2B Marketplace](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2b-mp-asset-bundle.zip)
+  - [B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2b-asset-bundle.zip)
+  - [B2C Marketplace](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-mp-asset-bundle.zip)
+  - [B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-asset-bundle.zip)
 
-- [B2B Marketplace](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2b-mp-asset-bundle.zip)
-- [B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2b-asset-bundle.zip)
-- [B2C Marketplace](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-mp-asset-bundle.zip)
-- [B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-asset-bundle.zip)
 
-
-2. Configure the path to the asset bundle:
+2. Define the path to the asset bundle:
 
 **src/Pyz/Zed/AmazonQuicksight/AmazonQuicksightConfig.php**
 
@@ -78,7 +76,7 @@ class AmazonQuicksightConfig extends SprykerEcoAmazonQuicksightConfig
 }
 ```
 
-3. To enable asset bundle import, configure the data sets and data source IDs from the asset bundle files:
+3. To enable the asset bundle import, configure the data sets and data source IDs from one of the asset bundles:
 
 **src/Pyz/Zed/AmazonQuicksight/AmazonQuicksightConfig.php**
 
@@ -292,7 +290,7 @@ These changes are verified in a later step.
 |-------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|------------------------------------|
 | AmazonQuicksightConstants::AWS_ACCOUNT_ID                         | ID of the AWS account holding your Amazon QuickSight account.                        | SprykerEco\Shared\AmazonQuicksight |
 | AmazonQuicksightConstants::AWS_REGION                             | AWS region of your Amazon QuickSight account.                                  | SprykerEco\Shared\AmazonQuicksight |
-| AmazonQuicksightConstants::AWS_QUICKSIGHT_NAMESPACE               | Name of the Quicksight namespace.                                                           | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::AWS_QUICKSIGHT_NAMESPACE               | Name of the QuickSight namespace.                                                           | SprykerEco\Shared\AmazonQuicksight |
 | AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_USERNAME           | Username of the default data source.                                                               | SprykerEco\Shared\AmazonQuicksight |
 | AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_PASSWORD           | Default data source password.                                                               | SprykerEco\Shared\AmazonQuicksight |
 | AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_DATABASE_NAME      | Default data source database name.                                                          | SprykerEco\Shared\AmazonQuicksight |
@@ -327,7 +325,7 @@ $config[AmazonQuicksightConstants::QUICKSIGHT_ASSUMED_ROLE_ARN] = getenv('QUICKS
 
 {% info_block infoBox "Credentials" %}
 
-The recommended way is not to specify the AWS credentials so SDK will attempt to load them from the environment. If you need to specify the credentials, for example for local development, you can do it in the following way:
+We recommended not defining the AWS credentials and let the SDK attempt to load them from the environment. If you need to specify the credentials,for example–for local development, you can do it as follows:
 
 | CONFIGURATION                                     | SPECIFICATION          | NAMESPACE                          |
 |---------------------------------------------------|------------------------|------------------------------------|
@@ -359,7 +357,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following changes have been applied by checking your database:
+Make sure the following changes have been applied in the database:
 
 | DATABASE ENTITY                        | TYPE  | EVENT   |
 |----------------------------------------|-------|---------|
@@ -427,9 +425,9 @@ console translator:generate-cache
 
 | PLUGIN                                      | SPECIFICATION                                                                                                        | PREREQUISITES | NAMESPACE                                                         |
 |---------------------------------------------|----------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------|
-| QuicksightAnalyticsCollectionExpanderPlugin | Expands the provided `AnalyticsCollectionTransfer` with the Quicksight analytics.                                    |               | SprykerEco\Zed\AmazonQuicksight\Communication\Plugin\AnalyticsGui |
-| QuicksightUserExpanderPlugin                | Populates `UserTransfer.quicksightUser` in collection with existing Quicksight users.                                |               | SprykerEco\Zed\AmazonQuicksight\Communication\Plugin\User         |
-| DeleteQuicksightUserPostUpdatePlugin        | Deletes Quicksight User when quicksight role is deselected for User on user updating or user is deactivated/deleted. |               | SprykerEco\Zed\AmazonQuicksight\Communication\Plugin\User         |
+| QuicksightAnalyticsCollectionExpanderPlugin | Expands the provided `AnalyticsCollectionTransfer` with QuickSight analytics.                                    |               | SprykerEco\Zed\AmazonQuicksight\Communication\Plugin\AnalyticsGui |
+| QuicksightUserExpanderPlugin                | Populates `UserTransfer.quicksightUser` in the collection with existing QuickSight users.                                |               | SprykerEco\Zed\AmazonQuicksight\Communication\Plugin\User         |
+| DeleteQuicksightUserPostUpdatePlugin        | Deletes a QuickSight user when the QuickSight role is deselected for the user or when the user is deactivated or deleted. |               | SprykerEco\Zed\AmazonQuicksight\Communication\Plugin\User         |
 
 **src/Pyz/Zed/AnalyticsGui/AnalyticsGuiDependencyProvider.php**
 
@@ -492,9 +490,11 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-- Verify `QuicksightAnalyticsCollectionExpanderPlugin`: go to `https://mysprykershop.com/analytics-gui/analytics` and make sure the page is expanded by Quicksight analytics, by default you should see the `No Analytics permission has been granted to the current user` message.
-- Verify `QuicksightUserExpanderPlugin`: create a new Quicksight user in the `spy_quicksight_user` DB table, call `UserFacade::getUserCollection()` for a user used for newly created Quicksight user and make sure the `UserCollection.user.quicksightUser` is expanded.
-- Verify `DeleteQuicksightUserPostUpdatePlugin`: log in to Back Office, go to the **Users** -> **Users** section, deactivate a user used for newly created Quicksight user and make sure the corresponding row is deleted in the `spy_quicksight_user` DB table.
+| PLUGIN | VERIFICATION |
+| - | - |
+| Verify `QuicksightAnalyticsCollectionExpanderPlugin`|  Go to `https://mysprykershop.com/analytics-gui/analytics` and make sure QuickSight analytics is displayed. By default, you should see the `No Analytics permission has been granted to the current user` message. |
+| Verify `QuicksightUserExpanderPlugin`|  Create a new QuickSight user in the `spy_quicksight_user` DB table and call `UserFacade::getUserCollection()` for a user used for the newly created QuickSight user. Make sure the `UserCollection.user.quicksightUser` is expanded. |
+| Verify `DeleteQuicksightUserPostUpdatePlugin`|  In the Back Office, go to **Users**>**Users**. For a newly created QuickSight user,  deactivate deactive the respective Back Office user. Make sure the corresponding row is deleted in the `spy_quicksight_user` DB table. |
 
 {% endinfo_block %}
 
@@ -502,7 +502,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 | PLUGIN                          | SPECIFICATION                                                                                            | PREREQUISITES | NAMESPACE                                             |
 |---------------------------------|----------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------|
-| QuicksightUserSyncCreateConsole | Persists in `spy_quicksight_user` DB table users registered in quicksight by persisted user emails.      |               | SprykerEco\Zed\AmazonQuicksight\Communication\Console |
+| QuicksightUserSyncCreateConsole | In the `spy_quicksight_user` DB table, persists the users registered in QuickSight by persisted user emails.      |               | SprykerEco\Zed\AmazonQuicksight\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -533,20 +533,16 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To check the `quicksight-user:sync:create` console command:
-
-1. Create new Quicksight user in Quicksight.
-2. Run the following command:
+1. Create a QuickSight user in QuickSight.
+2. Sync QuickSight to Back Office users:
 ```bash
 console quicksight-user:sync:create
 ```
-3. In the `spy_quicksight_user` table check that the corresponding Quicksight user has been added.
+In the `spy_quicksight_user` table, make sure that the corresponding QuickSight user has been added.
 
 {% endinfo_block %}
 
-{% info_block infoBox "Deployment" %}
-
-In order users to be synchronized automatically during deployment, you can configure the installation stage of the pipeline, for example the `destructive` pipeline. Add the following command to the end of the `demodata` section:
+3. Optional: To sync users automatically during deployment, configure the installation stage of a pipeline, for example–destructive pipeline. Add the following command to the end of the `demodata` section:
 
 **config/install/destructive.yml**
 ```yaml
@@ -557,11 +553,8 @@ sections:
             command: 'vendor/bin/console quicksight-user:sync:create'
 ```
 
-{% endinfo_block %}
 
 4. Clear router cache:
-
-Execute the following command to clear the router cache:
 
 ```bash
 console router:cache:warm-up:backoffice
@@ -569,13 +562,13 @@ console router:cache:warm-up:backoffice
 
 {% info_block warningBox "Verification" %}
 
-Log in to Back Office and make sure you can open the `https://backoffice.mysprykershop.com/amazon-quicksight/analytics/enable` page.
+In the Back Office, make sure you can access the Analytics page: `https://backoffice.mysprykershop.com/amazon-quicksight/analytics/enable`.
 
 {% endinfo_block %}
 
 ## Install feature frontend
 
-Follow the steps below to install the Amazon Quicksight module frontend.
+Follow the steps below to install the Amazon QuickSight frontend.
 
 ### Prerequisites
 
@@ -598,20 +591,9 @@ Install the required features:
 }
 ```
 
-2. Run the following command to enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 npm install
 console frontend:zed:build
 ```
-
-{% info_block warningBox "Verification" %}
-
-- log in to Back Office and go to `https://backoffice.mysprykershop.com/analytics-gui/analytics`;
-- try to enable the Analytics, the asset bundle import should be started;
-- after the import is completed the iframe with the Quicksight embed URL should be displayed;
-- there should not be any errors in the browser developer console;
-- the data sets and data sources with the corresponding IDs should be created;
-- after the analytics reset the specified datasets should be deleted and then reimported.
-
-{% endinfo_block %}

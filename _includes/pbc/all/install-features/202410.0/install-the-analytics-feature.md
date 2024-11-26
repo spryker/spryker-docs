@@ -1,12 +1,6 @@
+This document describes how to install the Analytics feature. This feature enables the Back Office UI for [Amazon QuickSight](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/amazon-quicksight.html).
 
-
-This document describes how to install the Analytics feature.
-
-## Install feature core
-
-Follow the steps below to install the Analytics feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -14,7 +8,7 @@ Install the required features:
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules
+## 1) Install the required modules
 
 Install the required modules using Composer:
 
@@ -35,7 +29,7 @@ Make sure the following modules have been installed:
 
 ## 2) Set up transfer objects
 
-Run the following command to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -75,7 +69,7 @@ Make sure the following changes have been applied in transfer objects:
 </config>
 ```
 
-2. Run the following command to build the navigation cache:
+2. Build the navigation cache:
 
 ```bash
 console navigation:build-cache
@@ -83,6 +77,6 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Log in to the Back Office. Make sure there is the **Analytics** navigation menu item.
+In the Back Office, make sure the **Analytics** navigation menu item is displayed.
 
 {% endinfo_block %}

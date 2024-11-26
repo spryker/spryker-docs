@@ -1,5 +1,6 @@
 ---
 title: "Import file details: navigation.csv"
+description: Learn about the Spryker navigation csv file used to configure the navigation information in to your Spryker Shop.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-navigationcsv

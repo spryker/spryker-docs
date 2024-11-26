@@ -37,6 +37,7 @@ We've divided the preparation into approximate timeframes, and you can adjust th
     - Check your concepts for DOS and DDOS prevention or mitigation, and check with relevant vendors for products that fit your needs and are compatible with SCCOS.
     - Check your concepts for DOS and DDOS prevention in the Back office and Merchant portal. Add basic auth if applicable. For instructions on implementing basic auth, see [Configure basic .htaccess authentication](/docs/pbc/all/identity-access-management/{{site.version}}/configure-basic-htaccess-authentication.html)
 - The DNS strategy is defined. If you delegate DNS to Spryker, let us know the date on which to point the domain name to your Spryker project.
+- IPs of Web Application Firewalls (WAF), Proxies or other Security and Traffic Filtering Systems you are using to route traffic to Spryker are whitelisted so they cannot be accidentally blocked by Spryker security systems (Can be requested via the Support Portal>Infrastructure Change Request).
 
 {% info_block infoBox "DNS propagation" %}
 

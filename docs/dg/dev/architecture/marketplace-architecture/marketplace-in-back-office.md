@@ -1,6 +1,6 @@
 ---
 title: Marketplace in the Back Office
-description: Marketplace functionality in the Back Office.
+description: Learn how to manage the Spryker Marketplace in the Back Office with features for product and order management, user roles, and efficient operational control.
 template: concept-topic-template
 last_updated: Sep 21, 2023
 redirect_from:

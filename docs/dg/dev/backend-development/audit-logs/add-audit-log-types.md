@@ -1,6 +1,6 @@
 ---
 title: Add audit log types
-description: Learn how to add an audit log type.
+description: Learn how to add custom audit log types in Spryker for effective tracking and management of backend activities, improving system transparency and security.
 template: howto-guide-template
 last_updated: Jun 16, 2024
 related:

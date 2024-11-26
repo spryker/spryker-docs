@@ -1,6 +1,6 @@
 ---
 title: Marketplace domain model
-description: Key domain objects that make a Spryker shop a Marketplace.
+description: Understand Spryker’s marketplace domain model, enabling effective structuring of marketplace operations, from vendor management to product catalog integration and order flow.
 template: concept-topic-template
 last_updated: Sep 21, 2023
 redirect_from:

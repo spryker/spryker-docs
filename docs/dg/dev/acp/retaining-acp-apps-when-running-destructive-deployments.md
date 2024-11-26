@@ -1,6 +1,6 @@
 ---
 title: Retaining ACP apps when running destructive deployments
-descriptions: ACP apps must be disconnected before running desctructive deployment
+Description: Learn how to retain your Spryker ACP applications during destructive deployments, ensuring uninterrupted app performance and minimizing downtime.
 template: concept-topic-template
 last_updated: Sep 15, 2024
 related:

@@ -1,5 +1,6 @@
 ---
 title: Back Office Translations overview
+description: Learn how to manage translations for Spryker Cloud Commerce OS Back Office, enabling seamless localization and improved global usability for back-office users.
 template: concept-topic-template
 last_updated: Nov 23, 2023
 originalLink: https://documentation.spryker.com/2021080/docs/back-office-translations-overview

@@ -1,6 +1,6 @@
 ---
 title: ACP security tips
-Descriptions: Guidelines and tips on how to make your ACP apps secure
+Description: Enhance your Spryker ACP security with expert tips on best practices and configurations to safeguard your platform and protect customer data effectively.
 template: howto-guide-template
 last_updated: Dec 18, 2023
 redirect_from:

@@ -17,7 +17,7 @@ Install the required features:
 
 | NAME                     | VERSION          | INSTALLATION GUIDE                                                                                                                                                              |
 |--------------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Analytics                | {{page.version}} | [Install the Analytics feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-analytics-feature.html)                           |
+| Analytics                | {{page.version}} | [Install the Analytics feature](/docs/pbc/all/business-intelligence/{{page.version}}/install-the-analytics-feature.html)                           |
 | Spryker Core Back Office | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 
 ### 1) Install the required modules

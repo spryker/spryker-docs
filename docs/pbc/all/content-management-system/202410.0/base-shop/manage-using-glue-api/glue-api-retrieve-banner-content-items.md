@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve banner content items"
-description: Retrieve information about banner content items via Glue API.
+description: Retrieve information about the Spryker CMS banner content items via the Spryker Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-banner-content-items

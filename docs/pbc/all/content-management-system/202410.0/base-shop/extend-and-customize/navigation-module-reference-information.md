@@ -1,7 +1,7 @@
 ---
 title: "Navigation module: reference information"
 last_updated: Aug 13, 2021
-description: The Navigation module provides database structure and a public API to manage what's in the database, and a small toolkit for rendering navigation menus in the frontend
+description: Reference information for the Navigation module that renders navigation menus on Spryker Cloud Commerce OS frontend. 
 template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/extend-and-customize/navigation-module-reference-information.html

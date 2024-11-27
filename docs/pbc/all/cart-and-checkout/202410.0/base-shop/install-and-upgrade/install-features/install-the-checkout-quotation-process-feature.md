@@ -1,6 +1,6 @@
 ---
 title: Install the Checkout + Quotation Process feature
-description: The guide describes the process of installing the Checkout + Quotation process feature into your project.
+description: A guide describing the process of installing the Spryker Cloud Commerce OS Checkout + Quotation process feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checkout-quotation-process-feature-integration

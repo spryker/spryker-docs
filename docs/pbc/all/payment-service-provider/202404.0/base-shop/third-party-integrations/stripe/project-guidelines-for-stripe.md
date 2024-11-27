@@ -30,3 +30,4 @@ Each section is designed to help you maximize the potential of Stripe in your pr
 * [Retrieving and using payment details from Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/payment-details.html)
 * [Sending additional data to Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/send-additional-data-to-stripe.html)
 * [Retrieve and use payment details from third-party PSPs](https://docs.spryker.com/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html)
+* [Change OOTB provided return URL's](https://docs.spryker.com/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/change-default-return-urls.html)

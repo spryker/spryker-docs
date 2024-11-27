@@ -1,6 +1,6 @@
 ---
 title: Upgrade the Cms module
-description: Use the guide to update versions to the newer ones of the CMS module.
+description: A guide to help you update and upgrade the Spryker CMS module from an older version to a a newer one.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cms

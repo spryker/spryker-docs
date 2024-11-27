@@ -1,7 +1,7 @@
 ---
 title: Add and configure cronjobs
 last_updated: Jun 16, 2021
-description: Learn to add and configure cronjobs
+description: Learn how to add and configure cronjobs in Spryker’s backend for automating tasks. Optimize your ecommerce platform's operations with effective cronjob management.
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/adding-and-configuring-cronjob
 originalArticleId: 6af304f1-b8ba-417b-874e-878e5d9a5730

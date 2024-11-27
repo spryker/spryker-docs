@@ -148,6 +148,7 @@ versioned_categories:
   pbc:
     all:
       - back-office
+      - business-intelligence
       - cart-and-checkout
       - carrier-management
       - content-management-system

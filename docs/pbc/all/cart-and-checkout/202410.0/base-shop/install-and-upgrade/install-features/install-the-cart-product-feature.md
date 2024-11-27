@@ -1,6 +1,6 @@
 ---
 title: Install the Cart + Product feature
-description: The guide walks you through the process of installing the Product and Cart features in your project.
+description: The guide walks you through the process of installing the Product and Cart features in your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 redirect_from:

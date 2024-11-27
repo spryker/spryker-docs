@@ -17,7 +17,7 @@ Follow the steps below to integrate Cache of Unresolved Entities for Zed into yo
 
 ## 1) Install the required modules
 
-Run the following command to install the required module:
+Install the required module:
 
 ```bash
 composer update spryker/kernel

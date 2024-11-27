@@ -14,13 +14,8 @@ In a multi-store environment, you can manage relationships between warehouses, s
 
 {% info_block warningBox %}
 
-In case if Dynamic Multistore feature is enabled, this scenario is only possible when stores belong to the different regions. (See [details](#What is the difference between Multi-store vs Dynamic Multistore))
-
-{% endinfo_block %}
-
-{% info_block infoBox "" %}
-
-To enable this scenario for your project, a developer needs to configure it.
+* With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview.html), this setup is only possible when stores belong to the different regions.
+* To enable this scenario for your project, a developer needs to configure it.
 
 {% endinfo_block %}
 
@@ -36,13 +31,8 @@ This scenario is appropriate for big businesses managed from various locations, 
 
 {% info_block warningBox %}
 
-In case if Dynamic Multistore feature is enabled, this scenario is only possible when stores belong to the different regions. (See [details](#What is the difference between Multi-store vs Dynamic Multistore))
-
-{% endinfo_block %}
-
-{% info_block infoBox "" %}
-
-To enable this scenario for your project, a developer should configure it. See [implementation reference](#implementation-reference) for recommendations.
+* With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview.html), this setup is only possible when stores belong to the different regions.
+* To enable this scenario for your project, a developer should configure it. For configuration details, see [implementation reference](#implementation-reference).
 
 {% endinfo_block %}
 

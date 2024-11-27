@@ -1,6 +1,6 @@
 ---
 title: Marketplace Application composition
-description: Key elements of Spryker Marketplace
+description: Explore Spryker's Marketplace Application Composition, detailing its modular, scalable architecture designed to enhance marketplace functionality with customized extensions and adaptable service integrations.
 template: concept-topic-template
 last_updated: Sep 21, 2023
 redirect_from:

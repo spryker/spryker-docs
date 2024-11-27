@@ -1,6 +1,6 @@
 ---
 title: Tutorial — Troubleshooting a killed process
-description: Learn how to troubleshoot a killed process
+description: Troubleshoot and resolve issues when a process is killed in Spryker, including steps to identify OOM Killer errors and check container task statuses.
 template: troubleshooting-guide-template
 last_updated: Oct 6, 2023
 redirect_from:

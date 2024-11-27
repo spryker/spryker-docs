@@ -1,6 +1,6 @@
 ---
 title: Install the Marketplace Shipment + Cart feature
-description: This document describes the process how to integrate Marketplace Shipment feature into your project
+description: This document describes the process how to integrate Marketplace Shipment and cart feature into your project
 last_updated: Jun 25, 2021
 template: feature-integration-guide-template
 redirect_from:

@@ -43,7 +43,7 @@ $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
 namespace Pyz\Zed\MessageBroker;
 
 use Spryker\Zed\MessageBroker\MessageBrokerDependencyProvider as SprykerMessageBrokerDependencyProvider;
-use Spryker\Zed\SalesPaymentDetail\Communication\Plugin\MessageBroker\PaymentCreatedMessageHandlerPlugin;
+use Spryker\Zed\SalesPaymentDetail\Communication\Plugin\MessageBroker\SalesPaymentDetailMessageHandlerPlugin;
 
 class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
 {
@@ -55,8 +55,8 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
         return [
             //...
 
-            # This plugin is handling the `PaymentCreated` messages sent from any Payment App that supports this feature.
-            new PaymentCreatedMessageHandlerPlugin(),
+            # This plugin handles the `PaymentCreated` and `PaymentUpdated` messages sent from the Stripe App.
+            new SalesPaymentDetailMessageHandlerPlugin(),
         ];
     }
 }

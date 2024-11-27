@@ -1,6 +1,6 @@
 ---
 title: Receive ACP Messages
-description: Find out how you can receive ACP messages in SCCOS.
+description: Receive and manage Spryker ACP messages efficiently with this guide, covering integration details and message processing for optimized communication.
 template: howto-guide-template
 last_updated: Jan 09, 2024
 redirect_from:

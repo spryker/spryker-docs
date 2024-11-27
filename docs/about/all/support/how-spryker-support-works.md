@@ -1,5 +1,6 @@
 ---
 title: How Spryker Support works
+description: A quick guide to understand how Spryker support works, including support processes and what their status means.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-spryker-support-works-1

@@ -102,7 +102,7 @@ To have payment methods available for the checkout,  extend `RestPaymentTransfer
 ```
 
 
-Run the following command to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -140,9 +140,10 @@ Make sure that the following changes have occurred:
 
 Activate the following plugin:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| PaymentMethodsByCheckoutDataResourceRelationshipPlugin | Adds payment-methods resource as relationship in case `RestCheckoutDataTransfer` is provided as payload. | None | Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication |
+| PLUGIN                                                 | SPECIFICATION                                                                                            | PREREQUISITES | NAMESPACE                                           |
+|--------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------|
+| PaymentMethodsByCheckoutDataResourceRelationshipPlugin | Adds payment-methods resource as relationship in case `RestCheckoutDataTransfer` is provided as payload. | None          | Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication |
+| PaymentCustomersResourceRoutePlugin                    | Returns customer data that should be used on the store front address page.                               | None          | Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -173,12 +174,100 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
         return $resourceRelationshipCollection;
     }
+    
+     /**
+     * {@inheritDoc}
+     *
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
+     */
+    protected function getResourceRoutePlugins(): array
+    {
+        return [
+            new PaymentCustomersResourceRoutePlugin(),
+        ];
+    }
 }
 ```
 
 {% info_block warningBox "Verification" %}
 
 To verify `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, send a POST request to `https://glue.mysprykershop.com/checkout-data?include=payment-methods` and make sure that `checkout-data` resource has a relationship to the `payment-methods` resources.
+To verify `PaymentCustomersResourceRoutePlugin` is activated, send a POST request to `https://glue.mysprykershop.com/payment-customers` and make sure that you get a response with customer data.
+
+An example request for `https://glue.mysprykershop.com/payment-customers`:
+The `customerPaymentServiceProviderData` field is a placeholder for the data that should be returned by the PSP widget.
+
+```json
+{
+  "data": {
+    "type": "payment-customers",
+    "attributes": {
+      "payment": {
+        "paymentMethodName": "dummyPayment",
+        "paymentProviderName": "dummyPaymentProvider"
+      },
+      "customerPaymentServiceProviderData": "customerPaymentServiceProviderData"
+    }
+  }
+}
+```
+
+Depending on the payment method, the response may vary.
+
+An example of the response:
+
+```json
+{
+  "data": {
+    "type": "payment-customers",
+    "id": "",
+    "attributes": {
+      "customer": {
+        "customerReference": "CUST-001",
+        "email": "customer@example.com",
+        "firstName": "John",
+        "lastName": "Doe",
+        "salutation": "Mr.",
+        "gender": "male",
+        "dateOfBirth": "1980-01-01",
+        "phone": "+1234567890",
+        "defaultBillingAddress": {
+          "salutation": "Mr.",
+          "firstName": "John",
+          "lastName": "Doe",
+          "address1": "123 Main St",
+          "address2": "Apt 4B",
+          "address3": "",
+          "zipCode": "12345",
+          "city": "Anytown",
+          "country": "USA",
+          "iso2Code": "US",
+          "company": "Example Corp",
+          "phone": "+1234567890",
+          "isDefaultShipping": false,
+          "isDefaultBilling": true
+        },
+        "defaultShippingAddress": {
+          "salutation": "Mr.",
+          "firstName": "John",
+          "lastName": "Doe",
+          "address1": "123 Main St",
+          "address2": "Apt 4B",
+          "address3": "",
+          "zipCode": "12345",
+          "city": "Anytown",
+          "country": "USA",
+          "iso2Code": "US",
+          "company": "Example Corp",
+          "phone": "+1234567890",
+          "isDefaultShipping": true,
+          "isDefaultBilling": false
+        }
+      }
+    }
+  }
+}
+```
 
 {% endinfo_block %}
 

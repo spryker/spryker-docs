@@ -1,3 +1,4 @@
+url: https://docs.spryker.com
 plugins:
   - jekyll-feed
   - jekyll-last-modified-at

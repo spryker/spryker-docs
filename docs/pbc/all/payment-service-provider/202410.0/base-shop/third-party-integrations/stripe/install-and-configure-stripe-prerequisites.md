@@ -122,7 +122,7 @@ namespace Pyz\Zed\MessageBroker;
 use Spryker\Zed\MessageBroker\MessageBrokerDependencyProvider as SprykerMessageBrokerDependencyProvider;
 use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin;
 use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentMethodMessageHandlerPlugin;
-use Spryker\Zed\SalesPaymentDetail\Communication\Plugin\MessageBroker\PaymentCreatedMessageHandlerPlugin;
+use Spryker\Zed\SalesPaymentDetail\Communication\Plugin\MessageBroker\SalesPaymentDetailMessageHandlerPlugin;
 
 class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
 {
@@ -133,11 +133,11 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     {
         return [
             //...
-            # These plugins are handling messages sent from Stripe app to your project.
+            # These plugins are handling messages sent from the Stripe app to your project.
             new PaymentOperationsMessageHandlerPlugin(),
             new PaymentMethodMessageHandlerPlugin(),
 
-            # [Optional] This plugin is handling the `PaymentCreated` and `PaymentUpdated` messages sent from Stripe App.
+            # [Optional] This plugin handles the `PaymentCreated` and `PaymentUpdated` messages sent from the Stripe App.
             new SalesPaymentDetailMessageHandlerPlugin(),
         ];
     }
@@ -145,7 +145,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 ```
 
-4. In `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`, add or updated the channels config in the message broker config:
+4. In `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`, add or update the channels config in the message broker config:
 
 ```php
 namespace Pyz\Zed\MessageBroker;

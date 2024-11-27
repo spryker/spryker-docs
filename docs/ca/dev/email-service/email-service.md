@@ -1,6 +1,6 @@
 ---
 title: Email service
-description: SCCOS is shipped with Amazon Simple Email Service
+description: Set up email services in Spryker Cloud Commerce OS with Amazon SES, covering email verification, quota restrictions, and third-party service integration.
 last_updated: Dec 15, 2023
 template: concept-topic-template
 ---

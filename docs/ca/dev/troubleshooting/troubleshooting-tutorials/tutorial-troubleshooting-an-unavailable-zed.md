@@ -1,6 +1,6 @@
 ---
 title: Tutorial — Troubleshooting an unavailable Zed
-description: Learn how to troubleshoot an unavailable Zed
+description: Resolve issues with an unavailable Zed in Spryker by troubleshooting ECS services, Redis, RDS, and logs to restore functionality and improve performance.
 template: troubleshooting-guide-template
 last_updated: Oct 6, 2023
 redirect_from:

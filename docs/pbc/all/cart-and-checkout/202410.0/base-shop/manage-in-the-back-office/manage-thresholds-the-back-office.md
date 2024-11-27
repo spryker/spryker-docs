@@ -1,6 +1,6 @@
 ---
 title: Manage thresholds the Back Office
-description: Learn how to log into the Back Office.
+description: Explore Global Thresholds and learn how to create a minimum and maximum threshold in the Spryker Cloud Commerce OS back office.
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:

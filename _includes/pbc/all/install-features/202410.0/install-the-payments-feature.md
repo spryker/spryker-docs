@@ -707,3 +707,23 @@ Verify that the following widgets have been registered by adding the respective 
 | ExpressCheckoutPaymentWidget | Make sure that the express checkout payment methods are displayed on the cart page. |
 
 {% endinfo_block %}
+
+3. Customize the address solution according to your needs.
+When the express checkout flow is enabled, the customer address does not always include the salutation field. 
+For this purpose, the 'n/a' placeholder is used. By default, it is not shown.
+
+**ShopUi/Theme/default/components/molecules/display-address/display-address.twig**
+
+```twig
+  <li class="list__item">
+      {{ (('customer.salutation.' ~ data.address.salutation | lower) | trans) == 'n/a' ? '' : (('customer.salutation.' ~ data.address.salutation | lower) | trans) }}
+      {{ data.address.firstName }} {{ data.address.lastName }}
+  </li>
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that:
+* The address salutation is displayed correctly on the summary page.
+
+{% endinfo_block %}

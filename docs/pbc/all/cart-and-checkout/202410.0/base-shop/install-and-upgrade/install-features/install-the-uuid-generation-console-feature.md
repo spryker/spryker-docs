@@ -1,5 +1,6 @@
 ---
 title: Install the Uuid Generation Console feature
+description: Learn to install Spryker Uuid Generation Console feature in to your Spryker projects.
 last_updated: Jul 4, 2022
 template: feature-integration-guide-template
 redirect_from:

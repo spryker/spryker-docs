@@ -1,6 +1,6 @@
 ---
 title: Install the Cart + Product Bundles feature
-description: Learn how to install the Cart + Product Bundles feature in a Spryker project
+description: Learn how to install the Spryker Cloud Commerce OS Cart + Product Bundles feature into a Spryker project
 last_updated: Jun 20, 2022
 template: feature-integration-guide-template
 related:

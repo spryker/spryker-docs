@@ -1,5 +1,6 @@
 ---
 title: Install the Checkout Workflow feature
+description: How to install the Spryker Cloud Commerce OS Checkout workflow feature to your Spryker projects.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checkout-workflow-integration

@@ -1,6 +1,6 @@
 ---
 title: Audit logs
-description: Learn how to work with Audit logs in Spryker.
+description: Track and manage backend operations in Spryker with audit logs, enhancing transparency and security by logging critical system activities for monitoring and review.
 template: howto-guide-template
 last_updated: Jun 16, 2024
 related:
@@ -169,7 +169,7 @@ This example of an audit log entry was recorded during a successful login attemp
 
 <details>
   <summary>Audit log example</summary>
-  
+
 ```json
 {
     "@timestamp": "2024-07-16T09:45:12.310532+00:00",

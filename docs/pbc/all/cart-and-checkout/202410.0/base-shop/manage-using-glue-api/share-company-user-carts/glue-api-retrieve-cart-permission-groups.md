@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve cart permission groups"
-description: Learn how to retrieve cart permission groups via Glue API.
+description: Learn how to retrieve cart permission groups using the Spryker Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-cart-permission-groups

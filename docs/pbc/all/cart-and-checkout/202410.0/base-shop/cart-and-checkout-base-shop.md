@@ -1,6 +1,6 @@
 ---
 title: "Cart and Checkout: Base shop"
-description: Cart and Checkout capability enables customers to create multiple carts and check out with ease.
+description: Learn about the Cart and Checkout Base Shop features in Spryker Cloud Commerce OS, supporting seamless shopping cart management and streamlined checkout processes
 last_updated: Oct 2, 2022
 template: concept-topic-template
 redirect_from:

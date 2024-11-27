@@ -1,6 +1,6 @@
 ---
 title: Create a custom scheduler
-description: This tutorial describes how to create a new custom scheduler.
+description: Learn how to create a custom scheduler in Spryker’s backend to automate tasks. Enhance your ecommerce platform's efficiency with tailored scheduling solutions.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-create-a-new-custom-scheduler

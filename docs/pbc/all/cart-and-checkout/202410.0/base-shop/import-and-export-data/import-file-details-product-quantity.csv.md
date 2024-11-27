@@ -1,5 +1,6 @@
 ---
 title: "Import file details: product_quantity.csv"
+description: Discover how to import product quantity data into Spryker Cloud Commerce OS using CSV files
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-quantitycsv

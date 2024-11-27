@@ -35,6 +35,27 @@ entries:
                     url: /docs/pbc/all/back-office/unified-commerce/install-and-upgrade/install-the-spryker-core-back-office-warehouse-user-management-feature.html
 
 
+      - title: Business Intelligence
+        url: /docs/pbc/all/business-intelligence/business-intelligence.html
+        include_versions:
+        - "202410.0"
+        nested:
+          - title: Amazon QuickSight third-party integration
+            url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.html
+            nested:
+              - title: Set up
+                url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/set-up-amazon-quicksight.html
+              - title: Install
+                url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.html                
+              - title: "Best practices: working with analytics"
+                url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/best-practices-working-with-analytics.html
+              - title: Refresh analytics datasets
+                url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html
+              - title: Manage analytics users and roles
+                url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/manage-analytics-users-and-roles.html
+          - title: Install the Analytics feature
+            url: /docs/pbc/all/business-intelligence/install-the-analytics-feature.html
+
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:

@@ -1,6 +1,6 @@
 ---
 title: Add events
-description: This document shows how to add events
+description: Add custom events in Spryker to enhance backend functionality. Follow this guide to integrate and manage events efficiently in your development workflow.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/event-adding

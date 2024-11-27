@@ -1,6 +1,6 @@
 ---
 title: Order thresholds overview
-description: Order thresholds let you control the values of the orders that your customers place. You can define a maximum or minimum monetary value for customers to reach to place an order.
+description: Spryker Cloud Commerce OS Order threshold feature lets you configure minimum and maximum values for the orders that your customers place.
 last_updated: Jul 19, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/order-thresholds

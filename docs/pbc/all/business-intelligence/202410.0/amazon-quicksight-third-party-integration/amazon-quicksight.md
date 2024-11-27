@@ -25,14 +25,14 @@ For more details on data sources, see [Supported data sources](https://docs.aws.
 
 ### Extending project data for analytics
 
-By looking at datasets, you can see what data from your project is available for analytics. By default, for each dataset, only secure data that can be useful for analytics and is available from a respective database table. For example, the Customer dataset doesn't include customer names or passwords.
+Datasets represent the data from your project that's available for analytics. By default, only the data that is secure and can be useful for analytics is available in datasets from respective database tables. For example, the Customer dataset doesn't include customer names or passwords.
 
-You can extend the data available to datasets on the project level. For more details, see [Install Amazon QuickSight]().
+You can extend the data available to datasets on the project level. For more details, see [Install Amazon QuickSight](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/install-amazon-quicksight.html).
 
 
 ### SPICE data
 
-SPICE (Super-fast, Parallel, In-memory Calculation Engine) is a robust in-memory engine used by Amazon QuickSight to calculate and serve data. All data in datasets is store as SPICE data, which has the following advantages:
+SPICE (Super-fast, Parallel, In-memory Calculation Engine) is a robust in-memory engine used by Amazon QuickSight to calculate and serve data. All data in datasets is stored as SPICE data, which has the following advantages:
 
 * Your analytical queries process faster.
 * You don't need to wait for a direct query to process.
@@ -53,7 +53,7 @@ You can refresh data manually or automatically by setting up a schedule per data
 
 ![refresh-dataset](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/refresh-dataset.png)
 
-For instructions, see [Refresh analytics datasets](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html).
+For instructions on refreshing data, see [Refresh analytics datasets](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html).
 
 
 ## Analyses and dashboards
@@ -241,8 +241,6 @@ For instructions, see the following docs:
 
 
 Sometimes you might want to start from scratch and get a fresh analytics account. Resetting analytics removes all assets and returns your account to the default state.
-
-Sometimes you might want to start from scratch and get a fresh analytics account.
 
 {% info_block warningBox %}
 

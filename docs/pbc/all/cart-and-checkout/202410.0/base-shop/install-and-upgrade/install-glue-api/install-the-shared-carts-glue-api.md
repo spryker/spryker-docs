@@ -1,5 +1,6 @@
 ---
 title: Install the Shared Carts Glue API
+description: A guide on how to install the Spryker Shared Carts glue API feature in to your projects.
 last_updated: Jul 4, 2022
 template: feature-integration-guide-template
 redirect_from:

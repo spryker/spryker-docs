@@ -1,5 +1,6 @@
 ---
 title: "Import file details: product_set.csv"
+description: Learn about the Spryker product set csv file used to configure the product set information in to your Spryker Shop.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-setcsv

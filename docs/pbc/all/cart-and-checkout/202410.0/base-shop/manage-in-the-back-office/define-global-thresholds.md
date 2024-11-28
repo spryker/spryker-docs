@@ -1,6 +1,6 @@
 ---
 title: Define global thresholds
-description: Learn how to define global thresholds in the Back Office.
+description: Learn how to define minimum and maximum global thresholds in the Spryker Cloud Commerce OS Back Office.
 last_updated: May 31, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-global-thresholds

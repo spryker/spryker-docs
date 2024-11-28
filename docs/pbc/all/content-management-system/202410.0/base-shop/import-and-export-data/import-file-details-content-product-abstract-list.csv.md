@@ -1,5 +1,6 @@
 ---
 title: "Import file details: content_product_abstract_list.csv"
+description: Learn about the Spryker content product abstract list csv file to configure content product abstract list information in your Spryker shop.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-content-product-abstract-listcsv

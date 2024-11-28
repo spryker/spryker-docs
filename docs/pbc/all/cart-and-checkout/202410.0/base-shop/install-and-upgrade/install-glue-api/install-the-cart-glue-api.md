@@ -1,6 +1,6 @@
 ---
 title: Install the Cart Glue API
-description: Install the Cart API feature in your project.
+description: A guide on how to install the Spryker Cart API feature in to your projects.
 last_updated: Jul 27, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-cart-feature-integration

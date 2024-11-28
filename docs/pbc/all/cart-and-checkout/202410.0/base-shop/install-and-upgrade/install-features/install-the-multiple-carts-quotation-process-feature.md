@@ -1,5 +1,6 @@
 ---
 title: Install the Multiple Carts + Quotation Process feature
+description: A guide to install the Spryker Multiple Cart and Quotation Feature in to your Spryker project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: "Import file details: cms_page_store.csv"
+description: Learn about the Spryker cms page store csv file to configure CMS Page Store information for your Spryker Shop.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-page-storecsv

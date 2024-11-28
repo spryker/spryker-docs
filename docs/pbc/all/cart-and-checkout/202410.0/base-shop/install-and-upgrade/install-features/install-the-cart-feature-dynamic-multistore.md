@@ -1,6 +1,6 @@
 ---
 title: Install the Cart feature + Dynamic Multistore
-description: Learn how to install the Cart feature + Dynamic Multistore.
+description: Learn how to install the Cart feature and dynamic multistore in Spryker Cloud Commerce OS.
 last_updated: Apr 25, 2023
 template: feature-integration-guide-template
 ---

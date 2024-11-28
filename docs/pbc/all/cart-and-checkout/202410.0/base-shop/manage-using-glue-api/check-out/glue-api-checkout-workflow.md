@@ -1,6 +1,6 @@
 ---
 title: Glue API checkout workflow
-description: Checkout workflow of Glue API.
+description: A diagram showing the Checkout workflow of the Spryker Glue API for placing, updating and retrieving checkout information
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checkout-workflow

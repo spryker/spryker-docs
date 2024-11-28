@@ -1,6 +1,6 @@
 ---
 title: Edit company roles
-description: Learn how to edit company roles in the Back Office.
+description: Learn how to edit a company roles in the Spryker Cloud Commerce OS Back Office.
 template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

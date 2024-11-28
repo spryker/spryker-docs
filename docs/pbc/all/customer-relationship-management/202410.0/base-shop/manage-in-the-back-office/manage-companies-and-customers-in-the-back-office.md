@@ -1,6 +1,6 @@
 ---
 title: Manage companies and customers in the the Back Office
-description: Learn how to log into the Back Office.
+description: A list of guides to help you learn how to manage companies and customers in the Spryker back office.
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:

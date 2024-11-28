@@ -1,6 +1,6 @@
 ---
 title: Edit company unit addresses
-description: Learn how to edit company unit addresses in the Back Office.
+description: Learn how to edit company unit addresses in the Spryker Cloud Commerce OS Back Office.
 template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

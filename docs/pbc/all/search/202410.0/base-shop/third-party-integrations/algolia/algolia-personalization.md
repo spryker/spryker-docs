@@ -179,8 +179,8 @@ If an event is not firing, verify that the desired action (e.g., 'click', 'chang
 Spryker provides default configurations for built-in components. For new or modified components, you need to add the appropriate event configuration.
 
 ```twig
-{% raw %}{% block eventTracker %}
-    {% set events = {
+{% raw %}{% block eventTracker %}{% endraw %}
+    {% raw %}{% set events = {{% endraw %}
         list: events.list | merge([
             {
                 event: 'NEEDED_EVENT_NAME', // e.g., PRODUCT_CLICK
@@ -192,7 +192,7 @@ Spryker provides default configurations for built-in components. For new or modi
     } %}
 
     {{ parent() }}
-{% endblock %}{% endraw %}
+{% raw %}{% endblock %}{% endraw %}
 ```
 
 Refer to the [API documentation](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md) for more details.

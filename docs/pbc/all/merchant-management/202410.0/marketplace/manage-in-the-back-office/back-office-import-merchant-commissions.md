@@ -3,6 +3,8 @@ title: "Back Office: Import merchant commissions"
 description: Learn how to import merchant commissions in the Back Office
 last_updated: Jun 16, 2024
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/pbc/all/merchant-management/202407.0/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant_commission_merchant.csv.html
 ---
 
 To import [merchant commissions](/docs/pbc/all/merchant-management/202410.0/marketplace/marketplace-merchant-commission-feature-overview.html), follow the steps:

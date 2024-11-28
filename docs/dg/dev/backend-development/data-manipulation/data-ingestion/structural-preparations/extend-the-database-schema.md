@@ -1,6 +1,6 @@
 ---
 title: Extend the database schema
-description: this document shows how to add fields to the existing database tables
+description: Expand Spryker's database schema with ease. Follow step-by-step guidance on schema files, database migration, and compatibility for your custom needs.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-extend-db-schema

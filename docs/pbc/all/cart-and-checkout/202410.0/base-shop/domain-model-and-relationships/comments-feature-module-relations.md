@@ -1,7 +1,7 @@
 ---
 title: "Comments feature: Module relations"
 last_updated: Aug 12, 2021
-description: The Comments feature lets you add multiple comments to any entity
+description: Discover how the comments feature relates and integrates with Spryker Cloud Commerce OS modules
 template: concept-topic-template
 redirect_from:
 - /docs/pbc/all/cart-and-checkout/base-shop/domain-model-and-relationships/comments-feature-module-relations.html

@@ -1,5 +1,6 @@
 ---
 title: Upgrade the CartsRestApi module
+description: A guide to help you upgrade the Spryker cart rest API module from older versions to a newer one.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cartsrestapi-migration-guide

@@ -1,6 +1,6 @@
 ---
 title: Carrier Management
-description: The Carrier Management capability deals with delivery methods
+description: Explore the comprehensive carrier management features in Spryker Cloud Commerce OS, including shipment methods, integrations, and third-party logistics solutions.
 template: concept-topic-template
 redirect_from:
 - /docs/pbc/all/carrier-management/202204.0/carrier-management.html

@@ -1,6 +1,6 @@
 ---
 title: Marketplace architecture
-description: Provides an overview of the Marketplace architecture
+description: Learn how Spryker’s marketplace architecture supports scalable, customizable eCommerce solutions for B2B and B2C environments.
 last_updated: Jan 12, 2023
 template: concept-topic-template
 redirect_from:

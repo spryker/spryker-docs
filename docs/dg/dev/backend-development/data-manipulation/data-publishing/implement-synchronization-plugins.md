@@ -1,6 +1,6 @@
 ---
 title: Implement synchronization plugins
-description: Learn how to implement synchronization plugins.
+description: Implement synchronization plugins in Spryker to streamline data consistency across systems. Follow this guide for seamless backend data synchronization.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/implementing-synchronization-plugins

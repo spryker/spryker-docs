@@ -1,6 +1,6 @@
 ---
 title: Back-end development
-description: Back-end development information for the Spryker Commerce OS
+description: Learn how to implement backend development in Spryker's customizable ecommerce platform. Explore key tools and processes for effective backend setup and integration.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/back-end-development/back-end-development.html

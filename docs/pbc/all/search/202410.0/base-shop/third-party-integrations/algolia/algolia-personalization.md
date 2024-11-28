@@ -8,7 +8,7 @@ template: howto-guide-template
 {% info_block infoBox "Info" %}
 
 Default Spryker installation supports Algolia personalization only for YVES frontend.
-If you plan to use Algolia personalization in headless frontend or mobile application follow [this guide](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia-personalization-headless.html). 
+If you plan to use Algolia personalization in headless frontend or mobile application follow [this guide](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia-personalization-headless.html).
 
 This feature also enables other Algolia premium features:
 
@@ -22,9 +22,9 @@ This feature also enables other Algolia premium features:
 
 ## Prerequisites
 
-Your shop already has [integrated](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html) 
+Your shop already has [integrated](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html)
 and [configured](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/configure-algolia.html) ACP Algolia App
-and your Algolia search indexes have products. 
+and your Algolia search indexes have products.
 
 ## Update Spryker Shop
 
@@ -67,7 +67,7 @@ spryker-shop/traceable-event-widget: ^1.0.1
 
 
 
-if the command does now work, try it with `--with-all-dependencies` flag instead. 
+if the command does now work, try it with `--with-all-dependencies` flag instead.
 
 ### Enabled new features
 1. Update project config:
@@ -79,7 +79,7 @@ $config[KernelAppConstants::TENANT_IDENTIFIER]
     = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
 ```
 
-2. Enable new widget, that will trigger events for user actions and send them to [Algolia Insights](https://www.algolia.com/doc/guides/sending-events/getting-started/): 
+2. Enable new widget, that will trigger events for user actions and send them to [Algolia Insights](https://www.algolia.com/doc/guides/sending-events/getting-started/):
 ```php
 // src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
 
@@ -113,7 +113,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 4. Build the JavaScript assets for Yves `npm ci && npm run yves` or `console frontend:project:install-dependencies && console frontend:yves:build`.
    Usually, it's executed automatically during the Spryker Cloud deployment pipeline. But it's better to check this command on the local development environment first.
-   
+
   Check that required dependency is installed `npm list search-insights` if you have `└── (empty)` result it means that you have to install `search-insights` manually `npm i search-insights`.
 
 
@@ -136,7 +136,7 @@ Monitor the browser's console and execute following cases:
 * Open Home page
   * (if home page has products) Click on a product - `PRODUCT_CLICK`
   * (if home page has the add to cart button) Click on a product add to cart button - `ADD_TO_CART`
-* Open any product detail page (PDP), you should see events for the actions: 
+* Open any product detail page (PDP), you should see events for the actions:
   * `PAGE_LOAD` with sku of viewed product.
   * `ADD_TO_CART` with product SKU, currency, price and quantity, when user clicks Add to cart.
   * `ADD_TO_SHOPPING_LIST` with product SKU when user clicks Add to shopping list.
@@ -166,7 +166,7 @@ To view a full list of available events, refer to the `traceable-events-algolia`
 If you need to add, modify, or fix events at the project level, start with these two steps:
 
 - Locate the page template or view that is used for the current page.
-- Override the `{% block eventTracker %}` block in your project’s template at the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/202410.0/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level).
+- Override the `{% raw %}{% block eventTracker %}{% endraw %}` block in your project’s template at the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/202410.0/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level).
 
 For comprehensive details about the **event configuration API**, visit the [traceable-events-orchestrator README](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
 
@@ -179,7 +179,7 @@ If an event is not firing, verify that the desired action (e.g., 'click', 'chang
 Spryker provides default configurations for built-in components. For new or modified components, you need to add the appropriate event configuration.
 
 ```twig
-{% block eventTracker %}
+{% raw %}{% block eventTracker %}{% endraw %}
     {% set events = {
         list: events.list | merge([
             {
@@ -192,7 +192,7 @@ Spryker provides default configurations for built-in components. For new or modi
     } %}
 
     {{ parent() }}
-{% endblock %}
+{% raw %}{% endblock %}{% endraw %}
 ```
 
 Refer to the [API documentation](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md) for more details.
@@ -328,7 +328,7 @@ You should update the website agreement text and ask for user consent to have th
 Something similar to
 
 > **User Data analytics**
-> 
+>
 > To enhance your experience, we use data and analytics to understand how you interact with our site.
 > By accepting, you allow us to capture anonymous events for personalization, analysis, and continuous improvement of your experience on our platform.
 
@@ -351,10 +351,10 @@ This action will update your Spryker shop config to be able to send events to Al
 
 ### Configure Algolia Features
 
-When your indexes will have enough data (unique searches, events), you can check it in Analytics and Events Debugger tabs on Algolia Dashaboard. 
+When your indexes will have enough data (unique searches, events), you can check it in Analytics and Events Debugger tabs on Algolia Dashaboard.
 Then you can start configuration of Personalization, Dynamic Re-Ranking and Query Categorization features (find Algolia docs and guides on their website).
 
-**It's important** that you need to first create [A/B tests](https://academy.algolia.com/training/00f72f14-0713-11ef-b9fe-0617d5264223/overview) 
+**It's important** that you need to first create [A/B tests](https://academy.algolia.com/training/00f72f14-0713-11ef-b9fe-0617d5264223/overview)
 with new personalized configuration of your search ("A/B Testing" page in Algolia Dashboard).
 It will allow you to see how new features influence your search conversion rate only for some limit audience of your site. When the results are good,
-you can change the settings globally in the indexes configuration, so it will work for all users. 
+you can change the settings globally in the indexes configuration, so it will work for all users.

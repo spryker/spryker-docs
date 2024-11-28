@@ -32,40 +32,18 @@ and your Algolia search indexes have products.
 ### Update Spryker packages
 
 ```bash
-composer update --with-dependencies spryker/kernel-app spryker/search-http spryker/customer \
-spryker-shop/cart-page spryker-shop/catalog-page spryker-shop/checkout-page spryker-shop/home-page spryker-shop/payment-page \
-spryker-shop/product-detail-page spryker-shop/product-group-widget spryker-shop/product-review-widget \
-spryker-shop/product-set-detail-page spryker-shop/quick-order-page spryker-shop/shop-ui
+composer update --with-dependencies spryker/kernel-app:1.2.0 spryker/search-http:0.5.0 spryker/customer:7.61.0 \
+spryker-shop/cart-page:3.45.0 spryker-shop/catalog-page:1.28.0 spryker-shop/checkout-page:3.32.1 spryker-shop/home-page:1.2.0 \
+spryker-shop/payment-page:1.5.0 spryker-shop/product-detail-page:3.22.1 spryker-shop/product-group-widget:1.10.1 \
+spryker-shop/product-review-widget:1.16.1 spryker-shop/product-set-detail-page:1.11.0 spryker-shop/quick-order-page:4.10.0 \
+spryker-shop/shop-ui:1.79.0
 ```
 
 ### Install new Spryker packages
 
 ```bash
-composer install spryker-shop/traceable-event-widget
+composer require spryker-shop/traceable-event-widget:1.0.1
 ```
-
-
-### Minimum package versions
-
-```bash
-spryker/kernel-app: ^1.2.0
-spryker/search-http: ^0.5.0
-spryker/customer: ^7.61.0
-spryker-shop/cart-page: ^3.45.0
-spryker-shop/catalog-page: ^1.28.0
-spryker-shop/checkout-page: ^3.32.1
-spryker-shop/home-page: ^1.2.0
-spryker-shop/payment-page: ^1.5.0
-spryker-shop/product-detail-page: ^3.22.1
-spryker-shop/product-group-widget: ^1.10.1
-spryker-shop/product-review-widget: ^1.16.1
-spryker-shop/product-set-detail-page: ^1.11.0
-spryker-shop/quick-order-page: ^4.10.0
-spryker-shop/shop-ui: ^1.79.0
-spryker-shop/traceable-event-widget: ^1.0.1
-```
-
-
 
 if the command does now work, try it with `--with-all-dependencies` flag instead. 
 

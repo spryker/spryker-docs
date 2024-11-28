@@ -28,21 +28,21 @@ When PayOne PayPal Express is integrated into a headless application, orders are
 
 1. The customer either selects PayPal Express as the payment method at the Product Detail page or the Cart Page.
 2. The `InitializePreOrderPayment` Glue API endpoint (`glue.mysprykershop.com/payments`) is called with the following parameters:
-* Payment provider name: Payone
-* Payment method name: PayPal Express
-* Payment amount
-* Quote data
+   * Payment provider name: Payone
+   * Payment method name: PayPal Express
+   * Payment amount
+   * Quote data
 3. Back Office sends the quote data and the payment amount to the PayOne app through an API.
 4. The payment with the given data is persisted in the PayOne app.
 5. PayOne app makes a request through an API to PayOne to `preauthorize` the payment.
 6. PayOne returns a JSON response with the following parameters:
-* transactionId
-* orderId 
-* workorderid
-* token
-* currency
-* clientId
-* merchantId
+   * transactionId
+   * orderId 
+   * workorderid
+   * token
+   * currency
+   * clientId
+   * merchantId
 7. When the customer clicks "Complete Purchase" the modal closes and the customer data is requested.
 8. After this the customer should be redirected to the summary page.
 9. Here he should see his address data that was received from PayPal, and he can change the data or submit it which makes an API request to persist the order in the Back Office: `glue.mysprykershop.com/checkout`.
@@ -51,8 +51,8 @@ When PayOne PayPal Express is integrated into a headless application, orders are
     The `order_reference` is passed to the PayOne app to be connected with `transaction_id`.
 12. PayOne app processes the payment and sends a `PaymentUpdated` message to Spryker.
 13. Depending on payment status, one of the following messages is returned through an asynchronous API:
-*  Payment is successful: `PaymentAuthorized` message.
-*  Payment is failed: `PaymentAuthorizationFailed` message.
+    * Payment is successful: `PaymentAuthorized` message.
+    * Payment is failed: `PaymentAuthorizationFailed` message.
 14. Further on, the order is processed through the OMS.
 
 All payment related messages mentioned above are handled by `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin`, which is registered in `MessageBrokerDependencyProvider::getMessageHandlerPlugins()`.

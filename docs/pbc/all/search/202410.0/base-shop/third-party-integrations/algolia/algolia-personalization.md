@@ -202,8 +202,8 @@ Refer to the [API documentation](https://github.com/spryker-shop/traceable-event
 Spryker includes default CSS selectors. If selectors have changed, update the configuration accordingly.
 
 ```twig
-{% block eventTracker %}
-    {% set events = {
+{% raw %}{% block eventTracker %}{% endraw %}
+    {% raw %}{% set events = {{% endraw %}
         list: events.list | merge([
             {
                 event: 'NEEDED_EVENT_NAME', // e.g., PRODUCT_CLICK
@@ -220,7 +220,7 @@ Spryker includes default CSS selectors. If selectors have changed, update the co
     } %}
 
     {{ parent() }}
-{% endblock %}
+{% raw %}{% endblock %}{% endraw %}
 
 ```
 
@@ -233,8 +233,8 @@ You can view the event payload in the console under `Adapter Data:`. If the payl
 Adjust static data in the `eventTracker` block as needed:
 
 ```twig
-{% block eventTracker %}
-    {% set events = {
+{% raw %}{% block eventTracker %}{% endraw %}
+    {% raw %}{% set events = {{% endraw %}
         list: events.list,
         data: events.data | merge({
           existing_key_to_override: New Data,
@@ -243,7 +243,7 @@ Adjust static data in the `eventTracker` block as needed:
     } %}
 
     {{ parent() }}
-{% endblock %}
+{% raw %}{% endblock %}{% endraw %}
 ```
 
 2. Dynamic Data
@@ -251,7 +251,7 @@ Adjust static data in the `eventTracker` block as needed:
 For adding dynamic data, refer to the [API documentation](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md). Adjust the configuration as needed for specific triggers.
 
 ```twig
-{% set events = {
+{% raw %}{% set events = {{% endraw %}
     list: events.list | merge([{
         event: 'EVENT_EXAMPLE',
         name: 'click',

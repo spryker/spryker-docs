@@ -28,23 +28,21 @@ This feature also enables other Algolia premium features:
 
 ## Update Spryker Shop
 
-
-1. Update Spryker packages:
-
-```bash
-composer update --with-dependencies spryker/kernel-app:1.2.0 spryker/search-http:0.5.0 spryker/customer:7.61.0 \
-spryker-shop/cart-page:3.45.0 spryker-shop/catalog-page:1.28.0 spryker-shop/checkout-page:3.32.1 spryker-shop/home-page:1.2.0 \
-spryker-shop/payment-page:1.5.0 spryker-shop/product-detail-page:3.22.1 spryker-shop/product-group-widget:1.10.1 \
-spryker-shop/product-review-widget:1.16.1 spryker-shop/product-set-detail-page:1.11.0 spryker-shop/quick-order-page:4.10.0 \
-spryker-shop/shop-ui:1.79.0
-```
-
-2. Install new Spryker packages:
+1. Install new Spryker packages:
 
 ```bash
-composer require spryker-shop/traceable-event-widget:1.0.1
+composer require --with-dependencies spryker-shop/traceable-event-widget:^1.0.0
 ```
+if the command does now work, try it with `--with-all-dependencies` flag instead.
 
+
+2. Update Spryker packages:
+
+```bash
+composer update --with-dependencies spryker-shop/cart-page:^3.45.0 spryker-shop/catalog-page:^1.28.0 spryker-shop/checkout-page:^3.32.1 \
+spryker-shop/home-page:^1.2.0 spryker-shop/payment-page:^1.5.0 spryker-shop/product-detail-page:^3.22.1 spryker-shop/product-group-widget:^1.10.1 \
+spryker-shop/product-review-widget:^1.16.1 spryker-shop/product-set-detail-page:^1.11.0 spryker-shop/quick-order-page:^4.10.0
+```
 if the command does now work, try it with `--with-all-dependencies` flag instead.
 
 ### Enable new features

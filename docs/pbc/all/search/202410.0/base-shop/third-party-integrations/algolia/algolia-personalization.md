@@ -179,8 +179,8 @@ If an event is not firing, verify that the desired action (e.g., 'click', 'chang
 Spryker provides default configurations for built-in components. For new or modified components, you need to add the appropriate event configuration.
 
 ```twig
-{% raw %}{% block eventTracker %}{% endraw %}
-    {% raw %}{% set events = {{% endraw %}
+{% raw %}{% endraw %}{% block eventTracker %}{% raw %}{% endraw %}
+    {% raw %}{% endraw %}{% set events = {{% raw %}{% endraw %}
         list: events.list | merge([
             {
                 event: 'NEEDED_EVENT_NAME', // e.g., PRODUCT_CLICK
@@ -192,7 +192,7 @@ Spryker provides default configurations for built-in components. For new or modi
     } %}
 
     {{ parent() }}
-{% raw %}{% endblock %}{% endraw %}
+{% raw %}{% endraw %}{% endblock %}{% raw %}{% endraw %}
 ```
 
 Refer to the [API documentation](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md) for more details.
@@ -202,8 +202,8 @@ Refer to the [API documentation](https://github.com/spryker-shop/traceable-event
 Spryker includes default CSS selectors. If selectors have changed, update the configuration accordingly.
 
 ```twig
-{% raw %}{% block eventTracker %}{% endraw %}
-    {% raw %}{% set events = {{% endraw %}
+{% raw %}{% endraw %}{% block eventTracker %}{% raw %}{% endraw %}
+    {% raw %}{% endraw %}{% set events = {{% raw %}{% endraw %}
         list: events.list | merge([
             {
                 event: 'NEEDED_EVENT_NAME', // e.g., PRODUCT_CLICK
@@ -220,7 +220,7 @@ Spryker includes default CSS selectors. If selectors have changed, update the co
     } %}
 
     {{ parent() }}
-{% raw %}{% endblock %}{% endraw %}
+{% raw %}{% endraw %}{% endblock %}{% raw %}{% endraw %}
 
 ```
 
@@ -233,8 +233,8 @@ You can view the event payload in the console under `Adapter Data:`. If the payl
 Adjust static data in the `eventTracker` block as needed:
 
 ```twig
-{% raw %}{% block eventTracker %}{% endraw %}
-    {% raw %}{% set events = {{% endraw %}
+{% raw %}{% endraw %}{% block eventTracker %}{% raw %}{% endraw %}
+    {% raw %}{% endraw %}{% set events = {{% raw %}{% endraw %}
         list: events.list,
         data: events.data | merge({
           existing_key_to_override: New Data,
@@ -243,7 +243,7 @@ Adjust static data in the `eventTracker` block as needed:
     } %}
 
     {{ parent() }}
-{% raw %}{% endblock %}{% endraw %}
+{% raw %}{% endraw %}{% endblock %}{% raw %}{% endraw %}
 ```
 
 2. Dynamic Data
@@ -251,7 +251,7 @@ Adjust static data in the `eventTracker` block as needed:
 For adding dynamic data, refer to the [API documentation](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md). Adjust the configuration as needed for specific triggers.
 
 ```twig
-{% raw %}{% set events = {{% endraw %}
+{% raw %}{% endraw %}{% set events = {{% raw %}{% endraw %}
     list: events.list | merge([{
         event: 'EVENT_EXAMPLE',
         name: 'click',

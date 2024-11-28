@@ -1,5 +1,5 @@
 ---
-title: Algolia Personalization
+title: Integrate Algolia Personalization
 description: Find out how you can enable Algolia personalization in your Spryker shop
 last_updated: Nov 24, 2024
 template: howto-guide-template
@@ -22,14 +22,14 @@ This feature also enables other Algolia premium features:
 
 ## Prerequisites
 
-Your shop already has [integrated](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html)
-and [configured](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/configure-algolia.html) ACP Algolia App
-and your Algolia search indexes have products.
+1. [Integrate Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html)
+2. [Configure Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/configure-algolia.html)
+3. Add products to your Algolia search indexes
 
 ## Update Spryker Shop
 
 
-### Update Spryker packages
+1. Update Spryker packages:
 
 ```bash
 composer update --with-dependencies spryker/kernel-app spryker/search-http spryker/customer \
@@ -38,7 +38,7 @@ spryker-shop/product-detail-page spryker-shop/product-group-widget spryker-shop/
 spryker-shop/product-set-detail-page spryker-shop/quick-order-page spryker-shop/shop-ui
 ```
 
-### Install new Spryker packages
+2. Install new Spryker packages:
 
 ```bash
 composer install spryker-shop/traceable-event-widget
@@ -69,7 +69,8 @@ spryker-shop/traceable-event-widget: ^1.0.1
 
 if the command does now work, try it with `--with-all-dependencies` flag instead.
 
-### Enabled new features
+### Enable new features
+
 1. Update project config:
 ```php
 // config_default.php
@@ -79,7 +80,7 @@ $config[KernelAppConstants::TENANT_IDENTIFIER]
     = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
 ```
 
-2. Enable new widget, that will trigger events for user actions and send them to [Algolia Insights](https://www.algolia.com/doc/guides/sending-events/getting-started/):
+2. Enable a widget that triggers events for user actions and sends them to [Algolia Insights](https://www.algolia.com/doc/guides/sending-events/getting-started/):
 ```php
 // src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
 
@@ -95,7 +96,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-3. Enabled the plugin that will generate an anonymous token for guest users in the session:
+3. Enabled the plugin that generates an anonymous token for guest users in the session:
 ```php
 // src/Pyz/Yves/EventDispatcher/EventDispatcherDependencyProvider.php
 
@@ -111,10 +112,24 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-4. Build the JavaScript assets for Yves `npm ci && npm run yves` or `console frontend:project:install-dependencies && console frontend:yves:build`.
-   Usually, it's executed automatically during the Spryker Cloud deployment pipeline. But it's better to check this command on the local development environment first.
+4. Build JavaScript assets for Yves using one of the following commands:
+```bash
+npm ci && npm run yves
+```
 
-  Check that required dependency is installed `npm list search-insights` if you have `└── (empty)` result it means that you have to install `search-insights` manually `npm i search-insights`.
+```bash
+console frontend:project:install-dependencies && console frontend:yves:build
+```
+
+5. Check that required dependency is installed:
+```bash
+npm list search-insights
+```
+
+6. If the previous command returned `└── (empty)`, install `search-insights` manually:
+```bash
+npm i search-insights`.
+```
 
 
 ### Check your Yves's compatibility with new functionality

@@ -1,5 +1,6 @@
 ---
 title: Customer Accounts overview
+description: Learn more about the Spryker Customer Accounts with this overview guide, explaining what Customer accounts are and how you can use them for your business.
 last_updated: Aug 13, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-accounts-overview

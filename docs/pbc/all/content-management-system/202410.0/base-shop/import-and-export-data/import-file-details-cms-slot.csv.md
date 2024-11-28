@@ -1,5 +1,6 @@
 ---
 title: "Import file details: cms_slot.csv"
+description: Learn about the Spryker cms slot csv file to configure cms slot information in your Spryker shop.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-slotcsv

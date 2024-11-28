@@ -9,25 +9,27 @@ redirect_from:
 - /docs/scos/user/intro-to-spryker/support/share-secrets-with-the-spryker-support-team.html
 ---
 
-This document explains how you can securely share secrets or credentials with the [Spryker Support Team](/docs/about/all/support/getting-support.html). In general, the safest way to share secrets is not to share them, but if the situation demands it, we ask you to share secrets only the way described in this document.
+This document explains how to securely share secrets and credentials with the [Spryker Support Team](/docs/about/all/support/getting-support.html). We recommend avoiding sharing secrets whenever possible. If you have to share them, do it only as described in this document.
 
 {% info_block warningBox %}
 
-Spryker employees never ask for credentials. We delete and don’t work with any credentials received if they were not shared using the process outlined below. Legit use cases for sharing secrets are very limited, so when in doubt, please discuss the issue with us before sharing your secret.
+We work only with credentials shared in the way described below and delete credentials shared in any other way. Don't share credentials or secrets unless we specifically request them because they are not needed in most cases.
 
 {% endinfo_block %}
 
-## Process for sharing the secrets
+## Share a secret
 
-1. Create a secret message by navigating to [One-Time Secret](https://onetimesecret.com/) and inserting your secret there. Make sure to configure a passphrase for your secret.
+1. Using [One-Time Secret](https://onetimesecret.com/), create a secret message by entering the secret and configuring a passphrase.
 
 {% info_block warningBox %}
 
-Do not include information on what the secret content is for—for example, if you insert a password, do not provide the username for it. Also, don’t include any information about where and how to use the secret. Also, create a new link for every individual secret you want to share.
+Don't include information on what the secret content is for—for example, if you insert a password, don't provide the username for it. Also, don’t include any information about where and how to use the secret.
+
+Create a new link for every individual secret you want to share.
 
 {% endinfo_block %}
 
 2. In the **Case Details**, in the **Link Passphrase** field add the secret link.
-3. Create a comment on the case that the team must retrieve the secret link.
-3. The Team retrieves the link and then clears the field and provide a comment.
-4. Add the passphrase to the link in the same—now empty—field.
+3. Create a comment on the case that the team must retrieve the secret link for.
+3. The team retrieves the link and then clears the field and provides a comment.
+4. Add the passphrase to the link in the same — now empty— field.

@@ -1,6 +1,6 @@
 ---
 title: Install the CMS feature
-description: The guide describes how to integrate the CMS feature into your project.
+description: The guide describes how to integrate the Spryker Cloud Commerce OS CMS feature into your Spryker project.
 last_updated: Nov 22, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cms-feature-integration-guide

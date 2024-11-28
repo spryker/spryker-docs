@@ -1,6 +1,6 @@
 ---
 title: Manage slots
-description: Learn about slot management in the Back Office.
+description: Learn more about CMS Slots with these guides, helping you to manage slots that are implemented in to pages right within the Spryker Back Office 
 last_updated: Jun 18, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-slots

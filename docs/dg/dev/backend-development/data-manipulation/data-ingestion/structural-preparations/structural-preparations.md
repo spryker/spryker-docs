@@ -1,6 +1,6 @@
 ---
 title: Structural preparation
-description: This page lists documents inside the Structural preparations section
+description: Prepare Spryker's database structure for data ingestion with essential structural setups. Learn best practices for schema adjustments and data compatibility.
 last_updated: Apr 25, 2023
 template: howto-guide-template
 redirect_from:

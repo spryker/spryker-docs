@@ -1,5 +1,6 @@
 ---
 title: "Marketplace Cart feature: Module relations"
+description: Explore the Marketplace Cart feature module relations in Spryker Marketplace, detailing the interconnected components and functionality.
 last_updated: Nov 1, 2021
 description: Buyers can add notes to carts of their orders.
 template: concept-topic-template

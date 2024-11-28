@@ -1,6 +1,6 @@
 ---
 title: Install the Spryker Core Back Office + Comments feature
-description: The guide walks you through the process of installing the Comments + Spryker Core Back Office feature into the project.
+description: The guide walks you through the process of installing the Comments and Spryker Core Back Office feature into the project.
 last_updated: Mar 12, 2024
 template: feature-integration-guide-template
 ---

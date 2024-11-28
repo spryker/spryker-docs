@@ -1,6 +1,6 @@
 ---
 title: Cart Notes overview
-description: Customers can add notes to a particular item or the whole cart
+description: Learn how Spryker Cloud Commerce OS dynamic cart feature improves user experience with seamless cart management and a frictionless checkout process.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/cart-notes-overview

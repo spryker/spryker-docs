@@ -1,6 +1,6 @@
 ---
 title: Upgrade the NavigationGui module
-description: Use the guide to migrate to a newer version of the NavigationGui module.
+description: A guide on how to upgrade to a newer version of the Spryker Navigation GUI module from an older version in your Spryker projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-navigation-gui

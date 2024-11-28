@@ -1,7 +1,7 @@
 ---
 title: "Product Sets feature: domain model and relationships"
 last_updated: Aug 19, 2021
-description: The Product Sets feature lets you create and sale collections of products
+description: Product Sets domain model and relationships in Spryker Cloud Commerce OS, including data structures for managing and displaying product collections.
 template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/domain-model-and-relationships/product-sets-domain-model-and-relationships.html

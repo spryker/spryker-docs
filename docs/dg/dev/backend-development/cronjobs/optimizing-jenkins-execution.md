@@ -1,6 +1,6 @@
 ---
 title: Optimizing Jenkins execution
-description: Save Jenkins-related costs or speed up background jobs processing by implementing a single custom Worker for all stores.
+description: Optimize Jenkins execution for cronjobs in Spryker’s backend. Enhance task automation performance and improve the efficiency of your ecommerce platform.
 last_updated: Jul 15, 2023
 template: howto-guide-template
 redirect_from:

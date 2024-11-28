@@ -1,6 +1,6 @@
 ---
 title: Edit navigation elements
-description: Learn how to edit navigation elements in the Back Office
+description: Learn how to edit navigation elements in the Spryker Cloud Commerce OS Back Office
 last_updated: Dec 2, 2022
 template: back-office-user-guide-template
 redirect_from:

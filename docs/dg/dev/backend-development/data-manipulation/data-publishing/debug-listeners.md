@@ -1,5 +1,6 @@
 ---
 title: Debug listeners
+description: Learn how to debug listeners in Spryker to ensure smooth data publishing. Follow best practices for troubleshooting backend events and improving performance.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-debug-listeners

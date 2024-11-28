@@ -1,6 +1,6 @@
 ---
 title: Delete navigation nodes
-description: Learn how to delete navigation nodes in the Back Office
+description: This guide helps you to know how to delete navigation nodes in the Spryker Cloud Commerce OS Back Office.
 last_updated: Dec 2, 2022
 template: back-office-user-guide-template
 redirect_from:

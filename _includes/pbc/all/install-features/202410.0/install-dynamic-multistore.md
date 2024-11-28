@@ -1500,11 +1500,21 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ### 5) Set up behavior
 
+{% info_block warningBox "Verification" %}
+
+If you are working with pre-generated internal URLs in Twig templates, you must now wrap them using the new Twig function `generatePath()`.
+This ensures the URLs include the necessary context (store name) based on the current request.
+
+{% endinfo_block %}
+
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-|StoreApplicationPlugin| Provides store data to the application.||SprykerShop\Yves\StoreWidget\Plugin\ShopApplication|
+| PLUGIN | SPECIFICATION                                                                                                                                                                                                                                                                                                                  | PREREQUISITES | NAMESPACE |
+| --- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| --- | --- |
+|StoreApplicationPlugin| Provides store data to the application.                                                                                                                                                                                                                                                                                        ||SprykerShop\Yves\StoreWidget\Plugin\ShopApplication|
+|StorePrefixRouterEnhancerPlugin| Extracts the current store name from an incoming URL, for adding the current store name to the Route parameters, and for prefixing the generated URL with the current store name. Through the \Spryker\Yves\Router\RouterConfig::getAllowedStores() configuration, you tell this plugin what store names it has to work with. ||Spryker\Yves\Router\Plugin\RouterEnhancer|
+|LanguagePrefixRouterEnhancerPlugin| Extracts the current language name from an incoming URL, to add the current language to the Route parameters, and to prefix the generated URLs with the current language. Through the \Spryker\Yves\Router\RouterConfig::getAllowedLanguages() configuration, you tell this plugin what languages it has to work with.                                                                                                                                                                                                                                                                                        ||Spryker\Yves\Router\Plugin\RouterEnhancer|
+|StorePrefixStorageRouterEnhancerPlugin| Extracts the current store name from an incoming URL, for adding the current store name to the Route parameters, and for prefixing the generated URL with the current store name. Through the \SprykerShop\Yves\StorageRouter\StorageRouterConfig::getAllowedStores() configuration, you tell this plugin what store names it has to work with.                                                                                                                                                                                                                                                                                        ||SprykerShop\Yves\StorageRouter\Plugin\RouterEnhancer|
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1526,7 +1536,65 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
         return [
             new StoreApplicationPlugin(),
         ];
-    }    
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+In the RouterDependencyProvider::getRouterEnhancerPlugins() stack, the order of plugin execution has changed:
+•	The `StorePrefixRouterEnhancerPlugin` must now be executed before the `LanguagePrefixRouterEnhancerPlugin`.
+•	Ensure that your plugin stack reflects this updated order to maintain the correct routing behavior.
+
+{% endinfo_block %}
+
+**src/Pyz/Yves/Router/RouterDependencyProvider.php**
+
+```php
+<?php
+namespace Pyz\Yves\Router;
+
+use Spryker\Yves\Router\Plugin\RouterEnhancer\LanguagePrefixRouterEnhancerPlugin;
+use Spryker\Yves\Router\Plugin\RouterEnhancer\StorePrefixRouterEnhancerPlugin;
+use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
+
+
+class RouterDependencyProvider extends SprykerRouterDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Yves\RouterExtension\Dependency\Plugin\RouterEnhancerPluginInterface>
+     */
+    protected function getRouterEnhancerPlugins(): array
+    {
+        return [
+            new StorePrefixRouterEnhancerPlugin(),
+            new LanguagePrefixRouterEnhancerPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Yves/StorageRouter/StorageRouterDependencyProvider.php**
+
+```php
+<?php
+namespace Pyz\Yves\StorageRouter;
+
+use SprykerShop\Yves\StorageRouter\Plugin\RouterEnhancer\StorePrefixStorageRouterEnhancerPlugin;
+use SprykerShop\Yves\StorageRouter\StorageRouterDependencyProvider as SprykerShopStorageRouterDependencyProvider;
+
+
+class StorageRouterDependencyProvider extends SprykerShopStorageRouterDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\StorageRouterExtension\Dependency\Plugin\StorageRouterEnhancerPluginInterface>
+     */
+    protected function getStorageRouterEnhancerPlugins(): array
+    {
+        return [
+            new StorePrefixStorageRouterEnhancerPlugin(),
+        ];
+    }
 }
 ```
 

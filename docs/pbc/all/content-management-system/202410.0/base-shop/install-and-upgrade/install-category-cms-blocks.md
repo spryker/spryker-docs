@@ -1,6 +1,6 @@
 ---
 title: Install category CMS blocks
-description: Learn how to install category CMS blocks into a Spryker project.
+description: Learn how to install Spryker category CMS blocks into a Spryker project and show them on Category Pages.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/enabling-the-category-cms-block

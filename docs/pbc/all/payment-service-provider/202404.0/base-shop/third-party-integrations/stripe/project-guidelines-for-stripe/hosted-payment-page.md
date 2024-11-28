@@ -21,7 +21,6 @@ If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project 
 
 ```twig
 {% raw %}
-
 {% for name, choices in data.form.paymentSelection.vars.choices %}
     ...
     {% embed molecule('form') with {
@@ -37,26 +36,26 @@ If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project 
 2. If you want to change the default payment provider or method names, do the following:
    1. Make sure the names are translated in your payment step template:
 
-```twig
-{% raw %}
-{% for name, choices in data.form.paymentSelection.vars.choices %}
-    ...
-    <h5>{{ name | trans }}</h5>
-{% endfor %}
-{% endraw %}
-```
+   ```twig
+   {% raw %}
+   {% for name, choices in data.form.paymentSelection.vars.choices %}
+       ...
+       <h5>{{ name | trans }}</h5>
+   {% endfor %}
+   {% endraw %}
+   ```
 
-    2. Add translations to your glossary data import file:
+   2. Add translations to your glossary data import file:
 
-```csv
-...
-Stripe,Pay Online with Stripe,en_US
-```
+   ```
+   Stripe,Pay Online with Stripe,en_US
+   ```
+
     3. Run the data import command for the glossary:
 
-```bash
-console data:import glossary
-```
+   ```bash
+   console data:import glossary
+   ```
 
 ### Further reading
 

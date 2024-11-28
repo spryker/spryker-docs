@@ -1,5 +1,5 @@
 ---
-title: Project guidelines for Stripe
+title: Project guidelines for Stripe - Embed the Stripe payment page as iframe
 description: Learn how to implement Stripe using ACP
 last_updated: Nov 8, 2024
 template: howto-guide-template
@@ -32,7 +32,8 @@ class PaymentConfig extends \Spryker\Zed\Payment\PaymentConfig
 }
 ```
 
-In this setup, the redirect URL will be added as a `url` query parameter to the URL you've specified in the `getStoreFrontPaymentPage()` method; the value of the parameter is base64-encoded.
+In this setup, the redirect URL will be added as a `url` query parameter to the URL you've specified in the `getStoreFrontPaymentPage()` method, the value of the parameter is base64-encoded.
+Example: `/payment?url=base64-encoded-URL-for-iframe-src`.
 
 
 2. Depending on your frontend setup, create a page to render the Stripe payment page in one of the following ways:

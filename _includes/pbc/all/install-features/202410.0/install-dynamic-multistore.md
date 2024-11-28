@@ -8,8 +8,8 @@ Follow the steps below to install the Dynamic Multistore feature core.
 
 {% info_block warningBox "Project version" %}
 
-If your project is of version 202307.0 or later, go to  [Enable the dynamic store feature](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#enable-the-dynamic-store-feature).
- 
+If your project is of version 202307.0 or later, go to [Enable the dynamic store feature](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#enable-the-dynamic-store-feature).
+
 {% endinfo_block %}
 
 1. Upgrade the following modules:

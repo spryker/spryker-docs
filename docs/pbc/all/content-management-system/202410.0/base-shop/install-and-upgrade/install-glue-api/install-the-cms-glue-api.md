@@ -1,5 +1,6 @@
 ---
 title: Install the CMS Glue API
+description: A guide on how to Install the Spryker CMS Glue API and configure the API behaviour within your Spryker projects.
 last_updated: Jul 14, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-cms-feature-integration-guide

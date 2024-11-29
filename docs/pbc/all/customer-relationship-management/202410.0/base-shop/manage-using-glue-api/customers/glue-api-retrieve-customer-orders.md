@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve customer orders"
-description: This endpoint allows retrieving a customer's orders.
+description: Learn how by using the Spryker Glue API you can retrieve customer orders within your Spryker Project.
 last_updated: Jul 12, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-customer-orders

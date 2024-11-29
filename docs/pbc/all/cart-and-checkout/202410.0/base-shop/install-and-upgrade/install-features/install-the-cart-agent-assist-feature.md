@@ -1,5 +1,6 @@
 ---
 title: Install the Cart + Agent Assist feature
+description: Learn how to install the Cart Agent Assist feature in Spryker Cloud Commerce OS to enhance cart functionality and provide shopping assistance to customers
 last_updated: Jul 6, 2021
 template: feature-integration-guide-template
 redirect_from:

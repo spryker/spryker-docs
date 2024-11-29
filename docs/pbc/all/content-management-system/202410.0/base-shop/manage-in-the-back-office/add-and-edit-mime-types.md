@@ -1,6 +1,6 @@
 ---
 title: Add and edit MIME types
-description: Learn how to add and edit MIME types in the Back Office.
+description: Learn how to add and edit MIME types in the Spryker Back Office for different file extensions that can be used in your Spryker projects.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-mime-type-settings

@@ -29,7 +29,7 @@ related:
   - title: About the Persistence layer
     link: docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
   - title: Using translations
-    link: docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
+    link: docs/dg/dev/internationalization-and-multi-store/managing-translations-with-twig-translator.html
 ---
 
 <!-- used to be: http://spryker.github.io/onboarding/product/ -->

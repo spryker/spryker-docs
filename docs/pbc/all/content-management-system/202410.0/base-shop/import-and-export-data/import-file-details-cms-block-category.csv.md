@@ -1,5 +1,6 @@
 ---
 title: "Import file details: cms_block_category.csv"
+description: Understand the Spryker cms block category csv file to configure CMS Block Category information in your Spryker Shop
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-block-categorycsv

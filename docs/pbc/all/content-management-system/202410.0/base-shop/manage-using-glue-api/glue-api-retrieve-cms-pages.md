@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve CMS pages"
-description: Retrieve details on CMS pages via the API.
+description: Learn how you can retrieve details on Spryker CMS pages via the Spryker Glue API.
 last_updated: Jun 18, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-cms-pages

@@ -1,6 +1,6 @@
 ---
 title: Install the Checkout feature
-description: Learn how to integrate the Checkout feature into a Spryker project.
+description: Learn how to integrate and install the Spryker Cloud Commerce OS Checkout feature into a Spryker project.
 last_updated: Jul 27, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checkout-feature-integration

@@ -1,6 +1,6 @@
 ---
 title: Add customer addresses
-description: Learn how to add customer addresses in the Back Office
+description: Learn how to add a new address to your customers in the Spryker Cloud Commerce OS Back Office
 last_updated: Jul 6, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-addresses

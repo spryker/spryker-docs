@@ -1,6 +1,6 @@
 ---
 title: Create customers
-description: Learn how to create customers in the Back Office.
+description: Learn how to create new customers in the Spryker Cloud Commerce OS Back Office.
 last_updated: Jul 6, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customers

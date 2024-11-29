@@ -11,7 +11,7 @@ related:
 
 ## Synchronous API
 
-All PSP integrations are based on a synchronous API. A synchronous API is used to process payments and refunds. The following endpoints are used:
+All PSP integrations are based on a synchronous API. A synchronous API is used to process payments and transfers to merchants. The following endpoints are used:
 
 * `/configure`: Used from the ACP app catalog to configure an app.
 * `/disconnect`: Used from the ACP app catalog to disconnect an app.

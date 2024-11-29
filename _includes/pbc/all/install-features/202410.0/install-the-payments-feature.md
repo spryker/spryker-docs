@@ -6,7 +6,7 @@ The following feature integration guide expects the basic feature to be in place
 * Payment Back Office UI;
 * Payment method per store;
 * Payment data import.
-w* Payment App express checkout flow. 
+* Payment App express checkout flow. 
 
 {% endinfo_block %}
 
@@ -32,26 +32,26 @@ composer require "spryker-feature/payments:{{page.version}}" "spryker/checkout-r
 {% info_block warningBox "Verification" %}
 Make sure that the following modules have been installed:
 
-| MODULE                    | EXPECTED DIRECTORY                               |
-|---------------------------|--------------------------------------------------|
-| PaymentDataImport         | vendor/spryker/payment-data-import               |
-| PaymentGui                | vendor/spryker/payment-gui                       |
-| PaymentApp                | vendor/spryker/payment-app                       |
-| PaymentAppExtension       | vendor/spryker/payment-app-extension             |
-| PaymentAppShipment        | vendor/spryker/payment-app-shipment              |
-| PaymentAppWidget          | vendor/spryker-shop/payment-app-widget           |
-| PaymentAppWidgetExtension | vendor/spryker-shop/payment-app-widget-extension |
-| PaymentCartConnector      | vendor/spryker/payment-cart-connector            |
+| MODULE                    | EXPECTED DIRECTORY                               | REQUIRED ONLY FOR ACP PAYMENTS |
+|---------------------------|--------------------------------------------------|--------------------------------|
+| PaymentDataImport         | vendor/spryker/payment-data-import               | no                             |
+| PaymentGui                | vendor/spryker/payment-gui                       | no                             |
+| PaymentApp                | vendor/spryker/payment-app                       | yes                            |
+| PaymentAppExtension       | vendor/spryker/payment-app-extension             | yes                            |
+| PaymentAppShipment        | vendor/spryker/payment-app-shipment              | yes                            |
+| PaymentAppWidget          | vendor/spryker-shop/payment-app-widget           | yes                            |
+| PaymentAppWidgetExtension | vendor/spryker-shop/payment-app-widget-extension | yes                            |
+| PaymentCartConnector      | vendor/spryker/payment-cart-connector            | no                             |
 
 {% endinfo_block %}
 
-### 2) Set up configuration
+### 2) Set up Express Checkout payments configuration
 
 1. Add the following configuration to your project:
 
 2. Configure the checkout payment step to hide the express checkout payment methods.
 Depending on your project needs, you can exclude the payment methods that you do not want to show on the checkout payment step.
-In case you are using the `Payone` app, you can exclude the `payone-paypal-express` payment method.
+In case you are using the ACP Payone app, you can exclude the `payone-paypal-express` payment method.
 
 **src/Pyz/Yves/CheckoutPage/CheckoutPageConfig.php**
 
@@ -77,7 +77,8 @@ class CheckoutPageConfig extends SprykerCheckoutPageConfig
 
 Cart reload, remove item, and update quantity are the default cart operations.
 Define the payment methods that you want to exclude from the cart operations.
-In the example below, the `PayPal Express` payment method name that is excluded from the cart operations.
+During the checkout steps, cart reloads are executed multiple times, and the payment methods are cleared.
+In the example below, the `PayPal Express` payment method name should be excluded from the cart operations in order to prevent the payment method from being cleared.
 
 **src/Pyz/Zed/PaymentCartConnector/PaymentCartConnectorConfig.php**
 
@@ -186,7 +187,7 @@ Make sure that:
 
 {% endinfo_block %}
 
-5. Configure the shipment method for the express checkout payment request.
+5. Configure the default shipment method for the express checkout payment that will be used in the order and the cost is added to the total price.
 In the example below, the `spryker_dummy_shipment-standard` shipment method is configured for the `payone-paypal-express` payment method.
 The key is the payment method key, and the value is the shipment method key.
 
@@ -423,8 +424,8 @@ Make sure that the configured data has been added to the `spy_payment_method`, `
 1. Append glossary according to your configuration:
 
 ```csv
-payment_app_widget.validation.quote_is_empty, Quote is empty.,en_US
-payment_app_widget.validation.quote_is_empty, Angebot ist leer.,de_DE
+payment_app_widget.validation.quote_is_empty,Quote is empty.,en_US
+payment_app_widget.validation.quote_is_empty,Angebot ist leer.,de_DE
 payment_app_widget.error.payment_failed,Payment failed,en_US
 payment_app_widget.error.payment_failed,Zahlung fehlgeschlagen,de_DE
 payment_app_widget.error.incorrect_quote,"Quote not found, session may have expired",en_US
@@ -709,7 +710,8 @@ Verify that the following widgets have been registered by adding the respective 
 {% endinfo_block %}
 
 3. Customize the address solution according to your needs.
-When the express checkout flow is enabled, the customer address does not always include the salutation field. 
+When the express checkout flow is enabled, the customer address does not always include all address fields used in Spryker, for example, the salutation field.
+
 For this purpose, the 'n/a' placeholder is used. By default, it is not shown.
 
 **ShopUi/Theme/default/components/molecules/display-address/display-address.twig**

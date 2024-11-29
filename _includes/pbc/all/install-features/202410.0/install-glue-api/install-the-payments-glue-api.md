@@ -194,8 +194,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 To verify `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, send a POST request to `https://glue.mysprykershop.com/checkout-data?include=payment-methods` and make sure that `checkout-data` resource has a relationship to the `payment-methods` resources.
 To verify `PaymentCustomersResourceRoutePlugin` is activated, send a POST request to `https://glue.mysprykershop.com/payment-customers` and make sure that you get a response with customer data.
 
-An example request for `https://glue.mysprykershop.com/payment-customers`:
-The `customerPaymentServiceProviderData` field is a placeholder for the data that should be returned by the PSP widget.
+Here is an example request of the PayOne PayPal express payment method for a guest or authorized customer to retrieve user data, such as addresses and other information, from the PSP: https://glue.mysprykershop.com/payment-customers.
 
 ```json
 {
@@ -203,10 +202,17 @@ The `customerPaymentServiceProviderData` field is a placeholder for the data tha
     "type": "payment-customers",
     "attributes": {
       "payment": {
-        "paymentMethodName": "dummyPayment",
-        "paymentProviderName": "dummyPaymentProvider"
+        "paymentMethodName": "paypal-express",
+        "paymentProviderName": "payone"
       },
-      "customerPaymentServiceProviderData": "customerPaymentServiceProviderData"
+      "customerPaymentServiceProviderData": {
+        "orderId": "order-id",
+        "workorderid": "workorder-id",
+        "transactionId": "transaction-id",
+        "token": "token",
+        "currency": "EUR",
+        "idCart": "d79a9c31-ed3d-57f5-958b-498e6b862ab3"
+      }
     }
   }
 }
@@ -218,53 +224,52 @@ An example of the response:
 
 ```json
 {
-  "data": {
-    "type": "payment-customers",
-    "id": "",
-    "attributes": {
-      "customer": {
-        "customerReference": "CUST-001",
-        "email": "customer@example.com",
-        "firstName": "John",
-        "lastName": "Doe",
-        "salutation": "Mr.",
-        "gender": "male",
-        "dateOfBirth": "1980-01-01",
-        "phone": "+1234567890",
-        "defaultBillingAddress": {
-          "salutation": "Mr.",
-          "firstName": "John",
-          "lastName": "Doe",
-          "address1": "123 Main St",
-          "address2": "Apt 4B",
-          "address3": "",
-          "zipCode": "12345",
-          "city": "Anytown",
-          "country": "USA",
-          "iso2Code": "US",
-          "company": "Example Corp",
-          "phone": "+1234567890",
-          "isDefaultShipping": false,
-          "isDefaultBilling": true
-        },
-        "defaultShippingAddress": {
-          "salutation": "Mr.",
-          "firstName": "John",
-          "lastName": "Doe",
-          "address1": "123 Main St",
-          "address2": "Apt 4B",
-          "address3": "",
-          "zipCode": "12345",
-          "city": "Anytown",
-          "country": "USA",
-          "iso2Code": "US",
-          "company": "Example Corp",
-          "phone": "+1234567890",
-          "isDefaultShipping": true,
-          "isDefaultBilling": false
-        }
+  "type": "payment-customers",
+  "id": null,
+  "attributes": {
+    "customer": {
+      "salutation": "n/a",
+      "firstName": "Spryker",
+      "lastName": "Systems",
+      "email": "eco-test+1@spryker.com",
+      "phone": "7886914965",
+      "company": null,
+      "billingAddress": {
+        "salutation": "n/a",
+        "firstName": "Eco",
+        "lastName": "Test",
+        "address1": "Julie-Wolfthorn-Strasse",
+        "address2": "1",
+        "address3": null,
+        "zipCode": "10115",
+        "city": "Berlin",
+        "country": "DE",
+        "iso2Code": "DE",
+        "company": null,
+        "phone": "7886914965",
+        "isDefaultShipping": null,
+        "isDefaultBilling": null
+      },
+      "shippingAddress": {
+        "salutation": "n/a",
+        "firstName": "Eco",
+        "lastName": "Test",
+        "address1": "Julie-Wolfthorn-Strasse",
+        "address2": "1",
+        "address3": null,
+        "zipCode": "10115",
+        "city": "Berlin",
+        "country": "DE",
+        "iso2Code": "DE",
+        "company": null,
+        "phone": "7886914965",
+        "isDefaultShipping": null,
+        "isDefaultBilling": null
       }
     }
+  },
+  "links": {
+    "self": "https://glue.de.aop-suite-testing.demo-spryker.com/payment-customers"
   }
 }
 ```

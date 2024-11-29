@@ -83,15 +83,15 @@ $config[OauthAuth0Constants::AUTH0_CLIENT_ID] = $aopAuthenticationConfiguration[
 $config[OauthAuth0Constants::AUTH0_CLIENT_SECRET] = $aopAuthenticationConfiguration['AUTH0_CLIENT_SECRET'] ?? '';
 
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
-    // Here we will define the transport map accordingly to APP (PBC)
+    // Here we will define the transport map accordingly to APP
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
-    // Here we will define the receiver transport map accordingly to APP (PBC)
+    // Here we will define the receiver transport map accordingly to APP
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
-    // Here we will define the sender transport map accordingly to APP (PBC)
+    // Here we will define the sender transport map accordingly to APP
 ];
 
 // -------------------------------- ACP AWS --------------------------------------
@@ -125,7 +125,7 @@ $config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_MESSAGE_BROKER]
 
 $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_ACP]
     = $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE]
-    = $config[Tax
+    = 'aop-app';
 
 $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_MESSAGE_BROKER] = 'aop-event-platform';
 

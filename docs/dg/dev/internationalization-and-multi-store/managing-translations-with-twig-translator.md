@@ -1,11 +1,9 @@
 ---
-title: Using translations
+title: Managing translations with Twig translator
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-using-translations
 originalArticleId: ff253743-a10f-4866-8047-a6c8357a88a7
-redirect_from:
-- /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
 ---
 
 The data stored in the key-value storage can be used for multiple purposes:
@@ -25,7 +23,7 @@ Example:
 * **key** : `demo.de_de.glossary.translation.catalog.next`
 * **value** : `weiter`
 
-```php
+```twig
 <div class="catalog__pagination">
     <button class="pagination__button js-pagination-prev">{% raw %}{{{% endraw %} 'catalog.prev' | trans {% raw %}}}{% endraw %}</button>
     <button class="pagination__button js-pagination-next">{% raw %}{{{% endraw %} 'catalog.next' | trans {% raw %}}}{% endraw %}</button>

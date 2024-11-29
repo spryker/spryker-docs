@@ -1,6 +1,6 @@
 ---
 title: Upgrade the CmsBlockCategoryConnector module
-description: Use the guide to update versions to the newer ones of the CMS Block Category Connector module.
+description: Use the guide to migrate the  Spryker CMS block category connector module versions to the newer ones.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cms-block-category-connector

@@ -1,6 +1,6 @@
 ---
 title: Add content items to CMS blocks
-description: Learn how to add content items to CMS pages in the Back Office
+description: Learn how to add content items to CMS pages in the Spryker Cloud Commerce OS Back Office
 last_updated: Oct 22, 2022
 template: back-office-user-guide-template
 redirect_from:

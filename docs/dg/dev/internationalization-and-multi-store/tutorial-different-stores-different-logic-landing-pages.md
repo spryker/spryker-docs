@@ -22,7 +22,7 @@ Spryker lets you have multi-stores and different logic for different stores in a
 
 Just extend the functionality for a specific store and postfix the module name with your store name.
 
-This tutorial shows how to implement different home pages for the Backend Office for different stores.
+This tutorial shows how to implement different home pages for the Back Office for different stores.
 
 {% info_block infoBox %}
 

@@ -1,6 +1,6 @@
 ---
 title: Export voucher codes
-description: Learn how to generate voucher codes in the Back Office.
+description: Learn how to generate and manage voucher codes in the Spryker Cloud Commerce OS back office.
 template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: Create navigation nodes
-description: Learn how to create navigation nodes in the Back Office.
+description: Learn the different types of navigation nodes and how to create navigation nodes in the Spryker Cloud Commerce OS Back Office.
 last_updated: Nov 22, 2022
 template: back-office-user-guide-template
 redirect_from:

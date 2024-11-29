@@ -1,5 +1,6 @@
 ---
 title: Customer Relationship Management
+description: Learn how to create and manage customers and understand about Spryker's Customer relationship management module within Spryker Cloud Commerce OS.
 last_updated: Feb 03, 2023
 template: concept-topic-template
 ---

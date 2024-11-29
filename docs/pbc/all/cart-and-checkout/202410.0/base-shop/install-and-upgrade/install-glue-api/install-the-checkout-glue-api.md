@@ -1,5 +1,6 @@
 ---
 title: Install the Checkout Glue API
+description: A guide on how to install the Spryker Checkout glue API feature in to your projects.
 template: feature-integration-guide-template
 last_updated: Dec 27, 2023
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-checkout-feature-integration

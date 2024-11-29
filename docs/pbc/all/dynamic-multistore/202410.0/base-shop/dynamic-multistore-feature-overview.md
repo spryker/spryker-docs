@@ -111,3 +111,7 @@ To avoid manually assigning entities in the Back Office, you can assign them usi
 ## Data import performance
 
 The number of stores affects data import speed: the more stores you have, the slower the data import. Importing products for 40 stores takes approximately 5 times longer than for 8 stores.
+
+## Limitations
+
+With Dynamic Multistore, the separated setup is only possible with stores belonging to different regions. To learn about setups, see [Multi-store setups](/docs/ca/dev/multi-store-setups/multi-store-setups.html)

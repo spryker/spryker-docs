@@ -1,5 +1,6 @@
 ---
 title: Install the Resource Sharing feature
+description: A guide on how to install the Spryker resource sharing feature within your Spryker projects.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: Upgrade the MultiCartPage module
-description: Use the guide to migrate to a newer version of the MultiCartPage module.
+description: A guide to help migrate and upgrade to a newer version of the Spryker MultiCartPage module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-multi-cart-page

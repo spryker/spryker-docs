@@ -1,6 +1,6 @@
 ---
 title: View customers
-description: Learn how to view customers in the Back Office.
+description: Learn how you can view and explore all of your customers in the Spryker Back Office.
 template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

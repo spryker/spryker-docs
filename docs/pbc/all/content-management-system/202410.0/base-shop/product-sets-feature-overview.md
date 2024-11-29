@@ -1,6 +1,6 @@
 ---
 title: Product Sets feature overview
-description: Learn about the modules that build up the Product Set feature
+description: An overview of the Spryker product sets feature, allowing you to create a set of products to showcase to your customers.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-sets-feature-overview

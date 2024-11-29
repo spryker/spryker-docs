@@ -1,6 +1,6 @@
 ---
 title: Create abstract product list content items
-description: Learn how to create abstract product list content items in the Back Office.
+description: Learn how to create and manage abstract product list content items in the Spryker Cloud Commerce OS Back Office.
 last_updated: Oct 22, 2022
 template: back-office-user-guide-template
 redirect_from:

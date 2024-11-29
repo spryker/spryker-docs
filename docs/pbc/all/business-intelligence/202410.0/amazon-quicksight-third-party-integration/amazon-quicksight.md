@@ -87,7 +87,7 @@ User roles define what assets a user has access to, including the following:
 * Analyses
 * Dashboards
 * Datasets
-* Datasources
+* Data sources
 
 When working with analytics, users can have the following roles:
 * Author: can view, create, and edit assets.
@@ -116,28 +116,28 @@ The default dashboard contains the following sheets.
 <details>
   <summary>Visuals in the sales sheet</summary>
 
-| Visual                              | Visual Type    |
-| ----------------------------------- | -------------- |
-| Total Sales                         | KPI            |
-| Total Orders                        | Table          |
-| Total Canceled                      | KPI            |
-| Cancelation Rate                    | Donut chart    |
-| Return Rate                         | Donut chart    |
-| "Waiting for Return" Order Items    | KPI            |
-| Average Fulllment Time in Hours     | KPI            |
-| Order Items by Status               | Donut chart    |
-| Number of Orders                    | Line chart     |
-| Order Value and Discounts           | Bar chart      |
-| Average Order Value                 | Bar chart      |
-| Average Order Size                  | Bar chart      |
-| Applied Discount Value              | Table          |
-| Payment Methods                     | Pie chart      |
-| Shipping Methods                    | Pie chart      |
-| Sales by Top Brands                 | Tree map chart |
-| Sales by Product Category           | Donut chart    |
-| Sales over time by Product Category | Line chart     |
-| Order Item Status by Customer       | Table          |
-| Order Items by Status               | Table          |
+  | Visual                              | Visual Type    | Business Value                                                                                                                                                                      | Actionable Insight                                                                                                                     |
+  | ----------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+  | Total Sales                         | KPI            | Indicates overall business revenue and helps track growth or identify trends.                                                                                                       | Track overall revenue trends. If growth slows, evaluate pricing strategies, marketing efforts, or product performance.                 |
+  | Total Orders                        | Table          | Reflects customer activity and signals demand and operational performance.                                                                                                          | Monitor order volume to measure demand. Sudden changes may indicate issues with pricing, stock availability, or competition.           |
+  | Total Canceled                      | KPI            | Quantifies the financial loss due to order cancellations, helping assess the monetary impact of cancellations and identify trends or root causes                                    | Analyze canceled order trends to identify common causes like shipping delays or inventory shortages and take corrective action.        |
+  | Cancelation Rate                    | Donut chart    | Reveals issues in inventory, delivery, or customer decision-making.                                                                                                                 | Investigate and reduce factors causing high cancellation rates, such as unclear product descriptions or lack of customer support.      |
+  | Return Rate                         | Donut chart    | Highlights product quality or customer dissatisfaction issues.                                                                                                                      | Identify patterns in high return rates and address them by improving product quality, descriptions, or customer expectations.          |
+  | "Waiting for Return" Order Items    | KPI            | Tracks pending returns, aiding better inventory and refund management.                                                                                                              | Monitor pending returns to ensure timely processing and better inventory management.                                                   |
+  | Average Fulllment Time in Hours     | KPI            | Measures operational efficiency and impacts customer satisfaction.                                                                                                                  | Reduce fulfillment times by streamlining logistics, optimizing warehouse operations, or enhancing coordination with shipping partners. |
+  | Order Items by Status               | Donut chart    | Provides insight into order processing and highlights bottlenecks.                                                                                                                  | Identify bottlenecks in order processing and implement targeted solutions to streamline the fulfillment pipeline.                      |
+  | Number of Orders                    | Line chart     | Provides a visual representation of order trends over time, helping identify seasonality, promotional effectiveness, or shifts in customer demand.                                  | Use order volume trends to assess promotional effectiveness or customer demand across periods.                                         |
+  | Order Value and Discounts           | Bar chart      | Tracks revenue per order while accounting for promotional costs.                                                                                                                    | Evaluate the financial impact of discounts on revenue. Adjust promotional strategies if discounts are eroding margins excessively.     |
+  | Average Order Value                 | Bar chart      | Indicates customer spending per order, revealing purchasing behavior.                                                                                                               | Boost average order value through upselling, bundling, or offering free shipping thresholds.                                           |
+  | Average Order Size                  | Bar chart      | Reflects the number of items per order, showing cross-sell or upsell effectiveness.                                                                                                 | Monitor the number of items per order. Encourage customers to add more products through cross-sell campaigns or discounts.             |
+  | Applied Discount Value              | Table          | Assesses the financial impact of discounts and promotional campaigns.                                                                                                               | Assess the effectiveness of discounts. Focus on high-impact promotions that drive sales without significantly reducing profitability.  |
+  | Payment Methods                     | Pie chart      | Provides insights into customer payment preferences, aiding optimization.                                                                                                           | Analyze customer payment preferences to optimize checkout processes and ensure support for popular payment options.                    |
+  | Shipping Methods                    | Pie chart      | Tracks delivery preferences, helping improve logistics offerings.                                                                                                                   | Adjust shipping options based on customer preferences to improve conversion rates and satisfaction.                                    |
+  | Sales by Top Brands                 | Tree map chart | Identifies high-performing brands for inventory and marketing optimization.                                                                                                         | Promote high-performing brands and focus marketing efforts on increasing visibility for underperforming brands with potential.         |
+  | Sales by Product Category           | Donut chart    | Highlights popular categories to adjust product strategies.                                                                                                                         | Refine product category offerings by investing in high-performing categories and reassessing the strategy for underperforming ones.    |
+  | Sales over time by Product Category | Line chart     | Reveals seasonal trends and demand fluctuations per category.                                                                                                                       | Identify seasonal trends and plan inventory, marketing, and promotions accordingly to maximize sales during peak times.                |
+  | Order Item Status by Customer       | Table          | Identifies issues or patterns related to specific customers.                                                                                                                        | Monitor customer-specific order issues to provide personalized support and improve satisfaction for at-risk customers.                 |
+  | Order Items by Status               | Table          | Tracks the processing stages (e.g., pending, shipped, delivered) of individual items, enabling identification of bottlenecks, delays, or inefficiencies in the fulfillment process. | Evaluate operational efficiency and resolve delays at specific stages of the fulfillment process, like packing or shipping.            |
 
 </details>
 
@@ -151,20 +151,20 @@ The default dashboard contains the following sheets.
 <details>
   <summary>Visuals in the products sheet</summary>
 
-| Visual                                      | Visual Type |
-| ------------------------------------------- | ----------- |
-| Ratio of Active Concrete Products           | Gauge       |
-| Product Availability                        | Pie chart   |
-| Top Products Sold by Quantity               | Bar chart   |
-| Top Products Sold by Revenue incl. Discount | Bar chart   |
-| Top Products Returned by Quantity           | Bar chart   |
-| Products per Category                       | Bar chart   |
-| Not Active Abstract Products per Category   | Donut chart |
-| Top Products in Orders                      | Table       |
-| Top Product in Carts of Logged-in Customers | Table       |
-| Top Product in Shopping Lists               | Table       |
-| Not Available Products                      | Table       |
-| Concrete Products                           | Table       |
+  | Visual                                      | Visual Type | Business Value                                                                                       | Actionable Insight                                                                                                                                               |
+  | ------------------------------------------- | ----------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | Ratio of Active Concrete Products           | Gauge       | Ensures a high percentage of available products for sale, reducing missed revenue opportunities.     | Monitor the ratio to ensure sufficient product availability. If low, focus on reactivating inactive products or onboarding new inventory.                        |
+  | Product Availability                        | Pie chart   | Tracks inventory health, minimizing out-of-stock situations.                                         | Identify products frequently out of stock and improve inventory management or supplier reliability to reduce missed sales.                                       |
+  | Top Products Sold by Quantity               | Bar chart   | Identifies bestsellers for marketing and inventory focus.                                            | Focus marketing campaigns and inventory prioritization on high-demand products to maximize revenue and customer satisfaction.                                    |
+  | Top Products Sold by Revenue incl. Discount | Bar chart   | Highlights high-revenue products, factoring in discount impact.                                      | Assess the effectiveness of discounts in driving revenue. Use insights to refine pricing and promotional strategies for top-selling items.                       |
+  | Top Products Returned by Quantity           | Bar chart   | Uncovers quality issues or customer dissatisfaction with specific products.                          | Investigate reasons for high return rates, such as quality or misaligned customer expectations, and address them through better quality control or descriptions. |
+  | Products per Category                       | Bar chart   | Evaluates category diversity and completeness.                                                       | Ensure balanced category distribution. If certain categories are underrepresented, encourage merchants to expand their catalog.                                  |
+  | Not Active Abstract Products per Category   | Donut chart | Flags inactive products for inventory optimization.                                                  | Identify inactive product categories and either reactivate or phase out underperforming categories to optimize the catalog.                                      |
+  | Top Products in Orders                      | Table       | Identifies frequently purchased products for cross-selling.                                          | Highlight frequently ordered items to create bundling opportunities or improve marketing efforts for similar products.                                           |
+  | Top Product in Carts of Logged-in Customers | Table       | Helps target marketing campaigns for high-interest products.                                         | Target cart abandonment campaigns with discounts or reminders for high-interest products to convert these into purchases.                                        |
+  | Top Product in Shopping Lists               | Table       | Tracks potential future purchases for upselling opportunities.                                       | Use shopping list data to anticipate future demand and strategically adjust inventory or pricing for these products.                                             |
+  | Not Available Products                      | Table       | Highlights inventory gaps, reducing potential lost sales.                                            | Track unavailable products to minimize stockouts. Work with suppliers to ensure critical items are consistently in stock.                                        |
+  | Concrete Products                           | Table       | Shows the table with concrete products to improve the user experience working with the product data. | Monitor the performance and availability of specific SKUs. Focus on optimizing inventory for high-performing or trending products.                               |
 
 
 </details>
@@ -181,18 +181,17 @@ Track the following customer metrics:
 <details>
   <summary>Visuals in the customers sheet</summary>
 
-| Visual                         | Visual Type |
-| ------------------------------ | ----------- |
-| Number of Customers            | KPI         |
-| Customers by Gender            | Pie chart   |
-| Number of Active Companies     | Gauge       |
-| Customers by Order Value       | Bar chart   |
-| Customers by Number of Orders  | Bar chart   |
-| Customers by Location          | Map         |
-| Customers by Registration Date | Line chart  |
-| Companies by Order Value       | Bar chart   |
-| Companies by Number of Orders  | Bar chart   |
-| Number of Merchants            | KPI         |
+  | Visual                         | Visual Type | Business Value                                                       | Actionable Insight                                                                                                                                        |
+  | ------------------------------ | ----------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | Number of Customers            | KPI         | Reflects overall reach and customer base growth.                     | Track customer base growth over time. If growth is slow, reassess marketing strategies or loyalty programs to attract and retain more customers.          |
+  | Customers by Gender            | Pie chart   | Provides demographic insights for targeted marketing.                | Use gender distribution to refine marketing campaigns and product offerings tailored to your primary customer demographic.                                |
+  | Number of Active Companies     | Gauge       | Tracks engagement in B2B scenarios.                                  | Identify inactive business accounts and implement engagement campaigns, such as B2B-specific discounts or targeted outreach.                              |
+  | Customers by Order Value       | Bar chart   | Identifies high-value customers for loyalty or premium services.     | Focus retention efforts and exclusive promotions on high-value customers to maximize lifetime value and build loyalty.                                    |
+  | Customers by Number of Orders  | Bar chart   | Reveals repeat customers and opportunities for retention strategies. | Identify repeat customers and design loyalty programs or personalized discounts to further encourage frequent purchases.                                  |
+  | Customers by Location          | Map         | Helps focus regional marketing or logistical optimization.           | Optimize regional marketing efforts and shipping logistics by identifying high-demand areas. Consider expanding offerings in underserved regions.         |
+  | Customers by Registration Date | Line chart  | Tracks acquisition trends over time.                                 | Analyze customer acquisition trends over time. Use insights to replicate successful campaigns or refine acquisition strategies during low-growth periods. |
+  | Companies by Order Value       | Bar chart   | Identifies top B2B clients for strategic relationship building.      | Develop tailored relationship strategies for high-value business customers, such as personalized account management or premium service options.           |
+  | Companies by Number of Orders  | Bar chart   | Highlights active business clients for retention efforts.            | Identify frequently ordering businesses and offer incentives like volume discounts or preferred shipping rates to enhance retention.                      |
 
 
 </details>
@@ -205,22 +204,23 @@ Track the following customer metrics:
 <details>
   <summary>Visuals in the marketplace sheet</summary>
 
-| Visual                                   | Visual Type |
-| ---------------------------------------- | ----------- |
-| Merchants Waiting for Approval           | Table       |
-| Merchant Online Status                   | Pie chart   |
-| Total Commissions                        | KPI         |
-| Merchants by Order Value                 | Bar chart   |
-| Merchants by Number of Orders            | Bar chart   |
-| Merchants by Number of Abstract Products | Bar chart   |
-| Merchants by Number of Product Offers    | Bar chart   |
-| Merchant Product Approval Status         | Donut chart |
-| Merchant Product Offer Approval Status   | Donut chart |
-| Commission by Merchant                   | Bar chart   |
-| Commission by Product Category           | Bar chart   |
-| Commission Value                         | Table       |
-| Merchant Order Items by Status           | Pie chart   |
-| Merchants by Registration Date           | Line chart  |
+  | Visual                                   | Visual Type | Business Value                                                                                                                                                  | Actionable Insight                                                                                                                                               |
+  | ---------------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | Number of Merchants                      | KPI         | Tracks marketplace growth and merchant diversity.                                                                                                               | Monitor the growth of marketplace participants. If growth is stagnant, adjust merchant acquisition strategies or improve onboarding experiences.                 |
+  | Merchants Waiting for Approval           | Table       | Helps streamline onboarding processes.                                                                                                                          | Identify bottlenecks in the approval process and implement faster verification workflows or automate routine checks to reduce delays.                            |
+  | Merchant Online Status                   | Pie chart   | Monitors merchant activity for marketplace health.                                                                                                              | Track inactive merchants and deploy reactivation campaigns, offering incentives, training, or reminders to encourage engagement.                                 |
+  | Total Commissions                        | KPI         | Measures revenue generated from marketplace commissions.                                                                                                        | Regularly evaluate commission policies to ensure profitability while remaining competitive. Use trends to forecast future marketplace earnings.                  |
+  | Merchants by Order Value                 | Bar chart   | Identifies high-performing merchants for partnerships.                                                                                                          | Identify high-performing merchants and provide exclusive benefits like marketing support or reduced commissions to strengthen partnerships.                      |
+  | Merchants by Number of Orders            | Bar chart   | Highlights active merchants for retention and optimization.                                                                                                     | Assist low-order-volume merchants by providing sales analytics, customer behavior insights, or promotional opportunities.                                        |
+  | Merchants by Number of Abstract Products | Bar chart   | Reflects inventory diversity per merchant.                                                                                                                      | Encourage merchants with low product counts to expand their offerings, providing tools or guides to simplify product listing.                                    |
+  | Merchants by Number of Product Offers    | Bar chart   | Indicates competitive variety offered by merchants.                                                                                                             | Analyze product diversity trends. Support merchants with fewer offers to list more products, enhancing marketplace variety.                                      |
+  | Merchant Product Approval Status         | Donut chart | Tracks pending product approvals to maintain catalog health.                                                                                                    | Accelerate approval workflows by standardizing guidelines or automating common checks, ensuring products go live quicker.                                        |
+  | Merchant Product Offer Approval Status   | Donut chart | Ensures timely processing of merchant offers.                                                                                                                   | Optimize product offer review processes to reduce delays, helping merchants stay competitive and responsive to customer demands.                                 |
+  | Commission by Merchant                   | Bar chart   | Tracks individual merchant contribution to revenue.                                                                                                             | Use commission data to segment merchants and offer performance-based incentives or support to underperforming merchants.                                         |
+  | Commission by Product Category           | Bar chart   | Highlights lucrative categories for commission revenue.                                                                                                         | Identify high-commission categories and prioritize them in marketing efforts. Consider adjusting commission rates for underperforming categories to drive sales. |
+  | Commission Value                         | Table       | Monitors overall commission revenue health.                                                                                                                     | Analyze trends in commission growth or decline to identify risks or opportunities. Adjust commission structures to balance revenue and merchant satisfaction.    |
+  | Merchant Order Items by Status           | Pie chart   | Tracks merchant-specific order fulfillment performance.                                                                                                         | Detect fulfillment issues (e.g., pending or delayed items) by merchant and address them with process optimizations or additional support.                        |
+  | Merchants by Registration Date           | Line chart  | Visualizes the rate of merchant onboarding over time, helping assess growth trends, evaluate marketing efforts, and identify periods of high or low engagement. | Assess periods of high registration to replicate successful campaigns. Address periods of low sign-ups by analyzing and resolving barriers.                      |
 
 </details>
 
@@ -228,7 +228,7 @@ Track the following customer metrics:
 ## Exporting data
 
 
-When you need to share analytics data with users outside of Back Office, you can share individual visuals or whole analyses.
+When you need to share analytics data with users outside of Back Office, you can export individual visuals or whole analyses.
 
 For instructions, see the following docs:
 
@@ -244,8 +244,10 @@ Sometimes you might want to start from scratch and get a fresh analytics account
 
 {% info_block warningBox %}
 
-Resetting analytics returns all default assets to the default state, erasing your changes. This recreates the default assets from scratch.
-The user initiating the reset becomes the ownes of the default assets, with all other users losing access to them. All custom assets created by other authors will remain in their ownership.
+* Resetting Analytics returns all default assets, such as dashboards, analyses, and datasets, to their original state, erasing any changes you've made.
+* The user performing the reset becomes the owner of the default assets, and all other users lose access to them.
+* Custom assets created by other users remain under their ownership.
+* Custom analyses will lose access to the default datasets. If the default datasets are used in custom analyses, duplicate the datasets and configure the analyses to use the copies. For instructions, see [Duplicating datasets](https://docs.aws.amazon.com/quicksight/latest/user/duplicate-a-data-set.html).
 
 {% endinfo_block %}
 

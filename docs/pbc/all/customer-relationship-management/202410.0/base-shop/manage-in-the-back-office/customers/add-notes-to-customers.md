@@ -1,6 +1,6 @@
 ---
 title: Add notes to customers
-description: Learn how to add notes to customers in the Back Office.
+description: Learn how to add notes to your customers in the Spryker Cloud Commerce OS Back Office.
 template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: Install the CMS feature + Dynamic Multistore
-description: Learn how to install the CMS feature + Dynamic Multistore.
+description: Learn how to install the CMS feature + Dynamic Multistore in to your Spryker Projects.
 last_updated: Apr 25, 2023
 template: feature-integration-guide-template
 ---

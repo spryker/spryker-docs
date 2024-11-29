@@ -85,7 +85,7 @@ entries:
       - title: Setup of new indexes throws an exception
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
       - title: Unable to bring up Mutagen Compose sidecar service
-        url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/unable-to-bring-up-mutagen-compose-sidecar-service.html        
+        url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/unable-to-bring-up-mutagen-compose-sidecar-service.html
       - title: Vendor folder synchronization error
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
 
@@ -905,6 +905,22 @@ entries:
         url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-migrate-database.html
       - title: "Finilize the migration"
         url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-finalize-the-migration.html
+
+
+  - title: Internationalization and multi-store
+    nested:
+      - title: Handling internationalization
+        url: /docs/dg/dev/internationalization-and-multi-store/handling-internationalization.html
+      - title: Managing glossary keys
+        url: /docs/dg/dev/internationalization-and-multi-store/managing-glossary-keys.html
+      - title: Set up multiple stores
+        url: /docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html
+      - title: Setting up a multi-language shop
+        url: /docs/dg/dev/internationalization-and-multi-store/setting-up-a-multi-language-shop.html
+      - title: "Tutorial: Different stores, different logic - landing pages"
+        url: /docs/dg/dev/internationalization-and-multi-store/tutorial-different-stores-different-logic-landing-pages.html
+      - title: Managing translations with Twig translator
+        url: /docs/dg/dev/internationalization-and-multi-store/managing-translations-with-twig-translator.html
 
   - title: Integrate and configure
     url: /docs/dg/dev/integrate-and-configure/integrate-and-configure.html

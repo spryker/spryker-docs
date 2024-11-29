@@ -1,5 +1,6 @@
 ---
 title: Using CMS blocks in content
+description: Discover how to effectively use CMS blocks in content within Spryker Cloud Commerce OS, enabling enhanced content customization for your Spryker Project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-use-cms-blocks

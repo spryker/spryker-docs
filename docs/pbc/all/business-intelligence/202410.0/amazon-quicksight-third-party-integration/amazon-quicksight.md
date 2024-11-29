@@ -240,15 +240,14 @@ For instructions, see the following docs:
 ## Resetting analytics
 
 
-If you want to start fresh with a new setup in Analytics, keep these critical points in mind:
+Sometimes you might want to start from scratch and get a fresh analytics account. Resetting analytics removes all assets and returns your account to the default state.
 
 {% info_block warningBox %}
-
 
 * Resetting Analytics returns all default assets, such as dashboards, analyses, and datasets, to their original state, erasing any changes you've made.
 * The user performing the reset becomes the owner of the default assets, and all other users lose access to them.
 * Custom assets created by other users remain under their ownership.
-* Custom analyses will lose access to the default datasets. If the default datasets are used in custom analyses, duplicate the datasets and configure the analyses to use the copies.
+* Custom analyses will lose access to the default datasets. If the default datasets are used in custom analyses, duplicate the datasets and configure the analyses to use the copies. For instructions, see [Duplicating datasets](https://docs.aws.amazon.com/quicksight/latest/user/duplicate-a-data-set.html).
 
 {% endinfo_block %}
 

@@ -138,25 +138,25 @@ In case of customizations, your codebase could have updated Yves templates on th
 It could be a reason that some events won't be triggered or triggered with incorrect data.
 
 #### Run the project
-* Set `TraceableEventWidgetConfig::isDebugEnabled()` set to `true`.  
-* Run the project locally or deploy to testing environment.
-* Open your Shop Storefront home page.
-* Open browser's development console and check "Preserve log" in the settings.
+1. Set `TraceableEventWidgetConfig::isDebugEnabled()` set to `true`.  
+2. Run the project locally or deploy to testing environment.
+3. Open your Shop Storefront home page.
+4. Open browser's development console and check "Preserve log" in the settings.
 
 #### Check triggered events and their payload
 
 When debug mode is enabled, you can see event logs in the console to help with inspection.
 
 Monitor the browser's console and execute following cases:
-* Open Home page
-  * (if home page has products) Click on a product - `PRODUCT_CLICK`
-  * (if home page has the add to cart button) Click on a product add to cart button - `ADD_TO_CART`
-* Open any product detail page (PDP), you should see events for the actions:
-  * `PAGE_LOAD` with sku of viewed product.
-  * `ADD_TO_CART` with product SKU, currency, price and quantity, when user clicks Add to cart.
-  * `ADD_TO_SHOPPING_LIST` with product SKU when user clicks Add to shopping list.
-  * `ADD_TO_WISHLIST` with product SKU when user clicks Add to wishlist list.
-* Open any Category page or Search results page:
+* Open the home page.
+  * If the home page has products, click on a product - `PRODUCT_CLICK`.
+  * If the home page has the add to cart button, click on it - `ADD_TO_CART`
+* Open a product's details page, you should see events for the actions:
+  * `PAGE_LOAD` with the product's SKU.
+  * `ADD_TO_CART` with the product's SKU, currency, price and quantity, when user clicks **Add to cart**.
+  * `ADD_TO_SHOPPING_LIST` with product SKU when user clicks **Add to shopping list**.
+  * `ADD_TO_WISHLIST` with product SKU when user clicks **Add to wishlist**.
+* Open a **Category** or **Search Results** page:
   * `QueryID` should be present in the event payload on this page type.
   * `PAGE_LOAD` with displayed products SKUs and displayed search filters.
   * `PRODUCT_CLICK` when user clicks on results.

@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 related:
 ---
 
-Amazon QuickSight is a powerful business intelligence tool. It's highly customizable and has many tools that can't be covered in one document. This document describes a typical use case and how to start working with analytics, but doesn't cover all the editing options.
+Amazon QuickSight is a powerful business intelligence tool and is highly customizable. This document describes a typical use case and how to start working with analytics.
 
 ## Prerequisites
 
@@ -29,7 +29,9 @@ Amazon QuickSight is shipped with a default analysis that is used for the defaul
 6. Click **SAVE**.
   This duplicates the analysis and opens it. Now you can safely create your own dashboards based on this analysis.
 
+## Back up the default datasets
 
+We also recommend duplicating default datasets and using the copies in the custom analyses. For instructions, see [Duplicating datasets](https://docs.aws.amazon.com/quicksight/latest/user/duplicate-a-data-set.html). You can also duplicate datasets by going to the Datasets table and clicking the three-dot icon for each dataset.
 
 ## Refresh data
 
@@ -156,5 +158,5 @@ To publish and share a dashboard, follow the steps:
 ## Learn more
 
 In this guide, you've followed a typical user journey of creating, collaborating, and presenting data in a meaningful way. Now you can play around with these tools or learn more using the following materials:
-* [Author Workshop](https://catalog.workshops.aws/quicksight/en-US/author-workshop)
 * [Amazon QuickSight - Getting Started](https://explore.skillbuilder.aws/learn/course/external/view/elearning/14908/getting-started-with-amazon-quicksight)
+* [Author Workshop](https://catalog.workshops.aws/quicksight/en-US/author-workshop)

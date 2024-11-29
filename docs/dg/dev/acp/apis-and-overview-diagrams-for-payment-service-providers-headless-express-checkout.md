@@ -13,6 +13,82 @@ The following diagram explains the flow of a headless payment page with an expre
 ![headless-express-checkout-flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.md/headless-express-checkout-flow.png)
 
 The main difference here is that the customer skips most of the default checkout steps such as enter addresses and goes directly to the payment step. The payment is created before the order is persisted. The data a customer usually enters during the checkout steps will be retrieved via the Glue `/payment-customer` API call. The returned data can then be used on SCOS side to update e.g. addresses.
+Here is an example request for the PayOne PayPal Express payment method, used by a guest or authorized customer to retrieve user data such as addresses and other information from the PSP: https://glue.mysprykershop.com/payment-customers.
+```json
+{
+  "data": {
+    "type": "payment-customers",
+    "attributes": {
+      "payment": {
+        "paymentMethodName": "paypal-express",
+        "paymentProviderName": "payone"
+      },
+      "customerPaymentServiceProviderData": {
+        "orderId": "order-id",
+        "workorderid": "workorder-id",
+        "transactionId": "transaction-id",
+        "token": "token",
+        "currency": "EUR",
+        "idCart": "d79a9c31-ed3d-57f5-958b-498e6b862ab3"
+      }
+    }
+  }
+}
+```
+
+An example of the response:
+
+```json
+{
+  "type": "payment-customers",
+  "id": null,
+  "attributes": {
+    "customer": {
+      "salutation": "n/a",
+      "firstName": "Spryker",
+      "lastName": "Systems",
+      "email": "eco-test+1@spryker.com",
+      "phone": "7886914965",
+      "company": null,
+      "billingAddress": {
+        "salutation": "n/a",
+        "firstName": "Eco",
+        "lastName": "Test",
+        "address1": "Julie-Wolfthorn-Strasse",
+        "address2": "1",
+        "address3": null,
+        "zipCode": "10115",
+        "city": "Berlin",
+        "country": "DE",
+        "iso2Code": "DE",
+        "company": null,
+        "phone": "7886914965",
+        "isDefaultShipping": null,
+        "isDefaultBilling": null
+      },
+      "shippingAddress": {
+        "salutation": "n/a",
+        "firstName": "Eco",
+        "lastName": "Test",
+        "address1": "Julie-Wolfthorn-Strasse",
+        "address2": "1",
+        "address3": null,
+        "zipCode": "10115",
+        "city": "Berlin",
+        "country": "DE",
+        "iso2Code": "DE",
+        "company": null,
+        "phone": "7886914965",
+        "isDefaultShipping": null,
+        "isDefaultBilling": null
+      }
+    }
+  },
+  "links": {
+    "self": "https://glue.de.aop-suite-testing.demo-spryker.com/payment-customers"
+  }
+}
+```
 
 ### Further reading
 

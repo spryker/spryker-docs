@@ -13,13 +13,9 @@ This document describes how to integrate [Algolia](/docs/pbc/all/search/{{page.v
 
 ## Prerequisites
 
-Before integrating Algolia, ensure the following prerequisites are met:
+- [Install prerequisites and enable ACP](/docs/dg/dev/acp/install-prerequisites-and-enable-acp.html)
 
-- Make sure your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
-
-- The Algolia app catalog page lists specific packages that must be installed or upgraded before you can use the Algolia app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Algolia**.
-
-Example:
+- In the Back Office, go to **Apps**-> **Algolia**. Install or update the packages required for Algolia. Example:
 
 ![list-of-algolia-modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/integrate-algolia/list-of-algolia-modules.png)
 

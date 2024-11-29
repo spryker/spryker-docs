@@ -244,10 +244,11 @@ If you want to start fresh with a new setup in Analytics, keep these critical po
 
 {% info_block warningBox %}
 
-* Resetting Analytics restores all default assets (dashboards, analyses, datasets) to their original state, erasing any modifications you've made.
+
+* Resetting Analytics returns all default assets, such as dashboards, analyses, and datasets, to their original state, erasing any changes you've made.
 * The user performing the reset becomes the owner of the default assets, and all other users lose access to them.
 * Custom assets created by other users remain under their ownership.
-* IMPORTANT: If you or other authors use default datasets in custom analyses, such analyses won't be able to access data for all visuals. To avoid this, duplicate the relevant default datasets and associate them with the custom analyses before proceeding.
+* Custom analyses will lose access to the default datasets. If the default datasets are used in custom analyses, duplicate the datasets and configure the analyses to use the copies.
 
 {% endinfo_block %}
 

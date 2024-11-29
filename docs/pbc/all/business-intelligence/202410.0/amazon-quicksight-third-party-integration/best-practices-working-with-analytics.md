@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 related:
 ---
 
-Amazon QuickSight is a powerful business intelligence tool. It's highly customizable and has many tools that can't be covered in one document. This document describes a typical use case and how to start working with analytics, but it doesn't cover all the editing options.
+Amazon QuickSight is a powerful business intelligence tool. It's highly customizable and has many tools that can't be covered in one document. This document describes a typical use case and how to start working with analytics, but doesn't cover all the editing options.
 
 ## Prerequisites
 
@@ -28,12 +28,6 @@ Amazon QuickSight is shipped with a default analysis that is used for the defaul
 5. In the **Save a copy** window, enter an **Analysis name**.
 6. Click **SAVE**.
   This duplicates the analysis and opens it. Now you can safely create your own dashboards based on this analysis.
-
-  {% info_block infoBox "" %}
-
-  Suppose you want or need to reset Analytics in the future, and you or other authors use default datasets in custom analyses. In that case, such analyses won't be able to access data for all visuals. To avoid this, duplicate the relevant default datasets and associate them with the custom analyses before proceeding.
-
-  {% endinfo_block %}  
 
 
 

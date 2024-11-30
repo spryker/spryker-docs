@@ -16,11 +16,9 @@ If your project version is below 202307.0, you need to update to the latest code
 1. Make sure that your custom Backoffice, MerchantPortal, Console Commands, Gateway, BackendAPI code do not use `StoreFacade::getCurrentStore()` as well as `StoreClient::getCurrentStore()` methods, they are no longer available in any other application except GlueStorefront and Storefront.
 2. Make sure that you custom console commands (and the places where they are executed) updated to the new format, see  [details](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/difference-between-modes.html#Deployment file difference).
 
-3. Be aware that after enabling Dynamic Multistore mode, your basic domain structure will change from store to region for all the applications(Example https://yves.de.mysprykershop.com => https://yves.eu.mysprykershop.com), make sure that it is expected. If external systems are impacted by this - necessary redirects are set, so SEO of your site is not impacted.
+3. After enabling Dynamic Multistore, the URLs of your shop will change from store to region context, for example–`https://yves.de.mysprykershop.com` will change to `https://yves.eu.mysprykershop.com`. Prepare your shop and third-party systems to handle this change. To avoid SEO impact, set up all the necessary redirects beforehand.
 
-4. The Dynamic Store feature itself does not require any database changes, in case you've already migrated to the latest demoshop version.
-
-5. Dynamic Multistore introduce some changes in RabbitMQ messages structure, so it is **important** that:
+4. Dynamic Multistore introduce some changes in RabbitMQ messages structure, so it is **important** that:
    - During server migration we do not have unprocessed messages in the queue. Make sure that all messages are processed **before** enabling Maintenance Mode.
    - Make sure that `Maintainance Mode` is enabled during migration to make sure that no new messages are added to the queue before the migration is finished.
    (Expected downtime is limited to the deployment time, normally it takes less than 1hr)

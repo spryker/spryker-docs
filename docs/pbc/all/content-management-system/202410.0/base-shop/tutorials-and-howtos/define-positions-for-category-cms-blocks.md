@@ -1,6 +1,6 @@
 ---
 title: Define positions of category CMS blocks
-description: Use the guide to customize the content field size in the CMS module.
+description: Learn how to define positions for Category CMS Blocks in Spryker Cloud Commerce OS, enabling precise placement of content in your Spryker online store.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 related:

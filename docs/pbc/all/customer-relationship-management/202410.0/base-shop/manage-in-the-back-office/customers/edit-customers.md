@@ -1,6 +1,6 @@
 ---
 title: Edit customers
-description: Learn how to edit customers in the Back Office.
+description: Learn how to edit customers information in the Spryker Cloud Commerce OS Back Office.
 template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

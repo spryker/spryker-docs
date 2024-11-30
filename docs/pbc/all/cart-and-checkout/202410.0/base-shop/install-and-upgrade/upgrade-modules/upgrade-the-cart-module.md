@@ -1,6 +1,6 @@
 ---
 title: Upgrade the Cart module
-description: Use the guide to update versions to the newer ones of the Cart module.
+description: Use this guide to help you upgrade the Spryker cart module from older versions to a newer one.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cart

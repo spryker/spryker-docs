@@ -1,6 +1,6 @@
 ---
 title: Create company roles
-description: Learn how to create company roles in the Back Office.
+description: Learn how to create and manage company roles in the Spryker Cloud Commerce OS Back Office.
 last_updated: Jul 6, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-roles

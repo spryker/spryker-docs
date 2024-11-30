@@ -1,6 +1,6 @@
 ---
 title: Reorder product sets
-description: Learn how to reorder product sets in the Back Office.
+description: Learn how to reorder product sets that you have configured within the Spryker Cloud Commerce OS Back Office.
 template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

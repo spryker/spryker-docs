@@ -29,7 +29,7 @@ We've divided the preparation into approximate timeframes, and you can adjust th
 
 ### Cloud environments
 
-- Connected systems are checked and prepared (project adjustments):
+- Project and connected systems are checked and prepared:
     - Double-check that all VPC peering and Site-to-Site VPN connections are monitored and secure. We don't usually monitor such connections with external parties.
     - Make sure that there is a network diagram that can be used to explain the setup quickly if the need arises.
     - Make sure that routing works as expected, and no internal resources are accidentally exposed via the Site-to-Site or VPC peering setup.
@@ -37,6 +37,7 @@ We've divided the preparation into approximate timeframes, and you can adjust th
     - Check your concepts for DOS and DDOS prevention or mitigation, and check with relevant vendors for products that fit your needs and are compatible with SCCOS.
     - Check your concepts for DOS and DDOS prevention in the Back office and Merchant portal. Add basic auth if applicable. For instructions on implementing basic auth, see [Configure basic .htaccess authentication](/docs/pbc/all/identity-access-management/{{site.version}}/configure-basic-htaccess-authentication.html)
 - The DNS strategy is defined. If you delegate DNS to Spryker, let us know the date on which to point the domain name to your Spryker project.
+- Web Application Firewalls (WAF) IPs, proxies, and other security and traffic filtering systems used to route traffic to Spryker are whitelisted. This prevents these systems to be accidentally blocked by Spryker security systems. You can request IPs to be whitelisted via an Infrastructure Change Request on the [Support Portal](https://support.spryker.com/s/).
 
 {% info_block infoBox "DNS propagation" %}
 

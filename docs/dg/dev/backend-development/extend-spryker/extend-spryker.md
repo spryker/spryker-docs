@@ -1,6 +1,6 @@
 ---
 title: Extend Spryker
-description: This section lists documents inside the Extend Spryker section.
+description: Extend Spryker’s capabilities with custom features and integrations. This guide provides essential steps to enhance your ecommerce platform, ensuring flexibility and scalability through tailored solutions.
 last_updated: Oct 10, 2023
 template: concept-topic-template
 redirect_from:

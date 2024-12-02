@@ -19,7 +19,7 @@ It is good to have overall plan, detailing all stores that will be added in the 
 Always have a backup plan ready in case of issues during the deployment. This includes not only database backups but also considerations on all points you will find below, including the business side.
 
 ### Environment Preparation
-Prepare the development, staging, and production environments for a new store rollout. Make sure you don’t have additional functionality to be released on top or parallel development. This involves ensuring that teams are prepared and stakeholders are aware of the procedure.
+Prepare your production and non-production environments for a new store rollout. Make sure you don’t have additional functionality to be released on top or parallel development. This involves ensuring that teams are prepared and stakeholders are aware of the procedure.
 
 ### Repeatability
 If you plan to release more stores in the future, focus that this process is easily repeatable in the future. That includes creating detailed technical documentation, release procedure, and tickets (epics, stories, tasks) in your project management software. This can be a detailed script or checklist tailored to your project, covering all relevant steps, configurations, and integrations. This documentation will be invaluable for future deployments and troubleshooting.

@@ -1,6 +1,6 @@
 ---
 title: "Create Gui tables"
-description: This articles provides details how to create a new Gui table
+description: Learn how you can create a new Gui tables within your Spryker B2B Marketplace project.
 template: howto-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

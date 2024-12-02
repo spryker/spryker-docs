@@ -1,6 +1,6 @@
 ---
 title: Edit customer addresses
-description: Learn how to edit customer addresses in the Back Office.
+description: Learn how to edit customer addresses that are configured in the Spryker Back Office.
 template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

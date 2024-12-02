@@ -1,6 +1,6 @@
 ---
 title: Merchant Management
-description: Merchant Management PBC lets you manage merchant information
+description: Learn all about the Spryker Marketplace Merchant Management feature allowing you manage merchant information
 template: concept-topic-template
 last_updated: Nov 17, 2023
 ---

@@ -1,5 +1,6 @@
 ---
 title: Import Discount Management data
+description: Learn which files are used to import data realted to Discount Management module within your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/discounts

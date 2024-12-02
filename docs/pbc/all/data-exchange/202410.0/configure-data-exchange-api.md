@@ -1,6 +1,6 @@
 ---
 title: Configure Data Exchange API endpoints
-description: This guide shows how to configure the Data Exchange API endpoints.
+description: This guide shows how to create and configure the Data Exchange API endpoints in your Spryker Projects.
 last_updated: May 30, 2024
 template: howto-guide-template
 redirect_from:

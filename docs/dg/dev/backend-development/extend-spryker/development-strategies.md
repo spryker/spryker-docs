@@ -1,6 +1,6 @@
 ---
 title: Development strategies
-description: Development strategies that you can use when building a Spryker project.
+description: Explore effective development strategies for extending Spryker. This guide outlines key approaches to optimize your backend, ensuring scalability and maintainability while customizing your ecommerce platform to meet specific business needs.
 last_updated: Jan 28, 2022
 template: concept-topic-template
 redirect_from:

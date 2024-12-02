@@ -31,7 +31,7 @@ This feature also enables other Algolia premium features:
 1. Install new Spryker packages:
 
 ```bash
-composer require --with-dependencies spryker-shop/traceable-event-widget:^1.0.0
+composer require --with-dependencies spryker-shop/traceable-event-widget:^1.0.2
 ```
 if the command does now work, try it with `--with-all-dependencies` flag instead.
 
@@ -40,8 +40,9 @@ if the command does now work, try it with `--with-all-dependencies` flag instead
 
 ```bash
 composer update --with-dependencies spryker-shop/cart-page:^3.45.0 spryker-shop/catalog-page:^1.28.0 spryker-shop/checkout-page:^3.32.1 \
-spryker-shop/home-page:^1.2.0 spryker-shop/payment-page:^1.5.0 spryker-shop/product-detail-page:^3.22.1 spryker-shop/product-group-widget:^1.10.1 \
-spryker-shop/product-review-widget:^1.16.1 spryker-shop/product-set-detail-page:^1.11.0 spryker-shop/quick-order-page:^4.10.0
+spryker-shop/home-page:^1.2.0 spryker-shop/payment-page:^1.5.0 spryker-shop/product-detail-page:^3.23.0 spryker-shop/product-group-widget:^1.10.1 \
+spryker-shop/product-review-widget:^1.16.1 spryker-shop/product-set-detail-page:^1.11.0 spryker-shop/quick-order-page:^4.10.1 \
+spryker-shop/shop-ui:^1.82.0
 ```
 if the command does now work, try it with `--with-all-dependencies` flag instead.
 

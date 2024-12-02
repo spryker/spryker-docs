@@ -6,7 +6,6 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-fe
 originalArticleId: 54c8c994-968d-4a53-aab8-8642ef56ac57
 redirect_from:
-  - /link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-front-end.html
 related:
   - title: Implement prepayment

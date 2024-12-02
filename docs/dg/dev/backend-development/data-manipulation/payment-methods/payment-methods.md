@@ -1,6 +1,6 @@
 ---
 title: Payment methods
-description: how to implement payment methods in the Spryker SCOS back end
+description: Explore Spryker’s payment methods integration guide. Learn to implement, customize, and manage diverse payment options for seamless ecommerce operations.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/payment-methods.html

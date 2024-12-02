@@ -1,6 +1,6 @@
 ---
 title: Data Exchange
-description: General information about the data exchange options.
+description: Learn all about Spryker's data exchange options that you can use within your Spryker project.
 template: concept-topic-template
 last_updated: Dec 18, 2023
 ---

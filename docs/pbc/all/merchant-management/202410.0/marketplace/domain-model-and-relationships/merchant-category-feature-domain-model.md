@@ -1,7 +1,7 @@
 ---
 title: "Merchant Category feature: Domain model"
 last_updated: Apr 23, 2021
-description: Merchant categories allows grouping merchants by categories.
+description: Learn about Spryker Marketplace Merchant categories allows grouping merchants by categories within your Spryker B2B Project.
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/merchant-category-feature-walkthrough.html

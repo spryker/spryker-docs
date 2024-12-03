@@ -1,5 +1,6 @@
 ---
 title: "Import file details: glossary.csv"
+description: Learn how you can configure customer information using the Spryker glossary csv file in your Spryker Cloud Commerce OS projects.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-glossarycsv

@@ -1,5 +1,6 @@
 ---
 title: Spryker Core feature overview
+description: Learn all about the basis of all the functionality in Spryker with the Spryker Core features overview.
 last_updated: Jul 2, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-core

@@ -1,6 +1,6 @@
 ---
 title: Install and integrate Minubo
-description: Learn how to install and integrate Minubo
+description: Learn how to install and integrate Minubo into your Spryker Cloud Commerce OS store
 template: howto-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

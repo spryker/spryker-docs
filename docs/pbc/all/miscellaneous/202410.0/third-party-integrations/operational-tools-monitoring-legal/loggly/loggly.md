@@ -1,6 +1,6 @@
 ---
 title: Loggly
-description: Overview of the Loggly integration.
+description: Overview of the Spryker Partner Loggly and the Loggly integration in to your Spryker Cloud Commerce OS projects.
 template: concept-topic-template
 last_updated: Nov 17, 2023
 redirect_from:

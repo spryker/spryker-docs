@@ -1,6 +1,6 @@
 ---
 title: Live Chat Service
-description: Ensure that live chat helps their customers with new leads and
+description: Learn about improving service and helping customers with Spryker Partner Live Chat a perfect combination for your Spryker projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/live-chat-service

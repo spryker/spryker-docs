@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Add push notification subscriptions"
-description: Learn how to add push notification subscription using Glue API
+description: Learn how to add push notification subscription using Spryker Glue API to your Spryker Projects.
 last_updated: Dec 23, 2023
 template: glue-api-storefront-guide-template
 ---

@@ -1,6 +1,6 @@
 ---
 title: Installing and configuring Episerver
-description: Install and configure Episerver
+description: Learn how to install and configure Episerver within your Spryker Cloud Commerce OS Projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/episerver-installation-and-configuration

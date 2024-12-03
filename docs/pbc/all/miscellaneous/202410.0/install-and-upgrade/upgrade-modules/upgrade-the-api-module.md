@@ -1,5 +1,6 @@
 ---
 title: Upgrade the Api module
+description: Learn how you can upgrade the API Module within your Spryker Cloud Commerce OS Projects
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-api-module

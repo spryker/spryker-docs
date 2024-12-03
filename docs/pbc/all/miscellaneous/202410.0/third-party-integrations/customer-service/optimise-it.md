@@ -1,6 +1,6 @@
 ---
 title: optimise-it
-description: Integrate a custom-tailored chat solution - Optimise it, which can include integrations of messengers (WhatsApp, Facebook, Apple Business Chat), chatbots, video-chat, co-browsing, screen sharing into Spryker  Commerce OS.
+description: Integrate a custom-tailored chat solution - Optimise it, which can include integrations of messengers, chatbots, video-chat and more in to your Spryker project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/optimise-it

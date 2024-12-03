@@ -1,6 +1,6 @@
 ---
 title: Upgrade the Quote module
-description: Use the guide to learn how to update the Quote module to a newer version.
+description: Use the guide to learn how to update the Quote module to a newer version within your Spryker Projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quote

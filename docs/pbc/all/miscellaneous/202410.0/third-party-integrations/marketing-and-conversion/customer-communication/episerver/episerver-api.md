@@ -1,6 +1,6 @@
 ---
 title: Episerver API
-description: Learn about the API requests for Episerver in Spryker.
+description: Learn about the API requests for Episerver in your Spryker Cloud Commerce OS Projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/episerver-api-requests

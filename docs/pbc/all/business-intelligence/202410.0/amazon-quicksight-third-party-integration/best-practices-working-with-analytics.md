@@ -6,14 +6,14 @@ template: back-office-user-guide-template
 related:
 ---
 
-Amazon QuickSight is a powerful business intelligence tool and is highly customizable. This document describes a typical use case and how to start working with analytics.
+Amazon QuickSight is a highly customizable and powerful business intelligence tool. This document describes a typical use case and how to start working with analytics.
 
 ## Prerequisites
 
 [Set up Amazon QuickSight](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/set-up-amazon-quicksight.html)
 
 
-## Back up the default analysis
+## Optional: Back up the default analysis
 
 Amazon QuickSight is shipped with a default analysis that is used for the default dashboard. We recommend duplicating the default analysis so you can learn how to create your own dashboards and keep the default analysis as a backup. To do it, follow the steps:
 
@@ -29,9 +29,18 @@ Amazon QuickSight is shipped with a default analysis that is used for the defaul
 6. Click **SAVE**.
   This duplicates the analysis and opens it. Now you can safely create your own dashboards based on this analysis.
 
-## Back up the default datasets
+## Optional: Back up the default datasets
 
-We also recommend duplicating default datasets and using the copies in the custom analyses. For instructions, see [Duplicating datasets](https://docs.aws.amazon.com/quicksight/latest/user/duplicate-a-data-set.html). You can also duplicate datasets by going to the Datasets table and clicking the three-dot icon for each dataset.
+Amazon Quicksight comes with your project's data in default datasets. We recommend duplicating the default datasets and creating analyses based on the copies. To do it, follow the steps:
+
+1. On the **Analytics** page, go to **Datasets**.
+2. Next to a dataset, click the more options button and select **Duplicate**.
+  This opens the **Duplicate dataset** window.
+3. For **Duplicate dataset name**, enter a name for the duplicate.
+4. Click **Duplicate**.
+  This creates the dataset duplicate.
+5. Repeat steps 2-4 for all the other datasets.
+  After duplicating the datasets, you can use the duplicates and keep the original ones as a backup.
 
 ## Refresh data
 

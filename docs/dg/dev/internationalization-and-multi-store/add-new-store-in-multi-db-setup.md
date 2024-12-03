@@ -8,7 +8,11 @@ originalArticleId:
 redirect_from:
 ---
 
-Setting up a new store in an existing multi-DB environment requires a well-prepared plan, to avoid disrupting the data and operations of existing stores. This guide provides a detailed procedure to release a new store within a region that already hosts other stores, ensuring a non-destructive deployment.
+Setting up a new store in an existing multi-DB environment requires a carefully crafted plan to ensure that the data and operations of existing stores remain unaffected. This guide outlines a detailed procedure for launching a new store within a region that already hosts other stores, guaranteeing a seamless and safe deployment.
+
+{% info_block warningBox %}
+This guide is applicable in scenarios where store configurations and setups are managed programmatically through code. If you are utilizing the Dynamic Multistore feature to manage your stores via Backoffice, please refer to this {guide}(/docs/pbc/all/dynamic-multistore/202410.0/dynamic-multistore.html)
+{% endinfo_block %}
 
 ## Initial planning and best practices
 
@@ -47,7 +51,7 @@ If you plan to release more stores in the future, focus that this process is eas
 
 ## Step-by-Step Procedure to release a new store(s)
 
-Follow [this guideline](/docs/scos/dev/technical-enhancement-integration-guides/integrate-multi-database-logic.html#define-databases) as a generic technical guideline, which is a requirement from the cloud team, to successfully deploy your new store in a multi-db setup.
+Follow [this guideline](/docs/scos/dev/technical-enhancement-integration-guides/integrate-multi-database-logic.html#define-databases) as a generic technical guideline for defining new database(s), connecting them with new store(s) and adding necessary configuration.
 
 ### Local Setup
 #### New store configuration
@@ -61,11 +65,10 @@ Follow [this guideline](/docs/scos/dev/technical-enhancement-integration-guides/
 * Adjust the local environment setup as needed, including configurations and environment variables. Examples: frontend router configuration, code bucket configuration, creating new backoffice users. 
 * Document all the steps you have done, to make sure they are repeatable in the future.
 
-#### Running Initial Setup
+#### Running initial setup locally
 
-* Boot the new configurations using the appropriate setup tool. 
-* Execute commands to initialize the database and services for the new store. 
-* Verify that the new store’s database is correctly initialized with demo data.
+* Bootstrap your updated configuration and run your environment as usual, using {docker/sdk}(/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html#configure-and-start-the-instance) 
+* Verify that the new store’s database is correctly initialized and filled up with the demo data.
 
 #### Setting up additional deployment recipes
 
@@ -77,7 +80,9 @@ env:
   NEW_RELIC_ENABLED: 0
 command-timeout: 7200
 stores:
-  - { STORES_GO_HERE }
+  - { STORE-1 }
+  - { STORE-2 }
+  ...
 sections:
   init-storage:
     setup-search-create-sources:
@@ -95,7 +100,9 @@ env:
     NEW_RELIC_ENABLED: 0
 command-timeout: 7200
 stores:
-  - { STORES_GO_HERE }
+  - { STORE-1 }
+  - { STORE-2 }
+  ...
 sections:
     scheduler-clean:
         scheduler-clean:

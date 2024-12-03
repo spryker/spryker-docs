@@ -1,5 +1,6 @@
 ---
 title: "Glue API: Manage discounts via Glue API"
+description: Learn how you can manage discounts via the Spryker Glue API in your Spryker projects.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-promotional-items

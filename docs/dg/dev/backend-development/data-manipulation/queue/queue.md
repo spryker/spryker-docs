@@ -9,9 +9,8 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/queue/queue.html
 related:
   - title: Queue pool
-    link: docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html
-  - title: Upgrade the RabbitMQ module
-    link: docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
+    link: docs/dg/dev/backend-development/data-manipulation/queue/queue-pool.html
+
 ---
 
 ## Concepts

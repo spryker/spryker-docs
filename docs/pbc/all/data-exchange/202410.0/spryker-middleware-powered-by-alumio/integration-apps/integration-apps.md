@@ -1,6 +1,6 @@
 ---
 title: Integration Apps
-description: General information about the integration apps.
+description: Learn more about Spryker integration apps, what they are and how you can use them in your Spryker projects.
 template: concept-topic-template
 last_updated: Nov 23, 2023
 ---

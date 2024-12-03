@@ -1,6 +1,6 @@
 ---
 title: Upgrade the Oauth module
-description: Use the guide to update versions to the newer ones of the Oauth module.
+description: Learn how to migrate and update to a newer version of Oauth module from an older one in your Spryker project.
 last_updated: May 20, 2022
 template: module-migration-guide-template
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Add items with discounts to guest carts"
-description: Learn how to add items with discounts to guest carts via Glue API.
+description: Learn how to add items with discounts to guest carts via the Spryker Glue API.
 last_updated: July 29, 2022
 template: glue-api-storefront-guide-template
 redirect_from:

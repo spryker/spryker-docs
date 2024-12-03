@@ -1,6 +1,6 @@
 ---
 title: Discount Management
-description: Discount Management PBC lets you manage discounts
+description: Learn all about Discounts within Spryker Cloud Commerce OS and Spryker marketplace and how you can create and manage discounts through the Discount module in your Spryker projects.
 template: concept-topic-template
 redirect_from:
 - /docs/pbc/all/discount-management/202204.0/discount-management.html

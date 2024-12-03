@@ -1,6 +1,6 @@
 ---
 title: Integrate RabbitMQ headers in queue messages
-description: This document shows the RabbitMQ message usage with demo headers.
+description: Integrate RabbitMQ headers in your Spryker queue messages to enhance message handling. This guide provides steps to customize and manage headers for better messaging functionality in your ecommerce backend system.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/rabbitmq-headers-in-queue-messages
@@ -10,11 +10,9 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/queue/integrating-rabbitmq-headers-in-queue-messages.html
 related:
   - title: Queue
-    link: docs/scos/dev/back-end-development/data-manipulation/queue/queue.html
+    link: docs/dg/dev/backend-development/data-manipulation/queue/queue.html
   - title: Queue pool
-    link: docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html
-  - title: Upgrade the RabbitMQ module
-    link: docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
+    link: docs/dg/dev/backend-development/data-manipulation/queue/queue-pool.html
 ---
 
 The main goal of RabbitMQ headers in the Advanced Message Queuing Protocol (AMQP) message is to store additional information about the message. The following example shows the RabbitMQ message usage with demo headers.

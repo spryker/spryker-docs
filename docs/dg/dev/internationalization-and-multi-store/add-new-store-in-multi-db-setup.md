@@ -135,7 +135,7 @@ or
 You can also use your custom recipe following the examples above (see “Setting up additional deployment recipes “)
 
 #### Support Requests
-* Open a support request to apply the new configuration to the staging environment. Attach all necessary files and provide detailed deployment instructions. You can also have the necessary configuration in a specific branch of your repository
+* Open a support request to apply the new configuration to the environment. Attach deploy file and explain shortly expected changes, i.e. new DB should be created. In case you have the necessary configuration in a specific branch of your repository, provide a reference to it in the ticket, making sure support team has access to your code base.
 * Run the destructive deployment, assuring the right store(s) is specified.
 
 #### Deployment Execution

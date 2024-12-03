@@ -67,7 +67,11 @@ Follow [this guideline](/docs/scos/dev/technical-enhancement-integration-guides/
 
 #### Running initial setup locally
 
-* Bootstrap your updated configuration and run your environment as usual, using {docker/sdk}(/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html#configure-and-start-the-instance) 
+* Bootstrap your updated configuration and run your environment as usual:
+  ```bash
+  docker/sdk boot deploy.dev.yml
+  docker/sdk up
+  ```
 * Verify that the new store’s database is correctly initialized and filled up with the demo data.
 
 #### Setting up additional deployment recipes

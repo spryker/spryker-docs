@@ -311,7 +311,7 @@ For adding dynamic data, refer to the [API documentation](https://github.com/spr
 ##### Examples of the feature integration into Spryker demo shops
 
 - [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop/pull/595/files)
-- [B2C Marketplace Demo Shop](https://github.com/spryker-shop/b2c-demo-marketplace/pull/474)
+- [B2C Marketplace Demo Shop](https://github.com/spryker-shop/b2c-demo-marketplace/pull/474/files)
 - [B2B Demo Shop](https://github.com/spryker-shop/b2b-demo-shop/pull/542/files)
 - [B2B Marketplace Demo Shop](https://github.com/spryker-shop/b2b-demo-marketplace/pull/490/files)
 

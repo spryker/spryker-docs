@@ -98,15 +98,9 @@ npm ci && npm run yves
 console frontend:project:install-dependencies && console frontend:yves:build
 ```
 
-5. Check that required dependency is installed:
-```bash
-npm list search-insights
-```
-
-6. If the previous command returned `└── (empty)`, install `search-insights` manually:
+5. Install required `search-insights` dependency:
 ```bash
 npm i search-insights`.
-```
 
 
 ### Check your Yves's compatibility with new functionality

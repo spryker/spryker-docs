@@ -1,5 +1,6 @@
 ---
 title: "Import file details: gift_card_abstract_configuration.csv"
+description: Learn how to configure the Spryker Gift Card Abstract feature by importing data through the gift card abstract configuration csv file.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-gift-card-abstract-configurationcsv

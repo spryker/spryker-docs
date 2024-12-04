@@ -1,6 +1,6 @@
 ---
 title: Install the Cart + Shipment feature
-description: Learn how to install the Cart + Shipment feature in a Spryker project.
+description: Learn how to install the Spryker Cloud Commerce OS Cart and Shipment feature in to a Spryker project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 redirect_from:

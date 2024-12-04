@@ -1,5 +1,6 @@
 ---
 title: Manage customer access to Glue API resources
+description:  Learn how to manage customer access to Glue API resources in Spryker Cloud Commerce OS, ensuring secure and efficient resource control for your e-commerce store
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-access-to-glue-api-resources

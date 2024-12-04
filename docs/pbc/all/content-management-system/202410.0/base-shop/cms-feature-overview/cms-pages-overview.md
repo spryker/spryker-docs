@@ -1,6 +1,6 @@
 ---
 title: CMS Pages overview
-description: Summary of the CMS page functionality.
+description: An overview guide on the Spryker Cloud Commerce OS CMS pages functionality.
 last_updated: Jul 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/cms-pages-overview

@@ -1,6 +1,6 @@
 ---
 title: Create company units
-description: Learn how to create company units in the Back Office.
+description: Learn how to create company units in the Spryker Cloud Commerce Back Office.
 last_updated: Mar 20, 2024
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-units

@@ -1,6 +1,6 @@
 ---
 title: Install the Data Exchange API
-description: Learn how to install the Data Exchange API
+description: Learn how to install the Data Exchange API in to your Spryker project and enable seamless data integration with databases.
 last_updated: June 22, 2023
 template: feature-integration-guide-template
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: Content Management System
-description: Content Management System capability for managing content
+description: The Content Management System Feature within Spryker Cloud Commerce OS and Marketplace, a perfect way to manage your content based pages and items.
 last_updated: June 23, 2023
 template: concept-topic-template
 redirect_from:

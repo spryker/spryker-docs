@@ -1,5 +1,6 @@
 ---
 title: Upgrade the ContentGui module
+description: Learn how to upgrade to a newer version of the Spryker Content GUI module from an older one in your Spryker Project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-contentgui-201907

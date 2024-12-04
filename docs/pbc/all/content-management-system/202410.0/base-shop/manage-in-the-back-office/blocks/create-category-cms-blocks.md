@@ -1,6 +1,6 @@
 ---
 title: Create category CMS blocks
-description: Learn how to create category CMS blocks in the Back Office.
+description: Learn how to create and implement category CMS blocks in the Spryker Cloud Commerce OS Back Office.
 last_updated: June 2, 2022
 template: back-office-user-guide-template
 related:

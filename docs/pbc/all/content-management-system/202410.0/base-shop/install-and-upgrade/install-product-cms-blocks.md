@@ -1,6 +1,6 @@
 ---
 title: Install product CMS blocks
-description: Learn how to install product CMS blocks into a Spryker project.
+description: Learn how to install Spryker Cloud Commerce OS product CMS blocks into a Spryker project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/enabling-the-product-cms-block

@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Authenticating as a company user"
-description: Learn how to authenticate as a company user via Glue API.
+description: Learn how to authenticate as a Company user using the Spryker Glue API for your Spryker projects.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authenticating-as-a-company-user

@@ -1,5 +1,6 @@
 ---
 title: "Import file details: cms_block_store.csv"
+description: Understand the Spryker cms block store csv file to configure CMS Block Store information for your Spryker Shop.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-block-storecsv

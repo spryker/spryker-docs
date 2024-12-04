@@ -1,6 +1,6 @@
 ---
 title: "Import file details: content_navigation.csv"
-description: Description of the import file of the navigation content item.
+description: Learn about the Spryker content navigation csv file to configure content navigation information in your Spryker shop.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-content-navigationcsv

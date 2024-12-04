@@ -1,6 +1,6 @@
 ---
 title: "Marketplace: Import and export Order Management System data"
-description: Details about the data importers for Order Management System
+description: Details about the data importers for the Spryker Order Management System within your Spryker Marketplace project.
 last_updated: Jun 23, 2023
 template: concept-topic-template
 ---

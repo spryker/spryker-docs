@@ -53,5 +53,5 @@ To comply with this regulation, follow the steps:
 
 To comply with this regulation, follow the steps:
 
-3. To add safety information to the products of a specific manufacturer, create a CMS block and add the needed information. For instructions, see [Create CMS blocks](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html).
-4. Assign the block to a product slot and select the needed SKUs. For instructions, see [Assigning CMS blocks to slots](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/manage-in-the-back-office/manage-slots.html).
+1. To add safety information to the products of a specific manufacturer, create a CMS block and add the needed information. For instructions, see [Create CMS blocks](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html).
+2. Assign the block to a product slot and select the needed SKUs. For instructions, see [Assigning CMS blocks to slots](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/manage-in-the-back-office/manage-slots.html).

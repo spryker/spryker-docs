@@ -131,6 +131,27 @@ class CustomerConfig extends SprykerCustomerConfig
 }
 ```
 
+4. Optional: To speed-up the query response time for the customer registration, adjust the `CustomerConfig::isCustomerEmailValidationCaseSensitive()` to return `true`:
+
+```php
+<?php
+
+namespace Pyz\Zed\Customer;
+
+use Spryker\Zed\Customer\CustomerConfig as SprykerCustomerConfig;
+
+class CustomerConfig extends SprykerCustomerConfig
+{
+    /**
+     * @return bool
+     */
+    public function isCustomerEmailValidationCaseSensitive(): bool
+    {
+        return true;
+    }
+}
+```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the double opt-in is enabled by registering a new customer and receiving an email to confirm the registration.

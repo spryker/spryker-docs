@@ -1,6 +1,6 @@
 ---
 title: Upgrade the Discount module
-description: Use the guide to migrate to a newer version of the Discount module.
+description: Learn how to upgrade and migrate to a newer version of the Spryker Discount module in Spryker Cloud Commerce OS to a new version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-discount

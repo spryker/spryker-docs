@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve discounts in guest carts"
-description: Retrieve details about cart rules and vouchers in guest carts
+description: Learn how you can retrieve discounts in guest carts via the Spryker Glue API for your Spryker projects.
 last_updated: July 25, 2022
 template: glue-api-storefront-guide-template
 redirect_from:

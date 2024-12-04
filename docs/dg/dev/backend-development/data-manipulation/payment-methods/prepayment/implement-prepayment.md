@@ -1,6 +1,6 @@
 ---
 title: Implement prepayment
-description: This section describes how to add a prepayment payment method.
+description: Implement prepayment methods in Spryker with this comprehensive guide. Streamline payment processing and enhance your ecommerce backend with tailored solutions.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-implement-prepayment

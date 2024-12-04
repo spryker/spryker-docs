@@ -1,6 +1,6 @@
 ---
 title: Akeneo PIM Integration App
-description: Import products from Akeneo to Spryker with Akeneo PIM Integration App
+description: Learn how you can import products from Akeneo to your Spryker projects with Akeneo PIM Integration App
 last_updated: August 7, 2023
 template: concept-topic-template
 ---

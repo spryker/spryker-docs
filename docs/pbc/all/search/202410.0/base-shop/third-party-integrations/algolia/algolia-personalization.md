@@ -31,7 +31,7 @@ This feature also enables other Algolia premium features:
 1. Install new Spryker packages:
 
 ```bash
-composer require --with-dependencies spryker-shop/traceable-event-widget:^1.0.0
+composer require --with-dependencies spryker-shop/traceable-event-widget:^1.0.2
 ```
 if the command does now work, try it with `--with-all-dependencies` flag instead.
 
@@ -40,8 +40,9 @@ if the command does now work, try it with `--with-all-dependencies` flag instead
 
 ```bash
 composer update --with-dependencies spryker-shop/cart-page:^3.45.0 spryker-shop/catalog-page:^1.28.0 spryker-shop/checkout-page:^3.32.1 \
-spryker-shop/home-page:^1.2.0 spryker-shop/payment-page:^1.5.0 spryker-shop/product-detail-page:^3.22.1 spryker-shop/product-group-widget:^1.10.1 \
-spryker-shop/product-review-widget:^1.16.1 spryker-shop/product-set-detail-page:^1.11.0 spryker-shop/quick-order-page:^4.10.0
+spryker-shop/home-page:^1.2.0 spryker-shop/payment-page:^1.5.0 spryker-shop/product-detail-page:^3.23.0 spryker-shop/product-group-widget:^1.10.1 \
+spryker-shop/product-review-widget:^1.16.1 spryker-shop/product-set-detail-page:^1.11.0 spryker-shop/quick-order-page:^4.10.1 \
+spryker-shop/shop-ui:^1.82.0
 ```
 if the command does now work, try it with `--with-all-dependencies` flag instead.
 
@@ -97,15 +98,9 @@ npm ci && npm run yves
 console frontend:project:install-dependencies && console frontend:yves:build
 ```
 
-5. Check that required dependency is installed:
-```bash
-npm list search-insights
-```
-
-6. If the previous command returned `└── (empty)`, install `search-insights` manually:
+5. Install required `search-insights` dependency:
 ```bash
 npm i search-insights`.
-```
 
 
 ### Check your Yves's compatibility with new functionality
@@ -186,7 +181,7 @@ Spryker provides default configurations for built-in components. For new or modi
 {% raw %}{% endblock %}{% endraw %}
 ```
 
-Refer to the [API documentation](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md) for more details.
+Refer to the [API documentation](https://github.com/spryker-shop/traceable-event-widget/blob/master/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md) for more details.
 
 2. Check Event Selector
 
@@ -312,6 +307,15 @@ For adding dynamic data, refer to the [API documentation](https://github.com/spr
   }
 #}
 ```
+
+##### Examples of the feature integration into Spryker demo shops
+
+- [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop/pull/595/files)
+- [B2C Marketplace Demo Shop](https://github.com/spryker-shop/b2c-demo-marketplace/pull/474/files)
+- [B2B Demo Shop](https://github.com/spryker-shop/b2b-demo-shop/pull/542/files)
+- [B2B Marketplace Demo Shop](https://github.com/spryker-shop/b2b-demo-marketplace/pull/490/files)
+
+  
 
 ### Update website agreement text
 

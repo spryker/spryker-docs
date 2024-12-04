@@ -1,4 +1,4 @@
----
+r the request and mention that you would like---
 title: Configure Azure Pipelines
 description: Set up Azure Pipelines for CI/CD in Spryker Cloud Commerce OS, with steps for YAML configuration, testing, and connecting to an AWS repository.
 template: howto-guide-template
@@ -71,7 +71,7 @@ steps:
 ## Connecting Azure Pipelines to your project
 
 To connect Azure Pipelines with your AWS repository:
-1. On the [Support Portal](https://support.spryker.com), create a **Infrastructure Change Request/Access Management>Change** request. Request your AWS repository URL and credentials. to existing Parameter Store Variable for the request and mention that you would like to receive the AWS repository URL and credentials. Please link this documentation page with your request.
+1. On the [Support Portal](https://support.spryker.com), create a **Infrastructure Change Request/Access Management>Change** request for an existing Parameter Store Variable. In the request, link this document and request your AWS repository URL and credentials.
 
 2. Add the following to the end of `azure-pipelines.yml`:
 ```yaml
@@ -98,15 +98,15 @@ To connect Azure Pipelines with your AWS repository:
 
       displayName: 'Sync repository with AWS CodeCommit'
 ```
-For security reasons recommended not to hardcode variables, but to place them into the Azure DevOps group variables. In the example above create a group with the name `AWS_repo_credentials`:
 
-`$(AZURE_REPO_URL)`: URL of your Azure repository.
+3. For security reasons, we recommend adding variables to Azure DevOps group variables instead of hardcoding them. For the prior example, create a group with the name `AWS_repo_credentials` and the following variables:
 
-`$(AWS_REPO_URL)`: URL of the AWS repository you’ve received from support.
-
-`$(AWS_GIT_USERNAME)` and `$(AWS_GIT_PASSWORD)`: credentials you’ve received from support.
-
-`$(System.AccessToken)`: Azure devops internal variable to access current repo, it's also possible to use other auth, see azure devops documentation for additional information.
+| VARIABLE | DESCRIPTION |
+| - | - |
+| `$(AZURE_REPO_URL)` |  URL of your Azure repository. |
+| `$(AWS_REPO_URL)` |  URL of the AWS repository you’ve received from support. |
+| `$(AWS_GIT_USERNAME)` and `$(AWS_GIT_PASSWORD)` |  credentials you’ve received from support. |
+| `$(System.AccessToken)` |  Azure DevOps internal variable to access current repo.  it's also possible to use other auth, see azure devops documentation for additional information. |
 
 
 You’ve configured Azure pipelines.

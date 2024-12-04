@@ -256,6 +256,40 @@ Make sure that:
 
 {% endinfo_block %}
 
+7. Enable the cart clean up for the regular checkout flow.
+When customers start the regular checkout, the quote is cleaned up to allow them to restart the checkout process from the beginning.
+
+**src/Pyz/Zed/PaymentAppShipment/PaymentAppShipmentConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\PaymentAppShipment;
+
+use Generated\Shared\Transfer\QuoteTransfer;
+use SprykerShop\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin;
+use Spryker\Zed\PaymentAppShipment\PaymentAppShipmentConfig as SprykerPaymentAppShipmentConfig;
+
+class PaymentAppShipmentConfig extends SprykerPaymentAppShipmentConfig
+{
+    /**
+     * @return string
+     */
+    public function getExpressCheckoutStartPageRouteName(): string
+    {
+        return CheckoutPageRouteProviderPlugin::ROUTE_NAME_CHECKOUT_INDEX;
+    }
+}
+```
+Make sure that:
+* The quote is cleaned up when customers start the regular checkout:
+  * Add several products to the cart and proceed to the express checkout flow.
+  * On summary page, click the "Back to cart" button.
+  * Start the regular checkout by clicking the "Checkout" button.
+  * You will be redirected to the address step of the regular checkout.
+
+{% endinfo_block %}
+
 
 ### 2) Set up database schema and transfer objects
 

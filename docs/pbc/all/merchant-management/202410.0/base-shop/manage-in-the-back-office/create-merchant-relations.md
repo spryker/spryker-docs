@@ -1,6 +1,6 @@
 ---
 title: Create merchant relations
-description: Learn how to create merchant relations in the Back Office
+description: Learn how to create Spryker Cloud Commerce OS merchant relations in the Back Office for your Spryker B2B Project.
 last_updated: Jun 16, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-merchant-relations

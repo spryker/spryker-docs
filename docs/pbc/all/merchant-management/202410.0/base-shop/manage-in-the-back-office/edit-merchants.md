@@ -1,6 +1,6 @@
 ---
 title: Edit merchants
-description: Learn how to edit merchants in the Back Office.
+description: Learn how to edit merchants that are configured in the Spryker Cloud Commerce OS Back Office for your B2B Projects.
 template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

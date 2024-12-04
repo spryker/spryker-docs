@@ -1,6 +1,6 @@
 ---
 title: Install the Merchant B2B Contract Requests + Comments feature
-description: The guide walks you through the process of installing the Comments + Merchant Contract Requests feature into the project.
+description: Learn how to install the Comments + Merchant Contract Requests feature into your Spryker B2B project.
 last_updated: Mar 12, 2024
 template: feature-integration-guide-template
 ---

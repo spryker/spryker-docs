@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve merchants"
-description: Retrieve merchant information via Glue API
+description: Learn how to retrieve merchants in your Spryker marketplace project via the Spryker Glue API
 template: glue-api-storefront-guide-template
 last_updated: Jan 12, 2024
 redirect_from:

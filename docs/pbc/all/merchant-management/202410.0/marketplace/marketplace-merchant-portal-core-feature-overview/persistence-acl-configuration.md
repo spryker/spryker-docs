@@ -1,7 +1,7 @@
 ---
 title: Persistence ACL configuration
 last_updated: Oct 20, 2021
-description: Learn how to you can configure Persistence ACL
+description: Learn how you can configure Persistence ACL within your Spryker Marketplace B2B project.
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html

@@ -1,7 +1,7 @@
 ---
 title: Merchant Category feature overview
 last_updated: Apr 23, 2021
-description: Merchant categories help you easily find relevant merchants.
+description: Learn all about Spryker Merchant Categories and how you can easily organise merchants to allow customers to easily find their products according to the categories.
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/user/features/202311.0/merchant-category-feature-overview.html

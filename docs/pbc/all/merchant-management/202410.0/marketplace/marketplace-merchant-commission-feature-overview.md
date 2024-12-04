@@ -1,7 +1,7 @@
 ---
 title: Marketplace Merchant Commission feature overview
 last_updated: Apr 23, 2021
-description: Merchant categories help you easily find relevant merchants.
+description: Everything you need to know about the Spryker Marketplace Merchant Commission feature for your Spryker B2B projects.
 template: concept-topic-template
 ---
 

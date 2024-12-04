@@ -1,6 +1,6 @@
 ---
 title: Create GUI modules
-description: This articles provides details how to create a new GUI module
+description: Learn how you can create a new GUI module within your Spryker marketplace project.
 template: howto-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: "Create Gui table filter types"
-description: This articles provides details how to create a new Gui table filter type
+description: Learn how to create a new Gui table filter type within your Spryker Marketplace project.
 template: howto-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

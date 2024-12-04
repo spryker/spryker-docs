@@ -1,5 +1,6 @@
 ---
 title: "Import file details: merchant_commission_group.csv"
+description: Learn about the Spryker merchant commission group CSV file and how to configure the merchant commission groups within your Spryker Marketplace project.
 last_updated: Jul 07, 2024
 description: Import merchant comission groups.
 template: import-file-template

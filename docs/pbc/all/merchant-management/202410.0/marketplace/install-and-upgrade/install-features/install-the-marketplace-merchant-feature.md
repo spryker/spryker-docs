@@ -1,7 +1,7 @@
 ---
 title: Install the Marketplace Merchant feature
 last_updated: Aug 7, 2024
-description: Learn how to install the Marketplace Merchant feature
+description: Learn how you can install the Marketplace Merchant feature in to your Spryker B2B Marketplace project.
 template: feature-integration-guide-template
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Import file details: merchant_commission_amount.csv"
+description: Learn about the Spryker Merchant Commission amount CSV file and how to configure the merchant commission amount within your Spryker Marketplace project.
 last_updated: Jul 07, 2024
 description: Import merchant commission amounts
 template: import-file-template

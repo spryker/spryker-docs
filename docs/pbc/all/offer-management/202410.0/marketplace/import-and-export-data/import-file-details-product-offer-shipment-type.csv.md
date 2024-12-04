@@ -1,5 +1,6 @@
 ---
 title: "Import file details: product_offer_shipment_type.csv"
+description: Learn how you can assign products offers by using the product offer shipment type CSV file in your Spryker Marketplace projects.
 last_updated: Nov 23, 2023
 template: data-import-template
 ---

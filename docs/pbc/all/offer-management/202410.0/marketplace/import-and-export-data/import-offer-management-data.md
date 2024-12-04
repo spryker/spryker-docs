@@ -1,6 +1,6 @@
 ---
 title: Import Offer Management data
-description: Details about the data importers for Offer Management
+description: Learn about different ways of importing data and how data import works for Spryker offer management data within your Spryker marketplace projects.
 last_updated: Jun 23, 2023
 template: concept-topic-template
 ---

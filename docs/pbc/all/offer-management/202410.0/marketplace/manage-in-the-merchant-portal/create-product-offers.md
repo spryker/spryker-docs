@@ -1,6 +1,6 @@
 ---
 title: Create product offers
-description: learn how to create product offers in the Merchant Portal.
+description: learn how to create new product offers in the Spryker Marketplace Merchant Portal for your store.
 template: back-office-user-guide-template
 last_updated: Jan 9, 2024
 redirect_from:

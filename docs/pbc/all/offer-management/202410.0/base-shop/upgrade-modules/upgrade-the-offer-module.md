@@ -1,6 +1,6 @@
 ---
 title: Upgrade the Offer module
-description: Use the guide to learn how to update the Offer module.
+description: Use the guide to learn how to update the Spryker Offer module from an older version to a newer one in your Spryker projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-offer

@@ -1,6 +1,6 @@
 ---
 title: Product Offer Service Points Availability feature overview
-description: General overview of the Product Offer Service feature
+description: General overview of the Product Offer availability feature for service points for your Spryker Unified Commerce project.
 template: concept-topic-template
 last_updated: Nov 30, 2023
 ---

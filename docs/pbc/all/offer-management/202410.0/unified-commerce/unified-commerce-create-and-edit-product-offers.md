@@ -1,6 +1,6 @@
 ---
 title: "Unified Commerce: Create and edit product offers"
-description: Learn how to create and edit product offers in the Merchant Portal
+description: Learn how to create and edit product offers for your Spryker Unified Commerce Project.
 template: back-office-user-guide-template
 last_updated: Jan 19, 2024
 ---

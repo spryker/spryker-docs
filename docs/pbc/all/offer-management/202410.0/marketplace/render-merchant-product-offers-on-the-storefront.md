@@ -1,7 +1,7 @@
 ---
 title: Render merchant product offers on the Storefront
 last_updated: Nov 05, 2021
-description: Learn how to render the Merchant Product Offers on the Storefront.
+description: Learn how to render the Merchant Product Offers on different types of Spryker Storefront pages.
 template: howto-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202204.0/marketplace-product-offer-feature-walkthrough/rendering-product-offers-on-the-storefront.html

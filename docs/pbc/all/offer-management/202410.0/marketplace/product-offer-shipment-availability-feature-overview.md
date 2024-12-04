@@ -1,6 +1,6 @@
 ---
 title: Product Offer Service Points Availability feature overview
-description: General overview of the Product Offer Service feature
+description: A quick overview of the Spryker Product Offer Service feature for your Spryker projects.
 template: concept-topic-template
 last_updated: Nov 23, 2023
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve product offers"
-description: Retrieve Marketplace product offers via API
+description: Learn how to retrieve Spryker Marketplace product offers via the Spryker API for your Marketplace projects.
 template: glue-api-storefront-guide-template
 last_updated: Nov 21, 2023
 related:

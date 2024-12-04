@@ -1,6 +1,6 @@
 ---
 title: Install the Back Office number formatting
-description: Add support of numbers formatting in the Back Office UI.
+description: Learn how to install and upgrade the Back Office number formatting in Spryker Cloud Commerce OS
 template: howto-guide-template
 last_updated: Aug 30, 2022
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: Spryker Cloud Commerce OS management
-description: Assignment of responsibilities, consultation and reporting obligations.
+description: Understand responsibilities in managing Spryker Cloud Commerce OS, defining who is accountable, responsible, consulted, and informed for cloud environment tasks.
 last_updated: Nov 21, 2022
 template: concept-topic-template
 redirect_from:

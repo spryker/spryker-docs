@@ -1,7 +1,7 @@
 ---
 title: Install Dynamic Multistore
 description: Learn how to integrate the Dynamic Store feature into your project
-last_updated: Feb 1, 2023
+last_updated: Nov 12, 2024
 template: feature-integration-guide-template
 ---
 

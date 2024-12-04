@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve shipments in orders"
-description: Retrieve all orders of a customer or a particular order via Glue API.
+description: Learn how to use Glue API to retrieve shipment details in orders for Spryker Cloud Commerce OS, enabling accurate tracking and shipping information integration.
 last_updated: Jul 28, 2022
 template: glue-api-storefront-guide-template
 redirect_from:

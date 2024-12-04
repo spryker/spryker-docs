@@ -16,7 +16,3 @@ To change the default return URLs, you can  use the following methods:
 - `\Spryker\Zed\Payment\PaymentConfig::getSuccessRoute()`
 - `\Spryker\Zed\Payment\PaymentConfig::getCancelRoute()`
 - `\Spryker\Zed\Payment\PaymentConfig::getCheckoutSummaryPageRoute()`
-
-
-
-

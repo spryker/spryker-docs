@@ -1,6 +1,6 @@
 ---
 title: Get access to Spryker Code Upgrader
-description: Get your project ready and start upgrading with Spryker Code Upgrader
+description: Get access to Spryker Code Upgrader by inviting a cloud admin to your workspace, allowing you to manage repositories and begin project integration.
 template: concept-topic-template
 last_updated: May 8, 2023
 redirect_from:

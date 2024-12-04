@@ -1,5 +1,6 @@
 ---
 title: Bypass the key-value storage
+description: Learn how to bypass key-value storage in Spryker to enhance data publishing performance. Optimize backend data handling with this advanced guide.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-replace-key-value-storage-with-database

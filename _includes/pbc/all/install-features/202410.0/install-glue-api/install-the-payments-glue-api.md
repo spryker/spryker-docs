@@ -102,7 +102,7 @@ To have payment methods available for the checkout,  extend `RestPaymentTransfer
 ```
 
 
-Run the following command to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -140,9 +140,10 @@ Make sure that the following changes have occurred:
 
 Activate the following plugin:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| PaymentMethodsByCheckoutDataResourceRelationshipPlugin | Adds payment-methods resource as relationship in case `RestCheckoutDataTransfer` is provided as payload. | None | Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication |
+| PLUGIN                                                 | SPECIFICATION                                                                                            | PREREQUISITES | NAMESPACE                                           |
+|--------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------|
+| PaymentMethodsByCheckoutDataResourceRelationshipPlugin | Adds payment-methods resource as relationship in case `RestCheckoutDataTransfer` is provided as payload. | None          | Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication |
+| PaymentCustomersResourceRoutePlugin                    | Returns customer data that should be used on the store front address page.                               | None          | Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -173,12 +174,104 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
         return $resourceRelationshipCollection;
     }
+    
+     /**
+     * {@inheritDoc}
+     *
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
+     */
+    protected function getResourceRoutePlugins(): array
+    {
+        return [
+            new PaymentCustomersResourceRoutePlugin(),
+        ];
+    }
 }
 ```
 
 {% info_block warningBox "Verification" %}
 
 To verify `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, send a POST request to `https://glue.mysprykershop.com/checkout-data?include=payment-methods` and make sure that `checkout-data` resource has a relationship to the `payment-methods` resources.
+To verify `PaymentCustomersResourceRoutePlugin` is activated, send a POST request to `https://glue.mysprykershop.com/payment-customers` and make sure that you get a response with customer data.
+
+Here is an example request for the PayOne PayPal Express payment method, used by a guest or authorized customer to retrieve user data such as addresses and other information from the PSP: https://glue.mysprykershop.com/payment-customers.
+
+```json
+{
+  "data": {
+    "type": "payment-customers",
+    "attributes": {
+      "payment": {
+        "paymentMethodName": "paypal-express",
+        "paymentProviderName": "payone"
+      },
+      "customerPaymentServiceProviderData": {
+        "orderId": "order-id",
+        "workorderid": "workorder-id",
+        "transactionId": "transaction-id",
+        "token": "token",
+        "currency": "EUR",
+        "idCart": "d79a9c31-ed3d-57f5-958b-498e6b862ab3"
+      }
+    }
+  }
+}
+```
+
+Depending on the payment method, the response may vary.
+An example of the response:
+
+```json
+{
+  "type": "payment-customers",
+  "id": null,
+  "attributes": {
+    "customer": {
+      "salutation": "n/a",
+      "firstName": "Spryker",
+      "lastName": "Systems",
+      "email": "eco-test+1@spryker.com",
+      "phone": "7886914965",
+      "company": null,
+      "billingAddress": {
+        "salutation": "n/a",
+        "firstName": "Eco",
+        "lastName": "Test",
+        "address1": "Julie-Wolfthorn-Strasse",
+        "address2": "1",
+        "address3": null,
+        "zipCode": "10115",
+        "city": "Berlin",
+        "country": "DE",
+        "iso2Code": "DE",
+        "company": null,
+        "phone": "7886914965",
+        "isDefaultShipping": null,
+        "isDefaultBilling": null
+      },
+      "shippingAddress": {
+        "salutation": "n/a",
+        "firstName": "Eco",
+        "lastName": "Test",
+        "address1": "Julie-Wolfthorn-Strasse",
+        "address2": "1",
+        "address3": null,
+        "zipCode": "10115",
+        "city": "Berlin",
+        "country": "DE",
+        "iso2Code": "DE",
+        "company": null,
+        "phone": "7886914965",
+        "isDefaultShipping": null,
+        "isDefaultBilling": null
+      }
+    }
+  },
+  "links": {
+    "self": "https://glue.de.aop-suite-testing.demo-spryker.com/payment-customers"
+  }
+}
+```
 
 {% endinfo_block %}
 

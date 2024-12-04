@@ -1,5 +1,6 @@
 ---
 title: "Import file details: sales_order_threshold.csv"
+description: Learn how to import sales order threshold data into Spryker Cloud Commerce OS using CSV files to manage order value limits.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-sales-order-thresholdcsv

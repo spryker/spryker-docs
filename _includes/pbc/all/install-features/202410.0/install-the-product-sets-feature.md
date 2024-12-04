@@ -132,7 +132,6 @@ namespace Pyz\Client\ProductSet;
 use Spryker\Client\ProductSet\Plugin\Elasticsearch\ResultFormatter\ProductSetListResultFormatterPlugin;
 use Spryker\Client\ProductSet\ProductSetDependencyProvider as SprykerProductSetDependencyProvider;
 use Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\LocalizedQueryExpanderPlugin;
-use Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\StoreQueryExpanderPlugin;
 
 class ProductSetDependencyProvider extends SprykerProductSetDependencyProvider
 {
@@ -154,7 +153,6 @@ class ProductSetDependencyProvider extends SprykerProductSetDependencyProvider
 	{
 		return [
 			new LocalizedQueryExpanderPlugin(),
-			new StoreQueryExpanderPlugin(),
 		];
 	}
 

@@ -1,6 +1,6 @@
 ---
 title: Integrating code releases
-description: Spryker Code Upgrader automatically integrates code releases
+description: Automate the integration of code releases in Spryker with the Code Upgrader, handling plugins, configurations, schemas, and more to streamline feature additions.
 template: concept-topic-template
 last_updated: Oct 20, 2023
 ---

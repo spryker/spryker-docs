@@ -125,7 +125,7 @@ The default checkout guides a customer through various steps such as the cart, t
 
 The Express Checkout Payment Flow belongs to so called PreOrderPayments. PreOrderPayments are payments that are done before the actual order is placed. The Express Checkout Payment Flow is a two-step process. The first step is to authorize the payment and the second step is to capture the payment. The authorization is done when the customer clicks on the button in the shop. The capture is done when the order is placed.
 
-Here the flow is different to the Hosted Payment Page flow. The customer will see e.g. on the Product Detail Page or the Cart Page a button to pay with the Payment Method. When the customer clicks on the button, the payment is initialized and a model is opened where the customer completes the payment. After that the customer is redirected to the Summary Page where he can submit the order. The order is placed in the Back Office and the payment will be captured.   
+Here the flow is different from the Hosted Payment Page flow. The customer will see e.g. on the Product Detail Page or the Cart Page a button to pay with the Payment Method. When the customer clicks on the button, the payment is initialized and a modal window is opened where the customer completes the payment. After that, the customer is redirected to the Summary Page where he can submit the order. The order is placed in the Back Office and the payment will be captured.
 
 Additionally, those Express Checkout Payment Methods provide customer data that can be used to prefill the checkout form. This data can contain e.g. customer data, address data or alike.  
 

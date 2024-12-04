@@ -1,5 +1,5 @@
 ---
-title: Project guidelines for Stripe
+title: Project guidelines for Stripe - Refunds
 description: Learn how to implement Stripe using ACP
 last_updated: Nov 8, 2024
 template: howto-guide-template

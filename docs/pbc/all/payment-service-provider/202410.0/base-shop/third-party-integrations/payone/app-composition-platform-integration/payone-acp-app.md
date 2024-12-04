@@ -22,7 +22,7 @@ You can have multiple accounts with Payone. For example, you can have different 
 The Payone App supports the B2B and B2C business models and the following payment methods:
 
 * Credit Card
-* Paypal Standard
+* PayPal Standard and Express
 * Klarna:
   * Invoice: pay later
   * Installments: slice it

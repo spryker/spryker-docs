@@ -1,6 +1,6 @@
 ---
 title: Integrating Inxmail
-description: Integrate Inxmail in the Spryker Commerce OS
+description: Learn how you can integrate third party Inxmail in your Spryker Cloud Commerce OS projects
 last_updated: Jun 16, 2021
 template: howto-guide-template
 redirect_from:

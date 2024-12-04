@@ -1,5 +1,6 @@
 ---
 title: Install the Order Management Glue API
+description: Learn how to install the Spryker order management Glue API for your Spryker Cloud Commerce OS project
 last_updated: Jul 27, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-order-management-feature-integration

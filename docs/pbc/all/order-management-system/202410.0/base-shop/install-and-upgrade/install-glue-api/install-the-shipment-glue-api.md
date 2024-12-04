@@ -1,5 +1,6 @@
 ---
 title: Install the Shipment Glue API
+description: Learn how to install the Spryker shipment Glue API for your Spryker Cloud Commerce OS project
 last_updated: Dec 14, 2022
 template: feature-integration-guide-template
 redirect_from:

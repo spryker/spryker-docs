@@ -1,5 +1,6 @@
 ---
 title: Display custom names for order item states on the Storefront
+description: Learn how you can change the state names in your Spryker Order State Machine to display a more customer friendly naming convention within your shop
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-display-custom-names-for-order-item-states-on-the-storefront

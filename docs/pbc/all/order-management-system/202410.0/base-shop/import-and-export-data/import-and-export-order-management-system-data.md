@@ -1,6 +1,6 @@
 ---
 title: Import and export Order Management System data
-description: Details about the data importers for Order Management System
+description: Learn about the data importers for Order Management System and how data import works with your Spryker project.
 last_updated: Jun 23, 2023
 template: concept-topic-template
 ---

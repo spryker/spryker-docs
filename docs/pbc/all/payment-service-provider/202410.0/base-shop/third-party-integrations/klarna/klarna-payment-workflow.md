@@ -1,6 +1,6 @@
 ---
 title: Klarna payment workflow
-description: In this article, you will find part payment request flow with Klarna.
+description: In this article, you will find part payment request flow with Klarna and how it can enhance your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/klarna-payment-workflow

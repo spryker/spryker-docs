@@ -1,6 +1,6 @@
 ---
 title: Edit billing addresses in orders
-description: Learn how to edit order billing addresses in the Back Office
+description: Learn how to edit order billing addresses in the Spryker Cloud Commerce OS Back Office
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:

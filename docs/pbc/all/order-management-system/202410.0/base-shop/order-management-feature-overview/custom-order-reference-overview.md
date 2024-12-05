@@ -1,5 +1,6 @@
 ---
 title: Custom Order Reference overview
+description: An overview of Sprykers Custom Order Reference feature to help companies manage their orders using their own custom reference.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/custom-order-reference-overview

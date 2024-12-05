@@ -1,6 +1,6 @@
 ---
 title: Comment orders
-description: Learn how to comment orders in the Back Office
+description: Learn how to add a comment to orders in the Spryker Cloud Commerce OS Back Office
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:

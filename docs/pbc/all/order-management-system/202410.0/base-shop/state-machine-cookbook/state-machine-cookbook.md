@@ -1,6 +1,6 @@
 ---
 title: State machine cookbook
-description: State machine fundamentals and how to build a state machine
+description: State machine fundamentals and how to build a state machine that works for your Spryker project.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:

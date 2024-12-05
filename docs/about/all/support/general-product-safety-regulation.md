@@ -21,37 +21,57 @@ For example, using the Product Attributes feature, you can record any required p
 
 There're different obligations depending on your company's role with regard to the product, like manufacturer, distributor, or economic operator in distance sale. The following are examples on how Spryker features can enable you to comply with the obligations.
 
-> Show the name, registered trade name, or trademark of the manufacturer (and, where the manufacturer is not established in the EU, of the responsible person in the EU), postal address, and electronic contact details  
+### Show the name, registered trade name, or trademark of the manufacturer (and, where the manufacturer is not established in the EU, of the responsible person in the EU), postal address, and electronic contact details
 
-To comply with this regulation, follow the steps:
+How you can do this with Spryker:
 
 1. In the Back Office, create a product attribute with the following settings:
-  * **INPUT TYPE**: **textarea**
-  * Select **Allow input any value other than predefined ones**
+     * **INPUT TYPE**: **textarea**
+     * Select **Allow input any value other than predefined ones**
 For detailed instructions, see [Create product attributes](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html).
 
 2. Assign the attribute to the relevant products of a specific manufacturer. For detailed instructions, see the following docs:
-  * [Assign product attributes to abstract products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html)
-  * [Assign product attributes to product variants](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/assign-product-attributes-to-product-variants.html)
+     * [Assign product attributes to abstract products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html)
+     * [Assign product attributes to product variants](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/assign-product-attributes-to-product-variants.html)
 
 3. To add additional information to the products of a specific manufacturer, create a CMS block and add the needed information. For instructions, see [Create CMS blocks](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html).
 4. Assign the block to a product slot and select SKUs of the manufacturer. For instructions, see [Assigning CMS blocks to slots](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/manage-in-the-back-office/manage-slots.html).
 
-> Provide information allowing the identification of the product, including pictures, product type, identifiers
 
-To comply with this regulation, follow the steps:
+You can also do it using data importers:
+* [Import file details: product_attribute_key.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-attribute-key.csv.html)
+* [Import file details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
+* [Import file details: product_concrete.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
+* [Import file details: cms_block.csv](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/import-and-export-data/import-file-details-cms-block.csv.html)
+* [Import file details: cms_slot_block.csv](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/import-and-export-data/import-file-details-cms-slot-block.csv.html)
+
+
+### Provide information allowing the identification of the product, including pictures, product type, identifiers
+
+How you can do this with Spryker:
 
 1. To add images to products, use one of the following docs:
-  * [Create abstract products and product bundles](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)
-  * [Creating product variants](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html)
+     * [Create abstract products and product bundles](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)
+     * [Creating product variants](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html)  
 2. To add product type and identifiers, [create product attributes](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html) with the needed identifiers.
 3. Assign the attributes to relevant products in one of the following ways:
-  * [Assign product attributes to abstract products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html)
-  * [Assign product attributes to product variants](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/assign-product-attributes-to-product-variants.html)
+     * [Assign product attributes to abstract products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html)
+     * [Assign product attributes to product variants](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/assign-product-attributes-to-product-variants.html)
 
-> Indicate clear warnings or safety information to be affixed to the product  
 
-To comply with this regulation, follow the steps:
+You can also do it using data importers:
+* [Import file details: product_attribute_key.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-attribute-key.csv.html)
+* [Import file details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
+* [Import file details: product_concrete.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
+
+
+### Indicate clear warnings or safety information to be affixed to the product  
+
+How you can do this with Spryker:
 
 1. To add safety information to the products of a specific manufacturer, create a CMS block and add the needed information. For instructions, see [Create CMS blocks](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html).
 2. Assign the block to a product slot and select the needed SKUs. For instructions, see [Assigning CMS blocks to slots](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/manage-in-the-back-office/manage-slots.html).
+
+You can also do it using data importers:
+* [Import file details: cms_block.csv](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/import-and-export-data/import-file-details-cms-block.csv.html)
+* [Import file details: cms_slot_block.csv](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/import-and-export-data/import-file-details-cms-slot-block.csv.html)

@@ -1,5 +1,6 @@
 ---
 title: Heidelpay OMS workflow
+description: Learn about the Heidelpay OMS workflow and how to create a new Spryker OMS with Heildelpay payment method in your Spryker Project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-oms-workflow

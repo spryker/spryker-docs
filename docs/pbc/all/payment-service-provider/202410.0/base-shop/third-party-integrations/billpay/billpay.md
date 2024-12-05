@@ -14,7 +14,7 @@ redirect_from:
 
 [ABOUT BILLPAY](https://www.billpay.de/en/)
 
-BillPay is the DACH market leader for the preferred, local payment methods Invoice, Direct Debit and Installments, making real-time financing decisions with 100% liability shift, so merchants carry zero risk.As only a bank account is required, these payment methods ensure full customer reach. In addition, BillPay's solution is multi-channel so orders can be placed online, through mobile web apps, at the POS or over-the-phone.
+BillPay is the DACH market leader for the preferred, local payment methods Invoice, Direct Debit and Installments, making real-time financing decisions with 100% liability shift, so merchants carry zero risk. As only a bank account is required, these payment methods ensure full customer reach. In addition, BillPay's solution is multi-channel so orders can be placed online, through mobile web apps, at the POS or over-the-phone.
 
 
 ## Related Developer guides

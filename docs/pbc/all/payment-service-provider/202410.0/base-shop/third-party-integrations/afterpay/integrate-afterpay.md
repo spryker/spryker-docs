@@ -1,6 +1,6 @@
 ---
 title: Integrating AfterPay
-description: Learn how to integrate AfterPay into Spryker-based project
+description: Learn how you can integrate AfterPay into your Spryker Cloud Commerce OS project
 last_updated: Jun 16, 2021
 template: howto-guide-template
 related:

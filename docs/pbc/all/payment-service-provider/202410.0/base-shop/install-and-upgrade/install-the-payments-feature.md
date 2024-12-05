@@ -1,6 +1,6 @@
 ---
 title: Install the Payments feature
-description: Use the guide to install the Payment per store feature in your project.
+description: Use the guide to install the Payment per store feature in your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/payments-feature-integration

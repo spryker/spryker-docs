@@ -1,6 +1,6 @@
 ---
 title: View payment methods
-description: Learn how to edit payment methods in the Back Office.
+description: Learn how to view payment methods that are in the Back Office that are configured within your Spryker Cloud Commerce OS project.
 last_updated: June 2, 2022
 template: back-office-user-guide-template
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: Billie
-description: Provide various payment options from Billie.
+description: Provide various payment options from Billie and how they can enhance your Spryker Cloud Commerce OS Project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/billie

@@ -1,6 +1,6 @@
 ---
 title: Manage payment methods in the Back Office
-description: Learn how to log into the Back Office.
+description: Learn how to manage payment methods in the Spryker Cloud Commerce OS Back office.
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 ---

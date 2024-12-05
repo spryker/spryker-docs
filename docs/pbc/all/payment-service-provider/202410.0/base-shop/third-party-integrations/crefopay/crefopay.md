@@ -1,5 +1,6 @@
 ---
 title: CrefoPay
+description: Learn all about Spryker partner CrefoPay and how together they can enhance your Spryker Cloud Commerce OS project.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:

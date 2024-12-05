@@ -1,6 +1,6 @@
 ---
 title: Integrating the iDeal payment method for Heidelpay
-description: Integrate iDeal payment through Heidelpay into the Spryker-based shop.
+description: Learn how to integrate iDeal payment through Heidelpay into the Spryker Cloud Commerce OS shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-ideal

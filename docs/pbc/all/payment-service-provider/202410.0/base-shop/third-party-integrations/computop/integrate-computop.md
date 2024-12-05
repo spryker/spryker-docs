@@ -1,5 +1,6 @@
 ---
 title: Integrating Computop
+description: learn how you integrate Computop in to your Spryker Cloud Commerce OS project.
 last_updated: Jun 10, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-integration-into-project

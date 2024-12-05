@@ -1,6 +1,6 @@
 ---
 title: CrefoPay—Enabling B2B payments
-description: CrefoPay module provides B2B strategy in payments.
+description: Learn how to enable the CrefoPay B2B payments for your Spryker Cloud Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/crefopay-business-to-business-model

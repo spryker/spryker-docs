@@ -1,5 +1,6 @@
 ---
 title: Integrating Billpay
+description: Learn how you can integrate billpay in to your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/billpay-integration

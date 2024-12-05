@@ -1,6 +1,6 @@
 ---
 title: Integrating Braintree
-description: This guide provides steps to integrate Braintree in the Spryker Frontend.
+description: This guide provides steps on how to integrate Braintree in the Spryker Cloud Commerce OS Frontend.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/braintree-integration

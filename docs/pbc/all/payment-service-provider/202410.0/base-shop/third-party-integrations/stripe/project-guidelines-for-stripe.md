@@ -1,6 +1,6 @@
 ---
 title: Project guidelines for Stripe
-description: Learn how to implement Stripe using ACP
+description: Learn the guidelines that are needed for your Spryker projects when it comes to using Stripe throught the Spryker Stripe App Integration.
 last_updated: Jul 22, 2024
 template: howto-guide-template
 related:

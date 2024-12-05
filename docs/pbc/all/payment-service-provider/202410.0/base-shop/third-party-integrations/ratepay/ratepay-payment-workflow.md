@@ -1,6 +1,6 @@
 ---
 title: RatePay payment workflow
-description: This article describes the request flow that uses Ratepay.
+description: This article describes the request workflow that uses Ratepay for Invoice, Prepayment and Direct Debit methods.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ratepay-payment-workflow

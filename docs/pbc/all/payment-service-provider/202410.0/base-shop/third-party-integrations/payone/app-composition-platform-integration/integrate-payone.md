@@ -1,6 +1,6 @@
 ---
 title: Integrate Payone
-description: Learn how you can integrate the Payone app into your Spryker shop
+description: Learn how you can integrate the Payone app into your Spryker shop using Spryker App Composition Platform.
 template: howto-guide-template
 last_updated: Nov 1, 2024
 redirect_from:

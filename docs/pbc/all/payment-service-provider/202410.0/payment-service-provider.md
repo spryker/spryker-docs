@@ -1,6 +1,6 @@
 ---
 title: Payment Service Provider
-description: Different payment methods for your shop
+description: Learn about the different types of payment methods that you can configure for your store using the Spryker Payment Service Provider module.
 last_updated: Apr 23, 2023
 template: concept-topic-template
 redirect_from:

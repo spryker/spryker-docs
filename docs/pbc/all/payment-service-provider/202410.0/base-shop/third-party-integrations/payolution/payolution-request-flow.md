@@ -1,6 +1,6 @@
 ---
 title: Payolution request flow
-description: This article describes the request flow for Payolution.
+description: This article describes the request flow for Payolution for both invoice and installment payment.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payolution-workflow

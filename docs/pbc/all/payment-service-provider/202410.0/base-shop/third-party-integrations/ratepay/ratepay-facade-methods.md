@@ -1,6 +1,6 @@
 ---
 title: RatePay facade methods
-description: This article includes facade methods provided by Ratepay.
+description: Explore the Ratepay facade methods in Spryker Cloud Commerce OS to manage payment integrations, enhance transaction capabilities, and streamline workflows.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ratepay-facade

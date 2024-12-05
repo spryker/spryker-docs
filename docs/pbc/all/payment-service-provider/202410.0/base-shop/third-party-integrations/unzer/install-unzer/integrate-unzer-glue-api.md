@@ -1,6 +1,6 @@
 ---
 title: Integrate Unzer Glue API
-description: Integrate Unzer Glue API into your project
+description: Learn how to integrate Unzer Glue API into your Spryker Cloud Commerce OS project
 last_updated: Aug 11, 2022
 template: feature-integration-guide-template
 redirect_from:

@@ -1,7 +1,7 @@
 ---
 title: Unzer
 last_updated: Jun 9, 2022
-description: This document desribes the Unzer payment method
+description: This document desribes the Unzer payment method and how it can enhance your Spryker Marketplace projects.
 template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/payment/unzer/unzer.html

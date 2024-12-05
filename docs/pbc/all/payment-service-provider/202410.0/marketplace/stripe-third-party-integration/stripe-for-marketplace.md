@@ -1,6 +1,6 @@
 ---
 title: Stripe for Marketplace
-description: Stripe technology partner for Marketplace
+description: Learn about Stripe technology partner for running in a Spryker Marketplace store.
 last_updated: August 8, 2024
 template: concept-topic-template
 ---

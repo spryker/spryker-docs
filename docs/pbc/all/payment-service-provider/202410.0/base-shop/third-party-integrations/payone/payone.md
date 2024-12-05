@@ -1,6 +1,6 @@
 ---
 title: Integrate PayOne
-description: Payone partner integration
+description: Learn all about Spryker partner PayOne and how to integrate PayOne in to your Spryker project.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 ---

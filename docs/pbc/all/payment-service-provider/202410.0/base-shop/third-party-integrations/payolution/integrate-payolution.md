@@ -1,5 +1,6 @@
 ---
 title: Integrating Payolution
+description: Learn all about integrating Payolution in to your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payolution-integration-into-project

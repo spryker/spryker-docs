@@ -1,6 +1,6 @@
 ---
 title: "Company account: module relations"
-description: Explore the module relations of the Company Account features
+description: Explore the module relations of the Sprker Cloud Commerce OS Company Account features for your Spryker Projects.
 last_updated: Jun 16, 2021
 template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v7/docs/company-account-module-relations

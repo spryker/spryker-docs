@@ -1,5 +1,6 @@
 ---
 title: Customer Registration overview
+description: Get customers registered on to your store with the Spryker Customer Registration Feature, learn the different methods to register customers to your store.
 last_updated: Jul 15, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-registration-overview

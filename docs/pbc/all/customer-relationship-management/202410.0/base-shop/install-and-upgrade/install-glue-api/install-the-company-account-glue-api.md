@@ -1,5 +1,6 @@
 ---
 title: Install the Company Account Glue API
+description: Learn how ot install and configure the Spryker Company Account GLUE API in to your Spryker projects.
 last_updated: Jul 13, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-company-account-api-feature-integration

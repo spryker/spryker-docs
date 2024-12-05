@@ -21,9 +21,9 @@ For example, using the Product Attributes feature, you can record any required p
 
 There're different obligations depending on your company's role with regard to the product, like manufacturer, distributor, or economic operator in distance sale. The following are examples on how Spryker features can enable you to comply with the obligations.
 
-> Show the name, registered trade name, or trademark of the manufacturer (and, where the manufacturer is not established in the EU, of the responsible person in the EU), postal address, and electronic contact details  
+**Show the name, registered trade name, or trademark of the manufacturer (and, where the manufacturer is not established in the EU, of the responsible person in the EU), postal address, and electronic contact details** 
 
-To comply with this regulation, follow the steps:
+How you can do this with Spryker:
 
 1. In the Back Office, create a product attribute with the following settings:
   * **INPUT TYPE**: **textarea**
@@ -37,9 +37,9 @@ For detailed instructions, see [Create product attributes](/docs/pbc/all/product
 3. To add additional information to the products of a specific manufacturer, create a CMS block and add the needed information. For instructions, see [Create CMS blocks](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html).
 4. Assign the block to a product slot and select SKUs of the manufacturer. For instructions, see [Assigning CMS blocks to slots](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/manage-in-the-back-office/manage-slots.html).
 
-> Provide information allowing the identification of the product, including pictures, product type, identifiers
+**Provide information allowing the identification of the product, including pictures, product type, identifiers**
 
-To comply with this regulation, follow the steps:
+How you can do this with Spryker:
 
 1. To add images to products, use one of the following docs:
   * [Create abstract products and product bundles](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)
@@ -49,9 +49,9 @@ To comply with this regulation, follow the steps:
   * [Assign product attributes to abstract products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html)
   * [Assign product attributes to product variants](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/assign-product-attributes-to-product-variants.html)
 
-> Indicate clear warnings or safety information to be affixed to the product  
+**Indicate clear warnings or safety information to be affixed to the product**  
 
-To comply with this regulation, follow the steps:
+How you can do this with Spryker:
 
 1. To add safety information to the products of a specific manufacturer, create a CMS block and add the needed information. For instructions, see [Create CMS blocks](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html).
 2. Assign the block to a product slot and select the needed SKUs. For instructions, see [Assigning CMS blocks to slots](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/manage-in-the-back-office/manage-slots.html).

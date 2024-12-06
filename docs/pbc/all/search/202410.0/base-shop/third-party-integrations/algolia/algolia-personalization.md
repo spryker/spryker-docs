@@ -5,18 +5,17 @@ last_updated: Nov 24, 2024
 template: howto-guide-template
 ---
 
-{% info_block infoBox "Info" %}
-
-Default Spryker installation supports Algolia personalization only for YVES frontend.
-If you plan to use Algolia personalization in headless frontend or mobile application follow [this guide](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia-personalization-headless.html).
-
-This feature also enables other Algolia premium features:
+This document describes how to integrate Algolia Personalization. This integration also enabled other Algolia premium features:
 
 - Dynamic Re-Ranking
 - Query Categorization
 - Search analytics
 - Revenue analytics
 - A/B Testing
+
+{% info_block infoBox "Third-party frontends" %}
+
+* By default, Spryker supports Algolia Personalization only for Yves. To integrate Algolia Personalization with a third-party or mobile frontend, follow [this guide](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia-personalization-headless.html).
 
 {% endinfo_block %}
 
@@ -28,12 +27,12 @@ This feature also enables other Algolia premium features:
 
 ## Update Spryker Shop
 
-1. Install new Spryker packages:
+1. Install a Spryker package for tracing events:
 
 ```bash
 composer require --with-dependencies spryker-shop/traceable-event-widget:^1.0.2
 ```
-if the command does now work, try it with `--with-all-dependencies` flag instead.
+If the command doesn't work, try running the following command: `composer require --with-dependencies spryker-shop/traceable-event-widget:^1.0.2 --with-all-dependencies`.
 
 
 2. Update Spryker packages:
@@ -44,11 +43,11 @@ spryker-shop/home-page:^1.2.0 spryker-shop/payment-page:^1.5.0 spryker-shop/prod
 spryker-shop/product-review-widget:^1.16.1 spryker-shop/product-set-detail-page:^1.11.0 spryker-shop/quick-order-page:^4.10.1 \
 spryker-shop/shop-ui:^1.82.0
 ```
-if the command does now work, try it with `--with-all-dependencies` flag instead.
+if the command doesn't work, try running it with the `--with-all-dependencies` flag.
 
 ### Enable new features
 
-1. Update project config:
+1. Update the project config:
 ```php
 // config_default.php
 
@@ -73,7 +72,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-3. Enabled the plugin that generates an anonymous token for guest users in the session:
+3. Enable the plugin that generates an anonymous token for guest users in the session:
 ```php
 // src/Pyz/Yves/EventDispatcher/EventDispatcherDependencyProvider.php
 
@@ -98,71 +97,95 @@ npm ci && npm run yves
 console frontend:project:install-dependencies && console frontend:yves:build
 ```
 
-5. Install required `search-insights` dependency:
+5. Install the `search-insights` dependency:
 ```bash
 npm i search-insights`.
 
 
 ### Check your Yves's compatibility with new functionality
 
-In case of customizations, your codebase could have updated Yves templates on the project level (`src/Pyz/Yves/`).
+In case of customizations, your codebase could have updated Yves templates on the project level: `src/Pyz/Yves/`.
 It could be a reason that some events won't be triggered or triggered with incorrect data.
 
 #### Run the project
-1. Set `TraceableEventWidgetConfig::isDebugEnabled()` set to `true`.  
-2. Run the project locally or deploy to testing environment.
-3. Open your Shop Storefront home page.
-4. Open browser's development console and check "Preserve log" in the settings.
+1. Set `TraceableEventWidgetConfig::isDebugEnabled()` to `true`.  
+2. Run the project locally or deploy to a testing environment.
+3. Open the Storefront's home page.
+4. In browser development console, go to settings.
+5. Enable the "Preserve log" option.
 
 #### Check triggered events and their payload
 
 When debug mode is enabled, you can see event logs in the console to help with inspection.
 
-Monitor the browser's console and execute following cases:
-* Open the home page.
-  * If the home page has products, click on a product - `PRODUCT_CLICK`.
-  * If the home page has the add to cart button, click on it - `ADD_TO_CART`
-* Open a product's details page, you should see events for the actions:
-  * `PAGE_LOAD` with the product's SKU.
-  * `ADD_TO_CART` with the product's SKU, currency, price and quantity, when user clicks **Add to cart**.
-  * `ADD_TO_SHOPPING_LIST` with product SKU when user clicks **Add to shopping list**.
-  * `ADD_TO_WISHLIST` with product SKU when user clicks **Add to wishlist**.
-* Open a **Category** or **Search Results** page:
-  * `QueryID` should be present in the event payload on this page type.
-  * `PAGE_LOAD` with displayed products SKUs and displayed search filters.
-  * `PRODUCT_CLICK` when user clicks on results.
-  * `ADD_TO_CART` with product SKU, currency and price, when user clicks Add to cart from the catalog page.
-  * `FILTER_CLICK` with filters list, when user clicks any filter from the filter section.
-* Open Cart page
-  * (if applicable) add a new product from add to cart widget `ADD_TO_CART`
-  * (if applicable) save cart items to a shopping list `ADD_TO_SHOPPING_LIST`
-* Open Quick Order page
-  * (if applicable) add a new product from add to cart widget `ADD_TO_CART`
-  * (if applicable) save cart items to a shopping list `ADD_TO_SHOPPING_LIST`
-* Open Order Success page
-  * `PAGE_LOAD` with currency, order total, skus, prices, quantities  of purchased products.
+Execute the following cases while monitoring the console for specified events:
+
+Home page cases:
+
+| CASE | EVENT |
+| - | - |
+| If the home page has products, click on a product. | `PRODUCT_CLICK` |
+| If the home page has the add to cart button, click on it. | `ADD_TO_CART` |
+
+
+Product Details page cases:
+
+| CASE | EVENT |
+| - | - |
+| Open the Product Details page | `PAGE_LOAD` with the product's SKU. |
+| Click **Add to cart**. | `ADD_TO_CART` with the product's SKU, currency, price, and quantity. |
+| Click **Add to shopping list**. | `ADD_TO_SHOPPING_LIST` with product's SKU. |
+| Click **Add to wishlist** | `ADD_TO_WISHLIST` with the product's SKU. |
+
+Category and Search Results page cases:
+
+| CASE | EVENT |
+| - | - |
+| Open Category or Search Results page. | `QueryID` is present in the event payload. `PAGE_LOAD` with displayed products SKUs and search filters. |
+| Click on a product. | `PRODUCT_CLICK` |
+| Click **Add to cart**. | `ADD_TO_CART` with the product's SKU, currency, and price. |
+| Click on a filter | `FILTER_CLICK` with a list of filters. |
+
+Cart page cases:
+
+| CASE | EVENT |
+| - | - |
+| If applicable: add a product from the "Add to cart" widget. |  `ADD_TO_CART` |
+| If applicable: save cart items to a shopping list. | `ADD_TO_SHOPPING_LIST` |
+
+Quick Order page cases:
+
+| CASE | EVENT |
+| - | - |
+| If applicable: add a product from the "Add to cart" widget. | `ADD_TO_CART` |
+| If applicable: save cart items to a shopping list. | `ADD_TO_SHOPPING_LIST` |
+
+Order Success page cases:
+| CASE | EVENT |
+| - | - |
+| Open the **Order Success** page | `PAGE_LOAD` with currency, order total, SKUs, prices, and quantities of purchased products. |
 
 To view a full list of available events, refer to the `traceable-events-algolia` [Readme file](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-algolia/README.md).
 
 
-#### Common Issues and Solutions
+#### Common issues and solutions
 
 ##### Prerequisites
 
 If you need to add, modify, or fix events at the project level, start with these two steps:
 
-- Locate the page template or view that is used for the current page.
-- Override the `{% raw %}{% block eventTracker %}{% endraw %}` block in your project’s template at the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/202410.0/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level).
+1. Locate the page template or view that is used for the current page.
+2. On the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/202410.0/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level), override the `{% raw %}{% block eventTracker %}{% endraw %}` block in your project’s template.
 
 For comprehensive details about the **event configuration API**, visit the [traceable-events-orchestrator README](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
 
-##### Issue: Event Not Triggering on User Action
+##### Issue: Event not triggering on user action
 
-If an event is not firing, verify that the desired action (e.g., 'click', 'change') is configured for the specific event (e.g., `PRODUCT_CLICK`).
+If an event is not firing, verify that the action, like `click` or `change`, is configured for the specific event, like `PRODUCT_CLICK`).
 
-1. Check the Configuration
+1. Check the configuration
 
-Spryker provides default configurations for built-in components. For new or modified components, you need to add the appropriate event configuration.
+Configuration for built-in components is provided by default. For new or modified components, you need to add the appropriate event configuration.
 
 ```twig
 {% raw %}{% block eventTracker %}{% endraw %}
@@ -315,7 +338,7 @@ For adding dynamic data, refer to the [API documentation](https://github.com/spr
 - [B2B Demo Shop](https://github.com/spryker-shop/b2b-demo-shop/pull/542/files)
 - [B2B Marketplace Demo Shop](https://github.com/spryker-shop/b2b-demo-marketplace/pull/490/files)
 
-  
+
 
 ### Update website agreement text
 

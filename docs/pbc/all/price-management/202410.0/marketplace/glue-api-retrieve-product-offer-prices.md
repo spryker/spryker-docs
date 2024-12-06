@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve product offer prices"
-description: Retrieve Marketplace product offer prices via Glue API
+description: Retrieve Marketplace product offer prices via Spryker Glue API for your Spryker Marketplace projects.
 template: glue-api-storefront-guide-template
 last_updated: Nov 21, 2023
 redirect_from:

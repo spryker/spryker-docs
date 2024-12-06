@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve prices when retrieving abstract products"
-description: Learn how to retrieve prices when retrieving abstract products.
+description: Learn how to retrieve prices when retrieving abstract products using Spryker GLUE API within your Spryker based project.
 last_updated: Aug 2, 2022
 template: glue-api-storefront-guide-template
 redirect_from:

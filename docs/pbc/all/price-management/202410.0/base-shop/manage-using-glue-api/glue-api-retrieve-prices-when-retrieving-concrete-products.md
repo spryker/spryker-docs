@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve prices when retrieving concrete products"
-description: Retrieve general information about concrete products.
+description: Learn how to retrieve prices when retrieving concrete products using Spryker GLUE API within your Spryker based project.
 last_updated: Aug 22, 2022
 template: glue-api-storefront-guide-template
 redirect_from:

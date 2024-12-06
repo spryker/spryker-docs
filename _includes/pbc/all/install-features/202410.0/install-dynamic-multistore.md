@@ -1502,10 +1502,9 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN | SPECIFICATION                                                                                                                                                                                                                                                                                      | PREREQUISITES | NAMESPACE |
-| --- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| --- | --- |
-|StoreApplicationPlugin| Provides store data to the application.                                                                                                                                                                                                                                                            ||SprykerShop\Yves\StoreWidget\Plugin\ShopApplication|
-
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+|StoreApplicationPlugin| Provides store data to the application.||SprykerShop\Yves\StoreWidget\Plugin\ShopApplication|
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 

@@ -25,7 +25,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/tutorial-product.html
 related:
   - title: Extend the core
-    link: docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
+    link: docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
   - title: About the Persistence layer
     link: docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
   - title: Using translations

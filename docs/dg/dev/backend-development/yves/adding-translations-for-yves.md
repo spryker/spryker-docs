@@ -12,19 +12,19 @@ related:
   - title: How translations are managed
     link: docs/pbc/all/miscellaneous/page.version/spryker-core-feature-overview/how-translations-are-managed.html
   - title: Yves overview
-    link: docs/scos/dev/back-end-development/yves/yves.html
+    link: docs/dg/dev/backend-development/yves/yves.html
   - title: CLI entry point for Yves
-    link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
+    link: docs/dg/dev/backend-development/yves/cli-entry-point-for-yves.html
   - title: Controllers and actions
-    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+    link: docs/dg/dev/backend-development/yves/controllers-and-actions.html
   - title: Implement URL routing in Yves
-    link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
+    link: docs/dg/dev/backend-development/yves/implement-url-routing-in-yves.html
   - title: Modular Frontend
-    link: docs/scos/dev/back-end-development/yves/modular-frontend.html
+    link: docs/dg/dev/backend-development/yves/modular-frontend.html
   - title: Yves bootstrapping
-    link: docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
+    link: docs/dg/dev/backend-development/yves/yves-bootstrapping.html
   - title: Yves routes
-    link: docs/scos/dev/back-end-development/yves/yves-routes.html
+    link: docs/dg/dev/backend-development/yves/yves-routes.html
 ---
 
 Textual translations are handled by the `Glossary` module. You can use the `GlossaryFacade` in Zed to add entries to `Glossary` (or you can use the Zed UI).

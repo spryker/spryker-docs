@@ -14,7 +14,7 @@ related:
   - title: Add a new module
     link: docs/scos/dev/back-end-development/extend-spryker/create-modules.html
   - title: Controllers and Actions
-    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+    link: docs/dg/dev/backend-development/yves/controllers-and-actions.html
 
 ---
 

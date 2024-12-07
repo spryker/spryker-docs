@@ -9,19 +9,19 @@ redirect_from:
   - /docs/scos/dev/back-end-development/yves/modular-frontend.html
 related:
   - title: Yves overview
-    link: docs/scos/dev/back-end-development/yves/yves.html
+    link: docs/dg/dev/backend-development/yves/yves.html
   - title: Add translations for Yves
-    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+    link: docs/dg/dev/backend-development/yves/adding-translations-for-yves.html
   - title: CLI entry point for Yves
-    link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
+    link: docs/dg/dev/backend-development/yves/cli-entry-point-for-yves.html
   - title: Controllers and actions
-    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+    link: docs/dg/dev/backend-development/yves/controllers-and-actions.html
   - title: Implement URL routing in Yves
-    link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
+    link: docs/dg/dev/backend-development/yves/implement-url-routing-in-yves.html
   - title: Yves bootstrapping
-    link: docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
+    link: docs/dg/dev/backend-development/yves/yves-bootstrapping.html
   - title: Yves routes
-    link: docs/scos/dev/back-end-development/yves/yves-routes.html
+    link: docs/dg/dev/backend-development/yves/yves-routes.html
 ---
 
 This document provides information on [Pages](/docs/dg/dev/backend-development/yves/modular-frontend.html#pages) and [Widgets](/docs/dg/dev/backend-development/yves/modular-frontend.html#widgets), the Pages module and how the Pages module can be extended. Real-life examples included into the document will help you to understand the concept better.

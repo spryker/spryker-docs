@@ -15,7 +15,7 @@ This document describes how to integrate Algolia Personalization. This integrati
 
 {% info_block infoBox "Third-party frontends" %}
 
-* By default, Spryker supports Algolia Personalization only for Yves. To integrate Algolia Personalization with a third-party or mobile frontend, follow [this guide](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia-personalization-headless.html).
+By default, Spryker supports Algolia Personalization only for Yves. To integrate Algolia Personalization with a third-party or mobile frontend, follow [this guide](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia-personalization-headless.html).
 
 {% endinfo_block %}
 
@@ -25,7 +25,7 @@ This document describes how to integrate Algolia Personalization. This integrati
 2. [Configure Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/configure-algolia.html)
 3. Add products to your Algolia search indexes
 
-## Update Spryker Shop
+## Install and update Spryker packages
 
 1. Install a Spryker package for tracing events:
 
@@ -45,7 +45,7 @@ spryker-shop/shop-ui:^1.82.0
 ```
 if the command doesn't work, try running it with the `--with-all-dependencies` flag.
 
-### Enable new features
+### Enable features
 
 1. Update the project config:
 ```php
@@ -172,7 +172,7 @@ To view a full list of available events, refer to the `traceable-events-algolia`
 
 ##### Prerequisites
 
-If you need to add, modify, or fix events at the project level, start with these two steps:
+If you need to add, change, or fix events at the project level, start with these steps:
 
 1. Locate the page template or view that is used for the current page.
 2. On the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/202410.0/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level), override the `{% raw %}{% block eventTracker %}{% endraw %}` block in your project’s template.
@@ -181,11 +181,9 @@ For comprehensive details about the **event configuration API**, visit the [trac
 
 ##### Issue: Event not triggering on user action
 
-If an event is not firing, verify that the action, like `click` or `change`, is configured for the specific event, like `PRODUCT_CLICK`).
+If an event isn't firing, verify that the action, like `click` or `change`, is configured for the specific event, like `PRODUCT_CLICK`. Detailed steps:
 
-1. Check the configuration
-
-Configuration for built-in components is provided by default. For new or modified components, you need to add the appropriate event configuration.
+1. Check the configuration is set up for new and changed components. Configuration for built-in components is provided by default.
 
 ```twig
 {% raw %}{% block eventTracker %}{% endraw %}
@@ -204,11 +202,9 @@ Configuration for built-in components is provided by default. For new or modifie
 {% raw %}{% endblock %}{% endraw %}
 ```
 
-Refer to the [API documentation](https://github.com/spryker-shop/traceable-event-widget/blob/master/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md) for more details.
+For more details, see [API documentation](https://github.com/spryker-shop/traceable-event-widget/blob/master/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
 
-2. Check Event Selector
-
-Spryker includes default CSS selectors. If selectors have changed, update the configuration accordingly.
+2. Check the Event Selector. CSS selectors are provided by default. If you've changed selectors, update the configuration accordingly.
 
 ```twig
 {% raw %}{% block eventTracker %}{% endraw %}
@@ -233,13 +229,11 @@ Spryker includes default CSS selectors. If selectors have changed, update the co
 
 ```
 
-##### Issue: Incorrect Event Payload
+##### Issue: Incorrect event payload
 
-You can view the event payload in the console under `Adapter Data:`. If the payload is incorrect, check the static and dynamic data configurations.
+You can view the event payload in the console under `Adapter Data:`. If the payload is incorrect, check the static and dynamic data configuration.
 
-1. Static Data
-
-Adjust static data in the `eventTracker` block as needed:
+* Adjust static data in the `eventTracker` block as needed:
 
 ```twig
 {% raw %}{% block eventTracker %}{% endraw %}
@@ -255,9 +249,7 @@ Adjust static data in the `eventTracker` block as needed:
 {% raw %}{% endblock %}{% endraw %}
 ```
 
-2. Dynamic Data
-
-For adding dynamic data, refer to the [API documentation](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md). Adjust the configuration as needed for specific triggers.
+* Adjust the configuration for dynamic data for the needed triggers. For more information, see [API documentation](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
 
 ```twig
 {% raw %}{% set events = {{% endraw %}
@@ -343,17 +335,17 @@ For adding dynamic data, refer to the [API documentation](https://github.com/spr
 ### Update website agreement text
 
 You should update the website agreement text and ask for user consent to have their interactions with the website tracked and sent to Algolia.
-Something similar to
+
 
 > **User Data analytics**
 >
 > To enhance your experience, we use data and analytics to understand how you interact with our site.
 > By accepting, you allow us to capture anonymous events for personalization, analysis, and continuous improvement of your experience on our platform.
 
-### Test it
+### Verify the installation
 
-1. Deploy to testing environment.
-2. Make sure that Algolia is connected and configured in the Backoffice > Apps.
+1. Deploy to a testing environment.
+2. In the Back Office, go to **Apps** and verify that Algolia is connected and configured.
 
 {% info_block warningBox "Make sure" %}
 
@@ -362,9 +354,15 @@ This action will update your Spryker shop config to be able to send events to Al
 
 {% endinfo_block %}
 
-3. Open Yves, act as a guest and logged-in user, do searches, filter results, open product pages after search, add products to cart, do order placement.
-4. Go to [Algolia Dashboard](https://dashboard.algolia.com/) and open Events from Data Sources section - `https://dashboard.algolia.com/apps/$APP_ID$/events/debugger`.
-5. Check that you see events from your website here.
+3. On the Storefront, do the following as a guest user:
+  * Search products
+  * Filter search results
+  * From search results, go to a product page
+  * Add products to cart
+  * Place orders
+4. Repeat step 3 as a logged-in user.  
+5. In the [Algolia Dashboard](https://dashboard.algolia.com/), go to **Data Sources**>**Events** and open  from  section - `https://dashboard.algolia.com/apps/$APP_ID$/events/debugger`.
+  Make sure the events you've triggered are displayed.
 
 
 ### Configure Algolia Features
@@ -372,7 +370,5 @@ This action will update your Spryker shop config to be able to send events to Al
 When your indexes will have enough data (unique searches, events), you can check it in Analytics and Events Debugger tabs on Algolia Dashaboard.
 Then you can start configuration of Personalization, Dynamic Re-Ranking and Query Categorization features (find Algolia docs and guides on their website).
 
-**It's important** that you need to first create [A/B tests](https://academy.algolia.com/training/00f72f14-0713-11ef-b9fe-0617d5264223/overview)
-with new personalized configuration of your search ("A/B Testing" page in Algolia Dashboard).
-It will allow you to see how new features influence your search conversion rate only for some limit audience of your site. When the results are good,
-you can change the settings globally in the indexes configuration, so it will work for all users.
+**It's important** that you need to first create [A/B tests](https://academy.algolia.com/training/00f72f14-0713-11ef-b9fe-0617d5264223/overview) with new personalized configuration of your search ("A/B Testing" page in Algolia Dashboard).
+It will allow you to see how new features influence your search conversion rate only for some limit audience of your site. When the results are good, you can change the settings globally in the indexes configuration, so it will work for all users.

@@ -1,6 +1,6 @@
 ---
 title: Product Comparison feature overview
-description: With the Product Bundles feature you can freely tie individual items together and sell them as a package.
+description: With the Product Comparison Feature your customers can compare products based on their attributes in your Spryker shop.
 last_updated: Oct 24, 2024
 template: concept-topic-template
 ---

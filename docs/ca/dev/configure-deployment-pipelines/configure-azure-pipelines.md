@@ -1,4 +1,4 @@
-r the request and mention that you would like---
+---
 title: Configure Azure Pipelines
 description: Set up Azure Pipelines for CI/CD in Spryker Cloud Commerce OS, with steps for YAML configuration, testing, and connecting to an AWS repository.
 template: howto-guide-template
@@ -106,8 +106,8 @@ To connect Azure Pipelines with your AWS repository:
 | `$(AZURE_REPO_URL)` |  URL of your Azure repository. |
 | `$(AWS_REPO_URL)` |  URL of the AWS repository you’ve received from support. |
 | `$(AWS_GIT_USERNAME)` and `$(AWS_GIT_PASSWORD)` |  credentials you’ve received from support. |
-| `$(System.AccessToken)` |  Azure DevOps internal variable to access current repo.  it's also possible to use other auth, see azure devops documentation for additional information. |
+| `$(System.AccessToken)` |  Azure DevOps internal variable to access the current repo. You can also use other auth options. For more information, see [Pipeline options for Git repositories](https://learn.microsoft.com/en-us/azure/devops/pipelines/repos/pipeline-options-for-git). |
 
-https://learn.microsoft.com/en-us/azure/devops/pipelines/repos/pipeline-options-for-git
+
 
 You’ve configured Azure pipelines.

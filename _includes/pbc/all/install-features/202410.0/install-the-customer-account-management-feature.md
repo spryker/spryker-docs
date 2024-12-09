@@ -1032,6 +1032,8 @@ customer.password.error.sequence,"You repeated the same character too many times
 customer.password.error.sequence,"Es wurde zu oft das gleiche Zeichen verwendet.",de_DE
 customer.password.error.character_set,"Password must contain at least 1 character of each allowed character group: upper case, lower case, digit, and a special character.",en_US
 customer.password.error.character_set,"Passwort muss mindestens 1 Zeichen von jeder erlaubten Zeichengruppe enthalten: Großschreibung, Kleinschreibung, Zahl und ein Sonderzeichen.",de_DE
+customer.salutation.n/a,n/a,en_US
+customer.salutation.n/a,n/v,de_DE
 ```
 
 2. Import data:

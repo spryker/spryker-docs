@@ -1,6 +1,6 @@
 ---
 title: Migration guide - CategoryStorage
-description: Migration instructions for the CategoryStorage module.
+description: Learn how to upgrade from an older version to a newer one of the Category Storage module within your Spryker based project.
 last_updated: Jun 24, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-categorystorage

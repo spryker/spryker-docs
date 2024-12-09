@@ -1,6 +1,6 @@
 ---
 title: Product Approval Process feature overview
-description: Product Approval Process feature adds approval mechanism for products.
+description: Learn about the Spryker Product Approval Process feature which adds approval mechanism for products in your Spryker projects.
 template: feature-walkthrough-template
 redirect_from:
 - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-approval-process-feature-overview.html

@@ -1,6 +1,6 @@
 ---
 title: Configurable Product feature overview
-description: All the details about the Configurable Product feature of Spryker.
+description: Learn about selling complex products with modular designs or services using the Spryker Configurable product feature.
 last_updated: Dec 27, 2022
 template: concept-topic-template
 redirect_from:

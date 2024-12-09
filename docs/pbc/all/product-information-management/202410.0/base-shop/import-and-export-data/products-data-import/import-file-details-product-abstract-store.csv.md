@@ -1,5 +1,6 @@
 ---
 title: "Import file details: product_abstract_store.csv"
+description: Learn how to configure product abstract store information using the product abstract store csv file for your Spryker project.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-abstract-storecsv

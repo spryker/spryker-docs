@@ -1,5 +1,6 @@
 ---
 title: "Import file details: product_attribute_key.csv"
+description: Learn how to configure Product Attribute information using the product attribute key csv file for your Spryker project.
 last_updated: Jul 7, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-attribute-keycsv

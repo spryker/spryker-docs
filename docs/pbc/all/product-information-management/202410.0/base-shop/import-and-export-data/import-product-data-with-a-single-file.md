@@ -1,6 +1,6 @@
 ---
 title: Import product data with a single file
-description: Learn how to import all main product data with a single file
+description: Learn how you can import data for products using just a single file within your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/importing-product-data-with-a-single-file

@@ -1,5 +1,6 @@
 ---
 title: Product Labels feature overview
+description: Learn about the Product Label feature in Spryker Cloud Commerce OS allowing to highlight products with information labels
 last_updated: Jul 26, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-labels-feature-overview

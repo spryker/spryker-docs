@@ -1,6 +1,6 @@
 ---
 title: "Import file details: product_packaging_unit_type.csv"
-description: Learn how to import product_packaging_unit_type.csv
+description: Learn how you can import data for product packaging units using the product packaging unit type csv file within your Spryker Cloud Commerce OS project.
 template: data-import-template
 last_updated: Aug 10, 2024
 redirect_from:

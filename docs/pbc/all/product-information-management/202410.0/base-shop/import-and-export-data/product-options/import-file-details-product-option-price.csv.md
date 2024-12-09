@@ -1,5 +1,6 @@
 ---
 title: "Import file details: product_option_price.csv"
+description: Learn how to confgiure product option price information using the product option price csv file within your Spryker project.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-option-pricecsv

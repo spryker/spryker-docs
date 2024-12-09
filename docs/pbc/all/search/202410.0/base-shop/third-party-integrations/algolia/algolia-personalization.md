@@ -234,7 +234,7 @@ Adjust static data in the `eventTracker` block as needed:
 
 2. Dynamic Data
 
-For adding dynamic data, refer to the [API documentation](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md). Adjust the configuration as needed for specific triggers.
+For adding dynamic data, refer to the [API documentation](https://github.com/spryker-shop/traceable-event-widget/blob/master/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md). Adjust the configuration as needed for specific triggers.
 
 ```twig
 {% raw %}{% set events = {{% endraw %}

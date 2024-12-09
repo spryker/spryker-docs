@@ -1,6 +1,6 @@
 ---
 title: Install the Promotions & Discounts + Category Management feature
-description: Add the category parameter to calculation and conditions queries in the Promotions & Discounts feature.
+description: Learn how to add the category parameter to calculation and conditions queries in the Promotions & Discounts feature to your Spryker projects.
 last_updated: Jan 11, 2022
 template: feature-integration-guide-template
 redirect_from:

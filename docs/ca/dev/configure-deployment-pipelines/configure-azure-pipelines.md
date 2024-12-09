@@ -108,5 +108,6 @@ To connect Azure Pipelines with your AWS repository:
 | `$(AWS_GIT_USERNAME)` and `$(AWS_GIT_PASSWORD)` |  credentials you’ve received from support. |
 | `$(System.AccessToken)` |  Azure DevOps internal variable to access current repo.  it's also possible to use other auth, see azure devops documentation for additional information. |
 
+https://learn.microsoft.com/en-us/azure/devops/pipelines/repos/pipeline-options-for-git
 
 You’ve configured Azure pipelines.

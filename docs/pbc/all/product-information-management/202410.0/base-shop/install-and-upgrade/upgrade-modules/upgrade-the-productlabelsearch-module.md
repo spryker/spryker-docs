@@ -1,6 +1,7 @@
 ---
 title: Upgrade the ProductLabelSearch module
 last_updated: Jun 16, 2021
+description: Learn how to upgrade from an older version to a newer one of the product label search module within your Spryker based project.
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productlabelsearch
 originalArticleId: 9fca0eb4-da0d-471a-a805-66f3fbd32879

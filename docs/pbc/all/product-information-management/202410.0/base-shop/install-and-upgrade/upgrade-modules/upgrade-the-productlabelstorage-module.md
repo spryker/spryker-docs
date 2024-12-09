@@ -1,5 +1,6 @@
 ---
 title: Upgrade the ProductLabelStorage module
+description: Learn how to upgrade from an older version to a newer one of the product label storage module within your Spryker based project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productlabelstorage

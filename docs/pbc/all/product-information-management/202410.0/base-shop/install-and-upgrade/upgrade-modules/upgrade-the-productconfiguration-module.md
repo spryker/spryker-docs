@@ -1,6 +1,6 @@
 ---
 title: Upgrade the ProductConfiguration module
-description: Learn how to upgrade the ProductConfiguation module to a newer version.
+description: Learn how to upgrade from an older version to a newer one of the product configuration module within your Spryker based project.
 template: module-migration-guide-template
 last_updated: Nov 21, 2023
 redirect_from:

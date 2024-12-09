@@ -7,8 +7,6 @@ last_updated: Oct 24, 2024
 
 When setting up Amazon QuickSight for the first time, Back Office users get access to analytics based on the contract terms. Users are assigned with roles, such as author or reader, defining their permissions when working with analytics. This document explains how you can update the list of users with access to analytics or change their roles.
 
-Changes to the users setup affect the price of Amazon QuickSight license.
-
 ## Update analytics users
 1. To request additional users or updating existing ones, contact your Customer Success Manager at [the analytics contact page](https://now.spryker.com/contact-analytics). Provide the list of users you want to add or remove. For each new user, specify their role: author or reader. You can request the roles of the existing users to be updated too.
 

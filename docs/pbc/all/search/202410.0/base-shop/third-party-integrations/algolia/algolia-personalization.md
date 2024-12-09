@@ -99,8 +99,8 @@ console frontend:project:install-dependencies && console frontend:yves:build
 
 5. Install the `search-insights` dependency:
 ```bash
-npm i search-insights`.
-
+npm i search-insights
+```
 
 ### Check your Yves's compatibility with new functionality
 
@@ -249,7 +249,7 @@ You can view the event payload in the console under `Adapter Data:`. If the payl
 {% raw %}{% endblock %}{% endraw %}
 ```
 
-* Adjust the configuration for dynamic data for the needed triggers. For more information, see [API documentation](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
+* Adjust the configuration for dynamic data for the needed triggers. For more information, see [API documentation](https://github.com/spryker-shop/traceable-event-widget/blob/master/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
 
 ```twig
 {% raw %}{% set events = {{% endraw %}

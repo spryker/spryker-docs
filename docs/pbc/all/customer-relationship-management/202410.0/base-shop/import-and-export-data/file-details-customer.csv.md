@@ -1,5 +1,6 @@
 ---
 title: "File details: customer.csv"
+description: Learn how to use the customer csv file in your Spryker Cloud Commerce OS store to configure customer information.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-customercsv

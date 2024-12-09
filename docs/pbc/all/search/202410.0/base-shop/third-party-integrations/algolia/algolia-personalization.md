@@ -100,8 +100,8 @@ console frontend:project:install-dependencies && console frontend:yves:build
 
 5. Install required `search-insights` dependency:
 ```bash
-npm i search-insights`.
-
+npm i search-insights
+```
 
 ### Check your Yves's compatibility with new functionality
 

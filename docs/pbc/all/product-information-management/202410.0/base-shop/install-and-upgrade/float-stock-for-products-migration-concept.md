@@ -1,5 +1,6 @@
 ---
 title: Float stock for products migration concept
+description: Learn how to migrate all effected modules when changing from an int to a float with your stock quantity fields in your Spryker Project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/float-stock-for-products

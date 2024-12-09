@@ -1,6 +1,6 @@
 ---
 title: Category Management + Promotions and Discounts feature integration
-description: Add the category parameter to calculation and conditions queries in the Promotions & Discounts feature.
+description: Learn how to install the Category Management + Promotions and discounts feature in to your Spryker Cloud Commerce OS project.
 last_updated: Jan 11, 2022
 template: feature-integration-guide-template
 redirect_from:

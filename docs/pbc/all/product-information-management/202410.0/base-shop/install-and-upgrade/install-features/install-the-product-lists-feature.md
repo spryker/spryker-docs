@@ -1,6 +1,6 @@
 ---
 title: Install the Product Lists feature
-description: Learn how to install the Product Lists feature into your project.
+description: Learn how to install the Product Lists feature into your Spryker Cloud Commerce OS project.
 last_updated: Aug 22, 2023
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-lists-feature-integration

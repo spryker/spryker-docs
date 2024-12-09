@@ -1,6 +1,6 @@
 ---
 title: Product Sets feature integration
-description: Learn how to integrate the Product sets feature into a Spryker project.
+description: Learn how to integrate the Spryker Product sets feature into a Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-sets-feature-integration

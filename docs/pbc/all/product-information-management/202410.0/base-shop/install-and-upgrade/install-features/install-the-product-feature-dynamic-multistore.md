@@ -1,6 +1,6 @@
 ---
 title: Install the Product feature + Dynamic Multistore
-description: Learn how to install the Product feature + Dynamic Multistore.
+description: Learn how to install the Product feature + Dynamic Multistore in to your Spryker Cloud Commerce OS projects.
 last_updated: Apr 25, 2023
 template: feature-integration-guide-template
 ---

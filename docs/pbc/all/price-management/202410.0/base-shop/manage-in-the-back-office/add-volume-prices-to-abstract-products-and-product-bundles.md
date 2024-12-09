@@ -1,5 +1,6 @@
 ---
 title: Add volume prices to abstract products and product bundles
+description: Learn how you can add volume prices to abstract products in the back office within your Spryker based products
 last_updated: June 27, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/adding-volume-prices-to-abstract-products

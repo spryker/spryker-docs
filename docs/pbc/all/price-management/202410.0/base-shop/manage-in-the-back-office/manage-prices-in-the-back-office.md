@@ -1,6 +1,6 @@
 ---
 title: Manage prices in the Back Office
-description: Learn how to log into the Back Office.
+description: Learn how you can manage prices for products in the back office for your Spryker based projects.
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:

@@ -1552,6 +1552,7 @@ If you want a store name as part of the URL path, follow the steps below.
 {% info_block warningBox "Verification" %}
 
 If you are working with pre-generated internal URLs in Twig templates, you must now wrap them using the new Twig function `generatePath()`.
+This function is provided by the `GeneratePathTwigPlugin` plugin.
 This ensures the URLs include the necessary context (store name) based on the current request.
 
 {% endinfo_block %}
@@ -1583,15 +1584,16 @@ Enable the following behaviors by registering the plugins and Twig command:
 |StorePrefixRouterEnhancerPlugin| Extracts and adding the current store name to the Route parameters, and for prefixing the generated URL with the current store name. Through the \Spryker\Yves\Router\RouterConfig::getAllowedStores() configuration, you tell this plugin what store names it has to work with.                   ||Spryker\Yves\Router\Plugin\RouterEnhancer|
 |LanguagePrefixRouterEnhancerPlugin| Extracts and adding the current language to the Route parameters, and to prefix the generated URLs with the current language. Through the \Spryker\Yves\Router\RouterConfig::getAllowedLanguages() configuration, you tell this plugin what languages it has to work with.                         ||Spryker\Yves\Router\Plugin\RouterEnhancer|
 |StorePrefixStorageRouterEnhancerPlugin| Extracts and adding the current store name to the Route parameters, and for prefixing the generated URL with the current store name. Through the \SprykerShop\Yves\StorageRouter\StorageRouterConfig::getAllowedStores() configuration, you tell this plugin what store names it has to work with. ||SprykerShop\Yves\StorageRouter\Plugin\RouterEnhancer|
-|GeneratePathTwigPlugin| Provides store name as part of URL path.                                                                                                                                                                                                                                                           ||SprykerShop\Yves\ShopUi\Plugin\Twig|
+|GeneratePathTwigPlugin| Wrapper on Symfony Router `generate()` function.                                                                                                                                                                                                                                                   ||SprykerShop\Yves\ShopUi\Plugin\Twig|
 
 
 
 {% info_block warningBox "Verification" %}
 
 In the RouterDependencyProvider::getRouterEnhancerPlugins() stack, the order of plugin execution has changed:
-•	The `StorePrefixRouterEnhancerPlugin` must now be executed before the `LanguagePrefixRouterEnhancerPlugin`.
-•	Ensure that your plugin stack reflects this updated order to maintain the correct routing behavior.
+•   By default store name placed before the language prefix in the URL. Example: `https://yves.eu.mysprykershop.com/DE/en/`.    
+•	So the `StorePrefixRouterEnhancerPlugin` must now be executed before the `LanguagePrefixRouterEnhancerPlugin`.
+•	Ensure your plugin stack reflects this updated order to maintain the correct routing behavior.
 
 {% endinfo_block %}
 
@@ -1644,6 +1646,12 @@ class StorageRouterDependencyProvider extends SprykerShopStorageRouterDependency
     }
 }
 ```
+
+{% info_block warningBox "Verification" %}
+
+We do not need `LanguagePrefixRouterEnhancerPlugin` for the StorageRouter, as the language is already part of the URL for the StorageRouter.
+
+{% endinfo_block %}
 
 **src/Pyz/Yves/Twig/TwigDependencyProvider.php**
 

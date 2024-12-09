@@ -8,7 +8,7 @@ redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-zed-rest-api.html
 related:
   - title: Facade
-    link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
+    link: docs/dg/dev/backend-development/zed/business-layer/facade/facade.html
   - title: Create, use, and extend the transfer objects
     link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
   - title: Add a new module

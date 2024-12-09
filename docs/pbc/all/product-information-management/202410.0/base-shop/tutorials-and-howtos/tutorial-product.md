@@ -27,7 +27,7 @@ related:
   - title: Extend the core
     link: docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
   - title: About the Persistence layer
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/persistence-layer.html
   - title: Using translations
     link: docs/dg/dev/internationalization-and-multi-store/managing-translations-with-twig-translator.html
 ---

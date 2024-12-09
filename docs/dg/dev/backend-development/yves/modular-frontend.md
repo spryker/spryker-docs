@@ -1,6 +1,6 @@
 ---
 title: Modular Frontend
-description: This document provides information on Pages and Widgets, the Pages module and how the Pages module can be extended. Real-life examples included into the document will help you to understand the concept better.
+description: This document provides information on Pages and Widgets, the Pages module and how the Pages module can be extended. Examples will help you to understand the concept better.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/modular-frontend

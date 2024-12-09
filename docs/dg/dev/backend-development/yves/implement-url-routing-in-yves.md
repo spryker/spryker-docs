@@ -1,6 +1,6 @@
 ---
 title: Implement URL routing in Yves
-description: URL routing lets you map URLs to the code that gets executed when a specific request is being submitted. URL routing makes URLs more human-readable and SEO friendly.
+description: URL routing lets you map URLs to the code that gets executed when a request is being submitted. URL routing makes URLs human-readable and SEO friendly.
 last_updated: Sep 2, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/yves-url-routing
@@ -9,19 +9,19 @@ redirect_from:
   - /docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
 related:
   - title: Yves overview
-    link: docs/scos/dev/back-end-development/yves/yves.html
+    link: docs/dg/dev/backend-development/yves/yves.html
   - title: Add translations for Yves
-    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+    link: docs/dg/dev/backend-development/yves/adding-translations-for-yves.html
   - title: CLI entry point for Yves
-    link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
+    link: docs/dg/dev/backend-development/yves/cli-entry-point-for-yves.html
   - title: Controllers and actions
-    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+    link: docs/dg/dev/backend-development/yves/controllers-and-actions.html
   - title: Modular Frontend
-    link: docs/scos/dev/back-end-development/yves/modular-frontend.html
+    link: docs/dg/dev/backend-development/yves/modular-frontend.html
   - title: Yves bootstrapping
-    link: docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
+    link: docs/dg/dev/backend-development/yves/yves-bootstrapping.html
   - title: Yves routes
-    link: docs/scos/dev/back-end-development/yves/yves-routes.html
+    link: docs/dg/dev/backend-development/yves/yves-routes.html
 ---
 
 The words contained in an URL play a major factor for a search engine to determine if the page is relevant for a specific search query. URL routing is a mechanism used to map URLs to the code that gets executed when a specific request is being submitted. URL routing makes URLs more human-readable and SEO-friendly.

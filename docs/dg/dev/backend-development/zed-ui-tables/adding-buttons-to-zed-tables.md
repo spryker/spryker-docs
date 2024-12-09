@@ -1,6 +1,6 @@
 ---
 title: Adding buttons to Zed tables
-description: The document describes how to add buttons to Zed tables.
+description: Enhance Zed tables by adding custom buttons with this guide. Learn how to configure button actions and integrate them seamlessly into your backend UI.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-add-button-table
@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed-ui-tables/adding-buttons-to-zed-tables.html
 related:
   - title: Create and configure Zed tables
-    link: docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html
+    link: docs/dg/dev/backend-development/zed-ui-tables/create-and-configure-zed-tables.html
 ---
 
 Depending on the button type that needs to be added (`Update/Create/Remove/View`), you can add the following operations:

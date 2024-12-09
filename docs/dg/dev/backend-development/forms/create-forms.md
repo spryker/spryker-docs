@@ -10,7 +10,7 @@ redirect_from:
   - docs/scos/dev/back-end-development/forms/creating-forms.html
 related:
   - title: Forms
-    link: docs/scos/dev/back-end-development/forms/forms.html
+    link: docs/dg/dev/backend-development/forms/forms.html
 ---
 
 Spryker uses Symfony forms; this tutorial helps you get started on working with forms and shows how to build a simple newsletter subscription form that contains a field for entering the email address and a submit button.

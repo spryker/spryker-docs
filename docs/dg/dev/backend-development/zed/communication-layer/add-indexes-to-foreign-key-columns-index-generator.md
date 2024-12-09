@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/communication-layer/adding-indexes-to-foreign-key-columns-index-generator.html
 related:
   - title: About Communication layer
-    link: docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html
+    link: docs/dg/dev/backend-development/zed/communication-layer/communication-layer.html
 ---
 
 Postgres doesn't automatically add indexes to foreign key columns. This can lead to performance issues with the database. In MySQL and MariaDB, you get the indexes for foreign key columns automatically. Most likely, with Postgres, no one adds indexes for the foreign key columns manually.

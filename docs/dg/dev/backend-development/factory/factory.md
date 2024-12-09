@@ -7,10 +7,6 @@ originalLink: https://documentation.spryker.com/2021080/docs/factory
 originalArticleId: 08d03a8a-184b-46a0-87ff-8594976ab795
 redirect_from:
   - /docs/scos/dev/back-end-development/factory/factory.html
-
-related:
-  - title: Injecting dependencies within factories - container globals
-    link: docs/scos/dev/back-end-development/factory/injecting-dependencies-within-factories-container-globals.html
 ---
 
 All modules are shipped with a dedicated factory for each layer. The responsibility of the factory is to create new instances of the classes from the same layer and module.

@@ -5,7 +5,7 @@ last_updated: Nov 24, 2024
 template: howto-guide-template
 ---
 
-This document describes how to integrate Algolia Personalization. This integration also enabled other Algolia premium features:
+This document describes how to integrate Algolia Personalization. This integration also enables the following Algolia premium features:
 
 - Dynamic Re-Ranking
 - Query Categorization
@@ -15,7 +15,7 @@ This document describes how to integrate Algolia Personalization. This integrati
 
 {% info_block infoBox "Third-party frontends" %}
 
-By default, Spryker supports Algolia Personalization only for Yves. To integrate Algolia Personalization with a third-party or mobile frontend, follow [this guide](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia-personalization-headless.html).
+By default, Spryker supports Algolia Personalization only for Yves. To integrate Algolia Personalization with a third-party or mobile frontend, follow [Algolia Personalization for headless frontends](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia-personalization-for-headless-frontends.html).
 
 {% endinfo_block %}
 
@@ -108,15 +108,13 @@ If you customized Yves templates on the project level (`src/Pyz/Yves/`), some ev
 
 ### Run the project in a testing environment
 
-1. Set `TraceableEventWidgetConfig::isDebugEnabled()` to `true`.  
+1. To be able to see event logs in the console, enable debug mode by setting `TraceableEventWidgetConfig::isDebugEnabled()` to `true`.  
 2. Run the project locally or deploy to a testing environment.
 3. Open the Storefront's home page.
 4. In browser development console, go to settings.
 5. Enable the "Preserve log" option.
 
 ### Check triggered events and their payload
-
-When debug mode is enabled, you can see event logs in the console to help with inspection.
 
 Execute the following cases while monitoring the console for specified events:
 
@@ -366,10 +364,9 @@ By accepting, you allow us to capture anonymous events for personalization, anal
   Make sure the events you've triggered are displayed.
 
 
-### Configure Algolia Features
+### Configure Algolia features
 
-When your indexes will have enough data (unique searches, events), you can check it in Analytics and Events Debugger tabs on Algolia Dashaboard.
-Then you can start configuration of Personalization, Dynamic Re-Ranking and Query Categorization features (find Algolia docs and guides on their website).
+When your indexes have enough data, such as unique searches and events, you can start configuring [Personalization](https://www.algolia.com/doc/guides/personalization/ai-personalization/what-is-ai-personalization/), [Dynamic Re-Ranking](https://www.algolia.com/doc/guides/algolia-ai/re-ranking/), and [Query Categorization](https://www.algolia.com/doc/guides/algolia-ai/query-categorization/) features.
 
-**It's important** that you need to first create [A/B tests](https://academy.algolia.com/training/00f72f14-0713-11ef-b9fe-0617d5264223/overview) with new personalized configuration of your search ("A/B Testing" page in Algolia Dashboard).
-It will allow you to see how new features influence your search conversion rate only for some limit audience of your site. When the results are good, you can change the settings globally in the indexes configuration, so it will work for all users.
+
+When updating the configuration of Algolia features, make sure to A/B test them before rolling out globally. A/B testing lets you test configuration and see how it affects conversion rates for a limited audience. For more details, see [A/B Testing](https://academy.algolia.com/training/00f72f14-0713-11ef-b9fe-0617d5264223/overview).

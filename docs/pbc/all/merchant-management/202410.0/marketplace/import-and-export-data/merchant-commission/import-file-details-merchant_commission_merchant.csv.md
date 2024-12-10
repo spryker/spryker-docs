@@ -1,5 +1,6 @@
 ---
 title: "Import file details: merchant_commission_merchant.csv"
+description: Learn about the Spryker merchant commission merchant CSV file and how to assign commisions within your Spryker Marketplace project.
 last_updated: Jul 07, 2024
 description: Import relations of merchant comissions to merchants.
 template: import-file-template

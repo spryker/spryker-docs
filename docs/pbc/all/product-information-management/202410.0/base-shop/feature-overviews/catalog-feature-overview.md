@@ -1,6 +1,6 @@
 ---
 title: Catalog feature overview
-description: The Catalog feature lets you manage product catalog.
+description: The Spryker Catalog feature lets you build, organize and manage your products within your Spryker Cloud Commerce OS project.
 last_updated: Jul 21, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/catalog

@@ -1,6 +1,6 @@
 ---
 title: Stripe
-description: Stripe technology partner
+description: Learn all about Sprykers Technology partner, Stripe. Enabling and Enhancing your payment process.
 last_updated: Oct 10, 2024
 template: concept-topic-template
 ---

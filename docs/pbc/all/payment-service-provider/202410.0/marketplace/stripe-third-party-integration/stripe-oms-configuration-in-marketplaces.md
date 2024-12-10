@@ -1,6 +1,6 @@
 ---
 title: "Stripe: OMS configuration for marketplaces"
-description: Merchant payouts and reverse payouts
+description: Guidelines on the Spryker Ordermanagement system and Stripe integration for Marketplace based stores.
 last_updated: Aug 20, 2024
 template: howto-guide-template
 ---

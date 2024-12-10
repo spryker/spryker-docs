@@ -1,6 +1,6 @@
 ---
 title: Products
-description: Explains abstract and concrete products
+description: Everything you need to know for Abstract and Concrete products within your Spryker Marketplace based projects.
 last_updated: Jan 17, 2023
 template: concept-topic-template
 redirect_from:

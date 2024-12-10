@@ -1,6 +1,6 @@
 ---
 title: Install and configure Adyen
-description: Install and configure Adyen module to work in the Spryker Commerce OS.
+description: Install and configure Adyen module to work in your Spryker Cloud Commerce OS store.
 last_updated: Oct 13, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/adyen-configuration
@@ -142,14 +142,14 @@ The table below describes all general configuration keys and their values.
 
 ## Notifications
 
-To complete the payment modification requests (cancel, capture, refund), it's necessary to [configure notification on Adyen](https://docs.adyen.com/platforms/configure-notifications) merchant backend side.
+To complete the payment modification requests (cancel, capture, refund), it's necessary to [configure notification on Adyen](https://docs.adyen.com/platforms/) merchant backend side.
 
-You can get more information form [Adyen documentation](https://docs.adyen.com/developers).
+You can get more information form [Adyen documentation](https://docs.adyen.com).
 
 The link to accept notifications from Adyen looks like https://mysprykershop.com/adyen/notification.
 
 ## Adyen Configuration
 
-You can get your credentials by following the [instruction](https://docs.adyen.com/online-payments/classic-integrations/api-integration-ecommerce).
+You can get your credentials by following the [instruction](https://docs.adyen.com/online-payments/classic-integrations/classic-api-integration/).
 
-You can get JS SDK url and generate your origin key by following this [instruction](https://docs.adyen.com/online-payments/classic-integrations/api-integration-ecommerce) from.
+You can get JS SDK url and generate your origin key by following this [instruction](https://docs.adyen.com/online-payments/classic-integrations/classic-api-integration/) from.

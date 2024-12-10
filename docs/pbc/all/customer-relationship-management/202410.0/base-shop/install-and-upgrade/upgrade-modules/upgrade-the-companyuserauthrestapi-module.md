@@ -1,5 +1,6 @@
 ---
 title: Upgrade the CompanyUserAuthRestApi module
+description: Learn how to upgrade to a newer version of Spryker Company User Auth Rest API module from older ones in your Spryker project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/companyuserauthrestapi-migration-guide

@@ -1,6 +1,6 @@
 ---
 title: "Extend Merchant Portal dashboard"
-description: This articles provides details how to create new module with application
+description: Learn how to extend the merchant portal dashboards in the merchant portal within your Spryker projects.
 template: howto-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

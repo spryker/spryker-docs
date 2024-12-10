@@ -1,6 +1,6 @@
 ---
 title: Product Offer Service feature overview
-description: General overview of the Product Offer Service feature
+description: General overview of the Product Offer Service feature for your Spryker Unified Commerce Projects.
 template: concept-topic-template
 last_updated: Nov 30, 2023
 ---

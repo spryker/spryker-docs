@@ -1,6 +1,6 @@
 ---
 title: Inxmail API requests
-description: Learn about the API requests for Inxmail in Spryker.
+description: Learn about the API requests for third party Inxmail in your Spryker projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 redirect_from:

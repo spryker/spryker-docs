@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve Marketplace orders"
-description: Retrieve information about Marketplace orders via Glue API.
+description: Retrieve information about Marketplace orders via Glue API for your Spryker Marketplace project.
 template: glue-api-storefront-guide-template
 last_updated: Nov 21, 2023
 related:

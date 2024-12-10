@@ -1,5 +1,6 @@
 ---
 title: "Import file details: payment_method.csv"
+description: Learn how to configure Payment Method information using the payment method csv file in your Spryker Cloud Commerce Os Project.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-payment-methodcsv

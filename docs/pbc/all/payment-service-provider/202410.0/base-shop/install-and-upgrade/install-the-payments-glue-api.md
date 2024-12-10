@@ -1,5 +1,6 @@
 ---
 title: Install the Payments Glue API
+description: Learn how to install the payments glue api in to your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-payments-feature-integration

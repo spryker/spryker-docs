@@ -1,5 +1,6 @@
 ---
 title: Implementing Twig extensions
+description: Create custom Twig extensions to enhance frontend templates. Learn to implement, register, and utilize Twig functions for a flexible ecommerce experience.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-twig-extensions

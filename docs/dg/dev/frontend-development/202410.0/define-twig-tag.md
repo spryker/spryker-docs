@@ -7,9 +7,6 @@ originalLink: https://documentation.spryker.com/2021080/docs/tutorial-how-define
 originalArticleId: caa98ac5-fcd3-4e58-b6f8-2aa573e5ed36
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-how-the-define-twig-tag-is-working.html
-related:
-  - title: "Tutorial: Twig extensions"
-    link: docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-twig-extensions.html
 ---
 
 This tutorial explains how the *define* tag works on particular examples.

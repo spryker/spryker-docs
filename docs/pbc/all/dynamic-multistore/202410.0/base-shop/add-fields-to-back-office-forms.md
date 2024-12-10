@@ -1,6 +1,6 @@
 ---
 title: Add fields to Back Office forms
-description: Learn how to add custom fields to Back Office forms.
+description: A guide to help you learn how to add new fields to forms that are used within the Spryker Cloud Commerce OS Back Office.
 last_updated: Jun 5, 2024
 template: howto-guide-template
 ---

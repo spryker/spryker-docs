@@ -1,6 +1,6 @@
 ---
 title: Upgrade the Country module
-description: Use the guide to update versions to the newer ones of the Country module.
+description: Learn how to upgrade to a newer version of the Dynamic multi store Country module within your Spryker project.
 last_updated: Nov 12, 2024
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-country

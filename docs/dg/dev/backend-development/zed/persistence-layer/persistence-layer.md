@@ -23,9 +23,9 @@ related:
   - title: Repository
     link: docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
   - title: About the Business layer
-    link: docs/scos/dev/back-end-development/zed/business-layer/business-layer.html
+    link: docs/dg/dev/backend-development/zed/business-layer/business-layer.html
   - title: About Communication layer
-    link: docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html
+    link: docs/dg/dev/backend-development/zed/communication-layer/communication-layer.html
 ---
 
 Zed's `Persistence` layer is the owner of the schema, entities, and queries. This layer knows the database structure and holds the connection to it.

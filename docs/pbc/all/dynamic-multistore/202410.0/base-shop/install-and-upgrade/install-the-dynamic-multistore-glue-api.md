@@ -1,6 +1,6 @@
 ---
 title: Install the Dynamic Multistore Glue API
-description: Use the guide to Install the Dynamic Multistore feature in your project.
+description: A tutorial guide showing you how to Install the Dynamic Multistore feature in to your Spryker project.
 last_updated: Nov 12, 2024
 template: feature-integration-guide-template
 ---

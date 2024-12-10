@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/messages-and-errors/handling-internal-server-messages.html
 related:
   - title: Handling errors with ErrorHandler
-    link: docs/scos/dev/back-end-development/messages-and-errors/handling-errors-with-errorhandler.html
+    link: docs/dg/dev/backend-development/messages-and-errors/handling-errors-with-errorhandler.html
   - title: Showing messages in Zed
     link: docs/dg/dev/backend-development/messages-and-errors/show-messages-in-the-back-office.html
 ---

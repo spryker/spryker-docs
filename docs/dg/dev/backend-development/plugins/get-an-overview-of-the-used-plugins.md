@@ -1,6 +1,6 @@
 ---
 title: Get an overview of the used plugins
-description: Plugin Overview gives you several ways of displaying used plugins.
+description: Discover how to review and analyze the plugins used in your Spryker project. This guide provides insights into managing plugins for optimal backend performance.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/plugin-overview
@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/plugins/getting-an-overview-of-the-used-plugins.html
 related:
   - title: Plugins
-    link: docs/scos/dev/back-end-development/plugins/plugins.html
+    link: docs/dg/dev/backend-development/plugins/plugins.html
 ---
 
 To use a new feature projects most likely need to add some plugins to their `*DependencyProvider`. Currently, it is not easy for projects to integrate a new feature due to the difficulties in identifying to which *`DependencyProvider` plugin A* of *module B* can be added to bring *functionality X*.

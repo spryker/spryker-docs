@@ -1,6 +1,6 @@
 ---
 title: Ratings and Reviews data import
-description: Details about data import files for the Ratings and Reviews PBC
+description: Learn all about data import files for the Ratings and Reviews Feature within your Spryker based projects.
 template: concept-topic-template
 last_updated: Jul 23, 2023
 redirect_from:

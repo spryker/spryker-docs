@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve product reviews when retrieving concrete products"
-description: Retrieve general information about concrete products.
+description: Retrieve product review information about concrete products using the Spryker GLUE API in your Spryker based project.
 last_updated: Sep 2, 2022
 template: glue-api-storefront-guide-template
 redirect_from:

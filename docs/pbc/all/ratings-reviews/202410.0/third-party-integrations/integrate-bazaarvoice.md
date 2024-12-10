@@ -1,6 +1,6 @@
 ---
 title: Integrate Bazaarvoice
-description: Find out how you can integrate Bazaarvoice into your Spryker shop
+description: Find out how you can integrate Spryker third party integration Bazaarvoice in your Spryker shop.
 template: howto-guide-template
 last_updated: Jan 09, 2024
 redirect_from:

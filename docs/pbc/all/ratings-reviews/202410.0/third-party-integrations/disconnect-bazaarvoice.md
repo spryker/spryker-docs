@@ -1,6 +1,6 @@
 ---
 title: Disconnect Bazaarvoice
-description: Find out how you can disconnect Bazaarvoice in your Spryker shop
+description: Find out how you can disconnect Spryker third party integration Bazaarvoice in your Spryker shop.
 template: howto-guide-template 
 redirect_from:
 - /docs/pbc/all/ratings-reviews/202204.0/third-party-integrations/disconnect-bazaarvoice.html

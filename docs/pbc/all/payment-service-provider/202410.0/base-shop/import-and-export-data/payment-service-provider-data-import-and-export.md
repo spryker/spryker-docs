@@ -1,6 +1,6 @@
 ---
 title: Payment Service Provider data import and export
-description: Details about the data importers for Payment Service Provider
+description: Learn how data import works and the different ways of importing data for Spryker Payment Service Providers in your Spryker project.
 last_updated: Jun 23, 2023
 template: concept-topic-template
 ---

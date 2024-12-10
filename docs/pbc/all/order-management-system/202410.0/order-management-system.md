@@ -1,5 +1,6 @@
 ---
 title: Order Management System
+description: Learn everything you need to know about the Spryker Order Management System for your Spryker Cloud Commerce OS or Marketplace project.
 last_updated: Feb 23, 2023
 template: concept-topic-template
 ---

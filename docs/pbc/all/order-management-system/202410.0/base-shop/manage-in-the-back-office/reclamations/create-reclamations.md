@@ -1,6 +1,6 @@
 ---
 title: Create reclamations
-description: Learn how to create reclamations in the Back Office
+description: Learn how you can create new reclamations in the Spryker Cloud Commerce OS Back Office
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:

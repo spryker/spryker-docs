@@ -1,6 +1,6 @@
 ---
 title: Heidelpay workflow for errors
-description: This article describes the procedure for handling errors in Heidelpay.
+description: This article describes the procedure for handling errors in Heidelpay within your Spryker Cloud Commerce OS Project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-error-workflow

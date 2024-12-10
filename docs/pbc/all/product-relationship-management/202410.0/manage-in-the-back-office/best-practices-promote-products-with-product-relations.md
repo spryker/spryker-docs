@@ -1,6 +1,6 @@
 ---
 title: "Best practices: Promote products with product relations"
-description: Learn how to promote products using product relations
+description: Learn how to promote products using product relations for your Spryker project with this best practice guide.
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 related:

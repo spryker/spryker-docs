@@ -1,6 +1,6 @@
 ---
 title: Installing and configuring Inxmail
-description: Install and configure Inxmail
+description: Learn how you can install and configure third party Inxmail in your Spryker Cloud Commerce OS projects
 last_updated: Jun 16, 2021
 template: howto-guide-template
 redirect_from:

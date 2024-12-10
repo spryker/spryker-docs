@@ -25,9 +25,9 @@ related:
   - title: Install module structure and configuration
     link: docs/scos/dev/set-up-spryker-locally/install-module-structure-and-configuration.html
   - title: Manage dependencies with Composer
-    link: docs/scos/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
+    link: docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
   - title: Redis configuration
-    link: docs/scos/dev/set-up-spryker-locally/redis-configuration.html
+    link: docs/dg/dev/set-up-spryker-locally/redis-configuration.html
 ---
 
 To install [B2B Demo Shop](/docs/about/all/b2b-suite.html) or [B2C Demo Shop](/docs/about/all/b2c-suite.html) without Docker, follow the steps below.

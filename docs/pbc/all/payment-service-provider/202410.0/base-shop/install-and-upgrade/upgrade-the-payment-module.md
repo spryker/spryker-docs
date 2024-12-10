@@ -1,6 +1,6 @@
 ---
 title: Upgrade the Payment module
-description: Use the guide to migrate to a newer version of the Payment module.
+description: Use the guide to migrate to a newer version of the Spryker Payment module in your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-payment

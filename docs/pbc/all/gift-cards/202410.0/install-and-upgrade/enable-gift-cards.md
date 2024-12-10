@@ -1,6 +1,6 @@
 ---
 title: Enabling gift cards
-description: The guide walks you through the process of installing the Gift Cards feature in the project.
+description: Learn how to enable Spryker gift cards in your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/enabling-gift-cards

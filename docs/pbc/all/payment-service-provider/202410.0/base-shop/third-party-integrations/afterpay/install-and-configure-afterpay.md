@@ -1,6 +1,6 @@
 ---
 title: Installing and configuring Afterpay
-description: Learn how to install and configure AfterPay into Spryker-based project
+description: Learn how to install and configure AfterPay into Spryker Cloud Commerce OS projects
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/afterpay-installation-and-configuration

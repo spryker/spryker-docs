@@ -1,5 +1,6 @@
 ---
 title: Migration guide - CompanyBusinessUnit
+description: Learn how to upgrade to a newer version of Spryker Company Business Unit Feature from older ones in your Spryker project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-companybusinessunit

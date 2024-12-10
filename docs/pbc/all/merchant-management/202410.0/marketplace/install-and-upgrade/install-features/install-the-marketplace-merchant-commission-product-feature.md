@@ -1,7 +1,7 @@
 ---
 title: Install the Marketplace Merchant Commission + Product feature
 last_updated: June 26, 2024
-description: Integrate the Product + Marketplace Merchant Commission feature into a Spryker project.
+description: Learn how you can Integrate the Product + Marketplace Merchant Commission feature into a Spryker B2B Marketplace project.
 template: feature-integration-guide-template
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Configure Payone
-description: Find out how you can configure the Payone app in your Spryker shop
+description: Find out how you can configure the Payone app in your Spryker shop using the Spryker App Composition Platform.
 last_updated: Jul 20, 2023
 template: howto-guide-template
 redirect_from:

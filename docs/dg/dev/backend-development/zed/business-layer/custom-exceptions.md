@@ -9,9 +9,9 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/business-layer/custom-exceptions.html
 related:
   - title: About the Business layer
-    link: docs/scos/dev/back-end-development/zed/business-layer/business-layer.html
+    link: docs/dg/dev/backend-development/zed/business-layer/business-layer.html
   - title: Business models
-    link: docs/scos/dev/back-end-development/zed/business-layer/business-models.html
+    link: docs/dg/dev/backend-development/zed/business-layer/business-models.html
 ---
 
 To throw an exception, you need to define your own type of exception. Later, it is much easier to handle exceptions when the type represents a specific type of error.

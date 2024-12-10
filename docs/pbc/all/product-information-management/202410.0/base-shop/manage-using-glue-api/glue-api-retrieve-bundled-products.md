@@ -1,5 +1,6 @@
 ---
 title: "Glue API: Retrieving bundled products"
+description: Learn how to retrieve bundled products that are configured with your Spryker Cloud Commerce OS project by using Glue API.
 last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-bundled-products

@@ -1,6 +1,6 @@
 ---
 title: Edit slots in configurable bundle templates
-description: Learn how to edit slots in configurable bundle templates in the Back Office.
+description: Learn how to edit slots in configurable bundle templates directly in the Spryker Cloud Commerce OS Back Office.
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 related:

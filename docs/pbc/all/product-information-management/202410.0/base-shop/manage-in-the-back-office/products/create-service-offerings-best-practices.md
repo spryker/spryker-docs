@@ -1,5 +1,6 @@
 ---
 title: "Creating service offerings: best practices"
+description: Create additional services to offer with your products, follow these best practices for your Spryker based project.
 last_updated: Jun 16, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-service-offerings

@@ -1,6 +1,6 @@
 ---
 title: Create product labels
-description: Learn how to create product labels in the Back Office
+description: Learn how to create product labels directly in the Spryker Cloud Commerce OS Back Office
 last_updated: Jul 30, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-product-labels

@@ -1,6 +1,6 @@
 ---
 title: "State machine cookbook: State machine fundamentals"
-description: State machines are a model of computation used to automate processes. In Spryker you can use the OMS module to automate the management of orders or the StateMachine module to automate other processes you define in your shop.
+description: In Spryker you can use the OMS module to automate the management of orders or the StateMachine module to automate other processes you define in your shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/state-machine-cookbook

@@ -1,6 +1,6 @@
 ---
 title: Delete product sets
-description: Learn how to reorder product sets in the Back Office.
+description: Learn how to delete your CMS product sets that you have configured within your Spryker Cloud Commerce OS Store.
 template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

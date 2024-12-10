@@ -1,5 +1,6 @@
 ---
 title: "Import file details: discount_store.csv"
+discount: Learn how to configure discount store information in your Spyker projects by importing data using the discount store csv file.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-discount-storecsv

@@ -1,6 +1,6 @@
 ---
 title: Create product CMS blocks
-description: Learn how to create product CMS blocks in the Back Office.
+description: Learn how to create and implement product CMS blocks in the Spryker Cloud Commerce OS Back Office.
 last_updated: June 2, 2022
 template: back-office-user-guide-template
 redirect_from:

@@ -23,9 +23,9 @@ redirect_from:
   - /v1/docs/en/installation-guide-chose-modules
 related:
   - title: Manage dependencies with Composer
-    link: docs/scos/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
+    link: docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
   - title: Redis configuration
-    link: docs/scos/dev/set-up-spryker-locally/redis-configuration.html
+    link: docs/dg/dev/set-up-spryker-locally/redis-configuration.html
 ---
 
 Spryker lets you change the modules included in a project at your will. You can add, remove, upgrade etc the modules a project consists of or even build a unique set of modules that suits specifically your needs. To do so:

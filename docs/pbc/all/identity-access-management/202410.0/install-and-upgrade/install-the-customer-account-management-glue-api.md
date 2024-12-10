@@ -1,5 +1,6 @@
 ---
 title: Install the Customer Account Management Glue API
+description: Learn how to implement and install the Customer Account Management Glue API feature in your Spryker project.
 last_updated: Jul 13, 2021
 template: feature-integration-guide-template
 redirect_from:

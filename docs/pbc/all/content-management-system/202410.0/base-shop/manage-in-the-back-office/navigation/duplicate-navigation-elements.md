@@ -1,6 +1,6 @@
 ---
 title: Duplicate navigation elements
-description: Learn how to duplicate navigation elements in the Back Office.
+description: Learn how to duplicate navigation elements in the Spryker Cloud Commerce OS Back Office.
 last_updated: Nov 22, 2022
 template: back-office-user-guide-template
 redirect_from:

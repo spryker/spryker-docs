@@ -1,6 +1,6 @@
 ---
 title: Configure data mapping between Akeneo and SCCOS
-description: Create data transformers in the Spryker Middleware powered by Alumio
+description: Learn how you can configure and map data between Akeneo and Spryker Cloud Commerce OS connecting the two together.
 template: howto-guide-template
 last_updated: Nov 17, 2023
 ---

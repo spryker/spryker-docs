@@ -1,5 +1,6 @@
 ---
 title: Upgrade the CmsPageSearch module
+description: Learn how to upgrade to a newer version of the Spryker CMS Page Search module from an older one in your Spryker Project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cmspagesearch

@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/factory/injecting-dependencies-within-factories-container-globals.html
 related:
   - title: Factory
-    link: docs/scos/dev/back-end-development/factory/factory.html
+    link: docs/dg/dev/backend-development/factory/factory.html
 ---
 
 The `ContainerInterface` provides a way to make dependencies globally available. Every dependency added to `ContainerInterface`, that is, marked as `isGlobal`, is available by using `getProvidedDependency()` in your factory.

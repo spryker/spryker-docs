@@ -1,6 +1,6 @@
 ---
 title: "Best practices: Promote products with discounts"
-description: Learn how to promote products using discounts.
+description: Learn how to promote products using the discounts module in the back office of Spryker Cloud Commerce OS.
 template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

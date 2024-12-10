@@ -1,6 +1,6 @@
 ---
 title: Create discounts
-description: Learn how to create discounts in the Back Office
+description: Learn how to create discounts using the discounts module in the back office of Spryker Cloud Commerce OS.
 last_updated: Aug 27, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-voucher

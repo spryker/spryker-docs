@@ -1,6 +1,6 @@
 ---
 title: Edit company units
-description: Learn how to edit company units in the Back Office.
+description: Learn how to edit company units configured in the Spryker Cloud Commerce OS Back Office.
 template: back-office-user-guide-template
 last_updated: Mar 20, 2024
 redirect_from:

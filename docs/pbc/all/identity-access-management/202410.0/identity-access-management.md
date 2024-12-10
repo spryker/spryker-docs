@@ -1,6 +1,6 @@
 ---
 title: Identity Access Management
-description:
+description: Learn all about the Spryker Identity Access Management capability and how to create and manage accounts within your Spryker project.
 last_updated: Oct 2, 2022
 template: concept-topic-template
 redirect_from:

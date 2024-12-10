@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Manage discount vouchers in guest carts"
-description: Learn how to manage discount vouchers in guest carts via Glue API.
+description: Learn how to manage discount vouchers in guest carts via the Spryker Glue API in your Spryker projects.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-discount-vouchers-in-guest-carts

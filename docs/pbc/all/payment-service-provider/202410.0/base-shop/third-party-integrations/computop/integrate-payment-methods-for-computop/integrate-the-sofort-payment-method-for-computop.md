@@ -1,6 +1,6 @@
 ---
 title: Integrating the Sofort payment method for Computop
-description: Integrate Sofort payment through Computop into the Spryker-based shop.
+description: Learn how to integrate Sofort payment through Computop into the Spryker Cloud Commerce OS shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-sofort

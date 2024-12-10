@@ -1,5 +1,6 @@
 ---
 title: Upgrade the SharedCartPage module
+description: Learn how to upgrade to a newer version of Spryker shared cart page module from older ones in your Spryker project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-shared-cart-page

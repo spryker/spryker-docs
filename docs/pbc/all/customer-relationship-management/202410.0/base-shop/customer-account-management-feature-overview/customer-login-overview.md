@@ -1,6 +1,6 @@
 ---
 title: Customer Login overview
-description: Customer Login lets you prevent brute-force login attacks
+description: Learn more about the Spryker Customer Login with this overview guide and learn how creating a strong password policy can enhance your security.
 last_updated: Jul 15, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-login-overview

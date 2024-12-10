@@ -1,6 +1,6 @@
 ---
 title: Configure merchant transfers for Stripe
-description: Learn how to configure merchant transfers for Stripe
+description: Learn how to configure merchant transfers with Stripe for your Spryker Marketplace project
 last_updated: Aug 20, 2024
 template: howto-guide-template
 ---

@@ -1,6 +1,6 @@
 ---
 title: Integrate Unzer
-description: Integrate Unzer into the Spryker Commerce OS.
+description: Learn how to integrate Unzer into your Spryker Cloud Commerce OS project.
 last_updated: Aug 11, 2022
 template: feature-integration-guide-template
 redirect_from:

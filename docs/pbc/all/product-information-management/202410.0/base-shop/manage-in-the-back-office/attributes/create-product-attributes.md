@@ -1,6 +1,6 @@
 ---
 title: Create product attributes
-description: Learn how to create product attributes in the Back Office.
+description: Learn how to create product attributes in the Spryker Cloud Commerce OS Back Office.
 last_updated: Oct 15, 2024
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-product-attributes

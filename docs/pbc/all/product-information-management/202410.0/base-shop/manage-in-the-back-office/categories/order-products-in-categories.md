@@ -1,6 +1,6 @@
 ---
 title: Order products in categories
-description: Learn how to order products in categories in the Back Office.
+description: Learn how to order products in categories directly in the Spryker Cloud Commerce OS Back Office.
 last_updated: June 15, 2021
 template: back-office-user-guide-template
 redirect_from:

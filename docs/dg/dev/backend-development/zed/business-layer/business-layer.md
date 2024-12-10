@@ -1,6 +1,6 @@
 ---
 title: About the Business layer
-description: Zed's business layer is responsible for the entire business logic.
+description: The Business Layer handles core logic and processes like product data, order management, and payment. This guide explains how to manage business rules and integrate backend workflows.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/business-layer
@@ -9,15 +9,15 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/business-layer/business-layer.html
 related:
   - title: Facade
-    link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
+    link: docs/dg/dev/backend-development/zed/business-layer/facade/facade.html
   - title: Business models
-    link: docs/scos/dev/back-end-development/zed/business-layer/business-models.html
+    link: docs/dg/dev/backend-development/zed/business-layer/business-models.html
   - title: Custom exceptions
-    link: docs/scos/dev/back-end-development/zed/business-layer/custom-exceptions.html
+    link: docs/dg/dev/backend-development/zed/business-layer/custom-exceptions.html
   - title: About Communication layer
-    link: docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html
+    link: docs/dg/dev/backend-development/zed/communication-layer/communication-layer.html
   - title: About the Persistence layer
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/persistence-layer.html
 ---
 
 Zed's `Business` layer is responsible for the entire business logic.

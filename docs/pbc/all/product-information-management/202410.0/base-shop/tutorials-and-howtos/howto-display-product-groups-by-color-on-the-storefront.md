@@ -1,6 +1,6 @@
 ---
 title: "Display product groups by color on the Storefront"
-description: Procedure to display a product group on Storefront.
+description: Procedure to display a product group by colour on the Spryker Storefront for your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-display-product-groups-by-color-on-the-storefront

@@ -1,7 +1,7 @@
 ---
 title: Edit marketplace concrete products
 last_updated: Sep 24, 2024
-description: Learn how to edit concrete products in the Merchant Portal.
+description: Learn how to edit concrete products in the Merchant Portal for your Spryker Marketplace based projects.
 template: back-office-user-guide-template
 redirect_from:
   - /docs/pbc/all/product-information-management/202404.0/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html

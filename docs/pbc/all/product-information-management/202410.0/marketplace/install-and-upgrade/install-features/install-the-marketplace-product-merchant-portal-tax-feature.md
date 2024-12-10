@@ -1,7 +1,7 @@
 ---
 title: Install the Marketplace Product - Merchant Portal + Tax feature
 last_updated: Jan 05, 2021
-description: This integration guide provides steps on how to integrate the Merchant Portal - Marketplace Product + Tax feature into a Spryker project.
+description: Learn how to integrate the Merchant Portal - Marketplace Product + Tax feature into a Spryker marketplace project.
 template: feature-integration-guide-template
 ---
 

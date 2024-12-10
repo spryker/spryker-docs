@@ -1,5 +1,6 @@
 ---
 title: Censhare PIM
+description: Learn about Spryker Third Party Integration Censhare PIM and how it can enhance your Spryker based project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/censhare-pim

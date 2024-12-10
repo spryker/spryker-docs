@@ -1,6 +1,6 @@
 ---
 title: Marketplace Product feature overview
-description: This document contains concept information for the Marketplace Products feature.
+description: Learn about the Spryker Marketplace product feature for your Spryker Marketplace based projects.
 template: concept-topic-template
 last_updated: Jan 12, 2024
 redirect_from:

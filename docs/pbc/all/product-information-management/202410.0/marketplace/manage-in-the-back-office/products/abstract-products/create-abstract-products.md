@@ -1,7 +1,7 @@
 ---
 title: Create abstract products
 last_updated: Jul 27, 2021
-description: This guide explains how to create abstract products in Marketplace.
+description: This guide explains how to create abstract products in your Spryker Marketplace based projects.
 template: back-office-user-guide-template
 related:
   - title: Editing abstract products

@@ -1,7 +1,7 @@
 ---
 title: Manage product options
 last_updated: Apr 21, 2021
-description: Use this document to manage product options in the Back Office.
+description: Use this document to manage product options in the Spryker Marketplace Back Office.
 template: back-office-user-guide-template
 redirect_from:
   - /docs/marketplace/user/back-office-user-guides/202311.0/catalog/product-options/managing-product-options.html

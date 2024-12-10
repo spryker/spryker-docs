@@ -1,6 +1,6 @@
 ---
 title: Split products by stores
-description: This document provides details about how to split products by stores.
+description: This document provides details about how to split products by stores for your Spryker Cloud Commerce OS Projects.
 template: howto-guide-template
 last_updated: Aug 2, 2023
 redirect_from:

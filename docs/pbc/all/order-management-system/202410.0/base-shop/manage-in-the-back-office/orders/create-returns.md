@@ -1,6 +1,6 @@
 ---
 title: Create returns
-description: Learn how to create returns in the Back Office
+description: Learn how to create returns if a order item is returnabel in the Spryker Cloud Commerce OS Back Office
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:

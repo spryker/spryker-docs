@@ -102,19 +102,19 @@ console frontend:project:install-dependencies && console frontend:yves:build
 npm i search-insights
 ```
 
-### Check your Yves's compatibility with new functionality
+## Test and configure Yves customizations to work with Algolia Personalization
 
-In case of customizations, your codebase could have updated Yves templates on the project level: `src/Pyz/Yves/`.
-It could be a reason that some events won't be triggered or triggered with incorrect data.
+If you customized Yves templates on the project level (`src/Pyz/Yves/`), some events may not trigger or trigger with incorrect data.
 
-#### Run the project
+### Run the project in a testing environment
+
 1. Set `TraceableEventWidgetConfig::isDebugEnabled()` to `true`.  
 2. Run the project locally or deploy to a testing environment.
 3. Open the Storefront's home page.
 4. In browser development console, go to settings.
 5. Enable the "Preserve log" option.
 
-#### Check triggered events and their payload
+### Check triggered events and their payload
 
 When debug mode is enabled, you can see event logs in the console to help with inspection.
 
@@ -168,22 +168,22 @@ Order Success page cases:
 To view a full list of available events, refer to the `traceable-events-algolia` [Readme file](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-algolia/README.md).
 
 
-#### Common issues and solutions
+### Common issues and solutions
 
-##### Prerequisites
+#### Prerequisites
 
-If you need to add, change, or fix events at the project level, start with these steps:
+If you need to add, change, or fix events on the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/202410.0/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level), start with these steps:
 
 1. Locate the page template or view that is used for the current page.
-2. On the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/202410.0/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level), override the `{% raw %}{% block eventTracker %}{% endraw %}` block in your project’s template.
+2. On the project level, override the `{% raw %}{% block eventTracker %}{% endraw %}` block in your project’s template.
 
-For comprehensive details about the **event configuration API**, visit the [traceable-events-orchestrator README](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
+For details on the event configuration API, see the [traceable-events-orchestrator README](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
 
-##### Issue: Event not triggering on user action
+#### Issue: Event not triggering on user action
 
-If an event isn't firing, verify that the action, like `click` or `change`, is configured for the specific event, like `PRODUCT_CLICK`. Detailed steps:
+If an event isn't firing, verify that the action, like `click` or `change`, is configured for the event, like `PRODUCT_CLICK`. Detailed steps:
 
-1. Check the configuration is set up for new and changed components. Configuration for built-in components is provided by default.
+1. Check the configuration is set up for new and changed components.
 
 ```twig
 {% raw %}{% block eventTracker %}{% endraw %}
@@ -202,7 +202,7 @@ If an event isn't firing, verify that the action, like `click` or `change`, is c
 {% raw %}{% endblock %}{% endraw %}
 ```
 
-For more details, see [API documentation](https://github.com/spryker-shop/traceable-event-widget/blob/master/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
+Configuration for built-in components is provided by default. For more details, see [API documentation](https://github.com/spryker-shop/traceable-event-widget/blob/master/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
 
 2. Check the Event Selector. CSS selectors are provided by default. If you've changed selectors, update the configuration accordingly.
 
@@ -229,11 +229,11 @@ For more details, see [API documentation](https://github.com/spryker-shop/tracea
 
 ```
 
-##### Issue: Incorrect event payload
+#### Issue: Incorrect event payload
 
-You can view the event payload in the console under `Adapter Data:`. If the payload is incorrect, check the static and dynamic data configuration.
+You can view event payload in the console under `Adapter Data:`. If payload is incorrect, check and adjust static and dynamic data configuration.
 
-* Adjust static data in the `eventTracker` block as needed:
+* Adjust static data in the `eventTracker` block:
 
 ```twig
 {% raw %}{% block eventTracker %}{% endraw %}
@@ -249,7 +249,7 @@ You can view the event payload in the console under `Adapter Data:`. If the payl
 {% raw %}{% endblock %}{% endraw %}
 ```
 
-* Adjust the configuration for dynamic data for the needed triggers. For more information, see [API documentation](https://github.com/spryker-shop/traceable-event-widget/blob/master/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
+* Adjust the configuration for dynamic data for the needed triggers.
 
 ```twig
 {% raw %}{% set events = {{% endraw %}
@@ -323,7 +323,12 @@ You can view the event payload in the console under `Adapter Data:`. If the payl
 #}
 ```
 
-##### Examples of the feature integration into Spryker demo shops
+For more information, see [API documentation](https://github.com/spryker-shop/traceable-event-widget/blob/master/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
+
+
+## Examples of integration into demo shops
+
+For examples of Algolia Personalization integration into demo shops, see the following PRs:
 
 - [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop/pull/595/files)
 - [B2C Marketplace Demo Shop](https://github.com/spryker-shop/b2c-demo-marketplace/pull/474/files)
@@ -332,36 +337,32 @@ You can view the event payload in the console under `Adapter Data:`. If the payl
 
 
 
-### Update website agreement text
+## Update privacy policy
 
-You should update the website agreement text and ask for user consent to have their interactions with the website tracked and sent to Algolia.
+With Algolia Personalization, user data is tracked and sent to Algolia. To ensure user privacy, you need to update your privacy policy and proactively collect users' consent for data tracking. The data consent popup can be similar to the following:
 
+```Text
+User Data analytics
 
-> **User Data analytics**
->
-> To enhance your experience, we use data and analytics to understand how you interact with our site.
-> By accepting, you allow us to capture anonymous events for personalization, analysis, and continuous improvement of your experience on our platform.
+To enhance your experience, we use data and analytics to understand how you interact with our site.
+By accepting, you allow us to capture anonymous events for personalization, analysis, and continuous improvement of your experience on our platform.
+```
 
-### Verify the installation
+## Verify the installation
 
 1. Deploy to a testing environment.
 2. In the Back Office, go to **Apps** and verify that Algolia is connected and configured.
-
-{% info_block warningBox "Make sure" %}
-
-If you previously had ACP Algolia App connected and used, you will need to disconnect and connect it again with the same Algolia credentials in the ACP App Catalog.
-This action will update your Spryker shop config to be able to send events to Algolia.
-
-{% endinfo_block %}
+3. If you've previously been using the Algolia App, in the Back Office, disconnect and connect it again with the same Algolia credentials.
+  This action updates your Spryker shop config to be able to send events to Algolia.
 
 3. On the Storefront, do the following as a guest user:
   * Search products
   * Filter search results
-  * From search results, go to a product page
+  * From search results, go to a product's page
   * Add products to cart
   * Place orders
 4. Repeat step 3 as a logged-in user.  
-5. In the [Algolia Dashboard](https://dashboard.algolia.com/), go to **Data Sources**>**Events** and open  from  section - `https://dashboard.algolia.com/apps/$APP_ID$/events/debugger`.
+5. In the [Algolia Dashboard](https://dashboard.algolia.com/), go to **Data Sources**>**Events**.
   Make sure the events you've triggered are displayed.
 
 

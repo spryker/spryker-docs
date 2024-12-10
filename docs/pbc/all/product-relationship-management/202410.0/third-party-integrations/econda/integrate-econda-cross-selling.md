@@ -1,6 +1,6 @@
 ---
 title: Integrating Econda cross-selling
-description: Learn how to integrate Econda cross-selling
+description: Learn how to integrate Econda cross-selling in to your Spryker Cloud Commerce OS based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/econda-cross-sell

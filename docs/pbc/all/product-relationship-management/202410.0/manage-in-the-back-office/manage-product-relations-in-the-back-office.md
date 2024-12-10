@@ -1,6 +1,6 @@
 ---
 title: Manage product relations in the Back Office
-description: Learn how to log into the Back Office.
+description: Learn how to manage product relations in the Spryker Cloud Commerce OS Back Office.
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 ---

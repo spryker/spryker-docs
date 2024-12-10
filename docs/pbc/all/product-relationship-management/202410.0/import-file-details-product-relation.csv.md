@@ -1,5 +1,6 @@
 ---
 title: "Import file details: product_relation.csv"
+description: Learn how to configure product relation information using the product relation CSV file in your Spryker project.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-relationcsv

@@ -1,6 +1,6 @@
 ---
 title: Stripe for Marketplace Overview
-description: Overview of the Stripe integration for Marketplace
+description: Overview of the Stripe integration for Spryker Marketplace based projects and how stripe can enhance your store.
 last_updated: August 8, 2024
 template: concept-topic-template
 ---

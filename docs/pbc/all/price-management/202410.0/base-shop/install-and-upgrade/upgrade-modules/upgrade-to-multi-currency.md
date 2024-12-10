@@ -1,6 +1,6 @@
 ---
 title: Upgrade to multi-currency
-description: Learn how to migrate your project to multi-currency.
+description: Learn how to upgrade and migrate your project to multi-currency to a newer version within your Spryker project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-multi-currency

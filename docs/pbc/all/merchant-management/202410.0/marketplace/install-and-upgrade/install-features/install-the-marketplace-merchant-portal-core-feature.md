@@ -1,7 +1,7 @@
 ---
 title: Install the Marketplace Merchant Portal Core feature
 last_updated: Jul 11, 2023
-description: Integrate the Merchant Portal Core feature into a Spryker project.
+description: Learn how to integrate the Merchant Portal Core feature into a Spryker B2B Marketplace project.
 template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202311.0/marketplace-merchant-portal-core-feature-integration.html  - 

@@ -1,6 +1,6 @@
 ---
 title: Upgrade the PriceCartConnector module
-description: Use the guide to learn how to update the PriceCartConnector module.
+description: Use the guide to learn how to update the PriceCartConnector module within your Srpyker based projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-price-cart-connector

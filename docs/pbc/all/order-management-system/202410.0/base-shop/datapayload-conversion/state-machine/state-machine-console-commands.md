@@ -1,6 +1,6 @@
 ---
 title: State machine console commands
-description: This document provides the console commands for state machine.
+description: This document presents the console commands for state machine that you can use to help manage the Spryker State Machine within your Spryker Projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/state-machine-cronjob

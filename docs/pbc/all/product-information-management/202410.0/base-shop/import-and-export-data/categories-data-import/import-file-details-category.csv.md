@@ -1,5 +1,6 @@
 ---
 title: "Import file details: category.csv"
+description: Learn how to configure categories using the Category csv file in your Spryker Cloud Commerce OS Project.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-categorycsv

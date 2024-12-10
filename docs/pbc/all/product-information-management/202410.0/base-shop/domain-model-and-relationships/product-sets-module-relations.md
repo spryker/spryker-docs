@@ -1,6 +1,6 @@
 ---
 title: "Product Sets: Module relations"
-description: Module relations and database schema of the Product Sets feature.
+description: Learn about Module relations and database schema of the Product Sets feature within Spryker Cloud Commerce OS.
 template: feature-walkthrough-template
 last_updated: Nov 21, 2023
 redirect_from:

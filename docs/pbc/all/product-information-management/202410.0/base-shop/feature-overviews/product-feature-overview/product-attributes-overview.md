@@ -1,5 +1,6 @@
 ---
 title: Product Attributes overview
+description: Learn about product attributes and their purpose for your products in your Spryker Cloud Commerce OS shop.
 last_updated: Jul 7, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-attributes-overview

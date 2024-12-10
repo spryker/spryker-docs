@@ -1,6 +1,6 @@
 ---
 title: Install the Company Account + Merchant B2B Contract Requests feature
-description: The guide walks you through the process of installing the Company Account + Merchant B2B Contract Requests feature into the project.
+description: The guide walks you through the process of installing the Company Account + Merchant B2B Contract Requests feature into your Spryker project.
 last_updated: Mar 13, 2024
 template: feature-integration-guide-template
 ---

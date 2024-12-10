@@ -1,6 +1,6 @@
 ---
 title: Manage merchants in the Back Office
-description: Learn how to log into the Back Office.
+description: Learn how to manage merchants that are configured in the B2B Spryker Cloud Commerce OS Back Office for your Spryker Projects.
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:

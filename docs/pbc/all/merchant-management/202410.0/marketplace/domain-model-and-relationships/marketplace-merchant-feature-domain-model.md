@@ -1,6 +1,6 @@
 ---
 title: "Marketplace Merchant feature: Domain model"
-description: Merchants are product and service sellers in the Marketplace.
+description: Learn about the dependencies between the modules for Spryker Marketplace Merchant feature in your B2B projects.
 last_updated: Nov 05, 2021
 template: concept-topic-template
 redirect_from:

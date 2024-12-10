@@ -1,6 +1,6 @@
 ---
 title: Edit categories
-description: Learn how to edit categories in the Back Office.
+description: Learn how to edit categories directly in the Spryker Cloud Commerce OS Back Office.
 last_updated: June 15, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-categories

@@ -1,5 +1,6 @@
 ---
 title: Install the Merchants and Merchant Relations feature
+description: Learn how to install the Spryker Cloud Commerce OS Merchants and Merchant relations feature in your Spryker B2B Project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/merchant-merchant-relations-feature-integration

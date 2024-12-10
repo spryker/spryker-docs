@@ -1,6 +1,6 @@
 ---
 title: Edit placeholders in CMS blocks
-description: Learn how to edit placeholders in CMS blocks in the Back Office.
+description: Learn how to manage and edit the placeholders in CMS blocks in the Spryker Cloud Commerce OS Back Office.
 last_updated: May 11, 2022
 template: back-office-user-guide-template
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: Create navigation elements
-description: Learn how to create navigation elements in the Back Office.
+description: Learn how to create and manage navigation elements in the Spryker Back Office.
 last_updated: Nov 22, 2022
 template: back-office-user-guide-template
 redirect_from:

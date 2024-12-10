@@ -1,5 +1,6 @@
 ---
 title: "Glue API: Manage customer authentication tokens"
+description: Learn how to manage, refresh and revoke customer authentication tokens via the Spryker Glue API.
 last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-authentication-tokens

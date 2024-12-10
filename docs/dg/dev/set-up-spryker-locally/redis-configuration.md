@@ -11,7 +11,7 @@ related:
   - title: Install module structure and configuration
     link: docs/scos/dev/set-up-spryker-locally/install-module-structure-and-configuration.html
   - title: Manage dependencies with Composer
-    link: docs/scos/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
+    link: docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
 ---
 
 In Spryker, Redis is used in two scenarios:

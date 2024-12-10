@@ -6,16 +6,16 @@ template: back-office-user-guide-template
 related:
 ---
 
-Amazon Quicksight is a powerful business intelligence tool. It's highly customizable and has a lot of tools that can't be covered in one document. This document describes a typical use case and how you can start working with analytics, but doesn't cover all the editing options.
+Amazon QuickSight is a highly customizable and powerful business intelligence tool. This document describes a typical use case and how to start working with analytics.
 
 ## Prerequisites
 
 [Set up Amazon QuickSight](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/set-up-amazon-quicksight.html)
 
 
-## Back up the default analysis
+## Optional: Back up the default analysis
 
-Amazon QuickSight is shipped with a default analysis that is used for default dashboards. We recommend duplicating the default analysis so you can learn how to create your own dashboards and keep the default analysis as a backup. To do it, follow the steps:
+Amazon QuickSight is shipped with a default analysis that is used for the default dashboard. We recommend duplicating the default analysis so you can learn how to create your own dashboards and keep the default analysis as a backup. To do it, follow the steps:
 
 1. In the Back Office, go to **Analytics**.
 2. On the **Analytics** page, click **Analyses**.
@@ -27,13 +27,24 @@ Amazon QuickSight is shipped with a default analysis that is used for default da
 4. On the page of the analysis, click **File**>**Save as Analysis**.
 5. In the **Save a copy** window, enter an **Analysis name**.
 6. Click **SAVE**.
-  This duplicates the analysis and opens it. Now you can safely create your own dashboards based on this analysis.  
+  This duplicates the analysis and opens it. Now you can safely create your own dashboards based on this analysis.
 
+## Optional: Back up the default datasets
 
+Amazon Quicksight comes with your project's data in default datasets. We recommend duplicating the default datasets and creating analyses based on the copies. To do it, follow the steps:
+
+1. On the **Analytics** page, go to **Datasets**.
+2. Next to a dataset, click the more options button and select **Duplicate**.
+  This opens the **Duplicate dataset** window.
+3. For **Duplicate dataset name**, enter a name for the duplicate.
+4. Click **Duplicate**.
+  This creates the dataset duplicate.
+5. Repeat steps 2-4 for all the other datasets.
+  After duplicating the datasets, you can use the duplicates and keep the original ones as a backup.
 
 ## Refresh data
 
-In this example, you're going to create an analysis with product availability data. Because availability is constantly changing, it's important for data to be up to date.
+In this example, you'll create an analysis using product availability data. Because availability is constantly changing, it's important for the data to be up to date.
 
 To refresh product related datasets, do the following:
 1. On the **Analytics** page, go to **Datasets**.
@@ -50,7 +61,7 @@ You've manually refreshed data and now it's ready to be used in an analysis. For
 
 ## Create an analysis
 
-Analysis is basically a visualization of data in your datasets. To create one, follow the steps:
+An analysis is basically a visualization of data in your datasets. To create one, follow the steps:
 
 1. On the **Analytics** page, go to **Analyses**.
 2. In the **Analyses** section, click **New analysis**.
@@ -91,7 +102,7 @@ This adds an empty visual to the sheet.
 10. In the **Edit title** window, enter a name for the visual. For example, `Products per category`.
 11. To apply the change, click **Save**.
 
-This closes the the window and the new name of the visual is displayed.
+This closes the window and the new name of the visual is displayed.
 
 Now you know how to add data and format it in different ways. For more information on how to create analyses, see [Author Workshop](https://catalog.workshops.aws/quicksight/en-US/author-workshop).
 
@@ -156,5 +167,5 @@ To publish and share a dashboard, follow the steps:
 ## Learn more
 
 In this guide, you've followed a typical user journey of creating, collaborating, and presenting data in a meaningful way. Now you can play around with these tools or learn more using the following materials:
-* [Author Workshop](https://catalog.workshops.aws/quicksight/en-US/author-workshop)
 * [Amazon QuickSight - Getting Started](https://explore.skillbuilder.aws/learn/course/external/view/elearning/14908/getting-started-with-amazon-quicksight)
+* [Author Workshop](https://catalog.workshops.aws/quicksight/en-US/author-workshop)

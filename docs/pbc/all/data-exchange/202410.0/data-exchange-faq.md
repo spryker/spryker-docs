@@ -1,6 +1,6 @@
 ---
 title: Data Exchange FAQ
-description:
+description: Understanding why data processing may have failed within Spryker Data Exchange and some frequently asked questions.
 template: concept-topic-template
 last_updated: Oct 18, 2023
 ---

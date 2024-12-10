@@ -1,6 +1,6 @@
 ---
 title: Integrating the Sofort payment method for Heidelpay
-description: Integrate Sofort payment through Heidelpay into the Spryker-based shop.
+description: Learn how to integrate Sofort payment through Heidelpay into the Spryker Cloud Commerce OS shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-sofort

@@ -1,6 +1,6 @@
 ---
 title: Dynamic Multistore
-description: Dynamic Multistore lets you create and manage multiple online stores from the Back Office.
+description: Spryker Dynamic Multistore is an innovative feature that enables business users to effortlessly create and manage multiple online stores from the Back Office.
 last_updated: July 31, 2023
 template: concept-topic-template
 ---

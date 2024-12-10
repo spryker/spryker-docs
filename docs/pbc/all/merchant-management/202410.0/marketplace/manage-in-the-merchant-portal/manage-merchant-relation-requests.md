@@ -1,6 +1,6 @@
 ---
 title: Manage merchant relation requests
-description: Learn how to approve, deny, and process merchant relation requests in the Merchant Portal
+description: Learn how to approve, deny, and process merchant relation requests in the Spryker Merchant Portal
 last_updated: Mar 19, 2024
 template: back-office-user-guide-template
 ---

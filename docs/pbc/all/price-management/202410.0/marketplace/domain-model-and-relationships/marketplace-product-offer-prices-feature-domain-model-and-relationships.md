@@ -1,6 +1,6 @@
 ---
 title: "Marketplace Product Offer Prices feature: Domain model and relationships"
-description: The Marketplace Product Offer Prices feature lets Marketplace merchants set prices for product offers.
+description: Learn about the dependencies between modules for the Marketplace product offer prices feature within your Spryker Marketplace project.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 ---

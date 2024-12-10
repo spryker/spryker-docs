@@ -1,5 +1,6 @@
 ---
 title: Import and export Price Management data
+description: Learn how data import works and different ways of importing price management data in to your Spryker project.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/pricing

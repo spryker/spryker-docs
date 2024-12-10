@@ -1,5 +1,6 @@
 ---
 title: Categories data import
+description: Learn how data import works and the files that are used for Product Categories within your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/categories

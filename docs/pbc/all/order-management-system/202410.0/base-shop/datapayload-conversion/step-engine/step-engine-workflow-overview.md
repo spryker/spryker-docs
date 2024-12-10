@@ -1,6 +1,6 @@
 ---
 title: "Step engine: Workflow overview"
-description: This document provides an overview of the step engine feature.
+description: This document provides an overview of the Spryker step engine feature within the Spryker Order Management System Module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/step-engine-workflow

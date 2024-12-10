@@ -1,6 +1,6 @@
 ---
 title: "Back Office: Import merchant commissions"
-description: Learn how to import merchant commissions in the Back Office
+description: Learn how to import merchant commissions in the Spryker Back Office for your Spryker B2B Marketplace projects.
 last_updated: Jun 16, 2024
 template: back-office-user-guide-template
 redirect_from:

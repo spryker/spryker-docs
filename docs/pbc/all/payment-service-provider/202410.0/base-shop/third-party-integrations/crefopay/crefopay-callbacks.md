@@ -1,6 +1,6 @@
 ---
 title: CrefoPay callbacks
-description: Callbacks are redirects performed by the CrefoPay system.
+description: Learn about Crefopay Callbacks and how to configure for your Spryker Cloud Commece OS Shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/crefopay-callback

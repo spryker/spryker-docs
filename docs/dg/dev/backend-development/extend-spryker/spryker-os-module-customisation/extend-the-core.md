@@ -11,9 +11,9 @@ redirect_from:
   - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extending-the-core.html
 related:
   - title: Extend the Spryker Core functionality
-    link: docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
+    link: docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
   - title: Extend a core module that is used by another
-    link: docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
+    link: docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another-module.html
 ---
 
 We offer several ways like plugins to hook into the core's behavior and extend this without modifications. But sometimes this is not enough, so you need to replace a method that is deep in the core.

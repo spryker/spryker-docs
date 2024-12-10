@@ -1,5 +1,6 @@
 ---
 title: "Import file details: product_management_attribute.csv"
+description: Learn how to configure product attribute information using the product management attribute csv file for your Spryker project.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-management-attributecsv

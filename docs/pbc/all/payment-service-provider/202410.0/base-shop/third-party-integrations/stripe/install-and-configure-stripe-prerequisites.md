@@ -1,6 +1,6 @@
 ---
 title: Install and configure Stripe prerequisites
-description: Learn how to prepare your project for Stripe
+description: Learn how to prepare, Install and configure your Spryker projects for Stripe using the App Composition Platform.
 last_updated: Nov 1, 2024
 template: howto-guide-template
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: Multi-language setup
-description: This document exmplains multi-language setup details
+description: This document explains multi-language setup details and things to consider when setting up multi-locales in your Spryker projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multi-language-setup

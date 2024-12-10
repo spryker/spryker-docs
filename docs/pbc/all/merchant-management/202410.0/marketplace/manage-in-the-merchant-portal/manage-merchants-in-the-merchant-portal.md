@@ -1,6 +1,6 @@
 ---
 title: Manage merchants in the Merchant Portal
-description: Learn how to log into the Merchant Portal and manage merchants
+description: Learn how to log into the Spryker Merchant Portal and manage merchants configured within your Spryker Marketplace Project.
 template: back-office-user-guide-template
 last_updated: Jan 11, 2024
 redirect_from:

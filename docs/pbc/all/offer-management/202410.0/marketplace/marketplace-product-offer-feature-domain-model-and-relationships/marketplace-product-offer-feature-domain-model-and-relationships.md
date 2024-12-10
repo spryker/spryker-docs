@@ -1,5 +1,6 @@
 ---
 title: "Marketplace Product Offer feature: Domain model and relationships"
+description: Discover the domain model and relationships of the Spryker Marketplace Product Offer feature, enabling management of product offers for marketplace projects.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 ---

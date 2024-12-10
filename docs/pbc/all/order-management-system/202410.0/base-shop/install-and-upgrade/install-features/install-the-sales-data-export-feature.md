@@ -1,6 +1,6 @@
 ---
 title: Install the Sales Data Export feature
-description: Integrate the Sales Data Export feature into your project.
+description: Learn with Order Management system how to Integrate the Sales Data Export feature into your Spryker project.
 last_updated: May 10, 2024
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/sales-data-export-feature-integration

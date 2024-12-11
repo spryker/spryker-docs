@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve gift cards in guest carts"
-description: Learn how to retrieve gift cards in guest carts using Glue Api.
+description: Learn how you can retrieve gift cards in guest carts by using the Spryker Glue Api.
 last_updated: Aug 12, 2022
 template: glue-api-storefront-guide-template
 redirect_from:

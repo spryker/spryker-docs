@@ -1,6 +1,6 @@
 ---
 title: Upgrade the Product module
-description: Use the guide to update the Product module to a newer version.
+description: Learn how to upgrade from an older version to a newer one of the product module within your Spryker based project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product

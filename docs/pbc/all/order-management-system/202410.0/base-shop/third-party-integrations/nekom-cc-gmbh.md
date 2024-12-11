@@ -1,5 +1,6 @@
 ---
 title: NEKOM CC GmbH
+description: learn all about Spryker partner, NEKOM. Learn how this provider for ECommerce services and multichannel processes can be integrated into your project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/nekom

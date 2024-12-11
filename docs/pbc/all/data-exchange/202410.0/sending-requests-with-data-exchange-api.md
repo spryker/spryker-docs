@@ -1,6 +1,6 @@
 ---
 title: Sending requests with Data Exchange API
-description: This guide shows how to send a request in Data Exchange API.
+description: Learn how to configure endpoints to interact with databases using the Spryker Data Exchange API.
 last_updated: May 30, 2024
 template: howto-guide-template
 redirect_from:

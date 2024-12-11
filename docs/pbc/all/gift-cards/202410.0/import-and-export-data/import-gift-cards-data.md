@@ -1,5 +1,6 @@
 ---
 title: Import Gift Cards data
+description: Learn how to import gift card data through file imports within your Spryker Cloud Commerce OS Projects.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/gift-cards-import

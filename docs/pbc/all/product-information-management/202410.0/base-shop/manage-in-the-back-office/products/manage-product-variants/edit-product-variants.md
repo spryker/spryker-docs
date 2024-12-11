@@ -1,6 +1,6 @@
 ---
 title: Editing product variants
-description: The guide describes how to update the product variant in the Back Office.
+description: The guide describes how to update and edit product variants direct in the Spryker Cloud Commerce OS Back Office.
 last_updated: Jul 7, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/editing-a-product-variant

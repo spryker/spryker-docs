@@ -1,6 +1,6 @@
 ---
 title: Install the Company Account + Merchant B2B Contracts feature
-description: The guide walks you through the process of installing the Company Account + Merchant B2B Contracts feature into the project.
+description: The guide walks you through the process of installing the Spryker Company Account + Merchant B2B Contracts feature into the project.
 last_updated: Mar 13, 2024
 template: feature-integration-guide-template
 ---

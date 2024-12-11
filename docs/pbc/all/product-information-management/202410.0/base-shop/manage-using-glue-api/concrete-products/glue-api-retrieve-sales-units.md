@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve sales units"
-description: Retrieve sales units of concrete products.
+description: Learn how to retrieve sales units of concrete products using the Spryker Cloud Commerce OS GLUE API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-sales-units

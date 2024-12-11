@@ -10,11 +10,10 @@ This document describes how to refresh datasets manually and on a schedule.
 
 {% info_block infoBox %}
 
-* You can refresh data only with an author role.
+* You can refresh datasets only with an author role.
 * To always keep your analyses up to date, we recommend setting up an automatic data refresh.
 
 {% endinfo_block %}
-
 
 
 ## Set up a schedule to refresh an analytics dataset automatically

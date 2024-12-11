@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieving concrete products"
-description: Retrieve general information about concrete products.
+description: Retrieve general information about concrete products using the Spryker Cloud Commerce OS GLUE API.
 last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-products

@@ -1,5 +1,6 @@
 ---
 title: Generate login tokens
+description: Learn how to generate login tokens for your Spryker Store and how to retrieve the customer from the tokens.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-generate-a-token-for-login

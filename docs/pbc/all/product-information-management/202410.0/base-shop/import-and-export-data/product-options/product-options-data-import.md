@@ -1,5 +1,6 @@
 ---
 title: Product options data import
+description: Learn how to import data and the different ways to import data for product options within your Spryker Cloud Commerce OS Project.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-options-import

@@ -1,5 +1,6 @@
 ---
 title: Upgrade the OauthCompanyUser module
+description:  Learn how to migrate and update to a newer version of Oauth company user module from an older one in your Spryker project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-oauthcompanyuser

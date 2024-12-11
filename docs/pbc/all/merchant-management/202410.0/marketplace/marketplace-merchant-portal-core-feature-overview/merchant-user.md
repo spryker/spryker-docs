@@ -1,6 +1,6 @@
 ---
 title: Merchant User
-description: Merchant User in Merchant Portal.
+description: A short overview of merchant user in the Spryker Merchant Portal for the Spryker Merchant Portal core features.
 template: concept-topic-template
 last_updated: Nov 17, 2023
 redirect_from:

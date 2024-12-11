@@ -1,6 +1,6 @@
 ---
 title: Manage marketplace orders in the Back Office
-description: Learn how to log into the Back Office.
+description: Learn how to manage the Spryker Marketplace orders using the Spryker back office.
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 ---

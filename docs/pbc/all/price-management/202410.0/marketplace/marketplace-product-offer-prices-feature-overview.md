@@ -1,6 +1,6 @@
 ---
 title: Marketplace Product Offer Prices feature overview
-description: The Marketplace Product Offer Prices feature lets Marketplace merchants set prices for product offers.
+description: The Marketplace Product Offer Prices feature lets Marketplace merchants set prices for product offers for your Spryker Marketplace Project.
 template: feature-overview-template
 last_updated: Nov 21, 2023
 redirect_from:

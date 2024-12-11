@@ -1,6 +1,6 @@
 ---
 title: "Use cases: Request for Quote processes"
-description: This document describes the use cases for Requests for Quote.
+description: Some great use cases for the Spryker Request for Quote feature and how you can use them in your Spryker based b2b project.
 last_updated: Nov 15, 2022
 template: concept-topic-template
 redirect_from:

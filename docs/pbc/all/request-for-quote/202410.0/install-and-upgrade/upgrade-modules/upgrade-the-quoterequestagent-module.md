@@ -1,5 +1,6 @@
 ---
 title: Upgrade the QuoteRequestAgent module
+description: Learn how to upgrade to a newer version of the Quote Request Agent module in your Spryker based projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quoterequestagent

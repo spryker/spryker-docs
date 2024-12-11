@@ -1,6 +1,6 @@
 ---
 title: Product Options
-description: Explains how to create and manage product options
+description: Explains how to create and manage product options within your Spryker Marketplace based projects.
 last_updated: Jan 18, 2023
 template: concept-topic-template
 redirect_from:

@@ -1,28 +1,27 @@
-This document describes how to enable [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html) on the demoshop version 202307.0 or above.
+This document describes how to enable [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html).
 
-## Enable Dynamic Multistore
+## Prerequisites
 
-{% info_block warningBox "Project version" %}
-If your project version is below 202307.0, you need to install Dynamic Multistore feature first, use instructions provided at [Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/install-dynamic-multistore.html) page.
-{% endinfo_block %}
+If your project version is below 202307.0, [Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/install-dynamic-multistore.html).
 
-### Here are the steps that needs to be performed to enable Dynamic Multistore.
+### Enable Dynamic Multistore
 
 {% info_block warningBox "Staging environment" %}
-     Make sure that **all** steps below are performed (and fully tested) on staging before applying it on production setup, to avoid unexpected downtime and data loss.
+To avoid unexpected downtime and data loss, perform and test *all* of the following steps in a staging environment first.
 {% endinfo_block %}
 
 
-1. Methods `StoreClient::getCurrentStore()`, `StoreFacade::getCurrentStore()` are available only in `GlueStorefront` and `Storefront` applications. For other applications (see list below) replace them with the following methods `StoreStorageClient:getStoreNames()`, `StoreStorageClient::findStoreByName()` or `StoreFacade::getStoreCollection()`.
+
+1. Replace `StoreClient::getCurrentStore()` and `StoreFacade::getCurrentStore()` methods with `StoreStorageClient:getStoreNames()`, `StoreStorageClient::findStoreByName()`, or `StoreFacade::getStoreCollection()` in the following applications:
   * Backoffice
   * MerchantPortal
   * Console Commands
   * Gateway
   * BackendAPI
 
-2. Update your custom console commands  (if any) to meet the following rules:
-- `Store(Facade|Client)::getCurrentStore()` should never be used in the code that console command executes.
-- All store aware commands should implement `Spryker\Zed\Kernel\Communication\Console\StoreAwareConsole` and execute actions for specific store if store parameter is provided, or for all the stores in the region otherwise.
+2. If you have custom console commands, update them to meet the following rules:
+- `Store(Facade|Client)::getCurrentStore()` isn't used in the code a console command executes.
+- All store-aware commands implement `Spryker\Zed\Kernel\Communication\Console\StoreAwareConsole` and execute actions for a specific store if a store parameter is provided; if not provided, actions are executed for all the stores in the region.
 - It is recommended to use `--store` parameter instead of `APPLICATION_STORE` env variable, despite the support of env variable still exists.
 3. Be aware that after enabling Dynamic Multistore mode, your basic domain structure will change from store to region for all the applications(Example https://yves.de.mysprykershop.com => https://yves.eu.mysprykershop.com), make sure that it is expected. If external systems are impacted by this - necessary redirects are set, so SEO of your site is not impacted.
 4. The Dynamic Store feature itself does not require any database changes, in case you've already migrated to the latest demoshop version.

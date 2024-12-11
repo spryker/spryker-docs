@@ -24,11 +24,11 @@ In both cases, the applications works with the several stores within the one reg
 * Backoffice, MerchantPortal operates with data from all the stores within the specific region without requirement to provide the specific store.
 * Storefront and GlueStorefront (as well as Glue) requires store to operate, and operates within only one provided store. (If store is not provided explicitly, the default one is used.)
 
-[See more details](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/difference-between-modes.html).
+[See more details](/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.html).
 
 ### Infrastructure in PaaS: is there anything that needs to be done in PaaS?
 
-The only difference is in the deployment files. More details that can be found [here](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/difference-between-modes.html).
+The only difference is in the deployment files. More details that can be found [here](/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.html).
 
 
 ### How store-specific entities should be managed in Data Exchange API?

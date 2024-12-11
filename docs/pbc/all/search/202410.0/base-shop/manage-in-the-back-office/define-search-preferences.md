@@ -1,6 +1,6 @@
 ---
 title: Define search preferences
-description: Learn how to define search preferences in the Back Office
+description: Learn how to define search preferences directly in the Back Office of your Spryker based projects.
 last_updated: Aug 4, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-search-preferences

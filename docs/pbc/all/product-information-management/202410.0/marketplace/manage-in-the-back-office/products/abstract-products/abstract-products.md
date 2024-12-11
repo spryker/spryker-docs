@@ -1,6 +1,6 @@
 ---
 title: Abstract products
-description: Explains how to create and edit abstract products
+description: Learn all about managing Abstract products when it comes to your Spryker Marketplace projects.
 last_updated: Jan 18, 2023
 template: concept-topic-template
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: Manage returns
-description: Learn how to manage returns in the Back Office.
+description: Learn how to efficiently manage customer product returns by direclty using the Back Office in your Spryker based projects.
 last_updated: Jun 23, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-returns

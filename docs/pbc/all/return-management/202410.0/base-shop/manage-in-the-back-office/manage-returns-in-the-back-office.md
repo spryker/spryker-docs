@@ -1,6 +1,6 @@
 ---
 title: Manage returns in the Back Office
-description: Learn how to log into the Back Office.
+description: Learn how to efficiently manage customer product returns using the Spryker Back Office
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:

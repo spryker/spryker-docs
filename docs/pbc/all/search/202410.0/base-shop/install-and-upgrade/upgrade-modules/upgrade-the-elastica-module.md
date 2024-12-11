@@ -1,6 +1,6 @@
 ---
 title: Upgrade the Elastica module
-description: Learn how to upgrade the Elastica module to a newer version
+description: learn how to upgrade to a newer version of the Elastica module within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-elastica

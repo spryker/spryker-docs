@@ -1,6 +1,6 @@
 ---
 title: Precise search by super attributes
-description: This document describes precise search by super attributes
+description: This document describes how to create precise search by using super attributes in your Spryker based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/precise-search-by-super-attributes

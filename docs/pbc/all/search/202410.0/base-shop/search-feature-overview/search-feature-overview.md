@@ -1,5 +1,6 @@
 ---
 title: Search feature overview
+description: Learn everything you need to know about the Spryker Search Feature with this helpful overview.
 last_updated: Jul 6, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-summary

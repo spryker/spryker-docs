@@ -1,6 +1,6 @@
 ---
 title: "Personalization: dynamic pricing"
-description: This document describes how to personalize pricing.
+description: This document describes how to personalize your Spryker based shop with dynamic pricing.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/personalization-dymanic-pricing

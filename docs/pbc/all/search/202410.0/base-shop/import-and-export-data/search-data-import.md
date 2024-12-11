@@ -1,6 +1,6 @@
 ---
 title: Search data import
-description: Details about data import files for the Search PBC
+description: Learn how data import works and the different methods and files for the Search module within your Spryker projects.
 template: concept-topic-template
 last_updated: Jul 23, 2023
 ---

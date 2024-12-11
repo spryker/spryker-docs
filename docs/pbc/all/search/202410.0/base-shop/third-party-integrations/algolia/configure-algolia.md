@@ -1,6 +1,6 @@
 ---
 title: Configure Algolia
-description: Find out how you can configure Algolia in your Spryker shop
+description: Learn how you can configure and integrate Spryker Third party Algolia in to your Spryker based projects.
 last_updated: Feb 21 2023
 template: howto-guide-template
 redirect_from:

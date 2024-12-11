@@ -1,5 +1,6 @@
 ---
 title: Search types overview
+description: Learn about the default search type options that come out of the box of Spryker Cloud Commerce OS.
 last_updated: Jul 8, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-types-overview

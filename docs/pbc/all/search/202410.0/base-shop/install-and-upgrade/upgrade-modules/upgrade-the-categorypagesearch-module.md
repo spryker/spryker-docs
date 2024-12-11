@@ -1,5 +1,6 @@
 ---
 title: Upgrade the CategoryPageSearch module
+description: learn how to upgrade to a newer version of the Category Page Search module within your Spryker based projects.
 last_updated: Jun 22, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-categorypagesearch

@@ -1,6 +1,6 @@
 ---
 title: Disconnect Algolia
-description: Find out how you can disconnect Algolia from your Spryker shop
+description: Learn how you can disconnect Spryker Third party Algolia in to your Spryker based projects.
 template: howto-guide-template
 last_updated: Feb 23, 2023
 redirect_from:

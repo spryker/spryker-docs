@@ -1,6 +1,6 @@
 ---
 title: Search best practices
-description: A collection of best practices for Spryker Commerce OS Search.
+description: A collection of best practices for on site search within your Spryker Cloud Commerce OS shop.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:

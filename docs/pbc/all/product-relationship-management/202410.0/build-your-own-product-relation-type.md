@@ -1,5 +1,6 @@
 ---
 title: Build your own product relation type
+description: Learn how to build your own product relation type with the Spryker Product Relationship Management Feature.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-build-product-relation

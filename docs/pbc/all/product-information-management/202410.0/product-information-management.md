@@ -1,6 +1,6 @@
 ---
 title: Product Information Management
-description: The capability for managing product catalogs
+description: Learn all about the Spryker Product Information Management (PIM) feature and managing your prodcuts in your Spryker based store.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 last_udpated: Aug 16, 2023

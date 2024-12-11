@@ -1,6 +1,6 @@
 ---
 title: "Build a return management process: Best practices"
-description: Choose a suitable return management process for your project.
+description: Choose a suitable return management process for your project and some best practices on building a Return management process for your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/building-a-return-management-process-best-practices

@@ -1,6 +1,6 @@
 ---
 title: Edit product options
-description: Learn how to edit product options in the Back Office.
+description: Learn how to edit product options directly in the Spryker Cloud Commerce OS Back Office.
 last_updated: June 25, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-product-options

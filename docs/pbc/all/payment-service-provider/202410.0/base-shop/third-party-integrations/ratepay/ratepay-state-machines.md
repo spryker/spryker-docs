@@ -1,6 +1,6 @@
 ---
 title: RatePay state machines
-description: Managing RatePay with state machines
+description: Managing RatePay with state machines by creating a new state machine that include RatePay payments.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 redirect_from:

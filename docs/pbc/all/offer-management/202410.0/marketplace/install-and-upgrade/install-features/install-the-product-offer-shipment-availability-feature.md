@@ -1,6 +1,6 @@
 ---
 title: Install the Product Offer Shipment Availability feature
-description: Learn how to integrate the Product Offer Shipment Availability feature into your project
+description: Learn how to integrate the Spryker Product Offer Shipment Availability feature into your Spryker marketplace project
 last_updated: Sep 04, 2023
 template: feature-integration-guide-template
 redirect_from:

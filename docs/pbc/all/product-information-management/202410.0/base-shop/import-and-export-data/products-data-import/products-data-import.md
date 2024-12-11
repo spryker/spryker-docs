@@ -1,5 +1,6 @@
 ---
 title: Products data import
+description: Learn how data import works and the different ways to import data related to products within your Spryker Cloud Commerce OS.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/products-import

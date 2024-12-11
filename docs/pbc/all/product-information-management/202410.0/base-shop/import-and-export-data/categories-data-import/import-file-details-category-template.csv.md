@@ -1,5 +1,6 @@
 ---
 title: "Import file details: category_template.csv"
+description: Learn how to import category template data using the Category template csv file in your Spryker Cloud Commerce OS Project.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-category-templatecsv

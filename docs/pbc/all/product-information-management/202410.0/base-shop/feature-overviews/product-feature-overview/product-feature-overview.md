@@ -1,6 +1,6 @@
 ---
 title: Product feature overview
-description: Detailed overview of the Product feature.
+description: Detailed overview of the Spryker Product feature allowing you to create products and characteristics of producs in Spryker Cloud Commerce OS
 last_updated: Jul 9, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/products-overview

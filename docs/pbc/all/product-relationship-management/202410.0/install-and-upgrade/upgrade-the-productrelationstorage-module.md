@@ -1,6 +1,6 @@
 ---
 title: Upgrade the ProductRelationStorage module
-description: Use the guide to learn how to update the ProductRelationStorage module.
+description: Use the guide to learn how to update the ProductRelationStorage module to a newer version in your Spryker based project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productrelationstorage

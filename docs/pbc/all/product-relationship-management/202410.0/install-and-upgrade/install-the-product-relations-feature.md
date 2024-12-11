@@ -1,6 +1,6 @@
 ---
 title: Install the Product Relations feature
-description: Integrate the Product Relations feature into your project.
+description: Learn how to integrate the Product Relations feature into your Spryker based project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-relations-feature-integration

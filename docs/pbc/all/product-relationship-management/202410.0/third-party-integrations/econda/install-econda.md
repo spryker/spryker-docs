@@ -1,5 +1,6 @@
 ---
 title: Install Econda
+description: Learn how you can install the Spryker Third Party Integration Econda in to your Spryker Cloud Commerce OS Project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/econda-installation-and-configuration

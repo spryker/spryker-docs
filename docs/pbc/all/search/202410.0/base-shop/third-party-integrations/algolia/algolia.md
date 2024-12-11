@@ -29,11 +29,12 @@ Your users can search for active concrete products by the following attributes:
 - Name
 - Description
 - Keywords
-- or any other attribute that your products have (when it's configured in Algolia Dashboard)
 
-{% info_block infoBox "Note" %}
+In Algolia Dashboard, you can configure other attributes to be searchable.
 
-Spryker groups all concrete products that belong to the same abstract product if a search query returns the concrete products.
+{% info_block infoBox "" %}
+
+In search results, Spryker groups all concrete products belonging to the same abstract product.
 
 {% endinfo_block %}
 

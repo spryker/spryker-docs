@@ -6,13 +6,13 @@ template: howto-guide-template
 ---
 
 
-The default Algolia app configuration mimics the default Spryker search configuration. However, you may want to adjust some of those settings to your needs.
+The default Algolia app configuration is similar to the default Spryker search configuration. You might want to customize that configuration.
 
-## Overview of searchable attributes
+## Searchable attributes
 
 ![algolia-searchable-attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/configure-algolia/algolia-searchable-attributes.png)
 
-Algolia's **Searchable attributes** configuration determines which attributes are used to find results while searching with a search query.
+**Searchable attributes** configuration defines the attributes used to find results while searching with a search query.
 
 Default fields for searchable attributes are the following:
 - `sku`
@@ -24,12 +24,12 @@ Default fields for searchable attributes are the following:
 - `keywords`
 - `attributes.brand`
 
-## Adjust the searchable attributes list in Algolia
+## Add and remove searchable attributes
 
-1. In the side pane, go to **Search&nbsp;<span aria-label="and then">></span> Index**.
+1. In Algolia Dashboard, go to **Search&nbsp;<span aria-label="and then">></span> Index**.
 2. Open the Algolia indices list and find all primary indices.
 3. On the **Configuration** tab, select **Searchable attributes**.
-4. To adjust the **Searchable attributes** list, add and remove needed searchable attributes.
+4. In the **Searchable attributes** list, add and remove needed searchable attributes.
 5. Click **Review and save settings**. This opens the **Review and save settings** window.
 6. Enable **Copy these settings to other indices and/or replicas** and click **Save settings**.
 
@@ -39,9 +39,9 @@ You can add additional data to exported products using the pre-configured `searc
 
 ### Filling in the `searchMetadata` field
 
-There're multiple ways of adding search metadata. For the sake of an example, we'll implement `ProductConcreteExpanderPlugin`.
+There're multiple ways of adding search metadata. This section shows how to implement `ProductConcreteExpanderPlugin` as an example.
 
-Create a new plugin implementing `ProductConcreteExpanderPluginInterface`. Then you can add any logic inside that plugin's `expand` method to add necessary metadata to ProductConcrete transfers:
+Create a new plugin implementing `ProductConcreteExpanderPluginInterface`. To add needed metadata to `ProductConcrete` transfers, you can add any logic inside that plugin's `expand` method:
 
 ```php
 
@@ -86,11 +86,11 @@ The `searchMetadata` field must be an associative array. Allowed values are all 
 
 Algolia product object `searchMetadata` field is a simple object that can be used in any index configuration just like any other field.
 
-## Overview of facets list
+## Facets
 
 ![algolia-facets](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/configure-algolia/algolia-facets.png)
 
-Algolia **Facets** configuration determines which attributes are used for search faceting.
+**Facets** configuration defines the attributes used for search faceting.
 
 Default attributes for faceting are as follows:
 - `attributes.brand`
@@ -105,11 +105,11 @@ The `prices` attribute is an object with nested fields. Algolia creates facets f
 
 ### Facet configuration
 
-Algolia uses facets for categorizing and grouping your data.
+Algolia uses facets for categorizing and grouping data.
 
 #### Facet display
 
-All configured index facets will be displayed in the list of filter on Yves or via Glue API `/catalog-search`.
+All configured index facets are displayed in the list of filter on Yves or via Glue API `/catalog-search`.
 Algolia app supports the `renderingContent` feature, which can be found in an index "Configuration > Facet display".
 Here you can configure the order of facets and add only for end-users relevant facets.
 

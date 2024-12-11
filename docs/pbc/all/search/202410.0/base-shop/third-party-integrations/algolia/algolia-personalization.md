@@ -32,7 +32,7 @@ By default, Spryker supports Algolia Personalization only for Yves. To integrate
 ```bash
 composer require --with-dependencies spryker-shop/traceable-event-widget:^1.0.2
 ```
-If the command doesn't work, try running the following command: `composer require --with-dependencies spryker-shop/traceable-event-widget:^1.0.2 --with-all-dependencies`.
+If the command doesn't work, try running it with the `--with-all-dependencies` flag.
 
 
 2. Update Spryker packages:
@@ -43,7 +43,8 @@ spryker-shop/home-page:^1.2.0 spryker-shop/payment-page:^1.5.0 spryker-shop/prod
 spryker-shop/product-review-widget:^1.16.1 spryker-shop/product-set-detail-page:^1.11.0 spryker-shop/quick-order-page:^4.10.1 \
 spryker-shop/shop-ui:^1.82.0
 ```
-if the command doesn't work, try running it with the `--with-all-dependencies` flag.
+
+If the command doesn't work, try running it with the `--with-all-dependencies` flag.
 
 ### Enable features
 
@@ -104,7 +105,7 @@ npm i search-insights
 
 ## Test and configure Yves customizations to work with Algolia Personalization
 
-If you customized Yves templates on the project level (`src/Pyz/Yves/`), some events may not trigger or trigger with incorrect data.
+If you customized Yves templates on the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/202410.0/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level) (`src/Pyz/Yves/`), some events may not trigger or trigger with incorrect data.
 
 ### Run the project in a testing environment
 
@@ -163,17 +164,17 @@ Order Success page cases:
 | - | - |
 | Open the **Order Success** page | `PAGE_LOAD` with currency, order total, SKUs, prices, and quantities of purchased products. |
 
-To view a full list of available events, refer to the `traceable-events-algolia` [Readme file](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-algolia/README.md).
+For a full list of available events, see the [traceable-events-algolia readme file](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-algolia/README.md).
 
 
 ### Common issues and solutions
 
+This section common issues to event and solutions. Most solutions involve adding, changing, and fixing events on the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/202410.0/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level).
+
 #### Prerequisites
 
-If you need to add, change, or fix events on the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/202410.0/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level), start with these steps:
-
-1. Locate the page template or view that is used for the current page.
-2. On the project level, override the `{% raw %}{% block eventTracker %}{% endraw %}` block in your project’s template.
+1. Locate the page template or view that is used for the page with faulty events.
+2. On the project level, override the `{% raw %}{% block eventTracker %}{% endraw %}` block in the template.
 
 For details on the event configuration API, see the [traceable-events-orchestrator README](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
 
@@ -202,7 +203,7 @@ If an event isn't firing, verify that the action, like `click` or `change`, is c
 
 Configuration for built-in components is provided by default. For more details, see [API documentation](https://github.com/spryker-shop/traceable-event-widget/blob/master/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
 
-2. Check the Event Selector. CSS selectors are provided by default. If you've changed selectors, update the configuration accordingly.
+2. Check the Event Selector. CSS selectors are provided by default. If you changed selectors, update the configuration accordingly:
 
 ```twig
 {% raw %}{% block eventTracker %}{% endraw %}
@@ -248,6 +249,9 @@ You can view event payload in the console under `Adapter Data:`. If payload is i
 ```
 
 * Adjust the configuration for dynamic data for the needed triggers.
+
+<details>
+  <summary>Dynamic data configuration example</summary>
 
 ```twig
 {% raw %}{% set events = {{% endraw %}
@@ -321,6 +325,8 @@ You can view event payload in the console under `Adapter Data:`. If payload is i
 #}
 ```
 
+</details>
+
 For more information, see [API documentation](https://github.com/spryker-shop/traceable-event-widget/blob/master/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
 
 
@@ -351,7 +357,7 @@ By accepting, you allow us to capture anonymous events for personalization, anal
 1. Deploy to a testing environment.
 2. In the Back Office, go to **Apps** and verify that Algolia is connected and configured.
 3. If you've previously been using the Algolia App, in the Back Office, disconnect and connect it again with the same Algolia credentials.
-  This action updates your Spryker shop config to be able to send events to Algolia.
+  This action updates your project config to be able to send events to Algolia.
 
 3. On the Storefront, do the following as a guest user:
   * Search products

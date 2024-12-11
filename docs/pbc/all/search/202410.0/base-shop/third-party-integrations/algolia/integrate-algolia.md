@@ -15,7 +15,7 @@ This document describes how to integrate [Algolia](/docs/pbc/all/search/{{page.v
 
 - [Install prerequisites and enable ACP](/docs/dg/dev/acp/install-prerequisites-and-enable-acp.html)
 
-- In the Back Office, go to **Apps**-> **Algolia**. Install or update the packages required for Algolia. Example:
+- In the Back Office, go to **Apps**>**Algolia**. Install or update the packages required for Algolia. Example:
 
 ![list-of-algolia-modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/integrate-algolia/list-of-algolia-modules.png)
 
@@ -706,10 +706,9 @@ When integrating Algolia, you should keep in mind some peculiarities of the Sear
 
 ### SearchHTTP plugins setup
 
-Spryker's `SearchHTTP` module transfers Glue search requests to external search providers, one of which is Algolia.
-The `SearchHTTP` query is built using the `QueryExpanderPlugin` classes. Their order is defined in the `CatalogDependencyProvider::createCatalogSearchQueryExpanderPluginVariants()` method.
-The order of execution of those plugins might be customized on the project level.
-By default, all module-specific query builder plugins will be executed before parsing `GET` query parameters, so any `GET` query parameters may overwrite search query parameters set before.
+Spryker's `SearchHTTP` module transfers Glue search requests to external search providers like Algolia. The `SearchHTTP` query is built using the `QueryExpanderPlugin` classes. Their order is defined in the `CatalogDependencyProvider::createCatalogSearchQueryExpanderPluginVariants()` method.
+
+The order of execution of those plugins can be customized on the project level. By default, all module-specific query builder plugins are executed before parsing `GET` query parameters, so any `GET` query parameters may overwrite search query parameters set before.
 
 ## Next steps
 

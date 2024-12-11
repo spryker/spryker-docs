@@ -11,7 +11,7 @@ Once you have [integrated the Algolia app](/docs/pbc/all/search/{{page.version}}
 
 ## Prerequisites
 
-To sign up for Algolia, contact our sales team.
+To sign up for Algolia, contact your Customer Success Manager.
 
 ## Configure Algolia
 

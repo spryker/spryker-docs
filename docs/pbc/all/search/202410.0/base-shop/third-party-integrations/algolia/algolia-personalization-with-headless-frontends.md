@@ -1,5 +1,5 @@
 ---
-title: Algolia Personalization for headless frontends
+title: Algolia Personalization with headless frontends
 description: Find out how you can enable Algolia personalization in your Spryker shop based on headless approach (custom frontend or mobile application).
 last_updated: Nov 24, 2024
 template: howto-guide-template
@@ -14,7 +14,7 @@ Algolia requires events from your application to support the following premium f
 - A/B Testing
 
 
-Spryker collects only Yves events by default. For custom frontends and mobile applications, we recommend using the Algolia SDK for your specific framework or platform and the built-in Algolia UI components. Algolia UI components support event tracking for most of the required events by default.
+Spryker collects only Yves events by default. For custom frontends and mobile applications, we recommend using the Algolia SDK for your specific framework or platform and the built-in Algolia UI components. Algolia UI components support event tracking for most of the required events by default. For information on Aloglia SDK for different platform, see the following docs.
 
 For web applications:  
 * JavaScript applications: [API Reference - JavaScript Widgets](https://www.algolia.com/doc/api-reference/widgets/js/)  

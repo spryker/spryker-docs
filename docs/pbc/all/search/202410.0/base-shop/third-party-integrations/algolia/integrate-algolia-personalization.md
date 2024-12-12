@@ -15,7 +15,7 @@ This document describes how to integrate Algolia Personalization. This integrati
 
 {% info_block infoBox "Third-party frontends" %}
 
-By default, Spryker supports Algolia Personalization only for Yves. To integrate Algolia Personalization with a third-party or mobile frontend, follow [Algolia Personalization for headless frontends](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia-personalization-for-headless-frontends.html).
+By default, Spryker supports Algolia Personalization only for Yves. To integrate Algolia Personalization with a third-party or mobile frontend, follow [Algolia Personalization for headless frontends](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia-personalization-with-headless-frontends.html).
 
 {% endinfo_block %}
 

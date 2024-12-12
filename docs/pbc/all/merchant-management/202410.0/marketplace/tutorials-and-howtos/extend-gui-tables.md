@@ -1,6 +1,6 @@
 ---
 title: "Extend Gui tables"
-description: This articles provides details how to extend an existing Gui table
+description: Learn how to extend existing Gui tables in the merchant portal within your Spryker projects.
 template: howto-guide-template
 last_updated: Nov 17, 2023
 redirect_from:

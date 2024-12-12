@@ -1,7 +1,7 @@
 ---
 title: Ratings and Reviews
 last_updated: Jul 29, 2022
-description: This document describes the capability of type Ratings & Reviews
+description: Everything you need to know about the Ratings and Reviews feature within Spryker Cloud Commerce OS.
 template: concept-topic-template
 redirect_from:
   - /2021080/docs/product-rating-reviews-feature-overview

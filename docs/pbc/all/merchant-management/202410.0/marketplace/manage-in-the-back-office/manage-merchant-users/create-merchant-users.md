@@ -1,7 +1,7 @@
 ---
 title: Create merchant users
 last_updated: Jan 24, 2024
-description: Learn how to create merchant users in the Back Office.
+description: Learn how to create merchant users in the Spryker Marketplace Back Office for your Spryker B2B projects.
 template: back-office-user-guide-template
 redirect_from:
   - /docs/marketplace/user/back-office-user-guides/202311.0/marketplace/merchants/managing-merchant-users.html

@@ -1,5 +1,6 @@
 ---
 title: 8Select
+description: Learn about Sprykers third party integration 8select and how the integration can enhance your Spryker project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/8select

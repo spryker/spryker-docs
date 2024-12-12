@@ -1,5 +1,6 @@
 ---
 title: Install the Category Management feature
+description: Learn how you can install the category management feature in to your Spryker Cloud Commerce OS Project.
 last_updated: Jun 29, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/category-management-feature-integration

@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve concrete products"
-description: Retrieve details about the items of the registered users' carts, and learn what else you can do with the resource in the Spryker Marketplace
+description: Retrieve Concrete product data in your Spryker Marketplace project using the Spryker GLUE API.
 template: glue-api-storefront-guide-template
 last_updated: Dec 18, 2023
 redirect_from:

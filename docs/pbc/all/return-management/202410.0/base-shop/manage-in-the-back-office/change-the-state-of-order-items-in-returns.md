@@ -1,6 +1,6 @@
 ---
 title: Change the state of order items in returns
-description: Learn how to change the state of order items in returns in the Back Office.
+description: Learn how to change the state of order items in returns using the Spryker Cloud Commerce OS Back Office.
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 related:

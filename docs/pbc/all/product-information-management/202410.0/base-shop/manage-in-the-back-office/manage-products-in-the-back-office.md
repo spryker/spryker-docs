@@ -1,6 +1,6 @@
 ---
 title: Manage products in the Back Office
-description: Learn how to log into the Back Office.
+description: Learn how to manage products and product information directly in the Spryker Cloud Commerce OS back office.
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:

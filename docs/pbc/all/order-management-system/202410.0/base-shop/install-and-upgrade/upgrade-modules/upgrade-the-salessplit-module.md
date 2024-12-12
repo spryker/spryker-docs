@@ -1,6 +1,6 @@
 ---
 title: Upgrade the SalesSplit module
-description: Use the guide to learn how to update the SalesSplit module.
+description: Use the guide to learn how to update a newer version of the SalesSplit module for your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-sales-split

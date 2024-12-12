@@ -1,6 +1,6 @@
 ---
 title: Create product lists
-description: Learn how to create product lists in the Back Office.
+description: Learn how to create product lists directly in the Spryker Cloud Commerce OS Back Office.
 last_updated: June 22, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-product-list

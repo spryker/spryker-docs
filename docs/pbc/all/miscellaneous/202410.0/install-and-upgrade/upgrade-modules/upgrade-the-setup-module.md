@@ -1,6 +1,6 @@
 ---
 title: Upgrade the Setup module
-description: Use the guide to learn how to update the Setup module to a newer version.
+description: Use the guide to learn how to update the Setup module to a newer version within your Spryker projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-setup

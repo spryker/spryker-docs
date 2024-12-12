@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Manage products"
-description: Describes the endpoints used to manage products
+description: Describes the endpoints used to manage products within your Spryker cloud Commerce OS project using GLUE API.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:

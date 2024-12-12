@@ -1,6 +1,6 @@
 ---
 title: Import Merchant Management data
-description: Details about the data importers for Merchant Management
+description: Learn the different ways to import data related to Spryker Merchant Managent Feature in Spryker Marketplace.
 last_updated: Jun 23, 2023
 template: concept-topic-template
 ---

@@ -1641,9 +1641,9 @@ class StorageRouterDependencyProvider extends SprykerShopStorageRouterDependency
 }
 ```
 
-{% info_block warningBox "Verification" %}
+{% info_block infoBox "" %}
 
-We do not need `LanguagePrefixRouterEnhancerPlugin` for the StorageRouter, as the language is already part of the URL for the StorageRouter.
+`LanguagePrefixRouterEnhancerPlugin` isn't needed for `StorageRouter` because the language is already part of the URL for `StorageRouter`.
 
 {% endinfo_block %}
 

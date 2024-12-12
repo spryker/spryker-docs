@@ -1585,15 +1585,11 @@ Enable the following behaviors by registering the plugins and a Twig command:
 |GeneratePathTwigPlugin| Wrapper for Symfony Router `generate()` function.                                                                                                                                                                                                                                                   ||SprykerShop\Yves\ShopUi\Plugin\Twig|
 
 
+In the `RouterDependencyProvider::getRouterEnhancerPlugins()` stack, the plugin execution order has been updated to reflect changes in how URL prefixes are structured.
 
-{% info_block warningBox "Verification" %}
-
-In the `RouterDependencyProvider::getRouterEnhancerPlugins()` stack, the order of plugin execution has changed:
-•   By default store name placed before the language prefix in the URL. Example: `https://yves.eu.mysprykershop.com/DE/en/`.    
-•	So the `StorePrefixRouterEnhancerPlugin` must now be executed before the `LanguagePrefixRouterEnhancerPlugin`.
-•	Ensure your plugin stack reflects this updated order to maintain the correct routing behavior.
-
-{% endinfo_block %}
+By default, the store name appears before the URL's language prefix. For example: `https://yves.eu.mysprykershop.com/DE/en/`
+To support this change in URL structure, the `StorePrefixRouterEnhancerPlugin` must now be executed before the `LanguagePrefixRouterEnhancerPlugin` in the plugin stack. This ensures that the store prefix is processed first, followed by the language prefix. Failing to update this order might result in incorrect routing behavior, where language and store prefixes could be misinterpreted or improperly structured in the URL.
+Verify the plugin stack in `RouterDependencyProvider::getRouterEnhancerPlugins()` and ensure that the `StorePrefixRouterEnhancerPlugin` precedes the `LanguagePrefixRouterEnhancerPlugin`. Adjusting the order of these plugins is necessary to maintain proper URL generation and routing consistency across the application.
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 

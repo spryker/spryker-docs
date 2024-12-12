@@ -1,6 +1,6 @@
 ---
 title: Dotdigital
-description: Connect customer data, surface powerful insights, and automate intelligent messages across email, SMS, social, and more by integrating Dotdigital into Spryker Commerce OS.
+description: Connect customer data, surface powerful insights, and automate messages across channels by integrating Dotdigital into Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/dotdigital

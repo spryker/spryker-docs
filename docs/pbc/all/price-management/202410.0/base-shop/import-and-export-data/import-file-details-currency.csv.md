@@ -1,5 +1,6 @@
 ---
 title: "Import file details: currency.csv"
+description: Learn how to import currency data in to your Spryker project using the currency csv file.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-currencycsv

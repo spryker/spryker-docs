@@ -1,6 +1,6 @@
 ---
 title: Connect and configure Stripe for Marketplace
-description: Find out how you can configure the Stripe app for Marketplace
+description: Find out how you can connect and configure the Stripe app for your Spryker Marketplace project.
 last_updated: June 31, 2024
 template: howto-guide-template
 ---

@@ -1,6 +1,6 @@
 ---
 title: Install the Prices feature + Dynamic Multistore
-description: Learn how to install the Prices feature + Dynamic Multistore
+description: Learn how to install the Prices feature + Dynamic Multistore within your Spryker based projects
 last_updated: Apr 25, 2023
 template: feature-integration-guide-template
 ---

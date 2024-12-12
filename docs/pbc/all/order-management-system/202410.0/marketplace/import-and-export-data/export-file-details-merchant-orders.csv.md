@@ -1,7 +1,7 @@
 ---
 title: "Export file details: merchant_orders.csv"
 last_updated: May 27, 2021
-description: This document describes the content of the merchant-order export file.
+description: This document describes the content of the merchant-order csv export file for your Spryker Marketplace project.
 template: import-file-template
 redirect_from:
   - /docs/pbc/all/order-management-system/202311.0/marketplace/import-and-export-data/data-export-merchant-orders-csv-files-format.html

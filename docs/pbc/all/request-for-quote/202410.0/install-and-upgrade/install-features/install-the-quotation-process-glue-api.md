@@ -1,6 +1,6 @@
 ---
 title: Install the Quotation Process Glue API
-description: Integrate the Quotation Process feature API into a Spryker project
+description: Learn how to integrate the Quotation Process feature GLUE API into a Spryker project
 template: feature-integration-guide-template
 last_updated: Nov 21, 2023
 redirect_from:

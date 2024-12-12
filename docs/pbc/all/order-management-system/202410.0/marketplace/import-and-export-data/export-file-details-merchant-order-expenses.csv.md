@@ -1,7 +1,7 @@
 ---
 title: "Export file details: merchant_order-expenses.csv"
 last_updated: May 27, 2021
-description: This document describes the content of merchant-order-expenses.
+description: This document describes the content of merchant order expenses csv file for your Spryker Marketplace project.
 template: import-file-template
 related:
   - title: Merchant order overview

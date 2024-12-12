@@ -1,5 +1,6 @@
 ---
 title: Edit translations
+description: Learn how to edit translations in the Spryker Cloud Commerce OS Back Office to your Spryker projects.
 last_updated: May 31, 2022
 template: back-office-user-guide-template
 redirect_from:

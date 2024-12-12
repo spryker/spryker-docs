@@ -1,6 +1,6 @@
 ---
 title: Manage translations the Back Office
-description: Learn how to log into the Back Office.
+description: Learn how to manage translations in the Spryker Cloud Commerce OS Back Office to your Spryker projects.
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 ---

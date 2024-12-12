@@ -1,7 +1,7 @@
 ---
 title: Create product variants
 last_updated: Jul 27, 2021
-description: This guide explains how to create product variants in Marketplace.
+description: This guide explains how to create product variants in your Spryker Marketplace based projects.
 template: back-office-user-guide-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-concrete-products/creating-product-variants.html

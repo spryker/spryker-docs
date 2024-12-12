@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieving category nodes"
-description: Retrieve information about category nodes.
+description: Retrieve information about category nodes within your Spryker Cloud Commerce OS Project using the Spryker GLUE API
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-category-nodes

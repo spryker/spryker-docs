@@ -1,6 +1,6 @@
 ---
 title: Request for Quote
-description: The document describes the Quotation Process feature, its statuses, and workflow (by a customer, sales representative, agent account and interaction with approval process.
+description: Learn about Spryker request for quote feature for your B2B shops and how it can enhance your offerings to your customers.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/quotation-process-feature-overview

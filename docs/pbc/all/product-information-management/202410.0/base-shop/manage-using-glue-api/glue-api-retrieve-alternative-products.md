@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve alternative products"
-description: Learn how to find alternatives for discontinued products with Glue API.
+description: Learn how to find alternatives for discontinued products with Spryker Cloud Commerce OS Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-alternative-products

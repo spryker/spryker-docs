@@ -1,7 +1,7 @@
 ---
 title: Install the Marketplace Product + Marketplace Product Offer feature
 last_updated: Jun 25, 2021
-description: This document describes the process how to integrate the Marketplace Product + Marketplace Product Offer feature into a Spryker project.
+description: Learn how to integrate the Marketplace Product + Marketplace Product Offer feature into a Spryker Marketplace project.
 template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202311.0/marketplace-product-marketplace-product-offer-feature-integration.html

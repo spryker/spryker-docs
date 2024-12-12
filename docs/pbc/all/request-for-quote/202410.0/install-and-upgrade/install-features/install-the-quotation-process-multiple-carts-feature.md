@@ -1,5 +1,6 @@
 ---
 title: Install the Quotation Process + Multiple Carts feature
+description: Learn how to integrate the Quotation Process + multiple carts feature GLUE API into a Spryker project
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/quotation-process-multiple-carts-feature-integration

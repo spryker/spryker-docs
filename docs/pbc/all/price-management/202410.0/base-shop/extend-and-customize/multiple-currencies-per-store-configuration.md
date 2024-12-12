@@ -1,6 +1,6 @@
 ---
 title: Multiple currencies per store configuration
-description: The article describes the configuration of multiple currencies per store.
+description: Learn about the configuration of multiple currencies per store for your Spryker based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-currencies-per-store-configuration

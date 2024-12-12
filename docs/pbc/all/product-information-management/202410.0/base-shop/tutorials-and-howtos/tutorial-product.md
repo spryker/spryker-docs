@@ -1,5 +1,6 @@
 ---
 title: "Tutorial: Product"
+description: Learn how to add information to products regarding country of manufacturer to display on product details page with your Spryker project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-product-challenge
@@ -25,9 +26,9 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/tutorial-product.html
 related:
   - title: Extend the core
-    link: docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
+    link: docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
   - title: About the Persistence layer
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/persistence-layer.html
   - title: Using translations
     link: docs/dg/dev/internationalization-and-multi-store/managing-translations-with-twig-translator.html
 ---

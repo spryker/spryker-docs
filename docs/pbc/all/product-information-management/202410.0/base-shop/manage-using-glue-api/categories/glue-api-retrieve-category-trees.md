@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieving category trees"
-description: Retrieve a full navigation tree with child category nodes.
+description: Retrieve a full navigation tree with child category nodes using the Spryker Cloud Commerce OS GLUE API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-category-trees

@@ -1,5 +1,6 @@
 ---
 title: Manage business unit specific prices via data import
+description: Manage business unit prices for your Spyker based store using data import within your Spryker project.
 last_updated: Feb 04, 2022
 template: howto-guide-template
 redirect_from:

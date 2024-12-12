@@ -1,6 +1,6 @@
 ---
 title: Disconnect Stripe
-description: Learn how to disconnect Stripe in the Back Office
+description: Learn how to disconnect Stripe in the Back Office using Spryker App Composition Platform.
 last_updated: Mar 24, 2024
 template: howto-guide-template
 ---

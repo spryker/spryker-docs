@@ -235,6 +235,38 @@ One can avoid using the unnecessary transitions by:
 - Removing the *Reservation* flag from the NEW and other steps in the OMS.
 - Removing the *Timeout* transition from the NEW step in the OMS.
 
+### Decoupling of Checkout endpoint and OMS commands
+
+During the checkout process, an order is created with the status `NEW` and immediately becomes part of the Order Management System (OMS) workflow. 
+Any `onEnter` events with commands right after the `NEW` status will be executed within the same process as the checkout. 
+This can significantly degrade its performance and may lead to issues.
+
+![img](./images/coupled_new_state_to_command.png)
+
+It's recommended to decouple all subsequent transitions from the `NEW` status. 
+
+![img](./images/decoupled_new_state_from_command.png)
+
+```
+        <transitions>
+            <transition happy="true">
+                <source>new</source>
+                <target>ready for confirmation</target>
+            </transition>
+            <transition happy="true">
+                <source>ready for confirmation</source>
+                <target>confirmation sent</target>
+                <event>confirmation</event>
+            </transition>
+        </transitions>
+        <events>
+            <event name="confirmation" onEnter="true" command="Oms/SendOrderConfirmation"/>
+        </events>
+```
+
+This approach ensures that these transitions are executed in the background by Jenkins triggering `console oms:check-condition`, 
+improving overall performance.
+
 ### Performance checklist
 
 Make sure to check the following articles on how to optimize the performance of your application:

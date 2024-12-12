@@ -49,9 +49,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up Express Checkout payments configuration
 
-1. Add the following configuration to your project:
-
-2. Configure the checkout payment step to hide the express checkout payment methods. For example, if you're using the ACP Payone app, you can exclude the `payone-paypal-express` payment method.
+1. Configure the checkout payment step to hide the express checkout payment methods. For example, if you're using the ACP Payone app, you can exclude the `payone-paypal-express` payment method.
 
 **src/Pyz/Yves/CheckoutPage/CheckoutPageConfig.php**
 
@@ -75,7 +73,7 @@ class CheckoutPageConfig extends SprykerCheckoutPageConfig
 }
 ```
 
-3. Cart reload, remove item, and update quantity are the default cart operations. Define the payment methods that you want to exclude from the cart operations. During the checkout steps, cart reloads are executed multiple times, and the payment methods are cleared. In the example below, the `PayPal Express` payment method name should be excluded from the cart operations to prevent the payment method from being cleared.
+2. Cart reload, remove item, and update quantity are the default cart operations. Define the payment methods that you want to exclude from the cart operations. During the checkout steps, cart reloads are executed multiple times, and the payment methods are cleared. In the example below, the `PayPal Express` payment method name should be excluded from the cart operations to prevent the payment method from being cleared.
 
 **src/Pyz/Zed/PaymentCartConnector/PaymentCartConnectorConfig.php**
 
@@ -137,7 +135,8 @@ Make sure the steps you have configured to skip are skipped in the checkout flow
 
 {% endinfo_block %}
 
-4. When a customer returns to the cart page during the express checkout flow, some quote fields are cleared to allow them to restart the checkout process from the beginning. Configure the quote fields to be cleared during the express checkout flow.
+4. When a customer returns to the cart page during the express checkout flow, some quote fields are cleared to allow them to restart the checkout process from the beginning. Configure the quote fields to be cleared during the express checkout flow. In the example below, the `PAYMENT`, `PAYMENTS`, `SHIPMENT`, `BILLING_ADDRESS`, `SHIPPING_ADDRESS`, and `PRE_ORDER_PAYMENT_DATA` quote fields are cleared during the express checkout flow.
+Chose the quote fields that you want to clear during the express checkout flow based on your project needs.
 
 
 **src/Pyz/Yves/PaymentAppWidget/PaymentAppWidgetConfig.php**

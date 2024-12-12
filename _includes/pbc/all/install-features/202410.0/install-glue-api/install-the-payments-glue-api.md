@@ -142,8 +142,8 @@ Activate the following plugin:
 
 | PLUGIN                                                 | SPECIFICATION                                                                                            | PREREQUISITES | NAMESPACE                                           |
 |--------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------|
-| PaymentMethodsByCheckoutDataResourceRelationshipPlugin | Adds payment-methods resource as relationship in case `RestCheckoutDataTransfer` is provided as payload. | None          | Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication |
-| PaymentCustomersResourceRoutePlugin                    | Returns customer data that should be used on the store front address page.                               | None          | Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication |
+| PaymentMethodsByCheckoutDataResourceRelationshipPlugin | Adds the `payment-methods` resource as relationship in case `RestCheckoutDataTransfer` is provided as payload. |           | Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication |
+| PaymentCustomersResourceRoutePlugin                    | Returns customer data to use on the Storefront address page.                               |           | Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -174,7 +174,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
         return $resourceRelationshipCollection;
     }
-    
+
      /**
      * {@inheritDoc}
      *
@@ -191,11 +191,12 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-To verify `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, send a POST request to `https://glue.mysprykershop.com/checkout-data?include=payment-methods` and make sure that `checkout-data` resource has a relationship to the `payment-methods` resources.
-To verify `PaymentCustomersResourceRoutePlugin` is activated, send a POST request to `https://glue.mysprykershop.com/payment-customers` and make sure that you get a response with customer data.
+* To verify `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, send a `POST https://glue.mysprykershop.com/checkout-data?include=payment-methods` and request and make sure that `checkout-data` resource has a relationship to the `payment-methods` resources.
+* To verify `PaymentCustomersResourceRoutePlugin` is activated, send a `POST https://glue.mysprykershop.com/payment-customers` request and make sure that customer data is returned.
 
-Here is an example request for the PayOne PayPal Express payment method, used by a guest or authorized customer to retrieve user data such as addresses and other information from the PSP: https://glue.mysprykershop.com/payment-customers.
+Here is an example request for the PayOne PayPal Express payment method used by a guest or authorized customer to retrieve user data such as addresses from the PSP:
 
+`POST https://glue.mysprykershop.com/payment-customers`
 ```json
 {
   "data": {
@@ -218,8 +219,10 @@ Here is an example request for the PayOne PayPal Express payment method, used by
 }
 ```
 
-Depending on the payment method, the response may vary.
-An example of the response:
+The response can be different depending on the payment method.
+
+<details>
+  <summary>Response example</summary>
 
 ```json
 {
@@ -273,6 +276,8 @@ An example of the response:
 }
 ```
 
+</details>
+
 {% endinfo_block %}
 
 ### Configure mapping
@@ -281,7 +286,7 @@ Mappers should be configured on a project level to map the data from the request
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- |--- |
-| PaymentsQuoteMapperPlugin | Adds a mapper that maps Payments information to `QuoteTransfer`. | None | `Spryker\Zed\PaymentsRestApi\Communication\Plugin\CheckoutRestApi` |
+| PaymentsQuoteMapperPlugin | Adds a mapper that maps Payments information to `QuoteTransfer`. |  | `Spryker\Zed\PaymentsRestApi\Communication\Plugin\CheckoutRestApi` |
 
 **src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
 
@@ -317,7 +322,7 @@ To verify that `PaymentsQuoteMapperPlugin` is activated, send a POST request to 
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| SelectedPaymentMethodCheckoutDataResponseMapperPlugin | Maps the selected payment method data to the checkout-data resource attributes. | None | Spryker\Glue\PaymentsRestApi\Plugin\CheckoutRestApi |
+| SelectedPaymentMethodCheckoutDataResponseMapperPlugin | Maps the selected payment method data to the checkout-data resource attributes. |  | Spryker\Glue\PaymentsRestApi\Plugin\CheckoutRestApi |
 
 **src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
 

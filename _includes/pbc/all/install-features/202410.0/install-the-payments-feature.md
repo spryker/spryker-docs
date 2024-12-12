@@ -2,11 +2,13 @@
 
 {% info_block errorBox %}
 
-The following feature integration guide expects the basic feature to be in place.<br>The current feature integration guide only adds the following functionalities:
-* Payment Back Office UI;
-* Payment method per store;
-* Payment data import.
-* Payment App express checkout flow. 
+The following feature integration guide expects the basic feature to be in place.
+
+The current feature integration guide only adds the following functionalities:
+* Payment Back Office UI
+* Payment method per store
+* Payment data import
+* Payment App express checkout flow.
 
 {% endinfo_block %}
 
@@ -34,14 +36,14 @@ Make sure that the following modules have been installed:
 
 | MODULE                    | EXPECTED DIRECTORY                               | REQUIRED ONLY FOR ACP PAYMENTS |
 |---------------------------|--------------------------------------------------|--------------------------------|
-| PaymentDataImport         | vendor/spryker/payment-data-import               | no                             |
-| PaymentGui                | vendor/spryker/payment-gui                       | no                             |
-| PaymentApp                | vendor/spryker/payment-app                       | yes                            |
-| PaymentAppExtension       | vendor/spryker/payment-app-extension             | yes                            |
-| PaymentAppShipment        | vendor/spryker/payment-app-shipment              | yes                            |
-| PaymentAppWidget          | vendor/spryker-shop/payment-app-widget           | yes                            |
-| PaymentAppWidgetExtension | vendor/spryker-shop/payment-app-widget-extension | yes                            |
-| PaymentCartConnector      | vendor/spryker/payment-cart-connector            | no                             |
+| PaymentDataImport         | vendor/spryker/payment-data-import               |                              |
+| PaymentGui                | vendor/spryker/payment-gui                       |                              |
+| PaymentApp                | vendor/spryker/payment-app                       | v                            |
+| PaymentAppExtension       | vendor/spryker/payment-app-extension             | v                            |
+| PaymentAppShipment        | vendor/spryker/payment-app-shipment              | v                            |
+| PaymentAppWidget          | vendor/spryker-shop/payment-app-widget           | v                            |
+| PaymentAppWidgetExtension | vendor/spryker-shop/payment-app-widget-extension | v                            |
+| PaymentCartConnector      | vendor/spryker/payment-cart-connector            |                              |
 
 {% endinfo_block %}
 
@@ -49,9 +51,7 @@ Make sure that the following modules have been installed:
 
 1. Add the following configuration to your project:
 
-2. Configure the checkout payment step to hide the express checkout payment methods.
-Depending on your project needs, you can exclude the payment methods that you do not want to show on the checkout payment step.
-In case you are using the ACP Payone app, you can exclude the `payone-paypal-express` payment method.
+2. Configure the checkout payment step to hide the express checkout payment methods. For example, if you're using the ACP Payone app, you can exclude the `payone-paypal-express` payment method.
 
 **src/Pyz/Yves/CheckoutPage/CheckoutPageConfig.php**
 
@@ -75,10 +75,7 @@ class CheckoutPageConfig extends SprykerCheckoutPageConfig
 }
 ```
 
-Cart reload, remove item, and update quantity are the default cart operations.
-Define the payment methods that you want to exclude from the cart operations.
-During the checkout steps, cart reloads are executed multiple times, and the payment methods are cleared.
-In the example below, the `PayPal Express` payment method name should be excluded from the cart operations in order to prevent the payment method from being cleared.
+3. Cart reload, remove item, and update quantity are the default cart operations. Define the payment methods that you want to exclude from the cart operations. During the checkout steps, cart reloads are executed multiple times, and the payment methods are cleared. In the example below, the `PayPal Express` payment method name should be excluded from the cart operations to prevent the payment method from being cleared.
 
 **src/Pyz/Zed/PaymentCartConnector/PaymentCartConnectorConfig.php**
 
@@ -102,16 +99,11 @@ class PaymentCartConnectorConfig extends SprykerPaymentCartConnectorConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:
-* The payment methods you have excluded are not shown on the checkout payment step page:
-  * Add several products to the cart and proceed to the checkout.
-  * Check that the excluded payment methods are not shown on the checkout payment step page.
+Add several products to cart and proceed to checkout. Make sure that the payment methods you've excluded are not shown on the checkout payment step page.
 
 {% endinfo_block %}
 
-3. Configure the checkout steps to hide during the express checkout flow.
-The express checkout flow is a simplified checkout flow that skips some of the checkout steps.
-Depending on your project needs, you can configure the checkout steps to be skipped during the express checkout flow.
+3. The express checkout flow is a simplified checkout flow that skips some of the checkout steps. Depending on your project needs, configure the needed checkout steps to be skipped during the express checkout flow.
 
 **src/Pyz/Yves/PaymentAppWidget/PaymentAppWidgetConfig.php**
 
@@ -137,17 +129,16 @@ class PaymentAppWidgetConfig extends SprykerPaymentAppWidgetConfig
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that:
-* The express checkout flow skips the checkout steps you have configured:
-  * Add several products to the cart and proceed to the express checkout flow.
-  * Use the express checkout widget to place an order shown on the cart page.
-  * After the confirmation, you will be redirected to the order confirmation page.
-  * Check that the express checkout flow skips the checkout steps you have configured.
+
+1. Add several products to the cart and proceed to the express checkout flow.
+2. Use the express checkout widget to place an order shown on the cart page.
+3. Confirming the order opens the order confirmation page.
+Make sure the steps you have configured to skip are skipped in the checkout flow.
 
 {% endinfo_block %}
 
-4. Configure the quote fields to be cleaned during the express checkout flow.
-When customers return to the cart page during the express checkout flow, certain quote fields are cleared to allow them to restart the checkout process from the beginning.
+4. When a customer returns to the cart page during the express checkout flow, some quote fields are cleared to allow them to restart the checkout process from the beginning. Configure the quote fields to be cleared during the express checkout flow.
+
 
 **src/Pyz/Yves/PaymentAppWidget/PaymentAppWidgetConfig.php**
 
@@ -178,16 +169,14 @@ class PaymentAppWidgetConfig extends SprykerPaymentAppWidgetConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:
-* The quote fields you have configured are cleared when customers return to the cart page during the express checkout flow:
-  * Add several products to the cart and proceed to the express checkout flow.
-  * Use the express checkout widget to place an order shown on the cart page.
-  * After the confirmation, you will be redirected to the order confirmation page.
-  * Return to the cart page and check that the quote fields you have configured are cleared.
+1. Add several products to cart and proceed to the express checkout flow.
+2. Use the express checkout widget to place an order shown on the cart page.
+3. Confirming the order opens the order confirmation page.
+4. Return to the cart page and check that the quote fields you have configured are cleared.
 
 {% endinfo_block %}
 
-5. Configure the default shipment method for the express checkout payment that will be used in the order and the cost is added to the total price.
+5. Configure a shipment method to be used by default in the express checkout and its cost to be added to the total price.
 In the example below, the `spryker_dummy_shipment-standard` shipment method is configured for the `payone-paypal-express` payment method.
 The key is the payment method key, and the value is the shipment method key.
 
@@ -214,12 +203,10 @@ class PaymentAppShipmentConfig extends SprykerPaymentAppShipmentConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:
-* The shipment method you have configured is used for the express checkout payment request:
-  * Add several products to the cart and proceed to the express checkout flow.
-  * Use the express checkout widget to place an order shown on the cart page.
-  * After the confirmation, you will be redirected to the order confirmation page.
-  * Check that the shipment method you have configured is used for the express checkout payment request.
+1. Add several products to cart and proceed to the express checkout flow.
+2. Use the express checkout widget to place an order shown on the cart page.
+3. Confirm the order, which opens the order confirmation page.
+  Make sure the shipment methods you've configured to be used by default was applied to the order.
 
 {% endinfo_block %}
 

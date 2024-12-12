@@ -237,13 +237,13 @@ One can avoid using the unnecessary transitions by:
 
 ### Decoupling of Checkout endpoint and OMS commands
 
-During the checkout process, an order is created with the status `NEW` and immediately becomes part of the Order Management System (OMS) workflow. 
-Any `onEnter` events with commands right after the `NEW` status will be executed within the same process as the checkout. 
-This can significantly degrade its performance and may lead to issues.
+During the checkout process, order items are created by default in the status `new` and immediately become part of the Order Management System (OMS) workflow. 
+Any `onEnter` event with command from the state `new` will be executed within the same PHP process as the checkout.
+This can significantly increase processing time of the checkout request and may lead to issues.
 
 ![img](./images/coupled_new_state_to_command.png)
 
-It's recommended to decouple all subsequent transitions from the `NEW` status. 
+It's recommended to postpone all subsequent transitions from the `new` state. 
 
 ![img](./images/decoupled_new_state_from_command.png)
 
@@ -265,7 +265,7 @@ It's recommended to decouple all subsequent transitions from the `NEW` status.
 ```
 
 This approach ensures that these transitions are executed in the background by Jenkins triggering `console oms:check-condition`, 
-improving overall performance.
+improving overall performance of the checkout process.
 
 ### Performance checklist
 

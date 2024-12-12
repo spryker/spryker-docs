@@ -191,3 +191,35 @@ To regenerate the cache, run the following command:
 ```bash
 vendor/bin/console oms:process-cache:warm-up
 ```
+
+## Slow Checkout endpoint
+
+**Issue:** During the checkout process, order items are created by default in the status `new` and immediately become part of the Order Management System (OMS) workflow.
+Any `onEnter` event with command from the state `new` will be executed within the same PHP process as the checkout.
+This can significantly increase processing time of the checkout request and may lead to issues.
+
+![img](./images/coupled_new_state_to_command.png)
+
+**Solution:** It's recommended to postpone all subsequent transitions from the `new` state.
+
+![img](./images/decoupled_new_state_from_command.png)
+
+```
+<transitions>
+    <transition happy="true">
+        <source>new</source>
+        <target>ready for confirmation</target>
+    </transition>
+    <transition happy="true">
+        <source>ready for confirmation</source>
+        <target>confirmation sent</target>
+        <event>confirmation</event>
+    </transition>
+</transitions>
+<events>
+    <event name="confirmation" onEnter="true" command="Oms/SendOrderConfirmation"/>
+</events>
+```
+
+This approach ensures that these transitions are executed in the background by Jenkins triggering `console oms:check-condition`,
+improving overall performance of the checkout process.

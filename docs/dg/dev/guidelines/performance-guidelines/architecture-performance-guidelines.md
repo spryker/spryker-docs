@@ -235,37 +235,12 @@ One can avoid using the unnecessary transitions by:
 - Removing the *Reservation* flag from the NEW and other steps in the OMS.
 - Removing the *Timeout* transition from the NEW step in the OMS.
 
-### Decoupling of Checkout endpoint and OMS commands
+{% info_block warningBox %}
 
-During the checkout process, order items are created by default in the status `new` and immediately become part of the Order Management System (OMS) workflow. 
-Any `onEnter` event with command from the state `new` will be executed within the same PHP process as the checkout.
-This can significantly increase processing time of the checkout request and may lead to issues.
+Decoupling of Checkout endpoint and OMS commands: 
+[Slow Checkout endpoint](/docs/pbc/all/order-management-system/202410.0/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html)
 
-![img](./images/coupled_new_state_to_command.png)
-
-It's recommended to postpone all subsequent transitions from the `new` state. 
-
-![img](./images/decoupled_new_state_from_command.png)
-
-```
-        <transitions>
-            <transition happy="true">
-                <source>new</source>
-                <target>ready for confirmation</target>
-            </transition>
-            <transition happy="true">
-                <source>ready for confirmation</source>
-                <target>confirmation sent</target>
-                <event>confirmation</event>
-            </transition>
-        </transitions>
-        <events>
-            <event name="confirmation" onEnter="true" command="Oms/SendOrderConfirmation"/>
-        </events>
-```
-
-This approach ensures that these transitions are executed in the background by Jenkins triggering `console oms:check-condition`, 
-improving overall performance of the checkout process.
+{% endinfo_block %}
 
 ### Performance checklist
 

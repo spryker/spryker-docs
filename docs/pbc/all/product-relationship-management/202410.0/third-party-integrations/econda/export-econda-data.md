@@ -1,6 +1,6 @@
 ---
 title: Export Econda data
-description: Export Econda data via CSVs
+description: Learn how you can Export Econda data via CSV files for your Spryker Cloud Commerce OS projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/econda-export-csvs

@@ -47,9 +47,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up Express Checkout payments configuration
 
-1. Add the following configuration to your project:
-
-2. Configure the checkout payment step to hide the express checkout payment methods.
+1. Configure the checkout payment step to hide the express checkout payment methods.
 Depending on your project needs, you can exclude the payment methods that you do not want to show on the checkout payment step.
 In case you are using the ACP Payone app, you can exclude the `payone-paypal-express` payment method.
 
@@ -109,7 +107,7 @@ Make sure that:
 
 {% endinfo_block %}
 
-3. Configure the checkout steps to hide during the express checkout flow.
+2. Configure the checkout steps to hide during the express checkout flow.
 The express checkout flow is a simplified checkout flow that skips some of the checkout steps.
 Depending on your project needs, you can configure the checkout steps to be skipped during the express checkout flow.
 
@@ -146,8 +144,10 @@ Make sure that:
 
 {% endinfo_block %}
 
-4. Configure the quote fields to be cleaned during the express checkout flow.
+3. Configure the quote fields to be cleaned during the express checkout flow.
 When customers return to the cart page during the express checkout flow, certain quote fields are cleared to allow them to restart the checkout process from the beginning.
+In the example below, the `PAYMENT`, `PAYMENTS`, `SHIPMENT`, `BILLING_ADDRESS`, `SHIPPING_ADDRESS`, and `PRE_ORDER_PAYMENT_DATA` quote fields are cleared during the express checkout flow.
+Chose the quote fields that you want to clear during the express checkout flow based on your project needs.
 
 **src/Pyz/Yves/PaymentAppWidget/PaymentAppWidgetConfig.php**
 

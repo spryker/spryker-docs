@@ -135,8 +135,7 @@ Make sure the steps you have configured to skip are skipped in the checkout flow
 
 {% endinfo_block %}
 
-4. When a customer returns to the cart page during the express checkout flow, some quote fields are cleared to allow them to restart the checkout process from the beginning. Configure the quote fields to be cleared during the express checkout flow. In the example below, the `PAYMENT`, `PAYMENTS`, `SHIPMENT`, `BILLING_ADDRESS`, `SHIPPING_ADDRESS`, and `PRE_ORDER_PAYMENT_DATA` quote fields are cleared during the express checkout flow.
-Chose the quote fields that you want to clear during the express checkout flow based on your project needs.
+4. When a customer returns to the cart page during the express checkout flow, some quote fields are cleared to allow them to restart the checkout process from the beginning. In the example below, the `PAYMENT`, `PAYMENTS`, `SHIPMENT`, `BILLING_ADDRESS`, `SHIPPING_ADDRESS`, and `PRE_ORDER_PAYMENT_DATA` quote fields are configured to be cleared. Configure the quote fields to be cleared during the express checkout flow according to your needs.
 
 
 **src/Pyz/Yves/PaymentAppWidget/PaymentAppWidgetConfig.php**
@@ -209,7 +208,7 @@ class PaymentAppShipmentConfig extends SprykerPaymentAppShipmentConfig
 
 {% endinfo_block %}
 
-6. Enable the express checkout shipment for the product bundles.
+6. Enable the express checkout shipment for product bundles.
 
 **src/Pyz/Zed/PaymentAppShipment/PaymentAppShipmentConfig.php**
 
@@ -234,16 +233,13 @@ class PaymentAppShipmentConfig extends SprykerPaymentAppShipmentConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:
-* The express checkout shipment is enabled for the product bundle:
-  * Add a product bundle to the cart and proceed to the express checkout flow.
-  * Place an order using the express checkout flow.
-  * The order is placed successfully.
+Add a product bundle to cart and place the order using the express checkout flow.
+  Make sure the order is placed successfully.
 
 {% endinfo_block %}
 
-7. Enable the cart clean up for the regular checkout flow.
-When customers start the regular checkout, the quote is cleaned up to allow them to restart the checkout process from the beginning.
+7. When customers start a regular checkout, the quote is cleaned up to let them to restart the checkout process from the beginning. Enable cart clean up for the regular checkout flow.
+
 
 **src/Pyz/Zed/PaymentAppShipment/PaymentAppShipmentConfig.php**
 
@@ -267,12 +263,14 @@ class PaymentAppShipmentConfig extends SprykerPaymentAppShipmentConfig
     }
 }
 ```
-Make sure that:
-* The quote is cleaned up when customers start the regular checkout:
-  * Add several products to the cart and proceed to the express checkout flow.
-  * On summary page, click the "Back to cart" button.
-  * Start the regular checkout by clicking the "Checkout" button.
-  * You will be redirected to the address step of the regular checkout.
+
+{% info_block warningBox "Verification" %}
+
+
+* Add several products to cart and proceed to the express checkout flow.
+* On the summary page, click the **Back to cart** button.
+* Start the regular checkout by clicking the **Checkout** button.
+* You will be redirected to the address step of the regular checkout.
 
 {% endinfo_block %}
 

@@ -46,7 +46,7 @@ entries:
               - title: Set up
                 url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/set-up-amazon-quicksight.html
               - title: Install
-                url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.html                
+                url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.html
               - title: "Best practices: working with analytics"
                 url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/best-practices-working-with-analytics.html
               - title: Refresh analytics datasets
@@ -3829,10 +3829,23 @@ entries:
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/integrate-algolia.html
                     - title: Configure Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/configure-algolia.html
+                    - title: Customize Algolia
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/customize-algolia.html
+                      include_versions:
+                      - "202410.0"
                     - title: Disconnect Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/disconnect-algolia.html
-                    - title: Getting access to Algolia dashboard
+                    - title: Getting access to Algolia Dashboard
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/getting-access-to-algolia-dashboard.html
+                    - title: Integrate Algolia Personalization
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/integrate-algolia-personalization.html
+                      include_versions:
+                      - "202410.0"
+                    - title: Algolia Personalization with headless frontends
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/algolia-personalization-with-headless-frontends.html
+                      include_versions:
+                      - "202410.0"
+
                 - title: Visual Search powered by OpenAI
                   url: /docs/pbc/all/search/base-shop/third-party-integrations/visual-search-powered-by-openai/install-visual-search-powered-by-openai.html
                   include_versions:

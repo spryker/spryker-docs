@@ -68,6 +68,8 @@ When the custome clicks on "Pay with PayPal Express" button, the `InitializePreO
 
 #### Pre-order payment initialization
 
+This script example makes a GLUE request to the `/payments` API endpoint to initialize the pre-order payment. It is important to note that the `transactionId` is empty in the first request but has to be used in further requests. The quote data and the payment method data also needs to be passed. The response of this request has `preOrderPaymentData` that will be used in further requests. 
+
 ```JS
 
 async initializePreOrderPayment() {
@@ -129,7 +131,7 @@ After making a request to the PayOne API, the payment is created in the PayOne a
 }
 ```
 
-After the customer clicks "Complete Purchase" in the PayPal Express modal he should be redirected to the summary page. 
+After the customer clicks "Complete Purchase" in the PayPal Express modal he will be redirected to the summary page. 
 
 Since we skipped some important checkout steps here (addresses, shipment method, etc) another request needs to be made to get the customer data.
 

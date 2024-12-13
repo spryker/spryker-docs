@@ -129,7 +129,7 @@ After making a request to the PayOne API, the payment is created in the PayOne a
 }
 ```
 
-After the customer clicks "Complete Purchase" in the PayPal Express modal he should be redirected to the summary page. 
+After the customer clicks "Complete Purchase" in the PayPal Express modal he will be redirected to the summary page. 
 
 Since we skipped some important checkout steps here (addresses, shipment method, etc) another request needs to be made to get the customer data.
 

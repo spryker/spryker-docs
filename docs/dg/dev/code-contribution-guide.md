@@ -1,6 +1,6 @@
 ---
 title: Code contribution guide
-description: Contribute to Spryker repositories
+description: Learn how to contribute code to Spryker with this comprehensive guide. Follow best practices for creating, reviewing, and submitting high-quality contributions efficiently.
 last_updated: Apr 3, 2024
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/code-contribution-guide

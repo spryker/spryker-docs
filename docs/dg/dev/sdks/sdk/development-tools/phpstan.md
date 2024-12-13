@@ -51,13 +51,19 @@ composer require --dev phpstan/phpstan
 1. Run the following command to generate autocompletion and prevent any error messages that might occur due to the incomplete classes:
 `vendor/bin/console dev:ide:generate-auto-completion`
 2. Run this command to start analyzing:
-`php -d memory_limit=2048M vendor/bin/phpstan analyze -c vendor/spryker/spryker/phpstan.neon vendor/<spryker | spryker-eco | spryker-middleware>/<MODULE>/ -l 2`
+`php -d memory_limit=2048M vendor/bin/phpstan analyze -l 6 -c phpstan.neon src/`
 
 {% info_block errorBox %}
 
-Note that running this command with the level 2 key (**-l 2**) and having no errors is obligatory, and having no errors with level 5 (**-l 5**) is highly recommended.
+By default, Spryker demo shops are configured with PHPStan at level 6 in the `phpstan.neon` file, which is the highly recommended configuration for Spryker projects. 
 
 {% endinfo_block %}
+
+## Baseline
+
+[PHPStan baseline](https://phpstan.org/user-guide/baseline)
+
+If you need to raise the level, add new rules or extensions, you can generate a baseline and enable it for future changes.
 
 ## Additional functionality
 

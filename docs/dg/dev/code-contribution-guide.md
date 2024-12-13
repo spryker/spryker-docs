@@ -7,9 +7,6 @@ originalLink: https://documentation.spryker.com/2021080/docs/code-contribution-g
 originalArticleId: d5ded6f2-5bb9-4288-bc96-3fabf7e32c8f
 redirect_from:
   - /docs/scos/dev/code-contribution-guide.html
-related:
-  - title: Contribute to the documentation
-    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/contribute-to-the-documentation.html
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Non-functional requirement templates
-description: This guide provides templates to document non-functional requirements in Spryker, focusing on performance, security, scalability, and maintainability.
+description: Define key system expectations using Spryker's non-functional requirement templates. Focus on performance, scalability, and security to align development goals effectively.
 template: concept-topic-template
 redirect_from:
 ---

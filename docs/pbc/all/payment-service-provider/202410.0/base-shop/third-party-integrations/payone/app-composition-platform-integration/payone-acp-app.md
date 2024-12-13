@@ -22,7 +22,8 @@ You can have multiple accounts with Payone. For example, you can have different 
 The Payone App supports the B2B and B2C business models and the following payment methods:
 
 * Credit Card
-* PayPal Standard and Express
+* PayPal Standard
+* PayPal Express
 * Klarna:
   * Invoice: pay later
   * Installments: slice it
@@ -47,9 +48,9 @@ The payment modes like Preauthorization and Capture must be set via the Spryker 
 
 ## Payment method flows
 
-* `Credit Card` - [Learn more about the Credit Card payment flow.](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/credit-card.html)
-* `PayPal` - [Learn more about the PayPal payment flow.](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/pay-pal.html)
-* `PayPal Express` - [Learn more about the PayPal Express payment flow.](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/pay-pal-express.html)
+* [Credit Card](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/credit-card.html)
+* [PayPal](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/pay-pal.html)
+* [PayPal Express](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/pay-pal-express.html)
 
 
 ## Current limitations

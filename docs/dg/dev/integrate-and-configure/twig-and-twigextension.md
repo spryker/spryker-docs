@@ -169,19 +169,29 @@ This interface gets the Twig environment and `ContainerInterface` to be able to 
 ```php
 <?php
 
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
 namespace Spryker\Shared\Twig\Plugin;
 
 use Spryker\Service\Container\ContainerInterface;
 use Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface;
+use Symfony\Bridge\Twig\Extension\DumpExtension;
+use Symfony\Component\VarDumper\Cloner\VarCloner;
 use Twig\Environment;
-use Twig\Extension\DebugExtension;
 
-class DebugTwigPlugin implements TwigPluginInterface
+class VarDumperTwigPlugin implements TwigPluginInterface
 {
+    /**
+     * @var string
+     */
     protected const SERVICE_DEBUG = 'debug';
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
+     * - Added pretty print for debug extension.
      *
      * @api
      *
@@ -196,11 +206,12 @@ class DebugTwigPlugin implements TwigPluginInterface
             return $twig;
         }
 
-        $twig->addExtension(new DebugExtension());
+        $twig->addExtension(new DumpExtension(new VarCloner()));
 
         return $twig;
     }
 }
+
 ```
 
 {% info_block infoBox %}

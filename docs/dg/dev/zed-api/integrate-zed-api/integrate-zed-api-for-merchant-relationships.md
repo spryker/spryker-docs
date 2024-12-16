@@ -1,6 +1,6 @@
 ---
 title: Integrate Zed API for merchant relationships
-description: Learn how to integrate the Zed API for merchant relationships into your project.
+description: Learn how to integrate Spryker ZED API for merchant relationships into your Spryker based project.
 template: feature-integration-guide-template
 last_updated: Nov 6, 2023
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: Vendor folder synchronization error
-description: Learn how to fix the vendor folder synchronization error
+description: Learn how you can troubleshoot and resolve the Vendor Folder Synchronization Error within your Spryker local environment.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/vendor-folder-synchronization-error

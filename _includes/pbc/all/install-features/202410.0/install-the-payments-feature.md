@@ -238,7 +238,7 @@ Add a product bundle to cart and place the order using the express checkout flow
 
 {% endinfo_block %}
 
-7. When customers start a regular checkout, the quote is cleaned up to let them to restart the checkout process from the beginning. Enable cart clean up for the regular checkout flow.
+7. When customers start a regular checkout, the quote is cleaned up to let them to restart the checkout process from the beginning. Enable cart cleanup for the regular checkout flow.
 
 
 **src/Pyz/Zed/PaymentAppShipment/PaymentAppShipmentConfig.php**
@@ -267,10 +267,10 @@ class PaymentAppShipmentConfig extends SprykerPaymentAppShipmentConfig
 {% info_block warningBox "Verification" %}
 
 
-* Add several products to cart and proceed to the express checkout flow.
-* On the summary page, click the **Back to cart** button.
-* Start the regular checkout by clicking the **Checkout** button.
-* You will be redirected to the address step of the regular checkout.
+1. Add several products to cart and proceed to the express checkout flow.
+2. On the summary page, click the **Back to cart** button.
+3. To proceed to the regular checkout, click **Checkout**.
+  This opens the address step of the regular checkout.
 
 {% endinfo_block %}
 

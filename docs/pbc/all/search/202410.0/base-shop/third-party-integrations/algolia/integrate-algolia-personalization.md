@@ -197,7 +197,7 @@ If an event isn't firing, verify that the action, like `click` or `change`, is c
         data: events.data,
     } %}
 
-    {{ parent() }}
+    {% raw %}{{ parent() }}{% endraw %}
 {% raw %}{% endblock %}{% endraw %}
 ```
 
@@ -223,7 +223,7 @@ Configuration for built-in components is provided by default. For more details, 
         data: events.data,
     } %}
 
-    {{ parent() }}
+    {% raw %}{{ parent() }}{% endraw %}
 {% raw %}{% endblock %}{% endraw %}
 
 ```
@@ -244,7 +244,7 @@ You can view event payload in the console under `Adapter Data:`. If payload is i
         }),
     } %}
 
-    {{ parent() }}
+    {% raw %}{{ parent() }}{% endraw %}
 {% raw %}{% endblock %}{% endraw %}
 ```
 

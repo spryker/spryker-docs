@@ -14,7 +14,7 @@ The following diagram explains the flow of a headless payment page based on Glue
 
 `CancelPreOrderPayment` is an optional element. It's used to cancel a payment that had been created before an order was persisted. This can happen when a customer clicks cancel or when the headless implementation requires a cancellation.
 
-For information about endpoints and messages, see the following sections.
+For information about endpoints and messages, see the following links.
 
 ### Further reading
 

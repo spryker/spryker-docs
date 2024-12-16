@@ -35,5 +35,5 @@ When customers pay with a credit card, a shop owner can do the following:
 
 ## Other Payment method flows
 
-* `PayPal` - [Learn more about the PayPal payment flow.](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/pay-pal.html)
-* `PayPal Express` - [Learn more about the PayPal Express payment flow.](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/pay-pal-express.html)
+* [Learn more about the PayPal payment flow.](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/pay-pal.html)
+* [Learn more about the PayPal Express payment flow.](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/pay-pal-express.html)

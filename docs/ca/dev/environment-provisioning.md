@@ -77,6 +77,8 @@ The following AWS regions are supported:
 - US West (N. California)
 - US West (Oregon)
 
+Spryker Cloud Services may be deployed in additional AWS regions beyond those explicitly listed, provided that the required AWS services are available and supported in the region under consideration. The feasibility of deployment in any such region is subject to technical evaluation and compliance with Spryker's infrastructure requirements and AWS service limitations. Any regional deployment outside the currently supported regions will be assessed on a case-by-case basis and may be subject to specific limitations or alternative service configurations. 
+
 ### Repository
 
 A repository is the place where Spryker application code resides. Spryker supports GitHub, GitLab, and Bitbucket code hosting services. Providing a repository with Spryker code is a prerequisite to provision a Spryker Cloud environment.

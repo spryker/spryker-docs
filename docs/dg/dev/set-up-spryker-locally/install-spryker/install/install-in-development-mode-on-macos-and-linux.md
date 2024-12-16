@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html
 related:
   - title: Database access credentials
-    link: docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html
+    link: docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
 ---
 
 {% info_block infoBox "Info" %}

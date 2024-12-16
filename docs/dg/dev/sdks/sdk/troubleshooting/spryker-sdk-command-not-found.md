@@ -1,6 +1,6 @@
 ---
 title: spryker-sdk command not found
-description: Troubleshooting for the Spryker SDK document.
+description: Learn how to Troubleshooting and resolve for the Spryker SDK command not found within your spryker projects.
 template: concept-topic-template
 redirect_from:
 - /docs/sdk/dev/troubleshooting/spryker-sdk-command-not-found.html

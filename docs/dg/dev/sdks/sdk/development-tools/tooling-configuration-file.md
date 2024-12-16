@@ -16,24 +16,24 @@ redirect_from:
   - /docs/scos/dev/sdk/202108.0/development-tools/tooling-config-file.html
   - /docs/scos/dev/sdk/development-tools/tooling-config-file.html
 related:
+   - title: Code sniffer
+    link: docs/dg/dev/sdks/sdk/development-tools/code-sniffer.html
+   - title: Formatter
+    link: docs/dg/dev/sdks/sdk/development-tools/formatter.html
   - title: Architecture sniffer
-    link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-  - title: Code sniffer
-    link: docs/scos/dev/sdk/development-tools/code-sniffer.html
-  - title: Formatter
-    link: docs/scos/dev/sdk/development-tools/formatter.html
+    link: docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html
   - title: Performance audit tool- Benchmark
-    link: docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
+    link: docs/scos/dev/sdks/sdk/development-tools/benchmark-performance-audit-tool.html
   - title: PHPStan
-    link: docs/dg/dev/sdks/sdk/development-tools/phpstan.html
+    link: docs/dg/dev/sdks/sdks/sdk/development-tools/phpstan.html
   - title: SCSS linter
-    link: docs/scos/dev/sdk/development-tools/scss-linter.html
+    link: docs/dg/dev/sdks/sdk/development-tools/scss-linter.html
   - title: TS linter
-    link: docs/scos/dev/sdk/development-tools/ts-linter.html
+    link: docs/dg/dev/sdks/sdk/development-tools/ts-linter.html
   - title: Spryk code generator
-    link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html
+    link: docs/dg/dev/sdks/sdk/spryks/spryks.html
   - title: Static Security Checker
-    link: docs/scos/dev/sdk/development-tools/static-security-checker.html
+    link: docs/dg/dev/sdks/sdk/development-tools/static-security-checker.html
 ---
 
 In order to make the tool configuring more convenient, we introduced the `.tooling.yml` file. It contains a variety of settings for different tools in one place, helping you to keep the number of files on the root level as small as possible. The `.tooling.yml` file should also be in `.gitattributes` to be ignored for tagging:

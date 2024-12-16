@@ -1,6 +1,6 @@
 ---
 title: Deploy file
-description: Overview of the deploy file
+description: Learn about the Spryker Deploy yaml file and how it works to deploy your Spryker environment.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 related:

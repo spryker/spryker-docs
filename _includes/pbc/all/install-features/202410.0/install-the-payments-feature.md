@@ -361,8 +361,8 @@ Register the following plugin data import plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| PaymentMethodDataImportPlugin | Imports payment method data into the database. | None | \Spryker\Zed\PaymentDataImport\Communication\Plugin |
-| PaymentMethodStoreDataImportPlugin | Imports payment method store data into the database. | None | \Spryker\Zed\PaymentDataImport\Communication\Plugin |
+| PaymentMethodDataImportPlugin | Imports payment method data into the database. |  | \Spryker\Zed\PaymentDataImport\Communication\Plugin |
+| PaymentMethodStoreDataImportPlugin | Imports payment method store data into the database. |  | \Spryker\Zed\PaymentDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -457,7 +457,8 @@ console data:import glossary
 ```
 
 ### 5) Set up behavior
-Configure the data import to use your data on the project level.
+
+1. Configure the data import to use your data on the project level.
 
 **src/Pyz/Zed/PaymentDataImport/PaymentDataImportConfig**
 
@@ -489,11 +490,11 @@ class PaymentDataImportConfig extends SprykerPaymentDataImportConfig
 }
 ```
 
-Configure the Payment GUI module with money and store plugins.
+2. Configure the Payment GUI module with money and store plugins.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| StoreRelationToggleFormTypePlugin | Represents a store relation toggle form based on stores registered in the system. | None | Spryker\Zed\Store\Communication\Plugin\Form |
+| StoreRelationToggleFormTypePlugin | Represents a store relation toggle form based on stores registered in the system. |  | Spryker\Zed\Store\Communication\Plugin\Form |
 
 **src/Pyz/Zed/PaymentGui/PaymentGuiDependencyProvider.php**
 
@@ -521,18 +522,18 @@ class PaymentGuiDependencyProvider extends SprykerPaymentGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:
+Make sure the following applies:
 * You can see the list of payment methods in the **Back Office > Administration >  Payment Management > Payment Methods** section.
 * You can see information about the payment method in the **Back Office > Administration >  Payment Management > Payment Methods > View** section.
 * You can edit the payment method in the **Back Office > Administration >  Payment Management > Payment Methods > Edit** section.
 
 {% endinfo_block %}
 
-Enable the payment app express checkout flow in the Yves step engine.
+3. Enable the payment app express checkout flow in the Yves step engine.
 
 | PLUGIN                                                              | SPECIFICATION                                                                                                    | PREREQUISITES | NAMESPACE                                             |
 |---------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------|
-| PaymentAppExpressCheckoutWorkflowCheckoutStepResolverStrategyPlugin | Returns checkout steps suitable to express checkout workflow and cleans quote fields based on the configuration. | None          | SprykerShop\Yves\PaymentAppWidget\Plugin\CheckoutPage |
+| PaymentAppExpressCheckoutWorkflowCheckoutStepResolverStrategyPlugin | Returns checkout steps suitable for the express checkout workflow and cleans quote fields based on the configuration. |           | SprykerShop\Yves\PaymentAppWidget\Plugin\CheckoutPage |
 
 **src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php**
 
@@ -559,11 +560,11 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 }
 ```
 
-Enable the default shipment method for the payment app express checkout flow.
+4. Enable the default shipment method for the payment app express checkout flow.
 
 | PLUGIN                                               | SPECIFICATION                                                         | PREREQUISITES | NAMESPACE                                                      |
 |------------------------------------------------------|-----------------------------------------------------------------------|---------------|----------------------------------------------------------------|
-| ShipmentExpressCheckoutPaymentRequestProcessorPlugin | Provides the shipment method for the express checkout payment request.| None          | Spryker\Zed\PaymentAppShipment\Communication\Plugin\PaymentApp |
+| ShipmentExpressCheckoutPaymentRequestProcessorPlugin | Provides the shipment method for the express checkout payment request.|           | Spryker\Zed\PaymentAppShipment\Communication\Plugin\PaymentApp |
 
 **src/Pyz/Zed/PaymentApp/PaymentAppDependencyProvider.php**
 
@@ -595,13 +596,13 @@ Make sure that:
 * Enabled the express checkout payment method for the payment app.
   * Depends on the payment app enabled in the project.
   * Not all payment methods support the express checkout flow.
-* You can see the express checkout button on the cart page.
-* Proceed to the express checkout flow by clicking the express checkout button.
-* Place an order using the express checkout flow.
+* The express checkout button is displayed on the Cart page.
+* Clicking the express checkout button opens the express checkout page.
+* You can place an order using the express checkout flow.
 
 {% endinfo_block %}
 
-Register the following route provider plugins:
+5. Register the following route provider plugin:
 
 | PLUGIN                              | SPECIFICATION                                        | PREREQUISITES | NAMESPACE                                       |
 |-------------------------------------|------------------------------------------------------|---------------|-------------------------------------------------|
@@ -631,11 +632,11 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-Enable the payment method clean up for the cart operations.
+6. Enable the payment method clean up for cart operations.
 
 | PLUGIN                                   | SPECIFICATION                                                              | PREREQUISITES | NAMESPACE                                                  |
 |------------------------------------------|----------------------------------------------------------------------------|---------------|------------------------------------------------------------|
-| RemoveQuotePaymentCartItemExpanderPlugin | Removes the payment information from the quote when cart changes are made. | None          | Spryker\Zed\PaymentCartConnector\Communication\Plugin\Cart |
+| RemoveQuotePaymentCartItemExpanderPlugin | Removes payment information from the quote when cart changes are made. |           | Spryker\Zed\PaymentCartConnector\Communication\Plugin\Cart |
 
 **src/Pyz/Zed/Cart/CartDependencyProvider.php**
 
@@ -665,18 +666,18 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 {% info_block warningBox "Verification" %}  
 
-Make sure that:
-* The payment method is removed from the quote when cart changes are made:
-  * Add a product to the cart and proceed to the checkout with express checkout.
-  * Navigate back to the cart page to adjust product quantities, add new products, or remove existing ones.
-  * Check that the payment method is removed from the cart.
+1. Add a product to cart and proceed to the express checkout.
+2. Go to the cart page and change product quantities, add new products, or remove existing ones.
+  Make sure the payment method has been removed from the cart.
+
 
 {% endinfo_block %}
 
-### 6) Additional cleanups:
+### 6) Replace deprecated funtionality
 
-The `SalesPaymentMethodTypeInstallerPlugin` plugin was removed, please use the `PaymentDataImport module` instead.
-The `PaymentConfig::getSalesPaymentMethodTypes()` config method was removed, please use the `PaymentDataImport` module instead.
+Use the `PaymentDataImport` module instead of the following:
+* `SalesPaymentMethodTypeInstallerPlugin` plugin
+* `PaymentConfig::getSalesPaymentMethodTypes()` config method
 
 ### 7) Set up widgets
 

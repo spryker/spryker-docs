@@ -8,8 +8,6 @@ related:
      link: docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.html
 ---
 
-## Asynchronous API
-
 All PSP integrations are based on a asynchronous API. The asynchronous API is used to process payments and refunds. The following asynchronous messages are used:
 
 Sent from the app:

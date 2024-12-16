@@ -2,9 +2,7 @@
 
 {% info_block errorBox %}
 
-
-The following feature integration Guide expects the basic feature to be in place.
-The current guide only adds the Payment Management API functionality.
+The following feature integration Guide expects the basic feature to be in place. The current guide only adds the Payment Management API functionality.
 
 {% endinfo_block %}
 
@@ -20,9 +18,9 @@ To start the feature integration, overview and install the necessary features:
 | Spryker Core | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)  |
 | Payments | {{page.version}} | [Install the Payments feature](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-feature.html) |
 
-## 1)  Install the required modules using Composer
+## 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker/payments-rest-api:"1.1.0" --update-with-dependencies

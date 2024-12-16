@@ -12,8 +12,14 @@ The following diagram explains the flow of a headless payment page with an expre
 
 ![headless-express-checkout-flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.md/headless-express-checkout-flow.png)
 
-The main difference here is that the customer skips most of the default checkout steps such as enter addresses and goes directly to the payment step. The payment is created before the order is persisted. The data a customer usually enters during the checkout steps will be retrieved via the Glue `/payment-customer` API call. The returned data can then be used on SCOS side to update e.g. addresses.
-Here is an example request for the PayOne PayPal Express payment method, used by a guest or authorized customer to retrieve user data such as addresses and other information from the PSP: https://glue.mysprykershop.com/payment-customers.
+The customer skips most of the default checkout steps, such as the addresses step, and goes directly to the payment step. The payment is created before the order is persisted. The data a customer usually enters during a regualr checkout is retrieved via the `/payment-customer` Glue API call. The returned data can then be used on Spryker's side to update customer data like addresses.
+Here is an example request for the PayOne PayPal Express payment method used by a guest or authorized customer to retrieve user data such as addresses and other information from the PSP:
+
+`https://glue.mysprykershop.com/payment-customers`
+
+<details>
+  <summary>Request example</summary>
+
 ```json
 {
   "data": {
@@ -36,7 +42,10 @@ Here is an example request for the PayOne PayPal Express payment method, used by
 }
 ```
 
-An example of the response:
+</details>
+
+<details>
+  <summary>Response example</summary>
 
 ```json
 {
@@ -89,6 +98,8 @@ An example of the response:
   }
 }
 ```
+
+</details>
 
 ### Further reading
 

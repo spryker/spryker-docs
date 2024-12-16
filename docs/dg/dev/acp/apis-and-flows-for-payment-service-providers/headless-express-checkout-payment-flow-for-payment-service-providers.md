@@ -1,11 +1,21 @@
 ---
-title: API and overview diagram the Headless express-checkout payment flow for payment service providers
+title: Headless express checkout payment flow for payment service providers
 description: Overview of the Headless payment flow with express-checkout payment methods
 last_updated: Now 08, 2024
 template: concept-topic-template
 related:
-   - title: APIs and overview diagrams for payment service providers
-     link: docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.html
+  - title: Asynchronous API for payment service providers
+    link: docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/asynchronous-api-for-payment-service-providers.html
+  - title: Configure and disconnect flows for payment service providers
+    link: docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/configure-and-disconnect-flows-for-payment-service-providers.html
+  - title: Headless payment flow for payment service providers
+    link: docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/headless-payment-flow-for-payment-service-providers.html
+  - title: Hosted payment page flow for payment service providers
+    link: docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/hosted-payment-page-flow-for-payment-service-providers.html
+  - title: OMS payment flow for payment service providers
+    link: docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/oms-payment-flow-for-payment-service-providers.html
+  - title: Synchronous API for payment service providers
+    link: docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/synchronous-api-for-payment-service-providers.html
 ---
 
 The following diagram explains the flow of a headless payment page with an express-checkout payment method based on Glue API.
@@ -100,12 +110,3 @@ Here is an example request for the PayOne PayPal Express payment method used by 
 ```
 
 </details>
-
-### Further reading
-
-* [Learn about the configure and disconnect flow used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-configure-and-disconnect.html)
-* [Learn about the Hosted payment page flow used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-hosted-payment-page.html)
-* [Learn about the Headless payment flow used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-headless.html)
-* [Learn about the OMS payment flow used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-oms-payment-flow.html)
-* [Learn about the asynchronous messages used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-asynchronous-api.html)
-* [Learn about the synchronous API endpoints used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-synchronous-api.html)

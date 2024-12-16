@@ -1,14 +1,13 @@
 ---
-title: Payone PayPal Express in a headless application
+title: PayOne PayPal Express payment flow in headless applications
 description: Payone offers your customers to pay with PayPal Express.
 template: howto-guide-template
 last_updated: Now 8, 2024
-redirect_from:
-   - /docs/aop/user/apps/payone.html
-   - /docs/acp/user/apps/payone.html
-   - /docs/pbc/all/payment-service-providers/payone/payone.html
-   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html
-   - /docs/pbc/all/payment-service-provider/202404.0/base-shop/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html
+related:
+  - title: PayOne Credit Card payment flow
+    url: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-credit-card-payment-flow.html
+  - title: Payone PayPal payment flow
+    url: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-payment-flow.html    
 ---
 
 ## PayPal Express for checkout in a headless application
@@ -175,9 +174,3 @@ This data must be used to fill the quote with the missing customer data.
 When the customer submits the order, the payment data is sent to PayOne.
 
 After this, the customer is redirected to the success or error page depending on the result.
-
-
-## Other Payment method flows
-
-* [Credit Card](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/credit-card.html)
-* [PayPal](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/pay-pal.html)

@@ -2426,6 +2426,14 @@ entries:
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/configure-payone.html
                           - title: Disconnect Payone
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/disconnect-payone.html
+                          - title: Payment method flows
+                            nested:
+                              - title: PayOne Credit Card payment flow
+                                url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-credit-card-payment-flow.html
+                              - title: PayOne PayPal Express payment flow in headless applications
+                                url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-express-payment-flow-in-headless-applications.html
+                              - title: Payone PayPal payment flow
+                                url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-payment-flow.html                                
 
                       - title: Manual integration
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/manual-integration/payone-manual-integration.html

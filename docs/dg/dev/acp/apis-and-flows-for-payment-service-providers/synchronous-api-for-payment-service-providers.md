@@ -1,11 +1,21 @@
 ---
-title: Synchronous API overview
+title: Synchronous API for payment service providers
 description: Overview of Synchronous API endpoints
 last_updated: Now 08, 2024
 template: concept-topic-template
 related:
-   - title: APIs and overview diagrams for payment service providers
-     link: docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.html
+  - title: Asynchronous API for payment service providers
+    link: docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/asynchronous-api-for-payment-service-providers.html
+  - title: Configure and disconnect flows for payment service providers
+    link: docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/configure-and-disconnect-flows-for-payment-service-providers.html
+  - title: Headless express checkout payment flow for payment service providers
+    link: docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/headless-express-checkout-payment-flow-for-payment-service-providers.html
+  - title: Headless payment flow for payment service providers
+    link: docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/headless-payment-flow-for-payment-service-providers.html
+  - title: Hosted payment page flow for payment service providers
+    link: docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/hosted-payment-page-flow-for-payment-service-providers.html
+  - title: OMS payment flow for payment service providers
+    link: docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/oms-payment-flow-for-payment-service-providers.html
 ---
 
 All PSP integrations are based on a synchronous API. A synchronous API is used to process payments and transfers to merchants. The following endpoints are used:
@@ -20,12 +30,3 @@ All PSP integrations are based on a synchronous API. A synchronous API is used t
 * `/payments/transfers`: Used from the Back Office or OMS with the app being used in a marketplace. This initiates a money transfer from the marketplace to the merchant.
 * `/webhooks`: Used from external applications to send requests to an app.
 * `/webhooks/test`: Used from external applications in test mode to send requests to an app.
-
-### Further reading
-
-* [Learn about the configure and disconnect flow used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-configure-and-disconnect.html)
-* [Learn about the Hosted payment page flow used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-hosted-payment-page.html)
-* [Learn about the Headless payment flow used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-headless.html)
-* [Learn about the Headless payment flow with express-checkout payment methods used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-headless-express-checkout.html)
-* [Learn about the OMS payment flow used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-oms-payment-flow.html)
-* [Learn about the asynchronous messages used in the ACP.](docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers-asynchronous-api.html)

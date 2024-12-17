@@ -1,7 +1,7 @@
 ---
 title: Algolia
 description: Algolia empowers Builders with Search and Recommendation services to create world-class digital experiences.
-last_updated: June 26 2023
+last_updated: Nov 24, 2024
 template: howto-guide-template
 redirect_from:
   - /docs/pbc/all/search/202311.0/third-party-integrations/algolia.html  -
@@ -30,9 +30,11 @@ Your users can search for active concrete products by the following attributes:
 - Description
 - Keywords
 
-{% info_block infoBox "Note" %}
+In Algolia Dashboard, you can configure other attributes to be searchable.
 
-Spryker groups all concrete products that belong to the same abstract product if a search query returns the concrete products.
+{% info_block infoBox "" %}
+
+In search results, Spryker groups all concrete products belonging to the same abstract product.
 
 {% endinfo_block %}
 

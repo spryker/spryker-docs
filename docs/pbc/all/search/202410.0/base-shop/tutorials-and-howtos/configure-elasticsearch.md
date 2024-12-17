@@ -195,7 +195,12 @@ Unfortunatelly, the errors you see from the Elastic Search are confusing.
 In order to ensure that the index is correct, please drop the index, create it again and sync data into it.
 APPLICATION_STORE=DE console search:index:delete
 APPLICATION_STORE=DE console search:setup:sources
+
+If you had **no changes** to the data, execute:
 APPLICATION_STORE=DE console sync:data
+
+If you had **any changes** to the data, execute:
+APPLICATION_STORE=DE console publish:trigger-events
 
 Please contact our support or community to get more specific help.
 

@@ -1,6 +1,6 @@
 ---
 title: Integrate multi-queue publish structure
-description: The single event queue is replaced by multiple publish queues.
+description: Learn how to integrate the Multi-queue publish structure to improve debugging and slow events in your Spryker based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-publish-queue-structure

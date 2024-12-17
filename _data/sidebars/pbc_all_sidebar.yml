@@ -2329,7 +2329,7 @@ entries:
               - title: Define return URLs for payments
                 url: /docs/pbc/all/payment-service-provider/base-shop/define-return-urls-for-payments.html
                 include_versions:
-                - "202410.0"  
+                - "202410.0"
               - title: Debug payment integrations locally
                 url: /docs/pbc/all/payment-service-provider/base-shop/debug-payment-integrations-locally.html
               - title: Hydrate payment methods for an order
@@ -2606,6 +2606,8 @@ entries:
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/disconnect-stripe.html
                       - title: Project guidelines
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-guidelines-for-stripe.html
+                        include_versions:
+                        - "202410.0"  
                         nested:
                           - title: Embed the Stripe payment page as an iframe
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/embed-the-stripe-payment-page-as-an-iframe.html

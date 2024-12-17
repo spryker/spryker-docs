@@ -1,5 +1,6 @@
 ---
 title: "Import file details: service_type.csv"
+description: Learn how to configure service type information via importing data through the service type CSV file in your Spryker unified commerce project.
 last_updated: Nov 23, 2023
 template: data-import-template
 ---

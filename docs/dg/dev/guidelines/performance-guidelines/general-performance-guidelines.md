@@ -1,6 +1,6 @@
 ---
 title: General performance guidelines
-description: This guideline explains how to optimize the server-side execution time.
+description: This guideline explains how to optimize the server-side execution time for your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-guidelines
@@ -11,13 +11,13 @@ redirect_from:
   - /docs/scos/dev/tuning-up-performance/202204.0/performance-guidelines.html
 related:
   - title: Architecture performance guidelines
-    link: docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
+    link: docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
   - title: Frontend performance guidelines
-    link: docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
+    link: docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
   - title: Web Profiler Widget for Yves
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
   - title: Web Profiler for Zed
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
+    link: ocs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
 ---
 
 Spryker is a fast application by design. These guidelines explain how to optimize the server-side execution time.

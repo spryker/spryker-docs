@@ -1,6 +1,6 @@
 ---
 title: Running tests with Robot Framework
-description: Learn how to run tests with the Robot Framework.
+description: Learn how to run tests with the Robot Framework in the command line for your Spryker based projects.
 last_updated: May 26, 2023
 template: howto-guide-template
 related:

@@ -7,9 +7,9 @@ redirect_from:
   - /docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
 related:
   - title: General performance guidelines
-    link: docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
+    link: docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
   - title: Frontend performance guidelines
-    link: docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
+    link: docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
 ---
 
 Performance shows the response of a system to carrying out certain actions for a certain period. Performance is an important quality attribute in each application architecture that can impact user experience behavior and business revenues. Therefore, we highly recommend following the best practices and avoiding performance drawbacks in the architecture design.
@@ -265,4 +265,4 @@ We strongly recommend our customers enable APM systems for their projects. Spryk
 
 ### Performance CI
 
-Performance CI plays a very important role for each project pipeline as it prevents new issues in the long term when it comes to feature development. To analyze your project's performance, you can use the [Benchmark](/docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html) tool.
+Performance CI plays a very important role for each project pipeline as it prevents new issues in the long term when it comes to feature development. To analyze your project's performance, you can use the [Benchmark](/docs/dg/dev/sdks/sdk/development-tools/benchmark-performance-audit-tool.html) tool.

@@ -1,6 +1,6 @@
 ---
 title: Install the Shopping Lists feature
-Learn how to install the Spryker Shopping List feature in to your Spryker Cloud Commerce OS Project.
+description: Learn how to install the Spryker Shopping List feature in to your Spryker Cloud Commerce OS Project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/shopping-lists-feature-integration

@@ -1620,13 +1620,11 @@ entries:
         url: /docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html
       - title: Retaining ACP apps when running destructive deployments
         url: /docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html
-      - title: APIs and overview diagrams for payment service providers
-        url: /docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.html
       - title: APIs and flows for payment service providers
         url: /docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/apis-and-flows-for-payment-service-providers.html
         nested:
           - title: Asynchronous API for payment service providers
-            url: /docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/asynchronous-api-for-payment-service-providers.html          
+            url: /docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/asynchronous-api-for-payment-service-providers.html
           - title: Configure and disconnect flows for payment service providers
             url: /docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/configure-and-disconnect-flows-for-payment-service-providers.html
           - title: Headless express checkout payment flow for payment service providers

@@ -1,6 +1,6 @@
 ---
 title: Test helpers best practices
-description: Learn about the best practices for the Root helper and the Assert helper
+description: Learn about the best practices for the Root helper and the Assert helper for your Spryker based projects.
 last_updated: Aug 29, 2023
 template: concept-topic-template
 redirect_from:

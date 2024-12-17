@@ -1,6 +1,6 @@
 ---
 title: Test the asynchronous API
-description: How to test the Asynchronous API.
+description: Learn how to test the asynchronous API with this helpful guide for your Spryker based projects.
 template: howto-guide-template
 last_updated: Oct 18, 2023
 redirect_from:

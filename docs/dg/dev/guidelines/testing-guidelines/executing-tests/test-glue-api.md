@@ -1,6 +1,6 @@
 ---
 title: Test Glue API
-description: Learn how to test Glue API
+description: Use this guide to Learn how to test Glue API End to end within your Spryker based projects.
 template: howto-guide-template
 last_updated: Jan 9, 2024
 redirect_from:

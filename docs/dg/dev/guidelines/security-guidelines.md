@@ -1,5 +1,6 @@
 ---
 title: Security guidelines
+description: Learn about the data security guidelines that you need to follow on an application level for your Spryker based projects.
 last_updated: Sep 15, 2023
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/making-your-spryker-shop-secure
@@ -9,11 +10,11 @@ redirect_from:
   - /docs/scos/dev/guidelines/making-your-spryker-shop-secure.html
 related:
   - title: Data Processing Guidelines
-    link: docs/scos/dev/guidelines/data-processing-guidelines.html
+    link: docs/dg/dev/guidelines/data-processing-guidelines.html
   - title: Module configuration convention
-    link: docs/scos/dev/guidelines/module-configuration-convention.html
+    link: docs/dg/dev/guidelines/module-configuration-convention.html
   - title: Project development guidelines
-    link: docs/scos/dev/guidelines/project-development-guidelines.html
+    link: docs/dg/dev/guidelines/project-development-guidelines.html
 ---
 
 This document describes the data security guidelines you need to follow on the application level. In cloud environments, infrastructure security measures are implemented by default, so they're not described.

@@ -1,6 +1,6 @@
 ---
 title: Best practices for effective testing
-description: The article describes how to write and organize your tests efficiently.
+description: The article describes how to write and organize your tests efficiently for your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/testing-best-practices
@@ -11,27 +11,27 @@ redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
 related:
   - title: Available test helpers
-    link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
-  - title: Code coverage
-    link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+    link: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
+ - title: Code coverage
+    link: docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
   - title: Data builders
-    link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+    link: docs/dg/dev/guidelines/testing-guidelines/data-builders.html
   - title: Executing tests
-    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
   - title: Publish and Synchronization testing
-    link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-process.html
   - title: Setting up tests
-    link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+    link: docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html
   - title: Test framework
-    link: docs/scos/dev/guidelines/testing-guidelines/test-framework.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-framework.html
   - title: Test helpers
-    link: docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
+    link: ocs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html
   - title: Testify
-    link: docs/scos/dev/guidelines/testing-guidelines/testify.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testify.html
   - title: Testing concepts
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
   - title: Testing console commands
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
 
 The rule of thumb for your [tests](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html) should be:

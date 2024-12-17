@@ -1,6 +1,6 @@
 ---
 title: Frontend performance guidelines
-description: Optimize your Spryker Frontend.
+description: Learn how you can optimize your Spryker Frontend performance and some general guidelines for your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/front-end-performance-guidelines
@@ -11,9 +11,9 @@ redirect_from:
   - /docs/scos/dev/tuning-up-performance/202204.0/performance-guidelines.html#frontend-performance
 related:
   - title: General performance guidelines
-    link: docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
+    link: docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
   - title: Architecture performance guidelines
-    link: docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
+    link: docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
 ---
 
 This document describes general and Spryker-specific frontend performance guidelines.

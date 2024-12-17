@@ -1,15 +1,15 @@
 ---
 title: New Relic transactions grouping by queue names
-description: Enhanced New Relic queue flow groups transactions by queue names.
+description: Learn about Enhanced New Relic queue flow groups transactions by queue names for your Spryker based projects.
 last_updated: May 16, 2022
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/scalable-application-infrastructure-for-publish-and-sync-workers.html
 related:
   - title: RAM-aware batch processing
-    link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
+    link: docs/dg/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
   - title: Storage caching for primary-replica database setups
-    link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
+    link: docs/dg/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
 redirect_from:
   - /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/scalable-application-infrastructure-for-publish-and-sync-workers.html
   - /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html

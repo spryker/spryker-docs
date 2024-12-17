@@ -1,6 +1,6 @@
 ---
 title: Testing the Publish and Synchronization process
-description: Learn how you can test Publish and Synchronization
+description: Learn how to test the publish and synchronization process with this helpful guide for your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization-testing

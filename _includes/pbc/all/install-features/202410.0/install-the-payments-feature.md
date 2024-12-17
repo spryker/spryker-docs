@@ -439,7 +439,7 @@ Make sure that the configured data has been added to the `spy_payment_method`, `
 
 ### 4) Add translations
 
-1. Append glossary according to your configuration:
+1. Append the glossary according to your configuration:
 
 ```csv
 payment_app_widget.validation.quote_is_empty,Quote is empty.,en_US
@@ -458,7 +458,7 @@ console data:import glossary
 
 ### 5) Set up behavior
 
-1. Configure the data import to use your data on the project level.
+1. Configure data import to use your data on the project level.
 
 **src/Pyz/Zed/PaymentDataImport/PaymentDataImportConfig**
 
@@ -632,7 +632,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-6. Enable the payment method clean up for cart operations.
+6. Enable the payment method cleanup for cart operations.
 
 | PLUGIN                                   | SPECIFICATION                                                              | PREREQUISITES | NAMESPACE                                                  |
 |------------------------------------------|----------------------------------------------------------------------------|---------------|------------------------------------------------------------|
@@ -681,8 +681,6 @@ Use the `PaymentDataImport` module instead of the following:
 
 ### 7) Set up widgets
 
-Set up widgets as follows:
-
 1. Register the following plugins to enable widgets:
 
 | PLUGIN                       | SPECIFICATION                                                     | PREREQUISITES | NAMESPACE                                |
@@ -728,10 +726,8 @@ Verify that the following widgets have been registered by adding the respective 
 
 {% endinfo_block %}
 
-3. Customize the address solution according to your needs.
-When the express checkout flow is enabled, the customer address does not always include all address fields used in Spryker, for example, the salutation field.
-
-For this purpose, the 'n/a' placeholder is used. By default, it is not shown.
+3. With the express checkout flow, you might want to skip some address fields that are part of the regular checkout, for example–the salutation field.
+Customize the address step according to your needs, hiding fields using the 'n/a' placeholder.
 
 **ShopUi/Theme/default/components/molecules/display-address/display-address.twig**
 
@@ -744,7 +740,6 @@ For this purpose, the 'n/a' placeholder is used. By default, it is not shown.
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:
-* The address salutation is displayed correctly on the summary page.
+Make sure that on the order summary page, the address fields you've configured to hide aren't displayed.
 
 {% endinfo_block %}

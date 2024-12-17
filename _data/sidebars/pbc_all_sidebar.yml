@@ -2303,20 +2303,12 @@ entries:
                 url: /docs/pbc/all/payment-service-provider/base-shop/payments-feature-overview.html
               - title: Install and upgrade
                 nested:
-                  - title: Install features
-                    nested:
-                      - title: Payments
-                        url: /docs/pbc/all/payment-service-provider/base-shop/install-and-upgrade/install-the-payments-feature.html
-
-                  - title: Install Glue APIs
-                    nested:
-                      - title: Payments
-                        url: /docs/pbc/all/payment-service-provider/base-shop/install-and-upgrade/install-the-payments-glue-api.html
-
-                  - title: Upgrade modules
-                    nested:
-                      - title: Payment
-                        url: /docs/pbc/all/payment-service-provider/base-shop/install-and-upgrade/upgrade-the-payment-module.html
+                  - title: Install the Payments feature
+                    url: /docs/pbc/all/payment-service-provider/base-shop/install-and-upgrade/install-the-payments-feature.html
+                  - title: Install the Payments Glue API
+                    url: /docs/pbc/all/payment-service-provider/base-shop/install-and-upgrade/install-the-payments-glue-api.html
+                  - title: Upgrade the Payment module
+                    url: /docs/pbc/all/payment-service-provider/base-shop/install-and-upgrade/upgrade-the-payment-module.html
 
               - title: Import and export data
                 url: /docs/pbc/all/payment-service-provider/base-shop/import-and-export-data/payment-service-provider-data-import-and-export.html
@@ -2334,6 +2326,8 @@ entries:
                   - title: View payment methods
                     url: /docs/pbc/all/payment-service-provider/base-shop/manage-in-the-back-office/view-payment-methods.html
 
+              - title: Define return URLs for payments
+                url: /docs/pbc/all/payment-service-provider/base-shop/define-return-urls-for-payments.html
               - title: Debug payment integrations locally
                 url: /docs/pbc/all/payment-service-provider/base-shop/debug-payment-integrations-locally.html
               - title: Hydrate payment methods for an order
@@ -2433,7 +2427,7 @@ entries:
                               - title: PayOne PayPal Express payment flow in headless applications
                                 url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-express-payment-flow-in-headless-applications.html
                               - title: Payone PayPal payment flow
-                                url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-payment-flow.html                                
+                                url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-payment-flow.html
 
                       - title: Manual integration
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/manual-integration/payone-manual-integration.html
@@ -2608,6 +2602,21 @@ entries:
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe.html
                       - title: Disconnect
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/disconnect-stripe.html
+                      - title: Project guidelines
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-guidelines-for-stripe.html
+                        nested:
+                          - title: Embed the Stripe payment page as an iframe
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/embed-the-stripe-payment-page-as-an-iframe.html
+                          - title: Implement Stripe checkout as a hosted payment page
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/implement-stripe-checkout-as-a-hosted-payment-page.html
+                          - title: OMS configuration for Stripe
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/oms-configuration-for-stripe.html
+                          - title: Processing refunds with Stripe
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/processing-refunds-with-stripe.html
+                          - title: Sending additional data to Stripe
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/sending-additional-data-to-stripe.html
+                          - title: Stripe checkout with third-party frontends
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/stripe-checkout-with-third-party-frontends.html                                                                                                                                            
 
                   - title: Unzer
                     url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/unzer/unzer.html

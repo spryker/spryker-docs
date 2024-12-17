@@ -1,30 +1,23 @@
 ---
-title: Project guidelines for Stripe - Headless implementation
+title: Stripe checkout with third-party frontends
 description: Learn how to implement Stripe using ACP
 last_updated: Nov 8, 2024
 template: howto-guide-template
 related:
    - title: Stripe
      link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/stripe.html
-redirect_from:
-   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
-   - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/install-stripe.html
-   - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/integrate-stripe.html
-
 ---
 
-## Implementing Stripe for checkout in a headless application
+This document describes the approaches to implementing Stripe checkout with third-party frontends.
 
-Use this approach for headless applications with third-party frontends.
-
-### Install modules
+## Install modules
 
 Install or upgrade the modules to the specified or later versions:
 - `spryker/kernel-app:1.2.0`
 - `spryker/payment:5.24.0`
 - `spryker/payments-rest-api:1.3.0`
 
-### Pre-order payment flow
+## Pre-order payment flow
 
 When Stripe is integrated into a headless application, orders are processed using a pre-order payment flow:
 
@@ -57,13 +50,13 @@ When Stripe is integrated into a headless application, orders are processed usin
 All payment related messages mentioned above are handled by `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin`, which is registered in `MessageBrokerDependencyProvider`.
 
 
-### Example of the headless checkout with Stripe
+## Example of the headless checkout with Stripe
 
 The Payment selection in this example will be used on the Summary page. The following examples show how to implement the Stripe Payment App in a headless application.
 
 Before the customer is redirected to the summary page, all required data is collected: customer data, addresses, and selected shipment method. When the customer goes to the summary page, to get the data required for rendering the Stripe Elements, the application needs to call the `InitializePreOrderPayment` Glue API endpoint.
 
-#### Pre-order payment initialization
+### Pre-order payment initialization
 
 ```JS
 
@@ -126,7 +119,7 @@ After a `PaymentIntent` is created using the Stripe API, a payment is created in
 }
 ```
 
-#### Rendering the Stripe Elements on the summary page
+### Rendering the Stripe Elements on the summary page
 
 The `preOrderPaymentData` from the previous example is used to render Stripe Elements on the summary page:
 
@@ -169,7 +162,7 @@ This sets up Stripe Elements on the summary page of your application. The custom
 
 When the customer submits the order, the payment data is sent to Stripe. Stripe may redirect them to another page, for example — PayPal, or redirect the customer to the specified `return_url`. The `return_url` must make another Glue API request to persist the order in the Back Office.
 
-#### Persisting orders in the Back Office through the return URL
+### Persisting orders in the Back Office through the return URL
 
 Because an order can be persisted in the Back Office only after a successful payment, the application needs to handle the `return_url` and make a request to the Glue API to persist the order.
 
@@ -243,7 +236,7 @@ After this, the customer should be redirected to the success page or in case of 
 
 
 
-#### Cancelling payments through Glue API
+### Cancelling payments through Glue API
 
 The following request cancels a PaymentIntent on the Stripe side and shows a `canceled` PaymentIntent in the Stripe Dashboard. You can implement this in your application to enable the customer to cancel the payment process.
 
@@ -293,12 +286,3 @@ async cancelPreOrderPayment() {
 ```
 
 </details>
-
-### Further reading
-
-* [OMS configuration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/oms.html)
-* [Implementing Stripe checkout as a hosted payment page](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/hosted-payment-page.html)
-* [Implementing Stripe payment page using an iframe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/iframe.html)
-* [Refund handling with Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/refund.html)
-* [Retrieving and using payment details from Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/payment-details.html)
-* [Sending additional data to Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/send-additional-data-to-stripe.html)

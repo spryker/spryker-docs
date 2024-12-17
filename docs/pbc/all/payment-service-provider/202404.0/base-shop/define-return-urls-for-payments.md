@@ -1,5 +1,5 @@
 ---
-title: Change the default return URLs for payments
+title: Define return URLs for payments
 description: Learn how to change the default return URLs to be used by third-party payment service providers
 last_updated: Nov. 27, 2024
 template: howto-guide-template

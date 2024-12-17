@@ -63,7 +63,7 @@ The payment methods returned by the `/checkout-data?include=payment-methods` end
 When the customer clicks the **Pay with PayPal Express** button, the `InitializePreOrderPayment` Glue API endpoint is called to initialize the payment.
 
 
-For more details on payment methods in a headless chechout, see [Payment Method Strategies](https://documentation.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/payment-method-strategies.html).
+For more details on payment methods in a headless chechout, see [Payment Method Strategies](/docs/pbc/all/payment-service-provider/202410.0/base-shop/payment-method-strategies.html).
 
 
 #### Preorder payment initialization

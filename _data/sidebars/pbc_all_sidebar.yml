@@ -2328,6 +2328,8 @@ entries:
 
               - title: Define return URLs for payments
                 url: /docs/pbc/all/payment-service-provider/base-shop/define-return-urls-for-payments.html
+                include_versions:
+                - "202410.0"  
               - title: Debug payment integrations locally
                 url: /docs/pbc/all/payment-service-provider/base-shop/debug-payment-integrations-locally.html
               - title: Hydrate payment methods for an order
@@ -2616,7 +2618,7 @@ entries:
                           - title: Sending additional data to Stripe
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/sending-additional-data-to-stripe.html
                           - title: Stripe checkout with third-party frontends
-                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/stripe-checkout-with-third-party-frontends.html                                                                                                                                            
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/stripe-checkout-with-third-party-frontends.html
 
                   - title: Unzer
                     url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/unzer/unzer.html

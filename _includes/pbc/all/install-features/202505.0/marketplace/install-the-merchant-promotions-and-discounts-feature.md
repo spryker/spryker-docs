@@ -78,8 +78,8 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1. [Create a discount](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a `merchant-refernce` field.
-2. Add a product sold by the defined merchant to the cart.
+1. [Create a discount](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a `merchant-reference` field.
+2. Add a product sold by the merchant defined in the newly created discount to the cart.
 3. Verify that the discount is applied to the cart.
 
 {% endinfo_block %}

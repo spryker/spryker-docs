@@ -270,7 +270,7 @@ class PaymentAppShipmentConfig extends SprykerPaymentAppShipmentConfig
 1. Add several products to cart and proceed to the express checkout flow.
 2. On the summary page, click the **Back to cart** button.
 3. To proceed to the regular checkout, click **Checkout**.
-  This opens the address step of the regular checkout.
+  Make sure this opens the address step of the regular checkout.
 
 {% endinfo_block %}
 

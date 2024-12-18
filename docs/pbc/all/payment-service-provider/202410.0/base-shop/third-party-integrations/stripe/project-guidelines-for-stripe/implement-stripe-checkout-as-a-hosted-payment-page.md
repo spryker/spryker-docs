@@ -1,5 +1,5 @@
 ---
-title: Implement Stripe checkout as a hosted payment page
+title: Prepare project for implementing Stripe checkout as a hosted payment page
 description: Learn how to implement Stripe using ACP
 last_updated: Nov 8, 2024
 template: howto-guide-template
@@ -8,7 +8,7 @@ related:
      link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/stripe.html
 ---
 
-Implementing Stripe checkout as a hosted payment page is usually needed if `@CheckoutPage/views/payment/payment.twig` is overwritten on the project level. To implement Stripe checkout as a hosted payment page, follow the steps:
+If your shop is live or `@CheckoutPage/views/payment/payment.twig` is overwritten on the project level, follow the steps to prepare your project to implement Stripe checkout as a hosted payment page:
 
 1. Make sure that a form molecule uses the following code for the payment selection choices:
 

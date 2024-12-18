@@ -68,6 +68,8 @@ For more details on payment methods in a headless chechout, see [Payment Method 
 
 #### Preorder payment initialization
 
+This script example makes a Glue API request to the `/payments` API endpoint to initialize a preorder payment. The `transactionId` is empty in the first request but needs to be used in further requests. The quote data and the payment method data also needs to be passed. The response will cantain `preOrderPaymentData`, which will be used in further requests.
+
 ```JS
 
 async initializePreOrderPayment() {
@@ -129,7 +131,7 @@ After making a request to the PayOne API, the payment is created in the PayOne a
 }
 ```
 
-After the customer clicks **Complete Purchase** in the PayPal Express modal, he should be redirected to the summary page.
+After the customer clicks **Complete Purchase** in the PayPal Express modal, they're redirected to the summary page.
 
 #### Getting the customer data
 

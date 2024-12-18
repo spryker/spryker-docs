@@ -16,7 +16,7 @@ The following strategies are available:
 
 The strategy is defined in the `PaymentMethodTransfer` object. The object is used to transfer the payment method data between the shop and the PSP.
 
-When an app is configured in the ACP app Catalog, the `PaymentMethod` data is sent to Spryker using an async API and is persisted in the database. The configuration is a JSON string which is mapped to the `PaymentMethodTransfer` object.
+When an app is configured in the ACP app Catalog, the `PaymentMethod` data is sent to Spryker using an async API and is persisted in the database. The configuration is a JSON string, which is mapped to the `PaymentMethodTransfer` object.
 
 `PaymentMethodTransfer` contains a `PaymentMethodappConfigurationTransfer` object. The `PaymentMethodappConfigurationTransfer` object contains the `CheckoutStrategyTransfer` object. `CheckoutStrategyTransfer` contains the strategy name. The strategy name is used to determine where and how the payment method or PSP elements are displayed in the shop.
 

@@ -594,11 +594,10 @@ class PaymentAppDependencyProvider extends SprykerPaymentAppDependencyProvider
 
 Make sure that:
 * Enabled the express checkout payment method for the payment app.
-  * Depends on the payment app enabled in the project.
-  * Not all payment methods support the express checkout flow.
 * The express checkout button is displayed on the Cart page.
 * Clicking the express checkout button opens the express checkout page.
 * You can place an order using the express checkout flow.
+* On the summary page you will see the default shipment method applied to the order.
 
 {% endinfo_block %}
 

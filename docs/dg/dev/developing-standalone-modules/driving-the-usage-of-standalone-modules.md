@@ -1,6 +1,6 @@
 ---
 title: Driving the usage of standalone modules
-description: Drive Usage and Support with Problems
+description: Learn how you can drive usage and support with problems within your Spryker based projects.
 last_updated: Jun 7, 2024
 template: howto-guide-template
 ---

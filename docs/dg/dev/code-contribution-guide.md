@@ -1,6 +1,6 @@
 ---
 title: Code contribution guide
-description: Contribute to Spryker repositories
+description: Learn how you can contribute to Spryker Repositories with this code contribution guide.
 last_updated: Apr 3, 2024
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/code-contribution-guide
@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/code-contribution-guide.html
 related:
   - title: Contribute to the documentation
-    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/contribute-to-the-documentation.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/contribute-to-the-docs.html
 
 ---
 

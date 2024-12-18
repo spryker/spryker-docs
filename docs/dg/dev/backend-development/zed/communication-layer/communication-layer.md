@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html
 related:
   - title: Addi indexes to foreign key columns - index generator
-    link: docs/scos/dev/back-end-development/zed/communication-layer/adding-indexes-to-foreign-key-columns-index-generator.html
+    link: docs/dg/dev/backend-development/zed/communication-layer/add-indexes-to-foreign-key-columns-index-generator.html
   - title: About the Business layer
     link: docs/dg/dev/backend-development/zed/business-layer/business-layer.html
   - title: About the Persistence layer

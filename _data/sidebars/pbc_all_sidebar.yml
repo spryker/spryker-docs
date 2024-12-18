@@ -2336,6 +2336,10 @@ entries:
                 url: /docs/pbc/all/payment-service-provider/base-shop/hydrate-payment-methods-for-an-order.html
               - title: Interact with third party payment providers using Glue API
                 url: /docs/pbc/all/payment-service-provider/base-shop/interact-with-third-party-payment-providers-using-glue-api.html
+              - title: Payment method strategies
+                url: /docs/pbc/all/payment-service-provider/base-shop/payment-method-strategies.html
+                include_versions:
+                - "202410.0"
               - title: Retrieve and use payment details from third-party PSPs
                 url: /docs/pbc/all/payment-service-provider/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html
               - title: "Payments feature: Domain model and relationships"
@@ -2607,7 +2611,7 @@ entries:
                       - title: Project guidelines
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-guidelines-for-stripe.html
                         include_versions:
-                        - "202410.0"  
+                        - "202410.0"
                         nested:
                           - title: Embed the Stripe payment page as an iframe
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/embed-the-stripe-payment-page-as-an-iframe.html

@@ -102,6 +102,6 @@ The express checkout payment flow belongs to so-called preorder payments. Preord
 2. Capture payment: after the order is placed.
 
 
-In this flow, a button to pay with a payment method is displayed on, for example–Product Details or Cart page. When the customer clicks on the button, the payment is initialized and a modal window is opened where the customer completes the payment. After that, the customer is redirected to the Summary Page where he can submit the order. The order is placed in the Back Office and the payment will be captured.
+In this flow, a button to pay with a payment method is displayed on, for example–Product Details or Cart page. When the customer clicks on the button, the payment is initialized and a modal window is opened where the customer completes the payment. After that, the customer is redirected to the summary page where they can submit the order. The order is placed in the Back Office and captured.
 
-Additionally, those Express Checkout payment methods provide customer data that can be used to prefill the checkout form. This data can contain e.g. customer data, address data or alike.  
+Also, express checkout payment methods provide customer data, such as addresses, that can be used to prefill the checkout form.

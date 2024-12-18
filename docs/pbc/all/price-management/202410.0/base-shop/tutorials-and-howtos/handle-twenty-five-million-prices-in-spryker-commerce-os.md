@@ -181,11 +181,11 @@ The side effects of this solution are the following:
 
 1. The [Product Reviews feature](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) is disabled because it requires multiple document types per index.
 2. Performance requires additional attention. You can read about performance issues related to the feature in [Parent-join and performance](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html#_parent_join_and_performance).
-3. Due to ES limitations, you can't build proper queries to run sorting by prices. Only facet filtering is possible.
+3. Because of ES limitations, you can't build proper queries to run sorting by prices. Only facet filtering is possible.
 
 ### How to speed up the publishing process
 
-To implement a parent-child relationship between documents, we built a standard search module that follows [Spryker architecture](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html). The new price search module is subscribed to the publish and unpublish events of abstract products to manage related price documents in the search. The listener in the search module receives a product abstract ID and fetches all related prices to publish or unpublish them, depending on the incoming event. Due to a large number of prices, the publish process became slow. This causes the following issues.
+To implement a parent-child relationship between documents, we built a standard search module that follows [Spryker architecture](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html). The new price search module is subscribed to the publish and unpublish events of abstract products to manage related price documents in the search. The listener in the search module receives a product abstract ID and fetches all related prices to publish or unpublish them, depending on the incoming event. Because of a large number of prices, the publish process became slow. This causes the following issues.
 
 #### Issues
 

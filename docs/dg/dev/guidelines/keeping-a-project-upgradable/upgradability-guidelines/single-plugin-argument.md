@@ -1,6 +1,6 @@
 ---
 title: Single plugin argument
-description: Reference information for evaluator tools.
+description: Learn how the single plugin argument checks that plugins do not require complicated constructor arguments within your spryker projects.
 template: howto-guide-template
 last_updated: Oct 24, 2023
 redirect_from:

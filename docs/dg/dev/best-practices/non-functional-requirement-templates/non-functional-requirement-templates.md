@@ -1,6 +1,6 @@
 ---
 title: Non-functional requirement templates
-description:
+description: Define key system expectations using Spryker's non-functional requirement templates. Focus on performance, scalability, and security to align development goals effectively.
 template: concept-topic-template
 redirect_from:
 ---

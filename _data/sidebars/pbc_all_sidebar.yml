@@ -2614,7 +2614,7 @@ entries:
                           - title: Embed the Stripe payment page as an iframe
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/embed-the-stripe-payment-page-as-an-iframe.html
                           - title: Implement Stripe checkout as a hosted payment page
-                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/implement-stripe-checkout-as-a-hosted-payment-page.html
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-prerequisites-for-implementing-Stripe-checkout-as-a-hosted-payment-page.html
                           - title: OMS configuration for Stripe
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/oms-configuration-for-stripe.html
                           - title: Processing refunds with Stripe

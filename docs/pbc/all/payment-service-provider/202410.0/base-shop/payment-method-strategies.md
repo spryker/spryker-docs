@@ -9,14 +9,14 @@ Spryker and Payment Service Provider (PSP) apps support various payment methods.
 
 The following strategies are available:
 
-- hosted-payment-page: After an order is submitted to complete the payment, the customer is redirected to a hosted payment page of the PSP.
-- express-checkout: One or more buttons are displayed e.g. on the Cart Page or the PDP Page.
+- hosted-payment-page: After an order is submitted, to complete the payment, the customer is redirected to a hosted payment page of the PSP.
+- express-checkout: One or more express checkout buttons are displayed, for example–on the Cart or PDP page.
 
 <!-- **embedded**: The payment form is embedded in the shops summary page. -->
 
 The strategy is defined in the `PaymentMethodTransfer` object. The object is used to transfer the payment method data between the shop and the PSP.
 
-When an app is configured in the ACP app Catalog, the `PaymentMethod` data is sent to Spryker using an async API and is persisted in the database. The configuration is a JSON string, which is mapped to the `PaymentMethodTransfer` object.
+When an app is configured in the ACP app Catalog, the `PaymentMethod` data and the configuration is sent to Spryker using an async API and is persisted in the database. The configuration is a JSON string, which is mapped to the `PaymentMethodTransfer` object.
 
 `PaymentMethodTransfer` contains a `PaymentMethodappConfigurationTransfer` object. The `PaymentMethodappConfigurationTransfer` object contains the `CheckoutStrategyTransfer` object. `CheckoutStrategyTransfer` contains the strategy name. The strategy name is used to determine where and how the payment method or PSP elements are displayed in the shop.
 
@@ -66,7 +66,7 @@ The `payment_service_provider_data` contains the data that can be used by projec
 
 The app knows only which query parameters (keys) are needed. The shop knows which values are needed and where to get them from.  
 
-For example the script must be like `https://example.com/js?currency=EUR`. The app knows that the `currency` is needed but can't know which one is used in the shop. The shop knows that the used `currency` is `EUR`.
+For example the script URL can be `https://example.com/js?currency=EUR`. The app knows that the `currency` is needed but can't know which one is used in the shop. The shop knows that the used `currency` is `EUR`.
 
 The app defines a script as follows:
 

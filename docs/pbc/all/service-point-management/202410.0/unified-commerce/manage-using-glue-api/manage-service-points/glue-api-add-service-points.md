@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Add service points"
-description: Learn how to add service points using Glue API
+description: Learn how to add service points to your Unified Commerce shop using Spryker Glue API
 last_updated: Nov 23, 2023
 template: glue-api-storefront-guide-template
 ---

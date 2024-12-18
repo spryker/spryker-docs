@@ -8,13 +8,11 @@ The current feature integration guide only adds the following functionalities:
 * Payment Back Office UI
 * Payment method per store
 * Payment data import
-* Payment App express checkout flow.
+* Payment app express checkout flow
 
 {% endinfo_block %}
 
-## Install feature core
-
-### Prerequisites
+## Prerequisites
 
 To start the feature integration, overview and install the necessary features:
 
@@ -22,7 +20,7 @@ To start the feature integration, overview and install the necessary features:
 | --- | --- |
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules
+## 1) Install the required modules
 
 Install the required modules using Composer:
 
@@ -47,7 +45,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up Express Checkout payments configuration
+## 2) Set up Express Checkout payments configuration
 
 1. Configure the checkout payment step to hide the express checkout payment methods. For example, if you're using the ACP Payone app, you can exclude the `payone-paypal-express` payment method.
 
@@ -275,7 +273,7 @@ class PaymentAppShipmentConfig extends SprykerPaymentAppShipmentConfig
 {% endinfo_block %}
 
 
-### 2) Set up database schema and transfer objects
+## 2) Set up database schema and transfer objects
 
 Apply database changes and generate entity and transfer changes:
 
@@ -312,9 +310,9 @@ Make sure the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Import data
+## 3) Import data
 
-#### Import Payment Methods
+### Import Payment Methods
 
 {% info_block infoBox "Info" %}
 
@@ -437,7 +435,7 @@ Make sure that the configured data has been added to the `spy_payment_method`, `
 {% endinfo_block %}
 
 
-### 4) Add translations
+## 4) Add translations
 
 1. Append the glossary according to your configuration:
 
@@ -456,7 +454,7 @@ payment_app_widget.error.incorrect_quote,"Angebot nicht gefunden, Sitzung ist m√
 console data:import glossary
 ```
 
-### 5) Set up behavior
+## 5) Set up behavior
 
 1. Configure data import to use your data on the project level.
 
@@ -592,12 +590,11 @@ class PaymentAppDependencyProvider extends SprykerPaymentAppDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:
-* Enabled the express checkout payment method for the payment app.
+Make sure the following applies:
 * The express checkout button is displayed on the Cart page.
 * Clicking the express checkout button opens the express checkout page.
-* You can place an order using the express checkout flow.
-* On the summary page you will see the default shipment method applied to the order.
+* You can place an order using the express checkout.
+* On the summary page, a default shipment method applied to the order is displayed.
 
 {% endinfo_block %}
 
@@ -672,13 +669,13 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 {% endinfo_block %}
 
-### 6) Replace deprecated funtionality
+## 6) Replace deprecated funtionality
 
 Use the `PaymentDataImport` module instead of the following:
 * `SalesPaymentMethodTypeInstallerPlugin` plugin
 * `PaymentConfig::getSalesPaymentMethodTypes()` config method
 
-### 7) Set up widgets
+## 7) Set up widgets
 
 1. Register the following plugins to enable widgets:
 

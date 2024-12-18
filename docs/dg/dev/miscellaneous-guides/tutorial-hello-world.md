@@ -68,7 +68,7 @@ class IndexController extends AbstractController
 
 1. Add the route to the controller:
    1. In `HelloWorld`, add a new folder called `Plugin`.
-   2. In `Plugin`, add a folder called **Provider**.
+   2. In `Plugin`, add a folder called **Router**.
    3. Add your `RouteProviderPlugin` class with the name `HelloWorldRouteProviderPlugin`:
 
 ```php

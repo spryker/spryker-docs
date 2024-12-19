@@ -25,7 +25,40 @@ The most important about password security is to not save passwords in plain tex
 
 ## Secrets
 
-Store secrets in a secrets management system. For more information about secrets and parameters, see [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html). We recommend establishing a regular cadence of rotating secrets. For recommendations on establishing a secrets rotation policy, see [Operational Best Practices for CIS AWS Foundations Benchmark v1.4 Level 1 1.14](https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_1.html).
+Store secrets, API keys, and similar sensitive data in a dedicated secrets management system rather than in `./config/Shared/**` and `./deploy.*.yml` files. 
+
+For more information about secrets and parameters, see [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html). We recommend establishing a regular cadence of rotating secrets. For recommendations on establishing a secrets rotation policy, see [Operational Best Practices for CIS AWS Foundations Benchmark v1.4 Level 1 1.14](https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_1.html).
+
+## Hardcoded passwords
+
+It is needed to avoid using demo users in the Production environment. 
+
+For example, installer users are used in `UserInstallerPlugin` that is run during destructive deployment. 
+
+```php
+namespace Pyz\Zed\User;
+
+class UserConfig extends \Spryker\Zed\User\UserConfig
+{
+    public function getInstallerUsers(): array
+    {
+        return [
+            [
+                'firstName' => 'Admin',
+                'lastName' => 'Spryker',
+                'username' => 'admin@spryker.com',
+                'password' => 'change123',
+                'localeName' => 'de_DE',
+                'isAgent' => 1,
+            ],
+            // ...
+        ];
+    }
+}
+```
+Moving installer user config to [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html) before the production release will mitigate these risks.
+
+Additionally, ensure that demo customers `customer.csv` are excluded from the data import for the Production environment.
 
 ## Encrypted communication
 

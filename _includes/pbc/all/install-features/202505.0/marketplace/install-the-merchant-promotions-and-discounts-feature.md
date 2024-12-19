@@ -1,10 +1,6 @@
 This document describes how to install the Merchant + Promotions & Discounts feature.
 
-## Install feature core
-
-Follow the steps below to install the feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -14,7 +10,7 @@ Install the required features:
 | Promotions & Discounts | {{page.version}} | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) |
 | Spryker Core           | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                       |
 
-### 1) Install the required modules
+## 1) Install the required modules
 
 Install the required modules using Composer:
 
@@ -32,14 +28,14 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up behavior
+## 2) Set up behavior
 
 Set up the following behaviors:
 
 | PLUGIN                                           | SPECIFICATION                                                                            | PREREQUISITES | NAMESPACE                                                           |
 |--------------------------------------------------|------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------|
 | MerchantReferenceDecisionRulePlugin              | Defines if a discount can be applied to a cart item with a merchant reference specified. |               | Spryker\Zed\MerchantDiscountConnector\Communication\Plugin\Discount |
-| MerchantReferenceDiscountableItemCollectorPlugin | Collects the cart items with merchant reference to which a discount should be applied.   |               | Spryker\Zed\MerchantDiscountConnector\Communication\Plugin\Discount |
+| MerchantReferenceDiscountableItemCollectorPlugin | Collects cart items with a merchant reference to which a discount should be applied.   |               | Spryker\Zed\MerchantDiscountConnector\Communication\Plugin\Discount |
 
 **src/Pyz/Zed/Discount/DiscountDependencyProvider.php**
 
@@ -79,7 +75,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 {% info_block warningBox "Verification" %}
 
 1. [Create a discount](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a `merchant-reference` field.
-2. Add a product sold by the merchant defined in the newly created discount to the cart.
-3. Verify that the discount is applied to the cart.
+2. Add a product sold by the merchant you've defined in the discount to cart.
+  Make sure the discount has been applied.
 
 {% endinfo_block %}

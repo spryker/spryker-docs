@@ -13,7 +13,7 @@ The complete default payment OMS configuration is available in `vendor/spryker/s
 
 The payment flow of the default OMS involves authorizing the initial payment, which means that the amount is emporarily blocked when the payment method permits. Then, the OMS sends requests to capture, that is, transfer of the previously blocked amount from the customer's account to the store account.
 
-For more information about the ForeignPayment OMS configuration, see [Project guidelines for Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe.html)
+For more information about the ForeignPayment OMS configuration, see [Project guidelines for Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-guidelines-for-stripe.html)
 
 In addition to the base shop implementation, the Stripe App in Marketplaces requires the following OMS configuration:
 

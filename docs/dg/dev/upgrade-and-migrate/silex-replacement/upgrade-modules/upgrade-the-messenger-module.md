@@ -1,6 +1,6 @@
 ---
 title: Upgrade the Messenger module
-description: Use the guide to perform the Messenger part of the Silex Migration Effort.
+description: Learn how you can upgrade the messenger module of the Silex Migration within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-messenger

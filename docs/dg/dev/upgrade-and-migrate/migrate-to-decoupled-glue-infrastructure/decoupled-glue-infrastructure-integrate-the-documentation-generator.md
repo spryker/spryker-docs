@@ -1,6 +1,6 @@
 ---
 title: "Decoupled Glue infrastructure: Integrate the documentation generator"
-description: Integrate the Glue documentation generation into your project
+description: Learn how to integrate the Glue documentation generation into your Spryker based project
 template: feature-integration-guide-template
 last_updated: Oct 30, 2023
 redirect_from:

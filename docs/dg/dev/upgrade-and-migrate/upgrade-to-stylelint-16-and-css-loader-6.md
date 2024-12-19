@@ -1,6 +1,6 @@
 ---
 title: Upgrade to Stylelint 16 and css-loader 6
-description: Learn how to update versions of the Stylelint and css-loader.
+description: Learn how you can upgrade to version 16 of Stylelint and upgrade to version 6 of css-loader for your spryker projects.
 template: module-migration-guide-template
 ---
 

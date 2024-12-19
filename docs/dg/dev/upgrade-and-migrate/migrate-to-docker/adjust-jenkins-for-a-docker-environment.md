@@ -1,6 +1,6 @@
 ---
 title: Adjust Jenkins for a Docker environment
-description: DevOPS guidelines for running Spryker in Docker.
+description: Learn how you can adjust Jenkins with these DevOPS guidelines for running Spryker projects in Docker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/additional-devops-guidelines

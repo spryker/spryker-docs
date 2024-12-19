@@ -1,6 +1,6 @@
 ---
 title: Upgrade to Symfony 6.4
-description: Learn about the main changes in the new Symfony version 6
+description: Learn how you can upgrade the version 6.4 of Symfony for your Spryker projects and Spryker modules that use Symfony.
 last_updated: Apr 1, 2024
 template: howto-guide-template
 redirect_from:

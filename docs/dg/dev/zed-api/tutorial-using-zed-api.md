@@ -1,5 +1,6 @@
 ---
 title: "Tutorial: Using Zed API"
+description: Learn how to use the ZED API, creating simple client librarys or extracting controller endpoints to use within your Spryker Projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-zed-rest-api

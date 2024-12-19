@@ -1,5 +1,6 @@
 ---
-title: Zed API resources
+title: Zed API resources\
+description: Some quick and helpful resources when it comes to using Spryker Zed API within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/zed-api-resources

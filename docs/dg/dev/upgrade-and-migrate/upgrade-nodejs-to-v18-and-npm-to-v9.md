@@ -1,7 +1,7 @@
 ---
 title: Upgrade Node.js to v18 and npm to v9
 last_updated: May 16, 2023
-description: Use this guide to upgrade Node.js to v18 and npm to v9.
+description: Learn how you can upgreade your Node.js to version 18 and how to upgrade NPM to version 9 for your Spryker projects.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/front-end-development/202304.0/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html

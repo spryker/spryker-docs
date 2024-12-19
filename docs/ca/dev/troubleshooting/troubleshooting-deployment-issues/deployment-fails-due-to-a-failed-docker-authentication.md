@@ -1,5 +1,5 @@
 ---
-title: Deployment fails due to a failed docker authentication
+title: Deployment fails because of a failed docker authentication
 description: Resolve Docker authentication errors in Spryker deployments with solutions to fix 'EOF' issues
 template: troubleshooting-guide-template
 last_updated: Oct 6, 2023

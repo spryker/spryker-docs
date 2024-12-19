@@ -1,6 +1,6 @@
 ---
 title: About the query container
-description: A query container holds all the database queries of the current module.
+description: Query containers in Persistence Layer. This guide explains their role in managing database queries, ensuring modular and efficient data access for Zed backend development.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/query-container
@@ -9,9 +9,9 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
 related:
   - title: Implement a query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-container/implement-a-query-container.html
   - title: Using a query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-container/using-a-query-container.html
 ---
 
 {% info_block infoBox "When to use query containers" %}

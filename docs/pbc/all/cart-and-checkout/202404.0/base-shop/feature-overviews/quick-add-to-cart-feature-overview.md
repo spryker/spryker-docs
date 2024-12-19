@@ -116,7 +116,7 @@ You can upload only one file at a time.
 
 By default, only concrete SKUs are validated. On successful upload, items and quantities are extracted and filled out in the quick order form fields.
 
-In case the quantity is not valid due to [quantity restrictions](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/non-splittable-products-feature-overview.html) setting, the quantity is changed to a valid number.
+In case the quantity is not valid because of [quantity restrictions](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/non-splittable-products-feature-overview.html) setting, the quantity is changed to a valid number.
 
 If there are already products added to the quick order list, the products from the CSV file are added to the bottom of the quick order template.
 

@@ -228,7 +228,7 @@ On the default Zed Order Details page, you can trigger an event for a single ite
 
 Events can be triggered after a defined period of time has passed through a timeout.
 
-Let's assume you are trying to define the prepayment process, in which if, after 15 days, no payment is received, the reminder sent is fired due to the timeout. How is the reminder then technically sent? This can be implemented through a command attached to the send first reminder event. The command attribute references a PHP class that implements a specific interface. Every time the event is fired (automatically, after the timeout), Zed makes sure the associated command is executed. If an exception occurs in the command coding, the order or order item stays in the source state.
+Let's assume you are trying to define the prepayment process, in which if, after 15 days, no payment is received, the reminder sent is fired because of the timeout. How is the reminder then technically sent? This can be implemented through a command attached to the send first reminder event. The command attribute references a PHP class that implements a specific interface. Every time the event is fired (automatically, after the timeout), Zed makes sure the associated command is executed. If an exception occurs in the command coding, the order or order item stays in the source state.
 
 ```xml
 <transition command="Oms/sendFirstReminder">

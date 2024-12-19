@@ -19,18 +19,19 @@ To avoid unexpected downtime and data loss, perform and test *all* of the follow
   * Gateway
   * BackendAPI
 
-2. If you have custom console commands, update them to meet the following rules:
-- `Store(Facade|Client)::getCurrentStore()` isn't used in the code a console command executes.
-- All store-aware commands implement `Spryker\Zed\Kernel\Communication\Console\StoreAwareConsole` and execute actions for a specific store if a store parameter is provided; if not provided, actions are executed for all the stores in the region.
-- It is recommended to use `--store` parameter instead of `APPLICATION_STORE` env variable, despite the support of env variable still exists.
-3. Be aware that after enabling Dynamic Multistore mode, your basic domain structure will change from store to region for all the applications(Example https://yves.de.mysprykershop.com => https://yves.eu.mysprykershop.com), make sure that it is expected. If external systems are impacted by this - necessary redirects are set, so SEO of your site is not impacted.
+2. Update custom console commands to meet the following rules:
+  - `Store(Facade|Client)::getCurrentStore()` isn't used in the code a console command executes.
+  - All store-aware commands implement `Spryker\Zed\Kernel\Communication\Console\StoreAwareConsole` and execute actions for a specific store if a store parameter is provided; if not provided, actions are executed for all the stores in the region.
+  - Optional: We recommend using the `--store` parameter instead of `APPLICATION_STORE` env variable; both methods are supported.
+
+3. After enabling Dynamic Multistore, the basic domain structure will change from store to region for all the applications. For example, `https://yves.de.mysprykershop.com` will change to `https://yves.eu.mysprykershop.com`. To prevent negative SEO effects, set up the needed redirects.
 4. The Dynamic Store feature itself does not require any database changes, in case you've already migrated to the latest demoshop version.
-5. Dynamic Multistore introduce some changes in RabbitMQ messages structure, so it is **important** that:
-   - During the migration we do not have unprocessed messages in the queue. Make sure that all messages are processed **before** enabling Maintenance Mode.
-   - Make sure that `Maintainance Mode` is enabled during migration to make sure that no new messages are added to the queue before the migration is finished.
+5. Dynamic Multistore changes the structure of RabbitMQ messages. When you're ready for the migration, wait for all the remaining messages in the queue to be processed. When the queue is empty, enable the maintenance mode.
+
    (Expected downtime is limited to the deployment time, normally it takes less than 1hr)
-6. Update AWS deployment files to Dynamic Multistore mode, using the example:
-- Environment variable section
+6. Update AWS deployment files to Dynamic Multistore mode using the example:
+
+Original environment variables section:
 ```yaml
 SPRYKER_HOOK_BEFORE_DEPLOY: 'vendor/bin/install -r pre-deploy.dynamic-store-off -vvv'
 SPRYKER_HOOK_AFTER_DEPLOY: 'true'
@@ -40,7 +41,7 @@ SPRYKER_YVES_HOST_DE: de.{{DOMAIN_ZONE}}
 SPRYKER_YVES_HOST_AT: at.{{DOMAIN_ZONE}}
 ```
 
-should be changed to:
+Updated environment variables section:
 
 ```yaml
 SPRYKER_HOOK_BEFORE_DEPLOY: 'vendor/bin/install -r pre-deploy -vvv'
@@ -50,7 +51,8 @@ SPRYKER_HOOK_DESTRUCTIVE_INSTALL: 'vendor/bin/install -r destructive --no-ansi -
 SPRYKER_DYNAMIC_STORE_MODE: true
 SPRYKER_YVES_HOST_EU: yves.eu.{{DOMAIN_ZONE}}
 ```
-- Regions section
+
+Original regions section:
 ```yaml
 regions:
   stores:
@@ -75,7 +77,8 @@ regions:
         session:
           namespace: 4
 ```
-should be changed to:
+
+Updated regions section:
 
 ```yaml
 regions:

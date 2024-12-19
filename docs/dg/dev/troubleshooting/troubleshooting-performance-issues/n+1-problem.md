@@ -1,6 +1,6 @@
 ---
 title: N+1 problem
-description: N+1 problem
+description: Learn how to troubleshoot and resolve issues for N+1 problems within your Spryker based projects.
 template: troubleshooting-guide-template
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/n+1-problem.html

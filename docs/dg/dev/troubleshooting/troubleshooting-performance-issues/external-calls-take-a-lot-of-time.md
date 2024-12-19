@@ -1,6 +1,6 @@
 ---
 title: External calls take a lot of time
-description: Troubleshoot the performance issue with external calls taking much time
+description: Learn how to troubleshoot the performance issue with external calls taking much time within your Spryker project.
 template: troubleshooting-guide-template
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/external-calls-take-a-lot-of-time.html

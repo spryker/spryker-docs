@@ -1,6 +1,6 @@
 ---
 title: Feature or module updates
-description: Choose at which level to take updates
+description: Learn how to update modules or features and to choose at which level to take updates within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 redirect_from:

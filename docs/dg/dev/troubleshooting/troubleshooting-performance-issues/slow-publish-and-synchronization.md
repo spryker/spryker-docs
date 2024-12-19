@@ -1,6 +1,6 @@
 ---
 title: Slow Publish and Synchronization
-description: Publish and Synchronization is slow on all or some actions.
+description: Learn how to troubelshoot and resolve if Publish and Synchronization is slow on all or some actions for your Spryker projects.
 template: troubleshooting-guide-template
 last_updated: Feb 23, 2023
 redirect_from:

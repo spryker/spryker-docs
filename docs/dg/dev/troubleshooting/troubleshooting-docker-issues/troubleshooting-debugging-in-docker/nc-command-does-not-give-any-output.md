@@ -1,6 +1,6 @@
 ---
 title: nc command does not give any output
-description: If the nc command does not give any output, contact us
+description: Learn what to do if the nc Command does not give any output when troubleshooting your Spryker project.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/nc-command-does-not-give-any-output

@@ -1,6 +1,6 @@
 ---
 title: Prices filter and sorting doesn't work on Frontend
-description: Explanation why these filters might not work.
+description: Learn the explanation to why prices and sorting filters might not work within your Spryker based project.
 last_updated: Oct 6, 2023
 template: troubleshooting-guide-template
 ---

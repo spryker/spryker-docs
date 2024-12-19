@@ -1,6 +1,6 @@
 ---
 title: 413 Request Entity Too Large
-description: Learn how to fix the issue 413 Request Entity Too Large
+description: Learn how to fix the issue 413 Request Entity Too Large when running your applications in docker with your Spryker projects.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/413-request-entity-too-large

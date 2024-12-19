@@ -1,6 +1,6 @@
 ---
 title: Not optimized Composer on the production environment
-description: Fix the issue when all pages are slow on the production environment
+description: Fix the issue when all pages are slow on the production environment and optimize compose within your Spryker projects.
 template: troubleshooting-guide-template
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/not-optimised-composer-on-the-production-environment.html

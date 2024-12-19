@@ -1,6 +1,6 @@
 ---
 title: Mutagen synchronization issue
-description: Learn how to fix the Mutagen synchronization issue
+description: Learn how to fix the Mutagen synchronization issue when running applications in docker with your Spryker projects.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mutagen-synchronization-issue

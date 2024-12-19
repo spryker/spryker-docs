@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve product offer availability"
-description: Retrieve Marketplace product offer availabilities via Glue API
+description: Learn how to retrieve Marketplace product offer availabilities via Glue API for your Spryker Marketplace projects.
 template: glue-api-storefront-guide-template
 last_updated: Nov 21, 2023
 redirect_from:

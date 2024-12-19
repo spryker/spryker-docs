@@ -1,5 +1,6 @@
 ---
 title: "Import file details: product_stock.csv"
+description: learn how to configure product stock data in your Spryker based project using the product stock csv file.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-stockcsv

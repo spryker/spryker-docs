@@ -1,6 +1,6 @@
 ---
 title: Retrieve concrete product availability
-description: Retrieve availability of concrete products.
+description: Learn how to retrieve availability of concrete products using Spryker GLUE API within your Spryker based projects.
 last_updated: Jul 12, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-product-availability

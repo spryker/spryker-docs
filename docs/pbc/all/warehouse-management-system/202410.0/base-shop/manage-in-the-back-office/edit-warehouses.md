@@ -1,6 +1,6 @@
 ---
 title: Edit warehouses
-description: Learn how to edit warehouses in the Back Office.
+description: Learn how to edit warhouses directly in the Back Office of your Spryker Cloud Commerce OS project.
 last_updated: May 28, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-warehouses

@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Pick picklist items"
-description: Learn how to pick picklist items using Glue API
+description: Learn how to pick picklist items using Spryker Glue API in your Spryker Unified Commerce Store.
 template: glue-api-storefront-guide-template
 last_updated: Dec 7, 2023
 ---

@@ -1,6 +1,6 @@
 ---
 title: Manage availability notifications
-description: Manage product availability notifications for registered users
+description: Manage product availability notifications for registered users with the Spryker Glue API for your Spryker based projects.
 last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-availability-notifications

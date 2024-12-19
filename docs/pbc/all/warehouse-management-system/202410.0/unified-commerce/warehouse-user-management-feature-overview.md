@@ -1,6 +1,6 @@
 ---
 title: Warehouse User Management feature overview
-description: General overview of the Warehouse User Management feature
+description: General overview of the Spryker Warehouse User Management feature and how it can enhance your Spryker Unified Commerce store.
 last_updated: Nov 23, 2023
 template: concept-topic-template
 related:

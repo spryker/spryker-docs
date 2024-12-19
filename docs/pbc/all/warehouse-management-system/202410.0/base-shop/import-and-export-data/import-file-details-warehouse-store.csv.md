@@ -1,5 +1,6 @@
 ---
 title: "Import file details: warehouse_store.csv"
+description: learn how to configure warehouse store data in your Spryker based project using the warehouse store csv file.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-warehouse-storecsv

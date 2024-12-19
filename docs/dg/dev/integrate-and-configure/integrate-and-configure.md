@@ -1,6 +1,6 @@
 ---
 title: Integrate and configure
-description: guides for integrating technical enhancement tools with Spryker SCOS
+description: Learn with these guides for integrating technical enhancement tools with Spryker Spryker Cloud Commerce OS.
 template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/technical-enhancement-integration-guides/technical-enhancement-integration-guides.html

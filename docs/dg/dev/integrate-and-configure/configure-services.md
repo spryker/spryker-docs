@@ -1,6 +1,6 @@
 ---
 title: Configure services
-description: Learn how to configure services.
+description: Learn how to set up and configure services that come out of the box of your Spryker shop.
 last_updated: May 8, 2024
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-services

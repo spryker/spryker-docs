@@ -18,11 +18,11 @@ redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/twig-and-twigextension.html
 related:
   - title: Cronjob scheduling
-    link: docs/scos/dev/sdk/cronjob-scheduling.html
+    link: docs/dg/dev/backend-development/cronjobs/cronjobs.html
   - title: Data import
     link: docs/dg/dev/data-import/page.version/data-import.html
   - title: Development virtual machine, docker containers & console
-    link: docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
+    link: docs/dg/dev/sdks/the-docker-sdk/docker-environment-infrastructure.html
 ---
 
 ## Twig

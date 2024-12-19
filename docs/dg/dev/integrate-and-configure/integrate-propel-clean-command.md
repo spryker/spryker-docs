@@ -1,6 +1,6 @@
 ---
 title: Integrate Propel clean command
-description: Learn how to integrate the Propel clean command into your project.
+description: Learn how to enable and integrate the Propel clean command into your Spryker based project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/propel-clean-command

@@ -1,6 +1,6 @@
 ---
 title: Using database transactions
-description: Use the guide to understand how to handle database transactions.
+description: Use the guide to understand how to handle database transactions within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-database-transactions

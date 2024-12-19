@@ -1,6 +1,6 @@
 ---
 title: Integrate profiler module
-description: Learn how to integrate profiler module
+description: Learn the prerequisites and how to enable and integrate profiler module in to a Spryker based project.
 last_updated: March 22, 2023
 template: howto-guide-template
 redirect_from:

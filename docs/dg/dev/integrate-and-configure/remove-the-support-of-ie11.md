@@ -1,7 +1,7 @@
 ---
 title: Remove the support of IE11
 last_updated: Aug 31, 2022
-description: This document shows how to remove support of IE11 in your Spryker project.
+description: This document shows how to remove the support of IE11 in your Spryker based project.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html

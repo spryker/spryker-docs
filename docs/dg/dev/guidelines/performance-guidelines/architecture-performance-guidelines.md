@@ -235,6 +235,13 @@ One can avoid using the unnecessary transitions by:
 - Removing the *Reservation* flag from the NEW and other steps in the OMS.
 - Removing the *Timeout* transition from the NEW step in the OMS.
 
+{% info_block warningBox %}
+
+Decoupling of Checkout endpoint and OMS commands: 
+[Slow Checkout endpoint](/docs/pbc/all/order-management-system/202410.0/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html)
+
+{% endinfo_block %}
+
 ### Performance checklist
 
 Make sure to check the following articles on how to optimize the performance of your application:

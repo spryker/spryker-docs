@@ -99,7 +99,10 @@ commonOptions = {
     "http://redisdesktop.com/",
     "https://developer.computop.com/display/EN/Test+Cards",
     "https://www.centralbank.cy/",
-    "https://www.facebook.com/Spryker/"
+    "https://www.facebook.com/Spryker/",
+    "https://www.cdata.com/virtuality/",
+    "https://dashboard.algolia.com/users/sign_in"
+
   ],
   :ignore_files => [],
   :typhoeus => {

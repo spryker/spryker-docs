@@ -1,5 +1,6 @@
 ---
 title: Install the Agent Assist + Shopping List feature
+description: Learn how to install the Agent Assist + Shopping List feature in to your Spryker based projects.
 last_updated: Jul 6, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/agent-assist-shopping-list-feature-integration

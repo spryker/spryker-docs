@@ -1,6 +1,6 @@
 ---
 title: Delete users
-description: Learn how to delete users in the Back Office
+description: Learn how you can delete users directly in the back office of your Spryker Cloud Commerce OS Shop.
 last_updated: Aug 2, 2021
 template: back-office-user-guide-template
 redirect_from:

@@ -1,7 +1,7 @@
 ---
 title: Persistence ACL feature configuration
 last_updated: Nov 05, 2021
-description: Learn how to configure the Persistence ACL feature.
+description: Learn how to configure the Persistence ACL feature in to your Spryker based marketplace shop.
 template: concept-topic-template
 ---
 This document describes how you can configure the [Persistence ACL feature](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html).

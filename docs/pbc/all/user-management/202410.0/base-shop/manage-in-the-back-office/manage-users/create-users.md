@@ -1,6 +1,6 @@
 ---
 title: Create users
-description: Learn how to create users in the Back Office
+description: Learn how you can create new users directly in the back office of your Spryker Cloud Commerce OS Shop.
 last_updated: Aug 2, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-users

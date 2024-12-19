@@ -1,7 +1,7 @@
 ---
 title: "Persistence ACL feature: Domain model and relationships"
 last_updated: Nov 05, 2021
-description: Technical details about the Persistence ACL feature.
+description: Learn the Technical details about the Persistence ACL feature in your Spryker Marketplace shop.
 template: concept-topic-template
 ---
 

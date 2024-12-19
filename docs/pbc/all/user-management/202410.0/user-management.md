@@ -1,6 +1,6 @@
 ---
 title: Users Management
-description: User Management capability lets you manage Back Office users.
+description: The Spryker User Management capability lets you manage Back Office users within your Spryker based projects.
 last_updated: Aug 20, 2021
 template: concept-topic-template
 redirect_from:

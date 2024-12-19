@@ -1,6 +1,6 @@
 ---
 title: Edit user groups
-description: Learn how to edit user groups in the Back Office
+description: Learn how you can edit user groups directly in the back office of Spryker Cloud Commerce OS.
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:

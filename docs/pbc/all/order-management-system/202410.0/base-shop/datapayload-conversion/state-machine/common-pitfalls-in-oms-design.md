@@ -27,17 +27,17 @@ This document describes the most common issues with OMS design and how you can f
 
 **Issue**: If there is more than one onEnter transition event from state A, only one is executed.
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-1.png)
+![img](https://i.ibb.co/7CWt81g/oms-processing-1-1.png)
 
 **Reason**: This behavior is not supported because there must always be only one state after an event execution.
 
 **Solution**: If you have different commands, you can chain those:
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-1-fixed.png))
+![img](https://i.ibb.co/23rpnHV/oms-processing-2.png))
 
 If you have the same commands, then one of the commands could get a condition:
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-1-solution-2.png)
+![img](https://i.ibb.co/DYHWY6w/oms-processing-3.png)
 
 
 
@@ -66,7 +66,7 @@ In the OMS drawing, you will see the last *read* event definition, but during th
 
 **Issue**: There are many states with only outgoing transitions.
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-2.png)
+![img](https://i.ibb.co/Np0d6rF/oms-processing-4.png)
 
 **Reason**: Function `OmsConfig:getInitialStatus` has only one return value, so it's impossible to start from another "initial" state.
 
@@ -97,7 +97,7 @@ Process/Process.php:198)
 
 **Solution:** Removing duplicate flag  `main` fixes the process rendering and processing:
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-7-fixed.png)
+![img](https://i.ibb.co/DwPryLC/oms-processing-5.png)
 
 ## More than one transition with the same events and without condition
 
@@ -187,7 +187,14 @@ Running this code inside a DB transaction make the lock entries inaccessible. Th
 
 **Solution:** OMS processes are cached by default. If `OmsConstants::ENABLE_PROCESS_CACHE` is not set to false in configuration files, you need to regenerate the cache every time you update OMS configuration.
 
+
 To regenerate the cache, run the following command:
 ```bash
 vendor/bin/console oms:process-cache:warm-up
 ```
+
+## Improve performance of the place order by not executing the OMS processing synchronously.
+This will ensure that OMS processing will instantly stop after order creation.
+Actual processing of the OMS will happen after the next execution of the `oms:check-condition` command.
+
+![img](https://i.ibb.co/ssv8Zgc/oms-Slow-order-placement.png)

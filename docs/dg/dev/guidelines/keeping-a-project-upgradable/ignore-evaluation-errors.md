@@ -1,6 +1,6 @@
 ---
 title: Ignore evaluation errors
-description: Reference information for evaluator configuration file.
+description: A short guide detailing the reference information for evaluator configuration file for your Spryker based projects.
 template: howto-guide-template
 last_updated: Sep 20, 2023
 redirect_from:

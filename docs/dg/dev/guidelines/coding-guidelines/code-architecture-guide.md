@@ -9,11 +9,11 @@ redirect_from:
   - /docs/scos/dev/guidelines/coding-guidelines/code-architecture-guide.html
 related:
   - title: Code Quality
-    link: docs/scos/dev/guidelines/coding-guidelines/code-quality.html
+    link: docs/dg/dev/guidelines/coding-guidelines/code-quality.html
   - title: Code style guide
-    link: docs/scos/dev/guidelines/coding-guidelines/code-style-guide.html
+    link: docs/dg/dev/guidelines/coding-guidelines/code-style-guide.html
   - title: Secure Coding Practices
-    link: docs/scos/dev/guidelines/coding-guidelines/secure-coding-practices.html
+    link: docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices.html
 ---
 This document outlines Spryker recommendations for the code architecture.
 

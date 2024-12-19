@@ -1,6 +1,6 @@
 ---
 title: Discouraged packages checker
-description: Reference information for evaluator tools.
+description: Learn about the discourage packages checker and how it checksif discouraged packages are installed within your Spryker project.
 template: howto-guide-template
 last_updated: Nov 10, 2023
 redirect_from:

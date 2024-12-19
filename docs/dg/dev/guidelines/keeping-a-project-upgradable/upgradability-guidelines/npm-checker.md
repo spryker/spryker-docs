@@ -1,6 +1,6 @@
 ---
 title: Npm checker
-description: Reference information for evaluator tools.
+description: Learn about the NPM checker and how it identifies and reports security vulnerabilites in npm dependencies within your Spryker project.
 template: howto-guide-template
 last_updated: Oct 24, 2023
 redirect_from:

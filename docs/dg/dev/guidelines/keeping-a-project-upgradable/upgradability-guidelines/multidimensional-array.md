@@ -1,6 +1,6 @@
 ---
 title: Multidimensional array
-description: Reference information for evaluator tools.
+description: Learn about the multidimensional array and how it checks that your Spryker project does not use deeply nested multidimensional arrays
 template: howto-guide-template
 last_updated: Oct 24, 2023
 redirect_from:

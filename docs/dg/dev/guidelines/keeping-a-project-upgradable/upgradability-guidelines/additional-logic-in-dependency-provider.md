@@ -1,6 +1,6 @@
 ---
 title: Additional logic in dependency provider
-description: Reference information for evaluator tools.
+description: Learn about the additional logic in dependency provider and how it checks the way plugins are registered within your Spryker project.
 template: howto-guide-template
 last_updated: Nov 15, 2023
 redirect_from:

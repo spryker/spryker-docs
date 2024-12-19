@@ -1,6 +1,6 @@
 ---
 title: Spryker dev packages checker
-description: Reference information for evaluator tools.
+description: Learn how the Spryker Dev Packages checker and how it checks the project dependencies for constraitns within your spryker projects.
 template: howto-guide-template
 last_updated: Sep 27, 2023
 redirect_from:

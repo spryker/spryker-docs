@@ -1,6 +1,6 @@
 ---
 title: Dead code checker
-description: Reference information for evaluator tools.
+description: Learn about the dead code checker and how it extends core classes within your Spryker based project.
 template: howto-guide-template
 last_updated: Oct 24, 2023
 redirect_from:

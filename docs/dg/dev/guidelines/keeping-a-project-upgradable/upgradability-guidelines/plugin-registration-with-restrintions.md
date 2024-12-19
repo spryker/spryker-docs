@@ -1,6 +1,6 @@
 ---
 title: Plugin registration with restrictions
-description: Reference information for evaluator tools.
+description: Learn how the registration with restrictions plugin checks dependencies between plugins are according to spec within your spryker projects.
 template: howto-guide-template
 last_updated: Oct 24, 2023
 redirect_from:

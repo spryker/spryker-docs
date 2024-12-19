@@ -1,6 +1,6 @@
 ---
 title: 'Migrate to cloud: Migrate database'
-description: To migrate to SCCOS, one of the steps is migrating the database
+description: Learn how to migrate to Spryker Cloud Commerce OS and migrate your data to the databse within your Spryker based project.
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-13-migrate-database.html

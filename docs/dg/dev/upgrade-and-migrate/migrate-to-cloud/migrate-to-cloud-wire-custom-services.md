@@ -1,6 +1,6 @@
 ---
 title: 'Migrate to cloud: Wire custom services'
-description: When migrating to SCCOS, you can wire the custom services.
+description: Learn how to migrate to Spryker Cloud Commerce OS and wire custom services for Spryker based project.
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-11-wire-custom-services.html

@@ -1,6 +1,6 @@
 ---
 title: 'Migrate to cloud: Restore Elasticsearch and Redis'
-description: To migrate to SCCOS, one of the steps, is restoring Elasticsearch and Redis.
+description:  Learn how to migrate to Spryker Cloud Commerce OS and restore Elasticsearch and Redis within your Spryker based project.
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-7-restore-es-and-redis.html

@@ -1,6 +1,6 @@
 ---
 title: 'Migrate to cloud: Adapt the file system-based features'
-description: To migrate to SCCOS, one of the steps, is restoring Elasticsearch and Redis.
+description: Learn how to migrate to Spryker Cloud Commerce os and adapt the file system based features for your Spryker project.
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-8-adapt-the-filesystem-based-features.html

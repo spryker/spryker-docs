@@ -1,6 +1,6 @@
 ---
 title: 'Migrate to cloud: Add frontend assets'
-description: To migrate to SCCOS, one of the steps, is adding the frontend assets.
+description: Learn how to migrate to Spryker Cloud Commerce OS and add frontend assets in your Spryker based project.
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-10-add-frontend-assets.html

@@ -1,6 +1,6 @@
 ---
 title: "Migrate to cloud: Integrate the Docker SDK"
-description: Learn how to integrate the Docker SDK
+description: Learn how to integrate the Docker SDK to start your migration to Spryker Cloud Commerce OS.
 template: howto-guide-template
 last_updated: Dec 6, 2023
 redirect_from:

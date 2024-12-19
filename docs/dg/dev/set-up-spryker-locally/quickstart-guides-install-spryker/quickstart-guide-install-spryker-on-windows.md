@@ -1,6 +1,6 @@
 ---
 title: "Quickstart guide: Install Spryker on Windows"
-description: Get started with Spryker using Docker on Windows
+description: A quickstart guide to get you up and running installing Spryker in a local environment on Windows.
 last_updated: Feb 03, 2023
 template: howto-guide-template
 redirect_from:

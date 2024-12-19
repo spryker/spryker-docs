@@ -1,6 +1,6 @@
 ---
 title: "Quickstart guides: Install Spryker"
-description: Quick install Spryker B2B, B2C, Marketplace B2B, Marketplace B2C
+description: Get up and running quickly with these Quickstart guides on how to install Spryker B2B, B2C, Marketplace B2B, Marketplace B2C in a local environment.
 last_updated: Feb 3, 2023
 template: concept-topic-template
 redirect_from:

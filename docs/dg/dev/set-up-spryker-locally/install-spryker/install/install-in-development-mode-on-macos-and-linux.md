@@ -1,6 +1,6 @@
 ---
 title: Install in Development mode on MacOS and Linux
-description: Learn how to install Spryker in Development mode on MacOS and Linux.
+description: Learn how to install and configure Spryker in Development mode on MacOS and Linux in a local environment.
 last_updated: Oct 21, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-in-development-mode-on-macos-and-linux
@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html
 related:
   - title: Database access credentials
-    link: docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html
+    link: docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
 ---
 
 {% info_block infoBox "Info" %}

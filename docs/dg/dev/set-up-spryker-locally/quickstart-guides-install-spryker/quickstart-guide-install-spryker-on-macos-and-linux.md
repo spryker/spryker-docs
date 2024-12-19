@@ -1,6 +1,6 @@
 ---
 title: "Quickstart guide: Install Spryker on MacOS and Linux"
-description: Get started with Spryker on MacOS and Linux
+description: A quickstart guide to get you up and running installing Spryker in a local environment on MacOS and Linux.
 last_updated: Feb 3, 2022
 template: howto-guide-template
 redirect_from:

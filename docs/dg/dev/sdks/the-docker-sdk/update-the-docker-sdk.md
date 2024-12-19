@@ -1,5 +1,6 @@
 ---
 title: Update the Docker SDK
+description: Learn how you can update the Docker SDK to a newer version depending on the installation of your Spryker instance.
 last_updated: Jun 1, 2024
 template: howto-guide-template
 

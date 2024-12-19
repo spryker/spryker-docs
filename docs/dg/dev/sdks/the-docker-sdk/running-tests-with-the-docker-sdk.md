@@ -1,6 +1,6 @@
 ---
 title: Running tests with the Docker SDK
-description: Learn how to run tests with the Docker SDK.
+description: Learn how you can run tests in different ways with the Docker SDK for your Spryker based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/running-tests-with-the-docker-sdk

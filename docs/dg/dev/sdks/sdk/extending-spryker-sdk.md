@@ -1,6 +1,6 @@
 ---
 title: Extending Spryker SDK
-description: Find out how you can extend the Spryker SDK
+description: Find out how you can extend the Spryker SDK allowing third parties to contribute to the SDK without modifying it.
 template: howto-guide-template
 last_updated: Jan 13, 2023
 redirect_from:

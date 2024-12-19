@@ -1,6 +1,6 @@
 ---
 title: Value resolvers
-description: Spryker SDK has several value resolvers described in this document.
+description: Learn about Spryker SDK and its several value resolvers described in this document for your spryker projects.
 template: concept-topic-template
 redirect_from:
 - /docs/sdk/dev/value-resolvers.html

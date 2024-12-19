@@ -1,6 +1,6 @@
 ---
 title: "Product Relations: module relations"
-description: Module relations of the product relations.
+description: Module relations for the product relations feature in Spryker Cloud Commerce OS and Spryker based projects.
 template: feature-walkthrough-template
 redirect_from:
 - /docs/scos/dev/feature-walkthroughs/202204.0/product-relations-feature-walkthrough/product-relations-feature-walkthrough.html

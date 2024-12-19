@@ -59,7 +59,7 @@ console transfer:generate
 
 {% info_block errorBox %}
 
-Care should be taken on the project level code to handle the availability and stock values as decimal objects. Due to the PHP floating-point precision issues, all decimal numbers in Spryker are wrapped in `decimal-object` that handles the calculations performed on them to allow exact precision. For more information about the`decimal-object` library, see [HowTo: Integrate and use precise decimal numbers](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html).
+Care should be taken on the project level code to handle the availability and stock values as decimal objects. Because of the PHP floating-point precision issues, all decimal numbers in Spryker are wrapped in `decimal-object` that handles the calculations performed on them to allow exact precision. For more information about the`decimal-object` library, see [HowTo: Integrate and use precise decimal numbers](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html).
 
 {% endinfo_block %}
 

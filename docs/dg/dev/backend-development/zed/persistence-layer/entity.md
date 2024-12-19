@@ -9,17 +9,17 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
 related:
   - title: Database overview
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/database-overview.html
   - title: Database schema definition
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/database-schema-definition.html
   - title: Entity manager
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/entity-manager.html
   - title: About the query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-container/query-container.html
   - title: Query objects - creation and usage
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-objects-creation-and-usage.html
   - title: Repository
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/repository.html
 ---
 
 In Spryker, an entity represents one entry from a table in the database. Entities are an implementation of the [Active record design pattern](https://en.wikipedia.org/wiki/Active_record_pattern), so their usage is very simple. For more details, see [Propel's Active Record Reference](http://propelorm.org/documentation/reference/active-record.html).

@@ -1,6 +1,6 @@
 ---
 title: Service Points Management
-description: Service points let you provide services at offline locations.
+description: Learn about the Spryker Service points feature, allowing you to provide your services at offline locations.
 template: concept-topic-template
 last_updated: Nov 23, 2023
 ---

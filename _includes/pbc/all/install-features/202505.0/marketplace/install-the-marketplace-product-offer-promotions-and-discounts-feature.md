@@ -1,10 +1,6 @@
 This document describes how to install the Marketplace Product Offer + Promotions & Discounts feature.
 
-## Install feature core
-
-Follow the steps below to install the feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -14,7 +10,7 @@ Install the required features:
 | Marketplace Product Offer | {{page.version}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
 | Spryker Core              | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                          |
 
-### 1) Install the required modules
+## 1) Install the required modules
 
 Install the required modules using Composer:
 
@@ -32,13 +28,13 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up behavior
+## 2) Set up behavior
 
 Set up the following behaviors:
 
 | PLUGIN                                               | SPECIFICATION                                                                        | PREREQUISITES | NAMESPACE                                                               |
 |------------------------------------------------------|--------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------|
-| ProductOfferReferenceDecisionRulePlugin              | Checks if the item's product offer reference matches the discount's condition.       |               | Spryker\Zed\ProductOfferDiscountConnector\Communication\Plugin\Discount |
+| ProductOfferReferenceDecisionRulePlugin              | Checks if an item's product offer reference matches the discount's condition.       |               | Spryker\Zed\ProductOfferDiscountConnector\Communication\Plugin\Discount |
 | ProductOfferReferenceDiscountableItemCollectorPlugin | Collects discountable items from the given quote by items' product offer references. |               | Spryker\Zed\ProductOfferDiscountConnector\Communication\Plugin\Discount |
 
 **src/Pyz/Zed/Discount/DiscountDependencyProvider.php**
@@ -63,7 +59,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
             new ProductOfferReferenceDecisionRulePlugin(),
         ]);
     }
-    
+
     /**
      * @return list<\Spryker\Zed\DiscountExtension\Dependency\Plugin\DiscountableItemCollectorPluginInterface>
      */
@@ -79,7 +75,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 {% info_block warningBox "Verification" %}
 
 1. [Create a discount](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a `product-offer` field.
-2. Add a product offer defined in the newly created discount to the cart.
-3. Verify that the discount is applied to the cart.
+2. Add a product offer defined in the discount you've created to cart.
+  Make sure that the discount has been applied to the cart.
 
 {% endinfo_block %}

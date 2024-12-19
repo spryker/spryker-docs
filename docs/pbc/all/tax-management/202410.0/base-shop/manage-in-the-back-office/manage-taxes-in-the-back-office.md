@@ -1,6 +1,6 @@
 ---
 title: Manage taxes in the Back Office
-description: Learn how to log into the Back Office.
+description: Learn how you can manage tax rates and tax sets directly in the back office of your Spryker Cloud Commerce OS project.
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 reidrect_from:

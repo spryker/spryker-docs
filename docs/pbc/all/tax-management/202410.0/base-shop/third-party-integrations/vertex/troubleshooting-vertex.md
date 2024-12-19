@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Vertex
-description: Troubleshoot issues related to the Vertex app
+description: Some hints and tips on troubleshoot issues related to the Vertex app within your Spryker project.
 template: troubleshooting-guide-template
 last_updated: Dec 4, 2023
 ---

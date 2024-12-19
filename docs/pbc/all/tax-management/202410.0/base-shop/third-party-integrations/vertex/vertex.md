@@ -1,6 +1,6 @@
 ---
 title: Vertex
-description: Vertex technology partner
+description: Spryker's third party Vertex technology partner, and how tax calculations can enhance your Spryker based project.
 last_updated: May 17, 2024
 template: concept-topic-template
 related:

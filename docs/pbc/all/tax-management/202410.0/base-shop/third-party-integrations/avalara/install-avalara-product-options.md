@@ -1,6 +1,6 @@
 ---
 title: Install Avalara + Product Options
-description: Integrate the Avalara Tax + Product Options feature into your project
+description: Learn how to install Avalara + Product options within your Spryker Cloud Commerce OS Project.
 last_updated: Aug 3, 2023
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/avalara-tax-product-options-feature-integration

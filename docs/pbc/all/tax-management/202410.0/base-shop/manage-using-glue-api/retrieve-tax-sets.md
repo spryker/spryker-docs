@@ -1,6 +1,6 @@
 ---
 title: Retrieve tax sets
-description: Retrieve details information about tax sets of abstract products.
+description: Learn how you can retrieve Spryker Tax sets using GLUE API within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-tax-sets

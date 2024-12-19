@@ -1,6 +1,6 @@
 ---
 title: Tax Management data import
-description: Details about data import files for the Tax Management PBC
+description: Learn all about data import files and the different ways of importing data for the Tax Management PBC within you Spryker based projects.
 template: concept-topic-template
 last_updated: Jul 23, 2023
 redirect_from:

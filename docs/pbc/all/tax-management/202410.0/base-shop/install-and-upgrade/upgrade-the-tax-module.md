@@ -1,6 +1,6 @@
 ---
 title: Upgrade the Tax module
-description: Use the guide to learn how to update the Tax module to a newer version.
+description: Learn to upgrade to a newer version of the tax module within your Spryker Tax management feature.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-tax

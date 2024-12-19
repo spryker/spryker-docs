@@ -1,6 +1,6 @@
 ---
 title: Edit tax rates
-description: Learn how to edit tax rates in the Back Office.
+description: Learn how you can edit tax rates directly in the back office of your Spryker Cloud Commerce OS project.
 last_updated: May 31, 2022
 template: back-office-user-guide-template
 related:

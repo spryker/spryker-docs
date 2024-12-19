@@ -1,5 +1,6 @@
 ---
 title: "Import file details: shipment.csv"
+description: Learn how to import shipment information using the shipment csv file within you Spryker based project for the tax management feature.
 last_updated: Aug 2, 2022
 template: data-import-template
 redirect_from:

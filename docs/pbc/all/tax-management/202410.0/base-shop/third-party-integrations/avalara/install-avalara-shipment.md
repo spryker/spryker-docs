@@ -1,6 +1,6 @@
 ---
 title: Install Avalara + Shipment
-description: Install Avalara + Shipment.
+description: Learn how to install Avalara + shipment within your Spryker Cloud Commerce OS Project.
 last_updated: Jun 18, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/avalara-tax-shipment-feature-integration

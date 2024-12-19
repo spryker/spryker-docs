@@ -1,6 +1,6 @@
 ---
 title: Avalara
-description: Avalara technology partner
+description: Learn about Sprykers third party Avalara and how you can integrate Avlara to enhance your Spryker based projects.
 last_updated: Jun 18, 2021
 template: concept-topic-template
 redirect_from:

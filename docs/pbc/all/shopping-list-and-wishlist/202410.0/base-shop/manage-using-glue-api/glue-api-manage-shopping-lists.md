@@ -1,5 +1,6 @@
 ---
 title: "Glue API: Manage shopping lists"
+description: Learn how to manage Spryker shopping list via the Glue API in your Spryker Cloud Commerce OS Projects.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-shopping-lists

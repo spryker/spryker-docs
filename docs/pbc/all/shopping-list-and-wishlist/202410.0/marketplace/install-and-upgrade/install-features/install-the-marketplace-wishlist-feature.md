@@ -1,7 +1,7 @@
 ---
 title: Install the Marketplace Wishlist feature
 last_updated: Jul 05, 2021
-Description: This document describes the process how to integrate the Marketplace wishlist feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace wishlist feature into a Spryker project.
 template: feature-integration-guide-template
 related:
   - title: Marketplace Wishlist feature walkthrough

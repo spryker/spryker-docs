@@ -1,5 +1,6 @@
 ---
 title: "Glue API: Manage marketplace shopping lists"
+description: Learn how to manage the Spryker Marketplace Shopping lists with GLUE API for your Spryker Marketplace projects.
 last_updated: May 20, 2022
 template: glue-api-storefront-guide-template
 related:

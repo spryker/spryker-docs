@@ -1,6 +1,6 @@
 ---
 title: Shopping Lists feature overview
-description: A general overview of the Multiple and shared shopping lists feature.
+description: A general overview of the Multiple and shared shopping lists feature within Spryker Cloud Commerce OS.
 last_updated: Aug 20, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-and-shared-shopping-lists-overview

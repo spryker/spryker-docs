@@ -1,6 +1,6 @@
 ---
 title: Upgrade the ShoppingListWidget module
-description: Use the guide to learn how to update the ShoppingListWidget module.
+description: Learn how to upgrade to a newer version of the Spryker Shopping List Widget Module within your Spryker Cloud Commerce OS projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-shopping-list-widget

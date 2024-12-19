@@ -1,6 +1,6 @@
 ---
 title: Marketplace Wishlist feature overview
-description: This document contains concept information for the Marketplace Wishlist feature.
+description: Learn about the Spryker Marketplace Wishlist Feature with this overview, helping your shoppers save time by having their favourite items in one place.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 ---

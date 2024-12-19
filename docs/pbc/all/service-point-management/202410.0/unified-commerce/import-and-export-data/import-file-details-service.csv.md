@@ -1,5 +1,6 @@
 ---
 title: "Import file details: service.csv"
+description: Learn how to configure service information via importing data through the service CSV file in your Spryker unified commerce project.
 last_updated: Nov 23, 2023
 template: data-import-template
 ---

@@ -95,7 +95,7 @@ docker/sdk boot && docker/sdk up --build
 
 ## 5. Test the upgrade
 
-Thoroughly test your application to identify any issues due to the PHP version upgrade:
+Thoroughly test your application to identify any issues because of the PHP version upgrade:
 
  - Automated tests: Run unit, integration, and functional tests.
  - Manual testing: Test critical application functionality.

@@ -64,7 +64,7 @@ Applies to all application components.
 ### What not to log?
 * Unreasonable logging: Avoid logging without a clear purpose. When deciding to create a log entry, identify at least one use case for the data.
 * Performance critical places: Minimize logging in areas where performance is critical. If there's a performance-critical process or a large cycle as a sub-process element, try to strike a balance between performance and traceability.
-* Audit trail: While it's recommended to log the audit trails of significant entity changes, these logs shouldn't be sent to the regular log system due to the sensitive nature of the data typically involved in authentication and authorization.
+* Audit trail: While it's recommended to log the audit trails of significant entity changes, these logs shouldn't be sent to the regular log system because of the sensitive nature of the data typically involved in authentication and authorization.
 
 ### Log levels
 Appropriately implement the following log levels in application workflows to simplify issue investigations and resolutions. The log levels are based on Syslog [RFC 5424](https://datatracker.ietf.org/doc/html/rfc5424).

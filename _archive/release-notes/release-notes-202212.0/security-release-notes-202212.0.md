@@ -60,7 +60,7 @@ spryker/twig (3.17.0 or earlier)
 
 ## Missing validation of the wishlist name on adding an item
 
-Due to the way the characters are handled, it was possible to abuse the name in a way that the constructed URL linked to another resource of the shop instead of the wishlist.
+Because of the way the characters are handled, it was possible to abuse the name in a way that the constructed URL linked to another resource of the shop instead of the wishlist.
 
 **Changes:**
 Wishlist module:
@@ -330,7 +330,7 @@ composer update codeception/codeception
 Make sure that for the codeception/codeception module, the current version is equal to or later than 4.1.22.
 
 ## Known vulnerabilities in frontend dependencies
-- The datatables.net package is vulnerable to Prototype Pollution due to an incomplete fix.
+- The datatables.net package is vulnerable to Prototype Pollution because of an incomplete fix.
 - Known Regular Expression Denial of Service (ReDoS) vulnerabilities in the hosted-git-info package.
 - Known vulnerabilities in the lodash package (Command Injection, ReDoS, Prototype Pollution).
 - Known vulnerabilities in the ssri package (ReDoS).

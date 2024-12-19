@@ -219,7 +219,7 @@ _Estimated migration time: 1 hour. The time may vary depending on project-specif
 ### Update modules
 
 1. Update the `Category` module by adding `"spryker/category": "^4.0.0"` to your `composer.json` and running composer update.
-Due to the changes in the Category module, all related modules have to be updated too.
+Because of the changes in the Category module, all related modules have to be updated too.
 2. Run composer require `spryker/event spryker/storage` to install Event and Storage modules.
 
 ### Database update and migration

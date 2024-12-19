@@ -10,7 +10,7 @@ redirect_from:
 
 ## Cause
 
-PHPStan needs to parse all files and due to Spryker's magic with resolving classes, e.g., `$this->getFacade()`, PHPStan needs to look up this class on its own when the `@method` annotation is missing.
+PHPStan needs to parse all files and because of Spryker's magic with resolving classes, e.g., `$this->getFacade()`, PHPStan needs to look up this class on its own when the `@method` annotation is missing.
 
 ## Solution
 

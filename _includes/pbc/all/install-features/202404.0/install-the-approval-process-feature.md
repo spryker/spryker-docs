@@ -139,9 +139,9 @@ quote_approval.remove,Cancel Request,en_US
 quote_approval.remove,Anfrage Abbrechen,de_DE
 quote_approval.cart.require_approval,"You can't place this order because of your purchasing limit, please send your cart for approval or contact your manager.",en_US
 quote_approval.cart.require_approval,"Sie können diese Bestellung aufgrund Ihres Einkaufslimits nicht aufgeben. Senden Sie Ihren Einkaufswagen zur Genehmigung oder wenden Sie sich an Ihren Kontakmanager.",de_DE
-quote_approval.cart.waiting_approval,"You can't place this order due to pending approval request.",en_US
+quote_approval.cart.waiting_approval,"You can't place this order because of pending approval request.",en_US
 quote_approval.cart.waiting_approval,"Sie können diese Bestellung aufgrund einer ausstehenden Genehmigungsanfrage nicht aufgeben.",de_DE
-quote_approval.create.approver_cant_approve_quote,"Selected approver cannot approve your request due to approver limit.",en_US
+quote_approval.create.approver_cant_approve_quote,"Selected approver cannot approve your request because of approver limit.",en_US
 quote_approval.create.approver_cant_approve_quote,"Der ausgewählte Manager kann Ihre Anfrage aufgrund des Genehmigungslimits nicht genehmigen.",de_DE
 quote_approval.create.you_cant_approve_quote,"You can't approve or decline this cart because it's amount higher that your Approver limit.",en_US
 quote_approval.create.you_cant_approve_quote,"Sie können diesen Einkaufswagen nicht genehmigen oder ablehnen, weil dessen Betrag höher als ihr Genehmigungslimit ist.",de_DE

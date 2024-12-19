@@ -1,6 +1,6 @@
 ---
 title: Service Points + Order Management feature overview
-description: General overview of the Service Points + Order Management feature
+description: General overview of the Service Points + Order Management feature for your Spryker Unified Commerce Features.
 template: concept-topic-template
 last_updated: Dec 4, 2023
 ---

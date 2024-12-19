@@ -366,7 +366,7 @@ By accepting, you allow us to capture anonymous events for personalization, anal
   * Add products to cart
   * Place orders
 4. Repeat step 3 as a logged-in user.  
-5. In the [Algolia Dashboard](https://dashboard.algolia.com/), go to **Data Sources**>**Events**.
+5. In the [Algolia Dashboard](https://dashboard.algolia.com/users/sign_in), go to **Data Sources**>**Events**.
   Make sure the events you've triggered are displayed.
 
 

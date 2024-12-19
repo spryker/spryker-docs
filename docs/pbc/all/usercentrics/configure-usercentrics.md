@@ -1,6 +1,6 @@
 ---
 title: Configure Usercentrics
-description: Find out how you can configure Usercentrics in your Spryker shop
+description: Learn how you can configure Spryker Third Party Usercentrics in to your Spryker based shop
 last_updated: July 3, 2023
 template: howto-guide-template
 ---

@@ -1,6 +1,6 @@
 ---
 title: Disconnect Usercentrics
-description: Find out how you can disconnect Usercentrics from your Spryker shop
+description: Learn how you can disconnect Spryker Third Party Usercentrics in to your Spryker based shop
 template: howto-guide-template
 last_updated: Sep 13, 2022
 ---

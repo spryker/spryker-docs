@@ -15,7 +15,7 @@ To improve debugging of failures and slow events in Spryker, we introduced a new
 | PROPERTY | SINGLE PUBLISH QUEUE STRUCTURE | MULTIPLE PUBLISH QUEUE STRUCTURE |
 | --- | --- | --- |
 | Event processing | Infrastructure and application events are processed in the same event queue. | Infrastructure events are spread across multiple publish events. Application events are processed in the event queue. |
-| Monitoring of event consumption speed | Due to mixed listeners, event consumption speed is unpredictable and not linear. | You can monitor the speed of event consumption in each queue separately. |
+| Monitoring of event consumption speed | Because of mixed listeners, event consumption speed is unpredictable and not linear. | You can monitor the speed of event consumption in each queue separately. |
 | Per event configuration of chunk size |  | &check; |
 | Per event separation of workers |  | &check; |
 

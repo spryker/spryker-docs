@@ -44,7 +44,7 @@ Spryker uses our proprietary licenses and common open-source licenses. In genera
 
 For example, here is a result of this flow: https://github.com/spryker/product-configurations-rest-api/pull/1.
 
-If we can't merge a PR due to our release process, we manually introduce the change. Once the change is released, we inform you by closing the PR.
+If we can't merge a PR because of our release process, we manually introduce the change. Once the change is released, we inform you by closing the PR.
 
 ## Pull request processing time
 

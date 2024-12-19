@@ -14,7 +14,7 @@ You normally add a CNAME record in your DNS Management for the domains you want 
 
 {% info_block infoBox "Info" %}
 
-This process can take a full week to complete due to DNS propagation and the terraform work that needs to be done. To avoid double work, ensure the endpoint selection is final and tested.
+This process can take a full week to complete because of DNS propagation and the terraform work that needs to be done. To avoid double work, ensure the endpoint selection is final and tested.
 
 {% endinfo_block %}
 

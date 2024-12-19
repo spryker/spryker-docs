@@ -1,6 +1,6 @@
 ---
-title: Mac OSX - Installation fails or project folder can not be mounted due to SIP
-description: Learn how to fix the issue when installation fails on MacOS or project folder can not be mounted due to SIP
+title: Mac OSX - Installation fails or project folder can not be mounted because of SIP
+description: Learn how to fix the issue when installation fails on MacOS or project folder can not be mounted because of SIP
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip
@@ -21,7 +21,7 @@ related:
 
 ## Description
 
-Sometimes, installation fails or project folder can not be mounted due to SIP on MacOS.
+Sometimes, installation fails or project folder can not be mounted because of SIP on MacOS.
 
 ## Cause
 

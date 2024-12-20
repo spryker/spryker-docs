@@ -1,7 +1,7 @@
 ---
 title: Run the docs locally
 description: Learn how to Build and run Spryker Documentation directly on your local machine with this guide.
-last_updated: Jul 18, 2022
+last_updated: Dec 20, 2024
 template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
@@ -33,36 +33,69 @@ Depending on your operating system, follow the Jekyll installation guides below.
 
 ### Install Jekyll on MacOS
 
-The installation process is different depending whether you are using a Mac with an Intel processor or with a Silicon M1 chip. To find out whether you have an Intel or a Silicon M1 Mac, click the **Apple** menu and choose **About This Mac**.
+The installation process is different depending whether you are using a Mac with an Intel processor or with Apple Silicon. To find out which type of Mac you have, click the **Apple** menu and choose **About This Mac**.
 
-* Silicon Macs with the M1 processor show an item labeled _Chip_ followed by the name of the Apple chip.
+* Apple Silicon Macs show an item labeled _Chip_ followed by the name of the Apple chip.
 
 * Intel-based Macs show an item labeled _Processor_ followed by the name and/or model number of the Intel processor.
 
-{% info_block warningBox "MacOS on M1 processor – Open Terminal using Rosetta" %}
+{% info_block warningBox "MacOS on Apple Silicon" %}
 
-On a MacBook with the M1 processor, make sure your Terminal is opened with Rosetta 2, by following the instructions here. Rosetta is a translation layer that enables non-native Intel x86 apps, including Homebrew, to run on Apple Silicon Macs.
-To open your terminal using Rosetta, follow these steps:
-1.	Open a _Finder_ window.
-2.	In _Applications_, locate _Terminal_.
-3.	Right click on **Terminal** and select **Get Info**.
-4.	Make sure _Open using Rosetta_ is checked.
+For Macs with Apple Silicon, we recommend using rbenv to manage Ruby versions. Follow these steps:
+
+1. Install rbenv using Homebrew:
+```bash
+brew install rbenv ruby-build
+```
+
+2. Set up rbenv in your shell:
+```bash
+# Add rbenv to your shell configuration
+echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+
+# Reload the shell configuration to apply changes
+source ~/.zshrc
+```
+
+3. Install and set up Ruby 3.2.2:
+```bash
+# Install Ruby 3.2.2
+rbenv install 3.2.2
+
+# Set Ruby 3.2.2 as the local version for this directory
+rbenv local 3.2.2
+
+# Update rbenv shims to ensure all commands are available
+rbenv rehash
+```
+
+4. Verify the installation:
+```bash
+# Should show ~/.rbenv/shims/ruby (indicating rbenv is managing Ruby)
+which ruby
+
+# Should show Ruby 3.2.2
+ruby -v
+
+# Should show bundler is available
+gem list bundler
+```
 
 {% endinfo_block %}
 
-On either an M1 or an Intel Mac, follow the steps below to install Jekyll. M1-specific instructions appear as notes wherever necessary.  
+On either an Apple Silicon or Intel Mac, follow the steps below to install Jekyll. Apple Silicon-specific instructions appear as notes wherever necessary.  
 
 #### 1. Install Homebrew
 
-Homebrew is a package manager for macOS because by default Mac doesn’t have a package manager. You use Homebrew to install Ruby in the next step. Additionally, when you install Homebrew, Xcode command line tools and GCC are also installed automatically.
+Homebrew is a package manager for macOS because by default Mac doesn't have a package manager. You use Homebrew to install Ruby in the next step. Additionally, when you install Homebrew, Xcode command line tools and GCC are also installed automatically.
 
 To install Homebrew, follow these steps:
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-{% info_block infoBox "MacOS on M1 processor" %}
+{% info_block infoBox "MacOS on Apple Silicon" %}
 
-On an M1 Mac, Homebrew files are installed into the `/opt/homebrew` folder. Because this folder is not part of the default $PATH, you need to follow the next steps that Homebrew includes at the end of the installation output to add Homebrew to your PATH. In the example below, we've replaced your actual username with:  `/Users/_username_/.zprofile`.
+On Apple Silicon Macs, Homebrew files are installed into the `/opt/homebrew` folder. Because this folder is not part of the default $PATH, you need to follow the next steps that Homebrew includes at the end of the installation output to add Homebrew to your PATH. In the example below, we've replaced your actual username with:  `/Users/_username_/.zprofile`.
 
 ```bash
 ==> Next steps:
@@ -94,7 +127,7 @@ To save the updated .zprofile file, click **control o**. Then, to exit the .zpro
 brew install make
 ```
 
-#### 3. Install Ruby
+#### 3. Install Ruby and Configure Path
 Check your current Ruby version:
 
 ```bash
@@ -126,7 +159,7 @@ Add the brew Ruby and gems path to your shell configuration:
         echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.bash_profile
         ```
 
-#### 3. Install Jekyll and Bundler
+#### 4. Install Jekyll and Bundler
 1. Install Jekyll and Bundler gems:
 ```bash
 gem install --user-install bundler jekyll
@@ -181,13 +214,17 @@ cd spryker-docs
 ```bash
 bundle install
 ```
-{% info_block infoBox "MacOS on M1 processor" %}
+{% info_block infoBox "MacOS on Apple Silicon" %}
 
-On a MacBook with the M1 processor, run the following command instead:
+On Apple Silicon Macs, after setting up rbenv and Ruby 3.2.2 as described above, simply run:
 
 ```bash
-arch -arch x86_64 bundle install
+bundle install
 ```
+
+Note: 
+- You may need to run `npm install` to set up the Node.js dependencies for asset processing.
+- The site uses jekyll-last-modified-at to track file modifications through Git history.
 
 {% endinfo_block %}
 
@@ -205,13 +242,15 @@ bundle exec jekyll serve
 ```
 Now, you can access the local copy of the Spryker documentation site at `http://localhost:4000`.
 
-{% info_block infoBox "MacOS on M1 processor" %}
+{% info_block infoBox "MacOS on Apple Silicon" %}
 
-On a MacBook with the M1 processor, run the following command instead:
+On Apple Silicon Macs, after setting up rbenv and Ruby 3.2.2 as described above, you can run the server normally:
 
 ```bash
-arch -arch x86_64 bundle exec jekyll serve
+bundle exec jekyll serve --incremental --livereload
 ```
+
+The `--incremental` flag ensures only changed files are rebuilt, and `--livereload` automatically refreshes your browser when changes are made.
 
 {% endinfo_block %}
 

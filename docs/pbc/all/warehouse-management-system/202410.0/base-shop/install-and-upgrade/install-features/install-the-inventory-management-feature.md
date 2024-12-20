@@ -1,6 +1,6 @@
 ---
 title: Install the Inventory Management feature
-description: Install the Inventory Management feature in your project
+description: Learn how to install the Spryker inventory management feature in to your Spryker based project.
 template: feature-integration-guide-template
 last_updated: Feb 8, 2023
 redirect_from:

@@ -11,7 +11,7 @@ related:
   - title: Facade
     link: docs/dg/dev/backend-development/zed/business-layer/facade/facade.html
   - title: A facade implementation
-    link: docs/scos/dev/back-end-development/zed/business-layer/facade/a-facade-implementation.html
+    link: docs/dg/dev/backend-development/zed/business-layer/facade/a-facade-implementation.html
   - title: Facade use cases
     link: docs/dg/dev/backend-development/zed/business-layer/facade/facade-use-cases.html
 ---

@@ -36,7 +36,7 @@ When you [install Spryker with Vagrant](/docs/dg/dev/set-up-spryker-locally/inst
 MacOS issues:
 
   * [Mac OSX: iterm2 (locale error)](/docs/dg/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-iterm2-locale-error.html)
-  * [Mac OSX: Installation fails or project folder can not be mounted due to SIP](/docs/dg/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip.html)
+  * [Mac OSX: Installation fails or project folder can not be mounted because of SIP](/docs/dg/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip.html)
   * [Mac OSX: Wrong curl version error](/docs/dg/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-wrong-curl-version-error.html)
 
 Windows issues:

@@ -43,7 +43,7 @@ Software architecture and design must ensure that there is no negative impact on
 
 ## Security guidelines
 
-Make sure to define and follow your own project's [security best practices](/docs/scos/dev/guidelines/security-guidelines.html).
+Make sure to define and follow your own project's [security best practices](/docs/dg/dev/guidelines/security-guidelines.html).
 
 ## Deployability guidelines
 

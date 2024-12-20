@@ -16,9 +16,9 @@ redirect_from:
   - /docs/scos/dev/sdk/202108.0/development-tools/scss-linter.html
   - /docs/scos/dev/sdk/development-tools/scss-linter.html
 related:
-   - title: Code sniffer
+  - title: Code sniffer
     link: docs/dg/dev/sdks/sdk/development-tools/code-sniffer.html
-   - title: Formatter
+  - title: Formatter
     link: docs/dg/dev/sdks/sdk/development-tools/formatter.html
   - title: Architecture sniffer
     link: docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html

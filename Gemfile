@@ -16,7 +16,8 @@ group :jekyll_plugins do
   gem "jekyll-algolia", "~> 1.0"
   gem "page_template_validator", path: "./_plugins/page_template_validator"
   gem "jekyll-sitemap"
-  gem "jekyll-last-modified-at"
+  # Use a newer version of jekyll-last-modified-at for MacOS compatibility
+  gem "jekyll-last-modified-at", "~> 1.3.0"
   gem "jekyll-include-cache"
 end
 

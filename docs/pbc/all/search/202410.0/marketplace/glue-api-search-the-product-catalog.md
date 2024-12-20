@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Search the product catalog"
-description: Search the product catalog via Glue API
+description: Learn how you can Search the product catalog via Glue API within your Spryker based projects.
 template: glue-api-storefront-guide-template
 last_updated: Nov 21, 2023
 redirect_from:

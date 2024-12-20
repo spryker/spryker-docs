@@ -1,5 +1,6 @@
 ---
 title: Search migration concept
+description: Learn about upgrading to a new Elasticsearch version or learn how to migrate to a different search provider within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-migration-concept

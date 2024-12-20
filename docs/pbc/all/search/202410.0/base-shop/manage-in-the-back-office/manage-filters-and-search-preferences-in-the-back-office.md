@@ -1,6 +1,6 @@
 ---
 title: Manage filters and search preferences in the Back Office
-description: Learn how to log into the Back Office.
+description: Learn how to manage filters and search preferences directly in the Back Office of your Spryker based projects.
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:

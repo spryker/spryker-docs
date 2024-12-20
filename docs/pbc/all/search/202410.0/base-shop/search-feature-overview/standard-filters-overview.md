@@ -1,5 +1,6 @@
 ---
 title: Standard filters overview
+description: Learn about the Standard filters that helps customers to narrow down products they are looking for in your Spryker Cloud Commerce OS Shop.
 last_updated: Jul 8, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/standard-filters-overview

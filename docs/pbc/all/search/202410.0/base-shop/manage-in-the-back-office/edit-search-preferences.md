@@ -1,6 +1,6 @@
 ---
 title: Edit search preferences
-description: Learn how to edit search preferences in the Back Office
+description: Learn how to edit search preferences directly in the Back Office for your Spryker based projects.
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:

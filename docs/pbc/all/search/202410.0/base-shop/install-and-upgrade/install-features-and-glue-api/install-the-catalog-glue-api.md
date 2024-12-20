@@ -1,6 +1,6 @@
 ---
 title: Install the Catalog Glue API
-description: Use the guide to install the Glue Catalog feature in your project.
+description: Use the guide to learn how to install the Spryker Glue Catalog feature in to your Spryker based project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/catalog-api-feature-integration

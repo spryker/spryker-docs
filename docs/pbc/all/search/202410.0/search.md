@@ -1,6 +1,6 @@
 ---
 title: Search
-description: Search PBC lets you manage the search on the Storefront
+description: Learn everything you need to know about the Spryker Search Feature for your Spryker Cloud Commerce OS or Spryker Marketplace shop.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 ---

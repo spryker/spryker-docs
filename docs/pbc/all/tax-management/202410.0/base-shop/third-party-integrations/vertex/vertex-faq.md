@@ -1,6 +1,6 @@
 ---
 title: Vertex FAQ
-description: FAQ about Vertex
+description: Frequently asked questions about the Spryker third party integration, Vertex. 
 template: concept-topic-template
 last_updated: May 17, 2024
 ---

@@ -163,14 +163,14 @@ This setup has the following characteristics:
     - Centralized third-party integrations.
 
 This setup is recommended for the following cases:
-- Your shops look completely different—not only from the design perspective but also from business logic and used features/modules due to completely separated code.
+- Your shops look completely different—not only from the design perspective but also from business logic and used features/modules because of completely separated code.
 - Shop maintenance and development happen independently. You may have multiple teams working on different shops, having their own development workflow and release cycles.
-- Data management (products, customers, orders, etc.) is separated due to separate databases. Data sharing and synchronization is possible with the help of external systems.
+- Data management (products, customers, orders, etc.) is separated because of separate databases. Data sharing and synchronization is possible with the help of external systems.
 
 In terms of infrastructure, this setup is the most flexible way of scaling and deploying your setups independently since all of the infrastructure parts are separate cloud resources:
 
 - You can host single stores in different AWS regions. For example, you can host the US store in N. Virginia and the DE store—in Frankfurt.
-- Traffic distribution is _independent_ for every store* due to ALB+NLBs (ALB-->NLB-->Nginx-->PHP-FPM).
+- Traffic distribution is _independent_ for every store* because of ALB+NLBs (ALB-->NLB-->Nginx-->PHP-FPM).
 
 {% info_block infoBox "Info" %}
 

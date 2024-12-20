@@ -1,6 +1,6 @@
 ---
 title: Apply Avalara tax codes
-description: Apply Avalara tax codes to calculate taxes
+description: Learn how to apply Avalara tax codes to calculate taxes within your Spryker Cloud Commerce OS Project.
 last_updated: Aug 3, 2023
 template: concept-topic-template
 redirect_from:

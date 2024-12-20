@@ -66,7 +66,7 @@ In February 2024, we have added and updated the following pages:
 - [Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management/202404.0/marketplace/merchant-portal-agent-assist-feature-overview.html).
 - [Finilizing upgrades](/docs/ca/devscu/finilizing-upgrades.html): Learn how you can make sure everything works correctly after upgrading a module.
 - [Manage Stripe configurations in the ACP catalog](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/connect-and-configure-stripe.html).
-- [Project guidelines for the Stripe app](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe.html).
+- [Project guidelines for the Stripe app](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-guidelines-for-stripe.html).
 
 ### Updated pages
 

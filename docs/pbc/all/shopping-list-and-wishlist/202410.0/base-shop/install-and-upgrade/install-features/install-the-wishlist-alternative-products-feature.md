@@ -1,6 +1,6 @@
 ---
 title: Install the Wishlist + Alternative Products feature
-description: The guide walks you through the process of installing the Alternative products and Wishlist features into the project.
+description: Learn how to install the Spryker Wishlist + Alternative Product features in to your Spryker Cloud Commerce OS projects.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
   - /docs/pbc/all/shopping-list-and-wishlist/202311.0/base-shop/install-and-upgrade/install-the-wishlist-alternative-products-feature.html

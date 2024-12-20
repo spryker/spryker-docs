@@ -22,7 +22,7 @@ Below, you will find the most common architecture design mistakes and impediment
 
 ### Duplications of slow operations
 
-Sometimes, due to business requirements, it’s mandatory to have a slow operation during one transaction. This slow part of functionality might be very small and hidden behind an API, but the usage of this API can go out of control.
+Sometimes, because of business requirements, it’s mandatory to have a slow operation during one transaction. This slow part of functionality might be very small and hidden behind an API, but the usage of this API can go out of control.
 
 Let's consider an example illustrating the impact of a bad architecture design with slow operations. Imagine you have a method called `caluculateDiscount()` that generates some discounts for cart items. However, each call of this method takes 100ms, which might be a proper response time for an API. Now think of another business requirement when you need to calculate the discount for 10 separated groups of items in the cart. In this case, you need to call the `caluculateDiscount()` method 10 times, leading to 1000ms (1 second), which already poses a performance problem.
 
@@ -41,7 +41,7 @@ Make sure you carefully check for memory leaks during the query optimizations, a
 
 ### Optimistic vs. pessimistic locking
 
-Sometimes, developers use explicit locks to prevent race conditions or other issues that impact performance due to the high traffic load. This happens because all requests need to wait for the lock, which turns the parallel request processing into sequential processing and can increase the response time of all the queued requests.
+Sometimes, developers use explicit locks to prevent race conditions or other issues that impact performance because of the high traffic load. This happens because all requests need to wait for the lock, which turns the parallel request processing into sequential processing and can increase the response time of all the queued requests.
 
 Some of the pessimistic locking use cases are:
 
@@ -106,7 +106,7 @@ Spryker uses Propel ORM as a database abstraction layer which allows to stay DBM
 
 Performance is one of the key attributes when it comes to synchronous combinations. Therefore, as a rule of thumb, any database operations must be high performant and be executed fast. If ORM cannot guarantee the high-speed database operation because of the lack of features or complexity, one should avoid using it.
 
-For example, to display products in the Spryker shop, we need to import and propagate data into several databases. For some projects, this is a cumbersome operation due to the large volume of data. Therefore, Spryker recommends not to use ORM for these operations, but choose other solutions instead, for example, CTE, PDO, etc.
+For example, to display products in the Spryker shop, we need to import and propagate data into several databases. For some projects, this is a cumbersome operation because of the large volume of data. Therefore, Spryker recommends not to use ORM for these operations, but choose other solutions instead, for example, CTE, PDO, etc.
 
 For data import of large files, it's also important to use bulk processing. Therefore, consider importing data into the database with chunks of 1000+ elements. The same applies to triggering events. Using bulk processing saves a lot of time for communication with the database and queues.
 

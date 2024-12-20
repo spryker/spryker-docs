@@ -9,11 +9,11 @@ redirect_from:
   - /docs/scos/dev/guidelines/data-processing-guidelines.html
 related:
   - title: Making your Spryker shop secure
-    link: docs/scos/dev/guidelines/security-guidelines.html
+    link: docs/dg/dev/guidelines/security-guidelines.html
   - title: Module configuration convention
-    link: docs/scos/dev/guidelines/module-configuration-convention.html
+    link: docs/dg/dev/guidelines/module-configuration-convention.html
   - title: Project development guidelines
-    link: docs/scos/dev/guidelines/project-development-guidelines.html
+    link: docs/dg/dev/guidelines/project-development-guidelines.html
   - title: Data importer speed optimization
     link: docs/dg/dev/data-import/page.version/data-import-optimization-guidelines.html
 ---

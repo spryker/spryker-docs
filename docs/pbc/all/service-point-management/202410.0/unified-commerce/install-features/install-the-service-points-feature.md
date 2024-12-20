@@ -1,6 +1,6 @@
 ---
 title: Install the Service Points feature
-description: Learn how to integrate the Service Points feature into your project
+description: Learn how to integrate the Service Points feature into your Spryker Unified Commerce project
 last_updated: Aug 28, 2023
 template: feature-integration-guide-template
 redirect_from:

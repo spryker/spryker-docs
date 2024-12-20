@@ -534,7 +534,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 | CODE | REASON |
 | --- | --- |
-| 400 | Bad request. This error can occur due to the following reasons:<ul><li>The POST data is incorrect.</li><li>Neither **Authorization** nor **X-Anonymous-Customer-Unique-Id** headers were provided in the request.</li></ul> |
+| 400 | Bad request. This error can occur because of the following reasons:<ul><li>The POST data is incorrect.</li><li>Neither **Authorization** nor **X-Anonymous-Customer-Unique-Id** headers were provided in the request.</li></ul> |
 | 422 | The checkout data is incorrect. |
 | 1101 | Checkout data is invalid. |
 | 1102 | Order cannot be placed. |

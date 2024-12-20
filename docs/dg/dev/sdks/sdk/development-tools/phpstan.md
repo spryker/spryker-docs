@@ -46,7 +46,7 @@ composer require --dev phpstan/phpstan
 
 ## Usage
 
-1. Run the following command to generate autocompletion and prevent any error messages that might occur due to the incomplete classes:
+1. Run the following command to generate autocompletion and prevent any error messages that might occur because of the incomplete classes:
 `vendor/bin/console dev:ide:generate-auto-completion`
 2. Run this command to start analyzing:
 `php -d memory_limit=2048M vendor/bin/phpstan analyze -c vendor/spryker/spryker/phpstan.neon vendor/<spryker | spryker-eco | spryker-middleware>/<MODULE>/ -l 2`

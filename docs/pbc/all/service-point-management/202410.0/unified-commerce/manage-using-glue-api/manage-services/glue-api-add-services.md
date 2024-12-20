@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Add services"
-description: Learn how to add services using Glue API
+description: Learn how to add new services to your Unified Commerce shop using Spryker Glue API
 last_updated: Nov 23, 2023
 template: glue-api-storefront-guide-template
 ---

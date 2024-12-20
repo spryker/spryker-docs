@@ -1,6 +1,6 @@
 ---
 title: 'Migrate to cloud: Restore Elasticsearch and Redis'
-description: To migrate to SCCOS, one of the steps, is restoring Elasticsearch and Redis.
+description:  Learn how to migrate to Spryker Cloud Commerce OS and restore Elasticsearch and Redis within your Spryker based project.
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-7-restore-es-and-redis.html
@@ -18,7 +18,7 @@ There is a default `vendor/bin/console sync:data` command in Spryker that lets y
 
 Considering this fact, ensure that the `sync:data` command can restore your Elasticsearch and Redis from scratch in a consistent and resilient way. This especially applies to custom `*Storage` and `*Search` modules, as they should have synchronization plugins implemented and enabled.
 
-Due to the large data size, sometimes the command can't process all the records and fails. In this case, it can be executed per resource as follows:
+Because of the large data size, sometimes the command can't process all the records and fails. In this case, it can be executed per resource as follows:
 
 ```bash
 console sync:data url

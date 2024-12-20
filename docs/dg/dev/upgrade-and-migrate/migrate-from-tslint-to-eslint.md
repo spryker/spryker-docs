@@ -1,6 +1,6 @@
 ---
 title: Migrate from TSLint to ESLint
-description: Use this guide to migrate the project from TSLint to ESLint.
+description: Use this guide to learn how to migrate the project from TSLint to ESLint for your Spryker based projects.
 last_updated: Mar 24, 2023
 template: module-migration-guide-template
 redirect_from:

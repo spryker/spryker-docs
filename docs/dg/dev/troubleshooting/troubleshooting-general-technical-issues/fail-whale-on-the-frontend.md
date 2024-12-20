@@ -1,6 +1,6 @@
 ---
 title: Fail whale on the frontend
-description: The solution for the fail whale on the front end.
+description: Learn how to troubleshoot and the solution for the fail whale on the front end within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/fail-whale-on-the-front-end

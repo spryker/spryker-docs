@@ -110,6 +110,8 @@ To avoid manually assigning entities in the Back Office, you can assign them usi
 
 ### Environment variable section
 
+DMS off:
+
 ```yaml
 SPRYKER_HOOK_BEFORE_DEPLOY: 'vendor/bin/install -r pre-deploy.dynamic-store-off -vvv'
 SPRYKER_HOOK_AFTER_DEPLOY: 'true'
@@ -119,7 +121,7 @@ SPRYKER_YVES_HOST_DE: de.{{DOMAIN_ZONE}}
 SPRYKER_YVES_HOST_AT: at.{{DOMAIN_ZONE}}
 ```
 
-changed to:
+DMS on:
 
 ```yaml
 SPRYKER_HOOK_BEFORE_DEPLOY: 'vendor/bin/install -r pre-deploy -vvv'
@@ -131,6 +133,8 @@ SPRYKER_YVES_HOST_EU: yves.eu.{{DOMAIN_ZONE}}
 ```
 
 ### Regions section
+
+DMS off:
 
 ```yaml
 regions:
@@ -156,7 +160,7 @@ regions:
         session:
           namespace: 4
 ```
-converted to:
+DMS on:
 
 ```yaml
 regions:
@@ -171,9 +175,9 @@ regions:
 
 ### Applications section
 
-{% info_block infoBox "Info" %}
-The same pattern is valid for all applications
-{% endinfo_block %}
+The following examples the difference for one application. The difference is similar for all the applications.
+
+DMS off:
 
 ```yaml
  mportal:
@@ -194,7 +198,7 @@ The same pattern is valid for all applications
             namespace: 8
 ```
 
-converted to:
+DMS on:
 
 ```yaml
 mportal:
@@ -210,34 +214,33 @@ mportal:
           namespace: 7
 ```
 
-{% info_block infoBox "Verification" %}
-Please make sure that you've migrated all the application by the pattern provided above.
+{% info_block infoBox "" %}
+
+The domain structure is changed to enable store switching within the same domain.
+
 {% endinfo_block %}
 
-{% info_block infoBox "Info" %}
-The domain structure is changed to have an ability to switch between stores withing one domain.
-{% endinfo_block %}
+## Difference in the execution of console commands
 
-## Difference in console commands execution
-
-In disabled Dynamic Multistore mode, console commands which somehow depends on store, were executed with `APPLICATION_STORE` environment variable, example:
+With DMS off, store-aware console commands are executed with the `APPLICATION_STORE` environment variable. Example:
 
 ```shell
 APPLICATION_STORE=DE console search:setup:sources
 ```
 
-In Dynamic Multistore mode, all the store aware console commands should be executed with `--store` parameter, example:
+With DMS on, all the store-aware console commands are executed with the `--store` parameter. Example:
 
 ```shell
 console search:setup:sources --store=DE
 ```
 
-In case if store is not provided as a parameter, the command is executed for all stores within the current region.
+If a store isn't provided as a parameter, the command is executed for all stores within a current region.
 
-For the custom console commands please follow the next rules:
-- `Store(Facade|Client)::getCurrentStore()` should never be used in the code that console command executes.
-- All store aware commands should implement `Spryker\Zed\Kernel\Communication\Console\StoreAwareConsole` and execute actions for specific store if store parameter is provided, or for all the stores in the region otherwise.
-- It is recommended to use `--store` parameter instead of `APPLICATION_STORE` env variable, despite the support of env variable still exists.
+### Rules for implementing custom console commands in environments with Dynamic Multistore
+
+- `Store(Facade|Client)::getCurrentStore()` must not be used in the code the console command executes.
+- All store-aware commands must implement `Spryker\Zed\Kernel\Communication\Console\StoreAwareConsole` and execute actions for a specific store if the store parameter is provided; if not provided, actions are executed for all the stores in the region.
+- We recommend using the `--store` parameter instead of `APPLICATION_STORE` env variable; both methods are supported.
 
 ## How Dynamic Multistore affects a project
 

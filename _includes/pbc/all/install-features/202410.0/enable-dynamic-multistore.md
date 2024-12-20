@@ -90,33 +90,34 @@ regions:
     namespace: eu_search
 ```
 
-7. Run normal deploy for your server pipeline.
+7. Run a normal deploy for your server pipeline.
 
 
 {% info_block warningBox "Verification" %}
-- Make sure your store is accessible at `https://yves.eu.mysprykershop.com` or `https://backoffice.eu.mysprykershop.com`.
+- Make sure your store is available at `https://yves.eu.mysprykershop.com` or `https://backoffice.eu.mysprykershop.com`.
 - Make sure the store switcher is displayed on the Storefront.
 
-
-Congratulations! Now you have Dynamic Multistore feature up and running.
 {% endinfo_block %}
 
-## Rollback
+Your shop is now running in dynamic multistore mode.
 
-### Rollback procedure is opposite, and contains the following steps:
+## Disable Dynamic Multistore
 
 {% info_block warningBox "Staging environment" %}
-Make sure that **all** steps above are performed (and fully tested) on staging before applying it on production setup, to avoid unexpected downtime and data loss.
+To avoid unexpected downtime and data loss, perform and test *all* of the following steps in a staging environment first.
 {% endinfo_block %}
 
-1. Be aware that after disabling Dynamic Multistore mode, your basic domain structure will change from region to store, make sure that it is expected. If external systems are impacted by this - necessary redirects are set, so SEO of your site is not impacted.
+
+
+
+
+1. After disabling Dynamic Multistore, the basic domain structure will change from region to store for all the applications. To prevent negative SEO effects, set up the needed redirects.
 2. Disabling Dynamic Store feature itself does not require any database changes.
-3. Dynamic Multistore introduce some changes in RabbitMQ messages structure, so it is **important** that:
-    - During server migration you do not have unprocessed messages in the queue. Make sure that all messages are processed **before** enabling Maintenance Mode.
-    - Make sure that `Maintainance Mode` is enabled during migration to make sure that no new messages are added to the queue before the migration is finished.
+3. Dynamic Multistore changes the structure of RabbitMQ messages. When you're ready for the migration, wait for all the remaining messages in the queue to be processed. When the queue is empty, enable the maintenance mode.
       (Expected downtime is limited to the deployment time, normally it takes less than 1hr)
-4. Revert changes for you deployment files to Dynamic Multistore OFF mode,
-- Environment variable section
+4. Revert changes in deploy files to disable dynamic multistore:
+
+Original environment variables section:
 ```yaml
 SPRYKER_HOOK_BEFORE_DEPLOY: 'vendor/bin/install -r pre-deploy -vvv'
 SPRYKER_HOOK_AFTER_DEPLOY: 'true'
@@ -125,7 +126,7 @@ SPRYKER_HOOK_DESTRUCTIVE_INSTALL: 'vendor/bin/install -r destructive --no-ansi -
 SPRYKER_DYNAMIC_STORE_MODE: true
 SPRYKER_YVES_HOST_EU: yves.eu.{{DOMAIN_ZONE}}
 ```
-should be changed to:
+Updated environment variables section:
 ```yaml
 SPRYKER_HOOK_BEFORE_DEPLOY: 'vendor/bin/install -r pre-deploy.dynamic-store-off -vvv'
 SPRYKER_HOOK_AFTER_DEPLOY: 'true'
@@ -135,7 +136,7 @@ SPRYKER_YVES_HOST_DE: de.{{DOMAIN_ZONE}}
 SPRYKER_YVES_HOST_AT: at.{{DOMAIN_ZONE}}
 ```
 
-- Regions section
+Original regions section:
 ```yaml
 regions:
   broker:
@@ -145,7 +146,8 @@ regions:
   search:
     namespace: eu_search
 ```
-should be changed to:
+
+Updated regions section:
 ```yaml
 regions:
   stores:
@@ -171,9 +173,9 @@ regions:
           namespace: 4
 ```
 
-6. Run normal deploy for your server pipeline.
+6. Run a normal deploy for your server pipeline.
 
 {% info_block warningBox "Verification" %}
-- Make sure your store is accessible at `https://yves.de.mysprykershop.com` or `https://backoffice.de.mysprykershop.com`.
-- Make sure the store switcher is **not** displayed on the Storefront.
+- Make sure your store is available at `https://yves.de.mysprykershop.com` or `https://backoffice.de.mysprykershop.com`.
+- Make sure the store switcher is *not* displayed on the Storefront.
 {% endinfo_block %}

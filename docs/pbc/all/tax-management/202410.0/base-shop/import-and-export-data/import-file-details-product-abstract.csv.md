@@ -1,5 +1,6 @@
 ---
 title: "Import file details: product_abstract.csv"
+description: Learn how to import file details for abstract products using the product abstract csv file within you Spryker based project.
 last_updated: July 22, 2022
 template: data-import-template
 redirect_from:

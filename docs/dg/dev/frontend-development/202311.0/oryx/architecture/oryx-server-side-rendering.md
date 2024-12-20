@@ -11,7 +11,7 @@ redirect_from:
 
 
 
-Server-side rendering (SSR), including Static Site Generation (SSG) as a variant, has grown in popularity due to its ability to boost web application performance, facilitate effective Search Engine Optimization (SEO), social sharing, and improve Core Web Vitals (CWV). By delivering pre-rendered HTML from the server or even a  content delivery network (CDN) to the client, SSR and SSG lead to quicker initial page load times, improve user experience (UX), and can significantly improve CWV scores. SSG, in particular, pre-renders HTML at build time, resulting in static HTML, CSS, and JavaScript files that can be served directly from a CDN. It is a useful strategy for sites with content that does not change frequently, and can improve performance, scalability, and security.
+Server-side rendering (SSR), including Static Site Generation (SSG) as a variant, has grown in popularity because of its ability to boost web application performance, facilitate effective Search Engine Optimization (SEO), social sharing, and improve Core Web Vitals (CWV). By delivering pre-rendered HTML from the server or even a  content delivery network (CDN) to the client, SSR and SSG lead to quicker initial page load times, improve user experience (UX), and can significantly improve CWV scores. SSG, in particular, pre-renders HTML at build time, resulting in static HTML, CSS, and JavaScript files that can be served directly from a CDN. It is a useful strategy for sites with content that does not change frequently, and can improve performance, scalability, and security.
 
 ## Differences between server-side and client-side rendering
 

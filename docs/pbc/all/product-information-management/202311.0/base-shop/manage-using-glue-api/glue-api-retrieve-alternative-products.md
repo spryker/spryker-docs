@@ -25,7 +25,7 @@ The Product Alternatives API provides access to alternative products via REST AP
 
 In your development, the endpoints help to:
 
-* Provide alternatives for a product that runs out or unavailable, for example, due to local restrictions.
+* Provide alternatives for a product that runs out or unavailable, for example, because of local restrictions.
 * Provide alternatives if a product is discontinued.
 * Make alternative products available to customers in their shopping list or suggestions area to make searching and comparing similar products easier.
 

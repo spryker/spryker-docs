@@ -1,5 +1,6 @@
 ---
 title: Edit tax sets
+description: Learn how you can edit tax sets directly in the back office of your Spryker Cloud Commerce OS project.
 last_updated: May 31, 2022
 template: back-office-user-guide-template
 related:

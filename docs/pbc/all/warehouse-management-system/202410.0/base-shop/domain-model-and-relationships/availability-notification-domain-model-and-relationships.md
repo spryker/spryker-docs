@@ -1,6 +1,6 @@
 ---
 title: Availability Notification domain model and relationships
-description: Relations between modules in the Availability Notification feature.
+description: Relations between modules in the Availability Notification feature for Spryker Warehouse management system.
 last_updated: Aug 12, 2021
 template: concept-topic-template
 redirect_from:

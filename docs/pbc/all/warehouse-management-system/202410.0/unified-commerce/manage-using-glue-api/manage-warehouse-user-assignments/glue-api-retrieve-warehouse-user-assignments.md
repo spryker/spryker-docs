@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve warehouse user assignments"
-description: Learn how to retrieve warehouse user assignments using Glue API
+description: Learn how to retrieve warehouse user assignments using Glue API within your Spryker Unified Commerce project.
 template: glue-api-storefront-guide-template
 last_updated: Dec 7, 2023
 ---

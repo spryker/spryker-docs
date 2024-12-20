@@ -18,7 +18,7 @@ There is a default `vendor/bin/console sync:data` command in Spryker that lets y
 
 Considering this fact, ensure that the `sync:data` command can restore your Elasticsearch and Redis from scratch in a consistent and resilient way. This especially applies to custom `*Storage` and `*Search` modules, as they should have synchronization plugins implemented and enabled.
 
-Due to the large data size, sometimes the command can't process all the records and fails. In this case, it can be executed per resource as follows:
+Because of the large data size, sometimes the command can't process all the records and fails. In this case, it can be executed per resource as follows:
 
 ```bash
 console sync:data url

@@ -29,7 +29,7 @@ Before switching PHP versions in production environments, ensure to check this n
 
 {% info_block infoBox "Info" %}
 
-PHP 8.2+ is a hard requirement from December 2023 due to the modules being PHP 8.2+.
+PHP 8.2+ is a hard requirement from December 2023 because of the modules being PHP 8.2+.
 
 {% endinfo_block %}
 

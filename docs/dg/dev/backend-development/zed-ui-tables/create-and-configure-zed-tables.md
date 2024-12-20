@@ -103,7 +103,7 @@ $config->setDefaultSortField(SpySalesOrderTableMap::COL_CREATED_ATб \Spryker\Ze
 
 ### Configure search by columns
 
-The default search option in Back Office data tables searches for anything that contains the specified substrings. This default search makes use of the SQL logical operator ‘LIKE’ in combination with ‘LOWER’ for comparison. It may result in performance issues on larger tables due to indexes not being used.
+The default search option in Back Office data tables searches for anything that contains the specified substrings. This default search makes use of the SQL logical operator ‘LIKE’ in combination with ‘LOWER’ for comparison. It may result in performance issues on larger tables because of indexes not being used.
 
 Search by columns can be used on all Back Office data tables which extend the `AbstractTable` class.
 

@@ -1,6 +1,6 @@
 ---
 title: Operatable feature guidelines
-description: Guidelines for enabling application operation.
+description: Learn Spryker’s operatable feature guidelines to ensure features are scalable, reliable, and manageable. Optimize performance while maintaining operational efficiency.
 last_updated: April 23, 2024
 template: concept-topic-template
 related:

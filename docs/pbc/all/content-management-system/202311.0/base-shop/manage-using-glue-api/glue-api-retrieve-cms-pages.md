@@ -46,7 +46,7 @@ This endpoint returns activated CMS pages only. Also, if there are more than 12 
 
 ### Request
 
-Due to the Storefront layout, by default, the number of the retrieved pages is a multiple of 12. If you have less than 12 active CMS pages, the above request returns all of them. If you have more, you can enable paging and receive results in pages. For this purpose, use the `limit` and `offset` parameters in your request.
+Because of the Storefront layout, by default, the number of the retrieved pages is a multiple of 12. If you have less than 12 active CMS pages, the above request returns all of them. If you have more, you can enable paging and receive results in pages. For this purpose, use the `limit` and `offset` parameters in your request.
 
 Keep in mind that you can not retrieve the number of results, which is not a multiple of 12. Except for the cases when:
 

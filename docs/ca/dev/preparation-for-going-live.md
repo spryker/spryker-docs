@@ -159,7 +159,7 @@ Prepare a data migration plan. Include all the data.
 Make sure you've addressed all the items from the following checklists:
 
 - Implement the code freeze. We recommend having a code freeze at least two weeks before going live.
-- Double-check the go-live date. If any of the preceding tasks aren't complete, postpone your go-live or discuss with us how to complete them in time. DNS changes are especially sensitive to deadlines. Due to the way the DNS system works, any DNS changes take time to take effect.
+- Double-check the go-live date. If any of the preceding tasks aren't complete, postpone your go-live or discuss with us how to complete them in time. DNS changes are especially sensitive to deadlines. Because of the way the DNS system works, any DNS changes take time to take effect.
 - Make sure that the rollback strategy is still valid. Check that you have everything you need to recover from an unforeseen issue with the newest version of the project you are deploying.
 - Make sure that DNS is set up. For details on the DNS setup, see [Set up DNS](/docs/ca/dev/set-up-dns.html).
 - Make sure that the third-party systems have been switched to the production mode:

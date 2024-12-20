@@ -103,7 +103,7 @@ image:
 regions:
     EU:
         # Services for EU region. Use one of the following services: mail, database, broker, key_value_store, search for all stores in EU region.
-        # Stores MUST not be defined in the deploy file as it was before due to their dynamic nature
+        # Stores MUST not be defined in the deploy file as it was before because of their dynamic nature
         services:
             mail:
                 sender:

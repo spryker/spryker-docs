@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Update service types"
-description: Learn how to update service types using Glue API
+description: Learn how to update service types to your Unified Commerce shop using Spryker Glue API
 last_updated: Nov 23, 2023
 template: glue-api-storefront-guide-template
 ---

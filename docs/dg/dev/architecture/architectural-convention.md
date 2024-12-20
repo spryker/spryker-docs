@@ -333,7 +333,7 @@ Used components:
 
 The Service application layer is a multipurpose library that's used across various application layers, such as Yves, Client, Glue, or Zed.
 
-A service primarily consists of reusable lightweight stateless business logic components. Due to its deployment across all applications, a service is constrained to accessing data providers that are available universally. For example, the backend database is not accessible from Storefront applications by default.
+A service primarily consists of reusable lightweight stateless business logic components. Because of its deployment across all applications, a service is constrained to accessing data providers that are available universally. For example, the backend database is not accessible from Storefront applications by default.
 
 ```text
 [Organization]

@@ -49,7 +49,7 @@ path.join(context, paths.eco.modules)
 ```
 
 Run `npm run yves` after applying these changes.
-Due to the pending update to Suite, you also have to apply Checkout template `.../src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig` update:
+Because of the pending update to Suite, you also have to apply Checkout template `.../src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig` update:
 
 ```xml
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}

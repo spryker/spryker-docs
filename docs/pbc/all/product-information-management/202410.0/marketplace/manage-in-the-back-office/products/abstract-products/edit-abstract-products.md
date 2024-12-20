@@ -1,7 +1,7 @@
 ---
 title: Edit abstract products
 last_updated: Jul 27, 2021
-description: This guide explains how to edit abstract products in Marketplace.
+description: This guide explains how to edit abstract products in your Spryker Marketplace based projects.
 template: back-office-user-guide-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-abstract-products/editing-abstract-products.html

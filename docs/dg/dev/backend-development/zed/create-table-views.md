@@ -1,6 +1,6 @@
 ---
 title: Create table views
-description: Use the guide to render data, fetched from the database, in the table.
+description: Learn to create and configure table views in Zed. This guide covers steps for defining custom table data and optimizing the user interface for efficient data management.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-create-table-view

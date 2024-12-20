@@ -1,5 +1,6 @@
 ---
 title: "Product data: From import to frontend views"
+description: learn about the import of product data in to your Spryker based project databases and how to show it on the frontend.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-product-data-import-frontend

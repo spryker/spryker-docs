@@ -1,6 +1,6 @@
 ---
 title: "Akeneo Connector (Eco module): Console commands"
-description: This guide provides the console commands for the Akeneo module.
+description: This guide provides the console commands for the Akeneo connect eco module for your Spryker based project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/akeneo-console-commands

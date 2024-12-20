@@ -12,7 +12,7 @@ This document describes the environment types shipped with Spryker and the best 
 {% info_block infoBox "" %}
 
 * Contracts may vary, and this document only describes the environments types that may represent your default setup. If you are using a different setup, ask your project manager or product owner for a more detailed explanation.
-* Your non-production environments don't scale automatically. If you want to increase their scaling, let us know by submitting this form: [Upscale Request](https://support.spryker.com/s/hosting-change-requests/environment-upscaling). Due to contractual reasons, only customers can request these changes, not partners.
+* Your non-production environments don't scale automatically. If you want to increase their scaling, let us know by submitting this form: [Upscale Request](https://support.spryker.com/s/hosting-change-requests/environment-upscaling). Because of contractual reasons, only customers can request these changes, not partners.
 
 {% endinfo_block %}
 

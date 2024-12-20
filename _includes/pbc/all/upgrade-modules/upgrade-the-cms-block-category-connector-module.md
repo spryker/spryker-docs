@@ -2,7 +2,7 @@
 
 ## Upgrading from version 1.* to version 2.*
 
-Due to introducing the CMS Block positioning and CMS Block templates for Category, the CMS Block Category Connector module now requires Category >=4.0.
+Because of introducing the CMS Block positioning and CMS Block templates for Category, the CMS Block Category Connector module now requires Category >=4.0.
 The migration will contain the following steps:
 
 1. New module installation

@@ -1,6 +1,6 @@
 ---
 title: Database overview
-description: This document overviews the database in the ORM directory.
+description: Overview of the persistence layer. Learn about schema design, entity management, and efficient data handling in Zed backend development.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/database-overview
@@ -9,17 +9,17 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
 related:
   - title: Database schema definition
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/database-schema-definition.html
   - title: Entity
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/entity.html
   - title: Entity manager
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/entity-manager.html
   - title: About the query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-container/query-container.html
   - title: Query objects - creation and usage
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-objects-creation-and-usage.html
   - title: Repository
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/repository.html
 ---
 
 

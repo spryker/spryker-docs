@@ -145,7 +145,7 @@ The following table lists descriptions of the properties you can use in the anno
 | `isEmptyResponse`             | The flag used to mark an endpoint that returns empty responses.                                                                        |
 | `responses`                   | A list of possible responses of the endpoint. The object must contain key-value pairs with HTTP codes as key, and a description as the value. |
 
-### Extending the behavior
+## Extending the behavior
 
 The following interfaces can be used to add more data to the generated documentation.
 

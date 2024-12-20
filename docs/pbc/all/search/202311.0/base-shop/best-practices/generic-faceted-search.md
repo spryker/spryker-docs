@@ -55,7 +55,7 @@ The main idea behind faceted search is to present the attributes of the document
 
 To support faceted search, Elasticsearch offers a simple but powerful concept of aggregations. One of the nice features of aggregations is that they can be nested. In other words, you can define top-level aggregations that create "buckets" of documents and other aggregations that are executed inside those buckets on a subset of documents. The concept of aggregations is in general similar to the SQL `GROUP_BY` command (but much more powerful). Nested aggregations are analogous to SQL grouping but with multiple column names in the GROUP BY part of the query.
 
-### Indexing facet values
+## Indexing facet values
 
 Before building aggregations, document attributes that can serve as facets need to be indexed in Elasticsearch. One way to index them is to list all attributes and their values under the same field like in the following example:
 
@@ -140,7 +140,7 @@ This requires special treatment in the mapping because otherwise, Elasticsearch 
 }
 ```
 
-### Facet queries
+## Facet queries
 
 Filtering and aggregating a structure like this requires nested filters and nested aggregations in queries.
 

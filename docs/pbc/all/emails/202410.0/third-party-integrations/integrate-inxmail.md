@@ -10,7 +10,7 @@ redirect_from:
 
 This document desribes how to integrate Inxmail.
 
-### New customer registration event
+## New customer registration event
 
 Inxmail module has `\SprykerEco\Zed\Inxmail\Communication\Plugin\Customer\InxmailPostCustomerRegistrationPlugin`. This plugin implements `PostCustomerRegistrationPluginInterface` and can be used in `\Pyz\Zed\Customer\CustomerDependencyProvider::getPostCustomerRegistrationPlugins.`
 
@@ -32,7 +32,7 @@ Inxmail module has `\SprykerEco\Zed\Inxmail\Communication\Plugin\Customer\Inxmai
  }
  ```
 
-### The customer asked to reset password event
+## The customer asked to reset password event
 
 Inxmail module has `\SprykerEco\Zed\Inxmail\Communication\Plugin\Customer\InxmailCustomerRestorePasswordMailTypePlugin`. This plugin implements `MailTypePluginInterface` and can be used in `\Pyz\Zed\Mail\MailDependencyProvider::provideBusinessLayerDependencies`
 

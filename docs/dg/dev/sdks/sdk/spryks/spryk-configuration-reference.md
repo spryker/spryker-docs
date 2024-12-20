@@ -1,6 +1,6 @@
 ---
 title: Spryk configuration reference
-description: Learn about the Spryk file structure and its elements
+description: Learn about the Spryk file structure and its elements with this Spryks configuration reference for your projects.
 template: howto-guide-template
 redirect_from:
 - /docs/sdk/dev/spryks/spryk-configuration-reference.html

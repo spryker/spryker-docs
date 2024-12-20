@@ -1,6 +1,6 @@
 ---
 title: Telemetry
-description: Learn about the Spryker SDK telemetry configuration.
+description: Learn about the Spryker SDK telemetry configuration and how to implement custom events within your Spryker project.
 template: howto-guide-template
 redirect_from:
 - /docs/sdk/dev/telemetry.html

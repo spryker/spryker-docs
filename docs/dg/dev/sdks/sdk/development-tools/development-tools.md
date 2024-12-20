@@ -1,6 +1,6 @@
 ---
 title: Development tools
-description:  How to use the tools associated with developing using the Spryker SDK
+description:  Learn how you can use the tools associated with developing with Spryker using the Spryker SDK
 last_updated: Jan 12, 2023
 template: concept-topic-template
 redirect_from:

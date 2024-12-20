@@ -1,6 +1,6 @@
 ---
 title: Build flavored Spryker SDKs
-description: Find out how you can build flavored Spryker SDKs
+description: Find out how you can build flavored Spryker SDKs with extension or deep integration of the SDK within your Spryker projects.
 template: howto-guide-template
 last_updated: Nov 22, 2022
 redirect_from:

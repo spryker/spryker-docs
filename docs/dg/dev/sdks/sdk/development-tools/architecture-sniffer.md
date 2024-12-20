@@ -22,9 +22,9 @@ related:
   - title: Formatter
     link: docs/dg/dev/sdks/sdk/development-tools/formatter.html
   - title: Performance audit tool- Benchmark
-    link: docs/scos/dev/sdks/sdk/development-tools/benchmark-performance-audit-tool.html
+    link: docs/dg/dev/sdks/sdk/development-tools/benchmark-performance-audit-tool.html
   - title: PHPStan
-    link: docs/dg/dev/sdks/sdks/sdk/development-tools/phpstan.html
+    link: docs/dg/dev/sdks/sdk/development-tools/phpstan.html
   - title: SCSS linter
     link: docs/dg/dev/sdks/sdk/development-tools/scss-linter.html
   - title: TS linter

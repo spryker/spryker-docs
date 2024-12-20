@@ -23,9 +23,9 @@ related:
   - title: Architecture sniffer
     link: docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html
   - title: Performance audit tool- Benchmark
-    link: docs/scos/dev/sdks/sdk/development-tools/benchmark-performance-audit-tool.html
+    link: docs/dg/dev/sdks/sdk/development-tools/benchmark-performance-audit-tool.html
   - title: PHPStan
-    link: docs/dg/dev/sdks/sdks/sdk/development-tools/phpstan.html
+    link: docs/dg/dev/sdks/sdk/development-tools/phpstan.html
   - title: TS linter
     link: docs/dg/dev/sdks/sdk/development-tools/ts-linter.html
   - title: Spryk code generator

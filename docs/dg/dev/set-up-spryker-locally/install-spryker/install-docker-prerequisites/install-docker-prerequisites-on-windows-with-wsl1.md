@@ -10,7 +10,7 @@ redirect_from:
 
 related:
   - title: Install Docker prerequisites on Linux
-    link: docs.spryker.com/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html#system-requirements-for-installing-spryker
+    link: /docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html
   - title: Install Docker prerequisites on MacOS
     link: docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html
   - title: Install Docker prerequisites on Windows with WSL2

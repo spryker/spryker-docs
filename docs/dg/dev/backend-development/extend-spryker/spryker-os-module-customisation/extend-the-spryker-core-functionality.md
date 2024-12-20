@@ -11,9 +11,9 @@ redirect_from:
   - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extending-the-spryker-core-functionality.html
 related:
   - title: Extend the core
-    link: docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
+    link: docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
   - title: Extend a core module that is used by another
-    link: docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
+    link: docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another-module.html
 ---
 
 To extend the Spryker Core functionality and to use the Spryker Engine to develop a project, you must understand the folder structure used in Spryker Commerce OS.

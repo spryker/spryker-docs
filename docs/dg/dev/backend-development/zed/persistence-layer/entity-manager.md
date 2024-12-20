@@ -9,17 +9,17 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
 related:
   - title: Database overview
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/database-overview.html
   - title: Database schema definition
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/database-schema-definition.html
   - title: Entity
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/entity.html
   - title: About the query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-container/query-container.html
   - title: Query objects - creation and usage
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-objects-creation-and-usage.html
   - title: Repository
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/repository.html
 ---
 
 From Kernel version 3.2, you can create an entity manager class in your `Persistence` layer. It is responsible for saving, updating, and deleting data. Using the class, you can separate data from persistence details (Propel).

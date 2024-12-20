@@ -1,6 +1,6 @@
 ---
 title: "HowTo: Add support for number formatting in the Storefront"
-description: Add support for numbers formatting in the Storefront UI.
+description: Learn how to add support for numbers formatting in the Spryker Storefront User Interface.
 template: howto-guide-template
 last_updated: Nov 04, 2022
 redirect_from:

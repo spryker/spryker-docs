@@ -1,6 +1,6 @@
 ---
 title: Sending requests with Data Exchange API
-description: This guide shows how to send a request in Data Exchange API.
+description: Learn how to configure endpoints to interact with databases using the Spryker Data Exchange API.
 last_updated: May 30, 2024
 template: howto-guide-template
 redirect_from:
@@ -636,7 +636,7 @@ to the child entities based on the newly created parent entity's ID.
 By default, the Data Exchange API uses a transactional approach to save data. If an error occurs during the saving process, the entire transaction is rolled back, and no data is saved. However, in some cases, you may want to save data non-transactionally. In the non-transactional mode, the API wraps each entity and its related records (if present in the request) in a separate transaction.
 
 To enable the non-transactional behavior, you need to set the `X-Is-Transactional` with the value `false` in the request.
-In the following example, the first entity will be saved successfully, while the second entity won't be saved due to the missing `rate` field.
+In the following example, the first entity will be saved successfully, while the second entity won't be saved because of the missing `rate` field.
 
 
 ```bash
@@ -676,7 +676,7 @@ Content-Length: 445
 ```
 
 
-Due to the non-transactional mode, the user will receive a response with the saved entity in the `data` field and an error message in the `error` field.
+Because of the non-transactional mode, the user will receive a response with the saved entity in the `data` field and an error message in the `error` field.
 
 ```json
 {

@@ -1,5 +1,6 @@
 ---
 title: Reclamations feature integration
+description: Learn how you can integrate the Reclamations feature in to your Spryker Order Management System.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/reclamations-feature-integration

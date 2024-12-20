@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Retrieve alternative products"
-description: Learn how to find alternatives for discontinued products with Glue API.
+description: Learn how to find alternatives for discontinued products with Spryker Cloud Commerce OS Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-alternative-products
@@ -25,7 +25,7 @@ The Product Alternatives API provides access to alternative products via REST AP
 
 In your development, the endpoints help to:
 
-* Provide alternatives for a product that runs out or unavailable, for example, due to local restrictions.
+* Provide alternatives for a product that runs out or unavailable, for example, because of local restrictions.
 * Provide alternatives if a product is discontinued.
 * Make alternative products available to customers in their shopping list or suggestions area to make searching and comparing similar products easier.
 

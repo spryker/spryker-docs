@@ -7,6 +7,8 @@ entries:
     - title: Releases
       url: /docs/about/all/releases/product-and-code-releases.html
       nested:
+      - title: Security release notes 202412.0
+        url: /docs/about/all/releases/security-release-notes-202412.0.html        
       - title: Release notes 202410.0
         url: /docs/about/all/releases/release-notes-202410.0.html
       - title: Security release notes 202409.0
@@ -55,6 +57,8 @@ entries:
         url: /docs/about/all/support/reporting-and-handling-security-issues.html
       - title: GDPR compliance guidelines
         url: /docs/about/all/support/gdpr-compliance-guidelines.html
+      - title: General Product Safety Regulations
+        url: /docs/about/all/support/general-product-safety-regulation.html
       - title: Getting the most out of Spryker Support
         url: /docs/about/all/support/getting-the-most-out-of-spryker-support.html
       - title: Understand SLAs

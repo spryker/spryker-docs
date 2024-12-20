@@ -1,7 +1,7 @@
 ---
 title: Unzer domain model and relationships
 last_updated: Jun 22, 2022
-description: This document describes domain model & relationships
+description: This document describes domain model & relationships for Unzer in your Spryker based Projects.
 template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/payment/unzer/domain-model-and-relationships.html

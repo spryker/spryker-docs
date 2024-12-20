@@ -1,6 +1,6 @@
 ---
 title: Import product data with a single file
-description: Learn how to import all main product data with a single file
+description: Learn how you can import data for products using just a single file within your Spryker Cloud Commerce OS project.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/importing-product-data-with-a-single-file
@@ -41,7 +41,7 @@ The headers in this file are prefixed with the names of the individual product-r
 
 The only exceptions are `abstract_sku` and `concrete_sku` headers that are not prefixed.
 
-Thus, the CSV file for the main product data import is a combination of data from separate product-related CSV files (except for a [few fields specific for just this file](#specific-fields)). Due to this, when importing corresponding data, the same [dependencies and mandatory fields](#mandatory-fields) as for the separate files, apply to the combined product data import file. For example, if you want to import product image data via the combined product data file (headers *productimage.imageset_name*, *productimage.externalurl_large*, etc.), you should mind the dependencies and mandatory fields as for [product_image.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-image.csv.html).
+Thus, the CSV file for the main product data import is a combination of data from separate product-related CSV files (except for a [few fields specific for just this file](#specific-fields)). Because of this, when importing corresponding data, the same [dependencies and mandatory fields](#mandatory-fields) as for the separate files, apply to the combined product data import file. For example, if you want to import product image data via the combined product data file (headers *productimage.imageset_name*, *productimage.externalurl_large*, etc.), you should mind the dependencies and mandatory fields as for [product_image.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-image.csv.html).
 
 By default, the import CSV file resides in data/import/common/{STORE}/. As, for example, the [combined_product_DE.csv](https://github.com/spryker-shop/suite/blob/master/data/import/common/DE/combined_product.csv) file in Spryker Master Suite.
 

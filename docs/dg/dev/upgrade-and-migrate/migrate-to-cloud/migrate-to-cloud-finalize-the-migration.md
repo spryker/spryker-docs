@@ -1,6 +1,6 @@
 ---
 title: 'Migrate to cloud: Finalize the migration'
-description:
+description: Learn about how to finalize the migration to Spryker Cloud Commerce OS and what you need to do to prepare your Spryker project for go live.
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-14-finalize-the-migration.html

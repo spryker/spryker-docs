@@ -1,6 +1,6 @@
 ---
 title: "Marketplace Shopping Lists feature: Domain model and relationships"
-description: The Marketplace Shopping Lists feature allows customers to create and share multiple lists of merchant products and product offers between company business units or single users.
+description: Marketplace Shopping Lists feature allows customers to create and share lists of merchant products and offers between company business units or single users.
 template: feature-walkthrough-template
 last_updated: Nov 21, 2023
 ---

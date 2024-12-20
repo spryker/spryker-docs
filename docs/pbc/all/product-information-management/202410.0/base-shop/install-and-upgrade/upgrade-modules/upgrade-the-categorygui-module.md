@@ -1,6 +1,6 @@
 ---
 title: Migration guide - CategoryGui
-description: Learn how to upgrade the CategoryGui module.
+description: Learn how to upgrade from an older version to a newer one of the CategoryGui module within your Spryker based project.
 last_updated: Jun 23, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-categorygui

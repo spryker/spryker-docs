@@ -1,5 +1,6 @@
 ---
 title: "Custom Order Reference: module relations"
+description: Learn about the module relations for the Custom order reference within the Spryker Order Management System.
 last_updated: Jun 16, 2021
 template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/2021080/docs/custom-order-reference-module-relations

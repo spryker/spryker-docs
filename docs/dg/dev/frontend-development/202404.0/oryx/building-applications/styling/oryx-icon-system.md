@@ -49,7 +49,7 @@ Oryx supports both font-based icons and SVG icons, letting you choose the most s
 
 ### Font-based icons
 
-Font-based icons are a popular choice due to their ease of use and the availability of a wide range of icons. They offer great quality and scalability, staying sharp at various sizes. Additionally, font-based icons can be easily colored using CSS, seamlessly integrating with UI themes.
+Font-based icons are a popular choice because of their ease of use and the availability of a wide range of icons. They offer great quality and scalability, staying sharp at various sizes. Additionally, font-based icons can be easily colored using CSS, seamlessly integrating with UI themes.
 
 Oryx leverages [Material symbols](https://fonts.google.com/icons) and [Font Awesome icons](https://fontawesome.com/). However, you can also add other icon fonts. Material Symbols are built with Variable fonts, enabling developers to edit font characteristics like line weight and fill through CSS.
 

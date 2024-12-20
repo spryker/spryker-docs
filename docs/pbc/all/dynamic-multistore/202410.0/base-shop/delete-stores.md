@@ -1,6 +1,6 @@
 ---
 title: Delete stores
-description: This document shows how to delete a store
+description: With this guide learn how you can delete stores that are configured within your Spryker Cloud Commerce OS project.
 past_updated: Jun 26, 2023
 template: howto-guide-template
 last_updated: Nov 12, 2024
@@ -53,7 +53,7 @@ vendor/bin/console scheduler:suspend
 ## Clean data and configuration in related database tables
 
 
-1. Due to the foreign key relationship with the store entity, delete the data from the following tables:
+1. Because of the foreign key relationship with the store entity, delete the data from the following tables:
 - `spy_price_product_store`
 - `spy_asset_store`
 - `spy_availability_abstract`

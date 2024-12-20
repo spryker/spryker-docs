@@ -1,6 +1,6 @@
 ---
 title: Create user groups
-description: Learn how to create user groups in the Back Office.
+description: Learn how you can create new user groups directly in the back office of Spryker Cloud Commerce OS.
 last_updated: Aug 2, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-groups

@@ -48,7 +48,7 @@ composer show spryker/product-management # Verify the version
 
 ## Cross-company role manipulation
 
-Due to missing access validation controls on the backend, an administrator user of a company was able to create and update roles for other companies. This was possible due to the possibility to manipulate the company ID parameter included in the HTTP requests of the role creation functionality.
+Because of missing access validation controls on the backend, an administrator user of a company was able to create and update roles for other companies. This was possible because of the possibility to manipulate the company ID parameter included in the HTTP requests of the role creation functionality.
 
 ### Affected modules
 

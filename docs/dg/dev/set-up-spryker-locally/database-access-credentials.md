@@ -1,6 +1,6 @@
 ---
 title: Database access credentials
-description: Database access credentials for MariaDB, MySQL, and PostgreSQL.
+description: Learn how to find Database access credentials for MariaDB, MySQL, and PostgreSQL for your Local Spryker Environments.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/database-access-credentials

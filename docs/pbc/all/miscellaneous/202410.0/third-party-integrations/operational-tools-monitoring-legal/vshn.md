@@ -22,7 +22,7 @@ Since 2014 we support 300 customers & partners operating over 900 servers in 20 
 YOUR ADVANTAGES:
 * Your partner for DevOps, Docker, Kubernetes, Openshift and 24/7 cloud operations partner & application operation.
 * Our automation accelerates development, deployment and operations processes.
-* Shorter time to market due to proven technologies like Git and Docker.
+* Shorter time to market because of proven technologies like Git and Docker.
 * APPUiO.ch - the Swiss container platform based on Red Hat OpenShift as Managed Service.
 * Our processes are ISO 27001 certified and we operate according to the Swiss banking standards.
 * Our team of experts is available to you. 24/7 in case of emergency.

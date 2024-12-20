@@ -1,6 +1,6 @@
 ---
 title: Manage dependencies with Composer
-description: Spryker Cloud Commerce OS uses Composer as a dependency manager.
+description: Spryker Cloud Commerce OS uses Composer as a dependency manager this guide helps you learn how to manage those dependencies with your Local Spryker Environement.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/composer
@@ -13,7 +13,7 @@ related:
   - title: Install module structure and configuration
     link: docs/scos/dev/set-up-spryker-locally/install-module-structure-and-configuration.html
   - title: Redis configuration
-    link: docs/scos/dev/set-up-spryker-locally/redis-configuration.html
+    link: docs/dg/dev/set-up-spryker-locally/redis-configuration.html
 ---
 
 Spryker Cloud Commerce OS (SCCOS) uses [Composer](https://getcomposer.org/) as a dependency manager. Composer allows declaring the libraries your project depends on and the versions required as well as it will manage them for you. Composer is downloaded as `composer.phar` file (PHP archive). To start using Composer in your project, all you need is a `composer.json` file. The file defines the required dependencies and is located in the root folder of the project.

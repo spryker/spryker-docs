@@ -1,6 +1,6 @@
 ---
 title: Marketplace Order overview
-description: This document contains concept information for the Marketplace order feature in the Spryker Commerce OS.
+description: Learn all about the Spryker Marketplace order feature and how orders work within your project.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 related:
@@ -73,7 +73,7 @@ Rounding rules for a regular SCOS sales order also apply to the Marketplace orde
 
 {% info_block warningBox "Warning" %}
 
-In some cases, due to rounding, the amounts of Marketplace order totals can differ from the amounts of the Merchant order totals in a matter of a cent or less. You can modify the behavior by changing the rounding algorithms on the project level.  
+In some cases, because of rounding, the amounts of Marketplace order totals can differ from the amounts of the Merchant order totals in a matter of a cent or less. You can modify the behavior by changing the rounding algorithms on the project level.  
 
 {% endinfo_block %}
 

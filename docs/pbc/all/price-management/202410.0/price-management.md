@@ -1,6 +1,6 @@
 ---
 title: Price Management
-description: Capability for all kinds of prices.
+description: Learn about the Spryker Price Management module and how you can define and manage all kind of prices within your Spryker based store.
 last_updated: Aug 2, 2022
 template: concept-topic-template
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: Install the Marketplace Product Offer + Service Points feature
-description: Install the Marketplace Product Offer + Service Points feature     
+description: Learn how you can install and implement  the Marketplace Product Offer + Service Points feature in to your Spryker Unified Commerce project.    
 last_updated: July 05, 2023
 template: feature-integration-guide-template
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Delete push notification providers"
-description: Learn how to delete push notification providers using Glue API
+description: Learn how to delete push notification providers using Spryker Glue API for your Spryker projects.
 last_updated: Dec 23, 2023
 template: glue-api-storefront-guide-template
 ---

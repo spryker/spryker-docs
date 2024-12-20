@@ -1,6 +1,6 @@
 ---
 title: Install Avalara
-description: Install Avalara to automatically calculate taxes.
+description: Install Sprykers third party Avalara to automatically calculate taxes within your Spryker based projects.
 last_updated: Jun 29, 2023
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/avalara-tax-integration

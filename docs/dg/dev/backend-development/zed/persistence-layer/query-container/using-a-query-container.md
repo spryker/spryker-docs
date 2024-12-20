@@ -9,9 +9,9 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html
 related:
   - title: About the query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-container/query-container.html
   - title: Implement a query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-container/implement-a-query-container.html
 ---
 
 {% info_block infoBox "When to use query containers" %}

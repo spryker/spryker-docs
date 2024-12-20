@@ -1,6 +1,6 @@
 ---
 title: Install the Quotation Process feature
-description: Install the Quotation Process feature in your project.
+description: Learn how to install the Quotation Process feature in your Spryker based project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/quotation-process-feature-integration

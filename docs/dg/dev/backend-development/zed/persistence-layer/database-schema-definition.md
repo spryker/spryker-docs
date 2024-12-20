@@ -9,17 +9,17 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
 related:
   - title: Database overview
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/database-overview.html
   - title: Entity
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/entity.html
   - title: Entity manager
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/entity-manager.html
   - title: About the query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-container/query-container.html
   - title: Query objects - creation and usage
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-objects-creation-and-usage.html
   - title: Repository
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/repository.html
 ---
 
 With Propel, a [database schema](http://propelorm.org/documentation/reference/schema.html) is defined in an XML file. Each module has its own part of the big schema that is collected and merged.

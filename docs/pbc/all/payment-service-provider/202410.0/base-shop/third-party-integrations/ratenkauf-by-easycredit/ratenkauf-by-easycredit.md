@@ -24,7 +24,7 @@ Germany’s easiest installment purchase solution ratenkauf by easyCredit is the
 TeamBank, with its easyCredit product family, is the liquidity management specialist in the Volksbanken Raiffeisenbanken cooperative financial network. Its ‘ratenkauf by easyCredit’ product is the first installment purchase solution that combines a simple and uniformly designed installment purchase function both for e-commerce and for a physical point of sale. Customers can make their ratenkauf by easyCredit installment purchase in just three steps. No paperwork, immediate approval, and complete flexibility throughout. Simple. Fair.
 
 YOUR ADVANTAGES:
-* Revenue booster: more revenue due to higher purchase amounts.
+* Revenue booster: more revenue because of higher purchase amounts.
 * Profitable: fewer purchase cancellations thanks to the immediate credit check and approval.
 * Safe: no payment defaults as TeamBank assumes the credit risk.
 * Fair: excellent easyCredit processes offer transparency and flexibility for customers.

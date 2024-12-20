@@ -1,6 +1,6 @@
 ---
 title: Install the Service Points Cart feature
-description: Learn how to integrate the Service Points Cart feature into your project
+description: Learn how to integrate the Service Points Cart feature into your Spryker Unified Commerce Project.
 last_updated: Oct 5, 2023
 template: feature-integration-guide-template
 redirect_from:

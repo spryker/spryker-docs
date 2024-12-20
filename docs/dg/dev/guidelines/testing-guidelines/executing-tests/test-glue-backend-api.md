@@ -1,6 +1,6 @@
 ---
 title: Test Glue Backend API
-description: Learn how to test Glue Backend API
+description: Learn how to test Glue Backend API end to end with this helpful guide for your Spryker based projects.
 template: howto-guide-template
 last_updated: Jan 9, 2024
 redirect_from:

@@ -1,6 +1,6 @@
 ---
 title: Module configuration convention
-description: This article contains conventions on the module configuration.
+description: Learn in this article about Spryker conventions on the module configuration for your Spryker based projects
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/module-configuration-convention

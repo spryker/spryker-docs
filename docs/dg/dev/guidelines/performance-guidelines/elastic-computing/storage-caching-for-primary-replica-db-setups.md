@@ -7,9 +7,9 @@ redirect_from:
   - /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
 related:
   - title: New Relic transactions grouping by queue names
-    link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html
+    link: docs/dg/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html
   - title: RAM-aware batch processing
-    link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
+    link: docs/dg/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
 ---
 
 With database replication enabled, there is a time gap between adding data to the primary database (DB) and transferring data to the replica. So, the application may fail to read the data from the replica.

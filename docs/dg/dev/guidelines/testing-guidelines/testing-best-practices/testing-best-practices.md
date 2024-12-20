@@ -1,6 +1,6 @@
 ---
 title: Testing best practices
-description: Best practices in the testing process and for specific test types.
+description: Learn the best practices in the testing process and for specific test types for your Spryker based projects.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/testing-best-practices.html

@@ -1,6 +1,6 @@
 ---
 title: Execute tests
-description: Lean what commands you can use to execute your tests.
+description: Learn what commands you can use to execute your tests. You can run all tests or specific ones within your Spryker Based Projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/executing-tests
@@ -10,27 +10,27 @@ redirect_from:
   - /docs/scos/dev/guidelines/testing/executing-tests.html
 related:
   - title: Available test helpers
-    link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
   - title: Code coverage
-    link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+    link: docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
   - title: Data builders
-    link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+    link: docs/dg/dev/guidelines/testing-guidelines/data-builders.html
   - title: Publish and Synchronization testing
-    link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-process.html
   - title: Setting up tests
-    link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+    link: docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html
   - title: Test framework
-    link: docs/scos/dev/guidelines/testing-guidelines/test-framework.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-framework.html
   - title: Test helpers
-    link: docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html
   - title: Testify
-    link: docs/scos/dev/guidelines/testing-guidelines/testify.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testify.html
   - title: Testing best practices
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
   - title: Testing concepts
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
   - title: Testing console commands
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
 
 There are many ways to execute the [tests](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html). You can do a full run of all tests, or you can narrow it down to only execute a specific test method.

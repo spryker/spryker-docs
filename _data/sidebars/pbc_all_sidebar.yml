@@ -1249,8 +1249,6 @@ entries:
                 url: /docs/pbc/all/dynamic-multistore/base-shop/add-fields-to-back-office-forms.html
               - title: Enable / Disable Dynamic Multistore
                 url: /docs/pbc/all/dynamic-multistore/base-shop/enable-dynamic-multistore.html
-              - title: FAQ Dynamic Multistore
-                url: /docs/pbc/all/dynamic-multistore/base-shop/faq.html
               - title: Delete stores
                 url: /docs/pbc/all/dynamic-multistore/base-shop/delete-stores.html
               - title: Import stores

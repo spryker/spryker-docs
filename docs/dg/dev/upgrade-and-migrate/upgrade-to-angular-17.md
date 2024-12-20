@@ -1,6 +1,6 @@
 ---
 title: Upgrade to Angular 17
-description: Use the guide to update versions of the Angular and related modules.
+description: Learn how you can upgrade to Version 17 of Angular for your Spryker project for bug fixes, optimized performance and tooling.
 template: module-migration-guide-template
 ---
 

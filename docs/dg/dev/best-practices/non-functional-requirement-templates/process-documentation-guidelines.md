@@ -61,7 +61,7 @@ This request is for the deployment of version 1.2.3 of the MyProject application
   * Add an additional application server to the load balancer pool.
   * Increase the size of the database server's disk.
 *Expected behavior:
-  * There may be a temporary increase in error log entries due to a known issue with the new version that will be fixed in the next release.
+  * There may be a temporary increase in error log entries because of a known issue with the new version that will be fixed in the next release.
 
 **Impact**:<br/>
 This deployment will include updates to the application's database connection and API key, as well as changes to the infrastructure. There is a low risk of downtime during the deployment.

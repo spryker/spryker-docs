@@ -9,7 +9,7 @@ General Product Safety Regulation (GPSR) is a new key instrument in the EU produ
 
 GPSR requires that all consumer products on the EU markets are safe and establishes specific obligations for businesses to ensure it.
 
-For a full version of regulations, see [General Product Safety Regulation](https://commission.europa.eu/business-economy-euro/doing-business-eu/eu-product-safety-and-labelling/product-safety/general-product-safety-regulation_en).
+<!-- For a full version of regulations, see [General Product Safety Regulation](https://commission.europa.eu/business-economy-euro/doing-business-eu/eu-product-safety-and-labelling/product-safety/general-product-safety-regulation_en). -->
 
 ## Spryker’s GPSR obligations
 

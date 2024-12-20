@@ -51,7 +51,7 @@ When a query returns hundreds or thousands of results, the most relevant to the 
 
 A common solution is to manually assign ranks to products (sometimes even within categories). However, this approach is not practical for large catalogs and might result in a bad search experience—for example, when products that are out of stock are listed at the top because of their manually assigned rank.
 
-### Sorting by formulas based on scores
+## Sorting by formulas based on scores
 
 We recommend an approach where a list of normalized scores per product at import time is precomputed and included in the documents that are sent to Elasticsearch. These are the scores from our previous hammer example (the interesting scores are left out because of the sensitivity of this information):
 
@@ -138,7 +138,7 @@ In queries, search results are sorted using an algebraic expression that combine
 
 Very different kinds of scoring functions are conceivable, and the advantages of combining scores at query time are twofold: Your stakeholders (category and product managers) can help you in finding good formulas by testing the effect of different expressions on the sorting of actual queries at run-time. Second, you can use different ranking strategies on different parts of the website.
 
-### Computing normalized scores
+## Computing normalized scores
 
 To combine scores in such expressions, we normalize them between 0 and 1 and try to make sure that they are more or less equally distributed across all documents. If, for example, the ranking formula is *0.3 * score_1 + 0.7 * score_2* and the scores are in the same range, then you could say that score_1 has a 30% influence on the outcome of the sorting and score_2 an influence of 70%. The equal distribution is important because if, for example, most documents have a very high score_2, then having a high score_2 becomes much more important for appearing at the top of the ranking than having a high score_1 (an effect that can be consciously used).
 

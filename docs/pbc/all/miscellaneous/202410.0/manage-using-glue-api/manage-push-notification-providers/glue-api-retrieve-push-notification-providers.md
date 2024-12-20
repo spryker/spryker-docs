@@ -32,7 +32,7 @@ This endpoint lets you retrieve push notification providers to further subscribe
 | Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
 
 
-Request sample: `GET https://glue-backend.de.b2c.demo-spryker.com/push-notification-providers`
+Request sample: `GET https://glue-backend.b2c-eu.demo-spryker.com/push-notification-providers`
 
 ### Response
 
@@ -50,7 +50,7 @@ Request sample: `GET https://glue-backend.de.b2c.demo-spryker.com/push-notificat
                 "name": "web-push-php"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/push-notification-providers/2a304ddf-d51b-514f-bd11-6e818a27fe23"
+                "self": "https://glue-backend.b2c-eu.demo-spryker.com/push-notification-providers/2a304ddf-d51b-514f-bd11-6e818a27fe23"
             }
         },
         {
@@ -61,12 +61,12 @@ Request sample: `GET https://glue-backend.de.b2c.demo-spryker.com/push-notificat
                 "name": "Fulfillment App provider"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/push-notification-providers/ffb5875e-00d3-5436-ae67-08b7c9837f3e"
+                "self": "https://glue-backend.b2c-eu.demo-spryker.com/push-notification-providers/ffb5875e-00d3-5436-ae67-08b7c9837f3e"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c.demo-spryker.com/push-notification-providers"
+        "self": "https://glue-backend.b2c-eu.demo-spryker.com/push-notification-providers"
     }
 }
 ```
@@ -95,7 +95,7 @@ Request sample: `GET https://glue-backend.de.b2c.demo-spryker.com/push-notificat
 | ------------- | ------------ | -------- | ------------------------------------------------------------ |
 | Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
 
-Request sample: `GET https://glue-backend.de.b2c.demo-spryker.com/push-notification-providers/2a304ddf-d51b-514f-bd11-6e818a27fe23`
+Request sample: `GET https://glue-backend.b2c-eu.demo-spryker.com/push-notification-providers/2a304ddf-d51b-514f-bd11-6e818a27fe23`
 
 ### Response
 
@@ -110,7 +110,7 @@ Response sample:
             "name": "web-push-php"
         },
         "links": {
-            "self": "https://glue-backend.de.b2c.demo-spryker.com/push-notification-providers/2a304ddf-d51b-514f-bd11-6e818a27fe23"
+            "self": "https://glue-backend.b2c-eu.demo-spryker.com/push-notification-providers/2a304ddf-d51b-514f-bd11-6e818a27fe23"
         }
     }
 }

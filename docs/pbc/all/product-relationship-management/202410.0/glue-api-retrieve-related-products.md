@@ -919,7 +919,7 @@ To get upselling items for all products in a cart of a registered customer, send
                 "url": "/en/acer-liquid-leap-100"
             },
             "links": {
-                "self": "https://glue.de.b2c.demo-spryker.com:80/abstract-products/100"
+                "self": "https://glue.b2c-eu.demo-spryker.com:80/abstract-products/100"
             },
             "relationships": {
                 "product-labels": {
@@ -934,7 +934,7 @@ To get upselling items for all products in a cart of a registered customer, send
         }
     ],
     "links": {
-        "self": "https://glue.de.b2c.demo-spryker.com:80/carts/976af32f-80f6-5f69-878f-4ea549ee0830/up-selling-products?include=product-labels"
+        "self": "https://glue.b2c-eu.demo-spryker.com:80/carts/976af32f-80f6-5f69-878f-4ea549ee0830/up-selling-products?include=product-labels"
     },
     "included": [
         {
@@ -947,7 +947,7 @@ To get upselling items for all products in a cart of a registered customer, send
                 "frontEndReference": "highlight"
             },
             "links": {
-                "self": "https://glue.de.b2c.demo-spryker.com:80/product-labels/5"
+                "self": "https://glue.b2c-eu.demo-spryker.com:80/product-labels/5"
             }
         }
     ]

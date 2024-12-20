@@ -1,6 +1,6 @@
 ---
 title: Manage dependencies with Composer
-description: Spryker Cloud Commerce OS uses Composer as a dependency manager.
+description: Spryker Cloud Commerce OS uses Composer as a dependency manager this guide helps you learn how to manage those dependencies with your Local Spryker Environement.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/composer

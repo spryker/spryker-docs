@@ -1,6 +1,6 @@
 ---
 title: Demo data was imported incorrectly
-description: Learn how to fix the issue when demo data was imported incorrectly
+description: Learn how to troubleshoot and resolve the error Demo data was importer incorrectly with your Spryker local environment.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/demo-data-was-imported-incorrectly
@@ -10,19 +10,19 @@ redirect_from:
   - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-installation/demo-data-was-imported-incorrectly.html
 related:
   - title: An error during front end setups
-    link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html
   - title: Docker daemon is not running
-    link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/docker-daemon-is-not-running.html
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/docker-daemon-is-not-running.html
   - title: docker-sync cannot start
-    link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/docker-sync-cannot-start.html
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/docker-sync-cannot-start.html
   - title: Error 403 No valid crumb was included in the request
-    link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/error-403-no-valid-crumb-was-included-in-the-request.html
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/error-403-no-valid-crumb-was-included-in-the-request.html
   - title: Node Sass does not yet support your current environment
-    link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/node-saas-does-not-yet-support-your-current-environment.html
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/node-saas-does-not-yet-support-your-current-environment.html
   - title: Setup of new indexes throws an exception
-    link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
   - title: Vendor folder synchronization error
-    link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
 ---
 
 ## Description

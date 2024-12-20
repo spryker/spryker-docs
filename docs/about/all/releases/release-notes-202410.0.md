@@ -418,7 +418,7 @@ Spryker projects running the Stripe ACP app can now send custom metadata to Stri
 
 ### Documentation
 
-[Sending additional data to Stripe](/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe.html#sending-additional-data-to-stripe)
+[Sending additional data to Stripe](/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-guidelines-for-stripe.html#sending-additional-data-to-stripe)
 
 
 

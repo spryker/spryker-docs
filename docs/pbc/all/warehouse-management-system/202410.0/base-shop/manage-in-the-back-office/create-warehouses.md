@@ -1,6 +1,6 @@
 ---
 title: Create warehouses
-description: Learn how to create warehouses in the Back Office.
+description: Learn how to create new warhouses directly in the Back Office of your Spryker based project.
 last_updated: May 28, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-warehouse

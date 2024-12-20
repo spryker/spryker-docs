@@ -1,6 +1,6 @@
 ---
 title: Zed API configuration
-description: The article describes how you can configure API for Zed.
+description: Learn how you can configure the Spryker Zed API and install it within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/zed-api-config

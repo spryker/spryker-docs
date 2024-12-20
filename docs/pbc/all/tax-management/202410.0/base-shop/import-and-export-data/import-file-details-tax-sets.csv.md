@@ -1,5 +1,6 @@
 ---
 title: "Import file details: tax_sets.csv"
+description: Learn how to import tax sets information using the tax sets csv file within you Spryker based project for the tax management feature.
 last_updated: Jun 23, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-taxcsv

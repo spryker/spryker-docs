@@ -1,6 +1,6 @@
 ---
 title: Router
-description: This section lists documents inside the Router section.
+description: Learn how you can Install, Integrate and Configure the router for both Yves and Zed in your Spryker based projects.
 last_updated: Apr 26, 2023
 template: concept-topic-template
 redirect_from:

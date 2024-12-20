@@ -13,7 +13,7 @@ Gateway and ZedRestApi requests require a different stack of plugins to be proce
 
 To separate application bootstrapping into individual endpoints, take the following steps:
 
-### 1) Update modules using Composer
+## 1) Update modules using Composer
 
 Update the required modules:
 
@@ -34,7 +34,7 @@ Update the required modules:
 composer update spryker/twig spryker/session spryker/router spryker/monitoring spryker/event-dispatcher spryker/application
 ```
 
-### 2) Update modules using npm
+## 2) Update modules using npm
 
 Update the required module:
 
@@ -64,7 +64,7 @@ npm install
 npm run zed
 ```
 
-### 3) Add application entry points
+## 3) Add application entry points
 
 1. Add the following application entry points:
 
@@ -299,7 +299,7 @@ The maintenance page is not yet compatible with Spryker Cloud.
     }
     ```
 
-### 4) Separate application plugin stacks
+## 4) Separate application plugin stacks
 
 1. Replace `ApplicationDependencyProvider::getApplicationPlugins();` with separate plugin stacks per endpoint:
 
@@ -378,7 +378,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 ```
 </details>
 
-### 5) Separate event dispatcher plugin stacks
+## 5) Separate event dispatcher plugin stacks
 
 Update `src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php` with the following changes:
 
@@ -422,7 +422,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-### 6) Separate router plugin stacks
+## 6) Separate router plugin stacks
 
 Replace `RouterDependencyProvider::getRouterPlugins();`  with two new methods:
 
@@ -455,7 +455,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-### 7) Add console commands
+## 7) Add console commands
 
 1. Configure the following console commands with a router cache warmup per endpoint:
 
@@ -514,7 +514,7 @@ sections:
         ...
 ```        
 
-### 8) Configure the application
+## 8) Configure the application
 
 1. Configure the Back Office error page, default port, and the ACL rule for the rest endpoint:
 
@@ -589,7 +589,7 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 Make sure to do this at least 5 working days prior to the planned change.    
 
 
-### 9) Update the Docker SDK
+## 9) Update the Docker SDK
 
 1. Update the Docker SDK to version `1.36.1` or higher.
 2. In the needed deploy files, replace the `zed` application with `backoffice`, `backend-gateway` and `backend-api` as follows.

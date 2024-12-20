@@ -76,7 +76,7 @@ Follow [this guideline](/docs/scos/dev/technical-enhancement-integration-guides/
 
 #### Setting up additional deployment recipes
 
-It is convenient to create additional deployment install recipes (located under config/install folder) to setup a new and delete an existing stores, for testing purposes. Below is an example of such setup that proves to be working well on prcatice. We took the existing folder structure, and EU folder as a base, but you can introduce your structure:
+It is convenient to create additional deployment install recipes (located under config/install folder) to setup a new and delete an existing stores, for testing purposes. Below is an example of such setup that proves to be working well on prcatice. We took the existing out of the box folder structure, and EU folder as a base, but you can introduce your structure:
 
 1. config/install/EU/setup-store.yml - contains everything needed to do a minimal setup of a new store(s):
 ```

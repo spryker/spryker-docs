@@ -35,11 +35,11 @@ related:
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/heidelpay/heidelpay-workflow-for-errors.html
 ---
 
-### Setup
+## Setup
 
 The following configuration should be made after Heidelpay has been [installed](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/install-heidelpay.html) and [integrated](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/integrate-heidelpay.html).
 
-#### Configuration
+### Configuration
 
 Example (for testing only):
 
@@ -48,17 +48,17 @@ $config[HeidelpayConstants::CONFIG_HEIDELPAY_TRANSACTION_CHANNEL_PAYPAL] = '31HA
 ```
 <sub>This value should be taken from HEIDELPAY</sub>
 
-#### Checkout Payment Step Display
+### Checkout Payment Step Display
 
 Displays payment method name with radio button. No extra input fields are required.
 
-#### Payment step submit
+### Payment step submit
 
 No extra actions needed, quote being filled with payment method selection as default.
 
-### Workflow
+## Workflow
 
-#### Summary Review and Order Submitting
+### Summary Review and Order Submitting
 
 **On "save order" event** - save Heidelpay payment per order and items, as usual.
 

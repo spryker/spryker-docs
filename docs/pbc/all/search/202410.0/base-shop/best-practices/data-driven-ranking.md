@@ -49,7 +49,7 @@ related:
 
 When a query returns hundreds or thousands of results, the most relevant to the user products must be at the top of the search result page. Getting this right leads to a higher conversion probability and increases customer happiness. Implementing proper data-driven ranking, however, is usually very tricky because there might be large numbers of heuristics, which define what a good search result for a certain query is.
 
-A common solution is to manually assign ranks to products (sometimes even within categories). However, this approach is not practical for large catalogs and might result in a bad search experience—for example, when products that are out of stock are listed at the top due to their manually assigned rank.
+A common solution is to manually assign ranks to products (sometimes even within categories). However, this approach is not practical for large catalogs and might result in a bad search experience—for example, when products that are out of stock are listed at the top because of their manually assigned rank.
 
 ### Sorting by formulas based on scores
 
@@ -142,7 +142,7 @@ Very different kinds of scoring functions are conceivable, and the advantages of
 
 To combine scores in such expressions, we normalize them between 0 and 1 and try to make sure that they are more or less equally distributed across all documents. If, for example, the ranking formula is *0.3 * score_1 + 0.7 * score_2* and the scores are in the same range, then you could say that score_1 has a 30% influence on the outcome of the sorting and score_2 an influence of 70%. The equal distribution is important because if, for example, most documents have a very high score_2, then having a high score_2 becomes much more important for appearing at the top of the ranking than having a high score_1 (an effect that can be consciously used).
 
-So to find good normalization functions, look at the distribution of some measures across all products. This is the distribution of the number of sold items per product at Contortion (numbers are only up to the end of 2014 due to data sensitivity):
+So to find good normalization functions, look at the distribution of some measures across all products. This is the distribution of the number of sold items per product at Contortion (numbers are only up to the end of 2014 because of data sensitivity):
 
 ![Computation of score top_seller](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Data-Driven+Ranking/score-top-seller-computation.png)
 
@@ -158,7 +158,7 @@ The last example is the expected delivery time in hours:
 
 Here our stakeholders made a conscious decision to define 48 hours as the neutral case (a score of 0.5) and everything after 60 hours as "bad": *0.5 - atan((x - 48) / 12) / π*.
 
-Finally, a word on data processing: We compute these scores as part of the ETL / data integration processes of the data warehouse. Given the table `search_tmp.product_search_score_kpi`, which contains a list of performance measures per product, computing normalized scores can be as easy as this (most computations are left out due to their sensitive nature):
+Finally, a word on data processing: We compute these scores as part of the ETL / data integration processes of the data warehouse. Given the table `search_tmp.product_search_score_kpi`, which contains a list of performance measures per product, computing normalized scores can be as easy as this (most computations are left out because of their sensitive nature):
 
 ```sql
 CREATE TABLE search_next.product_search_score AS

@@ -1,15 +1,12 @@
 ---
 title: Code contribution guide
-description: Contribute to Spryker repositories
+description: Learn how to contribute code to Spryker with this comprehensive guide. Follow best practices for creating, reviewing, and submitting high-quality contributions efficiently.
 last_updated: Apr 3, 2024
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/code-contribution-guide
 originalArticleId: d5ded6f2-5bb9-4288-bc96-3fabf7e32c8f
 redirect_from:
   - /docs/scos/dev/code-contribution-guide.html
-related:
-  - title: Contribute to the documentation
-    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/contribute-to-the-documentation.html
 
 ---
 
@@ -47,7 +44,7 @@ Spryker uses our proprietary licenses and common open-source licenses. In genera
 
 For example, here is a result of this flow: https://github.com/spryker/product-configurations-rest-api/pull/1.
 
-If we can't merge a PR due to our release process, we manually introduce the change. Once the change is released, we inform you by closing the PR.
+If we can't merge a PR because of our release process, we manually introduce the change. Once the change is released, we inform you by closing the PR.
 
 ## Pull request processing time
 

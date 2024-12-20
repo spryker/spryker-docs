@@ -1,6 +1,6 @@
 ---
 title: Installing features and updating modules
-description: Learn how to take different kinds of updates and install new packages
+description: Learn how to take different kinds of updates and install new packages within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 redirect_from:

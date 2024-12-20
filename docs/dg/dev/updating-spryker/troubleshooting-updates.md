@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting updates
-description: Common update issues and how to solve them
+description: Learn how to troubleshoot and resolve common update issues and errors within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 redirect_from:

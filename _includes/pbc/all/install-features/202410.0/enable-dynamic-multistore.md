@@ -29,7 +29,7 @@ If your project version is below 202307.0, you need to install Dynamic Multistor
 5. Dynamic Multistore introduce some changes in RabbitMQ messages structure, so it is **important** that: 
    - During the migration we do not have unprocessed messages in the queue. Make sure that all messages are processed **before** enabling Maintenance Mode.
    - Make sure that `Maintainance Mode` is enabled during migration to make sure that no new messages are added to the queue before the migration is finished.
-   (Expected downtime is limited to the deployment time, normally it takes less than 1hr)
+   (Expected server downtime is limited to the deployment time, normally it takes less than 1hr)
 6. Update AWS deployment files to Dynamic Multistore mode, using the example:
 - Environment variable section
 ```yaml

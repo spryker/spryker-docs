@@ -27,8 +27,7 @@ To avoid unexpected downtime and data loss, perform and test *all* of the follow
 3. After enabling Dynamic Multistore, the basic domain structure will change from store to region for all the applications. For example, `https://yves.de.mysprykershop.com` will change to `https://yves.eu.mysprykershop.com`. To prevent negative SEO effects, set up the needed redirects.
 4. The Dynamic Store feature itself does not require any database changes, in case you've already migrated to the latest demoshop version.
 5. Dynamic Multistore changes the structure of RabbitMQ messages. When you're ready for the migration, wait for all the remaining messages in the queue to be processed. When the queue is empty, enable the maintenance mode.
-
-   (Expected downtime is limited to the deployment time, normally it takes less than 1hr)
+  Expected server downtime is limited to the deployment time, which is usually up to an hour.
 6. Update AWS deployment files to Dynamic Multistore mode using the example:
 
 Original environment variables section:

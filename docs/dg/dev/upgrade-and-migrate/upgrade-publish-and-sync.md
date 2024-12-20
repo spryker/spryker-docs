@@ -47,7 +47,7 @@ $stores['DE']['queuePools']['synchronizationPool'] = [
 
 #### Module layers
 
-In Previous version the listener plugins has been extended from Abstract plugin classes and now this has changed due to obey the Spryker architecture and moved into business layer and open APIs from Facade classes.
+In Previous version the listener plugins has been extended from Abstract plugin classes and now this has changed because of obey the Spryker architecture and moved into business layer and open APIs from Facade classes.
 
 ### Version 1 of the EventBehavior modules
 

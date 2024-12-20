@@ -44,7 +44,7 @@ oryxForZed.getConfiguration(myCustomZedSettings)
 ```
 
 The `oryx-for-zed` building settings must be expanded with a path to ZED modules on the project level (`entry.dirs`). 
-Due to `mergeWithStrategy`, the default config with core paths is expanded with a path to the project level.
+Because of `mergeWithStrategy`, the default config with core paths is expanded with a path to the project level.
 
 {% info_block infoBox %}
 

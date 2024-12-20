@@ -1,6 +1,6 @@
 ---
 title: Testing updates
-description: Learn how to test your code after taking updates
+description: Learn how you can test your code after taking updates to make sure your Spryker based projects work as expected.
 last_updated: Apr 3, 2023
 template: howto-guide-template
 redirect_from:

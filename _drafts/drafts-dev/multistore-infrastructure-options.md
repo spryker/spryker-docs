@@ -12,7 +12,7 @@ Multi-store setup 1: Database, search engine, and key-value storage are shared b
 
 ![multi-store setup 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/how-to-set-up-multiple-stores.md/multi-store-setup-configuration-option-1.png)
 
-Due to the resources being shared, the infrastructure costs are low. This setup is most suitable for B2C projects with low traffic and a small amount of data like products and prices.
+Because of the resources being shared, the infrastructure costs are low. This setup is most suitable for B2C projects with low traffic and a small amount of data like products and prices.
 
 Multi-store setup 2: Each store has a dedicated search engine and key-value storage while the database is shared.
 

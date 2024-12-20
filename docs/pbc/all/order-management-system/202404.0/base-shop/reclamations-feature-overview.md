@@ -26,7 +26,7 @@ With the reclamations in place, you can find the problematic issues with orders 
 
 {% info_block errorBox %}
 
-Due to the specificity of the state machine for every project, out of the box, the `Refunded` state is not reflected in OMS in any way. It is just a mark for the shop administrators signifying that the order has been refunded.
+Because of the specificity of the state machine for every project, out of the box, the `Refunded` state is not reflected in OMS in any way. It is just a mark for the shop administrators signifying that the order has been refunded.
 
 {% endinfo_block %}
 

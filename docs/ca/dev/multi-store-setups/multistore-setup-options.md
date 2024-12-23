@@ -98,6 +98,11 @@ The following table provides details on infrastructure for this setup:
 </div>
 
 ### Setup 2: Isolated virtual database
+
+{% info_block warningBox "" %}
+If Dynamic Multistore is enabled, separate databases can be used only per region, not per store.
+{% endinfo_block %}
+
 ![setup-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/multi-store-setups/setup-2.png)
 
 This setup has the following characteristics:

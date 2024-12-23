@@ -1,6 +1,6 @@
 ---
 title: External calls—several calls to Zed
-description: Troubleshoot the performance issue with several external calls to Zed
+description: Troubleshoot the performance issue with several external calls to Zed with your Spryker based project.
 template: troubleshooting-guide-template
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/external-calls-several-calls-to-zed.html

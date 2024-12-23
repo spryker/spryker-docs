@@ -352,6 +352,11 @@ To enhance your experience, we use data and analytics to understand how you inte
 By accepting, you allow us to capture anonymous events for personalization, analysis, and continuous improvement of your experience on our platform.
 ```
 
+### Disable user data tracking
+
+If a user does not consent to data tracking, you must set the `disableUserActionTracking` flag in the cookie to `true` to stop sending user action tracking events. This ensures no user data is sent from the application.
+
+
 ## Verify the installation
 
 1. Deploy to a testing environment.
@@ -376,7 +381,3 @@ When your indexes have enough data, such as unique searches and events, you can 
 
 
 When updating the configuration of Algolia features, make sure to A/B test them before rolling out globally. A/B testing lets you test configuration and see how it affects conversion rates for a limited audience. For more details, see [A/B Testing](https://academy.algolia.com/training/00f72f14-0713-11ef-b9fe-0617d5264223/overview).
-
-### Disable events
-
-To disable the sending of user action tracking events, you must configure the cookie with the `disableUserActionTracking` flag set to `true`. This ensures that no user action events are sent from the application.

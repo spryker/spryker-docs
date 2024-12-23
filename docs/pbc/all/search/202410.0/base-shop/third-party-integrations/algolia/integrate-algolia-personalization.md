@@ -164,7 +164,7 @@ Order Success page cases:
 | - | - |
 | Open the **Order Success** page | `PAGE_LOAD` with currency, order total, SKUs, prices, and quantities of purchased products. |
 
-For a full list of available events, see the [traceable-events-algolia readme file](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-algolia/README.md).
+For a full list of available events, see the [traceable-events-algolia readme file](https://github.com/spryker-shop/traceable-event-widget/blob/master/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-algolia/README.md).
 
 
 ### Common issues and solutions
@@ -176,7 +176,7 @@ This section common issues to event and solutions. Most solutions involve adding
 1. Locate the page template or view that is used for the page with faulty events.
 2. On the project level, override the `{% raw %}{% block eventTracker %}{% endraw %}` block in the template.
 
-For details on the event configuration API, see the [traceable-events-orchestrator README](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
+For details on the event configuration API, see the [traceable-events-orchestrator README](https://github.com/spryker-shop/traceable-event-widget/blob/master/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
 
 #### Issue: Event not triggering on user action
 
@@ -376,3 +376,7 @@ When your indexes have enough data, such as unique searches and events, you can 
 
 
 When updating the configuration of Algolia features, make sure to A/B test them before rolling out globally. A/B testing lets you test configuration and see how it affects conversion rates for a limited audience. For more details, see [A/B Testing](https://academy.algolia.com/training/00f72f14-0713-11ef-b9fe-0617d5264223/overview).
+
+### Disable events
+
+To disable the sending of user action tracking events, you must configure the cookie with the `disableUserActionTracking` flag set to `true`. This ensures that no user action events are sent from the application.

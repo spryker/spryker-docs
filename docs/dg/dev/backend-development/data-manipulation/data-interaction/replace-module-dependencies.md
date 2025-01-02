@@ -30,7 +30,7 @@ For each module that you want to add, take these steps:
     1. Name or rename the new module by using the old module’s name and prefixing it with `replace_`.  For example, create a dummy file called `replace_refund` to replace the refund module. This helps keep track of any replacements you do in the project.
     2. In the newly created dummy module directory, create an empty `composer.json` file and add the following Composer configuration information.
     3. Add the newly created module to your project’s `composer.json` file by going to `shop/composer.json` and adding the new location.
-    4. Check if the core module is in your project’s `composer.json` file. If it is, remove it.
+    4. Check if the core module is in your project’s `composer.json` file. If it's, remove it.
 2. Execute the composer update command with the replacement module name: composer update `“replace_<the name of the module you are replacing>”`. Running the composer update command removes all mentions of the module (for example, `refund`) and replaces it with your module (for example, `replace_refund`).
 
 {% info_block warningBox %}

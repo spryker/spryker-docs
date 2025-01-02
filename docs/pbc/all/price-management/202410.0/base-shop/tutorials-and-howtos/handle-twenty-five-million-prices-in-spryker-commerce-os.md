@@ -15,7 +15,7 @@ B2B business model usually challenges any software with higher requirements to a
 
 Imagine you have thousands of products and customers with unique pricing terms and conditions. A product can have thousands of prices assigned—one per customer. This document shares the technical challenges of handling such a number of prices and the solutions to solve them.
 
-Such a number of prices cannot be managed manually, but it is defined by business rules based on which the prices can be generated automatically. For example, you might agree on the special terms with your B2B partner, and they receive their own prices for the whole catalog. It might be considered as a discount, but usually, it is not a single simple rule but a set of rules and their priorities for each partner. These rules exist in an ERP system, which can export data through SOAP or CSV files.
+Such a number of prices cannot be managed manually, but it's defined by business rules based on which the prices can be generated automatically. For example, you might agree on the special terms with your B2B partner, and they receive their own prices for the whole catalog. It might be considered as a discount, but usually, it's not a single simple rule but a set of rules and their priorities for each partner. These rules exist in an ERP system, which can export data through SOAP or CSV files.
 
 In Spryker, each price is imported as a [price dimension](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html) and has a unique key, which determines its relation to a customer—for example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices must appear in Redis price entries and abstract product search documents so that facet filters can be applied in search and categories.
 
@@ -298,7 +298,7 @@ Ensure that `\Pyz\Zed\EventBehavior\Persistence\Propel\Behavior\ResourceAwareEve
 
 3. Adjust `\Pyz\Zed\EventBehavior\Business\Model\TriggerManager::triggerEvents()` to extract the new piece of data from the payload obtained from the database and set it as the value of the newly created `EventEntityTransfer::queueName` property.
 
-4. Configure `\Spryker\Zed\Event\Business\Queue\Producer\EventQueueProducer::enqueueListenerBulk()` to check if `queueName` is set on the `EventEntityTransfer.` If it is set, this queue name is used to push event messages to. Otherwise, it falls back to the default event queue.
+4. Configure `\Spryker\Zed\Event\Business\Queue\Producer\EventQueueProducer::enqueueListenerBulk()` to check if `queueName` is set on the `EventEntityTransfer.` If it's set, this queue name is used to push event messages to. Otherwise, it falls back to the default event queue.
 
 Now you have a separate event queue for prices. This approach applies to any type of event. *Quick lane* ensures that critical data is replicated faster.
 

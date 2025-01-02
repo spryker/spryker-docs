@@ -20,7 +20,7 @@ Permissions related to the approval process are configured based on the restrict
 
 Approvers can only approve orders of employees *within their own business unit*.
 
-If an employee with a *Buy up to grand total* limit is in a business unit without any approvers, at the checkout, the employee can't see any approvers to send their order to and thus can't proceed with their order. Not even if another business unit of the same company does have an approver. And not even if that other business unit is the direct parent of the employee's business unit.
+If an employee with a *Buy up to grand total* limit's in a business unit without any approvers, at the checkout, the employee can't see any approvers to send their order to and thus can't proceed with their order. Not even if another business unit of the same company does have an approver. And not even if that other business unit's the direct parent of the employee's business unit.
 
 {% endinfo_block %}
 
@@ -138,7 +138,7 @@ The company has the following company users:
 | Manager | Approver  | Has the *Approve up to grand total* permission set to €600. |
 | Head of the department | Approver  | Has the *Approve up to grand total* permission set to €1000. |
 
-Quote C needs approval that has to be provided by the head of the department because the manager's approval limit is lower than the quote grand total. After the request has been approved by the head of the department, the buyer can complete the checkout.
+Quote C needs approval that has to be provided by the head of the department because the manager's approval limit's lower than the quote grand total. After the request has been approved by the head of the department, the buyer can complete the checkout.
 
 #### Case 4: Approval Process is not initiated
 

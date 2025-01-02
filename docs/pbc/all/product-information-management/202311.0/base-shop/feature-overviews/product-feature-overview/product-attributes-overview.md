@@ -24,7 +24,7 @@ A developer can import [product attributes](/docs/pbc/all/product-information-ma
 
 ## Product attribute inheritance
 
-A Back Office user can add product attributes to abstract and concrete products. If they add a product attribute to an abstract product, it is added to all its concrete products. If they add it to a concrete product, it's not added to the other concrete products.
+A Back Office user can add product attributes to abstract and concrete products. If they add a product attribute to an abstract product, it's added to all its concrete products. If they add it to a concrete product, it's not added to the other concrete products.
 
 
 ## Declared attributes
@@ -45,7 +45,7 @@ The Spryker Commerce OS product data model allows the creation of multiple produ
 
 For a product variant to be selectable on the Storefront, a value of one of its product attributes must be unique compared to the product attribute values of other variants of the same abstract product.
 
-When creating a product attribute, a Back Office user selects if it is a super attribute.
+When creating a product attribute, a Back Office user selects if it's a super attribute.
 
 Product variants of the same abstract product can differ by different super attributes. Check the following super attribute examples:
 

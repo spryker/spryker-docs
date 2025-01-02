@@ -16,7 +16,7 @@ This endpoint allows finalizing the checkout process by placing an order.
 
 After sending a request, the cart is deleted, and you cannot make any further changes in the checkout data. This means the endpoint is best used for checkouts that can be performed in one pass or for finalizing a checkout after [submitting checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html).  
 
-The endpoint also provides information on whether it is necessary to redirect the user to a third-party page to complete the payment.
+The endpoint also provides information on whether it's necessary to redirect the user to a third-party page to complete the payment.
 
 ## Installation
 

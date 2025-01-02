@@ -1,11 +1,10 @@
 ---
-title: "Adding stores in a multi-database setup"
+title: "Adding stores in a multi-datatabse setup"
 description: Adding and deploying a new store in multi-db store setup requires additional steps and preparation. This guideline contains all the best practices you need to know.
 last_updated: Dec 02, 2024
 template: howto-guide-template
-originalLink:
-originalArticleId:
 redirect_from:
+  - /docs/dg/dev/internationalization-and-multi-store/add-new-store-in-multi-db-setup.html
 ---
 
 Setting up a new store in an existing multi-database environment requires a carefully crafted plan to ensure that the data and operations of existing stores remain unaffected. This document describes how to launch a new store within a region that already hosts other stores, guaranteeing a seamless and safe deployment.
@@ -20,82 +19,92 @@ This section describes the planning stage of launching a store.
 
 ### Clear roadmap
 
-It's good to have an overall plan, detailing all the stores you want to add in future. This can affect database structure, configuration, and overall decisions on how to approach the rollout, making sure it is cost-efficient over time, on all ends.
+Create a long-term plan, detailing all the stores you want to add in future. This can affect database (DB) structure, configuration, and  the choice of rollout approach, making sure it's cost-efficient over time.
 
 
 ### Backup strategy
 
-A backup plan needs to be ready in case of issues during deployment. Apart from database backups, this includes considerations on all the points in the following sections, including the business side.
+A backup plan needs to be ready in case of issues during deployment. Apart from DB backups, this includes considerations on all the points in the following sections, including the business side.
 
 ### Environment preparation
-To prepare your production and non-production environments for a store rollout, make sure there's no additional functionality to be released on top or parallel development. Teams and stakeholders need to be prepared and aware of the procedure.
+
+To prepare production and non-production environments for a store rollout, make sure there's no additional functionality to be released on top or parallel development. Teams and stakeholders need to be prepared and aware of the procedure.
 
 ### Repeatability
-If you're planning to release more stores in future, prepare process to be easily repeatable. This includes creating various detailed documentation, release procedure, and tickets, such as epics, stories, tasks, in your project management software. This can be a detailed script or checklist tailored to your project, covering all relevant steps, configurations, and integrations.
+If you're planning to release more stores in future, make the process easily repeatable. This includes creating detailed documentation, release procedure, and tickets, such as epics, stories, or tasks, in your project management software. This can be a detailed script or checklist tailored to your project, covering all relevant steps, configurations, and integrations.
 
 
-## Detailed considerations for the migration
+## Store rollout considerations
+
+This section describes parts of the application you need to consider when preparing a rollout plan.
 
 ### Integrations and third-party systems
-* Review and adjust all third-party integrations to ensure they work with the new store setup. This mainly concerns data and it’s isolation across multiple virtual DBs. Make sure that people working with both sides of the system, such as backend, frontend, merchant portal and APIs, have access to all the needed data.
-* Integrations, such as single sign-on, payment gateways, or inventory systems, may require updates. Make sure tech teams responsible for those systems are available and ready to do needed changes on time.
+* Review and adjust all third-party integrations to ensure they work with the new store setup. This mainly concerns data and it’s isolation across virtual DBs. Teams working with both sides of the system, such as backend, frontend, merchant portal and APIs, should have access to all the needed data.
+* Integrations, such as single sign-on, payment gateways, or inventory systems, may require updates. Teams responsible for those systems should be available and ready to do needed changes on time.
 
 ### Data import
-* Handle the data import process carefully, breaking it down into specific tasks such as configuring databases and adjusting the data import setup to work with the new store.
-* Make sure existing DBs, for example–a DB from another country, are correctly renamed or adjusted to fit the new multi-DB structure.
+* Handle the data import process carefully, breaking it down into specific tasks such as configuring DBs and adjusting the data import setup to work with the new store.
+* Make sure existing DBs, for example–a DB from another country, are correctly renamed or adjusted to fit the multi-DB structure.
 * Anticipate and plan for potential updates that may arise after end-to-end testing of the project data migration.
 
 ### Code buckets
-* If code buckets are used, investigate and adjust their configurations as necessary. Thoroughly document the steps for adjusting the configurations, making sure that code bucket keep working properly after a new store is added.
+
+If code buckets are used, investigate and adjust their configurations, making sure code buckets keeps working properly after the stored is introduced. Thoroughly document the steps for adjusting the code buckets configuration.
 
 ### Cloud environment and monitoring
-* Consider and adjust monitoring tools and APM, such as NewRelic and CloudWatch, to accommodate the new store. Check that all alerts and metrics are correctly configured to monitor the health and performance of the new store.
-* Check if you need to adjust AWS services, for example–introduce buckets for the new store in S3.
+* Consider and adjust application performance monitoring tools, such as NewRelic and CloudWatch, to accommodate the new store. Check that all alerts and metrics are correctly configured to monitor the health and performance of the new store.
+* Consider adjusting AWS services, for example–introduce S3 buckets for the new store.
 
 ### Frontend considerations
 
 Reconsider the prior topics relative to your frontend. For example–frontend separation might be a significant task, requiring layout changes between different stores and API changes.
 
+
+
+
+
+
 ## Releasing stores
 
 This section provides detailed guidelines for releasing stores.
 
-For general instructions for defining new databases, connecting them with new stores, and adding configuration, follow [Integrate multi-database logic](/docs/dg/dev/integrate-and-configure/integrate-multi-database-logic.html).
+For general instructions for defining new DBs, connecting them with new stores, and adding configuration, follow [Integrate multi-DB logic](/docs/dg/dev/integrate-and-configure/integrate-multi-DB-logic.html).
 
 ### Local setup
 
+This section describes how to add the configuration and deployment recipes for a new store.
 
 
-#### New store configuration
+#### Add the configuration for the new store
 
-* Using [Add and remove databases of stores](/docs/ca/dev/multi-store-setups/add-and-remove-databases-of-stores.html#remove-the-configuration-of-the-database), define the following new entities in your deploy file:
+* Using [Add and remove DBs of stores](/docs/ca/dev/multi-store-setups/add-and-remove-DBs-of-stores.html), define the following new entities in your deploy file:
 
 | ENTITY | SECTION |
-| Database | `regions.<region_name>.services.databases` |
+| Database | `regions.<region_name>.services.DBs` |
  | Store | `regions.<region_name>.stores`|
 | Domains | `groups.<region_name>.applications`  |
 
-* Using [Integrate multi-database logic](/docs/dg/dev/integrate-and-configure/integrate-multi-database-logic.html), add the configuration needed for the new store to `stores.php`.
+* In `stores.php`, add the configuration for the new store. For instructions, see [Integrate multi-DB logic](/docs/dg/dev/integrate-and-configure/integrate-multi-DB-logic.html).
 * Prepare data import configurations and data files for the new store.
 * Adjust the local environment setup as needed, including configurations and environment variables. Examples:
   * Frontend router configuration
   * Code bucket configuration
   * Create new Back Office users
-* To make sure these steps are repeatable in future, document them.
+* To make these steps repeatable in future, document them.
 
 #### Running initial setup locally
 
-Bootstrap your updated configuration and run the project:
+Bootstrap the updated configuration and run the project:
   ```bash
   docker/sdk boot deploy.dev.yml
   docker/sdk up
   ```
 
-Make sure the new store’s database has been correctly initialized and filled up with the demo data.
+Make sure the new store’s DB has been correctly initialized and filled up with demo data.
 
 #### Setting up additional deployment recipes
 
-When adding and deleting stores, for testing purposes, we recommend creating additional deployment install recipes in `config/install`. The following are examples of such recipes, which we tested in action. The examples recipes are based on the default folder structure with the EU folder as a base, but you can introduce your own structure.
+When adding and deleting stores, for testing purposes, we recommend creating additional deployment install recipes in `config/install`. The following are examples of such recipes, which we tested in action. The examples are based on the default folder structure with the EU folder as a base, but you can introduce your own structure.
 
 A minimal recipe for adding a store:
 
@@ -160,22 +169,23 @@ More information on this is provided in the following sections.
 
 ### Staging setup
 
+This section describes how to roll out a new store in a staging environment.
 
-#### Environment configuration
+#### Staging environment configuration
 
-* Add the configuration for the new store to the staging environment’s configuration.
+Add the configuration for the new store to the staging environment’s configuration.
 
+For initialize the DB, run a destructive deployment for the new store. To not affect existing stores, in the `image.environment` section of the deployment file, define only the new store in `SPRYKER_HOOK_DESTRUCTIVE_INSTALL`. In the following example, new PL and AT stores are introduced:
+```yml
+...
+SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install PL,AT -r EU/destructive --no-ansi -vvv"
+...
+```
 
-For the database to be initialized, you will need to run a destructive deployment for the new store.
+You can also use a custom recipe as described in [Setting up additional deployment recipes](#setting-up-additional-deployment-recipes).
 
-To make sure existing stores are not affected, you need to specify only new store code(s) in your deployment yml file (image.environment section), in `SPRYKER_HOOK_DESTRUCTIVE_INSTALL`.
-
-Example, for new PL and AT stores to be introduced: `SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install PL,AT -r EU/destructive --no-ansi -vvv"`
-
-You can also use your custom recipe following the examples above (see “Setting up additional deployment recipes “)
-
-#### Support Requests
-* Open a support request to apply the new configuration to the environment. Attach deploy file and explain shortly expected changes, i.e. new DB should be created. In case you have the necessary configuration in a specific branch of your repository, provide a reference to it in the ticket, making sure support team has access to your code base.
+#### Support requests
+* Open a support request to apply the new configuration to the environment. Attach the deploy file and shortly explain expected changes, that is the stores that need to be introduced. If the necessary configuration is in a specific repository branch, reference it in the ticket and make sure the support team has access to your code base.
 * Run the destructive deployment, assuring the right store(s) is specified.
 
 #### Deployment Execution

@@ -1006,7 +1006,7 @@ For the attributes of other included resources, see:
 
 Guest carts are anonymous as they are not related to any user. If a user registers or logs in, the guest cart can be automatically assigned to their account.
 
-To assign a guest cart to a customer, for example, merge the carts, include the unique identifier associated with the customer in the `X-Anonymous-Customer-Unique-Id` header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one. Adjust the configuration constant to create a cart for the newly authenticated customer while merging the guest cart with the customer cart:
+To assign a guest cart to a customer, for example, merge the carts, include the unique identifier associated with the customer in the `X-Anonymous-Customer-Unique-Id` header of the authentication request if it's an existing customer, or request to create a customer account if it's a new one. Adjust the configuration constant to create a cart for the newly authenticated customer while merging the guest cart with the customer cart:
 
 **src/Pyz/Zed/CartsRestApi/CartsRestApiConfig.php**
 

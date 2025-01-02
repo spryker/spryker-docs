@@ -951,7 +951,7 @@ Go through the checkout workflow, make an order and check if the following state
   * `amount_base_measurement_unit_name`
 
 Go to the Zed UI Sales overview, check the order, and verify the following:
-- The correct sales unit is displayed.
+- The correct sales unit's displayed.
 - The correct amount is displayed per sales order item.
 
 Make sure the following:

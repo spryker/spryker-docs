@@ -91,7 +91,7 @@ Make sure that the following endpoints are available:
 
 {% info_block warningBox “Verification” %}
 
-Make sure that it is possible to create more than one cart.
+Make sure that it's possible to create more than one cart.
 
 {% endinfo_block %}
 

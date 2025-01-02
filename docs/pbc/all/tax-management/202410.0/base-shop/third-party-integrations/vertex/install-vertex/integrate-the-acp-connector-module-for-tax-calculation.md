@@ -153,7 +153,7 @@ use Spryker\Zed\Tax\Communication\Plugin\Calculator\TaxRateAverageAggregatorPlug
     {
         return [
             # These plugins will be called if TaxApp configuration is missing or TaxApp is disabled.
-            # Please note that this list includes PriceToPayAggregatorPlugin - this plugin isn't a part of tax calculation logic but it is required by TaxRateAverageAggregatorPlugin.
+            # Please note that this list includes PriceToPayAggregatorPlugin - this plugin isn't a part of tax calculation logic but it's required by TaxRateAverageAggregatorPlugin.
             new TaxAmountCalculatorPlugin(),
             new ItemTaxAmountFullAggregatorPlugin(),
             new PriceToPayAggregatorPlugin(),
@@ -170,7 +170,7 @@ use Spryker\Zed\Tax\Communication\Plugin\Calculator\TaxRateAverageAggregatorPlug
     {
         return [
             # These plugins will be called if TaxApp configuration is missing or TaxApp is disabled.
-            # Please note that this list includes PriceToPayAggregatorPlugin - this plugin isn't a part of tax calculation logic but it is required by TaxAmountAfterCancellationCalculatorPlugin.
+            # Please note that this list includes PriceToPayAggregatorPlugin - this plugin isn't a part of tax calculation logic but it's required by TaxAmountAfterCancellationCalculatorPlugin.
             new TaxAmountCalculatorPlugin(),
             new ItemTaxAmountFullAggregatorPlugin(),
             new PriceToPayAggregatorPlugin(),

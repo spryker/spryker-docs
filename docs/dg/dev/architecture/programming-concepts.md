@@ -24,7 +24,7 @@ Having covered the main architectural concepts of the Spryker Commerce OS, front
 
 Spryker *Facades* use the [Facade design pattern](https://en.wikipedia.org/wiki/Facade_pattern). They hide all the business logic of a module behind them and give a very simple and straightforward interface. Thus, the main API of a module is its Facade. When you want to find out what a module does, simply check its Facade interface.
 
-Spryker's Facades work as delegators, so they do not have any business logic in them. They delegate to the right model in order to handle the needed business logic. There is only one Facade for each module, and it is located in the Business layer.
+Spryker's Facades work as delegators, so they do not have any business logic in them. They delegate to the right model in order to handle the needed business logic. There is only one Facade for each module, and it's located in the Business layer.
 
 ## Factory
 
@@ -32,7 +32,7 @@ Spryker *Factories* follow the [Factory method pattern](https://en.wikipedia.org
 
 To isolate objects between the software layers in Spryker, every software layer in a module has its own Factory. The only exception is that the Presentation layer does not have objects, only templates. So, there are Persistence Factories, Business Factories, and Communication Factories.
 
-Glue, Client, and Service application layers have their own Factories as well. Yves can have a Factory when needed. However, it is not enforced by the Spryker architecture as, in many cases, it is not needed for the frontend presentation logic.
+Glue, Client, and Service application layers have their own Factories as well. Yves can have a Factory when needed. However, it's not enforced by the Spryker architecture as, in many cases, it's not needed for the frontend presentation logic.
 
 ## Query Container
 
@@ -64,7 +64,7 @@ To manage data transfer between the frontend and the Commerce OS applications an
 
 Transfer Objects are defined as XML files. Every module can define its own Transfer Objects or extend Transfer Objects from other modules when a dependency to that data is needed. The XML files are merged and transformed into auto-generated PHP objects.
 
-Transfer Objects are a great way to represent data contracts between the Commerce OS and frontend applications. It also represents data contracts between different modules. When any data is needed from a module, it is clear what structure the data has and how to properly use it.
+Transfer Objects are a great way to represent data contracts between the Commerce OS and frontend applications. It also represents data contracts between different modules. When any data is needed from a module, it's clear what structure the data has and how to properly use it.
 
 As both the Commerce OS and the frontend application need to know about the structure of the Transfer Objects, they are located on the Shared application layer. Every module can have one or more Transfer Objects.
 

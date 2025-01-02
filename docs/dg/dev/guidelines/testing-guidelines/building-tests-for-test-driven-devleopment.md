@@ -9,7 +9,7 @@ redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-testing-and-tdd-spryker-commerce-os.html
 ---
 
-This document helps you understand the main concepts of testing with Spryker and see how simple it is to build tests. You will use the *test-driven development (TDD)* approach.
+This document helps you understand the main concepts of testing with Spryker and see how simple it's to build tests. You will use the *test-driven development (TDD)* approach.
 
 Spryker's testing structure and data handling make it very easy to develop using TDD. You will build a simple module that reverses a string and test it.
 

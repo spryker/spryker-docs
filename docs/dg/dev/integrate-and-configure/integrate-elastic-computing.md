@@ -128,7 +128,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 }
 ```
 
-3. In `Pyz\Zed\DataImport\Business\Model\Glossary\GlossaryWriterStep`, update the writer steps by adjusting the execute method to flush `MemoryAllocatedElasticBatch` when it is full.
+3. In `Pyz\Zed\DataImport\Business\Model\Glossary\GlossaryWriterStep`, update the writer steps by adjusting the execute method to flush `MemoryAllocatedElasticBatch` when it's full.
 
 
 ```php

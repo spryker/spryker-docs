@@ -79,6 +79,6 @@ class ProductLabelDependencyProvider extends SprykerProductLabelDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Ensure that, on the Storefront, the Discontinued product label is displayed on the *Catalog* and *Product Details* pages for all the products to which it is assigned.
+Ensure that, on the Storefront, the Discontinued product label is displayed on the *Catalog* and *Product Details* pages for all the products to which it's assigned.
 
 {% endinfo_block %}

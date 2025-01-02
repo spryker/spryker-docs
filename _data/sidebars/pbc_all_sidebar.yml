@@ -1517,6 +1517,8 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-feature.html
                       - title: Merchant Portal + Marketplace Order Management
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-order-management-feature.html
+                      - title: Merchant Portal + CMS feature integration
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-merchant-portal-core-cms-feature.html
                       - title: Merchant Portal - Marketplace Product
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-feature.html
                       - title: Merchant Portal - Marketplace Product + Inventory Management

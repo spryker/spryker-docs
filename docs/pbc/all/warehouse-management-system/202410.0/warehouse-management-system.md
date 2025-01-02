@@ -1,6 +1,6 @@
 ---
 title: Warehouse Management System
-description: Capability for managing stock and warehouses.
+description: Learn all about creating and managing warhouses and stock within the Spryker Warehouse Management Sytem feature.
 last_updated: Sep 2, 2022
 template: concept-topic-template
 redirect_from:

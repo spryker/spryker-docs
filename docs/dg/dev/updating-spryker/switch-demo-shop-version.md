@@ -1,6 +1,6 @@
 ---
 title: Switch Demo Shop version
-description: Learn how to switch the version of a Demo Shop
+description: Learn how you can switch the version of a Demo Shop to a previous or next version within your Spryker projects.
 last_updated: Apr 13, 2023
 template: howto-guide-template
 redirect_from:

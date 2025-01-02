@@ -1247,6 +1247,8 @@ entries:
 
               - title: Add fields to Back Office forms
                 url: /docs/pbc/all/dynamic-multistore/base-shop/add-fields-to-back-office-forms.html
+              - title: Enable / Disable Dynamic Multistore
+                url: /docs/pbc/all/dynamic-multistore/base-shop/enable-dynamic-multistore.html
               - title: Delete stores
                 url: /docs/pbc/all/dynamic-multistore/base-shop/delete-stores.html
               - title: Import stores
@@ -2612,8 +2614,6 @@ entries:
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/disconnect-stripe.html
                       - title: Project guidelines
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-guidelines-for-stripe.html
-                        include_versions:
-                        - "202410.0"
                         nested:
                           - title: Embed the Stripe payment page as an iframe
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/embed-the-stripe-payment-page-as-an-iframe.html

@@ -1,6 +1,6 @@
 ---
 title: Fulfillment App overview
-description: Fulfillment App streamlines the process of fulfilling orders.
+description: Fulfillment App streamlines the process of fulfilling orders, learn all you need to know about the Spryker Fulfilment app for your Unified Commerce Store.
 last_updated: Oct 3, 2023
 template: concept-topic-template
 ---

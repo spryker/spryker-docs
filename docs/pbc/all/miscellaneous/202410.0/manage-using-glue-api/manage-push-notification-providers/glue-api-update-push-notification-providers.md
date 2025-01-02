@@ -33,7 +33,7 @@ This endpoint lets you update push notification providers.
 | Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
 
 
-Request sample: `PATCH https://glue-backend.de.b2c.demo-spryker.com/push-notification-providers/ffb5875e-00d3-5436-ae67-08b7c9837f3e`
+Request sample: `PATCH https://glue-backend.b2c-eu.demo-spryker.com/push-notification-providers/ffb5875e-00d3-5436-ae67-08b7c9837f3e`
 
 ```json
 {
@@ -63,7 +63,7 @@ Response sample:
             "name": "FA provider"
         },
         "links": {
-            "self": "https://glue-backend.de.b2c.demo-spryker.com/push-notification-providers/ffb5875e-00d3-5436-ae67-08b7c9837f3e"
+            "self": "https://glue-backend.b2c-eu.demo-spryker.com/push-notification-providers/ffb5875e-00d3-5436-ae67-08b7c9837f3e"
         }
     }
 }

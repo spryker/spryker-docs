@@ -14,7 +14,7 @@ related:
      link: docs/pbc/all/dynamic-multistore/page.version/marketplace/install-dynamic-multistore-the-marketplace-merchant-portal-core.html    
 ---
 
-The *Dynamic Multistore* feature lets you create and manage multiple stores within the same region in the Back Office. It streamlines the setup and maintenance of distinct stores tailored to various customer segments, regions, or product categories.
+*Dynamic Multistore* (DMS) lets you create and manage multiple stores within the same region in the Back Office. It streamlines the setup and maintenance of distinct stores tailored to various customer segments, regions, or product categories.
 
 In the Back Office, in the **Administration&nbsp;<span aria-label="and then">></span> Stores**, you can view the list of stores in the current region. The **Stores** page shows all the stores within a specific region.
 
@@ -104,8 +104,13 @@ When you add a new store, to enable store-related entities for customers, you ne
 
 To avoid manually assigning entities in the Back Office, you can assign them using data import. For more details, see [Import stores](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/import-stores.html).
 
+## Differences in modes
 
-## How Dynamic Multistore affects a project
+This section describes the differences in different parts of application in DMS on and off modes.
+
+
+
+## Differences between applications with and without Dynamic Multistore
 
 In this example, EU region has DE and AT stores. US region has a US store. Dynamic Multistore introduces the following changes in this setup:
 
@@ -135,10 +140,168 @@ In this example, EU region has DE and AT stores. US region has a US store. Dynam
 
 ![storefront-store-switcher](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/storefront-store-switcher.png)
 
+
+
+### Store context in different applications with Dynamic Multistore
+
+All the applications work with the several stores within one region with the following differences:
+* Back Office and Merchant Portal operate with data from all the stores within a region and don't require a store context.
+* Storefront, GlueStorefront, and Glue require a store context and operate within only one provided store. If a store isn't provided, the default one is used.
+
+### Cloud infrastructure differences
+
+DMS doesn't affect cloud infrastructure. The only related changes are in the deployment files, which are described in the following sections.
+
+
+### Deployment file differences
+
+Applacation configurations are defined differently depending on whether DMS is on or off.
+
+#### Environment variables configuration
+
+DMS off:
+
+```yaml
+SPRYKER_HOOK_BEFORE_DEPLOY: 'vendor/bin/install -r pre-deploy.dynamic-store-off -vvv'
+SPRYKER_HOOK_AFTER_DEPLOY: 'true'
+SPRYKER_HOOK_INSTALL: 'vendor/bin/install -r production.dynamic-store-off --no-ansi -vvv'
+SPRYKER_HOOK_DESTRUCTIVE_INSTALL: 'vendor/bin/install -r destructive.dynamic-store-off --no-ansi -vvv'
+SPRYKER_YVES_HOST_DE: de.{{DOMAIN_ZONE}}
+SPRYKER_YVES_HOST_AT: at.{{DOMAIN_ZONE}}
+```
+
+DMS on:
+
+```yaml
+SPRYKER_HOOK_BEFORE_DEPLOY: 'vendor/bin/install -r pre-deploy -vvv'
+SPRYKER_HOOK_AFTER_DEPLOY: 'true'
+SPRYKER_HOOK_INSTALL: 'vendor/bin/install -r dynamic-store --no-ansi -vvv'
+SPRYKER_HOOK_DESTRUCTIVE_INSTALL: 'vendor/bin/install -r destructive --no-ansi -vvv'
+SPRYKER_DYNAMIC_STORE_MODE: true
+SPRYKER_YVES_HOST_EU: yves.eu.{{DOMAIN_ZONE}}
+```
+
+#### Regions configuration
+
+DMS off:
+
+```yaml
+regions:
+  stores:
+    DE:
+      services:
+        broker:
+          namespace: de_queue
+        key_value_store:
+          namespace: 1
+        search:
+          namespace: de_search
+        session:
+          namespace: 2
+    AT:
+      services:
+        broker:
+          namespace: at_queue
+        key_value_store:
+          namespace: 3
+        search:
+          namespace: at_search
+        session:
+          namespace: 4
+```
+DMS on:
+
+```yaml
+regions:
+  broker:
+    namespace: eu-docker
+  key_value_store:
+    namespace: 1
+  search:
+    namespace: eu_search
+```
+
+
+#### Applications configuration
+
+The following examples show the difference for the `merchant-portal` application. The difference is similar for all the applications.
+
+DMS off:
+
+```yaml
+ mportal:
+    application: merchant-portal
+    endpoints:
+      mp.de.{{DOMAIN_ZONE}}:
+        entry-point: MerchantPortal
+        store: DE
+        primal: true
+        services:
+          session:
+            namespace: 7
+      mp.at.{{DOMAIN_ZONE}}:
+        entry-point: MerchantPortal
+        store: AT
+        services:
+          session:
+            namespace: 8
+```
+
+DMS on:
+
+```yaml
+mportal:
+  application: merchant-portal
+  endpoints:
+    mp.eu.{{DOMAIN_ZONE}}:
+      region: EU
+      <<: *frontend-auth
+      entry-point: MerchantPortal
+      primal: true
+      services:
+        session:
+          namespace: 7
+```
+
+{% info_block infoBox "" %}
+
+The domain structure in DMS on mode enables store switching within the same domain.
+
+{% endinfo_block %}
+
+### Differences in the execution of console commands
+
+With DMS off, store-aware console commands are executed with the `APPLICATION_STORE` environment variable. Example:
+
+```shell
+APPLICATION_STORE=DE console search:setup:sources
+```
+
+With DMS on, all the store-aware console commands are executed with the `--store` parameter. Example:
+
+```shell
+console search:setup:sources --store=DE
+```
+
+If a store isn't provided as a parameter, the command is executed for all stores within a current region.
+
+#### Rules for implementing custom console commands in environments with Dynamic Multistore
+
+- `Store(Facade|Client)::getCurrentStore()` must not be used in the code the console command executes.
+- All store-aware commands must implement `Spryker\Zed\Kernel\Communication\Console\StoreAwareConsole` and execute actions for a specific store if the store parameter is provided; if not provided, actions are executed for all the stores in the region.
+- We recommend using the `--store` parameter instead of `APPLICATION_STORE` env variable; both methods are supported.
+
+
+### Store-specific entities in Data Exchange API
+
+There're no specific requirements, and the changes you need to make depend on the database structure. These entities should be handled in the same way as any other exposed through Data Exchange API database table.
+
+
+
 ## Data import performance
 
 The number of stores affects data import speed: the more stores you have, the slower the data import. Importing products for 40 stores takes approximately 5 times longer than for 8 stores.
 
 ## Limitations
 
-With Dynamic Multistore, the separated setup is only possible with stores belonging to different regions. To learn about setups, see [Multi-store setups](/docs/ca/dev/multi-store-setups/multi-store-setups.html)
+With Dynamic Multistore, the separated setup is only possible with stores belonging to different regions. To learn about setups, see [Multi-store setups](/docs/ca/dev/multi-store-setups/multi-store-setups.html).

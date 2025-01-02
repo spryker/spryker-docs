@@ -64,13 +64,13 @@ Reconsider the prior topics relative to your frontend. For example–frontend se
 
 
 
-## Releasing stores
+## Releasing a store
 
 This section provides detailed guidelines for releasing stores.
 
 For general instructions for defining new DBs, connecting them with new stores, and adding configuration, follow [Integrate multi-DB logic](/docs/dg/dev/integrate-and-configure/integrate-multi-DB-logic.html).
 
-### Local setup
+### 1. Local setup
 
 This section describes how to add the configuration and deployment recipes for a new store.
 
@@ -167,7 +167,7 @@ SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install {STORES_GO_HERE} -r EU/del
 
 More information on this is provided in the following sections.
 
-### Staging setup
+### 2. Staging setup
 
 This section describes how to roll out a new store in a staging environment.
 
@@ -175,7 +175,8 @@ This section describes how to roll out a new store in a staging environment.
 
 Add the configuration for the new store to the staging environment’s configuration.
 
-For initialize the DB, run a destructive deployment for the new store. To not affect existing stores, in the `image.environment` section of the deployment file, define only the new store in `SPRYKER_HOOK_DESTRUCTIVE_INSTALL`. In the following example, new PL and AT stores are introduced:
+To initialize the DB, run a destructive deployment for the new store. To not affect existing stores, in the `image.environment` section of the deployment file, define only the new store in `SPRYKER_HOOK_DESTRUCTIVE_INSTALL`. In the following example, new PL and AT stores are introduced:
+
 ```yml
 ...
 SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install PL,AT -r EU/destructive --no-ansi -vvv"
@@ -189,36 +190,51 @@ You can also use a custom recipe as described in [Setting up additional deployme
 * Run the destructive deployment, assuring the right store(s) is specified.
 
 #### Deployment Execution
-* Deploy the new store in the staging environment, ensuring existing stores remain unaffected.
-* Test the new store thoroughly to confirm it operates correctly without impacting other stores, including all the external integrations in the staging mode.
+* Deploy the new store in the staging environment.
+* Test the new store thoroughly to confirm it operates correctly without affecting other stores, including all the external integrations in the staging mode.
 
-### Production Setup
-#### Configuration Preparation
+### 3. Production setup
 
-* Prepare the production environment’s configuration similarly to the staging setup.
+This section describes how to roll out a new store in a production environment.
 
-#### Support and Deployment
-* Open a support request to deploy the new store configuration to production, ensuring all configurations are correct.
+
+#### Production environment configuration
+
+Prepare the production environment’s configuration similarly to the staging setup.
+
+#### Support and deployment
+* Open a support request to deploy the new store configuration to production.
 * Execute the deployment, closely monitoring the process to catch any issues early.
 
-#### Post-Deployment
-* After deployment, verify that the new store is fully operational and that no data or services for existing stores have been impacted.
-* During environment configuration, if you have chosen to update existing installation recipe (production or destructive), revert it back to its original state.
+#### Post-deployment
+* After deployment, verify that the new store is fully operational and that no data or services for existing stores were affected.
+* If you updated an existing installation recipe during environment configuration, revert it back to its original state.
 
-## Releasing many stores one after another
-When you plan releasing multiple stores one after another you can save some time on support requests, doing only one request per environment for all stores upfront, which will make the overall process faster. To do so, adjust the above procedure as following:
+## Releasing multiple stores in a row
 
-### First release
-#### Local Setup
-* Prepare and test the configuration for ALL stores you are planning to release in the future.
+This section describes the changes you need to make to the procedure in [Releasing a store] to release multiple stores in a row.
 
-#### Staging Setup
-* Prepare staging deploy yml file, containing ALL stores you are planning to release in the future. Open a support request and hand the deploy file to them, explaining your intent and ideally - approx. schedule on when are you going to release all the stores.
-* Once the preparation is ready - you can revert the configuration, leaving only store you’d like to release now. We recommend to save this configuration separately, to be able to come back to it later.
-* Run the destructive deployment, assuring the right store(s) is specified and check the result.
+When releasing multiple stores, you need to prepare configuration for all the stores, but release one store at a time.
 
-#### Production Setup
-Repeat the same procedure as you’ve done for Staging
+This lets you avoid repeating some of the steps for multiple stores.
 
-### Next releases
-While doing next releases, you can add stores you’d like to release one by one and running the destructive deployment on your own and when you need it, w.o. raising a new request with the Support team. Make sure that configuration you’re appending matches with the one you sent during the “first release“ above.
+### Release of the first store
+
+#### 1. Local setup
+
+Prepare and test the configuration for *all* the stores you want to release.
+
+#### 2. Staging setup
+1. Prepare a staging deploy file, containing all the stores you want to release.
+2. Open a support request an describe the end result. Attach the deploy file and optionally provide a rollout schedule for all the stores.
+
+3. Save the configuration you've prepared separately.
+4. Update the configuration to contain only the first store you want to release.
+5. Run a destructive deployment.
+
+#### 3. Production setup
+Repeat the procedure from the previous step for production environment.
+
+### Releases of subsequent stores
+
+After releasing the first store, you can append the configuration for the next store and run a destructive deployment. This way you can release all the stores you've provided the configuration for in your initial support request. You don't have to create additional support tickets.

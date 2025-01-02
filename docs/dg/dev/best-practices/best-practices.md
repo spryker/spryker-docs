@@ -1,6 +1,6 @@
 ---
 title: Best practices
-description: Best practices for developers working on Spryker Commerce OS
+description: Discover best practices for Spryker development, including coding standards, modular architecture, testing strategies, and optimization techniques.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/best-practices/

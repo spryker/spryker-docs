@@ -1,6 +1,6 @@
 ---
 title: Install the Warehouse User Management feature
-description: Install the Warehouse User Management feature in your project
+description: Learn how to install the Spryker Warehouse User Management feature in your Spryker Unified Commerce project
 template: feature-integration-guide-template
 last_updated: Jan 10, 2024
 redirect_from:

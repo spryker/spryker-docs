@@ -1,6 +1,6 @@
 ---
 title: Port is already occupied on host
-description: Learn how to fix the issue when port is already occupied on host
+description: Learn how to fix the issue when port is already occupied on host when running applications in docker for your Spryker projects.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/port-is-already-occupied-on-host

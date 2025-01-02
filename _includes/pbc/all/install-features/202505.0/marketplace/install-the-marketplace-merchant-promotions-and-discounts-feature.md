@@ -35,7 +35,7 @@ Set up the following behaviors:
 | PLUGIN                                           | SPECIFICATION                                                                            | PREREQUISITES | NAMESPACE                                                           |
 |--------------------------------------------------|------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------|
 | MerchantReferenceDecisionRulePlugin              | Defines if a discount can be applied to a cart item with a merchant reference specified. |               | Spryker\Zed\MerchantDiscountConnector\Communication\Plugin\Discount |
-| MerchantReferenceDiscountableItemCollectorPlugin | Collects cart items with a merchant reference to which a discount should be applied.   |               | Spryker\Zed\MerchantDiscountConnector\Communication\Plugin\Discount |
+| MerchantReferenceDiscountableItemCollectorPlugin | Collects cart items with the reference of a merchant to which a discount should be applied.   |               | Spryker\Zed\MerchantDiscountConnector\Communication\Plugin\Discount |
 
 **src/Pyz/Zed/Discount/DiscountDependencyProvider.php**
 

@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-description: Learn how you can fix technical issues with Spryker
+description: Learn how you can troubleshoot and resolve technical issues with your Spryker based project.
 template: concept-topic-template
 last_updated: Jun 30, 2023
 redirect_from:

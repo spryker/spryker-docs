@@ -1,6 +1,6 @@
 ---
 title: Edit users
-description: Learn how to edit users in the Back Office
+description: Learn how you can edit users directly in the back office of your Spryker Cloud Commerce OS Shop.
 template: back-office-user-guide-template
 last_updated: Jan 4, 2024
 redirect_from:

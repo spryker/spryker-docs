@@ -1,6 +1,6 @@
 ---
 title: Integrate the ACP connector module for tax calculation
-description: Find out how to integrate the connector module for tax calculation
+description: Learn how you can configure and integrate Vertex via Spryker App Compositon Platform into your Spryker project.
 draft: true
 last_updated: Jan 10, 2024
 template: howto-guide-template

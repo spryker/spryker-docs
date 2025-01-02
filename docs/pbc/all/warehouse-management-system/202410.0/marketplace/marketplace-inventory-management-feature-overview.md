@@ -1,6 +1,6 @@
 ---
 title: Marketplace Inventory Management feature overview
-description: This document contains concept information for the Marketplace Products feature.
+description: Learn all about the Spryker Marketplace Inventory Management feature and how you can use it within your Spryker Marketplace store.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:

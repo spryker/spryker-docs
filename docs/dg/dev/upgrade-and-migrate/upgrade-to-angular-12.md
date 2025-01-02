@@ -1,6 +1,6 @@
 ---
 title: Upgrade to Angular 12
-description: Use the guide to update versions of the Angular and related modules.
+description: Learn how you can upgrade to Version 12 of Angular for your Spryker project for improved performance and security. 
 template: module-migration-guide-template
 last_updated: Jul 13, 2023
 redirect_from:

@@ -48,7 +48,7 @@ Formula to estimate your maximum theoretical RAM demand:
 
 Number of executors x (maximum workers and threads spawned by heaviest job * memory_limit) = Theoretical max RAM Demand
 
-As you can see from the multiplicative nature of the threads and executors, you can easily reach a surprisingly high theoretical max RAM demand. However, it's unlikely that you will actually consume this amount. You would need to have multiple heaviest jobs running in parallel and consuming up to the `memory_limit simultaneously`. Nevertheless, calculating it is good practice, as keeping your theoretical maximum RAM demand below the memory supply significantly increases stability as it virtually eliminates the risk of Jenkins crashing due to exhausting its memory supply. This is currently the most common root cause of Jenkins service degradation and outages.
+As you can see from the multiplicative nature of the threads and executors, you can easily reach a surprisingly high theoretical max RAM demand. However, it's unlikely that you will actually consume this amount. You would need to have multiple heaviest jobs running in parallel and consuming up to the `memory_limit simultaneously`. Nevertheless, calculating it is good practice, as keeping your theoretical maximum RAM demand below the memory supply significantly increases stability as it virtually eliminates the risk of Jenkins crashing because of exhausting its memory supply. This is currently the most common root cause of Jenkins service degradation and outages.
 
 ### To-Dos
 
@@ -95,7 +95,7 @@ Import jobs, as well as Publish and Sync-related processes, can be taxing on the
 
 ### Imports and Publish and Synchronize
 
-Imports and certain Publish and Sync processes can lead to high computational costs, such as permutation calculations for filters. Therefore, it is crucial to implement [RAM-aware batch processing](/docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html#integrate-ram-aware-batch-processing) and [queue chunk sizes](/docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html#chunk-size) that are suitable for the complexity of your data. The former helps prevent loading all import data into RAM, while the latter prevents RabbitMQ pipe timeouts due to lengthy processing times. A chunk or batch size that is too large may result in memory-related exceptions or messages being stuck in queues (with logs indicating RabbitMQ broken pipe exceptions), whereas a chunk or batch size that is too small may lead to subpar import and P&S performance. There is no one-size-fits-all solution, but with profiling, you can find a good balance between stability and performance.
+Imports and certain Publish and Sync processes can lead to high computational costs, such as permutation calculations for filters. Therefore, it is crucial to implement [RAM-aware batch processing](/docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html#integrate-ram-aware-batch-processing) and [queue chunk sizes](/docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html#chunk-size) that are suitable for the complexity of your data. The former helps prevent loading all import data into RAM, while the latter prevents RabbitMQ pipe timeouts because of lengthy processing times. A chunk or batch size that is too large may result in memory-related exceptions or messages being stuck in queues (with logs indicating RabbitMQ broken pipe exceptions), whereas a chunk or batch size that is too small may lead to subpar import and P&S performance. There is no one-size-fits-all solution, but with profiling, you can find a good balance between stability and performance.
 
 While fine-tuning your chunk size, check out the following articles:
 - [Messages are moved to error queues](https://docs.spryker.com/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-moved-to-error-queues.html)
@@ -107,7 +107,7 @@ A valuable general recommendation is to [split up publishing queues](https://doc
 ### CPU credits
 Standard-sized non-production environments aren't intended to handle long periods of high load. Most infrastructure components in this package size operate with a burst configuration, allowing for increased performance during limited periods. However, if these environments are under heavy load for an extended duration, the components will eventually run out of "burst credits" and throttle until the load decreases and the credits can replenish over time. When an instance is throttled, its CPU performance is capped at 20%. Consequently, the instance may struggle to complete standard tasks, resulting in the following common symptoms:
 
-- Deployment-related steps in the Deploy_Scheduler pipeline may encounter issues due to insufficient processing capacity.
+- Deployment-related steps in the Deploy_Scheduler pipeline may encounter issues because of insufficient processing capacity.
 - Job execution durations in your APM may sharply increase, or you may encounter RabbitMQ broken pipe exceptions.
 - The Jenkins UI may become unresponsive or sluggish.
 

@@ -5,24 +5,12 @@ layout: default
 <div class="page-content">
     <section class="search-section">
         <div class="container">
-            <h1 class="search-section__title">Welcome to the Spryker <br>documentation center</h1>
-            <div class="fake-input js-home-search">
-                <div class="fake-input__icon icon-search"></div>
-                <div class="fake-input__placeholder js-search-popup-opener">Search documentation</div>
-            </div>
-            <div class="search-popup">
-                <div class="search-popup__inner">
-                    <div class="search-popup__content">
-                        <a href="#" class="search-popup__close js-search-popup-close"><i class="icon-arrow-left"></i></a>
-                        <div class="search-section__panel dropdown-menu dropdown-menu--dark">
-                            <i class="search-section__panel-icon icon-search"></i>
-                            {% include search/{{ site.search | default "default" }}_quicksearch.html %}
-                        </div>
-                    </div>
-                    <div class="search-popup__footer">
-                        <a href="/search" class="search-popup__more">Show all results</a>
-                    </div>
-                </div>
+            <h1 class="search-section__title">
+                Welcome to the Spryker <br />documentation center
+            </h1>
+
+            <div class="search-section-panel">
+                {% include search/{{ site.search | default "default" }}-quicksearch.html %}
             </div>
         </div>
     </section>
@@ -40,8 +28,9 @@ layout: default
                     </div>
                     <div class="card__footer">
                         <ul class="card__links">
-                            <li><a href="/docs/scos/dev/developer-getting-started-guide.html">SCOS developer guides</a></li>
-                            <li><a href="/docs/marketplace/dev/setup/system-requirements.html">Marketplace developer guides</a></li>
+                            <li><a href="/docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html">Quick installation guides</a></li>
+                            <li><a href="/docs/dg/dev/development-getting-started-guide.html">Development guides</a></li>
+                            <li><a href="/docs/pbc/all/pbc.html">PBC guides</a></li>
                         </ul>
                     </div>
                 </div>
@@ -56,8 +45,7 @@ layout: default
                     </div>
                     <div class="card__footer">
                         <ul class="card__links">
-                            <li><a href="/docs/scos/user/intro-to-spryker/about-spryker.html">SCOS user guides</a></li>
-                            <li><a href="/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html">Marketplace user guides</a></li>
+                            <li><a href="/docs/about/all/about-spryker.html">About Spryker</a></li>
                         </ul>
                     </div>
                 </div>
@@ -66,13 +54,14 @@ layout: default
                     <div class="card__content">
                         <div class="card__heading">
                             <i class="card__heading-icon icon-cloud"></i>
-                            <h2 class="card__heading-title">Cloud Engineer guides</h2>
+                            <h2 class="card__heading-title">Cloud Admin guides</h2>
                         </div>
-                        <p>Cloud Engineer guides will help you to develop with the Spryker Cloud Commerce OS (SCCOS). After the initial setup of your SCCOS project, use the documentation as step-by-step instructions on how to go live.</p>
+                        <p>Cloud Admin guides will help you to manage and upgrade your cloud applications.</p>
                     </div>
                     <div class="card__footer">
                         <ul class="card__links">
-                            <li><a href="/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html">Spryker Cloud engineer guides</a></li>
+                            <li><a href="/docs/ca/dev/getting-started-with-cloud-administration.html">Manage cloud applications</a></li>
+                            <li><a href="/docs/ca/devscu/spryker-code-upgrader.html">Upgrade cloud applications</a></li>
                         </ul>
                     </div>
                 </div>

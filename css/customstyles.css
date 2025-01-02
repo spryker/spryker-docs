@@ -370,9 +370,12 @@ a[href^="http://"]:after, a[href^="https://"]:after {
     font-family: FontAwesome;
     font-weight: normal;
     font-style: normal;
+    font-display: block;
     display: inline-block;
+    vertical-align: baseline;
     text-decoration: none;
     padding-left: 3px;
+    min-height: 1em;
 }
 
 /* Strip the outbound icon when this class is present */
@@ -483,4 +486,8 @@ div.box.box1 {
 h4.panel-title {
     padding-top: 0px;
     margin-top: 0px;
+}
+
+code {
+    line-height: 1.4;
 }

@@ -16,8 +16,22 @@
     h1, h2, h3, h4, h5, h6 {
         color: $grey-dark;
         font-weight: 800;
-        margin: 0 0 16px;
+        margin: 0 0 2px;
     }
+
+    h2, h3, h4, h5, h6 {
+        margin-top: 40px;
+    }
+
+
+    h2, h3, h4, h5 {
+      &:has(+ ul),
+      &:has(+ p) {
+        margin-bottom: -15px;
+      }
+    }
+
+
 
     h1 {
         font-size: 38px;
@@ -34,7 +48,7 @@
         @include media("<tablet") {
             font-size: 20px;
             line-height: 1.4;
-            margin-bottom: 8px;
+            margin-bottom: 2px;
         }
     }
 
@@ -43,7 +57,7 @@
 
         @include media("<tablet") {
             font-size: 16px;
-            margin-bottom: 8px;
+            margin-bottom: 2px;
         }
     }
 
@@ -52,7 +66,7 @@
 
         @include media("<tablet") {
             font-size: 15px;
-            margin-bottom: 8px;
+            margin-bottom: 2px;
         }
     }
 
@@ -212,11 +226,7 @@
         font-size: 13px;
         font-weight: 600;
         background: $grey;
-        text-transform: lowercase;
-
-        &::first-letter {
-            text-transform: capitalize;
-        }
+        text-transform: uppercase;
 
         &:first-child {
             border-top-left-radius: 4px;
@@ -254,7 +264,6 @@
     details {
         margin: 0 0 24px;
         border: 2px solid $grey-lighten;
-        background: $grey-lightest;
         border-radius: 4px;
         position: relative;
 
@@ -275,6 +284,7 @@
             color: $grey-dark;
             word-break: break-word;
             border-radius: 2px;
+            background: $grey-lightest;
 
             &:hover {
                 @include hover {
@@ -380,7 +390,7 @@
     img {
         display: block;
         margin: 0 auto 1em;
-        max-width: 50%;
+        max-width: 80%;
         cursor: zoom-in;
         position: relative;
 
@@ -411,6 +421,10 @@
     }
 
     .anchorjs-link {
+        min-height: 1em;
+        display: inline-block;
+        vertical-align: baseline;
+
         @include media("<desktop") {
             opacity: 1;
         }
@@ -567,7 +581,7 @@
     position: relative;
 
     table {
-        margin: 0 0 5px;
+        margin: 0;
 
         @include media("<tablet") {
             margin: 0;
@@ -626,5 +640,27 @@
                 display: none;
             }
         }
+    }
+}
+
+.swagger-ui {
+    pre {
+        background: none;
+    }
+
+    th {
+        text-transform: none;
+        background: none;
+    }
+
+    ol,
+    ul {
+        li {
+            margin: 0;
+        }
+    }
+
+    ul > li::before {
+        content: none;
     }
 }

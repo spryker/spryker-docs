@@ -361,7 +361,7 @@ function initHomeSearchPosition() {
 
     function handleScroll() {
         pageOffsetTop = page.scrollTop();
-        searchOffsetTop = searchContainer.offset().top;
+        searchOffsetTop = searchContainer.offset()?.top ?? 0;
 
         if (isScrolled && pageOffsetTop < searchOffsetTop) {
             opener.removeClass('under-search');
@@ -382,7 +382,8 @@ function initSearchPopup() {
         opener = $('.js-search-popup-opener'),
         close = $('.js-search-popup-close'),
         body = $('body'),
-        input = $('.search-input.aa-input');
+        input = $('.search-input.aa-input'),
+        drop = $('.aa-dropdown-menu');
 
     // mobile-overflow
 
@@ -399,6 +400,10 @@ function initSearchPopup() {
         body.removeClass('tablet-overflow');
 
         popup.fadeOut(300);
+    });
+
+    input.on('blur', function(e){
+       drop.hide();
     });
 }
 
@@ -575,15 +580,81 @@ function initSidebarAccordion() {
 }
 
 function initFeedbackForm() {
+    let form = $('#feedback-form'),
+        formNative = form.get(0),
+        regEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
+        isValid = false,
+        errorClass = 'validation-error',
+        inputs = form.find('.required-field, .required-email, .optional-email'),
+        successMessage = $('.feedback-form__success-message'),
+        formIsSubmitted = false;
+
+    function validateForm() {
+        isValid = true;
+        inputs.each(checkField);
+
+        if(!isValid) {
+            return false;
+        }
+    }
+
+    function checkField(i, item) {
+        let input = $(item);
+
+        // not empty fields
+        if(input.hasClass('required-field')) {
+            setState(input, !input.val().length)
+        }
+
+        // correct email fields
+        if(input.hasClass('required-email')) {
+            setState(input, !regEmail.test(input.val()));
+        }
+
+        // optional email fields
+        if(input.hasClass('optional-email') && input.val().length) {
+            setState(input, !regEmail.test(input.val()));
+        }
+    }
+
+    function setState(field, error) {
+        field.removeClass(errorClass);
+
+        if (error) {
+            field.addClass(errorClass);
+
+            field.one('focus', function() {
+                field.removeClass(errorClass);
+            });
+
+            isValid = false;
+        }
+    }
+
+    $(':input', form).change(function() {
+        form.data('state-changed', true);
+    })
+
     $('.form-collapse').each(function () {
         let container = $(this),
             opener = container.find('.js-form-collapse__opener'),
+            firstStep = container.find('.js-form-collapse__first-step'),
+            secondStep = container.find('.js-form-collapse__second-step'),
+            secondStepOpener = container.find('.js-form-collapse__second-step-opener'),
             close = container.find('.js-form-collapse__close'),
-            slide = container.find('.js-form-collapse__slide');
+            slide = container.find('.js-form-collapse__slide'),
+            shortFeedback = container.find('.js-form-collapse__short-feedback');
 
-        opener.on('click', function (e) {
-            e.preventDefault();
+        secondStepOpener.on('click', function (e) {
+            let shortFeedbackValue = $(e.currentTarget).text();
 
+            shortFeedback.val(shortFeedbackValue).change();
+            firstStep.hide();
+            secondStep.removeClass('hidden');
+        });
+
+        opener.on('click', function () {
+            opener.addClass('button--disabled');
             slide.stop().slideDown(300);
         });
 
@@ -591,7 +662,48 @@ function initFeedbackForm() {
             e.preventDefault();
 
             slide.stop().slideUp(300);
+
+            if (!formIsSubmitted) {
+                opener.removeClass('button--disabled');
+            }
         });
+    });
+
+    $('#feedback-submit').on('click', function(e){
+        e.preventDefault();
+        validateForm();
+
+        if (isValid) {
+            handleFeedbackSubmit(e);
+            form.data('state-changed', false);
+        }
+    });
+
+    async function handleFeedbackSubmit(event) {
+        event.preventDefault();
+        let data = new FormData(formNative);
+
+        fetch(formNative.action, {
+            method: formNative.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.status === 200) {
+                form.hide();
+                successMessage.show();
+                formIsSubmitted = true;
+            }
+        }).catch(error => {
+            console.log(error);
+        });
+    }
+
+    document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'hidden' && form.data('state-changed')) {
+            navigator.sendBeacon(formNative.action, new FormData(formNative));
+        }
     });
 }
 
@@ -790,7 +902,11 @@ function initToc() {
         },
     };
 
-    $('nav[data-toggle="toc"]').each(function (i, el) {
+    let nav = $('nav[data-toggle="toc"]');
+
+    if (!nav.length) return;
+
+    nav.each(function (i, el) {
         Toc.init({
             $nav: $(el),
             $scope: $('.post-content h2, .post-content h3'),

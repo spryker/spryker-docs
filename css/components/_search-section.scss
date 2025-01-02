@@ -1,3 +1,8 @@
+:root {
+    --docsearch-highlight-color: #{$grey};
+    --docsearch-modal-width: 700px;
+}
+
 .search-section {
     background: $darkest url('../images/search-section-bg.jpg') no-repeat #{50% 50%/cover};
     color: $white;
@@ -9,6 +14,7 @@
 
     @include media("<tablet") {
         padding: 90px 0;
+        background-image: url('../images/search-section-bg-sm.png');
     }
 
     &__title {
@@ -126,6 +132,217 @@
             width: 100%;
             height: 100%;
             z-index: 5;
+        }
+    }
+}
+
+.search-section-panel {
+    max-width: 614px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+
+    .DocSearch-Button {
+        display: block;
+        height: 56px;
+        width: 100%;
+        padding: 17px 40px;
+        border: 1px solid transparent;
+        border-bottom-color: $grey-darker;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        color: $grey-dark;
+        background: transparent;
+        outline: none;
+        outline-width: 0;
+        letter-spacing: 0.02em;
+        transition: color 0.2s linear, background 0.2s linear,
+            border-color 0.2s linear;
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        text-align: left;
+
+        &:focus,
+        &:hover {
+            border-bottom-color: $grey-lighten;
+            color: $grey-lighten;
+            box-shadow: none;
+
+            .DocSearch-Search-Icon {
+                color: $grey-lighten;
+            }
+        }
+    }
+
+    .DocSearch-Search-Icon {
+        position: absolute;
+        z-index: 2;
+        pointer-events: none;
+        color: $grey-dark;
+        width: 18px;
+        height: 18px;
+        stroke-width: 2;
+        top: 20px;
+        left: 5px;
+        transition: color 0.2s linear;
+    }
+
+    .DocSearch-Button-Keys {
+        display: none;
+    }
+
+    .DocSearch-Button-Placeholder {
+        display: block;
+    }
+
+    &--secondary {
+        flex: 1 1 auto;
+
+        @include media('<desktop') {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .DocSearch-Button,
+        .DocSearch-Search-Icon {
+            color: $grey;
+        }
+
+        .DocSearch-Button {
+            height: 40px;
+            padding: 6px 40px 12px;
+            border-bottom-color: $grey-lighten;
+
+            &:hover {
+                color: $grey;
+
+                .DocSearch-Search-Icon {
+                    color: $grey;
+                }
+            }
+
+            @include media('<desktop') {
+                width: 30px;
+                border-bottom-color: transparent;
+                position: relative;
+
+                &:focus,
+                &:hover {
+                    border-bottom-color: transparent;
+                }
+            }
+        }
+
+        .DocSearch-Button-Placeholder {
+            @include media('<desktop') {
+                display: none;
+            }
+        }
+
+        .DocSearch-Search-Icon {
+            top: 9px;
+
+            @include media('<desktop') {
+                width: 26px;
+                height: 26px;
+                top: 6px;
+                left: 50%;
+            }
+        }
+    }
+}
+
+.DocSearch {
+    &-SearchBar {
+        @include media('<tablet') {
+            padding: 0;
+        }
+    }
+
+    &-Input {
+        @include media('<tablet') {
+            padding-left: 30px;
+        }
+    }
+
+    &-MagnifierLabel {
+        @include media('<tablet') {
+            display: none;
+        }
+    }
+
+    &-Form {
+        background: transparent;
+        box-shadow: none;
+        border-bottom: 2px solid $grey;
+        border-radius: 0;
+    }
+
+    &-Modal {
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &-Footer {
+        display: none;
+    }
+
+    &-Hit {
+        &-source {
+            color: $dark;
+        }
+
+        &-content-wrapper {
+            overflow: hidden;
+        }
+
+        &-title {
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        & mark,
+        &[aria-selected] mark {
+            color: $red !important;
+        }
+    }
+
+    &-Cancel {
+        position: absolute;
+        width: 30px; 
+        height: 30px;
+        font-size: 0;
+        top: 13px;
+        left: -6px;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            top: 26%;
+            transform: translateY(-44%);
+            left: 9px;
+            width: 3px;
+            height: 13px;
+            background: $grey;
+            border-radius: 30px;
+        }
+
+        &::after {
+            rotate: 135deg;
+        }
+
+        &::before {
+            rotate: 45deg;
         }
     }
 }

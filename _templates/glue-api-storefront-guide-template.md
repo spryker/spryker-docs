@@ -49,7 +49,9 @@ If a particular combination of resources should be included in the request to ac
 
 -->
 
-Request sample: '{method} {endpoint}{parameter example}' <!--usage description (in imperative mood, i.e. Retrieve all products).-->
+Request sample: {request description} (e.g., add an item to a shopping list)
+
+'{method} {endpoint}{parameter example}' <!--usage description (in imperative mood, i.e. Retrieve all products).-->
 
 ```{language}
 {request body}
@@ -61,13 +63,12 @@ Request sample: '{method} {endpoint}{parameter example}' <!--usage description (
 | {method} {endpoint}{parameter example} | <!-- usage description (in imperative mood, i.e. Retrieve all products) --> |
 | {method} {endpoint}{parameter example}?include={included resource} | <!-- If including a resource into a request requires other resources to be included, describe only the target resource. For example, including `bundled-products` requires `concrete-products` and `bundled-products`. In this case, describe the request as " Retrieve ... with bundled products" omitting the other two resources. |
 
-<details><summary markdown='span'>{request description}</summary>
+<details><summary>Request sample: {request description} (e.g., add an item to a shopping list)</summary>
 '{method} {endpoint}{parameter example}' <!--usage description (in imperative mood, i.e. Retrieve all products). -->
 
 ```{language}
 {request body}
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -78,22 +79,20 @@ Request sample: '{method} {endpoint}{parameter example}' <!--usage description (
 
 <!-- Response sample should correspond to the request sample in the previous section. -->
 
-<details><summary markdown='span'>{response sample description}</summary>
+<details><summary>{response sample description}</summary>
 
 ```{language}
 {response sample body}
 ```
-
 </details>
 
 <!-- For included resources: -->
 <!-- If an included resource is in the request to include some other resource, omit it in the description -->
-<details><summary markdown='span'>Response sample with {included entity name}</summary>
+<details><summary>Response sample with {included entity name}</summary>
 
 ```{language}
 {response sample body}
 ```
-
 </details>
 
 <!-- For long code blocks with sections, use H3 or H4 for section names (e.g., General order information)

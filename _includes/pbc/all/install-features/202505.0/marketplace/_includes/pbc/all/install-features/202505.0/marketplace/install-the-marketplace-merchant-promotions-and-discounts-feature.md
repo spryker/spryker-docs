@@ -1,4 +1,4 @@
-This document describes how to install the Merchant + Promotions & Discounts feature.
+This document describes how to install the Marketplace Merchant + Promotions & Discounts feature.
 
 ## Prerequisites
 

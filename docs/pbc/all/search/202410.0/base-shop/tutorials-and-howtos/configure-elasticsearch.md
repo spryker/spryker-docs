@@ -199,10 +199,14 @@ APPLICATION_STORE=DE console search:index:delete
 APPLICATION_STORE=DE console search:setup:sources
 ```
 
-If you had *no changes* to the data, execute:
+If you had *no changes* to the searchable data during the previous commands execution, execute:
+```bash
 APPLICATION_STORE=DE console sync:data
+```
 
-If you had *any changes* to the data, execute:
+If you are not sure or you actually may have *any changes* to the searchable data, execute:
+```bash
 APPLICATION_STORE=DE console publish:trigger-events
+```
 
 Please contact our support or community to get more specific help.

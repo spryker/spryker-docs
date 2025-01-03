@@ -232,7 +232,7 @@ class SearchRouter implements SearchRouterInterface
 
 If you want to use Elasticsearch for specific cases, you have to create a plugin on the project level
 
-**ElasticsearchHandlerPlugin**
+**ElasticSearchHandlerPlugin**
 
 ```php
 <?php
@@ -250,7 +250,7 @@ use Spryker\Client\Search\Dependency\Plugin\QueryInterface;
 /**
  * @method \Pyz\Client\Search\SearchFactory getFactory()
  */
-class ElasticsearchHandlerPlugin extends AbstractPlugin
+class ElasticSearchHandlerPlugin extends AbstractPlugin
 {
     /**
      * @param \Spryker\Client\Search\Dependency\Plugin\QueryInterface $searchQuery
@@ -290,7 +290,7 @@ The Fact-Finder Ng module contains plugins for choosing search, suggestion, or n
  
 namespace Pyz\Client\Search;
  
-use Pyz\Client\Search\Plugin\ElasticsearchHandlerPlugin;
+use Pyz\Client\Search\Plugin\ElasticSearchHandlerPlugin;
 use Spryker\Client\Kernel\Container;
 use Spryker\Client\Search\SearchDependencyProvider as SprykerSearchDependencyProvider;
 use SprykerEco\Client\FactFinderNg\Plugin\FactFinderNgNavigationHandlerPlugin;
@@ -325,7 +325,7 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
             new FactFinderNgNavigationHandlerPlugin(),
             new FactFinderNgSearchHandlerPlugin(),
             new FactFinderNgSuggestHandlerPlugin(),
-            new ElasticsearchHandlerPlugin(),
+            new ElasticSearchHandlerPlugin(),
         ];
     }
  

@@ -294,7 +294,7 @@ class YourValueResolver implements ValueResolverInterface
 }
 ```
 
-You can define a value resolver as a Symfony service, for example to be able to inject services into it. If the value resolver is not defined as a service, it is instantiated by its FQCN.
+You can define a value resolver as a Symfony service, for example to be able to inject services into it. If the value resolver is not defined as a service, it's instantiated by its FQCN.
 
 Example of defining a value resolver as a Symfony service:
 

@@ -76,7 +76,7 @@ Upon receiving an API request, an API context transfer is created where we set u
 
 First, we hydrate `GlueRequestTransfer` with data from the `Request` object. This includes request body, query params, headers, and attributes.
 
-Then, `ContentNegotiator` tries to resolve what convention the application must use for this request and updates `GlueRequestTransfer` with the request format. The convention is optional, so if it isn't found, the application uses the requested and accepted format to prepare request and response data.
+Then, `ContentNegotiator` tries to resolve what convention the application must use for this request and updates `GlueRequestTransfer` with the request format. The convention is optional, so if it'sn't found, the application uses the requested and accepted format to prepare request and response data.
 
 With hydrated `GlueRequestTransfer` and selected or not convention, the application executes `RequestFlowExecutor`.
 

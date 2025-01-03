@@ -119,7 +119,7 @@ appBuilder().withOptions({'your-feature-key': {...}});
 
 ### Define default values for feature options
 
-To avoid forcing users to repeatedly pass the same kind of values, you can provide default values for your feature options. After you define `AppFeature.defaultOptions` for a feature, it is used when a user does not provide any option:
+To avoid forcing users to repeatedly pass the same kind of values, you can provide default values for your feature options. After you define `AppFeature.defaultOptions` for a feature, it's used when a user does not provide any option:
 
 ```ts
 import { AppFeature } from '@spryker-oryx/core';

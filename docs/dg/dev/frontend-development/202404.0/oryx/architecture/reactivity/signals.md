@@ -117,7 +117,7 @@ class MyComponent extends LitElement {}
 
 This decorator is required to make a component work with signals as expected. With the decorator, the component automatically detects signals and renders changes whenever a signal alters. It does this intelligently, considering only the signals relevant to the last render.
 
-Some Oryx domain components are not using this decorator directly, as it is already applied to some common domain mixins, like `ContentMixin` or `ProductMixin`.
+Some Oryx domain components are not using this decorator directly, as it's already applied to some common domain mixins, like `ContentMixin` or `ProductMixin`.
 
 ### `@elementEffect` directive
 

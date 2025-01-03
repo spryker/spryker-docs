@@ -274,7 +274,7 @@ class MerchantOpeningHoursStorageConfig extends SprykerMerchantOpeningHoursStora
 
 1. Make sure that after step 1 the command `console sync:data merchant_opening_hours` exports data from the `spy_merchant_opening_hours_storage` table to Redis.
 
-2. Make sure that when merchant opening hours entities get created or updated through ORM, it is exported to Redis accordingly.
+2. Make sure that when merchant opening hours entities get created or updated through ORM, it's exported to Redis accordingly.
 
 | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | ---------------- | ----------------- |

@@ -1,6 +1,6 @@
 ---
 title: Test types best practices
-description: Learn when and how it is best to use different test types in your Spryker project.
+description: Learn when and how it's best to use different test types in your Spryker project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 redirect_from:

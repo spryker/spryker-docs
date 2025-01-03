@@ -18,7 +18,7 @@ export class ProductPriceComponent extends LitElement {
 }
 ```
 
-To ensure that components are reusable in different contexts, it is recommended to not couple them directly with the qualifier that is used to load data. For example, `ProductPriceComponent` does not need to be aware of `SKU`, as `SKU` can be determined from the route of the product page, the product card in a list, or the cart entry. Oryx provides a mechanism to set up a so-called context. In the case of product components, the product controller is used to resolve the SKU from the context controller.
+To ensure that components are reusable in different contexts, it's recommended to not couple them directly with the qualifier that is used to load data. For example, `ProductPriceComponent` does not need to be aware of `SKU`, as `SKU` can be determined from the route of the product page, the product card in a list, or the cart entry. Oryx provides a mechanism to set up a so-called context. In the case of product components, the product controller is used to resolve the SKU from the context controller.
 
 `ProductController` resolves the product qualifier (SKU) from the context and returns an observable from `ProductService`. If an SKU is provided statically to the component, `ProductController` also takes `sku` as a component property into account. This can be useful in custom development or for demonstrating the component—for example, in a Storybook.
 

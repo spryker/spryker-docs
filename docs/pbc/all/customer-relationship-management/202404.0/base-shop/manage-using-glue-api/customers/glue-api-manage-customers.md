@@ -36,7 +36,7 @@ The Customer API allows creating customers and manage their account data. This i
 
 In your development, these resources can help you:
 
-* Retrieve relevant customer information. for any page where it is needed.
+* Retrieve relevant customer information. for any page where it's needed.
 * Retrieve customer subscriptions to availability notifications.
 * Enable customer registration.
 * Allow customer login and authentication.

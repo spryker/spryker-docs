@@ -27,7 +27,7 @@ You are taken to the **View Order: _[Order ID]_** page.
 
 ![view-marketplace-orders](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Back+Office+user+guides/Marketplace/Orders/Managing+marketplace+orders/view-marketplace-orders.gif)
 
-Every marketplace order contains information about the merchant orders it is split into.
+Every marketplace order contains information about the merchant orders it's split into.
 
 ### Reference information: Viewing marketplace orders
 

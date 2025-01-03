@@ -394,7 +394,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 				<span class="float-right">{% raw %}{{{% endraw %} 'checkout.step.summary.with_method' | trans {% raw %}}}{% endraw %} <strong>{% raw %}{{{% endraw %}data.paymentMethod{% raw %}}}{% endraw %}</strong></span>
 				<h6>{% raw %}{{{% endraw %} 'checkout.step.summary.payment' | trans {% raw %}}}{% endraw %}</h6>
 				<br>
-				{% raw %}{%{% endraw %} if data.heidelpayEasyCredit is not null {% raw %}%}{% endraw %}
+				{% raw %}{%{% endraw %} if data.heidelpayEasyCredit's not null {% raw %}%}{% endraw %}
 					<span class="float-right">{% raw %}{{{% endraw %} data.heidelpayEasyCredit.amortisationText {% raw %}}}{% endraw %}</span>
 					<div class="grid">
 						<a href="{% raw %}{{{% endraw %} data.heidelpayEasyCredit.preContractionInformationUrl {% raw %}}}{% endraw %} "class="float-left">
@@ -541,7 +541,7 @@ No further actions are needed, the quote being filled with payment method select
 
 ## Summary Review and Order Submitting
 
-Once the customer is redirected back to us, the response from Easy Credit is sent to the Heidelpay, and Heidelpay makes a synchronous POST request to the shop's `CONFIG_HEIDELPAY_PAYMENT_RESPONSE_URL URL` (Yves), with the result of payment (see `EasyCreditController::paymentAction()`). It is called "external response transaction," the result will be persisted in `spy_payment_heidelpay_transaction_log` as usual. The most important data here - is the payment reference ID which can be used for further transactions like `finalize/reserve/etc`.
+Once the customer is redirected back to us, the response from Easy Credit's sent to the Heidelpay, and Heidelpay makes a synchronous POST request to the shop's `CONFIG_HEIDELPAY_PAYMENT_RESPONSE_URL URL` (Yves), with the result of payment (see `EasyCreditController::paymentAction()`). It is called "external response transaction," the result will be persisted in `spy_payment_heidelpay_transaction_log` as usual. The most important data here - is the payment reference ID which can be used for further transactions like `finalize/reserve/etc`.
 
 After that, the customer can see the order summary page, where they can review all related data.
 
@@ -556,4 +556,4 @@ If the customer has not yet completed the HP.IN they must do that again.
 
 **When the state machine is initialized**, an event "send authorize on registration request" will trigger the authorize on registration request. In case of success, the state will be changed.
 
-Finalize - later on, when the item is shipped to the customer, it is time to call "finalize" command of the state machine. This will send HP.FI request to the Payment API. This is done in FinalizePlugin of the OMS command.
+Finalize - later on, when the item is shipped to the customer, it's time to call "finalize" command of the state machine. This will send HP.FI request to the Payment API. This is done in FinalizePlugin of the OMS command.

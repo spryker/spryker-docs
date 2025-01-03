@@ -5,7 +5,7 @@ template: concept-topic-template
 last_updated: Nov 21, 2023
 ---
 
-Product Offer and data related to it is cached to enhance performance.
+Product Offer and data related to it's cached to enhance performance.
 
 {% info_block infoBox "" %}
 

@@ -27,7 +27,7 @@ This document describes the `merchant-order-status.csv` file to configure the up
 ## Additional Information
 
 When the merchant order item status is updated by importing the CSV file, the corresponding events in a merchant state machine are triggered, and the state gets updated. As a merchant order may contain several order items, the CSV file can have several rows of items for the same order.
-`Merchant_order_item_reference` can repeat and have different states in the file. For example, in one case, it is `packed` and then `shipped`. That lets you update the item through different merchant state machine statuses (for instance, `packed` and `shipped`) and avoid errors. If the merchant order item doesn't follow the existing sequence (the statuses flow in the merchant state machine), the state won't be updated, and you will get an error in the uploading process' report.
+`Merchant_order_item_reference` can repeat and have different states in the file. For example, in one case, it's `packed` and then `shipped`. That lets you update the item through different merchant state machine statuses (for instance, `packed` and `shipped`) and avoid errors. If the merchant order item doesn't follow the existing sequence (the statuses flow in the merchant state machine), the state won't be updated, and you will get an error in the uploading process' report.
 
 ## Import template file and content example
 

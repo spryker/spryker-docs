@@ -1100,7 +1100,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Make sure that the Merchant State Machine is executed on merchant orders after the order has been split.
 
-Make sure that when retrieving an order in the *Sales* module, it is split by the merchant order and that the Order state is derived from the Merchant State Machine.
+Make sure that when retrieving an order in the *Sales* module, it's split by the merchant order and that the Order state is derived from the Merchant State Machine.
 
 Make sure that after splitting the order into merchants' orders, their IDs are displayed on the order details page in Yves.
 

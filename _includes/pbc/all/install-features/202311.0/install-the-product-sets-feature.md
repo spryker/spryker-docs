@@ -117,7 +117,7 @@ Implement an installer in your project to put products together in sets represen
 
 ### Listing products sets on the Storefront
 
-The KV storage and Elasticsearch should by now contain some product sets you can display on the Storefront. By default, the exported documents in Search do not support the configurable search features as products: full-text search, faceted navigation, sorting, and pagination. However, since their data structure is the same, it is possible to implement the same features with a custom implementation.
+The KV storage and Elasticsearch should by now contain some product sets you can display on the Storefront. By default, the exported documents in Search do not support the configurable search features as products: full-text search, faceted navigation, sorting, and pagination. However, since their data structure is the same, it's possible to implement the same features with a custom implementation.
 
 For a simple listing, the `ProductSet` module provides a Client API to list product sets from Elasticsearch. By calling the `ProductSetClient::getProductSetList()` method, a limited set of documents can be listed on the Storefront. The results are sorted in descending order based on the product sets' weight attributes.
 

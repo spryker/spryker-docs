@@ -165,7 +165,7 @@ The template list contains the following information:
 | description | Template description. It is shown in the Back Office. | "The layout of Slots in the Home Page, always below Store Header including Navigation, and above Store Footer." |
 
 Note the following:
-* If a template has only inactive slots, it is still considered a template with slots. Therefore, it is shown in the **Slots** section.
+* If a template has only inactive slots, it's still considered a template with slots. Therefore, it's shown in the **Slots** section.
 * If a template is on an imported template list but does not have a slot, it's not considered a template with slots. Therefore, it's not displayed in the **Slots** section.
 
 ### Slot list
@@ -179,7 +179,7 @@ The slot list contains the following information:
 | content provider | Defines the source of content of this slot. | SprykerCmsSlotBlock |
 | name | Alphabetical identifier of the slot. It is shown in the Back Office. | "Header Top" |
 | description | Description of the slot. It is shown in the Back Office. | "A content area in the Header section, that is below the logo and search section and above main navigation" |
-| status | Defines whether the slot is active or not where "0" stands for "inactive" and "1" stands for "active". If a slot is inactive, it is not rendered in the Storefront by the slot widget. | 1 |
+| status | Defines whether the slot is active or not where "0" stands for "inactive" and "1" stands for "active". If a slot is inactive, it's not rendered in the Storefront by the slot widget. | 1 |
 
 ## Content providers
 A content provider is a source from which Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront. With templates and slots, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (for example, [CoreMedia](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/coremedia.html), [E-spirit](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/e-spirit.html), [Styla](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/styla.html), [Magnolia](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/magnolia.html)).
@@ -196,7 +196,7 @@ The following schema shows how content is managed with the help of templates wit
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/templates-and-slots.png)
 
 ## Visibility conditions
-When the content manager assigns a CMS block to a slot, it is displayed on all the pages to which the template with the slot is applied. To narrow down the number of pages to a needed selection, the content manager can define visibility conditions for each CMS block assigned to a slot. Visibility conditions are defined by selecting particular pages in which the content of a CMS block will be displayed. When visibility conditions are defined, the slot widget checks if the CMS block must be rendered in an opened page or not. Then, it either renders or skips it.
+When the content manager assigns a CMS block to a slot, it's displayed on all the pages to which the template with the slot is applied. To narrow down the number of pages to a needed selection, the content manager can define visibility conditions for each CMS block assigned to a slot. Visibility conditions are defined by selecting particular pages in which the content of a CMS block will be displayed. When visibility conditions are defined, the slot widget checks if the CMS block must be rendered in an opened page or not. Then, it either renders or skips it.
 
 Page identifiers used to define visibility conditions depend on the page type to which a template with slots is applied. You can check identifiers for each page type in the following table.
 
@@ -255,7 +255,7 @@ Properties are used by slot widgets to identify for which entity content is bein
 You can add other properties to meet your project or external content provider requirements.
 
 #### Property Types
-Properties can be either `required` or `autofilled`. If a property is of the required type, it is entered manually and the slot widget does not render the content if one of the required values is not filled. If a property is of the auto-filled type, when sending a request to fetch content, the slot widget fills this value based on the page opened on the Storefront and fetches the corresponding content. For example, if you want a slot widget to fill `locale` and `store` values automatically, it looks as follows:
+Properties can be either `required` or `autofilled`. If a property is of the required type, it's entered manually and the slot widget does not render the content if one of the required values is not filled. If a property is of the auto-filled type, when sending a request to fetch content, the slot widget fills this value based on the page opened on the Storefront and fetches the corresponding content. For example, if you want a slot widget to fill `locale` and `store` values automatically, it looks as follows:
 
 ```twig
 {% raw %}{%{% endraw %} cms_slot "cms-slot-key" autofilled ['locale', 'store'] required ['requiredProperty'] with {

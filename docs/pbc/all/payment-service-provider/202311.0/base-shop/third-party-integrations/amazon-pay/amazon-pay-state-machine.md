@@ -20,7 +20,7 @@ related:
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/obtain-an-amazon-order-reference-and-information-about-shipping-addresses.html
 ---
 
-The state machine is different for synchronous and asynchronous flow. Although from status "capture completed" it is the same and in the state machine, it's presented as a sub-process.
+The state machine is different for synchronous and asynchronous flow. Although from status "capture completed" it's the same and in the state machine, it's presented as a sub-process.
 
 The state machine for the synchronous flow:
 

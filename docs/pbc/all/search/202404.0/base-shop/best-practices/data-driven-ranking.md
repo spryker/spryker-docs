@@ -146,7 +146,7 @@ So to find good normalization functions, look at the distribution of some measur
 
 ![Computation of score top_seller](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Data-Driven+Ranking/score-top-seller-computation.png)
 
-Out of the products sold at all, most were sold only once or twice, while only very few products were sold more than 10 times. For the top_seller score to be meaningful, it is less important whether the product sold 500 or 50 times but rather whether it sold 10 times or once. The *atan(x - avg(X)) / (π / 2)* score formula reflects this: it returns 0.5 for the average number of sold items across all products and has most of its dynamics around that average. A second example is the distribution of the expected margin across products (again with data up to the end of 2014):
+Out of the products sold at all, most were sold only once or twice, while only very few products were sold more than 10 times. For the top_seller score to be meaningful, it's less important whether the product sold 500 or 50 times but rather whether it sold 10 times or once. The *atan(x - avg(X)) / (π / 2)* score formula reflects this: it returns 0.5 for the average number of sold items across all products and has most of its dynamics around that average. A second example is the distribution of the expected margin across products (again with data up to the end of 2014):
 
 ![Computation of score expected_margin](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Data-Driven+Ranking/score-expected-margin-computation.png)
 
@@ -190,4 +190,4 @@ CREATE TABLE search_next.product_search_score AS
   FROM search_tmp.product_search_score_kpi;
   ```
 
-But even without a data integration infrastructure in place, it is easy to collect relevant metrics and translate them into scores. Since none of these numbers (except the random score) changes very quickly, it is sufficient if they are computed once a night.
+But even without a data integration infrastructure in place, it's easy to collect relevant metrics and translate them into scores. Since none of these numbers (except the random score) changes very quickly, it's sufficient if they are computed once a night.

@@ -61,7 +61,7 @@ HeidelpayConfig::PAYMENT_METHOD_DIRECT_DEBIT => 'HeidelpayDirectDebit01',
 ```
 ## The Process of a Direct Debit Account Registration
 
-Payment flow with direct debit is divided into two workflows - based on the new "Registration," and without/with the existing "Registration." Existing "Registration" means that customer's bank account data (IBAN, Account Holder and so on) will be persisted in the database to use it again next time if customer uses the same shipping address. Otherwise, use the new "Registration" option.
+Payment flow with direct debit's divided into two workflows - based on the new "Registration," and without/with the existing "Registration." Existing "Registration" means that customer's bank account data (IBAN, Account Holder and so on) will be persisted in the database to use it again next time if customer uses the same shipping address. Otherwise, use the new "Registration" option.
 
 When you go to the checkout payment page and choose the DirectDebit payment method, there are two payment options - to use the already existing registration (if available) or to create a new registration (always available) with the two fields IBAN and Account Holder. Existing registration is available only for registered customer after he placed an order with DirectDebit payment method, and he uses the same shipping address.
 

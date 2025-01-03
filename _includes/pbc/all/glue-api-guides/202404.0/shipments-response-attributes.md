@@ -14,8 +14,8 @@
 | shipments | shippingAddress.iso2Code | String | Specifies an ISO 2 Country Code to use. |
 | shipments | shippingAddress.company | String | Specifies the customer's company. |
 | shipments | shippingAddress.phone | String | Specifies the customer's phone number. |
-| shipments | shippingAddress.isDefaultShipping | Boolean | If true, it is the default shipping address of the customer. |
-| shipments | shippingAddress.isDefaultBilling | Boolean | If true, it is the default billing address of the customer. |
+| shipments | shippingAddress.isDefaultShipping | Boolean | If true, it's the default shipping address of the customer. |
+| shipments | shippingAddress.isDefaultBilling | Boolean | If true, it's the default billing address of the customer. |
 | shipments | shippingAddress.idCompanyBusinessUnitAddress | String | The unique identifier of a business unit address used for this shipment. |
 | shipments | selectedShipmentMethod | Object | Describes the shipment method for the shipment. |
 | shipments | selectedShipmentMethod.id | String | The unique identifier of the shipment method. |

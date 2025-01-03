@@ -9,7 +9,7 @@ redirect_from:
 
 By default, the system requires the `queue:worker:start` command to be continuously running for each store to process queues and ensure the propagation of information. In addition to this command, there are other commands such as OMS processing, import, export, and more. When these processes aren't functioning or running slowly, there is a delay in data changes being reflected on the frontend, causing dissatisfaction among customers and leading to disruption of business processes.
 
-By default, Spryker has a limit of two Jenkins executors for each environment. This limit is usually not a problem for single-store setups, but it can be a critical issue when there are multiple stores. Without increasing this limit, processing becomes slow because only two Workers are scanning queues and running tasks at a time, while other Workers for different stores have to wait. On top of this, even when some stores don't have messages to process, we still need to run a Worker just for scanning purposes, which occupies Jenkins executors, CPU time, and memory.
+By default, Spryker has a limit of two Jenkins executors for each environment. This limit's usually not a problem for single-store setups, but it can be a critical issue when there are multiple stores. Without increasing this limit, processing becomes slow because only two Workers are scanning queues and running tasks at a time, while other Workers for different stores have to wait. On top of this, even when some stores don't have messages to process, we still need to run a Worker just for scanning purposes, which occupies Jenkins executors, CPU time, and memory.
 
 Increasing the number of processes per queue can lead to issues such as Jenkins hanging, crashing, or becoming unresponsive. Although memory consumption and CPU usage aren't generally high (around 20-30%), there can be spikes in memory consumption because of a random combination of several workers simultaneously processing heavy messages for multiple stores.
 
@@ -47,7 +47,7 @@ A pool refers to a collection of resources that are kept in memory and ready to 
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/NewWorker+Flow.png)
 
-We define the total number of simultaneously running processes for the entire setup on the EC2 instance level. This makes it easier to manage, as we can monitor the average memory consumption for the process pool. If it's too low, we can increase the pool size, and if it's too high, we can decrease it. Additionally, we check the available memory (RAM) and prevent spawning additional processes if it is too low, ensuring system stability. Execution statistics provide valuable insights for decision-making, including adjusting the pool size or scaling the EC2 instance up or down.
+We define the total number of simultaneously running processes for the entire setup on the EC2 instance level. This makes it easier to manage, as we can monitor the average memory consumption for the process pool. If it's too low, we can increase the pool size, and if it's too high, we can decrease it. Additionally, we check the available memory (RAM) and prevent spawning additional processes if it's too low, ensuring system stability. Execution statistics provide valuable insights for decision-making, including adjusting the pool size or scaling the EC2 instance up or down.
 
 The following parameters exist:
 
@@ -76,7 +76,7 @@ Child processes are killed at the end of each minute, which means those batches 
 
 There are two ways to implement the background job orchestration:
 
-1. Applying a patch, although it may require conflict resolution since it is applied on the project level, and each project may have unique customizations already in place. See [these diffs](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/one-worker.diff) for an example implementation.
+1. Applying a patch, although it may require conflict resolution since it's applied on the project level, and each project may have unique customizations already in place. See [these diffs](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/one-worker.diff) for an example implementation.
 
 ```bash
 git apply one-worker.diff
@@ -133,7 +133,7 @@ class NewWorker implements WorkerInterface
     public function start(string $command, array $options = []): void
     {
         // env var - QUEUE_WORKER_MAX_THRESHOLD_SECONDS
-        // default is 60 seconds, 1 minute, it is safe to have it as 1 hour instead
+        // default is 60 seconds, 1 minute, it's safe to have it as 1 hour instead
         $maxThreshold = $this->queueConfig->getQueueWorkerMaxThreshold();
 
         // minimum interval after starting one process before executing another
@@ -171,7 +171,7 @@ class NewWorker implements WorkerInterface
 
             // QUEUE_WORKER_MEMORY_MAX_GROWTH_FACTOR, 50 by default
             // measures how much Worker own memory consumption increased after first iteration
-            // when more than 50% - it is considered a memory leak and Worker will finish its operation
+            // when more than 50% - it's considered a memory leak and Worker will finish its operation
             // allowing Jenkins to run Worker again
             if ($ownMemGrowthFactor > $this->queueConfig->maxAllowedWorkerMemoryGrowthFactor()) {
                 $this->logger->emergency(sprintf('Worker memory grew more than %d%%, probably a memory leak, exiting', $ownMemGrowthFactor));

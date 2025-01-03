@@ -203,7 +203,7 @@ Add environment configuration for the agent security:
 |----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
 | SecurityBlockerStorefrontAgentConstants::AGENT_BLOCK_FOR_SECONDS           | Specifies the TTL configuration, the period for which the agent is blocked if the number of attempts is exceeded for an agent.                       | Spryker\Shared\SecurityBlockerStorefrontAgent |
 | SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_TTL                | Specifies the TTL configuration, the period when the number of unsuccessful tries is counted for an agent.                                          | Spryker\Shared\SecurityBlockerStorefrontAgent |
-| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies number of failed login attempt an agent can make during the `SECURITY_BLOCKER_STOREFRONT:AGENT_BLOCKING_TTL` time before it is blocked. | Spryker\Shared\SecurityBlockerStorefrontAgent |
+| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies number of failed login attempt an agent can make during the `SECURITY_BLOCKER_STOREFRONT:AGENT_BLOCKING_TTL` time before it's blocked. | Spryker\Shared\SecurityBlockerStorefrontAgent |
 
 **config/Shared/config_default.php**
 

@@ -25,7 +25,7 @@ The CMS feature is shipped with several block templates by default. A developer 
 
 ## CMS block validity period
 
-When creating a block, you can select validity dates. The dates define when the block starts and stops being displayed on the pages it is added to on the Storefront. For example, if you are planning to run a promotion campaign, you can create a banner beforehand and define when it starts and stops being displayed based on the promotion period.
+When creating a block, you can select validity dates. The dates define when the block starts and stops being displayed on the pages it's added to on the Storefront. For example, if you are planning to run a promotion campaign, you can create a banner beforehand and define when it starts and stops being displayed based on the promotion period.
 
 
 ## CMS block store relation

@@ -50,7 +50,7 @@ Request sample: `GET http://glue.mysprykershop.com/navigations/SOCIAL_LINKS`
 
 {% info_block infoBox "Performance" %}
 
-If a navigation tree has a category child node, include the `category-nodes` resource to retrieve the category information without extra calls to the `/category-nodes` endpoint. Retrieving the category information can affect the performance of the Navigation API. We recommend doing it only when it is absolutely necessary.
+If a navigation tree has a category child node, include the `category-nodes` resource to retrieve the category information without extra calls to the `/category-nodes` endpoint. Retrieving the category information can affect the performance of the Navigation API. We recommend doing it only when it's absolutely necessary.
 
 {% endinfo_block %}
 

@@ -210,7 +210,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Ensure that, when a product bundle is created, updated, or deleted, it is exported to or removed from Redis.
+Ensure that, when a product bundle is created, updated, or deleted, it's exported to or removed from Redis.
 
 Storage type: Redis
 Target entity: Product Bundle

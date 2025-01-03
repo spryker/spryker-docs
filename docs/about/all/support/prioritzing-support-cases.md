@@ -51,7 +51,7 @@ Priority is an internal attribute that we set for cases after having evaluated t
 * *Urgent*: urgent cases have the highest priority for us. Since there can only be a very limited number of urgent cases for us to be able to operate, we assign this priority only to the most severe cases (for example, Security Incidents or Infrastructure Outages).
 * *High*: high priority cases are dealt with priority if there are no urgent cases in the backlog, or not all support representatives are currently busy working on urgent cases.
 * *Medium*: most of the problem cases we receive are assigned `Medium` priority. They are dealt with if there are no urgent and high cases in the backlog or if enough free resources are available.
-* *Low*: low priority cases are dealt with if there are no urgent and high priority cases in the Backlog or if a support representative thinks that the request can be dealt with very quickly or that they are working on a similar case already and it is beneficial to work on the related low priority case as well.
+* *Low*: low priority cases are dealt with if there are no urgent and high priority cases in the Backlog or if a support representative thinks that the request can be dealt with very quickly or that they are working on a similar case already and it's beneficial to work on the related low priority case as well.
 
 You can see what priority your case was assigned to in the case detail view on the Support and Partner Portal.
 
@@ -65,7 +65,7 @@ You can see what priority your case was assigned to in the case detail view on t
 We recently gave our partners and customers the option to specify desired solution times on request, change request, and problem cases. Emergency cases do not have this field, because they are always dealt with as soon as possible.
 
 ### Case types
-The case type you choose to create an issue also determines how high it is prioritized initially.
+The case type you choose to create an issue also determines how high it's prioritized initially.
 * *Request Cases* automatically receive low priority and are dealt with when there is time.
 * *Problem Cases* let you specify business impact and desired solution time. We assign a priority to this case after evaluating the information provided, the business impact specified, and the desired solution time.
 * *Emergency Cases* are reserved for severe outages with significant business impact. Emergency cases always receive the highest priority and can only be cases with business impact P1—Urgent.

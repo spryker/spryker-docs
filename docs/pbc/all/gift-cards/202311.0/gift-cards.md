@@ -25,7 +25,7 @@ Gift cards are sensitive data and can be used to pay orders. Keep in mind that t
 
 {% endinfo_block %}
 
-Gift cards follow the same rules as any product, and are bought as products. They can even be bundled. However, they are purely virtual and do not require shipping. A gift card can be applied as a voucher and redeemed to pay an order. Gift cards have two traits: a product traits and a voucher (+payment method) traits. When a gift card is bought, it is treated like a product. When it is applied, it’s a *voucher* that can be used as a payment method.
+Gift cards follow the same rules as any product, and are bought as products. They can even be bundled. However, they are purely virtual and do not require shipping. A gift card can be applied as a voucher and redeemed to pay an order. Gift cards have two traits: a product traits and a voucher (+payment method) traits. When a gift card is bought, it's treated like a product. When it's applied, it’s a *voucher* that can be used as a payment method.
 
 Gift cards have variants just like abstract products. For example, a New Year Gift Card can have all the different values—50 Euro and 100 Euro. In this case, the New Year Gift Card would be handled like an abstract product, and 50 Euro and 100 Euro gift cards would be its variants.
 
@@ -76,7 +76,7 @@ The main advantage of this strategy is that the same gift card code cannot be us
 
 ### Balance strategy
 
-In the case of the Balance strategy, the gift card's purchase history and its balance information are checked. If after paying an order a gift card has any remaining balance, then in contrast to the Replacement strategy, the user does not get a new gift card code with the new gift card value, but the old gift card code is used instead. The remaining gift card value is calculated by the following formula: `Gift Card Value - Value of all orders where it is used`.
+In the case of the Balance strategy, the gift card's purchase history and its balance information are checked. If after paying an order a gift card has any remaining balance, then in contrast to the Replacement strategy, the user does not get a new gift card code with the new gift card value, but the old gift card code is used instead. The remaining gift card value is calculated by the following formula: `Gift Card Value - Value of all orders where it's used`.
 
 With this strategy, a Back Office user will see gift card balance information such as the date when the gift card was used, the customer who used it, the gift card's code, and its spent value.
 

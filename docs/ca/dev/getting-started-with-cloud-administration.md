@@ -56,7 +56,7 @@ The following CD pipelines are configured in [CodePipeline](https://docs.aws.ama
 | --- | --- |
 | DESTRUCTIVE | You can configure the installation stage of this pipeline in `config/install/destructive.yml`. |
 | NORMAL | You can configure the installation stage of this pipeline in `config/install/production.yml`. |
-| Build | Compiles images and pushes them into the [Amazon Elastic Container Registry](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html). Starts automatically when a new commit is detected.  |
+| Build | Compiles images and pushes them into the [Amazon Elastic Container Registry](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html). Starts automatically when a new commit's detected.  |
 | Rollout Scheduler | Deploys the scheduler. |
 
 </div>

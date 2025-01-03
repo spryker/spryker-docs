@@ -48,7 +48,7 @@ Adapting your offerings to your customers' needs and locales is crucial for prov
 
 #### Number formatting in the Storefront
 
-For an effortless shopping experience, the localized number formatting is available throughout the Storefront for any user locale. Whether it is a catalog, product details page, cart, checkout, or customer account, your customers and guests can now enjoy their known number format. This helps to avoid any confusion about pricing or quantities.
+For an effortless shopping experience, the localized number formatting is available throughout the Storefront for any user locale. Whether it's a catalog, product details page, cart, checkout, or customer account, your customers and guests can now enjoy their known number format. This helps to avoid any confusion about pricing or quantities.
 
 ##### Documentation
 

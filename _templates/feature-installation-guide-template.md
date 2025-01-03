@@ -244,9 +244,9 @@ Configure tables to be published and synchronized to the Storage on create, edit
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.
 
-Usually, it is technically impossible to verify the current step before the [Import data](#import-data) step. In such a case, move the verification of this step there. -->
+Usually, it's technically impossible to verify the current step before the [Import data](#import-data) step. In such a case, move the verification of this step there. -->
 
-Make sure that, when an {entity} is created, updated or deleted, it is exported to or removed from Redis and Elasticsearch.
+Make sure that, when an {entity} is created, updated or deleted, it's exported to or removed from Redis and Elasticsearch.
 
 | STORAGE TYPE | TARGET ENTITY | EXPECTED DATA IDENTIFIER EXAMPLE | EXPECTED DATA FRAGMENT EXAMPLE     |
 | ------------ | ------------- | -------------------------------- | ---------------------------------- |
@@ -276,9 +276,9 @@ Configure tables to be published to the {table name} table and synchronized to t
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.
 
-Usually, it is technically impossible to verify the current step before the [Import data](#import-data) step. In such a case, move the verification of this step there. -->
+Usually, it's technically impossible to verify the current step before the [Import data](#import-data) step. In such a case, move the verification of this step there. -->
 
-Make sure that, when an {entity} is created, updated or deleted, it is exported to or removed from Redis and Elasticsearch.
+Make sure that, when an {entity} is created, updated or deleted, it's exported to or removed from Redis and Elasticsearch.
 
 | STORAGE TYPE | TARGET ENTITY | EXPECTED DATA IDENTIFIER EXAMPLE | EXPECTED DATA FRAGMENT EXAMPLE     |
 | ------------ | ------------- | -------------------------------- | ---------------------------------- |
@@ -309,9 +309,9 @@ Install the following plugins:
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.
 
-Usually, it is technically impossible to verify the current step before the [Import data](#import-data) step. In such a case, move the verification of this step there. -->
+Usually, it's technically impossible to verify the current step before the [Import data](#import-data) step. In such a case, move the verification of this step there. -->
 
-Make sure that, when an {entity} is created, updated or deleted, it is exported to or removed from Redis and Elasticsearch.
+Make sure that, when an {entity} is created, updated or deleted, it's exported to or removed from Redis and Elasticsearch.
 
 | STORAGE TYPE | TARGET ENTITY | EXPECTED DATA IDENTIFIER EXAMPLE | EXPECTED DATA FRAGMENT EXAMPLE     |
 | ------------ | ------------- | -------------------------------- | ---------------------------------- |

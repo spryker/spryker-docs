@@ -42,7 +42,7 @@ Routers are added to the `\Pyz\Yves\Router\RouterDependencyProvider::getRouterPl
 
 The Router can be configured with the following `\Spryker\Yves\Router\RouterEnvironmentConfigConstantsYves` options:
 
-* `\Spryker\Shared\Router\RouterConstants::YVES_IS_CACHE_ENABLED` - use this option to enable/disable the cache. By default, it is enabled.
+* `\Spryker\Shared\Router\RouterConstants::YVES_IS_CACHE_ENABLED` - use this option to enable/disable the cache. By default, it's enabled.
 * `\Spryker\Shared\Router\RouterConstants::YVES_CACHE_PATH` - use this option if you want to change the path to the generated cache files.
 * `\Spryker\Shared\Router\RouterConstants::YVES_IS_SSL_ENABLED` - use this option to enable/disable the Router's SSL capabilities.
 * `\Spryker\Shared\Router\RouterConstants::YVES_SSL_EXCLUDED_ROUTE_NAMES` - use this option to disable SSL for the specific route names when SSL is enabled.

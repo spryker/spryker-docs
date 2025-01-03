@@ -124,7 +124,7 @@ The next step is to create a database table that is used as a mirror for the cor
 
 {% info_block infoBox "Naming convention"%}
 
-As a naming convention, it is recommended to append `_storage` to the end of the table name if it is synchronized with Redis, and `_search` if it is synchronized with Elasticsearch.
+As a naming convention, it's recommended to append `_storage` to the end of the table name if it's synchronized with Redis, and `_search` if it's synchronized with Elasticsearch.
 
 {% endinfo_block %}
 
@@ -173,8 +173,8 @@ The *Synchronization* behavior added by the above schema files adds a column tha
 
 Synchronization behavior parameters:
 * `resource`—specifies the Redis or Elasticsearch namespace to synchronize with.
-* `store`—specifies whether it is necessary to specify a store for an entity.
-* `locale`—specifies whether it is necessary to specify a locale for an entity.
+* `store`—specifies whether it's necessary to specify a store for an entity.
+* `locale`—specifies whether it's necessary to specify a locale for an entity.
 * `key_suffix_column`—specifies the name of the column that will be appended to the Redis or Elasticsearch key to make the key unique. If this parameter is omitted, then all entities will be stored under the same key.
 * `queue_group`—specifies the queue group for synchronization.
 * `params`—specifies search parameters (Elasticsearch only).
@@ -298,7 +298,7 @@ The `handleBulk` method is called by the event queue for the defined events in t
 
 {% info_block infoBox "Info"%}
 
-For performance considerations, events are passed to the listener in bulk. Even if a single event must be handled, it is passed as an array of a single element.
+For performance considerations, events are passed to the listener in bulk. Even if a single event must be handled, it's passed as an array of a single element.
 
 {% endinfo_block %}
 

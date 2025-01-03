@@ -471,7 +471,7 @@ service_point.validation.wrong_request_body,Falscher Anforderungstext.,de_DE
 service_point.validation.country_entity_not_found,Country with iso2 code '%iso2Code%' does not exist.,en_US
 service_point.validation.country_entity_not_found,Das Land mit dem iso2-Code '%iso2Code%' existiert nicht.,de_DE
 service_point.validation.region_entity_not_found,Region with uuid '%uuid%' does not exist for country with iso2 code '%countryIso2Code%'.,en_US
-service_point.validation.region_entity_not_found,Region mit uuid '%uuid%' existiert nicht für Land mit iso2-Code '%countryIso2Code%',de_DE
+service_point.validation.region_entity_not_found,Region mit uuid '%uuid%' existiert nicht für Land mit'so2-Code '%countryIso2Code%',de_DE
 service_point.validation.service_point_address_address1_wrong_length,Service Point Address Input address1 must have a length of %min% to %max% characters.,en_US
 service_point.validation.service_point_address_address1_wrong_length,Service Point Adresse Input address1 muss eine Länge von %min% bis %max% Zeichen haben.,de_DE
 service_point.validation.service_point_address_address2_wrong_length,Service Point Address Input address2 must have a length of %min% to %max% characters.,en_US
@@ -1075,7 +1075,7 @@ Verify the `service-point` synchronization plugin works correctly:
 
 {% info_block warningBox "Verification" %}
 
-* Make sure that, when a service point is created or edited through BAPI, it is exported to Redis accordingly.
+* Make sure that, when a service point is created or edited through BAPI, it's exported to Redis accordingly.
 
 * Make sure that, in Redis, data is displayed in the following format:
 ```yaml
@@ -1148,7 +1148,7 @@ Verify the `service-type` synchronization plugin works correctly:
 
 {% info_block warningBox "Verification" %}
 
-* Make sure that when a service type is created or edited through BAPI, it is exported to Redis accordingly.
+* Make sure that when a service type is created or edited through BAPI, it's exported to Redis accordingly.
 
 * Make sure that, in Redis, data is displayed in the following format:
 ```json

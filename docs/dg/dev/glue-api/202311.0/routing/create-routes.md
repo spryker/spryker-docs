@@ -50,7 +50,7 @@ class ModuleBarController extends AbstractController
 
 ```
 
-Even though an empty response is returned, the module's `Factory` is available and can be used to access Processor models or external dependencies the same way it is done everywhere in Spryker.
+Even though an empty response is returned, the module's `Factory` is available and can be used to access Processor models or external dependencies the same way it's done everywhere in Spryker.
 
 {% info_block infoBox %}
 

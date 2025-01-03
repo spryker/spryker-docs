@@ -21,7 +21,7 @@ While this strategy might feel like the right thing to do (we need to do somethi
 
 ## How do we want to deal with escalations?
 
-In Support, we acknowledge that we cannot always produce a satisfying result. We do not always get it right, and sometimes our hands might simply be tied. Escalations happen, and it is important for us to steer them into a constructive and orderly direction right away that ensures:
+In Support, we acknowledge that we cannot always produce a satisfying result. We do not always get it right, and sometimes our hands might simply be tied. Escalations happen, and it's important for us to steer them into a constructive and orderly direction right away that ensures:
 1. It is easy for a customer or partner to escalate an issue.
 2. The customer's or partner's problem is evaluated by the right audience.
 3. The stakeholders align quickly to find a feasible strategy going forward.
@@ -36,7 +36,7 @@ The escalation process is designed in a way to create visibility for the right a
 
 `STARTED`. A customer or partner has created an emergency case. Internal stakeholders are informed and began evaluating the information provided. In cases where the Emergency Case option is misused, the Escalation is canceled, and the requester is informed about it.
 
-`ACKNOWLEDGED`. If the escalation is valid, it is acknowledged by the support rep that takes care of the case. They do not inform internal stakeholders and see to it that a solution is developed. They also make sure to update the customer and partner at regular intervals on their progress.
+`ACKNOWLEDGED`. If the escalation is valid, it's acknowledged by the support rep that takes care of the case. They do not inform internal stakeholders and see to it that a solution is developed. They also make sure to update the customer and partner at regular intervals on their progress.
 
 `SOLUTION PROPOSED`. Once the team has found a solution that either fixes the problem outright, or at least mitigates its impact, they propose a solution, and the partner and customer are asked to accept or reject the proposed solution.
 

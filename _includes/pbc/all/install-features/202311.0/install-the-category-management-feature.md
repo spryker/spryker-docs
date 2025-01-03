@@ -710,7 +710,7 @@ Make sure that *category-node*, *category-tree* synchronization plugins works co
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a category is created or edited through ORM, it is exported to Redis and Elasticsearch accordingly.
+Make sure that when a category is created or edited through ORM, it's exported to Redis and Elasticsearch accordingly.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | ---  | --- | --- |

@@ -121,7 +121,7 @@ Customer and partner users can have access to the following:
 This section explains what additional attributes you can specify at the beginning of your provisioning, as well as accesses you can request.
 
 ### Optional: SFTP
-SFTP is implemented on top of EFS. You can use SFTP for any third-party integrations or for explicit data imports via Jenkins jobs if required on the project level. Note that SFTP is only available on Bastion and Jenkins. This feature is disabled by default. You can also request it later via the support ticket, but it is preferred to validate this option during provisioning.
+SFTP is implemented on top of EFS. You can use SFTP for any third-party integrations or for explicit data imports via Jenkins jobs if required on the project level. Note that SFTP is only available on Bastion and Jenkins. This feature is disabled by default. You can also request it later via the support ticket, but it's preferred to validate this option during provisioning.
 
 For data import, we recommend using S3 buckets.
 

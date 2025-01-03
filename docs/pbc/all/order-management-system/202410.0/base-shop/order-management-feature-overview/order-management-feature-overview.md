@@ -14,7 +14,7 @@ redirect_from:
 
 Bringing flexible shipping options to your online business may have a key impact on the purchasing decisions of your customers. The *Order Management* feature is a collection of functionalities that let your customers place orders easily and let you manage the orders effectively.
 
-In B2B companies, it is important to control employees' purchases and add order references to the external systems. To keep the order references in your Spryker-based shop, use *Custom Order References* that let you link the reference used in external systems, such as an ERP, to your internal orders. For example, your company pays the products with an invoice that has a reference. To make it easier to report and track the operations in your external systems, you, as a buyer, can include this reference number in your order.
+In B2B companies, it's important to control employees' purchases and add order references to the external systems. To keep the order references in your Spryker-based shop, use *Custom Order References* that let you link the reference used in external systems, such as an ERP, to your internal orders. For example, your company pays the products with an invoice that has a reference. To make it easier to report and track the operations in your external systems, you, as a buyer, can include this reference number in your order.
 
 *Invoice Generation* lets you generate and send invoices to customers after they placed an order. At the same time, you can also keep the invoices for your records by sending a copy of the invoices to your own email address.
 

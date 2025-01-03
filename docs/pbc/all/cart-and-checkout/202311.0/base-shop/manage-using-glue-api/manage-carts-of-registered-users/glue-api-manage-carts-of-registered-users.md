@@ -3002,7 +3002,7 @@ To delete a cart, send the request:
 
 {% info_block infoBox "Deleting carts" %}
 
-You cannot delete a cart if it is the customer's only cart. If you attempt to delete a customer's last cart, the endpoint responds with the **422 Unprocessable Entry** status code. If you delete the default cart of a customer, another cart will be assigned as default automatically.
+You cannot delete a cart if it's the customer's only cart. If you attempt to delete a customer's last cart, the endpoint responds with the **422 Unprocessable Entry** status code. If you delete the default cart of a customer, another cart will be assigned as default automatically.
 
 {% endinfo_block %}
 

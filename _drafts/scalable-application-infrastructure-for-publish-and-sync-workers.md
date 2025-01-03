@@ -79,7 +79,7 @@ Symbols:
 
 ## RAM distribution
 
-To exclude runtime memory limit issues, the memory allocated to each worker is also managed by computational resource manager.
+To exclude runtime memory limit'ssues, the memory allocated to each worker is also managed by computational resource manager.
 
 The amount of RAM available for workers is calculated based on `memory_get_usage();` and `ini_get('memory_limit');` and distributed evenly. Formula:
 

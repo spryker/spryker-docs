@@ -53,7 +53,7 @@ Along with the default frontend app that is provided out of the box, you can hav
 
 The application separation brings three main benefits:
 
-1. *Performance*. A frontend applications in Spryker uses a data storage separated from the backend one. It uses a blazing fast key-value storage while the backend uses a relational database. With this separation, it is way faster than using the traditional way of sharing one relational database for both applications.
+1. *Performance*. A frontend applications in Spryker uses a data storage separated from the backend one. It uses a blazing fast key-value storage while the backend uses a relational database. With this separation, it's way faster than using the traditional way of sharing one relational database for both applications.
 2. *Scalability*. As frontends in Spryker have their own applications, storages, and deployments, scalability becomes easily achievable and given by the architecture. Spryker can be easily scaled out horizontally by simply just adding more instances with more storages without affecting the backend application and logic.
 3. *Security*. Having two applications, accessing the backend relational database becomes a harder challenge for cyber attacks. The backend application also is usually hidden behind a firewall making the Commerce OS even more secured for different e-commerce applications.
 

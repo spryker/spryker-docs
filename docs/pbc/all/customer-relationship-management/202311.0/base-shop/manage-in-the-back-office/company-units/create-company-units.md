@@ -36,7 +36,7 @@ This document describes how to create company units.
 5. Optional: Enter an **IBAN**.
 6. Optional: Enter a **BIC**.
 7. Click **Save**.
-    This opens the **Company Units** page. The created company business unit is displayed in the list.
+    This opens the **Company Units** page. The created company business unit's displayed in the list.
 
 ## Reference information: Create a company unit
 

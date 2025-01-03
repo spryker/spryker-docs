@@ -22,7 +22,7 @@ A product catalog manager selects a discount type when [creating a discount](/do
 
 {% info_block warningBox %}
 
-Creating cart rules or vouchers based on any merchant parameters, such as a merchant ID or product offer, is not available by default in the current implementation and needs to be added on the project level by extending the Discount Engine. However, it is possible to create cart rules and vouchers for the Marketplace products. See [Create discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) for more details.
+Creating cart rules or vouchers based on any merchant parameters, such as a merchant ID or product offer, is not available by default in the current implementation and needs to be added on the project level by extending the Discount Engine. However, it's possible to create cart rules and vouchers for the Marketplace products. See [Create discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) for more details.
 
 {% endinfo_block %}
 
@@ -75,7 +75,7 @@ A discount can have one or more decision rules. Find an exemplary combination be
 
 In this case, the discount is applied if the cart contains three items and the purchase is made on the fifth day of the week (Friday).
 
-Multiple decision rules form a query. A query is a request for information based on the defined parameters. In the Discount feature, a query requests information from a cart to check if it is eligible for the discount. By specifying decision rules, you define the parameters of the query.
+Multiple decision rules form a query. A query is a request for information based on the defined parameters. In the Discount feature, a query requests information from a cart to check if it's eligible for the discount. By specifying decision rules, you define the parameters of the query.
 
 In the Back Office, a product catalog manager creates decision rules in a Query Builder. The decision rules created in the Query Builder are transformed into a single query.
 
@@ -123,7 +123,7 @@ A rule group is a separate set of rules with its own combination operator.
 
 ![Decision rule group](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/decision-rule-group.png)
 
-With the rule groups, you can build multiple levels of rule hierarchy. When a cart is evaluated against the rules, it is evaluated on all levels of the hierarchy. On each level, there can be both rules and rule groups.
+With the rule groups, you can build multiple levels of rule hierarchy. When a cart is evaluated against the rules, it's evaluated on all levels of the hierarchy. On each level, there can be both rules and rule groups.
 
 ![Decision rule hierarchy](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/decision-rule-hierarchy.png)
 

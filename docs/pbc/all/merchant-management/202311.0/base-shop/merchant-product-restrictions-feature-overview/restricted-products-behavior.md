@@ -25,12 +25,12 @@ On this page, you can find commonly encountered cases of product restrictions be
          <td rowspan="6">Product Catalog</td>
          <td rowspan="2">Blacklist</td>
          <td>
-            <p>If the merchant relation has a blacklist, all buyers in the associated business units cannot interact with any products from the blacklist. The blacklisted products are excluded from view, search, existing lists and carts. If the category is a part of a blacklist, it is greyed out in the shop navigation, however, you can change this setting on the project level so, for example, that the category is not greyed out.</p>
+            <p>If the merchant relation has a blacklist, all buyers in the associated business units cannot interact with any products from the blacklist. The blacklisted products are excluded from view, search, existing lists and carts. If the category is a part of a blacklist, it's greyed out in the shop navigation, however, you can change this setting on the project level so, for example, that the category is not greyed out.</p>
             <p>All products assigned to a category are also included in the black/white list.</p>
          </td>
          <td>
             <img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/categories-blacklist.png" alt="" />
-            <p>In case the products are added to the category after it was included in a list, it is reflected after some time with the help of <a href="/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html">publish &amp; sync</a> process.</p>
+            <p>In case the products are added to the category after it was included in a list, it's reflected after some time with the help of <a href="/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html">publish &amp; sync</a> process.</p>
          </td>
       </tr>
       <tr>
@@ -86,7 +86,7 @@ On this page, you can find commonly encountered cases of product restrictions be
             <p>Blacklist</p>
          </td>
          <td>
-            <p>If the product, that is added to the shopping list, has been blacklisted, it is displayed as if it is unavailable.</p>
+            <p>If the product, that is added to the shopping list, has been blacklisted, it's displayed as if it's unavailable.</p>
          </td>
          <td>
             <p><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/blacklisted-product-in-shopping-list.png" alt="" /></p>
@@ -100,7 +100,7 @@ On this page, you can find commonly encountered cases of product restrictions be
             <p>Blacklist</p>
          </td>
          <td>
-            <p>If a product that has been added to a list of the alternative products, is restricted, it is not suggested on product pages.</p>
+            <p>If a product that has been added to a list of the alternative products, is restricted, it's not suggested on product pages.</p>
          </td>
          <td>
             <p><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/alternative-product-blacklisted.png" alt="" /></p>
@@ -114,7 +114,7 @@ On this page, you can find commonly encountered cases of product restrictions be
             <p>Blacklist</p>
          </td>
          <td>
-            <p>If any of the products that are added to a product group, is restricted, it is not displayed in the Shop Application.</p>
+            <p>If any of the products that are added to a product group, is restricted, it's not displayed in the Shop Application.</p>
          </td>
          <td>
             <p><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/product-groups-blacklisted.png" alt="" /></p>
@@ -128,7 +128,7 @@ On this page, you can find commonly encountered cases of product restrictions be
             <p>Blacklist</p>
          </td>
          <td>
-            <p>If any of the related products is added to a blacklist - it is not displayed in the Shop Application.</p>
+            <p>If any of the related products is added to a blacklist - it's not displayed in the Shop Application.</p>
          </td>
          <td>
             <p><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/related-product-blacklist.png" alt="" /></p>

@@ -18,7 +18,7 @@ A *container* is a class which holds one or more object collections or definitio
 
 The container is used to add services and allow other application plugins access them. Services are integrations like Twig or Symfony components like Security or Form. To be able to configure or change the services easily, they are added to the applications as a part of [application plugins](/docs/dg/dev/upgrade-and-migrate/silex-replacement/application.html).
 
-It's important that almost everything that is accessible through the container should only be instantiated when it is requested. It's not as important for static values like `isDebugMode` as it is important for expensive instantiations.                
+It's important that almost everything that is accessible through the container should only be instantiated when it's requested. It's not as important for static values like `isDebugMode` as it's important for expensive instantiations.                
 
 ## Where is the container used?
 
@@ -166,7 +166,7 @@ if ($container->has('your service identifier')) {
 }
 ```
 
-With the code, you can alter your service without loading it. Your service will only be loaded when it is requested from the container using `container::get()`.
+With the code, you can alter your service without loading it. Your service will only be loaded when it's requested from the container using `container::get()`.
 
 ## Global services
 
@@ -228,4 +228,4 @@ class ModuleCommunicationFactory extends AbstractCommunicationFactory
 `FrozenServiceException` - The service `your service identifier` is marked as frozen and can't be extended at this point.
 
 **then**
-If you try to extend a service which was already requested from the container, you will see this exception. A debugger will help you to find a solution. Check which code causes this error by setting a breakpoint in the container where this exception is thrown. Most likely, you will spot the issue right away. If not, set an additional conditional breakpoint in the first line of the `container::get()` method: `$id === 'your service identifier'`. It instructs the debugger to stop when the service identifier which brings the exception is retrieved from the container. Now check the code which wants to retrieve the service and change it in a way that it is called only after `container::extend()` was executed.
+If you try to extend a service which was already requested from the container, you will see this exception. A debugger will help you to find a solution. Check which code causes this error by setting a breakpoint in the container where this exception is thrown. Most likely, you will spot the issue right away. If not, set an additional conditional breakpoint in the first line of the `container::get()` method: `$id === 'your service identifier'`. It instructs the debugger to stop when the service identifier which brings the exception is retrieved from the container. Now check the code which wants to retrieve the service and change it in a way that it's called only after `container::extend()` was executed.

@@ -8,7 +8,7 @@ redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-internationalization.html
 ---
 
-In international business, it is important to fine-tune a shop's behavior according to the country. Functionality that needs to be configured:
+In international business, it's important to fine-tune a shop's behavior according to the country. Functionality that needs to be configured:
 
 * Design and layout
 * Currency and price
@@ -25,7 +25,7 @@ At the same time, the product import from a PIM system cart calculation and the 
 
 ## Store concept
 
-To cope with these challenges, Spryker’s architecture differentiates a project and a store level. That means coding and behavior can be defined on each level. Logic that is identical will be on the project level. Examples are the product structure or customer structure. At the same time, it is possible to define a store level, this will typically be used for each country the company operates in. This allows maintaining coding that is only relevant for the given store. The store will define design and layout, used currency, and price. We recommend you have a different store at least on the currency level.
+To cope with these challenges, Spryker’s architecture differentiates a project and a store level. That means coding and behavior can be defined on each level. Logic that is identical will be on the project level. Examples are the product structure or customer structure. At the same time, it's possible to define a store level, this will typically be used for each country the company operates in. This allows maintaining coding that is only relevant for the given store. The store will define design and layout, used currency, and price. We recommend you have a different store at least on the currency level.
 
 ## Internationalization vs localization
 

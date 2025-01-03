@@ -155,7 +155,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox “Verification” %}
 
-Now, it is possible to verify that the configuration of NavigationsRestApiConfig is done correctly. Perform the "https://glue.mysprykershop.com/navigations/{navigationId}" request and check that each node of the type you set up in the configuration (category and CMS pages in the example "resourceId" is filled with the valid foreign key.)
+Now, it's possible to verify that the configuration of NavigationsRestApiConfig is done correctly. Perform the "https://glue.mysprykershop.com/navigations/{navigationId}" request and check that each node of the type you set up in the configuration (category and CMS pages in the example "resourceId" is filled with the valid foreign key.)
 
 {% endinfo_block %}
 

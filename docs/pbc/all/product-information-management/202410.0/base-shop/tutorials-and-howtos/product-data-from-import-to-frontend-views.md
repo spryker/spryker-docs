@@ -42,7 +42,7 @@ vendor/bin/console collector:storage:export
 
 When you have data in the key-value storage, you can display the product details in the frontend views.
 
-When requesting a page in frontend, the `Collector` module takes care of identifying the type of request (if it is a product details page or a category page) and retrieves necessary data from Redis.
+When requesting a page in frontend, the `Collector` module takes care of identifying the type of request (if it's a product details page or a category page) and retrieves necessary data from Redis.
 
 It also takes care of routing the request to the correct controller action.
 

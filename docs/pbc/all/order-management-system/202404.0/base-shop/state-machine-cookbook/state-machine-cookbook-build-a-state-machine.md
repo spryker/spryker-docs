@@ -205,7 +205,7 @@ Now that you have identified the events, you can add them to the XML file that d
 
 {% info_block infoBox "Timeout Events " %}
 
-If the state machine's current state is the source state for a transition that has a timeout event attached, it is checked periodically by a cronjob to see whether that amount of time has already passed.
+If the state machine's current state is the source state for a transition that has a timeout event attached, it's checked periodically by a cronjob to see whether that amount of time has already passed.
 
 {% endinfo_block %}
 

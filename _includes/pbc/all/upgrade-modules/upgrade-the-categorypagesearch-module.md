@@ -230,7 +230,7 @@ To upgrade to the new version of the module, do the following:
 composer update spryker/category-page-search
 ```
 
-2. Remove deprecated plugin usages listed below (in case it is used) from `Pyz\Zed\Search\SearchDependencyProvider`:
+2. Remove deprecated plugin usages listed below (in case it's used) from `Pyz\Zed\Search\SearchDependencyProvider`:
 
 ```bash
 Spryker\Zed\CategoryPageSearch\Communication\Plugin\Search\CategoryNodeDataPageMapBuilder

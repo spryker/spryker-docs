@@ -188,6 +188,6 @@ $('.any-target-selector').countdown('2100/01/01', function (event: any) {
 
 {% info_block errorBox %}
 
-Make sure that it is invoked inside/after `mountCallback (readyCallback` can be used as well, but it's now deprecated).
+Make sure that it's invoked inside/after `mountCallback (readyCallback` can be used as well, but it's now deprecated).
 
 {% endinfo_block %}

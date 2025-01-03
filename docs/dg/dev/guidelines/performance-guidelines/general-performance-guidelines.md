@@ -174,7 +174,7 @@ Making calculations on the PHP side can help here a lot, as well as using `{% ra
 
 ## Activate Zed navigation cache
 
-The navigation of Zed is defined in XML files that need to be parsed and merged. As it does not happen quite often, it is recommended to keep the cache activated at all times (even during development) and to run `vendor/bin/console navigation:build-cache` only when something has changed.
+The navigation of Zed is defined in XML files that need to be parsed and merged. As it does not happen quite often, it's recommended to keep the cache activated at all times (even during development) and to run `vendor/bin/console navigation:build-cache` only when something has changed.
 
 Zed navigation cache is activated by default:
 

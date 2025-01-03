@@ -144,7 +144,7 @@ quote_approval.cart.waiting_approval,"Sie können diese Bestellung aufgrund eine
 quote_approval.create.approver_cant_approve_quote,"Selected approver cannot approve your request because of approver limit.",en_US
 quote_approval.create.approver_cant_approve_quote,"Der ausgewählte Manager kann Ihre Anfrage aufgrund des Genehmigungslimits nicht genehmigen.",de_DE
 quote_approval.create.you_cant_approve_quote,"You can't approve or decline this cart because it's amount higher that your Approver limit.",en_US
-quote_approval.create.you_cant_approve_quote,"Sie können diesen Einkaufswagen nicht genehmigen oder ablehnen, weil dessen Betrag höher als ihr Genehmigungslimit ist.",de_DE
+quote_approval.create.you_cant_approve_quote,"Sie können diesen Einkaufswagen nicht genehmigen oder ablehnen, weil dessen Betrag höher als ihr Genehmigungslimit'st.",de_DE
 quote_approval.create.quote_already_approved,"This Cart was already approved.",en_US
 quote_approval.create.quote_already_approved,"Dieser Einkaufswagen wurde schon zur Genehmigung gesendet.",de_DE
 quote_approval.create.quote_already_declined,"This Cart was already declined.",en_US
@@ -448,7 +448,7 @@ quote_approval_widget.cart.status.waiting,"Waiting",en_US
 quote_approval_widget.cart.status.waiting,"Wartet",de_DE
 quote_approval_widget.shared_cart_warning,"After a cart has been sent to approval, all of its shares will be dismissed.",en_US
 quote_approval_widget.shared_cart_warning,"Nachdem der Warenkorb zur Genehmigung gesendet wurde, wird sein Sharing aufgehoben.",de_DE
-quote_approval_widget.limit_text,"Your purchase limit is %amount%. To spend more, request approval from your manager.",en_US
+quote_approval_widget.limit_text,"Your purchase limit's %amount%. To spend more, request approval from your manager.",en_US
 quote_approval_widget.limit_text,"Ihr Einkaufsrahmen liegt bei %amount%. Um mehr auszugeben, fordern Sie bitte die Genehmigung bei Ihrem Manager an",de_DE
 quote_approval_widget.no_limit_text,"You do not have a purchase limit",en_US
 quote_approval_widget.no_limit_text,"Sie haben kein Einkaufslimit",de_DE

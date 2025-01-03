@@ -43,7 +43,7 @@ For more details, see REST API reference:
 
 ## B2C API React example
 
-To help you understand possible use cases, we provide a sample app as an exemplary implementation (which is not a starting point for development). It can coexist with a shop as a second touchpoint in the project. From a technological perspective, it is based on our customers' interests. The app is single-page application based on a React JS library.
+To help you understand possible use cases, we provide a sample app as an exemplary implementation (which is not a starting point for development). It can coexist with a shop as a second touchpoint in the project. From a technological perspective, it's based on our customers' interests. The app is single-page application based on a React JS library.
 
 It delivers a full customer experience from browsing the catalog to placing an order. The application helps you understand how you can use the predefined APIs to create a B2C user experience. As an example, the full power of Elasticsearch, which is already present in our [B2B](/docs/about/all/b2b-suite.html) and [B2C Demo Shops](/docs/about/all/b2c-suite.html), is leveraged through dedicated endpoints to deliver catalog search functionality with autocompletion, autosuggestion, facets, sorting, and pagination.
 
@@ -57,7 +57,7 @@ For more deatails about installing and running, see [B2C API React example](/doc
 
 Glue API helps you to connect your Spryker Commerce OS with new or existing touch points. These touchpoints can be headless like voice commerce devices and chat bots, or they may come with a user interface like a mobile app. Alternative front ends also benefit from the APIs. Here are some examples:
 * New frontend: Build a new frontend or use a frontend framework like Progressive Web Apps and power it by the Glue API.
-* Mobile app: a mobile app, no matter if it is native, hybrid or just a web-view, can support the same functionality as the existing demo shops do.
+* Mobile app: a mobile app, no matter if it's native, hybrid or just a web-view, can support the same functionality as the existing demo shops do.
 * Voice commerce: Leverage the APIs for order history to inform your customers about the status of their delivery.
 * Chatbot: Use chatbots to identify the customer that are trying to reach out to you and help them answer basic questions about your products.
 

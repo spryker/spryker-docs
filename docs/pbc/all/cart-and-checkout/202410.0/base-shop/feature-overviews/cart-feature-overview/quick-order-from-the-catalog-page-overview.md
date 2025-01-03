@@ -25,4 +25,4 @@ For the **Add to cart** icon to be active for the product on the **Catalog** pag
 
 A product belonging to a [product group](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) can also be added to the cart from the **Category** page. However, like with regular products, a product from the product group must have no more than one variant and be available.
 
-If a product has [options](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-options-feature-overview.html), it can be added to the cart from the Category page, but it is added without any options.
+If a product has [options](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-options-feature-overview.html), it can be added to the cart from the Category page, but it's added without any options.

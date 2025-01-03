@@ -66,7 +66,7 @@ Below, you will find an analysis of the Spryker architecture and solutions for t
 
 ### Database queries in plugins
 
-Spryker widely uses plugins to reduce module dependencies and to increase flexibility to make features work together smoothly. However, this can lead to some performance issues if there are database queries in each plugin. That's why it is essential to aggregate all queries to decrease the number of database operations.
+Spryker widely uses plugins to reduce module dependencies and to increase flexibility to make features work together smoothly. However, this can lead to some performance issues if there are database queries in each plugin. That's why it's essential to aggregate all queries to decrease the number of database operations.
 
 Let's consider an example. Suppose there are 10 plugins for the cart feature to calculate items price, discount, tax, etc. Each plugin has a query to find a product by SKU per order item, which means the code will execute 10 same queries per each item in the cart.
 
@@ -215,7 +215,7 @@ As the Spryker boilerplate comes with most of the features enabled, make sure yo
 
 ### Zed calls
 
-Zed calls are necessary when it comes to executing a database-related operation like Cart and Checkout requests. As an RPC mechanism handles these calls, it is necessary to reduce the number of calls to maximum one call to Zed. You can achieve this by:
+Zed calls are necessary when it comes to executing a database-related operation like Cart and Checkout requests. As an RPC mechanism handles these calls, it's necessary to reduce the number of calls to maximum one call to Zed. You can achieve this by:
 
 - Exporting necessary data, only product-related ones, from Zed to Redis at the pre-calculation phase with the help of Publish and Synchronization.
 - Merging duplicate Zed requests to only one customer request (AddToCart + Validations + …).
@@ -228,7 +228,7 @@ Avoid making ZED calls within QueryExpanderPlugin (from Storage or Search).
 
 ### OMS optimization
 
-OMS processes are the template of the order fulfillment in Spryker. The first state of OMS processes, called the NEW state, plays an important role in the checkout process. Therefore, it is necessary to make sure you don't use unnecessary features when you don't need them, for example, Reservation or Timeout transitions.
+OMS processes are the template of the order fulfillment in Spryker. The first state of OMS processes, called the NEW state, plays an important role in the checkout process. Therefore, it's necessary to make sure you don't use unnecessary features when you don't need them, for example, Reservation or Timeout transitions.
 
 One can avoid using the unnecessary transitions by:
 

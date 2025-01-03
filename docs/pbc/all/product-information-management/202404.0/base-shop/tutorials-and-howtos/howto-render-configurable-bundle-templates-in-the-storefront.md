@@ -78,7 +78,7 @@ In the checkout summary page template (`CheckoutPage/Theme/default/views/summary
 {% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 ```
 
-When you set up `ConfiguredBundleNoteWidget` for your product, it is called automatically in the `configured-bundle` molecule of the `QuoteConfiguredBundleWidget` (the same example as for the cart page). It is impossible to edit or remove comments for the configured bundle product on the checkout summary step. The customer can read comments which are editable on the cart page only.
+When you set up `ConfiguredBundleNoteWidget` for your product, it's called automatically in the `configured-bundle` molecule of the `QuoteConfiguredBundleWidget` (the same example as for the cart page). It is impossible to edit or remove comments for the configured bundle product on the checkout summary step. The customer can read comments which are editable on the cart page only.
 
 ## Render configurable bundle templates on the order details page
 

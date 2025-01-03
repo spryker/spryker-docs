@@ -158,7 +158,7 @@ you have to merge the latest changes with the core. Especially this is important
 * `\Spryker\Client\Search\Plugin\Config\SortConfigBuilder` now looks for configuration by configuration field name.
 
 **Yves changes:**
-The `UrlGenerator` was incorrectly setting the request parameters, therefore now it is necessary to change processFacetSearchResultTransfer and processRangeSearchResultTransfer as shown in the code sample below.
+The `UrlGenerator` was incorrectly setting the request parameters, therefore now it's necessary to change processFacetSearchResultTransfer and processRangeSearchResultTransfer as shown in the code sample below.
 
 **Code sample:**
 

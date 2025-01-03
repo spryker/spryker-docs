@@ -74,7 +74,7 @@ The following schema illustrates the workflow as well as the areas that require 
 
 ![image](https://confluence-connect.gliffy.net/embed/image/2599f923-6892-42bc-a867-e2b38bed5b2b.png?utm_medium=live&utm_source=custom)
 
-This scenario suites both B2B and B2C models and is especially good for resolving disputes and handling warranty cases that can imply return or replacement. So it is best to use such a workflow when human intervention is needed.
+This scenario suites both B2B and B2C models and is especially good for resolving disputes and handling warranty cases that can imply return or replacement. So it's best to use such a workflow when human intervention is needed.
 
 You can combine this scenario with [scenario 1](#scenario1). For example:
 

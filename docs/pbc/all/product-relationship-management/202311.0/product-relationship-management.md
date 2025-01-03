@@ -78,7 +78,7 @@ In the following example, for a product to be added to related products, it must
 
 {% info_block infoBox "Info" %}
 
-When rules are combined by the OR operator, they do not exclude each other. If a product fulfills both such rules, it is still added to related products. In the previous example, a product must fulfill at least one of the rules to be added to related products. However, fulfilling both of them still adds it to related products.
+When rules are combined by the OR operator, they do not exclude each other. If a product fulfills both such rules, it's still added to related products. In the previous example, a product must fulfill at least one of the rules to be added to related products. However, fulfilling both of them still adds it to related products.
 
 {% endinfo_block %}
 
@@ -88,7 +88,7 @@ When you have a big product catalog, you might want to use rule groups to make t
 
 ![Rule group]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/rule-group.png)
 
-With the rule groups, you can build multiple levels of rule hierarchy. When a product is evaluated against the rules, it is evaluated on all the levels of the hierarchy you build. On each level, there can be both rules and rule groups.
+With the rule groups, you can build multiple levels of rule hierarchy. When a product is evaluated against the rules, it's evaluated on all the levels of the hierarchy you build. On each level, there can be both rules and rule groups.
 
 ![Rule group hierarchy](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/rule-group-hierarchy.png)
 
@@ -119,7 +119,7 @@ A developer can do the following:
 
 A product catalog manager can define the [stores](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html) each product relation is displayed in.
 
-If no store relation is defined for a product relation, it is not displayed on Storefront.
+If no store relation is defined for a product relation, it's not displayed on Storefront.
 
 Stores are defined when creating or editing a product relation in the Back Office.
 

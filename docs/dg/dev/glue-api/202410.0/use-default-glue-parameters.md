@@ -21,7 +21,7 @@ The Glue JSON:API convention provides some parameter parsing out of the box. The
 
 ## Pagination
 
-Glue uses an offset-based pagination style: the client passes two values, `offset` and `limit`, where the limit is the number of records to display, and offset is the number of records to skip. Here is an example:
+Glue uses an offset-based pagination style: the client passes two values, `offset` and `limit`, where the limit's the number of records to display, and offset is the number of records to skip. Here is an example:
 
 ```
 ?page[offset]=0&page[limit]=10 # display 10 records starting at 0 (AKA page #1)
@@ -58,7 +58,7 @@ $glueResponseTransfer->getPagination()->setNbResults();
 
 ## Sorting
 
-Sorting can be passed part as a request as simple GET parameters `?sort=resources.age`, where value is the field by which sort resource and attribute; by default, it is ASCENDING order. To change it to DESCENDING, add a hyphen (`-`)—for example, `?sort=-resources.age`.
+Sorting can be passed part as a request as simple GET parameters `?sort=resources.age`, where value is the field by which sort resource and attribute; by default, it's ASCENDING order. To change it to DESCENDING, add a hyphen (`-`)—for example, `?sort=-resources.age`.
 
 To get an order, you can read it from `$glueRequestTransfer->getSortings()`, which returns an array of `SortTransfer`, each containing field to be sorted. Use it to sort data when querying from persistence.
 
@@ -74,4 +74,4 @@ You can reduce the amount of data returned by using sparse fields. Clients can p
 
 When processing a request, you can get this by accessing `$glueRequestTransfer->getQueryFields()`. This returns an array of strings.
 
-When building response attributes that are not within the fields, the list is removed, even if it is populated by resource processing.
+When building response attributes that are not within the fields, the list is removed, even if it's populated by resource processing.

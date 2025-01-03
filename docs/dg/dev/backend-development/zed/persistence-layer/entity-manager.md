@@ -30,7 +30,7 @@ As an example of using an entity manager, see the [Company module](https://githu
 
 ## Entity transfers
 
-With the Publish and Synchronize feature, we have added a new transfer generation for `EntityTransfers`. The `EntityTransfers` are a direct representation of SQL tables. `EntityTransfer` has all properties, and relations defined and holds FQCN to the Propel entity it is mapped to. This FQCN is used when mapping the entity as the data is persisted.
+With the Publish and Synchronize feature, we have added a new transfer generation for `EntityTransfers`. The `EntityTransfers` are a direct representation of SQL tables. `EntityTransfer` has all properties, and relations defined and holds FQCN to the Propel entity it's mapped to. This FQCN is used when mapping the entity as the data is persisted.
 
 ## AbstractEntityManager class
 

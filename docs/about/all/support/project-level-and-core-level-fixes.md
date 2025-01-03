@@ -13,7 +13,7 @@ This document explains the differences between project and core level fixes to p
 
 ## Project-level fixes
 
-Sometimes, it is important to react fast and provide an undemocratic solution to an urgent problem. This is where project-level fixes come into place. We use them to solve problems on a project level. If a reported problem is relatively simple but has a high business impact, we sometimes provide a patch. This patch might not run through the normal QA and review processes and has the singular purpose of solving a problem with high business impact as fast as possible and buying the time necessary to provide a proper solution.
+Sometimes, it's important to react fast and provide an undemocratic solution to an urgent problem. This is where project-level fixes come into place. We use them to solve problems on a project level. If a reported problem is relatively simple but has a high business impact, we sometimes provide a patch. This patch might not run through the normal QA and review processes and has the singular purpose of solving a problem with high business impact as fast as possible and buying the time necessary to provide a proper solution.
 We also usually try to avoid project-level fixes where possible, because they do not make Spryker better for everyone and treat symptoms rather than solving the core issue.
 
 ## Core-level fixes

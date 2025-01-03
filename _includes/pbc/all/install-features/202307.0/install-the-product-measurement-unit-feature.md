@@ -534,9 +534,9 @@ sales_unit_19,218_1232,ITEM,1,1,1,1
 |concrete_sku|mandatory|string|215_123|An already existing product concrete SKU.|
 |code|mandatory|string|METR	|An already existing measurement unit code that will be used to convert back and forth with the base unit defined in product abstract.|
 |conversion|mandatory|float, empty|5|<p>A custom multiplier that is used to calculate base unit. This field can be empty if both base and sales unit code is defined in the general [conversion ratios](https://github.com/spryker/util-measurement-unit-conversion/blob/1ae26cf8e629d25157e273097941bde438a24ddc/src/Spryker/Service/UtilMeasurementUnitConversion/UtilMeasurementUnitConversionConfig.php).</p><p>Example: 5 means that 1 quantity of this sales unit represents 5 of the base unit.</p>|
-|precision|mandatory|integer, power of ten, empty|100|A property that affects how detailed to render a float measurement unit. Affects visual only, not used in calculations. <br>When left empty, the precision of the measurement unit is used.|
+|precision|mandatory|integer, power of ten, empty|100|A property that affects how detailed to render a float measurement unit. Affects visual only, not used in calculations. <br>When left empty, the precision of the measurement unit's used.|
 |is_displayed|mandatory|integer|0|Controls if the sales unit can be displayed for customers.|
-|is_default|mandatory|integer|1|Controls if this sales unit is preferred as the default sales unit when offered for customers.<br>Takes no effect if is_displayed set as 0.<br>1 product concrete can have up to 1 default sales unit.|
+|is_default|mandatory|integer|1|Controls if this sales unit's preferred as the default sales unit when offered for customers.<br>Takes no effect if is_displayed set as 0.<br>1 product concrete can have up to 1 default sales unit.|
 
 Register the following plugin:
 
@@ -650,7 +650,7 @@ sales_unit_19,AT
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | sales_unit_key |mandatory  | string | sales_unit_1 |A reference used for the product measurement sales unit data import.  |
-|store_name|mandatory|string|DE|Contains the store name where the sales unit is available.|
+|store_name|mandatory|string|DE|Contains the store name where the sales unit's available.|
 Register the following plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -938,7 +938,7 @@ measurement_units.recommendation.suggestion,Was würden Sie gerne hinzufügen? ,
 cart.pre.check.quantity.min.failed,Die Mindestanzahl für Produkt SKU '%sku%' ist nicht erreicht.,de_DE
 cart.pre.check.quantity.max.failed,Die Maximalanzahl für Produkt SKU '%sku%' ist überschritten.,de_DE
 cart.pre.check.quantity.interval.failed,Die Anzahl für Produkt SKU '%sku%' liegt nicht innerhalb des vorgegebenen Intervals.,de_DE
-cart.item.sales_unit.not_found,Sales unit is not found for product with SKU '%sku%'.,en_US
+cart.item.sales_unit.not_found,Sales unit's not found for product with SKU '%sku%'.,en_US
 cart.item.sales_unit.not_found,Verkaufseinheit wird für Produkt mit SKU '%sku%' nicht gefunden.,de_DE
 ```
 

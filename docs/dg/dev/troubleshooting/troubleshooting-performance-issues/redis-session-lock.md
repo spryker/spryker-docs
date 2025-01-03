@@ -141,7 +141,7 @@ $config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = CONDITION ?
     SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING;
 ```
 
-In this example, `CONDITION` can be any operation with a boolean result, but it is impostant to keep it quickly executed, not to make a bottleneck from configuration declartion.
+In this example, `CONDITION` can be any operation with a boolean result, but it's impostant to keep it quickly executed, not to make a bottleneck from configuration declartion.
 Here's one of the possible examples of a condition: 
 - `str_contains($_SERVER['HTTP_USER_AGENT'] ?? '', 'Googlebot')` or
 - `str_contains($_SERVER['REQUEST_URI'] ?? '', '/some-url')` or

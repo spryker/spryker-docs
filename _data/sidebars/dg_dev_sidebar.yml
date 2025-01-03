@@ -909,6 +909,8 @@ entries:
 
   - title: Internationalization and multi-store
     nested:
+      - title: Adding stores in a multi-database setup
+        url: /docs/dg/dev/internationalization-and-multi-store/adding-stores-in-a-multi-database-setup.html      
       - title: Handling internationalization
         url: /docs/dg/dev/internationalization-and-multi-store/handling-internationalization.html
       - title: Managing glossary keys

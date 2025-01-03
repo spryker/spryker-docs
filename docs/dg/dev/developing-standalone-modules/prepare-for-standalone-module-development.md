@@ -1,6 +1,6 @@
 ---
 title: Prepare for standalone module development
-description: Onboard and learn
+description: Learn how you can prepare for standalone module development within your Spryker based projects.
 last_updated: Jun 7, 2024
 template: howto-guide-template
 ---

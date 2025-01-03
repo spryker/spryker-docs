@@ -84,7 +84,7 @@ To create the scheduler, do the following:
 5. In *Expression*, enter the time you want the scheduler to run. Use [Crontab guru](https://crontab.guru/) to set the time in the right format.
 6. Create one more scheduler with the same parameters, but for step 3, select the *Run outgoing configuration* job.
 
-Since the number of tasks that can be processed is limited, it is recommended to create a scheduler that would remove completed tasks after the specified intervals. 
+Since the number of tasks that can be processed is limited, it's recommended to create a scheduler that would remove completed tasks after the specified intervals. 
 
 To create such a scheduler, do the following:
 

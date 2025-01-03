@@ -34,7 +34,7 @@ By default, the option is enabled on the Spryker Core level but disabled on th
 
 {% info_block infoBox %}
 
-For the purposes of boosting the API performance and bandwidth usage optimization, it is recommended to request only the information you need.
+For the purposes of boosting the API performance and bandwidth usage optimization, it's recommended to request only the information you need.
 
 {% endinfo_block %}
 

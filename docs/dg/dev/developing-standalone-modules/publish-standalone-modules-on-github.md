@@ -1,6 +1,6 @@
 ---
 title: Publish standalone modules on GitHub
-description: Learn how to publish a standalone module on GitHub
+description: Learn how to publish a standalone module on GitHub with your github account and github repository.
 last_updated: Jun 7, 2024
 template: howto-guide-template
 ---

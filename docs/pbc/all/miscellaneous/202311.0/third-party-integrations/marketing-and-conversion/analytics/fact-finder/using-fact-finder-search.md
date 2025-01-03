@@ -49,7 +49,7 @@ Basic parameters:
 * `productsPerPage` - In the FACT-Finder Management Interface, you can define the number of results that will be returned on a page by default. To change the number, you can set it with this parameter.
 * `sort` - By default, the result that is returned has been sorted for relevance. However, you can specify a different sort order here.
 * `filter` - When a filter parameter is sent to FACT-Finder, the Search engine only returns results that correspond to the filter indicated.
-* `searchField` -  Normally FACT-Finder searches all fields defined as searchable. However, it is possible to search only one specific field as well.
+* `searchField` -  Normally FACT-Finder searches all fields defined as searchable. However, it's possible to search only one specific field as well.
 * `noArticleNumberSearch` - Normally an article number search is carried out if the search term matches one or more set formats. You can also use parameters to prevent an article number search from being carried out.
 * `sid` - Session ID.
 * `useAsn` - Controls whether or not the ASN (after-search navigation block) is created.

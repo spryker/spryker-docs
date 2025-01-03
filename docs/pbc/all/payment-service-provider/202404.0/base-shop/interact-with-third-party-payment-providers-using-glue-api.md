@@ -51,7 +51,7 @@ The overall interaction diagram between Glue API, the API Client, and the third 
 
 First, implement a plugin that maps the checkout response and fills it with the necessary redirect URL and other attributes that are mapped. To do so, create a plugin file on the `Glue` layer: `src/Pyz/Glue/MyModule/Plugin/CheckoutRestApi/CheckoutResponseMapperPlugin.php`.
 
-The plugin must implement `CheckoutResponseMapperPluginInterface`. Using the `mapRestCheckoutResponseTransferToRestCheckoutResponseAttributesTransfer` function of the interface, you can set the redirect URL and specify whether it is an internal or external redirect.
+The plugin must implement `CheckoutResponseMapperPluginInterface`. Using the `mapRestCheckoutResponseTransferToRestCheckoutResponseAttributesTransfer` function of the interface, you can set the redirect URL and specify whether it's an internal or external redirect.
 
 **Sample implementation**
 
@@ -99,7 +99,7 @@ The plugin must extend the `OrderPaymentUpdaterPluginInterface` and implement th
 * `isAppplicable`: This function determines whether a specific payment is processed by the plugin. The function returns true if the payment must be processed; otherwise, it returns false.
 * `updateOrderPayment`: This function updates the payment data in the database.
 
-To help you understand which payments need to be processed, you can use the optional `paymentIdentifier` field in `POST` requests to the `/order-payments` endpoint. To make sure it is always present in a request, you may require the API client to set the field to a specific value to invoke your payment plugin. The value of the field can be retrieved using the `getPaymentIdentifier` helper function.
+To help you understand which payments need to be processed, you can use the optional `paymentIdentifier` field in `POST` requests to the `/order-payments` endpoint. To make sure it's always present in a request, you may require the API client to set the field to a specific value to invoke your payment plugin. The value of the field can be retrieved using the `getPaymentIdentifier` helper function.
 
 {% info_block infoBox %}
 

@@ -41,7 +41,7 @@ To override the global component, the Twig file name on the project level must b
 } {% raw %}%}{% endraw %}
 ```
 
-Since the new component will be used everywhere instead of the global one, it is also recommended to replicate the data contracts. For this purpose, the **data** and **attributes** properties need to be configured the same as in the source component. If you are going to change the outlook of the component only, without changing its **data** property, attributes etc, you can copy the source Twig file, and then make changes to the **body** block only. The block contains the visual layout of a component.
+Since the new component will be used everywhere instead of the global one, it's also recommended to replicate the data contracts. For this purpose, the **data** and **attributes** properties need to be configured the same as in the source component. If you are going to change the outlook of the component only, without changing its **data** property, attributes etc, you can copy the source Twig file, and then make changes to the **body** block only. The block contains the visual layout of a component.
 
 As we are not going to change the component template, let us copy the whole of the source twig implementation (`vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/components/molecules/simple-carousel/simple-carousel.twig`) to the project level (`src/Pyz/Yves/ShopUi/Theme/default/components/molecules/simple-carousel.twig`). The Twig file will look as follows:
 

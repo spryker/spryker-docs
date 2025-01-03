@@ -67,7 +67,7 @@ At this point, you are most likely to know which document you want to edit. To f
 5. Below the list of edited files, enter the name and description of your changes. The name of your fist commit will be used as the pull request's name.
 6. To add your changes to the branch, click **Commit to {BRANCH_NAME}**.
 7. To publish the changes on GitHub, click **Push origin**.
-    If you are editing in several sessions, it is good practice to commit and push after each session. If something happens to the changes on your machine, they will be safe on GitHub, and you will be able to keep working on them.
+    If you are editing in several sessions, it's good practice to commit and push after each session. If something happens to the changes on your machine, they will be safe on GitHub, and you will be able to keep working on them.
 
 
 <figure class="video_container">

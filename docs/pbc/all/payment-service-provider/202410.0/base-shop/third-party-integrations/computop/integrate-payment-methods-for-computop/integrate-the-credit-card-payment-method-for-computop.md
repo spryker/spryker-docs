@@ -78,7 +78,7 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 
 For partial capturing:
 
-1. Case: Merchant uses neither ETM nor PCN (`PseudoCardNumber`). After authorization has been done, you are able to do one capture. This can be a partial or a complete capture of the authorized amount. After the capture is performed you cannot do another capture. If it is a partial capture, the rest of the initial authorized amount is released.
+1. Case: Merchant uses neither ETM nor PCN (`PseudoCardNumber`). After authorization has been done, you are able to do one capture. This can be a partial or a complete capture of the authorized amount. After the capture is performed you cannot do another capture. If it's a partial capture, the rest of the initial authorized amount is released.
 2. Case: Merchant uses ETM (Extended Transactions Management). You can do partial captures as long as the as the initial amount of the authorization has not been reached or you send `FinishAuth=Y` with the last capture you like to do. (see page 83 of Computop documentation)
 3. Case: Merchant uses PCN. With the authorization request you get back the PCN and other credit card parameter (Expiry Date, Brand). PCN and the other parameters can be stored.
 

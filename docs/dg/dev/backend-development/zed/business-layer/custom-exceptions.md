@@ -14,7 +14,7 @@ related:
     link: docs/dg/dev/backend-development/zed/business-layer/business-models.html
 ---
 
-To throw an exception, you need to define your own type of exception. Later, it is much easier to handle exceptions when the type represents a specific type of error.
+To throw an exception, you need to define your own type of exception. Later, it's much easier to handle exceptions when the type represents a specific type of error.
 
 {% info_block errorBox %}
 

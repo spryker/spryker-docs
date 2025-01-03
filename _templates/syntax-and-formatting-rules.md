@@ -1,4 +1,4 @@
-We use the default Markdown syntax, however, in some cases, it is not enough or is not processed correctly. For such cases, the rules described here apply.
+We use the default Markdown syntax, however, in some cases, it's not enough or is not processed correctly. For such cases, the rules described here apply.
 
 ## Code samples in dropdowns
 For code samples with more than 38 lines, use dropdowns with this syntax: 

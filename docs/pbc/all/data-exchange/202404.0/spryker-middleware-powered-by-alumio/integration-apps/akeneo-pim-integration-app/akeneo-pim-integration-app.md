@@ -33,7 +33,7 @@ The Akeneo PIM Integration App works with B2C and B2B business models of Spryker
 
 Akeneo lets you create products with up to 3 levels of enrichment, while Spryker lets you select multiple super attributes to enrich product information and create product variants. 
 
-For example, if you want to create a T-shirt with varying sizes and colors, here is how it is created in Akeneo:
+For example, if you want to create a T-shirt with varying sizes and colors, here is how it's created in Akeneo:
 *Root* Product Model = T-shirt
 *Level 1* Product Models (created by varying colour) = Yellow T-shirt, red T-shirt
 *Level 2* Product Variants (with variant: size) = Yellow T-shirt small, yellow T-shirt large, red T-shirt small, red T-shirt Large

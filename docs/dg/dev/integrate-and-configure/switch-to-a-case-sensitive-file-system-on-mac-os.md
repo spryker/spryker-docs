@@ -37,7 +37,7 @@ After the disk has been created, you can see it being mounted in Finder already.
 
 ## Copy existing projects
 
-You can copy all existing projects to the newly created box. If it is not mounted, double-click the disk image file in Finder. After copying all your projects, you can replace your current project directory with the mount-point for the disk image so that you don't have to adjust any paths you already set up. For details, see the following section.
+You can copy all existing projects to the newly created box. If it's not mounted, double-click the disk image file in Finder. After copying all your projects, you can replace your current project directory with the mount-point for the disk image so that you don't have to adjust any paths you already set up. For details, see the following section.
 
 ## mount the disk image at boot automatically
 

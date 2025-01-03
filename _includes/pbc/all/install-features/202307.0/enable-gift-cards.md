@@ -31,7 +31,7 @@ spryker/product-management:"^0.12.0"
 | `GiftCardIsActiveDecisionRulePlugin` | Doesn’t allow using inactive Gift Cards. |`GiftCardDependencyProvider::getDecisionRulePlugins`  | - |
 | `GiftCardDiscountableItemFilterPlugin` |Restricts using a Gift Card for another Gift Cards in a cart. The plugin filters out Gift Cards from discountable items.  |`DiscountDependencyProvider::getDiscountableItemFilterPlugins`  | -  |
 | `GiftCardIsUsedDecisionRulePlugin` | As a part of the replacement strategy, this plugin does not allow using a Gift Card twice. |`GiftCardDependencyProvider::getDecisionRulePlugins`  | Replacement |
-| `GiftCardMetadataExpanderPlugin` | Populates Gift Card information when it is in the cart. | `CartDependencyProvider::getExpanderPlugins` | - |
+| `GiftCardMetadataExpanderPlugin` | Populates Gift Card information when it's in the cart. | `CartDependencyProvider::getExpanderPlugins` | - |
 | `GiftCardCheckoutDoSaveOrderPlugin` | Saves a Gift Card with populated data when an order is placed. Keeps Gift Card as an order payment method.  | `CheckoutDependencyProvider::getCheckoutOrderSavers` | - |
 | `GiftCardPaymentMethodFilterPlugin` | Now, every payment method is compatible with a Gift Card in the cart. The plugin filters out all incompatible payment methods from available ones during checkout payment methods step. | `PaymentDependencyProvider::getPaymentMethodFilterPlugins` | - |
 | `GiftCardCheckoutPreConditionPlugin` | Confirms that a Gift Card is not used at the moment and that payment method amount assigned to the Gift Card is no more than the Gift Card amount itself.. | `CheckoutDependencyProvider::getCheckoutPreConditions` | - |

@@ -5,7 +5,7 @@
 | items | groupKey | String | Unique item identifier. The value is generated based on product properties. |
 | items | abstractSku | String | Unique identifier of the abstract product owning this concrete product. |
 | items | amount | Integer | Amount of the products in the cart. |
-| items | unitPrice | Integer | Single item price without assuming if it is net or gross. This value should be used everywhere the price is displayed. It allows switching tax mode without side effects. |
+| items | unitPrice | Integer | Single item price without assuming if it's net or gross. This value should be used everywhere the price is displayed. It allows switching tax mode without side effects. |
 | items | sumPrice | Integer | Sum of all items prices calculated. |
 | items | taxRate | Integer | Current tax rate in per cent. |
 | items | unitNetPrice | Integer | Single item net price. |

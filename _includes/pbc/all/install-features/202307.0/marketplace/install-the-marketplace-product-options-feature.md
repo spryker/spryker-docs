@@ -372,7 +372,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 Make sure the following is true:
 * Merchants can create product option groups and values in the Merchant Portal.
-* Merchant product option information is shown on a product details page when it is approved and active.
+* Merchant product option information is shown on a product details page when it's approved and active.
 * Merchant product option information is displayed in the cart, checkout, and user account.
 * Merchant product options are a part of the marketplace or merchant order, and all totals are calculated correctly.
 

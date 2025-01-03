@@ -15,7 +15,7 @@ To learn how data import works and about different ways of importing data, see [
 
 * [product_price.csv](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-price.csv.html): allows you to define the price-related information for each product. This data defines the price type, whether is gross or net, its value, the store and currency to which the price applies, and other price data (for example, volumes price).
 
-* [product_price_schedule.csv](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-price-schedule.csv.html): use this file to schedule a specific price for a product. For that you have to define the price type, whether it is gross or net, its value, the store and currency to which the price applies, the activation date of that price, and its validity.
+* [product_price_schedule.csv](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-price-schedule.csv.html): use this file to schedule a specific price for a product. For that you have to define the price type, whether it's gross or net, its value, the store and currency to which the price applies, the activation date of that price, and its validity.
 
 * [currency.csv](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-currency.csv.html)
 

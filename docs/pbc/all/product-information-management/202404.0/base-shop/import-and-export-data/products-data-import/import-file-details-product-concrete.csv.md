@@ -39,7 +39,7 @@ This file has the following dependency: [ product_abstract.csv](/docs/pbc/all/pr
 | description.{ANY_LOCALE_NAME}<br>Example value: *description.en_US*  |  | String | | Product description, translated in the specified locale (US for our example). |
 | is_searchable.{ANY_LOCALE_NAME}<br>Example value: *is_searchable.en_US*|  | Integer |  | Indicates if the product is searchable in the specified locale (US for our example). |
 | bundled |  | String | | Products SKUs separated by comas, that are part of the bundle. |
-| is_quantity_splittable |  | Boolean |If it is empty, will be *False*.<br>False = 0<br>True = 1 | Defines if the product is [splittable](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/non-splittable-products-feature-overview.html) or not. |
+| is_quantity_splittable |  | Boolean |If it's empty, will be *False*.<br>False = 0<br>True = 1 | Defines if the product is [splittable](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/non-splittable-products-feature-overview.html) or not. |
 
 <!--
 | old_sku |  | String | | Old SKU identifier. |

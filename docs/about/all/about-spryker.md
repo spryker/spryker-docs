@@ -65,7 +65,7 @@ Spryker is split into four different layers:
 * We confine long and resource-intensive processes to the business and persistence layers, which ensures high performance on the presentation layer. The presentation side is separated from the rest of the OS to make sure that only lean processes are executed there. Anything that can impact the purchase process is offloaded to an area that does not impact the performance.
 * Separate frontend and backend means developers can work in parallel, allowing for faster implementation, testing, and better optimization—all for less internal cost.
 * Because your commercial offering is not dependent on a single channel, you can focus your effort on growth and improvement, rather than on solutions, extensions, and sometimes workarounds to make things work.
-* Essential information is not tied up with the presentation. You can easily swap out, extend, replace this information, as well as change the ways it is presented.
+* Essential information is not tied up with the presentation. You can easily swap out, extend, replace this information, as well as change the ways it's presented.
 
 
 ## Managed cloud platform

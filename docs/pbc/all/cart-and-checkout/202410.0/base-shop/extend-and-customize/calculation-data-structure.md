@@ -62,7 +62,7 @@ The entire data object is stored in the session, and it consists of the followin
 |sumGrossPrice (int)|The sum of item's gross price, calculated with `PriceCalculatorPlugin`.|
 |unitNetPrice (int) | A single item net price, set with `CartItemPricePlugin` (cart expander). |
 | sumNetPrice (int) | The sum of items net price, calculated with `PriceCalculatorPlugin`. |
-| unitPrice (int) | A single item price without assuming whether it is new or gross. This value must be used everywhere the price is displayed. It lets you switch tax mode without side effects. It's set with `CartItemPricePlugin` (cart expander). |
+| unitPrice (int) | A single item price without assuming whether it's new or gross. This value must be used everywhere the price is displayed. It lets you switch tax mode without side effects. It's set with `CartItemPricePlugin` (cart expander). |
 | sumPrice (int) | The sum of item's price calculated with `PriceCalculatorPlugin`. |
 | taxRate (float) | The current tax rate set by `ProductItemTaxRateCalculatorPlugin`. |
 | refundableAmount (int) | The item's available refundable amount (order only). It's set by `RefundableAmountCalculatorPlugin`. |

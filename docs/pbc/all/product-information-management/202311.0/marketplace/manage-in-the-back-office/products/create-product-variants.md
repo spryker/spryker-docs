@@ -110,7 +110,7 @@ Once you select to discontinue the product, you can add a note about that on thi
 
 #### Product Alternatives tab
 
-The only field available is **Add Product Alternative by Name or SKU**. Here it is enough to enter three characters of a product name or SKU to see the autosuggested product list. From one to many values can be selected. If there is no need to set up an alternative product, you can skip this tab.
+The only field available is **Add Product Alternative by Name or SKU**. Here it's enough to enter three characters of a product name or SKU to see the autosuggested product list. From one to many values can be selected. If there is no need to set up an alternative product, you can skip this tab.
 
 **What's next?**
 

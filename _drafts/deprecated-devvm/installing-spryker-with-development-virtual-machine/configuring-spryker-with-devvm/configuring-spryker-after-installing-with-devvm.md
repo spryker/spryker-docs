@@ -37,7 +37,7 @@ We will soon deprecate the DevVM and stop supporting it. Therefore, we highly re
 
 ## Configuring Git
 
-If you want to commit from within the VM, it is recommended to set the right Git preferences:
+If you want to commit from within the VM, it's recommended to set the right Git preferences:
 
 ```bash
 git config --global user.email "your.email@domain.tld"

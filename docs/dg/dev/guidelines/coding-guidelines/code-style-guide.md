@@ -198,7 +198,7 @@ Storing the dates in a common time zone ensures consistency, as the time zone co
 
 ### Deprecations
 
-When you deprecate a method, class, or alike, it is recommended to add a short sentence on what to use instead, so all people know what to do without having to investigate deeper.
+When you deprecate a method, class, or alike, it's recommended to add a short sentence on what to use instead, so all people know what to do without having to investigate deeper.
 
 |DEPRECATION | MESSAGE |
 |---|---|

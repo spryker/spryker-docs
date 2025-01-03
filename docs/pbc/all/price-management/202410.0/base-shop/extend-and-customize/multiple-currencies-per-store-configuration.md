@@ -59,7 +59,7 @@ The methods defined in the `CurrencyFacade` return an instance of the `CurrencyT
 * currency name e.g. Euro
 * currency symbol e.g. €
 
-In addition, `CurrencyTransfer` contains information that specifies if it is the default currency or not. `CurrencyTransfer::$isDefault` can be used to check if currency that was retrieved by `CurrencyFacade::fromIsoCode()` is the same as the one configured as default for the current store.
+In addition, `CurrencyTransfer` contains information that specifies if it's the default currency or not. `CurrencyTransfer::$isDefault` can be used to check if currency that was retrieved by `CurrencyFacade::fromIsoCode()` is the same as the one configured as default for the current store.
 
 From currency version 3, we have introduced currency table where currencies are persisted. Also, currency facade provides API to read this data.
 

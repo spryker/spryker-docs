@@ -198,7 +198,7 @@ Filtering and aggregating a structure like this requires nested filters and nest
 }
 ```
 
-Numeric attributes need to be handled differently in aggregations and must be stored and analyzed separately. This is because numeric facets sometimes have huge numbers of distinct values. Instead of listing all possible values, it is sufficient just to get the minimum and maximum values and show them as a range selector or slider in the frontend. This is possible only if values are stored as numbers.
+Numeric attributes need to be handled differently in aggregations and must be stored and analyzed separately. This is because numeric facets sometimes have huge numbers of distinct values. Instead of listing all possible values, it's sufficient just to get the minimum and maximum values and show them as a range selector or slider in the frontend. This is possible only if values are stored as numbers.
 
 The most important numeric facet on any ecommerce website is probably the price facet.
 

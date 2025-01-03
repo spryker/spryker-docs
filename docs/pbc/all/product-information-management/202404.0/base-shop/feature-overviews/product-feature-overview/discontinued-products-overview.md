@@ -16,7 +16,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html
 ---
 
-If a concrete product runs out of stock, it is tagged as out of stock and cannot be added to cart:
+If a concrete product runs out of stock, it's tagged as out of stock and cannot be added to cart:
 
 ![Discontinued PDP](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Discontinued+Products/Discontinued+Products+Feature+Overview/discontinued-pdp-page.png)
 

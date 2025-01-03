@@ -722,7 +722,7 @@ Spryker's `SearchHTTP` module transfers Glue search requests to external search 
 
 ### Default facets differences
 
-There is a difference in how default facets behave on Algolia and on the default Spryker installation using Elasticsearch. Some default Spryker facets like `brand` only accept one value as a filter, so it is impossible to specify multiple brands to filter on in one search request. This is not the case with Algolia, as multiple brands can be specified in the same search requests. This also applies to other configured facets.
+There is a difference in how default facets behave on Algolia and on the default Spryker installation using Elasticsearch. Some default Spryker facets like `brand` only accept one value as a filter, so it's impossible to specify multiple brands to filter on in one search request. This is not the case with Algolia, as multiple brands can be specified in the same search requests. This also applies to other configured facets.
 
 ## Next steps
 

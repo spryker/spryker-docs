@@ -45,7 +45,7 @@ data:import:shipment-price
 
 ## Additional information
 
-The field *value* must be an *integer* as it is the internal format to store money (currency) in the Spryker Demo Shop. Float values get converted into integer through multiplying by 100. For example, if the shipment cost is 5.50 EUR, the value in the CSV file should be 550.
+The field *value* must be an *integer* as it's the internal format to store money (currency) in the Spryker Demo Shop. Float values get converted into integer through multiplying by 100. For example, if the shipment cost is 5.50 EUR, the value in the CSV file should be 550.
 
 Fields `shipment_method_key`, `store` and `currency` are mandatory, and must be valid (imported already from existing database values, or created manually using the precedent CSV files: `shipment_method.csv` and `currency.csv` and `stores.php` configuration project file). Empty value fields are imported as zeros.
 

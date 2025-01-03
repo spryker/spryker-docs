@@ -546,7 +546,7 @@ For debugging purposes, use the `-k` option to keep messages in the queue `queue
 
 ## 6. Storage table
 
-To synchronize data with Redis, an intermediate Zed database table is required. The table stores the data until it is sent to Redis. The data in the table is already structured for Redis.
+To synchronize data with Redis, an intermediate Zed database table is required. The table stores the data until it's sent to Redis. The data in the table is already structured for Redis.
 
 Follow the steps to create the table:
 

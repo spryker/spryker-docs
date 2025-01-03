@@ -16,7 +16,7 @@ When a merchant is created, the corresponding warehouse is created for this merc
 
 {% info_block infoBox "Example" %}
 
-"Spryker MER000001 Warehouse 1" where `Spryker` is the merchant name, `MER000001` is a merchant reference, and the index is `1` as it is the first warehouse created.
+"Spryker MER000001 Warehouse 1" where `Spryker` is the merchant name, `MER000001` is a merchant reference, and the index is `1` as it's the first warehouse created.
 
 {% endinfo_block %}
 

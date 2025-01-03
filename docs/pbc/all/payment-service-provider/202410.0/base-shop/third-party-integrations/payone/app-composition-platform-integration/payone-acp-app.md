@@ -2,7 +2,7 @@
 title: Payone ACP app
 description: With Payone, your customers can pay with common payment methods, such as credit card, PayPal, Prepayment and Klarna.
 template: howto-guide-template
-last_updated: Now 8, 2024
+last_updated: Dec 18, 2024
 redirect_from:
    - /docs/aop/user/apps/payone.html
    - /docs/acp/user/apps/payone.html

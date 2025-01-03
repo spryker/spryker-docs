@@ -59,7 +59,7 @@ Spryker\Zed\ProductPageSearch\Communication\Plugin\Search\ProductPageMapPlugin
 
 ## Upgrading from version 2.* to version 3.*
 
-`ProductPageSearch` 3.0.0 got separate search index for Concrete Products. It includes database table and ElasticSearch index.
+`ProductPageSearch` 3.0.0 got separate search index for Concrete Products. It includes database table and Elasticsearch index.
 
 *Estimated migration time: ~2h*
 
@@ -83,7 +83,7 @@ vendor/bin/console transfer:generate
 vendor/bin/console search:setup
 ```
 
-4. Sync concrete products data with ElasticSearch:
+4. Sync concrete products data with Elasticsearch:
 
 ```bash
 vendor/bin/console data:import:product-concrete

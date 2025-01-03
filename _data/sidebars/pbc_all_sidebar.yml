@@ -1479,6 +1479,10 @@ entries:
                     nested:
                       - title: Marketplace Merchant
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html
+                      - title: Marketplace Merchant + Promotions & Discounts
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-promotions-and-discounts-feature.html
+                        include_versions:
+                        - "202505.0"
                       - title: Marketplace Merchant B2B Contract Requests
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-b2b-contract-requests-feature.html
                         include_versions:

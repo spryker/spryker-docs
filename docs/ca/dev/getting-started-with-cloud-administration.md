@@ -36,8 +36,8 @@ After the initial setup, the following is configured and available:
 You can access your cloud environments via the following means:
 
 * IAM account: provides access to the AWS Management Console. For instructions, see [Access AWS Management Console](/docs/ca/dev/access/access-the-aws-management-console.html).
-* SSH: provides access to internal services via [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html). For instructions, see [Connect to services via SSH](/docs/ca/dev/access/connect-to-services-via-ssh.html).
-* VPN: provides access to internal services via [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html). You receive these access details during the onboarding.
+* SSH: provides access to internal services via [bastion host](https://docs.aws.amazon.com/managedservices/latest/userguide/using-bastions.html). For instructions, see [Connect to services via SSH](/docs/ca/dev/access/connect-to-services-via-ssh.html).
+* VPN: provides access to internal services via [bastion host](https://docs.aws.amazon.com/managedservices/latest/userguide/using-bastions.html). You receive these access details during the onboarding.
 * SFTP: provides access to the SFTP folder mounted inside the Jenkins container. You receive these access details during the onboarding.
 
 

@@ -9,7 +9,7 @@ redirect_from:
 Spryker comes pre-configured with the following services by default:
 
 * RabbitMQ
-* ElasticSearch
+* Elasticsearch
 * Redis
 * MariaDB
 * Jenkins

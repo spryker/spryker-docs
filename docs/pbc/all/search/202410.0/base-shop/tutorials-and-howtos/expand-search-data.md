@@ -1,6 +1,6 @@
 ---
 title: Expand search data
-description: Learn how to expand entity data and create new data types in the search.
+description: Learn how to expand entity data and create new data types in the search for your Spryker based projects.
 template: howto-guide-template
 last_updated: Nov 21, 2023
 redirect_from:

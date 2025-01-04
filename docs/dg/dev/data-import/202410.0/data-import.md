@@ -1,6 +1,6 @@
 ---
 title: Data import
-description:  Import data from other systems into your Spryker Commerce OS project
+description:  Learn how to import data from other systems into your Spryker Cloud Commerce OS based project
 last_updated: Sep 7, 2022
 template: concept-topic-template
 redirect_from:

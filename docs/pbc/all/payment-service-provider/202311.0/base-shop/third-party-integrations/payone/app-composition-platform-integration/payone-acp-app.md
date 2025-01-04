@@ -24,7 +24,7 @@ You can have multiple accounts with Payone. For example, you can have different 
 
 For the *Payone Credit Card* payment method, we support the following modes:
 
-- *Preauthorization and Capture*: After a customer entered the credit card details during the checkout, the seller preauthorizes or reserves the payable amount on the customer’s credit card. As soon as the items have shipped, this amount is captured. Capture kicks off the process of moving money from the customer’s credit card to the seller’s account. The preauthorization and capture mode is the best choice for physical goods. It ensures that in case the ordered items are not available anymore or the customer cancels the order before it is shipped, the seller does not have to transfer the money back to the customer's account and thereby avoids a chargeback.
+- *Preauthorization and Capture*: After a customer entered the credit card details during the checkout, the seller preauthorizes or reserves the payable amount on the customer’s credit card. As soon as the items have shipped, this amount is captured. Capture kicks off the process of moving money from the customer’s credit card to the seller’s account. The preauthorization and capture mode is the best choice for physical goods. It ensures that in case the ordered items are not available anymore or the customer cancels the order before it's shipped, the seller does not have to transfer the money back to the customer's account and thereby avoids a chargeback.
 - *3DS*: Messaging protocol that enables consumer authentication with their card issuer when making online purchases.
 - *PCI DSS Compliance via SAQ A*: A set of security standards designed to ensure that you accept, process, and transmit credit card information in a secure environment.
 
@@ -48,7 +48,7 @@ When paying with a credit card, customers can do the following:
 
 - Repeat payments as often as they want if the payment (preauthorization) has failed, or cancel and close the payment page.
 - Cancel the entire order before shipment and receive the money back, that is, void the existing preauthorization without being charged a fee.
-- Cancel the order after it is ready for shipment and receive the money back, that is, trigger a refund.
+- Cancel the order after it's ready for shipment and receive the money back, that is, trigger a refund.
 - Return the order or its items after it has been successfully shipped and is refunded for the returned items or the entire order.
 
 When customers pay with a credit card, a shop owner can do the following:
@@ -69,7 +69,7 @@ When customers pay with PayPal, the flow is as follows:
 When paying with PayPal, customers can:
 
 - Cancel the entire order before shipment and receive the money back, that is, void the existing preauthorization, without being charged a fee.
-- Cancel the order after it is ready for shipment and receive the money back, that is, trigger a refund.
+- Cancel the order after it's ready for shipment and receive the money back, that is, trigger a refund.
 - Return the order or its items after it has been successfully shipped and is refunded for the returned items or the entire order.
 
 When customers pay with PayPal, a shop owner can do the following:

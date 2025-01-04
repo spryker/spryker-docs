@@ -17,7 +17,7 @@ redirect_from:
 
 ---
 
-For authentication, Spryker implements the OAuth 2.0 mechanism. On the REST API level, it is represented by the Login API.
+For authentication, Spryker implements the OAuth 2.0 mechanism. On the REST API level, it's represented by the Login API.
 
 To get access to a protected resource, a user obtains an *access token*. An access token is a JSON Web Token used to identify a user during API calls. Then, they pass the token in the request header.
 

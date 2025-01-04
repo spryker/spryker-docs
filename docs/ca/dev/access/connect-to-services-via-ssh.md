@@ -11,7 +11,7 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/access/connecting-to-services-via-ssh.html
 ---
 
-We add your SSH public key to the [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html) during the onboarding, so you can access your environments' internal networks via SSH right after.
+We add your SSH public key to the [bastion host](https://docs.aws.amazon.com/managedservices/latest/userguide/using-bastions.html) during the onboarding, so you can access your environments' internal networks via SSH right after.
 
 You can use SSH in two ways:
 

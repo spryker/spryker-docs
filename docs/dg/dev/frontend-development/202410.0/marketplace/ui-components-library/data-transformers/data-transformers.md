@@ -136,7 +136,7 @@ export class CustomDataTransformerService implements
 export class RootModule {}
 ```
 
-The context in which the Data Transformer operates is determined by the local injector where it is being used.
+The context in which the Data Transformer operates is determined by the local injector where it's being used.
 
 ## Interfaces
 

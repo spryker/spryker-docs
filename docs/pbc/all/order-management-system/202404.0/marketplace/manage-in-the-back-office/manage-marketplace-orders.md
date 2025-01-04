@@ -31,7 +31,7 @@ You are taken to the **View Order: _[Order ID]_** page.
   </video>
 </figure>
 
-Every marketplace order contains information about the merchant orders it is split into.
+Every marketplace order contains information about the merchant orders it's split into.
 
 ### Reference information: Viewing marketplace orders
 

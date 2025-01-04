@@ -1,8 +1,8 @@
 1. In the AWS Management Console, go to **Services** > **Amazon OpenSearch Service**.
 2. Select the desired environment.
 3. On the page of the environment, check the following:
-   - *Domain status:* If the status is *Active*, ElasticSearch is running.
-   - *Cluster health*: If the status is *Green* or *Yellow*, ElasticSearch works properly.
+   - *Domain status:* If the status is *Active*, Elasticsearch is running.
+   - *Cluster health*: If the status is *Green* or *Yellow*, Elasticsearch works properly.
 
 4. Below the *General information* pane, switch to the **Cluster health** tab.
 

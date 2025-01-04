@@ -15,7 +15,7 @@ To upgrade to the new version of the module, do the following:
 ALTER TABLE "spy_company_user"
 ADD "is_active" BOOLEAN DEFAULT 't';
 ```
-As a result, all existing company users will receive a new column `is_active`. By default, the value is `true` and it is `required`.
+As a result, all existing company users will receive a new column `is_active`. By default, the value is `true` and it's `required`.
 
 2. Rebuild `Propel2` models:
 

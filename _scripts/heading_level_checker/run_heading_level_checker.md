@@ -3,17 +3,17 @@ The heading level checker checks and corrects headings according to the standard
 Run the checker in the `docs` folder:
 
 ```bash
-node _scripts/fix-headings.js
+node _scripts/heading_level_checker/heading_level_checker.js
 ```
 
 Run the checker for a particular file or folder:
 
 ```bash
-_scripts/fix-headings.js {PATH_TO_FILE}
+node _scripts/heading_level_checker/heading_level_checker.js {PATH_TO_FILE}
 ```
 
 Example of a targeted run:
 
 ```bash
-_scripts/fix-headings.js docs/dg/dev/guidelines/coding-guidelines
+node _scripts/heading_level_checker/heading_level_checker.js docs/dg/dev/guidelines/coding-guidelines
 ```

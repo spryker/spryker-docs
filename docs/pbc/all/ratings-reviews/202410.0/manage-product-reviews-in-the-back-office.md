@@ -32,7 +32,7 @@ Next to the review you want to read, click the arrow in the very first column.
 ## Reject a review
 
 Next to the review you want to reject, click **Reject**.
-    This refreshes the page with a success message displayed. The review will remain in the shop, but it is no longer displayed on the Storefront. If you approve the review later, it will be displayed on the same page.
+    This refreshes the page with a success message displayed. The review will remain in the shop, but it's no longer displayed on the Storefront. If you approve the review later, it will be displayed on the same page.
 
 ## Approve a review
 

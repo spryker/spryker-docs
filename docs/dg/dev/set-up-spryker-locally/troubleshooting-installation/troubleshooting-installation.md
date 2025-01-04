@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting installation
-description: Troubleshoot installation issues.
+description: Learn how you can troubleshoot issues that occur during installing Spryker to a local environment.
 last_updated: Jun 16, 2023
 template: troubleshooting-guide-template
 redirect_from:

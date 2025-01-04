@@ -302,7 +302,7 @@ In the `OauthApi` module, extend the access token validation step with your CIAM
 ```
 
 Adjust `OauthApiFactory` and `OauthApiDependencyProvider` to include the CIAM provider service.
-In the implementation example, it is `Pyz\Service\CiamProvider\CiamProviderServiceInterface`.
+In the implementation example, it's `Pyz\Service\CiamProvider\CiamProviderServiceInterface`.
 
 The following example extends `AccessTokenValidator` to validate the authorization header using the CIAM provider parser:
 

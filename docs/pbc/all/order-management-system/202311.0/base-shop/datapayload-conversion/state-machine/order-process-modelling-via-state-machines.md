@@ -99,7 +99,7 @@ The number of state machine flags in the `oms.xsd` file has been already predefi
 
 {% endinfo_block %}
 
-We use the `exclude from customer` flag that skips all orders having _ALL_ item states flagged with this flag. That means it is not displayed on customer Yves order details and list pages.
+We use the `exclude from customer` flag that skips all orders having _ALL_ item states flagged with this flag. That means it's not displayed on customer Yves order details and list pages.
 
 ## Transitions
 

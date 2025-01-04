@@ -448,7 +448,7 @@ quote_approval_widget.cart.status.waiting,"Waiting",en_US
 quote_approval_widget.cart.status.waiting,"Wartet",de_DE
 quote_approval_widget.shared_cart_warning,"After a cart has been sent to approval, all of its shares will be dismissed.",en_US
 quote_approval_widget.shared_cart_warning,"Nachdem der Warenkorb zur Genehmigung gesendet wurde, wird sein Sharing aufgehoben.",de_DE
-quote_approval_widget.limit_text,"Your purchase limit is %amount%. To spend more, request approval from your manager.",en_US
+quote_approval_widget.limit_text,"Your purchase limit's %amount%. To spend more, request approval from your manager.",en_US
 quote_approval_widget.limit_text,"Ihr Einkaufsrahmen liegt bei %amount%. Um mehr auszugeben, fordern Sie bitte die Genehmigung bei Ihrem Manager an",de_DE
 quote_approval_widget.no_limit_text,"You do not have a purchase limit",en_US
 quote_approval_widget.no_limit_text,"Sie haben kein Einkaufslimit",de_DE

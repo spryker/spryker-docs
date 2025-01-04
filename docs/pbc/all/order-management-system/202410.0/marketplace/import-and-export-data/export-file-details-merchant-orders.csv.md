@@ -46,13 +46,13 @@ These are the parameters included in the `merchant_orders.csv` file:
 | 30 | billing_address_comment |   | String |   | Comment used with the billing address. |
 | 31 | billing_address_country | &check; | String |   | Country of the billing address. |
 | 32 | billing_address_region |   | String |   | Region of the billing address. |
-| 33 | merchant_order_totals_canceled_total |   | Number | Original value is multiplied by 100 before it is stored in this field. | Cancelled total of the order totals for this merchant. |
-| 34 | merchant_order_totals_discount_total |   | Number | Original value is multiplied by 100 before it is stored in this field. | Discount total of the order totals for this merchant. |
-| 35 | merchant_order_totals_grand_total |   | Number | Original value is multiplied by 100 before it is stored in this field. | Grand total of the order totals for this merchant. |
-| 36 | merchant_order_totals_order_expense_total |   | Number | Original value is multiplied by 100 before it is stored in this field. | Order expense total of the order totals for this merchant. |
-| 37 | merchant_order_totals_refund_total |   | Number | Original value is multiplied by 100 before it is stored in this field. | Refund total of the order totals for this merchant. |
-| 38 | merchant_order_totals_subtotal |   | Number | Original value is multiplied by 100 before it is stored in this field. | Subtotal of the order totals for this merchant. |
-| 39 | merchant_order_totals_tax_total |   | Number | Original value is multiplied by 100 before it is stored in this field. | Tax total of the order totals for this merchant. |
+| 33 | merchant_order_totals_canceled_total |   | Number | Original value is multiplied by 100 before it's stored in this field. | Cancelled total of the order totals for this merchant. |
+| 34 | merchant_order_totals_discount_total |   | Number | Original value is multiplied by 100 before it's stored in this field. | Discount total of the order totals for this merchant. |
+| 35 | merchant_order_totals_grand_total |   | Number | Original value is multiplied by 100 before it's stored in this field. | Grand total of the order totals for this merchant. |
+| 36 | merchant_order_totals_order_expense_total |   | Number | Original value is multiplied by 100 before it's stored in this field. | Order expense total of the order totals for this merchant. |
+| 37 | merchant_order_totals_refund_total |   | Number | Original value is multiplied by 100 before it's stored in this field. | Refund total of the order totals for this merchant. |
+| 38 | merchant_order_totals_subtotal |   | Number | Original value is multiplied by 100 before it's stored in this field. | Subtotal of the order totals for this merchant. |
+| 39 | merchant_order_totals_tax_total |   | Number | Original value is multiplied by 100 before it's stored in this field. | Tax total of the order totals for this merchant. |
 | 40 | merchant_order_comments |   | Object | Comments are presented in a JSON array format: order_comments {% raw %}{{username, message, created_at, updated_at},...}{% endraw %} | Comments added by the customer to the sales order for this merchant. Username may be a different name from the customer’s first, middle, or last name—for example, a nickname. |
 
 Check out the [merchant-orders.csv sample file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Data+Export/merchant-orders.csv).

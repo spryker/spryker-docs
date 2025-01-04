@@ -36,7 +36,7 @@ This new module is responsible for interacting with the database in read-only mo
 
 There are two limitations of using the database as storage on Yves compared to the default storage engine. The following are scenarios when Yves actually writes data to storage:
 
-- Caching of requests to storage: while using the database as storage, it is not possible to cache anything in Yves.
+- Caching of requests to storage: while using the database as storage, it's not possible to cache anything in Yves.
 - Concurrent requests and caching for the Glue API.
 
 {% endinfo_block %}

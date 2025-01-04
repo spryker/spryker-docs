@@ -23,7 +23,7 @@ Also, queue data import allows you to use different import groups.
 
 ## Why do you need it?
 
-Mainly, it is used to import data in parallel. Once data is stored in a queue, it can be consumed by several consumers at a time, thus roughly dividing total import execution time by the number of consumers.
+Mainly, it's used to import data in parallel. Once data is stored in a queue, it can be consumed by several consumers at a time, thus roughly dividing total import execution time by the number of consumers.
 
 ## How does it work?
 

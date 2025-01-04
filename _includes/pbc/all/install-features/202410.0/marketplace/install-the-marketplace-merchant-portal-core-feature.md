@@ -250,7 +250,7 @@ Set up the following behaviors.
 | MerchantUserUserRoleFilterPlugin                                 | Filters `ROLE_BACK_OFFICE_USER` to prevent a merchant user from logging into the Back Office.                           |               | Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui                        |
 | ProductViewerForOfferCreationAclInstallerPlugin                  | Provides `ProductViewerForOfferCreation` roles with rules and groups to create on installation.                         |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
 | AclGroupMerchantUserLoginRestrictionPlugin                       | Checks if the merchant user login is restricted.                                                                        |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\SecurityMerchantPortalGui     |
-| MailMerchantUserPasswordResetRequestStrategyPlugin | Checks if strategy is applicable for a password reset request. Returns true if merchant user exists, false otherwise. |  | Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\UserPasswordReset  |
+| MailMerchantUserPasswordResetRequestStrategyPlugin | Checks if the strategy is applicable for a password reset request. Returns true if merchant user exists; false otherwise. |  | Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\UserPasswordReset  |
 | MerchantUserPasswordResetMailTypePlugin | Builds the mail of merchant password restore type. |  | Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\Mail  |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
@@ -727,8 +727,8 @@ $config[AclConstants::ACL_DEFAULT_RULES][] = [
 ];
 ```
 
-### 3) Add translations
-Add Merchant Portal translations:
+### 3) Add Merchant Portal translations
+
 
 1. Append glossary according to your configuration:
 

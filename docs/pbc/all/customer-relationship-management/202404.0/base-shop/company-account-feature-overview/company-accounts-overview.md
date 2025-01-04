@@ -38,11 +38,11 @@ A company consists of several *business units*, which you can consider physical 
 
 ## Company address
 
-The level below the business unit's the *company address*. The company address is a physical representation of a company.
+The level below the business unit is the *company address*. The company address is a physical representation of a company.
 
 One company address can be assigned to several business units. For example, if IT and Sales departments are located in the same office, they can share one company address.
 
-However, a department may be distributed between several locations and have several addresses. For example, if it's a building company, and each unit's a construction site, for each order made for this department, one selects which address of the department the order is to be delivered to. Also, default billing and shipping addresses can't be assigned to business units.
+However, a department may be distributed between several locations and have several addresses. For example, if it's a building company, and each unit is a construction site, for each order made for this department, one selects which address of the department the order is to be delivered to. Also, default billing and shipping addresses can't be assigned to business units.
 
 ## Company user
 

@@ -171,7 +171,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                                         | SPECIFICATION                                                                                                                                             | PREREQUISITES | NAMESPACE                                                                        |
 |--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------|
-| MerchantRelationRequestCompanyBusinessUnitPreDeletePlugin                      | When a company business unit's deleted, deletes merchant relation request entities and the related merchant relation request to company business unit entities.  |               | Spryker\Zed\MerchantRelationRequest\Communication\Plugin\CompanyBusinessUnit     |
+| MerchantRelationRequestCompanyBusinessUnitPreDeletePlugin                      | When a company business unit is deleted, deletes merchant relation request entities and the related merchant relation request to company business unit entities.  |               | Spryker\Zed\MerchantRelationRequest\Communication\Plugin\CompanyBusinessUnit     |
 | MerchantRelationRequestCompanyUserPreDeletePlugin                              | When a company user is deleted, deletes merchant relation request entities and the related merchant relation request to company business unit entities.            |               | Spryker\Zed\MerchantRelationRequest\Communication\Plugin\CompanyUser             |
 | MerchantRelationRequestStatusChangeMailTypeBuilderPlugin                       | Builds `MailTransfer` with the data for the merchant relation request status change email.     |               | Spryker\Zed\MerchantRelationRequest\Communication\Plugin\Mail                    |
 | StatusChangeCompanyUserNotificationMerchantRelationshipRequestPostUpdatePlugin | Sends a status change notification email to the company user who initiated the request to the merchant.                              |               | Spryker\Zed\MerchantRelationRequest\Communication\Plugin\MerchantRelationRequest |
@@ -204,7 +204,7 @@ class CompanyBusinessUnitDependencyProvider extends SprykerCompanyBusinessUnitDe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, when a company business unit's deleted, all related merchant relation requests are deleted too.
+Make sure that, when a company business unit is deleted, all related merchant relation requests are deleted too.
 
 {% endinfo_block %}
 

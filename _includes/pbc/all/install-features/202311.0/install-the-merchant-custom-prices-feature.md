@@ -493,7 +493,7 @@ Make sure that there is the "Merchant Price Dimension" drop-down in the Back Off
 
 {% info_block warningBox "Verification" %}
 
-Make sure that a logged in user, who belongs to a company business unit and that business unit's assigned to some Merchant Relationship with specified prices, sees Merchant Relationship prices on the Catalog and on the Product page.<br>Make sure that this user sees MIN price if their business unit's assigned to multiple Merchant Relationships with different prices for the same product.
+Make sure that a logged in user, who belongs to a company business unit and that business unit is assigned to some Merchant Relationship with specified prices, sees Merchant Relationship prices on the Catalog and on the Product page.<br>Make sure that this user sees MIN price if their business unit is assigned to multiple Merchant Relationships with different prices for the same product.
 {% endinfo_block %}
 
 ### Ensure compatibility

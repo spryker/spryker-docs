@@ -192,7 +192,7 @@ Structure:
 ### Measurement Units
 
 {% info_block infoBox %}
-Products can be sold in different **Measurement Units**. For instance, apples can be sold in "Item" and "Kilogram" amounts. Each product variant can be sold in one or multiple different units but only one unit's the base one that we use for all internal calculations.
+Products can be sold in different **Measurement Units**. For instance, apples can be sold in "Item" and "Kilogram" amounts. Each product variant can be sold in one or multiple different units but only one unit is the base one that we use for all internal calculations.
 {% endinfo_block %}
 ![Measurement units](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/measurement-units.png)
 

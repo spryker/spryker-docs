@@ -144,7 +144,7 @@ quote_approval.cart.waiting_approval,"Sie können diese Bestellung aufgrund eine
 quote_approval.create.approver_cant_approve_quote,"Selected approver cannot approve your request because of approver limit.",en_US
 quote_approval.create.approver_cant_approve_quote,"Der ausgewählte Manager kann Ihre Anfrage aufgrund des Genehmigungslimits nicht genehmigen.",de_DE
 quote_approval.create.you_cant_approve_quote,"You can't approve or decline this cart because it's amount higher that your Approver limit.",en_US
-quote_approval.create.you_cant_approve_quote,"Sie können diesen Einkaufswagen nicht genehmigen oder ablehnen, weil dessen Betrag höher als ihr Genehmigungslimit'st.",de_DE
+quote_approval.create.you_cant_approve_quote,"Sie können diesen Einkaufswagen nicht genehmigen oder ablehnen, weil dessen Betrag höher als ihr Genehmigungslimit ist.",de_DE
 quote_approval.create.quote_already_approved,"This Cart was already approved.",en_US
 quote_approval.create.quote_already_approved,"Dieser Einkaufswagen wurde schon zur Genehmigung gesendet.",de_DE
 quote_approval.create.quote_already_declined,"This Cart was already declined.",en_US

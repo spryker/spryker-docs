@@ -706,7 +706,7 @@ Workstations,spryker_systems_Berlin,READ_ONLY
 | --- | --- | --- | --- | --- |
 | shopping_list_key     | ✓        | string    | Laptops            | Defines a shopping list to assign to a business unit.                                |
 | business_unit_key     | ✓        | string    | spryker_systems_HR | Defines a business unit to share a shopping list with. |
-| permission_group_name | ✓        | integer   | FULL_ACCESS        | Defines a business unit's permissions to access a shopping list.             |
+| permission_group_name | ✓        | integer   | FULL_ACCESS        | Defines a business unit is permissions to access a shopping list.             |
 
 2. Register the following plugin to enable data import:
 
@@ -1139,7 +1139,7 @@ customer.account.shopping_list.add_selected_items_to_cart,Ausgewählte Artikel i
 customer.account.shopping_list.add_all_available_to_cart,Add all available products to cart,en_US
 customer.account.shopping_list.add_all_available_to_cart,Alle Produkte zum Warenkorb hinzufügen,de_DE
 customer.account.shopping_list.empty,Currently there are no items in your shopping list.,en_US
-customer.account.shopping_list.empty,Zurzeit'st kein Produkt auf deiner Einkaufsliste.,de_DE
+customer.account.shopping_list.empty,Zurzeit ist kein Produkt auf deiner Einkaufsliste.,de_DE
 customer.account.shopping_list.overview.dismiss,Dismiss,en_US
 customer.account.shopping_list.overview.dismiss,Ablehnen,de_DE
 customer.account.shopping_list.overview.warning,Warning,en_US

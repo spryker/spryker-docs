@@ -16,9 +16,9 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/measurement-units-feature-overview.html
 ---
 
-The *Measurement Units* feature lets you sell products by any unit of measure defined by the shop administrator. For example, apples can be offered in "Item" or "Kilogram", cables can be offered in "Centimeter", "Meter" or "Feet". To support alternate units of measure, there must be a base unit value relative to which all the internal conversions and calculations will be made. Such value is referred to as a base unit. The base unit's assigned to abstract products, and by default, it's "item"; however, it can be changed to any other unit.
+The *Measurement Units* feature lets you sell products by any unit of measure defined by the shop administrator. For example, apples can be offered in "Item" or "Kilogram", cables can be offered in "Centimeter", "Meter" or "Feet". To support alternate units of measure, there must be a base unit value relative to which all the internal conversions and calculations will be made. Such value is referred to as a base unit. The base unit is assigned to abstract products, and by default, it's "item"; however, it can be changed to any other unit.
 
-Besides the base unit, the shop owner can define *sales units*—alternate units of measure in which items will be offered in the shop. Sales units are assigned to concrete products, but if sales units are not defined, the *base unit* is used as a default sales unit. If there are several sales units and no default sales unit's defined, then the first unit to show will be the first in alphabetical order.
+Besides the base unit, the shop owner can define *sales units*—alternate units of measure in which items will be offered in the shop. Sales units are assigned to concrete products, but if sales units are not defined, the *base unit* is used as a default sales unit. If there are several sales units and no default sales unit is defined, then the first unit to show will be the first in alphabetical order.
 
 The sales units are displayed on the product details page. You can define the sales units in the Administration Interface but choose not to display them on the webshop. Actually, sales units are only shown on the website but then immediately converted into the base unit, as internally, the system only works with the base units.
 
@@ -34,7 +34,7 @@ The shop owner can define if the conversion factor between base and sales units 
 
 | EXAMPLE | DISPLAY VALUE | PRODUCT DETAILS PAGE |
 | --- | --- | --- |
-| The base unit's meter and the sales unit's feet | "**1 meter=3,048 feet**" is displayed under the drop-down field with measuring units on product details page | ![Quantity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Measurement+Units/Measurement+Units+Feature+Overview/quantity.png)|
+| The base unit is meter and the sales unit is feet | "**1 meter=3,048 feet**" is displayed under the drop-down field with measuring units on product details page | ![Quantity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Measurement+Units/Measurement+Units+Feature+Overview/quantity.png)|
 
 On the cart page, the user sees quantity both in the base unit and sales unit.
 
@@ -53,7 +53,7 @@ There can be two types of conversions in the system:
 * *Global conversions*—are defined in the code already (like from cm to meter).
 * *Product-specific conversions*—are defined per product (like from one meter of cable to its weight).
 
-If a global unit conversion exists between the base and sales unit, then factor and precision fields are optional. If no global unit conversion exists between the base and sales unit, then factor and precision fields are mandatory. If precision is "null", then the information is taken from the product measurement unit's default_precision (default value is 1).
+If a global unit conversion exists between the base and sales unit, then factor and precision fields are optional. If no global unit conversion exists between the base and sales unit, then factor and precision fields are mandatory. If precision is "null", then the information is taken from the product measurement unit is default_precision (default value is 1).
 
 | CORE LEVEL| PROJECT LEVEL |
 | --- | --- |

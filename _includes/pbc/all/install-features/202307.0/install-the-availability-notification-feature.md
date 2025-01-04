@@ -399,7 +399,7 @@ availability_notification_subscription.mail.notification.subject,"%name% is avai
 availability_notification_subscription.mail.notification.subject,"%name% ist wieder verfügbar!",de_DE
 availability_notification_subscription.mail.notification.head,"%name% is available again!",en_US
 availability_notification_subscription.mail.notification.head,"%name% ist wieder verfügbar",de_DE
-availability_notification_subscription.mail.notification.body,"The wait's over, you can not add this product inside your cart.",en_US
+availability_notification_subscription.mail.notification.body,"The wait is over, you can not add this product inside your cart.",en_US
 availability_notification_subscription.mail.notification.body,"Das Warten hat ein Ende, Sie können dieses Produkt nicht in Ihren Warenkorb legen.",de_DE
 availability_notification_subscription.mail.copyright,"<em>Copyright © current year company name, All rights reserved.</em><br><br>",en_US
 availability_notification_subscription.mail.copyright,"<em>Copyright © Name des aktuellen Jahres, Alle Rechte vorbehalten.</em><br><br>",de_DE

@@ -1138,7 +1138,7 @@ customer.account.shopping_list.add_selected_items_to_cart,Ausgewählte Artikel i
 customer.account.shopping_list.add_all_available_to_cart,Add all available products to cart,en_US
 customer.account.shopping_list.add_all_available_to_cart,Alle Produkte zum Warenkorb hinzufügen,de_DE
 customer.account.shopping_list.empty,Currently there are no items in your shopping list.,en_US
-customer.account.shopping_list.empty,Zurzeit'st kein Produkt auf deiner Einkaufsliste.,de_DE
+customer.account.shopping_list.empty,Zurzeit ist kein Produkt auf deiner Einkaufsliste.,de_DE
 customer.account.shopping_list.overview.dismiss,Dismiss,en_US
 customer.account.shopping_list.overview.dismiss,Ablehnen,de_DE
 customer.account.shopping_list.overview.warning,Warning,en_US

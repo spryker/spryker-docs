@@ -939,13 +939,13 @@ Add an item with packaging units to cart and check if the following statements a
 * A packaging unit can be found for an item.
 * The `amount`, `amountSalesUnit`, `amountLeadProduct` and `ProductPackagingUnit` fields in the `ItemTransfer` properties get fully populated.
 * The amount restriction works as expected.
-* Availability is validated respectfully according to your lead product's and packaging unit's configuration.
+* Availability is validated respectfully according to your lead product's and packaging unit is configuration.
 * Item grouping in cart works as expected.
 * Variable amount changes affect unit prices in the `ItemTransfer` properties.
 * The quantity and amount are merged correctly when the group key matches.
 
 Go through the checkout workflow, make an order and check if the following statements are true:
-* Check if the stock is modified respectfully according to your lead product's and packaging unit's configuration.
+* Check if the stock is modified respectfully according to your lead product's and packaging unit is configuration.
 * Check if the following fields in the `spy_sales_order_item` table are saved:
   * `amount`
   * `amount_sku`
@@ -956,7 +956,7 @@ Go through the checkout workflow, make an order and check if the following state
   * `amount_base_measurement_unit_name`
 
 Go to the Zed UI Sales overview, check the order, and verify the following:
-- The correct sales unit's displayed.
+- The correct sales unit is displayed.
 - The correct amount is displayed per sales order item.
 
 Make sure the following:

@@ -39,7 +39,7 @@ redirect_from:
 
 The _Packaging Unit_ feature introduces a *packaging unit* that is a unit of measure used as packaging for a product. It allows including the amount of stock in a product a customer wants to buy. A shop owner can sell the same product in different packaging units—for example, apples can be sold as an "Item", a "Bag", or "Pallet" of apples. The "bag", "pallet", and "box" are referred to as *packaging unit types*.
 
-Each packaging unit's defined on an abstract product level and is represented by one product variant—for example:
+Each packaging unit is defined on an abstract product level and is represented by one product variant—for example:
 
 | ABSTRACT PRODUCT | CONCRETE PRODUCT / VARIANT | PACKAGING UNIT |
 | --- | --- | --- |
@@ -95,7 +95,7 @@ For example, a packaging unit "bag" can be set to have "item" as a base unit and
 
 {% endinfo_block %}
 
-The amount of items contained in a sales unit's referred to as *sales unit amount*. If a customer chooses a sales unit amount, which is in between two available amounts (because of amount restriction settings), a higher or lower amount must be selected.
+The amount of items contained in a sales unit is referred to as *sales unit amount*. If a customer chooses a sales unit amount, which is in between two available amounts (because of amount restriction settings), a higher or lower amount must be selected.
 
 {% info_block infoBox "Info" %}
 

@@ -50,7 +50,7 @@ The following alerts are configured by default for all environments.
 
 </div>
 
-### ElasticSearch
+### Elasticsearch
 
 <div class="width-100">
 

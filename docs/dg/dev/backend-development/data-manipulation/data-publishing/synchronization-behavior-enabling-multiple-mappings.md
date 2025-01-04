@@ -38,7 +38,7 @@ During the [Publish and Synchronization](/docs/dg/dev/backend-development/data-m
  where *123* is the product ID from the database. Now, we can get that product's data straight away by querying storage for this particular key. But what if we don't know ID of a product, but know its SKU? What if we don't want to expose database IDs to the outer world? In these cases, we could make some heavy changes to the Publish & Synchronize mechanism on the project level, or we could use *mappings*.
 
 ##  What are mappings
-You can instruct Publish & Synchronize facilities to create mappings for any resource. Mapping is a relation between a resource's database ID and some other unique piece of information about that resource. In terms of storage, it is an extra-record, related to some resource entity, which stores its ID, and is saved with its own key. This key, of course, does not have database ID as its part. To understand the mappings better, read on how mappings are [defined](#defining) and [used](#using).
+You can instruct Publish & Synchronize facilities to create mappings for any resource. Mapping is a relation between a resource's database ID and some other unique piece of information about that resource. In terms of storage, it's an extra-record, related to some resource entity, which stores its ID, and is saved with its own key. This key, of course, does not have database ID as its part. To understand the mappings better, read on how mappings are [defined](#defining) and [used](#using).
 
 <a name="defining"></a>
 

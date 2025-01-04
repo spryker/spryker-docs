@@ -70,7 +70,7 @@ Your requirements could not be resolved to an installable set of packages.
 
   Problem 1
 
-    - <organisation_name>/<package_name> <package_version> requires ext-<extension_name> * -> it is missing from your system. Install or enable PHP\'s <extension_name> extension.
+    - <organisation_name>/<package_name> <package_version> requires ext-<extension_name> * -> it's missing from your system. Install or enable PHP\'s <extension_name> extension.
 
 You can also run `php --ini` in a terminal to see which files are used by PHP in CLI mode.
 

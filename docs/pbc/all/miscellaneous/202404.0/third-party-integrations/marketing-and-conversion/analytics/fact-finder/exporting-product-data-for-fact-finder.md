@@ -85,7 +85,7 @@ public function getConsoleCommands(Container $container)
 
 * The first row of the CSV file must contain the field names. The structure of this row is identical to the data rows.
 * The number of fields is limited to 128. However, the standard FACT-Finder modules require the use of a limited number of fields. For that reason, we recommend that you do not use this limit in full. If your product database contains more than 128 attributes, you can store them in the multi-attribute fields.
-* The field content is not limited in length. There is, however, a limit on the complete data record size. This limit is set at 50,000 characters. In special cases, the limit can be removed. We consider it as a part of a special FACT-Finder package creation process we perform  for you.
+* The field content is not limited in length. There is, however, a limit on the complete data record size. This limit's set at 50,000 characters. In special cases, the limit can be removed. We consider it as a part of a special FACT-Finder package creation process we perform  for you.
 
 ### Recommendations
 
@@ -94,7 +94,7 @@ public function getConsoleCommands(Container $container)
 You need to create an URL for a CSV file or put it into a public folder. Then you can set up an URL and an interval  in a FACT-Finder channel management panel to download the CSV file.
 * A CSV file export can be scheduled with the help of a cron job or triggered by an event.
 *  If additional attributes are available, they can also be used by the search process.
-* If you have attribute types that vary from item to item, it does not make sense to create a separate field for every possible attribute type. Instead, you can create an attribute field that is formatted according to the following pattern: `|attribute1=value|attribute2=value|attribute3=value|`.Please note that  for the Attribute field the pipe separator `(|)` appears between the attributes, as well as at the beginning and at the end of the field contents. Also note, that the symbols `|`, `#` and `=` are reserved symbols in attribute field data and therefore are not permitted here. For some attributes, it is desirable to include a unit or currency designator. You must separate the attribute name from the unit with a double tilde `(~~)`. Please note that there can only be one unit per attribute name (even if the attributes appear in different data records), so the values must be normalized beforehand.
+* If you have attribute types that vary from item to item, it does not make sense to create a separate field for every possible attribute type. Instead, you can create an attribute field that is formatted according to the following pattern: `|attribute1=value|attribute2=value|attribute3=value|`.Please note that  for the Attribute field the pipe separator `(|)` appears between the attributes, as well as at the beginning and at the end of the field contents. Also note, that the symbols `|`, `#` and `=` are reserved symbols in attribute field data and therefore are not permitted here. For some attributes, it's desirable to include a unit or currency designator. You must separate the attribute name from the unit with a double tilde `(~~)`. Please note that there can only be one unit per attribute name (even if the attributes appear in different data records), so the values must be normalized beforehand.
 
 ## Checking Your Setup
 

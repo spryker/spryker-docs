@@ -16,7 +16,7 @@ This endpoint allows finalizing the checkout process by placing an order.
 
 After sending a request, the cart is deleted, and you cannot make any further changes in the checkout data. This means the endpoint is best used for checkouts that can be performed in one pass or for finalizing a checkout after [submitting checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html).  
 
-The endpoint also provides information on whether it is necessary to redirect the user to a third-party page to complete the payment.
+The endpoint also provides information on whether it's necessary to redirect the user to a third-party page to complete the payment.
 
 ## Installation
 
@@ -1212,7 +1212,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 | STATUS | REASONS |
 | --- | --- |
-| 400 | Bad request. This error can occur due to the following reasons:<ul><li>The POST data is incorrect;</li><li>Neither **Authorization** nor **X-Anonymous-Customer-Unique-Id** headers were provided in the request.</li></ul> |
+| 400 | Bad request. This error can occur because of the following reasons:<ul><li>The POST data is incorrect;</li><li>Neither **Authorization** nor **X-Anonymous-Customer-Unique-Id** headers were provided in the request.</li></ul> |
 | 404 | Order not found. |
 | 422 | Order payment is not updated. Checkout data is incorrect. |
 | 1101 | Checkout data is invalid. |

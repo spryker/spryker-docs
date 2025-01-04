@@ -96,7 +96,7 @@ class TwigConfig extends SprykerTwigConfig
 
 All public assets are generated into `/public/Yves/` plus the path defined in the config file, which is `assets/%namespace%/%theme%/` by default.
 
-For example, for the `DE` namespace and default theme, it is`/public/Yves/assets/DE/default/`.
+For example, for the `DE` namespace and default theme, it's`/public/Yves/assets/DE/default/`.
 
 All incoming files (images, fonts, etc.) are copied from `global` (for every namespace) and `DE` folders:
 

@@ -11,7 +11,7 @@ To start managing upgrades with Spryker Code Upgrader, fulfill the following pre
 
 ## Make your code compliant with upgradability guidelines
 
-Our [upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html) ensure your project stays upgradable. When an application is compliant with the guidelines, it can take minor and patch updates without breaking functionality, even if it is highly customized.
+Our [upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html) ensure your project stays upgradable. When an application is compliant with the guidelines, it can take minor and patch updates without breaking functionality, even if it's highly customized.
 
 To check if your code is compliant with the guidelines, [run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
 

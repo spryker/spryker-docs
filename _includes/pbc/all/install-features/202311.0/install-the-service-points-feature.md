@@ -1075,7 +1075,7 @@ Verify the `service-point` synchronization plugin works correctly:
 
 {% info_block warningBox "Verification" %}
 
-* Make sure that, when a service point is created or edited through BAPI, it is exported to Redis accordingly.
+* Make sure that, when a service point is created or edited through BAPI, it's exported to Redis accordingly.
 
 * Make sure that, in Redis, data is displayed in the following format:
 ```yaml
@@ -1148,7 +1148,7 @@ Verify the `service-type` synchronization plugin works correctly:
 
 {% info_block warningBox "Verification" %}
 
-* Make sure that when a service type is created or edited through BAPI, it is exported to Redis accordingly.
+* Make sure that when a service type is created or edited through BAPI, it's exported to Redis accordingly.
 
 * Make sure that, in Redis, data is displayed in the following format:
 ```json

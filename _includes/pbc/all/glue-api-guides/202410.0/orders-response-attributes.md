@@ -64,7 +64,7 @@
 | items.taxRate                           | Integer | Current tax rate, in percent.                                |
 | items.unitNetPrice                      | Integer | Single item net price.                                       |
 | items.sumNetPrice                       | Integer | Sum total of net prices for all items.                       |
-| items.unitPrice                         | Integer | Single item price without assuming if it is new or gross. *This price should be displayed everywhere when a product price is displayed. It allows switching tax mode without side effects*. |
+| items.unitPrice                         | Integer | Single item price without assuming if it's new or gross. *This price should be displayed everywhere when a product price is displayed. It allows switching tax mode without side effects*. |
 | items.unitTaxAmountFullAggregation      | Integer | Total tax amount for a given item, with additions.           |
 | items.sumTaxAmountFullAggregation       | Integer | Total tax amount for a given sum of items, with additions.   |
 | items.refundableAmount                  | Integer | Available refundable amount for an item (order only).        |
@@ -104,7 +104,7 @@
 | RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | salesUnit | Object | List of attributes defining the sales unit to be used for item amount calculation. |
-| conversion | integer | Factor to convert a value from sales to base unit. If it is "null", the information is taken from the global conversions. |
+| conversion | integer | Factor to convert a value from sales to base unit. If it's "null", the information is taken from the global conversions. |
 | precision | integer | Ratio between a sales unit and a base unit. |
 | measurementUnit | string | Code of the measurement unit. |
 | name | String | Name of the measurement unit. |

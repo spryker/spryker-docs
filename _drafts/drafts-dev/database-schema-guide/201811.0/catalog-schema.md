@@ -53,7 +53,7 @@ Any product can have any Attributes. The data is stored as pairs of keys / value
 **Structure:**
 
 * Attributes are identified by the key (e.g. "material").
-* The table `spy_product_attribute_key` can contain attribute keys so that it is possible to add metadata
+* The table `spy_product_attribute_key` can contain attribute keys so that it's possible to add metadata
 * Super-Attributes must be declared here with `is_super=true`.
 * **Data for PIM**: On the left side of `spy_product_attribute_key` you see the general attribute meta data that can be attached to the keys. (warning) This meta data is only used for the integrated PIM and does not work for imported data.
 
@@ -212,7 +212,7 @@ Products can be sold in different **Measurement Units**. For instance, apples ca
 * **Base Unit**
 
   - An Abstract Product can have a Base Unit (otherwise we assume that the product is sold as "Item")
-  - The Base Unit is used for all internal calculations of prices and stocks (e.g Cables are usually calculated in kilogram).
+  - The Base Unit's used for all internal calculations of prices and stocks (e.g Cables are usually calculated in kilogram).
 
 * **Sales Unit**
 
@@ -253,7 +253,7 @@ Even when the product is marked as splittable, Spryker may still save them into 
 ### Packaging Units
 
 {% info_block infoBox %}
-A shop can sell the same product in different Packaging Units, for example, to sell apples, options could be to sell apples as "Item", a "Bag" of apples or a "Pallet" of apples. Each Packaging Unit is represented by one product variant:
+A shop can sell the same product in different Packaging Units, for example, to sell apples, options could be to sell apples as "Item", a "Bag" of apples or a "Pallet" of apples. Each Packaging Unit's represented by one product variant:
 {% endinfo_block %}
 ![Packaging units](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/packaging-units.png)
 
@@ -269,7 +269,7 @@ A packaging unit contains multiple items of a product. For instance, a "Bag of a
 
 **Structure:**
 
-* A Packaging Unit is represented by a Concrete Product
+* A Packaging Unit's represented by a Concrete Product
 * The Packaging Unit has a type (like "Bag", "Pallet" or "Item) and a fixed or variable amount.
 
   - `spy_product_packaging_unit_amount::default_amount` - E.g. a bag contains 10 apples
@@ -373,7 +373,7 @@ Spryker ships with several price related features. Here is an overview:
 | Merchant Price | The same product is sold by different merchants. Each merchant provides its own price (like at Amazon Marketplace).In B2C Shops the Merchant Prices are usually used for all customers while in B2B scenarios there can be individual Merchant Prices that are only valid for a relationship between a Merchant and some Company Business Units. |
 | Custom Amount Price(for Packaging Units) | With packaging units we will introduce a possibility to change the amount. There is always a default amount that is related to the price of the product variant. In case the customer changes another amount then the price is adapted.Example: A bag of 10 apples costs 5.-. The customer changes the amount to 12 apples then he pays 5 * 12/10 = 6.- |
 | Price Types | Some products have multiple Price Types. For instance a mobile phone contract has a one-time price, a monthly fee and a working-price per minute. |
-| Promotion price(~ former "Strike Price") | A temporal lower price that is shown as a strike price in shop.This can be configured in two ways per company/business-unit: <ul><li> If the promotion price is lower than the price-per-business unit then it will be used (and vice-versa)</li><li>But it is also possible that a price-per-business is fixed and the promotion price is ignored.</li></ul>  |
+| Promotion price(~ former "Strike Price") | A temporal lower price that is shown as a strike price in shop.This can be configured in two ways per company/business-unit: <ul><li> If the promotion price is lower than the price-per-business unit then it will be used (and vice-versa)</li><li>But it's also possible that a price-per-business is fixed and the promotion price is ignored.</li></ul>  |
 {% info_block errorBox %}
 The Promotional price feature is currently under development.
 {% endinfo_block %}

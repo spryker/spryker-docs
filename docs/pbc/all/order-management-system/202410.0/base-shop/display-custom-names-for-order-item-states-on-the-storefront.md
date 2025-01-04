@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/howto-display-custom-names-for-order-item-states-on-the-storefront
 ---
 
-For the order items states on the Storefront, it is not always appropriate to display the states as they are in the state machine, as they do not make much sense for Buyers. For example, for the OMS *confirmed* state, you might want to display this sate as, for example, *waiting for shipment* for the Storefront users.
+For the order items states on the Storefront, it's not always appropriate to display the states as they are in the state machine, as they do not make much sense for Buyers. For example, for the OMS *confirmed* state, you might want to display this sate as, for example, *waiting for shipment* for the Storefront users.
 
 To display custom order states on the Storefront, do the following:
 

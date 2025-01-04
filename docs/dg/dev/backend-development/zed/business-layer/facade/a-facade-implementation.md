@@ -1,6 +1,6 @@
 ---
 title: A facade implementation
-description: This document describes a facade implementation.
+description: Implement a facade in Business Layer to streamline interactions between modules. This guide explains best practices for creating a centralized API for module communication.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/implementing-facade
@@ -13,7 +13,7 @@ related:
   - title: Facade use cases
     link: docs/dg/dev/backend-development/zed/business-layer/facade/facade-use-cases.html
   - title: Design by Contract (DBC) - Facade
-    link: docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
+    link: docs/dg/dev/backend-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
 ---
 
 ## AbstractFacade
@@ -45,7 +45,7 @@ class GlossaryFacade extends AbstractFacade
 
 When you look at the `deleteKey()` method, observe the following:
 
-* The method's name expresses exactly what happens. It uses the terms of the related terminology, but it is easy to grasp what happens ("A key is deleted").
+* The method's name expresses exactly what happens. It uses the terms of the related terminology, but it's easy to grasp what happens ("A key is deleted").
 * The method does not contain any control logic, like `if` or `foreach` statements; it just delegates to the business model and calls the right method.
 * The business model KeyManager is created using the factory, so it does not need to know how the class is created.
 

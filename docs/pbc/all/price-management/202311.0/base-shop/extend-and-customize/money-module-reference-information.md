@@ -56,7 +56,7 @@ The only difference between them is `MoneyTransfer::$currency`. This value diffe
 {% endinfo_block %}
 
 * In case you don't pass a currency, the currency configured as default is used.
-* If you pass a specific currency, it is used instead of the one that's configured as default.
+* If you pass a specific currency, it's used instead of the one that's configured as default.
 
 **`MoneyFacade::formatWithSymbol()`**
 

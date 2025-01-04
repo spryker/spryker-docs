@@ -48,7 +48,7 @@ composer require --dev phpstan/phpstan
 
 ## Usage
 
-1. Run the following command to generate autocompletion and prevent any error messages that might occur due to the incomplete classes:
+1. Run the following command to generate autocompletion and prevent any error messages that might occur because of the incomplete classes:
 `vendor/bin/console dev:ide:generate-auto-completion`
 2. Run this command to start analyzing:
 `php -d memory_limit=2048M vendor/bin/phpstan analyze -c vendor/spryker/spryker/phpstan.neon vendor/<spryker | spryker-eco | spryker-middleware>/<MODULE>/ -l 2`
@@ -63,7 +63,7 @@ Note that running this command with the level 2 key (**-l 2**) and having no err
 
 **Main configuration file inheritance**
 
-To avoid duplicated code while specifying a different configuration in the _parameters_ section of the `phpstat.neon` file, it is possible to extend this file and determine only the changes needed for a particular configuration of a module.
+To avoid duplicated code while specifying a different configuration in the _parameters_ section of the `phpstat.neon` file, it's possible to extend this file and determine only the changes needed for a particular configuration of a module.
 
 ### ./[ROOT]/phpstan.neon
 

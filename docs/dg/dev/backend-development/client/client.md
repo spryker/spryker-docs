@@ -28,7 +28,7 @@ End customers interact only with the frontend application. The frontend applicat
 
 The _client's_ job is to connect the frontend application to all of the surrounding resources needed for the frontend application to work. These resources include the Commerce OS, Storage, and Search. It also contains some other resources like Session and Queues.
 
-For each of these resources, there is a client. So, it is not only one client, but many of them. Each one of them is responsible for a specific resource or functionality. Spryker, by default, is shipped with the following clients:
+For each of these resources, there is a client. So, it's not only one client, but many of them. Each one of them is responsible for a specific resource or functionality. Spryker, by default, is shipped with the following clients:
 
 * SearchClient: to connect to Elasticsearch using its API.
 * StorageClient: to connect to Redis using the Redis protocol; RESP.

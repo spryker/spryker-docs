@@ -17,7 +17,7 @@ related:
 
 In Spryker, front-end elements have dedicated SCSS styles. To show you how to customize the Spryker front end, we broke down the *Product Details* page from our [B2C Demo Shop](/docs/about/all/b2c-suite.html#b2c-demo-shop) into separate elements with their respective style files. To customize a particular element, you adjust the code in the respective style file.
 
-You can see the [full version of this page](https://www.de.b2c.demo-spryker.com/en/acer-aspire-s7-134) in our B2C Demo Shop.
+You can see the [full version of this page](https://www.b2c-eu.demo-spryker.com/en/acer-aspire-s7-134) in our B2C Demo Shop.
 
 ![B2C-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2C+Product+Details+page/b2c-1.png)
 

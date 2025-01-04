@@ -336,7 +336,7 @@ Make sure that `product-offer-shipment-type` synchronization plugin works correc
 2. Run the `console sync:data -r product_offer_shipment_type` command.
 3. Make sure that, in your system, storage entries are displayed with the `kv:product_offer_shipment_type:{store}:{product_offer_reference}` mask.
 
-Make sure that when a product offer shipment type relation is created or edited through BAPI, it is exported to Redis accordingly.
+Make sure that when a product offer shipment type relation is created or edited through BAPI, it's exported to Redis accordingly.
 
 In Redis, make sure data is represented in the following format:
 ```json

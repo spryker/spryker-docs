@@ -1,6 +1,6 @@
 ---
 title: Install the Warehouse picking feature
-description: Learn how to integrate the Warehouse picking feature into your project
+description: Learn how to integrate the Spryker Warehouse picking feature into your Spryker Unified Commerce project
 last_updated: Feb 10, 2023
 template: feature-integration-guide-template
 redirect_from:

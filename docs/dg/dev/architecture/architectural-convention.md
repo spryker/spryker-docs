@@ -333,7 +333,7 @@ Used components:
 
 The Service application layer is a multipurpose library that's used across various application layers, such as Yves, Client, Glue, or Zed.
 
-A service primarily consists of reusable lightweight stateless business logic components. Due to its deployment across all applications, a service is constrained to accessing data providers that are available universally. For example, the backend database is not accessible from Storefront applications by default.
+A service primarily consists of reusable lightweight stateless business logic components. Because of its deployment across all applications, a service is constrained to accessing data providers that are available universally. For example, the backend database is not accessible from Storefront applications by default.
 
 ```text
 [Organization]
@@ -2218,7 +2218,7 @@ No general conventions.
 
 #### Guidelines
 - Operations on single items in plugin stack methods is not feasible, except for the following reasons:
-  - it is strictly and inevitably a single-item flow.
+  - it's strictly and inevitably a single-item flow.
   - the items go in FIFO order and there is no other way to use a collection instead.
 - Plugin interface class specification should explain:
   - how the [Plugins](#plugin) will be used,

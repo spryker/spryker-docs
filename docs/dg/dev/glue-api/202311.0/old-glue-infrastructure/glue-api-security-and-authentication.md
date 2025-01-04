@@ -26,7 +26,7 @@ This is a document related to the Old Glue infrastructure. For the new one, see 
 
 {% endinfo_block %}
 
-When exposing information via Spryker Glue API and integrating with third-party applications, it is essential to protect API endpoints from unauthorized access. For this purpose, Spryker provides an authorization mechanism, using which you can request users to authenticate themselves before accessing a resource. For this purpose, Spryker Glue is shipped with an implementation of the OAuth 2.0 protocol. It allows users to authenticate themselves with their username and password and receive an access token. The token can then be used to access protected resources.
+When exposing information via Spryker Glue API and integrating with third-party applications, it's essential to protect API endpoints from unauthorized access. For this purpose, Spryker provides an authorization mechanism, using which you can request users to authenticate themselves before accessing a resource. For this purpose, Spryker Glue is shipped with an implementation of the OAuth 2.0 protocol. It allows users to authenticate themselves with their username and password and receive an access token. The token can then be used to access protected resources.
 
 The authorization mechanism provided by the Glue is flexible and allows you to define which endpoints specifically require authentication. Usually, protected endpoints include customer wish lists, carts, personal data and the like. Also, you may want to protect additional areas as required by your project. In addition to endpoints, you may require authorization to use specific REST verbs. For example, a certain endpoint can allow retrieving information, but not modifying it. In this case, the GET verb can be allowed for usage without authentication, while the PUT, PATCH and DELETE verbs will require user authentication to use.
 
@@ -141,7 +141,7 @@ All data related to API authentication functionality is stored in the following 
 
 |TABLE|	PURPOSE|
 | --- | --- |
-| spy_oauth_access_token| Stores all issued tokens.<br>The table is not used for token verification, it is added for audit purposes only.  |
+| spy_oauth_access_token| Stores all issued tokens.<br>The table is not used for token verification, it's added for audit purposes only.  |
 |  spy_oauth_client|Contains a list of clients that are currently using OAuth, one record for each frontend customer. The `is_confidental` field identifies whether a specific client must provide a password.  |
 | spy_oauth_scope |  Stores user scopes.|
 

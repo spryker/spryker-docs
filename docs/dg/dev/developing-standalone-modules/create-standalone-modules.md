@@ -1,6 +1,6 @@
 ---
 title: Create standalone modules
-description: How to develop a Spryker module
+description: Learn how you can create standalone modules like extending modules or enabling custom namespace within your Spryker based projects.
 last_updated: Jun 7, 2024
 template: howto-guide-template
 ---

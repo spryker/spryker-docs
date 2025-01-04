@@ -23,7 +23,7 @@ You can create customer accounts by [importing](/docs/dg/dev/data-import/{{page.
 
 With the help of [Glue API](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/glue-rest-api.html), you can change and reset customer account passwords. This can be useful when you want to use a single authentication in all the apps connected to your shop. To learn how a developer can do it, see [Change a customer’s password](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html#change-a-customers-password) and [Reset a customer’s password](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html#reset-a-customers-password).
 
-On the Storefront, it is mandatory to enter a password when creating a customer account. After the account is created, you can update the password in the customer account or request a password reset using email.
+On the Storefront, it's mandatory to enter a password when creating a customer account. After the account is created, you can update the password in the customer account or request a password reset using email.
 
 ## Related Business User documents
 

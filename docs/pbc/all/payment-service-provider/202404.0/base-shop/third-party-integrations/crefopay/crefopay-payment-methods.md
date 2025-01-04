@@ -59,7 +59,7 @@ You can find the state machine example in `vendor/spryker-eco/crefo-pay/config/Z
 
 ## Direct Debit
 
-Direct Debit is processed by the bank system once it is transferred to the bank gateway. This can take several days. While being processed, the order has PayPending status.
+Direct Debit's processed by the bank system once it's transferred to the bank gateway. This can take several days. While being processed, the order has PayPending status.
 
 As a result of the reconciliation process, the bank system provides feedback which is evaluated automatically within CrefoPay system:
 

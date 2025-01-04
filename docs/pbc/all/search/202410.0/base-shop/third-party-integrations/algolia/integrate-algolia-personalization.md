@@ -354,7 +354,7 @@ By accepting, you allow us to capture anonymous events for personalization, anal
 
 ### Disable user data tracking
 
-If a user does not consent to data tracking, you must set the `disableUserActionTracking` flag in the cookie to `true` to stop sending user action tracking events. This ensures no user data is sent from the application.
+If a user doesn't consent to data tracking, no user data should be sent from the application. To stop sending user action tracking events, set the `disableUserActionTracking` flag in the cookie to `true`.
 
 
 ## Verify the installation

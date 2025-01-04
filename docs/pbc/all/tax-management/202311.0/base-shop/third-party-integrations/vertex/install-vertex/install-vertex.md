@@ -27,7 +27,7 @@ Before integrating Vertex, ensure the following prerequisites are met:
 Ensure that your installation meets these requirements.
 
 - Make sure that your deployment pipeline executes database migrations.
-- You are using NET prices in your Spryker project. Keep in mind that the Vertex integration only works with NET prices, as it is assumed that businesses using the app are unable to determine GROSS prices.
+- You are using NET prices in your Spryker project. Keep in mind that the Vertex integration only works with NET prices, as it's assumed that businesses using the app are unable to determine GROSS prices.
 
 ## Installation steps
 

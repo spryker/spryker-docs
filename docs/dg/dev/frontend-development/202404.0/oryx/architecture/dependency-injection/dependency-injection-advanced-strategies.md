@@ -34,7 +34,7 @@ In this example, the `inject` method is used to resolve a dependency based on a 
 
 ## Multi-providers
 
-Most dependencies in an application correspond to only one value, like a class. In some cases, it is useful to have dependencies with multiple values, like HTTP interceptors or normalizers. However, it's not very practical to configure these dependencies separately, because the application needs to access them all together at once. Therefore, you can use a special type of dependency that accepts multiple values and is linked to the same dependency injection token. These are called multi-providers.
+Most dependencies in an application correspond to only one value, like a class. In some cases, it's useful to have dependencies with multiple values, like HTTP interceptors or normalizers. However, it's not very practical to configure these dependencies separately, because the application needs to access them all together at once. Therefore, you can use a special type of dependency that accepts multiple values and is linked to the same dependency injection token. These are called multi-providers.
 
 There are different types of multi-providers based on location an number of asterisks(`*`) in  the name of their tokens. They are described in the following sections.
 

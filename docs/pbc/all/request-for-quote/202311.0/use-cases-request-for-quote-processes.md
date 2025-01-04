@@ -10,7 +10,7 @@ redirect_from:
 
 ## Use case 1: Long waiting time until Request for Quote gets processed
 
-The [Request for Quote](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html) (RFQ) process is currently not fully efficient because it is manual. As a result, sometimes customers have to wait a long time until their RFQ gets approved or denied. 
+The [Request for Quote](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html) (RFQ) process is currently not fully efficient because it's manual. As a result, sometimes customers have to wait a long time until their RFQ gets approved or denied. 
 
 ### Solution
 

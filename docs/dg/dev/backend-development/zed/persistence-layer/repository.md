@@ -53,7 +53,7 @@ class BlogRepository extends AbstractRepository implements BlogRepositoryInterfa
 
 ## EntityTransfers
 
-With the Publish and Synchronize feature, we have added a new transfer generation for `EntityTransfers`. The `EntityTransfers` are a direct representation of SQL tables, `EntityTransfer` has all properties and relations defined, also it holds FQCN to the Propel entity it is mapped to. This FQCN is used when mapping entity when data is persisted. Names of `EntityTransfers` start with `Spy`, followed by the table name, and then the `EntityTransfer` suffix. For example, `SpyBlogEntityTransfer` would map to SpyBlog Propel entity.
+With the Publish and Synchronize feature, we have added a new transfer generation for `EntityTransfers`. The `EntityTransfers` are a direct representation of SQL tables, `EntityTransfer` has all properties and relations defined, also it holds FQCN to the Propel entity it's mapped to. This FQCN is used when mapping entity when data is persisted. Names of `EntityTransfers` start with `Spy`, followed by the table name, and then the `EntityTransfer` suffix. For example, `SpyBlogEntityTransfer` would map to SpyBlog Propel entity.
 
 ## Abstract Repository Class
 

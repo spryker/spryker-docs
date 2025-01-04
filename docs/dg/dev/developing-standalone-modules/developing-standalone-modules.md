@@ -1,6 +1,6 @@
 ---
 title: Developing standalone modules
-description: Learn how to develop standalone modules
+description: Learn how you can develop standalone modules like extending modules or enabling custom namespace within your Spryker based projects.
 last_updated: Jul 7, 2024
 template: concept-topic-template
 ---

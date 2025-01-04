@@ -34,7 +34,7 @@ Additionally, you need to add the following plugins to the `\Pyz\Zed\EventDispat
 
 The Router can be configured with the following `RouterEnvironmentConfigConstantsZed` options:
 
-* `\Spryker\Zed\Router\RouterConstants::ZED_IS_CACHE_ENABLED` - use this option to enable/disable the cache. By default, it is enabled.
+* `\Spryker\Zed\Router\RouterConstants::ZED_IS_CACHE_ENABLED` - use this option to enable/disable the cache. By default, it's enabled.
 * `\Spryker\Zed\Router\RouterConstants::ZED_CACHE_PATH` - use this if you want to change the path to the generated cache files.
 * `\Spryker\Zed\Router\RouterConstants::ZED_IS_SSL_ENABLED` - use this to enable/disable Router's SSL capabilities.
 * `\Spryker\Zed\Router\RouterConstants::ZED_SSL_EXCLUDED_ROUTE_NAMES` - use this to disable SSL for the specific route names when SSL is enabled.

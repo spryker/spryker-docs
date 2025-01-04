@@ -37,7 +37,7 @@ This document explains the Table Feature Batch Actions component in the Componen
 
 Table Feature Batch Actions is a feature of the Table Component that allows triggering batch/multiple actions from rows.
 As Table Feature Batch Actions is based on the [Table Feature Selectable](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-selectable.html), batch actions must be registered and enabled via the table config. Batch actions are functions that can be performed on multiple items within a table. As soon as at least one row is selected in the table, the batch action bar with allowed actions appears at the top of the table.
-To escape the `batch action mode`, it is necessary to unselect the table rows.
+To escape the `batch action mode`, it's necessary to unselect the table rows.
 
 Check out an example usage of the Table Feature Batch Actions in the `@spryker/table` config.
 

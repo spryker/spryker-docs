@@ -246,7 +246,7 @@ class PersonalizedProductQueryPlugin implements QueryInterface
 
 {% info_block infoBox %}
 
-The limit passed in the constructor of the query plugin. Also, the seed value is `session_id()` of the customer and it is used with the random score from Elasticsearch. You can change these values according to your needs.
+The limit passed in the constructor of the query plugin. Also, the seed value is `session_id()` of the customer and it's used with the random score from Elasticsearch. You can change these values according to your needs.
 
 {% endinfo_block %}
 

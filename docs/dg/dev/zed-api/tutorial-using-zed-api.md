@@ -94,9 +94,9 @@ After this step log into Zed and try opening `http://ZED_HOST/api/v1/doc` and `h
 
 ## 2. Create a business model to examine facade classes using reflection
 
-First, it is needed to create an empty model class `ApiEntry` in the business layer, it can be placed in `Business/Model/ApiEntry.php`.
+First, it's needed to create an empty model class `ApiEntry` in the business layer, it can be placed in `Business/Model/ApiEntry.php`.
 
-This class must be created in a factory of the module. Additionally, the factory must provide additional dependencies from facades of other modules. To simplify the solution, facades can be created dynamically based on GET parameters of the request, while in real life it is advised to always specify these dependencies implicitly.
+This class must be created in a factory of the module. Additionally, the factory must provide additional dependencies from facades of other modules. To simplify the solution, facades can be created dynamically based on GET parameters of the request, while in real life it's advised to always specify these dependencies implicitly.
 
 Considering all of above, the factory implementation can look like this:
 

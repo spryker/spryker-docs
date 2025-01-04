@@ -153,7 +153,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 1. Make sure that when you added some data to tables `spy_product_image_set`, `spy_product_image_set_to_product_image`, `spy_product_image` with `fk_resource_configurable_bundle_template` and run `console trigger:event -r configurable_bundle_template_image` command, the changes are reflected in the `spy_configurable_bundle_template_image_storage` table.
 2. Make sure that after step #4  or after `console sync:data configurable_bundle_template_image` command execution, the data s added to the `spy_configurable_bundle_template_image_storage` table and Redis.
-3. Make sure that when a product image set with the `fk_resource_configurable_bundle_template` is created or edited through ORM, it is exported to Redis accordingly.
+3. Make sure that when a product image set with the `fk_resource_configurable_bundle_template` is created or edited through ORM, it's exported to Redis accordingly.
 4. Ensure that Elasticsearch document has been expanded by images property.
 
 {% endinfo_block %}

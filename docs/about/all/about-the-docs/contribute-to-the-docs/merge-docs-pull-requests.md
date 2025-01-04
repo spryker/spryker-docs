@@ -61,7 +61,7 @@ For fixing internal links, you need to understand their structure:
 * Non-versioned link example: `/docs/about/all/about-the-docs/run-the-docs-locally.html`.
 * Versioned link example: `/docs/dg/dev/frontend-development/{{site.version}}/create-angular-modules.html`
 
-If you have a broken link, the easiest way to fix it is as follows:
+If you have a broken link, the easiest way to fix it's as follows:
 1. Copy the relative path to the target document, starting from `docs`: `docs/dg/dev/frontend-development/202404.0/create-angular-modules.md`.
 2. Add a slash in the beginning: `/docs/dg/dev/frontend-development/202404.0/create-angular-modules.md`.
 3. Replace `.md` with `.html`: `/docs/dg/dev/frontend-development/202404.0/create-angular-modules.html`.

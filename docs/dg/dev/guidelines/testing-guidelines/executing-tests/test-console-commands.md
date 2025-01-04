@@ -51,7 +51,7 @@ suites:
 
 For more information about the `codeception.yml` file, see [Test framework](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html).
 
-2. Create the test directory `tests/PyzTests/Zed/FooModule/Communication/Plugin/Console/`, if it is not available yet.
+2. Create the test directory `tests/PyzTests/Zed/FooModule/Communication/Plugin/Console/`, if it's not available yet.
 3. Add the test class:
 
 ```php

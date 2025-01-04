@@ -23,17 +23,17 @@ These are the header fields included in the `merchant_order_items.csv` file:
 | 8 | discount_amount_aggregation |   | Number | Default = 0 | Discount amount aggregation of the merchant order item. |
 | 9 | discount_amount_full_aggregation |   | Number | Default = 0 | Discount amount full aggregation of the merchant order item. |
 | 10 | expense_price_aggregation |   | Number | Default = 0 | Expense price aggregation of the merchant order item. |
-| 11 | gross_price |   | Number | Original value is multiplied by 100 before it is stored in this field. | Gross price of the ordered item. |
-| 12 | net_price |   | Number | Original value is multiplied by 100 before it is stored in this field. | Net price of the ordered item. |
-| 13 | price |   | Number | Original value is multiplied by 100 before it is stored in this field. | Price of the ordered item. |
-| 14 | price_to_pay_aggregation |   | Number | Original value is multiplied by 100 before it is stored in this field. | Price to pay aggregation of the ordered item. |
-| 15 | product_option_price_aggregation |   | Number | Original value is multiplied by 100 before it is stored in this field. | Product option price aggregation of the ordered item. |
+| 11 | gross_price |   | Number | Original value is multiplied by 100 before it's stored in this field. | Gross price of the ordered item. |
+| 12 | net_price |   | Number | Original value is multiplied by 100 before it's stored in this field. | Net price of the ordered item. |
+| 13 | price |   | Number | Original value is multiplied by 100 before it's stored in this field. | Price of the ordered item. |
+| 14 | price_to_pay_aggregation |   | Number | Original value is multiplied by 100 before it's stored in this field. | Price to pay aggregation of the ordered item. |
+| 15 | product_option_price_aggregation |   | Number | Original value is multiplied by 100 before it's stored in this field. | Product option price aggregation of the ordered item. |
 | 16 | quantity | &check; | Number | Default = 1 | Quantity of items in this order item. |
-| 17 | refundable_amount |   | Number | Original value is multiplied by 100 before it is stored in this field. | Refundable amount of the ordered item. |
-| 18 | subtotal_aggregation |   | Number | Original value is multiplied by 100 before it is stored in this field. | Subtotal aggregation of the ordered item. |
-| 19 | tax_amount |   | Number | Original value is multiplied by 100 before it is stored in this field. | Tax amount of the ordered item. |
-| 20 | tax_amount_after_cancellation |   | Number | Original value is multiplied by 100 before it is stored in this field. | Tax amount after the cancellation of the ordered item. |
-| 21 | tax_amount_full_aggregation |   | Number | Original value is multiplied by 100 before it is stored in this field. | Tax amount full aggregation of the ordered item. |
+| 17 | refundable_amount |   | Number | Original value is multiplied by 100 before it's stored in this field. | Refundable amount of the ordered item. |
+| 18 | subtotal_aggregation |   | Number | Original value is multiplied by 100 before it's stored in this field. | Subtotal aggregation of the ordered item. |
+| 19 | tax_amount |   | Number | Original value is multiplied by 100 before it's stored in this field. | Tax amount of the ordered item. |
+| 20 | tax_amount_after_cancellation |   | Number | Original value is multiplied by 100 before it's stored in this field. | Tax amount after the cancellation of the ordered item. |
+| 21 | tax_amount_full_aggregation |   | Number | Original value is multiplied by 100 before it's stored in this field. | Tax amount full aggregation of the ordered item. |
 | 22 | tax_rate |   | Number |   | Tax rate of the ordered item. |
 | 23 | tax_rate_average_aggregation |   | Number |   | Tax rate average aggregation of the ordered item. |
 | 24 | merchant_order_item_created_at |   | Date Time |   | Merchant order item creation date. |

@@ -28,7 +28,7 @@ This guide reviews customizing Spryker UI on each of these levels.
 
 ## Twig
 
-The visual layout of each component, whether it is a molecule or a whole organism, is defined using Symphony Twig. Twig is a template language for defining the HTML code of pages rendered dynamically. It is a common technology used for building web components, like the ones that comprise Spryker Atomic Frontend.
+The visual layout of each component, whether it's a molecule or a whole organism, is defined using Symphony Twig. Twig is a template language for defining the HTML code of pages rendered dynamically. It is a common technology used for building web components, like the ones that comprise Spryker Atomic Frontend.
 
 For more information about Twig basics, see [Twig Homepage](https://twig.symfony.com/).
 

@@ -111,7 +111,7 @@ During this step, all the services in an updated state may still respond to requ
 
 ## Run_install
 
-In this step, the scripts in the `SPRYKER_HOOK_INSTALL` are run. By default, it is `vendor/bin/install -r EU/production --no-ansi -vvv`.
+In this step, the scripts in the `SPRYKER_HOOK_INSTALL` are run. By default, it's `vendor/bin/install -r EU/production --no-ansi -vvv`.
 
 The script runs all the propel database migrations, so the database is updated to V2. However, Search and Redis are not, as the synchronization was "paused".
 

@@ -63,7 +63,7 @@ Import CMS blocks:
 console data:import:cms-block
 ```
 
-3. Enable CMS blocks per needed store via importing the next data (or enable them via zed backoffice)
+3. Prepare data import files per store to enable CMS blocks: (or enable them via zed backoffice)
 
 **data/import/common/AT/cms_block_store.csv**
 
@@ -88,14 +88,14 @@ cms-block-email--merchant_restore_password--html,US
 cms-block-email--merchant_restore_password--text,US
 ```
 
-Import CMS blocks per needed store:
+4. To enable CMS blocks import the files:
 ```bash
 console data:import:cms-block-store
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following data has been added to the database
+Make sure that the following data has been added to the database:
 
 * `spy_cms_block`
 * `spy_cms_block_store`

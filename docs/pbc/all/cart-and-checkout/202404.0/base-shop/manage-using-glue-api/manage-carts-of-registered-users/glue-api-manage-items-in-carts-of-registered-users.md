@@ -2704,7 +2704,7 @@ To change the number of items in a cart, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***cart_uuid*** | Unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
-| ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. |
+| ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it's equal to the item’s SKU. |
 
 ### Request
 
@@ -3189,7 +3189,7 @@ To remove an item from a registered user's cart, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
-| ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. |
+| ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it's equal to the item’s SKU. |
 
 
 ### Request

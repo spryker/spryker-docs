@@ -1,6 +1,6 @@
 ---
 title: Set up Spryker locally
-description: Set up Spryker Cloud Commerce OS locally
+description: Learn how you can set up Spryker Cloud Commerce OS in to a local enviroment for Demos, development and experimentation purposes.
 template: concept-topic-template
 last_updated: Jun 23, 2023
 redirect_from:

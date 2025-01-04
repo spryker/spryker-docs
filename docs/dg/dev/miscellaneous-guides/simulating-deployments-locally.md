@@ -8,7 +8,7 @@ redirect_from:
 
 ---
 
-Are you about to roll out an important feature to your staging or production environment and want to ensure that everything will work out right? Or you are encountering behavior in your application when it is deployed that does not seem right, and you are wondering how to best debug it? This document provides tips that can help you avoid surprises and help you prepare your project optimally for deployment and build a local development setup with which you can debug more effectively.
+Are you about to roll out an important feature to your staging or production environment and want to ensure that everything will work out right? Or you are encountering behavior in your application when it's deployed that does not seem right, and you are wondering how to best debug it? This document provides tips that can help you avoid surprises and help you prepare your project optimally for deployment and build a local development setup with which you can debug more effectively.
 
 To simulate your application behavior and how it looks when deployed to the staging or production environment, bootstrap the `deploy.yml` files used by those environments. The following sections show what needs to be done.
 

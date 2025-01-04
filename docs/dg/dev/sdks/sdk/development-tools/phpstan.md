@@ -61,7 +61,7 @@ Note that running this command with the level 2 key (**-l 2**) and having no err
 
 **Main configuration file inheritance**
 
-To avoid duplicated code while specifying a different configuration in the _parameters_ section of the `phpstat.neon` file, it is possible to extend this file and determine only the changes needed for a particular configuration of a module.
+To avoid duplicated code while specifying a different configuration in the _parameters_ section of the `phpstat.neon` file, it's possible to extend this file and determine only the changes needed for a particular configuration of a module.
 
 ### ./[ROOT]/phpstan.neon
 

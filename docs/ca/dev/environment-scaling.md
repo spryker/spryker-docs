@@ -27,7 +27,7 @@ There is an autoscaling configuration that has a service-level CPU threshold con
 
 You can test autoscaling by applying load to the aforementioned services of your application. The application will automatically scale, which might visible by by "steps" in your monitoring—response time climbing until a new container is provisioned, which will make it fall again. You should also be able to see new containers being deployed when checking the ECS overview of the service you are load testing.
 
-Because autoscaling is guard-railed by a maximum number of scaling group members, we recommend load and performance testing before going live so that this maximum number can be dialed in more easily. While our monitoring team can adjust these settings on the fly as well, it is normally best to apply a realistic load to the application (containing the data you want to use in production) before going live. This will also help adjust the container CPU and memory budget—which will determine how much CPU and memory each service will "get" compared to other containers. This helps to further optimize the setup.
+Because autoscaling is guard-railed by a maximum number of scaling group members, we recommend load and performance testing before going live so that this maximum number can be dialed in more easily. While our monitoring team can adjust these settings on the fly as well, it's normally best to apply a realistic load to the application (containing the data you want to use in production) before going live. This will also help adjust the container CPU and memory budget—which will determine how much CPU and memory each service will "get" compared to other containers. This helps to further optimize the setup.
 
 ## Additional notes
 

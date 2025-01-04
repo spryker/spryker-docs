@@ -5,17 +5,14 @@ description: This document describes how to integrate the Merchant Portal Core +
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Marketplace Merchant Portal Core + CMS feature into a Spryker project.
+This document describes how to install the Marketplace Merchant Portal Core + CMS feature.
 
-## Install feature core
-
-Follow the steps below to install the Merchant Portal Core + CMS feature core.
 
 ## Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | -------------------- | ---------- | ---------|
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | CMS      | {{page.version}} | [Spryker CMS feature integration](https://documentation.spryker.com/docs/cms)
@@ -23,13 +20,8 @@ To start feature integration, integrate the required features:
 
 ###  1) Create merchant restore password email templates
 
-Set up templates as follows:
-
-1. Create the following templates:
-
 **src/Pyz/Zed/MerchantUserPasswordResetMail/Presentation/Mail/merchant_restore_password.html.twig**
-
-```html
+```twig
 {{ renderCmsBlockAsTwig(
 'merchant_restore_password--html',
 constant('APPLICATION_STORE'),
@@ -38,8 +30,7 @@ mail.locale.localeName,
 ```
 
 **src/Pyz/Zed/MerchantUserPasswordResetMail/Presentation/Mail/merchant_restore_password.text.twig**
-
-```html
+```twig
 {{ renderCmsBlockAsTwig(
 'merchant_restore_password--text',
 constant('APPLICATION_STORE'),
@@ -47,13 +38,14 @@ mail.locale.localeName,
 {mail: mail}) }}
 ```
 
-### 2) Data Import
+### 2) Data import
 
 Import CMS blocks as follows (or create them via zed backoffice):
 
 1. Add the following csv file:
 
-**data/import/common/common/cms_block.csv**
+<details>
+  <summary>data/import/common/common/cms_block.csv</summary>
 
 ```csv
 block_key,block_name,template_name,template_path,active,placeholder.title.de_DE,placeholder.title.en_US,placeholder.description.de_DE,placeholder.description.en_US,placeholder.link.de_DE,placeholder.link.en_US,placeholder.content.de_DE,placeholder.content.en_US
@@ -61,15 +53,17 @@ cms-block-email--merchant_restore_password--html,merchant_restore_password--html
 cms-block-email--merchant_restore_password--text,merchant_restore_password--text,TEXT Email Template With Header And Footer,@CmsBlock/template/email-template-with-header-and-footer.text.twig,1,,,,,,,{{ 'mail.trans.common.hello_for_first_name' | trans }} {{ mail.user.firstName }} {{mail.user.lastName}} {{ 'mail.trans.merchant.restore_password.title' | trans }}  {{ 'mail.trans.restore_password.subtitle' | trans }}  {{ 'mail.trans.restore_password.change_password' | trans }} ({{ mail.resetPasswordLink }}) ,{{ 'mail.trans.common.hello_for_first_name' | trans }} {{ mail.user.firstName }} {{mail.user.lastName}} {{ 'mail.trans.merchant.restore_password.title' | trans }}  {{ 'mail.trans.restore_password.subtitle' | trans }}  {{ 'mail.trans.restore_password.change_password' | trans }} ({{ mail.resetPasswordLink }})
 ```
 
+</details>
+
 2. Add the following csv file:
 
-Import cms blocks:
+Import CMS blocks:
 
 ```bash
 console data:import:cms-block
 ```
 
-3. Enable cms blocks per needed store via importing the next data (or enable them via zed backoffice)
+3. Enable CMS blocks per needed store via importing the next data (or enable them via zed backoffice)
 
 **data/import/common/AT/cms_block_store.csv**
 
@@ -94,7 +88,7 @@ cms-block-email--merchant_restore_password--html,US
 cms-block-email--merchant_restore_password--text,US
 ```
 
-Import cms blocks per needed store:
+Import CMS blocks per needed store:
 ```bash
 console data:import:cms-block-store
 ```

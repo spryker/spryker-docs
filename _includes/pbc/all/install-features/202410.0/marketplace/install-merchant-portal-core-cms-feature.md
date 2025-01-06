@@ -86,7 +86,7 @@ console data:import:cms-block-store
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following data has been added to the database:
+Make sure that the imported data is added to the following database tables:
 
 * `spy_cms_block`
 * `spy_cms_block_store`

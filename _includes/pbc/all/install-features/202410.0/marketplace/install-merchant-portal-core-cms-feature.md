@@ -1,10 +1,3 @@
----
-title: Marketplace Merchant Portal Core feature + CMS integration
-last_updated: Mar 31, 2021
-description: This document describes how to integrate the Merchant Portal Core + CMS feature into a Spryker project.
-template: feature-integration-guide-template
----
-
 This document describes how to integrate the Marketplace Merchant Portal Core + CMS feature into a Spryker project.
 
 ## Install feature core
@@ -17,8 +10,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | -------------------- | ---------- | ---------|
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| CMS      | {{page.version}} | [Spryker CMS feature integration](https://documentation.spryker.com/docs/cms)
+| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{ page.version }}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| CMS      | {{page.version}} | [Spryker CMS feature integration](/docs/pbc/all/content-management-system/{{ page.version }}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html)
 | Marketplace Merchant Portal Core | {{page.version}} | [Marketplace Merchant Portal Core](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/merchant-portal-core-feature-integration.html)
 
 ###  1) Create merchant restore password email templates
@@ -30,28 +23,28 @@ Set up templates as follows:
 **src/Pyz/Zed/MerchantUserPasswordResetMail/Presentation/Mail/merchant_restore_password.html.twig**
 
 ```html
-{{ renderCmsBlockAsTwig(
+\{\{ renderCmsBlockAsTwig(
 'merchant_restore_password--html',
 constant('APPLICATION_STORE'),
 mail.locale.localeName,
-{mail: mail}) }}
+{mail: mail}) \}\}
 ```
 
 **src/Pyz/Zed/MerchantUserPasswordResetMail/Presentation/Mail/merchant_restore_password.text.twig**
 
 ```html
-{{ renderCmsBlockAsTwig(
+\{\{ renderCmsBlockAsTwig(
 'merchant_restore_password--text',
 constant('APPLICATION_STORE'),
 mail.locale.localeName,
-{mail: mail}) }}
+{mail: mail}) \}\}
 ```
 
 ### 2) Data Import
 
 Import CMS blocks as follows (or create them via zed backoffice):
 
-1. Add the following csv file:
+1. Add cms blocks:
 
 **data/import/common/common/cms_block.csv**
 
@@ -61,15 +54,13 @@ cms-block-email--merchant_restore_password--html,merchant_restore_password--html
 cms-block-email--merchant_restore_password--text,merchant_restore_password--text,TEXT Email Template With Header And Footer,@CmsBlock/template/email-template-with-header-and-footer.text.twig,1,,,,,,,{{ 'mail.trans.common.hello_for_first_name' | trans }} {{ mail.user.firstName }} {{mail.user.lastName}} {{ 'mail.trans.merchant.restore_password.title' | trans }}  {{ 'mail.trans.restore_password.subtitle' | trans }}  {{ 'mail.trans.restore_password.change_password' | trans }} ({{ mail.resetPasswordLink }}) ,{{ 'mail.trans.common.hello_for_first_name' | trans }} {{ mail.user.firstName }} {{mail.user.lastName}} {{ 'mail.trans.merchant.restore_password.title' | trans }}  {{ 'mail.trans.restore_password.subtitle' | trans }}  {{ 'mail.trans.restore_password.change_password' | trans }} ({{ mail.resetPasswordLink }})
 ```
 
-2. Add the following csv file:
-
 Import cms blocks:
 
 ```bash
 console data:import:cms-block
 ```
 
-3. Enable cms blocks per needed store via importing the next data (or enable them via zed backoffice)
+2. Enable cms blocks per needed store via importing the next data (or enable them via zed backoffice)
 
 **data/import/common/AT/cms_block_store.csv**
 
@@ -95,13 +86,14 @@ cms-block-email--merchant_restore_password--text,US
 ```
 
 Import cms blocks per needed store:
+
 ```bash
 console data:import:cms-block-store
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following data has been added to the database
+Make sure that the data from csv files above has been added to the following database tables:
 
 * `spy_cms_block`
 * `spy_cms_block_store`

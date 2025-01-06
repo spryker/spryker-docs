@@ -860,6 +860,12 @@ entries:
 
           - title: Marketplace
             nested:
+              - title: Install
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Install the CMS + Marketplace Merchant Portal Core feature
+                        url: /docs/pbc/all/content-management-system/marketplace/install-features/install-cms-merchant-portal-core-feature.html
               - title: "Glue API: Retrieve abstract products in abstract product lists"
                 url: /docs/pbc/all/content-management-system/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html
 

@@ -464,7 +464,7 @@ Make sure that the `product-offer-service` synchronization plugin works correctl
 2. Run the `console sync:data -r product_offer_service` command.
 3. Make sure that, in your system, storage entries are displayed with the `kv:product_offer_service:{store}:{product_offer_reference}` mask.
 
-Make sure when a product offer service is created via DataImport, it is exported to Redis accordingly.
+Make sure when a product offer service is created via DataImport, it's exported to Redis accordingly.
 
 Make sure that, in Redis, data is displayed in the following format:
 

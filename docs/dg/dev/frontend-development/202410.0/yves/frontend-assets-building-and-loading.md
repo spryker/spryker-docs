@@ -22,7 +22,7 @@ To support the assets loading behavior as described above, most pages considered
 
 For the landing pages, there is the `page-critical-path` layout defining the asset's loading behavior. It is an extension of the `page-blank` layout with the overwritten `nonCriticalStyles` and `styleLazyLoader` blocks. The `page-critical-path` contains a `style-loader` component before the closing tag of `<body>`. The `style-loader` component is responsible for loading the non-critical CSS only after the whole page is loaded.
 
-The `page-critical-path` layout uses cookies to track whether it is the first session on the site. If it is the first session, the critical CSS and utils are loaded into the `<head>` tag at the start of the page loading. Only after the whole page is loaded, the `style-loader` component appends the non-critical CSS to the end of the `<head>` tag. Otherwise, the approach for the non-landing pages is used.
+The `page-critical-path` layout uses cookies to track whether it's the first session on the site. If it's the first session, the critical CSS and utils are loaded into the `<head>` tag at the start of the page loading. Only after the whole page is loaded, the `style-loader` component appends the non-critical CSS to the end of the `<head>` tag. Otherwise, the approach for the non-landing pages is used.
 
 The main purpose of the page-critical-path layout is to use the CSS Lazy Load only for the landing pages. To enable the CSS Lazy Load for your project, see [Frontend CSS Lazy Load integration](/docs/dg/dev/integrate-and-configure/integrate-css-lazy-loading.html).
 
@@ -46,7 +46,7 @@ A *polyfill* is a code that is used to provide modern functionality for older br
 
 ## Cache-busting mechanism
 
-The main idea of the *cache-busting mechanism* is to provide an ability to reset JS/CSS cache for a newly deployed version so that the new assets are delivered to the frontend applications. It is achieved by adding a hash to every asset path using an environment variable `SPRYKER_BUILD_HASH` that lets you reset the browser cache instead of a namespace variable. The path of the resources on Yves is displayed with this hash folder `assets/SPRYKER_BUILD_HASH/default/css/yves_default.app.css`. If the project is set up by Docker, the `assets` folder is present in the Docker container in a production environment. Otherwise, if it is a development environment, the `assets` folder is in a public `assets` folder rather than a container.
+The main idea of the *cache-busting mechanism* is to provide an ability to reset JS/CSS cache for a newly deployed version so that the new assets are delivered to the frontend applications. It is achieved by adding a hash to every asset path using an environment variable `SPRYKER_BUILD_HASH` that lets you reset the browser cache instead of a namespace variable. The path of the resources on Yves is displayed with this hash folder `assets/SPRYKER_BUILD_HASH/default/css/yves_default.app.css`. If the project is set up by Docker, the `assets` folder is present in the Docker container in a production environment. Otherwise, if it's a development environment, the `assets` folder is in a public `assets` folder rather than a container.
 
 ## `isCssLazyLoadSupported` Twig variable
 

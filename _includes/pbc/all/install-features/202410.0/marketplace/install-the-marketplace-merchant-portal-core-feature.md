@@ -727,8 +727,8 @@ $config[AclConstants::ACL_DEFAULT_RULES][] = [
 ];
 ```
 
-### 3) Add translations
-Add Merchant Portal translations:
+### 3) Add Merchant Portal translations
+
 
 1. Append glossary according to your configuration:
 

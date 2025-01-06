@@ -39,7 +39,7 @@ All of these files are merged automatically by Spryker when the application is r
 
 ### Constant interfaces
 
-As you can see in the configuration files, the whole configuration is a big array of keys and values. To enable traceability, it is a good practice to use constants as keys. These constants are defined in shared interfaces that are provided by the related module.
+As you can see in the configuration files, the whole configuration is a big array of keys and values. To enable traceability, it's a good practice to use constants as keys. These constants are defined in shared interfaces that are provided by the related module.
 
 ```php
 <?php
@@ -70,7 +70,7 @@ There are some other configuration files for specific purposes.
 
 | FILENAME | PURPOSE  |
 | ----------------- | -------------------- |
-| `console_env_local.php` | This file returns the default environment for command line calls. This file is on gitignore. It is optional. If it is missing, you need to explicitly pass the environment to all [command line calls](/docs/dg/dev/backend-development/console-commands/implement-console-commands.html). |
+| `console_env_local.php` | This file returns the default environment for command line calls. This file is on gitignore. It is optional. If it's missing, you need to explicitly pass the environment to all [command line calls](/docs/dg/dev/backend-development/console-commands/implement-console-commands.html). |
 |   `default_store.php`   | This file returns the default store which is used for all [command line calls](/docs/dg/dev/backend-development/console-commands/implement-console-commands.html). |
 |      `stores.php`       | This file contains an array with all stores and their configuration like locale, date format, currency. |
 
@@ -86,7 +86,7 @@ You can retrieve the configuration from the configuration files with a static me
 	$value = Config::get($key);
 ```
 
-Each module ships with specific classes, which gives access to the configuration. Here you can also add more configuration which needs more programming. For instance, when you need to parse a CSV file to get more configuration, this code would be here. Although you can use the same global mechanism as in Yves to read the documentation, it is a better practice to access it through the module config file. This snippet can be used to create a new module config. Just replace `MyModule` with your current module name.
+Each module ships with specific classes, which gives access to the configuration. Here you can also add more configuration which needs more programming. For instance, when you need to parse a CSV file to get more configuration, this code would be here. Although you can use the same global mechanism as in Yves to read the documentation, it's a better practice to access it through the module config file. This snippet can be used to create a new module config. Just replace `MyModule` with your current module name.
 
 ```php
 <?php

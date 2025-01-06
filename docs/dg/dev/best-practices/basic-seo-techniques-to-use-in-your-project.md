@@ -26,7 +26,7 @@ It is important to use the `h1` heading. However, the number of `h1` elements on
 
 {% endinfo_block %}
 
-For example, on a catalog page, `h1` is the name of the chosen category. Or, on a product details page, it is the product name.
+For example, on a catalog page, `h1` is the name of the chosen category. Or, on a product details page, it's the product name.
 Then `h2` and `h3` subheadings are used to introduce different sections. Those individual sections might also use more specific headers (`h3` tags, then `h4` tags) to introduce sub-sections. It's rare for most content to get deep enough to need to use h4 tags.
 
 Check out the headings structure on a catalog page in the Spryker Demo Shop:

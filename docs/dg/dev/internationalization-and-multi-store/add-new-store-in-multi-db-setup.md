@@ -17,7 +17,7 @@ This guide is applicable in scenarios where store configurations and setups are 
 ## Initial planning and best practices
 
 ### Clear Roadmap
-It is good to have overall plan, detailing all stores that will be added in the future. This can impact not only database structure and configurations, but overall decisions on how to approach the rollout, making sure it is cost-efficient over time, on all ends.
+It is good to have overall plan, detailing all stores that will be added in the future. This can impact not only database structure and configurations, but overall decisions on how to approach the rollout, making sure it's cost-efficient over time, on all ends.
 
 ### Backup strategy
 Always have a backup plan ready in case of issues during the deployment. This includes not only database backups but also considerations on all points you will find below, including the business side.

@@ -63,7 +63,7 @@ A discount can have one or more decision rules. Find an example combination belo
 
 In this case, the discount is applied if the cart contains three items and the purchase is made on the fifth day of the week (Friday).
 
-Multiple decision rules form a query. A query is a request for information based on the defined parameters. In the Discount Management capability, a query requests information from a cart to check if it is eligible for the discount. By specifying decision rules, you define the parameters of the query.
+Multiple decision rules form a query. A query is a request for information based on the defined parameters. In the Discount Management capability, a query requests information from a cart to check if it's eligible for the discount. By specifying decision rules, you define the parameters of the query.
 
 In the Back Office, you create decision rules in a Query Builder. Query Builder transforms the decision rules into a single query.
 
@@ -101,7 +101,7 @@ A *rule group* is a separate set of rules with its own combination operator.
 
 ![Decision rule group](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/decision-rule-group.png)
 
-With the rule groups, you can build multiple levels of rule hierarchy. When a cart is evaluated against the rules, it is evaluated on all levels of the hierarchy. At each level, there can be both rules and rule groups.
+With the rule groups, you can build multiple levels of rule hierarchy. When a cart is evaluated against the rules, it's evaluated on all levels of the hierarchy. At each level, there can be both rules and rule groups.
 
 ![Decision rule hierarchy](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/decision-rule-hierarchy.png)
 
@@ -155,7 +155,7 @@ The promotional product discount only applies if the product is added to the car
 
 {% endinfo_block %}
 
-A Back Office user can either give away promotional products for free or provide a discount for these products by specifying the percentage value, or a fixed amount, to be discounted from their price. When giving a product for free, the percentage value must be 100%. Using a fixed amount discount for a free product is also possible, where the amount is equal to a product's price, but it is not recommended because of the possibility of price fluctuations and differences across multiple products.
+A Back Office user can either give away promotional products for free or provide a discount for these products by specifying the percentage value, or a fixed amount, to be discounted from their price. When giving a product for free, the percentage value must be 100%. Using a fixed amount discount for a free product is also possible, where the amount is equal to a product's price, but it's not recommended because of the possibility of price fluctuations and differences across multiple products.
 
 ![Collection - promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/promotions-discounts-feature-overview.md/202200.0/collection-promotional-product.png)
 

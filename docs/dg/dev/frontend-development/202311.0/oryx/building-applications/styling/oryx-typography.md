@@ -93,7 +93,7 @@ The headings get `margin: 0` to avoid any clashes in the component layout.
 
 ### Semantic HTML structure versus UI
 
-The semantic usage of heading elements, like h1 or h2, defines the structure, which crawlers and screen readers use to interpret the content. This enables easier content navigation, especially for those with limited sight; screen readers guide and let them skip sections that are not of interest. Consequently, if the structure is not well formatted, for example, when `h3` is followed by an `h5`, it is considered a violation of accessibility best practices.
+The semantic usage of heading elements, like h1 or h2, defines the structure, which crawlers and screen readers use to interpret the content. This enables easier content navigation, especially for those with limited sight; screen readers guide and let them skip sections that are not of interest. Consequently, if the structure is not well formatted, for example, when `h3` is followed by an `h5`, it's considered a violation of accessibility best practices.
 
 A valid structure, however, might conflict with the UI design. UI designers use the headings in combination with the layout, which means that their options are more advanced compared to the structure only. UI designers tend to ignore the structure and favor layout options to emphasize sections of a page.
 

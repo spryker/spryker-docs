@@ -1,6 +1,6 @@
 ---
 title: Task set
-description: Task set is a group of related tasks that you can run with one command.
+description: Learn about task sets and how a Task set is a group of related tasks that you can run with one command.
 template: concept-topic-template
 redirect_from:
 - /docs/sdk/dev/task-set.html

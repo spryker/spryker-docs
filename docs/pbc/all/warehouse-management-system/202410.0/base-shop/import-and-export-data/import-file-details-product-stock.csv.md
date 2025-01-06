@@ -1,5 +1,6 @@
 ---
 title: "Import file details: product_stock.csv"
+description: learn how to configure product stock data in your Spryker based project using the product stock csv file.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-stockcsv
@@ -32,7 +33,7 @@ This document describes the `product_stock.csv` file to configure [Product Stock
 | concrete_sku | &check; | String |   | SKU reference that identifies the concrete product. |
 | name | &check; | String |	  |The *name* value is imported from the `warehouse.csv` file. |  |
 | quantity | &check; | Integer |   | Number of product items remaining in stock. The number of articles available in the warehouse. |
-| is_never_out_of_stock |  | Boolean | True = 1<br>False = 0 | Used for non-tangible products that never run out-of-stock (for example, a software license, a service, etc.). The value must be 1 (*true*) if it is a non-tangible product. |
+| is_never_out_of_stock |  | Boolean | True = 1<br>False = 0 | Used for non-tangible products that never run out-of-stock (for example, a software license, a service, etc.). The value must be 1 (*true*) if it's a non-tangible product. |
 | is_bundle |  | Boolean | True = 1<br>False = 0 | Indicates if the product is a a bundle or not. The value will be equal to 1 (*true*) if the product is a bundle. |
 
 ## Import template file and content example

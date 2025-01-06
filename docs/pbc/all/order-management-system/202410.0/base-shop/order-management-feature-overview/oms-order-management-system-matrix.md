@@ -31,7 +31,7 @@ Order 2 Cash is an important process that describes all activities needed that a
 
 ### How do you manage a process?
 
-First of all, it is important to understand what tasks are executed in which order. Defining the "to be" process ensures common understanding for all involved parties. A process model helps make implicit knowledge of an individual player explicitly understandable for everyone involved. This understanding helps align everyone and execute tasks in a standardized fashion.
+First of all, it's important to understand what tasks are executed in which order. Defining the "to be" process ensures common understanding for all involved parties. A process model helps make implicit knowledge of an individual player explicitly understandable for everyone involved. This understanding helps align everyone and execute tasks in a standardized fashion.
 
 If a "to be" process is established, it needs to be monitored. Does the idea of how a sales order should be processed reflects the reality? Process performance indicators help measure how efficiently a process creates value for the customer. Together with the process model, they give the basis to improve the process. If a process is executed more often, aspects that were an edge case at the beginning, are now worth to be explicitly modeled in the next version.
 
@@ -57,6 +57,6 @@ A typical improvement cycle with Spryker looks like this: first, the "to be" pro
 
 Every state in the process model can be mapped to a business state. This lets you measure process performance. How many processes are in the pick pack ship subprocess? How much time does it typically take? How many credit card authorizations have failed? How long does it take to process a return? Furthermore, the Spryker user interface lets you track where in the process every sales order item is. This gives a process insight to support teams that talk with customers. How many processes fail? Is a problem an edge case, or is it worth to be automated? All kinds of Process Performance Indicators (PPI) can be defined.
 
-If it is about to start the next process improvement iteration, the current process model is already available. No need to look into the coding to understand what the engine actually executes. The process model combined with the performance indicator forms the basis for the next improvement. Which can also be realized in a very short time. The process models need to be updated, and new hooks are implemented. Then the new process can be executed and monitored again.
+If it's about to start the next process improvement iteration, the current process model is already available. No need to look into the coding to understand what the engine actually executes. The process model combined with the performance indicator forms the basis for the next improvement. Which can also be realized in a very short time. The process models need to be updated, and new hooks are implemented. Then the new process can be executed and monitored again.
 
 The advantages are clear: highly individual processes can be designed with a model that allows a common understanding of all stakeholders. The process itself can be measured and weak spots identified. This lets the company do what is actually supposed to do: continuously improve the way how customer value is created.

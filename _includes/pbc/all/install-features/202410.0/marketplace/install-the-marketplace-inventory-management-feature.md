@@ -612,7 +612,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 Make sure the following actions take place as expected:
 * The command `console sync:data merchant_profile` exports data from the `spy_product_offer_availability_storage` table to Redis.
-* When a product offer availability entity gets created or updated through ORM, it is exported to Redis accordingly.
+* When a product offer availability entity gets created or updated through ORM, it's exported to Redis accordingly.
 
 {% endinfo_block %}
 

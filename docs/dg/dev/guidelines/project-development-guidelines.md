@@ -9,11 +9,11 @@ redirect_from:
   - /docs/scos/dev/guidelines/project-development-guidelines.html
 related:
   - title: Data Processing Guidelines
-    link: docs/scos/dev/guidelines/data-processing-guidelines.html
+    link: docs/dg/dev/guidelines/data-processing-guidelines.html
   - title: Making your Spryker shop secure
-    link: docs/scos/dev/guidelines/security-guidelines.html
+    link: docs/dg/dev/guidelines/security-guidelines.html
   - title: Module configuration convention
-    link: docs/scos/dev/guidelines/module-configuration-convention.html
+    link: docs/dg/dev/guidelines/module-configuration-convention.html
 ---
 
 Spryker OS exposes codebase projects, which enables a high level of customization and can satisfy  complex business requirements.
@@ -62,7 +62,7 @@ Instead of using, extending, and overriding [Private API](/docs/dg/dev/architect
 Extending Private API is still possible, but Spryker development team can change them without a notice in the minor change, since Spryker BC break policy is only considering a Public API.
 We recommend to not extend Private API classes, but implement new one based on the same interface. In this case changes in core classes will not affect your code.
 
-If you believe that you found a bug in Spryker module, or you want to submit a fix, new functionality by yourself, you can create a pull request to the corresponding module repository. It will be reviewed by the Spryker team and, if it is accepted, it will be merged into the core via our release process. Be advised that such PRs will be checked as a Core contribution and should be prepared accordingly.
+If you believe that you found a bug in Spryker module, or you want to submit a fix, new functionality by yourself, you can create a pull request to the corresponding module repository. It will be reviewed by the Spryker team and, if it's accepted, it will be merged into the core via our release process. Be advised that such PRs will be checked as a Core contribution and should be prepared accordingly.
 
 ## Development and tests
 Starting from the first day of development, write tests for all the customizations you implement. We provide infrastructure for unit, functional, and acceptance tests.

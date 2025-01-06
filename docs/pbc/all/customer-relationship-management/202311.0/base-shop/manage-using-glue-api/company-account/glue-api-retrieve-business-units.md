@@ -215,7 +215,7 @@ To retrieve a business unit, send the request:
 | name | String | Specifies the name of the business unit. |
 | email | String | Specifies the email address of the business unit. |
 | phone | String | Specifies the telephone number of the business unit. |
-| externalUrl | String | Specifies the URL of the business unit's website. |
+| externalUrl | String | Specifies the URL of the business unit is website. |
 | bic | String | Specifies the Bank Identifier Code of the business unit. |
 | iban | String | Specifies the International Bank Account Number of the business unit. |
 | defaultBillingAddress | String | Specifies the ID of the business unit default billing address. For details on how to retrieve the actual address, see the *Retrieving Business Unit Addresses* section. |

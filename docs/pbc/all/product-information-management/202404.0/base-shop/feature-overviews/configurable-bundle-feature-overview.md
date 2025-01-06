@@ -86,7 +86,7 @@ To learn how a Back Office User creates slots, see [Creating slots in configurab
 When a Storefront user configures a bundle, for each slot, they select a product from the provided product list.
 ![Slot Base Cabinet](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Slot+Base+Cabinet.png)
 
-By default, it is not obligatory to select products for all the slots to order a configurable bundle.
+By default, it's not obligatory to select products for all the slots to order a configurable bundle.
 
 Schematically, a configurable bundle looks as follows:
 ![Config Bundle Schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/slots+scheme.png)
@@ -197,7 +197,7 @@ The order looks as follows:
     * Product B x1
 
 
-If a configurable bundle contains non-splittable products and its quantity is above 1, it is not split.
+If a configurable bundle contains non-splittable products and its quantity is above 1, it's not split.
 
 For example, a Storefront User places the order with the following item:
 

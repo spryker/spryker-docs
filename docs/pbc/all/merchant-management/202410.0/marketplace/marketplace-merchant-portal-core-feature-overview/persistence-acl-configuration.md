@@ -52,7 +52,7 @@ See the complete configuration of the `PersistenceAcl` module at [AclEntityMetad
 
 ## How to extend the initial Persistence ACL configuration
 Even though the Merchant Portal comes with the Persistence ACL configuration, which is fully ready for the full-fledged merchant operation and provides data protection, you can extend or override this configuration. To do this, implement `\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface`.
-To override the rules that are created automatically when creating a merchant and a user's merchant, it is enough to override such methods as:
+To override the rules that are created automatically when creating a merchant and a user's merchant, it's enough to override such methods as:
 - `\Spryker\Zed\AclMerchantPortal\AclMerchantPortalConfig::getMerchantAclRoleEntityRules()`
 - `\Spryker\Zed\AclMerchantPortal\AclMerchantPortalConfig::getMerchantUserAclRoleEntityRules()`
 

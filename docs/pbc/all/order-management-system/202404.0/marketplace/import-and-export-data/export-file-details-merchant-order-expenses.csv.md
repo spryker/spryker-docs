@@ -17,14 +17,14 @@ These are the header fields included in the `merchant_order_expenses.csv` file.
 | 3 | shipment_id |   | Number |   | Merchant order shipment identification. |
 | 4 | canceled_amount |   | Number | Default = 0 | Merchant order expense canceled amount. |
 | 5 | discount_amount_aggregation |   | Number | Default = 0 | Merchant order expense discount amount aggregation. |
-| 6 | gross_price | &check; | Number | Original value is multiplied by 100 before it is stored in this field. | Merchant order gross price of the expense. |
-| 7 | name |   | String | Original value is multiplied by 100 before it is stored in this field. | Merchant order name of the expense. |
-| 8 | net_price |   | Number | Original value is multiplied by 100 before it is stored in this field. | Merchant order net price of the expense. |
-| 9 | price |   | Number | Original value is multiplied by 100 before it is stored in this field. | Merchant order price of the expense. |
-| 10 | price_to_pay_aggregation |   | Number | Original value is multiplied by 100 before it is stored in this field. | Merchant order expense price to pay aggregation. |
-| 11 | refundable_amount |   | Number | Original value is multiplied by 100 before it is stored in this field. | Merchant order refundable amount of the expense. |
-| 12 | tax_amount |   | Number | Original value is multiplied by 100 before it is stored in this field. | Merchant order tax amount of the expense. |
-| 13 | tax_amount_after_cancellation |   | Number | Original value is multiplied by 100 before it is stored in this field. | Merchant order expense tax amount after cancellation. |
+| 6 | gross_price | &check; | Number | Original value is multiplied by 100 before it's stored in this field. | Merchant order gross price of the expense. |
+| 7 | name |   | String | Original value is multiplied by 100 before it's stored in this field. | Merchant order name of the expense. |
+| 8 | net_price |   | Number | Original value is multiplied by 100 before it's stored in this field. | Merchant order net price of the expense. |
+| 9 | price |   | Number | Original value is multiplied by 100 before it's stored in this field. | Merchant order price of the expense. |
+| 10 | price_to_pay_aggregation |   | Number | Original value is multiplied by 100 before it's stored in this field. | Merchant order expense price to pay aggregation. |
+| 11 | refundable_amount |   | Number | Original value is multiplied by 100 before it's stored in this field. | Merchant order refundable amount of the expense. |
+| 12 | tax_amount |   | Number | Original value is multiplied by 100 before it's stored in this field. | Merchant order tax amount of the expense. |
+| 13 | tax_amount_after_cancellation |   | Number | Original value is multiplied by 100 before it's stored in this field. | Merchant order expense tax amount after cancellation. |
 | 14 | tax_rate |   | Number |   | Merchant order tax rate of the expense. |
 | 15 | type |   | String |   | Merchant order type of expense. |
 | 16 | expense_created_at | &check; | Date Time |   | Merchant order timestamp of this sales expense creation. |

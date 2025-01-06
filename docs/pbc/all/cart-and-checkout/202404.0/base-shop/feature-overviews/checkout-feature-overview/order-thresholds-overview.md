@@ -95,7 +95,7 @@ All the thresholds have a store relation. If you have a multi-store and multi-cu
 
 
 ## Merchant order thresholds
-A *merchant order threshold* is a threshold that is applied to the customers belonging to the [merchant relation](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html) for which it is defined.   
+A *merchant order threshold* is a threshold that is applied to the customers belonging to the [merchant relation](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html) for which it's defined.   
 
 If global and merchant order thresholds are defined, both are applied to the customers' orders belonging to the merchant relation.
 

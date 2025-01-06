@@ -16,7 +16,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/measurement-units-feature-overview.html
 ---
 
-The *Measurement Units* feature lets you sell products by any unit of measure defined by the shop administrator. For example, apples can be offered in "Item" or "Kilogram", cables can be offered in "Centimeter", "Meter" or "Feet". To support alternate units of measure, there must be a base unit value relative to which all the internal conversions and calculations will be made. Such value is referred to as a base unit. The base unit is assigned to abstract products, and by default, it is "item"; however, it can be changed to any other unit.
+The *Measurement Units* feature lets you sell products by any unit of measure defined by the shop administrator. For example, apples can be offered in "Item" or "Kilogram", cables can be offered in "Centimeter", "Meter" or "Feet". To support alternate units of measure, there must be a base unit value relative to which all the internal conversions and calculations will be made. Such value is referred to as a base unit. The base unit is assigned to abstract products, and by default, it's "item"; however, it can be changed to any other unit.
 
 Besides the base unit, the shop owner can define *sales units*—alternate units of measure in which items will be offered in the shop. Sales units are assigned to concrete products, but if sales units are not defined, the *base unit* is used as a default sales unit. If there are several sales units and no default sales unit is defined, then the first unit to show will be the first in alphabetical order.
 
@@ -30,7 +30,7 @@ For example, you might have bought a quintal of apples, but want to use kilogram
 
 {% endinfo_block %}
 
-The shop owner can define if the conversion factor between base and sales units should be displayed on the webshop. If it is set to `true`, then:
+The shop owner can define if the conversion factor between base and sales units should be displayed on the webshop. If it's set to `true`, then:
 
 | EXAMPLE | DISPLAY VALUE | PRODUCT DETAILS PAGE |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ There can be two types of conversions in the system:
 * *Global conversions*—are defined in the code already (like from cm to meter).
 * *Product-specific conversions*—are defined per product (like from one meter of cable to its weight).
 
-If a global unit conversion exists between the base and sales unit, then factor and precision fields are optional. If no global unit conversion exists between the base and sales unit, then factor and precision fields are mandatory. If precision is "null", then the information is taken from the product measurement unit's default_precision (default value is 1).
+If a global unit conversion exists between the base and sales unit, then factor and precision fields are optional. If no global unit conversion exists between the base and sales unit, then factor and precision fields are mandatory. If precision is "null", then the information is taken from the product measurement unit is default_precision (default value is 1).
 
 | CORE LEVEL| PROJECT LEVEL |
 | --- | --- |

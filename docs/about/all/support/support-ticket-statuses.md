@@ -9,7 +9,7 @@ redirect_from:
 - /docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html
 ---
 
-When you report an issue, and we discover an underlying problem with Spryker, we create a Jira Bug Ticket. Then, this ticket is handed over to our development department, and our colleagues evaluate how to address the problem best and resolve it. After the issue is resolved, it is then released to our repositories.
+When you report an issue, and we discover an underlying problem with Spryker, we create a Jira Bug Ticket. Then, this ticket is handed over to our development department, and our colleagues evaluate how to address the problem best and resolve it. After the issue is resolved, it's then released to our repositories.
 
 ## Status descriptions
 

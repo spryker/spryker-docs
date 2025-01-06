@@ -89,7 +89,7 @@ Alternatively, you can check the script of the step in the environment's deploy 
 
 ![pre-deploy-file]
 
-In this example, the `scheduler:suspendddddddddddd` is misspelled, and it is the root cause of the issue.
+In this example, the `scheduler:suspendddddddddddd` is misspelled, and it's the root cause of the issue.
 
 
 {% info_block infoBox "Debugging pre-deploy scripts" %}

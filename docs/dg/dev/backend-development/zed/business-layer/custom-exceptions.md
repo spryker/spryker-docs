@@ -1,6 +1,6 @@
 ---
 title: Custom exceptions
-description: When you need to throw an exception, you should define your own type of exception.
+description: Define and handle custom exceptions in Spryker's Business Layer to streamline error management and ensure clean code. Create and manage  exceptions effectively.
 last_updated: Sep 27, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/custom-exceptions
@@ -14,7 +14,7 @@ related:
     link: docs/dg/dev/backend-development/zed/business-layer/business-models.html
 ---
 
-To throw an exception, you need to define your own type of exception. Later, it is much easier to handle exceptions when the type represents a specific type of error.
+To throw an exception, you need to define your own type of exception. Later, it's much easier to handle exceptions when the type represents a specific type of error.
 
 {% info_block errorBox %}
 

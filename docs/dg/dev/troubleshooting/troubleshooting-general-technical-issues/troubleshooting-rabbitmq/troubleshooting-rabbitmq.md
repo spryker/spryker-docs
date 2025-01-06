@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting RabbitMQ
-description: Troubleshoot RabbitMQ issues
+description: Common issues that may occur with RabbitMQ and how to troubleshoot and resolve those issues within you Spryker based project.
 template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/troubleshooting-rabbitmq.html

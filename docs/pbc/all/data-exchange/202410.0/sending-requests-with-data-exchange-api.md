@@ -310,7 +310,7 @@ For example, configure `isCreatable: false` for `iso3_code` and send the same re
 ```
 
 
-Certain database-specific configurations may result in issues independent of entity configurations. For example, with MariaDB, it is impossible to set the ID value for an auto-incremented field. Additionally, the `iso2_code` field in the `spy_country` table must have a unique value. Therefore, before creating a new record, you need to make sure you are not passing a duplicate value for this field. If a duplicate value is passed, the following is returned:
+Certain database-specific configurations may result in issues independent of entity configurations. For example, with MariaDB, it's impossible to set the ID value for an auto-incremented field. Additionally, the `iso2_code` field in the `spy_country` table must have a unique value. Therefore, before creating a new record, you need to make sure you are not passing a duplicate value for this field. If a duplicate value is passed, the following is returned:
 
 ```json
 [
@@ -427,7 +427,7 @@ If `id_country` is not found, the following is returned:
 
 {% info_block infoBox %}
 
-Similarly to the `POST` request, it is important to consider database-specific configurations when sending a `PATCH` request.
+Similarly to the `POST` request, it's important to consider database-specific configurations when sending a `PATCH` request.
 
 {% endinfo_block %}
 
@@ -636,7 +636,7 @@ to the child entities based on the newly created parent entity's ID.
 By default, the Data Exchange API uses a transactional approach to save data. If an error occurs during the saving process, the entire transaction is rolled back, and no data is saved. However, in some cases, you may want to save data non-transactionally. In the non-transactional mode, the API wraps each entity and its related records (if present in the request) in a separate transaction.
 
 To enable the non-transactional behavior, you need to set the `X-Is-Transactional` with the value `false` in the request.
-In the following example, the first entity will be saved successfully, while the second entity won't be saved due to the missing `rate` field.
+In the following example, the first entity will be saved successfully, while the second entity won't be saved because of the missing `rate` field.
 
 
 ```bash
@@ -676,7 +676,7 @@ Content-Length: 445
 ```
 
 
-Due to the non-transactional mode, the user will receive a response with the saved entity in the `data` field and an error message in the `error` field.
+Because of the non-transactional mode, the user will receive a response with the saved entity in the `data` field and an error message in the `error` field.
 
 ```json
 {

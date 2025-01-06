@@ -92,7 +92,7 @@ If the test failed, you will see the passed message on the console, which should
 
 ## Use as less mocks as possible
 
-Testing single units of your application is a good approach, however, it has some drawbacks as described in the [Test API](#test-api) section. The more you mock, the less you really test. Besides, it is very common to forget to update mocks, which leads to even more issues in your code.
+Testing single units of your application is a good approach, however, it has some drawbacks as described in the [Test API](#test-api) section. The more you mock, the less you really test. Besides, it's very common to forget to update mocks, which leads to even more issues in your code.
 
 Of course, you can mock all the dependencies of a model under test, but, most likely, that just adds unneeded overhead to your test. In many cases, let's say at least in the happy case, your code should work with the given dependencies. Testing exceptional cases very often requires mocking to be able to test the un-happy cases. In this case, you should also try to use as little mocks as possible to get the most coverage out of a few lines of test code.
 

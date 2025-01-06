@@ -263,7 +263,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a category image is created, updated, or deleted, it is exported or removed from Redis accordingly.
+Make sure that when a category image is created, updated, or deleted, it's exported or removed from Redis accordingly.
 
 {% endinfo_block %}
 

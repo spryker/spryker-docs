@@ -345,7 +345,7 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-When a category product assignment is changed through ORM, make sure it is exported to Redis.
+When a category product assignment is changed through ORM, make sure it's exported to Redis.
 
 | STORAGE TYPE | TARGET ENTITY           | EXAMPLE EXPECTED DATA IDENTIFIER     |
 |--------------|-------------------------|--------------------------------------|

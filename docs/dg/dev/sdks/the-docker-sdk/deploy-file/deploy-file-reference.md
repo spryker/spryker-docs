@@ -345,7 +345,7 @@ image:
 Defines PHP settings.
 {% info_block warningBox "Memory Limits" %}
 
-Please note that the maximum recommended PHP memory limit is 2048M. Going above this limit is rarely necessary and can lead to stability and performance issues in your environment. Test any configuration change carefully in a non-production setting.
+Please note that the maximum recommended PHP memory limit's 2048M. Going above this limit's rarely necessary and can lead to stability and performance issues in your environment. Test any configuration change carefully in a non-production setting.
 
 {% endinfo_block %}
 
@@ -852,7 +852,7 @@ Defines the composer settings to be used during deployment.
 ## Services
 
 You can configure and use external tools that are shipped with Spryker in Docker as services.
-If a service has a dedicated configuration, it is configured and run when the current environment is set up and executed.
+If a service has a dedicated configuration, it's configured and run when the current environment is set up and executed.
 
 
 The following services are supported:

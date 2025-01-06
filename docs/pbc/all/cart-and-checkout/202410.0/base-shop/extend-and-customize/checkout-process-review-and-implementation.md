@@ -1,6 +1,6 @@
 ---
 title: Checkout process review and implementation
-description: This document provides an overview of the checkout process and how it is implemented in Spryker.
+description: This document provides an overview of the checkout process and how it's implemented in Spryker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checkout-process-review-and-implementation
@@ -80,7 +80,7 @@ Symfony forms provide a mechanism to store data into objects without needing man
 
 ## Checkout form submission
 
-On form submission, the same processing starts with the difference that if form submit is detected, then the validation is called:
+On form submission, the same processing starts with the difference that if form submit's detected, then the validation is called:
 * If the form is invalid, then the view is rendered with validation errors.
 * If form data is valid, then `execute()` is called on the step that executes the step-related logic.
 

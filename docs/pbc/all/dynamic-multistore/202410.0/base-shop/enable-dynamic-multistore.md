@@ -10,7 +10,7 @@ This document describes how to enable [Dynamic Multistore](/docs/pbc/all/dynamic
 
 ## Prerequisites
 
-If your project version is below 202307.0, [Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/install-dynamic-multistore.html).
+If your project version is below 202307.0, [Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html).
 
 ### Enable Dynamic Multistore
 

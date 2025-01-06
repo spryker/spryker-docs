@@ -15,7 +15,7 @@ Inherited scope rules apply when you need to grant access to an entity (child) t
 
 Inheritance rules (child-parent relationship) are set in the configuration. For more details, see [Persistence ACL configuration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html).
 
-Inherited scope functionality has one unique feature: it is sufficient to have **read** access to the parent for successful inheritance for any operation (create/read/update/delete).
+Inherited scope functionality has one unique feature: it's sufficient to have **read** access to the parent for successful inheritance for any operation (create/read/update/delete).
 
 Here is an example where a user has a configuration where `SpyMerchantProductAbstract` inherits from `SpyMerchant`, and the user has 2 rules:
 
@@ -86,7 +86,7 @@ Rules with IDs `1`, `2`, `3` and `4` refer to one role (`fk_acl_role: 1`), and r
 - it will only find role `1` (since it has a rule for updating a product).
 - the role `2` will not be considered at all since it does not allow products to be updated.
 
-The context of a rule is determined by the role to which it is attached. Because of this, a user with such a set of roles and rules will be able to:
+The context of a rule is determined by the role to which it's attached. Because of this, a user with such a set of roles and rules will be able to:
 
 - perform CRUD actions for products in the DE store.
 - have read-only permissions for products in the US store.

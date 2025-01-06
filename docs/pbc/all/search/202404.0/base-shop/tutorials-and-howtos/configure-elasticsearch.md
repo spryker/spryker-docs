@@ -170,7 +170,7 @@ vendor/bin/console search:setup:source-map
 
 The first command installs indexes that are not created and [updates the mappings](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-put-mapping.html) based on the JSON configurations.
 
-If an index is created with the given settings, it is changed by running this process, but the mapping can be modified and changed.
+If an index is created with the given settings, it's changed by running this process, but the mapping can be modified and changed.
 
 In the development environment, to create new analyzers or change the index settings, you must delete the index and run the installation process again.
 

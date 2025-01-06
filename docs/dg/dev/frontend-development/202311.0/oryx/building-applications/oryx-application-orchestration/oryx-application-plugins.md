@@ -114,7 +114,7 @@ You can create custom plugins to change the behavior of an Oryx application. The
 - `apply()`: main life-cycle method.
 - `destroy()`: Optional cleanup method.
 
-When a plugin is registered to the Oryx application builder, it is _applied_ by invoking the `AppPlugin.apply()` method with an `App` instance as an argument. Then, the plugin behaves as configured.
+When a plugin is registered to the Oryx application builder, it's _applied_ by invoking the `AppPlugin.apply()` method with an `App` instance as an argument. Then, the plugin behaves as configured.
 
 The following additional plugin life-cycle methods are invoked around the main lifecycle of _all_ plugins:
 

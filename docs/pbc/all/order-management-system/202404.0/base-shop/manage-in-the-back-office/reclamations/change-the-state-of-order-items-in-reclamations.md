@@ -69,7 +69,7 @@ The following table describes the states you can select for order items.
 States flow:
 
 * **Payment pending**: the initial order status.
-* **Canceled**: state  of the order after it is canceled by the customer on the Storefront or by the Back Office user.
+* **Canceled**: state  of the order after it's canceled by the customer on the Storefront or by the Back Office user.
 * When you select **Pay**, the state becomes **Confirmed**.
 * When you select **Skip Timeout**, the state becomes **Exported**.
 * When you select **Cancel**, the state becomes **Cancelled**.

@@ -212,7 +212,7 @@ These actions should be enough to prepare a module-based importer to use.
 * Product Set Content Item Importer
 * Tax Importer
 
-Project-level importers work a little bit different. You can still use a module-based approach if you add a new data importer to the project level. Note that it is possible to append it directly to the `DataImport` module on the project level.
+Project-level importers work a little bit different. You can still use a module-based approach if you add a new data importer to the project level. Note that it's possible to append it directly to the `DataImport` module on the project level.
 
 To append a data importer to the DataImport module, do the following:
 

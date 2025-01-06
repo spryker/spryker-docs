@@ -39,7 +39,7 @@ Both accounts share the same configuration with different values. Braintree uses
 
 We use state machines for handling and managing orders and payments. To integrate Braintree payments, a state machine for Braintree should be created.
 
-A basic and fully functional state machine is already built (`BraintreePayPal01` and `BraintreeCreditCard01`). You can use the same state machine or build a new one. In case a new state machine has to be built, it is preferred to contact Braintree and confirm the new state machine design and functionality.
+A basic and fully functional state machine is already built (`BraintreePayPal01` and `BraintreeCreditCard01`). You can use the same state machine or build a new one. In case a new state machine has to be built, it's preferred to contact Braintree and confirm the new state machine design and functionality.
 
 The state machine commands and conditions trigger Braintree facade calls in order to perform the needed requests to Braintree. For simplicity, the Braintree facade uses the same calls for both credit card and PayPal payments and automatically distinguishes between the payment methods from the payment entity.
 

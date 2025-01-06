@@ -1,6 +1,6 @@
 ---
 title: Configure access to private repositories
-description: Configure your local environment to access private repositories.
+description: Learn how to configure your local environment to access private repositories for your Spryker project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-access-to-private-repositories

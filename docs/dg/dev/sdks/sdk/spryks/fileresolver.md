@@ -1,6 +1,6 @@
 ---
 title: FileResolver
-description: Find out how you can enable or disable the Code Sniffer when running Spryks
+description: Learn all about the FileResolver, a core part to file management within your Spryker Projects.
 template: howto-guide-template
 redirect_from:
 - /docs/sdk/dev/spryks/fileresolver.html

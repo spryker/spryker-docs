@@ -82,7 +82,7 @@ The table below describes all general configuration keys and their values.
 | `AdyenApiConstants::CAPTURE_ACTION_URL` | string | URL for the capture API call. |
 | `AdyenApiConstants::CANCEL_ACTION_URL` | string | URL for the cancel API call. |
 | `AdyenApiConstants::REFUND_ACTION_URL` | string | URL for the refund API call. |
-| `AdyenApiConstants::CANCEL_OR_REFUND_ACTION_URL` | string | URL for the API call to cancel payment. When it's not possible to know if the payment is already captured, it is used for the refund API call. |
+| `AdyenApiConstants::CANCEL_OR_REFUND_ACTION_URL` | string | URL for the API call to cancel payment. When it's not possible to know if the payment is already captured, it's used for the refund API call. |
 | `AdyenApiConstants::TECHNICAL_CANCEL_ACTION_URL` | string | URL for the technical cancellation API call. |
 | `AdyenApiConstants::ADJUST_AUTHORIZATION_ACTION_URL` | string | URL for the API call to adjust the authorized amount. |
 

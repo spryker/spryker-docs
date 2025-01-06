@@ -20,7 +20,7 @@ This document describes what Angular Services are, how to create and use them.
 ## Introduction
 
 The Angular Services are stateless objects which provide useful functionality. These functions can be invoked from any component of Angular, such as Components and Directives. It enables services to organize and share business logic, models, data and functions with other components of an Angular application and thus divide the web application into small, reusable logical units. A service typically encapsulates a particular aspect/function of the system (HTTP, part of business logic).
-Using Angular Services methods, the data is maintained throughout the life of an application, that is, it is never refreshed and is always available.
+Using Angular Services methods, the data is maintained throughout the life of an application, that is, it's never refreshed and is always available.
 
 #### Component communication using Angular services
 

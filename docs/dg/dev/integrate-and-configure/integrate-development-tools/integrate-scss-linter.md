@@ -19,7 +19,7 @@ related:
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
 ---
 
-Follow the steps below to integrate the [SCSS linter ](/docs/scos/dev/sdk/development-tools/scss-linter.html)into your project.
+Follow the steps below to integrate the [SCSS linter ](/docs/dg/dev/sdks/sdk/development-tools/scss-linter.html)into your project.
 
 ## 1. Install the dependencies
 

@@ -84,6 +84,7 @@ commonOptions = {
     /twitter.com\/[\.\w\-\/\?]+/,
     /www.optimise-it.de\/[\.\w\-\/\?]+/,
     /blackfire.io\/[\.\w\-\/\?]+/,
+    /www.cdata.com/virtuality\/[\.\w\-\/\?]+/,
     /dixa.com\/[\.\w\-\/\?]+/,
     /rxjs.dev\/[\.\w\-\/\?]+/,
     /www.blackfire.io\/[\.\w\-\/\?]+/,
@@ -96,10 +97,12 @@ commonOptions = {
     /code.visualstudio.com\/[\.\w\-\/\?]+/,
     /www.jetbrains.com\/[\.\w\-\/\?]+/,
     /docs.spring.io\/[\.\w\-\/\?]+/,
-    "http://redisdesktop.com/",
-    "https://developer.computop.com/display/EN/Test+Cards",
-    "https://www.centralbank.cy/",
-    "https://www.facebook.com/Spryker/"
+    /redisdesktop.com\/[\.\w\-\/\?]+/,
+    /developer.computop.com/display/EN/Test+Cards\/[\.\w\-\/\?]+/,
+    /www.centralbank.cy\/[\.\w\-\/\?]+/,
+    /dashboard.algolia.com/\/[\.\w\-\/\?]+/,    
+    /www.facebook.com/Spryker\/[\.\w\-\/\?]+/
+
   ],
   :ignore_files => [],
   :typhoeus => {
@@ -153,7 +156,8 @@ task :check_pbc do
     /docs\/pbc\/\w+\/[\w-]+\/202307\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202403\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/,
-    /docs\/pbc\/\w+\/[\w-]+\/202311\.0\/.+/,    
+    /docs\/pbc\/\w+\/[\w-]+\/202311\.0\/.+/,
+    /docs\/pbc\/\w+\/[\w-]+\/202505\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202404\.0\/.+/
   ]
   run_htmlproofer_with_retry("./_site", options)

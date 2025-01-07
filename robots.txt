@@ -7,4 +7,5 @@ Disallow: /
 {% else %}
 User-agent: *
 Allow: /
+Sitemap: https://docs.spryker.com/sitemap.xml
 {% endif %}

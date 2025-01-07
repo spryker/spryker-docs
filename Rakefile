@@ -89,7 +89,6 @@ commonOptions = {
     /rxjs.dev\/[\.\w\-\/\?]+/,
     /www.blackfire.io\/[\.\w\-\/\?]+/,
     /linux.die.net\/[\.\w\-\/\?]+/,
-    # check next url's
     /redisdesktop.com\/[\.\w\-\/\?]+/,
     /xdebug.org\/[\.\w\-\/\?]+/,
     /www.javaworld.com\/[\.\w\-\/\?]+/,
@@ -100,7 +99,7 @@ commonOptions = {
     /redisdesktop.com\/[\.\w\-\/\?]+/,
     /developer.computop.com/display/EN/Test+Cards\/[\.\w\-\/\?]+/,
     /www.centralbank.cy\/[\.\w\-\/\?]+/,
-    /dashboard.algolia.com/\/[\.\w\-\/\?]+/,    
+    /dashboard.algolia.com/\/[\.\w\-\/\?]+/,
     /www.facebook.com/Spryker\/[\.\w\-\/\?]+/
 
   ],

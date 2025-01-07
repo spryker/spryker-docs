@@ -84,7 +84,7 @@ commonOptions = {
     /twitter.com\/[\.\w\-\/\?]+/,
     /www.optimise-it.de\/[\.\w\-\/\?]+/,
     /blackfire.io\/[\.\w\-\/\?]+/,
-    /www.cdata.com/virtuality\/[\.\w\-\/\?]+/,
+    /www.cdata.com\/[\.\w\-\/\?]+/,
     /dixa.com\/[\.\w\-\/\?]+/,
     /rxjs.dev\/[\.\w\-\/\?]+/,
     /www.blackfire.io\/[\.\w\-\/\?]+/,

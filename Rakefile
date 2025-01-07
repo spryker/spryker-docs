@@ -97,10 +97,10 @@ commonOptions = {
     /www.jetbrains.com\/[\.\w\-\/\?]+/,
     /docs.spring.io\/[\.\w\-\/\?]+/,
     /redisdesktop.com\/[\.\w\-\/\?]+/,
-    /developer.computop.com/display/EN/Test+Cards\/[\.\w\-\/\?]+/,
+    /developer.computop.com\/[\.\w\-\/\?]+/,
     /www.centralbank.cy\/[\.\w\-\/\?]+/,
     /dashboard.algolia.com/\/[\.\w\-\/\?]+/,
-    /www.facebook.com/Spryker\/[\.\w\-\/\?]+/
+    /www.facebook.com\/[\.\w\-\/\?]+/
 
   ],
   :ignore_files => [],

@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/migration-and-integration/202108.0/development-tools/web-profiler.html
 related:
   - title: Web Profiler Widget for Yves
-    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.htmlintegrating-web-profiler-widget-for-yves.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
   - title: Integrating Formatter
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-formatter.html
   - title: Integrating SCSS linter
@@ -18,7 +18,7 @@ related:
   - title: Integrating TS linter
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-ts-linter.html
   - title: Integrating Web Profiler Widget for Yves
-    link: https://docs.spryker.com/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
+    link: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
 ---
 
 The _Web Profiler_ provides a toolbar for debugging and informational purposes. The toolbar is located at the bottom of a loaded page.

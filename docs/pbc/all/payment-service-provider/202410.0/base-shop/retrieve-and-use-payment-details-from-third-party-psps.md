@@ -1,7 +1,7 @@
 ---
 title: Retrieve and use payment details from third-party PSPs
 description: Learn how to retrieve and use payment details from a third-party payment service providers
-last_updated: Aug 8, 2024
+last_updated: Jan 8, 2025
 template: howto-guide-template
 ---
 
@@ -123,3 +123,13 @@ When a third-party PSP supports this feature, your shop receives asynchronous me
 To use the data of the `spy_sales_payment_detail` table, you need to combine the data from the table with the entity you are fetching from the database to which this payment detail is related.
 
 When the payment is used in the normal order process, the payment detail can be combined by using `spy_sales_order.order_reference` and `spy_sales_payment_detail.entity_reference`.
+
+## Payment Details on the Sales order Overview Page
+
+You can find specific data of a Payment Service Provider on the Sales order overview page. The data is displayed in the `Payment Details` section.
+
+There are specific data for different Payment Service Providers and the data may differ depending on the payment method used.
+
+The default data provided for all Payment Apps are:
+- Transaction Id - The unique identifier of the transaction of the Payment Service Provider. Can be used to find payments in the Payment Service Provider's system.
+- Payment App specific payment status - It consists of the state name and the date-time this state was reached. The state name of the App does not correlate to the states from the State-machine, they are PSP App specific states.

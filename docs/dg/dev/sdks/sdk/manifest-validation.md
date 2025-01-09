@@ -1,6 +1,6 @@
 ---
 title: Manifest validation
-description: The manifest validation validates the YAML structure for a task.
+description: Learn about the Manifest validation feature where it validates the YAML structure for a task within your Spryker projects.
 template: howto-guide-template
 redirect_from:
 - /docs/sdk/dev/manifest-validation.html

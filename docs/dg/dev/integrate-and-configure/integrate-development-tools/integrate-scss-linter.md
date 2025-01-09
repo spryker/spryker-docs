@@ -1,6 +1,6 @@
 ---
 title: Integrate SCSS linter
-description: Learn how to integrate the SCSS linter into your project
+description: Learn how to enable and integrate the SCSS linter and its dependencies for your Spryker based project
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/scss-linter-integration-guide
@@ -10,16 +10,16 @@ redirect_from:
   - /docs/scos/dev/migration-and-integration/202108.0/development-tools/scss-linter-integration-guide.html
 related:
   - title: Integrating Formatter
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-formatter.html
   - title: Integrating TS linter
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-ts-linter.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-ts-linter.html
   - title: Integrating Web Profiler for Zed
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
   - title: Integrating Web Profiler Widget for Yves
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
 ---
 
-Follow the steps below to integrate the [SCSS linter ](/docs/scos/dev/sdk/development-tools/scss-linter.html)into your project.
+Follow the steps below to integrate the [SCSS linter](/docs/dg/dev/sdks/sdk/development-tools/scss-linter.html) into your project.
 
 ## 1. Install the dependencies
 

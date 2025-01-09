@@ -32,7 +32,7 @@ To implement a fix for this vulnerability, update the sales module.
 
 {% info_block infoBox "Recommended upgrade is 11.36.2" %}
 
-Spryker recommends upgrading to 11.36.2 because it is the continuous latest stable version. However, due to the increased migration effort caused by 11.31.0 (Propel timestamp type fix), 11.33.0 (PHP8.0), and 11.36.0 (Symfony 6), you might need to consider upgrading to the nearest possible patch (see the following details).
+Spryker recommends upgrading to 11.36.2 because it's the continuous latest stable version. However, because of the increased migration effort caused by 11.31.0 (Propel timestamp type fix), 11.33.0 (PHP8.0), and 11.36.0 (Symfony 6), you might need to consider upgrading to the nearest possible patch (see the following details).
 
 {% endinfo_block %}
 

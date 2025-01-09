@@ -1,7 +1,7 @@
 ---
 title: Algolia
 description: Algolia empowers Builders with Search and Recommendation services to create world-class digital experiences.
-last_updated: June 26 2023
+last_updated: Nov 24, 2024
 template: howto-guide-template
 redirect_from:
   - /docs/pbc/all/search/202311.0/third-party-integrations/algolia.html  -
@@ -10,7 +10,7 @@ redirect_from:
 
 ![algolia-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/algolia-hero.png)
 
-Spryker is shipped with [Elasticsearch](https://www.elastic.co/elasticsearch/) as the default search engine. However, you can replace it with [Algolia](https://www.algolia.com/). The Algolia search engine stands out due to its performance. With the Algolia app, your users can conduct advanced searches of active concrete products in your store.
+Spryker is shipped with [Elasticsearch](https://www.elastic.co/elasticsearch/) as the default search engine. However, you can replace it with [Algolia](https://www.algolia.com/). The Algolia search engine stands out because of its performance. With the Algolia app, your users can conduct advanced searches of active concrete products in your store.
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -30,9 +30,11 @@ Your users can search for active concrete products by the following attributes:
 - Description
 - Keywords
 
-{% info_block infoBox "Note" %}
+In Algolia Dashboard, you can configure other attributes to be searchable.
 
-Spryker groups all concrete products that belong to the same abstract product if a search query returns the concrete products.
+{% info_block infoBox "" %}
+
+In search results, Spryker groups all concrete products belonging to the same abstract product.
 
 {% endinfo_block %}
 

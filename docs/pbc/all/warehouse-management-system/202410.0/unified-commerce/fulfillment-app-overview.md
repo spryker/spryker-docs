@@ -1,6 +1,6 @@
 ---
 title: Fulfillment App overview
-description: Fulfillment App streamlines the process of fulfilling orders.
+description: Fulfillment App streamlines the process of fulfilling orders, learn all you need to know about the Spryker Fulfilment app for your Unified Commerce Store.
 last_updated: Oct 3, 2023
 template: concept-topic-template
 ---
@@ -18,7 +18,7 @@ To give a warehouse user access to fulfilling orders in a warehouse, you need to
 
 ## Fulfillment App
 
-Fulfillment App is an app used by warehouse users to fulfill orders. When a customer places an order, it is assigned to a warehouse that can fulfill the order. In the assigned warehouse, a warehouse user uses the Fulfillment App to gather and ship the order items.
+Fulfillment App is an app used by warehouse users to fulfill orders. When a customer places an order, it's assigned to a warehouse that can fulfill the order. In the assigned warehouse, a warehouse user uses the Fulfillment App to gather and ship the order items.
 
 ![Picklists](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/unified-commerce/fulfillment-app-feature-overview.md/picklists.png)
 

@@ -230,7 +230,7 @@ class SearchRouter implements SearchRouterInterface
 }
 ```
 
-If you want to use ElasticSearch for specific cases, you have to create a plugin on the project level
+If you want to use Elasticsearch for specific cases, you have to create a plugin on the project level
 
 **ElasticSearchHandlerPlugin**
 

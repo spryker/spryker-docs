@@ -1173,8 +1173,8 @@ In case of a successful update, the endpoint responds with information that can 
 | addresses | iso2Code | String | Specifies an ISO 2 Country Code to use. |
 | addresses | company | String | Specifies the customer's company. |
 | addresses | phone | String | Specifies the customer's phone number. |
-| addresses | isDefaultShipping | String | Defines if it is the default shipping address of the customer. |
-| addresses | isDefaultBilling | String | Defines if it is the default billing address of the customer. |
+| addresses | isDefaultShipping | String | Defines if it's the default shipping address of the customer. |
+| addresses | isDefaultBilling | String | Defines if it's the default billing address of the customer. |
 | shipments | Items | Array | A list of items in the shipment. |
 | shipments | requestedDeliveryDate | Date | Desired delivery date. |
 | shipments | shippingAddress | Object | The address to which this shipment will be delivered. |
@@ -1221,7 +1221,7 @@ In case of a successful update, the endpoint responds with information that can 
 
 | CODE | REASON |
 | --- | --- |
-| 400 | Bad request. This error can occur due to the following reasons:<ul><li>The POST data is incorrect.</li><li>Neither **Authorization** nor **X-Anonymous-Customer-Unique-Id** headers were provided in the request.</li></ul> |
+| 400 | Bad request. This error can occur because of the following reasons:<ul><li>The POST data is incorrect.</li><li>Neither **Authorization** nor **X-Anonymous-Customer-Unique-Id** headers were provided in the request.</li></ul> |
 | 422 | The checkout data is incorrect. |
 | 1101 | Checkout data is invalid. |
 | 1102 | Order cannot be placed. |

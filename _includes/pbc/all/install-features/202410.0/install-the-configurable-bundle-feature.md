@@ -612,7 +612,7 @@ class ConfigurableBundlePageSearchConfig extends SprykerConfigurableBundlePageSe
     * from `spy_configurable_bundle_template_page_search` table to Elasticsearch
 
 4. Create or edit a configurable bundle template or template slot through ORM.
-  Make sure it is exported to Redis or Elasticsearch accordingly.
+  Make sure it's exported to Redis or Elasticsearch accordingly.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |

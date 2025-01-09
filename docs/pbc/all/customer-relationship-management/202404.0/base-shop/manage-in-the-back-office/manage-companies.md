@@ -34,7 +34,7 @@ To start managing companies, go to **Customers&nbsp;<span aria-label="and then">
 
 {% info_block warningBox "Company headquarters" %}
 
-Once a company is created, one business unit for it is created automatically. This business unit is the company's headquarters. To edit it, see [Edit company units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-units/edit-company-units.html).
+Once a company is created, one business unit for it's created automatically. This business unit is the company's headquarters. To edit it, see [Edit company units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-units/edit-company-units.html).
 
 {% endinfo_block %}
 

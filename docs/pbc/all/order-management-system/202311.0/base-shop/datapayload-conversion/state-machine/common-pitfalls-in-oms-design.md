@@ -212,7 +212,7 @@ The unused state may have a missing transition.
 **Issue:** During the last transition in the callback from `picking finished` to `ready for recalculation`, a Jenkins job starts the `check-condition` command. Because of the command, the check-condition takes only a part of order items and pushes them forward. The next job executes the remaining order items with a delay, so many commands are triggered twice.
 ![saving-states-2](https://github.com/xartsiomx/spryker-docs/assets/110463030/1fd1b30f-00dc-49eb-8d35-37583e140f5e)
 
-**Solution:** This is possible because, during the execution of `\Spryker\Zed\Oms\Business\OrderStateMachine\OrderStateMachine::saveOrderItems`, the system stores data per item. That's because the core logic expects that there may be more than one order in transition. To avoid blocking all of them due to a potential failed order, transition is executed per item. To change that, group order items per order and change the transaction behavior to store all order items per one transaction. Then, a check-condition or any other command can’t take order items partially.
+**Solution:** This is possible because, during the execution of `\Spryker\Zed\Oms\Business\OrderStateMachine\OrderStateMachine::saveOrderItems`, the system stores data per item. That's because the core logic expects that there may be more than one order in transition. To avoid blocking all of them because of a potential failed order, transition is executed per item. To change that, group order items per order and change the transaction behavior to store all order items per one transaction. Then, a check-condition or any other command can’t take order items partially.
 
 ## LockedStateMachine
 
@@ -220,7 +220,7 @@ When multiple processes can push forward an order from one source state, we reco
 
 1. It implements the same interface as a common StateMachine and has locks for all methods except the `check-condition` command.
 
-2. Lock works based on `spy_state_machine_lock` table. Due to the nature of MySQL, you may face deadlocks, which you need to [handle properly](https://dev.mysql.com/doc/refman/8.4/en/innodb-deadlocks-handling.html). Also, the same operation in MySQL takes more time than memory storage, like Redis. By default, locking works on the order item level, but, in most cases, using locks on the order level is more efficient.
+2. Lock works based on `spy_state_machine_lock` table. Because of the nature of MySQL, you may face deadlocks, which you need to [handle properly](https://dev.mysql.com/doc/refman/8.4/en/innodb-deadlocks-handling.html). Also, the same operation in MySQL takes more time than memory storage, like Redis. By default, locking works on the order item level, but, in most cases, using locks on the order level is more efficient.
 
 ## Speed up oms:check-condition: parallel execution and run often than once per minute
 

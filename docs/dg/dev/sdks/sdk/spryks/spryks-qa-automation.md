@@ -1,6 +1,6 @@
 ---
 title: Spryks QA automation
-description: QA automation lets you run QA tools and unit tests required by Spryker
+description: Learn all about QA automation lets you run QA tools and unit tests required by Spryker
 template: howto-guide-template
 redirect_from:
 - /docs/sdk/dev/spryks/qa-automation.html

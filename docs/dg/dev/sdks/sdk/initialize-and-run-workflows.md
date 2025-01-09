@@ -1,6 +1,6 @@
 ---
 title: Initialize and run workflows
-description: Learn about the Spryker SDK telemetry configuration.
+description: Learn about the Spryker SDK telemetry configuration and how you can Initialise and run workflows within your Spryker SDK project.
 template: howto-guide-template
 last_updated: Dec 16, 2022
 redirect_from:

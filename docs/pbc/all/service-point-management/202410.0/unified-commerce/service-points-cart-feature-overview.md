@@ -1,6 +1,6 @@
 ---
 title: Service Points Cart feature overview
-description: General overview of the Service Points Cart feature
+description: General overview of the Service Points Cart feature for your Spryker Unified Commerce projects
 template: concept-topic-template
 last_updated: Dec 4, 2023
 ---

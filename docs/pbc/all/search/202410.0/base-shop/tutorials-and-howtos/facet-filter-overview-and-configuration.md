@@ -1,6 +1,6 @@
 ---
 title: Facet filter overview and configuration
-description: Facets provide aggregated data based on a search query.
+description: Learn how to configure Facet filters allowing customers to quickly locate products within your Spryker shop.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-working-filter-facets

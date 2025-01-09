@@ -13,7 +13,7 @@ related:
     link: docs/dg/dev/backend-development/plugins/plugins.html
 ---
 
-To use a new feature projects most likely need to add some plugins to their `*DependencyProvider`. Currently, it is not easy for projects to integrate a new feature due to the difficulties in identifying to which *`DependencyProvider` plugin A* of *module B* can be added to bring *functionality X*.
+To use a new feature projects most likely need to add some plugins to their `*DependencyProvider`. Currently, it's not easy for projects to integrate a new feature because of the difficulties in identifying to which *`DependencyProvider` plugin A* of *module B* can be added to bring *functionality X*.
 
 To see which [Plugin](/docs/dg/dev/backend-development/plugins/plugins.html) can be used in which `DependencyProvider` we added a feature called **Plugin Overview**. This feature gives you several ways of displaying our plugin usages. The feature brings a console command (`vendor/bin/console dev:plugin-usage:dump`) and a [GUI in Zed](https://zed.mysprykershop.com/development/dependency-provider-plugin-usage).
 

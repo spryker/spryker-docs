@@ -22,7 +22,7 @@ Register the following plugins:
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | QuoteApprovalQuoteRequestQuoteCheckPlugin | Checks if the "Request For Quote" button should be shown on the cart page or not. | None | Spryker\Client\QuoteApproval\Plugin\QuoteRequest |
-| QuoteRequestQuoteApprovalUnlockPreCheckPlugin | Prevents quote unlock  by approval process when it is in quotation process. | None | Spryker\Zed\QuoteRequest\Communication\Plugin\QuoteApproval |
+| QuoteRequestQuoteApprovalUnlockPreCheckPlugin | Prevents quote unlock  by approval process when it's in quotation process. | None | Spryker\Zed\QuoteRequest\Communication\Plugin\QuoteApproval |
 | QuoteApprovalQuoteRequestPreCreateCheckPlugin | Checks if the quote doesn't have the status `waiting`. | None | Spryker\Zed\QuoteApproval\Communication\Plugin\QuoteRequest |
 
 **src/Pyz/Client/QuoteRequest/QuoteRequestDependencyProvider.php**

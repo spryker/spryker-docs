@@ -1,6 +1,6 @@
 ---
 title: "Deploy file inheritance: common use cases"
-description: Examples of using deploy file inheritance
+description: Learn about common use cases for deploy file inheritance and how you can enhance your Spryker projects.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 related:

@@ -11,7 +11,7 @@ redirect_from:
 
 ## Partner Information
 
-[ABOUT DATA VIRTUALITY](https://datavirtuality.com/)
+[ABOUT DATA VIRTUALITY](https://www.cdata.com/virtuality/)
 
 Data Virtuality successfully became the fastest growing big data start-up in Germany with offices in Leipzig, Frankfurt am Main and San Francisco.The Data Virtuality Platform enables detailed insights from real time and historical data with any BI tool. By combining data virtualization with an automated ETL engine, customers benefit from reducing their data integration effort by 80% and gaining faster business insights. Make your decisions based on facts. Become data driven while using and accessing all your data from multiple data sources! And everything just by using SQL.
 

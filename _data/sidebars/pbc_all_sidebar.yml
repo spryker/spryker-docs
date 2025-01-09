@@ -46,7 +46,7 @@ entries:
               - title: Set up
                 url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/set-up-amazon-quicksight.html
               - title: Install
-                url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.html                
+                url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.html
               - title: "Best practices: working with analytics"
                 url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/best-practices-working-with-analytics.html
               - title: Refresh analytics datasets
@@ -1247,6 +1247,8 @@ entries:
 
               - title: Add fields to Back Office forms
                 url: /docs/pbc/all/dynamic-multistore/base-shop/add-fields-to-back-office-forms.html
+              - title: Enable / Disable Dynamic Multistore
+                url: /docs/pbc/all/dynamic-multistore/base-shop/enable-dynamic-multistore.html
               - title: Delete stores
                 url: /docs/pbc/all/dynamic-multistore/base-shop/delete-stores.html
               - title: Import stores
@@ -1477,6 +1479,10 @@ entries:
                     nested:
                       - title: Marketplace Merchant
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html
+                      - title: Marketplace Merchant + Promotions & Discounts
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-promotions-and-discounts-feature.html
+                        include_versions:
+                        - "202505.0"
                       - title: Marketplace Merchant B2B Contract Requests
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-b2b-contract-requests-feature.html
                         include_versions:
@@ -1939,6 +1945,10 @@ entries:
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-marketplace-product-feature.html
                       - title: Marketplace Product Offer + Quick Add to Cart
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-quick-add-to-cart-feature.html
+                      - title: Marketplace Product Offer + Promotions & Discounts feature
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-promotions-and-discounts-feature.html
+                        include_versions:
+                        - "202505.0"
                       - title: Product Offer Shipment Availability
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-availability-feature.html
                       - title: Product Offer Shipment
@@ -2303,20 +2313,12 @@ entries:
                 url: /docs/pbc/all/payment-service-provider/base-shop/payments-feature-overview.html
               - title: Install and upgrade
                 nested:
-                  - title: Install features
-                    nested:
-                      - title: Payments
-                        url: /docs/pbc/all/payment-service-provider/base-shop/install-and-upgrade/install-the-payments-feature.html
-
-                  - title: Install Glue APIs
-                    nested:
-                      - title: Payments
-                        url: /docs/pbc/all/payment-service-provider/base-shop/install-and-upgrade/install-the-payments-glue-api.html
-
-                  - title: Upgrade modules
-                    nested:
-                      - title: Payment
-                        url: /docs/pbc/all/payment-service-provider/base-shop/install-and-upgrade/upgrade-the-payment-module.html
+                  - title: Install the Payments feature
+                    url: /docs/pbc/all/payment-service-provider/base-shop/install-and-upgrade/install-the-payments-feature.html
+                  - title: Install the Payments Glue API
+                    url: /docs/pbc/all/payment-service-provider/base-shop/install-and-upgrade/install-the-payments-glue-api.html
+                  - title: Upgrade the Payment module
+                    url: /docs/pbc/all/payment-service-provider/base-shop/install-and-upgrade/upgrade-the-payment-module.html
 
               - title: Import and export data
                 url: /docs/pbc/all/payment-service-provider/base-shop/import-and-export-data/payment-service-provider-data-import-and-export.html
@@ -2334,12 +2336,20 @@ entries:
                   - title: View payment methods
                     url: /docs/pbc/all/payment-service-provider/base-shop/manage-in-the-back-office/view-payment-methods.html
 
+              - title: Define return URLs for payments
+                url: /docs/pbc/all/payment-service-provider/base-shop/define-return-urls-for-payments.html
+                include_versions:
+                - "202410.0"
               - title: Debug payment integrations locally
                 url: /docs/pbc/all/payment-service-provider/base-shop/debug-payment-integrations-locally.html
               - title: Hydrate payment methods for an order
                 url: /docs/pbc/all/payment-service-provider/base-shop/hydrate-payment-methods-for-an-order.html
               - title: Interact with third party payment providers using Glue API
                 url: /docs/pbc/all/payment-service-provider/base-shop/interact-with-third-party-payment-providers-using-glue-api.html
+              - title: Payment method strategies
+                url: /docs/pbc/all/payment-service-provider/base-shop/payment-method-strategies.html
+                include_versions:
+                - "202410.0"
               - title: Retrieve and use payment details from third-party PSPs
                 url: /docs/pbc/all/payment-service-provider/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html
               - title: "Payments feature: Domain model and relationships"
@@ -2426,6 +2436,14 @@ entries:
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/configure-payone.html
                           - title: Disconnect Payone
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/disconnect-payone.html
+                          - title: Payment method flows
+                            nested:
+                              - title: PayOne Credit Card payment flow
+                                url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-credit-card-payment-flow.html
+                              - title: PayOne PayPal Express payment flow in headless applications
+                                url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-express-payment-flow-in-headless-applications.html
+                              - title: Payone PayPal payment flow
+                                url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-payment-flow.html
 
                       - title: Manual integration
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/manual-integration/payone-manual-integration.html
@@ -2596,10 +2614,23 @@ entries:
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html
                       - title: Connect and configure
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/connect-and-configure-stripe.html
-                      - title: Project guidelines
-                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe.html
                       - title: Disconnect
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/disconnect-stripe.html
+                      - title: Project guidelines
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-guidelines-for-stripe.html
+                        nested:
+                          - title: Embed the Stripe payment page as an iframe
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/embed-the-stripe-payment-page-as-an-iframe.html
+                          - title: Implement Stripe checkout as a hosted payment page
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-prerequisites-for-implementing-Stripe-checkout-as-a-hosted-payment-page.html
+                          - title: OMS configuration for Stripe
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/oms-configuration-for-stripe.html
+                          - title: Processing refunds with Stripe
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/processing-refunds-with-stripe.html
+                          - title: Sending additional data to Stripe
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/sending-additional-data-to-stripe.html
+                          - title: Stripe checkout with third-party frontends
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/stripe-checkout-with-third-party-frontends.html
 
                   - title: Unzer
                     url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/unzer/unzer.html
@@ -3829,10 +3860,23 @@ entries:
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/integrate-algolia.html
                     - title: Configure Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/configure-algolia.html
+                    - title: Customize Algolia
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/customize-algolia.html
+                      include_versions:
+                      - "202410.0"
                     - title: Disconnect Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/disconnect-algolia.html
-                    - title: Getting access to Algolia dashboard
+                    - title: Getting access to Algolia Dashboard
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/getting-access-to-algolia-dashboard.html
+                    - title: Integrate Algolia Personalization
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/integrate-algolia-personalization.html
+                      include_versions:
+                      - "202410.0"
+                    - title: Algolia Personalization with headless frontends
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/algolia-personalization-with-headless-frontends.html
+                      include_versions:
+                      - "202410.0"
+
                 - title: Visual Search powered by OpenAI
                   url: /docs/pbc/all/search/base-shop/third-party-integrations/visual-search-powered-by-openai/install-visual-search-powered-by-openai.html
                   include_versions:

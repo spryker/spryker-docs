@@ -29,7 +29,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-Sometimes it's needed to manually [synchronize or re-syncrhonize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html#published-data-re-generation) the published model data with Redis or ElasticSearch. To do that, you need to implement a synchronization plugin.
+Sometimes it's needed to manually [synchronize or re-syncrhonize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html#published-data-re-generation) the published model data with Redis or Elasticsearch. To do that, you need to implement a synchronization plugin.
 
 Follow these steps to implement and register a synchronization plugin.
 
@@ -115,7 +115,7 @@ The method descriptions:
 * `HelloWorldSynchronizationDataRepositoryPlugin::getResourceName()`—defines a resource name of the storage or search module for key generation.
 * `HelloWorldSynchronizationDataRepositoryPlugin::hasStore()`—defines if the entity implements a multi-store concept.
 * `HelloWorldSynchronizationDataRepositoryPlugin::getData()`—retrieves a collection of sync transfers based on the provided offset and limit.
-* `HelloWorldSynchronizationDataRepositoryPlugin::getParams()`—defines additional sync parameters for Redis or ElasticSearch.
+* `HelloWorldSynchronizationDataRepositoryPlugin::getParams()`—defines additional sync parameters for Redis or Elasticsearch.
 * `HelloWorldSynchronizationDataRepositoryPlugin::getQueueName()`—defines a queue name for synchonization.
 * `HelloWorldSynchronizationDataRepositoryPlugin::getSynchronizationQueuePoolName()`—defines the name of the synchronization queue pool for broadcasting messages.
 

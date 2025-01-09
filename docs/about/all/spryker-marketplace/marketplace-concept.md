@@ -18,7 +18,7 @@ The Spryker Marketplace solution supports two major types of marketplace models:
 
 * *Enterprise Marketplace*: This type of marketplace is an organization with existing e-commerce operations, which lets third-party merchants sell through its platform to enrich offerings and stimulate growth. In such cases, both merchants and a Marketplace administrator act as sellers.
 
-The Spryker Marketplace solution supports both B2C and B2B marketplaces. Besides, Spryker Marketplace is not a separate system. Instead, it is built as a set of extensions on top of Spryker Commerce OS, which makes upgrading to Marketplace straightforward and easy.
+The Spryker Marketplace solution supports both B2C and B2B marketplaces. Besides, Spryker Marketplace is not a separate system. Instead, it's built as a set of extensions on top of Spryker Commerce OS, which makes upgrading to Marketplace straightforward and easy.
 
 ![Marketplace concept](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Marketplace/Marketplace+Concept/marketplace-concept.png)
 

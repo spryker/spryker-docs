@@ -1,6 +1,6 @@
 ---
 title: "Best practices: Promote products with search preferences"
-description: Learn how to edit search preferences in the Back Office
+description: Learn how to edit search preferences in the Spryker Back Office using this best practices guide for your Spryker projects.
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:

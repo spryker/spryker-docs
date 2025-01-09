@@ -909,6 +909,8 @@ entries:
 
   - title: Internationalization and multi-store
     nested:
+      - title: Adding stores in a multi-database setup
+        url: /docs/dg/dev/internationalization-and-multi-store/adding-stores-in-a-multi-database-setup.html      
       - title: Handling internationalization
         url: /docs/dg/dev/internationalization-and-multi-store/handling-internationalization.html
       - title: Managing glossary keys
@@ -1620,8 +1622,23 @@ entries:
         url: /docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html
       - title: Retaining ACP apps when running destructive deployments
         url: /docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html
-      - title: APIs and overview diagrams for payment service providers
-        url: /docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.html
+      - title: APIs and flows for payment service providers
+        url: /docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/apis-and-flows-for-payment-service-providers.html
+        nested:
+          - title: Asynchronous API for payment service providers
+            url: /docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/asynchronous-api-for-payment-service-providers.html
+          - title: Configure and disconnect flows for payment service providers
+            url: /docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/configure-and-disconnect-flows-for-payment-service-providers.html
+          - title: Headless express checkout payment flow for payment service providers
+            url: /docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/headless-express-checkout-payment-flow-for-payment-service-providers.html
+          - title: Headless payment flow for payment service providers
+            url: /docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/headless-payment-flow-for-payment-service-providers.html
+          - title: Hosted payment page flow for payment service providers
+            url: /docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/hosted-payment-page-flow-for-payment-service-providers.html
+          - title: OMS payment flow for payment service providers
+            url: /docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/oms-payment-flow-for-payment-service-providers.html
+          - title: Synchronous API for payment service providers
+            url: /docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/synchronous-api-for-payment-service-providers.html
 #      - title: Develop an app
 #        url: /docs/dg/dev/acp/develop-an-app/develop-an-app.html
 #        nested:

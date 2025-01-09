@@ -1,6 +1,6 @@
 ---
 title: Developing with Spryker SDK
-description: You can install and use Spryker SDK for your development needs
+description: Learn how you can install and use Spryker SDK for your development needs with the dev enironment.
 template: howto-guide-template
 last_updated: Nov 22, 2022
 related:

@@ -1,5 +1,6 @@
 ---
 title: "Import file details: service_point_address.csv"
+description: Learn how to configure service point addresses via importing data through the service point address CSV file in your Spryker unified commerce project.
 last_updated: Nov 23, 2023
 template: data-import-template
 ---

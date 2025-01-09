@@ -1,6 +1,6 @@
 ---
 title: Set up XDebug profiling
-description: Learn how to setup XDebug profiling in a local development environment.
+description: Learn how to setup XDebug profiling in a local development environment for your Spryker based projects.
 template: howto-guide-templatel
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html

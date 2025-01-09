@@ -197,7 +197,7 @@ This opens the **Jobs** page where you can see the progress of restoration. Wait
 Restored DB is created and modified.
 
 
-### Re-sync data from the restored database to ElasticSearch and Redis
+### Re-sync data from the restored database to Elasticsearch and Redis
 
 1.  Connect to OpenVPN.
 

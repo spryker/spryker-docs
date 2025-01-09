@@ -712,7 +712,7 @@ Make sure that *category-node* and *category-tree* synchronization plugins works
 3.  Run the `console sync:data -r category_tree` command.
 4.  Check that, in your system, the storage entries are displayed with the `kv:category_node:{store}:{locale}:{id}` and `kv:category_tree:{store}:{locale}:{id}` masks.
 
-Make sure that, when a category is created or edited through ORM, it is exported to Redis and Elasticsearch accordingly.
+Make sure that, when a category is created or edited through ORM, it's exported to Redis and Elasticsearch accordingly.
 
 | STORAGE TYPE  | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 |---------------|---------------|----------------------------------|

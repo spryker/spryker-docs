@@ -1,6 +1,6 @@
 ---
 title: PHPStan
-description: Learn how to install and use PHPStan, a static code analyzer
+description: Learn how to install and use PHPStan, a static code analyzer within your Spryker SDK projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/phpstan
@@ -17,23 +17,21 @@ redirect_from:
   - /docs/scos/dev/sdk/development-tools/phpstan.html
 related:
   - title: Architecture sniffer
-    link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-  - title: Code sniffer
-    link: docs/scos/dev/sdk/development-tools/code-sniffer.html
+    link: docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html
   - title: Formatter
-    link: docs/scos/dev/sdk/development-tools/formatter.html
+    link: docs/dg/dev/sdks/sdk/development-tools/formatter.html
   - title: Performance audit tool- Benchmark
-    link: docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
+    link: docs/dg/dev/sdks/sdk/development-tools/benchmark-performance-audit-tool.html
   - title: SCSS linter
-    link: docs/scos/dev/sdk/development-tools/scss-linter.html
+    link: docs/dg/dev/sdks/sdk/development-tools/scss-linter.html
   - title: TS linter
-    link: docs/scos/dev/sdk/development-tools/ts-linter.html
+    link: docs/dg/dev/sdks/sdk/development-tools/ts-linter.html
   - title: Spryk code generator
-    link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html
+    link: docs/dg/dev/sdks/sdk/spryks/spryks.html
   - title: Static Security Checker
-    link: docs/scos/dev/sdk/development-tools/static-security-checker.html
+    link: docs/dg/dev/sdks/sdk/development-tools/static-security-checker.html
   - title: Tooling config file
-    link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
+    link: docs/dg/dev/sdks/sdk/development-tools/tooling-configuration-file.html
 ---
 
 [PHPStan](https://github.com/phpstan/phpstan) is a static code analyzer that introspects the code without running it and catches various classes of bugs prior to unit testing.
@@ -48,7 +46,7 @@ composer require --dev phpstan/phpstan
 
 ## Usage
 
-1. Run the following command to generate autocompletion and prevent any error messages that might occur due to the incomplete classes:
+1. Run the following command to generate autocompletion and prevent any error messages that might occur because of the incomplete classes:
 `vendor/bin/console dev:ide:generate-auto-completion`
 2. Run this command to start analyzing:
 `php -d memory_limit=2048M vendor/bin/phpstan analyze -l 6 -c phpstan.neon src/`
@@ -69,7 +67,7 @@ If you need to raise the level, add new rules or extensions, you can generate a 
 
 **Main configuration file inheritance**
 
-To avoid duplicated code while specifying a different configuration in the _parameters_ section of the `phpstat.neon` file, it is possible to extend this file and determine only the changes needed for a particular configuration of a module.
+To avoid duplicated code while specifying a different configuration in the _parameters_ section of the `phpstat.neon` file, it's possible to extend this file and determine only the changes needed for a particular configuration of a module.
 
 ### ./[ROOT]/phpstan.neon
 

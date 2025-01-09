@@ -1,6 +1,6 @@
 ---
 title: Configure services
-description: Learn how to configure services.
+description: Learn how to set up and configure services that come out of the box of your Spryker shop.
 last_updated: May 8, 2024
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-services
@@ -218,18 +218,18 @@ docker/sdk clean-data
 docker/sdk up --build --data
 ```
 
-## ElasticSearch
+## Elasticsearch
 
 [Elasticsearch](https://www.elastic.co/elasticsearch/) is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
 
 For more information, see the following documents:
 
 * [Configure Elasticsearch](/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
-* [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)—provides detailed information about ElasticSearch.
+* [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)—provides detailed information about Elasticsearch.
 
-### Configure ElasticSearch
+### Configure Elasticsearch
 
-In `deploy.*.yml`, adjust the `services` section to open the port used for accessing ElasticSearch:
+In `deploy.*.yml`, adjust the `services` section to open the port used for accessing Elasticsearch:
 ```yaml
 services:
     search:

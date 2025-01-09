@@ -14,7 +14,7 @@ Dependency injection (DI) is a design pattern that provides loosely-coupled, mai
 
 In the context of Oryx, DI enables you to customize logic deep inside the framework, which is particularly useful for projects with complex or rapidly-evolving requirements. Without DI, you need to override large portions of the logic or create a lot of boilerplate code. By leveraging DI, you can override logic while still being able to upgrade to new versions of Oryx.
 
-The key advantage of using Oryx's DI implementation is that it is vanilla JavaScript and can be used in other frameworks as well. Although there are popular DI packages available, using Oryx's implementation ensures seamless integration and compatibility with its features.
+The key advantage of using Oryx's DI implementation is that it's vanilla JavaScript and can be used in other frameworks as well. Although there are popular DI packages available, using Oryx's implementation ensures seamless integration and compatibility with its features.
 
 ## Next step
 

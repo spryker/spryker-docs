@@ -27,7 +27,7 @@ related:
     link: docs/pbc/all/search/page.version/base-shop/search-feature-overview/search-feature-overview.html
 ---
 
-This tutorial shows how to boost and personalize the catalog using the color attribute of a product when it is added to the cart.
+This tutorial shows how to boost and personalize the catalog using the color attribute of a product when it's added to the cart.
 
 {% info_block infoBox "Info" %}
 
@@ -377,4 +377,4 @@ In your shop `https://mysprykershop.com/en/cameras-&amp;-camcorders/digital-came
 
 All red cameras are on the top now.
 
-To see how simple it is to update this boosting, go to `CatalogDependencyProvider`, comment out and then uncomment `AttributeCartBasedBoostingQueryExpanderPlugin()`, and then check how this affects the catalog page.
+To see how simple it's to update this boosting, go to `CatalogDependencyProvider`, comment out and then uncomment `AttributeCartBasedBoostingQueryExpanderPlugin()`, and then check how this affects the catalog page.

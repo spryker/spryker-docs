@@ -40,7 +40,7 @@ Currently, you can create and manage general product options via the Back Office
 Product option groups created by merchants can have the following statuses:
 
 * *Waiting for approval*: The product option group was created by a merchant and waits for the Marketplace administrator's approval. This is the default status assigned to all Marketplace product options that do not have a different approval status set.
-* *Approved*: The product option group was approved by the Marketplace administrator. Merchants can use it for their products and offers, so if it is [active](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/product-options/create-product-options.html#activating-a-product-option), the product option is displayed on the Storefront.
+* *Approved*: The product option group was approved by the Marketplace administrator. Merchants can use it for their products and offers, so if it's [active](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/product-options/create-product-options.html#activating-a-product-option), the product option is displayed on the Storefront.
 * *Denied*: The Marketplace administrator rejected the product option, and merchants cannot use it for their products and offers. If they still use it, it will not be applied and will not be displayed on the Storefront.
 
 

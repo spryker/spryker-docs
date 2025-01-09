@@ -36,40 +36,48 @@ related:
 
 [PHPStan](https://github.com/phpstan/phpstan) is a static code analyzer that introspects the code without running it and catches various classes of bugs prior to unit testing.
 
-## Installation
-
-To install PHPStan, run the following command:
+## Install PHPStan
 
 ```bash
 composer require --dev phpstan/phpstan
 ```
 
-## Usage
+## Use PHPStan
 
-1. Run the following command to generate autocompletion and prevent any error messages that might occur because of the incomplete classes:
-`vendor/bin/console dev:ide:generate-auto-completion`
-2. Run this command to start analyzing:
-`php -d memory_limit=2048M vendor/bin/phpstan analyze -l 6 -c phpstan.neon src/`
+1. Generate autocompletion and prevent any error messages that might occur because of incomplete classes:
+
+```bash
+vendor/bin/console dev:ide:generate-auto-completion
+```
+
+2. Start analyzing:
+
+```bash
+php -d memory_limit=2048M vendor/bin/phpstan analyze -l 6 -c phpstan.neon src/`
+```
+
 
 {% info_block errorBox %}
 
-By default, Spryker demo shops are configured with PHPStan at level 6 in the `phpstan.neon` file, which is the highly recommended configuration for Spryker projects. 
+Demo shops are by default configured with PHPStan at level 6 in `phpstan.neon`. We highly recommend this configuration.
 
 {% endinfo_block %}
 
 ## Baseline
 
-[PHPStan baseline](https://phpstan.org/user-guide/baseline)
-
 If you need to raise the level, add new rules or extensions, you can generate a baseline and enable it for future changes.
 
-## Additional functionality
 
-**Main configuration file inheritance**
+For more information, see [PHPStan baseline](https://phpstan.org/user-guide/baseline).
 
-To avoid duplicated code while specifying a different configuration in the _parameters_ section of the `phpstat.neon` file, it's possible to extend this file and determine only the changes needed for a particular configuration of a module.
+
+## Main configuration file inheritance
+
+You can extend `phpstat.neon` and define per-module configuration in the `parameters` section to reuse the matching configuration.
+
 
 ### ./[ROOT]/phpstan.neon
+
 
 ```php
 parameters:
@@ -88,6 +96,7 @@ services:
 ```
 
 ### ./[Module]/phpstan.neon
+
 
 ```php
 parameters:

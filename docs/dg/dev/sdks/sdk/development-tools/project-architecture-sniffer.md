@@ -41,12 +41,16 @@ vendor/bin/phpmd src/Pyz/ text vendor/spryker/project-architecture-sniffer/src/r
 Existing projects and demo-shops may contain rule violations.
 The decision to refactor existing violations may be at the discretion of each project individually.
 It is recommended to approach this in a differentiated manner.
-To integrate rules into the project immediately, there recommended to generate a [baseline](https://phpmd.org/documentation/#baseline) and move forward.
-It is also permissible to [suppress rules](https://phpmd.org/documentation/suppress-warnings.html) on a case-by-case basis.
+To integrate rules into the project immediately, generate a [baseline](https://phpmd.org/documentation/#baseline) and move forward, developing only violations free code.
+We still recommend to review violations and plan refactoring for the most important ones.
+Also make sure to explain developers how to fix violations from the baseline:
+1. Fix violation in the code.
+2. Remove fixed error from the baseline.
+It is also permissible to [suppress rules](https://phpmd.org/documentation/suppress-warnings.html) on a case-by-case basis. Although we strongly recommend to use baseline, since ignoring violations may hide consequential violations as well.
 
 {% info_block infoBox %}
 
-Spryker demo shops may contain violations when analyzed with the Architecture Sniffer, as the tool includes more specific rules by default. 
+Spryker demo shops may contain violations when analyzed with the Architecture Sniffer, as the tool includes more project specific rules by default. 
 It is recommended to generate a baseline during the initialization phase of your project development. 
 This allows you to focus on addressing violations related to project-level integrations.
 

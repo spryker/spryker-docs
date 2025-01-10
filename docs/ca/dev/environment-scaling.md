@@ -7,6 +7,12 @@ template: concept-topic-template
 
 Production environments, unlike staging environments, are equipped with auto-scaling capabilities. This enables the resources used by the application to dynamically scale up or down based on the current load. This document uses the checkout analogy as an example to explain the types of scaling.
 
+{% info_block infoBox "" %}
+* While all production environments offer some form of automatic scaling by default, environments must be optimized for your work load. Please schedule a Load Test using the "Announce High Load/Traffic" topic in our Support Portal. Please allow for at least 3 days of lead time. 
+* Load tests usually are performed in rounds. After deploying a typical infrastructure configuration for the size of your project, you will be asked to perform your load testing. The results are analysed and the environment dialed in. This pattern is repeated until the environment is configured to support the expected load. Typically 2-3 rounds are necessary.
+* We do not recomment load tests to be conducted on live production environments due to the risk of impacting the applications performance for your visitors. We instead recommend booking a production-like environment or upgrading one of your non-production environments to this size to be able to perform tests without risking spillover.
+{% endinfo_block %}
+
 ## Cloud architecture
 
 EC2 hosts are used to deploy Docker containers. One host generally has multiple containers running with Spryker services, such as Yves and BackGW. The containers may only reserve up to the configured amount of CPU and RAM of the host machine. Additional hosts, up to a configured maximum number of hosts, are deployed as needed so that more containers can be placed on them in scaling events.

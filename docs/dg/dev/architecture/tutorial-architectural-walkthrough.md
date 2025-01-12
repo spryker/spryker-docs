@@ -572,7 +572,7 @@ name="zed"  xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-    
 
 4. Run the command:
 ```bash
-console propel:install.
+console propel:install
 ```
 
 5. The `HelloSpryker` table is in the database.

@@ -24,7 +24,7 @@ For local environments and CI checks, we recommend at least priority 3.
 
 Include the sniffer as `require-dev` dependency:
 
-```bash
+```
 composer require --dev spryker/project-architecture-sniffer
 ```
 
@@ -36,20 +36,20 @@ Run the sniffer from CLI:
 vendor/bin/phpmd src/Pyz/ text vendor/spryker/project-architecture-sniffer/src/ruleset.xml --minimumpriority 3
 ```
 
-Find [command line option](https://phpmd.org/documentation/index.html).
+For command options, see [Command line options](https://phpmd.org/documentation/index.html).
 
 
-### Baseline
+## Violation baseline
 
-Existing projects and demo-shops may contain rule violations.
-The decision to refactor existing violations may be at the discretion of each project individually.
-It is recommended to approach this in a differentiated manner.
-To integrate rules into the project immediately, generate a [baseline](https://phpmd.org/documentation/#baseline) and move forward, developing only violations free code.
-We still recommend to review violations and plan refactoring for the most important ones.
-Also make sure to explain developers how to fix violations from the baseline:
-1. Fix violation in the code.
-2. Remove fixed error from the baseline.
-It is also permissible to [suppress rules](https://phpmd.org/documentation/suppress-warnings.html) on a case-by-case basis. Although we strongly recommend to use baseline, since ignoring violations may hide consequential violations as well.
+When integrating the sniffer into existing projects, you may reveal violations introduced in the past.
+
+If there're a couple of violations, you can refactor them right away and start using the sniffer moving forward.
+
+With many existing violations, we recommend generating a [violation baseline](https://phpmd.org/documentation/#baseline) and move forward writing violation-free code. Review existing violations and plan refactoring the most critical ones. When you fix a violation from the baseline, make sure to update the baseline.
+
+
+
+You can [suppress rules](https://phpmd.org/documentation/suppress-warnings.html) on a case-by-case basis. However we strongly recommend using the baseline because ignoring violations may hide consequential violations.
 
 {% info_block infoBox %}
 

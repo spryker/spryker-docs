@@ -18,23 +18,26 @@ This tool ensures that your project's architecture aligns with Spryker's best pr
 - 2: Major
 - 3: Medium
 
-For local environments and CI checks, we recommend at least priority `3`.
+For local environments and CI checks, we recommend at least priority 3.
 
-## Usage
+## Install
 
-Make sure you include the sniffer as `require-dev` dependency:
-```
+Include the sniffer as `require-dev` dependency:
+
+```bash
 composer require --dev spryker/project-architecture-sniffer
 ```
 
-### Running
+## Run
 
-Find [command line option](https://phpmd.org/documentation/index.html).
 
-You can run the Project Architecture Sniffer from CLI by using:
+Run the sniffer from CLI:
 ```
 vendor/bin/phpmd src/Pyz/ text vendor/spryker/project-architecture-sniffer/src/ruleset.xml --minimumpriority 3
 ```
+
+Find [command line option](https://phpmd.org/documentation/index.html).
+
 
 ### Baseline
 

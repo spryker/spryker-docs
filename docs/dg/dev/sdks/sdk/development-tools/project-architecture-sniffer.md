@@ -3,22 +3,22 @@ title: Project Architecture Sniffer
 last_updated: Jan 7, 2024
 ---
 
-The [Project Architecture Sniffer](https://github.com/spryker/project-architecture-sniffer) is a powerful tool designed specifically for Spryker projects, leveraging the capabilities of the [PHP Mess Detector](https://phpmd.org) to maintain and enforce architectural standards.
+[Project Architecture Sniffer](https://github.com/spryker/project-architecture-sniffer) is a powerful tool designed specifically for Spryker projects. It leverages the capabilities of [PHP Mess Detector](https://phpmd.org) to maintain and enforce architectural standards.
 
-The tool includes:
+Functionality:
 
-* Adapted PHPMD rules tailored to the needs of Spryker projects.
-* [Architecture Sniffer](https://github.com/spryker/architecture-sniffer) rules for enforcing core-specific conventions.
-* Newly designed rules created specifically to address challenges unique to Spryker projects.
+* PHPMD rules tailored to the needs of Spryker projects
+* [Architecture Sniffer](https://github.com/spryker/architecture-sniffer) rules for enforcing core-specific conventions
+* New rules designed to address challenges unique to Spryker projects
 
-We recommend using this tool to ensure that your project's architecture aligns with Spryker's best practices and guidelines.
+This tool ensures that your project's architecture aligns with Spryker's best practices and guidelines.
 
-## Priority Levels
-- `1`: Сritical
-- `2`: Major
-- `3`: Medium
+## Priority levels
+- 1: Сritical
+- 2: Major
+- 3: Medium
 
-We recommend minimum priority `3` by default for local and CI checks.
+For local environments and CI checks, we recommend at least priority `3`.
 
 ## Usage
 
@@ -50,8 +50,8 @@ It is also permissible to [suppress rules](https://phpmd.org/documentation/suppr
 
 {% info_block infoBox %}
 
-Spryker demo shops may contain violations when analyzed with the Architecture Sniffer, as the tool includes more project specific rules by default. 
-It is recommended to generate a baseline during the initialization phase of your project development. 
+Spryker demo shops may contain violations when analyzed with the Architecture Sniffer, as the tool includes more project specific rules by default.
+It is recommended to generate a baseline during the initialization phase of your project development.
 This allows you to focus on addressing violations related to project-level integrations.
 
 {% endinfo_block %}

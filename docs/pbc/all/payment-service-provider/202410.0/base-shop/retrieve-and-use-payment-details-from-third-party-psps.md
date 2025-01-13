@@ -124,7 +124,7 @@ To use the data of the `spy_sales_payment_detail` table, you need to combine the
 
 When the payment is used in the normal order process, the payment detail can be combined by using `spy_sales_order.order_reference` and `spy_sales_payment_detail.entity_reference`.
 
-## Payment Details on the Sales order Overview Page
+## Payment details on the sales order overview page
 
 You can find specific data of a Payment Service Provider on the Sales order overview page. The data is displayed in the `Payment Details` section.
 

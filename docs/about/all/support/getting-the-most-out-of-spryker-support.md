@@ -18,9 +18,7 @@ related:
 [Spryker Support Portal](https://support.spryker.com/s/) is the main portal for interacting with Spryker support. In the portal, you can have  3 (Standard Success) or 10 (Premier Success) licenses. To get access to the support portal [fill out the form](https://www.surveymonkey.com/r/XYK5R26).
 
 ## Best practices for Partners and SIs
-
-
-Spryker Partners and SIs should create support cases in Spryker Support Portal.
+Spryker Partners and SIs should create support cases in the Spryker Support Portal. If you are a Spryker Partner or SI, please ask your customer to request Support Portal licenses for your project team. The licenses can be requested via the form linked above and will allow your team to request changes and report issues on the customer's behalf. If you have multiple Spryker projects with various customers, you will need to request access from each of these customers.
 
 {% info_block infoBox %}
 The functionality of creating support cases in the Spryker Partner Portal is deprecated.
@@ -32,7 +30,7 @@ Using the Support Portal over the Partner Portal has the following advantages:
 * Advanced relation between change requests, support cases, and infrastructure environments.
 * When creating a case, you can select a needed environment from a list of owned environments, preventing human errors.
 
-* <!-- Upcoming support for MFA -->
+ <!-- Upcoming support for MFA -->
 
 ## Whitelist our email addresses
 

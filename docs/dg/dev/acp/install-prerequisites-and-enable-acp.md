@@ -37,6 +37,8 @@ Update the following modules to specified or later versions:
 * `spryker/message-broker-aws: ^1.6.0`
 * `spryker/session: ^4.15.1`
 * `spryker/oauth-client: ^1.4.0`
+* `spryker/kernel-app": ^1.1.0`
+* `spryker/oauth-auth0: ^1.1.1`
 
 
 {% info_block infoBox "ACP app modules" %}

@@ -26,9 +26,13 @@ To configure the Upgrader, follow the steps:
 
 5. On the **Run: #1** page, update the needed parameters and click **Proceed**.
 
-![Spryker CI Set Config Upgrader Pipeline](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/configure-spryker-code-upgrader.md/set-spryker-code-upgrader-variables.png)
+{% info_block infoBox %}
 
-Note: The JSON value should be in one line and without whitespaces.
+JSON values must be added in one line and without whitespaces.
+
+{% endinfo_block %}
+
+![Spryker CI Set Config Upgrader Pipeline](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/configure-spryker-code-upgrader.md/set-spryker-code-upgrader-variables.png)
 
 This runs the pipeline. After it finishes, the configuration gets updated.
 

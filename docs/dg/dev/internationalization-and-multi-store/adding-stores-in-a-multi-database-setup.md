@@ -3,8 +3,6 @@ title: "Adding stores in a multi-datatabse setup"
 description: Adding and deploying a new store in multi-db store setup requires additional steps and preparation. This guideline contains all the best practices you need to know.
 last_updated: Dec 02, 2024
 template: howto-guide-template
-redirect_from:
-  - /docs/dg/dev/internationalization-and-multi-store/add-new-store-in-multi-db-setup.html
 ---
 
 Setting up a new store in an existing multi-database environment requires a detailed plan to make sure that the data and operations of existing stores remain unaffected. This document describes how to seamlessly launch a new store within a region that already hosts other stores.

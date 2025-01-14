@@ -1,6 +1,6 @@
 ---
 title: Test the compatibility of standalone modules
-description: Ensure compatibility
+description: Learn how to test the compatibility of standalone modules within your Spryker based project.
 last_updated: Jun 7, 2024
 template: howto-guide-template
 ---

@@ -38,7 +38,7 @@ The following table explains where you can take the values for populating the fi
 
 </div>
 
-The following video explains how you can create an API key if it is not available in your account:
+The following video explains how you can create an API key if it's not available in your account:
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>

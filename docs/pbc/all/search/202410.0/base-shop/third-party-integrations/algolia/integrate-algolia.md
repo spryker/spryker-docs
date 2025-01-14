@@ -1,6 +1,6 @@
 ---
 title: Integrate Algolia
-description: Find out how you can integrate Algolia into your Spryker shop
+description: Learn how you can integrate Spryker Third party Algolia in to your Spryker based projects.
 template: howto-guide-template
 last_updated: Nov 24, 2024
 redirect_from:

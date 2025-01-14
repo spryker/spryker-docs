@@ -316,7 +316,7 @@ class MerchantRelationshipDependencyProvider extends SprykerMerchantRelationship
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, when you delete a merchant relationship, a notification email is sent to the email address of the company business unit's owner.
+Make sure that, when you delete a merchant relationship, a notification email is sent to the email address of the company business unit is owner.
 
 {% endinfo_block %}
 

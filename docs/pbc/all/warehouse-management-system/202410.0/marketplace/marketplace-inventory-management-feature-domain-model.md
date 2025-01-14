@@ -1,6 +1,6 @@
 ---
 title: "Marketplace Inventory Management feature: Domain model"
-description: Merchants are product and service sellers in the Marketplace.
+description: Learn about Marketplace Inventory Management feature domain model within your Spryker Marketplace project.
 template: feature-walkthrough-template
 last_updated: Nov 21, 2023
 ---

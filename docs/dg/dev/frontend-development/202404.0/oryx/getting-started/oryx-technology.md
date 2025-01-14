@@ -50,7 +50,7 @@ In Oryx, Web Components are used to create reusable UI components that can be us
 
 ## Lit
 
-Lit is a lightweight library for creating web components using TS and HTML templates. In Oryx, Lit is used to create reusable and encapsulated UI components that can be easily styled and extended. It provides a simple and intuitive API for creating custom elements and lets developers write less boilerplate code.
+Lit's a lightweight library for creating web components using TS and HTML templates. In Oryx, Lit's used to create reusable and encapsulated UI components that can be easily styled and extended. It provides a simple and intuitive API for creating custom elements and lets developers write less boilerplate code.
 
 You can use Lit to customize Oryx, but you can also use another framework to build web components. Advantages of using Lit:
 - Reusable component mixins and controllers.

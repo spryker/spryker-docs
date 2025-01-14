@@ -35,7 +35,7 @@ If there is a need to modify a Spryker-owned environment variable, it must be do
 
 By adhering to these guidelines, you can effectively manage your environment variables without risking the system stability. It also helps in maintaining a seamless experience while working with the Spryker Cloud Commerce OS.
 
-Please remember that improper management of environment variables can lead to unexpected issues. Therefore, it is recommended to consult the Spryker Cloud or support team for any complex or system-critical changes.
+Please remember that improper management of environment variables can lead to unexpected issues. Therefore, it's recommended to consult the Spryker Cloud or support team for any complex or system-critical changes.
 
 ## Naming convention for variables
 

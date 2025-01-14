@@ -69,7 +69,7 @@ For more details, see section _Twig_ in [Atomic Frontend](/docs/dg/dev/frontend-
 
 ## Include
 
-By including a component, you place it on a page as is. Each component has the `data`, `attributes`, and other properties that allow passing the necessary information to configure it, but apart from that, you can't change it. The outlook of the component depends only on configuration. By including an element, you also pass the context of the page where it is added.
+By including a component, you place it on a page as is. Each component has the `data`, `attributes`, and other properties that allow passing the necessary information to configure it, but apart from that, you can't change it. The outlook of the component depends only on configuration. By including an element, you also pass the context of the page where it's added.
 The following block demonstrates how to include component `new-component-counter`.
 
 ```twig

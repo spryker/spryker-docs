@@ -23,7 +23,7 @@ Yes. We refer to third-party integrations as industry partners. They include ser
 
 ## Which new trends does your OS support?
 
-As vendors of an operating system, our task is to ensure the quick development of apps. Since ROI timescales shorten increasingly and technology develops in ever quicker succession, it is difficult to look ahead even to 12 months. With this in mind, Spryker provides a starting point from which to develop applications in such areas as voice, chatbots, blockchain, AI, and more.
+As vendors of an operating system, our task is to ensure the quick development of apps. Since ROI timescales shorten increasingly and technology develops in ever quicker succession, it's difficult to look ahead even to 12 months. With this in mind, Spryker provides a starting point from which to develop applications in such areas as voice, chatbots, blockchain, AI, and more.
 
 ## What is Spryker's solution for omnichannel?
 
@@ -43,7 +43,7 @@ Capabilities are groups of features that are composed of modules, such as a cart
 
 ## How expensive is an average Spryker project?
 
-The price depends on the number of apps and on the type of app you are going to build. As a rule of thumb, it is possible to build and deploy a single slimline app for most standard use cases within a few weeks—for example, a voice app for Alexa or a simple chatbot. The aim is to keep each app simple and relevant and to lock away as much of it in the OS as possible. This means that building a standard, run-of-the-mill webshop with Spryker does not take longer than with other systems. Spryker's real strength, however, is the variety of apps. So, building a B2C case with 4-5 apps (for example, a shop, a web app, a chatbot, voice, and POS) using a standard system would be complex, very expensive, and frustratingly slow undertaking. Unlike standard systems, such a use case is part of Spryker's DNA. Besides, in IoT scenarios, Spryker is actually better than most of the other solutions because of the absence of dedicated technology.
+The price depends on the number of apps and on the type of app you are going to build. As a rule of thumb, it's possible to build and deploy a single slimline app for most standard use cases within a few weeks—for example, a voice app for Alexa or a simple chatbot. The aim is to keep each app simple and relevant and to lock away as much of it in the OS as possible. This means that building a standard, run-of-the-mill webshop with Spryker does not take longer than with other systems. Spryker's real strength, however, is the variety of apps. So, building a B2C case with 4-5 apps (for example, a shop, a web app, a chatbot, voice, and POS) using a standard system would be complex, very expensive, and frustratingly slow undertaking. Unlike standard systems, such a use case is part of Spryker's DNA. Besides, in IoT scenarios, Spryker is actually better than most of the other solutions because of the absence of dedicated technology.
 
 ## How might an MVP look like?
 

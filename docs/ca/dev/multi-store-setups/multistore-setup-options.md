@@ -17,7 +17,7 @@ Keep in mind that the definition of a store can vary depending on the business u
 
 ## Assess whether your shop is fit for Spryker Multi-Store
 
-When planning multiple stores, it is crucial to determine whether your project supports the Spryker Multistore solution and assess whether it is necessary for your business needs.
+When planning multiple stores, it's crucial to determine whether your project supports the Spryker Multistore solution and assess whether it's necessary for your business needs.
 
 The Spryker Multi-Store solution is designed to represent several business channels on a single platform. These channels include:
 
@@ -48,7 +48,7 @@ There are three types of setups you can choose from.
 
 {% info_block infoBox "Stores grouping" %}
 
-When setting up multiple stores, we recommended to group stores that share the same processes and data to regional stores. For instance, if your DE and AT stores share the same database, it is best not to separate them but to have one regional store instead.
+When setting up multiple stores, we recommended to group stores that share the same processes and data to regional stores. For instance, if your DE and AT stores share the same database, it's best not to separate them but to have one regional store instead.
 
 {% endinfo_block %}
 
@@ -98,6 +98,11 @@ The following table provides details on infrastructure for this setup:
 </div>
 
 ### Setup 2: Isolated virtual database
+
+{% info_block warningBox "" %}
+If Dynamic Multistore is enabled, separate databases can be used only per region, not per store.
+{% endinfo_block %}
+
 ![setup-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/multi-store-setups/setup-2.png)
 
 This setup has the following characteristics:
@@ -157,7 +162,7 @@ This setup has the following characteristics:
 - Separate database per account.
 - Allows for different regions.
 - Lets you use themes for a different visual look and feel.
-- Possibility of an isolated codebase for each store. In this case, it is possible to have fully independent development teams.
+- Possibility of an isolated codebase for each store. In this case, it's possible to have fully independent development teams.
 - In the case of a shared codebase:
     - Use of code buckets for store customization (logic).
     - Centralized third-party integrations.

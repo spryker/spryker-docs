@@ -64,7 +64,7 @@ The following is a breakdown of the different bits of the boilerplate code.
 
 ### `package.json`
 
-`package.json` contains all the dependencies of the project. To simplify the dependency management, all dependencies are pulled through a single preset package. The preset package contains dependencies to all available Oryx packages. This might not be the most optimal setup over time, as it might contain a lot of "dead code", but it is a convenient starting point. As you are getting experienced with Oryx, you can consider creating a narrowed down list of dependencies.
+`package.json` contains all the dependencies of the project. To simplify the dependency management, all dependencies are pulled through a single preset package. The preset package contains dependencies to all available Oryx packages. This might not be the most optimal setup over time, as it might contain a lot of "dead code", but it's a convenient starting point. As you are getting experienced with Oryx, you can consider creating a narrowed down list of dependencies.
 
 That being said, having unused dependencies in your project does _not_ affect the build time or run time of your project. It is only an overhead during the installation process.
 

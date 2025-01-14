@@ -1,6 +1,6 @@
 ---
 title: Configure a search query
-description: This document explains how to configure a search query.
+description: This document explains how to configure a search query for your Spryker based shop.
 last_updated: Jul 29, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-search-query
@@ -246,7 +246,7 @@ To filter content according to the request's store, use `\Spryker\Client\SearchE
 
 #### Filter by the "is active" flag
 
-To display only active records in search results, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\IsActiveQueryExpanderPlugin`. Add this to expander plugin stack, for example `\Pyz\Client\Catalog\CatalogDependencyProvider::createSuggestionQueryExpanderPlugins`. You also must export the `is-active` field by your search collector. The value for it is a boolean.
+To display only active records in search results, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\IsActiveQueryExpanderPlugin`. Add this to expander plugin stack, for example `\Pyz\Client\Catalog\CatalogDependencyProvider::createSuggestionQueryExpanderPlugins`. You also must export the `is-active` field by your search collector. The value for it's a boolean.
 
 #### Filter by "is active" within a given date range
 
@@ -268,7 +268,7 @@ If you use this plugin, add `\Spryker\Client\SearchElasticsearch\Plugin\ResultFo
 
 To optimize facet aggregations, the `Search` module combines all fields in groups of simple faceted aggregations—for example, `string-facet`. However, in some cases, you need more control over facet generation.
 
-To manage each facet filter separately, check the `aggregationParams` field in `FacetConfigTransfer`. If no custom parameters are set to a facet config, it is grouped by default.
+To manage each facet filter separately, check the `aggregationParams` field in `FacetConfigTransfer`. If no custom parameters are set to a facet config, it's grouped by default.
 
 However, if your project requires more, replace the default behavior in the provided extension points. `FacetQueryExpanderPlugin`, `FacetResultFormatterPlugin` are good points to start.
 

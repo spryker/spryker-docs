@@ -78,7 +78,6 @@ You can extend `phpstat.neon` and define per-module configuration in the `parame
 
 ### ./[ROOT]/phpstan.neon
 
-
 ```php
 parameters:
     excludes_analyse:
@@ -96,7 +95,6 @@ services:
 ```
 
 ### ./[Module]/phpstan.neon
-
 
 ```php
 parameters:

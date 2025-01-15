@@ -17,7 +17,7 @@ related:
   - title: Web Profiler Widget for Yves
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
   - title: Web Profiler for Zed
-    link: ocs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
 ---
 
 Spryker is a fast application by design. These guidelines explain how to optimize the server-side execution time.

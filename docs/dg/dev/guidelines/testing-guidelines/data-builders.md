@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/guidelines/testing/data-builders.html
 related:
   - title: Available test helpers
-    link: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
   - title: Code coverage
     link: docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
   - title: Executing tests
@@ -26,7 +26,7 @@ related:
   - title: Testify
     link: docs/dg/dev/guidelines/testing-guidelines/testify.html
   - title: Testing best practices
-    link: ddocs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
   - title: Testing concepts
     link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
   - title: Testing console commands

@@ -10,9 +10,9 @@ redirect_from:
   - /docs/scos/dev/guidelines/testing/setting-up-tests.html
 related:
   - title: Available test helpers
-    link: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
   - title: Code coverage
-    link: /docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
+    link: docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
   - title: Data builders
     link: docs/dg/dev/guidelines/testing-guidelines/data-builders.html
   - title: Executing tests

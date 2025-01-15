@@ -22,7 +22,7 @@ related:
   - title: Test framework
     link: docs/dg/dev/guidelines/testing-guidelines/test-framework.html
   - title: Test helpers
-    link: ocs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html
   - title: Testify
     link: docs/dg/dev/guidelines/testing-guidelines/testify.html
   - title: Testing best practices

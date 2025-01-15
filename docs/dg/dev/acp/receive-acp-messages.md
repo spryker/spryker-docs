@@ -24,13 +24,15 @@ console message-broker:consume {channel-name} # {channel-name} is the name of th
 ## Receiving messages automatically
 
 The preceding command must be executed periodically. To set up a periodic execution, configure Jenkins in `config/Zed/cronjobs/jenkins.php`:
+The conditional clause verifies whether the message broker is enabled in the configuration. If it is enabled, the job is added to the list of scheduled jobs during the next deployment.
 
 ```php
-$jobs[] = [
-    'name' => 'message-broker-consume-channels',
-    'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=15 --sleep=5',
-    'schedule' => '* * * * *',
-    'enable' => true,
-    'stores' => $allStores,
-];
+if (\Spryker\Shared\Config\Config::get(\Spryker\Shared\MessageBroker\MessageBrokerConstants::IS_ENABLED)) {
+    $jobs[] = [
+        'name' => 'message-broker-consume-channels',
+        'command' => $logger . '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=15 --sleep=5',
+        'schedule' => '* * * * *',
+        'enable' => true,
+    ];
+}
 ```

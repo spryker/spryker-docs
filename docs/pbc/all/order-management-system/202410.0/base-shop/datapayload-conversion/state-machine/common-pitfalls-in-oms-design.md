@@ -197,4 +197,4 @@ vendor/bin/console oms:process-cache:warm-up
 
 To speed up order placement, you can configure OMS to be executed asynchronously with order placement. After an order is created, OMS processing stops, enabling the order to be created quicker. The OMS processing of the order happens after the `oms:check-condition` command is executed.
 
-![img](https://i.ibb.co/ssv8Zgc/oms-Slow-order-placement.png)
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/oms-slow-order-placement.png)

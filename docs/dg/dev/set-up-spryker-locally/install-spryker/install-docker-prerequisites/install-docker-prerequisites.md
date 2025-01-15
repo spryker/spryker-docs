@@ -1,6 +1,6 @@
 ---
 title: Installing Docker prerequisites
-description: This section
+description: Learn about the prerequisites needed for installing Spryker in docker on Linux, MacOS or Windows
 last_updated: Mar 30, 2023
 template: howto-guide-template
 redirect_from:

@@ -134,7 +134,7 @@ To re-execute a subset of tests, for example, after fixing a bug in the system o
 * Tags: `--include` and `--exclude`
 * Previous status: `--rerunfailed` or `--rerunfailedsuites`
 
-Combining re-execution results with the original results using the default combining outputs approach doesn't work well. The main issue is that you get separate test suites, and possibly already fixed failures are also shown. In this situation, it is better to use the `--merge (-R)` option to tell Rebot to merge the results instead. In practice, this means that tests from the latter test runs replace the tests in the original.
+Combining re-execution results with the original results using the default combining outputs approach doesn't work well. The main issue is that you get separate test suites, and possibly already fixed failures are also shown. In this situation, it's better to use the `--merge (-R)` option to tell Rebot to merge the results instead. In practice, this means that tests from the latter test runs replace the tests in the original.
 
 The following is the recommended way of re-executing failed tested:
 

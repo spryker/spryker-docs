@@ -1,6 +1,6 @@
 ---
 title: Define search preferences
-description: Learn how to define search preferences in the Back Office
+description: Learn how to define search preferences directly in the Back Office of your Spryker based projects.
 last_updated: Aug 4, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-search-preferences
@@ -103,4 +103,4 @@ For example, the _storage_media_ attribute has *SSD* and *Flash* values. With  *
 
 
 Also, it does not make much sense to activate search preferences for attributes with the **numeric** and **Yes/No** values. As numbers may occur not only in attributes but in product SKUs, names and descriptions (which are actually ranked higher than attributes in search results), therefore the probability that a user will find what they were looking for is low, but the list of search results will be huge, and the search term will be present in multiple places.
-Besides, it is very unlikely that users will be searching for an attribute with a numeric value or the Yes/No values.
+Besides, it's very unlikely that users will be searching for an attribute with a numeric value or the Yes/No values.

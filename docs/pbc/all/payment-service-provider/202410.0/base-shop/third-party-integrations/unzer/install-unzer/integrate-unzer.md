@@ -11,15 +11,15 @@ related:
   link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/unzer/install-unzer/install-and-configure-unzer.html
 ---
 
-# Unzer feature integration
+## Unzer feature integration
 
 This document describes how to integrate [Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/unzer/unzer.html) into your project.
 
-## Install feature core
+### Install feature core
 
 To integrate the Unzer, follow these steps.
 
-### Prerequisites
+#### Prerequisites
 
 [Install and configure Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/unzer/install-unzer/install-and-configure-unzer.html).
 
@@ -29,7 +29,7 @@ The following state machines are examples of the payment service provider flow.
 
 {% endinfo_block %}
 
-### 1) Set up the configuration
+#### 1) Set up the configuration
 
 1. Add the Unzer OMS processes to the project on the project level or provide your own:
 
@@ -80,7 +80,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 
 ---
 
-### 2) Set up database schema and transfer objects
+#### 2) Set up database schema and transfer objects
 
 Apply database changes and generate entity and transfer changes:
 
@@ -233,7 +233,7 @@ Make sure that the following changes have been triggered in transfer objects:
 
 ---
 
-### 3) Add translations
+#### 3) Add translations
 
 Append glossary according to your configuration:
 
@@ -278,7 +278,7 @@ Make sure that, in the database, the configured data are added to the `spy_gloss
 
 ---
 
-### 4) Add Zed translations
+#### 4) Add Zed translations
 
 Generate a new translation cache for Zed:
 
@@ -294,7 +294,7 @@ Make sure that all labels and help tooltips in the Unzer forms have English and 
 
 ---
 
-### 5) Set up behavior
+#### 5) Set up behavior
 
 Set up the following behaviors:
 
@@ -685,11 +685,11 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 ---
 
-## Install feature frontend
+### Install feature frontend
 
 Follow these steps to install the Unzer feature front end.
 
-### 1) Set up behavior
+#### 1) Set up behavior
 
 Set up the following behaviors:
 
@@ -732,7 +732,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 </details>
 
-### 2) Set up template
+#### 2) Set up template
 
 <details>
 <summary>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
@@ -753,7 +753,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 </details>
 
-### 3) Enable Javascript and CSS changes
+#### 3) Enable Javascript and CSS changes
 
 ```bash
 console frontend:yves:build

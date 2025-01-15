@@ -32,7 +32,7 @@ This endpoint lets you subscribe to push notifications using Glue API.
 | Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
 
 
-Request sample: `POST https://glue-backend.de.b2c.demo-spryker.com/push-notification-providers`
+Request sample: `POST https://glue-backend.b2c-eu.demo-spryker.com/push-notification-providers`
 
 ```json
 {
@@ -45,7 +45,7 @@ Request sample: `POST https://glue-backend.de.b2c.demo-spryker.com/push-notifica
                 "identifier": "1"
             },
             "payload": {
-                "endpoint": "https://push-notifications.de.b2c.demo-spryker.com",
+                "endpoint": "https://push-notifications.b2c-eu.demo-spryker.com",
                 "publicKey": "3243-f234-3f34-d2334",
                 "authToken": "4o3ijfoi3j4f93j4d7fh4f34jf3d902kfh345g8jf903kdj23uf3"
             },
@@ -82,7 +82,7 @@ Response sample:
       "attributes": {
          "providerName": "web-push-php",
          "payload": {
-            "endpoint": "https://push-notifications.de.b2c.demo-spryker.com",
+            "endpoint": "https://push-notifications.b2c-eu.demo-spryker.com",
             "publicKey": "3243-f234-3f34-d2334",
             "authToken": "4o3ijfoi3j4f93j4d7fh4f34jf3d902kfh345g8jf903kdj23uf3"
          },

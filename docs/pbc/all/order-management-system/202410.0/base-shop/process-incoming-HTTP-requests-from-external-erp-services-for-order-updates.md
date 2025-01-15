@@ -35,7 +35,7 @@ By default, the Spryker application has the `oms:check-condition` worker that ca
 
 {% info_block infoBox "Info" %}
 
-An incoming request handler must not only store the event context but also trigger an OMS event. Therefore, it is necessary to pass control to the `oms:check-condition` worker. If the event must affect several orders, then the handler must trigger an OMS event for each order.
+An incoming request handler must not only store the event context but also trigger an OMS event. Therefore, it's necessary to pass control to the `oms:check-condition` worker. If the event must affect several orders, then the handler must trigger an OMS event for each order.
 
 {% endinfo_block %}
 

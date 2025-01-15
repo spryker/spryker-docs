@@ -25,7 +25,41 @@ The most important about password security is to not save passwords in plain tex
 
 ## Secrets
 
-Store secrets in a secrets management system. For more information about secrets and parameters, see [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html). We recommend establishing a regular cadence of rotating secrets. For recommendations on establishing a secrets rotation policy, see [Operational Best Practices for CIS AWS Foundations Benchmark v1.4 Level 1 1.14](https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_1.html).
+Store secrets, API keys, and similar sensitive data in a dedicated secrets management system rather than in `./config/Shared/**` and `./deploy.*.yml` files.
+
+For more information about secrets and parameters, see [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html). We recommend establishing a regular cadence of rotating secrets. For recommendations on establishing a secrets rotation policy, see [Operational Best Practices for CIS AWS Foundations Benchmark v1.4 Level 1 1.14](https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_1.html).
+
+## Hardcoded passwords
+
+Avoid using demo users in production environments.
+
+For example, installer users are used in `UserInstallerPlugin`, which runs during a destructive deployment.
+
+```php
+namespace Pyz\Zed\User;
+
+class UserConfig extends \Spryker\Zed\User\UserConfig
+{
+    public function getInstallerUsers(): array
+    {
+        return [
+            [
+                'firstName' => 'Admin',
+                'lastName' => 'Spryker',
+                'username' => 'admin@spryker.com',
+                'password' => 'change123',
+                'localeName' => 'de_DE',
+                'isAgent' => 1,
+            ],
+            // ...
+        ];
+    }
+}
+```
+
+We recommend moving installer user config to Parameter Store before the release of production. For more information, see [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html).
+
+Also, make sure to remove demo customers from the `customer.csv` data import for production environments.
 
 ## Encrypted communication
 
@@ -58,11 +92,12 @@ The following sections describe the configuration places for various security he
 ### X-Content-Type-Options, X-Frame-Options, X-XSS-Protection, Content-Security-Policy
 
 #### Yves
-For Yves set of default security headers in: `\Spryker\Yves\Application\ApplicationConfig::getSecurityHeaders()`.
+
+Default security headers are located in: `\Spryker\Yves\Application\ApplicationConfig::getSecurityHeaders()`.
 
 Default values:
 
-```
+```yml
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 X-XSS-Protection: 1; mode=block
@@ -71,11 +106,11 @@ Content-Security-Policy: frame-ancestors 'self'; sandbox allow-downloads allow-f
 
 #### Zed
 
-For Zed set of default security headers in: `\Spryker\Zed\Application\ApplicationConfig::getSecurityHeaders()`.
+Default security headers are located in: `\Spryker\Zed\Application\ApplicationConfig::getSecurityHeaders()`.
 
 Default values:
 
-```
+```yml
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 X-XSS-Protection: 1; mode=block
@@ -84,11 +119,11 @@ Content-Security-Policy: frame-ancestors 'self'
 
 #### Glue
 
-For Glue set of default security headers in:  `\Spryker\Glue\GlueApplication\GlueApplicationConfig::getSecurityHeaders()`.
+Default security headers are located in:  `\Spryker\Glue\GlueApplication\GlueApplicationConfig::getSecurityHeaders()`.
 
 Default values:
 
-```
+```yml
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 X-XSS-Protection: 1; mode=block
@@ -97,11 +132,11 @@ Content-Security-Policy: frame-ancestors 'self'
 
 #### Glue Storefront
 
-Glue is in the set of default security headers in: `\Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationConfig:::getSecurityHeaders()`.
+Default security headers are located in: `\Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationConfig:::getSecurityHeaders()`.
 
 Default values:
 
-```
+```yml
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 X-XSS-Protection: 1; mode=block
@@ -110,36 +145,46 @@ Content-Security-Policy: frame-ancestors 'self'
 
 #### Glue Backend
 
-Glue is in the set of default security headers in: `\Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationConfig::getSecurityHeaders()`.
+Default security headers are located in: `\Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationConfig::getSecurityHeaders()`.
 
 Default values:
 
-```
+```yml
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 X-XSS-Protection: 1; mode=block
 Content-Security-Policy: frame-ancestors 'self'
 ```
 
-####  Cache-Control header
+#### Cache-Control header
 
-You can enable custom Cache-Control header for the Storefront, Back Office, and Glue using plugins:
-* `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Zed `\Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
-and configure using: `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_ENABLED`, `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_CONFIG`.
-* `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Yves `\Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
-  and configure using: `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_ENABLED`, `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_CONFIG`.
-* `Spryker\Glue\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Glue `\Pyz\Glue\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
-  and configure using: `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_ENABLED`, `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_CONFIG`.
+You can enable custom Cache-Control header for the Storefront, Back Office, and Glue using the following plugins:
 
+* `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`:
+  * Add the plugin into an application specific method for Zed using `\Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
+  * Plugin configuration:
+    * `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_ENABLED`  
+    * `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_CONFIG`
 
+* `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`:
+  * Add the plugin into an application specific method for Yves using `\Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
+  * Plugin configuration:
+    * `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_ENABLED`
+    * `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_CONFIG`
+
+* `Spryker\Glue\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`
+  * Add the plugin into an application specific method for Glue using `\Pyz\Glue\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
+  * Plugin configuration:
+  * `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_ENABLED`
+  * `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_CONFIG`
 
 
 ## Session security and hijacking
 
 Websites include many third-party JavaScript libraries that can access the content of a page.
 
-* To prevent access to session cookies from Javascript, Spryker sets the HttpOnly attribute of the session cookie by default. We advise to set this attribute for all sensitive cookies.
-* When using TLS, you can use a `secure` cookie flag to instruct a browser to send this cookie back to the server only via an encrypted connection. To configure it, use the  `*_SESSION_COOKIE_SECURE` configuration keys.
+* To prevent access to session cookies from Javascript, the HttpOnly attribute of the session cookie is set by default. We recommend setting this attribute for all sensitive cookies.
+* When using TLS, you can use a `secure` cookie flag to instruct a browser to send this cookie back to the server only via an encrypted connection. To configure it, use the `*_SESSION_COOKIE_SECURE` configuration keys.
 * To prevent session fixation, session identifier is refreshed on login and logout events. We recommend implementing the same behavior for other sensitive cookies if you use them in your shop.
 * Make sure that your web server configuration does not cut these flags from cookie headers.
 * Make sure that `*_SESSION_COOKIE_DOMAIN` matches only your domain to disallow a browser to send the cookie to another domain or subdomain.

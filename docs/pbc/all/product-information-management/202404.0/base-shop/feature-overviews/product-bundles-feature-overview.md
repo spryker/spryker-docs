@@ -15,7 +15,7 @@ redirect_from:
 
 With the _Product Bundles_ feature you can tie individual items together and sell them as a package. As opposed to a set, in which products are loosely grouped, the items in a bundle are always sold together. You can choose to create a special bundle price to make the purchase more attractive. Since each bundle's product is still handled like an individual item in the Order Management Process, bundle availability is always calculated and displayed based on the item with the smallest available stock to avoid overselling.
 
-A bundle represents two or more products, sold as a set; it is a distinct product that incorporates other concrete products.
+A bundle represents two or more products, sold as a set; it's a distinct product that incorporates other concrete products.
 
 Example:
 ![Product bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Bundles/product_bundles.png)
@@ -94,7 +94,7 @@ For example:
 
 If bundled items have quantity&nbsp;<span aria-label="and then">></span> 1 then it will be split as separate items in cart.
 
-BundleProduct have price this price, it is distributed to whole bundled items. Overwriting original product price. If bundle have price 100, and there is 3 bundled products, each will get price 33,34,33 distributed, 34 is to cover rounding error.
+BundleProduct have price this price, it's distributed to whole bundled items. Overwriting original product price. If bundle have price 100, and there is 3 bundled products, each will get price 33,34,33 distributed, 34 is to cover rounding error.
 
 ## Persisting when placing an order, end of checkout
 

@@ -627,7 +627,7 @@ To get upselling items for all products in a cart of a registered customer, send
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Asus ZenPad Z380C-1B",
-                "description": "Bigger while smaller ASUS ZenPad 8.0 is an 8-inch tablet with a 76.5% screen-to-body ratio—an incredible engineering achievement made possible by reducing the bezel width to the bare minimum. ASUS VisualMaster is a suite of exclusive visual enhancement technologies that combine hardware and software to optimize all aspects of the display—including contrast, sharpness, color, clarity, and brightness—resulting in an incredibly realistic viewing experience. With ASUS VisualMaster, it’s just like being there. ASUS Audio Cover is an entertainment accessory that brings cinematic, 5.1-channel surround sound to ASUS ZenPad 8.0. DTS-HD Premium Sound and SonicMaster technology provide further enhancement, ensuring the ultimate audio experience on ASUS ZenPad 8.0. Intelligent contrast enhancement analyzes and optimizes each pixel in an image before it is reproduced, rendering more detail in the highlights and shadows to reveal the true beauty in your pictures.",
+                "description": "Bigger while smaller ASUS ZenPad 8.0 is an 8-inch tablet with a 76.5% screen-to-body ratio—an incredible engineering achievement made possible by reducing the bezel width to the bare minimum. ASUS VisualMaster is a suite of exclusive visual enhancement technologies that combine hardware and software to optimize all aspects of the display—including contrast, sharpness, color, clarity, and brightness—resulting in an incredibly realistic viewing experience. With ASUS VisualMaster, it’s just like being there. ASUS Audio Cover is an entertainment accessory that brings cinematic, 5.1-channel surround sound to ASUS ZenPad 8.0. DTS-HD Premium Sound and SonicMaster technology provide further enhancement, ensuring the ultimate audio experience on ASUS ZenPad 8.0. Intelligent contrast enhancement analyzes and optimizes each pixel in an image before it's reproduced, rendering more detail in the highlights and shadows to reveal the true beauty in your pictures.",
                 "attributes": {
                     "processor_cores": "4",
                     "storage_media": "flash",
@@ -682,7 +682,7 @@ To get upselling items for all products in a cart of a registered customer, send
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Asus ZenPad Z380C-1B",
-                "description": "Bigger while smaller ASUS ZenPad 8.0 is an 8-inch tablet with a 76.5% screen-to-body ratio—an incredible engineering achievement made possible by reducing the bezel width to the bare minimum. ASUS VisualMaster is a suite of exclusive visual enhancement technologies that combine hardware and software to optimize all aspects of the display—including contrast, sharpness, color, clarity, and brightness—resulting in an incredibly realistic viewing experience. With ASUS VisualMaster, it’s just like being there. ASUS Audio Cover is an entertainment accessory that brings cinematic, 5.1-channel surround sound to ASUS ZenPad 8.0. DTS-HD Premium Sound and SonicMaster technology provide further enhancement, ensuring the ultimate audio experience on ASUS ZenPad 8.0. Intelligent contrast enhancement analyzes and optimizes each pixel in an image before it is reproduced, rendering more detail in the highlights and shadows to reveal the true beauty in your pictures.",
+                "description": "Bigger while smaller ASUS ZenPad 8.0 is an 8-inch tablet with a 76.5% screen-to-body ratio—an incredible engineering achievement made possible by reducing the bezel width to the bare minimum. ASUS VisualMaster is a suite of exclusive visual enhancement technologies that combine hardware and software to optimize all aspects of the display—including contrast, sharpness, color, clarity, and brightness—resulting in an incredibly realistic viewing experience. With ASUS VisualMaster, it’s just like being there. ASUS Audio Cover is an entertainment accessory that brings cinematic, 5.1-channel surround sound to ASUS ZenPad 8.0. DTS-HD Premium Sound and SonicMaster technology provide further enhancement, ensuring the ultimate audio experience on ASUS ZenPad 8.0. Intelligent contrast enhancement analyzes and optimizes each pixel in an image before it's reproduced, rendering more detail in the highlights and shadows to reveal the true beauty in your pictures.",
                 "attributes": {
                     "processor_cores": "4",
                     "storage_media": "flash",
@@ -737,7 +737,7 @@ To get upselling items for all products in a cart of a registered customer, send
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Asus ZenPad Z580CA",
-                "description": "Fashion-inspired design The design of ASUS ZenPad S 8.0 carries modern influences and a simple, clean look that gives it a universal and stylish appeal. These elements are inspired by our Zen design philosophy of balancing beauty and strength. ASUS ZenPad S 8.0 is an 8-inch tablet that is only 6.6mm thin, weighs just 298g, and has a 74% screen-to-body ratio—an incredible engineering achievement made possible by reducing the bezel width to the bare minimum. Intelligent contrast enhancement analyzes and optimizes each pixel in an image before it is reproduced, rendering more detail in the highlights and shadows to reveal the true beauty in your pictures. ASUS ZenPad S 8.0 is equipped with ASUS Tru2Life+ technology, which improves video with fast action scenes—such as sports—by increasing the screen refresh rate, resulting in reduced blur and smooth, detailed motion.",
+                "description": "Fashion-inspired design The design of ASUS ZenPad S 8.0 carries modern influences and a simple, clean look that gives it a universal and stylish appeal. These elements are inspired by our Zen design philosophy of balancing beauty and strength. ASUS ZenPad S 8.0 is an 8-inch tablet that is only 6.6mm thin, weighs just 298g, and has a 74% screen-to-body ratio—an incredible engineering achievement made possible by reducing the bezel width to the bare minimum. Intelligent contrast enhancement analyzes and optimizes each pixel in an image before it's reproduced, rendering more detail in the highlights and shadows to reveal the true beauty in your pictures. ASUS ZenPad S 8.0 is equipped with ASUS Tru2Life+ technology, which improves video with fast action scenes—such as sports—by increasing the screen refresh rate, resulting in reduced blur and smooth, detailed motion.",
                 "attributes": {
                     "processor_cores": "4",
                     "display_technology": "IPS",
@@ -919,7 +919,7 @@ To get upselling items for all products in a cart of a registered customer, send
                 "url": "/en/acer-liquid-leap-100"
             },
             "links": {
-                "self": "https://glue.de.b2c.demo-spryker.com:80/abstract-products/100"
+                "self": "https://glue.b2c-eu.demo-spryker.com:80/abstract-products/100"
             },
             "relationships": {
                 "product-labels": {
@@ -934,7 +934,7 @@ To get upselling items for all products in a cart of a registered customer, send
         }
     ],
     "links": {
-        "self": "https://glue.de.b2c.demo-spryker.com:80/carts/976af32f-80f6-5f69-878f-4ea549ee0830/up-selling-products?include=product-labels"
+        "self": "https://glue.b2c-eu.demo-spryker.com:80/carts/976af32f-80f6-5f69-878f-4ea549ee0830/up-selling-products?include=product-labels"
     },
     "included": [
         {
@@ -947,7 +947,7 @@ To get upselling items for all products in a cart of a registered customer, send
                 "frontEndReference": "highlight"
             },
             "links": {
-                "self": "https://glue.de.b2c.demo-spryker.com:80/product-labels/5"
+                "self": "https://glue.b2c-eu.demo-spryker.com:80/product-labels/5"
             }
         }
     ]
@@ -1064,7 +1064,7 @@ To retrieve upselling products of a guest cart, send the request:
             "attributes": {
                 "sku": "042",
                 "name": "Samsung Galaxy S7",
-                "description": "Smart Design The beauty of what we've engineered is to give you the slimmest feel in your hand without compromising the big screen size. The elegantly curved front and back fit in your palm just right. It's as beautiful to look at as it is to use. We spent a long time perfecting the curves of the Galaxy S7 edge and S7. Using a proprietary process called 3D Thermoforming, we melted 3D glass to curve with such precision that it meets the curved metal alloy to create an exquisitely seamless and strong unibody. The dual-curve backs on the Galaxy S7 edge and S7 are the reason why they feel so comfortable when you hold them. Everything about the design, from the naturally flowing lines to the thin form factor, come together to deliver a grip that's so satisfying, you won't want to let go.",
+                "description": "Smart Design The beauty of what we've engineered is to give you the slimmest feel in your hand without compromising the big screen size. The elegantly curved front and back fit in your palm just right. It's as beautiful to look at as it's to use. We spent a long time perfecting the curves of the Galaxy S7 edge and S7. Using a proprietary process called 3D Thermoforming, we melted 3D glass to curve with such precision that it meets the curved metal alloy to create an exquisitely seamless and strong unibody. The dual-curve backs on the Galaxy S7 edge and S7 are the reason why they feel so comfortable when you hold them. Everything about the design, from the naturally flowing lines to the thin form factor, come together to deliver a grip that's so satisfying, you won't want to let go.",
                 "attributes": {
                     "usb_version": "2",
                     "os_version": "6",
@@ -1106,7 +1106,7 @@ To retrieve upselling products of a guest cart, send the request:
             "attributes": {
                 "sku": "043",
                 "name": "Samsung Galaxy S7",
-                "description": "Smart Design The beauty of what we've engineered is to give you the slimmest feel in your hand without compromising the big screen size. The elegantly curved front and back fit in your palm just right. It's as beautiful to look at as it is to use. We spent a long time perfecting the curves of the Galaxy S7 edge and S7. Using a proprietary process called 3D Thermoforming, we melted 3D glass to curve with such precision that it meets the curved metal alloy to create an exquisitely seamless and strong unibody. The dual-curve backs on the Galaxy S7 edge and S7 are the reason why they feel so comfortable when you hold them. Everything about the design, from the naturally flowing lines to the thin form factor, come together to deliver a grip that's so satisfying, you won't want to let go.",
+                "description": "Smart Design The beauty of what we've engineered is to give you the slimmest feel in your hand without compromising the big screen size. The elegantly curved front and back fit in your palm just right. It's as beautiful to look at as it's to use. We spent a long time perfecting the curves of the Galaxy S7 edge and S7. Using a proprietary process called 3D Thermoforming, we melted 3D glass to curve with such precision that it meets the curved metal alloy to create an exquisitely seamless and strong unibody. The dual-curve backs on the Galaxy S7 edge and S7 are the reason why they feel so comfortable when you hold them. Everything about the design, from the naturally flowing lines to the thin form factor, come together to deliver a grip that's so satisfying, you won't want to let go.",
                 "attributes": {
                     "usb_version": "2",
                     "os_version": "6",
@@ -1148,7 +1148,7 @@ To retrieve upselling products of a guest cart, send the request:
             "attributes": {
                 "sku": "044",
                 "name": "Samsung Galaxy S7",
-                "description": "Smart Design The beauty of what we've engineered is to give you the slimmest feel in your hand without compromising the big screen size. The elegantly curved front and back fit in your palm just right. It's as beautiful to look at as it is to use. We spent a long time perfecting the curves of the Galaxy S7 edge and S7. Using a proprietary process called 3D Thermoforming, we melted 3D glass to curve with such precision that it meets the curved metal alloy to create an exquisitely seamless and strong unibody. The dual-curve backs on the Galaxy S7 edge and S7 are the reason why they feel so comfortable when you hold them. Everything about the design, from the naturally flowing lines to the thin form factor, come together to deliver a grip that's so satisfying, you won't want to let go.",
+                "description": "Smart Design The beauty of what we've engineered is to give you the slimmest feel in your hand without compromising the big screen size. The elegantly curved front and back fit in your palm just right. It's as beautiful to look at as it's to use. We spent a long time perfecting the curves of the Galaxy S7 edge and S7. Using a proprietary process called 3D Thermoforming, we melted 3D glass to curve with such precision that it meets the curved metal alloy to create an exquisitely seamless and strong unibody. The dual-curve backs on the Galaxy S7 edge and S7 are the reason why they feel so comfortable when you hold them. Everything about the design, from the naturally flowing lines to the thin form factor, come together to deliver a grip that's so satisfying, you won't want to let go.",
                 "attributes": {
                     "usb_version": "2",
                     "os_version": "6",

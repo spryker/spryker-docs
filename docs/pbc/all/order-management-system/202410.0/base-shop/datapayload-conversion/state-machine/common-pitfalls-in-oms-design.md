@@ -27,17 +27,17 @@ This document describes the most common issues with OMS design and how you can f
 
 **Issue**: If there is more than one onEnter transition event from state A, only one is executed.
 
-![img](https://i.ibb.co/7CWt81g/oms-processing-1-1.png)
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/oms-processing-1.png)
 
 **Reason**: This behavior is not supported because there must always be only one state after an event execution.
 
 **Solution**: If you have different commands, you can chain those:
 
-![img](https://i.ibb.co/23rpnHV/oms-processing-2.png))
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/oms-processing-2.png)
 
 If you have the same commands, then one of the commands could get a condition:
 
-![img](https://i.ibb.co/DYHWY6w/oms-processing-3.png)
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/oms-processing-3.png)
 
 
 
@@ -66,7 +66,7 @@ In the OMS drawing, you will see the last *read* event definition, but during th
 
 **Issue**: There are many states with only outgoing transitions.
 
-![img](https://i.ibb.co/Np0d6rF/oms-processing-4.png)
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/oms-processing-4.png)
 
 **Reason**: Function `OmsConfig:getInitialStatus` has only one return value, so it's impossible to start from another "initial" state.
 
@@ -97,7 +97,7 @@ Process/Process.php:198)
 
 **Solution:** Removing duplicate flag  `main` fixes the process rendering and processing:
 
-![img](https://i.ibb.co/DwPryLC/oms-processing-5.png)
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/oms-processing-5.png)
 
 ## More than one transition with the same events and without condition
 

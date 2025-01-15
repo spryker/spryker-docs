@@ -170,7 +170,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a customer access rule is created, updated, or deleted, it is exported (or removed) to Redis.
+Make sure that when a customer access rule is created, updated, or deleted, it's exported (or removed) to Redis.
 
 | TARGET ENTITY                       | EXAMPLE EXPECTED DATA IDENTIFIER   |
 |-------------------------------------|------------------------------------|

@@ -1,5 +1,6 @@
 ---
 title: Integrate the Shopping Lists Glue API
+description: Learn how to integrate the Spryker Shopping Lists GLUE API in to your Spryker Cloud Commerce OS Projects.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-shopping-lists-feature-integration

@@ -1,6 +1,6 @@
 ---
 title: Zed API
-description: This section lists documents inside the Zed API section.
+description: Learn everything you need to know about the Spryker Zed API and how you can configure and use it within your Spryker based projects.
 last_updated: Apr 26, 2023
 template: concept-topic-template
 redirect_from:

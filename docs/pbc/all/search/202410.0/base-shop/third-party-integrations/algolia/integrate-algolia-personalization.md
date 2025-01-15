@@ -164,7 +164,7 @@ Order Success page cases:
 | - | - |
 | Open the **Order Success** page | `PAGE_LOAD` with currency, order total, SKUs, prices, and quantities of purchased products. |
 
-For a full list of available events, see the [traceable-events-algolia readme file](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-algolia/README.md).
+For a full list of available events, see the [traceable-events-algolia readme file](https://github.com/spryker-shop/traceable-event-widget/blob/master/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-algolia/README.md).
 
 
 ### Common issues and solutions
@@ -176,7 +176,7 @@ This section common issues to event and solutions. Most solutions involve adding
 1. Locate the page template or view that is used for the page with faulty events.
 2. On the project level, override the `{% raw %}{% block eventTracker %}{% endraw %}` block in the template.
 
-For details on the event configuration API, see the [traceable-events-orchestrator README](https://github.com/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
+For details on the event configuration API, see the [traceable-events-orchestrator README](https://github.com/spryker-shop/traceable-event-widget/blob/master/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/components/molecules/traceable-events-orchestrator/README.md).
 
 #### Issue: Event not triggering on user action
 
@@ -352,6 +352,11 @@ To enhance your experience, we use data and analytics to understand how you inte
 By accepting, you allow us to capture anonymous events for personalization, analysis, and continuous improvement of your experience on our platform.
 ```
 
+### Disable user data tracking
+
+If a user doesn't consent to data tracking, no user data should be sent from the application. To stop sending user action tracking events, set the `disableUserActionTracking` flag in the cookie to `true`.
+
+
 ## Verify the installation
 
 1. Deploy to a testing environment.
@@ -366,7 +371,7 @@ By accepting, you allow us to capture anonymous events for personalization, anal
   * Add products to cart
   * Place orders
 4. Repeat step 3 as a logged-in user.  
-5. In the [Algolia Dashboard](https://dashboard.algolia.com/), go to **Data Sources**>**Events**.
+5. In the [Algolia Dashboard](https://dashboard.algolia.com/users/sign_in), go to **Data Sources**>**Events**.
   Make sure the events you've triggered are displayed.
 
 

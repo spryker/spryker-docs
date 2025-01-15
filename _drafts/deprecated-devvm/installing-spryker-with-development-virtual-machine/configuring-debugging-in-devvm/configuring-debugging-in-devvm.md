@@ -99,7 +99,7 @@ Define servers in PhpStorm:
 1. In PhpStorm, go to **Preferences** > **Languages & Frameworks** > **PHP** > **Servers**.
 2. Add a new server:
     1. Select **+**.
-    2. Enter a **Name**. For example, `zed.mysprykershop.com` (it is used in CLI below).
+    2. Enter a **Name**. For example, `zed.mysprykershop.com` (it's used in CLI below).
     3. For **Host**, enter `~^zed\.de\..+\.local$`.
     4. Select **Use path mappings**.
     5. For **Absolute path on server**, select `/data/shop/development/current`.

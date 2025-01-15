@@ -85,7 +85,7 @@ To learn about the module versioning approach in Spryker, see [Semantic Versioni
 
 1. Define how to manage the settings in the configuration files with [Configuration management](/docs/dg/dev/backend-development/data-manipulation/configuration-management.html).
 2. [Configure services](/docs/dg/dev/integrate-and-configure/configure-services.html).
-3. [Configure ElasticSearch](/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html).
+3. [Configure Elasticsearch](/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html).
 4. [Configure queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html).
 5. [Configure stores](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html#configure-stores).
 6. [Set up cronjobs](/docs/dg/dev/backend-development/cronjobs/cronjobs.html).

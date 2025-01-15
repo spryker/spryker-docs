@@ -20,7 +20,7 @@ This is achieved by establishing a connection between the user interface and the
 
 Implementing reactivity in a web application is a complex challenge, especially in an SPA where data is loaded asynchronously and in real time from a backend API. Various components dynamically request the same data, and updates of the application state must be managed in a highly efficient way.
 
-The following is a high-level overview of the reactivity patterns available in Oryx. In the diagram, it is shown using a product component.
+The following is a high-level overview of the reactivity patterns available in Oryx. In the diagram, it's shown using a product component.
 
 {% include diagrams/oryx/reactivity-high-level.md %}
 

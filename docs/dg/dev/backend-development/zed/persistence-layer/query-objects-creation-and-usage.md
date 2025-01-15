@@ -36,6 +36,6 @@ As you can see `src/Orm/Zed/` the query object which belongs to the Spryker core
 
 The `Propel` module alters the rules of generating query models by requiring explicit passing of filtering criteria into `filterBy..` and `findBy...` methods.
 
-This means, that when an array, `LIKE` expression or an array with `min/max` are passed as a filtering argument, it is explicitly required to specify `Criteria::IN`, `Criteria::LIKE` or `Criteria::BETWEEN`. The `Criteria::BETWEEN` is implemented in the wrapper class `Spryker\Zed\Propel\Business\Runtime\ActiveQuery\Criteria`.
+This means, that when an array, `LIKE` expression or an array with `min/max` are passed as a filtering argument, it's explicitly required to specify `Criteria::IN`, `Criteria::LIKE` or `Criteria::BETWEEN`. The `Criteria::BETWEEN` is implemented in the wrapper class `Spryker\Zed\Propel\Business\Runtime\ActiveQuery\Criteria`.
 
 Additionally the `Propel` module adds the following methods into the generated classes, that allow to easily filter: `filterBy...._In()`, `filterBy...._Like()` and `filterBy...._Between()`.

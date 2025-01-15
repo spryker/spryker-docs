@@ -15,6 +15,14 @@ Highlights:
 * Highly customizable, offering multiple options to tailor reports & analytics workflows
 * Aggregate data across various systems
 
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/Amazon+QuickSight+Demo.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
+
 ## Data sources and datasets
 
 This feature supports data from Spryker projects and third-party systems. When you set up Amazon QuickSight, the data from your project is available by default, and you can add other data sources if needed.
@@ -120,7 +128,7 @@ The default dashboard contains the following sheets.
   | ----------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
   | Total Sales                         | KPI            | Indicates overall business revenue and helps track growth or identify trends.                                                                                                       | Track overall revenue trends. If growth slows, evaluate pricing strategies, marketing efforts, or product performance.                 |
   | Total Orders                        | Table          | Reflects customer activity and signals demand and operational performance.                                                                                                          | Monitor order volume to measure demand. Sudden changes may indicate issues with pricing, stock availability, or competition.           |
-  | Total Canceled                      | KPI            | Quantifies the financial loss due to order cancellations, helping assess the monetary impact of cancellations and identify trends or root causes                                    | Analyze canceled order trends to identify common causes like shipping delays or inventory shortages and take corrective action.        |
+  | Total Canceled                      | KPI            | Quantifies the financial loss because of order cancellations, helping assess the monetary impact of cancellations and identify trends or root causes                                    | Analyze canceled order trends to identify common causes like shipping delays or inventory shortages and take corrective action.        |
   | Cancelation Rate                    | Donut chart    | Reveals issues in inventory, delivery, or customer decision-making.                                                                                                                 | Investigate and reduce factors causing high cancellation rates, such as unclear product descriptions or lack of customer support.      |
   | Return Rate                         | Donut chart    | Highlights product quality or customer dissatisfaction issues.                                                                                                                      | Identify patterns in high return rates and address them by improving product quality, descriptions, or customer expectations.          |
   | "Waiting for Return" Order Items    | KPI            | Tracks pending returns, aiding better inventory and refund management.                                                                                                              | Monitor pending returns to ensure timely processing and better inventory management.                                                   |

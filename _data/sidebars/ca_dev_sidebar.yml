@@ -135,7 +135,7 @@ entries:
             nested:
               - title: Assets, logs, or pipelines are not visible in AWS Management Console
                 url: /docs/ca/dev/troubleshooting/troubleshooting-deployment-issues/assets-logs-or-pipelines-are-not-visible-in-aws-management-console.html
-              - title: Deployment fails due to a failed docker authentication
+              - title: Deployment fails because of a failed docker authentication
                 url: /docs/ca/dev/troubleshooting/troubleshooting-deployment-issues/deployment-fails-due-to-a-failed-docker-authentication.html
               - title: Jenkins does not restart
                 url: /docs/ca/dev/troubleshooting/troubleshooting-deployment-issues/jenkins-does-not-restart.html

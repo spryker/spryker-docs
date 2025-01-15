@@ -1,6 +1,6 @@
 ---
 title: Choosing a mount mode
-description: Learn about supported mount modes and how to choose one.
+description: Learn about supported mount modes and how to choose one depending of your operating system for your Spryker Project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/choosing-a-mount-mode

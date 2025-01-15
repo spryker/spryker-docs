@@ -1,5 +1,6 @@
 ---
 title: Install the Shopping List + Agent Assist feature
+description: Learn how to install the Shopping List + Agent assist feature in to your Spryker Cloud Commerce OS Project.
 last_updated: Jul 6, 2021
 template: feature-integration-guide-template
 redirect_from:

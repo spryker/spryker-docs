@@ -1,6 +1,6 @@
 ---
 title: Connect Vertex
-description: Find out how you can configure Vertex in your Spryker shop
+description: Find out how you can confiure Sprykers third party Vertex in to your Spryker Based project.
 last_updated: Nov 3 2023
 template: howto-guide-template
 ---

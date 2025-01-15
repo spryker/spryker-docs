@@ -1,5 +1,6 @@
 ---
 title: Install the Catalog + Category Management feature
+description: learn how to install the Spryker Catalog + Category Management Feature in to your Spryker based project.
 last_updated: Jul 6, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/catalog-category-management-feature-integration

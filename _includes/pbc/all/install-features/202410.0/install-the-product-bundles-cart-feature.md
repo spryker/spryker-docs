@@ -55,7 +55,7 @@ Make sure that the item counter of the cart widget shows the correct number—bu
 ## Alternative setup for handling large quantities of bundled products in the cart
 
 When a bundle product is added to the cart with a large quantity (for example, 100-200 items), users may
-experience a slow-down in the cart operations handling or even may get an internal server error due to insufficient memory.
+experience a slow-down in the cart operations handling or even may get an internal server error because of insufficient memory.
 
 To avoid a slow-down in the cart operations and internal server errors, an alternative set of plugins has been
 implemented:

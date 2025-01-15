@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting performance issues
-description: Learn how you can troubleshoot the most common performance issues
+description: Learn how you can troubleshoot and resolve the most common performance issues within your Spryker based projects
 template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html

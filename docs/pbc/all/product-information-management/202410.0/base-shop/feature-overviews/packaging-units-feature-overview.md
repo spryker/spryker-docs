@@ -95,7 +95,7 @@ For example, a packaging unit "bag" can be set to have "item" as a base unit and
 
 {% endinfo_block %}
 
-The amount of items contained in a sales unit is referred to as *sales unit amount*. If a customer chooses a sales unit amount, which is in between two available amounts (due to amount restriction settings), a higher or lower amount must be selected.
+The amount of items contained in a sales unit is referred to as *sales unit amount*. If a customer chooses a sales unit amount, which is in between two available amounts (because of amount restriction settings), a higher or lower amount must be selected.
 
 {% info_block infoBox "Info" %}
 

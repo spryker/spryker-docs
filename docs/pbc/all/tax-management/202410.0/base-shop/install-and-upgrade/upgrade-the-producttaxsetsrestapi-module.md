@@ -1,5 +1,6 @@
 ---
 title: Upgrade the ProductTaxSetsRestApi module
+description: Learn to upgrade to a newer version of the product tax sets rest api module within your Spryker Tax management feature.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/producttaxsetsrestapi-migration-guide

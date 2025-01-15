@@ -14,7 +14,7 @@ To compose a frontend application from different backend APIs, Oryx provides a f
 
 ## Data models
 
-In modern web applications, it is common to communicate with an API to retrieve data. However, the response from an API can be complex and not suitable to be directly used in a component. This is where client models come into play. A _client model_ is a representation of data that is tailored specifically for the needs of a client-side application.
+In modern web applications, it's common to communicate with an API to retrieve data. However, the response from an API can be complex and not suitable to be directly used in a component. This is where client models come into play. A _client model_ is a representation of data that is tailored specifically for the needs of a client-side application.
 
 In the Oryx framework, adapters transform API responses into a client model. Adapters make HTTP requests to load data from APIs and provide normalizers or serializers to transform the data into a more readable format. This is especially important when working with complex data standards like JSON-API, as they can be difficult for a component to work with directly.
 

@@ -204,4 +204,4 @@ class SpyGlossary extends BaseSpyGlossary
 }
 ```
 
-Now, you can track the changes in the `Glossary` entity. When it is created, updated, or deleted, an event is created and posted to the specified RabbitMQ publish queue (`publish.translation`).
+Now, you can track the changes in the `Glossary` entity. When it's created, updated, or deleted, an event is created and posted to the specified RabbitMQ publish queue (`publish.translation`).

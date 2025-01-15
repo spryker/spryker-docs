@@ -41,7 +41,7 @@ To create a new abstract product:
 
       {% info_block warningBox "Warning" %}
 
-      You can not save an abstract product unless it is accompanied by at least one concrete product.
+      You can not save an abstract product unless it's accompanied by at least one concrete product.
 
       {% endinfo_block %}
 

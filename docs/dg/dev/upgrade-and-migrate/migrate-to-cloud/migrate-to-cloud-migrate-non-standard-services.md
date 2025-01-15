@@ -1,6 +1,6 @@
 ---
 title: 'Migrate to cloud: Migrate non-standard services'
-description: To migrate to SCCOS, you need to migrate non-standard services.
+description: Learn how to migrate to Spryker Cloud Commerce OS and migrate non-standard services within your Spryker based project.
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-3-migrate-non-standard-services.html
@@ -9,7 +9,7 @@ redirect_from:
 Spryker comes pre-configured with the following services by default:
 
 * RabbitMQ
-* ElasticSearch
+* Elasticsearch
 * Redis
 * MariaDB
 * Jenkins

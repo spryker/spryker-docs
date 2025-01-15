@@ -60,9 +60,9 @@ Product offer status defines whether the offer is active and displayed on the St
 
 ### Visibility
 
-* *Active*: When an offer is active, it is displayed on the Storefront. Either merchant or Marketplace administrator can make the offer active.
+* *Active*: When an offer is active, it's displayed on the Storefront. Either merchant or Marketplace administrator can make the offer active.
 
-* *Inactive*: When an offer is inactive, it is not displayed on the Storefront. Either merchant or Marketplace administrator can make the offer inactive.
+* *Inactive*: When an offer is inactive, it's not displayed on the Storefront. Either merchant or Marketplace administrator can make the offer inactive.
 
 ![Offer approval flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Products+and+offers/Product+offer+feature+overview/offer-approval-flow.png)
 
@@ -76,7 +76,7 @@ The product offer prices support:
 * Store
 * Currency
 
-Product offer price follows the [concrete product price inheritance model](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/prices-feature-overview.html). So if the Merchant doesn't set a price in the offer, it is taken from the concrete product. Otherwise, the product offer price has a higher priority and substitutes the concrete product price if it is indicated. If at least one price is defined for the offer (for example, original), it is valid for this offer even if the concrete product has a default price (sales price), but the offer does not. For details about price types, see [Price types](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/prices-feature-overview.html).
+Product offer price follows the [concrete product price inheritance model](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/prices-feature-overview.html). So if the Merchant doesn't set a price in the offer, it's taken from the concrete product. Otherwise, the product offer price has a higher priority and substitutes the concrete product price if it's indicated. If at least one price is defined for the offer (for example, original), it's valid for this offer even if the concrete product has a default price (sales price), but the offer does not. For details about price types, see [Price types](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/prices-feature-overview.html).
 
 If a [merchant custom price](/docs/pbc/all/price-management/{{page.version}}/base-shop/merchant-custom-prices-feature-overview.html) exists for a customer, they see only the prices that apply to them, based on their merchant relationship. If the merchant relationship doesn't have prices for some products, default prices are displayed for the customer.
 
@@ -158,7 +158,7 @@ During the checkout, offers from the same merchant are grouped for delivery so t
 
 ### Product offers on the wishlist page
 
-Customers can add product offers to a wishlist for future purchase. Merchant information is kept for the offer when it is added to a wishlist. Further, customers can add the offer from the wishlist to cart.
+Customers can add product offers to a wishlist for future purchase. Merchant information is kept for the offer when it's added to a wishlist. Further, customers can add the offer from the wishlist to cart.
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>

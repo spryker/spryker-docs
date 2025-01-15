@@ -1,6 +1,6 @@
 ---
 title: Configure queue worker signal handling
-description: Configure a graceful shutdown of queue worker.
+description: Learn how you can configure a graceful shutdown of queue worker for your Spryker based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/queue-worker-signal-handling

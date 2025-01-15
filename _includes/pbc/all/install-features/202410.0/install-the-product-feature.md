@@ -166,7 +166,7 @@ class ProductPageSearchConfig extends SprykerProductPageSearchConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that abstract products that can be added to cart have the `add_to_cart_sku` field in the ElasticSearch document.
+Make sure that abstract products that can be added to cart have the `add_to_cart_sku` field in the Elasticsearch document.
 
 {% endinfo_block %}
 

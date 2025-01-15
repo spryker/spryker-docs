@@ -1,6 +1,6 @@
 ---
 title: Marketplace Inventory Management feature overview
-description: This document contains concept information for the Marketplace Products feature.
+description: Learn all about the Spryker Marketplace Inventory Management feature and how you can use it within your Spryker Marketplace store.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:
@@ -16,7 +16,7 @@ When a merchant is created, the corresponding warehouse is created for this merc
 
 {% info_block infoBox "Example" %}
 
-"Spryker MER000001 Warehouse 1" where `Spryker` is the merchant name, `MER000001` is a merchant reference, and the index is `1` as it is the first warehouse created.
+"Spryker MER000001 Warehouse 1" where `Spryker` is the merchant name, `MER000001` is a merchant reference, and the index is `1` as it's the first warehouse created.
 
 {% endinfo_block %}
 

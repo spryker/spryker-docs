@@ -39,7 +39,7 @@ A Developer can create more CMS Block email templates.
 
 
 ### Naming of email CMS blocks
-Being a multi-purpose entity, CMS Blocks relies strongly on its naming when used as an email. The CMS Block name defines the email template it is assigned to.
+Being a multi-purpose entity, CMS Blocks relies strongly on its naming when used as an email. The CMS Block name defines the email template it's assigned to.
 
 
 #### Template assignment
@@ -123,7 +123,7 @@ To learn how a Back Office User creates translations, see [Managing Glossary](/d
 
 ### Variables in Email Templates
 
-Also, you can use variables to adjust details like a customer name in the emails automatically. For example, if you add the `firstName` variable, when the email is sent, the variable is replaced with the first name of the customer it is sent to. Unlike glossary keys, variables are defined on the code level, namely in the transfer object definition.  
+Also, you can use variables to adjust details like a customer name in the emails automatically. For example, if you add the `firstName` variable, when the email is sent, the variable is replaced with the first name of the customer it's sent to. Unlike glossary keys, variables are defined on the code level, namely in the transfer object definition.  
 
 A developer can provide a full list of variables and create new ones.
 

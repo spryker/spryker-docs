@@ -32,7 +32,7 @@ This endpoint lets you add push notification providers to further subscribe to n
 | Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
 
 
-Request sample: `POST https://glue-backend.de.b2c.demo-spryker.com/push-notification-providers`
+Request sample: `POST https://glue-backend.b2c-eu.demo-spryker.com/push-notification-providers`
 
 ```json
 {
@@ -63,7 +63,7 @@ Response sample:
             "name": "Fulfillment App provider"
         },
         "links": {
-            "self": "https://glue-backend.de.b2c.demo-spryker.com/push-notification-providers/ffb5875e-00d3-5436-ae67-08b7c9837f3e"
+            "self": "https://glue-backend.b2c-eu.demo-spryker.com/push-notification-providers/ffb5875e-00d3-5436-ae67-08b7c9837f3e"
         }
     }
 }

@@ -1,5 +1,6 @@
 ---
 title: "Import file details: product_search_attribute_map.csv"
+description: Learn how to confgiure product searh attribute map in your Spryker shop using the product search attribute map csv file.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-search-attribute-mapcsv

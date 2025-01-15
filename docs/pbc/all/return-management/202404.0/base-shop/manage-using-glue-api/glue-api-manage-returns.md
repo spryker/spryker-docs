@@ -216,7 +216,7 @@ Request sample: create a return
 | taxRate | Integer | Current tax rate in percentage. |
 | unitNetPrice | Integer | Single item net price. |
 | sumNetPrice | Integer | Sum of items' net price. |
-| unitPrice | Integer | Single item price without assuming if it is new or gross, this value should be used everywhere the price is displayed, it allows switching tax mode without side effects. |
+| unitPrice | Integer | Single item price without assuming if it's new or gross, this value should be used everywhere the price is displayed, it allows switching tax mode without side effects. |
 | unitTaxAmountFullAggregation | Integer | Total tax amount for a given item with additions. |
 | sumTaxAmountFullAggregation | Integer | Total tax amount for a given sum of items with additions. |
 | refundableAmount | Integer | Available refundable amount for an item. |
@@ -500,7 +500,7 @@ Request sample: retrieve a return
 | taxRate | Integer | Current tax rate in percentage. |
 | unitNetPrice | Integer | Single item net price. |
 | sumNetPrice | Integer | Sum of items' net price. |
-| unitPrice | Integer | Single item price without assuming if it is new or gross, this value should be used everywhere the price is displayed, it allows switching tax mode without side effects. |
+| unitPrice | Integer | Single item price without assuming if it's new or gross, this value should be used everywhere the price is displayed, it allows switching tax mode without side effects. |
 | unitTaxAmountFullAggregation | Integer | Total tax amount for a given item with additions. |
 | sumTaxAmountFullAggregation | Integer | Total tax amount for a given sum of items with additions. |
 | refundableAmount | Integer | Available refundable amount for an item. |

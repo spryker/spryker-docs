@@ -193,8 +193,8 @@ To regenerate the cache, run the following command:
 vendor/bin/console oms:process-cache:warm-up
 ```
 
-## Improve performance of the place order by not executing the OMS processing synchronously.
-This will ensure that OMS processing will instantly stop after order creation.
-Actual processing of the OMS will happen after the next execution of the `oms:check-condition` command.
+## Optimize order placement performance
+
+To speed up order placement, you can configure OMS to be executed asynchronously with order placement. After an order is created, OMS processing stops, enabling the order to be created quicker. The OMS processing of the order happens after the `oms:check-condition` command is executed.
 
 ![img](https://i.ibb.co/ssv8Zgc/oms-Slow-order-placement.png)

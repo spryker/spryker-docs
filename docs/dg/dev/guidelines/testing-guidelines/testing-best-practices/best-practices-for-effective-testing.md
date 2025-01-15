@@ -12,7 +12,7 @@ redirect_from:
 related:
   - title: Available test helpers
     link: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
- - title: Code coverage
+  - title: Code coverage
     link: docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
   - title: Data builders
     link: docs/dg/dev/guidelines/testing-guidelines/data-builders.html

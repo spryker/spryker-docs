@@ -26,7 +26,8 @@ If you're working with multiple Spryker projects and customers, each of those cu
 
 {% info_block infoBox %}
 
-* Only customers can request Support Portal access because it's part of their contractual agreement with Spryker
+Only customers can request Support Portal access because it's part of their contractual agreement with Spryker.
+
 {% endinfo_block %}
 
 ### Spryker partner portal deprecation

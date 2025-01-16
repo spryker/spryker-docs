@@ -228,17 +228,16 @@ Avoid making ZED calls within QueryExpanderPlugin (from Storage or Search).
 
 ### OMS optimization
 
-OMS processes are the template of the order fulfillment in Spryker. The first state of OMS processes, called the NEW state, plays an important role in the checkout process. Therefore, it's necessary to make sure you don't use unnecessary features when you don't need them, for example, Reservation or Timeout transitions.
+OMS processes are the template of the order fulfillment in Spryker. The first state of OMS processes, called the NEW state, plays an important role in the checkout process. So, make sure transitions related to unsused features are disabled, for example–Reservation or Timeout transitions.
 
-One can avoid using the unnecessary transitions by:
+You can avoid using the unnecessary transitions as follows:
 
-- Removing the *Reservation* flag from the NEW and other steps in the OMS.
-- Removing the *Timeout* transition from the NEW step in the OMS.
+- Remove the `Reservation` flag from the `NEW` and other steps in the OMS.
+- Remove the `Timeout` transition from the `NEW` step in the OMS.
 
-{% info_block warningBox %}
-
-Decoupling of Checkout endpoint and OMS commands: 
-[Slow Checkout endpoint](/docs/pbc/all/order-management-system/202410.0/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html)
+For more ways to optimize OMS, see
+* [Slow checkout endpoint](/docs/pbc/all/order-management-system/202410.0/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html#slow-checkout-endpoint)
+* [Optimize order placement performance](/docs/pbc/all/order-management-system/202410.0/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html#optimize-order-placement-performance)
 
 {% endinfo_block %}
 

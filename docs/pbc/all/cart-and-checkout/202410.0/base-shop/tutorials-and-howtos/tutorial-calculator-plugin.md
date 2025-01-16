@@ -85,7 +85,7 @@ class ItemTaxAmountCalculatorPlugin extends AbstractPlugin implements Calculatio
    }
 ```
 
-6. Add a new facade method: `Pyz\Zed\Tax\TaxFacade::calculateItemTax()` and create the `TaxFacade` class extending Spryker Core `TaxFacade` if it is not present.
+6. Add a new facade method: `Pyz\Zed\Tax\TaxFacade::calculateItemTax()` and create the `TaxFacade` class extending Spryker Core `TaxFacade` if it's not present.
 
 ```php
 <?php

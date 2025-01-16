@@ -1,6 +1,6 @@
 ---
 title: Migrate from Twig v1 to Twig v3
-description: The article describes how you can migrate from Twig v1 to Twig v3
+description: The article describes how you can migrate from Twig v1 to Twig v3 for your Spryker based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migrating-from-twig-v1-to-twig-v3

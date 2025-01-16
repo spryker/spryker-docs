@@ -17,7 +17,7 @@ related:
 
 In Spryker, front-end elements have dedicated SCSS styles. To show you how to customize the Spryker front end, we broke down the *Product Details* page from our [B2B Demo Shop](/docs/about/all/b2b-suite.html#b2b-demo-shop) into separate elements with their respective style files. To customize a particular element, you adjust the code in the respective style file.
 
-You can see the [full version of this page](https://www.de.b2b.demo-spryker.com/en/soennecken-permanentmarker-4mm-rundspitze-M22663) in our B2B Demo Shop.
+You can see the [full version of this page](https://www.b2b-eu.demo-spryker.com/en/soennecken-permanentmarker-4mm-rundspitze-M22663) in our B2B Demo Shop.
 
 ![B2B-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2B+Product+Details+page/b2b-1.png)
 

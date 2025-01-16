@@ -9,9 +9,9 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html
 related:
   - title: About the query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-container/query-container.html
   - title: Implement a query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-container/implement-a-query-container.html
 ---
 
 {% info_block infoBox "When to use query containers" %}
@@ -25,7 +25,7 @@ The query container of the current unterminated query is available via `$this->g
 
 ![Query container via factory](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Zed/Persistence+Layer/Query+Container/query-container-via-factory.png)
 
-### Executing the query
+## Executing the query
 
 You can adjust the query itself, but avoid adding more filters or joins because this is the responsibility of the query container only.
 

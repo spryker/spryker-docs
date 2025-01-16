@@ -30,7 +30,7 @@ This document describes the `cms_slot.csv` file to configure [CMS Slot](/docs/pb
 | content_provider | &check; | String |Must be a valid type of content provider. | Defines the source of content of this slot. |
 | name | &check; | String |  | Alphabetical identifier of the slot. It will be shown in the Back Office. |
 | description | &check; | String |  | Description of the slot. It will be shown in the Back Office. |
-| is_active |  | Boolean |<ul><li>Inactive = 0</li><li>Active = 1</li><li>If empty during the import, the slots will be imported as inactive.</li></ul> | Indicates if the slot is active or inactive.<br>If the slot is inactive, it is not rendered in the Storefront by the slot widget. |
+| is_active |  | Boolean |<ul><li>Inactive = 0</li><li>Active = 1</li><li>If empty during the import, the slots will be imported as inactive.</li></ul> | Indicates if the slot is active or inactive.<br>If the slot is inactive, it's not rendered in the Storefront by the slot widget. |
 
 
 

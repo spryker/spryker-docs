@@ -65,7 +65,7 @@ Oryx consists of a range of packages, applications, and tools. To avoid inadvert
 
 ## Backward compatibility
 
-The Oryx framework provides maximum compatibility with previous versions. If a feature is deprecated, it is removed completely only after a few releases.
+The Oryx framework provides maximum compatibility with previous versions. If a feature is deprecated, it's removed completely only after a few releases.
 
 Minor releases are fully backward compatible and do not require any developer assistance.
 

@@ -971,7 +971,7 @@ Make sure that `shipment-type` synchronization plugin works correctly:
 2. Run the `console sync:data -r shipment_type` command.
 3. Make sure that, in your system, storage entries are displayed with the `kv:shipment_type:{store}:{shipment_type_id}` mask.
 
-Make sure that when a shipment type is created or edited through BAPI, it is exported to Redis accordingly.
+Make sure that when a shipment type is created or edited through BAPI, it's exported to Redis accordingly.
 
 In Redis, make sure data is represented in the following format:
 ```json

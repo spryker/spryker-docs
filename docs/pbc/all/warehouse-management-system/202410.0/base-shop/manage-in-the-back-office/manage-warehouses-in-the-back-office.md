@@ -1,6 +1,6 @@
 ---
 title: Manage warehouses in the Back Office
-description: Learn how to log into the Back Office.
+description: Learn how to manage warhouses directly in the Back Office of your Spryker Cloud Commerce OS project.
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:

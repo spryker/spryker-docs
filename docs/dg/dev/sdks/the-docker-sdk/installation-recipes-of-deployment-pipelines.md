@@ -1,6 +1,6 @@
 ---
 title: Installation recipes of deployment pipelines
-description: Installation recipe commands and file structure.
+description: Learn all about the Spryker Installation recipes of your deployment pipelines for your spryker based projects.
 last_updated: Nov 29, 2022
 template: howto-guide-template
 redirect_from:

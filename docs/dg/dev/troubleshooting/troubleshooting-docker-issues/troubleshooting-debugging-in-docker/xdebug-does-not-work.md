@@ -1,6 +1,6 @@
 ---
 title: Xdebug does not work
-description: Learn how to fix the issue with a non-working Xdebug
+description: Learn how to fix the issue with a non-working Xdebug when troubleshooting your Spryker project.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/xdebug-does-not-work

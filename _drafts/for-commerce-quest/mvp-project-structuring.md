@@ -98,7 +98,7 @@ The following image below is an example of how to map functionality to assess th
 
 {% endinfo_block %}
 
-Once functionality has been mapped, it is easier to assess the scope, importance, and cost of each feature.
+Once functionality has been mapped, it's easier to assess the scope, importance, and cost of each feature.
 
 The next step is to map features to specific releases. With this method, you can formulate a fair assessment of the progression of your release scope and plan your work and resources accordingly.
 
@@ -137,7 +137,7 @@ Both methods result in a document listing the tasks, resources, and timeline nee
 
 {% info_block infoBox "Examples:" %}
 
-The Data Export functionality is ideal to be tackled with the spike tickets approach because it is a single functionality with no other external dependencies that need to be considered.<br><br>On the other hand, something like an ERP Connection that spans many processes and many edge cases needs in-depth analysis.
+The Data Export functionality is ideal to be tackled with the spike tickets approach because it's a single functionality with no other external dependencies that need to be considered.<br><br>On the other hand, something like an ERP Connection that spans many processes and many edge cases needs in-depth analysis.
 
 So you would have a plan of attack workshops with the shop and ERP team and also with logistics and payment experts and combine the conclusions into a single plan.
 
@@ -156,7 +156,7 @@ Choose the launch scenario that best suits the nature of the functionality that 
 
 {% info_block infoBox %}
 
-For example, if the new feature has to do with financial or highly sensitive information, it is better to choose the more conservative canary appropriate.
+For example, if the new feature has to do with financial or highly sensitive information, it's better to choose the more conservative canary appropriate.
 
 {% endinfo_block %}
 

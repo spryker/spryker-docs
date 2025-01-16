@@ -351,7 +351,7 @@ After this, when you read an order using `SalesFacade::getOrderByIdSalesOrder()`
 
 {% info_block errorBox %}
 
-The Sales module does not depend on the `SalesAggregator` anymore. Therefore, you need to remove the `/sales-aggregator/sales/list` from `\Pyz\Zed\Sales\SalesConfig::getSalesDetailExternalBlocksUrls` as it is no longer in use. Totals were moved to Sales to the template `Spryker/Zed/Sales/Presentation/Detail/boxes/totals.twig` available in Sales version >= 6.\*.
+The Sales module does not depend on the `SalesAggregator` anymore. Therefore, you need to remove the `/sales-aggregator/sales/list` from `\Pyz\Zed\Sales\SalesConfig::getSalesDetailExternalBlocksUrls` as it's no longer in use. Totals were moved to Sales to the template `Spryker/Zed/Sales/Presentation/Detail/boxes/totals.twig` available in Sales version >= 6.\*.
 
 {% endinfo_block %}
 

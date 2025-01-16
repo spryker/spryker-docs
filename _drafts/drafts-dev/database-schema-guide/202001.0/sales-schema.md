@@ -48,7 +48,7 @@ It is currently not possible to realize splits with Sales Order Items that have 
 
 ### Customer Data
 
-The Sales Order contains a copy of the Customer data so that it is not affected if the Customer makes changes.
+The Sales Order contains a copy of the Customer data so that it's not affected if the Customer makes changes.
 ![Customer data](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/customer-data.png)
 
 **Structure**:

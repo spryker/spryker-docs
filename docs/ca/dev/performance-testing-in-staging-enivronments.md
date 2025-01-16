@@ -18,24 +18,24 @@ If you are unable to use real data for your load tests, you can use the [test da
 
 Based on our experience, the [Load testing tool](https://github.com/spryker-sdk/load-testing) can greatly assist you in conducting more effective load tests.
 
-# Load testing tool for Spryker
+## Load testing tool for Spryker
 
 To assist in performance testing, we have a [load testing tool](https://github.com/spryker-sdk/load-testing). The tool contains predefined test scenarios that are specific to Spryker. Test runs based on Gatling.io, an open-source tool. Web UI helps to manage runs and multiple target projects are supported simultaneously.
 
 The tool can be used as a package integrated into the Spryker project or as a standalone package.
 
-## What is Gatling?
+### What is Gatling?
 
 Gatling is a powerful performance testing tool that supports HTTP, WebSocket, Server-Sent-Events, and JMS. Gatling is built on top of Akka that enables thousands of virtual users on a single machine. Akka has a message-driven architecture, and this overrides the JVM limitation of handling many threads. Virtual users are not threads but messages.
 
 Gatling is capable of creating an immense amount of traffic from a single node, which helps obtain the most precise information during the load testing.
 
-## Prerequisites
+### Prerequisites
 
 - Java 8+
 - Node 10.10+
 
-## Including the load testing tool into an environment
+### Including the load testing tool into an environment
 
 The purpose of this guide is to show you how to integrate Spryker's load testing tool into your environment. While the instructions here will focus on setting this up with using one of Spryker’s many available demo shops, it can also be implemented into an on-going project.
 
@@ -57,7 +57,7 @@ git clone https://github.com/spryker-shop/b2c-demo-shop.git ./
 git clone git@github.com:spryker/docker-sdk.git docker
 ```
 
-### Integrating Gatling
+#### Integrating Gatling
 
 With the B2C Demo Shop and Docker SDK cloned, you will need to make a few changes to integrate Gatling into your project. These changes include requiring the load testing tool with composer as well as updating the [Router module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/router/router-yves.html) inside of Yves.
 
@@ -122,7 +122,7 @@ extensions:
 ...
 ```
 
-### Setting up the environment
+#### Setting up the environment
 
 {% info_block infoBox %}
 
@@ -160,13 +160,13 @@ docker/sdk up --build --assets --data
 
 You've set up your Spryker B2C Demo Shop and can now access your applications.
 
-### Data preparation
+#### Data preparation
 
 With the integrations done and the environment set up, you will need to create and load the data fixtures. This is done by first generating the necessary fixtures before triggering a *publish* of all events and then running the *queue worker*. As this will be running tests for this data preparation step, this will need to be done in the [testing mode for the Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/running-tests-with-the-docker-sdk.html).
 
 These steps assume you are working from a local environment. If you are attempting to implement these changes to a production or staging environment, you will need to take separate steps to generate parity data between the load-testing tool and your cloud-based environment.
 
-#### Steps for using a cloud-hosted environment.
+##### Steps for using a cloud-hosted environment.
 
 The Gatling test tool uses pre-seeded data which is used locally for both testing and generating the fixtures in the project's database. If you wish to test a production or a staging environment, there are several factors which need to be addressed.
 
@@ -178,7 +178,7 @@ The Gatling test tool uses pre-seeded data which is used locally for both testin
 
 Data used for Gatling's load testing can be found in **/load-test-tool-dir/tests/_data**. Any data that you generate from your cloud-hosted environment will need to be stored here.
 
-##### Setting up for basic authentication.
+###### Setting up for basic authentication.
 
 If your environment is set for `BASIC AUTH` authentication and requires a user name and password before the site can be loaded, Gatling needs additional configuration. Found within **/load-test-tool-dir/resources/scenarios/spryker/**, two files control the HTTP protocol which is used by each test within the same directory. `GlueProtocol.scala` and `YvesProtocol.scala` each have a value (`httpProtocol`) which needs an additional argument to account for this authentication mode.
 
@@ -195,7 +195,7 @@ val httpProtocol = http
 
 **usernamehere** and **passwordhere** should match the username and password used for your environment's basic authentication, and not an account created within Spryker. This username and password are typically set up within your deploy file.
 
-##### Generating product data
+###### Generating product data
 
 {% info_block errorBox %}
 
@@ -216,7 +216,7 @@ FROM `us-docker`.`spy_product_concrete_storage`;
 
 This command parses through the JSON entry and extracts what we need. Once this information has been generated, it should be saved as `product_concrete.csv` and saved in the **/load-test-tool-dir/tests/_data** directory.
 
-##### Generating customer data
+###### Generating customer data
 
 {% info_block errorBox %}
 
@@ -259,7 +259,7 @@ For each of these, the username is typically the email of the user that was crea
 
 Once users have been created and access tokens generated, this information should be stored and formatted in `customer.csv` and saved in the **/load-test-tool-dir/tests/_data** directory. Make sure to put the correct information under the appropriate column name.
 
-#### Steps for using a local environment
+##### Steps for using a local environment
 
 To start, entering testing mode with the following command:
 
@@ -289,7 +289,7 @@ console queue:worker:start -s
 
 You should have the fixtures loaded into the databases and can now exit the CLI to install Gatling into the project.
 
-#### Alternative method to generate local fixtures.
+##### Alternative method to generate local fixtures.
 
 Jenkins is the default scheduler which ships with Spryker. It is an automation service which helps to automate tasks within Spryker. If you would like an alternative way to generate fixtures for your local environment, Jenkins can be used to schedule the necessary tasks you need for the data preparation step.
 
@@ -334,13 +334,13 @@ APPLICATION_STORE="DE" COMMAND="$PHP_BIN vendor/bin/console queue:worker:start -
 
 {% info_block infoBox %}
 
-While it is possible to change the Jenkins cronjobs found at **/config/Zed/cronjobs/jenkins.php**, please note that these entries require a scheduled time and setting this will cause those jobs to run until they have been disabled in the Jenkins web UI.
+While it's possible to change the Jenkins cronjobs found at **/config/Zed/cronjobs/jenkins.php**, please note that these entries require a scheduled time and setting this will cause those jobs to run until they have been disabled in the Jenkins web UI.
 
 {% endinfo_block %}
 
 You are now done and can move on to [Installing Gatling](#installing-gatling)!
 
-### Installing Gatling
+#### Installing Gatling
 
 {% info_block infoBox %}
 
@@ -370,7 +370,7 @@ cd vendor/spryker-sdk/load-testing
 
 After this step has been finished, you will be able to run the Web UI and tool to perform load testing for your project on the local level.
 
-#### Installing Gatling as a standalone package
+##### Installing Gatling as a standalone package
 
 It is possible for you to run Gatling as a standalone package. Fixtures and data are still needed to be generated on the project level to determine what loads to send with each test. However, as the Spryker load testing tool utilizes NPM to run a localized server for the Web UI, you can do the following to install it:
 
@@ -389,7 +389,7 @@ cd load-testing
 
 This should install Gatling with Spryker's available Web UI, making it ready for load testing.
 
-### Running Gatling
+#### Running Gatling
 
 To get the Web UI of the Gatling tool, run:
 
@@ -432,7 +432,7 @@ Tests like **CartApi** and **GuestCartApi** use an older method of the `cart` en
 {% endinfo_block %}
 
 
-## Using Gatling
+### Using Gatling
 
 In the testing tool Web UI, you can do the following:
 - Create, edit, and delete instances.
@@ -444,11 +444,11 @@ You can perform all these actions from the main page:
 ![screenshot](https://github.com/spryker-sdk/load-testing/raw/master/docs/images/main-page.png)
 
 
-### Managing instances
+#### Managing instances
 
 You can create new instances and edit or delete the existing ones.
 
-#### Creating an instance
+##### Creating an instance
 
 To create an instance:
 
@@ -462,7 +462,7 @@ To create an instance:
 Now, the new instance should appear in the navigation bar in *INSTANCES* section.
 
 
-#### Editing an instance
+##### Editing an instance
 For the already available instances, you can edit Yves URL and Glue URL. Instance names cannot be edited.
 
 To edit an instance:
@@ -474,7 +474,7 @@ To edit an instance:
 
 Now, the instance data is updated.
 
-#### Deleting an instance
+##### Deleting an instance
 To delete an instance:
 1. In the navigation bar, click **New instance**. The *Instance* page opens.
 2. Click the X sign next to the instance you want to delete:
@@ -483,7 +483,7 @@ To delete an instance:
 
 Your instance is now deleted.
 
-### Running tests
+#### Running tests
 
 To run a new load test:
 
@@ -502,7 +502,7 @@ To run a new load test:
 That's it - your test should run now. While it runs, you see a page where logs are generated. Once the time you specified in the Duration field from step 6 elapses, the test stops, and you can view the detailed test report.
 
 
-### Viewing the test reports
+#### Viewing the test reports
 
 On the main page, you can check what tests are currently being run as well as view the detailed log for the completed tests.
 
@@ -521,7 +521,7 @@ To view the reports of the completed tests, on the main page, in the *Done* sect
 
 
 
-## Example test: Measuring the capacity
+### Example test: Measuring the capacity
 
 Let's consider the example of measuring the capacity with the `AddToCustomerCart` or `AddToGuestCart` test.
 
@@ -541,7 +541,7 @@ For the *Steady probe* test type, the following is done:
 - Checking that the response time is in acceptable boundaries. [< 400ms for 90% of requests]
 ![screenshot](https://github.com/spryker-sdk/load-testing/raw/master/docs/images/steady-probe.png)
 
-## Gatling Reports
+### Gatling Reports
 
 Gatling reports are a valuable source of information to read the performance data by providing some details about requests and response timing.
 
@@ -556,18 +556,18 @@ There are the following report types in Gatling:
 - Response time against Global RPS
 
 
-### Indicators
+#### Indicators
 
 This chart shows how response times are distributed among the standard ranges.
 The right panel shows the number of OK/KO requests.
 ![screenshot](https://github.com/spryker-sdk/load-testing/raw/master/docs/images/indicators.png)
 
-### Statistics
+#### Statistics
 
 This table shows some standard statistics such as min, max, average, standard deviation, and percentiles globally and per request.
 ![screenshot](https://github.com/spryker-sdk/load-testing/raw/master/docs/images/statistics.png)
 
-### Active users among time
+#### Active users among time
 
 This chart displays the active users during the simulation: total and per scenario.
 
@@ -581,27 +581,27 @@ It’s computed as:
 ```
 ![screenshot](https://github.com/spryker-sdk/load-testing/raw/master/docs/images/active-users-among-time.png)
 
-### Response time distribution
+#### Response time distribution
 
 This chart displays the distribution of response times.
 ![screenshot](https://github.com/spryker-sdk/load-testing/raw/master/docs/images/response-time-distribution.png)
 
-### Response time percentiles over time (OK)
+#### Response time percentiles over time (OK)
 
 This chart displays a variety of response time percentiles over time, but only for successful requests. As failed requests can end prematurely or be caused by timeouts, they would have a drastic effect on the computation for percentiles.
 ![screenshot](https://github.com/spryker-sdk/load-testing/raw/master/docs/images/response-time-percentiles-over-time-ok.png)
 
-### Number of requests per second
+#### Number of requests per second
 
 This chart displays the number of requests sent per second overtime.
 ![screenshot](https://github.com/spryker-sdk/load-testing/raw/master/docs/images/number-of-requests-per-second.png)
 
-### Number of responses per second
+#### Number of responses per second
 
 This chart displays the number of responses received per second overtime: total, successes, and failures.
 ![screenshot](https://github.com/spryker-sdk/load-testing/raw/master/docs/images/number-of-responses-per-second.png)
 
-### Response time against Global RPS
+#### Response time against Global RPS
 
 This chart shows how the response time for the given request is distributed, depending on the overall number of requests at the same time.
 ![screenshot](https://github.com/spryker-sdk/load-testing/raw/master/docs/images/response-time-against-global-rps.png)

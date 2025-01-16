@@ -11,7 +11,7 @@ For additional support with this content, [contact our support](https://support.
 
 ## Privilege escalation through the "adding users to companies" function
 
-Due to an access controls vulnerability in the "adding users to companies" function, it was possible for attackers with access to the vulnerable functionality of a company to create admin users to another company.
+Because of an access controls vulnerability in the "adding users to companies" function, it was possible for attackers with access to the vulnerable functionality of a company to create admin users to another company.
 
 ### Affected modules
 

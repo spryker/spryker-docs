@@ -153,7 +153,7 @@ Request sample: retrieve all product attributes
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | allowInput | Boolean | Indicates if custom values can be entered for this product attribute. |
-| isSuper | Boolean | Indicates if it is a super attribute or not. |
+| isSuper | Boolean | Indicates if it's a super attribute or not. |
 | inputType | String | Input type of the product attribute, for example, text, number, select, etc. |
 | localeName | String | Name of the locale. |
 | values | Array | Possible values of the attribute. |

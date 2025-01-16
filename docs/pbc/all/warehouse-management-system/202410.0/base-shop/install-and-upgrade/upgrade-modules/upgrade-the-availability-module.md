@@ -1,6 +1,6 @@
 ---
 title: Upgrade the Availability module
-description: Use the guide to migrate to the new version of the Availability module.
+description: Use the guide to upgrade or migrate to the new version of the Availability module in your Spryker based project.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-availability

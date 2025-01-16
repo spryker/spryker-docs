@@ -1,6 +1,6 @@
 ---
 title: Upgrade to Webpack v5
-description: Use the guide to update versions of the Webpack and related modules.
+description: Use the guide to update versions of the Webpack to Version 5 and related modules for your Spryker projects.
 last_updated: Jan 12, 2023
 template: module-migration-guide-template
 redirect_from:

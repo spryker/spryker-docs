@@ -1,6 +1,6 @@
 ---
 title: Security guidelines
-description: Explore operational and deployment guidelines for efficient ecommerce system management. Focus on best practices for deployment, monitoring, and scaling infrastructure.
+description: Learn about the data security guidelines that you need to follow on an application level for your Spryker based projects.
 last_updated: Sep 15, 2023
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/making-your-spryker-shop-secure

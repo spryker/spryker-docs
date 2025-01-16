@@ -23,7 +23,7 @@ To install the prerequisites, update modules and set up the configuration as des
 
 ### Update modules
 
-Update the following modules to meet the requirements of the App Composition Platform:
+Update the following modules to meet the ACP requirements:
 
 * `spryker/app-catalog-gui:^1.4.1`
 * `spryker/kernel-app:^1.3.0`
@@ -289,7 +289,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 }
 ```
 
-6. In `OauthClientDependencyProvider.php`, enable the following module plugins:
+6. In `OauthClientDependencyProvider.php`, enable the following module plugin:
 
 {% info_block infoBox "Disable deprecated plugins" %}
 

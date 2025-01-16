@@ -198,11 +198,11 @@ vendor/bin/console oms:process-cache:warm-up
 **Issue:** During the checkout process, order items are created in the `new` status by default and immediately become part of the OMS workflow. Any `onEnter` event with command from the state `new` is executed within the same PHP process as the checkout.
 This can significantly increase processing time of checkout requests.
 
-![img](./images/coupled_new_state_to_command.png)
+![coupled_new_state_to_command](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/coupled_new_state_to_command.png)
 
 **Solution:** Postpone all subsequent transitions from the `new` state. Configure transitions to be executed in the background by Jenkins triggering `console oms:check-condition`.
 
-![img](./images/decoupled_new_state_from_command.png)
+![decoupled_new_state_from_command](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/decoupled_new_state_from_command.png)
 
 ```xml
 <transitions>

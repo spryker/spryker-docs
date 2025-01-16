@@ -195,8 +195,7 @@ vendor/bin/console oms:process-cache:warm-up
 
 ## Slow checkout endpoint
 
-**Issue:** During the checkout process, order items are created in the `new` status by default and immediately become part of the OMS workflow. Any `onEnter` event with command from the state `new` is executed within the same PHP process as the checkout.
-This can significantly increase processing time of checkout requests.
+**Issue:** During the checkout process, order items are created in the `new` status by default and immediately become part of the OMS workflow. Any `onEnter` event with command from the state `new` is executed within the same PHP process as the checkout. This can significantly increase processing time of checkout requests.
 
 ![coupled_new_state_to_command](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/coupled_new_state_to_command.png)
 

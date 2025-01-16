@@ -9,7 +9,7 @@ related:
   - title: Plugins registration
     link: docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/plugins-registration.html
   - title: Event subscribers registration
-    link: ocs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html
 redirect_from:
     - /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
     - /docs/scos/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/modules-configuration.html

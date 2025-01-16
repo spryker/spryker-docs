@@ -1,6 +1,6 @@
 ---
 title: Testing guidelines
-description: This section lists documents inside the Testing guidelines section.
+description: This section lists documents inside the Testing guidelines to help you be able to test your Spryker projects effectively.
 last_updated: Apr 26, 2023
 template: concept-topic-template
 redirect_from:

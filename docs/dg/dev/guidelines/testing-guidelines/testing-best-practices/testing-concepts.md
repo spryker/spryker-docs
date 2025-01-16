@@ -11,27 +11,28 @@ redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
 related:
   - title: Available test helpers
-    link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
   - title: Code coverage
-    link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+    link: docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
   - title: Data builders
-    link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+    link: docs/dg/dev/guidelines/testing-guidelines/data-builders.html
   - title: Executing tests
-    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
   - title: Publish and Synchronization testing
-    link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-process.html
   - title: Setting up tests
-    link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+    link: docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html
   - title: Test framework
-    link: docs/scos/dev/guidelines/testing-guidelines/test-framework.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-framework.html
   - title: Test helpers
-    link: docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html
   - title: Testify
-    link: docs/scos/dev/guidelines/testing-guidelines/testify.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testify.html
   - title: Testing best practices
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
   - title: Testing console commands
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
+
 ---
 
 Testing your project is one of the best ways to ensure that your software functions as it's supposed to. The role of testing is to find bugs during the early stages of development to minimize risks. QA is the process of assuring quality, not just verifying you will not get an error on some page.

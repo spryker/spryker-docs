@@ -68,7 +68,11 @@ You can view how it looks like on the store website:
 
 * **B2C**
     Template used: Big Banner w/Middle Title and Subtitle
-![Banner content item widget B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/banner-yves-b2c.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.md/banner-yves-b2c.mp4" type="video/mp4">
+  </video>
+</figure>
 
 * **B2B**
     Template used: Big Banner Left Title, Subtitle and Button

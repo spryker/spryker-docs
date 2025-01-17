@@ -220,7 +220,7 @@ Zed calls are necessary when it comes to executing a database-related operation 
 - Exporting necessary data, only product-related ones, from Zed to Redis at the pre-calculation phase with the help of Publish and Synchronization.
 - Merging duplicate Zed requests to only one customer request (AddToCart + Validations + …).
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 Avoid making ZED calls within QueryExpanderPlugin (from Storage or Search).
 
@@ -238,8 +238,6 @@ You can avoid using the unnecessary transitions as follows:
 For more ways to optimize OMS, see the following docs:
 * [Slow checkout endpoint](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html#slow-checkout-endpoint)
 * [Optimize order placement performance](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html#optimize-order-placement-performance)
-
-{% endinfo_block %}
 
 ### Performance checklist
 

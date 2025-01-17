@@ -9,7 +9,7 @@ Production environments, unlike staging environments, are equipped with auto-sca
 
 ## General Considerations
 
-* While all production environments offer some form of automatic scaling by default, environments must be optimized for your work load. To do it, schedule a load test by creating a "Announce High Load/Traffic" case at the (support portal)[https://support.spryker.com]. Plan for at least three days of lead time.
+* While all production environments offer some form of automatic scaling by default, environments must be optimized for your work load. To do it, schedule a load test by creating a "Announce High Load/Traffic" case at the [support portal](https://support.spryker.com). Plan for at least three days of lead time.
 * Load tests are usually performed in rounds. After deploying a typical infrastructure configuration for the size of your project, we'll ask you to perform load testing. The results are analyzed and the environment is dialed in. This pattern is repeated until the environment is configured to support the expected load. For a good result, two to three rounds are needed.
 * We don't recomment load testing in live production environments because this can affect the experience of your visitors. Instead, book a production-like environment or upgrade one of your non-production environments to perform the tests.
 

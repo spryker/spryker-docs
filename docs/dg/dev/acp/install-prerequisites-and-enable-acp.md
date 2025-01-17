@@ -376,8 +376,6 @@ class OauthClientConfig extends SprykerOauthClientConfig
 - `OAuthRequestExpanderPlugin` to expand the request with OAuth token.
 - `MerchantAppRequestExpanderPlugin` to expand the request with the merchant app data.
 
-{% info_block infoBox "Disable deprecated plugins" %}
-
 <details>
   <summary>src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php</summary>
 

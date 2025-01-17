@@ -346,15 +346,15 @@ By setting a span attribute `no_critical` and `is_critical`, span can be marked 
 ### Sampling configuration
 Like already mentioned, valued that used for sampling can be changed. In order to do so, you need to change a few env variables.
 
-| Variable Name                                   | Description                                                                                                  | Default Value | Allowed range |
-|-------------------------------------------------|--------------------------------------------------------------------------------------------------------------|---------------|---------------|
-| `OTEL_BSP_MIN_SPAN_DURATION_THRESHOLD`          | Used in `Closing span sampling` to define a value when spans that execution time is lower to be filtered out | 5             | 0...100000    |
-| `OTEL_BSP_MIN_CRITICAL_SPAN_DURATION_THRESHOLD` | Same as a previous one, but used for critical spans only                                                     | 0             | 0...100000    |
-| `OTEL_TRACES_SAMPLER_ARG`                       | A probability value that is used to define if WEB GET request trace going to be detailed or not              | 0.3           | 0...1.0       |
-| `OTEL_CLI_TRACE_PROBABILITY`                    | A probability value that is used to define if console command trace going to be detailed or not              | 0.5           | 0...1.0       |
-| `OTEL_TRACES_CRITICAL_SAMPLER_ARG`              | A probability value that is used to define if `critical` span will be sampled or not                         | 1             | 0...1.0       |
-| `OTEL_TRACES_NON_CRITICAL_SAMPLER_ARG`          | A probability value that is used to define if `non critical` span will be sampled or not                     | 0.1           | 0...1.0       |
-| `OTEL_TRACE_PROBABILITY`                        | A probability value that is used to define if `regular` span will be sampled or not                          | 0.3           | 0...1.0       |
+| Variable Name                                   | Description                                                                                                        | Default Value | Allowed range |
+|-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|---------------|---------------|
+| `OTEL_BSP_MIN_SPAN_DURATION_THRESHOLD`          | Used in `Closing span sampling` to define a value in ms when spans that execution time is lower to be filtered out | 5             | 0...100000    |
+| `OTEL_BSP_MIN_CRITICAL_SPAN_DURATION_THRESHOLD` | Same as a previous one, but used for critical spans only                                                           | 0             | 0...100000    |
+| `OTEL_TRACES_SAMPLER_ARG`                       | A probability value that is used to define if WEB GET request trace going to be detailed or not                    | 0.3           | 0...1.0       |
+| `OTEL_CLI_TRACE_PROBABILITY`                    | A probability value that is used to define if console command trace going to be detailed or not                    | 0.5           | 0...1.0       |
+| `OTEL_TRACES_CRITICAL_SAMPLER_ARG`              | A probability value that is used to define if `critical` span will be sampled or not                               | 1             | 0...1.0       |
+| `OTEL_TRACES_NON_CRITICAL_SAMPLER_ARG`          | A probability value that is used to define if `non critical` span will be sampled or not                           | 0.1           | 0...1.0       |
+| `OTEL_TRACE_PROBABILITY`                        | A probability value that is used to define if `regular` span will be sampled or not                                | 0.3           | 0...1.0       |
 
 Increasing those values will make your traces more detailed, but also can slow down your application as more spans will be sampled and sent to a collector.
 
@@ -366,7 +366,7 @@ Increasing those values will make your traces more detailed, but also can slow d
 | `OTEL_EXPORTER_OTLP_ENDPOINT`    | Defines a url for a collector. Please contact a Spryker representative to get one for a Cloud env.                                                                           | 'http://collector:4317' | valid url                                                      |
 | `OTEL_SERVICE_NAME_MAPPING`      | A JSON object that includes mapping from application URL to service name. This mapping is used if no service name was provided via `MonitoringService::setApplicationName()` | '{}'                    | valid json with keys as service name and value as  URL pattern |
 | `OTEL_DEFAULT_SERVICE_NAME`      | If no service name is provided and no name was defined in `OTEL_SERVICE_NAME_MAPPING`, this default name will be used instead                                                | 'Default Service'       | any valid string                                               |
-| `OTEL_BSP_SCHEDULE_DELAY`        | Defines a delay that will be used to wait before sending batch of spans into the exporter. The bigger the number, the bigger the batch.                                      | 1000                    | 0...100000000                                                  |
+| `OTEL_BSP_SCHEDULE_DELAY`        | Defines a delay in ms that will be used to wait before sending batch of spans into the exporter. The bigger the number, the bigger the batch.                                | 1000                    | 0...100000000                                                  |
 | `OTEL_BSP_MAX_QUEUE_SIZE`        | Defines a max size of the queue of spans that can be processed in one request                                                                                                | 2048                    | at least an amount of spans you want to see                    |
 | `OTEL_BSP_MAX_EXPORT_BATCH_SIZE` | Defines a size of the batch of spans. After this size is reached, batch will be sent to the exporter.                                                                        | 512                     | more than 0 and less than `OTEL_BSP_MAX_QUEUE_SIZE`            |
 

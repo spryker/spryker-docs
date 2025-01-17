@@ -384,6 +384,10 @@ class OauthClientConfig extends SprykerOauthClientConfig
 
 {% info_block infoBox "Disable deprecated plugins" %}
 
+Make sure that no deprecated plugins are enabled. Ideally, the content of each of the methods listed below should exactly match the provided example.
+
+{% endinfo_block %}
+
 <details>
   <summary>src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php</summary>
 

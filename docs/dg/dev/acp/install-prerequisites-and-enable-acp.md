@@ -264,7 +264,7 @@ class MessageBrokerAwsDependencyProvider extends SprykerMessageBrokerAwsDependen
 
 </details>
 
-5. In `MessageBrokerConfig.php` configure the following:
+5. In `MessageBrokerConfig.php` configure the default worker channels to have the system events channel enabled:
 
 **src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php**
 ```php
@@ -289,7 +289,10 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 }
 ```
 
-6. In `OauthClientDependencyProvider.php`, enable the following module plugin:
+6. In `OauthClientDependencyProvider.php`, enable the following module plugins:
+- `Auth0OauthAccessTokenProviderPlugin` to add the Auth0 OAuth access token provider.
+- `CacheKeySeedAccessTokenRequestExpanderPlugin` to expand the OAuth request with the cache key seed.
+- `TenantIdentifierAccessTokenRequestExpanderPlugin` to expand the OAuth request with the tenant identifier.
 
 {% info_block infoBox "Disable deprecated plugins" %}
 
@@ -342,7 +345,7 @@ class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
 
 </details>
 
-7. In `OauthClientConfig.php`, configure the following:
+7. In `OauthClientConfig.php`, configure the flag to expand the access token request by message attributes:
 
 <details>
   <summary>src/Pyz/Zed/OauthClient/OauthClientConfig.php</summary>
@@ -376,6 +379,10 @@ class OauthClientConfig extends SprykerOauthClientConfig
 </details>
 
 8. In `KernelAppDependencyProvider.php`, enable the following module plugins:
+- `OAuthRequestExpanderPlugin` to expand the request with OAuth token.
+- `MerchantAppRequestExpanderPlugin` to expand the request with the merchant app data.
+
+{% info_block infoBox "Disable deprecated plugins" %}
 
 <details>
   <summary>src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php</summary>

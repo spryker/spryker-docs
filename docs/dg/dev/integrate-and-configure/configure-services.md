@@ -470,6 +470,22 @@ It is not obligatory to pass all the details as environment variables or define 
 
 {% endinfo_block %}
 
+## OpenTelemetry (via Spryker Monitoring Integration)
+
+- Understanding OTEL (Cloud)
+- What are spans, traces etc at OTEL (Cloud+Platform)
+- How to instrument (Platform)
+  - Integration Guide
+ - What are hooks in the app?
+ - Configuration of the instrumentation
+ - Performance impact explained
+ - Custom instrumentation
+- What is included
+  - APM (with examples)  (Platform)
+  - Health Metrics (with examples) (Cloud)
+- Explanation about what I need to do in my APM (e.g. Dynatrace) (Cloud+Platform)
+-- Refer to the docs of the APM tool
+
 ## New Relic
 
 [New Relic](https://newrelic.com/) is a tool used to track the performance of services and the environment to quickly find and fix issues.

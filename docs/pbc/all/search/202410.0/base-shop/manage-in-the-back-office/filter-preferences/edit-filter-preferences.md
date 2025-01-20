@@ -1,6 +1,6 @@
 ---
 title: Edit filter preferences
-description: Learn how to edit filter preferences in the Back Office
+description: Learn how to edit filter preferences directly in the Back Office of your Spryker based projects.
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:

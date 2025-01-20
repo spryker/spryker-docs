@@ -15,24 +15,31 @@ related:
 ---
 
 
-[Spryker Support Portal](https://support.spryker.com/s/) is the main portal for interacting with Spryker support. In the portal, you can have  3 (Standard Success) or 10 (Premier Success) licenses. To get access to the support portal [fill out the form](https://www.surveymonkey.com/r/XYK5R26).
+[Spryker Support Portal](https://support.spryker.com/s/) is the main portal for interacting with Spryker support. In the portal, you can have 3 (Standard Access) or 10 (Premier Access) licenses. To get access to the support portal [fill out the Portal Access Request
+ form](https://www.surveymonkey.com/r/XYK5R26).
 
 ## Best practices for Partners and SIs
 
+Ask your customer to request Support Portal licenses for your project's team. Customers can request licenses using the [Portal Access Request form](https://www.surveymonkey.com/r/XYK5R26). This lets your team request changes and report issues on the customer's behalf.
 
-Spryker Partners and SIs should create support cases in Spryker Support Portal.
+If you're working with multiple Spryker projects and customers, each of those customers needs to request licenses for you.
 
 {% info_block infoBox %}
-The functionality of creating support cases in the Spryker Partner Portal is deprecated.
+
+Only customers can request Support Portal access because it's part of their contractual agreement with Spryker.
+
 {% endinfo_block %}
 
+### Spryker partner portal deprecation
+
+Support cases can no longer be created in Spryker Partner Portal. Use the Support Portal instead.
 
 Using the Support Portal over the Partner Portal has the following advantages:
 * Partners and customers can see their cases and collaborate on them.
 * Advanced relation between change requests, support cases, and infrastructure environments.
 * When creating a case, you can select a needed environment from a list of owned environments, preventing human errors.
 
-* <!-- Upcoming support for MFA -->
+ <!-- Upcoming support for MFA -->
 
 ## Whitelist our email addresses
 

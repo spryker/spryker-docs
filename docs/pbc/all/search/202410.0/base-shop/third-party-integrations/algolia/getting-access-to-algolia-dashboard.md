@@ -1,6 +1,6 @@
 ---
 title: Getting access to Algolia dashboard
-description: Submit a ticket to get access to Algolia dashboard
+description: Learn how you can submit a ticket to get access to your Algolia dashboard for your Spryker based shop.
 template: concept-topic-template
 ---
 

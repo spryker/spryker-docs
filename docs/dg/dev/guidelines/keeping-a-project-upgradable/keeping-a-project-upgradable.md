@@ -1,17 +1,17 @@
 ---
 title: Keeping a project upgradable
-description: Guidelines for keeping a project upgradable
+description: Helpful guidelines to help keeping your Spryker projects upgradable by keeping them comploant with our development guidelines
 last_updated: Mar 24, 2023
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
 related:
   - title: Plugins registration
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/plugins-registration.html
   - title: Event subscribers registration
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html
   - title: Modules configuration
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/modules-configuration.html
 ---
 
 Keeping software up to date is often a potential issue, especially when it comes to transactional business models with sophisticated requirements.

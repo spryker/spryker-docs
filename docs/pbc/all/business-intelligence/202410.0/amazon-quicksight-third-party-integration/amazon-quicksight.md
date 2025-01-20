@@ -15,6 +15,14 @@ Highlights:
 * Highly customizable, offering multiple options to tailor reports & analytics workflows
 * Aggregate data across various systems
 
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/Amazon+QuickSight+Demo.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
+
 ## Data sources and datasets
 
 This feature supports data from Spryker projects and third-party systems. When you set up Amazon QuickSight, the data from your project is available by default, and you can add other data sources if needed.

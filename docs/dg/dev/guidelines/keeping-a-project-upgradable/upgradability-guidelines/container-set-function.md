@@ -1,6 +1,6 @@
 ---
 title: Container set function
-description: Reference information for evaluator tools.
+description: Learn about the container set function and how it checks the way plugins are registered in the dependency provider within your Spryker project.
 template: howto-guide-template
 last_updated: Oct 24, 2023
 redirect_from:

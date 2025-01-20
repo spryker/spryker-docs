@@ -1,6 +1,6 @@
 ---
 title: Reorder category filters
-description: Learn how to reorder category filters in the Back Office
+description: Learn how to reorder category filters directly in the Back Office of your spryker based projects.
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:

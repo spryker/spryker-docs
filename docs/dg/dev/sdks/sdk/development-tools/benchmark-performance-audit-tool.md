@@ -1,6 +1,6 @@
 ---
 title: "Benchmark: Performance audit tool"
-description: The Benchmark tool allows you to assess an application's performance by seeing how long it takes to load a page and how much memory the application consumes during requests.
+description: The Benchmark tool allows you to assess an application's performance by how long it takes to load a page and how much memory the it consumes during requests.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-audit-tool-benchmark

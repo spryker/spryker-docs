@@ -12,9 +12,9 @@ As a prerequisite, customers need to have an OpenTelemetry-compatible APM tool, 
 To request the Spryker Monitoring Integration, customers need to submit a Change Request through the Support Portal. Follow these steps:
 
 - Submit a Change Request: Access the Support Portal and create a new Change Request.
-- Provide the Following Information:
--- Endpoint: The endpoint URL of your APM tool.
--- Credentials/Token: Credentials or an API token that Spryker can use to configure and communicate with your APM tool.
+- Provide the following Information:
+  - Endpoint: The endpoint URL of your APM tool.
+  - Token: An API token that Spryker can use to configure and communicate with your APM tool.
 
 Spryker Support will guide you through the setup process once the request is submitted.
 

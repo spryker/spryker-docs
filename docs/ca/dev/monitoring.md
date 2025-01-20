@@ -12,3 +12,4 @@ Integrate Spryker monitoring data into your preferred APM tool using OpenTelemet
 
 ### New Relic
 Leverage New Relic’s powerful APM features to monitor and troubleshoot your Spryker applications with ease. Learn more about how to use [New Relic APM with Spryker solutions](/docs/dg/dev/integrate-and-configure/configure-services.html#new-relic).
+                                                                                                

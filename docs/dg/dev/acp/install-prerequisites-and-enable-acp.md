@@ -297,12 +297,6 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 | CacheKeySeedAccessTokenRequestExpanderPlugin |  Expands the OAuth request with a cache key seed. |
 | TenantIdentifierAccessTokenRequestExpanderPlugin |  Expands the OAuth request with a tenant identifier. |
 
-{% info_block infoBox "Disable deprecated plugins" %}
-
-Make sure that no deprecated plugins are enabled. Ideally, the content of each of the following methods should exactly match the provided example.
-
-{% endinfo_block %}
-
 <details>
   <summary>src/Pyz/Zed/OauthClient/OauthClientDependencyProvider.php</summary>
 
@@ -388,12 +382,6 @@ class OauthClientConfig extends SprykerOauthClientConfig
 | - | - |
 | `OAuthRequestExpanderPlugin` | Expands the request with an OAuth token. |
 | `MerchantAppRequestExpanderPlugin` | Expands the request with the merchant app data. |
-
-{% info_block infoBox "Disable deprecated plugins" %}
-
-Make sure that no deprecated plugins are enabled. Ideally, the content of each of the following methods should exactly match the provided example.
-
-{% endinfo_block %}
 
 <details>
   <summary>src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php</summary>

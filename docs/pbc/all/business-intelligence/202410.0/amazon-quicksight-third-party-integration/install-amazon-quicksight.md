@@ -1,7 +1,7 @@
 ---
 title: Install Amazon QuickSight
 description: Learn how to integrate the Amazon QuickSight into your project
-last_updated: Nov 21, 2024
+last_updated: Jan 20, 2025
 template: feature-integration-guide-template
 ---
 
@@ -42,11 +42,16 @@ Make sure the following modules have been installed:
 
 1. Add one of the following QuickSight asset bundles to the project level, for example–to `src/Pyz/Zed/AmazonQuicksight/data/asset-bundle.zip`.
 Preconfigured asset bundles per demo shop:
-  - [B2B Marketplace](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2b-mp-asset-bundle.zip) 
-  - [B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2b-asset-bundle.zip) 
-  - [B2C Marketplace](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-mp-asset-bundle.zip) 
-  - [B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-asset-bundle.zip) 
+  - [B2B Marketplace](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2b-mp-asset-bundle.zip)
+  - [B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2b-asset-bundle.zip)
+  - [B2C Marketplace](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-mp-asset-bundle.zip)
+  - [B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-asset-bundle.zip)
 
+{% info_block infoBox "Info" %}
+
+In your custom SQL queries, we recommend avoiding the use of `*` in the SELECT statement and explicitly specifying the exact columns. This practice minimizes the risk of exposing sensitive data when modifying asset bundles or creating custom datasets.
+
+{% endinfo_block %}
 
 2. Define the path to the asset bundle:
 

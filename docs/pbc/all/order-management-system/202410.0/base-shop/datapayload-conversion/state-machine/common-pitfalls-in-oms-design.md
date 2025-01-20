@@ -193,6 +193,35 @@ To regenerate the cache, run the following command:
 vendor/bin/console oms:process-cache:warm-up
 ```
 
+## Slow checkout endpoint
+
+**Issue:** During the checkout process, order items are created in the `new` status by default and immediately become part of the OMS workflow. Any `onEnter` event with command from the state `new` is executed within the same PHP process as the checkout. This can significantly increase processing time of checkout requests.
+
+![coupled_new_state_to_command](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/coupled_new_state_to_command.png)
+
+**Solution:** Postpone all subsequent transitions from the `new` state. Configure transitions to be executed in the background by Jenkins triggering `console oms:check-condition`.
+
+![decoupled_new_state_from_command](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/decoupled_new_state_from_command.png)
+
+```xml
+<transitions>
+    <transition happy="true">
+        <source>new</source>
+        <target>ready for confirmation</target>
+    </transition>
+    <transition happy="true">
+        <source>ready for confirmation</source>
+        <target>confirmation sent</target>
+        <event>confirmation</event>
+    </transition>
+</transitions>
+<events>
+    <event name="confirmation" onEnter="true" command="Oms/SendOrderConfirmation"/>
+</events>
+```
+
+
+
 ## Optimize order placement performance
 
 To speed up order placement, you can configure OMS to be executed asynchronously with order placement. After an order is created, OMS processing stops, enabling the order to be created quicker. The OMS processing of the order happens after the `oms:check-condition` command is executed.

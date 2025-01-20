@@ -1,6 +1,6 @@
 ---
 title: Open-source vulnerabilities checker
-description: Reference information for evaluator tools.
+description: Open source vulnerabilities checker and how it checks if your PHP application depends on PHP packages with known security issues for your Spryker project.
 template: howto-guide-template
 last_updated: Oct 24, 2023
 redirect_from:

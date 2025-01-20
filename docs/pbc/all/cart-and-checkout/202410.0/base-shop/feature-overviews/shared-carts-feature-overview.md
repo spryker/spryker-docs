@@ -140,7 +140,11 @@ With the current functionality, the shopping cart cannot be shared outside of th
 
 On the storefront, company users can share a cart with other users within the same business unit:
 
-![Shopping Cart Actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/share-a-shopping-cart.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/shared-carts-feature-overview.md/share-a-shopping-cart.mp4" type="video/mp4">
+  </video>
+</figure>  
 
 
 ## Related Developer documents

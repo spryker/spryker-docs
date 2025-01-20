@@ -25,4 +25,8 @@ Using the Spryker step engine, you can design different checkout types, such as 
 
 The following example shows how the checkout works in the Spryker Demo Shop for a guest user:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Checkout/Multi-Step+Checkout/shop-guide-checkout.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/checkout-feature-overview/multi-step-checkout-overview.md/shop-guide-checkout.mp4" type="video/mp4">
+  </video>
+</figure>

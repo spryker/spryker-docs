@@ -1,6 +1,6 @@
 ---
 title: Spryker security checker
-description: Reference information for evaluator tools.
+description: Learn how the Spryker security checker and how it checks if security fixes exist for modules present within your spryker projects.
 template: howto-guide-template
 last_updated: Oct 24, 2023
 redirect_from:

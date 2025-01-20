@@ -1,6 +1,6 @@
 ---
 title: Run the evaluator tool
-description: Instructions for running the evaluator tool
+description: Learn with this guide instructions for running the evaluator tool within your Spryker projects.
 template: howto-guide-template
 last_updated: Sep 18, 2023
 redirect_from:

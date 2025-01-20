@@ -6,11 +6,11 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | -------------------- | ---------- | ---------|
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{ page.version }}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| CMS      | {{page.version}} | [Spryker CMS feature integration](/docs/pbc/all/content-management-system/{{ page.version }}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html)
-| Marketplace Merchant Portal Core | {{page.version}} | [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/merchant-portal-core-feature-integration.html)
+| Spryker Core         | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| CMS      | {{page.version}} | [Install the Spryker CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html)
+| Marketplace Merchant Portal Core | {{page.version}} | [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/content-management-system/{{page.version}}/marketplace/install-features/install-cms-merchant-portal-core-feature.html)
 
-### 1) Create merchant restore password email templates
+## 1) Create merchant restore password email templates
 
 **src/Pyz/Zed/MerchantUserPasswordResetMail/Presentation/Mail/merchant_restore_password.html.twig**
 ```twig
@@ -23,18 +23,18 @@ mail.locale.localeName,
 
 **src/Pyz/Zed/MerchantUserPasswordResetMail/Presentation/Mail/merchant_restore_password.text.twig**
 ```twig
-{{ renderCmsBlockAsTwig(
+{% raw %}{{ renderCmsBlockAsTwig({% endraw %}
 'merchant_restore_password--text',
 constant('APPLICATION_STORE'),
 mail.locale.localeName,
-{mail: mail}) \}\}
+{% raw %}{mail: mail}) \}\}{% endraw %}
 ```
 
-### 2) Data import
+## 2) Import data
 
-Import CMS blocks as follows (or create them via zed backoffice):
+You can import and enable CMS blocks as described below or do it in the Back Office.
 
-1. Add cms blocks:
+1. Prepare in import file using the following example:
 
 <details>
   <summary>data/import/common/common/cms_block.csv</summary>
@@ -47,13 +47,13 @@ cms-block-email--merchant_restore_password--text,merchant_restore_password--text
 
 </details>
 
-Import CMS blocks:
+2. Import CMS blocks:
 
 ```bash
 console data:import:cms-block
 ```
 
-2. Prepare data import files per store to enable CMS blocks: (or enable them via zed backoffice)
+3. Prepare data import files per store to enable CMS blocks:
 
 **data/import/common/AT/cms_block_store.csv**
 
@@ -78,7 +78,7 @@ cms-block-email--merchant_restore_password--html,US
 cms-block-email--merchant_restore_password--text,US
 ```
 
-Import CMS blocks:
+4. Import CMS blocks per store:
 
 ```bash
 console data:import:cms-block-store
@@ -86,7 +86,7 @@ console data:import:cms-block-store
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the imported data is added to the following database tables:
+Make sure that the imported data has been added to the following database tables:
 
 * `spy_cms_block`
 * `spy_cms_block_store`

@@ -236,9 +236,9 @@ Set up the following behaviors.
 
 | PLUGIN                                                          | SPECIFICATION                                                                                                           | PREREQUISITES | NAMESPACE                                                                        |
 |-----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------|
-| ZedMerchantUserSecurityPlugin                                   | Sets security firewalls (rules, handlers) for Marketplace users.                                                        |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security              |
-| BooleanToStringTwigPlugin                                       | Adds a Twig function for converting Boolean to String.                                                                  |               | Spryker\Zed\ZedUi\Communication\Plugin\Twig                                      |
-| ZedUiNavigationTwigPlugin                                       | Adds a Twig function for rendering the navigation using web components.                                                 |               | Spryker\Zed\ZedUi\Communication\Plugin                                           |
+| ZedMerchantUserSecurityPlugin                                   | Sets security firewalls, such as rules and handlers, for Marketplace users.                                                        |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security              |
+| BooleanToStringTwigPlugin                                       | Adds a Twig function for converting boolean to string.                                                                  |               | Spryker\Zed\ZedUi\Communication\Plugin\Twig                                      |
+| ZedUiNavigationTwigPlugin                                       | Adds a Twig function for rendering navigation using web components.                                                 |               | Spryker\Zed\ZedUi\Communication\Plugin                                           |
 | MerchantNavigationTypeTwigPlugin                                | Adds `mainMerchantNavigationType` and `secondaryMerchantNavigationType` Twig global variables.                          |               | Spryker\Zed\MerchantPortalApplication\Communication\Plugin\Twig                  |
 | GuiTableApplicationPlugin                                       | Enables the GuiTable infrastructure for the Back Office.                                                                |               | Spryker\Zed\GuiTable\Communication\Plugin\Application                            |
 | GuiTableConfigurationTwigPlugin                                 | Adds a Twig function for rendering `GuiTableConfiguration` for the `GuiTable` web component.                            |               | Spryker\Zed\GuiTable\Communication\Plugin\Twig                                   |
@@ -250,8 +250,8 @@ Set up the following behaviors.
 | MerchantUserUserRoleFilterPlugin                                | Filters `ROLE_BACK_OFFICE_USER` to prevent a merchant user from logging into the Back Office.                           |               | Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui                        |
 | ProductViewerForOfferCreationAclInstallerPlugin                 | Provides `ProductViewerForOfferCreation` roles with rules and groups to create on installation.                         |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
 | AclGroupMerchantUserLoginRestrictionPlugin                      | Checks if the merchant user login is restricted.                                                                        |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\SecurityMerchantPortalGui     |
-| MailMerchantUserPasswordResetRequestStrategyPlugin | Allows to enable reset password functionality for merchant users.                                                       |  | Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\UserPasswordReset  |
-| MerchantUserPasswordResetMailTypeBuilderPlugin | Builds the MailTransfer for merchant password restore email type.                                                       |  | Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\Mail  |
+| MailMerchantUserPasswordResetRequestStrategyPlugin | Enables reset password functionality for merchant users.                                                       |  | Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\UserPasswordReset  |
+| MerchantUserPasswordResetMailTypeBuilderPlugin | Builds the MailTransfer for the merchant password restore email type.                                                       |  | Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\Mail  |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
@@ -754,7 +754,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data has been added to the `spy_glossary` table in the database.
+Make sure the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

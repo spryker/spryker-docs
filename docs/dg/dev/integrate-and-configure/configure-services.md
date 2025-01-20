@@ -473,13 +473,14 @@ It is not obligatory to pass all the details as environment variables or define 
 ## OpenTelemetry (via Spryker Monitoring Integration)
 
 - Understanding OTEL (Cloud)
+### Prerequisites
+In order to successfully integrate your Spryker solution with an Otel-compatible APM tool, you must first follow [this guide](/docs/ca/dev/spryker-monitoring-integration.md#how-do-i-get-it).
+  
 - What are spans, traces etc at OTEL (Cloud+Platform)
-- How to instrument (Platform)
-  - Integration Guide
- - What are hooks in the app?
- - Configuration of the instrumentation
- - Performance impact explained
- - Custom instrumentation
+### How to instrument
+We've created a comprehensive guide to help you instrument your application using OpenTelemetry. By following these instructions, you can gain valuable insights into your application's performance and ensure a robust monitoring setup. To start instrumenting your application, check out our detailed [OpenTelemetry Instrumentation Guide](/docs/dg/dev/backend-development/opentelemetry/overview.md#integration).
+
+
 - What is included
   - APM (with examples)  (Platform)
   - Health Metrics (with examples) (Cloud)

@@ -1,0 +1,1 @@
+# Spryker Monitoring Integration

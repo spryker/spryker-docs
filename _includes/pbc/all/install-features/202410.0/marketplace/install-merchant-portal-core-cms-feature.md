@@ -10,15 +10,15 @@ Install the required features:
 | CMS      | {{page.version}} | [Spryker CMS feature integration](/docs/pbc/all/content-management-system/{{ page.version }}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html)
 | Marketplace Merchant Portal Core | {{page.version}} | [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/merchant-portal-core-feature-integration.html)
 
-###  1) Create merchant restore password email templates
+### 1) Create merchant restore password email templates
 
 **src/Pyz/Zed/MerchantUserPasswordResetMail/Presentation/Mail/merchant_restore_password.html.twig**
 ```twig
-{{ renderCmsBlockAsTwig(
+{% raw %}{{ renderCmsBlockAsTwig({% endraw %}
 'merchant_restore_password--html',
 constant('APPLICATION_STORE'),
 mail.locale.localeName,
-{mail: mail}) \}\}
+{% raw %}{mail: mail}) \}\}{% endraw %}
 ```
 
 **src/Pyz/Zed/MerchantUserPasswordResetMail/Presentation/Mail/merchant_restore_password.text.twig**

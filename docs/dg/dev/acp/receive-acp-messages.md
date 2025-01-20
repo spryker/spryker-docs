@@ -9,7 +9,7 @@ redirect_from:
 
 Your Spryker project can receive ACP messages using the following commands:
 
-Receive messages from all the channels:
+Receive messages from all channels:
 ```bash
 console message-broker:consume
 ```
@@ -24,7 +24,7 @@ console message-broker:consume {channel-name} # {channel-name} is the name of th
 ## Receiving messages automatically
 
 The preceding command must be executed periodically. To set up a periodic execution, configure Jenkins in `config/Zed/cronjobs/jenkins.php`:
-The conditional clause verifies whether the message broker is enabled in the configuration. If it is enabled, the job is added to the list of scheduled jobs during the next deployment.
+
 
 ```php
 if (\Spryker\Shared\Config\Config::get(\Spryker\Shared\MessageBroker\MessageBrokerConstants::IS_ENABLED)) {
@@ -36,3 +36,5 @@ if (\Spryker\Shared\Config\Config::get(\Spryker\Shared\MessageBroker\MessageBrok
     ];
 }
 ```
+
+The conditional clause verifies if the message broker is enabled. If enabled, the job is added to the list of scheduled jobs during the next deployment.

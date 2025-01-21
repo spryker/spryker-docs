@@ -346,13 +346,13 @@ By setting a span attribute `no_critical` and `is_critical`, span can be marked 
 ### Sampling configuration
 Like already mentioned, valued that used for sampling can be changed. In order to do so, you need to change a few env variables.
 
-| Variable Name                                   | Description                                                                                                        | Default Value | Allowed range |
+| Variable Name                                   | Description                                                       commitomm                                        | Default Value | Allowed range |
 |-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|---------------|---------------|
-| `OTEL_BSP_MIN_SPAN_DURATION_THRESHOLD`          | Used in `Closing span sampling` to define a value in ms when spans that execution time is lower to be filtered out | 5             | 0...100000    |
-| `OTEL_BSP_MIN_CRITICAL_SPAN_DURATION_THRESHOLD` | Same as a previous one, but used for critical spans only                                                           | 0             | 0...100000    |
-| `OTEL_TRACES_SAMPLER_ARG`                       | A probability value that is used to define if WEB GET request trace going to be detailed or not                    | 0.3           | 0...1.0       |
+| `OTEL_BSP_MIN_SPAN_DURATION_THRESHOLD`          | Used in `Closing span sampling` to define a value in ms when spans that execution time is lower to be filtered out | 20            | 0...100000    |
+| `OTEL_BSP_MIN_CRITICAL_SPAN_DURATION_THRESHOLD` | Same as a previous one, but used for critical spans only                                                           | 10            | 0...100000    |
+| `OTEL_TRACES_SAMPLER_ARG`                       | A probability value that is used to define if WEB GET request trace going to be detailed or not                    | 0.1           | 0...1.0       |
 | `OTEL_CLI_TRACE_PROBABILITY`                    | A probability value that is used to define if console command trace going to be detailed or not                    | 0.5           | 0...1.0       |
-| `OTEL_TRACES_CRITICAL_SAMPLER_ARG`              | A probability value that is used to define if `critical` span will be sampled or not                               | 1             | 0...1.0       |
+| `OTEL_TRACES_CRITICAL_SAMPLER_ARG`              | A probability value that is used to define if `critical` span will be sampled or not                               | 0.5           | 0...1.0       |
 | `OTEL_TRACES_NON_CRITICAL_SAMPLER_ARG`          | A probability value that is used to define if `non critical` span will be sampled or not                           | 0.1           | 0...1.0       |
 | `OTEL_TRACE_PROBABILITY`                        | A probability value that is used to define if `regular` span will be sampled or not                                | 0.3           | 0...1.0       |
 

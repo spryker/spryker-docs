@@ -1,6 +1,8 @@
 ---
 title: Project Architecture Sniffer
-last_updated: Jan 7, 2024
+description: Use Project Architecture Sniffer to ensure the architecture quality for project
+last_updated: Jan 21, 2025
+template: concept-topic-template
 ---
 
 [Project Architecture Sniffer](https://github.com/spryker/project-architecture-sniffer) is a powerful tool designed specifically for Spryker projects. It leverages the capabilities of [PHP Mess Detector](https://phpmd.org) to maintain and enforce architectural standards.
@@ -14,9 +16,10 @@ Functionality:
 This tool ensures that your project's architecture aligns with Spryker's best practices and guidelines.
 
 ## Priority levels
-- 1: Сritical
-- 2: Major
-- 3: Medium
+It identifies and categorizes findings into levels:
+- 1: Сritical - Immediate attention required due to potential high impact on application stability or business functionality.
+- 2: Major - Significant improvements needed to enhance maintainability and prevent future issues.
+- 3: Medium - Suggestions for better practices to keep the codebase clean and efficient.
 
 For local environments and CI checks, we recommend at least priority 3.
 

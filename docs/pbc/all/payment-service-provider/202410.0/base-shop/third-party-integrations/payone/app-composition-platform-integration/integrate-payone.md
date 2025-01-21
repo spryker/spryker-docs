@@ -90,7 +90,6 @@ $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     PaymentCancellationFailedTransfer::class => 'payment-events',
     PaymentCreatedTransfer::class => 'payment-events',
     PaymentUpdatedTransfer::class => 'payment-events',
-    AppConfigUpdatedTransfer::class => 'app-events',
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [

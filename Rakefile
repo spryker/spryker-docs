@@ -99,6 +99,7 @@ commonOptions = {
     /redisdesktop.com\/[\.\w\-\/\?]+/,
     /developer.computop.com\/[\.\w\-\/\?]+/,
     /www.centralbank.cy\/[\.\w\-\/\?]+/,
+    /www.gnu.org\/[\.\w\-\/\?]+/,    
     /algolia.com\/[\.\w\-\/\?]+/,
     /www.facebook.com\/[\.\w\-\/\?]+/
 

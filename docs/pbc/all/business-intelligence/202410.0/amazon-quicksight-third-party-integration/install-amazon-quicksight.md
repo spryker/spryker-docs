@@ -47,9 +47,9 @@ Preconfigured asset bundles per demo shop:
   - [B2C Marketplace](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-mp-asset-bundle.zip)
   - [B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-asset-bundle.zip)
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "Custom SQL queries" %}
 
-In your custom SQL queries, we recommend avoiding the use of `*` in the SELECT statement and explicitly specifying the exact columns. This practice minimizes the risk of exposing sensitive data when modifying asset bundles or creating custom datasets.
+In custom SQL queries, avoid using `*` in `SELECT` statements. Instead, explicitly specify the required columns. This reduces the risk of exposing sensitive data when modifying asset bundles or creating custom datasets.
 
 {% endinfo_block %}
 

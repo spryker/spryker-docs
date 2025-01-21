@@ -26,8 +26,8 @@ Update modules and set up the configuration as described in the following sectio
 Update the following modules to meet the ACP requirements:
 
 * `spryker/app-catalog-gui:^1.4.1`
-* `spryker/kernel-app:^1.3.0`
-* `spryker/message-broker:^1.14.0`
+* `spryker/kernel-app:^1.4.0`
+* `spryker/message-broker:^1.15.0`
 * `spryker/message-broker-aws:^1.9.0`
 * `spryker/session:^4.15.1`
 * `spryker/oauth-client:^1.5.0`
@@ -223,6 +223,16 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             new ValidationMiddlewarePlugin(),
         ];
     }
+    
+    /**
+     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\FilterMessageChannelPluginInterface>
+     */
+    public function getFilterMessageChannelPlugins(): array
+    {
+        return [
+            new ActiveAppFilterMessageChannelPlugin(),
+        ];
+    }
 }
 ```
 
@@ -275,13 +285,23 @@ use Spryker\Zed\MessageBroker\MessageBrokerConfig as SprykerMessageBrokerConfig;
 class MessageBrokerConfig extends SprykerMessageBrokerConfig
 {
     /**
-     * @return array<string>
+     * @return list<string>
      */
     public function getDefaultWorkerChannels(): array
     {
         return [
             'app-events',
             //...
+        ];
+    }
+    
+    /**
+     * @return list<string>
+     */
+    public function getSystemWorkerChannels(): array
+    {
+        return [
+            'app-events',
         ];
     }
 

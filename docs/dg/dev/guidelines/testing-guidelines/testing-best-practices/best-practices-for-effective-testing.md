@@ -44,15 +44,13 @@ This article provides some recommendations on how you can achieve that.
 
 ## Test API
 
-It is often stated that you should test the smallest possible unit of your application. On the one hand, that's a good approach, but on the other hand, it often leads to too many tests and tests that show the small units are working, but it doesn't show if the units work together. A valid argument could be to have integration tests to test everything together. That's ok but leads to the issue that you cover most of your code lines more than once, which makes the test execution take longer.
+It is often stated that you should test the smallest possible unit of your application. While this ensures granular validation, it can lead to excessive tests that verify individual units but do not confirm whether they work together. Integration tests help address this but often result in redundant coverage, increasing test execution time.
 
-Facades are a very good example. You can write tests for the model under test. Then you also need a test that covers the creational part of the model, and then you need to have tests for the Facade itself. You can do that, of course, but such an approach leads to many mocks, and probably you also cover code lines more often than required.
+In Spryker, we prioritize API tests as they serve as the primary entry point into the application code. API tests should cover both the Facade and Plugins (applicable to Plugins that bypass the Facade) to ensure correct functionality.
 
-At Spryker, we focus first on the API tests. The API is always the entry point into the application code.
+Each API method should have at least two test cases: a happy-path and an unhappy-path scenario. Ideally, tests should cover the entire API specification.
 
-You should have a least two test cases per API method: the happy and the un-happy test case. Ideally, you cover each line of your API specification.
-
-Only when the `Arrange` section of your API test becomes too complex for all cases, you should consider smaller unit tests.
+If the Arrange section of an API test becomes overly complex, consider adding targeted unit tests to ensure clarity and maintainability.
 
 ## Method naming
 

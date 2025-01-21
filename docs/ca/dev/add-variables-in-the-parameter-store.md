@@ -140,6 +140,28 @@ The following variables are arranged from lower to higher priority:
 
 The following sections describe how to add parameters and secrets for different resources.
 
+**Note:** The next variables should be requested by a ticket on Support Portal
+
+* /{project}/{environment}/secret/scheduler/limited/{variable_name}
+
+* /{project}/{environment}/secret/pipeline/limited/{variable_name}
+
+* /{project}/{environment}/secret/infra/limited/{variable_name}
+
+* /{project}/{environment}/secret/common/limited/{variable_name}
+
+* /{project}/{environment}/secret/app/limited/{variable_name}
+
+* /{project}/{environment}/config/scheduler/limited/{variable_name}
+
+* /{project}/{environment}/config/pipeline/limited/{variable_name}
+
+* /{project}/{environment}/config/infra/limited/{variable_name}
+
+* /{project}/{environment}/config/common/limited/{variable_name}
+
+* /{project}/{environment}/config/app/limited/{variable_name}
+
 ### Add parameters to all resource types
 
 1. In the AWS Management Console, go to **Services&nbsp;<span aria-label="and then">></span> Parameter Store**.

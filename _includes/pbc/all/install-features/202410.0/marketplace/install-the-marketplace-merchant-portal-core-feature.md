@@ -234,22 +234,24 @@ Set up the following behaviors.
 
 #### Integrate the following plugins
 
-| PLUGIN                                                           | SPECIFICATION                                                                                                           | PREREQUISITES | NAMESPACE                                                                        |
-|------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------|
-| ZedMerchantUserSecurityPlugin                                    | Sets security firewalls (rules, handlers) for Marketplace users.                                                        |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security              |
-| BooleanToStringTwigPlugin                                        | Adds a Twig function for converting Boolean to String.                                                                  |               | Spryker\Zed\ZedUi\Communication\Plugin\Twig                                      |
-| ZedUiNavigationTwigPlugin                                        | Adds a Twig function for rendering the navigation using web components.                                                 |               | Spryker\Zed\ZedUi\Communication\Plugin                                           |
-| MerchantNavigationTypeTwigPlugin                                 | Adds `mainMerchantNavigationType` and `secondaryMerchantNavigationType` Twig global variables.                          |               | Spryker\Zed\MerchantPortalApplication\Communication\Plugin\Twig                  |
-| GuiTableApplicationPlugin                                        | Enables the GuiTable infrastructure for the Back Office.                                                                            |               | Spryker\Zed\GuiTable\Communication\Plugin\Application                            |
-| GuiTableConfigurationTwigPlugin                                  | Adds a Twig function for rendering `GuiTableConfiguration` for the `GuiTable` web component.                            |               | Spryker\Zed\GuiTable\Communication\Plugin\Twig                                   |
-| MerchantUserSecurityTokenUpdateMerchantUserPostChangePlugin      | Rewrites the Symfony security token for merchant users with `MerchantUser` and without `IS_IMPERSONATOR` roles granted. |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui |
+| PLUGIN                                                          | SPECIFICATION                                                                                                           | PREREQUISITES | NAMESPACE                                                                        |
+|-----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------|
+| ZedMerchantUserSecurityPlugin                                   | Sets security firewalls, such as rules and handlers, for Marketplace users.                                                        |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security              |
+| BooleanToStringTwigPlugin                                       | Adds a Twig function for converting boolean to string.                                                                  |               | Spryker\Zed\ZedUi\Communication\Plugin\Twig                                      |
+| ZedUiNavigationTwigPlugin                                       | Adds a Twig function for rendering navigation using web components.                                                 |               | Spryker\Zed\ZedUi\Communication\Plugin                                           |
+| MerchantNavigationTypeTwigPlugin                                | Adds `mainMerchantNavigationType` and `secondaryMerchantNavigationType` Twig global variables.                          |               | Spryker\Zed\MerchantPortalApplication\Communication\Plugin\Twig                  |
+| GuiTableApplicationPlugin                                       | Enables the GuiTable infrastructure for the Back Office.                                                                |               | Spryker\Zed\GuiTable\Communication\Plugin\Application                            |
+| GuiTableConfigurationTwigPlugin                                 | Adds a Twig function for rendering `GuiTableConfiguration` for the `GuiTable` web component.                            |               | Spryker\Zed\GuiTable\Communication\Plugin\Twig                                   |
+| MerchantUserSecurityTokenUpdateMerchantUserPostChangePlugin     | Rewrites the Symfony security token for merchant users with `MerchantUser` and without `IS_IMPERSONATOR` roles granted. |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui |
 | MerchantPortalConfigurationAclEntityMetadataConfigExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with event behavior composite data.                      |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity                     |
-| MerchantAclEntitiesMerchantPostCreatePlugin                      | Creates an ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for a provided merchant.            |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant                      |
-| MerchantUserAclEntitiesMerchantUserPostCreatePlugin              | Creates an ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for a provided merchant user.       |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
-| AclMerchantPortalMerchantUserRoleFilterPreConditionPlugin        | Checks if Symfony security authentication roles should be filtered out.                                                 |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
-| MerchantUserUserRoleFilterPlugin                                 | Filters `ROLE_BACK_OFFICE_USER` to prevent a merchant user from logging into the Back Office.                           |               | Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui                        |
-| ProductViewerForOfferCreationAclInstallerPlugin                  | Provides `ProductViewerForOfferCreation` roles with rules and groups to create on installation.                         |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
-| AclGroupMerchantUserLoginRestrictionPlugin                       | Checks if the merchant user login is restricted.                                                                        |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\SecurityMerchantPortalGui     |
+| MerchantAclEntitiesMerchantPostCreatePlugin                     | Creates an ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for a provided merchant.            |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant                      |
+| MerchantUserAclEntitiesMerchantUserPostCreatePlugin             | Creates an ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for a provided merchant user.       |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
+| AclMerchantPortalMerchantUserRoleFilterPreConditionPlugin       | Checks if Symfony security authentication roles should be filtered out.                                                 |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
+| MerchantUserUserRoleFilterPlugin                                | Filters `ROLE_BACK_OFFICE_USER` to prevent a merchant user from logging into the Back Office.                           |               | Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui                        |
+| ProductViewerForOfferCreationAclInstallerPlugin                 | Provides `ProductViewerForOfferCreation` roles with rules and groups to create on installation.                         |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
+| AclGroupMerchantUserLoginRestrictionPlugin                      | Checks if the merchant user login is restricted.                                                                        |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\SecurityMerchantPortalGui     |
+| MailMerchantUserPasswordResetRequestStrategyPlugin | Enables reset password functionality for merchant users.                                                       |  | Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\UserPasswordReset  |
+| MerchantUserPasswordResetMailTypeBuilderPlugin | Builds the MailTransfer for the merchant password restore email type.                                                       |  | Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\Mail  |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
@@ -326,6 +328,62 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
         return [
             new ZedMerchantUserSecurityPlugin(),
         ];
+    }
+}
+```
+
+**src/Pyz/Zed/UserPasswordReset/UserPasswordResetDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\UserPasswordReset;
+
+use Spryker\Zed\UserPasswordReset\UserPasswordResetDependencyProvider as SprykerUserPasswordResetDependencyProvider;
+use Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\UserPasswordReset\MailMerchantUserPasswordResetRequestStrategyPlugin;
+
+class UserPasswordResetDependencyProvider extends SprykerUserPasswordResetDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\UserPasswordResetExtension\Dependency\Plugin\UserPasswordResetRequestStrategyPluginInterface[]
+     */
+    public function getUserPasswordResetRequestStrategyPlugins(): array
+    {
+        return [
+            new MailMerchantUserPasswordResetRequestStrategyPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/Mail/MailDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Mail;
+
+use Spryker\Zed\Mail\MailDependencyProvider as SprykerMailDependencyProvider;
+use Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\Mail\MerchantUserPasswordResetMailTypePlugin;
+
+class MailDependencyProvider extends SprykerMailDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Kernel\Container
+     */
+    public function provideBusinessLayerDependencies(Container $container)
+    {
+        $container = parent::provideBusinessLayerDependencies($container);
+        $container->extend(static::MAIL_TYPE_COLLECTION, function (MailTypeCollectionAddInterface $mailCollection) {
+            $mailCollection
+                ->add(new MerchantUserPasswordResetMailTypePlugin());
+
+            return $mailCollection;
+        });
+
+        return $container;
     }
 }
 ```
@@ -663,11 +721,42 @@ $config[AclConstants::ACL_DEFAULT_RULES][] = [
     [
         'bundle' => 'security-merchant-portal-gui',
         'controller' => 'login',
-        'action' => 'index',
-        'type' => 'allow',
+        'action' => '*',
+        'type' => '*',
     ],
 ];
 ```
+
+### 3) Add Merchant Portal translations
+
+
+1. Append glossary according to your configuration:
+
+**data/import/common/common/glossary.csv**
+```
+mail.merchant.restore_password.subject,Neues Passwort für Ihren Spryker Merchant Portal Account,de_DE
+mail.merchant.restore_password.subject,New password for your Spryker Merchant Portal account,en_US
+mail.merchant.restore_password.text,"""Es wurde ein neues Passwort für Ihren Spryker Merchant Portal Account angefordert. Wenn Sie nicht um um eine Neueinrichtung des Passworts gebeten haben, ignorieren Sie bitte diese Email. Klicken Sie auf den folgedenen Link, um Ihr Passwort zu ändern:""",de_DE
+mail.merchant.restore_password.text,"""Somebody has requested a new password for your Spryker Merchant Portal account. If it's not you, just ignore this email. If it's you, please follow the link bellow:""",en_US
+mail.merchant.restore_password.label,Passwort ändern,de_DE
+mail.merchant.restore_password.label,Change Password,en_US
+mail.trans.merchant.restore_password.subtitle,"Somebody has requested a new password for your Spryker Merchant Portal account. If it was not you, please ignore this email. If it was you, please follow the instructions in  the button bellow",en_US
+mail.trans.merchant.restore_password.subtitle,"Es wurde ein neues Passwort für dein Merchant Portal-Konto angefordert. Wenn du es nicht warst, kannst du diese E-Mail ignorieren. Wenn du es warst, klicke bitte den Knopf unten an:",de_DE
+mail.trans.merchant.restore_password.title,New password for your Spryker Merchant Portal account,en_US
+mail.trans.merchant.restore_password.title,Neues Passwort für dein Spryker Merchant Portal-Konto,de_DE
+```
+
+2. Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the configured data has been added to the `spy_glossary` table.
+
+{% endinfo_block %}
 
 3. Add a console command for warming up the Merchant Portal router cache:
 
@@ -871,6 +960,13 @@ Make sure the following changes have been applied in transfer objects:
 |-------------------------------|--------|---------|---------------------------------------------------------------------|
 | MerchantDashboardCard         | object | Created | src/Generated/Shared/Transfer/MerchantDashboardCardTransfer         |
 | MerchantDashboardActionButton | object | Created | src/Generated/Shared/Transfer/MerchantDashboardActionButtonTransfer |
+| MerchantDashboardCard | class | created | src/Generated/Shared/Transfer/MerchantDashboardCardTransfer  |
+| MerchantDashboardActionButton | class | created | src/Generated/Shared/Transfer/MerchantDashboardActionButtonTransfer |
+| Mail | class | created | src/Generated/Shared/Transfer/MailTransfer |
+| UserPasswordResetRequest | class | created | src/Generated/Shared/Transfer/UserPasswordResetRequestTransfer |
+| User | class | created | src/Generated/Shared/Transfer/UserTransfer |
+| MerchantUser | class | created | src/Generated/Shared/Transfer/MerchantUserTransfer |
+| MerchantUserCriteria | class | created | src/Generated/Shared/Transfer/MerchantUserCriteriaTransfer |
 
 {% endinfo_block %}
 

@@ -1,6 +1,6 @@
 ---
 title: Working with logs
-description: Locate the needed logs to debug an application.
+description: Manage and search logs in Spryker Cloud Commerce OS using AWS CloudWatch, including log groups for various services and tracking events with audit logs.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/working-with-logs

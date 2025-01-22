@@ -46,7 +46,7 @@ In contrast to Spryker SCCOS core modules, example modules do not adhere to stri
   * While we do our best to keep things compatible, we can't guarantee forward or backward compatibility.
   * There is no upgradability support for projects or Demo Shop integrations.
 * **Learnability:**
-  While documentation is provided when possible, it is not a firm commitment. We encourage community learning and support.
+  While documentation is provided when possible, it's not a firm commitment. We encourage community learning and support.
 * **Maintainability:**
   * There is no obligation to maintain example modules.
   * Example modules may be abandoned at any time.

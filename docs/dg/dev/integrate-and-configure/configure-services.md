@@ -1,6 +1,6 @@
 ---
 title: Configure services
-description: Learn how to configure services.
+description: Learn how to set up and configure services that come out of the box of your Spryker shop.
 last_updated: May 8, 2024
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-services
@@ -73,41 +73,41 @@ git clone https://github.com/spryker/docker-sdk.git ./docker
 
 When configuring a service, you need to define its version. The Docker SDK supports the following service versions:
 
-| SERVICE | ENGINE  | VERSIONS | ARM SUPPORT | NOTE |
-|----|----|----|----|---|
-| datab | postgres | 9.6*         | &check;     |    |
-|       |          | 10           | &check;     |    |
-|       |          | 11           | &check;     |    |
-|       |          | 12           | &check;     |    |
-|       | mysql    | 5.7          |             |    |
-|       |          | mariadb-10.2 | &check;     |    |
-|       |          | mariadb-10.3 | &check;     |    |
-|       |          | mariadb-10.4 | &check;     |    |
-|       |          | mariadb-10.5 | &check;     |    |
-|       |          | mariadb-10.6 | &check;     |    |
+| SERVICE | ENGINE  | VERSIONS      | ARM SUPPORT | NOTE |
+|----|----|---------------|----|---|
+| datab | postgres | 17            | &check;     |    |
+|       |          | 10            | &check;     |    |
+|       |          | 11            | &check;     |    |
+|       |          | 12            | &check;     |    |
+|       | mysql    | 5.7           |             |    |
+|       |          | mariadb-10.2  | &check;     |    |
+|       |          | mariadb-10.3  | &check;     |    |
+|       |          | mariadb-10.4  | &check;     |    |
+|       |          | mariadb-10.5  | &check;     |    |
+|       |          | mariadb-10.6  | &check;     |    |
 |       |          | mariadb-10.11 | &check;     |    |
-| broke | rabbitmq | 3.7          |             |    |
-|       |          | 3.8          | &check;     |    |
-|       |          | 3.9          | &check;     |    |
-| session         | redis    | 5.0          | &check;     |    |
-| key_value_store | redis    | 5.0          | &check;     |    |
-| search          | elastic  | 5.6*         | &check;     | https://www.elastic.co/support/eol |
-|                 |          | 6.8          | &check;     | https://www.elastic.co/support/eol |
-|                 |          | 7.6          | &check;     |    |
-|                 |          | 7.10         | &check;     |    |
-|                 | opensearch | 1.3         | &check;     |    |
-| scheduler       | jenkins  | 2.176        |             |    |
-|                 |          | 2.305        | &check;     |    |
-|                 |          | 2.324        | &check;     |    |
-| webdriver       | phantomjs| latest*      |             |    |
-|                 | chromedriver | latest   | &check;      |    |
-| mail_catcher    | mailhog  | 1.0          | &check;     |    |
-| swagger         | swagger-ui   | v3.24    | &check;      |    |
-| kibana          | kibana   | 5.6*         | &check;     | https://www.elastic.co/support/eol |
-|                 |          | 6.8          | &check;     | https://www.elastic.co/support/eol |
-|                 |          | 7.6          | &check;     |    |
-|                 |          | 7.10         | &check;     |    |
-| blackfire       | blackfire  | latest   | &check;      |      |
+| broke | rabbitmq | 3.7           |             |    |
+|       |          | 3.8           | &check;     |    |
+|       |          | 3.9           | &check;     |    |
+| session         | redis    | 5.0           | &check;     |    |
+| key_value_store | redis    | 5.0           | &check;     |    |
+| search          | elastic  | 5.6*          | &check;     | https://www.elastic.co/support/eol |
+|                 |          | 6.8           | &check;     | https://www.elastic.co/support/eol |
+|                 |          | 7.6           | &check;     |    |
+|                 |          | 7.10          | &check;     |    |
+|                 | opensearch | 1.3           | &check;     |    |
+| scheduler       | jenkins  | 2.176         |             |    |
+|                 |          | 2.305         | &check;     |    |
+|                 |          | 2.324         | &check;     |    |
+| webdriver       | phantomjs| latest*       |             |    |
+|                 | chromedriver | latest        | &check;      |    |
+| mail_catcher    | mailhog  | 1.0           | &check;     |    |
+| swagger         | swagger-ui   | v3.24         | &check;      |    |
+| kibana          | kibana   | 5.6*          | &check;     | https://www.elastic.co/support/eol |
+|                 |          | 6.8           | &check;     | https://www.elastic.co/support/eol |
+|                 |          | 7.6           | &check;     |    |
+|                 |          | 7.10          | &check;     |    |
+| blackfire       | blackfire  | latest        | &check;      |      |
 
 
 ## Database services
@@ -203,6 +203,7 @@ To switch the database engine to PostgreSQL, follow these steps:
 services:
     database:
         engine: postgres
+        version: 17
         ...
         endpoints:
             localhost:5432:
@@ -217,18 +218,18 @@ docker/sdk clean-data
 docker/sdk up --build --data
 ```
 
-## ElasticSearch
+## Elasticsearch
 
 [Elasticsearch](https://www.elastic.co/elasticsearch/) is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
 
 For more information, see the following documents:
 
 * [Configure Elasticsearch](/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
-* [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)—provides detailed information about ElasticSearch.
+* [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)—provides detailed information about Elasticsearch.
 
-### Configure ElasticSearch
+### Configure Elasticsearch
 
-In `deploy.*.yml`, adjust the `services` section to open the port used for accessing ElasticSearch:
+In `deploy.*.yml`, adjust the `services` section to open the port used for accessing Elasticsearch:
 ```yaml
 services:
     search:

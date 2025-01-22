@@ -1,26 +1,26 @@
 ---
 title: Reduce Jenkins execution without P&S and data importers refactoring
-description: Save Jenkins-related costs or speed up background jobs processing by implementing a single custom Worker for all stores.
+description: Learn how to reduce Jenkins execution costs in Spryker’s backend without refactoring P&S and data importers. Optimize cronjob processes for better performance.
 last_updated: Jul 15, 2023
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html
 ---
 
-By default, the system requires the `queue:worker:start` command to be continuously running for each store to process queues and ensure the propagation of information. In addition to this command, there are other commands such as OMS processing, import, export, and more. When these processes aren't functioning or running slowly, there is a delay in data changes being reflected on the frontend, causing dissatisfaction among customers and leading to disruption of business processes. 
+By default, the system requires the `queue:worker:start` command to be continuously running for each store to process queues and ensure the propagation of information. In addition to this command, there are other commands such as OMS processing, import, export, and more. When these processes aren't functioning or running slowly, there is a delay in data changes being reflected on the frontend, causing dissatisfaction among customers and leading to disruption of business processes.
 
-By default, Spryker has a limit of two Jenkins executors for each environment. This limit is usually not a problem for single-store setups, but it can be a critical issue when there are multiple stores. Without increasing this limit, processing becomes slow because only two Workers are scanning queues and running tasks at a time, while other Workers for different stores have to wait. On top of this, even when some stores don't have messages to process, we still need to run a Worker just for scanning purposes, which occupies Jenkins executors, CPU time, and memory.
+By default, Spryker has a limit of two Jenkins executors for each environment. This limit's usually not a problem for single-store setups, but it can be a critical issue when there are multiple stores. Without increasing this limit, processing becomes slow because only two Workers are scanning queues and running tasks at a time, while other Workers for different stores have to wait. On top of this, even when some stores don't have messages to process, we still need to run a Worker just for scanning purposes, which occupies Jenkins executors, CPU time, and memory.
 
-Increasing the number of processes per queue can lead to issues such as Jenkins hanging, crashing, or becoming unresponsive. Although memory consumption and CPU usage aren't generally high (around 20-30%), there can be spikes in memory consumption due to a random combination of several workers simultaneously processing heavy messages for multiple stores. 
+Increasing the number of processes per queue can lead to issues such as Jenkins hanging, crashing, or becoming unresponsive. Although memory consumption and CPU usage aren't generally high (around 20-30%), there can be spikes in memory consumption because of a random combination of several workers simultaneously processing heavy messages for multiple stores.
 
 There are two potential solutions to address this problem that can be implemented simultaneously: application optimization and better background job orchestration.
 
 ## Application optimization
 
-For details on the application optimization, see the following documents: 
+For details on the application optimization, see the following documents:
 - [Performance guidelines](https://docs.spryker.com/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html)
 - [Troubleshooting performance issues](https://docs.spryker.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html)
-  
+
 ## Background job orchestration
 
 The background job orchestration implies using one Worker (`queue:worker:start`) for all stores, regardless of the number of stores. Instead of executing these steps for one store within one process and having multiple processes for multiple stores, you can have one process that scans all queues for all stores and spawns child processes the same way as the default solution. However, instead of determining the number of processes based on the presence of a single message, you can analyze the total number of messages in the queue to make an informed decision on how many processes should be launched at any given moment.
@@ -47,7 +47,7 @@ A pool refers to a collection of resources that are kept in memory and ready to 
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/NewWorker+Flow.png)
 
-We define the total number of simultaneously running processes for the entire setup on the EC2 instance level. This makes it easier to manage, as we can monitor the average memory consumption for the process pool. If it's too low, we can increase the pool size, and if it's too high, we can decrease it. Additionally, we check the available memory (RAM) and prevent spawning additional processes if it is too low, ensuring system stability. Execution statistics provide valuable insights for decision-making, including adjusting the pool size or scaling the EC2 instance up or down.
+We define the total number of simultaneously running processes for the entire setup on the EC2 instance level. This makes it easier to manage, as we can monitor the average memory consumption for the process pool. If it's too low, we can increase the pool size, and if it's too high, we can decrease it. Additionally, we check the available memory (RAM) and prevent spawning additional processes if it's too low, ensuring system stability. Execution statistics provide valuable insights for decision-making, including adjusting the pool size or scaling the EC2 instance up or down.
 
 The following parameters exist:
 
@@ -76,7 +76,7 @@ Child processes are killed at the end of each minute, which means those batches 
 
 There are two ways to implement the background job orchestration:
 
-1. Applying a patch, although it may require conflict resolution since it is applied on the project level, and each project may have unique customizations already in place. See [these diffs](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/one-worker.diff) for an example implementation. 
+1. Applying a patch, although it may require conflict resolution since it's applied on the project level, and each project may have unique customizations already in place. See [these diffs](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/one-worker.diff) for an example implementation.
 
 ```bash
 git apply one-worker.diff
@@ -89,7 +89,7 @@ git apply one-worker.diff
 
 This is a custom implementation, which doesn't extend anything and is built based on the ideas described in the previous sections.
 
-The new worker implementation provides such features as: 
+The new worker implementation provides such features as:
 - Spawns only a single process per loop iteration.
 - Checks free system memory before each launch.
 - Ignores processes limits per queue in favor of one limit of simultaneously running processes (process pool size).
@@ -120,20 +120,20 @@ class NewWorker implements WorkerInterface
     protected SplFixedArray $processes;
     // ...
 
-    public function __construct(...) 
+    public function __construct(...)
     {
         // ...
-        // can be configured in config and/or using environment variable QUEUE_ONE_WORKER_POOL_SIZE, 
+        // can be configured in config and/or using environment variable QUEUE_ONE_WORKER_POOL_SIZE,
         // average recommended values are 5-10
-        // defines how many PHP processes (`queue:task:start QUEUE-NAME`) allowed to run simultaneously 
+        // defines how many PHP processes (`queue:task:start QUEUE-NAME`) allowed to run simultaneously
         // within NewWorker regardless of number of stores or queues
         $this->processes = new SplFixedArray($this->queueConfig->getQueueWorkerMaxProcesses());
     }
 
     public function start(string $command, array $options = []): void
     {
-        // env var - QUEUE_WORKER_MAX_THRESHOLD_SECONDS 
-        // default is 60 seconds, 1 minute, it is safe to have it as 1 hour instead
+        // env var - QUEUE_WORKER_MAX_THRESHOLD_SECONDS
+        // default is 60 seconds, 1 minute, it's safe to have it as 1 hour instead
         $maxThreshold = $this->queueConfig->getQueueWorkerMaxThreshold();
 
         // minimum interval after starting one process before executing another
@@ -141,7 +141,7 @@ class NewWorker implements WorkerInterface
         $delayIntervalMilliseconds = $this->queueConfig->getQueueWorkerInterval();
 
         // when false - there will be an exception thrown if the Worker can't read the system memory info
-        // otherwise - memory info will be returned as 0, so the system will continue to work, but not launching processes 
+        // otherwise - memory info will be returned as 0, so the system will continue to work, but not launching processes
         // because it'll think there is no memory available
         // QUEUE_WORKER_IGNORE_MEM_READ_FAILURE, default = false
         $shouldIgnoreZeroMemory = $this->queueConfig->shouldIgnoreNotDetectedFreeMemory();
@@ -171,7 +171,7 @@ class NewWorker implements WorkerInterface
 
             // QUEUE_WORKER_MEMORY_MAX_GROWTH_FACTOR, 50 by default
             // measures how much Worker own memory consumption increased after first iteration
-            // when more than 50% - it is considered a memory leak and Worker will finish its operation
+            // when more than 50% - it's considered a memory leak and Worker will finish its operation
             // allowing Jenkins to run Worker again
             if ($ownMemGrowthFactor > $this->queueConfig->maxAllowedWorkerMemoryGrowthFactor()) {
                 $this->logger->emergency(sprintf('Worker memory grew more than %d%%, probably a memory leak, exiting', $ownMemGrowthFactor));
@@ -225,7 +225,7 @@ class NewWorker implements WorkerInterface
      * Strategy defines which queue to return for processing,
      * it can have any other custom dependencies to make a decision.
      *
-     * Strategy can be different, we can inject some smart strategy 
+     * Strategy can be different, we can inject some smart strategy
      * which will delegate actual processing to another one depending on something, e.g. store operation times or time zones, etc.
      *
      * @param int $freeIndex
@@ -260,9 +260,9 @@ class NewWorker implements WorkerInterface
 ### System resource manager
 
 Available free system memory is measured before spawning each child process.
-The system should always have spare resources, because each `queue:task:start ...` command can consume different amount of resources, which isn't easily predictable. 
+The system should always have spare resources, because each `queue:task:start ...` command can consume different amount of resources, which isn't easily predictable.
 Because of this, this buffer must be set with the following limitations in mind:
-    
+
 - To accommodate a new process it's going to launch.
 - To leave space for any sporadic memory consumption change of already running processes.
 
@@ -329,10 +329,10 @@ class SystemResourcesManager implements SystemResourcesManagerInterface
      */
     private function readSystemMemoryInfo(): string
     {
-        // 
+        //
         $memoryReadProcessTimeout = $this->queueConfig->memoryReadProcessTimeout();
         $memory = @file_get_contents('/proc/meminfo') ?? '';
-        
+
         return $memory ?? 0;
     }
 ```

@@ -1,6 +1,6 @@
 ---
 title: Multi-store setups
-description: Types of multi-store setups in Spryker Cloud Commerce OS
+description: Learn about multi-store setups in Spryker Cloud Commerce OS, including shared and separated configurations for flexible store management, deployment, and data handling.
 template: concept-topic-template
 last_updated: Oct 6, 2023
 redirect_from:
@@ -37,10 +37,15 @@ For more details on this setup, see [Setup 1: Shared infrastructure resources (d
 
 ## Separated setup
 
-With the separated setup, store share the same codebase but have dedicated databases. It is the standard setup.
+With the separated setup, stores share the same codebase but have dedicated databases. It's the standard setup.
 
 ![separated setup diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/multi-store-setups.md/separated-setup.png)
 
+{% info_block warningBox %}
+
+With Dynamic Multistore, the separated setup is only possible with stores belonging to different regions. For more information, see [Dymamic Multistore](/docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/dynamic-multistore-feature-overview.html).
+
+{% endinfo_block %}
 
 ### Separated setup: When to use
 
@@ -68,3 +73,8 @@ With the separated setup, store share the same codebase but have dedicated datab
 ### Separated setup: Integration
 
 New projects are shipped with a shared setup by default. To switch to a separated setup, reach out to your sales representative.
+
+
+### Dynamic Multistore
+
+Dynamic Multistore extends multi-store, allowing several stores within one domain (region based). For more information, see [Dymamic Multistore](/docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/dynamic-multistore-feature-overview.html).

@@ -134,7 +134,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Using the following data, make sure that when you add, update, or delete a store currency, it is exported to or removed from Storage.
+Using the following data, make sure that when you add, update, or delete a store currency, it's exported to or removed from Storage.
 
 Storage type: Redis
 Target entity: Store

@@ -61,11 +61,11 @@ A major upgrade may require significant code changes that may be incompatible wi
 
 ## Public API
 
-Oryx consists of a range of packages, applications, and tools. To avoid inadvertent use of private APIs and get a clear understanding of what's included or excluded from the private API, see public API](//TODO: add link).-->
+Oryx consists of a range of packages, applications, and tools. To avoid inadvertent use of private APIs and get a clear understanding of what's included or excluded from the private API, see public API](/TODO: add link).-->
 
 ## Backward compatibility
 
-The Oryx framework provides maximum compatibility with previous versions. If a feature is deprecated, it is removed completely only after a few releases.
+The Oryx framework provides maximum compatibility with previous versions. If a feature is deprecated, it's removed completely only after a few releases.
 
 Minor releases are fully backward compatible and do not require any developer assistance.
 

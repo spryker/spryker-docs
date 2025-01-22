@@ -1,15 +1,15 @@
 ---
 title: Plugins registration
-description: Plugins registration extension scenario
+description: Learn all about plugins registration extension scenario and how it can support your Spryker based proejct.
 last_updated: Mar 13, 2023
 template: concept-topic-template
 related:
   - title: Keeping a project upgradable
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
   - title: Event subscribers registration
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html
   - title: Modules configuration
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/modules-configuration.html
 redirect_from:
     - /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
     - /docs/scos/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/plugins-registration.html
@@ -92,7 +92,7 @@ Manifests fully support multiple plugins registration in an indexed array. Manif
 
 Restrictions on the order of the plugins can be done with special annotation keys `before` and `after`.
 
-If the plugin doesn’t contain any of these keys, it is added to the end of the plugin stack.
+If the plugin doesn’t contain any of these keys, it's added to the end of the plugin stack.
 
 If the plugin contains the `after` key and defined plugins in the `after` parameter don’t exist on the project side, the plugin is added to the end of the plugin stack.
 
@@ -460,7 +460,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 ## Special situations
 
-* If the target dependency provider class doesn’t exist in the project, it is created and all required methods are created automatically as well.
+* If the target dependency provider class doesn’t exist in the project, it's created and all required methods are created automatically as well.
 
 * If the target dependency provider class exists in the project without the target method, but such method exists in the parent class, the method is created and the changes are applied.
 

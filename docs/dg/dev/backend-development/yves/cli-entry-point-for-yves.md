@@ -1,6 +1,6 @@
 ---
 title: CLI entry point for Yves
-description: Spryker provides CLI entry points to run console commands for specific use cases.
+description: Set up a CLI entry point for Yves. Learn to configure commands and streamline Yves processes for improved backend performance and development efficiency.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cli-entry-point-for-yves
@@ -9,19 +9,19 @@ redirect_from:
   - /docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
 related:
   - title: Yves overview
-    link: docs/scos/dev/back-end-development/yves/yves.html
+    link: docs/dg/dev/backend-development/yves/yves.html
   - title: Add translations for Yves
-    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+    link: docs/dg/dev/backend-development/yves/adding-translations-for-yves.html
   - title: Controllers and actions
-    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+    link: docs/dg/dev/backend-development/yves/controllers-and-actions.html
   - title: Implement URL routing in Yves
-    link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
+    link: docs/dg/dev/backend-development/yves/implement-url-routing-in-yves.html
   - title: Modular Frontend
-    link: docs/scos/dev/back-end-development/yves/modular-frontend.html
+    link: docs/dg/dev/backend-development/yves/modular-frontend.html
   - title: Yves bootstrapping
-    link: docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
+    link: docs/dg/dev/backend-development/yves/yves-bootstrapping.html
   - title: Yves routes
-    link: docs/scos/dev/back-end-development/yves/yves-routes.html
+    link: docs/dg/dev/backend-development/yves/yves-routes.html
 ---
 
 Spryker provides CLI entry points to run console commands for certain use cases. To provide this feature, we use [Symfony's Console component](https://symfony.com/doc/current/components/console.html)

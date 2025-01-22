@@ -1,6 +1,6 @@
 ---
 title: Customize deployment pipelines
-description: Learn how to customize deployment pipelines.
+description: Customize deployment pipelines in Spryker Cloud Commerce OS by adding different commands using YAML files and shell scripts.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/customizing-deployment-pipelines
@@ -26,7 +26,7 @@ This document describes how to customize deployment pipelines.
 {% endinfo_block %}
 
 
-### Adding a single command to a deployment pipeline
+## Adding a single command to a deployment pipeline
 
 To customize the `pre-deploy` stage of a pipeline:
 
@@ -46,7 +46,7 @@ image:
 
 During the next deployment, the command will be executed in the `pre-deploy` stage.
 
-### Adding multiple commands to a deployment pipeline via a shell script
+## Adding multiple commands to a deployment pipeline via a shell script
 
 To add multiple commands to the `pre-deploy` stage:
 
@@ -70,7 +70,7 @@ Do not include the `.yml` extension of the file name in `{path_to_script}`. For 
 
 During the next deployment, the commands in the script will be executed in the `pre-deploy` stage.
 
-### Adding different commands for different environments and pipeline types
+## Adding different commands for different environments and pipeline types
 
 By default, in `pre-deploy` and `post-deploy` stages, there is no possibility to run different commands for combinations of different environments and pipeline types. To do that, you can set up a custom shell script with _if statements_.
 
@@ -94,7 +94,7 @@ if [ "${SPRYKER_PIPELINE_TYPE}" == "destructive" ]; then
 fi
 ```
 
-### Adding commands to the install stage of deployment pipelines
+## Adding commands to the install stage of deployment pipelines
 
 To add one or more commands to the `install` stage of a deployment pipeline:
 

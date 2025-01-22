@@ -8,7 +8,7 @@ redirect_from:
 
 ---
 
-Oryx components are web components built with [Lit](https://lit.dev). Lit is a lightweight open-source framework from Google that's used to build highly efficient web components. Web components can be created with any framework or even with vanilla HTML, CSS, and JavaScript. You can use any other framework instead of Lit. However, some Oryx utilities, like [signals](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/reactivity/signals.html) and component mixins, are available only with Lit.
+Oryx components are web components built with [Lit](https://lit.dev). Lit's a lightweight open-source framework from Google that's used to build highly efficient web components. Web components can be created with any framework or even with vanilla HTML, CSS, and JavaScript. You can use any other framework instead of Lit. However, some Oryx utilities, like [signals](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/reactivity/signals.html) and component mixins, are available only with Lit.
 
 ## Implementing a component
 
@@ -155,7 +155,7 @@ If your application needs to be indexed by crawlers, such as Google Search or Pi
 
 When a component is server-side rendered, some of the browser APIs are not available. Most commonly known are the `window` and `document` objects. Take this into account when implementing custom components.
 
-Oryx renders pages on the server and returns the minimum amount of JavaScript needed. A component doesn't need JavaScript initially, but when a user start interacting with it, or when the component needs to reflect a certain application state, additional JavaScript needs to be loaded. Loading the component logic at the client side is called _hydration_. Because the component logic is loaded over the network and initialized in the application, hydration is costly. Additionally, the component might need to fetch data from a backend API. Oryx therefore tries to avoid or delay hydration till it is needed.
+Oryx renders pages on the server and returns the minimum amount of JavaScript needed. A component doesn't need JavaScript initially, but when a user start interacting with it, or when the component needs to reflect a certain application state, additional JavaScript needs to be loaded. Loading the component logic at the client side is called _hydration_. Because the component logic is loaded over the network and initialized in the application, hydration is costly. Additionally, the component might need to fetch data from a backend API. Oryx therefore tries to avoid or delay hydration till it's needed.
 
 When developing a component, you need to configure the hydration trigger using the `@hydrate` decorator that can take an event or context. The following example shows how to set up the component to be hydrated when the context is changed:
 

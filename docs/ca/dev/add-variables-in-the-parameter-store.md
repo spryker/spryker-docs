@@ -1,6 +1,6 @@
 ---
 title: Add variables in the Parameter Store
-description: Learn how to define variables in the Parameter Store.
+description: Learn to add and manage environment variables in Spryker's Parameter Store, including variable structure guidelines for secure and organized configuration.
 last_updated: Aug 21, 2023
 template: howto-guide-template
 keywords: environment variable management
@@ -35,7 +35,7 @@ If there is a need to modify a Spryker-owned environment variable, it must be do
 
 By adhering to these guidelines, you can effectively manage your environment variables without risking the system stability. It also helps in maintaining a seamless experience while working with the Spryker Cloud Commerce OS.
 
-Please remember that improper management of environment variables can lead to unexpected issues. Therefore, it is recommended to consult the Spryker Cloud or support team for any complex or system-critical changes.
+Please remember that improper management of environment variables can lead to unexpected issues. Therefore, it's recommended to consult the Spryker Cloud or support team for any complex or system-critical changes.
 
 ## Naming convention for variables
 

@@ -1,6 +1,6 @@
 ---
 title: Migrate to Jenkins
-description: Learn how to migrate to the Jenkins scheduler.
+description: Learn how to migrate cronjobs to Jenkins in Spryker's backend to streamline task automation. Improve the efficiency of your ecommerce platform with Jenkins integration.
 template: howto-guide-template
 last_updated: Nov 1, 2021
 redirect_from:

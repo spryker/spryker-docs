@@ -1,6 +1,6 @@
 ---
 title: Tutorial — Troubleshooting a failed deployment
-description: Learn how to troubleshoot a failed deployment
+description: Troubleshoot failed deployments in Spryker by following detailed steps to identify issues in build, pre-deploy, and service deployment stages.
 template: troubleshooting-guide-template
 last_updated: Oct 6, 2023
 redirect_from:
@@ -89,7 +89,7 @@ Alternatively, you can check the script of the step in the environment's deploy 
 
 ![pre-deploy-file]
 
-In this example, the `scheduler:suspendddddddddddd` is misspelled, and it is the root cause of the issue.
+In this example, the `scheduler:suspendddddddddddd` is misspelled, and it's the root cause of the issue.
 
 
 {% info_block infoBox "Debugging pre-deploy scripts" %}

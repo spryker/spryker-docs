@@ -1,6 +1,6 @@
 ---
 title: 'Migrate to cloud: Choose a multi-store setup'
-description: To migrate to SCCOS, one of the steps, is choosing a multi-store setup
+description: Learn how to migrate to Spryker Cloud Commerce OS and choose a multi-store setup within your Spryker based projects.
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-12-choose-a-multi-store-setup.html

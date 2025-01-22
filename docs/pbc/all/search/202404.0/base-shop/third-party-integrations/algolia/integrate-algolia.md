@@ -79,6 +79,9 @@ Configure modules and add the necessary dependencies according to these guidelin
 
 Add the following code to `src/Pyz/Client/Catalog/CatalogDependencyProvider.php`:
 
+<details>
+  <summary>src/Pyz/Client/Catalog/CatalogDependencyProvider.php</summary>
+
 ```php
 //...
 
@@ -229,6 +232,8 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 }
 ```
 
+</details>
+
 #### Adjust RabbitMq configuration in `Client`
 
 Add the following code to `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`:
@@ -304,6 +309,9 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
 
 Add the following code to `src/Pyz/Client/SearchHttp/SearchHttpDependencyProvider.php`:
 
+<details>
+  <summary>src/Pyz/Client/SearchHttp/SearchHttpDependencyProvider.php</summary>
+
 ```php
 <?php
 
@@ -355,6 +363,8 @@ class SearchHttpDependencyProvider extends SprykerSearchHttpDependencyProvider
     }
 }
 ```
+
+</details>
 
 #### Configure MessageBroker dependencies in `Zed`
 
@@ -722,7 +732,7 @@ Spryker's `SearchHTTP` module transfers Glue search requests to external search 
 
 ### Default facets differences
 
-There is a difference in how default facets behave on Algolia and on the default Spryker installation using Elasticsearch. Some default Spryker facets like `brand` only accept one value as a filter, so it is impossible to specify multiple brands to filter on in one search request. This is not the case with Algolia, as multiple brands can be specified in the same search requests. This also applies to other configured facets.
+There is a difference in how default facets behave on Algolia and on the default Spryker installation using Elasticsearch. Some default Spryker facets like `brand` only accept one value as a filter, so it's impossible to specify multiple brands to filter on in one search request. This is not the case with Algolia, as multiple brands can be specified in the same search requests. This also applies to other configured facets.
 
 ## Next steps
 

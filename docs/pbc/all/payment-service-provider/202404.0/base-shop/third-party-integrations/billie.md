@@ -20,7 +20,7 @@ redirect_from:
 
 B2B-PayAfterDelivery for the 21st century
 
-Billie is Germany’s innovative online-only provider of flexible working capital solutions. Whether it is our award-wining, 100% digital factoring platform or our B2B-PayAfterDelivery solution for online stores:
+Billie is Germany’s innovative online-only provider of flexible working capital solutions. Whether it's our award-wining, 100% digital factoring platform or our B2B-PayAfterDelivery solution for online stores:
 
 Aspiring start-ups, established SMEs and world-leading hidden champions all trust in Billie when it comes to fast, reliable and simple liquidity provision.
 

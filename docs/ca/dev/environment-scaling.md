@@ -1,11 +1,17 @@
 ---
 title: Environment scaling
-description: Scaling in Spryker cloud environments.
+description: Learn how Spryker's environment scaling adjusts resources dynamically to meet load demands, with strategies for vertical and horizontal scaling to ensure performance.
 last_updated: MAy 23, 2024
 template: concept-topic-template
 ---
 
 Production environments, unlike staging environments, are equipped with auto-scaling capabilities. This enables the resources used by the application to dynamically scale up or down based on the current load. This document uses the checkout analogy as an example to explain the types of scaling.
+
+## General considerations
+
+* While all production environments offer some form of automatic scaling by default, environments must be optimized for your work load. To do it, schedule a load test by creating a "Announce High Load/Traffic" case at the [support portal](https://support.spryker.com). Plan for at least three days of lead time.
+* Load tests are usually performed in rounds. After deploying a typical infrastructure configuration for the size of your project, we'll ask you to perform load testing. The results are analyzed and the environment is dialed in. This pattern is repeated until the environment is configured to support the expected load. For a good result, two to three rounds are needed.
+* We don't recomment load testing in live production environments because this can affect the experience of your visitors. Instead, book a production-like environment or upgrade one of your non-production environments to perform the tests.
 
 ## Cloud architecture
 
@@ -27,7 +33,7 @@ There is an autoscaling configuration that has a service-level CPU threshold con
 
 You can test autoscaling by applying load to the aforementioned services of your application. The application will automatically scale, which might visible by by "steps" in your monitoring—response time climbing until a new container is provisioned, which will make it fall again. You should also be able to see new containers being deployed when checking the ECS overview of the service you are load testing.
 
-Because autoscaling is guard-railed by a maximum number of scaling group members, we recommend load and performance testing before going live so that this maximum number can be dialed in more easily. While our monitoring team can adjust these settings on the fly as well, it is normally best to apply a realistic load to the application (containing the data you want to use in production) before going live. This will also help adjust the container CPU and memory budget—which will determine how much CPU and memory each service will "get" compared to other containers. This helps to further optimize the setup.
+Because autoscaling is guard-railed by a maximum number of scaling group members, we recommend load and performance testing before going live so that this maximum number can be dialed in more easily. While our monitoring team can adjust these settings on the fly as well, it's normally best to apply a realistic load to the application (containing the data you want to use in production) before going live. This will also help adjust the container CPU and memory budget—which will determine how much CPU and memory each service will "get" compared to other containers. This helps to further optimize the setup.
 
 ## Additional notes
 

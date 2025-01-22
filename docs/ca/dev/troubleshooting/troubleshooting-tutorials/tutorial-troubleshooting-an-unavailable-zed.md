@@ -1,6 +1,6 @@
 ---
 title: Tutorial — Troubleshooting an unavailable Zed
-description: Learn how to troubleshoot an unavailable Zed
+description: Resolve issues with an unavailable Zed in Spryker by troubleshooting ECS services, Redis, RDS, and logs to restore functionality and improve performance.
 template: troubleshooting-guide-template
 last_updated: Oct 6, 2023
 redirect_from:
@@ -8,7 +8,7 @@ redirect_from:
 ---
 Zed didn't restart after a deployment or you can't access it.
 
-To troubleshoot this issue, you need to go through all the stages of information flow. The default information flow is:  Front end > Gateway(optional) > Zed > ElastiCache, ElasticSearch, RMQ, and RDS.
+To troubleshoot this issue, you need to go through all the stages of information flow. The default information flow is:  Front end > Gateway(optional) > Zed > ElastiCache, Elasticsearch, RMQ, and RDS.
 
 ![information flow diagram](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/_includes/informatin-flow-diagram.png)
 
@@ -85,15 +85,15 @@ To check Redis system information via a CLI, do the following.
 {% include checking-redis-system-information-via-a-cli.md %} <!-- To edit, see /_includes/checking-redis-system-information-via-a-cli.md -->
 
 
-## 6. Check ElasticSearch status
+## 6. Check Elasticsearch status
 
-Check ElasticSearch status via AWS Management Console:
+Check Elasticsearch status via AWS Management Console:
 
 {% include checking-elasticsearch-status-via-aws-management-console.md %} <!-- To edit, see /_includes/checking-elasticsearch-status-via-aws-management-console.md -->
 
-## 7. Check ElasticSearch indices
+## 7. Check Elasticsearch indices
 
-To check ElasticSearch indices via a CLI, do the following.
+To check Elasticsearch indices via a CLI, do the following.
 
 {% include checking-elasticsearch-indices-via-a-cli.md %} <!-- To edit, see /_includes/checking-elasticsearch-indices-via-a-cli.md -->
 

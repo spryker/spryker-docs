@@ -152,8 +152,8 @@ To configure this transformer, do the following:
 
 To configure this transformer, do the following:
 
-1. In *Stock value*, specify the value of the stock that the product will have after it is imported into Spryker. You can specify 0 as well, but in this case, in SCCOS, this product would be considered as out-of-stock, and, therefore, be unavailable in the Storefront.
-2. Optional: Specify the warehouse where this stock should be kept. For details about the warehouses in the Spryker Back Office, see [Create warehouses](/docs/pbc/all/warehouse-management-system/202307.0/base-shop/manage-in-the-back-office/create-warehouses.html).
+1. In *Stock value*, specify the value of the stock that the product will have after it's imported into Spryker. You can specify 0 as well, but in this case, in SCCOS, this product would be considered as out-of-stock, and, therefore, be unavailable in the Storefront.
+2. Optional: Specify the warehouse where this stock should be kept. For details about the warehouses in the Spryker Back Office, see [Create warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/create-warehouses.html).
 
 ![memo-base-product-set-stock](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/3-configure-data-mapping-between-akeneo-and-spryker/memo-base-product-set-stock.png)
 

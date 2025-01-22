@@ -40,15 +40,13 @@ We recommend mapping your branches to environments as follows:
 
 
 ## Connect a GitHub code repository
-To connect a GitHub code repository:
+
 
 1. Configure a GitHub code repository.
-2. Provide the following details via [support](https://spryker.force.com/support/s/):
-
-* **URL**
-* **Branch**
-* **Access token**
-
+2. On the [support portal](https://support.spryker.com/) in the Infrastructure Change Request category, create a Change to existing Parameter Store Variable case and provide the following details:
+  * **URL**
+  * **Branch**
+3. Provide the **Access token** by following [Share a secret](/docs/about/all/support/share-secrets-with-the-spryker-support-team.html#share-a-secret).
 
 We connect the code repository shortly after you provide the details.
 
@@ -57,7 +55,7 @@ We connect the code repository shortly after you provide the details.
 
 ## Connect a Bitbucket code repository
 
-Currently, only GitHub is integrated into AWS CodeBuild. To use a Bitbucket code repository, configure [AWS CodeStar](https://docs.aws.amazon.com/codestar/latest/userguide/welcome.html) by following the steps below.
+Currently, only GitHub is integrated into AWS CodeBuild. To use a Bitbucket code repository, configure AWS CodeStar by following the steps below.
 
 
 ### Prerequisites

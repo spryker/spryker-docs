@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/forms/forms.html
 related:
   - title: Creating forms
-    link: docs/scos/dev/back-end-development/forms/creating-forms.html
+    link: docs/dg/dev/backend-development/forms/create-forms.html
 ---
 
 Spryker uses **Symfony Forms** as the default form engine and **Symfony Validator** for form validation. In combination with Symfony components, we also use an additional **Validator** Service.

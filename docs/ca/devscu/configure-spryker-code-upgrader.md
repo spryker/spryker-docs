@@ -1,6 +1,6 @@
 ---
 title: Configure Spryker Code Upgrader
-description: Instructions for configuration of Spryker Code Upgrader
+description: Configure Spryker Code Upgrader with custom variables for pipelines, including cron schedules and version limits, to tailor updates to your project needs.
 template: concept-topic-template
 last_updated: Aug 15, 2023
 redirect_from:
@@ -25,6 +25,12 @@ To configure the Upgrader, follow the steps:
 ![Spryker CI Run Config Upgrader Pipeline](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/configure-spryker-code-upgrader.md/set-upgrader-variables-run-now.png)
 
 5. On the **Run: #1** page, update the needed parameters and click **Proceed**.
+
+{% info_block infoBox %}
+
+JSON values must be added in one line and without whitespaces.
+
+{% endinfo_block %}
 
 ![Spryker CI Set Config Upgrader Pipeline](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/configure-spryker-code-upgrader.md/set-spryker-code-upgrader-variables.png)
 

@@ -1,6 +1,6 @@
 ---
 title: Install in Demo mode on Windows
-description: Learn how to install Spryker in Demo mode on Windows.
+description: Learn how you can install and configure Spryker in Demo mode on Windows in a local environment.
 last_updated: Oct 21, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-in-demo-mode-on-windows
@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html
 related:
   - title: Database access credentials
-    link: docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html
+    link: docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
 ---
 
 This doc describes how to install Spryker in [Demo Mode](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#demo-mode) on Windows.
@@ -33,28 +33,28 @@ Depending on the needed WSL version, follow one of the guides:
     * B2C Demo Shop:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202404.0 --single-branch ./b2c-demo-shop && \
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202410.0 --single-branch ./b2c-demo-shop && \
     cd b2c-demo-shop
     ```
 
     * B2B Demo Shop:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202404.0 --single-branch ./b2b-demo-shop && \
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202410.0 --single-branch ./b2b-demo-shop && \
     cd b2b-demo-shop
     ```
 
     * B2C Marketplace Demo Shop
 
     ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202404.0 --single-branch ./b2c-demo-marketplace && \
+    git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202410.0 --single-branch ./b2c-demo-marketplace && \
     cd b2c-demo-marketplace
     ```
 
     * B2B Marketplace Demo Shop
 
     ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202404.0 --single-branch ./b2b-demo-marketplace && \
+    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202410.0 --single-branch ./b2b-demo-marketplace && \
     cd b2b-demo-marketplace
     ```
 

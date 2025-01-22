@@ -1,7 +1,7 @@
 ---
 title: Prepare a project for Spryker Code Upgrader
 last_updated: Sep 4, 2023
-description: Get your project ready to start using Spryker Code Upgrader
+description: Prepare your project for Spryker Code Upgrader by ensuring code compliance, updating modules, and meeting technical requirements for a smooth upgrade process.
 template: concept-topic-template
 redirect_from:
   - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html
@@ -11,7 +11,7 @@ To start managing upgrades with Spryker Code Upgrader, fulfill the following pre
 
 ## Make your code compliant with upgradability guidelines
 
-Our [upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html) ensure your project stays upgradable. When an application is compliant with the guidelines, it can take minor and patch updates without breaking functionality, even if it is highly customized.
+Our [upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html) ensure your project stays upgradable. When an application is compliant with the guidelines, it can take minor and patch updates without breaking functionality, even if it's highly customized.
 
 To check if your code is compliant with the guidelines, [run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
 

@@ -1,5 +1,6 @@
 ---
 title: Using the Support Portal
+description: How to navigate Spryker's Support Portal to create, track, and manage support cases efficiently for seamless issue resolution
 last_updated: Sep 28, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-use-the-support-portal
@@ -76,9 +77,9 @@ Emergencies are reserved for problems that have significant business impact now 
 
 {% info_block warningBox "Plan your change requests and use the right request form" %}
 
-Due to verification processes and role-based access control mechanisms, change requests take some time to process. Expect 3-5 days of processing time.
+Because of verification processes and role-based access control mechanisms, change requests take some time to process. Expect 3-5 days of processing time.
 
-Due to contractual reasons, only customers can request new environments or access to environment monitoring, not partners.
+Because of contractual reasons, only customers can request new environments or access to environment monitoring, not partners.
 
 {% endinfo_block %}
 

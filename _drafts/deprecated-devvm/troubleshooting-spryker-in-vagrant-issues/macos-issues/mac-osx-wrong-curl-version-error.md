@@ -13,7 +13,7 @@ redirect_from:
   - /v6/docs/mac-osx-wrong-curl-version-error
   - /v6/docs/en/mac-osx-wrong-curl-version-error
 related:
-  - title: Mac OSX - Installation fails or project folder can not be mounted due to SIP
+  - title: Mac OSX - Installation fails or project folder can not be mounted because of SIP
     link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip.html
   - title: Mac OSX - iterm2 (locale error)
     link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-iterm2-locale-error.html

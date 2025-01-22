@@ -631,7 +631,7 @@ By default, in state machine names, the following applies:
 ```csv
 sales.error.customer_order_not_found,Customer Order not found.,en_US
 sales.error.customer_order_not_found,Die Bestellung wurde nicht gefunden.,de_DE
-sales.error.order_cannot_be_canceled_due_to_wrong_item_state,Order cannot be canceled due to wrong item state.,en_US
+sales.error.order_cannot_be_canceled_due_to_wrong_item_state,Order cannot be canceled because of wrong item state.,en_US
 sales.error.order_cannot_be_canceled_due_to_wrong_item_state,Die Bestellung kann wegen dem falschen Artikelstatus nicht storniert werden.,de_DE
 oms.state.new,New,en_US
 oms.state.new,Neu,de_DE

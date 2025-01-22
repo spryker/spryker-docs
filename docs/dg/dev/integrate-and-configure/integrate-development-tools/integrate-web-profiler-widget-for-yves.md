@@ -10,15 +10,15 @@ redirect_from:
   - /docs/scos/dev/migration-and-integration/202108.0/development-tools/web-profiler-widget
 related:
   - title: Web Profiler for Zed
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
   - title: Integrating Formatter
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-formatter.html
   - title: Integrating SCSS linter
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-scss-linter.html
   - title: Integrating TS linter
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-ts-linter.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-ts-linter.html
   - title: Integrating Web Profiler for Zed
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
 ---
 
 The _Web Profiler Widget_ provides a toolbar for debugging and for informational purposes. The toolbar is located at the bottom of a loaded page.

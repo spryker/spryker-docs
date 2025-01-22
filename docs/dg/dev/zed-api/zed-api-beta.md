@@ -94,7 +94,7 @@ JSON_PARTIAL_OUTPUT_ON_ERROR | JSON_PRETTY_PRINT
 * 405 Method Not Allowed - When an HTTP method is being requested that isn’t allowed for the authenticated user. 410 Gone - Indicates that the resource at this end point is no longer available. Useful as a blanket response for old API versions.
 * 415 Unsupported Media Type - If incorrect content type was provided as part of the request.
 * 422 Unprocessable Entity - Used for validation errors.
-* 429 Too Many Requests - When a request is rejected due to rate limiting.
+* 429 Too Many Requests - When a request is rejected because of rate limiting.
 * 500 Internal Server Error - An internal error of the API. Something is broken.
 
 ## Development tools

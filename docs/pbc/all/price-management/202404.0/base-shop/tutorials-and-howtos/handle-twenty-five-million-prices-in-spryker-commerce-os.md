@@ -15,7 +15,7 @@ B2B business model usually challenges any software with higher requirements to a
 
 Imagine you have thousands of products and customers with unique pricing terms and conditions. A product can have thousands of prices assigned—one per customer. This document shares the technical challenges of handling such a number of prices and the solutions to solve them.
 
-Such a number of prices cannot be managed manually, but it is defined by business rules based on which the prices can be generated automatically. For example, you might agree on the special terms with your B2B partner, and they receive their own prices for the whole catalog. It might be considered as a discount, but usually, it is not a single simple rule but a set of rules and their priorities for each partner. These rules exist in an ERP system, which can export data through SOAP or CSV files.
+Such a number of prices cannot be managed manually, but it's defined by business rules based on which the prices can be generated automatically. For example, you might agree on the special terms with your B2B partner, and they receive their own prices for the whole catalog. It might be considered as a discount, but usually, it's not a single simple rule but a set of rules and their priorities for each partner. These rules exist in an ERP system, which can export data through SOAP or CSV files.
 
 In Spryker, each price is imported as a [price dimension](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html) and has a unique key, which determines its relation to a customer—for example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices must appear in Redis price entries and abstract product search documents so that facet filters can be applied in search and categories.
 
@@ -29,7 +29,7 @@ Price import flow:
 When enabling Spryker to handle such a number of prices, the following challenges occur:
 
 1. 25,000,000 prices are imported in two separate price dimensions.
-2. A product can have about 40,000 prices. This results in overpopulated product abstract search documents: each document aggregates prices of abstract products and all related concrete products. Each price is represented as an indexed field in the search document. Increasing the number of indexed fields slows `ElasticSearch(ES)` down. Just for comparison, the [recommended limit](https://www.elastic.co/guide/en/elasticsearch/reference/master/mapping.html#mapping-limit-settings) is 1,000.
+2. A product can have about 40,000 prices. This results in overpopulated product abstract search documents: each document aggregates prices of abstract products and all related concrete products. Each price is represented as an indexed field in the search document. Increasing the number of indexed fields slows `Elasticsearch(ES)` down. Just for comparison, the [recommended limit](https://www.elastic.co/guide/en/elasticsearch/reference/master/mapping.html#mapping-limit-settings) is 1,000.
 3. Overloaded product abstract search documents cause issues with memory limit and slow down [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html). The average document size is bigger than 1&nbsp;MB.
 4. When more than 100 product abstract search documents are processed at a time, the payload gets above 100&nbsp;MB, and ES rejects queries. [AWS native service](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html) does not allow changing this limit.
 
@@ -94,7 +94,7 @@ In AWS, the `http.max_content_length` ES limit defines the maximum payload size 
 The evaluated solutions are as follows:
 
 1. ES join field type.
-   This ES functionality is similar to the classical joins in relational databases. This solution solves your problem faster and with less effort. To learn about the implementation of this solution, see [ElasticSearch join data type: Implementation](#elasticsearch-join-field-type-implementation). Also, have a look at the other evaluated solutions as they may be more appropriate in your particular case.
+   This ES functionality is similar to the classical joins in relational databases. This solution solves your problem faster and with less effort. To learn about the implementation of this solution, see [Elasticsearch join data type: Implementation](#elasticsearch-join-field-type-implementation). Also, have a look at the other evaluated solutions as they may be more appropriate in your particular case.
    <br>Documentation: [Join field type](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html)
 2. Multi sharding with the `_routing` field.
    The idea is to avoid indexing problems by sharing big documents between shards. Breaking a huge index into smaller ones makes it easier for the search to index data. The solution is complex and does not solve the payload issues.
@@ -106,7 +106,7 @@ The evaluated solutions are as follows:
    - [Script score query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-script-score-query.html#script-score-query-ex-request)
    - [Chapter 12. Full-Text Search](https://www.postgresql.org/docs/9.5/textsearch.html)
 
-## ElasticSearch Join field type: Implementation
+## Elasticsearch Join field type: Implementation
 
 To solve the ES indexing issue, we reduced the size of product abstract documents, which reduced dynamic mapping properties.
 
@@ -175,17 +175,17 @@ To implement the solution, follow these steps:
 
 These two documents can be viewed as two tables with a foreign key in terms of relational databases.
 
-### ElasticSearch join data type feature: Side effects
+### Elasticsearch join data type feature: Side effects
 
 The side effects of this solution are the following:
 
 1. The [Product Reviews feature](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) is disabled because it requires multiple document types per index.
 2. Performance requires additional attention. You can read about performance issues related to the feature in [Parent-join and performance](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html#_parent_join_and_performance).
-3. Due to ES limitations, you can't build proper queries to run sorting by prices. Only facet filtering is possible.
+3. Because of ES limitations, you can't build proper queries to run sorting by prices. Only facet filtering is possible.
 
 ### How to speed up the publishing process
 
-To implement a parent-child relationship between documents, we built a standard search module that follows [Spryker architecture](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html). The new price search module is subscribed to the publish and unpublish events of abstract products to manage related price documents in the search. The listener in the search module receives a product abstract ID and fetches all related prices to publish or unpublish them, depending on the incoming event. Due to a large number of prices, the publish process became slow. This causes the following issues.
+To implement a parent-child relationship between documents, we built a standard search module that follows [Spryker architecture](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html). The new price search module is subscribed to the publish and unpublish events of abstract products to manage related price documents in the search. The listener in the search module receives a product abstract ID and fetches all related prices to publish or unpublish them, depending on the incoming event. Because of a large number of prices, the publish process became slow. This causes the following issues.
 
 #### Issues
 
@@ -207,7 +207,7 @@ The following solutions were evaluated:
 
 #### Bulk insertion with raw SQL
 
-[Postgresql CTE](https://www.postgresqltutorial.com/postgresql-cte/) allows managing bulk inserts and updates of huge data amounts, which speeds up the execution of PHP processes.
+[Postgresql CTE](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-cte/) allows managing bulk inserts and updates of huge data amounts, which speeds up the execution of PHP processes.
 
 <details><summary>SQL query example</summary>
 
@@ -298,7 +298,7 @@ Ensure that `\Pyz\Zed\EventBehavior\Persistence\Propel\Behavior\ResourceAwareEve
 
 3. Adjust `\Pyz\Zed\EventBehavior\Business\Model\TriggerManager::triggerEvents()` to extract the new piece of data from the payload obtained from the database and set it as the value of the newly created `EventEntityTransfer::queueName` property.
 
-4. Configure `\Spryker\Zed\Event\Business\Queue\Producer\EventQueueProducer::enqueueListenerBulk()` to check if `queueName` is set on the `EventEntityTransfer.` If it is set, this queue name is used to push event messages to. Otherwise, it falls back to the default event queue.
+4. Configure `\Spryker\Zed\Event\Business\Queue\Producer\EventQueueProducer::enqueueListenerBulk()` to check if `queueName` is set on the `EventEntityTransfer.` If it's set, this queue name is used to push event messages to. Otherwise, it falls back to the default event queue.
 
 Now you have a separate event queue for prices. This approach applies to any type of event. *Quick lane* ensures that critical data is replicated faster.
 

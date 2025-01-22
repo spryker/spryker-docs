@@ -1,6 +1,6 @@
 ---
 title: Tutorial — Troubleshooting unavailable Yves or Glue
-description: Learn how to troubleshoot unavailable Yves or Glue
+description: Troubleshoot unavailable Yves or Glue in Spryker by checking logs, ECS services, Redis, and Elasticsearch to identify and resolve issues quickly.
 template: troubleshooting-guide-template
 last_updated: Oct 6, 2023
 redirect_from:
@@ -8,7 +8,7 @@ redirect_from:
 ---
 Yves or Glue didn't restart after a deployment or you can't access it.
 
-To troubleshoot this issue, you need to go through all the stages of information flow. The default information flow is front end > Yves or Glue > ElastiCache, ElasticSearch, and Zed.
+To troubleshoot this issue, you need to go through all the stages of information flow. The default information flow is front end > Yves or Glue > ElastiCache, Elasticsearch, and Zed.
 
 ![information flow diagram](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/_includes/informatin-flow-diagram.png)
 
@@ -43,14 +43,14 @@ Check Redis system information via a CLI as follows.
 
 {% include checking-redis-system-information-via-a-cli.md %}  <!-- To edit, see /_includes/checking-redis-system-information-via-a-cli.md -->
 
-## 6. Check ElasticSearch status
+## 6. Check Elasticsearch status
 
-Check ElasticSearch status via AWS Management Console:
+Check Elasticsearch status via AWS Management Console:
 
 {% include checking-elasticsearch-status-via-aws-management-console.md %} <!-- To edit, see /_includes/checking-elasticsearch-status-via-aws-management-console.md -->
 
-## 7. Check ElasticSearch indices
+## 7. Check Elasticsearch indices
 
-Check ElasticSearch status via a CLI:
+Check Elasticsearch status via a CLI:
 
 {% include checking-elasticsearch-indices-via-a-cli.md %} <!-- To edit, see /_includes/checking-elasticsearch-indices-via-a-cli.md -->

@@ -1,6 +1,6 @@
 ---
 title: Extending Spryker SDK
-description: Find out how you can extend the Spryker SDK
+description: Find out how you can extend the Spryker SDK allowing third parties to contribute to the SDK without modifying it.
 template: howto-guide-template
 last_updated: Jan 13, 2023
 redirect_from:
@@ -294,7 +294,7 @@ class YourValueResolver implements ValueResolverInterface
 }
 ```
 
-You can define a value resolver as a Symfony service, for example to be able to inject services into it. If the value resolver is not defined as a service, it is instantiated by its FQCN.
+You can define a value resolver as a Symfony service, for example to be able to inject services into it. If the value resolver is not defined as a service, it's instantiated by its FQCN.
 
 Example of defining a value resolver as a Symfony service:
 

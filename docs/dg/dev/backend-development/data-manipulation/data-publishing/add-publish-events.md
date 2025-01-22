@@ -1,6 +1,6 @@
 ---
 title: Add publish events
-description: Learn how to add publish events for Publish and Synchronization.
+description: Add custom publish events in Spryker to automate data updates efficiently. Learn best practices for backend data manipulation in Spryker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/adding-publish-events
@@ -204,4 +204,4 @@ class SpyGlossary extends BaseSpyGlossary
 }
 ```
 
-Now, you can track the changes in the `Glossary` entity. When it is created, updated, or deleted, an event is created and posted to the specified RabbitMQ publish queue (`publish.translation`).
+Now, you can track the changes in the `Glossary` entity. When it's created, updated, or deleted, an event is created and posted to the specified RabbitMQ publish queue (`publish.translation`).

@@ -481,9 +481,12 @@ In order to successfully integrate your Spryker solution with an Otel-compatible
 ### How to instrument
 We've created a comprehensive guide to help you instrument your application using OpenTelemetry. By following these instructions, you can gain valuable insights into your application's performance and ensure a robust monitoring setup. To start instrumenting your application, check out our detailed [OpenTelemetry Instrumentation Guide](/docs/dg/dev/backend-development/opentelemetry/overview.md#integration).
 
-- What is included
-  - APM (with examples)  (Platform)
-  - Health Metrics (with examples) (Cloud)
+### What is included
+
+#### Application Performance Monitoring (Platform)
+
+#### Health Metrics (with examples) (Cloud)
+
 - Explanation about what I need to do in my APM (e.g. Dynatrace) (Cloud+Platform)
 -- Refer to the docs of the APM tool
 

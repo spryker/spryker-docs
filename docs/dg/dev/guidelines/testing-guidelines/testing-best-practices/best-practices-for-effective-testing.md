@@ -50,7 +50,7 @@ In Spryker, we prioritize API tests as they serve as the primary entry point int
 
 Each module API method should have at least two test cases: a happy-path and an unhappy-path scenario. Ideally, tests should cover the entire API specification.
 
-If the Arrange section of an API test becomes overly complex, consider adding targeted unit tests to ensure clarity and maintainability.
+If the Arrange section of a module API test becomes overly complex, consider adding targeted unit tests to ensure clarity and maintainability.
 
 ## Method naming
 

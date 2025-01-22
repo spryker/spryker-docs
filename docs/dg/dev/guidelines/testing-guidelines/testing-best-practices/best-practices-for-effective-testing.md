@@ -48,7 +48,7 @@ It is often stated that you should test the smallest possible unit of your appli
 
 In Spryker, we prioritize API tests as they serve as the primary entry point into the application code. API tests should cover both the Facade and Plugins (applicable to Plugins that bypass the Facade) to ensure correct functionality.
 
-Each API method should have at least two test cases: a happy-path and an unhappy-path scenario. Ideally, tests should cover the entire API specification.
+Each module API method should have at least two test cases: a happy-path and an unhappy-path scenario. Ideally, tests should cover the entire API specification.
 
 If the Arrange section of an API test becomes overly complex, consider adding targeted unit tests to ensure clarity and maintainability.
 

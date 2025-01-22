@@ -2,11 +2,11 @@
 
 ## Upgrading from version 4.* to version 5.*
 
-From version 5 we have changed price module responsibilities: previously it was responsible for handling product price related functionality. This responsibility has now been moved to the new PriceProduct module which handles product prices, while Price module is responsible for generic spryker core related functionality.
+From version 5 we have changed price module responsibilities: previously it was responsible for handling product price related functionality. This responsibility has now been moved to the new PriceProduct module which handles product prices, while the Price module handles generic Spryker core related functionality.
 
-Because of this change of the Price module responsibility, all related modules have also be updated to work with the `PriceProduct` module.
+Because of the changes in the Price module, all related modules have to be updated to work with the `PriceProduct` module.
 
-1. First you have to install the new `PriceProduct` module.
+1. First you have to install the `PriceProduct` module.
 
    * run `composer require spryker/price-product`.
    * run SQL queries to create a new table and alter the existing one.

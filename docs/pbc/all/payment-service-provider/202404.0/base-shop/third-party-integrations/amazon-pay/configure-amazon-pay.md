@@ -91,7 +91,7 @@ $config[AmazonPayConstants::WIDGET_BUTTON_SIZE] = AmazonPayConfig::WIDGET_BUTTON
 $config[AmazonPayConstants::WIDGET_BUTTON_COLOR] = AmazonPayConfig::WIDGET_BUTTON_COLOR_DARK_GRAY;
 ```
 
-According to Amazon Pay restrictions, a module can run either on a `localhost` domain or via HTTPS. If it is not possible to use `localhost`, HTTPS connection should be configured. For testing purposes, register a test account in the [Amazon Pay dashboard](https://pay.amazon.com/us).
+According to Amazon Pay restrictions, a module can run either on a `localhost` domain or via HTTPS. If it's not possible to use `localhost`, HTTPS connection should be configured. For testing purposes, register a test account in the [Amazon Pay dashboard](https://pay.amazon.com/us).
 
 {% info_block warningBox "Important" %}
 

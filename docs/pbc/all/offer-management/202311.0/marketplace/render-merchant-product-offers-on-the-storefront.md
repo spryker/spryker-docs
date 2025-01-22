@@ -11,7 +11,7 @@ This document explains how to render merchant product offers on the Storefront.
 
 ## Prerequisites
 
-The [MerchantProductOfferWidget](https://github.com/spryker-shop/merchant-product-offer-widget) module is responsible for rendering product offers on the Storefront. Make sure it is installed in your project before adding the product offers to the Storefront.
+The [MerchantProductOfferWidget](https://github.com/spryker-shop/merchant-product-offer-widget) module is responsible for rendering product offers on the Storefront. Make sure it's installed in your project before adding the product offers to the Storefront.
 
 ## Rendering product offers on the product details page
 

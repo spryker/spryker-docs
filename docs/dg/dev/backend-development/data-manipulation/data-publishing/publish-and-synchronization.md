@@ -1,7 +1,7 @@
 ---
 title: Publish and Synchronization
 description: Publish and Synchronization process synchronizes all changes made on the backend need to be propagated to the client data stores.
-last_updated: Jun 16, 2021
+last_updated: Oct 18, 2024
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization
 originalArticleId: 58721bca-2881-4583-a9fa-59d698e8b9bb
@@ -53,11 +53,11 @@ Both Publish and Synchronize implement the queue pattern. See [Spryker Queue 
 
 The process relies heavily on Propel behaviors, which are used to trigger actions automatically when updating the database. Thus, you don't need to trigger any step of the process in the code manually. See [Boostrapping a Behavior](http://propelorm.org/documentation/cookbook/writing-behavior.html) to learn more.
 
-### Triggering the Publish process
+## Triggering the Publish process
 
 There are 2 ways to start the Publish process: automated and manual.
 
-#### Automated event emitting
+### Automated event emitting
 
 Any changes done to an entity implementing the _event_ Propel behavior triggers a publish event immediately. CUD (create, update, delete) operations are covered by this Propel behavior. So you can expect these three types of events on creation, update, and deletion of DB entities managed by Propel ORM.
 
@@ -71,7 +71,7 @@ $productAbstractEntity->save();
 
 Implementing event behaviors is recommended for your project features to keep the Shop App data up-to-date. For example, behaviors are widely used in the `Availability` module to inform customers whether a certain product is available for purchase.
 
-#### Manual event emitting
+### Manual event emitting
 
 You can trigger the publish event manually using the [Event Facade](/docs/dg/dev/backend-development/data-manipulation/event/add-events.html):
 
@@ -81,12 +81,12 @@ $this->eventFacade->trigger(CmsStorageConfig::CMS_KEY_PUBLISH_WRITE, (new EventE
 
 Manual even emitting is best suited when an entity passes several stages before becoming available to a customer. A typical use case for this method is content management. In most cases, a page does not become available once you create it. Usually, it exists as a draft to be published later. For example, when a new product is released to the market.
 
-### How Publish and Synchronize works
+## How Publish and Synchronize works
 
 Publish and Synchronize Process schema:
 ![How Publish and Synchronize works](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Publish+and+Synchronization/how-it-works.png)
 
-### Publish
+## Publish
 
 When the publish process is triggered, an event or events are posted to a queue. Each event message posted to the queue contains the following information on the event that triggered it:
 * Event name
@@ -128,7 +128,7 @@ To consume an event, the queue adapter calls the publisher plugin specified in t
 
 The transformed data is stored in a dedicated database table. It serves as a _mirror table_ for the respective Redis or Elasticsearch storage. The `data` column of the table contains the data to be synced to the front end, defining [the storage and the key](/docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html). It is stored in JSON for easy and fast synchronization. The table also contains the foreign keys used to backtrack data and the timestamp of the last change for each row. The timestamp is used to track changes rapidly.
 
-### Synchronize
+## Synchronize
 
 When a change happens in the mirror table, its *synchronization behavior* sends the updated rows as messages to one of the Sync Queues. After consuming a message, the data is pushed to Redis or Elastisearch.
 
@@ -178,7 +178,7 @@ When a change happens in the mirror table, its *synchronization behavior* sends 
 }
 ```
 
-#### Direct synchronize
+### Direct synchronize
 
 To optimize performance and flexibility, you can enable direct synchronization on the project level. This approach uses in-memory storage to retain all synchronization events instead of sending them to the queue. With this setup, you can control if entities are synchronized directly or through the traditional queue-based method.
 
@@ -241,8 +241,38 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 </table>
 ```
 
+### Environment limitations related to DMS
 
-### Data Architecture
+When Dynamic Multi-Store (DMS) is disabled, the Direct Sync feature has the following limitations:  
+- Single-store configuration: The feature is only supported for configurations with a single store.
+- Multi-store configuration with namespace consistency: For configurations with multiple stores, all stores must use the same Storage and Search namespaces.
+
+Example configuration for multiple stores:
+
+```yaml
+stores:
+    DE:
+        services:
+            broker:
+                namespace: de-docker
+            key_value_store:
+                namespace: 1
+            search:
+                namespace: search
+    AT:
+        services:
+            broker:
+                namespace: at-docker
+            key_value_store:
+                namespace: 1
+            search:
+                namespace: search
+```
+
+When DMS is enabled, there're no environment limitations for the Direct Sync feature.
+
+
+## Data Architecture
 
 P&S plays a major role in data denormalization and distribution to Spryker storefronts and API. Denormalization procedure aims for preparing data in the form it will be consumed by data clients. Distribution procedure aims to distribute the data closer to the end users, so that they feel like accessing a local storage.
 
@@ -260,7 +290,7 @@ When designing a solution using P&S we need to consider the following concerns i
 - horizontal scalability of publish process (native) and sync process (requires development)
 - data object limitations
 
-#### Data Object Limitations
+### Data Object Limitations
 
 In order to build a healthy commerce system, we need to make sure that P&S process is healthy at all times. And first we start with healthy NFRs for P&S.
 - storage sync message size should not be over 256Kb - this prevents us from problems in data processing, but even more important in data comsumption, when an API consumer might experience failure when reviceing an aggregated object of a high size.

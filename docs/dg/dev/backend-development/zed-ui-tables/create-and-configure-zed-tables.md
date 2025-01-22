@@ -1,6 +1,6 @@
 ---
 title: Create and configure Zed tables
-description: This document helps you get started on working with tables.
+description: Learn how to create and configure Zed tables. This guide details steps for building custom tables, defining data sources, and enhancing backend user interfaces.
 last_updated: Jan 02, 2023
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-and-configuring-zed-tables
@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed-ui-tables/creating-and-configuring-zed-tables.html
 related:
   - title: Add buttons to Zed tables
-    link: docs/scos/dev/back-end-development/zed-ui-tables/adding-buttons-to-zed-tables.html
+    link: docs/dg/dev/backend-development/zed-ui-tables/adding-buttons-to-zed-tables.html
 ---
 
 Spryker has a dedicated component to help you build tables for the Zed UI.
@@ -103,7 +103,7 @@ $config->setDefaultSortField(SpySalesOrderTableMap::COL_CREATED_ATб \Spryker\Ze
 
 ### Configure search by columns
 
-The default search option in Back Office data tables searches for anything that contains the specified substrings. This default search makes use of the SQL logical operator ‘LIKE’ in combination with ‘LOWER’ for comparison. It may result in performance issues on larger tables due to indexes not being used.
+The default search option in Back Office data tables searches for anything that contains the specified substrings. This default search makes use of the SQL logical operator ‘LIKE’ in combination with ‘LOWER’ for comparison. It may result in performance issues on larger tables because of indexes not being used.
 
 Search by columns can be used on all Back Office data tables which extend the `AbstractTable` class.
 

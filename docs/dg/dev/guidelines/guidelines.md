@@ -1,6 +1,6 @@
 ---
 title: Guidelines
-description: Guidelines for developers working on Spryker Commerce OS
+description: A set of guidelines for developers to use whilst working on Spryker Cloud Commerce OS projects.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/guidelines/guidelines.html

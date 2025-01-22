@@ -1,6 +1,6 @@
 ---
 title: Spryker SDK
-description: Learn about the Spryker SDK and how you can use it in your project.
+description: Learn all about the Spryker SDK and how you can use it to enhance your Spryker projects.
 template: concept-topic-template
 last_updated: Aug 31, 2023
 redirect_from:

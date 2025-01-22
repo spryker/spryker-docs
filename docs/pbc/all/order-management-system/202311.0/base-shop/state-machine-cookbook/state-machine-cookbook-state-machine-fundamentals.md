@@ -184,7 +184,7 @@ The use case is when you want to wait for something—for example, *wait in this
 #### Transition representation
 ![Transition representation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/State+Machine+Cookbook/State+Machine+Cookbook+-+Part+I+-+State+Machine+Fundamentals/state-machine-transition-representation.png)
 
-For performance reasons, it is not recommended to create scenarios where a lot of items wait. This check is executed every minute and can be time-consuming.
+For performance reasons, it's not recommended to create scenarios where a lot of items wait. This check is executed every minute and can be time-consuming.
 
 ### Events
 
@@ -228,7 +228,7 @@ On the default Zed Order Details page, you can trigger an event for a single ite
 
 Events can be triggered after a defined period of time has passed through a timeout.
 
-Let's assume you are trying to define the prepayment process, in which if, after 15 days, no payment is received, the reminder sent is fired due to the timeout. How is the reminder then technically sent? This can be implemented through a command attached to the send first reminder event. The command attribute references a PHP class that implements a specific interface. Every time the event is fired (automatically, after the timeout), Zed makes sure the associated command is executed. If an exception occurs in the command coding, the order or order item stays in the source state.
+Let's assume you are trying to define the prepayment process, in which if, after 15 days, no payment is received, the reminder sent is fired because of the timeout. How is the reminder then technically sent? This can be implemented through a command attached to the send first reminder event. The command attribute references a PHP class that implements a specific interface. Every time the event is fired (automatically, after the timeout), Zed makes sure the associated command is executed. If an exception occurs in the command coding, the order or order item stays in the source state.
 
 ```xml
 <transition>
@@ -277,7 +277,7 @@ The textual timeout is evaluated with `\DateInterval::createFromDateString()`. F
 
 #### Events triggered automatically using onEnter
 
-If an event has the `onEnter` attribute set to `True`, it is automatically triggered when the order is in the source state of the transition that contains the event.
+If an event has the `onEnter` attribute set to `True`, it's automatically triggered when the order is in the source state of the transition that contains the event.
 
 ```xml
 ..
@@ -316,7 +316,7 @@ Therefore you can implement a service that receives such a message. The next ste
 
 {% info_block errorBox %}
 
-The process needs to be in a state where it is actually waiting for the event you are triggering. Otherwise, the event is not processed.
+The process needs to be in a state where it's actually waiting for the event you are triggering. Otherwise, the event is not processed.
 
 {% endinfo_block %}
 
@@ -387,7 +387,7 @@ class SendPaymentRequest extends AbstractCommand implements CommandByOrderInterf
 ```
 
 ### Processes
-A process represents a model for things that are happening in a shop. In essence, it is a graph on which the nodes are possible statuses of the order, and the vertices that connect the nodes are the transitions.
+A process represents a model for things that are happening in a shop. In essence, it's a graph on which the nodes are possible statuses of the order, and the vertices that connect the nodes are the transitions.
 
 For example, when submitting a new order, if the payment is made, the shipment subprocess can be initiated; if the payment was not performed, the state machine moves to the `cancelled` status.
 
@@ -404,7 +404,7 @@ To check the code that does this, see [CheckoutWorkflow.php](https://github.com/
 
 #### Order versus order item
 
-Zed executes the process for every sales order item. This is helpful if you want to track that a specific item has been shipped and others are still waiting. The same for a return. A customer might keep two items and send back the third one. Therefore, it is important to walk through the process at the sales order item level. It is important to keep in mind when such a split might happen. Most of the time, an event is fired for all sales order items at the same time. However, sometimes it is important to wait in a specific state until all sales order items have a certain state or flag.
+Zed executes the process for every sales order item. This is helpful if you want to track that a specific item has been shipped and others are still waiting. The same for a return. A customer might keep two items and send back the third one. Therefore, it's important to walk through the process at the sales order item level. It is important to keep in mind when such a split might happen. Most of the time, an event is fired for all sales order items at the same time. However, sometimes it's important to wait in a specific state until all sales order items have a certain state or flag.
 
 #### Subprocesses
 

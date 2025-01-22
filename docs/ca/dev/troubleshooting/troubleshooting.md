@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting tutorials
-description: Learn how to troubleshoot common issues in Spryker Cloud Commerce OS
+description: Explore troubleshooting tutorials for common Cloud Commerce OS issues, including deployment failures, authentication errors, and service restarts for Yves or Zed.
 template: concept-topic-template
 last_updated: Oct 6, 2023
 redirect_from:

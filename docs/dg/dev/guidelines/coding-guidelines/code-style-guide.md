@@ -9,11 +9,11 @@ redirect_from:
   - /docs/scos/dev/guidelines/coding-guidelines/code-style-guide.html
 related:
   - title: Code Architecture Guide
-    link: docs/scos/dev/guidelines/coding-guidelines/code-architecture-guide.html
+    link: docs/dg/dev/guidelines/coding-guidelines/code-architecture-guide.html
   - title: Code Quality
-    link: docs/scos/dev/guidelines/coding-guidelines/code-quality.html
+    link: docs/dg/dev/guidelines/coding-guidelines/code-quality.html
   - title: Secure Coding Practices
-    link: docs/scos/dev/guidelines/coding-guidelines/secure-coding-practices.html
+    link: docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices.html
 ---
 
 We at Spryker follow the PSR-2 standards<!-- ](http://www.php-fig.org/psr/psr-2/) check if it works before restoring --> as the coding style guide. To achieve a styled codebase, we integrated the well known [PHP-CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
@@ -198,7 +198,7 @@ Storing the dates in a common time zone ensures consistency, as the time zone co
 
 ### Deprecations
 
-When you deprecate a method, class, or alike, it is recommended to add a short sentence on what to use instead, so all people know what to do without having to investigate deeper.
+When you deprecate a method, class, or alike, it's recommended to add a short sentence on what to use instead, so all people know what to do without having to investigate deeper.
 
 |DEPRECATION | MESSAGE |
 |---|---|

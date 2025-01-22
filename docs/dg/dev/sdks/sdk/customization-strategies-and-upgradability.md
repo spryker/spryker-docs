@@ -35,7 +35,7 @@ Module configuration is one of the Public APIs.  This means that Spryker makes s
 
 ### Plug and Play customization
 
-Plug and Play is Spryker’s out-of-the-box development strategy that allows customers to extend a project with various built-in plugins. In case there’s no plugin, it is recommended to create a feature request or create a custom plugin and wire it up in the DependencyProvider, or via configuration.
+Plug and Play is Spryker’s out-of-the-box development strategy that allows customers to extend a project with various built-in plugins. In case there’s no plugin, it's recommended to create a feature request or create a custom plugin and wire it up in the DependencyProvider, or via configuration.
 
 Check out our [Plugins](/docs/dg/dev/backend-development/plugins/plugins.html) article to get more information.
 
@@ -135,7 +135,7 @@ Let’s see how this affects our upgrade process.
 
 #### Patch releases
 
-Patch releases, such as for example 1.2.1 to 1.2.2, will not affect the `DEFAULT_CATEGORY_READ_CHUNK` value or usage so it is safe to automatically update to patches even if the project has modified the constant value to suit its needs.
+Patch releases, such as for example 1.2.1 to 1.2.2, will not affect the `DEFAULT_CATEGORY_READ_CHUNK` value or usage so it's safe to automatically update to patches even if the project has modified the constant value to suit its needs.
 
 #### Minor release
 

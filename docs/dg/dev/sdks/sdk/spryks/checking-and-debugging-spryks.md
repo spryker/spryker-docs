@@ -1,6 +1,6 @@
 ---
 title: Checking and debugging Spryks
-description: Find out how you can check and debug Spryks
+description: Learn how you can check, troubleshoot and debug Spryks nad how to avoid dependencies within your Spryker project.
 template: howto-guide-template
 redirect_from:
 - /docs/sdk/dev/spryks/checking-and-debugging-spryks.html

@@ -84,7 +84,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 Make sure that inactive product offers get removed from cart on reload.
 
-Make sure that it is only possible to have items in cart where the product offer reference belongs to the correct concrete product.
+Make sure that it's only possible to have items in cart where the product offer reference belongs to the correct concrete product.
 
 {% endinfo_block %}
 

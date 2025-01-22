@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting deployment issues
-description: Solutions to common deployment issues
+description: Find solutions to common Spryker deployment issues, including troubleshooting Docker, Jenkins, and AWS-related deployment errors.
 template: concept-topic-template
 last_updated: Oct 17, 2023
 redirect_from:
@@ -14,5 +14,5 @@ This section contains solutions to common deployment issues.
 Browse the deployment troubleshooting:
 
 * [Assets, logs, or pipelines are not visible in AWS Management](/docs/ca/dev/troubleshooting/troubleshooting-deployment-issues/assets-logs-or-pipelines-are-not-visible-in-aws-management-console.html)
-* [Deployment fails due to a failed Docker authentication](/docs/ca/dev/troubleshooting/troubleshooting-deployment-issues/deployment-fails-due-to-a-failed-docker-authentication.html)
+* [Deployment fails because of a failed Docker authentication](/docs/ca/dev/troubleshooting/troubleshooting-deployment-issues/deployment-fails-due-to-a-failed-docker-authentication.html)
 * [Jenkins does not restart](/docs/ca/dev/troubleshooting/troubleshooting-deployment-issues/jenkins-does-not-restart.html)

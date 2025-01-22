@@ -88,7 +88,7 @@ We recommend making de.mysprykershop.com a mirror of eu.mysprykershop.com to pre
 
 2. Enable dynamic store feature
 
-Due to a change in the ideology with shifting to the region instead of store configuration for deploy, you need to change the deploy file to enable it.
+Because of a change in the ideology with shifting to the region instead of store configuration for deploy, you need to change the deploy file to enable it.
 To use the new region configuration, create a new deployment file, such as `deploy.dynamic-store.yml` (or `deploy.dev.dynamic-store.yml` for development environment).
 
 You can check example deploy file for EU region:
@@ -116,7 +116,7 @@ image:
 regions:
     EU:
         # Services for EU region. Use one of the following services: mail, database, broker, key_value_store, search for all stores in EU region.
-        # Stores MUST not be defined in the deploy file as it was before due to their dynamic nature
+        # Stores MUST not be defined in the deploy file as it was before because of their dynamic nature
         services:
             mail:
                 sender:
@@ -622,7 +622,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that, when a store created, updated, or deleted with local and country data.  And it is exported to or removed from Redis.
+Ensure that, when a store created, updated, or deleted with local and country data.  And it's exported to or removed from Redis.
 
 Storage type: Redis
 Target entity: Store

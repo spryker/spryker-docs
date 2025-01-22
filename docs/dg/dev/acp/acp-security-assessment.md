@@ -1,6 +1,6 @@
 ---
 title: ACP security assessment
-Descriptions: This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker’s app catalog.
+Description: Ensure robust security for your Spryker ACP environment with our comprehensive guide on assessments, compliance, and protection best practices.
 template: howto-guide-template
 last_updated: Aug 30, 2023
 redirect_from:
@@ -15,7 +15,7 @@ This document outlines the threat modeling and security assessment requirements 
 
 ## ACP security
 
-In the context of listings on the ACP apps catalog, security is a measure of trust. For our enterprise customers to trust us with their data, it is important that every app they use with SCCOS offers a satisfactory level of security.
+In the context of listings on the ACP apps catalog, security is a measure of trust. For our enterprise customers to trust us with their data, it's important that every app they use with SCCOS offers a satisfactory level of security.
 
 ## Security responsibility
 
@@ -158,7 +158,7 @@ The diagram below demonstrates the security assessment procedure:
 ## Review results
 
 - As soon as a review is cleared, an app is marked as approved, and a badge is displayed on the marketplace listing.
-- During subsequent full reviews (typically annually), the app will retain its badge while it is in the test cycles. Nevertheless, in the following scenarios, the badge will be removed, and customers notified of it:
+- During subsequent full reviews (typically annually), the app will retain its badge while it's in the test cycles. Nevertheless, in the following scenarios, the badge will be removed, and customers notified of it:
 	- The app developer fails to respond to repeated requests for annual re-assessments.
 	- During the re-assessment,  the app fails repeatedly (about 5 times), and the app developer isn’t able to fix the reported issues.
 - At this time, customers can choose to look at an alternate application or work with the developer to remedy the issues.

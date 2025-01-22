@@ -1,6 +1,6 @@
 ---
 title: Connect Spryker Code Upgrader to a GitHub managed project
-description: Learn how to connect Spryker CI to a GitHub managed project
+description: Connect Spryker Code Upgrader to a GitHub-managed project using native integration or access tokens to enable seamless upgrades and repository analysis.
 template: howto-guide-template
 last_updated: Jul 4, 2023
 redirect_from:

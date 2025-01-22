@@ -1,6 +1,6 @@
 ---
 title: About Spryker
-description: High-level overview of Spryker Cloud Commerce OS
+description: Learn about Spryker's modular architecture, designed for flexible, scalable e-commerce solutions. This page covers its layered structure, customizable modules, and how it supports agile updates, reduced dependencies, and cost-efficient management for B2B, B2C, and marketplaces.
 last_updated: Sep 9, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-spryker
@@ -22,9 +22,7 @@ redirect_from:
 
 ---
 
-
-
-Spryker Cloud Commerce OS (SCCOS) is a completely modular e-commerce technology. With the modular design and API-based integration with all possible touchpoints, Spryker supports most business models: B2B, B2C, and marketplace.
+Spryker Cloud Commerce OS (Spryker) is an e-commerce platform-as-a-service solution designed to provide businesses with the flexibility and efficiency needed to create a unique digital commerce experience. Built on a modular and layered architecture, it increases operational efficiency and lowers the total cost of ownership. With the modular design and API-based integration with all possible touchpoints, Spryker supports most business models: B2B, B2C, and marketplace. This document provides an overview of the key features and benefits of Spryker.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/Spryker-OS-Overview-RGB-JULY19_Spryker-OS-Overview.png)
 
@@ -65,7 +63,7 @@ Spryker is split into four different layers:
 * We confine long and resource-intensive processes to the business and persistence layers, which ensures high performance on the presentation layer. The presentation side is separated from the rest of the OS to make sure that only lean processes are executed there. Anything that can impact the purchase process is offloaded to an area that does not impact the performance.
 * Separate frontend and backend means developers can work in parallel, allowing for faster implementation, testing, and better optimization—all for less internal cost.
 * Because your commercial offering is not dependent on a single channel, you can focus your effort on growth and improvement, rather than on solutions, extensions, and sometimes workarounds to make things work.
-* Essential information is not tied up with the presentation. You can easily swap out, extend, replace this information, as well as change the ways it is presented.
+* Essential information is not tied up with the presentation. You can easily swap out, extend, replace this information, as well as change the ways it's presented.
 
 
 ## Managed cloud platform
@@ -85,9 +83,7 @@ We take care of the infrastructure security and provide you with guidelines for 
 
 ## Customizable system
 
-Being highly customizable at its core, Spryker is designed to cater the the most complex use cases. The functionality shipped by default can be extended and customized. Each module is released with an extension point so you can adjust it to your needs. On top of customizing the existing functionality, you can introduce completely new components.
-
-Glue API enables you to integrate any external systems and touchpoints, making your shop an all-in-one commerce system.
+Spryker offers an adaptable platform suitable for a variety of e-commerce needs, including different business operational models and industry verticals. This is possible because development teams can modify vendor-specific business logic provided out of the box, aligning the platform with individual operational requirements. Built on a modular and layered structure, Spryker is designed for making specific adjustments. This flexibility is beneficial for iterative development, enabling projects to launch with an essential feature set (MVP approach) and then incrementally introduce additional functionalities as needed. Glue API enables you to integrate any external systems and touchpoints, making your shop an all-in-one commerce system.
 
 ## Demo Shops
 
@@ -95,10 +91,10 @@ Demo Shops are fully functional shops with collections of features that match di
 
 If you want to check out how Spryker works, Demo Shops also quick to install on your machine. The following Demo Shops are available:
 
-* [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html)
-* [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html)
-* [Marketplace B2B](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2b-suite.html)
-* [Marketplace B2C](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2c-suite.html)
+* [B2B](/docs/about/all/b2b-suite.html)
+* [B2C](/docs/about/all/b2c-suite.html)
+* [Marketplace B2B](/docs/about/all/spryker-marketplace/marketplace-b2b-suite.html)
+* [Marketplace B2C](/docs/about/all/spryker-marketplace/marketplace-b2c-suite.html)
 
 Demo Shops are covered by the same commercial license and the same support and long-term support rules as individual modules.
 

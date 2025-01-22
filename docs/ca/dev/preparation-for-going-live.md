@@ -1,6 +1,6 @@
 ---
 title: Preparation for going live
-description: This instruction explains how to prepare a Spryker project for going live.
+description: Prepare your Spryker Cloud Commerce OS environment for a successful launch with essential pre-live checks, testing, and configuration steps to ensure smooth deployment.
 last_updated: Jan 23, 2023
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/preparation-for-going-live
@@ -29,7 +29,7 @@ We've divided the preparation into approximate timeframes, and you can adjust th
 
 ### Cloud environments
 
-- Connected systems are checked and prepared (project adjustments):
+- Project and connected systems are checked and prepared:
     - Double-check that all VPC peering and Site-to-Site VPN connections are monitored and secure. We don't usually monitor such connections with external parties.
     - Make sure that there is a network diagram that can be used to explain the setup quickly if the need arises.
     - Make sure that routing works as expected, and no internal resources are accidentally exposed via the Site-to-Site or VPC peering setup.
@@ -37,6 +37,7 @@ We've divided the preparation into approximate timeframes, and you can adjust th
     - Check your concepts for DOS and DDOS prevention or mitigation, and check with relevant vendors for products that fit your needs and are compatible with SCCOS.
     - Check your concepts for DOS and DDOS prevention in the Back office and Merchant portal. Add basic auth if applicable. For instructions on implementing basic auth, see [Configure basic .htaccess authentication](/docs/pbc/all/identity-access-management/{{site.version}}/configure-basic-htaccess-authentication.html)
 - The DNS strategy is defined. If you delegate DNS to Spryker, let us know the date on which to point the domain name to your Spryker project.
+- Web Application Firewalls (WAF) IPs, proxies, and other security and traffic filtering systems used to route traffic to Spryker are whitelisted. This prevents these systems to be accidentally blocked by Spryker security systems. You can request IPs to be whitelisted via an Infrastructure Change Request on the [Support Portal](https://support.spryker.com/s/).
 
 {% info_block infoBox "DNS propagation" %}
 
@@ -50,7 +51,7 @@ After pointing the domain name to your Spryker project, some of your customers m
 - Upgrade your project's code to the [latest Demo Shop release](/docs/about/all/releases/product-and-code-releases.html). Or at least upgrade to a release that fully supports the Docker SDK (202009.0 and later).
 - Update `spryker/twig` to version 3.15.2 or later because this and later versions have important stability improvements over version 3.15.1.
 - Migrate the project's database to MariaDB.
-- Split the project's Zed endpoints as described in [Integrating separate endpoint bootstraps](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html).
+- Split the project's Zed endpoints as described in [Integrating separate endpoint bootstraps](/docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html).
 - Verify that your project's service naming scheme exactly matches the examples in the [sample deploy-spryker-b2c-staging.yml file](https://github.com/spryker-shop/b2c-demo-shop/blob/202204.0-p2/deploy.spryker-b2c-staging.yml).
 - Create [deploy files](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file.html) for each of your environments. File names must follow the naming convention: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
 - [Define a Docker SDK version](/docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html).
@@ -60,15 +61,15 @@ After pointing the domain name to your Spryker project, some of your customers m
   - Connect Staging S3 bucket to a staging environment.
   - If you're using CSV imports, make sure they're imported from S3 buckets.
 - Implement the following performance tips:
-  - Implement approaches described in all the [performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html).
+  - Implement approaches described in all the [performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html).
   - Implement [Jenekins operational best practices](/docs/ca/dev/best-practices/jenkins-operational-best-practices.html)
   - Implement the [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management) where applicable.
 - Implement the security tips:
-  - Apply Spryker [security guidelines](/docs/scos/dev/guidelines/security-guidelines.html).
+  - Apply Spryker [security guidelines](/docs/dg/dev/guidelines/security-guidelines.html).
   - Make sure that you don't have any plain-text passwords, private keys, or API secrets in config files or Git repositories.
   - Minimize the use of personal credentials and choose work-specific accounts based on each environment (production, staging, testing). We highly recommend employing Centralized Credential Management to securely store and manage these credentials.
   - Install all the [security updates](/docs/about/all/releases/product-and-code-releases.html) from all Spryker packages.
-  - Install all the security updates from all the external packages. To check if your project modules require security updates, you can use the [Security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html).
+  - Install all the security updates from all the external packages. To check if your project modules require security updates, you can use the [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html).
 - Perform compliance and legal checks. To ensure the platform complies with relevant legal and regulatory requirements, especially for international operations, consult your legal team. Make sure to check [Guidelines for GDPR compliance](/docs/about/all/support/gdpr-compliance-guidelines.html).
 - Make sure that the Back Office Access Control List (ACL) setup is configured correctly to manage user permissions and access rights within the system's administrative interface. For instructions on how to configure ACL, see [Users and rights overview](/docs/pbc/all/user-management/{{site.version}}/base-shop/user-and-rights-overview.html).
 - If your application is writing logs into your database, develop a strategy on how these logs can be regularly rotated or truncated to avoid large table sizes that can affect the application's performance. By default, the `spy_oms_transition_log` is used to log state machine transitions and can get very large if not [truncated](/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html) regularly.
@@ -85,7 +86,7 @@ After pointing the domain name to your Spryker project, some of your customers m
 
 - Make sure the SEO strategy and plan are defined. Do the following:
   - Set up redirects. If you are migrating from another shop or project to Spryker, that is, the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results.
-  - Review and implement the best practices where applicable. For details, see [Basic SEO techniques to use in your project](/docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html).
+  - Review and implement the best practices where applicable. For details, see [Basic SEO techniques to use in your project](/docs/dg/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html).
 
 ### Training
 
@@ -158,7 +159,7 @@ Prepare a data migration plan. Include all the data.
 Make sure you've addressed all the items from the following checklists:
 
 - Implement the code freeze. We recommend having a code freeze at least two weeks before going live.
-- Double-check the go-live date. If any of the preceding tasks aren't complete, postpone your go-live or discuss with us how to complete them in time. DNS changes are especially sensitive to deadlines. Due to the way the DNS system works, any DNS changes take time to take effect.
+- Double-check the go-live date. If any of the preceding tasks aren't complete, postpone your go-live or discuss with us how to complete them in time. DNS changes are especially sensitive to deadlines. Because of the way the DNS system works, any DNS changes take time to take effect.
 - Make sure that the rollback strategy is still valid. Check that you have everything you need to recover from an unforeseen issue with the newest version of the project you are deploying.
 - Make sure that DNS is set up. For details on the DNS setup, see [Set up DNS](/docs/ca/dev/set-up-dns.html).
 - Make sure that the third-party systems have been switched to the production mode:

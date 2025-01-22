@@ -1,6 +1,6 @@
 ---
 title: "Decoupled Glue infrastructure: Integrate the API Key authorization"
-description: Integration of the API Key authorization mechanism into a Spryker project.
+description: Learn about Integration of the API Key authorization mechanism into a Spryker based project.
 last_updated: October 10, 2023
 template: feature-integration-guide-template
 redirect_from:

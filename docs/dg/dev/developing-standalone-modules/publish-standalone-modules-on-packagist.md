@@ -1,6 +1,6 @@
 ---
 title: Publish standalone modules on Packagist
-description: Learn how to publish a module on Packagist for distribution
+description: Learn how to publish a module on Packagist for distribution within your Spryker Cloud Commerce OS Project.
 last_updated: Jun 7, 2024
 template: howto-guide-template
 

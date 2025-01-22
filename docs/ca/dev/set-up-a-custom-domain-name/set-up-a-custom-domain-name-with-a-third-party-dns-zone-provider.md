@@ -1,5 +1,6 @@
 ---
 title: Setting up a custom domain name with a third-party DNS zone provider
+description: Set up a custom domain name with a third-party DNS provider on Spryker, following detailed steps for load balancer configuration and domain management.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/setting-up-a-custom-domain-name-with-a-third-party-dns-zone-provider
@@ -66,7 +67,7 @@ groups:
 
 {% info_block warningBox "Store configuration" %}
 
-`store:` must correspond to `groups:` and `region:`. For example, it is impossible to set a US store in the DE region.
+`store:` must correspond to `groups:` and `region:`. For example, it's impossible to set a US store in the DE region.
 
 {% endinfo_block %}
 

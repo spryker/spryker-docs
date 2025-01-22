@@ -19,7 +19,7 @@ redirect_from:
 
 Suggesting product alternatives is a great way to ease the user’s product finding process. Instead of browsing the product catalog, product alternatives let customers jump from one product page to the next until they find a relevant item.
 
-For marketplace relations, alternative products are useful because for a marketplace owner it is irrelevant from what merchant a buyer has bought a product. If a merchant does not have this product, the alternative product can be shown on the marketplace.
+For marketplace relations, alternative products are useful because for a marketplace owner it's irrelevant from what merchant a buyer has bought a product. If a merchant does not have this product, the alternative product can be shown on the marketplace.
 
 A Back Office user can add product alternatives for both abstract and concrete products in **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 

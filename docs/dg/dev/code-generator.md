@@ -1,5 +1,6 @@
 ---
 title: Code Generator
+description: The code Generator module can generate Yves, Zed, Client Service and shared application code for your Spryker based project.
 last_updated: Nov 18, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/code-generator
@@ -15,13 +16,13 @@ redirect_from:
   - /docs/scos/dev/code-generator.html
 related:
   - title: Cronjob scheduling
-    link: docs/scos/dev/sdk/cronjob-scheduling.html
+    link: docs/dg/dev/backend-development/cronjobs/cronjobs.html
   - title: Data import
-    link: docs/scos/dev/sdk/data-import.html
+    link: docs/dg/dev/data-import/202410.0/data-import.html
   - title: Development virtual machine, docker containers & console
-    link: docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
+    link: docs/dg/dev/sdks/the-docker-sdk/docker-environment-infrastructure.html
   - title: Twig and TwigExtension
-    link: docs/scos/dev/sdk/twig-and-twigextension.html
+    link: docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
 ---
 
 The CodeGenerator module can generate your project code.

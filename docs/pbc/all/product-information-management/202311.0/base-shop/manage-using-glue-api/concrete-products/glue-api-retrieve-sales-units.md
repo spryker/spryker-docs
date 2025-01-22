@@ -97,7 +97,7 @@ Request sample: retrieve sales units
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| conversion | integer | Factor to convert a value from sales to base unit. If it is "null", the information is taken from the global conversions. |
+| conversion | integer | Factor to convert a value from sales to base unit. If it's "null", the information is taken from the global conversions. |
 | precision | integer | Ratio between a sales unit and a base unit. |
 | is displayed | boolean | Defines if the sales unit is displayed on the product details page. |
 | is default | boolean | Defines if the sales unit is selected by default on the product details page. |

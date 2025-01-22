@@ -9,11 +9,11 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
 related:
   - title: Facade
-    link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
+    link: docs/dg/dev/backend-development/zed/business-layer/facade/facade.html
   - title: A facade implementation
-    link: docs/scos/dev/back-end-development/zed/business-layer/facade/a-facade-implementation.html
+    link: docs/dg/dev/backend-development/zed/business-layer/facade/a-facade-implementation.html
   - title: Facade use cases
-    link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade-use-cases.html
+    link: docs/dg/dev/backend-development/zed/business-layer/facade/facade-use-cases.html
 ---
 
 Every method in a facade contains an implicit promise. So a client expects that the behavior does not change in a minor update. Basically, there are two types of possible changes:
@@ -51,5 +51,5 @@ Based on the name, this method "saves a customer". So the contract is as follows
 **Additional information**:
 
 * *The post-conditions are complete*. Any other behavior is not expected here—for example, this method must not send an email to a customer to confirm the change.
-* *This method must not return anything*. You could think of a boolean return value if the email cannot be changed. But then this method would do two things. Therefore, it is a better approach to have another `doesEmailExist($email)` method for the pre-check.
+* *This method must not return anything*. You could think of a boolean return value if the email cannot be changed. But then this method would do two things. Therefore, it's a better approach to have another `doesEmailExist($email)` method for the pre-check.
 * *If the preconditions are not valid, the method must throw an exception*. In this case, if the email address already exists, the `EmailAlreadyExistsException` exception is thrown.

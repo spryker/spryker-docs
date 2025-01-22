@@ -46,7 +46,7 @@ This article provides some recommendations on how you can achieve that.
 
 It is often stated that you should test the smallest possible unit of your application. While this ensures granular validation, it can lead to excessive tests that verify individual units but do not confirm whether they work together. Integration tests help address this but often result in redundant coverage, increasing test execution time.
 
-In Spryker, we prioritize module API tests as they serve as the primary entry point into the module business logic. Module API tests should cover both the **Facade** and **Plugins** (skip for Facade wrapping plugins) to ensure correct functionality.
+In Spryker, we prioritize module API tests as they serve as the primary entry point into the module business logic. Module API tests should cover both the **Facade** and **Plugins** (except for Plugins that only forward the call to a Facade method) to ensure correct functionality.
 
 Each module API method should have at least two test cases: a happy-path and an unhappy-path scenario. Ideally, tests should cover the entire API specification.
 

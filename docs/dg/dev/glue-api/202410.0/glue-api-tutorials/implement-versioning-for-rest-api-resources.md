@@ -237,3 +237,37 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 You can add as many plugins as required by your project needs.
+
+## 3. Create a custom route
+
+You can include the version in the URL by introducing a [custom route](/docs/dg/dev/glue-api/{{site.version}}/routing/create-routes.html).
+
+```php
+<?php
+
+namespace Pyz\Glue\ModuleRestApi\Plugin;
+
+use Pyz\Glue\ModuleRestApi\Controller\ModuleBarController;
+use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface;
+use Spryker\Glue\Kernel\Backend\AbstractPlugin;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\RouteCollection;
+
+class ModuleBarRouteProviderPlugin extends AbstractPlugin implements RouteProviderPluginInterface
+{
+    public function addRoutes(RouteCollection $routeCollection): RouteCollection
+    {
+        $getRoute = (new Route('/v1/module/bar'))
+            ->setDefaults([
+                '_controller' => [ModuleBarController::class, 'getCollectionAction'],
+                '_resourceName' => 'moduleBar',
+            ])
+            ->setMethods(Request::METHOD_GET);
+
+        $routeCollection->add('moduleBarGetCollection', $getRoute);
+
+        return $routeCollection;
+    }
+}
+```

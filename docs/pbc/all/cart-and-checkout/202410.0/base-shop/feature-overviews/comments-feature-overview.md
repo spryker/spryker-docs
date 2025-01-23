@@ -51,27 +51,48 @@ Company users can perform the following actions using the Comments widget on the
 <details>
 <summary>Create and edit comments</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/creating-and-editing-comments.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/comments-feature-overview.md/creating-and-editing-comments.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 </details>
 
 <details>
 <summary>Remove comments</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/removing-comments.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/comments-feature-overview.md/removing-comments.mp4" type="video/mp4">
+  </video>
+</figure>
+
 </details>
 
 <details>
 <summary>Tag comments</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/adding-tags.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/comments-feature-overview.md/adding-tags.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 </details>
 
 <details>
 <summary>Filter comments by tags</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/filtering-tags.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/comments-feature-overview.md/filtering-tags.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
 </details>
 
 ## Related Developer documents

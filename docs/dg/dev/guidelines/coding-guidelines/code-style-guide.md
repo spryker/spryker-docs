@@ -9,11 +9,11 @@ redirect_from:
   - /docs/scos/dev/guidelines/coding-guidelines/code-style-guide.html
 related:
   - title: Code Architecture Guide
-    link: docs/scos/dev/guidelines/coding-guidelines/code-architecture-guide.html
+    link: docs/dg/dev/guidelines/coding-guidelines/code-architecture-guide.html
   - title: Code Quality
-    link: docs/scos/dev/guidelines/coding-guidelines/code-quality.html
+    link: docs/dg/dev/guidelines/coding-guidelines/code-quality.html
   - title: Secure Coding Practices
-    link: docs/scos/dev/guidelines/coding-guidelines/secure-coding-practices.html
+    link: docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices.html
 ---
 
 We at Spryker follow the PSR-2 standards<!-- ](http://www.php-fig.org/psr/psr-2/) check if it works before restoring --> as the coding style guide. To achieve a styled codebase, we integrated the well known [PHP-CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).

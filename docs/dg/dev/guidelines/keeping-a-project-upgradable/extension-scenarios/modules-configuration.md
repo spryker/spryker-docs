@@ -1,15 +1,15 @@
 ---
 title: Modules configuration
-description: Modules configuration extension scenario
+description: Learn all about how manifests support changes in the configuration files of modules within your Spryker Project.
 last_updated: Mar 13, 2023
 template: concept-topic-template
 related:
   - title: Keeping a project upgradable
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
   - title: Plugins registration
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/plugins-registration.html
   - title: Event subscribers registration
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html
 redirect_from:
     - /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
     - /docs/scos/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/modules-configuration.html

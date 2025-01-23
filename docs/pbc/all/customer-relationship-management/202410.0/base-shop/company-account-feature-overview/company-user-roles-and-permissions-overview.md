@@ -88,13 +88,13 @@ Some permissions can be configured for specific roles—for example, for a junio
 These values are referred to as *company role permissions*.
 
 
-### Yves and Zed permissions
+### Storefront and backend permissions
 
-Yves permissions don't need to get any data from the database. They refer to key-value storage or search to check the right for actions. For example, the permission to view a product, page, or permission to place an order, permission to place an order with grand total less than X would be Yves-side permissions.
+Storefront permissions don't need to get any data from the database. They refer to key-value storage or search to check the right for actions. For example, the permission to view a product, page, or permission to place an order, permission to place an order with grand total less than X would be Storefront-side permissions.
 
 
-Permissions that require some data from the database or additional business logic on top to check the rights for actions are referred to as Zed permissions. For example, the permission to add to cart up to X [order value] is a Zed-side permission. In this case, the process of permissions check is as follows:
-1. After the user clicks **Add to cart**, the request comes to Zed, and the prechecks are made following the "add to cart" request.
+Permissions that require some data from the database or additional business logic on top to check the rights for actions are referred to as backend permissions. For example, the permission to add to cart up to X [order value] is a backend-side permission. In this case, the process of permissions check is as follows:
+1. After the user clicks **Add to cart**, the request comes to backend, and the prechecks are made following the "add to cart" request.
 2. Then, the calculations are run. The calculations apply discounts per items, and then per cart (total). The logic behind this is simple: a user might have a discount for a specific item and a discount for an order starting from a specific order value. The order value is calculated taking the discount per items into account, and therefore the discount per cart is applied after all discounts per items have been calculated.
 3. After the calculations have been made, the cart is saved.
 

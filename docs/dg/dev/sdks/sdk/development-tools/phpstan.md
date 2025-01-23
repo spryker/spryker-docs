@@ -76,8 +76,7 @@ For more information, see [PHPStan baseline](https://phpstan.org/user-guide/base
 You can extend `phpstat.neon` and define per-module configuration in the `parameters` section to reuse the matching configuration.
 
 
-### ./[ROOT]/phpstan.neon
-
+**./[ROOT]/phpstan.neon**
 ```php
 parameters:
     excludes_analyse:
@@ -94,7 +93,7 @@ services:
 ...
 ```
 
-### ./[Module]/phpstan.neon
+**./[Module]/phpstan.neon**
 
 ```php
 parameters:

@@ -140,7 +140,7 @@ The following variables are arranged from lower to higher priority:
 
 The following sections describe how to add parameters and secrets for different resources.
 
-**Note:** The next variables should be requested by a ticket on Support Portal
+**Note:** The next variables should be requested by a ticket on [Support Portal](https://support.spryker.com/)
 
 * /{project}/{environment}/secret/scheduler/limited/{variable_name}
 

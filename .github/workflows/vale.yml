@@ -1,0 +1,30 @@
+name: Lint with Vale
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  vale-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Vale
+    - name: Install Vale
+      run: |
+        curl -fsSL https://install.errata.ai/vale.sh | sh
+
+    # Step 3: Run Vale
+    - name: Run Vale linter
+      run: |
+        vale --version
+        vale .
+
+      # Ensure the command fails if Vale detects issues
+      continue-on-error: false

@@ -19,7 +19,7 @@ jobs:
     - name: Install Vale
       run: |
         sudo apt update
-        sudo apt install vale
+        sudo snap install vale
         vale --version
 
     # Step 3: Run Vale linter

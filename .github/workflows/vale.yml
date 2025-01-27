@@ -18,9 +18,8 @@ jobs:
     # Step 2: Install Vale
     - name: Install Vale
       run: |
-        curl -L https://github.com/errata-ai/vale/releases/latest/download/vale_linux_amd64.tar.gz -o vale.tar.gz
-        tar -xzf vale.tar.gz
-        sudo mv vale /usr/local/bin/
+        sudo apt update
+        sudo apt install vale
         vale --version
 
     # Step 3: Run Vale linter

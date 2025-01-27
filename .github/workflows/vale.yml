@@ -25,5 +25,5 @@ jobs:
     # Step 3: Run Vale linter
     - name: Run Vale linter
       run: |
-        vale .
+        vale docs/
       continue-on-error: false

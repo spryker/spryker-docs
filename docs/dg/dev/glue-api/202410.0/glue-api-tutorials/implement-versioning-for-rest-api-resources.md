@@ -162,27 +162,23 @@ PHP version:
             ->setMajor(A);
 ```
 
-Then, use version
+Then, use the version as follows:
 
-In the header: *Content-Type: application/vnd.api+json; version=A*
+* In the header: *Content-Type: application/vnd.api+json; version=A*
 
-In the path: */vA*
+* In the path: */vA*
 
-There's no fall-back to the latest minor, only exact match of version is used.
+There's no fall-back to the latest minor, a version can only be be matched exactly.
 
 {% info_block infoBox %}
 
-If a version is not specified, the latest available version is returned.
-
-In order to call the the latest version of the resource, do not specify version in the request.
+To call the latest vailable version, don't specify any version in a request.
 
 {% endinfo_block %}
 
 ## 3. Add more versions
 
-To implement a new version, you can create a new route plugin in your module—for example, to support version 3.0, you can use the following code in your plugin:
-
-**Code sample:**
+To implement a version, create a route plugin in a module—for example, to support version 3.0, you can create the following route plugin:
 
 ```php
 class CustomerRestorePasswordResourceRouteVersion3Plugin extends AbstractPlugin implements ResourceRoutePluginInterface, ResourceVersionableInterface
@@ -197,9 +193,7 @@ class CustomerRestorePasswordResourceRouteVersion3Plugin extends AbstractPlugin 
 }
 ```
 
-In the new plugin, you can configure routing differently. You can use a different controller class or use a different transfer for the resource attributes. See the following example:
-
-**Code sample:**
+In this plugin, you can configure routing pre your needs: use a different controller class or a different transfer for the resource attributes. Example:
 
 ```php
 ...
@@ -210,9 +204,7 @@ public function getResourceAttributesClassName(): string
 ...
 ```
 
-After implementing the plugin and the required functionality, you register the new plugin in `Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider`:
-
-**Code sample:**
+After implementing the plugin and the required functionality, register the plugin in `Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider`:
 
 ```php
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
@@ -231,7 +223,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 You can add as many plugins as required by your project needs.
 
-## 3. Create a custom route
+## 3. Custom route creation
 
 You can include the version in the URL by introducing a [custom route](/docs/dg/dev/glue-api/{{site.version}}/routing/create-routes.html).
 

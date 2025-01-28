@@ -117,8 +117,6 @@ In `econda-widget.js` we are include the `cross-sell-widget.html` for the widget
 </section>
 ```
 
-Please refer to Econda visual widget [documentation](https://www.econda.de/support/).
-
 ## Adding the Cross Sell Widget to Twig
 
 To include this snippet in your project, you need to include this code in your twig template:

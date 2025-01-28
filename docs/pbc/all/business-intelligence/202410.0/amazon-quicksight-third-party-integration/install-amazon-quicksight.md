@@ -1,7 +1,7 @@
 ---
 title: Install Amazon QuickSight
 description: Learn how to integrate the Amazon QuickSight into your project
-last_updated: Nov 21, 2024
+last_updated: Jan 20, 2025
 template: feature-integration-guide-template
 ---
 
@@ -47,6 +47,11 @@ Preconfigured asset bundles per demo shop:
   - [B2C Marketplace](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-mp-asset-bundle.zip)
   - [B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-asset-bundle.zip)
 
+{% info_block infoBox "SELECT statements in custom SQL queries" %}
+
+In custom SQL queries, avoid using `*` in `SELECT` statements. Instead, explicitly specify the required columns. This reduces the risk of exposing sensitive data when modifying asset bundles or creating custom datasets.
+
+{% endinfo_block %}
 
 2. Define the path to the asset bundle:
 

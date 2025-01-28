@@ -34,35 +34,34 @@ related:
     link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
 
-The rule of thumb for your [tests](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html) should be:
+As a rule of thumb, [tests](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html) should be as follows:
 
-* Tests are treated as if they were the production code.
-* Tests are easy to read and easy to maintain.
+* Easy to read and maintain
+* Treated as if they were the production code
 
-This article provides some recommendations on how you can achieve that.
+
+This article provides recommendations on how you can achieve that.
 <a name="{test-api}"></a>
 
-## Test API
+## API tests
 
-It is often stated that you should test the smallest possible unit of your application. While this ensures granular validation, it can lead to excessive tests that verify individual units but do not confirm whether they work together. Integration tests help address this but often result in redundant coverage, increasing test execution time.
+It's a common idea that that you should test the smallest possible unit of an application. While ensuring granular validation, it can lead to excessive tests that verify individual units but don't confirm if they work together. Integration tests help address this but often result in redundant coverage, increasing test execution time.
 
-In Spryker, we prioritize module API tests as they serve as the primary entry point into the module business logic. Module API tests should cover both the **Facade** and **Plugins** (except for Plugins that only forward the call to a Facade method) to ensure correct functionality.
+In Spryker, we prioritize module API tests because they serve as the primary entry point into the module business logic. To ensure correct functionality, module API tests should cover both the *facade* and *plugins*, except for plugins that only forward the call to a Facade method.
 
-Each module API method should have at least two test cases: a happy-path and an unhappy-path scenario. Ideally, tests should cover the entire API specification.
+Each module API method should have at least two test cases: a happy- and an unhappy-path scenario. Ideally, tests should cover the entire API specification.
 
-If the Arrange section of a module API test becomes overly complex, consider adding targeted unit tests to ensure clarity and maintainability.
+If the arrange section of a module API test becomes too complex, consider adding targeted unit tests to ensure clarity and maintainability.
 
 ## Method naming
 
-A good test starts with a good method name. You can get many opinions about what is good and what not about the method naming. We at Spryker, follow the practice to use speaking names that not only contain the method name under test.
+A good test starts with a good method name, which may be subjective. At Spryker, we try to use descriptive names that describe a test does. Examples:
+* testDoSomethingShouldReturnTrueWhen...()
+* testDoSomethingShouldReturnFalseWhen...()
 
-Examples:
-testDoSomethingShouldReturnTrueWhen...()
-testDoSomethingShouldReturnFalseWhen...()
+## Three-step testing approach
 
-## Three step test approach
-
-On top of the method name, the test method body should follow a three-step testing approach:
+A test's method body should follow a three-step testing approach:
 
 1. // Arrange
 2. // Act
@@ -72,11 +71,11 @@ These inline comments give the reader of your test method a clear understanding 
 
 ## Small test methods
 
-There are several ways to make your test methods small, easy to read and understand. When your `Arrange` part becomes huge, you can use the tester class and helper classes. If you see too many code lines in this section, you can move the `Arrange` code into the generated `Tester` class.
+There're several ways to make your test methods small, easy to read and understand. When the arrange part is too big, you can use the tester class and helper classes. Move the arrange code into the generated tester class.
 
-Additionally, when you want to use the same code in different modules, you can use helpers as described in [Using Another Helper in a Helper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html#using-another-helper-in-a-helper).
+If you need to use the same code in different modules, you can use helpers as described in [Using Another Helper in a Helper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html#using-another-helper-in-a-helper).
 
-Take a look into [\SprykerTest\Shared\Customer\Helper\CustomerDataHelper](https://github.com/spryker/customer/blob/master/tests/SprykerTest/Shared/Customer/_support/Helper/CustomerDataHelper.php) - this one can be re-used in many modules to give you CustomerTransfer.
+For an example of code that can be used in multiple modules, see CustomerTransfer in  [\SprykerTest\Shared\Customer\Helper\CustomerDataHelper](https://github.com/spryker/customer/blob/master/tests/SprykerTest/Shared/Customer/_support/Helper/CustomerDataHelper.php).
 
 ## Use message argument in assert* methods
 

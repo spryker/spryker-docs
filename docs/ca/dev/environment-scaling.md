@@ -33,7 +33,29 @@ There is an autoscaling configuration that has a service-level CPU threshold con
 
 You can test autoscaling by applying load to the aforementioned services of your application. The application will automatically scale, which might visible by by "steps" in your monitoring—response time climbing until a new container is provisioned, which will make it fall again. You should also be able to see new containers being deployed when checking the ECS overview of the service you are load testing.
 
-Because autoscaling is guard-railed by a maximum number of scaling group members, we recommend load and performance testing before going live so that this maximum number can be dialed in more easily. While our monitoring team can adjust these settings on the fly as well, it's normally best to apply a realistic load to the application (containing the data you want to use in production) before going live. This will also help adjust the container CPU and memory budget—which will determine how much CPU and memory each service will "get" compared to other containers. This helps to further optimize the setup.
+Because autoscaling is guard-railed by a maximum number of scaling group members, we recommend load and performance testing before going live so that this maximum number can be dialed in more easily. While our monitoring team can adjust these settings on the fly as well, it's normally best to apply a realistic load to the application (containing the data you want to use in production) before going live. This will also help adjust the container CPU and memory budget—which will determine how much CPU and memory each service will "get" compared to other containers. This helps to further optimize the setup. 
+
+Due to the inherent delay in horizontal scaling on application tasks, significant load spikes should generally be avoided. While testing with high RPMs without "warmup" (gradually ramping up the traffic over several minutes to allow step scaling to deploy now tasks) is generally a good way to test whether the autoscale guardrails are set correctly, the application will need to be prepared on our side for this testing scenario - we will temporary deploy the maximum count of tasks configured for your environment. You can mention this as a comment in your Load Event Announcement. Without it, you will quickly see timeouts during your load test if your load test is significant enough to overwhelm the vertical scaling buffers configured for your environment.
+
+## Example Load Test
+Below we want to describe how a simple load test could look like:
+1. Warm-Up Period (Minute 0-10):
+- Traffic: Start with 10-20% of the expected peak traffic.
+- Purpose: Gradually ramp up the load to avoid sudden spikes and allow the system to stabilize.
+
+2. Scale-Up Period (Minute 10-20):
+- Traffic: Ramp up the traffic to 50% of the expected traffic peak
+- Purpose: The vertical buffer should now be overwhelmened and horizontal autoscaling will provide additional containers to spread out the load.
+
+3. Peak Load Period (Minute 20-30 minutes):
+- Traffic: Increase to 80-100% of the expected peak traffic.
+- Purpose: Test the system's ability to handle maximum load and trigger auto-scaling.
+
+4. Break Period (30-40 minutes)
+- Traffic: Reduce to 10-20% of the peak traffic.
+- Purpose: Allow the system to scale down and observe how it handles reduced load.
+
+Repeat 1-4 two times and check your results. 
 
 ## Additional notes
 

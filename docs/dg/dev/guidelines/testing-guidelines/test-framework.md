@@ -156,7 +156,7 @@ On top of Codeception, we have added a basic infrastructure for tests. We have d
 
 The **Communication** suite can contain unit and functional tests. The controller tests can be used to test like a user that interacts with the browser but without the overhead of the GUI rendering. This suite should be used for all tests that do not need JavaScript.
 
-The **Business** suite can contain unit and functional tests. The facade test is one kind of an API test approach. For more information, see [Test API](/docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html#test-api).
+The **Business** suite can contain unit and functional tests. The facade test is one kind of an API test approach. For more information, see [Test API](/docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html#api-tests).
 
 The **Presentation** suite contains functional tests that can be used to interact with a headless browser. These tests should be used when you have JavaScript on the page under test.
 

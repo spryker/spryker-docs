@@ -50,9 +50,9 @@ Some of the pessimistic locking use cases are:
 
 To avoid performance issues, architects can recommend using optimistic locking with several different implementations according to the faced problems.
 
-### Synchronous communications and 3rd party calls
+### Synchronous communications and third-party calls
 
-Another architectural mistake is relying on a 3rd party response time to achieve promised performance for an application. Having a direct external call to a 3rd party organization during a transaction can make the performance unpredictable and impact the user experience.
+Another architectural mistake is relying on a third-party response time to achieve promised performance for an application. Having a direct external call to a third-party organization during a transaction can make the performance unpredictable and impact the user experience.
 
 We recommend architects fulfill the requirements by providing a different solution like asynchronous communication<!-- or pre/after indirect hooks that are not visible for the end users-->.
 

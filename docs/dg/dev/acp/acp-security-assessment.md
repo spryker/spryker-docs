@@ -9,7 +9,7 @@ redirect_from:
 
 This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker’s app catalog or the app store. It covers the following app types:
 
-- Pure API integrations (with 3rd party services and vendors)
+- Pure API integrations (with third-party services and vendors)
 - Apps extending the Spryker Cloud Commerce Operating System (SCCOS)
 - Hybrid apps
 

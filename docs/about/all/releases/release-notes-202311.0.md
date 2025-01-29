@@ -168,7 +168,7 @@ Key features of this integration include the following:
 
 ## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Improved performance, stability, and scalability <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Adding 3rd party integrations via apps to your existing SCCOS solution has become easier with the App Composition Platform (ACP). Get in touch with us to get ACP enabled faster and take advantage of ACP’s steadily growing number of no and low-code apps.
+Adding third-party integrations via apps to your existing SCCOS solution has become easier with the App Composition Platform (ACP). Get in touch with us to get ACP enabled faster and take advantage of ACP’s steadily growing number of no and low-code apps.
 
 **Business benefit**:<br>
 Simplified and faster enablement of ACP for SCCOS, as well as improved scalability, performance, and data security of the entire platform.

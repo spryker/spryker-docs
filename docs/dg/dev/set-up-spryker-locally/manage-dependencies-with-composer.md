@@ -122,7 +122,7 @@ to use deployment-like download of all packages as zip files. This also dramatic
 
 ## Replace Spryker module dependencies
 
-Each Spryker module might have several dependent modules that provide communication, utilities and added functionality. For example, `spryker/product` needs a dependent `spryker/product-label` module as the product label cannot be attached when there is no product itself. Usually, adjustments are done via our [plugin mechanism](/docs/dg/dev/backend-development/plugins/plugins.html) or via class extensions. However, when introducing a massive functional change, you may need to replace an entire core module with one of your own (or a 3rd party). To do so, there are two steps that you need to follow. Firstly, you will need **to replace the module**, and secondly, **connect the module to the new functionality**.
+Each Spryker module might have several dependent modules that provide communication, utilities and added functionality. For example, `spryker/product` needs a dependent `spryker/product-label` module as the product label cannot be attached when there is no product itself. Usually, adjustments are done via our [plugin mechanism](/docs/dg/dev/backend-development/plugins/plugins.html) or via class extensions. However, when introducing a massive functional change, you may need to replace an entire core module with one of your own (or a third-party). To do so, there are two steps that you need to follow. Firstly, you will need **to replace the module**, and secondly, **connect the module to the new functionality**.
 
 The following process describes adding a replace command into a new module to indicate that it replaces a core module.
 

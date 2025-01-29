@@ -47,7 +47,7 @@ On `CurlResponse::select` and the request itself we spend 45.70% and 45.49%, so 
 
 However, these approaches may not always be applicable. For example, in the cases when:
 
-- A 3rd party system does not support bulk operations.
+- A third-party system does not support bulk operations.
 - You have to make a call right during the order placement.
 
 In the cases like these, you need to develop your solution. Some of the most common recommendations include:  

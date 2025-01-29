@@ -32,7 +32,7 @@ composer require "spryker-feature/payments:{{page.version}}" "spryker/checkout-r
 {% info_block warningBox "Verification" %}
 Make sure that the following modules have been installed:
 
-| MODULE                    | EXPECTED DIRECTORY                               | REQUIRED ONLY FOR ACP PAYMENTS |
+| MODULE                    | EXPECTED DIRECTORY                               |  REQUIRED ONLY FOR ACP PAYMENTS |
 |---------------------------|--------------------------------------------------|--------------------------------|
 | PaymentDataImport         | vendor/spryker/payment-data-import               |                              |
 | PaymentGui                | vendor/spryker/payment-gui                       |                              |
@@ -51,7 +51,7 @@ Make sure that the following modules have been installed:
 
 When you want to use PayPal Express provided by the PayOne App, you need to ensure that your PayOne Account is onboarded to the PayPal Express V2.
 
-You can find more information to this on the PayOne Documentation page https://docs.payone.com/payment-methods/paypal/paypal-v2/paypalv2-credentials. 
+You can find more information to this on the PayOne Documentation page https://docs.payone.com/payment-methods/paypal/paypal-v2/paypalv2-credentials.
 
 Ensure that all Payment Methods can be used with your PayOne account before deploying to production.
 

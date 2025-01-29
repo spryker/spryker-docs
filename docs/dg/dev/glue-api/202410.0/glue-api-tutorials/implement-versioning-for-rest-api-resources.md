@@ -223,9 +223,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 You can add as many plugins as required by your project needs.
 
-## 3. Custom route creation
+## 3. Creating custom routes
 
-You can include the version in the URL by introducing a [custom route](/docs/dg/dev/glue-api/{{site.version}}/routing/create-routes.html).
+You can include the version in the URL by introducing a [custom route](/docs/dg/dev/glue-api/{{site.version}}/routing/create-routes.html). The following example shows a `/v1/module/bar` custom route:
 
 ```php
 <?php

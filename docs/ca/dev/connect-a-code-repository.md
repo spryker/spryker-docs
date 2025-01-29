@@ -43,14 +43,20 @@ We recommend mapping your branches to environments as follows:
 
 
 1. Configure a GitHub code repository.
-2. On the [support portal](https://support.spryker.com/) in the Infrastructure Change Request category, create a Change to existing Parameter Store Variable case and provide the following details:
-  * **URL**
-  * **Branch**
-3. Provide the **Access token** by following [Share a secret](/docs/about/all/support/share-secrets-with-the-spryker-support-team.html#share-a-secret).
-
-We connect the code repository shortly after you provide the details.
+2. Sign in to the **AWS Console** of respective environment.
+3. Navigate to **CodePipeline** and select the pipeline you want to modify.
+    
 
 
+4. Under Source Provider, select **GitHub**.
+5. Click **Connect to GitHub**, and authorize AWS CodePipeline to access your GitHub repository.
+6. Select your **repository** and **branch** you want to connect.
+7. Click on **Done** or **Save** at each stage while navigating back.
+
+
+                  
+
+Your GitHub repository is now successfully connected!
 
 
 ## Connect a Bitbucket code repository

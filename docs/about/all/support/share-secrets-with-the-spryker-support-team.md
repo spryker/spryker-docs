@@ -18,6 +18,9 @@ We work only with credentials shared in the way described below and delete crede
 
 {% endinfo_block %}
 
+## Retrieve a secret
+If you have received a Secret Link from our Team, please check the related case's Link Passphrase field. In it you should find the password for the link. Please let us know immediately if the passphrase does not work.
+
 ## Share a secret
 
 1. Using [One-Time Secret](https://onetimesecret.com/), create a secret message by entering the secret and configuring a passphrase.

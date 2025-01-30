@@ -56,7 +56,7 @@ node jarvis.js <path to your spryker project folder>
 
 ## Jarvis views
 
-Depending on your project’s specifics and your goals, you can use various migration views available in Jarvis and take necessary actions. There are three views:
+Depending on your project's specifics and your goals, you can use various migration views available in Jarvis and take necessary actions. There are three views:
 
 * *Basic* view—for migrating to a newer product release.
 * *No-features* view—for upgrading your project modules to their current major and minor versions.
@@ -81,7 +81,7 @@ To see this view, run `node jarvis.js <path to your spryker project folder>` in 
 It can be that a dependency has been upgraded, but no migration is needed. In this case, we will highlight it:
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-04+at+14.00.13.png)
 
-In this view, under the list of features to upgrade and the dependencies, you can also check the features you don’t use but might be interested in. The recently released features are marked as *New feature*:
+In this view, under the list of features to upgrade and the dependencies, you can also check the features you don't use but might be interested in. The recently released features are marked as *New feature*:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/unused-features.png)
 

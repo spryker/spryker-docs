@@ -22,7 +22,7 @@ related:
 
 This topic describes how to add content to Storefront pages using templates with slots. To start working with templates with slots, go to **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
-Let’s say you have *Sticky Notes* and *Writing Materials* categories, and you want to cross-promote them. You set the following tasks:
+Let's say you have *Sticky Notes* and *Writing Materials* categories, and you want to cross-promote them. You set the following tasks:
 
 * All the products belonging to the *Sticky Notes* category should display a content block with a link to the *Writing Materials* category and a content block with featured products.
 * All the products belonging to the *Writing Materials* category should display a content block with a link to the *Writing Materials* category and a content block with top sellers.

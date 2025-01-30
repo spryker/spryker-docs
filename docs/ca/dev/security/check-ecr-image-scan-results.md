@@ -23,4 +23,4 @@ To check image scan results:
 4. On the *Repositories* page, select the repository that contains the image whose scan you want to check.
 5. In the *Vulnerabilities* column of the *Images* page, select **Details** next to the image whose scan you want to check.
 
-You’ve located ECR image scan results.
+You've located ECR image scan results.

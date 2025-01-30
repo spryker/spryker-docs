@@ -83,4 +83,4 @@ You can find additional details on [Collector module release page](https://githu
 
 With version 4 of the Collector module, we fixed the `collector:search:export` and `collector:search:update` console commands to run for all available locales instead of just for the current one. This behavior is now consistent with the storage collector command (`collector:storage:export`).
 
-If you would like to upgrade to this version and you have multiple locales in your store, then you need to make sure that your collector query (in the Spryker Demoshop we use the `ProductCollectorQuery` class) is also correctly filtered by locale, otherwise it could happen that you’ll have inconsistent data in your Elasticsearch.
+If you would like to upgrade to this version and you have multiple locales in your store, then you need to make sure that your collector query (in the Spryker Demoshop we use the `ProductCollectorQuery` class) is also correctly filtered by locale, otherwise it could happen that you'll have inconsistent data in your Elasticsearch.

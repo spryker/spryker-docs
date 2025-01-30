@@ -8,7 +8,7 @@ redirect_from:
 last_updated: March 11, 2024
 ---
 
-This document will help you implement Spryker’s best practices to enhance the stability and performance of the Jenkins component in your Spryker PaaS environment.
+This document will help you implement Spryker's best practices to enhance the stability and performance of the Jenkins component in your Spryker PaaS environment.
 Before raising issues about Jenkins performance and stability with Spryker, make sure you have fully completed the following checklist. If you have concerns or questions about it, raise them with Spryker Support.
 
 
@@ -36,7 +36,7 @@ The following diagram showcases different memory constraints you should consider
 Keep in mind that each Jenkins executor can run one PHP job, which may potentially spawn multiple PHP threads or child processes. Each process can consume RAM up to `memory_limit` value. 
 The `vendor/bin/console queue:worker:start` CLI command, in particular, is often configured to have multiple workers or threads and is typically the most RAM-intensive job. Hence, we will use it as an example moving forward.
 
-It is crucial to ensure that the combined theoretical maximum memory consumption, estimated using the formula below, is below the total RAM supply of the Jenkins container. By default, the Jenkins container is configured to optimize the use of the total memory supply of its host. You can calculate the Jenkins container’s available RAM by deducting 750 MB from the Jenkins memory allocation of your infrastructure package listed in our Service Description. 
+It is crucial to ensure that the combined theoretical maximum memory consumption, estimated using the formula below, is below the total RAM supply of the Jenkins container. By default, the Jenkins container is configured to optimize the use of the total memory supply of its host. You can calculate the Jenkins container's available RAM by deducting 750 MB from the Jenkins memory allocation of your infrastructure package listed in our Service Description. 
 
 {% info_block infoBox "Info" %}
 

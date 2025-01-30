@@ -38,7 +38,7 @@ We now need to decide further on the URL format. Should this be extension driven
 
 In order to keep this flexible for our customers, we provide a basic pre and post stack for processing the incoming request and the outgoing response.
 
-Let’s start with the request and pre-processing. Inside the Api module’s `ApiBusinessFactory` class, you can define your pre and post stack:
+Let's start with the request and pre-processing. Inside the Api module's `ApiBusinessFactory` class, you can define your pre and post stack:
 
 ```php
 <?php

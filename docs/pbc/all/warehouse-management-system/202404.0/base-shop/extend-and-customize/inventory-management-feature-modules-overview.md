@@ -22,7 +22,7 @@ This section describes how the availability modules works.
 A product's availability is checked with the following operations:
 
 * The product details page doesn't show the **Add to cart** button when a concrete product is out of stock. Instead, a message about the product being out of stock is displayed.
-* `\Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin` checks if all items in cart are available. It’s executed after the "Add to cart" operation. If an item is not available, an error message is sent to Yves.
+* `\Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin` checks if all items in cart are available. It's executed after the "Add to cart" operation. If an item is not available, an error message is sent to Yves.
 * `Spryker\Zed\Availability\Communication\Plugin\ProductsAvailableCheckoutPreConditionPlugin` checks if all items in the cart are available before placing the order. If one or more items are not available, order placing is aborted and an error message is displayed.
 
 ### Reserved flag

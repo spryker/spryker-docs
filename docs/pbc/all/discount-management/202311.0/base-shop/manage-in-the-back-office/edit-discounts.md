@@ -199,7 +199,7 @@ This section contains additional information for defining decision rules.
 |RELATION OPERATOR|IN PLAIN QUERY|VALUE TYPE|DESCRIPTION|
 |-|-|-|-|
 |Contains|CONTAINS|String, Number| Checks if the value is contained in the field. |
-|Doesn’t contain|DOES NOT CONTAIN|String, Number| Checks if the value is not contained in the field. |
+|Doesn't contain|DOES NOT CONTAIN|String, Number| Checks if the value is not contained in the field. |
 |Equal | = | String, Number |Checks if the value is equal to the value of the right operand|
 |Not Equal|!=| String, Number|Checks if the value is not equal to the value of the right operand|
 |In|IS IN|List| The values need to be semicolon-separated|

@@ -43,8 +43,8 @@ This document describes the `merchant_profile.csv` file to configure [merchant p
 | imprint_glossary_key.{ANY_LOCALE_NAME} |   | String |   | Example value: `imprint_glossary_key.en_US` | Imprint information per merchant is specified here. |
 | data_privacy_glossary_key.{ANY_LOCALE_NAME} |   | String |   | Example value: `data_privacy_glossary_key.en_US` | Data privacy statement is defined here. |
 | fax_number |   | String |   |   | Merchant's fax number. |
-| longitude |   | String |   |   | This field identifies merchant’s location. |
-| latitude |   | String |   |   | This field identifies merchant’s location. |
+| longitude |   | String |   |   | This field identifies merchant's location. |
+| latitude |   | String |   |   | This field identifies merchant's location. |
 
 
 

@@ -1161,7 +1161,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Samsung Galaxy Tab S2 SM-T813",
-                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper - create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
+                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2's 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper - create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
                 "attributes": {
                     "internal_memory": "3 GB",
                     "processor_model": "APQ8076",
@@ -2041,7 +2041,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Samsung Galaxy S5 mini",
-                "description": "Galaxy S5 mini continues Samsung design legacy and flagship experience Outfitted with a 4.5-inch HD Super AMOLED display, the Galaxy S5 mini delivers a wide and vivid viewing experience, and its compact size provides users with additional comfort, allowing for easy operation with only one hand. Like the Galaxy S5, the Galaxy S5 mini features a unique perforated pattern on the back cover creating a modern and sleek look, along with a premium, soft touch grip. The Galaxy S5 mini enables users to enjoy the same flagship experience as the Galaxy S5 with innovative features including IP67 certification, Ultra Power Saving Mode, a heart rate monitor, fingerprint scanner, and connectivity with the latest Samsung wearable devices.The Galaxy S5 mini comes equipped with a powerful Quad Core 1.4 GHz processor and 1.5GM RAM for seamless multi-tasking, faster webpage loading, softer UI transition, and quick power up. The high-resolution 8MP camera delivers crisp and clear photos and videos, while the Galaxy S5 mini’s support of LTE Category 4 provides users with ultra-fast downloads of movies and games on-the-go.    ",
+                "description": "Galaxy S5 mini continues Samsung design legacy and flagship experience Outfitted with a 4.5-inch HD Super AMOLED display, the Galaxy S5 mini delivers a wide and vivid viewing experience, and its compact size provides users with additional comfort, allowing for easy operation with only one hand. Like the Galaxy S5, the Galaxy S5 mini features a unique perforated pattern on the back cover creating a modern and sleek look, along with a premium, soft touch grip. The Galaxy S5 mini enables users to enjoy the same flagship experience as the Galaxy S5 with innovative features including IP67 certification, Ultra Power Saving Mode, a heart rate monitor, fingerprint scanner, and connectivity with the latest Samsung wearable devices.The Galaxy S5 mini comes equipped with a powerful Quad Core 1.4 GHz processor and 1.5GM RAM for seamless multi-tasking, faster webpage loading, softer UI transition, and quick power up. The high-resolution 8MP camera delivers crisp and clear photos and videos, while the Galaxy S5 mini's support of LTE Category 4 provides users with ultra-fast downloads of movies and games on-the-go.    ",
                 "attributes": {
                     "display_diagonal": "44.8 in",
                     "themes": "Wallpapers",
@@ -2108,7 +2108,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "reviewCount": 0,
                 "productAbstractSku": "067",
                 "name": "Samsung Galaxy S5 mini",
-                "description": "Galaxy S5 mini continues Samsung design legacy and flagship experience Outfitted with a 4.5-inch HD Super AMOLED display, the Galaxy S5 mini delivers a wide and vivid viewing experience, and its compact size provides users with additional comfort, allowing for easy operation with only one hand. Like the Galaxy S5, the Galaxy S5 mini features a unique perforated pattern on the back cover creating a modern and sleek look, along with a premium, soft touch grip. The Galaxy S5 mini enables users to enjoy the same flagship experience as the Galaxy S5 with innovative features including IP67 certification, Ultra Power Saving Mode, a heart rate monitor, fingerprint scanner, and connectivity with the latest Samsung wearable devices.The Galaxy S5 mini comes equipped with a powerful Quad Core 1.4 GHz processor and 1.5GM RAM for seamless multi-tasking, faster webpage loading, softer UI transition, and quick power up. The high-resolution 8MP camera delivers crisp and clear photos and videos, while the Galaxy S5 mini’s support of LTE Category 4 provides users with ultra-fast downloads of movies and games on-the-go.",
+                "description": "Galaxy S5 mini continues Samsung design legacy and flagship experience Outfitted with a 4.5-inch HD Super AMOLED display, the Galaxy S5 mini delivers a wide and vivid viewing experience, and its compact size provides users with additional comfort, allowing for easy operation with only one hand. Like the Galaxy S5, the Galaxy S5 mini features a unique perforated pattern on the back cover creating a modern and sleek look, along with a premium, soft touch grip. The Galaxy S5 mini enables users to enjoy the same flagship experience as the Galaxy S5 with innovative features including IP67 certification, Ultra Power Saving Mode, a heart rate monitor, fingerprint scanner, and connectivity with the latest Samsung wearable devices.The Galaxy S5 mini comes equipped with a powerful Quad Core 1.4 GHz processor and 1.5GM RAM for seamless multi-tasking, faster webpage loading, softer UI transition, and quick power up. The high-resolution 8MP camera delivers crisp and clear photos and videos, while the Galaxy S5 mini's support of LTE Category 4 provides users with ultra-fast downloads of movies and games on-the-go.",
                 "attributes": {
                     "display_diagonal": "44.8 in",
                     "themes": "Wallpapers",
@@ -2455,9 +2455,9 @@ For the attributes of other included resources, see the following:
 * [Create a cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#create-a-cart)
 * [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#abstract-products-response-attributes)
 
-## Add a configurable bundle to a registered user’s cart
+## Add a configurable bundle to a registered user's cart
 
-To add a configurable bundle to a registered user’s cart, send the request:
+To add a configurable bundle to a registered user's cart, send the request:
 
 ***
 `POST` **/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/configured-bundles**
@@ -2691,7 +2691,7 @@ To change the number of items in a cart, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***cart_uuid*** | Unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
-| ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it's equal to the item’s SKU. |
+| ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it's equal to the item's SKU. |
 
 ### Request
 
@@ -2853,9 +2853,9 @@ Request sample:
 {% include pbc/all/glue-api-guides/{{page.version}}/items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/items-response-attributes.md -->
 
 
-## Change quantity of configurable bundles in a registered user’s cart
+## Change quantity of configurable bundles in a registered user's cart
 
-To change quantity of configurable bundles in a registered user’s cart, send the request:
+To change quantity of configurable bundles in a registered user's cart, send the request:
 
 ***
 `PATCH` /carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/configured-bundles/{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}?include=items
@@ -2864,7 +2864,7 @@ To change quantity of configurable bundles in a registered user’s cart, send t
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | A unique identifier of a cart.[ Create a cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
-| ***{% raw %}{{{% endraw %}bundlegroupkey{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the Configurable Bundle Template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-users-cart). |
+| ***{% raw %}{{{% endraw %}bundlegroupkey{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the Configurable Bundle Template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user's cart](#add-a-configurable-bundle-to-a-registered-users-cart). |
 
 ### Request
 
@@ -3163,7 +3163,7 @@ Request sample:
 ```    
 </details>
 
-For the attribute descriptions, see [Add a configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-users-cart)
+For the attribute descriptions, see [Add a configurable bundle to a registered user's cart](#add-a-configurable-bundle-to-a-registered-users-cart)
 
 ## Remove items from a registered user's cart
 
@@ -3176,7 +3176,7 @@ To remove an item from a registered user's cart, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
-| ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it's equal to the item’s SKU. |
+| ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it's equal to the item's SKU. |
 
 
 ### Request
@@ -3191,9 +3191,9 @@ Request sample: `DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f
 
 If the item is deleted successfully, the endpoint returns the `204 No Content` status code.
 
-## Remove a configurable bundle from a registered user’s cart
+## Remove a configurable bundle from a registered user's cart
 
-To remove a configurable bundle from a registered user’s cart, send the request:
+To remove a configurable bundle from a registered user's cart, send the request:
 
 ***
 `DELETE` ***/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/configured-bundles/{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}***
@@ -3202,7 +3202,7 @@ To remove a configurable bundle from a registered user’s cart, send the reques
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
-| ***{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}*** | The group key of the configurable bundle. The value is generated based on the configurable bundle template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-users-cart). |
+| ***{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}*** | The group key of the configurable bundle. The value is generated based on the configurable bundle template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user's cart](#add-a-configurable-bundle-to-a-registered-users-cart). |
 
 ### Request
 
@@ -3231,7 +3231,7 @@ If the item is deleted successfully, the endpoint returns the “204 No Content�
 | 106 | Cart item cannot be deleted. |
 | 107 | Failed to create a cart. |
 | 110 | Customer already has a cart. |
-| 111 | Can’t switch price mode when there are items in the cart. |
+| 111 | Can't switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |
 | 113 | Cart item cannot be added. |
 | 114 | Cart item cannot be updated. |

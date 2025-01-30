@@ -67,7 +67,7 @@ Request sample: confirm customer registration
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| registrationKey | String | ✓ | Customer’s registration key. You can get it from the link in the customer confirmation registration email sent after customer creation. The example link: `https://mysprykershop.com/register/confirm?token=e13ec2a7c45c6d1bae9b266ed90dfff0`, where `e13ec2a7c45c6d1bae9b266ed90dfff0` is the registration key. |
+| registrationKey | String | ✓ | Customer's registration key. You can get it from the link in the customer confirmation registration email sent after customer creation. The example link: `https://mysprykershop.com/register/confirm?token=e13ec2a7c45c6d1bae9b266ed90dfff0`, where `e13ec2a7c45c6d1bae9b266ed90dfff0` is the registration key. |
 
 ### Response
 

@@ -33,9 +33,9 @@ To use FACT-Finder as a search data provider, do the following:
 1. [Execute search and search suggestion requests](#executing), which implies the following actions:
 
     1. Handling the search request.
-    2. Building a query object from the customer’s request. Usually, the request contains a query string, facets, and pagination. All project-specific parameters must be used.
+    2. Building a query object from the customer's request. Usually, the request contains a query string, facets, and pagination. All project-specific parameters must be used.
     3. Making a request to FACT-Finder with the built query object.
-    4. Mapping the response to the shop’s specific format.
+    4. Mapping the response to the shop's specific format.
 
 2. [Handle search update events](#populate).
 
@@ -47,7 +47,7 @@ To execute the search and search suggestion requests, follow these steps:
 
 #### 1. Build and pass a query
 
-1. Define, for example, the `FfSearchQueryTransfer` object, which must contain at least `searchString` (string, customer’s input) and `requestParams` (string, containing, for example, pagination and filters):
+1. Define, for example, the `FfSearchQueryTransfer` object, which must contain at least `searchString` (string, customer's input) and `requestParams` (string, containing, for example, pagination and filters):
 
 ```xml
 <transfer name="FfSearchQuery">
@@ -322,7 +322,7 @@ Returning this JSON data as an object shows you an empty result page.
 
 {% info_block infoBox %}
 
-To see what is supported by Spryker’s template, refer to `CatalogDependencyProvider::createCatalogSearchResultFormatterPlugins`.
+To see what is supported by Spryker's template, refer to `CatalogDependencyProvider::createCatalogSearchResultFormatterPlugins`.
 
 {% endinfo_block %}
 

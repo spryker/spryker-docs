@@ -34,7 +34,7 @@ To make your project compatible with Symfony 5, update the [Symfony](https://git
 composer require spryker/symfony:"^3.5.0"
 ```
 
-If you can’t install the required version, run the following command to see what else you need to update:
+If you can't install the required version, run the following command to see what else you need to update:
 
 ```bash
 composer why-not spryker/symfony:3.5.0

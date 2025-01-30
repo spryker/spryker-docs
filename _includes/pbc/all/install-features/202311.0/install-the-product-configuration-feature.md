@@ -2244,7 +2244,7 @@ console frontend:date-time-product-configurator:build
 {% info_block warningBox "Verification" %}
 
 Make sure that the frontend part has been built:
-1. Check that the folder `public/Configurator/dist` exists, and it’s not empty.
+1. Check that the folder `public/Configurator/dist` exists, and it's not empty.
 2. Check that you can access the configurator at `https://date-time-configurator-example.mysprykershop.com/`.
 
 {% endinfo_block %}

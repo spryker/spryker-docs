@@ -109,7 +109,7 @@ Normal deploy is a pipeline that includes all the stages of a complete CI/CD flo
 
 ![release change](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+staging+environment/release-change-staging.png)
 
-If the deployment is successful, the */spryker-staging/lastdeployedversion* parameter in the [Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters) is updated with the application version you’ve deployed.
+If the deployment is successful, the */spryker-staging/lastdeployedversion* parameter in the [Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters) is updated with the application version you've deployed.
 
 
 ## Check the deployed application version

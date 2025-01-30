@@ -15,7 +15,7 @@ redirect_from:
 
 Preventing Online Journey Hijacking and Boosting eCommerce KPIs
 
-Namogoo is pioneering the market of customer hijacking prevention. Namogoo’s disruptive technology identifies and blocks unauthorized ads injected into consumer web sessions that divert customers to competitor offerings, hurting conversion rates and damaging brand equity. By eliminating these invasive promotions, companies who use Namogoo preserve a distraction-free online customer experience and consistently increase conversions by 2-5%.
+Namogoo is pioneering the market of customer hijacking prevention. Namogoo's disruptive technology identifies and blocks unauthorized ads injected into consumer web sessions that divert customers to competitor offerings, hurting conversion rates and damaging brand equity. By eliminating these invasive promotions, companies who use Namogoo preserve a distraction-free online customer experience and consistently increase conversions by 2-5%.
 
 YOUR ADVANTAGES:
 

@@ -54,7 +54,7 @@ On either an M1 or an Intel Mac, follow the steps below to install Jekyll. M1-sp
 
 #### 1. Install Homebrew
 
-Homebrew is a package manager for macOS because by default Mac doesn’t have a package manager. You use Homebrew to install Ruby in the next step. Additionally, when you install Homebrew, Xcode command line tools and GCC are also installed automatically.
+Homebrew is a package manager for macOS because by default Mac doesn't have a package manager. You use Homebrew to install Ruby in the next step. Additionally, when you install Homebrew, Xcode command line tools and GCC are also installed automatically.
 
 To install Homebrew, follow these steps:
 ```bash

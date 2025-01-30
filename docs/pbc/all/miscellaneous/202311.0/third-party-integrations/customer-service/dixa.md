@@ -17,9 +17,9 @@ redirect_from:
 
 [ABOUT DIXA](https://dixa.com/)
 
-Meet Conversational Customer Engagement- Helping brands build stronger bonds with their customers and eliminate bad customer service. Dixa is the Conversational Customer Engagement platform of choice for hundreds of the world’s leading brands. Our software unifies customer engagement across email, chat, messaging and phone in one platform for a
+Meet Conversational Customer Engagement- Helping brands build stronger bonds with their customers and eliminate bad customer service. Dixa is the Conversational Customer Engagement platform of choice for hundreds of the world's leading brands. Our software unifies customer engagement across email, chat, messaging and phone in one platform for a
 better customer and agent experience.
-Dixa is a truly international company with 14+ nationalities working together in the heart of Copenhagen and with offices in London, Berlin and Kiev. With customers in 20+ countries, Dixa has experienced incredible growth since it’s global launch in 2018, quickly becoming one of Scandinavia’s fastest growing SaaS companies.
+Dixa is a truly international company with 14+ nationalities working together in the heart of Copenhagen and with offices in London, Berlin and Kiev. With customers in 20+ countries, Dixa has experienced incredible growth since it's global launch in 2018, quickly becoming one of Scandinavia's fastest growing SaaS companies.
 
 YOUR ADVANTAGES:
 

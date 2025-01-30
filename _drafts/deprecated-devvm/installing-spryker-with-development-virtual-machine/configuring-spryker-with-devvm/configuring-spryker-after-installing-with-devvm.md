@@ -61,7 +61,7 @@ export VM_IP_PREFIX="10.10.0."
 
 For non-standard setups you have the option to disable shared folder with Spryker code.
 
-If you decide not to use shared folders feature, it’s your responsibility to get Spryker code into the `/data/shop/development/current` directory of your VM. For example, you can use a file synchronization utility like [Unison](https://www.cis.upenn.edu/~bcpierce/unison/).
+If you decide not to use shared folders feature, it's your responsibility to get Spryker code into the `/data/shop/development/current` directory of your VM. For example, you can use a file synchronization utility like [Unison](https://www.cis.upenn.edu/~bcpierce/unison/).
 
 ```bash
 export VM_SKIP_SF=1

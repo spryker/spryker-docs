@@ -116,7 +116,7 @@ Evaluate if you can combine Redis operations—for example, by using MGET. In ge
 Work with short timeouts and avoid increasing them above industry standards or defaults. Setting a long `max_execution_time` may exacerbate the issue if a process can't finish successfully because of outages or other errors. It can quickly introduce a single point of failure to your application.
 
 ### Evalaute architecture performance guidelines
-Explore [architecture performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html#general-performance-challenges-in-architecture-design) to improve the performance and responsiveness of your application. Ensuring requests are fulfilled as quickly as possible significantly enhances the application’s scalability.
+Explore [architecture performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html#general-performance-challenges-in-architecture-design) to improve the performance and responsiveness of your application. Ensuring requests are fulfilled as quickly as possible significantly enhances the application's scalability.
 
 ### Leverage APIs
 Headless scenarios aren't usually impacted by Session Locking challenges. Evaluate if you can adjust calls that would normally target Yves to target APIs instead.

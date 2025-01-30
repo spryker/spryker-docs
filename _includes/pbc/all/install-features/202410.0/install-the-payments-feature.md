@@ -20,6 +20,15 @@ To start the feature integration, overview and install the necessary features:
 | --- | --- |
 | Spryker Core | {{page.version}} |
 
+### Prerequisites for PayPal Express by PayOne
+
+Your PayOne Account needs to be onboarded to the PayPal Express v2.
+
+For more information, see [Paypal Express V2 in PayOne docs](https://docs.payone.com/payment-methods/paypal/paypal-v2/paypal-express-v2).
+
+Make sure all payment methods can be used with your PayOne account before deploying to production.
+
+
 ## 1) Install the required modules
 
 Install the required modules using Composer:
@@ -32,7 +41,7 @@ composer require "spryker-feature/payments:{{page.version}}" "spryker/checkout-r
 {% info_block warningBox "Verification" %}
 Make sure that the following modules have been installed:
 
-| MODULE                    | EXPECTED DIRECTORY                               | REQUIRED ONLY FOR ACP PAYMENTS |
+| MODULE                    | EXPECTED DIRECTORY                               |  REQUIRED ONLY FOR ACP PAYMENTS |
 |---------------------------|--------------------------------------------------|--------------------------------|
 | PaymentDataImport         | vendor/spryker/payment-data-import               |                              |
 | PaymentGui                | vendor/spryker/payment-gui                       |                              |
@@ -46,6 +55,7 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 ## 2) Set up Express Checkout payments configuration
+
 
 1. Configure the checkout payment step to hide the express checkout payment methods. For example, if you're using the ACP Payone app, you can exclude the `payone-paypal-express` payment method.
 

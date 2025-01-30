@@ -13,28 +13,28 @@ related:
     link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-infrastructure.html
 ---
 
-In the course of the development of your REST APIs, you may need to change the data contracts of API resources. However, you can also have clients that rely on the existing contracts. To preserve backward compatibility for such clients, we recommend implementing a versioning system for REST API resources. In this case, each resource version has its own contract in terms of data, and various clients can request the exact resource versions they are designed for.
+When developing REST APIs, you might need to change the data contracts of API resources. However, you can also have clients that rely on the existing contracts. To preserve backward compatibility for such clients, we recommend implementing a versioning system for REST API resources. With versioning, each resource version has its own data contract, and various clients can request the exact resource versions they are designed for.
 
 {% info_block infoBox %}
 
-Resources that are provided by Spryker out of the box do not have a version. When developing resources, only new resources or attributes are added without removing anything, which ensures backward compatibility for all clients.
-If necessary, you can implement versioning for built-in resources as well as [extend](/docs/dg/dev/glue-api/{{page.version}}/glue-api-tutorials/extend-a-rest-api-resource.html) the corresponding resource module on your project level.
+Default Spryker resources don't have versions. When developing resources, only new resources or attributes are added without removing anything, which ensures backward compatibility for all clients.
+If necessary, you can implement versioning for built-in resources as well as [extend](/docs/dg/dev/glue-api/{{page.version}}/glue-api-tutorials/extend-a-rest-api-resource.html) the corresponding resource module on the project level.
 
 {% endinfo_block %}
 
-To implement versioning for a REST API resource, follow these steps:
+To implement versioning for a REST API resource, take the following steps.
 
 ## 1. Implement `ResourceVersionableInterface`
 
 To add versioning to a resource, the route plugin of the `resource` module needs to implement not only `ResourceRoutePluginInterface`, but also `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceVersionableInterface`. The latter exposes a method called `getVersion` that lets you set the resource version.
 
-{% info_block warningBox %}
+{% info_block infoBox %}
 
-For more information on route plugins, see the [Resource routing](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/glue-infrastructure.html#resource-routing) section in *Glue Infrastructure*.
+For more information on route plugins, see [Resource routing](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 
-Consider the following implementation of a route plugin:
+Here's an example implementation of a route plugin:
 
 <details><summary>CustomerRestorePasswordResourceRoutePlugin.php</summary>
 
@@ -90,9 +90,7 @@ class CustomerRestorePasswordResourceRoutePlugin extends AbstractPlugin implemen
 
 </details>
 
-As you can see, the `CustomerRestorePasswordResourceRoutePlugin` class implements the `ResourceRoutePluginInterface` and `ResourceVersionableInterface` interfaces. The resource supports only one HTTP method: `PATCH`. Also, the `getVersion` function sets version 2.0 for the resource:
-
-**Code sample:**
+The `CustomerRestorePasswordResourceRoutePlugin` class implements `ResourceRoutePluginInterface` and `ResourceVersionableInterface` interfaces. The resource supports only `PATCH` HTTP method. Also, the `getVersion` function sets version 2.0 for the resource:
 
 ```php
 class CustomerRestorePasswordResourceRoutePlugin extends AbstractPlugin implements ResourceRoutePluginInterface, ResourceVersionableInterface
@@ -113,11 +111,9 @@ Set both the major and minor versions of a resource; otherwise, requests to this
 
 {% endinfo_block %}
 
-## 2. Query specific resource version
+## 2. Query a specific resource version
 
-After implementing a specific resource version, you can query the resource specifying the version you need. Send a `PATCH` request to the `/customer-restore-password` endpoint that now has version 2.0. The payload is as follows:
-
-**Code sample:**
+After implementing a specific resource version, you can query the resource by specifying the needed version. Send a request to the following endpoint of version 2.0.
 
 **PATCH /customer-restore-password**
 ```json
@@ -130,38 +126,35 @@ After implementing a specific resource version, you can query the resource speci
 }
 ```
 
-If `\Spryker\Glue\GlueApplication\GlueApplicationConfig::getPathVersionResolving` is set to *false*, specify the exact version you need, in the HTTP header of your request:
+If `\Spryker\Glue\GlueApplication\GlueApplicationConfig::getPathVersionResolving` is set to `false`, specify the exact version in the HTTP header of the request:
 
-```php
+```json
 Content-Type: application/vnd.api+json; version=2.0
 ```
 
-If `getPathVersionResolving` is set to *true*, then you have to set some value in `\Pyz\Glue\GlueApplication\GlueApplicationConfig::getPathVersionPrefix`, *"v"* in our examples, and then your resource path should look like this:
-**PATCH /v2.0/customer-restore-password**
+If `getPathVersionResolving` is set to `true`, set a value for `\Pyz\Glue\GlueApplication\GlueApplicationConfig::getPathVersionPrefix`. In the example, the value is `v`. The resource path should look like this: `PATCH /v2.0/customer-restore-password`.
 
-
-In the preceding example, version 2.0 is specified. If you repeat the request with such headers, you receive a valid response with resource version 2.0. However, if you specify a non-existent version, for example, 3.0, the request fail.
-
-```php
+Because the resource is configured to version 2.0 only requests with this version specified are processed correctly. For example, the following request will fail with the `404 Not Found` error.
+```json
 Content-Type: application/vnd.api+json; version=3.0
 ```
 
-In this case, the endpoint responds with the `404 Not Found` error.
-
 Here's a version matching rule-set:
 
-PHP version:
+* PHP version:
 ```php
 (new RestVersionTransfer())
             ->setMajor(A)
             ->setMinor(B);
 ```
 
-Then use version
+Then use the version as follows:
 
-In the header: *Content-Type: application/vnd.api+json; version=A.B*
+* In the header: *Content-Type: application/vnd.api+json; version=A.B*
 
-In the path: */vA.B*
+* In the path: */vA.B*
+
+
 
 PHP version:
 ```php
@@ -169,27 +162,23 @@ PHP version:
             ->setMajor(A);
 ```
 
-Then, use version
+Then, use the version as follows:
 
-In the header: *Content-Type: application/vnd.api+json; version=A*
+* In the header: *Content-Type: application/vnd.api+json; version=A*
 
-In the path: */vA*
+* In the path: */vA*
 
-There's no fall-back to the latest minor, only exact match of version is used.
+There's no fall-back to the latest minor, a version can only be be matched exactly.
 
 {% info_block infoBox %}
 
-If a version is not specified, the latest available version is returned.
-
-In order to call the the latest version of the resource, do not specify version in the request.
+To call the latest vailable version, don't specify any version in a request.
 
 {% endinfo_block %}
 
 ## 3. Add more versions
 
-To implement a new version, you can create a new route plugin in your module—for example, to support version 3.0, you can use the following code in your plugin:
-
-**Code sample:**
+To implement a version, create a route plugin in a module—for example, to support version 3.0, you can create the following route plugin:
 
 ```php
 class CustomerRestorePasswordResourceRouteVersion3Plugin extends AbstractPlugin implements ResourceRoutePluginInterface, ResourceVersionableInterface
@@ -204,9 +193,7 @@ class CustomerRestorePasswordResourceRouteVersion3Plugin extends AbstractPlugin 
 }
 ```
 
-In the new plugin, you can configure routing differently. You can use a different controller class or use a different transfer for the resource attributes. See the following example:
-
-**Code sample:**
+In this plugin, you can configure routing pre your needs: use a different controller class or a different transfer for the resource attributes. Example:
 
 ```php
 ...
@@ -217,9 +204,7 @@ public function getResourceAttributesClassName(): string
 ...
 ```
 
-After implementing the plugin and the required functionality, you register the new plugin in `Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider`:
-
-**Code sample:**
+After implementing the plugin and the required functionality, register the plugin in `Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider`:
 
 ```php
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
@@ -237,3 +222,37 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 You can add as many plugins as required by your project needs.
+
+## 3. Creating custom routes
+
+You can include the version in the URL by introducing a [custom route](/docs/dg/dev/glue-api/{{site.version}}/routing/create-routes.html). The following example shows a `/v1/module/bar` custom route:
+
+```php
+<?php
+
+namespace Pyz\Glue\ModuleRestApi\Plugin;
+
+use Pyz\Glue\ModuleRestApi\Controller\ModuleBarController;
+use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface;
+use Spryker\Glue\Kernel\Backend\AbstractPlugin;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\RouteCollection;
+
+class ModuleBarRouteProviderPlugin extends AbstractPlugin implements RouteProviderPluginInterface
+{
+    public function addRoutes(RouteCollection $routeCollection): RouteCollection
+    {
+        $getRoute = (new Route('/v1/module/bar'))
+            ->setDefaults([
+                '_controller' => [ModuleBarController::class, 'getCollectionAction'],
+                '_resourceName' => 'moduleBar',
+            ])
+            ->setMethods(Request::METHOD_GET);
+
+        $routeCollection->add('moduleBarGetCollection', $getRoute);
+
+        return $routeCollection;
+    }
+}
+```

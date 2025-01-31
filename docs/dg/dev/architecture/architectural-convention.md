@@ -2125,7 +2125,7 @@ No general conventions.
 
 <details><summary>For *module development* and *core module development*</summary>
 
-- `Plugins` can't contain business logic but delegate to the underlying [facade](#facade-design-pattern).
+- `Plugins` can't contain business logic but delegate to the underlying models, preferably via [Factory](#factory).
 - `Plugin` method names need to contain `pre` and `post` instead of `before`, `after`.
 - `Plugin` class names need to contain `pre`, `post`, `create`, `update`, and `delete`, instead of `creator`, `updater`, and `deleter`.
 - `Plugin` classes need to implement a [Plugin Interface](#plugin-interface), which is provided by an `extension module`.

@@ -19,7 +19,7 @@ We work only with credentials shared in the way described below and delete crede
 {% endinfo_block %}
 
 ## Retrieve a secret
-If you have received a Secret Link from our Team, please check the related case's Link Passphrase field. In it you should find the password for the link. Please let us know immediately if the passphrase does not work.
+If we share a onetimesecret link with you, use the password provided in the Link Passphrase field of the support case. If the password doesn't work, let us know in the case.
 
 ## Share a secret
 

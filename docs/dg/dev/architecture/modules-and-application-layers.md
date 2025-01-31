@@ -18,14 +18,12 @@ related:
     link: docs/dg/dev/architecture/code-buckets.html
 ---
 
-In Spryker, we use modular programming and packaging principles for organizing functionalities into independent software packages—modules.
-To establish a common infrastructure across all modules and to assist configurability, flexibility, agility, and modularity, the modules are divided into application layers according to the Spryker OS application design concept. Each application layer is further divided into layers following the layered architecture pattern.
-
-This document describes the Spryker layers and their roles in the application layers.
+At Spryker, we use modular programming and packaging principles for organizing functionalities into independent software packages – modules.
+To establish a common infrastructure across all modules and to assist configurability, flexibility, agility, and modularity, the modules are divided into application layers according to the Spryker's application design concept. Each application layer is further divided into layers following the layered architecture pattern.
 
 ## Layers
 
-Layers are not limited to any specific application layer. In practice, though, there is a specific set of layers utilized by each application layer.
+Layers are not limited to any specific application layer. However, in practice, there is a specific set of layers used by each application layer.
 
 The Spryker layer structure looks as follows:
 
@@ -53,23 +51,19 @@ On the _Presentation_ layer, the view-related content is implemented. To get the
 
 ## Modularity
 
-Spryker is renowned for its modular architecture, which is one of its core strengths. 
-Modularity in Spryker refers to the platform's design philosophy of breaking down the system into independent, reusable components or modules. 
-Each module encapsulates specific functionality, such as cart management, product search, or checkout processes, allowing developers to build, customize, and scale e-commerce solutions with greater flexibility and efficiency.
-Properly organized modules ensure scalability, maintainability, and flexibility.
+Modularity in Spryker refers to the platform's design philosophy of breaking down the system into independent, reusable components or modules. Each module encapsulates specific functionality, such as cart management, product search, or checkout processes, letting developers build, customize, and scale e-commerce solutions with greater flexibility and efficiency.
 
-Below are some hands-on recommendations on splitting into modules in Spryker:
+The following are recommendations on splitting functionality into modules:
 
-1. Spryker follows a module-centric architecture, where each module is a self-contained unit. A module typically represents a specific feature or functionality, such as Cart, Product, or Checkout.
-2. Identify Core Business Capabilities. Start by identifying the core business capabilities of your e-commerce platform. Each capability can be a candidate for a module. For example: Product, Cart, Checkout. Break down your application into these high-level domains and assign each to a module.
-3. Follow the Single Responsibility Principle (SRP). Each module should have a single responsibility and focus on one specific functionality. Avoid creating monolithic modules that handle multiple unrelated tasks. This ensures that modules remain lightweight, reusable, and easy to maintain.
-4. Group Related Features Together. If certain features are closely related, group them into a single module. However, ensure that the module does not become too large or violate the SRP.
-5. Cross-cutting concerns like logging, authentication, or caching should be separated into their own modules. This approach ensures that these concerns are reusable across multiple modules.
-6. Clearly define the boundaries of each module to avoid tight coupling. Modules should communicate with each other through well-defined interfaces (e.g., Facade, Client, Service, Plugin).
-7. Organize Modules by Layers: Persistence, Business, Communication and Presentation.
-8. Avoid Over-Modularization. While modularity is beneficial, over-modularization can lead to unnecessary complexity. Avoid creating too many small modules that perform trivial tasks. Instead, focus on creating modules that encapsulate meaningful and reusable functionality.
-9. Each module should be independently testable. Write functional or API tests for each module to ensure it works as expected. Use Spryker's testing tools and frameworks to streamline this process.
-10. Reuse and enhance existing modules. Before creating a new module, check if Spryker or its ecosystem already provides a module that meets your needs. Reusing existing modules saves time and ensures compatibility with the platform.
+1. Identify core business capabilities. Each capability can be a candidate for a module. For example: Product, Cart, Checkout. Break down your application into these high-level domains and assign each to a module.
+2. Follow the single-responsibility principle (SRP). Each module should have a single responsibility and focus on one specific functionality. Avoid creating monolithic modules that handle multiple unrelated tasks. This ensures that modules remain lightweight, reusable, and easy to maintain.
+3. Group related features together. If some features are closely related, group them into a single module. However, ensure that the module doesn't become too large or violate the SRP.
+4. Separate cross-cutting concerns, such as logging, authentication, or caching, into their own modules. This approach ensures that these concerns are reusable across multiple modules.
+5. Clearly define the boundaries of each module to avoid tight coupling. Modules should communicate with each other through well-defined interfaces, such as Facade, Client, Service, or Plugin.
+6. Organize modules by layers: Persistence, Business, Communication and Presentation.
+7. Avoid over-modularization. While modularity is beneficial, over-modularization can lead to unnecessary complexity. Avoid creating too many small modules that perform trivial tasks. Instead, focus on creating modules that encapsulate meaningful and reusable functionality.
+8. Each module should be independently testable. Write functional or API tests for each module to ensure it works as expected. Use Spryker's testing tools and frameworks to streamline this process.
+9. Reuse and enhance existing modules. Before creating a new module, check if Spryker or its ecosystem already provides a module that meets your needs. Reusing existing modules saves time and ensures compatibility with the platform.
 
 ## Next steps
 

@@ -1,6 +1,14 @@
-extends: existence
-message: "Don't use exclamation points in text."
-link: 'https://developers.google.com/style/exclamation-points'
-nonword: true
+extends: conditional
+message: "Avoid using exclamation points per the Google Style Guide."
 level: error
-pattern: '(?<!<!--[^>]*?)!(?![^<]*?-->)'
+scope: sentence
+
+# Define when the rule should be active (outside comments)
+conditions:
+  - pattern: "<!--.*?-->"
+    scope: raw
+    action: stop
+
+  - pattern: "!"
+    scope: raw
+    action: error

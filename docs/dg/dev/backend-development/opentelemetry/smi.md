@@ -24,5 +24,6 @@ These metrics can be split by the following dimensions/labels*:
 The default metrics resolution is 60 seconds. All metrics can be split by telemetry-data-account.
 
 ## Terminology
+
 In this document, Labels/Dimensions/Attributes in relation to metrics are used interchangeably. The terminology depends on the customer's solution choice.
-For example, in Grafana, we would use the term labels, while in Dynatrace, we use dimensions, etc.
+For example in Grafana, we would use the term labels, while in Dynatrace, we use dimensions, etc.

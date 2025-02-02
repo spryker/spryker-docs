@@ -110,7 +110,13 @@ A common Spryker Project is like a typical web project. There is the project lev
 
 To optimize the performance of the system, you can enable the Opcache. This is not recommend for development, because you may get strange results. To activate the Opcache, just put the following lines at the end of the `php.ini` and `restart.php`.
 
-This configuration is not optimized for production environments!
+
+{% info_block warningBox %}
+
+This configuration is not optimized for production environments.
+
+{% endinfo_block %}
+
 
 ```bash
 sudo nano /etc/php7.2/fpm/php.ini

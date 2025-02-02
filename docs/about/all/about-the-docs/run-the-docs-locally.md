@@ -39,7 +39,7 @@ The installation process is different depending whether you are using a Mac with
 
 * Intel-based Macs show an item labeled _Processor_ followed by the name and/or model number of the Intel processor.
 
-{% info_block warningBox "MacOS on M1 processor – Open Terminal using Rosetta" %}
+{% info_block warningBox "MacOS on M1 processor: open Terminal using Rosetta" %}
 
 On a MacBook with the M1 processor, make sure your Terminal is opened with Rosetta 2, by following the instructions here. Rosetta is a translation layer that enables non-native Intel x86 apps, including Homebrew, to run on Apple Silicon Macs.
 To open your terminal using Rosetta, follow these steps:

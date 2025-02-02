@@ -13,7 +13,7 @@ redirect_from:
 
 This document describes how to check ECR image scan results.
 
-After a new code is pushed to a repository, ECR scans images for known vulnerabilities. You can check scan results and resolve detected issues to protect your applications.  See [Image scanning](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) to learn more about ECR image scans.
+After a new code is pushed to a repository, ECR scans images for known vulnerabilities. You can check scan results and resolve detected issues to protect your applications. See [Image scanning](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) to learn more about ECR image scans.
 
 To check image scan results:
 

@@ -1,14 +1,9 @@
-extends: conditional
+extends: existence
 message: "Avoid using exclamation points per the Google Style Guide."
 level: error
 scope: sentence
-
-# Define when the rule should be active (outside comments)
-conditions:
-  - pattern: "<!--.*?-->"
-    scope: raw
-    action: stop
-
-  - pattern: "!"
-    scope: raw
-    action: error
+nonword: true
+tokens:
+  - '!'
+exceptions:
+  - '<!--.*?-->'

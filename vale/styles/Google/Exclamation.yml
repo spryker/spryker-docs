@@ -7,4 +7,4 @@ tokens:
   - '!'
 exceptions:
   - '<!--.*?-->'  # Ignore exclamation marks inside comments
-  - '!\\['        # Ignore exclamation marks before square brackets (e.g., images/links in Markdown)
+  - '!['          # Ignore exclamation marks before square brackets (Markdown images/links)

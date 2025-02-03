@@ -5,6 +5,7 @@ scope: sentence
 nonword: true
 tokens:
   - '!'
+ignorecase: false
 exceptions:
   - '<!--.*?-->'  # Ignore exclamation marks inside comments
-  - '!['          # Ignore exclamation marks before square brackets (Markdown images/links)
+  - '!\\['        # Ignore exclamation marks before square brackets (Markdown images/links)

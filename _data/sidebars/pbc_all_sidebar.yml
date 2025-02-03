@@ -23,6 +23,10 @@ entries:
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-the-back-office-number-formatting.html
                   - title: Upgrade the Chart module
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-chart-module.html
+                  - title: Install Backoffice accessibility improvements
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/back-office-accessibility-integration-guide.html
+                    include_versions:
+                      - "202404.0"
 
               - title: Configure the timezone in the Back Office
                 url: /docs/pbc/all/back-office/base-shop/configure-the-timezone-in-the-back-office.html

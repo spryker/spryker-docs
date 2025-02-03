@@ -1,8 +1,0 @@
-extends: substitution
-message: "If you're refering to the Back Office-related actions, then use '%s' instead of '%s'. If you meam dev-related things, like a layer or module name, then use 'Zed'."
-level: warning
-ignorecase: false
-action:
-  name: replace
-swap:
-  - '(?:Z|z)ed': the Back Office

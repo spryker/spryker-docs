@@ -24,9 +24,9 @@ entries:
                   - title: Upgrade the Chart module
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-chart-module.html
                   - title: Install Backoffice accessibility improvements
-                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/back-office-accessibility-integration-guide.html
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-accessibility-improvements.html
                     include_versions:
-                      - "202404.0"
+                      - "202410.0"
 
               - title: Configure the timezone in the Back Office
                 url: /docs/pbc/all/back-office/base-shop/configure-the-timezone-in-the-back-office.html
@@ -1516,7 +1516,7 @@ entries:
                       - title: Marketplace Merchant Portal Core
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html
                       - title: Marketplace Merchant Portal Core + CMS feature
-                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-cms-feature.html                        
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-cms-feature.html
                       - title: Marketplace Merchant Portal Core + Dynamic Multistore
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-dynamic-multistore.html
                       - title: Merchant Category

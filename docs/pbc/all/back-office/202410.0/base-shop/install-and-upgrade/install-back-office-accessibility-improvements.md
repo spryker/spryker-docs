@@ -9,7 +9,7 @@ Back Office accessibility improvements include the following changes:
 
 - Green and grey colors have a bigger contrast ratio
 - Disabled elements are skipped in pagination
-- Improved navigation accessibility by fixing tab index order
+- Improved tab index order
 - HTML tag has a `lang` attribute, which signals screen readers to switch to a defined language
 
 To install Back Office accessibility improvements, take the following steps:

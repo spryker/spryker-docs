@@ -7,13 +7,12 @@ template: feature-integration-guide-template
 
 Back Office accessibility improvements include the following changes:
 
-- Adjusted current green and grey colors to the new one with bigger contrast ratio.
-- Fixed pagination accessibility, so now disabled elements are skipped.
-- Improved navigation accessibility.
-- Added `lang` attribute to the HTML tag.
+- Green and grey colors have a bigger contrast ratio
+- Disabled elements are skipped in pagination
+- Improved navigation accessibility
+- HTML tag has a `lang` attribute, which signals screen readers to switch to a defined language
 
-Follow the steps below to install the BO accessibility improvements.
-
+To install Back Office accessibility improvements, take the following steps:
 
 1. Install the required modules using Composer:
 
@@ -28,9 +27,7 @@ console frontend:zed:install-dependencies
 console frontend:zed:build
 ```
 
-3. Add translations:
-
-Generate translation cache for Zed:
+3. Generate translation cache for Zed:
 
 ```bash
 console translator:generate-cache

@@ -288,7 +288,7 @@ We moved the possible facet type option constants from `Spryker\Client\Search\Pl
 * `FacetConfigBuilder::TYPE_CATEGORY` -> `SearchConstants::FACET_TYPE_CATEGORY`
 * `FacetConfigBuilder::TYPE_BOOL`-> not supported
 
-We have added a type field to the default “page” index type defined by `Search/src/Spryker/Shared/Search/IndexMap/search.json`. With this field it's possible to differentiate multiple item types (e.g. products, cms pages, categories, etc.). Additionally, we also fixed the indexing strategy of store and `locale` field, they are set to “not_analyzed”. These changes require a repeated indexation of your existing data. In a non-production environment this means that you need to delete your index and then install the new one by running `vendor/bin/console setup:search`.
+We have added a type field to the default "page" index type defined by `Search/src/Spryker/Shared/Search/IndexMap/search.json`. With this field it's possible to differentiate multiple item types (e.g. products, cms pages, categories, etc.). Additionally, we also fixed the indexing strategy of store and `locale` field, they are set to “not_analyzed”. These changes require a repeated indexation of your existing data. In a non-production environment this means that you need to delete your index and then install the new one by running `vendor/bin/console setup:search`.
 
 {% info_block errorBox "Important" %}
 

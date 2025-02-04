@@ -395,7 +395,7 @@ if (getenv('SPRYKER_CURRENT_REGION')) {
 
 You also can check this configuration in the file `config/Zed/cronjobs/jenkins.php` in the [Spryker Suite repository](https://github.com/spryker-shop/suite/blob/master/config/Zed/cronjobs/jenkins.php).
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Run the following commands:
 
@@ -764,7 +764,7 @@ DE,"[{""application"": null, ""timezone"": ""Europe/Berlin""}]"
 | application_context_collection | ✓ | string | `[{""application"": null, ""timezone"": ""Europe/Berlin""}]` | Defines a store context collection in JSON. |
 
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that:
 

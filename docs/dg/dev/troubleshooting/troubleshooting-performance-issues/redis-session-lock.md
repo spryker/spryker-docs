@@ -69,7 +69,7 @@ The following sections describe how requests are processed, how the Redis Sessio
 
 When incoming requests come through the frontend application, PHP-FPM workers in a pool are available to handle them. These workers are allowed to try to fulfill the request within some constraints:
 `max_execution_time`
-  The process gets killed if it takes too long to finish. This make sure the application isn't “blocked” for too long in case a process can't complete successfully.
+  The process gets killed if it takes too long to finish. This make sure the application isn't "blocked" for too long in case a process can't complete successfully.
 `memory_limit`
   The process gets killed if it consumes more memory than the memory limit configured for each PHP process.
 `max_children`
@@ -142,7 +142,7 @@ $config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = CONDITION ?
 ```
 
 In this example, `CONDITION` can be any operation with a boolean result, but it's impostant to keep it quickly executed, not to make a bottleneck from configuration declartion.
-Here's one of the possible examples of a condition: 
+Here's one of the possible examples of a condition:
 - `str_contains($_SERVER['HTTP_USER_AGENT'] ?? '', 'Googlebot')` or
 - `str_contains($_SERVER['REQUEST_URI'] ?? '', '/some-url')` or
 - any other pattern known as not requiring exclusive session data access and modification.

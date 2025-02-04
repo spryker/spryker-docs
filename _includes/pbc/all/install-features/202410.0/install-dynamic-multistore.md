@@ -415,7 +415,7 @@ if (getenv('SPRYKER_CURRENT_REGION')) {
 
 For an example of an updated file, see [jenkins.php in the Spryker Suite repository](https://github.com/spryker-shop/suite/blob/master/config/Zed/cronjobs/jenkins.php).
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 1. Remove Jenkins jobs per store:
 
@@ -817,7 +817,7 @@ DE,"[{""application"": null, ""timezone"": ""Europe/Berlin""}]"
 | application_context_collection | ✓ | string | `[{""application"": null, ""timezone"": ""Europe/Berlin""}]` | Defines a store context collection in JSON. |
 
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following applies:
 

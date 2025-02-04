@@ -133,7 +133,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 If everything is set up correctly, a new console command will be available.
 ```
@@ -250,7 +250,7 @@ If the second parameter `array $apiApplications` for `$contextExpanderCollection
 
 {% endinfo_block %}
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 In order to make sure that `StorefrontApiApplicationProviderPlugin` and `BackendApiApplicationProviderPlugin` are setup correctly,
 attempt to generate the documentation for `storerfront` or `backend`. Do so by passing the optional `--application` parameter:

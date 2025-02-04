@@ -80,7 +80,7 @@ In some cases, because of rounding, the amounts of Marketplace order totals can 
 
 ## Merchant orders in the Merchant Portal
 
-{% info_block warningBox “Warning” %}
+{% info_block warningBox "Warning" %}
 
 Do not build the Merchant functionality around Orders, but rather around Merchant Orders.
 Make sure that Merchants do not modify the order directly, but instead use [MerchantOms](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/merchant-oms.html) for this purpose.

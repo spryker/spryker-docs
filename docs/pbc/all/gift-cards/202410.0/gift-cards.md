@@ -41,7 +41,7 @@ Once the gift card code has been generated, it becomes a voucher that can be use
 The following diagram shows the gift card product-voucher transition workflow:
 ![Gift card product-voucher transition workflow schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/GC+product-voucher+transition.png)
 
-When buying a gift card, the shipment method selection step is skipped on Yves. In the background, there is a “noshipment” constant in the app configuration, which can be selected to configure shipment for a specific type of product. In this case, this product is a gift card.
+When buying a gift card, the shipment method selection step is skipped on Yves. In the background, there is a "noshipment" constant in the app configuration, which can be selected to configure shipment for a specific type of product. In this case, this product is a gift card.
 
 
 When a customer buys a gift card, you can use the default OMS states for the GiftCardSubprocess to be displayed on the Storefront, or set custom state names so they would make more sense for the Storefront users. For details about how to set the custom state names on the Storefront for refunded orders, see [HowTo: Display custom names for order item states on the Storefront](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/display-custom-names-for-order-item-states-on-the-storefront.html).

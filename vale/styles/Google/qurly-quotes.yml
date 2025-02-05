@@ -4,4 +4,4 @@ link: 'https://developers.google.com/style/quotation-marks#straight-and-curly-qu
 level: error
 nonword: true
 tokens:
-  - “|”|‘|’
+  - "|"|‘|’

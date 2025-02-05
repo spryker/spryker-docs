@@ -1078,7 +1078,7 @@ To retrieve a specific wishlist, send the request:
                 "reviewCount": 0,
                 "productAbstractSku": "011",
                 "name": "Canon IXUS 180",
-                "description": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control and choose the perfect camera settings for you. Play with your creativity in stills or movies using a range of Creative Filters such as Fish Eye, Miniature and Toy Camera.  Enjoy exceptional quality, detailed images ideal for creating stunning poster sized prints thanks to 20.0 Megapixels and DIGIC 4+ processing. An intelligent optical Image Stabilizer ensures sharp stills and steady movies in any situation, while the 6.8 cm (2.7”) LCD screen allows easy viewing and sharing.",
+                "description": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control and choose the perfect camera settings for you. Play with your creativity in stills or movies using a range of Creative Filters such as Fish Eye, Miniature and Toy Camera.  Enjoy exceptional quality, detailed images ideal for creating stunning poster sized prints thanks to 20.0 Megapixels and DIGIC 4+ processing. An intelligent optical Image Stabilizer ensures sharp stills and steady movies in any situation, while the 6.8 cm (2.7") LCD screen allows easy viewing and sharing.",
                 "attributes": {
                     "megapixel": "20 MP",
                     "sensor_type": "CCD",
@@ -1440,7 +1440,7 @@ To retrieve a specific wishlist, send the request:
                 "reviewCount": 0,
                 "productAbstractSku": "011",
                 "name": "Canon IXUS 180",
-                "description": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control and choose the perfect camera settings for you. Play with your creativity in stills or movies using a range of Creative Filters such as Fish Eye, Miniature and Toy Camera.  Enjoy exceptional quality, detailed images ideal for creating stunning poster sized prints thanks to 20.0 Megapixels and DIGIC 4+ processing. An intelligent optical Image Stabilizer ensures sharp stills and steady movies in any situation, while the 6.8 cm (2.7”) LCD screen allows easy viewing and sharing.",
+                "description": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control and choose the perfect camera settings for you. Play with your creativity in stills or movies using a range of Creative Filters such as Fish Eye, Miniature and Toy Camera.  Enjoy exceptional quality, detailed images ideal for creating stunning poster sized prints thanks to 20.0 Megapixels and DIGIC 4+ processing. An intelligent optical Image Stabilizer ensures sharp stills and steady movies in any situation, while the 6.8 cm (2.7") LCD screen allows easy viewing and sharing.",
                 "attributes": {
                     "megapixel": "20 MP",
                     "sensor_type": "CCD",
@@ -1824,7 +1824,7 @@ To retrieve a specific wishlist, send the request:
                 "reviewCount": 0,
                 "productAbstractSku": "011",
                 "name": "Canon IXUS 180",
-                "description": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control and choose the perfect camera settings for you. Play with your creativity in stills or movies using a range of Creative Filters such as Fish Eye, Miniature and Toy Camera.  Enjoy exceptional quality, detailed images ideal for creating stunning poster sized prints thanks to 20.0 Megapixels and DIGIC 4+ processing. An intelligent optical Image Stabilizer ensures sharp stills and steady movies in any situation, while the 6.8 cm (2.7”) LCD screen allows easy viewing and sharing.",
+                "description": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control and choose the perfect camera settings for you. Play with your creativity in stills or movies using a range of Creative Filters such as Fish Eye, Miniature and Toy Camera.  Enjoy exceptional quality, detailed images ideal for creating stunning poster sized prints thanks to 20.0 Megapixels and DIGIC 4+ processing. An intelligent optical Image Stabilizer ensures sharp stills and steady movies in any situation, while the 6.8 cm (2.7") LCD screen allows easy viewing and sharing.",
                 "attributes": {
                     "megapixel": "20 MP",
                     "sensor_type": "CCD",

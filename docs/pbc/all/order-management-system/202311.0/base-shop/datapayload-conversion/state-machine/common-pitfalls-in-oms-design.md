@@ -185,7 +185,7 @@ The unused state may have a missing transition.
 **Example:** When a recalculation is started by `oms:check-condition`, it triggers a chain of `onEnter` events with more than eight transitions in it.
 ![long-chain-on-enter](https://github.com/xartsiomx/spryker-docs/assets/110463030/2cafb0fe-1388-434e-a783-7838535a69e7)
 
-**Issue:** Long chains of `onEnter` events can be “fragile”. It increases the time of execution, memory consumption, and the risk of having an error in the middle of the process, which results in a stuck order item.
+**Issue:** Long chains of `onEnter` events can be "fragile". It increases the time of execution, memory consumption, and the risk of having an error in the middle of the process, which results in a stuck order item.
 
 **Solution:** Remove unnecessary states and `onEnter` transitions. If you have an event with `onEnter` that doesn't have any command or condition, consider removing it. Split long chains into several smaller ones. This especially applies to chains that are starting from `check*` commands, like condition and timeout.
 

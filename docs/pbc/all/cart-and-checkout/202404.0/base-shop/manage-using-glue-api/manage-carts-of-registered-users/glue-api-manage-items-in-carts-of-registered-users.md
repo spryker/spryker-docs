@@ -3227,7 +3227,7 @@ Request sample: `DELETE https://mysprykershop.com/carts/e68db76b-1c9b-5fb8-88db-
 
 ### Response
 
-If the item is deleted successfully, the endpoint returns the “204 No Content” status code.
+If the item is deleted successfully, the endpoint returns the "204 No Content" status code.
 
 ## Possible errors
 

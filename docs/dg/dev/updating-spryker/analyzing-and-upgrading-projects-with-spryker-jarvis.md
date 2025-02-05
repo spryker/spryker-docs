@@ -27,7 +27,7 @@ Jarvis is not actively supported. For upgrading your projects, use [Spryker Code
 * How far are your modules behind the latest Spryker minor and major module versions?
 * What features are compatible with your current project version?
 
-Spryker Jarvis is meant mostly for developers working on the Spryker projects who want to get a clear view of what it takes to update their project to the latest product release version of Spryker. The tools can also be useful for project managers, as it answers the question “How outdated is the project?“ and helps to estimate efforts to update the project.
+Spryker Jarvis is meant mostly for developers working on the Spryker projects who want to get a clear view of what it takes to update their project to the latest product release version of Spryker. The tools can also be useful for project managers, as it answers the question "How outdated is the project?" and helps to estimate efforts to update the project.
 
 This document shows how to install and use the Spryker Jarvis tool for the analysis and upgrade of your project.
 

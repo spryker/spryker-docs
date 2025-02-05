@@ -151,11 +151,11 @@ For more information on using the composer replace command see  [Composer websit
 
 ```php
 {
-"name": “[vendor]/ replace_[the name of the module you are replacing] ",
+"name": "[vendor]/ replace_[the name of the module you are replacing] ",
 "replace": {
 "spryker/[the name of the module you are replacing] ":"*"
 },
-"description": “[add_decription_of_what_you_are_replacing]"			
+"description": "[add_decription_of_what_you_are_replacing]"			
 }
 
 ```

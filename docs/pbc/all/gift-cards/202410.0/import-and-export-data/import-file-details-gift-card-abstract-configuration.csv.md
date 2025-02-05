@@ -17,7 +17,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `gift_card_abstract_configuration.csv` file to configure [Gift Card](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html) Abstract Configuration information in your Spryker Demo Shop. A **Gift Card Product** is a regular product in the shop which represents a Gift Card that Customer can buy. The **Gift Card Abstract Product** represents a type of Gift Cards with a code pattern (e.g. "XMAS-", “Happy-B”, etc.).
+This document describes the `gift_card_abstract_configuration.csv` file to configure [Gift Card](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html) Abstract Configuration information in your Spryker Demo Shop. A **Gift Card Product** is a regular product in the shop which represents a Gift Card that Customer can buy. The **Gift Card Abstract Product** represents a type of Gift Cards with a code pattern (e.g. "XMAS-", "Happy-B", etc.).
 
 ## Import file dependencies
 

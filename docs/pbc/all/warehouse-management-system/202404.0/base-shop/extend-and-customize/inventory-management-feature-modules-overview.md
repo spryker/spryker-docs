@@ -84,7 +84,7 @@ Product availability can have the flag `is_never_out_of_stock`. This indicates t
 
 In the state machine, items get reserved for an open order. There are certain states that release items—for example, when the payment fails and the order is canceled. However, if the order is successfully fulfilled, and the item is delivered, the item stays reserved until the next stock update.
 
-A stock update triggers the event `stock update`. For example, in our dummy payment's implementation, this would move the items from the “Shipped” state to next state. As the consecutive state is not reserved, the items that have already been shipped will no longer be reserved.
+A stock update triggers the event `stock update`. For example, in our dummy payment's implementation, this would move the items from the "Shipped" state to next state. As the consecutive state is not reserved, the items that have already been shipped will no longer be reserved.
 
 ### Import or change stock
 

@@ -385,7 +385,7 @@ The following table reflects the mapping of the Spryker Quote and Order transfer
 | -     | lineItems[].discount.discountType | Always `DiscountAmount`. Spryker stores discounts based on amount, so there is no need for percentage-based discounts.  |
 | items[].unitPrice (either GROSS or NET depending on the selected mode) | lineItems[].unitPrice | Prices are converted from Spryker's cent-based format to Vertex decimal format. |
 | items[].merchantStockAddresses.quantityToShip  | lineItems[].quantity.value | If `quantityToShip` is less than the quantity requested in cart, the item is mapped to multiple items in the Vertex API.      |
-| - | lineItems[].quantity.unitOfMeasure   | Always `EA` (“each”). Other units of measure are not supported. |
+| - | lineItems[].quantity.unitOfMeasure   | Always `EA` ("each"). Other units of measure are not supported. |
 | items[].taxMetadata | Mapped over specific `lineItem` one to one. | Metadata needs to follow the structure of the Vertex API request. For `lineItems`, it's mapped over each corresponding item based on `lineItemId`. |
 | items[].taxMetadata.seller.company | lineItems[].seller.company | Required by Vertex from the legal standpoint. |
 | expenses (only for expenses with the `SHIPMENT_EXPENSE_TYPE` type) | lineItems | Shipments are treated like products in Vertex - like a line item. |

@@ -178,7 +178,7 @@ These GPTs leverage Open AI and are provided under the following conditions:
 
 ### Documentation
 
-These GPTs are self-documenting. Have a conversation with them to understand what they can do and how to use their features. Example prompt you could use: “List your features, and for each feature you list provide guidance on how you would use the feature in a generic way. Provide examples of how I would use each feature”.
+These GPTs are self-documenting. Have a conversation with them to understand what they can do and how to use their features. Example prompt you could use: "List your features, and for each feature you list provide guidance on how you would use the feature in a generic way. Provide examples of how I would use each feature".
 
 
 

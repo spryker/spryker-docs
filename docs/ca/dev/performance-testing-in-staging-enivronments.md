@@ -571,7 +571,7 @@ This table shows some standard statistics such as min, max, average, standard de
 
 This chart displays the active users during the simulation: total and per scenario.
 
-“Active users” is neither “concurrent users” or “users arrival rate”. It's a kind of mixed metric that serves for both open and closed workload models, and that represents “users who were active on the system under load at a given second”.
+"Active users" is neither "concurrent users" or "users arrival rate". It's a kind of mixed metric that serves for both open and closed workload models, and that represents "users who were active on the system under load at a given second".
 
 It's computed as:
 ```

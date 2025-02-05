@@ -3289,7 +3289,7 @@ Request sample: remove a configurable bundle from a guest cart
 
 ### Response
 
-If the item is deleted successfully, the endpoint returns the “204 No Content” status code.
+If the item is deleted successfully, the endpoint returns the "204 No Content" status code.
 
 ## Possible errors
 

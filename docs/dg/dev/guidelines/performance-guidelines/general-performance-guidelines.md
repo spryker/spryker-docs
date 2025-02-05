@@ -101,7 +101,7 @@ During the synchronization part of Publish & Sync, each time the `queue:task:sta
 For backward compatibility reasons, `RabbitMqEnv::RABBITMQ_ENABLE_RUNTIME_SETTING_UP` is enabled by default in the module configuration class: `\Spryker\Client\RabbitMq\RabbitMqConfig::isRuntimeSettingUpEnabled`. For production environments, we recommend disabling it by setting it to `false` in `config_default.php` or another config file.
 
 Side effects:
-- The application doesn't try to recreate queues and exchanges “on the fly” while interacting with RabbitMQ. If a queue is deleted, and the application attempts to access it, there will be an exception.
+- The application doesn't try to recreate queues and exchanges "on the fly" while interacting with RabbitMQ. If a queue is deleted, and the application attempts to access it, there will be an exception.
 - The only way to create queues and exchanges to configure RabbitMQ is to run the `console queue:setup` CLI command defined in `\Spryker\Zed\RabbitMq\Communication\Console\QueueSetupConsole`. Make sure to *adjust your deploy scripts* accordingly.
 
 ## Disable INFO event logs

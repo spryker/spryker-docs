@@ -17,7 +17,7 @@ Before raising issues about Jenkins performance and stability with Spryker, make
 - Implement batch processing in your importers and be mindful of maximum memory consumption. For the implementation details, see [Data import optimization guidelines](/docs/dg/dev/data-import/202311.0/data-import-optimization-guidelines.html) and [Integrate elastic computing](/docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html).
 - Fine-tune the chunk size of the queues you work with.
 - Make sure that your theoretical maximum memory demand for all planned parallel processes remains below the memory allocation of your Jenkins instance.
-- Verify that every PHP job you run consumes less memory than your specified PHP memory limit. There shouldn't be the error “PHP Fatal error: Out of memory”.
+- Verify that every PHP job you run consumes less memory than your specified PHP memory limit. There shouldn't be the error "PHP Fatal error: Out of memory".
 - Make sure that no jobs are configured with a non-default memory limit or without any memory limit at all in `jenkins.php`. For example,`php -d memory_limit=-1 vendor/bin/console ...`.
 - Avoid spawning an excessive number of workers. There should be no more than two workers per queue.
 - Profile your jobs locally to understand their normal memory demand, especially when interacting with data.
@@ -33,10 +33,10 @@ The following diagram showcases different memory constraints you should consider
 
 ![memory-constraints](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/jenkins-stability-checklist/memory_constraints.png)
 
-Keep in mind that each Jenkins executor can run one PHP job, which may potentially spawn multiple PHP threads or child processes. Each process can consume RAM up to `memory_limit` value. 
+Keep in mind that each Jenkins executor can run one PHP job, which may potentially spawn multiple PHP threads or child processes. Each process can consume RAM up to `memory_limit` value.
 The `vendor/bin/console queue:worker:start` CLI command, in particular, is often configured to have multiple workers or threads and is typically the most RAM-intensive job. Hence, we will use it as an example moving forward.
 
-It is crucial to ensure that the combined theoretical maximum memory consumption, estimated using the formula below, is below the total RAM supply of the Jenkins container. By default, the Jenkins container is configured to optimize the use of the total memory supply of its host. You can calculate the Jenkins container's available RAM by deducting 750 MB from the Jenkins memory allocation of your infrastructure package listed in our Service Description. 
+It is crucial to ensure that the combined theoretical maximum memory consumption, estimated using the formula below, is below the total RAM supply of the Jenkins container. By default, the Jenkins container is configured to optimize the use of the total memory supply of its host. You can calculate the Jenkins container's available RAM by deducting 750 MB from the Jenkins memory allocation of your infrastructure package listed in our Service Description.
 
 {% info_block infoBox "Info" %}
 
@@ -62,7 +62,7 @@ Make sure the following criteria are met:
 
 {% info_block infoBox "Info" %}
 
-If you are running multiple stores, you might notice that jobs “pile up” with only two executors configured. This happens because adding stores usually duplicates all jobs. While most jobs are executed quickly and Jenkins cycles through these jobs rapidly, the `queue:worker:start` jobs might take longer, potentially leading to delays in message propagation for some shops. To mitigate this behavior, you can process all queues by using a single executor slot, as described in [Optimizing Jenkins execution](https://docs.spryker.com/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html).
+If you are running multiple stores, you might notice that jobs "pile up" with only two executors configured. This happens because adding stores usually duplicates all jobs. While most jobs are executed quickly and Jenkins cycles through these jobs rapidly, the `queue:worker:start` jobs might take longer, potentially leading to delays in message propagation for some shops. To mitigate this behavior, you can process all queues by using a single executor slot, as described in [Optimizing Jenkins execution](https://docs.spryker.com/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html).
 
 {% endinfo_block %}
 
@@ -127,4 +127,3 @@ Make sure the following criteria are met:
 With all the preparation work listed in this document, you should already notice a significant improvement in Jenkins stability. To further enhance the resilience of your setup, we have gathered the following general recommendations for you.
 
 When the Jenkins host crashes and requires re-provisioning, there is a risk of losing all manually created jobs. To mitigate this risk, we recommend persisting important jobs in code. This ensures that when `vendor/bin/console scheduler:setup` is executed during recovery, all your critical jobs are reinstalled.
-

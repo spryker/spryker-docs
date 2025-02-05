@@ -43,11 +43,11 @@ Links as part of the meta information will be part of the response on the same l
 }
 ```
 
-“self” URIs are included, for example for adding an item.
+"self" URIs are included, for example for adding an item.
 
 ## Logging
 
-By default all incoming requests and outgoing responses will be logged as “info” level.
+By default all incoming requests and outgoing responses will be logged as "info" level.
 
 ## Security recommendations
 

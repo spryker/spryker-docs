@@ -65,11 +65,11 @@ The `FormatTypeByPathPreProcessor` would extract the .json extension for format 
 
 After that, the `ResourcePreProcessor`, `ResourceMethodPreProcessor` and `ResourceParametersPreProcessor` take care of mapping the remaining elements to the right resource and method. They also prepare the basic params.
 
-Finally, we then prepare the CRUD methods with concrete params based on the payload, URL query strings, headers or alike. If you want to provide pagination, sorting, filtering, and more for your “find” action, you can hook in processors to translate your request to the `filterTransfer`.
+Finally, we then prepare the CRUD methods with concrete params based on the payload, URL query strings, headers or alike. If you want to provide pagination, sorting, filtering, and more for your "find" action, you can hook in processors to translate your request to the `filterTransfer`.
 
 ## Response and post-processing
 
-Similarly, the post processing stack can further hydrate the `ApiResponseTransfer` before returning it. Any custom headers you need to add to the response, you can add here based on the request or persistence data. You can also set or adjust response codes (“HTTP Status Codes”) and add special meta data to the response.
+Similarly, the post processing stack can further hydrate the `ApiResponseTransfer` before returning it. Any custom headers you need to add to the response, you can add here based on the request or persistence data. You can also set or adjust response codes ("HTTP Status Codes") and add special meta data to the response.
 
 ```php
 <?php

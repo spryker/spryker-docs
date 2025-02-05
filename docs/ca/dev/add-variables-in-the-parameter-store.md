@@ -101,11 +101,7 @@ Reserved variables:
 * `TIDEWAYS_CLI_ENABLED`
 * `TIDEWAYS_DAEMON_URI`
 * `TIDEWAYS_ENVIRONMENT`
-
-
-
-
-{% endinfo_block %}
+ 
 
 
 ## Variable path hierarchy

@@ -158,3 +158,11 @@ Symfony/security-http third-party dependency was vulnerable to authentication by
 ```bash
 composer update symfony/security-http
 ```
+
+## Vulnerability in Summernote third-party dependency
+
+High-privileged users could inject and execute arbitrary Twig template code, leading to Remote Code Execution (RCE). This vulnerability allowed unauthorized access to sensitive server data, including application secrets, credentials, and configurations.
+
+### Fix the vulnerability
+
+1. Update the `spryker/twig` package to version 3.27.0 or higher.

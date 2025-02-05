@@ -48,7 +48,9 @@ We recommend mapping your branches to environments as follows:
   This opens the pipeline editing page.  
 5. In the **Edit: Source** pane, click **Edit stage**.  
 6. In the **Spryker_App_Src** section, click the *Edit action* button.
-! [edit-action]
+
+![edit-action](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/connect-a-code-repository.md/edit-action.png)
+
   This opens the **Edit action** window.
 7. For **Action provider**, select **GitHub(via GitHub App)**.
   This adds GitHub related fields to the window.

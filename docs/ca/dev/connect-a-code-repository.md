@@ -45,17 +45,20 @@ We recommend mapping your branches to environments as follows:
 2. Go to **CodePipeline**.
 3. One the **Pipelines** page, select the pipeline you want to connect the repository to.
 4. On the page of the pipeline, click **Edit**.
-  This opens the pipeline editing page.
+  This opens the pipeline editing page.  
 5. In the **Edit: Source** pane, click **Edit stage**.  
-
-
-Under Source Provider, select **GitHub**.
-5. Click **Connect to GitHub**, and authorize AWS CodePipeline to access your GitHub repository.
-6. Select the **repository** and **branch** you want to connect to the pipeline.
-7. Click on **Done** or **Save** at each stage while navigating back.
-
-
-
+6. In the **Spryker_App_Src** section, click the *Edit action* button.
+! [edit-action]
+  This opens the **Edit action** window.
+7. For **Action provider**, select **GitHub(via GitHub App)**.
+  This adds GitHub related fields to the window.
+8. Click **Connect to GitHub** and authorize AWS CodePipeline to access your GitHub repository.
+9. For **Repository name**, enter and select the repository you want to connect.
+10. For **Branch name**, enter and select the branch you want to connect.
+11. Click **Done**.
+12. In the **Edit: Source** pane, click **Done**.
+13. Scroll up and click **Save**.
+14. In the **Save pipeline changes** window, click **Save**.
 
 Your GitHub repository is now successfully connected!
 

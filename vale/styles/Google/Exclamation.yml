@@ -1,6 +1,6 @@
 extends: existence
 message: "Avoid using exclamation points per the Google Style Guide."
-level: error
+level: warning
 scope: sentence
 nonword: true
 tokens:

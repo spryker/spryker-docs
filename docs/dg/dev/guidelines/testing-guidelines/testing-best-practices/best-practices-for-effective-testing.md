@@ -1,6 +1,6 @@
 ---
 title: Best practices for effective testing
-description: The article describes how to write and organize your tests efficiently.
+description: The article describes how to write and organize your tests efficiently for your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/testing-best-practices
@@ -11,60 +11,56 @@ redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
 related:
   - title: Available test helpers
-    link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
   - title: Code coverage
-    link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+    link: docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
   - title: Data builders
-    link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+    link: docs/dg/dev/guidelines/testing-guidelines/data-builders.html
   - title: Executing tests
-    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
   - title: Publish and Synchronization testing
-    link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-process.html
   - title: Setting up tests
-    link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+    link: docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html
   - title: Test framework
-    link: docs/scos/dev/guidelines/testing-guidelines/test-framework.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-framework.html
   - title: Test helpers
-    link: docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html
   - title: Testify
-    link: docs/scos/dev/guidelines/testing-guidelines/testify.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testify.html
   - title: Testing concepts
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
   - title: Testing console commands
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
 
-The rule of thumb for your [tests](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html) should be:
+As a rule of thumb, [tests](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html) should be as follows:
 
-* Tests are treated as if they were the production code.
-* Tests are easy to read and easy to maintain.
+* Easy to read and maintain
+* Treated as if they were the production code
 
-This article provides some recommendations on how you can achieve that.
-<a name="{test-api}"></a>
 
-## Test API
+This article provides recommendations on how you can achieve that.
 
-It is often stated that you should test the smallest possible unit of your application. On the one hand, that's a good approach, but on the other hand, it often leads to too many tests and tests that show the small units are working, but it doesn't show if the units work together. A valid argument could be to have integration tests to test everything together. That's ok but leads to the issue that you cover most of your code lines more than once, which makes the test execution take longer.
+## API tests
 
-Facades are a very good example. You can write tests for the model under test. Then you also need a test that covers the creational part of the model, and then you need to have tests for the Facade itself. You can do that, of course, but such an approach leads to many mocks, and probably you also cover code lines more often than required.
+It's a common idea that that you should test the smallest possible unit of an application. While ensuring granular validation, it can lead to excessive tests that verify individual units but don't confirm if they work together. Integration tests help address this but often result in redundant coverage, increasing test execution time.
 
-At Spryker, we focus first on the API tests. The API is always the entry point into the application code.
+In Spryker, we prioritize module API tests because they serve as the primary entry point into the module business logic. To ensure correct functionality, module API tests should cover both the *facade* and *plugins*, except for plugins that only forward the call to a Facade method.
 
-You should have a least two test cases per API method: the happy and the un-happy test case. Ideally, you cover each line of your API specification.
+Each module API method should have at least two test cases: a happy- and an unhappy-path scenario. Ideally, tests should cover the entire API specification.
 
-Only when the `Arrange` section of your API test becomes too complex for all cases, you should consider smaller unit tests.
+If the arrange section of a module API test becomes too complex, consider adding targeted unit tests to ensure clarity and maintainability.
 
 ## Method naming
 
-A good test starts with a good method name. You can get many opinions about what is good and what not about the method naming. We at Spryker, follow the practice to use speaking names that not only contain the method name under test.
+A good test starts with a good method name, which may be subjective. At Spryker, we try to use descriptive names that describe a test does. Examples:
+* testDoSomethingShouldReturnTrueWhen...()
+* testDoSomethingShouldReturnFalseWhen...()
 
-Examples:
-testDoSomethingShouldReturnTrueWhen...()
-testDoSomethingShouldReturnFalseWhen...()
+## Three-step testing approach
 
-## Three step test approach
-
-On top of the method name, the test method body should follow a three-step testing approach:
+A test's method body should follow a three-step testing approach:
 
 1. // Arrange
 2. // Act
@@ -74,11 +70,11 @@ These inline comments give the reader of your test method a clear understanding 
 
 ## Small test methods
 
-There are several ways to make your test methods small, easy to read and understand. When your `Arrange` part becomes huge, you can use the tester class and helper classes. If you see too many code lines in this section, you can move the `Arrange` code into the generated `Tester` class.
+There're several ways to make your test methods small, easy to read and understand. When the arrange part is too big, you can use the tester class and helper classes. Move the arrange code into the generated tester class.
 
-Additionally, when you want to use the same code in different modules, you can use helpers as described in [Using Another Helper in a Helper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html#using-another-helper-in-a-helper).
+If you need to use the same code in different modules, you can use helpers as described in [Using Another Helper in a Helper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html#using-another-helper-in-a-helper).
 
-Take a look into [\SprykerTest\Shared\Customer\Helper\CustomerDataHelper](https://github.com/spryker/customer/blob/master/tests/SprykerTest/Shared/Customer/_support/Helper/CustomerDataHelper.php) - this one can be re-used in many modules to give you CustomerTransfer.
+For an example of code that can be used in multiple modules, see CustomerTransfer in  [\SprykerTest\Shared\Customer\Helper\CustomerDataHelper](https://github.com/spryker/customer/blob/master/tests/SprykerTest/Shared/Customer/_support/Helper/CustomerDataHelper.php).
 
 ## Use message argument in assert* methods
 
@@ -92,7 +88,7 @@ If the test failed, you will see the passed message on the console, which should
 
 ## Use as less mocks as possible
 
-Testing single units of your application is a good approach, however, it has some drawbacks as described in the [Test API](#test-api) section. The more you mock, the less you really test. Besides, it's very common to forget to update mocks, which leads to even more issues in your code.
+Testing single units of your application is a good approach, however, it has some drawbacks as described in the [Test API](#api-tests) section. The more you mock, the less you really test. Besides, it's very common to forget to update mocks, which leads to even more issues in your code.
 
 Of course, you can mock all the dependencies of a model under test, but, most likely, that just adds unneeded overhead to your test. In many cases, let's say at least in the happy case, your code should work with the given dependencies. Testing exceptional cases very often requires mocking to be able to test the un-happy cases. In this case, you should also try to use as little mocks as possible to get the most coverage out of a few lines of test code.
 

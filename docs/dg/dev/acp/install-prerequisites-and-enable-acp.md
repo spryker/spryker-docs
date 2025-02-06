@@ -17,40 +17,35 @@ This document describes how to make your project ready and enabled for ACP.
 
 Your project is running in Spryker Cloud.
 
-
-## Install prerequisites for projects version 202311.0 and later
-
-If your project is of version [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or later, proceed to [Register your project with ACP](#register-your-project-with-acp).
-
-
 ## Install prerequisites for projects version 202211.0
 
-To install the prerequisites, update modules and set up the configuration as described in the following sections.
-
+Update modules and set up the configuration as described in the following sections.
 
 ### Update modules
 
-Update the following modules to specified or later versions:
+Update the following modules to meet the ACP requirements:
 
-* `spryker/app-catalog-gui: ^1.4.1`
-* `spryker/message-broker: ^1.11.0`
-* `spryker/message-broker-aws: ^1.6.0`
-* `spryker/session: ^4.15.1`
-* `spryker/oauth-client: ^1.4.0`
+* `spryker/app-catalog-gui:^1.4.1`
+* `spryker/kernel-app:^1.4.0`
+* `spryker/message-broker:^1.15.0`
+* `spryker/message-broker-aws:^1.9.0`
+* `spryker/session:^4.15.1`
+* `spryker/oauth-client:^1.5.0`
+* `spryker/oauth-auth0:^1.1.1`
 
 
 {% info_block infoBox "ACP app modules" %}
 
 When installing an ACP app, make sure to follow the provided guide to install and update the modules required by the app.
 
-When a new version of app is released, you don't need to update it. However, you may need to update modules that are related to an app to take full advantage of it.
+When a new version of app is released, you don't need to update it. However, you may need to update modules that are related to an app.
 
 {% endinfo_block %}
 
 
 ### Add plugins and configuration
 
-1. Define the configuration and add plugins:
+1. Define the following configuration and add plugins:
 
 <details>
   <summary>config/Shared/config_default.php</summary>
@@ -83,10 +78,12 @@ $config[OauthAuth0Constants::AUTH0_CLIENT_ID] = $aopAuthenticationConfiguration[
 $config[OauthAuth0Constants::AUTH0_CLIENT_SECRET] = $aopAuthenticationConfiguration['AUTH0_CLIENT_SECRET'] ?? '';
 
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
+    AppConfigUpdatedTransfer::class => 'app-events',
     // Here we will define the transport map accordingly to APP
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
+    'app-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
     // Here we will define the receiver transport map accordingly to APP
 ];
 
@@ -134,7 +131,7 @@ $config[AppCatalogGuiConstants::OAUTH_OPTION_AUDIENCE] = 'aop-atrs';
 
 </details>
 
-2. In the `navigation.xml` file, add the navigation item:
+2. In `navigation.xml`, add the following navigation items:
 
 ```xml
 ...
@@ -149,7 +146,7 @@ $config[AppCatalogGuiConstants::OAUTH_OPTION_AUDIENCE] = 'aop-atrs';
 ...
 ```
 
-3. In the `MessageBrokerDependencyProvider.php` file, enable the following module plugins:
+3. In `MessageBrokerDependencyProvider.php`, enable the following module plugins:
 
 {% info_block infoBox "Disable deprecated plugins" %}
 
@@ -226,6 +223,16 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             new ValidationMiddlewarePlugin(),
         ];
     }
+    
+    /**
+     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\FilterMessageChannelPluginInterface>
+     */
+    public function getFilterMessageChannelPlugins(): array
+    {
+        return [
+            new ActiveAppFilterMessageChannelPlugin(),
+        ];
+    }
 }
 ```
 
@@ -267,13 +274,48 @@ class MessageBrokerAwsDependencyProvider extends SprykerMessageBrokerAwsDependen
 
 </details>
 
-5. In `OauthClientDependencyProvider.php`, enable the following module plugins:
+5. In `MessageBrokerConfig.php`, configure the default worker channels for the system events channel to be enabled:
 
-{% info_block infoBox "Disable deprecated plugins" %}
+**src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php**
+```php
+namespace Pyz\Zed\MessageBroker;
 
-Make sure that no deprecated plugins are enabled. Ideally, the content of each of the methods listed below should exactly match the provided example.
+use Spryker\Zed\MessageBroker\MessageBrokerConfig as SprykerMessageBrokerConfig;
 
-{% endinfo_block %}
+class MessageBrokerConfig extends SprykerMessageBrokerConfig
+{
+    /**
+     * @return list<string>
+     */
+    public function getDefaultWorkerChannels(): array
+    {
+        return [
+            'app-events',
+            //...
+        ];
+    }
+    
+    /**
+     * @return list<string>
+     */
+    public function getSystemWorkerChannels(): array
+    {
+        return [
+            'app-events',
+        ];
+    }
+
+    //...
+}
+```
+
+6. In `OauthClientDependencyProvider.php`, enable the following module plugins:
+
+| PLUGIN | DESCRIPTION |
+| - | - |
+| Auth0OauthAccessTokenProviderPlugin |  Adds the Auth0 OAuth access token provider. |
+| CacheKeySeedAccessTokenRequestExpanderPlugin |  Expands the OAuth request with a cache key seed. |
+| TenantIdentifierAccessTokenRequestExpanderPlugin |  Expands the OAuth request with a tenant identifier. |
 
 <details>
   <summary>src/Pyz/Zed/OauthClient/OauthClientDependencyProvider.php</summary>
@@ -313,6 +355,81 @@ class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
         return [
             new CacheKeySeedAccessTokenRequestExpanderPlugin(),
             new TenantIdentifierAccessTokenRequestExpanderPlugin(),
+        ];
+    }
+}
+```
+
+</details>
+
+7. In `OauthClientConfig.php`, configure the flag to expand the access token request with message attributes:
+
+<details>
+  <summary>src/Pyz/Zed/OauthClient/OauthClientConfig.php</summary>
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Zed\OauthClient;
+
+use Spryker\Zed\OauthClient\OauthClientConfig as SprykerOauthClientConfig;
+
+class OauthClientConfig extends SprykerOauthClientConfig
+{
+    /**
+     * @api
+     *
+     * @return bool
+     */
+    public function isAccessTokenRequestExpandedByMessageAttributes(): bool
+    {
+        return true;
+    }
+}
+```
+
+</details>
+
+
+8. In `KernelAppDependencyProvider.php`, enable the following module plugins:
+
+| PLUGIN | DESCRIPTION |
+| - | - |
+| `OAuthRequestExpanderPlugin` | Expands the request with an OAuth token. |
+| `MerchantAppRequestExpanderPlugin` | Expands the request with the merchant app data. |
+
+<details>
+  <summary>src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php</summary>
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Zed\KernelApp;
+
+use Spryker\Zed\KernelApp\KernelAppDependencyProvider as SprykerKernelAppDependencyProvider;
+use Spryker\Zed\MerchantApp\Communication\Plugin\KernelApp\MerchantAppRequestExpanderPlugin;
+use Spryker\Zed\OauthClient\Communication\Plugin\KernelApp\OAuthRequestExpanderPlugin;
+
+class KernelAppDependencyProvider extends SprykerKernelAppDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\KernelAppExtension\RequestExpanderPluginInterface>
+     */
+    public function getRequestExpanderPlugins(): array
+    {
+        return [
+            new OAuthRequestExpanderPlugin(),
+            new MerchantAppRequestExpanderPlugin(),
         ];
     }
 }

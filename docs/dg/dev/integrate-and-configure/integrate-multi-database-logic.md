@@ -1,6 +1,6 @@
 ---
 title: Integrate multi-database logic
-description: Learn how to integrate multi-database logic
+description: Learn how to switch from using a shared database to integrate multi-database logic within your Spryker projects.
 last_updated: June 2, 2022
 template: howto-guide-template
 redirect_from:

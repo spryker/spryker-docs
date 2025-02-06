@@ -1,6 +1,6 @@
 ---
 title: Set up multiple stores
-description: Learn how to set up multiple stores for your project.
+description: Learn how to enable and set up and create multiple stores for multiple countries or regions for your Spryker Based project.
 last_updated: Dec 22, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-set-up-multiple-stores

@@ -7,9 +7,9 @@ redirect_from:
   - /docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
 related:
   - title: General performance guidelines
-    link: docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
+    link: docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
   - title: Frontend performance guidelines
-    link: docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
+    link: docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
 ---
 
 Performance shows the response of a system to carrying out certain actions for a certain period. Performance is an important quality attribute in each application architecture that can impact user experience behavior and business revenues. Therefore, we highly recommend following the best practices and avoiding performance drawbacks in the architecture design.
@@ -220,7 +220,7 @@ Zed calls are necessary when it comes to executing a database-related operation 
 - Exporting necessary data, only product-related ones, from Zed to Redis at the pre-calculation phase with the help of Publish and Synchronization.
 - Merging duplicate Zed requests to only one customer request (AddToCart + Validations + …).
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 Avoid making ZED calls within QueryExpanderPlugin (from Storage or Search).
 
@@ -228,12 +228,14 @@ Avoid making ZED calls within QueryExpanderPlugin (from Storage or Search).
 
 ### OMS optimization
 
-OMS processes are the template of the order fulfillment in Spryker. The first state of OMS processes, called the NEW state, plays an important role in the checkout process. Therefore, it's necessary to make sure you don't use unnecessary features when you don't need them, for example, Reservation or Timeout transitions.
+OMS processes are the template of the order fulfillment in Spryker. The first state of OMS processes, called the NEW state, plays an important role in the checkout process. So, make sure transitions related to unsused features are disabled, for example–Reservation or Timeout transitions.
 
-One can avoid using the unnecessary transitions by:
+You can avoid using the unnecessary transitions as follows:
 
-- Removing the *Reservation* flag from the NEW and other steps in the OMS.
-- Removing the *Timeout* transition from the NEW step in the OMS.
+- Remove the `Reservation` flag from the `NEW` and other steps in the OMS.
+- Remove the `Timeout` transition from the `NEW` step in the OMS.
+
+For more ways to optimize OMS, see [Slow checkout endpoint](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html#slow-checkout-endpoint).
 
 ### Performance checklist
 
@@ -265,4 +267,4 @@ We strongly recommend our customers enable APM systems for their projects. Spryk
 
 ### Performance CI
 
-Performance CI plays a very important role for each project pipeline as it prevents new issues in the long term when it comes to feature development. To analyze your project's performance, you can use the [Benchmark](/docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html) tool.
+Performance CI plays a very important role for each project pipeline as it prevents new issues in the long term when it comes to feature development. To analyze your project's performance, you can use the [Benchmark](/docs/dg/dev/sdks/sdk/development-tools/benchmark-performance-audit-tool.html) tool.

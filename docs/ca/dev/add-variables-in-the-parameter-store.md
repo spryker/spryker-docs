@@ -29,9 +29,34 @@ For complex or system-critical changes to variables, we recommend consulting wit
 
 There are two types of environment variables: customer-owned and Spryker-owned.
 
-Customer-owned variables are created and managed by you—the onboarded customer or implementation partner. You have full control over these variables and can add or edit them according to your needs. Changes to these variables don't automatically propagate into a running environment. To apply changes made to your environment variables, you need to run an ECS-updater-* pipeline to bring them to the containers or run a full redeploy. You can do this whole process without creating support tickets.
+Spryker-owned variables are managed and can be updated only with the help of Spryker Cloud or support teams.
 
-You can update Spryker-owned variables with the help of Spryker Cloud or support team.
+Customer-owned variables are created and managed by you or implementation partner. You have full control over these variables and can add or edit them according to your needs. Changes to these variables don't automatically propagate into a running environment. To apply changes made to your environment variables, you need to run an ECS-updater-* pipeline to bring them to the containers or run a full redeploy. You can do this whole process without creating support tickets.
+
+### Customer-owned variables with limited access
+
+The following customer-owned variables can be updated only with the help of Spryker Cloud or support teams:
+
+* /{project}/{environment}/secret/scheduler/limited/{variable_name}
+
+* /{project}/{environment}/secret/pipeline/limited/{variable_name}
+
+* /{project}/{environment}/secret/infra/limited/{variable_name}
+
+* /{project}/{environment}/secret/common/limited/{variable_name}
+
+* /{project}/{environment}/secret/app/limited/{variable_name}
+
+* /{project}/{environment}/config/scheduler/limited/{variable_name}
+
+* /{project}/{environment}/config/pipeline/limited/{variable_name}
+
+* /{project}/{environment}/config/infra/limited/{variable_name}
+
+* /{project}/{environment}/config/common/limited/{variable_name}
+
+* /{project}/{environment}/config/app/limited/{variable_name}
+
 
 ## Naming convention for variables
 
@@ -101,7 +126,7 @@ Reserved variables:
 * `TIDEWAYS_CLI_ENABLED`
 * `TIDEWAYS_DAEMON_URI`
 * `TIDEWAYS_ENVIRONMENT`
- 
+
 
 
 ## Variable path hierarchy
@@ -133,28 +158,6 @@ The following variables are arranged from lower to higher priority:
 ## Add variables
 
 The following sections describe how to add parameters and secrets for different resources.
-
-**Note:** The next variables should be requested by a ticket on [Support Portal](https://support.spryker.com/) in "(Infrastructure Change Request > Change to existing parameter store variable)"
-
-* /{project}/{environment}/secret/scheduler/limited/{variable_name}
-
-* /{project}/{environment}/secret/pipeline/limited/{variable_name}
-
-* /{project}/{environment}/secret/infra/limited/{variable_name}
-
-* /{project}/{environment}/secret/common/limited/{variable_name}
-
-* /{project}/{environment}/secret/app/limited/{variable_name}
-
-* /{project}/{environment}/config/scheduler/limited/{variable_name}
-
-* /{project}/{environment}/config/pipeline/limited/{variable_name}
-
-* /{project}/{environment}/config/infra/limited/{variable_name}
-
-* /{project}/{environment}/config/common/limited/{variable_name}
-
-* /{project}/{environment}/config/app/limited/{variable_name}
 
 ### Add parameters to all resource types
 

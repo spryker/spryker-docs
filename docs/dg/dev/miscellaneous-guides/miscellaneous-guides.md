@@ -17,4 +17,5 @@ Miscellaneous guides are a collection of guides that don't fit under any specifi
 * [Simulating deployments locally](/docs/dg/dev/miscellaneous-guides/miscellaneous-guides.html)
 * [Transfer big databases between environments](/docs/dg/dev/miscellaneous-guides/transfer-big-databases-between-environments.html)
 * [Tutorial: Hello World](/docs/dg/dev/miscellaneous-guides/tutorial-hello-world.html)
+* [Strategy resolver](/docs/dg/dev/miscellaneous-guides/strategy-resolver.html)
 * [Using database transactions](/docs/dg/dev/miscellaneous-guides/using-database-transaction.html)

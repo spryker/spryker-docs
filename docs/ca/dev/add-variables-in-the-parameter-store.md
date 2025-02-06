@@ -15,8 +15,6 @@ redirect_from:
   - /docs/ca/dev/managing-parameters-in-the-parameter-store.html
 ---
 
-
-
 Variables, such as parameters and secrets, are used for multiple purposes, like storing mail server details or providing Composer authentication details to the build and deploy process securely.
 
 {% info_block infoBox %}
@@ -25,27 +23,72 @@ This feature is part of a gradual rollout and will be available to everyone even
 
 {% endinfo_block %}
 
+For complex or system-critical changes to variables, we recommend consulting with our support to prevent unexpected issues.
+
 ## Customer-owned and Spryker-owned variables
 
-There are two types of environment variables in the Spryker Cloud Commerce OS: those owned by the customer and those owned by Spryker.
+There are two types of environment variables: customer-owned and Spryker-owned.
 
-Customer-owned variables are created and managed by you—the onboarded customer or implementation partner. You have full control over these variables and can add or edit them according to your needs. However, keep in mind that changes to these variables don't automatically propagate into the running environment. To apply changes made to your environment variables, you need to run an ECS-updater-* pipeline to bring them to the containers (full re-deploy would also do the trick, of course). This process doesn't require intervention of the Spryker Cloud or support team.
+Spryker-owned variables are managed and can be updated only with the help of Spryker Cloud or support teams.
 
-If there is a need to modify a Spryker-owned environment variable, it must be done through the Spryker Cloud or support team, as it needs to be coordinated with our DevOps team to ensure proper application and consistency.
+Customer-owned variables are created and managed by you or implementation partner. You have full control over these variables and can add or edit them according to your needs. Changes to these variables don't automatically propagate into a running environment. To apply changes made to your environment variables, you need to run an ECS-updater-* pipeline to bring them to the containers or run a full redeploy. You can do this whole process without creating support tickets.
 
-By adhering to these guidelines, you can effectively manage your environment variables without risking the system stability. It also helps in maintaining a seamless experience while working with the Spryker Cloud Commerce OS.
+### Customer-owned variables with limited access
 
-Please remember that improper management of environment variables can lead to unexpected issues. Therefore, it's recommended to consult the Spryker Cloud or support team for any complex or system-critical changes.
+The following customer-owned variables can be updated only with the help of Spryker Cloud or support teams:
+
+* /{project}/{environment}/secret/scheduler/limited/{variable_name}
+
+* /{project}/{environment}/secret/pipeline/limited/{variable_name}
+
+* /{project}/{environment}/secret/infra/limited/{variable_name}
+
+* /{project}/{environment}/secret/common/limited/{variable_name}
+
+* /{project}/{environment}/secret/app/limited/{variable_name}
+
+* /{project}/{environment}/config/scheduler/limited/{variable_name}
+
+* /{project}/{environment}/config/pipeline/limited/{variable_name}
+
+* /{project}/{environment}/config/infra/limited/{variable_name}
+
+* /{project}/{environment}/config/common/limited/{variable_name}
+
+* /{project}/{environment}/config/app/limited/{variable_name}
+
 
 ## Naming convention for variables
 
 Variables must follow this naming convention: `/{project}/{environment}/{type}/{bucket}/{grant}/{variable_name}`.
 
-{% info_block warningBox "Reserved variables" %}
+Placeholder description:
 
-Reserved variables are variable names that have special meaning in Spryker Cloud Commerce OS. Since their names are reserved, you can't define your own variables using these names.
-<BR> The reserved variable names are the following:
-* `SPRYKER_*` *(Every variable name with that prefix)*
+* `type`: defines the type of a variable. Possible values:
+    * `config`: parameter
+    * `secret`: secret
+
+* `bucket`: defines what services a variable is used for. Possible values:
+    * `common`: used by all the buckets.
+    * `app`: used only by application services.
+    * `scheduler`: used by the scheduler.
+
+* `grant`: Defines access permissions to variables. Possible values:
+    * `public`: readable and writable
+    * `limited`: readable
+
+Path examples:
+
+* /fashion_club_store/staging/config/common/limited/composer_pass
+
+* /deans_jeans/prod/config/app/public/mail_host
+
+### Reserved variables
+
+Reserved variables are reserved in Spryker for dedicated functions. These names can't be used to create more variables. If you're already using reserved variables in your code, you need to change their names to avoid any service issues.
+
+Reserved variables:
+* `SPRYKER_*`: Every variable name with this prefix
 * `ALLOWED_IP`
 * `BLACKFIRE_AGENT_SOCKET`
 * `BLACKFIRE_SERVER_ID`
@@ -85,30 +128,6 @@ Reserved variables are variable names that have special meaning in Spryker Cloud
 * `TIDEWAYS_ENVIRONMENT`
 
 
-If you are already using these reserved variables in your code, you need to change their names to avoid any service issues.
-
-{% endinfo_block %}
-
-Placeholder description:
-
-* `type`: defines the type of a variable. Possible values:
-    * `config`: parameter
-    * `secret`: secret
-
-* `bucket`: defines what services a variable is used for. Possible values:
-    * `common`: used by all the buckets.
-    * `app`: used only by application services.
-    * `scheduler`: used by the scheduler.
-
-* `grant`: Defines access permissions to variables. Possible values:
-    * `public`: readable and writable
-    * `limited`: readable
-
-Path examples:
-
-* /fashion_club_store/staging/config/common/limited/composer_pass
-
-* /deans_jeans/prod/config/app/public/mail_host
 
 ## Variable path hierarchy
 

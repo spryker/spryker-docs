@@ -1,0 +1,314 @@
+---
+title: OpenTelemetry overview
+description: Describing what is OpenTelemetry and how Spryker integrates it in the SCCOS
+template: howto-guide-template
+last_updated: Feb 1, 2025
+related:
+---
+
+## Integration
+For the integration you can use a script from the [Installer repo](https://github.com/spryker/opentelemetry-installer/). Use the latest version and run it in your system.
+Below you can see what steps this script does, if you want to do everything manually.
+
+### Install required packages
+OpenTelemetry provides instrumentation via packages that can be installed and register hooks automatically. If you want to instrument something that is not covered in our code base, but is required for you, you can try to install one of the packages that are listed [here](https://opentelemetry.io/ecosystem/registry/?language=php) or something that you consider useful for you from other sources. Be advised that Spryker doesn't responsible for this code and you install those on your own risk.
+Spryker provides [spryker/opentelemetry](https://packagist.org/packages/spryker/opentelemetry) package that covers essential parts. It includes the entry point for instrumentation, plugin that you can wire in your monitoring service and a console command that allows you to generate [hooks](https://opentelemetry.io/docs/zero-code/php/#how-it-works) for project's code, which will create spans automatically. Also it includes instrumentation of Propel, Redis, ElasticSearch, RabbitMQ and Guzzle calls.
+
+### (Optional) Install Monitoring module
+OpenTelemetry integration doesn't require to use Monitoring service, but this is highly recommended as it allows you to add custom attributes and events, change your traces (transaction) name during the request execution, have exceptions added to the root span for visibility and more.
+You can get a module [here](https://packagist.org/packages/spryker/monitoring).
+After installation you can wire a Monitoring plugin from a `spryker/opentelemtry` module to enable all listed above features.
+```php
+<?php
+
+namespace Pyz\Service\Monitoring;
+
+use Spryker\Service\Monitoring\MonitoringDependencyProvider as SprykerMonitoringDependencyProvider;
+use Spryker\Service\Opentelemetry\Plugin\OpentelemetryMonitoringExtensionPlugin;
+
+class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Service\MonitoringExtension\Dependency\Plugin\MonitoringExtensionPluginInterface>
+     */
+    protected function getMonitoringExtensions(): array
+    {
+        return [
+            new OpentelemetryMonitoringExtensionPlugin(),
+        ];
+    }
+}
+
+```
+After that you can call methods from Monitoring service and they will be translated to OpenTelemetry actions. Be advised that some of the methods are empty due to the fact that those things have no direct implementation in Opentelemetry, like `\Spryker\Service\Opentelemetry\Plugin\OpentelemetryMonitoringExtensionPlugin::markStartTransaction()` as transaction will start anyway.
+
+### Wire a console command
+
+Spryker is a big application, so you definitely don't want to create all hooks manually. Console command  class *OpentelemetryGeneratorConsole*  is used to generate those hooks automatically for classes that you want to cover with spans.
+```php
+<?php
+
+namespace Pyz\Zed\Console;
+
+...
+use Spryker\Zed\Opentelemetry\Communication\Plugin\Console\OpentelemetryGeneratorConsole;
+...
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    protected function getConsoleCommands(Container $container): array
+    {
+        $commands = [
+            ...
+            new OpentelemetryGeneratorConsole(),
+            ...
+        ];
+
+        return $commands;
+    }
+}
+
+```
+
+You have to wire this console command into your install script, so it's executed on every deployment during base container image build. We recommend placing it as the last one in the section **build**.
+Please make sure that this command is located after all code modifications and generation.
+
+```yaml
+sections:
+    build:
+        generate-open-telemetry:
+            command: 'vendor/bin/console open-telemetry:generate'
+```
+
+### Configure hooks generation
+
+`open-telemetry:generate` command will do a heavy lifting and generate hooks for your code base. You can control what exactly you want to instrument by updating a few configuration methods.
+
+`\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getExcludedDirs()` - controls what directories MUST NOT be instrumented. You may not want to see in your traces spans from some infra code that is not relevant for you. So you can just exclude the whole directory with a provided name. OOTB we excluded a bunch of directories. Review them in the vendor dir of the module if you want to instrument something from that list.
+Below you can see an example of how this method should look.
+```php
+class OpentelemetryConfig extends AbstractBundleConfig
+{
+    // We don't want to have traces for Monitoring module, OpenTelemetry module and tests in existing module, so those will be excluded even if we scan those directories during the generation. In the actual implementation you can see more directories.
+    public function getExcludedDirs(): array
+    {
+        return [
+        ...
+            'Monitoring',
+            'OpenTelemetry',
+            'tests',
+        ...
+        ];
+    }
+}
+```
+
+`\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getExcludedSpans()` - allows you to exclude specific spans by name. You can use it to exclude autogenerated span that is not relevant for you, but excluding the directory itself is too much.
+```php
+class OpentelemetryConfig extends AbstractBundleConfig
+{
+    // In this example we are not going to generate a span with a 'User-UserFacade::isSystemUser' name as it's not relevant for our traces, but in the same time it's called a lot of times during the request
+    public function getExcludedSpans(): array
+    {
+        return [
+            ...
+            'User-UserFacade::isSystemUser',
+            ...
+        ];
+    }
+
+}
+```
+
+`\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getPathPatterns()` - allows to add a path pattern that shows where console command should look for you classes to cover them with hooks. OOTB all Spryker directories are covered together with `Pyz` namespace on the project. Be advised that you should not cover code that is autogenerated like Transfers.
+```php
+class OpentelemetryConfig extends AbstractBundleConfig
+{
+    public function getPathPatterns(): array
+    {
+        return [
+            '#^vendor/spryker/[^/]+/.*/.*/(Zed|Shared)/.*/(?!Persistence|Presentation)[^/]+/.*#',
+            '#^vendor/spryker/[^/]+/Glue.*#',
+            '#^vendor/spryker(?:/spryker)?-shop/[^/]+/.*#',
+            '#^vendor/spryker-eco/[^/]+/.*#',
+            '#^src/Pyz/.*#',
+        ];
+    }
+
+}
+```
+
+`\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getOutputDir()` - specifies in what directory you want to put generated hooks. Default value is `src/Generated/OpenTelemetry/Hooks/`. The classmap file will also be added into this directory.
+```php
+class OpentelemetryConfig extends AbstractBundleConfig
+{
+    public function getOutputDir(): string
+    {
+        return APPLICATION_SOURCE_DIR . '/Generated/OpenTelemetry/Hooks/';
+    }
+
+}
+```
+
+`\Spryker\Zed\Opentelemetry\OpentelemetryConfig::areOnlyPublicMethodsInstrumented()` - OOTB we cover with hooks only public methods of regular classes and all methods of Controller classes, but you can change that with this configuration method.
+```php
+class OpentelemetryConfig extends AbstractBundleConfig
+{
+    public function areOnlyPublicMethodsInstrumented(): bool
+    {
+        return true;
+    }
+
+}
+```
+
+`\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getCriticalClassNamePatterns()` - some of the spans can be marked as `critical` in order to give them more priority on sampling. You can define what classes you are interested in for that. OOTB we have Controllers and Facades here. With the current implementation it's not a Regex, but just a string that we are looking for in the class name.
+```php
+class OpentelemetryConfig extends AbstractBundleConfig
+{
+    public function getCriticalClassNamePatterns(): array
+    {
+        return [
+            'Facade',
+            'Controller',
+        ];
+    }
+
+}
+```
+
+### Enable PHP extensions
+
+Hooks processing requires you to have a few PHP extensions in place. Spryker has prepared a new PHP image, so you need to install nothing, just enable them in your deploy file.
+
+```yaml
+namespace: spryker-otel
+tag: 'dev'
+
+environment: docker.dev
+image:
+    tag: spryker/php:8.3-alpine3.20-otel
+    php:
+        enabled-extensions:
+            - opentelemetry
+            - grpc
+            - protobuf
+```
+Be advised that according to [extension README](https://github.com/open-telemetry/opentelemetry-php-instrumentation?tab=readme-ov-file#conflicting-extensions) `blackfire` extension can have a conflict with a `opentelemetry` one, so make sure that you are not using both in the same time. We also would not recommend to run it together with a `newrelic` one.
+
+## Sampling
+As already mentioned before, spans can be sampled. But what does it mean?
+Spryker is a big application with humongous amount of methods executed during the request. Some of them executed a lot of times. OpenTelemetry uses a PHP functions to open and close spans. This can add not desired load on your application, so we prepare instruments to reduce amount of spans that is sent with traces.
+In our implementation sampling is done 3 times during the execution - first (`tracing sampling`) the trace it self is deciding if it can be just a root span without any details, second time (`Opening span sampling`) before we even open a span and third time (`Closing span sampling`) after a span is closing to remove super fast and succesful spans as the most probably have no value for you.
+
+### Tracing sampling
+In most cases, we don't need a detailed trace on each and every request or command execution. But we want at least know that it was there and see an error if one was triggered during the execution.
+For this, we are checking a few things when we initialise a trace. We check if the method is a WEB request or a console command.
+For the WEB request we check if the HTTP method is GET or not. If not, the trace is going to be detailed in any case.
+If the method was GET, we generate a random number from 0 to 1.0 and compare it against a configured probability. If the generated number less than a configured value - the trace will include spans. If not, only a root span will be present.
+Console command sampling works exactly the same, but the configuration value is separate for the more fine tuning.
+
+### Opening span sampling
+When we try to start a span we check if we want to do so, by the same algorithm as we did for a trace itself. The only difference is that we are using different configuration value and the random number is generated on each and every span starting.
+Not all spans are equal so we use different probabilities for different types of spans. You can read about criticality of spans below.
+If decision was to not sample a span, an empty one will be opened. Empty spans are just a placeholder that we are using to build a tree properly. They will appear in the trace in any case.
+
+### Closing span sampling
+We also may want to filter super fast spans that have no errors inside of them. After the sampled span is closing we are checking its execution time and status. If span is successful and faster than a configured value (`OTEL_BSP_MIN_SPAN_DURATION_THRESHOLD` or `OTEL_BSP_MIN_CRITICAL_SPAN_DURATION_THRESHOLD`) it will also be omitted and will not appear in the trace.
+
+### Span criticality
+Some of the spans are more relevant for users, some of them are not. So for span sampling we have 3 different span criticality: `non critical`, `regular` and `critical` one.
+They are using different probability and execution time limits that can be configured separately. (be advises that for `Closing span sampling` we treat `regular` and `non critical` spans as the same span type for now).
+
+#### Critical spans
+When we execute something that is communicating with other services or change a state of the application, we may want to see those inside of the traces with bigger probability. We want to mark such spans as critical.
+OOTB we have a few span types that are considered as critical:
+- RabbitMQ spans;
+- ElasticSearch spans;
+- Redis spans;
+- Guzzle spans.
+- Propel INSERT/DELETE/UPDATE calls.
+- Hooks for classes that are configured in `\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getCriticalClassNamePatterns()` method.
+
+They all get a span attribute `is_critical` and use a different probability and execution time values.
+
+#### Non Critical spans
+Currently we mark only Propel SELECT calls spans as `no_critical` as we have a lot of them in the system and they can easily overflow a trace with useless information.
+
+#### Regular spans
+All other spans are considered as `regular`.
+
+#### How to make span critical or not.
+By setting a span attribute `no_critical` and `is_critical`, span can be marked as critical or not.
+
+### Sampling configuration
+Like already mentioned, valued that used for sampling can be changed. In order to do so, you need to change a few env variables.
+
+| Variable Name                                   | Description                                                       commitomm                                        | Default Value | Allowed range |
+|-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|---------------|---------------|
+| `OTEL_BSP_MIN_SPAN_DURATION_THRESHOLD`          | Used in `Closing span sampling` to define a value in ms when spans that execution time is lower to be filtered out | 20            | 0...100000    |
+| `OTEL_BSP_MIN_CRITICAL_SPAN_DURATION_THRESHOLD` | Same as a previous one, but used for critical spans only                                                           | 10            | 0...100000    |
+| `OTEL_TRACES_SAMPLER_ARG`                       | A probability value that is used to define if WEB GET request trace going to be detailed or not                    | 0.1           | 0...1.0       |
+| `OTEL_CLI_TRACE_PROBABILITY`                    | A probability value that is used to define if console command trace going to be detailed or not                    | 0.5           | 0...1.0       |
+| `OTEL_TRACES_CRITICAL_SAMPLER_ARG`              | A probability value that is used to define if `critical` span will be sampled or not                               | 0.5           | 0...1.0       |
+| `OTEL_TRACES_NON_CRITICAL_SAMPLER_ARG`          | A probability value that is used to define if `non critical` span will be sampled or not                           | 0.1           | 0...1.0       |
+| `OTEL_TRACE_PROBABILITY`                        | A probability value that is used to define if `regular` span will be sampled or not                                | 0.3           | 0...1.0       |
+
+Increasing those values will make your traces more detailed, but also can slow down your application as more spans will be sampled and sent to a collector.
+
+### Additional configuration
+
+| Variable Name                    | Description                                                                                                                                                                  | Default Value           | Allowed range                                                  |
+|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|----------------------------------------------------------------|
+| `OTEL_SERVICE_NAMESPACE`         | Value is used to define a service namespace that is used in resource definition                                                                                              | 'spryker'               | any string value                                               |
+| `OTEL_EXPORTER_OTLP_ENDPOINT`    | Defines a url for a collector. Please contact a Spryker representative to get one for a Cloud env.                                                                           | 'http://collector:4317' | valid url                                                      |
+| `OTEL_SERVICE_NAME_MAPPING`      | A JSON object that includes mapping from application URL to service name. This mapping is used if no service name was provided via `MonitoringService::setApplicationName()` | '{}'                    | valid json with keys as service name and value as  URL pattern |
+| `OTEL_DEFAULT_SERVICE_NAME`      | If no service name is provided and no name was defined in `OTEL_SERVICE_NAME_MAPPING`, this default name will be used instead                                                | 'Default Service'       | any valid string                                               |
+| `OTEL_BSP_SCHEDULE_DELAY`        | Defines a delay in ms that will be used to wait before sending batch of spans into the exporter. The bigger the number, the bigger the batch.                                | 1000                    | 0...100000000                                                  |
+| `OTEL_BSP_MAX_QUEUE_SIZE`        | Defines a max size of the queue of spans that can be processed in one request                                                                                                | 2048                    | at least an amount of spans you want to see                    |
+| `OTEL_BSP_MAX_EXPORT_BATCH_SIZE` | Defines a size of the batch of spans. After this size is reached, batch will be sent to the exporter.                                                                        | 512                     | more than 0 and less than `OTEL_BSP_MAX_QUEUE_SIZE`            |
+
+
+## Custom attributes
+
+You may want to add some custom data to your traces. E.g. a user id that was logged that time into your system. Or a current store name. Or anything else that can vary from request to request. In order to do so, you can add a custom attribute that will appear in the root span for better visibility.
+We would recommend to do so using `MonitoringService::addCustomParameter()` method. By default Spryker provides a few of those attributes already, like a current store name and locale.
+If you don't want to use `MonitoringService` for some reason, you may use `\Spryker\Service\Opentelemetry\OpentelemetryService::setCustomParameter` directly. It does exactly the same job, but without necessity to install `Monitoring` module.
+All attributes added via those services will be added into the root span on the very end of request execution, so you can call it even after response wes already sent.
+
+## Custom events
+
+If you want to add some custom event to you trace in order to configure some logic into your backend, you can trigger a custom event during the execution. It works pretty much the same as adding custom attributes, so it's pretty easy to use.
+The same as for custom attributes you can add those via `\Spryker\Service\Monitoring\MonitoringService::addCustomEvent()` or via `\Spryker\Service\Opentelemetry\OpentelemetryService::addEvent()` if you dont want to install `Monitoring` module.
+Event will be wired into the root span.
+
+## Error handling
+
+You are definitely want to track all possible errors during the execution. OOTB OpenTelemetry integration will catch all exceptions that were thrown during request/command execution and attach those as events into the root span. Those events should also be present in the span of the method that thrown the exception, but only if we have a hook for this method in the first place.
+In order to catch those error in any case we would recommend to use `\Spryker\Service\Monitoring\MonitoringService::setError()` or `\Spryker\Service\Opentelemetry\OpentelemetryService::setError()` inside of the Error Handler of your application.
+Default Spryker's Error Handler already executes `\Spryker\Service\Monitoring\MonitoringService::setError()`, so if you are using `Monitoring` module and default Error Handler - you are covered. But if you don't, please adjust your error handler accordingly.
+This will add a error event into the root span and will change its status to the `error` one. We would highly recommend to check this part during integration of OpenTelemetry into your system.
+
+## Changing a service name
+
+Service name allows you to filter traces by the source. You may want to check only Yves traces or mb just to check only Glue requests, but you backend can show you a bunch of CLI commands from your Scheduler.
+You can define a service name via `\Spryker\Service\Monitoring\MonitoringService::setApplicationName()` or `\Spryker\Service\Opentelemetry\OpentelemetryService::setResourceName()`.
+If you are using the `MonitoringService` and any method from it was executed, you will get a generated service name in any case. By default it looks like `APPLICATION-REGION_OR_STORE(application.env)`, where `APPLICATION` is a name of your application (ZED, YVES, GLUE, etc.), `REGION_OR_STORE` is a current store or region name that depends if your application works in Dynamic Store mode or not, and `application.env` is an env name from your deploy file. You can change any of those value via `MonitoringService` or change the name completely via `OpentelemetryService`.
+If nothing was provided by services, OpenTelemetry integration will try to resolve a service name for you.
+First of all `OTEL_SERVICE_NAME_MAPPING` value will be fetched and will try to find a proper service name based on the URL or CLI binary file name.
+If no value was provided or nothing from it was suitable or us - the default service name from `OTEL_DEFAULT_SERVICE_NAME` env value will be used.
+
+## Changing a trace name
+
+Trace name (or in our case a root span name) should show you what request or command was executed. By default it should include a HTTP method name with an URL for the WEB requests and command name for a command execution.
+But it can be also changed during the execution. OOTB Spryker will change a WEB requests trace name in order to reflect a route name of the request. But if you don't like it or don't use a `Monitoring` module, you can define it via `\Spryker\Service\Opentelemetry\OpentelemetryService::setRootSpanName()` or `\Spryker\Service\Monitoring\MonitoringService::setTransactionName()` accordingly.
+
+## Recommendations
+
+Due to the fact that we use PHP code to instrument codebase, you should consider performance. Tracing is an expensive operation and we should use it wisely.
+
+Please minimise amount of generated spans per request. OpenTelemetry documentation recommends to have no more than 1000 of them. So you can skip some spans via configuration that are not relevant to you. Don't be afraid, errors will be processed even if the method was not instrumented as Error Event will be attached to the root span.
+
+Use sampling to not get a full trace every time. Please check configuration section for the reference.
+
+Skip some traces. You may not want to get a full trace for all of your transactions. You can define a probability of detailed trace overview by setting a probability via `OTEL_TRACE_PROBABILITY` env variable. Be advised that Trace still will be processed and root span will be there for you. Also requests that are changing something in your application (POST, DELETE, PUT, PATCH) considered as critical and will be processed anyway.

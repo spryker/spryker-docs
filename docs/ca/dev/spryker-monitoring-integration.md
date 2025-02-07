@@ -6,8 +6,35 @@ OpenTelemetry is an open-source framework that provides APIs, libraries, and age
 
 ## Telemetry data in scope of Spryker Monitoring Integration
 The Spryker Monitoring Integration focuses on several key entities to provide comprehensive monitoring:
-- **Traces and Spans**: In OpenTelemetry, a **trace** represents the journey of a single request or transaction as it moves through various components of a system, capturing the end-to-end flow. A **span** is a single operation or unit of work within a trace, containing information like the operation name, start and end times, and any relevant metadata. Together, traces and spans provide a detailed view of the interactions and performance of different parts of an application, helping to diagnose issues and optimize performance.
-- **Health Status Metrics**: Monitoring the overall health of critical backing services such as the SQL Database, Message Broker, Scheduler, and key SCOS Services. This ensures continuous insight into the stability and performance of the system components. To learn more about health status metrics check out [Health Status Metrics](/docs/ca/dev/smi-health-status-metrics.md) page.
+### Traces and Spans
+In OpenTelemetry, a **trace** represents the journey of a single request or transaction as it moves through various components of a system, capturing the end-to-end flow. A **span** is a single operation or unit of work within a trace, containing information like the operation name, start and end times, and any relevant metadata. Together, traces and spans provide a detailed view of the interactions and performance of different parts of an application, helping to diagnose issues and optimize performance.
+### Health Status Metrics
+Via Spryker Monitoring Integration our customers have access to a set of service health metrics. These metrics provide a high-level view into the health status of enabled services. The level of detail is as follows.
+
+> [!NOTE]
+> Labels/Dimensions/Attributes in relation to metrics are used interchangeably. The terminology depends on the customer's solution choice. For example in Grafana, we would use the term labels, while in Dynatrace, we use dimensions, etc.
+
+#### Metrics Without Dimensions
+The following metrics return a gauge with a binary value: 1 (Green) or 0 (Red). They are composites of multiple service-related signals that, after transformations and calculations, yield a single value indicating the service's health.
+
+```yaml
+hc_rds: Reports 0 or 1 for the overall health of the RDS Service.
+hc_jenkins: Reports 0 or 1 for the overall health of the Jenkins Service.
+hc_rabbitmq: Reports 0 or 1 for RabbitMQ health.
+```
+
+#### Metrics with Dimensions
+These metrics can be split by the following dimensions/labels*:
+```yaml
+hc_rabbitmq_message_count_sum: A count of RabbitMQ messages [dimension_queue, dimension_virtualhost].
+hc_jenkins_builds_success_build_count_total.count: A count of successful Jenkins jobs [jenkins_job].
+hc_jenkins_builds_failed_build_count_total.count: A count of failed Jenkins jobs [jenkins_job].
+hc_tasks_cpu_average: CPU utilization in % for cluster tasks [dimension_clustername, dimension_servicename].
+hc_tasks_memory_utilization: Memory utilization in % for cluster tasks [dimension_clustername, dimension_servicename].
+```
+#### Metric Details
+The default metrics resolution is 60 seconds. All metrics can be split by telemetry-data-account.
+
 
 ## How do I get it?
 ### Prerequisites

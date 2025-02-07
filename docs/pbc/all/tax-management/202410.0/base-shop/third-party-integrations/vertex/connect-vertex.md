@@ -1,7 +1,7 @@
 ---
 title: Connect Vertex
 description: Find out how you can confiure Sprykers third party Vertex in to your Spryker Based project.
-last_updated: Nov 3 2023
+last_updated: Jan 8 2025
 template: howto-guide-template
 ---
 
@@ -11,6 +11,7 @@ This document describes how to connect a Spryker project to Vertex.
 
 - [Install Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html)
 - Create an account with [Vertex](https://www.vertexinc.com/). If you need support getting a Vertex account, [contact support](https://support.spryker.com/) or your Customer Success Manager.
+- Create an account with [Taxamo](https://www.taxamo.com/) (optional feature). If you need support getting a Taxamo account, [contact support](https://support.spryker.com/) or your Customer Success Manager.
 
 ## Connect Vertex
 
@@ -27,8 +28,6 @@ This document describes how to connect a Spryker project to Vertex.
 8. For **DEFAULT TAXPAYER COMPANY CODE**, enter the company code you set in your Vertex account.
 9. Optional: To enable invoice saving in Vertex, select **Enable invoice save in Vertex**.
 10. Click **Save**.
-
-![vertex-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/vertex-configuration.png)
 
 ## Verify Vertex connection
 
@@ -54,6 +53,39 @@ If you configured invoices to be saved in Vertex, you can view the taxes process
 ![vertex-report-output](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/vertex-report-output.png)
 4. On the invoice page, you can verify the invoice number that corresponds to the Spryker order number and the applicable country tax calculated by Vertex.
 ![invoice-in-vertex](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/invoice-in-vertex.png)
+
+## Connect Taxamo (optional)
+
+1. In the Back Office, go to **Apps**.
+2. On the **App Composition Platform Catalog** page, click **Vertex**.
+   This opens the Vertex app details page.
+3. In the top right corner of the Vertex app details page, click **Connect app**.
+   The notification saying that the application connection is pending is displayed.
+4. In the top right corner of the Vertex app details page, click **Configure**.
+5. To activate the app, select **Active**.
+6. Select Enable Tax id validation (taxamo).
+7. In **Api URL (v3)**, enter the Api URI of your Taxamo platform. For details on the Api URI, see [Taxamo documentation](https://docs.marketplace.taxamo.com/docs/standalone#useful-links).
+7. In **Seller token**, enter your Taxamo seller token. See [Vertex documentation](https://docs.marketplace.taxamo.com/docs/getting-started-1) for details about how to obtain it.
+10. Click **Save**.
+
+![taxamo-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-taxamo/taxamo-configuration.png)
+
+## Verify Taxamo tax id validation endpoint connection
+
+Send `/tax-id-validate` validation request via GLUE to validate your tax ID.
+
+```json
+{
+    "data": {
+        "type": "tax-id-validate",
+        "attributes": {
+            "countryCode": "**",
+            "taxId": "*****"
+        }
+    }
+}
+```
+
 
 ## Retain Vertex configuration after a destructive deployment
 

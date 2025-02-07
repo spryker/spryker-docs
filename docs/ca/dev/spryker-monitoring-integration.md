@@ -9,7 +9,7 @@ The Spryker Monitoring Integration focuses on several key entities to provide co
 ### Traces and Spans
 In OpenTelemetry, a **trace** represents the journey of a single request or transaction as it moves through various components of a system, capturing the end-to-end flow. A **span** is a single operation or unit of work within a trace, containing information like the operation name, start and end times, and any relevant metadata. Together, traces and spans provide a detailed view of the interactions and performance of different parts of an application, helping to diagnose issues and optimize performance.
 ### Health Status Metrics
-Via Spryker Monitoring Integration our customers have access to a set of service health metrics. These metrics provide a high-level view into the health status of enabled services. The level of detail is as follows.
+Via Spryker Monitoring Integration our customers have access to a set of service health metrics. These metrics provide a high-level view into the health status of enabled services such us database, message broker, scheduler and application services. The level of detail is as follows.
 
 > [!NOTE]
 > Labels/Dimensions/Attributes in relation to metrics are used interchangeably. The terminology depends on the customer's solution choice. For example in Grafana, we would use the term labels, while in Dynatrace, we use dimensions, etc.

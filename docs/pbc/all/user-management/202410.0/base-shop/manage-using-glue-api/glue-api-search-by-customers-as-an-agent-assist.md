@@ -54,7 +54,7 @@ To search by customers, send the request:
 | REQUEST | USAGE |
 | --- | --- |
 | `GET http://glue.mysprykershop.com/agent-customer-search` | Return the list of all customers. |
-| `GET http://glue.mysprykershop.com/agent-customer-search?page[limit]=5&page[offset]=5` | Return a list of 5 customer entries starting from the 6th entry. |
+| `GET http://glue.mysprykershop.com/agent-customer-search?page[limit]=5&page[offset]=5` | Return a list of 5 customer entries starting from the sixth entry. |
 | `GET http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com` | Search for the customer with the `sonia@spryker.com` email address. |
 | `GET http://glue.mysprykershop.com/agent-customer-search?q=spencor` | Search for the customer with the `spencor` name. |
 | `GET http://glue.mysprykershop.com/agent-customer-search?q=DE--5` | Search for the customer with the `DE--5` customer reference. |

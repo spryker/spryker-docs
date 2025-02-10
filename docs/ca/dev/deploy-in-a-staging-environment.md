@@ -75,7 +75,7 @@ Enter *latest* if you want to deploy the last built application version. You can
 
 {% info_block infoBox "Deploy types" %}
 
-Normal deploy is a pipeline that includes all the stages of a complete CI/CD flow.  The Install stage of this pipeline does not perform any dangerous data manipulations like database cleanup or scheduler reset. If you want to reset demo data during deployment, select *DESTRUCTIVE_Deploy_Spryker_spryker-staging*.
+Normal deploy is a pipeline that includes all the stages of a complete CI/CD flow. The Install stage of this pipeline does not perform any dangerous data manipulations like database cleanup or scheduler reset. If you want to reset demo data during deployment, select *DESTRUCTIVE_Deploy_Spryker_spryker-staging*.
 
 {% endinfo_block %}
 

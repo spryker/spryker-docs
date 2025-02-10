@@ -43,7 +43,7 @@ The following alerts are configured by default for all environments.
 
 |NAME OF METRIC   | DESCRIPTION  |
 |---|---|
-| ElastiCache Status  | Checks the status of ‘ElastiCache for Redis'.  |
+| ElastiCache Status  | Checks the status of 'ElastiCache for Redis'.  |
 | Redis is not used by any service  | Checks whether ElastiCache is used.  |
 | Redis available Memory  | Checks if Redis free memory on the host is running low.  |
 | Redis High CPU  | Checks if the Redis service is high on CPU usage.  |

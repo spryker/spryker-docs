@@ -219,7 +219,7 @@ If you need to modify the CSV column mapping for any reason you will have to ext
 
 ## Console
 
-To export the products and categories,  we must register the Collectors we have just created in the Console.  The Econda module already has everything in place and the only thing you need to do is add `EcondaFileExportConsole` to `Pyz\Zed\Console\ConsoleDependencyProvider` as bellow:
+To export the products and categories,  we must register the Collectors we have just created in the Console. The Econda module already has everything in place and the only thing you need to do is add `EcondaFileExportConsole` to `Pyz\Zed\Console\ConsoleDependencyProvider` as bellow:
 
 ```php
 <?php

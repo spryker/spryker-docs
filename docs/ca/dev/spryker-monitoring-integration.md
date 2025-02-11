@@ -53,7 +53,7 @@ Spryker Support will guide you through the setup process once the request is sub
 
 ### Instrumenting Your Application
 To send telemetry data to your APM tool, your application must be instrumented using OpenTelemetry. This process ensures that the necessary data is collected and forwarded to the monitoring system of your choice.
-Customers can self-serve the instrumentation by following the [instrumentation guide](/docs/ca/dev/opentelemetry/how-to-instrument.md), but Spryker also offers expert services to assist with this setup. If you require professional support, please contact your sales representative for further assistance.
+Customers can self-serve the instrumentation by following the [instrumentation guide](/docs/ca/dev/opentelemetry/how-to-instrument.md#integration), but Spryker also offers expert services to assist with this setup. If you require professional support, please contact your sales representative for further assistance.
 
 > [!NOTE]
 >This solution only supports the **OpenTelemetry Collector** for telemetry ingestion. **Proprietary vendor agents (e.g., Dynatrace, DataDog, or New Relic agents) are not supported**. Instead, these platforms ingest telemetry streamed through the OpenTelemetry Collector, ensuring flexibility, interoperability, and vendor neutrality while adhering to industry-standard observability practices

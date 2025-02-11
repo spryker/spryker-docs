@@ -6,20 +6,10 @@ OpenTelemetry is an open-source framework that provides APIs, libraries, and age
 
 ## Telemetry data in scope of Spryker Monitoring Integration
 The Spryker Monitoring Integration focuses on several key entities to provide comprehensive monitoring:
-### Traces
-In OpenTelemetry, a **trace** represents the journey of a single request or transaction as it moves through various components of a system, capturing the end-to-end flow. A trace has a name defined automatically or it can be changed via `\Spryker\Service\Monitoring\MonitoringServiceInterface::setTransactionName()` method if you wire a plugin for it. E.g. it can be a route name.
-### Spans
-A **span** is a single operation or unit of work within a trace, containing information like the operation name, start and end times, and any relevant metadata. Together, traces and spans provide a detailed view of the interactions and performance of different parts of an application, helping to diagnose issues and optimize performance. In OpenTelemetry, they include the following information:
-- Name
-- Parent span ID (empty for root spans)
-- Start and End Timestamps
-- Span Context
-- Attributes
-- Span Events
-- Span Links
-- Span Status
 
-You can say that Span in our case represents an execution of a single method.
+### Traces and Spans
+In OpenTelemetry, a **trace** represents the journey of a single request or transaction as it moves through various components of a system, capturing the end-to-end flow. A **span** is a single operation or unit of work within a trace, containing information like the operation name, start and end times, and any relevant metadata. Together, traces and spans provide a detailed view of the interactions and performance of different parts of an application, helping to diagnose issues and optimize performance.
+
 ### Health Status Metrics
 Via Spryker Monitoring Integration our customers have access to a set of service health metrics. These metrics provide a high-level view into the health status of enabled services such us database, message broker, scheduler and application services. The level of detail is as follows.
 

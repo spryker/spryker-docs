@@ -243,7 +243,7 @@ The following table describes the attributes you enter and select when creating 
 | Last name   | Customer's last name.   | &check; |
 | Email   | Customer's email address.   | &check; |
 | Country   | Drop-down menu with the list of countries to select.  | &check; |
-| Address 1 | 1st line of the customer's address.  | &check; |
+| Address 1 | First line of the customer's address.  | &check; |
 | Address 2  | 2nd line of the customer's address.  | &check; |
 | Company  | Customer's company name.  |     |
 | City   | Customer's city.  | &check;  |

@@ -13,7 +13,7 @@ You may want to get familiar with [OpenTelemetry Documentation first](https://op
 ### Things that you should know
 
 #### Trace
-Trace represents a single transaction. It has a unique ID and all spans are related to it. Trace has a name that is defined automatically or can be changed with `\Spryker\Service\Monitoring\MonitoringServiceInterface::setTransactionName()` method if you wire a plugin for it. E.g. it can be a route name.
+Trace represents a single transaction. It has a unique ID and all spans are related to it. Trace has a name that is defined automatically or can be changed as described [here](https://github.com/spryker/spryker-docs/edit/otel-main-doc/docs/ca/dev/opentelemetry/how-to-instrument.md#integration).
 
 #### Span
 A span represents a unit of work or operation. Spans are the building blocks of Traces. In OpenTelemetry, they include the following information:

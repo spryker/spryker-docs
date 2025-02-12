@@ -123,7 +123,7 @@ We've divided the preparation into approximate timeframes, and you can adjust th
 | CLO-16 | Cloud    | Disable email sending restrictions           | Disable email sending restrictions.
 | CLO-17 | Cloud    | Remove basic auth                            | Remove basic authentication from the frontend part and deploy the change.
 | GEN-9  | General  | Run the go-live communication plan           | Run the go-live communication plan.
-| CLO-18 | Cloud    | Disable destructive pipeline                 | Disable the destructive pipeline after the successful go-live process.
+| CLO-18 | Cloud    | Disable destructive pipeline                 | Disable the destructive pipeline after a successful go-live.
 | GEN-10 | General  | Disable old system after 72 hours            | After pointing the domain name to your Spryker project, some of your customers may still see your old project until the DNS propagation is completed. So, keep it live for at least 72 hours after the migration.
 
 {% info_block infoBox "Don't hesitate to contact us" %}

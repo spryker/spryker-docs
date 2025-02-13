@@ -60,7 +60,7 @@ If you configured invoices to be saved in Vertex, you can view the taxes process
 ![invoice-in-vertex](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/invoice-in-vertex.png)
 
 
-## Verify Taxamo tax ID validation endpoint connection
+## Verify Taxamo tax ID validation
 
 Validate a tax ID by sending a request to `/tax-id-validate` using Glue API.
 

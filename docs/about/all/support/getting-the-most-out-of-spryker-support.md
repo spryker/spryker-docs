@@ -58,6 +58,11 @@ If you need help with whitelisting the email addresses, forward this request to 
 
 -->
 
+## Adjust Auto Replies
+Automatic responses to our updates and notifications can lead to a lot of cases being created. Please make sure you are not sending automatic replies to support@spryker.com.
+
+If you are using the email address of a ticket system or any other automated system to receive our communications and notifications, please make sure that you do not send automatic replies, such as receipts or other automated communication, back to support@spryker.com.
+
 ## Provide all the information
 
 Our goal is to increase the number of tickets that are solved with the first engagement. This is more likely to happen when a support case is opened with all the information needed to assess, reproduce, and solve the problem. Such cases may be resolved with the first response.

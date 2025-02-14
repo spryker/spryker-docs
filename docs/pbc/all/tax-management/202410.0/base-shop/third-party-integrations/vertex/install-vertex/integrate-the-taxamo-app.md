@@ -6,7 +6,12 @@ last_updated: Jan 8, 2025
 template: howto-guide-template
 ---
 
-To [install Taxamo](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html), you need to update [spryker/tax-app:0.4.0](https://github.com/spryker/tax-app-rest-api) and install the [spryker/tax-app-rest-api](https://github.com/spryker/tax-app-rest-api) module first.
+To [install Taxamo](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html), you need to update [spryker/tax-app:0.4.0](https://github.com/spryker/tax-app) and install the [spryker/tax-app-rest-api](https://github.com/spryker/tax-app-rest-api) module first.
+
+```bash
+composer require spryker/tax-app-rest-api:"^0.1.0" --update-with-dependencies
+```
+
 
 To integrate Taxamo API, follow these steps.
 

@@ -1,6 +1,6 @@
 ---
 title: Strategy Resolvers
-description: This document 
+description: This document
 last_updated: Feb 6, 2025
 template: howto-guide-template
 redirect_from:
@@ -8,7 +8,7 @@ redirect_from:
 
 ---
 
-Spryker introduces context-based dependency (eg: plugin-stack) resolution using a strategy resolver to handle complex workflows that stretch across multiple modules. This enhancement allows defining multiple dependencies and selecting the appropriate one dynamically at runtime by the business logic.
+Spryker introduces context-based dependency resolution, such as plugin-stack, using a strategy resolver to handle complex workflows that stretch across multiple modules. This enhancement allows for defining multiple dependencies and selecting the appropriate one dynamically at runtime by the business logic.
 
 Why this change? Some workflows require multiple plugin-stack variations that need to be switched in sync.
 What does it do? Allows defining multiple plugin-stacks and resolving the correct one based on a context identifier.
@@ -55,7 +55,7 @@ interface CheckoutExtensionContextsInterface
 
 ### Configuring Strategy Resolver in the Factory
 
-The factory is responsible for creating the strategy resolver and mapping all supported contexts to plug-in stacks and choose fallbacks if needed. 
+The factory is responsible for creating the strategy resolver and mapping all supported contexts to plug-in stacks and choose fallbacks if needed.
 It is important to well define the generic type of the strategy resolver to ensure type safety.
 
 The below example defines plugin stacks for `Checkout` and `Order Amendment` contexts, while keeps `Checkout` context as fallback for backward compatibility reasons.
@@ -105,7 +105,7 @@ class CheckoutWorkflow implements CheckoutWorkflowInterface
      * @var \Spryker\Shared\Kernel\StrategyResolverInterface<list<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface>>
      */
     protected $preConditionPluginStrategyResolver;
-    
+
     /**
      * ...
      * @param \Spryker\Shared\Kernel\StrategyResolverInterface<list<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface>> $preConditionPluginStrategyResolver
@@ -116,7 +116,7 @@ class CheckoutWorkflow implements CheckoutWorkflowInterface
         $this->preConditionPluginStrategyResolver = $preConditionPluginStrategyResolver;
         ...
     }
-    
+
     protected function checkPreConditions(QuoteTransfer $quoteTransfer, CheckoutResponseTransfer $checkoutResponse)
     {
         $isPassed = true;

@@ -19,7 +19,7 @@ redirect_from:
   - /docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html
 ---
 
-Previously, out of the box, Spryker provided support only for Elasticsearch 5 as the search provider.  It was impossible to use major versions of Elasticsearch later because of the breaking changes introduced in its version 6 - primarily because of the removal of mapping types. From the very beginning, Spryker's search setup included one index per store, which was logically divided into several mapping types to support different types of resources. Besides, there was no easy way to substitute Elasticsearch with alternative search providers.
+Previously, out of the box, Spryker provided support only for Elasticsearch 5 as the search provider. It was impossible to use major versions of Elasticsearch later because of the breaking changes introduced in its version 6 - primarily because of the removal of mapping types. From the very beginning, Spryker's search setup included one index per store, which was logically divided into several mapping types to support different types of resources. Besides, there was no easy way to substitute Elasticsearch with alternative search providers.
 
 Refactoring of the Spryker's search sub-system has two main goals:
 
@@ -39,7 +39,7 @@ The central place of the Spryker's search sub-system is the *Search* module. Thi
 Old versions of the Search module were highly coupled to Elasticsearch 5 as the search provider.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Migration+Concepts/Current+Search+state+Copy.png)
 
-From now on, all the search provider-specific tasks are performed by the dedicated modules, which implement various plugin interfaces from the new *SearchExtension* module and are hooked to the Search module. The Search module itself is all about receiving requests through its API and routing them to the corresponding search provider-specific module(s) through the delegation mechanism. All Elasticsearch specific code has been deprecated in the Search module and moved to the new *SearchElasticsearch* module.
+From now on, all the search provider-specific tasks are performed by the dedicated modules, which implement various plugin interfaces from the new *SearchExtension* module and are hooked to the Search module. The Search module itself is all about receiving requests through its API and routing them to the corresponding search provider-specific modules through the delegation mechanism. All Elasticsearch specific code has been deprecated in the Search module and moved to the new *SearchElasticsearch* module.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Migration+Concepts/Desired+state+Copy.png)
 
 To achieve this in the backward-compatible way, a new concept called **search context** was introduced, which is represented by the `SearchContextTransfer` object. The search context is needed to determine the search provider, which should respond to a particular search request, as well as to store information/configuration needed to handle this request. The main and mandatory part of this search context is the source identifier. The source identifier is used in two scenarios:
@@ -55,11 +55,11 @@ There are several new interfaces, for which search provider-specific modules may
 
 2. `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextExpanderPluginInterface` (optional). This API is used to expand search context with various vendor specific information/configuration, which is needed to handle a particular search request.
 
-3. `Spryker\Zed\SearchExtension\Dependency\Plugin\InstallPluginInterface`. This API is used to create the infrastructure for a particular search provider (e.g., create indexes and index maps for Elasticsearch).
+3. `Spryker\Zed\SearchExtension\Dependency\Plugin\InstallPluginInterface`. This API is used to create the infrastructure for a particular search provider–for example, create indexes and index maps for Elasticsearch.
 
 ### Creating the infrastructure for search
 
-All the Elasticsearch specific commands in the *Search* module were deprecated and replaced with generic commands (e.g., `search:setup:sources` instead of `search:setup:indexes`), which utilize `Spryker\Zed\SearchExtension\Dependency\Plugin\InstallPluginInterface` to hand over the infrastructure setup tasks to search provider-specific modules.
+All the Elasticsearch specific commands in the *Search* module were deprecated and replaced with generic commands–for example, `search:setup:sources` instead of `search:setup:indexes`, which utilize `Spryker\Zed\SearchExtension\Dependency\Plugin\InstallPluginInterface` to hand over the infrastructure setup tasks to search provider-specific modules.
 
 ### Searching for data
 

@@ -356,7 +356,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 1. Create a warehouse with a non-US address.
 2. Specify product stock for a product.
 3. Add the product to a cart.
-4. On the summary page of checkout, check that you can’t place the order because of a failed request to the Avalara API.
+4. On the summary page of checkout, check that you can't place the order because of a failed request to the Avalara API.
 
 {% endinfo_block %}
 

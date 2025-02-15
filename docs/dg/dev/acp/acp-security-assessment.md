@@ -88,7 +88,7 @@ Spryker will be provided with the following information for conducting a test:
 Test results will be shared in a PDF, Word, or HTML format and will contain the following information:
 
 - The type/classification of the vulnerability - (XSS, SQL Injection, CSRF, etc.) according to [OWASP](https://owasp.org/www-community/vulnerabilities/), [CWE](https://cwe.mitre.org/data/definitions/699.html), or [NIST NVD](https://nvd.nist.gov/vuln/).
-- The location of the issue within the code or steps to reproduce the issue (e.g. example of a network request triggering the vulnerability).
+- The location of the issue within the code or steps to reproduce the issue–for example, a network request triggering the vulnerability.
 - Recommendation on how to fix or mitigate it.
 As stated earlier, these results will not cover the entire code base.
 

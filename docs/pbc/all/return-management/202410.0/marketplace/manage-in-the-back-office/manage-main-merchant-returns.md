@@ -132,7 +132,7 @@ You can trigger the following states for the returns on the **Overview of Return
 | Execute return               | Select this state when you want to perform the return. When triggering this state, the return status is changed to *returned*. |
 | Refund                       | Select this state when you want to refund the returned item. When triggering this state, the return status is changed to *refunded*. |
 | Cancel return                | Select this state when you want to cancel the submitted return. When triggering this state, the return status is changed to *return canceled*. |
-| Send return back to customer | Select this state when you shipped the returned item back to the customer.  When triggering this state, the return status is changed to *shipped to customer*. |
+| Send return back to customer | Select this state when you shipped the returned item back to the customer. When triggering this state, the return status is changed to *shipped to customer*. |
 | Deliver return               | Select this state when the return was delivered to customer. When triggering this state, the return status is changed to *delivered*. |
 
 ## Printing a main merchant return slip

@@ -849,7 +849,7 @@ No general conventions.
 - Creating, updating, and deleting functions need to be separated by concern, even if they use overlapping internal methods.
 - The `Entity manager` class needs to define and implement an interface that holds the specification of each `public` method.
 - `Entity manager` methods need to receive only [Transfer Objects](#transfer-object) as input parameters.
-- `Entity manager` methods need to return `void` or the saved object or objects as [Transfer Object(s)](#transfer-object).
+- `Entity manager` methods need to return `void` or the saved object or objects as [Transfer Objects](#transfer-object).
 -`Entitie manager` needs to use [Entities](#entity) and/or [Query Objects](#query-object) for database operations because raw SQL usage isn't feasible.
 
 </details>
@@ -1364,7 +1364,7 @@ interface OmsConstants
 ```
 
 
-### Navigation.XML
+### Navigation.xml
 
 ```
 [Organization]
@@ -2201,7 +2201,7 @@ No general conventions.
 There are three modules involved:
 
 1. **Plugin definer** (aka **extension module**): The module that defines and holds the `Plugin Interface` (example: `CompanyPostCreatePluginInterface` in `CompanyExtension` module).
-2. **Plugin executor**: The module that uses the [Plugin(s)](#plugin) in its [Dependency Provider](#dependency-provider) thus provides extension point (example: `CompanyDependencyProvider::getCompanyPostCreatePlugins()` in `Company` module)
+2. **Plugin executor**: The module that uses the [plugin or plugins](#plugin) in its [Dependency Provider](#dependency-provider) thus provides extension point (example: `CompanyDependencyProvider::getCompanyPostCreatePlugins()` in `Company` module)
 3. **Plugin providers**: The modules that implement a [Plugin](#plugin) thus provide extension for the given extension point (example: `CompanyBusinessUnitCreatePlugin` in `CompanyBusinessUnit` module)
 
 #### Conventions

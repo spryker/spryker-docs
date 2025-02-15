@@ -38,7 +38,7 @@ All `fk_*` fields are foreign keys to other database tables. We can not know the
 
 {% endinfo_block %}
 
-For the database field `fk_locale` we will use the name of the locale for which we need the id (e.g. de_DE). This value will then be used later to fetch the id for the given locale name.
+For the database field `fk_locale`, we will use the name of the locale for which we need the id–for example, `de_DE`. This value will then be used later to fetch the id for the given locale name.
 We will use the same technique for the `fk_product` and `fk_product_abstract` fields.
 
 {% info_block infoBox "" %}
@@ -234,7 +234,7 @@ We have made sure that the data importer can be executed, but we only print a de
 
 As mentioned in the [Prerequisites](#prerequisites), we can not use foreign keys in our import file - we need a logical identifier that can now be used to get the foreign key of a related entity.
 
-There are several ways of how we can get the logical identifier. For example, we could add a new Step e.g. `LocaleNameToIdLocaleStep`. However, in our case, it's better to use a Repository, which provides us with a getter to retrieve the `id_locale` by its name. We will take this approach and do the following:
+There are several ways of how we can get the logical identifier. One of them is to add a new step–for example, `LocaleNameToIdLocaleStep`. However, in our case, it's better to use a Repository, which provides us with a getter to retrieve the `id_locale` by its name. We will take this approach and do the following:
 
 1. Add `LocaleRepository` to get the foreign key of a locale by its name:
 

@@ -10,6 +10,9 @@ redirect_from:
 
 Spryker introduces context-based dependency resolution, such as plugin-stack, using a strategy resolver to handle complex workflows that stretch across multiple modules. This enhancement allows for defining multiple dependencies and selecting the appropriate one dynamically at runtime by the business logic.
 
+Spryker introduces context-based dependency resolution using a strategy resolver to manage complex workflows spanning multiple modules. This enhancement allows defining multiple dependencies and dynamically selecting the appropriate one at runtime based on business logic.
+
+
 Why this change? Some workflows require multiple plugin-stack variations that need to be switched in sync.
 What does it do? Allows defining multiple plugin-stacks and resolving the correct one based on a context identifier.
 Backward compatibility? Only applied to selected plugin-stacks that require this enhancement. Customizations may need updates, but the approach is backward compatible.
@@ -161,3 +164,151 @@ A: Only if multiple plugin-stacks are resolved simultaneously. Use lazy loading 
 
 Q: What happens if a context is missing?
 A: By default, it fails. However, you can define a fallback mechanism.
+
+
+
+
+
+
+
+# Context-Based Dependency Resolution in Spryker
+
+
+
+## Why This Change?
+Some workflows require multiple plugin-stack variations that need to be switched in sync.
+
+## What Does It Do?
+- Enables defining multiple plugin-stacks and resolving the correct one based on a context identifier.
+- Facilitates context-specific behavior while maintaining flexibility.
+
+## Backward Compatibility
+- Applied only to selected plugin-stacks requiring this enhancement.
+- Customizations may need updates, but the approach remains backward compatible.
+
+## When to Use It
+Use the strategy resolver when:
+- Handling multiple plugin-stack configurations dynamically.
+- A workflow spans multiple modules and requires synchronized behavior.
+- Context-specific behavior is necessary while keeping plugin-stack resolution flexible.
+
+Do not use it if:
+- A single plugin-stack is sufficient (consider using the regular strategy plugin stack approach instead).
+- Context-based, wide-spread synchronization is not needed.
+
+## How It Works (Technical Details & Code Examples)
+
+### Defining Contexts
+Each module providing a context must define it as an interface constant with a clear and verbose description.
+
+```php
+<?php
+
+namespace Spryker\Shared\CheckoutExtension;
+
+interface CheckoutExtensionContextsInterface
+{
+    /**
+     * Specification:
+     * - Defines the Checkout Context for initiating a new order.
+     * - Differentiates new order processing from other order-related operations.
+     * - Enables context-specific logic execution.
+     *
+     * @api
+     *
+     * @var string
+     */
+    public const CONTEXT_CHECKOUT = 'checkout';
+```
+
+### Configuring the Strategy Resolver in the Factory
+The factory creates the strategy resolver, mapping contexts to plugin stacks while ensuring type safety.
+
+```php
+    /**
+     * @return \Spryker\Shared\Kernel\StrategyResolverInterface<list<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface>>
+     */
+    public function createCheckoutPreConditionPluginStrategyResolver(): StrategyResolverInterface
+    {
+        return new StrategyResolver(
+            [
+                CheckoutExtensionContextsInterface::CONTEXT_CHECKOUT => $this->getProvidedDependency(CheckoutDependencyProvider::CHECKOUT_PRE_CONDITIONS, static::LOADING_LAZY),
+                SalesOrderAmendmentExtensionContextsInterface::CONTEXT_ORDER_AMENDMENT => $this->getProvidedDependency(CheckoutDependencyProvider::CHECKOUT_PRE_CONDITIONS_FOR_ORDER_AMENDMENT, static::LOADING_LAZY),
+            ],
+            CheckoutExtensionContextsInterface::CONTEXT_CHECKOUT, // fallback context
+        );
+    }
+```
+
+Instead of injecting a single plugin-stack, inject the strategy resolver into the model:
+
+```php
+    /**
+     * @return \Spryker\Zed\Checkout\Business\Workflow\CheckoutWorkflowInterface
+     */
+    public function createCheckoutWorkflow()
+    {
+        return new CheckoutWorkflow(
+            $this->getOmsFacade(),
+            $this->createCheckoutPreConditionPluginStrategyResolver(),
+            $this->createCheckoutSaveOrderPluginStrategyResolver(),
+            $this->createCheckoutPostSavePluginStrategyResolver(),
+            $this->createCheckoutPreSavePluginStrategyResolver(),
+        );
+    }
+```
+
+### Using Context-Based Resolution in the Model
+The model must explicitly specify the context when requesting a plugin stack.
+
+```php
+class CheckoutWorkflow implements CheckoutWorkflowInterface
+{
+    /**
+     * @var \Spryker\Shared\Kernel\StrategyResolverInterface<list<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface>>
+     */
+    protected $preConditionPluginStrategyResolver;
+
+    public function __construct( ... StrategyResolverInterface $preConditionPluginStrategyResolver ...) {
+        $this->preConditionPluginStrategyResolver = $preConditionPluginStrategyResolver;
+    }
+
+    protected function checkPreConditions(QuoteTransfer $quoteTransfer, CheckoutResponseTransfer $checkoutResponse)
+    {
+        $isPassed = true;
+
+        $quoteProcessFlowName = $quoteTransfer->getQuoteProcessFlow()?->getNameOrFail(); // Example resolution
+        $preConditionPlugins = $this->preConditionPluginStrategyResolver->get($quoteProcessFlowName);
+
+        foreach ($preConditionPlugins as $preConditionPlugin) {
+            $isPassed &= $preConditionPlugin->checkCondition($quoteTransfer, $checkoutResponse);
+        }
+
+        return (bool)$isPassed;
+    }
+}
+```
+
+### Enabling Lazy Plugin-Stack Resolution
+When multiple plugin-stacks contain a large number of plugins (10+), performance may become an issue. Lazy loading addresses this.
+
+```php
+    $this->getProvidedDependency(CheckoutDependencyProvider::CHECKOUT_PRE_CONDITIONS, static::LOADING_LAZY);
+```
+
+### Debugging & Logging
+- Full compatibility with tools like Xdebug.
+- Generic template directive ensures inspection of available plugin stacks.
+
+## Frequently Asked Questions (FAQ)
+
+### Should I use this for all plugin-stacks?
+No, the strategy design pattern introduces complexity. Use it only when business logic requires it.
+
+### Does this affect performance?
+Only when multiple plugin-stacks are resolved simultaneously. Use lazy loading to mitigate this.
+
+### What happens if a context is missing?
+By default, it fails. However, a fallback mechanism can be defined.
+
+o

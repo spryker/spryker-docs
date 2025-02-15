@@ -437,7 +437,7 @@ Sony Experts MER000006 Warehouse 1,1,multi-shipment
 console data:import stock
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the defined picking list strategies have been imported to the `spy_stock` database table.
 

@@ -7,9 +7,9 @@ To prepare your project to work with Navigation:
 2. Install the new database tables By running `vendor/bin/console propel:diff`. Propel will generate a migration file with the changes.
 3. Apply the database changes by running `vendor/bin/console propel:migrate`.
 4. Generate ORM models by running `vendor/bin/console propel:model:build`.
-5. After running this command you’ll find some new classes in your project under `\Orm\Zed\Navigation\Persistence` namespace.
+5. After running this command you'll find some new classes in your project under `\Orm\Zed\Navigation\Persistence` namespace.
 
-    It’s important to make sure that they extend the base classes from the Spryker core, e.g.:
+    It's important to make sure that they extend the base classes from the Spryker core, e.g.:
 
     * `\Orm\Zed\Navigation\Persistence\SpyNavigation` extends `\Spryker\Zed\Navigation\Persistence\Propel\AbstractSpyNavigation`
     * `\Orm\Zed\Navigation\Persistence\SpyNavigationNode` extends `\Spryker\Zed\Navigation\Persistence\Propel\AbstractSpyNavigationNode`
@@ -71,7 +71,7 @@ The `Navigation` module ships with a twig extension that provides the `spyNaviga
 * `$navigationKey`: Reference of a navigation menu by its key field (for example, "MAIN_NAVIGATION").
 * `$template`: Template path used to render the navigation menu (for example, `"@application/layout/navigation/main.twig"`).
 
-To enable the navigation twig function, register `\Spryker\Yves\Navigation\Plugin\Provider\NavigationTwigServiceProvider` in your application’s bootstrap.
+To enable the navigation twig function, register `\Spryker\Yves\Navigation\Plugin\Provider\NavigationTwigServiceProvider` in your application's bootstrap.
 
 ```php
 <?php

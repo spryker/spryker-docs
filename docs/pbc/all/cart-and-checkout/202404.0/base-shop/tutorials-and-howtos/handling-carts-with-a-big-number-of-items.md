@@ -19,7 +19,7 @@ Mitigation strategies are divided into the following categories:
 - *Storefront*: applies only to projects with Spryker Storefront.
 - *Glue*: applies only to projects with a headless approach.
 
-Choose and apply the mitigation strategies that meet your requirements. Implementing them altogether might not be cost-efficient or even compatible. Consider implementing strategies in a “conditional“ mode, which enables the feature after achieving a certain cart size threshold. Despite having to maintain two solutions, it can give you good flexibility and a fallback tolerance.
+Choose and apply the mitigation strategies that meet your requirements. Implementing them altogether might not be cost-efficient or even compatible. Consider implementing strategies in a "conditional" mode, which enables the feature after achieving a certain cart size threshold. Despite having to maintain two solutions, it can give you good flexibility and a fallback tolerance.
 
 ## Heavy rendering with atomic design
 
@@ -40,7 +40,7 @@ Storefront:
 - Extract heavy operations, like price and availability updates, into dedicated async calls.
 - Shift from full-cart to partial lookups for operations like removing or updating a single cart item.
 
-Glue: Implement dedicated “lightweight“ API endpoints for partial updates or heavy operations.
+Glue: Implement dedicated "lightweight" API endpoints for partial updates or heavy operations.
 
 
 ## Slow session handling
@@ -93,10 +93,10 @@ When the whole cart information is loaded, handling split payments, shipping cos
 
 Backend:
 - Reduce unnecessary backend checks between steps and excessive quote walkthroughs.
-- Unless it’s really needed, don’t load or involve full cart information on checkout steps.
+- Unless it's really needed, don't load or involve full cart information on checkout steps.
 
 Storefront: Redesign the checkout process to better manage big carts and enhance the UX.
 
 Glue:
-- Implement dedicated “lightweight“ checkout API endpoints for specific updates or recalculations.
+- Implement dedicated "lightweight" checkout API endpoints for specific updates or recalculations.
 - Implement pagination for the `checkout-data` endpoint.

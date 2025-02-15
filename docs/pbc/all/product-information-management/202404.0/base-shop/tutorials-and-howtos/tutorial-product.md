@@ -37,7 +37,7 @@ related:
 
 This tutorial shows how to add information to products regarding the country where the product was manufactured (for example, Made in "China") and display it on the product details page rather than just adding it as an attribute.
 
-**Bonus challenge**: Add a glossary key for “Made in”. Show this string translated in the product detail page.
+**Bonus challenge**: Add a glossary key for "Made in". Show this string translated in the product detail page.
 
 ## ProductCountry module (Zed)
 

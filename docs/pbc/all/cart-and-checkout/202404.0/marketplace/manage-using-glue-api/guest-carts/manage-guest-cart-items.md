@@ -939,7 +939,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "reviewCount": 0,
                 "productAbstractSku": "181",
                 "name": "Samsung Galaxy Tab S2 SM-T813",
-                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper—create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
+                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2's 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper—create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
                 "attributes": {
                     "internal_memory": "3 GB",
                     "processor_model": "APQ8076",
@@ -1760,7 +1760,7 @@ To change item quantity, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | {% raw %}***{{guest_cart_id}}***{% endraw %}| Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html#retrieve-a-guest-cart). |
-| {% raw %}***{{groupKey}}***{% endraw %} | Group key of the item. Usually, it's equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
+| {% raw %}***{{groupKey}}***{% endraw %} | Group key of the item. Usually, it's equal to the item's SKU. To get it, [retrieve the guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
 
 ### Request
 
@@ -1823,7 +1823,7 @@ To remove an item from a guest cart, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | {% raw %}***{{guest_cart_id}}***{% endraw %}| Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html#retrieve-a-guest-cart). |
-| {% raw %}***{{groupKey}}***{% endraw %} | Group key of the item. Usually, it's equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
+| {% raw %}***{{groupKey}}***{% endraw %} | Group key of the item. Usually, it's equal to the item's SKU. To get it, [retrieve the guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
 
 ### Request
 
@@ -1852,7 +1852,7 @@ If the item is deleted successfully, the endpoint returns the "204 No Content"�
 | 107 | Failed to create cart. |
 | 109 | Anonymous customer unique ID is empty. |
 | 110 | Customer already has a cart. |
-| 111 | Can’t switch price mode when there are items in the cart. |
+| 111 | Can't switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |
 | 113 | Cart item could not be added. |
 | 114 | Cart item could not be updated. |

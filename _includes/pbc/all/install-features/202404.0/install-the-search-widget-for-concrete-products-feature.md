@@ -14,7 +14,7 @@ To start the feature integration, overview and install the necessary features:
 
 ### 1) Check the installed modules
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 
@@ -35,7 +35,7 @@ Apply database changes and generate entity and transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes are present in the transfer objects:
 
@@ -120,7 +120,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following widgets were registered:
 

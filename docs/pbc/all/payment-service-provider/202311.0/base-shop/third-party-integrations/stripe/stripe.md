@@ -50,7 +50,7 @@ The Stripe App has limited or no support for the following features:
 - Payment authorization timeout: There is currently a one day timeout for authorizing payments. Payment methods, like bank transfers, which are not authorized within this timeframe, will experience a timeout. We recommend extending the timeout from one day to seven days.
 - Multi-capture: Partial capture of payment for order items.
 - Payments can be properly canceled only from the the Back Office and not from the Stripe Dashboard.
-- Payments can’t be partially canceled. We create one payment intent per order and it can either be authorized or fully cancelled.
+- Payments can't be partially canceled. We create one payment intent per order and it can either be authorized or fully cancelled.
 - When you cancel an item on the order details page, all order items are canceled.
 
 ## Next step

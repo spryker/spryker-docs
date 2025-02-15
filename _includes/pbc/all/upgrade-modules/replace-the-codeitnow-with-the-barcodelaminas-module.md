@@ -1,6 +1,6 @@
 
 
-Because of a DMCA takedown of a 3rd party library that the `spryker/code-it-now` module uses, the `spryker/code-it-now` module is deprecated. Therefore, migration to the `BarcodeLaminas` module is required.
+Because of a DMCA takedown of a third-party library that the `spryker/code-it-now` module uses, the `spryker/code-it-now` module is deprecated. Therefore, migration to the `BarcodeLaminas` module is required.
 
 This document describes how to replace the deprecated `CodeItNow` module with `BarcodeLaminas`.
 

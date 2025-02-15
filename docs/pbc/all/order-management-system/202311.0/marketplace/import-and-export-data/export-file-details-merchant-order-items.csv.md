@@ -55,9 +55,9 @@ These are the header fields included in the `merchant_order_items.csv` file:
 | 40 | shipment_method_name |   | String |   | Name of the shipment method. |
 | 41 | shipment_requested_delivery_date |   | Date |   | Requested delivery date of the shipment. |
 | 42 | shipping_address_salutation |   | String |   | Customer salutation used with shipping address. |
-| 43 | shipping_address_first_name |   |   |   | Customer’s first name used in the shipping address. |
-| 44 | shipping_address_last_name |   | String |   | Customer’s last name used in the shipping address. |
-| 45 | shipping_address_middle_name |   | String |   | Customer’s middle name used in the shipping address. |
+| 43 | shipping_address_first_name |   |   |   | Customer's first name used in the shipping address. |
+| 44 | shipping_address_last_name |   | String |   | Customer's last name used in the shipping address. |
+| 45 | shipping_address_middle_name |   | String |   | Customer's middle name used in the shipping address. |
 | 46 | shipping_address_email |   | String |   | Email used with shipping address. |
 | 47 | shipping_address_cell_phone |   | String |   | Cell phone used with shipping address. |
 | 48 | shipping_address_phone |   | String |   | Phone used with the shipping address. |

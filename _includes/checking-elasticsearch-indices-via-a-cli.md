@@ -6,7 +6,7 @@ Check `SPRYKER_SEARCH_HOST ` and `SPRYKER_SEARCH_PORT` values as follows:
 
 ### Check the health and status of Elasticsearch indices
 
-1. Connect to the environment’s VPN.
+1. Connect to the environment's VPN.
 
 2. Set the variables:
 

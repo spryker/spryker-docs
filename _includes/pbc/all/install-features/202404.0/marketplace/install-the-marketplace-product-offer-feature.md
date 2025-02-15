@@ -482,8 +482,8 @@ Make sure that when the following entities get updated through the ORM, the corr
 
 | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER                | EXAMPLE EXPECTED DATA FRAGMENT                                                                           |
 |---------------|-------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| ProductOffer  | kv:product_offer:offer2                         | {“id_product_offer”:1,“id_merchant”:6,“product_offer_reference”:“offer1",“merchant_sku”:“GS952M00H-Q11"} |
-| ProductOffer  | kv:product_concrete_product_offers:093_24495843 | [“offer3”,“offer4"]                                                                                      |
+| ProductOffer  | kv:product_offer:offer2                         | {"id_product_offer":1,"id_merchant":6,"product_offer_reference":"offer1","merchant_sku":"GS952M00H-Q11"} |
+| ProductOffer  | kv:product_concrete_product_offers:093_24495843 | ["offer3","offer4"]                                                                                      |
 
 {% endinfo_block %}
 

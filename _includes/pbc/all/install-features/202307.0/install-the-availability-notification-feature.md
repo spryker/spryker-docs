@@ -322,7 +322,7 @@ class AvailabilityNotificationConfig extends SprykerAvailabilityNotificationConf
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 We recommend setting `AVAILABILITY_NOTIFICATION_CHECK_PRODUCT_EXISTS` to true.
 Make sure that don't catch the previously mentioned exception somewhere in your Pyz code but use the check of `$availabilityNotificationSubscriptionResponseTransfer->getIsSuccess()`.

@@ -163,7 +163,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 console data:import:shipment-type-service-type
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that entities have been imported into the `spy_shipment_type_service_type` database table.
 

@@ -17,7 +17,7 @@ Install the required modules using Composer:
 composer require spryker-feature/resource-sharing: "{{page.version}}" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 
@@ -37,7 +37,7 @@ console propel:install
 console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes applied by checking your database:
 
@@ -47,7 +47,7 @@ Make sure that the following changes applied by checking your database:
 
 {% endinfo_block %}
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes in transfer objects have been applied:
 
@@ -79,7 +79,7 @@ Install the required modules using Composer:
 composer require spryker-feature/resource-sharing: "{{page.version}}" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 

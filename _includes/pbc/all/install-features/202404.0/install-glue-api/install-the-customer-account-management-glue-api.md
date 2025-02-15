@@ -1038,7 +1038,7 @@ To verify `OauthRefreshTokenRemoverPlugin` is set up, delete expired refresh tok
 console oauth:refresh-token:remove-expired
 ```
 
-Make sure all the expired refresh tokens older than defined by the removal interval you’ve configured in `Spryker\Shared\Oauth\OauthConfig::getRefreshTokenRetentionInterval()` have been deleted.
+Make sure all the expired refresh tokens older than defined by the removal interval you've configured in `Spryker\Shared\Oauth\OauthConfig::getRefreshTokenRetentionInterval()` have been deleted.
 
 {% endinfo_block %}
 

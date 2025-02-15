@@ -29,7 +29,7 @@ Service configuration:
 | event | An event type triggered by element.  |
 |debounce |  Delays the emission of values of the next datasource; by default, delays by `300ms`. |
 |minCharacters |  Emits the trigger element value if the length is greater than or equal to the `minCharacters` property. The default value is `2`. |
-| datasource | The next datasource that runs based on the depended element value (e.g. [http](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-http.html).  |
+| datasource | The next datasource that runs based on the depended element value–for example, [http](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-http.html).  |
 
 Usage example:
 

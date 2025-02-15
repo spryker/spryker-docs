@@ -42,8 +42,8 @@ To create a return for a registered user, send the Request sample:
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 |---|---|---|
-| offset | Offset of the order at which to begin the response.  Works only together with `page[limit]`.  To work correctly, the value should be devisable by the value of `page[limit]`.  The default value is `0`. | From `0` to any. |
-| limit | Maximum number of entries to return.  Works only together with `page[offset]`.  The default value is `10`. | From `1` to any. |
+| offset | Offset of the order at which to begin the response. Works only together with `page[limit]`.  To work correctly, the value should be devisable by the value of `page[limit]`.  The default value is `0`. | From `0` to any. |
+| limit | Maximum number of entries to return. Works only together with `page[offset]`.  The default value is `10`. | From `1` to any. |
 | include | Adds resource relationships to the request. | <ul><li>return-items</li><li>order-itemsorder-items</li><li>merchants</li></ul> |
 
 <details><summary>Request sample: create a return</summary>
@@ -212,8 +212,8 @@ To retrieve returns, send the Request sample:
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 |---|---|---|
-| offset | Offset of the order at which to begin the response.  Works only together with `page[limit]`.  To work correctly, the value should be devisable by the value of `page[limit]`.  The default value is `0`. | From `0` to any. |
-| limit | Maximum number of entries to return.  Works only together with page[offset].  The default value is `10`. | From `1` to any. |
+| offset | Offset of the order at which to begin the response. Works only together with `page[limit]`.  To work correctly, the value should be devisable by the value of `page[limit]`.  The default value is `0`. | From `0` to any. |
+| limit | Maximum number of entries to return. Works only together with page[offset].  The default value is `10`. | From `1` to any. |
 | include | Adds resource relationships to the request. | <ul><li>return-items</li><li>merchants</li></ul> |
 
 | REQUEST | USAGE |
@@ -575,8 +575,8 @@ To retrieve a return, send the Request sample:
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 |---|---|---|
-| offset | Offset of the order at which to begin the response.  Works only together with `page[limit]`.  To work correctly, the value should be devisable by the value of `page[limit]`.  The default value is `0`. | From `0` to any. |
-| limit | Maximum number of entries to return.  Works only together with page[offset].  The default value is `10`. | From `1` to any. |
+| offset | Offset of the order at which to begin the response. Works only together with `page[limit]`.  To work correctly, the value should be devisable by the value of `page[limit]`.  The default value is `0`. | From `0` to any. |
+| limit | Maximum number of entries to return. Works only together with page[offset].  The default value is `10`. | From `1` to any. |
 | include | Adds resource relationships to the request. | <ul><li>return-items</li><li>merchants</li></ul> |
 
 | REQUEST | USAGE |

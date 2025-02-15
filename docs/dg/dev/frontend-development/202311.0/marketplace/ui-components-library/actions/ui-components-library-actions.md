@@ -96,7 +96,7 @@ export class CustomActionHandlerService implements ActionHandler<unknown, void> 
 export class RootModule {}
 ```
 
-The context within which Actions operate is defined by the local injector where it’s being used.
+The context within which Actions operate is defined by the local injector where it's being used.
 
 ## Interfaces
 

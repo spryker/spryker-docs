@@ -182,7 +182,7 @@ There can only be one default currency per store.
 
 {% endinfo_block %}
 
-{% info_block warningBox “Import requirements” %}
+{% info_block warningBox "Import requirements" %}
 
 *  The `.csv` files must have an empty line in the end.
 *  For each `currency_code` entry in the CSV files, there must be a respective `code` entry in the `spy_currency` database table.

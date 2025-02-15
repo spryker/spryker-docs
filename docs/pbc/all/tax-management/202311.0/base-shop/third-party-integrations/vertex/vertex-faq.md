@@ -17,7 +17,7 @@ The Product Class Code is used to represent groups or categories of products or 
 
 **How will stock address information be used in the Marketplace? Does it calculate freight tax for shipment?**
 
-We do not support freight shipment in terms of big packaging support, but if it’s about just calculating taxes for shipping price, yes, it’s supported.
+We do not support freight shipment in terms of big packaging support, but if it's about just calculating taxes for shipping price, yes, it's supported.
 
 
 **Could you share more information about sending invoices to Vertex through the OMS feature?**

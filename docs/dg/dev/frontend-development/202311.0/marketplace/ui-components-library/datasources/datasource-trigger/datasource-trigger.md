@@ -107,7 +107,7 @@ export class CustomDatasourceTriggerService implements DatasourceTriggerEvent {
 export class RootModule {}
 ```
 
-The context within which Datasources operate is defined by the local injector where it’s being used.
+The context within which Datasources operate is defined by the local injector where it's being used.
 
 ## Interfaces
 

@@ -23,7 +23,7 @@ redirect_from:
 When Shipping gets serious.
 
 Paazl is a multi-carrier platform on a mission to change the world of e-commerce delivery. The Paazl technology connects e-commerce brands and retailers to a wide range of global, national and inner-city delivery carriers.
-Through Paazl’s solutions we take care of everything delivery related, from dynamic delivery information and Track & Trace notifications in the front-end to customs forms and label generation in the back-end. By implementing Paazl, e-commerce brands can provide their customers with a wide range of delivery options.
+Through Paazl's solutions we take care of everything delivery related, from dynamic delivery information and Track & Trace notifications in the front-end to customs forms and label generation in the back-end. By implementing Paazl, e-commerce brands can provide their customers with a wide range of delivery options.
 In a nutshell, Paazl provides the tools to scale delivery and create more – and better – delivery choices for e-commerce customers.
 
 YOUR ADVANTAGES:

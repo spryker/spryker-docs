@@ -8,7 +8,7 @@ Check `SPRYKER_KEY_VALUE_STORE_PORT` and `SPRYKER_KEY_VALUE_STORE_HOST` values a
 
 ### Check Redis system information
 
-1. Connect to the desired environment’s VPN.
+1. Connect to the desired environment's VPN.
 
 2. Set the environment variables:
 

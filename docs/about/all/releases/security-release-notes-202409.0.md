@@ -70,9 +70,9 @@ composer require spryker/kernel:"~3.68.1"
 composer show spryker/kernel # Verify the version
 ```
 
-## “Remember Me” Functionality
+## Remember me Functionality
 
-The "remember me" functionality is considered to be against security best practices. This fix lets you disable this functionality.
+The remember me functionality is considered to be against security best practices. This fix lets you disable this functionality.
 
 ### Affected modules
 

@@ -54,7 +54,7 @@ A *tax set* is a set of tax rates that can be applied to a specific product.
 </figure>
 
 
-Once the rate is defined, you can attach it to a tax set(s). A tax set can contain from one to many tax rates.
+Once the rate is defined, you can attach it to one or more tax sets. A tax set can contain from one to many tax rates.
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>

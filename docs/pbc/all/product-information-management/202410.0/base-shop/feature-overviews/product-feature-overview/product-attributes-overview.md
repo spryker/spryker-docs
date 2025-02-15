@@ -133,12 +133,12 @@ In the DB, the following localized keys are saved: `attribute.length.de`, `attri
 
 Now for each of the attribute keys we add the attribute values.
 
-For the key “attribute.length.de” the value is `1.5 meter`.
+For the key "attribute.length.de" the value is `1.5 meter`.
 
-For the key “attribute.length.ie” the value is:
+For the key "attribute.length.ie" the value is:
 Value = 1.5 meter
 
-For the key “attribute.length.us” the value is:
+For the key "attribute.length.us" the value is:
 Value = 4.92 feet
 
 What you see on the Irish and German versions of the shop:

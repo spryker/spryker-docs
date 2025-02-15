@@ -16,7 +16,7 @@ In March 2024, we have added and updated the following pages:
 ### New pages
 
 - [Contribute to Oryx](/docs/dg/dev/frontend-development/202311.0/oryx/contribute-to-oryx.html): Learn how you can contribute to the development of the Oryx frontend framework.
-- [Jenkins operational best practices](/docs/ca/dev/best-practices/jenkins-operational-best-practices.html): Implement Spryker’s best practices to enhance the stability and performance of the Jenkins component in your Spryker PaaS environment.
+- [Jenkins operational best practices](/docs/ca/dev/best-practices/jenkins-operational-best-practices.html): Implement Spryker's best practices to enhance the stability and performance of the Jenkins component in your Spryker PaaS environment.
 - [Security release notes 202403.0](/docs/about/all/releases/security-release-notes-202403.0.html).
 - [Retrieve and use payment details from third-party PSPs](/docs/pbc/all/payment-service-provider/202311.0/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html):  how to retrieve and use payment details from third-party payment service providers (PSPs).
 - [Install the Comments + Merchant B2B Contract Requests feature](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contract-requests-feature.html).
@@ -333,11 +333,11 @@ In October 2023, we have added and updated the following pages:
 - [Additional logic in dependency provider](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider
 - [Dead code checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
 - [Minimum allowed shop version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
-- [Multidimensional array](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider’s methods.
+- [Multidimensional array](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider's methods.
 - [PHP version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): Make sure the allowed and consistent PHP version is used in different project parts.
 - [Plugin registration with restrictions](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html): Resolve isues related to plugin registration with restrictions.
 - [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
-- [Single plugin argument](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider’s methods.
+- [Single plugin argument](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider's methods.
 - - [Container set function](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html): Check how plugins are registered in the dependency provider on the project level.
 - [Spryker dev packages checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html): Check if all your Spryker packages have valid version constraints to prevent issues with Spryker Code Upgrader.
 - [Spryker security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Learn how to check for security fixes in the Spryker modules.
@@ -492,11 +492,11 @@ In June 2023, we have added and updated the following pages:
 - [Additional logic in dependency provider](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider.
 - [Dead code checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
 - [Minimum allowed shop version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
-- [Multidimensional array](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider’s methods.
+- [Multidimensional array](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider's methods.
 - [PHP version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): Make sure the allowed and consistent PHP version is used in different project parts.
 - [Plugin registration with restrictions](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html): Resolve isues related to plugin registration with restrictions.
 - [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
-- [Single plugin argument](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider’s methods.
+- [Single plugin argument](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider's methods.
 - [Integrate profiler module](/docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html).
 
 
@@ -517,11 +517,11 @@ In May 2023, we have added and updated the following pages:
     - [Additional logic in dependency provider](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider
     - [Dead code checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
     - [Minimum allowed shop version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
-    - [Multidimensional array](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider’s methods.
+    - [Multidimensional array](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider's methods.
     - [PHP version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): Make sure the allowed and consistent PHP version is used in different project parts.
     - [Plugin registration with restrictions](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html): Resolve isues related to plugin registration with restrictions.
     - [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
-    - [Single plugin argument](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider’s methods.
+    - [Single plugin argument](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider's methods.
 - [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html)
 - [Change default branch](/docs/ca/devscu/set-the-target-branch-for-spryker-code-upgrader.html): Learn how to change the default branch in Spryker CI
 

@@ -960,7 +960,7 @@ Go to the Zed UI Sales overview, check the order, and verify the following:
 - The correct amount is displayed per sales order item.
 
 Make sure the following:
-* Abstract products which have packaging units available don’t have `add_to_cart_sku` field at Elasticsearch document.
+* Abstract products which have packaging units available don't have `add_to_cart_sku` field at Elasticsearch document.
 * Every order item from `SalesFacade::getOrderItems()` results contains packaging units data: `ItemTransfer.amountLeadProduct` and `ItemTransfer.amountSalesUnit` are set for the order items that have packaging units.
 * The results of picking lists from `PickingListFacade::getPickingListCollection()` contain packaging units data: `PickingListCollectionTransfer.pickingList.pickingListItem.orderItem.amountSalesUnit` are set for the order items that have packaging units.
 

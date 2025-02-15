@@ -48,9 +48,10 @@ We recommend mapping your branches to environments as follows:
   This opens the pipeline editing page.  
 5. In the **Edit: Source** pane, click **Edit stage**.  
 6. In the **Spryker_App_Src** section, click the *Edit action* button.
+  This opens the **Edit action** window.
+
 ![edit-action](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/connect-a-code-repository.md/edit-action.png)
 
-This opens the **Edit action** window.
 7. For **Action provider**, select **GitHub(via GitHub App)**.
 This adds GitHub related fields to the window.
 8. Click **Connect to GitHub** and authorize AWS CodePipeline to access your GitHub repository.

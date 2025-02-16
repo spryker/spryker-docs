@@ -27,7 +27,7 @@ Code that gets merged into master must be compatible with the latest minor relea
 2. Create a brunch based on the master.
 3. Run `npm install` in the repository root.  
 4. Add your changes. For more details, see [Development workflow](#development-workflow)
-5. If you’ve added code that should be tested, add tests.
+5. If you've added code that should be tested, add tests.
 6. Create a PR. Provide a clear and concise description of your changes in the PR's description.
 7. If the required checks are failing, look into fixing them.
 

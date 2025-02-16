@@ -281,7 +281,7 @@ The maintenance page is not yet compatible with Spryker Cloud.
         </html>
     ```
 
-    2. Configure the page you’ve added in step 1 to be displayed when the error `503` occurs:
+    2. Configure the page you've added in step 1 to be displayed when the error `503` occurs:
 
     **public/Backoffice/maintenance/maintenance.php**
 
@@ -487,7 +487,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }    
 ```
 
-You’ve added the following commands:
+You've added the following commands:
 
 - `console router:cache:warm-up:backoffice`
 - `console router:cache:warm-up:backend-gateway`

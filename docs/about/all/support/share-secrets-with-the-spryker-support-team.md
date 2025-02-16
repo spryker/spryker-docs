@@ -27,7 +27,7 @@ If we share a onetimesecret link with you, use the password provided in the Link
 
 {% info_block warningBox %}
 
-Don't include information on what the secret content is for—for example, if you insert a password, don't provide the username for it. Also, don’t include any information about where and how to use the secret.
+Don't include information on what the secret content is for—for example, if you insert a password, don't provide the username for it. Also, don't include any information about where and how to use the secret.
 
 Create a new link for every individual secret you want to share.
 

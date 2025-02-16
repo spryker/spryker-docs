@@ -31,7 +31,7 @@ To suggest changes, follow the steps:
 10. Click **Create pull request**.
 11. To confirm that the PR is ready to merge, set a [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels#applying-a-label), like **in progress**, **tech review needed**, or **TW review needed**.
 
-That’s it! Your pull request has been created. Once we review and approve the changes, they will be published on the documentation website.
+That's it! Your pull request has been created. Once we review and approve the changes, they will be published on the documentation website.
 
 ## Contributors
 

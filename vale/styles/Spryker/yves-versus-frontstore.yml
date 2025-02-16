@@ -1,8 +1,0 @@
-extends: substitution
-message: "If you're refering to the frontstore-related actions, then use '%s' instead of '%s'. If you mean dev-related things, like a layer or module name, then use 'Yves'."
-level: warning
-ignorecase: false
-action:
-  name: replace
-swap:
-  - '(?:Y|y)ves': the frontstore

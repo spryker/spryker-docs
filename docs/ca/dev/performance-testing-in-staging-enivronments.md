@@ -37,7 +37,7 @@ Gatling is capable of creating an immense amount of traffic from a single node, 
 
 ### Including the load testing tool into an environment
 
-The purpose of this guide is to show you how to integrate Spryker's load testing tool into your environment. While the instructions here will focus on setting this up with using one of Spryker’s many available demo shops, it can also be implemented into an on-going project.
+The purpose of this guide is to show you how to integrate Spryker's load testing tool into your environment. While the instructions here will focus on setting this up with using one of Spryker's many available demo shops, it can also be implemented into an on-going project.
 
 For instructions on setting up a developer environment using one of the available Spryker shops, you can visit our [getting started guide](/docs/dg/dev/development-getting-started-guide.html) which shows you how to set up the Spryker Commerce OS.
 
@@ -571,9 +571,9 @@ This table shows some standard statistics such as min, max, average, standard de
 
 This chart displays the active users during the simulation: total and per scenario.
 
-“Active users” is neither “concurrent users” or “users arrival rate”. It’s a kind of mixed metric that serves for both open and closed workload models, and that represents “users who were active on the system under load at a given second”.
+“Active users” is neither “concurrent users” or “users arrival rate”. It's a kind of mixed metric that serves for both open and closed workload models, and that represents “users who were active on the system under load at a given second”.
 
-It’s computed as:
+It's computed as:
 ```
 (number of alive users at previous second)
 + (number of users that were started during this second)

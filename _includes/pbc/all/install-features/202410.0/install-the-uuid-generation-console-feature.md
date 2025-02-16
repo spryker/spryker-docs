@@ -83,6 +83,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {% info_block warningBox "Verification" %}
 
 
-To make sure you’ve set up `UuidGeneratorConsole`, run `console | grep uuid:generate` and check that the command is found.
+To make sure you've set up `UuidGeneratorConsole`, run `console | grep uuid:generate` and check that the command is found.
 
 {% endinfo_block %}

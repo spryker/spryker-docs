@@ -138,7 +138,7 @@ The following configuration parameters are optional:
 
 {% info_block infoBox "Site to Site VPN" %}
 
-If you need Site to Site VPN, provide your internal subnet CIDR, so our Spryker VPC doesn’t overlap with it. It is crucial to evaluate this option during provisioning, as Spryker can’t change it later once the environment is provisioned. If overlapping is identified, the environment will need to be recreated.
+If you need Site to Site VPN, provide your internal subnet CIDR, so our Spryker VPC doesn't overlap with it. It is crucial to evaluate this option during provisioning, as Spryker can't change it later once the environment is provisioned. If overlapping is identified, the environment will need to be recreated.
 
 {% endinfo_block %}
 

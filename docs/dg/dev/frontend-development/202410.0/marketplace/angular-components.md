@@ -64,16 +64,16 @@ Invoked when the change detector of the given component is invoked. It lets you 
 This method is invoked just before Angular destroys the component.
 Use this hook to unsubscribe observables and detach event handlers to avoid memory leaks.
 
-### Hooks for the component’s children
+### Hooks for the component's children
 
 `ngAfterContentInit`  
-Invoked after Angular performs any content projection into the component’s view (see the previous lecture on Content Projection for more info). To get more info about content query, see the official documentation [ContentChildren](https://angular.io/api/core/ContentChildren), [ContentChild](https://angular.io/api/core/ContentChild).
+Invoked after Angular performs any content projection into the component's view (see the previous lecture on Content Projection for more info). To get more info about content query, see the official documentation [ContentChildren](https://angular.io/api/core/ContentChildren), [ContentChild](https://angular.io/api/core/ContentChild).
 
 `ngAfterContentChecked`  
 Invoked each time the content of the given component has been checked by Angular's change detection mechanism.
 
 `ngAfterViewInit`  
-Invoked when the component’s view has been fully initialized. To get more info about the content query see official documentation [ViewChildren](https://angular.io/api/core/ViewChildren), [ViewChild](https://angular.io/api/core/ViewChild).
+Invoked when the component's view has been fully initialized. To get more info about the content query see official documentation [ViewChildren](https://angular.io/api/core/ViewChildren), [ViewChild](https://angular.io/api/core/ViewChild).
 
 `ngAfterViewChecked`  
 Invoked each time the view of the given component has been checked by Angular's change detection mechanism.
@@ -96,10 +96,10 @@ It is an inline-defined template for the view. The template defines some markup.
 It is the URL for the external file containing the template for the view.
 
 `styles`  
-These are inline-defined styles to be applied to the component’s view.
+These are inline-defined styles to be applied to the component's view.
 
 `styleUrls`  
-List of URLs to the stylesheets to be applied to the component’s view.
+List of URLs to the stylesheets to be applied to the component's view.
 
 `providers`  
 It is an array where certain services for the component can be registered.

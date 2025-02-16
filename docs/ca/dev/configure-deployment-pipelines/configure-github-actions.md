@@ -379,8 +379,8 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 
 {% info_block infoBox "Default configuration" %}
 
-* Since Alpine is the default platform and a specific version is not needed, don’t define it in the image tag in the deploy and workflow files.
-* MariaDB is the default database engine, so you don’t need to define it in the deploy file.
+* Since Alpine is the default platform and a specific version is not needed, don't define it in the image tag in the deploy and workflow files.
+* MariaDB is the default database engine, so you don't need to define it in the deploy file.
 
 {% endinfo_block %}
 
@@ -782,8 +782,8 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 
 {% info_block infoBox "Default configuration" %}
 
-* Since Alpine is the default platform and a specific version is not needed, don’t define it in the image tag in the deploy and workflow files.
-* MariaDB is the default database engine, so you don’t need to define it in the deploy file.
+* Since Alpine is the default platform and a specific version is not needed, don't define it in the image tag in the deploy and workflow files.
+* MariaDB is the default database engine, so you don't need to define it in the deploy file.
 
 {% endinfo_block %}
 
@@ -1204,8 +1204,8 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
 
 {% info_block infoBox "Default configuration" %}
 
-* Since Alpine is the default platform and we don’t need a specific version, we don’t define it in the image tag in the deploy and workflow files.
-* MariaDB is the default database engine, so we don’t need to define it in the deploy file.
+* Since Alpine is the default platform and we don't need a specific version, we don't define it in the image tag in the deploy and workflow files.
+* MariaDB is the default database engine, so we don't need to define it in the deploy file.
 
 {% endinfo_block %}
 

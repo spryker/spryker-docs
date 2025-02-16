@@ -45,7 +45,7 @@ To learn more about the Generators, see the Generators documentation.
 
 ## Handle exceptions
 
-To throw an exception into the Generator code, you can use the second argument of the `GracefulRunnerFacadeInterface::run()` method. It’s the class name that must be thrown into the Generator when a signal is handled. The following example explains it in more detail:
+To throw an exception into the Generator code, you can use the second argument of the `GracefulRunnerFacadeInterface::run()` method. It's the class name that must be thrown into the Generator when a signal is handled. The following example explains it in more detail:
 
 ```php
 public function import(Collection $collection): void

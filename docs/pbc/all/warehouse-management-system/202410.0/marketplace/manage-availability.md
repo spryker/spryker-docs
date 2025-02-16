@@ -13,7 +13,7 @@ This document includes the information you need to know when working with the **
 
 On the **Overview of Products Availability** page, you see the following:
 
-* The SKUs and names of the abstract products and SKU values are a hyperlink to this product’s **Edit** page.
+* The SKUs and names of the abstract products and SKU values are a hyperlink to this product's **Edit** page.
 * The number of products in current stock and the number of reserved products (meaning ordered ones).
 * The identifier for the bundled product and those that are *never out of stock* (Yes/No values).
 
@@ -88,6 +88,6 @@ Let's say you have two products: a smartphone and three glass screen protectors 
 This means that a customer can either buy those separately from their product details pages or buy a "smartphone+3 glass screen protectors" bundle.
 
 Each product has its own stock and availability value if bought separately.
-But in the case of a bundle, the availability is calculated based on each item’s availability taking into account their *quantity in the bundle*.
+But in the case of a bundle, the availability is calculated based on each item's availability taking into account their *quantity in the bundle*.
 
 Even if each item is available on its own, but the availability does not meet the minimum quantity for a bundle (for example, there are only two glass screen protectors, but the bundle goes with three), then the whole bundle is *unavailable*.

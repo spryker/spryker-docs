@@ -9,7 +9,7 @@ redirect_from:
 - /docs/scos/user/intro-to-spryker/support/special-prepare-for-a-busy-season.html
 ---
 
-This document helps you prepare for a traditionally very busy season of the year: Black Friday, Cyber Monday, and the Holiday Season but it helps you whenever you expect your shop to receive record-breaking traffic. In this document, you can find recommendations written for business decision-makers, hosting providers, and Spryker developers. So feel free to forward our recommendations to your colleagues!
+This document helps you prepare for a traditionally very busy season of the year: Black Friday, Cyber Monday, and the Holiday Season but it helps you whenever you expect your shop to receive record-breaking traffic. In this document, you can find recommendations written for business decision-makers, hosting providers, and Spryker developers. So feel free to forward our recommendations to your colleagues.
 
 ## Business tips
 

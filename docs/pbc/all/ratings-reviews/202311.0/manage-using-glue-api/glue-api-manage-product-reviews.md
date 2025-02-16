@@ -97,7 +97,7 @@ Request sample: retrieve product ratings and reviews: `GET http://glue.myspryker
 
 | ATTRIBUTE | TYPE | DESCRIPTIONS |
 | --- | --- | --- |
-| nickname | String | Customer’s nickname. |
+| nickname | String | Customer's nickname. |
 | rating | Integer | Rating given to the product by a customer. |
 | summary | String | Review summary. |
 | description | String | Full review. |

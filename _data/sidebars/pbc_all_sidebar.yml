@@ -4229,7 +4229,7 @@ entries:
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
                             nested:
                               - title: Integrate Taxamo
-                                url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-taxamo-app.html
+                                url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-taxamo.html
 
                       - title: Project configuration for Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/project-configuration-for-vertex.html

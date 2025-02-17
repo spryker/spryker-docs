@@ -1,21 +1,20 @@
 ---
-title: Integrate the Vertex app
+title: Integrate Taxamo
 description: Find out how you can integrate the Taxamo app into your Spryker shop
-draft: true
 last_updated: Jan 8, 2025
 template: howto-guide-template
 ---
 
-To [install Taxamo](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html), you need to update [spryker/tax-app:0.4.0](https://github.com/spryker/tax-app) and install the [spryker/tax-app-rest-api](https://github.com/spryker/tax-app-rest-api) module first.
+To integrate Taxamo, follow the steps:
+
+1. Update [spryker/tax-app](https://github.com/spryker/tax-app) to `0.4.0` and install the [spryker/tax-app-rest-api](https://github.com/spryker/tax-app-rest-api) module:
 
 ```bash
 composer require spryker/tax-app-rest-api:"^0.1.0" --update-with-dependencies
 ```
 
 
-To integrate Taxamo API, follow these steps.
-
-## 1. Configure GlueApplicationDependencyProvider to enable Tax ID validator
+2. To integrate Taxamo API, configure `GlueApplicationDependencyProvider` to enable Tax ID validator:
 
 ```php
 <?php
@@ -42,4 +41,5 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 ## Next step
-[Configure Vertex in the Back Office](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html)
+
+[Connect Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html)

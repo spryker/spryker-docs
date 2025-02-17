@@ -62,7 +62,7 @@ If you need help with whitelisting the email addresses, forward this request to 
 
 Automatic responses to updates and notifications we send you can lead to cases being created accidentally. Make sure automatic replies are disabled for support@spryker.com.
 
-If you are using the email address of a ticket system or any other automated system to receive our communications and notifications, please make sure that you do not send automatic replies, such as receipts or other automated communication, back to support@spryker.com.
+If you are using the email address of a ticket system or any other automated system to receive our communications and notifications, make sure that that system also doesn't send automatic replies to support@spryker.com.
 
 ## Provide all the information
 

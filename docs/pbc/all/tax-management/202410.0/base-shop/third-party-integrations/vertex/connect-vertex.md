@@ -64,6 +64,8 @@ If you configured invoices to be saved in Vertex, you can view the taxes process
 
 Validate a tax ID by sending a request to `/tax-id-validate` using Glue API.
 
+### Request
+
 ```json
 {
     "data": {
@@ -76,6 +78,30 @@ Validate a tax ID by sending a request to `/tax-id-validate` using Glue API.
 }
 ```
 
+### Successful response 
+
+HTTP code: 200.
+
+```json
+{
+  "data": [],
+  "links": []
+}
+```
+### Unsuccessful response
+
+HTTP code: 400, 422.
+
+```json
+{
+  "errors": [
+    {
+      "status": 400,
+      "detail": "Wrong format of the tax number."
+    }
+  ]
+}
+```
 
 ## Retain Vertex configuration after a destructive deployment
 

@@ -480,6 +480,24 @@ use PyzTest\Zed\YourModuleName\YourModuleNameIntegrationTester;
 
 class OmsIntegrationTest extends Unit
 {
+	/**
+     * @var string
+     */
+    protected const STATE_MACHINE_NAME = 'ForeignPaymentStateMachine01';
+
+    /**
+     * @param \Codeception\TestInterface $test
+     *
+     * @return void
+     */
+    public function _before(TestInterface $test): void
+    {
+        parent::_before($test);
+
+        $xmlFileDirectory = APPLICATION_VENDOR_DIR . 'spryker/spryker/Bundles/SalesPayment/config/Zed/Oms/';
+        $this->getSalesOmsHelper()->setupStateMachine(static::STATE_MACHINE_NAME, $xmlFileDirectory);
+    }
+    
 	public function testMoveAnItemFromStateAToStateB(): void
     {
     	// Set up one single item with its current expected state
@@ -497,6 +515,8 @@ class OmsIntegrationTest extends Unit
     } 
 }
 ```
+
+In the `_before` method the state machine setup is done. You need to provide the state machine name and the path to the XML files of your definitions.
 
 The first method `haveOrderItemInState` sets up an item in the state `a`. This method also accepts a second argument where you can pass individual fields to be used for order item creation.
 After that you need to add your code where you expect that the item should move to the next state. F.e. receiving an Async API message or calling a command.

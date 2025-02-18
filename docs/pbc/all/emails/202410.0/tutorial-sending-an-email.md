@@ -203,7 +203,7 @@ The `MailTypeBuilderPlugin` also has access to the glossary with the `setSubject
 
 A string is used as a key of the translation. The default mail provider internally does the translation through `GlossaryFacade`.
 
-You can also translate with the parameters setting up the placeholder to be replaced.  For the `mail.order.shipped.subject` key, you have `Your order {orderReference} is on its way as translation`.
+You can also translate with the parameters setting up the placeholder to be replaced. For the `mail.order.shipped.subject` key, you have `Your order {orderReference} is on its way as translation`.
 In your `MailTypeBuilderPlugin` you can use the `orderReference` from the given `OrderTransfer` within the subject translations:
 
 ```php

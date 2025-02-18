@@ -1,7 +1,7 @@
 ---
 title: Create an Order Management System - Spryker Commerce OS
 description: This task-based document shows how to create a full order management process (OMS) using the Spryker state machine and then use it in your shop..
-last_updated: Oct 21, 2021
+last_updated: Feb 18, 2025
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-oms-and-state-machines-spryker-commerce-os
 originalArticleId: dc0c3c0d-c1af-4949-9645-762c67f03c8a
@@ -413,7 +413,99 @@ You can keep moving the item until the order is closed.
 
 {% endinfo_block %}
 
-### 5. Define the happy path of an order item (optional)
+### 5. Automated tests for your State Machine
+
+Besides the explained manual tests you can and should also implement automated tests for your state machine. Spryker provides some test helpers that you can use to build your tests.
+
+- `\SprykerTest\Zed\Oms\Helper\OmsHelper` - This helper provides hooks to add your commands and conditions to the tests.
+- `\SprykerTest\Shared\Sales\Helper\SalesOmsHelper` - This helper provides some handy methods to test the state machine.
+
+#### 5.1 Add the test helper to cour `codeception.yml`
+
+```yaml	
+namespace: PyzTest\Zed\YourModuleName
+
+suites:
+    Integration:
+        path: Integration
+        actor: YourModuleNameIntegrationTester
+        modules:
+            enabled:
+                - \SprykerTest\Shared\Sales\Helper\SalesHelper
+                - \SprykerTest\Shared\Sales\Helper\SalesOmsHelper
+                - \SprykerTest\Shared\Testify\Helper\DataCleanupHelper
+                - \SprykerTest\Shared\Sales\Helper\SalesDataHelper
+                - \SprykerTest\Shared\Shipment\Helper\ShipmentMethodDataHelper
+                - \SprykerTest\Zed\Oms\Helper\OmsHelper:
+                      conditions:
+                      	  name-of/your-condition: \Fully\Qualified\Class\Name
+                      	  ...
+                      commands:
+			  name-of/your-command: \Fully\Qualified\Class\Name
+			  ...
+						  
+```
+
+This is a basic example which shows how to add commands and conditions to the OmsHelper. You can add as many commands and conditions as you need.
+
+There are also some default commands and conditions for testing purposes you can use:
+- `\SprykerTest\Zed\Oms\Helper\Mock\AlwaysTrueConditionPluginMock` - This condition always returns true.
+- `\SprykerTest\Zed\Oms\Helper\Mock\AlwaysFalseConditionPluginMock` - This condition always returns false.
+- `\SprykerTest\Zed\Oms\Helper\Mock\CommandByItemPluginMock` - This command is a mock for the CommandByItemInterface and always return an empty array.
+- `\SprykerTest\Zed\Oms\Helper\Mock\CommandByOrderPluginMock` - This command is a mock for the CommandByOrderInterface and always return an empty array.
+
+You can use those when you need placeholders for commands and conditions. The key is the name that you are using in the OmsDependencyProvider as well to set up the state machine.
+
+{% info_block infoBox %}
+
+Currently, it is not possible to use commands or condition at run time of the test. You have to define them in the `codeception.yml` file.
+
+Another important thing is that it is currently only possible to use a single item in the test scenarios. And timeouts are also not testable yet. 
+
+{% endinfo_block %}
+
+#### 5.2 Create a test for your state machine
+
+An example test could look like this:
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace PyzTest\Zed\YourModuleName\Integration\Oms;
+
+use Codeception\Test\Unit;
+use PyzTest\Zed\YourModuleName\YourModuleNameIntegrationTester;
+
+class OmsIntegrationTest extends Unit
+{
+	public function testMoveAnItemFromStateAToStateB(): void
+    {
+    	// Set up one single item with its current expected state
+        $this->tester->haveOrderItemInState('a');
+
+		// do something where you expect that the item should move to the next state
+		
+		// Trigger the state machine
+        $this->tester->tryToTransitionOrderItems();
+        // or
+        $this->tester->tryToTransitionOrderItems('event name');
+        
+        // Assert that the item is moved to the expected state.
+        $this->tester->assertOrderItemIsInState('b');
+    } 
+}
+```
+
+The first method `haveOrderItemInState` sets up an item in the state `a`. This method also accepts a second argument where you can pass individual fields to be used for order item creation.
+After that you need to add your code where you expect that the item should move to the next state. F.e. receiving an Async API message or calling a command.
+The second method (use only one of both examples) `tryToTransitionOrderItems` triggers the state machine to move the item to the next state if possible. When used without an event name only conditions are checked. If you want to trigger a specific event you can pass the event name as a parameter. 
+The last method asserts that the item is in the expected state `b`.
+
+These tests can be easy but also become very complex depending on your needs for testing. When you need more items or processing of complete orders you currently need to create your own helper.
+
+### 6. Define the happy path of an order item (optional)
 
 Along with the nice representation of the state machine as a graph, Spryker provides the `happy` flag. It adds green arrows on the transitions to define the happy path of an order item.
 

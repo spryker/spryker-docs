@@ -2,9 +2,11 @@
 title: Configure the Spryker Middleware Powered by Alumio connection with Akeneo PIM and SCCOS
 description: Create clients for Akeneo and Spryker in the Spryker Middleware Powered by Alumio
 template: howto-guide-template
+redirect_from:
+  - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html
 last_updated: Nov 10, 2023
 ---
-To start importing products from Akeneo to your Spryker project using the Spryker Middleware powered by Alumio, you need to connect Spryker Middleware powered by Alumio with Akeneo and SCCOS. 
+To start importing products from Akeneo to your Spryker project using the Spryker Middleware powered by Alumio, you need to connect Spryker Middleware powered by Alumio with Akeneo and SCCOS.
 
 You can establish this connection directly in the Spryker Middleware Powered by Alumio platform by following these guidelines.
 
@@ -33,7 +35,7 @@ To connect Akeneo with Spryker Middleware powered by Alumio, you need to create 
 6. Optional: Check the *Enable logging of requests* checkbox.
 7. Click **Grant access to Alumio** and proceed to the next step.
 8. Enter the name of your client. As you are entering the name, the identifier will be populated automatically based on the name.
-9. Click **Save**. 
+9. Click **Save**.
 
 The client should now be on the list of the *HTTP clients* page.
 
@@ -50,7 +52,7 @@ To connect SCCOS to Spryker Middleware powered by Alumio, you also need to creat
 7. Optional: Check the *Enable logging of requests* checkbox.
 8. Click **Grant access to Alumio** and proceed to the next step.
 9. Enter the name of your client. As you are entering the name, the identifier will be populated automatically based on the name.
-10. Click **Save**. 
+10. Click **Save**.
 
 The client should now be on the list of the *HTTP clients* page.
 

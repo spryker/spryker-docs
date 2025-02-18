@@ -3,31 +3,32 @@ title: Data Exchange
 description: Learn all about Spryker's data exchange options that you can use within your Spryker project.
 template: concept-topic-template
 last_updated: Dec 18, 2023
+redirect_from:
+  - /spryker-middleware.htm
+  - https://docs.spryker.com/spryker-middleware.htm   
+  - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html
+  - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/incrementally-import-products-with-spryker-middleware-powered-by-alumio.html
+  - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/integration-apps/integration-apps.html
+  - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos.html
+  - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html       
+  - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html  
+  - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app.html
+  - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html  
+
 ---
 
 Data Exchange refers to the process of transferring data between Spryker and third-party systems.
 
 Spryker offers the following options to import and export data:
 
-- Spryker Middleware powered by Alumio:
-    - Spryker Integration Apps
-    - Custom integrations using the existing Alumio connectors
-    - Custom integration apps using the Alumio SDK to build your own connectors
 - Data Exchange API: available in SCCOS by default
 - Data Importers and Data Exporters: available in Spryker Cloud Commerce OS (SCCOS) by default
 
-
-## Spryker Middleware powered by Alumio
-
-{% include pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio.md %} <!-- To edit, see /_includes/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio.md -->
 
 ### Spryker Integration Apps
 
 {% include pbc/all/data-exchange/202311.0/spryker-integration-apps.md %} <!-- To edit, see /_includes/pbc/all/data-exchange/202311.0/spryker-integration-apps.md -->
 
-### Custom integrations with Alumio connectors
-
-{% include pbc/all/data-exchange/202311.0/custom-integrations-with-alumio-connectors.md %} <!-- To edit, see /_includes/pbc/all/data-exchange/202311.0/custom-integrations-with-alumio-connectors.md -->
 
 ### Custom integrations with custom connectors
 
@@ -47,10 +48,7 @@ The main benefits of the Data Exchange API include the following:
 - Real-time updates: The infrastructure supports dynamic changes, so you can modify APIs on the fly.
 - Security and Access Control: The infrastructure incorporates strong security measures and access controls, which safeguards sensitive information.
 
-We recommend considering the Data Exchange API in the following cases:
-
-- You want to implement a data integration via API with a middleware that's not [Alumio](https://www.alumio.com).
-- You want to create your own data integration engine via API, without using any middleware software.
+We recommend considering the Data Exchange API if you want to create your own data integration engine via API, without using any middleware software.
 
 
 ## Data Importers and Data Exporters

@@ -1,7 +1,6 @@
 ---
 title: Install Vertex
 description: Find out how you can install Vertex in your Spryker shop
-draft: true
 last_updated: Jan 8, 2025
 template: howto-guide-template
 related:
@@ -37,4 +36,4 @@ To install Vertex, integrate the ACP connector module and the Vertex app:
 
 1. [Integrate ACP connector module for tax calculation](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html)
 2. [Integrate the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html)
-3. [Integrate the Taxamo app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-taxamo-app.html)
+3. [Integrate Taxamo](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-taxamo.html)

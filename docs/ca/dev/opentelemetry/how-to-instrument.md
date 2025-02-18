@@ -12,6 +12,9 @@ You may want to get familiar with [OpenTelemetry Documentation first](https://op
 
 ### Things that you should know
 
+#### Convention following
+The current implementation is following https://opentelemetry.io/docs/specs/semconv/ version 1.30.0.
+
 #### Trace
 Trace represents a single transaction. It has a unique ID and all spans are related to it. Trace has a name that is defined automatically or can be changed as described [here](https://github.com/spryker/spryker-docs/edit/otel-main-doc/docs/ca/dev/opentelemetry/how-to-instrument.md#integration).
 
@@ -293,7 +296,7 @@ image:
             - grpc
             - protobuf
 ```
-Be advised that according to [extension README](https://github.com/open-telemetry/opentelemetry-php-instrumentation?tab=readme-ov-file#conflicting-extensions) `blackfire` extension can have a conflict with a `opentelemetry` one, so make sure that you are not using both in the same time. We also would not recommend to run it together with a `newrelic` one.
+Be advised that according to [extension README](https://github.com/open-telemetry/opentelemetry-php-instrumentation?tab=readme-ov-file#conflicting-extensions) `blackfire` extension can have a conflict with a `opentelemetry` one, so make sure that you are not using both in the same time. The `newrelic` extension also has conflict in Distributed Tracing headers mechanism, so using both extensions in the same time will cause broken traces in your APM.
 
 ## Sampling
 As already mentioned before, spans can be sampled. But what does it mean?
@@ -360,7 +363,6 @@ Increasing those values will make your traces more detailed, but also can slow d
 | Variable Name                    | Description                                                                                                                                                                  | Default Value           | Allowed range                                                  |
 |----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|----------------------------------------------------------------|
 | `OTEL_SERVICE_NAMESPACE`         | Value is used to define a service namespace that is used in resource definition                                                                                              | 'spryker'               | any string value                                               |
-| `OTEL_EXPORTER_OTLP_ENDPOINT`    | Defines a url for a collector. Please contact a Spryker representative to get one for a Cloud env.                                                                           | 'http://collector:4317' | valid url                                                      |
 | `OTEL_SERVICE_NAME_MAPPING`      | A JSON object that includes mapping from application URL to service name. This mapping is used if no service name was provided via `MonitoringService::setApplicationName()` | '{}'                    | valid json with keys as service name and value as  URL pattern |
 | `OTEL_DEFAULT_SERVICE_NAME`      | If no service name is provided and no name was defined in `OTEL_SERVICE_NAME_MAPPING`, this default name will be used instead                                                | 'Default Service'       | any valid string                                               |
 | `OTEL_BSP_SCHEDULE_DELAY`        | Defines a delay in ms that will be used to wait before sending batch of spans into the exporter. The bigger the number, the bigger the batch.                                | 1000                    | 0...100000000                                                  |

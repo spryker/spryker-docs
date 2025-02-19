@@ -1,7 +1,7 @@
 ---
 title: Asynchronous API for payment service providers
 description: Overview of PSP Asynchronous API
-last_updated: Now 08, 2024
+last_updated: Feb 19, 2025
 template: concept-topic-template
 related:
   - title: Configure and disconnect flows for payment service providers
@@ -32,6 +32,8 @@ Sent from the app:
 * `PaymentRefundFailed`: Payment refund fails.
 * `PaymentCanceled`: A payment is canceled.
 * `PaymentCancellationFailed`: Payment cancellation fails.
+* `PaymentOverpaid`: A Payment is overpaid.
+* `PaymentUnderpaid`: A Payment is underpaid.
 * `PaymentCreated`: A payment is created.
 * `PaymentUpdated`: A payment is updated.
 * `ReadyForMerchantAppOnboarding`: App is ready to onboard merchants.

@@ -25,11 +25,6 @@ Spryker offers the following options to import and export data:
 - Data Importers and Data Exporters: available in Spryker Cloud Commerce OS (SCCOS) by default
 
 
-### Spryker Integration Apps
-
-{% include pbc/all/data-exchange/202311.0/spryker-integration-apps.md %} <!-- To edit, see /_includes/pbc/all/data-exchange/202311.0/spryker-integration-apps.md -->
-
-
 ### Custom integrations with custom connectors
 
 {% include pbc/all/data-exchange/202311.0/custom-integrations-with-custom-connectors.md %} <!-- To edit, see /_includes/pbc/all/data-exchange/202311.0/custom-integrations-with-custom-connectors.md -->

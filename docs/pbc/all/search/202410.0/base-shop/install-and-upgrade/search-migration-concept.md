@@ -63,7 +63,7 @@ All the Elasticsearch specific commands in the *Search* module were deprecated a
 
 ### Searching for data
 
-Searching for data is done through the SearchClient. Whenever there is a need to search for some data, implementation of `\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface`, tailored for that specific search, is defined by some satellite module.  It is then passed to `SearchClient::search()` method. Right now, all existing implementations of this interface in the core are bound to Elasticsearch. To provide future support for other search providers all these classes now implement the additional interface `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. This interface could be implemented like this:
+Searching for data is done through the SearchClient. Whenever there is a need to search for some data, implementation of `\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface`, tailored for that specific search, is defined by some satellite module. It is then passed to `SearchClient::search()` method. Right now, all existing implementations of this interface in the core are bound to Elasticsearch. To provide future support for other search providers all these classes now implement the additional interface `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. This interface could be implemented like this:
 
 **Code sample**
 

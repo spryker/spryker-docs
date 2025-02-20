@@ -60,7 +60,7 @@ To send telemetry data to your APM tool, your application must be instrumented u
 Customers can self-serve the instrumentation by following the [instrumentation guide](/docs/ca/dev/opentelemetry/how-to-instrument.md#integration), but Spryker also offers expert services to assist with this setup. If you require professional support, please contact your sales representative for further assistance.
 
 > [!NOTE]
->This solution only supports the **OpenTelemetry Collector** for telemetry ingestion. **Proprietary vendor agents (e.g., Dynatrace, DataDog, or New Relic agents) are not supported**. Instead, these platforms ingest telemetry streamed through the OpenTelemetry Collector, ensuring flexibility, interoperability, and vendor neutrality while adhering to industry-standard observability practices
+>This solution only supports the **OpenTelemetry Collector** for telemetry ingestion. **Proprietary vendor agents (e.g., Dynatrace, DataDog, or New Relic agents) are not supported**. Instead, these platforms ingest telemetry streamed through the OpenTelemetry Collector, ensuring flexibility, interoperability, and vendor neutrality while adhering to industry-standard observability practices. As a consequence of the OpenTelemetry activation, any previously installed proprietary agent will be removed.
 
 ## Additional information
 For more information, check out our [Spryker Service Description](https://spryker.com/ssd/).

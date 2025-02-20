@@ -39,9 +39,10 @@ The default metrics resolution is 60 seconds. All metrics can be split by teleme
 
 ## How do I get it?
 ### Prerequisites
-As a prerequisite, customers need to have an OpenTelemetry-compatible APM tool, which can be selected from the list of [supported vendors](https://opentelemetry.io/ecosystem/vendors/). <br>
+- Customers need to have an OpenTelemetry-compatible APM tool, which can be selected from the list of [supported vendors](https://opentelemetry.io/ecosystem/vendors/). <br>
+- Customers need to be eligible for Spryker Monitoring Integration.
 
-### How to Request Spryker Monitoring Integration
+### How to activate Spryker Monitoring Integration
 To request the Spryker Monitoring Integration, customers need to submit a Change Request through the [Support Portal](https://support.spryker.com/). Follow these steps:
 
 - Submit a Change Request: Access the Support Portal and create a new Change Request.

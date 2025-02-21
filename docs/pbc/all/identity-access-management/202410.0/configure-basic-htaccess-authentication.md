@@ -98,3 +98,26 @@ Open a protected endpoint from the excluded IP address and make sure that you ar
 {% endinfo_block %}
 
 You've excluded IP addresses from authentication.
+
+## Using allow-listing to protect endpoints and application parts
+
+You can also protect endpoints without using basic authentication. You can use the deny and allowlist engines to determine which IPs can communicate with different application parts. The below example will allow only the AWS application environment IPs, as well as the IPs added below it in the list to access the application "backoffice". You can adjust this example to other application parts, such as backgw or boffice as needed. Please make sure to thorougly test this in a non production environment to prevent unforseen connectivity issues in your application. You can learn more about the allow and deny-listing [here](https://docs.spryker.com/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html#groups-applications).
+
+```bash
+      boffice:
+        application: backoffice
+        endpoints:
+          backoffice.example.com.:
+            store: TR
+            <<: *real-ip
+            auth:
+              engine: whitelist
+              include:
+                - '${ALLOWED_IP}' # AWS gateway
+                - 195.xx.xx.xx
+                - 128.xx.xx.xx
+                - 128.xx.xx.xx
+```
+
+
+

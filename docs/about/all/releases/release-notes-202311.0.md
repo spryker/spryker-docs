@@ -106,9 +106,6 @@ The Spryker Middleware powered by Alumio helps you to reach the following outcom
 **Business benefit**:<br>
 Faster time-to-value shortening setup times for integrations
 
-### Documentation
-- [Spryker Middleware powered by Alumio](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html)
-- [Alumio: Integrate Spryker with any endpoint](https://www.alumio.com/platforms/spryker)
 
 ### Technical prerequisites
 To connect Spryker Middleware powered by Alumio with Spryker Cloud Commerce OS, you need to install or deploy the [Data Exchange API feature](/docs/pbc/all/data-exchange/202311.0/install-and-upgrade/install-the-data-exchange-api.html) in your environment.
@@ -127,9 +124,6 @@ The Spryker Akeneo PIM Integration App allows you to do the following:
 **Business benefit**:<br>
 Reduce time-to-market with a flexible integration to Akeneo PIM, keeping new product information synchronized at the rhythm your business demands.
 
-### Documentation
-- [Akeneo PIM Integration App](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/akeneo-pim-integration-app.html)
-- [Configure the Akeneo PIM Integration App](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app.html)
 
 ### Technical prerequisites
 - To use your Akeneo PIM Integration App, you need to have the Spryker Middleware powered by Alumio.

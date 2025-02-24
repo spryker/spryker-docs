@@ -37,10 +37,6 @@ Problems can be reports suspecting a bug or issues with the hosting services. To
 
 For any questions about Spryker. We want the knowledge about Spryker to be available to everyone. So, we'll provide you with a link to [Spryker Community](https://commercequest.space/) to ask your question there. If there are docs on the topic, we will provide a link to that.
 
-### Request help with Alumio
-
-Report problems with Alumio, request its provisioning for your environments, or schedule an appointment with Alumio Support.
-
 ### Infrastructure Change Request and Access Management
 
 Request all currently supported standard changes, such as requesting changes to non-production environments sizing, IAM users and environment provisioning.

@@ -302,6 +302,9 @@ When multiple plugin-stacks contain a large number of plugins (10+), performance
 
 ## Frequently Asked Questions (FAQ)
 
+### What kind of semantic versioning lock needs to be applied on the changes of the Factory when I define a new context?
+Minor (as default). When a new context is introduced in a Project, it needs to be wired in the [Factory definition](#Configuring the Strategy Resolver in the Factory); any project change in a Spryker Factory requires a minor semantic versoning lock on that package.
+
 ### Should I use this for all plugin-stacks?
 No, the strategy design pattern introduces complexity. Use it only when business logic requires it.
 

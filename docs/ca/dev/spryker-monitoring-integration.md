@@ -30,7 +30,7 @@ hc_rabbitmq: Reports 0 or 1 for RabbitMQ health.
 ```
 
 #### Metrics with Dimensions
-These metrics can be split by the following dimensions/labels*:
+These metrics can be split by the following dimensions or labels:
 ```yaml
 hc_rabbitmq_message_count_sum: A count of RabbitMQ messages [dimension_queue, dimension_virtualhost].
 hc_jenkins_builds_success_build_count_total.count: A count of successful Jenkins jobs [jenkins_job].
@@ -43,8 +43,8 @@ The default metrics resolution is 60 seconds. All metrics can be split by teleme
 
 ## How do I get it?
 ### Prerequisites
-- Customers need to have an OpenTelemetry-compatible APM tool, which can be selected from the list of [supported vendors](https://opentelemetry.io/ecosystem/vendors/). <br>
-- Customers need to be eligible for Spryker Monitoring Integration.
+- Integrate an OpenTelemetry-compatible APM tool from the list of [supported vendors](https://opentelemetry.io/ecosystem/vendors/)
+- Customers need to be eligible for Spryker Monitoring Integration
 
 ### How to activate Spryker Monitoring Integration
 To request the Spryker Monitoring Integration, customers need to submit a Change Request through the [Support Portal](https://support.spryker.com/). Follow these steps:

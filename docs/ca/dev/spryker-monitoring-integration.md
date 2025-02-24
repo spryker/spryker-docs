@@ -1,13 +1,17 @@
 # Spryker Monitoring Integration
 The Spryker Monitoring Integration is a comprehensive product capability designed to empower customers with advanced monitoring for their applications and systems. Leveraging [OpenTelemetry](https://opentelemetry.io/), this solution enables seamless connectivity and forwarding of telemetry data, including traces and health status metrics, to OpenTelemetry-compatible monitoring platforms. This integration facilitates near real-time tracking of application performance and monitoring of system health status.
 
-## What is OpenTelemetry (OTel)
-OpenTelemetry is an open-source framework that provides APIs, libraries, and agents for collecting traces and metrics across various applications. It standardizes the instrumentation of software to help developers monitor and improve application performance effectively. OTel allows to provide a seamless and vendor-agnostic monitoring experience, empowering customers to integrate Spryker with their preferred APM solutions while adhering to industry best practices for collecting and analyzing performance data.
+## OpenTelemetry
+OpenTelemetry (OTel) is an open-source framework that provides APIs, libraries, and agents for collecting traces and metrics across various applications. It standardizes the instrumentation of software to help developers monitor and improve application performance effectively. OTel allows to provide a seamless and vendor-agnostic monitoring experience, empowering customers to integrate Spryker with their preferred APM solutions while adhering to industry best practices for collecting and analyzing performance data.
 
 ## Telemetry data in scope of Spryker Monitoring Integration
-The Spryker Monitoring Integration focuses on several key entities to provide comprehensive monitoring:
+
+The Spryker Monitoring Integration focuses on the following entities to provide comprehensive monitoring.
 
 ### Traces and Spans
+> [!NOTE]
+> Supported Version of OpenTelemetry Semantic Conventions is 1.30.0
+
 In OpenTelemetry, a **trace** represents the journey of a single request or transaction as it moves through various components of a system, capturing the end-to-end flow. A **span** is a single operation or unit of work within a trace, containing information like the operation name, start and end times, and any relevant metadata. Together, traces and spans provide a detailed view of the interactions and performance of different parts of an application, helping to diagnose issues and optimize performance.
 
 ### Health Status Metrics
@@ -39,9 +43,10 @@ The default metrics resolution is 60 seconds. All metrics can be split by teleme
 
 ## How do I get it?
 ### Prerequisites
-As a prerequisite, customers need to have an OpenTelemetry-compatible APM tool, which can be selected from the list of [supported vendors](https://opentelemetry.io/ecosystem/vendors/). <br>
+- Customers need to have an OpenTelemetry-compatible APM tool, which can be selected from the list of [supported vendors](https://opentelemetry.io/ecosystem/vendors/). <br>
+- Customers need to be eligible for Spryker Monitoring Integration.
 
-### How to Request Spryker Monitoring Integration
+### How to activate Spryker Monitoring Integration
 To request the Spryker Monitoring Integration, customers need to submit a Change Request through the [Support Portal](https://support.spryker.com/). Follow these steps:
 
 - Submit a Change Request: Access the Support Portal and create a new Change Request.
@@ -56,7 +61,7 @@ To send telemetry data to your APM tool, your application must be instrumented u
 Customers can self-serve the instrumentation by following the [instrumentation guide](/docs/ca/dev/opentelemetry/how-to-instrument.md#integration), but Spryker also offers expert services to assist with this setup. If you require professional support, please contact your sales representative for further assistance.
 
 > [!NOTE]
->This solution only supports the **OpenTelemetry Collector** for telemetry ingestion. **Proprietary vendor agents (e.g., Dynatrace, DataDog, or New Relic agents) are not supported**. Instead, these platforms ingest telemetry streamed through the OpenTelemetry Collector, ensuring flexibility, interoperability, and vendor neutrality while adhering to industry-standard observability practices
+>This solution only supports the **OpenTelemetry Collector** for telemetry ingestion. **Proprietary vendor agents (e.g., Dynatrace, DataDog, or New Relic agents) are not supported**. Instead, these platforms ingest telemetry streamed through the OpenTelemetry Collector, ensuring flexibility, interoperability, and vendor neutrality while adhering to industry-standard observability practices. As a consequence of the OpenTelemetry activation, any previously installed proprietary agent will be removed.
 
 ## Additional information
 For more information, check out our [Spryker Service Description](https://spryker.com/ssd/).

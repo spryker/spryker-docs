@@ -396,8 +396,15 @@ services:
 
 [Blackfire](https://blackfire.io/) is a tool used to profile, test, debug, and optimize the performance of PHP applications. It gathers data about consumed server resources like memory, CPU time, and I/O operations. The data and configuration can be checked through the Blackfire web interface.
 
-> [!IMPORTANT]  
-> While we recommend Blackfire for PHP code profiling, it's important to note that **Blackfire is currently not compatible with OpenTelemetry (OTel)**. If OpenTelemetry resolves this compatibility in the future, we will inform our customers accordingly. In the meantime, for profiling needs compatible with OTel, we suggest using tools like [Tideways](/docs/dg/dev/integrate-and-configure/configure-services.md#tideways), which can integrate seamlessly with your OpenTelemetry-based monitoring stack.
+{% info_block warningBox %}
+
+While we recommend Blackfire for PHP code profiling, *Blackfire is not compatible with OpenTelemetry (OTel)*. If OpenTelemetry resolves this compatibility in future, we will inform you. Meantime, for profiling needs compatible with OTel, we suggest using tools like [Tideways](/docs/dg/dev/integrate-and-configure/configure-services.md#tideways), which can integrate seamlessly with your OTel-based monitoring stack.
+
+
+{% endinfo_block %}
+
+
+
 
 ### Configure Blackfire
 

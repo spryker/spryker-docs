@@ -18,17 +18,17 @@ This document describes how to connect a code repository to Spryker Cloud Commer
 
 If you specified a code repository in the Onboarding Questionnaire, we connected it to your Staging environment during the initial setup. To connect a code repository to another environment, follow this document.
 
-Note that we are only supporting the Cloud variants of the repositories listed below. To connect the On-Premises repository, check the documentation of your git repository provider about mirroring the repository to one of the following providers.
+Spryker supports only the cloud variants of the repositories listed below. To connect an on-premises repository, check the documentation of your Git repository provider about mirroring it to one of the following providers.
 
 {% endinfo_block %}
 
-Spryker Cloud Commerce OS supports the following version control systems:
+Spryker supports the following version control systems:
 
 * [GitHub](https://github.com/)
 * [Bitbucket](https://bitbucket.org/)
 * [GitLab](https://gitlab.com/)
 
-Spryker Cloud also offers support for all the Git repositories that support AWS CodeCommit push mirroring. Similar to the GitLab setup, you can configure all the commits from your version control system to be mirrored to Spryker Cloud and consumed by our pipelines to build and deploy your system.
+Spryker also supports all the Git repositories that support AWS CodeCommit push mirroring. Similar to the GitLab setup, you can configure all the commits from your version control system to be mirrored to Spryker and consumed by our pipelines to build and deploy your system.
 
 We recommend mapping your branches to environments as follows:
 
@@ -41,16 +41,28 @@ We recommend mapping your branches to environments as follows:
 
 ## Connect a GitHub code repository
 
+1. Log into the AWS management console of the environment you want to connect a repository to.
+2. Go to **CodePipeline**.
+3. One the **Pipelines** page, select the pipeline you want to connect the repository to.
+4. On the page of the pipeline, click **Edit**.
+  This opens the pipeline editing page.  
+5. In the **Edit: Source** pane, click **Edit stage**.  
+6. In the **Spryker_App_Src** section, click the *Edit action* button.
+  This opens the **Edit action** window.
 
-1. Configure a GitHub code repository.
-2. On the [support portal](https://support.spryker.com/) in the Infrastructure Change Request category, create a Change to existing Parameter Store Variable case and provide the following details:
-  * **URL**
-  * **Branch**
-3. Provide the **Access token** by following [Share a secret](/docs/about/all/support/share-secrets-with-the-spryker-support-team.html#share-a-secret).
+![edit-action](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/connect-a-code-repository.md/edit-action.png)
 
-We connect the code repository shortly after you provide the details.
+7. For **Action provider**, select **GitHub(via GitHub App)**.
+This adds GitHub related fields to the window.
+8. Click **Connect to GitHub** and authorize AWS CodePipeline to access your GitHub repository.
+9. For **Repository name**, enter and select the repository you want to connect.
+10. For **Branch name**, enter and select the branch you want to connect.
+11. Click **Done**.
+12. In the **Edit: Source** pane, click **Done**.
+13. Scroll up and click **Save**.
+14. In the **Save pipeline changes** window, click **Save**.
 
-
+Your GitHub repository is now successfully connected!
 
 
 ## Connect a Bitbucket code repository

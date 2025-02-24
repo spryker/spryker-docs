@@ -36,7 +36,7 @@ Consider studying the following documents before you begin:
 
 Logically, the Glue layer can be divided into 3 parts:
 * **GlueApplication module**
-    <br>The `GlueApplication` module provides a framework for constructing API resources. It intercepts all HTTP requests at resource URLs (e.g. `http://mysprykershop.com/resource/1`), handles call semantics, verifies requests, and also provides several utility interfaces that can be used to construct API responses.
+    <br>The `GlueApplication` module provides a framework for constructing API resources. It intercepts all HTTP requests at resource URLs–for example, `http://mysprykershop.com/resource/1`, handles call semantics, verifies requests, and also provides several utility interfaces that can be used to construct API responses.
 * **Resource modules**
     <br>Each `Resource` module implements a separate resource or a set of resources. Such a module handles requests to a particular resource and provides them with responses. In the process of doing so, the module can communicate with the Storage, Search or Spryker Commerce OS (Zed). The modules do not handle request semantics or rules. Their only task is to provide the necessary data in a format that can be converted by the `GlueApplication` module into an API response.
 * **Relationship modules**

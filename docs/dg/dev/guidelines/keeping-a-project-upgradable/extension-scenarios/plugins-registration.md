@@ -19,7 +19,7 @@ Manifests support plugins registration in the dependency provider and plugins re
 
 ## Plugins registration in the configuration file
 
-The following is an example of how to have single plugin registration in the global configuration file (e.g. config_default.php):
+The following is an example of how to have single plugin registration in the global configuration file, such as `config_default.php`:
 
 ```php
 <?php

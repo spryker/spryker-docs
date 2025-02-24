@@ -30,7 +30,7 @@ Before starting the implementation, let's consider the most important concepts a
 
 The rule of thumb is: *Follow incremental data updates. Avoid repetitive full data import.*
 
-A full data import is required during the initial project setup. Once data is uploaded on a staging or a production system, a project needs to switch operations to only apply incremental updates. E.g., only new products should be added to the import pipeline, or only prices updated in ERP are added to the import pipeline.
+A full data import is required during the initial project setup. Once data is uploaded on a staging or a production system, a project needs to switch operations to only apply incremental updates. Fox example, only new products should be added to the import pipeline, or only prices updated in ERP are added to the import pipeline.
 
 {% info_block infoBox "Note" %}
 
@@ -61,17 +61,17 @@ Data processing has higher impacts on IO resources. To scale this process and ta
 
 {% info_block infoBox "Note" %}
 
-When parallel processing is used, data dependency must be handled manually, and dependent queues must be consumed by order. E.g., to import Product Concretes, all processes of Product Abstracts must be finished first.
+When parallel processing is used, data dependency must be handled manually, and dependent queues must be consumed by order. For example, to import Product Concretes, all processes of Product Abstracts must be finished first.
 
 {% endinfo_block %}
 
 ### Data consistency
 
-There are many DB features we use for data consistency (e.g., foreign keys, unique indexes). This way, we ensure that only complete data sets reach production DB.
+There are many DB features we use for data consistency, such as foreign keys or unique indexes. This way, we ensure that only complete data sets reach production DB.
 
 At the same time, IO operations have limited scalability. This means that we need to ensure data consistency before reaching the persistence layer.
 
-The first step in achieving this is to establish a data pipeline, where inconsistent data sets do not reach Spryker Data Importers and are managed on the data export phase (e.g., by ERP, Middleware).
+The first step in achieving this is to establish a data pipeline, where inconsistent data sets do not reach Spryker Data Importers and are managed on the data export phase–for example, by ERP or Middleware.
 
 When a clean data pipeline is not possible by DevVM system requirements, you can establish runtime validations. They should prevent inconsistent data coming to the persistence layer and reduce pollution of the DB connection with invalid SQL queries. In this case, we spend CPU time for validation, which remains highly scalable until business models are stateless.
 

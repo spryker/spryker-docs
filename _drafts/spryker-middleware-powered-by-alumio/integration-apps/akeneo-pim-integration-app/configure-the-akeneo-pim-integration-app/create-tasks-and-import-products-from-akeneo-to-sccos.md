@@ -2,6 +2,8 @@
 title: Create tasks and import products from Akeneo to SCCOS
 description: Test the configuration, create tasks, schedulers and run the import of products from Akeneo to SCCOS
 template: howto-guide-template
+redirect_from:
+  - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos.html
 last_updated: Nov 10, 2023
 ---
 
@@ -9,12 +11,12 @@ After you have [configured the data integration path between Akeneo and SCCOS](/
 
 ## Create a task for the products import from Akeneo
 
-To create a task for the products import from Akeneo, you have to run the incoming created at step [Create an incoming configuration](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html#create-an-incoming-configuration). 
+To create a task for the products import from Akeneo, you have to run the incoming created at step [Create an incoming configuration](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html#create-an-incoming-configuration).
 
 To run the incoming, do the following:
 
 1. In the Spryker Middleware powered by Alumio platform, go to **Connections -> Incoming** and click the necessary incoming configuration.
-2. In the top right corner, click **Run incoming**. 
+2. In the top right corner, click **Run incoming**.
 3. Go to *Tasks* and make sure that there is the new task with the route you created at step [Define the route](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html#define-the-route). The task's status should be *Processing*.
 
 ![tasks](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos/tasks.png)
@@ -27,7 +29,7 @@ A separate task is created for every product. That is, if you initiate an incomi
 
 ### Filtering task messages
 
-You can filter the task messages by different categories such as info, notice, error, and others. This is especially useful when you need to determine a reason why the task execution has failed. In such a case, you can filter the messages by errors and see details of the errors. 
+You can filter the task messages by different categories such as info, notice, error, and others. This is especially useful when you need to determine a reason why the task execution has failed. In such a case, you can filter the messages by errors and see details of the errors.
 To filter the messages, do the following:
 1. On the *Tasks* page, click the necessary task, for example, the one with the *Failed* status.
 2. On the task details page, go to *Export Messages* tab.
@@ -55,7 +57,7 @@ The product that will be imported into SCCOS, appears at the bottom of the trans
 
 ## Run the route
 
-To get the task processed, you need to run the full route. 
+To get the task processed, you need to run the full route.
 To run the route, do the following:
 1. Go to *Routes* and click the route you created at step [Define the route](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html#define-the-route).
 2. At the *Routes* page, click **Run route**.
@@ -84,7 +86,7 @@ To create the scheduler, do the following:
 5. In *Expression*, enter the time you want the scheduler to run. Use [Crontab guru](https://crontab.guru/) to set the time in the right format.
 6. Create one more scheduler with the same parameters, but for step 3, select the *Run outgoing configuration* job.
 
-Since the number of tasks that can be processed is limited, it's recommended to create a scheduler that would remove completed tasks after the specified intervals. 
+Since the number of tasks that can be processed is limited, it's recommended to create a scheduler that would remove completed tasks after the specified intervals.
 
 To create such a scheduler, do the following:
 

@@ -3,6 +3,8 @@ title: Incrementally import recently updated products with Spryker Middleware Po
 description: Learn how to incrementally import products that have been updated a day ago
 last_updated: Apr 18, 2024
 template: howto-guide-template
+redirect_from:
+  - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/incrementally-import-products-with-spryker-middleware-powered-by-alumio.html
 ---
 
 This document describes how to import products that have recently been updated. Following the described procedure, you can import products that have been updated within the past day.

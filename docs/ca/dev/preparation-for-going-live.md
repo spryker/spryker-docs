@@ -19,7 +19,7 @@ The preparation steps listed here are mandatory because they're crucial for the 
 
 This document describes how to prepare a Spryker project for going live.
 
-We've divided the preparation into approximate timeframes, and you can adjust them to your needs. Make sure that all of the following tasks are completed at least one week before going live.
+We've divided the preparation into approximate timeframes. Feel free to copy this to your project management software and adjust to your needs. Make sure that all of the following tasks are completed at least one week before going live.
 
 ## Eight weeks before go-live
 

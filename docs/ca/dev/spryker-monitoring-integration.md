@@ -1,11 +1,12 @@
 # Spryker Monitoring Integration
 The Spryker Monitoring Integration is a comprehensive product capability designed to empower customers with advanced monitoring for their applications and systems. Leveraging [OpenTelemetry](https://opentelemetry.io/), this solution enables seamless connectivity and forwarding of telemetry data, including traces and health status metrics, to OpenTelemetry-compatible monitoring platforms. This integration facilitates near real-time tracking of application performance and monitoring of system health status.
 
-## What is OpenTelemetry (OTel)
-OpenTelemetry is an open-source framework that provides APIs, libraries, and agents for collecting traces and metrics across various applications. It standardizes the instrumentation of software to help developers monitor and improve application performance effectively. OTel allows to provide a seamless and vendor-agnostic monitoring experience, empowering customers to integrate Spryker with their preferred APM solutions while adhering to industry best practices for collecting and analyzing performance data.
+## OpenTelemetry
+OpenTelemetry (OTel) is an open-source framework that provides APIs, libraries, and agents for collecting traces and metrics across various applications. It standardizes the instrumentation of software to help developers monitor and improve application performance effectively. OTel allows to provide a seamless and vendor-agnostic monitoring experience, empowering customers to integrate Spryker with their preferred APM solutions while adhering to industry best practices for collecting and analyzing performance data.
 
 ## Telemetry data in scope of Spryker Monitoring Integration
-The Spryker Monitoring Integration focuses on several key entities to provide comprehensive monitoring:
+
+The Spryker Monitoring Integration focuses on the following entities to provide comprehensive monitoring.
 
 ### Traces and Spans
 > [!NOTE]

@@ -1,4 +1,9 @@
-# Monitoring
+---
+title: Monitoring
+description:
+last_updated: Feb 25, 2025
+template: howto-guide-template
+---
 
 Effective monitoring is crucial for maintaining the health and performance of your Spryker applications. This page provides access to resources and integrations that enable comprehensive monitoring through logs and application performance metrics.
 

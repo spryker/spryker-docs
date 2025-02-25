@@ -2,7 +2,7 @@
 title: Integrate Algolia
 description: Find out how you can integrate Algolia into your Spryker shop
 template: howto-guide-template
-last_updated: Jan 09, 2024
+last_updated: Feb 25, 2025
 redirect_from:
 - /docs/pbc/all/search/202400.0/base-shop/third-party-integrations/integrate-algolia.html
 - /docs/pbc/all/search/202311.0/base-shop/third-party-integrations/integrate-algolia.html
@@ -44,7 +44,14 @@ use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
 //...
 
 $config[SearchHttpConstants::TENANT_IDENTIFIER]
+    = $config[KernelAppConstants::TENANT_IDENTIFIER]
     = $config[ProductConstants::TENANT_IDENTIFIER]
+    = $config[MessageBrokerConstants::TENANT_IDENTIFIER]
+    = $config[MessageBrokerAwsConstants::CONSUMER_ID]
+    = $config[OauthClientConstants::TENANT_IDENTIFIER]
+    = $config[PaymentConstants::TENANT_IDENTIFIER]
+    = $config[AppCatalogGuiConstants::TENANT_IDENTIFIER]
+    = $config[TaxAppConstants::TENANT_IDENTIFIER]
     = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
 
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [

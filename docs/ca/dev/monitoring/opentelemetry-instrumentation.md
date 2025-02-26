@@ -119,7 +119,6 @@ If you want to integrate manually, the following sections describe all steps of 
 ### Install required packages
 OpenTelemetry provides instrumentation via packages that can be installed to register hooks automatically. If you want to instrument something that is not covered in our code base but is required for you, you can try to install one of the packages listed at [Registry](https://opentelemetry.io/ecosystem/registry/?language=php) or from other sources.
 
-
 {% info_block warningBox %}
 Install third-party packages at your own risk.
 {% endinfo_block %}
@@ -132,10 +131,12 @@ The [spryker/opentelemetry](https://packagist.org/packages/spryker/opentelemetry
 * Instrumentation of Propel, Redis, ElasticSearch, RabbitMQ, and Guzzle calls
 
 ### Optional: Install the Monitoring module
-OpenTelemetry integration doesn't require to use Monitoring service, but this is highly recommended as it allows you to add custom attributes and events, change your traces (transaction) name during the request execution, have exceptions added to the root span for visibility and more.
-You can get a module on the [Packagist](https://packagist.org/packages/spryker/monitoring).
 
-After installation you can wire a Monitoring plugin from a `spryker/opentelemtry` module to enable all listed above features.
+The Monitoring module enables you to add custom attributes and events, change trace names during the request execution, add exceptions to the root span for visibility.
+
+You can get the Monitoring module on the [Packagist](https://packagist.org/packages/spryker/monitoring).
+
+After installation, wire the Monitoring plugin from the module.
 ```php
 <?php
 
@@ -160,7 +161,9 @@ class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
 ```
 
 
-After that you can call methods from Monitoring service and they will be translated to OpenTelemetry actions. Be advised that some of the methods are empty due to the fact that those things have no direct implementation in Opentelemetry, like `\Spryker\Service\Opentelemetry\Plugin\OpentelemetryMonitoringExtensionPlugin::markStartTransaction()` as transaction will start anyway.
+After installation, you can call methods from Monitoring service and they will be translated to OpenTelemetry actions. Some of the methods are empty because those things have no direct implementation in Opentelemetry, like `\Spryker\Service\Opentelemetry\Plugin\OpentelemetryMonitoringExtensionPlugin::markStartTransaction()` as transaction will start anyway.
+
+
 
 ### Wire a console command
 

@@ -58,24 +58,25 @@ The default metrics resolution is 60 seconds. All metrics can be split by teleme
 - Customers need to be eligible for Spryker Monitoring Integration
 
 ### How to activate Spryker Monitoring Integration
-To request the Spryker Monitoring Integration, customers need to submit a Change Request through the [Support Portal](https://support.spryker.com/). Follow these steps:
 
-- Submit a Change Request: Access the Support Portal and create a new Change Request.
-- Provide the following Information:
+To request the Spryker Monitoring Integration, on [Support Portal](https://support.spryker.com/), create a Change Request with the following details:
   - Endpoint: The endpoint URL of your APM tool.
-  - Token: An API token that Spryker can use to configure and communicate with your APM tool.
+  - Token: An API token to configure the connection and communication of Spryker with the APM tool.
 
-Spryker Support will guide you through the setup process once the request is submitted.
+We'll guide you through the setup process once you submit the request.
 
-### Instrumenting Your Application
-To send telemetry data to your APM tool, your application must be instrumented using OpenTelemetry. This process ensures that the necessary data is collected and forwarded to the monitoring system of your choice.
-Customers can self-serve the instrumentation by following the [instrumentation guide](/docs/ca/dev/opentelemetry/how-to-instrument.md#integration), but Spryker also offers expert services to assist with this setup. If you require professional support, please contact your sales representative for further assistance.
+### Instrumenting your application
+To send telemetry data to an APM tool, you need to instrument the application using OTel. For information on instrumenting your application, see
+[OpenTelemetry instrumentation](/docs/ca/dev/monitoring/opentelemetry-instrumentation.html).
+
+We're also providing expert services for instrumentation setups. If you need help with instrumentation, contact your sales representative.
 
 
-{% info_block infoBox %}
-This solution only supports the **OpenTelemetry Collector** for telemetry ingestion. **Proprietary vendor agents (e.g., Dynatrace, DataDog, or New Relic agents) are not supported**. Instead, these platforms ingest telemetry streamed through the OpenTelemetry Collector, ensuring flexibility, interoperability, and vendor neutrality while adhering to industry-standard observability practices. As a consequence of the OpenTelemetry activation, any previously installed proprietary agent will be removed.
-{% endinfo_block %}
+## OpenTelemetry Collector
+
+This solution supports data ingestion only through the OpenTelemetry Collector. Proprietary vendor agents, such as Dynatrace, DataDog, or New Relic agents, are not supported. These platforms are still supported but have to ingest data through the collector. Once OTel is activeted, any proprietary agents are removed.
 
 
 ## Additional information
+
 For more information, check out our [Spryker Service Description](https://spryker.com/ssd/).

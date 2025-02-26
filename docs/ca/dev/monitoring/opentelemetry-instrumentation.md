@@ -420,8 +420,12 @@ This will add a error event into the root span and will change its status to the
 ## Changing a service name
 
 Service name allows you to filter traces by the source. You may want to check only Yves traces or mb just to check only Glue requests, but you backend can show you a bunch of CLI commands from your Scheduler.
+
 You can define a service name via `\Spryker\Service\Monitoring\MonitoringService::setApplicationName()` or `\Spryker\Service\Opentelemetry\OpentelemetryService::setResourceName()`.
-If you are using the `MonitoringService` and any method from it was executed, you will get a generated service name in any case. By default it looks like `APPLICATION-REGION_OR_STORE(application.env)`, where `APPLICATION` is a name of your application (ZED, YVES, GLUE, etc.), `REGION_OR_STORE` is a current store or region name that depends if your application works in Dynamic Store mode or not, and `application.env` is an env name from your deploy file. You can change any of those value via `MonitoringService` or change the name completely via `OpentelemetryService`.
+
+If you are using the `MonitoringService` and any method from it was executed, you will get a generated service name in any case.
+
+By default it looks like `APPLICATION-REGION_OR_STORE(application.env)`, where `APPLICATION` is a name of your application (ZED, YVES, GLUE, etc.), `REGION_OR_STORE` is a current store or region name that depends if your application works in Dynamic Store mode or not, and `application.env` is an env name from your deploy file. You can change any of those value via `MonitoringService` or change the name completely via `OpentelemetryService`.
 If nothing was provided by services, OpenTelemetry integration will try to resolve a service name for you.
 First of all `OTEL_SERVICE_NAME_MAPPING` value will be fetched and will try to find a proper service name based on the URL or CLI binary file name.
 If no value was provided or nothing from it was suitable or us - the default service name from `OTEL_DEFAULT_SERVICE_NAME` env value will be used.
@@ -429,7 +433,7 @@ If no value was provided or nothing from it was suitable or us - the default ser
 ## Changing a trace name
 
 Trace name (or in our case a root span name) should show you what request or command was executed. By default it should include a HTTP method name with an URL for the WEB requests and command name for a command execution.
-But it can be also changed during the execution. OOTB Spryker will change a WEB requests trace name in order to reflect a route name of the request. But if you don't like it or don't use a `Monitoring` module, you can define it via `\Spryker\Service\Opentelemetry\OpentelemetryService::setRootSpanName()` or `\Spryker\Service\Monitoring\MonitoringService::setTransactionName()` accordingly.
+But it can be also changed during the execution. OOTB Spryker will change a WEB requests trace name in order to reflect a route name of the request. But if you don't like it or don't use a `Monitoring` module, you can define it via `\Spryker\Service\Opentelemetry\OpentelemetryService::setRootSpanName()` or `\Spryker\Service\Monitoring\MonitoringService::setTransactionName()`.
 
 ## Recommendations
 

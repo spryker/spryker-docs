@@ -207,7 +207,7 @@ sections:
 
 `open-telemetry:generate` command will do a heavy lifting and generate hooks for your code base. You can control what exactly you want to instrument by updating a few configuration methods.
 
-`\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getExcludedDirs()` - controls what directories MUST NOT be instrumented. You may not want to see in your traces spans from some infra code that is not relevant for you. So you can just exclude the whole directory with a provided name. OOTB we excluded a bunch of directories. Review them in the vendor dir of the module if you want to instrument something from that list.
+`\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getExcludedDirs()` - controls what directories MUST NOT be instrumented. You may not want to see in your traces spans from some infra code that is not relevant for you. So you can just exclude the whole directory with a provided name. OOTB we excluded a bunch of directories. Review them in the vendor directory of the module if you want to instrument something from that list.
 Below you can see an example of how this method should look.
 ```php
 class OpentelemetryConfig extends AbstractBundleConfig
@@ -324,13 +324,15 @@ Be advised that according to [extension README](https://github.com/open-telemetr
 
 Spryker is a big application with humongous amount of methods executed during the request. Some of them executed a lot of times. OpenTelemetry uses a PHP functions to open and close spans. This can add not desired load on your application, so we prepare instruments to reduce amount of spans that is sent with traces.
 
-In our implementation sampling is done three times during the execution - first (`tracing sampling`) the trace it self is deciding if it can be just a root span without any details, second time (`Opening span sampling`) before we even open a span and third time (`Closing span sampling`) after a span is closing to remove super fast and succesful spans as the most probably have no value for you.
+In our implementation sampling is done three times during the execution - first (`tracing sampling`) the trace it self is deciding if it can be just a root span without any details, second time (`Opening span sampling`) before we even open a span and third time (`Closing span sampling`) after a span is closing to remove super fast and succesful spans because those probably have no value for you.
 
 ### Tracing sampling
 In most cases, we don't need a detailed trace on each and every request or command execution. But we want at least know that it was there and see an error if one was triggered during the execution.
 For this, we are checking a few things when we initialise a trace. We check if the method is a WEB request or a console command.
+
 For the WEB request we check if the HTTP method is GET or not. If not, the trace is going to be detailed in any case.
 If the method was GET, we generate a random number from 0 to 1.0 and compare it against a configured probability. If the generated number less than a configured value - the trace will include spans. If not, only a root span will be present.
+
 Console command sampling works exactly the same, but the configuration value is separate for the more fine tuning.
 
 ### Opening span sampling
@@ -367,7 +369,7 @@ All other spans are considered as `regular`.
 By setting a span attribute `no_critical` and `is_critical`, span can be marked as critical or not.
 
 ### Sampling configuration
-Like already mentioned, valued that used for sampling can be changed. In order to do so, you need to change a few env variables.
+Values that are used for sampling can be changed. In order to do so, you need to change a few env variables.
 
 | Variable Name                                   | Description                                                       commitomm                                        | Default Value | Allowed range |
 |-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|---------------|---------------|
@@ -433,7 +435,7 @@ But it can be also changed during the execution. OOTB Spryker will change a WEB 
 
 Due to the fact that we use PHP code to instrument codebase, you should consider performance. Tracing is an expensive operation and we should use it wisely.
 
-Please minimise amount of generated spans per request. OpenTelemetry documentation recommends to have no more than 1000 of them. So you can skip some spans via configuration that are not relevant to you. Don't be afraid, errors will be processed even if the method was not instrumented as Error Event will be attached to the root span.
+Please minimise amount of generated spans per request. OpenTelemetry documentation recommends to have no more than 1000 of them. So you can skip some spans via configuration that are not relevant to you. Don't be afraid, errors will be processed even if the method was not instrumented because Error Event will be attached to the root span.
 
 Use sampling to not get a full trace every time. Please check configuration section for the reference.
 

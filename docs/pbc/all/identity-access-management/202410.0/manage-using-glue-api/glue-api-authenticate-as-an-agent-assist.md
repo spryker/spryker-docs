@@ -18,7 +18,7 @@ related:
     link: docs/pbc/all/user-management/page.version/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---
 
-Log into the Storefront as an [agent assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) to help customers by performing actions on their behalf. After you’ve logged in, you can search by customers and impersonate them to perform any action available to them.
+Log into the Storefront as an [agent assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) to help customers by performing actions on their behalf. After you've logged in, you can search by customers and impersonate them to perform any action available to them.
 
 ## Installation
 
@@ -107,6 +107,6 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ## Next steps
 
-After you’ve authenticated in as an agent assist, you can:
+After you've authenticated in as an agent assist, you can:
 * [Search by customers](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html#search-by-customers)
 * [Impersonate a customer](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html#impersonate-a-customer)

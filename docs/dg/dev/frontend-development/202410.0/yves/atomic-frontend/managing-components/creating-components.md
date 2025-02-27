@@ -222,7 +222,7 @@ export default class NewComponentCounter extends Component {
 
 After implementing the behavior, we also need to bind the Javascript class to the DOM. For this purpose, we need to use the **register** function of the Spryker Shop application. It accepts **2** arguments:
 
-* **name** - specifies the component name.This name will be associated with the component and can be used in Twig to insert the component in a template. Also, it will be used in the DOM as a tag name. Whenever a tag with the specified name occurs in the DOM, the Shop Application will load the component. It must be the same as the `data.tag` specified in the component Twig on step **2**.
+* **name** - specifies the component name. This name will be associated with the component and can be used in Twig to insert the component in a template. Also, it will be used in the DOM as a tag name. Whenever a tag with the specified name occurs in the DOM, the Shop Application will load the component. It must be the same as the `data.tag` specified in the component Twig on step **2**.
 
 * **importer** - must be a call of Webpack's **import** function to import Typescript code for the component.
 

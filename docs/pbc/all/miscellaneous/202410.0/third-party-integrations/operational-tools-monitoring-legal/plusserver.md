@@ -17,7 +17,7 @@ PlusServer GmbH is the leading managed cloud provider in Germany, Austria and Sw
 YOUR ADVANTAGES:
 * Highest performance through optimized solutions
 * Proactive monitoring and 24/7 support
-* Flexible scalability, e.g. for peak loads
+* Flexible scalability–for example, for peak loads
 * Experts certified by shop software manufacturers
 * 99.998% average availability in 2017
 * German data protection and secure credit card payment

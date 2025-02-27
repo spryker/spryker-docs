@@ -18,6 +18,6 @@ Additional guidance for introducing short and long examples:
 |-|-|-|
 | To introduce a short example, use a comma or an em dash. | Create a new module—for example, `src/Yves/ContentFooWidget`. | Create a new module. For example, `src/Yves/ContentFooWidget`. |
 | To introduce a long example in a short sentence, use a comma or an em dash. | A customer is the final consumer of the store—for example, the person who places an order. | A customer is the final consumer of the store. For example, the person who places an order. |
-| To introduce a long example in a long sentence, write the example as a separate sentence. | A shop owner can sell the same product in different packaging units. For example, apples can be sold as an "Item", a "Bag", or "Pallet" of apples. | A shop owner can sell the same product in different packaging units—for example, apples can be sold as an "Item", a "Bag", or "Pallet" of apples. |
+| To introduce a long example in a long sentence, write the example as a separate sentence. | A shop owner can sell the same product in different packaging units. For example, apples can be sold as an "Item," a "Bag," or "Pallet" of apples. | A shop owner can sell the same product in different packaging units—for example, apples can be sold as an "Item," a "Bag," or "Pallet" of apples. |
 
 </div>

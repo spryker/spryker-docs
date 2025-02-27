@@ -38,4 +38,4 @@ This opens the **IAM Dashboard** page.
 
 8. Click **Next** and follow the wizard to set up the device.
 
-Once MFA is activated, you’ll need to provide this factor every time you log into AWS.
+Once MFA is activated, you'll need to provide this factor every time you log into AWS.

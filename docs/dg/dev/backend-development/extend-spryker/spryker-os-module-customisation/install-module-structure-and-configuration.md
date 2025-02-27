@@ -35,7 +35,7 @@ All of the models of the Install module reside in the *Business* layer. The Busi
 public function runInstall(InputInterface $input, OutputInterface $output): void;
 ```
 
-This method starts the installation process and expects Symfony’s console `input` and `output` objects as its arguments.
+This method starts the installation process and expects Symfony's console `input` and `output` objects as its arguments.
 
 ### Communication layer
 

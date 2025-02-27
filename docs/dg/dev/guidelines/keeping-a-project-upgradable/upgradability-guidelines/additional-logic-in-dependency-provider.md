@@ -47,7 +47,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 
 2. `isDevelopment` function call
 
-The usage of `isDevelopment` checks is allowed in order to register the plugins that are needed in development mode only (e.g. profiling, debug, etc.).
+The usage of `isDevelopment` checks is allowed in order to register the plugins that are needed in development mode only, such as profiling or debug.
 
 ```php
 namespace Pyz\Zed\Console;

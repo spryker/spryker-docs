@@ -25,7 +25,7 @@ Install the required features:
 composer require spryker/price-cart-connector:"^6.9.0" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 

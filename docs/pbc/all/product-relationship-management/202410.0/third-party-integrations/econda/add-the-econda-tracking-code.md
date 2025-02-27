@@ -239,7 +239,7 @@ List of the accepted template variables:
 
 | NAME | DESCRIPTION | NOTES |
 | --- | --- | --- |
-| content |Path of the current page, as displayed in econda Monitor. Use slashes (“/”) to separate path components for drill-down analysis.  | Translated into CONTENTLABEL parameter |
+| content |Path of the current page, as displayed in econda Monitor. Use slashes ("/") to separate path components for drill-down analysis.  | Translated into CONTENTLABEL parameter |
 |query  |Search query (could be passed to the search results page template)  | Translated into QUERY parameter |
 |number	  |Number of results returned by the search query (can be passed to the search results page template)  | Translated into NUMBEROFHITS parameter |
 |product  | Associative array representing product data (can be passed to the product page template). Accepted keys: `abstract_name`, `abstractSku`, `price` | Product Information |

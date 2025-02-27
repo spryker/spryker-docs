@@ -203,7 +203,7 @@ The `MailTypeBuilderPlugin` also has access to the glossary with the `setSubject
 
 A string is used as a key of the translation. The default mail provider internally does the translation through `GlossaryFacade`.
 
-You can also translate with the parameters setting up the placeholder to be replaced.  For the `mail.order.shipped.subject` key, you have `Your order {orderReference} is on its way as translation`.
+You can also translate with the parameters setting up the placeholder to be replaced. For the `mail.order.shipped.subject` key, you have `Your order {orderReference} is on its way as translation`.
 In your `MailTypeBuilderPlugin` you can use the `orderReference` from the given `OrderTransfer` within the subject translations:
 
 ```php
@@ -304,7 +304,7 @@ We also provide a basic layout file, where you can inject concrete content files
 {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
 ```
 
-The preceeding template is used for plain text messages, and templates can also be used to generate JSON or query strings like `customer={% raw %}{{{% endraw %} mail.customer.firstName {% raw %}}}{% endraw %}&orderReference={% raw %}{{{% endraw %} mail.order.orderReference {% raw %}}}{% endraw %}`. It’s up to your provider to decide what to render.
+The preceeding template is used for plain text messages, and templates can also be used to generate JSON or query strings like `customer={% raw %}{{{% endraw %} mail.customer.firstName {% raw %}}}{% endraw %}&orderReference={% raw %}{{{% endraw %} mail.order.orderReference {% raw %}}}{% endraw %}`. It's up to your provider to decide what to render.
 
 For HTML messages, you need to have this in your layout file:
 

@@ -330,7 +330,7 @@ Sony Experts MER000006 Warehouse 1,Wallstrasse 58,,,53507,Dernau,,DE,+49 2643 48
 | comment           | optional  | string    |                    | Any related comment.                      |
 
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following:
 * The CSV files have an empty line at the end.

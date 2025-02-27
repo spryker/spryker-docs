@@ -26,7 +26,7 @@ The Spryker documentation is hosted on GitHub, in the [spryker-docs](https://git
 
 {% info_block infoBox "Info" %}
 
-We write the Spryker documentation using Markdown. If you don’t know Markdown yet, check the [GitHub Markdown Guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). For the documentation-specific Markdown elements and HTML syntax used where Markdown is not enough, see [Markdown syntax](/docs/about/all/about-the-docs/style-guide/markdown-syntax.html).
+We write the Spryker documentation using Markdown. If you don't know Markdown yet, check the [GitHub Markdown Guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). For the documentation-specific Markdown elements and HTML syntax used where Markdown is not enough, see [Markdown syntax](/docs/about/all/about-the-docs/style-guide/markdown-syntax.html).
 
 {% endinfo_block %}
 

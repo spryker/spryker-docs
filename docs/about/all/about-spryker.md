@@ -39,7 +39,7 @@ For a complete list of modules, see the [Spryker repository](https://github.com/
 
 ### Benefits of the modular architecture
 
-* You take only the modules or features needed for your project, without overloading it with redundant code and investing effort into something you don’t need.
+* You take only the modules or features needed for your project, without overloading it with redundant code and investing effort into something you don't need.
 * You can easily grow your project by adding new modules at any time.
 * You can add, delete, and test new features without worrying about breaking or pausing your live shop.
 * Thanks to the atomic release approach, each module is released independently, has its own version, and is backward compatible. You can install and update the needed modules right after they are released without having to update any other installed modules.

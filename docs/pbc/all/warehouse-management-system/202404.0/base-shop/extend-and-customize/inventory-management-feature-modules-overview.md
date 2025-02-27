@@ -22,7 +22,7 @@ This section describes how the availability modules works.
 A product's availability is checked with the following operations:
 
 * The product details page doesn't show the **Add to cart** button when a concrete product is out of stock. Instead, a message about the product being out of stock is displayed.
-* `\Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin` checks if all items in cart are available. It’s executed after the "Add to cart" operation. If an item is not available, an error message is sent to Yves.
+* `\Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin` checks if all items in cart are available. It's executed after the "Add to cart" operation. If an item is not available, an error message is sent to Yves.
 * `Spryker\Zed\Availability\Communication\Plugin\ProductsAvailableCheckoutPreConditionPlugin` checks if all items in the cart are available before placing the order. If one or more items are not available, order placing is aborted and an error message is displayed.
 
 ### Reserved flag
@@ -84,7 +84,7 @@ Product availability can have the flag `is_never_out_of_stock`. This indicates t
 
 In the state machine, items get reserved for an open order. There are certain states that release items—for example, when the payment fails and the order is canceled. However, if the order is successfully fulfilled, and the item is delivered, the item stays reserved until the next stock update.
 
-A stock update triggers the event `stock update`. For example, in our dummy payment's implementation, this would move the items from the “Shipped” state to next state. As the consecutive state is not reserved, the items that have already been shipped will no longer be reserved.
+A stock update triggers the event `stock update`. For example, in our dummy payment's implementation, this would move the items from the "Shipped" state to next state. As the consecutive state is not reserved, the items that have already been shipped will no longer be reserved.
 
 ### Import or change stock
 

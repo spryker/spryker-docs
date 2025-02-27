@@ -33,7 +33,7 @@ All `MailTransfers` need to know which mail type has to be used for further inte
 
 In most cases, you can add a specific transfer to the `MailTransfer`—for example, a `CustomerTransfer` when a customer registers. This transfer object is available in your `MailTypeBuilderPlugin` through the `MailTransfer`.
 
-Let’s say you have a module named `FooBar`, where you want to add automated mail sending. To enable that feature, follow these steps:
+Let's say you have a module named `FooBar`, where you want to add automated mail sending. To enable that feature, follow these steps:
 
 Example of a `FooBarMailTypeBuilderPlugin`:
 

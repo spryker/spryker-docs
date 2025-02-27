@@ -189,7 +189,7 @@ If you have a custom CMS Block Collector, make sure that it collects CMS Blocks 
 4. Install the database changes by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
 5. Apply the database changes: `vendor/bin/console propel:migrate`
 6. Generate and update ORM models: `vendor/bin/console propel:model:build`
-7. You will find some new classes in your project under the `\Orm\Zed\CmsBlock\Persistence` namespace. It’s important to make sure that they extend the base classes from the Spryker core, for example:
+7. You will find some new classes in your project under the `\Orm\Zed\CmsBlock\Persistence` namespace. It's important to make sure that they extend the base classes from the Spryker core, for example:
    * `\Orm\Zed\CmsBlock\Persistence\SpyCmsBlockStore` extends `\Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlockStore`
    * `\Orm\Zed\CmsBlock\Persistence\SpyCmsBlockStoreQuery` extends `\Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlockStoreQuery`
 

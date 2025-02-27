@@ -22,7 +22,7 @@ When a customer places an order on the Marketplace, the *Marketplace order* is c
 
 Each Marketplace order has a set of properties such as order number, order summary, payment information, date, state, shipping methods, and others.
 
-For example, let’s consider the case when a customer purchased four items from three different merchants in one order.
+For example, let's consider the case when a customer purchased four items from three different merchants in one order.
 From the customer perspective, the Marketplace order is a single order with products from one or multiple merchants:
 
 ![Marketplace order structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+order+management/Marketplace+Order+Management+feature+overview/Marketplace+Order+schema.png)
@@ -80,7 +80,7 @@ In some cases, because of rounding, the amounts of Marketplace order totals can 
 
 ## Merchant orders in the Merchant Portal
 
-{% info_block warningBox “Warning” %}
+{% info_block warningBox "Warning" %}
 
 Do not build the Merchant functionality around Orders, but rather around Merchant Orders.
 Make sure that Merchants do not modify the order directly, but instead use [MerchantOms](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/merchant-oms.html) for this purpose.

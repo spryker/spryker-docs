@@ -62,7 +62,7 @@ Then make sure you enable the console commands in your `getConsoleCommands()` me
 
 ## How to use it
 
-You can now use the commands, to e.g. generate the application layers for `FooBar` module as follows:
+You can now use the commands–for example, generate the application layers for `FooBar` module as follows:
 
 ```bash
 console code:generate:module:all FooBar

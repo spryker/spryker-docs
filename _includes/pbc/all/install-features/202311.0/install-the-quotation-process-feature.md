@@ -71,7 +71,7 @@ class QuoteConfig extends SprykerQuoteConfig
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that when you converted quote request to quote, JSON data in the database column `spy_quote.quote_data` of the corresponding quote contains `quoteRequestVersionReference`.
 

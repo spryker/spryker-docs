@@ -1,6 +1,6 @@
 ---
 title: Company Account feature overview
-description: The Company Account page gives a clear overview of business’ structure, hierarchy, shipping, billing addresses, and other users in the Business Unit.
+description: The Company Account page gives a clear overview of business' structure, hierarchy, shipping, billing addresses, and other users in the Business Unit.
 last_updated: Jul 30, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/company-account

@@ -22,7 +22,7 @@ When a customer places an order on the Marketplace, the *Marketplace order* is c
 
 Each Marketplace order has a set of properties such as order number, order summary, payment information, date, state, shipping methods, and others.
 
-For example, let’s consider the case when a customer purchased 4 items from 3 different merchants in 1 order.
+For example, let's consider the case when a customer purchased 4 items from 3 different merchants in 1 order.
 From the customer perspective, the Marketplace order is a single order with products from one or multiple merchants:
 
 ![Marketplace order structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+order+management/Marketplace+Order+Management+feature+overview/Marketplace+Order+schema.png)

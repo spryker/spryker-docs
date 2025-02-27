@@ -17,7 +17,7 @@ To support best practices, any services shared between bundles and applications 
 
 ### Service structure
 
-When creating a new service, under a newly-created module, follow this file structure:
+When creating a new service, under a newly created module, follow this file structure:
 
 * `src/Spryker/Service/`: Root directory.
 * `src/Spryker/Service/DemoService.php`: Main locatable service class. Should extend `Spryker/Service/Kernel/AbstractService`.

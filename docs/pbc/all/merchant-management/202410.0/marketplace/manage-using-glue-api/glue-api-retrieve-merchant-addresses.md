@@ -98,9 +98,9 @@ Request sample: retrieve merchant addresses
 | ------------- | -------- | --------------- |
 | addresses       | Array    | List of merchant addresses information. |
 | addresses.countryName     | String   | Country name.                |
-| addresses.address1        | String   | 1st line of the merchant address.   |
-| addresses.address2        | String   | 2nd line of the merchant address.   |
-| addresses.address3        | String   | 3rd line of the merchant address.   |
+| addresses.address1        | String   | First line of the merchant address.   |
+| addresses.address2        | String   | Second line of the merchant address.   |
+| addresses.address3        | String   | Third line of the merchant address.   |
 | addresses.city            | String   | City name.                   |
 | addresses.zipCode         | String   | ZIP code.                           |
 | addresses.email           | String   | Email address.                      |

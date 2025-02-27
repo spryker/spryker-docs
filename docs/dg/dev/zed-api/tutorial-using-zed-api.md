@@ -358,7 +358,7 @@ Template `doc-transfer.twig`:
 
 After completing this step we should be able to see transfer object annotation by accessing `http://ZED_HOST/api/v1/docTransfer?transfer=Generated\Shared\Transfer\CustomerGroupTransfer`.
 
-## 4. Implement an “execute” controller action, which will proxy calls to specific methods of a facade and pass all the arguments to it
+## 4. Implement an "execute" controller action, which will proxy calls to specific methods of a facade and pass all the arguments to it
 
 This step is not directly related to Spryker but to an idea to cast incoming parameters to types based on method signature dynamically and forward a call to respective facade method. The big advantage is that Spryker allows to unserialize transfer objects from JSON, it means, we can just send values for complex objects as JSON objects and those can be automatically cast to transfer objects and be safely used, when calling different facade methods.
 

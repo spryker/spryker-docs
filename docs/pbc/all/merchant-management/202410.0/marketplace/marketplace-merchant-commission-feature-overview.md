@@ -158,7 +158,7 @@ If an order item fulfills the conditions of all the commissions in the prior exa
 ## Apply commissions to GROSS or NET price
 
 
-The price mode used to apply commissions is defined by the order price mode. This price mode configuration controls which prices are used as a basis to calculate commission: gross or net price. The item gross price and net price is configured in the backend, including volume pricing, and doesn’t include any discounts applied in the shopping cart afterwards.
+The price mode used to apply commissions is defined by the order price mode. This price mode configuration controls which prices are used as a basis to calculate commission: gross or net price. The item gross price and net price is configured in the backend, including volume pricing, and doesn't include any discounts applied in the shopping cart afterwards.
 
 For information on setting up commission percentages per price mode, see [Price mode based commissions](#price-mode-based-commissions).
 

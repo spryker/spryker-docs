@@ -1,6 +1,6 @@
 ---
 title: Optimizing Jenkins execution
-description: Optimize Jenkins execution for cronjobs in Spryker’s backend. Enhance task automation performance and improve the efficiency of your ecommerce platform.
+description: Optimize Jenkins execution for cronjobs in Spryker's backend. Enhance task automation performance and improve the efficiency of your ecommerce platform.
 last_updated: Jul 15, 2023
 template: howto-guide-template
 redirect_from:
@@ -54,7 +54,7 @@ In addition to statistics, we also capture the output of children's processes in
 
 ## Edge cases and limitation
 
-Child processes are killed at the end of each minute, which means those batches that were in progress will be abandoned and will return to the source queue to be processed during the next run. While we didn’t notice any issues with this approach, please note that this is still an experimental approach and may or may not change in the future. The recommendation to mitigate this is to use smaller batches to ensure children processes are running within seconds or up to 10s (rough estimate), to reduce the number of messages that will be retried.
+Child processes are killed at the end of each minute, which means those batches that were in progress will be abandoned and will return to the source queue to be processed during the next run. While we didn't notice any issues with this approach, please note that this is still an experimental approach and may or may not change in the future. The recommendation to mitigate this is to use smaller batches to ensure children processes are running within seconds or up to 10s (rough estimate), to reduce the number of messages that will be retried.
 
 ## Implementation
 

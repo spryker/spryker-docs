@@ -65,7 +65,7 @@ The `MoneyFacade::formatWithSymbol()` method accepts only one argument — a Mon
 {% info_block infoBox "Example" %}
 
 * MoneyTransfer::$amount = 1000
-* MoneyTransfer::$currency = ‘EUR'
+* MoneyTransfer::$currency = 'EUR'
 * Current locale is de_DE
 * The output would be 10,00 €
 * If the current locale would be en_US, the output would be: €10.00 when passing the same object.

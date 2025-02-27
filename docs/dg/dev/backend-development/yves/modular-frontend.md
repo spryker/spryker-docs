@@ -161,7 +161,7 @@ For more information on how to implement a Widget, see the [How to Implement a W
 | `with TWIG_PARAMETERS` | Pass an associative array of variables for the scope of the rendered widget twig blocks.  | This parameter is optional. |
 | `{% raw %}{%{% endraw %} block WIDGET_BLOCK_N {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}` | Twig blocks to overwrite/customize blocks of the twig template to be rendered. `{% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}` can be used to render the original content of a block.  | This tag is optional. |
 | `only` | Optional argument to reduce the context of the template to be rendered to only the provided `TWIG_PARAMETERS`.  | By convention, in Spryker core we always provide this argument to prevent mixing template scopes. |
-| `{% raw %}{%{% endraw %} elsewidget ... {% raw %}%}{% endraw %}` | Optional twig tag to render a widget when the previous widget(s) were not found. Has the same parameters as the base widget tag including `WIDGET_BLOCK_N`.  | Listing multiple `elsewidget` tags will render the first widget that is found. |
+| `{% raw %}{%{% endraw %} elsewidget ... {% raw %}%}{% endraw %}` | Optional twig tag to render a widget when the previous widgets were not found. Has the same parameters as the base widget tag including `WIDGET_BLOCK_N`.  | Listing multiple `elsewidget` tags will render the first widget that is found. |
 | `{% raw %}{%{% endraw %} nowidget {% raw %}%}{% endraw %} WIDGET_FALLBACK` | Optional twig tag to render any content `(WIDGET_FALLBACK)`, when no widget is found by the widget tag. | N/A |
 
 ### findWidget() twig function reference

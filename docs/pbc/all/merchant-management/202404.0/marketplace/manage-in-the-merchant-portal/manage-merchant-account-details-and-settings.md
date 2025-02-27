@@ -14,7 +14,7 @@ This document describes how to manage merchant user account details in the Merch
 
 ## Prerequisites
 
-To start working with the merchant user’s account, go to **Merchant Portal&nbsp;<span aria-label="and then">></span> My account**.
+To start working with the merchant user's account, go to **Merchant Portal&nbsp;<span aria-label="and then">></span> My account**.
 
 To open the **My account** page, in the top right corner of the Merchant Portal, click the user icon and then click **My account**.
 

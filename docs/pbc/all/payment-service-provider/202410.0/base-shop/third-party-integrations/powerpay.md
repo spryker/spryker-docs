@@ -13,7 +13,7 @@ originalArticleId: f6d0bdfc-6145-4e9f-b2b6-51509e16713c
 
 [ABOUT POWERPAY](https://getpowerpay.com/)
 
-Omni-channel payment solutions for the 21st century, powerpay21, is a Global FinTech Network that provides payment products and solutions for merchants whether offline or online.
+Omni-channel payment solutions for the twenty first century, powerpay21, is a Global FinTech Network that provides payment products and solutions for merchants whether offline or online.
 We gained worldwide payments expertise that delivers results for our merchants. From delivering omni-channel payment solutions to controlling risk and fraud to delivering higher conversion ratios, businesses across the world have trusted us and have benefited from our merchant solutions. powerpay21 is committed to outstanding service, out-of-the box solutions and long-lasting relationships.
 
 **Acquiring through powercash21:**

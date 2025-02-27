@@ -90,7 +90,7 @@ AI-powered features implemented by connecting to third-party APIs:
 The AI features leverage Open AI and are provided under the following conditions:
 
 * ChatGPT Plus, Team, or Enterprise license from OpenAI is required.  
-* Provided as an Early Access release. Early Access releases are subject to specific legal terms. They’re unsupported and don’t provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.  
+* Provided as an Early Access release. Early Access releases are subject to specific legal terms. They're unsupported and don't provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.  
 * Available as an opt-in and are not automatically integrated into the core product with this release.  
 * Projects take full responsibility for using AI.
 
@@ -130,7 +130,7 @@ The Stripe ACP app now fully supports the marketplace business model with the fo
 * Marketplace or admin onboarding: Admin is onboarded and configures the Stripe ACP app.   
 * Merchant onboarding and KYC: Each merchant is onboarded into the Marketplace and submits a KYC with Stripe.   
 * Customer payment collection: Collects funds from customers through various payment methods, like credit cards, digital wallets, or bank transfers.  
-* Authorization and processing: Authorization from the customer’s bank or payment provider ensures that the funds are available and the transaction is legitimate.  
+* Authorization and processing: Authorization from the customer's bank or payment provider ensures that the funds are available and the transaction is legitimate.  
 * Payment reconciliation: Confirmed payments and refunds are ingested through an API: payment and refund confirmations, pay-in reports, settlement funds. Funds are reconciled, including splits between 1P and 3P.   
 * Seamless merchant payout: When directed, funds are released to the merchant, leveraging the preconfigured billing cycle rules, order status, and commission rules. This is often in near real-time. The capability can also connect with the Spryker Commission Engine to apply commissions.   
 * Merchants withdraw funds: Merchants can transfer earnings into a local bank account in preferred currency.  
@@ -172,13 +172,13 @@ Spryker GPTs powered by OpenAI LLMs help developers automate crucial areas of so
 These GPTs leverage Open AI and are provided under the following conditions:
 
 * ChatGPT Plus, Team, or Enterprise license from OpenAI is required.  
-* Provided as an Early Access release . Early Access releases are subject to specific legal terms. They’re unsupported and don’t provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.  
+* Provided as an Early Access release . Early Access releases are subject to specific legal terms. They're unsupported and don't provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.  
 * Available as an opt-in and are not automatically integrated into the core product with this release.  
 * Projects take full responsibility for using AI.
 
 ### Documentation
 
-These GPTs are self-documenting. Have a conversation with them to understand what they can do and how to use their features. Example prompt you could use: “List your features, and for each feature you list provide guidance on how you would use the feature in a generic way. Provide examples of how I would use each feature”.
+These GPTs are self-documenting. Have a conversation with them to understand what they can do and how to use their features. Example prompt you could use: "List your features, and for each feature you list provide guidance on how you would use the feature in a generic way. Provide examples of how I would use each feature".
 
 
 
@@ -394,7 +394,7 @@ The following components have been updated to ensure compatibility with the late
 
 - PHP 8.3 is now supported; support for PHP 8.1 is discontinued.  
 - Jenkins has been upgraded to the latest LTS version. All new cloud environments are now deployed with this version by default. For local development, the new version of Jenkins requires Docker SDK version 1.61.0 or higher.   
-- Improved Jenkins’ resource management by adding SWAP memory on the infrastructure level. This addresses memory-related issues causing job failures and instability.  
+- Improved Jenkins' resource management by adding SWAP memory on the infrastructure level. This addresses memory-related issues causing job failures and instability.  
 - The Angular framework has been updated to version 17, providing faster performance and smaller asset sizes for the merchant portal.   
 - PHPStan has been upgraded to version 1.10, significantly improving code analysis speed.
 

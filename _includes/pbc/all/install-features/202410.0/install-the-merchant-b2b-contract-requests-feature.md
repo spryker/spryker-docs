@@ -159,7 +159,7 @@ MER000002,Video King,1234.4567,approved,martha@video-king.nl,1,/de/merchant/vide
 console data:import stock
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the defined picking list strategies have been imported to the `spy_stock` database table.
 

@@ -24,7 +24,7 @@ Install the required modules using Composer:
 composer require spryker/product-image-cart-connector:"^1.1.0" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -78,7 +78,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 ```
 </details>
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Check cart product image expander plugins - make sure you can see images related to cart items in the cart page in Yves.
 

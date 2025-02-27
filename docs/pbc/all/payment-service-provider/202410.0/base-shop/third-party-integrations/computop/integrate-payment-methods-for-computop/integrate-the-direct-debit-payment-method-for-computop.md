@@ -63,10 +63,10 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 ## Direct Debit Payment Flow:
 
 1. There is a radio button on "Payment" step. After submitting the order the customer will be redirected to the Computop (Paygate form implementation). The GET consists of 3 parameters:
-  - Data (encrypted parameters, e.g. currency, amount, description)
+  - Data (encrypted parameters, such as currency, amount, description)
   - Length (length of 'data' parameter)
   - Merchant id (assigned by Computop)
-Customer sets up all data just after the redirect to Computop.  Init action: "Authorization". There is no Order call provided for this payment method. But Authorization call is working as Order call - without holding money. There is no call for holding money for this payment method.
+Customer sets up all data just after the redirect to Computop. Init action: "Authorization". There is no Order call provided for this payment method. But Authorization call is working as Order call - without holding money. There is no call for holding money for this payment method.
 2. By default, on success the customer  will be redirected to "Success" step. The response contains `payId`. On error, the customer  will be redirected to "Payment" step with the error message by default. Response data is stored in the DB.
 3. Capture/Refund and Cancel actions are implemented in the admin panel (on manage order). On requests, Spryker will use `payId` parameter stored in the DB to identify a payment.
 

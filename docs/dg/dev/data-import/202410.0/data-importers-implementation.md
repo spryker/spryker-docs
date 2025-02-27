@@ -93,7 +93,7 @@ action:
   where:
 
 * `data_entity` represents the name of your data importer.
-* `source` describes the path to your CSV file with data to import. If the source is not specified, then CSV file defined in the module’s `Config` will be used.
+* `source` describes the path to your CSV file with data to import. If the source is not specified, then CSV file defined in the module's `Config` will be used.
 
 Then you can run the `./vendor/bin/console data:import --config=path/to/config.yml` command to import all the data from the `config.yml` file. See [Importing Data](/docs/dg/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html) for more details about this and other import commands you can use.
 
@@ -267,7 +267,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 }
 ```
 
-That’s it. Your data importer is now appended to the DataImport module.
+That's it. Your data importer is now appended to the DataImport module.
 
 Also, there are **bulk importers** that can be used if you have a huge amount of data to import, and existing importers may be slow.
 

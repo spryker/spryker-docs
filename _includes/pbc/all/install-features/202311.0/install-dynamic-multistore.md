@@ -392,7 +392,7 @@ if (getenv('SPRYKER_CURRENT_REGION')) {
 
 You also can check this configuration in the file `config/Zed/cronjobs/jenkins.php` in the [Spryker Suite repository](https://github.com/spryker-shop/suite/blob/master/config/Zed/cronjobs/jenkins.php).
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Run the following commands:
 
@@ -712,7 +712,7 @@ DE,FR
 
 
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that:
 

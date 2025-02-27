@@ -370,7 +370,7 @@ if (getenv('SPRYKER_CURRENT_REGION')) {
 
 For an example of an updated file, see [jenkins.php in the Spryker Suite repository](https://github.com/spryker-shop/suite/blob/master/config/Zed/cronjobs/jenkins.php).
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 1. Remove Jenkins jobs per store:
 
@@ -643,7 +643,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-When a store’s data is created, updated, or deleted, including local and country information, make sure it's correctly exported to or removed from Redis.
+When a store's data is created, updated, or deleted, including local and country information, make sure it's correctly exported to or removed from Redis.
 
 Storage type: Redis
 Target entity: Store
@@ -755,7 +755,7 @@ DE,"[{""application"": null, ""timezone"": ""Europe/Berlin""}]"
 | application_context_collection | ✓ | string | `[{""application"": null, ""timezone"": ""Europe/Berlin""}]` | Defines a store context collection in JSON. |
 
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following applies:
 

@@ -36,7 +36,7 @@ Consider studying the following documents before you begin:
 
 Logically, the Glue layer can be divided into 3 parts:
 * **GlueApplication module**
-    <br>The `GlueApplication` module provides a framework for constructing API resources. It intercepts all HTTP requests at resource URLs (e.g. `http://mysprykershop.com/resource/1`), handles call semantics, verifies requests, and also provides several utility interfaces that can be used to construct API responses.
+    <br>The `GlueApplication` module provides a framework for constructing API resources. It intercepts all HTTP requests at resource URLs–for example, `http://mysprykershop.com/resource/1`, handles call semantics, verifies requests, and also provides several utility interfaces that can be used to construct API responses.
 * **Resource modules**
     <br>Each `Resource` module implements a separate resource or a set of resources. Such a module handles requests to a particular resource and provides them with responses. In the process of doing so, the module can communicate with the Storage, Search or Spryker Commerce OS (Zed). The modules do not handle request semantics or rules. Their only task is to provide the necessary data in a format that can be converted by the `GlueApplication` module into an API response.
 * **Relationship modules**
@@ -280,7 +280,7 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
                 "isDiscontinued": false,
                 "discontinuedNote": null,
                 "name": "Sony Cyber-shot DSC-W830",
-                "description": "Styled for your pocket  Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing it, and slip in your pocket. Shooting great photos and videos is easy with the W800. Buttons are positioned for ease of use, while a dedicated movie button makes shooting movies simple. The vivid 2.7-type Clear Photo LCD display screen lets you view your stills and play back movies with minimal effort. Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound. Breathe new life into a picture by using built-in Picture Effect technology. There’s a range of modes to choose from – you don’t even have to download image-editing software.",
+                "description": "Styled for your pocket  Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing it, and slip in your pocket. Shooting great photos and videos is easy with the W800. Buttons are positioned for ease of use, while a dedicated movie button makes shooting movies simple. The vivid 2.7-type Clear Photo LCD display screen lets you view your stills and play back movies with minimal effort. Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound. Breathe new life into a picture by using built-in Picture Effect technology. There's a range of modes to choose from – you don't even have to download image-editing software.",
                 "attributes": {
                     "hdmi": "no",
                     "sensor_type": "CCD",

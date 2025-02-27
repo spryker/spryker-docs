@@ -57,6 +57,6 @@ As installment requests use additional type of requests called Calculation Reque
 * `TRANSACTION_CHANNEL_PRE_CHECK`: a Payolution channel for handling pre-check requests, in case of using Pre-check (optional).
 * `TRANSACTION_CHANNEL_INSTALLMENT`: a Payolution channel for handling installment requests except Pre-check and calculation as they have their own channel (required).
 * `CALCULATION_CHANNEL`: a Payolution channel for handling calculation requests (required).
-* `MIN_ORDER_GRAND_TOTAL_INSTALLMENT`: the allowed minimum order grand total amount for installment payments in the shop e.g. the minimum allowed payment is $2 (required).
-* `MAX_ORDER_GRAND_TOTAL_INSTALLMENT`: the allowed maximum order grand total amount for installment payments in the shop e.g. the maximum allowed payment is $5000 (required).
+* `MIN_ORDER_GRAND_TOTAL_INSTALLMENT`: the allowed minimum order grand total amount for installment payments in the shop–for example, the minimum allowed payment is $2 (required).
+* `MAX_ORDER_GRAND_TOTAL_INSTALLMENT`: the allowed maximum order grand total amount for installment payments in the shop–for example, the maximum allowed payment is $5000 (required).
 * `PAYOLUTION_BCC_EMAIL_ADDRESS`: Payolution email address to send copies of payment details to Payolution.

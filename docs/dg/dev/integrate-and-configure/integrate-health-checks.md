@@ -64,7 +64,7 @@ Run the following command to install the required modules:
 composer require spryker-feature/spryker-core: "^{{page.version}}" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -245,7 +245,7 @@ Run the following command to apply transfer changes:
 vendor/bin/console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes took place in transfer objects:
 

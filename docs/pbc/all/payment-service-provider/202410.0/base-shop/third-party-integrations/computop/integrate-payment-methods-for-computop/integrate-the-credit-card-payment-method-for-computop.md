@@ -67,11 +67,11 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 ## Credit Card Payment Flow
 
 1. There is a radio button on "Payment" step. After submitting the order the customer will be redirected to the to Computop (Pay gate form implementation). The GET consists of 3 parameters:
-  - Data (encrypted parameters, e.g. currency, amount, description)
+  - Data (encrypted parameters such as currency, amount, description)
   - Length (length of 'data' parameter)
   - Merchant id (assigned by Computop).The customer sets up all data just after redirect to Computop.
          Init action: "Order".
-2. By default, on success the customer  will be redirected to "Success" step. The response contains `payId` On error, the customer will be redirected to "Payment" step with the error message by defaul.  Response data is stored in the DB.
+2. By default, on success the customer will be redirected to "Success" step. The response contains `payId` On error, the customer will be redirected to "Payment" step with the error message by default. Response data is stored in the DB.
 3. Authorization is added  right after success init action by default. Capture/Refund and Cancel actions are implemented in the admin panel (on manage order).  On requests, Spryker will use `payId` parameter stored in the DB to identify a payment.
 
 ## Set Up Details:

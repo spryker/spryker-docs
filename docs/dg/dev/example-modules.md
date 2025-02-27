@@ -30,7 +30,7 @@ SCCOS uses example modules to implement functionality that is tailored to specif
   * All example modules will be released as standalone modules.
   * All example modules will be released under the MIT license.
 * **Uniformity:**
-  * Example modules will be suffixed with “example”.
+  * Example modules will be suffixed with "example".
 * **Testability:**
   * Example modules might include tests, but they don't have to.
 * **Learnability:**

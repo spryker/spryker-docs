@@ -70,7 +70,7 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
       There is a radio button on "Payment" step.
       After submitting the order the customer will be redirected to the Computop (Paygate form implementation).
       The GET consists of 3 parameters:
-  - Data (encrypted parameters, e.g. currency, amount, description)
+  - Data (encrypted parameters such as currency, amount, description)
   - Length (length of 'data' parameter)
   - Merchant id (assigned by Computop)
         Customer sets up all data just after the redirect to Computop.

@@ -56,7 +56,7 @@ Basically, when a packaging unit does not use the leading product, it means that
 
 {% info_block infoBox "Info" %}
 
-For example, if there is a leading product in the product abstract with three packagings, where one of the packages *has no lead product*, it means that the two other packages actually consume the same product when you buy them. But the 3rd packaging, which does not use the leading product, is completely independent of a stock perspective, it only depends on its own stock.
+For example, if there is a leading product in the product abstract with three packagings, where one of the packages *has no lead product*, it means that the two other packages actually consume the same product when you buy them. But the third packaging, which does not use the leading product, is completely independent of a stock perspective, it only depends on its own stock.
 
 {% endinfo_block %}
 

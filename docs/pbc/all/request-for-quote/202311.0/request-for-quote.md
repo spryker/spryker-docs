@@ -35,7 +35,7 @@ With the *Quotation Process* feature, the B2B customers can ask for special pric
 
 *Request for Quote (RFQ)* is a request that a B2B buyer sends to their suppliers stating that they want to get a quoted price on particular products with the details about the packaging and volumes they need.
 Within the Spryker Commerce OS, RFQ is represented by the ability of a sales representative to see the list of quotes, check and edit them, thereby changing and overwriting the prices for the products, and view and edit shipment costs in the RFQ for a certain buyer. In turn, a buyer can create an RFQ from a shopping cart, add a note to it, and bid for lower prices, as well as define a delivery address and select a shipment method. An RFQ can also specify the timeline for delivery, the date when the proposal is to be submitted, and the history of the negotiations.
-One of the RFQ features is a tool for creating special offers for buyers with limited validity. A sales representative can update the prices for products in the RFQ and set the exact time until which this offer is valid—for example, the 29th of December, 2019, 11:58 PM. If the buyer tries to proceed with this RFQ to checkout on the 29th of December, 2019, at 11:59 PM, then this RFQ will not be available.
+One of the RFQ features is a tool for creating special offers for buyers with limited validity. A sales representative can update the prices for products in the RFQ and set the exact time until which this offer is valid—for example, the 29 of December, 2019, 11:58 PM. If the buyer tries to proceed with this RFQ to checkout on the 29 of December, 2019, at 11:59 PM, then this RFQ will not be available.
 ![RFQ Validity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/valid-till.png)
 
 To view how to create and manage RFQs, see [Quotation process & RFQ on the Storefront](#quotation-process-and-rfq-on-the-storefront).
@@ -115,7 +115,7 @@ A sales representative can create an RFQ on behalf of any company user, then pro
 The workflow with statuses for a sales representative is presented in the following schema:
 ![Sales Rep Workflow](https://confluence-connect.gliffy.net/embed/image/0dedd086-45ab-494d-a2f8-04c92501a229.png?utm_medium=live&utm_source=custom)
 
-When a sales representative creates an RFQ, it has the **Show the latest version to customer** checkbox empty by default. It means that the buyer cannot see the latest updated version of the RFQ (for example, with the changed prices) until the **Show the latest version to customer** checkbox is selected.  The buyer can see the **In Progress** status for the RFQ.
+When a sales representative creates an RFQ, it has the **Show the latest version to customer** checkbox empty by default. It means that the buyer cannot see the latest updated version of the RFQ (for example, with the changed prices) until the **Show the latest version to customer** checkbox is selected. The buyer can see the **In Progress** status for the RFQ.
 
 ## RFQ versioning
 
@@ -127,7 +127,7 @@ Versioning implies the management of multiple variants of the same RFQ, all of w
 ![RFQ versions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/rfq-versions.png)
 
 The RFQ version is updated when:
-* The RFQ is created for the 1st time—for example, the version is `DE-21-8-1`.
+* The RFQ is created for the first time—for example, the version is `DE-21-8-1`.
 * The RFQ is revised and negotiated by the buyer.
 * The RFQ is revised by a sales representative.
 

@@ -1089,31 +1089,6 @@ entries:
             url: /docs/pbc/all/data-exchange/create-post-plugins-for-data-exchange-api.html
             include_versions:
             - "202410.0"
-          - title: Spryker Middleware powered by Alumio
-            url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html
-            nested:
-              - title: Integration apps
-                url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/integration-apps.html
-              - title: Incrementally import recently updated products
-                url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/incrementally-import-products-with-spryker-middleware-powered-by-alumio.html
-                include_versions:
-                - "202404.0"
-                - "202410.0"
-                nested:
-                - title: Akeneo PIM Integration App
-                  url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/akeneo-pim-integration-app.html
-                  nested:
-                    - title: Configure the Akeneo PIM Integration App
-                      url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app.html
-                      nested:
-                      - title: Configure the Spryker Middleware powered by Alumio connection with Akeneo PIM and SCCOS
-                        url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html
-                      - title: Configure data mapping between Akeneo and SCCOS
-                        url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html
-                      - title: Configure the data integration path between Akeneo and SCCOS
-                        url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html
-                      - title: Create tasks and import products from Akeneo to SCCOS
-                        url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos.html
 
           - title: Data Exchange FAQ
             url: /docs/pbc/all/data-exchange/data-exchange-faq.html

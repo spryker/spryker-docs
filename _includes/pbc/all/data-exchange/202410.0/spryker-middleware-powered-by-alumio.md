@@ -3,7 +3,7 @@ The Spryker Middleware Powered by Alumio isn't a part of SCCOS by default. To ob
 
 {% info_block infoBox "Alumio" %}
 
-Alumio is a cloud-based iPaaS solution which is the foundation of Spryker Middleware and Spryker Integration Apps. Alumio has integrations or connectors with several solutions in its marketplace allowing to connect Spryker with other systems. 
+Alumio is a cloud-based iPaaS solution which is the foundation of Spryker Middleware and Spryker Integration Apps. Alumio has integrations or connectors with several solutions in its marketplace allowing to connect Spryker with other systems.
 
 {% endinfo_block %}
 

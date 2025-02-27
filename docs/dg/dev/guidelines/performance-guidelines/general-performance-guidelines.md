@@ -182,13 +182,13 @@ Zed navigation cache is activated by default:
 $config[\Spryker\Shared\ZedNavigation\ZedNavigationConstants::ZED_NAVIGATION_CACHE_ENABLED] = true;
 
 ```
-## Enable Zed/MP router caching
+## Enable Zed and Merchant Portal router caching
 
 Routing for ZED and the Merchant Portal can either be cached or generated on each request.
 
-For performance reasons, it is recommended to use the cached option, where the routing cache is built once during deployment.
+For optimal performance, we recommend building routing cache once during deployment.
 
-In the `src/Pyz/Zed/Router/RouterConfig.php` enable the next config:
+To configure this, update the configuration in `src/Pyz/Zed/Router/RouterConfig.php`:
 ```php
    public function isRoutingCacheEnabled(): bool
     {
@@ -241,19 +241,24 @@ Enabling this option can cause undesired behavior when the resolved class is sta
 
 {% endinfo_block %}
 
-## Splitted ZED/Merchant portal navigation 
+## Split ZED and Merchant Portal navigation
 
-Split navigation is an out-of-the-box feature that significantly enhances performance for both ZED and the Merchant Portal (only in the case when project has both).
+Split navigation significantly enhances performance for both ZED and the Merchant Portal when a project has both.
 
+This feature is shipped by default but existing projects may need to install it using the following steps:
 For projects that began before this feature was introduced, the following steps should be taken:
-1. Pre requirements:
+1. Install or update the following modules:
  - `spryker/merchant-portal-application:^1.4.0`
  - `spryker/zed-ui: ^3.1.0`
 
-2. Move merchant portal related navigation from the file `config/Zed/navigation.xml` to the `config/Zed/navigation-main-merchant-portal.xml`.
-3. Rename `config/Zed/navigation-secondary.xml` to the `config/Zed/navigation-secondary-merchant-portal.xml`.
-4. Extend `src/Pyz/Zed/Twig/TwigDependencyProvider.php` with plugin `new MerchantNavigationTypeTwigPlugin()`.
-5. Extend `src/Pyz/Zed/ZedNavigation/ZedNavigationConfig.php` with the next code:
+2. Move merchant portal related navigation from `config/Zed/navigation.xml` to `config/Zed/navigation-main-merchant-portal.xml`.
+3. Rename `config/Zed/navigation-secondary.xml` to `config/Zed/navigation-secondary-merchant-portal.xml`.
+4. Extend `src/Pyz/Zed/Twig/TwigDependencyProvider.php` with `new MerchantNavigationTypeTwigPlugin()`.
+5. Extend `src/Pyz/Zed/ZedNavigation/ZedNavigationConfig.php` with the the following:
+
+<details>
+  <summary>src/Pyz/Zed/ZedNavigation/ZedNavigationConfig.php</summary>
+
 ```php
     /**
      * @uses \Spryker\Zed\MerchantPortalApplication\Communication\Plugin\Twig\MerchantNavigationTypeTwigPlugin::NAVIGATION_TYPE_MAIN_MERCHANT_PORTAL
@@ -314,6 +319,9 @@ For projects that began before this feature was introduced, the following steps 
         return static::NAVIGATION_TYPE_MAIN;
     }
 ```
+
+</details>
+
 
 ## Reduce functionality
 

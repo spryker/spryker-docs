@@ -2,6 +2,8 @@
 title: Configure the Akeneo PIM Integration App
 description: Learn how you can configure the Akeneo PIM Integration App in the Spryker Middleware powered by Alumio
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app.html
 last_updated: Nov 10, 2023
 ---
 

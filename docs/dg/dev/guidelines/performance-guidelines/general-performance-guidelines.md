@@ -37,6 +37,12 @@ Xdebug slows down the application and is not necessary for a non-development env
 
 For performance reasons, always use the newest stable version of PHP, as every new version ships with several improvements.
 
+## Packages with a performance fixes
+
+### Merchant portal related performance fixes:
+- `spryker/category:^5.18.1`
+- `spryker/acl:^3.22.0`
+- `spryker/acl-entity:^1.13.0`
 
 ## Opcache activation
 
@@ -322,6 +328,10 @@ For projects that began before this feature was introduced, the following steps 
 
 </details>
 
+## Gateway performance improvement
+For the Gateway, when used for Twig rendering (such as email sending), the following fix can enhance performance.
+1. Update package `spryker/twig:^3.28.0`
+2. In the `src/Pyz/Zed/Application/ApplicationDependencyProvider.php:getBackendGatewayApplicationPlugins()` replace plugin `new TwigApplicationPlugin()` with a new one - `new TwigGatewayApplicationPlugin()`.
 
 ## Reduce functionality
 

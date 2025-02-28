@@ -1,4 +1,4 @@
-name: Lint with Vale
+name: Is formatting great?
 
 on:
   push:
@@ -25,5 +25,5 @@ jobs:
     # Step 3: Run Vale linter
     - name: Run Vale linter
       run: |
-        vale $(find . -type f -name "*.md" ! -path "*/202311.0/*" ! -path "*/202404.0/*") --minAlertLevel=error
+        vale $(find docs/ -type f -name "*.md" ! -path "*/202311.0/*" ! -path "*/202404.0/*") --minAlertLevel=error
       continue-on-error: false

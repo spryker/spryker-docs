@@ -8,23 +8,19 @@ redirect_from:
 
 ---
 
-Spryker introduces context-based dependency resolution, such as plugin-stack, using a strategy resolver to handle complex workflows that stretch across multiple modules. This enhancement allows for defining multiple dependencies and selecting the appropriate one dynamically at runtime by the business logic.
-
 Spryker introduces context-based dependency resolution using a strategy resolver to manage complex workflows spanning multiple modules. This enhancement allows defining multiple dependencies and dynamically selecting the appropriate one at runtime based on business logic.
 
+Strategy resolvers are introduced because some workflows require multiple plugin-stack variations that need to be switched in sync.
 
-Why this change? Some workflows require multiple plugin-stack variations that need to be switched in sync.
-What does it do? Allows defining multiple plugin-stacks and resolving the correct one based on a context identifier.
-Backward compatibility? Only applied to selected plugin-stacks that require this enhancement. Customizations may need updates, but the approach is backward compatible.
+The approach is backward compatible. It's applied only to selected plugin-stacks that require this enhancement, and only customizations may need updates.
 
-## When to Use It
 
-Use the strategy resolver when:
+Use the strategy resolver in the following cases:
 - You need to handle multiple plugin-stack configurations dynamically.
 - A workflow spans multiple modules and requires synchronized behavior.
 - You want to allow context-specific behavior while keeping plugin-stack resolution flexible.
 
-Do not use it if:
+Don't use it in the following cases:
 - A single plugin-stack is sufficient for your module (considering using regular strategy plugin stack approach instead).
 - You do not need context-based, wide-spread synchronization.
 
@@ -175,22 +171,8 @@ A: By default, it fails. However, you can define a fallback mechanism.
 
 
 
-## Why This Change?
-Some workflows require multiple plugin-stack variations that need to be switched in sync.
-
-## What Does It Do?
-- Enables defining multiple plugin-stacks and resolving the correct one based on a context identifier.
-- Facilitates context-specific behavior while maintaining flexibility.
-
-## Backward Compatibility
-- Applied only to selected plugin-stacks requiring this enhancement.
-- Customizations may need updates, but the approach remains backward compatible.
-
 ## When to Use It
-Use the strategy resolver when:
-- Handling multiple plugin-stack configurations dynamically.
-- A workflow spans multiple modules and requires synchronized behavior.
-- Context-specific behavior is necessary while keeping plugin-stack resolution flexible.
+
 
 Do not use it if:
 - A single plugin-stack is sufficient (consider using the regular strategy plugin stack approach instead).

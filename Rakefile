@@ -105,7 +105,7 @@ commonOptions = {
     /algolia.com\/[\.\w\-\/\?]+/,
     /www.cursor.com\/[\.\w\-\/\?]+/,
     /www.mysql.com\/[\.\w\-\/\?]+/,
-    /wt.io\/[\.\w\-\/\?]+/,
+    /jwt.io\/[\.\w\-\/\?]+/,
     /www.facebook.com\/[\.\w\-\/\?]+/
 
   ],

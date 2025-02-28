@@ -1,7 +1,7 @@
 ---
 title: General performance guidelines
 description: This guideline explains how to optimize the server-side execution time for your Spryker based projects.
-last_updated: Jun 16, 2021
+last_updated: Feb 24, 2025
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-guidelines
 originalArticleId: 5feb83b8-5196-44f9-8f6a-ffb208a2c162
@@ -182,6 +182,19 @@ Zed navigation cache is activated by default:
 $config[\Spryker\Shared\ZedNavigation\ZedNavigationConstants::ZED_NAVIGATION_CACHE_ENABLED] = true;
 
 ```
+## Enable Zed and Merchant Portal router caching
+
+Routing for ZED and the Merchant Portal can either be cached or generated on each request.
+
+For optimal performance, we recommend building routing cache once during deployment.
+
+To configure this, update the configuration in `src/Pyz/Zed/Router/RouterConfig.php`:
+```php
+   public function isRoutingCacheEnabled(): bool
+    {
+        return true;
+    }
+```
 
 ## Redis Mget cache
 
@@ -227,6 +240,88 @@ This allows reusing an already resolved class instance during a request.
 Enabling this option can cause undesired behavior when the resolved class is stateful.
 
 {% endinfo_block %}
+
+## Split ZED and Merchant Portal navigation
+
+Split navigation significantly enhances performance for both ZED and the Merchant Portal when a project has both.
+
+This feature is shipped by default but existing projects may need to install it using the following steps:
+For projects that began before this feature was introduced, the following steps should be taken:
+1. Install or update the following modules:
+ - `spryker/merchant-portal-application:^1.4.0`
+ - `spryker/zed-ui: ^3.1.0`
+
+2. Move merchant portal related navigation from `config/Zed/navigation.xml` to `config/Zed/navigation-main-merchant-portal.xml`.
+3. Rename `config/Zed/navigation-secondary.xml` to `config/Zed/navigation-secondary-merchant-portal.xml`.
+4. Extend `src/Pyz/Zed/Twig/TwigDependencyProvider.php` with `new MerchantNavigationTypeTwigPlugin()`.
+5. Extend `src/Pyz/Zed/ZedNavigation/ZedNavigationConfig.php` with the the following:
+
+<details>
+  <summary>src/Pyz/Zed/ZedNavigation/ZedNavigationConfig.php</summary>
+
+```php
+    /**
+     * @uses \Spryker\Zed\MerchantPortalApplication\Communication\Plugin\Twig\MerchantNavigationTypeTwigPlugin::NAVIGATION_TYPE_MAIN_MERCHANT_PORTAL
+     *
+     * @var string
+     */
+    protected const NAVIGATION_TYPE_MAIN_MERCHANT_PORTAL = 'main-merchant-portal';
+
+    /**
+     * @uses \Spryker\Zed\MerchantPortalApplication\Communication\Plugin\Twig\MerchantNavigationTypeTwigPlugin::NAVIGATION_TYPE_SECONDARY_MERCHANT_PORTAL
+     *
+     * @var string
+     */
+    protected const NAVIGATION_TYPE_SECONDARY_MERCHANT_PORTAL = 'secondary-merchant-portal';
+
+   /**
+     * @return array<string>
+     */
+    public function getCacheFilePaths(): array
+    {
+        $cacheFilePaths = parent::getCacheFilePaths();
+        $cacheFilePaths[static::NAVIGATION_TYPE_MAIN_MERCHANT_PORTAL] = $this->getCacheDirName() . 'navigation-main-merchant-portal.cache';
+        $cacheFilePaths[static::NAVIGATION_TYPE_SECONDARY_MERCHANT_PORTAL] = $this->getCacheDirName() . 'navigation-secondary-merchant-portal.cache';
+
+        return $cacheFilePaths;
+    }
+
+    /**
+     * @return array<string>
+     */
+    public function getRootNavigationSchemaPaths(): array
+    {
+        $rootNavigationSchemaPaths = parent::getRootNavigationSchemaPaths();
+        $rootNavigationSchemaPaths[static::NAVIGATION_TYPE_MAIN_MERCHANT_PORTAL] = $this->getRootNavigationSchemasDirName() . 'navigation-main-merchant-portal.xml';
+        $rootNavigationSchemaPaths[static::NAVIGATION_TYPE_SECONDARY_MERCHANT_PORTAL] = $this->getRootNavigationSchemasDirName() . 'navigation-secondary-merchant-portal.xml';
+
+        return $rootNavigationSchemaPaths;
+    }
+
+    /**
+     * @return array<string>
+     */
+    public function getNavigationSchemaFileNamePatterns(): array
+    {
+        $navigationSchemaFileNamePatterns = parent::getNavigationSchemaFileNamePatterns();
+        $navigationSchemaFileNamePatterns[static::NAVIGATION_TYPE_MAIN_MERCHANT_PORTAL] = 'navigation-main-merchant-portal.xml';
+        $navigationSchemaFileNamePatterns[static::NAVIGATION_TYPE_SECONDARY_MERCHANT_PORTAL] = 'navigation-secondary-merchant-portal.xml';
+
+        return $navigationSchemaFileNamePatterns;
+    }
+
+    public function getDefaultNavigationType(): string
+    {
+        if (APPLICATION === 'MERCHANT_PORTAL') {
+            return self::NAVIGATION_TYPE_MAIN_MERCHANT_PORTAL;
+        }
+
+        return static::NAVIGATION_TYPE_MAIN;
+    }
+```
+
+</details>
+
 
 ## Reduce functionality
 

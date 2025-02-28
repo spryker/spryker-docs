@@ -17,7 +17,7 @@ related:
   - title: Code buckets
     link: docs/dg/dev/architecture/code-buckets.html
   - title: Strategy resolvers
-    link: docs/dg/dev/miscellaneous-guides/strategy-resolver.html
+    link: docs/dg/dev/miscellaneous-guides/strategy-resolvers.html
 ---
 
 Having covered the main architectural concepts of the Spryker Commerce OS, frontend, modularity, and the application and software layers, this document dives deeper into these approaches and explains the main software and coding concepts in Spryker. There are seven main software concepts in Spryker.
@@ -50,7 +50,7 @@ The Client is not needed for every module: some modules have it, and some do not
 
 In Spryker, a *Plugin* extends certain functionality in a module, like a Calculation stack when placing an order. The Calculation module is an abstract idea and should not depend on other modules to calculate the final price. Thus, it exposes an interface with the needed method to be implemented by other modules. When there is another module involved in calculating the final price, it implements this interface and does the calculation internally. This implementation is called Plugin. This Plugin, along with others, can then be injected into the Calculation module. In the end, the Calculation module calculates the final price by running the exposed method from all the injected Plugins.
 
-Plugins are used in many different places in Spryker. They're a great way to extend functionality and manage the modularity and dependencies. A module can implement many different plugins and have many different plugins injected into it. Plugins are located inside the Communication layer. In case of widely overarching functionality where multiple contexts appear, consider using [strategy resolvers](/docs/dg/dev/miscellaneous-guides/strategy-resolver.html) in combination with plugins. 
+Plugins are used in many different places in Spryker. They're a great way to extend functionality and manage the modularity and dependencies. A module can implement many different plugins and have many different plugins injected into it. Plugins are located inside the Communication layer. In case of widely overarching functionality where multiple contexts appear, consider using [strategy resolvers](/docs/dg/dev/miscellaneous-guides/strategy-resolvers.html) in combination with plugins.
 
 ## Dependency provider
 

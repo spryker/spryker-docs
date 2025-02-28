@@ -910,7 +910,7 @@ entries:
   - title: Internationalization and multi-store
     nested:
       - title: Adding stores in a multi-database setup
-        url: /docs/dg/dev/internationalization-and-multi-store/adding-stores-in-a-multi-database-setup.html      
+        url: /docs/dg/dev/internationalization-and-multi-store/adding-stores-in-a-multi-database-setup.html
       - title: Handling internationalization
         url: /docs/dg/dev/internationalization-and-multi-store/handling-internationalization.html
       - title: Managing glossary keys
@@ -1670,6 +1670,8 @@ entries:
     nested:
       - title: Simulating deployments locally
         url: /docs/dg/dev/miscellaneous-guides/simulating-deployments-locally.html
+      - title: Strategy resolvers
+        url: /docs/dg/dev/miscellaneous-guides/strategy-resolvers.html        
       - title: "Tutorial: Hello world"
         url: /docs/dg/dev/miscellaneous-guides/tutorial-hello-world.html
       - title: Using database transactions

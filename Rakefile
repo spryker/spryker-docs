@@ -103,8 +103,9 @@ commonOptions = {
     /www.mysql.com\/[\.\w\-\/\?]+/,
     /www.gnu.org\/[\.\w\-\/\?]+/,
     /algolia.com\/[\.\w\-\/\?]+/,
-    /mysql.com\/[\.\w\-\/\?]+/,    
-    /wt.io\/[\.\w\-\/\?]+/,
+    /www.cursor.com\/[\.\w\-\/\?]+/,
+    /www.mysql.com\/[\.\w\-\/\?]+/,
+    /jwt.io\/[\.\w\-\/\?]+/,
     /www.facebook.com\/[\.\w\-\/\?]+/
 
   ],

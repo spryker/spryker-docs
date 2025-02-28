@@ -37,7 +37,7 @@ process_files() {
 }
 
 # Specify the folder containing the files to add paths to
-folder_path="docs/scos/user"
+folder_path="docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio"
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then

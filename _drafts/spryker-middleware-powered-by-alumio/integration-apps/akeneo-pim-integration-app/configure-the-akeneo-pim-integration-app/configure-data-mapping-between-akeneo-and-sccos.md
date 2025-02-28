@@ -2,6 +2,8 @@
 title: Configure data mapping between Akeneo and SCCOS
 description: Learn how you can configure and map data between Akeneo and Spryker Cloud Commerce OS connecting the two together.
 template: howto-guide-template
+redirect_from:
+  - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html
 last_updated: Nov 17, 2023
 ---
 
@@ -25,7 +27,7 @@ To import data from Akeneo PIM, you need to transform it from the Akeneo model t
 
 ## Create cache
 
-When you perform the initial product import from Akeneo, all data pertaining to the imported products is stored in the cache. During subsequent product imports, Spryker Middleware powered by Alumio compares this cached data with the information that needs to be imported from Akeneo. If no changes are detected, the product data isn't re-imported from Akeneo but is instead retrieved from the cache. This significantly speeds up the importing process. 
+When you perform the initial product import from Akeneo, all data pertaining to the imported products is stored in the cache. During subsequent product imports, Spryker Middleware powered by Alumio compares this cached data with the information that needs to be imported from Akeneo. If no changes are detected, the product data isn't re-imported from Akeneo but is instead retrieved from the cache. This significantly speeds up the importing process.
 
 To create the cache, do the following:
 
@@ -75,7 +77,7 @@ By default, there are the following Akeneo to Base data transformers that you ca
 *Memo Akeneo to Base - Product - Set Base Information* is the main Akeneo to Base transformer that processes all the basic product information. You must always select this transformer to enable the product data import.
 
 1. In *Client*, enter the Akeneo client you created at this step: [Connect Akeneo with Spryker Middleware powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
-2. In *Locale*, enter the locale from where you want to import data in the Akeneo PIM. For example, *en_US*. 
+2. In *Locale*, enter the locale from where you want to import data in the Akeneo PIM. For example, *en_US*.
 
 {% info_block infoBox "Locale in Akeneo" %}
 
@@ -92,7 +94,7 @@ If the locale isn't specified in Akeneo, the locale you specify at this step wil
 
 {% info_block infoBox "Importing product descriptions" %}
 
-Spryker uses a simple text editor in its product description, however Akeneo enables customers to use rich-text in their product description. If you want to use rich-text on your store you need to extend Spryker to enable the support of rich text on a project-level. 
+Spryker uses a simple text editor in its product description, however Akeneo enables customers to use rich-text in their product description. If you want to use rich-text on your store you need to extend Spryker to enable the support of rich text on a project-level.
 
 {% endinfo_block %}
 
@@ -191,12 +193,12 @@ You must use all of these transformers, irrespective of the data you want to imp
 
 ### Memo Spryker - Product - Set General Settings
 
-The *Memo Spryker - Product - Set General Settings* transformer sets the destination store and the product statuses. 
+The *Memo Spryker - Product - Set General Settings* transformer sets the destination store and the product statuses.
 
 To configure this transformer, do the following:
 
 1. In *Spryker HTTP Client*, select the client you created at step [Connect SCCOS with Spryker Middleware powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html#connect-sccos-with-spryker-middleware-powered-by-alumio).
-2. In *Store name*, enter the store to which you want to import data from Akeneo. For example, *en_US*. 
+2. In *Store name*, enter the store to which you want to import data from Akeneo. For example, *en_US*.
 
 {% info_block infoBox "Multiple stores" %}
 
@@ -218,12 +220,12 @@ To configure this transformer, do the following:
 
 1. In *Akeneo HTTP client*, select the Akeneo client you created at step [Connect the Spryker Middleware powered by Alumio with Akeneo PIM](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
 2. In *Spryker HTTP client*, select the Spryker client you created at step [Connect SCCOS with the Middleware powered by Alumio platform](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html#connect-sccos-with-spryker-middleware-powered-by-alumio).
-3. Optional: specify the super attributes for your product. If you don't specify any super attributes here, there won't be any super attributes for the products in SCCOS, even though the products might have them in Alumio. Keep in mind that once you specify an attribute as a super attribute, it can't be a normal attribute attribute in SCCOS. 
+3. Optional: specify the super attributes for your product. If you don't specify any super attributes here, there won't be any super attributes for the products in SCCOS, even though the products might have them in Alumio. Keep in mind that once you specify an attribute as a super attribute, it can't be a normal attribute attribute in SCCOS.
 4. Optional: In *Relations*, map Akeneo relation keys to the SCCOS relation keys. To map the relation keys, do the following:
   1. In Akeneo PIM, go to **Settings -> Association types** and click the label of the necessary association type. For example, *Upsell*.
   2. On the Association type details page, copy the code and paste it in the *Akeneo Relation Key Name* field.
   ![akeneo-association-type](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/3-configure-data-mapping-between-akeneo-and-spryker/akeneo-association-type.png).
-  3. In *Spryker Relation Key Name*, enter either the code of the existing SCCOS relation type key, for example, `up-selling`, or the new one that you want to be automatically created in SCCOS after the product import. 
+  3. In *Spryker Relation Key Name*, enter either the code of the existing SCCOS relation type key, for example, `up-selling`, or the new one that you want to be automatically created in SCCOS after the product import.
 5. Optional: To use specific Akeneo multi select attributes as labels in SCCOS, in *Akeneo label attribute code*, specify the corresponding Akeneo multi select association code.
 
 {% info_block infoBox "Product attributes" %}
@@ -261,7 +263,7 @@ If a product is inactive in Akeneo and you want to import it as inactive as well
 
 ## Reference information: Creating multi select attributes in Alumio
 Multi select attributes in Akeneo correspond to the Spryker Product Labels. To import the multi select attributes as labels to Spryker, you first need to create them in Akeneo.
-To create the multi select attributes in Akeneo, do the following: 
+To create the multi select attributes in Akeneo, do the following:
 
 1. Go to **Settings -> Attributes**.
 ![settings-attributes-akeneo](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/3-configure-data-mapping-between-akeneo-and-spryker/settings-attributes-akeneo.png)

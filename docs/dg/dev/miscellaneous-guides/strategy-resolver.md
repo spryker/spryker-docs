@@ -8,7 +8,7 @@ redirect_from:
 
 ---
 
-Context-based dependency resolution using a strategy resolver is used to manage complex workflows spanning multiple modules. This lets you define multiple dependencies and dynamically select the appropriate one at runtime based on business logic.
+Context-based dependency resolution using a strategy resolver is used to manage complex workflows spanning multiple modules. This lets you define multiple dependencies and dynamically select a needed dependency at runtime based on business logic.
 
 Strategy resolvers are introduced because some workflows require multiple plugin-stack variations that need to be switched in sync.
 

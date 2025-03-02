@@ -96,6 +96,12 @@ Instead of injecting a single plugin-stack, inject the strategy resolver into th
     }
 ```
 
+
+## Semantic versioning lock for factory changes
+
+When defining a new context, a minor version lock must be applied. The context needs to be wired in the Factory definition. Because changes to a  Factory affects project functionality, the package must adhere to minor semantic versioning to ensure compatibility.
+
+
 ## Context-based resolution in models
 
 When a model executes logic, it must explicitly specify the context when requesting a plugin stack.

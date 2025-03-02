@@ -169,13 +169,13 @@ In our case, with all the CMS blocks assigned to a single slot, the correct orde
 
 To achieve that, make sure to fulfill the following:
 
-* For the *Writing Materials* product pages, the *Homepage Featured products* CMS block is located above the *Category Banner-3* CMS block in the **List of Blocks for "Bottom" Slot**. Other CMS blocks can be disregarded as they are not displayed on the *Writing Materials* product pages.  Any of the following order variants will work:
+* For the *Writing Materials* product pages, the *Homepage Featured products* CMS block is located above the *Category Banner-3* CMS block in the **List of Blocks for "Bottom" Slot**. Other CMS blocks can be disregarded as they are not displayed on the *Writing Materials* product pages. Any of the following order variants will work:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Slots/Adding+Content+to+Storefront+Pages+Using+Templates+%26+Slots/cms-block-order-in-slot-1.png)
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Slots/Adding+Content+to+Storefront+Pages+Using+Templates+%26+Slots/cms-block-order-in-slot-2.png)
 
-* For the *Sticky Notes* category pages, the *Homepage Top sellers* CMS block is located above the *Category Banner-2* CMS block in the **List of Blocks for "Bottom" Slot**. Other CMS blocks can be disregarded as they are not displayed in the *Sticky Notes* product pages.  Any of the order variants above will work.
+* For the *Sticky Notes* category pages, the *Homepage Top sellers* CMS block is located above the *Category Banner-2* CMS block in the **List of Blocks for "Bottom" Slot**. Other CMS blocks can be disregarded as they are not displayed in the *Sticky Notes* product pages. Any of the order variants above will work.
 
 {% info_block warningBox "Saving changes" %}
 

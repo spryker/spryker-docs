@@ -37,12 +37,6 @@ Xdebug slows down the application and is not necessary for a non-development env
 
 For performance reasons, always use the newest stable version of PHP, as every new version ships with several improvements.
 
-## Packages with a performance fixes
-
-### Merchant portal related performance fixes:
-- `spryker/category:^5.18.1`
-- `spryker/acl:^3.22.0`
-- `spryker/acl-entity:^1.13.0`
 
 ## Opcache activation
 
@@ -328,10 +322,12 @@ For projects that began before this feature was introduced, the following steps 
 
 </details>
 
-## Gateway performance improvement
-For the Gateway, when used for Twig rendering (such as email sending), the following fix can enhance performance.
-1. Update package `spryker/twig:^3.28.0`
-2. In the `src/Pyz/Zed/Application/ApplicationDependencyProvider.php:getBackendGatewayApplicationPlugins()` replace plugin `new TwigApplicationPlugin()` with a new one - `new TwigGatewayApplicationPlugin()`.
+## Gateway performance
+
+When using Gateway for Twig rendering–for example, for sending emails–you can improve its performance as follows:
+
+1. Update `spryker/twig` to version `3.28.0` or higher.
+2. In `src/Pyz/Zed/Application/ApplicationDependencyProvider.php:getBackendGatewayApplicationPlugins()` replace `TwigApplicationPlugin()` with `TwigGatewayApplicationPlugin()`.
 
 ## Reduce functionality
 
@@ -346,7 +342,7 @@ There might be other DependencyProvider, and you must check if you can remove de
 
 Check if you need the `can` method calls from Twig. For example, `{% raw %}{%{% endraw %} if can('SeePricePermissionPlugin') {% raw %}%}{% endraw %}`. Talking back from Twig to PHP is often slow, so try to avoid that by checking if you need all used Twig functions Spryker provides.
 
-### Use the newest Spryker modules
+### Use the newest modules
 
 Try to update the Spryker modules where you can, as we constantly add performance optimizations. Ideally, always use the latest versions of the Spryker modules.
 
@@ -364,6 +360,12 @@ The latest performance optimization releases can be found in:
 - https://github.com/spryker/product-prices-rest-api/releases/tag/1.4.0
 - https://github.com/spryker/quote/releases/tag/2.13.0
 - https://github.com/spryker/store/releases/tag/1.14.0
+
+Performance optimizations in the Merchant Portal:
+- `spryker/category:^5.18.1`
+- `spryker/acl:^3.22.0`
+- `spryker/acl-entity:^1.13.0`
+
 
 ## Performance profiling
 

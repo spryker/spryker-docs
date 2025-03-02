@@ -70,7 +70,7 @@ The plugin must provide routing information for the following:
 
 | RESOURCE | DESCRIPTION |
 | --- | --- |
-| Resource Type | Type of the resource implemented by the current `Resource` module.  Resource types are extracted by Glue from the request URL. For example, if the URL is `/carts/1`, the resource type is `carts`. To be able to process calls to this URL, Glue will need a route plugin for the resource type _carts_. |
+| Resource Type | Type of the resource implemented by the current `Resource` module. Resource types are extracted by Glue from the request URL. For example, if the URL is `/carts/1`, the resource type is `carts`. To be able to process calls to this URL, Glue will need a route plugin for the resource type _carts_. |
 | Controller Name | Name of the controller that handles a specific resource type. |
 | Mapping of Verbs to Actions | List of REST verbs that the resource supports and the respective controller actions used to handle them. Allowed verbs are GET, POST, PATCH, and DELETE. The OPTIONS verb is supported by all resources and should not be mapped. |
 | Resource Attributes <br>Transfer Class Name | FQCN of the Resource Attributes Transfer that is used to handle request attributes for the given resource type. |

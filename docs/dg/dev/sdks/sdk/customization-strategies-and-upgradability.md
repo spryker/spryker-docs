@@ -31,7 +31,7 @@ In terms of upgradability, we'll look at the following customization strategies:
 
 ### Module configuration customization
 
-Module configuration is one of the Public APIs.  This means that Spryker makes sure to keep both the environment and module configuration stable in the patch and minor releases.
+Module configuration is one of the Public APIs. This means that Spryker makes sure to keep both the environment and module configuration stable in the patch and minor releases.
 
 ### Plug and Play customization
 

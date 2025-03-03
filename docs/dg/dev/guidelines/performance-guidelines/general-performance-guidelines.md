@@ -362,9 +362,9 @@ The latest performance optimization releases can be found in:
 - https://github.com/spryker/store/releases/tag/1.14.0
 
 Performance optimizations in the Merchant Portal:
-- `spryker/category:^5.18.1`
-- `spryker/acl:^3.22.0`
-- `spryker/acl-entity:^1.13.0`
+- `spryker/category:^5.18.2` - https://github.com/spryker/category/releases/tag/5.18.2
+- `spryker/acl:^3.22.0` - https://github.com/spryker/acl/releases/tag/3.22.0
+- `spryker/acl-entity:^1.13.0` - https://github.com/spryker/acl-entity/releases/tag/1.13.0
 
 
 ## Performance profiling

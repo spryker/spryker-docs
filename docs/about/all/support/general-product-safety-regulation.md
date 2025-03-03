@@ -11,9 +11,9 @@ GPSR requires that all consumer products on the EU markets are safe and establis
 
 For a full version of regulations, see [General Product Safety Regulation](https://eur-lex.europa.eu/eli/reg/2023/988/oj).
 
-## Spryker’s GPSR obligations
+## Spryker's GPSR obligations
 
-Spryker doesn't fall into a category of directly obliged parties but Spryker’s customers do. So Spryker’s obligations are limited to enabling its customers to meet the requirements under the regulation. Customers are fully responsible for ensuring compliance with the regulations. However, Spryker has features to help customer with achieving compliance.
+Spryker doesn't fall into a category of directly obliged parties but Spryker's customers do. So Spryker's obligations are limited to enabling its customers to meet the requirements under the regulation. Customers are fully responsible for ensuring compliance with the regulations. However, Spryker has features to help customer with achieving compliance.
 
 For example, using the Product Attributes feature, you can record any required product-specific information, like manufacturer details, product identifiers, or postal and email addresses, including for a responsible person within EU. You can also apply this feature to the warning or safety instructions. If you need to add additional details to multiple Product Details pages, you can use CMS blocks.
 

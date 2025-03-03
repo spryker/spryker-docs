@@ -422,7 +422,7 @@ An application layer can have up to four logical layers with clear purpose and c
 
 ### Conventions
 
-- Components must be placed according to the corresponding [application layer’s](#application-layers) directory architecture  to take effect.
+- Components must be placed according to the corresponding [application layer's](#application-layers) directory architecture  to take effect.
 - Components are required to inherit from the [application layer](#application-layers) corresponding abstract class in the  `Kernel` module to take effect.
 
 <details>
@@ -1936,7 +1936,7 @@ The following components are used in `core module development` to ensure modular
 For `project development` and `module development`, these components are recommended. Consider implementing these components based on their relevance to your business or technical requirements.
 
 ### Conventions
-- Components must be placed according to the corresponding [application layer’s](#application-layers) directory architecture to take effect.
+- Components must be placed according to the corresponding [application layer's](#application-layers) directory architecture to take effect.
 - The components must inherit from the [application layer's](#application-layers) corresponding abstract class in `Kernel` module to take effect.
 
 <details><summary>For *core module development*</summary>

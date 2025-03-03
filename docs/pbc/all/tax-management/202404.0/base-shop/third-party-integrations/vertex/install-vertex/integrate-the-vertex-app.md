@@ -381,9 +381,9 @@ The following table reflects the mapping of the Spryker Quote and Order transfer
 | billingAddress | lineItems[].customer.administrativeDestination  |       |
 | items[].merchantStockAddresses | lineItems[].seller.physicalOrigin       | Multiple addresses are mapped to multiple items in the Vertex PBC and Vertex API `lineItems[]`. |
 | items[].merchantProfileAddress   | lineItems[].seller.administrativeOrigin |     |
-| items[].unitDiscountAmountFullAggregation      | lineItems[].discount.discountValue| Prices are converted from the Spryker’s cent-based format to the Vertex decimal format. |
+| items[].unitDiscountAmountFullAggregation      | lineItems[].discount.discountValue| Prices are converted from the Spryker's cent-based format to the Vertex decimal format. |
 | -     | lineItems[].discount.discountType | Always `DiscountAmount`. Spryker stores discounts based on amount, so there is no need for percentage-based discounts.  |
-| items[].unitPrice (either GROSS or NET depending on the selected mode) | lineItems[].unitPrice | Prices are converted from Spryker’s cent-based format to Vertex decimal format. |
+| items[].unitPrice (either GROSS or NET depending on the selected mode) | lineItems[].unitPrice | Prices are converted from Spryker's cent-based format to Vertex decimal format. |
 | items[].merchantStockAddresses.quantityToShip  | lineItems[].quantity.value | If `quantityToShip` is less than the quantity requested in cart, the item is mapped to multiple items in the Vertex API.      |
 | - | lineItems[].quantity.unitOfMeasure   | Always `EA` (“each”). Other units of measure are not supported. |
 | items[].taxMetadata | Mapped over specific `lineItem` one to one. | Metadata needs to follow the structure of the Vertex API request. For `lineItems`, it's mapped over each corresponding item based on `lineItemId`. |
@@ -394,7 +394,7 @@ The following table reflects the mapping of the Spryker Quote and Order transfer
 | expenses.shipment.method.shipmentMethodKey | lineItems[].product.value | Depends on the selected shipment method. |
 | billingAddress     | lineItems[].customer.administrativeDestination |                                  |
 | expenses.sumPrice (either GROSS or NET depending on the selected mode)                       | lineItems[].extendedPrice |       |
-| expenses.sumDiscountAmountAggregation                                                        | lineItems[].discount.discountValue | Prices are converted from the Spryker’s cent-based format to the Vertex decimal format. | | -  | lineItems[].discount.discountType  | Always `DiscountAmount`. Spryker stores discounts based on amount, so there is no need to use percentage-based discounts. |
+| expenses.sumDiscountAmountAggregation                                                        | lineItems[].discount.discountValue | Prices are converted from the Spryker's cent-based format to the Vertex decimal format. | | -  | lineItems[].discount.discountType  | Always `DiscountAmount`. Spryker stores discounts based on amount, so there is no need to use percentage-based discounts. |
 | priceMode| lineItems[].taxIncludedIndicator                                         | NET mode: false; GROSS mode: true. |
 
 ### Location mapping

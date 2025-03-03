@@ -304,7 +304,7 @@ We also provide a basic layout file, where you can inject concrete content files
 {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
 ```
 
-The preceeding template is used for plain text messages, and templates can also be used to generate JSON or query strings like `customer={% raw %}{{{% endraw %} mail.customer.firstName {% raw %}}}{% endraw %}&orderReference={% raw %}{{{% endraw %} mail.order.orderReference {% raw %}}}{% endraw %}`. It’s up to your provider to decide what to render.
+The preceeding template is used for plain text messages, and templates can also be used to generate JSON or query strings like `customer={% raw %}{{{% endraw %} mail.customer.firstName {% raw %}}}{% endraw %}&orderReference={% raw %}{{{% endraw %} mail.order.orderReference {% raw %}}}{% endraw %}`. It's up to your provider to decide what to render.
 
 For HTML messages, you need to have this in your layout file:
 

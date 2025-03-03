@@ -54,7 +54,7 @@ To add multiple commands to the `pre-deploy` stage:
 
 The file should have a `.yml` extension. For example, `pre-deploy.yml`.
 
-2. In `deploy.yml`, define `SPRYKER_HOOK_BEFORE_DEPLOY` with the command that executes the script you’ve created:
+2. In `deploy.yml`, define `SPRYKER_HOOK_BEFORE_DEPLOY` with the command that executes the script you've created:
 
 ```yaml
 environment: ...

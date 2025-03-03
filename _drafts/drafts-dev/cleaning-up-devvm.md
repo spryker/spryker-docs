@@ -72,7 +72,7 @@ cd /data/shop/development/current
 
 1. **Clear the Elasticsearch service:**
 
-Make sure the Elasticsearch service is up and running; if it’s not, restart it with:
+Make sure the Elasticsearch service is up and running; if it's not, restart it with:
 
 ```bash
 sudo /etc/init.d/elasticsearch restart

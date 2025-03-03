@@ -12,7 +12,7 @@ Spryker uses schema files to generate code for your project, including predefine
 
 ## Code generation
 
-You can use the Sync API’s OpenAPI schema file to generate code with the help of [Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks.html).
+You can use the Sync API's OpenAPI schema file to generate code with the help of [Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks.html).
 You can control the code generator with the following parts of the schema file:
 - Paths
 - Extension

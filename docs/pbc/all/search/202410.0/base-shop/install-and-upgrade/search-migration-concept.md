@@ -19,9 +19,9 @@ redirect_from:
   - /docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html
 ---
 
-Previously, out of the box, Spryker provided support only for Elasticsearch 5 as the search provider.  It was impossible to use major versions of Elasticsearch later because of the breaking changes introduced in its version 6 - primarily because of the removal of mapping types. From the very beginning, Spryker’s search setup included one index per store, which was logically divided into several mapping types to support different types of resources. Besides, there was no easy way to substitute Elasticsearch with alternative search providers.
+Previously, out of the box, Spryker provided support only for Elasticsearch 5 as the search provider.  It was impossible to use major versions of Elasticsearch later because of the breaking changes introduced in its version 6 - primarily because of the removal of mapping types. From the very beginning, Spryker's search setup included one index per store, which was logically divided into several mapping types to support different types of resources. Besides, there was no easy way to substitute Elasticsearch with alternative search providers.
 
-Refactoring of the Spryker’s search sub-system has two main goals:
+Refactoring of the Spryker's search sub-system has two main goals:
 
 1. Prepare the infrastructure for replacing Elasticsearch with alternative search providers as well as for using several search providers at a time.
 2. Unblock the ability to use Elasticsearch 6, by changing the way, in which the search data is stored in Elasticsearch - rather than having all the data inside of a single index with multiple mapping types, indexed documents are now stored across multiple Elasticsearch indexes each having its own single mapping type. This is compatible with Elasticsearch 6, which allows a single mapping type per index,  and is a solid foundation for the future migration to Elasticsearch 7, where the concept of mapping types is removed completely.
@@ -30,7 +30,7 @@ This article describes the changes made to add support of Elasticsearch 6 and cr
 
 ## Preparing the infrastructure for replacing Elasticsearch
 
-The central place of the Spryker’s search sub-system is the *Search* module. This module provides APIs for:
+The central place of the Spryker's search sub-system is the *Search* module. This module provides APIs for:
 
 * installing the infrastructure for search (creating/updating Elasticsearch indexes)
 * searching for data

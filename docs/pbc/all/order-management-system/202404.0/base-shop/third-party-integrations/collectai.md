@@ -19,7 +19,7 @@ redirect_from:
 
 Digital accounts receivable management based on AI collection services
 
-collectAI is a software platform providing digitised, AI-based payments and collection services to manage accounts receivables. Covering the end-to-end process from e-invoicing and payment reminder to debt collection it flexibly optimises the goals of collection rates, costs and customer retention. In addition, the company offers payment links as well as business process outsourcing services. It uses digital communication channels and payment solutions for a frictionless checkout process. With its proprietary technology, collectAI fundamentally improves the customer experience, putting the needs and behaviour of the end consumer to the centre of the service. collectAI, founded in 2016, is part of Germany’s largest e-commerce retailer, the Otto Group.
+collectAI is a software platform providing digitised, AI-based payments and collection services to manage accounts receivables. Covering the end-to-end process from e-invoicing and payment reminder to debt collection it flexibly optimises the goals of collection rates, costs and customer retention. In addition, the company offers payment links as well as business process outsourcing services. It uses digital communication channels and payment solutions for a frictionless checkout process. With its proprietary technology, collectAI fundamentally improves the customer experience, putting the needs and behaviour of the end consumer to the centre of the service. collectAI, founded in 2016, is part of Germany's largest e-commerce retailer, the Otto Group.
 
 YOUR ADVANTAGES:
 

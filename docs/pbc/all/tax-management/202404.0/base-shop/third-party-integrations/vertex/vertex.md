@@ -14,7 +14,7 @@ redirect_from:
 
 ![vertex-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/vertex-hero.png)
 
-The Spryker-Vertex integration is part of the tax Category of Spryker’s App Composition Platform. This integration is built with support for both the default Storefront as well as Spryker’s GLUE APIs. For more information about Vertex, see the [Vertex website](https://www.vertexinc.com/).
+The Spryker-Vertex integration is part of the tax Category of Spryker's App Composition Platform. This integration is built with support for both the default Storefront as well as Spryker's GLUE APIs. For more information about Vertex, see the [Vertex website](https://www.vertexinc.com/).
 
 The Spryker Vertex app, based on the *Vertex O Series*, performs automatic, near-real-time tax calculations at the point of purchase while accounting for the following:
 

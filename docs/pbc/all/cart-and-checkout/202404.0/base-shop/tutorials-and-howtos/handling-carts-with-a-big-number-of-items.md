@@ -93,7 +93,7 @@ When the whole cart information is loaded, handling split payments, shipping cos
 
 Backend:
 - Reduce unnecessary backend checks between steps and excessive quote walkthroughs.
-- Unless it’s really needed, don’t load or involve full cart information on checkout steps.
+- Unless it's really needed, don't load or involve full cart information on checkout steps.
 
 Storefront: Redesign the checkout process to better manage big carts and enhance the UX.
 

@@ -194,7 +194,7 @@ It is also possible to extend the vendor twig blocks. You need to extend the ven
 {% endraw %}
 ```
 
-If a project file isn’t reflected in the browser, try to clean cache:
+If a project file isn't reflected in the browser, try to clean cache:
 
 ```bash
 console cache:empty-all

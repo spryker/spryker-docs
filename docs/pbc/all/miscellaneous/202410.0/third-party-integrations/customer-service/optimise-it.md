@@ -15,7 +15,7 @@ redirect_from:
 
 We ❤ Conversations!
 
-As one of the leading chat service providers in Europe, optimise-it focuses primarily on a custom tailored chat solution, which can include integrations of messengers (WhatsApp, Facebook, Apple Business Chat), chatbots, video-chat, co-browsing, screen sharing, and more. With their inhouse chat lab, they provide experienced and performance driven chat agents for their full service customers. optimise-it’s customers include leading companies like BASF, Migros, Eurowings, Deutsche Bahn and 1&1.
+As one of the leading chat service providers in Europe, optimise-it focuses primarily on a custom tailored chat solution, which can include integrations of messengers (WhatsApp, Facebook, Apple Business Chat), chatbots, video-chat, co-browsing, screen sharing, and more. With their inhouse chat lab, they provide experienced and performance driven chat agents for their full service customers. optimise-it's customers include leading companies like BASF, Migros, Eurowings, Deutsche Bahn and 1&1.
 
 YOUR ADVANTAGES:
 

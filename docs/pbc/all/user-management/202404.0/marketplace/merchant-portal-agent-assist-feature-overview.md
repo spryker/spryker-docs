@@ -22,7 +22,7 @@ To act as a Merchant Agent, the Marketplace Operator user must have the Agent pe
 
 ## Agent Assist in Merchant Portal
 
-To act on a merchant’s behalf, the Merchant Agent signs in to the Merchant Portal with the Merchant Agent credentials on a dedicated Agent Assist Login page and finds the necessary merchant user. To impersonate this user, the agent clicks **Assist User**, and then **Confirm** to impersonate them.
+To act on a merchant's behalf, the Merchant Agent signs in to the Merchant Portal with the Merchant Agent credentials on a dedicated Agent Assist Login page and finds the necessary merchant user. To impersonate this user, the agent clicks **Assist User**, and then **Confirm** to impersonate them.
 This logs the agent into the selected merchant account so they see the Merchant Portal as the merchant user does. To finish the merchant assistance session, the agent clicks **End User Assistance**.
 
 This is how the Agent Assist in Merchant Portal feature works in the Merchant Portal:

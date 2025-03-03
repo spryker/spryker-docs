@@ -40,7 +40,7 @@ The escalation process is designed in a way to create visibility for the right a
 
 `SOLUTION PROPOSED`. Once the team has found a solution that either fixes the problem outright, or at least mitigates its impact, they propose a solution, and the partner and customer are asked to accept or reject the proposed solution.
 
-`CLOSED`. After an acceptable solution is found, the escalation (not the case!) is closed. This means that the urgency of the matter was successfully reduced, and the case can be handled within the normal support process again. Usually, the internal stakeholders involved are debriefed at this point.
+`CLOSED`. After an acceptable solution is found, the escalation (not the case) is closed. This means that the urgency of the matter was successfully reduced, and the case can be handled within the normal support process again. Usually, the internal stakeholders involved are debriefed at this point.
 
 After a valid escalation is over, Post Mortem is held and the results are shared with the partner and customer. The point of this is to make it less likely that a similar situation that causes an escalation likely can occur in the future. If the escalation was caused by infrastructure problems in production systems, a technical Root Cause Analysis (RCA) will also be shared.
 

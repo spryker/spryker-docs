@@ -28,4 +28,4 @@ sudo docker/sdk prune
 docker/sdk clean-data && docker/sdk boot {deploy_file_name} && docker/sdk up
 ```
 
-You’ve restarted your instance from scratch.
+You've restarted your instance from scratch.

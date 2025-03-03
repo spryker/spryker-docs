@@ -12,7 +12,7 @@ related:
     link: docs/pbc/all/return-management/page.version/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
 ---
 
-The Spryker Marketplace platform offers sales opportunities to everyone. To help support the [Enterprise Marketplace](/docs/about/all/spryker-marketplace/marketplace-concept.html) model, not only the 3rd party merchants but also the company owner of the Marketplace store can sell their products and offers online. We call this company the *main merchant*.
+The Spryker Marketplace platform offers sales opportunities to everyone. To help support the [Enterprise Marketplace](/docs/about/all/spryker-marketplace/marketplace-concept.html) model, not only the third-party merchants but also the company owner of the Marketplace store can sell their products and offers online. We call this company the *main merchant*.
 
 Thus, the main merchant acts as a common [marketplace merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) having all its characteristics.
 

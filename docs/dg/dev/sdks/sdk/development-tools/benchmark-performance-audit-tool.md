@@ -23,7 +23,7 @@ The Benchmark tool allows you to profile requests to an application and see how 
 
 To install the Benchmark tool, follow the steps below.
 
-1. Install the package via composer. You might want to add it to the `composer dev` section if you don’t want to use it on the production environment:
+1. Install the package via composer. You might want to add it to the `composer dev` section if you don't want to use it on the production environment:
 
 ```bash
 composer require --dev spryker-sdk/benchmark
@@ -90,7 +90,7 @@ To have the same code on production and development environments, we recommend a
 
 4. Create test folders, so there is a different folder for each application: `tests/Benchmark(Yves|Glue|Zed)`.
 
-5. Add the bootstrap file to `tests\Benchmark\bootstrap.php`. The bootstrap file is a .php file that should be almost the same as your public index.php file (e.g. `public/Zed/index.php`). The Benchmark tool has default bootstrap files out-of-the-box, but it’s recommended to add one on the project level, as shown below.
+5. Add the bootstrap file to `tests\Benchmark\bootstrap.php`. The bootstrap file is a .php file that should be almost the same as your public index.php file (e.g. `public/Zed/index.php`). The Benchmark tool has default bootstrap files out-of-the-box, but it's recommended to add one on the project level, as shown below.
 
 **tests\Benchmark\bootstrap.php**
 
@@ -115,7 +115,7 @@ Environment::initialize();
 require_once __DIR__ . '/../bootstrap.php';
 ```
 
-That’s it. You now have the Benchmark tool installed.
+That's it. You now have the Benchmark tool installed.
 
 ## Running the tests
 

@@ -24,7 +24,7 @@ The simplest way to bring data to a project is to leverage [Data importers](/doc
 
 ## Strategies and concepts
 
-Before starting the implementation, let’s consider the most important concepts and best practices that should be used during data processing.
+Before starting the implementation, let's consider the most important concepts and best practices that should be used during data processing.
 
 ### Incremental data updates
 
@@ -50,7 +50,7 @@ The exponential growth of SQL queries is a good refactoring reason.
 
 To read in batches, consider pre-collecting of identifiers. Also, you can leverage table JOINs and UNIONs to enrich complete datasets in relational DBs.
 
-To write in batches, consider INSERT concatenations or an advanced method with CTE (described below). Concatenated INSERTs generate lots of repetitive character sequences that lead to Mbs of useless data transferred over a network. CTE doesn’t have this pitfall.
+To write in batches, consider INSERT concatenations or an advanced method with CTE (described below). Concatenated INSERTs generate lots of repetitive character sequences that lead to Mbs of useless data transferred over a network. CTE doesn't have this pitfall.
 
 When writing in batches, there can be data inconsistency, which will be discovered only on DB query execution. In some cases, one of the business requirements is to be able to work with inconsistent data. Typically after a DB exception and transaction rollback, one could decide to stop the import process or log the data set and continue with the next one. Both options are **not optimal** as terminated processes usually cause business losses and leave an engineer no trail on what entity in a batch caused the problem. In this case, consider a fallback strategy for batch operation. The default strategy here is switching to the per-entity processing, where healthy records will reach DB, and unhealthy ones could be logged and then analyzed outside of the data import process. More details on this topic can be found [here](https://docs.spring.io/spring-batch/docs/current/reference/html/index-single.html#databaseItemWriters).
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Guidelines/Data+Processing+Guidelines/recovery+on+batch.png)

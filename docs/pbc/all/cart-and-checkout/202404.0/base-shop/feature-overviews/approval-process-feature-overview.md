@@ -70,7 +70,7 @@ Every approval request can have three statuses:
 
 Approval Process as such introduces steps that company employees must follow to order, request for approval, and pay for products.
 
-Here’s how approvals fit into the buying process:
+Here's how approvals fit into the buying process:
 
 ### 1. Submitting the request for approval
 

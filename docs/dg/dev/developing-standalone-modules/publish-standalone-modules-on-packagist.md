@@ -37,7 +37,7 @@ You'll be prompted to fill out details like the following:
 ## Add the package metadata
 
 
-Add the package metadata to `composer.json`. Here’s an example of what it might look like:
+Add the package metadata to `composer.json`. Here's an example of what it might look like:
 
 
 {% info_block infoBox %}

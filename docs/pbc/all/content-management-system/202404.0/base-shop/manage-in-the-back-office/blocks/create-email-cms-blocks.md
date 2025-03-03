@@ -50,7 +50,7 @@ Review the [reference information](#reference-information-create-an-email-cms-bl
 
 {% info_block warningBox "Activating email blocks" %}
 
-You don’t need to activate the email CMS block, as the deactivated status of the email CMS block does not prevent emails from being sent.
+You don't need to activate the email CMS block, as the deactivated status of the email CMS block does not prevent emails from being sent.
 
 {% endinfo_block %}
 

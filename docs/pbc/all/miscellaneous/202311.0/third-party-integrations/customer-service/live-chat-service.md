@@ -29,7 +29,7 @@ real time.
   - More service: live chat is an approachable contact channel that you can use
 from 07:00 - 23:00 during the week and from 09:00 - 23:00 during weekends.
   - More leads: on average we generate up to 20-25% of the chats into leads.
-  - Less phone calls: by answering questions on the website, we’re reducing
+  - Less phone calls: by answering questions on the website, we're reducing
 incoming calls.
 
 * LiveChat Software (Knowler).

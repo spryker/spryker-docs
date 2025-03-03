@@ -58,7 +58,7 @@ Migration to OpenSearch provides several benefits:
 
 * Active community: OpenSearch benefits from a thriving open-source community, driving continuous enhancement and innovation.
 
-## Why didn’t we get access to OpenSearch earlier?
+## Why didn't we get access to OpenSearch earlier?
 
 We prioritize our services' stability, security, and compatibility above all else. That's why we approach upgrades with the utmost caution, ensuring that we have extensively tested and verified their functionality and compatibility before they are introduced into our ecosystem. Elasticsearch has been a reliable and robust search engine, and many of our customers still use versions under 7.10. Despite Elastic's decision to deprecate some older versions of Elasticsearch, we've been able to maintain their service continuity through our partnership with AWS, which has committed to supporting these versions without deprecation notice. As a result, there was no immediate need to rush the migration to OpenSearch.
 

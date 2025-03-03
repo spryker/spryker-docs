@@ -78,11 +78,11 @@ To redefine the path for the config file, adjust `/frontend/libs/stylelint.js`  
 configFile: `${globalSettings.context}/node_modules/@spryker/frontend-config.stylelint/.stylelintrc.json`,
 ```
 
-The SCSS Linter also uses the ignore file `/.stylelintignore` that includes directories and files where the SCSS linter shouldn’t be executed.
+The SCSS Linter also uses the ignore file `/.stylelintignore` that includes directories and files where the SCSS linter shouldn't be executed.
 
 {% info_block infoBox %}
 
-SCSS Linter rules related to formatting aren’t included in the [stylelint config](https://www.npmjs.com/package/@spryker/frontend-config.stylelint) to avoid duplication with the [Prettier rules](https://www.npmjs.com/package/@spryker/frontend-config.prettier).
+SCSS Linter rules related to formatting aren't included in the [stylelint config](https://www.npmjs.com/package/@spryker/frontend-config.stylelint) to avoid duplication with the [Prettier rules](https://www.npmjs.com/package/@spryker/frontend-config.prettier).
 
 {% endinfo_block %}
 

@@ -78,9 +78,9 @@ In the preceding example, when rendering the product details page, you can see t
 
 Adding a new attribute to a product can be done without having to make many changes.
 
-Let’s consider that you want to add a `waterproof` attribute to abstract products that have associated boolean values.
+Let's consider that you want to add a `waterproof` attribute to abstract products that have associated boolean values.
 
-In the `product_abstract.csv` file, add the `waterproof` key the already defined but empty `attribute_key_x` (where *`x`* is a number) field and the desired value to its related `value_x` field. If there’s no empty product attribute key-value field for the product to edit, you can introduce a new column in CSV with the same pattern.
+In the `product_abstract.csv` file, add the `waterproof` key the already defined but empty `attribute_key_x` (where *`x`* is a number) field and the desired value to its related `value_x` field. If there's no empty product attribute key-value field for the product to edit, you can introduce a new column in CSV with the same pattern.
 
 The process of importing products can happen only once to reimport every product, reset the data stores, and reinstall it:
 

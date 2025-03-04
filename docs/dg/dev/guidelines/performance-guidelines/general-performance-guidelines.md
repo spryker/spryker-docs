@@ -348,23 +348,25 @@ Try to update the Spryker modules where you can, as we constantly add performanc
 
 The latest performance optimization releases can be found in:
 
-- https://github.com/spryker/kernel/releases/tag/3.37.4
-- https://github.com/spryker/catalog-price-product-connector/releases/tag/1.3.0
-- https://github.com/spryker/catalog-search-rest-api/releases/tag/2.4.0
-- https://github.com/spryker/category-storage/releases/tag/1.8.0
-- https://github.com/spryker/customer-catalog/releases/tag/1.1.0
-- https://github.com/spryker/price-product/releases/tag/4.15.2
-- https://github.com/spryker/price-product-merchant-relationship-storage/releases/tag/1.9.0
-- https://github.com/spryker/price-product-storage/releases/tag/4.4.0
-- https://github.com/spryker/product-list-storage/releases/tag/1.11.0
-- https://github.com/spryker/product-prices-rest-api/releases/tag/1.4.0
-- https://github.com/spryker/quote/releases/tag/2.13.0
-- https://github.com/spryker/store/releases/tag/1.14.0
+- [spryker/kernel:^3.37.4](https://github.com/spryker/kernel/releases/tag/3.37.4)
+- [spryker/catalog-price-product-connector:^1.3.0](https://github.com/spryker/catalog-price-product-connector/releases/tag/1.3.0)
+- [spryker/catalog-search-rest-api:^2.4.0](https://github.com/spryker/catalog-search-rest-api/releases/tag/2.4.0)
+- [spryker/category-storage:^1.8.0](https://github.com/spryker/category-storage/releases/tag/1.8.0)
+- [spryker/customer-catalog:^1.1.0](https://github.com/spryker/customer-catalog/releases/tag/1.1.0)
+- [spryker/price-product:^4.15.2](https://github.com/spryker/price-product/releases/tag/4.15.2)
+- [spryker/price-product-merchant-relationship-storage:^1.9.0](https://github.com/spryker/price-product-merchant-relationship-storage/releases/tag/1.9.0)
+- [spryker/price-product-storage:^4.4.0](https://github.com/spryker/price-product-storage/releases/tag/4.4.0)
+- [spryker/product-list-storage:^1.11.0](https://github.com/spryker/product-list-storage/releases/tag/1.11.0)
+- [spryker/product-prices-rest-api:^1.4.0](https://github.com/spryker/product-prices-rest-api/releases/tag/1.4.0)
+- [spryker/quote:^2.13.0](https://github.com/spryker/quote/releases/tag/2.13.0)
+- [spryker/store:^1.14.0](https://github.com/spryker/store/releases/tag/1.14.0)
+
 
 Performance optimizations in the Merchant Portal:
-- `spryker/category:^5.18.2` - https://github.com/spryker/category/releases/tag/5.18.2
-- `spryker/acl:^3.22.0` - https://github.com/spryker/acl/releases/tag/3.22.0
-- `spryker/acl-entity:^1.13.0` - https://github.com/spryker/acl-entity/releases/tag/1.13.0
+- [spryker/category:^5.18.2](https://github.com/spryker/category/releases/tag/5.18.2)
+- [spryker/acl:^3.22.0](https://github.com/spryker/acl/releases/tag/3.22.0)
+- [spryker/acl-entity:^1.13.0](https://github.com/spryker/acl-entity/releases/tag/1.13.0)
+
 
 
 ## Performance profiling

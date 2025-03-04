@@ -25,7 +25,7 @@ e-Spirit's FirstSpirit Digital Experience Platform, offered through a SaaS or on
 
 YOUR ADVANTAGES:
 
-* Easy to use content editing: No coding needed to add content for experience-driven commerce (e.g., promotional banners, product teasers, interactive images and videos, user generated content).
+* Easy to use content editing: No coding needed to add content for experience-driven commerce, such as promotional banners, product teasers, interactive images and videos, user generated content.
 * Rapid start-up.
 * Deep partnership with Spryker.
 * Many leading e-commerce customers globally: Reitmans, Carter's, Converse, L'Oreal Luxe brands, Karstadt, TSI Holdings, Hugo Boss, etc.

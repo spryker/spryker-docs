@@ -85,7 +85,7 @@ The following table provides an overview of the statuses that are displayed at t
 | Customer                  | Storefront      | Refunded   |
 
 ## Order item's status progress: Sent to Merchant
-When the system has payment confirmation, it performs the operations to split the marketplace order into one or several merchant orders. The state of the marketplace order item becomes *Sent to Merchant*. The merchant orders are created, and each of the items that they contain shows a state according to each Merchant’s state machine. The first state is *New*.
+When the system has payment confirmation, it performs the operations to split the marketplace order into one or several merchant orders. The state of the marketplace order item becomes *Sent to Merchant*. The merchant orders are created, and each of the items that they contain shows a state according to each Merchant's state machine. The first state is *New*.
 
 ![Order item's status progress: Sent to Merchant](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Order+Management/sent-to-merchant.png)
 

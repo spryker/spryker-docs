@@ -98,7 +98,7 @@ To configure the field on which the table is sorted by default when it's initial
 ```php
 <?php
 
-$config->setDefaultSortField(SpySalesOrderTableMap::COL_CREATED_ATб \Spryker\Zed\Gui\Communication\Table\TableConfiguration::SORT_DESC);
+$config->setDefaultSortField(SpySalesOrderTableMap::COL_CREATED_AT, \Spryker\Zed\Gui\Communication\Table\TableConfiguration::SORT_DESC);
 ```
 
 ### Configure search by columns

@@ -93,9 +93,9 @@ Append glossary according to your language configuration:
 
 ```yaml
 cart_reorder.validation.order_not_found,Order not found.,en_US
-  cart_reorder.validation.order_not_found,Bestellung nicht gefunden.,de_DE
-  cart_reorder.validation.quote_not_provided,Quote not provided.,en_US
-  cart_reorder.validation.quote_not_provided,Angebot nicht bereitgestellt.,de_DE
+cart_reorder.validation.order_not_found,Bestellung nicht gefunden.,de_DE
+cart_reorder.validation.quote_not_provided,Quote not provided.,en_US
+cart_reorder.validation.quote_not_provided,Angebot nicht bereitgestellt.,de_DE
 sales_configured_bundle.success.items_added_to_cart_as_individual_products,"Please notice: Items from the Configured Bundle were added to the Cart as individual products.",en_US
 sales_configured_bundle.success.items_added_to_cart_as_individual_products,"Bitte beachten: Artikel aus dem konfigurierbaren Bündel wurden als einzelne Produkte in den Warenkorb gelegt.",de_DE
 ```

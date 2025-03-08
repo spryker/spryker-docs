@@ -367,6 +367,6 @@ public function readAcme(AcmeCriteriaTransfer $acmeCriteriaTransfer): AcmeTransf
 
 This does not break any customized logic. The project code continues to work just fine using the deprecated external facade method, and it might only miss some performance improvements potentially brought by the new method.
 
-#### Major release (e.g., 1.0.0 to 2.0.0)
+#### Major release
 
-In the major version  release 1.0.0 to 2.0.0, the deprecated method `FooFacade::findFooByAcme(int $id)` is completely removed. The upgrader tool will update the `spryker/acme` and `spryker/foo` packages to the latest version. Because of this, the project's code now throws an `Error` exception and breaks the application because the old method does not exist anymore. This means you need to manually fix this issue.
+In the major version release–for example, 1.0.0 to 2.0.0–the deprecated method `FooFacade::findFooByAcme(int $id)` is completely removed. The upgrader tool will update the `spryker/acme` and `spryker/foo` packages to the latest version. Because of this, the project's code now throws an `Error` exception and breaks the application because the old method does not exist anymore. This means you need to manually fix this issue.

@@ -33,7 +33,7 @@ Zed API, initially released as a beta version, is now considered outdated and is
 
 {% endinfo_block %}
 
-Each module can have a `{module}Api` module(e.g. CustomerApi for Customer). Such an API module exposes CRUD facade methods (find, get, add, update, remove) that can be mapped to a URL via REST `resource/action` resolution.
+Each module can have a `{module}Api` module–for example, CustomerApi for Customer. Such an API module exposes CRUD facade methods (find, get, add, update, remove) that can be mapped to a URL via REST `resource/action` resolution.
 
 The main `Api` module contains a dispatcher that delegates to those API module via resource map and returns the response in the expected format.
 

@@ -110,7 +110,7 @@ In case you need a different pagination strategy, you can replace the core Proce
 
 ## Fields
 
-Each resource must have a `ResourceApiTransfer`, e.g. for a customer it would be a `CustomerApiTransfer`. You will declare it in a `customer_api.transfer.xml` and insert only fields you want to support for.
+Each resource must have a `ResourceApiTransfer`–for example, for a customer, it would be a `CustomerApiTransfer`. You will declare it in a `customer_api.transfer.xml` and insert only fields you want to support for.
 
 By default, any resource will only expose and accept the fields defined in this transfer. For response data you can also further filter by a whitelist as field map (see above).
 
@@ -191,4 +191,4 @@ A successful delete request returns an empty body and a 204 response code.
 
 The Spryker default behavior is to not fail on no-op delete. If you want to be stricter, you can customize your post processor to only allow a true delete and to throw 404 if not found (anymore). Use a post processor and check the content returned then by "remove" action. It will be an empty array if no record was found to delete.
 
-If a body is supposed to be returned, e.g. including meta data, use a 202 response code.
+If a body is supposed to be returned–for example, with metadata, use a 202 response code.

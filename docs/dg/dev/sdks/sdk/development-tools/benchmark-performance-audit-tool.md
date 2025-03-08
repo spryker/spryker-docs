@@ -90,7 +90,7 @@ To have the same code on production and development environments, we recommend a
 
 4. Create test folders, so there is a different folder for each application: `tests/Benchmark(Yves|Glue|Zed)`.
 
-5. Add the bootstrap file to `tests\Benchmark\bootstrap.php`. The bootstrap file is a .php file that should be almost the same as your public index.php file (e.g. `public/Zed/index.php`). The Benchmark tool has default bootstrap files out-of-the-box, but it's recommended to add one on the project level, as shown below.
+5. Add the bootstrap file to `tests\Benchmark\bootstrap.php`. The bootstrap file is a .php file that should be almost the same as your public index.php file–for example, `public/Zed/index.php`. The Benchmark tool has default bootstrap files out-of-the-box, but it's recommended to add one on the project level, as shown below.
 
 **tests\Benchmark\bootstrap.php**
 

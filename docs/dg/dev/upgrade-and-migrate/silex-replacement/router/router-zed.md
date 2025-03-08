@@ -96,7 +96,7 @@ This plugin can be used to add a project specific Router to the `ChainRouter`. T
 
 ### Use controller from third-party
 
-If you want to use third-party Controller,  e.g. from `spryker-eco` and alike you need to add the path where the controller can be found to the `\Pyz\Zed\Router\RouterConfig::getControllerDirectories()` method. Paths added to this method will be scanned for controllers. Found controllers will be added to the route cache.
+If you want to use third-party Controller, such as `spryker-eco`, you need to add the path where the controller can be found to the `\Pyz\Zed\Router\RouterConfig::getControllerDirectories()` method. Paths added to this method will be scanned for controllers. Found controllers will be added to the route cache.
 
 ## Console commands
 

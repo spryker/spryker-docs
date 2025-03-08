@@ -158,7 +158,7 @@ Link tests to use cases and other requirement tickets with relation like "covers
 
 After each completed iteration, create reports and keep them in the same wiki where all other artifacts are based. Reports can show you the state of the project, possible risky features and things that can be improved.
 
-Each iteration, at least big one, should be ended with regression testing. If you don't have time or manpower to perform a full regression, make sure to test at least all high priority test cases to see that none of the main use scenarios are broken.
+Each iteration, at least big one, should be ended with regression testing. If you don't have time or resources to perform a full regression, make sure to test at least all high priority test cases to see that none of the main use scenarios are broken.
 
 ## Testing scenarios
 

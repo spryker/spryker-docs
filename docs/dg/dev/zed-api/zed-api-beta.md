@@ -51,7 +51,7 @@ By default all incoming requests and outgoing responses will be logged as "info"
 
 ## Security recommendations
 
-Secure the API with a token system (e.g. JWT) and also apply basic API Rate Limiting, e.g. using X-Rate-Limit-Limit header. You can add your custom ServiceProvider in the mentioned stack above.
+Secure the API with a token system, such as JWT, and also apply basic API Rate Limiting–for example, using the `X-Rate-Limit-Limit` header. You can add your custom ServiceProvider in the mentioned stack above.
 
 For CORS you should add a ServiceProvider.
 

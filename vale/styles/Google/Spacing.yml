@@ -1,10 +1,10 @@
 extends: existence
-message: "Use a single space after periods, question marks, and exclamation points."
-link: "https://developers.google.com/style/sentence-spacing"
+message: "'%s' should have one space."
+link: 'https://developers.google.com/style/sentence-spacing'
 level: error
 nonword: true
 tokens:
   - '[a-z][.?!] {2,}[A-Z]'
   - '[a-z][.?!][A-Z]'
 exceptions:
-  - zed.critical
+  - 'RabbitMQ: Zed.CRITICAL: PhpAmqpLib\Exception\AMQPChannelClosedException - Channel connection is closed'

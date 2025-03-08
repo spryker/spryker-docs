@@ -215,7 +215,7 @@ A certain degree of independence often makes the tester more effective at findin
 * Test by the author (developer)
 * Test by another developer not involved in implementing this feature
 * Test by internal tester or test team as people familiar with the software but having a mindset of a user rather than a developer
-* Test by a person from a different organization or company (e.g. externally invited test team)
+* Test by a person from a different organization or company–for example, externally invited test team
 
 [*ISTQB Syllabus Released Version 2011*]
 

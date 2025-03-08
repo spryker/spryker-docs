@@ -18,7 +18,7 @@ This document describes how to use the support portal to create and manage your 
 
 ## Prerequisites
 
-* You should have a customer account provisioned for you. If you don't, request one using this [form](https://www.surveymonkey.com/r/XYK5R26).
+* You should have a customer account provisioned for you. If you don't, request one using this [form](https://support.spryker.com/s/portal-access-request).
 * Log in at the [support portal](https://support.spryker.com).
 
 ## Create new cases

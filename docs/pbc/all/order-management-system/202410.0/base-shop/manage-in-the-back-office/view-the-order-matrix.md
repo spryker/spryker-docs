@@ -36,6 +36,6 @@ On the **Overview of Order Matrix** page, you see the following information:
 * The number of items with a specific status.
 ![Order Matrix](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Order+Matrix/order+matrix.png)
 
-The numbers are hyperlinked. If selected, you will be redirected to the **Overview of Orders** page. The table will display only the order(s) that contains the items with the selected status.
+The numbers are hyperlinked. If selected, you will be redirected to the **Overview of Orders** page. The table will display only the orders that contains the items with the selected status.
 
 For example, you have five items with the **exported** status. On the **Overview of Order Matrix** page, if you click **5**, the **Overview of Orders** page is displayed, filtered by orders with the exported items only.

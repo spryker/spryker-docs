@@ -191,7 +191,7 @@ Optional: You can add the `$templateIdentifier` parameter—for example, `functi
 
 5. In `\Pyz\Yves\Twig\TwigDependencyProvider::getTwigPlugins()`, register your Twig plugin.
 
-Now you can use your plugin as a function in Twig files. If you’ve named your plugin `content_foo`, in a Twig file, the function looks like `{% raw %}{{{% endraw %} content_foo('content-key', 'big-header') {% raw %}}}{% endraw %}`.
+Now you can use your plugin as a function in Twig files. If you've named your plugin `content_foo`, in a Twig file, the function looks like `{% raw %}{{{% endraw %} content_foo('content-key', 'big-header') {% raw %}}}{% endraw %}`.
 
 ## WYSIWYG editor plugin
 

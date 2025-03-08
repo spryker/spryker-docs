@@ -20,7 +20,7 @@ The *File Manager* feature lets you upload and manage your assets (media files) 
 * Upload and delete files in bulk.
 * Add and delete files manually through the Back Office.
 * Maintain multiple versions of individual files.
-* Drag and drop to create and update your assets’ file structure.
+* Drag and drop to create and update your assets' file structure.
 * Manage files from a list view.
 
 A Back Office user can upload files then add them to CMS pages and blocks to display on the Storefront.

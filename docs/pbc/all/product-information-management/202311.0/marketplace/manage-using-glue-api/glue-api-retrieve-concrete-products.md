@@ -92,7 +92,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             "averageRating": null,
             "reviewCount": 0,
             "name": "Canon IXUS 160",
-            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7") LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
             "attributes": {
                 "megapixel": "20 MP",
                 "flash_range_tele": "4.2-4.9 ft",
@@ -139,7 +139,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             "averageRating": null,
             "reviewCount": 0,
             "name": "Canon IXUS 160",
-            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7") LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
             "attributes": {
                 "megapixel": "20 MP",
                 "flash_range_tele": "4.2-4.9 ft",
@@ -219,7 +219,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             "averageRating": null,
             "reviewCount": 0,
             "name": "Canon IXUS 160",
-            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7") LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
             "attributes": {
                 "megapixel": "20 MP",
                 "flash_range_tele": "4.2-4.9 ft",
@@ -290,7 +290,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             "averageRating": null,
             "reviewCount": 0,
             "name": "Canon IXUS 160",
-            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7") LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
             "attributes": {
                 "megapixel": "20 MP",
                 "flash_range_tele": "4.2-4.9 ft",
@@ -481,7 +481,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             "averageRating": null,
             "reviewCount": 0,
             "name": "Canon IXUS 160",
-            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7") LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
             "attributes": {
                 "megapixel": "20 MP",
                 "flash_range_tele": "4.2-4.9 ft",
@@ -771,7 +771,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             "averageRating": null,
             "reviewCount": 0,
             "name": "Canon IXUS 160",
-            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7") LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
             "attributes": {
                 "megapixel": "20 MP",
                 "flash_range_tele": "4.2-4.9 ft",
@@ -818,7 +818,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             "averageRating": null,
             "reviewCount": 0,
             "name": "Canon IXUS 160",
-            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7") LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
             "attributes": {
                 "megapixel": "20 MP",
                 "flash_range_tele": "4.2-4.9 ft",
@@ -891,7 +891,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             "reviewCount": 0,
             "productAbstractSku": "076",
             "name": "Sony Xperia Z3 Compact",
-            "description": "Dive into new experiences Xperia Z3 Compact is the smartphone designed to enhance your life. And life isn’t lived inside. With the highest waterproof rating*, Xperia Z3 Compact lets you answer calls in the rain or take pictures in the pool. And it can handle all the drops into the sink in between. Combined with a slim, compact design that’s easy to use with one hand, Xperia Z3 Compact is the Android smartphone that teams durability with beauty. Some of the best times happen in the lowest light. Years of Sony camera expertise have been brought to Xperia Z3 Compact, to deliver unparalleled low-light capability. Thanks to Cyber-shot and Handycam technologies you can record stunning videos on the move and take crisp shots under water. Want to take your shots to the next level? Get creative with our unique camera apps. It’s our best smartphone camera yet – for memories that deserve more than good.",
+            "description": "Dive into new experiences Xperia Z3 Compact is the smartphone designed to enhance your life. And life isn't lived inside. With the highest waterproof rating*, Xperia Z3 Compact lets you answer calls in the rain or take pictures in the pool. And it can handle all the drops into the sink in between. Combined with a slim, compact design that's easy to use with one hand, Xperia Z3 Compact is the Android smartphone that teams durability with beauty. Some of the best times happen in the lowest light. Years of Sony camera expertise have been brought to Xperia Z3 Compact, to deliver unparalleled low-light capability. Thanks to Cyber-shot and Handycam technologies you can record stunning videos on the move and take crisp shots under water. Want to take your shots to the next level? Get creative with our unique camera apps. It's our best smartphone camera yet – for memories that deserve more than good.",
             "attributes": {
                 "internal_ram": "2048 MB",
                 "display_type": "TFT",
@@ -906,7 +906,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             ],
             "metaTitle": "Sony Xperia Z3 Compact",
             "metaKeywords": "Sony,Communication Electronics",
-            "metaDescription": "Dive into new experiences Xperia Z3 Compact is the smartphone designed to enhance your life. And life isn’t lived inside. With the highest waterproof ratin",
+            "metaDescription": "Dive into new experiences Xperia Z3 Compact is the smartphone designed to enhance your life. And life isn't lived inside. With the highest waterproof ratin",
             "attributeNames": {
                 "internal_ram": "Internal RAM",
                 "display_type": "Display type",
@@ -1005,7 +1005,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             "reviewCount": 0,
             "productAbstractSku": "111",
             "name": "Sony SmartWatch",
-            "description": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your world’s just a tap, swipe or press away. Want to do more with your SmartWatch? Download compatible applications on Google Play™. And customise your SmartWatch to make it exclusively yours. Customise your SmartWatch with a 20mm wristband. Or wear its stylish wristband. You can even use it as a clip. This ultra-thin Android™ remote was designed to impress. An elegant Android watch that’ll keep you discreetly updated and your hands free.",
+            "description": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your world's just a tap, swipe or press away. Want to do more with your SmartWatch? Download compatible applications on Google Play™. And customise your SmartWatch to make it exclusively yours. Customise your SmartWatch with a 20mm wristband. Or wear its stylish wristband. You can even use it as a clip. This ultra-thin Android™ remote was designed to impress. An elegant Android watch that'll keep you discreetly updated and your hands free.",
             "attributes": {
                 "shape": "square",
                 "bluetooth_version": "3",
@@ -1052,7 +1052,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Sony SmartWatch",
-                "description": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your world’s just a tap, swipe or press away. Want to do more with your SmartWatch? Download compatible applications on Google Play™. And customise your SmartWatch to make it exclusively yours. Customise your SmartWatch with a 20mm wristband. Or wear its stylish wristband. You can even use it as a clip. This ultra-thin Android™ remote was designed to impress. An elegant Android watch that’ll keep you discreetly updated and your hands free.      ",
+                "description": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your world's just a tap, swipe or press away. Want to do more with your SmartWatch? Download compatible applications on Google Play™. And customise your SmartWatch to make it exclusively yours. Customise your SmartWatch with a 20mm wristband. Or wear its stylish wristband. You can even use it as a clip. This ultra-thin Android™ remote was designed to impress. An elegant Android watch that'll keep you discreetly updated and your hands free.      ",
                 "attributes": {
                     "shape": "square",
                     "bluetooth_version": "3",

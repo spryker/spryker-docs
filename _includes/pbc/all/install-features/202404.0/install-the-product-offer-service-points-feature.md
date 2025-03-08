@@ -215,7 +215,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 console data:import:product-offer-service
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that entities were imported to the following database tables respectively:
 

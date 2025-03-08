@@ -20,7 +20,7 @@ Install the required modules using Composer:
 composer require spryker-feature/quick-add-to-cart:"{{page.version}}" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 
@@ -39,7 +39,7 @@ Generate transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following changes have been applied in transfer objects:
 
@@ -144,7 +144,7 @@ Install the required modules using Composer:
 composer require spryker-feature/quick-add-to-cart:"^master" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 
@@ -273,7 +273,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following URLs are available on Yves:
 
@@ -343,7 +343,7 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make the following checks at https://mysprykershop.com/quick-order:
 

@@ -69,14 +69,14 @@ We have compiled a short checklist to use while creating the specification and d
 * Did I inform the testers of specific areas which need to be double checked?
 * Do the testers need any kind of help to perform the tests (for example, scripts for generating specific data)?
 
-## What is “high-quality software”?
+## What is "high-quality software"?
 
-Quality doesn't mean "bug free". Quality means, meeting the stated requirements, functions correctly where it's supposed to, there are no critical, blocking or major issues, and that bugs of other severity are brought to the possible minimum or don’t distract/prevent the user from using the system.
+Quality doesn't mean "bug free". Quality means, meeting the stated requirements, functions correctly where it's supposed to, there are no critical, blocking or major issues, and that bugs of other severity are brought to the possible minimum or don't distract/prevent the user from using the system.
 
 This brings us to two questions:
 
 1. What should we be testing?
-2. How do we determine the software’s quality?
+2. How do we determine the software's quality?
 
 Quality is when the software meets all the above mentioned requirements, but there are many more quality attributes surrounding the overall factors that affect behavior, design, and user experience such as performance, security and usability.
 
@@ -90,7 +90,7 @@ We can prevent this by thinking of performance testing in advance. Plan performa
 
 ### Security
 
-Is the capability of a system to prevent malicious or accidental actions outside of the designed usage, and to prevent disclosure or loss of information. When working with thousands of people’s data and personal information, security leaks and the resulting money loss means that security testing should be one of the first things you think about. Ensure that confidential user data cannot be revealed, that your frontend doesn't allow SQL injections in the text fields ( SQL injections are SQL queries that could be put into a text field like a password or username and instead of requesting authorization to the website a request is made to the DB or malicious data is written into it).
+Is the capability of a system to prevent malicious or accidental actions outside of the designed usage, and to prevent disclosure or loss of information. When working with thousands of people's data and personal information, security leaks and the resulting money loss means that security testing should be one of the first things you think about. Ensure that confidential user data cannot be revealed, that your frontend doesn't allow SQL injections in the text fields ( SQL injections are SQL queries that could be put into a text field like a password or username and instead of requesting authorization to the website a request is made to the DB or malicious data is written into it).
 
 ### Usability
 
@@ -150,7 +150,7 @@ Real example:
 
 * If the procedure or accessing the DB has changed, like passwords or names and nobody except the developer knows about it, it can also cause time loss and introduce frustration when a person unaware of these changes tries to test with old steps and has no clue whether the current problems are local or something was secretly changed. Yes, everybody can ask if something doesn't work as before, but this is human psychology to try figure things out themselves before asking others.
 
-Link tickets and documents with feature changes to the original features. Make sure that it’s easy to find initial functionality and how it’s connected to the new changes. Be sure that support documentation is also updated and does not stay in initial state without new changes.
+Link tickets and documents with feature changes to the original features. Make sure that it's easy to find initial functionality and how it's connected to the new changes. Be sure that support documentation is also updated and does not stay in initial state without new changes.
 
 Link bugs found during testing to the tested feature with a relation like "discovered by" - bugs sometimes reveal uncovered requirements steps and it's easier to track such black points if they are all linked together.
 
@@ -158,13 +158,13 @@ Link tests to use cases and other requirement tickets with relation like "covers
 
 After each completed iteration, create reports and keep them in the same wiki where all other artifacts are based. Reports can show you the state of the project, possible risky features and things that can be improved.
 
-Each iteration, at least big one, should be ended with regression testing. If you don’t have time or manpower to perform a full regression, make sure to test at least all high priority test cases to see that none of the main use scenarios are broken.
+Each iteration, at least big one, should be ended with regression testing. If you don't have time or resources to perform a full regression, make sure to test at least all high priority test cases to see that none of the main use scenarios are broken.
 
 ## Testing scenarios
 
 Test scenarios come from use cases or other documented requirements. Use cases usually describe positive scenarios, how the system should work, sometimes also error scenarios are specified, but usually requirements only describe what a user should see with a correct behavior of the system. Even if negative scenarios are not described, think about them and put them into your test cases, because negative usage scenarios come out of positive. The requirement says, you can create an element with x,y fields using latin characters? Then for sure, there will be cases where you create an element without these fields, create an identical element or set some unexpected characters. So even if something is not specified it could be undetermined, think 360 degrees.
 
-We mentioned prioritizing test scenarios, make the positive cases that check what should work high priority and negative cases that check that what shouldn’t low priority (unless the case would break everything).
+We mentioned prioritizing test scenarios, make the positive cases that check what should work high priority and negative cases that check that what shouldn't low priority (unless the case would break everything).
 
 Building Scenarios and prioritizing saves time and introduces clarity into the development environment. Consider creating a check-list of the different tests and define priority and depth for each test. How much and how deep they should go - this is all up to you and your project – focusing on critical functionality helps.
 
@@ -196,7 +196,7 @@ When you are working on a single module or functionality, it's easy to forget th
 
 ### Test and test again
 
-This is a note for developers - if you are implementing new code, logically you are already on the branch and have the application running on the VM. This is an ideal time to **take a few moments to open Yves/Zed and check that your fix works and doesn’t break anything else**. Remembering to check how the fix looks like in the UI can prevent having to make a bigger fix down the line. This simple check can save lots of time. Detecting an issue during the development stage is faster and easier to fix than during the testing stage.
+This is a note for developers - if you are implementing new code, logically you are already on the branch and have the application running on the VM. This is an ideal time to **take a few moments to open Yves/Zed and check that your fix works and doesn't break anything else**. Remembering to check how the fix looks like in the UI can prevent having to make a bigger fix down the line. This simple check can save lots of time. Detecting an issue during the development stage is faster and easier to fix than during the testing stage.
 
 Even if you tested during development and it worked for you, ask somebody to test it after the development is done. If you do not have a QA in the team, this could be another developer or product owner, but the final check should always be done on a different machine and best - by a different person. Why? Some things can pass for you locally because you have some special extensions, software installed or a special state of DB, in an environment with different conditions something can fail, so you need to ensure that things work not only for you locally but also on all environments. Another person for testing is needed, because it will bring a new view on the feature and new scenarios of using it so new problems could be revealed.
 
@@ -215,7 +215,7 @@ A certain degree of independence often makes the tester more effective at findin
 * Test by the author (developer)
 * Test by another developer not involved in implementing this feature
 * Test by internal tester or test team as people familiar with the software but having a mindset of a user rather than a developer
-* Test by a person from a different organization or company (e.g. externally invited test team)
+* Test by a person from a different organization or company–for example, externally invited test team
 
 [*ISTQB Syllabus Released Version 2011*]
 
@@ -225,4 +225,4 @@ Be prepared that even if all the tests done by test team passed, there will stil
 
 ## Endnotes
 
-We hope this information helps you plan your projects and resources to support producing amazing results with the Spryker Commerce OS. Remember to plan your tests and define clear priorities and requirements. Write test scenarios that reflect positive and negative cases. Run manual tests during the development stage. Keep records and think of other team members. Don’t wait with testing until testing stage, continuously test both in development and retest after merging to master – because well… things happen sometimes.
+We hope this information helps you plan your projects and resources to support producing amazing results with the Spryker Commerce OS. Remember to plan your tests and define clear priorities and requirements. Write test scenarios that reflect positive and negative cases. Run manual tests during the development stage. Keep records and think of other team members. Don't wait with testing until testing stage, continuously test both in development and retest after merging to master – because well… things happen sometimes.

@@ -20,7 +20,7 @@ Install the required modules using Composer:
 composer require spryker/content-banners-rest-api:"^2.1.0" spryker/content-product-abstract-lists-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Ensure that the following modules have been installed in `vendor/spryker`:
 
@@ -39,7 +39,7 @@ Generate transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 
 Make sure that the following changes have been applied in transfer objects, see `src/Generated/Shared/Transfer/` folder:
@@ -100,7 +100,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following endpoints return the result with the all necessary data. For example:
 - https://glue.mysprykershop.com/content-banners/{content_key}-

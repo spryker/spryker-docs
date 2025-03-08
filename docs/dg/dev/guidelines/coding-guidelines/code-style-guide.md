@@ -95,7 +95,7 @@ Always use one programming language per file. This allows us to use language-spe
 
 ### Comparison
 
-Don’t use loose comparison, always be as strict as possible.
+Don't use loose comparison, always be as strict as possible.
 
 Bad:
 
@@ -132,9 +132,9 @@ You can also be more strict and use `!== null` check, especially if the returned
 
 ### Typecasting
 
-Don’t use `intval()` or other casting functions. Use `(int)`, `(bool)`, etc.
+Don't use `intval()` or other casting functions. Use `(int)`, `(bool)`, etc.
 
-Don’t use `!!` to cast to bool, use `(bool)`. There is no space after casts.
+Don't use `!!` to cast to bool, use `(bool)`. There is no space after casts.
 
 ### String functions
 
@@ -144,7 +144,7 @@ The performance costs are negligible, but you can easily see where you might sti
 
 ### Switch statements
 
-Don’t use switch statements in PHP. They only make loose comparisons, and it’s easy to mess up the break.
+Don't use switch statements in PHP. They only make loose comparisons, and it's easy to mess up the break.
 
 ### Return early and else
 

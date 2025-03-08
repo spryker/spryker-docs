@@ -25,7 +25,7 @@ The middleware allows customers to configure data that is to be transferred to S
 
 {% info_block infoBox "Cold data handling" %}
 
-Akeneo handles the so-called “cold data”. Cold data is product information directly linked to the product that describes product properties. The Akeneo PIM Integration App doesn't include the transfer of “hot data” such as stock or pricing.
+Akeneo handles the so-called "cold data". Cold data is product information directly linked to the product that describes product properties. The Akeneo PIM Integration App doesn't include the transfer of "hot data" such as stock or pricing.
 
 {% endinfo_block %}
 

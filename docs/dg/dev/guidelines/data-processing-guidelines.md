@@ -18,19 +18,19 @@ related:
     link: docs/dg/dev/data-import/202410.0/data-import-optimization-guidelines.html
 ---
 
-One of the most important questions addressed during project development is “How to bring data in my project?”. Spryker provides the required infrastructure to address performance and consistency when dealing with project data.
+One of the most important questions addressed during project development is "How to bring data in my project?". Spryker provides the required infrastructure to address performance and consistency when dealing with project data.
 
 The simplest way to bring data to a project is to leverage [Data importers](/docs/dg/dev/data-import/{{site.version}}/creating-data-importers.html) and [P&S](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html) infrastructure. See [Data importers overview and implementation](/docs/dg/dev/guidelines/data-processing-guidelines.html) for the list of available importers.
 
 ## Strategies and concepts
 
-Before starting the implementation, let’s consider the most important concepts and best practices that should be used during data processing.
+Before starting the implementation, let's consider the most important concepts and best practices that should be used during data processing.
 
 ### Incremental data updates
 
 The rule of thumb is: *Follow incremental data updates. Avoid repetitive full data import.*
 
-A full data import is required during the initial project setup. Once data is uploaded on a staging or a production system, a project needs to switch operations to only apply incremental updates. E.g., only new products should be added to the import pipeline, or only prices updated in ERP are added to the import pipeline.
+A full data import is required during the initial project setup. Once data is uploaded on a staging or a production system, a project needs to switch operations to only apply incremental updates. Fox example, only new products should be added to the import pipeline, or only prices updated in ERP are added to the import pipeline.
 
 {% info_block infoBox "Note" %}
 
@@ -50,7 +50,7 @@ The exponential growth of SQL queries is a good refactoring reason.
 
 To read in batches, consider pre-collecting of identifiers. Also, you can leverage table JOINs and UNIONs to enrich complete datasets in relational DBs.
 
-To write in batches, consider INSERT concatenations or an advanced method with CTE (described below). Concatenated INSERTs generate lots of repetitive character sequences that lead to Mbs of useless data transferred over a network. CTE doesn’t have this pitfall.
+To write in batches, consider INSERT concatenations or an advanced method with CTE (described below). Concatenated INSERTs generate lots of repetitive character sequences that lead to Mbs of useless data transferred over a network. CTE doesn't have this pitfall.
 
 When writing in batches, there can be data inconsistency, which will be discovered only on DB query execution. In some cases, one of the business requirements is to be able to work with inconsistent data. Typically after a DB exception and transaction rollback, one could decide to stop the import process or log the data set and continue with the next one. Both options are **not optimal** as terminated processes usually cause business losses and leave an engineer no trail on what entity in a batch caused the problem. In this case, consider a fallback strategy for batch operation. The default strategy here is switching to the per-entity processing, where healthy records will reach DB, and unhealthy ones could be logged and then analyzed outside of the data import process. More details on this topic can be found [here](https://docs.spring.io/spring-batch/docs/current/reference/html/index-single.html#databaseItemWriters).
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Guidelines/Data+Processing+Guidelines/recovery+on+batch.png)
@@ -61,17 +61,17 @@ Data processing has higher impacts on IO resources. To scale this process and ta
 
 {% info_block infoBox "Note" %}
 
-When parallel processing is used, data dependency must be handled manually, and dependent queues must be consumed by order. E.g., to import Product Concretes, all processes of Product Abstracts must be finished first.
+When parallel processing is used, data dependency must be handled manually, and dependent queues must be consumed by order. For example, to import Product Concretes, all processes of Product Abstracts must be finished first.
 
 {% endinfo_block %}
 
 ### Data consistency
 
-There are many DB features we use for data consistency (e.g., foreign keys, unique indexes). This way, we ensure that only complete data sets reach production DB.
+There are many DB features we use for data consistency, such as foreign keys or unique indexes. This way, we ensure that only complete data sets reach production DB.
 
 At the same time, IO operations have limited scalability. This means that we need to ensure data consistency before reaching the persistence layer.
 
-The first step in achieving this is to establish a data pipeline, where inconsistent data sets do not reach Spryker Data Importers and are managed on the data export phase (e.g., by ERP, Middleware).
+The first step in achieving this is to establish a data pipeline, where inconsistent data sets do not reach Spryker Data Importers and are managed on the data export phase–for example, by ERP or Middleware.
 
 When a clean data pipeline is not possible by DevVM system requirements, you can establish runtime validations. They should prevent inconsistent data coming to the persistence layer and reduce pollution of the DB connection with invalid SQL queries. In this case, we spend CPU time for validation, which remains highly scalable until business models are stateless.
 

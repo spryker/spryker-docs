@@ -18,7 +18,7 @@ To implement a Twig extension, take the following steps.
 
 ## 1. Implement the filter
 
-To implement the filter, add the logic to a dedicated class in the module you’re currently working on:
+To implement the filter, add the logic to a dedicated class in the module you're currently working on:
 
 ```php
 <?php

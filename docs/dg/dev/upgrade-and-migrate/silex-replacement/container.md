@@ -33,7 +33,7 @@ The container implements the [PSR-11 interface](https://github.com/php-fig/fig-s
 | --- | --- |
 | `set()` | Adds services to the container. |
 | `setGlobal()` | Adds global services to the container. |
-| `configure()` | Configures existing services (e.g. makes them global, adds aliases). |
+| `configure()` | Configures existing services, such as makes them global, adds aliases. |
 | `extend()` | Extends existing services. |
 | `remove()` | Removes added services. |
 

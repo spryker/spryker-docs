@@ -34,9 +34,9 @@ To set up the notifications, do the following:
 
 {% info_block warningBox "Verification" %}
 
-Return to the subscription’s page in the AWS Management Console. Refresh the page and check that the subscription’s status is *Confirmed*.
+Return to the subscription's page in the AWS Management Console. Refresh the page and check that the subscription's status is *Confirmed*.
 
 {% endinfo_block %}
 
 
-You’ve set up the notifications and will receive emails about 5xx errors to the specified email address.
+You've set up the notifications and will receive emails about 5xx errors to the specified email address.

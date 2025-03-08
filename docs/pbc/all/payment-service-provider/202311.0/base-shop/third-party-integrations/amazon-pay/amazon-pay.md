@@ -11,7 +11,7 @@ redirect_from:
 related:
   - title: Obtaining an Amazon Order Reference and information about shipping addresses
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/obtain-an-amazon-order-reference-and-information-about-shipping-addresses.html
-  - title: Amazon Pay - Rendering a “Pay with Amazon” Button on the Cart Page
+  - title: Amazon Pay - Rendering a "Pay with Amazon" Button on the Cart Page
   - title: Configuring Amazon Pay
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/configure-amazon-pay.html
   - title: Handling orders with Amazon Pay API

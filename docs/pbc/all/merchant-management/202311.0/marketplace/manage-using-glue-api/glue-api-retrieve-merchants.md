@@ -301,26 +301,26 @@ This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.ver
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | merchantName           | String   | Name of the merchant.                             |
-| merchantUrl            | String   | Merchant’s profile URL.                           |
+| merchantUrl            | String   | Merchant's profile URL.                           |
 | contactPersonRole      | String   | Role of the contact person.                       |
 | contactPersonTitle     | String   | Salutation to use when addressing the contact person. |
-| contactPersonFirstName | String   | Contact person’s first name.                          |
-| contactPersonLastName  | String   | Contact person’s last name.                           |
-| contactPersonPhone     | String   | Contact person’s phone number.                        |
-| logoUrl                | String   | Merchant’s logo URL.                              |
-| publicEmail            | String   | Merchant’s public email address.                      |
-| publicPhone            | String   | Merchant’s public phone number.                       |
-| description            | String   | Merchant’s description.                           |
-| bannerUrl              | String   | Merchant’s banner URL.                            |
+| contactPersonFirstName | String   | Contact person's first name.                          |
+| contactPersonLastName  | String   | Contact person's last name.                           |
+| contactPersonPhone     | String   | Contact person's phone number.                        |
+| logoUrl                | String   | Merchant's logo URL.                              |
+| publicEmail            | String   | Merchant's public email address.                      |
+| publicPhone            | String   | Merchant's public phone number.                       |
+| description            | String   | Merchant's description.                           |
+| bannerUrl              | String   | Merchant's banner URL.                            |
 | deliveryTime           | String   | Average delivery time.                            |
-| latitude               | String   | Merchant’s latitude.                              |
-| longitude              | String   | Merchant’s longitude.                             |
-| faxNumber              | String   | Merchant’s fax number.                            |
+| latitude               | String   | Merchant's latitude.                              |
+| longitude              | String   | Merchant's longitude.                             |
+| faxNumber              | String   | Merchant's fax number.                            |
 | legalInformation       | Object   | List of legal information.                        |
-| legalInformation.terms                  | String   | Merchant’s terms and conditions. |
-| legalInformation. cancellationPolicy     | String   | Merchant’s cancellation policy.|
-| legalInformation.imprint                | String   | Merchant’s imprint information.|
-| legalInformation.dataPrivacy            | String   | Merchant’s data privacy conditions.|
+| legalInformation.terms                  | String   | Merchant's terms and conditions. |
+| legalInformation. cancellationPolicy     | String   | Merchant's cancellation policy.|
+| legalInformation.imprint                | String   | Merchant's imprint information.|
+| legalInformation.dataPrivacy            | String   | Merchant's data privacy conditions.|
 | categories             | Array    | List of categories where the merchant belongs.    |
 | categories.categoryKey            | String   | Category key used for the merchant.  |
 | categories.name                   | String   | Name of the merchant category.

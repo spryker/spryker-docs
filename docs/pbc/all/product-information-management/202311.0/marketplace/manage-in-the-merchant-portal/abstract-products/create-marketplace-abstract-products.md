@@ -93,7 +93,7 @@ The following table describes attributes you select and enter on the **Create an
 
 This section describes attributes you select and enter on the **Create an Abstract Product with 1 Concrete Product** drawer.
 
-You can select as many super attributes as you need and define one or more values for them. When you select a product attribute value, a concrete product based on this value is displayed. In the **Concrete Products’ Preview** pane you can view the products to be created.
+You can select as many super attributes as you need and define one or more values for them. When you select a product attribute value, a concrete product based on this value is displayed. In the **Concrete Products' Preview** pane you can view the products to be created.
 
 By selecting **Autogenerate SKUs**, the SKU numbers for the variants are generated automatically, based on the SKU prefix of their abstract product.
 

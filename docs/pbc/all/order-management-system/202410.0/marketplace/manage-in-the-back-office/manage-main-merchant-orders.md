@@ -127,11 +127,11 @@ The following table describes the attributes on the **View Order _[Order ID]_** 
   </tr>
   <tr>
     <td>Name</td>
-    <td>Customer’s name.</td>
+    <td>Customer's name.</td>
   </tr>
   <tr>
     <td>Email</td>
-    <td>Customer’s email address.</td>
+    <td>Customer's email address.</td>
   </tr>
   <tr>
     <td>Previous orders count</td>
@@ -139,7 +139,7 @@ The following table describes the attributes on the **View Order _[Order ID]_** 
   </tr>
   <tr>
     <td>Billing address</td>
-    <td>Customer’s address used for billing purposes.</td>
+    <td>Customer's address used for billing purposes.</td>
   </tr>
   <tr>
     <td>Merchant order items</td>
@@ -211,7 +211,7 @@ You can set different states for your order by clicking the action buttons. The 
 | MAIN MERCHANT ORDER ITEM STATE | DESCRIPTION |
 | ----------------------- | --------------------- |
 | Send to distribution               | Choose this state once you receive the payment for the order from your customer. |
-| Cancel                             | Choose this state to cancel the order on the customer’s behalf. |
+| Cancel                             | Choose this state to cancel the order on the customer's behalf. |
 | Confirm at center                  | Choose this state when the order is confirmed at the distribution center. |
 | Ship                               | Choose this state when the order is shipped to the customer. |
 | Deliver                            | Choose this state when the order reached the customer.       |
@@ -232,7 +232,7 @@ You can create a new shipment for one or several merchant order items. To create
 
 ### Reference information: Creating a shipment for the main merchant order
 
-The following table describes the attributes you enter and select when creating or editing customer’s shipment details.
+The following table describes the attributes you enter and select when creating or editing customer's shipment details.
 
 | ATTRIBUTE  | DESCRIPTION   | REQUIRED |
 | ----------------------- | ---------------- | ----------- |
@@ -241,15 +241,15 @@ The following table describes the attributes you enter and select when creating 
 | First Name  | Customer's first name.  | &check; |
 | Middle name  | Customer's middle name.   |   |
 | Last name   | Customer's last name.   | &check; |
-| Email   | Customer’s email address.   | &check; |
+| Email   | Customer's email address.   | &check; |
 | Country   | Drop-down menu with the list of countries to select.  | &check; |
-| Address 1 | 1st line of the customer's address.  | &check; |
-| Address 2  | 2nd line of the customer's address.  | &check; |
-| Company  | Customer’s company name.  |     |
-| City   | Customer’s city.  | &check;  |
+| Address 1 | First line of the customer's address.  | &check; |
+| Address 2  | Second line of the customer's address.  | &check; |
+| Company  | Customer's company name.  |     |
+| City   | Customer's city.  | &check;  |
 | ZIP code  | ZIP code.   | &check;  |
-| Phone  | Customer’s phone number.  |      |
-| Cell Phone  | Customer’s cell phone number.   |   |
+| Phone  | Customer's phone number.  |      |
+| Cell Phone  | Customer's cell phone number.   |   |
 | Description   | Description of the shipping address.  |   |
 | Comment   | Comment to the shipping address.  |              |
 | Shipment method   | Drop-down menu with the list of all the available shipment methods in the system. You can select only one. | &check;  |

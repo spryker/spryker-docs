@@ -14,7 +14,7 @@ redirect_from:
 
 This topic describes how to integrate Computop into a Spryker project by installing and configuring the Computop module.
 
-The [SprykerEco.Computop](https://github.com/spryker-eco/computop) bundle provides integration of the Computop industry partner with Spryker Commerce OS. It requires the [SprykerEco.ComputopApi](https://github.com/spryker-eco/computop-api) bundle that provides the REST Client for making API calls to the Computop Payment Provider.
+The [spryker-eco/computop](https://github.com/spryker-eco/computop) bundle provides integration of the Computop industry partner with Spryker Commerce OS. It requires the [spryker-eco/computopapi](https://github.com/spryker-eco/computop-api) bundle that provides the REST Client for making API calls to the Computop Payment Provider.
 
 The `SprykerEco.Computop` module includes the integrations:
 * Checkout process—payment forms with all the necessary fields that are required to make payment requests, save order information and so on.

@@ -4,8 +4,7 @@ link: 'https://developers.google.com/style/dates-times'
 ignorecase: true
 level: error
 nonword: true
-exceptions:
-  - "115.1.2.9/2018"
+scope: sentence
 tokens:
   - '\b\d{1,2}(?:\.|/)\d{1,2}(?:\.|/)\d{4}\b'
   - '\b\d{1,2} (?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)|May|Jun(?:e)|Jul(?:y)|Aug(?:ust)|Sep(?:tember)?|Oct(?:ober)|Nov(?:ember)?|Dec(?:ember)?) \d{4}\b'

@@ -244,7 +244,7 @@ The following table describes the attributes you enter and select when creating 
 | Email   | Customer's email address.   | &check; |
 | Country   | Drop-down menu with the list of countries to select.  | &check; |
 | Address 1 | First line of the customer's address.  | &check; |
-| Address 2  | 2nd line of the customer's address.  | &check; |
+| Address 2  | Second line of the customer's address.  | &check; |
 | Company  | Customer's company name.  |     |
 | City   | Customer's city.  | &check;  |
 | ZIP code  | ZIP code.   | &check;  |

@@ -52,7 +52,7 @@ Keep in mind that you can not retrieve the number of results, which is not a mul
 
 You have less than 12 active CMS pages. In this case, all of them are returned.
 You have more than 12 CMS pages but less than its multiple. For example, if you have 14 pages, you can set the `limit` to 24 - this returns all 14 pages.
-You set the `offset` value, which equals the difference by which the actual number of active CMS pages is greater than a multiple of 12. For example, if you have 14 pages and set the `offset` to 12 and `limit` to 12, this returns 2 results - 13th and 14th CMS pages, so the ones you would not see when the `limit` is 12.
+You set the `offset` value, which equals the difference by which the actual number of active CMS pages is greater than a multiple of 12. For example, if you have 14 pages and set the `offset` to 12 and `limit` to 12, this returns 2 results - thirteenth and fourteenth CMS pages, so the ones you would not see when the `limit` is 12.
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |

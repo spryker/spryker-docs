@@ -396,6 +396,9 @@ services:
 
 [Blackfire](https://blackfire.io/) is a tool used to profile, test, debug, and optimize the performance of PHP applications. It gathers data about consumed server resources like memory, CPU time, and I/O operations. The data and configuration can be checked through the Blackfire web interface.
 
+> [!IMPORTANT]  
+> While we recommend Blackfire for PHP code profiling, it's important to note that **Blackfire is currently not compatible with OpenTelemetry (OTel)**. If OpenTelemetry resolves this compatibility in the future, we will inform our customers accordingly. In the meantime, for profiling needs compatible with OTel, we suggest using tools like [Tideways](/docs/dg/dev/integrate-and-configure/configure-services.md#tideways), which can integrate seamlessly with your OpenTelemetry-based monitoring stack.
+
 ### Configure Blackfire
 
 To enable Blackfire, follow these steps:
@@ -469,6 +472,23 @@ You can pass the server details only with the `docker/sdk up` command.
 It is not obligatory to pass all the details as environment variables or define all the details in the deploy file. You can pass the details in any combination.
 
 {% endinfo_block %}
+
+## OpenTelemetry (via Spryker Monitoring Integration)
+
+### Prerequisites
+In order to successfully integrate your Spryker solution with an Otel-compatible APM tool, you must first follow [this guide](/docs/ca/dev/spryker-monitoring-integration.md#how-do-i-get-it).
+  
+### How to instrument
+We've created a comprehensive guide to help you instrument your application using OpenTelemetry. By following these instructions, you can gain valuable insights into your application's performance and ensure a robust monitoring setup. To start instrumenting your application, check out our detailed [OpenTelemetry Instrumentation Guide](/docs/dg/dev/backend-development/opentelemetry/overview.md#integration).
+
+### What is included
+
+#### Application Performance Monitoring (Platform)
+
+#### Health Metrics (with examples) (Cloud)
+
+- Explanation about what I need to do in my APM (e.g. Dynatrace) (Cloud+Platform)
+-- Refer to the docs of the APM tool
 
 ## New Relic
 

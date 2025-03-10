@@ -194,7 +194,7 @@ export default register(
 
 Now, let us build the frontend. Run the following command in the console: `npm run yves`.
 
-As soon as **npm** finishes, you can see the changes in the simple carousel component. The arrow color is changed and you cannot switch to the **1st** element after reaching the last one:
+As soon as **npm** finishes, you can see the changes in the simple carousel component. The arrow color is changed and you cannot switch to the first element after reaching the last one:
 
 ![New simple carousel](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/new-simple-carousel.png)
 

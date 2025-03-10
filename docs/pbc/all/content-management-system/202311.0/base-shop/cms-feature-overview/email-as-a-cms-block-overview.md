@@ -51,7 +51,7 @@ There are two email formats by default: HTML and pure text. The format of the [d
 * `customer-registration--html`
 * `customer-registration--text`
 
-The email format itself is defined on the code level, the tales serving as identifiers. If you create new email templates, you don’t have to add them to their Email CMS Block names.
+The email format itself is defined on the code level, the tales serving as identifiers. If you create new email templates, you don't have to add them to their Email CMS Block names.
 
 
 ### Default email templates
@@ -81,8 +81,8 @@ The following table contains the list of the default email templates, their Emai
 | Order has been shipped | order-shipped--text | Oms/src/Spryker/Zed/Oms/Presentation/Mail/order_shipped.text.twig |
 | Customer has invited a new Company User. The invited user receives the email | company-user-invitation--html | CompanyUserInvitation/src/Spryker/Zed/CompanyUserInvitation/Presentation/Mail/invitation.html.twig |
 | Customer has invited a new Company User. The invited user receives the email | company-user-invitation--text | CompanyUserInvitation/src/Spryker/Zed/CompanyUserInvitation/Presentation/Mail/invitation.text.twig |
-| Company’s status has changed | company-status--html | CompanyMailConnector/src/Spryker/Zed/CompanyMailConnector/Presentation/Mail/company_status.html.twig |
-| Company’s status has changed | company-status--text | CompanyMailConnector/src/Spryker/Zed/CompanyMailConnector/Presentation/Mail/company_status.text.twig |
+| Company's status has changed | company-status--html | CompanyMailConnector/src/Spryker/Zed/CompanyMailConnector/Presentation/Mail/company_status.html.twig |
+| Company's status has changed | company-status--text | CompanyMailConnector/src/Spryker/Zed/CompanyMailConnector/Presentation/Mail/company_status.text.twig |
 | Customer subscribed to notifications about the product availability | availability-notification-subscription--html | AvailabilityNotification/src/Spryker/Zed/AvailabilityNotification/Presentation/Mail/subscribed.html.twig |
 | Customer subscribed to notifications about the product availability | availability-notification-subscription--text | AvailabilityNotification/src/Spryker/Zed/AvailabilityNotification/Presentation/Mail/subscribed.text.twig |
 | Customer unsubscribed from notifications about the product availability | availability-notification-unsubscribed--html | AvailabilityNotification/src/Spryker/Zed/AvailabilityNotification/Presentation/Mail/unsubscribed.html.twig |

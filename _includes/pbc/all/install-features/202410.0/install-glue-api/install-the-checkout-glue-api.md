@@ -202,7 +202,7 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
 
 {% endinfo_block %}
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` is true, make sure the `checkout-data` endpoint returns shipping methods in the `shipmentMethods` attribute.
 

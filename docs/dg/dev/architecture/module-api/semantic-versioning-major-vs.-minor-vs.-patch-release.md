@@ -54,7 +54,7 @@ Usually, you need to run `composer update` to get Spryker Core updates, because 
 
 {% info_block infoBox %}
 
-Some minor updates require specific development effort for the project, which is caused by the deprecation of some old approaches or 3rd party modules. We recommend reading the [release notes](/docs/about/all/releases/product-and-code-releases.html) published after the project's start.
+Some minor updates require specific development effort for the project, which is caused by the deprecation of some old approaches or third-party modules. We recommend reading the [release notes](/docs/about/all/releases/product-and-code-releases.html) published after the project's start.
 
 For solutions to general technical issues you might have, see [Troubleshooting general technical issues](/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-general-technical-issues.html).
 

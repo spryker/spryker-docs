@@ -82,8 +82,8 @@ By default, the last created order goes on top of the table. However, you can so
 * Marketplace order reference
 * Merchant order reference
 * Created date
-* Customer’s name
-* Customer’s email address
+* Customer's name
+* Customer's email address
 * Merchant order grand total
 * No. of items
 * Store
@@ -103,7 +103,7 @@ The following table describes the sections on the ***[Order ID]*** page:
 |---|---|---|
 | Details | Overview | Contains the merchant order date, number of products purchased, number of items in the merchant order, and the number of shipments. |
 | Details | Totals | Contains information about the merchant order totals. |
-| Details | Customer | Contains the customer’s name, email, and the number of orders the customer has made from this merchant. |
+| Details | Customer | Contains the customer's name, email, and the number of orders the customer has made from this merchant. |
 | Items | Shipments | Contains information about shipments, such as the number of shipments, delivery address, shipment carrier and delivery method, and the requested date. |
 | Items | Order Items | Contains information about every item in the merchant order, including: <ul><li>Item SKU</li><li>Image</li><li>Name</li><li>Quantity</li><li>Current state</li><li>Merchant SKU (if exists)</li><li>Offer reference</li><li>Included product options (if exist)</li><li>Comment</li><li>States that can be triggered</li></ul>|
 

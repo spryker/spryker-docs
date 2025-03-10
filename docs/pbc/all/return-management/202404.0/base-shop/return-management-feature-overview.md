@@ -68,7 +68,7 @@ The *guest users* can not initiate returns of their orders, as the return manage
 
 {% info_block warningBox "Note" %}
 
-For a [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
+For a [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html), you can't select to return an entire Configurable Bundle, but you can select to return separate items from it.
 The [Product Bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}
@@ -107,7 +107,7 @@ Check out this video to get more details about how Return Management works:
 The feature has the following functional constraints which are going to be resolved in the future:
 
 * There is no user interface for managing the return policy and the return reasons.
-* You can’t return individual items of a Product Bundle.
+* You can't return individual items of a Product Bundle.
 
 ## Installation
 

@@ -34,7 +34,7 @@ See [Configuration Management](/docs/dg/dev/backend-development/data-manipulatio
 | `BILLPAY_PORTAL_ID` | Portal ID that Billpay will provide to you |
 | `BILLPAY_SECURITY_KEY` | MD5 hash of the security key generated for this portal. (generated and delivered by BillPay) |
 | `BILLPAY_PUBLIC_API_KEY` | Public API Key; generated and delivered by BillPay for your portal. |
-| `BILLPAY_MAX_DELAY_IN_DAYS` | Amount of days that will be added to the payment due date (e.g. in case of delayed shipping) |
+| `BILLPAY_MAX_DELAY_IN_DAYS` | Amount of days that will be added to the payment due date–for example, in case of delayed shipping. |
 | `USE_MD5_HASH` | If your security key is not md5 hash encrypted, you can do that by setting this config to 1 |
 | `USE_PRESCORE` | In if it's necessary to show all Billpay payment methods despite of Billpay prescore response, you can set this option to 0. It should be set to 1 by default. |
 

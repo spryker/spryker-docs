@@ -33,7 +33,7 @@ Zed API, initially released as a beta version, is now considered outdated and is
 
 {% endinfo_block %}
 
-Each module can have a “{module}Api” module(e.g. CustomerApi for Customer). Such an API module exposes CRUD facade methods (find, get, add, update, remove) that can be mapped to a URL via REST `resource/action` resolution.
+Each module can have a `{module}Api` module–for example, CustomerApi for Customer. Such an API module exposes CRUD facade methods (find, get, add, update, remove) that can be mapped to a URL via REST `resource/action` resolution.
 
 The main `Api` module contains a dispatcher that delegates to those API module via resource map and returns the response in the expected format.
 
@@ -97,9 +97,9 @@ Error responses are usually 4xx or 5xx codes, they contain an error message inst
 
 ### Collection vs item
 
-An index action in CRUD usually displays a collection of a resource. The same is true for our API. A “GET” call to the resource endpoint “/customers” then returns a collection. A “GET” call to “/customers/{id}” returns a single item of that resource.
+An index action in CRUD usually displays a collection of a resource. The same is true for our API. A "GET" call to the resource endpoint "/customers" then returns a collection. A "GET" call to "/customers/{id}" returns a single item of that resource.
 
-The “find” action returns a collection, for JSON format this will be an array of arrays:
+The "find" action returns a collection, for JSON format this will be an array of arrays:
 
 ```json
 "data": [
@@ -111,7 +111,7 @@ The “find” action returns a collection, for JSON format this will be an arra
 ]
 ```
 
-The “get”, “add” and “update” actions return a single item:
+The "get", "add" and "update" actions return a single item:
 
 ```json
 "data": {

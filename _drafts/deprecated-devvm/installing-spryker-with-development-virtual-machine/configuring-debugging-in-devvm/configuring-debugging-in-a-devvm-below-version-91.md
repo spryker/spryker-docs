@@ -109,7 +109,7 @@ To debug with PhpStorm:
 3. Select *Listen for PHP Debug Connections* ![listen-to-php-debug-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Debugging/Configuring+debugging+in+Vagrant/listen-php-debug-connections.png).
 
 
-4. Select *Debug* ![debug-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Debugging/Configuring+debugging+in+Vagrant/debug-button.png). You should get the message: “Waiting for incoming connection with IDE key ‘PHPSTORM’”.
+4. Select *Debug* ![debug-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Debugging/Configuring+debugging+in+Vagrant/debug-button.png). You should get the message: Waiting for incoming connection with IDE key ‘PHPSTORM’.
 
 ### Debugging console commands
 
@@ -136,6 +136,6 @@ To manage debugging sessions directly in a browser, configure browser bookmarkle
 2. Bookmark the generated links.
 
 
-As a Chrome user, you can install the “Xdebug helper” extension. Under options set the IDE Key to “PhpStorm”. Everybody else can then generate bookmarklets with IDE key set to “PhpStorm” ([Debugger bookmarklets generator for PhpStorm](http://www.jetbrains.com/phpstorm/marklets/)).
+As a Chrome user, you can install the Xdebug helper extension. Under options set the IDE Key to **PhpStorm**. Everybody else can then generate bookmarklets with IDE key set to **PhpStorm** ([Debugger bookmarklets generator for PhpStorm](http://www.jetbrains.com/phpstorm/marklets/)).
 
 Now you can manage debugging sessions using the bookmarks you've created.

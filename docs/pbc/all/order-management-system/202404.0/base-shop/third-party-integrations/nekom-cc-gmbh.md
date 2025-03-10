@@ -18,7 +18,7 @@ redirect_from:
 
 Scaleable Omnichannel for high-growth brands
 
-NEKOM is an Austrian platform provider for eCommerce services and multichannel processes. The system is completely modularly programmed and can therefore quickly react to your requirements and those of the market. NEKOM also provides the modules as Micro Services. These Microservices are easy and fast to integrate and extend the existing feature set of online shops without large implementation projects and costs. NEKOM’s goal is to provide retailers the best tools to be successful on- and offline.
+NEKOM is an Austrian platform provider for eCommerce services and multichannel processes. The system is completely modularly programmed and can therefore quickly react to your requirements and those of the market. NEKOM also provides the modules as Micro Services. These Microservices are easy and fast to integrate and extend the existing feature set of online shops without large implementation projects and costs. NEKOM's goal is to provide retailers the best tools to be successful on- and offline.
 
 YOUR ADVANATAGES:
 * Short Time2Market - in 4 weeks to the first orders

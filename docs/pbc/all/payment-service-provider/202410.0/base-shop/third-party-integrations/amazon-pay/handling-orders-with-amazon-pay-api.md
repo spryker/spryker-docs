@@ -133,7 +133,7 @@ The rest of the decline flow includes logic determining where to redirect a buye
 
 {% info_block errorBox "Important!" %}
 
-Even if a response has status code 200 it still may contain constraint(s) in the response body.
+Even if a response has status code 200 it still may contain constraints in the response body.
 
 {% endinfo_block %}
 

@@ -26,7 +26,7 @@ Server configuration:
 * Cookie-free domain for assets: CSS, JS, Fonts, Images.
 * Brotli encoding for textual assets: CSS, JS, SVG. Use gzip as a fallback.
 * Expires and ETag response headers.
-* Production build mode.  To build production, run `npm run yves:production` and `npm run zed:production`.
+* Production build mode. To build production, run `npm run yves:production` and `npm run zed:production`.
 
 Assets optimization:
 

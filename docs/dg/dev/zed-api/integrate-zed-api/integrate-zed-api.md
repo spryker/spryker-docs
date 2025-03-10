@@ -377,7 +377,7 @@ ip zed-api.mysprykershop.com
 ```
 
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 If everything is set up correctly, you should be able to access `http://zed-api.mysprykershop.com`.
 

@@ -78,7 +78,7 @@ This section describes attributes you see when editing the merchant's online pro
 | ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Store Profile URL | Field where you can specify the URL of the Merchant Profile in the Marketplace Storefront for every locale. | &check; |
-| About Your Store | Description of the merchant company/store. It’s provided for every locale. |   |
+| About Your Store | Description of the merchant company/store. It's provided for every locale. |   |
 
 #### Visual assets
 

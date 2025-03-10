@@ -25,7 +25,7 @@ User and rights management is implemented in the following three bundles:
 
 It is important to distinguish between users and customers. A user works with the back-end side of the store and handles the store maintenance such as creating users and assigning them to roles that will let them perform actions such as editing the CMS, activating and deactivating products, and managing discounts. A customer on the other hand is the final consumer of the online store—for example, the person who places orders. Customers are also managed in Zed but in a different section.
 
-Users are assigned to groups. Groups are a collection of Roles—for example, customer-care, root, or 3rd party. Roles have Resources (rules) assigned to them. Resources (rules) are used to assign specific privileges to a Role for example, a Sales Representative Role or a System Administrator Role. Resources are always /module/controller/action and you can use * as placeholder.
+Users are assigned to groups. Groups are a collection of Roles—for example, customer-care, root, or third-party. Roles have Resources (rules) assigned to them. Resources (rules) are used to assign specific privileges to a Role for example, a Sales Representative Role or a System Administrator Role. Resources are always /module/controller/action and you can use * as placeholder.
 
 * `/customer/*/*` would mean everything in /customer.
 * `/customer/view/*` would mean a user can only see customers but can't edit them.

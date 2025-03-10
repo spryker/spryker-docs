@@ -56,7 +56,7 @@ The price can have a gross or net value which can be used based on a price mode 
 
 {% info_block Net and Gross Prices Across Tax Regions %}
 
-It’s important to understand how Spryker calculates gross price for a product across tax regions, to ensure your store displays the intended price to customers. If a customer chooses *gross* mode and chooses to buy the product in a tax region different than the store's tax region, Spryker calculates the new region’s tax based on the product's gross price defined for this product in the store, rather than the product's net price. Therefore, the tax amount will be different depending on whether *gross* or *net* is enabled on the storefront. Here's a simple example of price calculation across tax regions:
+It's important to understand how Spryker calculates gross price for a product across tax regions, to ensure your store displays the intended price to customers. If a customer chooses *gross* mode and chooses to buy the product in a tax region different than the store's tax region, Spryker calculates the new region's tax based on the product's gross price defined for this product in the store, rather than the product's net price. Therefore, the tax amount will be different depending on whether *gross* or *net* is enabled on the storefront. Here's a simple example of price calculation across tax regions:
 
 The Value Added Tax (VAT) in country A, the store's tax region, is 20%. The net price of a product is 100. In country A the gross price is 120. The customer sees a price of 100 in net mode and a price of 120 in gross mode.
 
@@ -71,7 +71,7 @@ Price also has currency and store assigned to it.
 
 ## Price retrieving logic
 
-If a concrete product doesn’t have a price entity stored, it inherits the values stored for its abstract product. When fetching the price of a concrete product, the price entity of the respective concrete product SKU is checked. If the entity exists, the price is returned. If not, an abstract product owning that concrete product is queried and its price entity is checked. If it exists, the abstract product's price is returned for the concrete product. If it does not exist an exception is thrown.
+If a concrete product doesn't have a price entity stored, it inherits the values stored for its abstract product. When fetching the price of a concrete product, the price entity of the respective concrete product SKU is checked. If the entity exists, the price is returned. If not, an abstract product owning that concrete product is queried and its price entity is checked. If it exists, the abstract product's price is returned for the concrete product. If it does not exist an exception is thrown.
 
 The following diagram summarizes the logic for retrieving the price for a product:
 ![Price retrieval logic](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_retrieval_logic.png)

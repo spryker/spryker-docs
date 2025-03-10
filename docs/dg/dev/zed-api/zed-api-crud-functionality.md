@@ -68,7 +68,7 @@ Comma separate the fields. A `-` prefix will sort DESC instead of the default AS
 
 ### Pagination
 
-By default the API returns a set of 20 records. You can adjust this up via `limit` query string to the “maximum per page” value. You can also set a page query string param as an offset.
+By default the API returns a set of 20 records. You can adjust this up via `limit` query string to the "maximum per page" value. You can also set a page query string param as an offset.
 
 `/api/rest/customers?page=2&limit=50`
 
@@ -110,7 +110,7 @@ In case you need a different pagination strategy, you can replace the core Proce
 
 ## Fields
 
-Each resource must have a `ResourceApiTransfer`, e.g. for a customer it would be a `CustomerApiTransfer`. You will declare it in a `customer_api.transfer.xml` and insert only fields you want to support for.
+Each resource must have a `ResourceApiTransfer`–for example, for a customer, it would be a `CustomerApiTransfer`. You will declare it in a `customer_api.transfer.xml` and insert only fields you want to support for.
 
 By default, any resource will only expose and accept the fields defined in this transfer. For response data you can also further filter by a whitelist as field map (see above).
 
@@ -131,7 +131,7 @@ Primary keys in the payload will be ignored for security reasons.
 
 ### Validation
 
-For “add” and “update” actions we need validation to handle the incoming post data. The process here is to delegate this to the `ApiFacade::validate()` method, which internally uses a configured stack of validation plugins. These can be configured in your `ApiDependencyProvider`:
+For "add" and "update" actions we need validation to handle the incoming post data. The process here is to delegate this to the `ApiFacade::validate()` method, which internally uses a configured stack of validation plugins. These can be configured in your `ApiDependencyProvider`:
 
 ```php
 <?php
@@ -177,7 +177,7 @@ Validation errors will abort the persisting and instead return a 422 error respo
 }
 ```
 
-Validators can have query container access if needed. For example, “isUnique rules might need that.
+Validators can have query container access if needed. For example, "isUnique rules might need that.
 
 {% info_block warningBox %}
 
@@ -189,6 +189,6 @@ As per specification the members data and errors **MUST NOT** coexist in the sam
 
 A successful delete request returns an empty body and a 204 response code.
 
-The Spryker default behavior is to not fail on no-op delete. If you want to be stricter, you can customize your post processor to only allow a true delete and to throw 404 if not found (anymore). Use a post processor and check the content returned then by “remove” action. It will be an empty array if no record was found to delete.
+The Spryker default behavior is to not fail on no-op delete. If you want to be stricter, you can customize your post processor to only allow a true delete and to throw 404 if not found (anymore). Use a post processor and check the content returned then by "remove" action. It will be an empty array if no record was found to delete.
 
-If a body is supposed to be returned, e.g. including meta data, use a 202 response code.
+If a body is supposed to be returned–for example, with metadata, use a 202 response code.

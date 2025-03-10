@@ -20,7 +20,7 @@ The Tax module is responsible for handling tax rates that can apply for products
 The tax sets can have different tax rates for each country defined in your shop. You can see in the diagram below how these entities are modeled in the database.
 ![Database for tax sets](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Tax+Version+1.0/tax.png)
 
-A tax set is defined by a name and is uniquely identified by an `id`. As its name says, it’s associated to a set of rates. A tax rate is defined by a name, a numeric rate value and it’s linked to a country.
+A tax set is defined by a name and is uniquely identified by an `id`. As its name says, it's associated to a set of rates. A tax rate is defined by a name, a numeric rate value and it's linked to a country.
 
 All in one, a tax set contains of collection of tax rates that apply by country.
 
@@ -62,7 +62,7 @@ The calculator plugins are registered in the `CalculationDependencyProvider:getC
 
 One of the most common use cases of extending the Tax module is to provide a custom calculator.
 
-In the coding example below, we’ll implement a calculator that uses a flat tax rate for all the products.
+In the coding example below, we'll implement a calculator that uses a flat tax rate for all the products.
 
 The new calculator plugin must extend the `AbstractPlugin` class and implement the `CalculatorPluginInterface`.
 
@@ -151,4 +151,4 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 
 ## Migration guide
 
-If you’re migrating the Tax module from version 2 to version 3, you need to follow the steps described in the [Upgrade the Tax module](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-tax-module.html).
+If you're migrating the Tax module from version 2 to version 3, you need to follow the steps described in the [Upgrade the Tax module](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-tax-module.html).

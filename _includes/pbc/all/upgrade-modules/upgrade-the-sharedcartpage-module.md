@@ -11,7 +11,7 @@ To upgrade to the new version of the module, do the following:
 1. Upgrade the `CompanyUser` module to version 2.0.0. See [Upgrade the CompanyUser module](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-companyuser-module.html) for more details:
 
 ```yaml
-composer require spryker/company-user: “^2.0.0”
+composer require spryker/company-user: "^2.0.0"
 ```
 
 2. Regenerate transfer objects:

@@ -123,9 +123,6 @@ entries:
           - title: Monitoring issues and informing about alerts
             url: /docs/ca/dev/monitoring/spryker-monitoring-integration.html            
 
-      - title: OpenTelemetry instrumentation
-        url: /docs/ca/dev/opentelemetry-instrumentation.html
-
       - title: Multi-store setups
         url: /docs/ca/dev/multi-store-setups/multi-store-setups.html
         nested:

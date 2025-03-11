@@ -15,7 +15,8 @@ Application Performance Monitoring (APM) provides near real-time insights into t
 Integrate Spryker monitoring data into your preferred APM tool using OpenTelemetry for flexible and comprehensive application performance monitoring. For more details, see [Spryker Monitoring Integration](/docs/ca/dev/spryker-monitoring-integration.md).
 
 ### New Relic APM
-Use New Relic’s powerful APM features to monitor and troubleshoot your applications. For more details, see [New Relic](/docs/dg/dev/integrate-and-configure/configure-services.html#new-relic).
+
+Use New Relic's powerful APM features to monitor and troubleshoot your applications. For more details, see [New Relic](/docs/dg/dev/integrate-and-configure/configure-services.html#new-relic).
 
 ## Logs with CloudWatch
 CloudWatch offers robust logging capabilities, allowing you to track, store, and analyze logs from your applications and services. For more information on CloucWatch logs, see [Working with Logs](/docs/ca/dev/working-with-logs.md).

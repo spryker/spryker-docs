@@ -120,8 +120,8 @@ entries:
         nested:
           - title: Monitoring issues and informing about alerts
             url: /docs/ca/dev/monitoring/monitoring-issues-and-informing-about-alerts.html
-          - title: Monitoring issues and informing about alerts
-            url: /docs/ca/dev/monitoring/spryker-monitoring-integration.html            
+          - title: Spryker Monitoring Integration
+            url: /docs/ca/dev/monitoring/spryker-monitoring-integration.html
 
       - title: Multi-store setups
         url: /docs/ca/dev/multi-store-setups/multi-store-setups.html

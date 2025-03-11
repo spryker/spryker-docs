@@ -20,27 +20,35 @@ related:
 
 All PSP integrations are based on a asynchronous API. The asynchronous API is used to process payments and refunds. The following asynchronous messages are used:
 
-Sent from the app:
-* `AddPaymentMethod`: A new payment method is added.
-* `UpdatePaymentMethod`: A payment method is updated.
-* `DeletePaymentMethod`: A payment method is deleted.
-* `PaymentAuthorized`: A payment is authorized.
-* `PaymentAuthorizationFailed`: Payment authorization fails.
-* `PaymentCaptured`: Payment is captured.
-* `PaymentCaptureFailed`: Payment capture fails.
-* `PaymentRefunded`: A payment is refunded.
-* `PaymentRefundFailed`: Payment refund fails.
-* `PaymentCanceled`: A payment is canceled.
-* `PaymentCancellationFailed`: Payment cancellation fails.
-* `PaymentOverpaid`: A Payment is overpaid.
-* `PaymentUnderpaid`: A Payment is underpaid.
-* `PaymentCreated`: A payment is created.
-* `PaymentUpdated`: A payment is updated.
-* `ReadyForMerchantAppOnboarding`: App is ready to onboard merchants.
-* `MerchantAppOnboardingStatusChanged`: Merchant app onboarding status changes.
-* `AppConfigUpdated`: App configuration is updated.
 
-Sent from Spryker:
-* `CancelPayment`: Initiates payment cancellation.
-* `CapturePayment`: Initiates payment capture.
-* `RefundPayment`: Initiates payment refund.
+Here’s the information formatted into tables:  
+
+## Messages sent from the app
+| Message                             | Description                                  |
+|--------------------------------------|----------------------------------------------|
+| AddPaymentMethod                  | A new payment method is added.              |
+| UpdatePaymentMethod                | A payment method is updated.                |
+| DeletePaymentMethod                | A payment method is deleted.                |
+| PaymentAuthorized                  | A payment is authorized.                    |
+| PaymentAuthorizationFailed         | Payment authorization fails.                |
+| PaymentCaptured                    | Payment is captured.                        |
+| PaymentCaptureFailed               | Payment capture fails.                      |
+| PaymentRefunded                    | A payment is refunded.                      |
+| PaymentRefundFailed                | Payment refund fails.                       |
+| PaymentCanceled                    | A payment is canceled.                      |
+| PaymentCancellationFailed          | Payment cancellation fails.                 |
+| PaymentOverpaid                    | A payment is overpaid.                      |
+| PaymentUnderpaid                   | A payment is underpaid.                     |
+| PaymentCreated                     | A payment is created.                       |
+| PaymentUpdated                     | A payment is updated.                       |
+| ReadyForMerchantAppOnboarding      | App is ready to onboard merchants.          |
+| MerchantAppOnboardingStatusChanged | Merchant app onboarding status changes.     |
+| AppConfigUpdated                   | App configuration is updated.               |
+
+## Messages sent from Spryker
+
+| Message         | Description                        |
+|----------------|------------------------------------|
+| CancelPayment | Initiates payment cancellation.  |
+| CapturePayment | Initiates payment capture.      |
+| RefundPayment | Initiates payment refund.        |

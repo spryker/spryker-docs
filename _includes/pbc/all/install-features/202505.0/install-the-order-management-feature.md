@@ -770,8 +770,6 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 ```php
 <?php
 
-declare(strict_types = 1);
-
 namespace Pyz\Zed\SalesPayment;
 
 use Spryker\Zed\GiftCard\Communication\Plugin\SalesPayment\PaymentGiftCardSalesPaymentPreDeletePlugin;

@@ -23,8 +23,6 @@ Register the following plugins:
 ```php
 <?php
 
-declare(strict_types = 1);
-
 namespace Pyz\Zed\CartReorder;
 
 use Spryker\Zed\CartReorder\CartReorderDependencyProvider as SprykerCartReorderDependencyProvider;

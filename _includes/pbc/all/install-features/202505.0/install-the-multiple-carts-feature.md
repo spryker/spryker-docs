@@ -54,7 +54,7 @@ use Spryker\Client\MultiCart\MultiCartConfig as SprykerMultiCartConfig;
 class MultiCartConfig extends SprykerMultiCartConfig
 {
     /**
-     * @return array<string|array<string>>
+     * @return list<string|list<string>>
      */
     public function getQuoteFieldsAllowedForCustomerQuoteCollectionInSession(): array
     {
@@ -184,14 +184,14 @@ quote-21,My Cart,DE--21,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",
 
 </details>
 
-| COLUMN             | REQUIRED | DATA TYPE | DATA EXAMPLE                                                                                                                                   | DATA EXPLANATION                                                   |
-|--------------------|-----------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| key                | ✓ | string    | quote-19        | Unique identifier used to refer to in other imports.  |
-| name               | ✓ | string    | >My Cart          | The name of the quote.                                                 |
-| customer_reference | ✓ | string    | DE--21            | Customer reference of the quote owner.                             |
-| store              | ✓ | string    | DE              | The store name that the quote is related to.                              |
-| is_default         | ✓ | int       | 1               | Thelag to show that the quote is default for the customer.           |
-| quote_data         | ✓ | string    | {""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""} | Quote data params serialized as json.                              |
+| COLUMN             | REQUIRED | DATA TYPE | DATA EXAMPLE                                                                                                                                   | DATA EXPLANATION                                             |
+|--------------------|-----------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| key                | ✓ | string    | quote-19        | Unique identifier used to refer to in other imports.         |
+| name               | ✓ | string    | >My Cart          | The name of the quote.                                       |
+| customer_reference | ✓ | string    | DE--21            | Customer reference of the quote owner.                       |
+| store              | ✓ | string    | DE              | The store name that the quote is related to.                 |
+| is_default         | ✓ | int       | 1               | The flag to show that the quote is default for the customer. |
+| quote_data         | ✓ | string    | {""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""} | Quote data params serialized as json.                        |
 
 2. Register the following plugin to enable data import:
 
@@ -212,7 +212,7 @@ use Spryker\Zed\MultiCartDataImport\Communication\Plugin\MultiCartDataImportPlug
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\MultiCartDataImport\Communication\Plugin\MultiCartDataImportPlugin>
+     * @return list<\Spryker\Zed\MultiCartDataImport\Communication\Plugin\MultiCartDataImportPlugin>
      */
     protected function getDataImporterPlugins(): array
     {
@@ -237,7 +237,7 @@ Make sure the data has been imported to the `spy_quote` table.
 
 ### 5) Set up behavior
 
-Set up the baheviors in the following sections.
+Set up the behaviors in the following sections.
 
 #### Set up quote integration
 
@@ -270,7 +270,7 @@ use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
 class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteWritePluginInterface>
+     * @return list<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteWritePluginInterface>
      */
     protected function getQuoteCreateAfterPlugins(): array
     {
@@ -280,7 +280,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteWritePluginInterface>
+     * @return list<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteWritePluginInterface>
      */
     protected function getQuoteCreateBeforePlugins(): array
     {
@@ -292,7 +292,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteWritePluginInterface>
+     * @return list<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteWritePluginInterface>
      */
     protected function getQuoteUpdateBeforePlugins(): array
     {
@@ -304,7 +304,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteDeleteAfterPluginInterface>
+     * @return list<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteDeleteAfterPluginInterface>
      */
     protected function getQuoteDeleteAfterPlugins(): array
     {
@@ -332,7 +332,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
     /**
      * @param \Spryker\Client\Kernel\Container $container
      *
-     * @return array<\Spryker\Client\Quote\Dependency\Plugin\QuoteTransferExpanderPluginInterface>
+     * @return list<\Spryker\Client\Quote\Dependency\Plugin\QuoteTransferExpanderPluginInterface>
      */
     protected function getQuoteTransferExpanderPlugins(Container $container): array
     {
@@ -391,11 +391,10 @@ Register the following plugins:
 
 | PLUGIN                                          | SPECIFICATION                                                                                                                                     | PREREQUISITES | NAMESPACE                                              |
 |-------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|
-| CustomerCartQuoteResponseExpanderPlugin         | Adds a customer quote collection to the quote response transfer after cart operation handling. Replaces a quote with an active quote if it exist. |               | Spryker\Zed\Spryker\Zed\MultiCart\Communication\Plugin |
+| CustomerCartQuoteResponseExpanderPlugin         | Adds a customer quote collection to the quote response transfer after cart operation handling. Replaces a quote with an active quote if it exists. |               | Spryker\Zed\Spryker\Zed\MultiCart\Communication\Plugin |
 | SaveCustomerQuotesQuoteUpdatePlugin             | Extracts a customer quote collection from a quote response object and saves it to the customer session.                                             |               | Spryker\Client\MultiCart\Plugin                        |
 | DefaultQuoteUpdatePlugin                        | Locates a customer default quote in a customer quote collection and saves it to the customer session.                                                 |               | Spryker\Client\MultiCart\Plugin                        |
 | QuoteSelectorPersistentCartChangeExpanderPlugin | Takes a quote ID form parameters and replaces it in a quote change request.                                                                       |               | Spryker\Client\MultiCart\Plugin                        |
-| MultiCartMiniCartViewExpanderPlugin             | Expands the provided mini cart view template with a multi-cart view.                                                                                |               |                                                        |
 
 **src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php**
 
@@ -412,7 +411,7 @@ use Spryker\Client\PersistentCart\PersistentCartDependencyProvider as SprykerPer
 class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyProvider
 {
     /**
-     * @return array<\Spryker\Client\PersistentCartExtension\Dependency\Plugin\QuoteUpdatePluginInterface>
+     * @return list<\Spryker\Client\PersistentCartExtension\Dependency\Plugin\QuoteUpdatePluginInterface>
      */
     protected function getQuoteUpdatePlugins(): array
     {
@@ -423,7 +422,7 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
     }
 
     /**
-     * @return array<\Spryker\Client\PersistentCartExtension\Dependency\Plugin\PersistentCartChangeExpanderPluginInterface>
+     * @return list<\Spryker\Client\PersistentCartExtension\Dependency\Plugin\PersistentCartChangeExpanderPluginInterface>
      */
     protected function getChangeRequestExtendPlugins(): array
     {
@@ -434,37 +433,12 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 }
 ```
 
-**src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Yves\CartPage;
-
-use Spryker\Zed\MultiCart\Communication\Plugin\CustomerCartQuoteResponseExpanderPlugin;
-use SprykerShop\Yves\CartPage\CartPageDependencyProvider as SprykerCartPageDependencyProvider;
-
-class CartPageDependencyProvider extends SprykerPersistentCartDependencyProvider
-{
-
-    /**
-     * @return array<\SprykerShop\Yves\CartPageExtension\Dependency\Plugin\MiniCartViewExpanderPluginInterface>
-     */
-    protected function getMiniCartViewExpanderPlugins(): array
-    {
-        return [
-            new MultiCartMiniCartViewExpanderPlugin(),
-        ];
-    }
-}
-```
-
 {% info_block warningBox "Verification" %}
 
 1. On the Storefront, log in as a customer.
 2. Add products to cart.
 3. Update quantity of products.
-  Open the mini-cart widget and make sure the updated quantity, prices, and products are displayed correctly.
+   Open the mini-cart widget and make sure the updated quantity, prices and products are displayed correctly.
 
 {% endinfo_block %}
 
@@ -481,7 +455,7 @@ use Spryker\Zed\PersistentCart\PersistentCartDependencyProvider as SprykerPersis
 class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\PersistentCartExtension\Dependency\Plugin\QuoteResponseExpanderPluginInterface>
+     * @return list<\Spryker\Zed\PersistentCartExtension\Dependency\Plugin\QuoteResponseExpanderPluginInterface>
      */
     protected function getQuoteResponseExpanderPlugins(): array
     {
@@ -519,7 +493,7 @@ use Spryker\Client\MultiCart\Plugin\GuestCartSaveCustomerSessionSetPlugin;
 class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 {
     /**
-     * @return array<\Spryker\Client\Customer\Dependency\Plugin\CustomerSessionSetPluginInterface>
+     * @return list<\Spryker\Client\Customer\Dependency\Plugin\CustomerSessionSetPluginInterface>
      */
     protected function getCustomerSessionSetPlugins()
     {
@@ -715,7 +689,7 @@ use SprykerShop\Yves\MultiCartPage\Plugin\Router\MultiCartPageRouteProviderPlugi
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     /**
-     * @return array<\Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface>
+     * @return list<\Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface>
      */
     protected function getRouteProvider(): array
     {
@@ -731,22 +705,23 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 | PLUGIN | VERIFICATION |
 | - | - |
-| MultiCartPageRouteProviderPlugin | The cart list page is available for a logged-in customer, for example—at `http://mysprykershop.com/multi-cart/`. |
+| MultiCartPageRouteProviderPlugin | The cart list page is available for a logged-in customer, for example — at `http://mysprykershop.com/multi-cart/`. |
 | MultiCartPageAsyncRouteProviderPlugin | You can clear a cart with the cart actions AJAX mode enabled. |
 | MultiCartPageRouteProviderPlugin | After performing a cart action with the cart actions AJAX mode enabled, the mini cart counter is updated. This can be verified after you complete the installation. |
 
 {% endinfo_block %}
 
-### 4) Set up widgets
+### 4) Set up widgets & plugins
 
 1. Register the following global widgets:
 
-| WIDGET                  | DESCRIPTION                                                  | NAMESPACE                               |
-|-------------------------|--------------------------------------------------------------|-----------------------------------------|
-| AddToMultiCartWidget    | Shows the cart list for adding items to cart.            | SprykerShop\Yves\MultiCartWidget\Widget |
-| CartOperationsWidget    | Shows multi-cart functionalities on the cart page.               | SprykerShop\Yves\MultiCartWidget\Widget |
-| MiniCartWidget          | Shows the mini cart in the header.                                   | SprykerShop\Yves\MultiCartWidget\Widget |
-| MultiCartMenuItemWidget | Shows a cart list navigation menu item. | SprykerShop\Yves\MultiCartWidget\Widget |
+| WIDGET                              | DESCRIPTION                                                           | NAMESPACE                                        |
+|-------------------------------------|-----------------------------------------------------------------------|--------------------------------------------------|
+| AddToMultiCartWidget                | Shows the cart list for adding items to cart.                         | SprykerShop\Yves\MultiCartWidget\Widget          |
+| CartOperationsWidget                | Shows multi-cart functionalities on the cart page.                    | SprykerShop\Yves\MultiCartWidget\Widget          |
+| MiniCartWidget                      | Shows the mini cart in the header.                                    | SprykerShop\Yves\MultiCartWidget\Widget          |
+| MultiCartMenuItemWidget             | Shows a cart list navigation menu item.                               | SprykerShop\Yves\MultiCartWidget\Widget          |
+| MultiCartMiniCartViewExpanderPlugin | Expands the provided mini cart view template with a multi-cart view.  | SprykerShop\Yves\MultiCartWidget\Plugin\CartPage |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -764,7 +739,7 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
 	/**
-	 * @return array<string>
+	 * @return list<string>
 	 */
 	protected function getGlobalWidgets(): array
 	{
@@ -775,6 +750,30 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 			MultiCartMenuItemWidget::class,
 		];
 	}
+}
+```
+
+**src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\CartPage;
+
+use SprykerShop\Yves\MultiCartWidget\Plugin\CartPage\MultiCartMiniCartViewExpanderPlugin;
+use SprykerShop\Yves\CartPage\CartPageDependencyProvider as SprykerCartPageDependencyProvider;
+
+class CartPageDependencyProvider extends SprykerPersistentCartDependencyProvider
+{
+    /**
+     * @return list<\SprykerShop\Yves\CartPageExtension\Dependency\Plugin\MiniCartViewExpanderPluginInterface>
+     */
+    protected function getMiniCartViewExpanderPlugins(): array
+    {
+        return [
+            new MultiCartMiniCartViewExpanderPlugin(),
+        ];
+    }
 }
 ```
 

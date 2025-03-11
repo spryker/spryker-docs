@@ -6,6 +6,11 @@ This document describes how to install the Reorder feature.
 
 Follow the steps below to install the Reorder feature core.
 
+When implementing the Reorder feature, be aware that some of the plugins mentioned in the documentation might
+not be relevant to your project if you haven't installed certain optional features.
+Only include the plugins for features that are installed in your project. The documentation provides a comprehensive
+list to cover all possible integration scenarios.
+
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
@@ -87,7 +92,7 @@ Make sure that the following changes were implemented in the transfer objects:
 
 ### 4) Add translations
 
-Append glossary according to your language configuration:
+1. Append glossary according to your language configuration:
 
 **src/data/import/glossary.csv**
 
@@ -99,6 +104,18 @@ cart_reorder.validation.quote_not_provided,Angebot nicht bereitgestellt.,de_DE
 sales_configured_bundle.success.items_added_to_cart_as_individual_products,"Please notice: Items from the Configured Bundle were added to the Cart as individual products.",en_US
 sales_configured_bundle.success.items_added_to_cart_as_individual_products,"Bitte beachten: Artikel aus dem konfigurierbaren Bündel wurden als einzelne Produkte in den Warenkorb gelegt.",de_DE
 ```
+
+2. Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
+
+{% endinfo_block %}
 
 ### 5) Set up behavior
 
@@ -149,8 +166,6 @@ Enable the following behaviors by registering the plugins:
 ```php
 <?php
 
-declare(strict_types = 1);
-
 namespace Pyz\Client\CartReorder;
 
 use Spryker\Client\CartReorder\CartReorderDependencyProvider as SprykerCartReorderDependencyProvider;
@@ -174,8 +189,6 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
 
 ```php
 <?php
-
-declare(strict_types = 1);
 
 namespace Pyz\Zed\CartReorder;
 
@@ -325,8 +338,6 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
 ```php
 <?php
 
-declare(strict_types = 1);
-
 namespace Pyz\Glue\GlueApplication;
 
 use Spryker\Glue\CartReorderRestApi\Plugin\GlueApplication\CartReorderResourceRoutePlugin;
@@ -385,7 +396,7 @@ Make sure the following modules have been installed:
 
 ### 2) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
@@ -399,6 +410,18 @@ cart_reorder_page.reorder_selected,Ausgewählte Artikel Nachbestellen,de_DE
 cart_reorder.pre_add_to_cart.inactive_product_option_item_removed,Inactive item %sku% was removed from your shopping cart.,en_US
 cart_reorder.pre_add_to_cart.inactive_product_option_item_removed,Der inaktive Artikel %sku% wurde aus Ihrem Warenkorb entfernt.,de_DE
 ```
+
+2. Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
+
+{% endinfo_block %}
 
 ### 3) Set up behavior
 
@@ -415,8 +438,6 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
-
-declare(strict_types = 1);
 
 namespace Pyz\Yves\Router;
 
@@ -441,8 +462,6 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 ```php
 <?php
-
-declare(strict_types = 1);
 
 namespace Pyz\Yves\CartReorderPage;
 
@@ -497,8 +516,6 @@ To enable widgets, register the following plugins:
 
 ```php
 <?php
-
-declare(strict_types = 1);
 
 namespace Pyz\Yves\ShopApplication;
 

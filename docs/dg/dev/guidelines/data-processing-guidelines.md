@@ -14,8 +14,6 @@ related:
     link: docs/dg/dev/guidelines/module-configuration-convention.html
   - title: Project development guidelines
     link: docs/dg/dev/guidelines/project-development-guidelines.html
-  - title: Data importer speed optimization
-    link: docs/dg/dev/data-import/202410.0/data-import-optimization-guidelines.html
 ---
 
 One of the most important questions addressed during project development is "How to bring data in my project?". Spryker provides the required infrastructure to address performance and consistency when dealing with project data.

@@ -1535,7 +1535,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "" %}
 
-To enable Dynamic Multistore in a production environment, see [Enable Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/enable-dynamic-multistore.html).
+To enable Dynamic Multistore in a production environment, see [Enable Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202404.0/base-shop/enable-dynamic-multistore.html).
 
 {% endinfo_block %}
 

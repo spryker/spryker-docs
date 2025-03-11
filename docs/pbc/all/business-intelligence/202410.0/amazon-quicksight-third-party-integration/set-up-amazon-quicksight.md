@@ -34,4 +34,4 @@ The user who enables analytics is assigned as an owner of all the default assets
 
 ## Next steps
 
-[Best practices: Working with analytics](/docs/pbc/all/business-intelligence/202410.0/amazon-quicksight-third-party-integration/best-practices-working-with-analytics.html)  
+[Best practices: Working with analytics](/docs/pbc/all/business-intelligence/202404.0/amazon-quicksight-third-party-integration/best-practices-working-with-analytics.html)  

@@ -119,7 +119,9 @@ entries:
         url: /docs/ca/dev/monitoring/monitoring.html
         nested:
           - title: Monitoring issues and informing about alerts
-            url: /docs/ca/dev/monitoring-issues-and-informing-about-alerts.html
+            url: /docs/ca/dev/monitoring/monitoring-issues-and-informing-about-alerts.html
+          - title: Monitoring issues and informing about alerts
+            url: /docs/ca/dev/monitoring/spryker-monitoring-integration.html            
 
       - title: OpenTelemetry instrumentation
         url: /docs/ca/dev/opentelemetry-instrumentation.html

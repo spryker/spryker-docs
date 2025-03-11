@@ -38,7 +38,7 @@ To get access to a protected resource, a user obtains an *access token*. An acce
 
 For security purposes, access tokens have a limited lifetime. When retrieving an access token, the response body also contains the token's lifetime, in seconds. When the lifetime expires, the token can no longer be used for authentication.
 
-There is also a *refresh token* in the response. When your access token expires, you can exchange the refresh token for a new access token.  The new access token also has a limited lifetime and a new refresh token.
+There is also a *refresh token* in the response. When your access token expires, you can exchange the refresh token for a new access token. The new access token also has a limited lifetime and a new refresh token.
 
 The default lifetime of the access tokens is 8 hours (28800 seconds) and 1 month (2628000 seconds) of the refresh tokens.
 

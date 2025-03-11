@@ -14,7 +14,7 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} | 
+| Spryker Core | {{page.version}} |
 | Navigation | {{page.version}} |
 
 ### 1) Install the required modules
@@ -25,7 +25,7 @@ Install the required modules using Composer:
 composer require spryker/navigations-rest-api:"^2.0.0" spryker/navigations-category-nodes-resource-relationship:"^1.0.0" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 
@@ -44,7 +44,7 @@ Generate transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following changes have been applied in transfer objects:
 
@@ -90,7 +90,7 @@ class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfig
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 The verification for this step can be provided once the resource is provided in the *Set up Behavior* section below.
 
@@ -147,19 +147,19 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 `NavigationsResourceRoutePlugin` is set up correctly if the following endpoint is available: *https://glue.mysprykershop.com/navigations/{navigationId}*
 
 {% endinfo_block %}
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Now, it's possible to verify that the configuration of NavigationsRestApiConfig is done correctly. Perform the "https://glue.mysprykershop.com/navigations/{navigationId}" request and check that each node of the type you set up in the configuration (category and CMS pages in the example "resourceId" is filled with the valid foreign key.)
 
 {% endinfo_block %}
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Send a request to *https://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes*.
 

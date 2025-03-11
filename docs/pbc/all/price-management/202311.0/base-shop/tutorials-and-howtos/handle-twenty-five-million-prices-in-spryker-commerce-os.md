@@ -85,7 +85,7 @@ All the `specificPrice-DEFAULT-EUR-NET_MODE-FOO-BAR` properties in the document 
 
 You could increase the limit, but it slows down the reindexing process.
 
-The events with the data for ES are processed and acknowledged in RabbitMQ but not delivered to the search service, and you don’t get any related errors.
+The events with the data for ES are processed and acknowledged in RabbitMQ but not delivered to the search service, and you don't get any related errors.
 
 In AWS, the `http.max_content_length` ES limit defines the maximum payload size in an HTTP request. In this case, the payload is higher than the default limit of 100&nbsp;MB without the infrastructural option to increase it. To learn about cloud service providers, technologies, and limits, see [Amazon Elasticsearch Service Limits](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html).
 
@@ -304,7 +304,7 @@ Now you have a separate event queue for prices. This approach applies to any typ
 
 ### Tweaking database
 
-With millions of prices in a shop, we needed analytics tools to monitor data consistency in the database. The CSV files, which are the source of price data for analytics, are too big, so it’s hard to process them. That's why we converted them into Postgres database tables.
+With millions of prices in a shop, we needed analytics tools to monitor data consistency in the database. The CSV files, which are the source of price data for analytics, are too big, so it's hard to process them. That's why we converted them into Postgres database tables.
 
 The Postgres `COPY` command is the fastest and easiest way to do that. This command copies the data from a CSV file to a database table.
 
@@ -340,7 +340,7 @@ The following line in the previous code snippet disables the synchronous commit:
 
 {% info_block errorBox %}
 
-If you disable the synchronous commit, enable it back after you’ve finished importing the files.
+If you disable the synchronous commit, enable it back after you've finished importing the files.
 
 {% endinfo_block %}
 

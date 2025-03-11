@@ -18,7 +18,7 @@ This document describes how to use the support portal to create and manage your 
 
 ## Prerequisites
 
-* You should have a customer account provisioned for you. If you don't, request one using this [form](https://www.surveymonkey.com/r/XYK5R26).
+* You should have a customer account provisioned for you. If you don't, request one using this [form](https://support.spryker.com/s/portal-access-request).
 * Log in at the [support portal](https://support.spryker.com).
 
 ## Create new cases
@@ -36,10 +36,6 @@ Problems can be reports suspecting a bug or issues with the hosting services. To
 ### Ask a Question
 
 For any questions about Spryker. We want the knowledge about Spryker to be available to everyone. So, we'll provide you with a link to [Spryker Community](https://commercequest.space/) to ask your question there. If there are docs on the topic, we will provide a link to that.
-
-### Request help with Alumio
-
-Report problems with Alumio, request its provisioning for your environments, or schedule an appointment with Alumio Support.
 
 ### Infrastructure Change Request and Access Management
 

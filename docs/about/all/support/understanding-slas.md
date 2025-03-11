@@ -1,6 +1,6 @@
 ---
 title: Understanding SLAs
-description: Explore Spryker’s SLAs to understand expected response times, responsibilities, and best practices for seamless support and timely issue resolution.
+description: Explore Spryker's SLAs to understand expected response times, responsibilities, and best practices for seamless support and timely issue resolution.
 last_updated: Sep 6, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/understand-slas
@@ -17,7 +17,7 @@ Fulfilling SLA is a two-way street, and we cannot achieve good results without y
 ### Keeping Spryker environments up-to-date
 We generally expect our customers to keep their Spryker environment up to date. The reason for this is having multiple layers.
 We release updates to introduce new features, performance improvements, and security enhancements. Especially the last ones you do not want to miss. We want our customers to have fast, responsive, and more secure shops.
-Up-to-date code generally means more stability, better support, and compatibility for 3rd party applications. If you use the latest versions, it means that you are using the best and most up-to-date version of the code we have to offer. Looking at the motivations to keep up-to-.date listed above, this is not only good for you, but it's good for us too. Working with a project that has recent code means that we have an easier time understanding what is going on. This reduces case resolution time and makes communication between you, Spryker Support, and Development much easier.
+Up-to-date code generally means more stability, better support, and compatibility for third-party applications. If you use the latest versions, it means that you are using the best and most up-to-date version of the code we have to offer. Looking at the motivations to keep up-to-.date listed above, this is not only good for you, but it's good for us too. Working with a project that has recent code means that we have an easier time understanding what is going on. This reduces case resolution time and makes communication between you, Spryker Support, and Development much easier.
 
 ### Keep it in English
 

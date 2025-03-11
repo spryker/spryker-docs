@@ -70,7 +70,7 @@ To understand where to go, if control over express checkout process should be ha
 Payone module needs several URLs to be configured in the global config:
 
 `PayoneConstants::PAYONE_STANDARD_CHECKOUT_ENTRY_POINT_URL`—URL, which is used when express checkout details are loaded to quote.
-Normally, it's an URL to a summary page or to some middleware URL, where additional logic can be added before going to checkout (e.g., filling some postconditions required to get to the summary page in Spryker step-engine).
+Normally, it's an URL to a summary page or to some middleware URL, where additional logic can be added before going to checkout–for example, filling some postconditions required to get to the summary page in Spryker step-engine.
 
 `PayoneConstants::PAYONE_EXPRESS_CHECKOUT_FAILURE_URL`—URL where a user is redirected when payone fails for some reason.
 

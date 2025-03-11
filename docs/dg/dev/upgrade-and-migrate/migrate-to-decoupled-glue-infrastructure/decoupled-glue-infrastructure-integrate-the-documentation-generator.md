@@ -89,7 +89,7 @@ Enable the following behaviors by registering the plugins:
 | StorefrontApiApplicationProviderPlugin                | Defines the `storefront` application that the documentation will be generated for.                                                                        | Spryker\Glue\GlueStorefrontApiApplication\Plugin\DocumentationGeneratorApi                                                   |
 | BackendApiApplicationProviderPlugin                   | Defines the `backend` application that the documentation will be generated for.                                                                           | Spryker\Glue\GlueBackendApiApplication\Plugin\DocumentationGeneratorApi                                             |
 | DocumentationGeneratorOpenApiSchemaFormatterPlugin    | Responsible for the formatting of several parts of the Open API 3 schema: info, components, paths, tags.                                                  | Spryker\Glue\DocumentationGeneratorOpenApi\Plugin\DocumentationGeneratorApi                                             |
-| JsonApiSchemaFormatterPlugin                          | Responsible for the formatting of JSON:API-specific parameters (e.g. `include`), and wrapping the request and response attributes into a JSON:API format. | Spryker\Glue\GlueJsonApiConvention\Plugin\DocumentationGeneratorApi                                             |
+| JsonApiSchemaFormatterPlugin                          | Responsible for the formatting of JSON:API-specific parameters, such as `include`, and wrapping the request and response attributes into a JSON:API format. | Spryker\Glue\GlueJsonApiConvention\Plugin\DocumentationGeneratorApi                                             |
 | RestApiSchemaFormatterPlugin                          | Formats API parameters that are getting processed by the REST convention.                                                                                 | Spryker\Glue\GlueApplication\Plugin\DocumentationGeneratorApi                                             |
 | StorefrontResourcesContextExpanderPlugin              | Adds storefront API resources to the documentation generation context.                                                                                    | Spryker\Glue\GlueStorefrontApiApplication\Plugin\DocumentationGeneratorApi                                             |
 | StorefrontCustomRoutesContextExpanderPlugin           | Adds storefront API custom routes to the documentation generation context.                                                                                | Spryker\Glue\GlueStorefrontApiApplication\Plugin\DocumentationGeneratorApi                                             |
@@ -133,7 +133,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 If everything is set up correctly, a new console command will be available.
 ```
@@ -250,7 +250,7 @@ If the second parameter `array $apiApplications` for `$contextExpanderCollection
 
 {% endinfo_block %}
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 In order to make sure that `StorefrontApiApplicationProviderPlugin` and `BackendApiApplicationProviderPlugin` are setup correctly,
 attempt to generate the documentation for `storerfront` or `backend`. Do so by passing the optional `--application` parameter:

@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/technical-enhancements/environment-configuration-enhancement.html
 ---
 
-Previously, the behavior of Spryker applications depended on the environment name and there was no other way to manage that.  This limited the number of possible names you could use to the four hardcoded ones:
+Previously, the behavior of Spryker applications depended on the environment name and there was no other way to manage that. This limited the number of possible names you could use to the four hardcoded ones:
 
 * `production`
 * `staging`

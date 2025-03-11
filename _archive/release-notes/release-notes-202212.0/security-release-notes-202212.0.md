@@ -392,7 +392,7 @@ Make sure that for the spryker/file-manager-gui module, the current version is e
 
 ## Cross Domain Script Include
 The application loads a subset of included JavaScript files from third-party domains.
-If the application included a script from an external domain, then the application is entrusting that domain with the application’s data and functionality. It has to trust that the external domain is secure enough to prevent an attacker from modifying the script to perform malicious actions within the application.
+If the application included a script from an external domain, then the application is entrusting that domain with the application's data and functionality. It has to trust that the external domain is secure enough to prevent an attacker from modifying the script to perform malicious actions within the application.
 
 **Changes:**
 

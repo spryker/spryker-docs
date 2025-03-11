@@ -20,7 +20,7 @@ Run the following command to install the required modules:
 composer require spryker/wishlists-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following module has been installed:
 
@@ -40,7 +40,7 @@ console propel:install
 console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have occurred in the database:
 
@@ -50,7 +50,7 @@ Make sure that the following changes have occurred in the database:
 
 {% endinfo_block %}
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have occurred in transfer objects:
 
@@ -78,7 +78,7 @@ Run the following command:
 console uuid:update Wishlist spy_wishlist
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the `uuid` field is populated for all records in the `spy_wishlist` table.
 For this purpose, run the following SQL query and make sure that the result is 0 records:
@@ -143,7 +143,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following endpoints are available:
 `http:///glue.mysprykershop.com/wishlists`

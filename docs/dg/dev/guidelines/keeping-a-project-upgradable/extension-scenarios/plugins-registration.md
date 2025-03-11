@@ -19,7 +19,7 @@ Manifests support plugins registration in the dependency provider and plugins re
 
 ## Plugins registration in the configuration file
 
-The following is an example of how to have single plugin registration in the global configuration file (e.g. config_default.php):
+The following is an example of how to have single plugin registration in the global configuration file, such as `config_default.php`:
 
 ```php
 <?php
@@ -92,11 +92,11 @@ Manifests fully support multiple plugins registration in an indexed array. Manif
 
 Restrictions on the order of the plugins can be done with special annotation keys `before` and `after`.
 
-If the plugin doesn’t contain any of these keys, it's added to the end of the plugin stack.
+If the plugin doesn't contain any of these keys, it's added to the end of the plugin stack.
 
-If the plugin contains the `after` key and defined plugins in the `after` parameter don’t exist on the project side, the plugin is added to the end of the plugin stack.
+If the plugin contains the `after` key and defined plugins in the `after` parameter don't exist on the project side, the plugin is added to the end of the plugin stack.
 
-If the plugin contains the `before` key and defined plugins in the `before` parameter don’t exist on the project side, the plugin is added as the first plugin in plugin stack.
+If the plugin contains the `before` key and defined plugins in the `before` parameter don't exist on the project side, the plugin is added as the first plugin in plugin stack.
 
 The following is an example of how to have multiple plugins registration in an indexed array:
 
@@ -460,10 +460,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 ## Special situations
 
-* If the target dependency provider class doesn’t exist in the project, it's created and all required methods are created automatically as well.
+* If the target dependency provider class doesn't exist in the project, it's created and all required methods are created automatically as well.
 
 * If the target dependency provider class exists in the project without the target method, but such method exists in the parent class, the method is created and the changes are applied.
 
-* If the target dependency provider class exists in the project without the target method, and such method also doesn’t exist in the parent class, the method is NOT created and the changes is NOT applied.
+* If the target dependency provider class exists in the project without the target method, and such method also doesn't exist in the parent class, the method is NOT created and the changes is NOT applied.
 
-* If the target method inside of the dependency provider class was modified on the project level and for example array was extracted into the separated method, the upgrader won’t find the array, and the changes won’t be applied.
+* If the target method inside of the dependency provider class was modified on the project level and for example array was extracted into the separated method, the upgrader won't find the array, and the changes won't be applied.

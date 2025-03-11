@@ -557,7 +557,7 @@ The step has a form now and receives the voucher code value from the customer. G
 
 1. Generate some voucher codes from the Back Office:
    1. In the Back Office, go to **Discount**, create a new discount, and generate some voucher codes.
-   2. Choose the discount and enter the voucher code.  In the **Valid to** field, make sure to select future dates.
+   2. Choose the discount and enter the voucher code. In the **Valid to** field, make sure to select future dates.
    3. Add the rule SKU equals to *, so the voucher code is applied to all products in the shop.
    4. Save and go to the **Voucher codes** tab, and generate the codes.
 

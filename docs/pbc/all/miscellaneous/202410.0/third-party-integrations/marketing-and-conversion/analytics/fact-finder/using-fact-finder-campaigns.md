@@ -41,7 +41,7 @@ related:
 The FACT-Finder Campaign Manager module allows you to target the management of search results in order to improve the customer lead process or deliberately highlight products.
 Campaigns are activated according to the specific criteria and are then returned accordingly in the search results.
 
-Campaigns are a powerful tool for visual merchandising. One of their numerous functions is automatic redirects to static pages for specific search terms, e.g. searching for "ToS" automatically redirects the user to the terms of service page. Even more importantly, campaigns allow for targeted placement of banners or the customization of search results.
+Campaigns are a powerful tool for visual merchandising. One of their numerous functions is automatic redirects to static pages for specific search terms–for example, searching for "ToS" automatically redirects the user to the terms of service page. Even more importantly, campaigns allow for targeted placement of banners or the customization of search results.
 
 These types of the campaign can be created with the Campaign Assistant:
 

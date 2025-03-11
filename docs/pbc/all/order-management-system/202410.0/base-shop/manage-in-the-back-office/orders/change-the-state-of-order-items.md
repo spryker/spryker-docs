@@ -58,7 +58,7 @@ The following table describes the states you can select for order items.
 | ORDER STATUS | DESCRIPTION |
 | --- | --- |
 | Pay | Select this state once you receive the payment for the order from your customer. |
-| Cancel | Select this state to cancel the order on the customer’s behalf. |
+| Cancel | Select this state to cancel the order on the customer's behalf. |
 | Skip Timeout | Select this status to end the time period during which the customer can cancel the order. |
 | Generate invoice | Select this state to generate the invoice and send it to the customer. If invoice BCC is configured for your project, the copy of the invoice will be sent to the specified email address as well. You can trigger the invoice-generate only for the whole order. Even if you selected just some of the order items, the invoice is generated for the whole order.|
 | Picking list generation schedule | Select this state to generate a picklist. Available with the [Fulfillment App](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app-overview.html). |

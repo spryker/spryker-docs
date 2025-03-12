@@ -83,7 +83,18 @@ Set up the following configuration.
 composer require spryker/merchant-sales-order:"^1.7.0" spryker/merchant-sales-order-extension:"^1.1.0" --update-with-dependencies
 ```
 
-2. Set this to `true` if you want to exclude the current order from the `customer-order-count` discount condition:
+{% info_block warningBox "Verification" %}
+
+Make sure the following modules have been installed:
+
+| MODULE                      | EXPECTED DIRECTORY                            |
+|-----------------------------|-----------------------------------------------|
+| MerchantSalesOrder          | vendor/spryker/merchant-sales-order           |
+| MerchantSalesOrderExtension | vendor/spryker/merchant-sales-order-extension |
+
+{% endinfo_block %}
+
+2. Set `SalesDiscountConnectorConfig::isCurrentOrderExcludedFromCount` to return `true` if you want to exclude the current order from the `customer-order-count` discount condition:
 
 **src/Pyz/Zed/SalesDiscountConnector/SalesDiscountConnectorConfig.php**
 

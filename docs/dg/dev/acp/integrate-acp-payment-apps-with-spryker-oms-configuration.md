@@ -71,29 +71,11 @@ The following sections provide detailed instructions for configuring each option
 
 
 
-#### Transition based on event triggers
-
-The `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` has message handlers attached that will trigger events based on the received messages from the Payment App.
-
-Transitions between states occur automatically via asynchronous ACP messages handled by the `spryker/message-broker` module.
-The sub-processes with auto-transitions are: `PaymentAuthorization`, `PaymentCapture`, `PaymentRefund`, and `PaymentCancel`.
-
-The MessageBroker worker checks for new messages in the background (cron job) and triggers OMS events based on
-the configuration in `\Spryker\Zed\Payment\PaymentConfig::getSupportedOrderPaymentEventTransfersList()`. You can modify this configuration for your project.
-
-{% info_block infobox %}
-
-Use this approach when you follow closely the default `ForeignPaymentStateMachine01` and most importantly, when you know your OMS does not have any slow running commands which could lead to loss of transitions.
-
-The status of a payment on the App side can change very fast and could lead to the issue that your OMS is not in a state where the transition can be made.
-
-For example, when you have to have a command somewhere between `PaymentAuthorized` and `PaymentCapturePending` that takes longer to process and a message is received that want to trigger the transition from `PaymentCapturePending` to `PaymentCaptured` the OMS will not be able to do this transition as the transitions is currently not possible.
-
-{% endinfo_block %}
 
 
 
-### Transition based on event triggers  
+
+#### Transition based on event triggers  
 
 The `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` contains message handlers that trigger events based on messages received from the Payment App.  
 
@@ -110,9 +92,7 @@ The MessageBroker worker runs in the background as a cron job, checking for new 
 
 Use this approach when closely following the default `ForeignPaymentStateMachine01`, particularly if your OMS does not contain slow-running commands that could cause transition failures.  
 
-The payment status on the App side can change rapidly, which may cause issues if your OMS is not in the correct state for the transition.  
-
-For example, if a command between `PaymentAuthorized` and `PaymentCapturePending` takes too long to process and a message arrives attempting to transition from `PaymentCapturePending` to `PaymentCaptured`, the OMS may not be able to complete the transition because it is not yet in the required state.  
+The payment status on the app side can change rapidly, which may cause issues if your OMS is not in the correct state for the transition. For example, if a command between `PaymentAuthorized` and `PaymentCapturePending` takes too long to process and a message arrives attempting to transition from `PaymentCapturePending` to `PaymentCaptured`, the OMS may not be able to complete the transition because it is not yet in the required state.  
 
 {% endinfo_block %}
 

@@ -57,17 +57,21 @@ You can use them as examples or building blocks for your own state machine defin
 
 ### Transition of orders and order items
 
-There're two ways to deal with transitions between states based on the Payment Apps behavior and states:
+Transitions between states in payment apps can be handled in two ways:  
 
-- Trigger events bases on the Payment App messages
-- Use conditional transitions based on the Payment App messages and used condition plugins
+- Event-based: Trigger events based on Payment App messages
+- Conditional: Use conditional transitions based on Payment App messages and condition plugins
 
-The setups for these options are different and explained in the following sections.
+Each approach requires a different setup:  
 
-The first one is set up by adding the `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` to your MessageBrokerDependencyProvider.
-The second one is set up by adding the `\Spryker\Zed\PaymentApp\Communication\Plugin\MessageBroker\PaymentAppOperationsMessageHandlerPlugin` to your MessageBrokerDependencyProvider and condition plugins.
+- Event-based: Add `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` to `MessageBrokerDependencyProvider`
+- Conditional: Add `Spryker\Zed\PaymentApp\Communication\Plugin\MessageBroker\PaymentAppOperationsMessageHandlerPlugin` to `MessageBrokerDependencyProvider` along with the necessary condition plugins
 
-#### Transition by using event triggers
+The following sections provide detailed instructions for configuring each option.  
+
+
+
+#### Transition based on event triggers
 
 The `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` has message handlers attached that will trigger events based on the received messages from the Payment App.
 
@@ -83,7 +87,32 @@ Use this approach when you follow closely the default `ForeignPaymentStateMachin
 
 The status of a payment on the App side can change very fast and could lead to the issue that your OMS is not in a state where the transition can be made.
 
-F.e. when you have to have a command somewhere between `PaymentAuthorized` and `PaymentCapturePending` that takes longer to process and a message is received that want to trigger the transition from `PaymentCapturePending` to `PaymentCaptured` the OMS will not be able to do this transition as the transitions is currently not possible.
+For example, when you have to have a command somewhere between `PaymentAuthorized` and `PaymentCapturePending` that takes longer to process and a message is received that want to trigger the transition from `PaymentCapturePending` to `PaymentCaptured` the OMS will not be able to do this transition as the transitions is currently not possible.
+
+{% endinfo_block %}
+
+
+
+### Transition based on event triggers  
+
+The `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` contains message handlers that trigger events based on messages received from the Payment App.  
+
+State transitions occur automatically through asynchronous ACP messages, processed by the `spryker/message-broker` module. The following sub-processes have auto-transitions:
+
+* `PaymentAuthorization`
+* `PaymentCapture`
+* `PaymentRefund`
+* `PaymentCancel`
+
+The MessageBroker worker runs in the background as a cron job, checking for new messages and triggering OMS events based on the configuration in `Spryker\Zed\Payment\PaymentConfig::getSupportedOrderPaymentEventTransfersList()`. You can modify this configuration to fit your project’s needs.  
+
+{% info_block infobox %}
+
+Use this approach when closely following the default `ForeignPaymentStateMachine01`, particularly if your OMS does not contain slow-running commands that could cause transition failures.  
+
+The payment status on the App side can change rapidly, which may cause issues if your OMS is not in the correct state for the transition.  
+
+For example, if a command between `PaymentAuthorized` and `PaymentCapturePending` takes too long to process and a message arrives attempting to transition from `PaymentCapturePending` to `PaymentCaptured`, the OMS may not be able to complete the transition because it is not yet in the required state.  
 
 {% endinfo_block %}
 

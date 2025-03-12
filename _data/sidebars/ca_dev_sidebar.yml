@@ -38,8 +38,6 @@ entries:
         url: /docs/ca/dev/deploy-in-a-staging-environment.html
       - title: Configure debugging
         url: /docs/ca/dev/configure-debugging.html
-      - title: Working with logs
-        url: /docs/ca/dev/working-with-logs.html
       - title: Preparation for going live
         url: /docs/ca/dev/preparation-for-going-live.html
       - title: Deploy in a production environment
@@ -118,10 +116,12 @@ entries:
       - title: Monitoring
         url: /docs/ca/dev/monitoring/monitoring.html
         nested:
-          - title: Monitoring issues and informing about alerts
-            url: /docs/ca/dev/monitoring/monitoring-issues-and-informing-about-alerts.html
+          - title: Working with logs
+            url: /docs/ca/dev/monitoring/working-with-logs.html
           - title: Spryker Monitoring Integration
             url: /docs/ca/dev/monitoring/spryker-monitoring-integration.html
+          - title: Monitoring issues and informing about alerts
+            url: /docs/ca/dev/monitoring/monitoring-issues-and-informing-about-alerts.html
 
       - title: Multi-store setups
         url: /docs/ca/dev/multi-store-setups/multi-store-setups.html

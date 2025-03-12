@@ -199,7 +199,7 @@ Audit logs improve security monitoring and transparency by letting you track all
 ### Documentation
 
 * [Audit logs](/docs/dg/dev/backend-development/audit-logs/audit-logs.html)
-* [Working with logs](/docs/ca/dev/working-with-logs.html)
+* [Working with logs](/docs/ca/dev/monitoring/working-with-logs.html)
 
 
 

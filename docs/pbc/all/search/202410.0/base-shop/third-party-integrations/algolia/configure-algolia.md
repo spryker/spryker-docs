@@ -1,7 +1,7 @@
 ---
 title: Configure Algolia
 description: Learn how you can configure and integrate Spryker Third party Algolia in to your Spryker based projects.
-last_updated: Nov 24, 2024
+last_updated: March 12, 2025
 template: howto-guide-template
 redirect_from:
   - /docs/pbc/all/search/202311.0/third-party-integrations/configure-algolia.html

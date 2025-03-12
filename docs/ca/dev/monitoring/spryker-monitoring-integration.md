@@ -98,7 +98,7 @@ We'll guide you through the setup process once you submit the request.
 
 ### Instrumenting your application
 
-To send telemetry data to an APM tool, you need to instrument the application using OTel. <!-- For information on instrumenting your application, see [OpenTelemetry instrumentation](/docs/ca/dev/monitoring/opentelemetry-instrumentation.html). -->
+To send telemetry data to an APM tool, you need to instrument the application using OTel. For information on instrumenting your application, see [OpenTelemetry instrumentation](/docs/ca/dev/monitoring/opentelemetry-instrumentation.html).
 
 We're also providing expert services for instrumentation setups. If you need help with instrumentation, contact your Customer Success Manager.
 

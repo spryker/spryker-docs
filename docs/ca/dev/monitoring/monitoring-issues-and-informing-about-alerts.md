@@ -11,6 +11,7 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/customizing-aws-cloudwatch-dashboards.html
   - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/customize-aws-cloudwatch-dashboards.html
   - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/performance-and-availability-monitoring-via-new-relic.html
+  - /docs/ca/dev/monitoring/monitoring.html
   - /docs/ca/dev/monitoring/performance-and-availability-monitoring-via-new-relic.html
   - /docs/ca/dev/monitoring/customize-aws-cloudwatch-dashboards.html  
 ---

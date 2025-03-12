@@ -36,11 +36,19 @@ To configure Algolia, do the following:
 
 ![algolia-settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-settings.png)
 
+11. If your store model includes products without prices, you need to select **Products without prices**.
+  This setting is used for the initial index setup in Algolia and can't be changed later.
+  If products has prices it should be unselected and means prices is required in products.
 12. To enable Algolia, select **Use Algolia instead of Elasticsearch**.
   After you save the settings, this enables Algolia search on your frontends: Yves or Glue API-based application. You can also enable it later, for example–after all your products are synced with Algolia.
 13. Click **Save**.
 
-The Algolia app is now added to your store and starts exporting your product data automatically.
+The Algolia app is now added to your store and starts exporting your valid product data automatically.
+
+Validated product for exporting:
+- The product should be `approved` and `isActive`.
+- The product should have `prices` if you use products with price.
+- If you selected **Products without prices** in configuration, `prices` are not required.
 
 {% info_block infoBox "Info" %}
 

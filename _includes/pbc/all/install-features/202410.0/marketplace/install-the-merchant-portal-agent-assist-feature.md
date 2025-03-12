@@ -324,6 +324,16 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
 
 **src/Pyz/Zed/Security/SecurityDependencyProvider.php**
 
+{% info_block infoBox %}
+
+If `SecurityDependencyProvider::getSecurityPlugins()` already contains plugins, add the `ZedAgentMerchantUserSecurityPlugin` **first** in the list.
+
+{% endinfo_block %}
+
+```php
+
+{% endinfo_block %}
+
 ```php
 <?php
 

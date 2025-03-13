@@ -190,11 +190,9 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 ];
 ```
 
-### Adding Commands and Conditions
+### Adding commands
 
-#### Adding Commands
-
-You can add new commands to the OMS configuration by extending the `OmsDependencyProvider::extendCommandPlugins` method.
+You can add new commands to the OMS configuration by extending the `OmsDependencyProvider::extendCommandPlugins` method. Example:
 
 ```php
 ...
@@ -218,11 +216,10 @@ protected function extendCommandPlugins(Container $container): Container
 
 ```
 
-Update the list of commands to your needs.
 
-#### Adding Conditions
+### Adding conditions
 
-You can add new conditions to the OMS configuration by extending the `OmsDependencyProvider::extendConditionPlugins` method.
+You can add new conditions to the OMS configuration by extending the `OmsDependencyProvider::extendConditionPlugins` method. Example:
 
 ```php
 protected function extendConditionPlugins(Container $container): Container // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
@@ -249,8 +246,6 @@ protected function extendConditionPlugins(Container $container): Container // ph
     return $container;
 }
 ```
-
-Update the list of conditions to your needs.
 
 
 ## Customizing for your business flow

@@ -75,6 +75,12 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 
 ### 3) Enable CustomerOrderCountDecisionRulePlugin discount for merchant orders
 
+By default, when a discount using the `CustomerOrderCountDecisionRulePlugin` is applied to the main order, it won't
+automatically be applied to any associated merchant orders in a marketplace setup. The discount calculation for merchant
+orders happens independently from the main order.
+To ensure that customer order count-based discounts are properly applied to merchant orders as well, complete the
+configuration steps below. This will synchronize the discount context between the main order and merchant orders.
+
 Set up the following configuration.
 
 1. Update the required modules using Composer:

@@ -98,9 +98,11 @@ The payment status on the app side can change rapidly, which may cause issues if
 
 #### Conditional transitions
 
-The `\Spryker\Zed\PaymentApp\Communication\Plugin\MessageBroker\PaymentAppOperationsMessageHandlerPlugin` works differently then the above. When a message is received from the Payment App, the message handler will persist a status of the payment that is given on the App side. Through conditions (list down below) the OMS will check if the payment is in a state that allows the transition to the next state.
+`Spryker\Zed\PaymentApp\Communication\Plugin\MessageBroker\PaymentAppOperationsMessageHandlerPlugin` operates differently from event-based transitions. When a message is received from the Payment App, the message handler stores the payment status as provided by the App. The OMS then evaluates this status against predefined conditions to determine if the transition to the next state is possible.
 
-##### Conditions
+
+The following condition plugins verify if the payment is in a specific state before allowing the transition:
+
 - `IsPaymentAppPaymentStatusAuthorizationFailedConditionPlugin`
 - `IsPaymentAppPaymentStatusAuthorizedConditionPlugin`
 - `IsPaymentAppPaymentStatusCanceledConditionPlugin`
@@ -111,18 +113,20 @@ The `\Spryker\Zed\PaymentApp\Communication\Plugin\MessageBroker\PaymentAppOperat
 - `IsPaymentAppPaymentStatusOverpaidConditionPlugin`
 - `IsPaymentAppPaymentStatusUnderpaidConditionPlugin`
 
-Each of the conditions checks if a payment is in an expected state and if so transitions to the next one. This completely decouples your OMS from the Payment App and allows you to have slow running commands in your OMS and a much more fine-grained control.
+Each condition ensures that the payment is in the expected state before allowing a transition. This approach decouples OMS from the Payment App, enabling you to run slow-processing commands within the OMS while maintaining fine-grained control over state transitions.
 
-To be able to use this approach you also need to add the OOTB provided condition plugins to your OMS configuration in the `OmsDependencyProvider::extendConditionPlugins`.
+To use this approach, add the provided condition plugins to your OMS configuration in the `OmsDependencyProvider::extendConditionPlugins` method.
 
-If you see some transitions are not happening as expected you can change the configuration via the `\Spryker\Zed\PaymentApp\PaymentAppConfig::STATUS_MAP` constant.
+If some transitions don't occur as expected, you can adjust the configuration using the `Spryker\Zed\PaymentApp\PaymentAppConfig::STATUS_MAP` constant.
 
-This configuration enables the Payment App states to move faster than your OMS but your OMS conditions can still execute. F.e. the Payment App status is already moved to `PaymentCaptured` but your OMS is still in `new` state, when you now ask via conditions if the payment is authorized it will return `true` as before a payment is set to `PaymentCaptured` as it was already authorized.
+This setup allows the Payment App to progress through states independently of your OMS while ensuring that OMS conditions still execute correctly. For example, if the Payment App status advances to `PaymentCaptured` while the OMS remains in the `new` state, querying whether the payment is authorized returns true because authorization occurs before the `PaymentCaptured` state.
+
 
 
 ### Automatic transitions of states
 
-The list of payment event messages is predefined, and they are common for all payment methods from the ACP App Catalog:
+The list of predefined payment event messages applies to all payment methods from the ACP App Catalog:
+
 - `PaymentAuthorized`
 - `PaymentAuthorizationFailed`
 - `PaymentCanceled`
@@ -138,9 +142,9 @@ Make sure that these messages are configured in your `config_default.php`.
 
 {% info_block infoBox "Manual transition between states" %}
 
-In case where a payment operation happened offline or was changed in the payment provider system, but the corresponding message about it wasn't sent or was lost, you can manually trigger a transition for each operation in the Back Office. For instructions on how to change states of orders, see [Change the state of order items](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html).
+If a payment operation occurs offline or changes in the payment provider's system but the corresponding message is not sent or is lost, you can manually trigger a transition in the Back Office. For instructions on changing states of orders, see [Change the state of order items](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html).
 
-For example, if an order got stuck in the `"payment capture pending"` state, a Back office user can make sure that the payment is resolved through alternative means and click **payment capture successful** to transition the order to the `"payment captured"` state.
+For example, if an order gets stuck in the `payment capture pending` state, a Back office user can resolve the payment by clicking **payment capture successful** to transition the order to the `payment captured` state.
 
 {% endinfo_block %}
 

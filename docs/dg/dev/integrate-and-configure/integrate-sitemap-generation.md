@@ -192,7 +192,7 @@ You can decrease this limit by extending the `SitemapConfig` class and overridin
 
 ```php
 <?php
-namespace Spryker\Zed\Sitemap;
+namespace Pyz\Zed\Sitemap;
 
 use Spryker\Zed\Sitemap\SitemapConfig as SprykerSitemapConfig;
 
@@ -201,6 +201,28 @@ class SitemapConfig extends SprykerSitemapConfig
     public function getSitemapUrlLimit(): int
     {
         return 50000;
+    }
+}
+```
+
+### 2.6) Configure Sitemap file path:
+
+By default, the sitemap file is stored with a structured path that includes the store name. This configuration ensures that sitemaps are organized per store, preventing conflicts between multiple store environments.
+However, you can redefine this behavior to better suit your project’s needs.
+
+The following example overrides the default Spryker configuration by redefining the `getFilePath()`. This allows you to control how sitemap files are organized and stored.
+
+```php
+<?php
+namespace Pyz\Shared\Sitemap;  
+
+use Spryker\Shared\Sitemap\SitemapConfig as SprykerSitemapConfig;
+
+class SitemapConfig extends SprykerSitemapConfig
+{
+    public function getFilePath(string $storeName, string $fileName): string
+    {
+        return sprintf('%s%s%s', $storeName, DIRECTORY_SEPARATOR, $fileName);
     }
 }
 ```

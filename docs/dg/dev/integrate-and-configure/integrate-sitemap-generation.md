@@ -5,6 +5,12 @@ last_updated: March 4, 2025
 template: howto-guide-template
 ---
 
+{% info_block warningBox "Warning" %}
+
+The Sitemap module is currently in beta, but an official release is coming soon. Feel free to explore the available documentation. We'll continue updating it with details on future releases.
+
+{% endinfo_block %}
+
 The Sitemap module helps in generating sitemaps for your Spryker application, which can improve the SEO of your site by making it easier for search engines to index your pages.
 The Sitemap module provides various configuration options to customize the sitemap generation process according to your specific needs.
 This document describes how to integrate Sitemap module into a Spryker project.
@@ -17,10 +23,12 @@ To start the integration, install the necessary features:
 |-----------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core          | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)     |
 
-## 1) Install required modules using Composer
+## 1) Install modules using Composer
+
+### 1.1) Install the required modules:
 
 ```bash
-composer require spryker/category-storage:"^2.10.0" spryker/cms-storage:"^2.8.0" spryker/merchant-storage:"^1.3.0" spryker/product-set-storage:"^1.11.0" spryker/product-storage:"^1.42.0" spryker/sitemap:"^0.1.0" spryker/sitemap-extension:"^1.0.0" spryker-shop/shop-ui:"^1.85.0" --update-with-dependencies
+composer require spryker/sitemap:"^0.1.0" spryker/sitemap-extension:"^1.0.0" spryker-shop/shop-ui:"^1.85.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -29,7 +37,27 @@ Make sure the following modules have been installed:
 
 | MODULE           | EXPECTED DIRECTORY                 |
 |------------------|------------------------------------|
-| CategoryStorage  | vendor/spryker/category-storage    |
+| Sitemap          | vendor/spryker/sitemap             |
+| SitemapExtension | vendor/spryker/sitemap-extension   |
+| ShopUi           | vendor/spryker-shop/shop-ui        |
+
+{% endinfo_block %}
+
+### 1.2) Install the optional modules:
+
+The following modules are not mandatory, but installing them enhances the Sitemap functionality by allowing it to include additional types of data.
+
+```bash
+composer require spryker/category-storage:"^2.10.0" spryker/cms-storage:"^2.8.0" spryker/merchant-storage:"^1.3.0" spryker/product-set-storage:"^1.11.0" spryker/product-storage:"^1.42.0" --update-with-dependencies
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the following modules have been installed:
+
+| MODULE           | EXPECTED DIRECTORY                 |
+|------------------|------------------------------------|
+| CategoryStorage  | vendor/spryker/category-storage    | 
 | CmsStorage       | vendor/spryker/cms-storage         |
 | MerchantStorage  | vendor/spryker/merchant-storage    |
 | ProductSetStorage| vendor/spryker/product-set-storage |
@@ -43,6 +71,15 @@ Make sure the following modules have been installed:
 ## 2) Adjust configuration 
 
 ### 2.1) Configure the filesystem service for Sitemap: 
+
+The Sitemap requires two filesystem configurations, see [Configure Sitemap caching interval](#configure-sitemap-caching-interval) for more details.
+
+{% info_block warningBox “Warning” %}
+
+Sitemap files can be large, especially for stores with a large product catalog.
+Ensure your S3 storage has sufficient space, and monitor your local cache directory to prevent excessive disk usage.
+
+{% endinfo_block %}
 
 <details>
 <summary>config/Shared/config_default.php</summary>
@@ -112,7 +149,7 @@ $jobs[] = [
 ```
 </details>
 
-To apply the updated cron job configuration without redeploying, run the following command in CLI:
+To apply the updated cron job configuration run the following command in CLI:
 
 ```bash
 vendor/bin/console scheduler:setup
@@ -132,7 +169,7 @@ By default, the interval is set to 86400 seconds (24 hours). You can adjust this
 
 ```php
 <?php
-namespace Spryker\Yves\Sitemap;
+namespace Pyz\Yves\Sitemap;
 
 use Spryker\Yves\Sitemap\SitemapConfig as SprykerSitemapConfig;
 
@@ -229,15 +266,15 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Register the following plugins:
 
-| PLUGIN                                   | SPECIFICATION                             | PREREQUISITES | NAMESPACE                                                  |
-|------------------------------------------|-------------------------------------------|---------------|------------------------------------------------------------|
-| SitemapRouteProviderPlugin               | Provides routing for sitemap generation.  |               | Spryker\Yves\Sitemap\Plugin\Router                         |
-| SitemapGenerateConsole                   | Console command to generate sitemaps.     |               | Spryker\Zed\Sitemap\Communication\Console                  |
-| CategoryNodeSitemapDataProviderPlugin    | Provides sitemap data for category nodes. |               | Spryker\Zed\CategoryStorage\Communication\Plugin\Sitemap   |
-| CmsPageSitemapDataProviderPlugin         | Provides sitemap data for CMS pages.      |               | Spryker\Zed\CmsStorage\Communication\Plugin\Sitemap        |
-| MerchantSitemapDataProviderPlugin        | Provides sitemap data for merchants.      |               | Spryker\Zed\MerchantStorage\Communication\Plugin\Sitemap   |
-| ProductAbstractSitemapDataProviderPlugin | Provides sitemap data for product.        |               | Spryker\Zed\ProductStorage\Communication\Plugin\Sitemap    |
-| ProductSetSitemapDataProviderPlugin      | Provides sitemap data for product sets.   |               | Spryker\Zed\ProductSetStorage\Communication\Plugin\Sitemap |
+| PLUGIN                                   | SPECIFICATION                             | PREREQUISITES                                                                | NAMESPACE                                                  |
+|------------------------------------------|-------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------|
+| SitemapRouteProviderPlugin               | Provides routing for sitemap generation.  |                                                                              | Spryker\Yves\Sitemap\Plugin\Router                         |
+| SitemapGenerateConsole                   | Console command to generate sitemaps.     |                                                                              | Spryker\Zed\Sitemap\Communication\Console                  |
+| CategoryNodeSitemapDataProviderPlugin    | Provides sitemap data for category nodes. | Expects [CategoryStorage](#install-the-optional-modules) module installed.   | Spryker\Zed\CategoryStorage\Communication\Plugin\Sitemap   |
+| CmsPageSitemapDataProviderPlugin         | Provides sitemap data for CMS pages.      | Expects [CmsStorage](#install-the-optional-modules) module installed.        | Spryker\Zed\CmsStorage\Communication\Plugin\Sitemap        |
+| MerchantSitemapDataProviderPlugin        | Provides sitemap data for merchants.      | Expects [MerchantStorage](#install-the-optional-modules) module installed.   | Spryker\Zed\MerchantStorage\Communication\Plugin\Sitemap   |
+| ProductAbstractSitemapDataProviderPlugin | Provides sitemap data for product.        | Expects [ProductStorage](#install-the-optional-modules) module installed.    | Spryker\Zed\ProductStorage\Communication\Plugin\Sitemap    |
+| ProductSetSitemapDataProviderPlugin      | Provides sitemap data for product sets.   | Expects [ProductSetStorage](#install-the-optional-modules) module installed. | Spryker\Zed\ProductSetStorage\Communication\Plugin\Sitemap |
 
 <details>
 <summary>src/Pyz/Yves/Router/RouterDependencyProvider.php</summary>

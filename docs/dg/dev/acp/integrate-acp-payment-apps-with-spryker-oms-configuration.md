@@ -98,7 +98,7 @@ The payment status on the app side can change rapidly, which may cause issues if
 
 #### Conditional transitions
 
-`Spryker\Zed\PaymentApp\Communication\Plugin\MessageBroker\PaymentAppOperationsMessageHandlerPlugin` operates differently from event-based transitions. When a message is received from the Payment App, the message handler stores the payment status as provided by the App. The OMS then evaluates this status against predefined conditions to determine if the transition to the next state is possible.
+The `Spryker\Zed\PaymentApp\Communication\Plugin\MessageBroker\PaymentAppOperationsMessageHandlerPlugin` contains message handlers that stores the payment status as provided by the App. The OMS then evaluates this status against predefined conditions to determine if the transition to the next state is possible.
 
 
 The following condition plugins verify if the payment is in a specific state before allowing the transition:
@@ -150,7 +150,7 @@ For example, if an order gets stuck in the `payment capture pending` state, a Ba
 
 ### Payment operation commands
 
-The following commands have to be triggered from your OMS to tell the Payment App where you are and what to do next.
+The following commands have to be triggered from your OMS to tell the Payment App what to do next. 
 
 The default OMS setup has three commands:
 - `Payment/Capture`

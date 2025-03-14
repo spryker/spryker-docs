@@ -276,8 +276,6 @@ class OpentelemetryConfig extends AbstractBundleConfig
 }
 ```
 
-`\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getOutputDir()` - specifies in what directory you want to put generated hooks. Default value is `src/Generated/OpenTelemetry/Hooks/`. The classmap file will also be added into this directory with the name `classmap.php`.
-
 `\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getOutputDir()` specifies the directory where generated hooks are stored. By default, they are placed in `src/Generated/OpenTelemetry/Hooks/`. The `classmap.php` file, which maps generated classes, is also added to this directory.
 
 

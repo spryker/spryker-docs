@@ -25,7 +25,7 @@ Blackfire:
 ## Solution
 
 1. Make sure there is no [N+1 problem](/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/n+1-problem.html).
-2. Check if this issue really causes a performance problem. For example, sometimes, during the checkout, customers have to wait until some call to a 3rd party system is done.
+2. Check if this issue really causes a performance problem. For example, sometimes, during the checkout, customers have to wait until some call to a third-party system is done.
 3. Check if this call can be done before or after this action in the background. Is it acceptable for business?
 If yes—move it.
-If no—confirm the behavior with the business stakeholders or contact the 3rd party system to optimize the request.
+If no—confirm the behavior with the business stakeholders or contact the third-party system to optimize the request.

@@ -284,7 +284,7 @@ Using the slot key property, the slot widget retrieves slot information from sto
 
 | ATTRIBUTE | RELEVANCE | DESCRIPTION |
 | --- | --- | --- |
-| template path | relevant | Defines the template for which CMS block(s) are fetched. |
+| template path | relevant | Defines the template for which CMS blocks are fetched. |
 | slot key | relevant | Identifies the slot for slot widget. |
 | content provider | relevant | Defines the content provider from which content is fetched. |
 | name | irrelevant | N/A |

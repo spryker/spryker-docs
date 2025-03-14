@@ -73,7 +73,7 @@ git commit -m "first commit"
 
 After running these commands, you get a new local repository that needs to be linked with your remote one.
 
-If not done yet, create a new remote repository by opening your [Github account](https://github.com/newConnect). After you have created the new repository, GitHub will display instructions on how to proceed. Execute the commands from the list below, as you don’t need some of the first steps proposed by GitHub since you’ve already initialized Git and you already have the `README.md` file from the cloned repository.
+If not done yet, create a new remote repository by opening your [Github account](https://github.com/newConnect). After you have created the new repository, GitHub will display instructions on how to proceed. Execute the commands from the list below, as you don't need some of the first steps proposed by GitHub since you've already initialized Git and you already have the `README.md` file from the cloned repository.
 
 ```bash
 git branch -M main
@@ -86,7 +86,7 @@ You can also execute this step later.
 
 {% endinfo_block %}
 
-Now, you have done the groundwork that enables you to develop an app. You created a new repository that contains the boilerplate code for almost any app you’d like to build.
+Now, you have done the groundwork that enables you to develop an app. You created a new repository that contains the boilerplate code for almost any app you'd like to build.
 
 ### Validation
 
@@ -140,7 +140,7 @@ The configuration file contains all necessary form fields for inputs required by
 
 ### Translation
 
-The translation file contains all translations for the form fields you’ve previously defined. You can use the Hello World [example translation file](/docs/acp/user/develop-an-app/code-snippets/translation-json-file.html) and update it to your needs. Add this file to `config/app/translation.json` of your app.
+The translation file contains all translations for the form fields you've previously defined. You can use the Hello World [example translation file](/docs/acp/user/develop-an-app/code-snippets/translation-json-file.html) and update it to your needs. Add this file to `config/app/translation.json` of your app.
 
 ### Validation
 

@@ -28,4 +28,4 @@ Example:
 {% raw %}{%{% endraw %} include molecule('unsupported-browser-popup') only {% raw %}%}{% endraw %}
 ```
 
-The example supports IE 9+ browsers.
+The example supports Internet Explorer 9+ browsers.

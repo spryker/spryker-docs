@@ -11,7 +11,6 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/customizing-aws-cloudwatch-dashboards.html
   - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/customize-aws-cloudwatch-dashboards.html
   - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/performance-and-availability-monitoring-via-new-relic.html
-  - /docs/ca/dev/monitoring/monitoring.html
   - /docs/ca/dev/monitoring/performance-and-availability-monitoring-via-new-relic.html
   - /docs/ca/dev/monitoring/customize-aws-cloudwatch-dashboards.html  
 ---
@@ -43,7 +42,7 @@ The following alerts are configured by default for all environments.
 
 |NAME OF METRIC   | DESCRIPTION  |
 |---|---|
-| ElastiCache Status  | Checks the status of ‘ElastiCache for Redis’.  |
+| ElastiCache Status  | Checks the status of 'ElastiCache for Redis'.  |
 | Redis is not used by any service  | Checks whether ElastiCache is used.  |
 | Redis available Memory  | Checks if Redis free memory on the host is running low.  |
 | Redis High CPU  | Checks if the Redis service is high on CPU usage.  |

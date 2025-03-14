@@ -81,10 +81,10 @@ Any shell commands specified in environment variables as hooks are executed with
 ```yaml
 ...
 environment:
-  SPRYKER_HOOK_BEFORE_DEPLOY: “touch /some/file && echo OK || echo FAIL“
-  SPRYKER_HOOK_AFTER_DEPLOY: “curl http://some.host.com:<port>/notify“
-  SPRYKER_HOOK_INSTALL: “chmod +x ./some_custom_script.sh && ./some_custom_scipt.sh“
-  SPRYKER_HOOK_DESTRUCTIVE_INSTALL: “vendor/bin/install -r destructive --no-ansi -vvv“
+  SPRYKER_HOOK_BEFORE_DEPLOY: "touch /some/file && echo OK || echo FAIL"
+  SPRYKER_HOOK_AFTER_DEPLOY: "curl http://some.host.com:<port>/notify"
+  SPRYKER_HOOK_INSTALL: "chmod +x ./some_custom_script.sh && ./some_custom_scipt.sh"
+  SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install -r destructive --no-ansi -vvv"
 ...
  ```
 

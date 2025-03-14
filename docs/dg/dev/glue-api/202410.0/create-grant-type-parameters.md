@@ -134,7 +134,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 * Ensure that you can authenticate as a user:
 

@@ -36,12 +36,12 @@ To perform the needed requests, you can easily use the implemented state machine
 
 **ReAuthorize**
 
-* Send updated order data (e.g., new price)
+* Send updated order data–for example, a new price
 * New risk check (taking into account the previous pre-authorization call)
 * Full and partial reauthorization possible.
 * Response:
   - Success: Risk check passed and update accepted
-  - Declined: Request format error, update not accepted (e.g., price too high), or risk check failed
+  - Declined: Request format error, update not accepted, because–for example, price too high, or risk check failed
 * Plugin: `ReAuthorizePlugin`
 
 **Revert**
@@ -54,7 +54,7 @@ To perform the needed requests, you can easily use the implemented state machine
 **Capture**
 
 * Capture of previous (p)re-authorization call
-* Full and partial capture possible.  Captured amount cannot exceed the authorized amount.
+* Full and partial capture possible. Captured amount cannot exceed the authorized amount.
 * Response:
   - Success: Previous (p)re-authorization still valid and accepted
   - Declined: Previous (p)re- authorization expired, request format error, or internal error

@@ -62,9 +62,9 @@ Request sample: `POST https://glue-backend.b2c-eu.demo-spryker.com/push-notifica
 | group.name | String | &check;  | The entity type to receive notifications about. |
 | group.identifier | String | &check;  | ID of the entity to receive notifications about. To get it, decode `accessToken` retrieved when [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 | payload | Object | &check;  | The subscription details for establishing a communication channel between the server and the client. |
-| payload.endpoint | String | &check;  | The URL provided by the push service that is used to send a push message to the recipient’s device. |
+| payload.endpoint | String | &check;  | The URL provided by the push service that is used to send a push message to the recipient's device. |
 | payload.publicKey | String | &check;  | A client public key that is used to encrypt the push message so that only the intended recipient can read it. |
-| payload.authToken | String | &check;  | An authentication token that allows the server to send messages to the client’s endpoint. |
+| payload.authToken | String | &check;  | An authentication token that allows the server to send messages to the client's endpoint. |
 | localeName | String | &check;  | Defines the language in which the client is to receive notifications. |
 
 
@@ -102,9 +102,9 @@ Response sample:
 | RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|
 | push-notification-subscriptions | providerName | String | The provider of push notifications.  |
-| push-notification-subscriptions | payload.endpoint | String | The URL provided by the push service that is used to send a push message to the recipient’s device. |
+| push-notification-subscriptions | payload.endpoint | String | The URL provided by the push service that is used to send a push message to the recipient's device. |
 | push-notification-subscriptions | payload.publicKey | String | A client public key that is used to encrypt the push message so that only the intended recipient can read it. |
-| push-notification-subscriptions | payload.authToken | String | An authentication token that allows the server to send messages to the client’s endpoint. |
+| push-notification-subscriptions | payload.authToken | String | An authentication token that allows the server to send messages to the client's endpoint. |
 | push-notification-subscriptions | localeName | String | The language in which the client is to receive notifications. |
 | push-notification-subscriptions | group | Object | Defines the entity you've subscribed to receive notifications about. |
 | push-notification-subscriptions | group.name | String | The entity type you've subscribed to notifications about. |

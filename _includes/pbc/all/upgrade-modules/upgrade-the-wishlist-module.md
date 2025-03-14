@@ -23,7 +23,7 @@ We have added a new dependency to `ProductStoreClient`: now use `Spryker\Client\
 
 ## Upgrading from Version 2.* to Version 3.*
 
-If you’re migrating the Wishlist module from version 2 to version 3, you need to follow the steps described below.
+If you're migrating the Wishlist module from version 2 to version 3, you need to follow the steps described below.
 Version 3 of the Wishlist module introduced new schema, and old tables have to be deleted while new created.
 First you need to drop old tables:
 

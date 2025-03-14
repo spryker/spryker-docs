@@ -76,7 +76,7 @@ Translations for all configurations in all locales are contained in the same fil
 ```
 </details>
 
-The translation configuration file has a very simple structure: it’s a JSON object. The keys of this object represent translation keys, that are the pieces of information from a configuration file that should be translated. The values are simple objects with the structure `"{locale name}": "{translated value}"`.
+The translation configuration file has a very simple structure: it's a JSON object. The keys of this object represent translation keys, that are the pieces of information from a configuration file that should be translated. The values are simple objects with the structure `"{locale name}": "{translated value}"`.
 
 You can translate the following properties of configuration:
 

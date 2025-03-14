@@ -16,7 +16,7 @@ related:
 
 This endpoint allows retrieving information about the configurable bundle templates and their slots.
 
-A configurable bundle doesn’t have any SKU but contains an identifier to distinguish from other elements in the system.
+A configurable bundle doesn't have any SKU but contains an identifier to distinguish from other elements in the system.
 
 In your development, this resource can help you to let the customers set up the product the way they want and increase the diversity of the products sold.
 
@@ -590,7 +590,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
                 "reviewCount": 0,
                 "productAbstractSku": "111",
                 "name": "Sony SmartWatch",
-                "description": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your world’s just a tap, swipe or press away. Want to do more with your SmartWatch? Download compatible applications on Google Play™. And customise your SmartWatch to make it exclusively yours. Customise your SmartWatch with a 20mm wristband. Or wear its stylish wristband. You can even use it as a clip. This ultra-thin Android™ remote was designed to impress. An elegant Android watch that’ll keep you discreetly updated and your hands free.",
+                "description": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your world's just a tap, swipe or press away. Want to do more with your SmartWatch? Download compatible applications on Google Play™. And customise your SmartWatch to make it exclusively yours. Customise your SmartWatch with a 20mm wristband. Or wear its stylish wristband. You can even use it as a clip. This ultra-thin Android™ remote was designed to impress. An elegant Android watch that'll keep you discreetly updated and your hands free.",
                 "attributes": {
                     "shape": "square",
                     "bluetooth_version": "3",
@@ -756,8 +756,8 @@ You can use the configurable bundle resource in the following way:
 * [Add a configurable bundle to a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html#add-a-configurable-bundle-to-a-guest-cart)
 * [Change the quantity of the configurable bundles in a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html#change-quantity-of-configurable-bundles-in-a-guest-cart)
 * [Remove a configurable bundle from a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html#remove-a-configurable-bundle-from-a-guest-cart)
-* [Add a configurable bundle to a registered user’s cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#add-a-configurable-bundle-to-a-registered-users-cart)
-* [Change the quantity of the configurable bundles in a registered user’s cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-users-cart)
-* [Remove a configurable bundle from a registered user’s cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-users-cart)
+* [Add a configurable bundle to a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#add-a-configurable-bundle-to-a-registered-users-cart)
+* [Change the quantity of the configurable bundles in a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-users-cart)
+* [Remove a configurable bundle from a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-users-cart)
 * [Checking our purchases with configurable bundles](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html)
 * [Retrieving orders with configurable bundles](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html)

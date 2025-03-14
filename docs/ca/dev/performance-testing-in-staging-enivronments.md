@@ -37,7 +37,7 @@ Gatling is capable of creating an immense amount of traffic from a single node, 
 
 ### Including the load testing tool into an environment
 
-The purpose of this guide is to show you how to integrate Spryker's load testing tool into your environment. While the instructions here will focus on setting this up with using one of Spryker’s many available demo shops, it can also be implemented into an on-going project.
+The purpose of this guide is to show you how to integrate Spryker's load testing tool into your environment. While the instructions here will focus on setting this up with using one of Spryker's many available demo shops, it can also be implemented into an on-going project.
 
 For instructions on setting up a developer environment using one of the available Spryker shops, you can visit our [getting started guide](/docs/dg/dev/development-getting-started-guide.html) which shows you how to set up the Spryker Commerce OS.
 
@@ -69,7 +69,7 @@ It should be noted that the Spryker Suite already has these changes implemented 
 
 {% endinfo_block %}
 
-1. Requires the *composer* package. This step is necessary if you are looking to implement the Gatling load testing tool into your project. This line will add the new package to your `composer.json` file. The `--dev` flag will install the requirements needed for development which have a version constraint (e.g. "spryker-sdk/load-testing": "^0.1.0").
+1. Requires the *composer* package. This step is necessary if you are looking to implement the Gatling load testing tool into your project. This line will add the new package to your `composer.json` file. The `--dev` flag will install the requirements needed for development which have a version constraint–for example, "spryker-sdk/load-testing": "^0.1.0").
 
 ```bash
 composer require spryker-sdk/load-testing --dev
@@ -173,7 +173,7 @@ The Gatling test tool uses pre-seeded data which is used locally for both testin
 - You may have data you wish to test with directly which the sample dummy data may not cover.
 - Cloud-hosted applications are not able to be run in test mode.
 - Cloud-hosted applications are not set up to run `codeception`.
-- Jenkins jobs in a cloud-hosted application are set up to run differently than those found on a locally-hosted environment.
+- Jenkins jobs in a cloud-hosted application are set up to run differently than those found on a locally hosted environment.
 - Some cloud-hosted applications may require `BASIC AUTH` authentication or require being connected to a VPN to access.
 
 Data used for Gatling's load testing can be found in **/load-test-tool-dir/tests/_data**. Any data that you generate from your cloud-hosted environment will need to be stored here.
@@ -313,20 +313,20 @@ Once these fixtures have been generated, attempting to rerun them in the future 
 
 {% endinfo_block %}
 
-You can change the store for which you wish to generate fixtures for (i.e., `AT` or `US`). This command allows Codeception to locate the proper configuration file with the `-c` flag for the load testing tool. Once the fixtures have been generated, the data needs to be republished. We can have Jenkins do that with the same job by adding an additional build step with `Add build step`.
+You can change the store for which you wish to generate fixtures for, that is `AT` or `US`. This command allows Codeception to locate the proper configuration file with the `-c` flag for the load testing tool. Once the fixtures have been generated, the data needs to be republished. We can have Jenkins do that with the same job by adding an additional build step with `Add build step`.
 
 ```bash
 APPLICATION_STORE="DE" COMMAND="$PHP_BIN vendor/bin/console publish:trigger-events" bash /usr/bin/spryker.sh
 ```
 
-From here, you can either add another build step to toggle the queue worker to run, or you can run the queue worker job already available within Jenkins, i.e. `DE__queue-worker-start`.
+From here, you can either add another build step to toggle the queue worker to run, or you can run the queue worker job already available within Jenkins, that is `DE__queue-worker-start`.
 
 ```bash
 APPLICATION_STORE="DE" COMMAND="$PHP_BIN vendor/bin/console queue:worker:start -s " bash /usr/bin/spryker.sh
 ```
 ![workers](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/performance-testing-in-staging-enivronments.md/workers.png)
 
-4. Once the build steps have been added, you can `Save` to be taken to the project status page for the newly-created job. As this is a job that you only need to run once and no schedule was set, you can select the `Build Now` option.
+4. Once the build steps have been added, you can `Save` to be taken to the project status page for the newly created job. As this is a job that you only need to run once and no schedule was set, you can select the `Build Now` option.
 ![build-now](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/performance-testing-in-staging-enivronments.md/build-now.png)
 
 5. With the job set to build and run, it will build a new workspace for the tasks and run each build step that you specified. Once the build has successfully completed, you can review the `Console Output` and then remove the project with `Delete Project` once you are finished, if you no longer need it.
@@ -571,9 +571,9 @@ This table shows some standard statistics such as min, max, average, standard de
 
 This chart displays the active users during the simulation: total and per scenario.
 
-“Active users” is neither “concurrent users” or “users arrival rate”. It’s a kind of mixed metric that serves for both open and closed workload models, and that represents “users who were active on the system under load at a given second”.
+"Active users" is neither "concurrent users" or "users arrival rate". It's a kind of mixed metric that serves for both open and closed workload models, and that represents "users who were active on the system under load at a given second".
 
-It’s computed as:
+It's computed as:
 ```
 (number of alive users at previous second)
 + (number of users that were started during this second)

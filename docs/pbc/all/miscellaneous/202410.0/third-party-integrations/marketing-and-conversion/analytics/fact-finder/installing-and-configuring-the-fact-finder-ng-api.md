@@ -52,7 +52,7 @@ Fact-Finder has an import API call. It can be used to update product information
 
 ```php
 <?php
- 
+
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
     /**
@@ -73,19 +73,19 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 You can import using the console fact-finder-ng:import:search command.
 
 ## Tracking Usage
-There are tracking functions at the Client layer in the module. 
+There are tracking functions at the Client layer in the module.
 
 **FactFinderNgClientInterface.php**
 
 ```php
 <?php
- 
+
 namespace SprykerEco\Client\FactFinderNg;
- 
+
 interface FactFinderNgClientInterface
 {
     ...
- 
+
     /**
      * Specification:
      * - Method send request to Fact finder for tracking checkout completed event.
@@ -97,7 +97,7 @@ interface FactFinderNgClientInterface
      * @return \Generated\Shared\Transfer\FactFinderNgResponseTransfer
      */
     public function trackCheckoutEvent(array $cartOrCheckoutEventTransfers): FactFinderNgResponseTransfer;
- 
+
     /**
      * Specification:
      * - Method send request to Fact finder for tracking adding to cart event.
@@ -109,7 +109,7 @@ interface FactFinderNgClientInterface
      * @return \Generated\Shared\Transfer\FactFinderNgResponseTransfer
      */
     public function trackCartEvent(array $cartOrCheckoutEventTransfers): FactFinderNgResponseTransfer;
- 
+
     /**
      * Specification:
      * - Method send request to Fact finder for tracking clicking by product event.
@@ -121,22 +121,22 @@ interface FactFinderNgClientInterface
      * @return \Generated\Shared\Transfer\FactFinderNgResponseTransfer
      */
     public function trackClickEvent(array $clickEventTransfers): FactFinderNgResponseTransfer;
- 
+
     ...
 }
 ```
 
-You can use it anywhere you want in your application. You can send a few events together. All these methods expect an array of event transfers. 
+You can use it anywhere you want in your application. You can send a few events together. All these methods expect an array of event transfers.
 
-E.g., you can use it on the Success step during the checkout process:
+For example, you can use it on the Success step during the checkout process:
 
 **SuccessStep**
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CheckoutPage\Process\Steps;
- 
+
 class SuccessStep extends SprykerSuccessStep
 {
     /**
@@ -148,10 +148,10 @@ class SuccessStep extends SprykerSuccessStep
     public function execute(Request $request, AbstractTransfer $quoteTransfer)
     {
         $this->factFinderNgClient->trackCheckoutEvent($this->preparedCheckoutEventTransfers($quoteTransfer));
- 
+
         return parent::execute($request, $quoteTransfer);
     }
- 
+
     /**
      * @param QuoteTransfer $quoteTransfer
      *
@@ -167,39 +167,39 @@ class SuccessStep extends SprykerSuccessStep
             $eventTransfer->setMasterId($itemTransfer->getAbstractSku());
             $eventTransfer->setPrice($itemTransfer->getUnitPriceToPayAggregation());
             $eventTransfer->setSid(uniqid());
- 
+
             $eventTransfers[] = $eventTransfer;
         }
- 
+
         return $eventTransfers;
     }
 }
 ```
 
 ## Search, Suggestion, Navigation Usage
-For using search functions, you have to extend SearchClient on the project level. If you want to use different search engines, you might need to create search router, for choosing the right engine. 
+For using search functions, you have to extend SearchClient on the project level. If you want to use different search engines, you might need to create search router, for choosing the right engine.
 
 **SearchRouter**
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Client\Search\Model\Router;
- 
+
 use Spryker\Client\Search\Dependency\Plugin\QueryInterface;
- 
+
 class SearchRouter implements SearchRouterInterface
 {
     /**
      * @var array
      */
     protected $searchPlugins;
- 
+
     /**
      * @param array $searchPlugins
      */
@@ -207,7 +207,7 @@ class SearchRouter implements SearchRouterInterface
     {
         $this->searchPlugins = $searchPlugins;
     }
- 
+
     /**
      * Resolve here what the handler should be work
      *
@@ -224,7 +224,7 @@ class SearchRouter implements SearchRouterInterface
                 return $searchPlugin->handle($searchQuery, $resultFormatters, $requestParameters);
             }
         }
- 
+
         return [];
     }
 }
@@ -236,17 +236,17 @@ If you want to use Elasticsearch for specific cases, you have to create a plugin
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Client\Search\Plugin;
- 
+
 use Spryker\Client\Kernel\AbstractPlugin;
 use Spryker\Client\Search\Dependency\Plugin\QueryInterface;
- 
+
 /**
  * @method \Pyz\Client\Search\SearchFactory getFactory()
  */
@@ -263,7 +263,7 @@ class ElasticSearchHandlerPlugin extends AbstractPlugin
     {
         return $this->getFactory()->createElasticsearchSearchHandler()->search($searchQuery, $resultFormatters, $requestParameters);
     }
- 
+
     /**
      * @param array $requestParameters
      *
@@ -276,32 +276,32 @@ class ElasticSearchHandlerPlugin extends AbstractPlugin
 }
 ```
 
-The Fact-Finder Ng module contains plugins for choosing search, suggestion, or navigation request should be used. By now you can create plugin stack in `SearchDependencyProvider` for using in `SearchRouter`. 
+The Fact-Finder Ng module contains plugins for choosing search, suggestion, or navigation request should be used. By now you can create plugin stack in `SearchDependencyProvider` for using in `SearchRouter`.
 
 **SearchDependencyProvider**
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Client\Search;
- 
+
 use Pyz\Client\Search\Plugin\ElasticSearchHandlerPlugin;
 use Spryker\Client\Kernel\Container;
 use Spryker\Client\Search\SearchDependencyProvider as SprykerSearchDependencyProvider;
 use SprykerEco\Client\FactFinderNg\Plugin\FactFinderNgNavigationHandlerPlugin;
 use SprykerEco\Client\FactFinderNg\Plugin\FactFinderNgSearchHandlerPlugin;
 use SprykerEco\Client\FactFinderNg\Plugin\FactFinderNgSuggestHandlerPlugin;
- 
+
 class SearchDependencyProvider extends SprykerSearchDependencyProvider
 {
     public const CLIENT_FACT_FINDER_NG = 'CLIENT_FACT_FINDER_NG';
     public const PLUGINS_SEARCH = 'SEARCH_PLUGINS';
- 
+
     /**
      * @param \Spryker\Client\Kernel\Container $container
      *
@@ -312,10 +312,10 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
         $container = parent::provideServiceLayerDependencies($container);
         $container = $this->provideFactFinderNgClient($container);
         $container = $this->addSearchPlugins($container);
- 
+
         return $container;
     }
- 
+
     /**
      * @return \Pyz\Client\Search\Plugin\SearchHandlerPluginInterface[]
      */
@@ -328,7 +328,7 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
             new ElasticSearchHandlerPlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Client\Kernel\Container $container
      *
@@ -339,10 +339,10 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
         $container[static::CLIENT_FACT_FINDER_NG] = function (Container $container) {
             return $container->getLocator()->factFinderNg()->client();
         };
- 
+
         return $container;
     }
- 
+
     /**
      * @param \Spryker\Client\Kernel\Container $container
      *
@@ -353,7 +353,7 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
         $container[static::PLUGINS_SEARCH] = function () {
             return $this->getSearchPlugins();
         };
- 
+
         return $container;
     }
 }
@@ -365,17 +365,17 @@ Then SearchClient can be adjusted:
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Client\Search;
- 
+
 use Spryker\Client\Search\Dependency\Plugin\QueryInterface;
 use Spryker\Client\Search\SearchClient as SprykerSearchClient;
- 
+
 /**
  * @method \Pyz\Client\Search\SearchFactory getFactory()
  */
@@ -408,17 +408,17 @@ The idea that you have to adjust places, where the search is called for adding n
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CatalogPage\Controller;
- 
+
 use SprykerShop\Yves\CatalogPage\Controller\SuggestionController as SprykerSuggestionController;
 use Symfony\Component\HttpFoundation\Request;
- 
+
 /**
  * @method \SprykerShop\Yves\CatalogPage\CatalogPageFactory getFactory()
  */
@@ -432,18 +432,18 @@ class SuggestionController extends SprykerSuggestionController
     public function indexAction(Request $request)
     {
         $searchString = $request->query->get(self::PARAM_SEARCH_QUERY);
- 
+
         if (!$searchString) {
             return $this->jsonResponse();
         }
- 
+
         $requestParameters = array_merge($request->query->all(), ['suggest' => 1]); # Here you add new request parameter.
- 
+
         $searchResults = $this
             ->getFactory()
             ->getCatalogClient()
             ->catalogSuggestSearch($searchString, $requestParameters);
- 
+
         return $this->jsonResponse([
             'completion' => ($searchResults['completion'] ? $searchResults['completion'][0] : null),
             'suggestion' => $this->renderView('@CatalogPage/views/suggestion-results/suggestion-results.twig', $searchResults)->getContent(),
@@ -462,14 +462,14 @@ If you use the Glue layer, you have to add page and ipp value to request paramet
 By default, the Yves layer doesn't care about sort options which suggested by Fact-Finder. If you want to use them, you have to change `SortedResultFormatterPlugin` in `CatalogDependencyProvider`.
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Client\Catalog;
- 
+
 class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 {
     ...
@@ -568,4 +568,4 @@ The typical response of filters looks like:
 		}
 	]
 ```
-You can add the values to request parameters as `?{name}={elements.text}`. E.g. `?CategoryPath=Kameras+%26+Camcorders`. Request mapper cares about these filter params and will map them to Fact-Finder understandable list. 
+You can add the values to request parameters as `?{name}={elements.text}`–for example, `?CategoryPath=Kameras+%26+Camcorders`. Request mapper cares about these filter params and will map them to Fact-Finder understandable list. 

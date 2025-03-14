@@ -29,7 +29,7 @@ related:
 
 This tutorial describes how you can improve the cart-based search in your project.
 
-Based on the colors of the products in the user's cart, the catalog must first display products that have the same color. For example, if there’s a red product in the cart, the top results in the catalog must also contain red products.
+Based on the colors of the products in the user's cart, the catalog must first display products that have the same color. For example, if there's a red product in the cart, the top results in the catalog must also contain red products.
 
 To solve the challenge, use instructions from the following sections.
 

@@ -1,6 +1,6 @@
 ---
 title: Checklist for a new store implementation
-description: Follow a checklist for implementing a new store in Spryker’s multi-store setup, including environment setup, DNS configuration, and integration tasks.
+description: Follow a checklist for implementing a new store in Spryker's multi-store setup, including environment setup, DNS configuration, and integration tasks.
 template: concept-topic-template
 last_updated: Oct 6, 2023
 redirect_from:

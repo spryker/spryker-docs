@@ -28,7 +28,7 @@ As you can see, for both of the import types you need a **data import YML config
 
 {% info_block infoBox "Info" %}
 
-If the source is not specified, then the CSV file defined in the module’s configuration file will be used. For example, for the [StockDataImport](https://github.com/spryker/stock-data-import/tree/aff1b706e7a0fb0db441b13d5c6a471e4d75cb49/src/Spryker/Zed/StockDataImport) module the CSV import file is defined in [StockDataImportConfig.php](https://github.com/spryker/stock-data-import/blob/aff1b706e7a0fb0db441b13d5c6a471e4d75cb49/src/Spryker/Zed/StockDataImport/StockDataImportConfig.php).
+If the source is not specified, then the CSV file defined in the module's configuration file will be used. For example, for the [StockDataImport](https://github.com/spryker/stock-data-import/tree/aff1b706e7a0fb0db441b13d5c6a471e4d75cb49/src/Spryker/Zed/StockDataImport) module the CSV import file is defined in [StockDataImportConfig.php](https://github.com/spryker/stock-data-import/blob/aff1b706e7a0fb0db441b13d5c6a471e4d75cb49/src/Spryker/Zed/StockDataImport/StockDataImportConfig.php).
 
 {% endinfo_block %}
 
@@ -65,7 +65,7 @@ For your shop, you can create your own default YML import configuration file and
 
 ## Custom YML import configuration file
 
-Of course, you don’t always need to use the default YML file and import everything it contains. When you want to import some specific importers without importing everything from the default YML file, you can create a YML file, which will include just the importers you need. You don’t need to put the CSV files for import to a specific place. Instead, you just specify a correct path to them in the `source`. Also, you can perform import in batch, which means you can run the same data importer with different data. For example, your custom YML file may look like this:
+Of course, you don't always need to use the default YML file and import everything it contains. When you want to import some specific importers without importing everything from the default YML file, you can create a YML file, which will include just the importers you need. You don't need to put the CSV files for import to a specific place. Instead, you just specify a correct path to them in the `source`. Also, you can perform import in batch, which means you can run the same data importer with different data. For example, your custom YML file may look like this:
 
 ```yml
 actions:
@@ -86,7 +86,7 @@ The order of import for the above example will be:
 3. product-abstract (*product.csv*)
 4. shipment (*shipment.csv*)
 
-Whenever you need to import some data, all you need to change is your YML file by defining the new data importer. You don’t need to change anything in the code.
+Whenever you need to import some data, all you need to change is your YML file by defining the new data importer. You don't need to change anything in the code.
 
 {% info_block infoBox "" %}
 

@@ -800,7 +800,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you’ve configured the content items:
+Make sure that you've configured the content items:
 
 1. Add a content item to a CMS block or page.
 

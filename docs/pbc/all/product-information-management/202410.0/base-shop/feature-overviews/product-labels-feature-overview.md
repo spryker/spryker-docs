@@ -58,7 +58,7 @@ The following dynamic product labels are shipped by default:
 <br>The *NEW* label is added when you create a product. It is active for the time period defined inclusively in the **New from** and **New to** fields. To learn more, see [Creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 
 * *SALE*
-<br>The *SALE* product label is added to a product automatically when the product’s original price is superior to the default price. To learn more, see [Creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
+<br>The *SALE* product label is added to a product automatically when the product's original price is superior to the default price. To learn more, see [Creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 
 {% info_block infoBox "Prices" %}
 

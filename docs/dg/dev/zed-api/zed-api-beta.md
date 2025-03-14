@@ -43,15 +43,15 @@ Links as part of the meta information will be part of the response on the same l
 }
 ```
 
-“self” URIs are included, for example for adding an item.
+"self" URIs are included, for example for adding an item.
 
 ## Logging
 
-By default all incoming requests and outgoing responses will be logged as “info” level.
+By default all incoming requests and outgoing responses will be logged as "info" level.
 
 ## Security recommendations
 
-Secure the API with a token system (e.g. JWT) and also apply basic API Rate Limiting, e.g. using X-Rate-Limit-Limit header. You can add your custom ServiceProvider in the mentioned stack above.
+Secure the API with a token system, such as JWT, and also apply basic API Rate Limiting–for example, using the `X-Rate-Limit-Limit` header. You can add your custom ServiceProvider in the mentioned stack above.
 
 For CORS you should add a ServiceProvider.
 
@@ -82,16 +82,16 @@ JSON_PARTIAL_OUTPUT_ON_ERROR | JSON_PRETTY_PRINT
 
 ## HTTP status codes
 
-* 200 OK - Response to a successful GET, PUT, PATCH or DELETE. Can also be used for a POST that doesn’t result in a creation.
+* 200 OK - Response to a successful GET, PUT, PATCH or DELETE. Can also be used for a POST that doesn't result in a creation.
 * 201 Created - Response to a POST that results in a creation. The resulting item will be returned.
-* 204 No Content - Response to a successful request that won’t be returning a body (like a DELETE request).
+* 204 No Content - Response to a successful request that won't be returning a body (like a DELETE request).
 * 206 Partial Content - When paginating a collection with more than a single page.
 * 304 Not Modified - Used when HTTP caching headers are in play.
 * 400 Bad Request - The request is malformed, such as if the body does not parse.
 * 401 Unauthorized - When no or invalid authentication details are provided. Also useful to trigger an auth popup if the API is used from a browser.
-* 403 Forbidden - When authentication succeeded but authenticated user doesn’t have access to the resource.
+* 403 Forbidden - When authentication succeeded but authenticated user doesn't have access to the resource.
 * 404 Not Found - When a non-existent resource is requested.
-* 405 Method Not Allowed - When an HTTP method is being requested that isn’t allowed for the authenticated user. 410 Gone - Indicates that the resource at this end point is no longer available. Useful as a blanket response for old API versions.
+* 405 Method Not Allowed - When an HTTP method is being requested that isn't allowed for the authenticated user. 410 Gone - Indicates that the resource at this end point is no longer available. Useful as a blanket response for old API versions.
 * 415 Unsupported Media Type - If incorrect content type was provided as part of the request.
 * 422 Unprocessable Entity - Used for validation errors.
 * 429 Too Many Requests - When a request is rejected because of rate limiting.

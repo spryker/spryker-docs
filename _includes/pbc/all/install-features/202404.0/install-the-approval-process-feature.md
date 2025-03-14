@@ -177,7 +177,7 @@ Import the glossary data:
 console data:import glossary
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the configured data has been added to the `spy_glossary` table in the database.
 

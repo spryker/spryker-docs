@@ -26,7 +26,7 @@ FES is structured around four key concepts:
 * Frontends are continuously updated with code changes deployed automatically.
 * Page layout and structure are managed with Spryker Experience Builder.
 
-Combined, they let you make changes without developers’ help, decouple and speed up frontend and backend development cycles.
+Combined, they let you make changes without developers' help, decouple and speed up frontend and backend development cycles.
 
 ### Spryker Launchpad
 
@@ -41,7 +41,7 @@ The default frontend template is a Storefront based on a [progressive web applic
 
 The Launchpad is a multi-tenant application that interacts with the following components:
 * SCCOS environment running on [Spryker PaaS](https://spryker.com/en/paas-cloud/).
-* GitHub repository that stores frontends’ code.
+* GitHub repository that stores frontends' code.
 * Netlify hosting provider, where frontends are built and distributed across a CDN.
 
 ![launchpad-architecture](https://confluence-connect.gliffy.net/embed/image/9cb232d7-e48c-48da-a53d-d78b4ba577c4.png?utm_medium=live&utm_source=custom)
@@ -59,7 +59,7 @@ Developers can switch the application between multiple repositories. For example
 ![continuous-development](https://spryker.s3.eu-central-1.amazonaws.com/docs/fes/dev/front-end-enablement-service.md/continuous-development.png)
 
 ### Spryker Experience Builder
-The Experience Builder lets content managers manage the structure and layout of frontends without developer’s help. It is in development, and we will release it soon.
+The Experience Builder lets content managers manage the structure and layout of frontends without developer's help. It is in development, and we will release it soon.
 
 ## What projects can use FES?
 Any project running on PaaS and with up-to-date APIs can use FES for its frontends.

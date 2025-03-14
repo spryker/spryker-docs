@@ -76,7 +76,7 @@ The managed Security Operations Center (SOC) provides continuous monitoring, det
 ### Business benefits
 
 - 24/7 security monitoring: Stay protected with round-the-clock vigilance against threats.
-- Optimized for Spryker’s infrastructure: Tailored specifically for the Spryker ecosystem, our service seamlessly integrates with your existing infrastructure.
+- Optimized for Spryker's infrastructure: Tailored specifically for the Spryker ecosystem, our service seamlessly integrates with your existing infrastructure.
 - Threat detection and analysis: Use cutting-edge technology and intelligence to promptly identify and assess cybersecurity risks. Our proactive approach ensures that potential threats are detected early, minimizing the risk to your business.
 - Streamlined incident response: In the event of a security incident, our coordinated response mechanism allows for a swift reaction, mitigation, and remediation. This ensures that any impact is minimized and business continuity is maintained.
 - Compliance and reporting: The service is aligned with industry regulations like SOC2 and ISO27001.

@@ -142,7 +142,7 @@ Setting `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPP
 
 {% endinfo_block %}
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 For the `checkout-data` endpoint to keep returning shipment methods, keep `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` set to true.
 

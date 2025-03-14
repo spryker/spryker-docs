@@ -159,7 +159,7 @@ class ProductPricesRestApiDependencyProvider extends SprykerProductPricesRestApi
 
 {% info_block warningBox "Verification" %}
 
-To verify that you’ve activated `PriceProductVolumeRestProductPricesAttributesMapperPlugin`:
+To verify that you've activated `PriceProductVolumeRestProductPricesAttributesMapperPlugin`:
 
 1.  Create an abstract product with a volume price.
 2.  Send the request `GET https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-prices` request and make sure that the response contains volume prices data.

@@ -187,7 +187,7 @@ Database structure is as follows:
     * Install the database changes by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
     * Apply the database changes: `vendor/bin/console propel:migrate`.
     * Generate and update ORM models: `vendor/bin/console propel:model:build`.
-    * You will find some new classes in your project under `\Orm\Zed\Shipment\Persistence` namespace. It’s important that you make sure that they extend the base classes from the Spryker core, e.g.:
+    * You will find some new classes in your project under `\Orm\Zed\Shipment\Persistence` namespace. It's important that you make sure that they extend the base classes from the Spryker core, e.g.:
         * `\Orm\Zed\Shipment\Persistence\SpyShipmentMethodPrice` extends `\Spryker\Zed\Shipment\Persistence\Propel\AbstractSpyShipmentMethodPrice`
         * `\Orm\Zed\Shipment\Persistence\SpyShipmentMethodPriceQuery` extends `\Spryker\Zed\Shipment\Persistence\Propel\AbstractSpyShipmentMethodPriceQuery`
 

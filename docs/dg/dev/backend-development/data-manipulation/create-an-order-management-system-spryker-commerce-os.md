@@ -417,12 +417,12 @@ You can keep moving the item until the order is closed.
 
 Besides manual tests, we recommend implementing automated tests for state machine. The default test helpers can help you build your tests:
 
-- `\SprykerTest\Zed\Oms\Helper\OmsHelper`: provides hooks to add your commands and conditions to tests.
-- `\SprykerTest\Shared\Sales\Helper\SalesOmsHelper`: provides methods to test the state machine.
+- `\SprykerTest\Zed\Oms\Helper\OmsHelper`: provides hooks to add your commands and conditions to tests
+- `\SprykerTest\Shared\Sales\Helper\SalesOmsHelper`: provides methods to test the state machine
 
-#### 5.1 Add the test helper to `codeception.yml`
+#### 5.1 Add the test helper
 
-The following example shows how to add commands and conditions to the OmsHelper. You can add as many commands and conditions as needed.
+The following example shows how to add commands and conditions to `OmsHelper` through `codeception.yml`. You can add as many commands and conditions as needed.
 
 ```yaml
 namespace: PyzTest\Zed\YourModuleName
@@ -448,9 +448,9 @@ suites:
 
 ```
 
-There're also default commands and conditions for testing purposes. You can use them as placeholders for commands and conditions. The key is the name that you are using in `OmsDependencyProvider` as well to set up the state machine. 
+There're also default commands and conditions, which can be used as placeholders for commands and conditions. The key is the name used in `OmsDependencyProvider` to set up the state machine. 
 
-They're as follows:
+Default commands and conditions:
 - `\SprykerTest\Zed\Oms\Helper\Mock\AlwaysTrueConditionPluginMock`: condition that always returns true
 - `\SprykerTest\Zed\Oms\Helper\Mock\AlwaysFalseConditionPluginMock`: condition that always returns true
 - `\SprykerTest\Zed\Oms\Helper\Mock\CommandByItemPluginMock`: a mock for `CommandByItemInterface` that always returns an empty array
@@ -468,7 +468,7 @@ They're as follows:
 
 #### 5.2 Create a test for your state machine
 
-An example test could look like this:
+Test example:
 
 ```php
 <?php
@@ -518,17 +518,41 @@ class OmsIntegrationTest extends Unit
 }
 ```
 
-In the `_before` method the state machine setup is done. You need to provide the state machine name and the path to the XML files of your definitions.
+The state machine is set up in the `_before` method. You need to specify the state machine name and the path to the XML files containing your definitions.
 
-The first method `haveOrderItemInState` sets up an item in the state `a`. This method also accepts a second argument where you can pass individual fields to be used for order item creation.
-After that you need to add your code where you expect that the item should move to the next state. F.e. receiving an Async API message or calling a command.
-The second method (use only one of both examples) `tryToTransitionOrderItems` triggers the state machine to move the item to the next state if possible. When used without an event name only conditions are checked. If you want to trigger a specific event you can pass the event name as a parameter.
-The last method asserts that the item is in the expected state `b`.
+1. The `haveOrderItemInState` method initializes an item in `a` state. This method also accepts a second argument, allowing you to pass custom fields for order item creation. After setting up the item, add the logic that should move it to the next state, such as receiving an async API message or calling a command.  
 
-These tests can be easy but also become very complex depending on your needs for testing. When you need more items or processing of complete orders you currently need to create your own helper.
+2. The `tryToTransitionOrderItems` method (use only one of these methods) attempts to transition the order item to the next state. When used without an event name, it only checks conditions. To trigger a specific event, pass the event name as a parameter.
 
-### 6. Define the happy path of an order item (optional)
+3. The last method asserts that the item is in the expected `b` state.
+
+These tests can range from simple to highly complex, depending on your testing needs. If additional items or full order processing are required, you may need to create a custom helper.  
+
+
+### 6. Optional: Define the happy path of an order item
 
 Along with the nice representation of the state machine as a graph, Spryker provides the `happy` flag. It adds green arrows on the transitions to define the happy path of an order item.
 
 To add this flag, write `happy = "true"` on the transitions that are a part of your process happy path and refresh the graph.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

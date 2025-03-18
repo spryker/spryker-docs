@@ -9,7 +9,9 @@ redirect_from:
 
 This feature enables delivery types for Cart Glue APIs. Delivery types are used by service points. For more information about service points, see [Service Points feature overview](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html).
 
-For more information about "delivery types", see [Shipment feature overview](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html).
+For more information about "delivery types", see [Shipment feature overview](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html)...
+
+b.2.b - 
 
 
 ## Related Business User documents

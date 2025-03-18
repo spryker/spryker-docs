@@ -353,51 +353,70 @@ Sampling occurs three times during execution:
 3. Closing span sampling: Filters out extremely fast and successful spans upon closing because they likely hold little value
 
 
-### Tracing sampling
+### Trace sampling
 
-In most cases, a detailed trace on each and every request or command execution is not needed. But span is needed to at least know that request took place and had an error inside.
-For this, a few things are checked during the trace initialisation. First of all, type of the request is checked. Is it a HTTP request or console command execution.
+A detailed trace for every request or command execution is usually unnecessary. At minimum, a span should capture that the request occurred and whether it contained an error.
 
-For the HTTP request HTTP method is checked if it GET or not. If not, the trace is going to be detailed in any case.
-If the method was GET, a random number from 0 to 1.0 is generated and compare it against a configured probability. If the generated number less than a configured value - the trace will include spans. If not, only a root span will be present.
+To do this, the request is checked during initialization. For HTTP requests, if the method is not `GET`, the trace is always detailed. If the method is `GET`, a random number between `0` and `1.0` is generated and compared against a configured probability. If the number is less than the configured probability, the trace includes spans. Otherwise, only a root span is recorded.
 
-Console command sampling works exactly the same, but the configuration value is separate for the more fine-tuning.
+The same logic applies to console commands, but with a separate configuration value for finer control.  
+
 
 ### Opening span sampling
 When span tried to start check take place if it should be started, by the same algorithm as trace sampling was done. The only difference is that different configuration value is used and the random number is generated on each and every span starting.
 Not all spans are equal so different probabilities for different types of spans are used. You can read about criticality of spans below.
 If decision was to not sample a span, an empty one will be opened. Empty spans are just a placeholder that are used to build a tree properly. They will appear in the trace in any case.
 
+
+### Opening span sampling  
+
+On start, each span is checked whether it should be started using the algorithm similar to that used for trace sampling. The differences between algorithms are as follows:  
+
+* A different configuration value is used for span sampling
+* A random number is generated for each span
+* Different span types have different sampling probabilities based on their criticality
+
+If a span is not sampled, an empty span is created instead. Empty spans act as placeholders to maintain the trace structure and always appear in the trace.
+
 ### Closing span sampling
-Super fast spans that have no errors inside of them also can be thrown away from the trace. After the sampled span is closing execution time and status check take place. If span is successful and faster than a configured value (`OTEL_BSP_MIN_SPAN_DURATION_THRESHOLD` or `OTEL_BSP_MIN_CRITICAL_SPAN_DURATION_THRESHOLD`) it will also be omitted and will not appear in the trace.
+
+Fast spans without errors can be discarded from the trace. When a sampled span closes, its execution time and status are checked. If the span is successful and completes faster than a configured threshold, it's omitted and they don't appear in the trace. The threshold is configured in `OTEL_BSP_MIN_SPAN_DURATION_THRESHOLD` or `OTEL_BSP_MIN_CRITICAL_SPAN_DURATION_THRESHOLD`.
+
 
 ### Span criticality
-Some of the spans are more relevant for users, some of them are not. So for span sampling there are 3 different span criticality: `non critical`, `regular` and `critical` one.
-They are using different probability and execution time limits that can be configured separately. (be advises that for `Closing span sampling` `regular` and `non critical` spans as the same span type for now).
+
+Some spans are more relevant to users than others. To manage span sampling effectively, spans are categorized into three levels of criticality: `non-critical`, `regular`, and `critical`.
+
+Each category uses different probability settings and execution time limits, which can be configured separately. For [closing span sampling](#closing-span-sampling), `regular` and `non-critical` spans are treated as the same type.
+
 
 #### Critical spans
-When something executed that is communicating with other services or change a state of the application, those spans should have bigger probability to be present in the trace. Such spans should be marked as critical.
-OOTB there are a few span types that are considered as critical:
-- RabbitMQ spans;
-- ElasticSearch spans;
-- Redis spans;
-- Guzzle spans (those are ignored by sampling mechanism as the are required for Distributed Tracing);
-- Propel INSERT/DELETE/UPDATE calls;
-- Hooks for classes that are configured in `\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getCriticalClassNamePatterns()` method;
 
-They all get a span attribute `is_critical` and use a different probability and execution time values.
+
+Spans that execute operations that communicate with other services or change the application's state should be marked as critical to have a higher chance of appearing of appearing in the trace
+
+The following span types are critical by default:
+
+- RabbitMQ spans  
+- ElasticSearch spans  
+- Redis spans  
+- Guzzle spans (ignored by the sampling mechanism because they're required for Distributed Tracing)  
+- Propel `INSERT`/`DELETE`/`UPDATE` calls  
+- Hooks for classes configured in `\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getCriticalClassNamePatterns()`  
+
 
 #### Non-critical spans
-Currently only Propel SELECT calls spans marked as `no_critical` as a lot of them are generated during every request in the system and they can easily overflow a trace with useless information.
+
+Only Propel `SELECT` calls spans marked as `no_critical` because every request generates a lot of them, which can easily overflow a trace with useless information.
+
 
 #### Regular spans
 All other spans are considered as `regular`.
 
-#### Span cricticality configuration
-By setting a span attribute `no_critical` and `is_critical`, span can be marked as critical or not.
 
 ### Sampling configuration
-Values that are used for sampling can be changed. In order to do so, you need to change a few env variables.
+
+You can adjust sampling values by changing environment variables.
 
 | Variable Name                                   | Description                                                       commitomm                                        | Default Value | Allowed range |
 |-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|---------------|---------------|

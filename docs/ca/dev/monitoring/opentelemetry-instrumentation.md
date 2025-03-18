@@ -457,41 +457,71 @@ You can adjust sampling values by changing environment variables. Increasing the
 
 ## Custom attributes
 
-You may want to add some custom data to your traces. E.g. a user id that was logged that time into your system. Or a current store name. Or anything else that can vary from request to request. In order to do so, you can add a custom attribute that will appear in the root span for better visibility.
-It's recommended to do so using `MonitoringService::addCustomParameter()` method. By default Spryker provides a few of those attributes already, like a current store name and locale.
-If you don't want to use `MonitoringService` for some reason, you may use `\Spryker\Service\Opentelemetry\OpentelemetryService::setCustomParameter` directly. It does exactly the same job, but without necessity to install `Monitoring` module.
-All attributes added via those services will be added into the root span on the very end of request execution, so you can call it even after response wes already sent.
+To add custom data to your traces, such as the logged-in user ID, the current store name, or any other request-specific information, add a custom attribute that appears in the root span for better visibility. There're attributes that are shipped by default, such as current store name or locale.
+
+We recommend adding custom attributes through `MonitoringService::addCustomParameter()`. Alternatively, you can add them directly through `\Spryker\Service\Opentelemetry\OpentelemetryService::setCustomParameter`, which doesn't require the `Monitoring` module.
+
+All attributes added via these services are included in the root span at the end of the request execution, so you can call them even after the response has been sent.
+
+
+
 
 ## Custom events
 
-If you want to add some custom event to you trace in order to configure some logic into your backend, you can trigger a custom event during the execution. It works pretty much the same as adding custom attributes, so it's pretty easy to use.
-The same as for custom attributes you can add those via `\Spryker\Service\Monitoring\MonitoringService::addCustomEvent()` or via `\Spryker\Service\Opentelemetry\OpentelemetryService::addEvent()` if you dont want to install `Monitoring` module.
-Event will be wired into the root span.
+To add a custom event to your trace for backend logic configuration, you can trigger a custom event during execution.
+
+You can add custom events via `\Spryker\Service\Monitoring\MonitoringService::addCustomEvent()`. Alternatively, add them directly though `\Spryker\Service\Opentelemetry\OpentelemetryService::addEvent()`, which doesn't require the Monitoring module.
+
+Custom events are attached to the root span.
+
 
 ## Error handling
 
-You are definitely want to track all possible errors during the execution. OOTB OTel integration will catch all exceptions that were thrown during request/command execution and attach those as events into the root span. Those events should also be present in the span of the method that thrown the exception, but only if the hook for this method exists in the first place.
-In order to catch those error in any case recommendation is to use `\Spryker\Service\Monitoring\MonitoringService::setError()` or `\Spryker\Service\Opentelemetry\OpentelemetryService::setError()` inside of the Error Handler of your application.
+
 Default Spryker's Error Handler already executes `\Spryker\Service\Monitoring\MonitoringService::setError()`, so if you are using `Monitoring` module and default Error Handler - you are covered. But if you don't, please adjust your error handler accordingly.
 This will add a error event into the root span and will change its status to the `error` one. Please check this part during integration of OTel into your system.
 
-## Changing a service name
+The OTel integration catches all the exceptions thrown during a request or command execution and attaches them as events to the root span. These events will also appear in the span of the method that threw the exception, but only if a hook for that method exists.
 
-Service name allows you to filter traces by the source. You may want to check only Yves traces or mb just to check only Glue requests, but you backend can show you a bunch of CLI commands from your Scheduler.
+To ensure error tracking, we recommend using `\Spryker\Service\Monitoring\MonitoringService::setError()` or `\Spryker\Service\Opentelemetry\OpentelemetryService::setError()` in your application's error handler.
 
-You can define a service name via `\Spryker\Service\Monitoring\MonitoringService::setApplicationName()` or `\Spryker\Service\Opentelemetry\OpentelemetryService::setResourceName()`.
+The default error handler calls `\Spryker\Service\Monitoring\MonitoringService::setError()` to add error events to the root span and update its status to `error`. If you're using the `Monitoring` module with the default error handler, no additional configuration is needed. With a custom setup, adjust your error handler and verify this logic during the integration.
 
-All `MonitoringService` methods will trigger service name changing, so if e.g. `\Spryker\Service\Monitoring\MonitoringService::setError()` was called, service name will be changed too.
 
-By default it looks like `APPLICATION-REGION_OR_STORE(application.env)`, where `APPLICATION` is a name of your application (ZED, YVES, GLUE, etc.), `REGION_OR_STORE` is a current store or region name that depends if your application works in Dynamic Store mode or not, and `application.env` is an env name from your deploy file. You can change any of those value via `MonitoringService` or change the name completely via `OpentelemetryService`.
-If no service name was provided by services, OTel integration will try to resolve a service name for you.
-First of all `OTEL_SERVICE_NAME_MAPPING` value will be fetched and will try to find a proper service name based on the URL or CLI binary file name.
-If no value was provided or nothing from it was suitable or us - the default service name from `OTEL_DEFAULT_SERVICE_NAME` env value will be used.
+## Service name
 
-## Changing a trace name
+Service names let you to filter traces by source. For example, you might want to analyze only Yves traces or Glue requests while excluding CLI commands from your Scheduler.
 
-Trace name (or in our case a root span name) should show you what request or command was executed. Default implementation includes a HTTP method name with a route name for the WEB requests and command name for a command execution.
-But it can be also changed during the execution. OOTB Spryker will change a WEB requests trace name in order to reflect a route name of the request. But if you don't like it or don't use a `Monitoring` module, you can define it via `\Spryker\Service\Opentelemetry\OpentelemetryService::setRootSpanName()` or `\Spryker\Service\Monitoring\MonitoringService::setTransactionName()`.
+You can define a service name using `\Spryker\Service\Monitoring\MonitoringService::setApplicationName()` or `\Spryker\Service\Opentelemetry\OpentelemetryService::setResourceName()`.
+
+All `MonitoringService` methods trigger a service name change. For example, calling `\Spryker\Service\Monitoring\MonitoringService::setError()` updates the service name.
+
+Default name convention for service names: `APPLICATION-REGION_OR_STORE(APPLICATION.ENV)`
+
+|PLACEHOLDER | DESCRIPTION|
+| - | - |
+| APPLICATION|  Application name, such as ZED, YVES, or GLUE. |
+| REGION_OR_STORE|  Current store or region name, depending on whether Dynamic Store mode is enabled. |
+| APPLICATION_ENV | Environment name from the deploy file. |
+
+You can change any of these values using `MonitoringService`, or override the service name entirely using `OpentelemetryService`.
+
+If no service name is explicitly set, the integration first checks `OTEL_SERVICE_NAME_MAPPING`, attempting to determine a service name based on the URL or CLI binary filename. If no matches found, it falls back to `OTEL_DEFAULT_SERVICE_NAME` from the environment configuration.
+
+
+
+
+## Trace name
+
+The trace name (or root span name) shows which request or command was executed. 
+
+Default behavior:
+- For web requests: The default trace name includes the HTTP method and route name
+- For command executions: The command name is used
+
+Spryker automatically adjusts the trace name for web requests to reflect the route name. However, if you prefer a different naming convention or don't use the `Monitoring` module, you can define it manually using `\Spryker\Service\Opentelemetry\OpentelemetryService::setRootSpanName()` or `\Spryker\Service\Monitoring\MonitoringService::setTransactionName()`.
+
+
 
 ## Recommendations
 
@@ -502,3 +532,55 @@ Please minimise amount of generated spans per request. OTel documentation recomm
 Use sampling to not get a full trace every time. Please check configuration section for the reference.
 
 Skip some traces. You may not want to get a full trace for all of your transactions. You can define a probability of detailed trace overview by setting a probability via `OTEL_TRACE_PROBABILITY` env variable. Be advised that Trace still will be processed and root span will be there for you. Also requests that are changing something in your application (POST, DELETE, PUT, PATCH) considered as critical and will be processed anyway.
+
+
+
+
+Tracing is resource-intensive and can slow down your application. Follow these recommendations to minimize performance impact:
+
+- Minimize the number of generated spans per request: 
+  - OTel docs recommend keeping span count below 1000 per trace
+  - Configure irrelevant spans to be skipped
+  - Errors are processed even if a method is not instrumented because error events are attached to the root span
+
+- Use sampling to reduce trace volume:
+  - Full traces for every request are unnecessary in most cases 
+  - Refer to the **sampling configuration** section to fine-tune trace collection
+
+- Skip unnecessary traces:
+  - You can control the probability of generating detailed traces using the `OTEL_TRACE_PROBABILITY` environment variable.  
+  - Even if a detailed trace is skipped, a root span will still be created.  
+  - Requests that modify the application state (`POST`, `DELETE`, `PUT`, `PATCH`) are always considered critical and will be fully processed.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

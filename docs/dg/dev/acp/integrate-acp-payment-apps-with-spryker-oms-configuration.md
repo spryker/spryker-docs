@@ -11,24 +11,24 @@ This document describes how to set up your project with the ACP payment app, ens
 
 ## Prerequisites
 
-Before you begin, make sure the following prerequisites are met:
-- You have installed the Spryker Order Management System. For the installation instructions, see [Install the Order Management feature](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html).
-- You are familiar with the basics of OMS provided in [Order Management feature overview](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/order-management-feature-overview/order-management-feature-overview.html), [State machine cookbook](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/state-machine-cookbook/state-machine-cookbook.html) and their sub-pages.
+- [Install the Order Management feature](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html).
+- Learn the basics of OMS described in [Order Management feature overview](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/order-management-feature-overview/order-management-feature-overview.html), [State machine cookbook](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/state-machine-cookbook/state-machine-cookbook.html), and their sub-pages.
 
 ## Default ACP Payment App OMS  
 
-The default ACP Payment App OMS configuration is in `vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`.
+The default ACP Payment App OMS configuration is located in `vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`.
 This configuration is assigned to each order paid with an ACP Payment App payment method. Use it as a starting point to build your own.
 
 ### XML file structure
 
-The main OMS file includes `<subprocesses>` – similar to libraries or building blocks with their own `<states>`, `<transitions>`, and `<events>`:
+The main OMS file includes `<subprocesses>`, which function like libraries or building blocks containing their own `<states>`, `<transitions>`, and `<events>`.  
+
 
 #### Subprocesses
 
-A typical state machine consists of a couple of sub processes that represent a complete order process.
+A typical state machine consists of a couple of subprocesses that represent a complete order process.
 
-Here is an example of how to add sub processes.
+Example of how to add subprocesses:
 
 ```xml
 <subprocesses>
@@ -37,9 +37,9 @@ Here is an example of how to add sub processes.
 </subprocesses>
 ```
 
-Each process in the `<subprocesses>` section has a start state, one or more final states, and the states are linked to each other in the main State Machine .xml file.
+Each process in the `<subprocesses>` section has a start state, one or more final states, and the states are linked to each other in the main state machine XML file.
 
-Other default sub processes:
+Other default subprocesses:
 - `ItemClose01`
 - `ItemReturn01`
 - `ItemSupply01`
@@ -59,19 +59,14 @@ You can use them as examples or building blocks for your own state machine defin
 
 Transitions between states in payment apps can be handled in two ways:  
 
-- Event-based: Trigger events based on Payment App messages
-- Conditional: Use conditional transitions based on Payment App messages and condition plugins
 
-Each approach requires a different setup:  
 
-- Event-based: Add `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` to `MessageBrokerDependencyProvider`
-- Conditional: Add `Spryker\Zed\PaymentApp\Communication\Plugin\MessageBroker\PaymentAppOperationsMessageHandlerPlugin` to `MessageBrokerDependencyProvider` along with the necessary condition plugins
+| Approach      | Description | Setup |  
+|--------------|-------------|---------|  
+| Event-based  | Trigger events based on Payment App messages | Add `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` to `MessageBrokerDependencyProvider` |  
+| Conditional  | Use conditional transitions based on Payment App messages and condition plugins | Add `Spryker\Zed\PaymentApp\Communication\Plugin\MessageBroker\PaymentAppOperationsMessageHandlerPlugin` to `MessageBrokerDependencyProvider` along with the necessary condition plugins |
 
 The following sections provide detailed instructions for configuring each option.  
-
-
-
-
 
 
 
@@ -125,7 +120,7 @@ This setup allows the Payment App to progress through states independently of yo
 
 ### Automatic transitions of states
 
-The list of predefined payment event messages applies to all payment methods from the ACP App Catalog:
+The following predefined payment event messages apply to all payment methods from the ACP App Catalog:
 
 - `PaymentAuthorized`
 - `PaymentAuthorizationFailed`
@@ -150,9 +145,8 @@ For example, if an order gets stuck in the `payment capture pending` state, a Ba
 
 ### Payment operation commands
 
-The following commands have to be triggered from your OMS to tell the Payment App what to do next. 
+The following default commands are triggered from OMS to instruct the Payment App on the next steps:
 
-The default OMS setup has three commands:
 - `Payment/Capture`
 - `Payment/Cancel`
 - `Payment/Refund`

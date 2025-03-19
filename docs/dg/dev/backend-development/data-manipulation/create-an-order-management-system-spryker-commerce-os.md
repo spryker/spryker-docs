@@ -518,13 +518,14 @@ class OmsIntegrationTest extends Unit
 }
 ```
 
-1. The state machine is set up in the `_before` method. You need to specify the state machine name and the path to the XML files containing your definitions. You could also set this up inside your test but this would be redundant.
+1. The `_before` method sets up state machine. You need to specify the state machine name and the path to the XML files containing your definitions. You could also set this up inside your test but this would be redundant.
 
 2. The `haveOrderItemInState` method initializes an item in `a` state. This method also accepts a second argument, allowing you to pass custom fields for order item creation. After setting up the item, add the logic that should move it to the next state, such as receiving an async API message or calling a command.  
 
 3. The `tryToTransitionOrderItems` method (use only one of these methods) attempts to transition the order item to the next state. When used without an event name, it only checks conditions. To trigger a specific event, pass the event name as a parameter.
 
-4. The last method `assertOrderItemIsInState` asserts that the item is in the expected `b` state.
+4. The `assertOrderItemIsInState` method asserts that the item is in the expected `b` state.
+
 
 These tests can range from simple to highly complex, depending on your testing needs. If additional items or full order processing are required, you may need to create a custom helper.  
 

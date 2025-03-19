@@ -18,10 +18,7 @@ related:
     link: docs/dg/dev/acp/apis-and-flows-for-payment-service-providers/synchronous-api-for-payment-service-providers.html
 ---
 
-All PSP integrations are based on a asynchronous API. The asynchronous API is used to process payments and refunds. The following asynchronous messages are used:
-
-
-Here’s the information formatted into tables:  
+All PSP integrations are based on a asynchronous API. The asynchronous API is used to process payments and refunds. The following asynchronous messages are used.
 
 ## Messages sent from the app
 | Message                             | Description                                  |
@@ -52,3 +49,40 @@ Here’s the information formatted into tables:
 | CancelPayment | Initiates payment cancellation.  |
 | CapturePayment | Initiates payment capture.      |
 | RefundPayment | Initiates payment refund.        |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

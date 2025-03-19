@@ -14,10 +14,10 @@ This document describes how to set up your project with the ACP payment app, ens
 - [Install the Order Management feature](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html).
 - Learn the basics of OMS described in [Order Management feature overview](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/order-management-feature-overview/order-management-feature-overview.html), [State machine cookbook](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/state-machine-cookbook/state-machine-cookbook.html), and their sub-pages.
 
-## Default ACP Payment App OMS  
+## Default ACP payment app OMS  
 
-The default ACP Payment App OMS configuration is located in `vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`.
-This configuration is assigned to each order paid with an ACP Payment App payment method. Use it as a starting point to build your own.
+The default ACP payment app OMS configuration is located in `vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`.
+This configuration is assigned to each order paid with an ACP payment app payment method. Use it as a starting point to build your configuration.
 
 ### XML file structure
 
@@ -63,8 +63,8 @@ Transitions between states in payment apps can be handled in two ways:
 
 | Approach      | Description | Setup |  
 |--------------|-------------|---------|  
-| Event-based  | Trigger events based on Payment App messages | Add `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` to `MessageBrokerDependencyProvider` |  
-| Conditional  | Use conditional transitions based on Payment App messages and condition plugins | Add `Spryker\Zed\PaymentApp\Communication\Plugin\MessageBroker\PaymentAppOperationsMessageHandlerPlugin` to `MessageBrokerDependencyProvider` along with the necessary condition plugins |
+| Event-based  | Trigger events based on Payment App messages. | Add `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` to `MessageBrokerDependencyProvider`. |  
+| Conditional  | Use conditional transitions based on Payment App messages and condition plugins. | Add `Spryker\Zed\PaymentApp\Communication\Plugin\MessageBroker\PaymentAppOperationsMessageHandlerPlugin` to `MessageBrokerDependencyProvider` along with the necessary condition plugins. |
 
 The following sections provide detailed instructions for configuring each option.  
 
@@ -72,7 +72,7 @@ The following sections provide detailed instructions for configuring each option
 
 #### Transition based on event triggers  
 
-The `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` contains message handlers that trigger events based on messages received from the Payment App.  
+The `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` contains message handlers that trigger events based on messages received from the payment app.  
 
 State transitions occur automatically through asynchronous ACP messages, processed by the `spryker/message-broker` module. The following sub-processes have auto-transitions:
 
@@ -81,22 +81,18 @@ State transitions occur automatically through asynchronous ACP messages, process
 * `PaymentRefund`
 * `PaymentCancel`
 
-The MessageBroker worker runs in the background as a cron job, checking for new messages and triggering OMS events based on the configuration in `Spryker\Zed\Payment\PaymentConfig::getSupportedOrderPaymentEventTransfersList()`. You can modify this configuration to fit your project’s needs.  
+The MessageBroker worker runs in the background as a cron job, checking for new messages and triggering OMS events based on the configuration in `Spryker\Zed\Payment\PaymentConfig::getSupportedOrderPaymentEventTransfersList()`. You can change this configuration to fit your project’s needs.  
 
-{% info_block infobox %}
-
-Use this approach when closely following the default `ForeignPaymentStateMachine01`, particularly if your OMS does not contain slow-running commands that could cause transition failures.  
-
-The payment status on the app side can change rapidly, which may cause issues if your OMS is not in the correct state for the transition. For example, if a command between `PaymentAuthorized` and `PaymentCapturePending` takes too long to process and a message arrives attempting to transition from `PaymentCapturePending` to `PaymentCaptured`, the OMS may not be able to complete the transition because it is not yet in the required state.  
-
-{% endinfo_block %}
+Use this approach if your configuration is similar to the default `ForeignPaymentStateMachine01`, particularly if your OMS doesn't contain slow-running commands that could cause transition failures. The payment status on the app side can change rapidly, which may cause issues if your OMS is not in the correct state for the transition. For example, if a command between `PaymentAuthorized` and `PaymentCapturePending` takes too long to process and a message arrives attempting to transition from `PaymentCapturePending` to `PaymentCaptured`, the OMS may not be able to complete the transition because it is not yet in the required state.  
 
 #### Conditional transitions
 
-The `Spryker\Zed\PaymentApp\Communication\Plugin\MessageBroker\PaymentAppOperationsMessageHandlerPlugin` contains message handlers that stores the payment status as provided by the App. The OMS then evaluates this status against predefined conditions to determine if the transition to the next state is possible.
+This setup enables the payment app to progress through states independently of OMS while ensuring that OMS conditions execute correctly. For example, if the payment app status advances to `PaymentCaptured` while the OMS remains in the `new` state, querying whether the payment is authorized returns true because authorization occurs before the `PaymentCaptured` state.
+
+`Spryker\Zed\PaymentApp\Communication\Plugin\MessageBroker\PaymentAppOperationsMessageHandlerPlugin` contains message handlers that store the payment status provided by the app. The OMS evaluates this status against predefined conditions to determine if the transition to the next state is possible.
 
 
-The following condition plugins verify if the payment is in a specific state before allowing the transition:
+The following condition plugins verify if the payment is in a needed state before allowing a transition:
 
 - `IsPaymentAppPaymentStatusAuthorizationFailedConditionPlugin`
 - `IsPaymentAppPaymentStatusAuthorizedConditionPlugin`
@@ -108,14 +104,11 @@ The following condition plugins verify if the payment is in a specific state bef
 - `IsPaymentAppPaymentStatusOverpaidConditionPlugin`
 - `IsPaymentAppPaymentStatusUnderpaidConditionPlugin`
 
-Each condition ensures that the payment is in the expected state before allowing a transition. This approach decouples OMS from the Payment App, enabling you to run slow-processing commands within the OMS while maintaining fine-grained control over state transitions.
+This approach decouples OMS from the payment app, enabling you to run slow-processing commands within the OMS while maintaining fine-grained control over state transitions.
 
 To use this approach, add the provided condition plugins to your OMS configuration in the `OmsDependencyProvider::extendConditionPlugins` method.
 
 If some transitions don't occur as expected, you can adjust the configuration using the `Spryker\Zed\PaymentApp\PaymentAppConfig::STATUS_MAP` constant.
-
-This setup allows the Payment App to progress through states independently of your OMS while ensuring that OMS conditions still execute correctly. For example, if the Payment App status advances to `PaymentCaptured` while the OMS remains in the `new` state, querying whether the payment is authorized returns true because authorization occurs before the `PaymentCaptured` state.
-
 
 
 ### Automatic transitions of states
@@ -133,7 +126,7 @@ The following predefined payment event messages apply to all payment methods fro
 - `PaymentOverpaid`
 - `PaymentUnderpaid`
 
-Make sure that these messages are configured in your `config_default.php`.
+Configure them in `config_default.php`.
 
 {% info_block infoBox "Manual transition between states" %}
 

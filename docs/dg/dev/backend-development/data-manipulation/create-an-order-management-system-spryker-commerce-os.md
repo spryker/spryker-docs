@@ -518,15 +518,17 @@ class OmsIntegrationTest extends Unit
 }
 ```
 
-The state machine is set up in the `_before` method. You need to specify the state machine name and the path to the XML files containing your definitions.
+1. The state machine is set up in the `_before` method. You need to specify the state machine name and the path to the XML files containing your definitions. You could also set this up inside your test but this would be redundant.
 
-1. The `haveOrderItemInState` method initializes an item in `a` state. This method also accepts a second argument, allowing you to pass custom fields for order item creation. After setting up the item, add the logic that should move it to the next state, such as receiving an async API message or calling a command.  
+2. The `haveOrderItemInState` method initializes an item in `a` state. This method also accepts a second argument, allowing you to pass custom fields for order item creation. After setting up the item, add the logic that should move it to the next state, such as receiving an async API message or calling a command.  
 
-2. The `tryToTransitionOrderItems` method (use only one of these methods) attempts to transition the order item to the next state. When used without an event name, it only checks conditions. To trigger a specific event, pass the event name as a parameter.
+3. The `tryToTransitionOrderItems` method (use only one of these methods) attempts to transition the order item to the next state. When used without an event name, it only checks conditions. To trigger a specific event, pass the event name as a parameter.
 
-3. The last method `assertOrderItemIsInState` asserts that the item is in the expected `b` state.
+4. The last method `assertOrderItemIsInState` asserts that the item is in the expected `b` state.
 
 These tests can range from simple to highly complex, depending on your testing needs. If additional items or full order processing are required, you may need to create a custom helper.  
+
+The order is important as you have to set up the state machine to be used first, then set up the item in the initial state, trigger the event that should move the item to the next state, and finally assert that your code under test is doing what it should do.
 
 
 ### 6. Optional: Define the happy path of an order item

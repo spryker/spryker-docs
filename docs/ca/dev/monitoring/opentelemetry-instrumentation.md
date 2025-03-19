@@ -168,7 +168,7 @@ class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
 ```
 
 
-You can call methods from Monitoring service, and they will be translated to OTel actions. Some methods act as placeholders because they're are not implemented in OTel, like `\Spryker\Service\Opentelemetry\Plugin\OpentelemetryMonitoringExtensionPlugin::markStartTransaction()` as transaction will start anyway.
+You can call methods from Monitoring service, and they will be translated to OTel actions. Some methods act as placeholders because they're are not implemented in OTel, like `\Spryker\Service\Opentelemetry\Plugin\OpentelemetryMonitoringExtensionPlugin::markStartTransaction()`.
 
 
 
@@ -233,7 +233,7 @@ class OpentelemetryConfig extends AbstractBundleConfig
 }
 ```
 
-Use `\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getExcludedSpans()` defines spans by name to exclude from instrumentation. This may be useful when spans you want to include and those you want to keep are in the same directory.
+`\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getExcludedSpans()` defines spans by name to exclude from instrumentation. This may be useful when spans you want to include and those you want to keep are in the same directory.
 
 ```php
 class OpentelemetryConfig extends AbstractBundleConfig
@@ -273,7 +273,7 @@ class OpentelemetryConfig extends AbstractBundleConfig
 }
 ```
 
-`\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getOutputDir()` specifies the directory where generated hooks are stored. By default, they are placed in `src/Generated/OpenTelemetry/Hooks/`. The `classmap.php` file, which maps generated classes, is also added to this directory.
+`\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getOutputDir()` specifies the directory where generated hooks are stored. By default, they are placed in `src/Generated/OpenTelemetry/Hooks/`. The `classmap.php` file, which is used to autoload hook files, is also added to this directory.
 
 
 ```php
@@ -434,25 +434,25 @@ You can adjust sampling values by changing environment variables. Increasing the
 
 ### Additional configuration
 
-| Variable Name                        | Description                                                                                                                                                                                                   | Default Value     | Allowed range                                                                                                                                                                                                                 |
-|--------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| OTEL_SERVICE_NAMESPACE             | Defines a service namespace used in resource definition                                                                                                                               | spryker         | any string value                                                                                                                                                                                                              |
-| OTEL_SERVICE_NAME_MAPPING          | A JSON object mapping application URLs to service names; used if no service name is provided via `MonitoringService::setApplicationName()`.
-                       | {}              | A valid JSON object where keys represent service names and values define URL patterns.
+| Variable Name                        | Description                                                                                                                                                                                                                       | Default Value     | Allowed range                                                                                                                                                                                                                 |
+|--------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| OTEL_SERVICE_NAMESPACE             | Defines a service namespace used in resource definition                                                                                                                                                                           | spryker         | any string value                                                                                                                                                                                                              |
+| OTEL_SERVICE_NAME_MAPPING          | A JSON object mapping application URLs to service names; used if no service name is provided via `MonitoringService::setApplicationName()`.                                                                                       
+                       | {}              | A valid JSON object where keys represent service names and values define URL patterns.                                                                                                                                            
                                                                                                                                                               |
-| OTEL_DEFAULT_SERVICE_NAME          | If no service name is provided and `OTEL_SERVICE_NAME_MAPPING` is not defined, this default name is used.
-                                            | Default Service | any valid string                                                                                                                                                                                                              |
-| OTEL_BSP_SCHEDULE_DELAY            | Defines the delay in milliseconds before sending a batch of spans to the exporter. A higher value results in larger batches.
-                                      | 1000              | 0...100000000                                                                                                                                                                                                                 |
-| OTEL_BSP_MAX_QUEUE_SIZE            | Defines the maximum number of spans that can be queued for processing in a single request.
-           | 2048              | At least an amount of spans you want to see                                                                                                                                                                                   |
-| OTEL_BSP_MAX_EXPORT_BATCH_SIZE     | Defines the batch size for spans. Once this limit is reached, the batch is sent to the exporter.
-                                                                           | 512               | More than `0` and less than `OEL_BSP_MAX_QUEUE_SIZE`                                                                                                        |
-| OTEL_SDK_DISABLED                  | If set to `true`, no traces are generated or sent to the backend. The default value is `true`; change only after the collector is up and running.
-| true            | Can be a boolean or a string representation of a boolean, such as `true` or `false`.
+| OTEL_DEFAULT_SERVICE_NAME          | If no service name is provided and `OTEL_SERVICE_NAME_MAPPING` is not defined, this default name is used.                                                                                                                         
+                                            | Default Service | any valid string                                                                                                                                                                                                                  |
+| OTEL_BSP_SCHEDULE_DELAY            | Defines the delay in milliseconds before sending a batch of spans to the exporter. A higher value results in larger batches.                                                                                                      
+                                      | 1000              | 0...100000000                                                                                                                                                                                                                     |
+| OTEL_BSP_MAX_QUEUE_SIZE            | Defines the maximum number of spans that can be queued for processing in a single request.                                                                                                                                        
+           | 2048              | At least an amount of spans you want to see                                                                                                                                                                                       |
+| OTEL_BSP_MAX_EXPORT_BATCH_SIZE     | Defines the batch size for spans. Once this limit is reached, the batch is sent to the exporter.                                                                                                                                  
+                                                                           | 512               | More than `0` and less than `OEL_BSP_MAX_QUEUE_SIZE`                                                                                                                                                                              |
+| OTEL_SDK_DISABLED                  | If set to `true`, no traces are generated or sent to the backend. The default value is `true`; change only after the collector is up and running.                                                                                 
+| true            | Can be a boolean or a string representation of a boolean, such as `true` or `false`.                                                                                                                                              
                                                                                                                                                                 |
-| OTEL_PHP_DISABLED_INSTRUMENTATIONS | Allows disabling specific parts of additional instrumentation. For example, to exclude all Redis spans, set the value to `spryker_otel_redis`. Multiple instrumentation parts can be disabled by providing a comma-separated list.
- |           | `spryker_otel_redis`, `spryker_otel_elastica`, `spryker_otel_propel`, `spryker_otel_rabbitmq`, `spryker_otel_guzzle`, or `all`. Also you can select a few of instrumentation, e.g. 'spryker_otel_rabbitmq,spryker_otel_propel' |
+| OTEL_PHP_DISABLED_INSTRUMENTATIONS | Allows disabling specific parts of additional instrumentation. For example, to exclude all Redis spans, set the value to `spryker_otel_redis`. Multiple instrumentation parts can be disabled by providing a comma-separated list. 
+ |           | `spryker_otel_redis`, `spryker_otel_elastica`, `spryker_otel_propel`, `spryker_otel_rabbitmq`, `spryker_otel_guzzle`, or `all`. Coma separated combintations are also allowed, e.g. `spryker_otel_rabbitmq,spryker_otel_propel`    |
 
 
 ## Custom attributes
@@ -521,7 +521,16 @@ Default behavior:
 
 Spryker automatically adjusts the trace name for web requests to reflect the route name. However, if you prefer a different naming convention or don't use the `Monitoring` module, you can define it manually using `\Spryker\Service\Opentelemetry\OpentelemetryService::setRootSpanName()` or `\Spryker\Service\Monitoring\MonitoringService::setTransactionName()`.
 
+In addition, if no name was provided and no route was resolved, the fallback name will be used. This name is configurable by adding in regular Spryker configuration file the following:
 
+```php
+
+$config[\Spryker\Shared\Opentelemetry\OpentelemetryConstants::FALLBACK_HTTP_ROOT_SPAN_NAME] = 'your_fallback_name';
+
+//Can be used to show HTTP method in the root span name. Default is true.
+$config[\Spryker\Shared\Opentelemetry\OpentelemetryConstants::SHOW_HTTP_METHOD_IN_ROOT_SPAN_NAME] = false;
+
+```
 
 ## Recommendations
 
@@ -545,7 +554,7 @@ Tracing is resource-intensive and can slow down your application. Follow these r
 
 - Use sampling to reduce trace volume:
   - Full traces for every request are unnecessary in most cases 
-  - Refer to the **sampling configuration** section to fine-tune trace collection
+  - Refer to the (sampling configuration)[#sampling-configuration] section to fine-tune trace collection
 
 - Skip unnecessary traces:
   - You can control the probability of generating detailed traces using the `OTEL_TRACE_PROBABILITY` environment variable.  

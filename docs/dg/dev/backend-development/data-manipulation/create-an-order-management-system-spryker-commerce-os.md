@@ -524,7 +524,7 @@ The state machine is set up in the `_before` method. You need to specify the sta
 
 2. The `tryToTransitionOrderItems` method (use only one of these methods) attempts to transition the order item to the next state. When used without an event name, it only checks conditions. To trigger a specific event, pass the event name as a parameter.
 
-3. The last method `assertOrderItemIsInState` asserts that the item is in the expected `b` state.
+3. The `assertOrderItemIsInState` method asserts that the item is in the expected `b` state.
 
 These tests can range from simple to highly complex, depending on your testing needs. If additional items or full order processing are required, you may need to create a custom helper.  
 

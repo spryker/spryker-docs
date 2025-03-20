@@ -344,6 +344,14 @@ Don't use `newrelic` or `blackfire` extensions simultaneously with the `opentele
 
 ## Sampling
 
+{% info_block infoBox %}
+
+Sampling is a mechanism to reduce the number of spans sent with traces. It is present in systems like New Relic too. See [NR tracing documentation](https://docs.newrelic.com/docs/distributed-tracing/concepts/how-new-relic-distributed-tracing-works/) for more details.
+
+Some of traces with default NR setup are not ending in the NR backend, but with OTel implementation traces must not be missed as they contain event data like errors. That is why all traces are present in the backend, but some of them are not detailed.
+
+{% endinfo_block %}
+
 Spryker executes a big number of methods per request, many of them repeatedly. Because OTel uses PHP functions to open and close spans, excessive span creation can introduce unnecessary load on your application. To mitigate this, there're mechanisms to reduce the number of spans sent with traces.  
 
 Sampling occurs three times during execution:  
@@ -419,12 +427,12 @@ All other spans are considered as `regular`.
 You can adjust sampling values by changing environment variables. Increasing these values will generate more detailed traces but may also slow down your application because more spans will be sampled and sent to the collector.
 
 
-| Variable Name                                   | Description                                                                           | Default Value | Allowed range |
-|-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|---------------|---------------|
+| Variable Name                                 | Description                                                                           | Default Value | Allowed range |
+|-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------|---------------|---------------|
 | OTEL_BSP_MIN_SPAN_DURATION_THRESHOLD          | Used in [Closing Span Sampling](#closing-span-sampling) to define a threshold in milliseconds. Spans with an execution time below this value are filtered out. | 20            | 0...100000    |
 | OTEL_BSP_MIN_CRITICAL_SPAN_DURATION_THRESHOLD | Same as a previous one, but used only for critical spans.                                    | 10            | 0...100000    |
 | OTEL_TRACES_SAMPLER_ARG                       | Defines the probability of a web `GET` request trace being detailed.                    | 0.1           | 0...1.0       |
-| `OTEL_CLI_TRACE_PROBABILITY`                    | Defines the probability of a console command trace to be detailed.                    | 0.5           | 0...1.0       |
+| OTEL_CLI_TRACE_PROBABILITY                    | Defines the probability of a console command trace to be detailed.                    | 0.5           | 0...1.0       |
 | OTEL_TRACES_CRITICAL_SAMPLER_ARG              | Defines the probability of a `critical` span to be sampled                               | 0.5           | 0...1.0       |
 | OTEL_TRACES_NON_CRITICAL_SAMPLER_ARG          | Defines the probability of a `non critical` to be sampled                           | 0.1           | 0...1.0       |
 | OTEL_TRACE_PROBABILITY                        | Defines the probability of a `regular` span to be sampled                                | 0.3           | 0...1.0       |
@@ -434,25 +442,16 @@ You can adjust sampling values by changing environment variables. Increasing the
 
 ### Additional configuration
 
-| Variable Name                        | Description                                                                                                                                                                                                                       | Default Value     | Allowed range                                                                                                                                                                                                                 |
-|--------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| OTEL_SERVICE_NAMESPACE             | Defines a service namespace used in resource definition                                                                                                                                                                           | spryker         | any string value                                                                                                                                                                                                              |
-| OTEL_SERVICE_NAME_MAPPING          | A JSON object mapping application URLs to service names; used if no service name is provided via `MonitoringService::setApplicationName()`.                                                                                       
-                       | {}              | A valid JSON object where keys represent service names and values define URL patterns.                                                                                                                                            
-                                                                                                                                                              |
-| OTEL_DEFAULT_SERVICE_NAME          | If no service name is provided and `OTEL_SERVICE_NAME_MAPPING` is not defined, this default name is used.                                                                                                                         
-                                            | Default Service | any valid string                                                                                                                                                                                                                  |
-| OTEL_BSP_SCHEDULE_DELAY            | Defines the delay in milliseconds before sending a batch of spans to the exporter. A higher value results in larger batches.                                                                                                      
-                                      | 1000              | 0...100000000                                                                                                                                                                                                                     |
-| OTEL_BSP_MAX_QUEUE_SIZE            | Defines the maximum number of spans that can be queued for processing in a single request.                                                                                                                                        
-           | 2048              | At least an amount of spans you want to see                                                                                                                                                                                       |
-| OTEL_BSP_MAX_EXPORT_BATCH_SIZE     | Defines the batch size for spans. Once this limit is reached, the batch is sent to the exporter.                                                                                                                                  
-                                                                           | 512               | More than `0` and less than `OEL_BSP_MAX_QUEUE_SIZE`                                                                                                                                                                              |
-| OTEL_SDK_DISABLED                  | If set to `true`, no traces are generated or sent to the backend. The default value is `true`; change only after the collector is up and running.                                                                                 
-| true            | Can be a boolean or a string representation of a boolean, such as `true` or `false`.                                                                                                                                              
-                                                                                                                                                                |
-| OTEL_PHP_DISABLED_INSTRUMENTATIONS | Allows disabling specific parts of additional instrumentation. For example, to exclude all Redis spans, set the value to `spryker_otel_redis`. Multiple instrumentation parts can be disabled by providing a comma-separated list. 
- |           | `spryker_otel_redis`, `spryker_otel_elastica`, `spryker_otel_propel`, `spryker_otel_rabbitmq`, `spryker_otel_guzzle`, or `all`. Coma separated combintations are also allowed, e.g. `spryker_otel_rabbitmq,spryker_otel_propel`    |
+| Variable Name                      | Description                                                                                                                                                                                                                        | Default Value   | Allowed range                                                                                                                                                                                                                   |
+|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| OTEL_SERVICE_NAMESPACE             | Defines a service namespace used in resource definition                                                                                                                                                                            | spryker         | any string value                                                                                                                                                                                                                |
+| OTEL_SERVICE_NAME_MAPPING          | A JSON object mapping application URLs to service names; used if no service name is provided via `MonitoringService::setApplicationName()`.                                                                                        | {}              | A valid JSON object where keys represent service names and values define URL patterns.                                                                                                                                          |
+| OTEL_DEFAULT_SERVICE_NAME          | If no service name is provided and `OTEL_SERVICE_NAME_MAPPING` is not defined, this default name is used.                                                                                                                          | Default Service | any valid string                                                                                                                                                                                                                |
+| OTEL_BSP_SCHEDULE_DELAY            | Defines the delay in milliseconds before sending a batch of spans to the exporter. A higher value results in larger batches.                                                                                                       | 1000            | 0...100000000                                                                                                                                                                                                                   |
+| OTEL_BSP_MAX_QUEUE_SIZE            | Defines the maximum number of spans that can be queued for processing in a single request.                                                                                                                                         | 2048            | At least an amount of spans you want to see                                                                                                                                                                                     |
+| OTEL_BSP_MAX_EXPORT_BATCH_SIZE     | Defines the batch size for spans. Once this limit is reached, the batch is sent to the exporter.                                                                                                                                   | 512             | More than `0` and less than `OEL_BSP_MAX_QUEUE_SIZE`                                                                                                                                                                            |
+| OTEL_SDK_DISABLED                  | If set to `true`, no traces are generated or sent to the backend. The default value is `true`; change only after the collector is up and running.                                                                                  | true            | Can be a boolean or a string representation of a boolean, such as `true` or `false`.                                                                                                                                            |
+| OTEL_PHP_DISABLED_INSTRUMENTATIONS | Allows disabling specific parts of additional instrumentation. For example, to exclude all Redis spans, set the value to `spryker_otel_redis`. Multiple instrumentation parts can be disabled by providing a comma-separated list. |                 | `spryker_otel_redis`, `spryker_otel_elastica`, `spryker_otel_propel`, `spryker_otel_rabbitmq`, `spryker_otel_guzzle`, or `all`. Coma separated combintations are also allowed, e.g. `spryker_otel_rabbitmq,spryker_otel_propel` |
 
 
 ## Custom attributes
@@ -554,7 +553,7 @@ Tracing is resource-intensive and can slow down your application. Follow these r
 
 - Use sampling to reduce trace volume:
   - Full traces for every request are unnecessary in most cases 
-  - Refer to the (sampling configuration)[#sampling-configuration] section to fine-tune trace collection
+  - Refer to the [sampling configuration](#sampling-configuration) section to fine-tune trace collection
 
 - Skip unnecessary traces:
   - You can control the probability of generating detailed traces using the `OTEL_TRACE_PROBABILITY` environment variable.  

@@ -1883,8 +1883,6 @@ entries:
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/proclane.html
                 - title: Data Virtuality
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/data-virtuality.html
-                - title: Usercentrics
-                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/usercentrics.html
                 - title: Mindcurv
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/mindcurv.html
 
@@ -4497,12 +4495,3 @@ entries:
                       - title: Pick picklist items
                         url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-pick-picklist-items.html
 
-      - title: Usercentrics
-        url: /docs/pbc/all/usercentrics/usercentrics.html
-        nested:
-          - title: Integrate Usercentrics
-            url: /docs/pbc/all/usercentrics/integrate-usercentrics.html
-          - title: Configure Usercentrics
-            url: /docs/pbc/all/usercentrics/configure-usercentrics.html
-          - title: Disconnect Usercentrics
-            url: /docs/pbc/all/usercentrics/disconnect-usercentrics.html

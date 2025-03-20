@@ -52,7 +52,7 @@ This document describes the `product_abstract.csv` file to configure [Abstract P
 | new_from |  | Date | | To be considered a new product from this presented date. |
 | new_to |  | String | | To be considered a new product until this presented date. |
 | avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/{{site.version}}/base-shop/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. Add this field if Avalara is used for tax management. |
-<!-- |is_featured |  | String |If it's empty, will be “False”. <br>False = 0<br>True = 1 | Indicates if it's a featured product. |
+<!-- |is_featured |  | String |If it's empty, will be "False". <br>False = 0<br>True = 1 | Indicates if it's a featured product. |
 | icecat_pdp_url |  | String | | Icecat product catalogue URL service. |
 | icecat_license |  | String | | Icecat product catalogue license code. |
 -->

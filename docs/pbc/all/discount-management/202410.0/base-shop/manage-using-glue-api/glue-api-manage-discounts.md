@@ -44,9 +44,9 @@ You can do the following actions on the promotional items via API:
 
 For customers to be able to benefit from promotional offers, they first need to know about them. For this purpose, you can fetch the promotions available for products in a cart and display the possible benefits to the customer. To do so, you can query the cart information and include the `promotional-items` resource relationship. The response provides the abstract SKU of the promoted product and how many of the promotional items customers can add. To present detailed information on promotional products to the customer, you can include the `abstract-products` and `concrete-products` resource relationships.
 
-For details about how to retrieve promotional items for a registered user’s cart, see [Manage carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html).
+For details about how to retrieve promotional items for a registered user's cart, see [Manage carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html).
 
- For details about how to retrieve promotional items for a guest user’s cart, see [Manage guest carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html).
+ For details about how to retrieve promotional items for a guest user's cart, see [Manage guest carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html).
 
 ## Adding applicable promotional items to cart
 
@@ -54,8 +54,8 @@ Once you know what promotional items you can make use of, you can apply the disc
 
 For details about how to retrieve promotional items for a registered user's cart, see [Retrieve discounts in carts of registered users](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-discounts-in-carts-of-registered-users.html).
 
-For details about how to retrieve promotional items for a guest user’s cart, see [Retrieve discounts in guest carts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-discounts-in-guest-carts.html).
+For details about how to retrieve promotional items for a guest user's cart, see [Retrieve discounts in guest carts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-discounts-in-guest-carts.html).
 
 ## Removing promotional items from cart
 
-To remove a discount applied to a promotional product, remove the promotional product(s) from the cart. For details, see Removing Items in [Manage items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#remove-items-from-a-registered-users-cart) and [Manage guest cart items](/docs/pbc/all/cart-and-checkout/{{site.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html#remove-an-item-from-a-guest-cart). If a cart no longer fulfills the conditions of the promotion, all promotional products are removed automatically.
+To remove a discount applied to a promotional product, remove the promotional product from the cart. For details, see Removing Items in [Manage items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#remove-items-from-a-registered-users-cart) and [Manage guest cart items](/docs/pbc/all/cart-and-checkout/{{site.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html#remove-an-item-from-a-guest-cart). If a cart no longer fulfills the conditions of the promotion, all promotional products are removed automatically.

@@ -35,15 +35,15 @@ related:
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
 ---
 
-This endpoint allows retrieving a customer’s orders.
+This endpoint allows retrieving a customer's orders.
 
 ## Installation
 
 For details on the modules that provide the API functionality and how to install them, see [Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html).
 
-## Retrieve customer’s orders
+## Retrieve customer's orders
 
-To retrieve a customer’s orders, send the request:
+To retrieve a customer's orders, send the request:
 
 ***
 `GET` **/customers/*{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*/orders**
@@ -72,7 +72,7 @@ Alternatively, you can retrieve all orders made by a customer through the **/ord
 
 ### Response
 
-<details><summary>Response sample: Retrieve a customer’s order</summary>
+<details><summary>Response sample: Retrieve a customer's order</summary>
 
 ```json
 {

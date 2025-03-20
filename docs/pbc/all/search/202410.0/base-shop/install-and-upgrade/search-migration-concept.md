@@ -19,9 +19,9 @@ redirect_from:
   - /docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html
 ---
 
-Previously, out of the box, Spryker provided support only for Elasticsearch 5 as the search provider.  It was impossible to use major versions of Elasticsearch later because of the breaking changes introduced in its version 6 - primarily because of the removal of mapping types. From the very beginning, Spryker’s search setup included one index per store, which was logically divided into several mapping types to support different types of resources. Besides, there was no easy way to substitute Elasticsearch with alternative search providers.
+Previously, out of the box, Spryker provided support only for Elasticsearch 5 as the search provider. It was impossible to use major versions of Elasticsearch later because of the breaking changes introduced in its version 6 - primarily because of the removal of mapping types. From the very beginning, Spryker's search setup included one index per store, which was logically divided into several mapping types to support different types of resources. Besides, there was no easy way to substitute Elasticsearch with alternative search providers.
 
-Refactoring of the Spryker’s search sub-system has two main goals:
+Refactoring of the Spryker's search sub-system has two main goals:
 
 1. Prepare the infrastructure for replacing Elasticsearch with alternative search providers as well as for using several search providers at a time.
 2. Unblock the ability to use Elasticsearch 6, by changing the way, in which the search data is stored in Elasticsearch - rather than having all the data inside of a single index with multiple mapping types, indexed documents are now stored across multiple Elasticsearch indexes each having its own single mapping type. This is compatible with Elasticsearch 6, which allows a single mapping type per index,  and is a solid foundation for the future migration to Elasticsearch 7, where the concept of mapping types is removed completely.
@@ -30,7 +30,7 @@ This article describes the changes made to add support of Elasticsearch 6 and cr
 
 ## Preparing the infrastructure for replacing Elasticsearch
 
-The central place of the Spryker’s search sub-system is the *Search* module. This module provides APIs for:
+The central place of the Spryker's search sub-system is the *Search* module. This module provides APIs for:
 
 * installing the infrastructure for search (creating/updating Elasticsearch indexes)
 * searching for data
@@ -39,7 +39,7 @@ The central place of the Spryker’s search sub-system is the *Search* module. T
 Old versions of the Search module were highly coupled to Elasticsearch 5 as the search provider.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Migration+Concepts/Current+Search+state+Copy.png)
 
-From now on, all the search provider-specific tasks are performed by the dedicated modules, which implement various plugin interfaces from the new *SearchExtension* module and are hooked to the Search module. The Search module itself is all about receiving requests through its API and routing them to the corresponding search provider-specific module(s) through the delegation mechanism. All Elasticsearch specific code has been deprecated in the Search module and moved to the new *SearchElasticsearch* module.
+From now on, all the search provider-specific tasks are performed by the dedicated modules, which implement various plugin interfaces from the new *SearchExtension* module and are hooked to the Search module. The Search module itself is all about receiving requests through its API and routing them to the corresponding search provider-specific modules through the delegation mechanism. All Elasticsearch specific code has been deprecated in the Search module and moved to the new *SearchElasticsearch* module.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Migration+Concepts/Desired+state+Copy.png)
 
 To achieve this in the backward-compatible way, a new concept called **search context** was introduced, which is represented by the `SearchContextTransfer` object. The search context is needed to determine the search provider, which should respond to a particular search request, as well as to store information/configuration needed to handle this request. The main and mandatory part of this search context is the source identifier. The source identifier is used in two scenarios:
@@ -55,15 +55,15 @@ There are several new interfaces, for which search provider-specific modules may
 
 2. `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextExpanderPluginInterface` (optional). This API is used to expand search context with various vendor specific information/configuration, which is needed to handle a particular search request.
 
-3. `Spryker\Zed\SearchExtension\Dependency\Plugin\InstallPluginInterface`. This API is used to create the infrastructure for a particular search provider (e.g., create indexes and index maps for Elasticsearch).
+3. `Spryker\Zed\SearchExtension\Dependency\Plugin\InstallPluginInterface`. This API is used to create the infrastructure for a particular search provider–for example, create indexes and index maps for Elasticsearch.
 
 ### Creating the infrastructure for search
 
-All the Elasticsearch specific commands in the *Search* module were deprecated and replaced with generic commands (e.g., `search:setup:sources` instead of `search:setup:indexes`), which utilize `Spryker\Zed\SearchExtension\Dependency\Plugin\InstallPluginInterface` to hand over the infrastructure setup tasks to search provider-specific modules.
+All the Elasticsearch specific commands in the *Search* module were deprecated and replaced with generic commands–for example, `search:setup:sources` instead of `search:setup:indexes`, which utilize `Spryker\Zed\SearchExtension\Dependency\Plugin\InstallPluginInterface` to hand over the infrastructure setup tasks to search provider-specific modules.
 
 ### Searching for data
 
-Searching for data is done through the SearchClient. Whenever there is a need to search for some data, implementation of `\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface`, tailored for that specific search, is defined by some satellite module.  It is then passed to `SearchClient::search()` method. Right now, all existing implementations of this interface in the core are bound to Elasticsearch. To provide future support for other search providers all these classes now implement the additional interface `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. This interface could be implemented like this:
+Searching for data is done through the SearchClient. Whenever there is a need to search for some data, implementation of `\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface`, tailored for that specific search, is defined by some satellite module. It is then passed to `SearchClient::search()` method. Right now, all existing implementations of this interface in the core are bound to Elasticsearch. To provide future support for other search providers all these classes now implement the additional interface `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. This interface could be implemented like this:
 
 **Code sample**
 

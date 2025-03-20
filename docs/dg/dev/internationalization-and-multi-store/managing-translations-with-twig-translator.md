@@ -14,7 +14,7 @@ The data stored in the key-value storage can be used for multiple purposes:
 
 ## Using twig translator
 
-Twig Translator uses the data that comes from the Redis key-value storage. The glossary keys store static localized text that’s not likely to be subject of a change, like the caption of a label.
+Twig Translator uses the data that comes from the Redis key-value storage. The glossary keys store static localized text that's not likely to be subject of a change, like the caption of a label.
 
 The format of the glossary keys is as follows: `{store}.{locale}.glossary.translation.{glossary_key}`
 

@@ -27,7 +27,7 @@ The file should have the following parameters:
 | PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | ----------- | ---------- | ----- | ------------- | ----------- | ---- |
 | merchant_reference | &check;             | String   |                   | Unique                       | Identifier of the merchant in the system.                    |
-| country_iso2_code  |               | String   |                   |                              | Currency ISO code.  For more details check [ISO 4217 CURRENCY CODES](https://www.iso.org/iso-4217-currency-codes.html). |
+| country_iso2_code  |               | String   |                   |                              | Currency ISO code. For more details check [ISO 4217 CURRENCY CODES](https://www.iso.org/iso-4217-currency-codes.html). |
 | country_iso3_code  |               | String   |                   |                              | Currency [ISO 3 code](https://www.iban.com/country-codes).   |
 | address1           |               | String   |                   |                              | Address information of the merchant.                         |
 | address2           |               | String   |                   |                              |                                                              |

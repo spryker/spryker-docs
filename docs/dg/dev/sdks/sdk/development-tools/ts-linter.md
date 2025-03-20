@@ -88,7 +88,7 @@ The config for tslint resides in `/tslint.json`.
 To redefine the path for the config, adjust `/frontend/libs/tslint.js` and use other [rules](https://palantir.github.io/tslint/rules/) for the TS Linter.
 {% info_block infoBox %}
 
-The TS Linter rules related to formatting aren’t included in `tslint.json` to avoid duplication with the [Prettier rules](https://www.npmjs.com/package/@spryker/frontend-config.prettier).
+The TS Linter rules related to formatting aren't included in `tslint.json` to avoid duplication with the [Prettier rules](https://www.npmjs.com/package/@spryker/frontend-config.prettier).
 
 {% endinfo_block %}
 
@@ -120,6 +120,6 @@ If you commit without the pre-commit hooks, you should run the TS Linter manuall
 
 {% info_block infoBox %}
 
-Pre-commit hooks weren’t integrated into [B2B](https://github.com/spryker-shop/b2b-demo-shop) and [B2C](https://github.com/spryker-shop/b2c-demo-shop) Demo Shops, only in the [Shop Suite](https://github.com/spryker-shop/suite).
+Pre-commit hooks weren't integrated into [B2B](https://github.com/spryker-shop/b2b-demo-shop) and [B2C](https://github.com/spryker-shop/b2c-demo-shop) Demo Shops, only in the [Shop Suite](https://github.com/spryker-shop/suite).
 
 {% endinfo_block %}

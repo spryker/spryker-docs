@@ -93,7 +93,7 @@ Make sure to fulfill the requirements:
 
 Currently, by default, when you add an image to your document, its size is automatically adjusted so that it does not exceed 50% of the content area. By default, 2-column tables also take 50% of the content area.
 
-If you want your image or a 2-column table to stretch to the content area’s size, wrap the image and the table in `<div>` with the `width-100` class. For example:
+If you want your image or a 2-column table to stretch to the content area's size, wrap the image and the table in `<div>` with the `width-100` class. For example:
 
 To make an image as wide as the content area:
 
@@ -373,7 +373,7 @@ Published table:
 
 ## Anchors
 
-You don’t have to create anchors for headings. Each heading has its default anchor that corresponds to its text. However, still check [step 2](#step-2) of this section to learn about important aspects of linking to anchors.
+You don't have to create anchors for headings. Each heading has its default anchor that corresponds to its text. However, still check [step 2](#step-2) of this section to learn about important aspects of linking to anchors.
 
 Follow these steps to create an anchor and link to it:
 
@@ -420,13 +420,13 @@ Click **More** <span class="inline-img">![google-chrome-more-button](link-to-an-
 
 To add a link to a Wistia video, use the following code: `{% raw %} {% wistia {{wistia video code}} %}{% endraw %}`, where `{video code}` is the Wistia's video code. For example, if you want to add video `https://fast.wistia.com/embed/medias/eiw5ev4gv2/`, your code should be: `{% raw %}{% wistia eiw5ev4gv2 %}{% endraw %}`.
 
-You can also set video’s width and height. For example:
+You can also set video's width and height. For example:
 
 `{% raw %}{% wistia eiw5ev4gv2 960 720 %}{% endraw %}`
 
 where
-960 - is the video’s width
-720 - is the video’s height
+960 - is the video's width
+720 - is the video's height
 
 ## Adding other videos
 To add a link to a video in the .mp4 format that originates not from Wistia, add this block with the link to your video:

@@ -39,7 +39,7 @@ To solve this problem, disable SIP during the installation:
 
 1. Reboot your Mac and hold down the Command+R as it boots.
 2. Wait for entering the recovery environment.
-3. Click on the “Utilities” menu and select “Terminal”.
+3. Click on the **Utilities** menu and select **Terminal**.
 4. Type `csrutil disable` in the terminal and press Enter.
 5. Type `reboot`.
 

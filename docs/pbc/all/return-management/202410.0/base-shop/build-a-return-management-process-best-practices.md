@@ -38,7 +38,7 @@ You can have the following return process:
     4. Prints the return label and adheres it to the box.
     5. Ships the order to the shop.
 
-* When the shop receives the return, the *Shop Administrator* checks the returned items. If all is good and if items meet the shop’s policy for the condition of returned items, the Shop Administrator confirms the return and makes the refund. Otherwise, the Shop Administrator contacts the Buyer and either cancels the return, or clarifies the details and makes the refund.
+* When the shop receives the return, the *Shop Administrator* checks the returned items. If all is good and if items meet the shop's policy for the condition of returned items, the Shop Administrator confirms the return and makes the refund. Otherwise, the Shop Administrator contacts the Buyer and either cancels the return, or clarifies the details and makes the refund.
 ![image](https://confluence-connect.gliffy.net/embed/image/ceba5ea5-5ee2-4e8c-acce-65b64467421c.png?utm_medium=live&utm_source=custom)
 
 This scenario is typical for most B2C models, and its main advantages are:

@@ -168,7 +168,7 @@ class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
 ```
 
 
-You can call methods from Monitoring service, and they will be translated to OTel actions. Some methods act as placeholders because they're are not implemented in OTel, like `\Spryker\Service\Opentelemetry\Plugin\OpentelemetryMonitoringExtensionPlugin::markStartTransaction()`.
+You can call methods from Monitoring service, and they will be translated to OTel actions. Some methods act as placeholders because they're are not implemented in OTel–for example, `\Spryker\Service\Opentelemetry\Plugin\OpentelemetryMonitoringExtensionPlugin::markStartTransaction()`.
 
 
 
@@ -273,7 +273,7 @@ class OpentelemetryConfig extends AbstractBundleConfig
 }
 ```
 
-`\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getOutputDir()` specifies the directory where generated hooks are stored. By default, they are placed in `src/Generated/OpenTelemetry/Hooks/`. The `classmap.php` file, which is used to autoload hook files, is also added to this directory.
+`\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getOutputDir()` specifies the directory where generated hooks are stored. By default, they're placed in `src/Generated/OpenTelemetry/Hooks/`. The `classmap.php` file, which is used to autoload hook files, is also added to this directory.
 
 
 ```php
@@ -451,8 +451,8 @@ You can adjust sampling values by changing environment variables. Increasing the
 | OTEL_SDK_DISABLED                  | If set to `true`, no traces are generated or sent to the backend. The default value is `true`; change only after the collector is up and running.                                                                                 
 | true            | Can be a boolean or a string representation of a boolean, such as `true` or `false`.                                                                                                                                              
                                                                                                                                                                 |
-| OTEL_PHP_DISABLED_INSTRUMENTATIONS | Allows disabling specific parts of additional instrumentation. For example, to exclude all Redis spans, set the value to `spryker_otel_redis`. Multiple instrumentation parts can be disabled by providing a comma-separated list. 
- |           | `spryker_otel_redis`, `spryker_otel_elastica`, `spryker_otel_propel`, `spryker_otel_rabbitmq`, `spryker_otel_guzzle`, or `all`. Coma separated combintations are also allowed, e.g. `spryker_otel_rabbitmq,spryker_otel_propel`    |
+| OTEL_PHP_DISABLED_INSTRUMENTATIONS | Disables specific parts of additional instrumentation. For example, to exclude all Redis spans, set the value to `spryker_otel_redis`. Multiple instrumentation parts can be disabled by providing a comma-separated list. 
+ |           | `spryker_otel_redis`, `spryker_otel_elastica`, `spryker_otel_propel`, `spryker_otel_rabbitmq`, `spryker_otel_guzzle`, `all`, or a combination such as `spryker_otel_rabbitmq,spryker_otel_propel`.    |
 
 
 ## Custom attributes
@@ -521,7 +521,7 @@ Default behavior:
 
 Spryker automatically adjusts the trace name for web requests to reflect the route name. However, if you prefer a different naming convention or don't use the `Monitoring` module, you can define it manually using `\Spryker\Service\Opentelemetry\OpentelemetryService::setRootSpanName()` or `\Spryker\Service\Monitoring\MonitoringService::setTransactionName()`.
 
-In addition, if no name was provided and no route was resolved, the fallback name will be used. This name is configurable by adding in regular Spryker configuration file the following:
+If no name was provided and no route was resolved, a fallback name is used. This name can be configured by adding the following to the regular configuration file:  
 
 ```php
 

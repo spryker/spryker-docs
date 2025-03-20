@@ -39,7 +39,7 @@ Example of how to add subprocesses:
 
 Each process in the `<subprocesses>` section has a start state, one or more final states, and the states are linked to each other in the main state machine XML file.
 
-Subprocesses used by the ForeignPaymentStateMachine01:
+Subprocesses used by ForeignPaymentStateMachine01:
 - `ItemClose01`
 - `ItemReturn01`
 - `ItemSupply01`

@@ -1,6 +1,6 @@
 ---
-title: Create an Order Management System - Spryker Commerce OS
-description: This task-based document shows how to create a full order management process (OMS) using the Spryker state machine and then use it in your shop..
+title: Set up an order management system
+description: This task-based document shows how to create a full order management process (OMS) using the Spryker state machine and then use it in your shop.
 last_updated: Feb 18, 2025
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-oms-and-state-machines-spryker-commerce-os
@@ -8,6 +8,7 @@ originalArticleId: dc0c3c0d-c1af-4949-9645-762c67f03c8a
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
   - /docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html
+  - /docs/dg/dev/backend-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
 related:
   - title: Order management system multi-thread
     link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/state-machine/order-management-system-multi-thread.html
@@ -518,7 +519,11 @@ class OmsIntegrationTest extends Unit
 }
 ```
 
-1. The `_before` method sets up state machine. You need to specify the state machine name and the path to the XML files containing your definitions. You could also set this up inside your test but this would be redundant.
+The order is important as you have to set up the state machine to be used first, then set up the item in the initial state, trigger the event that should move the item to the next state, and finally assert that your code under test is doing what it should do.
+
+This test is based on the following method, which are executed in the provided order:
+
+1. The `_before` method sets up state machine. You need to specify the state machine name and the path to the XML files containing your definitions. You could also set this up inside your test but it would be redundant.
 
 2. The `haveOrderItemInState` method initializes an item in `a` state. This method also accepts a second argument, allowing you to pass custom fields for order item creation. After setting up the item, add the logic that should move it to the next state, such as receiving an async API message or calling a command.  
 
@@ -529,7 +534,7 @@ class OmsIntegrationTest extends Unit
 
 These tests can range from simple to highly complex, depending on your testing needs. If additional items or full order processing are required, you may need to create a custom helper.  
 
-The order is important as you have to set up the state machine to be used first, then set up the item in the initial state, trigger the event that should move the item to the next state, and finally assert that your code under test is doing what it should do.
+
 
 
 ### 6. Optional: Define the happy path of an order item

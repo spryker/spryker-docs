@@ -69,14 +69,13 @@ Make sure the following modules have been installed:
 
 ## 2) Adjust configuration 
 
-### 2.1) Configure the filesystem service for Sitemap: 
+### 2.1) Configure the filesystem service for Sitemap
 
-The Sitemap requires two filesystem configurations, see [Configure Sitemap caching interval](#configure-sitemap-caching-interval) for more details.
+Sitemap requires two filesystem configurations, see [Configure Sitemap caching interval](#configure-sitemap-caching-interval) for more details.
 
-{% info_block warningBox “Warning” %}
+{% info_block warningBox "Storage requirements" %}
 
-Sitemap files can be large, especially for stores with a large product catalog.
-Ensure your S3 storage has sufficient space, and monitor your local cache directory to prevent excessive disk usage.
+Sitemap files can be large, especially for stores with a large product catalog. Make sure your S3 storage has sufficient space and monitor your local cache directory to prevent excessive disk usage.
 
 {% endinfo_block %}
 
@@ -103,17 +102,14 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 ```
 </details>
 
-### 2.2) Configure the base URL and host mappings for Sitemap:
+### 2.2) Configure the base URL and host mappings for Sitemap
 
-{% info_block warningBox "Note" %}
+The following configuration ensure that the application uses the correct hostnames based on the mode it is operating in.
 
-Note, when Dynamic Store is disabled, use the `STORE_TO_YVES_HOST_MAPPING` configuration. This maps specific stores to their respective hostnames.
-When Dynamic Store is enabled, use the `REGION_TO_YVES_HOST_MAPPING` configuration. This maps regions to their respective hostnames.
+* When Dynamic Store is disabled, use the `STORE_TO_YVES_HOST_MAPPING` configuration to map specific stores to their respective hostnames.
+* When Dynamic Store is enabled, use the `REGION_TO_YVES_HOST_MAPPING` configuration to map regions to their respective hostnames.  
 
-{% endinfo_block %}
-
-<details>
-<summary>config/Shared/config_default.php</summary>
+**config/Shared/config_default.php**
 
 ```php
 $config[SitemapConstants::BASE_URL_YVES_PORT] = $yvesPort;
@@ -129,14 +125,14 @@ $config[SitemapConstants::REGION_TO_YVES_HOST_MAPPING] = [
     'US' => getenv('SPRYKER_YVES_HOST_US'),
 ];
 ```
-</details>
 
-These configurations ensure that the application uses the correct hostnames based on the mode it is operating in.
 
-### 2.3) Enable Jenkins job for Sitemap generation:
 
-<details>
-<summary>config/Zed/cronjobs/jenkins.php</summary>
+### 2.3) Enable Jenkins job for Sitemap generation
+
+1. Add the following configuration:
+
+**config/Zed/cronjobs/jenkins.php**
 
 ```php
 $jobs[] = [
@@ -146,25 +142,18 @@ $jobs[] = [
     'enable' => true,
 ];
 ```
-</details>
 
-To apply the updated cron job configuration run the following command in CLI:
+2. Apply the updated cron job configuration:
 
 ```bash
 vendor/bin/console scheduler:setup
 ```
 
-### 2.4) Configure Sitemap caching interval:
+### 2.4) Configure Sitemap caching interval
 
-In the Sitemap module, we introduced a caching mechanism to minimize the number of requests to the S3 Bucket. 
-When the first request is made, a copy of the sitemap file is created in the local file system. For subsequent requests, 
-the cached version is returned instead of fetching the file from S3 again. The cached file remains valid as long as its last 
-updated date is within the interval specified by the `getSitemapFileTimeThreshold()` method, which returns the interval in seconds.
+A caching mechanism in the Sitemap module minimizes the number of requests to the S3 Bucket. When the first request is made, a copy of the sitemap file is stored locally. Subsequent requests use the cached version instead of fetching the file from S3 again. The cached file remains valid if its last updated date is within the interval specified by the `getSitemapFileTimeThreshold()` method, which returns the interval in seconds. By default, this interval is set to 86400 seconds or 24 hours. You can adjust it by extending the `SitemapConfig` class and overriding the `getSitemapFileTimeThreshold()` method.
 
-By default, the interval is set to 86400 seconds (24 hours). You can adjust this interval by extending the `SitemapConfig` class and overriding the `getSitemapFileTimeThreshold()` method.
-
-<details>
-<summary>src/Pyz/Yves/Sitemap/SitemapConfig.php</summary>
+**src/Pyz/Yves/Sitemap/SitemapConfig.php**
 
 ```php
 <?php
@@ -181,13 +170,14 @@ class SitemapConfig extends SprykerSitemapConfig
 }
 ```
 
-### 2.5) Configure Sitemap URL limit:
+### 2.5) Configure Sitemap URL limit
 
-The Sitemap module allows you to set a limit on the number of URLs that can be included in a single sitemap file. 
-This is useful to ensure that the sitemap file does not exceed the maximum allowed size and remains manageable.
 
-The default limit is 50,000 URLs per sitemap file, which is the maximum allowed by the Sitemaps Protocol. 
+The Sitemap module lets you set a limit on the number of URLs that can be included in a single sitemap file. This ensures that the sitemap file doesn't exceed the maximum allowed size and remains manageable.  
+
+By default, the limit is 50,000 URLs per sitemap file, which is the maximum allowed by the Sitemaps Protocol.  
 You can decrease this limit by extending the `SitemapConfig` class and overriding the `getSitemapUrlLimit()` method.
+
 
 ```php
 <?php

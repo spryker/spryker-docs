@@ -120,6 +120,8 @@ entries:
             url: /docs/ca/dev/monitoring/working-with-logs.html
           - title: Spryker Monitoring Integration
             url: /docs/ca/dev/monitoring/spryker-monitoring-integration.html
+          - title: OpenTelemetry instrumentation
+            url: /docs/ca/dev/monitoring/opentelemetry-instrumentation.html
           - title: Monitoring issues and informing about alerts
             url: /docs/ca/dev/monitoring/monitoring-issues-and-informing-about-alerts.html
 

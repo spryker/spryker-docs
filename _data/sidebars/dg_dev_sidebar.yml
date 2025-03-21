@@ -263,7 +263,7 @@ entries:
           url: /docs/dg/dev/backend-development/data-manipulation/data-interaction/replace-module-dependencies.html
 
       - title: Create an Order Management System - Spryker Commerce OS
-        url: /docs/dg/dev/backend-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
+        url: /docs/dg/dev/backend-development/data-manipulation/set-up-an-order-management-system.html
       - title: Queue
         url: /docs/dg/dev/backend-development/data-manipulation/queue/queue.html
         nested:

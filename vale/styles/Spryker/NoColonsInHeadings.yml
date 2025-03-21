@@ -1,0 +1,6 @@
+extends: existence
+message: "Avoid using a colon at the end of a heading."
+level: error
+scope: heading
+tokens:
+  - ':$'

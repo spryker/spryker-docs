@@ -37,7 +37,8 @@ Make sure the following modules have been installed:
 
 ### 2) Set up configuration
 
-Configure the quote fields that are allowed for saving in quote collection in the customer's session. You can specify nested fields.
+1. Configure the quote fields that are allowed to be saved in the quote collection within the customer's session. You can also specify nested fields.
+
 
 **src/Pyz/Client/MultiCart/MultiCartConfig.php**
 
@@ -83,11 +84,11 @@ class MultiCartConfig extends SprykerMultiCartConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that only configured fields are saved in a customer's session.
+Make sure that only the fields you've defined are saved in a customer's session.
 
 {% endinfo_block %}
 
-Configure the cart name for the reorder cart.
+2. Configure the cart name for the reorder cart.
 
 **src/Pyz/Zed/MultiCart/MultiCartConfig.php**
 
@@ -109,7 +110,7 @@ class MultiCartConfig extends SprykerMultiCartConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a customer reorders a cart, the cart name is set to `Reorder from Order {orderReference}`.
+Make sure that, when a customer reorders a cart, the cart name is set to `Reorder from Order {orderReference}`.
 
 {% endinfo_block %}
 

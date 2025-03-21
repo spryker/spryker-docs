@@ -81,7 +81,7 @@ State transitions occur automatically through asynchronous ACP messages, process
 * `PaymentRefund`
 * `PaymentCancel`
 
-The MessageBroker worker runs in the background as a cron job, checking for new messages and triggering OMS events based on the configuration in `Spryker\Zed\Payment\PaymentConfig::getSupportedOrderPaymentEventTransfersList()`. You can change this configuration to fit your project’s needs.  
+The MessageBroker worker runs in the background as a cron job, checking for new messages and triggering OMS events based on the configuration in `Spryker\Zed\Payment\PaymentConfig::getSupportedOrderPaymentEventTransfersList()`. You can change this configuration to fit your project's needs.  
 
 Use this approach if your configuration is similar to the default `ForeignPaymentStateMachine01`, particularly if your OMS doesn't contain slow-running commands that could cause transition failures. The payment status on the app side can change rapidly, which may cause issues if your OMS is not in the correct state for the transition. For example, if a command between `PaymentAuthorized` and `PaymentCapturePending` takes too long to process and a message arrives attempting to transition from `PaymentCapturePending` to `PaymentCaptured`, the OMS may not be able to complete the transition because it is not yet in the required state.  
 

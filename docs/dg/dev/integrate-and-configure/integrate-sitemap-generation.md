@@ -24,7 +24,7 @@ Install the required features:
 | Spryker Core          | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)     |
 
 
-## 1) Install module
+## 1) Install modules
 
 1. Install the required modules using Composer:
 
@@ -194,12 +194,12 @@ class SitemapConfig extends SprykerSitemapConfig
 }
 ```
 
-### 2.6) Configure Sitemap file path:
+### 2.6) Configure Sitemap file path
 
-By default, the sitemap file is stored with a structured path that includes the store name. This configuration ensures that sitemaps are organized per store, preventing conflicts between multiple store environments.
-However, you can redefine this behavior to better suit your project’s needs.
+By default, the sitemap file is stored with a structured path that includes the store name. This ensures sitemaps are organized per store, preventing conflicts in multi-store environments. You can change this behavior to fit your project's requirements.  
 
-The following example overrides the default Spryker configuration by redefining the `getFilePath()`. This allows you to control how sitemap files are organized and stored.
+The following example overrides the default configuration by redefining `getFilePath()`.
+
 
 ```php
 <?php
@@ -249,8 +249,7 @@ Register the following plugins to enable widgets:
 | SitemapWidget | Provides functionality to display a sitemap. |               | Spryker\Yves\Sitemap\Widget\SitemapWidget |
 
 
-<details>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
 
 ```php
 <?php
@@ -271,7 +270,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-</details>
 
 ## 5) Set up the behavior
 
@@ -281,11 +279,11 @@ Register the following plugins:
 |------------------------------------------|-------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------|
 | SitemapRouteProviderPlugin               | Provides routing for sitemap generation.  |                                                                              | Spryker\Yves\Sitemap\Plugin\Router                         |
 | SitemapGenerateConsole                   | Console command to generate sitemaps.     |                                                                              | Spryker\Zed\Sitemap\Communication\Console                  |
-| CategoryNodeSitemapDataProviderPlugin    | Provides sitemap data for category nodes. | Expects [CategoryStorage](#install-the-optional-modules) module installed.   | Spryker\Zed\CategoryStorage\Communication\Plugin\Sitemap   |
-| CmsPageSitemapDataProviderPlugin         | Provides sitemap data for CMS pages.      | Expects [CmsStorage](#install-the-optional-modules) module installed.        | Spryker\Zed\CmsStorage\Communication\Plugin\Sitemap        |
-| MerchantSitemapDataProviderPlugin        | Provides sitemap data for merchants.      | Expects [MerchantStorage](#install-the-optional-modules) module installed.   | Spryker\Zed\MerchantStorage\Communication\Plugin\Sitemap   |
-| ProductAbstractSitemapDataProviderPlugin | Provides sitemap data for product.        | Expects [ProductStorage](#install-the-optional-modules) module installed.    | Spryker\Zed\ProductStorage\Communication\Plugin\Sitemap    |
-| ProductSetSitemapDataProviderPlugin      | Provides sitemap data for product sets.   | Expects [ProductSetStorage](#install-the-optional-modules) module installed. | Spryker\Zed\ProductSetStorage\Communication\Plugin\Sitemap |
+| CategoryNodeSitemapDataProviderPlugin    | Provides sitemap data for category nodes. | Requires the [CategoryStorage](#install-modules) module.   | Spryker\Zed\CategoryStorage\Communication\Plugin\Sitemap   |
+| CmsPageSitemapDataProviderPlugin         | Provides sitemap data for CMS pages.      | Requires the [CmsStorage](#install-modules) module.        | Spryker\Zed\CmsStorage\Communication\Plugin\Sitemap        |
+| MerchantSitemapDataProviderPlugin        | Provides sitemap data for merchants.      | Requires the [MerchantStorage](#install-modules) module.   | Spryker\Zed\MerchantStorage\Communication\Plugin\Sitemap   |
+| ProductAbstractSitemapDataProviderPlugin | Provides sitemap data for products.        | Requires the [ProductStorage](#install-modules) module.    | Spryker\Zed\ProductStorage\Communication\Plugin\Sitemap    |
+| ProductSetSitemapDataProviderPlugin      | Provides sitemap data for product sets.   | Requires the [ProductSetStorage](#install-modules) module. | Spryker\Zed\ProductSetStorage\Communication\Plugin\Sitemap |
 
 <details>
 <summary>src/Pyz/Yves/Router/RouterDependencyProvider.php</summary>
@@ -369,14 +367,12 @@ class SitemapDependencyProvider extends SprykerSitemapDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-In order to verify that the Sitemap module has been successfully integrated follow these steps:
-
-1. Run the following command to generate the sitemap:
+Generate the sitemap:
 
 ```bash
 vendor/bin/console sitemap:generate
 ```
 
-2. Make sure that you can access the sitemap by sending a request to the following URL `https://yves.eu.mysprykershop.com/sitemap.xml`  
+Make sure you can access the sitemap by sending a request to `https://yves.eu.mysprykershop.com/sitemap.xml` 
 
 {% endinfo_block %}

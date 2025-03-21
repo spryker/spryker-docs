@@ -26,16 +26,16 @@ These are the header fields included in the `order.csv` file:
 | 5 | order_store | No | String |  | The name of the store where the order was place. |
 | 6 | email | No | String |  | E-mail of the customer. |
 | 7 | salutation | No | String |  | Salutation used with the customer. |
-| 8 | first_name | No | String |  | Customer’s first name. |
-| 9 | last_name | No | String |  | Customer’s last name. |
+| 8 | first_name | No | String |  | Customer's first name. |
+| 9 | last_name | No | String |  | Customer's last name. |
 | 10 | order_note | No | String |  | Note added to the order. |
 | 11 | currency_iso_code | No | String |  | Indicates the currency used in the order. |
 | 12 | price_mode | No | Enum (NET_MODE, GROSS_MODE) |  | Indicates if the order was calculated in a net or gross price mode. |
-| 13 | 	locale_name | No | String |  | Sales order’s locale used during the checkout. The Sales Order has a relation to the Locale which was used during the checkout so that the same locale can be used for communication. |
+| 13 | 	locale_name | No | String |  | Sales order's locale used during the checkout. The Sales Order has a relation to the Locale which was used during the checkout so that the same locale can be used for communication. |
 | 14 | billing_address_salutation | No | ENUM (Mr, Mrs, Dr, Ms) |  | Customer salutation used with the billing address. |
-| 15 | billing_address_first_name | Yes | String |  | Customer’s first name used in the billing address. |
-| 16 | billing_address_last_name | Yes | String |  | Customer’s last name used in the billing address. |
-| 17 | billing_address_middle_name | No | String |  | Customer’s middle name used in the billing address. |
+| 15 | billing_address_first_name | Yes | String |  | Customer's first name used in the billing address. |
+| 16 | billing_address_last_name | Yes | String |  | Customer's last name used in the billing address. |
+| 17 | billing_address_middle_name | No | String |  | Customer's middle name used in the billing address. |
 | 18 | billing_address_email | No | String |  | E-mail used with the billing address. |
 | 19 | billing_address_cell_phone | No | String |  | Cell phone used with the billing address. |
 | 20 | billing_address_phone | No | String |  | Phone used with the billing address. |

@@ -24,7 +24,7 @@ Fulfillment App is an app used by warehouse users to fulfill orders. When a cust
 
 ## Warehouse assignment
 
-By default, when a customer orders several items of the same SKU, the requested item’s stock is checked in all of the store's warehouses. The warehouses are sorted in the descending order of how much stock of the item they are holding. The warehouse holding the biggest stock of the item is assigned to the order. The warehouse holding the never-out-of-stock item quantity is considered to be holding the biggest stock.
+By default, when a customer orders several items of the same SKU, the requested item's stock is checked in all of the store's warehouses. The warehouses are sorted in the descending order of how much stock of the item they are holding. The warehouse holding the biggest stock of the item is assigned to the order. The warehouse holding the never-out-of-stock item quantity is considered to be holding the biggest stock.
 
 In some cases, the ordered quantity might not be available in the warehouse holding the biggest stock of the item. Then, the warehouse fulfills the order partially. The remaining quantity is fulfilled by the the warehouse holding the next biggest stock of the item. For example, the customer orders 100 tablets. The store's warehouses hold the following stock:
 

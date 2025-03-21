@@ -104,7 +104,7 @@ To redefine the path for the config file, adjust `/frontend/libs/formatter.js`  
 const configPath = 'node_modules/@spryker/frontend-config.prettier/.prettierrc.json';
 ```
 
-The Prettier formatter uses the ignore file `/.prettierignore` that includes directories and files where the formatter shouldn’t be executed.
+The Prettier formatter uses the ignore file `/.prettierignore` that includes directories and files where the formatter shouldn't be executed.
 
 ## CI checks and pre-commit hook
 
@@ -131,6 +131,6 @@ If you commit without the pre-commit hooks, you should run the Formatter manuall
 
 {% info_block infoBox %}
 
-Pre-commit hooks weren’t integrated into [B2B](https://github.com/spryker-shop/b2b-demo-shop) and [B2C](https://github.com/spryker-shop/b2c-demo-shop) demo shops, only in the [Shop Suite](https://github.com/spryker-shop/suite).
+Pre-commit hooks weren't integrated into [B2B](https://github.com/spryker-shop/b2b-demo-shop) and [B2C](https://github.com/spryker-shop/b2c-demo-shop) demo shops, only in the [Shop Suite](https://github.com/spryker-shop/suite).
 
 {% endinfo_block %}

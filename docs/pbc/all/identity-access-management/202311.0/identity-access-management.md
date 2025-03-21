@@ -50,7 +50,7 @@ Depending on your access and security requirements, you can have one of the foll
 #### Registration is required only with the SSO service
 
 If a user logs in with an SSO but does not have a Back Office account, the following happens:
-* Based on the third-party system’s user data, such as first name, last name, and email, a Back Office account is created.
+* Based on the third-party system's user data, such as first name, last name, and email, a Back Office account is created.
 * The user is assigned to the default user group.
 * The user is logged into the Back Office.
 
@@ -73,7 +73,7 @@ For details about Glue API authentication, see [Glue API authentication and auth
 
 The feature has the following functional constraint:
 
-Each of the identity managers is an ECO module that must be developed separately. After the module development, the identity manager’s roles and permissions must be mapped to the roles and permissions in Spryker. The mapping is always implemented at the project level.
+Each of the identity managers is an ECO module that must be developed separately. After the module development, the identity manager's roles and permissions must be mapped to the roles and permissions in Spryker. The mapping is always implemented at the project level.
 
 
 

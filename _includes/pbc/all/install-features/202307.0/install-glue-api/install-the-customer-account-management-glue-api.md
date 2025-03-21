@@ -750,7 +750,7 @@ Ensure that the addresses resource relationship is registered correctly:
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you’ve set up `AccessTokenRestRequestValidatorPlugin`:
+Ensure that you've set up `AccessTokenRestRequestValidatorPlugin`:
 
 1. Send the `POST https://glue.mysprykershop.com/refresh-tokens` request without the `Authorization` header or with an outdated or incorrect authentication token.
 
@@ -787,7 +787,7 @@ Ensure that you’ve set up `AccessTokenRestRequestValidatorPlugin`:
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you’ve set up `FormatAuthenticationErrorResponseHeadersPlugin`:
+Ensure that you've set up `FormatAuthenticationErrorResponseHeadersPlugin`:
 
 1. Retrieve an authentication token for a user.
 
@@ -798,7 +798,7 @@ Ensure that you’ve set up `FormatAuthenticationErrorResponseHeadersPlugin`:
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you’ve set up `RestUserFinderByAccessTokenPlugin`:
+Ensure that you've set up `RestUserFinderByAccessTokenPlugin`:
 
 1. Retrieve an authentication token for a user.
 
@@ -811,7 +811,7 @@ Ensure that you’ve set up `RestUserFinderByAccessTokenPlugin`:
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you’ve set up `OauthRefreshTokenSaverPlugin`:
+Ensure that you've set up `OauthRefreshTokenSaverPlugin`:
 
 1. Send the request: `POST https://glue.mysprykershop.com/access-tokens`.
 
@@ -830,7 +830,7 @@ Ensure that you’ve set up `OauthRefreshTokenSaverPlugin`:
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you’ve set up `OauthRefreshTokenReaderPlugin` and `OauthRefreshTokenRevokerPlugin`:
+Ensure that you've set up `OauthRefreshTokenReaderPlugin` and `OauthRefreshTokenRevokerPlugin`:
 
 1. Send the request: `DELETE https://glue.mysprykershop.com/refresh-tokens/{% raw %}{{{% endraw %}refresh_token}`[.](#)
 2. Check that the refresh token has been revoked: run the following SQL query and check that the `spy_oauth_refresh_token::revoked_at` database field is not empty.
@@ -840,7 +840,7 @@ Ensure that you’ve set up `OauthRefreshTokenReaderPlugin` and `OauthRefreshTok
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you’ve set up `OauthRefreshTokensReaderPlugin` and `OauthRefreshTokensRevokerPlugin`:
+Ensure that you've set up `OauthRefreshTokensReaderPlugin` and `OauthRefreshTokensRevokerPlugin`:
 
 1. Prepare several refresh tokens.
 
@@ -859,7 +859,7 @@ Check that the `spy_oauth_refresh_token::revoked_at` values of all the records r
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you’ve set up `OauthRefreshTokenCheckerPlugin`:
+Ensure that you've set up `OauthRefreshTokenCheckerPlugin`:
 
 1. Send the following request with a revoked refresh token:
    `POST https://glue.mysprykershop.com/refresh-tokens`
@@ -894,7 +894,7 @@ Ensure that you’ve set up `OauthRefreshTokenCheckerPlugin`:
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you’ve set up `OauthRefreshTokenRemoverPlugin`:
+Ensure that you've set up `OauthRefreshTokenRemoverPlugin`:
 
 1. Delete expired refresh tokens:
 
@@ -902,13 +902,13 @@ Ensure that you’ve set up `OauthRefreshTokenRemoverPlugin`:
    console oauth:refresh-token:remove-expired
    ```
 
-2. Check that all the expired refresh tokens older than defined by the removal interval you’ve configured in `Spryker\Shared\Oauth\OauthConfig::getRefreshTokenRetentionInterval()` were deleted.
+2. Check that all the expired refresh tokens older than defined by the removal interval you've configured in `Spryker\Shared\Oauth\OauthConfig::getRefreshTokenRetentionInterval()` were deleted.
 
 {% endinfo_block %}
 
 
 {% info_block warningBox "Verification" %}
 
-To make sure that you’ve activated `AddressByCheckoutDataResourceRelationshipPlugin`, send the `POST https://glue.mysprykershop.com/checkout-data?include=addresses` request and check that the response contains the information from the addresses resource.
+To make sure that you've activated `AddressByCheckoutDataResourceRelationshipPlugin`, send the `POST https://glue.mysprykershop.com/checkout-data?include=addresses` request and check that the response contains the information from the addresses resource.
 
 {% endinfo_block %}

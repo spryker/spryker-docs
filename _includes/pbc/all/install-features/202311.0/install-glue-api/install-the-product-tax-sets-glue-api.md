@@ -61,7 +61,7 @@ Run the following command:
 console tax-sets:uuid:update
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the uuid field is filled out for all records in the `spy_tax_set` table. You can run the following SQL-query for it and make sure that the result is 0 records.<br>`SELECT COUNT(*
 {% endinfo_block %} FROM spy_tax_set WHERE uuid IS NULL;`)

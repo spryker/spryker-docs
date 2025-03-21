@@ -88,7 +88,7 @@ vendor/bin/console transfer:generate
 npm run zed
 ```
 
-8. Update Zed’s navigation cache to show the new items for the Product Category Filter management user interface:
+8. Update Zed's navigation cache to show the new items for the Product Category Filter management user interface:
 ```shell
 vendor/bin/console application:build-navigation-cache
 ```

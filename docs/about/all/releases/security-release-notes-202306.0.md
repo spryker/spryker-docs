@@ -478,7 +478,7 @@ composer show spryker/merchant-profile-gui # Verify the version
 
 ## Outdated third-party library guzzlehttp/psr7
 
-An outdated version of the `guzzlehttp/psr7` library was identified to affect Spryker’s applications. The version in use, 2.4.3, was affected by a publicly known vulnerability that could let an attacker sneak in a newline (\n) into both the header names and values (CVE-2023-29197).
+An outdated version of the `guzzlehttp/psr7` library was identified to affect Spryker's applications. The version in use, 2.4.3, was affected by a publicly known vulnerability that could let an attacker sneak in a newline (\n) into both the header names and values (CVE-2023-29197).
 
 ### Affected modules
 
@@ -525,7 +525,7 @@ composer show spryker/oauth-auth0 # Verify the version
 
 ## Missing security HTTP headers
 
-Security-related HTTP headers were missing from Spryker’s applications. Adding these headers improves the overall security posture of the applications because they implement an additional layer of protection against common web application attacks.
+Security-related HTTP headers were missing from Spryker's applications. Adding these headers improves the overall security posture of the applications because they implement an additional layer of protection against common web application attacks.
 
 ### Affected modules
 

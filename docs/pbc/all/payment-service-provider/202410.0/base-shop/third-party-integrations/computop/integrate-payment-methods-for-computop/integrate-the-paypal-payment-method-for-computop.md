@@ -61,7 +61,7 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 ## PayPal Payment Flow:
 
 1.There is a radio button on "Payment" step. After submit order customer will be redirected to the to Computop (Paygate form implementation). The GET consists of 3 parameters:
-  - Data (encrypted parameters, e.g. currency, amount, description)
+  - Data (encrypted parameters, such as currency, amount, or description)
   - Length (length of `data` parameter)
   - Merchant id (assigned by Computop)
 2. By default, on success the customer  will be redirected to "Success" step. The response contains `payId`. On error, the customer  will be redirected to "Payment" step with the error message by default. Response data is stored in the DB.

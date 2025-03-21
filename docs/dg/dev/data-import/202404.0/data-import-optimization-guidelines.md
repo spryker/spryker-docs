@@ -215,8 +215,8 @@ Example classes are going to be replaced with a Core CTE solution.
 When we are facing some batch operation, we need to think about big data and performance under heavy loading, we are not allowed to write same code that only does the job, it needs to be scalable and fast for high usages. Below you can find our main points:
 
 * Create batch queries and processes
-* Don’t use ORM for batch processing as it’s slow by design
-* Don’t run separated queries for each data-set
-* Don’t call any facade logic if they are slow or run internal queries
+* Don't use ORM for batch processing as it's slow by design
+* Don't run separated queries for each data-set
+* Don't call any facade logic if they are slow or run internal queries
 * Release memory after each bulk operations to prevent memory issues
 * Use CTE technique (supported by PostgreSQL or MySQL >= 8, and MariaDB >= 10.2)

@@ -23,7 +23,7 @@ The following diagram illustrates the dependencies between the modules for the *
 | PriceProductOfferVolumeGui | Backoffice UI Interface for managing volume prices for product offers.    |
 | PriceProductOfferExtension | Provides plugin interfaces for extending `PriceProductOffer` module functionality.   |
 | PriceProductOfferStorageExtension | Provides plugin interfaces used by Price Product Offer Storage bundle.    |
-| PriceProductOfferVolumesRestApi | Provides plugin(s) to add product-offer-volume-prices to the product-offer-prices.   |
+| PriceProductOfferVolumesRestApi | Provides plugins to add `product-offer-volume-prices` to the `product-offer-prices`.   |
 | ProductOfferPricesRestApi | Provides Rest API endpoints to manage product offer prices.   |
 | ProductOfferPricesRestApiExtension | Provides plugin interfaces for extending the `ProductOfferPricesRestApi` module.    |
 | Price | Handles product pricing and provides plugins for products to populate prices.  |

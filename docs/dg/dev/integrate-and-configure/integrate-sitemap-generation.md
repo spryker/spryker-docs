@@ -5,27 +5,28 @@ last_updated: March 4, 2025
 template: howto-guide-template
 ---
 
-{% info_block warningBox "Warning" %}
+{% info_block warningBox "" %}
 
 The Sitemap module is currently in beta, but an official release is coming soon. Feel free to explore the available documentation. We'll continue updating it with details on future releases.
 
 {% endinfo_block %}
 
-The Sitemap module helps in generating sitemaps for your Spryker application, which can improve the SEO of your site by making it easier for search engines to index your pages.
-The Sitemap module provides various configuration options to customize the sitemap generation process according to your specific needs.
-This document describes how to integrate Sitemap module into a Spryker project.
 
-### Prerequisites
+The Sitemap module generates sitemaps for your Spryker application, enhancing SEO by helping search engines index your pages efficiently. It offers various configuration options to customize sitemap generation. This document explains how to integrate the Sitemap module into a Spryker project.
 
-To start the integration, install the necessary features:
+
+## Prerequisites
+
+Install the required features:
 
 | NAME                  | VERSION          | INSTALLATION GUIDE                                                                                                                                               |
 |-----------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core          | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)     |
 
-## 1) Install modules using Composer
 
-### 1.1) Install the required modules:
+## 1) Install module
+
+1. Install the required modules using Composer:
 
 ```bash
 composer require spryker/sitemap:"^0.1.0" spryker/sitemap-extension:"^1.0.0" spryker-shop/shop-ui:"^1.85.0" --update-with-dependencies
@@ -43,9 +44,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-### 1.2) Install the optional modules:
-
-The following modules are not mandatory, but installing them enhances the Sitemap functionality by allowing it to include additional types of data.
+2. Optional: To enable Sitemap functionality to include additional types of data, install the following modules using Composer:
 
 ```bash
 composer require spryker/category-storage:"^2.10.0" spryker/cms-storage:"^2.8.0" spryker/merchant-storage:"^1.3.0" spryker/product-set-storage:"^1.11.0" spryker/product-storage:"^1.42.0" --update-with-dependencies

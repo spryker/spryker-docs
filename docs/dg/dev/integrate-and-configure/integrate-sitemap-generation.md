@@ -105,12 +105,12 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 ```
 </details>
 
-### 2.2) Configure the base URL and host mappings for Sitemap
+### 2.2) Configure the base URL and host mappings for sitemap
 
-The following configuration ensure that the application uses the correct hostnames based on the mode it is operating in.
+The following configuration ensures that the application uses the correct hostnames based on the mode it's operating in:
 
-* When Dynamic Store is disabled, use the `STORE_TO_YVES_HOST_MAPPING` configuration to map specific stores to their respective hostnames.
-* When Dynamic Store is enabled, use the `REGION_TO_YVES_HOST_MAPPING` configuration to map regions to their respective hostnames.  
+* When Dynamic Store is disabled, use the `STORE_TO_YVES_HOST_MAPPING` configuration to map specific stores to their respective hostnames
+* When Dynamic Store is enabled, use the `REGION_TO_YVES_HOST_MAPPING` configuration to map regions to their respective hostnames
 
 **config/Shared/config_default.php**
 
@@ -131,7 +131,7 @@ $config[SitemapConstants::REGION_TO_YVES_HOST_MAPPING] = [
 
 
 
-### 2.3) Enable Jenkins job for Sitemap generation
+### 2.3) Add a Jenkins job for sitemap generation
 
 1. Add the following configuration:
 
@@ -152,7 +152,7 @@ $jobs[] = [
 vendor/bin/console scheduler:setup
 ```
 
-### 2.4) Configure Sitemap caching interval
+### 2.4) Configure sitemap caching interval
 
 A caching mechanism in the Sitemap module minimizes the number of requests to the S3 Bucket. When the first request is made, a copy of the sitemap file is stored locally. Subsequent requests use the cached version instead of fetching the file from S3 again. The cached file remains valid if its last updated date is within the interval specified by the `getSitemapFileTimeThreshold()` method, which returns the interval in seconds. By default, this interval is set to 86400 seconds or 24 hours. You can adjust it by extending the `SitemapConfig` class and overriding the `getSitemapFileTimeThreshold()` method.
 
@@ -370,7 +370,7 @@ class SitemapDependencyProvider extends SprykerSitemapDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Generate the sitemap:
+Generate a sitemap:
 
 ```bash
 vendor/bin/console sitemap:generate

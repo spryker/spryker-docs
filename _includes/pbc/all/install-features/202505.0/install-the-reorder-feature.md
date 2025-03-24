@@ -365,6 +365,8 @@ Make sure that that reordering with different types of products is available for
 
 ## Install feature frontend
 
+To install the feature frontend, take the following steps.
+
 ### Prerequisites
 
 Please overview and install the necessary features before beginning the integration step.

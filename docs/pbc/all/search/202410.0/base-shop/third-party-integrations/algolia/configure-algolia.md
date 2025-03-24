@@ -7,15 +7,16 @@ redirect_from:
   - /docs/pbc/all/search/202311.0/third-party-integrations/configure-algolia.html
   - /docs/pbc/all/search/202311.0/base-shop/third-party-integrations/configure-algolia.html
 ---
-Once you have [integrated the Algolia app](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html), you can configure it.
+
+This document describes how to connect your Algolia account with Spryker and configure product export.
 
 ## Prerequisites
 
-To sign up for Algolia, contact your Customer Success Manager.
+* To sign up for Algolia, contact your Customer Success Manager
+* [Integrate the Algolia app](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html)
+
 
 ## Configure Algolia
-
-To configure Algolia, do the following:
 
 1. In your store's Back Office, go to **Apps**.
 2. In **App Composition Platform Catalog**, click **Algolia**. This takes you to the Algolia app details page.
@@ -36,23 +37,20 @@ To configure Algolia, do the following:
 
 ![algolia-settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-settings.png)
 
-11. If your store model includes products without prices, you need to select **Products without prices**.
-  This setting is used for the initial index setup in Algolia and can't be changed later.
-  If products has prices it should be unselected and means prices is required in products.
+11. Optional: If your store model has products without prices, select **Products without prices**.
+  This setting is used for the initial index setup of Algolia and can't be changed later. Select this only if products without prices can exist in the application.
 12. To enable Algolia, select **Use Algolia instead of Elasticsearch**.
   After you save the settings, this enables Algolia search on your frontends: Yves or Glue API-based application. You can also enable it later, for example–after all your products are synced with Algolia.
 13. Click **Save**.
 
-The Algolia app is now added to your store and starts exporting your valid product data automatically.
+The Algolia app is now added to your store and starts exporting product data. For a product to be exported, it must fulfill the following requirements:
 
-Validated product for exporting:
-- The product should be `approved` and `isActive`.
-- The product should have `prices` if you use products with price.
-- If you selected **Products without prices** in configuration, `prices` are not required.
+- Product is `approved` and `isActive`
+- Product has `prices` unless **Products without prices** is selected
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
-Depending on the size of your product catalog, Algolia can take from few minutes to several hours to export it. The average export speed is around 300 products per minute.
+Depending on the size of your product catalog, Algolia can take from few minutes to several hours to export it. The average export speed is 300 products per minute.
 
 {% endinfo_block %}
 

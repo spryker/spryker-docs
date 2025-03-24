@@ -1,5 +1,3 @@
-# Install the Reorder feature
-
 This document describes how to install the Reorder feature.
 
 ## Install feature core

@@ -1,5 +1,5 @@
 ---
-title: Integrate Sitemap module
+title: Integrate sitemap generation
 description: Learn the prerequisites and how to enable and integrate Sitemap module into a Spryker based project.
 last_updated: March 4, 2025
 template: howto-guide-template
@@ -44,7 +44,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-2. Optional: To enable Sitemap functionality to include additional types of data, install the following modules using Composer:
+2. Optional: To enable sitemap functionality to include additional types of data, install the following modules using Composer:
 
 ```bash
 composer require spryker/category-storage:"^2.10.0" spryker/cms-storage:"^2.8.0" spryker/merchant-storage:"^1.3.0" spryker/product-set-storage:"^1.11.0" spryker/product-storage:"^1.42.0" --update-with-dependencies
@@ -69,7 +69,10 @@ Make sure the following modules have been installed:
 
 ## 2) Adjust configuration 
 
-### 2.1) Configure the filesystem service for Sitemap
+
+Adjust the following configuration.
+
+### 2.1) Configure the filesystem service for sitemap
 
 Sitemap requires two filesystem configurations, see [Configure Sitemap caching interval](#configure-sitemap-caching-interval) for more details.
 
@@ -373,6 +376,6 @@ Generate the sitemap:
 vendor/bin/console sitemap:generate
 ```
 
-Make sure you can access the sitemap by sending a request to `https://yves.eu.mysprykershop.com/sitemap.xml` 
+Make sure you can access the sitemap by sending a request to `https://yves.eu.mysprykershop.com/sitemap.xml`.
 
 {% endinfo_block %}

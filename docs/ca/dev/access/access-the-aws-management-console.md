@@ -15,6 +15,13 @@ This document describes how to access AWS Management Console as an [Identity and
 
 We create the requested IAM accounts during the initial setup. If you need to create more accounts create an Infrastructure Change/Access Management Request in the [Support Portal](https://support.spryker.com).
 
+{% info_block infoBox "Multifactor authentication" %}
+
+Please note that Spryker is enforcing Multi-Factor Authentication (MFA) and password policy . If your API access does not work please login to AWS Management Console and verify if your password is valid and MFA enabled.
+For details on setting up MFA check [Setting up Multi-Factor Authentication](/docs/ca/dev/security/set-up-multi-factor-authentication.html)
+
+{% endinfo_block %}
+
 To sign in to the AWS Management Console as an IAM user:
 
 1. In your browser, open the sign-in URL provided by your administrator.

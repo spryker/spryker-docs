@@ -42,6 +42,10 @@ However, our team only tested the following payment methods:
 - US, UK, CA, AU, NZ: AfterPay
 
 
+## Browser Back Button Handling
+
+When using Stripe's hosted payment page, customers might use their browser's back button during the payment process. This can lead to issues with order persistence and stock management. To properly handle these scenarios and prevent duplicate orders, see [Hosted Payment Page Back Button Handling](../../hosted-payment-page-back-button-handling.md).
+
 ## Current limitations
 
 * The Stripe App has limited or no support for multi-capture. Partial capture of payment for orders with multiple items isn't covered. So, payments can't be partially canceled. One payment intent is created per order, and the payment for the order can either be authorized, captured, or cancelled from Stripe's side.

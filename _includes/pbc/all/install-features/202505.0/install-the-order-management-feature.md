@@ -5,7 +5,7 @@ This document describes how to install the [Order Management](/docs/pbc/all/orde
 
 {% info_block warningBox "Included features" %}
 
-The following feature integration guide expects the basic feature to be in place. It only adds the following functionalities:
+This guide expects the basic feature to be in place. It only adds the following functionalities:
 
 - Order cancellation behavior
 - Show `display names` for order item states
@@ -650,9 +650,10 @@ By default, in state machine names, the following applies:
 {% endinfo_block %}
 
 1. Append the glossary according to your configuration:
-<details><summary>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
 
-**src/data/import/glossary.csv**
+<details>
+  <summary>src/data/import/glossary.csv</summary>
+
 ```csv
 sales.error.customer_order_not_found,Customer Order not found.,en_US
 sales.error.customer_order_not_found,Die Bestellung wurde nicht gefunden.,de_DE
@@ -695,6 +696,7 @@ order_custom_reference.form.placeholder,Ihre Bestellreferenz hinzufügen,de_DE
 order_custom_reference.save,Save,en_US
 order_custom_reference.save,Speichern,de_DE
 ```
+
 </details>
 
  2. Import data:
@@ -1073,7 +1075,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 
 1. In the Back Office, go to **Sales**>**Orders**.
 2. Click **View** next to an order.
-Make sure that, on the order details page, the *Custom Order Reference* section with the **Edit Reference** button is displayed.
+Make sure that, on the order details page, the **Custom Order Reference** section with the **Edit Reference** button is displayed.
 
 {% endinfo_block %}
 
@@ -1174,7 +1176,8 @@ Make sure that, on the following Storefront pages, even if the `display` propert
 
 2. Make sure the `sales-orders` resource is returned as a relationship to the `picking-list-items` resource.
 
-`GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}?include=picking-list-items,sales-orders`
+Request example: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}?include=picking-list-items,sales-orders`
+
 <details>
   <summary>Response body example</summary>
 ```json
@@ -1284,7 +1287,7 @@ Make sure the following modules have been installed:
 
 1. Append the glossary according to your configuration:
 
-```
+```csv
 order_cancel_widget.cancel_order,Cancel Order,en_US
 order_cancel_widget.cancel_order,Bestellung stornieren,de_DE
 order_cancel_widget.order.cancelled,Order was canceled successfully.,en_US
@@ -1338,7 +1341,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sur the `yves.mysprykershop.com/order/cancel` route is available for POST requests.
+Make sure the `yves.mysprykershop.com/order/cancel` route is available for POST requests.
 
 {% endinfo_block %}
 

@@ -13,7 +13,7 @@ list to cover all possible integration scenarios.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                      |
 |------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

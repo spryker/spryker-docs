@@ -21,8 +21,8 @@ Install the required features:
 
 | PLUGIN                                   | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                            |
 |------------------------------------------|--------------------------------------------------------------|---------------|------------------------------------------------------|
-| ProductBundleItemCountQuantityPlugin     | Returns combined quantity of all items in the cart.          | None          | Spryker\Client\ProductBundle\Plugin\Cart             |
-| SanitizeBundleItemsBeforeQuoteSavePlugin | Sanitizes quote bundleItems when all items removed from cart | None          | Spryker\Zed\ProductBundle\Communication\Plugin\Quote |
+| ProductBundleItemCountQuantityPlugin     | Returns combined quantity of all items in the cart.          |           | Spryker\Client\ProductBundle\Plugin\Cart             |
+| SanitizeBundleItemsBeforeQuoteSavePlugin | Sanitizes quote bundleItems when all items removed from cart |           | Spryker\Zed\ProductBundle\Communication\Plugin\Quote |
 
 **src/Pyz/Client/Cart/CartDependencyProvider.php**
 
@@ -98,7 +98,7 @@ implemented:
 | UnfoldBundlesToUnitedItemsItemExpanderPlugin                 | ExpandBundleItemsPlugin                 | Spryker\Zed\ProductBundle\Communication\Plugin\Cart           |
 | ReplaceBundlesWithUnitedItemsCartChangeRequestExpanderPlugin | RemoveBundleChangeRequestExpanderPlugin | Spryker\Client\ProductBundle\Plugin\Cart                      |
 | ReplaceBundlesWithUnitedItemsCartChangeRequestExpandPlugin   | RemoveBundleChangeRequestExpanderPlugin | Spryker\Zed\ProductBundle\Communication\Plugin\PersistentCart |
-| ExpandBundleItemsWithImagesPlugin                            | None                                    | Spryker\Zed\ProductBundle\Communication\Plugin\Cart           |
+| ExpandBundleItemsWithImagesPlugin                            |                                     | Spryker\Zed\ProductBundle\Communication\Plugin\Cart           |
 
 ### 1) Set up new plugins
 

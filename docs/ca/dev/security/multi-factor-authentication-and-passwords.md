@@ -1,13 +1,25 @@
 ---
-title: Set up multi-factor authentication
+title: Multi-factor authentication and passwords
 description: Follow this guide to set up multi-factor authentication on Spryker, improving your security with detailed MFA device and configuration steps.
 template: howto-guide-template
 last_updated: Apr 22, 2024
+redirect_from:
+  - /docs/ca/dev/security/set-up-multi-factor-authentication.html
 ---
+
+Multi-factor authentication (MFA) and a strong password are required security features for all AWS accounts.
+
+## Password rotation and policy updates
+
+Passwords are required to be updated every 365 days. If your password isn't updated within this period, you may get locked out of your account. This also affects API keys because they're tied to your account.
+
+The same behavior applies for security policy changes. If MFA is disabled or account password no longer fulfills the requirements, you may have to update the settings to regain access to the account. 
+
+## MFA
 
 Multi-factor authentication (MFA) adds an extra layer of security by requiring users to provide unique authentication in addition to their regular sign-in credentials when accessing AWS services. Here are the steps to set up MFA:
 
-## MFA devices
+### MFA devices
 
 AWS supports the following types of MFA devices:
 
@@ -17,7 +29,7 @@ AWS supports the following types of MFA devices:
 | Virtual MFA devices | Authenticator apps for smartphones and other devices. They emulate physical MFA devices and use the time-based one-time password (TOTP) algorithm. |
 | Hardware TOTP tokens | Physical tokens that generate TOTP codes. |
 
-## Set up MFA
+### Set up MFA
 
 {% info_block infoBox "Changing and removing MFA" %}
 

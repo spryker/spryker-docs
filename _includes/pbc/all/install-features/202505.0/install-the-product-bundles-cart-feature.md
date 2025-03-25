@@ -13,7 +13,7 @@ Install the required features:
 | NAME | EXPECTED DIRECTORY | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
-| Product Bundles | {{page.version}} | [Product Bundles feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html)|
+| Product Bundles | {{page.version}} | [Install the Product Bundles feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html)|
 | Cart | {{page.version}} | |
 
 
@@ -21,8 +21,8 @@ Install the required features:
 
 | PLUGIN                                   | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                            |
 |------------------------------------------|--------------------------------------------------------------|---------------|------------------------------------------------------|
-| ProductBundleItemCountQuantityPlugin     | Returns combined quantity of all items in the cart.          |           | Spryker\Client\ProductBundle\Plugin\Cart             |
-| SanitizeBundleItemsBeforeQuoteSavePlugin | Sanitizes quote bundleItems when all items removed from cart |           | Spryker\Zed\ProductBundle\Communication\Plugin\Quote |
+| ProductBundleItemCountQuantityPlugin     | Returns the combined quantity of all items in the cart.          |           | Spryker\Client\ProductBundle\Plugin\Cart             |
+| SanitizeBundleItemsBeforeQuoteSavePlugin | Sanitizes quote bundle items when all items are removed from the cart. |           | Spryker\Zed\ProductBundle\Communication\Plugin\Quote |
 
 **src/Pyz/Client/Cart/CartDependencyProvider.php**
 
@@ -48,8 +48,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Add several regular products and product bundles to the cart.
-Make sure that the item counter of the cart widget shows the correct number—bundled items must not be counted as separate items.
+Add several regular products and product bundles to cart. Make sure that the item counter of the cart widget shows the correct number–bundled items must not be counted as separate items.
 
 {% endinfo_block %}
 
@@ -79,8 +78,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the bundle items are removed from the quote when all items are removed from the cart.
-Cart counter must show 0 items after all items are removed from the cart.
+Make sure bundle items are removed from the quote when all items are removed from the cart. Cart counter must show 0 items after all items are removed from the cart.
 
 {% endinfo_block %}
 

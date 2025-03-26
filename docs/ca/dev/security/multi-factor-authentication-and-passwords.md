@@ -7,17 +7,24 @@ redirect_from:
   - /docs/ca/dev/security/set-up-multi-factor-authentication.html
 ---
 
-Multi-factor authentication (MFA) and a strong password are required security features for all AWS accounts.
+As per our info mail to Cloud Maintenance Contacts from the 14.02.2025 we have started to roll out updates that will make Spryker environments safer. In this article, we want to summarize the most important changes.
 
 ## Password rotation and policy updates
 
-Passwords are required to be updated every 365 days. If your password isn't updated within this period, you may get locked out of your account. This also affects API keys because they're tied to your account.
+Passwords are required to be updated every 365 days. If your password isn't updated within this period, you may get locked out of your account. If that happens, the next time you are trying to log in with your correct passwrd, you will be asked to setup a new password before you can use the account. As the maximum credential age threshold approaches, you will receive warnings, asking you to update your password, which you should be able to do using the AWS UI.
 
-The same behavior applies for security policy changes. If MFA is disabled or account password no longer fulfills the requirements, you may have to update the settings to regain access to the account. 
+This also affects API keys for IAM users and they will expire after 365 days. If you are using API Keys to interact with an AWS IAM user, please remember to renew the Keys before they reach 365 days of age. You can do so in the AWS Management Console. 
+
+We are enforcing multi-factor authentication and require all IAM users to have Multi Factor Authentication set up. If MFA is disabled or the IAM user account password no longer fulfills the requirements, you may have to update the settings to regain access to the account and its normal permission set.
+
+{% info_block warningBox "Note on Service Users" %}
+SES and S3 service accounts are generally used via API Keys only and are for now exempted from MFA requirements. This means you can continue to use the API Keys and access S3 buckets without needing to set up MFA for these users. API Key age restrictions also do not currently apply. This might change in the future and you will be notified separately when a policy change related to API Keys for service accounts is phased in.
+{% endinfo_block %}
+
 
 ## MFA
 
-Multi-factor authentication (MFA) adds an extra layer of security by requiring users to provide unique authentication in addition to their regular sign-in credentials when accessing AWS services. Here are the steps to set up MFA:
+Multi-factor authentication (MFA) adds an extra layer of security by requiring users to provide unique authentication in addition to their regular sign-in credentials when accessing AWS services. Below we want to explain how you can upgrade IAM users to use Multi Factor Authentication. 
 
 ### MFA devices
 

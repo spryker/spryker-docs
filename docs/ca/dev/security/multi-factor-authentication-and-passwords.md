@@ -7,24 +7,45 @@ redirect_from:
   - /docs/ca/dev/security/set-up-multi-factor-authentication.html
 ---
 
-As per our info mail to Cloud Maintenance Contacts from the 14.02.2025 we have started to roll out updates that will make Spryker environments safer. In this article, we want to summarize the most important changes.
+This document describes the security policies and features used to keep your accounts and environments safe.
+
+## Security policy updates
+
+To make Spryker environments safe, we regularly review our security policy and update access requirements. When the policy updates happen, we send email updates to Cloud Maintenance Contracts, informing about the changes and the steps to be taken. The latest email was sent on February 14, 2025.
+
 
 ## Password rotation and policy updates
 
-Passwords are required to be updated every 365 days. If your password isn't updated within this period, you may get locked out of your account. If that happens, the next time you are trying to log in with your correct passwrd, you will be asked to setup a new password before you can use the account. As the maximum credential age threshold approaches, you will receive warnings, asking you to update your password, which you should be able to do using the AWS UI.
+Passwords must be updated every 365 days. If not updated within this period, you may be locked out of your account. If a password expires, on the next login attempt, you'll be asked to set a new password. As your password is getting closer to the expiration date, you'll receive warnings prompting you to update your password via the AWS Management Console.
 
-This also affects API keys for IAM users and they will expire after 365 days. If you are using API Keys to interact with an AWS IAM user, please remember to renew the Keys before they reach 365 days of age. You can do so in the AWS Management Console. 
 
-We are enforcing multi-factor authentication and require all IAM users to have Multi Factor Authentication set up. If MFA is disabled or the IAM user account password no longer fulfills the requirements, you may have to update the settings to regain access to the account and its normal permission set.
+## API keys
 
-{% info_block warningBox "Note on Service Users" %}
-SES and S3 service accounts are generally used via API Keys only and are for now exempted from MFA requirements. This means you can continue to use the API Keys and access S3 buckets without needing to set up MFA for these users. API Key age restrictions also do not currently apply. This might change in the future and you will be notified separately when a policy change related to API Keys for service accounts is phased in.
+API keys must be renewed every 365 days. If keys expire, you'll not be able to interact with the account via API. If that happens, renew keys in the AWS Management Console and use them to access your account via API.
+
+
+{% info_block warningBox "SES and S3 service accounts" %}
+
+API keys for SES and S3 service accounts are an exception and don't expire.
+
 {% endinfo_block %}
 
 
 ## MFA
 
-Multi-factor authentication (MFA) adds an extra layer of security by requiring users to provide unique authentication in addition to their regular sign-in credentials when accessing AWS services. Below we want to explain how you can upgrade IAM users to use Multi Factor Authentication. 
+Multi-factor authentication (MFA) adds an extra layer of security by requiring users to provide unique authentication in addition to their regular sign-in credentials when accessing AWS services.
+
+MFA must be enabled for all accounts. An account with MFA disabled will not be able to access the AWS Management Console.
+
+
+{% info_block warningBox "SES and S3 service accounts" %}
+
+SES and S3 service accounts don't require MFA because they're accessed using API keys only.
+
+{% endinfo_block %}
+
+
+The following sections explain how to set up MFA. 
 
 ### MFA devices
 

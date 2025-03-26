@@ -69,7 +69,7 @@ entries:
           - title: Penetration testing
             url: /docs/ca/dev/security/penetration-testing.html
           - title: Set up multi-factor authentication
-            url: /docs/ca/dev/security/set-up-multi-factor-authentication.html
+            url: /docs/ca/dev/security/multi-factor-authentication-and-passwords.html
           - title: Web Application Firewall (WAF)
             url: /docs/ca/dev/security/web-application-firewall-waf.html
 
@@ -119,9 +119,9 @@ entries:
           - title: Working with logs
             url: /docs/ca/dev/monitoring/working-with-logs.html
           - title: Spryker Monitoring Integration
-            url: /docs/ca/dev/monitoring/spryker-monitoring-integration.html    
+            url: /docs/ca/dev/monitoring/spryker-monitoring-integration.html
           - title: OpenTelemetry instrumentation
-            url: /docs/ca/dev/monitoring/opentelemetry-instrumentation.html                    
+            url: /docs/ca/dev/monitoring/opentelemetry-instrumentation.html
           - title: Monitoring issues and informing about alerts
             url: /docs/ca/dev/monitoring/monitoring-issues-and-informing-about-alerts.html
 

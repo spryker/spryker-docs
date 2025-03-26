@@ -7,7 +7,7 @@ redirect_from:
   - /docs/ca/dev/security/set-up-multi-factor-authentication.html
 ---
 
-As per our info mail to Cloud Maintenance Contacts from the 14.02.2025 we have started to roll out updates that will make Spryker environments safer. In this article, we want to summarize the most important changes.
+As per our info mail to Cloud Maintenance Contacts from the February 14, 2025 we have started to roll out updates that will make Spryker environments safer. In this article, we want to summarize the most important changes.
 
 ## Password rotation and policy updates
 

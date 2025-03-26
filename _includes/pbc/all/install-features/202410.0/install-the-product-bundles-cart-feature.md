@@ -181,4 +181,4 @@ To create an order successfully with a large number of product bundles in the ca
 This constant controls the bundle quantity threshold. When the threshold is reached, it keeps bundled items from splitting into individual items and adds them to the order as a single shipment.
 The lower the threshold, the fewer number of separate shipments are created in an order, which decreases the potential probability of insufficient memory errors during the order creation process.
 
-For details, see [Splittable Order Items feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-splittable-order-items-feature.html).
+For details, see [Install the Splittable Order Items feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-splittable-order-items-feature.html).

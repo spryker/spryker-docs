@@ -69,7 +69,7 @@ entries:
           - title: Penetration testing
             url: /docs/ca/dev/security/penetration-testing.html
           - title: Set up multi-factor authentication
-            url: /docs/ca/dev/security/set-up-multi-factor-authentication.html
+            url: /docs/ca/dev/security/multi-factor-authentication-and-passwords.html
           - title: Web Application Firewall (WAF)
             url: /docs/ca/dev/security/web-application-firewall-waf.html
 

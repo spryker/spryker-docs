@@ -11,7 +11,8 @@ For additional support with this content, [contact our support](https://support.
 
 ## Server-Side Template Injection (SSTI) vulnerability could lead to Remote Code Execution (RCE)
 
-A Server-Side Template Injection (SSTI) vulnerability affecting the application's CMS page editing feature could potentially result in Remote Code Execution (RCE). This was due to the fact that high-privileged users were able to inject and execute arbitrary Twig template code within the affected functionality. This vulnerability could result in unauthorized access to sensitive server data, including application secrets, credentials, and configurations.
+A Server-Side Template Injection (SSTI) vulnerability in the CMS page editing feature could lead to Remote Code Execution (RCE). High-privileged users were able to inject and execute arbitrary Twig template code, potentially exposing sensitive server data, including application secrets, credentials, and configurations.
+
 
 ### Affected modules
 
@@ -26,9 +27,10 @@ composer update spryker/twig
 composer show spryker/twig # Verify the version
 ```
 
-## CSRF Leading to Privilege Escalation via Manage Users for a Role
+## CSRF leading to privilege escalation via manage users for a role
 
-Validation against Cross-Site Request Forgery (CSRF) was absent for the Company User Role Assign/Unassign functionality, potentially allowing an attacker to trick an admin into changing user roles. 
+The company user role assign and unassign functionality lacked Cross-Site Request Forgery (CSRF) validation, potentially allowing an attacker to trick an admin into changing user roles without authorization.
+
 
 ### Affected modules
 
@@ -43,9 +45,10 @@ composer update spryker-shop/company-page # Udpate package
 composer show spryker-shop/company-page # Verify the version
 ```
 
-## Email verification feature upon email change in Storefront
+## Email change verification on Storefront
 
-Additional security has been implemented for the ‘Email Edit’ functionality in Storefront. Email address is now changed to the new one, only when users verify their new email address. Also, they are notified about this change with an email sent to their old email address.
+On the Storefront, a user could change their email address without verifying the new email address. With this change, a user now needs to verify the new email address and confirm the change using the old email address.
+
 
 ### Affected modules
 
@@ -57,9 +60,12 @@ Additional security has been implemented for the ‘Email Edit’ functionality 
 
 1. Update the modules to the specified version or higher:
 
-* `spryker-shop/customer-page`: 2.59.0
-* `spryker/customer`: 7.67.0
-* `spryker/customer-extension`: 1.6.0
+
+| MODULE | VERSION |
+| - | - |
+| `spryker-shop/customer-page`  | 2.59.0 |
+| `spryker/customer`  | 7.67.0 |
+| `spryker/customer-extension`  | 1.6.0 |
 
 ```bash
 composer require spryker/user-merchant-portal-gui:"~1.0.0"
@@ -76,7 +82,9 @@ cms-block-email--customer_email_change_notification--html,STORE_NAME
 cms-block-email--customer_email_change_notification--text,STORE_NAME
 ```
 
-**data/import/common/common/cms_block.csv**
+<details>
+  <summary>data/import/common/common/cms_block.csv</summary>
+  
 ```csv
 cms-block-email--customer_email_change_verification--html,customer_email_change_verification--html,HTML Email Template With Header And Footer,@CmsBlock/template/email-template-with-header-and-footer.html.twig,1,,,,,,,"<table class=""sprykerBoxedTextBlock"" style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""> <!--[if gte mso 9]> <table align=""center"" border=""0"" cellspacing=""0"" cellpadding=""0"" width=""100%""> <![endif]--> <tbody class=""sprykerBoxedTextBlockOuter""> <tr> <td class=""sprykerBoxedTextBlockInner"" valign=""top"" style=""mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;""> <!--[if gte mso 9]> <td align=""center"" valign=""top"" ""> <![endif]--> <table style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" class=""sprykerBoxedTextContentContainer"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" align=""left""> <tbody> <tr> <td style=""padding-top: 18px;padding-left: 18px;padding-bottom: 18px;padding-right: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;""> <table class=""sprykerTextContentContainer"" style=""min-width: 100% !important;background-color: #F9F9F9;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" border=""0""> <tbody> <tr> <td class=""sprykerTextContent"" style=""padding-top: 18px;padding-right: 18px;padding-bottom: 18px;padding-left: 18px;color: #F2F2F2;font-family:Helvetica, Arial, Verdana, sans-serif;font-size: 22px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;"" valign=""top""> <h1 style=""text-align: center;display: block;margin: 0;padding: 0px 0px 18px 0px;color: #202020;font-family: Helvetica;font-size: 22px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: normal;"">{{ 'mail.customer.customer_email_change_verification.text' | trans }} <a href=""{{ mail.verificationLink }}"">link</a></h1> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <!--[if gte mso 9]> </td> <![endif]--> <!--[if gte mso 9]> </tr> </table> <![endif]--> </td> </tr> </tbody> </table> <table class=""sprykerTextBlock"" style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""> <tbody class=""sprykerTextBlockOuter""> <tr> <td class=""sprykerTextBlockInner"" style=""padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" valign=""top""><br> <!--[if mso]> </td> <![endif]--> <!--[if mso]> </tr> </table> <![endif]--> </td> </tr> </tbody> </table> <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]--> <!-- // END TEMPLATE -->","<table class=""sprykerBoxedTextBlock"" style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""> <!--[if gte mso 9]> <table align=""center"" border=""0"" cellspacing=""0"" cellpadding=""0"" width=""100%""> <![endif]--> <tbody class=""sprykerBoxedTextBlockOuter""> <tr> <td class=""sprykerBoxedTextBlockInner"" valign=""top"" style=""mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;""> <!--[if gte mso 9]> <td align=""center"" valign=""top"" ""> <![endif]--> <table style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" class=""sprykerBoxedTextContentContainer"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" align=""left""> <tbody> <tr> <td style=""padding-top: 18px;padding-left: 18px;padding-bottom: 18px;padding-right: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;""> <table class=""sprykerTextContentContainer"" style=""min-width: 100% !important;background-color: #F9F9F9;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" border=""0""> <tbody> <tr> <td class=""sprykerTextContent"" style=""padding-top: 18px;padding-right: 18px;padding-bottom: 18px;padding-left: 18px;color: #F2F2F2;font-family:Helvetica, Arial, Verdana, sans-serif;font-size: 22px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;"" valign=""top""> <h1 style=""text-align: center;display: block;margin: 0;padding: 0px 0px 18px 0px;color: #202020;font-family: Helvetica;font-size: 22px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: normal;"">{{ 'mail.customer.customer_email_change_verification.text' | trans }} <a href=""{{ mail.verificationLink }}"">link</a></h1> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <!--[if gte mso 9]> </td> <![endif]--> <!--[if gte mso 9]> </tr> </table> <![endif]--> </td> </tr> </tbody> </table> <table class=""sprykerTextBlock"" style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""> <tbody class=""sprykerTextBlockOuter""> <tr> <td class=""sprykerTextBlockInner"" style=""padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" valign=""top""><br> <!--[if mso]> </td> <![endif]--> <!--[if mso]> </tr> </table> <![endif]--> </td> </tr> </tbody> </table> <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]--> <!-- // END TEMPLATE -->"
 cms-block-email--customer_email_change_notification--html,customer_email_change_notification--html,HTML Email Template With Header And Footer,@CmsBlock/template/email-template-with-header-and-footer.html.twig,1,,,,,,,"<table class=""sprykerBoxedTextBlock"" style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""> <!--[if gte mso 9]> <table align=""center"" border=""0"" cellspacing=""0"" cellpadding=""0"" width=""100%""> <![endif]--> <tbody class=""sprykerBoxedTextBlockOuter""> <tr> <td class=""sprykerBoxedTextBlockInner"" valign=""top"" style=""mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;""> <!--[if gte mso 9]> <td align=""center"" valign=""top"" ""> <![endif]--> <table style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" class=""sprykerBoxedTextContentContainer"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" align=""left""> <tbody> <tr> <td style=""padding-top: 18px;padding-left: 18px;padding-bottom: 18px;padding-right: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;""> <table class=""sprykerTextContentContainer"" style=""min-width: 100% !important;background-color: #F9F9F9;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" border=""0""> <tbody> <tr> <td class=""sprykerTextContent"" style=""padding-top: 18px;padding-right: 18px;padding-bottom: 18px;padding-left: 18px;color: #F2F2F2;font-family:Helvetica, Arial, Verdana, sans-serif;font-size: 22px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;"" valign=""top""> <p style=""text-align: center;display: block;margin: 0;padding: 0px 0px 18px 0px;color: #202020;font-family: Helvetica;font-size: 16px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: normal;"">{{ 'mail.customer.customer_email_change_notification.text' | trans }}</p> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <!--[if gte mso 9]> </td> <![endif]--> <!--[if gte mso 9]> </tr> </table> <![endif]--> </td> </tr> </tbody> </table> <table class=""sprykerTextBlock"" style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""> <tbody class=""sprykerTextBlockOuter""> <tr> <td class=""sprykerTextBlockInner"" style=""padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" valign=""top""><br> <!--[if mso]> </td> <![endif]--> <!--[if mso]> </tr> </table> <![endif]--> </td> </tr> </tbody> </table> <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]--> <!-- // END TEMPLATE -->","<table class=""sprykerBoxedTextBlock"" style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""> <!--[if gte mso 9]> <table align=""center"" border=""0"" cellspacing=""0"" cellpadding=""0"" width=""100%""> <![endif]--> <tbody class=""sprykerBoxedTextBlockOuter""> <tr> <td class=""sprykerBoxedTextBlockInner"" valign=""top"" style=""mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;""> <!--[if gte mso 9]> <td align=""center"" valign=""top"" ""> <![endif]--> <table style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" class=""sprykerBoxedTextContentContainer"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" align=""left""> <tbody> <tr> <td style=""padding-top: 18px;padding-left: 18px;padding-bottom: 18px;padding-right: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;""> <table class=""sprykerTextContentContainer"" style=""min-width: 100% !important;background-color: #F9F9F9;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" border=""0""> <tbody> <tr> <td class=""sprykerTextContent"" style=""padding-top: 18px;padding-right: 18px;padding-bottom: 18px;padding-left: 18px;color: #F2F2F2;font-family:Helvetica, Arial, Verdana, sans-serif;font-size: 22px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;"" valign=""top""> <p style=""text-align: center;display: block;margin: 0;padding: 0px 0px 18px 0px;color: #202020;font-family: Helvetica;font-size: 16px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: normal;"">{{ 'mail.customer.customer_email_change_notification.text' | trans }}</p> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <!--[if gte mso 9]> </td> <![endif]--> <!--[if gte mso 9]> </tr> </table> <![endif]--> </td> </tr> </tbody> </table> <table class=""sprykerTextBlock"" style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""> <tbody class=""sprykerTextBlockOuter""> <tr> <td class=""sprykerTextBlockInner"" style=""padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" valign=""top""><br> <!--[if mso]> </td> <![endif]--> <!--[if mso]> </tr> </table> <![endif]--> </td> </tr> </tbody> </table> <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]--> <!-- // END TEMPLATE -->"
@@ -84,9 +92,14 @@ cms-block-email--customer_email_change_verification--text,customer_email_change_
 cms-block-email--customer_email_change_notification--text,customer_email_change_notification--text,TEXT Email Template With Header And Footer,@CmsBlock/template/email-template-with-header-and-footer.text.twig,1,,,,,,,"{{ 'mail.customer.customer_email_change_notification.text' | trans }}","{{ 'mail.customer.customer_email_change_notification.text' | trans }}"
 ```
 
-3. Update glossary 
+</details>
 
-**data/import/common/common/glossary.csv**
+
+3. Update the glossary:
+
+<details>
+  <summary>data/import/common/common/glossary.csv</summary>
+
 ```csv
 customer.data_change_request.email_change.success,"Your email address was successfully changed.",en_US
 customer.data_change_request.email_change.success,"Ihre E-Mail-Adresse wurde erfolgreich geändert.",de_DE
@@ -108,7 +121,9 @@ customer.change_customer_email_mail_sent,"Almost there! We send you an email to 
 customer.change_customer_email_mail_sent,"Fast dort! Wir senden Ihnen eine E-Mail, um Ihre E-Mail-Adresse zu bestätigen. Bitte bestätigen Sie dies, um sich anmelden zu können.",de_DE
 ```
 
-4. Register the plugin `CustomerDataChangeRequestRouteProviderPlugin` in the `RouterDependencyProvider`:
+</details>
+
+4. Register `CustomerDataChangeRequestRouteProviderPlugin` in `RouterDependencyProvider`:
 
 ```bash
 namespace Pyz\Yves\Router;
@@ -132,7 +147,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 ...
 ```
 
-5. Register the plugin `CustomerEmailChangeRequestWidget` in the `ShopApplicationDependencyProvider`:
+5. Register `CustomerEmailChangeRequestWidget` in `ShopApplicationDependencyProvider`:
 
 ```bash
 namespace Pyz\Yves\ShopApplication;
@@ -158,7 +173,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ...
 ```
 
-6. Register the plugins `CustomerEmailChangeVerificationMailTypePlugin` and `CustomerEmailChangeNotificationMailTypePlugin`  in the `MailDependencyProvider`:
+6. Register `CustomerEmailChangeVerificationMailTypePlugin` and `CustomerEmailChangeNotificationMailTypePlugin` in `MailDependencyProvider`:
 
 ```bash
 namespace Pyz\Zed\Mail;
@@ -186,7 +201,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 ...
 ```
 
-7. Register the plugin `EmailChangeRequestSendVerificationCustomerPreUpdatePlugin` in the `CustomerDependencyProvider`:
+7. Register `EmailChangeRequestSendVerificationCustomerPreUpdatePlugin` in `CustomerDependencyProvider`:
 
 ```bash
 namespace Pyz\Zed\Customer;
@@ -211,9 +226,9 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 ```
 
 
-## 'Remember Me' Secret Hardcoded in Code
+## Hardcoded Remember Me secret
 
-A secret related to the 'Remember Me' functionality was found to be hardcoded in the code, which is against security best practices.
+A secret related to the "Remember Me" functionality was found to be hardcoded in the code, violating security best practices.
 
 ### Affected modules
 
@@ -221,14 +236,43 @@ A secret related to the 'Remember Me' functionality was found to be hardcoded in
 
 ### Fix the vulnerability
 
-1. Update the `spryker/docker-sdk` module to version 1.64.0 or higher
+1. Update the `spryker/docker-sdk` module to version 1.64.0 or higher.
 
-2. Update .git.docker with hash commit `ac17ea980d151c6b4dd83b7093c0c05a9205c244` or higher
+2. Update `.git.docker` with hash commit `ac17ea980d151c6b4dd83b7093c0c05a9205c244` or higher.
 
-3. Add `SPRYKER_CUSTOMER_REMEMBER_ME_SECRET` environment variable in the cloud
+3. Add `SPRYKER_CUSTOMER_REMEMBER_ME_SECRET` environment variable in the cloud. For instructions, see [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html).
 
-4. Change `config/Shared/config_default.php` as it is shown below:
+4. Update `config/Shared/config_default.php`:
 
-```bash
+```php
 $config[CustomerPageConstants::CUSTOMER_REMEMBER_ME_SECRET] = getenv('SPRYKER_CUSTOMER_REMEMBER_ME_SECRET');
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

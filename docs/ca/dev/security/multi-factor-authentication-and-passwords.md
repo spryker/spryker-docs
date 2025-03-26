@@ -45,7 +45,7 @@ SES and S3 service accounts don't require MFA because they're accessed using API
 {% endinfo_block %}
 
 
-The following sections explain how to set up MFA. 
+The following sections explain how to set up MFA.
 
 ### MFA devices
 

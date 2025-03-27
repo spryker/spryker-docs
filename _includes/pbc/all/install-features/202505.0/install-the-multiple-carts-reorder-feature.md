@@ -1,6 +1,6 @@
-## Install feature core
+This document describes how to install the Multiple Carts + Reorder feature.
 
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -10,13 +10,13 @@ Install the required features:
 | Reorder        | {{page.version}} |
 | Spryker Core   | {{page.version}} |
 
-### 1) Set up behavior
+## 1) Set up behavior
 
 Register the following plugins:
 
 | PLUGIN                                      | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                              |
 |---------------------------------------------|--------------------------------------------------------------|---------------|--------------------------------------------------------|
-| DefaultReorderQuoteNameCartPreReorderPlugin | Sets quote reorder name to `CartReorderTransfer.quote.name`. | None          | Spryker\Zed\MultiCart\Communication\Plugin\CartReorder |
+| DefaultReorderQuoteNameCartPreReorderPlugin | Sets quote reorder name to `CartReorderTransfer.quote.name`. |           | Spryker\Zed\MultiCart\Communication\Plugin\CartReorder |
 
 **src/Pyz/Zed/CartReorder/CartReorderDependencyProvider.php**
 
@@ -47,3 +47,41 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
 When using the reorder feature, a new customer quote must be created with the name "Cart from order {Order reference}".
 
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

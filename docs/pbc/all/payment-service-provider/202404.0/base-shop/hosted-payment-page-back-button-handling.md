@@ -22,95 +22,42 @@ The solution implements a mechanism to detect and handle cases where customers r
 
 ## Implementation
 
-### 1. Transfer Object Modification
+### 1. Plugin Registration
 
-Add the following property to your project's `Payment/src/Spryker/Shared/Payment/Transfer/payment.transfer.xml`:
-
-```xml
-<?xml version="1.0"?>
-<transfers xmlns="spryker:transfer-01"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
-
-    <transfer name="Quote">
-        <!-- Flag to identify if the quote is used with a hosted payment page provider -->
-        <property name="usedWithHostedPaymentPagePaymentServiceProvider" type="bool"/>
-    </transfer>
-</transfers>
-```
-
-### 2. Checkout Process Modification
-
-Override the following methods in your project's `CheckoutPage/Process/Steps/SummaryStep.php`:
+To handle the browser back button functionality for hosted payment pages, register the `PaymentAppCancelOrderOnSummaryPageAfterRedirectFromHostedPaymentPagePlugin` in your project's `CheckoutPageDependencyProvider`. Add the following methods to `src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php`:
 
 ```php
 <?php
 
-namespace Pyz\Yves\CheckoutPage\Process\Steps;
+namespace Pyz\Yves\CheckoutPage;
 
-use Generated\Shared\Transfer\QuoteTransfer;
-use SprykerShop\Yves\CheckoutPage\Process\Steps\SummaryStep as SprykerSummaryStep;
+use SprykerShop\Yves\PaymentAppWidget\Plugin\CheckoutPage\PaymentAppCancelOrderOnSummaryPageAfterRedirectFromHostedPaymentPagePlugin;
 
-class SummaryStep extends SprykerSummaryStep
+class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvider
 {
     /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return bool
+     * @return array<\SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\CheckoutStepPreConditionPluginInterface>
      */
-    public function preCondition(QuoteTransfer $quoteTransfer): bool
+    protected function getCheckoutSummaryStepPreConditionPlugins(): array
     {
-        if ($quoteTransfer->getUsedWithHostedPaymentPagePaymentServiceProvider()) {
-            $this->salesClient->cancelOrder($quoteTransfer);
-        }
-
-        return parent::preCondition($quoteTransfer);
+        return [
+            new PaymentAppCancelOrderOnSummaryPageAfterRedirectFromHostedPaymentPagePlugin(),
+        ];
     }
 
     /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return bool
+     * @return array<\SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\CheckoutStepPostConditionPluginInterface>
      */
-    public function postCondition(QuoteTransfer $quoteTransfer): bool
+    protected function getCheckoutSummaryStepPostConditionPlugins(): array
     {
-        $quoteTransfer->setUsedWithHostedPaymentPagePaymentServiceProvider(true);
-        
-        return parent::postCondition($quoteTransfer);
+        return [
+            new PaymentAppCancelOrderOnSummaryPageAfterRedirectFromHostedPaymentPagePlugin(),
+        ];
     }
 }
 ```
 
-### 3. Sales Module Updates
-
-The core `cancelOrder` method in `Spryker/Client/Sales/SalesClient.php` requires a customer reference, which doesn't work for guest orders. You need to override this method in your project to remove this requirement:
-
-1. Create your project-level SalesClient class:
-```php
-<?php
-
-namespace Pyz\Client\Sales;
-
-use Generated\Shared\Transfer\QuoteTransfer;
-use Spryker\Client\Sales\SalesClient as SprykerSalesClient;
-
-class SalesClient extends SprykerSalesClient
-{
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return void
-     */
-    public function cancelOrder(QuoteTransfer $quoteTransfer): void
-    {
-        $this->getZedStub()->cancelOrder($quoteTransfer);
-    }
-}
-```
-
-2. Update the corresponding Zed stub and facade methods to handle the order cancellation without requiring customer reference. This ensures that both guest and logged-in customer orders can be properly cancelled when returning from a hosted payment page.
-
-### 4. State Machine Configuration
+### 2. State Machine Configuration
 
 Update your OMS state configuration in `SalesPayment/config/Zed/Oms/Subprocess/PaymentCancel01.xml`. Add the `exclude from customer` flag to the "payment cancellation pending" state:
 
@@ -124,11 +71,9 @@ Update your OMS state configuration in `SalesPayment/config/Zed/Oms/Subprocess/P
 
 The `exclude from customer` flag is specifically needed for logged-in customers to prevent cancelled payment orders from appearing in their customer account. Without this flag, logged-in customers would see these cancelled orders in their order history.
 
+For more information about the `exclude from customer` flag, see [Order Process Modelling via State Machines](https://docs.spryker.com/docs/pbc/all/order-management-system/202410.0/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#state-machine-module).
+
 {% endinfo_block %}
-
-### 5. OrderReader
-
-The OrderReader class from Spryker core already contains the necessary logic to handle the `exclude from customer` flag. No additional implementation is required for this class.
 
 ## Testing
 

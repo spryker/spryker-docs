@@ -1163,12 +1163,14 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-Place an order with different types of products–for exampale, physical or digital, and check if the order amendment is available.
-Go to order detail and order list pages and check if the "edit order" button is present.
+* Place an order with different types of products–for exampale, physical or digital, and check if the order amendment is available.
+* Go to order detail and order list pages and check if the **edit order** button is displayed.
 
 {% endinfo_block %}
 
 ## Install feature frontend
+
+Take the following steps to install the feature frontend.
 
 ### Prerequisites
 
@@ -1226,7 +1228,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                       | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                |
 |----------------------------------------------|------------------------------------------------------------|---------------|----------------------------------------------------------|
-| SalesOrderAmendmentWidgetRouteProviderPlugin | Expands router collection with `order-amendment` endpoint. |           | SprykerShop\Yves\SalesOrderAmendmentWidget\Plugin\Router |
+| SalesOrderAmendmentWidgetRouteProviderPlugin | Expands the router collection with the `order-amendment` endpoint. |           | SprykerShop\Yves\SalesOrderAmendmentWidget\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -1254,7 +1256,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the order amendment is available for the customer in order detail and order list pages.
+Make sure order amendment is available on order details and orders pages.
 
 {% endinfo_block %}
 
@@ -1264,7 +1266,7 @@ To enable widgets, register the following plugins:
 
 | PLUGIN               | SPECIFICATION                            | PREREQUISITES | NAMESPACE                                         |
 |----------------------|------------------------------------------|---------------|---------------------------------------------------|
-| OrderAmendmentWidget | Allows customers to edit existing order. |           | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
+| OrderAmendmentWidget | Enables customers to edit existing orders. |           | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1296,6 +1298,53 @@ Make sure the following widgets have been registered:
 
 | MODULE               | TEST                                                                                                 |
 |----------------------|------------------------------------------------------------------------------------------------------|
-| OrderAmendmentWidget | Go to the **Order List** or **Order Detail** pages and make sure the "edit order" button is present. |
+| OrderAmendmentWidget | Make sure the edit order button is displayed on orders and order details pages. |
 
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

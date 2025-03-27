@@ -44,7 +44,19 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-When using the reorder feature, a new customer quote must be created with the name "Cart from order {Order reference}".
+To verify the `DefaultReorderQuoteNameCartPreReorderPlugin` functionality:
+
+1. Log in to the customer account in the Storefront
+2. Navigate to the Orders section in My Account
+3. Select an existing order and click the "Reorder" button
+4. Verify the following:
+    - A new quote (cart) has been created automatically
+    - The new cart name follows the format "Cart from order {Order reference}"
+    - All available items from the original order are added to the cart
+5. Additionally, verify in the database:
+    - Check the `spy_quote` table
+    - Find the newly created quote record for this customer
+    - Confirm the `name` field contains "Cart from order {Original order reference}"
 
 {% endinfo_block %}
 

@@ -62,6 +62,14 @@ Make sure that accessing `mysprykershop.com/cart-reorder` with a guest user redi
 
 ### 3) Set up the transfer objects
 
+Generate transfer changes:
+
+```bash
+console transfer:generate
+```
+
+{% info_block warningBox "Verification" %}
+
 Make sure the following changes have been implemented in transfer objects:
 
 | TRANSFER                         | TYPE  | PATH                                                                   |

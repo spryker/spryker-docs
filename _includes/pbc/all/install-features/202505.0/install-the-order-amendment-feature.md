@@ -1,12 +1,8 @@
-# Install the Order Amendment feature
-
 This document describes how to install the Order Amendment feature.
 
 ## Install feature core
 
-Follow the steps below to install the Order Amendment feature core.
-
-Some plugins mentioned in the document are needed only for optional features. The document provides a list of plugins for all possible integration scenarios, but you need to include only the plugins that match your setup.
+Some plugins are needed only for optional features. The document provides a list of plugins for all possible integration scenarios, but you need to include only the plugins that match your setup.
 
 ### Prerequisites
 
@@ -616,18 +612,18 @@ Enable the following behaviors by registering the plugins:
 | CountriesCheckoutDataValidatorPlugin                              | Verifies if countries can be found by `countryIso2Codes` given in `CheckoutDataTransfer.shipments.shippingAddress`.                                                                                       |                                                                                                                                              | Spryker\Zed\Country\Communication\Plugin\CheckoutRestApi                             |
 | ShipmentMethodCheckoutDataValidatorPlugin                         | Verifies if a shipment method is valid.                                                                                                                                                                   |                                                                                                                                              | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi                    |
 | ItemsCheckoutDataValidatorPlugin                                  | Validates if `CheckoutDataTransfer` provides shipment data per item level.                                                                                                                              |                                                                                                                                              | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi                    |
-| CustomerAddressCheckoutDataValidatorPlugin                        | Checks if customer addresses exists.                                                                                                                                                                    |                                                                                                                                              | Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi                    |
-| CompanyBusinessUnitAddressCheckoutDataValidatorPlugin             | Checks if company addresses exists.                                                                                                                                                                     |                                                                                                                                              | Spryker\Zed\CompanyBusinessUnitAddressesRestApi\Communication\Plugin\CheckoutRestApi |
+| CustomerAddressCheckoutDataValidatorPlugin                        | Checks if customer addresses exist.                                                                                                                                                                    |                                                                                                                                              | Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi                    |
+| CompanyBusinessUnitAddressCheckoutDataValidatorPlugin             | Checks if company addresses exist.                                                                                                                                                                     |                                                                                                                                              | Spryker\Zed\CompanyBusinessUnitAddressesRestApi\Communication\Plugin\CheckoutRestApi |
 | ShipmentTypeCheckoutDataValidatorPlugin                           | Validates whether a shipment type related to the shipment method is active and belongs to the quote store.                                                                                                |                                                                                                                                              | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi                |
 | ClickAndCollectExampleReplaceCheckoutDataValidatorPlugin          | Replaces filtered product offers with suitable product offers from Persistence.                                                                                                                         |                                                                                                                                              | Spryker\Zed\ClickAndCollectExample\Communication\Plugin\CheckoutRestApi              |
 | SaveOrderCommentThreadOrderPostSavePlugin                         | Saves a comments thread after an order is saved.                                                                                                                                                             |                                                                                                                                              | Spryker\Zed\CommentSalesConnector\Communication\Plugin\Sales                         |
 | SaveCompanyBusinessUnitUuidOrderPostSavePlugin                    | Saves company business unit UUID to the order after it's saved.                                                                                                                                         |                                                                                                                                              | Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\Sales             |
 | SaveCompanyUuidOrderPostSavePlugin                                | Saves company UUID to the order after it's saved.                                                                                                                                                       |                                                                                                                                              | Spryker\Zed\CompanySalesConnector\Communication\Plugin\Sales                         |
-| DiscountSalesOrderItemCollectionPreDeletePlugin                   | Deletes found by criteria sales discount and sales discount code entities.                                                                                                                              |                                                                                                                                              | Spryker\Zed\Discount\Communication\Plugin\Sales                                      |
+| DiscountSalesOrderItemCollectionPreDeletePlugin                   | Deletes sales discount and sales discount code entities found by criteria.                                                                                                                              |                                                                                                                                              | Spryker\Zed\Discount\Communication\Plugin\Sales                                      |
 | SalesDiscountSalesExpensePreDeletePlugin                          | Deletes sales discount entities related to provided expenses.                                                                                                                                           |                                                                                                                                              | Spryker\Zed\Discount\Communication\Plugin\Sales                                      |
 | GiftCardOrderItemsPostSavePlugin                                  | Processes gift card order items after they're saved.                                                                                                                                                    |                                                                                                                                              | Spryker\Zed\GiftCard\Communication\Plugin\Sales                                      |
 | GiftCardSalesOrderItemCollectionPreDeletePlugin                   | Deletes sales order item gift card entities found by criteria.                                                                                                                                          |                                                                                                                                              | Spryker\Zed\GiftCard\Communication\Plugin\Sales                                      |
-| NopaymentSalesOrderItemCollectionPreDeletePlugin                  | Deletes nopayment paid entities found by criteria.                                                                                                                                                      |                                                                                                                                              | Spryker\Zed\Nopayment\Communication\Plugin\Sales                                     |
+| NopaymentSalesOrderItemCollectionPreDeletePlugin                  | Deletes no-payment paid entities found by criteria.                                                                                                                                                      |                                                                                                                                              | Spryker\Zed\Nopayment\Communication\Plugin\Sales                                     |
 | DefaultOrderItemInitialStateProviderPlugin                        | Sets the initial OMS state for order items.                                                                                                                                                             |                                                                                                                                              | Spryker\Zed\Oms\Communication\Plugin\Sales                                           |
 | OmsItemHistorySalesOrderItemCollectionPreDeletePlugin             | Deletes entities found by criteria.                                                                                                                                                                     |                                                                                                                                              | Spryker\Zed\Oms\Communication\Plugin\Sales                                           |
 | UpdateOrderCustomReferenceOrderPostSavePlugin                     | Updates custom order reference after an order is saved.                                                                                                                                                    |                                                                                                                                              | Spryker\Zed\OrderCustomReference\Communication\Plugin\Sales                          |
@@ -644,7 +640,8 @@ Enable the following behaviors by registering the plugins:
 | ServicePointSalesOrderItemCollectionPostUpdatePlugin              | Processes service points after an order items collection is updated.                                                                                                                                           |                                                                                                                                              | Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales                             |
 | ServicePointSalesOrderItemCollectionPreDeletePlugin               | Deletes sales order item service point entities found by criteria.                                                                                                                                      |                                                                                                                                              | Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales                             |
 
-**src/Pyz/Zed/SalesOrderAmendment/SalesOrderAmendmentDependencyProvider.php**
+<details>
+  <summary>src/Pyz/Zed/SalesOrderAmendment/SalesOrderAmendmentDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -687,7 +684,11 @@ class SalesOrderAmendmentDependencyProvider extends SprykerSalesOrderAmendmentDe
 }
 ```
 
-**src/Pyz/Zed/CartReorder/CartReorderDependencyProvider.php**
+</details>
+
+
+<details>
+  <summary>src/Pyz/Zed/CartReorder/CartReorderDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -739,7 +740,11 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
 }
 ```
 
-**src/Pyz/Glue/CartReorderRestApi/CartReorderRestApiDependencyProvider.php**
+</details>
+
+<details>
+  <summary>src/Pyz/Glue/CartReorderRestApi/CartReorderRestApiDependencyProvider.php</summary>
+    
 
 ```php
 <?php
@@ -763,7 +768,11 @@ class CartReorderRestApiDependencyProvider extends SprykerCartReorderRestApiDepe
 }
 ```
 
-**src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
+</details>
+
+<details>
+  <summary>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+
 
 ```php
 <?php
@@ -787,7 +796,12 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ```
 
-**src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
+
+</details>
+
+
+<details>
+  <summary>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -903,7 +917,13 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 }
 ```
 
-**src/Pyz/Zed/Quote/QuoteDependencyProvider.php**
+</details>
+
+
+
+<details>
+  <summary>src/Pyz/Zed/Quote/QuoteDependencyProvider.php</summary>
+    
 
 ```php
 <?php
@@ -943,7 +963,13 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 }
 ```
 
-**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+</details>
+
+
+
+<details>
+  <summary>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
+
 
 ```php
 <?php
@@ -1093,7 +1119,10 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 }
 ```
 
-**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+</details>
+
+<details>
+  <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1125,7 +1154,15 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-**src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
+
+
+</details>
+
+
+
+<details>
+  <summary>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+    
 
 ```php
 <?php
@@ -1160,6 +1197,8 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
     }
 }
 ```
+
+</details>
 
 {% info_block warningBox "Verification" %}
 

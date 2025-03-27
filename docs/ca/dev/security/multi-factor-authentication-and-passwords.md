@@ -7,17 +7,45 @@ redirect_from:
   - /docs/ca/dev/security/set-up-multi-factor-authentication.html
 ---
 
-Multi-factor authentication (MFA) and a strong password are required security features for all AWS accounts.
+This document describes the security policies and features used to keep your accounts and environments safe.
+
+## Security policy updates
+
+To make Spryker environments safe, we regularly review our security policy and update access requirements. When the policy updates happen, we send email updates to Cloud Maintenance Contracts, informing about the changes and the steps to be taken. The latest email was sent on February 14, 2025.
+
 
 ## Password rotation and policy updates
 
-Passwords are required to be updated every 365 days. If your password isn't updated within this period, you may get locked out of your account. This also affects API keys because they're tied to your account.
+Passwords must be updated every 365 days. If not updated within this period, you may be locked out of your account. If a password expires, on the next login attempt, you'll be asked to set a new password. As your password is getting closer to the expiration date, you'll receive warnings prompting you to update your password via the AWS Management Console.
 
-The same behavior applies for security policy changes. If MFA is disabled or account password no longer fulfills the requirements, you may have to update the settings to regain access to the account. 
+
+## API keys
+
+API keys must be renewed every 365 days. If keys expire, you'll not be able to interact with the account via API. If that happens, renew keys in the AWS Management Console and use them to access your account via API.
+
+
+{% info_block warningBox "SES and S3 service accounts" %}
+
+API keys for SES and S3 service accounts are an exception and don't expire.
+
+{% endinfo_block %}
+
 
 ## MFA
 
-Multi-factor authentication (MFA) adds an extra layer of security by requiring users to provide unique authentication in addition to their regular sign-in credentials when accessing AWS services. Here are the steps to set up MFA:
+Multi-factor authentication (MFA) adds an extra layer of security by requiring users to provide unique authentication in addition to their regular sign-in credentials when accessing AWS services.
+
+MFA must be enabled for all accounts. An account with MFA disabled will not be able to access the AWS Management Console.
+
+
+{% info_block warningBox "SES and S3 service accounts" %}
+
+SES and S3 service accounts don't require MFA because they're accessed using API keys only.
+
+{% endinfo_block %}
+
+
+The following sections explain how to set up MFA.
 
 ### MFA devices
 

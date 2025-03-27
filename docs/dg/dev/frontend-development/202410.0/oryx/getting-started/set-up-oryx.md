@@ -6,6 +6,7 @@ template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/oryx/set-up-oryx.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/getting-started/set-up-oryx.html
+  - docs/scos/dev/front-end-development/202307.0/oryx/set-up-oryx.html 
 
 ---
 

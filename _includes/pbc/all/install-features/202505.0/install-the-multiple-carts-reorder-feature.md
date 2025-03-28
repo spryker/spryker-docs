@@ -44,19 +44,16 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To verify the `DefaultReorderQuoteNameCartPreReorderPlugin` functionality:
+1. Log in on the Storefront as a customer.
+2. Go to the orders.
+3. Select an existing order and click the reorder button.
 
-1. Log in to the customer account in the Storefront
-2. Navigate to the Orders section in My Account
-3. Select an existing order and click the "Reorder" button
-4. Verify the following:
-    - A new quote (cart) has been created automatically
-    - The new cart name follows the format "Cart from order {Order reference}"
-    - All available items from the original order are added to the cart
-5. Additionally, verify in the database:
-    - Check the `spy_quote` table
-    - Find the newly created quote record for this customer
-    - Confirm the `name` field contains "Cart from order {Original order reference}"
+Make sure the following applies:
+* On the Storefront: 
+    - A new cart has been created
+    - The cart name follows the format: `Cart from order {Order reference}`
+    - All available items from the original order have been added to the cart
+* In the `spy_quote` database table, the newly created quote record contains the `name` field in the format: `Cart from order {Original order reference}`
 
 {% endinfo_block %}
 

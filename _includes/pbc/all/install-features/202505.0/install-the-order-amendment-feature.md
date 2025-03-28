@@ -937,6 +937,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 namespace Pyz\Zed\Quote;
 
+use Spryker\Zed\PriceProductSalesOrderAmendment\Communication\Plugin\Quote\ResetOriginalSalesOrderItemUnitPricesBeforeQuoteSavePlugin;
 use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
 use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote\ResetAmendmentOrderReferenceBeforeQuoteSavePlugin;
 use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote\ResetQuoteNameQuoteBeforeSavePlugin;
@@ -955,6 +956,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
             new ResetQuoteNameQuoteBeforeSavePlugin(),
             new CancelOrderAmendmentBeforeQuoteSavePlugin(),
             new ResetAmendmentOrderReferenceBeforeQuoteSavePlugin(),
+            new ResetOriginalSalesOrderItemUnitPricesBeforeQuoteSavePlugin(),
         ];
     }
 
@@ -1353,6 +1355,67 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 - Change price for the product from the order to the higher one.
 - Start the order amendment process for the newly created order, make sure the price from the original order is applied for the order item instead of the new higher price.
 - In Storefront go to PDP page of the product from the order, make sure the price from the original order is applied instead of the new higher price.
+
+{% endinfo_block %}
+
+## Add product offers context
+
+### 1) Install the required modules
+
+Install the required modules using Composer:
+
+```bash
+composer require spryker/price-product-offer-sales-order-amendment-connector: "^0.1.0" --update-with-dependencies
+```
+
+{% info_block warningBox “Verification” %}
+
+Make sure that the following modules have been installed:
+
+| MODULE                                        | EXPECTED DIRECTORY                                                 |
+|-----------------------------------------------|--------------------------------------------------------------------|
+| PriceProductOfferSalesOrderAmendmentConnector | vendor/spryker/price-product-offer-sales-order-amendment-connector |
+
+{% endinfo_block %}
+
+### 2) Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                                         | SPECIFICATION                                                                                            | PREREQUISITES | NAMESPACE                                                                                            |
+|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
+| ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin  | Expands provided group key with product offer reference if `ItemTransfer.productOfferReference` is set.  | None          | Spryker\Service\PriceProductOfferSalesOrderAmendmentConnector\Plugin\PriceProductSalesOrderAmendment |
+
+**src/Pyz/Service/PriceProductSalesOrderAmendment/PriceProductSalesOrderAmendmentDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Service\PriceProductSalesOrderAmendment;
+
+use Spryker\Service\PriceProductOfferSalesOrderAmendmentConnector\Plugin\PriceProductSalesOrderAmendment\ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin;
+use Spryker\Service\PriceProductSalesOrderAmendment\PriceProductSalesOrderAmendmentDependencyProvider as SprykerPriceProductSalesOrderAmendmentDependencyProvider;
+
+class PriceProductSalesOrderAmendmentDependencyProvider extends SprykerPriceProductSalesOrderAmendmentDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Service\PriceProductSalesOrderAmendmentExtension\Dependency\Plugin\OriginalSalesOrderItemPriceGroupKeyExpanderPluginInterface>
+     */
+    protected function getOriginalSalesOrderItemPriceGroupKeyExpanderPlugins(): array
+    {
+        return [
+            new ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+- Make an order with a product offer.
+- Change price for the product offer from the order to the higher one.
+- Start the order amendment process for the newly created order, make sure the price from the original order is applied for the order item instead of the new higher price.
+- In Storefront go to PDP page of the product offer from the order, make sure the price from the original order is applied instead of the new higher price.
 
 {% endinfo_block %}
 

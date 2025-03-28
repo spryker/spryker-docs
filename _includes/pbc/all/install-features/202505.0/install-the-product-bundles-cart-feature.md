@@ -2,27 +2,23 @@
 
 This document describes how to install the Product Bundles + Cart feature.
 
-## Install feature core
-
-Follow the steps below to install feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
 | NAME | EXPECTED DIRECTORY | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
-| Product Bundles | {{page.version}} | [Product Bundles feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html)|
+| Product Bundles | {{page.version}} | [Install the Product Bundles feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html)|
 | Cart | {{page.version}} | |
 
 
-### Set up behavior
+## Set up behavior
 
 | PLUGIN                                   | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                            |
 |------------------------------------------|--------------------------------------------------------------|---------------|------------------------------------------------------|
-| ProductBundleItemCountQuantityPlugin     | Returns combined quantity of all items in the cart.          |           | Spryker\Client\ProductBundle\Plugin\Cart             |
-| SanitizeBundleItemsBeforeQuoteSavePlugin | Sanitizes quote bundleItems when all items removed from cart |           | Spryker\Zed\ProductBundle\Communication\Plugin\Quote |
+| ProductBundleItemCountQuantityPlugin     | Returns the combined quantity of all items in the cart.          |           | Spryker\Client\ProductBundle\Plugin\Cart             |
+| SanitizeBundleItemsBeforeQuoteSavePlugin | Sanitizes quote bundle items when all items are removed from the cart. |           | Spryker\Zed\ProductBundle\Communication\Plugin\Quote |
 
 **src/Pyz/Client/Cart/CartDependencyProvider.php**
 
@@ -48,8 +44,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Add several regular products and product bundles to the cart.
-Make sure that the item counter of the cart widget shows the correct number—bundled items must not be counted as separate items.
+Add several regular products and product bundles to cart. Make sure that the item counter of the cart widget shows the correct number–bundled items must not be counted as separate items.
 
 {% endinfo_block %}
 
@@ -79,18 +74,15 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the bundle items are removed from the quote when all items are removed from the cart.
-Cart counter must show 0 items after all items are removed from the cart.
+Make sure bundle items are removed from the quote when all items are removed from the cart. Cart counter must show 0 items after all items are removed from the cart.
 
 {% endinfo_block %}
 
 ## Alternative setup for handling large quantities of bundled products in the cart
 
-When a bundle product is added to the cart with a large quantity (for example, 100-200 items), users may
-experience a slow-down in the cart operations handling or even may get an internal server error because of insufficient memory.
+When a bundle product is added to the cart with a large quantity–for example, 100-200 items–users may experience a slowdown in cart operations or even get an internal server error because of insufficient memory.
 
-To avoid a slow-down in the cart operations and internal server errors, an alternative set of plugins has been
-implemented:
+To avoid this, you can use the following alternative plugins:
 
 | PLUGIN                                                       | ALTERNATIVE FOR                         | NAMESPACE                                                     |
 |--------------------------------------------------------------|-----------------------------------------|---------------------------------------------------------------|
@@ -100,9 +92,9 @@ implemented:
 | ReplaceBundlesWithUnitedItemsCartChangeRequestExpandPlugin   | RemoveBundleChangeRequestExpanderPlugin | Spryker\Zed\ProductBundle\Communication\Plugin\PersistentCart |
 | ExpandBundleItemsWithImagesPlugin                            |                                     | Spryker\Zed\ProductBundle\Communication\Plugin\Cart           |
 
-### 1) Set up new plugins
+### 1) Set up plugins
 
-To use this alternative solution, all old plugins must be removed and new ones connected instead.
+Remove the existing plugins and add the alternative ones:
 
 **src/Pyz/Zed/Cart/CartDependencyProvider.php**
 
@@ -199,18 +191,51 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Add a product bundle to the cart and increase its quantity to a larger number—for example, 1,000 items. Then, decrease the quantity.
-Make sure that increase and decrease operations are performed without a significant delay and do not fail, with an exception.  
+* Do the following as a guest user:
+  1. Add a product bundle to cart.
+  2. Increase the bundle's quantity to a larger number—for example, 1,000 items.
+  3. Decrease the quantity.
+    Make sure that increase and decrease operations are performed without a significant delay and don't fail with an exception.  
+  4. Repeat steps 1-3 as a registered user.
 
-Perform this verification both as an anonymous and logged-in user.
-Make sure that bundled products have an images that are displayed correctly in the cart.
+* Make sure that the images of bundled products are displayed correctly in cart.
 
 {% endinfo_block %}
 
-### 2) Adjust a non-splittable quantity threshold for bundled items in the `SalesQuantity` module config.
+### 2) Adjust a non-splittable quantity threshold for bundled items
 
-To create an order successfully with a large number of product bundles in the cart, the `SalesQuantityConfig::BUNDLED_ITEM_NONSPLIT_QUANTITY_THRESHOLD` constant in the `SalesQuantity` module config must be also set to a lower number—for example, 10.
-This constant controls the bundle quantity threshold. When the threshold is reached, it keeps bundled items from splitting into individual items and adds them to the order as a single shipment.
-The lower the threshold, the fewer number of separate shipments are created in an order, which decreases the potential probability of insufficient memory errors during the order creation process.
+For orders with a large numbers of product bundles to be created successfully, the threshold for creating separate shipments out of bundled items needs to be not higher than 10. Lowering the threshold reduces the number of separate shipments in an order, decreasing the risk of insufficient memory errors during order creation.
 
-For details, see [Splittable Order Items feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-splittable-order-items-feature.html).
+You can set the threshold using the `SalesQuantityConfig::BUNDLED_ITEM_NONSPLIT_QUANTITY_THRESHOLD` constant in the `SalesQuantity` module config. When the threshold is reached, bundled items are kept together instead of being split into individual items, ensuring they are processed as a single shipment. Lowering the threshold reduces the number of separate shipments in an order, decreasing the risk of insufficient memory errors during order creation.
+
+For details more details on, see [Install the Splittable Order Items feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-splittable-order-items-feature.html).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

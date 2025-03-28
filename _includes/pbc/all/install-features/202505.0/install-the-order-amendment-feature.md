@@ -1,15 +1,8 @@
-# Install the Order Amendment feature
-
 This document describes how to install the Order Amendment feature.
 
 ## Install feature core
 
-Follow the steps below to install the Order Amendment feature core.
-
-When implementing the Order Amendment feature, be aware that some of the plugins mentioned in the documentation might
-not be relevant to your project if you haven't installed certain optional features.
-Only include the plugins for features that are installed in your project. The documentation provides a comprehensive
-list to cover all possible integration scenarios.
+Some plugins are needed only for optional features. The document provides a list of plugins for all possible integration scenarios, but you need to include only the plugins that match your setup.
 
 ### Prerequisites
 
@@ -52,10 +45,10 @@ Add the following configuration to your project:
 
 | CONFIGURATION                                                               | SPECIFICATION                                                                                                 | NAMESPACE                   |
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|-----------------------------|
-| A regular expression (See below in `config/Shared/config_default.php`)      | Used to close access for not logged in customers.                                                             | None                        |
-| MultiCartConfig::getQuoteFieldsAllowedForCustomerQuoteCollectionInSession() | Used to configure the quote fields that are allowed for saving in quote collection in the customer's session. | Pyz\Client\MultiCart        |
-| QuoteConfig::getQuoteFieldsAllowedForSaving()                               | Used to allow saving order amendment related fields of the quote to the database.                             | Pyz\Zed\Quote               |
-| SalesOrderAmendmentConfig::getQuoteFieldsAllowedForSaving()                 | Used to allow saving quote related fields of the quote to the database.                                       | Pyz\Zed\SalesOrderAmendment |
+| A regular expression, see in `config/Shared/config_default.php`.      | Closes access for non-logged-in users.                                                             |                         |
+| MultiCartConfig::getQuoteFieldsAllowedForCustomerQuoteCollectionInSession() | Configures the quote fields that are allowed for saving in quote collection in a customer's session. | Pyz\Client\MultiCart        |
+| QuoteConfig::getQuoteFieldsAllowedForSaving()                               | Allows saving order amendment related fields of the quote to the database.                             | Pyz\Zed\Quote               |
+| SalesOrderAmendmentConfig::getQuoteFieldsAllowedForSaving()                 | Allows saving quote related fields of the quote to the database.                                       | Pyz\Zed\SalesOrderAmendment |
 
 **config/Shared/config_default.php**
 
@@ -129,8 +122,7 @@ class QuoteConfig extends SprykerQuoteConfig
 
 {% info_block warningBox “Verification” %}
 
-Make sure that when you edit order, JSON data in the database column `spy_quote.quote_data` of the corresponding quote
-contains `amendmentOrderReference` and `quoteProcessFlow`.
+Make sure that when you edit an order, `amendmentOrderReference` and `quoteProcessFlow` are added to the JSON data in the `spy_quote.quote_data` database column of the corresponding quote.
 
 {% endinfo_block %}
 
@@ -169,18 +161,18 @@ class SalesOrderAmendmentConfig extends SprykerSalesOrderAmendmentConfig
 }
 ```
 
-Some quote fields could be not relevant for your project. You can remove them from the list.
+Romeve the quote fields that are not relevant for your project.
 
 {% info_block warningBox “Verification” %}
 
-Table `spy_sales_order_amendment_quote` is not used yet and should be empty. This table could be used as a temporary storage for the quote
-data during the order amendment process in order to allow async mode for the order amendment process.
+The `spy_sales_order_amendment_quote` table should be empty. It can serve as a temporary storage for quote data during the order amendment process, enabling asynchronous processing of order amendments.
+
 
 {% endinfo_block %}
 
 #### Configure OMS
 
-1. Create the OMS sub-process file:
+1. Create the OMS subprocess file:
 
 <details>
     <summary>config/Zed/oms/DummySubprocess/DummyOrderAmendment01.xml</summary>
@@ -241,12 +233,11 @@ data during the order amendment process in order to allow async mode for the ord
 
 {% info_block warningBox "Verification" %}
 
-Verify the order-amendment state machine configuration in the following step.
+Verify the order amendment state machine configuration in the following step.
 
 {% endinfo_block %}
 
-2. Using the following process as an example, adjust your OMS state-machine configuration according to your project's
-   requirements.
+2. Using the following process as an example, adjust your OMS state machine configuration according to your project's requirements.
 
 <details><summary>config/Zed/oms/DummyPayment01.xml</summary>
 
@@ -466,14 +457,12 @@ Verify the order-amendment state machine configuration in the following step.
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you've configured OMS:
-
 1. In the Back Office, go to **Administration&nbsp;<span aria-label="and then">></span> OMS**.
 
 2. Select **DummyPayment01 [preview-version]** and check the following:
 
-- The `grace period started` state keep the `amendable` tag inside.
-- The `order amendment` state has been added.
+- The `grace period started` state has the `amendable` tag.
+- The `order amendment` state exists.
 
 {% endinfo_block %}
 
@@ -583,85 +572,86 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                                 | SPECIFICATION                                                                                                                                                                                           | PREREQUISITES                                                                                                                                    | NAMESPACE                                                                            |
 |------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| OrderAmendmentCartReorderValidatorPlugin                               | Validates if quote amendment order reference matches `CartReorderTransfer.order.orderReference`.                                                                                                        | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder                     |
-| OrderAmendmentQuoteProcessFlowExpanderCartPreReorderPlugin             | Expands quote process flow with the quote process flow name.                                                                                                                                            | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder                     |
-| StartOrderAmendmentCartReorderPostCreatePlugin                         | Triggers OMS event to start the order amendment process.                                                                                                                                                | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder                  |
-| IsAmendableOrderCartReorderValidatorRulePlugin                         | Validates if all order items are in order item state that has `amendable` flag.                                                                                                                         | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder                  |
-| AmendmentOrderReferenceCartPreReorderPlugin                            | Sets `CartReorderTransfer.quote.amendmentOrderReference` taken from `CartReorderRequestTransfer.orderReference`.                                                                                        | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder                     |
-| AmendmentQuoteNameCartPreReorderPlugin                                 | Updates `CartReorderTransfer.quote.name` with custom amendment quote name.                                                                                                                              | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder                     |
+| OrderAmendmentCartReorderValidatorPlugin                               | Validates if quote amendment order reference matches `CartReorderTransfer.order.orderReference`.                                                                                                        |                                                                                                                                              | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder                     |
+| OrderAmendmentQuoteProcessFlowExpanderCartPreReorderPlugin             | Expands the quote process flow with the quote process flow name.                                                                                                                                            |                                                                                                                                              | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder                     |
+| StartOrderAmendmentCartReorderPostCreatePlugin                         | Triggers the OMS event to start the order amendment process.                                                                                                                                                |                                                                                                                                              | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder                  |
+| IsAmendableOrderCartReorderValidatorRulePlugin                         | Validates if all order items are in the order item state that has the `amendable` flag.                                                                                                                         |                                                                                                                                              | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder                  |
+| AmendmentOrderReferenceCartPreReorderPlugin                            | Sets `CartReorderTransfer.quote.amendmentOrderReference` taken from `CartReorderRequestTransfer.orderReference`.                                                                                        |                                                                                                                                              | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder                     |
+| AmendmentQuoteNameCartPreReorderPlugin                                 | Updates `CartReorderTransfer.quote.name` with a custom amendment quote name.                                                                                                                              |                                                                                                                                              | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder                     |
 | OriginalSalesOrderItemPriceCartPreReorderPlugin                        | Adds original sales order item unit prices to `CartReorderTransfer.quote.originalSalesOrderItemUnitPrices` with group keys as array keys.                                                               | None                                                                                                                                             | Spryker\Zed\PriceProductSalesOrderAmendment\Communication\Plugin\CartReorder         |
-| OrderSalesOrderAmendmentValidatorRulePlugin                            | Validates if order with provided original/amended order reference exists.                                                                                                                               | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\SalesOrderAmendment          |
-| CartNoteSalesOrderItemCollectorPlugin                                  | Iterates over `SalesOrderAmendmentItemCollectionTransfer.itemsToSkip` and compares item's cart notes with the corresponding item's cart notes from `OrderTransfer.items`.                               | None                                                                                                                                             | Spryker\Zed\CartNote\Communication\Plugin\SalesOrderAmendment                        |
-| ShipmentSalesOrderItemCollectorPlugin                                  | Iterates over `SalesOrderAmendmentItemCollectionTransfer.itemsToSkip` and compares item's shipments with the corresponding item's shipments from `OrderTransfer.items`.                                 | None                                                                                                                                             | Spryker\Zed\Shipment\Communication\Plugin\SalesOrderAmendment                        |
-| ConfigurableBundleNoteSalesOrderItemCollectorPlugin                    | Iterates over `SalesOrderAmendmentItemCollectionTransfer.itemsToSkip` and compares item's configurable bundle notes with the corresponding item's configurable bundle notes from `OrderTransfer.items`. | None                                                                                                                                             | Spryker\Zed\ConfigurableBundleNote\Communication\Plugin\SalesOrderAmendment          |
-| SalesProductConfigurationSalesOrderItemCollectorPlugin                 | Iterates over `SalesOrderAmendmentItemCollectionTransfer.itemsToSkip` and compares item's configurations with the corresponding item's configurations from `OrderTransfer.items`.                       | None                                                                                                                                             | Spryker\Zed\SalesProductConfiguration\Communication\Plugin\SalesOrderAmendment       |
-| SalesServicePointSalesOrderItemCollectorPlugin                         | Iterates over `SalesOrderAmendmentItemCollectionTransfer.itemsToSkip` and compares item's service points with the corresponding item's service points from `OrderTransfer.items`.                       | None                                                                                                                                             | Spryker\Zed\SalesServicePoint\Communication\Plugin\SalesOrderAmendment               |
-| OrderAmendmentRestCartReorderAttributesMapperPlugin                    | Maps 'isAmendment' property from `RestCartReorderRequestAttributesTransfer` to `CartReorderRequestTransfer`.                                                                                            | None                                                                                                                                             | Spryker\Glue\OrderAmendmentsRestApi\Plugin\CartReorderRestApi                        |
-| OrderAmendmentRestCartAttributesMapperPlugin                           | Maps field `amendmentOrderReference` from `QuoteTransfer` to `RestCartsAttributesTransfer`.                                                                                                             | None                                                                                                                                             | Spryker\Glue\OrderAmendmentsRestApi\Plugin\CartsRestApi                              |
-| OrderAmendmentCheckoutPreCheckPlugin                                   | Validates if order is in a state that allows amendment.                                                                                                                                                 | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Checkout                     |
-| CustomerOrderSavePlugin                                                | Saves customer info to sales related table.                                                                                                                                                             | None                                                                                                                                             | Spryker\Zed\Customer\Communication\Plugin\Checkout                                   |
-| UpdateOrderByQuoteCheckoutDoSaveOrderPlugin                            | Updates order billing address with billing address data from quote.                                                                                                                                     | None                                                                                                                                             | Spryker\Zed\Sales\Communication\Plugin\Checkout                                      |
-| OrderTotalsSaverPlugin                                                 | Saves order totals.                                                                                                                                                                                     | None                                                                                                                                             | Spryker\Zed\Sales\Communication\Plugin\Checkout                                      |
-| ReleaseUsedCodesCheckoutDoSaveOrderPlugin                              | Decreases the number of uses of each of found discount codes by 1.                                                                                                                                      | None                                                                                                                                             | Spryker\Zed\Discount\Communication\Plugin\Checkout                                   |
-| ShipmentTypeCheckoutDoSaveOrderPlugin                                  | Creates/updates sales shipment type entity.                                                                                                                                                             | None                                                                                                                                             | Spryker\Zed\SalesShipmentType\Communication\Plugin\Checkout                          |
-| UpdateCartNoteCheckoutDoSaveOrderPlugin                                | Updates order's cart note with the cart note provided in `QuoteTransfer.cartNote`.                                                                                                                      | None                                                                                                                                             | Spryker\Zed\CartNote\Communication\Plugin\Checkout                                   |
-| ReplaceSalesOrderDiscountsCheckoutDoSaveOrderPlugin                    | Deletes sales discount and sales discount code entities related to provided sales order ID. Iterates over `orderItems`, `orderExpenses` and creates sales discount entities for each item.              | None                                                                                                                                             | Spryker\Zed\Discount\Communication\Plugin\Checkout                                   |
-| ReplaceSalesOrderShipmentCheckoutDoSaveOrderPlugin                     | Recreates new sales shipment expenses for each item level shipment.                                                                                                                                     | None                                                                                                                                             | Spryker\Zed\Shipment\Communication\Plugin\Checkout                                   |
-| SalesOrderAmendmentItemsCheckoutDoSaveOrderPlugin                      | Replaces order item during amendment process.                                                                                                                                                           | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout                        |
-| ProductBundleOrderSaverPlugin                                          | Saves order bundle items.                                                                                                                                                                               | None                                                                                                                                             | Spryker\Zed\ProductBundle\Communication\Plugin\Checkout                              |
-| ReplaceSalesOrderPaymentCheckoutDoSaveOrderPlugin                      | Saves order payments from `QuoteTransfer`.                                                                                                                                                              | None                                                                                                                                             | Spryker\Zed\SalesPayment\Communication\Plugin\Checkout                               |
-| GiftCardPaymentCheckoutDoSaveOrderPlugin                               | Iterates over `QuoteTransfer.payments` and saves gift card related payments into the `spy_payment_gift_card` DB table.                                                                                  | None                                                                                                                                             | Spryker\Zed\GiftCard\Communication\Plugin\Checkout                                   |
-| ReplaceSalesOrderThresholdExpensesCheckoutDoSaveOrderPlugin            | Iterates over `QuoteTransfer.expenses` and stores expenses of the type defined by {@link \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::THRESHOLD_EXPENSE_TYPE} in the database.        | None                                                                                                                                             | Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Checkout                        |
-| FinishOrderAmendmentCheckoutPostSavePlugin                             | Triggers OMS event defined in {@link \Spryker\Zed\SalesOrderAmendmentOms\SalesOrderAmendmentOmsConfig::getFinishOrderAmendmentEvent()} to finish the order amendment process.                           | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Checkout                     |
-| DummyPaymentCheckoutPostSavePlugin                                     | If QuoteTransfer.billingAddress.lastName is 'Invalid' the plugin adds the error into CheckoutResponseTransfer.                                                                                          | None                                                                                                                                             | Spryker\Zed\DummyPayment\Communication\Plugin\Checkout                               |
-| CloseQuoteRequestCheckoutPostSaveHookPlugin                            | If quote contains quote request version reference - marks quote request as closed.                                                                                                                      | None                                                                                                                                             | Spryker\Zed\QuoteRequest\Communication\Plugin\Checkout                               |
-| SendEmailToGiftCardUser                                                | Sends an email to a Gift Card user.                                                                                                                                                                     | None                                                                                                                                             | Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Checkout                      |
-| PaymentAuthorizationCheckoutPostSavePlugin                             | Checks whether a payment method that requires authorization is selected for the given order.                                                                                                            | None                                                                                                                                             | Spryker\Zed\Payment\Communication\Plugin\Checkout                                    |
-| PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin                    | Send a request to the used PSP App to confirm the pre-order payment.                                                                                                                                    | None                                                                                                                                             | Spryker\Zed\Payment\Communication\Plugin\Checkout                                    |
-| DisallowQuoteCheckoutPreSavePlugin                                     | Disallows quote checkout for the configured amount of seconds.                                                                                                                                          | None                                                                                                                                             | Spryker\Zed\QuoteCheckoutConnector\Communication\Plugin\Checkout                     |
-| SalesOrderExpanderPlugin                                               | Transforms provided cart items according configured cart item transformer strategies.                                                                                                                   | None                                                                                                                                             | Spryker\Zed\Sales\Communication\Plugin\Checkout                                      |
-| OriginalOrderQuoteExpanderCheckoutPreSavePlugin                        | Sets `QuoteTransfer.originalOrder` with found order entity.                                                                                                                                             | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout                        |
-| ResetQuoteNameQuoteBeforeSavePlugin                                    | Sets `QuoteTransfer.name` to null if quote has no items and `QuoteTransfer.amendmentOrderReference` is set.                                                                                             | Should be executed before {@link \Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote\ResetAmendmentOrderReferenceBeforeQuoteSavePlugin}. | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote                           |
-| CancelOrderAmendmentBeforeQuoteSavePlugin                              | Triggers OMS event defined in {@link \Spryker\Zed\SalesOrderAmendmentOms\SalesOrderAmendmentOmsConfig::getCancelOrderAmendmentEvent()} to cancel the order amendment process.                           | Should be executed before {@link \Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote\ResetAmendmentOrderReferenceBeforeQuoteSavePlugin}. | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Quote                        |
-| ResetAmendmentOrderReferenceBeforeQuoteSavePlugin                      | Sets `QuoteTransfer.amendmentOrderReference` to null if `QuoteTransfer.amendmentOrderReference` is not null.                                                                                            | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote                           |
+| OrderSalesOrderAmendmentValidatorRulePlugin                            | Validates if an order with provided original or amended order reference exists.                                                                                                                               |                                                                                                                                              | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\SalesOrderAmendment          |
+| CartNoteSalesOrderItemCollectorPlugin                                  | Iterates over `SalesOrderAmendmentItemCollectionTransfer.itemsToSkip` and compares an item's cart notes with the corresponding item's cart notes from `OrderTransfer.items`.                               |                                                                                                                                              | Spryker\Zed\CartNote\Communication\Plugin\SalesOrderAmendment                        |
+| ShipmentSalesOrderItemCollectorPlugin                                  | Iterates over `SalesOrderAmendmentItemCollectionTransfer.itemsToSkip` and compares an item's shipments with the corresponding item's shipments from `OrderTransfer.items`.                                 |                                                                                                                                              | Spryker\Zed\Shipment\Communication\Plugin\SalesOrderAmendment                        |
+| ConfigurableBundleNoteSalesOrderItemCollectorPlugin                    | Iterates over `SalesOrderAmendmentItemCollectionTransfer.itemsToSkip` and compares an item's configurable bundle notes with the corresponding item's configurable bundle notes from `OrderTransfer.items`. |                                                                                                                                              | Spryker\Zed\ConfigurableBundleNote\Communication\Plugin\SalesOrderAmendment          |
+| SalesProductConfigurationSalesOrderItemCollectorPlugin                 | Iterates over `SalesOrderAmendmentItemCollectionTransfer.itemsToSkip` and compares an item's configurations with the corresponding item's configurations from `OrderTransfer.items`.                       |                                                                                                                                              | Spryker\Zed\SalesProductConfiguration\Communication\Plugin\SalesOrderAmendment       |
+| SalesServicePointSalesOrderItemCollectorPlugin                         | Iterates over `SalesOrderAmendmentItemCollectionTransfer.itemsToSkip` and compares an item's service points with the corresponding item's service points from `OrderTransfer.items`.                       |                                                                                                                                              | Spryker\Zed\SalesServicePoint\Communication\Plugin\SalesOrderAmendment               |
+| OrderAmendmentRestCartReorderAttributesMapperPlugin                    | Maps the 'isAmendment' property from `RestCartReorderRequestAttributesTransfer` to `CartReorderRequestTransfer`.                                                                                            |                                                                                                                                              | Spryker\Glue\OrderAmendmentsRestApi\Plugin\CartReorderRestApi                        |
+| OrderAmendmentRestCartAttributesMapperPlugin                           | Maps the `amendmentOrderReference` field from `QuoteTransfer` to `RestCartsAttributesTransfer`.                                                                                                             |                                                                                                                                              | Spryker\Glue\OrderAmendmentsRestApi\Plugin\CartsRestApi                              |
+| OrderAmendmentCheckoutPreCheckPlugin                                   | Validates if an order is in a state that allows amendment.                                                                                                                                                 |                                                                                                                                              | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Checkout                     |
+| CustomerOrderSavePlugin                                                | Saves customer info to a sales related table.                                                                                                                                                             |                                                                                                                                              | Spryker\Zed\Customer\Communication\Plugin\Checkout                                   |
+| UpdateOrderByQuoteCheckoutDoSaveOrderPlugin                            | Updates order billing address with billing address data from quote.                                                                                                                                     |                                                                                                                                              | Spryker\Zed\Sales\Communication\Plugin\Checkout                                      |
+| OrderTotalsSaverPlugin                                                 | Saves order totals.                                                                                                                                                                                     |                                                                                                                                              | Spryker\Zed\Sales\Communication\Plugin\Checkout                                      |
+| ReleaseUsedCodesCheckoutDoSaveOrderPlugin                              | Decreases the number of uses of each of located discount codes by 1.                                                                                                                                      |                                                                                                                                              | Spryker\Zed\Discount\Communication\Plugin\Checkout                                   |
+| ShipmentTypeCheckoutDoSaveOrderPlugin                                  | Creates or updates a sales shipment type entity.                                                                                                                                                             |                                                                                                                                              | Spryker\Zed\SalesShipmentType\Communication\Plugin\Checkout                          |
+| UpdateCartNoteCheckoutDoSaveOrderPlugin                                | Updates an order's cart note with the cart note provided in `QuoteTransfer.cartNote`.                                                                                                                      |                                                                                                                                              | Spryker\Zed\CartNote\Communication\Plugin\Checkout                                   |
+| ReplaceSalesOrderDiscountsCheckoutDoSaveOrderPlugin                    | Deletes sales discount and sales discount code entities related to a provided sales order ID. Iterates over `orderItems` and `orderExpenses` and creates sales discount entities for each item.              |                                                                                                                                              | Spryker\Zed\Discount\Communication\Plugin\Checkout                                   |
+| ReplaceSalesOrderShipmentCheckoutDoSaveOrderPlugin                     | Recreates new sales shipment expenses for each item level shipment.                                                                                                                                     |                                                                                                                                              | Spryker\Zed\Shipment\Communication\Plugin\Checkout                                   |
+| SalesOrderAmendmentItemsCheckoutDoSaveOrderPlugin                      | Replaces an order item during amendment process.                                                                                                                                                           |                                                                                                                                              | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout                        |
+| ProductBundleOrderSaverPlugin                                          | Saves order bundle items.                                                                                                                                                                               |                                                                                                                                              | Spryker\Zed\ProductBundle\Communication\Plugin\Checkout                              |
+| ReplaceSalesOrderPaymentCheckoutDoSaveOrderPlugin                      | Saves order payments from `QuoteTransfer`.                                                                                                                                                              |                                                                                                                                              | Spryker\Zed\SalesPayment\Communication\Plugin\Checkout                               |
+| GiftCardPaymentCheckoutDoSaveOrderPlugin                               | Iterates over `QuoteTransfer.payments` and saves gift card related payments into the `spy_payment_gift_card` table.                                                                                  |                                                                                                                                              | Spryker\Zed\GiftCard\Communication\Plugin\Checkout                                   |
+| ReplaceSalesOrderThresholdExpensesCheckoutDoSaveOrderPlugin            | Iterates over `QuoteTransfer.expenses` and stores expenses of the type defined by `{@link \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::THRESHOLD_EXPENSE_TYPE}` in the database.        |                                                                                                                                              | Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Checkout                        |
+| FinishOrderAmendmentCheckoutPostSavePlugin                             | Triggers the OMS event defined in `{@link \Spryker\Zed\SalesOrderAmendmentOms\SalesOrderAmendmentOmsConfig::getFinishOrderAmendmentEvent()}` to finish the order amendment process.                           |                                                                                                                                              | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Checkout                     |
+| DummyPaymentCheckoutPostSavePlugin                                     | If `QuoteTransfer.billingAddress.lastName` is `Invalid`, adds the error into `CheckoutResponseTransfer`.                                                                                          |                                                                                                                                              | Spryker\Zed\DummyPayment\Communication\Plugin\Checkout                               |
+| CloseQuoteRequestCheckoutPostSaveHookPlugin                            | If quote contains a quote request version reference, marks the quote request as closed.                                                                                                                      |                                                                                                                                              | Spryker\Zed\QuoteRequest\Communication\Plugin\Checkout                               |
+| SendEmailToGiftCardUser                                                | Sends an email to a Gift Card user.                                                                                                                                                                     |                                                                                                                                              | Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Checkout                      |
+| PaymentAuthorizationCheckoutPostSavePlugin                             | Checks whether the payment method selected for the given order requires authorization.                                                                                                            |                                                                                                                                              | Spryker\Zed\Payment\Communication\Plugin\Checkout                                    |
+| PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin                    | Send a request to the used PSP App to confirm the preorder payment.                                                                                                                                    |                                                                                                                                              | Spryker\Zed\Payment\Communication\Plugin\Checkout                                    |
+| DisallowQuoteCheckoutPreSavePlugin                                     | Disallows quote checkout for the configured amount of seconds.                                                                                                                                          |                                                                                                                                              | Spryker\Zed\QuoteCheckoutConnector\Communication\Plugin\Checkout                     |
+| SalesOrderExpanderPlugin                                               | Transforms the provided cart items according to the configured cart item transformer strategies.
+                                                        |                                                                        | Spryker\Zed\Sales\Communication\Plugin\Checkout                                      |
+| OriginalOrderQuoteExpanderCheckoutPreSavePlugin                        | Sets `QuoteTransfer.originalOrder` with a found order entity.                                                                                                                                             |                                                                                                                                              | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout                        |
+| ResetQuoteNameQuoteBeforeSavePlugin                                    | Sets `QuoteTransfer.name` to `null` if quote has no items and `QuoteTransfer.amendmentOrderReference` is set.                                                                                             | Should be executed before `{@link \Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote\ResetAmendmentOrderReferenceBeforeQuoteSavePlugin}` | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote                           |
+| CancelOrderAmendmentBeforeQuoteSavePlugin                              | Triggers the OMS event defined in `{@link \Spryker\Zed\SalesOrderAmendmentOms\SalesOrderAmendmentOmsConfig::getCancelOrderAmendmentEvent()}` to cancel the order amendment process.                           | Should be executed before `{@link \Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote\ResetAmendmentOrderReferenceBeforeQuoteSavePlugin}`. | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Quote                        |
+| ResetAmendmentOrderReferenceBeforeQuoteSavePlugin                      | Sets `QuoteTransfer.amendmentOrderReference` to null if `QuoteTransfer.amendmentOrderReference` is not `null`.                                                                                            |                                                                                                                                              | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote                           |
 | ResetOriginalSalesOrderItemUnitPricesBeforeQuoteSavePlugin             | Sets empty array to `QuoteTransfer.originalSalesOrderItemUnitPrices` if `QuoteTransfer.items` is empty and `QuoteTransfer.originalSalesOrderItemUnitPrices` is not empty.                               | None                                                                                                                                             | Spryker\Zed\PriceProductSalesOrderAmendment\Communication\Plugin\Quote               |
-| CancelOrderAmendmentQuoteDeleteAfterPlugin                             | Triggers OMS event defined in {@link \Spryker\Zed\SalesOrderAmendmentOms\SalesOrderAmendmentOmsConfig::getCancelOrderAmendmentEvent()} to cancel the order amendment process.                           | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Quote                        |
-| SalesOrderAmendmentOrderExpanderPlugin                                 | Expands `OrderTransfer.salesOrderAmendment` with found sales order amendment.                                                                                                                           | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Sales                           | 
-| IsAmendableOrderExpanderPlugin                                         | Checks if all order items are in order item state that has a flag defined in {@link \Spryker\Zed\SalesOrderAmendmentOms\SalesOrderAmendmentOmsConfig::getAmendableOmsFlag()}.                           | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Sales                        | 
-| CreateSalesOrderAmendmentOrderPostSavePlugin                           | Persists sales order amendment entity.                                                                                                                                                                  | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Sales                           |
-| IsAmendableOrderSearchOrderExpanderPlugin                              | Expands the `OrderTransfer.isAmendable` property.                                                                                                                                                       | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Sales                        |
-| OrderAmendmentDefaultOrderItemInitialStateProviderPlugin               | Returns initial oms order item state for order items in order amendment flow.                                                                                                                           | None                                                                                                                                             | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Sales                        |
-| OrderAmendmentsByOrderResourceRelationshipPlugin                       | Adds `order-amendments` resource as relationship in case `OrderTransfer` and `OrderTransfer.salesOrderAmendment` are provided as a payload.                                                             | None                                                                                                                                             | Spryker\Glue\OrderAmendmentsRestApi\Plugin\GlueApplication                           |
-| CountriesCheckoutDataValidatorPlugin                                   | Verifies if countries can be found by countryIso2Codes given in `CheckoutDataTransfer.shipments.shippingAddress`.                                                                                       | None                                                                                                                                             | Spryker\Zed\Country\Communication\Plugin\CheckoutRestApi                             |
-| ShipmentMethodCheckoutDataValidatorPlugin                              | Verifies if shipment method is valid.                                                                                                                                                                   | None                                                                                                                                             | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi                    |
-| ItemsCheckoutDataValidatorPlugin                                       | Validates if `CheckoutDataTransfer` provides shipment data per item level.                                                                                                                              | None                                                                                                                                             | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi                    |
-| CustomerAddressCheckoutDataValidatorPlugin                             | Checks if customer addresses exists.                                                                                                                                                                    | None                                                                                                                                             | Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi                    |
-| CompanyBusinessUnitAddressCheckoutDataValidatorPlugin                  | Checks if company addresses exists.                                                                                                                                                                     | None                                                                                                                                             | Spryker\Zed\CompanyBusinessUnitAddressesRestApi\Communication\Plugin\CheckoutRestApi |
-| ShipmentTypeCheckoutDataValidatorPlugin                                | Validates whether shipment type related to the shipment method is active and belongs to the quote store.                                                                                                | None                                                                                                                                             | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi                |
-| ClickAndCollectExampleReplaceCheckoutDataValidatorPlugin               | Replaces filtered product offers with suitable product offers from Persistence.                                                                                                                         | None                                                                                                                                             | Spryker\Zed\ClickAndCollectExample\Communication\Plugin\CheckoutRestApi              |
-| SaveOrderCommentThreadOrderPostSavePlugin                              | Saves comments thread after order is saved.                                                                                                                                                             | None                                                                                                                                             | Spryker\Zed\CommentSalesConnector\Communication\Plugin\Sales                         |
-| SaveCompanyBusinessUnitUuidOrderPostSavePlugin                         | Saves company business unit UUID to the order after it's saved.                                                                                                                                         | None                                                                                                                                             | Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\Sales             |
-| SaveCompanyUuidOrderPostSavePlugin                                     | Saves company UUID to the order after it's saved.                                                                                                                                                       | None                                                                                                                                             | Spryker\Zed\CompanySalesConnector\Communication\Plugin\Sales                         |
-| DiscountSalesOrderItemCollectionPreDeletePlugin                        | Deletes found by criteria sales discount and sales discount code entities.                                                                                                                              | None                                                                                                                                             | Spryker\Zed\Discount\Communication\Plugin\Sales                                      |
-| SalesDiscountSalesExpensePreDeletePlugin                               | Deletes sales discount entities related to provided expenses.                                                                                                                                           | None                                                                                                                                             | Spryker\Zed\Discount\Communication\Plugin\Sales                                      |
-| GiftCardOrderItemsPostSavePlugin                                       | Processes gift card order items after they're saved.                                                                                                                                                    | None                                                                                                                                             | Spryker\Zed\GiftCard\Communication\Plugin\Sales                                      |
-| GiftCardSalesOrderItemCollectionPreDeletePlugin                        | Deletes found by criteria sales order item gift card entities.                                                                                                                                          | None                                                                                                                                             | Spryker\Zed\GiftCard\Communication\Plugin\Sales                                      |
-| NopaymentSalesOrderItemCollectionPreDeletePlugin                       | Deletes found by criteria nopayment paid entities.                                                                                                                                                      | None                                                                                                                                             | Spryker\Zed\Nopayment\Communication\Plugin\Sales                                     |
-| DefaultOrderItemInitialStateProviderPlugin                             | Sets the initial OMS state for order items.                                                                                                                                                             | None                                                                                                                                             | Spryker\Zed\Oms\Communication\Plugin\Sales                                           |
-| OmsItemHistorySalesOrderItemCollectionPreDeletePlugin                  | Deletes found by criteria entities.                                                                                                                                                                     | None                                                                                                                                             | Spryker\Zed\Oms\Communication\Plugin\Sales                                           |
-| UpdateOrderCustomReferenceOrderPostSavePlugin                          | Updates custom order reference after order is saved.                                                                                                                                                    | None                                                                                                                                             | Spryker\Zed\OrderCustomReference\Communication\Plugin\Sales                          |
-| ProductOptionOrderItemsPostSavePlugin                                  | Processes product option order items after they're saved.                                                                                                                                               | None                                                                                                                                             | Spryker\Zed\ProductOption\Communication\Plugin\Sales                                 |
-| ProductOptionSalesOrderItemCollectionPostUpdatePlugin                  | Processes product options after order items collection update.                                                                                                                                          | None                                                                                                                                             | Spryker\Zed\ProductOption\Communication\Plugin\Sales                                 |
-| ProductOptionSalesOrderItemCollectionPreDeletePlugin                   | Deletes sales order item option entities.                                                                                                                                                               | None                                                                                                                                             | Spryker\Zed\ProductOption\Communication\Plugin\Sales                                 |
-| SalesConfigurableBundleSalesOrderItemCollectionPreDeletePlugin         | Deletes sales order configured bundle item entities.                                                                                                                                                    | None                                                                                                                                             | Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales                       |
-| SalesConfiguredBundlesSalesOrderItemCollectionPostUpdatePlugin         | Processes configured bundles after order items collection update.                                                                                                                                       | None                                                                                                                                             | Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales                       |
-| SalesProductConfigurationSalesOrderItemCollectionPostUpdatePlugin      | Processes product configurations after order items collection update.                                                                                                                                   | None                                                                                                                                             | Spryker\Zed\SalesProductConfiguration\Communication\Plugin\Sales                     |
-| SalesProductConfigurationSalesOrderItemCollectionPreDeletePlugin       | Deletes found by criteria sales order item configuration entities.                                                                                                                                      | None                                                                                                                                             | Spryker\Zed\SalesProductConfiguration\Communication\Plugin\Sales                     |
-| ItemMetadataSalesOrderItemCollectionPostUpdatePlugin                   | Processes item metadata after order items collection update.                                                                                                                                            | None                                                                                                                                             | Spryker\Zed\SalesProductConnector\Communication\Plugin\Sales                         |
-| ItemMetadataSalesOrderItemCollectionPreDeletePlugin                    | Deletes found by criteria sales order item metadata entities.                                                                                                                                           | None                                                                                                                                             | Spryker\Zed\SalesProductConnector\Communication\Plugin\Sales                         |
-| SalesReclamationSalesOrderItemCollectionPreDeletePlugin                | Deletes found by criteria sales reclamation item entities.                                                                                                                                              | None                                                                                                                                             | Spryker\Zed\SalesReclamation\Communication\Plugin\Sales                              |
-| ServicePointSalesOrderItemCollectionPostUpdatePlugin                   | Processes service points after order items collection update.                                                                                                                                           | None                                                                                                                                             | Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales                             |
-| ServicePointSalesOrderItemCollectionPreDeletePlugin                    | Deletes found by criteria sales order item service point entities.                                                                                                                                      | None                                                                                                                                             | Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales                             |
+| CancelOrderAmendmentQuoteDeleteAfterPlugin                             | Triggers the OMS event defined in `{@link \Spryker\Zed\SalesOrderAmendmentOms\SalesOrderAmendmentOmsConfig::getCancelOrderAmendmentEvent()}` to cancel the order amendment process.                           |                                                                                                                                              | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Quote                        |
+| SalesOrderAmendmentOrderExpanderPlugin                                 | Expands `OrderTransfer.salesOrderAmendment` with a found sales order amendment.                                                                                                                           |                                                                                                                                              | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Sales                           | 
+| IsAmendableOrderExpanderPlugin                                         | Checks if all order items are in the order item state that has a flag defined in `{@link \Spryker\Zed\SalesOrderAmendmentOms\SalesOrderAmendmentOmsConfig::getAmendableOmsFlag()}`.                           |                                                                                                                                              | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Sales                        | 
+| CreateSalesOrderAmendmentOrderPostSavePlugin                           | Persists a sales order amendment entity.                                                                                                                                                                  |                                                                                                                                              | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Sales                           |
+| IsAmendableOrderSearchOrderExpanderPlugin                              | Expands the `OrderTransfer.isAmendable` property.                                                                                                                                                       |                                                                                                                                              | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Sales                        |
+| OrderAmendmentDefaultOrderItemInitialStateProviderPlugin               | Returns the initial OMS order item state for order items in the order amendment flow.                                                                                                                           |                                                                                                                                              | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Sales                        |
+| OrderAmendmentsByOrderResourceRelationshipPlugin                       | Adds the `order-amendments` resource as relationship if `OrderTransfer` and `OrderTransfer.salesOrderAmendment` are provided as a payload.                                                             |                                                                                                                                              | Spryker\Glue\OrderAmendmentsRestApi\Plugin\GlueApplication                           |
+| CountriesCheckoutDataValidatorPlugin                                   | Verifies if countries can be found by `countryIso2Codes` given in `CheckoutDataTransfer.shipments.shippingAddress`.                                                                                       |                                                                                                                                              | Spryker\Zed\Country\Communication\Plugin\CheckoutRestApi                             |
+| ShipmentMethodCheckoutDataValidatorPlugin                              | Verifies if a shipment method is valid.                                                                                                                                                                   |                                                                                                                                              | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi                    |
+| ItemsCheckoutDataValidatorPlugin                                       | Validates if `CheckoutDataTransfer` provides shipment data per item level.                                                                                                                              |                                                                                                                                              | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi                    |
+| CustomerAddressCheckoutDataValidatorPlugin                             | Checks if customer addresses exist.                                                                                                                                                                    |                                                                                                                                              | Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi                    |
+| CompanyBusinessUnitAddressCheckoutDataValidatorPlugin                  | Checks if company addresses exist.                                                                                                                                                                     |                                                                                                                                              | Spryker\Zed\CompanyBusinessUnitAddressesRestApi\Communication\Plugin\CheckoutRestApi |
+| ShipmentTypeCheckoutDataValidatorPlugin                                | Validates whether a shipment type related to the shipment method is active and belongs to the quote store.                                                                                                |                                                                                                                                              | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi                |
+| ClickAndCollectExampleReplaceCheckoutDataValidatorPlugin               | Replaces filtered product offers with suitable product offers from Persistence.                                                                                                                         |                                                                                                                                              | Spryker\Zed\ClickAndCollectExample\Communication\Plugin\CheckoutRestApi              |
+| SaveOrderCommentThreadOrderPostSavePlugin                              | Saves a comments thread after an order is saved.                                                                                                                                                             |                                                                                                                                              | Spryker\Zed\CommentSalesConnector\Communication\Plugin\Sales                         |
+| SaveCompanyBusinessUnitUuidOrderPostSavePlugin                         | Saves company business unit UUID to the order after it's saved.                                                                                                                                         |                                                                                                                                              | Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\Sales             |
+| SaveCompanyUuidOrderPostSavePlugin                                     | Saves company UUID to the order after it's saved.                                                                                                                                                       |                                                                                                                                              | Spryker\Zed\CompanySalesConnector\Communication\Plugin\Sales                         |
+| DiscountSalesOrderItemCollectionPreDeletePlugin                        | Deletes sales discount and sales discount code entities found by criteria.                                                                                                                              |                                                                                                                                              | Spryker\Zed\Discount\Communication\Plugin\Sales                                      |
+| SalesDiscountSalesExpensePreDeletePlugin                               | Deletes sales discount entities related to provided expenses.                                                                                                                                           |                                                                                                                                              | Spryker\Zed\Discount\Communication\Plugin\Sales                                      |
+| GiftCardOrderItemsPostSavePlugin                                       | Processes gift card order items after they're saved.                                                                                                                                                    |                                                                                                                                              | Spryker\Zed\GiftCard\Communication\Plugin\Sales                                      |
+| GiftCardSalesOrderItemCollectionPreDeletePlugin                        | Deletes sales order item gift card entities found by criteria.                                                                                                                                          |                                                                                                                                              | Spryker\Zed\GiftCard\Communication\Plugin\Sales                                      |
+| NopaymentSalesOrderItemCollectionPreDeletePlugin                       | Deletes no-payment paid entities found by criteria.                                                                                                                                                      |                                                                                                                                              | Spryker\Zed\Nopayment\Communication\Plugin\Sales                                     |
+| DefaultOrderItemInitialStateProviderPlugin                             | Sets the initial OMS state for order items.                                                                                                                                                             |                                                                                                                                              | Spryker\Zed\Oms\Communication\Plugin\Sales                                           |
+| OmsItemHistorySalesOrderItemCollectionPreDeletePlugin                  | Deletes entities found by criteria.                                                                                                                                                                     |                                                                                                                                              | Spryker\Zed\Oms\Communication\Plugin\Sales                                           |
+| UpdateOrderCustomReferenceOrderPostSavePlugin                          | Updates custom order reference after an order is saved.                                                                                                                                                    |                                                                                                                                              | Spryker\Zed\OrderCustomReference\Communication\Plugin\Sales                          |
+| ProductOptionOrderItemsPostSavePlugin                                  | Processes product option order items after they're saved.                                                                                                                                               |                                                                                                                                              | Spryker\Zed\ProductOption\Communication\Plugin\Sales                                 |
+| ProductOptionSalesOrderItemCollectionPostUpdatePlugin                  | Processes product options after an order items collection is  updated.                                                                                                                                          |                                                                                                                                              | Spryker\Zed\ProductOption\Communication\Plugin\Sales                                 |
+| ProductOptionSalesOrderItemCollectionPreDeletePlugin                   | Deletes sales order item option entities.                                                                                                                                                               |                                                                                                                                              | Spryker\Zed\ProductOption\Communication\Plugin\Sales                                 |
+| SalesConfigurableBundleSalesOrderItemCollectionPreDeletePlugin         | Deletes sales order configured bundle item entities.                                                                                                                                                    |                                                                                                                                              | Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales                       |
+| SalesConfiguredBundlesSalesOrderItemCollectionPostUpdatePlugin         | Processes configured bundles after an order items collection is  updated.                                                                                                                                       |                                                                                                                                              | Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales                       |
+| SalesProductConfigurationSalesOrderItemCollectionPostUpdatePlugin      | Processes product configurations after an order items collection is updated.                                                                                                                                   |                                                                                                                                              | Spryker\Zed\SalesProductConfiguration\Communication\Plugin\Sales                     |
+| SalesProductConfigurationSalesOrderItemCollectionPreDeletePlugin       | Deletes sales order item configuration entities found by criteria.                                                                                                                                      |                                                                                                                                              | Spryker\Zed\SalesProductConfiguration\Communication\Plugin\Sales                     |
+| ItemMetadataSalesOrderItemCollectionPostUpdatePlugin                   | Processes item metadata after an order items collection is updated.                                                                                                                                            |                                                                                                                                              | Spryker\Zed\SalesProductConnector\Communication\Plugin\Sales                         |
+| ItemMetadataSalesOrderItemCollectionPreDeletePlugin                    | Deletes sales order item metadata entities found by criteria.                                                                                                                                           |                                                                                                                                              | Spryker\Zed\SalesProductConnector\Communication\Plugin\Sales                         |
+| SalesReclamationSalesOrderItemCollectionPreDeletePlugin                | Deletes sales reclamation item entities found by criteria.                                                                                                                                              |                                                                                                                                              | Spryker\Zed\SalesReclamation\Communication\Plugin\Sales                              |
+| ServicePointSalesOrderItemCollectionPostUpdatePlugin                   | Processes service points after an order items collection is updated.                                                                                                                                           |                                                                                                                                              | Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales                             |
+| ServicePointSalesOrderItemCollectionPreDeletePlugin                    | Deletes sales order item service point entities found by criteria.                                                                                                                                      |                                                                                                                                              | Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales                             |
 | SalesOrderAmendmentCurrentCurrencyIsoCodePreCheckPlugin                | Disallows changing a currency when order is being edited.                                                                                                                                               | None                                                                                                                                             | Spryker\Client\SalesOrderAmendment\Plugin\Currency                                   |
 | SalesOrderAmendmentCurrentPriceModePreCheckPlugin                      | Disallows changing a price mode when order is being edited.                                                                                                                                             | None                                                                                                                                             | Spryker\Client\SalesOrderAmendment\Plugin\Price                                      |
 | PriceItemExpanderPlugin                                                | Adds product prices to item, based on currency, price mode and price type. Allows to expand items with nullable prices.                                                                                 | For Order amendment flow should be executed instead of {@link \Spryker\Zed\PriceCartConnector\Communication\Plugin\CartItemPricePlugin}.         | Spryker\Zed\PriceCartConnector\Communication\Plugin\Cart                             |
@@ -669,7 +659,8 @@ Enable the following behaviors by registering the plugins:
 | OriginalSalesOrderItemPriceProductPostResolvePlugin                    | Replaces item's prices with the original sales order item's prices after resolving prices for the resulting `PriceProductTransfer`.                                                                     | None                                                                                                                                             | Spryker\Client\PriceProductSalesOrderAmendment\Plugin\PriceProduct                   |
 | OrderItemPriceProductResolveConditionsPriceProductFilterExpanderPlugin | Expands `PriceProductFilterTransfer` with `PriceProductResolveConditionsTransfer` from `ProductViewTransfer`.                                                                                           | None                                                                                                                                             | Spryker\Client\PriceProductSalesOrderAmendment\Plugin\PriceProductStorage            |
 
-**src/Pyz/Zed/SalesOrderAmendment/SalesOrderAmendmentDependencyProvider.php**
+<details>
+  <summary>src/Pyz/Zed/SalesOrderAmendment/SalesOrderAmendmentDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -712,7 +703,11 @@ class SalesOrderAmendmentDependencyProvider extends SprykerSalesOrderAmendmentDe
 }
 ```
 
-**src/Pyz/Zed/CartReorder/CartReorderDependencyProvider.php**
+</details>
+
+
+<details>
+  <summary>src/Pyz/Zed/CartReorder/CartReorderDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -766,7 +761,11 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
 }
 ```
 
-**src/Pyz/Glue/CartReorderRestApi/CartReorderRestApiDependencyProvider.php**
+</details>
+
+<details>
+  <summary>src/Pyz/Glue/CartReorderRestApi/CartReorderRestApiDependencyProvider.php</summary>
+    
 
 ```php
 <?php
@@ -790,7 +789,11 @@ class CartReorderRestApiDependencyProvider extends SprykerCartReorderRestApiDepe
 }
 ```
 
-**src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
+</details>
+
+<details>
+  <summary>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+
 
 ```php
 <?php
@@ -814,7 +817,12 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ```
 
-**src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
+
+</details>
+
+
+<details>
+  <summary>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -930,7 +938,13 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 }
 ```
 
-**src/Pyz/Zed/Quote/QuoteDependencyProvider.php**
+</details>
+
+
+
+<details>
+  <summary>src/Pyz/Zed/Quote/QuoteDependencyProvider.php</summary>
+    
 
 ```php
 <?php
@@ -972,7 +986,13 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 }
 ```
 
-**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+</details>
+
+
+
+<details>
+  <summary>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
+
 
 ```php
 <?php
@@ -1122,7 +1142,10 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 }
 ```
 
-**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+</details>
+
+<details>
+  <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1154,7 +1177,15 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-**src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
+
+
+</details>
+
+
+
+<details>
+  <summary>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+    
 
 ```php
 <?php
@@ -1190,10 +1221,12 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 }
 ```
 
+</details>
+
 {% info_block warningBox "Verification" %}
 
-Place an order with different types of products (e.g., physical, digital, etc.) and check if the order amendment is available.
-Go to order detail and order list pages and check if the "edit order" button is present.
+* Place an order with different types of products–for exampale, physical or digital, and check if the order amendment is available.
+* Go to order detail and order list pages and check if the **edit order** button is displayed.
 
 {% endinfo_block %}
 
@@ -1421,6 +1454,8 @@ class PriceProductSalesOrderAmendmentDependencyProvider extends SprykerPriceProd
 
 ## Install feature frontend
 
+Take the following steps to install the feature frontend.
+
 ### Prerequisites
 
 Please overview and install the necessary features before beginning the integration step.
@@ -1477,7 +1512,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                       | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                |
 |----------------------------------------------|------------------------------------------------------------|---------------|----------------------------------------------------------|
-| SalesOrderAmendmentWidgetRouteProviderPlugin | Expands router collection with `order-amendment` endpoint. | None          | SprykerShop\Yves\SalesOrderAmendmentWidget\Plugin\Router |
+| SalesOrderAmendmentWidgetRouteProviderPlugin | Expands the router collection with the `order-amendment` endpoint. |           | SprykerShop\Yves\SalesOrderAmendmentWidget\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -1505,7 +1540,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the order amendment is available for the customer in order detail and order list pages.
+Make sure order amendment is available on order details and orders pages.
 
 {% endinfo_block %}
 
@@ -1515,7 +1550,7 @@ To enable widgets, register the following plugins:
 
 | PLUGIN               | SPECIFICATION                            | PREREQUISITES | NAMESPACE                                         |
 |----------------------|------------------------------------------|---------------|---------------------------------------------------|
-| OrderAmendmentWidget | Allows customers to edit existing order. | None          | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
+| OrderAmendmentWidget | Enables customers to edit existing orders. |           | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1547,6 +1582,53 @@ Make sure the following widgets have been registered:
 
 | MODULE               | TEST                                                                                                 |
 |----------------------|------------------------------------------------------------------------------------------------------|
-| OrderAmendmentWidget | Go to the **Order List** or **Order Detail** pages and make sure the "edit order" button is present. |
+| OrderAmendmentWidget | Make sure the edit order button is displayed on orders and order details pages. |
 
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

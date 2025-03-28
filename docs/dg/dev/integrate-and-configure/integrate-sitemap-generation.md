@@ -181,6 +181,7 @@ The Sitemap module lets you set a limit on the number of URLs that can be includ
 By default, the limit is 50,000 URLs per sitemap file, which is the maximum allowed by the Sitemaps Protocol.  
 You can decrease this limit by extending the `SitemapConfig` class and overriding the `getSitemapUrlLimit()` method.
 
+**src/Pyz/Yves/Sitemap/SitemapConfig.php**
 
 ```php
 <?php
@@ -203,6 +204,7 @@ By default, the sitemap file is stored with a structured path that includes the 
 
 The following example overrides the default configuration by redefining `getFilePath()`.
 
+**src/Pyz/Shared/Sitemap/SitemapConfig.php**
 
 ```php
 <?php

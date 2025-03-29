@@ -70,7 +70,7 @@ Make sure that you can't see the **Checkout** button on the Quote request items 
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Install the following required features:
 
 | NAME | VERSION |
 | --- | --- |

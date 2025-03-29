@@ -222,7 +222,7 @@ Go to the product detail page for a product with Volume Prices set, update the q
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Install the following required features:
 
 | NAME | VERSION |
 |---|---|

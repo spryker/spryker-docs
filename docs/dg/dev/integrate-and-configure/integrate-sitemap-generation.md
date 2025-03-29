@@ -105,7 +105,7 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 ```
 </details>
 
-For more details on sitemap caching, see [Configure Sitemap caching interval](#configure-sitemap-caching-interval).
+For more details on sitemap caching, see [Configure Sitemap caching interval](#configure-the-sitemap-caching-interval).
 
 
 ### 2.2) Configure the base URL and host mappings for sitemap

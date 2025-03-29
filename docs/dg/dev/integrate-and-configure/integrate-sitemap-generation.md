@@ -7,7 +7,7 @@ template: howto-guide-template
 
 {% info_block warningBox "" %}
 
-The Sitemap module is currently in beta, but an official release is coming soon. Feel free to explore the available documentation. We'll continue updating it with details on future releases.
+The Sitemap module is in beta and may be significantly changed before a stable version is released.
 
 {% endinfo_block %}
 
@@ -74,17 +74,17 @@ Adjust the following configuration.
 
 ### 2.1) Configure the filesystem service for sitemap
 
-Sitemap requires two filesystem configurations, see [Configure Sitemap caching interval](#configure-sitemap-caching-interval) for more details.
 
-{% info_block warningBox "Storage requirements" %}
+{% info_block infoBox "Storage requirements" %}
 
 Sitemap files can be large, especially for stores with a large product catalog. Make sure your S3 storage has sufficient space and monitor your local cache directory to prevent excessive disk usage.
 
 {% endinfo_block %}
 
-<details>
-<summary>config/Shared/config_default.php</summary>
+Add the configuration for regular and caching filesystems:
 
+
+**config/Shared/config_default.php**
 ```php
 use Spryker\Shared\Sitemap\SitemapConstants;
 
@@ -105,12 +105,15 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 ```
 </details>
 
+For more details on sitemap caching, see [Configure Sitemap caching interval](#configure-sitemap-caching-interval).
+
+
 ### 2.2) Configure the base URL and host mappings for sitemap
 
 The following configuration ensures that the application uses the correct hostnames based on the mode it's operating in:
 
-* When Dynamic Store is disabled, use the `STORE_TO_YVES_HOST_MAPPING` configuration to map specific stores to their respective hostnames
-* When Dynamic Store is enabled, use the `REGION_TO_YVES_HOST_MAPPING` configuration to map regions to their respective hostnames
+* When Dynamic Store is disabled, `STORE_TO_YVES_HOST_MAPPING` is used to map stores to hostnames
+* When Dynamic Store is enabled, `REGION_TO_YVES_HOST_MAPPING` is used to map regions to hostnames
 
 **config/Shared/config_default.php**
 
@@ -152,9 +155,9 @@ $jobs[] = [
 vendor/bin/console scheduler:setup
 ```
 
-### 2.4) Configure sitemap caching interval
+### 2.4) Configure the sitemap caching interval
 
-A caching mechanism in the Sitemap module minimizes the number of requests to the S3 Bucket. When the first request is made, a copy of the sitemap file is stored locally. Subsequent requests use the cached version instead of fetching the file from S3 again. The cached file remains valid if its last updated date is within the interval specified by the `getSitemapFileTimeThreshold()` method, which returns the interval in seconds. By default, this interval is set to 86400 seconds or 24 hours. You can adjust it by extending the `SitemapConfig` class and overriding the `getSitemapFileTimeThreshold()` method.
+The caching mechanism minimizes the number of requests to the S3 Bucket. When the first request is made, a copy of the sitemap file is stored locally. Subsequent requests use the cached version instead of fetching the file from S3 again. The cached file remains valid if its last updated date is within the interval specified by the `getSitemapFileTimeThreshold()` method, which returns the interval in seconds. By default, this interval is set to 86400 seconds or 24 hours. You can adjust it by extending the `SitemapConfig` class and overriding the `getSitemapFileTimeThreshold()` method.
 
 **src/Pyz/Yves/Sitemap/SitemapConfig.php**
 
@@ -176,10 +179,9 @@ class SitemapConfig extends SprykerSitemapConfig
 ### 2.5) Configure Sitemap URL limit
 
 
-The Sitemap module lets you set a limit on the number of URLs that can be included in a single sitemap file. This ensures that the sitemap file doesn't exceed the maximum allowed size and remains manageable.  
+The sitemap URL limit determines the number of URLs that can be included in a single sitemap file. This ensures that the sitemap file doesn't exceed the maximum allowed size and remains manageable.  
 
-By default, the limit is 50,000 URLs per sitemap file, which is the maximum allowed by the Sitemaps Protocol.  
-You can decrease this limit by extending the `SitemapConfig` class and overriding the `getSitemapUrlLimit()` method.
+The default limit is 50,000 URLs per sitemap file, which is the maximum allowed by the Sitemaps Protocol. You can decrease this limit by extending the `SitemapConfig` class and overriding the `getSitemapUrlLimit()` method.
 
 **src/Pyz/Yves/Sitemap/SitemapConfig.php**
 
@@ -251,7 +253,7 @@ Register the following plugins to enable widgets:
 
 | PLUGIN        | SPECIFICATION                                | PREREQUISITES | NAMESPACE                                 |
 |---------------|----------------------------------------------|---------------|-------------------------------------------|
-| SitemapWidget | Provides functionality to display a sitemap. |               | Spryker\Yves\Sitemap\Widget\SitemapWidget |
+| SitemapWidget | Display a sitemap. |               | Spryker\Yves\Sitemap\Widget\SitemapWidget |
 
 
 src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
@@ -283,7 +285,7 @@ Register the following plugins:
 | PLUGIN                                   | SPECIFICATION                             | PREREQUISITES                                                                | NAMESPACE                                                  |
 |------------------------------------------|-------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------|
 | SitemapRouteProviderPlugin               | Provides routing for sitemap generation.  |                                                                              | Spryker\Yves\Sitemap\Plugin\Router                         |
-| SitemapGenerateConsole                   | Console command to generate sitemaps.     |                                                                              | Spryker\Zed\Sitemap\Communication\Console                  |
+| SitemapGenerateConsole                   | A console command to generate sitemaps.     |                                                                              | Spryker\Zed\Sitemap\Communication\Console                  |
 | CategoryNodeSitemapDataProviderPlugin    | Provides sitemap data for category nodes. | Requires the [CategoryStorage](#install-modules) module.   | Spryker\Zed\CategoryStorage\Communication\Plugin\Sitemap   |
 | CmsPageSitemapDataProviderPlugin         | Provides sitemap data for CMS pages.      | Requires the [CmsStorage](#install-modules) module.        | Spryker\Zed\CmsStorage\Communication\Plugin\Sitemap        |
 | MerchantSitemapDataProviderPlugin        | Provides sitemap data for merchants.      | Requires the [MerchantStorage](#install-modules) module.   | Spryker\Zed\MerchantStorage\Communication\Plugin\Sitemap   |

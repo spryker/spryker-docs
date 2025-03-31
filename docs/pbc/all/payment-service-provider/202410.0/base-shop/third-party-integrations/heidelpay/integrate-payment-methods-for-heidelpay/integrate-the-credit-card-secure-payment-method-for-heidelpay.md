@@ -63,7 +63,7 @@ With the credit card, two payment options are possible - using the already exist
 
 {% info_block errorBox "Attention" %}
 
-Please note that iframe doesn't have a submit button, it will be submitted with javascript when customer submits the payment step.
+Iframe doesn't have a submit button, it will be submitted with javascript when customer submits the payment step.
 
 {% endinfo_block %}
 

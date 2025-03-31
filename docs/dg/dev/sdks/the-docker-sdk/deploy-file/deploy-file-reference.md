@@ -345,7 +345,7 @@ image:
 Defines PHP settings.
 {% info_block warningBox "Memory Limits" %}
 
-Please note that the maximum recommended PHP memory limit's 2048M. Going above this limit's rarely necessary and can lead to stability and performance issues in your environment. Test any configuration change carefully in a non-production setting.
+The maximum recommended PHP memory limit's 2048M. Going above this limit's rarely necessary and can lead to stability and performance issues in your environment. Test any configuration change carefully in a non-production setting.
 
 {% endinfo_block %}
 

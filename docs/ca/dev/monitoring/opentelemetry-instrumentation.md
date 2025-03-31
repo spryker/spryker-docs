@@ -479,7 +479,7 @@ Custom events are attached to the root span.
 
 
 Default Spryker's Error Handler already executes `\Spryker\Service\Monitoring\MonitoringService::setError()`, so if you are using `Monitoring` module and default Error Handler - you are covered. But if you don't,  adjust your error handler accordingly.
-This will add a error event into the root span and will change its status to the `error` one. Please check this part during integration of OTel into your system.
+This will add a error event into the root span and will change its status to the `error` one. Check this part during integration of OTel into your system.
 
 The OTel integration catches all the exceptions thrown during a request or command execution and attaches them as events to the root span. These events will also appear in the span of the method that threw the exception, but only if a hook for that method exists.
 
@@ -536,9 +536,9 @@ $config[\Spryker\Shared\Opentelemetry\OpentelemetryConstants::SHOW_HTTP_METHOD_I
 
 Due to the fact that PHP code is used to instrument codebase, you should consider performance. Tracing is an expensive operation and can slow down your application. Here are some recommendations to avoid performance issues:
 
-Please minimise amount of generated spans per request. OTel documentation recommends to have no more than 1000 of them. So you can skip some spans via configuration that are not relevant to you. Don't be afraid, errors will be processed even if the method was not instrumented because Error Event will be attached to the root span.
+Minimize amount of generated spans per request. OTel documentation recommends to have no more than 1000 of them. So you can skip some spans via configuration that are not relevant to you. Don't be afraid, errors will be processed even if the method was not instrumented because Error Event will be attached to the root span.
 
-Use sampling to not get a full trace every time. Please check configuration section for the reference.
+Use sampling to not get a full trace every time. Check configuration section for the reference.
 
 Skip some traces. You may not want to get a full trace for all of your transactions. You can define a probability of detailed trace overview by setting a probability via `OTEL_TRACE_PROBABILITY` env variable. Be advised that Trace still will be processed and root span will be there for you. Also requests that are changing something in your application (POST, DELETE, PUT, PATCH) considered as critical and will be processed anyway.
 

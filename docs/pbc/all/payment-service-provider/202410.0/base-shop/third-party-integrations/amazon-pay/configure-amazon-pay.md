@@ -35,7 +35,7 @@ There is currently an issue when using giftcards with Amazon Pay. Our team is de
 
 {% info_block infoBox "Note" %}
 
-Please refer to `config/Shared/config.dist.php` for the module configuration example.
+Refer to `config/Shared/config.dist.php` for the module configuration example.
 
 {% endinfo_block %}
 

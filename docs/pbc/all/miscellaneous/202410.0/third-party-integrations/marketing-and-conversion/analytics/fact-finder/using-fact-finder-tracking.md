@@ -40,7 +40,7 @@ Tracking information lets the FACT-Finder Search tool automatically learn from t
 
 The data provided through this interface can be used for a variety of purposes. They include the tracking of events such as users clicking on a detail page, placing a product into the shopping cart and purchasing it. The information can form the basis for automated search optimization. It automatically improves the search result on the basis of the established consumer behavior. Information about product clicks, shopping cart, and purchase events, in other words, the user behavior, is required for the Personalization module, which provides tailored search results for each user. The information on product purchases can also be used as a basis for the Recommendation Engine module.
 
-Please note, that the personalization can only work if a proper session ID is sent with each search request.
+The personalization can only work if a proper session ID is sent with each search request.
 
 ## Usage
 
@@ -98,7 +98,7 @@ By default, you can use the `/fact-finder/track` route. According to the FACT-Fi
   - `additionalInfo`` (optional) - You may use this parameter to add something to the log entry, such as to enable searching the log for a specific entry.
 * <b>Suggest Tracking</b>:
   - `queryFromSuggest` - This parameter indicates that the FACT-Finder query was triggered through a selection from the suggestion list. In this case send the parameter with the value true.
-  - `userInput` - Please use this parameter to send the order of letters the shop user entered until the search query was triggered.
+  - `userInput` - Use this parameter to send the order of letters the shop user entered until the search query was triggered.
 
 To use tracking on the back-end, provide the dependency to your module dependency provider.
 

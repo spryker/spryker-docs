@@ -132,7 +132,7 @@ Make sure that when creating a cart from a shopping list, the product options ar
 
 ### Prerequisites
 
-Please review and install the necessary features before beginning the integration step.
+Install the required features:
 
 | NAME | VERSION |
 |---|---|

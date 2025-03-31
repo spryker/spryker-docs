@@ -1159,9 +1159,9 @@ In case of a successful update, the endpoint responds with information that can 
 | payment-methods | paymentProviderName | String | The name of the payment provider. |
 | payment-methods | priority | String | Defines the order of returned payment methods in ascending order. |
 | payment-methods | requiredRequestData | Object | An array of attributes required by the given method to effectuate a purchase. The exact attribute list depends on the specific provider. |
-| company-business-unit-addresses | address1 | String | The 1st line of the customer's address. |
-| company-business-unit-addresses | address2 | String | The 2nd line of the customer's address. |
-| company-business-unit-addresses | address3 | String | The 3rd line of the customer's address. |
+| company-business-unit-addresses | address1 | String | The first line of the customer's address. |
+| company-business-unit-addresses | address2 | String | The second line of the customer's address. |
+| company-business-unit-addresses | address3 | String | The third line of the customer's address. |
 | company-business-unit-addresses | zipCode | String | The ZIP code. |
 | company-business-unit-addresses | city | String | The name of the city. |
 | company-business-unit-addresses | iso2Code | String | Specifies an ISO 2 Country Code to use. |

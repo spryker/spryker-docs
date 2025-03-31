@@ -426,7 +426,7 @@ class ProductOptionCollector extends Spryker\Zed\Collector\Business\Collector\St
     * `ProductOptionToMoneyInterface::convertIntegerToDecimal()` is removed.
     * `ProductOptionToMoneyInterface::fromFloat()` is removed.
     * `ProductOptionToMoneyInterface::fromString()` is removed.
-    * `ProductOptionFacadeInterface::toggleOptionActive()` expects 1st argument to be int.
+    * `ProductOptionFacadeInterface::toggleOptionActive()` expects first argument to be int.
     * `ProductOptionCommunicationFactory::createProductOptionGroup()` does not accept null argument anymore.
     * `ProductOptionDependencyProvider`'s constants are refactored.
     * Client dependency interfaces are renamed (postfixed with "Client").

@@ -2,7 +2,7 @@
 
 {% info_block errorBox %}
 
-The following feature integration guide expects the basic feature to be in place.
+This guide expects the basic feature to be in place.
 
 The current feature installation guide only adds the [Add product to cart from the Catalog page](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/cart-feature-overview/quick-order-from-the-catalog-page-overview.html) and Dynamic cart page update functionality.
 
@@ -69,7 +69,7 @@ Make sure the keys with translations have been added to the `spy_glossary_key` a
 
 To enable database storage strategy for customer quotes, override the `getStorageStrategy()` method in the Quote module's shared configuration.
 
-Create or modify the `src/Pyz/Shared/Quote/QuoteConfig.php` file:
+**src/Pyz/Shared/Quote/QuoteConfig.php**
 
 ```php
 <?php
@@ -92,10 +92,11 @@ class QuoteConfig extends SprykerQuoteConfig
 
 {% info_block warningBox "Verification" %}
 
-To verify the database storage strategy is properly enabled:
-- Add items to a cart as a logged-in customer
-- Check that records are created in the `spy_quote` table
-- Log out and log back in - your cart items should be preserved
+1. Log in on the Storefront as a customer.
+2. Add items to cart.
+  Make sure records have been created in the `spy_quote` table.
+3. Log out and log back in.
+  Make sure your cart items are still in cart.
 
 {% endinfo_block %}
 
@@ -170,9 +171,9 @@ class CartPageConfig extends SprykerCartPageConfig
 {% info_block warningBox "Verification" %}
 
 Make sure the following applies on the **Cart** page:
-- Cart items are loaded via AJAX.
-- Upselling products are loaded via AJAX.
-- Cart actions, like changing item quantity or removing an item, are performed via AJAX.
+- Cart items are loaded via AJAX
+- Upselling products are loaded via AJAX
+- Cart actions, like changing item quantity or removing an item, are performed via AJAX
 
 {% endinfo_block %}
 
@@ -247,7 +248,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 | PLUGIN | VERIFICATION |
 | - | - |
-| CartPageRouteProviderPlugin` | `https://mysprykershop.com/cart` page is accessible |
+| CartPageRouteProviderPlugin` | `https://mysprykershop.com/cart` page is accessible. |
 
 | CartPageAsyncRouteProviderPlugin | You can perform cart actions, like changing item quantity or removing an item, with AJAX mode enabled. |
 
@@ -356,6 +357,6 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Go to the catalog and find an abstract product with a single concrete product. The button for adding this concrete product to the cart should be displayed on the catalog page.
+On the catalog page, the add to cart product is displayed for an abstract product with a single concrete product.
 
 {% endinfo_block %}

@@ -13,7 +13,7 @@
 | RESOURCE | Attribute                | Type    | Description                                     |
 | ------------------------ | ------- | ----------------------- | ------------------------ |
 | totals                   | Object  | Totals calculations.                            |
-| totals.expenseTotal      | Integer | Total amount of expenses (e.g. shipping costs). |
+| totals.expenseTotal      | Integer | Total amount of expenses, such as shipping costs. |
 | totals.discountTotal     | Integer | Total amount of discounts applied.              |
 | totals.taxTotal          | Integer | Total amount of taxes paid.                     |
 | totals.subtotal          | Integer | Subtotal of the order.                          |

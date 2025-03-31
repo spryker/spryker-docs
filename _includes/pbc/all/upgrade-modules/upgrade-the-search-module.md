@@ -126,7 +126,7 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 ## Upgrading from version 7.* to version 8.*
 
 
-With this version of the Search module we have migrated to Elasticsearch 5.6. Please read the [Elasticsearch Breaking Changes in 5.0](https://www.elastic.co/guide/en/elasticsearch/reference/5.5/breaking-changes-5.0.html) official documentation to adjust your custom implementation accordingly.
+With this version of the Search module we have migrated to Elasticsearch 5.6. Read the [Elasticsearch Breaking Changes in 5.0](https://www.elastic.co/guide/en/elasticsearch/reference/5.5/breaking-changes-5.0.html) official documentation to adjust your custom implementation accordingly.
 
 Your development environment needs to be updated with Elasticsearch 5.6.x.
 
@@ -288,7 +288,7 @@ We moved the possible facet type option constants from `Spryker\Client\Search\Pl
 * `FacetConfigBuilder::TYPE_CATEGORY` -> `SearchConstants::FACET_TYPE_CATEGORY`
 * `FacetConfigBuilder::TYPE_BOOL`-> not supported
 
-We have added a type field to the default "page" index type defined by `Search/src/Spryker/Shared/Search/IndexMap/search.json`. With this field it's possible to differentiate multiple item types (e.g. products, cms pages, categories, etc.). Additionally, we also fixed the indexing strategy of store and `locale` field, they are set to "not_analyzed". These changes require a repeated indexation of your existing data. In a non-production environment this means that you need to delete your index and then install the new one by running `vendor/bin/console setup:search`.
+We have added a type field to the default "page" index type defined by `Search/src/Spryker/Shared/Search/IndexMap/search.json`. With this field it's possible to differentiate multiple item types, products, cms pages, categories. Additionally, we also fixed the indexing strategy of store and `locale` field, they are set to "not_analyzed". These changes require a repeated indexation of your existing data. In a non-production environment this means that you need to delete your index and then install the new one by running `vendor/bin/console setup:search`.
 
 {% info_block errorBox "Important" %}
 

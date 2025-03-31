@@ -97,12 +97,12 @@ Quite a long way, isn't it?
 
 With the changes of this Epic, the picture is completely different. Now, you're able to manage permissions directly from the Company Role Edit page.
 
-To achieve this, some some changes have been made. Please take a time to check the list below to make sure that upgrading your CompanyUser module to the new 2.0.0 major won't break any existing code.
+To achieve this, some some changes have been made. Take a time to check the list below to make sure that upgrading your CompanyUser module to the new 2.0.0 major won't break any existing code.
 
 The changes are:
 
 * `CompanyRolePermissionController::manageAction()` method has been removed.
-  Please replace all usages with `CompanyRoleController::updateAction()`.
+  Replace all usages with `CompanyRoleController::updateAction()`.
 * `SprykerShop/Yves/CompanyPage/Plugin/Provider/CompanyPageControllerProvider::ROUTE_COMPANY_ROLE_PERMISSION_MANAGE` constant that represented the old _Company Role Permissions Management_ page, has been removed and is no longer available.
-Please use `SprykerShop/Yves/CompanyPage/Plugin/Provider/CompanyPageControllerProvider::ROUTE_COMPANY_ROLE_UPDATE` instead;
+Use `SprykerShop/Yves/CompanyPage/Plugin/Provider/CompanyPageControllerProvider::ROUTE_COMPANY_ROLE_UPDATE` instead;
 * Manage permissions button link on Company Role Details page has been changed from `company/company-role-permission/manage` to `company/company-role/update`.

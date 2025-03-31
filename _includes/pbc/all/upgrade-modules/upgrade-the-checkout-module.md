@@ -21,9 +21,9 @@ Important: you can return `true` even if a plugin adds errors to the checkout re
 Replace the interface with `Spryker\Zed\Checkout\Dependency\Plugin\PlaceOrder\CheckoutPreConditionInterface`.
 
 If you extended `\Spryker\Zed\Checkout\Dependency\Plugin\CheckoutPreSaveHookInterface`: find those plugins and make sure they work with only one parameter `QuoteTransfer $quoteTransfer` in the `preSave` function. Replace the interface to `Spryker\Zed\Checkout\Dependency\Plugin\PlaceOrder\CheckoutPreSaveHookInterface`.
-OMS run is not optional anymore. Order placement process will trigger the OMS run after an order is saved, and before post save hooks run. Please find and remove usages of `\Spryker\Zed\Oms\Communication\Plugin\Checkout\OmsPostSaveHookPlugin` and any customer OMS trigger implementation.
+OMS run is not optional anymore. Order placement process will trigger the OMS run after an order is saved, and before post save hooks run. Find and remove usages of `\Spryker\Zed\Oms\Communication\Plugin\Checkout\OmsPostSaveHookPlugin` and any customer OMS trigger implementation.
 
-### Migrate to the new saved plugins:
+### Migrate to the new saved plugins
 
 Replace `\Spryker\Zed\ProductOption\Communication\Plugin\ProductOptionOrderSaverPlugin` with `\Spryker\Zed\ProductOption\Communication\Plugin\Checkout\ProductOptionOrderSaverPlugin`
 Replace `\Spryker\Zed\ProductBundle\Communication\Plugin\Sales\ProductBundleOrderSaverPlugin` with `\Spryker\Zed\ProductBundle\Communication\Plugin\Checkout\ProductBundleOrderSaverPlugin`

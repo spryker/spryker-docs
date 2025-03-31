@@ -30,7 +30,7 @@ new ExpenseTaxCalculatorPlugin(),
 
 {% info_block errorBox %}
 
-The old Calculator plugins were moved to the following separate repository: `spryker/calculation-migration`. Please include into your `composer.json` like `"spryker/calculation-migration": "dev-master"` and run composer update. This should enable you to use the old plugins.
+The old Calculator plugins were moved to the following separate repository: `spryker/calculation-migration`. Include into your `composer.json` like `"spryker/calculation-migration": "dev-master"` and run composer update. This should enable you to use the old plugins.
 
 {% endinfo_block %}
 
@@ -460,7 +460,7 @@ Register the following console command: `\Pyz\Zed\SalesAggregator\Communication\
 
 {% info_block errorBox %}
 
-Please back up your data now!
+Back up your data as soon as possible.
 
 {% endinfo_block %}
 

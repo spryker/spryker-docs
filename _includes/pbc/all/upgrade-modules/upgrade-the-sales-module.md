@@ -270,7 +270,7 @@ With the Product-Bundle module release, the Sales schema file `spy_sales.schema.
 
 {% info_block errorBox "Important" %}
 
-Please update your templates if overwritten.
+Update your templates if overwritten.
 
 {% endinfo_block %}
 

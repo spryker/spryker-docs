@@ -75,7 +75,7 @@ It should be noted that the Spryker Suite already has these changes implemented 
 composer require spryker-sdk/load-testing --dev
 ```
 
-2. Add the Router provider plugin to `src/Pyz/Yves/Router/RouterDependencyProvider.php`. Please note that you must import the appropriate class, `LoadTestingRouterProviderPlugin` to initialize the load testing. We also need to build onto the available array, so the `return` clause should be updated to reflect the additions to the array with `$routeProviders`.
+2. Add the Router provider plugin to `src/Pyz/Yves/Router/RouterDependencyProvider.php`. You must import the appropriate class, `LoadTestingRouterProviderPlugin` to initialize the load testing. We also need to build onto the available array, so the `return` clause should be updated to reflect the additions to the array with `$routeProviders`.
 
 ```php
 <?php

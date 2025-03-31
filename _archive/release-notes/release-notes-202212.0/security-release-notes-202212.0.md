@@ -92,7 +92,7 @@ spryker/wishlist (8.6.0 or earlier)
 It was possible to enumerate users if creating them via the API. The message in response was "Customer with this email already exists."
 
 **Changes:**
-The response message has been changed as follows: "If this email address is already in use, you will receive a password reset link. Otherwise you must first validate your e-mail address to finish registration. Please check your e-mail."
+The response message has been changed as follows: "If this email address is already in use, you will receive a password reset link. Otherwise you must first validate your e-mail address to finish registration. Check your e-mail."
 
 **Affected modules:**
 No changes.

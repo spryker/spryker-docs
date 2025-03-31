@@ -755,7 +755,7 @@ Make sure that you can submit the *Discount Create* and *Discount Update* forms 
 [//]: # (```)
 
 [//]: # ()
-[//]: # (When using promotion discount with voucher code, you will get the error message that voucher is not correct. It’s because voucher code is a product offered as promotion and not yet added to cart.)
+[//]: # (When using promotion discount with voucher code, you will get the error message that voucher is not correct. It's because voucher code is a product offered as promotion and not yet added to cart.)
 
 [//]: # ()
 [//]: # (You have to modify `\Pyz\Yves\Discount\Handler\VoucherHandler::addFlashMessages` to handle discounts with promotions.)

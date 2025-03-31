@@ -29,7 +29,7 @@ Install the required modules using Composer:
 composer require spryker-feature/order-amendment: "{{page.version}}" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -122,7 +122,7 @@ class QuoteConfig extends SprykerQuoteConfig
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that when you edit order, JSON data in the database column `spy_quote.quote_data` of the corresponding quote
 contains `amendmentOrderReference` and `quoteProcessFlow`.
@@ -166,7 +166,7 @@ class SalesOrderAmendmentConfig extends SprykerSalesOrderAmendmentConfig
 
 Some quote fields could be not relevant for your project. You can remove them from the list.
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Table `spy_sales_order_amendment_quote` is not used yet and should be empty. This table could be used as a temporary storage for the quote
 data during the order amendment process in order to allow async mode for the order amendment process.

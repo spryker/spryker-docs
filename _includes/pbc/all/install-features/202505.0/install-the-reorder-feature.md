@@ -29,7 +29,7 @@ Install the required modules using Composer:
 composer require spryker-feature/reorder: "{{page.version}}" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 

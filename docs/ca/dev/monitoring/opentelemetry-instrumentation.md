@@ -428,15 +428,16 @@ All other spans are considered as `regular`.
 You can adjust sampling values by changing environment variables. Increasing these values will generate more detailed traces but may also slow down your application because more spans will be sampled and sent to the collector.
 
 
-| Variable Name                                 | Description                                                                           | Default Value | Allowed range |
-|-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------|---------------|---------------|
+| Variable Name                                 | Description                                                                                                                                                    | Default Value | Allowed range |
+|-----------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|---------------|
 | OTEL_BSP_MIN_SPAN_DURATION_THRESHOLD          | Used in [Closing Span Sampling](#closing-span-sampling) to define a threshold in milliseconds. Spans with an execution time below this value are filtered out. | 20            | 0...100000    |
-| OTEL_BSP_MIN_CRITICAL_SPAN_DURATION_THRESHOLD | Same as a previous one, but used only for critical spans.                                    | 10            | 0...100000    |
-| OTEL_TRACES_SAMPLER_ARG                       | Defines the probability of a web `GET` request trace being detailed.                    | 0.1           | 0...1.0       |
-| OTEL_CLI_TRACE_PROBABILITY                    | Defines the probability of a console command trace to be detailed.                    | 0.5           | 0...1.0       |
-| OTEL_TRACES_CRITICAL_SAMPLER_ARG              | Defines the probability of a `critical` span to be sampled                               | 0.5           | 0...1.0       |
-| OTEL_TRACES_NON_CRITICAL_SAMPLER_ARG          | Defines the probability of a `non critical` to be sampled                           | 0.1           | 0...1.0       |
-| OTEL_TRACE_PROBABILITY                        | Defines the probability of a `regular` span to be sampled                                | 0.3           | 0...1.0       |
+| OTEL_BSP_MIN_CRITICAL_SPAN_DURATION_THRESHOLD | Same as a previous one, but used only for critical spans.                                                                                                      | 10            | 0...100000    |
+| OTEL_TRACES_SAMPLER_ARG                       | Defines the probability of a `regular` span to be sampled                                                                                                      | 0.1           | 0...1.0       |
+| OTEL_TRACES_CRITICAL_SAMPLER_ARG              | Defines the probability of a `critical` span to be sampled                                                                                                     | 0.5           | 0...1.0       |
+| OTEL_TRACES_NON_CRITICAL_SAMPLER_ARG          | Defines the probability of a `non critical` to be sampled                                                                                                      | 0.1           | 0...1.0       |
+| OTEL_TRACE_PROBABILITY                        | Defines the probability of a web `GET` request trace being detailed.                                                                                           | 0.3           | 0...1.0       |
+| OTEL_TRACE_PROBABILITY_NON_GET                | Defines the probability of a web non `GET` request trace being detailed.                                                                                       | 1.0           | 0...1.0       |
+| OTEL_CLI_TRACE_PROBABILITY                    | Defines the probability of a console command trace to be detailed.                                                                                             | 0.5           | 0...1.0       |
 
 
 

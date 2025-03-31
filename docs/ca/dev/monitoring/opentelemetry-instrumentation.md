@@ -478,7 +478,7 @@ Custom events are attached to the root span.
 ## Error handling
 
 
-Default Spryker's Error Handler already executes `\Spryker\Service\Monitoring\MonitoringService::setError()`, so if you are using `Monitoring` module and default Error Handler - you are covered. But if you don't, please adjust your error handler accordingly.
+Default Spryker's Error Handler already executes `\Spryker\Service\Monitoring\MonitoringService::setError()`, so if you are using `Monitoring` module and default Error Handler - you are covered. But if you don't,  adjust your error handler accordingly.
 This will add a error event into the root span and will change its status to the `error` one. Please check this part during integration of OTel into your system.
 
 The OTel integration catches all the exceptions thrown during a request or command execution and attaches them as events to the root span. These events will also appear in the span of the method that threw the exception, but only if a hook for that method exists.

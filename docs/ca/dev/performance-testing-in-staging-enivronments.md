@@ -334,7 +334,7 @@ APPLICATION_STORE="DE" COMMAND="$PHP_BIN vendor/bin/console queue:worker:start -
 
 {% info_block infoBox %}
 
-While it's possible to change the Jenkins cronjobs found at **/config/Zed/cronjobs/jenkins.php**, please note that these entries require a scheduled time and setting this will cause those jobs to run until they have been disabled in the Jenkins web UI.
+While it's possible to change the Jenkins cronjobs found at **/config/Zed/cronjobs/jenkins.php**,  note that these entries require a scheduled time and setting this will cause those jobs to run until they have been disabled in the Jenkins web UI.
 
 {% endinfo_block %}
 

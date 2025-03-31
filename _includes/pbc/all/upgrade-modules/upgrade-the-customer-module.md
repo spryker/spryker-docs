@@ -10,7 +10,7 @@ To apply the fix, you need to regenerate Propel models. During this migration ta
 
 {% info_block warningBox %}
 
-Before you start, please check that all migrations are applied and you don't have technical dept here.
+Before you start,  check that all migrations are applied and you don't have technical dept here.
 
 {% endinfo_block %}
 

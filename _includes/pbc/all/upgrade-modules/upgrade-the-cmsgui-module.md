@@ -39,7 +39,7 @@ New transfers must be generated:
 
 `$ console transfer:generate`
 
-3. If project overrides were introduced, please observe the following changes:
-* `CmsGuiCommunicationFactory::createCmsVersionForm` was deprecated, please use `CmsGuiCommunicationFactory::getCmsVersionForm`.
-* `CmsGuiCommunicationFactory::createCmsGlossaryForm` was deprecated, please use `CmsGuiCommunicationFactory::getCmsGlossaryForm`.
+3. If project overrides were introduced,  observe the following changes:
+* `CmsGuiCommunicationFactory::createCmsVersionForm` was deprecated,  use `CmsGuiCommunicationFactory::getCmsVersionForm`.
+* `CmsGuiCommunicationFactory::createCmsGlossaryForm` was deprecated,  use `CmsGuiCommunicationFactory::getCmsGlossaryForm`.
 * `CmsVersionMapper::mapToCmsVersionDataTransfer` was given return type `CmsVersionMapper::CmsVersionDataTransfer`

@@ -130,7 +130,7 @@ $this->touchQuery->addJoin(
 
 ## Upgrading from version 3.* to version 4.*
 
-All `Availability` UI has been moved to `AvailabilitGui` module, mostly Communication or Persistence were changed. If you have overwritten any of moved classes from those layers please change base class namespace from `Availability` to `AvailabilityGui` root.
+All `Availability` UI has been moved to `AvailabilitGui` module, mostly Communication or Persistence were changed. If you have overwritten any of moved classes from those layers  change base class namespace from `Availability` to `AvailabilityGui` root.
 
 ## Upgrading from version 2.* to version 3.*
 

@@ -183,7 +183,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\Unzer\Form\DataProvider;
@@ -237,7 +237,7 @@ class PayPalFormDataProvider extends AbstractFormDataProvider
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\Unzer\Form;
@@ -300,7 +300,7 @@ class PayPalSubform extends AbstractUnzerSubForm
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\Unzer\Plugin\StepEngine;
@@ -399,7 +399,7 @@ use Pyz\Yves\Unzer\Plugin\StepEngine\UnzerPayPalSubFormPlugin;
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\Unzer;
@@ -443,7 +443,7 @@ class UnzerFactory extends EcoUnzerFactory
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\Unzer\Business\Payment\Processor;
@@ -597,7 +597,7 @@ class PayPalPaymentProcessor implements UnzerChargeablePaymentProcessorInterface
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\Unzer\Business;
@@ -654,7 +654,7 @@ class UnzerBusinessFactory extends EcoUnzerBusinessFactory
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\Unzer;

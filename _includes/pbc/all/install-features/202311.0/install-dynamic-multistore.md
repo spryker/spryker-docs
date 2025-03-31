@@ -368,7 +368,7 @@ $allStores = array_keys($stores);
 
 ```
 
-Also please adjust each configuration of the job to remove the variable `$allStores`.
+Also  adjust each configuration of the job to remove the variable `$allStores`.
 So, job configuration will be like this:
 
 ```php

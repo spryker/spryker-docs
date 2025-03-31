@@ -18,7 +18,7 @@ To integrate Econda, do the following.
 
 Our Econda module offers the integration with these services for the application you are building using Spryker.
 
-To integrate with Econda, you will need to connect your Econda account. If you do not have an Econda account please contact [Econda Sales](mailto:sales@econda.com?subject=SalesRequest from a Spryker Contact).
+To integrate with Econda, you will need to connect your Econda account. If you do not have an Econda account  contact [Econda Sales](mailto:sales@econda.com?subject=SalesRequest from a Spryker Contact).
 
 To enable Econda tracking for your application, you need to download a personalized JavaScript library from the Econda Analytics Configuration menu (you can find the detailed instructions on the [Econda website](https://support.econda.de/display/MONDE/Tracking-Bibliothek+herunterladen)).
 

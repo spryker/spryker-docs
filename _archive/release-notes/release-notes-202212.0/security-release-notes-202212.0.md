@@ -12,7 +12,7 @@ The following information pertains to security-related issues that have been rec
 
 {% info_block infoBox "Note" %}
 
-If you need any additional support with this content, please contact [support@spryker.com](mailto:support@spryker.com). If you found a new security vulnerability, please inform us via [security@spryker.com](mailto:security@spryker.com).
+If you need any additional support with this content,  contact [support@spryker.com](mailto:support@spryker.com). If you found a new security vulnerability,  inform us via [security@spryker.com](mailto:security@spryker.com).
 
 {% endinfo_block %}
 

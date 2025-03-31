@@ -13,7 +13,7 @@ In the previous version (3*), the calculator stack was called `getCalculatorSta
 
 {% endinfo_block %}
 
-By default, the demoshop ships with these plugins. If you have your custom plugins, please add them accordingly, old and new calculators plugins are backwards compatible.
+By default, the demoshop ships with these plugins. If you have your custom plugins,  add them accordingly, old and new calculators plugins are backwards compatible.
 If you want to keep having old calculated fields, add the plugins to `getQuoteCalculatorPluginStack`. Take into consideration, that we recommend you discard old plugins and use the new ones.
 
 **Code sample:**

@@ -109,7 +109,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 }
 ```
 
-9. A bug was fixed in our [Demoshop implementation](https://github.com/spryker/demoshop) when displaying promotion items using `DiscountPromotion/Theme/default/discount-promotion/item-list.twig`. In case you used it, please amend your implementation to check the same variable for number of elements and iterating through.
+9. A bug was fixed in our [Demoshop implementation](https://github.com/spryker/demoshop) when displaying promotion items using `DiscountPromotion/Theme/default/discount-promotion/item-list.twig`. In case you used it,  amend your implementation to check the same variable for number of elements and iterating through.
 
 **Modified version**
 
@@ -124,7 +124,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```
 
-10.  The following classes' constructor dependencies were altered, please check if you have customized any of them or their constructor method:
+10.  The following classes' constructor dependencies were altered,  check if you have customized any of them or their constructor method:
 
 * `Calculator/Discount`
 * `DiscountConfigurationHydrate`
@@ -132,14 +132,14 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 * `GeneralForm`
 * `DiscountsTable`
 
-11. The following methods were enhanced, please check if you have customized any of them:
+11. The following methods were enhanced,  check if you have customized any of them:
 
 * `Calculator/Discount::retrieveActiveCartAndVoucherDiscounts()`
 * `DiscountFormDataProvider::createDiscountGeneralTransferDefaults()`
 * `DiscountConfigurationHydrate::getByIdDiscount()`
 * `DiscountCommunicationFactory::getVoucherForm()`
 
-12. The following methods/classes were removed or renamed, please check if you have customized any of them:
+12. The following methods/classes were removed or renamed,  check if you have customized any of them:
 
 * `DiscountConfigurationHydrate::setDiscountConfigurationExpanderPlugins()`
 * `DiscountPersist::setDiscountPostCreatePlugins()`

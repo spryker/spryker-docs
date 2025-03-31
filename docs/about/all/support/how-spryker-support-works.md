@@ -50,7 +50,7 @@ To say that we take security issues seriously would be an understatement. The to
 
 ### Customer Effort Score (CES) and Customer Satisfaction Score (CSS)
 Proven scores that we use to measure your experience with our support.
-When we close a case, we send out a case closure notification email. This email contains a link to our feedback portal. Whenever you can, please provide honest feedback. We evaluate every single feedback form that we receive from customers. Your feedback matters to us and has a real impact on our support operations.
+When we close a case, we send out a case closure notification email. This email contains a link to our feedback portal. Whenever you can,  provide honest feedback. We evaluate every single feedback form that we receive from customers. Your feedback matters to us and has a real impact on our support operations.
 Because your time is valuable, include only two questions. For these questions, we use the broadly accepted metrics CES and CSS. For CES, you can rate on a five-point scale, how easy it was to work with us. On the CSS, you can indicate how satisfied you were with your interaction, overall.
 If you rate us low, we would like to ask you in a comment, why. Depending on your comment, our team lead might contact you for a follow-up. The feedback we receive is discussed openly in our weekly team meetings.
 

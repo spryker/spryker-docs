@@ -9,7 +9,38 @@ Follow the steps below to install the Multiple Carts feature core.
 
 ### Prerequisites
 
-* Enable the database storage strategy in the Quote module.
+* Enable database storage strategy in the Quote module
+
+To enable database storage strategy for customer quotes, override the `getStorageStrategy()` method in the Quote module's shared configuration.
+Create or modify the `src/Pyz/Shared/Quote/QuoteConfig.php` file:
+
+```php
+<?php
+
+namespace Pyz\Shared\Quote;
+
+use Spryker\Shared\Quote\QuoteConfig as SprykerQuoteConfig;
+
+class QuoteConfig extends SprykerQuoteConfig
+{
+    /**
+     * @return string
+     */
+    public function getStorageStrategy(): string
+    {
+        return static::STORAGE_STRATEGY_DATABASE;
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+To verify the database storage strategy is properly enabled:
+- Add items to a cart as a logged-in customer
+- Check that records are created in the `spy_quote` table
+- Log out and log back in - your cart items should be preserved
+
+{% endinfo_block %}
 
 * Install the required features:
 

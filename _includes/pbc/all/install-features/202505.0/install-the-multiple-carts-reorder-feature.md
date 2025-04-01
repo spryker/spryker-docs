@@ -1,6 +1,6 @@
-## Install feature core
+This document describes how to install the Multiple Carts + Reorder feature.
 
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -10,13 +10,13 @@ Install the required features:
 | Reorder        | {{page.version}} |
 | Spryker Core   | {{page.version}} |
 
-### 1) Set up behavior
+## 1) Set up behavior
 
 Register the following plugins:
 
 | PLUGIN                                      | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                              |
 |---------------------------------------------|--------------------------------------------------------------|---------------|--------------------------------------------------------|
-| DefaultReorderQuoteNameCartPreReorderPlugin | Sets quote reorder name to `CartReorderTransfer.quote.name`. | None          | Spryker\Zed\MultiCart\Communication\Plugin\CartReorder |
+| DefaultReorderQuoteNameCartPreReorderPlugin | Sets quote reorder name to `CartReorderTransfer.quote.name`. |           | Spryker\Zed\MultiCart\Communication\Plugin\CartReorder |
 
 **src/Pyz/Zed/CartReorder/CartReorderDependencyProvider.php**
 
@@ -44,6 +44,53 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-When using the reorder feature, a new customer quote must be created with the name "Cart from order {Order reference}".
+1. Log in on the Storefront as a customer.
+2. Go to the orders.
+3. Select an existing order and click the reorder button.
+
+Make sure the following applies:
+* On the Storefront: 
+    - A new cart has been created
+    - The cart name follows the format: `Cart from order {Order reference}`
+    - All available items from the original order have been added to the cart
+* In the `spy_quote` database table, the newly created quote record contains the `name` field in the format: `Cart from order {Original order reference}`
 
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

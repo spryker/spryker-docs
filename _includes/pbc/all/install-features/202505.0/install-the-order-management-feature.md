@@ -5,7 +5,7 @@ This document describes how to install the [Order Management](/docs/pbc/all/orde
 
 {% info_block warningBox "Included features" %}
 
-The following feature integration guide expects the basic feature to be in place. It only adds the following functionalities:
+This guide expects the basic feature to be in place. It only adds the following functionalities:
 
 - Order cancellation behavior
 - Show `display names` for order item states
@@ -335,15 +335,14 @@ Verify the invoice state machine configuration in the following step.
 1. In the Back Office, go to **Administration&nbsp;<span aria-label="and then">></span> OMS**.
 
 2. Select **DummyPayment01 [preview-version]** and check the following:
-
-- The `new`, `payment pending`, `paid`, and `confirmed` states keep the `cancellable` tag inside.
-- The `invoice generated` state has been added.
+  - The `new`, `payment pending`, `paid`, and `confirmed` states have the `cancellable` tag inside.
+  - The `invoice generated` state exists.
 
 {% endinfo_block %}
 
 #### Configure the fallback display name prefix
 
-Adjust configuration according to your project's requirements:
+Adjust the configuration according to your project's requirements:
 
 **src/Pyz/Zed/Oms/OmsConfig.php**
 
@@ -650,9 +649,10 @@ By default, in state machine names, the following applies:
 {% endinfo_block %}
 
 1. Append the glossary according to your configuration:
-<details><summary>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
 
-**src/data/import/glossary.csv**
+<details>
+  <summary>src/data/import/glossary.csv</summary>
+
 ```csv
 sales.error.customer_order_not_found,Customer Order not found.,en_US
 sales.error.customer_order_not_found,Die Bestellung wurde nicht gefunden.,de_DE
@@ -695,6 +695,7 @@ order_custom_reference.form.placeholder,Ihre Bestellreferenz hinzufügen,de_DE
 order_custom_reference.save,Save,en_US
 order_custom_reference.save,Speichern,de_DE
 ```
+
 </details>
 
  2. Import data:
@@ -1073,7 +1074,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 
 1. In the Back Office, go to **Sales**>**Orders**.
 2. Click **View** next to an order.
-Make sure that, on the order details page, the *Custom Order Reference* section with the **Edit Reference** button is displayed.
+Make sure that, on the order details page, the **Custom Order Reference** section with the **Edit Reference** button is displayed.
 
 {% endinfo_block %}
 
@@ -1085,7 +1086,7 @@ Set up the following plugins:
 |-------------------------------|--------------------------------------------------|---------------|----------------------------------------------------|
 | OrderSaverPlugin              | Saves an order.                                  |               | Spryker\Zed\Sales\Communication\Plugin\Checkout    |
 | OrderTotalsSaverPlugin        | Saves order totals.                              |               | Spryker\Zed\Sales\Communication\Plugin\Checkout    |
-| SalesOrderShipmentSaverPlugin | Saves an order shipment. Adds shipment expenses. |               | Spryker\Zed\Shipment\Communication\Plugin\Checkout |
+| SalesOrderShipmentSaverPlugin | Saves an order shipment and adds shipment expenses. |               | Spryker\Zed\Shipment\Communication\Plugin\Checkout |
 | OrderItemsSaverPlugin         | Saves order items.                               |               | Spryker\Zed\Sales\Communication\Plugin\Checkout    |
 
 
@@ -1174,9 +1175,11 @@ Make sure that, on the following Storefront pages, even if the `display` propert
 
 2. Make sure the `sales-orders` resource is returned as a relationship to the `picking-list-items` resource.
 
-`GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}?include=picking-list-items,sales-orders`
+Request example: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}?include=picking-list-items,sales-orders`
+
 <details>
   <summary>Response body example</summary>
+  
 ```json
 {
     "data": {
@@ -1245,9 +1248,15 @@ Make sure that, on the following Storefront pages, even if the `display` propert
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}
+
+
+
+
+
 
 ## Install feature frontend
 
@@ -1284,7 +1293,7 @@ Make sure the following modules have been installed:
 
 1. Append the glossary according to your configuration:
 
-```
+```csv
 order_cancel_widget.cancel_order,Cancel Order,en_US
 order_cancel_widget.cancel_order,Bestellung stornieren,de_DE
 order_cancel_widget.order.cancelled,Order was canceled successfully.,en_US
@@ -1338,7 +1347,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sur the `yves.mysprykershop.com/order/cancel` route is available for POST requests.
+Make sure the `yves.mysprykershop.com/order/cancel` route is available for POST requests.
 
 {% endinfo_block %}
 
@@ -1346,7 +1355,7 @@ Make sur the `yves.mysprykershop.com/order/cancel` route is available for POST r
 
 Set up the following behaviors.
 
-#### Set up an order cancellation behavior
+#### Set up order cancellation
 
 Set up the following plugin:
 
@@ -1382,7 +1391,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Make sure the following applies:
 
-- The `OrderCancelButtonWidget` widget has been registered.
 - On the **Order Details** page on the Storefront, the **Cancel** button is displayed.
 - In the **item state** table column on the **Customer Overview** and **Order History** pages on the Storefront, aggregated order item states are displayed.
 - On the **Returns** page on the Storefront, aggregated return item states are displayed.
@@ -1465,7 +1473,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Log in as a customer on the Storefront and check that the **Custom order reference** form is displayed on the order view page.
+Log in as a customer on the Storefront and check that, on the order view page, the **Custom order reference** form is displayed.
 
 {% endinfo_block %}
 

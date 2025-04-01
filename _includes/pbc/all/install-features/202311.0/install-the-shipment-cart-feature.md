@@ -15,7 +15,7 @@ To start feature integration, overview, and install the necessary features:
 
 ### Install the required modules using Composer
 
-Run the following commands to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker/shipment-cart-connector: "^2.1.0" spryker/shipment-type-cart: "^1.0.0" --update-with-dependencies
@@ -33,7 +33,7 @@ Make sure that the following modules have been installed:
 
 ### Set up transfer objects
 
-Run the following command(s) to apply transfer changes:
+Apply transfer changes:
 
 ```bash
 console transfer:generate

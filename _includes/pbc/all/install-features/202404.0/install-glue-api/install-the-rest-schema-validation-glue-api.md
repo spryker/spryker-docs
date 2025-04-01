@@ -104,7 +104,7 @@ Make sure that cache has been generated successfully. To do so, verify the conte
 
 ### Enable Request Validation
 
-Activate the following plugin(s):
+Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |

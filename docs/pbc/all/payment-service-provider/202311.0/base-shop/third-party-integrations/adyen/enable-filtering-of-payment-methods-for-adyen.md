@@ -27,7 +27,7 @@ To enable this add `\SprykerEco\Zed\Adyen\Communication\Plugin\AdyenPaymentMetho
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\Payment;

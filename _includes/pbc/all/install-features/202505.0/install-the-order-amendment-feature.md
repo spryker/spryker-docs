@@ -22,7 +22,7 @@ Install the required modules using Composer:
 composer require spryker-feature/order-amendment: "{{page.version}}" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -115,7 +115,7 @@ class QuoteConfig extends SprykerQuoteConfig
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that when you edit an order, `amendmentOrderReference` and `quoteProcessFlow` are added to the JSON data in the `spy_quote.quote_data` database column of the corresponding quote.
 
@@ -158,7 +158,7 @@ class SalesOrderAmendmentConfig extends SprykerSalesOrderAmendmentConfig
 
 Romeve the quote fields that are not relevant for your project.
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 The `spy_sales_order_amendment_quote` table should be empty. It can serve as a temporary storage for quote data during the order amendment process, enabling asynchronous processing of order amendments.
 
@@ -482,7 +482,7 @@ Make sure that the following changes have been applied in the database:
 Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                         | TYPE  | EVENT   | PATH                                                                                       |
-|--------------------------------------------------|-------|---------|--------------------------------------------------------------------------------------------| 
+|--------------------------------------------------|-------|---------|--------------------------------------------------------------------------------------------|
 | SalesOrderAmendment                              | class | created | src/Generated/Shared/Transfer/SalesOrderAmendmentTransfer.php                              |
 | SalesOrderAmendmentQuote                         | class | created | src/Generated/Shared/Transfer/SalesOrderAmendmentQuoteTransfer.php                         |
 | SalesOrderAmendmentCriteria                      | class | created | src/Generated/Shared/Transfer/SalesOrderAmendmentCriteriaTransfer.php                      |
@@ -603,8 +603,8 @@ Enable the following behaviors by registering the plugins:
 | CancelOrderAmendmentBeforeQuoteSavePlugin                         | Triggers the OMS event defined in `{@link \Spryker\Zed\SalesOrderAmendmentOms\SalesOrderAmendmentOmsConfig::getCancelOrderAmendmentEvent()}` to cancel the order amendment process.                           | Should be executed before `{@link \Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote\ResetAmendmentOrderReferenceBeforeQuoteSavePlugin}`. | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Quote                        |
 | ResetAmendmentOrderReferenceBeforeQuoteSavePlugin                 | Sets `QuoteTransfer.amendmentOrderReference` to null if `QuoteTransfer.amendmentOrderReference` is not `null`.                                                                                            |                                                                                                                                              | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote                           |
 | CancelOrderAmendmentQuoteDeleteAfterPlugin                        | Triggers the OMS event defined in `{@link \Spryker\Zed\SalesOrderAmendmentOms\SalesOrderAmendmentOmsConfig::getCancelOrderAmendmentEvent()}` to cancel the order amendment process.                           |                                                                                                                                              | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Quote                        |
-| SalesOrderAmendmentOrderExpanderPlugin                            | Expands `OrderTransfer.salesOrderAmendment` with a found sales order amendment.                                                                                                                           |                                                                                                                                              | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Sales                           | 
-| IsAmendableOrderExpanderPlugin                                    | Checks if all order items are in the order item state that has a flag defined in `{@link \Spryker\Zed\SalesOrderAmendmentOms\SalesOrderAmendmentOmsConfig::getAmendableOmsFlag()}`.                           |                                                                                                                                              | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Sales                        | 
+| SalesOrderAmendmentOrderExpanderPlugin                            | Expands `OrderTransfer.salesOrderAmendment` with a found sales order amendment.                                                                                                                           |                                                                                                                                              | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Sales                           |
+| IsAmendableOrderExpanderPlugin                                    | Checks if all order items are in the order item state that has a flag defined in `{@link \Spryker\Zed\SalesOrderAmendmentOms\SalesOrderAmendmentOmsConfig::getAmendableOmsFlag()}`.                           |                                                                                                                                              | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Sales                        |
 | CreateSalesOrderAmendmentOrderPostSavePlugin                      | Persists a sales order amendment entity.                                                                                                                                                                  |                                                                                                                                              | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Sales                           |
 | IsAmendableOrderSearchOrderExpanderPlugin                         | Expands the `OrderTransfer.isAmendable` property.                                                                                                                                                       |                                                                                                                                              | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Sales                        |
 | OrderAmendmentDefaultOrderItemInitialStateProviderPlugin          | Returns the initial OMS order item state for order items in the order amendment flow.                                                                                                                           |                                                                                                                                              | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Sales                        |
@@ -744,7 +744,7 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
 
 <details>
   <summary>src/Pyz/Glue/CartReorderRestApi/CartReorderRestApiDependencyProvider.php</summary>
-    
+
 
 ```php
 <?php
@@ -923,7 +923,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 <details>
   <summary>src/Pyz/Zed/Quote/QuoteDependencyProvider.php</summary>
-    
+
 
 ```php
 <?php
@@ -1162,7 +1162,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 <details>
   <summary>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
-    
+
 
 ```php
 <?php
@@ -1213,7 +1213,7 @@ Take the following steps to install the feature frontend.
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Install the following required features:
 
 | NAME             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                      |
 |------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -1340,50 +1340,3 @@ Make sure the following widgets have been registered:
 | OrderAmendmentWidget | Make sure the edit order button is displayed on orders and order details pages. |
 
 {% endinfo_block %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

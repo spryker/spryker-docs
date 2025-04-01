@@ -25,7 +25,7 @@ Install the required modules using Composer:
 composer require spryker-feature/reorder: "{{page.version}}" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -372,11 +372,11 @@ Make sure that a customer can reorder with different types of products on the ca
 
 ## Install feature frontend
 
-To install the feature frontend, take the following steps.
+To install the feature frontend, take the following steps. 
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Install the following required features:
 
 | NAME             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                      |
 |------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

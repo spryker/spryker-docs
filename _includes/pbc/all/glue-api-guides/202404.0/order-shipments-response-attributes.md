@@ -9,9 +9,9 @@
 | order-shipments       | shippingAddress.firstName  | String   |       |
 | order-shipments | shippingAddress.middleName  | String | Customer's middle name.                 |
 | order-shipments | shippingAddress.lastName    | String | Customer's last name.                   |
-| order-shipments | shippingAddress.address1    | String | The 1st line of the customer's address. |
-| order-shipments | shippingAddress.address2    | String | The 2nd line of the customer's address. |
-| order-shipments | shippingAddress.address3    | String | The 3rd line of the customer's address. |
+| order-shipments | shippingAddress.address1    | String | The first line of the customer's address. |
+| order-shipments | shippingAddress.address2    | String | The second line of the customer's address. |
+| order-shipments | shippingAddress.address3    | String | The third line of the customer's address. |
 | order-shipments | shippingAddress.company     | String | Specifies the customer's company.       |
 | order-shipments | shippingAddress.city        | String | Specifies the city.                     |
 | order-shipments | shippingAddress.zipCode     | String | ZIP code.                               |

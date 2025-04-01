@@ -71,9 +71,9 @@ It is important to add the condition to the `LEFT JOIN` section so the number of
 
 {% endinfo_block %}
 
-7. The deprecated `CollectorDependencyProvider::provideLocaleFacade()` is removed, please check your code if you have custom calls or dependencies.
+7. The deprecated `CollectorDependencyProvider::provideLocaleFacade()` is removed,  check your code if you have custom calls or dependencies.
 
-8. The following methods have internal changes, please check if you have customized them:
+8. The following methods have internal changes,  check if you have customized them:
 * `AbstractTouchUpdater::bulkUpdate()`
 * `AbstractTouchUpdater::getCollectorKeyFromData()`
 

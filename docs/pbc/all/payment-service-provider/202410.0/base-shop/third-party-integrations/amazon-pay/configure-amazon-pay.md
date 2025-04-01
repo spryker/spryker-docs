@@ -35,7 +35,7 @@ There is currently an issue when using giftcards with Amazon Pay. Our team is de
 
 {% info_block infoBox "Note" %}
 
-Please refer to `config/Shared/config.dist.php` for the module configuration example.
+Refer to `config/Shared/config.dist.php` for the module configuration example.
 
 {% endinfo_block %}
 
@@ -167,7 +167,7 @@ All default commands and conditions are stored in `SprykerEco\Zed\AmazonPay\Comm
 
 ## IPN Configuration
 
-In order to allow everyone to send push notifications, please extend `config_default.XXX.php` for desired environments:
+In order to allow everyone to send push notifications,  extend `config_default.XXX.php` for desired environments:
 
 ```php
 $config[AclConstants::ACL_USER_RULE_WHITELIST][] = [
@@ -187,7 +187,7 @@ $config[ApplicationConstants::YVES_SSL_EXCLUDED]['aie'] = '/amazonpay/ipn/endpoi
 
 ## Yves Controllers
 
-In order to enable processing of AmazonPay commands on front end, please add `AmazonPayControllerProvider` to `YvesBootstrap`:
+In order to enable processing of AmazonPay commands on front end,  add `AmazonPayControllerProvider` to `YvesBootstrap`:
 
 ```php
 /**

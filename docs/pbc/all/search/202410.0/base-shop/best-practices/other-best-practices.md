@@ -107,7 +107,7 @@ Bonus points for providing a user interface for this purpose. It allows category
 
 Everybody has an opinion on how search should work, and being a product owner or product manager for search is definitely not the easiest task.
 
-What is good product management for search? Certainly, it's not of technical nature (the suggestion like "please use technique X" is usually suck).
+What is good product management for search? Certainly, it's not of technical nature (the suggestion like " use technique X" is usually suck).
 
 Rather helpful are concrete examples of expected and actual behavior from a user perspective ("If I search for a hammer, I want to find a hammer").
 

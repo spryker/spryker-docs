@@ -65,7 +65,7 @@ Make sure that the following changes in transfer objects have been applied:
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Install the following required features:
 
 | NAME | VERSION |
 | --- | --- |

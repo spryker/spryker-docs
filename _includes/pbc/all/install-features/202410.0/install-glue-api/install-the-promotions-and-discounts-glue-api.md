@@ -363,7 +363,7 @@ To verify that `ProductLabelsResourceRoutePlugin` is set up correctly, make sure
 
 {% info_block warningBox "Verification" %}
 
-To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send a request to `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` with an SKU of a product with at least one product label assigned to it. Make sure that the response includes relationships to the product-labels resource(s).
+To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send a request to `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` with an SKU of a product with at least one product label assigned to it. Make sure that the response includes relationships to the product-labels resources.
 
 **Example response**
 
@@ -411,7 +411,7 @@ To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send
 
 {% info_block warningBox "Verification" %}
 
-To check `ProductLabelByProductConcreteSkuResourceRelationshipPlugin` plugin installation, send a request to `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` with an SKU of a product with at least one product label assigned to it. Make sure that the response includes relationships to the product-labels resource(s).
+To check `ProductLabelByProductConcreteSkuResourceRelationshipPlugin` plugin installation, send a request to `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` with an SKU of a product with at least one product label assigned to it. Make sure that the response includes relationships to the product-labels resources.
 
 **Example response**
 

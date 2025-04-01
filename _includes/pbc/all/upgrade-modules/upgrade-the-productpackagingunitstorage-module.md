@@ -105,7 +105,7 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 
 {% info_block infoBox %}
 
-In order to dismantle the Horizontal Barrier and enable partial module updates on projects, Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please contact us if you have any questions.
+In order to dismantle the Horizontal Barrier and enable partial module updates on projects, Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Contact us if you have any questions.
 
 {% endinfo_block %}
 

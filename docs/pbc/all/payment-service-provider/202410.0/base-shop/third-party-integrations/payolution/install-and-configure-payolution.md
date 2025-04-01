@@ -39,7 +39,7 @@ composer require spryker-eco/payolution
 
 ## Configuration
 
-Please refer to `config/config.dist.php` for example of module configuration.
+Refer to `config/config.dist.php` for example of module configuration.
 
 To set up the initial Payolution configuration, use the credentials you received after registering your Payolution merchant account:
 

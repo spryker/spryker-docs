@@ -228,7 +228,7 @@ use Spryker\Yves\Payone\Plugin\Provider\PayoneControllerProvider;
 Optionally configure security firewall for `/payone` route to accept `TransactionStatus` requests.
 Excerpt from PAYONE Platform Channel Server API document:
 
-According to the configuration of your payment portal you will receive the data and the status for each payment processed via the URL you have submitted. The data transfer is based on simple HTTP-POST request (key/value pairs). The `TransactionStatus` is sent from the following IP addresses: 185.60.20.0/24 (for example, 185.60.20.1 to 185.60.20.254). Please configure your firewall to allow incoming packets from these IP addresses.
+According to the configuration of your payment portal you will receive the data and the status for each payment processed via the URL you have submitted. The data transfer is based on simple HTTP-POST request (key/value pairs). The `TransactionStatus` is sent from the following IP addresses: 185.60.20.0/24 (for example, 185.60.20.1 to 185.60.20.254). Configure your firewall to allow incoming packets from these IP addresses.
 
 To provide payment details for rendering on frontend, add Payone client to the Checkout and to the Customer module:
 
@@ -400,6 +400,6 @@ class OrderController extends AbstractCustomerController
 See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
 
-For further information on this partner and integration into Spryker, please contact us.
+For further information on this partner and integration into Spryker,  contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

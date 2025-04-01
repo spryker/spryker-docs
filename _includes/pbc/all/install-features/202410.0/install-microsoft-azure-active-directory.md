@@ -7,7 +7,7 @@ This page describes the Microsoft Azure Active Directory and how to install it.
 Azure Active Directory is Microsoft's multi-tenant, cloud-based directory and identity management service. For an organization, Azure AD helps employees sign up to multiple services and access them anywhere over the cloud with a single set of login credentials.
 
 
-The [SprykerEco.Oauth-Azure](https://github.com/spryker-eco/oauth-azure) enables OAuth 2.0 authentication via Microsoft Azure Active Directory.
+The [`SprykerEco.Oauth-Azure`](https://github.com/spryker-eco/oauth-azure) enables OAuth 2.0 authentication via Microsoft Azure Active Directory.
 
 ## Integrating Azure Active Directory
 

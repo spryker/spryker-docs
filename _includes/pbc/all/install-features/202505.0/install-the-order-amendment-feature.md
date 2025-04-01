@@ -1169,7 +1169,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-Place an order with different types of products (e.g., physical, digital, etc.) and check if the order amendment is available.
+Place an order with different types of products, such as physical or digital, and check if the order amendment is available.
 Go to order detail and order list pages and check if the "edit order" button is present.
 
 {% endinfo_block %}

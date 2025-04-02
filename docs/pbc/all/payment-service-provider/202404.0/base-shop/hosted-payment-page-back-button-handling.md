@@ -78,38 +78,38 @@ For more information about the `exclude from customer` flag, see [Order Process 
 ## Testing
 
 1. **Basic Flow Test**
-   - Add products to cart
-   - Proceed to checkout
-   - Reach payment step and get redirected to hosted payment page
-   - Use browser's back button
-   - Verify that the original order is cancelled
-   - Verify that a new order can be placed
+   - Add products to cart.
+   - Proceed to checkout.
+   - Reach payment step and get redirected to hosted payment page.
+   - Use browser's back button.
+   - Verify that the original order is cancelled.
+   - Verify that a new order can be placed.
 
 2. **Stock Verification Test**
-   - Add last available item of a product to cart
-   - Proceed to hosted payment page
-   - Use back button
-   - Verify that the item becomes available again after order cancellation
-   - Verify that a new order can be placed with the same item
+   - Add last available item of a product to cart.
+   - Proceed to hosted payment page.
+   - Use back button.
+   - Verify that the item becomes available again after order cancellation.
+   - Verify that a new order can be placed with the same item.
 
 3. **Order Status Test**
-   - Log in as a customer
-   - Place an order that triggers hosted payment page
-   - Use back button
-   - Verify order status changes to "payment cancellation pending"
-   - Verify order is not visible in customer account
-   - Log in to Zed and verify that the order exists with the correct state
+   - Log in as a customer.
+   - Place an order that triggers hosted payment page.
+   - Use back button.
+   - Verify order status changes to "payment cancellation pending".
+   - Verify order is not visible in customer account.
+   - Log in to Zed and verify that the order exists with the correct state.
 
 ## Troubleshooting
 
 ### Order Still Visible in Customer Account
-- Verify `exclude from customer` flag is properly set in state machine configuration
-- Check if the order state transition to "payment cancellation pending" was successful
-- Verify the state is properly configured in the OMS
+- Verify `exclude from customer` flag is properly set in state machine configuration.
+- Check if the order state transition to "payment cancellation pending" was successful.
+- Verify the state is properly configured in the OMS.
 
 ### Stock Issues
-- Ensure proper order cancellation workflow
-- Verify stock update triggers
+- Ensure proper order cancellation workflow.
+- Verify stock update triggers.
 
 ## Related Developer Guides
 

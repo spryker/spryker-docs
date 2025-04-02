@@ -43,7 +43,7 @@ Pay attention to an [architecture convention](/docs/dg/dev/architecture/architec
 
 ## Use custom namespaces
 Instead of using the `Pyz` namespace, it's possible to use your own namespace for project development. For example, use the project name as a namespace.
-Please note that most of existing examples and documentation use the `Pyz` namespace, and you will have to adjust the code every time you want to use it.
+Most of existing examples and documentation use the `Pyz` namespace, and you will have to adjust the code every time you want to use it.
 
 ## Use custom names
 Use custom names for everything that is added on the project level, like the following:

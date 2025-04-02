@@ -8,11 +8,12 @@ Some plugins are needed only for optional features. The document provides a list
 
 Install the required features:
 
-| NAME             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                      |
-|------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core     | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                             |
-| Order Management | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
-| Reorder          | {{page.version}} | [Install the Reorder feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-reorder-feature.html)                         |
+| NAME             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                       |
+|------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core     | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                              |
+| Order Management | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)  |
+| Reorder          | {{page.version}} | [Install the Reorder feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-reorder-feature.html)                          |
+| Prices           | {{site.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                             |
 
 ### 1) Install the required modules
 
@@ -26,12 +27,15 @@ composer require spryker-feature/order-amendment: "{{page.version}}" --update-wi
 
 Make sure that the following modules have been installed:
 
-| MODULE                       | EXPECTED DIRECTORY                             |
-|------------------------------|------------------------------------------------|
-| SalesOrderAmendment          | vendor/spryker/sales-order-amendment           |
-| SalesOrderAmendmentOms       | vendor/spryker/sales-order-amendment-oms       |
-| SalesOrderAmendmentExtension | vendor/spryker/sales-order-amendment-extension |
-| OrderAmendmentsRestApi       | vendor/spryker/sales-order-amendments-rest-api |
+| MODULE                                   | EXPECTED DIRECTORY                                           |
+|------------------------------------------|--------------------------------------------------------------|
+| SalesOrderAmendment                      | vendor/spryker/sales-order-amendment                         |
+| SalesOrderAmendmentOms                   | vendor/spryker/sales-order-amendment-oms                     |
+| SalesOrderAmendmentExtension             | vendor/spryker/sales-order-amendment-extension               |
+| OrderAmendmentsRestApi                   | vendor/spryker/sales-order-amendments-rest-api               |
+| OrderAmendmentsRestApi                   | vendor/spryker/sales-order-amendments-rest-api               |
+| PriceProductSalesOrderAmendment          | vendor/spryker/price-product-sales-order-amendment           |
+| PriceProductSalesOrderAmendmentExtension | vendor/spryker/price-product-sales-order-amendment-extension |
 
 {% endinfo_block %}
 
@@ -110,6 +114,7 @@ class QuoteConfig extends SprykerQuoteConfig
         return array_merge(parent::getQuoteFieldsAllowedForSaving(), [
             QuoteTransfer::AMENDMENT_ORDER_REFERENCE,
             QuoteTransfer::QUOTE_PROCESS_FLOW,
+            QuoteTransfer::ORIGINAL_SALES_ORDER_ITEM_UNIT_PRICES,
         ]);
     }
 }
@@ -515,6 +520,8 @@ Make sure the following changes have been applied in transfer objects:
 | RestCartsAttributes                              | class | created | src/Generated/Shared/Transfer/RestCartsAttributesTransfer.php                              |
 | RestCartReorderRequestAttributes                 | class | created | src/Generated/Shared/Transfer/RestCartReorderRequestAttributesTransfer.php                 |
 | RestOrderAmendmentsAttributes                    | class | created | src/Generated/Shared/Transfer/RestOrderAmendmentsAttributesTransfer.php                    |
+| PriceProductResolveConditions                    | class | created | src/Generated/Shared/Transfer/PriceProductResolveConditionsTransfer.php                    |
+| PriceProductFilter                               | class | updated | src/Generated/Shared/Transfer/PriceProductFilterTransfer.php                               |
 
 {% endinfo_block %}
 
@@ -541,6 +548,10 @@ oms.state.order-amendment,Editing in Progress,en_US
 oms.state.order-amendment,Bestelländerung in Bearbeitung,de_DE
 sales_order_amendment_oms.validation.order_not_being_amended,This order cannot be edited because the time limit for changes has expired.,en_US
 sales_order_amendment_oms.validation.order_not_being_amended,"Eine Bearbeitung dieser Bestellung ist nicht möglich, da die Änderungsfrist abgelaufen ist.",de_DE
+sales_order_amendment.pre_check.cannot_change_currency,"Currency cannot be changed during order edit.",en_US
+sales_order_amendment.pre_check.cannot_change_currency,"Währung kann während der Bearbeitung einer Bestellung nicht geändert werden.",de_DE
+sales_order_amendment.pre_check.cannot_change_price_mode,"Price mode cannot be changed during order edit.",en_US
+sales_order_amendment.pre_check.cannot_change_price_mode,"Preismodus kann während der Bearbeitung einer Bestellung nicht geändert werden.",de_DE
 ```
 
 2. Import data:
@@ -712,6 +723,7 @@ class SalesOrderAmendmentDependencyProvider extends SprykerSalesOrderAmendmentDe
 namespace Pyz\Zed\CartReorder;
 
 use Spryker\Zed\CartReorder\CartReorderDependencyProvider as SprykerCartReorderDependencyProvider;
+use Spryker\Zed\PriceProductSalesOrderAmendment\Communication\Plugin\CartReorder\OriginalSalesOrderItemPriceCartPreReorderPlugin;
 use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\AmendmentOrderReferenceCartPreReorderPlugin;
 use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\AmendmentQuoteNameCartPreReorderPlugin;
 use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\OrderAmendmentCartReorderValidatorPlugin;
@@ -741,6 +753,7 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
             new OrderAmendmentQuoteProcessFlowExpanderCartPreReorderPlugin(),
             new AmendmentOrderReferenceCartPreReorderPlugin(),
             new AmendmentQuoteNameCartPreReorderPlugin(),
+            new OriginalSalesOrderItemPriceCartPreReorderPlugin(),
         ];
     }
 
@@ -946,6 +959,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 namespace Pyz\Zed\Quote;
 
+use Spryker\Zed\PriceProductSalesOrderAmendment\Communication\Plugin\Quote\ResetOriginalSalesOrderItemUnitPricesBeforeQuoteSavePlugin;
 use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
 use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote\ResetAmendmentOrderReferenceBeforeQuoteSavePlugin;
 use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote\ResetQuoteNameQuoteBeforeSavePlugin;
@@ -964,6 +978,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
             new ResetQuoteNameQuoteBeforeSavePlugin(),
             new CancelOrderAmendmentBeforeQuoteSavePlugin(),
             new ResetAmendmentOrderReferenceBeforeQuoteSavePlugin(),
+            new ResetOriginalSalesOrderItemUnitPricesBeforeQuoteSavePlugin(),
         ];
     }
 
@@ -1220,6 +1235,241 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 * Place an order with different types of products–for exampale, physical or digital, and check if the order amendment is available.
 * Go to order detail and order list pages and check if the **edit order** button is displayed.
+
+{% endinfo_block %}
+
+**src/Pyz/Client/Currency/CurrencyDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\Currency;
+
+use Spryker\Client\Currency\CurrencyDependencyProvider as SprykerCurrencyDependencyProvider;
+use Spryker\Client\SalesOrderAmendment\Plugin\Currency\SalesOrderAmendmentCurrentCurrencyIsoCodePreCheckPlugin;
+
+class CurrencyDependencyProvider extends SprykerCurrencyDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Client\CurrencyExtension\Dependency\Plugin\CurrentCurrencyIsoCodePreCheckPluginInterface>
+     */
+    protected function getCurrentCurrencyIsoCodePreCheckPlugins(): array
+    {
+        return [
+            new SalesOrderAmendmentCurrentCurrencyIsoCodePreCheckPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Client/Price/PriceDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\Price;
+
+use Spryker\Client\Price\PriceDependencyProvider as SprykerPriceDependencyProvider;
+use Spryker\Client\SalesOrderAmendment\Plugin\Price\SalesOrderAmendmentCurrentPriceModePreCheckPlugin;
+
+class PriceDependencyProvider extends SprykerPriceDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Client\PriceExtension\Dependency\Plugin\CurrentPriceModePreCheckPluginInterface>
+     */
+    protected function getCurrentPriceModePreCheckPlugins(): array
+    {
+        return [
+            new SalesOrderAmendmentCurrentPriceModePreCheckPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make the Glue API call with a currency and price mode different from those in the cart when an order is being edited. For example: `glue.mysprykershop.com/catalog-search?q=001&currency=CHF&priceMode=NET_MODE`. Then, verify that the currency and price mode remain unchanged.
+
+{% endinfo_block %}
+
+<details>
+  <summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Client\Price;
+
+use Spryker\Zed\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
+use Spryker\Zed\PriceCartConnector\Communication\Plugin\Cart\PriceItemExpanderPlugin;
+use Spryker\Zed\PriceProductSalesOrderAmendment\Communication\Plugin\Cart\OriginalSalesOrderItemPriceItemExpanderPlugin;
+
+class CartDependencyProvider extends SprykerCartDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface>
+     */
+    protected function getExpanderPluginsForOrderAmendment(Container $container): array
+    {
+        return [
+            new PriceItemExpanderPlugin(),
+            new OriginalSalesOrderItemPriceItemExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\CartExtension\Dependency\Plugin\CartPreCheckPluginInterface>
+     */
+    protected function getCartPreCheckPluginsForOrderAmendment(): array
+    {
+        return [
+            // Plugins from getCartPreCheckPlugins() without CartItemPricePreCheckPlugin
+        ];
+    }
+
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Spryker\Zed\CartExtension\Dependency\Plugin\PreReloadItemsPluginInterface>
+     */
+    protected function getPreReloadPluginsForOrderAmendment(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
+    {
+        return [
+            // Plugins from getPreReloadPlugin() without FilterItemsWithoutPricePlugin
+        ];
+    }
+}
+```
+
+</details>
+
+**src/Pyz/Client/PriceProduct/PriceProductDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\PriceProduct;
+
+use Spryker\Client\PriceProduct\PriceProductDependencyProvider as SprykerPriceProductDependencyProvider;
+use Spryker\Client\PriceProductSalesOrderAmendment\Plugin\PriceProduct\OriginalSalesOrderItemPriceProductPostResolvePlugin;
+
+class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Client\PriceProductExtension\Dependency\Plugin\PriceProductPostResolvePluginInterface>
+     */
+    protected function getPriceProductPostResolvePlugins(): array
+    {
+        return [
+            new OriginalSalesOrderItemPriceProductPostResolvePlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Client/PriceProductStorage/PriceProductStorageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\PriceProductStorage;
+
+use Spryker\Client\PriceProductSalesOrderAmendment\Plugin\PriceProductStorage\OrderItemPriceProductResolveConditionsPriceProductFilterExpanderPlugin;
+use Spryker\Client\PriceProductStorage\PriceProductStorageDependencyProvider as SprykerPriceProductStorageDependencyProvider;
+
+class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Client\PriceProductStorageExtension\Dependency\Plugin\PriceProductFilterExpanderPluginInterface>
+     */
+    protected function getPriceProductFilterExpanderPlugins(): array
+    {
+        return [
+            new OrderItemPriceProductResolveConditionsPriceProductFilterExpanderPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Place an order with a product.  
+2. Increase the price of the product from the order.  
+3. Start the order amendment process for the order you've placed. 
+  Make sure the product still has the original price.
+4. Go to the order details page and click the product to go to the product details page.
+  Make sure that, on the product details page, the product still has the original price.
+
+
+
+{% endinfo_block %}
+
+## Add product offers context
+
+Take the steps in the following sections to add the context for product offers.
+
+### 1) Install the required modules
+
+Install the required modules using Composer:
+
+```bash
+composer require spryker/price-product-offer-sales-order-amendment-connector: "^0.1.0" --update-with-dependencies
+```
+
+{% info_block warningBox “Verification” %}
+
+Make sure that the following modules have been installed:
+
+| MODULE                                        | EXPECTED DIRECTORY                                                 |
+|-----------------------------------------------|--------------------------------------------------------------------|
+| PriceProductOfferSalesOrderAmendmentConnector | vendor/spryker/price-product-offer-sales-order-amendment-connector |
+
+{% endinfo_block %}
+
+### 2) Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                                         | SPECIFICATION                                                                                            | PREREQUISITES | NAMESPACE                                                                                            |
+|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
+| ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin  | Expands a provided group key with a product offer reference if `ItemTransfer.productOfferReference` is set.  |           | Spryker\Service\PriceProductOfferSalesOrderAmendmentConnector\Plugin\PriceProductSalesOrderAmendment |
+
+**src/Pyz/Service/PriceProductSalesOrderAmendment/PriceProductSalesOrderAmendmentDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Service\PriceProductSalesOrderAmendment;
+
+use Spryker\Service\PriceProductOfferSalesOrderAmendmentConnector\Plugin\PriceProductSalesOrderAmendment\ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin;
+use Spryker\Service\PriceProductSalesOrderAmendment\PriceProductSalesOrderAmendmentDependencyProvider as SprykerPriceProductSalesOrderAmendmentDependencyProvider;
+
+class PriceProductSalesOrderAmendmentDependencyProvider extends SprykerPriceProductSalesOrderAmendmentDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Service\PriceProductSalesOrderAmendmentExtension\Dependency\Plugin\OriginalSalesOrderItemPriceGroupKeyExpanderPluginInterface>
+     */
+    protected function getOriginalSalesOrderItemPriceGroupKeyExpanderPlugins(): array
+    {
+        return [
+            new ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Place an order with a product offer.  
+2. Increase the price of the offer from the order.  
+3. Start the order amendment process for the order you've placed. 
+  Make sure the product offer still has the original price.
+4. Go to the order details page and click the product to go to the product details page.
+  Make sure that, on the product details page, the product offer still has the original price.
+
+
 
 {% endinfo_block %}
 

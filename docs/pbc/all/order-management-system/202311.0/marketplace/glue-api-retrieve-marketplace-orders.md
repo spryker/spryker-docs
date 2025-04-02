@@ -1365,9 +1365,9 @@ To retrieve detailed information about an order, send the request:
 | billingAddress.firstName   | String | Customer's first name.                                       |
 | billingAddress.middleName  | String | Customer's middle name.                                      |
 | billingAddress.lastName    | String | Customer's last name.                                        |
-| billingAddress.address1    | String | 1st line of the customer's address.                          |
-| billingAddress.address2    | String | 2nd line of the customer's address.                          |
-| billingAddress.address3    | String | 3rd line of the customer's address.                          |
+| billingAddress.address1    | String | first line of the customer's address.                          |
+| billingAddress.address2    | String | second line of the customer's address.                          |
+| billingAddress.address3    | String | third line of the customer's address.                          |
 | billingAddress.company     | String | Specifies the customer's company.                            |
 | billingAddress.city        | String | Specifies the city.                                          |
 | billingAddress.zipCode     | String | ZIP code.                                                    |
@@ -1513,9 +1513,9 @@ To retrieve detailed information about an order, send the request:
 | order-shipments       | shippingAddress.firstName  | String   |
 | order-shipments | shippingAddress.middleName  | String | Customer's middle name.                 |
 | order-shipments | shippingAddress.lastName    | String | Customer's last name.                   |
-| order-shipments | shippingAddress.address1    | String | The 1st line of the customer's address. |
-| order-shipments | shippingAddress.address2    | String | The 2nd line of the customer's address. |
-| order-shipments | shippingAddress.address3    | String | The 3rd line of the customer's address. |
+| order-shipments | shippingAddress.address1    | String | The first line of the customer's address. |
+| order-shipments | shippingAddress.address2    | String | The second line of the customer's address. |
+| order-shipments | shippingAddress.address3    | String | The third line of the customer's address. |
 | order-shipments | shippingAddress.company     | String | Specifies the customer's company.       |
 | order-shipments | shippingAddress.city        | String | Specifies the city.                     |
 | order-shipments | shippingAddress.zipCode     | String | ZIP code.                               |

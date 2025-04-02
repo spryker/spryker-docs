@@ -556,7 +556,7 @@ Before removing company user, all records from DB table `spy_quote_company_user`
 
 ### Prerequisites
 
-Please review and install the necessary features before beginning the integration step.
+Install the required features:
 
 | NAME | VERSION |
 |---|---|

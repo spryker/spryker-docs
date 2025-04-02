@@ -7,9 +7,9 @@
 | shipments | shippingAddress.salutation | String | The salutation to use when addressing the customer. |
 | shipments | shippingAddress.firstName | String | The customer's first name. |
 | shipments | shippingAddress.lastName | String | The customer's last name. |
-| shipments | shippingAddress.address1 | String | The 1st line of the customer's address. |
-| shipments | shippingAddress.address2 | String | The 2nd line of the customer's address. |
-| shipments | shippingAddress.address3 | String | The 3rd line of the customer's address. |
+| shipments | shippingAddress.address1 | String | The first line of the customer's address. |
+| shipments | shippingAddress.address2 | String | The second line of the customer's address. |
+| shipments | shippingAddress.address3 | String | The third line of the customer's address. |
 | shipments | shippingAddress.zipCode | String | The ZIP code. |
 | shipments | shippingAddress.city | String | The name of the city. |
 | shipments | shippingAddress.country | String | The name of the country. |

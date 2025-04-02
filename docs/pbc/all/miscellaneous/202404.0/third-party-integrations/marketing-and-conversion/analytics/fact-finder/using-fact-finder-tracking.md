@@ -94,7 +94,7 @@ By default, you can use the `/fact-finder/track` route. According to the FACT-Fi
   - `minSimi` - Similarity of the last product.
   - `filterfieldName` (optional) - Information about active filters in the search result.
   - `searchField` (optional) - The field for which the search was performed in case the search was limited to a specific field.
-  - `customSorting` (optional) - If the default sorting was not used for the search result, then please send a true.
+  - `customSorting` (optional) - If the default sorting was not used for the search result, then  send a true.
   - `additionalInfo`` (optional) - You may use this parameter to add something to the log entry, such as to enable searching the log for a specific entry.
 * <b>Suggest Tracking</b>:
   - `queryFromSuggest` - This parameter indicates that the FACT-Finder query was triggered through a selection from the suggestion list. In this case send the parameter with the value true.

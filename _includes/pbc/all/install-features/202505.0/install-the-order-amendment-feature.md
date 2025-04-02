@@ -1292,7 +1292,8 @@ Make the Glue API call with a currency and price mode different from those in th
 
 {% endinfo_block %}
 
-**src/Pyz/Zed/Cart/CartDependencyProvider.php**
+<details>
+  <summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1341,6 +1342,8 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     }
 }
 ```
+
+</details>
 
 **src/Pyz/Client/PriceProduct/PriceProductDependencyProvider.php**
 
@@ -1392,14 +1395,20 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 
 {% info_block warningBox "Verification" %}
 
-- Make an order with a product.
-- Change price for the product from the order to the higher one.
-- Start the order amendment process for the newly created order, make sure the price from the original order is applied for the order item instead of the new higher price.
-- In Storefront go to PDP page of the product from the order, make sure the price from the original order is applied instead of the new higher price.
+1. Place an order with a product.  
+2. Increase the price of the product from the order.  
+3. Start the order amendment process for the order you've placed. 
+  Make sure the product still has the original price.
+4. Go to the order details page and click the product to go to the product details page.
+  Make sure that, on the product details page, the product still has the original price.
+
+
 
 {% endinfo_block %}
 
 ## Add product offers context
+
+Take the steps in the following sections to add the context for product offers.
 
 ### 1) Install the required modules
 
@@ -1425,7 +1434,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                         | SPECIFICATION                                                                                            | PREREQUISITES | NAMESPACE                                                                                            |
 |----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
-| ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin  | Expands provided group key with product offer reference if `ItemTransfer.productOfferReference` is set.  | None          | Spryker\Service\PriceProductOfferSalesOrderAmendmentConnector\Plugin\PriceProductSalesOrderAmendment |
+| ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin  | Expands a provided group key with a product offer reference if `ItemTransfer.productOfferReference` is set.  |           | Spryker\Service\PriceProductOfferSalesOrderAmendmentConnector\Plugin\PriceProductSalesOrderAmendment |
 
 **src/Pyz/Service/PriceProductSalesOrderAmendment/PriceProductSalesOrderAmendmentDependencyProvider.php**
 
@@ -1453,10 +1462,14 @@ class PriceProductSalesOrderAmendmentDependencyProvider extends SprykerPriceProd
 
 {% info_block warningBox "Verification" %}
 
-- Make an order with a product offer.
-- Change price for the product offer from the order to the higher one.
-- Start the order amendment process for the newly created order, make sure the price from the original order is applied for the order item instead of the new higher price.
-- In Storefront go to PDP page of the product offer from the order, make sure the price from the original order is applied instead of the new higher price.
+1. Place an order with a product offer.  
+2. Increase the price of the offer from the order.  
+3. Start the order amendment process for the order you've placed. 
+  Make sure the product offer still has the original price.
+4. Go to the order details page and click the product to go to the product details page.
+  Make sure that, on the product details page, the product offer still has the original price.
+
+
 
 {% endinfo_block %}
 

@@ -528,16 +528,6 @@ $config[\Spryker\Shared\Opentelemetry\OpentelemetryConstants::SHOW_HTTP_METHOD_I
 
 ## Recommendations
 
-Due to the fact that PHP code is used to instrument codebase, you should consider performance. Tracing is an expensive operation and can slow down your application. Here are some recommendations to avoid performance issues:
-
-Minimize amount of generated spans per request. OTel documentation recommends to have no more than 1000 of them. So you can skip some spans via configuration that are not relevant to you. Don't be afraid, errors will be processed even if the method was not instrumented because Error Event will be attached to the root span.
-
-Use sampling to not get a full trace every time. Check configuration section for the reference.
-
-Skip some traces. You may not want to get a full trace for all of your transactions. You can define a probability of detailed trace overview by setting a probability via `OTEL_TRACE_PROBABILITY` env variable. Be advised that Trace still will be processed and root span will be there for you. Also requests that are changing something in your application (POST, DELETE, PUT, PATCH) considered as critical and will be processed anyway.
-
-
-
 
 Tracing is resource-intensive and can slow down your application. Follow these recommendations to minimize performance impact:
 

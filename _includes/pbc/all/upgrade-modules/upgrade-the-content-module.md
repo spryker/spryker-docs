@@ -35,7 +35,7 @@ console transfer:generate
 console propel:install
 ```
 
-**If you need to update the existing content items in the database, please follow these steps:**
+**If you need to update the existing content items in the database,  follow these steps:**
 
 1. In `src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml`, update the key column's property "required" to false for the data migration on the project level:
 

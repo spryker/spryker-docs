@@ -324,7 +324,7 @@ For example, you can change the type to the `best_fields`:
             ->setType(MultiMatch::TYPE_BEST_FIELDS);
     }
 ```
-Please check [official Elastic Search documentation]{https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-match-query.html#multi-match-types} in order to pick most preferable type for the multi-match search query.
+Check [official Elastic Search documentation]{https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-match-query.html#multi-match-types} in order to pick most preferable type for the multi-match search query.
 
 #### Suggestions by page type
 

@@ -12,9 +12,9 @@
 | billingAddress.email | String | &check; | Customer's email address. |
 | billingAddress.firstName | String | &check; | Customer's first name. |
 | billingAddress.lastName | String | &check; | Customer's last name. |
-| billingAddress.address1 | String | &check; | The 1st line of the customer's address. |
-| billingAddress.address2 | String | &check; | The 2nd line of the customer's address. |
-| billingAddress.address3 | String | &check; | The 3rd line of the customer's address. |
+| billingAddress.address1 | String | &check; | The first line of the customer's address. |
+| billingAddress.address2 | String | &check; | The second line of the customer's address. |
+| billingAddress.address3 | String | &check; | The third line of the customer's address. |
 | billingAddress.zipCode | String | &check; | ZIP code. |
 | billingAddress.city | String | &check; | Specifies the city. |
 | billingAddress.iso2Code | String | &check; | Specifies an ISO 2 Country Code to use. |
@@ -32,9 +32,9 @@
 | shipment.shippingAddress.email | String | &check; | Customer's email address. |
 | shipment.shippingAddress.firstName | String | &check; | Customer's first name. |
 | shipment.shippingAddress.lastName | String | &check; | Customer's last name. |
-| shipment.shippingAddress.address1 | String | &check; | The 1st line of the customer's address. |
-| shipment.shippingAddress.address2 | String | &check; | The 2nd line of the customer's address. |
-| shipment.shippingAddress.address3 | String | &check; | The 3rd line of the customer's address. |
+| shipment.shippingAddress.address1 | String | &check; | The first line of the customer's address. |
+| shipment.shippingAddress.address2 | String | &check; | The second line of the customer's address. |
+| shipment.shippingAddress.address3 | String | &check; | The third line of the customer's address. |
 | shipment.shippingAddress.zipCode | String | &check; | ZIP code. |
 | shipment.shippingAddress.city | String | &check; | Specifies the city. |
 | shipment.shippingAddress.iso2Code | String | &check; | Specifies an ISO 2 Country Code to use. |

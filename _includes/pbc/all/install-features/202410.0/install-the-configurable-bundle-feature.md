@@ -246,8 +246,8 @@ configurable_bundle_page.invalid_template_slot_combination,Invalid template/slot
 configurable_bundle_page.invalid_template_slot_combination,Invalid template/slot combination.,de_DE
 configurable_bundle_page.configurator.tip.header,Create your own bundle.,en_US
 configurable_bundle_page.configurator.tip.header,Create your own bundle.,de_DE
-configurable_bundle_page.configurator.tip.text,"To create the bundle, please select the slot from the left side, and choose the product from the list.",en_US
-configurable_bundle_page.configurator.tip.text,"To create the bundle, please select the slot from the left side, and choose the product from the list.",de_DE
+configurable_bundle_page.configurator.tip.text,"To create the bundle,  select the slot from the left side, and choose the product from the list.",en_US
+configurable_bundle_page.configurator.tip.text,"To create the bundle,  select the slot from the left side, and choose the product from the list.",de_DE
 configurable_bundle_page.configurator.selected_product,Selected product,en_US
 configurable_bundle_page.configurator.selected_product,Selected product,de_DE
 configurable_bundle_page.configurator.summary,Summary,en_US

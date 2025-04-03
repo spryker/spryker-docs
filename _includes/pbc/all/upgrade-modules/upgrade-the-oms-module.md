@@ -40,7 +40,7 @@ console transfer:generate
 
 {% info_block infoBox %}
 
-In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. [Contact us](https://spryker.com/en/support/) if you have any questions.
 
 {% endinfo_block %}
 
@@ -148,7 +148,7 @@ CREATE TABLE "spy_oms_product_reservation_last_exported_version"
 
 ## Upgrading from version 6.* to version 7.*
 
-In version 7, OMS no longer uses `SalesAggregator` to calculate totals; it is now done via the `Calculator` module. Therefore, there is no more dependency with `SalesAggregator`.
+In version 7, OMS no longer uses `SalesAggregator` to calculate totals; it's now done via the `Calculator` module. Therefore, there is no more dependency with `SalesAggregator`.
 The `Spryker\Zed\Oms\Business\Mail\MailHandler` dependency to `SalesAggregatorFacade` was replaced with `SalesFacade`.
 To learn how to migrate to the new structure, see the [Upgrading from version 3.* to version 4.*](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html#upgrading-from-version-3-to-version-4) section in *Upgrade the Calculation module*.
 

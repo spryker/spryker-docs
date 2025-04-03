@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting updates
-description: Common update issues and how to solve them
+description: Learn how to troubleshoot and resolve common update issues and errors within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 redirect_from:
@@ -76,7 +76,7 @@ One of the issues projects often face during an upgrade is when a Spryker class 
 Let us know if anything goes wrong with an update:
 
 * You find an issue in the code while reviewing the diff in a Spryker repo.
-* After running automated tests or testing the website, you find an issue that broke the website. If it's not a project-related conflict, and other projects can potentially be affected, please report the issue as soon as you can.
+* After running automated tests or testing the website, you find an issue that broke the website. If it's not a project-related conflict, and other projects can potentially be affected,  report the issue as soon as you can.
 * There are missing steps in an upgrade guide.
 
 Reach out to us using one of the following channels:

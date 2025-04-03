@@ -8,7 +8,7 @@ redirect_from:
   - /docs/scu/dev/spryker-code-upgrader-in-a-development-workflow.html
 ---
 
-Spryker Code Upgrader works best when it is strategically integrated into your development process. This document describes how to integrate the Upgrader into your scrum activities and Git flow to streamline and optimize the development workflow.
+Spryker Code Upgrader works best when it's strategically integrated into your development process. This document describes how to integrate the Upgrader into your scrum activities and Git flow to streamline and optimize the development workflow.
 
 ## Processing code upgrades with Scrum
 
@@ -43,7 +43,7 @@ Following your usual development process, the development team deploys the updat
 
 * Cover customizations with automated tests.
 
-* Cover the Upgrader PRs with tests. For information about different kinds of tests, see [Testing updates](/docs/scos/dev/updating-spryker/testing-updates.html).
+* Cover the Upgrader PRs with tests. For information about different kinds of tests, see [Testing updates](/docs/dg/dev/updating-spryker/testing-updates.html).
 
 * Apply major upgrades manually.
 

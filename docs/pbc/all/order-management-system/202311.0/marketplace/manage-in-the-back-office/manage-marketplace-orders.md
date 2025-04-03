@@ -27,7 +27,7 @@ You are taken to the **View Order: _[Order ID]_** page.
 
 ![view-marketplace-orders](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Back+Office+user+guides/Marketplace/Orders/Managing+marketplace+orders/view-marketplace-orders.gif)
 
-Every marketplace order contains information about the merchant orders it is split into.
+Every marketplace order contains information about the merchant orders it's split into.
 
 ### Reference information: Viewing marketplace orders
 
@@ -74,7 +74,7 @@ All columns with headers having arrows in **List of orders** are sortable.
 | Customer |   | Section with the information about the customer who has submitted the order. |
 |   | Reference | Unique reference of the customer in the system. The reference is clickable and leads to the *[View Customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/view-customers.html)* page. |
 |   | Name | Name of the customer. |
-|   | Email | Customer’s email address. |
+|   | Email | Customer's email address. |
 |   | Previous orders count | Number of orders the customer has submitted. |
 |   | Billing address | Address that is used for billing purposes. |
 | Merchant orders |   | Section with details about every merchant order with its products and Shipment information. |
@@ -134,7 +134,7 @@ You can set different states for your order by clicking the action buttons. The 
 | Pay | Click this button once you receive the payment for the order from your customer. |
 | Picking list generation schedule | Select this state to generate a picklist. Available with the [Fulfillment App](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-overview.html). |
 | Prepare for picking | Makes the picklist available in the Fulfillment App. Available with the [Fulfillment App](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-overview.html). |
-| Cancel | Click this button to cancel the order on the customer’s behalf. |
+| Cancel | Click this button to cancel the order on the customer's behalf. |
 | Close | Click this button when your customer has successfully received the ordered items and is satisfied with their quality. |
 | Refund | Click this button in case of a refund. |
 | Return | Click this button if the customer returns you either all or several items from the order. |
@@ -206,7 +206,7 @@ Once a return has been created, it acquires the *Waiting for return* state. You 
 |---|---|
 | execute-return | Select this state if you accept the return. When triggering this state, the return status is changed to *Returned*. |
 | refund | Select this state if you have refunded the returned items. When triggering this state, the return status is changed to *Refunded*. |
-| cancel-return | You can trigger this state after the *Waiting for return* state. Select this state if either customer changed their mind and doesn’t want to make the return anymore, or you cancel the return due to the return policy, or for other reasons. When triggering this state, the return status is changed to *Canceled*. |
+| cancel-return | You can trigger this state after the *Waiting for return* state. Select this state if either customer changed their mind and doesn't want to make the return anymore, or you cancel the return because of the return policy, or for other reasons. When triggering this state, the return status is changed to *Canceled*. |
 | ship-return | You can trigger this state after the *Cancel* return state. Select this state if you shipped the canceled return back to the customer. The return status is changed to *Shipped to customer*. |
 | delivery-return | You can trigger this state after the *Shipped to customer*. Select this state if the return has been delivered to the customer. The return status is changed to *Delivered*. |
 | close | You can trigger this state after the *Delivered* state. Select this state to close the return. The return status is changed to *Closed*. |
@@ -264,7 +264,7 @@ The **Total** section displays the total amount of items to be returned.
 |---|---|
 | Customer reference | Reference of the customer. |
 | Name | Customer name. |
-| Email | Customer’s email address. |
+| Email | Customer's email address. |
 
 ## Editing a Custom Order Reference for a marketplace order
 

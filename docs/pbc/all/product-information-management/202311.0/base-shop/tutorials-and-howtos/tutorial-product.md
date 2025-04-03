@@ -25,11 +25,11 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/tutorial-product.html
 related:
   - title: Extend the core
-    link: docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
+    link: docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
   - title: About the Persistence layer
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/persistence-layer.html
   - title: Using translations
-    link: docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
+    link: docs/dg/dev/internationalization-and-multi-store/managing-translations-with-twig-translator.html
 ---
 
 <!-- used to be: http://spryker.github.io/onboarding/product/ -->
@@ -37,7 +37,7 @@ related:
 
 This tutorial shows how to add information to products regarding the country where the product was manufactured (for example, Made in "China") and display it on the product details page rather than just adding it as an attribute.
 
-**Bonus challenge**: Add a glossary key for “Made in”. Show this string translated in the product detail page.
+**Bonus challenge**: Add a glossary key for "Made in". Show this string translated in the product detail page.
 
 ## ProductCountry module (Zed)
 

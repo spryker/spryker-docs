@@ -35,11 +35,11 @@ related:
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-split-payment-marketplace-payment-method-for-heidelpay.html
 ---
 
-### Setup
+## Setup
 
 The following configuration should be made after Heidelpay has been [installed](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/install-heidelpay.html) and [integrated](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/configure-heidelpay.html).
 
-#### Configuration
+### Configuration
 
 Example (for testing only):
 
@@ -49,15 +49,15 @@ $config[HeidelpayConstants::CONFIG_HEIDELPAY_TRANSACTION_CHANNEL_PAYPAL] = '31HA
 
 <sub>This value should be taken from HEIDELPAY</sub>
 
-#### Checkout Payment Step Display
+### Checkout Payment Step Display
 
 Displays payment method name with radio button. No extra input fields are required.
 
-#### Payment Step Submitting
+### Payment Step Submitting
 
 No extra actions needed, quote is filled with payment method selection by default.
 
-### Workflow: Summary Review and Order Submitting
+## Workflow: Summary Review and Order Submitting
 
 **On "save order" event** save Heidelpay payment per order and items, as usual.
 
@@ -91,4 +91,4 @@ The most important data here is the payment reference ID which can be used for f
 
 In the response Heidelpay expects an URL string which defines where customer has to be redirected. In case if customer successfully confirmed payment, it should be a link to checkout order success step, in case of failure - checkout payment failed action with error code (see `HeidelpayController::paymentFailedAction()` and [Heidelpay workflow for errors](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/heidelpay-workflow-for-errors.html) section). Heidelpay redirects customer to the given URL and the payment process is finished. 
 
-**Capture the money** - later on, when the item is shipped to the customer, it is time to call "capture" command of the state machine to capture the money from the customer's account. It is done in CapturePlugin of the OMS command. In the provided basic order of state machine for Paypal authorize method, the command will be executed automatically, when order is manually moved into the "shipped" state. Now the order can be considered as "paid".
+**Capture the money** - later on, when the item is shipped to the customer, it's time to call "capture" command of the state machine to capture the money from the customer's account. It is done in CapturePlugin of the OMS command. In the provided basic order of state machine for Paypal authorize method, the command will be executed automatically, when order is manually moved into the "shipped" state. Now the order can be considered as "paid".

@@ -1,6 +1,6 @@
 ---
 title: Integrate elastic computing
-description: Learn how to integrate elastic computing.
+description: Learn how to integrate elastic computing including New Relic and other features for your Spryker based project.
 last_updated: Jan 23, 2023
 template: concept-topic-template
 redirect_from:
@@ -128,14 +128,14 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 }
 ```
 
-3. In `Pyz\Zed\DataImport\Business\Model\Glossary\GlossaryWriterStep`, update the writer steps by adjusting the execute method to flush `MemoryAllocatedElasticBatch` when it is full.
+3. In `Pyz\Zed\DataImport\Business\Model\Glossary\GlossaryWriterStep`, update the writer steps by adjusting the execute method to flush `MemoryAllocatedElasticBatch` when it's full.
 
 
 ```php
 <?php
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 namespace Pyz\Zed\DataImport\Business\Model\Glossary;
 use Orm\Zed\Glossary\Persistence\SpyGlossaryKeyQuery;

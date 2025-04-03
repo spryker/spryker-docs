@@ -57,7 +57,7 @@ The following table describes the states you can select for order items.
 | ORDER STATUS | DESCRIPTION |
 | --- | --- |
 | Pay | Select this state once you receive the payment for the order from your customer. |
-| Cancel | Select this state to cancel the order on the customer’s behalf. |
+| Cancel | Select this state to cancel the order on the customer's behalf. |
 | Skip Timeout | Select this status to end the time period during which the customer can cancel the order. |
 | invoice-generate | Select this state to generate the invoice and send it to the customer. If invoice BCC is configured for your project, the copy of the invoice will be sent to the specified email address as well. You can trigger the invoice-generate only for the whole order. Even if you selected just some of the order items, the invoice is generated for the whole order.|
 | Ship | Select this state once the order is shipped.|
@@ -69,7 +69,7 @@ The following table describes the states you can select for order items.
 States flow:
 
 * **Payment pending**: the initial order status.
-* **Canceled**: state  of the order after it is canceled by the customer on the Storefront or by the Back Office user.
+* **Canceled**: state  of the order after it's canceled by the customer on the Storefront or by the Back Office user.
 * When you select **Pay**, the state becomes **Confirmed**.
 * When you select **Skip Timeout**, the state becomes **Exported**.
 * When you select **Cancel**, the state becomes **Cancelled**.

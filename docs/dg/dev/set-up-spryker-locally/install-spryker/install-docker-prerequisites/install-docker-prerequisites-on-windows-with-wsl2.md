@@ -1,6 +1,6 @@
 ---
 title: Install Docker prerequisites on Windows with WSL2
-description: This page describes the steps that are to be performed before you can start working with Spryker in Docker on Windows.
+description: This page describes the steps that are to be performed before you can start working with Spryker in Docker on Windows with WSL2.
 last_updated: Oct 21, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-docker-prerequisites-on-windows
@@ -11,11 +11,11 @@ redirect_from:
   - /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html  
 related:
   - title: Install Docker prerequisites on Linux
-    link: docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html
+    link: docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html
   - title: Install Docker prerequisites on MacOS
-    link: docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html
+    link: docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html
   - title: Install Docker prerequisites on Windows with WSL1
-    link: docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html
+    link: docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html
 ---
 
 This document describes the prerequisites for installing Spryker on Windows.
@@ -30,8 +30,8 @@ This document describes the prerequisites for installing Spryker on Windows.
 | CPU SLAT-capable feature | Enabled |SLAT is CPU related feature. It is called Rapid Virtualization Indexing (RVI). |
 | Docker | 18.09.1 or higher |
 | Docker Compose | 2.0 or higher |  
-| RAM  | 4GB or more |
-| Swap  | 2GB or more |
+| RAM  | 16GB or more |
+| Swap  | 4GB or more |
 
 ## Install and configure the required software
 

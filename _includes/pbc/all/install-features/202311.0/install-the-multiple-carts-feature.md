@@ -331,7 +331,7 @@ Make sure that customer carts have unique names. If a customer creates a cart wi
 
 Example:
 
-If the name "Shopping cart" already exists, it is changed to the following:
+If the name "Shopping cart" already exists, it's changed to the following:
 * Shopping cart → Shopping cart 1
 * Shopping cart → Shopping cart 2
 
@@ -427,7 +427,7 @@ Register the following plugins:
 
 | PLUGIN                                | SPECIFICATION                                                                                                                                                                                           | PREREQUISITES                                                     | NAMESPACE                       |
 |---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|---------------------------------|
-| GuestCartSaveCustomerSessionSetPlugin | Executed after the customer has been added to the session. Saves a guest customer quote to the database if it is not empty. Takes an actual customer quote from the database if the guest cart is empty. | Must be added before `GuestCartUpdateCustomerSessionSetPlugin`. | Spryker\Client\MultiCart\Plugin |
+| GuestCartSaveCustomerSessionSetPlugin | Executed after the customer has been added to the session. Saves a guest customer quote to the database if it's not empty. Takes an actual customer quote from the database if the guest cart is empty. | Must be added before `GuestCartUpdateCustomerSessionSetPlugin`. | Spryker\Client\MultiCart\Plugin |
 
 **src/Pyz/Client/Customer/CustomerDependencyProvider.php**
 

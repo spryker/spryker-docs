@@ -1,6 +1,6 @@
 
 
-The environment configuration was restructured to solve a couple of inconsistencies and dependencies within the configuration itself. To untangle some of the configuration options it was necessary to introduce a few new configuration constants. Although the Spryker core should be fully backward compatible it is advised to update project implementations to make use of the new configuration options.
+The environment configuration was restructured to solve a couple of inconsistencies and dependencies within the configuration itself. To untangle some of the configuration options it was necessary to introduce a few new configuration constants. Although the Spryker core should be fully backward compatible it's advised to update project implementations to make use of the new configuration options.
 
 Along with the introduction of the new configuration constants, a couple of unused ones have been marked as deprecated.
 
@@ -10,7 +10,7 @@ The configuration contained some inconsistencies in defining a host for `_Yves_`
 
 ### HOST_YVES and HOST_ZED
 
-They should only define the host for accessing either `_Yves_` or `_Zed_`. They should not include any scheme and port definitions. This makes for reuse for e.g. setting a cookie domain.
+They should only define the host for accessing either `_Yves_` or `_Zed_`. They should not include any scheme and port definitions. This makes for reuse–for example, for setting a cookie domain.
 
 ### BASE_URL_YVES and BASE_URL_SSL_YVES
 
@@ -69,7 +69,7 @@ $config[ApplicationConstants::BASE_URL_ZED] = sprintf(
 ```
 
 <!--
-If it is required to define ports in project implementations, it might be necessary to update `\Pyz\Shared\Application\Business\Routing\UrlGenerator` to the latest version from [Demoshop](https://github.com/spryker/demoshop). Older versions of this class aren't aware of URLs containing ports.
+If it's required to define ports in project implementations, it might be necessary to update `\Pyz\Shared\Application\Business\Routing\UrlGenerator` to the latest version from [Demoshop](https://github.com/spryker/demoshop). Older versions of this class aren't aware of URLs containing ports.
 -->
 
 ### List of the new configuration

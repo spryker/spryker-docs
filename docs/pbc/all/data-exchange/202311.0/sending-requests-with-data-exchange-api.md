@@ -310,7 +310,7 @@ For example, configure `isCreatable: false` for `iso3_code` and send the same re
 ```
 
 
-Certain database-specific configurations may result in issues independent of entity configurations. For example, with MariaDB, it is impossible to set the ID value for an auto-incremented field. Additionally, the `iso2_code` field in the `spy_country` table must have a unique value. Therefore, before creating a new record, you need to make sure you are not passing a duplicate value for this field. If a duplicate value is passed, the following is returned:
+Certain database-specific configurations may result in issues independent of entity configurations. For example, with MariaDB, it's impossible to set the ID value for an auto-incremented field. Additionally, the `iso2_code` field in the `spy_country` table must have a unique value. Therefore, before creating a new record, you need to make sure you are not passing a duplicate value for this field. If a duplicate value is passed, the following is returned:
 
 ```json
 [
@@ -427,7 +427,7 @@ If `id_country` is not found, the following is returned:
 
 {% info_block infoBox %}
 
-Similarly to the `POST` request, it is important to consider database-specific configurations when sending a `PATCH` request.
+Similarly to the `POST` request, it's important to consider database-specific configurations when sending a `PATCH` request.
 
 {% endinfo_block %}
 
@@ -592,7 +592,7 @@ Response sample:
 
 The response contains all columns from the `spy_country` table and the included `spy_tax_rate` table,
 as configured in `spy_dynamic_entity_definition.definition`. Each column is identified using the `fieldVisibleName`
-as the key, providing a comprehensive view of the table’s data in the API response.
+as the key, providing a comprehensive view of the table's data in the API response.
 
 {% info_block infoBox %}
 

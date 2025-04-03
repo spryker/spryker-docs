@@ -38,7 +38,7 @@ You can have the following return process:
     4. Prints the return label and adheres it to the box.
     5. Ships the order to the shop.
 
-* When the shop receives the return, the *Shop Administrator* checks the returned items. If all is good and if items meet the shop’s policy for the condition of returned items, the Shop Administrator confirms the return and makes the refund. Otherwise, the Shop Administrator contacts the Buyer and either cancels the return, or clarifies the details and makes the refund.
+* When the shop receives the return, the *Shop Administrator* checks the returned items. If all is good and if items meet the shop's policy for the condition of returned items, the Shop Administrator confirms the return and makes the refund. Otherwise, the Shop Administrator contacts the Buyer and either cancels the return, or clarifies the details and makes the refund.
 ![image](https://confluence-connect.gliffy.net/embed/image/ceba5ea5-5ee2-4e8c-acce-65b64467421c.png?utm_medium=live&utm_source=custom)
 
 This scenario is typical for most B2C models, and its main advantages are:
@@ -74,7 +74,7 @@ The following schema illustrates the workflow as well as the areas that require 
 
 ![image](https://confluence-connect.gliffy.net/embed/image/2599f923-6892-42bc-a867-e2b38bed5b2b.png?utm_medium=live&utm_source=custom)
 
-This scenario suites both B2B and B2C models and is especially good for resolving disputes and handling warranty cases that can imply return or replacement. So it is best to use such a workflow when human intervention is needed.
+This scenario suites both B2B and B2C models and is especially good for resolving disputes and handling warranty cases that can imply return or replacement. So it's best to use such a workflow when human intervention is needed.
 
 You can combine this scenario with [scenario 1](#scenario1). For example:
 

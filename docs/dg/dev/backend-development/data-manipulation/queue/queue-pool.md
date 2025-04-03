@@ -1,5 +1,6 @@
 ---
 title: Queue pool
+description: Manage your Spryker queue system effectively with the Queue Pool feature. This guide explains how to organize and optimize queues, ensuring better message processing and resource management for your ecommerce backend.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/queue-pool
@@ -8,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html
 related:
   - title: Queue
-    link: docs/scos/dev/back-end-development/data-manipulation/queue/queue.html
+    link: docs/dg/dev/backend-development/data-manipulation/queue/queue.html
 ---
 
 Queue pool is designed to allow P&S ([Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html)) messages to be sent to several queues.

@@ -37,7 +37,7 @@ To create a new abstract product:
 
       {% info_block warningBox "Warning" %}
 
-      You can not save an abstract product unless it is accompanied by at least one concrete product.
+      You can not save an abstract product unless it's accompanied by at least one concrete product.
 
       {% endinfo_block %}
 
@@ -65,7 +65,7 @@ To create a new abstract product:
 
 6. Click **Next**.
 
-Only active marketplace products are displayed on the Marketplace Storefront. To activate your marketplace product, see [Managing marketplace concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products.html#activating-and-deactivating-a-concrete-product).
+Only active marketplace products are displayed on the Marketplace Storefront. To activate your marketplace product, see [Managing marketplace concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html).
 
 ### Reference information: Create Abstract Product drawer
 
@@ -93,7 +93,7 @@ The following table describes attributes you select and enter on the **Create an
 
 This section describes attributes you select and enter on the **Create an Abstract Product with 1 Concrete Product** drawer.
 
-You can select as many super attributes as you need and define one or more values for them. When you select a product attribute value, a concrete product based on this value is displayed. In the **Concrete Products’ Preview** pane you can view the products to be created.
+You can select as many super attributes as you need and define one or more values for them. When you select a product attribute value, a concrete product based on this value is displayed. In the **Concrete Products' Preview** pane you can view the products to be created.
 
 By selecting **Autogenerate SKUs**, the SKU numbers for the variants are generated automatically, based on the SKU prefix of their abstract product.
 

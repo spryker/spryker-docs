@@ -57,7 +57,7 @@ The following dynamic product labels are shipped by default:
 <br>The *NEW* label is added when you create a product. It is active for the time period defined inclusively in the **New from** and **New to** fields. To learn more, see [Creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 
 * *SALE*
-<br>The *SALE* product label is added to a product automatically when the product’s original price is superior to the default price. To learn more, see [Creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
+<br>The *SALE* product label is added to a product automatically when the product's original price is superior to the default price. To learn more, see [Creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 
 {% info_block infoBox "Prices" %}
 
@@ -135,7 +135,7 @@ A product label can have the following statuses:
 * Active
 * Inactive
 
-If a product label is active, it is displayed on all the product pages it is applied to. If a product label is inactive, it is still applied to the selected product, but it is not displayed on the respective product pages. This might be useful when you want to prepare for an event beforehand. You can create an inactive product label and apply it to the needed products. When the event starts, you just need to activate the label to show it on all the product pages it is applied to.
+If a product label is active, it's displayed on all the product pages it's applied to. If a product label is inactive, it's still applied to the selected product, but it's not displayed on the respective product pages. This might be useful when you want to prepare for an event beforehand. You can create an inactive product label and apply it to the needed products. When the event starts, you just need to activate the label to show it on all the product pages it's applied to.
 
 To learn how a Back Office user can activate and deactivate product labels in the Back Office, see [Edit product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/product-labels/edit-product-labels.html)
 

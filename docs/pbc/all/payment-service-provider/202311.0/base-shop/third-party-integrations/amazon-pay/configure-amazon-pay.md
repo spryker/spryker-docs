@@ -91,7 +91,7 @@ $config[AmazonPayConstants::WIDGET_BUTTON_SIZE] = AmazonPayConfig::WIDGET_BUTTON
 $config[AmazonPayConstants::WIDGET_BUTTON_COLOR] = AmazonPayConfig::WIDGET_BUTTON_COLOR_DARK_GRAY;
 ```
 
-According to Amazon Pay restrictions, a module can run either on a `localhost` domain or via HTTPS. If it is not possible to use `localhost`, HTTPS connection should be configured. For testing purposes, register a test account in the [Amazon Pay dashboard](https://pay.amazon.com/us).
+According to Amazon Pay restrictions, a module can run either on a `localhost` domain or via HTTPS. If it's not possible to use `localhost`, HTTPS connection should be configured. For testing purposes, register a test account in the [Amazon Pay dashboard](https://pay.amazon.com/us).
 
 {% info_block warningBox "Important" %}
 
@@ -167,7 +167,7 @@ All default commands and conditions are stored in `SprykerEco\Zed\AmazonPay\Comm
 
 ## IPN Configuration
 
-In order to allow everyone to send push notifications, please extend `config_default.XXX.php` for desired environments:
+In order to allow everyone to send push notifications,  extend `config_default.XXX.php` for desired environments:
 
 ```php
 $config[AclConstants::ACL_USER_RULE_WHITELIST][] = [
@@ -187,7 +187,7 @@ $config[ApplicationConstants::YVES_SSL_EXCLUDED]['aie'] = '/amazonpay/ipn/endpoi
 
 ## Yves Controllers
 
-In order to enable processing of AmazonPay commands on front end, please add `AmazonPayControllerProvider` to `YvesBootstrap`:
+In order to enable processing of AmazonPay commands on front end,  add `AmazonPayControllerProvider` to `YvesBootstrap`:
 
 ```php
 /**

@@ -1,5 +1,6 @@
 ---
 title: Using the Support Portal
+description: How to navigate Spryker's Support Portal to create, track, and manage support cases efficiently for seamless issue resolution
 last_updated: Sep 28, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-use-the-support-portal
@@ -17,7 +18,7 @@ This document describes how to use the support portal to create and manage your 
 
 ## Prerequisites
 
-* You should have a customer account provisioned for you. If you don't, request one using this [form](https://www.surveymonkey.com/r/XYK5R26).
+* You should have a customer account provisioned for you. If you don't, request one using this [form](https://support.spryker.com/s/portal-access-request).
 * Log in at the [support portal](https://support.spryker.com).
 
 ## Create new cases
@@ -35,10 +36,6 @@ Problems can be reports suspecting a bug or issues with the hosting services. To
 ### Ask a Question
 
 For any questions about Spryker. We want the knowledge about Spryker to be available to everyone. So, we'll provide you with a link to [Spryker Community](https://commercequest.space/) to ask your question there. If there are docs on the topic, we will provide a link to that.
-
-### Request help with Alumio
-
-Report problems with Alumio, request its provisioning for your environments, or schedule an appointment with Alumio Support.
 
 ### Infrastructure Change Request and Access Management
 
@@ -76,9 +73,9 @@ Emergencies are reserved for problems that have significant business impact now 
 
 {% info_block warningBox "Plan your change requests and use the right request form" %}
 
-Due to verification processes and role-based access control mechanisms, change requests take some time to process. Expect 3-5 days of processing time.
+Because of verification processes and role-based access control mechanisms, change requests take some time to process. Expect 3-5 days of processing time.
 
-Due to contractual reasons, only customers can request new environments or access to environment monitoring, not partners.
+Because of contractual reasons, only customers can request new environments or access to environment monitoring, not partners.
 
 {% endinfo_block %}
 

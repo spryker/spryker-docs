@@ -149,7 +149,7 @@ To give away a promotional product for free, select percentage calculator type a
 
 Similarly do [defining discounted products](#discount-application-type-query-string), the conditions in which a discount is a applied are defined using a query string.
 
-Example: The discount is applied if five or more items are in the cart, and if it is Tuesday or Wednesday.
+Example: The discount is applied if five or more items are in the cart, and if it's Tuesday or Wednesday.
 ![Discount Condition](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/discount-condition.png)
 
 The **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).** defines a minimum number of items that must fulfill the query for the discount to be applies. By default, the minimum order amount value is 1. It means that the discount is applied if there is one item in a cart the fulfills the query.
@@ -199,7 +199,7 @@ This section contains additional information for defining decision rules.
 |RELATION OPERATOR|IN PLAIN QUERY|VALUE TYPE|DESCRIPTION|
 |-|-|-|-|
 |Contains|CONTAINS|String, Number| Checks if the value is contained in the field. |
-|Doesn’t contain|DOES NOT CONTAIN|String, Number| Checks if the value is not contained in the field. |
+|Doesn't contain|DOES NOT CONTAIN|String, Number| Checks if the value is not contained in the field. |
 |Equal | = | String, Number |Checks if the value is equal to the value of the right operand|
 |Not Equal|!=| String, Number|Checks if the value is not equal to the value of the right operand|
 |In|IS IN|List| The values need to be semicolon-separated|

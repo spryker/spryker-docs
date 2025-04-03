@@ -1,7 +1,7 @@
 ---
 title: Stripe
 description: Stripe technology partner
-last_updated: Mar 24, 2024
+last_updated: Mar 24, 2025
 template: concept-topic-template
 ---
 
@@ -39,12 +39,61 @@ However, our team only tested the following payment methods:
 - Link
 - Przelewy24
 - Giropay
+- US, UK, CA, AU, NZ: AfterPay
 
 
 ## Current limitations
 
-The Stripe App has limited or no support for multi-capture. Partial capture of payment for orders with multiple items isn't covered. So, payments can’t be partially canceled. One payment intent is created per order, and the payment for the order can either be authorized, captured, or cancelled from Stripe's perespective.
+* The Stripe App has limited or no support for multi-capture. Partial capture of payment for orders with multiple items isn't covered. So, payments can't be partially canceled. One payment intent is created per order, and the payment for the order can either be authorized, captured, or cancelled from Stripe's side.
+* Payments can be properly canceled only from the the Back Office and not from the Stripe Dashboard.
+* When customer email address is not provided to the API, which is optional, bank transfer is not available as a payment method on the hosted payment page. This feature enables omitting personal data while retaining other payment options.
+
 
 ## Next step
 
 [Install and configure the Stripe App prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

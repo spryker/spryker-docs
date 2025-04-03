@@ -13,7 +13,7 @@ In the previous version (3*), the calculator stack was called `getCalculatorSta
 
 {% endinfo_block %}
 
-By default, the demoshop ships with these plugins. If you have your custom plugins, please add them accordingly, old and new calculators plugins are backwards compatible.
+By default, the demoshop ships with these plugins. If you have your custom plugins,  add them accordingly, old and new calculators plugins are backwards compatible.
 If you want to keep having old calculated fields, add the plugins to `getQuoteCalculatorPluginStack`. Take into consideration, that we recommend you discard old plugins and use the new ones.
 
 **Code sample:**
@@ -30,7 +30,7 @@ new ExpenseTaxCalculatorPlugin(),
 
 {% info_block errorBox %}
 
-The old Calculator plugins were moved to the following separate repository: `spryker/calculation-migration`. Please include into your `composer.json` like `"spryker/calculation-migration": "dev-master"` and run composer update. This should enable you to use the old plugins.
+The old Calculator plugins were moved to the following separate repository: `spryker/calculation-migration`. Include into your `composer.json` like `"spryker/calculation-migration": "dev-master"` and run composer update. This should enable you to use the old plugins.
 
 {% endinfo_block %}
 
@@ -351,7 +351,7 @@ After this, when you read an order using `SalesFacade::getOrderByIdSalesOrder()`
 
 {% info_block errorBox %}
 
-The Sales module does not depend on the `SalesAggregator` anymore. Therefore, you need to remove the `/sales-aggregator/sales/list` from `\Pyz\Zed\Sales\SalesConfig::getSalesDetailExternalBlocksUrls` as it is no longer in use. Totals were moved to Sales to the template `Spryker/Zed/Sales/Presentation/Detail/boxes/totals.twig` available in Sales version >= 6.\*.
+The Sales module does not depend on the `SalesAggregator` anymore. Therefore, you need to remove the `/sales-aggregator/sales/list` from `\Pyz\Zed\Sales\SalesConfig::getSalesDetailExternalBlocksUrls` as it's no longer in use. Totals were moved to Sales to the template `Spryker/Zed/Sales/Presentation/Detail/boxes/totals.twig` available in Sales version >= 6.\*.
 
 {% endinfo_block %}
 
@@ -460,7 +460,7 @@ Register the following console command: `\Pyz\Zed\SalesAggregator\Communication\
 
 {% info_block errorBox %}
 
-Please back up your data now!
+Back up your data as soon as possible.
 
 {% endinfo_block %}
 

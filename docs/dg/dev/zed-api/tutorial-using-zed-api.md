@@ -1,5 +1,6 @@
 ---
 title: "Tutorial: Using Zed API"
+description: Learn how to use the ZED API, creating simple client librarys or extracting controller endpoints to use within your Spryker Projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-zed-rest-api
@@ -8,13 +9,13 @@ redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-zed-rest-api.html
 related:
   - title: Facade
-    link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
+    link: docs/dg/dev/backend-development/zed/business-layer/facade/facade.html
   - title: Create, use, and extend the transfer objects
     link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
   - title: Add a new module
     link: docs/scos/dev/back-end-development/extend-spryker/create-modules.html
   - title: Controllers and Actions
-    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+    link: docs/dg/dev/backend-development/yves/controllers-and-actions.html
 
 ---
 
@@ -93,9 +94,9 @@ After this step log into Zed and try opening `http://ZED_HOST/api/v1/doc` and `h
 
 ## 2. Create a business model to examine facade classes using reflection
 
-First, it is needed to create an empty model class `ApiEntry` in the business layer, it can be placed in `Business/Model/ApiEntry.php`.
+First, it's needed to create an empty model class `ApiEntry` in the business layer, it can be placed in `Business/Model/ApiEntry.php`.
 
-This class must be created in a factory of the module. Additionally, the factory must provide additional dependencies from facades of other modules. To simplify the solution, facades can be created dynamically based on GET parameters of the request, while in real life it is advised to always specify these dependencies implicitly.
+This class must be created in a factory of the module. Additionally, the factory must provide additional dependencies from facades of other modules. To simplify the solution, facades can be created dynamically based on GET parameters of the request, while in real life it's advised to always specify these dependencies implicitly.
 
 Considering all of above, the factory implementation can look like this:
 
@@ -357,7 +358,7 @@ Template `doc-transfer.twig`:
 
 After completing this step we should be able to see transfer object annotation by accessing `http://ZED_HOST/api/v1/docTransfer?transfer=Generated\Shared\Transfer\CustomerGroupTransfer`.
 
-## 4. Implement an “execute” controller action, which will proxy calls to specific methods of a facade and pass all the arguments to it
+## 4. Implement an "execute" controller action, which will proxy calls to specific methods of a facade and pass all the arguments to it
 
 This step is not directly related to Spryker but to an idea to cast incoming parameters to types based on method signature dynamically and forward a call to respective facade method. The big advantage is that Spryker allows to unserialize transfer objects from JSON, it means, we can just send values for complex objects as JSON objects and those can be automatically cast to transfer objects and be safely used, when calling different facade methods.
 

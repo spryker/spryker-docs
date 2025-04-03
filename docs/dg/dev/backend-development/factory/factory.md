@@ -7,10 +7,6 @@ originalLink: https://documentation.spryker.com/2021080/docs/factory
 originalArticleId: 08d03a8a-184b-46a0-87ff-8594976ab795
 redirect_from:
   - /docs/scos/dev/back-end-development/factory/factory.html
-
-related:
-  - title: Injecting dependencies within factories - container globals
-    link: docs/scos/dev/back-end-development/factory/injecting-dependencies-within-factories-container-globals.html
 ---
 
 All modules are shipped with a dedicated factory for each layer. The responsibility of the factory is to create new instances of the classes from the same layer and module.
@@ -75,7 +71,7 @@ The extended `AbstractFactory` holds some important methods:
 
 ## Snippets to create a new factory
 
-The factory pattern is used all over our code base. The concrete implementations look a bit different for Yves, Zed, and Client. You can copy and paste these snippets and just replace `MyBundle` with your real module name. To enable auto-completion, it is recommended to define the interfaces for the query container and module config in the class doc block as shown in the snippets.
+The factory pattern is used all over our code base. The concrete implementations look a bit different for Yves, Zed, and Client. You can copy and paste these snippets and just replace `MyBundle` with your real module name. To enable auto-completion, it's recommended to define the interfaces for the query container and module config in the class doc block as shown in the snippets.
 
 ### Yves
 

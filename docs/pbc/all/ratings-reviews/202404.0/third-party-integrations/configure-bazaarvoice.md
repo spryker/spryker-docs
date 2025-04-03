@@ -1,7 +1,7 @@
 ---
 title: Configure Bazaarvoice
 description: Find out how you can configure Bazaarvoice in your Spryker shop
-template: howto-guide-template 
+template: howto-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
   - /docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html
@@ -38,7 +38,7 @@ The following table explains where you can take the values for populating the fi
 
 </div>
 
-The following video explains how you can create an API key if it is not available in your account:
+The following video explains how you can create an API key if it's not available in your account:
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -64,7 +64,7 @@ If you are unsure of your credentials or the region, reach out to the internal B
 
 9. In **Settings&nbsp;<span aria-label="and then">></span> Select Services**, select the services that you need:
    - RATINGS & REVIEWS: These are the accumulated star ratings along with reviews that are displayed on the product details page.
-   <!---- QUESTIONS & ANSWERS:--> 
+   <!---- QUESTIONS & ANSWERS:-->
    - INLINE RATINGS: This service displays the star ratings directly in these lists of products, for example, in search results, in the product catalog, etc.
 
 10. To configure the stores where you want to turn on the Bazaarvoice app, in **Settings&nbsp;<span aria-label="and then">></span> Store**, select the stores.
@@ -76,5 +76,17 @@ This adds the Bazaarvoice app to your store. It usually takes Bazaarvoice a few 
 {% info_block infoBox "Info" %}
 
 You can do the administration work on the Bazaarvoice reviews from the [Bazaarvoice portal](https://portal.bazaarvoice.com/signin?ref=spryker-documentation). For example, you can approve individual reviews. See [Workbench overview](https://knowledge.bazaarvoice.com/wp-content/brandedge-pro-wb/en_US/basics/workbench_overview.html#log-in-to-workbench?ref=spryker-documentation) for details on how you can manage reviews from the Bazaarvoice portal.
+
+{% endinfo_block %}
+
+## Retain Bazaarvoice configuration after a destructive deployment
+
+{% info_block errorBox "" %}
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html) permanently deletes the configuration of Bazaarvoice.
+
+To run a destructive deployment, follow the steps:
+1. Disconnect Bazaarvoice.
+2. Run a destructive deployment.
+3. Reconnect Bazaarvoice.
 
 {% endinfo_block %}

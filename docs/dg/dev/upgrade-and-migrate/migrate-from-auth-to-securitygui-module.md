@@ -1,5 +1,6 @@
 ---
 title: Migrate from Auth to SecurityGui module
+description: Learn how to migrate from the Auth module to the Security GUI Module within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-auth-module-to-securitygui-module
@@ -175,7 +176,7 @@ The steps in this section show you how to re-configure the YVES system user and 
     ];
     ```
 
-    * If you are using the plugin `Spryker/Zed/Auth/Communication/Plugin/SessionRedis/SystemUserSessionRedisLifeTimeCalculatorPlugin` in `src/Pyz/Zed/SessionRedis/SessionRedisDependencyProvider::getSessionRedisLifeTimeCalculatorPlugins()`, please replace it with `Spryker/Zed/SecuritySystemUser/Communication/Plugin/SessionRedis/SystemUserSessionRedisLifeTimeCalculatorPlugin`.
+    * If you are using the plugin `Spryker/Zed/Auth/Communication/Plugin/SessionRedis/SystemUserSessionRedisLifeTimeCalculatorPlugin` in `src/Pyz/Zed/SessionRedis/SessionRedisDependencyProvider::getSessionRedisLifeTimeCalculatorPlugins()`,  replace it with `Spryker/Zed/SecuritySystemUser/Communication/Plugin/SessionRedis/SystemUserSessionRedisLifeTimeCalculatorPlugin`.
 
 ## Update the Security module  
 
@@ -287,7 +288,7 @@ Remove `RestorePasswordMailTypePlugin()` and add `UserPasswordResetMailTypePlugi
 
 /**
  * This file is part of the Spryker Commerce OS.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\Security;
@@ -320,7 +321,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 
 /**
  * This file is part of the Spryker Commerce OS.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\SecurityGui;
@@ -340,7 +341,7 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 
 /**
  * This file is part of the Spryker Commerce OS.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\UserPasswordReset;

@@ -124,7 +124,7 @@ The next step is to create a database table that is used as a mirror for the cor
 
 {% info_block infoBox "Naming convention"%}
 
-As a naming convention, it is recommended to append `_storage` to the end of the table name if it is synchronized with Redis, and `_search` if it is synchronized with Elasticsearch.
+As a naming convention, it's recommended to append `_storage` to the end of the table name if it's synchronized with Redis, and `_search` if it's synchronized with Elasticsearch.
 
 {% endinfo_block %}
 
@@ -133,7 +133,7 @@ All mirror tables must implement the *Synchronization* behavior that is used to 
 Sample Redis synchronization table (see `data/shop/development/current/src/Orm/Propel/DE/Schema/spy_product_storage.schema.xml`):
 
 ```xml
-    <table name="spy_product_abstract_storage">
+    <table name="spy_product_abstract_storage" identifierQuoting="true">
         <column name="id_product_abstract_storage" type="integer" autoIncrement="true" primaryKey="true"/>
         <column name="fk_product_abstract" type="INTEGER" required="true"/>
         <id-method-parameter value="spy_product_abstract_storage_pk_seq"/>
@@ -151,7 +151,7 @@ Sample Redis synchronization table (see `data/shop/development/current/src/Orm/P
 Sample Elasticsearch synchronization table (see `data/shop/development/current/src/Orm/Propel/DE/Schema/spy_cms_page_search.schema.xml`):
 
 ```xml
-    <table name="spy_cms_page_search">
+    <table name="spy_cms_page_search" identifierQuoting="true">
         <column name="id_cms_page_search" type="INTEGER" autoIncrement="true" primaryKey="true"/>
         <column name="fk_cms_page" type="INTEGER" required="true"/>
         <!-- "structured_data" column contains the result from database query while "data" column contains mapped data for the search engine -->
@@ -173,8 +173,8 @@ The *Synchronization* behavior added by the above schema files adds a column tha
 
 Synchronization behavior parameters:
 * `resource`—specifies the Redis or Elasticsearch namespace to synchronize with.
-* `store`—specifies whether it is necessary to specify a store for an entity.
-* `locale`—specifies whether it is necessary to specify a locale for an entity.
+* `store`—specifies whether it's necessary to specify a store for an entity.
+* `locale`—specifies whether it's necessary to specify a locale for an entity.
 * `key_suffix_column`—specifies the name of the column that will be appended to the Redis or Elasticsearch key to make the key unique. If this parameter is omitted, then all entities will be stored under the same key.
 * `queue_group`—specifies the queue group for synchronization.
 * `params`—specifies search parameters (Elasticsearch only).
@@ -298,7 +298,7 @@ The `handleBulk` method is called by the event queue for the defined events in t
 
 {% info_block infoBox "Info"%}
 
-For performance considerations, events are passed to the listener in bulk. Even if a single event must be handled, it is passed as an array of a single element.
+For performance considerations, events are passed to the listener in bulk. Even if a single event must be handled, it's passed as an array of a single element.
 
 {% endinfo_block %}
 

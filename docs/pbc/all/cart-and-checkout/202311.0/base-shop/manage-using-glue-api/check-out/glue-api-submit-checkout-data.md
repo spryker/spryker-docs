@@ -1164,17 +1164,17 @@ In case of a successful update, the endpoint responds with information that can 
 | addresses | salutation | String | The salutation to use when addressing the customer. |
 | addresses |  firstName | String | The customer's first name. |
 | addresses | lastName | String | The customer's last name. |
-| addresses | address1 | String | The 1st line of the customer's address. |
-| addresses | address2 | String | The 2nd line of the customer's address. |
-| addresses | address3 | String | The 3rd line of the customer's address. |
+| addresses | address1 | String | The first line of the customer's address. |
+| addresses | address2 | String | The second line of the customer's address. |
+| addresses | address3 | String | The third line of the customer's address. |
 | addresses | zipCode | String | ZIP code. |
 | addresses | city | String |The name of the city. |
 | addresses | country | String | The name of the country. |
 | addresses | iso2Code | String | Specifies an ISO 2 Country Code to use. |
 | addresses | company | String | Specifies the customer's company. |
 | addresses | phone | String | Specifies the customer's phone number. |
-| addresses | isDefaultShipping | String | Defines if it is the default shipping address of the customer. |
-| addresses | isDefaultBilling | String | Defines if it is the default billing address of the customer. |
+| addresses | isDefaultShipping | String | Defines if it's the default shipping address of the customer. |
+| addresses | isDefaultBilling | String | Defines if it's the default billing address of the customer. |
 | shipments | Items | Array | A list of items in the shipment. |
 | shipments | requestedDeliveryDate | Date | Desired delivery date. |
 | shipments | shippingAddress | Object | The address to which this shipment will be delivered. |
@@ -1182,9 +1182,9 @@ In case of a successful update, the endpoint responds with information that can 
 | shipments | shippingAddress.salutation | String | The salutation to use when addressing the customer. |
 | shipments | shippingAddress.firstName | String | The customer's first name. |
 | shipments | shippingAddress.lastName | String | The customer's last name. |
-| shipments | shippingAddress.address1 | String | The 1st line of the customer's address. |
-| shipments | shippingAddress.address2 | String | The 2nd line of the customer's address. |
-| shipments | shippingAddress.address3 | String | The 3rd line of the customer's address. |
+| shipments | shippingAddress.address1 | String | The first line of the customer's address. |
+| shipments | shippingAddress.address2 | String | The second line of the customer's address. |
+| shipments | shippingAddress.address3 | String | The third line of the customer's address. |
 | shipments | shippingAddress.zipCode | String | ZIP code. |
 | shipments | shippingAddress.city | String | The name of the city. |
 | shipments | shippingAddress.country | String | The name of the country. |
@@ -1208,9 +1208,9 @@ In case of a successful update, the endpoint responds with information that can 
 | shipment-methods | deliveryTime | Integer | Estimated delivery time. |
 | shipment-methods | Price | Integer | Price of the shipment method. |
 | shipment-methods | currencyIsoCode | String |The ISO 4217 code of the currency in which the price is specified. |
-| company-business-unit-addresses | address1 | String | The 1st line of the customer's address. |
-| company-business-unit-addresses | address2 | String | The 2nd line of the customer's address. |
-| company-business-unit-addresses | address3 | String | The 3rd line of the customer's address. |
+| company-business-unit-addresses | address1 | String | The first line of the customer's address. |
+| company-business-unit-addresses | address2 | String | The second line of the customer's address. |
+| company-business-unit-addresses | address3 | String | The third line of the customer's address. |
 | company-business-unit-addresses | zipCode | String | The ZIP code. |
 | company-business-unit-addresses | city | String | The name of the city. |
 | company-business-unit-addresses | iso2Code | String | Specifies an ISO 2 Country Code to use. |
@@ -1221,7 +1221,7 @@ In case of a successful update, the endpoint responds with information that can 
 
 | CODE | REASON |
 | --- | --- |
-| 400 | Bad request. This error can occur due to the following reasons:<ul><li>The POST data is incorrect.</li><li>Neither **Authorization** nor **X-Anonymous-Customer-Unique-Id** headers were provided in the request.</li></ul> |
+| 400 | Bad request. This error can occur because of the following reasons:<ul><li>The POST data is incorrect.</li><li>Neither **Authorization** nor **X-Anonymous-Customer-Unique-Id** headers were provided in the request.</li></ul> |
 | 422 | The checkout data is incorrect. |
 | 1101 | Checkout data is invalid. |
 | 1102 | Order cannot be placed. |

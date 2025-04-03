@@ -1,6 +1,6 @@
 ---
 title: Connect to services via SSH
-description: Access Spryker Cloud services via SSH.
+description: Access internal Spryker Cloud environments securely via SSH, with onboarding steps for connecting through the bastion host to manage your cloud resources.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/connecting-to-services-via-ssh
@@ -11,7 +11,7 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/access/connecting-to-services-via-ssh.html
 ---
 
-We add your SSH public key to the [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html) during the onboarding, so you can access your environments' internal networks via SSH right after.
+We add your SSH public key to the [bastion host](https://docs.aws.amazon.com/managedservices/latest/userguide/using-bastions.html) during the onboarding, so you can access your environments' internal networks via SSH right after.
 
 You can use SSH in two ways:
 

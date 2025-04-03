@@ -1,5 +1,6 @@
 ---
 title: Setting up a custom domain name with a third-party DNS zone provider
+description: Set up a custom domain name with a third-party DNS provider on Spryker, following detailed steps for load balancer configuration and domain management.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/setting-up-a-custom-domain-name-with-a-third-party-dns-zone-provider
@@ -24,7 +25,7 @@ To point a domain to your application, point it to the respective load balancer 
 
 3. In the *Load balancer:{load balancer name}* section, select **Copy** ![copy icon](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Setting+up+a+custom+domain+name/Setting+up+a+custom+domain+name+with+a+third-party+DNS+zone+provider/copy-icon.png) next to the DNS name field.
 
-4. On the side of the DNS zone provider, set up a CNAME record using the copied *DNS name* as the record value. Refer to the DNS zone provider’s documentation for details.
+4. On the side of the DNS zone provider, set up a CNAME record using the copied *DNS name* as the record value. Refer to the DNS zone provider's documentation for details.
 
 
 ## 2. Define domain names
@@ -66,7 +67,7 @@ groups:
 
 {% info_block warningBox "Store configuration" %}
 
-`store:` must correspond to `groups:` and `region:`. For example, it is impossible to set a US store in the DE region.
+`store:` must correspond to `groups:` and `region:`. For example, it's impossible to set a US store in the DE region.
 
 {% endinfo_block %}
 

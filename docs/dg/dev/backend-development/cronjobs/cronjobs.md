@@ -1,6 +1,6 @@
 ---
 title: Cronjobs
-description: Spryker applications demand performing repetitive background operation—jobs. Such operations are necessary for synchronizing denormalized data into the search engine or key-value store.
+description: Explore how to manage and configure cronjobs in Spryker's backend to automate tasks, ensuring smooth operation of your ecommerce platform with scheduled jobs.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cronjob-scheduling-guide

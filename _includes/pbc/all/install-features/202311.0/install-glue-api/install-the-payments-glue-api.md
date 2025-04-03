@@ -28,7 +28,7 @@ Run the following command to install the required modules:
 composer require spryker/payments-rest-api:"1.1.0" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 
@@ -102,7 +102,7 @@ To have payment methods available for the checkout,  extend `RestPaymentTransfer
 ```
 
 
-Run the following command to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate

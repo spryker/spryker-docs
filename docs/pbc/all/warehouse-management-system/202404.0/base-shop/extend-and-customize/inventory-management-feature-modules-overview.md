@@ -22,7 +22,7 @@ This section describes how the availability modules works.
 A product's availability is checked with the following operations:
 
 * The product details page doesn't show the **Add to cart** button when a concrete product is out of stock. Instead, a message about the product being out of stock is displayed.
-* `\Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin` checks if all items in cart are available. It’s executed after the "Add to cart" operation. If an item is not available, an error message is sent to Yves.
+* `\Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin` checks if all items in cart are available. It's executed after the "Add to cart" operation. If an item is not available, an error message is sent to Yves.
 * `Spryker\Zed\Availability\Communication\Plugin\ProductsAvailableCheckoutPreConditionPlugin` checks if all items in the cart are available before placing the order. If one or more items are not available, order placing is aborted and an error message is displayed.
 
 ### Reserved flag
@@ -84,7 +84,7 @@ Product availability can have the flag `is_never_out_of_stock`. This indicates t
 
 In the state machine, items get reserved for an open order. There are certain states that release items—for example, when the payment fails and the order is canceled. However, if the order is successfully fulfilled, and the item is delivered, the item stays reserved until the next stock update.
 
-A stock update triggers the event `stock update`. For example, in our dummy payment's implementation, this would move the items from the “Shipped” state to next state. As the consecutive state is not reserved, the items that have already been shipped will no longer be reserved.
+A stock update triggers the event `stock update`. For example, in our dummy payment's implementation, this would move the items from the "Shipped" state to next state. As the consecutive state is not reserved, the items that have already been shipped will no longer be reserved.
 
 ### Import or change stock
 
@@ -92,13 +92,13 @@ It's possible to use the `vendor/bin/console data:import:product-stock` command 
 
 To edit stock in the Back Office, see [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).
 
-Stock update considers the stock from the stock file to be the absolute value. On stock update, the stock is overwritten with the values from the file. If a certain product does not have a record in the stock file, then it is considered that the stock of this product does not have to be updated.
+Stock update considers the stock from the stock file to be the absolute value. On stock update, the stock is overwritten with the values from the file. If a certain product does not have a record in the stock file, then it's considered that the stock of this product does not have to be updated.
 
 ### Availability per store
 
 Since Availability module version 6.*, we have added support for multi-store availability. That means that you can now have availability calculated per store basis. In the Administration Interface, you can change from which store you want to see availability.
 
-The main change in Availability is that `spy_availability` and `spy_availability_abstract` now have foreign keys to store tables which indicates to which store it is applicable. Reservations in OMS have also undergone a few changes to support multiple multi-store scenarios.
+The main change in Availability is that `spy_availability` and `spy_availability_abstract` now have foreign keys to store tables which indicates to which store it's applicable. Reservations in OMS have also undergone a few changes to support multiple multi-store scenarios.
 
 With Spryker shop, you can actually have several scenarios pertain to product warehouses in a multi-store environment. Each scenario is configured and enabled manually. The possible scenarios are listed below.
 

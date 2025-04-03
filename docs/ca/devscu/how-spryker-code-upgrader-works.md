@@ -1,6 +1,6 @@
 ---
 title: How Spryker Code Upgrader works
-description: Spryker Code Upgrader overview
+description: Learn how Spryker Code Upgrader works, from identifying module updates and applying security releases to creating Git branches, committing changes, and submitting PRs for seamless upgrades.
 template: concept-topic-template
 last_updated: Aug 22, 2023
 redirect_from:
@@ -30,7 +30,7 @@ Firstly, it applies the security releases: the releases with security updates. F
 
 After updating the modules, the Upgrader returns the list of updated modules and proceeds to the next step.
 
-If the Upgrader can’t update a module, it skips the module and the remaining groups. If all the groups fail to update, the Upgrader returns the errors causing this and stops. With at least one group updated, it returns the list of updated modules and proceeds to the next step.
+If the Upgrader can't update a module, it skips the module and the remaining groups. If all the groups fail to update, the Upgrader returns the errors causing this and stops. With at least one group updated, it returns the list of updated modules and proceeds to the next step.
 
 By default, the Upgrader updates only minor and patch versions. When the Upgrader finds a group with a [major release](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#what-is-a-major-release), it doesn't update it and informs you about that:
 

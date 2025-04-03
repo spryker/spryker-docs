@@ -53,7 +53,7 @@ To Integrate Klarna payments, create and configure a Klarna merchant account.
 
 We use state machines for handling and managing orders and payments. To integrate Klarna payments, a dedicated state machine should be created.
 
-A basic and fully functional state machine is already available (KlarnaPayment01). You can use the same state machine or build a new one. In case a new state machine needs to be built, it is preferred to contact Klarna and confirm the new state machine design and functionality.
+A basic and fully functional state machine is already available (KlarnaPayment01). You can use the same state machine or build a new one. In case a new state machine needs to be built, it's preferred to contact Klarna and confirm the new state machine design and functionality.
 
 The [Klarna State Machine Commands and Conditions](klarna-state-machine.htm) trigger the operations exposed by the KlarnaFacade in order to perform the needed requests to Klarna.
 -->
@@ -72,6 +72,6 @@ The [Klarna State Machine Commands and Conditions](klarna-state-machine.htm) tri
 See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
 ---
-For further information on this partner and integration into Spryker, please contact us.
+For further information on this partner and integration into Spryker,  contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

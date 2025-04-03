@@ -59,7 +59,7 @@ Other changes are listed below:
 * Replaced `ProductListFacade::deleteProductList()` usage with `ProductListFacade::removeProductList()` in `DeleteController::confirmAction()`.
 * Introduced extension point to inject buttons for the product list table.
 * Adjusted UI to see the owner domain entities for each product list.
-* Adjusted deletion logic so that it is not possible to delete a product list if it has any owner domain entity.
+* Adjusted deletion logic so that it's not possible to delete a product list if it has any owner domain entity.
 * Introduced extension point to define the ownership over product list by another domain entity.
 * Deprecated `ProductListOwnerTypeFormExpanderPluginInterface` to allow multiple owners concept.
 
@@ -112,7 +112,7 @@ Avoid using of the plugins implementing `ProductListOwnerTypeFormExpanderPluginI
 * `getProductListTableDataExpanderPlugins`
 * `getProductListTableHeaderExpanderPlugins`
 
-5. If your project has any domain entities that use product list (e.g. *Configurable Bundle*, *Merchant Relationship*, etc), add the respective plugins to the dependency provider:
+5. If your project has any domain entities that use product list, such as *Configurable Bundle*, *Merchant Relationship*, add the respective plugins to the dependency provider:
 
 ```php
 <?php

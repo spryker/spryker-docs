@@ -1,6 +1,6 @@
 ---
 title: Run the docs locally
-description: Find out how you can build the Spryker documentation site
+description: Learn how to Build and run Spryker Documentation directly on your local machine with this guide.
 last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:
@@ -39,7 +39,7 @@ The installation process is different depending whether you are using a Mac with
 
 * Intel-based Macs show an item labeled _Processor_ followed by the name and/or model number of the Intel processor.
 
-{% info_block warningBox "MacOS on M1 processor – Open Terminal using Rosetta" %}
+{% info_block warningBox "MacOS on M1 processor: open Terminal using Rosetta" %}
 
 On a MacBook with the M1 processor, make sure your Terminal is opened with Rosetta 2, by following the instructions here. Rosetta is a translation layer that enables non-native Intel x86 apps, including Homebrew, to run on Apple Silicon Macs.
 To open your terminal using Rosetta, follow these steps:
@@ -54,7 +54,7 @@ On either an M1 or an Intel Mac, follow the steps below to install Jekyll. M1-sp
 
 #### 1. Install Homebrew
 
-Homebrew is a package manager for macOS because by default Mac doesn’t have a package manager. You use Homebrew to install Ruby in the next step. Additionally, when you install Homebrew, Xcode command line tools and GCC are also installed automatically.
+Homebrew is a package manager for macOS because by default Mac doesn't have a package manager. You use Homebrew to install Ruby in the next step. Additionally, when you install Homebrew, Xcode command line tools and GCC are also installed automatically.
 
 To install Homebrew, follow these steps:
 ```bash

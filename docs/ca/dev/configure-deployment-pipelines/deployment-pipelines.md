@@ -1,6 +1,6 @@
 ---
 title: Deployment pipelines
-description: Deployment pipelines consist of three configurable stages.
+description: Configure and manage deployment pipelines in Spryker Cloud Commerce OS, with support for different deploy types, stages, and custom configuration via AWS
 template: howto-guide-template
 last_updated: Nov 30, 2023
 originalLink: https://cloud.spryker.com/docs/deployment-pipelines
@@ -81,10 +81,10 @@ Any shell commands specified in environment variables as hooks are executed with
 ```yaml
 ...
 environment:
-  SPRYKER_HOOK_BEFORE_DEPLOY: “touch /some/file && echo OK || echo FAIL“
-  SPRYKER_HOOK_AFTER_DEPLOY: “curl http://some.host.com:<port>/notify“
-  SPRYKER_HOOK_INSTALL: “chmod +x ./some_custom_script.sh && ./some_custom_scipt.sh“
-  SPRYKER_HOOK_DESTRUCTIVE_INSTALL: “vendor/bin/install -r destructive --no-ansi -vvv“
+  SPRYKER_HOOK_BEFORE_DEPLOY: "touch /some/file && echo OK || echo FAIL"
+  SPRYKER_HOOK_AFTER_DEPLOY: "curl http://some.host.com:<port>/notify"
+  SPRYKER_HOOK_INSTALL: "chmod +x ./some_custom_script.sh && ./some_custom_scipt.sh"
+  SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install -r destructive --no-ansi -vvv"
 ...
  ```
 
@@ -106,7 +106,7 @@ The CodeBuild project of this stage is named `Run_pre-deploy_for_<project_name>`
 
 {% info_block warningBox "Updating the pre-deploy hook" %}
 
-The CodeBuild project of the pre-deploy hook uses a *currently running* application image. If you add a new command to the hook, it is added to the hook during the next deployment. So, after updating the hook's configuration, the command only runs starting from the second deployment.
+The CodeBuild project of the pre-deploy hook uses a *currently running* application image. If you add a new command to the hook, it's added to the hook during the next deployment. So, after updating the hook's configuration, the command only runs starting from the second deployment.
 
 {% endinfo_block %}
 

@@ -131,7 +131,7 @@ class ProductCollector extends AbstractSearchPdoCollector
 
 Collectors should now be able to export abstract product data per store both for Storage and Search.
 
-10. `Facade/ProductToUrlInterface::hasUrl()` method is removed because it is not used within the module. Please check your code if you have customized calls to it.
+10. `Facade/ProductToUrlInterface::hasUrl()` method is removed because it's not used within the module. Please check your code if you have customized calls to it.
 11. `ProductAbstractManager` internal class was amended to handle `abstract product-store` relation, take a look if you have customized it.
 
 Additionally you might want to update the Product Information Management (PIM) Zed Admin UI to manage abstract products and their store configuration. You can find further information about multi-store products here, and [Upgrade the ProductManagement module](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html).
@@ -204,7 +204,7 @@ Add product reader, creator and updater plugins in `Pyz\Zed\Product\ProductDepen
 <?php
 /**
  * This file is part of the Spryker Demoshop.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\Product;
@@ -369,7 +369,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 
 ### 5. Troubleshooting
 
-For all other issues that you might encounter after migration, please refer to the Spryker Demoshop.
+For all other issues that you might encounter after migration,  refer to the Spryker Demoshop.
 
 ## Upgrading from version 2.* to version 3.*
 

@@ -1,6 +1,6 @@
 ---
 title: Set the target branch for Spryker Code Upgrader
-description: Learn how to select a target branch on Spryker CI
+description: Learn how to set the target branch for Spryker Code Upgrader in your project, enabling seamless pull requests and efficient upgrade management.
 template: howto-guide-template
 last_updated: Aug 14, 2023
 redirect_from:

@@ -20,7 +20,7 @@ Run the following command to install the required modules:
 composer require spryker/product-labels-rest-api:"^1.0.1" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following module is installed:
 
@@ -38,7 +38,7 @@ Generate transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes are present in transfer objects:
 

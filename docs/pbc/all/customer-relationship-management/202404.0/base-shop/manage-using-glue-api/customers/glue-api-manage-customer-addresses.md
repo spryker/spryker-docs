@@ -22,7 +22,7 @@ related:
   - title: Customer Accounts
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
+    link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration
@@ -98,9 +98,9 @@ Request sample: add an address
 | salutation | String | &check; | Salutation to use when addressing the customer. |
 | firstName | String | &check; | Customer's first name. |
 | lastName | String | &check; | Customer's last name. |
-| address1 | String | &check; | The 1st line of the customer's address. |
-| address2 | String | &check; | The 2nd line of the customer's address. |
-| address3 | String | &check; | The 3rd line of the customer's address. |
+| address1 | String | &check; | The first line of the customer's address. |
+| address2 | String | &check; | The second line of the customer's address. |
+| address3 | String | &check; | The third line of the customer's address. |
 | zipCode | String | &check; | ZIP code. |
 | city | String | &check; | Specifies the city. |
 | country | String | &check; | Specifies the country. |
@@ -179,9 +179,9 @@ Request sample: edit an address
 | salutation | String | Salutation to use when addressing the customer. |
 | firstName | String | Customer's first name. |
 | lastName | String | Customer's last name. |
-| address1 | String | The 1st line of the customer's address. |
-| address2 | String | The 2nd line of the customer's address. |
-| address3 | String | The 3rd line of the customer's address. |
+| address1 | String | The first line of the customer's address. |
+| address2 | String | The second line of the customer's address. |
+| address3 | String | The third line of the customer's address. |
 | zipCode | String | ZIP code. |
 | city | String | Specifies the city. |
 | country | String | Specifies the country. |

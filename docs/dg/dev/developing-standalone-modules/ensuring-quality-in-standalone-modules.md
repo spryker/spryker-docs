@@ -1,6 +1,6 @@
 ---
 title: Ensuring quality in standalone modules
-description: Ensure Quality
+description: Learn how you can ensure quality in standalone modules and adhere to Spryker's code quality within your Spryker based projects.
 last_updated: Jun 7, 2024
 template: howto-guide-template
 ---
@@ -44,7 +44,7 @@ jobs:
             - name: Setup PHP
               uses: shivammathur/setup-php@v2
               with:
-                  php-version: '8.2'
+                  php-version: '8.3'
                   extensions: mbstring, intl, bcmath
                   coverage: none
 
@@ -65,7 +65,7 @@ jobs:
             - name: Setup PHP
               uses: shivammathur/setup-php@v2
               with:
-                  php-version: '8.1'
+                  php-version: '8.2'
                   extensions: mbstring, intl, bcmath
                   coverage: none
 

@@ -1,6 +1,6 @@
 ---
 title: Module configuration convention
-description: This article contains conventions on the module configuration.
+description: Learn in this article about Spryker conventions on the module configuration for your Spryker based projects
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/module-configuration-convention
@@ -9,11 +9,11 @@ redirect_from:
   - /docs/scos/dev/guidelines/module-configuration-convention.html
 related:
   - title: Data Processing Guidelines
-    link: docs/scos/dev/guidelines/data-processing-guidelines.html
+    link: docs/dg/dev/guidelines/data-processing-guidelines.html
   - title: Making your Spryker shop secure
-    link: docs/scos/dev/guidelines/security-guidelines.html
+    link: docs/dg/dev/guidelines/security-guidelines.html
   - title: Project development guidelines
-    link: docs/scos/dev/guidelines/project-development-guidelines.html
+    link: docs/dg/dev/guidelines/project-development-guidelines.html
 ---
 
 ## Definitions

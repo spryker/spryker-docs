@@ -1,6 +1,6 @@
 ---
 title: Enable and disable maintenance mode
-description: Learn how to deploy maintenance pages for Spryker applications.
+description: Learn how to enable and disable maintenance mode in Spryker Cloud Commerce OS using AWS CodePipeline, with customizable maintenance pages and IP allowlisting for access.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 redirect_from:

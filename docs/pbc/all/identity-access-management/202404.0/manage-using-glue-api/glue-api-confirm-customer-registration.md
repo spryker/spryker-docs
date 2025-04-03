@@ -13,7 +13,7 @@ redirect_from:
   - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
 related:
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
+    link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Authenticating as a customer
@@ -67,7 +67,7 @@ Request sample: confirm customer registration
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| registrationKey | String | ✓ | Customer’s registration key. You can get it from the link in the customer confirmation registration email sent after customer creation. The example link: `https://mysprykershop.com/register/confirm?token=e13ec2a7c45c6d1bae9b266ed90dfff0`, where `e13ec2a7c45c6d1bae9b266ed90dfff0` is the registration key. |
+| registrationKey | String | ✓ | Customer's registration key. You can get it from the link in the customer confirmation registration email sent after customer creation. The example link: `https://mysprykershop.com/register/confirm?token=e13ec2a7c45c6d1bae9b266ed90dfff0`, where `e13ec2a7c45c6d1bae9b266ed90dfff0` is the registration key. |
 
 ### Response
 

@@ -18,13 +18,13 @@ To give a warehouse user access to fulfilling orders in a warehouse, you need to
 
 ## Fulfillment App
 
-Fulfillment App is an app used by warehouse users to fulfill orders. When a customer places an order, it is assigned to a warehouse that can fulfill the order. In the assigned warehouse, a warehouse user uses the Fulfillment App to gather and ship the order items.
+Fulfillment App is an app used by warehouse users to fulfill orders. When a customer places an order, it's assigned to a warehouse that can fulfill the order. In the assigned warehouse, a warehouse user uses the Fulfillment App to gather and ship the order items.
 
 ![Picklists](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/unified-commerce/fulfillment-app-feature-overview.md/picklists.png)
 
 ## Warehouse assignment
 
-By default, when a customer orders several items of the same SKU, the requested item’s stock is checked in all of the store's warehouses. The warehouses are sorted in the descending order of how much stock of the item they are holding. The warehouse holding the biggest stock of the item is assigned to the order. The warehouse holding the never-out-of-stock item quantity is considered to be holding the biggest stock.
+By default, when a customer orders several items of the same SKU, the requested item's stock is checked in all of the store's warehouses. The warehouses are sorted in the descending order of how much stock of the item they are holding. The warehouse holding the biggest stock of the item is assigned to the order. The warehouse holding the never-out-of-stock item quantity is considered to be holding the biggest stock.
 
 In some cases, the ordered quantity might not be available in the warehouse holding the biggest stock of the item. Then, the warehouse fulfills the order partially. The remaining quantity is fulfilled by the the warehouse holding the next biggest stock of the item. For example, the customer orders 100 tablets. The store's warehouses hold the following stock:
 

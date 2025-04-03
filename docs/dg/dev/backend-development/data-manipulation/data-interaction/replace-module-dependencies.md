@@ -1,5 +1,6 @@
 ---
 title: Replace module dependencies
+description: Learn how to replace module dependencies in Spryker for flexible backend customization. Optimize data interactions and tailor modules to fit your needs.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-replace-bundle-dependencies
@@ -17,7 +18,7 @@ This document describes the process using an example. Assume your project uses P
 
 ## Prerequisites
 
-The preceding example assumes that you know exactly what core module you want to replace. If that is not the case, you need to know what are the core module’s dependencies. You can find this information in a module’s `composer.json` file. This file lists all the dependent components and can be used to locate the dependent functionality that you want to replace based on your project’s requirements.
+The preceding example assumes that you know exactly what core module you want to replace. If that is not the case, you need to know what are the core module's dependencies. You can find this information in a module's `composer.json` file. This file lists all the dependent components and can be used to locate the dependent functionality that you want to replace based on your project's requirements.
 
 To replace a module with another module:
 
@@ -26,11 +27,11 @@ The following process describes adding a replace command into a new module to in
 For each module that you want to add, take these steps:
 
 1. Replace the old module with the new one by creating a dummy module repository in a directory accessible to Composer.
-    1. Name or rename the new module by using the old module’s name and prefixing it with `replace_`.  For example, create a dummy file called `replace_refund` to replace the refund module. This helps keep track of any replacements you do in the project.
+    1. Name or rename the new module by using the old module's name and prefixing it with `replace_`.  For example, create a dummy file called `replace_refund` to replace the refund module. This helps keep track of any replacements you do in the project.
     2. In the newly created dummy module directory, create an empty `composer.json` file and add the following Composer configuration information.
-    3. Add the newly created module to your project’s `composer.json` file by going to `shop/composer.json` and adding the new location.
-    4. Check if the core module is in your project’s `composer.json` file. If it is, remove it.
-2. Execute the composer update command with the replacement module name: composer update `“replace_<the name of the module you are replacing>”`. Running the composer update command removes all mentions of the module (for example, `refund`) and replaces it with your module (for example, `replace_refund`).
+    3. Add the newly created module to your project's `composer.json` file by going to `shop/composer.json` and adding the new location.
+    4. Check if the core module is in your project's `composer.json` file. If it's, remove it.
+2. Execute the composer update command with the replacement module name: composer update `"replace_<the name of the module you are replacing>"`. Running the composer update command removes all mentions of the module (for example, `refund`) and replaces it with your module (for example, `replace_refund`).
 
 {% info_block warningBox %}
 
@@ -42,11 +43,11 @@ For more information on using the composer replace, see [replace](https://getcom
 
 ```
 {
-     "name": “<vendor>/ replace_<the name of the module you are replacing> ",
+     "name": "<vendor>/ replace_<the name of the module you are replacing> ",
      "replace": {
        "spryker/<the name of the module you are replacing> ":"*"
      },
-     "description": “<add_decription_of_what_you_are_replacing>"
+     "description": "<add_decription_of_what_you_are_replacing>"
     }
 ```
 
@@ -62,6 +63,6 @@ To check whether this has worked:
 
 Now that we have replaced a core module with a different module, we need to connect the rest of the OS to this new module.
 
-To set up connectivity, check the replaced module’s usage and adapt its logic to the new module.
+To set up connectivity, check the replaced module's usage and adapt its logic to the new module.
 
 For further assistance on project-level implementations, email us: [support@spryker.com](mailto:support@spryker.com).

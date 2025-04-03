@@ -1,6 +1,6 @@
 ---
 title: PHPStan
-description: Learn how to install and use PHPStan, a static code analyzer
+description: Learn how to install and use PHPStan, a static code analyzer within your Spryker SDK projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/phpstan
@@ -17,56 +17,66 @@ redirect_from:
   - /docs/scos/dev/sdk/development-tools/phpstan.html
 related:
   - title: Architecture sniffer
-    link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-  - title: Code sniffer
-    link: docs/scos/dev/sdk/development-tools/code-sniffer.html
+    link: docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html
   - title: Formatter
-    link: docs/scos/dev/sdk/development-tools/formatter.html
+    link: docs/dg/dev/sdks/sdk/development-tools/formatter.html
   - title: Performance audit tool- Benchmark
-    link: docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
+    link: docs/dg/dev/sdks/sdk/development-tools/benchmark-performance-audit-tool.html
   - title: SCSS linter
-    link: docs/scos/dev/sdk/development-tools/scss-linter.html
+    link: docs/dg/dev/sdks/sdk/development-tools/scss-linter.html
   - title: TS linter
-    link: docs/scos/dev/sdk/development-tools/ts-linter.html
+    link: docs/dg/dev/sdks/sdk/development-tools/ts-linter.html
   - title: Spryk code generator
-    link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html
+    link: docs/dg/dev/sdks/sdk/spryks/spryks.html
   - title: Static Security Checker
-    link: docs/scos/dev/sdk/development-tools/static-security-checker.html
+    link: docs/dg/dev/sdks/sdk/development-tools/static-security-checker.html
   - title: Tooling config file
-    link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
+    link: docs/dg/dev/sdks/sdk/development-tools/tooling-configuration-file.html
 ---
 
 [PHPStan](https://github.com/phpstan/phpstan) is a static code analyzer that introspects the code without running it and catches various classes of bugs prior to unit testing.
 
-## Installation
-
-To install PHPStan, run the following command:
+## Install PHPStan
 
 ```bash
 composer require --dev phpstan/phpstan
 ```
 
-## Usage
+## Use PHPStan
 
-1. Run the following command to generate autocompletion and prevent any error messages that might occur due to the incomplete classes:
-`vendor/bin/console dev:ide:generate-auto-completion`
-2. Run this command to start analyzing:
-`php -d memory_limit=2048M vendor/bin/phpstan analyze -c vendor/spryker/spryker/phpstan.neon vendor/<spryker | spryker-eco | spryker-middleware>/<MODULE>/ -l 2`
+1. Generate autocompletion and prevent any error messages that might occur because of incomplete classes:
+
+```bash
+vendor/bin/console dev:ide:generate-auto-completion
+```
+
+2. Start analyzing:
+
+```bash
+php -d memory_limit=2048M vendor/bin/phpstan analyze -l 6 -c phpstan.neon src/`
+```
+
 
 {% info_block errorBox %}
 
-Note that running this command with the level 2 key (**-l 2**) and having no errors is obligatory, and having no errors with level 5 (**-l 5**) is highly recommended.
+Demo shops are by default configured with PHPStan at level 6 in `phpstan.neon`. We highly recommend this configuration.
 
 {% endinfo_block %}
 
-## Additional functionality
+## Baseline
 
-**Main configuration file inheritance**
+If you need to raise the level, add new rules or extensions, you can generate a baseline and enable it for future changes.
 
-To avoid duplicated code while specifying a different configuration in the _parameters_ section of the `phpstat.neon` file, it is possible to extend this file and determine only the changes needed for a particular configuration of a module.
 
-### ./[ROOT]/phpstan.neon
+For more information, see [PHPStan baseline](https://phpstan.org/user-guide/baseline).
 
+
+## Main configuration file inheritance
+
+You can extend `phpstat.neon` and define per-module configuration in the `parameters` section to reuse the matching configuration.
+
+
+**./[ROOT]/phpstan.neon**
 ```php
 parameters:
     excludes_analyse:
@@ -83,7 +93,7 @@ services:
 ...
 ```
 
-### ./[Module]/phpstan.neon
+**./[Module]/phpstan.neon**
 
 ```php
 parameters:

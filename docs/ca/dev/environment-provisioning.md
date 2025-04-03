@@ -121,7 +121,7 @@ Customer and partner users can have access to the following:
 This section explains what additional attributes you can specify at the beginning of your provisioning, as well as accesses you can request.
 
 ### Optional: SFTP
-SFTP is implemented on top of EFS. You can use SFTP for any third-party integrations or for explicit data imports via Jenkins jobs if required on the project level. Note that SFTP is only available on Bastion and Jenkins. This feature is disabled by default. You can also request it later via the support ticket, but it is preferred to validate this option during provisioning.
+SFTP is implemented on top of EFS. You can use SFTP for any third-party integrations or for explicit data imports via Jenkins jobs if required on the project level. Note that SFTP is only available on Bastion and Jenkins. This feature is disabled by default. You can also request it later via the support ticket, but it's preferred to validate this option during provisioning.
 
 For data import, we recommend using S3 buckets.
 
@@ -138,7 +138,7 @@ The following configuration parameters are optional:
 
 {% info_block infoBox "Site to Site VPN" %}
 
-If you need Site to Site VPN, provide your internal subnet CIDR, so our Spryker VPC doesn’t overlap with it. It is crucial to evaluate this option during provisioning, as Spryker can’t change it later once the environment is provisioned. If overlapping is identified, the environment will need to be recreated.
+If you need Site to Site VPN, provide your internal subnet CIDR, so our Spryker VPC doesn't overlap with it. It is crucial to evaluate this option during provisioning, as Spryker can't change it later once the environment is provisioned. If overlapping is identified, the environment will need to be recreated.
 
 {% endinfo_block %}
 

@@ -27,8 +27,8 @@ console propel:install
 console transfer:generate
 ```
 
-4. The `SalesPaymentMethodTypeInstallerPlugin` plugin was removed, please use `PaymentDataImport module` instead. <!-- add Install the Payments feature guide link here. -->
-5. The `PaymentConfig::getSalesPaymentMethodTypes()` config method was removed, please use the `PaymentDataImport` module instead. <!-- add Install the Payments feature guide link here. -->
+4. The `SalesPaymentMethodTypeInstallerPlugin` plugin was removed,  use `PaymentDataImport module` instead. <!-- add Install the Payments feature guide link here. -->
+5. The `PaymentConfig::getSalesPaymentMethodTypes()` config method was removed,  use the `PaymentDataImport` module instead. <!-- add Install the Payments feature guide link here. -->
 
 
 ## Upgrading from version 3.* to version 4.*
@@ -41,32 +41,32 @@ To enable the new version:
 3. Insert new sales payment tables by executing the following queries:
 
 ```sql
-CREATE SEQUENCE “spy_sales_payment_pk_seq”;
-CREATE TABLE “spy_sales_payment”
+CREATE SEQUENCE "spy_sales_payment_pk_seq";
+CREATE TABLE "spy_sales_payment"
 (
-    “id_sales_payment” INTEGER NOT NULL,
-    “fk_sales_order” INTEGER NOT NULL,
-    “fk_sales_payment_method_type” INTEGER NOT NULL,
-    “amount” INTEGER NOT NULL,
-    “created_at” TIMESTAMP,
-    “updated_at” TIMESTAMP,
-    PRIMARY KEY (“id_sales_payment”)
+    "id_sales_payment" INTEGER NOT NULL,
+    "fk_sales_order" INTEGER NOT NULL,
+    "fk_sales_payment_method_type" INTEGER NOT NULL,
+    "amount" INTEGER NOT NULL,
+    "created_at" TIMESTAMP,
+    "updated_at" TIMESTAMP,
+    PRIMARY KEY ("id_sales_payment")
 );
-CREATE SEQUENCE “spy_sales_payment_method_type_pk_seq”;
-CREATE TABLE “spy_sales_payment_method_type”
+CREATE SEQUENCE "spy_sales_payment_method_type_pk_seq";
+CREATE TABLE "spy_sales_payment_method_type"
 (
-    “id_sales_payment_method_type” INTEGER NOT NULL,
-    “payment_provider” VARCHAR NOT NULL,
-    “payment_method” VARCHAR NOT NULL,
-    PRIMARY KEY (“id_sales_payment_method_type”)
+    "id_sales_payment_method_type" INTEGER NOT NULL,
+    "payment_provider" VARCHAR NOT NULL,
+    "payment_method" VARCHAR NOT NULL,
+    PRIMARY KEY ("id_sales_payment_method_type")
 );
-CREATE INDEX “spy_sales_payment_method_type-type” ON “spy_sales_payment_method_type” (“payment_provider”,“payment_method”);
-ALTER TABLE “spy_sales_payment” ADD CONSTRAINT “spy_sales_payment-fk_sales_order”
-    FOREIGN KEY (“fk_sales_order”)
-    REFERENCES “spy_sales_order” (“id_sales_order”);
-ALTER TABLE “spy_sales_payment” ADD CONSTRAINT “spy_sales_payment-fk_sales_payment_method_type”
-    FOREIGN KEY (“fk_sales_payment_method_type”)
-    REFERENCES “spy_sales_payment_method_type” (“id_sales_payment_method_type”);
+CREATE INDEX "spy_sales_payment_method_type-type" ON "spy_sales_payment_method_type" ("payment_provider","payment_method");
+ALTER TABLE "spy_sales_payment" ADD CONSTRAINT "spy_sales_payment-fk_sales_order"
+    FOREIGN KEY ("fk_sales_order")
+    REFERENCES "spy_sales_order" ("id_sales_order");
+ALTER TABLE "spy_sales_payment" ADD CONSTRAINT "spy_sales_payment-fk_sales_payment_method_type"
+    FOREIGN KEY ("fk_sales_payment_method_type")
+    REFERENCES "spy_sales_payment_method_type" ("id_sales_payment_method_type");
 ```
 
 You should now be able to see that the new order saved payment information into the `spy_sales_payment` table.

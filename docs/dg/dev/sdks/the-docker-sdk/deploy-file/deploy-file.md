@@ -1,6 +1,6 @@
 ---
 title: Deploy file
-description: Overview of the deploy file
+description: Learn about the Spryker Deploy yaml file and how it works to deploy your Spryker environment.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 related:
@@ -174,7 +174,7 @@ Deploy files are merged in the following order:
 
 ## Parameter inheritance
 
-When merging deploy files, the deploy file builder skips each duplicate parameter that was present in the previous parsed deploy files. For example, in `deploy.dev.yml`, memory limit is defined as follows:
+When merging deploy files, the deploy file builder skips each duplicate parameter that was present in the previous parsed deploy files. For example, in `deploy.dev.yml`, memory limit's defined as follows:
 
 ```yaml
 image:
@@ -184,7 +184,7 @@ image:
             memory_limit: 2048M
 ```
 
-And, in `./spryker/generator/deploy-file-generator/templates/services.deploy.template.yml`, the memory limit is defined as follows:
+And, in `./spryker/generator/deploy-file-generator/templates/services.deploy.template.yml`, the memory limit's defined as follows:
 
 ```yaml
 image:

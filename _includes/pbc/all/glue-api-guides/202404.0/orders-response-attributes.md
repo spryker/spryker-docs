@@ -3,7 +3,7 @@
 
 | RESOURCE | ATTRIBUTE       | TYPE   | DESCRIPTION  |
 | --------------- | ------ | ---| - |
-| itemStates      | Array  | Statuses of the order’s items in the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
+| itemStates      | Array  | Statuses of the order's items in the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
 | createdAt       | String | Date and time when the order was created.                    |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
 | priceMode       | String | Price mode that was active when placing the order. Possible values:<ul><li>**NET_MODE**—prices before tax.</li><li>**GROSS_MODE**—prices after tax.</li></ul> |
@@ -30,9 +30,9 @@
 | billingAddress.firstName   | String | Customer's first name.                                       |
 | billingAddress.middleName  | String | Customer's middle name.                                      |
 | billingAddress.lastName    | String | Customer's last name.                                        |
-| billingAddress.address1    | String | 1st line of the customer's address.                          |
-| billingAddress.address2    | String | 2nd line of the customer's address.                          |
-| billingAddress.address3    | String | 3rd line of the customer's address.                          |
+| billingAddress.address1    | String | first line of the customer's address.                          |
+| billingAddress.address2    | String | second line of the customer's address.                          |
+| billingAddress.address3    | String | third line of the customer's address.                          |
 | billingAddress.company     | String | Specifies the customer's company.                            |
 | billingAddress.city        | String | Specifies the city.                                          |
 | billingAddress.zipCode     | String | ZIP code.                                                    |
@@ -64,7 +64,7 @@
 | items.taxRate                           | Integer | Current tax rate, in percent.                                |
 | items.unitNetPrice                      | Integer | Single item net price.                                       |
 | items.sumNetPrice                       | Integer | Sum total of net prices for all items.                       |
-| items.unitPrice                         | Integer | Single item price without assuming if it is new or gross. *This price should be displayed everywhere when a product price is displayed. It allows switching tax mode without side effects*. |
+| items.unitPrice                         | Integer | Single item price without assuming if it's new or gross. *This price should be displayed everywhere when a product price is displayed. It allows switching tax mode without side effects*. |
 | items.unitTaxAmountFullAggregation      | Integer | Total tax amount for a given item, with additions.           |
 | items.sumTaxAmountFullAggregation       | Integer | Total tax amount for a given sum of items, with additions.   |
 | items.refundableAmount                  | Integer | Available refundable amount for an item (order only).        |
@@ -104,7 +104,7 @@
 | RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | salesUnit | Object | List of attributes defining the sales unit to be used for item amount calculation. |
-| conversion | integer | Factor to convert a value from sales to base unit. If it is "null", the information is taken from the global conversions. |
+| conversion | integer | Factor to convert a value from sales to base unit. If it's "null", the information is taken from the global conversions. |
 | precision | integer | Ratio between a sales unit and a base unit. |
 | measurementUnit | string | Code of the measurement unit. |
 | name | String | Name of the measurement unit. |

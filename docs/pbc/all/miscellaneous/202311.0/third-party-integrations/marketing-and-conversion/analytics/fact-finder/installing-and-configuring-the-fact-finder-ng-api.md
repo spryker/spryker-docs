@@ -186,7 +186,7 @@ For using search functions, you have to extend SearchClient on the project level
  
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
  
 namespace Pyz\Client\Search\Model\Router;
@@ -230,16 +230,16 @@ class SearchRouter implements SearchRouterInterface
 }
 ```
 
-If you want to use ElasticSearch for specific cases, you have to create a plugin on the project level
+If you want to use Elasticsearch for specific cases, you have to create a plugin on the project level
 
-**ElasticSearchHandlerPlugin**
+**ElasticsearchHandlerPlugin**
 
 ```php
 <?php
  
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
  
 namespace Pyz\Client\Search\Plugin;
@@ -250,7 +250,7 @@ use Spryker\Client\Search\Dependency\Plugin\QueryInterface;
 /**
  * @method \Pyz\Client\Search\SearchFactory getFactory()
  */
-class ElasticSearchHandlerPlugin extends AbstractPlugin
+class ElasticsearchHandlerPlugin extends AbstractPlugin
 {
     /**
      * @param \Spryker\Client\Search\Dependency\Plugin\QueryInterface $searchQuery
@@ -285,12 +285,12 @@ The Fact-Finder Ng module contains plugins for choosing search, suggestion, or n
  
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
  
 namespace Pyz\Client\Search;
  
-use Pyz\Client\Search\Plugin\ElasticSearchHandlerPlugin;
+use Pyz\Client\Search\Plugin\ElasticsearchHandlerPlugin;
 use Spryker\Client\Kernel\Container;
 use Spryker\Client\Search\SearchDependencyProvider as SprykerSearchDependencyProvider;
 use SprykerEco\Client\FactFinderNg\Plugin\FactFinderNgNavigationHandlerPlugin;
@@ -325,7 +325,7 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
             new FactFinderNgNavigationHandlerPlugin(),
             new FactFinderNgSearchHandlerPlugin(),
             new FactFinderNgSuggestHandlerPlugin(),
-            new ElasticSearchHandlerPlugin(),
+            new ElasticsearchHandlerPlugin(),
         ];
     }
  
@@ -368,7 +368,7 @@ Then SearchClient can be adjusted:
  
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
  
 namespace Pyz\Client\Search;
@@ -411,7 +411,7 @@ The idea that you have to adjust places, where the search is called for adding n
  
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
  
 namespace Pyz\Yves\CatalogPage\Controller;
@@ -465,7 +465,7 @@ By default, the Yves layer doesn't care about sort options which suggested by Fa
  
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
  
 namespace Pyz\Client\Catalog;

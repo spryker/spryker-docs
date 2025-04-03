@@ -9,10 +9,12 @@ This document describes how to connect and configure the Stripe app in the Back 
 
 ## Prerequisites
 
-* [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
+* [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
 * Obtain Stripe account details in [Stripe Dashboard](https://dashboard.stripe.com):
-  * Stripe account ID. For more details, see [Stripe account ID](https://stripe.com/docs/payments/account).
-  * Stripe publishable and secret keys. For more details, see [Secret and publishable keys](https://docs.stripe.com/keys#obtain-api-keys).
+  * [Stripe account ID](https://stripe.com/docs/payments/account)
+  * [Stripe publishable and secret keys](https://docs.stripe.com/keys#obtain-api-keys)
+* Enable and configure [Stripe Connect](https://docs.stripe.com/connect) in your account
+  * [Configure and customize Stripe-hosted onboarding flow look and feel](https://docs.stripe.com/connect/hosted-onboarding)
 
 
 ## Connect and configure the Stripe app
@@ -35,6 +37,18 @@ This document describes how to connect and configure the Stripe app in the Back 
 13. Click **Save**.
   This displays a success message with the app's status as **Connected**.
 
+
+## Retain Stripe configuration after a destructive deployment
+
+{% info_block errorBox "" %}
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html) permanently deletes the configuration of the Stripe payment method.
+
+To run a destructive deployment, follow the steps:
+1. Disconnect Stripe.
+2. Run a destructive deployment.
+3. Reconnect Stripe.
+
+{% endinfo_block %}
 
 ## Next steps
 

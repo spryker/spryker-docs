@@ -1,6 +1,6 @@
 ---
 title: Additional logic in dependency provider
-description: Reference information for evaluator tools.
+description: Learn about the additional logic in dependency provider and how it checks the way plugins are registered within your Spryker project.
 template: howto-guide-template
 last_updated: Nov 15, 2023
 redirect_from:
@@ -47,7 +47,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 
 2. `isDevelopment` function call
 
-The usage of `isDevelopment` checks is allowed in order to register the plugins that are needed in development mode only (e.g. profiling, debug, etc.).
+The usage of `isDevelopment` checks is allowed in order to register the plugins that are needed in development mode only, such as profiling or debug.
 
 ```php
 namespace Pyz\Zed\Console;

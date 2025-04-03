@@ -1,6 +1,6 @@
 ---
 title: Modular Frontend
-description: This document provides information on Pages and Widgets, the Pages module and how the Pages module can be extended. Real-life examples included into the document will help you to understand the concept better.
+description: This document provides information on Pages and Widgets, the Pages module and how the Pages module can be extended. Examples will help you to understand the concept better.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/modular-frontend
@@ -9,19 +9,19 @@ redirect_from:
   - /docs/scos/dev/back-end-development/yves/modular-frontend.html
 related:
   - title: Yves overview
-    link: docs/scos/dev/back-end-development/yves/yves.html
+    link: docs/dg/dev/backend-development/yves/yves.html
   - title: Add translations for Yves
-    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+    link: docs/dg/dev/backend-development/yves/adding-translations-for-yves.html
   - title: CLI entry point for Yves
-    link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
+    link: docs/dg/dev/backend-development/yves/cli-entry-point-for-yves.html
   - title: Controllers and actions
-    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+    link: docs/dg/dev/backend-development/yves/controllers-and-actions.html
   - title: Implement URL routing in Yves
-    link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
+    link: docs/dg/dev/backend-development/yves/implement-url-routing-in-yves.html
   - title: Yves bootstrapping
-    link: docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
+    link: docs/dg/dev/backend-development/yves/yves-bootstrapping.html
   - title: Yves routes
-    link: docs/scos/dev/back-end-development/yves/yves-routes.html
+    link: docs/dg/dev/backend-development/yves/yves-routes.html
 ---
 
 This document provides information on [Pages](/docs/dg/dev/backend-development/yves/modular-frontend.html#pages) and [Widgets](/docs/dg/dev/backend-development/yves/modular-frontend.html#widgets), the Pages module and how the Pages module can be extended. Real-life examples included into the document will help you to understand the concept better.
@@ -90,7 +90,7 @@ Before you start using the widget system, make sure to register the following pl
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\EventDispatcher;
@@ -161,7 +161,7 @@ For more information on how to implement a Widget, see the [How to Implement a W
 | `with TWIG_PARAMETERS` | Pass an associative array of variables for the scope of the rendered widget twig blocks.  | This parameter is optional. |
 | `{% raw %}{%{% endraw %} block WIDGET_BLOCK_N {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}` | Twig blocks to overwrite/customize blocks of the twig template to be rendered. `{% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}` can be used to render the original content of a block.  | This tag is optional. |
 | `only` | Optional argument to reduce the context of the template to be rendered to only the provided `TWIG_PARAMETERS`.  | By convention, in Spryker core we always provide this argument to prevent mixing template scopes. |
-| `{% raw %}{%{% endraw %} elsewidget ... {% raw %}%}{% endraw %}` | Optional twig tag to render a widget when the previous widget(s) were not found. Has the same parameters as the base widget tag including `WIDGET_BLOCK_N`.  | Listing multiple `elsewidget` tags will render the first widget that is found. |
+| `{% raw %}{%{% endraw %} elsewidget ... {% raw %}%}{% endraw %}` | Optional twig tag to render a widget when the previous widgets were not found. Has the same parameters as the base widget tag including `WIDGET_BLOCK_N`.  | Listing multiple `elsewidget` tags will render the first widget that is found. |
 | `{% raw %}{%{% endraw %} nowidget {% raw %}%}{% endraw %} WIDGET_FALLBACK` | Optional twig tag to render any content `(WIDGET_FALLBACK)`, when no widget is found by the widget tag. | N/A |
 
 ### findWidget() twig function reference

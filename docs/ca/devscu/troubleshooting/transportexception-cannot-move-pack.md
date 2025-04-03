@@ -1,6 +1,6 @@
 ---
 title: "TransportException: Cannot move pack"
-description: How to solve the problem of cannot move pack while trying to connect the repository to the Spryker Code Upgrader project
+description: Learn how to solve the problem of cannot move pack while trying to connect the repository to the Spryker Code Upgrader project
 template: concept-topic-template
 last_updated: May 8, 2023
 redirect_from:

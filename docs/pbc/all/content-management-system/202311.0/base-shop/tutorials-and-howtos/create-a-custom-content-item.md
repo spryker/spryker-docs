@@ -38,7 +38,7 @@ To create a new content form plugin, follow these steps:
    * `getTypeKey()`—returns a string with the name of your content item—for example, Foo.
    * `getTermKey()`—returns a string displaying the term for this content type in database—for example, `Foo`, `Foo List` or `Foo Query`. In database, a content type can have different term representations. Correspondingly, there are different ways of getting information about content. For example:
      * `Foo List`—product list IDs.
-     * `Foo Query`—product query as part of SQL/ElasticSearch query. This value is displayed in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Content Items**.
+     * `Foo Query`—product query as part of SQL/Elasticsearch query. This value is displayed in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Content Items**.
    * `getForm()`—a form class name with a namespace which is displayed on the **Content create** or **Content edit** pages.
    * `getTransferObject()`—maps form data to a content term transfer object—for example, `ContentFooTermTransfer`.
 
@@ -191,7 +191,7 @@ Optional: You can add the `$templateIdentifier` parameter—for example, `functi
 
 5. In `\Pyz\Yves\Twig\TwigDependencyProvider::getTwigPlugins()`, register your Twig plugin.
 
-Now you can use your plugin as a function in Twig files. If you’ve named your plugin `content_foo`, in a Twig file, the function looks like `{% raw %}{{{% endraw %} content_foo('content-key', 'big-header') {% raw %}}}{% endraw %}`.
+Now you can use your plugin as a function in Twig files. If you've named your plugin `content_foo`, in a Twig file, the function looks like `{% raw %}{{{% endraw %} content_foo('content-key', 'big-header') {% raw %}}}{% endraw %}`.
 
 ## WYSIWYG editor plugin
 

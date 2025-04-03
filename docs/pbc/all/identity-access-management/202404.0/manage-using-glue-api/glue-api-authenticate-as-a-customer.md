@@ -13,7 +13,7 @@ redirect_from:
   - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
 related:
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
+    link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration
@@ -79,7 +79,7 @@ Request sample: authenticate as a customer
 
 {% info_block infoBox "Username" %}
 
-If you are authenticating as a newly created customer, make sure to verify your email address first. If an email address was not confirmed, the endpoint returns the `403 “Failed to authenticate user”` error.
+If you are authenticating as a newly created customer, make sure to verify your email address first. If an email address was not confirmed, the endpoint returns the `403 "Failed to authenticate user"` error.
 
 {% endinfo_block %}
 

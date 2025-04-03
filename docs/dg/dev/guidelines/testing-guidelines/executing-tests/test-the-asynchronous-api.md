@@ -1,6 +1,6 @@
 ---
 title: Test the asynchronous API
-description: How to test the Asynchronous API.
+description: Learn how to test the asynchronous API with this helpful guide for your Spryker based projects.
 template: howto-guide-template
 last_updated: Oct 18, 2023
 redirect_from:
@@ -122,7 +122,7 @@ The file should contain the following section:
         - \Pyz\Zed\HelloWorld\Communication\Plugin\MessageBroker\UserCreatedMessageHandlerPlugin
 ```
 
-Depending on your schema file, you need to add your specific handlers.  All handlers are located in the `src/Pyz/Zed/HelloWorld/Communication/Plugin/MessageBroker` directory. Add the class name of each handler to your Codeception configuration.
+Depending on your schema file, you need to add your specific handlers. All handlers are located in the `src/Pyz/Zed/HelloWorld/Communication/Plugin/MessageBroker` directory. Add the class name of each handler to your Codeception configuration.
 
 ### 4. Update the project configuration
 

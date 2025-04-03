@@ -1,13 +1,13 @@
 ---
 title: Configure data import from an S3 bucket via Flysystem
-description: Learn how to import data via an S3 bucket.  
+description: Set up data imports from an S3 bucket in Spryker using Flysystem, with detailed configuration steps for structured, cloud-based data management.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/configuring-data-import-from-an-s3-bucket.html
 ---
 
-Unlike a local environment, a cloud one cannot hold the data you want to import for any determined amount of time. That’s why you need to store the data in persistent storage, like an S3 bucket, and configure your Spryker environment to access and use the import data there.
+Unlike a local environment, a cloud one cannot hold the data you want to import for any determined amount of time. That's why you need to store the data in persistent storage, like an S3 bucket, and configure your Spryker environment to access and use the import data there.
 
 By default, data import relies on `\Spryker\Zed\DataImport\Business\Model\DataReader\CsvReader\CsvReader`.It works only with the `data/import` folder in the local file system, based on `\SplFileObject`.
 

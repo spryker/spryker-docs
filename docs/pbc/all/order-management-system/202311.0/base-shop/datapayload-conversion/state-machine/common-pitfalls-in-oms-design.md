@@ -185,16 +185,16 @@ The unused state may have a missing transition.
 **Example:** When a recalculation is started by `oms:check-condition`, it triggers a chain of `onEnter` events with more than eight transitions in it.
 ![long-chain-on-enter](https://github.com/xartsiomx/spryker-docs/assets/110463030/2cafb0fe-1388-434e-a783-7838535a69e7)
 
-**Issue:** Long chains of `onEnter` events can be “fragile”. It increases the time of execution, memory consumption, and the risk of having an error in the middle of the process, which results in a stuck order item.
+**Issue:** Long chains of `onEnter` events can be "fragile". It increases the time of execution, memory consumption, and the risk of having an error in the middle of the process, which results in a stuck order item.
 
-**Solution:** Remove unnecessary states and `onEnter` transitions. If you have an event with `onEnter` that doesn’t have any command or condition, consider removing it. Split long chains into several smaller ones. This especially applies to chains that are starting from `check*` commands, like condition and timeout.
+**Solution:** Remove unnecessary states and `onEnter` transitions. If you have an event with `onEnter` that doesn't have any command or condition, consider removing it. Split long chains into several smaller ones. This especially applies to chains that are starting from `check*` commands, like condition and timeout.
 
 ## Slow order creation
 
 **Issue:** Orders start processing directly after placement. The checkout endpoint contains the execution of all `onEnter` transitions in OMS.
 ![slow-order-creation](https://github.com/xartsiomx/spryker-docs/assets/110463030/02892077-3d8d-432e-a6a4-281dcdb9824d)
 
-**Solution:** Configure the checkout endpoint logic to finish after an order is created with all items in starting states—for example, `new`. The transition from the `new` state shouldn’t have an event and is processed by the `oms:check-condition` command.
+**Solution:** Configure the checkout endpoint logic to finish after an order is created with all items in starting states—for example, `new`. The transition from the `new` state shouldn't have an event and is processed by the `oms:check-condition` command.
 
 ## Stuck onEnter
 
@@ -212,7 +212,7 @@ The unused state may have a missing transition.
 **Issue:** During the last transition in the callback from `picking finished` to `ready for recalculation`, a Jenkins job starts the `check-condition` command. Because of the command, the check-condition takes only a part of order items and pushes them forward. The next job executes the remaining order items with a delay, so many commands are triggered twice.
 ![saving-states-2](https://github.com/xartsiomx/spryker-docs/assets/110463030/1fd1b30f-00dc-49eb-8d35-37583e140f5e)
 
-**Solution:** This is possible because, during the execution of `\Spryker\Zed\Oms\Business\OrderStateMachine\OrderStateMachine::saveOrderItems`, the system stores data per item. That's because the core logic expects that there may be more than one order in transition. To avoid blocking all of them due to a potential failed order, transition is executed per item. To change that, group order items per order and change the transaction behavior to store all order items per one transaction. Then, a check-condition or any other command can’t take order items partially.
+**Solution:** This is possible because, during the execution of `\Spryker\Zed\Oms\Business\OrderStateMachine\OrderStateMachine::saveOrderItems`, the system stores data per item. That's because the core logic expects that there may be more than one order in transition. To avoid blocking all of them because of a potential failed order, transition is executed per item. To change that, group order items per order and change the transaction behavior to store all order items per one transaction. Then, a check-condition or any other command can't take order items partially.
 
 ## LockedStateMachine
 
@@ -220,7 +220,7 @@ When multiple processes can push forward an order from one source state, we reco
 
 1. It implements the same interface as a common StateMachine and has locks for all methods except the `check-condition` command.
 
-2. Lock works based on `spy_state_machine_lock` table. Due to the nature of MySQL, you may face deadlocks, which you need to [handle properly](https://dev.mysql.com/doc/refman/8.4/en/innodb-deadlocks-handling.html). Also, the same operation in MySQL takes more time than memory storage, like Redis. By default, locking works on the order item level, but, in most cases, using locks on the order level is more efficient.
+2. Lock works based on `spy_state_machine_lock` table. Because of the nature of MySQL, you may face deadlocks, which you need to [handle properly](https://dev.mysql.com/doc/refman/8.4/en/innodb-deadlocks-handling.html). Also, the same operation in MySQL takes more time than memory storage, like Redis. By default, locking works on the order item level, but, in most cases, using locks on the order level is more efficient.
 
 ## Speed up oms:check-condition: parallel execution and run often than once per minute
 
@@ -235,7 +235,7 @@ When the execution of `check-condition` once per minute isn't enough, you can in
 ](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-management-system-multi-thread.html).
 
 * Create a wrapper console command that runs `check-condition` in a loop. Tips for the wrapper command:
-  * Don’t run subprocesses in parallel because it results in more complexity in logic than profits.
+  * Don't run subprocesses in parallel because it results in more complexity in logic than profits.
   * Run the real command (check-condition) in a subprocess to speed up memory cleanup after the execution.
   * Implement timeouts for subprocesses and the wrapper. To prevent items from being stuck in the `onEnter` transitions, avoid hard limits with the killing process. Instead, analyze the execution time of subprocesses to figure out if you should run a new child process or finish the execution of the wrapper.
 

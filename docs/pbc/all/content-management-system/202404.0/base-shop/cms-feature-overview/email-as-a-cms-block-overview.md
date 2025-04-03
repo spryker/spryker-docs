@@ -38,7 +38,7 @@ A Developer can create more CMS Block email templates.
 
 
 ### Naming of email CMS blocks
-Being a multi-purpose entity, CMS Blocks relies strongly on its naming when used as an email. The CMS Block name defines the email template it is assigned to.
+Being a multi-purpose entity, CMS Blocks relies strongly on its naming when used as an email. The CMS Block name defines the email template it's assigned to.
 
 
 #### Template assignment
@@ -51,7 +51,7 @@ There are two email formats by default: HTML and pure text. The format of the [d
 * `customer-registration--html`
 * `customer-registration--text`
 
-The email format itself is defined on the code level, the tales serving as identifiers. If you create new email templates, you don’t have to add them to their Email CMS Block names.
+The email format itself is defined on the code level, the tales serving as identifiers. If you create new email templates, you don't have to add them to their Email CMS Block names.
 
 
 ### Default email templates
@@ -81,8 +81,8 @@ The following table contains the list of the default email templates, their Emai
 | Order was shipped.                                                                                                      | order-shipped--text                                                                | Oms/src/Spryker/Zed/Oms/Presentation/Mail/order_shipped.text.twig                                                                                                                         |
 | Customer invited a new company user. The invited user receives the email.                                                | company-user-invitation--html                                                      | CompanyUserInvitation/src/Spryker/Zed/CompanyUserInvitation/Presentation/Mail/invitation.html.twig                                                                                        |
 | Customer invited a new company user. The invited user receives the email.                                                | company-user-invitation--text                                                      | CompanyUserInvitation/src/Spryker/Zed/CompanyUserInvitation/Presentation/Mail/invitation.text.twig                                                                                        |
-| Company’s status changed.                                                                                                | company-status--html                                                               | CompanyMailConnector/src/Spryker/Zed/CompanyMailConnector/Presentation/Mail/company_status.html.twig                                                                                      |
-| Company’s status changed.                                                                                                | company-status--text                                                               | CompanyMailConnector/src/Spryker/Zed/CompanyMailConnector/Presentation/Mail/company_status.text.twig                                                                                      |
+| Company's status changed.                                                                                                | company-status--html                                                               | CompanyMailConnector/src/Spryker/Zed/CompanyMailConnector/Presentation/Mail/company_status.html.twig                                                                                      |
+| Company's status changed.                                                                                                | company-status--text                                                               | CompanyMailConnector/src/Spryker/Zed/CompanyMailConnector/Presentation/Mail/company_status.text.twig                                                                                      |
 | Customer subscribed to notifications about product availability.                                                         | availability-notification-subscription--html                                       | AvailabilityNotification/src/Spryker/Zed/AvailabilityNotification/Presentation/Mail/subscribed.html.twig                                                                                  |
 | Customer subscribed to notifications about product availability.                                                         | availability-notification-subscription--text                                       | AvailabilityNotification/src/Spryker/Zed/AvailabilityNotification/Presentation/Mail/subscribed.text.twig                                                                                  |
 | Customer unsubscribed from notifications about product availability.                                                     | availability-notification-unsubscribed--html                                       | AvailabilityNotification/src/Spryker/Zed/AvailabilityNotification/Presentation/Mail/unsubscribed.html.twig                                                                                |
@@ -122,7 +122,7 @@ To learn how a Back Office User creates translations, see [Managing Glossary](/d
 
 ### Variables in Email Templates
 
-Also, you can use variables to adjust details like a customer name in the emails automatically. For example, if you add the `firstName` variable, when the email is sent, the variable is replaced with the first name of the customer it is sent to. Unlike glossary keys, variables are defined on the code level, namely in the transfer object definition.  
+Also, you can use variables to adjust details like a customer name in the emails automatically. For example, if you add the `firstName` variable, when the email is sent, the variable is replaced with the first name of the customer it's sent to. Unlike glossary keys, variables are defined on the code level, namely in the transfer object definition.  
 
 A developer can provide a full list of variables and create new ones.
 

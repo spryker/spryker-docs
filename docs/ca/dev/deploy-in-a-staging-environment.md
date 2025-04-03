@@ -1,6 +1,6 @@
 ---
 title: Deploy in a staging environment
-description: Deploy an application in a staging environment.
+description: Deploy applications in a Spryker staging environment with step-by-step guidance, including version management, pipeline setup, and rollback procedures.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/deploying-in-a-staging-environment
@@ -75,7 +75,7 @@ Enter *latest* if you want to deploy the last built application version. You can
 
 {% info_block infoBox "Deploy types" %}
 
-Normal deploy is a pipeline that includes all the stages of a complete CI/CD flow.  The Install stage of this pipeline does not perform any dangerous data manipulations like database cleanup or scheduler reset. If you want to reset demo data during deployment, select *DESTRUCTIVE_Deploy_Spryker_spryker-staging*.
+Normal deploy is a pipeline that includes all the stages of a complete CI/CD flow. The Install stage of this pipeline does not perform any dangerous data manipulations like database cleanup or scheduler reset. If you want to reset demo data during deployment, select *DESTRUCTIVE_Deploy_Spryker_spryker-staging*.
 
 {% endinfo_block %}
 
@@ -109,7 +109,7 @@ Normal deploy is a pipeline that includes all the stages of a complete CI/CD flo
 
 ![release change](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+staging+environment/release-change-staging.png)
 
-If the deployment is successful, the */spryker-staging/lastdeployedversion* parameter in the [Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters) is updated with the application version you’ve deployed.
+If the deployment is successful, the */spryker-staging/lastdeployedversion* parameter in the [Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters) is updated with the application version you've deployed.
 
 
 ## Check the deployed application version

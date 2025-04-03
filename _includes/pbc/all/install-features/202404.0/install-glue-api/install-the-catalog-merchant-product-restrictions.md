@@ -15,7 +15,7 @@ Run the following command to install the required modules:
 composer require spryker/merchant-relationship-product-lists-rest-api:"^0.1.0" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 
@@ -27,13 +27,13 @@ Make sure the following modules have been installed:
 
 ### 2) Set up transfer objects
 
-Run the following command to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have occurred in transfer objects:
 

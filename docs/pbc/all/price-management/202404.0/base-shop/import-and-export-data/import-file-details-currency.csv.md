@@ -37,7 +37,7 @@ data:import:currency
 
 ## Additional information
 
-It is recommended to fill all three columns, when adding a new record, except if the “currency” being added is not an ISO standard currency (for example, system of points, or product/service exchange, etc.).
+It is recommended to fill all three columns, when adding a new record, except if the "currency" being added is not an ISO standard currency (for example, system of points, or product/service exchange, etc.).
 
 Default currency might be set up when setting up the store. Check [here](https://github.com/spryker-shop/b2c-demo-shop/blob/master/config/Shared/stores.php#L38).
 

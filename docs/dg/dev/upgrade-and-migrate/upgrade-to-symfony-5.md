@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/technical-enhancements/symfony-5-integration.html
 ---
 
-Spryker supports Symfony 5 that was released in November 2019. We tried to keep BC for all three major versions of Symfony, but due to some changes in version 5, we had to partially drop support for Symfony 3.
+Spryker supports Symfony 5 that was released in November 2019. We tried to keep BC for all three major versions of Symfony, but because of some changes in version 5, we had to partially drop support for Symfony 3.
 
 {% info_block warningBox "Avoid old Symfony versions" %}
 
@@ -24,7 +24,7 @@ Although Spryker still supports older versions of Symfony, avoid installing them
 
 Most of the changes in Symfony 5 are related to changes in `symfony/http-kernel` and the `symfony/translation` components. In version 4 of the `symfony/http-kernel` component, new event classes were introduced, some were deprecated, and the event classes are final in version 5. Thus, we had to use the new final event classes and refactor some modules that use the old event classes.
 
-In version 5 of the `symfony/translation` component, some interfaces were extracted into the `symfony/translation-contracts` component. Due to this, we had to refactor some modules that used those interfaces.
+In version 5 of the `symfony/translation` component, some interfaces were extracted into the `symfony/translation-contracts` component. Because of this, we had to refactor some modules that used those interfaces.
 
 ## Upgrade Symfony to version 5
 
@@ -34,7 +34,7 @@ To make your project compatible with Symfony 5, update the [Symfony](https://git
 composer require spryker/symfony:"^3.5.0"
 ```
 
-If you can’t install the required version, run the following command to see what else you need to update:
+If you can't install the required version, run the following command to see what else you need to update:
 
 ```bash
 composer why-not spryker/symfony:3.5.0

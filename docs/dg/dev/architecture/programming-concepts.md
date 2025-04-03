@@ -1,6 +1,6 @@
 ---
 title: Programming concepts
-description: This dociment explains the main software and coding concepts used in Spryker.
+description: This document explains the main software and coding concepts used in Spryker.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/programming-concepts
@@ -16,6 +16,8 @@ related:
     link: docs/dg/dev/architecture/modules-and-application-layers.html
   - title: Code buckets
     link: docs/dg/dev/architecture/code-buckets.html
+  - title: Strategy resolvers
+    link: docs/dg/dev/miscellaneous-guides/strategy-resolvers.html
 ---
 
 Having covered the main architectural concepts of the Spryker Commerce OS, frontend, modularity, and the application and software layers, this document dives deeper into these approaches and explains the main software and coding concepts in Spryker. There are seven main software concepts in Spryker.
@@ -24,7 +26,7 @@ Having covered the main architectural concepts of the Spryker Commerce OS, front
 
 Spryker *Facades* use the [Facade design pattern](https://en.wikipedia.org/wiki/Facade_pattern). They hide all the business logic of a module behind them and give a very simple and straightforward interface. Thus, the main API of a module is its Facade. When you want to find out what a module does, simply check its Facade interface.
 
-Spryker's Facades work as delegators, so they do not have any business logic in them. They delegate to the right model in order to handle the needed business logic. There is only one Facade for each module, and it is located in the Business layer.
+Spryker's Facades work as delegators, so they do not have any business logic in them. They delegate to the right model in order to handle the needed business logic. There is only one Facade for each module, and it's located in the Business layer.
 
 ## Factory
 
@@ -32,7 +34,7 @@ Spryker *Factories* follow the [Factory method pattern](https://en.wikipedia.org
 
 To isolate objects between the software layers in Spryker, every software layer in a module has its own Factory. The only exception is that the Presentation layer does not have objects, only templates. So, there are Persistence Factories, Business Factories, and Communication Factories.
 
-Glue, Client, and Service application layers have their own Factories as well. Yves can have a Factory when needed. However, it is not enforced by the Spryker architecture as, in many cases, it is not needed for the frontend presentation logic.
+Glue, Client, and Service application layers have their own Factories as well. Yves can have a Factory when needed. However, it's not enforced by the Spryker architecture as, in many cases, it's not needed for the frontend presentation logic.
 
 ## Query Container
 
@@ -48,7 +50,7 @@ The Client is not needed for every module: some modules have it, and some do not
 
 In Spryker, a *Plugin* extends certain functionality in a module, like a Calculation stack when placing an order. The Calculation module is an abstract idea and should not depend on other modules to calculate the final price. Thus, it exposes an interface with the needed method to be implemented by other modules. When there is another module involved in calculating the final price, it implements this interface and does the calculation internally. This implementation is called Plugin. This Plugin, along with others, can then be injected into the Calculation module. In the end, the Calculation module calculates the final price by running the exposed method from all the injected Plugins.
 
-Plugins are used in many different places in Spryker. It is a great way to extend functionality and properly manage the modularity and dependencies. A module can implement many different Plugins and can have many different plugins injected into it. Plugins are located inside the Communication layer.
+Plugins are used in many different places in Spryker. They're a great way to extend functionality and manage the modularity and dependencies. A module can implement many different plugins and have many different plugins injected into it. Plugins are located inside the Communication layer. In case of widely overarching functionality where multiple contexts appear, consider using [strategy resolvers](/docs/dg/dev/miscellaneous-guides/strategy-resolvers.html) in combination with plugins.
 
 ## Dependency provider
 
@@ -64,7 +66,7 @@ To manage data transfer between the frontend and the Commerce OS applications an
 
 Transfer Objects are defined as XML files. Every module can define its own Transfer Objects or extend Transfer Objects from other modules when a dependency to that data is needed. The XML files are merged and transformed into auto-generated PHP objects.
 
-Transfer Objects are a great way to represent data contracts between the Commerce OS and frontend applications. It also represents data contracts between different modules. When any data is needed from a module, it is clear what structure the data has and how to properly use it.
+Transfer Objects are a great way to represent data contracts between the Commerce OS and frontend applications. It also represents data contracts between different modules. When any data is needed from a module, it's clear what structure the data has and how to properly use it.
 
 As both the Commerce OS and the frontend application need to know about the structure of the Transfer Objects, they are located on the Shared application layer. Every module can have one or more Transfer Objects.
 

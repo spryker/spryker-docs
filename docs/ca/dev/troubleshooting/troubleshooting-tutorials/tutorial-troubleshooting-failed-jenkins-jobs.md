@@ -1,6 +1,6 @@
 ---
 title: Tutorial — Troubleshooting failed Jenkins jobs
-description: Learn how to troubleshoot Jenkins jobs issues
+description: Troubleshoot failed Jenkins jobs in Spryker by checking console output, RabbitMQ status, and queue errors to resolve issues impacting job execution.
 template: troubleshooting-guide-template
 last_updated: Oct 6, 2023
 redirect_from:

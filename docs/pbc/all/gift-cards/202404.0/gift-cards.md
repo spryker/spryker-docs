@@ -15,7 +15,7 @@ redirect_from:
 
 The _Gift Cards_ capability lets you create a special product type with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout.
 
-A gift card is a prepaid certificate which lets its owner purchase products for the gift card’s value.
+A gift card is a prepaid certificate which lets its owner purchase products for the gift card's value.
 
 When paying for orders with a gift card, the gift cards are considered as an additional payment method. You can use either their full balance, or part of the total gift card's value. In the latter case, the remaining value is stored as a leftover balance on the original code. You can also use additional gift cards to pay for products. However, gift cards can only be applied for products in the same currency they have been bought with.
 
@@ -25,11 +25,11 @@ Gift cards are sensitive data and can be used to pay orders. Keep in mind that t
 
 {% endinfo_block %}
 
-Gift cards follow the same rules as any product, and are bought as products. They can even be bundled. However, they are purely virtual and do not require shipping. A gift card can be applied as a voucher and redeemed to pay an order. Gift cards have two traits: a product traits and a voucher (+payment method) traits. When a gift card is bought, it is treated like a product. When it is applied, it’s a *voucher* that can be used as a payment method.
+Gift cards follow the same rules as any product, and are bought as products. They can even be bundled. However, they are purely virtual and do not require shipping. A gift card can be applied as a voucher and redeemed to pay an order. Gift cards have two traits: a product traits and a voucher (+payment method) traits. When a gift card is bought, it's treated like a product. When it's applied, it's a *voucher* that can be used as a payment method.
 
 Gift cards have variants just like abstract products. For example, a New Year Gift Card can have all the different values—50 Euro and 100 Euro. In this case, the New Year Gift Card would be handled like an abstract product, and 50 Euro and 100 Euro gift cards would be its variants.
 
-When a customer adds a gift card to the cart, they can change a variant and quantity and remove it from the cart, just like any abstract product. However, no discounts are applied to gift card products since the price paid for the gift card must equal the value of the gift card. Even though technically you can have different amounts for a gift card’s price and value (say, the gift card price is 100 Euro, however, the gift card value is 150 Euro), you need to consult your local legislation to make sure it would be legal in your country.
+When a customer adds a gift card to the cart, they can change a variant and quantity and remove it from the cart, just like any abstract product. However, no discounts are applied to gift card products since the price paid for the gift card must equal the value of the gift card. Even though technically you can have different amounts for a gift card's price and value (say, the gift card price is 100 Euro, however, the gift card value is 150 Euro), you need to consult your local legislation to make sure it would be legal in your country.
 ![Gift cards](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gift_card.png)
 
 You can't pay a gift card by using another gift card, even if the order contains other products with the gift card. The range of payment methods that can be used to pay for gift cards can also be limited, by filtering payment methods out for the gift card. Payment methods available for gift cards can be specified in the configuration file. By default, the invoice payment method is not available for a gift card, to avoid fraud.
@@ -41,7 +41,7 @@ Once the gift card code has been generated, it becomes a voucher that can be use
 The following diagram shows the gift card product-voucher transition workflow:
 ![Gift card product-voucher transition workflow schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/GC+product-voucher+transition.png)
 
-When buying a gift card, the shipment method selection step is skipped on Yves. In the background, there is a “noshipment” constant in the app configuration, which can be selected to configure shipment for a specific type of product. In this case, this product is a gift card.
+When buying a gift card, the shipment method selection step is skipped on Yves. In the background, there is a "noshipment" constant in the app configuration, which can be selected to configure shipment for a specific type of product. In this case, this product is a gift card.
 
 
 When a customer buys a gift card, you can use the default OMS states for the GiftCardSubprocess to be displayed on the Storefront, or set custom state names so they would make more sense for the Storefront users. For details about how to set the custom state names on the Storefront for refunded orders, see [HowTo: Display custom names for order item states on the Storefront](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/display-custom-names-for-order-item-states-on-the-storefront.html).
@@ -50,7 +50,7 @@ When a customer buys a gift card, you can use the default OMS states for the Gif
 
 With a gift card code in place, users get an alternative payment method to pay for their orders. The payment workflow with the gift card is as follows:
 1. A user adds products to the cart and assumes that they have discounts for the products while also applying a voucher.
-2. The *Order subtotal* is calculated: General products’ prices without discounts.
+2. The *Order subtotal* is calculated: General products' prices without discounts.
 3. The *Order grand total* is calculated: Price including discounts, vouchers, and taxes.
 4. The *gift card* is applied: Grand total minus the gift card's value. If the order value is lower or equals the gift card value, the checkout workflow stops here, as the gift card is used to fully pay the order.
 5. If the order value is higher than the value of the applied gift, a price to pay is calculated: the remaining sum to be paid using an additional payment method.
@@ -76,11 +76,11 @@ The main advantage of this strategy is that the same gift card code cannot be us
 
 ### Balance strategy
 
-In the case of the Balance strategy, the gift card's purchase history and its balance information are checked. If after paying an order a gift card has any remaining balance, then in contrast to the Replacement strategy, the user does not get a new gift card code with the new gift card value, but the old gift card code is used instead. The remaining gift card value is calculated by the following formula: `Gift Card Value - Value of all orders where it is used`.
+In the case of the Balance strategy, the gift card's purchase history and its balance information are checked. If after paying an order a gift card has any remaining balance, then in contrast to the Replacement strategy, the user does not get a new gift card code with the new gift card value, but the old gift card code is used instead. The remaining gift card value is calculated by the following formula: `Gift Card Value - Value of all orders where it's used`.
 
 With this strategy, a Back Office user will see gift card balance information such as the date when the gift card was used, the customer who used it, the gift card's code, and its spent value.
 
-Even though the Balance strategy is a bit more complicated than Replacement, it provides the shop owner with detailed information about the gift card as well as the purchase history. From the customer’s perspective, this strategy might be a better option if a gift card is used by one person, and it does not make sense to send emails with new codes every time a gift card was used.
+Even though the Balance strategy is a bit more complicated than Replacement, it provides the shop owner with detailed information about the gift card as well as the purchase history. From the customer's perspective, this strategy might be a better option if a gift card is used by one person, and it does not make sense to send emails with new codes every time a gift card was used.
 
 
 ## Related Developer documents

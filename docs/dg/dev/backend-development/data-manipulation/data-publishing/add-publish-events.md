@@ -1,6 +1,6 @@
 ---
 title: Add publish events
-description: Learn how to add publish events for Publish and Synchronization.
+description: Add custom publish events in Spryker to automate data updates efficiently. Learn best practices for backend data manipulation in Spryker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/adding-publish-events
@@ -173,4 +173,35 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-Now, you can track the changes in the `Glossary` entity. When it is created, updated, or deleted, an event is created and posted to the specified RabbitMQ publish queue (`publish.translation`).
+5. If you need original values or an additional data set in `EventEntityTransfer`, provide the configuration in the Entity class. `getOriginalValueColumnNames` is called only on a save event.
+```php
+<?php
+
+...
+
+namespace Orm\Zed\Glossary\Persistence;
+
+use Orm\Zed\Glossary\Persistence\Map\SpyGlossaryTableMap;
+use Spryker\Zed\Glossary\Persistence\Propel\AbstractSpyGlossary as BaseSpyGlossary;
+
+class SpyGlossary extends BaseSpyGlossary
+{
+    protected function getAdditionalValueColumnNames(): array
+    {
+        return [
+            SpyGlossaryTableMap::COL_IS_ACTIVE,
+            ...
+        ];
+    }
+
+    protected function getOriginalValueColumnNames(): array
+    {
+        return [
+            SpyGlossaryTableMap::COL_SOME_COLUMN,
+            ...
+        ];
+    }
+}
+```
+
+Now, you can track the changes in the `Glossary` entity. When it's created, updated, or deleted, an event is created and posted to the specified RabbitMQ publish queue (`publish.translation`).

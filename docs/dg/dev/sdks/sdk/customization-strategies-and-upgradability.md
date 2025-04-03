@@ -31,11 +31,11 @@ In terms of upgradability, we'll look at the following customization strategies:
 
 ### Module configuration customization
 
-Module configuration is one of the Public APIs.  This means that Spryker makes sure to keep both the environment and module configuration stable in the patch and minor releases.
+Module configuration is one of the Public APIs. This means that Spryker makes sure to keep both the environment and module configuration stable in the patch and minor releases.
 
 ### Plug and Play customization
 
-Plug and Play is Spryker’s out-of-the-box development strategy that allows customers to extend a project with various built-in plugins. In case there’s no plugin, it is recommended to create a feature request or create a custom plugin and wire it up in the DependencyProvider, or via configuration.
+Plug and Play is Spryker's out-of-the-box development strategy that allows customers to extend a project with various built-in plugins. In case there's no plugin, it's recommended to create a feature request or create a custom plugin and wire it up in the DependencyProvider, or via configuration.
 
 Check out our [Plugins](/docs/dg/dev/backend-development/plugins/plugins.html) article to get more information.
 
@@ -84,7 +84,7 @@ This section explains how different project customizations affect upgradability 
     </tbody>
 </table>
 
-➕ Customization doesn’t affect the upgradability process.
+➕ Customization doesn't affect the upgradability process.
 
 ⚠️ Customization may affect the upgradability process, cause some issues, and sometimes requires review.
 
@@ -131,11 +131,11 @@ We managed to adjust the chunk size according to our needs and everything works 
 
 Assuming this customization is compatible with the version of Spryker being used, we can integrate new releases of the Catalog module without any additional effort.
 
-Let’s see how this affects our upgrade process.
+Let's see how this affects our upgrade process.
 
 #### Patch releases
 
-Patch releases, such as for example 1.2.1 to 1.2.2, will not affect the `DEFAULT_CATEGORY_READ_CHUNK` value or usage so it is safe to automatically update to patches even if the project has modified the constant value to suit its needs.
+Patch releases, such as for example 1.2.1 to 1.2.2, will not affect the `DEFAULT_CATEGORY_READ_CHUNK` value or usage so it's safe to automatically update to patches even if the project has modified the constant value to suit its needs.
 
 #### Minor release
 
@@ -151,9 +151,9 @@ In general, it's important for you to be aware of any changes to module configur
 
 ### Plug and Play customization and how it affects upgradability
 
-Let’s check this with the `DiscountCalculationConnector` module example and its releases.
+Let's check this with the `DiscountCalculationConnector` module example and its releases.
 
-The `Calculation` module provides an extension point via `CalculationDependencyProvider`, so you can create your own plugins that implement `CalculationPluginInterface` and add it to the plugin stack in the `CalculationDependencyProvider::getOrderCalculatorPluginStack()`. Let’s imagine you added your own plugins in the following way:
+The `Calculation` module provides an extension point via `CalculationDependencyProvider`, so you can create your own plugins that implement `CalculationPluginInterface` and add it to the plugin stack in the `CalculationDependencyProvider::getOrderCalculatorPluginStack()`. Let's imagine you added your own plugins in the following way:
 
 ```php
 /**
@@ -170,13 +170,13 @@ protected function getOrderCalculatorPluginStack(): array
 }
 ```
 
-In this particular example, the order does matter. Tax can’t be calculated before final price calculation.
+In this particular example, the order does matter. Tax can't be calculated before final price calculation.
 
-Now let’s check how this affects upgradability.
+Now let's check how this affects upgradability.
 
 #### Patch release
 
-The 1.0.0 to 1.0.1 version release of the `DiscountCalculationConnector` module provides nothing beyond a typo fix in the `DiscountCalculator` business model used by the `DiscountCalculatorPlugin`. This change does not affect the plugin external API, which in turn means it doesn’t affect upgradability.
+The 1.0.0 to 1.0.1 version release of the `DiscountCalculationConnector` module provides nothing beyond a typo fix in the `DiscountCalculator` business model used by the `DiscountCalculatorPlugin`. This change does not affect the plugin external API, which in turn means it doesn't affect upgradability.
 
 #### Minor release
 
@@ -196,7 +196,7 @@ protected function getOrderCalculatorPluginStack(): array
 }
 ```
 
-As a result, the refunded amount will be higher than the amount that the client paid for the order because the plugin doesn’t take into account the discount. The project still works, and nothing fails but the business logic is changed leading to incorrect calculations during the checkout. Because of this, automatically applied minor release changes need review and QA before going to production.
+As a result, the refunded amount will be higher than the amount that the client paid for the order because the plugin doesn't take into account the discount. The project still works, and nothing fails but the business logic is changed leading to incorrect calculations during the checkout. Because of this, automatically applied minor release changes need review and QA before going to production.
 
 Another case we can look at is when a project has previously customized the whole discount calculation process by unwiring the old plugin and introducing the new custom one to replace it:
 
@@ -212,7 +212,7 @@ protected function getOrderCalculatorPluginStack(): array
 }
 ```
 
-In this case, the automatic update to the `DiscountCalculationConnector` module version 1.1.0 will introduce an additional plugin for discount calculation while not removing the custom project’s plugin. This means that a project developer (or anyone else who reviews the upgrader pull requests) needs to keep an eye open for this new plugin and remove it when it’s added:
+In this case, the automatic update to the `DiscountCalculationConnector` module version 1.1.0 will introduce an additional plugin for discount calculation while not removing the custom project's plugin. This means that a project developer (or anyone else who reviews the upgrader pull requests) needs to keep an eye open for this new plugin and remove it when it's added:
 
 ```php
 protected function getOrderCalculatorPluginStack(): array
@@ -245,7 +245,7 @@ protected function getOrderCalculatorPluginStack(): array
 
 In the major version 2.0.0, the previously deprecated `DiscountCalculatorPlugin` is removed and a new plugin `DiscountAmountCalculatorPlugin` is added to replace it. The upgrader tool will update `DiscountCalculationConnector` package to the latest version and will try to update the plugin stack in the project.
 
-Let’s say the project has modified the original plugin’s behaviour by extending the `DiscountCalculatorPlugin` on the project level and wiring it instead.
+Let's say the project has modified the original plugin's behaviour by extending the `DiscountCalculatorPlugin` on the project level and wiring it instead.
 
 ```php
 protected function getOrderCalculatorPluginStack(): array
@@ -276,14 +276,14 @@ protected function getOrderCalculatorPluginStack(): array
 In the example above, the following issues may appear:
 
 - If `CustomDiscountAmountCalculatorPlugin` extends core `DiscountCalculatorPlugin` which does not exist anymore, the code will fail.
-- The `DiscountAmountCalculatorPlugin` was added to the end because the Upgrader couldn’t find the removed plugin in the stack and didn’t replace it.
+- The `DiscountAmountCalculatorPlugin` was added to the end because the Upgrader couldn't find the removed plugin in the stack and didn't replace it.
 - The discount is calculated two times.
 
 As a result, `getOrderCalculatorPluginStack` must be adjusted manually in order to fix the issues that came up.
 
 ### Private API customization and how it affects upgradability
 
-Let’s check this scenario with the `Acme` module example and its releases.
+Let's check this scenario with the `Acme` module example and its releases.
 
 A core module named `Acme` is provided as a `spryker/acme` package with version 1.0.0. For instance, it contains `AcmeReader`.
 
@@ -303,7 +303,7 @@ class AcmeReader implements AcmeReaderInterface
 }
 ```
 
-And let’s say for some reason, the customer wants to customize `AcmeReader`, or example,  by adding extra logic execution.
+And let's say for some reason, the customer wants to customize `AcmeReader`, or example,  by adding extra logic execution.
 
 ```php
 class AcmeReader extends SprykerAcmeReader
@@ -329,7 +329,7 @@ class AcmeReader extends SprykerAcmeReader
 }
 ```
 
-Now, let’s imagine Spryker released new versions of the `spryker/acme` package.
+Now, let's imagine Spryker released new versions of the `spryker/acme` package.
 
 #### Patch release
 
@@ -345,7 +345,7 @@ is changed to this
 return $this->acmeExpander->expand($acmeTransfer);
 ```
 
-As you can see, this doesn’t affect custom code and everything works fine.
+As you can see, this doesn't affect custom code and everything works fine.
 
 #### Minor release
 
@@ -367,6 +367,6 @@ public function readAcme(AcmeCriteriaTransfer $acmeCriteriaTransfer): AcmeTransf
 
 This does not break any customized logic. The project code continues to work just fine using the deprecated external facade method, and it might only miss some performance improvements potentially brought by the new method.
 
-#### Major release (e.g., 1.0.0 to 2.0.0)
+#### Major release
 
-In the major version  release 1.0.0 to 2.0.0, the deprecated method `FooFacade::findFooByAcme(int $id)` is completely removed. The upgrader tool will update the `spryker/acme` and `spryker/foo` packages to the latest version. Because of this, the project's code now throws an `Error` exception and breaks the application because the old method does not exist anymore. This means you need to manually fix this issue.
+In the major version release–for example, 1.0.0 to 2.0.0–the deprecated method `FooFacade::findFooByAcme(int $id)` is completely removed. The upgrader tool will update the `spryker/acme` and `spryker/foo` packages to the latest version. Because of this, the project's code now throws an `Error` exception and breaks the application because the old method does not exist anymore. This means you need to manually fix this issue.

@@ -186,7 +186,7 @@ For using search functions, you have to extend SearchClient on the project level
  
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
  
 namespace Pyz\Client\Search\Model\Router;
@@ -230,7 +230,7 @@ class SearchRouter implements SearchRouterInterface
 }
 ```
 
-If you want to use ElasticSearch for specific cases, you have to create a plugin on the project level
+If you want to use Elasticsearch for specific cases, you have to create a plugin on the project level
 
 **ElasticSearchHandlerPlugin**
 
@@ -239,7 +239,7 @@ If you want to use ElasticSearch for specific cases, you have to create a plugin
  
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
  
 namespace Pyz\Client\Search\Plugin;
@@ -285,7 +285,7 @@ The Fact-Finder Ng module contains plugins for choosing search, suggestion, or n
  
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
  
 namespace Pyz\Client\Search;
@@ -368,7 +368,7 @@ Then SearchClient can be adjusted:
  
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
  
 namespace Pyz\Client\Search;
@@ -411,7 +411,7 @@ The idea that you have to adjust places, where the search is called for adding n
  
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
  
 namespace Pyz\Yves\CatalogPage\Controller;
@@ -465,7 +465,7 @@ By default, the Yves layer doesn't care about sort options which suggested by Fa
  
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
  
 namespace Pyz\Client\Catalog;

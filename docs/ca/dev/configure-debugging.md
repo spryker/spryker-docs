@@ -1,6 +1,6 @@
 ---
 title: Configure debugging
-description: Enable extended logs for an application to debug it.
+description: Configure debugging in Spryker by enabling extended logs and setting up environment-specific parameters for efficient troubleshooting
 template: howto-guide-template
 last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/debugging
@@ -40,7 +40,7 @@ $config[LogConstants::LOG_LEVEL] = getenv('SPRYKER_DEBUG_ENABLED') ? Logger::INF
     * [Deploy in the production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
     * [Deploy in the staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
 
-Extended logs are enabled and you can check them in the AWS Management Console. See [Working with logs](/docs/ca/dev/working-with-logs.html) for more details.
+Extended logs are enabled and you can check them in the AWS Management Console. See [Working with logs](/docs/ca/dev/monitoring/working-with-logs.html) for more details.
 
 ## Next step
-[Working with logs](/docs/ca/dev/working-with-logs.html)
+[Working with logs](/docs/ca/dev/monitoring/working-with-logs.html)

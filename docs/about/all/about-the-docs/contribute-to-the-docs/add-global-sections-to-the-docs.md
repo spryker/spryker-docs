@@ -1,6 +1,6 @@
 ---
 title: Add global sections to the docs
-description: Learn how to add a new global section to Spryker docs.
+description: Want to contribute but need a new section to add your articles to? Learn how to add global sections to Spryker Documentation.
 last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:
@@ -207,7 +207,7 @@ jobs:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-check_acp_dev-htmlproofer
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
 
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
@@ -235,7 +235,7 @@ jobs:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-check_acp_user-htmlproofer
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
 
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz

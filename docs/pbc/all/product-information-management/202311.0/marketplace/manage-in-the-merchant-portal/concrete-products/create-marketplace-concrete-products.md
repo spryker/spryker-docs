@@ -43,11 +43,11 @@ To add a concrete product to the existing abstract product:
 
   {% endinfo_block %}
 
-Once the product is created, it needs to be [activated](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products.html#activating-and-deactivating-a-concrete-product). Only the active marketplace products are displayed on the Marketplace Storefront.
+Once the product is created, it needs to be [activated](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html). Only the active marketplace products are displayed on the Marketplace Storefront.
 
 ### Reference information: Create Concrete Products for [Abstract product name SKU]
 
-This page contains a drop-down menu that displays super attribute values based on a super attribute selected while [creating a marketplace abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html). When you select a product attribute value, a concrete product based on this value is displayed. In the **Concrete Products’ Preview** pane, you can view the products to be created.
+This page contains a drop-down menu that displays super attribute values based on a super attribute selected while [creating a marketplace abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html). When you select a product attribute value, a concrete product based on this value is displayed. In the **Concrete Products' Preview** pane, you can view the products to be created.
 
 By selecting **Autogenerate SKUs**, the SKU numbers for the concrete products are generated automatically, based on the SKU prefix of their abstract product.
 
@@ -56,4 +56,4 @@ By selecting **Same Name as Abstract Product**, the name of the abstract product
 
 ## Next steps
 
-[Manage concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products.html)
+[Manage concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html)

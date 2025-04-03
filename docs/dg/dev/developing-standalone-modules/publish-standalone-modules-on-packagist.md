@@ -1,6 +1,6 @@
 ---
 title: Publish standalone modules on Packagist
-description: Learn how to publish a module on Packagist for distribution
+description: Learn how to publish a module on Packagist for distribution within your Spryker Cloud Commerce OS Project.
 last_updated: Jun 7, 2024
 template: howto-guide-template
 
@@ -37,7 +37,7 @@ You'll be prompted to fill out details like the following:
 ## Add the package metadata
 
 
-Add the package metadata to `composer.json`. Here’s an example of what it might look like:
+Add the package metadata to `composer.json`. Here's an example of what it might look like:
 
 
 {% info_block infoBox %}
@@ -57,7 +57,7 @@ Make sure all the module dependencies are listed in the `require` section.
         }
     ],
     "require": {
-        "php": ">=8.1"
+        "php": ">=8.2"
     },
     "autoload": {
         "psr-4": {

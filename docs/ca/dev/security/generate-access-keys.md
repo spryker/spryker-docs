@@ -1,6 +1,6 @@
 ---
 title: Generate access keys
-description: Learn how to generate access keys for your AWS account.
+description: Learn how to generate access keys in the AWS Management Console for Spryker Cloud Commerce OS, enabling AWS CLI access and development environment integration.
 template: howto-guide-template
 last_updated: Jan 19, 2024
 originalLink: https://cloud.spryker.com/docs/generating-access-keys

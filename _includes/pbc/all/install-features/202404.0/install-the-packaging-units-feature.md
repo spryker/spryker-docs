@@ -934,13 +934,13 @@ Add an item with packaging units to cart and check if the following statements a
 * A packaging unit can be found for an item.
 * The `amount`, `amountSalesUnit`, `amountLeadProduct` and `ProductPackagingUnit` fields in the `ItemTransfer` properties get fully populated.
 * The amount restriction works as expected.
-* Availability is validated respectfully according to your lead product's and packaging unit's configuration.
+* Availability is validated respectfully according to your lead product's and packaging unit is configuration.
 * Item grouping in the cart works as expected.
 * Variable amount changes affect unit prices in the `ItemTransfer` properties.
 * The quantity and amount are merged correctly when the group key matches.
 
 Go through the checkout workflow, make an order and check if the following statements are true:
-* Check if the stock is modified respectfully according to your lead product's and packaging unit's configuration.
+* Check if the stock is modified respectfully according to your lead product's and packaging unit is configuration.
 * Check if the following fields in the `spy_sales_order_item` table are saved:
   * `amount`
   * `amount_sku`
@@ -955,7 +955,7 @@ Go to the Zed UI Sales overview, check the order, and verify the following:
 - The correct amount is displayed per sales order item.
 
 Make sure the following:
-* Abstract products that have packaging units available don’t have `add_to_cart_sku` field in the Elasticsearch document.
+* Abstract products that have packaging units available don't have `add_to_cart_sku` field in the Elasticsearch document.
 * Every order item from `SalesFacade::getOrderItems()` results contains packaging units data: `ItemTransfer.amountLeadProduct` and `ItemTransfer.amountSalesUnit` are set for the order items that have packaging units.
 * The results of picking lists from `PickingListFacade::getPickingListCollection()` contain packaging units data: `PickingListCollectionTransfer.pickingList.pickingListItem.orderItem.amountSalesUnit` are set for the order items that have packaging units.
 

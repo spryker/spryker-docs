@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202204.0/order-management-feature-overview/order-cancellation-overview.html
 ---
 
-Order cancellation makes the shopping experience of B2B and B2C shoppers more flexible by allowing them to cancel their orders within a defined time period. Also, it optimizes the workflow of sales and customer service by allowing them to cancel orders on customers’ behalf in the Back Office.
+Order cancellation makes the shopping experience of B2B and B2C shoppers more flexible by allowing them to cancel their orders within a defined time period. Also, it optimizes the workflow of sales and customer service by allowing them to cancel orders on customers' behalf in the Back Office.
 
 For example, a customer changes their mind about an item in an order they have placed. Instead of contacting customer service, they can cancel the order and place a new one with the needed items.
 
@@ -58,7 +58,12 @@ To learn how a Back Office user can skip timeout or cancel an order by changing 
 ## Order cancellation on the Storefront
 This is how the Order Cancellation feature works on the Spryker Demo Shop Storefront:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/order-cancellation-overview.md/shop-guide-cancelling-orders.mp4)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/order-cancellation-overview.md/shop-guide-cancelling-orders.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 ## Related Business User documents
 

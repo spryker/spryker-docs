@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-customers/managing-customers.html
 related:
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
+    link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration
@@ -36,7 +36,7 @@ The Customer API allows creating customers and manage their account data. This i
 
 In your development, these resources can help you:
 
-* Retrieve relevant customer information. for any page where it is needed.
+* Retrieve relevant customer information. for any page where it's needed.
 * Retrieve customer subscriptions to availability notifications.
 * Enable customer registration.
 * Allow customer login and authentication.

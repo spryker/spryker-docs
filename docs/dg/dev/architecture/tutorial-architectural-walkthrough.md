@@ -415,9 +415,9 @@ class HelloSprykerDependencyProvider extends AbstractDependencyProvider
     */
     protected function addZedRequestClient(Container $container)
     {
-	    $container[static::CLIENT_ZED_REQUEST] = function (Container $container) {
+	    $container->set(static::CLIENT_ZED_REQUEST, function (Container $container) {
 		    return $container->getLocator()->zedRequest()->client();
-	    };
+	    });
 
 	    return $container;
     }
@@ -570,9 +570,9 @@ name="zed"  xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-    
 </database>
 ```
 
-4. Run the command:
+4. Apply database changes and generate entity and transfer changes:
 ```bash
-console propel:install.
+console propel:install
 ```
 
 5. The `HelloSpryker` table is in the database.

@@ -1,13 +1,13 @@
 ---
 title: Checklist for a new store implementation
-description: Learn how to implement a new store in a multi-store environment
+description: Follow a checklist for implementing a new store in Spryker's multi-store setup, including environment setup, DNS configuration, and integration tasks.
 template: concept-topic-template
 last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/checklist-for-a-new-store-implementation.html
 related:
   - title: Multistore setup options
-    link: docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html
+    link: docs/ca/dev/multi-store-setups/multistore-setup-options.html
 ---
 
 This document outlines the high-level tasks and responsibilities of Spryker and Customer when setting up a new store depending on the chosen setup for the multi-store environment. For a description of setups referred to in this document, see [Multistore setup options](/docs/ca/dev/multi-store-setups/multistore-setup-options.html).

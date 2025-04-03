@@ -1,6 +1,6 @@
 ---
 title: Configure Usercentrics
-description: Find out how you can configure Usercentrics in your Spryker shop
+description: Learn how you can configure Spryker Third Party Usercentrics in to your Spryker based shop
 last_updated: July 3, 2023
 template: howto-guide-template
 ---
@@ -112,3 +112,15 @@ To use Usercentrics with the Google Tag Manager, do the following:
 ![usercentrics-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/usercentrics/usercentrics/configure-usercentrics/usercentrics-configuration.png)
 
 The drawer closes with a success message displayed. On the **App Composition Platform Catalog** page, the app's status changes to **Connected**. The cookie consent dialog should be displayed on every Storefront page.
+
+## Retain Usercentrics configuration after a destructive deployment
+
+{% info_block errorBox "" %}
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html) permanently deletes the configuration of Usercentrics.
+
+To run a destructive deployment, follow the steps:
+1. Disconnect Usercentrics.
+2. Run a destructive deployment.
+3. Reconnect Usercentrics.
+
+{% endinfo_block %}

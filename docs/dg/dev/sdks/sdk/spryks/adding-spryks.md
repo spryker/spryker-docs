@@ -1,6 +1,6 @@
 ---
 title: Adding Spryks
-description: Find out how you can add a new Spryk
+description: Find out how you can add a new Spryk in to your Spryker project with Spryker SDKs
 template: howto-guide-template
 redirect_from:
 - /docs/sdk/dev/spryks/adding-a-new-spryk.html
@@ -8,7 +8,7 @@ redirect_from:
 last_updated: Nov 10, 2022
 related:
     - title: Spryk configuration reference
-      link: docs/sdk/dev/spryks/spryk-configuration-reference.html
+      link: docs/dg/dev/sdks/sdk/spryks/spryk-configuration-reference.html
 ---
 
 To add a new Spryk, you need to add a YAML configuration file to the `config/spryk/spryks/` directory.

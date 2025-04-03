@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-infrastructure.html
 related:
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
+    link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-api-authentication-and-authorization.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
@@ -109,9 +109,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 ### Resource modules
 
-A _Resource module_ is a module that implements a single resource or a set of resources. It is responsible for accepting a request in the form of _Request Objects_ and providing responses in the form of _Response Objects_. For this purpose, the module can communicate with the Storage or Search, for which purpose it implements a [Client](/docs/dg/dev/backend-development/client/client.html). It can also communicate with the Spryker Commerce OS (Zed), however, it is recommended to avoid round trips to the database as much as possible as that can reduce API performance considerably.
+A _Resource module_ is a module that implements a single resource or a set of resources. It is responsible for accepting a request in the form of _Request Objects_ and providing responses in the form of _Response Objects_. For this purpose, the module can communicate with the Storage or Search, for which purpose it implements a [Client](/docs/dg/dev/backend-development/client/client.html). It can also communicate with the Spryker Commerce OS (Zed), however, it's recommended to avoid round trips to the database as much as possible as that can reduce API performance considerably.
 
-Resource modules must implement all logic related to processing a request. It is not recommended having any of the Business Logic, or a part of it, in the _GlueApplication Module_. In case you need to extend any of the built-in Glue functionality, it is always safer to extend the relevant _Resource module_ than infrastructure.
+Resource modules must implement all logic related to processing a request. It is not recommended having any of the Business Logic, or a part of it, in the _GlueApplication Module_. In case you need to extend any of the built-in Glue functionality, it's always safer to extend the relevant _Resource module_ than infrastructure.
 
 #### Module structure
 
@@ -207,7 +207,7 @@ Business errors are returned as the `RestErrorMessageTransfer` objects with the 
 
 ### Nested resources
 
-Glue API allows creating resources with parent-child relationships or, in other words, nested resources. For example, a request to `/customers/1/addresses` returns addresses for a customer with ID 1. To enable such behavior, it is necessary to define how resources depend on each other. This is done by configuring resource route plugins. When processing an URL, the _GlueApplication Module_ tries to find a correct route to a child resource. For this reason, all modules in the nesting chain should be arranged in a sequence using **ResourceWithParentPluginInterface**. Then, while handling a request to a child resource, business logic can access the parent resource identifier and process the request in the correct context.
+Glue API allows creating resources with parent-child relationships or, in other words, nested resources. For example, a request to `/customers/1/addresses` returns addresses for a customer with ID 1. To enable such behavior, it's necessary to define how resources depend on each other. This is done by configuring resource route plugins. When processing an URL, the _GlueApplication Module_ tries to find a correct route to a child resource. For this reason, all modules in the nesting chain should be arranged in a sequence using **ResourceWithParentPluginInterface**. Then, while handling a request to a child resource, business logic can access the parent resource identifier and process the request in the correct context.
 
 #### ResourceWithParentPluginInterface
 
@@ -280,7 +280,7 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
                 "isDiscontinued": false,
                 "discontinuedNote": null,
                 "name": "Sony Cyber-shot DSC-W830",
-                "description": "Styled for your pocket  Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing it, and slip in your pocket. Shooting great photos and videos is easy with the W800. Buttons are positioned for ease of use, while a dedicated movie button makes shooting movies simple. The vivid 2.7-type Clear Photo LCD display screen lets you view your stills and play back movies with minimal effort. Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound. Breathe new life into a picture by using built-in Picture Effect technology. There’s a range of modes to choose from – you don’t even have to download image-editing software.",
+                "description": "Styled for your pocket  Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing it, and slip in your pocket. Shooting great photos and videos is easy with the W800. Buttons are positioned for ease of use, while a dedicated movie button makes shooting movies simple. The vivid 2.7-type Clear Photo LCD display screen lets you view your stills and play back movies with minimal effort. Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound. Breathe new life into a picture by using built-in Picture Effect technology. There's a range of modes to choose from – you don't even have to download image-editing software.",
                 "attributes": {
                     "hdmi": "no",
                     "sensor_type": "CCD",

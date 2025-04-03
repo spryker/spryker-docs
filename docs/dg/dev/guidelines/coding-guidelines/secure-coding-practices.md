@@ -1,6 +1,6 @@
 ---
 title: Secure Coding Practices
-description: Unsafe coding practices can make the software application vulnerable to theft of sensitive data. In this article, we’ll present a series of coding practices that we recommend using when developing an e-commerce application using Spryker Commerce OS, that will keep your software solution secured.
+description: In this article, we'll present a series of coding practices that we recommend using when developing an e-commerce application using Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/secure-coding-practices
@@ -9,14 +9,14 @@ redirect_from:
   - /docs/scos/dev/guidelines/coding-guidelines/secure-coding-practices.html
 related:
   - title: Code Architecture Guide
-    link: docs/scos/dev/guidelines/coding-guidelines/code-architecture-guide.html
+    link: docs/dg/dev/guidelines/coding-guidelines/code-architecture-guide.html
   - title: Code Quality
-    link: docs/scos/dev/guidelines/coding-guidelines/code-quality.html
+    link: docs/dg/dev/guidelines/coding-guidelines/code-quality.html
   - title: Code style guide
-    link: docs/scos/dev/guidelines/coding-guidelines/code-style-guide.html
+    link: docs/dg/dev/guidelines/coding-guidelines/code-style-guide.html
 ---
 
-Unsafe coding practices can make the software application vulnerable to theft of sensitive data. In this article, we’ll present a series of coding practices that we recommend using when developing an e-commerce application using Spryker Commerce OS, that will keep your software solution secured.
+Unsafe coding practices can make the software application vulnerable to theft of sensitive data. In this article, we'll present a series of coding practices that we recommend using when developing an e-commerce application using Spryker Commerce OS, that will keep your software solution secured.
 
 ## HTTP strict transport security (HSTS)
 
@@ -72,7 +72,7 @@ HTTP_HOST header attacks refer to injecting malicious host in the header of the 
 
 There are two main ways to exploit this vulnerability. One would be web-cache poisoning and the other is manipulating the password reset emails to contain links to malicious applications.
 
-To prevent this, the HTTP_HOST request header must checked by the application. Spryker integrates Symfony’s trusted_hosts to secure the application from this type of attacks.
+To prevent this, the HTTP_HOST request header must checked by the application. Spryker integrates Symfony's trusted_hosts to secure the application from this type of attacks.
 
 You can add the trusted hosts in the configuration file. The trusted hosts must be registered in `ApplicationServiceProvider:register(Application $app)()`
 
@@ -91,7 +91,7 @@ Code injection refers to any mean that allows the attacker to inject malicious c
 * `require()`
 * `require_once()`
 
-Untrusted input should be prevented to be used to determine the path to the parameter that’s passed to these functions.
+Untrusted input should be prevented to be used to determine the path to the parameter that's passed to these functions.
 
 ### PHP Code evaluation vulnerabilities
 

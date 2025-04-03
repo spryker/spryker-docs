@@ -1,6 +1,6 @@
 ---
 title: Upgrade to Symfony 6.4
-description: Learn about the main changes in the new Symfony version 6
+description: Learn how you can upgrade the version 6.4 of Symfony for your Spryker projects and Spryker modules that use Symfony.
 last_updated: Apr 1, 2024
 template: howto-guide-template
 redirect_from:
@@ -22,7 +22,7 @@ Although Spryker still supports older versions of Symfony, avoid installing them
 ## Main changes in Symfony 6.4
 
 Symfony 6.4 has a new cycle of innovations. When it starts, one cycle lasts two years, on a modernized codebase that has been cleaned up from the dead weight of the past.
-The major change included in Symfony 6.4 is PHP 8.1 being the minimum required version of PHP.
+The major change included in Symfony 6.4 is PHP 8.2 being the minimum required version of PHP.
 The code of Symfony 6.4 has been updated. You can take advantage of all the new features in PHP.
 For example, the code includes PHP 8 [attributes](https://www.php.net/manual/fr/language.attributes.overview.php), more expressive and rigorous type declarations, and more.
 
@@ -36,7 +36,7 @@ To make your project compatible with Symfony 6.4, update the [Symfony](https://g
 composer require spryker/symfony:"^3.11.0"
 ```
 
-If you can’t install the required version, run the following command to see what else you need to update:
+If you can't install the required version, run the following command to see what else you need to update:
 
 ```bash
 composer why-not spryker/symfony:3.11.0

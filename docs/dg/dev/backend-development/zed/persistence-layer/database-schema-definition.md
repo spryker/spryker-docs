@@ -9,17 +9,17 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
 related:
   - title: Database overview
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/database-overview.html
   - title: Entity
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/entity.html
   - title: Entity manager
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/entity-manager.html
   - title: About the query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-container/query-container.html
   - title: Query objects - creation and usage
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-objects-creation-and-usage.html
   - title: Repository
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/repository.html
 ---
 
 With Propel, a [database schema](http://propelorm.org/documentation/reference/schema.html) is defined in an XML file. Each module has its own part of the big schema that is collected and merged.
@@ -79,14 +79,14 @@ The workflow can be described like this:
 
 ## Schema file merge
 
-Sometimes it is useful to add columns to a table that belongs to another module. Possible use cases are:
+Sometimes it's useful to add columns to a table that belongs to another module. Possible use cases are:
 
 * A core module wants to inject a foreign key into a table from another core module. This happens when the dependency direction is in contrast to the direction of the relation.
 * A project module wants to add a column to a table from a core module.
 
 When you add a column to a core table, this column must not be mandatory. Otherwise, the core classes, not knowing the mandatory fields, become unusable and, thus, have to be overwritten. This makes updating more difficult. In most cases, you need to avoid adding a column to a core table, as it can cause compatibility problems in the future.
 
-What happens when the next release adds a column with the same name but another meaning? To avoid this problem, it is a good practice to add a new table and use a one-to-one relationship.
+What happens when the next release adds a column with the same name but another meaning? To avoid this problem, it's a good practice to add a new table and use a one-to-one relationship.
 
 ### Merge workflow
 

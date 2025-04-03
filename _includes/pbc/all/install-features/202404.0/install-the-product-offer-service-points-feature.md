@@ -215,7 +215,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 console data:import:product-offer-service
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that entities were imported to the following database tables respectively:
 
@@ -318,7 +318,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\ProductOfferServicePointStorage;
@@ -464,7 +464,7 @@ Make sure that the `product-offer-service` synchronization plugin works correctl
 2. Run the `console sync:data -r product_offer_service` command.
 3. Make sure that, in your system, storage entries are displayed with the `kv:product_offer_service:{store}:{product_offer_reference}` mask.
 
-Make sure when a product offer service is created via DataImport, it is exported to Redis accordingly.
+Make sure when a product offer service is created via DataImport, it's exported to Redis accordingly.
 
 Make sure that, in Redis, data is displayed in the following format:
 

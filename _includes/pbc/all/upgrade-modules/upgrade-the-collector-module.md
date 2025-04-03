@@ -15,7 +15,7 @@ The following classes were altered to support the multi-store concept:
 
 ### Collector multi-store concept overview
 
-1. The primary change affects the `AbstractDatabaseCollector::processBatchForExport()`. Previously this method was responsible for simply exporting all "touch active" touched entities to Storage or Search. In multi-store environment, a multi-store entity does not necessary exist in all stores even though it is "touch active" in all stores. Moreover, an exported "touch active" multi-store entity can become invalid if it is unassigned from a specific store. To achieve the expected behavior, the `AbstractCollector::isStorable()` method is introduced. Whenever this method returns with `true`, the subject entity is considered to be available (in the current store) and will be exported. On the other hand, the `false` return value that the entity is not available (in the current store) and either not should not be exported or should be deleted from Storage or Search if it has already been exported previously.
+1. The primary change affects the `AbstractDatabaseCollector::processBatchForExport()`. Previously this method was responsible for simply exporting all "touch active" touched entities to Storage or Search. In multi-store environment, a multi-store entity does not necessary exist in all stores even though it's "touch active" in all stores. Moreover, an exported "touch active" multi-store entity can become invalid if it's unassigned from a specific store. To achieve the expected behavior, the `AbstractCollector::isStorable()` method is introduced. Whenever this method returns with `true`, the subject entity is considered to be available (in the current store) and will be exported. On the other hand, the `false` return value that the entity is not available (in the current store) and either not should not be exported or should be deleted from Storage or Search if it has already been exported previously.
 
 {% info_block warningBox %}
 
@@ -71,9 +71,9 @@ It is important to add the condition to the `LEFT JOIN` section so the number of
 
 {% endinfo_block %}
 
-7. The deprecated `CollectorDependencyProvider::provideLocaleFacade()` is removed, please check your code if you have custom calls or dependencies.
+7. The deprecated `CollectorDependencyProvider::provideLocaleFacade()` is removed,  check your code if you have custom calls or dependencies.
 
-8. The following methods have internal changes, please check if you have customized them:
+8. The following methods have internal changes,  check if you have customized them:
 * `AbstractTouchUpdater::bulkUpdate()`
 * `AbstractTouchUpdater::getCollectorKeyFromData()`
 
@@ -83,4 +83,4 @@ You can find additional details on [Collector module release page](https://githu
 
 With version 4 of the Collector module, we fixed the `collector:search:export` and `collector:search:update` console commands to run for all available locales instead of just for the current one. This behavior is now consistent with the storage collector command (`collector:storage:export`).
 
-If you would like to upgrade to this version and you have multiple locales in your store, then you need to make sure that your collector query (in the Spryker Demoshop we use the `ProductCollectorQuery` class) is also correctly filtered by locale, otherwise it could happen that you’ll have inconsistent data in your Elasticsearch.
+If you would like to upgrade to this version and you have multiple locales in your store, then you need to make sure that your collector query (in the Spryker Demoshop we use the `ProductCollectorQuery` class) is also correctly filtered by locale, otherwise it could happen that you'll have inconsistent data in your Elasticsearch.

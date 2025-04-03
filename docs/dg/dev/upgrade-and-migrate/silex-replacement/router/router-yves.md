@@ -42,7 +42,7 @@ Routers are added to the `\Pyz\Yves\Router\RouterDependencyProvider::getRouterPl
 
 The Router can be configured with the following `\Spryker\Yves\Router\RouterEnvironmentConfigConstantsYves` options:
 
-* `\Spryker\Shared\Router\RouterConstants::YVES_IS_CACHE_ENABLED` - use this option to enable/disable the cache. By default, it is enabled.
+* `\Spryker\Shared\Router\RouterConstants::YVES_IS_CACHE_ENABLED` - use this option to enable/disable the cache. By default, it's enabled.
 * `\Spryker\Shared\Router\RouterConstants::YVES_CACHE_PATH` - use this option if you want to change the path to the generated cache files.
 * `\Spryker\Shared\Router\RouterConstants::YVES_IS_SSL_ENABLED` - use this option to enable/disable the Router's SSL capabilities.
 * `\Spryker\Shared\Router\RouterConstants::YVES_SSL_EXCLUDED_ROUTE_NAMES` - use this option to disable SSL for the specific route names when SSL is enabled.
@@ -145,7 +145,7 @@ interface PostAddRouteManipulatorPluginInterface
 }
 ```
 
-Use this class when you need to manipulate all routes at once without refactoring each part of the code, where routes are created. Every route, which is added to `RouteCollection`, will be manipulated with all the attached `\Spryker\Yves\RouterExtension\Dependency\Plugin\PostAddRouteManipulatorPluginInterface's`. Imagine you need all your URLs to have a prefix or suffix (e.g. `/{store}/url-to-something/{locale}`) instead of adding `{store}` and `{locale}` to all routes manually. In this case, you just add a manipulator that does that for you.
+Use this class when you need to manipulate all routes at once without refactoring each part of the code, where routes are created. Every route, which is added to `RouteCollection`, will be manipulated with all the attached `\Spryker\Yves\RouterExtension\Dependency\Plugin\PostAddRouteManipulatorPluginInterface's`. Imagine you need all your URLs to have a prefix or suffix–for example, `/{store}/url-to-something/{locale}`–instead of adding `{store}` and `{locale}` to all routes manually. In this case, you just add a manipulator that does that for you.
 
 <details>
 <summary>\Spryker\Yves\RouterExtension\Dependency\Plugin\RouterEnhancerPluginInterface</summary>

@@ -6,9 +6,9 @@
 | billingAddress.email | String | &check; | Customer's email address. |
 | billingAddress.firstName | String | &check; | Customer's first name. |
 | billingAddress.lastName | String | &check; | Customer's last name. |
-| billingAddress.address1 | String | &check; | The 1st line of the customer's address. |
-| billingAddress.address2 | String | &check; | The 2nd line of the customer's address. |
-| billingAddress.address3 | String | | The 3rd line of the customer's address. |
+| billingAddress.address1 | String | &check; | The first line of the customer's address. |
+| billingAddress.address2 | String | &check; | The second line of the customer's address. |
+| billingAddress.address3 | String | | The third line of the customer's address. |
 | billingAddress.zipCode | String | &check; | ZIP code. |
 | billingAddress.city | String | &check; | Specifies the city. |
 | billingAddress.iso2Code | String | &check; | Specifies an ISO 2 Country Code to use. |
@@ -24,9 +24,9 @@
 | shipments.shippingAddress.email | String | &check; | Customer's email address. |
 | shipments.shippingAddress.firstName | String | &check; | Customer's first name. |
 | shipments.shippingAddress.lastName | String | &check; | Customer's last name. |
-| shipments.shippingAddress.address1 | String | &check; | The 1st line of the customer's address. |
-| shipments.shippingAddress.address2 | String | &check; | The 2nd line of the customer's address. |
-| shipments.shippingAddress.address3 | String | | The 3rd line of the customer's address. |
+| shipments.shippingAddress.address1 | String | &check; | The first line of the customer's address. |
+| shipments.shippingAddress.address2 | String | &check; | The second line of the customer's address. |
+| shipments.shippingAddress.address3 | String | | The third line of the customer's address. |
 | shipments.shippingAddress.zipCode | String | &check; | ZIP code. |
 | shipments.shippingAddress.city | String | &check; | Specifies the city. |
 | shipments.shippingAddress.iso2Code | String | &check; | Specifies an ISO 2 Country Code to use. |

@@ -70,8 +70,19 @@ You can view how it looks like on the store website:
 
 * **B2C**
     <br>Template used: File icon and size
-![File list content item widget B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/file-list-yves-b2c.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/content-items/create-file-list-content-items.md/file-list-yves-b2c.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 * **B2B**
     <br>Template used: Text Link
-![File list content item widget B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/file-list-yves-b2b.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/content-items/create-file-list-content-items.md/file-list-yves-b2b.mp4" type="video/mp4">
+  </video>
+</figure>

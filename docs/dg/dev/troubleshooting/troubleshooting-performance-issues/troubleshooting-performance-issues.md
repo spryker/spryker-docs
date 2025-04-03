@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting performance issues
-description: Learn how you can troubleshoot the most common performance issues
+description: Learn how you can troubleshoot and resolve the most common performance issues within your Spryker based projects
 template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html
@@ -20,11 +20,11 @@ Performance optimization has to start with the analysis or with the profiling.
 Before you start optimizing performance, make sure the following preconditions are met:
 
 1. You know and understand the problem.
-An example of a poorly defined problem: “Website is slow“.
+An example of a poorly defined problem: "Website is slow".
 An example of a well-defined problem:
-“Web site is slow when I place an order with 25 products of the same SKU (SKU=001).
+"Web site is slow when I place an order with 25 products of the same SKU (SKU=001).
 URL: {URL}
-Credentials: {Instruction on how to get credentials}.”
+Credentials: {Instruction on how to get credentials}."
 
 If you do not have this information, then request additional data from the person who reported the problem.
 
@@ -45,7 +45,7 @@ Note the following:
 Read more on the [official New Relic website](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/troubleshooting-not-seeing-transaction-traces/).
 
 3. Review the profiling.
-For example, if the problem is with “place-order“ with 25 product items, do the following:
+For example, if the problem is with "place-order" with 25 product items, do the following:
 
 1. Check if you have profiling for the necessary action in New Relic:
 
@@ -57,7 +57,7 @@ For example, if the problem is with “place-order“ with 25 product items, do 
   ![trasaction-type](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/transaction-type.png)
   4. In **Sort By**, select how you want to sort the items—for example, **Most time consuming**.
   ![transaction-filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/transactions-filter.png)
-  5. Check if you have the necessary action “place-order“ in the resulting list. Click **See transaction table** if needed.
+  5. Check if you have the necessary action "place-order" in the resulting list. Click **See transaction table** if needed.
   ![transaction-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/transactions-list.png)
 
 {% info_block infoBox "Issues with transaction grouping" %}

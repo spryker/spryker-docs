@@ -43,7 +43,7 @@ Software architecture and design must ensure that there is no negative impact on
 
 ## Security guidelines
 
-Make sure to define and follow your own project's [security best practices](/docs/scos/dev/guidelines/security-guidelines.html).
+Make sure to define and follow your own project's [security best practices](/docs/dg/dev/guidelines/security-guidelines.html).
 
 ## Deployability guidelines
 
@@ -66,3 +66,7 @@ The rollback scripts must not break the behavior of the current system:
 * Glue GET requests with subsequent Zed requests should be under 180ms on average.
 * Glue GET requests without subsequent Zed requests should be under 140ms on average.
 * Glue POST, PATCH, and PUT requests with subsequent Zed requests should be under 290ms on average.
+
+## Scaleability guidelines
+
+[P&S](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html) processes must have O(n) time complexity and O(n) resource complexity. In other words, they scale linearly with the number of entities they're processing. Specifically, memory and CPU consumption must grow proportionally to the number of entities. For example, if a process handles 100 entities, its resource consumption is X. When it handles 200 entities, the resource consumption must not exceed 2X.

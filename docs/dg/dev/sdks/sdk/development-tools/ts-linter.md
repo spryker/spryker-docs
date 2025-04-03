@@ -23,24 +23,24 @@ redirect_from:
   - /docs/sdk/dev/development-tools/ts-linter.html
 
 related:
-  - title: Architecture sniffer
-    link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
   - title: Code sniffer
-    link: docs/scos/dev/sdk/development-tools/code-sniffer.html
+    link: docs/dg/dev/sdks/sdk/development-tools/code-sniffer.html
   - title: Formatter
-    link: docs/scos/dev/sdk/development-tools/formatter.html
+    link: docs/dg/dev/sdks/sdk/development-tools/formatter.html
+  - title: Architecture sniffer
+    link: docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html
   - title: Performance audit tool- Benchmark
-    link: docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
+    link: docs/dg/dev/sdks/sdk/development-tools/benchmark-performance-audit-tool.html
   - title: PHPStan
-    link: docs/scos/dev/sdk/development-tools/phpstan.html
+    link: docs/dg/dev/sdks/sdk/development-tools/phpstan.html
   - title: SCSS linter
-    link: docs/scos/dev/sdk/development-tools/scss-linter.html
+    link: docs/dg/dev/sdks/sdk/development-tools/scss-linter.html
   - title: Spryk code generator
-    link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html
+    link: docs/dg/dev/sdks/sdk/spryks/spryks.html
   - title: Static Security Checker
-    link: docs/scos/dev/sdk/development-tools/static-security-checker.html
+    link: docs/dg/dev/sdks/sdk/development-tools/static-security-checker.html
   - title: Tooling config file
-    link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
+    link: docs/dg/dev/sdks/sdk/development-tools/tooling-configuration-file.html
 ---
 
 {% info_block warningBox "No longer supported" %}
@@ -88,7 +88,7 @@ The config for tslint resides in `/tslint.json`.
 To redefine the path for the config, adjust `/frontend/libs/tslint.js` and use other [rules](https://palantir.github.io/tslint/rules/) for the TS Linter.
 {% info_block infoBox %}
 
-The TS Linter rules related to formatting aren’t included in `tslint.json` to avoid duplication with the [Prettier rules](https://www.npmjs.com/package/@spryker/frontend-config.prettier).
+The TS Linter rules related to formatting aren't included in `tslint.json` to avoid duplication with the [Prettier rules](https://www.npmjs.com/package/@spryker/frontend-config.prettier).
 
 {% endinfo_block %}
 
@@ -120,6 +120,6 @@ If you commit without the pre-commit hooks, you should run the TS Linter manuall
 
 {% info_block infoBox %}
 
-Pre-commit hooks weren’t integrated into [B2B](https://github.com/spryker-shop/b2b-demo-shop) and [B2C](https://github.com/spryker-shop/b2c-demo-shop) Demo Shops, only in the [Shop Suite](https://github.com/spryker-shop/suite).
+Pre-commit hooks weren't integrated into [B2B](https://github.com/spryker-shop/b2b-demo-shop) and [B2C](https://github.com/spryker-shop/b2c-demo-shop) Demo Shops, only in the [Shop Suite](https://github.com/spryker-shop/suite).
 
 {% endinfo_block %}

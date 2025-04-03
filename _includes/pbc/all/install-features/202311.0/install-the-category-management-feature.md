@@ -710,7 +710,7 @@ Make sure that *category-node*, *category-tree* synchronization plugins works co
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a category is created or edited through ORM, it is exported to Redis and Elasticsearch accordingly.
+Make sure that when a category is created or edited through ORM, it's exported to Redis and Elasticsearch accordingly.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | ---  | --- | --- |
@@ -935,7 +935,7 @@ cameras-and-camcorder,demoshop,Kameras & Camcorders,Cameras & Camcorders,Kameras
 | is_searchable | | bool | 1 | Defines if the category is displayed in the search. If the value is `0`, the category cannot be found in the catalog search. |
 | is_root ||  bool | 0 | Defines if the category. is a root category: `0` – non-root category, `1` – root category. |
 | is_main ||  bool | 1 | Defines if the category is main. |
-| node_order ||  int | 90 | When displayed with other categories, defines their order based on the comparison of this parameter’s values. |
+| node_order ||  int | 90 | When displayed with other categories, defines their order based on the comparison of this parameter's values. |
 | template_name | | string | Catalog (default) | Human-readable name of the category template. |
 
 
@@ -1209,13 +1209,13 @@ class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To make sure that you’ve integrated category image handling successfully, check that, in the Back Office, you can manage category images when creating and editing categories.
+To make sure that you've integrated category image handling successfully, check that, in the Back Office, you can manage category images when creating and editing categories.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Make sure you’ve integrated category store assignments successfully by checking that you can manage store relations when creating and editing categories in the Back Office.
+Make sure you've integrated category store assignments successfully by checking that you can manage store relations when creating and editing categories in the Back Office.
 
 {% endinfo_block %}
 

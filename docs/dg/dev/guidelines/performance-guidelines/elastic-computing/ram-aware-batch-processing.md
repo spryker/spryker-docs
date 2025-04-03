@@ -7,9 +7,9 @@ redirect_from:
   - /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
 related:
   - title: New Relic transactions grouping by queue names
-    link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html
+    link: docs/dg/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html
   - title: Storage caching for primary-replica database setups
-    link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
+    link: docs/dg/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
 ---
 
 Long-running PHP operations like data import may consume a considerable amount of memory during execution. However, in some cases, a significant amount of available memory is not used.

@@ -95,7 +95,7 @@ To deploy a specific application version, copy the version of the respective Git
 
 ![release change](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+production+environment/release-change.png)
 
-If the deployment is successful, the **/spryker-prod/lastdeployedversion** parameter in the Parameter Store is updated with the application version you’ve deployed.
+If the deployment is successful, the **/spryker-prod/last_deployed_version** parameter in the Parameter Store is updated with the application version you've deployed.
 
 
 ## Check the deployed application version

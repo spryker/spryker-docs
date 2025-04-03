@@ -10,7 +10,7 @@ redirect_from:
 
 ![algolia-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/algolia-hero.png)
 
-Spryker is shipped with [Elasticsearch](https://www.elastic.co/elasticsearch/) as the default search engine. However, you can replace it with [Algolia](https://www.algolia.com/). The Algolia search engine stands out due to its performance. With the Algolia app, your users can conduct advanced searches of active concrete products in your store.
+Spryker is shipped with [Elasticsearch](https://www.elastic.co/elasticsearch/) as the default search engine. However, you can replace it with [Algolia](https://www.algolia.com/). The Algolia search engine stands out because of its performance. With the Algolia app, your users can conduct advanced searches of active concrete products in your store.
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -65,7 +65,7 @@ Here is an example of product data stored in Algolia:
   "sku": "017_21748906",
   "name": "Sony Cyber-shot DSC-W800",
   "abstract_name": "Sony Cyber-shot DSC-W800",
-  "description": "Styled for your pocket Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing it, and slip in your pocket. Shooting great photos and videos is easy with the W800. Buttons are positioned for ease of use, while a dedicated movie button makes shooting movies simple. The vivid 2.7-type Clear Photo LCD display screen lets you view your stills and play back movies with minimal effort. Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound. Breathe new life into a picture by using built-in Picture Effect technology. There’s a range of modes to choose from – you don’t even have to download image-editing software.",
+  "description": "Styled for your pocket Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing it, and slip in your pocket. Shooting great photos and videos is easy with the W800. Buttons are positioned for ease of use, while a dedicated movie button makes shooting movies simple. The vivid 2.7-type Clear Photo LCD display screen lets you view your stills and play back movies with minimal effort. Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound. Breathe new life into a picture by using built-in Picture Effect technology. There's a range of modes to choose from – you don't even have to download image-editing software.",
   "url": "/en/sony-cyber-shot-dsc-w800-17",
   "product_abstract_sku": "017",
   "rating": 4.5,

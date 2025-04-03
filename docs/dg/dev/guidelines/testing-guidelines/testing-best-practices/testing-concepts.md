@@ -1,6 +1,6 @@
 ---
 title: Testing concepts
-description: Testing your project is one of the best ways to ensure that your software functions as it is supposed to. The role of testing is to find bugs during the early stages of development to minimize risks.
+description: Testing your project is one of the best ways to ensure that your software functions as it's supposed to. The role of testing is to find bugs during the early stages of development to minimize risks.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/testing-concepts
@@ -11,30 +11,31 @@ redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
 related:
   - title: Available test helpers
-    link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
   - title: Code coverage
-    link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+    link: docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
   - title: Data builders
-    link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+    link: docs/dg/dev/guidelines/testing-guidelines/data-builders.html
   - title: Executing tests
-    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
   - title: Publish and Synchronization testing
-    link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-process.html
   - title: Setting up tests
-    link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+    link: docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html
   - title: Test framework
-    link: docs/scos/dev/guidelines/testing-guidelines/test-framework.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-framework.html
   - title: Test helpers
-    link: docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html
   - title: Testify
-    link: docs/scos/dev/guidelines/testing-guidelines/testify.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testify.html
   - title: Testing best practices
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
   - title: Testing console commands
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
+
 ---
 
-Testing your project is one of the best ways to ensure that your software functions as it is supposed to. The role of testing is to find bugs during the early stages of development to minimize risks. QA is the process of assuring quality, not just verifying you will not get an error on some page.
+Testing your project is one of the best ways to ensure that your software functions as it's supposed to. The role of testing is to find bugs during the early stages of development to minimize risks. QA is the process of assuring quality, not just verifying you will not get an error on some page.
 
 However, testing will not make a system completely bug-free, it can and will reduce the quantity of system faults, help you avoid having major and critical errors and minimize those which can just distract users from using the system.
 
@@ -46,7 +47,7 @@ With or without a QA engineer, we have compiled a few tips, guidelines and recom
 
 ## The four main reasons errors occur
 
-Errors can appear during all stages of software development: while introducing a feature, during specification, development and testing phases. These are elements of human error - features are introduced without taking into consideration how they will work for the end user, specifications don't include integration with an existing or upcoming feature, validation rules and behavior descriptions are not fully thought through and many more other intricacies that are overlooked. In the development stage, bugs are a natural occurrence and during testing it is not uncommon to discover that fixing a bug actually reveals or introduces new ones.
+Errors can appear during all stages of software development: while introducing a feature, during specification, development and testing phases. These are elements of human error - features are introduced without taking into consideration how they will work for the end user, specifications don't include integration with an existing or upcoming feature, validation rules and behavior descriptions are not fully thought through and many more other intricacies that are overlooked. In the development stage, bugs are a natural occurrence and during testing it's not uncommon to discover that fixing a bug actually reveals or introduces new ones.
 
 Generally, errors happen from the following reasons:
 
@@ -68,14 +69,14 @@ We have compiled a short checklist to use while creating the specification and d
 * Did I inform the testers of specific areas which need to be double checked?
 * Do the testers need any kind of help to perform the tests (for example, scripts for generating specific data)?
 
-## What is “high-quality software”?
+## What is "high-quality software"?
 
-Quality doesn't mean "bug free". Quality means, meeting the stated requirements, functions correctly where it is supposed to, there are no critical, blocking or major issues, and that bugs of other severity are brought to the possible minimum or don’t distract/prevent the user from using the system.
+Quality doesn't mean "bug free". Quality means, meeting the stated requirements, functions correctly where it's supposed to, there are no critical, blocking or major issues, and that bugs of other severity are brought to the possible minimum or don't distract/prevent the user from using the system.
 
 This brings us to two questions:
 
 1. What should we be testing?
-2. How do we determine the software’s quality?
+2. How do we determine the software's quality?
 
 Quality is when the software meets all the above mentioned requirements, but there are many more quality attributes surrounding the overall factors that affect behavior, design, and user experience such as performance, security and usability.
 
@@ -89,11 +90,11 @@ We can prevent this by thinking of performance testing in advance. Plan performa
 
 ### Security
 
-Is the capability of a system to prevent malicious or accidental actions outside of the designed usage, and to prevent disclosure or loss of information. When working with thousands of people’s data and personal information, security leaks and the resulting money loss means that security testing should be one of the first things you think about. Ensure that confidential user data cannot be revealed, that your frontend doesn't allow SQL injections in the text fields ( SQL injections are SQL queries that could be put into a text field like a password or username and instead of requesting authorization to the website a request is made to the DB or malicious data is written into it).
+Is the capability of a system to prevent malicious or accidental actions outside of the designed usage, and to prevent disclosure or loss of information. When working with thousands of people's data and personal information, security leaks and the resulting money loss means that security testing should be one of the first things you think about. Ensure that confidential user data cannot be revealed, that your frontend doesn't allow SQL injections in the text fields ( SQL injections are SQL queries that could be put into a text field like a password or username and instead of requesting authorization to the website a request is made to the DB or malicious data is written into it).
 
 ### Usability
 
-Usability defines how well the application meets user requirements. We are looking for an application that is intuitive and provides a good overall user experience. Even if you do not have a QA team you can still run usability testing. "Still" because as mentioned above, developers tend to think positively of their code. Usually a developer only wants to check that the scenarios written in the requirements are passed. But it is important to look at your software from the outside. To imagine you are not the creator but the user. Try to identify what irritates you when using the software. It is very common for us to get frustrated by bad usability and want to fix it ourselves, but we can only report bugs to the creators and wait for the fix. Here you have the opportunity to fix everything yourself in the way you see it the best!
+Usability defines how well the application meets user requirements. We are looking for an application that is intuitive and provides a good overall user experience. Even if you do not have a QA team you can still run usability testing. "Still" because as mentioned above, developers tend to think positively of their code. Usually a developer only wants to check that the scenarios written in the requirements are passed. But it's important to look at your software from the outside. To imagine you are not the creator but the user. Try to identify what irritates you when using the software. It is very common for us to get frustrated by bad usability and want to fix it ourselves, but we can only report bugs to the creators and wait for the fix. Here you have the opportunity to fix everything yourself in the way you see it the best!
 
 Naturally, there are many more quality attributes and there are lots of articles and resources online that you can use to further research and tailor your own list, like (Chapter 16: Quality Attributes)[https://msdn.microsoft.com/en-us/library/ee658094.aspx]. However, for us, our top priority is to focus on performance, security and usability.
 
@@ -111,7 +112,7 @@ Here are the steps you should follow:
 * Prioritize test scenarios. Sometimes you will not have enough time to run a full regression test scope for all existing features. In this case, knowing which are the highest priority scenarios helps you to concentrate on them to pass.
 * Using TDD for implementation can be a good practice. First, write the acceptance tests and then implement until tests are all passed.
 * Also make sure to manually test the feature at least once.
-* Testing each module as soon as it is ready. It is best not to wait until the project is more or less done. Instead, adopt the approach that if a feature is ready - test it. Use manual tests and follow your test scenarios to make the process fast and effective.
+* Testing each module as soon as it's ready. It is best not to wait until the project is more or less done. Instead, adopt the approach that if a feature is ready - test it. Use manual tests and follow your test scenarios to make the process fast and effective.
 * By our estimate, testing a module such as the Product Category module with some positive and some negative cases takes 30 - 40 minutes for an experienced tester. An inexperienced person would probably take an hour. Use these estimates to help calculate the time you need for testing in your plans. Planning projects with development time and test time together, helps to create a more realistic timeline. It will also help you to be able to predict your launch date a bit better as a well-tested project is likely to have less surprises towards the end.
 
 The following diagram illustrates what a test process looks like without a QA team.
@@ -149,21 +150,21 @@ Real example:
 
 * If the procedure or accessing the DB has changed, like passwords or names and nobody except the developer knows about it, it can also cause time loss and introduce frustration when a person unaware of these changes tries to test with old steps and has no clue whether the current problems are local or something was secretly changed. Yes, everybody can ask if something doesn't work as before, but this is human psychology to try figure things out themselves before asking others.
 
-Link tickets and documents with feature changes to the original features. Make sure that it’s easy to find initial functionality and how it’s connected to the new changes. Be sure that support documentation is also updated and does not stay in initial state without new changes.
+Link tickets and documents with feature changes to the original features. Make sure that it's easy to find initial functionality and how it's connected to the new changes. Be sure that support documentation is also updated and does not stay in initial state without new changes.
 
-Link bugs found during testing to the tested feature with a relation like "discovered by" - bugs sometimes reveal uncovered requirements steps and it is easier to track such black points if they are all linked together.
+Link bugs found during testing to the tested feature with a relation like "discovered by" - bugs sometimes reveal uncovered requirements steps and it's easier to track such black points if they are all linked together.
 
 Link tests to use cases and other requirement tickets with relation like "covers" or "verifies", this will help you understand in the future how well your requirement tickets are covered and see whether there are any not covered by any tests.
 
 After each completed iteration, create reports and keep them in the same wiki where all other artifacts are based. Reports can show you the state of the project, possible risky features and things that can be improved.
 
-Each iteration, at least big one, should be ended with regression testing. If you don’t have time or manpower to perform a full regression, make sure to test at least all high priority test cases to see that none of the main use scenarios are broken.
+Each iteration, at least big one, should be ended with regression testing. If you don't have time or resources to perform a full regression, make sure to test at least all high priority test cases to see that none of the main use scenarios are broken.
 
 ## Testing scenarios
 
 Test scenarios come from use cases or other documented requirements. Use cases usually describe positive scenarios, how the system should work, sometimes also error scenarios are specified, but usually requirements only describe what a user should see with a correct behavior of the system. Even if negative scenarios are not described, think about them and put them into your test cases, because negative usage scenarios come out of positive. The requirement says, you can create an element with x,y fields using latin characters? Then for sure, there will be cases where you create an element without these fields, create an identical element or set some unexpected characters. So even if something is not specified it could be undetermined, think 360 degrees.
 
-We mentioned prioritizing test scenarios, make the positive cases that check what should work high priority and negative cases that check that what shouldn’t low priority (unless the case would break everything).
+We mentioned prioritizing test scenarios, make the positive cases that check what should work high priority and negative cases that check that what shouldn't low priority (unless the case would break everything).
 
 Building Scenarios and prioritizing saves time and introduces clarity into the development environment. Consider creating a check-list of the different tests and define priority and depth for each test. How much and how deep they should go - this is all up to you and your project – focusing on critical functionality helps.
 
@@ -191,11 +192,11 @@ Test environments should as much as possible, correspond with the final target o
 
 ### Where to test
 
-When you are working on a single module or functionality, it is easy to forget that the end result is a collection of many working pieces. Do not limit testing to just either Yves or Zed, check them both together. For example: if you create a new shipment method, it is not enough to see the success message in Zed. Take a moment to go to Yves to see that the new element is also there, functional and not throwing exceptions when you try to select/open it.
+When you are working on a single module or functionality, it's easy to forget that the end result is a collection of many working pieces. Do not limit testing to just either Yves or Zed, check them both together. For example: if you create a new shipment method, it's not enough to see the success message in Zed. Take a moment to go to Yves to see that the new element is also there, functional and not throwing exceptions when you try to select/open it.
 
 ### Test and test again
 
-This is a note for developers - if you are implementing new code, logically you are already on the branch and have the application running on the VM. This is an ideal time to **take a few moments to open Yves/Zed and check that your fix works and doesn’t break anything else**. Remembering to check how the fix looks like in the UI can prevent having to make a bigger fix down the line. This simple check can save lots of time. Detecting an issue during the development stage is faster and easier to fix than during the testing stage.
+This is a note for developers - if you are implementing new code, logically you are already on the branch and have the application running on the VM. This is an ideal time to **take a few moments to open Yves/Zed and check that your fix works and doesn't break anything else**. Remembering to check how the fix looks like in the UI can prevent having to make a bigger fix down the line. This simple check can save lots of time. Detecting an issue during the development stage is faster and easier to fix than during the testing stage.
 
 Even if you tested during development and it worked for you, ask somebody to test it after the development is done. If you do not have a QA in the team, this could be another developer or product owner, but the final check should always be done on a different machine and best - by a different person. Why? Some things can pass for you locally because you have some special extensions, software installed or a special state of DB, in an environment with different conditions something can fail, so you need to ensure that things work not only for you locally but also on all environments. Another person for testing is needed, because it will bring a new view on the feature and new scenarios of using it so new problems could be revealed.
 
@@ -214,7 +215,7 @@ A certain degree of independence often makes the tester more effective at findin
 * Test by the author (developer)
 * Test by another developer not involved in implementing this feature
 * Test by internal tester or test team as people familiar with the software but having a mindset of a user rather than a developer
-* Test by a person from a different organization or company (e.g. externally invited test team)
+* Test by a person from a different organization or company–for example, externally invited test team
 
 [*ISTQB Syllabus Released Version 2011*]
 
@@ -224,4 +225,4 @@ Be prepared that even if all the tests done by test team passed, there will stil
 
 ## Endnotes
 
-We hope this information helps you plan your projects and resources to support producing amazing results with the Spryker Commerce OS. Remember to plan your tests and define clear priorities and requirements. Write test scenarios that reflect positive and negative cases. Run manual tests during the development stage. Keep records and think of other team members. Don’t wait with testing until testing stage, continuously test both in development and retest after merging to master – because well… things happen sometimes.
+We hope this information helps you plan your projects and resources to support producing amazing results with the Spryker Commerce OS. Remember to plan your tests and define clear priorities and requirements. Write test scenarios that reflect positive and negative cases. Run manual tests during the development stage. Keep records and think of other team members. Don't wait with testing until testing stage, continuously test both in development and retest after merging to master – because well… things happen sometimes.

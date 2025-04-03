@@ -13,7 +13,7 @@ This document describes how you can contribute to the development of the Oryx fr
 
 ## Semantic versioning
 
-Oryx follows semantic versioning. We release patch versions for critical bug fixes, minor versions for new features or non-essential changes, and major versions for any breaking changes. When we make breaking changes, we also introduce deprecation warnings in a minor version so that our users learn about the upcoming changes and migrate their code in advance. For more details, see [Oryx versioning](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/oryx-versioning.html).
+Oryx follows semantic versioning. We release patch versions for critical bug fixes, minor versions for new features or non-essential changes, and major versions for any breaking changes. When we make breaking changes, we also introduce deprecation warnings in a minor version so that our users learn about the upcoming changes and migrate their code in advance. For more details, see [Oryx versioning](/docs/dg/dev/frontend-development/{{page.version}}/oryx/getting-started/oryx-versioning.html).
 
 ## Branch organization
 
@@ -27,7 +27,7 @@ Code that gets merged into master must be compatible with the latest minor relea
 2. Create a brunch based on the master.
 3. Run `npm install` in the repository root.  
 4. Add your changes. For more details, see [Development workflow](#development-workflow)
-5. If you’ve added code that should be tested, add tests.
+5. If you've added code that should be tested, add tests.
 6. Create a PR. Provide a clear and concise description of your changes in the PR's description.
 7. If the required checks are failing, look into fixing them.
 

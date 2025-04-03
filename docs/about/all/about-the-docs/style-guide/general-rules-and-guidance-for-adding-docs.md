@@ -1,6 +1,6 @@
 ---
 title: General rules and guidance for adding docs
-description: Learn how to style and format your docs.
+description: Understand the core fundamentals of contributing to the Spryker Documentation site and our general rules and guidance for adding articles.
 last_updated: Jul 18, 2022
 template: concept-topic-template
 redirect_from:
@@ -115,7 +115,7 @@ After creating a new document, you must add it to the sidebar navigation. Keep i
 
 ### Sidebars
 
-Each _product/realm_ set has its own sidebar, which is represented by a YAML file in the `[_data/sidebar](https://github.com/spryker/spryker-docs/tree/master/_data/sidebars)` directory. The sidebar name is `{product}_{realm}_sidebar.yml`. So, for example, for the marketplace user documentation, the sidebar file is called `marketplace_user_sidebar.html`. The sidebar consists of the list of files that are present in the navigation. As a best practice, as soon as you create a new page, add it to your sidebar (so you don’t forget about the page).
+Each _product/realm_ set has its own sidebar, which is represented by a YAML file in the `[_data/sidebar](https://github.com/spryker/spryker-docs/tree/master/_data/sidebars)` directory. The sidebar name is `{product}_{realm}_sidebar.yml`. So, for example, for the marketplace user documentation, the sidebar file is called `marketplace_user_sidebar.html`. The sidebar consists of the list of files that are present in the navigation. As a best practice, as soon as you create a new page, add it to your sidebar (so you don't forget about the page).
 
 ```
 - product: SCOS
@@ -134,10 +134,10 @@ Each _product/realm_ set has its own sidebar, which is represented by a YAML fil
 
 ### Creating landing pages for the main categories
 
-For each main category, like *Setup*, *Feature integration guides*, or *HowTos*, you can create an `index.md.` file. This lets you open category pages without specific files in the link. For example, let’s do that for the **Glue API guides** section of the developer guide:
+For each main category, like *Setup*, *Feature integration guides*, or *HowTos*, you can create an `index.md.` file. This lets you open category pages without specific files in the link. For example, let's do that for the **Glue API guides** section of the developer guide:
 
 1. In `docs/marketplace/dev/glue-api-guides`, add the `index.md` file. Make sure you specify the title in the file.
-2. In the `marketplace_dev_sidebar.yml` file, add the URL for the **Glue API guides** element. You don’t have to write `index.html` at the end of the link, the link works without it:
+2. In the `marketplace_dev_sidebar.yml` file, add the URL for the **Glue API guides** element. You don't have to write `index.html` at the end of the link, the link works without it:
 
 ```
 - title: Glue API guides         
@@ -212,7 +212,7 @@ To delete an unnecessary or outdated page from the website, make sure to set up 
 This section contains most coming issues that you may face while working with docs and expected ways how to resolve the problem.
 
 ### Filename too long in Git for Windows
-If you face the “Filename too long” error, or an error like this one *“spryker.github.io/vendor/bundle/ruby/2.7.0/gems/jekyll-4.2.0/lib/jekyll/convertible.rb:222:in `write': No such file or directory @ rb_sysopen - E:/Jekyll/spryker.github.io/_site/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html (Errno::ENOENT)”*, run the following command to circumvent it:
+If you face the "Filename too long" error, or an error like this one *"spryker.github.io/vendor/bundle/ruby/2.7.0/gems/jekyll-4.2.0/lib/jekyll/convertible.rb:222:in `write': No such file or directory @ rb_sysopen - E:/Jekyll/spryker.github.io/_site/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html (Errno::ENOENT)"*, run the following command to circumvent it:
 
 ```bash
 git config --system core.longpaths true

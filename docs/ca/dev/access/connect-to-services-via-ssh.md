@@ -13,8 +13,7 @@ redirect_from:
 
 {% info_block warningBox "Restrictions apply" %}
 
-* To be able to connect to Spryker Services you will need to establish a VPN connection first. 
-* The below instruction are meant to be used by personnel connecting to the PaaS infrastructure and should not be used to connect other infrastructure components and systems to the PaaS infrastructure. 
+* The following instruction are for personnel to connect to the cloud infrastructure and should not be used to connect other infrastructure components and systems to the cloud infrastructure. 
 * We do not allow connections to RDS database outside of the SCOS application
 
 {% endinfo_block %}
@@ -36,15 +35,12 @@ To request SSH access, please request an IAM User to be created for you and add 
 
 ## Connect to a service
 
-{% info_block infoBox "Exemplary services" %}
+{% info_block infoBox "Example services" %}
 
 In the following instructions we use the Jenkins service as an example. Adjust the service name per your requirements.
 
 {% endinfo_block %}
 
-
-
-To connect to a service:
 
 1. Connect to the VPN using the provided OVPN profile
 2. Connect to the bastion host:

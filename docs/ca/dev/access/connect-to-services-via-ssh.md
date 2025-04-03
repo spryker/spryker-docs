@@ -18,19 +18,16 @@ redirect_from:
 
 {% endinfo_block %}
 
-We add your SSH public key to the [bastion host](https://docs.aws.amazon.com/managedservices/latest/userguide/using-bastions.html) during the onboarding, so you can access your environments' internal networks via SSH right after.
+We add your SSH public key to the [bastion host](https://docs.aws.amazon.com/managedservices/latest/userguide/using-bastions.html) during the onboarding, so you can access your environments' internal networks via SSH right after. Bastion is the only instance you can connect to via SSH.
 
 You can use SSH in two ways:
 
-1. Connect to the bastion host and, subsequently, connect to other supported infrastructure components
-2. Set up SSH port forwarding through bastion host to access a specific service from your computer.
-{% info_block infoBox "Connecting to instances" %}
+* Connect to the bastion host and, subsequently, connect to other supported infrastructure components
+* Set up SSH port forwarding through bastion host to access a specific service from your computer
 
-Bastion is the only instance you can connect to via SSH.
-
-{% endinfo_block %}
 
 ## Prerequisites
+
 To request SSH access, please request an IAM User to be created for you and add your SSH Key to the request. VPN access will be provisioned to you automatically. You can request an IAM User to be provisioned in our [Support Portal](https://support.spryker.com/s/case-funnel-problem) (Infrastructure Change Request/Access Management)
 
 ## Connect to a service

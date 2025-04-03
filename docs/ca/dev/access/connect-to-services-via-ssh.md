@@ -42,18 +42,17 @@ In the following instructions we use the Jenkins service as an example. Adjust t
 1. Connect to the VPN using the provided OVPN profile
 2. Connect to the bastion host:
     1. In the AWS Management Console, go to **Services** > **EC2** > **Instances**.
-    2. Select *{environment_name}-bastion*.
+    2. Select **{environment_name}-bastion**.
         This opens a pane at the bottom of the page.
-    3. Copy the value of the *Public IPv4 address* field.
+    3. Copy the value of the **Public IPv4 address** field.
     4. Connect to the copied IP address via SSH.
-3. In the AWS Management Console, find the endpoint to connect to a service endpoint
+3. In the AWS Management Console, find the endpoint to connect to a service endpoint:
     1. Go to **Services** > **Route53** > **Hosted Zones**.
     2. Select the desired hosted zone.
-    3. Enter *jenkins* in the search field and press *Enter*.
-    4. Copy the value of the *Value/Route traffic to* field.
-5. Connect to the copied endpoint via SSH.
-
-6. Optional: Set up SSH port forwarding:
+    3. Enter **jenkins** in the search field and press **Enter**.
+    4. Copy the value of the **Value/Route traffic to** field.
+4. Connect to the copied endpoint via SSH.
+5. Optional: Set up SSH port forwarding:
     1. In the bastion host, get the IP address of the endpoint by resolving the copied endpoint:
     ```shell
     dig +short staging.cxg4btdhhsrr.eu-central-1.example.amazonaws.com
@@ -63,3 +62,43 @@ In the following instructions we use the Jenkins service as an example. Adjust t
     ```shell
     ssh -A ubuntu@<private_bastion_ip> -L 0.0.0.0:8080:<private_scheduler_ip>:80
     ```
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

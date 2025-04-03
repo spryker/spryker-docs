@@ -9,7 +9,7 @@ Follow the steps below to install the Alternative Products + Discontinued Produc
 
 ### Prerequisites
 
-Please review and install the necessary features before beginning the integration.
+Install the required features:
 
 | NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |

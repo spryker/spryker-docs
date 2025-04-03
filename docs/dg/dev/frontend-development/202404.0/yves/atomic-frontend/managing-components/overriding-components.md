@@ -157,7 +157,7 @@ export default class SimpleCarouselExtended extends SimpleCarousel {
 
         super.slide();
 
-        // If we've reached the last image, prevent automatic transfer to the 1st one
+        // If we've reached the last image, prevent automatic transfer to the first one
         if (this.viewCurrentIndex + 1 === this.viewsCount) {
             this.viewCurrentIndex = this.viewCurrentIndex -1;
         }

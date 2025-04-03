@@ -61,7 +61,7 @@ Make sure that the following changes have been applied in transfer objects, see 
 
 {% info_block infoBox %}
 
-`ContentBannerResourceRoutePlugin` GET, `ContentProductAbstractListRoutePlugin` GET verbs are protected resources. Please refer to the Configure section of the *Configure documentation*.
+`ContentBannerResourceRoutePlugin` GET, `ContentProductAbstractListRoutePlugin` GET verbs are protected resources. Refer to the Configure section of the *Configure documentation*.
 
 {% endinfo_block %}
 

@@ -578,7 +578,7 @@ To do it, add the `NewRelicMonitoringExtensionPlugin` by creating the class `src
 ​
 /**
  * This file is part of the Spryker Commerce OS.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 ​
 namespace Pyz\Service\Monitoring;
@@ -607,7 +607,7 @@ Next, create the class `src/Pyz/Service/NewRelic/Plugin/NewRelicMonitoringExtens
 ​
 /**
  * MIT License
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 ​
 namespace Pyz\Service\NewRelic\Plugin;

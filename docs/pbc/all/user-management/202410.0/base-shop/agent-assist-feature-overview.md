@@ -48,7 +48,13 @@ This is how the Agent Assist feature works on the Spryker Demo Shop Storefront:
 
 
 Check out this video tutorial on setting up an Agent user in a B2B company account:
-<iframe src="https://spryker.wistia.com/medias/5zraqrascy" title="Agent Assist" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/user-management/base-shop/agent-assist-feature-overview.md/Agent+Assist+v2.0-5zraqrascy.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
 
 ## Related Business User documents
 

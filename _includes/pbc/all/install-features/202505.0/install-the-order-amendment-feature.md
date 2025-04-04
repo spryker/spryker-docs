@@ -1418,7 +1418,7 @@ Install the required modules using Composer:
 composer require spryker/price-product-offer-sales-order-amendment-connector: "^0.1.0" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 

@@ -1,11 +1,12 @@
-version: '2'
 services:
-  server:
+  jekyll:
     build:
       context: .
-      dockerfile: Dockerfile
-    image: result/latest
-    ports:
-      - "4000:4000"
+      dockerfile: docker/Dockerfile
+    container_name: jekyll_dev
     volumes:
-      - ".:/src"
+      - .:/usr/src/app      # Mount the current directory to the container workdir
+      - /usr/src/app/vendor # (Optional) persist bundle installs in a volume
+    ports:
+      - "4000:4000"         # Forward Jekyll's web server port to host
+      - "35729:35729"       # Forward LiveReload port for browser auto-refresh

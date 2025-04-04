@@ -70,6 +70,19 @@ This enhances security by preventing the reuse of old codes in case they were in
 
 The duration of the grace period is configurable. To modify the timeout settings and apply them to specific forms, refer the link: [Install the Multi-Factor Authentication Feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html#configure-code-validity-time).
 
+## Brute Force Protection
+
+To further enhance account security, the Multi-Factor Authentication system includes protection against brute force attacks. This mechanism limits the number of failed MFA code entry attempts a customer can make within a single validation flow.
+
+Once the configurable limit of incorrect attempts is reached:
+- The system automatically resets the MFA flow.
+- The page is refreshed, and the customer must start the authentication process again from the beginning.
+- All previously generated codes become invalid.
+
+This prevents attackers from repeatedly guessing codes and ensures that users must successfully pass each MFA step within a limited number of tries.
+
+You can configure the allowed number of attempts in your project settings. For details on how to adjust these values, refer to: [Install the Multi-Factor Authentication Feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html#configure-brute-force-protection-limit).
+
 ## Multi-Factor Authentication Methods
 
 The following MFA methods are available in Spryker:

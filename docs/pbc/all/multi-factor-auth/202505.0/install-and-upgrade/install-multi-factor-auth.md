@@ -22,7 +22,7 @@ To start the integration, make sure that the following features have been instal
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker/multi-factor-auth:"^1.0.0" spryker/multi-factor-auth-extension:"^1.0.0" --update-with-dependencies
+composer require spryker/multi-factor-auth:"^0.1.0" spryker/multi-factor-auth-extension:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -52,9 +52,9 @@ use Spryker\Zed\MultiFactorAuth\MultiFactorAuthConfig as SprykerMultiFactorAuthC
 
 class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 {
-    public function getCodeValidityTtl(): int
+    public function getCustomerCodeLength(): int
     {
-        return 30;
+        return 6;
     }
 }
 ```
@@ -75,7 +75,7 @@ use Spryker\Zed\MultiFactorAuth\MultiFactorAuthConfig as SprykerMultiFactorAuthC
 
 class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 {
-    public function getCodeValidityTtl(): int
+    public function getCustomerCodeValidityTtl(): int
     {
         return 30;
     }
@@ -83,7 +83,29 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 ```
 </details>
 
-### 2.3) Configure enabled routes and forms
+### 2.3) Configure brute-force protection limit
+
+To configure the number of failed attempts a customer can make to enter the authentication code in order to prevent brute force attacks, extend the `MultiFactorAuthConfig` class in your project:
+
+<details>
+<summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
+
+```php
+namespace Pyz\Zed\MultiFactorAuth;
+
+use Spryker\Zed\MultiFactorAuth\MultiFactorAuthConfig as SprykerMultiFactorAuthConfig;
+
+class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
+{
+    public function getCustomerAttemptLimit(): int
+    {
+        return 3;
+    }
+}
+```
+</details>
+
+### 2.4) Configure enabled routes and forms
 
 To specify which routes and forms should require Multi-Factor Authentication (MFA), extend the `MultiFactorAuthConfig` class in your project and configure the necessary entries:
 
@@ -125,10 +147,11 @@ console transfer:generate
 
 Make sure that the following changes have been applied in the database:
 
-| DATABASE ENTITY                      | TYPE   | EVENT   |
-|--------------------------------------|--------|---------|
-| spy_customer_multi_factor_auth       | table  | added   |
-| spy_customer_multi_factor_auth_codes | table  | added   |
+| DATABASE ENTITY                               | TYPE  | EVENT |
+|-----------------------------------------------|-------|-------|
+| spy_customer_multi_factor_auth                | table | added |
+| spy_customer_multi_factor_auth_codes          | table | added |
+| spy_customer_multi_factor_auth_codes_attempts | table | added |
 
 {% endinfo_block %}
 
@@ -141,6 +164,7 @@ Make sure the following changes have been applied in transfer objects:
 | MultiFactorAuth                   | class    | created | src/Generated/Shared/Transfer/MultiFactorAuthTransfer                   |
 | MultiFactorAuthCode               | class    | created | src/Generated/Shared/Transfer/MultiFactorAuthCodeTransfer               |
 | MultiFactorAuthTypesCollection    | class    | created | src/Generated/Shared/Transfer/MultiFactorAuthTypesCollectionTransfer    |
+| MultiFactorAuthValidationRequest   | class    | created | src/Generated/Shared/Transfer/MultiFactorAuthValidationRequestTransfer |
 | MultiFactorAuthValidationResponse | class    | created | src/Generated/Shared/Transfer/MultiFactorAuthValidationResponseTransfer |
 
 {% endinfo_block %}
@@ -155,16 +179,22 @@ Append glossary according to your configuration:
 ```csv
 multi_factor_auth.multi_factor_auth.list.title,"Set up Multi-Factor Authentication",en_US
 multi_factor_auth.multi_factor_auth.list.title,"Multi-Faktor-Authentifizierung einrichten",de_DE
-multi_factor_auth.error.invalid_code,"Invalid multi-factor authentication code",en_US
-multi_factor_auth.error.invalid_code,"Ungültiger Multi-Faktor-Authentifizierungscode",de_DE
-multi_factor_auth.code.validation,"Code Validation",en_US
-multi_factor_auth.code.validation,"Code-Validierung",de_DE
+multi_factor_auth.error.invalid_code,"Invalid multi-factor authentication code. You have %remainingAttempts% attempt(s) left.",en_US
+multi_factor_auth.error.invalid_code,"Ungültiger Multi-Faktor-Authentifizierungscode. Sie haben %remainingAttempts% Versuch(e) verbleiben.",de_DE
+multi_factor_auth.error.attempts_exceeded,"You have exceeded the number of allowed attempts. Please try again after the page has been refreshed.",en_US
+multi_factor_auth.error.attempts_exceeded,"Sie haben die Anzahl der zulässigen Versuche überschritten. Bitte versuchen Sie es erneut, nachdem die Seite aktualisiert wurde.",de_DE
+multi_factor_auth.error.expired_code,"The multi-factor authentication code has expired. Please try again.",en_US
+multi_factor_auth.error.expired_code,"Der Multi-Faktor-Authentifizierungscode ist abgelaufen. Bitte versuchen Sie es erneut.",de_DE
 multi_factor_auth.error.authentication_method_not_selected,"Unable to proceed. A multi-factor authentication method must be selected. Please refresh the page and try again or contact support if the problem persists.",en_US
 multi_factor_auth.error.authentication_method_not_selected,"Kann nicht fortgesetzt werden. Es muss eine Multi-Faktor-Authentifizierungsmethode ausgewählt werden. Bitte aktualisieren Sie die Seite und versuchen Sie es erneut oder wenden Sie sich an den Support, wenn das Problem weiterhin besteht.",de_DE
 multi_factor_auth.method.select,"Select Authentication Method",en_US
 multi_factor_auth.method.select,"Authentifizierungsmethode auswählen",de_DE
-multi_factor_auth.enter_code_for_method,"Enter Authentication Code for %type%",en_US
-multi_factor_auth.enter_code_for_method,"Authentifizierungscode für %type% eingeben",de_DE
+multi_factor_auth.code.validation,"Enter Authentication Code",en_US
+multi_factor_auth.code.validation,"Authentifizierungscode eingeben",de_DE
+multi_factor_auth.enter_code_for_method,"We sent the authentication code to your %type%. Type it below to continue.",en_US
+multi_factor_auth.enter_code_for_method,"Wir haben Ihnen den Authentifizierungscode per %type% gesendet. Geben Sie ihn unten ein, um fortzufahren.",de_DE
+multi_factor_auth.access_denied,"Access is strictly restricted until multi-factor authentication verification is successfully completed. Please ensure that JavaScript is enabled in your browser, refresh the page, and try again. If the problem persists, you may need to complete the multi-factor authentication process again.",en_US
+multi_factor_auth.access_denied,"Zugriff ist bis zur erfolgreichen Vollziehung der Multi-Faktor-Authentifizierung eingeschränkt. Bitte stellen Sie sicher, dass JavaScript in Ihrem Browser aktiviert ist, die Seite aktualisieren und erneut versuchen. Wenn das Problem weiterhin besteht, sollten Sie die Multi-Faktor-Authentifizierungprozess erneut abschließen.",de_DE
 multi_factor_auth.activation.success,"The multi-factor authentication has been activated.",en_US
 multi_factor_auth.activation.success,"Die Multi-Faktor-Authentifizierung wurde aktiviert.",de_DE
 multi_factor_auth.deactivation.success,"The multi-factor authentication has been deactivated.",en_US
@@ -175,6 +205,12 @@ multi_factor_auth.deactivation.error,"The multi-factor authentication could not 
 multi_factor_auth.deactivation.error,"Die Multi-Faktor-Authentifizierung konnte nicht deaktiviert werden.",de_DE
 multi_factor_auth.selection.error.required,"Please choose how you would like to verify your identity.",en_US
 multi_factor_auth.selection.error.required,"Bitte wählen Sie aus, wie Sie Ihre Identität überprüfen möchten.",de_DE
+multi_factor_auth.continue,"Continue",en_US
+multi_factor_auth.continue,"Fortfahren",de_DE
+multi_factor_auth.verify_code,"Verify Code",en_US
+multi_factor_auth.verify_code,"Code überprüfen",de_DE
+multi_factor_auth.required_options,"You must choose one option to continue!",en_US
+multi_factor_auth.required_options,"Sie müssen eine Option auswählen, um fortzufahren!",de_DE
 ```
 </details>
 
@@ -223,14 +259,15 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 </details>
 
-### 4) Set up behavior
+### 6) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                         | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                           |
-|------------------------------------------------|------------------------------------------------------------|---------------|---------------------------------------------------------------------|
-| CustomerMultiFactorAuthenticationHandlerPlugin | Handles customer multi-factor authentication during login  |               | Spryker\Yves\MultiFactorAuth\Plugin\AuthenticationHandler\Customer  |
-| MultiFactorAuthCustomerRouteProviderPlugin     | Provides routes for customer multi-factor auth             |               | Spryker\Yves\MultiFactorAuth\Plugin\Router\Customer  |
+| PLUGIN                                         | SPECIFICATION                                             | PREREQUISITES | NAMESPACE                                                           |
+|------------------------------------------------|-----------------------------------------------------------|---------------|---------------------------------------------------------------------|
+| CustomerMultiFactorAuthenticationHandlerPlugin | Handles customer multi-factor authentication during login |               | Spryker\Yves\MultiFactorAuth\Plugin\AuthenticationHandler\Customer  |
+| MultiFactorAuthCustomerRouteProviderPlugin     | Provides routes for customer multi-factor auth            |               | Spryker\Yves\MultiFactorAuth\Plugin\Router\Customer  |
+| MultiFactorAuthExtensionFormPlugin             | Provides form validation against corrupted requests       |               | Spryker\Yves\MultiFactorAuth\Plugin\Form |
 
 <details>
 <summary>src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php</summary>
@@ -270,6 +307,77 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
             new MultiFactorAuthCustomerRouteProviderPlugin(),
         ];
     }
+}
+```
+</details>
+
+<details>
+<summary>src/Pyz/Yves/Router/RouterDependencyProvider.php</summary>
+
+```php
+namespace Pyz\Yves\Form;
+
+use Spryker\Yves\Form\FormDependencyProvider as SprykerFormDependencyProvider;
+use Spryker\Yves\MultiFactorAuth\Plugin\Form\MultiFactorAuthExtensionFormPlugin;
+
+class FormDependencyProvider extends SprykerFormDependencyProvider
+{
+    protected function getFormPlugins(): array
+    {
+        return [
+            new MultiFactorAuthExtensionFormPlugin(),
+        ];
+    }
+}
+```
+</details>
+
+### 7) Set up the frontend
+
+To set up the frontend, you need to build the assets for the Multi-Factor Authentication feature. This step is crucial to ensure that the frontend components are properly integrated and functional.
+
+<details>
+<summary>frontend/settings.json</summary>
+
+```javascript
+{
+    const globalSettings = {
+        ...
+        paths: {
+            ...
+            sprykerCore: './vendor/spryker/spryker/Bundles',
+            ...
+        };
+        
+    const paths = {
+        ...
+        sprykerCore: globalSettings.paths.sprykerCore,   
+        ...
+        };
+
+    return {
+        ...
+        find: {
+            componentEntryPoints: {
+                dirs: [
+                    ...
+                    join(globalSettings.context, paths.sprykerCore),
+                    ...
+                ],
+                ...
+            },
+            componentStyles: {
+                dirs: [
+                    ...
+                    join(globalSettings.context, paths.sprykerCore),
+                    ...
+                ],
+                ...
+            },
+            ...
+        },
+        ... 
+    };
 }
 ```
 </details>

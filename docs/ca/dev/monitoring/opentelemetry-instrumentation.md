@@ -362,12 +362,6 @@ To do this, the request is checked during initialization. For HTTP requests, if 
 The same logic applies to console commands, but with a separate configuration value for finer control.  
 
 
-### Opening span sampling
-When span tried to start check take place if it should be started, by the same algorithm as trace sampling was done. The only difference is that different configuration value is used and the random number is generated on each and every span starting.
-Not all spans are equal so different probabilities for different types of spans are used. You can read about criticality of spans below.
-If decision was to not sample a span, an empty one will be opened. Empty spans are just a placeholder that are used to build a tree properly. They will appear in the trace in any case.
-
-
 ### Opening span sampling  
 
 On start, each span is checked whether it should be started using the algorithm similar to that used for trace sampling. The differences between algorithms are as follows:  
@@ -533,16 +527,6 @@ $config[\Spryker\Shared\Opentelemetry\OpentelemetryConstants::SHOW_HTTP_METHOD_I
 ```
 
 ## Recommendations
-
-Due to the fact that PHP code is used to instrument codebase, you should consider performance. Tracing is an expensive operation and can slow down your application. Here are some recommendations to avoid performance issues:
-
-Minimize amount of generated spans per request. OTel documentation recommends to have no more than 1000 of them. So you can skip some spans via configuration that are not relevant to you. Don't be afraid, errors will be processed even if the method was not instrumented because Error Event will be attached to the root span.
-
-Use sampling to not get a full trace every time. Check configuration section for the reference.
-
-Skip some traces. You may not want to get a full trace for all of your transactions. You can define a probability of detailed trace overview by setting a probability via `OTEL_TRACE_PROBABILITY` env variable. Be advised that Trace still will be processed and root span will be there for you. Also requests that are changing something in your application (POST, DELETE, PUT, PATCH) considered as critical and will be processed anyway.
-
-
 
 
 Tracing is resource-intensive and can slow down your application. Follow these recommendations to minimize performance impact:

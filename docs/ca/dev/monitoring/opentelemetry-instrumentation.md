@@ -7,8 +7,6 @@ last_updated: Feb 1, 2025
 
 This document describes how to configure and instrument application for OpenTelemetry (OTel). It contains a brief overview of basic OTel concepts, but reading [OpenTelemetry documentation](https://opentelemetry.io/docs/concepts/) first is recommended.
 
-![High-level overview of OpenTelemetry](/images/otel-overview.png)
-
 ## Convention
 The current implementation follows [OpenTelemetry Semantic Conventions 1.30.0](https://opentelemetry.io/docs/specs/semconv/).
 

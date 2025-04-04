@@ -35,6 +35,6 @@ Magnolia - the CMS that connects content and commerce. Magnolia CMS is a platfor
 See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
 ---
-We have an agreement with this technology provider. If you want to use it in your project, please contact us.
+We have an agreement with this technology provider. If you want to use it in your project,  contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

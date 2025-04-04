@@ -1,0 +1,7 @@
+extends: existence  
+message: "'%s' is unnecessary. Keep instructions direct and clear."  
+level: error  
+scope: paragraph  
+ignorecase: true  
+tokens:  
+  - '\b(please|kindly)\b'

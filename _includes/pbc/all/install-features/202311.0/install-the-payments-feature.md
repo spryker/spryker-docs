@@ -272,5 +272,5 @@ Make sure that:
 
 ### 5) Additional cleanups:
 
-The `SalesPaymentMethodTypeInstallerPlugin` plugin was removed, please use the `PaymentDataImport module` instead.
-The `PaymentConfig::getSalesPaymentMethodTypes()` config method was removed, please use the `PaymentDataImport` module instead.
+The `SalesPaymentMethodTypeInstallerPlugin` plugin was removed,  use the `PaymentDataImport module` instead.
+The `PaymentConfig::getSalesPaymentMethodTypes()` config method was removed,  use the `PaymentDataImport` module instead.

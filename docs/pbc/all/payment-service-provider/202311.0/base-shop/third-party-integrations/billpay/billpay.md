@@ -29,7 +29,7 @@ BillPay is the DACH market leader for the preferred, local payment methods Invoi
 See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
 ---
-For further information on this partner and integration into Spryker, please contact us.
+For further information on this partner and integration into Spryker,  contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>
 
@@ -58,5 +58,5 @@ To install the module, use composer, [https://getcomposer.org/](https://getcompo
 
 **Billpay visuals**:
 
-If you want to use Billpay visuals on your website, please download them directly from Billpay [https://www.billpay.de/en/shopintegration/downloads/](https://www.billpay.de/en/shopintegration/downloads/).
+If you want to use Billpay visuals on your website,  download them directly from Billpay [https://www.billpay.de/en/shopintegration/downloads/](https://www.billpay.de/en/shopintegration/downloads/).
 --->

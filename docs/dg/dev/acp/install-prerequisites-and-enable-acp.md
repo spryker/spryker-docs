@@ -162,7 +162,7 @@ Make sure that no deprecated plugins are enabled. Ideally, the content of each o
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\MessageBroker;
@@ -248,7 +248,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\MessageBrokerAws;
@@ -325,7 +325,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\OauthClient;
@@ -372,7 +372,7 @@ class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\OauthClient;
@@ -411,7 +411,7 @@ class OauthClientConfig extends SprykerOauthClientConfig
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\KernelApp;

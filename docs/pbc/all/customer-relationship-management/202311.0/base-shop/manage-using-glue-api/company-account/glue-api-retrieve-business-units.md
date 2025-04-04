@@ -225,9 +225,9 @@ To retrieve a business unit, send the request:
 | companies | name | String | Specifies the company name. |
 | companies | isActive | Boolean | Indicates whether the company is active. |
 | companies | status | String | Specifies the status of the company. Possible values: *Pending*, *Approved* or *Denied*. |
-| company-business-unit-addresses | address1 | String | Specifies the 1st line of the business unit address. |
-| company-business-unit-addresses | address2 | String | Specifies the 2nd line of the business unit address. |
-| company-business-unit-addresses | address3 | String | Specifies the 3rd line of the business unit address. |
+| company-business-unit-addresses | address1 | String | Specifies the first line of the business unit address. |
+| company-business-unit-addresses | address2 | String | Specifies the second line of the business unit address. |
+| company-business-unit-addresses | address3 | String | Specifies the third line of the business unit address. |
 | company-business-unit-addresses | zipCode  | String | Specifies the ZIP code. |
 | company-business-unit-addresses | city | String | Specifies the city. |
 | company-business-unit-addresses | phone | String | Specifies the phone number of the business unit. |

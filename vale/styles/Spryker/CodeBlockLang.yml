@@ -1,0 +1,6 @@
+extends: raw
+message: "Code blocks should specify a language for proper syntax highlighting."
+level: error
+scope: raw
+tokens:
+  - '^```(\s*?)$'

@@ -3,6 +3,8 @@ title: Spryker Monitoring Integration
 description:
 last_updated: Feb 25, 2025
 template: howto-guide-template
+redirect_from:
+  - /docs/ca/dev/monitoring/spryker-monitoring-integration.html
 ---
 
 The Spryker Monitoring Integration provides advanced monitoring for applications and systems. Leveraging [OpenTelemetry](https://opentelemetry.io/), this solution enables seamless connectivity and forwarding of telemetry data, including traces and health status metrics, to OpenTelemetry-compatible monitoring platforms. This integration facilitates near real-time tracking of application performance and monitoring of system health status.
@@ -98,7 +100,7 @@ We'll guide you through the setup process once you submit the request.
 
 ### Instrumenting your application
 
-To send telemetry data to an APM tool, you need to instrument the application using OTel. <!-- For information on instrumenting your application, see [OpenTelemetry instrumentation](/docs/ca/dev/monitoring/opentelemetry-instrumentation.html). -->
+To send telemetry data to an APM tool, you need to instrument the application using OTel. For information on instrumenting your application, see [OpenTelemetry instrumentation](/docs/ca/dev/monitoring/spryker-monitoring-integration/opentelemetry-instrumentation.html).
 
 We're also providing expert services for instrumentation setups. If you need help with instrumentation, contact your Customer Success Manager.
 

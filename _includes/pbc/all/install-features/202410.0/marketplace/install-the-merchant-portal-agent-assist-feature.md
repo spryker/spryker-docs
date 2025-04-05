@@ -39,8 +39,8 @@ Make sure the following modules have been installed:
 | CONFIGURATION                                                  | SPECIFICATION                                                                                                    | NAMESPACE                |
 |----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|--------------------------|
 | AclConstants::ACL_DEFAULT_RULES                                | Default ACL rules.                                                           | Spryker\Shared\Acl       |
-| AclMerchantAgentConfig::MERCHANT_AGENT_ACL_BUNDLE_ALLOWED_LIST | A collection of bundles which a merchant agent has ACL access to.                                                    | Pyz\Zed\AclMerchantAgent |
-| AclConfig::getInstallerRules()                                 | The default ACL rules that are added to the respective database table after executing `setup:init-db`. | Pyz\Zed\Acl              |
+| AclMerchantAgentConfig::MERCHANT_AGENT_ACL_BUNDLE_ALLOWED_LIST | A collection of bundles a merchant agent has ACL access to.                                                    | Pyz\Zed\AclMerchantAgent |
+| AclConfig::getInstallerRules()                                 | The default ACL rules that are added to a respective database table after executing `setup:init-db`. | Pyz\Zed\Acl              |
 
 **config/Shared/config_default.php**
 ```php
@@ -260,7 +260,7 @@ Make sure the following changes have been triggered in transfer objects:
 
 1. Append the glossary:
 
-```
+```csv
 agent_security_blocker_merchant_portal_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
 agent_security_blocker_merchant_portal_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
 ```

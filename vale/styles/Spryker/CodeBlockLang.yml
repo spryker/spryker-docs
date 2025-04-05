@@ -1,6 +1,8 @@
-extends: raw
-message: "Code blocks should specify a language for proper syntax highlighting."
+extends: existence
+message: "Code blocks should specify a language after the opening backticks (e.g., ```js)."
 level: error
 scope: raw
+ignorecase: true
 tokens:
-  - '^```(\s*?)$'
+  - '^```[ \t]*$'
+

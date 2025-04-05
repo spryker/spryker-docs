@@ -143,7 +143,7 @@ class AclMerchantAgentConfig extends SprykerAclMerchantAgentConfig
 
 2. Execute the registered installer plugins:
 
-```bash
+```
 console setup:init-db
 ```
 
@@ -284,16 +284,16 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------------|
 | AgentMerchantPortalSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with agent merchant portal settings.                                    |               | Spryker\Client\AgentSecurityBlockerMerchantPortal\Plugin\SecurityBlocker                  |
 | ZedAgentMerchantUserSecurityPlugin                                    | Extends the security service with the AgentMerchantUser firewall.                                                       |               | Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\Security                  |
-| SecurityBlockerAgentMerchantPortalEventDispatcherPlugin               | Denies an agent access after exceeding the limit of failed merchant portal agent login attempts.                        |               | Spryker\Zed\AgentSecurityBlockerMerchantPortalGui\Communication\Plugin\EventDispatcher    |
-| MerchantAgentAclAccessCheckerStrategyPlugin                           | Checks if the merchant agent ACL access checker strategy is applicable for the given user and rule.                     |               | Spryker\Zed\AclMerchantAgent\Communication\Plugin\Acl                                     |
+| SecurityBlockerAgentMerchantPortalEventDispatcherPlugin               | Denies access to an agent after exceeding the limit of failed merchant portal agent login attempts.                        |               | Spryker\Zed\AgentSecurityBlockerMerchantPortalGui\Communication\Plugin\EventDispatcher    |
+| MerchantAgentAclAccessCheckerStrategyPlugin                           | Checks if the merchant agent ACL access checker strategy is applicable for a given user and rule.                     |               | Spryker\Zed\AclMerchantAgent\Communication\Plugin\Acl                                     |
 | AgentMerchantUserCriteriaExpanderPlugin                               | Sets `null` for `MerchantUserCriteria.status` and `MerchantUserCriteria.merchantStatus` for Merchant agents.            |               | Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\SecurityMerchantPortalGui |
-| MerchantAgentUserQueryCriteriaExpanderPlugin                          | Expands the user's table query criteria with the `isMerchantAgent` condition.                                           |               | Spryker\Zed\MerchantAgent\Communication\Plugin\User                                       |
-| MerchantAgentUserFormExpanderPlugin                                   | Expands the user's form with the `is_merchant_agent` checkbox.                                                          |               | Spryker\Zed\MerchantAgentGui\Communication\Plugin\User                                    |
-| MerchantAgentUserTableConfigExpanderPlugin                            | Expands the user's table with the `isMerchantAgent` column.                                                             |               | Spryker\Zed\MerchantAgentGui\Communication\Plugin\User                                    |
-| MerchantAgentUserTableDataExpanderPlugin                              | Expands the user's `isMerchantAgent` table column with data.                                                            |               | Spryker\Zed\MerchantAgent\Communication\Plugin\User                                       |
+| MerchantAgentUserQueryCriteriaExpanderPlugin                          | Expands a user's table query criteria with the `isMerchantAgent` condition.                                           |               | Spryker\Zed\MerchantAgent\Communication\Plugin\User                                       |
+| MerchantAgentUserFormExpanderPlugin                                   | Expands a user's form with the `is_merchant_agent` checkbox.                                                          |               | Spryker\Zed\MerchantAgentGui\Communication\Plugin\User                                    |
+| MerchantAgentUserTableConfigExpanderPlugin                            | Expands a user's table with the `isMerchantAgent` column.                                                             |               | Spryker\Zed\MerchantAgentGui\Communication\Plugin\User                                    |
+| MerchantAgentUserTableDataExpanderPlugin                              | Expands a user's `isMerchantAgent` table column with data.                                                            |               | Spryker\Zed\MerchantAgent\Communication\Plugin\User                                       |
 | BackofficeAllowedAclGroupMerchantUserTableDataExpanderPlugin          | Sets `null` to the response data under the `assistUser` keys for users belonging to ACL groups with Back Office access. |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AgentDashboardMerchantPortalGui        |
-| MerchantUserTwigPlugin                                                | Adds 'merchantName' Twig global variable.                                                                               |               | Spryker\Zed\MerchantUser\Communication\Plugin\Twig                                        |
-| MerchantUserSecurityTokenUpdateMerchantUserPostChangePlugin           | Rewrites Symfony security token for merchant users with `MerchantUser` and without `IS_IMPERSONATOR` roles granted.     |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui          |
+| MerchantUserTwigPlugin                                                | Adds the `merchantName` Twig global variable.                                                                               |               | Spryker\Zed\MerchantUser\Communication\Plugin\Twig                                        |
+| MerchantUserSecurityTokenUpdateMerchantUserPostChangePlugin           | Rewrites the Symfony security token for merchant users with `MerchantUser` and without `IS_IMPERSONATOR` roles granted.     |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui          |
 
 **src/Pyz/Client/SecurityBlocker/SecurityBlockerDependencyProvider.php**
 
@@ -322,18 +322,12 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
 }
 ```
 
-**src/Pyz/Zed/Security/SecurityDependencyProvider.php**
-
 {% info_block infoBox %}
 
-If `SecurityDependencyProvider::getSecurityPlugins()` already contains plugins, add the `ZedAgentMerchantUserSecurityPlugin` **first** in the list.
+If `SecurityDependencyProvider::getSecurityPlugins()` already contains plugins, add the `ZedAgentMerchantUserSecurityPlugin` as *first* in the list.
 
 {% endinfo_block %}
-
-```php
-
-{% endinfo_block %}
-
+**src/Pyz/Zed/Security/SecurityDependencyProvider.php**
 ```php
 <?php
 

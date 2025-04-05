@@ -1,0 +1,23 @@
+name: Lint Markdown
+
+on:
+  pull_request:
+    paths:
+      - '**.md'
+
+jobs:
+  markdownlint:
+    name: Markdownlint Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run markdownlint
+        uses: nosborn/github-action-markdownlint@v3
+        with:
+          config: .markdownlint.json
+          files: |
+            docs/
+            _includes/pbc/

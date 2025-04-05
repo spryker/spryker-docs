@@ -1,8 +1,7 @@
 extends: existence
-message: "Code blocks should specify a language after the opening backticks (e.g., ```js)."
+message: "Code block is missing a language identifier (e.g., '```bash')."
 level: error
 scope: raw
 ignorecase: true
 tokens:
-  - '^```[ \t]*$'
-
+  - '^```[\s]*$'

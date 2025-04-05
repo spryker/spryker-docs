@@ -280,7 +280,7 @@ P&S plays a major role in data denormalization and distribution to Spryker store
 
 Some of Spryker partners applied P&S features to distribute data over picking devices (barcode scanners) in a warehouse. The picking devices accessed the Spryker catalog as their local one, enabling them to properly function with low quality or missing network access.
 
-In other cases, P&S enabled customer projects to keep their main backend systems with customer data in one region (eg Germany), while distributing local catalogs over the world. This enabled them on one hand to keep customer data under data privacy constraints, and on other hand their buyers in Brazil can browse their catalogs (as "local") with blazing fast response times.
+In other cases, P&S enabled customer projects to keep their main backend systems with customer data in one region, such as Germany, while distributing local catalogs over the world. This enabled them on one hand to keep customer data under data privacy constraints, and on other hand their buyers in Brazil can browse their catalogs (as "local") with blazing fast response times.
 
 P&S inspires intelligent solutions and smart architecture designs!
 {% endinfo_block %}

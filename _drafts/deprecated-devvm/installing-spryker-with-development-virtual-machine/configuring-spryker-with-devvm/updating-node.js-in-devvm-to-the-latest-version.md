@@ -53,4 +53,4 @@ You can specify an exact version instead of *stable*: `sudo n [version]`. For ex
 
 2. Restart the console to apply the changes.
 
-That’s it. You now how the latest stable Node.js inside your devvm.
+That's it. You now how the latest stable Node.js inside your devvm.

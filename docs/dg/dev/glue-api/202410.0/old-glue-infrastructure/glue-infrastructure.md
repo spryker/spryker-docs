@@ -36,7 +36,7 @@ Consider studying the following documents before you begin:
 
 Logically, the Glue layer can be divided into 3 parts:
 * **GlueApplication module**
-    <br>The `GlueApplication` module provides a framework for constructing API resources. It intercepts all HTTP requests at resource URLs (e.g. `http://mysprykershop.com/resource/1`), handles call semantics, verifies requests, and also provides several utility interfaces that can be used to construct API responses.
+    <br>The `GlueApplication` module provides a framework for constructing API resources. It intercepts all HTTP requests at resource URLs–for example, `http://mysprykershop.com/resource/1`, handles call semantics, verifies requests, and also provides several utility interfaces that can be used to construct API responses.
 * **Resource modules**
     <br>Each `Resource` module implements a separate resource or a set of resources. Such a module handles requests to a particular resource and provides them with responses. In the process of doing so, the module can communicate with the Storage, Search or Spryker Commerce OS (Zed). The modules do not handle request semantics or rules. Their only task is to provide the necessary data in a format that can be converted by the `GlueApplication` module into an API response.
 * **Relationship modules**
@@ -70,7 +70,7 @@ The plugin must provide routing information for the following:
 
 | RESOURCE | DESCRIPTION |
 | --- | --- |
-| Resource Type | Type of the resource implemented by the current `Resource` module.  Resource types are extracted by Glue from the request URL. For example, if the URL is `/carts/1`, the resource type is `carts`. To be able to process calls to this URL, Glue will need a route plugin for the resource type _carts_. |
+| Resource Type | Type of the resource implemented by the current `Resource` module. Resource types are extracted by Glue from the request URL. For example, if the URL is `/carts/1`, the resource type is `carts`. To be able to process calls to this URL, Glue will need a route plugin for the resource type _carts_. |
 | Controller Name | Name of the controller that handles a specific resource type. |
 | Mapping of Verbs to Actions | List of REST verbs that the resource supports and the respective controller actions used to handle them. Allowed verbs are GET, POST, PATCH, and DELETE. The OPTIONS verb is supported by all resources and should not be mapped. |
 | Resource Attributes <br>Transfer Class Name | FQCN of the Resource Attributes Transfer that is used to handle request attributes for the given resource type. |
@@ -280,7 +280,7 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
                 "isDiscontinued": false,
                 "discontinuedNote": null,
                 "name": "Sony Cyber-shot DSC-W830",
-                "description": "Styled for your pocket  Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing it, and slip in your pocket. Shooting great photos and videos is easy with the W800. Buttons are positioned for ease of use, while a dedicated movie button makes shooting movies simple. The vivid 2.7-type Clear Photo LCD display screen lets you view your stills and play back movies with minimal effort. Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound. Breathe new life into a picture by using built-in Picture Effect technology. There’s a range of modes to choose from – you don’t even have to download image-editing software.",
+                "description": "Styled for your pocket  Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing it, and slip in your pocket. Shooting great photos and videos is easy with the W800. Buttons are positioned for ease of use, while a dedicated movie button makes shooting movies simple. The vivid 2.7-type Clear Photo LCD display screen lets you view your stills and play back movies with minimal effort. Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound. Breathe new life into a picture by using built-in Picture Effect technology. There's a range of modes to choose from – you don't even have to download image-editing software.",
                 "attributes": {
                     "hdmi": "no",
                     "sensor_type": "CCD",

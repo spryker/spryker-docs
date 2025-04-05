@@ -995,7 +995,7 @@ class SummaryStep extends SprykerShopSummaryStep
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\CheckoutPage\Process\Steps;
@@ -1055,7 +1055,7 @@ class PaymentStep extends SprykerShopPaymentStep
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\CheckoutPage\Process\Steps;
@@ -1148,7 +1148,7 @@ class ShipmentStep extends SprykerShipmentStep
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Client\Quote;
@@ -1184,7 +1184,7 @@ class QuoteDependencyProvider extends BaseQuoteDependencyProvider
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\Computop;
@@ -1388,7 +1388,7 @@ class ComputopDependencyProvider extends SprykerComputopDependencyProvider
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\CheckoutWidget\Widget;
@@ -1438,7 +1438,7 @@ class ProceedToCheckoutButtonWidget extends SprykerProceedToCheckoutButtonWidget
 
     /**
      * This file is part of the Spryker Suite.
-     * For full license information, please view the LICENSE file that was distributed with this source code.
+     * For full license information,  view the LICENSE file that was distributed with this source code.
      */
 
     namespace Pyz\Yves\CheckoutWidget;
@@ -1468,7 +1468,7 @@ class ProceedToCheckoutButtonWidget extends SprykerProceedToCheckoutButtonWidget
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\CheckoutWidget;
@@ -1523,7 +1523,7 @@ class CheckoutWidgetDependencyProvider extends SprykerCheckoutWidgetDependencyPr
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\ShopApplication;

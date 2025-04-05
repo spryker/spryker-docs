@@ -895,7 +895,7 @@ Make sure that checkout workflow works with measurement unit by ordering item wi
 
 {% info_block warningBox "Verification" %}
 
-Make sure that abstract products which have measurement units don’t have `add_to_cart_sku` field at Elasticsearch document.
+Make sure that abstract products which have measurement units don't have `add_to_cart_sku` field at Elasticsearch document.
 
 {% endinfo_block %}
 
@@ -909,7 +909,7 @@ Make sure that every order item from the `SalesFacade::getOrderItems()` results 
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Install the following required features:
 
 | NAME | VERSION |
 | --- | --- |

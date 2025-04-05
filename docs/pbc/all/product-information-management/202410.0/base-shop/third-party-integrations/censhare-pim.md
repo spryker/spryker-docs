@@ -18,7 +18,7 @@ redirect_from:
 
 [ABOUT CENSHARE](https://www.censhare.com/)
 
-Our pioneering, universal content management platform lets you connect with your audiences on any channel, in any language, locally or globally. Expect complete control over all your content. Enjoy new freedom to create. Experience lower costs. And join Jaguar Land Rover, Dyson, Christie’s, Lufthansa and hundreds more in delivering quality communications with exceptional efficiency.
+Our pioneering, universal content management platform lets you connect with your audiences on any channel, in any language, locally or globally. Expect complete control over all your content. Enjoy new freedom to create. Experience lower costs. And join Jaguar Land Rover, Dyson, Christie's, Lufthansa and hundreds more in delivering quality communications with exceptional efficiency.
 
 **Product Information Management (PIM)** – Manage and provide product data for efficient and accurate use across the business
 
@@ -29,6 +29,6 @@ Our pioneering, universal content management platform lets you connect with your
 See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
 ---
-For further information on this partner and integration into Spryker, please contact us.
+For further information on this partner and integration into Spryker,  contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

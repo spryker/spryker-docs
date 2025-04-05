@@ -97,10 +97,16 @@ commonOptions = {
     /www.jetbrains.com\/[\.\w\-\/\?]+/,
     /docs.spring.io\/[\.\w\-\/\?]+/,
     /redisdesktop.com\/[\.\w\-\/\?]+/,
+    /jwt.io\/[\.\w\-\/\?]+/,
     /developer.computop.com\/[\.\w\-\/\?]+/,
     /www.centralbank.cy\/[\.\w\-\/\?]+/,
-    /www.gnu.org\/[\.\w\-\/\?]+/,    
+    /www.mysql.com\/[\.\w\-\/\?]+/,
+    /www.gnu.org\/[\.\w\-\/\?]+/,
     /algolia.com\/[\.\w\-\/\?]+/,
+    /www.cursor.com\/[\.\w\-\/\?]+/,
+    /mysql.com\/[\.\w\-\/\?]+/,
+    /dev.mysql.com\/[\.\w\-\/\?]+/,        
+    /jwt.io\/[\.\w\-\/\?]+/,
     /www.facebook.com\/[\.\w\-\/\?]+/
 
   ],

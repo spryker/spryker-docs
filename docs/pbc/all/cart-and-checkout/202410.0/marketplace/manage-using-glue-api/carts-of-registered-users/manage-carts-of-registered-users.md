@@ -1403,7 +1403,7 @@ To retrieve all carts, send the request:
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Samsung Galaxy Tab S2 SM-T813",
-                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper—create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
+                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2's 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper—create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
                 "attributes": {
                     "internal_memory": "3 GB",
                     "processor_model": "APQ8076",
@@ -3198,7 +3198,7 @@ To retrieve a registered user's cart, send the request:
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Samsung Galaxy Tab S2 SM-T813",
-                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper—create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
+                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2's 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper—create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
                 "attributes": {
                     "internal_memory": "3 GB",
                     "processor_model": "APQ8076",
@@ -4404,7 +4404,7 @@ Request sample: edit a cart
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| name | String | &check; | Sets the cart name.This field can be set only if you are using the Multiple Carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the `422 Unprocessable Entry` status code. Cart name should be unique and should not be longer than 30 characters.|
+| name | String | &check; | Sets the cart name. This field can be set only if you are using the Multiple Carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the `422 Unprocessable Entry` status code. Cart name should be unique and should not be longer than 30 characters.|
 | priceMode | Enum | &check; | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE—prices after tax;</li><li>NET_MODE—prices before tax.</li></ul>For details, see [Net & Gross Prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/extend-and-customize/configuration-of-price-modes-and-types.html). |
 | currency | String | &check; | Sets the cart currency. |
 | store | String | &check; | Sets the name of the store where to create the cart. |
@@ -4490,7 +4490,7 @@ If the cart is deleted successfully, the endpoint returns the `204 No Content` s
 | 107 | Failed to create a cart. |
 | 109 | Anonymous customer unique id is empty. |
 | 110 | Customer already has a cart. |
-| 111 | Can’t switch price mode when there are items in the cart. |
+| 111 | Can't switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |
 | 113 | Cart item could not be added. |
 | 114 | Cart item could not be updated. |

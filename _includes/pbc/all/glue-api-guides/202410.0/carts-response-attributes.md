@@ -20,7 +20,7 @@
 
 | RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|
-| carts | expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
+| carts | expenseTotal | String | Total amount of expenses such as shipping costs. |
 | carts | discountTotal | Integer | Total amount of discounts applied to the cart. |
 | carts | taxTotal | Integer | Total amount of taxes to be paid. |
 | carts | subTotal | Integer | Subtotal of the cart. |

@@ -102,4 +102,4 @@ To configure dynamic Yves-Zed tokens:
 
 3. `config_default-docker.dev.php`
 
-You’ve configured dynamic Yves-Zed tokens.
+You've configured dynamic Yves-Zed tokens.

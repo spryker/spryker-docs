@@ -14,8 +14,8 @@ To manage merchant relations, go to **B2B Contracts -> Merchant Relations**. Cli
 To edit a merchant relation:
 
 1. Optional: In *Business Units*, clear the checkboxes for the business units you want to remove from this relation and click **Save**.
-2. Optional: In *Internal comments*, leave notes for your colleagues. Buyers won’t see these comments.
+2. Optional: In *Internal comments*, leave notes for your colleagues. Buyers won't see these comments.
 
-You can also delete a merchant relation. Deletion removes the merchant relation from the Merchant Portal, the Back Office, and from the buyer’s Storefront. To delete a merchant relation, click **Delete** and confirm deletion.
+You can also delete a merchant relation. Deletion removes the merchant relation from the Merchant Portal, the Back Office, and from the buyer's Storefront. To delete a merchant relation, click **Delete** and confirm deletion.
 
 ![merchant-relations-mp](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/merchant-relations-in-merchant-portal/manage-merchant-relations/mp-relation-details.png)

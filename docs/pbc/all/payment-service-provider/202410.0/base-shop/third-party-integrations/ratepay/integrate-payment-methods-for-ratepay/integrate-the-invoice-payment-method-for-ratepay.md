@@ -55,9 +55,9 @@ To integrate invoice payment, you need to: RatePAY invoice payment configuration
 
 The configuration to integrate invoice payments using RatePAY is:
 
-* `PROFILE_ID`: merchant’s login (required).
+* `PROFILE_ID`: merchant's login (required).
 
-* `SECURITY_CODE`: merchant’s password (required).
+* `SECURITY_CODE`: merchant's password (required).
 
 * `SHOP_ID`: shop identifier (required).
 

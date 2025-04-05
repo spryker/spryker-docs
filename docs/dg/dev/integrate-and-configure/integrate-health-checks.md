@@ -44,7 +44,7 @@ Depending on the application status, you will see:
 
 ## Running Application Service Health Checks
 
-When an application service is unavailable, you might want to apply a fix and run a health check for that particular service. To do that, you can specify the application service(s) you want to run a health check for in the request URL. The pattern is `http://application.mysprykershop.com/health-check?services={service},{service}`. For example, `https://glue.mysprykershop.com/health-check?services=storage`.
+When an application service is unavailable, you might want to apply a fix and run a health check for that particular service. To do that, you can specify the application services you want to run a health check for in the request URL. The pattern is `http://application.mysprykershop.com/health-check?services={service},{service}`. For example, `https://glue.mysprykershop.com/health-check?services=storage`.
 
 ## Integration
 
@@ -64,7 +64,7 @@ Run the following command to install the required modules:
 composer require spryker-feature/spryker-core: "^{{page.version}}" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -245,7 +245,7 @@ Run the following command to apply transfer changes:
 vendor/bin/console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes took place in transfer objects:
 

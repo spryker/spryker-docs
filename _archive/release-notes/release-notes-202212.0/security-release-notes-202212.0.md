@@ -12,7 +12,7 @@ The following information pertains to security-related issues that have been rec
 
 {% info_block infoBox "Note" %}
 
-If you need any additional support with this content, please contact [support@spryker.com](mailto:support@spryker.com). If you found a new security vulnerability, please inform us via [security@spryker.com](mailto:security@spryker.com).
+If you need any additional support with this content,  contact [support@spryker.com](mailto:support@spryker.com). If you found a new security vulnerability,  inform us via [security@spryker.com](mailto:security@spryker.com).
 
 {% endinfo_block %}
 
@@ -92,7 +92,7 @@ spryker/wishlist (8.6.0 or earlier)
 It was possible to enumerate users if creating them via the API. The message in response was "Customer with this email already exists."
 
 **Changes:**
-The response message has been changed as follows: "If this email address is already in use, you will receive a password reset link. Otherwise you must first validate your e-mail address to finish registration. Please check your e-mail."
+The response message has been changed as follows: "If this email address is already in use, you will receive a password reset link. Otherwise you must first validate your e-mail address to finish registration. Check your e-mail."
 
 **Affected modules:**
 No changes.
@@ -392,7 +392,7 @@ Make sure that for the spryker/file-manager-gui module, the current version is e
 
 ## Cross Domain Script Include
 The application loads a subset of included JavaScript files from third-party domains.
-If the application included a script from an external domain, then the application is entrusting that domain with the application’s data and functionality. It has to trust that the external domain is secure enough to prevent an attacker from modifying the script to perform malicious actions within the application.
+If the application included a script from an external domain, then the application is entrusting that domain with the application's data and functionality. It has to trust that the external domain is secure enough to prevent an attacker from modifying the script to perform malicious actions within the application.
 
 **Changes:**
 

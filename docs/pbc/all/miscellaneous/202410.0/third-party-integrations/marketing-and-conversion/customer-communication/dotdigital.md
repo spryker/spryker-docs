@@ -16,7 +16,7 @@ ABOUT DOTDIGITAL
 
 Acquire smarter. Convert faster. Deliver big.
 
-Dotdigital is a leader in customer engagement technology. Dotdigital’s Engagement Cloud is the platform of choice for businesses seeking to engage customers across all touchpoints. The platform’s features empower 4,000+ brands across 150 countries to acquire, convert, and retain customers. Users can connect customer data, surface powerful insights, and automate intelligent messages across email, SMS, social, and more. dotdigital is a global company with over 350 employees, serving companies of all sizes and in all verticals for over 20 years.
+Dotdigital is a leader in customer engagement technology. Dotdigital's Engagement Cloud is the platform of choice for businesses seeking to engage customers across all touchpoints. The platform's features empower 4,000+ brands across 150 countries to acquire, convert, and retain customers. Users can connect customer data, surface powerful insights, and automate intelligent messages across email, SMS, social, and more. dotdigital is a global company with over 350 employees, serving companies of all sizes and in all verticals for over 20 years.
 
 YOUR ADVANTAGES:
 
@@ -39,6 +39,6 @@ YOUR ADVANTAGES:
 See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
 ---
-For further information on this partner and integration into Spryker, please contact us.
+For further information on this partner and integration into Spryker,  contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

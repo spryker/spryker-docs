@@ -199,7 +199,7 @@ Run the `console transfer:generate` command to generate all the necessary transf
 ## Enable the configuration
 
 Module Profile works as a part of Web Profiler feature. By default, Web Profiler is disabled.
-To enable Web Profiler, please update `config/Shared/config_default-docker.dev.php` configuration file.
+To enable Web Profiler,  update `config/Shared/config_default-docker.dev.php` configuration file.
 
 ```php
 if (interface_exists(WebProfilerConstants::class, true)) {

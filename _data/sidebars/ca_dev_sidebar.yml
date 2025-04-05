@@ -38,8 +38,6 @@ entries:
         url: /docs/ca/dev/deploy-in-a-staging-environment.html
       - title: Configure debugging
         url: /docs/ca/dev/configure-debugging.html
-      - title: Working with logs
-        url: /docs/ca/dev/working-with-logs.html
       - title: Preparation for going live
         url: /docs/ca/dev/preparation-for-going-live.html
       - title: Deploy in a production environment
@@ -71,7 +69,7 @@ entries:
           - title: Penetration testing
             url: /docs/ca/dev/security/penetration-testing.html
           - title: Set up multi-factor authentication
-            url: /docs/ca/dev/security/set-up-multi-factor-authentication.html
+            url: /docs/ca/dev/security/multi-factor-authentication-and-passwords.html
           - title: Web Application Firewall (WAF)
             url: /docs/ca/dev/security/web-application-firewall-waf.html
 
@@ -115,8 +113,20 @@ entries:
         url: /docs/ca/dev/performance-testing-in-staging-enivronments.html
       - title: Environment scaling
         url: /docs/ca/dev/environment-scaling.html
-      - title: Monitoring issues and informing about alerts
-        url: /docs/ca/dev/monitoring-issues-and-informing-about-alerts.html
+      - title: Monitoring
+        url: /docs/ca/dev/monitoring/monitoring.html
+        nested:
+          - title: Working with logs
+            url: /docs/ca/dev/monitoring/working-with-logs.html
+          - title: Spryker Monitoring Integration
+            url: /docs/ca/dev/monitoring/spryker-monitoring-integration/spryker-monitoring-integration.html
+            nested:
+              - title: OpenTelemetry instrumentation
+                url: /docs/ca/dev/monitoring/spryker-monitoring-integration/opentelemetry-instrumentation.html
+                
+          - title: Monitoring issues and informing about alerts
+            url: /docs/ca/dev/monitoring/monitoring-issues-and-informing-about-alerts.html
+
       - title: Multi-store setups
         url: /docs/ca/dev/multi-store-setups/multi-store-setups.html
         nested:

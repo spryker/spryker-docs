@@ -58,7 +58,7 @@ Once you create a customer, a verification email is sent to their email address,
 | PHONE | Phone number.|
 |COMPANY| Company. Not to be confused with a [B2B company](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html). |
 | LOCALE | Locale.|
-| SEND PASSWORD TOKEN THROUGH EMAIL | If you select the checkbox, after saving the customer, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don’t select this option, the customer will still be able request this email on the Storefront. |
+| SEND PASSWORD TOKEN THROUGH EMAIL | If you select the checkbox, after saving the customer, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don't select this option, the customer will still be able request this email on the Storefront. |
 
 ## Next steps
 

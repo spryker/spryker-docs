@@ -67,7 +67,7 @@ Make sure that the following changes have been applied in the transfer objects:
 
 {% endinfo_block %}
 
-2. Update the UUID for the CMS pages that had existed before you’ve added the column:
+2. Update the UUID for the CMS pages that had existed before you've added the column:
 
 ```bash
 console uuid:generate Cms spy_cms_page

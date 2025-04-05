@@ -1,6 +1,6 @@
 ---
 title: Company Account feature overview
-description: The Company Account page gives a clear overview of business’ structure, hierarchy, shipping, billing addresses, and other users in the Business Unit.
+description: The Company Account page gives a clear overview of business' structure, hierarchy, shipping, billing addresses, and other users in the Business Unit.
 last_updated: Jul 30, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/company-account
@@ -35,7 +35,12 @@ Check out the following video about managing company accounts:
 
 Setting up company structure:
 
-{% wistia qkdgkeannb 960 720 %}
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/How+to+Setup+Company+Structure+in+Spryker+B2B-qkdgkeannb.mp4" type="video/mp4">
+  </video>
+</figure>
 
 
 ## Related Business User documents

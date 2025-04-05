@@ -1164,9 +1164,9 @@ In case of a successful update, the endpoint responds with information that can 
 | addresses | salutation | String | The salutation to use when addressing the customer. |
 | addresses |  firstName | String | The customer's first name. |
 | addresses | lastName | String | The customer's last name. |
-| addresses | address1 | String | The 1st line of the customer's address. |
-| addresses | address2 | String | The 2nd line of the customer's address. |
-| addresses | address3 | String | The 3rd line of the customer's address. |
+| addresses | address1 | String | The first line of the customer's address. |
+| addresses | address2 | String | The second line of the customer's address. |
+| addresses | address3 | String | The third line of the customer's address. |
 | addresses | zipCode | String | ZIP code. |
 | addresses | city | String |The name of the city. |
 | addresses | country | String | The name of the country. |
@@ -1182,9 +1182,9 @@ In case of a successful update, the endpoint responds with information that can 
 | shipments | shippingAddress.salutation | String | The salutation to use when addressing the customer. |
 | shipments | shippingAddress.firstName | String | The customer's first name. |
 | shipments | shippingAddress.lastName | String | The customer's last name. |
-| shipments | shippingAddress.address1 | String | The 1st line of the customer's address. |
-| shipments | shippingAddress.address2 | String | The 2nd line of the customer's address. |
-| shipments | shippingAddress.address3 | String | The 3rd line of the customer's address. |
+| shipments | shippingAddress.address1 | String | The first line of the customer's address. |
+| shipments | shippingAddress.address2 | String | The second line of the customer's address. |
+| shipments | shippingAddress.address3 | String | The third line of the customer's address. |
 | shipments | shippingAddress.zipCode | String | ZIP code. |
 | shipments | shippingAddress.city | String | The name of the city. |
 | shipments | shippingAddress.country | String | The name of the country. |
@@ -1208,9 +1208,9 @@ In case of a successful update, the endpoint responds with information that can 
 | shipment-methods | deliveryTime | Integer | Estimated delivery time. |
 | shipment-methods | Price | Integer | Price of the shipment method. |
 | shipment-methods | currencyIsoCode | String |The ISO 4217 code of the currency in which the price is specified. |
-| company-business-unit-addresses | address1 | String | The 1st line of the customer's address. |
-| company-business-unit-addresses | address2 | String | The 2nd line of the customer's address. |
-| company-business-unit-addresses | address3 | String | The 3rd line of the customer's address. |
+| company-business-unit-addresses | address1 | String | The first line of the customer's address. |
+| company-business-unit-addresses | address2 | String | The second line of the customer's address. |
+| company-business-unit-addresses | address3 | String | The third line of the customer's address. |
 | company-business-unit-addresses | zipCode | String | The ZIP code. |
 | company-business-unit-addresses | city | String | The name of the city. |
 | company-business-unit-addresses | iso2Code | String | Specifies an ISO 2 Country Code to use. |

@@ -1,5 +1,5 @@
 
-This document describes how to install Merchant Portal Agent Assist feature.
+This document describes how to install Merchant Portal Agent Assist feature please.
 
 ## Prerequisites
 
@@ -322,7 +322,7 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
 }
 ```
 
-{% info_block infoBox %}
+{% info_block warningBox %}
 
 If `SecurityDependencyProvider::getSecurityPlugins()` already contains plugins, add the `ZedAgentMerchantUserSecurityPlugin` as *first* in the list.
 

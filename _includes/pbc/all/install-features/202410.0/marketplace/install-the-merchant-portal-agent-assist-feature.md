@@ -1,5 +1,5 @@
 
-This document describes how to install Merchant Portal Agent Assist feature please.
+This document describes how to install Merchant Portal Agent Assist feature.
 
 ## Prerequisites
 

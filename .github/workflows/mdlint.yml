@@ -16,9 +16,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run markdownlint
-        uses: nosborn/github-action-markdownlint@v2
+        uses: nosborn/github-action-markdown-cli@v3.3.0
         with:
-          config: .markdownlint.json
           files: |
             docs/
             _includes/pbc/
+          config_file: .markdownlint.json

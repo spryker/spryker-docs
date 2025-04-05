@@ -40,7 +40,7 @@ The FACT-Finder Suggest module enables you to provide customers with suggested s
 
 ## Usage
 
-To check example implementation, please see  [Fact Finder - Search Integration](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html). Typing in a search box triggers an API suggest request. By default , use `/fact-finder/suggestions` to get suggestions. Or you can use the `FactFinderSdk` module to make a suggest request.
+To check example implementation,  see  [Fact Finder - Search Integration](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html). Typing in a search box triggers an API suggest request. By default , use `/fact-finder/suggestions` to get suggestions. Or you can use the `FactFinderSdk` module to make a suggest request.
 
 It will return a `FactFinderSdkSuggestResponseTransfer` object that contains an array of suggestions.
 

@@ -13,7 +13,7 @@
 | RESOURCE | Attribute                | Type    | Description                                     |
 | ------------------------ | ------- | ----------------------- | ------------------------ |
 | totals                   | Object  | Totals calculations.                            |
-| totals.expenseTotal      | Integer | Total amount of expenses (e.g. shipping costs). |
+| totals.expenseTotal      | Integer | Total amount of expenses, such as shipping costs. |
 | totals.discountTotal     | Integer | Total amount of discounts applied.              |
 | totals.taxTotal          | Integer | Total amount of taxes paid.                     |
 | totals.subtotal          | Integer | Subtotal of the order.                          |
@@ -30,9 +30,9 @@
 | billingAddress.firstName   | String | Customer's first name.                                       |
 | billingAddress.middleName  | String | Customer's middle name.                                      |
 | billingAddress.lastName    | String | Customer's last name.                                        |
-| billingAddress.address1    | String | 1st line of the customer's address.                          |
-| billingAddress.address2    | String | 2nd line of the customer's address.                          |
-| billingAddress.address3    | String | 3rd line of the customer's address.                          |
+| billingAddress.address1    | String | first line of the customer's address.                          |
+| billingAddress.address2    | String | second line of the customer's address.                          |
+| billingAddress.address3    | String | third line of the customer's address.                          |
 | billingAddress.company     | String | Specifies the customer's company.                            |
 | billingAddress.city        | String | Specifies the city.                                          |
 | billingAddress.zipCode     | String | ZIP code.                                                    |

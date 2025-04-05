@@ -991,7 +991,7 @@ Ensure that the configured data has been added to the `spy_glossary` table in th
 
 ### 3) Enable controllers
 
-Register the following route provider(s) on the Storefront:
+Register the following route provider on the Storefront:
 
 | PROVIDER | NAMESPACE |
 | --- | --- |

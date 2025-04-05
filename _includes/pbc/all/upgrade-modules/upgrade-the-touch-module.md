@@ -36,7 +36,7 @@ This command will update `spy_touch_storage`, and `spy_touch_search` classes to 
           ROM spy_store WHERE LOWER(spy_store.name) = LOWER(SUBSTR(key, 1, STRPOS(key, '.') - 1));
   ```
 
-6. The following deprecated methods were removed, please check your code if you have custom calls or dependencies:
+6. The following deprecated methods were removed,  check your code if you have custom calls or dependencies:
 
    * `TouchFacadeInterface::bulkTouchActive()`
    * `TouchFacadeInterface::bulkTouchInactive()`
@@ -46,7 +46,7 @@ This command will update `spy_touch_storage`, and `spy_touch_search` classes to 
 
 You can find additional details on the [Touch module release page](https://github.com/spryker/touch/releases).
 
-7. The following methods have internal changes, please check if you have customized them:
+7. The following methods have internal changes,  check if you have customized them:
 
    * `TouchQueryContainer::queryTouchDeleteStorageAndSearch()`
    * `TouchRecord::removeTouchEntriesMarkedAsDeleted()`

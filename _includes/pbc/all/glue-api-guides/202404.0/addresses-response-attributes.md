@@ -3,9 +3,9 @@
 | addresses | salutation | String | Salutation to use when addressing to the customer. |
 | addresses | firstName | String | Customer's first name. |
 | addresses | lastName | String | Customer's last name. |
-| addresses | address1 | String | The 1st line of the customer's address. |
-| addresses | address2 | String | The 2nd line of the customer's address. |
-| addresses | address3 | String | The 3rd line of the customer's address. |
+| addresses | address1 | String | The first line of the customer's address. |
+| addresses | address2 | String | The second line of the customer's address. |
+| addresses | address3 | String | The third line of the customer's address. |
 | addresses | zipCode | String | ZIP code. |
 | addresses | city | String | Specifies the city. |
 | addresses | country | String | Specifies the country. |

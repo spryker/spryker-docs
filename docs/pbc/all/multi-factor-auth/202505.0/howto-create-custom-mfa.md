@@ -1,0 +1,203 @@
+---
+title: How to Create Custom Multi-Factor Authentication Method
+description: Learn how to create and implement your own Multi-Factor Authentication method in Spryker.
+template: howto-guide-template
+last_updated: Apr 7, 2025
+---
+
+This document describes how to create and implement your own Multi-Factor Authentication (MFA) method in Spryker.
+Follow the link to the [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-auth/{{site.version}}/multi-factor-auth.html) to learn more about the feature and its benefits.
+
+## Prerequisites
+
+To start the integration, make sure that the [Multi-Factor Authentication Feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html) has been installed in your project.
+
+## Implementation Overview
+
+To create a custom MFA method, you need to implement the following components:
+
+1. Multi-Factor Authentication Type Plugin
+2. Code Sender Strategy
+
+
+## 1. Create a Multi-Factor Authentication Type Plugin
+
+Create a plugin that implements `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface`:
+
+<details>
+<summary>Pyz\Yves\MultiFactorAuth\Plugin\Factors\YourMultiFactorAuthType\YourMfaTypePlugin.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Yves\MultiFactorAuth\Plugin\Factors\YourMultiFactorAuthType;
+
+use Generated\Shared\Transfer\CustomerMultiFactorAuthTypeTransfer;
+use Generated\Shared\Transfer\CustomerTransfer;
+use Spryker\Yves\Kernel\AbstractPlugin;
+use Spryker\Shared\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthPluginInterface;
+
+class YourMfaTypePlugin extends AbstractPlugin implements MultiFactorAuthPluginInterface
+{
+    /**
+     * @var string
+     */
+    protected const YOUR_MULTI_FACTOR_AUTH_TYPE = 'your-multi-factor-auth-type';
+    
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     * 
+     * @var string
+     */
+    public function getName(): string
+    {
+        return static::YOUR_MULTI_FACTOR_AUTH_TYPE;
+    }
+    
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     *
+     * @param string $multiFactorAuthMethod
+     *
+     * @return bool
+     */
+    public function isApplicable(string $multiFactorAuthMethod): bool
+    {
+        return $multiFactorAuthMethod === static::YOUR_MULTI_FACTOR_AUTH_TYPE;
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     *
+     * @param \Generated\Shared\Transfer\MultiFactorAuthTransfer $multiFactorAuthTransfer
+     *
+     * @return void
+     */
+    public function sendCode(MultiFactorAuthTransfer $multiFactorAuthTransfer): void
+    {
+        $this->getClient()->sendCustomerCode($multiFactorAuthTransfer);
+    }
+}
+```
+</details>
+
+## 2. Create Code Sender Strategy
+
+Create a sender strategy that implements `\Spryker\Zed\MultiFactorAuth\Business\Strategy\SendStrategyInterface`. Here's an example based on the email implementation:
+
+<details>
+<summary>Pyz\Zed\MultiFactorAuth\Business\Strategy\Customer\YourMfaCodeSenderStrategy.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MultiFactorAuth\Business\Strategy\Customer;
+
+use Generated\Shared\Transfer\MultiFactorAuthTransfer;
+use Spryker\Zed\MultiFactorAuth\Business\Strategy\SendStrategyInterface;
+
+class YourMfaCodeSenderStrategy implements SendStrategyInterface
+{
+    /**
+     * @var string
+     */
+    protected const YOUR_MFA_TYPE = 'your-multi-factor-auth-type';
+
+    /**
+     * @param \Generated\Shared\Transfer\MultiFactorAuthTransfer $multiFactorAuthTransfer
+     *
+     * @return bool
+     */
+    public function isApplicable(MultiFactorAuthTransfer $multiFactorAuthTransfer): bool
+    {
+        return $multiFactorAuthTransfer->getType() === static::YOUR_MFA_TYPE;
+    }
+
+    /**
+     * @param \Generated\Shared\Transfer\MultiFactorAuthTransfer $multiFactorAuthTransfer
+     *
+     * @return \Generated\Shared\Transfer\MultiFactorAuthTransfer
+     */
+    public function send(MultiFactorAuthTransfer $multiFactorAuthTransfer): MultiFactorAuthTransfer
+    {
+        // Implement your code sending logic here
+        // For example, send via SMS, authenticator app, etc.
+        
+        return $multiFactorAuthTransfer;
+    }
+}
+```
+</details>
+
+## 3. Wire Strategy in Factory
+
+Add your strategy to the factory so that it can be used by the Multi-Factor Authentication system to resolve the correct sender strategy based on the type of MFA method selected by the customer.
+
+<details>
+<summary>Pyz\Zed\MultiFactorAuth\Business\MultiFactorAuthBusinessFactory.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MultiFactorAuth\Business;
+
+use Spryker\Zed\MultiFactorAuth\Business\MultiFactorAuthBusinessFactory as SprykerMultiFactorAuthBusinessFactory;
+use Pyz\Zed\MultiFactorAuth\Business\Strategy\Customer\YourMfaCodeSenderStrategy;
+
+class MultiFactorAuthBusinessFactory extends SprykerMultiFactorAuthBusinessFactory
+{
+    /**
+     * @return array<\Spryker\Zed\MultiFactorAuth\Business\Strategy\SendStrategyInterface>
+     */
+    protected function getCustomerCodeSenderStrategies(): array
+    {
+        return [
+            // ... other strategies
+            new YourMfaCodeSenderStrategy(),
+        ];
+    }
+}
+```
+</details>
+
+## 4. Register Your Plugins
+
+Register your plugin in the dependency provider:
+
+<details>
+<summary>Pyz\Yves\MultiFactorAuth\MultiFactorAuthDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Yves\MultiFactorAuth;
+
+use Spryker\Yves\MultiFactorAuth\MultiFactorAuthDependencyProvider as SprykerMultiFactorAuthDependencyProvider;
+
+class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface>
+     */
+    protected function getCustomerMultiFactorAuthPlugins(): array
+    {
+        return [
+            // ... other plugins
+            new YourMfaTypePlugin(),
+        ];
+    }
+}
+```
+</details>
+
+## Related Documentation
+
+- [Multi-Factor Authentication Feature Overview](/docs/pbc/all/multi-factor-auth/{{site.version}}/multi-factor-auth.html)
+- [Install the Multi-Factor Authentication Feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html)
+- [How to Install Customer Email Multi-Factor Authentication Method](/docs/pbc/all/multi-factor-auth/{{site.version}}/howto-install-customer-email-mfa.html)

@@ -52,6 +52,14 @@ use Spryker\Zed\MultiFactorAuth\MultiFactorAuthConfig as SprykerMultiFactorAuthC
 
 class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 {
+    /**
+     * Specifications:
+     * - Defines the length of the authentication code.
+     * 
+     * @api
+     *
+     * @return int
+     */
     public function getCustomerCodeLength(): int
     {
         return 6;
@@ -63,7 +71,7 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 
 ### 2.2) Configure code validity time
 
-To configure the time interval during which the authentication code is valid, extend the `MultiFactorAuthConfig` class in your project:
+To configure the time interval in minutes during which the authentication code is valid, extend the `MultiFactorAuthConfig` class in your project:
 
 <details>
 <summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
@@ -75,6 +83,14 @@ use Spryker\Zed\MultiFactorAuth\MultiFactorAuthConfig as SprykerMultiFactorAuthC
 
 class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 {
+    /**
+     * Specifications:
+     * - Defines the time interval in minutes during which the authentication code is valid.
+     * 
+     * @api
+     *
+     * @return int
+     */
     public function getCustomerCodeValidityTtl(): int
     {
         return 30;
@@ -97,6 +113,14 @@ use Spryker\Zed\MultiFactorAuth\MultiFactorAuthConfig as SprykerMultiFactorAuthC
 
 class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 {
+    /**
+     * Specifications:
+     * - Defines the number of failed attempts a customer can make to enter the authentication code in order to prevent brute force attacks.
+     * 
+     * @api
+     *
+     * @return int
+     */
     public function getCustomerAttemptLimit(): int
     {
         return 3;
@@ -119,6 +143,14 @@ use Spryker\Yves\MultiFactorAuth\MultiFactorAuthConfig as SprykerMultiFactorAuth
 
 class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 {
+    /**
+     * Specifications:
+     * - Defines the routes and forms that require MFA authentication.
+     * 
+     * @api
+     *
+     * @return array<string, array<string>>
+     */
     public function getEnabledRoutesAndForms(): array
     {
         return [

@@ -36,7 +36,7 @@ If the code is correct, authentication is successful. If incorrect, the user mus
 ## Login Flow with MFA
 
 The MFA flow for the login page follows a slightly different sequence compared to general authentication.
-In this case, the customer’s credentials (email & password) are validated first before triggering MFA.
+In this case, the customer's credentials (email & password) are validated first before triggering MFA.
 
 Key Difference:
 1.	Customer enters email & password on the login page.
@@ -51,8 +51,8 @@ This ensures that MFA is only triggered after confirming that the credentials ar
 MFA is not limited to the login process but is also applied to critical customer profile actions where additional security is necessary to protect sensitive user information. 
 These actions require MFA validation to ensure that only the legitimate account owner can perform them.
 
-By default, the following customer profile actions are protected by MFA:
-- Updating the email address: prevents unauthorized users from changing the account’s primary contact method.
+Some of the actions that are protected by MFA by default include:
+- Updating the email address: prevents unauthorized users from changing the account's primary contact method.
 - Changing the password: ensures that only the legitimate user can modify login credentials.
 - Deleting the account: protects against accidental or malicious account deletions.
 
@@ -89,6 +89,8 @@ The following MFA methods are available in Spryker:
 
 - Email: sends an authentication code via email [How to Install Customer Email Multi-Factor Authentication Method](/docs/pbc/all/multi-factor-auth/{{site.version}}/howto-install-customer-email-mfa.html)
 
+If you want to create your own MFA method, you can do so by implementing a custom MFA type plugin. For more information, refer to the guide: [How to Create Custom Multi-Factor Authentication Method](/docs/pbc/all/multi-factor-auth/{{site.version}}/howto-create-custom-mfa.html).
+
 ## Managing Multi-Factor Authentication in the Customer Profile
 
 Customers have the ability to activate or deactivate specific MFA types directly from their profile settings. This allows users to configure their preferred authentication methods based on security and usability preferences.
@@ -106,7 +108,7 @@ On the MFA settings page, a list of available MFA types will be displayed. Each 
 
 To change the status of an MFA type:
 1. Click on the activation/deactivation button next to the desired MFA type.
-2. The system will trigger the standard [MFA flow](#flow-overview) to verify the user’s identity.
+2. The system will trigger the standard [MFA flow](#flow-overview) to verify the user's identity.
 3. After successful code validation, an additional MFA check will be required specifically for the MFA type being activated or deactivated. This ensures that only the legitimate account owner can modify MFA settings.
 4. Once verified, the selected MFA type will be successfully activated or deactivated.
 

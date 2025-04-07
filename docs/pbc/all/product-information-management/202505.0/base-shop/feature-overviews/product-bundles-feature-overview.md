@@ -94,6 +94,14 @@ For example:
 
 If bundled items have quantity&nbsp;<span aria-label="and then">></span> 1 then it will be split as separate items in cart.
 
+{% info_block infoBox %}
+
+When a bundle product is added to cart with a big number of items–for example, 150–users may experience slow cart operations.  
+To improve performance in such cases, configure bundles to not be split in cart by following [Alternative setup for handling large quantities of bundled products in the cart](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-product-bundles-feature.html#alternative-setup-for-handling-large-quantities-of-bundled-products-in-the-cart).  
+
+
+{% endinfo_block %}
+
 BundleProduct have price this price, it's distributed to whole bundled items. Overwriting original product price. If bundle have price 100, and there is 3 bundled products, each will get price 33,34,33 distributed, 34 is to cover rounding error.
 
 ## Persisting when placing an order, end of checkout

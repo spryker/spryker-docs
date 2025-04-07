@@ -2,21 +2,11 @@ title: PBC guides
 entries:
   - product: PBC
     nested:
-      - title: Yves
-        nested:
-          - title: Base Shop
-            nested:
-              - title: Install the Spryker core accessibility improvements
-              - url: /docs/pbc/all/yves/base-shop/install-the-spryker-accessibility-improvements.html
-          - title: B2B, B2B-MP shops
-            nested:
-              - title: Install the Spryker core accessibility improvements
-              - url: /docs/pbc/all/yves/b2b/install-the-spryker-accessibility-improvements.html
       - title: Back Office
         nested:
           - title: Base shop
             nested:
-              - title: Spryker Core Back Office feature overview
+              - title: Spryker Core Back Office feature overview 2
                 url: /docs/pbc/all/back-office/base-shop/spryker-core-back-office-feature-overview.html
               - title: Back Office Translations overview
                 url: /docs/pbc/all/back-office/base-shop/back-office-translations-overview.html
@@ -47,7 +37,6 @@ entries:
                 nested:
                   - title: Spryker Core Back Office + Warehouse User Management
                     url: /docs/pbc/all/back-office/unified-commerce/install-and-upgrade/install-the-spryker-core-back-office-warehouse-user-management-feature.html
-
 
       - title: Business Intelligence
         url: /docs/pbc/all/business-intelligence/business-intelligence.html
@@ -1684,6 +1673,7 @@ entries:
                 nested:
                   - title: ChannelPilot Marketplace
                     url: /docs/pbc/all/merchant-management/marketplace/third-party-integrations/channelpilot-marketplace.html
+
       - title: Miscellaneous
         nested:
           - title: Spryker Core feature overview
@@ -4339,7 +4329,6 @@ entries:
                 - "202404.0"
                 - "202410.0"
 
-
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html
         nested:
@@ -4514,3 +4503,13 @@ entries:
                       - title: Pick picklist items
                         url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-pick-picklist-items.html
 
+      - title: Accessibility
+        nested:
+          - title: Base Shop
+            nested:
+              - title: Install the Spryker core accessibility improvements
+                url: /docs/pbc/all/accessibility-improvement/202410.0/base-shop/install-the-spryker-accessibility-improvements.html
+          - title: B2B, B2B-MP shops
+            nested:
+              - title: Install the Spryker core accessibility improvements
+                url: /docs/pbc/all/accessibility-improvement/202410.0/b2b/install-the-spryker-accessibility-improvements.html

@@ -7,11 +7,9 @@ template: feature-integration-guide-template
 
 Keyboard accessibility improvements include the following changes:
 
-- Adjusted multiple components to be more accessible via keyboard:
-  - Added `aria-label` attributes to the multiple components to improve screen reader support
-  - Adjusted `tabIndex` attributes to improve keyboard navigation
-- Add a new attribute `parent-class-name` for the `suggest-search` component that helps to improve keyboard accessibility for the product searching process.
-- Improved color schema for better text to background contrast
+- Enhanced Accessibility: Made several interface elements more accessible. You can now navigate more logically using the Tab key, and screen readers provide better descriptions of elements.
+- Keyboard-Friendly Search: Improved the way keyboard users can interact with the product search suggestions.
+- Better Visual Clarity: Adjusted the color scheme across the site to ensure text stands out better from its background, making it easier for everyone to read.
 
 To install Yves keyboard accessibility improvements, take the following steps:
 
@@ -24,10 +22,10 @@ To install Yves keyboard accessibility improvements, take the following steps:
   - Update the `spryker-shop/shop-ui` module to version `1.84.0` or later.
 * To update necessary modules run the following command:
 ```bash
-  composer update "MODULE_NAME"
+  composer update spryker-shop/catalog-page spryker-shop/company-page spryker-shop/customer-page spryker-shop/product-group-widget spryker-shop/product-review-widget spryker-shop/shop-ui
 ```
 
-2. Adjust templates and files on the project lvl.
+2. Adjust templates and files on the project level.
    - Add `skip-link` and ID attribute (href for `skip-link`) to 
      - src/Pyz/Yves/CatalogPage/Theme/default/templates/page-layout-catalog/page-layout-catalog.twig
      - src/Pyz/Yves/CompanyPage/Theme/default/templates/page-layout-company/page-layout-company.twig

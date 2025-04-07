@@ -4511,5 +4511,5 @@ entries:
                 url: /docs/pbc/all/accessibility-improvement/202410.0/base-shop/install-the-spryker-accessibility-improvements.html
           - title: B2B, B2B-MP shops
             nested:
-              - title: Install the Spryker core accessibility improvements
+              - title: Install the Spryker accessibility improvements
                 url: /docs/pbc/all/accessibility-improvement/202410.0/b2b/install-the-spryker-accessibility-improvements.html

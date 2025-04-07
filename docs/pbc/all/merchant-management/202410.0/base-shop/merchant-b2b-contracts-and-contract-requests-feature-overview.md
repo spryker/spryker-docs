@@ -58,7 +58,12 @@ Based on merchant relations, you can assign [buyer-specific products](/docs/pbc/
 
 Check out this video tutorial on how to set up merchants and merchant relations:
 
-{% wistia aowgi1c6k1 960 720 %}
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/base-shop/merchant-b2b-contracts-feature-overview.md/How+to+Setup+Merchants+and+Merchant+Relationships+in+Spryker+B2B-aowgi1c6k1.mp4" type="video/mp4">
+  </video>
+</figure>
 
 
 ## Related Developer documents

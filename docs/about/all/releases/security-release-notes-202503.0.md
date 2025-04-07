@@ -111,7 +111,7 @@ customer.data_change_request.invalid,"No valid data change request found.",en_US
 customer.data_change_request.invalid,"Keine gültige Datenänderungsanforderung gefunden.",de_DE
 mail.customer.customer_email_change_verification.text,"Please validate your email address by clicking the",en_US
 mail.customer.customer_email_change_verification.text,"Bitte bestätigen Sie Ihre E-Mail-Adresse, indem Sie auf den",de_DE
-mail.customer.customer_email_change_notification.text,"We would like to inform you that the email address associated with your account has been successfully changed. If you made this change, no further action is required. However, if you did not request this change, please contact the store owner immediately to secure your account.",en_US
+mail.customer.customer_email_change_notification.text,"We would like to inform you that the email address associated with your account has been successfully changed. If you made this change, no further action is required. However, if you did not request this change,  contact the store owner immediately to secure your account.",en_US
 mail.customer.customer_email_change_notification.text,"Wir möchten Sie darüber informieren, dass die mit Ihrem Konto verknüpfte E-Mail-Adresse erfolgreich geändert wurde. Wenn Sie diese Änderung vorgenommen haben, ist keine weitere Aktion erforderlich. Wenn Sie diese Änderung jedoch nicht angefordert haben, wenden Sie sich bitte umgehend an den Shop-Besitzer, um Ihr Konto zu sichern.",de_DE
 mail.customer.customer_email_change_notification.subject,Your Email Address Has Been Changed,en_US
 mail.customer.customer_email_change_notification.subject,Ihre E-Mail-Adresse wurde geändert,de_DE

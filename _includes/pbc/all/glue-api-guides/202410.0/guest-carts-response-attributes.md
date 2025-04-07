@@ -12,7 +12,7 @@
 
 | RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
-| guest-carts | expenseTotal | Integer | Total amount of expenses (including e.g. shipping costs). |
+| guest-carts | expenseTotal | Integer | Total amount of expenses such as shipping costs. |
 | guest-carts | discountTotal | Integer | Total amount of discounts applied to the cart. |
 | guest-carts | taxTotal | Integer | Total amount of taxes to be paid. |
 | guest-carts | subTotal | Integer | Subtotal of the cart. |

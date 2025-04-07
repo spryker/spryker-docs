@@ -10,7 +10,7 @@ To apply the fix, you need to regenerate Propel models. During this migration ta
 
 {% info_block warningBox %}
 
-Before you start, please check that all migrations are applied and you don't have technical dept here.
+Before you start,  check that all migrations are applied and you don't have technical dept here.
 
 {% endinfo_block %}
 
@@ -37,7 +37,7 @@ Find usages of `\Spryker\Client\Customer\CustomerClientInterface::hasCustomerWit
 
 Find usages of `\Spryker\Zed\Customer\Dependency\Service\CustomerToUtilSanitizeInterface`and replace with `\Spryker\Zed\Customer\Dependency\Service\CustomerToUtilSanitizeServiceInterface`.
 
-`\Spryker\Zed\Customer\Business\Exception\CountryNotFoundException` is removed from the `Customer` module. Please make sure there are no usages in your code. Instead of it, `\Spryker\Zed\Country\Business\Exception\MissingCountryException`will be thrown, but take care that your code does not use Spryker exceptions to implement business logic.
+`\Spryker\Zed\Customer\Business\Exception\CountryNotFoundException` is removed from the `Customer` module. Make sure there are no usages in your code. Instead of it, `\Spryker\Zed\Country\Business\Exception\MissingCountryException`will be thrown, but take care that your code does not use Spryker exceptions to implement business logic.
 
 ## Upgrading from version 5.* to version 6.*
 

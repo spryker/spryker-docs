@@ -59,7 +59,7 @@ by adding a line `require('js/econda/econda');`
 
 ## Integration
 
-Tracking is highly customizable and it depends on your setup. Please refer to [econda official documentation](https://support.econda.de/display/INDE).
+Tracking is highly customizable and it depends on your setup. Refer to [econda official documentation](https://support.econda.de/display/INDE).
 
 Here is a sample `econda-tracking.js` you can use as a help to integrate tracking to your website:
 

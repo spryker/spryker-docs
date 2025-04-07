@@ -132,7 +132,7 @@ This step will publish tables on change (create, edit, delete) to the `spy_produ
 
 #### Set up Event Listeners
 
-Set up the following plugin(s):
+Set up the following plugins:
 
 
 | Plugin | Specification | Prerequisites | Namespace |
@@ -161,7 +161,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 #### Setup re-generate and re-sync features
 
-Set up the following plugin(s):
+Set up the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |

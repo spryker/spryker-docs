@@ -77,7 +77,7 @@ export SPRYKER_REPOSITORY="git@github.com:spryker-shop/suite.git"
 
 {% info_block warningBox %}
 
-Before proceeding with the installation, please make sure you have your SSH public key in GitHub.
+Before proceeding with the installation,  make sure you have your SSH public key in GitHub.
 
 {% endinfo_block %}
 

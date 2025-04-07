@@ -2063,6 +2063,11 @@ entries:
                   - title: Custom order reference
                     url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/custom-order-reference-overview.html
 
+              
+              - title: Order Amendment feature overview
+                url: /docs/pbc/all/order-management-system/base-shop/order-amendment-feature-overview.html      
+                include_versions:
+                - "202505.0"                        
               - title: Reclamations feature overview
                 url: /docs/pbc/all/order-management-system/base-shop/reclamations-feature-overview.html
               - title: Refunds feature overview
@@ -2089,6 +2094,10 @@ entries:
                     nested:
                       - title: Order Management
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html
+                      - title: Order Amendment
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature.html                        
+                        include_versions:
+                        - "202505.0"
                       - title: Reclamations
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-reclamations-feature.html
                       - title: Quick Add to Cart + Non-splittable Products

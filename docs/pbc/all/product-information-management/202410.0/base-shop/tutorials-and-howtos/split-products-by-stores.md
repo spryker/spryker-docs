@@ -228,7 +228,7 @@ console propel:install
 
 /**
  * This file is part of the Spryker Commerce OS.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\DataImport;
@@ -272,7 +272,7 @@ class DataImportConfig extends SprykerDataImportConfig
 
 /**
  * This file is part of the Spryker Commerce OS.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\Console;
@@ -322,7 +322,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 /**
  * This file is part of the Spryker Commerce OS.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\DataImport;
@@ -521,7 +521,7 @@ You can do that through the application plugins system by adding `AclEntityAppli
 
 /**
  * This file is part of the Spryker Commerce OS.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\Application;

@@ -37,6 +37,6 @@ Troubleshooting debugging in Docker:
 
 If you encounter a Spryker in Docker issue that is not addressed on this page, try searching by an error output or keywords, or visit the [Spryker Support Portal](https://spryker.force.com/support/s/) for technical support.
 
-If you found a solution to a repetitive issue, please suggest a change to this page by clicking the **Edit or Report** button.
+If you found a solution to a repetitive issue,  suggest a change to this page by clicking the **Edit or Report** button.
 
 {% endinfo_block %}

@@ -1338,7 +1338,7 @@ To retrieve detailed information about an order, send the request:
 | ATTRIBUTE     | TYPE | DESCRIPTION     |
 | ------------------ | -------- | --------------------- |
 | merchantReferences | Array    | Unique identifier of the [merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) |
-| itemStates      | Array  | Statuses of the order’s items in the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
+| itemStates      | Array  | Statuses of the order's items in the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
 | createdAt       | String | Date and time when the order was created.   |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
 | priceMode       | String | Price mode that was active when placing the order. Possible values:<ul><li>**NET_MODE**—prices before tax.</li><li>**GROSS_MODE**—prices after tax.</li></ul> |
@@ -1365,9 +1365,9 @@ To retrieve detailed information about an order, send the request:
 | billingAddress.firstName   | String | Customer's first name.                                       |
 | billingAddress.middleName  | String | Customer's middle name.                                      |
 | billingAddress.lastName    | String | Customer's last name.                                        |
-| billingAddress.address1    | String | 1st line of the customer's address.                          |
-| billingAddress.address2    | String | 2nd line of the customer's address.                          |
-| billingAddress.address3    | String | 3rd line of the customer's address.                          |
+| billingAddress.address1    | String | first line of the customer's address.                          |
+| billingAddress.address2    | String | second line of the customer's address.                          |
+| billingAddress.address3    | String | third line of the customer's address.                          |
 | billingAddress.company     | String | Specifies the customer's company.                            |
 | billingAddress.city        | String | Specifies the city.                                          |
 | billingAddress.zipCode     | String | ZIP code.                                                    |
@@ -1513,9 +1513,9 @@ To retrieve detailed information about an order, send the request:
 | order-shipments       | shippingAddress.firstName  | String   |
 | order-shipments | shippingAddress.middleName  | String | Customer's middle name.                 |
 | order-shipments | shippingAddress.lastName    | String | Customer's last name.                   |
-| order-shipments | shippingAddress.address1    | String | The 1st line of the customer's address. |
-| order-shipments | shippingAddress.address2    | String | The 2nd line of the customer's address. |
-| order-shipments | shippingAddress.address3    | String | The 3rd line of the customer's address. |
+| order-shipments | shippingAddress.address1    | String | The first line of the customer's address. |
+| order-shipments | shippingAddress.address2    | String | The second line of the customer's address. |
+| order-shipments | shippingAddress.address3    | String | The third line of the customer's address. |
 | order-shipments | shippingAddress.company     | String | Specifies the customer's company.       |
 | order-shipments | shippingAddress.city        | String | Specifies the city.                     |
 | order-shipments | shippingAddress.zipCode     | String | ZIP code.                               |

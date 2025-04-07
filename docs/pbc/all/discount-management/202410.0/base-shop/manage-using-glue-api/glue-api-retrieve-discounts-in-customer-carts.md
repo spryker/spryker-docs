@@ -18,9 +18,9 @@ For details on the modules that provide the API functionality and how to install
 * [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
 
 
-## Retrieve customer’s carts
+## Retrieve customer's carts
 
-To retrieve a customer’s carts, send the following request:
+To retrieve a customer's carts, send the following request:
 
 `GET` **/customers/*{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*/carts**
 

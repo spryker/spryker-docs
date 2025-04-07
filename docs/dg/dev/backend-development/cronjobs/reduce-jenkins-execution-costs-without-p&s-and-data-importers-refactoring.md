@@ -1,6 +1,6 @@
 ---
 title: Reduce Jenkins execution without P&S and data importers refactoring
-description: Learn how to reduce Jenkins execution costs in Spryker’s backend without refactoring P&S and data importers. Optimize cronjob processes for better performance.
+description: Learn how to reduce Jenkins execution costs in Spryker's backend without refactoring P&S and data importers. Optimize cronjob processes for better performance.
 last_updated: Jul 15, 2023
 template: howto-guide-template
 redirect_from:
@@ -70,7 +70,7 @@ In addition to statistics, we also capture the output of children's processes in
 
 ### Edge cases and limitation
 
-Child processes are killed at the end of each minute, which means those batches that were in progress will be abandoned and will return to the source queue to be processed during the next run. While we didn’t notice any issues with this approach, keep in mind that this is still an experimental approach and may or may not change in the future. The recommendation to mitigate this is to use smaller batches to ensure children processes are running within seconds or up to roughly 10 seconds, to reduce the number of messages that will be retried.
+Child processes are killed at the end of each minute, which means those batches that were in progress will be abandoned and will return to the source queue to be processed during the next run. While we didn't notice any issues with this approach, keep in mind that this is still an experimental approach and may or may not change in the future. The recommendation to mitigate this is to use smaller batches to ensure children processes are running within seconds or up to roughly 10 seconds, to reduce the number of messages that will be retried.
 
 ## Background job orchestration solution implementation
 

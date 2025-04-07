@@ -511,7 +511,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "reviewCount": 0,
                 "productAbstractSku": "181",
                 "name": "Samsung Galaxy Tab S2 SM-T813",
-                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper—create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
+                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2's 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper—create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
                 "attributes": {
                     "internal_memory": "3 GB",
                     "processor_model": "APQ8076",
@@ -890,7 +890,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Samsung Galaxy Tab S2 SM-T715",
-                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper—create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
+                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2's 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper—create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
                 "attributes": {
                     "storage_media": "flash",
                     "touch_technology": "Multi-touch",
@@ -2126,7 +2126,7 @@ In a *single cart* environment, items from the guest cart have been added to t
 | 106 | Cart item could not be deleted. |
 | 107 | Failed to create a cart. |
 | 109 | Anonymous customer unique ID is empty. |
-| 111 | Can’t switch price mode when there are items in the cart. |
+| 111 | Can't switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |
 | 113 | Cart item could not be added. |
 | 114 | Cart item could not be updated. |

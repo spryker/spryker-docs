@@ -67,10 +67,10 @@ In the project level `composer.json` file you can specify the components that yo
 Pulling hundreds of composer dependencies declared in `composer.json` file takes time and can be tricky sometimes. On the one hand, you want your system to have all the newest functionality and improvements, but on the other hand, you might be reluctant to invest additional development effort into the updates. While minor updates do not affect compatibility, that might not be the case for major updates. Check the recommendations below in order to perform the core updates smoothly.
 
 * **Stay Up-to-Date with the New Features**
-  First of all, make sure you do not miss our release mail newsletter ([subscribe](https://now.spryker.com/release-notes) to them and be well informed). Staying up-to-date with the improvements and the new features will help you to understand what releases will bring business value to your company. It’s not recommended to take all major releases or the new modules just because they exist. Once you have taken a module, keep on following the release notes for minor releases and patches and incorporate them once they come out. This method of continuous updates should help to prevent the likelihood of incompatibility and breaks in your project. Always think of the business value you gain from the update, as updates always take some time and it’s up to you to decide if the migration effort is justified in your specific case.
+  First of all, make sure you do not miss our release mail newsletter ([subscribe](https://now.spryker.com/release-notes) to them and be well informed). Staying up-to-date with the improvements and the new features will help you to understand what releases will bring business value to your company. It's not recommended to take all major releases or the new modules just because they exist. Once you have taken a module, keep on following the release notes for minor releases and patches and incorporate them once they come out. This method of continuous updates should help to prevent the likelihood of incompatibility and breaks in your project. Always think of the business value you gain from the update, as updates always take some time and it's up to you to decide if the migration effort is justified in your specific case.
 
 * **Know What You Have**
-  We update dependencies based on Atomic Release process. To check what you have installed you can use the `composer.lock` file, that reflects the real status of your installation. composer.lock file can also be found in project’s root folder.
+  We update dependencies based on Atomic Release process. To check what you have installed you can use the `composer.lock` file, that reflects the real status of your installation. composer.lock file can also be found in project's root folder.
 
 * **Check for Newer Module Versions**
   You can easily keep track of new module versions [using composer-versions-check](https://github.com/Soullivaneuh/composer-versions-check) as add-on for your local composer tool. It will warn you about outdated Spryker Commerce OS module dependencies.
@@ -122,7 +122,7 @@ to use deployment-like download of all packages as zip files. This also dramatic
 
 ## Replace Spryker module dependencies
 
-Each Spryker module might have several dependent modules that provide communication, utilities and added functionality. For example, `spryker/product` needs a dependent `spryker/product-label` module as the product label cannot be attached when there is no product itself. Usually, adjustments are done via our [plugin mechanism](/docs/dg/dev/backend-development/plugins/plugins.html) or via class extensions. However, when introducing a massive functional change, you may need to replace an entire core module with one of your own (or a 3rd party). To do so, there are two steps that you need to follow. Firstly, you will need **to replace the module**, and secondly, **connect the module to the new functionality**.
+Each Spryker module might have several dependent modules that provide communication, utilities and added functionality. For example, `spryker/product` needs a dependent `spryker/product-label` module as the product label cannot be attached when there is no product itself. Usually, adjustments are done via our [plugin mechanism](/docs/dg/dev/backend-development/plugins/plugins.html) or via class extensions. However, when introducing a massive functional change, you may need to replace an entire core module with one of your own (or a third-party). To do so, there are two steps that you need to follow. Firstly, you will need **to replace the module**, and secondly, **connect the module to the new functionality**.
 
 The following process describes adding a replace command into a new module to indicate that it replaces a core module.
 
@@ -130,10 +130,10 @@ For each module that you want to add:
 
 * Replace the old module with the new one by creating a dummy module repository in a directory accessible to composer.
 
-  1. Name or rename the new module by using the old module’s name and prefixing it with `replace_`. For example, create a dummy file called `replace_refund` to replace the refund module. This will help to keep track of any replaces you do in the project.
+  1. Name or rename the new module by using the old module's name and prefixing it with `replace_`. For example, create a dummy file called `replace_refund` to replace the refund module. This will help to keep track of any replaces you do in the project.
   2. In the newly created dummy module directory, create an empty `composer.json` file and add the following Composer Configuration Information.
-  3. Add the newly created module to your project’s `composer.json` file by going into your project’s `composer.json` and adding the new location.
-  4. Check if the core module is in your project’s `composer.json` file and if it's, remove it.
+  3. Add the newly created module to your project's `composer.json` file by going into your project's `composer.json` and adding the new location.
+  4. Check if the core module is in your project's `composer.json` file and if it's, remove it.
 
 * Execute composer update with the replace module name:
 
@@ -151,11 +151,11 @@ For more information on using the composer replace command see  [Composer websit
 
 ```php
 {
-"name": “[vendor]/ replace_[the name of the module you are replacing] ",
+"name": "[vendor]/ replace_[the name of the module you are replacing] ",
 "replace": {
 "spryker/[the name of the module you are replacing] ":"*"
 },
-"description": “[add_decription_of_what_you_are_replacing]"			
+"description": "[add_decription_of_what_you_are_replacing]"			
 }
 
 ```

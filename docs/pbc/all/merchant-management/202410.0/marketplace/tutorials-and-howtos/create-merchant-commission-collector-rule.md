@@ -293,7 +293,7 @@ class DiscountMerchantCommissionFacade extends AbstractFacade implements Discoun
 ## 6) Implement the collector rule plugin
 
 The plugin will call our `DiscountAmountMerchantCommissionItemCollectorRule` class to collect order items. In our example, the plugin only accepts the `number` data type, but you can adjust it to accept other data types, like `list` or `string`.
-The `getFieldName()` method returns the field name as it's used in the item collector query string, e.g. `discount-amount >= '100'`.
+The `getFieldName()` method returns the field name as it's used in the item collector query string–for example, `discount-amount >= '100'`.
 
 ```php
 <?php

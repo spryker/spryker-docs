@@ -355,7 +355,7 @@ To retrieve all wishlists of a customer, send the request:
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Sony Cyber-shot DSC-W830",
-                "description": "Styled for your pocket  Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing it, and slip in your pocket. Shooting great photos and videos is easy with the W800. Buttons are positioned for ease of use, while a dedicated movie button makes shooting movies simple. The vivid 2.7-type Clear Photo LCD display screen lets you view your stills and play back movies with minimal effort. Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound. Breathe new life into a picture by using built-in Picture Effect technology. There’s a range of modes to choose from – you don’t even have to download image-editing software.",
+                "description": "Styled for your pocket  Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing it, and slip in your pocket. Shooting great photos and videos is easy with the W800. Buttons are positioned for ease of use, while a dedicated movie button makes shooting movies simple. The vivid 2.7-type Clear Photo LCD display screen lets you view your stills and play back movies with minimal effort. Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound. Breathe new life into a picture by using built-in Picture Effect technology. There's a range of modes to choose from – you don't even have to download image-editing software.",
                 "attributes": {
                     "hdmi": "no",
                     "sensor_type": "CCD",
@@ -577,7 +577,7 @@ To retrieve a specific wishlist, send the request:
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Sony Cyber-shot DSC-W830",
-                "description": "Styled for your pocket  Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing it, and slip in your pocket. Shooting great photos and videos is easy with the W800. Buttons are positioned for ease of use, while a dedicated movie button makes shooting movies simple. The vivid 2.7-type Clear Photo LCD display screen lets you view your stills and play back movies with minimal effort. Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound. Breathe new life into a picture by using built-in Picture Effect technology. There’s a range of modes to choose from – you don’t even have to download image-editing software.",
+                "description": "Styled for your pocket  Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing it, and slip in your pocket. Shooting great photos and videos is easy with the W800. Buttons are positioned for ease of use, while a dedicated movie button makes shooting movies simple. The vivid 2.7-type Clear Photo LCD display screen lets you view your stills and play back movies with minimal effort. Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound. Breathe new life into a picture by using built-in Picture Effect technology. There's a range of modes to choose from – you don't even have to download image-editing software.",
                 "attributes": {
                     "hdmi": "no",
                     "sensor_type": "CCD",
@@ -682,7 +682,7 @@ To retrieve a specific wishlist, send the request:
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Sony Cyber-shot DSC-W830",
-                "description": "Styled for your pocket  Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing it, and slip in your pocket. Shooting great photos and videos is easy with the W800. Buttons are positioned for ease of use, while a dedicated movie button makes shooting movies simple. The vivid 2.7-type Clear Photo LCD display screen lets you view your stills and play back movies with minimal effort. Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound. Breathe new life into a picture by using built-in Picture Effect technology. There’s a range of modes to choose from – you don’t even have to download image-editing software.",
+                "description": "Styled for your pocket  Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing it, and slip in your pocket. Shooting great photos and videos is easy with the W800. Buttons are positioned for ease of use, while a dedicated movie button makes shooting movies simple. The vivid 2.7-type Clear Photo LCD display screen lets you view your stills and play back movies with minimal effort. Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound. Breathe new life into a picture by using built-in Picture Effect technology. There's a range of modes to choose from – you don't even have to download image-editing software.",
                 "attributes": {
                     "hdmi": "no",
                     "sensor_type": "CCD",
@@ -797,7 +797,7 @@ To retrieve a specific wishlist, send the request:
                 "reviewCount": 0,
                 "productAbstractSku": "109",
                 "name": "Sony SW2 SmartWatch",
-                "description": "Anywhere. Any weather SmartWatch 2 is the wireless accessory that has something for everybody. If you are a busy communicator, you will appreciate being on top of everything. If you like to get out running, you can use SmartWatch as your phone remote. If it rains, you can keep on going. SmartWatch 2 can take the rain. If it's bright and sunny, SmartWatch 2 has an impressive sunlight-readable display. Take it anywhere. When you are using a wireless Bluetooth® headset for music, you can use SmartWatch 2 as a phone remote to make or receive calls. When a call comes in, you can see who’s calling in your SmartWatch display, press once to answer and enjoy hands-free calling at its easiest. You can also browse recent calls in your call log and use SmartWatch to initiate a call.",
+                "description": "Anywhere. Any weather SmartWatch 2 is the wireless accessory that has something for everybody. If you are a busy communicator, you will appreciate being on top of everything. If you like to get out running, you can use SmartWatch as your phone remote. If it rains, you can keep on going. SmartWatch 2 can take the rain. If it's bright and sunny, SmartWatch 2 has an impressive sunlight-readable display. Take it anywhere. When you are using a wireless Bluetooth® headset for music, you can use SmartWatch 2 as a phone remote to make or receive calls. When a call comes in, you can see who's calling in your SmartWatch display, press once to answer and enjoy hands-free calling at its easiest. You can also browse recent calls in your call log and use SmartWatch to initiate a call.",
                 "attributes": {
                     "display_type": "LCD",
                     "shape": "square",
@@ -933,7 +933,7 @@ To retrieve a specific wishlist, send the request:
                 "reviewCount": 0,
                 "productAbstractSku": "109",
                 "name": "Sony SW2 SmartWatch",
-                "description": "Anywhere. Any weather SmartWatch 2 is the wireless accessory that has something for everybody. If you are a busy communicator, you will appreciate being on top of everything. If you like to get out running, you can use SmartWatch as your phone remote. If it rains, you can keep on going. SmartWatch 2 can take the rain. If it's bright and sunny, SmartWatch 2 has an impressive sunlight-readable display. Take it anywhere. When you are using a wireless Bluetooth® headset for music, you can use SmartWatch 2 as a phone remote to make or receive calls. When a call comes in, you can see who’s calling in your SmartWatch display, press once to answer and enjoy hands-free calling at its easiest. You can also browse recent calls in your call log and use SmartWatch to initiate a call.",
+                "description": "Anywhere. Any weather SmartWatch 2 is the wireless accessory that has something for everybody. If you are a busy communicator, you will appreciate being on top of everything. If you like to get out running, you can use SmartWatch as your phone remote. If it rains, you can keep on going. SmartWatch 2 can take the rain. If it's bright and sunny, SmartWatch 2 has an impressive sunlight-readable display. Take it anywhere. When you are using a wireless Bluetooth® headset for music, you can use SmartWatch 2 as a phone remote to make or receive calls. When a call comes in, you can see who's calling in your SmartWatch display, press once to answer and enjoy hands-free calling at its easiest. You can also browse recent calls in your call log and use SmartWatch to initiate a call.",
                 "attributes": {
                     "display_type": "LCD",
                     "shape": "square",
@@ -1078,7 +1078,7 @@ To retrieve a specific wishlist, send the request:
                 "reviewCount": 0,
                 "productAbstractSku": "011",
                 "name": "Canon IXUS 180",
-                "description": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control and choose the perfect camera settings for you. Play with your creativity in stills or movies using a range of Creative Filters such as Fish Eye, Miniature and Toy Camera.  Enjoy exceptional quality, detailed images ideal for creating stunning poster sized prints thanks to 20.0 Megapixels and DIGIC 4+ processing. An intelligent optical Image Stabilizer ensures sharp stills and steady movies in any situation, while the 6.8 cm (2.7”) LCD screen allows easy viewing and sharing.",
+                "description": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control and choose the perfect camera settings for you. Play with your creativity in stills or movies using a range of Creative Filters such as Fish Eye, Miniature and Toy Camera.  Enjoy exceptional quality, detailed images ideal for creating stunning poster sized prints thanks to 20.0 Megapixels and DIGIC 4+ processing. An intelligent optical Image Stabilizer ensures sharp stills and steady movies in any situation, while the 6.8 cm (2.7") LCD screen allows easy viewing and sharing.",
                 "attributes": {
                     "megapixel": "20 MP",
                     "sensor_type": "CCD",
@@ -1240,7 +1240,7 @@ To retrieve a specific wishlist, send the request:
                 "reviewCount": 0,
                 "productAbstractSku": "111",
                 "name": "Sony SmartWatch",
-                "description": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your world’s just a tap, swipe or press away. Want to do more with your SmartWatch? Download compatible applications on Google Play™. And customise your SmartWatch to make it exclusively yours. Customise your SmartWatch with a 20mm wristband. Or wear its stylish wristband. You can even use it as a clip. This ultra-thin Android™ remote was designed to impress. An elegant Android watch that’ll keep you discreetly updated and your hands free.",
+                "description": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your world's just a tap, swipe or press away. Want to do more with your SmartWatch? Download compatible applications on Google Play™. And customise your SmartWatch to make it exclusively yours. Customise your SmartWatch with a 20mm wristband. Or wear its stylish wristband. You can even use it as a clip. This ultra-thin Android™ remote was designed to impress. An elegant Android watch that'll keep you discreetly updated and your hands free.",
                 "attributes": {
                     "shape": "square",
                     "bluetooth_version": "3",
@@ -1440,7 +1440,7 @@ To retrieve a specific wishlist, send the request:
                 "reviewCount": 0,
                 "productAbstractSku": "011",
                 "name": "Canon IXUS 180",
-                "description": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control and choose the perfect camera settings for you. Play with your creativity in stills or movies using a range of Creative Filters such as Fish Eye, Miniature and Toy Camera.  Enjoy exceptional quality, detailed images ideal for creating stunning poster sized prints thanks to 20.0 Megapixels and DIGIC 4+ processing. An intelligent optical Image Stabilizer ensures sharp stills and steady movies in any situation, while the 6.8 cm (2.7”) LCD screen allows easy viewing and sharing.",
+                "description": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control and choose the perfect camera settings for you. Play with your creativity in stills or movies using a range of Creative Filters such as Fish Eye, Miniature and Toy Camera.  Enjoy exceptional quality, detailed images ideal for creating stunning poster sized prints thanks to 20.0 Megapixels and DIGIC 4+ processing. An intelligent optical Image Stabilizer ensures sharp stills and steady movies in any situation, while the 6.8 cm (2.7") LCD screen allows easy viewing and sharing.",
                 "attributes": {
                     "megapixel": "20 MP",
                     "sensor_type": "CCD",
@@ -1602,7 +1602,7 @@ To retrieve a specific wishlist, send the request:
                 "reviewCount": 0,
                 "productAbstractSku": "111",
                 "name": "Sony SmartWatch",
-                "description": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your world’s just a tap, swipe or press away. Want to do more with your SmartWatch? Download compatible applications on Google Play™. And customise your SmartWatch to make it exclusively yours. Customise your SmartWatch with a 20mm wristband. Or wear its stylish wristband. You can even use it as a clip. This ultra-thin Android™ remote was designed to impress. An elegant Android watch that’ll keep you discreetly updated and your hands free.",
+                "description": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your world's just a tap, swipe or press away. Want to do more with your SmartWatch? Download compatible applications on Google Play™. And customise your SmartWatch to make it exclusively yours. Customise your SmartWatch with a 20mm wristband. Or wear its stylish wristband. You can even use it as a clip. This ultra-thin Android™ remote was designed to impress. An elegant Android watch that'll keep you discreetly updated and your hands free.",
                 "attributes": {
                     "shape": "square",
                     "bluetooth_version": "3",
@@ -1824,7 +1824,7 @@ To retrieve a specific wishlist, send the request:
                 "reviewCount": 0,
                 "productAbstractSku": "011",
                 "name": "Canon IXUS 180",
-                "description": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control and choose the perfect camera settings for you. Play with your creativity in stills or movies using a range of Creative Filters such as Fish Eye, Miniature and Toy Camera.  Enjoy exceptional quality, detailed images ideal for creating stunning poster sized prints thanks to 20.0 Megapixels and DIGIC 4+ processing. An intelligent optical Image Stabilizer ensures sharp stills and steady movies in any situation, while the 6.8 cm (2.7”) LCD screen allows easy viewing and sharing.",
+                "description": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control and choose the perfect camera settings for you. Play with your creativity in stills or movies using a range of Creative Filters such as Fish Eye, Miniature and Toy Camera.  Enjoy exceptional quality, detailed images ideal for creating stunning poster sized prints thanks to 20.0 Megapixels and DIGIC 4+ processing. An intelligent optical Image Stabilizer ensures sharp stills and steady movies in any situation, while the 6.8 cm (2.7") LCD screen allows easy viewing and sharing.",
                 "attributes": {
                     "megapixel": "20 MP",
                     "sensor_type": "CCD",
@@ -1986,7 +1986,7 @@ To retrieve a specific wishlist, send the request:
                 "reviewCount": 0,
                 "productAbstractSku": "111",
                 "name": "Sony SmartWatch",
-                "description": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your world’s just a tap, swipe or press away. Want to do more with your SmartWatch? Download compatible applications on Google Play™. And customise your SmartWatch to make it exclusively yours. Customise your SmartWatch with a 20mm wristband. Or wear its stylish wristband. You can even use it as a clip. This ultra-thin Android™ remote was designed to impress. An elegant Android watch that’ll keep you discreetly updated and your hands free.",
+                "description": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your world's just a tap, swipe or press away. Want to do more with your SmartWatch? Download compatible applications on Google Play™. And customise your SmartWatch to make it exclusively yours. Customise your SmartWatch with a 20mm wristband. Or wear its stylish wristband. You can even use it as a clip. This ultra-thin Android™ remote was designed to impress. An elegant Android watch that'll keep you discreetly updated and your hands free.",
                 "attributes": {
                     "shape": "square",
                     "bluetooth_version": "3",

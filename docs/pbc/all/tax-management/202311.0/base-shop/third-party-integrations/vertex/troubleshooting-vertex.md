@@ -16,6 +16,6 @@ Also, make sure that the Vertex app is activated in the ACP catalog:
 
 You can also use the Vertex log files on your Vertex platform to check the logs on the Vertex side. To access the logs, go to **System -> Administration -> Log Files**.
 
-## I don’t know if the right address is being sent to Vertex
+## I don't know if the right address is being sent to Vertex
 
 Ensure that you have the needed fields for the address in your country. For example, if you are in the US, ensure that a state field is on your address form on the Storefront. Alternatively, Vertex offers an [address cleansing product](https://www.vertexinc.com/solutions/products/vertex-o-series-address-cleansing) for the US only. It can be integrated into your project for address cleansing and validation. 

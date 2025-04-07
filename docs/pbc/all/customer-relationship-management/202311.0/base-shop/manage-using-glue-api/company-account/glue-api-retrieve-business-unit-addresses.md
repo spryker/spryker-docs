@@ -87,9 +87,9 @@ Request sample: retrieve a business unit address
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| address1 | String | 1st line of the business unit address. |
-| address2 | String | 2nd line of the business unit address. |
-| address3 | String | 3rd line of the business unit address. |
+| address1 | String | first line of the business unit address. |
+| address2 | String | second line of the business unit address. |
+| address3 | String | third line of the business unit address. |
 | zipCode  | String | ZIP code. |
 | city  | String | City. |
 | phone | String | Phone number of the business unit. |

@@ -28,7 +28,7 @@ To check if your module versions are supported by the Upgrader, [run the evaluat
 
 ## Implement E2E testing in development workflow
 
-Upgrades are provided as PRs that are automatically created in a project’s repository. To make sure all functionality works as expected, you will need to review and test the PRs before merging.
+Upgrades are provided as PRs that are automatically created in a project's repository. To make sure all functionality works as expected, you will need to review and test the PRs before merging.
 
 ## Migrate to a supported version control system
 

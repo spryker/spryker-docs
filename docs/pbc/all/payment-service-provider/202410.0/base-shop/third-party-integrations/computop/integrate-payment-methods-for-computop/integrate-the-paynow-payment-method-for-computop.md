@@ -103,7 +103,7 @@ Computop PayNow payment method also provides a new Checkout Step for filling the
 
 /**
 * This file is part of the Spryker Demoshop.
-* For full license information, please view the LICENSE file that was distributed with this source code.
+* For full license information,  view the LICENSE file that was distributed with this source code.
 */
 
 namespace Pyz\Yves\Checkout\Process\Steps;
@@ -356,9 +356,9 @@ protected function createPlaceOrderStep()
 1. There is a radio button on **Payment** step. After submitting the order, the customer is redirected to the to PayNow checkout step. The step contains Credit Card form with the following fields:
   - Credit Card brand choice
   - Credit Card number
-  - Credit Card expires date (in the format `YYYYMM`, e.g. 201807)
+  - Credit Card expires date (in the format `YYYYMM`–for example, 201807)
   - Credit Card security code (CVV)
-  - Data (hidden field, encrypted parameters, e.g. currency, amount, description)
+  - Data (hidden field, encrypted parameters, such as currency, amount, or description)
   - Length (hidden field, length of `data` parameter)
   - Merchant id (hidden field, assigned by Computop)
 

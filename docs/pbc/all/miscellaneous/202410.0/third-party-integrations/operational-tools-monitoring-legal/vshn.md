@@ -15,7 +15,7 @@ redirect_from:
 
 The DevOps Company
 
-VSHN AG is Switzerland’s leading DevOps, Docker, Kubernetes, Openshift and 24/7 cloud operations partner. VSHN helps software developers to run their applications agile and 24/7 on any infrastructure while relieving the burden on IT operations.
+VSHN AG is Switzerland's leading DevOps, Docker, Kubernetes, Openshift and 24/7 cloud operations partner. VSHN helps software developers to run their applications agile and 24/7 on any infrastructure while relieving the burden on IT operations.
 
 Since 2014 we support 300 customers & partners operating over 900 servers in 20 different clouds and on-premises with more than 62000 combined monitored services. We are ISO 27001 certified and work in accordance with the strict FINMA guidelines to ensure the security and confidentiality of customer data at all times. We also created APPUiO.ch, the Swiss container platform based on Red Hat OpenShift, where we provide managed services on a Platform-as-a-Service (PaaS) on any infrastructure: public, dedicated, private and on-premises.
 
@@ -35,6 +35,6 @@ See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
 ---
 
-For further information on this partner and integration into Spryker, please contact us.
+For further information on this partner and integration into Spryker,  contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

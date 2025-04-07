@@ -11,7 +11,7 @@ redirect_from:
 related:
   - title: Obtaining an Amazon Order Reference and information about shipping addresses
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/obtain-an-amazon-order-reference-and-information-about-shipping-addresses.html
-  - title: Amazon Pay - Rendering a “Pay with Amazon” Button on the Cart Page
+  - title: Amazon Pay - Rendering a "Pay with Amazon" Button on the Cart Page
   - title: Configuring Amazon Pay
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/configure-amazon-pay.html
   - title: Handling orders with Amazon Pay API
@@ -46,6 +46,6 @@ Subsequent all integration functionality is provided by Amazon Pay.
 See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
 ---
-For further information on this partner and integration into Spryker, please contact us.
+For further information on this partner and integration into Spryker,  contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

@@ -16,7 +16,7 @@ To approve or reject a merchant relation request, do the following:
 1. Click **Edit** for the request you want to process.
 2. Optional: In *Assigned business units*, select more business units to add to the request or remove the business units for which you don't want to create a relation.
 3. Optional: In *Company Note*, leave a message for the company that requested the relation.
-4. Optional: In *Internal Comments*, leave comments for internal usage within your organization. Your colleagues can see and respond to the internal comments. The buyer’s company that requested the merchant relation won't see these comments.
+4. Optional: In *Internal Comments*, leave comments for internal usage within your organization. Your colleagues can see and respond to the internal comments. The buyer's company that requested the merchant relation won't see these comments.
 5. In the top right corner, click **Approve** or **Reject**.
 6. Optional: To create a separate merchant relation per each business unit, check the respective check box.
 7. Confirm approval or rejection of the merchant request.

@@ -15,7 +15,7 @@ For information about installing the Spryker Commerce OS, see [Getting started g
 
 ## <span class="inline-img">![core-commerce](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Commerce+OS_128.png)</span> Fulfillment App <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-As part of Spryker’s Unified Commerce capability, the Fulfillment App provides an all-new user interface designed to streamline your order fulfillment process. Supporting new business models and with enhanced functionalities, the Fulfillment App simplifies tasks for warehouse and store staff, offering an efficient and effective fulfillment process.
+As part of Spryker's Unified Commerce capability, the Fulfillment App provides an all-new user interface designed to streamline your order fulfillment process. Supporting new business models and with enhanced functionalities, the Fulfillment App simplifies tasks for warehouse and store staff, offering an efficient and effective fulfillment process.
 
 The fulfillment App includes the following features:
 
@@ -23,7 +23,7 @@ The fulfillment App includes the following features:
 - Warehouse allocation strategy: Optimize warehouse space utilization for your specific warehouse setup.
 - Offline mode: Ensure uninterrupted picking, even without an internet connection.
 - Backend API architecture: Better performance and improved scalability.
-- Powered by Spryker’s Oryx Framework: Make rapid frontend customizations by utilizing a rich library of components.
+- Powered by Spryker's Oryx Framework: Make rapid frontend customizations by utilizing a rich library of components.
 
 **Business benefits**:
 - Fulfill orders faster, easier, and smarter.
@@ -94,7 +94,7 @@ The key features of the Data Exchange API include the following:
 
 ## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Next Generation Middleware: Spryker Middleware powered by Alumio <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-The Spryker Middleware powered by Alumio solves the main challenges of data integrations in a flexible and customizable way and, therefore, greatly reduces the efforts for Spryker’s data exchange use cases. It is the foundation on which we build our Integration Apps. The Spryker Middleware powered by Alumio uses Alumio data integration technology.
+The Spryker Middleware powered by Alumio solves the main challenges of data integrations in a flexible and customizable way and, therefore, greatly reduces the efforts for Spryker's data exchange use cases. It is the foundation on which we build our Integration Apps. The Spryker Middleware powered by Alumio uses Alumio data integration technology.
 
 The Spryker Middleware powered by Alumio helps you to reach the following outcomes:
 
@@ -162,7 +162,7 @@ Key features of this integration include the following:
 
 ## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Improved performance, stability, and scalability <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Adding 3rd party integrations via apps to your existing SCCOS solution has become easier with the App Composition Platform (ACP). Get in touch with us to get ACP enabled faster and take advantage of ACP’s steadily growing number of no and low-code apps.
+Adding third-party integrations via apps to your existing SCCOS solution has become easier with the App Composition Platform (ACP). Get in touch with us to get ACP enabled faster and take advantage of ACP's steadily growing number of no and low-code apps.
 
 **Business benefit**:<br>
 Simplified and faster enablement of ACP for SCCOS, as well as improved scalability, performance, and data security of the entire platform.
@@ -204,7 +204,7 @@ Build an efficient path to purchase for your buyers with Algolia search, an inno
 
 ## <span class="inline-img">![code-upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/code-upgrader.png)</span> Autointegration of code releases <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-In addition to updating Spryker packages in your repository, with this release, Spryker Code Upgrader starts integrating plugins, settinh configurations keys, and adding new translations and similar elements to your project code. Now engineers don’t have to figure out and manually apply code changes to activate new features.
+In addition to updating Spryker packages in your repository, with this release, Spryker Code Upgrader starts integrating plugins, settinh configurations keys, and adding new translations and similar elements to your project code. Now engineers don't have to figure out and manually apply code changes to activate new features.
 
 **Business benefit**:<br>
 Reduce the engineering time needed to integrate a Spryker module release into your project.
@@ -251,7 +251,7 @@ Install and run [Upgrader compliance Evaluator](/docs/dg/dev/guidelines/keeping-
 Oryx Framework empowers developers to efficiently build composable frontends. Oryx provides a rich library of Oryx components, including a design system, allowing developers to rapidly create modern and visually appealing user interfaces. These components integrate with Spryker APIs by default, providing a seamless, decoupled experience for developers and end consumers.
 
 **Business benefit**:<br>
-Save time and effort with Oryx Framework. Spryker’s purpose-built framework lets developers utilize fast, lightweight, and reactive components for storefronts and other frontends that quickly and dynamically display various devices.
+Save time and effort with Oryx Framework. Spryker's purpose-built framework lets developers utilize fast, lightweight, and reactive components for storefronts and other frontends that quickly and dynamically display various devices.
 
 ### Learn more:
 [Oryx in 90 seconds videos](https://www.youtube.com/playlist?list=PLJooqCSo73Sj9r_632NRtr-O0zuY7eHPb)
@@ -264,7 +264,7 @@ Oryx can be installed on your local machine and requires a Node.js or a compatib
 
 ## <span class="inline-img">![composable-frontend](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Composable+Storefront_128.png)</span> Composable Storefront: Additional foundation features - EA (early access) <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Additional features are being released for Spryker's new upgradeable, decoupled frontend solution — Composable Storefront. This set of features provides essential components for commonplace purchase journeys. Spryker Composable Storefront is built using Spryker’s Oryx framework, a reactive, fast, and lightweight framework.
+Additional features are being released for Spryker's new upgradeable, decoupled frontend solution — Composable Storefront. This set of features provides essential components for commonplace purchase journeys. Spryker Composable Storefront is built using Spryker's Oryx framework, a reactive, fast, and lightweight framework.
 
 For more information about this Early Access product, contact your Spryker representative.
 

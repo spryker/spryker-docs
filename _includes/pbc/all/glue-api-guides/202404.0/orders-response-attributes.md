@@ -3,7 +3,7 @@
 
 | RESOURCE | ATTRIBUTE       | TYPE   | DESCRIPTION  |
 | --------------- | ------ | ---| - |
-| itemStates      | Array  | Statuses of the order’s items in the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
+| itemStates      | Array  | Statuses of the order's items in the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
 | createdAt       | String | Date and time when the order was created.                    |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
 | priceMode       | String | Price mode that was active when placing the order. Possible values:<ul><li>**NET_MODE**—prices before tax.</li><li>**GROSS_MODE**—prices after tax.</li></ul> |
@@ -30,9 +30,9 @@
 | billingAddress.firstName   | String | Customer's first name.                                       |
 | billingAddress.middleName  | String | Customer's middle name.                                      |
 | billingAddress.lastName    | String | Customer's last name.                                        |
-| billingAddress.address1    | String | 1st line of the customer's address.                          |
-| billingAddress.address2    | String | 2nd line of the customer's address.                          |
-| billingAddress.address3    | String | 3rd line of the customer's address.                          |
+| billingAddress.address1    | String | first line of the customer's address.                          |
+| billingAddress.address2    | String | second line of the customer's address.                          |
+| billingAddress.address3    | String | third line of the customer's address.                          |
 | billingAddress.company     | String | Specifies the customer's company.                            |
 | billingAddress.city        | String | Specifies the city.                                          |
 | billingAddress.zipCode     | String | ZIP code.                                                    |

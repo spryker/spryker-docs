@@ -20,7 +20,7 @@ Install the required modules using Composer:
 composer require spryker-feature/quick-add-to-cart:"{{page.version}}" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 
@@ -39,7 +39,7 @@ Generate transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following changes have been applied in transfer objects:
 
@@ -61,7 +61,7 @@ quick-order.upload-order.errors.upload-order-invalid-sku-item,Product with this 
 quick-order.upload-order.errors.upload-order-invalid-sku-item,Produkt mit dieser SKU wurde nicht gefunden.,de_DE
 price_product.error.price_not_found,Product price not found.,en_US
 price_product.error.price_not_found,Produktpreis nicht gefunden.,de_DE
-product_discontinued.message.product_discontinued,"Product is discontinued, please choose an alternative one.",en_US
+product_discontinued.message.product_discontinued,"Product is discontinued,  choose an alternative one.",en_US
 product_discontinued.message.product_discontinued,"Produkt ist nicht mehr verfügbar, bitte wählen Sie eine Alternative.",de_DE
 product-quantity.warning.quantity.min.failed,The ordered quantity was adjusted to the next possible quantity for the article because minimum quantity is %min%.,en_US
 product-quantity.warning.quantity.min.failed,Die bestellte Anzahl erfüllt nicht die Anforderungen für dieses Produkt. Mindestanzahl ist %min%.,de_DE
@@ -144,7 +144,7 @@ Install the required modules using Composer:
 composer require spryker-feature/quick-add-to-cart:"^master" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 
@@ -273,7 +273,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following URLs are available on Yves:
 
@@ -343,7 +343,7 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make the following checks at https://mysprykershop.com/quick-order:
 

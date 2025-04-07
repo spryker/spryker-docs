@@ -43,7 +43,7 @@ Status inquiries within Paygate give detailed information about the amounts that
 
 ## Reverse Call:
 
-* Reverse.aspx does not only reverse authorizations, but also any LAST TRANSACTION STAGE! If the last transaction was a capture, Reverse.aspx initiates the reverse, e.g. a credit. Therefore, the utmost caution is urged. Use it at your own risk. We recommend checking the transaction status with Inquire.aspx before using Reverse.aspx.
+* Reverse.aspx does not only reverse authorizations, but also any last transaction stage. If the last transaction was a capture, `Reverse.aspx` initiates the reverse–for example, a credit. Therefore, the utmost caution is urged. Use it at your own risk. We recommend checking the transaction status with Inquire.aspx before using Reverse.aspx.
 * Use it just after "Inquire" call if it returns the previous action as "Authorization".
 
 ## Capture Call:

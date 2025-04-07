@@ -288,7 +288,7 @@ services:
 
 ## Swagger UI
 
-[Swagger UI](https://swagger.io/tools/swagger-ui/) allows anyone—be it your development team or your end consumers—to visualize and interact with the API’s resources without having any of the implementation logic in place. It’s automatically generated from your OpenAPI (formerly known as Swagger) Specification, with the visual documentation making it easy for backend implementation and client-side consumption.
+[Swagger UI](https://swagger.io/tools/swagger-ui/) allows anyone—be it your development team or your end consumers—to visualize and interact with the API's resources without having any of the implementation logic in place. It's automatically generated from your OpenAPI (formerly known as Swagger) Specification, with the visual documentation making it easy for backend implementation and client-side consumption.
 
 For more details, see [Swagger UI documentation](https://swagger.io/docs/open-source-tools/swagger-ui/usage/installation/).
 
@@ -396,6 +396,16 @@ services:
 
 [Blackfire](https://blackfire.io/) is a tool used to profile, test, debug, and optimize the performance of PHP applications. It gathers data about consumed server resources like memory, CPU time, and I/O operations. The data and configuration can be checked through the Blackfire web interface.
 
+{% info_block warningBox %}
+
+While we recommend Blackfire for PHP code profiling, *Blackfire is not compatible with OpenTelemetry (OTel)*. If OTel resolves this compatibility in future, we will inform you. Meantime, for profiling needs compatible with OTel, we suggest using tools like [Tideways](/docs/dg/dev/integrate-and-configure/configure-services.html#tideways), which can integrate seamlessly with your OTel-based monitoring stack.
+
+
+{% endinfo_block %}
+
+
+
+
 ### Configure Blackfire
 
 To enable Blackfire, follow these steps:
@@ -426,7 +436,7 @@ services:
 
 #### Alternative configuration
 
-Use the following configuration if you are going to change server or client details often or if you don’t want to define them in your deploy file.
+Use the following configuration if you are going to change server or client details often or if you don't want to define them in your deploy file.
 
 To enable Blackfire, follow these steps:
 
@@ -568,7 +578,7 @@ To do it, add the `NewRelicMonitoringExtensionPlugin` by creating the class `src
 ​
 /**
  * This file is part of the Spryker Commerce OS.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 ​
 namespace Pyz\Service\Monitoring;
@@ -597,7 +607,7 @@ Next, create the class `src/Pyz/Service/NewRelic/Plugin/NewRelicMonitoringExtens
 ​
 /**
  * MIT License
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 ​
 namespace Pyz\Service\NewRelic\Plugin;

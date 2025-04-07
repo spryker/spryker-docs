@@ -24,7 +24,7 @@ A pull request can ship a new feature, bug fixes, and improvements to existing f
 
 ## What is a Major release?
 
-When we make a change to the [external API of a module](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html), it's a major release. This includes changes to the internal contract. Even when there is no change in a facade method, there can be a change in the behavior so that the contract (~ expected behavior) changes. Please obey the constraints for major releases.
+When we make a change to the [external API of a module](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html), it's a major release. This includes changes to the internal contract. Even when there is no change in a facade method, there can be a change in the behavior so that the contract (~ expected behavior) changes. Obey the constraints for major releases.
 
 Our customers need to change their `composer.json` file to get major versions of modules.
 
@@ -54,7 +54,7 @@ Usually, you need to run `composer update` to get Spryker Core updates, because 
 
 {% info_block infoBox %}
 
-Some minor updates require specific development effort for the project, which is caused by the deprecation of some old approaches or 3rd party modules. We recommend reading the [release notes](/docs/about/all/releases/product-and-code-releases.html) published after the project's start.
+Some minor updates require specific development effort for the project, which is caused by the deprecation of some old approaches or third-party modules. We recommend reading the [release notes](/docs/about/all/releases/product-and-code-releases.html) published after the project's start.
 
 For solutions to general technical issues you might have, see [Troubleshooting general technical issues](/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-general-technical-issues.html).
 

@@ -10,7 +10,7 @@ The configuration contained some inconsistencies in defining a host for `_Yves_`
 
 ### HOST_YVES and HOST_ZED
 
-They should only define the host for accessing either `_Yves_` or `_Zed_`. They should not include any scheme and port definitions. This makes for reuse for e.g. setting a cookie domain.
+They should only define the host for accessing either `_Yves_` or `_Zed_`. They should not include any scheme and port definitions. This makes for reuse–for example, for setting a cookie domain.
 
 ### BASE_URL_YVES and BASE_URL_SSL_YVES
 

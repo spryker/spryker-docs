@@ -22,7 +22,7 @@ Below, you will find the most common architecture design mistakes and impediment
 
 ### Duplications of slow operations
 
-Sometimes, because of business requirements, it’s mandatory to have a slow operation during one transaction. This slow part of functionality might be very small and hidden behind an API, but the usage of this API can go out of control.
+Sometimes, because of business requirements, it's mandatory to have a slow operation during one transaction. This slow part of functionality might be very small and hidden behind an API, but the usage of this API can go out of control.
 
 Let's consider an example illustrating the impact of a bad architecture design with slow operations. Imagine you have a method called `caluculateDiscount()` that generates some discounts for cart items. However, each call of this method takes 100ms, which might be a proper response time for an API. Now think of another business requirement when you need to calculate the discount for 10 separated groups of items in the cart. In this case, you need to call the `caluculateDiscount()` method 10 times, leading to 1000ms (1 second), which already poses a performance problem.
 
@@ -50,9 +50,9 @@ Some of the pessimistic locking use cases are:
 
 To avoid performance issues, architects can recommend using optimistic locking with several different implementations according to the faced problems.
 
-### Synchronous communications and 3rd party calls
+### Synchronous communications and third-party calls
 
-Another architectural mistake is relying on a 3rd party response time to achieve promised performance for an application. Having a direct external call to a 3rd party organization during a transaction can make the performance unpredictable and impact the user experience.
+Another architectural mistake is relying on a third-party response time to achieve promised performance for an application. Having a direct external call to a third-party organization during a transaction can make the performance unpredictable and impact the user experience.
 
 We recommend architects fulfill the requirements by providing a different solution like asynchronous communication<!-- or pre/after indirect hooks that are not visible for the end users-->.
 
@@ -235,9 +235,7 @@ You can avoid using the unnecessary transitions as follows:
 - Remove the `Reservation` flag from the `NEW` and other steps in the OMS.
 - Remove the `Timeout` transition from the `NEW` step in the OMS.
 
-For more ways to optimize OMS, see the following docs:
-* [Slow checkout endpoint](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html#slow-checkout-endpoint)
-* [Optimize order placement performance](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html#optimize-order-placement-performance)
+For more ways to optimize OMS, see [Slow checkout endpoint](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html#slow-checkout-endpoint).
 
 ### Performance checklist
 

@@ -26,8 +26,8 @@ Update modules and set up the configuration as described in the following sectio
 Update the following modules to meet the ACP requirements:
 
 * `spryker/app-catalog-gui:^1.4.1`
-* `spryker/kernel-app:^1.3.0`
-* `spryker/message-broker:^1.14.0`
+* `spryker/kernel-app:^1.4.0`
+* `spryker/message-broker:^1.15.0`
 * `spryker/message-broker-aws:^1.9.0`
 * `spryker/session:^4.15.1`
 * `spryker/oauth-client:^1.5.0`
@@ -162,7 +162,7 @@ Make sure that no deprecated plugins are enabled. Ideally, the content of each o
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\MessageBroker;
@@ -223,6 +223,16 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             new ValidationMiddlewarePlugin(),
         ];
     }
+    
+    /**
+     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\FilterMessageChannelPluginInterface>
+     */
+    public function getFilterMessageChannelPlugins(): array
+    {
+        return [
+            new ActiveAppFilterMessageChannelPlugin(),
+        ];
+    }
 }
 ```
 
@@ -238,7 +248,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\MessageBrokerAws;
@@ -275,13 +285,23 @@ use Spryker\Zed\MessageBroker\MessageBrokerConfig as SprykerMessageBrokerConfig;
 class MessageBrokerConfig extends SprykerMessageBrokerConfig
 {
     /**
-     * @return array<string>
+     * @return list<string>
      */
     public function getDefaultWorkerChannels(): array
     {
         return [
             'app-events',
             //...
+        ];
+    }
+    
+    /**
+     * @return list<string>
+     */
+    public function getSystemWorkerChannels(): array
+    {
+        return [
+            'app-events',
         ];
     }
 
@@ -305,7 +325,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\OauthClient;
@@ -352,7 +372,7 @@ class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\OauthClient;
@@ -391,7 +411,7 @@ class OauthClientConfig extends SprykerOauthClientConfig
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\KernelApp;

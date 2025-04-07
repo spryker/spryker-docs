@@ -4,10 +4,10 @@ This page describes the Microsoft Azure Active Directory and how to install it.
 
 ## General information
 
-Azure Active Directory is Microsoft’s multi-tenant, cloud-based directory and identity management service. For an organization, Azure AD helps employees sign up to multiple services and access them anywhere over the cloud with a single set of login credentials.
+Azure Active Directory is Microsoft's multi-tenant, cloud-based directory and identity management service. For an organization, Azure AD helps employees sign up to multiple services and access them anywhere over the cloud with a single set of login credentials.
 
 
-The [SprykerEco.Oauth-Azure](https://github.com/spryker-eco/oauth-azure) enables OAuth 2.0 authentication via Microsoft Azure Active Directory.
+The [`SprykerEco.Oauth-Azure`](https://github.com/spryker-eco/oauth-azure) enables OAuth 2.0 authentication via Microsoft Azure Active Directory.
 
 ## Integrating Azure Active Directory
 
@@ -29,7 +29,7 @@ To start the feature integration:
 
 ### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Run the following command to install the required modules:
 
 ```bash
 composer require spryker-eco/oauth-azure:"^1.0.0" --update-with-dependencies
@@ -121,7 +121,7 @@ class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure you’ve activated `AzureAuthenticationLinkPlugin` by checking the **Login with Microsoft Azure** button on the Back Office login page.
+Make sure you've activated `AzureAuthenticationLinkPlugin` by checking the **Login with Microsoft Azure** button on the Back Office login page.
 
 {% endinfo_block %}
 
@@ -152,7 +152,7 @@ class SecurityOauthUserDependencyProvider extends SprykerSecurityOauthUserDepend
 {% info_block warningBox "Verification" %}
 
 
-Make sure you’ve activated `AzureOauthUserClientStrategyPlugin`:
+Make sure you've activated `AzureOauthUserClientStrategyPlugin`:
 
 1. On the Back Office login page, select **Login with Microsoft Azure**.
 

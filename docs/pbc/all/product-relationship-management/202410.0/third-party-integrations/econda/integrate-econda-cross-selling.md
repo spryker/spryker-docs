@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-cross-selling.html
 ---
 
-Cross sell is highly customizable and it depends on your setup. Please refer to [Econda offical documentation](https://support.econda.de/display/CSDE/Control+Panel).
+Cross sell is highly customizable and it depends on your setup. Refer to [Econda offical documentation](https://support.econda.de/display/CSDE/Control+Panel).
 
 All necessary JS files are already integrated into the module, the only thing you need to do is to add your API key inside the `econda_crosssell.twig` template:
 
@@ -52,7 +52,7 @@ require('js/econda/econda');
 
 ## Integration
 
-Cross sell is highly customizable and it depends on your setup. Please refer to Econda offical [documentation](https://support.econda.de/display/CSDE/Control+Panel).
+Cross sell is highly customizable and it depends on your setup. Refer to Econda offical [documentation](https://support.econda.de/display/CSDE/Control+Panel).
 
 Here is a sample `econda-widget.js` you can use as a help to integrate cross sell widget to your website:
 
@@ -116,8 +116,6 @@ In `econda-widget.js` we are include the `cross-sell-widget.html` for the widget
  <% } %>
 </section>
 ```
-
-Please refer to Econda visual widget [documentation](https://www.econda.de/support/).
 
 ## Adding the Cross Sell Widget to Twig
 

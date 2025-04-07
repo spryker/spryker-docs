@@ -54,7 +54,7 @@ Make sure that `QuoteTransfer::commentThread` contains information about comment
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Install the following required features:
 
 | NAME | VERSION |
 | --- | --- |

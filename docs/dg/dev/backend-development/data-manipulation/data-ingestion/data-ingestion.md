@@ -1,6 +1,6 @@
 ---
 title: Data ingestion
-description: Explore Spryker’s data ingestion process for importing data into your ecommerce platform. Learn tools and best practices for efficient data management.
+description: Explore Spryker's data ingestion process for importing data into your ecommerce platform. Learn tools and best practices for efficient data management.
 last_updated: Sep 6, 2022
 template: howto-guide-template
 redirect_from:

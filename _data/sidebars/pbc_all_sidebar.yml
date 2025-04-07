@@ -23,6 +23,10 @@ entries:
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-the-back-office-number-formatting.html
                   - title: Upgrade the Chart module
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-chart-module.html
+                  - title: Install Backoffice accessibility improvements
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-accessibility-improvements.html
+                    include_versions:
+                      - "202410.0"
 
               - title: Configure the timezone in the Back Office
                 url: /docs/pbc/all/back-office/base-shop/configure-the-timezone-in-the-back-office.html
@@ -1085,31 +1089,6 @@ entries:
             url: /docs/pbc/all/data-exchange/create-post-plugins-for-data-exchange-api.html
             include_versions:
             - "202410.0"
-          - title: Spryker Middleware powered by Alumio
-            url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html
-            nested:
-              - title: Integration apps
-                url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/integration-apps.html
-              - title: Incrementally import recently updated products
-                url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/incrementally-import-products-with-spryker-middleware-powered-by-alumio.html
-                include_versions:
-                - "202404.0"
-                - "202410.0"
-                nested:
-                - title: Akeneo PIM Integration App
-                  url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/akeneo-pim-integration-app.html
-                  nested:
-                    - title: Configure the Akeneo PIM Integration App
-                      url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app.html
-                      nested:
-                      - title: Configure the Spryker Middleware powered by Alumio connection with Akeneo PIM and SCCOS
-                        url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html
-                      - title: Configure data mapping between Akeneo and SCCOS
-                        url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html
-                      - title: Configure the data integration path between Akeneo and SCCOS
-                        url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html
-                      - title: Create tasks and import products from Akeneo to SCCOS
-                        url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos.html
 
           - title: Data Exchange FAQ
             url: /docs/pbc/all/data-exchange/data-exchange-faq.html
@@ -1512,7 +1491,7 @@ entries:
                       - title: Marketplace Merchant Portal Core
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html
                       - title: Marketplace Merchant Portal Core + CMS feature
-                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-cms-feature.html                        
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-cms-feature.html
                       - title: Marketplace Merchant Portal Core + Dynamic Multistore
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-dynamic-multistore.html
                       - title: Merchant Category
@@ -1904,8 +1883,6 @@ entries:
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/proclane.html
                 - title: Data Virtuality
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/data-virtuality.html
-                - title: Usercentrics
-                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/usercentrics.html
                 - title: Mindcurv
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/mindcurv.html
 
@@ -2076,6 +2053,11 @@ entries:
                   - title: Custom order reference
                     url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/custom-order-reference-overview.html
 
+              
+              - title: Order Amendment feature overview
+                url: /docs/pbc/all/order-management-system/base-shop/order-amendment-feature-overview.html      
+                include_versions:
+                - "202505.0"                        
               - title: Reclamations feature overview
                 url: /docs/pbc/all/order-management-system/base-shop/reclamations-feature-overview.html
               - title: Refunds feature overview
@@ -2102,6 +2084,10 @@ entries:
                     nested:
                       - title: Order Management
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html
+                      - title: Order Amendment
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature.html                        
+                        include_versions:
+                        - "202505.0"
                       - title: Reclamations
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-reclamations-feature.html
                       - title: Quick Add to Cart + Non-splittable Products
@@ -4223,6 +4209,9 @@ entries:
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html
                           - title: Integrate Vertex
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
+                            nested:
+                              - title: Integrate Taxamo
+                                url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-taxamo.html
 
                       - title: Project configuration for Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/project-configuration-for-vertex.html
@@ -4515,12 +4504,3 @@ entries:
                       - title: Pick picklist items
                         url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-pick-picklist-items.html
 
-      - title: Usercentrics
-        url: /docs/pbc/all/usercentrics/usercentrics.html
-        nested:
-          - title: Integrate Usercentrics
-            url: /docs/pbc/all/usercentrics/integrate-usercentrics.html
-          - title: Configure Usercentrics
-            url: /docs/pbc/all/usercentrics/configure-usercentrics.html
-          - title: Disconnect Usercentrics
-            url: /docs/pbc/all/usercentrics/disconnect-usercentrics.html

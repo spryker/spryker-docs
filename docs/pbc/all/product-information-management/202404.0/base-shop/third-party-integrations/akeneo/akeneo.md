@@ -13,8 +13,6 @@ redirect_from:
   - /docs/scos/user/technology-partners/202311.0/product-information-pimerp/akeneo.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/akeneo/akeneo.html
 related:
-  - title: Akeneo PIM Integration App
-    link: docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/akeneo-pim-integration-app.html
   - title: Akeneo Connector (Eco module) — Console commands
     link: docs/pbc/all/product-information-management/page.version/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html
   - title: Installing and configuring Akeneo Connector (Eco module)
@@ -40,7 +38,6 @@ YOUR ADVANTAGES:
 
 ## Related Developer guides
 
-* [Akeneo PIM Integration App] (/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/akeneo-pim-integration-app.html)
 Discontinued - Akeneo Connector (Eco module):
 * [Installing and configuring Akeneo Connector (Eco module)](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html)
 * [Akeneo Connector (Eco module) — Console commands](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html)
@@ -53,6 +50,6 @@ Discontinued - Akeneo Connector (Eco module):
 See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
 ---
-For further information on this partner and integration into Spryker, please contact us.
+For further information on this partner and integration into Spryker,  contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

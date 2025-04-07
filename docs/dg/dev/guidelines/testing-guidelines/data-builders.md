@@ -60,4 +60,4 @@ In your test, you will use the data builder with:
 $customerTransfer = (new CustomerBuilder())->build();
 ```
 
-With this code, you get `CustomerTransfer` that is filled by the [Faker library](https://github.com/fzaninotto/Faker) with the defined dataBuilderRule(s). When passing the optional `$seedData` to the constructor, the values you pass will be used instead.
+With this code, you get `CustomerTransfer` that is filled by the [Faker library](https://github.com/fzaninotto/Faker) with the defined data builder rules. When passing the optional `$seedData` to the constructor, the values you pass will be used instead.

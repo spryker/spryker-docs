@@ -22,6 +22,6 @@ To use a root domain for your application (for example, spryker.com), use an IP 
 
 {% info_block infoBox "Info" %}
 
-We do not normally support full delegation of your DNS to us and, therefore, do not suggest that you change your domain’s NS records to ours.
+We do not normally support full delegation of your DNS to us and, therefore, do not suggest that you change your domain's NS records to ours.
 
 {% endinfo_block %}

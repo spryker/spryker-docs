@@ -20,7 +20,7 @@ Integrate authorization into your project. For details, see [Authorization prote
 
 ## Create protected endpoints
 
-Let's say you have a module named `ModuleRestApi`, where you want to have a new protected endpoint `/module` with `GET` and `POST` methods.  To create the protected endpoint, follow these steps:
+Let's say you have a module named `ModuleRestApi`, where you want to have a new protected endpoint `/module` with `GET` and `POST` methods. To create the protected endpoint, follow these steps:
 
 1. To `src/Pyz/Shared/GlueStorefrontApiApplicationAuthorizationConnector/GlueStorefrontApiApplicationAuthorizationConnectorConfig.php`, add a route or regular expression for the endpoint:
 

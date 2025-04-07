@@ -40,9 +40,9 @@ class ModuleDependencyProvider extends SprykerModuleDependencyProvider
     ...
     protected function getPlugins(): array
     {
-        return [ // 1st level
-            GlossaryStorageConfig::PUBLISH_TRANSLATION => [ // 2nd level
-                'delete' => [ // 3rd level. Only plugins registration should be on this nesting level
+        return [ // first level
+            GlossaryStorageConfig::PUBLISH_TRANSLATION => [ // second level
+                'delete' => [ // third level. Only plugins registration should be on this nesting level
                     new GlossaryKeyDeletePublisherPlugin(),
                 ],
                 'write' => [

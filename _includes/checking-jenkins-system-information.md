@@ -5,7 +5,7 @@
 
 ![jenkins-ip-address](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/_includes/checking-jenkins-system-information.md/jenkins-ip-address.png)
 
-5. Using the IP address you’ve copied, open the Jenkins Web UI at `https://{PRIVATE_IPV4_ADDRESS}/script`.
+5. Using the IP address you've copied, open the Jenkins Web UI at `https://{PRIVATE_IPV4_ADDRESS}/script`.
 6. On the *Script Console* page, insert the following script and select **Run**.
 
 ```bash

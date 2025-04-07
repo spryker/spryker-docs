@@ -21,7 +21,7 @@ process_markdown_files() {
 }
 
 # Specify the folder to add `redirect_from` to
-folder_path="docs/scos/user"
+folder_path="docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio"
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then

@@ -13,7 +13,7 @@ redirect_from:
 
 This document describes how to access AWS Management Console as an [Identity and Access Management (IAM)](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) user.
 
-We create the requested IAM accounts during the initial setup. If you need to create more accounts, contact [support](https://spryker.force.com/support/s/).
+We create the requested IAM accounts during the initial setup. If you need to create more accounts create an Infrastructure Change/Access Management Request in the [Support Portal](https://support.spryker.com).
 
 To sign in to the AWS Management Console as an IAM user:
 

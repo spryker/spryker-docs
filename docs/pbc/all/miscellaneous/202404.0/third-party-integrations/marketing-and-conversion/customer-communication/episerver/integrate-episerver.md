@@ -67,7 +67,7 @@ Add a page for (un)subscribing on your site's side. To complete it, first you ne
 <?php
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 namespace Pyz\Yves\NewsletterPage\Controller;
 use Generated\Shared\Transfer\NewsletterSubscriberTransfer;
@@ -139,7 +139,7 @@ Expand the factory like this:
 <?php
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 namespace Pyz\Yves\NewsletterPage;
 use Pyz\Yves\NewsletterPage\Dependency\Client\NewsletterPageToNewsletterClientInterface;
@@ -164,7 +164,7 @@ class NewsletterPageFactory extends SprykerNewsletterPageFactory
 <?php
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 namespace Pyz\Yves\NewsletterPage;
 use Pyz\Yves\NewsletterPage\Dependency\Client\NewsletterPageToNewsletterClientBridge;
@@ -208,7 +208,7 @@ Prepare `NewsletterPageToNewsletterClientBridge`:
 <?php
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 namespace Pyz\Yves\NewsletterPage\Dependency\Client;
 use Generated\Shared\Transfer\NewsletterSubscriberTransfer;
@@ -236,7 +236,7 @@ And a contract for it:
 <?php
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 namespace Pyz\Yves\NewsletterPage\Dependency\Client;
 use Generated\Shared\Transfer\NewsletterSubscriberTransfer;
@@ -261,7 +261,7 @@ Create a route for our controller. Here's an example:
 <?php
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 namespace Pyz\Yves\NewsletterPage\Plugin\Router;
 
@@ -346,7 +346,7 @@ In case you want to change user data on the Episerver side, you need to extend t
 <?php
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 namespace Pyz\Zed\Customer\Business\Customer;
 use Generated\Shared\Transfer\CustomerTransfer;
@@ -410,7 +410,7 @@ Set up a factory for the Customer module on the project level
 <?php
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 namespace Pyz\Zed\Customer\Business;
 use Pyz\Zed\Customer\Business\Customer\Customer;
@@ -452,7 +452,7 @@ Create one more mail plugin for Customer on data changing (without a body)
 <?php
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 namespace Pyz\Zed\Customer\Communication\Plugin\Mail;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;

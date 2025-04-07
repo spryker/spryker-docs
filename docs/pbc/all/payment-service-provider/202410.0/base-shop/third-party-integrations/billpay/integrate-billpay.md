@@ -15,7 +15,7 @@ related:
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/billpay/billpay.html
 ---
 
-Billpay offers multiple payment methods (Invoice, Direct Debit, PayLater, Instalment). Availability of payment methods differs from country to country. Please contact Billpay directly or visit the [Billpay website](https://www.billpay.de/en/)e  for details.
+Billpay offers multiple payment methods (Invoice, Direct Debit, PayLater, Instalment). Availability of payment methods differs from country to country. Contact Billpay directly or visit the [Billpay website](https://www.billpay.de/en/)e  for details.
 
 The Billpay module provides integration with the [Invoice with prescoring](https://www.billpay.de/en/klarna-group-for-business/index.html) payment method.
 
@@ -34,7 +34,7 @@ See [Configuration Management](/docs/dg/dev/backend-development/data-manipulatio
 | `BILLPAY_PORTAL_ID` | Portal ID that Billpay will provide to you |
 | `BILLPAY_SECURITY_KEY` | MD5 hash of the security key generated for this portal. (generated and delivered by BillPay) |
 | `BILLPAY_PUBLIC_API_KEY` | Public API Key; generated and delivered by BillPay for your portal. |
-| `BILLPAY_MAX_DELAY_IN_DAYS` | Amount of days that will be added to the payment due date (e.g. in case of delayed shipping) |
+| `BILLPAY_MAX_DELAY_IN_DAYS` | Amount of days that will be added to the payment due date–for example, in case of delayed shipping. |
 | `USE_MD5_HASH` | If your security key is not md5 hash encrypted, you can do that by setting this config to 1 |
 | `USE_PRESCORE` | In if it's necessary to show all Billpay payment methods despite of Billpay prescore response, you can set this option to 0. It should be set to 1 by default. |
 
@@ -54,7 +54,7 @@ $config[BillpayConstants::USE_PRESCORE] = 1;
 
 ## Additional Configuration Options
 
-Payone module provides dependency injectors to extend checkout and order processing. Please add or extend with the corresponding keys:
+Payone module provides dependency injectors to extend checkout and order processing. Add or extend with the corresponding keys:
 
 ```php
 <?php

@@ -215,7 +215,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 console data:import:product-offer-service
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that entities were imported to the following database tables respectively:
 
@@ -318,7 +318,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\ProductOfferServicePointStorage;

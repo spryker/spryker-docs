@@ -29,7 +29,7 @@ real time.
   - More service: live chat is an approachable contact channel that you can use
 from 07:00 - 23:00 during the week and from 09:00 - 23:00 during weekends.
   - More leads: on average we generate up to 20-25% of the chats into leads.
-  - Less phone calls: by answering questions on the website, we’re reducing
+  - Less phone calls: by answering questions on the website, we're reducing
 incoming calls.
 
 * LiveChat Software (Knowler).
@@ -48,6 +48,6 @@ and innovative chat software.
 See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
 ---
-For further information on this partner and integration into Spryker, please contact us.
+For further information on this partner and integration into Spryker,  contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

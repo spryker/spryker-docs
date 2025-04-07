@@ -3,6 +3,7 @@ title: Share secrets with the Spryker Support Team
 description: Learn the secure steps for sharing secrets or credentials with the Spryker Support Team, ensuring sensitive information is handled safely and appropriately.
 last_updated: Jun 16, 2021
 template: concept-topic-template
+keywords: username password credentials
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-share-secrets-with-the-spryker-support-team
 originalArticleId: a52e18a4-1aee-4f08-a132-82940f1f207e
 redirect_from:
@@ -17,13 +18,16 @@ We work only with credentials shared in the way described below and delete crede
 
 {% endinfo_block %}
 
+## Retrieve a secret
+If we share a onetimesecret link with you, use the password provided in the Link Passphrase field of the support case. If the password doesn't work, let us know in the case.
+
 ## Share a secret
 
 1. Using [One-Time Secret](https://onetimesecret.com/), create a secret message by entering the secret and configuring a passphrase.
 
 {% info_block warningBox %}
 
-Don't include information on what the secret content is for—for example, if you insert a password, don't provide the username for it. Also, don’t include any information about where and how to use the secret.
+Don't include information on what the secret content is for—for example, if you insert a password, don't provide the username for it. Also, don't include any information about where and how to use the secret.
 
 Create a new link for every individual secret you want to share.
 

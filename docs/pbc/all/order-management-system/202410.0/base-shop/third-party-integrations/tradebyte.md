@@ -24,7 +24,7 @@ Tradebyte operates a modern ecosystem for digital commerce and offers SaaS solut
 
 YOUR ADVANATAGES:
 * The Tradebyte ecosystem provides answers to the challenges of the digital transformation in commerce and enables the seamless interconnection of manufacturers, traders and retailers in the digital supply chain.
-* Consistent and standardised exchange formats and transmission paths – supported end-to- end by Tradebyte – enable a fully-automatic and always synchronous data flow.
+* Consistent and standardised exchange formats and transmission paths – supported end-to- end by Tradebyte – enable a fully automatic and always synchronous data flow.
 * Highly-scalable SaaS solutions building on the modern ecosystem, provide the necessary functions out-of-the-box.
 * The Tradebyte ecosystem overcomes barriers and saves resources with a short time-to-market.
 
@@ -35,6 +35,6 @@ YOUR ADVANATAGES:
 See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
 ---
-For further information on this partner and integration into Spryker, please contact us.
+For further information on this partner and integration into Spryker,  contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

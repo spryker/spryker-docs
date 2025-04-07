@@ -22,9 +22,7 @@ redirect_from:
 
 ---
 
-
-
-Spryker Cloud Commerce OS (SCCOS) is a completely modular e-commerce technology. With the modular design and API-based integration with all possible touchpoints, Spryker supports most business models: B2B, B2C, and marketplace.
+Spryker Cloud Commerce OS (Spryker) is an e-commerce platform-as-a-service solution designed to provide businesses with the flexibility and efficiency needed to create a unique digital commerce experience. Built on a modular and layered architecture, it increases operational efficiency and lowers the total cost of ownership. With the modular design and API-based integration with all possible touchpoints, Spryker supports most business models: B2B, B2C, and marketplace. This document provides an overview of the key features and benefits of Spryker.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/Spryker-OS-Overview-RGB-JULY19_Spryker-OS-Overview.png)
 
@@ -41,7 +39,7 @@ For a complete list of modules, see the [Spryker repository](https://github.com/
 
 ### Benefits of the modular architecture
 
-* You take only the modules or features needed for your project, without overloading it with redundant code and investing effort into something you don’t need.
+* You take only the modules or features needed for your project, without overloading it with redundant code and investing effort into something you don't need.
 * You can easily grow your project by adding new modules at any time.
 * You can add, delete, and test new features without worrying about breaking or pausing your live shop.
 * Thanks to the atomic release approach, each module is released independently, has its own version, and is backward compatible. You can install and update the needed modules right after they are released without having to update any other installed modules.
@@ -85,9 +83,7 @@ We take care of the infrastructure security and provide you with guidelines for 
 
 ## Customizable system
 
-Being highly customizable at its core, Spryker is designed to cater the the most complex use cases. The functionality shipped by default can be extended and customized. Each module is released with an extension point so you can adjust it to your needs. On top of customizing the existing functionality, you can introduce completely new components.
-
-Glue API enables you to integrate any external systems and touchpoints, making your shop an all-in-one commerce system.
+Spryker offers an adaptable platform suitable for a variety of e-commerce needs, including different business operational models and industry verticals. This is possible because development teams can modify vendor-specific business logic provided out of the box, aligning the platform with individual operational requirements. Built on a modular and layered structure, Spryker is designed for making specific adjustments. This flexibility is beneficial for iterative development, enabling projects to launch with an essential feature set (MVP approach) and then incrementally introduce additional functionalities as needed. Glue API enables you to integrate any external systems and touchpoints, making your shop an all-in-one commerce system.
 
 ## Demo Shops
 

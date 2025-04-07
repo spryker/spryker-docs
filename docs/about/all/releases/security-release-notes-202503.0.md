@@ -40,8 +40,19 @@ The company user role assign and unassign functionality lacked Cross-Site Reques
 
 Update the `spryker-shop/company-page` module to version 2.34.0 or higher:
 
+
+{% info_block infoBox "Note" %}
+
+
+Because of dependencies you might also need to update:
+- `spryker-shop/shop-ui`
+- `spryker/validator`
+
+{% endinfo_block %}
+
+
 ```bash
-composer update spryker-shop/company-page # Udpate package
+composer update spryker-shop/company-page # Update package
 composer show spryker-shop/company-page # Verify the version
 ```
 

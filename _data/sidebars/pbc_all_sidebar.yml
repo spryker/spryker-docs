@@ -2,6 +2,16 @@ title: PBC guides
 entries:
   - product: PBC
     nested:
+      - title: Yves
+        nested:
+          - title: Base Shop
+            nested:
+              - title: Install the Spryker core accessibility improvements
+              - url: /docs/pbc/all/yves/base-shop/install-the-spryker-accessibility-improvements.html
+          - title: B2B, B2B-MP shops
+            nested:
+              - title: Install the Spryker core accessibility improvements
+              - url: /docs/pbc/all/yves/b2b/install-the-spryker-accessibility-improvements.html
       - title: Back Office
         nested:
           - title: Base shop

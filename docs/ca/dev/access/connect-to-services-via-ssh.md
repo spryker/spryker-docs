@@ -14,7 +14,7 @@ redirect_from:
 {% info_block warningBox "Restrictions apply" %}
 
 * The following instruction are for personnel to connect to the cloud infrastructure and should not be used to connect other infrastructure components and systems to the cloud infrastructure. 
-* We do not allow connections to RDS database outside of the SCOS application
+* We do not allow direct connections to RDS database outside of the SCOS application's internal networks. Direct RDS connections are only permitted from Spryker services.
 
 {% endinfo_block %}
 
@@ -28,7 +28,7 @@ You can use SSH in two ways:
 
 ## Prerequisites
 
-To request SSH access, please request an IAM User to be created for you and add your SSH Key to the request. VPN access will be provisioned to you automatically. You can request an IAM User to be provisioned in our [Support Portal](https://support.spryker.com/s/case-funnel-problem) (Infrastructure Change Request/Access Management)
+To request SSH access, please request an IAM User to be created for you and add your SSH Key to the request. VPN access (via OVPN Profile) will be provisioned to you automatically. You can request an IAM User to be provisioned in our [Support Portal](https://support.spryker.com/s/case-funnel-problem) (Infrastructure Change Request/Access Management)
 
 ## Connect to a service
 

@@ -113,6 +113,11 @@ trial-company_Admin,EditCompanyRolesPermissionPlugin,
 trial-company_Admin,ManageCompanyUserInvitationPermissionPlugin,
 trial-company_Admin,CompanyUserStatusChangePermissionPlugin,
 ```
+{% info_block warningBox %}
+
+This CSV import is only an example and will work exclusively for `test-company_Admin` and `trial-company_Admin`. For a real project, you will need to add these plugins to all company admin accounts, and make sure that a new admin account have those permissions.
+
+{% endinfo_block %}
 
 Alternatively, you can assign permissions directly to customers on the company permission management page.
 

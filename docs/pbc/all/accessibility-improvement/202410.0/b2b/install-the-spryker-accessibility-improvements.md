@@ -1,6 +1,6 @@
 ---
-title: Install the Spryker core keyboard accessibility improvements
-description: Learn how to the Spryker core keyboard accessibility improvements.
+title: Install accessibility improvements
+description: Learn how install accessibility improvements.
 last_updated: March 31, 2025
 template: feature-integration-guide-template
 ---
@@ -20,6 +20,7 @@ To install Yves keyboard accessibility improvements, take the following steps:
   - Update the `spryker-shop/product-group-widget` module to version `1.11.1` or later.
   - Update the `spryker-shop/product-review-widget` module to version `1.16.2` or later.
   - Update the `spryker-shop/shop-ui` module to version `1.84.0` or later.
+
 * To update necessary modules run the following command:
 ```bash
   composer update spryker-shop/catalog-page spryker-shop/company-page spryker-shop/customer-page spryker-shop/product-group-widget spryker-shop/product-review-widget spryker-shop/shop-ui

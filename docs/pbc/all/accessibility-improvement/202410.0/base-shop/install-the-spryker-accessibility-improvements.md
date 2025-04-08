@@ -1,6 +1,6 @@
 ---
-title: Install the Spryker core accessibility improvements
-description: Learn how to install the Spryker core accessibility improvements.
+title: Install accessibility improvements
+description: Learn how install accessibility improvements.
 last_updated: March 31, 2025
 template: feature-integration-guide-template
 ---
@@ -10,18 +10,12 @@ Keyboard accessibility improvements include the following changes:
 - Enhanced Accessibility: Made several interface elements more accessible. You can now navigate more logically using the Tab key, and screen readers provide better descriptions of elements.
 - Keyboard-Friendly Search: Improved the way keyboard users can interact with the product search suggestions.
 - Better Visual Clarity: Adjusted the color scheme across the site to ensure text stands out better from its background, making it easier for everyone to read.
-* To update necessary modules run the following command:
-```bash
-  composer update spryker-shop/shop-ui
-```
 
 To install Yves keyboard accessibility improvements, take the following steps:
 
-1. Build Javascript and CSS changes:
-
+1. Update necessary modules with the following command:
 ```bash
-  console frontend:project:install-dependencies
-  console frontend:yves:build -e production
+  composer update spryker-shop/shop-ui
 ```
 
 2. Generate translation cache for Yves:
@@ -45,17 +39,18 @@ To install Yves keyboard accessibility improvements, take the following steps:
 | product_bundle_widget.aria_label.view.details | Details für %productName% anzeigen             | View details for %productName%                    |
 | customer_reorder_widget.aria_label.check.product.to.reorder | Überprüfen Sie das Produkt %productName%, um es erneut zu bestellen | Check the product %productName% to reorder |
    
-
+- Run the following command to import the glossary:
 ```bash
   console data:import glossary
 ```
 
 3. Enable user scalable option in the project:
-    - Set `viewportUserScaleable` variable at `src/Pyz/Yves/ShopUi/Theme/default/templates/page-blank/page-blank.twig`
+    - Set `viewportUserScaleable` variable at `src/Pyz/Yves/ShopUi/Theme/default/templates/page-blank/page-blank.twig`. Possible values are `yes` or `no`. The default value is `no`.
 
 <!-- {% raw %} -->
 ```twig
     {% block template %}
+        ...
         {% set viewportUserScaleable = 'yes' %}
 
         {{ parent() }}
@@ -79,3 +74,10 @@ To install Yves keyboard accessibility improvements, take the following steps:
     {% endembed %}
 ```
 <!-- {% endraw %} -->
+
+5. Build Javascript and CSS changes:
+
+```bash
+  console frontend:project:install-dependencies
+  console frontend:yves:build -e production
+```

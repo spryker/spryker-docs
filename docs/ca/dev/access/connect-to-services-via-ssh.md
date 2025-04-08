@@ -28,7 +28,7 @@ You can use SSH in two ways:
 
 ## Prerequisites
 
-To request SSH access, please request an IAM User to be created for you and add your SSH Key to the request. VPN access (via OVPN Profile) will be provisioned to you automatically. You can request an IAM User to be provisioned in our [Support Portal](https://support.spryker.com/s/case-funnel-problem) (Infrastructure Change Request/Access Management)
+To request SSH access, request an IAM User to be created for you and add your SSH Key to the request. VPN access (via OVPN Profile) will be provisioned to you automatically. You can request an IAM User to be provisioned in our [Support Portal](https://support.spryker.com/s/case-funnel-problem) (Infrastructure Change Request/Access Management)
 
 ## Connect to a service
 

@@ -45,12 +45,15 @@ To install Yves keyboard accessibility improvements, take the following steps:
 | product_bundle_widget.aria_label.view.details | Details für %productName% anzeigen             | View details for %productName%                    |
 | customer_reorder_widget.aria_label.check.product.to.reorder | Überprüfen Sie das Produkt %productName%, um es erneut zu bestellen | Check the product %productName% to reorder |
    
+
 ```bash
   console data:import glossary
 ```
 
 3. Enable user scalable option in the project:
     - Set `viewportUserScaleable` variable at `src/Pyz/Yves/ShopUi/Theme/default/templates/page-blank/page-blank.twig`
+
+<!-- {% raw %} -->
 ```twig
     {% block template %}
         {% set viewportUserScaleable = 'yes' %}
@@ -58,10 +61,13 @@ To install Yves keyboard accessibility improvements, take the following steps:
         {{ parent() }}
     {% endblock %}
  ```
+<!-- {% endraw %} -->
 
 4. Pass `navigationId` into the `header` organism from `src/Pyz/Yves/ShopUi/Theme/default/templates/page-layout-main/page-layout-main.twig` to enable `skip-link`. 
+
+<!-- {% raw %} -->
 ```twig
-{% embed organism('header') with {
+    {% embed organism('header') with {
         data: {
             ...
         },
@@ -72,3 +78,4 @@ To install Yves keyboard accessibility improvements, take the following steps:
         ...
     {% endembed %}
 ```
+<!-- {% endraw %} -->

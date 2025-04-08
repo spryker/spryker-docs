@@ -6,7 +6,7 @@ entries:
         nested:
           - title: Base shop
             nested:
-              - title: Spryker Core Back Office feature overview 2
+              - title: Spryker Core Back Office feature overview
                 url: /docs/pbc/all/back-office/base-shop/spryker-core-back-office-feature-overview.html
               - title: Back Office Translations overview
                 url: /docs/pbc/all/back-office/base-shop/back-office-translations-overview.html
@@ -4507,9 +4507,9 @@ entries:
         nested:
           - title: Base Shop
             nested:
-              - title: Install the Spryker core accessibility improvements
+              - title: Accessibility improvements
                 url: /docs/pbc/all/accessibility-improvement/202410.0/base-shop/install-the-spryker-accessibility-improvements.html
           - title: B2B, B2B-MP shops
             nested:
-              - title: Install the Spryker accessibility improvements
+              - title: Accessibility improvements
                 url: /docs/pbc/all/accessibility-improvement/202410.0/b2b/install-the-spryker-accessibility-improvements.html

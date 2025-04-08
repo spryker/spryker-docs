@@ -1,5 +1,5 @@
 ---
-title: Install accessibility improvements
+title: Accessibility improvements
 description: Learn how install accessibility improvements.
 last_updated: March 31, 2025
 template: feature-integration-guide-template

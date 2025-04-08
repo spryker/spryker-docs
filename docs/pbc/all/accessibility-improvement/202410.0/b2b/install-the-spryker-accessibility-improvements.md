@@ -25,11 +25,11 @@ To install Yves keyboard accessibility improvements, take the following steps:
 ```bash
     composer update spryker-shop/catalog-page spryker-shop/company-page spryker-shop/customer-page spryker-shop/product-group-widget spryker-shop/product-review-widget spryker-shop/shop-ui
 ```
-
+<!-- {% raw %} -->
 2. Adjust templates and files on the project level.
 - Rename `{% block body %}` to `{% block viewport %}` at `src/Pyz/Yves/ShopUi/Theme/default/components/organisms/header/header.twig` to enable `skip-link`. Pass this attribute into the `header` organism from `src/Pyz/Yves/ShopUi/Theme/default/templates/page-layout-main/page-layout-main.twig`
 - Pass `navigationId` attribute with its value as `navigationId` (variable from the Spryker Core) to the call of the `header` organism at `src/Pyz/Yves/ShopUi/Theme/default/components/organisms/header/header.twig` to enable `skip-link`. Pass this attribute into the `header` organism from `src/Pyz/Yves/ShopUi/Theme/default/templates/page-layout-main/page-layout-main.twig`
-<!-- {% raw %} -->
+
   ```twig
     {% embed organism('header') with {
         data: {

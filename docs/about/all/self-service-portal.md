@@ -179,9 +179,8 @@ In the **Status** section, view the inquiry's current status and update it based
 
 You can see all inquire state machine states in **Administration** > **State Machine**.  
 
-{% info_block infoBox %}
 Customer support can create inquiries on behalf of customers using the [Agent Assist feature](/docs/pbc/all/user-management/{{site.version}}/base-shop/agent-assist-feature-overview.html).
-{% endinfo_block %}
+
 
 
 

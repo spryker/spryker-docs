@@ -4,6 +4,12 @@ description: Self-Service Portal (SSP) is a centralized B2B platform that stream
 template: concept-topic-template
 ---
 
+{% info_block warningBox %}
+
+Self-Service Portal is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
 
 B2B Self-Service Portal (SSP) is a platform designed to enhance operational efficiency, transparency, and customer satisfaction. With features like Assets, Inquiries, Services, Files, and Dashboard, SSP centralizes business interactions, making it easier to manage after-sales activities.
 
@@ -19,7 +25,7 @@ Assets are the core of SSP and can represent high-value or custom-built products
 
 * Track and manage assets
 * Monitor maintenance schedules and service histories
-* Access essential documentation and service records
+* Access documentation and service records
 
 
 ### Inquiries
@@ -60,7 +66,7 @@ Dashboard offers a centralized view of all SSP interactions, providing users wit
 
 
 
-## Self-Service Portal Inquiry Management feature
+## Self-Service Portal Inquiry Management
 
 The Inquiry Management feature allows customers to submit and track different types of inquiries in SSP, providing a structured way to handle and resolve customer requests and claims.
 
@@ -70,7 +76,7 @@ Back Office users can manage inquiries, update statuses, and communicate with cu
 ### Storefront functionalities 
 
 * Submit an inquiry with relevant details
-* Attach supporting documents or images
+* Attach supporting documents and images
 * Track the status of submitted inquiries
 * Get inquiry resolution details via email
 
@@ -129,12 +135,12 @@ Inquiry statuses are handled by a dedicated Inquiry State Machine. This state ma
 | Canceled | Inquiry was withdrawn by the customer or customer support team while it was in the Pending state. |
 
 
-On the project level, the status logic can be customized for each inquiry type. For example an automatic refund action can be initiated for order claims.
+On the project level, the status logic can be customized for each inquiry type. For example, an automatic refund action can be initiated for order claims.
 
 
 ### Permissions
 
-On the Storefront access to the inquiry actions is restricted based on user permissions. By default, users can have the following permissions:
+On the Storefront, access to inquiry actions is restricted based on user permissions. By default, users can have the following permissions:
 
 
 | Permission                    | Description |
@@ -149,9 +155,9 @@ On the Storefront access to the inquiry actions is restricted based on user perm
 ### Inquiry creation on Storefront
 
 Company users can create different types of inquiries as follows:
-* General inquiry: go to Customer Account > Self-Service Portal > Inquires > Create inquiry
-* Asset inquiry: go to Customer Account > Self-Service Portal > Assets > Asset Details page > Create inquiry
-* Order claim: go to Customer Account > Order History > Order Details page > Claim
+* General inquiry: Customer Account > Self-Service Portal > Inquires > Create inquiry
+* Asset inquiry: Customer Account > Self-Service Portal > Assets > Asset Details page > Create inquiry
+* Order claim: Customer Account > Order History > Order Details page > Claim
 
 On the submit inquiry page, the user needs to enter the following details:
 * Subject
@@ -160,16 +166,16 @@ On the submit inquiry page, the user needs to enter the following details:
 
 After an inquiry is submitted, the user can find it in Customer Account > Self-Service Portal > Inquires. 
 
-The company user can also cancel an inquiry while it's in the pending status.
+The company user can also cancel an inquiry while it's in the Pending status.
 
 
 ### Inquiry creation in the Back Office
 
-In the Back Office, inquires are located in Customer Portal > Inquires. In this section, you can filter by inquiry type and status and search by customer or inquiry reference. 
+In the Back Office, inquires are located in **Customer Portal** > **Inquires**. In this section, you can filter by inquiry type and status and search by customer or inquiry reference. 
 
 From here, click **View** to open the inquiry details page. If the inquiry has attached files, click **Download** to access them.
 
-In the **Status** section, view the inquiry’s current status and update it based on available transitions in the Inquiry State Machine. To check all status changes, click the **Show history** button.
+In the **Status** section, view the inquiry's current status and update it based on available transitions in the Inquiry State Machine. To check all status changes, click the **Show history** button.
 
 You can see all inquire state machine states in **Administration** > **State Machine**.  
 
@@ -179,7 +185,7 @@ Customer support can create inquiries on behalf of customers using the [Agent As
 
 
 
-## Self-Service Portal Service Management feature
+## Self-Service Portal Service Management
 
 The *Service Management* feature enables customers to book a service, either for delivery to their address or for provision at a designated service point. For example, you can provide after-sales support, such as maintenance or repair.
 
@@ -196,7 +202,7 @@ This section describes how to set up components for selling services as products
 
 1. Set up the service product type for abstract products. This distinguishes service products from regular products in the Back Office and Storefront.
 2. Set up allowed shipment types for concrete products. This determines if a product is eligible for a specific shipment type. For services that are sold at service points, configure the on-site service shipment type.
-3. Create one or more product offers for each service product. The offer must be associated with Service Points, Services, and Shipment Types.
+3. Create one or more product offers for each service product. The offers must be associated with Service Points, Services, and Shipment Types.
 4. Optional: Set service date and time as required for checkout. This can be enabled for concrete products if scheduling is necessary.
 
 The following sections describe each step in more details.
@@ -205,7 +211,7 @@ The following sections describe each step in more details.
 
 The product type defines the category of a product to distinguish between standard products, services, and any other product types.
 
-Product types are imported using the standard console importer:  
+Product types are imported using the console importer:  
 
 **product-abstract-type.csv**
 
@@ -220,7 +226,7 @@ Product types are imported using the standard console importer:
 
 To add a product type to a product in the Back Office, go to **Catalog** and click the needed product.
 
-Alternatively, you can import product type assignments using the standard console importer:
+Alternatively, you can import product type assignments using the console importer:
 
 **product-abstract-product-abstract-type.csv**
 
@@ -233,8 +239,6 @@ Alternatively, you can import product type assignments using the standard consol
 
 
 #### Enabling service date and time for a product
-
-To add a service date and time to products, follow these steps:
 
 1. In the Back Office, go to **Catalog**.
 2. Click a product to enable date and time for.
@@ -255,7 +259,7 @@ To add a service date and time to products, follow these steps:
 <!-- Alternatively, shipment types can be imported using the standard console importer. See *Import file details: product-type.csv*. -->
 
 
-### Adding a product offers for products
+### Adding product offers for products
 
 1. In the Back Office, go to **Catalog** > **Offers**.
 2. Click **Create Offer**.
@@ -265,11 +269,11 @@ To add a service date and time to products, follow these steps:
 |---------------------|-------------|
 | Offer status        | Active or inactive. |
 | Stores              | Spryker Marketplace is a multi-store environment, and an operator can define which stores to display their offers in. |
-| Stock               | Offer’s stock that’s not dependent on the respective product’s stock. 
+| Stock               | Offer’s stock that's not dependent on the respective product's stock. 
 | Quantity | Always in Stock |
 | Validity Dates      | Specifies the period during which the product offer is visible on the Storefront. Concrete product validity dates have higher priority over the Offer validity dates. |
 | Service Point       | A service point is a physical location where services are provided. Depending on the services provided, there can be different kinds of service points, such as a warehouse or a physical store. |
-| Services            | A service represents a specific service type that is provided at a specific service point. For example, an On-Site Service at a retail location at Julie-Wolfthorn-Straße 1, 10115, Berlin is a unique service. |
+| Services            | A service represents a specific service type that is provided at a specific service point. For example, an "On-Site Service at a retail location at Julie-Wolfthorn-Straße 1, 10115", Berlin is a unique service. |
 | Shipment Types      | A shipment type is a way in which a customer receives an order after placing it. Shipment type examples: Delivery, On-Site Service, In-Store Pickup, Curbside Pickup. |
 
 
@@ -298,85 +302,93 @@ The latter two require respective permissions. For more information on company p
 
 ### Reviewing purchased services in the Back Office
 
-Back Office users can view previously purchased service products by navigating to **Orders** > **Services**.
+Back Office users can view previously purchased service products in **Orders** > **Services**.
 
 
-### Multi-step checkout overview
+### Multi-step checkout
 
-The **Self-Service Portal Checkout** flow allows customers to:
+The SSP checkout flow adds the following functionality:
 
+* Customers can switch between single-address and multi-address checkout for items with the **Delivery** shipment type
+* Items delivered with the **On-Site Service** shipment type are displayed as a separate group
+* For **On-Site Service** items, customers can change the service point but not the shipment type
 
+#### Current constraints
 
-* **Switch between single-address and multi-address checkout** for items delivered via the **Delivery** shipment type.
-* **Items delivered using "On-Site Service"** appear in a separate group during checkout, where customers can change the **service point** to a different one. However, switching the **shipment type** is not allowed.
-
-#### Known limitations
-
-
-
-* You cannot specify product prices for product offers from the **Back Office**; however, they can be imported using a **console command**.
-* Some B2B features, such as **Merchant Relations**, are not supported by product offers. See details in *[Product Offer Constraints](/docs/pbc/all/offer-management/202410.0/marketplace/marketplace-product-offer-feature-overview.html#current-constraints)*.
-* Additionally, the **shipment type** cannot be changed for a **cart line item** by the customer in the **shopping cart** or during **checkout**.
+* Product prices for product offers can't be added in the Back Office; they can only be imported.
+* Some B2B features, such as Merchant Relations, are not supported by product offers. For more information, see [Product Offer constraints](/docs/pbc/all/offer-management/202410.0/marketplace/marketplace-product-offer-feature-overview.html#current-constraints).
+* Customers can't change shipment type in cart and checkout.
 
 
-### Extending current capability
+## Self-Service Portal Dashboard
 
-This guide is created based on the assumption that the default **Shipment Type** and **Service Type** are used for the initial setup. If you want to add more Shipment Types and Service Types, see: [/docs/pbc/all/service-point-management/202410.0/unified-commerce/service-points-feature-overview.html](/docs/pbc/all/service-point-management/202410.0/unified-commerce/service-points-feature-overview.html)
+The Dashboard provides company users with a consolidated view of key metrics, assets, inquiries, services, and other relevant information. 
 
+Dashboard access is role-based, meaning each user can see the data they're authorized to access.
 
-
-## Storefront Dashboard
-
-The **Dashboard** feature within the **Self-Service Portal (SSP)** provides company users with an intuitive, consolidated view of their key metrics, assets, inquiries, services, and other relevant information. It centralizes actionable content and insights in one place. The feature is role-based, meaning users will only see data they are authorized to access, ensuring that the right information is presented to the right person.
-
-The Dashboard is accessible from the **Customer Account** menu in the **Storefront**.
+On the Storefront, company users can access the dashboard in the customer account menu. It consists of the following blocks:
 
 
-
-### Storefront functionality
-
-The dashboard consists of the following blocks: 
-
-* **Welcome Block**: A personalized greeting that displays the user’s name, company name, and business unit.
-* **Overview Block**: Provides a quick snapshot of key metrics such as the number of assets, pending inquiries, and upcoming services.
-* **Customer Service Representative Block**: Displays contact details (name, photo, and contact methods) for the user’s business unit-assigned customer service representative.
-* **Assets Block**: Shows a list of the user’s assets, including clickable links to asset details.
-* **Files Block**: Displays a list of files with options to download.
-* **Inquires Block**: Allows users to track the status of their inquiries, including a table of inquiry details.
-* **Services Block**: Lists upcoming services and allows users to access related information.
-* **Promo Blocks**: Displays promotional content like special offers and upcoming events.
-
-**Access Control**: Company admins can configure visibility and access control for different user roles based on permissions.
+| Block                          | Description                                                                                                  |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------|
+| Welcome                          | Personalized greeting showing the user's name, company name, and business unit.                             |
+| Overview                         | Snapshot of key metrics such as asset count, pending inquiries, and upcoming services.                      |
+| Customer service representative  | Contact details, such as name, photo, methods for the user's assigned CSR.                                         |
+| Assets                           | List of the user's assets with clickable links to asset details.                                            |
+| Files                            | List of files with download options.                                                                         |
+| Inquiries                        | Status tracking for user inquiries, including a table of inquiry details.                                    |
+| Services                         | List of upcoming services with access to related information.                                                |
+| Promo                            | Promotional content such as special offers and upcoming events.                                              |
+| Access control | Company admins can configure visibility and access control for different user roles based on permissions. |
 
 
-### Back Office functionality
+For the customer service representative block, you can assign a representative per business unit in the **Content** > **Blocks** section of the Back Office. If no business unit-specific block is defined, a default block named `sales_rep:default` is displayed.
+
+<!-- The block name structure is business unit-specific like `sales_rep:company_unit:12` where 12 is the ID of the respective business unit. Go to Customers > Company Units to find the relevant ID in the table. -->
 
 
 
-* **Customer Service Representative Block**: The content in this block is business unit-specific and can be managed by Back Office users. 
-
-
-### User Permissions
-
-The **Dashboard Permissions System** ensures that access to different blocks and data is restricted based on the user’s role and permissions. This guarantees that only authorized users can view specific content:
 
 
 
-* **View Dashboard**: Grants users the ability to view the Dashboard page.
-* **Access to Dashboard Data**: Data within the Dashboard, such as assets, inquiries, services, and files, is filtered based on the user’s role and specific entity-level permissions (business unit, company). If a company user does not have permission to view certain data (e.g., assets, inquiries) that block will not be displayed.
-
-
-### User Guides
-
-
-#### Back Office
-
-To manage the business unit-specific Customer Service Representative (CSR) blocks:
 
 
 
-1. Go to Back Office > **Content** > **Blocks** to configure the CMS blocks for CSR per business unit.
-2. The CMS block name structure is business unit-specific like `sales_rep:company_unit:12` where 12 is the ID of the respective business unit. Go to Customers > Company Units to find the relevant ID in the table.
 
-If no business unit-specific CMS block is defined, a default block will be shown. Its name is `sales_rep:default`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

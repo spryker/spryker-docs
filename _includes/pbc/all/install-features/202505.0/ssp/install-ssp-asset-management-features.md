@@ -36,11 +36,11 @@ Check that the following packages are now listed in `composer.lock`:
 
 Update your `config/Shared/config_default.php`:
 
-| CONFIGURATION                                                                 | SPECIFICATION                                               | NAMESPACE                                |
-|-------------------------------------------------------------------------------|-------------------------------------------------------------|------------------------------------------|
-| FileSystemConstants::FILESYSTEM_SERVICE                                       | Flysystem configuration for file management.                | Spryker\Shared\FileSystem                |
-| SspAssetManagementConstants::BASE_URL_YVES                                    | Yves URL used in image URLs.                                | SprykerFeature\Shared\SspAssetManagement |
-| SspInquiryManagementConfig::getSspInquiryStateMachineProcessSspInquiryTypeMap | Returns the ssp inquiry type => state machine process map.  | Pyz\Shared\SspInquiryManagement          |
+| CONFIGURATION                              | SPECIFICATION                                       | NAMESPACE                                |
+|--------------------------------------------|-----------------------------------------------------|------------------------------------------|
+| FileSystemConstants::FILESYSTEM_SERVICE    | Flysystem configuration for file management.        | Spryker\Shared\FileSystem                |
+| SspAssetManagementConstants::BASE_URL_YVES | Yves URL used in image URLs.                        | SprykerFeature\Shared\SspAssetManagement |
+| SspAssetManagementConfig::getStorageName() | Defines the Storage name for esset Flysystem files. | SprykerFeature\Zed\SspAssetManagement    |
 
 **config/Shared/config_default.php**
 ```php
@@ -57,6 +57,26 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 ];
 
 $config[SspAssetManagementConstants::BASE_URL_YVES] = 'https://your-yves-url';
+```
+
+**src/Pyz/Shared/SspInquiryManagement/SspInquiryManagementConfig.php**
+```php
+<?php
+
+namespace Pyz\Zed\SspAssetManagement;
+
+use SprykerFeature\Zed\SspAssetManagement\SspAssetManagementConfig as SprykerFeatureSspAssetManagementConfig;
+
+class SspAssetManagementConfig extends SprykerFeatureSspAssetManagementConfig
+{
+    /**
+     * @return string|null
+     */
+    public function getStorageName(): ?string
+    {
+        return 'ssp-asset-image';
+    }
+}
 ```
 
 ## Set up database schema and transfer objects
@@ -305,16 +325,16 @@ Check `spy_glossary_key` and `spy_glossary_translation` tables for the new gloss
 
 ### Set up behavior
 
-| PLUGIN                                     | SPECIFICATION                                            | PREREQUISITES | NAMESPACE                                                                         |
-|--------------------------------------------|----------------------------------------------------------|---------------|-----------------------------------------------------------------------------------|
-| ViewCompanySspAssetPermissionPlugin        | Allows viewing company assets.                           |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
-| ViewBusinessUnitSspAssetPermissionPlugin   | Allows access to assets in the same business unit.       |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
-| CreateSspAssetPermissionPlugin             | Allows creation assets.                                  |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
-| UpdateSspAssetPermissionPlugin             | Allows update of assets.                                 |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
-| UnassignSspAssetPermissionPlugin           | Allows unassigning assets .                              |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
-| SspAssetRouteProviderPlugin                | Provides Yves routes for SSP asset feature.              |               | SprykerFeature\Yves\SspAssetManagement\Plugin\Router                              |
+| PLUGIN                                     | SPECIFICATION                                           | PREREQUISITES | NAMESPACE                                                                         |
+|--------------------------------------------|---------------------------------------------------------|---------------|-----------------------------------------------------------------------------------|
+| ViewCompanySspAssetPermissionPlugin        | Allows viewing company assets.                          |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
+| ViewBusinessUnitSspAssetPermissionPlugin   | Allows access to assets in the same business unit.      |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
+| CreateSspAssetPermissionPlugin             | Allows creation assets.                                 |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
+| UpdateSspAssetPermissionPlugin             | Allows update of assets.                                |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
+| UnassignSspAssetPermissionPlugin           | Allows unassigning assets.                              |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
+| SspAssetRouteProviderPlugin                | Provides Yves routes for SSP asset feature.             |               | SprykerFeature\Yves\SspAssetManagement\Plugin\Router                              |
 | SspAssetManagementFilePreDeletePlugin      | Ensures the files are deleted when the asset is removed. |               | SprykerFeature\Zed\SspAssetManagement\Communication\Plugin\FileManager            |
-| SspAssetDashboardDataProviderPlugin        | Adds assets table to the SSP Dashboard.                  |               | SprykerFeature\Zed\SspAssetManagement\Communication\Plugin\SspDashboardManagement |
+| SspAssetDashboardDataProviderPlugin        | Adds assets table to the SSP Dashboard.                 |               | SprykerFeature\Zed\SspAssetManagement\Communication\Plugin\SspDashboardManagement |
 
 Update your Zed dependency providers.
 

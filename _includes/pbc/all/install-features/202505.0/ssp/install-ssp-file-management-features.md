@@ -52,7 +52,33 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 $config[SspFileManagementConstants::STORAGE_NAME] = 'ssp-files';
 ```
 
-### Set up database schema and transfer objects
+## Configure navigation
+
+Add the `Files` section to `navigation.xml`:
+
+**config/Zed/navigation.xml**
+
+```xml
+<?xml version="1.0"?>
+<config>
+    <content>
+       <ssp-file-management>
+          <label>File Attachments</label>
+          <title>File Attachments</title>
+          <bundle>ssp-file-management</bundle>
+          <controller>list</controller>
+          <action>index</action>
+          <visible>1</visible>
+       </ssp-file-management>
+    </content>
+</config>
+```
+
+{% info_block warningBox "Verification" %}
+Login to the backoffice. Make sure the `Files` section is visible in the navigation menu under `Content` section.
+{% endinfo_block %}
+
+## Set up database schema and transfer objects
 
 Apply database changes and generate entity and transfer objects:
 

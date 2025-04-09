@@ -36,15 +36,26 @@ Check that the following packages are now listed in `composer.lock`:
 
 Update your `config/Shared/config_default.php` (or CI/Docker equivalents):
 
-| CONFIGURATION                                              | SPECIFICATION                                     | NAMESPACE                                   |
-|------------------------------------------------------------|---------------------------------------------------|---------------------------------------------|
-| FileSystemConstants::FILESYSTEM_SERVICE                    | Flysystem configuration for file management.      | Spryker\Shared\FileSystem                   |
-| SspInquiryManagementConstants::BASE_URL_YVES               | Yves URL used in mailing templates.               | SprykerFeature\Shared\SspInquiryManagement  |
-| SspInquiryManagementConstants::DEFAULT_TOTAL_FILE_MAX_SIZE | Configurable total file upload limits.            | SprykerFeature\Shared\SspInquiryManagement  |
-| SspInquiryManagementConstants::DEFAULT_FILE_MAX_SIZE       | Configurable single file upload size.             | SprykerFeature\Shared\SspInquiryManagement  |
+| CONFIGURATION                                                                   | SPECIFICATION                                                                           | NAMESPACE                                  |
+|---------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------|
+| FileSystemConstants::FILESYSTEM_SERVICE                                         | Flysystem configuration for file management.                                            | Spryker\Shared\FileSystem                  |
+| SspInquiryManagementConstants::BASE_URL_YVES                                    | Yves URL used in mailing templates.                                                     | SprykerFeature\Shared\SspInquiryManagement |
+| SspInquiryManagementConstants::DEFAULT_TOTAL_FILE_MAX_SIZE                      | Configurable total file upload limits.                                                  | SprykerFeature\Shared\SspInquiryManagement |
+| SspInquiryManagementConstants::DEFAULT_FILE_MAX_SIZE                            | Configurable single file upload size.                                                   | SprykerFeature\Shared\SspInquiryManagement |
+| SspInquiryManagementConfig::getSspInquiryInitialStateMap()                      | Returns the inquiry state machine process to initial state mapping.                     | SprykerFeature\Shared\SspInquiryManagement |
+| SspInquiryManagementConfig::getSspInquiryStateMachineProcessSspInquiryTypeMap() | Returns the inquiry type to state machine process mapping.                              | SprykerFeature\Shared\SspInquiryManagement |
+| SspInquiryManagementConfig::getSspInquiryCancelStateMachineEventName()          | Returns inquiry event name of the inquiry cancellation.                                 | SprykerFeature\Shared\SspInquiryManagement |
+| SspInquiryManagementConfig::getAvailableStatuses()                              | Returns the list of inquiry statuses.                                                   | SprykerFeature\Shared\SspInquiryManagement |
+| SspInquiryManagementConfig::getStorageName()                                    | Defines the Storage name for inquiry Flysystem files.                                   | SprykerFeature\Shared\SspInquiryManagement |
+| SalesConfig::getSalesDetailExternalBlocksUrls()                                 | Defines the list of URLs to render blocks inside order detail page.                     | Spryker\Zed\Sales                          |
+| SspInquiryManagementConfig::getSspInquiryStatusClassMap()                       | Returns the inquiry status to СSS class name mapping used for status indicator styling. | SprykerFeature\Zed\SspInquiryManagement    |
+| SspInquiryManagementConfig::getPendingStatus()                                  | Identifies the status that will be considered `Pending`.                                | SprykerFeature\Zed\SspInquiryManagement    |
+| SspInquiryManagementConfig::getPendingStatus()                                  | Identifies the status that will be considered `Pending`.                                | SprykerFeature\Zed\SspInquiryManagement    |
 
 **config/Shared/config_default.php**
 ```php
+<?php
+
 use Spryker\Service\FlysystemLocalFileSystem\Plugin\Flysystem\LocalFilesystemBuilderPlugin;
 use Spryker\Shared\FileSystem\FileSystemConstants;
 use SprykerFeature\Shared\SspInquiryManagement\SspInquiryManagementConstants;
@@ -58,6 +69,92 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 ];
 
 $config[SspInquiryManagementConstants::BASE_URL_YVES] = 'https://your-yves-url';
+$config[SspInquiryManagementConstants::DEFAULT_TOTAL_FILE_MAX_SIZE] = getenv('SPRYKER_SSP_INQUIRY_DEFAULT_TOTAL_FILE_MAX_SIZE') ?: '100M';
+$config[SspInquiryManagementConstants::DEFAULT_FILE_MAX_SIZE] = getenv('SPRYKER_SSP_INQUIRY_DEFAULT_FILE_MAX_SIZE') ?: '20M';
+```
+
+**src/Pyz/Shared/SspInquiryManagement/SspInquiryManagementConfig.php**
+```php
+<?php
+
+namespace Pyz\Shared\SspInquiryManagement;
+
+use SprykerFeature\Shared\SspInquiryManagement\SspInquiryManagementConfig as SprykerSspInquiryConfig;
+
+class SspInquiryManagementConfig extends SprykerSspInquiryConfig
+{
+    public function getSspInquiryInitialStateMap(): array
+    {
+        return [
+            'SspInquiryDefaultStateMachine' => 'created',
+        ];
+    }
+
+    public function getSspInquiryStateMachineProcessSspInquiryTypeMap(): array
+    {
+        return [
+            'general' => 'SspInquiryDefaultStateMachine',
+            'order' => 'SspInquiryDefaultStateMachine',
+            'ssp_asset' => 'SspInquiryDefaultStateMachine',
+        ];
+    }
+
+    /**
+     * @return string
+     */
+    public function getSspInquiryCancelStateMachineEventName(): string
+    {
+        return 'cancel';
+    }
+
+    /**
+     * @return array<string>
+     */
+    public function getAvailableStatuses(): array
+    {
+        return [
+            'pending',
+            'in_review',
+            'approved',
+            'rejected',
+            'canceled',
+        ];
+    }
+
+    /**
+     * @return string
+     */
+    public function getStorageName(): string
+    {
+        return 'ssp-inquiry';
+    }
+}
+```
+
+**src/Pyz/Zed/Sales/SalesConfig.php**
+```php
+<?php
+
+namespace Pyz\Zed\Sales;
+
+use Spryker\Zed\Sales\SalesConfig as SprykerSalesConfig;
+
+class SalesConfig extends SprykerSalesConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getSalesDetailExternalBlocksUrls(): array
+    {
+        $projectExternalBlocks = [
+            'inquiries' => '/ssp-inquiry-management/order-ssp-inquiry-list',
+        ];
+
+        $externalBlocks = parent::getSalesDetailExternalBlocksUrls();
+
+        return array_merge($externalBlocks, $projectExternalBlocks);
+    }
+}
 ```
 
 ## Set up database schema and transfer objects
@@ -142,11 +239,97 @@ Ensure the following transfer objects were generated:
 | FileCollection                      | transfer | created | src/Generated/Shared/Transfer/FileCollectionTransfer                      |
 | SspAssetInclude                     | transfer | created | src/Generated/Shared/Transfer/SspAssetIncludeTransfer                     |
 
-
-
 {% endinfo_block %}
 
----
+## Add state machine configuration
+
+Create an XML configuration file for the state machine in `config/Zed/StateMachine/SspInquiry/SspInquiryDefaultStateMachine.xml`:
+
+```xml
+<?xml version="1.0"?>
+<statemachine
+    xmlns="spryker:state-machine-01"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="spryker:state-machine-01 http://static.spryker.com/state-machine-01.xsd"
+>
+    <process name="SspInquiryDefaultStateMachine" main="true">
+
+        <states>
+            <state name="created"/>
+            <state name="pending"/>
+            <state name="in_review"/>
+            <state name="canceled"/>
+            <state name="approved"/>
+            <state name="rejected"/>
+            <state name="closed"/>
+        </states>
+        <transitions>
+            <transition happy="true">
+                <source>created</source>
+                <target>pending</target>
+                <event>initiate</event>
+            </transition>
+            <transition happy="true">
+                <source>pending</source>
+                <target>in_review</target>
+                <event>start_review</event>
+            </transition>
+            <transition happy="true">
+                <source>pending</source>
+                <target>canceled</target>
+                <event>cancel</event>
+            </transition>
+            <transition>
+                <source>in_review</source>
+                <target>approved</target>
+                <event>approve</event>
+            </transition>
+            <transition>
+                <source>in_review</source>
+                <target>rejected</target>
+                <event>reject</event>
+            </transition>
+        </transitions>
+        <events>
+            <event name="initiate" onEnter="true"/>
+            <event name="start_review" manual="true"/>
+            <event name="cancel" manual="true"/>
+            <event name="approve" manual="true" command="SspInquiry/Approve"/>
+            <event name="reject" manual="true" command="SspInquiry/Reject"/>
+        </events>
+    </process>
+
+</statemachine>
+```
+
+{% info_block warningBox "Verification" %}
+Verification will be possible after the integration of the `SspInquiryStateMachineHandlerPlugin`.
+{% endinfo_block %}
+
+## Configure navigation
+
+Add the `Inquiries` section to `navigation.xml`:
+
+**config/Zed/navigation.xml**
+
+```xml
+<?xml version="1.0"?>
+<config>
+    <sales>
+        <ssp-inquiries>
+            <label>Ssp Inquiries</label>
+            <title>Ssp Inquiries</title>
+            <bundle>ssp-inquiry-management</bundle>
+            <controller>index</controller>
+            <action>index</action>
+        </ssp-inquiries>
+    </sales>
+</config>
+```
+
+{% info_block warningBox "Verification" %}
+Login to the backoffice. Make sure the `Inquiries` section is visible in the navigation menu under `Sales` section.
+{% endinfo_block %}
 
 ## Add translations
 

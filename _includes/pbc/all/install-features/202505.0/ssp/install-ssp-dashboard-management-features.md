@@ -101,12 +101,10 @@ ssp_dashboard.overview.not_applicable,n/a,en_US
 ssp_dashboard.overview.not_applicable,n/a,de_DE
 ```
 
-
-TODO: below is WIP
 3. Append the cms_block.csv:
 ```csv
-cms-sales_rep:default,sales_rep:default,Title and Content,@CmsBlock/template/title_and_content_block.twig,1,,,"<div class='contact-list box box--dark' data-qa='component contact-list'><div class='block-title spacing-bottom' data-qa='component block-title'><div class='grid grid--middle'><h5 class='block-title__title spacing-right col'>Service Representatives</h5></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Alice Johnson</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:alice.johnson@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> alice.johnson@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-123-4567' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-123-4567</a></span></span></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Michael Smith</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:michael.smith@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> michael.smith@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-987-6543' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-987-6543</a></span></span></div></div></div>","<div class='contact-list box box--dark' data-qa='component contact-list'><div class='block-title spacing-bottom' data-qa='component block-title'><div class='grid grid--middle'><h5 class='block-title__title spacing-right col'>Service Representatives</h5></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Alice Johnson</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:alice.johnson@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> alice.johnson@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-123-4567' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-123-4567</a></span></span></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Michael Smith</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:michael.smith@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> michael.smith@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-987-6543' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-987-6543</a></span></span></div></div></div>",,,,
-ssp-news-block-1,News Banner-1,Title and Content,@CmsBlock/template/title_and_content_block.twig,1,"<h5 class='spacing-x'>{{ 'dashboard.general.news' | trans }}</h5>","<h5 class='spacing-x'>{{ 'dashboard.general.news' | trans }}</h5>","<div class='grid grid--with-gutter'><div class='col col--with-gutter col--md-6 col--sm-12'>{{ content_banner('ssp-br-1', 'bottom-title') }}</div><div class='col col--with-gutter col--md-6 col--sm-12'>{{ content_banner('ssp-br-2', 'bottom-title') }}</div></div>","<div class='grid grid--with-gutter'><div class='col col--with-gutter col--md-6 col--sm-12'>{{ content_banner('ssp-br-1', 'bottom-title') }}</div><div class='col col--with-gutter col--md-6 col--sm-12'>{{ content_banner('ssp-br-2', 'bottom-title') }}</div></div>",,,,
+cms-sales_rep:default,sales_rep:default,Title and Content,@CmsBlock/template/title_and_content_block.twig,1,,,<div class='contact-list box box--dark' data-qa='component contact-list'><div class='block-title spacing-bottom' data-qa='component block-title'><div class='grid grid--middle'><h5 class='block-title__title spacing-right col'>Mitarbeiter des Kundendienstes</h5></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Alice Johnson</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:alice.johnson@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> alice.johnson@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-123-4567' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-123-4567</a></span></span></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Michael Smith</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:michael.smith@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> michael.smith@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-987-6543' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-987-6543</a></span></span></div></div></div>,<div class='contact-list box box--dark' data-qa='component contact-list'><div class='block-title spacing-bottom' data-qa='component block-title'><div class='grid grid--middle'><h5 class='block-title__title spacing-right col'>Service Representatives</h5></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Alice Johnson</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:alice.johnson@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> alice.johnson@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-123-4567' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-123-4567</a></span></span></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Michael Smith</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:michael.smith@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> michael.smith@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-987-6543' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-987-6543</a></span></span></div></div></div>,,,,
+ssp-news-block-1,News Banner-1,Title and Content,@CmsBlock/template/title_and_content_block.twig,1,"<h5 class='spacing-x'>{{ 'ssp_dashboard.general.news' | trans }}</h5>","<h5 class='spacing-x'>{{ 'ssp_dashboard.general.news' | trans }}</h5>","<div class='grid grid--with-gutter'><div class='col col--with-gutter col--md-6 col--sm-12'>{{ content_banner('ssp-br-1', 'bottom-title') }}</div><div class='col col--with-gutter col--md-6 col--sm-12'>{{ content_banner('ssp-br-2', 'bottom-title') }}</div></div>","<div class='grid grid--with-gutter'><div class='col col--with-gutter col--md-6 col--sm-12'>{{ content_banner('ssp-br-1', 'bottom-title') }}</div><div class='col col--with-gutter col--md-6 col--sm-12'>{{ content_banner('ssp-br-2', 'bottom-title') }}</div></div>",,,,
 ```
 4. Append the cms_block_store.csv:
 ```csv
@@ -126,6 +124,11 @@ ssp-news,ssp-news-block-1,1,@SspDashboardManagement/views/dashboard/dashboard.tw
 ```csv
 SSP Dashboard,Dashboard Page.,@SspDashboardManagement/views/dashboard/dashboard.twig
 ```
+8. Append the content_banner.csv:
+```csv
+ssp-br-1,SSP Banner Name 1,SSP Banner Description 1, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
+ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
+```
 
 ## Import data
 
@@ -133,43 +136,30 @@ Import glossary and demo data required for the feature:
 
 ```bash
 console data:import glossary
-console data:import ssp-inquiry
+console data:import cms-slot-template
+console data:import content-banner
 console data:import cms-block
 console data:import cms-block-store
+console data:import cms-slot
+console data:import cms-slot-block
 ```
 
 {% info_block warningBox "Verification" %}
 Check `spy_glossary_key` and `spy_glossary_translation` tables for the new glossary keys.
-Make sure the `ssp_inquiry` table contains the new inquiries.
-Check CMS blocks and make sure the new blocks are assigned to the correct stores.
+Check CMS blocks, CMS slots, content banners and make sure the data is present in the backoffice.
 {% endinfo_block %}
 
 ---
 
 ### Set up behavior
 
-| PLUGIN                                     | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                                           |
-|--------------------------------------------|------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------|
-| CreateSspInquiryPermissionPlugin           | Allows creating inquiries.                                 |               | SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission                        |
-| ViewBusinessUnitSspInquiryPermissionPlugin | Allows access to inquiries in the same business unit.      |               | SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission                        |
-| ViewCompanySspInquiryPermissionPlugin      | Allows access to inquiries in the same company.            |               | SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission                        |
-| SspInquiryRouteProviderPlugin              | Provides Yves routes for SSP files feature.                |               | SprykerFeature\Yves\SspInquiryManagement\Plugin\Router                              |
-| SspInquiryRestrictionHandlerPlugin         | Restricts access to inquiries pages for non-company users. |               | SprykerFeature\Yves\SspInquiryManagement\Plugin\ShopApplication                     |
-| BytesTwigPlugin                            | Adds `format_bytes` twig function.                         |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Twig                                |
-| SspInquiryDataImportPlugin                 | Introduces import type `ssp-inquiry`                       |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\DataImport             |
-| SspInquiryManagementFilePreDeletePlugin    | Ensures the files are deleted when the inquiry is removed. |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\FileManager            |
-| SspInquiryApprovedMailTypeBuilderPlugin    | Sends email on inquiry approval.                           |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\Mail                   |
-| SspInquiryRejectedMailTypeBuilderPlugin    | Sends email on inquiry rejection.                          |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\Mail                   |
-| SspInquiryDashboardDataProviderPlugin      | Adds inquiries table to the SSP Dashboard.                 |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspDashboardManagement |
-| SspInquirySspAssetManagementExpanderPlugin | Adds inquiries table to Assets.                            |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspAssetManagement     |
-| SspInquiryStateMachineHandlerPlugin        | StateMachine handler for inquiry processing.               |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\StateMachine           |
-| ApproveSspInquiryCommandPlugin             | StateMachine command that handles the inquiry approval.    |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspInquiryManagement   |
-| RejectSspInquiryCommandPlugin              | StateMachine command that handles the inquiry rejection.   |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspInquiryManagement   |
-| CreateOrderSspInquiryLinkWidget            | Provides button to create an inquiry for an order.         |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
-| DashboardInquiryWidget                     | Provides the inquiries table for the Dashboard.            |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
-| SspInquiryListWidget                       | Provides the inquiries table.                              |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
-| SspInquiryMenuItemWidget                   | Provides a customer menu item for the inquiries.           |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
-
+| PLUGIN                                                 | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                                           |
+|--------------------------------------------------------|---------------------------------------------------------------|---------------|---------------------------------------------------------------------|
+| ViewDashboardPermissionPlugin                          | Allows accessing dashboard page.                              |               | SprykerFeature\Shared\SspDashboardManagement\Plugin\Permission      |
+| CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin | Allows using business unit-specific cms blocks.               |               | SprykerFeature\Client\SspDashboardManagement\Plugin\CmsBlockStorage |
+| DashboardRouteProviderPlugin                           | Provides Yves routes for SSP dashboard page.                  |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\Router            |
+| SspDashboardFilterControllerEventHandlerPlugin         | Restricts access to dashboard pages for non-company users.    |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\ShopApplication   |
+| DashboardMenuItemWidget                                | Provides Menu item widget for the customer account side menu. |               | SprykerFeature\Yves\SspDashboardManagement\Widget                   |
 
 Update your Zed dependency providers.
 
@@ -177,37 +167,31 @@ Update your Zed dependency providers.
 
 ```php
 use Spryker\Zed\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
-use SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission\CreateSspInquiryPermissionPlugin;
-use SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission\ViewBusinessUnitSspInquiryPermissionPlugin;
-use SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission\ViewCompanySspInquiryPermissionPlugin;
+use SprykerFeature\Shared\SspDashboardManagement\Plugin\Permission\ViewDashboardPermissionPlugin;
 
 class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 {
     protected function getPermissionPlugins(): array
     {
         return [
-            new CreateSspInquiryPermissionPlugin(),
-            new ViewBusinessUnitSspInquiryPermissionPlugin(),
-            new ViewCompanySspInquiryPermissionPlugin(),
+            new ViewDashboardPermissionPlugin(),
         ];
     }
 }
 ```
 
-**src/Pyz/Yves/Permission/PermissionDependencyProvider.php**
+**src/Pyz/Client/Permission/PermissionDependencyProvider.php**
 
 ```php
-use Spryker\Yves\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
-use SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission\CreateSspInquiryPermissionPlugin;
-use SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission\ViewBusinessUnitSspInquiryPermissionPlugin;
-use SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission\ViewCompanySspInquiryPermissionPlugin;
+use Spryker\Client\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
+use SprykerFeature\Shared\SspDashboardManagement\Plugin\Permission\ViewDashboardPermissionPlugin;
 
 class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 {
     protected function getPermissionPlugins(): array
     {
         return [
-            new CreateSspInquiryPermissionPlugin(),
+            new ViewDashboardPermissionPlugin(),
             new ViewBusinessUnitSspInquiryPermissionPlugin(),
             new ViewCompanySspInquiryPermissionPlugin(),
         ];
@@ -223,7 +207,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 namespace Pyz\Yves\Router;
 
 use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
-use SprykerFeature\Yves\SspInquiryManagement\Plugin\Router\SspInquiryRouteProviderPlugin;
+use SprykerFeature\Yves\SspDashboardManagement\Plugin\Router\DashboardRouteProviderPlugin;
 
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
@@ -233,7 +217,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
     protected function getRouteProvider(): array
     {
         return [
-            new SspInquiryRouteProviderPlugin(),
+            new DashboardRouteProviderPlugin(),
         ];
     }
 }
@@ -246,217 +230,40 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 namespace Pyz\Yves\ShopApplication;
 
-use SprykerFeature\Yves\SspInquiryManagement\Plugin\ShopApplication\SspInquiryRestrictionHandlerPlugin;
-use SprykerFeature\Yves\SspInquiryManagement\Widget\SspInquiryListWidget;
+use SprykerFeature\Yves\SspDashboardManagement\Plugin\ShopApplication\SspDashboardFilterControllerEventHandlerPlugin;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
-    protected function getGlobalWidgets(): array
-    {
-        return [
-            SspInquiryListWidget::class,
-        ];
-    }
-    
     protected function getFilterControllerEventSubscriberPlugins(): array
     {
         return [
-            new SspInquiryRestrictionHandlerPlugin(),
+            new SspDashboardFilterControllerEventHandlerPlugin(),
         ];
     }
 }
 
 ```
 
-**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+**src/Pyz/Client/CmsBlockStorage/CmsBlockStorageDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Zed\DataImport;
+namespace Pyz\Client\CmsBlockStorage;
 
-use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\DataImport\SspInquiryDataImportPlugin;
+use Spryker\Client\CmsBlockStorage\CmsBlockStorageDependencyProvider as SprykerCmsBlockStorageDependencyProvider;
+use SprykerFeature\Client\SspDashboardManagement\Plugin\CmsBlockStorage\CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin;
 
-class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
+class CmsBlockStorageDependencyProvider extends SprykerCmsBlockStorageDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
+     * @return array<\Spryker\Client\CmsBlockStorageExtension\Dependency\Plugin\CmsBlockStorageReaderPluginInterface>
      */
-    protected function getDataImporterPlugins(): array
+    protected function getCmsBlockStorageReaderPlugins(): array
     {
         return [
-            new SspInquiryDataImportPlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Zed/FileManager/FileManagerDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\FileManager;
-
-use Spryker\Zed\FileManager\FileManagerDependencyProvider as SprykerFileManagerDependencyProvider;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\FileManager\SspInquiryManagementFilePreDeletePlugin;
-
-class FileManagerDependencyProvider extends SprykerFileManagerDependencyProvider
-{
-    /**
-     * @return list<\Spryker\Zed\FileManagerExtension\Dependency\Plugin\FilePreDeletePluginInterface>
-     */
-    protected function getFilePreDeletePlugins(): array
-    {
-        return [
-            new SspInquiryManagementFilePreDeletePlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Zed/Mail/MailDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Mail;
-
-use Spryker\Zed\Mail\MailDependencyProvider as SprykerMailDependencyProvider;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\Mail\SspInquiryApprovedMailTypeBuilderPlugin;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\Mail\SspInquiryRejectedMailTypeBuilderPlugin;
-
-class MailDependencyProvider extends SprykerMailDependencyProvider
-{
-    protected function getMailTypeBuilderPlugins(): array
-    {
-        return [
-            new SspInquiryApprovedMailTypeBuilderPlugin(),
-            new SspInquiryRejectedMailTypeBuilderPlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Zed/SspDashboardManagement/SspDashboardManagementDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\SspDashboardManagement;
-
-use SprykerFeature\Zed\SspDashboardManagement\SspDashboardManagementDependencyProvider as SprykerSspDashboardManagementDependencyProvider;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspDashboardManagement\SspInquiryDashboardDataProviderPlugin;
-
-class SspDashboardManagementDependencyProvider extends SprykerSspDashboardManagementDependencyProvider
-{
-    /**
-     * @return array<int, \SprykerFeature\Zed\SspDashboardManagement\Dependency\Plugin\DashboardDataProviderPluginInterface>
-     */
-    protected function getDashboardDataProviderPlugins(): array
-    {
-        return [
-            new SspInquiryDashboardDataProviderPlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Zed/SspAssetManagement/SspAssetManagementDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\SspAssetManagement;
-
-use SprykerFeature\Zed\SspAssetManagement\SspAssetManagementDependencyProvider as SprykerSspAssetManagementDependencyProvider;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspAssetManagement\SspInquirySspAssetManagementExpanderPlugin;
-
-class SspAssetManagementDependencyProvider extends SprykerSspAssetManagementDependencyProvider
-{
-    /**
-     * @return array<\SprykerFeature\Zed\SspAssetManagement\Dependency\Plugin\SspAssetManagementExpanderPluginInterface>
-     */
-    protected function getSspAssetManagementExpanderPlugins(): array
-    {
-        return [
-            new SspInquirySspAssetManagementExpanderPlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Zed/StateMachine/StateMachineDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\StateMachine;
-
-use Spryker\Zed\StateMachine\StateMachineDependencyProvider as SprykerStateMachineDependencyProvider;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\StateMachine\SspInquiryStateMachineHandlerPlugin;
-
-class StateMachineDependencyProvider extends SprykerStateMachineDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\StateMachine\Dependency\Plugin\StateMachineHandlerInterface>
-     */
-    protected function getStateMachineHandlers(): array
-    {
-        return [
-            new SspInquiryStateMachineHandlerPlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Zed/SspInquiryManagement/SspInquiryManagementDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\SspInquiryManagement;
-
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspInquiryManagement\ApproveSspInquiryCommandPlugin;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspInquiryManagement\RejectSspInquiryCommandPlugin;
-use SprykerFeature\Zed\SspInquiryManagement\SspInquiryManagementDependencyProvider as SprykerSspInquiryManagementDependencyProvider;
-
-class SspInquiryManagementDependencyProvider extends SprykerSspInquiryManagementDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\StateMachine\Dependency\Plugin\CommandPluginInterface>
-     */
-    protected function getStateMachineCommandPlugins(): array
-    {
-        return [
-            'SspInquiry/Approve' => new ApproveSspInquiryCommandPlugin(),
-            'SspInquiry/Reject' => new RejectSspInquiryCommandPlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Zed/Twig/TwigDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Twig;
-
-use Spryker\Zed\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Twig\BytesTwigPlugin;
-
-class TwigDependencyProvider extends SprykerTwigDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface>
-     */
-    protected function getTwigPlugins(): array
-    {
-        return [
-            new BytesTwigPlugin(),
+            new CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin(),
         ];
     }
 }
@@ -475,15 +282,9 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 namespace Pyz\Yves\ShopApplication;
 
-use SprykerFeature\Yves\SspInquiryManagement\Widget\CreateOrderSspInquiryLinkWidget;
-use SprykerFeature\Yves\SspInquiryManagement\Widget\DashboardInquiryWidget;
-use SprykerFeature\Yves\SspInquiryManagement\Widget\SspInquiryListWidget;
-use SprykerFeature\Yves\SspInquiryManagement\Widget\SspInquiryMenuItemWidget;
+use SprykerFeature\Yves\SspDashboardManagement\Widget\DashboardMenuItemWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
-/**
- * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
- */
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
@@ -492,10 +293,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     protected function getGlobalWidgets(): array
     {
         return [
-            SspInquiryMenuItemWidget::class,
-            CreateOrderSspInquiryLinkWidget::class,
-            DashboardInquiryWidget::class,
-            SspInquiryListWidget::class,
+            DashboardMenuItemWidget::class,
         ];
     }
 }

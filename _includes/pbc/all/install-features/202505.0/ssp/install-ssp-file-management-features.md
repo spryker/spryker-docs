@@ -257,10 +257,6 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 **src/Pyz/Client/Permission/PermissionDependencyProvider.php**
 
 ```php
-
-{% endinfo_block %}
-
-```php
 <?php
 
 namespace Pyz\Client\Permission;

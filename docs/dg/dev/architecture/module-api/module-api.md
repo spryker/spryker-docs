@@ -1,7 +1,7 @@
 ---
 title: Module API
 description: Learn about Module APIs, performance and scalability, semantic versioning, and Composer constrains for customer modules.
-last_updated: Apr 25, 2023
+last_updated: Apr 9, 2025
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/architecture/module-api/module-api.html

@@ -5,6 +5,18 @@ template: concept-topic-template
 last_updated: Mar 05, 2026
 ---
 
+{% info_block warningBox "⚠️ WARNING: BETA FEATURE" %}
+
+**THE MULTI-FACTOR AUTH MODULE IS CURRENTLY IN BETA.**
+
+This feature is not yet considered stable and **may be significantly changed in future releases**.
+
+By using this feature, you accept full responsibility for any potential issues, including breaking changes, limited support, and incomplete functionality.
+
+**Use in production environments is not recommended** unless you are prepared to adapt to future updates.
+
+{% endinfo_block %}
+
 Multi-Factor Authentication adds an extra layer of security to your account.
 It allows customers to enhance their account security by requiring additional verification steps beyond the standard username and password.
 

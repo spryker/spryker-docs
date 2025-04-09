@@ -1,3 +1,15 @@
+---
+title: Semantic versioning - unstable version
+description: Spryker releases early as unstable. Learn more about them in this document.
+last_updated: Apr 9, 2025
+template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/architecture/module-api/module-api.html
+related:
+  - title: Semantic versioning - major vs. minor vs. patch release
+    link: docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
+---
+
 # Understanding Unstable Modules in Spryker
 
 Spryker adheres to [Semantic Versioning](https://semver.org/) to communicate the stability and expected impact of changes within its modules. As part of this versioning scheme, any module with a version **below 1.0.0** is considered an **unstable** module.

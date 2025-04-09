@@ -1,5 +1,5 @@
 ---
-title: How to Create Custom Multi-Factor Authentication Method
+title: Create Custom Multi-Factor Authentication Method
 description: Learn how to create and implement your own Multi-Factor Authentication method in Spryker.
 template: howto-guide-template
 last_updated: Apr 7, 2025
@@ -12,7 +12,7 @@ Follow the link to the [Multi-Factor Authentication feature overview](/docs/pbc/
 
 To start the integration, make sure that the [Multi-Factor Authentication Feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html) has been installed in your project.
 
-## Implementation Overview
+## Implementation overview
 
 To create a custom MFA method, you need to implement the following components:
 
@@ -85,9 +85,10 @@ class YourMfaTypePlugin extends AbstractPlugin implements MultiFactorAuthPluginI
     }
 }
 ```
+
 </details>
 
-## 2. Create Code Sender Strategy
+## 2. Create a code sender strategy
 
 Create a sender strategy that implements `\Spryker\Zed\MultiFactorAuth\Business\Strategy\SendStrategyInterface`. Here's an example based on the email implementation:
 
@@ -135,7 +136,7 @@ class YourMfaCodeSenderStrategy implements SendStrategyInterface
 ```
 </details>
 
-## 3. Wire Strategy in Factory
+## 3. Wire strategy in factory
 
 Add your strategy to the factory so that it can be used by the Multi-Factor Authentication system to resolve the correct sender strategy based on the type of MFA method selected by the customer.
 
@@ -166,7 +167,7 @@ class MultiFactorAuthBusinessFactory extends SprykerMultiFactorAuthBusinessFacto
 ```
 </details>
 
-## 4. Register Your Plugins
+## 4. Register your plugins
 
 Register your plugin in the dependency provider:
 

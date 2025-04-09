@@ -36,10 +36,12 @@ Check that the following packages are now listed in `composer.lock`:
 
 Update your `config/Shared/config_default.php` (or CI/Docker equivalents):
 
-| CONFIGURATION                                 | SPECIFICATION                                | NAMESPACE                                   |
-|-----------------------------------------------|----------------------------------------------|---------------------------------------------|
-| FileSystemConstants::FILESYSTEM_SERVICE       | Flysystem configuration for file management. | Spryker\Shared\FileSystem                   |
-| SspInquiryManagementConstants::BASE_URL_YVES  | Yves URL used in mailing templates.          | SprykerFeature\Shared\SspInquiryManagement  |
+| CONFIGURATION                                              | SPECIFICATION                                     | NAMESPACE                                   |
+|------------------------------------------------------------|---------------------------------------------------|---------------------------------------------|
+| FileSystemConstants::FILESYSTEM_SERVICE                    | Flysystem configuration for file management.      | Spryker\Shared\FileSystem                   |
+| SspInquiryManagementConstants::BASE_URL_YVES               | Yves URL used in mailing templates.               | SprykerFeature\Shared\SspInquiryManagement  |
+| SspInquiryManagementConstants::DEFAULT_TOTAL_FILE_MAX_SIZE | Configurable total file upload limits.            | SprykerFeature\Shared\SspInquiryManagement  |
+| SspInquiryManagementConstants::DEFAULT_FILE_MAX_SIZE       | Configurable single file upload size.             | SprykerFeature\Shared\SspInquiryManagement  |
 
 **config/Shared/config_default.php**
 ```php
@@ -425,7 +427,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 }
 ```
 
-**src/Pyz/Yves/Permission/PermissionDependencyProvider.php**
+**src/Pyz/Client/Permission/PermissionDependencyProvider.php**
 
 ```php
 use Spryker\Yves\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;

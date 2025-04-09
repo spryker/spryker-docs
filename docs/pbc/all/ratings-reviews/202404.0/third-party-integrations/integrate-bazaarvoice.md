@@ -375,7 +375,7 @@ protected function extendCommandPlugins(Container $container): Container
 
 #### 2. Update the OMS schema
 
-Adjust your OMS state machine configuration to trigger the `Order/RequestProductReviews` command according to your project’s requirements.
+Adjust your OMS state machine configuration to trigger the `Order/RequestProductReviews` command according to your project's requirements.
 
 Here is an example with the `DummyPayment01.xml` process for the `deliver` event:
 

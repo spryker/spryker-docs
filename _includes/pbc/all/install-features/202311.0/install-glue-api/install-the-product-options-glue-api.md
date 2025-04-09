@@ -31,7 +31,7 @@ Make sure the following modules have been installed:
 
 ### 2) Set up transfer objects
 
-Run the following command(s) to apply transfer changes:
+Apply transfer changes:
 
 ```bash
 console transfer:generate

@@ -287,7 +287,7 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 
 ### Configure the shipment method validator plugin and selected shipment method mapper plugin
 
-Activate the following plugin(s):
+Activate the following plugins:
 
 | PLUGIN                                                 | SPECIFICATION                                                                     | PREREQUISITES | NAMESPACE                                                         |
 |--------------------------------------------------------|-----------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------|

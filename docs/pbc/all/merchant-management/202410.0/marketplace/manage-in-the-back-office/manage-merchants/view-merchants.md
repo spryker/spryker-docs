@@ -31,12 +31,12 @@ The detailed view page displays all relevant information about the selected merc
 
 | ATTRIBUTE            | DESCRIPTION                                        |
 |----------------------|----------------------------------------------------|
-| Name                 | The merchant’s name.                               |
-| Registration Number  | The merchant’s official registration number.       |
+| Name                 | The merchant's name.                               |
+| Registration Number  | The merchant's official registration number.       |
 | Merchant Reference   | A unique identifier for the merchant.              |
 | Email                | The contact email address of the merchant.         |
 | Store Relation       | The stores the merchant is associated with.  |
-| Merchant URL         | URL of the merchant’s profile.               |
+| Merchant URL         | URL of the merchant's profile.               |
 | Warehouses           | Warehouses used by the merchant. |
 
 ## Contact Person
@@ -57,7 +57,7 @@ The detailed view page displays all relevant information about the selected merc
 | Public Email    | Public email address.                                |
 | Public Phone    | Public phone number.                                                 |
 | Fax Number      | Fax number.                                                          |
-| Logo URL        | The link to the merchant’s logo.                                         |
+| Logo URL        | The link to the merchant's logo.                                         |
 | Address Details | Merchant's address.   |
 
 ## Legal Information

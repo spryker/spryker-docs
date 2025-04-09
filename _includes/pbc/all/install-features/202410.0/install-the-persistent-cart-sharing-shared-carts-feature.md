@@ -94,7 +94,7 @@ Make sure, that you're able to share a cart with the "Internal Access" links (bo
 
 {% info_block warningBox "Verification" %}
 
-Make sure, that when you have a cart share link with Read-only or Full Access and you're not logged in - you can see the "Please login to access requested shared resource." error message.
+Make sure, that when you have a cart share link with Read-only or Full Access and you're not logged in - you can see the "Login to access requested shared resource." error message.
 
 {% endinfo_block %}
 

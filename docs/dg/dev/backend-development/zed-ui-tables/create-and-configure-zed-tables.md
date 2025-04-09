@@ -98,12 +98,12 @@ To configure the field on which the table is sorted by default when it's initial
 ```php
 <?php
 
-$config->setDefaultSortField(SpySalesOrderTableMap::COL_CREATED_ATб \Spryker\Zed\Gui\Communication\Table\TableConfiguration::SORT_DESC);
+$config->setDefaultSortField(SpySalesOrderTableMap::COL_CREATED_AT, \Spryker\Zed\Gui\Communication\Table\TableConfiguration::SORT_DESC);
 ```
 
 ### Configure search by columns
 
-The default search option in Back Office data tables searches for anything that contains the specified substrings. This default search makes use of the SQL logical operator ‘LIKE’ in combination with ‘LOWER’ for comparison. It may result in performance issues on larger tables because of indexes not being used.
+The default search option in Back Office data tables searches for anything that contains the specified substrings. This default search makes use of the SQL logical operator `LIKE` in combination with `LOWER` for comparison. It may result in performance issues on larger tables because of indexes not being used.
 
 Search by columns can be used on all Back Office data tables which extend the `AbstractTable` class.
 

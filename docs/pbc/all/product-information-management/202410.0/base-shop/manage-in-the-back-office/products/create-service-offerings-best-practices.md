@@ -21,7 +21,7 @@ Imagine the scenarios:
 
 *Scenario 2*: you sell equipment that requires specific installation, and installation by your service technician is required for the warranty to apply. This means, when buyers add specific products to cart, you want the installation service to be automatically included in the cart as well.
 
-Let’s consider how you can handle both of the scenarios for your store.
+Let's consider how you can handle both of the scenarios for your store.
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ To create the product, do the following:
 3. Click **Save**. Your product is now created and will appear in the list of products in the **Catalog&nbsp;<span aria-label="and then">></span> Products** section.
 4. Activate the product:
     1. In the list of products in the **Catalog&nbsp;<span aria-label="and then">></span> Products** section, find your product and click **Edit** in the *Actions* column for it.
-    2. In the **Variants** tab, click **Edit** for the product(s) you want to make active.
+    2. In the **Variants** tab, click **Edit** for the products you want to make active.
     3. On the *Edit Concrete Product* page, click **Activate**. The abstract product will now also become active.
 5. Make sure your product is visible and searchable in the Storefront by going through the checklist in the HowTo - [Make a Product Searchable and Shown on the Storefront](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/make-products-searchable-and-shown-on-the-storefront.html) article.
 
@@ -70,12 +70,12 @@ To create the product option, do the following:
 4. Click **Save**. The product option is now created and appears in the **Product option list** on the **Catalog&nbsp;<span aria-label="and then">></span> Product Options** page.
 5. Activate the option by clicking **Activate** in the *Actions* column of the **Product option list**.
 
-That’s it. The option appears for the product on the Storefront:
+That's it. The option appears for the product on the Storefront:
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Creating+Service+Offerings/service-as-option-storefront.png)
 
 {% info_block infoBox "Note" %}
 
-Keep in mind that depending on the use case you want to implement for your shop, additional development effort may be required on your project's side. For example, if you don’t want to allow buyers to add the Service option more than once if they have a set of specific products in carts.
+Keep in mind that depending on the use case you want to implement for your shop, additional development effort may be required on your project's side. For example, if you don't want to allow buyers to add the Service option more than once if they have a set of specific products in carts.
 
 {% endinfo_block %}
 
@@ -93,7 +93,7 @@ One more way to have a product with an optional service offering would be to mak
 
 {% info_block infoBox "Note" %}
 
-If you don’t want to display the Service products in the Storefront so buyers can not find them in the products catalog, don’t check the Searchable checkbox for it in the **General** tab of the **Create/Edit Concrete Product** page.
+If you don't want to display the Service products in the Storefront so buyers can not find them in the products catalog, don't check the Searchable checkbox for it in the **General** tab of the **Create/Edit Concrete Product** page.
 
 {% endinfo_block %}
 
@@ -135,7 +135,7 @@ First of all, you need to somehow identify the products for which the custom sol
 
 #### 2.  Override the Add to Cart functionality
 
-At this step, you need the development team to change the default *Add to Cart* functionality to meet your project’s needs.
+At this step, you need the development team to change the default *Add to Cart* functionality to meet your project's needs.
 
 The  *Add to Cart* functionality implies a call to both Yves and Zed, which means the development team can execute a back-end logic for it. This logic could be triggered when products with specific labels are added to the cart. For example, it could automatically add the service product to the cart. It could also imply a check, that if another product with the same label is added to cart, the service product is not added, or another service product (for example, a service of another type with another price) is added to cart instead. You could also have a logic that if they buy more than a specific number of the products, the service product is for free.
 

@@ -621,7 +621,7 @@ Response sample:
 
 The response contains all columns from the `spy_country` table and the included `spy_tax_rate` table,
 as configured in `spy_dynamic_entity_definition.definition`. Each column is identified using the `fieldVisibleName`
-as the key, providing a comprehensive view of the table’s data in the API response.
+as the key, providing a comprehensive view of the table's data in the API response.
 
 {% info_block infoBox %}
 

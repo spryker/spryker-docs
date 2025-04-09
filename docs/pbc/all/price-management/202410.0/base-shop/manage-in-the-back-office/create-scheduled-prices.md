@@ -27,7 +27,7 @@ For example, you want to set up a promotion for Valentine's Day beforehand so th
 * Prices switch to the specified ones automatically on the starting date of the promotion.
 * Prices switch back automatically on the last day of the promotion.
 
-Instead of changing prices manually on the starting day of the promotion, you can create a price schedule called,  e.g., *Valentine's day prices*. To do that, you need to import a file with predefined dates and prices.
+Instead of changing prices manually on the starting day of the promotion, you can create a price schedule called–for example, *Valentine's day prices*. To do that, you need to import a file with predefined dates and prices.
 
 ## Prerequisites
 

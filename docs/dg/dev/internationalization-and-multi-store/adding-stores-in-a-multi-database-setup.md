@@ -99,7 +99,7 @@ Bootstrap the updated configuration and run the project:
   docker/sdk up
   ```
 
-Make sure the new store’s DB has been correctly initialized and filled up with demo data.
+Make sure the new store's DB has been correctly initialized and filled up with demo data.
 
 #### Setting up additional deployment recipes
 
@@ -172,7 +172,7 @@ This section describes how to roll out a store in a staging environment. This ro
 
 #### Staging environment configuration
 
-Add the configuration for the new store to the staging environment’s configuration.
+Add the configuration for the new store to the staging environment's configuration.
 
 To initialize the new store's DB, run a destructive deployment. To not affect existing stores, in the `image.environment` section of the deployment file, define only the new store in `SPRYKER_HOOK_DESTRUCTIVE_INSTALL`. In the following example, new PL and AT stores are introduced:
 
@@ -200,7 +200,7 @@ This section describes how to roll out a new store in a production environment.
 
 #### Production environment configuration
 
-Prepare the production environment’s configuration similarly to the staging setup.
+Prepare the production environment's configuration similarly to the staging setup.
 
 #### Apply the configuration
 

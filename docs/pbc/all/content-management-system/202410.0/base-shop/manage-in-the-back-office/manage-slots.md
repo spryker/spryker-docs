@@ -1,6 +1,6 @@
 ---
 title: Manage slots
-description: Learn more about CMS Slots with these guides, helping you to manage slots that are implemented in to pages right within the Spryker Back Office 
+description: Learn more about CMS Slots with these guides, helping you to manage slots that are implemented in to pages right within the Spryker Back Office
 last_updated: Jun 18, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-slots
@@ -31,11 +31,11 @@ Each section contains reference information. Make sure to review it before you s
 
 ## Activating and deactivating slots
 
-You can activate or deactivate a slot.  The embedded content will either be visible or invisible on the Storefront pages.
+You can activate or deactivate a slot. The embedded content will either be visible or invisible on the Storefront pages.
 
-To activate a slot, click **Activate** in the *Actions* column in the *List of Slots for [Name] Template* section. This will change the status to *Active*. The content of this slot will be displayed on the corresponding Storefront page(s).
+To activate a slot, click **Activate** in the *Actions* column in the *List of Slots for [Name] Template* section. This will change the status to *Active*. The content of this slot will be displayed on the corresponding Storefront pages.
 
-To deactivate a slot, click **Deactivate** in the *Actions* column in the *List of Slots for [Name] Template* section. This will change the status to *Inactive*. The content of this slot will be removed from the corresponding Storefront page(s).
+To deactivate a slot, click **Deactivate** in the *Actions* column in the *List of Slots for [Name] Template* section. This will change the status to *Inactive*. The content of this slot will be removed from the corresponding Storefront pages.
 
 ### Reference information: Activating and deactivating slots:
 
@@ -52,7 +52,7 @@ In the *List of Slots for [name] Template* section, you see the following:
 
 ## Assigning CMS blocks to slots
 
-You can assign CMS blocks to a slot selected in *List of Slots for [Name] Template*. The content of assigned CMS blocks is displayed on the corresponding Storefront page(s). If there are no CMS blocks with content that you can assign, see [Create a CMS block](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html).
+You can assign CMS blocks to a slot selected in *List of Slots for [Name] Template*. The content of assigned CMS blocks is displayed on the corresponding Storefront pages. If there are no CMS blocks with content that you can assign, see [Create a CMS block](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html).
 
 To assign a CMS block to a slot:
 1. In *List of Slots for [Name] Template*, click on the row of the slot you wish to assign CMS blocks to.
@@ -77,7 +77,7 @@ Repeat step 2 for each CMS block that you want to assign.
 
 4. Click **Save** to assign all the selected CMS blocks to the slot.
 
-The order of the assigned CMS blocks in the *List of Blocks for [Name] Slot* reflects the order of CMS blocks displayed on the corresponding Storefront page(s). See Changing the position of CMS blocks to define the desired order.
+The order of the assigned CMS blocks in the *List of Blocks for [Name] Slot* reflects the order of CMS blocks displayed on the corresponding Storefront pages. See Changing the position of CMS blocks to define the desired order.
 
 ### Reference information: Assigning CMS blocks to slots
 
@@ -157,8 +157,8 @@ You can change the position of a CMS block in relation to the other CMS blocks i
 To move a CMS block:
 1. In *List of Slots for [Name] Template*, click on the row of the slot the CMS block of which you wish to move.
 2. In the *Actions* column of the *List of  Blocks for [Name] Slot*,
-    - To move a CMS block one position up, click **Move Up**. This will swap this slot with the one located above. The content of the CMS blocks will be swapped respectively on the corresponding page(s).
-    - To move a CMS block one position down, click **Move Down**. This will swap this slot with the one located below. The content of the CMS blocks will be swapped respectively on the corresponding page(s).
+    - To move a CMS block one position up, click **Move Up**. This will swap this slot with the one located above. The content of the CMS blocks will be swapped respectively on the corresponding pages.
+    - To move a CMS block one position down, click **Move Down**. This will swap this slot with the one located below. The content of the CMS blocks will be swapped respectively on the corresponding pages.
 
 {% info_block infoBox %}
 

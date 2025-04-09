@@ -127,7 +127,7 @@ The **Total** section displays the total amount of items to be returned.
 | --------------- | ----------------------- |
 | Customer reference | Reference of the customer. |
 | Name               | Customer name.             |
-| Email              | Customer’s email address.  |
+| Email              | Customer's email address.  |
 
 ## Printing a marketplace return slip
 

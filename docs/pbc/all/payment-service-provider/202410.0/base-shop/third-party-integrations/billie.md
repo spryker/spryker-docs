@@ -18,15 +18,13 @@ redirect_from:
 
 [ABOUT BILLIE](https://www.billie.io/)
 
-B2B-PayAfterDelivery for the 21st century
-
-Billie is Germany’s innovative online-only provider of flexible working capital solutions. Whether it's our award-wining, 100% digital factoring platform or our B2B-PayAfterDelivery solution for online stores:
+Billie is Germany's innovative online-only provider of flexible working capital solutions. Whether it's our award-wining, 100% digital factoring platform or our B2B-PayAfterDelivery solution for online stores:
 
 Aspiring start-ups, established SMEs and world-leading hidden champions all trust in Billie when it comes to fast, reliable and simple liquidity provision.
 
 Focus fully on your core business — Billie takes care of your debtor management, provides a white-label dunning & collection process and includes full protection against payment defaults.
 
-Offer your business customers their preferred payment option, fully integrated into your online store’s checkout process: easily integrate our B2B-PayAfterDelivery module and experience dramatically improved conversion rates by allowing your customers to pay by invoice. Experience reliable payouts to your bank account on the next business day.
+Offer your business customers their preferred payment option, fully integrated into your online store's checkout process: easily integrate our B2B-PayAfterDelivery module and experience dramatically improved conversion rates by allowing your customers to pay by invoice. Experience reliable payouts to your bank account on the next business day.
 
 YOUR ADVANTAGES:
 * Fully automated PayAfterDelivery module for your B2B-eCommerce store
@@ -45,6 +43,6 @@ YOUR ADVANTAGES:
 See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
 ---
-For further information on this partner and integration into Spryker, please contact us.
+For further information on this partner and integration into Spryker,  contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

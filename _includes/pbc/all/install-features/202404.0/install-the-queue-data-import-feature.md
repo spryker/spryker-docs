@@ -10,7 +10,7 @@ Run the following command to install the required modules:
 composer require spryker/data-import:"1.5.0" spryker/data-import-extension:"1.1.0" --update-with-dependencies`
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -30,7 +30,7 @@ Generate transfer changes:
 console transfer:generate`
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in the transfer objects:
 

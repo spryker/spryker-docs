@@ -119,14 +119,14 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 10. Adjust all project-level Elasticsearch index definition JSON files (if any) as follows:
 
     - Each JSON file should be renamed, so it would have one of the source identifiers (see above) as its name. The name of the definition file matters and will later be translated into index name.
-    - Each JSON file should provide a definition only for one mapping type, suitable for that index. By default, *index’s only* mapping type should have the same name as the JSON file it’s described by. For example, `page.json` should only contain a definition for the `page` mapping type.
+    - Each JSON file should provide a definition only for one mapping type, suitable for that index. By default, *index's only* mapping type should have the same name as the JSON file it's described by. For example, `page.json` should only contain a definition for the `page` mapping type.
     - Each JSON file should be placed inside of the directory, which matches a path pattern defined by `SearchElasticsearchConfig::getJsonSchemaDefinitionDirectories()`.
 
 
 ## Upgrading from version 7.* to version 8.*
 
 
-With this version of the Search module we have migrated to Elasticsearch 5.6. Please read the [Elasticsearch Breaking Changes in 5.0](https://www.elastic.co/guide/en/elasticsearch/reference/5.5/breaking-changes-5.0.html) official documentation to adjust your custom implementation accordingly.
+With this version of the Search module we have migrated to Elasticsearch 5.6. Read the [Elasticsearch Breaking Changes in 5.0](https://www.elastic.co/guide/en/elasticsearch/reference/5.5/breaking-changes-5.0.html) official documentation to adjust your custom implementation accordingly.
 
 Your development environment needs to be updated with Elasticsearch 5.6.x.
 
@@ -278,7 +278,7 @@ We changed the way dynamic search configuration was cached and then used. This f
 
 * The `Spryker\Shared\Search\SearchConstants::SEARCH_CONFIG_CACHE_KEY` config was removed, but previously it was required to be filled with a key that was used to save the search config cache into Redis.
 * Removed `SearchFacade::saveSearchConfigCache()` method which stored the given search cache configuration into Redis.
-* In the new version, instead of the removed code mentioned above, you’ll need to provide a list of `Spryker\Client\Search\Dependency\Plugin\SearchConfigExpanderPluginInterface` in `Pyz\Client\Search\SearchDependencyProvider::createSearchConfigExpanderPlugins()` instead.
+* In the new version, instead of the removed code mentioned above, you'll need to provide a list of `Spryker\Client\Search\Dependency\Plugin\SearchConfigExpanderPluginInterface` in `Pyz\Client\Search\SearchDependencyProvider::createSearchConfigExpanderPlugins()` instead.
 
 We moved the possible facet type option constants from `Spryker\Client\Search\Plugin\Config\FacetConfigBuilder` to `\Spryker\Shared\Search\SearchConstants`:
 
@@ -288,7 +288,7 @@ We moved the possible facet type option constants from `Spryker\Client\Search\Pl
 * `FacetConfigBuilder::TYPE_CATEGORY` -> `SearchConstants::FACET_TYPE_CATEGORY`
 * `FacetConfigBuilder::TYPE_BOOL`-> not supported
 
-We have added a type field to the default “page” index type defined by `Search/src/Spryker/Shared/Search/IndexMap/search.json`. With this field it’s possible to differentiate multiple item types (e.g. products, cms pages, categories, etc.). Additionally, we also fixed the indexing strategy of store and `locale` field, they are set to “not_analyzed”. These changes require a repeated indexation of your existing data. In a non-production environment this means that you need to delete your index and then install the new one by running `vendor/bin/console setup:search`.
+We have added a type field to the default "page" index type defined by `Search/src/Spryker/Shared/Search/IndexMap/search.json`. With this field it's possible to differentiate multiple item types, products, cms pages, categories. Additionally, we also fixed the indexing strategy of store and `locale` field, they are set to "not_analyzed". These changes require a repeated indexation of your existing data. In a non-production environment this means that you need to delete your index and then install the new one by running `vendor/bin/console setup:search`.
 
 {% info_block errorBox "Important" %}
 
@@ -299,6 +299,6 @@ In production environments, follow the official Elasticsearch guide about [Index
 
 ## Upgrading from version 3.* to version 4.*
 
-With the version 4 of the Search module, the logic and configuration of how the results are sorted has been changed. Previously there were two request parameters that controlled what field we are sorting by as well as the direction of the sorting (e.g /?sort=price&sort_order=desc).
+With the version 4 of the Search module, the logic and configuration of how the results are sorted has been changed. Previously there were two request parameters that controlled what field we are sorting by as well as the direction of the sorting–for example, `/?sort=price&sort_order=desc`.
 
-The new version now works with one parameter only (e.g. `/?sort=price_asc`). To migrate to the new version, you’ll need to change your configurations in your classes that implement `\Spryker\Client\Search\Dependency\Plugin\SearchConfigBuilderInterface`. Instead of providing one `SortConfigTransfer` per sorted attribute, now you need to provide two if you wish to sort by both ascending and descending order. To do this, use the `SortConfigTransfer::setIsDescending()` method, and make sure that the values in `SortConfigTransfer::setParameterName()` are unique.
+The new version now works with one parameter only, such as `/?sort=price_asc`. To migrate to the new version, you'll need to change your configurations in your classes that implement `\Spryker\Client\Search\Dependency\Plugin\SearchConfigBuilderInterface`. Instead of providing one `SortConfigTransfer` per sorted attribute, now you need to provide two if you wish to sort by both ascending and descending order. To do this, use the `SortConfigTransfer::setIsDescending()` method, and make sure that the values in `SortConfigTransfer::setParameterName()` are unique.

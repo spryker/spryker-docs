@@ -87,8 +87,8 @@ When bundle item added to cart there is the additional `ExpandBundleItemsPlugin`
 
 For example:
 
-1. Item with SKU “123” is added to cart, expander will look if this item is bundle. If it’s bundle then it will read all bundled items from persistence.
-2. Item with SKU “123” is then added to `QuoteTransfer:bundleItems`.
+1. Item with SKU "123" is added to cart, expander will look if this item is bundle. If it's bundle then it will read all bundled items from persistence.
+2. Item with SKU "123" is then added to `QuoteTransfer:bundleItems`.
 3. This item is given special `ItemTransfer:bundleItemIdentifier` unique ID which have each bundle in cart.
 4. At the same time bundled items are created and stored into `CartChangeTransfer:items` with referenced bundled identifier `ItemTransfer:relatedBundleItemIdentifier` this is the same ID where bundle got assigned. This helps to track back belonging bundle items in quote object.
 
@@ -113,3 +113,21 @@ If bundled item moves to reserved state machine state then corresponding bundle 
 |INSTALLATION GUIDES | GLUE API GUIDES  |
 |---------|---------|
 |[Install the Product Bundles feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html) | [Retrieving bundled products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-bundled-products.html) |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -25,7 +25,7 @@ Install the required features:
 composer require spryker/price-cart-connector:"^6.9.0" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -68,7 +68,7 @@ class PriceCartConnectorConfig extends SprykerPriceCartConnectorConfig
 }
 ```
 
-If `IS_ZERO_PRICE_ENABLED_FOR_CART_ACTIONS=false` while attempting to add the product with zero price to the cart, you get the following message: "Price in selected currency not found for product with sku '%sku%'. Please change the currency or remove product from order."
+If `IS_ZERO_PRICE_ENABLED_FOR_CART_ACTIONS=false` while attempting to add the product with zero price to the cart, you get the following message: "Price in selected currency not found for product with sku '%sku%'. Change the currency or remove product from order."
 
 The `PriceCartConnectorConfig::getItemFieldsForIdentifier()` lets you set up a list of fields that are used to build item identifiers. Based on generated identifiers, the system can recognize duplicate items and perform requests only for unique items.
 

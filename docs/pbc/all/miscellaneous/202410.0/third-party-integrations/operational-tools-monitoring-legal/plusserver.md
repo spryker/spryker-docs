@@ -17,7 +17,7 @@ PlusServer GmbH is the leading managed cloud provider in Germany, Austria and Sw
 YOUR ADVANTAGES:
 * Highest performance through optimized solutions
 * Proactive monitoring and 24/7 support
-* Flexible scalability, e.g. for peak loads
+* Flexible scalability–for example, for peak loads
 * Experts certified by shop software manufacturers
 * 99.998% average availability in 2017
 * German data protection and secure credit card payment
@@ -33,6 +33,6 @@ YOUR ADVANTAGES:
 See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
 ---
-For further information on this partner and integration into Spryker, please contact us.
+For further information on this partner and integration into Spryker,  contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

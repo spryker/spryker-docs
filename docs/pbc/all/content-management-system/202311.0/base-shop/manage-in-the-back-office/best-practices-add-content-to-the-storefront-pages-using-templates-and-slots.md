@@ -22,7 +22,7 @@ related:
 
 This topic describes how to add content to Storefront pages using templates with slots. To start working with templates with slots, go to **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
-Let’s say you have *Sticky Notes* and *Writing Materials* categories, and you want to cross-promote them. You set the following tasks:
+Let's say you have *Sticky Notes* and *Writing Materials* categories, and you want to cross-promote them. You set the following tasks:
 
 * All the products belonging to the *Sticky Notes* category should display a content block with a link to the *Writing Materials* category and a content block with featured products.
 * All the products belonging to the *Writing Materials* category should display a content block with a link to the *Writing Materials* category and a content block with top sellers.
@@ -73,13 +73,13 @@ Make sure to activate the CMS blocks. Only active CMS blocks are rendered on Sto
 2. Insert the *Best Selling Products* content item into the *Homepage Top sellers Products* CMS block, and apply the *Product Slider for store/landing pages* template.
 3. Insert the *Featured Products* content item into the *Homepage Featured Products* CMS block and apply the Product Slider for store/landing pages template.
 4. Configure the *Category Banner-2* CMS block as follows:
-    * **Title**—“Writing Materials”.
-    * **Content**—“Stock up on the perfect pens, pencils, and markers for every member of your team”.
+    * **Title**—"Writing Materials".
+    * **Content**—"Stock up on the perfect pens, pencils, and markers for every member of your team".
     * **Link**—`/en/stationery/writing-materials`.
     * **ImageURL**—`/assets/DE/default/images/category-banner-image-2@2x.jpg`.
 5. Configure the *Category Banner-3* CMS block as follows:
-    * Title—“Post-Its”.
-    * Content—“Organize and prioritize yourself or your team using our great selection of Post-Its”.
+    * Title—"Post-Its".
+    * Content—"Organize and prioritize yourself or your team using our great selection of Post-Its".
     * Link—`/en/stationery/paper/sticky-notes`.
     * ImageURL—`/assets/DE/default/images/category-banner-image-3@2x.jpg`.
 

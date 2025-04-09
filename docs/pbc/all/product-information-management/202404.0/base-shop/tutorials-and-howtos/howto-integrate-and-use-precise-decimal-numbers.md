@@ -42,7 +42,7 @@ To install the `{% raw %}{{{% endraw %}decimal-object{% raw %}}}{% endraw %}` li
 
 ## How decimal numbers work with transfer objects
 
-You can specify Decimal as a type of your Data Transfer Object’s property. To define it, use the `decimal` type:  
+You can specify Decimal as a type of your Data Transfer Object's property. To define it, use the `decimal` type:  
 
 ```
 <transfer name="StockProduct">

@@ -142,7 +142,7 @@ Depending on your project setup, you might need to run updates of additional mod
 
 {% endinfo_block %}
 
-Other modules that belong to the merchant context might require an update as well. But this is highly dependent on the actual project setup. Since we can’t predict every variation, be advised that there are likely to be additional dependencies requiring an update.
+Other modules that belong to the merchant context might require an update as well. But this is highly dependent on the actual project setup. Since we can't predict every variation, be advised that there are likely to be additional dependencies requiring an update.
 
 4. Update `spryker/user-password-reset`.
 

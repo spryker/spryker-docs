@@ -26,7 +26,7 @@ composer require spryker-shop/quote-request-page: "^3.0.0" --update-with-depende
 console transfer:generate
 ```
 
-3. Some files were re-organized, please check if you had overwritten them on project level:
+3. Some files were re-organized,  check if you had overwritten them on project level:
 
    * Renamed `quote-request-cart-summary` into `quote-request-summary`.
    * Renamed `quote-request-discount-summary` into `quote-request-summary-discount`.

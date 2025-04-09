@@ -31,5 +31,4 @@ For example:
     }
 ```
 
-Please keep in mind, that the original select component is still loaded on the page, alhough we hie it and replace with custom-build JS component.
-Multi-select is also supported.
+The original select component is still loaded on the page, alhough we hie it and replace with custom-build JS component. Multi-select is also supported.

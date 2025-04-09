@@ -131,7 +131,7 @@ We connect the repository shortly after you provide the details.
 
 ## Connect a GitLab code repository
 
-Currently, [CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html) doesn’t have a native integration of GitLab. To make it work, you can configure a [CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) repository as a mirror of a GitLab repository.
+Currently, [CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html) doesn't have a native integration of GitLab. To make it work, you can configure a [CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) repository as a mirror of a GitLab repository.
 
 {% info_block warningBox "Pushing changes" %}
 

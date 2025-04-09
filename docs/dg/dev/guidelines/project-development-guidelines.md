@@ -34,7 +34,7 @@ Additionally, we recommend keeping all modules up to date in general. [Evaluator
 
 In order to keep track of the Spryker's modules updates, you can use the [Release App history page](https://api.release.spryker.com/release-history). Release groups are created for each Spryker's feature/fix release. Each release group contains a list of modules that have been updated. You can use this information to check if any of the modules you are using have been updated and also use provided command to update them manually.
 
-Also, you need to update you infrastructure and use latest provided docker images. E.g. each year we update PHP version and provide new docker images for it. Also all code updates from Spryker side will require new PHP version, so you need to update it as well.
+Also, you need to update you infrastructure and use latest provided docker images. For example, each year we update PHP version and provide new docker images for it. Also all code updates from Spryker side will require new PHP version, so you need to update it as well.
 You can check supported PHP versions in the [Docker Hub](https://hub.docker.com/r/spryker/php) or you can check version of Docker SDK in the [Spryker Docker SDK repo](https://github.com/spryker/docker-sdk).
 
 ## Apply coding guidelines
@@ -43,7 +43,7 @@ Pay attention to an [architecture convention](/docs/dg/dev/architecture/architec
 
 ## Use custom namespaces
 Instead of using the `Pyz` namespace, it's possible to use your own namespace for project development. For example, use the project name as a namespace.
-Please note that most of existing examples and documentation use the `Pyz` namespace, and you will have to adjust the code every time you want to use it.
+Most of existing examples and documentation use the `Pyz` namespace, and you will have to adjust the code every time you want to use it.
 
 ## Use custom names
 Use custom names for everything that is added on the project level, like the following:
@@ -88,11 +88,12 @@ The following tools can help you make your code maintainable:
 ## Don't be slowed down by Spryker's core rules
 Spryker core development has a lot of rules that are not always applicable to the project level. If you find that a rule is slowing you down, you are not forced to use it. But pay attention that some of the rules are not just recommendations, but conventions and must be followed in order to get a working functionality.
 
-E.g. in code development we use Bridges instead of direct usage of Facades from other modules. We do it to keep our dependencies in track, but it's not required for the project level. So there we can use Facades directly.
-But you MUST to follow a directory structure, naming conventions, and other rules that are required for the project level. E.g. controllers will not work if you put them in the wrong directory.
+For example, in code development we use Bridges instead of direct usage of Facades from other modules. We do it to keep our dependencies in track, but it's not required for the project level. So there we can use Facades directly.
+
+But you must follow a directory structure, naming conventions, and other rules that are required for the project level. For example, controllers will not work if you put them in the wrong directory.
 
 ## Tips and tricks
-It's an always a good idea to define a proper GIt Flow in your project. E.g. as a tip, we recommend to put your ticket ID in the branch name. It will help you to track the changes and to understand what is done in the branch.
+It's an always a good idea to define a proper Git Flow in your project. For example, as a tip, we recommend to put your ticket ID in the branch name. It will help you to track the changes and to understand what is done in the branch.
 
 Commit messages should also include the ticket ID and a short description of the changes. This will help you to understand what was done in the commit and to track the changes in the future.
 

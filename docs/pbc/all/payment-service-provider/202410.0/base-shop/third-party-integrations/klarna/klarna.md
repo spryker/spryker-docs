@@ -23,7 +23,7 @@ related:
 
 [ABOUT KLARNA](https://www.klarna.com/de/)
 
-Klarna was founded in 2005 in Stockholm, Sweden with the aim of making it easier for people to shop online. In the last 12 years, technology has evolved, excited and transformed the world around us, yet our mission remains as relevant as ever, to make paying as simple, safe and above all, smooth as possible.Klarna is now one of Europe's largest banks and is providing payment solutions for 60 million consumers across 70,000 merchants in 18 countries. Klarna offers direct payments, pay after delivery options and installment plans in a smooth one-click purchase experience that lets consumers pay when and how they prefer to.When the company acquired SOFORT in 2014 the Klarna Group was formed.
+Klarna was founded in 2005 in Stockholm, Sweden with the aim of making it easier for people to shop online. In the last 12 years, technology has evolved, excited and transformed the world around us, yet our mission remains as relevant as ever, to make paying as simple, safe and above all, smooth as possible. Klarna is now one of Europe's largest banks and is providing payment solutions for 60 million consumers across 70,000 merchants in 18 countries. Klarna offers direct payments, pay after delivery options and installment plans in a smooth one-click purchase experience that lets consumers pay when and how they prefer to. When the company acquired SOFORT in 2014 the Klarna Group was formed.
 
 YOUR ADVANTAGES:
 * With Invoice:  With Installments increase of conversion rates and high acceptance rates  higher baskets and less cancellations easy and secure customer experience for shoppers  direct Direkter shipping thanks to real time-check offer germany´s most popular payment methods guaranteed payout to merchants .
@@ -72,6 +72,6 @@ The [Klarna State Machine Commands and Conditions](klarna-state-machine.htm) tri
 See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
 ---
-For further information on this partner and integration into Spryker, please contact us.
+For further information on this partner and integration into Spryker,  contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

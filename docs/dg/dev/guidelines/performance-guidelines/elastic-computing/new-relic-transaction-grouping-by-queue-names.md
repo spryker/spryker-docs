@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html
 ---
 
-By default, the `spryker/monitoring` module groups all New Relic transactions generated from a console command by the command’s name. For example, `ooms:check-timeout`.
+By default, the `spryker/monitoring` module groups all New Relic transactions generated from a console command by the command's name. For example, `ooms:check-timeout`.
 
 This strategy works in most cases, and you can still query the data from a needed queue using [NRQL](https://docs.newrelic.com/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions/). But you might want to override this behavior.
 

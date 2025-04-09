@@ -204,7 +204,7 @@ Add product reader, creator and updater plugins in `Pyz\Zed\Product\ProductDepen
 <?php
 /**
  * This file is part of the Spryker Demoshop.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\Product;
@@ -369,7 +369,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 
 ### 5. Troubleshooting
 
-For all other issues that you might encounter after migration, please refer to the Spryker Demoshop.
+For all other issues that you might encounter after migration,  refer to the Spryker Demoshop.
 
 ## Upgrading from version 2.* to version 3.*
 

@@ -1,6 +1,6 @@
 ---
-title: Semantic versioning - unstable version
-description: Spryker releases early as unstable. Learn more about them in this document.
+title: Semantic Versioning - Zero-Major Version
+description: Spryker releases early as zero-major. Learn more about them in this document.
 last_updated: Apr 9, 2025
 template: concept-topic-template
 redirect_from:
@@ -10,23 +10,23 @@ related:
     link: docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
 ---
 
-# Understanding Unstable Modules in Spryker
+# Understanding Zero-Major Modules in Spryker
 
-Spryker adheres to [Semantic Versioning](https://semver.org/) to communicate the stability and expected impact of changes within its modules. As part of this versioning scheme, any module with a version **below 1.0.0** is considered an **unstable** module.
+Spryker adheres to [Semantic Versioning](https://semver.org/) to communicate the stability and expected impact of changes within its modules. As part of this versioning scheme, any module with a version **below 1.0.0** is considered a **zero-major** module.
 
 This document outlines what using such a module means for both **developers** and **project stakeholders**, focusing on technical expectations, functional completeness, and versioning behavior.
 
 ---
 
-## What Defines an Unstable Module?
+## What Defines a Zero-Major Module?
 
-Unstable modules are **early-stage implementations** that are publicly released for evaluation and early integration. These modules follow a versioning pattern of `0.x.x` and are not yet considered stable.
+Zero-major modules are **early-stage implementations** that are publicly released for evaluation and early integration. These modules follow a versioning pattern of `0.x.x` and are not yet considered stable.
 
-> A module remains unstable until it reaches version **1.0.0**, at which point it is considered **stable** and the full set of [Semantic Versioning guarantees](https://docs.spryker.com/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) apply.
+> A module remains zero-major until it reaches version **1.0.0**, at which point it is considered **stable** and the full set of [Semantic Versioning guarantees](https://docs.spryker.com/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) apply.
 
 ---
 
-## Technical Characteristics of Unstable Modules
+## Technical Characteristics of Zero-Major Modules
 
 | Characteristic                              | Description                                                                 |
 |--------------------------------------------|-----------------------------------------------------------------------------|
@@ -35,13 +35,13 @@ Unstable modules are **early-stage implementations** that are publicly released 
 | **Code Quality**                           | ✅ Production-level, code must be free of known bugs.                      |
 | **Non-Functional Requirements (NFRs)**     | ⚠️ May be partially met e.g., performance, scalability, entity count handling. |
 
-While the code is expected to be operational and error-free, **NFRs may not be fully addressed** in an unstable module. These aspects are typically matured and optimized closer to the 1.0.0 milestone.
+While the code is expected to be operational and error-free, **NFRs may not be fully addressed** in a zero-major module. These aspects are typically matured and optimized closer to the 1.0.0 milestone.
 
 ---
 
 ## Business Characteristics
 
-From a business perspective, unstable modules are **not feature-complete** and **subject to change**. 
+From a business perspective, zero-major modules are **not feature-complete** and **subject to change**. 
 
 | Characteristic                         | Description                                                                  |
 |----------------------------------------|------------------------------------------------------------------------------|
@@ -55,7 +55,7 @@ Business logic and behaviors may be redefined based on feedback, internal alignm
 
 ## What are the Gaps?
 
-The level of readiness and the presence of gaps in an unstable module can vary by case. To assess whether an unstable module meets your project's technical and functional requirements, alignment with Spryker is essential.
+The level of readiness and the presence of gaps in a zero-major module can vary by case. To assess whether a zero-major module meets your project's technical and functional requirements, alignment with Spryker is essential.
 - Which functional and non-functional capabilities are currently covered  
 - Any known limitations or planned changes  
 
@@ -63,7 +63,7 @@ This ensures transparency around the module’s maturity and avoids unexpected i
 
 ---
 
-## When Should You Use an Unstable Module?
+## When Should You Use a Zero-Major Module?
 
 - ✅ You want early access to upcoming functionality  
 - ✅ You're building a PoC or MVP and can tolerate change  

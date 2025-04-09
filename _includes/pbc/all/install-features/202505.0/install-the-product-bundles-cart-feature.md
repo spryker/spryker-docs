@@ -80,7 +80,7 @@ Make sure bundle items are removed from the quote when all items are removed fro
 
 ## Alternative setup for handling large quantities of bundled products in the cart
 
-When a bundle product is added to the cart with a large quantity–for example, 100-200 items–users may experience a slowdown in cart operations or even get an internal server error because of insufficient memory.
+When a bundle product is added to cart with a big number of items–for example, 100-200 items–users may experience a slowdown in cart operations or even get an internal server error because of insufficient memory.
 
 To avoid this, you can use the following alternative plugins:
 

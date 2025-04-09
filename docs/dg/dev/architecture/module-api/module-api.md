@@ -12,5 +12,5 @@ This section is about module APIs, performance and scalability, semantic version
 * [Declaration of module APIs: Public and private](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html)
 * [Performance and scalability](/docs/dg/dev/architecture/module-api/performance-and-scalability.html)
 * [Semantic versioning - major vs. minor vs. patch release](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html)
-* [Semantic versioning - unstable version](/docs/dg/dev/architecture/module-api/semantic-versioning-unstable-version.html)
+* [Semantic versioning - zero-major version](/docs/dg/dev/architecture/module-api/semantic-versioning-zero-major-version.html)
 * [Using ~ Composer constraint for customized modules](/docs/dg/dev/architecture/module-api/use-composer-constraint-for-customized-modules.html)

@@ -7,16 +7,16 @@ This document describes how to install the *SSP Inquiry Management* feature in y
 
 ## Prerequisites
 
-Before installing this feature, make sure the following are already set up in your project:
+
 
 | NAME         | VERSION | INSTALLATION GUIDE  |
 |--------------| ------- | ------------------ |
 | Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
 | SSP features | {{site.version}}  | [Install the SSP feature](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
 
-## Install the required modules using Composer
+## Install the required modules
 
-Install the necessary packages via Composer:
+Install the necessary modules using Composer:
 
 ```bash
 composer require spryker-feature/ssp-inquiry-management:"^0.1.1" --update-with-dependencies
@@ -24,7 +24,7 @@ composer require spryker-feature/ssp-inquiry-management:"^0.1.1" --update-with-d
 
 {% info_block warningBox "Verification" %}
 
-Check that the following packages are now listed in `composer.lock`:
+Make sure the following packages are now listed in `composer.lock`:
 
 | MODULE                 | EXPECTED DIRECTORY                               |
 |------------------------|--------------------------------------------------|
@@ -34,20 +34,20 @@ Check that the following packages are now listed in `composer.lock`:
 
 ## Set up configuration
 
-Update your `config/Shared/config_default.php` (or CI/Docker equivalents):
+Update your `config/Shared/config_default.php` or CI, Docker equivalents:
 
 | CONFIGURATION                                                                   | SPECIFICATION                                                                           | NAMESPACE                                  |
 |---------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------|
 | FileSystemConstants::FILESYSTEM_SERVICE                                         | Flysystem configuration for file management.                                            | Spryker\Shared\FileSystem                  |
 | SspInquiryManagementConstants::BASE_URL_YVES                                    | Yves URL used in mailing templates.                                                     | SprykerFeature\Shared\SspInquiryManagement |
-| SspInquiryManagementConstants::DEFAULT_TOTAL_FILE_MAX_SIZE                      | Configurable total file upload limits.                                                  | SprykerFeature\Shared\SspInquiryManagement |
+| SspInquiryManagementConstants::DEFAULT_TOTAL_FILE_MAX_SIZE                      | Configurable total file upload limit.                                                  | SprykerFeature\Shared\SspInquiryManagement |
 | SspInquiryManagementConstants::DEFAULT_FILE_MAX_SIZE                            | Configurable single file upload size.                                                   | SprykerFeature\Shared\SspInquiryManagement |
-| SspInquiryManagementConfig::getSspInquiryInitialStateMap()                      | Returns the inquiry state machine process to initial state mapping.                     | SprykerFeature\Shared\SspInquiryManagement |
+| SspInquiryManagementConfig::getSspInquiryInitialStateMap()                      | Returns the inquiry state machine process to the initial state mapping.                     | SprykerFeature\Shared\SspInquiryManagement |
 | SspInquiryManagementConfig::getSspInquiryStateMachineProcessSspInquiryTypeMap() | Returns the inquiry type to state machine process mapping.                              | SprykerFeature\Shared\SspInquiryManagement |
-| SspInquiryManagementConfig::getSspInquiryCancelStateMachineEventName()          | Returns inquiry event name of the inquiry cancellation.                                 | SprykerFeature\Shared\SspInquiryManagement |
+| SspInquiryManagementConfig::getSspInquiryCancelStateMachineEventName()          | Returns the inquiry event name of the inquiry cancellation.                                 | SprykerFeature\Shared\SspInquiryManagement |
 | SspInquiryManagementConfig::getAvailableStatuses()                              | Returns the list of inquiry statuses.                                                   | SprykerFeature\Shared\SspInquiryManagement |
 | SspInquiryManagementConfig::getStorageName()                                    | Defines the Storage name for inquiry Flysystem files.                                   | SprykerFeature\Shared\SspInquiryManagement |
-| SalesConfig::getSalesDetailExternalBlocksUrls()                                 | Defines the list of URLs to render blocks inside order detail page.                     | Spryker\Zed\Sales                          |
+| SalesConfig::getSalesDetailExternalBlocksUrls()                                 | Defines the list of URLs for rendering blocks in the order details page.                     | Spryker\Zed\Sales                          |
 | SspInquiryManagementConfig::getSspInquiryStatusClassMap()                       | Returns the inquiry status to СSS class name mapping used for status indicator styling. | SprykerFeature\Zed\SspInquiryManagement    |
 | SspInquiryManagementConfig::getPendingStatus()                                  | Identifies the status that will be considered `Pending`.                                | SprykerFeature\Zed\SspInquiryManagement    |
 | SspInquiryManagementConfig::getPendingStatus()                                  | Identifies the status that will be considered `Pending`.                                | SprykerFeature\Zed\SspInquiryManagement    |
@@ -157,18 +157,16 @@ class SalesConfig extends SprykerSalesConfig
 }
 ```
 
-## Set up database schema and transfer objects
+## Set up database schema
 
-### Set up database schema
-
-Run Propel commands to apply schema updates:
+Apply schema updates:
 
 ```bash
 console propel:install
 ```
 
 {% info_block warningBox "Verification" %}
-Verify the following tables are created in your database:
+Make sure the following tables have been created in the database:
 
 - `spy_ssp_inquiry`
 - `spy_ssp_inquiry_file`
@@ -177,7 +175,7 @@ Verify the following tables are created in your database:
 - `spy_ssp_inquiry_ssp_asset`
 {% endinfo_block %}
 
-### Set up transfer objects
+## Set up transfer objects
 
 Generate transfer classes:
 
@@ -186,7 +184,7 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Ensure the following transfer objects were generated:
+Make sure the following transfer objects have been generated:
 
 | TRANSFER                            | TYPE | EVENT | PATH                                                                      |
 |-------------------------------------|------|--------|---------------------------------------------------------------------------|
@@ -328,7 +326,7 @@ Add the `Inquiries` section to `navigation.xml`:
 ```
 
 {% info_block warningBox "Verification" %}
-Login to the backoffice. Make sure the `Inquiries` section is visible in the navigation menu under `Sales` section.
+Make sure that, in the Back Office, the **Sales** > **Inquiries** menu item is available.
 {% endinfo_block %}
 
 ## Add translations
@@ -521,12 +519,14 @@ customer.ssp_inquiry.details.ssp_asset_name,Asset-Name,de_DE
 ssp_dashboard.general.inquiries,Pending Inquiries,en_US
 ssp_dashboard.general.inquiries,Ausstehende Ansprüche,de_DE
 ```
-2. Append the ssp_inquiry.csv:
+
+
+2. Append `ssp_inquiry.csv`:
 ```csv
 DE-INQR--1,DE,general,Spryker--8,Request for documentation,Please provide detailed documentation on the warranty and return policies for the products purchased under my account.
 DE-INQR--2,DE,general,Spryker--8,Product catalog issue,I noticed that several products in the catalog are missing specifications and images. This makes it difficult to make informed purchasing decisions. Please update the product details.
 ```
-3. Append the cms_block.csv:
+3. Append `cms_block.csv`:
 ```csv
 cms-block-email--customer_email_change_notification--html,customer_email_change_notification--html,HTML Email Template With Header And Footer,@CmsBlock/template/email-template-with-header-and-footer.html.twig,1,,,,,,,"<table class=""sprykerBoxedTextBlock"" style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""> <!--[if gte mso 9]> <table align=""center"" border=""0"" cellspacing=""0"" cellpadding=""0"" width=""100%""> <![endif]--> <tbody class=""sprykerBoxedTextBlockOuter""> <tr> <td class=""sprykerBoxedTextBlockInner"" valign=""top"" style=""mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;""> <!--[if gte mso 9]> <td align=""center"" valign=""top"" ""> <![endif]--> <table style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" class=""sprykerBoxedTextContentContainer"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" align=""left""> <tbody> <tr> <td style=""padding-top: 18px;padding-left: 18px;padding-bottom: 18px;padding-right: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;""> <table class=""sprykerTextContentContainer"" style=""min-width: 100% !important;background-color: #F9F9F9;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" border=""0""> <tbody> <tr> <td class=""sprykerTextContent"" style=""padding-top: 18px;padding-right: 18px;padding-bottom: 18px;padding-left: 18px;color: #F2F2F2;font-family:Helvetica, Arial, Verdana, sans-serif;font-size: 22px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;"" valign=""top""> <p style=""text-align: center;display: block;margin: 0;padding: 0px 0px 18px 0px;color: #202020;font-family: Helvetica;font-size: 16px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: normal;"">{{ 'mail.customer.customer_email_change_notification.text' | trans }}</p> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <!--[if gte mso 9]> </td> <![endif]--> <!--[if gte mso 9]> </tr> </table> <![endif]--> </td> </tr> </tbody> </table> <table class=""sprykerTextBlock"" style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""> <tbody class=""sprykerTextBlockOuter""> <tr> <td class=""sprykerTextBlockInner"" style=""padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" valign=""top""><br> <!--[if mso]> </td> <![endif]--> <!--[if mso]> </tr> </table> <![endif]--> </td> </tr> </tbody> </table> <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]--> <!-- // END TEMPLATE -->","<table class=""sprykerBoxedTextBlock"" style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""> <!--[if gte mso 9]> <table align=""center"" border=""0"" cellspacing=""0"" cellpadding=""0"" width=""100%""> <![endif]--> <tbody class=""sprykerBoxedTextBlockOuter""> <tr> <td class=""sprykerBoxedTextBlockInner"" valign=""top"" style=""mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;""> <!--[if gte mso 9]> <td align=""center"" valign=""top"" ""> <![endif]--> <table style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" class=""sprykerBoxedTextContentContainer"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" align=""left""> <tbody> <tr> <td style=""padding-top: 18px;padding-left: 18px;padding-bottom: 18px;padding-right: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;""> <table class=""sprykerTextContentContainer"" style=""min-width: 100% !important;background-color: #F9F9F9;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" border=""0""> <tbody> <tr> <td class=""sprykerTextContent"" style=""padding-top: 18px;padding-right: 18px;padding-bottom: 18px;padding-left: 18px;color: #F2F2F2;font-family:Helvetica, Arial, Verdana, sans-serif;font-size: 22px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;"" valign=""top""> <p style=""text-align: center;display: block;margin: 0;padding: 0px 0px 18px 0px;color: #202020;font-family: Helvetica;font-size: 16px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: normal;"">{{ 'mail.customer.customer_email_change_notification.text' | trans }}</p> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <!--[if gte mso 9]> </td> <![endif]--> <!--[if gte mso 9]> </tr> </table> <![endif]--> </td> </tr> </tbody> </table> <table class=""sprykerTextBlock"" style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""> <tbody class=""sprykerTextBlockOuter""> <tr> <td class=""sprykerTextBlockInner"" style=""padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" valign=""top""><br> <!--[if mso]> </td> <![endif]--> <!--[if mso]> </tr> </table> <![endif]--> </td> </tr> </tbody> </table> <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]--> <!-- // END TEMPLATE -->"
 cms-block-email--company-status--text,company-status--text,TEXT Email Template With Header And Footer,@CmsBlock/template/email-template-with-header-and-footer.text.twig,1,,,,,,,"{{ 'mail.trans.common.hello_for_first_name' | trans }} {{ mail.customer.firstName }} {{ mail.customer.lastName }},  {{ 'mail.trans.company_status.title' | trans }} {{ ('mail.company.status.' ~ mail.company.status) | trans }}","{{ 'mail.trans.common.hello_for_first_name' | trans }} {{ mail.customer.firstName }} {{ mail.customer.lastName }},  {{ 'mail.trans.company_status.title' | trans }} {{ ('mail.company.status.' ~ mail.company.status) | trans }}"
@@ -535,7 +535,7 @@ cms-block-email--ssp-inquiry-approved--text,ssp-inquiry-approved--text,TEXT Emai
 cms-block-email--ssp-inquiry-rejected--html,ssp-inquiry-rejected--html,HTML Email Template With Header And Footer,@CmsBlock/template/email-template-with-header-and-footer.html.twig,1,,,,,,,"<table class=""sprykerTextBlock"" style=""min-width:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""><tbody class=""sprykerTextBlockOuter""><tr><td class=""sprykerTextBlockInner"" style=""mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" valign=""top""><table style=""min-width:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" class=""sprykerTextContentContainer"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" align=""left""><tbody><tr><td class=""sprykerTextContent"" style=""mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;word-break:break-word;color:#202020;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center"" valign=""top""><h1 style=""text-align:center;margin:0;color:#202020;font-family:Helvetica;font-size:20px;font-weight:normal;line-height:125%;padding:15px"">{{ 'ssp_inquiry.mail.trans.ssp_inquiry_rejected.salutation' | trans({'%name%':mail.customer.firstName~' '~mail.customer.lastName})}}</h1></td></tr></tbody></table></td></tr></tbody></table><table class=""sprykerTextBlock"" style=""min-width:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""><tbody class=""sprykerTextBlockOuter""><tr><td class=""sprykerTextBlockInner"" style=""mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" valign=""top""><table style=""min-width:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" class=""sprykerTextContentContainer"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" align=""left""><tbody><tr><td class=""sprykerTextContent"" style=""mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;word-break:break-word;color:#202020;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center"" valign=""top""><p style=""text-align:center;margin:0;font-weight:bold"">{{ 'ssp_inquiry.mail.trans.sspInquiry_rejected.main_text' | trans({'%reference%':mail.sspInquiry.reference})}}</p></td></tr><tr><td style=""padding-top:18px;padding-bottom:18px;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" class=""sprykerButtonBlockInner"" valign=""top"" align=""center""><table class=""sprykerButtonContentContainer"" style=""min-width:30%;border-collapse:separate!important;border-radius:2px;background-color:#1EBEA0;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" cellspacing=""0"" cellpadding=""0"" border=""0""><tbody><tr><td class=""sprykerButtonContent"" style=""font-family:Helvetica,Helvetica,Arial,Verdana,sans-serif;font-size:14px;padding:13px 18px;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" valign=""middle"" align=""center""><a class=""sprykerButton"" href=""{{ mail.sspInquiryUrl }}"" target=""_blank"" style=""font-weight:bold;letter-spacing:normal;line-height:100%;text-align:center;text-decoration:none;color:#FFFFFF;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:block"">{{ 'ssp_inquiry.mail.trans.ssp_inquiry_list_page' | trans }}</a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>","<table class=""sprykerTextBlock"" style=""min-width:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""><tbody class=""sprykerTextBlockOuter""><tr><td class=""sprykerTextBlockInner"" style=""mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" valign=""top""><table style=""min-width:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" class=""sprykerTextContentContainer"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" align=""left""><tbody><tr><td class=""sprykerTextContent"" style=""mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;word-break:break-word;color:#202020;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center"" valign=""top""><h1 style=""text-align:center;margin:0;color:#202020;font-family:Helvetica;font-size:20px;font-weight:normal;line-height:125%;padding:15px"">{{ 'ssp_inquiry.mail.trans.ssp_inquiry_rejected.salutation' | trans({'%name%':mail.customer.firstName~' '~mail.customer.lastName})}}</h1></td></tr></tbody></table></td></tr></tbody></table><table class=""sprykerTextBlock"" style=""min-width:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""><tbody class=""sprykerTextBlockOuter""><tr><td class=""sprykerTextBlockInner"" style=""mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" valign=""top""><table style=""min-width:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" class=""sprykerTextContentContainer"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" align=""left""><tbody><tr><td class=""sprykerTextContent"" style=""mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;word-break:break-word;color:#202020;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center"" valign=""top""><p style=""text-align:center;margin:0;font-weight:bold"">{{ 'ssp_inquiry.mail.trans.ssp_inquiry_rejected.main_text' | trans({'%reference%':mail.sspInquiry.reference})}}</p></td></tr><tr><td style=""padding-top:18px;padding-bottom:18px;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" class=""sprykerButtonBlockInner"" valign=""top"" align=""center""><table class=""sprykerButtonContentContainer"" style=""min-width:30%;border-collapse:separate!important;border-radius:2px;background-color:#1EBEA0;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" cellspacing=""0"" cellpadding=""0"" border=""0""><tbody><tr><td class=""sprykerButtonContent"" style=""font-family:Helvetica,Helvetica,Arial,Verdana,sans-serif;font-size:14px;padding:13px 18px;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" valign=""middle"" align=""center""><a class=""sprykerButton"" href=""{{ mail.sspInquiryUrl }}"" target=""_blank"" style=""font-weight:bold;letter-spacing:normal;line-height:100%;text-align:center;text-decoration:none;color:#FFFFFF;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:block"">{{ 'ssp_inquiry.mail.trans.ssp_inquiry_list_page' | trans }}</a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>"
 cms-block-email--ssp-inquiry-rejected--text,ssp-inquiry-rejected--text,TEXT Email Template With Header And Footer,@CmsBlock/template/email-template-with-header-and-footer.text.twig,1,,,,,,,"{{ 'ssp_inquiry.mail.trans.ssp_inquiry_rejected.salutation' | trans({'%name%' : mail.customer.firstName ~ ' ' ~ mail.customer.lastName})}}\n{{ 'ssp_inquiry.mail.trans.ssp_inquiry_rejected.main_text' | trans({'%reference%' : mail.sspInquiry.reference})}}\n{{ 'ssp_inquiry.mail.trans.ssp_inquiry_list_page' | trans }}: {{ mail.sspInquiryUrl }}","{{ 'ssp_inquiry.mail.trans.ssp_inquiry_rejected.salutation' | trans({'%name%' : mail.customer.firstName ~ ' ' ~ mail.customer.lastName})}}\n{{ 'ssp_inquiry.mail.trans.ssp_inquiry_rejected.main_text' | trans({'%reference%' : mail.sspInquiry.reference})}}\n{{ 'ssp_inquiry.mail.trans.ssp_inquiry_list_page' | trans }}: {{ mail.sspInquiryUrl }}"
 ```
-4. Append the cms_block_store.csv:
+4. Append `cms_block_store.csv`:
 ```csv
 cms-block-email--ssp-inquiry-approved--html,DE
 cms-block-email--ssp-inquiry-approved--text,DE
@@ -545,7 +545,7 @@ cms-block-email--ssp-inquiry-rejected--text,DE
 
 ## Import data
 
-Import glossary and demo data required for the feature:
+Import glossary and demo data:
 
 ```bash
 console data:import glossary
@@ -555,9 +555,11 @@ console data:import cms-block-store
 ```
 
 {% info_block warningBox "Verification" %}
-Check `spy_glossary_key` and `spy_glossary_translation` tables for the new glossary keys.
-Make sure the `ssp_inquiry` table contains the new inquiries.
-Check CMS blocks and make sure the new blocks are assigned to the correct stores.
+
+* Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
+* Make sure the `ssp_inquiry` table contains the new inquiries.
+* Make sure the new CMS blocks are assigned to correct stores.
+
 {% endinfo_block %}
 
 ---
@@ -569,25 +571,23 @@ Check CMS blocks and make sure the new blocks are assigned to the correct stores
 | CreateSspInquiryPermissionPlugin           | Allows creating inquiries.                                 |               | SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission                        |
 | ViewBusinessUnitSspInquiryPermissionPlugin | Allows access to inquiries in the same business unit.      |               | SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission                        |
 | ViewCompanySspInquiryPermissionPlugin      | Allows access to inquiries in the same company.            |               | SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission                        |
-| SspInquiryRouteProviderPlugin              | Provides Yves routes for SSP files feature.                |               | SprykerFeature\Yves\SspInquiryManagement\Plugin\Router                              |
-| SspInquiryRestrictionHandlerPlugin         | Restricts access to inquiries pages for non-company users. |               | SprykerFeature\Yves\SspInquiryManagement\Plugin\ShopApplication                     |
-| BytesTwigPlugin                            | Adds `format_bytes` twig function.                         |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Twig                                |
-| SspInquiryDataImportPlugin                 | Introduces import type `ssp-inquiry`                       |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\DataImport             |
-| SspInquiryManagementFilePreDeletePlugin    | Ensures the files are deleted when the inquiry is removed. |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\FileManager            |
-| SspInquiryApprovedMailTypeBuilderPlugin    | Sends email on inquiry approval.                           |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\Mail                   |
-| SspInquiryRejectedMailTypeBuilderPlugin    | Sends email on inquiry rejection.                          |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\Mail                   |
-| SspInquiryDashboardDataProviderPlugin      | Adds inquiries table to the SSP Dashboard.                 |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspDashboardManagement |
-| SspInquirySspAssetManagementExpanderPlugin | Adds inquiries table to Assets.                            |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspAssetManagement     |
-| SspInquiryStateMachineHandlerPlugin        | StateMachine handler for inquiry processing.               |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\StateMachine           |
-| ApproveSspInquiryCommandPlugin             | StateMachine command that handles the inquiry approval.    |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspInquiryManagement   |
-| RejectSspInquiryCommandPlugin              | StateMachine command that handles the inquiry rejection.   |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspInquiryManagement   |
-| CreateOrderSspInquiryLinkWidget            | Provides button to create an inquiry for an order.         |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
+| SspInquiryRouteProviderPlugin              | Provides Yves routes for the SSP files feature.                |               | SprykerFeature\Yves\SspInquiryManagement\Plugin\Router                              |
+| SspInquiryRestrictionHandlerPlugin         | Restricts access to inquiries and inquire details pages for non-company users. |               | SprykerFeature\Yves\SspInquiryManagement\Plugin\ShopApplication                     |
+| BytesTwigPlugin                            | Adds the `format_bytes` twig function.                         |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Twig                                |
+| SspInquiryDataImportPlugin                 | Introduces the `ssp-inquiry` import type.                       |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\DataImport             |
+| SspInquiryManagementFilePreDeletePlugin    | Ensures files are deleted when an inquiry is removed. |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\FileManager            |
+| SspInquiryApprovedMailTypeBuilderPlugin    | Sends an email on inquiry approval.                           |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\Mail                   |
+| SspInquiryRejectedMailTypeBuilderPlugin    | Sends an email on inquiry rejection.                          |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\Mail                   |
+| SspInquiryDashboardDataProviderPlugin      | Adds the inquiries table to the SSP Dashboard.                 |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspDashboardManagement |
+| SspInquirySspAssetManagementExpanderPlugin | Adds the inquiries table to Assets.                            |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspAssetManagement     |
+| SspInquiryStateMachineHandlerPlugin        | State Machine handler for inquiry processing.               |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\StateMachine           |
+| ApproveSspInquiryCommandPlugin             | State Machine command that handles inquiry approval.    |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspInquiryManagement   |
+| RejectSspInquiryCommandPlugin              | State Machine command that handles inquiry rejection.   |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspInquiryManagement   |
+| CreateOrderSspInquiryLinkWidget            | Provides a button to create an inquiry for an order.         |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
 | DashboardInquiryWidget                     | Provides the inquiries table for the Dashboard.            |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
 | SspInquiryListWidget                       | Provides the inquiries table.                              |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
 | SspInquiryMenuItemWidget                   | Provides a customer menu item for the inquiries.           |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
 
-
-Update your Zed dependency providers.
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 

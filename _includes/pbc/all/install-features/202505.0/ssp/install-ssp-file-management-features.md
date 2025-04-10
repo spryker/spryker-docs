@@ -28,8 +28,6 @@ Ensure the following modules are installed:
 
 ### Set up the configuration
 
-1. Add the following configuration:
-
 | CONFIGURATION                                | SPECIFICATION                                                                                          | NAMESPACE                               |
 |----------------------------------------------|--------------------------------------------------------------------------------------------------------|-----------------------------------------|
 | FileSystemConstants::FILESYSTEM_SERVICE      | Flysystem configuration for file management.                                                           | Spryker\Shared\FileSystem               |
@@ -75,7 +73,7 @@ Add the `Files` section to `navigation.xml`:
 ```
 
 {% info_block warningBox "Verification" %}
-Login to the backoffice. Make sure the `Files` section is visible in the navigation menu under `Content` section.
+Make sure that, in the Back Office, the **Content** > **Files** section is available.
 {% endinfo_block %}
 
 ## Set up database schema and transfer objects
@@ -99,7 +97,7 @@ Verify the following changes in your database:
 | spy_file.file_reference        | column | created |
 | spy_file.uuid                  | column | created |
 
-Ensure the following transfer objects were generated:
+Make sure the following transfer objects have been generated:
 
 | TRANSFER                                             | TYPE     | EVENT   | PATH                                                      |
 | ---------------------------------------------------- | -------- | ------- | --------------------------------------------------------- |
@@ -221,7 +219,7 @@ ssp_file_management.file_management.file_search_filter_form.field.type.company_b
 ssp_file_management.file_management.file_search_filter_form.field.type.company_business_unit,Geschäftseinheitsdateien,de_DE
 ```
 
-2. Import the data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -243,9 +241,9 @@ Ensure the data has been added to the `spy_glossary_key` and `spy_glossary_trans
 | ViewCompanyUserFilesPermissionPlugin         | Allows company users to view files they uploaded.              |               | SprykerFeature\Shared\SspFileManagement\Plugin\Permission             |
 | ViewCompanyBusinessUnitFilesPermissionPlugin | Allows access to files uploaded within the same business unit. |               | SprykerFeature\Shared\SspFileManagement\Plugin\Permission             |
 | ViewCompanyFilesPermissionPlugin             | Allows access to all files within the same company.            |               | SprykerFeature\Shared\SspFileManagement\Plugin\Permission             |
-| SspFileManagementPageRouteProviderPlugin     | Provides Yves routes for SSP files feature.                    |               | SprykerFeature\Yves\SspFileManagement\Plugin\Router                   |
-| SspFileManagerMenuItemWidget                 | Provides Menu item widget for the customer account side menu.  |               | SprykerFeature\Yves\SspFileManagement\Widget                          |
-| FileAttachmentFilePreDeletePlugin            | Ensures the files are deleted when the file is removed.        |               | SprykerFeature\Zed\SspFileManagement\Communication\Plugin\FileManager |
+| SspFileManagementPageRouteProviderPlugin     | Provides Yves routes for the SSP files feature.                    |               | SprykerFeature\Yves\SspFileManagement\Plugin\Router                   |
+| SspFileManagerMenuItemWidget                 | Provides a Menu item widget for the customer account side menu.  |               | SprykerFeature\Yves\SspFileManagement\Widget                          |
+| FileAttachmentFilePreDeletePlugin            | Ensures files are deleted when a file is removed.        |               | SprykerFeature\Zed\SspFileManagement\Communication\Plugin\FileManager |
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 
@@ -381,38 +379,47 @@ class FileManagerDependencyProvider extends SprykerFileManagerDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-### Check file upload and attachment
-1. Log into the Back Office.
-2. Go to **Content** > **File Attachments**.
-3. Click Upload button.
-4. Drag and drop three files into the upload area.
-5. Click **Upload**.
-6. Make sure the File Attachments list page shows the files you just uploaded. 
-7. Click **Attach** next to the first file you just uploaded.
-8. In the **Company** field, start typing a company name, select the company you want to attach the file to.
-9. Click **Save**. 
-10. Click **Attach** next to the second file you just uploaded.
-11. In the **Company User** field, start typing a business unit name, select the business unit you want to attach the file to. 
-12. Click **Save**.
-13. Attach the third file to a company user.
+Verify file upload and attachment:
 
-### Check permissions
-1. Log into the Back Office.
-2. Go to **Customers** > **Company Roles**.
-3. Click **Add Company User Role** button.
-4. Select a Company.
-5. Give the role a name.
-6. In the **Unassigned Permissions** list select:
-   - Open My Files page
-   - Download file(s)
-   - View My Files
-   - View Business unit files
-   - View Company Files
-7. Click **Submit**.
-8. Go to **Customers** > **Company Users**.
-9. Edit a company user and assign the role you just created.
+1. In the Back Office, go to **Content** > **File Attachments**.
+2. Click **Upload**.
+3. Drag and drop three files into the upload area.
+4. Click **Upload**.
+  Make sure the File Attachments list page shows the files you've uploaded. 
+5. Next to the first file you've uploaded, click **Attach**.
+6. For **Company**, enter and select the company you want to attach the file to.
+7. Click **Save**. 
+8. Click **Attach** next to the second file you've uploaded.
+9. For **Company User**, enter and select the business unit you want to attach the file to. 
+10. Click **Save**.
+11. Attach the third file to a company user.
 
-### Check the storefront pages
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Verify permissions:
+
+1. In the Back Office, go to **Customers** > **Company Roles**.
+2. Click **Add Company User Role**.
+3. Select a company.
+4. Enter a name for the role.
+5. In **Unassigned Permissions**, enable the following permissions:
+   - **Open My Files page**
+   - **Download file(s)**
+   - **View My Files**
+   - **View Business unit files**
+   - **View Company Files**
+6. Click **Submit**.
+7. Go to **Customers** > **Company Users**.
+8. Click **Edit** next to a user.
+9. Assign the role you've just created to the user.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Verify Storefront pages
 
 1. Login to Yves as the company user you just created.
 2. Make sure you can see the **My Files** menu item.
@@ -423,3 +430,34 @@ class FileManagerDependencyProvider extends SprykerFileManagerDependencyProvider
 7. Check that you cannot see the **My Files** page.
 
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

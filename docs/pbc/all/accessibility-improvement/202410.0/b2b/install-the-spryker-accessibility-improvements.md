@@ -23,7 +23,7 @@ To install Yves keyboard accessibility improvements, take the following steps:
 
 * To update necessary modules run the following command:
 ```bash
-    composer update spryker-shop/catalog-page:^1.29.0 spryker-shop/company-page:^1.32.0 spryker-shop/customer-page:^1.58.0 spryker-shop/product-group-widget:^1.11.1 spryker-shop/product-review-widget:^1.16.2 spryker-shop/shop-ui:^1.84.0
+    composer require spryker-shop/catalog-page:^1.29.0 spryker-shop/company-page:^1.32.0 spryker-shop/customer-page:^1.58.0 spryker-shop/product-group-widget:^1.11.1 spryker-shop/product-review-widget:^1.16.2 spryker-shop/shop-ui:^1.84.0
 ```
 <!-- {% raw %} -->
 2. Adjust templates and files on the project level.

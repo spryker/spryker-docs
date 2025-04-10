@@ -14,9 +14,9 @@ This document describes how to install the *SSP Inquiry Management* feature in y
 | Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
 | SSP features | {{site.version}}  | [Install the SSP feature](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
 
-## Install the required modules using Composer
+## Install the required modules
 
-Install the necessary packages via Composer:
+Install the necessary modules using Composer:
 
 ```bash
 composer require spryker-feature/ssp-inquiry-management:"^0.1.1" --update-with-dependencies
@@ -34,20 +34,20 @@ Make sure the following packages are now listed in `composer.lock`:
 
 ## Set up configuration
 
-Update your `config/Shared/config_default.php` (or CI/Docker equivalents):
+Update your `config/Shared/config_default.php` or CI, Docker equivalents:
 
 | CONFIGURATION                                                                   | SPECIFICATION                                                                           | NAMESPACE                                  |
 |---------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------|
 | FileSystemConstants::FILESYSTEM_SERVICE                                         | Flysystem configuration for file management.                                            | Spryker\Shared\FileSystem                  |
 | SspInquiryManagementConstants::BASE_URL_YVES                                    | Yves URL used in mailing templates.                                                     | SprykerFeature\Shared\SspInquiryManagement |
-| SspInquiryManagementConstants::DEFAULT_TOTAL_FILE_MAX_SIZE                      | Configurable total file upload limits.                                                  | SprykerFeature\Shared\SspInquiryManagement |
+| SspInquiryManagementConstants::DEFAULT_TOTAL_FILE_MAX_SIZE                      | Configurable total file upload limit.                                                  | SprykerFeature\Shared\SspInquiryManagement |
 | SspInquiryManagementConstants::DEFAULT_FILE_MAX_SIZE                            | Configurable single file upload size.                                                   | SprykerFeature\Shared\SspInquiryManagement |
-| SspInquiryManagementConfig::getSspInquiryInitialStateMap()                      | Returns the inquiry state machine process to initial state mapping.                     | SprykerFeature\Shared\SspInquiryManagement |
+| SspInquiryManagementConfig::getSspInquiryInitialStateMap()                      | Returns the inquiry state machine process to the initial state mapping.                     | SprykerFeature\Shared\SspInquiryManagement |
 | SspInquiryManagementConfig::getSspInquiryStateMachineProcessSspInquiryTypeMap() | Returns the inquiry type to state machine process mapping.                              | SprykerFeature\Shared\SspInquiryManagement |
-| SspInquiryManagementConfig::getSspInquiryCancelStateMachineEventName()          | Returns inquiry event name of the inquiry cancellation.                                 | SprykerFeature\Shared\SspInquiryManagement |
+| SspInquiryManagementConfig::getSspInquiryCancelStateMachineEventName()          | Returns the inquiry event name of the inquiry cancellation.                                 | SprykerFeature\Shared\SspInquiryManagement |
 | SspInquiryManagementConfig::getAvailableStatuses()                              | Returns the list of inquiry statuses.                                                   | SprykerFeature\Shared\SspInquiryManagement |
 | SspInquiryManagementConfig::getStorageName()                                    | Defines the Storage name for inquiry Flysystem files.                                   | SprykerFeature\Shared\SspInquiryManagement |
-| SalesConfig::getSalesDetailExternalBlocksUrls()                                 | Defines the list of URLs to render blocks inside order detail page.                     | Spryker\Zed\Sales                          |
+| SalesConfig::getSalesDetailExternalBlocksUrls()                                 | Defines the list of URLs for rendering blocks in the order details page.                     | Spryker\Zed\Sales                          |
 | SspInquiryManagementConfig::getSspInquiryStatusClassMap()                       | Returns the inquiry status to СSS class name mapping used for status indicator styling. | SprykerFeature\Zed\SspInquiryManagement    |
 | SspInquiryManagementConfig::getPendingStatus()                                  | Identifies the status that will be considered `Pending`.                                | SprykerFeature\Zed\SspInquiryManagement    |
 | SspInquiryManagementConfig::getPendingStatus()                                  | Identifies the status that will be considered `Pending`.                                | SprykerFeature\Zed\SspInquiryManagement    |
@@ -186,7 +186,7 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Ensure the following transfer objects were generated:
+Make sure the following transfer objects have been generated:
 
 | TRANSFER                            | TYPE | EVENT | PATH                                                                      |
 |-------------------------------------|------|--------|---------------------------------------------------------------------------|
@@ -555,7 +555,7 @@ console data:import cms-block-store
 ```
 
 {% info_block warningBox "Verification" %}
-Check `spy_glossary_key` and `spy_glossary_translation` tables for the new glossary keys.
+Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
 Make sure the `ssp_inquiry` table contains the new inquiries.
 Check CMS blocks and make sure the new blocks are assigned to the correct stores.
 {% endinfo_block %}

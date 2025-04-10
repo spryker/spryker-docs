@@ -99,7 +99,7 @@ Verify the following changes in your database:
 | spy_file.file_reference        | column | created |
 | spy_file.uuid                  | column | created |
 
-Ensure the following transfer objects were generated:
+Make sure the following transfer objects have been generated:
 
 | TRANSFER                                             | TYPE     | EVENT   | PATH                                                      |
 | ---------------------------------------------------- | -------- | ------- | --------------------------------------------------------- |

@@ -1,18 +1,14 @@
 
-This document describes how to install SSP feature.
+This document describes how to install the SSP feature.
 
 ## Prerequisites
 
-Install the required features:
-
-| NAME                             | VERSION | INSTALLATION GUIDE  |
+| FEATURE                             | VERSION | INSTALLATION GUIDE  |
 |----------------------------------| ------- | ------------------ |
 | Spryker Core  | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
 
 
-### Set up the configuration
-
-1. Add the following configuration:
+## Set up the configuration
 
 | CONFIGURATION                                                  | SPECIFICATION                                                                                          | NAMESPACE                |
 |----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|--------------------------|

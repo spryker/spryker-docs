@@ -14,9 +14,9 @@ This document describes how to install the *SSP Dashboard Management* feature in
 | Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
 | SSP features | {{site.version}}  | [Install the SSP feature](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
 
-## Install the required modules using Composer
+## Install the required modules
 
-Install the necessary packages via Composer:
+Install the necessary modules using Composer:
 
 ```bash
 composer require spryker-feature/ssp-dashboard-management:"^0.1.1" --update-with-dependencies
@@ -41,7 +41,7 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Ensure the following transfer objects were generated:
+Make sure the following transfer objects have been generated:
 
 | TRANSFER                          | TYPE | EVENT | PATH                                                             |
 |-----------------------------------|------|--------|------------------------------------------------------------------|
@@ -58,7 +58,7 @@ Ensure the following transfer objects were generated:
 
 {% endinfo_block %}
 
----
+
 
 ## Add translations
 
@@ -101,30 +101,30 @@ ssp_dashboard.overview.not_applicable,n/a,en_US
 ssp_dashboard.overview.not_applicable,n/a,de_DE
 ```
 
-3. Append the cms_block.csv:
+3. Append `cms_block.csv`:
 ```csv
 cms-sales_rep:default,sales_rep:default,Title and Content,@CmsBlock/template/title_and_content_block.twig,1,,,<div class='contact-list box box--dark' data-qa='component contact-list'><div class='block-title spacing-bottom' data-qa='component block-title'><div class='grid grid--middle'><h5 class='block-title__title spacing-right col'>Mitarbeiter des Kundendienstes</h5></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Alice Johnson</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:alice.johnson@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> alice.johnson@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-123-4567' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-123-4567</a></span></span></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Michael Smith</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:michael.smith@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> michael.smith@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-987-6543' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-987-6543</a></span></span></div></div></div>,<div class='contact-list box box--dark' data-qa='component contact-list'><div class='block-title spacing-bottom' data-qa='component block-title'><div class='grid grid--middle'><h5 class='block-title__title spacing-right col'>Service Representatives</h5></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Alice Johnson</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:alice.johnson@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> alice.johnson@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-123-4567' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-123-4567</a></span></span></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Michael Smith</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:michael.smith@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> michael.smith@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-987-6543' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-987-6543</a></span></span></div></div></div>,,,,
 ssp-news-block-1,News Banner-1,Title and Content,@CmsBlock/template/title_and_content_block.twig,1,"<h5 class='spacing-x'>{{ 'ssp_dashboard.general.news' | trans }}</h5>","<h5 class='spacing-x'>{{ 'ssp_dashboard.general.news' | trans }}</h5>","<div class='grid grid--with-gutter'><div class='col col--with-gutter col--md-6 col--sm-12'>{{ content_banner('ssp-br-1', 'bottom-title') }}</div><div class='col col--with-gutter col--md-6 col--sm-12'>{{ content_banner('ssp-br-2', 'bottom-title') }}</div></div>","<div class='grid grid--with-gutter'><div class='col col--with-gutter col--md-6 col--sm-12'>{{ content_banner('ssp-br-1', 'bottom-title') }}</div><div class='col col--with-gutter col--md-6 col--sm-12'>{{ content_banner('ssp-br-2', 'bottom-title') }}</div></div>",,,,
 ```
-4. Append the cms_block_store.csv:
+4. Append `cms_block_store.csv`:
 ```csv
 ssp-news-block-1,DE
 cms-sales_rep:default,DE
 ```
-5. Append the cms_slot.csv:
+5. Append the `cms_slot.csv`:
 ```csv
 ssp-news,ssp-news-block-1,"SSP News.",SprykerCmsSlotBlock,@SspDashboardManagement/views/dashboard/dashboard.twig,1
 ```
-6. Append the cms_slot_block.csv:
+6. Append the `cms_slot_block.csv`:
 ```csv
 slt-mobile-header,blck-9,1,@ShopUi/templates/page-layout-main/page-layout-main.twig,,,,,,,
 ssp-news,ssp-news-block-1,1,@SspDashboardManagement/views/dashboard/dashboard.twig,,,,,,,
 ```
-7. Append the cms_slot_template.csv:
+7. Append the `cms_slot_template.csv`:
 ```csv
 SSP Dashboard,Dashboard Page.,@SspDashboardManagement/views/dashboard/dashboard.twig
 ```
-8. Append the content_banner.csv:
+8. Append the `content_banner.csv`:
 ```csv
 ssp-br-1,SSP Banner Name 1,SSP Banner Description 1, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
 ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
@@ -132,7 +132,7 @@ ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/defa
 
 ## Import data
 
-Import glossary and demo data required for the feature:
+Import glossary and demo data:
 
 ```bash
 console data:import glossary
@@ -145,23 +145,21 @@ console data:import cms-slot-block
 ```
 
 {% info_block warningBox "Verification" %}
-Check `spy_glossary_key` and `spy_glossary_translation` tables for the new glossary keys.
-Check CMS blocks, CMS slots, content banners and make sure the data is present in the backoffice.
+* Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
+* Make sure that the imported data on CMS blocks, CMS slots, and content banners is present in the Back Office.
 {% endinfo_block %}
 
----
 
-### Set up behavior
+## Set up behavior
 
 | PLUGIN                                                 | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                                           |
 |--------------------------------------------------------|---------------------------------------------------------------|---------------|---------------------------------------------------------------------|
-| ViewDashboardPermissionPlugin                          | Allows accessing dashboard page.                              |               | SprykerFeature\Shared\SspDashboardManagement\Plugin\Permission      |
-| CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin | Allows using business unit-specific cms blocks.               |               | SprykerFeature\Client\SspDashboardManagement\Plugin\CmsBlockStorage |
-| DashboardRouteProviderPlugin                           | Provides Yves routes for SSP dashboard page.                  |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\Router            |
+| ViewDashboardPermissionPlugin                          | Allows accessing the dashboard page.                              |               | SprykerFeature\Shared\SspDashboardManagement\Plugin\Permission      |
+| CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin | Allows using business unit-specific CMS blocks.               |               | SprykerFeature\Client\SspDashboardManagement\Plugin\CmsBlockStorage |
+| DashboardRouteProviderPlugin                           | Provides Yves routes for the SSP dashboard page.                  |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\Router            |
 | SspDashboardFilterControllerEventHandlerPlugin         | Restricts access to dashboard pages for non-company users.    |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\ShopApplication   |
-| DashboardMenuItemWidget                                | Provides Menu item widget for the customer account side menu. |               | SprykerFeature\Yves\SspDashboardManagement\Widget                   |
+| DashboardMenuItemWidget                                | Provides a Menu item widget for the customer account side menu. |               | SprykerFeature\Yves\SspDashboardManagement\Widget                   |
 
-Update your Zed dependency providers.
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 
@@ -273,7 +271,7 @@ class CmsBlockStorageDependencyProvider extends SprykerCmsBlockStorageDependency
 
 {% endinfo_block %}
 
-### Set up widgets
+## Set up widgets
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 

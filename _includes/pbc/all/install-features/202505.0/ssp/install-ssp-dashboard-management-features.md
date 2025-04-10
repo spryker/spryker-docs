@@ -130,6 +130,21 @@ ssp-br-1,SSP Banner Name 1,SSP Banner Description 1, ,,, ,,,/assets/current/defa
 ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
 ```
 
+## Add twig template
+
+1. Create twig file with `title_and_content_block.twig` name by `src/Pyz/Shared/CmsBlock/Theme/default/template` path.
+2. Add following content
+
+```twig
+{% block content %}
+    <!-- CMS_BLOCK_PLACEHOLDER : "title" -->
+    <!-- CMS_BLOCK_PLACEHOLDER : "content" -->
+
+    {{ spyCmsBlockPlaceholder('title') | raw }}
+    {{ spyCmsBlockPlaceholder('content') | raw }}
+{% endblock %}
+```
+
 ## Import data
 
 Import glossary and demo data:

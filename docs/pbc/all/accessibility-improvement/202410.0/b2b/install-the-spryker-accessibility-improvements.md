@@ -200,4 +200,4 @@ To install Yves keyboard accessibility improvements, take the following steps:
 <hr />
 
 #### Integration PR with an example:
-https://github.com/spryker-shop/b2b-demo-marketplace/tree/8ce31915e05e5c6f0e6f8058d2a387156608deb6
+https://github.com/spryker-shop/b2b-demo-marketplace/pull/532

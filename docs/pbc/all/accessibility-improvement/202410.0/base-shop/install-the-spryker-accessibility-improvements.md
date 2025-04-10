@@ -15,11 +15,10 @@ To install Yves keyboard accessibility improvements, take the following steps:
 
 1. Update necessary modules with the following command:
 ```bash
-  composer update spryker-shop/shop-ui
+  composer update spryker-shop/shop-ui:^1.84.0
 ```
 
-2. Generate translation cache for Yves:
-- Add glossary keys for the new accessibility improvements.
+2. Add glossary keys for the new accessibility improvements.
 
 | Key                                         | Translation (de_DE)                                | Translation (en_US)                                |
 |---------------------------------------------|---------------------------------------------------|---------------------------------------------------|
@@ -38,13 +37,14 @@ To install Yves keyboard accessibility improvements, take the following steps:
 | product_review_widget.aria_label.current.rating | Aktuelle Bewertung ist %s%                    | Current rating is %s%                             |
 | product_bundle_widget.aria_label.view.details | Details für %productName% anzeigen             | View details for %productName%                    |
 | customer_reorder_widget.aria_label.check.product.to.reorder | Überprüfen Sie das Produkt %productName%, um es erneut zu bestellen | Check the product %productName% to reorder |
-   
+
+3. Generate translation cache for Yves:
 - Run the following command to import the glossary:
 ```bash
   console data:import glossary
 ```
 
-3. Enable user scalable option in the project:
+4. Enable user scalable option in the project:
     - Set `viewportUserScaleable` variable at `src/Pyz/Yves/ShopUi/Theme/default/templates/page-blank/page-blank.twig`. Possible values are `yes` or `no`. The default value is `no`.
 
 <!-- {% raw %} -->
@@ -58,7 +58,7 @@ To install Yves keyboard accessibility improvements, take the following steps:
  ```
 <!-- {% endraw %} -->
 
-4. Pass `navigationId` into the `header` organism from `src/Pyz/Yves/ShopUi/Theme/default/templates/page-layout-main/page-layout-main.twig` to enable `skip-link`. 
+5. Pass `navigationId` into the `header` organism from `src/Pyz/Yves/ShopUi/Theme/default/templates/page-layout-main/page-layout-main.twig` to enable `skip-link`. 
 
 <!-- {% raw %} -->
 ```twig
@@ -75,7 +75,7 @@ To install Yves keyboard accessibility improvements, take the following steps:
 ```
 <!-- {% endraw %} -->
 
-5. Build Javascript and CSS changes:
+6. Build Javascript and CSS changes:
 
 ```bash
   console frontend:project:install-dependencies

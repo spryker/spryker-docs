@@ -23,7 +23,7 @@ To install Yves keyboard accessibility improvements, take the following steps:
 
 * To update necessary modules run the following command:
 ```bash
-    composer update spryker-shop/catalog-page spryker-shop/company-page spryker-shop/customer-page spryker-shop/product-group-widget spryker-shop/product-review-widget spryker-shop/shop-ui
+    composer update spryker-shop/catalog-page:^1.29.0 spryker-shop/company-page:^1.32.0 spryker-shop/customer-page:^1.58.0 spryker-shop/product-group-widget:^1.11.1 spryker-shop/product-review-widget:^1.16.2 spryker-shop/shop-ui:^1.84.0
 ```
 <!-- {% raw %} -->
 2. Adjust templates and files on the project level.
@@ -185,19 +185,19 @@ To install Yves keyboard accessibility improvements, take the following steps:
   - src/Pyz/Yves/ShopUi/Theme/default/styles/settings/_z-index.scss
   - src/Pyz/Yves/ShopUi/Theme/default/styles/shared.scss
   
-1. Build Javascript and CSS changes:
+3. Build Javascript and CSS changes:
 
 ```bash
   console frontend:project:install-dependencies
   console frontend:yves:build -e production
 ```
 
-2. Generate translation cache for Yves:
+4. Generate translation cache for Yves:
 
 ```bash
   console data:import glossary
 ```
 <hr />
 
-#### Link to the repository with this changes
+#### Integration PR with an example:
 https://github.com/spryker-shop/b2b-demo-marketplace/tree/8ce31915e05e5c6f0e6f8058d2a387156608deb6

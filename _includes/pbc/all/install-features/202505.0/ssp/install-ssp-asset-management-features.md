@@ -1,22 +1,20 @@
 
 # Install the SSP Asset Management Feature
 
-This document describes how to install the *SSP Asset Management* feature in your Spryker project.
+This document describes how to install the *SSP Asset Management* feature.
 
 ---
 
 ## Prerequisites
 
-Before installing this feature, make sure the following are already set up in your project:
-
-| NAME         | VERSION | INSTALLATION GUIDE  |
+| FEATURE         | VERSION | INSTALLATION GUIDE  |
 |--------------| ------- | ------------------ |
 | Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
 | SSP features | {{site.version}}  | [Install the SSP feature](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
 
-## Install the required modules using Composer
+## Install the required modules
 
-Install the necessary packages via Composer:
+Install the necessary modules using Composer:
 
 ```bash
 composer require spryker-feature/ssp-asset-management:"^0.1.3" --update-with-dependencies
@@ -24,7 +22,7 @@ composer require spryker-feature/ssp-asset-management:"^0.1.3" --update-with-dep
 
 {% info_block warningBox "Verification" %}
 
-Check that the following packages are now listed in `composer.lock`:
+Make sure the following packages are now listed in `composer.lock`:
 
 | MODULE                 | EXPECTED DIRECTORY                               |
 |------------------------|--------------------------------------------------|
@@ -34,13 +32,13 @@ Check that the following packages are now listed in `composer.lock`:
 
 ## Set up configuration
 
-Update your `config/Shared/config_default.php`:
+Add the following configuration to `config/Shared/config_default.php`:
 
 | CONFIGURATION                              | SPECIFICATION                                       | NAMESPACE                                |
 |--------------------------------------------|-----------------------------------------------------|------------------------------------------|
 | FileSystemConstants::FILESYSTEM_SERVICE    | Flysystem configuration for file management.        | Spryker\Shared\FileSystem                |
 | SspAssetManagementConstants::BASE_URL_YVES | Yves URL used in image URLs.                        | SprykerFeature\Shared\SspAssetManagement |
-| SspAssetManagementConfig::getStorageName() | Defines the Storage name for esset Flysystem files. | SprykerFeature\Zed\SspAssetManagement    |
+| SspAssetManagementConfig::getStorageName() | Defines the Storage name for asset Flysystem files. | SprykerFeature\Zed\SspAssetManagement    |
 
 **config/Shared/config_default.php**
 ```php
@@ -79,24 +77,23 @@ class SspAssetManagementConfig extends SprykerFeatureSspAssetManagementConfig
 }
 ```
 
-## Set up database schema and transfer objects
+## Set up database schema
 
-### Set up database schema
-
-Run Propel commands to apply schema updates:
+Apply schema updates:
 
 ```bash
 console propel:install
 ```
 
 {% info_block warningBox "Verification" %}
-Verify the following tables are created in your database:
+Make sure the following tables have been created in the database:
 
 - `spy_ssp_asset`
 - `spy_ssp_asset_to_company_business_unit`
+
 {% endinfo_block %}
 
-### Set up transfer objects
+## Set up transfer objects
 
 Generate transfer classes:
 
@@ -105,7 +102,7 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Ensure the following transfer objects were generated:
+Make sure the following transfer objects have been generated:
 
 | TRANSFER                          | TYPE       | EVENT | PATH                                                                    |
 |-----------------------------------|------------|--------|-------------------------------------------------------------------------|
@@ -318,25 +315,22 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Check `spy_glossary_key` and `spy_glossary_translation` tables for the new glossary keys.
+Make sure glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}
 
----
 
-### Set up behavior
+## Set up behavior
 
 | PLUGIN                                     | SPECIFICATION                                           | PREREQUISITES | NAMESPACE                                                                         |
 |--------------------------------------------|---------------------------------------------------------|---------------|-----------------------------------------------------------------------------------|
 | ViewCompanySspAssetPermissionPlugin        | Allows viewing company assets.                          |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
 | ViewBusinessUnitSspAssetPermissionPlugin   | Allows access to assets in the same business unit.      |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
-| CreateSspAssetPermissionPlugin             | Allows creation assets.                                 |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
-| UpdateSspAssetPermissionPlugin             | Allows update of assets.                                |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
+| CreateSspAssetPermissionPlugin             | Allows creating assets.                                 |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
+| UpdateSspAssetPermissionPlugin             | Allows updating assets.                                |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
 | UnassignSspAssetPermissionPlugin           | Allows unassigning assets.                              |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
-| SspAssetRouteProviderPlugin                | Provides Yves routes for SSP asset feature.             |               | SprykerFeature\Yves\SspAssetManagement\Plugin\Router                              |
-| SspAssetManagementFilePreDeletePlugin      | Ensures the files are deleted when the asset is removed. |               | SprykerFeature\Zed\SspAssetManagement\Communication\Plugin\FileManager            |
-| SspAssetDashboardDataProviderPlugin        | Adds assets table to the SSP Dashboard.                 |               | SprykerFeature\Zed\SspAssetManagement\Communication\Plugin\SspDashboardManagement |
-
-Update your Zed dependency providers.
+| SspAssetRouteProviderPlugin                | Provides Yves routes for the SSP asset feature.             |               | SprykerFeature\Yves\SspAssetManagement\Plugin\Router                              |
+| SspAssetManagementFilePreDeletePlugin      | Ensures files are deleted when an asset is removed. |               | SprykerFeature\Zed\SspAssetManagement\Communication\Plugin\FileManager            |
+| SspAssetDashboardDataProviderPlugin        | Adds the assets table to the SSP Dashboard.                 |               | SprykerFeature\Zed\SspAssetManagement\Communication\Plugin\SspDashboardManagement |
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 

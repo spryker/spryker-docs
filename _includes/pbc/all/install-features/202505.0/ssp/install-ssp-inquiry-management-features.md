@@ -7,7 +7,7 @@ This document describes how to install the *SSP Inquiry Management* feature in y
 
 ## Prerequisites
 
-Before installing this feature, make sure the following are already set up in your project:
+
 
 | NAME         | VERSION | INSTALLATION GUIDE  |
 |--------------| ------- | ------------------ |
@@ -24,7 +24,7 @@ composer require spryker-feature/ssp-inquiry-management:"^0.1.1" --update-with-d
 
 {% info_block warningBox "Verification" %}
 
-Check that the following packages are now listed in `composer.lock`:
+Make sure the following packages are now listed in `composer.lock`:
 
 | MODULE                 | EXPECTED DIRECTORY                               |
 |------------------------|--------------------------------------------------|

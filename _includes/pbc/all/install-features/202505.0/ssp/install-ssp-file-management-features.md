@@ -28,8 +28,6 @@ Ensure the following modules are installed:
 
 ### Set up the configuration
 
-1. Add the following configuration:
-
 | CONFIGURATION                                | SPECIFICATION                                                                                          | NAMESPACE                               |
 |----------------------------------------------|--------------------------------------------------------------------------------------------------------|-----------------------------------------|
 | FileSystemConstants::FILESYSTEM_SERVICE      | Flysystem configuration for file management.                                                           | Spryker\Shared\FileSystem               |

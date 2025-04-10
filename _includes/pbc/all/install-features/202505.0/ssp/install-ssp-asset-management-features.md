@@ -308,7 +308,7 @@ dashboard.general.assets,Assets,de_DE
 
 ## Import data
 
-Import glossary and demo data required for the feature:
+Import glossary and demo data:
 
 ```bash
 console data:import glossary

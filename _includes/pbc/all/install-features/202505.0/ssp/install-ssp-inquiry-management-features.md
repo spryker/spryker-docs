@@ -157,18 +157,16 @@ class SalesConfig extends SprykerSalesConfig
 }
 ```
 
-## Set up database schema and transfer objects
+## Set up database schema
 
-### Set up database schema
-
-Run Propel commands to apply schema updates:
+Apply schema updates:
 
 ```bash
 console propel:install
 ```
 
 {% info_block warningBox "Verification" %}
-Verify the following tables are created in your database:
+Make sure the following tables have been created in the database:
 
 - `spy_ssp_inquiry`
 - `spy_ssp_inquiry_file`
@@ -177,7 +175,7 @@ Verify the following tables are created in your database:
 - `spy_ssp_inquiry_ssp_asset`
 {% endinfo_block %}
 
-### Set up transfer objects
+## Set up transfer objects
 
 Generate transfer classes:
 

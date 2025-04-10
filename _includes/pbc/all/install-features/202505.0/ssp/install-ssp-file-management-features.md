@@ -10,7 +10,7 @@ Install the required features:
 | Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | SSP features | {{site.version}}  | [Install the SSP feature](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
 
-### 1) Install the required modules
+## 1) Install the required modules
 
 ```bash
 composer require spryker-feature/ssp-file-management:"^0.1.6" --update-with-dependencies
@@ -26,7 +26,7 @@ Ensure the following modules are installed:
 
 {% endinfo_block %}
 
-### Set up the configuration
+## Set up the configuration
 
 | CONFIGURATION                                | SPECIFICATION                                                                                          | NAMESPACE                               |
 |----------------------------------------------|--------------------------------------------------------------------------------------------------------|-----------------------------------------|
@@ -152,11 +152,14 @@ Make sure the following transfer objects have been generated:
 
 {% endinfo_block %}
 
-### Add translations
+## Add translations
 
 1. Append the glossary:
 
-```
+<details>
+  <summary>Glossary</summary>
+
+```csv
 customer.account.button.filters,Filters,en_US
 customer.account.button.filters,Filter,de_DE
 permission.name.DownloadFilesPermissionPlugin,Download file(s) ,en_US
@@ -219,6 +222,9 @@ ssp_file_management.file_management.file_search_filter_form.field.type.company_b
 ssp_file_management.file_management.file_search_filter_form.field.type.company_business_unit,Geschäftseinheitsdateien,de_DE
 ```
 
+</details>
+
+
 2. Import data:
 
 ```bash
@@ -232,7 +238,7 @@ Ensure the data has been added to the `spy_glossary_key` and `spy_glossary_trans
 {% endinfo_block %}
 
 
-### Set up behavior
+## Set up behavior
 
 | PLUGIN                                       | SPECIFICATION                                                  | PREREQUISITES | NAMESPACE                                                             |
 |----------------------------------------------|----------------------------------------------------------------|---------------|-----------------------------------------------------------------------|

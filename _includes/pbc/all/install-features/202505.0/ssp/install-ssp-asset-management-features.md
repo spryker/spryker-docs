@@ -421,11 +421,12 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-{% info_block warningBox "Verification" %}
-
-{% endinfo_block %}
-
 ### Set up widgets
+
+| PLUGIN                     | SPECIFICATION                                                   | PREREQUISITES | NAMESPACE                                      |
+|----------------------------|-----------------------------------------------------------------|---------------|------------------------------------------------|
+| SspAssetListWidget         | Provides a table display for Assets.                            |               | SprykerFeature\Yves\SspAssetManagement\Widget  |
+| SspAssetMenuItemWidget     | Provides a Menu item widget for the customer account side menu. |               | SprykerFeature\Yves\SspAssetManagement\Widget  |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -437,6 +438,7 @@ namespace Pyz\Yves\ShopApplication;
 use SprykerFeature\Yves\SspAssetManagement\Widget\SspAssetListWidget;
 use SprykerFeature\Yves\SspAssetManagement\Widget\SspAssetMenuItemWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
@@ -453,5 +455,44 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 {% info_block warningBox "Verification" %}
+
+Verify permissions:
+
+1. In the Back Office, go to **Customers** > **Company Roles**.
+2. Click **Add Company User Role**.
+3. Select a company.
+4. Enter a name for the role.
+5. In **Unassigned Permissions**, enable the following permissions:
+    - **View company ssp assets**
+    - **View business unit ssp assets**
+    - **Update ssp assets**
+    - **Unassign business unit ssp assets**
+    - **Create ssp assets**
+6. Click **Submit**.
+7. Go to **Customers** > **Company Users**.
+8. Click **Edit** next to a user.
+9. Assign the role you've just created to the user.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Verify Storefront pages
+
+1. Login to Yves as the company user you just created.
+2. Make sure you can see the **My Assets** menu item.
+3. Go to **Customer Account** > **My Assets** page.
+4. Make sure you can see the **Create Asset** button.
+5. Click the **Create Asset** button.
+6. Upload an image and fill in the required fields.
+7. Click **Save**.
+8. Make sure you asset is saved and you land on the new asset details page.
+9. Go to **Customer Account** > **My Assets** page.
+10. Make sure the list of assets has your asset listed.
+11. Go to **Customer Account** > **Dashboard** page.
+12. Make sure the **My Assets** widget displays the asset you just created. 
+13. Login to Yves as a company user without the role you created. 
+14. Make sure you cannot see the **My Assets** menu item.
+15. Check that you cannot see the **My Assets** page.
 
 {% endinfo_block %}

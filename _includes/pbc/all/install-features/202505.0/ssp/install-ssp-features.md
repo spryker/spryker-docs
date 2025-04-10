@@ -51,7 +51,10 @@ Adjust the `package.json` to add spryker-feature to the `workspaces` section:
     "workspaces": [
       "vendor/spryker-feature/*",
       "vendor/spryker-feature/*/assets/Zed"
-    ]
+    ],
+    "devDependencies": {
+        "@spryker/oryx-for-zed": "~3.4.5",
+    }
 }
 ```
 

@@ -583,11 +583,6 @@ console data:import cms-block-store
 | SspInquiryStateMachineHandlerPlugin        | State Machine handler for inquiry processing.               |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\StateMachine           |
 | ApproveSspInquiryCommandPlugin             | State Machine command that handles inquiry approval.    |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspInquiryManagement   |
 | RejectSspInquiryCommandPlugin              | State Machine command that handles inquiry rejection.   |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspInquiryManagement   |
-| CreateOrderSspInquiryLinkWidget            | Provides a button to create an inquiry for an order.         |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
-| DashboardInquiryWidget                     | Provides the inquiries table for the Dashboard.            |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
-| SspInquiryListWidget                       | Provides the inquiries table.                              |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
-| SspInquiryMenuItemWidget                   | Provides a customer menu item for the inquiries.           |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
-
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 
@@ -884,6 +879,14 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 ### Set up widgets
 
+| PLUGIN                           | SPECIFICATION                                         | PREREQUISITES | NAMESPACE                                        |
+|----------------------------------|-------------------------------------------------------|---------------|--------------------------------------------------|
+| CreateOrderSspInquiryLinkWidget  | Provides a button to create an inquiry for an order.  |               | SprykerFeature\Yves\SspInquiryManagement\Widget  |
+| DashboardInquiryWidget           | Provides the inquiries table for the Dashboard.       |               | SprykerFeature\Yves\SspInquiryManagement\Widget  |
+| SspInquiryListWidget             | Provides the inquiries table.                         |               | SprykerFeature\Yves\SspInquiryManagement\Widget  |
+| SspInquiryMenuItemWidget         | Provides a customer menu item for the inquiries.      |               | SprykerFeature\Yves\SspInquiryManagement\Widget  |
+
+
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
@@ -918,5 +921,58 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 {% info_block warningBox "Verification" %}
+
+Verify permissions:
+
+1. In the Back Office, go to **Customers** > **Company Roles**.
+2. Click **Add Company User Role**.
+3. Select a company.
+4. Enter a name for the role.
+5. In **Unassigned Permissions**, enable the following permissions:
+    - **Create inquiry**
+    - **View company inquiries**
+    - **View business unit inquiries**
+6. Click **Submit**.
+7. Go to **Customers** > **Company Users**.
+8. Click **Edit** next to a user.
+9. Assign the role you've just created to the user.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Verify Storefront pages
+
+1. Login to Yves as the company user you just created.
+2. Make sure you can see the **Inquiries** menu item.
+3. Go to **Customer Account** > **Inquiries** page.
+4. Make sure you can see the **Create Inquiry** button.
+5. Click the **Create Inquiry** button.
+6. Fill in the required fields, optionally upload up to 5 files.
+7. Click **Submit Inquiry**.
+8. Make sure your inquiry is saved and you land on the inquiry details page.
+9. Go to **Customer Account** > **Inquiry** page.
+10. Make sure the list of inquiries has your inquiry listed.
+11. Go to **Customer Account** > **Dashboard** page.
+12. Make sure the Inquiry widget displays the inquiry you just created.
+13. Login to Yves as a company user without the role you created.
+14. Make sure you cannot see the **Inquiries** menu item.
+15. Check that you cannot see the **Inquiries** page.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Verify Backoffice pages
+
+1. Login to Backoffice.
+2. Go to **Sales** > **Inquiries** page.
+4. Make sure you can see the Inquiry list and it contains the inquiry you created in the storefront.
+5. Make sure you are able to filters by **Inquiry status** and **Inquiry type**.
+5. Click `View` next to an inquiry.
+6. Scroll down to the **Status** section.
+7. Make sure you can see **Start review** and **Reject** buttons.
+9. Click the **Start review** button.
+10. Make sure the inquiry status changes to **In review**.
 
 {% endinfo_block %}

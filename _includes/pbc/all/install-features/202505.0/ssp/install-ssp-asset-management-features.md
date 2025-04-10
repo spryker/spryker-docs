@@ -486,7 +486,7 @@ Verify Storefront pages
 5. Click the **Create Asset** button.
 6. Upload an image and fill in the required fields.
 7. Click **Save**.
-8. Make sure you asset is saved and you land on the new asset details page.
+8. Make sure your asset is saved and you land on the asset details page.
 9. Go to **Customer Account** > **My Assets** page.
 10. Make sure the list of assets has your asset listed.
 11. Go to **Customer Account** > **Dashboard** page.

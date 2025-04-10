@@ -45,6 +45,7 @@ From a business perspective, zero-major modules are **not feature-complete** and
 
 | Characteristic                         | Description                                                                  |
 |----------------------------------------|------------------------------------------------------------------------------|
+| **Availability**                       | ⚠️ Early Access functionality (not yet General Availability).                |
 | **Functional Gaps**                    | ⚠️ May exist, not all use cases or workflows may be supported yet.           |
 | **Business Logic Stability**           | ❌ Not guaranteed, feature definitions may evolve up until 1.0.0.            |
 | **Production Readiness**               | ⚠️ Validation recommended, depends on specific use case and module maturity. |

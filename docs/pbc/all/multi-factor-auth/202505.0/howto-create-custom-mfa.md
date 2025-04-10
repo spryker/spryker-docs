@@ -5,20 +5,18 @@ template: howto-guide-template
 last_updated: Apr 7, 2025
 ---
 
-This document describes how to create and implement your own Multi-Factor Authentication (MFA) method in Spryker.
-Follow the link to the [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-auth/{{site.version}}/multi-factor-auth.html) to learn more about the feature and its benefits.
+This document describes how to create and implement custom Multi-Factor Authentication (MFA) methods. 
+
+To lean more about MFA methods, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-auth/{{site.version}}/multi-factor-auth.html).
+
+A custom MFA method consists of two components:
+
+* MFA type plugin
+* Code Sender Strategy
 
 ## Prerequisites
 
-To start the integration, make sure that the [Multi-Factor Authentication Feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html) has been installed in your project.
-
-## Implementation overview
-
-To create a custom MFA method, you need to implement the following components:
-
-1. Multi-Factor Authentication Type Plugin
-2. Code Sender Strategy
-
+[Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html)
 
 ## 1. Create a Multi-Factor Authentication Type Plugin
 

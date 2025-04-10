@@ -5,28 +5,26 @@ template: howto-guide-template
 last_updated: Mar 6, 2025
 ---
 
-This document describes how to install and configure customer email Multi-Factor Authentication (MFA) in Spryker.
-Follow the link to the [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-auth/{{site.version}}/multi-factor-auth.html) to learn more about the feature and its benefits.
-
-## What is Email Multi-Factor Authentication?
-
 Email Multi-Factor Authentication (MFA) is a security mechanism that requires users to verify their identity through an authentication code sent to their registered email. This adds an extra layer of protection beyond just a password.
 
-### How It Works?
+This document describes how to install and configure customer email Multi-Factor Authentication (MFA).
 
-1.	The user attempts to log in or perform a protected action.
-2.	A one-time code is sent to their email.
-3.	The user enters the received code to complete authentication.
+For more information about MFA, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-auth/{{site.version}}/multi-factor-auth.html).
 
-This method enhances security by ensuring that even if a password is compromised, access to the account still requires possession of the registered email.
+
+## Email multi-factor authentication mechanism
+
+1. The user attempts to log in or perform a protected action.
+2. A one-time code is sent to their email.
+3. The user enters the received code to complete authentication.
 
 ## Prerequisites
 
-To start the integration, make sure that the following [Install the Multi-Factor Authentication Feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html) has been installed in your project.
+[Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html)
 
-## 1) Set up the transfer objects
+## 1) Set up transfer objects
 
-Run the following command to generate the transfer objects:
+Generate transfer objects:
 
 ```bash
 console transfer:generate
@@ -44,7 +42,7 @@ Make sure the following changes have been applied in transfer objects:
 
 ## 2) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 <details>
 <summary>data/import/common/common/glossary.csv</summary>
@@ -58,7 +56,7 @@ mail.customer.multi_factor_auth.email.subject,"Bestätigungscode für sicheren Z
 
 </details>
 
-Import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -66,7 +64,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the database, the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

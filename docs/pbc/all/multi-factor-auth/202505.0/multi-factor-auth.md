@@ -17,40 +17,47 @@ By using this feature, you accept full responsibility for any potential issues, 
 
 {% endinfo_block %}
 
-Multi-Factor Authentication adds an extra layer of security to your account.
-It allows customers to enhance their account security by requiring additional verification steps beyond the standard username and password.
+Multi-Factor Authentication (MFA) adds an extra layer of security to your account. It enhances account protection by requiring additional verification steps beyond just a username and password.
+
+
 
 ## Benefits of MFA
 
-- **Enhanced security**: MFA adds an extra layer of security to your account, making it harder for attackers to gain access.
-- **Enhanced privacy**: MFA helps protect your privacy by requiring additional verification steps beyond the standard username and password.
-- **Reduced risk**: MFA reduces the risk of unauthorized access, as it requires multiple factors to be verified before allowing access.
-- **Compliance**: MFA helps you comply with security regulations and standards.
+* Enhanced security: Adds an extra layer of protection, making it more difficult for attackers to gain access 
+* Enhanced privacy: Safeguards personal data by requiring more than just a username and password 
+* Reduced risk: Minimizes the chance of unauthorized access through multi-factor verification  
+* Compliance: Supports compliance with security regulations and industry standards
 
-## Flow Overview
 
-1) **Initial MFA check**: The system first verifies whether any MFA types are enabled for the customer. 
-If no MFA methods are enabled, the authentication process continues without additional validation.
+## Flow overview
 
-2) **Fetch enabled MFA types**: If MFA is enabled, the system sends a request to `multi-factor-auth/get-customer-enabled-types` to retrieve a list of enabled MFA types for the customer.
+The login process with MFA looks as follows:
 
-3) **Evaluate the number of enabled MFA types**: If more than one MFA method is enabled, the system presents a selection screen where the user must choose their preferred authentication method.
-If only one MFA method is enabled, the system proceeds to the next step automatically.
+1. Initial MFA check: The system checks if MFA is enabled for the customer. If no MFA methods are enabled, the authentication process continues without additional validation.
 
-4) **Send the authentication code**: If only one MFA method is enabled, the system automatically sends the authentication code using the appropriate method via `multi-factor-auth/send-customer-code`.
-If multiple methods were available and the user has selected one, the authentication code is sent through the selected method.
+2. Fetch enabled MFA types: If MFA is enabled, the system retrieves the customer's enabled MFA types from `multi-factor-auth/get-customer-enabled-types`.
 
-5) **Code validation**: After the authentication code is sent, the system presents a code validation form to the user. The user enters the received authentication code in the form. 
+3. Evaluate the number of enabled MFA methods:
+  * Multiple MFA methods: the system presents a selection screen where the user must choose their preferred authentication method. 
+  * One MFA method: the system proceeds to the next step automatically.
+
+4. Send the authentication code: 
+  * Multiple MFA methods: the authentication code is sent to the user based on the method they've selected
+  * One MFA method: the system sends the authentication code using the method via `multi-factor-auth/send-customer-code`.  
+
+
+5. Code validation: After the authentication code is sent, the system presents a code validation form to the user. The user enters the received authentication code in the form.  
 If the code is correct, authentication is successful. If incorrect, the user must retry.
+
 
 [PUT THE FLOW DIAGRAM HERE]
 
-## Login Flow with MFA
+## Login flow with MFA
 
-The MFA flow for the login page follows a slightly different sequence compared to general authentication.
+The MFA flow for the login page follows a slightly different sequence compared to regular authentication.
 In this case, the customer's credentials (email & password) are validated first before triggering MFA.
 
-Key Difference:
+Key Differenceу:
 1.	Customer enters email & password on the login page.
 2.	System validates the credentials: if invalid, authentication fails, and the customer is prompted to try again. If valid, the system proceeds to check if MFA is enabled.
 3.	If MFA is enabled, the process continues as described in the main MFA flow.

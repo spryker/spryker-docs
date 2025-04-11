@@ -1046,15 +1046,16 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 ### B. Set Up Product Offers for the Service Product
 
 - **Create a Product Offer:**
+  - Navigate to the "Offers" under the "Merchandising" section in the backoffice. 
   - Generate one or more product offers for the service product in the backoffice.
   - Verify that the offer creation form pre-populates with correct product information.
 
 - **Attach the Offer to Service Points:**
-  - Confirm that you can assign one or more service points (locations where the service is provided) to the product offer.
+  - Confirm that you can assign one or more service points (locations where the service is provided) to the product offer on the create page.
   - Check that the list of available service points is updated and reflects the intended configuration.
 
 - **Add Shipment Type (On-Site Service) to the Offer:**
-  - Ensure that the product offer includes the on-site service shipment type.
+  - Ensure that the product offer includes the on-site service shipment type on the create page.
   - Validate that the offer details correctly display the assigned shipment type(s).
 
 {% endinfo_block %}

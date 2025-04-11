@@ -1,5 +1,5 @@
 
-This document describes how to install the SSP feature.
+This document describes how to install Self-Service Portal (SSP).
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ This document describes how to install the SSP feature.
 
 | CONFIGURATION                                                  | SPECIFICATION                                                                                          | NAMESPACE                |
 |----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|--------------------------|
-| KernelConstants::CORE_NAMESPACES                               | Add SprykerFeature namespace to Core namespaces.                                                       | Spryker\Shared\Kernel\KernelConstants       |
+| KernelConstants::CORE_NAMESPACES                               | Adds the SprykerFeature namespace to the Core namespaces.                                                       | Spryker\Shared\Kernel\KernelConstants       |
 
 **config/Shared/config_default.php**
 ```php
@@ -28,34 +28,31 @@ $config[KernelConstants::CORE_NAMESPACES] = [
 
 ## Install feature frontend
 
-## Requirements
-
-To build frontend features, install or update the following tools:
-- [Node.js](https://nodejs.org/en/download/package-manager)—minimum version is v18.
-- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/)—minimum version is v9.
-
-## Overview
-
-SSP integrates into Yves and Zed frontend application:
-- Minimum Node.js version is v18.
-- Minimum npm version is v9.
-
 The entire project is now an *npm workspace*, meaning each submodule declares its dependencies. During the installation stage, npm installs all of those dependencies and stores them into the root of the project.
 
-## Install dependencies and build Yves and Zed applications
+### Prerequisites
 
-Adjust the `package.json` to add spryker-feature to the `workspaces` section:
+- [Node.js](https://nodejs.org/en/download/package-manager) 18 or higher
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) 9 or higher
+
+
+### Install dependencies and build Yves and Zed applications
+
+1. In `package.json`, add `spryker-feature` to the `workspaces` section:
 
 ```json
 {
     "workspaces": [
       "vendor/spryker-feature/*",
       "vendor/spryker-feature/*/assets/Zed"
-    ]
+    ],
+    "devDependencies": {
+        "@spryker/oryx-for-zed": "~3.4.5",
+    }
 }
 ```
 
-Adjust the `frontend/settings.js` to resolve typescript files in the `vendor/spryker-features` directory:
+2. Adjust `frontend/settings.js` to resolve typescript files in the `vendor/spryker-features` directory:
 
 ```javascript
 const globalSettings = {
@@ -86,7 +83,7 @@ const getAppSettingsByTheme = (namespaceConfig, theme, pathToConfig) => {
 }
 ```
 
-Build the project:
+3. Build the project:
 
 ```bash
 vendor/bin/console frontend:project:install-dependencies

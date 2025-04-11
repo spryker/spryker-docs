@@ -1,22 +1,19 @@
 
-# Install the SSP Inquiry Management Feature
+This document describes how to install the Self-Service Portal (SSP) Inquiry Management feature.
 
-This document describes how to install the *SSP Inquiry Management* feature in your Spryker project.
 
----
 
 ## Prerequisites
 
 
-
-| NAME         | VERSION | INSTALLATION GUIDE  |
+| FEATURE         | VERSION | INSTALLATION GUIDE  |
 |--------------| ------- | ------------------ |
 | Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
-| SSP features | {{site.version}}  | [Install the SSP feature](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
+| Self-Service Portal | {{site.version}}  | [Install Self-Service Portal](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
 
 ## Install the required modules
 
-Install the necessary modules using Composer:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/ssp-inquiry-management:"^0.1.1" --update-with-dependencies
@@ -34,7 +31,7 @@ Make sure the following packages are now listed in `composer.lock`:
 
 ## Set up configuration
 
-Update your `config/Shared/config_default.php` or CI, Docker equivalents:
+Update your `config/Shared/config_default.php`:
 
 | CONFIGURATION                                                                   | SPECIFICATION                                                                           | NAMESPACE                                  |
 |---------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------|
@@ -240,7 +237,10 @@ Make sure the following transfer objects have been generated:
 
 ## Add state machine configuration
 
-Create an XML configuration file for the state machine in `config/Zed/StateMachine/SspInquiry/SspInquiryDefaultStateMachine.xml`:
+Create an XML configuration file for the state machine::
+
+<details>
+  <summary>config/Zed/StateMachine/SspInquiry/SspInquiryDefaultStateMachine.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -299,6 +299,8 @@ Create an XML configuration file for the state machine in `config/Zed/StateMachi
 </statemachine>
 ```
 
+</details>
+
 {% info_block warningBox "Verification" %}
 Verification will be possible after the integration of the `SspInquiryStateMachineHandlerPlugin`.
 {% endinfo_block %}
@@ -331,6 +333,9 @@ Make sure that, in the Back Office, the **Sales** > **Inquiries** menu item is a
 ## Add translations
 
 1. Append the glossary:
+
+<details>
+  <summary>Glossary</summary>
 
 ```csv
 permission.name.CreateSspInquiryPermissionPlugin,Create inquiry,en_US
@@ -519,13 +524,20 @@ ssp_dashboard.general.inquiries,Pending Inquiries,en_US
 ssp_dashboard.general.inquiries,Ausstehende Ansprüche,de_DE
 ```
 
+</details>
+
 
 2. Append `ssp_inquiry.csv`:
 ```csv
 DE-INQR--1,DE,general,Spryker--8,Request for documentation,Please provide detailed documentation on the warranty and return policies for the products purchased under my account.
 DE-INQR--2,DE,general,Spryker--8,Product catalog issue,I noticed that several products in the catalog are missing specifications and images. This makes it difficult to make informed purchasing decisions. Please update the product details.
 ```
+
 3. Append `cms_block.csv`:
+
+<details>
+  <summary>cms_block.csv</summary>
+  
 ```csv
 cms-block-email--customer_email_change_notification--html,customer_email_change_notification--html,HTML Email Template With Header And Footer,@CmsBlock/template/email-template-with-header-and-footer.html.twig,1,,,,,,,"<table class=""sprykerBoxedTextBlock"" style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""> <!--[if gte mso 9]> <table align=""center"" border=""0"" cellspacing=""0"" cellpadding=""0"" width=""100%""> <![endif]--> <tbody class=""sprykerBoxedTextBlockOuter""> <tr> <td class=""sprykerBoxedTextBlockInner"" valign=""top"" style=""mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;""> <!--[if gte mso 9]> <td align=""center"" valign=""top"" ""> <![endif]--> <table style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" class=""sprykerBoxedTextContentContainer"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" align=""left""> <tbody> <tr> <td style=""padding-top: 18px;padding-left: 18px;padding-bottom: 18px;padding-right: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;""> <table class=""sprykerTextContentContainer"" style=""min-width: 100% !important;background-color: #F9F9F9;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" border=""0""> <tbody> <tr> <td class=""sprykerTextContent"" style=""padding-top: 18px;padding-right: 18px;padding-bottom: 18px;padding-left: 18px;color: #F2F2F2;font-family:Helvetica, Arial, Verdana, sans-serif;font-size: 22px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;"" valign=""top""> <p style=""text-align: center;display: block;margin: 0;padding: 0px 0px 18px 0px;color: #202020;font-family: Helvetica;font-size: 16px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: normal;"">{{ 'mail.customer.customer_email_change_notification.text' | trans }}</p> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <!--[if gte mso 9]> </td> <![endif]--> <!--[if gte mso 9]> </tr> </table> <![endif]--> </td> </tr> </tbody> </table> <table class=""sprykerTextBlock"" style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""> <tbody class=""sprykerTextBlockOuter""> <tr> <td class=""sprykerTextBlockInner"" style=""padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" valign=""top""><br> <!--[if mso]> </td> <![endif]--> <!--[if mso]> </tr> </table> <![endif]--> </td> </tr> </tbody> </table> <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]--> <!-- // END TEMPLATE -->","<table class=""sprykerBoxedTextBlock"" style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""> <!--[if gte mso 9]> <table align=""center"" border=""0"" cellspacing=""0"" cellpadding=""0"" width=""100%""> <![endif]--> <tbody class=""sprykerBoxedTextBlockOuter""> <tr> <td class=""sprykerBoxedTextBlockInner"" valign=""top"" style=""mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;""> <!--[if gte mso 9]> <td align=""center"" valign=""top"" ""> <![endif]--> <table style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" class=""sprykerBoxedTextContentContainer"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" align=""left""> <tbody> <tr> <td style=""padding-top: 18px;padding-left: 18px;padding-bottom: 18px;padding-right: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;""> <table class=""sprykerTextContentContainer"" style=""min-width: 100% !important;background-color: #F9F9F9;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" border=""0""> <tbody> <tr> <td class=""sprykerTextContent"" style=""padding-top: 18px;padding-right: 18px;padding-bottom: 18px;padding-left: 18px;color: #F2F2F2;font-family:Helvetica, Arial, Verdana, sans-serif;font-size: 22px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;"" valign=""top""> <p style=""text-align: center;display: block;margin: 0;padding: 0px 0px 18px 0px;color: #202020;font-family: Helvetica;font-size: 16px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: normal;"">{{ 'mail.customer.customer_email_change_notification.text' | trans }}</p> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <!--[if gte mso 9]> </td> <![endif]--> <!--[if gte mso 9]> </tr> </table> <![endif]--> </td> </tr> </tbody> </table> <table class=""sprykerTextBlock"" style=""min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""> <tbody class=""sprykerTextBlockOuter""> <tr> <td class=""sprykerTextBlockInner"" style=""padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"" valign=""top""><br> <!--[if mso]> </td> <![endif]--> <!--[if mso]> </tr> </table> <![endif]--> </td> </tr> </tbody> </table> <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]--> <!-- // END TEMPLATE -->"
 cms-block-email--company-status--text,company-status--text,TEXT Email Template With Header And Footer,@CmsBlock/template/email-template-with-header-and-footer.text.twig,1,,,,,,,"{{ 'mail.trans.common.hello_for_first_name' | trans }} {{ mail.customer.firstName }} {{ mail.customer.lastName }},  {{ 'mail.trans.company_status.title' | trans }} {{ ('mail.company.status.' ~ mail.company.status) | trans }}","{{ 'mail.trans.common.hello_for_first_name' | trans }} {{ mail.customer.firstName }} {{ mail.customer.lastName }},  {{ 'mail.trans.company_status.title' | trans }} {{ ('mail.company.status.' ~ mail.company.status) | trans }}"
@@ -534,6 +546,9 @@ cms-block-email--ssp-inquiry-approved--text,ssp-inquiry-approved--text,TEXT Emai
 cms-block-email--ssp-inquiry-rejected--html,ssp-inquiry-rejected--html,HTML Email Template With Header And Footer,@CmsBlock/template/email-template-with-header-and-footer.html.twig,1,,,,,,,"<table class=""sprykerTextBlock"" style=""min-width:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""><tbody class=""sprykerTextBlockOuter""><tr><td class=""sprykerTextBlockInner"" style=""mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" valign=""top""><table style=""min-width:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" class=""sprykerTextContentContainer"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" align=""left""><tbody><tr><td class=""sprykerTextContent"" style=""mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;word-break:break-word;color:#202020;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center"" valign=""top""><h1 style=""text-align:center;margin:0;color:#202020;font-family:Helvetica;font-size:20px;font-weight:normal;line-height:125%;padding:15px"">{{ 'ssp_inquiry.mail.trans.ssp_inquiry_rejected.salutation' | trans({'%name%':mail.customer.firstName~' '~mail.customer.lastName})}}</h1></td></tr></tbody></table></td></tr></tbody></table><table class=""sprykerTextBlock"" style=""min-width:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""><tbody class=""sprykerTextBlockOuter""><tr><td class=""sprykerTextBlockInner"" style=""mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" valign=""top""><table style=""min-width:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" class=""sprykerTextContentContainer"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" align=""left""><tbody><tr><td class=""sprykerTextContent"" style=""mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;word-break:break-word;color:#202020;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center"" valign=""top""><p style=""text-align:center;margin:0;font-weight:bold"">{{ 'ssp_inquiry.mail.trans.sspInquiry_rejected.main_text' | trans({'%reference%':mail.sspInquiry.reference})}}</p></td></tr><tr><td style=""padding-top:18px;padding-bottom:18px;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" class=""sprykerButtonBlockInner"" valign=""top"" align=""center""><table class=""sprykerButtonContentContainer"" style=""min-width:30%;border-collapse:separate!important;border-radius:2px;background-color:#1EBEA0;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" cellspacing=""0"" cellpadding=""0"" border=""0""><tbody><tr><td class=""sprykerButtonContent"" style=""font-family:Helvetica,Helvetica,Arial,Verdana,sans-serif;font-size:14px;padding:13px 18px;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" valign=""middle"" align=""center""><a class=""sprykerButton"" href=""{{ mail.sspInquiryUrl }}"" target=""_blank"" style=""font-weight:bold;letter-spacing:normal;line-height:100%;text-align:center;text-decoration:none;color:#FFFFFF;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:block"">{{ 'ssp_inquiry.mail.trans.ssp_inquiry_list_page' | trans }}</a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>","<table class=""sprykerTextBlock"" style=""min-width:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""><tbody class=""sprykerTextBlockOuter""><tr><td class=""sprykerTextBlockInner"" style=""mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" valign=""top""><table style=""min-width:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" class=""sprykerTextContentContainer"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" align=""left""><tbody><tr><td class=""sprykerTextContent"" style=""mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;word-break:break-word;color:#202020;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center"" valign=""top""><h1 style=""text-align:center;margin:0;color:#202020;font-family:Helvetica;font-size:20px;font-weight:normal;line-height:125%;padding:15px"">{{ 'ssp_inquiry.mail.trans.ssp_inquiry_rejected.salutation' | trans({'%name%':mail.customer.firstName~' '~mail.customer.lastName})}}</h1></td></tr></tbody></table></td></tr></tbody></table><table class=""sprykerTextBlock"" style=""min-width:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0""><tbody class=""sprykerTextBlockOuter""><tr><td class=""sprykerTextBlockInner"" style=""mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" valign=""top""><table style=""min-width:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" class=""sprykerTextContentContainer"" width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" align=""left""><tbody><tr><td class=""sprykerTextContent"" style=""mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;word-break:break-word;color:#202020;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center"" valign=""top""><p style=""text-align:center;margin:0;font-weight:bold"">{{ 'ssp_inquiry.mail.trans.ssp_inquiry_rejected.main_text' | trans({'%reference%':mail.sspInquiry.reference})}}</p></td></tr><tr><td style=""padding-top:18px;padding-bottom:18px;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" class=""sprykerButtonBlockInner"" valign=""top"" align=""center""><table class=""sprykerButtonContentContainer"" style=""min-width:30%;border-collapse:separate!important;border-radius:2px;background-color:#1EBEA0;mso-table-lspace:0pt;mso-table-rspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" cellspacing=""0"" cellpadding=""0"" border=""0""><tbody><tr><td class=""sprykerButtonContent"" style=""font-family:Helvetica,Helvetica,Arial,Verdana,sans-serif;font-size:14px;padding:13px 18px;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"" valign=""middle"" align=""center""><a class=""sprykerButton"" href=""{{ mail.sspInquiryUrl }}"" target=""_blank"" style=""font-weight:bold;letter-spacing:normal;line-height:100%;text-align:center;text-decoration:none;color:#FFFFFF;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:block"">{{ 'ssp_inquiry.mail.trans.ssp_inquiry_list_page' | trans }}</a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>"
 cms-block-email--ssp-inquiry-rejected--text,ssp-inquiry-rejected--text,TEXT Email Template With Header And Footer,@CmsBlock/template/email-template-with-header-and-footer.text.twig,1,,,,,,,"{{ 'ssp_inquiry.mail.trans.ssp_inquiry_rejected.salutation' | trans({'%name%' : mail.customer.firstName ~ ' ' ~ mail.customer.lastName})}}\n{{ 'ssp_inquiry.mail.trans.ssp_inquiry_rejected.main_text' | trans({'%reference%' : mail.sspInquiry.reference})}}\n{{ 'ssp_inquiry.mail.trans.ssp_inquiry_list_page' | trans }}: {{ mail.sspInquiryUrl }}","{{ 'ssp_inquiry.mail.trans.ssp_inquiry_rejected.salutation' | trans({'%name%' : mail.customer.firstName ~ ' ' ~ mail.customer.lastName})}}\n{{ 'ssp_inquiry.mail.trans.ssp_inquiry_rejected.main_text' | trans({'%reference%' : mail.sspInquiry.reference})}}\n{{ 'ssp_inquiry.mail.trans.ssp_inquiry_list_page' | trans }}: {{ mail.sspInquiryUrl }}"
 ```
+
+</details>
+
 4. Append `cms_block_store.csv`:
 ```csv
 cms-block-email--ssp-inquiry-approved--html,DE
@@ -555,15 +570,16 @@ console data:import cms-block-store
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
-* Make sure the `ssp_inquiry` table contains the new inquiries.
-* Make sure the new CMS blocks are assigned to correct stores.
+Make sure the following applies:
+* Glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
+* The `ssp_inquiry` table contains the new inquiries.
+* The new CMS blocks are assigned to correct stores.
 
 {% endinfo_block %}
 
----
 
-### Set up behavior
+
+## Set up behavior
 
 | PLUGIN                                     | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                                           |
 |--------------------------------------------|------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------|
@@ -571,7 +587,7 @@ console data:import cms-block-store
 | ViewBusinessUnitSspInquiryPermissionPlugin | Allows access to inquiries in the same business unit.      |               | SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission                        |
 | ViewCompanySspInquiryPermissionPlugin      | Allows access to inquiries in the same company.            |               | SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission                        |
 | SspInquiryRouteProviderPlugin              | Provides Yves routes for the SSP files feature.                |               | SprykerFeature\Yves\SspInquiryManagement\Plugin\Router                              |
-| SspInquiryRestrictionHandlerPlugin         | Restricts access to inquiries and inquire details pages for non-company users. |               | SprykerFeature\Yves\SspInquiryManagement\Plugin\ShopApplication                     |
+| SspInquiryRestrictionHandlerPlugin         | Restricts access to inquiries and inquiry details pages for non-company users. |               | SprykerFeature\Yves\SspInquiryManagement\Plugin\ShopApplication                     |
 | BytesTwigPlugin                            | Adds the `format_bytes` twig function.                         |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Twig                                |
 | SspInquiryDataImportPlugin                 | Introduces the `ssp-inquiry` import type.                       |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\DataImport             |
 | SspInquiryManagementFilePreDeletePlugin    | Ensures files are deleted when an inquiry is removed. |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\FileManager            |
@@ -872,17 +888,21 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 }
 ```
 
+<!--
+
 {% info_block warningBox "Verification" %}
 
 {% endinfo_block %}
 
-### Set up widgets
+-->
+
+## Set up widgets
 
 | PLUGIN                           | SPECIFICATION                                         | PREREQUISITES | NAMESPACE                                        |
 |----------------------------------|-------------------------------------------------------|---------------|--------------------------------------------------|
 | CreateOrderSspInquiryLinkWidget  | Provides a button to create an inquiry for an order.  |               | SprykerFeature\Yves\SspInquiryManagement\Widget  |
-| DashboardInquiryWidget           | Provides the inquiries table for the Dashboard.       |               | SprykerFeature\Yves\SspInquiryManagement\Widget  |
 | SspInquiryListWidget             | Provides the inquiries table.                         |               | SprykerFeature\Yves\SspInquiryManagement\Widget  |
+| DashboardInquiryWidget           | Provides the inquiries table for the Dashboard.       |               | SprykerFeature\Yves\SspInquiryManagement\Widget  |
 | SspInquiryMenuItemWidget         | Provides a customer menu item for the inquiries.      |               | SprykerFeature\Yves\SspInquiryManagement\Widget  |
 
 
@@ -921,7 +941,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Verify permissions:
+Verify permission management:
 
 1. In the Back Office, go to **Customers** > **Company Roles**.
 2. Click **Add Company User Role**.
@@ -934,44 +954,40 @@ Verify permissions:
 6. Click **Submit**.
 7. Go to **Customers** > **Company Users**.
 8. Click **Edit** next to a user.
-9. Assign the role you've just created to the user.
+9. Assign the role you've created to the user.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Verify Storefront pages
+Verify permissions on Storefront:
 
-1. Login to Yves as the company user you edited in the previous step.
-2. Make sure you can see the **Inquiries** menu item.
-3. Go to **Customer Account** > **Inquiries** page.
-4. Make sure you can see the **Create Inquiry** button.
-5. Click the **Create Inquiry** button.
-6. Fill in the required fields, optionally upload up to 5 files.
-7. Click **Submit Inquiry**.
-8. Make sure your inquiry is saved and you land on the inquiry details page.
-9. Go to **Customer Account** > **Inquiry** page.
-10. Make sure the list of inquiries has your inquiry listed.
-11. Go to **Customer Account** > **Dashboard** page.
-12. Make sure the Inquiry widget displays the inquiry you just created.
-13. Login to Yves as a company user without the role you created.
-14. Make sure you cannot see the **Inquiries** menu item.
-15. Check that you cannot see the **Inquiries** page.
+1. On the Storefront, log in with the company user you've assigned the role to.
+2. Go to **Customer Account** > **Inquiries**.
+3. Click **Create Inquiry**.
+4. Fill in the required fields.
+5. Optional: Upload up to 5 files.
+6. Click **Submit Inquiry**.
+  Make sure this saves the inquiry and opens the inquiry details page.
+7. Go to **Customer Account** > **Inquiries**.
+  Make sure the you've created is displayed in the list.
+8. Go to **Customer Account** > **Dashboard**.
+  Make sure the Inquiry widget displays the inquiry you've created.
+9. Log out and log in with another company user that doesn't have the role.
+Make sure the **Inquiries** menu item is not displayed and you can't access the **Inquiries** page.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Verify Backoffice pages
+Verify inquiries in the Back Office:
 
-1. Login to Backoffice.
-2. Go to **Sales** > **Inquiries** page.
-4. Make sure you can see the Inquiry list and it contains the inquiry you created in the storefront.
-5. Make sure you are able to filters by **Inquiry status** and **Inquiry type**.
-5. Click `View` next to an inquiry.
-6. Scroll down to the **Status** section.
-7. Make sure you can see **Start review** and **Reject** buttons.
-9. Click the **Start review** button.
-10. Make sure the inquiry status changes to **In review**.
+1. In the Back Office, go to **Sales** > **Inquiries** page. Make sure the following applies:
+ * The inquiry you've created on the Storefront is displayed in the list.
+ * You can filter the list by **Inquiry status** and **Inquiry type**.
+2. Click **View** next to an inquiry.
+  Make sure that, in the **Status** section, **Start review** and **Reject** buttons are displayed.
+3. Click **Start review**.
+  Make sure the inquiry status changes to **In review**.
 
 {% endinfo_block %}

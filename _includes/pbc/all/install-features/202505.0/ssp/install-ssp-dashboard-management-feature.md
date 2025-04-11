@@ -1,22 +1,16 @@
 
-# Install the SSP Dashboard Management Feature
-
-This document describes how to install the *SSP Dashboard Management* feature in your Spryker project.
-
----
+This document describes how to install the Self-Service Portal (SSP) Dashboard Management feature.
 
 ## Prerequisites
 
-
-
-| NAME         | VERSION | INSTALLATION GUIDE  |
+| FEATURE         | VERSION | INSTALLATION GUIDE  |
 |--------------| ------- | ------------------ |
 | Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
-| SSP features | {{site.version}}  | [Install the SSP feature](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
+| Self-Service Portal | {{site.version}}  | [Install Self-Service Portal](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
 
 ## Install the required modules
 
-Install the necessary modules using Composer:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/ssp-dashboard-management:"^0.1.1" --update-with-dependencies
@@ -64,6 +58,9 @@ Make sure the following transfer objects have been generated:
 
 1. Append the glossary:
 
+<details>
+  <summary>Glossary</summary>
+
 ```csv
 ssp_dashboard.index.widget.title,Dashboard,en_US
 ssp_dashboard.index.widget.title,Dashboard,de_DE
@@ -101,33 +98,59 @@ ssp_dashboard.overview.not_applicable,n/a,en_US
 ssp_dashboard.overview.not_applicable,n/a,de_DE
 ```
 
+</details>
+
+
 3. Append `cms_block.csv`:
+
+<details>
+  <summary>cms_block.csv</summary>
+
 ```csv
 cms-sales_rep:default,sales_rep:default,Title and Content,@CmsBlock/template/title_and_content_block.twig,1,,,<div class='contact-list box box--dark' data-qa='component contact-list'><div class='block-title spacing-bottom' data-qa='component block-title'><div class='grid grid--middle'><h5 class='block-title__title spacing-right col'>Mitarbeiter des Kundendienstes</h5></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Alice Johnson</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:alice.johnson@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> alice.johnson@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-123-4567' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-123-4567</a></span></span></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Michael Smith</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:michael.smith@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> michael.smith@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-987-6543' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-987-6543</a></span></span></div></div></div>,<div class='contact-list box box--dark' data-qa='component contact-list'><div class='block-title spacing-bottom' data-qa='component block-title'><div class='grid grid--middle'><h5 class='block-title__title spacing-right col'>Service Representatives</h5></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Alice Johnson</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:alice.johnson@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> alice.johnson@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-123-4567' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-123-4567</a></span></span></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Michael Smith</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:michael.smith@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> michael.smith@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-987-6543' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-987-6543</a></span></span></div></div></div>,,,,
 ssp-news-block-1,News Banner-1,Title and Content,@CmsBlock/template/title_and_content_block.twig,1,"<h5 class='spacing-x'>{{ 'ssp_dashboard.general.news' | trans }}</h5>","<h5 class='spacing-x'>{{ 'ssp_dashboard.general.news' | trans }}</h5>","<div class='grid grid--with-gutter'><div class='col col--with-gutter col--md-6 col--sm-12'>{{ content_banner('ssp-br-1', 'bottom-title') }}</div><div class='col col--with-gutter col--md-6 col--sm-12'>{{ content_banner('ssp-br-2', 'bottom-title') }}</div></div>","<div class='grid grid--with-gutter'><div class='col col--with-gutter col--md-6 col--sm-12'>{{ content_banner('ssp-br-1', 'bottom-title') }}</div><div class='col col--with-gutter col--md-6 col--sm-12'>{{ content_banner('ssp-br-2', 'bottom-title') }}</div></div>",,,,
 ```
+
+</details>
+
+
 4. Append `cms_block_store.csv`:
 ```csv
 ssp-news-block-1,DE
 cms-sales_rep:default,DE
 ```
-5. Append the `cms_slot.csv`:
+5. Append `cms_slot.csv`:
 ```csv
 ssp-news,ssp-news-block-1,"SSP News.",SprykerCmsSlotBlock,@SspDashboardManagement/views/dashboard/dashboard.twig,1
 ```
-6. Append the `cms_slot_block.csv`:
+6. Append `cms_slot_block.csv`:
 ```csv
 slt-mobile-header,blck-9,1,@ShopUi/templates/page-layout-main/page-layout-main.twig,,,,,,,
 ssp-news,ssp-news-block-1,1,@SspDashboardManagement/views/dashboard/dashboard.twig,,,,,,,
 ```
-7. Append the `cms_slot_template.csv`:
+7. Append `cms_slot_template.csv`:
 ```csv
 SSP Dashboard,Dashboard Page.,@SspDashboardManagement/views/dashboard/dashboard.twig
 ```
-8. Append the `content_banner.csv`:
+8. Append `content_banner.csv`:
 ```csv
 ssp-br-1,SSP Banner Name 1,SSP Banner Description 1, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
 ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
+```
+
+## Add twig template
+
+1. Create the file: 
+
+**src/Pyz/Shared/CmsBlock/Theme/default/template/title_and_content_block.twig**
+```twig
+{% block content %}
+    <!-- CMS_BLOCK_PLACEHOLDER : "title" -->
+    <!-- CMS_BLOCK_PLACEHOLDER : "content" -->
+
+    {{ spyCmsBlockPlaceholder('title') | raw }}
+    {{ spyCmsBlockPlaceholder('content') | raw }}
+{% endblock %}
 ```
 
 ## Import data
@@ -152,12 +175,12 @@ console data:import cms-slot-block
 
 ## Set up behavior
 
-| PLUGIN                                                 | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                                           |
-|--------------------------------------------------------|---------------------------------------------------------------|---------------|---------------------------------------------------------------------|
-| ViewDashboardPermissionPlugin                          | Allows accessing the dashboard page.                              |               | SprykerFeature\Shared\SspDashboardManagement\Plugin\Permission      |
-| CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin | Allows using business unit-specific CMS blocks.               |               | SprykerFeature\Client\SspDashboardManagement\Plugin\CmsBlockStorage |
-| DashboardRouteProviderPlugin                           | Provides Yves routes for the SSP dashboard page.                  |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\Router            |
-| SspDashboardFilterControllerEventHandlerPlugin         | Restricts access to dashboard pages for non-company users.    |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\ShopApplication   |
+| PLUGIN                                                 | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                           |
+|--------------------------------------------------------|------------------------------------------------------------|---------------|---------------------------------------------------------------------|
+| ViewDashboardPermissionPlugin                          | Provides access to the dashboard page.                     |               | SprykerFeature\Shared\SspDashboardManagement\Plugin\Permission      |
+| CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin | Enables business unit-specific CMS blocks.                 |               | SprykerFeature\Client\SspDashboardManagement\Plugin\CmsBlockStorage |
+| DashboardRouteProviderPlugin                           | Provides Yves routes for the SSP dashboard page.           |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\Router            |
+| SspDashboardFilterControllerEventHandlerPlugin         | Restricts access to dashboard pages for non-company users. |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\ShopApplication   |
 
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
@@ -270,7 +293,7 @@ class CmsBlockStorageDependencyProvider extends SprykerCmsBlockStorageDependency
 
 | PLUGIN                                                 | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                                           |
 |--------------------------------------------------------|---------------------------------------------------------------|---------------|---------------------------------------------------------------------|
-| DashboardMenuItemWidget                                | Provides a Menu item widget for the customer account side menu. |               | SprykerFeature\Yves\SspDashboardManagement\Widget                   |
+| DashboardMenuItemWidget                                | Provides a menu item widget for the customer account side menu. |               | SprykerFeature\Yves\SspDashboardManagement\Widget                   |
 
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
@@ -298,31 +321,27 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 {% info_block warningBox "Verification" %}
-Verify that Dashboard permission is added correctly:
-1. Login to the Back Office.
-2. Go to **Customers** > **Company Roles**. 
-3. Click **Add Company User Role**.
-4. Select a company.
-5. Enter a name for the role. 
-6. In **Unassigned Permissions**, enable the following permissions:
-    - **View Dashboard**
+
+1. In the Back Office, go to **Customers** > **Company Roles**. 
+2. Click **Add Company User Role**.
+3. Select a company.
+4. Enter a name for the role. 
+5. In **Unassigned Permissions**, enable the **View Dashboard** permission.
 6. Click **Submit**.
 7. Go to **Customers** > **Company Users**.
 8. Click **Edit** next to a user.
 9. Assign the role you've just created to the user.
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Verify Storefront pages:
+1. On the Storefront, log in with the company user you've assigned the role to.
+  Make sure the **Dashboard** menu item is displayed.
+2. Go to **Customer Account** > **Dashboard**. Make sure the page shows the following:
+  * Correct company account information
+  * Widgets for Assets, Inquiries, and Files
+3. Log out and log in with a compnay user without the role you've created.
+  Make sure the **Dashboard** menu item is not displayed and you can't access the **Dashboard** page.
 
-1. Login to Yves as the company user you edited in the previous step.
-2. Make sure you can see the **Dashboard** menu item.  
-3. Go to **Customer Account** > **Dashboard** page.
-4. Make sure the page opens.
-5. Make sure the page shows the correct Company account information.
-5. Make sure the page contains widgets for Assets, Inquiries, and Files.
-5. Login to Yves as a company user without the role you created.
-6. Make sure you cannot see the **Dashboard** menu item.
-7. Check that you cannot see the **Dashboard** page.
 {% endinfo_block %}

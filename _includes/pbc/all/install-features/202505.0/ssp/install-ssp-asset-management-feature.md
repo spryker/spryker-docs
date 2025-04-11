@@ -1,20 +1,18 @@
 
-# Install the SSP Asset Management Feature
 
-This document describes how to install the *SSP Asset Management* feature.
+This document describes how to install the Self-Service Portal (SSP) Asset Management feature.
 
----
 
 ## Prerequisites
 
 | FEATURE         | VERSION | INSTALLATION GUIDE  |
 |--------------| ------- | ------------------ |
 | Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
-| SSP features | {{site.version}}  | [Install the SSP feature](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
+| Self-Service Portal | {{site.version}}  | [Install Self-Service Portal](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
 
 ## Install the required modules
 
-Install the necessary modules using Composer:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/ssp-asset-management:"^0.1.3" --update-with-dependencies
@@ -135,7 +133,6 @@ Make sure the following transfer objects have been generated:
 
 {% endinfo_block %}
 
----
 
 ## Add translations
 
@@ -323,11 +320,11 @@ Make sure glossary keys have been added to `spy_glossary_key` and `spy_glossary_
 
 | PLUGIN                                     | SPECIFICATION                                           | PREREQUISITES | NAMESPACE                                                                         |
 |--------------------------------------------|---------------------------------------------------------|---------------|-----------------------------------------------------------------------------------|
-| ViewCompanySspAssetPermissionPlugin        | Allows viewing company assets.                          |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
-| ViewBusinessUnitSspAssetPermissionPlugin   | Allows access to assets in the same business unit.      |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
-| CreateSspAssetPermissionPlugin             | Allows creating assets.                                 |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
-| UpdateSspAssetPermissionPlugin             | Allows updating assets.                                |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
-| UnassignSspAssetPermissionPlugin           | Allows unassigning assets.                              |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
+| ViewCompanySspAssetPermissionPlugin        | Enables viewing of company assets.                          |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
+| ViewBusinessUnitSspAssetPermissionPlugin   | Provides access to assets in the same business unit.      |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
+| CreateSspAssetPermissionPlugin             | Enables creation of assets.                                 |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
+| UpdateSspAssetPermissionPlugin             | Enables updating of assets.                                |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
+| UnassignSspAssetPermissionPlugin           | Enables unassignment of assets.                              |               | SprykerFeature\Shared\SspAssetManagement\Plugin\Permission                        |
 | SspAssetRouteProviderPlugin                | Provides Yves routes for the SSP asset feature.             |               | SprykerFeature\Yves\SspAssetManagement\Plugin\Router                              |
 | SspAssetManagementFilePreDeletePlugin      | Ensures files are deleted when an asset is removed. |               | SprykerFeature\Zed\SspAssetManagement\Communication\Plugin\FileManager            |
 | SspAssetDashboardDataProviderPlugin        | Adds the assets table to the SSP Dashboard.                 |               | SprykerFeature\Zed\SspAssetManagement\Communication\Plugin\SspDashboardManagement |
@@ -425,8 +422,8 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 | PLUGIN                     | SPECIFICATION                                                   | PREREQUISITES | NAMESPACE                                      |
 |----------------------------|-----------------------------------------------------------------|---------------|------------------------------------------------|
-| SspAssetListWidget         | Provides a table display for Assets.                            |               | SprykerFeature\Yves\SspAssetManagement\Widget  |
-| SspAssetMenuItemWidget     | Provides a Menu item widget for the customer account side menu. |               | SprykerFeature\Yves\SspAssetManagement\Widget  |
+| SspAssetListWidget         | Provides a table display for assets.                            |               | SprykerFeature\Yves\SspAssetManagement\Widget  |
+| SspAssetMenuItemWidget     | Provides a menu item widget for the customer account side menu. |               | SprykerFeature\Yves\SspAssetManagement\Widget  |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -456,8 +453,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Verify permissions:
-
 1. In the Back Office, go to **Customers** > **Company Roles**.
 2. Click **Add Company User Role**.
 3. Select a company.
@@ -477,22 +472,18 @@ Verify permissions:
 
 {% info_block warningBox "Verification" %}
 
-Verify Storefront pages
-
-1. Login to Yves as the company user you edited in the previous step.
-2. Make sure you can see the **My Assets** menu item.
-3. Go to **Customer Account** > **My Assets** page.
-4. Make sure you can see the **Create Asset** button.
-5. Click the **Create Asset** button.
-6. Upload an image and fill in the required fields.
-7. Click **Save**.
-8. Make sure your asset is saved and you land on the asset details page.
-9. Go to **Customer Account** > **My Assets** page.
-10. Make sure the list of assets has your asset listed.
-11. Go to **Customer Account** > **Dashboard** page.
-12. Make sure the **My Assets** widget displays the asset you just created. 
-13. Login to Yves as a company user without the role you created. 
-14. Make sure you cannot see the **My Assets** menu item.
-15. Check that you cannot see the **My Assets** page.
+1. On the Storefront, log in with the company user you've assigned the role to.
+  Make sure the **My Assets** menu item is displayed.
+2. Go to **Customer Account** > **My Assets**.
+3. Click **Create Asset**.
+4. Upload an image and fill in the required fields.
+5. Click **Save**.
+  Make sure the asset gets saved and this opens the asset details page.
+6. Go to **Customer Account** > **My Assets**.
+  Make sure the asset you've created is displayed in the list.
+7. Go to **Customer Account** > **Dashboard**.
+  Make sure the **My Assets** widget displays the asset you've created. 
+8. Log out and log in with a compnay user without the role you've created.
+  Make sure the **My Assets** menu item is not displayed and you can't access the **My Assets** page.
 
 {% endinfo_block %}

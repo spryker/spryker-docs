@@ -1,23 +1,17 @@
 
-# Install the SSP Inquiry Management Feature
-
-This document describes how to install the *SSP Inquiry Management* feature in your Spryker project.
-
----
+This document describes how to install the Self-Service Portal (SSP) SSP Inquiry Management feature.
 
 ## Prerequisites
 
-Before installing this feature, make sure the following are already set up in your project:
+| FEATURE             | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
+|---------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Click and Collect   | {{site.version}} | [Enable Click and Collect](/docs/pbc/all/service-point-management/{{site.version}}/unified-commerce/enable-click-collect.html)                                      |
+| Self-Service Portal | {{site.version}} | [Install Self-Service Portal](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)                                                         |
 
-| NAME              | VERSION | INSTALLATION GUIDE  |
-|-------------------| ------- | ------------------ |
-| Spryker Core      | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
-| Click and collect | {{site.version}}  | |
-| SSP features      | {{site.version}}  | [Install the SSP feature](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
+## Install the required modules
 
-## Install the required modules using Composer
-
-Install the necessary packages via Composer:
+Install the required packages using Composer:
 
 ```bash
 composer require spryker-feature/ssp-service-management:"^0.1.2" --update-with-dependencies
@@ -25,158 +19,129 @@ composer require spryker-feature/ssp-service-management:"^0.1.2" --update-with-d
 
 {% info_block warningBox "Verification" %}
 
-Check that the following packages are now listed in `composer.lock`:
+Make sure the following package is listed in `composer.lock`:
 
-| MODULE               | EXPECTED DIRECTORY                               |
-|----------------------|--------------------------------------------------|
-| SspServiceManagement | vendor/spryker-feature/ssp-service-management       |
+| MODULE               | EXPECTED DIRECTORY                            |
+|----------------------|-----------------------------------------------|
+| SspServiceManagement | vendor/spryker-feature/ssp-service-management |
 
 {% endinfo_block %}
 
 ## Set up configuration
 
-| CONFIGURATION                                                                   | SPECIFICATION                                                                           | NAMESPACE                                  |
-|---------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------|
-| FileSystemConstants::FILESYSTEM_SERVICE                                         | Flysystem configuration for file management.                                            | Spryker\Shared\FileSystem                  |
-| SspInquiryManagementConstants::BASE_URL_YVES                                    | Yves URL used in mailing templates.                                                     | SprykerFeature\Shared\SspInquiryManagement |
-| SspInquiryManagementConstants::DEFAULT_TOTAL_FILE_MAX_SIZE                      | Configurable total file upload limits.                                                  | SprykerFeature\Shared\SspInquiryManagement |
-| SspInquiryManagementConstants::DEFAULT_FILE_MAX_SIZE                            | Configurable single file upload size.                                                   | SprykerFeature\Shared\SspInquiryManagement |
-| SspInquiryManagementConfig::getSspInquiryInitialStateMap()                      | Returns the inquiry state machine process to initial state mapping.                     | SprykerFeature\Shared\SspInquiryManagement |
-| SspInquiryManagementConfig::getSspInquiryStateMachineProcessSspInquiryTypeMap() | Returns the inquiry type to state machine process mapping.                              | SprykerFeature\Shared\SspInquiryManagement |
-| SspInquiryManagementConfig::getSspInquiryCancelStateMachineEventName()          | Returns inquiry event name of the inquiry cancellation.                                 | SprykerFeature\Shared\SspInquiryManagement |
-| SspInquiryManagementConfig::getAvailableStatuses()                              | Returns the list of inquiry statuses.                                                   | SprykerFeature\Shared\SspInquiryManagement |
-| SspInquiryManagementConfig::getStorageName()                                    | Defines the Storage name for inquiry Flysystem files.                                   | SprykerFeature\Shared\SspInquiryManagement |
-| SalesConfig::getSalesDetailExternalBlocksUrls()                                 | Defines the list of URLs to render blocks inside order detail page.                     | Spryker\Zed\Sales                          |
-| SspInquiryManagementConfig::getSspInquiryStatusClassMap()                       | Returns the inquiry status to СSS class name mapping used for status indicator styling. | SprykerFeature\Zed\SspInquiryManagement    |
-| SspInquiryManagementConfig::getPendingStatus()                                  | Identifies the status that will be considered `Pending`.                                | SprykerFeature\Zed\SspInquiryManagement    |
-| SspInquiryManagementConfig::getPendingStatus()                                  | Identifies the status that will be considered `Pending`.                                | SprykerFeature\Zed\SspInquiryManagement    |
+| CONFIGURATION                                                      | SPECIFICATION                                                                  | NAMESPACE                           |
+|--------------------------------------------------------------------|--------------------------------------------------------------------------------|-------------------------------------|
+| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES | Shipment types supported by the Click&Collect feature.                         | Pyz\Yves\ClickAndCollectPageExample |
+| SspServiceManagementConfig::getDefaultMerchantReference()          | Reference of a merchant used for creating product offers from the Back Office. | Pyz\Zed\SspServiceManagement        |
+| DataImportConfig::getFullImportTypes()                             | List of data import entities to be imported during a full import.              | Pyz\Zed\DataImport                  |
 
-**config/Shared/config_default.php**
+**src/Pyz/Yves/ClickAndCollectPageExample/ClickAndCollectPageExampleConfig.php**
+
 ```php
-<?php
+declare(strict_types = 1);
 
-use Spryker\Service\FlysystemLocalFileSystem\Plugin\Flysystem\LocalFilesystemBuilderPlugin;
-use Spryker\Shared\FileSystem\FileSystemConstants;
-use SprykerFeature\Shared\SspInquiryManagement\SspInquiryManagementConstants;
+namespace Pyz\Yves\ClickAndCollectPageExample;
 
-$config[FileSystemConstants::FILESYSTEM_SERVICE] = [
-    'ssp-inquiry' => [
-        'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
-        'root' => '/data',
-        'path' => '/data/ssp-inquiry',
-    ],
-];
+use SprykerShop\Yves\ClickAndCollectPageExample\ClickAndCollectPageExampleConfig as SprykerClickAndCollectPageExampleConfig;
 
-$config[SspInquiryManagementConstants::BASE_URL_YVES] = 'https://your-yves-url';
-$config[SspInquiryManagementConstants::DEFAULT_TOTAL_FILE_MAX_SIZE] = getenv('SPRYKER_SSP_INQUIRY_DEFAULT_TOTAL_FILE_MAX_SIZE') ?: '100M';
-$config[SspInquiryManagementConstants::DEFAULT_FILE_MAX_SIZE] = getenv('SPRYKER_SSP_INQUIRY_DEFAULT_FILE_MAX_SIZE') ?: '20M';
+class ClickAndCollectPageExampleConfig extends SprykerClickAndCollectPageExampleConfig
+{
+    /**
+     * @uses \SprykerFeature\Yves\SspServiceManagement\SspServiceManagementConfig::SHIPMENT_TYPE_ON_SITE_SERVICE
+     *
+     * @var string
+     */
+    protected const SHIPMENT_TYPE_ON_SITE_SERVICE = 'on-site-service';
+
+    /**
+     * @var list<string>
+     */
+    protected const CLICK_AND_COLLECT_SHIPMENT_TYPES = [
+        self::SHIPMENT_TYPE_ON_SITE_SERVICE,
+        self::SHIPMENT_TYPE_DELIVERY,
+        self::SHIPMENT_TYPE_PICKUP,
+    ];
+}
 ```
 
-**src/Pyz/Shared/SspInquiryManagement/SspInquiryManagementConfig.php**
+**src/Pyz/Zed/SspServiceManagement/SspServiceManagementConfig.php**
+
 ```php
 <?php
 
-namespace Pyz\Shared\SspInquiryManagement;
+declare(strict_types = 1);
 
-use SprykerFeature\Shared\SspInquiryManagement\SspInquiryManagementConfig as SprykerSspInquiryConfig;
+namespace Pyz\Zed\SspServiceManagement;
 
-class SspInquiryManagementConfig extends SprykerSspInquiryConfig
+use SprykerFeature\Zed\SspServiceManagement\SspServiceManagementConfig as SprykerSspServiceManagementConfig;
+
+class SspServiceManagementConfig extends SprykerSspServiceManagementConfig
 {
-    public function getSspInquiryInitialStateMap(): array
-    {
-        return [
-            'SspInquiryDefaultStateMachine' => 'created',
-        ];
-    }
-
-    public function getSspInquiryStateMachineProcessSspInquiryTypeMap(): array
-    {
-        return [
-            'general' => 'SspInquiryDefaultStateMachine',
-            'order' => 'SspInquiryDefaultStateMachine',
-            'ssp_asset' => 'SspInquiryDefaultStateMachine',
-        ];
-    }
-
     /**
      * @return string
      */
-    public function getSspInquiryCancelStateMachineEventName(): string
+    public function getDefaultMerchantReference(): string
     {
-        return 'cancel';
-    }
-
-    /**
-     * @return array<string>
-     */
-    public function getAvailableStatuses(): array
-    {
-        return [
-            'pending',
-            'in_review',
-            'approved',
-            'rejected',
-            'canceled',
-        ];
-    }
-
-    /**
-     * @return string
-     */
-    public function getStorageName(): string
-    {
-        return 'ssp-inquiry';
+        return 'MER000001';
     }
 }
 ```
 
-**src/Pyz/Zed/Sales/SalesConfig.php**
+**src/Pyz/Zed/DataImport/DataImportConfig.php**
+
 ```php
 <?php
 
-namespace Pyz\Zed\Sales;
+declare(strict_types = 1);
 
-use Spryker\Zed\Sales\SalesConfig as SprykerSalesConfig;
+namespace Pyz\Zed\DataImport;
 
-class SalesConfig extends SprykerSalesConfig
+use Pyz\Zed\DataImport\DataImportConfig;
+use SprykerFeature\Zed\SspServiceManagement\SspServiceManagementConfig;
+
+class DataImportConfig extends SprykerDataImportConfig
 {
     /**
      * @return array<string>
      */
-    public function getSalesDetailExternalBlocksUrls(): array
+    public function getFullImportTypes(): array
     {
-        $projectExternalBlocks = [
-            'inquiries' => '/ssp-inquiry-management/order-ssp-inquiry-list',
+        return [
+            SspServiceManagementConfig::IMPORT_TYPE_PRODUCT_ABSTRACT_TYPE,
+            SspServiceManagementConfig::IMPORT_TYPE_PRODUCT_ABSTRACT_TO_PRODUCT_ABSTRACT_TYPE,
+            SspServiceManagementConfig::IMPORT_TYPE_PRODUCT_SHIPMENT_TYPE,
         ];
-
-        $externalBlocks = parent::getSalesDetailExternalBlocksUrls();
-
-        return array_merge($externalBlocks, $projectExternalBlocks);
     }
 }
 ```
 
-## Set up database schema and transfer objects
 
-### Set up database schema
+## Set up database schema
 
-Run Propel commands to apply schema updates:
+Apply schema updates:
 
 ```bash
 console propel:install
 ```
 
 {% info_block warningBox "Verification" %}
-Verify the following tables are created in your database:
 
-- `spy_ssp_inquiry`
-- `spy_ssp_inquiry_file`
-- `spy_ssp_inquiry_sales_order`
-- `spy_ssp_inquiry_sales_order_item`
-- `spy_ssp_inquiry_ssp_asset`
+Make sure the following changes occurred in the database:
+
+| DATABASE ENTITY                                   | TYPE   | EVENT   |
+|---------------------------------------------------|--------|---------|
+| spy_product_shipment_type                         | table  | created |
+| spy_sales_product_abstract_type                   | table  | created |
+| spy_sales_order_item_product_abstract_type        | table  | created |
+| spy_product_abstract_type                         | table  | created |
+| spy_product_abstract_to_product_abstract_type     | table  | created |
+| spy_product.is_service_date_time_enabled          | column | added   |
+| spy_sales_order_item_metadata.scheduled_at        | column | added   |
+| spy_sales_order_item.is_service_date_time_enabled | column | added   |
+
 {% endinfo_block %}
 
-### Set up transfer objects
+## Set up transfer objects
 
 Generate transfer classes:
 
@@ -185,129 +150,106 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Ensure the following transfer objects were generated:
 
-| TRANSFER                            | TYPE | EVENT | PATH                                                                      |
-|-------------------------------------|------|--------|---------------------------------------------------------------------------|
-| SspInquiryCollection                | transfer | created | src/Generated/Shared/Transfer/SspInquiryCollectionTransfer                |
-| SspInquiry                          | transfer | created | src/Generated/Shared/Transfer/SspInquiryTransfer                          |
-| File                                | transfer | created | src/Generated/Shared/Transfer/FileTransfer                                |
-| Mail                                | transfer | created | src/Generated/Shared/Transfer/MailTransfer                                |
-| SspInquiryCriteria                  | transfer | created | src/Generated/Shared/Transfer/SspInquiryCriteriaTransfer                  |
-| SspInquiryInclude                   | transfer | created | src/Generated/Shared/Transfer/SspInquiryIncludeTransfer                   |
-| SspInquiryConditions                | transfer | created | src/Generated/Shared/Transfer/SspInquiryConditionsTransfer                |
-| SspInquiryOwnerConditionGroup       | transfer | created | src/Generated/Shared/Transfer/SspInquiryOwnerConditionGroupTransfer       |
-| Order                               | transfer | created | src/Generated/Shared/Transfer/OrderTransfer                               |
-| SspInquiryCollectionRequest         | transfer | created | src/Generated/Shared/Transfer/SspInquiryCollectionRequestTransfer         |
-| SspInquiryCollectionResponse        | transfer | created | src/Generated/Shared/Transfer/SspInquiryCollectionResponseTransfer        |
+Ensure the following transfer objects have been generated:
+
+| TRANSFER                            | TYPE     | EVENT   | PATH                                                                      |
+|-------------------------------------|----------|---------|---------------------------------------------------------------------------|
+| ProductConcrete                     | transfer | updated | src/Generated/Shared/Transfer/ProductConcreteTransfer                     |
+| ProductAbstract                     | transfer | updated | src/Generated/Shared/Transfer/ProductAbstractTransfer                     |
+| ShipmentTypeCriteria                | transfer | created | src/Generated/Shared/Transfer/ShipmentTypeCriteriaTransfer                |
+| ShipmentType                        | transfer | created | src/Generated/Shared/Transfer/ShipmentTypeTransfer                        |
+| ShipmentTypeCollection              | transfer | created | src/Generated/Shared/Transfer/ShipmentTypeCollectionTransfer              |
+| ShipmentTypeConditions              | transfer | created | src/Generated/Shared/Transfer/ShipmentTypeConditionsTransfer              |
+| ProductConcreteStorage              | transfer | created | src/Generated/Shared/Transfer/ProductConcreteStorageTransfer              |
+| EventEntity                         | transfer | created | src/Generated/Shared/Transfer/EventEntityTransfer                         |
+| ProductView                         | transfer | created | src/Generated/Shared/Transfer/ProductViewTransfer                         |
+| ProductStorageCriteria              | transfer | created | src/Generated/Shared/Transfer/ProductStorageCriteriaTransfer              |
+| ShipmentTypeStorageCollection       | transfer | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCollectionTransfer       |
+| ShipmentTypeStorageConditions       | transfer | created | src/Generated/Shared/Transfer/ShipmentTypeStorageConditionsTransfer       |
+| ShipmentTypeStorageCriteria         | transfer | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCriteriaTransfer         |
+| ShipmentTypeStorage                 | transfer | created | src/Generated/Shared/Transfer/ShipmentTypeStorageTransfer                 |
+| Store                               | transfer | updated | src/Generated/Shared/Transfer/StoreTransfer                               |
+| ItemMetadata                        | transfer | created | src/Generated/Shared/Transfer/ItemMetadataTransfer                        |
+| ProductImage                        | transfer | created | src/Generated/Shared/Transfer/ProductImageTransfer                        |
+| ProductOffer                        | transfer | created | src/Generated/Shared/Transfer/ProductOfferTransfer                        |
+| ServicePointCollection              | transfer | created | src/Generated/Shared/Transfer/ServicePointCollectionTransfer              |
+| ServiceCollection                   | transfer | created | src/Generated/Shared/Transfer/ServiceCollectionTransfer                   |
+| SspServiceCollection                | transfer | created | src/Generated/Shared/Transfer/SspServiceCollectionTransfer                |
+| Item                                | transfer | updated | src/Generated/Shared/Transfer/ItemTransfer                                |
+| Service                             | transfer | created | src/Generated/Shared/Transfer/ServiceTransfer                             |
+| SspService                          | transfer | created | src/Generated/Shared/Transfer/SspServiceTransfer                          |
+| MerchantCriteria                    | transfer | created | src/Generated/Shared/Transfer/MerchantCriteriaTransfer                    |
+| MerchantCollection                  | transfer | created | src/Generated/Shared/Transfer/MerchantCollectionTransfer                  |
+| MerchantStockCriteria               | transfer | created | src/Generated/Shared/Transfer/MerchantStockCriteriaTransfer               |
+| StockCollection                     | transfer | created | src/Generated/Shared/Transfer/StockCollectionTransfer                     |
+| ProductOfferStock                   | transfer | created | src/Generated/Shared/Transfer/ProductOfferStockTransfer                   |
+| Locale                              | transfer | created | src/Generated/Shared/Transfer/LocaleTransfer                              |
+| ServiceConditions                   | transfer | created | src/Generated/Shared/Transfer/ServiceConditionsTransfer                   |
+| SspServiceConditions                | transfer | created | src/Generated/Shared/Transfer/SspServiceConditionsTransfer                |
+| ServicesSearchConditionGroup        | transfer | created | src/Generated/Shared/Transfer/ServicesSearchConditionGroupTransfer        |
+| SspServicesSearchConditionGroup     | transfer | created | src/Generated/Shared/Transfer/SspServicesSearchConditionGroupTransfer     |
+| ServiceCriteria                     | transfer | created | src/Generated/Shared/Transfer/ServiceCriteriaTransfer                     |
+| SspServiceCriteria                  | transfer | created | src/Generated/Shared/Transfer/SspServiceCriteriaTransfer                  |
+| OrderItemFilter                     | transfer | created | src/Generated/Shared/Transfer/OrderItemFilterTransfer                     |
+| Quote                               | transfer | updated | src/Generated/Shared/Transfer/QuoteTransfer                               |
+| SalesOrderItemCollectionRequest     | transfer | created | src/Generated/Shared/Transfer/SalesOrderItemCollectionRequestTransfer     |
+| ProductOfferValidity                | transfer | created | src/Generated/Shared/Transfer/ProductOfferValidityTransfer                |
+| ServicePointConditions              | transfer | created | src/Generated/Shared/Transfer/ServicePointConditionsTransfer              |
+| ServicePointCriteria                | transfer | created | src/Generated/Shared/Transfer/ServicePointCriteriaTransfer                |
+| ServicePoint                        | transfer | created | src/Generated/Shared/Transfer/ServicePointTransfer                        |
+| Merchant                            | transfer | created | src/Generated/Shared/Transfer/MerchantTransfer                            |
+| Stock                               | transfer | created | src/Generated/Shared/Transfer/StockTransfer                               |
+| Payment                             | transfer | updated | src/Generated/Shared/Transfer/PaymentTransfer                             |
+| PaymentMethodCriteria               | transfer | created | src/Generated/Shared/Transfer/PaymentMethodCriteriaTransfer               |
+| PaymentMethodConditions             | transfer | created | src/Generated/Shared/Transfer/PaymentMethodConditionsTransfer             |
+| PaymentMethodCollection             | transfer | created | src/Generated/Shared/Transfer/PaymentMethodCollectionTransfer             |
+| Order                               | transfer | updated | src/Generated/Shared/Transfer/OrderTransfer                               |
 | Error                               | transfer | created | src/Generated/Shared/Transfer/ErrorTransfer                               |
-| Pagination                          | transfer | created | src/Generated/Shared/Transfer/PaginationTransfer                          |
-| Item                                | transfer | created | src/Generated/Shared/Transfer/ItemTransfer                                |
-| Sort                                | transfer | created | src/Generated/Shared/Transfer/SortTransfer                                |
-| CommentThread                       | transfer | created | src/Generated/Shared/Transfer/CommentThreadTransfer                       |
-| SequenceNumberSettings              | transfer | created | src/Generated/Shared/Transfer/SequenceNumberSettingsTransfer              |
-| FileManagerData                     | transfer | created | src/Generated/Shared/Transfer/FileManagerDataTransfer                     |
-| SspInquiryFileDownloadRequest       | transfer | created | src/Generated/Shared/Transfer/SspInquiryFileDownloadRequestTransfer       |
-| Customer                            | transfer | created | src/Generated/Shared/Transfer/CustomerTransfer                            |
-| FileInfo                            | transfer | created | src/Generated/Shared/Transfer/FileInfoTransfer                            |
-| CompanyUser                         | transfer | created | src/Generated/Shared/Transfer/CompanyUserTransfer                         |
-| FileUpload                          | transfer | created | src/Generated/Shared/Transfer/FileUploadTransfer                          |
-| Company                             | transfer | created | src/Generated/Shared/Transfer/CompanyTransfer                             |
-| CompanyBusinessUnit                 | transfer | created | src/Generated/Shared/Transfer/CompanyBusinessUnitTransfer                 |
-| Store                               | transfer | created | src/Generated/Shared/Transfer/StoreTransfer                               |
-| DataImporterReport                  | transfer | created | src/Generated/Shared/Transfer/DataImporterReportTransfer                  |
+| SalesOrderItemCollectionResponse    | transfer | created | src/Generated/Shared/Transfer/SalesOrderItemCollectionResponseTransfer    |
+| ItemCollection                      | transfer | created | src/Generated/Shared/Transfer/ItemCollectionTransfer                      |
+| ItemState                           | transfer | created | src/Generated/Shared/Transfer/ItemStateTransfer                           |
+| ServiceType                         | transfer | created | src/Generated/Shared/Transfer/ServiceTypeTransfer                         |
+| PaymentMethod                       | transfer | created | src/Generated/Shared/Transfer/PaymentMethodTransfer                       |
+| LocalizedAttributes                 | transfer | created | src/Generated/Shared/Transfer/LocalizedAttributesTransfer                 |
+| ProductAbstractType                 | transfer | created | src/Generated/Shared/Transfer/ProductAbstractTypeTransfer                 |
+| ProductAbstractTypeCollection       | transfer | created | src/Generated/Shared/Transfer/ProductAbstractTypeCollectionTransfer       |
+| ProductAbstractTypeCriteria         | transfer | created | src/Generated/Shared/Transfer/ProductAbstractTypeCriteriaTransfer         |
+| ProductAbstractTypeConditions       | transfer | created | src/Generated/Shared/Transfer/ProductAbstractTypeConditionsTransfer       |
+| ProductPayload                      | transfer | created | src/Generated/Shared/Transfer/ProductPayloadTransfer                      |
+| ProductPageSearch                   | transfer | created | src/Generated/Shared/Transfer/ProductPageSearchTransfer                   |
+| ProductPageLoad                     | transfer | created | src/Generated/Shared/Transfer/ProductPageLoadTransfer                     |
 | DataImporterConfiguration           | transfer | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer           |
 | DataImporterDataSourceConfiguration | transfer | created | src/Generated/Shared/Transfer/DataImporterDataSourceConfigurationTransfer |
-| OrderCriteria                       | transfer | created | src/Generated/Shared/Transfer/OrderCriteriaTransfer                       |
-| OrderConditions                     | transfer | created | src/Generated/Shared/Transfer/OrderConditionsTransfer                     |
-| MailRecipient                       | transfer | created | src/Generated/Shared/Transfer/MailRecipientTransfer                       |
-| CommentsRequest                     | transfer | created | src/Generated/Shared/Transfer/CommentsRequestTransfer                     |
-| StateMachineProcess                 | transfer | created | src/Generated/Shared/Transfer/StateMachineProcessTransfer                 |
-| OrderCollection                     | transfer | created | src/Generated/Shared/Transfer/OrderCollectionTransfer                     |
-| CompanyUserCriteriaFilter           | transfer | created | src/Generated/Shared/Transfer/CompanyUserCriteriaFilterTransfer           |
-| MailTemplate                        | transfer | created | src/Generated/Shared/Transfer/MailTemplateTransfer                        |
-| StateMachineItem                    | transfer | created | src/Generated/Shared/Transfer/StateMachineItemTransfer                    |
-| CompanyUserCollection               | transfer | created | src/Generated/Shared/Transfer/CompanyUserCollectionTransfer               |
-| DashboardResponse                   | transfer | created | src/Generated/Shared/Transfer/DashboardResponseTransfer                   |
-| DashboardComponentInquiry           | transfer | created | src/Generated/Shared/Transfer/DashboardComponentInquiryTransfer           |
-| DashboardRequest                    | transfer | created | src/Generated/Shared/Transfer/DashboardRequestTransfer                    |
-| SspAsset                            | transfer | created | src/Generated/Shared/Transfer/SspAssetTransfer                            |
-| SspAssetCollection                  | transfer | created | src/Generated/Shared/Transfer/SspAssetCollectionTransfer                  |
-| SspAssetConditions                  | transfer | created | src/Generated/Shared/Transfer/SspAssetConditionsTransfer                  |
-| SspAssetCriteria                    | transfer | created | src/Generated/Shared/Transfer/SspAssetCriteriaTransfer                    |
-| FileCollection                      | transfer | created | src/Generated/Shared/Transfer/FileCollectionTransfer                      |
-| SspAssetInclude                     | transfer | created | src/Generated/Shared/Transfer/SspAssetIncludeTransfer                     |
+| DataImporterReaderConfiguration     | transfer | created | src/Generated/Shared/Transfer/DataImporterReaderConfigurationTransfer     |
+| DataImporterReport                  | transfer | created | src/Generated/Shared/Transfer/DataImporterReportTransfer                  |
+| Sort                                | transfer | created | src/Generated/Shared/Transfer/SortTransfer                                |
+| Pagination                          | transfer | created | src/Generated/Shared/Transfer/PaginationTransfer                          |
+| CartChange                          | transfer | created | src/Generated/Shared/Transfer/CartChangeTransfer                          |
+| Shipment                            | transfer | updated | src/Generated/Shared/Transfer/ShipmentTransfer                            |
+| FacetConfig                         | transfer | created | src/Generated/Shared/Transfer/FacetConfigTransfer                         |
+| ProductOfferStorage                 | transfer | created | src/Generated/Shared/Transfer/ProductOfferStorageTransfer                 |
+| ServiceStorage                      | transfer | created | src/Generated/Shared/Transfer/ServiceStorageTransfer                      |
+| ServicePointStorage                 | transfer | created | src/Generated/Shared/Transfer/ServicePointStorageTransfer                 |
+| Address                             | transfer | created | src/Generated/Shared/Transfer/AddressTransfer                             |
+| ServicePointSearchCollection        | transfer | created | src/Generated/Shared/Transfer/ServicePointSearchCollectionTransfer        |
+| ServicePointSearchRequest           | transfer | created | src/Generated/Shared/Transfer/ServicePointSearchRequestTransfer           |
+| ServicePointSearch                  | transfer | created | src/Generated/Shared/Transfer/ServicePointSearchTransfer                  |
+| SaveOrder                           | transfer | created | src/Generated/Shared/Transfer/SaveOrderTransfer                           |
+| Customer                            | transfer | updated | src/Generated/Shared/Transfer/CustomerTransfer                            |
+| CompanyBusinessUnitCollection       | transfer | created | src/Generated/Shared/Transfer/CompanyBusinessUnitCollectionTransfer       |
+| CompanyBusinessUnitCriteriaFilter   | transfer | created | src/Generated/Shared/Transfer/CompanyBusinessUnitCriteriaFilterTransfer   |
+| FilterField                         | transfer | created | src/Generated/Shared/Transfer/FilterFieldTransfer                         |
+| CompanyUser                         | transfer | updated | src/Generated/Shared/Transfer/CompanyUserTransfer                         |
+| CompanyBusinessUnit                 | transfer | updated | src/Generated/Shared/Transfer/CompanyBusinessUnitTransfer                 |
+| Company                             | transfer | updated | src/Generated/Shared/Transfer/CompanyTransfer                             |
+| PageMap                             | transfer | created | src/Generated/Shared/Transfer/PageMapTransfer                             |
 
-{% endinfo_block %}
-
-## Add state machine configuration
-
-Create an XML configuration file for the state machine in `config/Zed/StateMachine/SspInquiry/SspInquiryDefaultStateMachine.xml`:
-
-```xml
-<?xml version="1.0"?>
-<statemachine
-    xmlns="spryker:state-machine-01"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="spryker:state-machine-01 http://static.spryker.com/state-machine-01.xsd"
->
-    <process name="SspInquiryDefaultStateMachine" main="true">
-
-        <states>
-            <state name="created"/>
-            <state name="pending"/>
-            <state name="in_review"/>
-            <state name="canceled"/>
-            <state name="approved"/>
-            <state name="rejected"/>
-            <state name="closed"/>
-        </states>
-        <transitions>
-            <transition happy="true">
-                <source>created</source>
-                <target>pending</target>
-                <event>initiate</event>
-            </transition>
-            <transition happy="true">
-                <source>pending</source>
-                <target>in_review</target>
-                <event>start_review</event>
-            </transition>
-            <transition happy="true">
-                <source>pending</source>
-                <target>canceled</target>
-                <event>cancel</event>
-            </transition>
-            <transition>
-                <source>in_review</source>
-                <target>approved</target>
-                <event>approve</event>
-            </transition>
-            <transition>
-                <source>in_review</source>
-                <target>rejected</target>
-                <event>reject</event>
-            </transition>
-        </transitions>
-        <events>
-            <event name="initiate" onEnter="true"/>
-            <event name="start_review" manual="true"/>
-            <event name="cancel" manual="true"/>
-            <event name="approve" manual="true" command="SspInquiry/Approve"/>
-            <event name="reject" manual="true" command="SspInquiry/Reject"/>
-        </events>
-    </process>
-
-</statemachine>
-```
-
-{% info_block warningBox "Verification" %}
-Verification will be possible after the integration of the `SspInquiryStateMachineHandlerPlugin`.
 {% endinfo_block %}
 
 ## Configure navigation
 
-Add the `Inquiries` section to `navigation.xml`:
+Add the `Services` and `Offers` sections to `navigation.xml`:
 
 **config/Zed/navigation.xml**
 
@@ -323,11 +265,23 @@ Add the `Inquiries` section to `navigation.xml`:
             <action>index</action>
         </ssp-service-management>
     </sales>
+    <product-offer-gui>
+        <label>Offers</label>
+        <title>Offers</title>
+        <bundle>product-offer-gui</bundle>
+        <controller>list</controller>
+        <action>index</action>
+    </product-offer-gui>
 </config>
 ```
 
 {% info_block warningBox "Verification" %}
-Login to the backoffice. Make sure the `Inquiries` section is visible in the navigation menu under `Sales` section.
+
+Make sure the following menu items are available in the Back Office navigation:
+
+- **Sales** > **Services**
+- **Marketplace** > **Offers**
+
 {% endinfo_block %}
 
 ## Add translations
@@ -397,64 +351,119 @@ ssp_service_management.list.field.business_unit,Business Unit,en_US
 ssp_service_management.list.field.business_unit,Geschäftsbereich,de_DE
 ssp_service_management.list.button.view,View,en_US
 ssp_service_management.list.button.view,Ansehen,de_DE
+ssp_service_management.product.no_shipment_types_available,Keine Versandarten für dieses Produkt verfügbar.,de_DE
+ssp_service_management.product.no_shipment_types_available,No shipping types available for this product.,en_US
+ssp_service_management.product.shipment_types,Versandarten,de_DE
+ssp_service_management.product.shipment_types,Shipment Types,en_US
+ssp_service_management.product.select_service_point,Wählen Sie einen Servicepunkt,de_DE
+ssp_service_management.product.select_service_point,Select a service point,en_US
+ssp_service_management.product.service_point_required,Ein Servicepunkt ist für dieses Produkt erforderlich,de_DE
+ssp_service_management.product.service_point_required,A service point is required for this product,en_US
+ssp_service_management.cart_item.service_point.name,Service point,en_US
+ssp_service_management.cart_item.service_point.name,Servicepunkt,de_DE
+ssp_service_management.product.service_date_time,Choose date and time,en_US
+ssp_service_management.product.service_date_time,Wählen Sie Datum und Uhrzeit,de_DE
+product.filter.product-abstract-types,Product Abstract Types,en_US
+product.filter.product-abstract-types,Produktabstraktsarten,de_DE
 ```
-2. Append the shipment.csv:
+
+2. Append `shipment.csv`:
+
 ```csv
 on-site-service,On-Site Service,On-Site Service,Tax Exempt
 ```
-3. Append the shipment_type.csv:
+
+3. Append `shipment_type.csv`:
+
 ```csv
 on-site-service,On-Site Service,1
 ```
-4. Append the service.csv:
+
+4. Append `service.csv`:
+
 ```csv
 s3,sp1,on-site-service,1
 ```
-5. Append the service_type.csv:
+
+5. Append `service_type.csv`:
+
 ```csv
 On-Site Service,on-site-service
 ```
-6. Append the shipment_method_shipment_type.csv:
+
+6. Append `shipment_method_shipment_type.csv`:
+
 ```csv
 on-site-service,on-site-service
 ```
-7. Append the shipment_type_service_type.csv:
+
+7. Append `shipment_type_service_type.csv`:
+
 ```csv
 on-site-service,on-site-service
 ```
-8. Append the shipment_method_store.csv:
+
+8. Append `shipment_method_store.csv`:
+
 ```csv
 on-site-service,DE,EUR,,0
 ```
-9. Append the product_abstract_product_abstract_type.csv:
+
+9. Append `product_abstract_product_abstract_type.csv`:
+
 ```csv
 abstract_sku,product_abstract_type_key
 001,product
 666,service
 ```
-11. Append the product_abstract_type.csv:
+
+11. Append `product_abstract_type.csv`:
+
 ```csv
 key,name
 product,product
 service,service
 ```
-12. Append the shipment_type_store.csv:
+
+12. Append `shipment_type_store.csv`:
+
 ```csv
 on-site-service,DE
 ```
-13. Append the shipment_price.csv:
+
+13. Append `shipment_price.csv`:
+
 ```csv
 on-site-service,DE,EUR,,0
 ```
-14. Append the product_shipment_type.csv:
+
+14. Append `product_shipment_type.csv`:
+
 ```csv
 concrete_sku,shipment_type_key
 001_25904006,delivery
 ```
 
+## Change the data import recipes
+
+1. Enable the `product-shipment-type` and `product-abstract-product-abstract-type` data imports in the following files:
+
+- `data/import/local/full_AT.yml`
+- `data/import/local/full_DE.yml`
+- `data/import/local/full_EU.yml`
+- `data/import/local/full_US.yml`
+
+```yaml
+- data_entity: product-shipment-type
+  source: data/import/common/common/product_shipment_type.csv
+
+- data_entity: product-abstract-product-abstract-type
+  source: data/import/common/common/product_abstract_product_abstract_type.csv
+```
+
 ## Import data
 
-Import glossary and demo data required for the feature:
+Import glossary and demo data:
 
 ```bash
 console data:import glossary
@@ -474,75 +483,134 @@ console data:import shipment
 ```
 
 {% info_block warningBox "Verification" %}
-Check the data is present in the database.
+
+* Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
+* Make sure the following tables contain the imported data:
+    - `spy_product_shipment_type`
+    - `spy_sales_product_abstract_type`
+    - `spy_sales_order_item_product_abstract_type`
+    - `spy_product_abstract_type`
+    - `spy_product_abstract_to_product_abstract_type`
+
 {% endinfo_block %}
 
----
-
-### Set up behavior
-
-| PLUGIN                                     | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                                           |
-|--------------------------------------------|------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------|
-| CreateSspInquiryPermissionPlugin           | Allows creating inquiries.                                 |               | SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission                        |
-| ViewBusinessUnitSspInquiryPermissionPlugin | Allows access to inquiries in the same business unit.      |               | SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission                        |
-| ViewCompanySspInquiryPermissionPlugin      | Allows access to inquiries in the same company.            |               | SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission                        |
-| SspInquiryRouteProviderPlugin              | Provides Yves routes for SSP files feature.                |               | SprykerFeature\Yves\SspInquiryManagement\Plugin\Router                              |
-| SspInquiryRestrictionHandlerPlugin         | Restricts access to inquiries pages for non-company users. |               | SprykerFeature\Yves\SspInquiryManagement\Plugin\ShopApplication                     |
-| BytesTwigPlugin                            | Adds `format_bytes` twig function.                         |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Twig                                |
-| SspInquiryDataImportPlugin                 | Introduces import type `ssp-inquiry`                       |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\DataImport             |
-| SspInquiryManagementFilePreDeletePlugin    | Ensures the files are deleted when the inquiry is removed. |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\FileManager            |
-| SspInquiryApprovedMailTypeBuilderPlugin    | Sends email on inquiry approval.                           |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\Mail                   |
-| SspInquiryRejectedMailTypeBuilderPlugin    | Sends email on inquiry rejection.                          |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\Mail                   |
-| SspInquiryDashboardDataProviderPlugin      | Adds inquiries table to the SSP Dashboard.                 |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspDashboardManagement |
-| SspInquirySspAssetManagementExpanderPlugin | Adds inquiries table to Assets.                            |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspAssetManagement     |
-| SspInquiryStateMachineHandlerPlugin        | StateMachine handler for inquiry processing.               |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\StateMachine           |
-| ApproveSspInquiryCommandPlugin             | StateMachine command that handles the inquiry approval.    |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspInquiryManagement   |
-| RejectSspInquiryCommandPlugin              | StateMachine command that handles the inquiry rejection.   |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspInquiryManagement   |
-| CreateOrderSspInquiryLinkWidget            | Provides button to create an inquiry for an order.         |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
-| DashboardInquiryWidget                     | Provides the inquiries table for the Dashboard.            |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
-| SspInquiryListWidget                       | Provides the inquiries table.                              |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
-| SspInquiryMenuItemWidget                   | Provides a customer menu item for the inquiries.           |               | SprykerFeature\Yves\SspInquiryManagement\Widget                                     |
 
 
-Update your Zed dependency providers.
+## Set up behavior
 
-**src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
+| PLUGIN                                                     | SPECIFICATION                                                                                                                              | PREREQUISITES | NAMESPACE                                                                      |
+|------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------|
+| ProductAbstractTypeFacetConfigTransferBuilderPlugin        | Configures a facet filter for product abstract types as an enumeration type with multi-value support.                                      |            | SprykerFeature\Client\SspServiceManagement\Plugin\Catalog                      |
+| ShipmentTypeProductViewExpanderPlugin                      | Adds shipment type information to product view based on provided shipment type identifiers.                                                |            | SprykerFeature\Client\SspServiceManagement\Plugin\ProductStorage               |
+| ProductOfferPreAddToCartPlugin                             | Adds the product offer reference to an item during the add-to-cart process.                                                                |            | SprykerFeature\Yves\SspServiceManagement\Plugin\CartPage                       |
+| ServicePointPreAddToCartPlugin                             | Associates a service point with a cart item using a provided product offer reference and service point UUID.                               |            | SprykerFeature\Yves\SspServiceManagement\Plugin\CartPage                       |
+| ShipmentTypePreAddToCartPlugin                             | Associates a shipment type with a cart item during the add-to-cart process.                                                                |            | SprykerFeature\Yves\SspServiceManagement\Plugin\CartPage                       |
+| ServiceDateTimePreAddToCartPlugin                          | Sets the service date and time in item metadata when the "scheduled at" parameter is provided during the add-to-cart process.              |            | SprykerFeature\Yves\SspServiceManagement\Plugin\CartPage                       |
+| SspServiceManagementPageRouteProviderPlugin                | Defines and adds routes for managing service points, searching, listing customer services, updating service times, and canceling services. |            | SprykerFeature\Yves\SspServiceManagement\Plugin\Router                         |
+| ProductAbstractTypeProductAbstractPostCreatePlugin         | Adds product abstract type information after creating a product abstract.                                                                  |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Product           |
+| ProductAbstractTypeProductAbstractAfterUpdatePlugin        | Updates product abstract type information after updating a product abstract.                                                               |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Product           |
+| ShipmentTypeProductConcretePostCreatePlugin                | Adds shipment type information after creating a product concrete.                                                                          |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Product           |
+| ShipmentTypeProductConcretePostUpdatePlugin                | Updates shipment type information after updating a product concrete.                                                                       |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Product           |
+| ShipmentTypeProductConcreteExpanderPlugin                  | Expands product concrete data with shipment type information.                                                                              |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Product           |
+| ProductAbstractTypeProductAbstractExpanderPlugin           | Expands product abstract data with product abstract type information.                                                                      |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Product           |
+| ProductAbstractTypeProductPageDataExpanderPlugin           | Expands product page data with product abstract type information.                                                                          |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductPageSearch |
+| ProductAbstractTypeProductPageDataLoaderPlugin             | Loads product abstract type data for product page search.                                                                                  |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductPageSearch |
+| ProductAbstractTypeMapExpanderPlugin                       | Expands product abstract map data with product abstract type information.                                                                  |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductPageSearch |
+| ShipmentTypeProductConcreteStorageCollectionExpanderPlugin | Expands product concrete storage collection with shipment type information.                                                                |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductStorage    |
+| SspShipmentTypeQuoteExpanderPlugin                         | Expands quote data with SSP shipment type information.                                                                                     |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Quote             |
+| ServicePointQuoteExpanderPlugin                            | Expands quote data with service point information.                                                                                         |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Quote             |
+| ScheduleTimeOrderItemExpanderPreSavePlugin                 | Expands order item data with scheduled time information before saving.                                                                     |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Sales             |
+| ProductTypeOrderItemsPostSavePlugin                        | Processes product type information for order items after saving an order.                                                                  |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Sales             |
+
+**src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 
 ```php
-use Spryker\Zed\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
-use SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission\CreateSspInquiryPermissionPlugin;
-use SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission\ViewBusinessUnitSspInquiryPermissionPlugin;
-use SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission\ViewCompanySspInquiryPermissionPlugin;
 
-class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
+declare(strict_types = 1);
+
+namespace Pyz\Client\Catalog;
+
+use Spryker\Client\Catalog\CatalogDependencyProvider as SprykerCatalogDependencyProvider;
+use SprykerFeature\Client\SspServiceManagement\Plugin\Catalog\ProductAbstractTypeFacetConfigTransferBuilderPlugin;
+
+class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 {
-    protected function getPermissionPlugins(): array
+    /**
+     * @return array<\Spryker\Client\Catalog\Dependency\Plugin\FacetConfigTransferBuilderPluginInterface>
+     */
+    protected function getFacetConfigTransferBuilderPlugins(): array
     {
         return [
-            new CreateSspInquiryPermissionPlugin(),
-            new ViewBusinessUnitSspInquiryPermissionPlugin(),
-            new ViewCompanySspInquiryPermissionPlugin(),
+            new ProductAbstractTypeFacetConfigTransferBuilderPlugin(),
         ];
+    }
+    
+    /**
+     * @return array<string, array<\Spryker\Client\Catalog\Dependency\Plugin\FacetConfigTransferBuilderPluginInterface>>
+     */
+    protected function getFacetConfigTransferBuilderPluginVariants(): array
+    {
+        return [
+            SearchHttpConfig::TYPE_SEARCH_HTTP => [
+                new ProductAbstractTypeFacetConfigTransferBuilderPlugin(),
+            ],
+      ];
     }
 }
 ```
 
-**src/Pyz/Client/Permission/PermissionDependencyProvider.php**
+**src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php**
 
 ```php
-use Spryker\Yves\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
-use SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission\CreateSspInquiryPermissionPlugin;
-use SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission\ViewBusinessUnitSspInquiryPermissionPlugin;
-use SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission\ViewCompanySspInquiryPermissionPlugin;
 
-class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
+declare(strict_types = 1);
+
+namespace Pyz\Client\ProductStorage;
+
+use SprykerFeature\Client\SspServiceManagement\Plugin\ProductStorage\ShipmentTypeProductViewExpanderPlugin;
+
+class ProductStorageDependencyProvider extends SprykerProductStorageDependencyProvider
 {
-    protected function getPermissionPlugins(): array
+    /**
+     * @return array<\Spryker\Client\ProductStorage\Dependency\Plugin\ProductViewExpanderPluginInterface>
+     */
+    protected function getProductViewExpanderPlugins(): array
+    {
+        /** @var array<\Spryker\Client\ProductStorage\Dependency\Plugin\ProductViewExpanderPluginInterface> $plugins */
+        $plugins = [
+            new ShipmentTypeProductViewExpanderPlugin(),
+        ];
+
+        return $plugins;
+}
+```
+
+**src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
+
+```php
+
+declare(strict_types = 1);
+
+namespace Pyz\Yves\CartPage;
+
+use SprykerShop\Yves\CartPage\CartPageDependencyProvider as SprykerCartPageDependencyProvider;
+use SprykerFeature\Yves\SspServiceManagement\Plugin\CartPage\ProductOfferPreAddToCartPlugin;
+use SprykerFeature\Yves\SspServiceManagement\Plugin\CartPage\ServiceDateTimePreAddToCartPlugin;
+use SprykerFeature\Yves\SspServiceManagement\Plugin\CartPage\ServicePointPreAddToCartPlugin;
+use SprykerFeature\Yves\SspServiceManagement\Plugin\CartPage\ShipmentTypePreAddToCartPlugin;
+
+class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\CartPageExtension\Dependency\Plugin\PreAddToCartPluginInterface>
+     */
+    protected function getPreAddToCartPlugins(): array
     {
         return [
-            new CreateSspInquiryPermissionPlugin(),
-            new ViewBusinessUnitSspInquiryPermissionPlugin(),
-            new ViewCompanySspInquiryPermissionPlugin(),
+            new ProductOfferPreAddToCartPlugin(),
+            new ServicePointPreAddToCartPlugin(),
+            new ShipmentTypePreAddToCartPlugin(),
+            new ServiceDateTimePreAddToCartPlugin(),
         ];
     }
 }
@@ -556,7 +624,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 namespace Pyz\Yves\Router;
 
 use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
-use SprykerFeature\Yves\SspInquiryManagement\Plugin\Router\SspInquiryRouteProviderPlugin;
+use SprykerFeature\Yves\SspServiceManagement\Plugin\Router\SspServiceManagementPageRouteProviderPlugin;
 
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
@@ -566,40 +634,40 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
     protected function getRouteProvider(): array
     {
         return [
-            new SspInquiryRouteProviderPlugin(),
+            new SspServiceManagementPageRouteProviderPlugin(),
         ];
     }
 }
 ```
 
-**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+**src/Pyz/Zed/Cart/CartDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Yves\ShopApplication;
+namespace Pyz\Zed\Cart;
 
-use SprykerFeature\Yves\SspInquiryManagement\Plugin\ShopApplication\SspInquiryRestrictionHandlerPlugin;
-use SprykerFeature\Yves\SspInquiryManagement\Widget\SspInquiryListWidget;
-use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+use Spryker\Zed\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Cart\ProductAbstactTypeItemExpanderPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Cart\ServicePointItemExpanderPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Cart\SspShipmentTypeItemExpanderPlugin;
 
-class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+class CartDependencyProvider extends SprykerCartDependencyProvider
 {
-    protected function getGlobalWidgets(): array
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface>
+     */
+    protected function getExpanderPlugins(Container $container): array
     {
         return [
-            SspInquiryListWidget::class,
-        ];
-    }
-    
-    protected function getFilterControllerEventSubscriberPlugins(): array
-    {
-        return [
-            new SspInquiryRestrictionHandlerPlugin(),
+            new SspShipmentTypeItemExpanderPlugin(),
+            new ProductAbstactTypeItemExpanderPlugin(),
+            new ServicePointItemExpanderPlugin(),
         ];
     }
 }
-
 ```
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
@@ -610,7 +678,9 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 namespace Pyz\Zed\DataImport;
 
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\DataImport\SspInquiryDataImportPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\DataImport\ProductAbstractToProductAbstractTypeDataImportPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\DataImport\ProductAbstractTypeDataImportPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\DataImport\ProductShipmentTypeDataImportPlugin;
 
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
@@ -620,176 +690,345 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
     protected function getDataImporterPlugins(): array
     {
         return [
-            new SspInquiryDataImportPlugin(),
+           new ProductShipmentTypeDataImportPlugin(),
+           new ProductAbstractTypeDataImportPlugin(),
+           new ProductAbstractToProductAbstractTypeDataImportPlugin(),
         ];
     }
 }
 ```
 
-**src/Pyz/Zed/FileManager/FileManagerDependencyProvider.php**
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
 ```php
 <?php
+namespace Pyz\Zed\Console;
 
-namespace Pyz\Zed\FileManager;
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
+use SprykerFeature\Zed\SspServiceManagement\SspServiceManagementConfig;
 
-use Spryker\Zed\FileManager\FileManagerDependencyProvider as SprykerFileManagerDependencyProvider;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\FileManager\SspInquiryManagementFilePreDeletePlugin;
-
-class FileManagerDependencyProvider extends SprykerFileManagerDependencyProvider
+/**
+ * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+ * @method \Pyz\Zed\Console\ConsoleConfig getConfig()
+ */
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
     /**
-     * @return list<\Spryker\Zed\FileManagerExtension\Dependency\Plugin\FilePreDeletePluginInterface>
+     * @var string
      */
-    protected function getFilePreDeletePlugins(): array
+    protected const COMMAND_SEPARATOR = ':';
+
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container): array
     {
         return [
-            new SspInquiryManagementFilePreDeletePlugin(),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . SspServiceManagementConfig::IMPORT_TYPE_PRODUCT_SHIPMENT_TYPE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . SspServiceManagementConfig::IMPORT_TYPE_PRODUCT_ABSTRACT_TYPE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . SspServiceManagementConfig::IMPORT_TYPE_PRODUCT_ABSTRACT_TO_PRODUCT_ABSTRACT_TYPE),         
         ];
     }
+
 }
 ```
 
-**src/Pyz/Zed/Mail/MailDependencyProvider.php**
+**src/Pyz/Zed/Product/ProductDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Zed\Mail;
+namespace Pyz\Zed\Product;
 
-use Spryker\Zed\Mail\MailDependencyProvider as SprykerMailDependencyProvider;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\Mail\SspInquiryApprovedMailTypeBuilderPlugin;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\Mail\SspInquiryRejectedMailTypeBuilderPlugin;
+use Spryker\Zed\Product\ProductDependencyProvider as SprykerProductDependencyProvider;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Product\ProductAbstractTypeProductAbstractAfterUpdatePlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Product\ProductAbstractTypeProductAbstractPostCreatePlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Product\ProductAbstractTypesProductAbstractExpanderPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Product\ShipmentTypeProductConcreteExpanderPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Product\ShipmentTypeProductConcretePostCreatePlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Product\ShipmentTypeProductConcretePostUpdatePlugin;
 
-class MailDependencyProvider extends SprykerMailDependencyProvider
-{
-    protected function getMailTypeBuilderPlugins(): array
-    {
-        return [
-            new SspInquiryApprovedMailTypeBuilderPlugin(),
-            new SspInquiryRejectedMailTypeBuilderPlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Zed/SspDashboardManagement/SspDashboardManagementDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\SspDashboardManagement;
-
-use SprykerFeature\Zed\SspDashboardManagement\SspDashboardManagementDependencyProvider as SprykerSspDashboardManagementDependencyProvider;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspDashboardManagement\SspInquiryDashboardDataProviderPlugin;
-
-class SspDashboardManagementDependencyProvider extends SprykerSspDashboardManagementDependencyProvider
+class ProductDependencyProvider extends SprykerProductDependencyProvider
 {
     /**
-     * @return array<int, \SprykerFeature\Zed\SspDashboardManagement\Dependency\Plugin\DashboardDataProviderPluginInterface>
+     * The order of execution is important to support Inherited scope and sub-entity functionality
+     *
+     * @return array<\Spryker\Zed\ProductExtension\Dependency\Plugin\ProductAbstractPostCreatePluginInterface>
      */
-    protected function getDashboardDataProviderPlugins(): array
+    protected function getProductAbstractPostCreatePlugins(): array
     {
         return [
-            new SspInquiryDashboardDataProviderPlugin(),
+            new ProductAbstractTypeProductAbstractPostCreatePlugin(),
+        ];
+    }
+    
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\Product\Dependency\Plugin\ProductAbstractPluginUpdateInterface>
+     */
+    protected function getProductAbstractAfterUpdatePlugins(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
+    {
+        return [
+            new ProductAbstractTypeProductAbstractAfterUpdatePlugin(),
+        ];
+    }
+    
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\ProductExtension\Dependency\Plugin\ProductConcreteCreatePluginInterface>
+     */
+    protected function getProductConcreteAfterCreatePlugins(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
+    {
+        return [
+            new ShipmentTypeProductConcretePostCreatePlugin(),
+        ];
+    }
+    
+     /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\Product\Dependency\Plugin\ProductConcretePluginUpdateInterface>
+     */
+    protected function getProductConcreteAfterUpdatePlugins(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
+    {
+        return [
+            new ShipmentTypeProductConcretePostUpdatePlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\ProductExtension\Dependency\Plugin\ProductConcreteExpanderPluginInterface>
+     */
+    protected function getProductConcreteExpanderPlugins(): array
+    {
+        return [
+            new ShipmentTypeProductConcreteExpanderPlugin(),
         ];
     }
 }
 ```
 
-**src/Pyz/Zed/SspAssetManagement/SspAssetManagementDependencyProvider.php**
+**src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Zed\SspAssetManagement;
+namespace Pyz\Zed\ProductManagement;
 
-use SprykerFeature\Zed\SspAssetManagement\SspAssetManagementDependencyProvider as SprykerSspAssetManagementDependencyProvider;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspAssetManagement\SspInquirySspAssetManagementExpanderPlugin;
+use Spryker\Zed\ProductManagement\ProductManagementDependencyProvider as SprykerProductManagementDependencyProvider;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductManagement\ProductAbstractTypeFormExpanderPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductManagement\ProductAbstractTypeProductAbstractFormDataProviderPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductManagement\ProductAbstractTypeProductAbstractTransferMapperPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductManagement\ServiceDateTimeEnabledProductConcreteFormEditDataProviderExpanderPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductManagement\ServiceDateTimeEnabledProductConcreteFormExpanderPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductManagement\ServiceDateTimeEnabledProductFormTransferMapperExpanderPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductManagement\ShipmentTypeProductConcreteFormEditDataProviderExpanderPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductManagement\ShipmentTypeProductConcreteFormExpanderPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductManagement\ShipmentTypeProductFormTransferMapperExpanderPlugin;
 
-class SspAssetManagementDependencyProvider extends SprykerSspAssetManagementDependencyProvider
+class ProductManagementDependencyProvider extends SprykerProductManagementDependencyProvider
 {
     /**
-     * @return array<\SprykerFeature\Zed\SspAssetManagement\Dependency\Plugin\SspAssetManagementExpanderPluginInterface>
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteFormEditDataProviderExpanderPluginInterface>
      */
-    protected function getSspAssetManagementExpanderPlugins(): array
+    protected function getProductConcreteFormEditDataProviderExpanderPlugins(): array
     {
         return [
-            new SspInquirySspAssetManagementExpanderPlugin(),
+            new ShipmentTypeProductConcreteFormEditDataProviderExpanderPlugin(),
+            new ServiceDateTimeEnabledProductConcreteFormEditDataProviderExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductFormTransferMapperExpanderPluginInterface>
+     */
+    protected function getProductFormTransferMapperExpanderPlugins(): array
+    {
+        return [
+            new ShipmentTypeProductFormTransferMapperExpanderPlugin(),
+            new ServiceDateTimeEnabledProductFormTransferMapperExpanderPlugin(),
+        ];
+    }
+    
+     /**
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractTransferMapperPluginInterface>
+     */
+    protected function getProductAbstractTransferMapperPlugins(): array
+    {
+        return [
+            new ProductAbstractTypeProductAbstractTransferMapperPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractFormExpanderPluginInterface>
+     */
+    protected function getProductAbstractFormExpanderPlugins(): array
+    {
+        return [
+            new ProductAbstractTypeFormExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteFormExpanderPluginInterface>
+     */
+    protected function getProductConcreteFormExpanderPlugins(): array
+    {
+        return [
+            new ShipmentTypeProductConcreteFormExpanderPlugin(),
+            new ServiceDateTimeEnabledProductConcreteFormExpanderPlugin(),
+        ];
+    }
+    
+     /**
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractFormDataProviderExpanderPluginInterface>
+     */
+    protected function getProductAbstractFormDataProviderExpanderPlugins(): array
+    {
+        return [
+            new ProductAbstractTypeProductAbstractFormDataProviderPlugin(),
+        ];
+    }
+   
+}
+```
+
+**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductPageSearch;
+
+use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as SprykerProductPageSearchDependencyProvider;
+use SprykerFeature\Shared\SspServiceManagement\SspServiceManagementConfig;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductPageSearch\ProductAbstractTypeMapExpanderPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductPageSearch\ProductAbstractTypeProductPageDataExpanderPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductPageSearch\ProductAbstractTypeProductPageDataLoaderPlugin;
+
+class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\ProductPageSearch\Dependency\Plugin\ProductPageDataExpanderInterface>|array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductPageDataExpanderPluginInterface>
+     */
+    protected function getDataExpanderPlugins(): array
+    {
+        $dataExpanderPlugins = [];
+        $dataExpanderPlugins[SspServiceManagementConfig::PLUGIN_PRODUCT_ABSTRACT_TYPE_DATA] = new ProductAbstractTypeProductPageDataExpanderPlugin();
+
+        return $dataExpanderPlugins;
+    }
+    
+     /**
+     * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductPageDataLoaderPluginInterface>
+     */
+    protected function getDataLoaderPlugins(): array
+    {
+        return [
+
+            new ProductAbstractTypeProductPageDataLoaderPlugin(),
+        ];
+    }
+    
+     /**
+     * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductAbstractMapExpanderPluginInterface>
+     */
+    protected function getProductAbstractMapExpanderPlugins(): array
+    {
+        return [
+            new ProductAbstractTypeMapExpanderPlugin(),
         ];
     }
 }
 ```
 
-**src/Pyz/Zed/StateMachine/StateMachineDependencyProvider.php**
+**src/Pyz/Zed/ProductStorage/ProductStorageDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Zed\StateMachine;
+namespace Pyz\Zed\ProductStorage;
 
-use Spryker\Zed\StateMachine\StateMachineDependencyProvider as SprykerStateMachineDependencyProvider;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\StateMachine\SspInquiryStateMachineHandlerPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\ProductStorage\ShipmentTypeProductConcreteStorageCollectionExpanderPlugin;
+use Spryker\Zed\ProductStorage\ProductStorageDependencyProvider as SprykerProductStorageDependencyProvider;
 
-class StateMachineDependencyProvider extends SprykerStateMachineDependencyProvider
+class ProductStorageDependencyProvider extends SprykerProductStorageDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\StateMachine\Dependency\Plugin\StateMachineHandlerInterface>
+     * @return array<\Spryker\Zed\ProductStorageExtension\Dependency\Plugin\ProductConcreteStorageCollectionExpanderPluginInterface>
      */
-    protected function getStateMachineHandlers(): array
+    protected function getProductConcreteStorageCollectionExpanderPlugins(): array
     {
         return [
-            new SspInquiryStateMachineHandlerPlugin(),
+            new ShipmentTypeProductConcreteStorageCollectionExpanderPlugin(),
         ];
     }
 }
 ```
 
-**src/Pyz/Zed/SspInquiryManagement/SspInquiryManagementDependencyProvider.php**
+**src/Pyz/Zed/Quote/QuoteDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Zed\SspInquiryManagement;
+namespace Pyz\Zed\Quote;
 
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspInquiryManagement\ApproveSspInquiryCommandPlugin;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\SspInquiryManagement\RejectSspInquiryCommandPlugin;
-use SprykerFeature\Zed\SspInquiryManagement\SspInquiryManagementDependencyProvider as SprykerSspInquiryManagementDependencyProvider;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Quote\ServicePointQuoteExpanderPlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Quote\SspShipmentTypeQuoteExpanderPlugin;
+use Spryker\Zed\ShipmentTypeCart\Communication\Plugin\Quote\ShipmentTypeQuoteExpanderPlugin;
 
-class SspInquiryManagementDependencyProvider extends SprykerSspInquiryManagementDependencyProvider
+class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {
+
     /**
-     * @return array<\Spryker\Zed\StateMachine\Dependency\Plugin\CommandPluginInterface>
+     * @return list<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteExpanderPluginInterface>
      */
-    protected function getStateMachineCommandPlugins(): array
+    protected function getQuoteExpanderPlugins(): array
     {
         return [
-            'SspInquiry/Approve' => new ApproveSspInquiryCommandPlugin(),
-            'SspInquiry/Reject' => new RejectSspInquiryCommandPlugin(),
+            new SspShipmentTypeQuoteExpanderPlugin(),
+            new ServicePointQuoteExpanderPlugin(),
         ];
     }
 }
 ```
 
-**src/Pyz/Zed/Twig/TwigDependencyProvider.php**
+**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Zed\Twig;
+namespace Pyz\Zed\Sales;
 
-use Spryker\Zed\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
-use SprykerFeature\Zed\SspInquiryManagement\Communication\Twig\BytesTwigPlugin;
+use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Sales\ProductTypeOrderItemsPostSavePlugin;
+use SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Sales\ScheduleTimeOrderItemExpanderPreSavePlugin;
 
-class TwigDependencyProvider extends SprykerTwigDependencyProvider
+class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
     /**
-     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface>
+     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPreSavePluginInterface>
      */
-    protected function getTwigPlugins(): array
+    protected function getOrderItemExpanderPreSavePlugins(): array
     {
         return [
-            new BytesTwigPlugin(),
+            new ScheduleTimeOrderItemExpanderPreSavePlugin(),
+        ];
+    }
+    
+     /**
+     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemsPostSavePluginInterface>
+     */
+    protected function getOrderItemsPostSavePlugins(): array
+    {
+        return [
+            new ProductTypeOrderItemsPostSavePlugin(),
         ];
     }
 }
@@ -797,9 +1036,42 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
+1. In the Back Office, go to **Catalog** > **Products**.
+2. Create an abstract product with a **service** product type.
+3. For the abstract product you've created, create a concrete product with the following settings:
+  * Enable **Service Date and Time**
+  * Add **Delivery** and **On-Site Service** shipment types
+  
+
+### B. Set Up Product Offers for the Service Product
+
+- **Create a Product Offer:**
+  - Generate one or more product offers for the service product in the backoffice.
+  - Verify that the offer creation form pre-populates with correct product information.
+
+- **Attach the Offer to Service Points:**
+  - Confirm that you can assign one or more service points (locations where the service is provided) to the product offer.
+  - Check that the list of available service points is updated and reflects the intended configuration.
+
+- **Add Shipment Type (On-Site Service) to the Offer:**
+  - Ensure that the product offer includes the on-site service shipment type.
+  - Validate that the offer details correctly display the assigned shipment type(s).
+
 {% endinfo_block %}
 
 ### Set up widgets
+
+Set up widgets as follows:
+
+1. Register the following plugins to enable widgets:
+
+| PLUGIN                                  | SPECIFICATION                                                                | PREREQUISITES | NAMESPACE                                       |
+|-----------------------------------------|------------------------------------------------------------------------------|---------------|-------------------------------------------------|
+| SspServiceMenuItemWidget                | Adds a menu item for accessing SSP services in the navigation.               |            | SprykerFeature\Yves\SspServiceManagement\Widget |
+| SspServiceChangeScheduledTimeLinkWidget | Provides a link to change the scheduled time for a specific service.         |            | SprykerFeature\Yves\SspServiceManagement\Widget |
+| ShipmentTypeServicePointSelectorWidget  | Displays a selector for choosing a service point based on the shipment type. |            | SprykerFeature\Yves\SspServiceManagement\Widget |
+| ServicePointNameForItemWidget           | Displays the name of the service point associated with a specific cart item. |            | SprykerFeature\Yves\SspServiceManagement\Widget |
+| ListItemsByShipmentTypeWidget           | Lists items in the cart grouped by their shipment type.                      |            | SprykerFeature\Yves\SspServiceManagement\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -808,32 +1080,94 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 namespace Pyz\Yves\ShopApplication;
 
-use SprykerFeature\Yves\SspInquiryManagement\Widget\CreateOrderSspInquiryLinkWidget;
-use SprykerFeature\Yves\SspInquiryManagement\Widget\DashboardInquiryWidget;
-use SprykerFeature\Yves\SspInquiryManagement\Widget\SspInquiryListWidget;
-use SprykerFeature\Yves\SspInquiryManagement\Widget\SspInquiryMenuItemWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+use SprykerFeature\Yves\SspServiceManagement\Widget\ListItemsByShipmentTypeWidget;
+use SprykerFeature\Yves\SspServiceManagement\Widget\ServicePointNameForItemWidget;
+use SprykerFeature\Yves\SspServiceManagement\Widget\ShipmentTypeServicePointSelectorWidget;
+use SprykerFeature\Yves\SspServiceManagement\Widget\SspServiceChangeScheduledTimeLinkWidget;
+use SprykerFeature\Yves\SspServiceManagement\Widget\SspServiceMenuItemWidget;
 
-/**
- * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
- */
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
-    /**
-     * @return array<string>
-     */
     protected function getGlobalWidgets(): array
     {
         return [
-            SspInquiryMenuItemWidget::class,
-            CreateOrderSspInquiryLinkWidget::class,
-            DashboardInquiryWidget::class,
-            SspInquiryListWidget::class,
+            SspServiceMenuItemWidget::class,
+            SspServiceChangeScheduledTimeLinkWidget::class,
+            ShipmentTypeServicePointSelectorWidget::class,
+            ServicePointNameForItemWidget::class,
+            ListItemsByShipmentTypeWidget::class,
         ];
     }
 }
 ```
 
+2. Enable Javascript and CSS changes:
+
+```bash
+console frontend:yves:build
+console frontend:zed:install-dependencies
+console frontend:zed:build
+```
+
 {% info_block warningBox "Verification" %}
 
+1. On the Storefront, use the search to find the service product you've created.
+  Make sure the product is available in the catalog.
+
+2. Click the product to open its details page. Make sure the following applies on the product details page:
+  - A service point selector is displayed
+  - A date and time selector is displayed
+  - Delivery and service-on-site shipment types are available
+
+3. Select a service point. 
+4. Select a service date and time.
+5. Add the product to cart.  
+6. Go to the cart page and make sure the following applies:
+  - The cart item displays the selected service point
+  - Items are grouped by shipment type
+  - All selected options (service point, date, and time) are clearly visible to the customer.
+
+- **Proceed with Checkout:**
+  - Go through the checkout process.
+  - Verify that the order placement completes without errors and that the order summary includes service-specific details.
+
+## 3. Post-Checkout – Service Scheduling and Order Management
+
+### A. Customer Profile (Storefront)
+
+- **Access the “Services” Section in the Profile:**
+  - After completing the order, navigate to the customer’s profile and open the **Services** tab.
+  - Verify that:
+    - The order-related service appears in the list with all associated details (scheduled date/time, product name, etc.).
+    - There is an option to change the scheduled date/time.
+    - Click on the view button to see the details of the order.
+    - On the order details page, confirm that the service point and shipment type are displayed correctly.
+    - You will see a button to change the scheduled time, and also to cancel the service.
+    - When changing the scheduled time, the updated information is saved and immediately reflected in the order view page.
+
+### B. Backoffice – Shop Owner Service Management
+
+- **Access the Services Module in Backoffice:**
+  - Log in as a shop owner or admin.
+  - Navigate to the Services section in the backoffice.
+  - Verify that:
+    - All service orders (from multiple customers) are listed correctly.
+    - Each service entry includes detailed information such as the product, customer, company, and scheduled date/time.
+    - Click on the order reference link to see the details of the order.
+    - There is a user interface element to modify the scheduled service date/time.
+    - Any changes made in the backoffice are propagated in the customer’s storefront profile.
+
+## 4. Catalog and Product Type Filter Verification
+
+- **Check Catalog Updates:**  
+  Confirm that the storefront catalog reflects the addition of the new service product.
+
+- **Verify the Product Type Filter:**
+  - Ensure that the filter control (usually part of the catalog sidebar or top navigation) includes options for filtering by product type.
+  - Verify that the default selection includes **Physical Product** and **Service**.
+  - Test filtering by each type independently to confirm that:
+    - When **Physical Product** is selected, only non-service products appear.
+    - When **Service** is selected, only service products are shown.
+    - When both are selected, the catalog shows the full list.
 {% endinfo_block %}

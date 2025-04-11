@@ -472,7 +472,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-1. On the Storefront, log in with the company user you've assignet the role to.
+1. On the Storefront, log in with the company user you've assigned the role to.
   Make sure the **My Assets** menu item is displayed.
 2. Go to **Customer Account** > **My Assets**.
 3. Click **Create Asset**.
@@ -487,33 +487,3 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
   Make sure the **My Assets** menu item is not displayed and you can't access the **My Assets** page.
 
 {% endinfo_block %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

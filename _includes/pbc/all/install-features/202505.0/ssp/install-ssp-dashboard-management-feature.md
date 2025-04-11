@@ -140,7 +140,7 @@ ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/defa
 
 ## Add twig template
 
-1. Create the file: 
+1. Create a new CMS template to be used for dashboard content sourced from the CMS:
 
 **src/Pyz/Shared/CmsBlock/Theme/default/template/title_and_content_block.twig**
 ```twig
@@ -175,12 +175,12 @@ console data:import cms-slot-block
 
 ## Set up behavior
 
-| PLUGIN                                                 | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                                           |
-|--------------------------------------------------------|---------------------------------------------------------------|---------------|---------------------------------------------------------------------|
-| ViewDashboardPermissionPlugin                          | Provides access to the dashboard page.                              |               | SprykerFeature\Shared\SspDashboardManagement\Plugin\Permission      |
-| CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin | Enables business unit-specific CMS blocks.               |               | SprykerFeature\Client\SspDashboardManagement\Plugin\CmsBlockStorage |
-| DashboardRouteProviderPlugin                           | Provides Yves routes for the SSP dashboard page.                  |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\Router            |
-| SspDashboardFilterControllerEventHandlerPlugin         | Restricts access to dashboard pages for non-company users.    |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\ShopApplication   |
+| PLUGIN                                                 | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                           |
+|--------------------------------------------------------|------------------------------------------------------------|---------------|---------------------------------------------------------------------|
+| ViewDashboardPermissionPlugin                          | Provides access to the dashboard page.                     |               | SprykerFeature\Shared\SspDashboardManagement\Plugin\Permission      |
+| CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin | Enables business unit-specific CMS blocks.                 |               | SprykerFeature\Client\SspDashboardManagement\Plugin\CmsBlockStorage |
+| DashboardRouteProviderPlugin                           | Provides Yves routes for the SSP dashboard page.           |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\Router            |
+| SspDashboardFilterControllerEventHandlerPlugin         | Restricts access to dashboard pages for non-company users. |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\ShopApplication   |
 
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
@@ -336,7 +336,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-1. On the Storefront, log in with the company user you've assignet the role to.
+1. On the Storefront, log in with the company user you've assigned the role to.
   Make sure the **Dashboard** menu item is displayed.
 2. Go to **Customer Account** > **Dashboard**. Make sure the page shows the following:
   * Correct company account information
@@ -345,40 +345,3 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
   Make sure the **Dashboard** menu item is not displayed and you can't access the **Dashboard** page.
 
 {% endinfo_block %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

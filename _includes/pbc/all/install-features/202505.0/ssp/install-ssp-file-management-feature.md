@@ -26,10 +26,10 @@ Make sure the following modules have been installed:
 
 ## Set up configuration
 
-| CONFIGURATION                                | SPECIFICATION                                                                                          | NAMESPACE                               |
-|----------------------------------------------|--------------------------------------------------------------------------------------------------------|-----------------------------------------|
-| FileSystemConstants::FILESYSTEM_SERVICE      | Flysystem configuration for file management.                                                           | Spryker\Shared\FileSystem               |
-| SspFileManagementConstants::STORAGE_NAME     | Flysystem SspFileManagement uses.                                                                      | SprykerFeature\Shared\SspFileManagement |
+| CONFIGURATION                                | SPECIFICATION                                                 | NAMESPACE                               |
+|----------------------------------------------|---------------------------------------------------------------|-----------------------------------------|
+| FileSystemConstants::FILESYSTEM_SERVICE      | Flysystem configuration for file management.                  | Spryker\Shared\FileSystem               |
+| SspFileManagementConstants::STORAGE_NAME     | Flysystem SspFileManagement used for uploaded files storage.  | SprykerFeature\Shared\SspFileManagement |
 
 **config/Shared/config_default.php**
 ```php
@@ -434,34 +434,3 @@ Make sure the **My Files** menu item is not displayed and you can't access the *
 
 
 {% endinfo_block %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

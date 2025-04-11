@@ -31,7 +31,7 @@ Make sure the following packages are now listed in `composer.lock`:
 
 ## Set up configuration
 
-Update your `config/Shared/config_default.php`, CI, or Docker equivalents:
+Update your `config/Shared/config_default.php`:
 
 | CONFIGURATION                                                                   | SPECIFICATION                                                                           | NAMESPACE                                  |
 |---------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------|
@@ -46,7 +46,6 @@ Update your `config/Shared/config_default.php`, CI, or Docker equivalents:
 | SspInquiryManagementConfig::getStorageName()                                    | Defines the Storage name for inquiry Flysystem files.                                   | SprykerFeature\Shared\SspInquiryManagement |
 | SalesConfig::getSalesDetailExternalBlocksUrls()                                 | Defines the list of URLs for rendering blocks in the order details page.                     | Spryker\Zed\Sales                          |
 | SspInquiryManagementConfig::getSspInquiryStatusClassMap()                       | Returns the inquiry status to СSS class name mapping used for status indicator styling. | SprykerFeature\Zed\SspInquiryManagement    |
-| SspInquiryManagementConfig::getPendingStatus()                                  | Identifies the status that will be considered `Pending`.                                | SprykerFeature\Zed\SspInquiryManagement    |
 | SspInquiryManagementConfig::getPendingStatus()                                  | Identifies the status that will be considered `Pending`.                                | SprykerFeature\Zed\SspInquiryManagement    |
 
 **config/Shared/config_default.php**
@@ -992,49 +991,3 @@ Verify inquiries in the Back Office:
   Make sure the inquiry status changes to **In review**.
 
 {% endinfo_block %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

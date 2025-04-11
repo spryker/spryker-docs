@@ -3,11 +3,11 @@ This document describes how to install the Self-Service Portal (SSP) SSP Inquiry
 
 ## Prerequisites
 
-| FEATURE              | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
-|-------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core      | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Click and Collect | {{site.version}} | [Enable Click and Collect](/docs/pbc/all/service-point-management/{{site.version}}/unified-commerce/enable-click-collect.html)                                      |
-| Self-Service Portal      | {{site.version}} | [Install Self-Service Portal](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)                                                         |
+| FEATURE             | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
+|---------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Click and Collect   | {{site.version}} | [Enable Click and Collect](/docs/pbc/all/service-point-management/{{site.version}}/unified-commerce/enable-click-collect.html)                                      |
+| Self-Service Portal | {{site.version}} | [Install Self-Service Portal](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)                                                         |
 
 ## Install the required modules
 
@@ -29,9 +29,9 @@ Make sure the following package is listed in `composer.lock`:
 
 ## Set up configuration
 
-| CONFIGURATION                                                      | SPECIFICATION                                                                        | NAMESPACE                           |
-|--------------------------------------------------------------------|--------------------------------------------------------------------------------------|-------------------------------------|
-| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES | Shipment types supported by the Click&Collect feature.                       | Pyz\Yves\ClickAndCollectPageExample |
+| CONFIGURATION                                                      | SPECIFICATION                                                                  | NAMESPACE                           |
+|--------------------------------------------------------------------|--------------------------------------------------------------------------------|-------------------------------------|
+| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES | Shipment types supported by the Click&Collect feature.                         | Pyz\Yves\ClickAndCollectPageExample |
 | SspServiceManagementConfig::getDefaultMerchantReference()          | Reference of a merchant used for creating product offers from the Back Office. | Pyz\Zed\SspServiceManagement        |
 | DataImportConfig::getFullImportTypes()                             | List of data import entities to be imported during a full import.              | Pyz\Zed\DataImport                  |
 
@@ -501,11 +501,11 @@ console data:import shipment
 | PLUGIN                                                     | SPECIFICATION                                                                                                                              | PREREQUISITES | NAMESPACE                                                                      |
 |------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------|
 | ProductAbstractTypeFacetConfigTransferBuilderPlugin        | Configures a facet filter for product abstract types as an enumeration type with multi-value support.                                      |            | SprykerFeature\Client\SspServiceManagement\Plugin\Catalog                      |
-| ShipmentTypeProductViewExpanderPlugin                      | Adds shipment type information to product view based on provided shipment type identifiers.                                    |            | SprykerFeature\Client\SspServiceManagement\Plugin\ProductStorage               |
-| ProductOfferPreAddToCartPlugin                             | Adds the product offer reference to an item during the add-to-cart process.                                                               |            | SprykerFeature\Yves\SspServiceManagement\Plugin\CartPage                       |
-| ServicePointPreAddToCartPlugin                             | Associates a service point with a cart item using a provided product offer reference and service point UUID.                        |            | SprykerFeature\Yves\SspServiceManagement\Plugin\CartPage                       |
-| ShipmentTypePreAddToCartPlugin                             | Associates a shipment type with a cart item during the add-to-cart process.                                                              |            | SprykerFeature\Yves\SspServiceManagement\Plugin\CartPage                       |
-| ServiceDateTimePreAddToCartPlugin                          | Sets the service date and time in item metadata when the "scheduled at" parameter is provided during the add-to-cart process.          |            | SprykerFeature\Yves\SspServiceManagement\Plugin\CartPage                       |
+| ShipmentTypeProductViewExpanderPlugin                      | Adds shipment type information to product view based on provided shipment type identifiers.                                                |            | SprykerFeature\Client\SspServiceManagement\Plugin\ProductStorage               |
+| ProductOfferPreAddToCartPlugin                             | Adds the product offer reference to an item during the add-to-cart process.                                                                |            | SprykerFeature\Yves\SspServiceManagement\Plugin\CartPage                       |
+| ServicePointPreAddToCartPlugin                             | Associates a service point with a cart item using a provided product offer reference and service point UUID.                               |            | SprykerFeature\Yves\SspServiceManagement\Plugin\CartPage                       |
+| ShipmentTypePreAddToCartPlugin                             | Associates a shipment type with a cart item during the add-to-cart process.                                                                |            | SprykerFeature\Yves\SspServiceManagement\Plugin\CartPage                       |
+| ServiceDateTimePreAddToCartPlugin                          | Sets the service date and time in item metadata when the "scheduled at" parameter is provided during the add-to-cart process.              |            | SprykerFeature\Yves\SspServiceManagement\Plugin\CartPage                       |
 | SspServiceManagementPageRouteProviderPlugin                | Defines and adds routes for managing service points, searching, listing customer services, updating service times, and canceling services. |            | SprykerFeature\Yves\SspServiceManagement\Plugin\Router                         |
 | ProductAbstractTypeProductAbstractPostCreatePlugin         | Adds product abstract type information after creating a product abstract.                                                                  |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Product           |
 | ProductAbstractTypeProductAbstractAfterUpdatePlugin        | Updates product abstract type information after updating a product abstract.                                                               |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Product           |
@@ -520,7 +520,7 @@ console data:import shipment
 | SspShipmentTypeQuoteExpanderPlugin                         | Expands quote data with SSP shipment type information.                                                                                     |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Quote             |
 | ServicePointQuoteExpanderPlugin                            | Expands quote data with service point information.                                                                                         |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Quote             |
 | ScheduleTimeOrderItemExpanderPreSavePlugin                 | Expands order item data with scheduled time information before saving.                                                                     |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Sales             |
-| ProductTypeOrderItemsPostSavePlugin                        | Processes product type information for order items after saving an order.                                                                           |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Sales             |
+| ProductTypeOrderItemsPostSavePlugin                        | Processes product type information for order items after saving an order.                                                                  |            | SprykerFeature\Zed\SspServiceManagement\Communication\Plugin\Sales             |
 
 **src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 
@@ -1046,15 +1046,16 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 ### B. Set Up Product Offers for the Service Product
 
 - **Create a Product Offer:**
+  - Navigate to the "Offers" under the "Merchandising" section in the backoffice. 
   - Generate one or more product offers for the service product in the backoffice.
   - Verify that the offer creation form pre-populates with correct product information.
 
 - **Attach the Offer to Service Points:**
-  - Confirm that you can assign one or more service points (locations where the service is provided) to the product offer.
+  - Confirm that you can assign one or more service points (locations where the service is provided) to the product offer on the create page.
   - Check that the list of available service points is updated and reflects the intended configuration.
 
 - **Add Shipment Type (On-Site Service) to the Offer:**
-  - Ensure that the product offer includes the on-site service shipment type.
+  - Ensure that the product offer includes the on-site service shipment type on the create page.
   - Validate that the offer details correctly display the assigned shipment type(s).
 
 {% endinfo_block %}
@@ -1122,8 +1123,9 @@ console frontend:zed:build
 
 3. Select a service point. 
 4. Select a service date and time.
-5. Add the product to cart.  
-6. Go to the cart page and make sure the following applies:
+5. Add the product to cart. 
+6. Add another product, we can choose any. 
+7. Go to the cart page and make sure the following applies:
   - The cart item displays the selected service point
   - Items are grouped by shipment type
   - Selected service point is displayed

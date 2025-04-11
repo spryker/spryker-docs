@@ -1123,8 +1123,9 @@ console frontend:zed:build
 
 3. Select a service point. 
 4. Select a service date and time.
-5. Add the product to cart.  
-6. Go to the cart page and make sure the following applies:
+5. Add the product to cart. 
+6. Add another product, we can choose any. 
+7. Go to the cart page and make sure the following applies:
   - The cart item displays the selected service point
   - Items are grouped by shipment type
   - All selected options (service point, date, and time) are clearly visible to the customer.

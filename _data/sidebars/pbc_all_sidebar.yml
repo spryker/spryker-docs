@@ -3903,6 +3903,28 @@ entries:
               - title: "Glue API: Retrieve autocomplete and search suggestions"
                 url: /docs/pbc/all/search/marketplace/glue-api-retrieve-autocomplete-and-search-suggestions.html
 
+
+      - title: Self-Service Portal
+        include_versions:
+        - "202505.0"
+        nested:
+          - title: Install
+            nested:
+              - title: Install Self-Service Portal
+                url: /docs/pbc/all/self-service-portal/install/install-self-service-portal.html
+              - title: Install the SSP Asset Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-asset-management-feature.html
+              - title: Install the SSP Dashboard Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-dashboard-management-feature.html
+              - title: Install the SSP File Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-file-management-feature.html
+              - title: Install the SSP Inquiry Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-inquiry-management-feature.html
+              - title: Install the SSP Service Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-service-management-feature.html
+          
+
+
       - title: Service Point Management
         url: /docs/pbc/all/service-point-management/service-point-management.html
         nested:

@@ -5,9 +5,9 @@ This document describes how to install the Self-Service Portal (SSP) SSP Inquiry
 
 | FEATURE             | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
 |---------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Click and Collect   | {{site.version}} | [Enable Click and Collect](/docs/pbc/all/service-point-management/{{site.version}}/unified-commerce/enable-click-collect.html)                                      |
-| Self-Service Portal | {{site.version}} | [Install Self-Service Portal](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)                                                         |
+| Spryker Core        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202505.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Click and Collect   | {{site.version}} | [Enable Click and Collect](/docs/pbc/all/service-point-management/202505.0/unified-commerce/enable-click-collect.html)                                      |
+| Self-Service Portal | {{site.version}} | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/202505.0/install/install-self-service-portal)                                                         |
 
 ## Install the required modules
 
@@ -288,6 +288,9 @@ Make sure the following menu items are available in the Back Office navigation:
 
 1. Append the glossary:
 
+<details>
+  <summary>Glossary</summary>
+
 ```csv
 ssp_service_management.validation.no_order_items_provided,No order items provided.,en_US
 ssp_service_management.validation.no_order_items_provided,Keine Auftragspositionen angegeben.,de_DE
@@ -366,6 +369,8 @@ ssp_service_management.product.service_date_time,Wählen Sie Datum und Uhrzeit,d
 product.filter.product-abstract-types,Product Abstract Types,en_US
 product.filter.product-abstract-types,Produktabstraktsarten,de_DE
 ```
+
+</details>
 
 2. Append `shipment.csv`:
 
@@ -736,7 +741,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-**src/Pyz/Zed/Product/ProductDependencyProvider.php**
+
+<details>
+  <summary>src/Pyz/Zed/Product/ProductDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -813,7 +820,12 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 }
 ```
 
-**src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
+<details>
+  
+
+
+<details>
+  <summary>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>  
 
 ```php
 <?php
@@ -899,7 +911,12 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 }
 ```
 
-**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
+</details>
+
+
+<details>
+  <summary>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>  
+
 
 ```php
 <?php
@@ -947,6 +964,8 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 }
 ```
+
+</details>
 
 **src/Pyz/Zed/ProductStorage/ProductStorageDependencyProvider.php**
 
@@ -1041,26 +1060,16 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 3. For the abstract product you've created, create a concrete product with the following settings:
   * Enable **Service Date and Time**
   * Add **Delivery** and **On-Site Service** shipment types
+4. Go to **Merchandising** > **Offers**.
+5. Generate one or more product offers for the service product you've created. Make sure the following applies on the offer create page:
+   * The offer creation form is automatically prepopulated with information from the product
+   * You can assign one or more service points to the product offer
+   * The on-site service shipment type is available
   
-
-### B. Set Up Product Offers for the Service Product
-
-- **Create a Product Offer:**
-  - Navigate to the "Offers" under the "Merchandising" section in the backoffice. 
-  - Generate one or more product offers for the service product in the backoffice.
-  - Verify that the offer creation form pre-populates with correct product information.
-
-- **Attach the Offer to Service Points:**
-  - Confirm that you can assign one or more service points (locations where the service is provided) to the product offer on the create page.
-  - Check that the list of available service points is updated and reflects the intended configuration.
-
-- **Add Shipment Type (On-Site Service) to the Offer:**
-  - Ensure that the product offer includes the on-site service shipment type on the create page.
-  - Validate that the offer details correctly display the assigned shipment type(s).
 
 {% endinfo_block %}
 
-### Set up widgets
+## Set up widgets
 
 Set up widgets as follows:
 
@@ -1124,26 +1133,25 @@ console frontend:zed:build
 3. Select a service point. 
 4. Select a service date and time.
 5. Add the product to cart. 
-6. Add another product, we can choose any. 
+6. Add several other service and regular products to cart.
 7. Go to the cart page and make sure the following applies:
-  - The cart item displays the selected service point
+  - The cart items display the selected service points
   - Items are grouped by shipment type
-  - Selected service point is displayed
+  - Selected service points are displayed
 7. Place the order.
   Make sure the order is places successfully and the order summary includes service-specific details.
 
-8.
-
-
-2. Go to **Customer Account** > **Services**. Make sure the following applies:
+8. Go to **Customer Account** > **Services**. Make sure the following applies:
   - The service associated with the order you've placed is displayed in the list with all the relevant service details
   - You can change service date and time
-3. Next to the service, click **View**. Make sure the following applies on the service details page:
+9. Next to the service, click **View**. Make sure the following applies on the service details page:
   - Service point and shipment type are displayed
   - Buttons to reschedule and cancel the service are displayed
   - When changing the scheduled time, the updated information is saved and immediately reflected in the order view page.
 
-### B. Backoffice – Shop Owner Service Management
+  {% endinfo_block %}
+
+  {% info_block warningBox "Verification" %}
 
 - **Access the Services Module in Backoffice:**
   - Log in as a shop owner or admin.
@@ -1154,8 +1162,6 @@ console frontend:zed:build
     - Click on the order reference link to see the details of the order.
     - There is a user interface element to modify the scheduled service date/time.
     - Any changes made in the backoffice are propagated in the customer’s storefront profile.
-
-## 4. Catalog and Product Type Filter Verification
 
 - **Check Catalog Updates:**  
   Confirm that the storefront catalog reflects the addition of the new service product.

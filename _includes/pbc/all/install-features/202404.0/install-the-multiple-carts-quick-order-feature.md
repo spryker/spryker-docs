@@ -54,7 +54,7 @@ If items have been added to the cart with parameter `createOrder`, a new custome
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Install the following required features:
 
 | NAME | VERSION |
 | --- | --- |

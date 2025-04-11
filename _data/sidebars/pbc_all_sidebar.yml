@@ -2053,6 +2053,11 @@ entries:
                   - title: Custom order reference
                     url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/custom-order-reference-overview.html
 
+              
+              - title: Order Amendment feature overview
+                url: /docs/pbc/all/order-management-system/base-shop/order-amendment-feature-overview.html      
+                include_versions:
+                - "202505.0"                        
               - title: Reclamations feature overview
                 url: /docs/pbc/all/order-management-system/base-shop/reclamations-feature-overview.html
               - title: Refunds feature overview
@@ -2079,6 +2084,10 @@ entries:
                     nested:
                       - title: Order Management
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html
+                      - title: Order Amendment
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature.html                        
+                        include_versions:
+                        - "202505.0"
                       - title: Reclamations
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-reclamations-feature.html
                       - title: Quick Add to Cart + Non-splittable Products
@@ -3893,6 +3902,28 @@ entries:
                 url: /docs/pbc/all/search/marketplace/glue-api-search-the-product-catalog.html
               - title: "Glue API: Retrieve autocomplete and search suggestions"
                 url: /docs/pbc/all/search/marketplace/glue-api-retrieve-autocomplete-and-search-suggestions.html
+
+
+      - title: Self-Service Portal
+        include_versions:
+        - "202505.0"
+        nested:
+          - title: Install
+            nested:
+              - title: Install Self-Service Portal
+                url: /docs/pbc/all/self-service-portal/install/install-self-service-portal.html
+              - title: Install the SSP Asset Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-asset-management-feature.html
+              - title: Install the SSP Dashboard Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-dashboard-management-feature.html
+              - title: Install the SSP File Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-file-management-feature.html
+              - title: Install the SSP Inquiry Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-inquiry-management-feature.html
+              - title: Install the SSP Service Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-service-management-feature.html
+          
+
 
       - title: Service Point Management
         url: /docs/pbc/all/service-point-management/service-point-management.html

@@ -26,7 +26,7 @@ composer require spryker-shop/quote-request-agent-page: "^3.0.0" --update-with-d
 console transfer:generate
 ```
 
-3. Some files were re-organized, please check if you had overwritten them on project level:
+3. Some files were re-organized,  check if you had overwritten them on project level:
 
    * Adjusted `source-price-form` molecule to remove deprecated `priceFiled` data property.
    * Adjusted `page-layout-quote-request` template to extend `page-layout-quote-request` template from `QuoteRequestPage` module instead of `page-layout-agent`.

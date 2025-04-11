@@ -46,7 +46,7 @@ CRIF (formerly Deltavista) provides information on about 80 million individuals,
 
 To carry out a CRIF order check via a Server-to-Server connection, go to [that URL](https://www.computop-paygate.com/deltavista.aspx).
 
-For security reasons, Paygate rejects all payment requests with formatting errors. Therefore please use the correct data type for each parameter.
+For security reasons, Paygate rejects all payment requests with formatting errors. Therefore  use the correct data type for each parameter.
 
 ## Integration with Checkout.
 
@@ -76,7 +76,7 @@ $config[ComputopConstants::CRIF_RED_AVAILABLE_PAYMENT_METHODS] = []; //List of a
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\CheckoutPage\Process\Steps;
@@ -143,7 +143,7 @@ class ShipmentStep extends SprykerShipmentStep
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\CheckoutPage\Process;
@@ -193,7 +193,7 @@ class StepFactory extends SprykerStepFactory
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\CheckoutPage;

@@ -112,7 +112,7 @@ Avoid using of the plugins implementing `ProductListOwnerTypeFormExpanderPluginI
 * `getProductListTableDataExpanderPlugins`
 * `getProductListTableHeaderExpanderPlugins`
 
-5. If your project has any domain entities that use product list (e.g. *Configurable Bundle*, *Merchant Relationship*, etc), add the respective plugins to the dependency provider:
+5. If your project has any domain entities that use product list, such as *Configurable Bundle*, *Merchant Relationship*, add the respective plugins to the dependency provider:
 
 ```php
 <?php

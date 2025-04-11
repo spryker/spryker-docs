@@ -1111,32 +1111,22 @@ console frontend:zed:build
 ```
 
 {% info_block warningBox "Verification" %}
-### A. Product Discovery and Detail Verification
 
-- **Search for the Service Product in the Catalog:**
-  - In the storefront, use search or filtering (e.g., by product type) to locate the newly created service product.
-  - Verify that the product appears in the catalog.
+1. On the Storefront, use the search to find the service product you've created.
+  Make sure the product is available in the catalog.
 
-- **Access the Product Detail Page (PDP):**
-  - Click on the service product to navigate to the PDP.
-  - On the PDP, verify that:
-    - A **service point selector** is visible so that customers can choose where they wish to receive the service.
-    - A **date and time selector** for scheduling the service is available.
-    - Both shipment type options are available if applicable (with **Delivery** set as the default).
+2. Click the product to open its details page. Make sure the following applies on the product details page:
+  - A service point selector is displayed
+  - A date and time selector is displayed
+  - Delivery and service-on-site shipment types are available
 
-### B. Add to Cart and Grouping Verification
-
-- **Select Service Options on the PDP:**
-  - Choose a service point from the dropdown (or selector).
-  - Set the desired service date and time.
-  - Verify that any validation (e.g., mandatory service point or date/time selection) works as expected.
-
-- **Add the Product to the Cart:**
-  - After selecting the service options, add the product to the cart.
-  - In the cart, verify that:
-    - The cart item displays the selected service point (usually shown at the bottom of the item details).
-    - The product items are grouped by the shipment type chosen on the PDP. Confirm that if no change is made, the default (delivery) grouping is applied.
-    - All selected options (service point, date, and time) are clearly visible to the customer.
+3. Select a service point. 
+4. Select a service date and time.
+5. Add the product to cart.  
+6. Go to the cart page and make sure the following applies:
+  - The cart item displays the selected service point
+  - Items are grouped by shipment type
+  - All selected options (service point, date, and time) are clearly visible to the customer.
 
 - **Proceed with Checkout:**
   - Go through the checkout process.

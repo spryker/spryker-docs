@@ -1,11 +1,9 @@
 
-This document describes how to install SSP feature.
+This document describes how to install the Self-Service Portal (SSP) File Management feature.
 
 ## Prerequisites
 
-Install the required features:
-
-| NAME         | VERSION | INSTALLATION GUIDE                                                                                                                                          |
+| FEATURE         | VERSION | INSTALLATION GUIDE                                                                                                                                          |
 |--------------| ------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Self-Service Portal | {{site.version}}  | [Install Self-Service Portal](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
@@ -18,7 +16,7 @@ composer require spryker-feature/ssp-file-management:"^0.1.6" --update-with-depe
 
 {% info_block warningBox "Verification" %}
 
-Ensure the following modules are installed:
+Make sure the following modules have been installed:
 
 | MODULE                 | EXPECTED DIRECTORY                               |
 |------------------------|--------------------------------------------------|
@@ -26,7 +24,7 @@ Ensure the following modules are installed:
 
 {% endinfo_block %}
 
-## Set up the configuration
+## Set up configuration
 
 | CONFIGURATION                                | SPECIFICATION                                                                                          | NAMESPACE                               |
 |----------------------------------------------|--------------------------------------------------------------------------------------------------------|-----------------------------------------|
@@ -233,7 +231,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Ensure the data has been added to the `spy_glossary_key` and `spy_glossary_translation` database tables.
+Make sure the data has been added to the `spy_glossary_key` and `spy_glossary_translation` database tables.
 
 {% endinfo_block %}
 
@@ -242,13 +240,13 @@ Ensure the data has been added to the `spy_glossary_key` and `spy_glossary_trans
 
 | PLUGIN                                       | SPECIFICATION                                                  | PREREQUISITES | NAMESPACE                                                             |
 |----------------------------------------------|----------------------------------------------------------------|---------------|-----------------------------------------------------------------------|
-| ViewFilesPermissionPlugin                    | Allows viewing files (generic).                                |               | SprykerFeature\Shared\SspFileManagement\Plugin\Permission             |
-| DownloadFilesPermissionPlugin                | Allows downloading files.                                      |               | SprykerFeature\Shared\SspFileManagement\Plugin\Permission             |
-| ViewCompanyUserFilesPermissionPlugin         | Allows company users to view files they uploaded.              |               | SprykerFeature\Shared\SspFileManagement\Plugin\Permission             |
+| ViewFilesPermissionPlugin                    | Enable viewing of files (generic).                                |               | SprykerFeature\Shared\SspFileManagement\Plugin\Permission             |
+| DownloadFilesPermissionPlugin                | Enables downloading of files.                                      |               | SprykerFeature\Shared\SspFileManagement\Plugin\Permission             |
+| ViewCompanyUserFilesPermissionPlugin         | Enables company users to view the files they uploaded.              |               | SprykerFeature\Shared\SspFileManagement\Plugin\Permission             |
 | ViewCompanyBusinessUnitFilesPermissionPlugin | Allows access to files uploaded within the same business unit. |               | SprykerFeature\Shared\SspFileManagement\Plugin\Permission             |
 | ViewCompanyFilesPermissionPlugin             | Allows access to all files within the same company.            |               | SprykerFeature\Shared\SspFileManagement\Plugin\Permission             |
 | SspFileManagementPageRouteProviderPlugin     | Provides Yves routes for the SSP files feature.                    |               | SprykerFeature\Yves\SspFileManagement\Plugin\Router                   |
-| SspFileManagerMenuItemWidget                 | Provides a Menu item widget for the customer account side menu.  |               | SprykerFeature\Yves\SspFileManagement\Widget                          |
+| SspFileManagerMenuItemWidget                 | Provides a menu item widget for the customer account side menu.  |               | SprykerFeature\Yves\SspFileManagement\Widget                          |
 | FileAttachmentFilePreDeletePlugin            | Ensures files are deleted when a file is removed.        |               | SprykerFeature\Zed\SspFileManagement\Communication\Plugin\FileManager |
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
@@ -404,7 +402,7 @@ Verify file upload and attachment:
 
 {% info_block warningBox "Verification" %}
 
-Verify permissions:
+Verify permission management:
 
 1. In the Back Office, go to **Customers** > **Company Roles**.
 2. Click **Add Company User Role**.
@@ -425,15 +423,15 @@ Verify permissions:
 
 {% info_block warningBox "Verification" %}
 
-Verify Storefront pages
+Verify permissions on Storefront:
 
-1. Login to Yves as the company user you just created.
-2. Make sure you can see the **My Files** menu item.
-3. Go to **Customer Account** > **My Files** page.
-4. Make sure you can see all three files you uploaded.
-5. Login to Yves as a company user without the role you created.
-6. Make sure you cannot see the **My Files** menu item.
-7. Check that you cannot see the **My Files** page.
+1. On the Storefront, log in with the company user you've assigned the role to.
+  Make sure the **My Files** menu item is displayed.
+2. Go to **Customer Account** > **My Files** page.
+  Make sure the three files you've uploaded are displayed.
+3. Log out and log in with another company user that doesn't have the role.
+Make sure the **My Files** menu item is not displayed and you can't access the **My Files** page.
+
 
 {% endinfo_block %}
 

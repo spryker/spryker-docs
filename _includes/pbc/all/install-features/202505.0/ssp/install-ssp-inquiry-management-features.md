@@ -1,15 +1,12 @@
 
-# Install the SSP Inquiry Management Feature
+This document describes how to install the Self-Service Portal (SSP) Inquiry Management feature.
 
-This document describes how to install the *SSP Inquiry Management* feature in your Spryker project.
 
----
 
 ## Prerequisites
 
 
-
-| NAME         | VERSION | INSTALLATION GUIDE  |
+| FEATURE         | VERSION | INSTALLATION GUIDE  |
 |--------------| ------- | ------------------ |
 | Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
 | Self-Service Portal | {{site.version}}  | [Install Self-Service Portal](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
@@ -34,7 +31,7 @@ Make sure the following packages are now listed in `composer.lock`:
 
 ## Set up configuration
 
-Update your `config/Shared/config_default.php` or CI, Docker equivalents:
+Update your `config/Shared/config_default.php`, CI, or Docker equivalents:
 
 | CONFIGURATION                                                                   | SPECIFICATION                                                                           | NAMESPACE                                  |
 |---------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------|
@@ -536,6 +533,7 @@ ssp_dashboard.general.inquiries,Ausstehende Ansprüche,de_DE
 DE-INQR--1,DE,general,Spryker--8,Request for documentation,Please provide detailed documentation on the warranty and return policies for the products purchased under my account.
 DE-INQR--2,DE,general,Spryker--8,Product catalog issue,I noticed that several products in the catalog are missing specifications and images. This makes it difficult to make informed purchasing decisions. Please update the product details.
 ```
+
 3. Append `cms_block.csv`:
 
 <details>
@@ -573,15 +571,16 @@ console data:import cms-block-store
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
-* Make sure the `ssp_inquiry` table contains the new inquiries.
-* Make sure the new CMS blocks are assigned to correct stores.
+Make sure the following applies:
+* Glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
+* The `ssp_inquiry` table contains the new inquiries.
+* The new CMS blocks are assigned to correct stores.
 
 {% endinfo_block %}
 
----
 
-### Set up behavior
+
+## Set up behavior
 
 | PLUGIN                                     | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                                           |
 |--------------------------------------------|------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------|
@@ -589,7 +588,7 @@ console data:import cms-block-store
 | ViewBusinessUnitSspInquiryPermissionPlugin | Allows access to inquiries in the same business unit.      |               | SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission                        |
 | ViewCompanySspInquiryPermissionPlugin      | Allows access to inquiries in the same company.            |               | SprykerFeature\Shared\SspInquiryManagement\Plugin\Permission                        |
 | SspInquiryRouteProviderPlugin              | Provides Yves routes for the SSP files feature.                |               | SprykerFeature\Yves\SspInquiryManagement\Plugin\Router                              |
-| SspInquiryRestrictionHandlerPlugin         | Restricts access to inquiries and inquire details pages for non-company users. |               | SprykerFeature\Yves\SspInquiryManagement\Plugin\ShopApplication                     |
+| SspInquiryRestrictionHandlerPlugin         | Restricts access to inquiries and inquiry details pages for non-company users. |               | SprykerFeature\Yves\SspInquiryManagement\Plugin\ShopApplication                     |
 | BytesTwigPlugin                            | Adds the `format_bytes` twig function.                         |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Twig                                |
 | SspInquiryDataImportPlugin                 | Introduces the `ssp-inquiry` import type.                       |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\DataImport             |
 | SspInquiryManagementFilePreDeletePlugin    | Ensures files are deleted when an inquiry is removed. |               | SprykerFeature\Zed\SspInquiryManagement\Communication\Plugin\FileManager            |
@@ -890,17 +889,21 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 }
 ```
 
+<!--
+
 {% info_block warningBox "Verification" %}
 
 {% endinfo_block %}
 
-### Set up widgets
+-->
+
+## Set up widgets
 
 | PLUGIN                           | SPECIFICATION                                         | PREREQUISITES | NAMESPACE                                        |
 |----------------------------------|-------------------------------------------------------|---------------|--------------------------------------------------|
 | CreateOrderSspInquiryLinkWidget  | Provides a button to create an inquiry for an order.  |               | SprykerFeature\Yves\SspInquiryManagement\Widget  |
-| DashboardInquiryWidget           | Provides the inquiries table for the Dashboard.       |               | SprykerFeature\Yves\SspInquiryManagement\Widget  |
 | SspInquiryListWidget             | Provides the inquiries table.                         |               | SprykerFeature\Yves\SspInquiryManagement\Widget  |
+| DashboardInquiryWidget           | Provides the inquiries table for the Dashboard.       |               | SprykerFeature\Yves\SspInquiryManagement\Widget  |
 | SspInquiryMenuItemWidget         | Provides a customer menu item for the inquiries.      |               | SprykerFeature\Yves\SspInquiryManagement\Widget  |
 
 
@@ -939,7 +942,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Verify permissions:
+Verify permission management:
 
 1. In the Back Office, go to **Customers** > **Company Roles**.
 2. Click **Add Company User Role**.
@@ -952,44 +955,86 @@ Verify permissions:
 6. Click **Submit**.
 7. Go to **Customers** > **Company Users**.
 8. Click **Edit** next to a user.
-9. Assign the role you've just created to the user.
+9. Assign the role you've created to the user.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Verify Storefront pages
+Verify permissions on Storefront:
 
-1. Login to Yves as the company user you just created.
-2. Make sure you can see the **Inquiries** menu item.
-3. Go to **Customer Account** > **Inquiries** page.
-4. Make sure you can see the **Create Inquiry** button.
-5. Click the **Create Inquiry** button.
-6. Fill in the required fields, optionally upload up to 5 files.
-7. Click **Submit Inquiry**.
-8. Make sure your inquiry is saved and you land on the inquiry details page.
-9. Go to **Customer Account** > **Inquiry** page.
-10. Make sure the list of inquiries has your inquiry listed.
-11. Go to **Customer Account** > **Dashboard** page.
-12. Make sure the Inquiry widget displays the inquiry you just created.
-13. Login to Yves as a company user without the role you created.
-14. Make sure you cannot see the **Inquiries** menu item.
-15. Check that you cannot see the **Inquiries** page.
+1. On the Storefront, log in with the company user you've assigned the role to.
+2. Go to **Customer Account** > **Inquiries**.
+3. Click **Create Inquiry**.
+4. Fill in the required fields.
+5. Optional: Upload up to 5 files.
+6. Click **Submit Inquiry**.
+  Make sure this saves the inquiry and opens the inquiry details page.
+7. Go to **Customer Account** > **Inquiries**.
+  Make sure the you've created is displayed in the list.
+8. Go to **Customer Account** > **Dashboard**.
+  Make sure the Inquiry widget displays the inquiry you've created.
+9. Log out and log in with another company user that doesn't have the role.
+Make sure the **Inquiries** menu item is not displayed and you can't access the **Inquiries** page.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Verify Backoffice pages
+Verify inquiries in the Back Office:
 
-1. Login to Backoffice.
-2. Go to **Sales** > **Inquiries** page.
-4. Make sure you can see the Inquiry list and it contains the inquiry you created in the storefront.
-5. Make sure you are able to filters by **Inquiry status** and **Inquiry type**.
-5. Click `View` next to an inquiry.
-6. Scroll down to the **Status** section.
-7. Make sure you can see **Start review** and **Reject** buttons.
-9. Click the **Start review** button.
-10. Make sure the inquiry status changes to **In review**.
+1. In the Back Office, go to **Sales** > **Inquiries** page. Make sure the following applies:
+ * The inquiry you've created on the Storefront is displayed in the list.
+ * You can filter the list by **Inquiry status** and **Inquiry type**.
+2. Click **View** next to an inquiry.
+  Make sure that, in the **Status** section, **Start review** and **Reject** buttons are displayed.
+3. Click **Start review**.
+  Make sure the inquiry status changes to **In review**.
 
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

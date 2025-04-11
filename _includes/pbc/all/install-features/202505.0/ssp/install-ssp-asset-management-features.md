@@ -1,6 +1,6 @@
 
 
-This document describes how to install the *SSP Asset Management* feature.
+This document describes how to install the Self-Service Portal (SSP) Asset Management feature.
 
 
 ## Prerequisites
@@ -484,7 +484,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 7. Go to **Customer Account** > **Dashboard**.
   Make sure the **My Assets** widget displays the asset you've created. 
 8. Log out and log in with a compnay user without the role you've created.
-  Make sure you the **My Assets** menu item is not displayed and you can't access the **My Assets** page.
+  Make sure the **My Assets** menu item is not displayed and you can't access the **My Assets** page.
 
 {% endinfo_block %}
 

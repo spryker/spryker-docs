@@ -138,6 +138,9 @@ Make sure the following transfer objects have been generated:
 
 1. Append the glossary:
 
+<details>
+  <summary>Glossary</summary>
+
 ```csv
 general.confirm.button,Confirm,en_US
 general.confirm.button,Bestätigen,de_DE
@@ -302,6 +305,8 @@ ssp_asset_management.ssp_asset_search_filter_form.field.reset_all.label,Alles zu
 dashboard.general.assets,Assets,en_US
 dashboard.general.assets,Assets,de_DE
 ```
+
+</details>
 
 ## Import data
 

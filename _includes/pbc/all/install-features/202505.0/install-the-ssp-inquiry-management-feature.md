@@ -69,7 +69,10 @@ $config[SspInquiryManagementConstants::DEFAULT_TOTAL_FILE_MAX_SIZE] = getenv('SP
 $config[SspInquiryManagementConstants::DEFAULT_FILE_MAX_SIZE] = getenv('SPRYKER_SSP_INQUIRY_DEFAULT_FILE_MAX_SIZE') ?: '20M';
 ```
 
-**src/Pyz/Shared/SspInquiryManagement/SspInquiryManagementConfig.php**
+
+<details>
+  <summary>src/Pyz/Shared/SspInquiryManagement/SspInquiryManagementConfig.php</summary>
+  
 ```php
 <?php
 
@@ -126,6 +129,8 @@ class SspInquiryManagementConfig extends SprykerSspInquiryConfig
     }
 }
 ```
+
+</details>
 
 **src/Pyz/Zed/Sales/SalesConfig.php**
 ```php

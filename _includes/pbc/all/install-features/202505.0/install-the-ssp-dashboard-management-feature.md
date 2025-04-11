@@ -142,15 +142,15 @@ ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/defa
 
 1. Create a new CMS template to be used for dashboard content sourced from the CMS:
 
-**src/Pyz/Shared/CmsBlock/Theme/default/template/title_and_content_block.twig**
+**src/Pyz/Shared/CmsBlock/Theme/default/template/title_and_content_block.twig** 
 ```twig
-{% block content %}
+{% raw %}{% block content %}{% endraw %}
     <!-- CMS_BLOCK_PLACEHOLDER : "title" -->
     <!-- CMS_BLOCK_PLACEHOLDER : "content" -->
 
     {{ spyCmsBlockPlaceholder('title') | raw }}
     {{ spyCmsBlockPlaceholder('content') | raw }}
-{% endblock %}
+{% raw %}{% endblock %}{% endraw %}
 ```
 
 ## Import data

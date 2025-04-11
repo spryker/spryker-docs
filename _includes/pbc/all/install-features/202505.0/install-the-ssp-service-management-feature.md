@@ -703,7 +703,8 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+<details>
+  <summary>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -740,6 +741,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 }
 ```
+
+</details>
 
 
 <details>

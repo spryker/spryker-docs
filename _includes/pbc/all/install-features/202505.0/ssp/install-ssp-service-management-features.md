@@ -1126,25 +1126,20 @@ console frontend:zed:build
 6. Go to the cart page and make sure the following applies:
   - The cart item displays the selected service point
   - Items are grouped by shipment type
-  - All selected options (service point, date, and time) are clearly visible to the customer.
+  - Selected service point is displayed
+7. Place the order.
+  Make sure the order is places successfully and the order summary includes service-specific details.
 
-- **Proceed with Checkout:**
-  - Go through the checkout process.
-  - Verify that the order placement completes without errors and that the order summary includes service-specific details.
+8.
 
-## 3. Post-Checkout – Service Scheduling and Order Management
 
-### A. Customer Profile (Storefront)
-
-- **Access the “Services” Section in the Profile:**
-  - After completing the order, navigate to the customer’s profile and open the **Services** tab.
-  - Verify that:
-    - The order-related service appears in the list with all associated details (scheduled date/time, product name, etc.).
-    - There is an option to change the scheduled date/time.
-    - Click on the view button to see the details of the order.
-    - On the order details page, confirm that the service point and shipment type are displayed correctly.
-    - You will see a button to change the scheduled time, and also to cancel the service.
-    - When changing the scheduled time, the updated information is saved and immediately reflected in the order view page.
+2. Go to **Customer Account** > **Services**. Make sure the following applies:
+  - The service associated with the order you've placed is displayed in the list with all the relevant service details
+  - You can change service date and time
+3. Next to the service, click **View**. Make sure the following applies on the service details page:
+  - Service point and shipment type are displayed
+  - Buttons to reschedule and cancel the service are displayed
+  - When changing the scheduled time, the updated information is saved and immediately reflected in the order view page.
 
 ### B. Backoffice – Shop Owner Service Management
 
@@ -1171,3 +1166,17 @@ console frontend:zed:build
     - When **Service** is selected, only service products are shown.
     - When both are selected, the catalog shows the full list.
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

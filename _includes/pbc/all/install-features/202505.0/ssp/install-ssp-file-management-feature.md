@@ -28,10 +28,10 @@ Ensure the following modules are installed:
 
 ### Set up the configuration
 
-| CONFIGURATION                                | SPECIFICATION                                                                                          | NAMESPACE                               |
-|----------------------------------------------|--------------------------------------------------------------------------------------------------------|-----------------------------------------|
-| FileSystemConstants::FILESYSTEM_SERVICE      | Flysystem configuration for file management.                                                           | Spryker\Shared\FileSystem               |
-| SspFileManagementConstants::STORAGE_NAME     | Flysystem SspFileManagement uses.                                                                      | SprykerFeature\Shared\SspFileManagement |
+| CONFIGURATION                                | SPECIFICATION                                                | NAMESPACE                               |
+|----------------------------------------------|--------------------------------------------------------------|-----------------------------------------|
+| FileSystemConstants::FILESYSTEM_SERVICE      | Flysystem configuration for file management.                 | Spryker\Shared\FileSystem               |
+| SspFileManagementConstants::STORAGE_NAME     | Flysystem SspFileManagement used for uploaded files storage. | SprykerFeature\Shared\SspFileManagement |
 
 **config/Shared/config_default.php**
 ```php
@@ -421,7 +421,7 @@ Verify permissions:
 
 Verify Storefront pages
 
-1. Login to Yves as the company user you just created.
+1. Login to Yves as the company user you edited in the previous step.
 2. Make sure you can see the **My Files** menu item.
 3. Go to **Customer Account** > **My Files** page.
 4. Make sure you can see all three files you uploaded.
@@ -430,34 +430,3 @@ Verify Storefront pages
 7. Check that you cannot see the **My Files** page.
 
 {% endinfo_block %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

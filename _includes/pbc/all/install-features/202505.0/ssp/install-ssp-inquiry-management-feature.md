@@ -50,7 +50,6 @@ Update your `config/Shared/config_default.php` or CI, Docker equivalents:
 | SalesConfig::getSalesDetailExternalBlocksUrls()                                 | Defines the list of URLs for rendering blocks in the order details page.                     | Spryker\Zed\Sales                          |
 | SspInquiryManagementConfig::getSspInquiryStatusClassMap()                       | Returns the inquiry status to СSS class name mapping used for status indicator styling. | SprykerFeature\Zed\SspInquiryManagement    |
 | SspInquiryManagementConfig::getPendingStatus()                                  | Identifies the status that will be considered `Pending`.                                | SprykerFeature\Zed\SspInquiryManagement    |
-| SspInquiryManagementConfig::getPendingStatus()                                  | Identifies the status that will be considered `Pending`.                                | SprykerFeature\Zed\SspInquiryManagement    |
 
 **config/Shared/config_default.php**
 ```php
@@ -943,7 +942,7 @@ Verify permissions:
 
 Verify Storefront pages
 
-1. Login to Yves as the company user you just created.
+1. Login to Yves as the company user you edited in the previous step.
 2. Make sure you can see the **Inquiries** menu item.
 3. Go to **Customer Account** > **Inquiries** page.
 4. Make sure you can see the **Create Inquiry** button.

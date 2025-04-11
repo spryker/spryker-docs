@@ -316,7 +316,7 @@ Verify that Dashboard permission is added correctly:
 
 Verify Storefront pages:
 
-1. Login to Yves as the company user you just created.
+1. Login to Yves as the company user you edited in the previous step.
 2. Make sure you can see the **Dashboard** menu item.  
 3. Go to **Customer Account** > **Dashboard** page.
 4. Make sure the page opens.

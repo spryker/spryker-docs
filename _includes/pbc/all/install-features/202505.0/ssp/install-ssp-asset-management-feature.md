@@ -479,7 +479,7 @@ Verify permissions:
 
 Verify Storefront pages
 
-1. Login to Yves as the company user you just created.
+1. Login to Yves as the company user you edited in the previous step.
 2. Make sure you can see the **My Assets** menu item.
 3. Go to **Customer Account** > **My Assets** page.
 4. Make sure you can see the **Create Asset** button.

@@ -142,6 +142,21 @@ ssp-br-1,SSP Banner Name 1,SSP Banner Description 1, ,,, ,,,/assets/current/defa
 ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
 ```
 
+## Add twig template
+
+1. Create twig file with `title_and_content_block.twig` name by `src/Pyz/Shared/CmsBlock/Theme/default/template` path.
+2. Add following content
+
+```twig
+{% block content %}
+    <!-- CMS_BLOCK_PLACEHOLDER : "title" -->
+    <!-- CMS_BLOCK_PLACEHOLDER : "content" -->
+
+    {{ spyCmsBlockPlaceholder('title') | raw }}
+    {{ spyCmsBlockPlaceholder('content') | raw }}
+{% endblock %}
+```
+
 ## Import data
 
 Import glossary and demo data:
@@ -170,7 +185,6 @@ console data:import cms-slot-block
 | CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin | Allows using business unit-specific CMS blocks.               |               | SprykerFeature\Client\SspDashboardManagement\Plugin\CmsBlockStorage |
 | DashboardRouteProviderPlugin                           | Provides Yves routes for the SSP dashboard page.                  |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\Router            |
 | SspDashboardFilterControllerEventHandlerPlugin         | Restricts access to dashboard pages for non-company users.    |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\ShopApplication   |
-| DashboardMenuItemWidget                                | Provides a Menu item widget for the customer account side menu. |               | SprykerFeature\Yves\SspDashboardManagement\Widget                   |
 
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
@@ -279,11 +293,12 @@ class CmsBlockStorageDependencyProvider extends SprykerCmsBlockStorageDependency
 }
 ```
 
-{% info_block warningBox "Verification" %}
-
-{% endinfo_block %}
-
 ## Set up widgets
+
+| PLUGIN                                                 | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                                           |
+|--------------------------------------------------------|---------------------------------------------------------------|---------------|---------------------------------------------------------------------|
+| DashboardMenuItemWidget                                | Provides a Menu item widget for the customer account side menu. |               | SprykerFeature\Yves\SspDashboardManagement\Widget                   |
+
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -310,5 +325,31 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 {% info_block warningBox "Verification" %}
+Verify that Dashboard permission is added correctly:
+1. Login to the Back Office.
+2. Go to **Customers** > **Company Roles**. 
+3. Click **Add Company User Role**.
+4. Select a company.
+5. Enter a name for the role. 
+6. In **Unassigned Permissions**, enable the following permissions:
+    - **View Dashboard**
+6. Click **Submit**.
+7. Go to **Customers** > **Company Users**.
+8. Click **Edit** next to a user.
+9. Assign the role you've just created to the user.
+{% endinfo_block %}
 
+{% info_block warningBox "Verification" %}
+
+Verify Storefront pages:
+
+1. Login to Yves as the company user you just created.
+2. Make sure you can see the **Dashboard** menu item.  
+3. Go to **Customer Account** > **Dashboard** page.
+4. Make sure the page opens.
+5. Make sure the page shows the correct Company account information.
+5. Make sure the page contains widgets for Assets, Inquiries, and Files.
+5. Login to Yves as a company user without the role you created.
+6. Make sure you cannot see the **Dashboard** menu item.
+7. Check that you cannot see the **Dashboard** page.
 {% endinfo_block %}

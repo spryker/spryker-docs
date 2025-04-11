@@ -140,7 +140,7 @@ ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/defa
 
 ## Add twig template
 
-1. Create the file: 
+1. Create a new CMS template to be used for dashboard content sourced from the CMS:
 
 **src/Pyz/Shared/CmsBlock/Theme/default/template/title_and_content_block.twig**
 ```twig

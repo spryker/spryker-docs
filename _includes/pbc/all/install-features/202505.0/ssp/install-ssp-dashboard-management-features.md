@@ -1,9 +1,7 @@
 
 # Install the SSP Dashboard Management Feature
 
-This document describes how to install the *SSP Dashboard Management* feature in your Spryker project.
-
----
+This document describes how to install the *SSP Dashboard Management* feature.
 
 ## Prerequisites
 
@@ -125,20 +123,20 @@ ssp-news-block-1,News Banner-1,Title and Content,@CmsBlock/template/title_and_co
 ssp-news-block-1,DE
 cms-sales_rep:default,DE
 ```
-5. Append the `cms_slot.csv`:
+5. Append `cms_slot.csv`:
 ```csv
 ssp-news,ssp-news-block-1,"SSP News.",SprykerCmsSlotBlock,@SspDashboardManagement/views/dashboard/dashboard.twig,1
 ```
-6. Append the `cms_slot_block.csv`:
+6. Append `cms_slot_block.csv`:
 ```csv
 slt-mobile-header,blck-9,1,@ShopUi/templates/page-layout-main/page-layout-main.twig,,,,,,,
 ssp-news,ssp-news-block-1,1,@SspDashboardManagement/views/dashboard/dashboard.twig,,,,,,,
 ```
-7. Append the `cms_slot_template.csv`:
+7. Append `cms_slot_template.csv`:
 ```csv
 SSP Dashboard,Dashboard Page.,@SspDashboardManagement/views/dashboard/dashboard.twig
 ```
-8. Append the `content_banner.csv`:
+8. Append `content_banner.csv`:
 ```csv
 ssp-br-1,SSP Banner Name 1,SSP Banner Description 1, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
 ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,

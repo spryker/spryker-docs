@@ -12,7 +12,7 @@ Before installing this feature, ensure the following are already set up in your 
 |-------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core      | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Click and Collect | {{site.version}} | [Enable Click and Collect](/docs/pbc/all/service-point-management/202311.0/unified-commerce/enable-click-collect.html)                                      |
-| SSP features      | {{site.version}} | [Install the SSP feature](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)                                                         |
+| Self-Service Portal      | {{site.version}} | [Install Self-Service Portal](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)                                                         |
 
 ## Install the required modules using Composer
 

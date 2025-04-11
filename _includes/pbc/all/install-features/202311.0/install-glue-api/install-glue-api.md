@@ -26,7 +26,7 @@ Spryker Shop Suite contains GLUE out of the box. If your project has the latest 
 
 {% endinfo_block %}
 
-1. Install the necessary modules using composer:
+1. Install the required modules using Composer:
 
     ```bash
     composer update "spryker/*" "spryker-shop/*" --update-with-dependencies

@@ -8,7 +8,7 @@ Install the required features:
 | NAME         | VERSION | INSTALLATION GUIDE                                                                                                                                          |
 |--------------| ------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| SSP features | {{site.version}}  | [Install the SSP feature](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
+| Self-Service Portal | {{site.version}}  | [Install Self-Service Portal](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
 
 ## 1) Install the required modules
 

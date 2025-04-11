@@ -12,11 +12,11 @@ This document describes how to install the *SSP Inquiry Management* feature in y
 | NAME         | VERSION | INSTALLATION GUIDE  |
 |--------------| ------- | ------------------ |
 | Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
-| SSP features | {{site.version}}  | [Install the SSP feature](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
+| Self-Service Portal | {{site.version}}  | [Install Self-Service Portal](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
 
 ## Install the required modules
 
-Install the necessary modules using Composer:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/ssp-inquiry-management:"^0.1.1" --update-with-dependencies

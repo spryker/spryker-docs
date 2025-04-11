@@ -1,20 +1,16 @@
 
-# Install the SSP Dashboard Management Feature
-
 This document describes how to install the *SSP Dashboard Management* feature.
 
 ## Prerequisites
 
-
-
-| NAME         | VERSION | INSTALLATION GUIDE  |
+| FEATURE         | VERSION | INSTALLATION GUIDE  |
 |--------------| ------- | ------------------ |
 | Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
-| SSP features | {{site.version}}  | [Install the SSP feature](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
+| Self-Service Portal | {{site.version}}  | [Install Self-Service Portal](/docs/pbc/all/miscellaneous/{{site.version}}/ssp/install-ssp-features.md)          |
 
 ## Install the required modules
 
-Install the necessary modules using Composer:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/ssp-dashboard-management:"^0.1.1" --update-with-dependencies
@@ -144,9 +140,9 @@ ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/defa
 
 ## Add twig template
 
-1. Create twig file with `title_and_content_block.twig` name by `src/Pyz/Shared/CmsBlock/Theme/default/template` path.
-2. Add following content
+1. Create the file: 
 
+**src/Pyz/Shared/CmsBlock/Theme/default/template/title_and_content_block.twig**
 ```twig
 {% block content %}
     <!-- CMS_BLOCK_PLACEHOLDER : "title" -->

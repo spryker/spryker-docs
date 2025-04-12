@@ -3,6 +3,13 @@ title: Create Custom Multi-Factor Authentication Method
 description: Learn how to create and implement your own Multi-Factor Authentication method in Spryker.
 template: howto-guide-template
 last_updated: Apr 7, 2025
+related:
+  - title: Multi-Factor Authentication Feature Overview
+    link: docs/pbc/all/multi-factor-auth/{{site.version}}/multi-factor-auth.html
+  - title: Install the Multi-Factor Authentication Feature
+    link: docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html
+  - title: How to Install Customer Email Multi-Factor Authentication Method
+    link: docs/pbc/all/multi-factor-auth/{{site.version}}/howto-install-customer-email-mfa.html
 ---
 
 This document describes how to create and implement custom Multi-Factor Authentication (MFA) methods. 
@@ -165,7 +172,7 @@ class MultiFactorAuthBusinessFactory extends SprykerMultiFactorAuthBusinessFacto
 ```
 </details>
 
-## 4. Register your plugins
+## 4. Register your plugin
 
 Register your plugin in the dependency provider:
 
@@ -194,9 +201,3 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
 }
 ```
 </details>
-
-## Related Documentation
-
-- [Multi-Factor Authentication Feature Overview](/docs/pbc/all/multi-factor-auth/{{site.version}}/multi-factor-auth.html)
-- [Install the Multi-Factor Authentication Feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html)
-- [How to Install Customer Email Multi-Factor Authentication Method](/docs/pbc/all/multi-factor-auth/{{site.version}}/howto-install-customer-email-mfa.html)

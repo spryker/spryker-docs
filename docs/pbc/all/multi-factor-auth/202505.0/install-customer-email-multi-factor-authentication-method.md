@@ -1,13 +1,11 @@
 ---
-title: How to Install Customer Email Multi-Factor Authentication Method
+title: Install Customer Email Multi-Factor Authentication Method 
 description: Learn how to install and configure customer email multi-factor authentication in Spryker.
 template: howto-guide-template
 last_updated: Mar 6, 2025
 ---
 
-Email Multi-Factor Authentication (MFA) is a security mechanism that requires users to verify their identity through an authentication code sent to their registered email. This adds an extra layer of protection beyond just a password.
-
-This document describes how to install and configure customer email Multi-Factor Authentication (MFA).
+Email Multi-Factor Authentication (MFA) is a security mechanism that requires users to verify their identity through an authentication code sent to their registered email. This document describes how to install and configure email MFA.
 
 For more information about MFA, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-auth/{{site.version}}/multi-factor-auth.html).
 
@@ -70,7 +68,7 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 ## 3) Import data
 
-Append the following data to ensure the correct email templates for each store are used when sending MFA codes: 
+Import MFA email templates per store:
 
 <details>
 <summary>data/import/common/AT/cms_block_store.csv</summary>
@@ -79,6 +77,7 @@ Append the following data to ensure the correct email templates for each store a
 cms-block-email--customer_multi_factor_auth_email--html,AT
 cms-block-email--customer_multi_factor_auth_email--text,AT
 ```
+
 </details>
 
 <details>
@@ -88,6 +87,7 @@ cms-block-email--customer_multi_factor_auth_email--text,AT
 cms-block-email--customer_multi_factor_auth_email--html,DE
 cms-block-email--customer_multi_factor_auth_email--text,DE
 ```
+
 </details>
 
 <details>
@@ -108,6 +108,7 @@ cms-block-email--customer_multi_factor_auth_email--html,customer_multi_factor_au
 cms-block-email--customer_multi_factor_auth_email--text,customer_multi_factor_auth_email--text,TEXT Email Template With Header And Footer,@CmsBlock/template/email-template-with-header-and-footer.text.twig,1,,,,,,,"{{ 'mail.customer.multi_factor_auth.email.subject' | trans }}  {{ 'customer.multi_factor_auth.email.text' | trans({'%code%': mail.multiFactorAuth.multiFactorAuthCode.code}) }}","{{ 'mail.customer.multi_factor_auth.email.subject' | trans }}  {{ 'customer.multi_factor_auth.email.text' | trans({'%code%': mail.multiFactorAuth.multiFactorAuthCode.code}) }}"
 {% endraw %}
 ```
+
 </details>
 
 ## 4) Set up behavior
@@ -116,8 +117,8 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                            | SPECIFICATION                                                                                                                                 | PREREQUISITES | NAMESPACE                                                      |
 |---------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------|
-| CustomerEmailMultiFactorAuthPlugin                | Handles email-based MFA authentication allowing customers to verify their identity via an authentication code sent to their registered email. |               | Spryker\Yves\MultiFactorAuth\Plugin\Factors\Email              |
-| CustomerEmailMultiFactorAuthMailTypeBuilderPlugin | Builds and processes the email template for sending MFA codes to customers.                                                                   |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Mail\Customer |
+| CustomerEmailMultiFactorAuthPlugin                | Handles email-based MFA authentication, enabling customers to verify their identity via an authentication code sent to their registered email. |               | Spryker\Yves\MultiFactorAuth\Plugin\Factors\Email              |
+| CustomerEmailMultiFactorAuthMailTypeBuilderPlugin | Builds and processes an email template for sending MFA codes to customers.                                                                   |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Mail\Customer |
 
 <details>
 <summary>src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthDependencyProvider.php</summary>
@@ -138,6 +139,7 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
     }
 } 
 ```
+
 </details>
 
 <details>
@@ -159,40 +161,47 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
 
-## Verification
-
-After completing all the integration steps, follow these steps to verify that Multi-Factor Authentication (MFA) via email is working correctly:
-
-### Verify Email MFA Setup
-1. Log in to the Yves application as a customer.
-2. Go to the MFA Setup Page:
- - Navigate to https://yves.mysprykershop.com/multi-factor-auth/set.
- - Ensure that the **Set up Multi-Factor Authentication** menu item is visible in the customer profile sidebar.
-3. Check Available MFA Methods:
- - On the MFA setup page, verify that **Email** appears in the list of available authentication methods.
-4. Activate Email MFA:
- - Click the **Activate** button for **Email Multi-Factor Authentication**.
- - The system should send a verification code to your registered email.
- - Enter the received code in the confirmation form.
- - If the code is valid, **Email MFA** should be successfully activated.
-
-### Test Multi-Factor Authentication During Login
-1. Log out and attempt to log in with an account where Email MFA is enabled.
-2. After entering valid credentials, you should be prompted to enter an MFA code.
-3. Check your email for the authentication code and enter it.
-4. If successful, you should be redirected to the dashboard.
-
-### Test Multi-Factor Authentication for Profile Actions
-1. Try updating the email address, password, or deleting the account in the customer profile.
-2. The system should prompt for MFA validation before allowing the action.
-
-### Check the Grace Period
-1. After entering a valid MFA code, attempt another MFA-protected action within the configured grace period.
-2. If the grace period is working correctly, the system should not prompt for MFA again.
-3. After the grace period expires, MFA should be required again.
+1. On the Storefront, go to the MFA setup page: `https://yves.mysprykershop.com/multi-factor-auth/set`
+  * Make sure the **Set up Multi-Factor Authentication** menu item is visible in the customer profile sidebar
+  * Make sure the **Email** authentication method is displayed in the list of available authentication methods
+2. For **Email Multi-Factor Authentication**, click **Activate**.
+ This sends a verification code to the customer's email address.
+3. Enter the received code in the confirmation form.
+ If the code is valid, Email MFA should be successfully activated.
+4. Log out and attempt to log in with the account with Email MFA enabled.
+  Make sure you're prompted to enter an MFA code.
+5. Enter the code in the form.
+  Make sure this logs you in successfully.
+6. In the customer profile, try updating the email address, password, or deleting the account.
+  * Make sure you can do these actions only after providing an email MFA code.
+  * Make sure that multiple actions done within a configured grace period don't trigger extra MFA checks.
 
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

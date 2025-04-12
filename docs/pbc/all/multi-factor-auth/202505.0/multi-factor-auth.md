@@ -5,31 +5,27 @@ template: concept-topic-template
 last_updated: Mar 05, 2026
 ---
 
-{% info_block warningBox "⚠️ WARNING: BETA FEATURE" %}
+{% info_block warningBox "Beta feature" %}
 
-**THE MULTI-FACTOR AUTH MODULE IS CURRENTLY IN BETA.**
-
-This feature is not yet considered stable and **may be significantly changed in future releases**.
+The multi-factor auth module is in beta. It's not stable and *may be significantly changed in future releases*.
 
 By using this feature, you accept full responsibility for any potential issues, including breaking changes, limited support, and incomplete functionality.
 
-**Use in production environments is not recommended** unless you are prepared to adapt to future updates.
+*We don't recommend using this in production environments*. You may have to adapt this implementation for future releases.
 
 {% endinfo_block %}
 
-Multi-Factor Authentication (MFA) adds an extra layer of security to your account. It enhances account protection by requiring additional verification steps beyond just a username and password.
-
+Multi-Factor Authentication (MFA) adds an extra layer of security for Storefront accounts by requiring multiple methods of authentication before allowing an action.
 
 
 ## Benefits of MFA
 
-* Enhanced security: Adds an extra layer of protection, making it more difficult for attackers to gain access 
-* Enhanced privacy: Safeguards personal data by requiring more than just a username and password 
-* Reduced risk: Minimizes the chance of unauthorized access through multi-factor verification  
-* Compliance: Supports compliance with security regulations and industry standards
+* Enhanced security with an an extra layer of protection
+* Enhanced privacy with better protected personal data
+* Supports compliance with security regulations and industry standards
 
 
-## Flow overview
+## MFA flow for protected actions
 
 The login process with MFA looks as follows:
 
@@ -38,56 +34,47 @@ The login process with MFA looks as follows:
 2. Fetch enabled MFA types: If MFA is enabled, the system retrieves the customer's enabled MFA types from `multi-factor-auth/get-customer-enabled-types`.
 
 3. Evaluate the number of enabled MFA methods:
-  * Multiple MFA methods: the system presents a selection screen where the user must choose their preferred authentication method. 
-  * One MFA method: the system proceeds to the next step automatically.
+  * Multiple MFA methods: the system presents a selection screen where the user selects a preferred authentication method
+  * One MFA method: the system proceeds to verify the user using their only MFA method
 
 4. Send the authentication code: 
   * Multiple MFA methods: the authentication code is sent to the user based on the method they've selected
-  * One MFA method: the system sends the authentication code using the method via `multi-factor-auth/send-customer-code`.  
-
+  * One MFA method: the system sends the authentication code to the method's platform using `multi-factor-auth/send-customer-code`  
 
 5. Code validation: After the authentication code is sent, the system presents a code validation form to the user. The user enters the received authentication code in the form.  
-If the code is correct, authentication is successful. If incorrect, the user must retry.
+If the code is correct, authentication is successful. If incorrect, the user needs to double-check the code and try entering again.
 
 
 [PUT THE FLOW DIAGRAM HERE]
 
-## Login flow with MFA
+### Login MFA flow
 
-The MFA flow for the login page follows a slightly different sequence compared to regular authentication.
-In this case, the customer's credentials (email & password) are validated first before triggering MFA.
+For the login MFA flow, MFA is triggered only after validating credentials to prevent unnecessary MFA processing.
 
-Key Differenceу:
-1.	Customer enters email & password on the login page.
-2.	System validates the credentials: if invalid, authentication fails, and the customer is prompted to try again. If valid, the system proceeds to check if MFA is enabled.
-3.	If MFA is enabled, the process continues as described in the main MFA flow.
-4.	Upon successful validation, the customer is logged in.
+1.	On the login page, customer enters email and password.
+2.	System validates the credentials. If invalid, authentication fails, and the customer is prompted to try again. If valid, the system proceeds to check if MFA is enabled.
+3.	If MFA is enabled, the process continues as described in [MFA flow for protected actions](#mfa-flow-for-protected-actions)
 
-This ensures that MFA is only triggered after confirming that the credentials are correct, preventing unnecessary MFA steps for incorrect login attempts.
+
 
 ## Multi-Factor Authentication Protection
 
-MFA is not limited to the login process but is also applied to critical customer profile actions where additional security is necessary to protect sensitive user information. 
-These actions require MFA validation to ensure that only the legitimate account owner can perform them.
+MFA is used for authenticating customer login and critical customer profile actions.
 
-Some of the actions that are protected by MFA by default include:
-- Updating the email address: prevents unauthorized users from changing the account's primary contact method.
-- Changing the password: ensures that only the legitimate user can modify login credentials.
-- Deleting the account: protects against accidental or malicious account deletions.
+Examples of protected actions:
+- Update email address
+- Change password
+- Delete account
 
-In addition to these predefined actions, other forms and operations within the system may also be secured with MFA based on business requirements.
+You can configure other actions to be protected with MFA according to your requirements.
 
-For detailed instructions on how to integrate MFA protection into additional forms and actions, refer to the following guide: [Install the Multi-Factor Authentication Feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html#configure-enabled-routes-and-forms).
+For instructions on integrating MFA into forms and actions, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html#configure-enabled-routes-and-forms).
 
-## MFA Grace Period After Successful Validation
+## MFA grace period
 
-After a user successfully enters a valid MFA code, there is a configurable time interval during which MFA validation is not required for subsequent actions. 
-This prevents users from needing to re-authenticate repeatedly within a short period while performing multiple secured actions.
+After a customer successfully enters a valid MFA code, there is a configurable time interval during which MFA validation is not required for subsequent actions. This improves user experience because users sometimes need to perform multiple protected actions within a short period of time.
 
-Additionally, once an MFA code is successfully verified, it can only be used once. Any previously generated MFA codes become invalid immediately after successful verification, ensuring that only the most recent code is accepted for authentication. 
-This enhances security by preventing the reuse of old codes in case they were intercepted or delayed in delivery.
-
-The duration of the grace period is configurable. To modify the timeout settings and apply them to specific forms, refer the link: [Install the Multi-Factor Authentication Feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html#configure-code-validity-time).
+For details on configuring the grace period, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html#configure-code-validity-time).
 
 ## Brute Force Protection
 

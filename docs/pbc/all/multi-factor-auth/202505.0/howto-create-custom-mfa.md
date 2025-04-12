@@ -1,5 +1,5 @@
 ---
-title: Create Custom Multi-Factor Authentication Method
+title: Create Multi-Factor Authentication methods
 description: Learn how to create and implement your own Multi-Factor Authentication method in Spryker.
 template: howto-guide-template
 last_updated: Apr 7, 2025
@@ -12,11 +12,11 @@ related:
     link: docs/pbc/all/multi-factor-auth/{{site.version}}/howto-install-customer-email-mfa.html
 ---
 
-This document describes how to create and implement custom Multi-Factor Authentication (MFA) methods. 
+This document describes how to create and implement Multi-Factor Authentication (MFA) methods. 
 
 To lean more about MFA methods, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-auth/{{site.version}}/multi-factor-auth.html).
 
-A custom MFA method consists of two components:
+An MFA method consists of two components:
 
 * MFA type plugin
 * Code Sender Strategy
@@ -25,7 +25,7 @@ A custom MFA method consists of two components:
 
 [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html)
 
-## 1. Create a Multi-Factor Authentication Type Plugin
+## 1. Create a Multi-Factor Authentication type plugin
 
 Create a plugin that implements `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface`:
 
@@ -139,11 +139,12 @@ class YourMfaCodeSenderStrategy implements SendStrategyInterface
     }
 }
 ```
+
 </details>
 
 ## 3. Wire strategy in factory
 
-Add your strategy to the factory so that it can be used by the Multi-Factor Authentication system to resolve the correct sender strategy based on the type of MFA method selected by the customer.
+Add your strategy to the factory so that it can be used by the MFA system to resolve the correct sender strategy based on the type of MFA method selected by a customer.
 
 <details>
 <summary>Pyz\Zed\MultiFactorAuth\Business\MultiFactorAuthBusinessFactory.php</summary>
@@ -170,11 +171,12 @@ class MultiFactorAuthBusinessFactory extends SprykerMultiFactorAuthBusinessFacto
     }
 }
 ```
+
 </details>
 
-## 4. Register your plugin
+## 4. Register the plugin
 
-Register your plugin in the dependency provider:
+Register the plugin in the dependency provider:
 
 <details>
 <summary>Pyz\Yves\MultiFactorAuth\MultiFactorAuthDependencyProvider.php</summary>
@@ -200,4 +202,5 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
     }
 }
 ```
+
 </details>

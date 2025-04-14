@@ -31,3 +31,10 @@ To generate an access key, follow the steps:
 4. Optional: To check the access key in this window, click **Show secret access key**.
 
 You've generated and downloaded your access key.
+
+If your IAM user has Multi-Factor Authentication (MFA) enabled, follow these additional steps to generate and use temporary credentials:
+
+1. Run the `aws configure` command and enter the permanent access key and secret key generated in the previous section.
+2. Follow the instructions in [this guide](https://repost.aws/knowledge-center/authenticate-mfa-cli) to fetch temporary credentials and export to your terminal.
+
+Once you've completed the above steps, you should be able to access AWS resources with the AWS Command Line Interface.

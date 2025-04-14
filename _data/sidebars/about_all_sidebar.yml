@@ -80,7 +80,8 @@ entries:
       url: /docs/about/all/b2c-suite.html
     - title: B2B Suite
       url: /docs/about/all/b2b-suite.html
-
+    - title: Self-Service Portal
+      url: /docs/about/all/self-service-portal.html
     - title: Spryker Marketplace
       url: /docs/about/all/spryker-marketplace/spryker-marketplace.html
       nested:

@@ -1,5 +1,5 @@
 ---
-title: Install the Multi-Factor Authentication Feature
+title: Install the Multi-Factor Authentication feature
 description: This document describes how to install the Multi-Factor Authentication (MFA) feature in your Spryker project.
 template: feature-integration-guide-template
 last_updated: Mar 06, 2025

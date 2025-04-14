@@ -1,5 +1,5 @@
 ---
-title: Install Customer Email Multi-Factor Authentication Method 
+title: Install customer email Multi-Factor Authentication method 
 description: Learn how to install and configure customer email multi-factor authentication in Spryker.
 template: howto-guide-template
 last_updated: Mar 6, 2025

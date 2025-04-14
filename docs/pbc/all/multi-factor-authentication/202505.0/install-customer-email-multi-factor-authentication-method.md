@@ -18,7 +18,7 @@ For more information about MFA, see [Multi-Factor Authentication feature overvie
 
 ## Prerequisites
 
-[Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html)
+[Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html)
 
 ## 1) Set up transfer objects
 

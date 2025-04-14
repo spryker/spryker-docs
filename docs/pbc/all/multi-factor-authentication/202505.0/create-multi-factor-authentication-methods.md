@@ -7,7 +7,7 @@ related:
   - title: Multi-Factor Authentication Feature Overview
     link: docs/pbc/all/multi-factor-auth/{{site.version}}/multi-factor-auth.html
   - title: Install the Multi-Factor Authentication Feature
-    link: docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html
+    link: docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html
   - title: How to Install Customer Email Multi-Factor Authentication Method
     link: docs/pbc/all/multi-factor-auth/{{site.version}}/howto-install-customer-email-mfa.html
 ---
@@ -23,7 +23,7 @@ An MFA method consists of two components:
 
 ## Prerequisites
 
-[Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html)
+[Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html)
 
 ## 1. Create a Multi-Factor Authentication type plugin
 

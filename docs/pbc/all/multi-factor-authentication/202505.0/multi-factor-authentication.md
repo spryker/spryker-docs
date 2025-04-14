@@ -65,7 +65,7 @@ Examples of protected actions:
 - Change password
 - Delete account
 
-You can configure other actions to be protected with MFA according to your requirements. For instructions on integrating MFA into forms and actions, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html#configure-enabled-routes-and-forms).
+You can configure other actions to be protected with MFA according to your requirements. For instructions on integrating MFA into forms and actions, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html#configure-enabled-routes-and-forms).
 
 
 
@@ -73,7 +73,7 @@ You can configure other actions to be protected with MFA according to your requi
 
 After a customer successfully enters a valid MFA code, there's a configurable time interval during which MFA validation isn't required for subsequent actions. This improves user experience because users sometimes need to perform multiple protected actions within a short period of time.
 
-For details on configuring the grace period, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html#configure-code-validity-time).
+For details on configuring the grace period, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html#configure-code-validity-time).
 
 ## Brute force protection
 
@@ -84,7 +84,7 @@ If a customer reaches the configured number of failed attempts to enter the code
 - The page is refreshed, and the customer must start the authentication process from the beginning
 - All previously generated codes become invalid
 
-For instructions on configuring brute force protection, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-auth/{{site.version}}/install-and-upgrade/install-multi-factor-auth.html#configure-brute-force-protection-limit).
+For instructions on configuring brute force protection, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html#configure-brute-force-protection-limit).
 
 ## Multi-Factor Authentication methods
 

@@ -194,7 +194,13 @@ Starting from v. 201907.0, every shopping list has a subtotal for all the items 
 
 Check out this video tutorial on how to use shopping lists.
 
-{% wistia zk32pr3lgt 960 720 %}
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/shopping-list-and-wishlist/base-shop/shopping-lists-feature-overview.md/How+to+Use+Shopping+Lists+in+Spryker+B2B-zk32pr3lgt.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
 
 ## Current constraints
 

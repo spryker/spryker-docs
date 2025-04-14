@@ -135,12 +135,13 @@ Make sure the following modules have been installed:
 
 Set up the following configuration:
 
-| CONFIGURATION                                                  | SPECIFICATION                                                        | NAMESPACE                    |
-|----------------------------------------------------------------|----------------------------------------------------------------------|------------------------------|
-| CartPageConfig::IS_CART_CART_ITEMS_VIA_AJAX_LOAD_ENABLED       | Enables cart items to be loaded via AJAX.                          | SprykerShop\Yves\CartPage    |
-| CartPageConfig::IS_LOADING_UPSELLING_PRODUCTS_VIA_AJAX_ENABLED | Enables upselling products to be loaded via AJAX.                  | SprykerShop\Yves\CartPage    |
-| CartPageConfig::IS_CART_ACTIONS_ASYNC_MODE_ENABLED             | Enables cart actions to be performed via AJAX.                     | SprykerShop\Yves\CartPage    |
-| CatalogPageConfig::IS_MINI_CART_ASYNC_MODE_ENABLED             | Enables mini cart to be rendered async during the AJAX add to cart action. | SprykerShop\Yves\CatalogPage |
+| CONFIGURATION                                                  | SPECIFICATION                                                              | NAMESPACE                    |
+|----------------------------------------------------------------|----------------------------------------------------------------------------|------------------------------|
+| CartPageConfig::IS_CART_CART_ITEMS_VIA_AJAX_LOAD_ENABLED       | Enables cart items to be loaded via AJAX.                                  | SprykerShop\Yves\CartPage    |
+| CartPageConfig::IS_LOADING_UPSELLING_PRODUCTS_VIA_AJAX_ENABLED | Enables upselling products to be loaded via AJAX.                          | SprykerShop\Yves\CartPage    |
+| CartPageConfig::IS_CART_ACTIONS_ASYNC_MODE_ENABLED             | Enables cart actions to be performed via AJAX.                             | SprykerShop\Yves\CartPage    |
+| CatalogPageConfig::IS_MINI_CART_ASYNC_MODE_ENABLED             | Enables the mini cart to be rendered async during the AJAX add to cart action. | SprykerShop\Yves\CatalogPage |
+| CartPageConfig::IS_QUOTE_VALIDATION_ENABLED_FOR_AJAX_CART_ITEMS| Disables quote validation when retrieving cart items via AJAX.              | SprykerShop\Yves\CartPage    |
 
 **src/Pyz/Yves/CartPage/CartPageConfig.php**
 
@@ -167,6 +168,11 @@ class CartPageConfig extends SprykerCartPageConfig
      * @var bool
      */
     protected const IS_CART_ACTIONS_ASYNC_MODE_ENABLED = true;
+    
+    /**
+     * @var bool
+     */
+    protected const IS_QUOTE_VALIDATION_ENABLED_FOR_AJAX_CART_ITEMS = false;
 }
 ```
 

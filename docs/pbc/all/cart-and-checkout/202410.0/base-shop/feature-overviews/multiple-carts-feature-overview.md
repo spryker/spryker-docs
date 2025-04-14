@@ -144,8 +144,14 @@ On the storefront, company users can perform the following actions by using the 
 
 This video explains how to use shopping carts in the Spryker [B2B Demo Shop](/docs/about/all/b2b-suite.html).
 
-{% wistia s776wlo9ds 960 720 %}
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/multiple-carts-feature-overview.md/How+to+Use+Shopping+Carts+in+Spryker+B2B-s776wlo9ds.mp4" type="video/mp4">
+  </video>
+</figure>
 
+
+https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/multiple-carts-feature-overview.md/How+to+Use+Shopping+Carts+in+Spryker+B2B-s776wlo9ds.mp4
 
 ## Related Developer documents
 

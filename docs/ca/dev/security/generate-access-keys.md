@@ -19,7 +19,7 @@ You can only generate an access key for your own account. If you want to create 
 
 {% endinfo_block %}
 
-To generate an access key, follow the steps:
+## Generate an access key
 
 1. In the AWS Management Console navigation bar, click on your username > **My Security Credentials**.
 ![My security credentials button](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Security/Generating+access+keys/my-security-credentials-button.png)
@@ -32,9 +32,11 @@ To generate an access key, follow the steps:
 
 You've generated and downloaded your access key.
 
-If your IAM user has Multi-Factor Authentication (MFA) enabled, follow these additional steps to generate and use temporary credentials:
+## Generate temporary credentials for Multi-Factor Authentication
 
-1. Run the `aws configure` command and enter the permanent access key and secret key generated in the previous section.
-2. Follow the instructions in [this guide](https://repost.aws/knowledge-center/authenticate-mfa-cli) to fetch temporary credentials and export to your terminal.
+If your IAM user has Multi-Factor Authentication enabled, follow generate and use temporary credentials:
+
+1. Run `aws configure` and enter the permanent access and secret keys generated in the previous section.
+2. To fetch temporary credentials and export them to your terminal, follow [How do I use the AWS CLI to authenticate access to AWS resources with an MFA token?](https://repost.aws/knowledge-center/authenticate-mfa-cli).
 
 Once you've completed the above steps, you should be able to access AWS resources with the AWS Command Line Interface.

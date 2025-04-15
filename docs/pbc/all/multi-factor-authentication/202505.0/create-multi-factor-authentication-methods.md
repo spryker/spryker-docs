@@ -4,17 +4,17 @@ description: Learn how to create and implement your own Multi-Factor Authenticat
 template: howto-guide-template
 last_updated: Apr 7, 2025
 related:
-  - title: Multi-Factor Authentication Feature Overview
-    link: docs/pbc/all/multi-factor-auth/{{site.version}}/multi-factor-auth.html
-  - title: Install the Multi-Factor Authentication Feature
-    link: docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html
-  - title: How to Install Customer Email Multi-Factor Authentication Method
-    link: docs/pbc/all/multi-factor-auth/{{site.version}}/howto-install-customer-email-mfa.html
+  - title: Multi-Factor Authentication Feature overview
+    link: docs/pbc/all/multi-factor-authentication/page.version/multi-factor-authentication.html
+  - title: Install the Multi-Factor Authentication feature
+    link: docs/pbc/all/multi-factor-authentication/page.version/install-multi-factor-authentication-feature.html
+  - title: Install Customer Email Multi-Factor Authentication method
+    link: docs/pbc/all/multi-factor-authentication/page.version/install-customer-email-multi-factor-authentication-method.html
 ---
 
 This document describes how to create and implement Multi-Factor Authentication (MFA) methods. 
 
-To lean more about MFA methods, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-auth/{{site.version}}/multi-factor-auth.html).
+To lean more about MFA methods, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html).
 
 An MFA method consists of two components:
 

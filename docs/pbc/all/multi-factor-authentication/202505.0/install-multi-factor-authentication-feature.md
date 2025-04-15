@@ -6,7 +6,7 @@ last_updated: Mar 06, 2025
 ---
 
 This document describes how to install the Multi-Factor Authentication (MFA) feature in your Spryker project. 
-Follow the link to the [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-auth/{{site.version}}/multi-factor-auth.html) to learn more about the feature and its benefits.
+Follow the link to the [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html) to learn more about the feature and its benefits.
 
 ## Prerequisites
 
@@ -427,6 +427,6 @@ docker/sdk up --assets
  - Once enabled, a new menu item, **Set up Multi-Factor Authentication**, will appear in the sidebar.
  - The MFA settings page should now be accessible at https://yves.mysprykershop.com/multi-factor-auth/set.
 
-For a complete list of available MFA types in Spryker and installation instructions, refer to the following guide [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-auth/{{site.version}}/multi-factor-auth.html#multi-factor-authentication-methods).
+For a complete list of available MFA types in Spryker and installation instructions, refer to the following guide [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html#multi-factor-authentication-methods).
 
 {% endinfo_block %}

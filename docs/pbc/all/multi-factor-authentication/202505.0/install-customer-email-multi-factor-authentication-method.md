@@ -7,7 +7,7 @@ last_updated: Mar 6, 2025
 
 Email Multi-Factor Authentication (MFA) is a security mechanism that requires users to verify their identity through an authentication code sent to their registered email. This document describes how to install and configure email MFA.
 
-For more information about MFA, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-auth/{{site.version}}/multi-factor-auth.html).
+For more information about MFA, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html).
 
 
 ## Email multi-factor authentication mechanism

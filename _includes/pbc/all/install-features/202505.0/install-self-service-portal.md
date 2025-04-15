@@ -5,7 +5,7 @@ This document describes how to install Self-Service Portal (SSP).
 
 | FEATURE                             | VERSION | INSTALLATION GUIDE  |
 |----------------------------------| ------- | ------------------ |
-| Spryker Core  | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202505.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
+| Spryker Core  | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
 
 
 ## Set up the configuration

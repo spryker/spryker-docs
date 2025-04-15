@@ -5,7 +5,7 @@ This document describes how to install the Self-Service Portal (SSP) SSP Inquiry
 
 | FEATURE             | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
 |---------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202505.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Click and Collect   | {{site.version}} | [Enable Click and Collect](/docs/pbc/all/service-point-management/202505.0/unified-commerce/enable-click-collect.html)                                      |
 | Self-Service Portal | {{site.version}} | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/202505.0/install/install-self-service-portal)                                                         |
 

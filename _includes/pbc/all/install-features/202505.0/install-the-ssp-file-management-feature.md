@@ -410,7 +410,7 @@ Verify permission management:
 4. Enter a name for the role.
 5. In **Unassigned Permissions**, enable the following permissions:
    - **Open My Files page**
-   - **Download file(s)**
+   - **Download file**
    - **View My Files**
    - **View Business unit files**
    - **View Company Files**

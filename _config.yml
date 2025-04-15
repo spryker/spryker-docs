@@ -135,8 +135,9 @@ defaults:
 versions:
   '202311.0': '202311.0'
   '202404.0': '202404.0'
+  '202505.0': '202505.0'  
   '202410.0': '202410.0'
-  '202505.0': '202505.0'
+
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
@@ -162,6 +163,7 @@ versioned_categories:
       - identity-access-management
       - merchant-management
       - miscellaneous
+      - multi-factor-authentication
       - offer-management
       - order-management-system
       - price-management
@@ -173,6 +175,7 @@ versioned_categories:
       - ratings-reviews
       - request-for-quote
       - search
+      - self-service-portal
       - service-point-management
       - shopping-list-and-wishlist
       - tax-management

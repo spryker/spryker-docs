@@ -5,6 +5,12 @@ template: concept-topic-template
 last_updated: Apr 10, 2025
 ---
 
+{% info_block warningBox %}
+
+Self-Service Portal is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
 
 The *Service Management* feature enables customers to book a service, either for delivery to their address or for provision at a designated service point. For example, you can provide after-sales support, such as maintenance or repair.
 

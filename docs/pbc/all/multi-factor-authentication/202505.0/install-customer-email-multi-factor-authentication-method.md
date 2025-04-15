@@ -42,8 +42,7 @@ Make sure the following changes have been applied in transfer objects:
 
 1. Append glossary according to your configuration:
 
-<details>
-<summary>data/import/common/common/glossary.csv</summary>
+**data/import/common/common/glossary.csv**
 
 ```csv
 customer.multi_factor_auth.email.text,"To proceed with your request, please use the following verification code: %code%. If you did not request this code, please ignore this email.",en_US
@@ -52,7 +51,7 @@ mail.customer.multi_factor_auth.email.subject,"Verification Code for Secure Acce
 mail.customer.multi_factor_auth.email.subject,"Bestätigungscode für sicheren Zugriff",de_DE
 ```
 
-</details>
+
 
 2. Import data:
 
@@ -70,34 +69,30 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 Import MFA email templates per store:
 
-<details>
-<summary>data/import/common/AT/cms_block_store.csv</summary>
+data/import/common/AT/cms_block_store.csv
 
 ```csv
 cms-block-email--customer_multi_factor_auth_email--html,AT
 cms-block-email--customer_multi_factor_auth_email--text,AT
 ```
 
-</details>
 
-<details>
-<summary>data/import/common/DE/cms_block_store.csv</summary>
+
+data/import/common/DE/cms_block_store.csv
 
 ```csv
 cms-block-email--customer_multi_factor_auth_email--html,DE
 cms-block-email--customer_multi_factor_auth_email--text,DE
 ```
 
-</details>
 
-<details>
-<summary>data/import/common/US/cms_block_store.csv</summary>
+
+data/import/common/US/cms_block_store.csv
 
 ```csv
 cms-block-email--customer_multi_factor_auth_email--html,US
 cms-block-email--customer_multi_factor_auth_email--text,US
 ```
-</details>
 
 <details>
 <summary>data/import/common/common/cms_block.csv</summary>
@@ -120,8 +115,7 @@ Enable the following behaviors by registering the plugins:
 | CustomerEmailMultiFactorAuthPlugin                | Handles email-based MFA authentication, enabling customers to verify their identity via an authentication code sent to their registered email. |               | Spryker\Yves\MultiFactorAuth\Plugin\Factors\Email              |
 | CustomerEmailMultiFactorAuthMailTypeBuilderPlugin | Builds and processes an email template for sending MFA codes to customers.                                                                   |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Mail\Customer |
 
-<details>
-<summary>src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthDependencyProvider.php</summary>
+src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthDependencyProvider.php
 
 ```php
 namespace Pyz\Yves\MultiFactorAuth;
@@ -140,10 +134,8 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
 } 
 ```
 
-</details>
 
-<details>
-<summary>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
+rc/Pyz/Zed/Mail/MailDependencyProvider.php
 
 ```php
 namespace Pyz\Zed\Mail;
@@ -162,13 +154,12 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 }
 ```
 
-</details>
 
 {% info_block warningBox "Verification" %}
 
-1. On the Storefront, go to the MFA setup page: `https://yves.mysprykershop.com/multi-factor-auth/set`
-  * Make sure the **Set up Multi-Factor Authentication** menu item is visible in the customer profile sidebar
-  * Make sure the **Email** authentication method is displayed in the list of available authentication methods
+1. On the Storefront, go to the MFA setup page: `https://yves.mysprykershop.com/multi-factor-auth/set`. Make sure the following applies:
+  * The **Set up Multi-Factor Authentication** menu item is displayed in the customer profile navigation menu
+  * The **Email** authentication method is displayed in the list of available authentication methods
 2. For **Email Multi-Factor Authentication**, click **Activate**.
  This sends a verification code to the customer's email address.
 3. Enter the received code in the confirmation form.
@@ -177,11 +168,18 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
   Make sure you're prompted to enter an MFA code.
 5. Enter the code in the form.
   Make sure this logs you in successfully.
-6. In the customer profile, try updating the email address, password, or deleting the account.
-  * Make sure you can do these actions only after providing an email MFA code.
-  * Make sure that multiple actions done within a configured grace period don't trigger extra MFA checks.
+6. In the customer profile, try updating the email address, password, or deleting the account. Make sure the following applies:
+  * Completing the actions requires entering an MFA code
+  * You can perform several actions without entering a code within the configured grace period.
 
 {% endinfo_block %}
+
+
+
+
+
+
+
 
 
 

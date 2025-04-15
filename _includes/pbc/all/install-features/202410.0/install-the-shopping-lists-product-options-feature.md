@@ -13,7 +13,7 @@ To start feature integration, review ad install the necessary features.
 
 ### 1) Install the required modules by bsing Composer
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 ```bash
 composer require spryker-feature/shopping-list-product-option-connector:"^1.0.0" --update-with-dependencies
 ```

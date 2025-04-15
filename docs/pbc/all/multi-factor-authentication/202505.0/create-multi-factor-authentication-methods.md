@@ -25,8 +25,8 @@ An MFA method consists of two components:
 
 [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html)
 
-## 1. Create a Multi-Factor Authentication type plugin
-
+## 1) Create an MFA type plugin
+ 
 Create a plugin that implements `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface`:
 
 <details>
@@ -93,7 +93,7 @@ class YourMfaTypePlugin extends AbstractPlugin implements MultiFactorAuthPluginI
 
 </details>
 
-## 2. Create a code sender strategy
+## 2) Create a code sender strategy
 
 Create a sender strategy that implements `\Spryker\Zed\MultiFactorAuth\Business\Strategy\SendStrategyInterface`. Here's an example based on the email implementation:
 
@@ -142,12 +142,11 @@ class YourMfaCodeSenderStrategy implements SendStrategyInterface
 
 </details>
 
-## 3. Wire strategy in factory
+## 3) Wire strategy in factory
 
 Add your strategy to the factory so that it can be used by the MFA system to resolve the correct sender strategy based on the type of MFA method selected by a customer.
 
-<details>
-<summary>Pyz\Zed\MultiFactorAuth\Business\MultiFactorAuthBusinessFactory.php</summary>
+**Pyz\Zed\MultiFactorAuth\Business\MultiFactorAuthBusinessFactory.php**
 
 ```php
 <?php
@@ -172,14 +171,11 @@ class MultiFactorAuthBusinessFactory extends SprykerMultiFactorAuthBusinessFacto
 }
 ```
 
-</details>
-
-## 4. Register the plugin
+## 4) Register the plugin
 
 Register the plugin in the dependency provider:
 
-<details>
-<summary>Pyz\Yves\MultiFactorAuth\MultiFactorAuthDependencyProvider.php</summary>
+**Pyz\Yves\MultiFactorAuth\MultiFactorAuthDependencyProvider.php**
 
 ```php
 <?php
@@ -202,5 +198,3 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
     }
 }
 ```
-
-</details>

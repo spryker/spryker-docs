@@ -37,11 +37,11 @@ The login process with MFA looks as follows:
   * One MFA method: the system proceeds to verify the user using their only MFA method
 
 4. Send the authentication code via `multi-factor-auth/send-customer-code`: 
-  * Multiple MFA methods: the authentication code is sent to the user based on the method they've selected
+  * Multiple MFA methods: the authentication code is sent to the platform selected by the user
   * One MFA method: the authentication code is sent to the method's platform
 
 5. Code validation: After the authentication code is sent, the system presents a code validation form to the user. The user enters the received authentication code in the form.  
-If the code is correct, authentication is successful. If incorrect, the user needs to double-check the code and try entering again.
+  If the code is correct, authentication is successful. If incorrect, the user needs to double-check the code and try entering again.
 
 
 ![MFA-flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/multi-factor-authentication/multi-factor-authentication.md/MFA-flow.png)
@@ -50,9 +50,9 @@ If the code is correct, authentication is successful. If incorrect, the user nee
 
 For the login MFA flow, MFA is triggered only after validating credentials to prevent unnecessary MFA processing.
 
-1.	On the login page, customer enters email and password.
-2.	System validates the credentials. If invalid, authentication fails, and the customer is prompted to try again. If valid, the system proceeds to check if MFA is enabled.
-3.	If MFA is enabled, the process continues as described in [MFA flow for protected actions](#mfa-flow-for-protected-actions)
+1. On the login page, customer enters email and password.
+2. System validates the credentials. If invalid, authentication fails, and the customer is prompted to try again. If valid, the system proceeds to check if MFA is enabled.
+3. If MFA is enabled, the process continues as described in [MFA flow for protected actions](#mfa-flow-for-protected-actions).
 
 
 

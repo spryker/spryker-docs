@@ -5,21 +5,19 @@ template: feature-integration-guide-template
 last_updated: Mar 06, 2025
 ---
 
-This document describes how to install the Multi-Factor Authentication (MFA) feature in your Spryker project. 
-Follow the link to the [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html) to learn more about the feature and its benefits.
+This document describes how to install the [Multi-Factor Authentication (MFA) feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html).
+
 
 ## Prerequisites
 
-To start the integration, make sure that the following features have been installed in your project:
-
-| NAME                        | VERSION          | INTEGRATION  GUIDE                                                                                                                                                                                                     |
+| FEATURE                        | VERSION          | INSTALLATION  GUIDE                                                                                                                                                                                                     |
 |-----------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core                | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                            |
 | Customer Account Management | {{site.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 
-## 1) Install the required modules using composer
+## 1) Install the required modules
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/multi-factor-auth:"^0.1.0" spryker/multi-factor-auth-extension:"^1.0.0" --update-with-dependencies
@@ -38,9 +36,12 @@ Make sure the following modules have been installed:
 
 ## 2) Set up configuration
 
+Set up the following configuration. 
+
+
 ### 2.1) Configure code length 
 
-To configure the length of the authentication code, extend the `MultiFactorAuthConfig` class in your project:
+To configure the length of the authentication code, extend the `MultiFactorAuthConfig` class:
 
 <details>
 <summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
@@ -71,7 +72,8 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 
 ### 2.2) Configure code validity time
 
-To configure the time interval in minutes during which the authentication code is valid, extend the `MultiFactorAuthConfig` class in your project:
+To configure the time interval in minutes during which an authentication code is valid, extend the `MultiFactorAuthConfig` class:
+
 
 <details>
 <summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
@@ -101,7 +103,9 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 
 ### 2.3) Configure brute-force protection limit
 
-To configure the number of failed attempts a customer can make to enter the authentication code in order to prevent brute force attacks, extend the `MultiFactorAuthConfig` class in your project:
+To configure the maximum number of failed MFA attempts a customer can make before brute force protection is triggered, extend the `MultiFactorAuthConfig` class:
+
+
 
 <details>
 <summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
@@ -129,9 +133,9 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 ```
 </details>
 
-### 2.4) Configure enabled routes and forms
+### 2.4) Configure protected routes and forms
 
-To specify which routes and forms should require Multi-Factor Authentication (MFA), extend the `MultiFactorAuthConfig` class in your project and configure the necessary entries:
+Extend the `MultiFactorAuthConfig` class and configure the needed routes and forms to require MFA:
 
 <details>
 <summary>src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
@@ -161,9 +165,9 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 ```
 </details>
 
-{% info_block warningBox "Note" %}
+{% info_block warningBox "" %}
 
-Note, you can configure multiple forms on the same page to require MFA authentication.
+You can configure multiple forms on the same page to require MFA authentication.
 
 {% endinfo_block %}
 
@@ -203,7 +207,7 @@ Make sure the following changes have been applied in transfer objects:
 
 ## 4) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 <details>
 <summary>data/import/common/common/glossary.csv</summary>
@@ -246,7 +250,7 @@ multi_factor_auth.required_options,"Sie müssen eine Option auswählen, um fortz
 ```
 </details>
 
-Import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -264,8 +268,8 @@ Register the following plugins to enable widgets:
 
 | PLUGIN                           | SPECIFICATION                                     | PREREQUISITES | NAMESPACE                               |
 |----------------------------------|---------------------------------------------------|---------------|-----------------------------------------|
-| MultiFactorAuthHandlerWidget     | Provides MFA handling functionality               |               | SprykerShop\Yves\MultiFactorAuth\Widget |
-| SetMultiFactorAuthMenuItemWidget | Adds menu item to the customer profile navigation |               | SprykerShop\Yves\MultiFactorAuth\Widget |
+| MultiFactorAuthHandlerWidget     | Provides MFA handling functionality.               |               | SprykerShop\Yves\MultiFactorAuth\Widget |
+| SetMultiFactorAuthMenuItemWidget | Adds an MFA menu item to the customer profile navigation. |               | SprykerShop\Yves\MultiFactorAuth\Widget |
 
 <details>
 <summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
@@ -297,9 +301,9 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                         | SPECIFICATION                                             | PREREQUISITES | NAMESPACE                                                           |
 |------------------------------------------------|-----------------------------------------------------------|---------------|---------------------------------------------------------------------|
-| CustomerMultiFactorAuthenticationHandlerPlugin | Handles customer multi-factor authentication during login |               | Spryker\Yves\MultiFactorAuth\Plugin\AuthenticationHandler\Customer  |
-| MultiFactorAuthCustomerRouteProviderPlugin     | Provides routes for customer multi-factor auth            |               | Spryker\Yves\MultiFactorAuth\Plugin\Router\Customer  |
-| MultiFactorAuthExtensionFormPlugin             | Provides form validation against corrupted requests       |               | Spryker\Yves\MultiFactorAuth\Plugin\Form |
+| CustomerMultiFactorAuthenticationHandlerPlugin | Handles  login MFA. |               | Spryker\Yves\MultiFactorAuth\Plugin\AuthenticationHandler\Customer  |
+| MultiFactorAuthCustomerRouteProviderPlugin     | Provides routes for MFA.            |               | Spryker\Yves\MultiFactorAuth\Plugin\Router\Customer  |
+| MultiFactorAuthExtensionFormPlugin             | Provides form validation against corrupted requests.       |               | Spryker\Yves\MultiFactorAuth\Plugin\Form |
 
 <details>
 <summary>src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php</summary>
@@ -366,7 +370,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 
 ### 7) Set up the frontend
 
-To set up the frontend, you need to build the assets for the Multi-Factor Authentication feature. This step is crucial to ensure that the frontend components are properly integrated and functional.
+Add the following settings:
 
 <details>
 <summary>frontend/settings.json</summary>
@@ -412,21 +416,65 @@ To set up the frontend, you need to build the assets for the Multi-Factor Authen
     };
 }
 ```
+
 </details>
 
-{% info_block warningBox "Verification" %}
 
-1. Build the MFA frontend assets by running the following command:
+
+2. Build the MFA frontend assets:
 
 ```bash
 docker/sdk up --assets
 ```
 
-2. Confirm successful integration:
- - Ensure that at least one MFA type plugin is wired.
- - Once enabled, a new menu item, **Set up Multi-Factor Authentication**, will appear in the sidebar.
- - The MFA settings page should now be accessible at https://yves.mysprykershop.com/multi-factor-auth/set.
+{% info_block warningBox "Verification" %}
 
-For a complete list of available MFA types in Spryker and installation instructions, refer to the following guide [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html#multi-factor-authentication-methods).
+* Make sure the **Set up Multi-Factor Authentication** menu item is displayed in the navigation menu.
+* Clicking the menu should open the following page: `https://yves.mysprykershop.com/multi-factor-auth/set`.
 
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

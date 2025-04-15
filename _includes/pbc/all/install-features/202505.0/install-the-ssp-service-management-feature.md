@@ -1164,7 +1164,7 @@ console frontend:zed:build
     - Each service entry includes detailed information such as the product, customer, company, and scheduled date/time.
     - Click on the order reference link to see the details of the order.
     - There is a user interface element to modify the scheduled service date/time.
-    - Any changes made in the backoffice are propagated in the customer’s storefront profile.
+    - Any changes made in the backoffice are propagated in the customer's storefront profile.
 
 - **Check Catalog Updates:**  
   Confirm that the storefront catalog reflects the addition of the new service product.

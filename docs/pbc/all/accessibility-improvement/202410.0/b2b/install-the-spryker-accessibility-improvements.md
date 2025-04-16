@@ -27,7 +27,7 @@ To install Yves keyboard accessibility improvements, take the following steps:
 ```
 <!-- {% raw %} -->
 2. Adjust templates and files on the project level.
-- Rename `{% block body %}` to `{% block viewport %}` at `src/Pyz/Yves/ShopUi/Theme/default/components/organisms/header/header.twig` to enable `skip-link`. Pass this attribute into the `header` organism from `src/Pyz/Yves/ShopUi/Theme/default/templates/page-layout-main/page-layout-main.twig`
+- Rename `{% block body %}` to `{% block viewport %}` at `src/Pyz/Yves/ShopUi/Theme/default/templates/page-layout-main/page-layout-main.twig`.
 - Pass `navigationId` attribute with its value as `navigationId` (variable from the Spryker Core) to the call of the `header` organism at `src/Pyz/Yves/ShopUi/Theme/default/components/organisms/header/header.twig` to enable `skip-link`. Pass this attribute into the `header` organism from `src/Pyz/Yves/ShopUi/Theme/default/templates/page-layout-main/page-layout-main.twig`
 
   ```twig
@@ -42,7 +42,7 @@ To install Yves keyboard accessibility improvements, take the following steps:
   ```
 <!-- {% endraw %} -->
 
-- Define and use as navigation ID `navigationId` attribute at `src/Pyz/Yves/ShopUi/Theme/default/components/organisms/header/header.twig`
+- Define navigation ID `navigationId` attribute at `src/Pyz/Yves/ShopUi/Theme/default/components/organisms/header/header.twig` and use it as an ID for the navigation component. 
 
 <!-- {% raw %} -->
 ```twig
@@ -56,11 +56,13 @@ To install Yves keyboard accessibility improvements, take the following steps:
 ```
 <!-- {% endraw %} -->
 
-- Add `skip-link` and ID attribute (href for `skip-link`) to 
-  - src/Pyz/Yves/CatalogPage/Theme/default/templates/page-layout-catalog/page-layout-catalog.twig (`catalogProductListId` is the ID for the `skip-link`)
+- Add `skip-link` and ID attribute for it's target to 
+  - src/Pyz/Yves/CatalogPage/Theme/default/templates/page-layout-catalog/page-layout-catalog.twig
        <!-- {% raw %} -->
        ```twig
        {% block content %}
+          {% set catalogProductListId = 'catalog-product-list' %}
+    
           {% include molecule('skip-link') with {
              data: {
                 href: catalogProductListId,
@@ -77,9 +79,9 @@ To install Yves keyboard accessibility improvements, take the following steps:
        - src/Pyz/Yves/CompanyPage/Theme/default/templates/page-layout-company/page-layout-company.twig
        <!-- {% raw %} -->
        ```twig
-       {% set contentSectionId = 'company-content' %}
-     
        {% block content %}
+         {% set contentSectionId = 'company-content' %}
+    
          {% include molecule('skip-link') with {
            data: {
              href: contentSectionId,
@@ -94,9 +96,9 @@ To install Yves keyboard accessibility improvements, take the following steps:
        - src/Pyz/Yves/CustomerPage/Theme/default/templates/page-layout-customer/page-layout-customer.twig
        <!-- {% raw %} -->
        ```twig
-       {% set contentSectionId = 'customer-content' %}
-     
        {% block content %}
+         {% set contentSectionId = 'customer-content' %}
+    
          {% include molecule('skip-link') with {
            data: {
              href: contentSectionId,
@@ -121,7 +123,7 @@ To install Yves keyboard accessibility improvements, take the following steps:
         })
       }
   ```
-- Enable `accessibility` param for the image slider config at the `src/Pyz/Yves/ProductImageWidget/Theme/default/components/molecules/image-gallery/image-gallery.ts`
+- Enable `accessibility` parameter for the image slider config at the `src/Pyz/Yves/ProductImageWidget/Theme/default/components/molecules/image-gallery/image-gallery.ts`
 
   <!-- {% raw %} -->
     ```twig
@@ -132,23 +134,23 @@ To install Yves keyboard accessibility improvements, take the following steps:
     ```
   <!-- {% endraw %} -->
 
-- Adjust `mapEvents` and add new `browseFileLabelHandler` method and `src/Pyz/Yves/QuickOrderPage/Theme/default/components/molecules/quick-order-file-upload/quick-order-file-upload.ts`
+- - In `src/Pyz/Yves/QuickOrderPage/Theme/default/components/molecules/quick-order-file-upload/quick-order-file-upload.ts`, adjust `mapEvents` and add a `browseFileLabelHandler` method:
 
-  ```js
-    protected mapEvents(): void {
-      ...
-      this.browseFileLabel.addEventListener('keydown', (event: KeyboardEvent) => this.browseFileLabelHandler(event));
+```js
+  protected mapEvents(): void {
+    ...
+    this.browseFileLabel.addEventListener('keydown', (event: KeyboardEvent) => this.browseFileLabelHandler(event));
+  }
+
+  protected browseFileLabelHandler(event: KeyboardEvent): void {
+    if (event.code !== 'Enter') {
+        return;
     }
-  
-    protected browseFileLabelHandler(event: KeyboardEvent): void {
-      if (event.code !== 'Enter') {
-          return;
-      }
-  
-      event.preventDefault();
-      this.browseFileLabel.dispatchEvent(new MouseEvent('click'));
-    }
-  ```
+
+    event.preventDefault();
+    this.browseFileLabel.dispatchEvent(new MouseEvent('click'));
+  }
+```
 - Adjust `src/Pyz/Yves/ShopUi/Theme/default/components/molecules/navigation-multilevel/navigation-multilevel.ts` by adding `focusin` and `focusout` event listeners
   ```js
    protected mapEvents(): void {
@@ -173,7 +175,7 @@ To install Yves keyboard accessibility improvements, take the following steps:
   ```
 <!-- {% endraw %} -->
  
-- Adjust styles for the following components
+- Next files contain text to background contrast adjustments and ui improvements.
   - src/Pyz/Yves/ShopUi/Theme/default/components/atoms/checkbox/checkbox.scss
   - src/Pyz/Yves/ShopUi/Theme/default/components/molecules/custom-select/custom-select.scss
   - src/Pyz/Yves/ShopUi/Theme/default/components/molecules/product-item/product-item.scss

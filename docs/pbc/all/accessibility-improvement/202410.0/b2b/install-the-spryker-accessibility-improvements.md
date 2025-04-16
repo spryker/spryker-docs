@@ -8,7 +8,7 @@ template: feature-integration-guide-template
 Keyboard accessibility improvements include the following changes:
 
 - Enhanced Accessibility: Made several interface elements more accessible. You can now navigate more logically using the Tab key, and screen readers provide better descriptions of elements.
-- Keyboard-Friendly Search: Improved the way keyboard users can interact with the product search suggestions.
+- Keyboard-Friendly Search: Users can now interact with search suggestions using the keyboard.
 - Better Visual Clarity: Adjusted the color scheme across the site to ensure text stands out better from its background, making it easier for everyone to read.
 
 To install Yves keyboard accessibility improvements, take the following steps:

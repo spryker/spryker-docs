@@ -1886,6 +1886,18 @@ entries:
                 - title: Mindcurv
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/mindcurv.html
 
+      - title: Multi-factor authentication
+        url: /docs/pbc/all/multi-factor-authentication/multi-factor-authentication.html
+        include_versions:
+        - "202505.0"
+        nested:
+          - title: Install the Multi-Factor Authentication feature
+            url: /docs/pbc/all/multi-factor-authentication/install-multi-factor-authentication-feature.html
+          - title: Install customer email Multi-Factor Authentication method
+            url: /docs/pbc/all/multi-factor-authentication/install-customer-email-multi-factor-authentication-method.html
+          - title: Create Multi-Factor Authentication methods
+            url: /docs/pbc/all/multi-factor-authentication/create-multi-factor-authentication-methods.html                    
+
       - title: Offer Management
         url: /docs/pbc/all/offer-management/offer-management.html
         nested:
@@ -3905,9 +3917,16 @@ entries:
 
 
       - title: Self-Service Portal
+        url: /docs/pbc/all/self-service-portal/self-service-portal.html
         include_versions:
         - "202505.0"
         nested:
+          - title: Self-Service Portal Service Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-service-management-feature-overview.html
+          - title: Self-Service Portal Inquiry Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-inquiry-management-feature-overview.html
+          - title: Self-Service Portal Dashboard Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-dashboard-management-feature-overview.html          
           - title: Install
             nested:
               - title: Install Self-Service Portal

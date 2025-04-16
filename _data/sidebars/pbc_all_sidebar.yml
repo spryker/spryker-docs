@@ -3922,11 +3922,11 @@ entries:
         - "202505.0"
         nested:
           - title: Self-Service Portal Service Management feature overview
-            url: /docs/pbc/all/self-service-portal/self-service-portal-service-management-feature-overview.html
+            url: /docs/pbc/all/self-service-portal/ssp-service-management-feature-overview.html
           - title: Self-Service Portal Inquiry Management feature overview
-            url: /docs/pbc/all/self-service-portal/self-service-portal-inquiry-management-feature-overview.html
+            url: /docs/pbc/all/self-service-portal/ssp-inquiry-management-feature-overview.html
           - title: Self-Service Portal Dashboard Management feature overview
-            url: /docs/pbc/all/self-service-portal/self-service-portal-dashboard-management-feature-overview.html          
+            url: /docs/pbc/all/self-service-portal/ssp-dashboard-management-feature-overview.html          
           - title: Install
             nested:
               - title: Install Self-Service Portal

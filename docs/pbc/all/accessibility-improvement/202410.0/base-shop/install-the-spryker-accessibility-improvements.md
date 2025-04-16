@@ -46,6 +46,7 @@ To install Yves keyboard accessibility improvements, take the following steps:
 
 4. Enable user scalable option in the project:
     - Set `viewportUserScaleable` variable at `src/Pyz/Yves/ShopUi/Theme/default/templates/page-blank/page-blank.twig`. Possible values are `yes` or `no`. The default value is `no`.
+   This variable is used to set the `user-scalable` attribute in the viewport meta tag - <meta name="viewport" ...
 
 <!-- {% raw %} -->
 ```twig

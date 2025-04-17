@@ -15,7 +15,7 @@ related:
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/billpay/billpay.html
 ---
 
-Billpay offers multiple payment methods (Invoice, Direct Debit, PayLater, Instalment). Availability of payment methods differs from country to country. Please contact Billpay directly or visit the [Billpay website](https://www.billpay.de/en/)e  for details.
+Billpay offers multiple payment methods (Invoice, Direct Debit, PayLater, Instalment). Availability of payment methods differs from country to country. Contact Billpay directly or visit the [Billpay website](https://www.billpay.de/en/)e  for details.
 
 The Billpay module provides integration with the [Invoice with prescoring](https://www.billpay.de/en/klarna-group-for-business/index.html) payment method.
 
@@ -54,7 +54,7 @@ $config[BillpayConstants::USE_PRESCORE] = 1;
 
 ## Additional Configuration Options
 
-Payone module provides dependency injectors to extend checkout and order processing. Please add or extend with the corresponding keys:
+Payone module provides dependency injectors to extend checkout and order processing. Add or extend with the corresponding keys:
 
 ```php
 <?php

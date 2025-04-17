@@ -18,7 +18,7 @@ redirect_from:
 User and rights management is implemented in the following three bundles:
 
 * ACL—ACL stands for Access Control List. This is where you can manage your roles, groups, privileges and resources.
-* Auth—manages the authorization of a specific user by returning true or false if the credentials are allowed to access the system or not. It is used for login, logout, and used by the login controller to verify if a given user token is authenticated. Login is authenticated with a form or a header (via token). Auth is also used to validate that Zed has authorization to process incoming requests from Yves or 3rd parties such as payment providers.
+* Auth—manages the authorization of a specific user by returning true or false if the credentials are allowed to access the system or not. It is used for login, logout, and used by the login controller to verify if a given user token is authenticated. Login is authenticated with a form or a header (via token). Auth is also used to validate that Zed has authorization to process incoming requests from Yves or third parties such as payment providers.
 * User—lets you create users and assign them to groups. Each group contains a set of roles.
 
 ## Users and customers

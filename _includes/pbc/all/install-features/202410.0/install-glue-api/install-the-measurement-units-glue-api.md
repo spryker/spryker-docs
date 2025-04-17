@@ -13,7 +13,7 @@ To start the feature integration, overview and install the necessary features:
 
 ## 1)  Install the required modules using Composer
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/product-measurement-units-rest-api:"^1.0.0" --update-with-dependencies

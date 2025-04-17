@@ -24,7 +24,7 @@ related:
 
 Query objects provide an object-oriented API for writing database queries which are used in [query containers](/docs/dg/dev/backend-development/zed/persistence-layer/query-container/query-container.html).
 
-Please check the official [Propel Query Reference](http://propelorm.org/documentation/reference/model-criteria.html) for a complete documentation.
+Check the official [Propel Query Reference](http://propelorm.org/documentation/reference/model-criteria.html) for a complete documentation.
 
 ## Creating a New Query Object
 

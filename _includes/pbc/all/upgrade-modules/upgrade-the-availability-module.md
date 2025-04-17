@@ -69,7 +69,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 {% info_block infoBox %}
 
-In order to dismantle the Horizontal Barrier and enable partial module updates on projects, Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+In order to dismantle the Horizontal Barrier and enable partial module updates on projects, Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. [Contact us](https://spryker.com/en/support/) if you have any questions.
 
 {% endinfo_block %}
 
@@ -130,7 +130,7 @@ $this->touchQuery->addJoin(
 
 ## Upgrading from version 3.* to version 4.*
 
-All `Availability` UI has been moved to `AvailabilitGui` module, mostly Communication or Persistence were changed. If you have overwritten any of moved classes from those layers please change base class namespace from `Availability` to `AvailabilityGui` root.
+All `Availability` UI has been moved to `AvailabilitGui` module, mostly Communication or Persistence were changed. If you have overwritten any of moved classes from those layers  change base class namespace from `Availability` to `AvailabilityGui` root.
 
 ## Upgrading from version 2.* to version 3.*
 

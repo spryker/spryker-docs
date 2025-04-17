@@ -3,7 +3,7 @@ var syntax         = 'scss', // Syntax: sass or scss;
 
 var gulp          = require('gulp'),
     gutil         = require('gulp-util' ),
-    sass          = require('gulp-sass'),
+    sass          = require('gulp-sass')(require('sass')),
     browserSync   = require('browser-sync'),
     concat        = require('gulp-concat'),
     uglify        = require('gulp-uglify'),

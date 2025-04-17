@@ -14,7 +14,7 @@ Install the required features:
 
 ## 1) Install required modules using Composer
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product-bundles --update-with-dependencies

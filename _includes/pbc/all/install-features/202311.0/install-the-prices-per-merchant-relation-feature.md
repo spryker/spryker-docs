@@ -13,7 +13,7 @@ The Price per Merchant Relation feature is shipped with the following modules:
 | [PriceProductPriceProduct](https://github.com/spryker/price-product) | Provides product price related functionality, price persistence, current price resolvers per currency/price mode. |
 
 To install the Price per Merchant Relation feature, follow the steps below:
-1. Install the necessary modules using composer:
+1. Install the required modules using Composer:
 
 Update the existing and install the required modules:
 

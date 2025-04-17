@@ -74,5 +74,5 @@ Customer sets up all data just after the redirect to Computop. Init action: "Aut
 
 For partial refunds:
 1. Partial refunds are possible for direct debit transactions.
-2. But please note, that you can not test it in test mode.
+2. But  note, that you can not test it in test mode.
 3. If you want to test it, you have to say it afterwards to Computop help desk, so that they can prepare the transaction.

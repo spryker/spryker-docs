@@ -77,7 +77,7 @@ The [code sniffer](https://github.com/spryker/code-sniffer) documentation shows 
 
 ## Conventions and guidelines
 
-We highly recommend following the best practices described below, as they help you to avoid certain classes of problems. These are more guidelines than absolute rules. If you feel the need to deviate from them, please document why you are doing so.
+We highly recommend following the best practices described below, as they help you to avoid certain classes of problems. These are more guidelines than absolute rules. If you feel the need to deviate from them,  document why you are doing so.
 
 ### Use statements
 

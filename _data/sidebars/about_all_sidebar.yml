@@ -7,6 +7,8 @@ entries:
     - title: Releases
       url: /docs/about/all/releases/product-and-code-releases.html
       nested:
+      - title: Security release notes 202503.0
+        url: /docs/about/all/releases/security-release-notes-202503.0.html                
       - title: Security release notes 202412.0
         url: /docs/about/all/releases/security-release-notes-202412.0.html        
       - title: Release notes 202410.0
@@ -78,7 +80,8 @@ entries:
       url: /docs/about/all/b2c-suite.html
     - title: B2B Suite
       url: /docs/about/all/b2b-suite.html
-
+    - title: Self-Service Portal
+      url: /docs/about/all/self-service-portal.html
     - title: Spryker Marketplace
       url: /docs/about/all/spryker-marketplace/spryker-marketplace.html
       nested:

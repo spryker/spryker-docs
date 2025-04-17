@@ -4552,13 +4552,3 @@ entries:
                       - title: Pick picklist items
                         url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-pick-picklist-items.html
 
-      - title: Accessibility
-        nested:
-          - title: Base Shop
-            nested:
-              - title: Accessibility improvements
-                url: /docs/pbc/all/accessibility-improvement/202410.0/base-shop/install-the-spryker-accessibility-improvements.html
-          - title: B2B, B2B-MP shops
-            nested:
-              - title: Accessibility improvements
-                url: /docs/pbc/all/accessibility-improvement/202410.0/b2b/install-the-spryker-accessibility-improvements.html

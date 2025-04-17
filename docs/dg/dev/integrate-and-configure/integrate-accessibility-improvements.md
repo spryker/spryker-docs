@@ -1,5 +1,5 @@
 ---
-title: Accessibility improvements
+title: Integrate accessibility improvements
 description: Learn how install accessibility improvements.
 last_updated: March 31, 2025
 template: feature-integration-guide-template
@@ -7,9 +7,9 @@ template: feature-integration-guide-template
 
 Accessibility improvements include the following changes:
 
-- Enhanced accessibility: Improved interface navigation with better **Tab** key logic and more accurate screen reader descriptions for UI elements.
-- Keyboard-friendly search: Users can now interact with search suggestions using the keyboard.
-- Better visual clarity: Adjusted the color scheme so text stands out better from its background, making it easier to read.
+- Enhanced accessibility: Improved interface navigation with better **Tab** key logic and more accurate screen reader descriptions for UI elements
+- Keyboard-friendly search: Users can now interact with search suggestions using the keyboard
+- Better visual clarity: Adjusted the color scheme so text stands out better from its background, making it easier to read
 
 To install Yves keyboard accessibility improvements, take the following steps:
 
@@ -38,13 +38,8 @@ To install Yves keyboard accessibility improvements, take the following steps:
 | product_bundle_widget.aria_label.view.details | Details für %productName% anzeigen             | View details for %productName%                    |
 | customer_reorder_widget.aria_label.check.product.to.reorder | Überprüfen Sie das Produkt %productName%, um es erneut zu bestellen | Check the product %productName% to reorder |
 
-3. Generate translation cache for Yves:
 
-
-
-
-
-4. Import the glossary:
+3. Import the glossary:
 ```bash
   console data:import glossary
 ```
@@ -63,8 +58,9 @@ To install Yves keyboard accessibility improvements, take the following steps:
  ```
 <!-- {% endraw %} -->
 
-5. To enable `skip-link`, pass `navigationId` into the `header` organism from `src/Pyz/Yves/ShopUi/Theme/default/templates/page-layout-main/page-layout-main.twig`:
-
+5. To enable `skip-link`, pass `navigationId` into the `header` organism:
+ 
+**src/Pyz/Yves/ShopUi/Theme/default/templates/page-layout-main/page-layout-main.twig**
 <!-- {% raw %} -->
 ```twig
     {% embed organism('header') with {
@@ -89,4 +85,4 @@ To install Yves keyboard accessibility improvements, take the following steps:
 
 ## Next step
 
-This document describes how to install the core of this functionality. The integration also requires project-specific frontend changes. For an exampe integration, see 
+This document describes how to install the core of this functionality. The integration also requires project-specific frontend changes. For an example integration, see [Tutorial: Integrate accessibility improvements into B2B Demo Shop](/docs/dg/dev/integrate-and-configure/tutorial-integrate-accessiblity-improvements-into-b2b-demoshop.html).

@@ -9,6 +9,11 @@ This document describes an example integration of accessibility improvements int
 
 For all changes described in this document, see the [integration PR](https://github.com/spryker-shop/b2b-demo-marketplace/pull/532).
 
+
+## Prerequisites
+
+[Integrate accessibility improvements](/docs/dg/dev/integrate-and-configure/integrate-accessibility-improvements.html)
+
 ## Update modules
 
 ```bash

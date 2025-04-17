@@ -30,7 +30,7 @@ For instructions on contributing, see [Edit the docs locally](/docs/about/all/ab
 1. Create an account on [GitHub](https://github.com/).
 2. Install [GitHub Desktop](https://desktop.github.com/).
 3. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/).
-4. Clone the Spryker docs repository. For detailed instructions, see [Clone the Spryker docs repository](https://docs.spryker.com/docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-locally.html#clone-the-spryker-docs-repository).
+4. Clone the [Spryker docs repository](https://github.com/spryker/spryker-docs). For detailed instructions, see [Clone the Spryker docs repository](https://docs.spryker.com/docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-locally.html#clone-the-spryker-docs-repository).
 
 
 ## Run the docs

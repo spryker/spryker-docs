@@ -5,20 +5,20 @@ last_updated: March 31, 2025
 template: feature-integration-guide-template
 ---
 
-Keyboard accessibility improvements include the following changes:
+Accessibility improvements include the following changes:
 
-- Enhanced Accessibility: Made several interface elements more accessible. You can now navigate more logically using the Tab key, and screen readers provide better descriptions of elements.
-- Keyboard-Friendly Search: Improved the way keyboard users can interact with the product search suggestions.
-- Better Visual Clarity: Adjusted the color scheme across the site to ensure text stands out better from its background, making it easier for everyone to read.
+- Enhanced accessibility: Improved interface navigation with better **Tab** key logic and more accurate screen reader descriptions for UI elements.
+- Keyboard-friendly search: Users can now interact with search suggestions using the keyboard.
+- Better visual clarity: Adjusted the color scheme so text stands out better from its background, making it easier to read.
 
 To install Yves keyboard accessibility improvements, take the following steps:
 
-1. Update necessary modules with the following command:
+1. Update the required modules:
 ```bash
   composer require spryker-shop/shop-ui:^1.84.0
 ```
 
-2. Add glossary keys for the new accessibility improvements.
+2. Add the glossary keys:
 
 | Key                                         | Translation (de_DE)                                | Translation (en_US)                                |
 |---------------------------------------------|---------------------------------------------------|---------------------------------------------------|
@@ -39,7 +39,12 @@ To install Yves keyboard accessibility improvements, take the following steps:
 | customer_reorder_widget.aria_label.check.product.to.reorder | Überprüfen Sie das Produkt %productName%, um es erneut zu bestellen | Check the product %productName% to reorder |
 
 3. Generate translation cache for Yves:
-- Run the following command to import the glossary:
+
+
+
+
+
+4. Import the glossary:
 ```bash
   console data:import glossary
 ```
@@ -82,3 +87,7 @@ To install Yves keyboard accessibility improvements, take the following steps:
   console frontend:project:install-dependencies
   console frontend:yves:build -e production
 ```
+
+## Next step
+
+This document describes how to install the core of this functionality. The integration also requires frontend changes. For an examp

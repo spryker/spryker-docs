@@ -1691,7 +1691,7 @@ entries:
           - title: Push Notification feature overview
             url: /docs/pbc/all/miscellaneous/push-notification-feature-overview.html
           - title: Sitemap feature overview
-            url: /docs/pbc/all/miscellaneous/sitemap.html            
+            url: /docs/pbc/all/miscellaneous/sitemap-feature-overview.html            
             include_versions:
             - "202505.0"  
           - title: Install and upgrade

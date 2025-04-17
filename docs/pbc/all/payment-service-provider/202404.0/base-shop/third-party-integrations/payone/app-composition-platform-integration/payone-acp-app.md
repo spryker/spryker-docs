@@ -37,6 +37,14 @@ For the *Payone Credit Card* payment method, the following modes are supported:
 - *3DS*: Messaging protocol that enables consumer authentication with their card issuer when making online purchases.
 - *PCI DSS Compliance via SAQ A*: A set of security standards designed to ensure that you accept, process, and transmit credit card information in a secure environment.
 
+For the *Payone Paypal* payment method, we support only *Preauthorization and Capture*.
+
+{% info_block infoBox "State machine for Payone" %}
+
+The payment modes like Preauthorization and Capture must be set via the Spryker state machine in the Order Management System (OMS). However, the state machine for the Payone app is now in development, so you can not customize it for your project yet.
+
+{% endinfo_block %}
+
 ## Credit card payment flow
 
 When customers pay with a credit card (with optional support of 3DS), the flow is as follows:

@@ -89,4 +89,4 @@ To install Yves keyboard accessibility improvements, take the following steps:
 
 ## Next step
 
-This document describes how to install the core of this functionality. The integration also requires frontend changes. For an examp
+This document describes how to install the core of this functionality. The integration also requires project-specific frontend changes. For an exampe integration, see 

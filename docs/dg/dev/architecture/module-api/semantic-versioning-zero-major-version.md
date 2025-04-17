@@ -10,23 +10,18 @@ related:
     link: docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
 ---
 
-# Understanding Zero-Major Modules in Spryker
 
-Spryker adheres to [Semantic Versioning](https://semver.org/) to communicate the stability and expected impact of changes within its modules. As part of this versioning scheme, any module with a version **below 1.0.0** is considered a **zero-major** module.
+Spryker adheres to [semantic versioning](https://semver.org/) to communicate the stability and expected impact of changes within its modules. As part of this versioning scheme, any module with a version *below 1.0.0* is considered a *zero-major* module.
 
-This document outlines what using such a module means for both **developers** and **project stakeholders**, focusing on technical expectations, functional completeness, and versioning behavior.
+This document describes what using such a module means for *developers* and *project stakeholders*, focusing on technical expectations, functional completeness, and versioning behavior.
 
----
+## Zero-major module definition
 
-## What Defines a Zero-Major Module?
+Zero-major modules are *early-stage implementations* that are publicly released for evaluation and early integration. These modules follow a versioning pattern of `0.x.x` and are not considered stable.
 
-Zero-major modules are **early-stage implementations** that are publicly released for evaluation and early integration. These modules follow a versioning pattern of `0.x.x` and are not yet considered stable.
+A module remains zero-major until it reaches version *1.0.0*, at which point it is considered **stable** and the full set of [semantic versioning guarantees](https://docs.spryker.com/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) apply.
 
-> A module remains zero-major until it reaches version **1.0.0**, at which point it is considered **stable** and the full set of [Semantic Versioning guarantees](https://docs.spryker.com/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) apply.
-
----
-
-## Technical Characteristics of Zero-Major Modules
+## Technical characteristics of zero-major modules
 
 | Characteristic                              | Description                                                                 |
 |--------------------------------------------|-----------------------------------------------------------------------------|

@@ -1,4 +1,13 @@
 
+
+{% info_block warningBox %}
+
+Self-Service Portal is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
+
+
 This document describes how to install the Self-Service Portal (SSP) Inquiry Management feature.
 
 
@@ -8,7 +17,7 @@ This document describes how to install the Self-Service Portal (SSP) Inquiry Man
 
 | FEATURE         | VERSION | INSTALLATION GUIDE  |
 |--------------| ------- | ------------------ |
-| Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202505.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
+| Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
 | Self-Service Portal | {{site.version}}  | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/202505.0/install/install-self-service-portal)          |
 
 ## Install the required modules
@@ -896,7 +905,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 <!--
 
 {% info_block warningBox "Verification" %}
-
+ 
 {% endinfo_block %}
 
 -->

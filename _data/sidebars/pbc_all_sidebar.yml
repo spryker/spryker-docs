@@ -1690,6 +1690,10 @@ entries:
 
           - title: Push Notification feature overview
             url: /docs/pbc/all/miscellaneous/push-notification-feature-overview.html
+          - title: Sitemap feature overview
+            url: /docs/pbc/all/miscellaneous/sitemap.html            
+            include_versions:
+            - "202505.0"  
           - title: Install and upgrade
             nested:
               - title: Install features
@@ -1699,7 +1703,11 @@ entries:
                   - title: Queue Data Import
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
                   - title: Spryker Core
-                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html                    
+                  - title: Sitemap
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-sitemap-feature.html
+                    include_versions:
+                    - "202505.0"  
                   - title: Push Notification
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-push-notification-feature.html
 
@@ -3917,9 +3925,16 @@ entries:
 
 
       - title: Self-Service Portal
+        url: /docs/pbc/all/self-service-portal/self-service-portal.html
         include_versions:
         - "202505.0"
         nested:
+          - title: Self-Service Portal Service Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-service-management-feature-overview.html
+          - title: Self-Service Portal Inquiry Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-inquiry-management-feature-overview.html
+          - title: Self-Service Portal Dashboard Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-dashboard-management-feature-overview.html          
           - title: Install
             nested:
               - title: Install Self-Service Portal

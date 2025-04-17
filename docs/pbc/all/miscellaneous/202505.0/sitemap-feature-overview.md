@@ -12,7 +12,7 @@ Sitemap is running under an Early Access Release. Early Access Releases are subj
 
 {% endinfo_block %}
 
-The Sitemap feature generates sitemaps for your Spryker applications to improve SEO by helping search engines index your pages efficiently. The feautre is configurable to tailor the sitemap generation to your project’s needs.
+The Sitemap feature generates sitemaps for your Spryker applications to improve SEO by helping search engines index your pages efficiently. The feature is configurable to tailor the sitemap generation to your project's needs.
 
 
 ## Supported entities

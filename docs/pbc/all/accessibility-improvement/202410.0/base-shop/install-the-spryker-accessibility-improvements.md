@@ -49,10 +49,9 @@ To install Yves keyboard accessibility improvements, take the following steps:
   console data:import glossary
 ```
 
-4. Enable user scalable option in the project:
-    - Set `viewportUserScaleable` variable at `src/Pyz/Yves/ShopUi/Theme/default/templates/page-blank/page-blank.twig`. Possible values are `yes` or `no`. The default value is `no`.
-   This variable is used to set the `user-scalable` attribute in the viewport meta tag - <meta name="viewport" ...
+4. To enable users to adjust scaling, update the `viewportUserScaleable` variable. This variable controls the `user-scalable` attribute in the viewport meta tag: `<meta name="viewport" content="..., user-scalable=no">`.
 
+**src/Pyz/Yves/ShopUi/Theme/default/templates/page-blank/page-blank.twig**
 <!-- {% raw %} -->
 ```twig
     {% block template %}
@@ -64,7 +63,7 @@ To install Yves keyboard accessibility improvements, take the following steps:
  ```
 <!-- {% endraw %} -->
 
-5. Pass `navigationId` into the `header` organism from `src/Pyz/Yves/ShopUi/Theme/default/templates/page-layout-main/page-layout-main.twig` to enable `skip-link`. 
+5. To enable `skip-link`, pass `navigationId` into the `header` organism from `src/Pyz/Yves/ShopUi/Theme/default/templates/page-layout-main/page-layout-main.twig`:
 
 <!-- {% raw %} -->
 ```twig

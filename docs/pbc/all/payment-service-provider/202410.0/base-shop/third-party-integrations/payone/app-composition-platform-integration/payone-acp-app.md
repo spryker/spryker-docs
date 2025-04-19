@@ -46,6 +46,18 @@ The payment modes like Preauthorization and Capture must be set via the Spryker 
 
 {% endinfo_block %}
 
+## Browser Back Button Handling
+
+When using PayOne's hosted payment page, customers might use their browser's back button during the payment process. This can lead to issues with order persistence and stock management. To properly handle these scenarios and prevent duplicate orders, see [Hosted Payment Page Back Button Handling](../../../hosted-payment-page-back-button-handling.md).
+
+For the *Payone Paypal* payment method, we support only *Preauthorization and Capture*.
+
+{% info_block infoBox "State machine for Payone" %}
+
+The payment modes like Preauthorization and Capture must be set via the Spryker state machine in the Order Management System (OMS). However, the state machine for the Payone app is now in development, so you can not customize it for your project yet.
+
+{% endinfo_block %}
+
 ## Payment method flows
 
 * [Credit Card](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-credit-card-payment-flow.html)

@@ -77,28 +77,38 @@ For more information about the `exclude from customer` flag, see [Order Process 
 
 ## Testing
 
-1. **Basic Flow Test**
-   - Add products to cart.
-   - Proceed to checkout.
-   - Reach payment step and get redirected to hosted payment page.
-   - Use browser's back button.
-   - Verify that the original order is cancelled.
-   - Verify that a new order can be placed.
+### Basic flow test
+1. Add products to cart  
+2. Proceed to checkout  
+3. Reach the payment step and get redirected to hosted payment page  
+4. Use the browser back button  
 
-2. **Stock Verification Test**
-   - Add last available item of a product to cart.
-   - Proceed to hosted payment page.
-   - Use back button.
-   - Verify that the item becomes available again after order cancellation.
-   - Verify that a new order can be placed with the same item.
+Make sure the following applies:
+* The original order has been cancelled  
+* You can place a new order with the same items
 
-3. **Order Status Test**
-   - Log in as a customer.
-   - Place an order that triggers hosted payment page.
-   - Use back button.
-   - Verify order status changes to "payment cancellation pending".
-   - Verify order is not visible in customer account.
-   - Log in to Zed and verify that the order exists with the correct state.
+### Stock verification test
+1. Add the last available item of a product to cart  
+2. Proceed to checkout  
+3. Reach the payment step and get redirected to hosted payment page  
+4. Use the browser back button  
+
+Make sure the following applies:
+* The item becomes available
+* You can place a new order with the same item
+
+### Order status test
+1. Log in as a customer  
+2. Add products to cart  
+3. Proceed to checkout  
+4. Reach the payment step and get redirected to hosted payment page  
+5. Use the browser back button  
+
+Make sure the following applies:
+* Order status changes to "payment cancellation pending"  
+* Order is not displayed in customer account  
+* In the Back Office, the order exists in the correct state
+
 
 ## Troubleshooting
 
@@ -115,3 +125,45 @@ For more information about the `exclude from customer` flag, see [Order Process 
 
 * [Payments Feature Overview](/docs/scos/dev/feature-walkthroughs/page.version/payments-feature-walkthrough/payments-feature-walkthrough.html)
 * [State Machines](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

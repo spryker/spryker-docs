@@ -36,7 +36,7 @@ This document describes how to edit documents on your machine and submit your ch
 ## Create and publish a branch
 
 1. To change the branch, click **Current Branch&nbsp;<span aria-label="and then">></span> New Branch**.
-    This opens the **Create a Brunch** window.
+    This opens the **Create a Branch** window.
 
 2. For **Name**, enter a branch name that best describes your changes.
     The app automatically replaces spaces in branch names with hyphens. You don't have to do anything about it.

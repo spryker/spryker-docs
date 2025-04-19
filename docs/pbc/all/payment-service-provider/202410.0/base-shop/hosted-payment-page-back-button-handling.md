@@ -1,5 +1,5 @@
 ---
-title: Hosted Payment Page Back Button Handling
+title: Configure handling of browser back button action
 description: Learn how to handle browser back button usage when integrating hosted payment pages
 last_updated: Mar 25, 2024
 template: concept-topic-template
@@ -57,7 +57,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 }
 ```
 
-2. Update your OMS state machine configuration by adding the `exclude from customer` flag to the `payment cancellation pending` state:
+2. Update your OMS state configuration by adding the `exclude from customer` flag to the `payment cancellation pending` state:
 
 
 **SalesPayment/config/Zed/Oms/Subprocess/PaymentCancel01.xml**
@@ -76,6 +76,8 @@ For more information about the `exclude from customer` flag, see [Order Process 
 {% endinfo_block %}
 
 ## Testing
+
+Test the implementation by taking the steps in the following sections.
 
 ### Basic flow test
 1. Add products to cart  
@@ -112,14 +114,18 @@ Make sure the following applies:
 
 ## Troubleshooting
 
-### Order Still Visible in Customer Account
-- Verify `exclude from customer` flag is properly set in state machine configuration.
-- Check if the order state transition to "payment cancellation pending" was successful.
-- Verify the state is properly configured in the OMS.
+Solutions to common issues.
 
-### Stock Issues
-- Ensure proper order cancellation workflow.
-- Verify stock update triggers.
+
+### Order still visible in customer account
+- Verify that the `exclude from customer` flag is properly set in the state machine configuration  
+- Check if the order state transition to `payment cancellation pending` is executed successfully
+- Verify that the state is properly configured in the OMS  
+
+### Stock issues
+- Verify that the order cancellation workflow works properly
+- Verify stock update triggers  
+
 
 ## Related Developer Guides
 

@@ -37,10 +37,6 @@ For the *Payone Credit Card* payment method, the following modes are supported:
 - *3DS*: Messaging protocol that enables consumer authentication with their card issuer when making online purchases.
 - *PCI DSS Compliance via SAQ A*: A set of security standards designed to ensure that you accept, process, and transmit credit card information in a secure environment.
 
-## Browser Back Button Handling
-
-When using PayOne's hosted payment page, customers might use their browser's back button during the payment process. This can lead to issues with order persistence and stock management. To properly handle these scenarios and prevent duplicate orders, see [Hosted Payment Page Back Button Handling](../../../hosted-payment-page-back-button-handling.md).
-
 For the *Payone Paypal* payment method, we support only *Preauthorization and Capture*.
 
 {% info_block infoBox "State machine for Payone" %}

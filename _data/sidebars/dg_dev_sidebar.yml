@@ -949,6 +949,10 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
     - title: Authorization Enabler
       url: /docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html
+    - title: Accessibility improvements
+      url: /docs/dg/dev/integrate-and-configure/integrate-accessibility-improvements.html
+    - title: "Tutorial: Integrate accessibility improvements into B2B Demo Shop"
+      url: /docs/dg/dev/integrate-and-configure/tutorial-integrate-accessiblity-improvements-into-b2b-demoshop.html      
     - title: Basic SEO techniques
       url: /docs/dg/dev/integrate-and-configure/integrate-basic-seo-techniques.html
     - title: Graceful shutdown
@@ -994,9 +998,7 @@ entries:
     - title: Separate endpoint bootstraps
       url: /docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html
     - title: Services
-      url: /docs/dg/dev/integrate-and-configure/configure-services.html
-    - title: Sitemap generation
-      url: /docs/dg/dev/integrate-and-configure/integrate-sitemap-generation.html      
+      url: /docs/dg/dev/integrate-and-configure/configure-services.html 
     - title: Twig and TwigExtension
       url: /docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
 

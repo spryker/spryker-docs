@@ -5,26 +5,26 @@ last_updated: Mar 25, 2024
 template: concept-topic-template
 ---
 
-When integrating Payment Service Providers (PSPs) that use hosted payment pages, proper handling of browser navigation is crucial for maintaining order consistency and stock management. This guide explains how to handle scenarios where customers use their browser's back button after being redirected to a hosted payment page.
+When integrating payment service providers (PSPs) that use hosted payment pages, the application needs to handle browser navigation to maintaining order consistency and stock management. This document explains how to configure applications with hosted payment pages to handle the browser back button action.
 
-## Problem Overview
+## Order persistence issue
 
-When customers are redirected from the Spryker checkout summary page to an external Payment Service Provider's hosted payment page, using the browser's back button creates an order persistence issue. The order is already created in the system with a unique OrderReference, preventing customers from completing the purchase if they attempt to proceed again through checkout.
+When a customer is redirected from the Spryker checkout summary page to an external PSP's hosted payment page, using the back button creates an order persistence issue. The order is already created in the system with a unique OrderReference, preventing the customer from completing the purchase if they attempt to proceed again through checkout.
 
-This issue is particularly critical when:
-1. The last item in stock was part of the order
-2. The customer wants to modify their order after being redirected to the payment page
-3. The order reference is already generated and persisted
+This issue is particularly critical in the following cases:
+* The last item in stock was part of the order
+* The customer wants to change their order after being redirected to the payment page
+* The order reference is already generated and persisted
 
 ## Solution
 
-The solution implements a mechanism to detect and handle cases where customers return from a hosted payment page using the browser's back button. When such a scenario is detected, the system automatically cancels the previously created order and allows the customer to proceed with a new order.
+Implement a mechanism to detect and handle cases where customers return from a hosted payment page using the back button. In such cases, the system cancels a previously created order and lets the customer to proceed with a new order.
 
-## Implementation
+## Implement back button handling
 
-### 1. Plugin Registration
+1. To support browser back button behavior for hosted payment pages, register the `PaymentAppCancelOrderOnSummaryPageAfterRedirectFromHostedPaymentPagePlugin` in your project's `CheckoutPageDependencyProvider`.
 
-To handle the browser back button functionality for hosted payment pages, register the `PaymentAppCancelOrderOnSummaryPageAfterRedirectFromHostedPaymentPagePlugin` in your project's `CheckoutPageDependencyProvider`. Add the following methods to `src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php`:
+Add the following methods to `src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php`:
 
 ```php
 <?php
@@ -57,19 +57,19 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 }
 ```
 
-### 2. State Machine Configuration
+2. Update your OMS state machine configuration by adding the `exclude from customer` flag to the `payment cancellation pending` state:
 
-Update your OMS state configuration in `SalesPayment/config/Zed/Oms/Subprocess/PaymentCancel01.xml`. Add the `exclude from customer` flag to the "payment cancellation pending" state:
 
+**SalesPayment/config/Zed/Oms/Subprocess/PaymentCancel01.xml**
 ```xml
 <state name="payment cancellation pending" display="oms.state.reservation-cancellation-pending">
     <flag>exclude from customer</flag>
 </state>
 ```
 
-{% info_block warningBox "Important" %}
+{% info_block warningBox "" %}
 
-The `exclude from customer` flag is specifically needed for logged-in customers to prevent cancelled payment orders from appearing in their customer account. Without this flag, logged-in customers would see these cancelled orders in their order history.
+The `exclude from customer` flag is used to prevent cancelled payment orders from appearing in registered customers' order history.
 
 For more information about the `exclude from customer` flag, see [Order Process Modelling via State Machines](https://docs.spryker.com/docs/pbc/all/order-management-system/202410.0/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#state-machine-module).
 

@@ -28,7 +28,7 @@ A module remains zero-major until it reaches version *1.0.0*, at which point it 
 | **Backward Compatibility (BC)**            | ❌ Not guaranteed, breaking changes may occur between `0.x.x` versions, and even as the module reaches `1.0.0`. |
 | **Migration Effort Predictability**        | ❌ No guarantee, updates may introduce significant migration requirements. |
 | **Code Quality**                           | ✅ Production-level, code must be free of known bugs.                      |
-| **Non-Functional Requirements (NFRs)**     | ⚠️ May be partially met e.g., performance, scalability, entity count handling. |
+| **Non-Functional Requirements (NFRs)**     | ⚠️ May be partially met for example performance, scalability, entity count handling. |
 
 While the code is expected to be operational and error-free, **NFRs may not be fully addressed** in a zero-major module. These aspects are typically matured and optimized closer to the 1.0.0 milestone.
 
@@ -57,7 +57,7 @@ The level of readiness and the presence of gaps in a zero-major module can vary 
 - Which functional and non-functional capabilities are currently covered  
 - Any known limitations or planned changes  
 
-This ensures transparency around the module’s maturity and avoids unexpected issues during integration.
+This ensures transparency around the module's maturity and avoids unexpected issues during integration.
 
 ---
 
@@ -65,7 +65,7 @@ This ensures transparency around the module’s maturity and avoids unexpected i
 
 - ✅ You want early access to upcoming functionality  
 - ✅ You're building a PoC or MVP and can tolerate change  
-- ✅ You’ve aligned with Spryker on current capabilities
+- ✅ You've aligned with Spryker on current capabilities
 - ❌ You require long-term BC and NFR guarantees today  
 - ❌ You cannot afford migration costs in short iterations
 

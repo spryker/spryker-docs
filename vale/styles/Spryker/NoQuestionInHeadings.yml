@@ -1,5 +1,5 @@
 extends: existence
-message: "Avoid using question marks in headings."
+message: "Don't use question marks in headings."
 level: error
 scope: heading
 raw:

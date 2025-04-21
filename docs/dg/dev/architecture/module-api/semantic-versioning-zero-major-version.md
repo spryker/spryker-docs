@@ -25,10 +25,10 @@ A module remains zero-major until it reaches version *1.0.0*, at which point it 
 
 | Characteristic                              | Description                                                                 |
 |--------------------------------------------|-----------------------------------------------------------------------------|
-| **Backward Compatibility (BC)**            | ❌ Not guaranteed, breaking changes may occur between `0.x.x` versions, and even as the module reaches `1.0.0`. |
-| **Migration Effort Predictability**        | ❌ No guarantee, updates may introduce significant migration requirements. |
-| **Code Quality**                           | ✅ Production-level, code must be free of known bugs.                      |
-| **Non-Functional Requirements (NFRs)**     | ⚠️ May be partially met for example performance, scalability, entity count handling. |
+| Backward Compatibility (BC)            | ❌ Not guaranteed, breaking changes may occur between `0.x.x` versions, and even as the module reaches `1.0.0`. |
+| Migration Effort Predictability        | ❌ No guarantee, updates may introduce significant migration requirements. |
+| Code Quality                           | ✅ Production-level, code must be free of known bugs.                      |
+| Non-Functional Requirements (NFRs)     | ⚠️ May be partially met for example performance, scalability, entity count handling. |
 
 While the code is expected to be operational and error-free, **NFRs may not be fully addressed** in a zero-major module. These aspects are typically matured and optimized closer to the 1.0.0 milestone.
 

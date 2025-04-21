@@ -1,5 +1,5 @@
 ---
-title: Semantic Versioning - Zero-Major Version
+title: "Semantic Versioning: Zero-major version"
 description: Spryker releases early as zero-major. Learn more about them and their connection to the Early Access features in this document.
 last_updated: Apr 9, 2025
 template: concept-topic-template
@@ -37,10 +37,10 @@ While the code is expected to be operational and error-free, *NFRs may not be fu
 
 From a business perspective, zero-major modules are *not feature-complete* and *subject to change*. 
 
-- Liability is limited because of Early Access functionality  
-- Functional gaps may exist: not all use cases or workflows may be supported
-- Business logic stability is not guaranteed: feature definitions may evolve until version 1.0.0  
-- Production readiness requires validation and depends on the specific use case and module maturity  
+- ⚠️ Liability is limited because of Early Access functionality  
+- ⚠️ Functional gaps may exist: not all use cases or workflows may be supported
+- ❌ Business logic stability is not guaranteed: feature definitions may evolve until version 1.0.0  
+- ⚠️ Production readiness requires validation and depends on the specific use case and module maturity  
 
 
 Business logic and behaviors may be redefined based on feedback, internal alignment, or ongoing development needs.

@@ -1,0 +1,6 @@
+extends: existence
+message: "Avoid using question marks in headings."
+level: error
+scope: heading
+raw:
+  - '\?'

@@ -23,54 +23,86 @@ A module remains zero-major until it reaches version *1.0.0*, at which point it 
 
 ## Technical characteristics of zero-major modules
 
-| Characteristic                              | Description                                                                 |
-|--------------------------------------------|-----------------------------------------------------------------------------|
-| Backward Compatibility (BC)            | ❌ Not guaranteed, breaking changes may occur between `0.x.x` versions, and even as the module reaches `1.0.0`. |
-| Migration Effort Predictability        | ❌ No guarantee, updates may introduce significant migration requirements. |
-| Code Quality                           | ✅ Production-level, code must be free of known bugs.                      |
-| Non-Functional Requirements (NFRs)     | ⚠️ May be partially met for example performance, scalability, entity count handling. |
+- ❌ Backward compatibility is not guaranteed: breaking changes may occur between `0.x.x` versions and even after reaching `1.0.0`  
+- ❌ Migration effort is unpredictable: updates may introduce significant migration requirements  
+- ✅ Code must be production-level and free of known bugs  
+- ⚠️ Non-functional requirements may be only partially met, such as performance, scalability, and handling of high entity counts  
 
-While the code is expected to be operational and error-free, **NFRs may not be fully addressed** in a zero-major module. These aspects are typically matured and optimized closer to the 1.0.0 milestone.
+
+While the code is expected to be operational and error-free, *NFRs may not be fully addressed* in a zero-major module. These aspects are typically matured and optimized closer to the 1.0.0 milestone.
 
 ---
 
-## Business Characteristics
+## Business characteristics
 
-From a business perspective, zero-major modules are **not feature-complete** and **subject to change**. 
+From a business perspective, zero-major modules are *not feature-complete* and *subject to change*. 
 
-| Characteristic                         | Description                                                                  |
-|----------------------------------------|------------------------------------------------------------------------------|
-| **Liability**                          | ⚠️ Early Access functionality (see below).                                   |
-| **Functional Gaps**                    | ⚠️ May exist, not all use cases or workflows may be supported yet.           |
-| **Business Logic Stability**           | ❌ Not guaranteed, feature definitions may evolve up until 1.0.0.            |
-| **Production Readiness**               | ⚠️ Validation recommended, depends on specific use case and module maturity. |
+- Liability is limited because of Early Access functionality  
+- Functional gaps may exist: not all use cases or workflows may be supported
+- Business logic stability is not guaranteed: feature definitions may evolve until version 1.0.0  
+- Production readiness requires validation and depends on the specific use case and module maturity  
+
 
 Business logic and behaviors may be redefined based on feedback, internal alignment, or ongoing development needs.
 
-Important: **Early Access functionality** is not recommended for use in production environments and are not covered by Spryker's SLAs. These features are typically developed during the R&D phase and are made available primarily for educational and experimental purposes.
+{% info_block warningBox %}
 
----
+Early Access functionality is not recommended for use in production environments and is not covered by Spryker's SLAs. These features are typically developed during the R&D phase and are made available primarily for educational and experimental purposes.
 
-## What are the Gaps?
+{% endinfo_block %}
 
-The level of readiness and the presence of gaps in a zero-major module can vary by case. To assess whether a zero-major module meets your project's technical and functional requirements, alignment with Spryker is essential.
-- Which functional and non-functional capabilities are currently covered  
-- Any known limitations or planned changes  
 
-This ensures transparency around the module's maturity and avoids unexpected issues during integration.
 
----
+## Evaluating module readiness and gaps
 
-## When Should You Use a Zero-Major Module?
+The readiness and potential gaps in a zero-major module can vary. To determine if it meets your project’s technical and functional needs, align with us to assess the following:
 
+- Which functional and non-functional capabilities are currently supported  
+- Limitations or planned changes  
+
+This gives you a solid understanding of the module's maturity and avoids unexpected issues during integration.
+
+
+## Zero-major module use cases
+
+You might want to use a zero-major module in the following cases:
 - ✅ You want early access to upcoming functionality  
 - ✅ You're building a PoC or MVP and can tolerate change  
-- ✅ You've aligned with Spryker on current capabilities
-- ❌ You require long-term BC and NFR guarantees today  
-- ❌ You cannot afford migration costs in short iterations
+- ✅ You've aligned with us on the module's capabilities and limitations
+
+You should not use a zero-major module in the following cases:
+- ❌ You require long-term BC and NFR guarantees
+- ❌ You can't afford migration costs in short iterations
 
 ---
 
 ## Related Topics
 
 - [Semantic Versioning: Major vs. Minor vs. Patch Release](https://docs.spryker.com/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

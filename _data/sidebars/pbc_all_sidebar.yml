@@ -38,7 +38,6 @@ entries:
                   - title: Spryker Core Back Office + Warehouse User Management
                     url: /docs/pbc/all/back-office/unified-commerce/install-and-upgrade/install-the-spryker-core-back-office-warehouse-user-management-feature.html
 
-
       - title: Business Intelligence
         url: /docs/pbc/all/business-intelligence/business-intelligence.html
         include_versions:
@@ -1674,6 +1673,7 @@ entries:
                 nested:
                   - title: ChannelPilot Marketplace
                     url: /docs/pbc/all/merchant-management/marketplace/third-party-integrations/channelpilot-marketplace.html
+
       - title: Miscellaneous
         nested:
           - title: Spryker Core feature overview
@@ -1691,7 +1691,7 @@ entries:
           - title: Push Notification feature overview
             url: /docs/pbc/all/miscellaneous/push-notification-feature-overview.html
           - title: Sitemap feature overview
-            url: /docs/pbc/all/miscellaneous/sitemap.html            
+            url: /docs/pbc/all/miscellaneous/sitemap-feature-overview.html            
             include_versions:
             - "202505.0"  
           - title: Install and upgrade
@@ -4377,7 +4377,6 @@ entries:
                 include_versions:
                 - "202404.0"
                 - "202410.0"
-
 
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html

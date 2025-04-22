@@ -21,11 +21,11 @@ Spryker uses our proprietary licenses and common open-source licenses. In genera
 - https://github.com/spryker-sdk
 
 
-## Pre-conditions
+## Preconditions
 - You must have a [GitHub account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github).
 - You must agree to the Spryker Contribution Terms located in each repository.
 
-## How to contribute?
+## Contribute
 
 1. Identify the module you would like to contribute to:
    - In the `vendor/` directory there is the organization and the module name. For example, `spryker/acl`.

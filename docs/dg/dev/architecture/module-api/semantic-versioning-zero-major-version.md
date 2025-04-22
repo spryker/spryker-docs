@@ -55,7 +55,7 @@ Early Access functionality is not recommended for use in production environments
 
 ## Evaluating module readiness and gaps
 
-The readiness and potential gaps in a zero-major module can vary. To determine if it meets your project’s technical and functional needs, align with us to assess the following:
+The readiness and potential gaps in a zero-major module can vary. To determine if it meets your project's technical and functional needs, align with us to assess the following:
 
 - Which functional and non-functional capabilities are currently supported  
 - Limitations or planned changes  

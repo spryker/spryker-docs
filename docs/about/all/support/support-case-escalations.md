@@ -19,7 +19,7 @@ While Support always tries to accommodate the plans of customers and partners, t
 
 While this strategy might feel like the right thing to do (we need to do something right?), it produces suboptimal results and consumes resources, nerves, and time. It also puts a strain on the relationship with the customer or partner and often introduces a lot of emotions that can stand in the way of orderly resolution.
 
-## How do we want to deal with escalations?
+## Handling escalations
 
 In Support, we acknowledge that we cannot always produce a satisfying result. We do not always get it right, and sometimes our hands might simply be tied. Escalations happen, and it's important for us to steer them into a constructive and orderly direction right away that ensures:
 1. It is easy for a customer or partner to escalate an issue.

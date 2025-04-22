@@ -17,7 +17,7 @@ redirect_from:
 
 Every Spryker cloud environment is monitored by the monitoring systems and a dedicated 24/7 team that ensures that environments run stable. If an issue occurs, this team takes action autonomously and informs you about any further actions needed on their or your side. This document explains how monitoring and alerting works.
 
-## What is monitored?
+## Monitoring metrics
 
 The following alerts are configured by default for all environments.
 

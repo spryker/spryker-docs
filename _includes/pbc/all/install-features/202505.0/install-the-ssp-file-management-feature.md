@@ -1,11 +1,20 @@
 
+
+{% info_block warningBox %}
+
+Self-Service Portal is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
+
+
 This document describes how to install the Self-Service Portal (SSP) File Management feature.
 
 ## Prerequisites
 
 | FEATURE         | VERSION | INSTALLATION GUIDE                                                                                                                                          |
 |--------------| ------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202505.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Self-Service Portal | {{site.version}}  | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/202505.0/install/install-self-service-portal)          |
 
 ## 1) Install the required modules
@@ -410,7 +419,7 @@ Verify permission management:
 4. Enter a name for the role.
 5. In **Unassigned Permissions**, enable the following permissions:
    - **Open My Files page**
-   - **Download file(s)**
+   - **Download file**
    - **View My Files**
    - **View Business unit files**
    - **View Company Files**

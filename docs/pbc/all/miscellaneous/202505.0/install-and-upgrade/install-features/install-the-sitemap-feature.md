@@ -1,18 +1,20 @@
 ---
-title: Integrate sitemap generation
-description: Learn the prerequisites and how to enable and integrate Sitemap module into a Spryker based project.
+title: Install the Sitemap feature
+description: Learn the prerequisites and how to enable and integrate Sitemap feature into a Spryker based project.
 last_updated: March 4, 2025
 template: howto-guide-template
+redirect_from: 
+  - /docs/dg/dev/integrate-and-configure/integrate-sitemap-generation.html
 ---
 
-{% info_block warningBox "" %}
+{% info_block warningBox %}
 
-The Sitemap module is in beta and may be significantly changed before a stable version is released.
+Sitemap is running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
 {% endinfo_block %}
 
 
-The Sitemap module generates sitemaps for your Spryker application, enhancing SEO by helping search engines index your pages efficiently. It offers various configuration options to customize sitemap generation. This document explains how to integrate the Sitemap module into a Spryker project.
+The Sitemap feature generates sitemaps for your Spryker application, enhancing SEO by helping search engines index your pages efficiently. It offers various configuration options to customize sitemap generation. This document explains how to integrate the Sitemap module into a Spryker project.
 
 
 ## Prerequisites

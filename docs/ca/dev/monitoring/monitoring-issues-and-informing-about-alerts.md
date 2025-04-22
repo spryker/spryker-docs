@@ -129,7 +129,7 @@ The following alerts are configured by default for all environments.
 
 </div>
 
-## In what cases do we contact you?
+## When we contact you
 
 Most alerts we receive are temporary states and aren't a real problem. However, some alert patterns require us to take action. There is a difference between critical issues in production environments and staging or test environments. We focus on critical infrastructure problems in production environments.
 

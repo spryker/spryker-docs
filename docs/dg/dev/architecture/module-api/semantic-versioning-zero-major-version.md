@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/architecture/module-api/module-api.html
 related:
   - title: Semantic versioning - major vs. minor vs. patch release
-    link: docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
+    link: docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html   
 ---
 
 
@@ -73,13 +73,6 @@ You might want to use a zero-major module in the following cases:
 You should not use a zero-major module in the following cases:
 - ❌ You require long-term BC and NFR guarantees
 - ❌ You can't afford migration costs in short iterations
-
----
-
-## Related Topics
-
-- [Semantic Versioning: Major vs. Minor vs. Patch Release](https://docs.spryker.com/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html)
-
 
 
 

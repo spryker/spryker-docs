@@ -5,8 +5,6 @@ template: concept-topic-template
 last_updated: May 17, 2024
 ---
 
-<!-- vale NoQuestionInHeadings = off -->
-
 ## What is a Product Class Code for Vertex, and how can I use it?
 
 The Product Class Code is used to represent groups or categories of products or services with identical taxability. By default, Spryker Product SKU is sent as `LineItems[].product.value` and `LineItems.lineItemId`. The Vertex App doesn't create any Vertex Tax Categories.
@@ -34,6 +32,3 @@ The Vertex app calculates taxes based on the tax rules and rates of the country 
 In some cases, the Vertex app can't calculate taxes and returns a 0 tax rate. For example, when a seller is located in EU, and the buyer is located in the US.
 
 So, make sure your project has a logic for such cases. For example, when a buyer selects a shipping address different from the project's default tax region or country, a warehouse address in the respective region needs to be used.  
-
-
-<!-- vale NoQuestionInHeadings = on -->

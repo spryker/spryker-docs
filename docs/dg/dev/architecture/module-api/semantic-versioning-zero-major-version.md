@@ -25,13 +25,9 @@ A module remains zero-major until it reaches version *1.0.0*, at which point it 
 
 - ❌ Backward compatibility is not guaranteed: breaking changes may occur between `0.x.x` versions and even after reaching `1.0.0`  
 - ❌ Migration effort is unpredictable: updates may introduce significant migration requirements  
-- ✅ Code must be production-level and free of known bugs  
+- ✅ Code doesn't contain any critical bugs that could prevent the functionality from being used according to its business requirements
 - ⚠️ Non-functional requirements may be only partially met, such as performance, scalability, and handling of high entity counts  
 
-
-While the code is expected to be operational and error-free, *NFRs may not be fully addressed* in a zero-major module. These aspects are typically matured and optimized closer to the 1.0.0 milestone.
-
----
 
 ## Business characteristics
 

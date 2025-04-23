@@ -58,7 +58,10 @@ Keep in mind that bundled product always has a 0-tax rate. However, all of the b
 
 * Product options are not fully supported in the generated invoice for now. If product options have one tax rate and the product itself another, the tax rate difference is not reflected in the invoice. The invoice shows prices that already include tax rates of products and product options.
 * .pdf files of the invoices are not generated.
-
+* 
+{% info_block infoBox "Loyability" %}
+* Spryker offers this e-invoice feature for your convenience / to simplify your operative processes but you remain responsible for it to be set up in a legally compliant way. Please take note of the legal requirements that are applicable for your company in that regard
+{% info_block infoBox "Loyability" %}
 ## Related Business User documents
 
 |BACK OFFICE USER GUIDES|

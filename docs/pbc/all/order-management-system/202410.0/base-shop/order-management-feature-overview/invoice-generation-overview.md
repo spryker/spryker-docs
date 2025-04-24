@@ -16,7 +16,7 @@ redirect_from:
 
 Invoices can be generated and sent to customer's email every time they place an order in the shop.
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 You can send a hidden copy of the invoice to yourself or your employees. Keep in mind that sending the hidden copy to yourself is the only way to keep invoices for your reference, as for now, the generated invoices are not saved in the Back Office or on the Storefront.
 
@@ -24,7 +24,7 @@ You can send a hidden copy of the invoice to yourself or your employees. Keep in
 
 You can generate an invoice only once the order has acquired the `confirmed` state. The invoice generation and sending are triggered in the Back Office by initiating the `invoice-generate` event on the **View Order** page. For details about how a Back Office User initiates events for orders, see [Changing order statuses](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html). After generating the invoice, the OMS state of the order changes to `exported`.
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 You can use the default OMS states to be displayed on the **Order Details** pages on the Storefront or set custom states so they would make more sense for the Storefront users. For details about how to set the custom states for orders on the Storefront, see [HowTo: Display Custom Names for Order Item States on the Storefront](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/display-custom-names-for-order-item-states-on-the-storefront.html).
 
@@ -57,10 +57,38 @@ Keep in mind that bundled product always has a 0-tax rate. However, all of the b
 ## Current constraints
 
 * Product options are not fully supported in the generated invoice for now. If product options have one tax rate and the product itself another, the tax rate difference is not reflected in the invoice. The invoice shows prices that already include tax rates of products and product options.
-* .pdf files of the invoices are not generated.
+* PDF files of the invoices are not generated.
+
+{% info_block infoBox "Liability" %}
+
+The invoice generation feature can help streamline your operational processes but comes with legal liability. It's the responsibility of each project to make sure their setup complies with the legal requirements applicable to your company.
+
+
+{% endinfo_block %}
 
 ## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Trigger invoice generation in the Back Office](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html)  |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

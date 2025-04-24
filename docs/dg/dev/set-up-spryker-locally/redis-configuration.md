@@ -107,3 +107,74 @@ $config[SessionConstants::ZED_SESSION_PREDIS_CLIENT_OPTION] = [
     'service' => 'mymaster',
 ];
 ```
+
+## Advanced configuration for Redis compression
+
+Standard Redis client configuration uses the environment configuration values set under keys which are defined as constants in `config/Shared/config_default.php`. The standard environment configuration for compression look like this:
+
+By default Redis compression is disabled.
+```php
+$config[RedisConstants::REDIS_COMPRESSION_ENABLED] = getenv('SPRYKER_KEY_VALUE_COMPRESSING_ENABLED') ?: false;
+```
+
+When the compression is activated `SPRYKER_KEY_VALUE_COMPRESSING_ENABLED=true` in environment configuration, the Redis start to compress all data.
+
+The configuration compression settings can be modified and extended at the project level with backward compatibility.
+
+By default, it uses `ZlibCompressorPlugin` to compress/decompress the data.
+
+```php
+namespace Spryker\Client\Redis;
+
+class RedisDependencyProvider extends AbstractDependencyProvider
+{
+    /**
+     *  Specification:
+     *  - Defines compressor plugins.
+     *  - The first plugin from the list is used for compression data.
+     *  - Other plugins can be used for data decompression, even if compression in Redis is disabled, for backward compatibility reasons.
+     *
+     * @return array<\Spryker\Client\Redis\Plugin\Compressor\CompressorPluginInterface>
+     */
+    protected function getKeyValueCompressorPlugins(): array
+    {
+        return [
+            new ZlibCompressorPlugin(),
+        ];
+    }
+}
+```
+Additional compressing settings can be also changed on project level:
+
+```php
+namespace Spryker\Client\Redis;
+
+class RedisConfig extends AbstractBundleConfig
+{
+    /**
+     * Specification:
+     * - These setting is used for the data compression level.
+     *
+     * @api
+     *
+     * @return int
+     */
+    public function getCompressionLevel(): int
+    {
+        return 3;
+    }
+
+    /**
+     * Specification:
+     * - These setting is used for the minimum size at which data compression begins.
+     *
+     * @api
+     *
+     * @return int
+     */
+    public function getMinBytesForCompression(): int
+    {
+        return 200;
+    }
+}
+```

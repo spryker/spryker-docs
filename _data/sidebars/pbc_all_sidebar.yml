@@ -38,7 +38,6 @@ entries:
                   - title: Spryker Core Back Office + Warehouse User Management
                     url: /docs/pbc/all/back-office/unified-commerce/install-and-upgrade/install-the-spryker-core-back-office-warehouse-user-management-feature.html
 
-
       - title: Business Intelligence
         url: /docs/pbc/all/business-intelligence/business-intelligence.html
         include_versions:
@@ -1674,6 +1673,7 @@ entries:
                 nested:
                   - title: ChannelPilot Marketplace
                     url: /docs/pbc/all/merchant-management/marketplace/third-party-integrations/channelpilot-marketplace.html
+
       - title: Miscellaneous
         nested:
           - title: Spryker Core feature overview
@@ -1690,6 +1690,10 @@ entries:
 
           - title: Push Notification feature overview
             url: /docs/pbc/all/miscellaneous/push-notification-feature-overview.html
+          - title: Sitemap feature overview
+            url: /docs/pbc/all/miscellaneous/sitemap-feature-overview.html            
+            include_versions:
+            - "202505.0"  
           - title: Install and upgrade
             nested:
               - title: Install features
@@ -1699,7 +1703,11 @@ entries:
                   - title: Queue Data Import
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
                   - title: Spryker Core
-                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html                    
+                  - title: Sitemap
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-sitemap-feature.html
+                    include_versions:
+                    - "202505.0"  
                   - title: Push Notification
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-push-notification-feature.html
 
@@ -1885,6 +1893,18 @@ entries:
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/data-virtuality.html
                 - title: Mindcurv
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/mindcurv.html
+
+      - title: Multi-factor authentication
+        url: /docs/pbc/all/multi-factor-authentication/multi-factor-authentication.html
+        include_versions:
+        - "202505.0"
+        nested:
+          - title: Install the Multi-Factor Authentication feature
+            url: /docs/pbc/all/multi-factor-authentication/install-multi-factor-authentication-feature.html
+          - title: Install customer email Multi-Factor Authentication method
+            url: /docs/pbc/all/multi-factor-authentication/install-customer-email-multi-factor-authentication-method.html
+          - title: Create Multi-Factor Authentication methods
+            url: /docs/pbc/all/multi-factor-authentication/create-multi-factor-authentication-methods.html                    
 
       - title: Offer Management
         url: /docs/pbc/all/offer-management/offer-management.html
@@ -3903,6 +3923,35 @@ entries:
               - title: "Glue API: Retrieve autocomplete and search suggestions"
                 url: /docs/pbc/all/search/marketplace/glue-api-retrieve-autocomplete-and-search-suggestions.html
 
+
+      - title: Self-Service Portal
+        url: /docs/pbc/all/self-service-portal/self-service-portal.html
+        include_versions:
+        - "202505.0"
+        nested:
+          - title: Self-Service Portal Service Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-service-management-feature-overview.html
+          - title: Self-Service Portal Inquiry Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-inquiry-management-feature-overview.html
+          - title: Self-Service Portal Dashboard Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-dashboard-management-feature-overview.html          
+          - title: Install
+            nested:
+              - title: Install Self-Service Portal
+                url: /docs/pbc/all/self-service-portal/install/install-self-service-portal.html
+              - title: Install the SSP Asset Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-asset-management-feature.html
+              - title: Install the SSP Dashboard Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-dashboard-management-feature.html
+              - title: Install the SSP File Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-file-management-feature.html
+              - title: Install the SSP Inquiry Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-inquiry-management-feature.html
+              - title: Install the SSP Service Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-service-management-feature.html
+          
+
+
       - title: Service Point Management
         url: /docs/pbc/all/service-point-management/service-point-management.html
         nested:
@@ -4328,7 +4377,6 @@ entries:
                 include_versions:
                 - "202404.0"
                 - "202410.0"
-
 
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html

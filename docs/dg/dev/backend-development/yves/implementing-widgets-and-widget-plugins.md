@@ -197,7 +197,6 @@ Widgets are placed and rendered in twig templates. The following examples show s
 ## Deprecations
 
 ### Implementing a widget plugin
-<a href="#how-to-implement-a-widget-plugin"></a>
 
 {% info_block infoBox %}
 

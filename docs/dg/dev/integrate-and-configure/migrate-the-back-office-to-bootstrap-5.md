@@ -1,18 +1,18 @@
 ---
-title: Migrate Backoffice to Bootstrap 5 
-description: Learn how migrate Bootstrap to version 5 in Backoffice.
+title: Migrate the Back Office to Bootstrap 5
+description: Learn how to migrate Spryker Back Office to Bootstrap 5 by updating dependencies, enabling assets, and configuring layouts for compatibility.
 last_updated: Apr 15, 2025
 template: howto-guide-template
 ---
 
-To migrate Bootstrap to version 5 in Backoffice, take the following steps:
+To migrate Bootstrap to version 5 in the Back Office, take the following steps:
 
 1. Update the required modules:
 ```bash
   composer update spryker/configurable-bundle-gui:^1.4.1 spryker/customer-group:^2.8.1 spryker/customer-user-connector-gui:^1.5.1 spryker/file-manager-gui:^2.8.1 spryker/gui:^3.59.0 spryker/navigation-gui:^2.10.1 spryker/product-category:^4.28.2 spryker/product-category-filter-gui:^2.5.1 spryker/product-label-gui:^3.6.1 spryker/product-list-gui:^2.6.2 spryker/product-option:^8.22.1 spryker/product-relation-gui:^1.6.1 spryker/product-set-gui:^2.12.1 spryker/security-gui:^1.9.1 spryker/warehouse-user-gui
 ```
 
-2. Update oryx-for-zed dependency.
+2. Update the `oryx-for-zed` dependency:
 ```bash
   npm install @spryker/oryx-for-zed@~3.5.0 --save-dev
 ```
@@ -64,7 +64,7 @@ Update `footer_js` block
 ```
 
 
-6. Build js and css assets compatible with Bootstrap 5. There is an environment variable created to manage the version of bootstrap - BOOTSTRAP_VERSION. The easiest way to set it::
+6. Build JS and CSS assets compatible with Bootstrap 5. There is an environment variable created to manage the version of bootstrap - `BOOTSTRAP_VERSION`. The easiest way to set it:
 ```bash
   docker/sdk cli BOOTSTRAP_VERSION=5 npm run zed
 ```
@@ -75,3 +75,50 @@ How to make sure that the assets are built with Bootstrap 5:
   /public/Backoffice/assets/css/spryker-zed-gui-commons-bootstrap-compatibility.css
   /public/Backoffice/assets/js/spryker-zed-gui-commons-bootstrap-compatibility.js
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

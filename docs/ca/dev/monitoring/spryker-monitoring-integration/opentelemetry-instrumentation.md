@@ -122,6 +122,8 @@ Run the latest version of the script from the [Installer repo](https://github.co
 
 If you want to integrate manually, the following sections describe all steps of the scripts.
 
+Be advised that Opentelemetry integration works with PHP 8.2 and above. if you are using older versions you must upgrade your PHP version first.
+
 ### Install required packages
 
 OTel provides instrumentation via packages that can be installed to register hooks automatically. If you want to instrument additional parts of an application, such as Symfony code, you can install respective packages from [Registry](https://opentelemetry.io/ecosystem/registry/?language=php) or other sources.

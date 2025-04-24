@@ -19,11 +19,17 @@ To migrate Bootstrap to version 5 in the Back Office, take the following steps:
 
 3. Enable Bootstrap 5 assets by setting `isBootstrapLatest` twig variable in general layout.
  - In case you already override a general layout from `Gui/Presentation/Layout/layout.twig`, add the following code to your `layout.twig` file:
+ 
+{% raw %} 
 ```bash
   {% set isBootstrapLatest = false %}
 ```
+{% endraw %}
+
 Update `head_css` block
 
+
+{% raw %} 
 ```bash
 {% block head_css %}
     {% if isBootstrapLatest %}
@@ -34,8 +40,10 @@ Update `head_css` block
     ...
 {% endblock %}
 ```
+{% endraw %}
 
 Update `footer_js` block
+{% raw %} 
 ```bash
 {% block footer_js %}
     {% if isBootstrapLatest %}
@@ -46,6 +54,8 @@ Update `footer_js` block
     ...
 {% endblock %}
 ```    
+{% endraw %}
+
 
 - In case you don't override a general layout, create a new file `src/Gui/Presentation/Layout/layout.twig` in your project and add the code from the previous step.
 

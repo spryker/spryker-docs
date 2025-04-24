@@ -4268,8 +4268,6 @@ entries:
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/connect-vertex.html
                       - title: Troubleshooting
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
-                      - title: FAQ
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex-faq.html
                       - title: Disconnect
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
 

@@ -1,6 +1,6 @@
 extends: existence
 message: "Don't use question marks in headings."
-level: warning
+level: error
 scope: heading
 raw:
   - '\?'

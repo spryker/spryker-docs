@@ -71,7 +71,7 @@ $config[ApplicationConstants::YVES_SSL_EXCLUDED] = [
 ];
 ```
 
-## When is a request secure?
+## How to determine if a request is secure
 
 Two options identify if a request is secure or not:
 

@@ -54,7 +54,7 @@ All queries are located in the `SprykerEco\Zed\FactFinderSdk\Persistence\FactFin
 
 To change the query in `FactFinderSdk` module, we need to extend the `FactFinderSdkQueryContainer` in your project.
 
-## How is my Query Mapped to CSV Output ?
+## How query data maps to CSV output in FactFinder
 
 If you need to modify the CSV column mapping for any reason, you will have to extend the `FactFinderSdkQueryContainer` from `FactFinderSdk` module and implement your own `addColumns` method.
 

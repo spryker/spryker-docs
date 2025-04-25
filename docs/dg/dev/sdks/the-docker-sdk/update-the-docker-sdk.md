@@ -20,7 +20,7 @@ For local environments, we recommend using the [Git submodule](/docs/dg/dev/sdks
 
 In cloud environments, versions are managed only using `.git.docker`.
 
-For more details on choosing a version, see [Choosing a Docker SDK version](/docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html#why-should-i-use-a-particular-version-of-the-docker-sdk).
+For more details on choosing a version, see [Choosing a Docker SDK version](/docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html#using-a-particular-version-of-docker-sdk).
 
 To update the Docker SDK version in a cloud environment, follow the steps:
 

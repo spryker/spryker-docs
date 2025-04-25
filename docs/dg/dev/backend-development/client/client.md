@@ -112,6 +112,6 @@ The request from Yves to Zed involves two important classes:
 * The *stub* represents the remote methods in the client.
 * The *gateway controller* represents the entry point on the Zed side.
 
-## What's next?
+## Next step
 
 To implement a client for your project, see [Implementing a client](/docs/dg/dev/backend-development/client/implement-a-client.html).

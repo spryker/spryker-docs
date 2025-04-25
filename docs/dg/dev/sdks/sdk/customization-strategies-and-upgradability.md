@@ -7,7 +7,7 @@ redirect_from:
 
 last_updated: May 16, 2023
 ---
-Spryker uses semantic versioning for its packages. There are 3 release types: major, minor, and patch. For more information, see [Semantic versioning - major vs. minor vs. patch release](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#what-is-a-release).
+Spryker uses semantic versioning for its packages. There are 3 release types: major, minor, and patch. For more information, see [Semantic versioning - major vs. minor vs. patch release](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html).
 
 Depending on the customization strategy and the type of release, you may need to invest additional efforts to integrate a release.
 

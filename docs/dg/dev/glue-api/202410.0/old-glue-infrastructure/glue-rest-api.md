@@ -24,7 +24,13 @@ This document is related to the Old Glue infrastructure. For the new one, see [D
 
 The *Spryker Glue REST API* is a JSON REST API that is an application of the Spryker Cloud Commerce OS (SCCOS). It is build to be used as a contract between the SCCOS backend and any possible touchpoint or integration with a third-party system. As an application, Glue knows how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
 
+
+
+The REST API represents a contract that developers can stick to when they are extending the Spryker Commerce OS with new touchpoints or integrations. The predefined APIs are not meant to be used in the same way. Furthermore, all REST API requests are handled according to the [JSON REST API specification](https://jsonapi.org/). These specifications define how clients should request data, fetch it, modify it, and how the server should respond to it. Hence, the expected behavior stays the same across all endpoints.
+
 ![Glue REST API](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+REST+API/glue-rest-api.jpg)
+
+
 
 ## Glue
 
@@ -53,7 +59,7 @@ For more deatails about installing and running, see [B2C API React example](/doc
 
 {% endinfo_block %}
 
-### What can you use the REST API for?
+### Use cases for Glue API
 
 Glue API helps you to connect your Spryker Commerce OS with new or existing touch points. These touchpoints can be headless like voice commerce devices and chat bots, or they may come with a user interface like a mobile app. Alternative front ends also benefit from the APIs. Here are some examples:
 * New frontend: Build a new frontend or use a frontend framework like Progressive Web Apps and power it by the Glue API.
@@ -61,14 +67,10 @@ Glue API helps you to connect your Spryker Commerce OS with new or existing touc
 * Voice commerce: Leverage the APIs for order history to inform your customers about the status of their delivery.
 * Chatbot: Use chatbots to identify the customer that are trying to reach out to you and help them answer basic questions about your products.
 
-## What are the business advantages of using the Glue API?
+## Business advantages of using the Glue API
 
 You can benefit from the APIs in these aspects:
 * Reach more customers: APIs empower you to create any number of touchpoints to connect with your customers, regardless of the device.
 * Customization:  You can reach out to different customer segments via different touchpoints. APIs enable you to offer a tailored customer experience for your audience, wherever it may be.
 * Integrations: APIs are not only used to deliver custom experiences, but you can also leverage APIs to integrate to different platforms; from offering your products on Amazon to leveraging mapping services for customers to find your offline store.
 * Testing ideas: APIs are the quickest way to test your ideas and get a head start before the competition does. Consider them as building blocks for your developers to assemble your new ideas. New applications only need to follow the API contracts, but even those can be extended for your purposes.
-
-### Why did we introduce the Glue API?
-
-The REST API represents a contract that developers can stick to when they are extending the Spryker Commerce OS with new touchpoints or integrations. The predefined APIs are not meant to be used in the same way. Furthermore, all REST API requests are handled according to the [JSON REST API specification](https://jsonapi.org/). These specifications define how clients should request data, fetch it, modify it, and how the server should respond to it. Hence, the expected behavior stays the same across all endpoints.

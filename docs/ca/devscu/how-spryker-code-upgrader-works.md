@@ -32,7 +32,7 @@ After updating the modules, the Upgrader returns the list of updated modules and
 
 If the Upgrader can't update a module, it skips the module and the remaining groups. If all the groups fail to update, the Upgrader returns the errors causing this and stops. With at least one group updated, it returns the list of updated modules and proceeds to the next step.
 
-By default, the Upgrader updates only minor and patch versions. When the Upgrader finds a group with a [major release](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#what-is-a-major-release), it doesn't update it and informs you about that:
+By default, the Upgrader updates only minor and patch versions. When the Upgrader finds a group with a [major release](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#major-release), it doesn't update it and informs you about that:
 
 ```bash
 There is a major release available for module spryker/merchant-product-approval.

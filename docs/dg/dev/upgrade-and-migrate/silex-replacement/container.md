@@ -20,12 +20,12 @@ The container is used to add services and allow other application plugins access
 
 It's important that almost everything that is accessible through the container should only be instantiated when it's requested. It's not as important for static values like `isDebugMode` as it's important for expensive instantiations.                
 
-## Where is the container used?
+## Container usage
 
 Spryker uses several container instances to separate the access to services. The first container is used for services like Twig, which are added to the application through `Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface`.
 The second container is used on a per-module basis. Each module creates its own container instance and can add its dependencies to the container. Usually, those dependencies are plugin stacks.
 
-## How to use the container?
+## How to use the container
 
 The container implements the [PSR-11 interface](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-11-container.md). On top of it, we added the following methods:
 

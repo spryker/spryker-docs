@@ -35,7 +35,7 @@ Applies to all application components.
 * Cross-component tracing ID: Include a cross component tracing ID in log entries to enable tracking of all generated logs across multiple components.
 * Data residency compliance: Ensure that logs comply with data residency requirements.
 
-### What to log?
+### What to log
 * Requests: Incoming requests to a local component.
 * Remote calls: All outgoing requests to a remote service. Log the duration of the call and the response, such as success or error, for future debugging.
 * Scheduled tasks: All initiated scheduled tasks with their end results: error, success, interrupt.
@@ -61,7 +61,7 @@ Applies to all application components.
     * Payment and transaction events
     * Significant user journey events
 
-### What not to log?
+### What not to log
 * Unreasonable logging: Avoid logging without a clear purpose. When deciding to create a log entry, identify at least one use case for the data.
 * Performance critical places: Minimize logging in areas where performance is critical. If there's a performance-critical process or a large cycle as a sub-process element, try to strike a balance between performance and traceability.
 * Audit trail: While it's recommended to log the audit trails of significant entity changes, these logs shouldn't be sent to the regular log system because of the sensitive nature of the data typically involved in authentication and authorization.

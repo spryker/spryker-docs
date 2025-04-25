@@ -21,11 +21,11 @@ Queue data import allows you to import data via message queues. It increases dat
 
 Also, queue data import allows you to use different import groups.
 
-## Why do you need it?
+## Queue data importer for parallel data import
 
 Mainly, it's used to import data in parallel. Once data is stored in a queue, it can be consumed by several consumers at a time, thus roughly dividing total import execution time by the number of consumers.
 
-## How does it work?
+## How queue-based data import works
 
 Regular data import is done as a single-step process: data is read from a data source and then stored in a persistent storage (usually a database).
 

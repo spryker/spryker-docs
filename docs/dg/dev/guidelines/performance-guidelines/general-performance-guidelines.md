@@ -1,7 +1,7 @@
 ---
 title: General performance guidelines
 description: This guideline explains how to optimize the server-side execution time for your Spryker based projects.
-last_updated: Feb 24, 2025
+last_updated: Apr 24, 2025
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-guidelines
 originalArticleId: 5feb83b8-5196-44f9-8f6a-ffb208a2c162
@@ -346,27 +346,24 @@ Check if you need the `can` method calls from Twig. For example, `{% raw %}{%{% 
 
 Try to update the Spryker modules where you can, as we constantly add performance optimizations. Ideally, always use the latest versions of the Spryker modules.
 
-The latest performance optimization releases can be found in:
-
-- [spryker/kernel:^3.37.4](https://github.com/spryker/kernel/releases/tag/3.37.4)
-- [spryker/catalog-price-product-connector:^1.3.0](https://github.com/spryker/catalog-price-product-connector/releases/tag/1.3.0)
-- [spryker/catalog-search-rest-api:^2.4.0](https://github.com/spryker/catalog-search-rest-api/releases/tag/2.4.0)
-- [spryker/category-storage:^1.8.0](https://github.com/spryker/category-storage/releases/tag/1.8.0)
-- [spryker/customer-catalog:^1.1.0](https://github.com/spryker/customer-catalog/releases/tag/1.1.0)
-- [spryker/price-product:^4.15.2](https://github.com/spryker/price-product/releases/tag/4.15.2)
-- [spryker/price-product-merchant-relationship-storage:^1.9.0](https://github.com/spryker/price-product-merchant-relationship-storage/releases/tag/1.9.0)
-- [spryker/price-product-storage:^4.4.0](https://github.com/spryker/price-product-storage/releases/tag/4.4.0)
-- [spryker/product-list-storage:^1.11.0](https://github.com/spryker/product-list-storage/releases/tag/1.11.0)
-- [spryker/product-prices-rest-api:^1.4.0](https://github.com/spryker/product-prices-rest-api/releases/tag/1.4.0)
-- [spryker/quote:^2.13.0](https://github.com/spryker/quote/releases/tag/2.13.0)
-- [spryker/store:^1.14.0](https://github.com/spryker/store/releases/tag/1.14.0)
-
-
 Performance optimizations in the Merchant Portal:
 - [spryker/category:^5.18.2](https://github.com/spryker/category/releases/tag/5.18.2)
 - [spryker/acl:^3.22.0](https://github.com/spryker/acl/releases/tag/3.22.0)
 - [spryker/acl-entity:^1.13.0](https://github.com/spryker/acl-entity/releases/tag/1.13.0)
 
+Performance optimizations in the order placement:
+- [spryker/calculation:^4.14.0](https://github.com/spryker/calculation/releases/tag/4.14.0)
+- [spryker/discount-calculation-connector:^5.4.0](https://github.com/spryker/discount-calculation-connector/releases/tag/5.4.0)
+- [spryker/merchant:^3.15.0](https://github.com/spryker/merchant/releases/tag/3.15.0)
+- [spryker/sales:^11.60.0](https://github.com/spryker/sales/releases/tag/11.60.0)
+- [spryker/product:^6.49.0](https://github.com/spryker/product/releases/tag/6.49.0)
+- [spryker/discount:^9.42.1](https://github.com/spryker/discount/releases/tag/9.42.1)
+- [spryker/product-cart-connector:^4.13.0](https://github.com/spryker/product-cart-connector/releases/tag/4.13.0)
+
+Performance optimizations in the OMS availability check and order item reservation:
+- [spryker/availability:^9.27.0](https://github.com/spryker/availability/releases/tag/9.27.0)
+- [spryker/stock:^8.10.1](https://github.com/spryker/stock/releases/tag/8.10.1)
+- [spryker/oms:^11.44.0](https://github.com/spryker/oms/releases/tag/11.44.0)
 
 
 ## Performance profiling

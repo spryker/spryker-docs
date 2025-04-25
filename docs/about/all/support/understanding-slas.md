@@ -24,7 +24,7 @@ Up-to-date code generally means more stability, better support, and compatibilit
 At Spryker people from around the world work together to provide outstanding products and services. To facilitate communication flow and reduce barriers, we decided to make English our business language. When getting in contact with Spryker Support, we ask you to do the same.
 
 ### Report problems in a timely manner
-If you discover a problem with Spryker Software, please let us know immediately. Avoid ignoring a problem that you find, or work around it without reporting it to us. Not only would this prevent us from making our software better, but your workaround might not be maintainable and could cause you problems with upgradability or reduce your flexibility sometime in the future.
+If you discover a problem with Spryker Software,  let us know immediately. Avoid ignoring a problem that you find, or work around it without reporting it to us. Not only would this prevent us from making our software better, but your workaround might not be maintainable and could cause you problems with upgradability or reduce your flexibility sometime in the future.
 
 ### Bring the right information
 Ensure that every case you open with us includes the information we need to work on it. To learn what info matters most, see [Getting the most out of Spryker Support](/docs/about/all/support/getting-the-most-out-of-spryker-support.html).
@@ -43,7 +43,7 @@ For Spryker customers using our PaaS, we can also support infrastructure-related
 ### Software support
 All Spryker customers can benefit from the support we offer for our Spryker software. We want the software we develop to be easy to work with and reliable. If defects happen that are reproducible for us in the out-of-the-box (OOTB) Spryker installation, we generally file a bug report and communicate the Jira ticket number, so you can reference it in a later communication. Since software development is a process with many steps, sometimes we provide project-level fixes for you rather than wait for the fix to be implemented in our core product and then ship it to you by an update. We make sure, though, that our other customers can benefit from the improvement your bug report introduced to our product in a timely manner.
 
-## What else can you do to avoid problems?
+## What else you can do to prevent issues
 There is a number of things you can do to avoid problems.
 
 ### Keep updated on Spryker

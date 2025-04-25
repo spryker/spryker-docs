@@ -29,17 +29,9 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-{% info_block infoBox %}
 
-The document provides information on the `event:trigger:listener` command.
+The document provides information on the `event:trigger:listener` command. The command debugs an event message with a specific listener mapped to it.
 
-{% endinfo_block %}
-
-## What does the command do?
-
-The command debugs an event message with a specific listener mapped to it.
-
-## Where is the command used?
 Upon triggering the publish process, an event or events are posted to the event queue. Each event message posted to the queue contains the following information about the event that triggered it: event name, ID, names of the corresponding listeners and transfer classes, list of modified columns, as well as foreign keys necessary to backtrack the updated Propel entities. However, it does not contain the actual data that has changed, making it hard to debug the issue when the transformed data is not stored in the specific storage table. In this case, you need to debug the event message with a specific event listener mapped to it using the `event:trigger:listener` command.
 
 ## How to use the command

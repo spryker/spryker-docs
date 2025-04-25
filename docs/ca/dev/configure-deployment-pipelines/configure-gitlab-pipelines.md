@@ -14,7 +14,7 @@ redirect_from:
 
 This document describes how to configure continuous integration using GitLab Pipelines.
 
-## What is GitLab Pipelines?
+## GitLab Pipelines
 GitLab pipelines automate steps in the SDLC like builds, tests, and deployments. When a team takes advantage of automated pipelines, they simplify the handoff process and decrease the chance of human error, creating faster iterations and better quality code. Everyone can see where code is in the process and identify problems long before they make it to production.
 
 For more information on Gitlab Pipelines, see [GitLab CI/CD](https://docs.gitlab.com/ee/ci/pipelines/).

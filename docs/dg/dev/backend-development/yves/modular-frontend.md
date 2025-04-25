@@ -90,7 +90,7 @@ Before you start using the widget system, make sure to register the following pl
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\EventDispatcher;
@@ -212,4 +212,4 @@ class YvesBootstrap extends SprykerYvesBootstrap
 }
 ```
 
-For more information on how to create a Widget Plugin, see the *How to Implement a Widget Plugin* section in [Tutorial: Widgets and Widget Plugins](/docs/dg/dev/backend-development/yves/implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget-plugin).  
+For more information on how to create a Widget Plugin, see the *How to Implement a Widget Plugin* section in [Tutorial: Widgets and Widget Plugins](/docs/dg/dev/backend-development/yves/implementing-widgets-and-widget-plugins.html#implementing-a-widget-plugin).  

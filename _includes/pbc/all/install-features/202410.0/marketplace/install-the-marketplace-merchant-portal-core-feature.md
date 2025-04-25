@@ -737,10 +737,10 @@ $config[AclConstants::ACL_DEFAULT_RULES][] = [
 mail.merchant.restore_password.subject,Neues Passwort für Ihren Spryker Merchant Portal Account,de_DE
 mail.merchant.restore_password.subject,New password for your Spryker Merchant Portal account,en_US
 mail.merchant.restore_password.text,"""Es wurde ein neues Passwort für Ihren Spryker Merchant Portal Account angefordert. Wenn Sie nicht um um eine Neueinrichtung des Passworts gebeten haben, ignorieren Sie bitte diese Email. Klicken Sie auf den folgedenen Link, um Ihr Passwort zu ändern:""",de_DE
-mail.merchant.restore_password.text,"""Somebody has requested a new password for your Spryker Merchant Portal account. If it's not you, just ignore this email. If it's you, please follow the link bellow:""",en_US
+mail.merchant.restore_password.text,"""Somebody has requested a new password for your Spryker Merchant Portal account. If it's not you, just ignore this email. If it's you,  follow the link bellow:""",en_US
 mail.merchant.restore_password.label,Passwort ändern,de_DE
 mail.merchant.restore_password.label,Change Password,en_US
-mail.trans.merchant.restore_password.subtitle,"Somebody has requested a new password for your Spryker Merchant Portal account. If it was not you, please ignore this email. If it was you, please follow the instructions in  the button bellow",en_US
+mail.trans.merchant.restore_password.subtitle,"Somebody has requested a new password for your Spryker Merchant Portal account. If it was not you,  ignore this email. If it was you,  follow the instructions in  the button bellow",en_US
 mail.trans.merchant.restore_password.subtitle,"Es wurde ein neues Passwort für dein Merchant Portal-Konto angefordert. Wenn du es nicht warst, kannst du diese E-Mail ignorieren. Wenn du es warst, klicke bitte den Knopf unten an:",de_DE
 mail.trans.merchant.restore_password.title,New password for your Spryker Merchant Portal account,en_US
 mail.trans.merchant.restore_password.title,Neues Passwort für dein Spryker Merchant Portal-Konto,de_DE

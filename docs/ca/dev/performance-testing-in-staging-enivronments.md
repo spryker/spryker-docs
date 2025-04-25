@@ -24,7 +24,7 @@ To assist in performance testing, we have a [load testing tool](https://github.c
 
 The tool can be used as a package integrated into the Spryker project or as a standalone package.
 
-### What is Gatling?
+### Gatling
 
 Gatling is a powerful performance testing tool that supports HTTP, WebSocket, Server-Sent-Events, and JMS. Gatling is built on top of Akka that enables thousands of virtual users on a single machine. Akka has a message-driven architecture, and this overrides the JVM limitation of handling many threads. Virtual users are not threads but messages.
 
@@ -75,7 +75,7 @@ It should be noted that the Spryker Suite already has these changes implemented 
 composer require spryker-sdk/load-testing --dev
 ```
 
-2. Add the Router provider plugin to `src/Pyz/Yves/Router/RouterDependencyProvider.php`. Please note that you must import the appropriate class, `LoadTestingRouterProviderPlugin` to initialize the load testing. We also need to build onto the available array, so the `return` clause should be updated to reflect the additions to the array with `$routeProviders`.
+2. Add the Router provider plugin to `src/Pyz/Yves/Router/RouterDependencyProvider.php`. You must import the appropriate class, `LoadTestingRouterProviderPlugin` to initialize the load testing. We also need to build onto the available array, so the `return` clause should be updated to reflect the additions to the array with `$routeProviders`.
 
 ```php
 <?php
@@ -334,7 +334,7 @@ APPLICATION_STORE="DE" COMMAND="$PHP_BIN vendor/bin/console queue:worker:start -
 
 {% info_block infoBox %}
 
-While it's possible to change the Jenkins cronjobs found at **/config/Zed/cronjobs/jenkins.php**, please note that these entries require a scheduled time and setting this will cause those jobs to run until they have been disabled in the Jenkins web UI.
+While it's possible to change the Jenkins cronjobs found at **/config/Zed/cronjobs/jenkins.php**,  note that these entries require a scheduled time and setting this will cause those jobs to run until they have been disabled in the Jenkins web UI.
 
 {% endinfo_block %}
 
@@ -427,7 +427,7 @@ For *Glue API*:
 
 {% info_block errorBox %}
 
-Tests like **CartApi** and **GuestCartApi** use an older method of the `cart` end-point and will need to have their scenarios updated. These and other tests may need to be updated to take this into account. Please visit the [Glue Cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart) reference for more details.
+Tests like **CartApi** and **GuestCartApi** use an older method of the `cart` end-point and will need to have their scenarios updated. These and other tests may need to be updated to take this into account. Visit the [Glue Cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart) reference for more details.
 
 {% endinfo_block %}
 

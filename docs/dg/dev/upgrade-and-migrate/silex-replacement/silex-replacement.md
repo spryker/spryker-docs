@@ -16,7 +16,7 @@ related:
 
 Originally, *Silex* was used to integrate Symfony Components with Spryker using _Service Providers_. Also, there were other Service Providers added by Spryker and customer projects to bootstrap the application. Such providers implemented Symfony components and other entities by adding them to the *Pimple container*. Since Silex project is abandoned and the Pimple version is outdated, we replace them with a Spryker solution.
 
-## What did we replace?
+## What we replaced
 
 We replaced `silex/silex` and `pimple/pimple`.
 
@@ -24,7 +24,7 @@ To be able to replace Silex, we removed all the dependencies in Spryker version 
 
 We added a new Spryker application to replace Silex and a container to replace Pimple.
 
-## Is Silex replacement backward compatible?
+## Silex replacement backward compatibility
 
 To avoid forcing an immediate update of the majority of modules, we introduced several small changes, which are backward compatible.
 
@@ -37,7 +37,7 @@ When you update a module partially, you might have to add `spryker/silex` to you
 
 {% endinfo_block %}
 
-## What changed?
+## Changes
 
 This section describes the changes caused by the Silex replacement.
 

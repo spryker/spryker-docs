@@ -61,7 +61,7 @@ quick-order.upload-order.errors.upload-order-invalid-sku-item,Product with this 
 quick-order.upload-order.errors.upload-order-invalid-sku-item,Produkt mit dieser SKU wurde nicht gefunden.,de_DE
 price_product.error.price_not_found,Product price not found.,en_US
 price_product.error.price_not_found,Produktpreis nicht gefunden.,de_DE
-product_discontinued.message.product_discontinued,"Product is discontinued, please choose an alternative one.",en_US
+product_discontinued.message.product_discontinued,"Product is discontinued,  choose an alternative one.",en_US
 product_discontinued.message.product_discontinued,"Produkt ist nicht mehr verfügbar, bitte wählen Sie eine Alternative.",de_DE
 product-quantity.warning.quantity.min.failed,The ordered quantity was adjusted to the next possible quantity for the article because minimum quantity is %min%.,en_US
 product-quantity.warning.quantity.min.failed,Die bestellte Anzahl erfüllt nicht die Anforderungen für dieses Produkt. Mindestanzahl ist %min%.,de_DE

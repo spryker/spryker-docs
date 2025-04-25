@@ -15,7 +15,7 @@ Install the required features:
 | Product | {{page.version}} |
 
 ### 1) Install the required modules
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/merchant-custom-prices:"{{page.version}}" spryker/price-product-merchant-relationship-gui:"^1.0.0" --update-with-dependencies
@@ -487,7 +487,7 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that there is the "Merchant Price Dimension" drop-down in the Back Office on the Product Abstract and Concrete variants edit page (on the Price &amp; Tax tab). When you select some Merchant Relationship, the current page should be reloaded and the prices table should display prices from the selected Merchant Relationship if they exist or an empty table should be displayed when they do not exist.Make sure that when you added/changed prices for some Merchant Relationship, they appear after submitting the form and reloading the page.Make sure that Redis keys are updated/created for this product and business units are assigned to the selected MR.
+Make sure that there is the "Merchant Price Dimension" drop-down in the Back Office on the Product Abstract and Concrete variants edit page (on the Price &amp; Tax tab). When you select some Merchant Relationship, the current page should be reloaded and the prices table should display prices from the selected Merchant Relationship if they exist or an empty table should be displayed when they do not exist. Make sure that when you added/changed prices for some Merchant Relationship, they appear after submitting the form and reloading the page. Make sure that Redis keys are updated/created for this product and business units are assigned to the selected MR.
 
 {% endinfo_block %}
 

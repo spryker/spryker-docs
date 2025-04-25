@@ -659,7 +659,7 @@ Make sure that you can submit the *Discount Create* and *Discount Update* forms 
 [//]: # (```)
 
 [//]: # ()
-[//]: # (`Pyz/Yves/Cart/Theme/default/cart/parts/cart-item.twig` was also heavily modified to work with promotion products &#40;please check our demoshop version&#41;, as the cart page can be different per project.)
+[//]: # (`Pyz/Yves/Cart/Theme/default/cart/parts/cart-item.twig` was also heavily modified to work with promotion products &#40; check our demoshop version&#41;, as the cart page can be different per project.)
 
 [//]: # ()
 [//]: # (The key points that were changed: the "Add to cart" button extracted to `Pyz/Yves/Cart/Theme/default/cart/parts/cart-add-to-cart.twig`, item price information extracted to `Pyz/Yves/Cart/Theme/default/cart/parts/cart-item-prices.twig`, cart product variants extracted to `Pyz/Yves/Cart/Theme/default/cart/parts/cart-product-variants.twig`.)

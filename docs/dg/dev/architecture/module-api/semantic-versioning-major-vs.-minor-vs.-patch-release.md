@@ -1,5 +1,5 @@
 ---
-title: Semantic versioning - major vs. minor vs. patch release
+title: "Semantic versioning: major vs. minor vs. patch release"
 description: Spryker releases update as major, minor, patch release or a bugfix. Learn more about them in this document.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -18,13 +18,13 @@ related:
 
 The Spryker Commerce OS versioning of modules relies on the [semantic versioning](https://semver.org/) approach, which implies a clear set of rules and requirements that dictate how version numbers are assigned and incremented. This document describes how we release modules and version them depending on the release type.
 
-## What is a release?
+## Release
 
 A pull request can ship a new feature, bug fixes, and improvements to existing features. A pull request contains one or multiple modules. Each module can be a *major*, *minor*, or *patch* release.
 
-## What is a Major release?
+## Major release
 
-When we make a change to the [external API of a module](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html), it's a major release. This includes changes to the internal contract. Even when there is no change in a facade method, there can be a change in the behavior so that the contract (~ expected behavior) changes. Please obey the constraints for major releases.
+When we make a change to the [external API of a module](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html), it's a major release. This includes changes to the internal contract. Even when there is no change in a facade method, there can be a change in the behavior so that the contract (~ expected behavior) changes. Obey the constraints for major releases.
 
 Our customers need to change their `composer.json` file to get major versions of modules.
 
@@ -32,13 +32,13 @@ We have two types of major releases:
 * A _maxi-major_. When the release effort is higher than four hours for clients who did not extend the module. This typically happens when data needs to be migrated. In case of a maxi-major release, the previous version automatically gets all bug fixes and security patches (LTS) as long as anyone uses this version.
 * A _mini-major_. When the release effort is lower than four hours for clients who did not extend the module.
 
-## What is a Minor release?
+## Minor release
 
 A release is *minor* when the internal API is changed. For example, when the signature of internal models or constructors is changed, or classes are renamed. Actually, it's anything that can break extensions using inheritance or composition on a project level.
 
 Our customers get all new minor releases automatically during composer update if they use the _^_ (caret) symbol in `composer.json`—for example, `"spryker/category": "^4.1.2"`. We recommend using the _~_ (tilde) symbol for all modules that have been extended at the project level to make sure that nothing breaks after a release—for example, `"spryker/category": "~4.1.0"`. For mode details about how you can easily detect _^_ in the extended modules and update them with _~_, see [Using ~ Composer Constraint for Customized Modules](/docs/dg/dev/architecture/module-api/use-composer-constraint-for-customized-modules.html)
 
-## What is a Patch release?
+## Patch release
 
 A release is a patch when the internal API of a module is not changed. So all internal method signatures are unaffected, and there is no change in the call flow or behavior of any method.
 

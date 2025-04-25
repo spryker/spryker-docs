@@ -85,7 +85,7 @@ The idea behind this concept is that the necessary data (stored in the relationa
 
 For more details on how Publish & Sync works, see [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html).
 
-## Where to go from here?
+## Next steps
 
 * To know more about the application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/dg/dev/architecture/modules-and-application-layers.html).
 * To know more about the building blocks of Spryker, see [Programming Concepts](/docs/dg/dev/architecture/programming-concepts.html).

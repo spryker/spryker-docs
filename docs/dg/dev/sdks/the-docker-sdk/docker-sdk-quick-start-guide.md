@@ -122,7 +122,9 @@ Depending on your requirements, you can select any combination of the following 
 For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/docker-daemon-is-not-running.html).
 
 
-## What documents should I use to start developing and configuring my project?
+## Next steps
+
+Documents to help you start developing your project:
 
 * [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
 * [Docker SDK configuration reference](/docs/dg/dev/sdks/the-docker-sdk/docker-sdk-configuration-reference.html)

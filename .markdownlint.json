@@ -1,6 +1,6 @@
 {
-  "MD013": false,
   "MD041": true,
+  "MD013": false,
   "MD040": {
     "enabled": true,
     "fenced_code_language": true

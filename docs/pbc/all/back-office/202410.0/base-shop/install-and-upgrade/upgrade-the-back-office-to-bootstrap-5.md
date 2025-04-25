@@ -1,11 +1,11 @@
 ---
-title: Migrate the Back Office to Bootstrap 5
+title: Upgrade the Back Office to Bootstrap 5
 description: Learn how to migrate Spryker Back Office to Bootstrap 5 by updating dependencies, enabling assets, and configuring layouts for compatibility.
 last_updated: Apr 15, 2025
 template: howto-guide-template
 ---
 
-To migrate Bootstrap to version 5 in the Back Office, take the following steps:
+To migrate Bootstrap in the Back Office to version 5, take the following steps:
 
 1. Update the required modules:
 ```bash
@@ -17,20 +17,23 @@ To migrate Bootstrap to version 5 in the Back Office, take the following steps:
   npm install @spryker/oryx-for-zed@~3.5.0 --save-dev
 ```
 
-3. Enable Bootstrap 5 assets by setting `isBootstrapLatest` twig variable in general layout.
- - In case you already override a general layout from `Gui/Presentation/Layout/layout.twig`, add the following code to your `layout.twig` file:
+3. Override the general layout from `Gui/Presentation/Layout/layout.twig` on the project level.
+
+4. Enable Bootstrap 5 assets by setting the `isBootstrapLatest` twig variable:
  
+**layout.twig** 
 {% raw %} 
-```bash
+```twig
   {% set isBootstrapLatest = false %}
 ```
 {% endraw %}
 
-Update `head_css` block
 
+5. Update the `head_css` block:
 
+**layout.twig** 
 {% raw %} 
-```bash
+```twig
 {% block head_css %}
     {% if isBootstrapLatest %}
         <link rel="stylesheet" href="{{ assetsPath('css/spryker-zed-gui-commons-bootstrap-compatibility.css') }}">
@@ -40,11 +43,15 @@ Update `head_css` block
     ...
 {% endblock %}
 ```
+
 {% endraw %}
 
-Update `footer_js` block
+
+6. Update the `footer_js` block:
+
+**layout.twig** 
 {% raw %} 
-```bash
+```twig
 {% block footer_js %}
     {% if isBootstrapLatest %}
         <script src="{{ assetsPath('js/spryker-zed-gui-commons-bootstrap-compatibility.js') }}"></script>
@@ -57,34 +64,37 @@ Update `footer_js` block
 {% endraw %}
 
 
-- In case you don't override a general layout, create a new file `src/Gui/Presentation/Layout/layout.twig` in your project and add the code from the previous step.
-
-- The same changes have to be done for login layout which is located in the separate module: `SecurityGui/Presentation/Layout/layout.twig`.
+7. Repeat steps 4-6 for the login layout in the separate module: `SecurityGui/Presentation/Layout/layout.twig`.
 
 
-4. Clear cache:
+8. Clear cache:
 ```bash
   docker/sdk console c:e
 ```
 
 
-5. Run twig cache warmer:
+9. Run twig cache warmer:
 ```bash
   docker/sdk console t:c:w
 ```
 
 
-6. Build JS and CSS assets compatible with Bootstrap 5. There is an environment variable created to manage the version of bootstrap - `BOOTSTRAP_VERSION`. The easiest way to set it:
+10. Build JS and CSS assets compatible with Bootstrap 5. To manage the version of bootstrap, set the `BOOTSTRAP_VERSION` variable:
 ```bash
-  docker/sdk cli BOOTSTRAP_VERSION=5 npm run zed
+docker/sdk cli BOOTSTRAP_VERSION=5 npm run zed
 ```
 
-How to make sure that the assets are built with Bootstrap 5:
-- Check the public directory for the following files:
+{% info_block warningBox "Verification" %}
+
+To make sure that the assets are built with Bootstrap 5, check the public directory for the following files:
 ```bash
   /public/Backoffice/assets/css/spryker-zed-gui-commons-bootstrap-compatibility.css
   /public/Backoffice/assets/js/spryker-zed-gui-commons-bootstrap-compatibility.js
 ```
+
+{% endinfo_block %}
+
+
 
 
 

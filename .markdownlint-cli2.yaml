@@ -1,6 +1,6 @@
 defaultConfig: .markdownlint.json
 
 overrides:
-  - files: ["_includes/pbc/**/*.md"]
+  - files: ["./_includes/pbc/**/*.md"]
     config:
       MD041: false

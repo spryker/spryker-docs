@@ -122,30 +122,7 @@ When the compression is activated `SPRYKER_KEY_VALUE_COMPRESSING_ENABLED=true` i
 
 The configuration compression settings can be modified and extended at the project level with backward compatibility.
 
-By default, it uses `ZlibCompressorPlugin` to compress/decompress the data.
-
-```php
-namespace Spryker\Client\Redis;
-
-class RedisDependencyProvider extends AbstractDependencyProvider
-{
-    /**
-     *  Specification:
-     *  - Defines compressor plugins.
-     *  - The first plugin from the list is used for compression data.
-     *  - Other plugins can be used for data decompression, even if compression in Redis is disabled, for backward compatibility reasons.
-     *
-     * @return array<\Spryker\Client\Redis\Plugin\Compressor\CompressorPluginInterface>
-     */
-    protected function getKeyValueCompressorPlugins(): array
-    {
-        return [
-            new ZlibCompressorPlugin(),
-        ];
-    }
-}
-```
-Additional compressing settings can be also changed on project level:
+By default, it uses:
 
 ```php
 namespace Spryker\Client\Redis;
@@ -176,6 +153,23 @@ class RedisConfig extends AbstractBundleConfig
     public function getMinBytesForCompression(): int
     {
         return 200;
+    }
+    
+    /**
+     *  Specification:
+     *  - Defines compressor strategies.
+     *  - The first strategy from the list is used for compression data.
+     *  - Other strategies can be used for data decompression, even if compression in Redis is disabled, for backward compatibility reasons.
+     *
+     * @api
+     *
+     * @return array<\Spryker\Client\Redis\Compressor\Strategy\CompressorStrategyInterface>
+     */
+    public function getKeyValueCompressorStrategies(): array
+    {
+        return [
+            new ZlibCompressorStrategy(),
+        ];
     }
 }
 ```

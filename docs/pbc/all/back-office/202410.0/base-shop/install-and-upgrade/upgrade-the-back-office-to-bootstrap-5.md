@@ -87,10 +87,8 @@ docker/sdk cli BOOTSTRAP_VERSION=5 npm run zed
 {% info_block warningBox "Verification" %}
 
 To make sure that the assets are built with Bootstrap 5, check the public directory for the following files:
-```bash
-  /public/Backoffice/assets/css/spryker-zed-gui-commons-bootstrap-compatibility.css
-  /public/Backoffice/assets/js/spryker-zed-gui-commons-bootstrap-compatibility.js
-```
+* /public/Backoffice/assets/css/spryker-zed-gui-commons-bootstrap-compatibility.css
+* /public/Backoffice/assets/js/spryker-zed-gui-commons-bootstrap-compatibility.js
 
 {% endinfo_block %}
 

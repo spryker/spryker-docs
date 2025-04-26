@@ -1,6 +1,5 @@
 defaultConfig: .markdownlint.json
 
-overrides:
-  - files: "_includes/pbc/**"
-    config:
-      MD041: false
+ignores:
+  - "**/202311.0/**"
+  - "**/202404.0/**"

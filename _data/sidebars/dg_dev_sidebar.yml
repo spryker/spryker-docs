@@ -1491,7 +1491,7 @@ entries:
       - title: Backend API Marketplace B2C Demo Shop reference
         url: /docs/dg/dev/glue-api/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html
 
-    - title: Old Glue infrastructure
+    - title: REST API
       nested:
       - title: Glue API authentication and authorization
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/glue-api-authentication-and-authorization.html

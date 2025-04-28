@@ -36,7 +36,47 @@ You can send additional data to Vertex, like a Customer Exemption Certificate, u
 
 If the Vertex app is down or taxes can't be calculated for other reasons, taxes are dispayed as 0, letting customers place orders. For some orders, taxes might actually be 0, so there is no way to identify if there is an issue with tax calculation. In future, there will be a flag to identify and track these issues.
 
+
 ## Next steps
 
 * [Connect Vertex](/docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/connect-vertex.html)
-* [Vertex FAQ](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex-faq.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

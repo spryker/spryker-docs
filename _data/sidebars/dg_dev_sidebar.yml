@@ -949,6 +949,10 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
     - title: Authorization Enabler
       url: /docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html
+    - title: Accessibility improvements
+      url: /docs/dg/dev/integrate-and-configure/integrate-accessibility-improvements.html
+    - title: "Tutorial: Integrate accessibility improvements into B2B Demo Shop"
+      url: /docs/dg/dev/integrate-and-configure/tutorial-integrate-accessiblity-improvements-into-b2b-demoshop.html      
     - title: Basic SEO techniques
       url: /docs/dg/dev/integrate-and-configure/integrate-basic-seo-techniques.html
     - title: Graceful shutdown
@@ -1138,8 +1142,10 @@ entries:
         url: /docs/dg/dev/architecture/module-api/performance-and-scalability.html
       - title: "Declaration of module APIs: Public and private"
         url: /docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
-      - title: Semantic Versioning- Major vs. Minor vs. Patch Release
+      - title: "Semantic Versioning: Major vs. minor vs. patch release"
         url: /docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
+      - title: "Semantic Versioning: Zero-major version"
+        url: /docs/dg/dev/architecture/module-api/semantic-versioning-zero-major-version.html        
 
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html

@@ -12,7 +12,7 @@ redirect_from:
 
 {% info_block warningBox "Don't risk your go-live" %}
 
-The preparation steps listed here are mandatory because they're crucial for the success of your go-live. We strongly encourage you to complete these steps where applicable because we won't be able to resolve issues related to steps not completed in time. Make sure that your project plan contains the tasks related to the go-live checklist and allocates enough time for their completion.
+The preparation steps listed here are mandatory because they're crucial for the success of your go-live. We strongly encourage you, customer or partner, to complete these steps where applicable because we won't be able to resolve issues related to steps not completed in time. Make sure that your project plan contains the tasks related to the go-live checklist and allocates enough time for their completion.
 
 {% endinfo_block %}
 
@@ -129,6 +129,31 @@ Update them if plans change.                                                    
 
 {% info_block infoBox "Don't hesitate to contact us" %}
 
-If your go-live date is close and you need help with any of the described tasks, contact us via your Partner or Customer Success Manager *right away*.
+If your go-live date is near and you need help with any of the tasks described, contact us via your Customer Success Manager *right away*. If you're a Spryker partner and unsure who the Customer Success Manager is for our joint customer, reach out to Partner Success Management via the [Partner Portal](https://partners.spryker.com/). They will connect you with the right contact for your project.
 
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

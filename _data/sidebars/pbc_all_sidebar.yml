@@ -23,6 +23,8 @@ entries:
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-the-back-office-number-formatting.html
                   - title: Upgrade the Chart module
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-chart-module.html
+                  - title: Upgrade the Back Office to Bootstrap 5
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-back-office-to-bootstrap-5.html                    
                   - title: Install Backoffice accessibility improvements
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-accessibility-improvements.html
                     include_versions:
@@ -37,7 +39,6 @@ entries:
                 nested:
                   - title: Spryker Core Back Office + Warehouse User Management
                     url: /docs/pbc/all/back-office/unified-commerce/install-and-upgrade/install-the-spryker-core-back-office-warehouse-user-management-feature.html
-
 
       - title: Business Intelligence
         url: /docs/pbc/all/business-intelligence/business-intelligence.html
@@ -1090,9 +1091,6 @@ entries:
             include_versions:
             - "202410.0"
 
-          - title: Data Exchange FAQ
-            url: /docs/pbc/all/data-exchange/data-exchange-faq.html
-
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:
@@ -1674,6 +1672,7 @@ entries:
                 nested:
                   - title: ChannelPilot Marketplace
                     url: /docs/pbc/all/merchant-management/marketplace/third-party-integrations/channelpilot-marketplace.html
+
       - title: Miscellaneous
         nested:
           - title: Spryker Core feature overview
@@ -1691,7 +1690,7 @@ entries:
           - title: Push Notification feature overview
             url: /docs/pbc/all/miscellaneous/push-notification-feature-overview.html
           - title: Sitemap feature overview
-            url: /docs/pbc/all/miscellaneous/sitemap.html            
+            url: /docs/pbc/all/miscellaneous/sitemap-feature-overview.html            
             include_versions:
             - "202505.0"  
           - title: Install and upgrade
@@ -4270,6 +4269,9 @@ entries:
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
                       - title: FAQ
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex-faq.html
+                        include_versions:
+                        - "202311.0"
+                        - "202404.0"                          
                       - title: Disconnect
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
 
@@ -4377,7 +4379,6 @@ entries:
                 include_versions:
                 - "202404.0"
                 - "202410.0"
-
 
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html

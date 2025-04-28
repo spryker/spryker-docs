@@ -39,7 +39,7 @@ To install the User Management capability, do the following:
 composer require spryker-feature/agent-assist:"{{site.version}}" spryker-feature/acl:"{{site.version}}" --update-with-dependencies
 ```
 2. Follow the integration guides for the individual features:
-* [User Management](#related-developer-documents).
+* [User Management](#related-developer-documents)
 * [Agent Assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html#related-developer-documents)
 
 ## Related Business User documents
@@ -60,4 +60,4 @@ composer require spryker-feature/agent-assist:"{{site.version}}" spryker-feature
 
 | OVERVIEWS | INSTALLATION GUIDES |
 | - | - |
-| [Users and rights overview](/docs/pbc/all/user-management/{{page.version}}/base-shop/user-and-rights-overview.html) | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-acl-feature.html)
+| [Users and rights overview](/docs/pbc/all/user-management/{{page.version}}/base-shop/user-and-rights-overview.html) | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-acl-feature.html) |

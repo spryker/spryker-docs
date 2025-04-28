@@ -40,9 +40,10 @@ For detailed information on the modules that provide the API functionality and r
 
 To create a cart, send the request:
 
-***
+---
 `POST` **/carts**
-***
+
+---
 
 {% info_block infoBox %}
 
@@ -111,6 +112,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts`
         }
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
@@ -121,9 +123,10 @@ Request sample: `POST https://glue.mysprykershop.com/carts`
 
 To retrieve all carts, send the request:
 
-***
+---
 `GET` **/carts**
-***
+
+---
 
 {% info_block infoBox "Note" %}
 
@@ -174,6 +177,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
     }
 }
 ```    
+
 </details>
 
 <details>
@@ -240,6 +244,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
     }
 }
 ```   
+
 </details>
 
 
@@ -539,6 +544,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
     ]
 }
 ```    
+
 </details>
 
 
@@ -679,6 +685,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
     ]
 }
 ```    
+
 </details>
 
 
@@ -819,6 +826,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
     ]
 }
 ```    
+
 </details>
 
 <details>
@@ -1199,6 +1207,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
     ]
 }
 ```    
+
 </details>
 
 <details>
@@ -1524,6 +1533,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
     ]
 }
 ```    
+
 </details>
 
 <details>
@@ -1684,6 +1694,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
     ]
 }
 ```
+
 </details>
 
 
@@ -1720,9 +1731,10 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 To retrieve a particular cart, send the request:
 
-***
+---
 `GET` **/carts/*{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}***
-***
+
+---
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
@@ -1799,6 +1811,7 @@ To retrieve a particular cart, send the request:
     }
 }
 ```    
+
 </details>
 
 
@@ -1928,6 +1941,7 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```    
+
 </details>
 
 
@@ -1990,6 +2004,7 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```    
+
 </details>
 
 
@@ -2053,6 +2068,7 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```    
+
 </details>
 
 <details>
@@ -2130,6 +2146,7 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -2197,6 +2214,7 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```    
+
 </details>
 
 
@@ -2260,6 +2278,7 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```    
+
 </details>
 
 

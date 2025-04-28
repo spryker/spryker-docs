@@ -154,22 +154,5 @@ class RedisConfig extends AbstractBundleConfig
     {
         return 200;
     }
-    
-    /**
-     *  Specification:
-     *  - Defines compressor strategies.
-     *  - The first strategy from the list is used for compression data.
-     *  - Other strategies can be used for data decompression, even if compression in Redis is disabled, for backward compatibility reasons.
-     *
-     * @api
-     *
-     * @return array<\Spryker\Client\Redis\Compressor\Strategy\CompressorStrategyInterface>
-     */
-    public function getKeyValueCompressorStrategies(): array
-    {
-        return [
-            new ZlibCompressorStrategy(),
-        ];
-    }
 }
 ```

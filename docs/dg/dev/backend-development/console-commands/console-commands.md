@@ -42,8 +42,8 @@ Options:
 Examples:
 
 ```bash
-$ console oms:check-condition -s DE
-$ console oms:check-condition --limit=100 --store=DE
+console oms:check-condition -s DE
+console oms:check-condition --limit=100 --store=DE
 ```
 
 ---
@@ -61,13 +61,13 @@ Options:
 Examples:
 
 ```bash
-$ console oms:check-timeout --store=DE --limit=100
-$ console oms:check-timeout -l 100
+console oms:check-timeout --store=DE --limit=100
+console oms:check-timeout -l 100
 ```
 
 ## Installation setup commands
 
-- The following command runs a set of commands necessary for installing or updating the application.
+* The following command runs a set of commands necessary for installing or updating the application.
 
 ```bash
 setup:install
@@ -124,17 +124,18 @@ dev:ide:generate-auto-completion
 
   {% endinfo_block %}
 
-- Insert demo data into the database for testing reasons.
+* Insert demo data into the database for testing reasons.
 
 ```bash
 setup:install:demo-data
 ```
 
-- Setup propel command runs a set of commands, necessary for creating or migrating the database.
+* Setup propel command runs a set of commands, necessary for creating or migrating the database.
 
 ```bash
 setup:propel
 ```
+
   The following steps are performed when running this command:
 
   1. Write propel configuration:

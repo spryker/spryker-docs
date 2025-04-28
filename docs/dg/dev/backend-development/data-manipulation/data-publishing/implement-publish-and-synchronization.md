@@ -48,6 +48,7 @@ As a naming convention, names of modules that publish data to Redis end with Sto
 {% endinfo_block %}
 
 ## 2. Define Publish events
+
 The *Publish* and *Synchronize* are event-driven processes. To start publishing data to the frontend, the Publish event must be triggered. After the publish process successfully prepares the data for the frontend, the Synchronization event must be triggered to deliver the prepared data to the frontend.
 
 For this purpose, you need to define events for all changes you want to publish and synchronize. For information about adding events to your module, see [Add events](/docs/dg/dev/backend-development/data-manipulation/event/add-events.html).
@@ -120,6 +121,7 @@ protected function getQueueOptions()
 
 
 ## 4. Create Publish table
+
 The next step is to create a database table that is used as a mirror for the corresponding *Redis* or *Elasticsearch* store. For details, see [Extend the database schema](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html).
 
 {% info_block infoBox "Naming convention"%}
@@ -181,6 +183,7 @@ Synchronization behavior parameters:
 
 
 ## 5. Trigger Publish events
+
 To implement the first step of the *Publish* process, you need to trigger the corresponding Publish events.
 
 You need to trigger the events manually by calling the `EventFacade::trigger()` method:
@@ -194,6 +197,7 @@ Alternatively, you can enable event triggering automatically. In this case, an e
 To implement Event Behavior, add the behavior called *event* to your Propel model. For example, the following code in the schema of the Product module enables the triggering of events each time the `spy_product_abstract` table is updated:
 
 **data/shop/development/current/src/Pyz/Zed/Product/Persistence/Propel/Schema/spy_product.schema.xml**
+
 ```xml
 <table name="spy_product_abstract">
     <behavior name="event">
@@ -205,7 +209,7 @@ To implement Event Behavior, add the behavior called *event* to your Propel mode
 The `parameter` element specifies when events should be triggered. It has four attributes:
 
 * `name`: the parameter name. It must be unique in your Propel model.
-* `column`: the column that needs to be updated to trigger an event. To track all columns, use the _*_ (asterisk) symbol.
+* `column`: the column that needs to be updated to trigger an event. To track all columns, use the *** (asterisk) symbol.
 * `value`: a value to compare.
 * `operator`: the comparison operator. You can use any PHP comparison operators (===, ==, !=, !==, <, >, <=, >=, <>) for this purpose.
 
@@ -236,6 +240,7 @@ $productAbstractEntity->save();
 ```
 
 ### Delete entries
+
 Event triggering works only with Propel Entities, but not Propel queries. For this reason, deleting multiple entities does not trigger the *Publish and Synchronize* process. Thus, for example, the following code does not trigger anything: `$query→filterByFkProduct(1)→delete();`. To work this around, you need to trigger the events manually or iterate through objects and delete them one by one:
 
 ```php
@@ -253,6 +258,7 @@ foreach ($productAbstracts as $productAbstract) {
 
 
 ## 6. Listen to Publish events
+
 To implement the next step of the *Publish* process, you need to consume the Publish events. For this purpose, create an event listener. A listener is a plugin class to your storage or search module. See the sample implementation in the [GlossaryStorage](https://github.com/spryker/glossary-storage) module.
 
 ```php
@@ -351,6 +357,7 @@ For details about creating your non-publish and synchronize listener classes, se
 {% endinfo_block %}
 
 ## 7. Publish data
+
 After consuming a publish event, you must prepare the frontend data. For this purpose, your code needs to query the data relevant to the update and make changes to the corresponding `storage` or `search` database table. For this purpose, you need to implement the following methods: w`riteCollectionBy{TriggeredEvent}Events` for publishing an entity, and `deleteCollectionBy{TriggeredEvent}Events` for removing it.
 
 For the sample implementation see the [GlossaryStorage](https://github.com/spryker/glossary-storage) module.
@@ -408,6 +415,7 @@ After implementing the preceding steps, the data storage of your frontend app sy
 ## 9. Recommended module structure
 
 The recommended module structure for the Publish and Synchronize module is as follows:
+
 ```
 + src/
   + Spryker/
@@ -432,10 +440,12 @@ The recommended module structure for the Publish and Synchronize module is as fo
 
 
 ## Perform additional tasks
+
 There are some additional tasks for the Publish and Synchronize that you can perform:
-- Viewing the event mapping.
-- Debugging Publish and Synchronize.
--
+* Viewing the event mapping.
+* Debugging Publish and Synchronize.
+*
+
 ### View event mapping
 
 To see all listeners mapped for a certain event, press <kbd>Control</kbd> and click it in PhpStorm. The following example shows that the `SPY_URL_CREATE` event has six listeners mapped to it, which means that there are six messages for this event in the *event* queue.
@@ -444,6 +454,7 @@ To see all listeners mapped for a certain event, press <kbd>Control</kbd> and cl
 ### Debug Publish and Synchronize
 
 1. To stop processing all queues, turn off [Jenkins](/docs/scos/dev/sdk/cronjob-scheduling.html). Use the following command:
+
    ```bash
    console setup:jenkins:disable
    ```
@@ -467,6 +478,7 @@ To see all listeners mapped for a certain event, press <kbd>Control</kbd> and cl
    ```
 
 ## Re-synchronize Storage and Search data to Redis or Elasticsearch
+
 There is no functionality for this purpose, but you can use the queue client to send data to sync queues.
 
 **Example:**
@@ -491,6 +503,7 @@ $queueClient->sendMessage("sync.storage.product", $queueSendTransfer);
 ```
 
 ## Re-trigger the Publish and Synchronize process
+
 Use the Event facade to trigger Publish events for specific entities:
 
 ```php

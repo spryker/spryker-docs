@@ -142,6 +142,7 @@ class MyBundleBusinessFactory extends AbstractBusinessFactory
 ```
 
 ### Zed - Persistence layer
+
 ```php
 <?php
 namespace Pyz\Zed\MyBundle\Persistence;

@@ -84,6 +84,7 @@ Additionally, you can use the code generator to create a module. For this, creat
 ```bash
 console spryk:run AddModule
 ```
+
 Requesting the URL `https://zed.mysprykershop.com/hello-world` shows the Hello World example.
 
 ## Display a random salutation message

@@ -101,9 +101,9 @@ Merging works like this:
 Note the following:
 * If one filename has one path: copy it to `src/Orm/Propel/DE/Schema`.
 * If one filename has more than one path: merge them.
- * Check if the database attributes name, package, and namespace are consistent; otherwise, throw an exception.
- * Merge XML by the name attribute on all levels.
- * Copy the merged XML to `src/Orm/Propel/DE/Schema`.
+* Check if the database attributes name, package, and namespace are consistent; otherwise, throw an exception.
+* Merge XML by the name attribute on all levels.
+* Copy the merged XML to `src/Orm/Propel/DE/Schema`.
 
 {% endinfo_block %}
 
@@ -173,6 +173,7 @@ Functionality is available only with versions later than `202212.0`.
 Spryker allows migration to a specific version by using the `migrate-to-version` option with the `propel:migrate` command. The option defines the version to migrate the database to and expects value that can be taken from the `version` column in the `propel_migration` table.
 
 For example:
+
 ```bash
 vendor/bin/console propel:migrate --migrate-to-version=1622797441
 ```

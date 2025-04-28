@@ -81,7 +81,7 @@ public function testAction(Request $request)
 }
 ```
 
-Now, the data can be accessed in the twig template like this: `{% raw %}{{{% endraw %}customer.name{% raw %}}}{% endraw %} `.
+Now, the data can be accessed in the twig template like this: `{% raw %}{{{% endraw %}customer.name{% raw %}}}{% endraw %}`.
 
 ***
 

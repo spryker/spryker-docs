@@ -277,6 +277,7 @@ class MessageBrokerAwsDependencyProvider extends SprykerMessageBrokerAwsDependen
 5. In `MessageBrokerConfig.php`, configure the default worker channels for the system events channel to be enabled:
 
 **src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php**
+
 ```php
 namespace Pyz\Zed\MessageBroker;
 

@@ -39,9 +39,9 @@ Server-side rendering (SSR), including Static Site Generation (SSG) as a variant
 
 While SSR offers numerous benefits, it's not the best fit for every type of application, like the following:
 
-- B2B shops with restricted access: public-facing SEO and quicker initial page load times offered by SSR may not significantly benefit these types of applications.
-- Business apps: applications heavily focused on functionality, like a fulfillment app, might not require the SEO or user experience enhancements provided by SSR.
-- Instore apps: used in a controlled environment and designed for specific functions, these types of applications might not necessitate the benefits of SSR.
+* B2B shops with restricted access: public-facing SEO and quicker initial page load times offered by SSR may not significantly benefit these types of applications.
+* Business apps: applications heavily focused on functionality, like a fulfillment app, might not require the SEO or user experience enhancements provided by SSR.
+* Instore apps: used in a controlled environment and designed for specific functions, these types of applications might not necessitate the benefits of SSR.
 
 
 ## SSR implementation approaches
@@ -115,14 +115,14 @@ Oryx components are built with SSR in mind. They're designed to render correctly
 
 Oryx provides special decorators to address some SSR-related challenges:
 
-- The `@hydratable` decorator marks a component for late hydration. This allows the component to render on the server but delays its hydration until it's interacted with on the client. Hydration can be triggered programmatically, or automatically with events.   
+* The `@hydratable` decorator marks a component for late hydration. This allows the component to render on the server but delays its hydration until it's interacted with on the client. Hydration can be triggered programmatically, or automatically with events.
 
-- The `@ssrShim` decorator shims certain parts of the component API to make it work on the server. Specifically, it adjusts how the `toggleAttribute()` function and style property work.
+* The `@ssrShim` decorator shims certain parts of the component API to make it work on the server. Specifically, it adjusts how the `toggleAttribute()` function and style property work.
 
 ### Utilities
 
 Oryx also provides utilities to assist with SSR:
 
-- `ssrAwaiter`: This utility manages asynchronous operations during SSR. It's particularly useful when a component depends on asynchronous data. By using `ssrAwaiter`, you can ensure that the server waits for the data before rendering the component.
+* `ssrAwaiter`: This utility manages asynchronous operations during SSR. It's particularly useful when a component depends on asynchronous data. By using `ssrAwaiter`, you can ensure that the server waits for the data before rendering the component.
 
-- `@subscribe`: This decorator is used to manage subscriptions during SSR. It solves the problem of missing lifecycle hooks in SSR and ensures that subscriptions are cleaned up properly.
+* `@subscribe`: This decorator is used to manage subscriptions during SSR. It solves the problem of missing lifecycle hooks in SSR and ensures that subscriptions are cleaned up properly.

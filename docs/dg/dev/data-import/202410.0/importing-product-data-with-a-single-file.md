@@ -28,6 +28,7 @@ To import combined product data via a single file, you need to:
 * Run a [console command](/docs/dg/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#console-commands-for-product-data-import) for product data import.
 
 ## Single .csv file for combined product data import
+
 <a name="single-csv-file-for-combined-product-data-import"></a>
 
 The CSV file for the main product data import contains product-related data that you can import into your system. Check out the [template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Importing+Product+Data+With+a+Single+File/TEMPLATE+Product+import+with+single+file.csv) of the file for details on the data it contains.
@@ -96,6 +97,7 @@ Depending on the product types you specified for the `product.assigned_product_t
 {% endinfo_block %}
 
 ## YML configuration file for product data import
+
 <a href="#yml-configuration-file-for-product-data-import"></a>
 
 The YML configuration file for product data import allows sequentially running importers for product data. This file can be used to import all product-related data sets, or just some of them. See [Console Commands for Product Data Import](/docs/dg/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#console-commands-for-product-data-import) for details.

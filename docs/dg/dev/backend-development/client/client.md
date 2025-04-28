@@ -109,8 +109,8 @@ The real execution time in your project depends on the environment, the performa
 
 The request from Yves to Zed involves two important classes:
 
-* The *stub* represents the remote methods in the client.
-* The *gateway controller* represents the entry point on the Zed side.
+* The _stub_ represents the remote methods in the client.
+* The _gateway controller_ represents the entry point on the Zed side.
 
 ## Next step
 

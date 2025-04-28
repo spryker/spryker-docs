@@ -162,9 +162,9 @@ When accessing a new page, the algorithm checks if a cache for it's already buil
 
 Spryker provides three caching strategies to build the list of the keys in the cache entry:
 
-* *Replacement strategy.* This strategy overwrites the list of the keys in a cache with a new one every time a cached page is accessed. This strategy is useful with static pages where the list of keys for these does not change often. This is a default strategy when a strategy is not specified.
-* *Incremental strategy.* This strategy increments the list of keys inside the cache until the limit's exceeded. The default limit's 1000 keys. The incremental strategy is useful with a page that uses configurators—for example, variants where the cache stores all the different combinations.
-* *Inactive strategy.* This strategy deactivates the cache for a specified page.
+* _Replacement strategy._ This strategy overwrites the list of the keys in a cache with a new one every time a cached page is accessed. This strategy is useful with static pages where the list of keys for these does not change often. This is a default strategy when a strategy is not specified.
+* _Incremental strategy._ This strategy increments the list of keys inside the cache until the limit's exceeded. The default limit's 1000 keys. The incremental strategy is useful with a page that uses configurators—for example, variants where the cache stores all the different combinations.
+* _Inactive strategy._ This strategy deactivates the cache for a specified page.
 
 All the cache entries have a default TTL of one day. The cache is removed after one day, and a new one is generated for different pages when accessing them.
 

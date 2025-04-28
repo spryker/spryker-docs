@@ -98,6 +98,7 @@ Environment parameters for HTTP requests are usually handled by DevOps Engineers
 ![Code bucket HTTP request](https://confluence-connect.gliffy.net/embed/image/9bf6683f-3e0d-48e8-bc27-f4a9332cb9f7.png?utm_medium=live&utm_source=custom)
 
 For console commands, you can pass the environment variable as shown in the example:
+
 ```bash
 SPRYKER_CODE_BUCKET=FOO vendor/bin/console name:of:command
 ```

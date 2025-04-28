@@ -3,6 +3,11 @@ title: Hosted Payment Page Back Button Handling
 description: Learn how to handle browser back button usage when integrating hosted payment pages
 last_updated: Mar 25, 2024
 template: concept-topic-template
+related:
+    - title: Payments Feature Overview
+      link: /docs/scos/dev/feature-walkthroughs/page.version/payments-feature-walkthrough/payments-feature-walkthrough.html
+    - title: State Machines
+      link: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine.html
 ---
 
 When integrating Payment Service Providers (PSPs) that use hosted payment pages, proper handling of browser navigation is crucial for maintaining order consistency and stock management. This guide explains how to handle scenarios where customers use their browser's back button after being redirected to a hosted payment page.
@@ -67,13 +72,9 @@ Update your OMS state configuration in `SalesPayment/config/Zed/Oms/Subprocess/P
 </state>
 ```
 
-{% info_block warningBox "Important" %}
-
 The `exclude from customer` flag is specifically needed for logged-in customers to prevent cancelled payment orders from appearing in their customer account. Without this flag, logged-in customers would see these cancelled orders in their order history.
 
 For more information about the `exclude from customer` flag, see [Order Process Modelling via State Machines](https://docs.spryker.com/docs/pbc/all/order-management-system/202410.0/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#state-machine-module).
-
-{% endinfo_block %}
 
 ## Testing
 
@@ -96,9 +97,8 @@ For more information about the `exclude from customer` flag, see [Order Process 
    - Log in as a customer.
    - Place an order that triggers hosted payment page.
    - Use back button.
-   - Verify order status changes to "payment cancellation pending".
+   - Verify order status changes to "payment cancellation pending" in the Zed back office.
    - Verify order is not visible in customer account.
-   - Log in to Zed and verify that the order exists with the correct state.
 
 ## Troubleshooting
 
@@ -110,8 +110,3 @@ For more information about the `exclude from customer` flag, see [Order Process 
 ### Stock Issues
 - Ensure proper order cancellation workflow.
 - Verify stock update triggers.
-
-## Related Developer Guides
-
-* [Payments Feature Overview](/docs/scos/dev/feature-walkthroughs/page.version/payments-feature-walkthrough/payments-feature-walkthrough.html)
-* [State Machines](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine.html)

@@ -22,9 +22,8 @@ Log into the Fulfillment App. The login details should be provided by your Back 
 4. Based on whether you found the item, do one of the following next to its card in the Fulfillment App:
   * If you've collected the item, select or enter the number of items you've collected and click **✓ Done**.
   * If the item wasn't found, select or enter `0` and click **✓ Done**.
-
 5. In the dialog that appears, to confirm you've collected the item, click **Confirm**.
-    This moves the item from the **Not Picked** tab to either the **Picked** or the **Not Found** tab. You can double-check the results by opening those tabs.
+   This moves the item from the **Not Picked** tab to either the **Picked** or the **Not Found** tab. You can double-check the results by opening those tabs.
 6. Repeat steps 3-5 until you process all the items by collecting or marking them as not found.
 7. To finish picking, click **Finish picking**.
   This opens the **PICK LISTS** page. The picklist you've processed is no longer displayed.

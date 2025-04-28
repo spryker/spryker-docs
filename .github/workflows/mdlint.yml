@@ -9,7 +9,7 @@ on:
 
 jobs:
   markdownlint:
-    name: Markdownlint Check
+    name: Is formatting great?
     runs-on: ubuntu-latest
 
     steps:

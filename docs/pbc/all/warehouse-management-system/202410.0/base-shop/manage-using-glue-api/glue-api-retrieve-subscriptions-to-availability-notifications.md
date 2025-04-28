@@ -76,6 +76,7 @@ Request sample: retrieve subscriptions to availability notifications
     "links": []
 }
 ```
+
 </details>
 
 ## Other management options

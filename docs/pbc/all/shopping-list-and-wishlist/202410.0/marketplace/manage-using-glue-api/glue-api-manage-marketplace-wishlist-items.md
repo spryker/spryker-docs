@@ -49,6 +49,7 @@ To add an item to a wishlist, send the request:
 		}
 	}
 ```
+
 </details>
 
 <details>
@@ -67,6 +68,7 @@ To add an item to a wishlist, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -84,6 +86,7 @@ To add an item to a wishlist, send the request:
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE  | TYPE   | REQUIRED | DESCRIPTION   |
@@ -110,6 +113,7 @@ To add an item to a wishlist, send the request:
 		}
 	}
 ```
+
 </details>
 
 <details>
@@ -169,6 +173,7 @@ To add an item to a wishlist, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -197,6 +202,7 @@ To add an item to a wishlist, send the request:
     }
 }
 ```
+
 </details>
 
 

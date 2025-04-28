@@ -474,7 +474,7 @@ class OrderedQueuesStrategy implements QueueProcessingStrategyInterface
 </details>
 
 
-## When to use and when not to use it?
+## Use cases for this solution
 
 Currently, this solution proved to be useful for multi-store setup environments with more than 2 stores operated within a single AWS region, although projects with only two stores can benefit from this solution as well.
 

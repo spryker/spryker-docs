@@ -158,7 +158,6 @@ In this release, we added the support of CRUD for combined entities allowing to 
 
 * [Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api/data-exchange-api-integration.html)
 * [Data Exchange](/docs/pbc/all/data-exchange/{{site.version}}/data-exchange.html#data-importers-and-data-exporters)
-* [Data Exchange FAQ](/docs/pbc/all/data-exchange/{{site.version}}/data-exchange-faq.html)
 
 ### Technical prerequisites
 

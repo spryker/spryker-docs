@@ -23,6 +23,8 @@ entries:
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-the-back-office-number-formatting.html
                   - title: Upgrade the Chart module
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-chart-module.html
+                  - title: Upgrade the Back Office to Bootstrap 5
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-back-office-to-bootstrap-5.html                    
                   - title: Install Backoffice accessibility improvements
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-accessibility-improvements.html
                     include_versions:
@@ -1088,9 +1090,6 @@ entries:
             url: /docs/pbc/all/data-exchange/create-post-plugins-for-data-exchange-api.html
             include_versions:
             - "202410.0"
-
-          - title: Data Exchange FAQ
-            url: /docs/pbc/all/data-exchange/data-exchange-faq.html
 
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
@@ -4270,6 +4269,9 @@ entries:
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
                       - title: FAQ
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex-faq.html
+                        include_versions:
+                        - "202311.0"
+                        - "202404.0"                          
                       - title: Disconnect
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
 

@@ -21,7 +21,7 @@ It is a view into all sales order items and their current states. The matrix sho
 
 They have started highly manually: every step from order to fulfillment was done by a support team. A typical culture of heroes. With the increasing amount of sales orders, the entire process or subprocesses have been automated—for example with a lot of if-then-else statements. This easily ends up in unmaintainable spaghetti code. Others have introduced an ERP system, which results in a distributed logic between shop and ERP. In both cases, the documentation of the implemented process can only be found in the code and development efficiency decreases with the increasing complexity. But this has also an effect on operations: Support teams need to use many tools to understand the flow of a sales order. Process insight and process performance indicators are missing. Typically, there is a set of KPI aggregated in a data warehouse, but KPI reflects a result, if you want to understand why a specific result was realized, Process Performance Indicators let you dig deeper.
 
-## Process Management as a solution?
+## Process Management
 
 Business Process Management is a management discipline that focuses on processes rather than on departments or functional units. Processes describe how and where value is created for a customer. Typically, processes start outside of the company and then are processed within to finally end outside again.
 
@@ -29,7 +29,7 @@ Order 2 Cash is an important process that describes all activities needed that a
 
 ![Process management](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/OMS+matrix/process_management.png)
 
-### How do you manage a process?
+### How to manage a business process
 
 First of all, it's important to understand what tasks are executed in which order. Defining the "to be" process ensures common understanding for all involved parties. A process model helps make implicit knowledge of an individual player explicitly understandable for everyone involved. This understanding helps align everyone and execute tasks in a standardized fashion.
 

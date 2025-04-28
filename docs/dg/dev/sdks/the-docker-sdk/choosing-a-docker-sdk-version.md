@@ -39,7 +39,7 @@ related:
 This document describes why and how to select a particular version of the Docker SDK and use it in your project.
 
 
-## Why should I use a particular version of the Docker SDK?
+## Using a particular version of Docker SDK
 
 You should use a particular Docker SDK version for:
 

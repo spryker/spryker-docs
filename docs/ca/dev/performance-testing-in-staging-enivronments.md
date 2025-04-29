@@ -24,7 +24,7 @@ To assist in performance testing, we have a [load testing tool](https://github.c
 
 The tool can be used as a package integrated into the Spryker project or as a standalone package.
 
-### What is Gatling?
+### Gatling
 
 Gatling is a powerful performance testing tool that supports HTTP, WebSocket, Server-Sent-Events, and JMS. Gatling is built on top of Akka that enables thousands of virtual users on a single machine. Akka has a message-driven architecture, and this overrides the JVM limitation of handling many threads. Virtual users are not threads but messages.
 

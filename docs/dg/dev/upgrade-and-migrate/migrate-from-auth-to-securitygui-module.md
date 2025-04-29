@@ -73,19 +73,19 @@ The steps in this section show you how to re-configure the YVES system user and 
 
 3. Adjust `config/Shared/config_default.php`.
 
-    *  Remove:
+    * Remove:
 
     ```php
     use Spryker\Shared\Auth\AuthConstants;
     ```
 
-    *  Add:
+    * Add:
 
     ```php
     use Spryker\Shared\SecuritySystemUser\SecuritySystemUserConstants;
     ```
 
-    *  Change:
+    * Change:
 
     ```php
     $config[AuthConstants::AUTH_DEFAULT_CREDENTIALS] = [
@@ -126,23 +126,24 @@ The steps in this section show you how to re-configure the YVES system user and 
 
 4. Adjust `tests/PyzTest/Zed/Console/_data/cli_sandbox/config/Shared/config_default.php`.
 
-    *  Remove:
+    * Remove:
 
     ```php
     use Spryker\Shared\Auth\AuthConstants;
     ```
 
-    *  Add:
+    * Add:
 
     ```php
     use Spryker\Shared\SecuritySystemUser\SecuritySystemUserConstants;
     ```
 
-    *  Change:
+    * Change:
 
     ```php
     $config[AuthConstants::AUTH_ZED_ENABLED]
     ```
+
     to:
 
     ```php
@@ -249,6 +250,7 @@ Add `Spryker\Zed\Security\Communication\Plugin\Application\ZedSecurityApplicatio
     }
 
 ```
+
 4. Adjust `src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php`.
 
 Remove `AuthorizationEventDispatcherPlugin()` and `RedirectAfterLoginEventDispatcherPlugin()` from `getEventDispatcherPlugins()`.
@@ -334,7 +336,7 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 }
 ```
 
-8. Update `src/Pyz/Zed/UserPasswordReset/UserPasswordResetDependencyProvider.php` with the following code:   
+8. Update `src/Pyz/Zed/UserPasswordReset/UserPasswordResetDependencyProvider.php` with the following code:
 
 ```php
 <?php
@@ -429,6 +431,7 @@ composer update spryker/application --with-dependencies
     ],
     ];
     ```
+
     * Change:
 
     ```php

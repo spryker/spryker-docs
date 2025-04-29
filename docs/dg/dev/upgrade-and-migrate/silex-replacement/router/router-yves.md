@@ -219,6 +219,7 @@ interface RouterEnhancerPluginInterface
     public function afterGenerate(string $url, RequestContext $requestContext, int $referenceType): string;
 }
 ```
+
 </details>
 
 Use this plugin to hook into the match and to generate processes of the Router.

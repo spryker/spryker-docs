@@ -32,6 +32,7 @@ related:
 Zed API, initially released as a beta version, is now considered outdated and is no longer being developed. Instead of it, we recommend using [Glue Backend API](/docs/dg/dev/glue-api/{{site.version}}/decoupled-glue-api.html#new-type-of-application-glue-backend-api-application).
 
 {% endinfo_block %}
+
 ## Filtering
 
 For find action we return a paginated collection that can be limited and customized based on query string input or headers. So using the provided `FilterPreProcessors` one can enable filtering (conditions), sorting (and multi-sorting) and pagination.

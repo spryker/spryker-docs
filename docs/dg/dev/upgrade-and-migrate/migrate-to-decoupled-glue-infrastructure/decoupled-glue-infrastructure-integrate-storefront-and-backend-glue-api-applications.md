@@ -72,7 +72,7 @@ $sprykerGlueStorefrontHost = getenv('SPRYKER_GLUE_STOREFRONT_HOST');
 $config[GlueStorefrontApiApplicationConstants::GLUE_STOREFRONT_API_HOST] = $sprykerGlueStorefrontHost;
 ```
 
-__src/Pyz/Glue/GlueApplication/Bootstrap/****GlueBackendApiBootstrap****.php__
+**src/Pyz/Glue/GlueApplication/Bootstrap/****GlueBackendApiBootstrap****.php**
 
 ```php
 <?php
@@ -97,7 +97,7 @@ class GlueBackendApiBootstrap extends GlueBootstrap
 }
 ```
 
-__src/Pyz/Glue/GlueApplication/Bootstrap/****GlueBootstrap****.php__
+**src/Pyz/Glue/GlueApplication/Bootstrap/****GlueBootstrap****.php**
 
 ```php
 <?php
@@ -122,7 +122,7 @@ class GlueBootstrap extends SprykerGlueBootstrap
 }
 ```
 
-__src/Pyz/Glue/GlueApplication/Bootstrap/****GlueStorefrontApiBootstrap****.php__
+**src/Pyz/Glue/GlueApplication/Bootstrap/****GlueStorefrontApiBootstrap****.php**
 
 ```php
 <?php
@@ -172,7 +172,7 @@ $bootstrap
     ->run();
 ```
 
-__public/Glue****/index.****php__
+**public/Glue****/index.****php**
 
 ```php
 <?php
@@ -197,7 +197,7 @@ $bootstrap
     ->run();
 ```
 
-__public/GlueStorefront****/index.****php__
+**public/GlueStorefront****/index.****php**
 
 ```php
 use Pyz\Glue\GlueApplication\Bootstrap\GlueStorefrontApiBootstrap;
@@ -220,7 +220,7 @@ $bootstrap
     ->run();
 ```
 
-__deploy****.yml__
+**deploy****.yml**
 
 ```
 groups:
@@ -416,6 +416,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Glue/Console/ConsoleDependencyProvider.php**
@@ -549,6 +550,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     }
 }
 ```
+
 </details>
 
 <details>
@@ -635,8 +637,9 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
     }
 }
 ```
+
 </details>
 
 If everything is set up correctly, you can access it as follows:
- * Glue Backend API application: `http://glue-backend.mysprykershop.com`.
- * Glue Storefront API application: `http://glue-storefront.mysprykershop.com`.
+* Glue Backend API application: `http://glue-backend.mysprykershop.com`.
+* Glue Storefront API application: `http://glue-storefront.mysprykershop.com`.

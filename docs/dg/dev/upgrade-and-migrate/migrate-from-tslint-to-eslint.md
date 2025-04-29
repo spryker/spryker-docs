@@ -76,6 +76,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 
 1. Create the `.eslintrc.json` file:
     * For SCOS demo shops, use this:
+
     ```json
     {
         "root": true,
@@ -115,6 +116,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
     ```
 
     * For Marketplace projects, use this:
+
     ```json
     {
         "root": true,

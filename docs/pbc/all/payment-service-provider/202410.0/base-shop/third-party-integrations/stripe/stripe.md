@@ -43,7 +43,7 @@ However, our team only tested the following payment methods:
 
 ## Browser back button handling
 
-Using the browser back button at Stripe's hosted payment page may lead to issues with order persistence and stock management. For instructions on configuring your application to handle this scenario and prevent duplicate orders, see [Configure handling of browser back button action](../../hosted-payment-page-back-button-handling.md).
+Using the browser back button at Stripe's hosted payment page may lead to issues with order persistence and stock management. For instructions on configuring your application to handle this scenario and prevent duplicate orders, see [Configure handling of browser back button action at hosted payment page](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/configure-handling-of-browser-back-button-action-at-hosted-payment-page.html).
 
 ## Current limitations
 

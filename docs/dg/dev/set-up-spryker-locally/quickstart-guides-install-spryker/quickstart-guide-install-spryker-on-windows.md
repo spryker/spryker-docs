@@ -25,7 +25,7 @@ Install the following applications:
 
 Depending on the needed Demo Shop, run one of the following in Ubuntu:
 
-- B2B Demo Shop:
+* B2B Demo Shop:
 
 ```shell
 git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202410.0 --single-branch ./b2b-demo-shop && \
@@ -34,7 +34,7 @@ git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
 ```
 
-- B2C Demo Shop:
+* B2C Demo Shop:
 
 ```shell
 git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202410.0 --single-branch ./b2c-demo-shop && \
@@ -43,7 +43,7 @@ git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
 ```
 
-- B2B Marketplace Demo Shop:
+* B2B Marketplace Demo Shop:
 
 ```shell
 git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202410.0 --single-branch ./b2b-demo-marketplace && \
@@ -52,7 +52,7 @@ git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
 ```
 
-- B2C Marketplace Demo Shop:
+* B2C Marketplace Demo Shop:
 
 ```shell
 git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202410.0 --single-branch ./b2c-demo-marketplace && \

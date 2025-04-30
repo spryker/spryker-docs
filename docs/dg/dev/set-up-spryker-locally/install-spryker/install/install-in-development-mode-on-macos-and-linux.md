@@ -62,7 +62,7 @@ This document describes how to install Spryker in [Development Mode](/docs/dg/de
     ```shell
     git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202410.0 --single-branch ./b2b-demo-marketplace && \
     cd b2b-demo-marketplace
-    ```    
+    ```
 
 3. Clone the Docker SDK:
 

@@ -87,12 +87,12 @@ The Docker SDK `up` command does the following:
    2. Builds app images in CLI with the `docker/sdk build` command.
    3. Tags application images with the `docker/sdk tag` command.
    4. Mounts codebase with the following commands:
-      - `install composer`
-      - `install -s build`
-      - `build-{mode}`
+      * `install composer`
+      * `install -s build`
+      * `build-{mode}`
    5. Mounts assets with the following commands:
-      - `install -s build-static`
-      - `build-static-{mode}`
+      * `install -s build-static`
+      * `build-static-{mode}`
    6. Builds frontend and gateway containers from an Nginx image.
 2. Runs containers:
    1. Runs before stack.
@@ -111,16 +111,16 @@ The Docker SDK `up` command does the following:
 In the *testing* mode, you can use the `docker/sdk testing` and `docker/sdk (up|start) -t` commands.
 
 The `docker/sdk testing` command does the following:
- - Sets the `SPRYKER_TESTING_ENABLE` variable in the frontend, gateway, and app containers.
- - Builds and runs the webdriver container if it does not exist.
- - Stops the scheduler to ensure isolation and control.
- - Runs the CLI container and executes the requested command.
+* Sets the `SPRYKER_TESTING_ENABLE` variable in the frontend, gateway, and app containers.
+* Builds and runs the webdriver container if it does not exist.
+* Stops the scheduler to ensure isolation and control.
+* Runs the CLI container and executes the requested command.
 
 The `docker/sdk (up|start) -t` command does the following:
- - Sets the `SPRYKER_TESTING_ENABLE` variable in the frontend, gateway, and app containers.
- - Builds and runs the webdriver container if it does not exist.
- - Stops the scheduler to ensure isolation and control.
- - Executes the `docker/sdk cli -t ...` command to enter CLI container in the test mode or to run commands.
+* Sets the `SPRYKER_TESTING_ENABLE` variable in the frontend, gateway, and app containers.
+* Builds and runs the webdriver container if it does not exist.
+* Stops the scheduler to ensure isolation and control.
+* Executes the `docker/sdk cli -t ...` command to enter CLI container in the test mode or to run commands.
 
 {% info_block infoBox "Leaving the testing mode" %}
 
@@ -139,56 +139,56 @@ Debugging from your browser by adding a cookie to the HTTP request works automat
 ## Other docker/sdk commands
 
 The `docker/sdk run` or `start` command does the following:
- - Executes the `docker-compose up -d` command.
- - Executes the `docker-compose restart` command that restarts the frontend and gateway containers.
- - Waits until the services are up and running.
+* Executes the `docker-compose up -d` command.
+* Executes the `docker-compose restart` command that restarts the frontend and gateway containers.
+* Waits until the services are up and running.
 
 The `docker/sdk stop` command stops running containers with the `docker-compose stop` command.
 
 The `docker/sdk restart` command does the following:
- - Executes the `docker/sdk stop` command.
- - Executes the `docker/sdk start` command.
+* Executes the `docker/sdk stop` command.
+* Executes the `docker/sdk start` command.
 
 The `docker/sdk install` command prints information about what you should do to complete the installation. For example, it shows information about how to add hosts to the `/etc/hosts` file, warns about incompatible OS or software,  etc.
 
 The `docker/sdk down` command executes `docker-compose down`, which stops and removes containers and networks.
 
 The `docker/sdk prune` command does the following:
-- Executes the `docker-compose down -v` command.
-- Executes the `docker prune` command for images, volumes, system, and builder.
+* Executes the `docker-compose down -v` command.
+* Executes the `docker prune` command for images, volumes, system, and builder.
 
 The `docker/sdk reset`  command does the following:
-- Executes `docker-compose down -v`
-- Executes `docker/sdk up --build --assets --data --jobs`
+* Executes `docker-compose down -v`
+* Executes `docker/sdk up --build --assets --data --jobs`
 
 The `docker/sdk clean-data` command stops and removes the following containers and volumes with  `docker-compose down -v`:
-- Logs
-- `/data` folder for Zed, Yves, and Glue
-- Broker data: `/var/lib/rabbitmq`
-- Session and key-value data: `/data`
-- Search data: `/usr/share/elasticsearch/data`
-- Scheduler data
+* Logs
+* `/data` folder for Zed, Yves, and Glue
+* Broker data: `/var/lib/rabbitmq`
+* Session and key-value data: `/data`
+* Search data: `/usr/share/elasticsearch/data`
+* Scheduler data
 
 The `docker/sdk trouble` command does the following:
 * Executes `docker-compose down`.
 * Cleans sync volumes for `docker-sync`.
 
 The `docker/sdk build` command builds the following data:
-- Images: executes the `docker build` command for app and Nginx images; builds codebase and assets.
-- Codebase: executes `composer install`, `install -s build`, `build-{mode}`.
-- Assets: executes `install -s build-static`, `build-static-{mode}`.
+* Images: executes the `docker build` command for app and Nginx images; builds codebase and assets.
+* Codebase: executes `composer install`, `install -s build`, `build-{mode}`.
+* Assets: executes `install -s build-static`, `build-static-{mode}`.
 
 The `docker/sdk pull` command executes `docker-compose pull`, which pulls all the external images, based on `docker-compose.yml`.
 
 The `docker/sdk demo` command does the following:
- - Executes the `docker-compose up -d` command.
- - Runs the demo data installation process for each region.
+* Executes the `docker-compose up -d` command.
+* Runs the demo data installation process for each region.
 
 The `docker/sdk export images {tag}` command is only for the baked mode. It does the following:
- - Builds and tags docker application images.
- - Based on assetsBuilder and CLI image, builds the assets builder docker image. Runs `vendor/bin-install -s build-static build-static-{mode}`.
- - Builds and tags frontend images.
- - Prints information about the built images.
+* Builds and tags docker application images.
+* Based on assetsBuilder and CLI image, builds the assets builder docker image. Runs `vendor/bin-install -s build-static build-static-{mode}`.
+* Builds and tags frontend images.
+* Prints information about the built images.
 
  The `docker/sdk robot-framework {command}` command executes sets of API and UI tests, built on the Robot Framework.
 
@@ -219,10 +219,12 @@ The following schema illustrates the Docker/sdk debug mode:
 ![docker-sdk-debug-mode](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/the-docker-sdk/the-docker-sdk/docker-sdk-debug-mode.png)
 
 ## Docker/sdk in SCCOS
+
 The following schema illustrates how Docker/sdk is used in the Spryker Cloud Commerce OS (SCCOS):
 ![docker-sdk-in-sccos](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/the-docker-sdk/the-docker-sdk/docker-sdk-in-sccos.png)
 
 ## Docker images
+
 The following schemas illustrate the Docker images:
 ![docker-image-nesting](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/the-docker-sdk/the-docker-sdk/Docker-image-nesting.png)
 
@@ -230,9 +232,10 @@ Docker images and containers:
 ![docker-images-and-containers](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/the-docker-sdk/the-docker-sdk/Docker-files-inheritance.png)
 
 ## Extending Docker/sdk
+
 To extend Docker/sdk, you can do the following:
 
-- To use a custom PHP or Nginx image and add extensions or libraries, you can change the application image:
+* To use a custom PHP or Nginx image and add extensions or libraries, you can change the application image:
 
    ```
    environment: docker.dev
@@ -240,9 +243,11 @@ To extend Docker/sdk, you can do the following:
       tag: spryker/php 8.0
       tag: registry.gitlab.com/my-company/spryker:1.0-php8debsap
    ```
+
   This approach is compatible with SCCOS, but provides limited customization possibilities.
 
-- To introduce "mocks" for development and CI/CD testing, you can use the [Docker-compose extension](https://docs.docker.com/compose/extends/):
+* To introduce "mocks" for development and CI/CD testing, you can use the [Docker-compose extension](https://docs.docker.com/compose/extends/):
+
   ```
   docker:
    compose:

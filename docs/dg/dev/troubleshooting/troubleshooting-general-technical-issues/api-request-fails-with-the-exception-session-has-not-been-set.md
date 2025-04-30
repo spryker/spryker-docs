@@ -11,6 +11,7 @@ redirect_from:
 Executing an API command leads to the exception `Session has not been set`.
 
 ## Cause
+
 Most probably, you're using a code that is relying on session. However, obviously, in case of an API, you don't have the session.
 
 ## Solution

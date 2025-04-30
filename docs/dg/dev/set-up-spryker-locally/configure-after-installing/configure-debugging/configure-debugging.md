@@ -202,6 +202,7 @@ Find several examples below:
 * `docker/sdk testing -x codecept run -codeception.yml`
 
 The [PHPMD](https://github.com/phpmd/phpmd/blob/master/src/bin/phpmd#L29) command requires the `PHPMD_ALLOW_XDEBUG` env variable for debug mode:
+
 ```bash
 docker/sdk cli -x
 PHPMD_ALLOW_XDEBUG=true vendor/bin/phpmd ...
@@ -213,6 +214,7 @@ Issue: Receiving no connection in PhpStorm or similar
 
 In rare cases, docker containers running in the debug mode stop XDebug connections after waking computer from the sleep mode.
 So if you don't get a banner "Debug session was finished without being paused", run the following command:
+
 ```bash
 docker/sdk stop && docker/sdk run -x
 ```

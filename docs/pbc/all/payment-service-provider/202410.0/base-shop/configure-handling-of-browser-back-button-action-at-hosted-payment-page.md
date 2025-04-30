@@ -120,14 +120,7 @@ Solutions to common issues.
 ### Stock issues
   
 - Verify that the order cancellation workflow works properly
-- Verify stock update triggers  
-
-
-## Related Developer Guides
-
-* [Payments Feature Overview](/docs/scos/dev/feature-walkthroughs/page.version/payments-feature-walkthrough/payments-feature-walkthrough.html)
-* [State Machines](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine.html)
-
+- Verify stock update triggers
 
 
 

@@ -74,4 +74,4 @@ Response sample: retrieve protected resources
 | --- | --- | --- |
 | resourceTypes | String | Contains a `string` array, where each element is a resource type that is protected from unauthorized access. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).

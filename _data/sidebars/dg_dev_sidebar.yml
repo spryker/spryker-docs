@@ -1494,27 +1494,27 @@ entries:
     - title: REST API
       nested:
       - title: Glue API authentication and authorization
-        url: /docs/dg/dev/glue-api/old-glue-infrastructure/glue-api-authentication-and-authorization.html
+        url: /docs/dg/dev/glue-api/rest-api/glue-api-authentication-and-authorization.html
       - title: Glue API security and authentication
-        url: /docs/dg/dev/glue-api/old-glue-infrastructure/glue-api-security-and-authentication.html
+        url: /docs/dg/dev/glue-api/rest-api/glue-api-security-and-authentication.html
       - title: Glue REST API
-        url: /docs/dg/dev/glue-api/old-glue-infrastructure/glue-rest-api.html
+        url: /docs/dg/dev/glue-api/rest-api/glue-rest-api.html
       - title: Glue infrastructure
-        url: /docs/dg/dev/glue-api/old-glue-infrastructure/glue-infrastructure.html
+        url: /docs/dg/dev/glue-api/rest-api/glue-infrastructure.html
       - title: Handling concurrent REST requests and caching with entity tags
-        url: /docs/dg/dev/glue-api/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
+        url: /docs/dg/dev/glue-api/rest-api/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
       - title: "Marketplace: Resolve search engine friendly URLs"
-        url: /docs/dg/dev/glue-api/old-glue-infrastructure/marketplace-glue-api-resolve-search-engine-friendly-urls.html
+        url: /docs/dg/dev/glue-api/rest-api/marketplace-glue-api-resolve-search-engine-friendly-urls.html
       - title: Reference information - GlueApplication errors
-        url: /docs/dg/dev/glue-api/old-glue-infrastructure/reference-information-glueapplication-errors.html
+        url: /docs/dg/dev/glue-api/rest-api/reference-information-glueapplication-errors.html
       - title:  REST API B2B Demo Shop reference
-        url: /docs/dg/dev/glue-api/old-glue-infrastructure/rest-api-b2b-demo-shop-reference.html
+        url: /docs/dg/dev/glue-api/rest-api/rest-api-b2b-demo-shop-reference.html
       - title: REST API B2C Demo Shop reference
-        url: /docs/dg/dev/glue-api/old-glue-infrastructure/rest-api-b2c-demo-shop-reference.html
+        url: /docs/dg/dev/glue-api/rest-api/rest-api-b2c-demo-shop-reference.html
       - title: REST API Marketplace B2B Demo Shop reference
-        url: /docs/dg/dev/glue-api/old-glue-infrastructure/rest-api-marketplace-b2b-demo-shop-reference.html
+        url: /docs/dg/dev/glue-api/rest-api/rest-api-marketplace-b2b-demo-shop-reference.html
       - title: REST API Marketplace B2C Demo Shop reference
-        url: /docs/dg/dev/glue-api/old-glue-infrastructure/rest-api-marketplace-b2c-demo-shop-reference.html
+        url: /docs/dg/dev/glue-api/rest-api/rest-api-marketplace-b2c-demo-shop-reference.html
 
     - title: Routing
       nested:

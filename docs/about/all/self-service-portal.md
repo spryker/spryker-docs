@@ -23,7 +23,7 @@ SSP offers a suite of features designed to enhance customer experience and opera
 
 Assets are the core of SSP and can represent high-value or custom-built products and equipment requiring ongoing maintenance and oversight. Customers can interact with assets as follows:
 
-* Track and manage assets
+* Create, track, and manage assets
 * Monitor maintenance schedules and service histories
 * Access documentation and service records
 

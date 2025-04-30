@@ -44,13 +44,13 @@ The function returns the fully qualified component name that can be used in Twig
 _Include_ or _Embed_ needs to be called with 2 arguments:
 
 * `with {}`: Defines the context to pass to the component;
-* `only` (*Important*): This mandatory attribute closes the context so that everything you pass via with `{}` is passed to the included object *only*.
+* `only` (_Important_): This mandatory attribute closes the context so that everything you pass via with `{}` is passed to the included object _only_.
 
-The `with{}` attribute must pass the objects and variables that are defined in the component. They need to follow the contracts defined by the component itself. The most important of them is the *data* object that defines the data contract.
+The `with{}` attribute must pass the objects and variables that are defined in the component. They need to follow the contracts defined by the component itself. The most important of them is the _data_ object that defines the data contract.
 
 {% info_block errorBox %}
 
-You must always pass *required* properties; otherwise, the component you are including will fail.
+You must always pass _required_ properties; otherwise, the component you are including will fail.
 
 {% endinfo_block %}
 

@@ -210,7 +210,7 @@ Let's see how to extend the Twig template of a molecule. By default, the front p
 
 3. Open the start page of Spryker Shop. It looks as follows:
 
-In addition to extending templates of existing components, you can create components on your own. When creating a component, you can define what it looks like in Twig. For detailed information, see the *2. Define a template* section in [Tutorial: Frontend - Create a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/creating-components.html#define-a-template).
+In addition to extending templates of existing components, you can create components on your own. When creating a component, you can define what it looks like in Twig. For detailed information, see the _2. Define a template_ section in [Tutorial: Frontend - Create a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/creating-components.html#define-a-template).
 
 ## Styles
 

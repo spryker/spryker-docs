@@ -49,6 +49,7 @@ For example, if the current libraries version is `1.5.2`, the version of the lab
 ## Upgrading Oryx
 
 To perform a minor or patch update of the Oryx framework, you need to update every Oryx-related package you are using to the latest version of the same major version. For example, if you want to update Oryx from version `1.2` to `1.3`, you should update all Oryx-related packages to version `1.3` using a command similar to the following:
+
 ```
 npm i @spryker-oryx/{package-name}@1.3
 ```

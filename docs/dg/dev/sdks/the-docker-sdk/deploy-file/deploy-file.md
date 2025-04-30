@@ -97,7 +97,7 @@ You can include a deploy file into an application's configuration using one of t
 imports:
     deploy.base.template.yml:
     deploy.project.template.yml:
-```      
+```
 
 * Named array:
 

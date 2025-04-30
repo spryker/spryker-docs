@@ -25,14 +25,19 @@ Follow the steps below to integrate the [SCSS linter](/docs/dg/dev/sdks/sdk/deve
 
 To install the dependencies:
 1. Install Stylelint:
+
 ```bash
 npm install stylelint@13.7.x --save-dev
 ```
+
 2. Install config for Stylelint:
+
 ```bash
 npm install @spryker/frontend-config.stylelint --save-dev
 ```
+
 3. Install the CLI parser:
+
 ```bash
 npm install commander@4.0.x --save-dev
 ```
@@ -42,6 +47,7 @@ npm install commander@4.0.x --save-dev
 To update the scripts:
 
 1. Add the SCSS lint script to `/frontend/libs/stylelint.js`
+
 ```
 const stylelint = require('stylelint');
 const { globalSettings } = require('../settings');
@@ -73,9 +79,11 @@ stylelint.lint({
     process.exit(1);
 });
 ```
+
 Check [here](https://github.com/spryker-shop/suite/blob/master/frontend/libs/stylelint.js) for the file example.
 
-2.  Adjust the `/package.json` scripts:
+2. Adjust the `/package.json` scripts:
+
 ```
 "scripts": {
     ....
@@ -83,7 +91,9 @@ Check [here](https://github.com/spryker-shop/suite/blob/master/frontend/libs/sty
     "yves:stylelint:fix": "node ./frontend/libs/stylelint --fix"
 }
 ```
+
 3. Add the ignore `file /.stylelintignore`:
+
 ```
 # Ignore paths
 **/node_modules/**

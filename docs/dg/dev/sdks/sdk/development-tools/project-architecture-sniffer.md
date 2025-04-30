@@ -34,6 +34,7 @@ composer require --dev spryker/project-architecture-sniffer
 
 
 Run the sniffer from CLI:
+
 ```bash
 vendor/bin/phpmd src/Pyz/ text vendor/spryker/project-architecture-sniffer/src/ruleset.xml --minimumpriority 3
 ```

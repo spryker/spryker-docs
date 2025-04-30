@@ -42,14 +42,14 @@ To configure the behavior of the **included** and **relationships** sections:
 
 ## Prerequisites
 
-To make the option possible, you need to have at least version *1.12.0* of the `GlueApplication` module installed in your project. For details on how to upgrade, see the Integration Guide.
+To make the option possible, you need to have at least version _1.12.0_ of the `GlueApplication` module installed in your project. For details on how to upgrade, see the Integration Guide.
 
 ## Configure
 
 1. Open or create the `Pyz\Glue\GlueApplication\GlueApplicationConfig.php` file on your project level.
 2. Set the value of the `getIsEagerRelatedResourcesInclusionEnabled` parameter according to the desired behavior:
-  * `true`: Eables related resources everywhere.
-  * `false`: Returns related resources per request only.
+* `true`: Eables related resources everywhere.
+* `false`: Returns related resources per request only.
 
 **Sample implementation**
 
@@ -133,7 +133,7 @@ class GlueApplicationConfig extends SprykerGlueApplicationConfig
 
     Make sure that the endpoint responds in accordance with your configuration:
 
-  * If the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `true`, the included section of the response contains all related resources.
+* If the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `true`, the included section of the response contains all related resources.
 
 <details><summary>Sample response</summary>
 
@@ -233,7 +233,7 @@ class GlueApplicationConfig extends SprykerGlueApplicationConfig
 
 </details>
 
-  * If the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `false`, the included and relationships sections are absent.
+* If the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `false`, the included and relationships sections are absent.
 
     **Sample response**
 

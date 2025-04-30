@@ -17,6 +17,7 @@ This document shows Document Glue API endpoints.
 You can enhance your resource's description in the [OPENAPI v3 schema](https://swagger.io/docs/specification/basic-structure/).
 
 To generate the documentation, use the following command:
+
 ```bash
 vendor/bin/glue api:generate:documentation
 ```
@@ -24,6 +25,7 @@ vendor/bin/glue api:generate:documentation
 By default, this command generates the documentation for all the configured applications.
 
 To select the application, you can pass the optional parameter `application`:
+
 ```bash
 vendor/bin/glue api:generate:documentation [--application=storefront|backend]
 ```

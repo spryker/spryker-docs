@@ -173,7 +173,7 @@ class HealthCheckDependencyProvider extends SprykerHealthCheckDependencyProvider
 | SessionHealthCheckPlugin | Performs a health check for the Session service. | None | Spryker\Yves\Session\Plugin\HealthCheck |
 | KeyValueStoreHealthCheckPlugin | Performs a health check for the Storage service. | None | Spryker\Yves\Storage\Plugin\HealthCheck |
 | SearchHealthCheckPlugin |Performs a health check for the Search service.| None | Spryker\Yves\Search\Plugin\HealthCheck |
-| ZedRequestHealthCheckPlugin | Performs a health check for the ZedRequest service. | None | Spryker\Yves\ZedRequest\Plugin\HealthCheck |    
+| ZedRequestHealthCheckPlugin | Performs a health check for the ZedRequest service. | None | Spryker\Yves\ZedRequest\Plugin\HealthCheck |
 
 ```php
 <?php

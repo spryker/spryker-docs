@@ -31,12 +31,14 @@ This document outlines Spryker recommendations for the code architecture.
 * A service can contain only reusable lightweight stateless business logic without using the database, storage connections, or global variables. All required data must be provided as an input.
 
 ## Dependency handling and business logic
+
 * Singleton instances should be provided from Dependency Provider classes, and avoid using `getInstance()` method outside the Dependency Provider.
 * Ensure there is no business logic within Non-Business layers. Plugins should focus on using business classes and making simple, one-line calls.
 * There is no need to follow the Bridge design pattern on the project level. Refrain from creating or extending bridges from the core.
 * Business Factory classes can resolve Repository, Entity Manager, and Config classes without needing initialization inside the Factory class.
 
 ## Code quality
+
 * If a method has multiple tasks, it violates the Single Responsibility Principle. The ideal approach is for a method to perform one task that aligns with its name.
 * Handle exceptions in your code base to provide meaningful error messages to customers at runtime.
 * Separate reader and mapper responsibilities for optimal implementation; mappers convert data types, and readers retrieve data from sources.
@@ -51,6 +53,7 @@ This document outlines Spryker recommendations for the code architecture.
 * Address technical debt promptly to maintain code quality and maintainability. Search and resolve `todo`, `fixme`, and `workaround` on the project level.
 
 ## Code testability and cleanup
+
 * Avoid mocking a service outside a test environment.
 * Use of global variables will reduce the testability of the code base.
 * Remove example modules such as `ExampleProductSalePage`, `ExampleStateMachine`, etc.

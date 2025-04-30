@@ -86,9 +86,9 @@ docker/sdk up --build --assets --data
 
 Depending on your requirements, you can select any combination of the following `up` command attributes. To fetch all the changes from the branch you switch to, we recommend running the command with all of them:
 
-- `--build` - update composer, generate transfer objects, etc.
-- `--assets` - build assets
-- `--data` - fetch new demo data
+* `--build` - update composer, generate transfer objects, etc.
+* `--assets` - build assets
+* `--data` - fetch new demo data
 
 
 ## Setting up a production-like environment
@@ -112,9 +112,9 @@ docker/sdk up --build --assets --data
 
 Depending on your requirements, you can select any combination of the following `up` command attributes. To fetch all the changes from the branch you switch to, we recommend running the command with all of them:
 
-- `--build` - update composer, generate transfer objects, etc.
-- `--assets` - build assets
-- `--data` - get new demo data
+* `--build` - update composer, generate transfer objects, etc.
+* `--assets` - build assets
+* `--data` - get new demo data
 
 
 ## Troubleshooting

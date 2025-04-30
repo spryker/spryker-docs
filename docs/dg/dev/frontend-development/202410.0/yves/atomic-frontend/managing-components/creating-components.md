@@ -354,6 +354,7 @@ When done, you can include it into other components, views and templates.
     {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
 </details>
 
 Now, open the front page of Spryker Shop. The new component will appear on the top of the page, below the header.

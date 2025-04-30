@@ -38,10 +38,12 @@ If you're planning to release more stores in future, make the process easily rep
 This section describes parts of the application you need to take into account when preparing a rollout plan.
 
 ### Integrations and third-party systems
+
 * Review and adjust all third-party integrations to ensure they work with the new store setup. This mainly concerns data and its isolation across virtual DBs. Teams working with both sides of the system, such as backend, frontend, merchant portal and APIs, should have access to all the needed data.
 * Integrations, such as single sign-on, payment gateways, or inventory systems, may require updates. Teams responsible for those systems should be available and ready to do the needed changes on time.
 
 ### Data import
+
 * Handle the data import process carefully, breaking it down into specific tasks such as configuring DBs and adjusting the data import setup to work with the new store.
 * Make sure existing DBs, for example–a DB from another country, are correctly renamed or adjusted to fit the multi-DB structure.
 * Anticipate and plan for potential updates that may arise after end-to-end testing of the project data migration.
@@ -51,6 +53,7 @@ This section describes parts of the application you need to take into account wh
 If code buckets are used, investigate and adjust their configurations, making sure code buckets keeps working properly after the stored is introduced. Thoroughly document the steps for adjusting the code buckets configuration.
 
 ### Cloud environment and monitoring
+
 * Consider and adjust application performance monitoring tools, such as NewRelic and CloudWatch, to accommodate the new store. Check that all alerts and metrics are correctly configured to monitor the health and performance of the new store.
 * Consider adjusting AWS services, for example–introduce S3 buckets for the new store.
 
@@ -94,6 +97,7 @@ This section describes how to add the configuration and deployment recipes for a
 #### Running initial setup locally
 
 Bootstrap the updated configuration and run the project:
+
   ```bash
   docker/sdk boot deploy.dev.yml
   docker/sdk up
@@ -108,6 +112,7 @@ When adding and deleting stores, for testing purposes, we recommend creating add
 A minimal recipe for adding a store:
 
 **config/install/EU/setup-store.yml**
+
 ```json
 env:
   NEW_RELIC_ENABLED: 0
@@ -130,6 +135,7 @@ sections:
 
 A minimal recipe for removing a store:
 **config/install/EU/delete-store.yml**
+
 ```
 env:
     NEW_RELIC_ENABLED: 0
@@ -185,6 +191,7 @@ SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install PL,AT -r EU/destructive --
 We also recommend using a custom recipe for this deployment as described in [Setting up additional deployment recipes](#setting-up-additional-deployment-recipes).
 
 #### Apply the configuration
+
 1. Open a support request and explain the expected changes, that is that stores need to be introduced. Attach the deploy file. If the needed configuration is in a specific repository branch, reference it in the ticket and make sure the support team has access to your code base.
 2. Run the destructive deployment for the stores that have been configured in the support request.
 
@@ -229,6 +236,7 @@ This section describes how to release the first store. It includes the preparati
 Prepare and test the configuration for *all* the stores you want to release.
 
 #### 2. Staging setup
+
 1. Prepare a staging deploy file, containing all the stores you want to release.
 2. Open a support request an describe the end result. Attach the deploy file and optionally provide a rollout schedule for all the stores.
 3. Save the configuration you've prepared separately.
@@ -236,6 +244,7 @@ Prepare and test the configuration for *all* the stores you want to release.
 5. Run a destructive deployment.
 
 #### 3. Production setup
+
 Repeat the procedure from the previous step for production environment.
 
 ### Releases of subsequent stores

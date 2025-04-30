@@ -96,7 +96,7 @@ Is the capability of a system to prevent malicious or accidental actions outside
 
 Usability defines how well the application meets user requirements. We are looking for an application that is intuitive and provides a good overall user experience. Even if you do not have a QA team you can still run usability testing. "Still" because as mentioned above, developers tend to think positively of their code. Usually a developer only wants to check that the scenarios written in the requirements are passed. But it's important to look at your software from the outside. To imagine you are not the creator but the user. Try to identify what irritates you when using the software. It is very common for us to get frustrated by bad usability and want to fix it ourselves, but we can only report bugs to the creators and wait for the fix. Here you have the opportunity to fix everything yourself in the way you see it the best!
 
-Naturally, there are many more quality attributes and there are lots of articles and resources online that you can use to further research and tailor your own list, like (Chapter 16: Quality Attributes)[https://msdn.microsoft.com/en-us/library/ee658094.aspx]. However, for us, our top priority is to focus on performance, security and usability.
+Naturally, there are many more quality attributes and there are lots of articles and resources online that you can use to further research and tailor your own list, like [Chapter 16: Quality Attributes](https://msdn.microsoft.com/en-us/library/ee658094.aspx). However, for us, our top priority is to focus on performance, security and usability.
 
 ## Development or testing process and TDD
 

@@ -122,9 +122,11 @@ As we are not going to change the component template, let us copy the whole of t
     </div>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
 </details>
 
 ## 3. Define component styles
+
 The next thing to do is to provide the styles to use in the component. We need to use the mixin of the default component and add our style customization within the mixin. For this purpose, create file `simple-carousel.scss` in the project folder with the following content:
 
 ```css

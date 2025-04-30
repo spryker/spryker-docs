@@ -38,8 +38,8 @@ The template layer contains packages that can be used as quick starters for demo
 |                                                                        |                             |
 | [Application](https://www.npmjs.com/package/@spryker-oryx/application) | `@spryker-oryx/application` |
 | [Presets](https://www.npmjs.com/package/@spryker-oryx/presets)         | `@spryker-oryx/presets`     |
-| [Labs ](https://www.npmjs.com/package/@spryker-oryx/labs)              | `@spryker-oryx/labs`        |
-| [Themes ](https://www.npmjs.com/package/@spryker-oryx/themes)          | `@spryker-oryx/themes`      |
+| [Labs](https://www.npmjs.com/package/@spryker-oryx/labs)              | `@spryker-oryx/labs`        |
+| [Themes](https://www.npmjs.com/package/@spryker-oryx/themes)          | `@spryker-oryx/themes`      |
 | [Resources](https://www.npmjs.com/package/@spryker-oryx/resources)     | `@spryker-oryx/resources`   |
 
 {% info_block infoBox %}

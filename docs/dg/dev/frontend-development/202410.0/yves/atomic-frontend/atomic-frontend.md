@@ -127,6 +127,7 @@ Spryker Frontend implementation is split into several folders depending on their
 * `src/Pyz/Yves`. It contains your own implementation of the Shop Suite and its modules.
 
 ### Shop UI
+
 The application is implemented by module ShopUI. It is located in the following folders:
 
 * `vendor/spryker-shop/shop-ui`. It contains the default shop implementation as shipped by Spryker.
@@ -221,9 +222,9 @@ Atomic frontend uses *kebab-case* as naming convention for every file and folder
 
 * *Twig*: everything related to atomic frontend follows camelCase.
 * *SASS*: follows kebab-case and implements BEM methodology with the following syntax:
-    * Block: `.component-name`
-    * *Element*: `.component-name__element`
-    * *Modifier*: `.component-name--modifier` or `.component-name__element--modifier`
+  * Block: `.component-name`
+  * *Element*: `.component-name__element`
+  * *Modifier*: `.component-name--modifier` or `.component-name__element--modifier`
 
 {% info_block infoBox "Note" %}
 
@@ -288,10 +289,10 @@ When defining a component template with Twig, you need to use the following defa
 
 **Attributes:**
 
-  * `name` (required). It specifies the component name. This name is also used as the main class name for the component; therefore, the HTML element and modifiers have this name as the base.
-  * `jsName` (optional): It is a Javascript name of the component. By convention, whenever Javascript behavior is added to a component, the DOM addressing for elements must be performed using dedicated classnames starting with the `-js` prefix. This prevents confusion in who-does-what: a classname starting with `js-` has no style attached to it, but only Javascript behaviour. On the other hand, any classname that does not start with `js-` is a pure style. If `jsName` is not defined explicitly, it's created automatically by prefing `js-` to the component name.
-  * `tag` (optional). It specifies the HTML tag name for the component. Every component is defined in the DOM as an HTML class with its dedicated tag name. Therefore, a tag name must be specified. You can use either a standard HTML5 tag name (for example, `p` or `td`) or have a custom element tag name in order to attach Javascript behavior. To create a component with custom behavior defined in Javascript, Web Component specification, specify a custom tag name. If tag name is not specified, `div`is used by default.
-  * `data`. It is the variable defining the data contract for the component. This variable is used the data contract for the component. The contract consists of the attributes required for the component to function properly. The attributes provided by this variable can be either required or optional. Required attributes must always be defined whenever a component is used, while optional ones can be left undefined. Nevertheless, by convention, attributes cannot have their value undefined. For this reason, if you define an optional attribute in your contract, you must set a default value for it. The default value is used if an attribute value is not set explicitly or by context.
+* `name` (required). It specifies the component name. This name is also used as the main class name for the component; therefore, the HTML element and modifiers have this name as the base.
+* `jsName` (optional): It is a Javascript name of the component. By convention, whenever Javascript behavior is added to a component, the DOM addressing for elements must be performed using dedicated classnames starting with the `-js` prefix. This prevents confusion in who-does-what: a classname starting with `js-` has no style attached to it, but only Javascript behaviour. On the other hand, any classname that does not start with `js-` is a pure style. If `jsName` is not defined explicitly, it's created automatically by prefing `js-` to the component name.
+* `tag` (optional). It specifies the HTML tag name for the component. Every component is defined in the DOM as an HTML class with its dedicated tag name. Therefore, a tag name must be specified. You can use either a standard HTML5 tag name (for example, `p` or `td`) or have a custom element tag name in order to attach Javascript behavior. To create a component with custom behavior defined in Javascript, Web Component specification, specify a custom tag name. If tag name is not specified, `div`is used by default.
+* `data`. It is the variable defining the data contract for the component. This variable is used the data contract for the component. The contract consists of the attributes required for the component to function properly. The attributes provided by this variable can be either required or optional. Required attributes must always be defined whenever a component is used, while optional ones can be left undefined. Nevertheless, by convention, attributes cannot have their value undefined. For this reason, if you define an optional attribute in your contract, you must set a default value for it. The default value is used if an attribute value is not set explicitly or by context.
 
 Whenever possible, use primitive types—for example, strings or numbers. Avoid complex objects as a change in the object might lead to a broken component outside the contract itself.
 
@@ -318,17 +319,17 @@ Whenever possible, use primitive types—for example, strings or numbers. Avoid 
 * `modifiers`. The array defining a list of modifiers received from the context that can be applied to the main block.
 * `embed`. The variable defining a list of variables that a component might receive from the context, specifically to be used for Twig embedding.
 * `macros`:
-    * `renderClass`. It renders the classnames for the component. According to BEM specifications, the following is rendered:
-        * *Name* (as defined in the config variable).
-        * *Modifiers* (if passed by the modifiers array).
-        * *External class names* (if passed by the class varible).
-    * `renderAttributes`. It renders the HTML5 attributes defined in the attributes variable.
+  * `renderClass`. It renders the classnames for the component. According to BEM specifications, the following is rendered:
+    * *Name* (as defined in the config variable).
+    * *Modifiers* (if passed by the modifiers array).
+    * *External class names* (if passed by the class varible).
+  * `renderAttributes`. It renders the HTML5 attributes defined in the attributes variable.
 * `blocks`:
-    * `component`. The main block that contains all the logic to render a component.
-    * `class`. It contains the class names for the component.
-    * `attributes`. It contains the HTML5 attributes for the component.
-    * `body`. It contains the body for the component. Use this block to fill a component with content.
- * `qa`. It is an experimental custom HTML5 attribute that renders a list of items that can be used later in QA to address a specific component or part of it.
+  * `component`. The main block that contains all the logic to render a component.
+  * `class`. It contains the class names for the component.
+  * `attributes`. It contains the HTML5 attributes for the component.
+  * `body`. It contains the body for the component. Use this block to fill a component with content.
+* `qa`. It is an experimental custom HTML5 attribute that renders a list of items that can be used later in QA to address a specific component or part of it.
 
 **Builtin Twig functions and filters:**
 

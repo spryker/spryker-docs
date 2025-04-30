@@ -62,7 +62,7 @@ npm ci
 npm run yves:stylelint
 ```
 
-*  fix mode:
+* fix mode:
 
 ```bash
 npm run yves:stylelint:fix

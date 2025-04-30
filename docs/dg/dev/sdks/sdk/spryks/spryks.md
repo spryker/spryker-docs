@@ -85,6 +85,7 @@ This is a Graphical User Interface (GUI) built inside the Back Office applicatio
 ```bash
 composer require --dev spryker-sdk/spryk-gui
 ```
+
 {% info_block infoBox "Info" %}
 
 We recommend installing it as a development dependency, since changes in the code on the production environment must not be allowed, and may lead to a nonworking application.
@@ -96,6 +97,7 @@ Once SprykGUI is installed, you can navigate to it through the Back Office. Ther
 ### Non-interactive mode
 
 After running `console spryk:dump {SPRYK NAME}`, you get a list of options required for the chosen Spryk:
+
 ```bash
 ╰─$ console spryk:dump AddYvesPage
  List of all "AddYvesPage" options:
@@ -109,9 +111,11 @@ theme
 ```
 
 Knowing these parameters enables you to run this Spryk in a non-interactive mode:
+
 ```bash
 console spryk:run AddYvesPage --controller=Test --controllerMethod=index --mode=project --module=Test --organization=Pyz --theme=default
 ```
+
 {% info_block infobox %}
 
 Some Spryks have interactive arguments, like interface name, which can't be passed as a command line argument.
@@ -123,8 +127,8 @@ Some Spryks have interactive arguments, like interface name, which can't be pass
 
 The difference between the Core and Project modes is the place where your code is generated.
 
-- *Core* has the `vendor/spryker/{% raw %}{{{% endraw %} organization {% raw %}}}{% endraw %}/ root` path;
-- *Project* has the `src/{% raw %}{{{% endraw %} organization {% raw %}}}{% endraw %}/ root` path.
+* *Core* has the `vendor/spryker/{% raw %}{{{% endraw %} organization {% raw %}}}{% endraw %}/ root` path;
+* *Project* has the `src/{% raw %}{{{% endraw %} organization {% raw %}}}{% endraw %}/ root` path.
 
 Put the organization option into the namespaces config files (Core or Project).
 
@@ -182,6 +186,6 @@ Spryks need some project-related configurations. These are passed automatically 
 
 The following configurations are passed to the Spryk tool:
 
-- `Spryker\Shared\Kernel\KernelConstants::PROJECT_NAMESPACE`
-- `Spryker\Shared\Kernel\KernelConstants::PROJECT_NAMESPACES`
-- `Spryker\Shared\Kernel\KernelConstants::CORE_NAMESPACES`
+* `Spryker\Shared\Kernel\KernelConstants::PROJECT_NAMESPACE`
+* `Spryker\Shared\Kernel\KernelConstants::PROJECT_NAMESPACES`
+* `Spryker\Shared\Kernel\KernelConstants::CORE_NAMESPACES`

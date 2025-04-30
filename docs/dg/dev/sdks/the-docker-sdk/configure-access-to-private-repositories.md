@@ -68,6 +68,7 @@ and the repository exists.
 ## Configure an environment to access private repositories
 
 1. Add the `.known_hosts` file with the list of domains of VCS services into the project root. Example:
+
 ```
 github.com
 bitbucket.org

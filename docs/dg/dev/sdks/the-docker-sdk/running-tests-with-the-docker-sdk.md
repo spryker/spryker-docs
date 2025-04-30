@@ -66,6 +66,7 @@ codecept build
 codecept fixtures
 codecept run
 ```
+
 {% info_block infoBox "" %}
 
 Same as other CLI commands, you can run the preceding commands as a single command: `docker/sdk testing codecept run`.
@@ -129,7 +130,7 @@ The Chromedriver configuration looks as follows in the deploy file:
 services:
     webdriver:
         engine: chromedriver
-```        
+```
 
 See [webdriver:](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html#webdriver) to learn more about webdriver configuration in the deploy file.
 

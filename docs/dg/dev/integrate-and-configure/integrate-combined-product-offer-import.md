@@ -203,6 +203,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/MerchantProductOfferDataImport/Business/MerchantProductOfferDataImportFacade.php**
@@ -355,6 +356,7 @@ interface CombinedMerchantProductOfferDataSetInterface
 }
 
 ```
+
 **src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Step/CombinedApprovalStatusValidationStep.php**
 
 ```php
@@ -943,6 +945,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/PriceProductOfferDataImport/Business/PriceProductOfferDataImportFacade.php**
@@ -1300,6 +1303,7 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/ProductOfferStockDataImport/Business/ProductOfferStockDataImportFacade.php**
@@ -1619,6 +1623,7 @@ class ProductOfferValidityDataImportBusinessFactory extends SprykerProductOfferV
     }
 }
 ```
+
 </details>
 
 

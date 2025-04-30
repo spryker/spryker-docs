@@ -111,6 +111,7 @@ class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProv
     }
 }
 ```
+
 </details>
 
 <details>
@@ -149,6 +150,7 @@ class GlueApplicationDependencyProvider extends SprykerAuthorizationDependencyPr
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}

@@ -12,6 +12,7 @@ This document outlines the process of using the evaluator tool to verify if your
 ## Install the evaluator tool
 
 * Install the evaluator tool in your project by using the composer:
+
 ```bash
 composer require --dev spryker-sdk/evaluator
 ```
@@ -41,14 +42,17 @@ vendor/bin/evaluator evaluate --path=src/path_to_module
 ## Execute checkers
 
 Exclude checkers:
+
 ```bash
 vendor/bin/evaluator evaluate --exclude-checkers=CONTAINER_SET_FUNCTION_CHECKER
 ```
 
 Execute a specific checker:
+
 ```bash
 vendor/bin/evaluator evaluate --checkers={CONTAINER_SET_FUNCTION_CHECKER}
 ```
+
 `CONTAINER_SET_FUNCTION_CHECKER` is the name of the checker to execute.
 
 ### Checkers

@@ -316,6 +316,7 @@ groups:
 3. In `deploy.prod.yml` and `deploy.dev.yml`, include `merchant-application.yml` with the `hostname` dynamic parameter defined:
 
 **deploy.prod.yml**
+
 ```yaml
 version: '0.1'
 
@@ -627,7 +628,7 @@ regions:
                         namespace: 1
                     search:
                         namespace: uk_search
-```                        
+```
 
 3. Include `regions.yml` into the build of the desired environments by extending their respective deploy files as follows:
 

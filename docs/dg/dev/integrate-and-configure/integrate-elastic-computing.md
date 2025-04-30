@@ -15,6 +15,7 @@ To integrate New Relic monitoring for the infastructure of queue workers in publ
 
 1. Update module `spryker/monitoring` to version 2.5.0 or higher.
 2. In `Pyz\Zed\Monitoring\MonitoringConfig`, add `queue:task:start` command to the argument grouped transactions:
+
 ```php
 namespace Pyz\Zed\Monitoring;
 
@@ -33,6 +34,7 @@ class MonitoringConfig extends BaseMonitoringConfig
 ```
 
 3. In `Pyz\Zed\Monitoring\Business\MonitoringBusinessFactory`, enable `FirstArgumentMonitoringConsoleTransactionNamingStrategy` to be used for transaction naming.
+
 ```php
     /**
      * @return array<\Spryker\Zed\Monitoring\Business\MonitoringTransactionNamingStrategy\MonitoringTransactionNamingStrategyInterface>
@@ -278,6 +280,7 @@ As a result, the worker spawns a group of processes per each non-empty queue bas
 1. Update module `spryker/propel-orm` to version 1.15.1 or higher.
 2. Update module `spryker/propel-replication-cache` to version 1.0.0 or higher.
 3. In `config/Shared/config_default.php`, add the following configuration.
+
 ```php
 <?php
 use Spryker\Shared\PropelReplicationCache\PropelReplicationCacheConstants;

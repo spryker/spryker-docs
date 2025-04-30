@@ -130,11 +130,13 @@ class CiamTokenDecoder implements CiamTokenDecoderInterface
     }
 }
 ```
+
 </details>
 
 In relation to the CIAM provider module, you need to add a service as well to extract and parse the token from the authorization header.
 
 The logic falls under `Pyz/Service/<CIAM Provider>`:
+
 ```php
 <?php
 interface CiamProviderServiceInterface
@@ -226,6 +228,7 @@ class CiamTokenParser implements CiamtokenParserInterface
     }
 }
 ```
+
 </details>
 
 ## 2. Extend the `Customer` module with a customer creation functionality

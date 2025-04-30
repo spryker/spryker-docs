@@ -40,6 +40,7 @@ Plug and Play is Spryker's out-of-the-box development strategy that allows custo
 Check out our [Plugins](/docs/dg/dev/backend-development/plugins/plugins.html) article to get more information.
 
 ### Private API customization
+
 Spryker generally allows changing private APIs and core code. However in this case, part of the upgrade responsibilities move to the side of the customer.
 
 What is a Private API?

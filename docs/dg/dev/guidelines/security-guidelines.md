@@ -242,9 +242,9 @@ To make sure that all the security updates are installed, keep Spryker and third
 
 To be up-to-speed with the security vulnerabilities, we recommend doing the following:
 
-- Check if Spryker packages have known vulnerabilities. We recommend checking [security release notes](https://docs.spryker.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) under every release.
-- Verify whether `composer` packages have known vulnerabilities. You can use the `./vendor/bin/console security:check` command to inspect third-party vulnerabilities.
-- Verify whether `npm` packages have known vulnerabilities. You can use `npm audit` command to inspect third-party vulnerabilities.
+* Check if Spryker packages have known vulnerabilities. We recommend checking [security release notes](https://docs.spryker.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) under every release.
+* Verify whether `composer` packages have known vulnerabilities. You can use the `./vendor/bin/console security:check` command to inspect third-party vulnerabilities.
+* Verify whether `npm` packages have known vulnerabilities. You can use `npm audit` command to inspect third-party vulnerabilities.
 
 ## Exceptions and debug mode
 
@@ -263,6 +263,7 @@ Debug mode is configured with the following:
 ## OAuth configuration
 
 We recommend using environment variables to define security configuration. Example:
+
 ```php
 $config[OauthConstants::PRIVATE_KEY_PATH] = getenv('SPRYKER_OAUTH_KEY_PRIVATE');
 $config[OauthConstants::PUBLIC_KEY_PATH]
@@ -281,6 +282,7 @@ Set up the ACL configuration according to your requirements and restrict access 
 
 Gateway is used for communication between the frontend and the backend. In most cases, it doesn't expect any communication from the internet. To protect this endpoint, you need to extend `deploy.{project}-{env}.yml` as follows:
 1. Add backend auths:
+
 ```yaml
 x-backend-auth: &backend-auth
   <<: *real-ip
@@ -292,6 +294,7 @@ x-backend-auth: &backend-auth
 ```
 
 2. Add this auth to gateway endpoints:
+
 ```yaml
 backgw:
     application: backend-gateway

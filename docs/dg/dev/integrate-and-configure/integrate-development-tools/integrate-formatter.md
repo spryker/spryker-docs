@@ -26,22 +26,29 @@ Follow the steps below to integrate [Formatter](/docs/scos/dev/sdk/development-t
 To install the dependencies:
 
 1. Install Prettier:
+
 ```bash
 npm install prettier@2.0.x --save-dev
 ```
+
 2. Install config for Prettier:
+
 ```bash
 npm install @spryker/frontend-config.prettier --save-dev
 ```
+
 3. Install the CLI parser:
+
 ```
 npm install commander@4.0.x --save-dev
 ```
+
 ## 2. Update the scripts
 
 To update the scripts:
 
 1. Add formatting file extensions to the global settings `/frontend/settings.js`:
+
 ```const globalSettings = {
     ....
 
@@ -50,7 +57,9 @@ To update the scripts:
     ],
 };
 ```
+
 2. Add the formatter script to `/frontend/libs/formatter.js`:
+
 ```
 const { spawn } = require('child_process');
 const { globalSettings } = require('../settings');
@@ -73,9 +82,11 @@ spawn(
     { stdio: 'inherit' }
 );
 ```
+
  Check [here](https://github.com/spryker-shop/suite/blob/master/frontend/libs/formatter.js) for the example file.
 
 3. Adjust the `/package.json` scripts:
+
 ```
 "scripts": {
     ....
@@ -83,7 +94,9 @@ spawn(
     "formatter:fix": "node ./frontend/libs/formatter --fix"
 }
 ```
+
 4. Add the ignore file `/.prettierignore`:
+
 ```
 # Ignore paths
 /.github/

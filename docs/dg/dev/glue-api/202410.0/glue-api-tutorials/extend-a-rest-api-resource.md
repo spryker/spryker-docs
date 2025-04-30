@@ -76,13 +76,14 @@ All transfer file names end with `.transfer.xml`.
 ```
 
 3. Generate transfers:
+
 ```bash
 vendor/bin/console transfer:generate
 ```
 
 4. Check that generated transfers contain the attribute you have added:
-  * `src/Generated/Shared/Transfer/AbstractProductsRestAttributesTransfer.php`—for abstract products.
-  * `src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer.php`—for concrete products.
+* `src/Generated/Shared/Transfer/AbstractProductsRestAttributesTransfer.php`—for abstract products.
+* `src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer.php`—for concrete products.
 
 {% info_block infoBox %}
 

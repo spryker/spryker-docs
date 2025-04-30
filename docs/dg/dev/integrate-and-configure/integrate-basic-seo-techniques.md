@@ -29,6 +29,7 @@ Run the following command to update the required modules:
 ```bash
 COMPOSER_MEMORY_LIMIT=-1 composer update spryker-shop/money-widget spryker-shop/price-product-volume-widget spryker-shop/product-review-widget spryker-shop/shop-ui spryker-shop/catalog-page spryker-shop/configurable-bundle-page spryker-shop/multi-cart-widget spryker-shop/product-alternative-widget spryker-shop/product-detail-page spryker-shop/product-replacement-for-widget spryker-shop/product-search-widget spryker-shop/shopping-list-page spryker-shop/shopping-list-widget spryker-shop/wishlist-page --with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the following modules have been updated:

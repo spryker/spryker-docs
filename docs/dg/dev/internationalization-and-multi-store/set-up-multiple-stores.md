@@ -111,11 +111,12 @@ $stores['AT'] = [
 
 return $stores;
 ```
+
 </details>
 
 2. Optional: Define store-specific configuration:
-  1. For one or more stores you've defined in `config/Shared/stores.php`, define a separate store-specific configuration. For example, `config/Shared/config-default_docker_de.php` is the configuration file for the `DE` store in the docker environment.
-  2. To apply the defined store-specific configuration, adjust the related deploy file in the `environment` section.
+1. For one or more stores you've defined in `config/Shared/stores.php`, define a separate store-specific configuration. For example, `config/Shared/config-default_docker_de.php` is the configuration file for the `DE` store in the docker environment.
+2. To apply the defined store-specific configuration, adjust the related deploy file in the `environment` section.
 
   In the following example, the `docker_de` environment name points to the `config/Shared/config-default_docker_de.php` store-specific configuration file. For more information about this deploy file parameter, see [environment](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html#environment):
 
@@ -252,6 +253,7 @@ Defining stores by headers is not supported by default, but you can use the foll
 The workaround is only supported by the [multi-store store setup 1](/docs/ca/dev/multi-store-setups/multistore-setup-options.html#setup-1-shared-infrastructure-resources-default) when all the resources are shared. With the other setup, you need to manage the infrastructure configuration on the application level.
 
 **public/Glue/index.php**
+
 ```php
 <?php
 
@@ -269,6 +271,7 @@ Environment::initialize();
 ```
 
 To check if the workaround works, in the browser console, run the following:
+
 ```php
 fetch("http://{domain-name}/catalog-search", {
   "headers": {

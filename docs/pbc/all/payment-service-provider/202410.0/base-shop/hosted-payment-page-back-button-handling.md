@@ -3,6 +3,11 @@ title: Configure handling of browser back button action
 description: Learn how to handle browser back button usage when integrating hosted payment pages
 last_updated: Mar 25, 2024
 template: concept-topic-template
+related:
+    - title: Payments Feature Overview
+      link: /docs/scos/dev/feature-walkthroughs/page.version/payments-feature-walkthrough/payments-feature-walkthrough.html
+    - title: State Machines
+      link: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine.html
 ---
 
 When integrating payment service providers (PSPs) that use hosted payment pages, the application needs to handle browser navigation to maintaining order consistency and stock management. This document explains how to configure applications with hosted payment pages to handle the browser back button action.
@@ -67,13 +72,9 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 </state>
 ```
 
-{% info_block warningBox "" %}
-
 The `exclude from customer` flag is used to prevent cancelled payment orders from appearing in registered customers' order history.
 
 For more information about the `exclude from customer` flag, see [Order Process Modelling via State Machines](https://docs.spryker.com/docs/pbc/all/order-management-system/202410.0/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#state-machine-module).
-
-{% endinfo_block %}
 
 ## Testing
 
@@ -107,10 +108,8 @@ Make sure the following applies:
 5. Use the browser back button  
 
 Make sure the following applies:
-* Order status changes to "payment cancellation pending"  
-* Order is not displayed in customer account  
-* In the Back Office, the order exists in the correct state
-
+* Order status changes to "payment cancellation pending" in the Zed back office.
+* Order is not displayed in customer account
 
 ## Troubleshooting
 
@@ -173,3 +172,4 @@ Solutions to common issues.
 
 
 
+>>>>>>> 0134259848974eeabe413347a75c5cdc2d7a2a89

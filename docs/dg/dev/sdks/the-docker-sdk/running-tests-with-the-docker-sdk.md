@@ -36,7 +36,7 @@ related:
 
 This document describes how to run tests in different ways.
 
-## What is a testing mode?
+## Testing mode
 
 The Docker SDK lets you run applications in an environment configured for running tests.
 

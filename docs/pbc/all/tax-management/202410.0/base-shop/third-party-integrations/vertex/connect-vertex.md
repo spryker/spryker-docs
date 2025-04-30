@@ -115,5 +115,4 @@ To run a destructive deployment, follow the steps:
 
 ## Next steps
 
-* [Vertex FAQ](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex-faq.html)
 * [Troubleshooting Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html)

@@ -1142,8 +1142,10 @@ entries:
         url: /docs/dg/dev/architecture/module-api/performance-and-scalability.html
       - title: "Declaration of module APIs: Public and private"
         url: /docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
-      - title: Semantic Versioning- Major vs. Minor vs. Patch Release
+      - title: "Semantic Versioning: Major vs. minor vs. patch release"
         url: /docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
+      - title: "Semantic Versioning: Zero-major version"
+        url: /docs/dg/dev/architecture/module-api/semantic-versioning-zero-major-version.html        
 
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html

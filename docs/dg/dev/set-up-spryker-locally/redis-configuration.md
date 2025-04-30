@@ -123,7 +123,7 @@ When compression is activated using the `SPRYKER_KEY_VALUE_COMPRESSING_ENABLED=t
 
 Compression settings can be changed on the project level while maintaining backward compatibility.
 
-By default, the following configuration is used:
+The following is the default compression configuration:
 
 
 ```php

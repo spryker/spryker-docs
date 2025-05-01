@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'master'
+      - 'archive'
   pull_request:
   workflow_dispatch:
   schedule:

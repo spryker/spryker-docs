@@ -107,7 +107,7 @@ commonOptions = {
     /mysql.com\/[\.\w\-\/\?]+/,
     /dev.mysql.com\/[\.\w\-\/\?]+/,        
     /jwt.io\/[\.\w\-\/\?]+/,
-    /auth0.com/\/[\.\w\-\/\?]+/,    
+    /auth0.com\/[\.\w\-\/\?]+/,    
     /www.facebook.com\/[\.\w\-\/\?]+/
 
   ],

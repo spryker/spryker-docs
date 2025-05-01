@@ -36,6 +36,8 @@ entries:
 
       - title: Business Intelligence
         url: /docs/pbc/all/business-intelligence/business-intelligence.html
+        include_versions:
+        - "202410.0"  
         nested:
           - title: Amazon QuickSight third-party integration
             url: /docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.html

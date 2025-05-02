@@ -61,7 +61,7 @@ Keep in mind that bundled product always has a 0-tax rate. However, all of the b
 
 {% info_block infoBox "Liability" %}
 
-The invoice generation feature can help streamline your operational processes but comes with responsibility for legal compliance. It’s your responsibility with regard to each project to make sure the setup complies with the legal requirements applicable to your company.
+The invoice generation feature can help streamline your operational processes but comes with responsibility for legal compliance. It's your responsibility with regard to each project to make sure the setup complies with the legal requirements applicable to your company.
 
 
 {% endinfo_block %}

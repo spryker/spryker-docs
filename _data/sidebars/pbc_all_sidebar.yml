@@ -2343,6 +2343,11 @@ entries:
                   - title: View payment methods
                     url: /docs/pbc/all/payment-service-provider/base-shop/manage-in-the-back-office/view-payment-methods.html
 
+
+              - title: Configure handling of browser back button action at hosted payment page
+                url: /docs/pbc/all/payment-service-provider/base-shop/configure-handling-of-browser-back-button-action-at-hosted-payment-page.html
+                include_versions:
+                - "202410.0"
               - title: Define return URLs for payments
                 url: /docs/pbc/all/payment-service-provider/base-shop/define-return-urls-for-payments.html
                 include_versions:

@@ -19,7 +19,7 @@ Out of the box, Spryker Commerce OS provides three API applications:
 
 ## Difference between Decoupled Glue Api and the old Glue API
 
-There are a few differences between the current Glue infrastructure (Decoupled Glue API) and the old [Glue API](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/glue-rest-api.html).
+There are a few differences between the current Glue infrastructure (Decoupled Glue API) and the old [Glue API](/docs/dg/dev/glue-api/{{page.version}}/rest-api/glue-rest-api.html).
 
 ### Possibility to create new API applications
 

@@ -13,14 +13,14 @@ related:
   - title: Glue API installation and configuration
     link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
   - title: Glue infrastructure
-    link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-infrastructure.html
+    link: docs/dg/dev/glue-api/page.version/rest-api/glue-infrastructure.html
 ---
 
 Spryker Glue REST API comes with a set of predefined APIs out of the box. You can extend and customize them to your own project needs by extending the Glue API modules that provide the relevant functionality on your project level.
 
 {% info_block infoBox %}
 
-The following guide relies on your knowledge of the structure of the Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource modules](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/glue-infrastructure.html#resource-modules) section in *Glue Infrastructure*.
+The following guide relies on your knowledge of the structure of the Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource modules](/docs/dg/dev/glue-api/{{page.version}}/rest-api/glue-infrastructure.html#resource-modules) section in *Glue Infrastructure*.
 
 {% endinfo_block %}
 

@@ -17,7 +17,7 @@ related:
 
 You can install Spryker in Development and Demo modes.
 
-## What installation mode do I choose?
+## Choosing an installation mode
 
 To install Spryker with all the tools for developing your project, go with the Development mode. Depending on your OS, see one of the following guides for installation instructions:
 

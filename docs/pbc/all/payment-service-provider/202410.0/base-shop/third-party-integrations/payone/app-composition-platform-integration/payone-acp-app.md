@@ -46,6 +46,10 @@ The payment modes like Preauthorization and Capture must be set via the Spryker 
 
 {% endinfo_block %}
 
+## Browser back button handling
+
+When using PayOne's hosted payment page, customers might use their browser's back button during the payment process. This can lead to issues with order persistence and stock management. To properly handle these scenarios and prevent duplicate orders, see [Configure handling of browser back button action at hosted payment page](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/configure-handling-of-browser-back-button-action-at-hosted-payment-page.html).
+
 ## Payment method flows
 
 * [Credit Card](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-credit-card-payment-flow.html)

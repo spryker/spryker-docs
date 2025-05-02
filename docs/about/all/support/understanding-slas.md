@@ -43,7 +43,7 @@ For Spryker customers using our PaaS, we can also support infrastructure-related
 ### Software support
 All Spryker customers can benefit from the support we offer for our Spryker software. We want the software we develop to be easy to work with and reliable. If defects happen that are reproducible for us in the out-of-the-box (OOTB) Spryker installation, we generally file a bug report and communicate the Jira ticket number, so you can reference it in a later communication. Since software development is a process with many steps, sometimes we provide project-level fixes for you rather than wait for the fix to be implemented in our core product and then ship it to you by an update. We make sure, though, that our other customers can benefit from the improvement your bug report introduced to our product in a timely manner.
 
-## What else can you do to avoid problems?
+## What else you can do to prevent issues
 There is a number of things you can do to avoid problems.
 
 ### Keep updated on Spryker

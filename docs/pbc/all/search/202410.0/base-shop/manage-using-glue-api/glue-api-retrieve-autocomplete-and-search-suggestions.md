@@ -235,4 +235,4 @@ To retrieve a search suggestion, send the request:
 | abstractProducts.images.externalUrlSmall | String | URL of the product's preview image. |
 | abstractProducts.images.externalUrlLarg | String | URL of the product's large image. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).

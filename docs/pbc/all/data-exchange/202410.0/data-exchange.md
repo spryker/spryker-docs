@@ -14,20 +14,16 @@ redirect_from:
   - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html  
   - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app.html
   - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html  
-
+  - /docs/pbc/all/data-exchange/202410.0/data-exchange-faq.html
 ---
 
 Data Exchange refers to the process of transferring data between Spryker and third-party systems.
 
 Spryker offers the following options to import and export data:
 
-- Data Exchange API: available in SCCOS by default
-- Data Importers and Data Exporters: available in Spryker Cloud Commerce OS (SCCOS) by default
+- Data Exchange API
+- Data importers and exporters
 
-
-### Custom integrations with custom connectors
-
-{% include pbc/all/data-exchange/202311.0/custom-integrations-with-custom-connectors.md %} <!-- To edit, see /_includes/pbc/all/data-exchange/202311.0/custom-integrations-with-custom-connectors.md -->
 
 ## Data Exchange API
 
@@ -45,8 +41,14 @@ The main benefits of the Data Exchange API include the following:
 
 We recommend considering the Data Exchange API if you want to create your own data integration engine via API, without using any middleware software.
 
+### Difference between Data Exchange and backend APIs
 
-## Data Importers and Data Exporters
+The difference between Backend API and Data Exchange API lies in their functionalities:
+
+- The Backend API consists of resource/route-based development-driven API endpoints that serve a specific business logic purpose, such as calculating order totals or managing PIM data.
+- In contrast, the Data Exchange API is a REST API abstraction layer over our database tables, offering secure and convenient access to our data model with enhanced performance. It's managed through UI or configuration files without requiring development efforts.
+
+## Data importers and data exporters
 
 Data Importers and Data Exporters are tools that let you bring external data into and send data from SCCOS, using .CSV files.  Data Importers and Data Exporters are part of the SCCOS platform core.
 Data Importers and Data Exporters require extensive customization development for each project and ongoing development effort, which makes them less suitable for demanding data exchange.

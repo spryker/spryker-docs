@@ -69,7 +69,7 @@ We have compiled a short checklist to use while creating the specification and d
 * Did I inform the testers of specific areas which need to be double checked?
 * Do the testers need any kind of help to perform the tests (for example, scripts for generating specific data)?
 
-## What is "high-quality software"?
+## High-quality software
 
 Quality doesn't mean "bug free". Quality means, meeting the stated requirements, functions correctly where it's supposed to, there are no critical, blocking or major issues, and that bugs of other severity are brought to the possible minimum or don't distract/prevent the user from using the system.
 

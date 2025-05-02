@@ -316,7 +316,7 @@ To search by customers, send the request:
 | 001 | Access token is invalid.|
 | 4103 | Agent access token is missing; or the action is available to an agent user only.|
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
 
 ## Next steps
 

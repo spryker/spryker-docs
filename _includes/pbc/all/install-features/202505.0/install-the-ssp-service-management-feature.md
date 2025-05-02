@@ -1,11 +1,18 @@
 
+{% info_block warningBox %}
+
+Self-Service Portal is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
+
 This document describes how to install the Self-Service Portal (SSP) SSP Inquiry Management feature.
 
 ## Prerequisites
 
 | FEATURE             | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
 |---------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202505.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Click and Collect   | {{site.version}} | [Enable Click and Collect](/docs/pbc/all/service-point-management/202505.0/unified-commerce/enable-click-collect.html)                                      |
 | Self-Service Portal | {{site.version}} | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/202505.0/install/install-self-service-portal)                                                         |
 
@@ -1156,27 +1163,55 @@ console frontend:zed:build
 
   {% info_block warningBox "Verification" %}
 
-- **Access the Services Module in Backoffice:**
-  - Log in as a shop owner or admin.
-  - Navigate to the Services section in the backoffice.
-  - Verify that:
-    - All service orders (from multiple customers) are listed correctly.
-    - Each service entry includes detailed information such as the product, customer, company, and scheduled date/time.
-    - Click on the order reference link to see the details of the order.
-    - There is a user interface element to modify the scheduled service date/time.
-    - Any changes made in the backoffice are propagated in the customer’s storefront profile.
-
-- **Check Catalog Updates:**  
-  Confirm that the storefront catalog reflects the addition of the new service product.
-
-- **Verify the Product Type Filter:**
-  - Ensure that the filter control (usually part of the catalog sidebar or top navigation) includes options for filtering by product type.
-  - Verify that the default selection includes **Physical Product** and **Service**.
-  - Test filtering by each type independently to confirm that:
-    - When **Physical Product** is selected, only non-service products appear.
-    - When **Service** is selected, only service products are shown.
-    - When both are selected, the catalog shows the full list.
+1. In the Back Office, go to **Services**.
+  Make sure the following applies:
+  - All service orders from multiple customers are listed correctly
+  - Each service entry includes detailed information such as the product, customer, company, and scheduled date and time
+2. Open an order's details page by clicking on its order reference.
+   On the order details page, make sure you can update the scheduled service date and time.
+3. Make changes to a service order.
+   Make sure the changes are reflected in the customer profile on the Storefront.
+4. In the Back Office, add a new service product.
+  Make sure that this product is displayed on the Storefront.
+5. On the Storefront, go to the catalog page.
+  Make sure you can filter products by product type: physical product or service.
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

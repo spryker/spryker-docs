@@ -167,6 +167,8 @@ This opens the **Edit Product Abstract:{product SKU} page with a success message
 | IMAGE SET NAME   | Image set name. For a multi-word name, instead of spaces, use dashes and underscores.                                                                                                         |
 | SMALL IMAGE URL  | A public URL to fetch a low-resolution image from. The image will be displayed on product catalog pages.                                                                                      |
 | LARGE IMAGE URL  | A public URL to fetch a high-resolution image from. The image will be displayed on product details pages.                                                                                     |
+| ALT TEXT SMALL   | A text that will be displayed if image is not available. The text will be added to the alt attribute. Are shown for small image.                                                              |
+| ALT TEXT LARGE   | A text that will be displayed if image is not available. The text will be added to the alt attribute. Are shown for large image.                                                              |
 | SORT ORDER       | A number that will define the position of the image on a page relatively to the sort order value of the other images. An image with a smaller sort order value is displayed higher on a page. |
 
 

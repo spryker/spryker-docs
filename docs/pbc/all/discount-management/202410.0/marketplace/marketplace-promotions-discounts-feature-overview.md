@@ -20,12 +20,6 @@ There are two discount types:
 
 A product catalog manager selects a discount type when [creating a discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
 
-{% info_block warningBox %}
-
-Creating cart rules or vouchers based on any merchant parameters, such as a merchant ID or product offer, is not available by default in the current implementation and needs to be added on the project level by extending the Discount Engine. However, it's possible to create cart rules and vouchers for the Marketplace products. See [Create discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) for more details.
-
-{% endinfo_block %}
-
 Based on the business logic, discounts can be applied in the following ways:
 
 * The discount is applied to the whole Marketplace order. In such a scenario, the discount is distributed among all the merchant orders and calculated according to the total volume of each of the items.

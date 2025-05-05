@@ -107,6 +107,8 @@ cart_reorder.validation.quote_not_provided,Quote not provided.,en_US
 cart_reorder.validation.quote_not_provided,Angebot nicht bereitgestellt.,de_DE
 sales_configured_bundle.success.items_added_to_cart_as_individual_products,"Please notice: Items from the Configured Bundle were added to the Cart as individual products.",en_US
 sales_configured_bundle.success.items_added_to_cart_as_individual_products,"Bitte beachten: Artikel aus dem konfigurierbaren Bündel wurden als einzelne Produkte in den Warenkorb gelegt.",de_DE
+store.cart_reorder.error.store_mismatch,"This order was placed in a different store. This action cannot be performed.",en_US
+store.cart_reorder.error.store_mismatch,"Diese Bestellung wurde in einem anderen Store getätigt. Aktion kann nicht ausgeführt werden.",de_DE
 ```
 
 2. Import data:

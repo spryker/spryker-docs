@@ -26,14 +26,14 @@ This document describes how to install Spryker in [Development Mode](/docs/dg/de
 
 ## Clone a Demo Shop and the Docker SDK
 
-{% info_block warningBox "Filesystems" %}
+{% info_block warningBox %}
 
-Avoid using folders under the Windows filesystem, because they have to be synced with the Ubuntu filesystem, which slows down all operations significantly.
+* Avoid using folders under the Windows filesystem, because they have to be synced with the Ubuntu filesystem, which slows down all operations significantly.
+  * Not recommended: `/mnt/c/Users/jdoe/Desktop/project`.
+  * Recommended: `/home/jdoe/workspace/project`.
 
-Not recommended: `/mnt/c/Users/jdoe/Desktop/project`.
-
-Recommended: `/home/jdoe/workspace/project`.
-
+* Product images, product data, other images or fonts displaced in a demo shop are examples, and you may need to purchase your own licenses to use any of them.
+  
 {% endinfo_block %}
 
 1. Open Ubuntu.

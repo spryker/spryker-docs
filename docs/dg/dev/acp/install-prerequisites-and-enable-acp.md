@@ -167,6 +167,8 @@ Make sure that no deprecated plugins are enabled. Ideally, the content of each o
 
 namespace Pyz\Zed\MessageBroker;
 
+use Spryker\Zed\KernelApp\Communication\Plugin\MessageBroker\ActiveAppFilterMessageChannelPlugin;
+use Spryker\Zed\KernelApp\Communication\Plugin\MessageBroker\AppConfigMessageHandlerPlugin;
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\CorrelationIdMessageAttributeProviderPlugin;
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\TenantActorMessageAttributeProviderPlugin;
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\TimestampMessageAttributeProviderPlugin;
@@ -179,6 +181,16 @@ use Spryker\Zed\Session\Communication\Plugin\MessageBroker\SessionTrackingIdMess
 
 class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
 {
+    /**
+     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageHandlerPluginInterface>
+     */
+    public function getMessageHandlerPlugins(): array
+    {
+        return [
+            new AppConfigMessageHandlerPlugin(),
+        ];
+    }
+
     /**
      * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageSenderPluginInterface>
      */

@@ -25,6 +25,12 @@ Depending on the needed WSL version, follow one of the guides:
 
 ## Clone a Demo Shop and the Docker SDK
 
+{% info_block warningBox %}
+
+Product images, product data, other images or fonts displaced in a demo shop are examples, and you may need to purchase your own licenses to use any of them.
+
+{% endinfo_block %}
+
 1. Open Ubuntu.
 2. Open a terminal.
 3. Create a new folder and navigate into it.

@@ -93,7 +93,6 @@ use Generated\Shared\Transfer\SearchHttpSearchContextTransfer;
 use Spryker\Client\Catalog\Plugin\SearchHttp\ResultFormatter\ProductConcreteCatalogSearchHttpResultFormatterPlugin;
 use Spryker\Client\CatalogPriceProductConnector\Plugin\Catalog\QueryExpander\ProductPriceSearchHttpQueryExpanderPlugin;
 use Spryker\Client\CatalogPriceProductConnector\Plugin\Catalog\ResultFormatter\CurrencyAwareCatalogSearchHttpResultFormatterPlugin;
-use Spryker\Client\CatalogPriceProductConnector\Plugin\Catalog\ResultFormatter\CurrencyAwareCatalogSearchHttpResultFormatterPlugin;
 use Spryker\Client\CategoryStorage\Plugin\Catalog\ResultFormatter\CategorySuggestionsSearchHttpResultFormatterPlugin;
 use Spryker\Client\CategoryStorage\Plugin\Catalog\ResultFormatter\CategoryTreeFilterSearchHttpResultFormatterPlugin;
 use Spryker\Client\MerchantProductOfferSearch\Plugin\Catalog\MerchantReferenceSearchHttpQueryExpanderPlugin;
@@ -110,6 +109,7 @@ use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\ProductSearchHttpRe
 use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\ProductSuggestionSearchHttpResultFormatterPlugin;
 use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\SortSearchHttpResultFormatterPlugin;
 use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\SpellingSuggestionSearchHttpResultFormatterPlugin;
+use Spryker\Client\SearchHttp\Plugin\Search\SearchHttpSearchResultCountPlugin;
 use Spryker\Shared\SearchHttp\SearchHttpConfig;
 
 //...
@@ -206,7 +206,6 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             SearchHttpConfig::TYPE_SEARCH_HTTP => [
                 new BasicSearchHttpQueryExpanderPlugin(),
                 new ProductPriceSearchHttpQueryExpanderPlugin(),
-                new MerchantReferenceSearchHttpQueryExpanderPlugin(), (only for marketplace)
                 new FacetSearchHttpQueryExpanderPlugin(),
             ],
         ];
@@ -228,6 +227,16 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
                 new FacetSearchHttpResultFormatterPlugin(),
                 new CategoryTreeFilterSearchHttpResultFormatterPlugin(),
             ],
+        ];
+    }
+    
+    /**
+     * @return list<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchResultCountPluginInterface>
+     */
+    protected function getSearchResultCountPlugins(): array
+    {
+        return [
+            new SearchHttpSearchResultCountPlugin(),
         ];
     }
 
@@ -356,7 +365,6 @@ class SearchHttpDependencyProvider extends SprykerSearchHttpDependencyProvider
     {
         return [
             new ProductSearchConfigExpanderPlugin(),
-            new MerchantProductMerchantNameSearchConfigExpanderPlugin(), # for marketplace only
         ];
     }
 }

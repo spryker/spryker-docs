@@ -33,6 +33,13 @@ This document describes how to install Spryker in [Development Mode](/docs/dg/de
 
 ## Clone a Demo Shop and the Docker SDK
 
+
+{% info_block warningBox %}
+
+Product images, product data, other images or fonts displaced in a demo shop are examples, and you may need to purchase your own licenses to use any of them.
+
+{% endinfo_block %}
+
 1. Open a terminal.
 2. Clone *one* of the following Demo Shops and navigate into its folder:
 

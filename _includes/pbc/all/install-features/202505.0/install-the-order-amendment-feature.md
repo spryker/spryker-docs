@@ -1596,6 +1596,15 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 }
 ```
 
+{% info_block warningBox "Verification" %}
+
+1. Create a request for quote.
+2. Approve the quote request by Agent.
+3. Place an order that was converted from Request for Quote.
+4. Ensure that the `quote_request_version_reference` column in the `spy_sales_order` table is populated with the correct value.
+
+{% endinfo_block %}
+
 **src/Pyz/Client/QuoteRequest/QuoteRequestDependencyProvider.php**
 
 ```php
@@ -1681,10 +1690,13 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
+To avoid freezing product prices after a quote request, reordering is disabled for orders created from a quote request.
+
 1. Create a request for quote.
 2. Approve the quote request by Agent.
 3. Place an order that was converted from Request for Quote.
-4. Ensure that the `quote_request_version_reference` column in the `spy_sales_order` table is populated with the correct value.
+4. Try to reorder the order.
+5. Ensure that the error message is displayed: `You cannot reorder this order because it is in the amendment process.`
 
 {% endinfo_block %}
 

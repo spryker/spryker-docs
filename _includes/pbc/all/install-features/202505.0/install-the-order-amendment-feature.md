@@ -670,10 +670,7 @@ Enable the following behaviors by registering the plugins:
 | OriginalSalesOrderItemPriceItemExpanderPlugin                          | Replaces an item's prices with the original sales order item's prices before adding or removing cart items to persistence.                                                                                 | Should be executed after `{@link \Spryker\Zed\PriceCartConnector\Communication\Plugin\PriceItemExpanderPlugin}`.                                   | Spryker\Zed\PriceProductSalesOrderAmendment\Communication\Plugin\Cart                |
 | OriginalSalesOrderItemPriceProductPostResolvePlugin                    | Replaces an item's prices with the original sales order item's prices after resolving prices for the resulting `PriceProductTransfer`.                                                                     |                                                                                                                                                    | Spryker\Client\PriceProductSalesOrderAmendment\Plugin\PriceProduct                   |
 | OrderItemPriceProductResolveConditionsPriceProductFilterExpanderPlugin | Expands `PriceProductFilterTransfer` with `PriceProductResolveConditionsTransfer` from `ProductViewTransfer`.                                                                                              |                                                                                                                                                    | Spryker\Client\PriceProductSalesOrderAmendment\Plugin\PriceProductStorage            |
-| OrderAmendmentQuoteRequestQuoteCheckPlugin                             | Returns false if quote is in amendment process, true otherwise.                                                                                                                                            |                                                                                                                                                    | Spryker\Client\SalesOrderAmendment\Plugin\QuoteRequest                               |
 | CurrentStoreCartReorderValidatorPlugin                                 | Validates that the store of the order and quote and current store are the same.                                                                                                                            |                                                                                                                                                    | Spryker\Zed\Store\Communication\Plugin\CartReorder                                   |
-| OrderAmendmentQuoteRequestValidatorPlugin                              | Prevents create/update of quote request with quote in order amendment process.                                                                                                                             |                                                                                                                                                    | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest                    |
-| OrderAmendmentQuoteRequestUserValidatorPlugin                          | Prevents create/update of quote request with quote in order amendment process.                                                                                                                             |                                                                                                                                                    | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest                    |
 
 
 
@@ -746,19 +743,10 @@ use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\OrderAmendm
 use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\OrderAmendmentQuoteProcessFlowExpanderCartPreReorderPlugin;
 use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder\IsAmendableOrderCartReorderValidatorRulePlugin;
 use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder\StartOrderAmendmentCartReorderPostCreatePlugin;
+use Spryker\Zed\Store\Communication\Plugin\CartReorder\CurrentStoreCartReorderValidatorPlugin;
 
 class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
 {
-    /**
-     * @return list<\Spryker\Zed\CartReorderExtension\Dependency\Plugin\CartReorderValidatorPluginInterface>
-     */
-    protected function getCartReorderValidatorPlugins(): array
-    {
-        return [
-            new CurrentStoreCartReorderValidatorPlugin(),
-        ];
-    }
-
     /**
      * @return list<\Spryker\Zed\CartReorderExtension\Dependency\Plugin\CartReorderValidatorPluginInterface>
      */
@@ -768,7 +756,6 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
             new CurrentStoreCartReorderValidatorPlugin(),
             new OrderAmendmentCartReorderValidatorPlugin(),
             new IsAmendableOrderCartReorderValidatorRulePlugin(),
-            new QuoteRequestVersionCartReorderValidatorPlugin(),
         ];
     }
 
@@ -999,7 +986,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {
 
     /**
-     * @return array<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteWritePluginInterface>
+     * @return list<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteWritePluginInterface>
      */
     protected function getQuoteUpdateBeforePlugins(): array
     {
@@ -1012,7 +999,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteDeleteAfterPluginInterface>
+     * @return list<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteDeleteAfterPluginInterface>
      */
     protected function getQuoteDeleteAfterPlugins(): array
     {
@@ -1079,7 +1066,7 @@ use Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales\ServicePointSalesOr
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderExpanderPluginInterface>
+     * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderExpanderPluginInterface>
      */
     protected function getOrderHydrationPlugins(): array
     {
@@ -1104,7 +1091,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\SearchOrderExpanderPluginInterface>
+     * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\SearchOrderExpanderPluginInterface>
      */
     protected function getSearchOrderExpanderPlugins(): array
     {
@@ -1114,7 +1101,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemsPostSavePluginInterface>
+     * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemsPostSavePluginInterface>
      */
     protected function getOrderItemsPostSavePlugins(): array
     {
@@ -1447,65 +1434,6 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 }
 ```
 
-**src/Pyz/Zed/QuoteRequest/QuoteRequestDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\QuoteRequest;
-
-use Spryker\Zed\QuoteRequest\QuoteRequestDependencyProvider as SprykerQuoteRequestDependencyProvider;
-use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest\OrderAmendmentQuoteRequestUserValidatorPlugin;
-use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest\OrderAmendmentQuoteRequestValidatorPlugin;
-
-class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\QuoteRequestExtension\Dependency\Plugin\QuoteRequestValidatorPluginInterface>
-     */
-    protected function getQuoteRequestValidatorPlugins(): array
-    {
-        return [
-            new OrderAmendmentQuoteRequestValidatorPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Zed\QuoteRequestExtension\Dependency\Plugin\QuoteRequestUserValidatorPluginInterface>
-     */
-    protected function getQuoteRequestUserValidatorPlugins(): array
-    {
-        return [
-            new OrderAmendmentQuoteRequestUserValidatorPlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Client/QuoteRequest/QuoteRequestDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\QuoteRequest;
-
-use Spryker\Client\QuoteRequest\QuoteRequestDependencyProvider as SprykerQuoteRequestDependencyProvider;
-use Spryker\Client\SalesOrderAmendment\Plugin\QuoteRequest\OrderAmendmentQuoteRequestQuoteCheckPlugin;
-
-class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Client\QuoteRequestExtension\Dependency\Plugin\QuoteRequestQuoteCheckPluginInterface>
-     */
-    protected function getQuoteRequestQuoteCheckPlugins(): array
-    {
-        return [
-            new OrderAmendmentQuoteRequestQuoteCheckPlugin(),
-        ];
-    }
-}
-```
-
 **src/Pyz/Client/PriceProductStorage/PriceProductStorageDependencyProvider.php**
 
 ```php
@@ -1636,11 +1564,15 @@ Make sure that the following modules have been installed:
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                          | SPECIFICATION                                                                                       | PREREQUISITES | NAMESPACE                                                         |
-|-------------------------------------------------|-----------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------|
-| QuoteRequestVersionReferenceOrderPostSavePlugin | Persists `QuoteTransfer.quoteRequestVersionReference` transfer property in `spy_sales_order` table. |               | Spryker\Zed\SalesQuoteRequestConnector\Communication\Plugin\Sales |
+| PLUGIN                                          | SPECIFICATION                                                                                                                        | PREREQUISITES | NAMESPACE                                                         |
+|-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------|
+| QuoteRequestVersionReferenceOrderPostSavePlugin | Persists `QuoteTransfer.quoteRequestVersionReference` transfer property in `spy_sales_order` table.                                  |               | Spryker\Zed\SalesQuoteRequestConnector\Communication\Plugin\Sales |
+| OrderAmendmentQuoteRequestQuoteCheckPlugin      | Returns false if quote is in amendment process, true otherwise.                                                                      |               | Spryker\Client\SalesOrderAmendment\Plugin\QuoteRequest            |
+| OrderAmendmentQuoteRequestValidatorPlugin       | Prevents create/update of quote request with quote in order amendment process.                                                       |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest |
+| OrderAmendmentQuoteRequestUserValidatorPlugin   | Prevents create/update of quote request with quote in order amendment process.                                                       |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest |
+| QuoteRequestVersionCartReorderValidatorPlugin   | Returns `CartReorderResponseTransfer.errors` with error messages if `CartReorderTransfer.order.quoteRequestVersionReference` is set. |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder  |
 
-**src/Pyz/Service/PriceProductSalesOrderAmendment/PriceProductSalesOrderAmendmentDependencyProvider.php**
+**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
 
 ```php
 <?php
@@ -1652,17 +1584,6 @@ use Spryker\Zed\SalesQuoteRequestConnector\Communication\Plugin\Sales\QuoteReque
 
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
-
-    /**
-     * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderPostSavePluginInterface>
-     */
-    protected function getOrderPostSavePlugins(): array
-    {
-        return [
-            new QuoteRequestVersionReferenceOrderPostSavePlugin(),
-        ];
-    }
-
     /**
      * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderPostSavePluginInterface>
      */
@@ -1675,11 +1596,94 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 }
 ```
 
+**src/Pyz/Client/QuoteRequest/QuoteRequestDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\QuoteRequest;
+
+use Spryker\Client\QuoteRequest\QuoteRequestDependencyProvider as SprykerQuoteRequestDependencyProvider;
+use Spryker\Client\SalesOrderAmendment\Plugin\QuoteRequest\OrderAmendmentQuoteRequestQuoteCheckPlugin;
+
+class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Client\QuoteRequestExtension\Dependency\Plugin\QuoteRequestQuoteCheckPluginInterface>
+     */
+    protected function getQuoteRequestQuoteCheckPlugins(): array
+    {
+        return [
+            new OrderAmendmentQuoteRequestQuoteCheckPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/QuoteRequest/QuoteRequestDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\QuoteRequest;
+
+use Spryker\Zed\QuoteRequest\QuoteRequestDependencyProvider as SprykerQuoteRequestDependencyProvider;
+use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest\OrderAmendmentQuoteRequestUserValidatorPlugin;
+use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest\OrderAmendmentQuoteRequestValidatorPlugin;
+
+class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\QuoteRequestExtension\Dependency\Plugin\QuoteRequestValidatorPluginInterface>
+     */
+    protected function getQuoteRequestValidatorPlugins(): array
+    {
+        return [
+            new OrderAmendmentQuoteRequestValidatorPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\QuoteRequestExtension\Dependency\Plugin\QuoteRequestUserValidatorPluginInterface>
+     */
+    protected function getQuoteRequestUserValidatorPlugins(): array
+    {
+        return [
+            new OrderAmendmentQuoteRequestUserValidatorPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/CartReorder/CartReorderDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\CartReorder;
+
+use Spryker\Zed\CartReorder\CartReorderDependencyProvider as SprykerCartReorderDependencyProvider;
+use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\QuoteRequestVersionCartReorderValidatorPlugin;
+
+class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\CartReorderExtension\Dependency\Plugin\CartReorderValidatorPluginInterface>
+     */
+    protected function getCartReorderValidatorPluginsForOrderAmendment(): array
+    {
+        return [
+            new QuoteRequestVersionCartReorderValidatorPlugin(),
+        ];
+    }
+}
+```
+
 {% info_block warningBox "Verification" %}
 
 1. Create a request for quote.
 2. Approve the quote request by Agent.
-3. Place an order that was converted from Rquest for Quote.  
+3. Place an order that was converted from Request for Quote.
 4. Ensure that the `quote_request_version_reference` column in the `spy_sales_order` table is populated with the correct value.
 
 {% endinfo_block %}

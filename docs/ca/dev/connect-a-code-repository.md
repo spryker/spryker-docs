@@ -54,7 +54,7 @@ We recommend mapping your branches to environments as follows:
 
 7. For **Action provider**, select **GitHub(via GitHub App)**.
 This adds GitHub related fields to the window.
-8. Click **Connect to GitHub** and authorize AWS CodePipeline to access your GitHub repository.
+8. For **Connection** choose an existing connection or click **Connect to GitHub** to create a new one and authorize AWS CodePipeline to access your GitHub repository.
 9. For **Repository name**, enter and select the repository you want to connect.
 10. For **Branch name**, enter and select the branch you want to connect.
 11. Click **Done**.
@@ -63,6 +63,18 @@ This adds GitHub related fields to the window.
 14. In the **Save pipeline changes** window, click **Save**.
 
 Your GitHub repository is now successfully connected!
+
+### Optional: Disable automatic pipeline triggers
+
+By default, pipelines are automatically triggered on every push event using predefined triggers and filters.  
+To manage the rollout manually or prevent a specific pipeline from starting, do the following:
+
+1. On the page of the pipeline, click **Edit**.
+2. In the **Edit: Git triggers** pane, click **Edit stage**.
+3. Clear the **Webhook** checkbox.
+4. Click **Save**.
+5. In the **Save pipeline changes** window, click **Save**.
+
 
 
 ## Connect a Bitbucket code repository

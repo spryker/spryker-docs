@@ -55,6 +55,9 @@ We recommend mapping your branches to environments as follows:
 7. For **Action provider**, select **GitHub(via GitHub App)**.
 This adds GitHub related fields to the window.
 8. For **Connection** choose an existing connection or click **Connect to GitHub** to create a new one and authorize AWS CodePipeline to access your GitHub repository.
+
+![connection](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/connect-a-code-repository.md/connection.png)
+
 9. For **Repository name**, enter and select the repository you want to connect.
 10. For **Branch name**, enter and select the branch you want to connect.
 11. Click **Done**.
@@ -71,7 +74,13 @@ To manage the rollout manually or prevent a specific pipeline from starting, do 
 
 1. On the page of the pipeline, click **Edit**.
 2. In the **Edit: Git triggers** pane, click **Edit stage**.
+
+![edit-triggers](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/connect-a-code-repository.md/edit-git-triggers.png)
+
 3. Clear the **Webhook** checkbox.
+
+![edit-filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/connect-a-code-repository.md/edit-filter.png)
+
 4. Click **Save**.
 5. In the **Save pipeline changes** window, click **Save**.
 

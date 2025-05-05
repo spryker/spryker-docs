@@ -1194,7 +1194,7 @@ entries:
     - title: Implement incremental installers
       url: /docs/dg/dev/data-import/implement-incremental-installers.html
       include_versions:
-      "202404.0"  
+      - "202404.0"  
 
   - title: Guidelines
     url: /docs/dg/dev/guidelines/guidelines.html

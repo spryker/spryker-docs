@@ -235,7 +235,7 @@ You can avoid using the unnecessary transitions as follows:
 - Remove the `Reservation` flag from the `NEW` and other steps in the OMS.
 - Remove the `Timeout` transition from the `NEW` step in the OMS.
 
-For more ways to optimize OMS, see [Slow checkout endpoint](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html#slow-checkout-endpoint).
+For more ways to optimize OMS, see [Slow checkout endpoint](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html#slow-order-creation).
 
 ### Performance checklist
 

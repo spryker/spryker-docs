@@ -166,7 +166,7 @@ Enable the following behaviors by registering the plugins:
 | RemoveInactiveProductOffersCartReorderPreAddToCartPlugin      | Filters out inactive and non-approved product offer items from `CartChangeTransfer`.               |               | Spryker\Zed\ProductOffer\Communication\Plugin\CartReorder               |
 | RemoveInactiveProductOptionItemsCartReorderPreAddToCartPlugin | Filters out items with inactive product options from `CartChangeTransfer`.                         |               | Spryker\Zed\ProductOptionCartConnector\Communication\Plugin\CartReorder |
 | CartReorderResourceRoutePlugin                                | Configures available actions for the `cart-reorder` resource.                                      |               | Spryker\Glue\CartReorderRestApi\Plugin\GlueApplication                  |
-| CurrentStoreCartReorderValidatorPlugin                        | Validates that the store of the order and quote and current store are the same.                    |               | Spryker\Zed\Store\Communication\Plugin\CartReorder                      |
+| CurrentStoreCartReorderValidatorPlugin                        | Validates that the current store matches the store of the order and quote.                    |               | Spryker\Zed\Store\Communication\Plugin\CartReorder                      |
 
 **src/Pyz/Client/CartReorder/CartReorderDependencyProvider.php**
 

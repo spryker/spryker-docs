@@ -21,9 +21,9 @@ For performance and stability reasons, remove all heavy data ingestion or proces
 
 Spryker Cloud Commerce OS(SCCOS) provides automated CI/CD(Continuous Integration/Continuous Deployment) Pipelines based on the following AWS Code Suite services:
 
-*   [CodePipeline](https://aws.amazon.com/codepipeline/) - Build and Deploy scenarios
+* [CodePipeline](https://aws.amazon.com/codepipeline/) - Build and Deploy scenarios
 
-*   [CodeBuild](https://aws.amazon.com/codebuild/) - Stages of pipeline execution
+* [CodeBuild](https://aws.amazon.com/codebuild/) - Stages of pipeline execution
 
 
 ## Deployment pipeline types
@@ -49,9 +49,9 @@ The stages are configured as [CodeBuild projects](https://docs.aws.amazon.com/co
 
 Each stage is configured to execute a set of commands. The configuration is based on two files:
 
-*   `buildspec.yml` provides the default configuration of SCCOS. This is a CodeBuild configuration file that is used if no custom configuration is provided for a stage.
+* `buildspec.yml` provides the default configuration of SCCOS. This is a CodeBuild configuration file that is used if no custom configuration is provided for a stage.
 
-*   `deploy.yml` provides a custom configuration overwriting `buildspec.yml`. This file is located in the project repository root.
+* `deploy.yml` provides a custom configuration overwriting `buildspec.yml`. This file is located in the project repository root.
 
 {% info_block infoBox "Deploy file name" %}
 
@@ -106,7 +106,7 @@ The CodeBuild project of this stage is named `Run_pre-deploy_for_<project_name>`
 
 {% info_block warningBox "Updating the pre-deploy hook" %}
 
-The CodeBuild project of the pre-deploy hook uses a *currently running* application image. If you add a new command to the hook, it's added to the hook during the next deployment. So, after updating the hook's configuration, the command only runs starting from the second deployment.
+The CodeBuild project of the pre-deploy hook uses a _currently running_ application image. If you add a new command to the hook, it's added to the hook during the next deployment. So, after updating the hook's configuration, the command only runs starting from the second deployment.
 
 {% endinfo_block %}
 
@@ -123,9 +123,9 @@ The `install` stage is configured as an install script.
 
 Depending on the pipeline type, the `install` stage command or script is specified in the following variables in `deploy.yml`:
 
-*   normal: `image: environment: SPRYKER_HOOK_INSTALL:`
+* normal: `image: environment: SPRYKER_HOOK_INSTALL:`
 
-*   destructive: `image: environment: SPRYKER_HOOK_DESTRUCTIVE_INSTALL:`
+* destructive: `image: environment: SPRYKER_HOOK_DESTRUCTIVE_INSTALL:`
 
 
 The CodeBuild project of this stage is named `Run_install_for_<project_name>`. The currently built Docker image is used as the environment image and all Zed environment variables are accessible.
@@ -168,4 +168,4 @@ Schematically, deployment in Spryker Cloud Commerce OS looks as follows.
 ## Next steps
 
 
-*   [Deployment in states](/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.html)
+* [Deployment in states](/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.html)

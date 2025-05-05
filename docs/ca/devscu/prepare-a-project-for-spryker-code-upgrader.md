@@ -22,7 +22,7 @@ By sticking to the [recommended extension points](/docs/scos/dev/guidelines/keep
 
 ## Update all Spryker modules to version 2022.04 or higher
 
-The Upgrader provides automatic minor and patch updates for the current version of each module. Because most updates are released for the latest module versions, modules need to be of the latest major version. To do that, in `composer.json `, update all `spryker-feature-*` packages to version `2022.04` or higher.
+The Upgrader provides automatic minor and patch updates for the current version of each module. Because most updates are released for the latest module versions, modules need to be of the latest major version. To do that, in `composer.json`, update all `spryker-feature-*` packages to version `2022.04` or higher.
 
 To check if your module versions are supported by the Upgrader, [run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
 

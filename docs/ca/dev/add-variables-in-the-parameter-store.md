@@ -65,17 +65,17 @@ Variables must follow this naming convention: `/{project}/{environment}/{type}/{
 Placeholder description:
 
 * `type`: defines the type of a variable. Possible values:
-    * `config`: parameter
-    * `secret`: secret
+  * `config`: parameter
+  * `secret`: secret
 
 * `bucket`: defines what services a variable is used for. Possible values:
-    * `common`: used by all the buckets.
-    * `app`: used only by application services.
-    * `scheduler`: used by the scheduler.
+  * `common`: used by all the buckets.
+  * `app`: used only by application services.
+  * `scheduler`: used by the scheduler.
 
 * `grant`: Defines access permissions to variables. Possible values:
-    * `public`: readable and writable
-    * `limited`: readable
+  * `public`: readable and writable
+  * `limited`: readable
 
 Path examples:
 
@@ -167,10 +167,10 @@ The following sections describe how to add parameters and secrets for different 
 3. For **Name**, enter `/{project}/{environment}/config/common/public/{variable_name}`.
     Make sure to replace the placeholders based on your requirements.
 4. Optional: For **Description**, enter a description of the variable. This may be a note about what this variable is used for.
-5. For **Type**, select a type of the variable based on your requirements.    
+5. For **Type**, select a type of the variable based on your requirements.
 6. For **Value**, enter the value of the variable.
 7. Click **Create parameter**.
-    This opens the **Parameter Store** page with a success message displayed.    
+    This opens the **Parameter Store** page with a success message displayed.
 8. Go to **Services**&nbsp;<span aria-label="and then">></span> **CodePipeline**.
 9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
@@ -189,7 +189,7 @@ The following sections describe how to add parameters and secrets for different 
 5. For **Type**, select **SecureString**.
 6. For **Value**, enter the value of the variable.
 7. Click **Create parameter**.
-    This opens the **Parameter Store** page with a success message displayed.    
+    This opens the **Parameter Store** page with a success message displayed.
 8. Go to **Services&nbsp;<span aria-label="and then">></span> CodePipeline**.
 9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
@@ -205,10 +205,10 @@ The following sections describe how to add parameters and secrets for different 
     Make sure to replace the placeholders based on your requirements.
 4. Optional: For **Description**, enter a description of the variable. This may be a note about what this variable is used for.
     This may be a note about what this variable is used for.
-5. For **Type**, select a type of the variable based on your requirements.    
+5. For **Type**, select a type of the variable based on your requirements.
 6. For **Value**, enter the value of the variable.
 7. Click **Create parameter**.
-    This opens the **Parameter Store** page with a success message displayed.    
+    This opens the **Parameter Store** page with a success message displayed.
 8. Go to **Services&nbsp;<span aria-label="and then">></span> CodePipeline**.
 9. On the **Pipelines** page, select the **ECS-updater-{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
@@ -227,12 +227,12 @@ The following sections describe how to add parameters and secrets for different 
 5. For **Type**, select **SecureString**.
 6. For **Value**, enter the value of the variable.
 7. Click **Create parameter**.
-    This opens the **Parameter Store** page with a success message displayed.    
+    This opens the **Parameter Store** page with a success message displayed.
 8. Go to **Services**&nbsp;<span aria-label="and then">></span> **CodePipeline**.
 9. On the **Pipelines** page, select the **ECS-updater-{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
-    After the pipeline finishes running, the variable gets available for your application.    
+    After the pipeline finishes running, the variable gets available for your application.
 
 ### Add parameters and secrets to Scheduler
 
@@ -248,7 +248,7 @@ The following sections describe how to add parameters and secrets for different 
 5. For **Type**, select **SecureString**.
 6. For **Value**, enter the value of the variable.
 7. Click **Create parameter**.
-    This opens the **Parameter Store** page with a success message displayed.    
+    This opens the **Parameter Store** page with a success message displayed.
 8. Go to **Services&nbsp;<span aria-label="and then">></span> CodePipeline**.
 9. On the **Pipelines** page, select the **Rollout_Scheduler_{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.

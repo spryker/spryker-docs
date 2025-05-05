@@ -51,11 +51,11 @@ With Dynamic Multistore, the separated setup is only possible with stores belong
 
 * The stores are completely different from the perspective of the following:
 
-    * Design
+  * Design
 
-    * Business logic
+  * Business logic
 
-    * Features or modules
+  * Features or modules
 
 * Separated data management for products, customers, orders, etc. Data sharing and synchronization requires external systems.
 

@@ -13,7 +13,7 @@ redirect_from:
 
 {% info_block warningBox "Restrictions apply" %}
 
-* The following instruction are for personnel to connect to the cloud infrastructure and should not be used to connect other infrastructure components and systems to the cloud infrastructure. 
+* The following instruction are for personnel to connect to the cloud infrastructure and should not be used to connect other infrastructure components and systems to the cloud infrastructure.
 * A direct RDS connection can be established only from Spryker services. Direct connection to RDS database outside of the the application's internal networks is prohibited.
 
 {% endinfo_block %}
@@ -57,51 +57,54 @@ In the following instructions we use the Jenkins service as an example. Adjust t
     5. Connect to the copied endpoint via SSH.
 5. Optional: Set up SSH port forwarding:
     1. In the bastion host, get the IP address of the endpoint by resolving the copied endpoint:
+
     ```shell
     dig +short staging.cxg4btdhhsrr.eu-central-1.example.amazonaws.com
     10.111.4.63
     ```
+
     2. Set up SSH port forwarding using the IP address. For example:
+
     ```shell
     ssh -A ubuntu@<private_bastion_ip> -L 0.0.0.0:8080:<private_scheduler_ip>:80
     ```
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

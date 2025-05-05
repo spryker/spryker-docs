@@ -30,9 +30,9 @@ This document describes how to customize deployment pipelines.
 
 To customize the `pre-deploy` stage of a pipeline:
 
-1.  In a deploy file of the desired environment, set the shell command as a value of the `SPRYKER_HOOK_BEFORE_DEPLOY:` variable:
+1. In a deploy file of the desired environment, set the shell command as a value of the `SPRYKER_HOOK_BEFORE_DEPLOY:` variable:
 
-```yaml    
+```yaml
 environment: ...
 image:
   tag: ...
@@ -50,7 +50,7 @@ During the next deployment, the command will be executed in the `pre-deploy` sta
 
 To add multiple commands to the `pre-deploy` stage:
 
-1.  Create a shell script with the desired commands.
+1. Create a shell script with the desired commands.
 
 The file should have a `.yml` extension. For example, `pre-deploy.yml`.
 
@@ -98,13 +98,13 @@ fi
 
 To add one or more commands to the `install` stage of a deployment pipeline:
 
-1.  Depending on the desired environment, add the desired commands to one of the following files:
+1. Depending on the desired environment, add the desired commands to one of the following files:
 
 * Normal: `config/install/production`
 
 * Destructive: `config/install/destructive`
 
-2.  Push the changes to the repository.
+2. Push the changes to the repository.
 
 
 During the next deployment, the commands in the script will be executed in the `install` stage.

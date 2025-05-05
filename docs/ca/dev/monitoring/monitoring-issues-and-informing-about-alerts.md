@@ -67,8 +67,8 @@ The following alerts are configured by default for all environments.
 
 |  NAME OF METRIC | DESCRIPTION  |
 |---|---|
-| RDS Status  | Checks the status of the RDS.  |   
-| RDS IO Credits  | Checks if the RDS instance is running low or is running out of IO credits.  |   
+| RDS Status  | Checks the status of the RDS.  |
+| RDS IO Credits  | Checks if the RDS instance is running low or is running out of IO credits.  |
 | RDS available storage  | Checks available storage of RDS.  |
 | RDS High CPU   | Checks if the RDS service is high on CPU usage.  |
 

@@ -52,6 +52,7 @@ groups:
                     {domain_name}:
                         store: {store_relation}
 ```
+
 Example:
 
 ```yaml
@@ -81,7 +82,7 @@ See [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-
 * [Deploy the application in the staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html).
 
 
-5.  Let us know about the desired change via [support](https://spryker.force.com/support/s/).
+5. Let us know about the desired change via [support](https://spryker.force.com/support/s/).
 
 Give the DNS configuration 24-48 hours to propagate and you will be able to access your application via the domain.
 

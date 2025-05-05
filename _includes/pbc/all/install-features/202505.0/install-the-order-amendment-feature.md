@@ -670,7 +670,7 @@ Enable the following behaviors by registering the plugins:
 | OriginalSalesOrderItemPriceItemExpanderPlugin                          | Replaces an item's prices with the original sales order item's prices before adding or removing cart items to persistence.                                                                                 | Should be executed after `{@link \Spryker\Zed\PriceCartConnector\Communication\Plugin\PriceItemExpanderPlugin}`.                                   | Spryker\Zed\PriceProductSalesOrderAmendment\Communication\Plugin\Cart                |
 | OriginalSalesOrderItemPriceProductPostResolvePlugin                    | Replaces an item's prices with the original sales order item's prices after resolving prices for the resulting `PriceProductTransfer`.                                                                     |                                                                                                                                                    | Spryker\Client\PriceProductSalesOrderAmendment\Plugin\PriceProduct                   |
 | OrderItemPriceProductResolveConditionsPriceProductFilterExpanderPlugin | Expands `PriceProductFilterTransfer` with `PriceProductResolveConditionsTransfer` from `ProductViewTransfer`.                                                                                              |                                                                                                                                                    | Spryker\Client\PriceProductSalesOrderAmendment\Plugin\PriceProductStorage            |
-| CurrentStoreCartReorderValidatorPlugin                                 | Validates that the store of the order and quote and current store are the same.                                                                                                                            |                                                                                                                                                    | Spryker\Zed\Store\Communication\Plugin\CartReorder                                   |
+| CurrentStoreCartReorderValidatorPlugin                                 | Validates that the current store matches the store of the order and quote.                                                                                                                            |                                                                                                                                                    | Spryker\Zed\Store\Communication\Plugin\CartReorder                                   |
 
 
 
@@ -1538,7 +1538,7 @@ class PriceProductSalesOrderAmendmentDependencyProvider extends SprykerPriceProd
 
 {% endinfo_block %}
 
-## Add quotation process context
+## Add the quotation process context
 
 Take the steps in the following sections to add the context for quote requests.
 
@@ -1566,10 +1566,10 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                          | SPECIFICATION                                                                                                                        | PREREQUISITES | NAMESPACE                                                         |
 |-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------|
-| QuoteRequestVersionReferenceOrderPostSavePlugin | Persists `QuoteTransfer.quoteRequestVersionReference` transfer property in `spy_sales_order` table.                                  |               | Spryker\Zed\SalesQuoteRequestConnector\Communication\Plugin\Sales |
-| OrderAmendmentQuoteRequestQuoteCheckPlugin      | Returns false if quote is in amendment process, true otherwise.                                                                      |               | Spryker\Client\SalesOrderAmendment\Plugin\QuoteRequest            |
-| OrderAmendmentQuoteRequestValidatorPlugin       | Prevents create/update of quote request with quote in order amendment process.                                                       |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest |
-| OrderAmendmentQuoteRequestUserValidatorPlugin   | Prevents create/update of quote request with quote in order amendment process.                                                       |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest |
+| QuoteRequestVersionReferenceOrderPostSavePlugin | Persists the `QuoteTransfer.quoteRequestVersionReference` transfer property in the `spy_sales_order` table.                                  |               | Spryker\Zed\SalesQuoteRequestConnector\Communication\Plugin\Sales |
+| OrderAmendmentQuoteRequestQuoteCheckPlugin      | Returns false if quote is in amendment process; true otherwise.                                                                      |               | Spryker\Client\SalesOrderAmendment\Plugin\QuoteRequest            |
+| OrderAmendmentQuoteRequestValidatorPlugin       | Prevents create and update of a quote request with quote in order amendment process.                                                       |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest |
+| OrderAmendmentQuoteRequestUserValidatorPlugin   | Prevents create and update of a quote request with quote in order amendment process.                                                       |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest |
 | QuoteRequestVersionCartReorderValidatorPlugin   | Returns `CartReorderResponseTransfer.errors` with error messages if `CartReorderTransfer.order.quoteRequestVersionReference` is set. |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder  |
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
@@ -1599,9 +1599,9 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {% info_block warningBox "Verification" %}
 
 1. Create a request for quote.
-2. Approve the quote request by Agent.
-3. Place an order that was converted from Request for Quote.
-4. Ensure that the `quote_request_version_reference` column in the `spy_sales_order` table is populated with the correct value.
+2. As an agent, approve the quote request.
+3. Place an order that was converted from request for quote.
+Make sure the `quote_request_version_reference` column in the `spy_sales_order` table is populated with the correct value.
 
 {% endinfo_block %}
 
@@ -1690,13 +1690,13 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To avoid freezing product prices after a quote request, reordering is disabled for orders created from a quote request.
+Verify that reordering is disabled for orders created from a quote request:
 
 1. Create a request for quote.
-2. Approve the quote request by Agent.
-3. Place an order that was converted from Request for Quote.
+2. As an agent, approve the quote request.
+3. Place an order that was converted from the request.
 4. Try to reorder the order.
-5. Ensure that the error message is displayed: `You cannot reorder this order because it is in the amendment process.`
+ Make sure the error message is displayed: `You cannot reorder this order because it is in the amendment process.`.
 
 {% endinfo_block %}
 

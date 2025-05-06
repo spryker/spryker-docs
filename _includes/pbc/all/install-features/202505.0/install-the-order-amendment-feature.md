@@ -583,7 +583,7 @@ Enable the following behaviors by registering the plugins:
 | OrderAmendmentCartReorderValidatorPlugin                               | Validates if quote amendment order reference matches `CartReorderTransfer.order.orderReference`.                                                                                                           |                                                                                                                                                    | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder                     |
 | OrderAmendmentQuoteProcessFlowExpanderCartPreReorderPlugin             | Expands the quote process flow with the quote process flow name.                                                                                                                                           |                                                                                                                                                    | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder                     |
 | StartOrderAmendmentCartReorderPostCreatePlugin                         | Triggers the OMS event to start the order amendment process.                                                                                                                                               |                                                                                                                                                    | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder                  |
-| IsAmendableOrderCartReorderValidatorRulePlugin                         | Validates if all order items are in the order item state that has the `amendable` flag.                                                                                                                    |                                                                                                                                                    | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder                  |
+| IsAmendableOrderCartReorderRequestValidatorPlugin                      | Validates if all order items are in the order item state that has the `amendable` flag.                                                                                                                    |                                                                                                                                                    | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder                  |
 | AmendmentOrderReferenceCartPreReorderPlugin                            | Sets `CartReorderTransfer.quote.amendmentOrderReference` taken from `CartReorderRequestTransfer.orderReference`.                                                                                           |                                                                                                                                                    | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder                     |
 | AmendmentQuoteNameCartPreReorderPlugin                                 | Updates `CartReorderTransfer.quote.name` with a custom amendment quote name.                                                                                                                               |                                                                                                                                                    | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder                     |
 | OriginalSalesOrderItemPriceCartPreReorderPlugin                        | Adds original sales order item unit prices to `CartReorderTransfer.quote.originalSalesOrderItemUnitPrices` with group keys as an array.                                                                    |                                                                                                                                                    | Spryker\Zed\PriceProductSalesOrderAmendment\Communication\Plugin\CartReorder         |
@@ -618,10 +618,6 @@ Enable the following behaviors by registering the plugins:
 | DisallowQuoteCheckoutPreSavePlugin                                     | Disallows quote checkout for the configured amount of seconds.                                                                                                                                             |                                                                                                                                                    | Spryker\Zed\QuoteCheckoutConnector\Communication\Plugin\Checkout                     |
 | SalesOrderExpanderPlugin                                               | Transforms the provided cart items according to the configured cart item transformer strategies.                                                                                                           |                                                                                                                                                    | Spryker\Zed\Sales\Communication\Plugin\Checkout                                      |
 | OriginalOrderQuoteExpanderCheckoutPreSavePlugin                        | Sets `QuoteTransfer.originalOrder` with a found order entity.                                                                                                                                              |                                                                                                                                                    | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout                        |
-| ResetQuoteNameQuoteBeforeSavePlugin                                    | Sets `QuoteTransfer.name` to `null` if quote has no items and `QuoteTransfer.amendmentOrderReference` is set.                                                                                              | Should be executed before `{@link \Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote\ResetAmendmentOrderReferenceBeforeQuoteSavePlugin}`  | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote                           |
-| CancelOrderAmendmentBeforeQuoteSavePlugin                              | Triggers the OMS event defined in `{@link \Spryker\Zed\SalesOrderAmendmentOms\SalesOrderAmendmentOmsConfig::getCancelOrderAmendmentEvent()}` to cancel the order amendment process.                        | Should be executed before `{@link \Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote\ResetAmendmentOrderReferenceBeforeQuoteSavePlugin}`. | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Quote                        |
-| ResetAmendmentOrderReferenceBeforeQuoteSavePlugin                      | Sets `QuoteTransfer.amendmentOrderReference` to `null` if `QuoteTransfer.amendmentOrderReference` is not `null`.                                                                                           |                                                                                                                                                    | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote                           |
-| ResetOriginalSalesOrderItemUnitPricesBeforeQuoteSavePlugin             | Sets an empty array to `QuoteTransfer.originalSalesOrderItemUnitPrices` if `QuoteTransfer.items` is empty and `QuoteTransfer.originalSalesOrderItemUnitPrices` is not empty.                               |                                                                                                                                                    | Spryker\Zed\PriceProductSalesOrderAmendment\Communication\Plugin\Quote               |
 | CancelOrderAmendmentQuoteDeleteAfterPlugin                             | Triggers the OMS event defined in `{@link \Spryker\Zed\SalesOrderAmendmentOms\SalesOrderAmendmentOmsConfig::getCancelOrderAmendmentEvent()}` to cancel the order amendment process.                        |                                                                                                                                                    | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Quote                        |
 | SalesOrderAmendmentOrderExpanderPlugin                                 | Expands `OrderTransfer.salesOrderAmendment` with a found sales order amendment.                                                                                                                            |                                                                                                                                                    | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Sales                           |
 | IsAmendableOrderExpanderPlugin                                         | Checks if all order items are in the order item state that has a flag defined in `{@link \Spryker\Zed\SalesOrderAmendmentOms\SalesOrderAmendmentOmsConfig::getAmendableOmsFlag()}`.                        |                                                                                                                                                    | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Sales                        |
@@ -741,12 +737,22 @@ use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\AmendmentOr
 use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\AmendmentQuoteNameCartPreReorderPlugin;
 use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\OrderAmendmentCartReorderValidatorPlugin;
 use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\OrderAmendmentQuoteProcessFlowExpanderCartPreReorderPlugin;
-use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder\IsAmendableOrderCartReorderValidatorRulePlugin;
+use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder\IsAmendableOrderCartReorderRequestValidatorPlugin;
 use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder\StartOrderAmendmentCartReorderPostCreatePlugin;
 use Spryker\Zed\Store\Communication\Plugin\CartReorder\CurrentStoreCartReorderValidatorPlugin;
 
 class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
 {
+    /**
+     * @return list<\Spryker\Zed\CartReorderExtension\Dependency\Plugin\CartReorderRequestValidatorPluginInterface>
+     */
+    protected function getCartReorderRequestValidatorPlugins(): array
+    {
+        return [
+            new IsAmendableOrderCartReorderRequestValidatorPlugin(),
+        ];
+    }
+
     /**
      * @return list<\Spryker\Zed\CartReorderExtension\Dependency\Plugin\CartReorderValidatorPluginInterface>
      */
@@ -755,7 +761,6 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
         return [
             new CurrentStoreCartReorderValidatorPlugin(),
             new OrderAmendmentCartReorderValidatorPlugin(),
-            new IsAmendableOrderCartReorderValidatorRulePlugin(),
         ];
     }
 
@@ -975,29 +980,11 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 namespace Pyz\Zed\Quote;
 
 use Spryker\Zed\MultiCart\Communication\Plugin\Quote\DefaultQuoteCollectionFilterPlugin;
-use Spryker\Zed\PriceProductSalesOrderAmendment\Communication\Plugin\Quote\ResetOriginalSalesOrderItemUnitPricesBeforeQuoteSavePlugin;
 use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
-use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote\ResetAmendmentOrderReferenceBeforeQuoteSavePlugin;
-use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Quote\ResetQuoteNameQuoteBeforeSavePlugin;
-use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Quote\CancelOrderAmendmentBeforeQuoteSavePlugin;
 use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Quote\CancelOrderAmendmentQuoteDeleteAfterPlugin;
 
 class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {
-
-    /**
-     * @return list<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteWritePluginInterface>
-     */
-    protected function getQuoteUpdateBeforePlugins(): array
-    {
-        return [
-            new ResetQuoteNameQuoteBeforeSavePlugin(),
-            new CancelOrderAmendmentBeforeQuoteSavePlugin(),
-            new ResetAmendmentOrderReferenceBeforeQuoteSavePlugin(),
-            new ResetOriginalSalesOrderItemUnitPricesBeforeQuoteSavePlugin(),
-        ];
-    }
-
     /**
      * @return list<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteDeleteAfterPluginInterface>
      */
@@ -1731,7 +1718,39 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Add translations
+### 2) Set up configuration
+
+Add the following configuration to your project:
+
+| CONFIGURATION                                                            | SPECIFICATION                                                                                                                                                                    | NAMESPACE                          |
+|--------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
+| SalesOrderAmendmentWidgetConfig::ORDER_AMENDMENT_CART_REORDER_STRATEGY   | Defines the cart reorder strategy for order amendment, e.g., `replace`, `new`. The corresponding strategy plugin handling the specified value must be registered in the project. | Pyz\Yves\SalesOrderAmendmentWidget |
+| SalesOrderAmendmentWidgetConfig::IS_ORDER_AMENDMENT_CONFIRMATION_ENABLED | Defines if the order amendment confirmation popup window is displayed.                                                                                                           | Pyz\Yves\SalesOrderAmendmentWidget |
+
+**src/Pyz/Yves/SalesOrderAmendmentWidget/SalesOrderAmendmentWidgetConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\SalesOrderAmendmentWidget;
+
+use SprykerShop\Yves\SalesOrderAmendmentWidget\SalesOrderAmendmentWidgetConfig as SprykerSalesOrderAmendmentWidgetConfig;
+
+class SalesOrderAmendmentWidgetConfig extends SprykerSalesOrderAmendmentWidgetConfig
+{
+    /**
+     * @var string|null
+     */
+    protected const ORDER_AMENDMENT_CART_REORDER_STRATEGY = 'replace';
+    
+    /**
+     * @var bool
+     */
+    protected const IS_ORDER_AMENDMENT_CONFIRMATION_ENABLED = true;
+}
+```
+
+### 3) Add translations
 
 1. Append glossary according to your configuration:
 
@@ -1740,6 +1759,16 @@ Make sure the following modules have been installed:
 ```yaml
 sales_order_amendment_widget.edit_order,Edit Order,en_US
 sales_order_amendment_widget.edit_order,Bestellung bearbeiten,de_DE
+sales_order_amendment_widget.edit_order.cancel,Cancel,en_US
+sales_order_amendment_widget.edit_order.cancel,Abbrechen,de_DE
+sales_order_amendment_widget.edit_order.warning_message,"Editing this order will replace the items in your current cart with those from the order?",en_US
+sales_order_amendment_widget.edit_order.warning_message,"Durch die Bearbeitung dieser Bestellung werden die Artikel in Ihrem aktuellen Warenkorb durch die Artikel der Bestellung ersetzt?",de_DE
+sales_order_amendment_widget.cancel_order_amendment,Cancel Edit,en_US
+sales_order_amendment_widget.cancel_order_amendment,Bearbeiten abbrechen,de_DE
+sales_order_amendment_widget.amendment_cant_be_canceled,"This order amendment cannot be canceled.",en_US
+sales_order_amendment_widget.amendment_cant_be_canceled,"Diese Bestelländerung kann nicht storniert werden. ",de_DE
+sales_order_amendment_widget.amendment_canceled,"The order amendment has been successfully canceled.",en_US
+sales_order_amendment_widget.amendment_canceled,"Die Bestelländerung wurde erfolgreich storniert.",de_DE
 ```
 
 2. Import data:
@@ -1754,13 +1783,13 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 {% endinfo_block %}
 
-### 3) Set up behavior
+### 4) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                       | SPECIFICATION                                                      | PREREQUISITES | NAMESPACE                                                |
-|----------------------------------------------|--------------------------------------------------------------------|---------------|----------------------------------------------------------|
-| SalesOrderAmendmentWidgetRouteProviderPlugin | Expands the router collection with the `order-amendment` endpoint. |               | SprykerShop\Yves\SalesOrderAmendmentWidget\Plugin\Router |
+| PLUGIN                                       | SPECIFICATION                                                                                    | PREREQUISITES | NAMESPACE                                                |
+|----------------------------------------------|--------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------|
+| SalesOrderAmendmentWidgetRouteProviderPlugin | Expands the router collection with the `order-amendment` and `cancel-order-amendment` endpoints. |               | SprykerShop\Yves\SalesOrderAmendmentWidget\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -1792,13 +1821,14 @@ Make sure order amendment is available on order details and orders pages.
 
 {% endinfo_block %}
 
-### 4) Set up widgets
+### 5) Set up widgets
 
 To enable widgets, register the following plugins:
 
-| PLUGIN               | SPECIFICATION                              | PREREQUISITES | NAMESPACE                                         |
-|----------------------|--------------------------------------------|---------------|---------------------------------------------------|
-| OrderAmendmentWidget | Enables customers to edit existing orders. |               | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
+| PLUGIN                     | SPECIFICATION                                | PREREQUISITES | NAMESPACE                                         |
+|----------------------------|----------------------------------------------|---------------|---------------------------------------------------|
+| OrderAmendmentWidget       | Enables customers to edit existing orders.   |               | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
+| CancelOrderAmendmentWidget | Enables customers to cancel order amendment. |               | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1819,6 +1849,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     {
         return [
             OrderAmendmentWidget::class,
+            CancelOrderAmendmentWidget::class,
         ];
     }
 }
@@ -1828,8 +1859,16 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Make sure the following widgets have been registered:
 
-| MODULE               | TEST                                                                             |
-|----------------------|----------------------------------------------------------------------------------|
-| OrderAmendmentWidget | Make sure the edit order button is displayed on orders and order details pages.  |
+| MODULE                     | TEST                                                                            |
+|----------------------------|---------------------------------------------------------------------------------|
+| OrderAmendmentWidget       | Make sure the edit order button is displayed on orders and order details pages. |
+| CancelOrderAmendmentWidget | Make sure the cancel order amendment button is displayed on cart page.          |
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+- Make sure that after clicking the edit order button the specified reorder strategy for order amendment is applied (the current cart items are replaced by the amended order items in case the `replace` strategy is applied, new cart is created in case the `new` strategy is applied).
+- Make sure that the order amendment confirmation popup window is displayed if the `IS_ORDER_AMENDMENT_CONFIRMATION_ENABLED` configuration is set to `true`.
 
 {% endinfo_block %}

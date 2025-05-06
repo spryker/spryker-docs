@@ -25,7 +25,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-eco/amazon-quicksight:"^2.0.0" --update-with-dependencies
+composer require spryker-eco/amazon-quicksight:"^2.1.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -505,9 +505,9 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 2. Enable behaviors by registering the console commands:
 
-| PLUGIN                          | SPECIFICATION                                                                                            | PREREQUISITES | NAMESPACE                                             |
-|---------------------------------|----------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------|
-| QuicksightUserSyncCreateConsole | In the `spy_quicksight_user` DB table, persists the users registered in QuickSight by persisted user emails.      |               | SprykerEco\Zed\AmazonQuicksight\Communication\Console |
+| PLUGIN                        | SPECIFICATION                                                                                                                                | PREREQUISITES | NAMESPACE                                             |
+|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------|
+| QuicksightUserSyncSaveConsole | In the `spy_quicksight_user` DB table,  creates new and updates existing Quicksight users registered in QuickSight by persisted user emails. |               | SprykerEco\Zed\AmazonQuicksight\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -518,7 +518,7 @@ namespace Pyz\Zed\Console;
 
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\Kernel\Container;
-use SprykerEco\Zed\AmazonQuicksight\Communication\Console\QuicksightUserSyncCreateConsole;
+use SprykerEco\Zed\AmazonQuicksight\Communication\Console\QuicksightUserSyncSaveConsole;
 
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
@@ -530,7 +530,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     protected function getConsoleCommands(Container $container): array
     {
         return [
-            new QuicksightUserSyncCreateConsole(),
+            new QuicksightUserSyncSaveConsole(),
         ];
     }
 }

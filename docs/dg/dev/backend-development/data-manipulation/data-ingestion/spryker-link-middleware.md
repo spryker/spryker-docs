@@ -361,129 +361,129 @@ You can check the examples of each rule in the following snippet. It's a final m
 
 ```js
 $payload = [
-				'prices' => [
-					[
-						'locale' => 'en_GB',
-						'price' => 12.35,
-					],
-					[
-						'locale' => 'de_DE',
-						'price' => 12.50,
-					],
-					[
-						'locale' => 'nl_NL',
-						'price' => 12.80,
-					],
-				],
-				'delivery' => [
-					[
-						'locale' => 'en_GB',
-						'is_allowed' => true,
-					],
-					[
-						'locale' => 'de_DE',
-						'is_allowed' => false,
-					],
-				],
-				'values' => [
-					'attributes' => [
-						'color' => 'white',
-						'size' => 'L',
-					],
-					'name' => [
-						[
-							'locale' => 'en_GB',
-							'name' => 'name-en',
-						],
-						[
-							'locale' => 'de_DE',
-							'name' => 'name-de',
-						],
-						[
-							'locale' => 'nl_NL',
-							'name' => 'name-nl',
-						],
-					],
-					'categories' => [
-						'category1',
-						'category2',
-					],
-				],
-			];
+    'prices' => [
+     [
+      'locale' => 'en_GB',
+      'price' => 12.35,
+     ],
+     [
+      'locale' => 'de_DE',
+      'price' => 12.50,
+     ],
+     [
+      'locale' => 'nl_NL',
+      'price' => 12.80,
+     ],
+    ],
+    'delivery' => [
+     [
+      'locale' => 'en_GB',
+      'is_allowed' => true,
+     ],
+     [
+      'locale' => 'de_DE',
+      'is_allowed' => false,
+     ],
+    ],
+    'values' => [
+     'attributes' => [
+      'color' => 'white',
+      'size' => 'L',
+     ],
+     'name' => [
+      [
+       'locale' => 'en_GB',
+       'name' => 'name-en',
+      ],
+      [
+       'locale' => 'de_DE',
+       'name' => 'name-de',
+      ],
+      [
+       'locale' => 'nl_NL',
+       'name' => 'name-nl',
+      ],
+     ],
+     'categories' => [
+      'category1',
+      'category2',
+     ],
+    ],
+   ];
 
-	...
+ ...
 
-	class TestImportMap extends AbstractMap
-	{
-		/**
-		 * @return array
-		 */
-		public function getMap(): array
-		{
-			return [
-				'categories' => 'values.categories', //KeyMapRule,
-				'names' => function ($payload) { //ClosureMapRule
-						$result = [];
-						foreach ($payload['values']['name'] as $name) {
-							$result[$name['locale']] = $name['name'];
-						}
+ class TestImportMap extends AbstractMap
+ {
+  /**
+   * @return array
+   */
+  public function getMap(): array
+  {
+   return [
+    'categories' => 'values.categories', //KeyMapRule,
+    'names' => function ($payload) { //ClosureMapRule
+      $result = [];
+      foreach ($payload['values']['name'] as $name) {
+       $result[$name['locale']] = $name['name'];
+      }
 
-						return $result;
-					},
-				'&values.attributes.color' => 'values.attributes.size', //DynamicMapRule
-				'delivery' => [ //DynamicArrayMapRule
-						'delivery',
-						'dynamicItemMap' => [
-							'locale' => 'is_allowed',
-						],
-					],
-				'delivery' => [ //ArrayMapRule
-						'delivery',
-						'itemMap' => [
-							'locale' => 'locale',
-							'is_exist' => 'is_allowed',
-						],
-					],
-			];
-		}
+      return $result;
+     },
+    '&values.attributes.color' => 'values.attributes.size', //DynamicMapRule
+    'delivery' => [ //DynamicArrayMapRule
+      'delivery',
+      'dynamicItemMap' => [
+       'locale' => 'is_allowed',
+      ],
+     ],
+    'delivery' => [ //ArrayMapRule
+      'delivery',
+      'itemMap' => [
+       'locale' => 'locale',
+       'is_exist' => 'is_allowed',
+      ],
+     ],
+   ];
+  }
 
-		/**
-		 * @return string
-		 */
-		public function getStrategy(): string
-		{
-			return MapInterface::MAPPER_STRATEGY_SKIP_UNKNOWN;
-		}
-	}
+  /**
+   * @return string
+   */
+  public function getStrategy(): string
+  {
+   return MapInterface::MAPPER_STRATEGY_SKIP_UNKNOWN;
+  }
+ }
 
-	...
+ ...
 
-	$result = [
-		'categories' => [
-			'category1',
-			'category2',
-		],
-		'names' => [
-			'en_GB' => 'name-en',
-			'de_DE' => 'name-de',
-			'nl_NL' => 'name-nl',
-		],
-		'white' => 'L',
-		'delivery' => [
-			'en_GB' => true,
-			'de_DE' => false,
-		],
-		'delivery' => [
-			[
-				'locale' => 'en_GB',
-				'is_allowed' => true,
-			],
-			[
-				'locale' => 'de_DE',
-				'is_allowed' => false,
-			],
-		],
-	]
+ $result = [
+  'categories' => [
+   'category1',
+   'category2',
+  ],
+  'names' => [
+   'en_GB' => 'name-en',
+   'de_DE' => 'name-de',
+   'nl_NL' => 'name-nl',
+  ],
+  'white' => 'L',
+  'delivery' => [
+   'en_GB' => true,
+   'de_DE' => false,
+  ],
+  'delivery' => [
+   [
+    'locale' => 'en_GB',
+    'is_allowed' => true,
+   ],
+   [
+    'locale' => 'de_DE',
+    'is_allowed' => false,
+   ],
+  ],
+ ]
 ```
 
 ### Validator
@@ -495,24 +495,24 @@ At first, you need to implement `SprykerMiddleware\Zed\Process\Business\Validato
 Use the following format to define validation rules:
 
 ```php
-	/**
-	 * @return array
-	 */
-	protected function getRules(): array
-	{
-		return [
-			'mapped_key' => [
-				'ValidatorName1',
-						[
-						'ValidatorName2',
-						'options' => [
-								'option1' => 'value1',
-								'option2' => 'value2',
-						]
-					]
-			],
-		];
-	}
+ /**
+  * @return array
+  */
+ protected function getRules(): array
+ {
+  return [
+   'mapped_key' => [
+    'ValidatorName1',
+      [
+      'ValidatorName2',
+      'options' => [
+        'option1' => 'value1',
+        'option2' => 'value2',
+      ]
+     ]
+   ],
+  ];
+ }
 ```
 
 #### Default validators
@@ -521,7 +521,7 @@ Many predefined validators can be used in `ValidationRuleSet`.
 
 | VALIDATOR NAME | DESCRIPTION | OPTIONS |
 | --- | --- | --- |
-| DateTime | Validates that a value is a valid _datetime_, meaning a string (or an object that can be cast into a string) that follows a specific format. | format (opt, string) |
+| DateTime | Validates that a value is a valid *datetime*, meaning a string (or an object that can be cast into a string) that follows a specific format. | format (opt, string) |
 | EqualTo | Validates that a value is equal to another value, defined in the options. | value (req, mixed) |
 | GreaterOrEqualThan | Validates that a value is equal to or greater than another value, defined in the options. | value (req, mixed) |
 | GreaterThan | Validates that a value is greater than another value, defined in the options. | value (req, mixed) |
@@ -545,29 +545,29 @@ After this, you can create a new validator plugin. You need to extend `SprykerMi
 #### Example of `ValidationRuleSet`
 
 ```php
-	...
-	use SprykerMiddleware\Zed\Process\Business\Validator\ValidationRuleSet\AbstractValidationRuleSet;
-	use SprykerMiddleware\Zed\Process\Business\Validator\ValidationRuleSet\ValidationRuleSetInterface;
-	...
-	class ProductModelImportValidationRuleSet extends AbstractValidationRuleSet implements ValidationRuleSetInterface
-	{
-		/**
-		 * @return array
-	   	 */
-		protected function getRules(): array
-		{
-			return [
-				'categories' => [
-					'Required',
-					[
-						'Length',
-						'options' => [
-							'min' => 3,
-						],
-					],
-				];
-			}
-		}
+ ...
+ use SprykerMiddleware\Zed\Process\Business\Validator\ValidationRuleSet\AbstractValidationRuleSet;
+ use SprykerMiddleware\Zed\Process\Business\Validator\ValidationRuleSet\ValidationRuleSetInterface;
+ ...
+ class ProductModelImportValidationRuleSet extends AbstractValidationRuleSet implements ValidationRuleSetInterface
+ {
+  /**
+   * @return array
+      */
+  protected function getRules(): array
+  {
+   return [
+    'categories' => [
+     'Required',
+     [
+      'Length',
+      'options' => [
+       'min' => 3,
+      ],
+     ],
+    ];
+   }
+  }
 ```
 
 ### Translator
@@ -581,47 +581,47 @@ You can apply the translator function for value with the type array. You can use
 Use the following format to define translation rules:
 
 ```php
-	...
-	use SprykerMiddleware\Zed\Process\Business\Translator\Dictionary\AbstractDictionary;
-	...
+ ...
+ use SprykerMiddleware\Zed\Process\Business\Translator\Dictionary\AbstractDictionary;
+ ...
 
-	class AttributeMapDictionary extends AbstractDictionary
-	{
-		/**
-		 * @return array
-		 */
-		public function getDictionary(): array
-		{
-			return [
-				'mapped_key' => [
-					[
-						'TranslatorFunction1',
-						'options' => [
-							'option1' => 'value1',
-						],
-					],
-					[
-						'TranslatorFunction2',
-						'options' => [
-							'option2' => 'value2',
-						],
-					],
-				],
-				'mapped_key.*' => [
-					[
-						'TranslatorFunction3',
-					],
-				],
-				'mapped_key.*.subkey' => [
-					[
-						'TranslatorFunction4',
-					],
-				],
-			];
-		}
-	}
+ class AttributeMapDictionary extends AbstractDictionary
+ {
+  /**
+   * @return array
+   */
+  public function getDictionary(): array
+  {
+   return [
+    'mapped_key' => [
+     [
+      'TranslatorFunction1',
+      'options' => [
+       'option1' => 'value1',
+      ],
+     ],
+     [
+      'TranslatorFunction2',
+      'options' => [
+       'option2' => 'value2',
+      ],
+     ],
+    ],
+    'mapped_key.*' => [
+     [
+      'TranslatorFunction3',
+     ],
+    ],
+    'mapped_key.*.subkey' => [
+     [
+      'TranslatorFunction4',
+     ],
+    ],
+   ];
+  }
+ }
 
-	...
+ ...
 ```
 
 #### Default translator functions
@@ -653,120 +653,120 @@ After that, you are ready to create the translator plugin. You need to extend `S
 Check out an example of the following dictionary:
 
 ```php
-	...
-	use SprykerMiddleware\Zed\Process\Business\Translator\Dictionary\AbstractDictionary;
-	...
+ ...
+ use SprykerMiddleware\Zed\Process\Business\Translator\Dictionary\AbstractDictionary;
+ ...
 
-	class ProductImportDictionary extends AbstractDictionary
-	{
-		...
+ class ProductImportDictionary extends AbstractDictionary
+ {
+  ...
 
-		/**
-		 * @return array
-		 */
-		public function getDictionary(): array
-		{
-			return [
-				'values.*' => 'MeasureUnitToInt',
-				'values' => [
-					[
-						'EnrichAttributes',
-						'options' => [
-							'map' => $this->getAttributeMap(),
-							'excludeKeys' => [
-								'country_availability',
-							],
-						],
-					],
-					[
-						'ValuesToAttributes',
-						'options' => [
-							'locales' => $this->config->getLocalesForImport(),
-						],
-					],
-					[
-						'ValuesToLocalizedAttributes',
-						'options' => [
-							'locales' => $this->config->getLocalesForImport(),
-						],
-					],
-				],
-				'values.price' => [
-					[
-						'PriceSelector',
-						'options' => [
-							PriceSelector::OPTION_LOCALE_TO_PRICE_MAP => $this->config->getLocaleToPriceMap(),
-						],
-					],
-				],
-				'values.localizedAttributes' => [
-					[
-						'LocaleKeysToIds',
-						'options' => [
-							'map' => $this->getLocaleMap(),
-						],
-					],
-					[
-						'MoveLocalizedAttributesToAttributes',
-						'options' => [
-							'blacklist' => [
-								'name',
-								'title',
-								'product_description',
-								'tax_set',
-								'is_active_per_locale',
-								'price',
-								'bild_information',
-								'picto_informationen',
-								'meta_title',
-								'meta_description',
-								'meta_keywords',
-							],
-						],
-					],
-				],
-				'values.localizedAttributes.*' => [
-					[
-						'ExcludeKeysAssociativeFilter',
-						'options' => [
-							'excludeKeys' => [
-								'price',
-								'bild_information',
-								'picto_information',
-								'tax_set',
-							],
-						],
-					],
-					[
-						'AddMissingAttributes',
-						'options' => [
-							'attributes' => [
-								'name' => '',
-								'description' => '',
-								'meta_title' => '',
-								'meta_description' => '',
-								'meta_keywords' => '',
-								'is_searchable' => true,
-							],
-						],
-					],
-				],
-				'values.attributes' => [
-					[
-						'ExcludeKeysAssociativeFilter',
-						'options' => [
-							'excludeKeys' => [
-								'price',
-								'country_availability',
-							],
-						],
-					],
-				],
-			];
-		}
+  /**
+   * @return array
+   */
+  public function getDictionary(): array
+  {
+   return [
+    'values.*' => 'MeasureUnitToInt',
+    'values' => [
+     [
+      'EnrichAttributes',
+      'options' => [
+       'map' => $this->getAttributeMap(),
+       'excludeKeys' => [
+        'country_availability',
+       ],
+      ],
+     ],
+     [
+      'ValuesToAttributes',
+      'options' => [
+       'locales' => $this->config->getLocalesForImport(),
+      ],
+     ],
+     [
+      'ValuesToLocalizedAttributes',
+      'options' => [
+       'locales' => $this->config->getLocalesForImport(),
+      ],
+     ],
+    ],
+    'values.price' => [
+     [
+      'PriceSelector',
+      'options' => [
+       PriceSelector::OPTION_LOCALE_TO_PRICE_MAP => $this->config->getLocaleToPriceMap(),
+      ],
+     ],
+    ],
+    'values.localizedAttributes' => [
+     [
+      'LocaleKeysToIds',
+      'options' => [
+       'map' => $this->getLocaleMap(),
+      ],
+     ],
+     [
+      'MoveLocalizedAttributesToAttributes',
+      'options' => [
+       'blacklist' => [
+        'name',
+        'title',
+        'product_description',
+        'tax_set',
+        'is_active_per_locale',
+        'price',
+        'bild_information',
+        'picto_informationen',
+        'meta_title',
+        'meta_description',
+        'meta_keywords',
+       ],
+      ],
+     ],
+    ],
+    'values.localizedAttributes.*' => [
+     [
+      'ExcludeKeysAssociativeFilter',
+      'options' => [
+       'excludeKeys' => [
+        'price',
+        'bild_information',
+        'picto_information',
+        'tax_set',
+       ],
+      ],
+     ],
+     [
+      'AddMissingAttributes',
+      'options' => [
+       'attributes' => [
+        'name' => '',
+        'description' => '',
+        'meta_title' => '',
+        'meta_description' => '',
+        'meta_keywords' => '',
+        'is_searchable' => true,
+       ],
+      ],
+     ],
+    ],
+    'values.attributes' => [
+     [
+      'ExcludeKeysAssociativeFilter',
+      'options' => [
+       'excludeKeys' => [
+        'price',
+        'country_availability',
+       ],
+      ],
+     ],
+    ],
+   ];
+  }
 
-		...
-	}		
+  ...
+ }  
 ```
 
 ## Create an importer
@@ -774,64 +774,64 @@ Check out an example of the following dictionary:
 Create a business model to import data to the database. Usually, it's called Importer. It must be implemented at the project level.
 
 ```php
-	<?php
+ <?php
 
-	namespace Pyz\Zed\MyModule\Business\Importer;
+ namespace Pyz\Zed\MyModule\Business\Importer;
 
-	use Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface;
-	use Spryker\Zed\DataImport\Business\Model\DataSet\DataSetStepBrokerInterface;
-	use Spryker\Zed\DataImport\Business\Model\Publisher\DataImporterPublisherInterface;
-	use Spryker\Zed\EventBehavior\EventBehaviorConfig;
+ use Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface;
+ use Spryker\Zed\DataImport\Business\Model\DataSet\DataSetStepBrokerInterface;
+ use Spryker\Zed\DataImport\Business\Model\Publisher\DataImporterPublisherInterface;
+ use Spryker\Zed\EventBehavior\EventBehaviorConfig;
 
-	class Importer implements ImporterInterface
-	{
-		/**
-		 * @var \Spryker\Zed\DataImport\Business\Model\Publisher\DataImporterPublisherInterface
-		 */
-		protected $dataImporterPublisher;
+ class Importer implements ImporterInterface
+ {
+  /**
+   * @var \Spryker\Zed\DataImport\Business\Model\Publisher\DataImporterPublisherInterface
+   */
+  protected $dataImporterPublisher;
 
-		/**
-		 * @var \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetStepBrokerInterface
-		 */
-		private $dataSetStepBroker;
+  /**
+   * @var \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetStepBrokerInterface
+   */
+  private $dataSetStepBroker;
 
-		/**
-		 * @var \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface
-		 */
-		private $dataSet;
+  /**
+   * @var \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface
+   */
+  private $dataSet;
 
-		/**
-		 * @param \Spryker\Zed\DataImport\Business\Model\Publisher\DataImporterPublisherInterface $dataImporterPublisher
-		 * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetStepBrokerInterface $dataSetStepBroker
-		 * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-		 */
-		public function __construct(
-			DataImporterPublisherInterface $dataImporterPublisher,
-			DataSetStepBrokerInterface $dataSetStepBroker,
-			DataSetInterface $dataSet
-		) {
-			$this->dataImporterPublisher = $dataImporterPublisher;
-			$this->dataSetStepBroker = $dataSetStepBroker;
-			$this->dataSet = $dataSet;
-		}
+  /**
+   * @param \Spryker\Zed\DataImport\Business\Model\Publisher\DataImporterPublisherInterface $dataImporterPublisher
+   * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetStepBrokerInterface $dataSetStepBroker
+   * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
+   */
+  public function __construct(
+   DataImporterPublisherInterface $dataImporterPublisher,
+   DataSetStepBrokerInterface $dataSetStepBroker,
+   DataSetInterface $dataSet
+  ) {
+   $this->dataImporterPublisher = $dataImporterPublisher;
+   $this->dataSetStepBroker = $dataSetStepBroker;
+   $this->dataSet = $dataSet;
+  }
 
-		/**
-		 * @param array $data
-		 *
-		 * @return void
-		 */
-		public function import(array $data): void
-		{
-			EventBehaviorConfig::disableEvent();
-			foreach ($data as $item) {
-				$this->dataSet->exchangeArray($item);
-				$this->dataSetStepBroker->execute($this->dataSet);
-			}
+  /**
+   * @param array $data
+   *
+   * @return void
+   */
+  public function import(array $data): void
+  {
+   EventBehaviorConfig::disableEvent();
+   foreach ($data as $item) {
+    $this->dataSet->exchangeArray($item);
+    $this->dataSetStepBroker->execute($this->dataSet);
+   }
 
-			EventBehaviorConfig::enableEvent();
-			$this->dataImporterPublisher->triggerEvents();
-		}
-	}
+   EventBehaviorConfig::enableEvent();
+   $this->dataImporterPublisher->triggerEvents();
+  }
+ }
 ```
 
 ### Prepare Publisher and `datasetStepBroker`
@@ -843,116 +843,116 @@ The importer business model expects three parameters in the constructor. You nee
 1. Update the business factory with the following methods:
 
 ```php
-	<?php
-	...
+ <?php
+ ...
 
-	class MyModuleBusinessFactory extends SprykerMyModuleBusinessFactory
-	{
-		...
+ class MyModuleBusinessFactory extends SprykerMyModuleBusinessFactory
+ {
+  ...
 
-		public function createCategoryImporter()
-		{
-			return new Importer(
-				$this->createDataImporterPublisher(),
-				$this->createCategoryImportDataSetStepBroker(),
-				$this->createDataSet()
-			);
-		}
+  public function createCategoryImporter()
+  {
+   return new Importer(
+    $this->createDataImporterPublisher(),
+    $this->createCategoryImportDataSetStepBroker(),
+    $this->createDataSet()
+   );
+  }
 
-		protected function createDataImporterPublisher()
-		{
-			return new DataImporterPublisher($this->createDataImportToEventBridge());
-		}
+  protected function createDataImporterPublisher()
+  {
+   return new DataImporterPublisher($this->createDataImportToEventBridge());
+  }
 
-		protected function createCategoryImportDataSetStepBroker()
-		{
-			$dataSetStepBroker = new DataSetStepBroker();
-			$dataSetStepBroker->addStep($this->createCategoryWriteStep());
-			return $dataSetStepBroker;
-		}
+  protected function createCategoryImportDataSetStepBroker()
+  {
+   $dataSetStepBroker = new DataSetStepBroker();
+   $dataSetStepBroker->addStep($this->createCategoryWriteStep());
+   return $dataSetStepBroker;
+  }
 
-		protected function createCategoryWriteStep()
-		{
-			return new CategoryWriterStep($this->createCategoryReader());
-		}
+  protected function createCategoryWriteStep()
+  {
+   return new CategoryWriterStep($this->createCategoryReader());
+  }
 
-		protected function createCategoryReader(): CategoryReader
-		{
-			return new CategoryReader();
-		}
+  protected function createCategoryReader(): CategoryReader
+  {
+   return new CategoryReader();
+  }
 
-		protected function createDataSet()
-		{
-			return new DataSet();
-		}
+  protected function createDataSet()
+  {
+   return new DataSet();
+  }
 
-		...
-	}
+  ...
+ }
 
-	...
+ ...
 ```
 
 2. Create a facade method that uses the importer.
 
 ```php
-	<?php
+ <?php
 
-	...
+ ...
 
-	class MyModuleFacade extends SprykerMyModuleFacade implements MyModuleFacadeInterface
-	{
-		...
+ class MyModuleFacade extends SprykerMyModuleFacade implements MyModuleFacadeInterface
+ {
+  ...
 
-		/**
-		 * @param array $data
-		 *
-		 * @return void
-		 */
-		public function importCategories(array $data)
-		{
-			$this->getFactory()
-				->createCategoryImporter()
-				->import($data);
-		}
+  /**
+   * @param array $data
+   *
+   * @return void
+   */
+  public function importCategories(array $data)
+  {
+   $this->getFactory()
+    ->createCategoryImporter()
+    ->import($data);
+  }
 
-		...
-	}
+  ...
+ }
 ```
 
 3. Update the communication layer and create the plugin to import categories.
 
 ```php
-	class CategoryDataImporterPlugin extends AbstractPlugin
-	{
-		/**
-		 * @param array $data
-		 *
-		 * @return void
-		 */
-		public function import(array $data): void
-		{
-			$this->getFacade()
-				->importCategories($data);
-		}
-	}
+ class CategoryDataImporterPlugin extends AbstractPlugin
+ {
+  /**
+   * @param array $data
+   *
+   * @return void
+   */
+  public function import(array $data): void
+  {
+   $this->getFacade()
+    ->importCategories($data);
+  }
+ }
 ```
 
 4. Add `CategoryDataImporterPlugin` to communication dependencies.
 
 ```php
-	/**
-	 * @param \Spryker\Zed\Kernel\Container $container
-	 *
-	 * @return \Spryker\Zed\Kernel\Container
-	 */
-	protected function addCategoryDataImporterPlugin(Container $container): Container
-	{
-		$container[static::MY_MODULE_CATEGORY_IMPORTER_PLUGIN] = function () {
-			return new CategoryDataImporterPlugin();
-		};
+ /**
+  * @param \Spryker\Zed\Kernel\Container $container
+  *
+  * @return \Spryker\Zed\Kernel\Container
+  */
+ protected function addCategoryDataImporterPlugin(Container $container): Container
+ {
+  $container[static::MY_MODULE_CATEGORY_IMPORTER_PLUGIN] = function () {
+   return new CategoryDataImporterPlugin();
+  };
 
-		return $container;
-	}
+  return $container;
+ }
 ```
 
 ### Prepare WriteStream
@@ -960,98 +960,98 @@ The importer business model expects three parameters in the constructor. You nee
 To save the categories into the database, create your own `WriteStream`. `SprykerMiddleware\Shared\Process\Stream\WriteStreamInterface` needs to be implemented.
 
 ```php
-	class DataImportWriteStream implements WriteStreamInterface
-	{
-		/**
-		 * @var \SprykerEco\Zed\MyModule\Dependency\Plugin\DataImporterPluginInterface
-		 */
-		protected $dataImporterPlugin;
+ class DataImportWriteStream implements WriteStreamInterface
+ {
+  /**
+   * @var \SprykerEco\Zed\MyModule\Dependency\Plugin\DataImporterPluginInterface
+   */
+  protected $dataImporterPlugin;
 
-		/**
-		 * @var array
-		 */
-		protected $data = [];
+  /**
+   * @var array
+   */
+  protected $data = [];
 
-		/**
-		 * @param \SprykerEco\Zed\MyModule\Dependency\Plugin\DataImporterPluginInterface $dataImporterPlugin
-		 */
-		public function __construct(DataImporterPluginInterface $dataImporterPlugin)
-		{
-			$this->dataImporterPlugin = $dataImporterPlugin;
-		}
+  /**
+   * @param \SprykerEco\Zed\MyModule\Dependency\Plugin\DataImporterPluginInterface $dataImporterPlugin
+   */
+  public function __construct(DataImporterPluginInterface $dataImporterPlugin)
+  {
+   $this->dataImporterPlugin = $dataImporterPlugin;
+  }
 
-		/**
-		 * @return bool
-		 */
-		public function open(): bool
-		{
-			$this->data = [];
-			return true;
-		}
+  /**
+   * @return bool
+   */
+  public function open(): bool
+  {
+   $this->data = [];
+   return true;
+  }
 
-		/**
-		 * @return bool
-		 */
-		public function close(): bool
-		{
-			return true;
-		}
+  /**
+   * @return bool
+   */
+  public function close(): bool
+  {
+   return true;
+  }
 
-		/**
-		 * @param int $offset
-		 * @param int $whence
-		 *
-		 * @throws \SprykerMiddleware\Zed\Process\Business\Exception\MethodNotSupportedException
-		 *
-		 * @return int
-		 */
-		public function seek(int $offset, int $whence): int
-		{
-			throw new MethodNotSupportedException();
-		}
+  /**
+   * @param int $offset
+   * @param int $whence
+   *
+   * @throws \SprykerMiddleware\Zed\Process\Business\Exception\MethodNotSupportedException
+   *
+   * @return int
+   */
+  public function seek(int $offset, int $whence): int
+  {
+   throw new MethodNotSupportedException();
+  }
 
-		/**
-		 * @throws \SprykerMiddleware\Zed\Process\Business\Exception\MethodNotSupportedException
-		 *
-		 * @return bool
-		 */
-		public function eof(): bool
-		{
-			throw new MethodNotSupportedException();
-		}
+  /**
+   * @throws \SprykerMiddleware\Zed\Process\Business\Exception\MethodNotSupportedException
+   *
+   * @return bool
+   */
+  public function eof(): bool
+  {
+   throw new MethodNotSupportedException();
+  }
 
-		/**
-		 * @param array $data
-		 *
-		 * @return int
-		 */
-		public function write(array $data): int
-		{
-			$this->data[] = $data;
-			return 1;
-		}
+  /**
+   * @param array $data
+   *
+   * @return int
+   */
+  public function write(array $data): int
+  {
+   $this->data[] = $data;
+   return 1;
+  }
 
-		/**
-		 * @return bool
-		 */
-		public function flush(): bool
-		{
-			$this->dataImporterPlugin->import($this->data);
-			return true;
-		}
-	}
+  /**
+   * @return bool
+   */
+  public function flush(): bool
+  {
+   $this->dataImporterPlugin->import($this->data);
+   return true;
+  }
+ }
 ```
 
 As the parameter for `DataImportWriteStream`, use `CategoryDataImporterPlugin`. Add the method to your `BusinessFactory`.
 
 ```php
-	/*
-	 * @return \SprykerMiddleware\Shared\Process\Stream\WriteStreamInterface
-	 */
-	public function createCategoryWriteStream(): WriteStreamInterface
-	{
-		return new DataImportWriteStream($this->categoryImporterPlugin);
-	}
+ /*
+  * @return \SprykerMiddleware\Shared\Process\Stream\WriteStreamInterface
+  */
+ public function createCategoryWriteStream(): WriteStreamInterface
+ {
+  return new DataImportWriteStream($this->categoryImporterPlugin);
+ }
 ```
 
 ### Update process plugins
@@ -1059,66 +1059,66 @@ As the parameter for `DataImportWriteStream`, use `CategoryDataImporterPlugin`. 
 1. Update process plugins as follows:
 
 ```php
-	class MyModuleDependencyProvider {
+ class MyModuleDependencyProvider {
 
-	...
+ ...
 
-	/**
-	 * @param \Spryker\Zed\Kernel\Container $container
-	 *
-	 * @return \Spryker\Zed\Kernel\Container
-	 */
-	protected function addCategoryImportProcessPlugins(Container $container): Container
-	{
-		...
+ /**
+  * @param \Spryker\Zed\Kernel\Container $container
+  *
+  * @return \Spryker\Zed\Kernel\Container
+  */
+ protected function addCategoryImportProcessPlugins(Container $container): Container
+ {
+  ...
 
-		$container[static::CATEGORY_IMPORT_OUTPUT_STREAM_PLUGIN] = function () {
-			return new CategoryWriteStreamPlugin();
-		};
+  $container[static::CATEGORY_IMPORT_OUTPUT_STREAM_PLUGIN] = function () {
+   return new CategoryWriteStreamPlugin();
+  };
 
-		...
+  ...
 
-		return $container;
-	}
+  return $container;
+ }
 ```
 
 2. Update the communication factory:
 
 ```php
-	/**
-	 * @return \SprykerMiddleware\Zed\Process\Dependency\Plugin\Stream\OutputStreamPluginInterface
-	 */
-	public function getCategoryImportOutputStreamPlugin(): OutputStreamPluginInterface
-	{
-		return $this->getProvidedDependency(MyModuleDependencyProvide::CATEGORY_IMPORT_OUTPUT_STREAM_PLUGIN);
-	}
+ /**
+  * @return \SprykerMiddleware\Zed\Process\Dependency\Plugin\Stream\OutputStreamPluginInterface
+  */
+ public function getCategoryImportOutputStreamPlugin(): OutputStreamPluginInterface
+ {
+  return $this->getProvidedDependency(MyModuleDependencyProvide::CATEGORY_IMPORT_OUTPUT_STREAM_PLUGIN);
+ }
 ```
 
 3. Update the Configuration plugin:
 
 ```php
-	class CategoryImportConfigurationPlugin extends AbstractPlugin implements ProcessConfigurationPluginInterface
-	{
-		protected const PROCESS_NAME = 'CATEGORY_IMPORT_PROCESS';
+ class CategoryImportConfigurationPlugin extends AbstractPlugin implements ProcessConfigurationPluginInterface
+ {
+  protected const PROCESS_NAME = 'CATEGORY_IMPORT_PROCESS';
 
-		/**
-		 * @return string
-		 */
-		public function getProcessName(): string
-		{
-			return static::PROCESS_NAME;
-		}
+  /**
+   * @return string
+   */
+  public function getProcessName(): string
+  {
+   return static::PROCESS_NAME;
+  }
 
 
-		/**
-		 * @return \SprykerMiddleware\Zed\Process\Dependency\Plugin\Stream\OutputStreamPluginInterface
-		 */
-		public function getOutputStreamPlugin(): OutputStreamPluginInterface
-		{
-			return $this->getFactory()
-				->getCategoryImportOutputStreamPlugin();
-		}
-	}
+  /**
+   * @return \SprykerMiddleware\Zed\Process\Dependency\Plugin\Stream\OutputStreamPluginInterface
+   */
+  public function getOutputStreamPlugin(): OutputStreamPluginInterface
+  {
+   return $this->getFactory()
+    ->getCategoryImportOutputStreamPlugin();
+  }
+ }
 ```
 
 If the configuration plugin is updated accordingly, category import from `ReadStream` to `WriteStream` is executed whenever the `CATEGORY_IMPORT_PROCESS` command is run.

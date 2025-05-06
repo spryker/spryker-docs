@@ -55,12 +55,13 @@ vendor/bin/console scheduler:setup
 $config[SchedulerConstants::ENABLED_SCHEDULERS] = [
     SchedulerConfig::SCHEDULER_JENKINS, //jenkins
     SchedulerConfig::SCHEDULER_OWN, //crontab
-	SchedulerConfig::SCHEDULER_JENKINS_SECOND, //jenkinsSecond
+ SchedulerConfig::SCHEDULER_JENKINS_SECOND, //jenkinsSecond
 ];
 
 // Sets up schedulers that will be executed
 vendor/bin/console scheduler:setup -s {scheduler_name} -s ...
 ```
+
 Suspend jobs:
 
 ```php
@@ -73,6 +74,7 @@ vendor/bin/console scheduler:suspend -s {scheduler_name} -s ...
 // Suspends one or several jobs for specific scheduler
 vendor/bin/console scheduler:suspend -s {scheduler_name} -j {job_name}
 ```
+
 Resume jobs:
 
 ```php
@@ -85,6 +87,7 @@ vendor/bin/console scheduler:resume -s {scheduler_name} -s ...
 // Resumes one or several jobs for specific scheduler
 vendor/bin/console scheduler:resume -s {scheduler_name} -j {job_name} -j ...
 ```
+
 Clean jobs:
 
 ```php

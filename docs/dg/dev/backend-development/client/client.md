@@ -26,7 +26,7 @@ To learn more about the Spryker applications and their layers, see [Conceptual O
 
 End customers interact only with the frontend application. The frontend application needs to get data from the storage, send search requests to the search engine, and send the customer requests to the Commerce OS whenever needed, like adding to the cart, because the Commerce OS performs all the business logic.
 
-The _client's_ job is to connect the frontend application to all of the surrounding resources needed for the frontend application to work. These resources include the Commerce OS, Storage, and Search. It also contains some other resources like Session and Queues.
+The *client's* job is to connect the frontend application to all of the surrounding resources needed for the frontend application to work. These resources include the Commerce OS, Storage, and Search. It also contains some other resources like Session and Queues.
 
 For each of these resources, there is a client. So, it's not only one client, but many of them. Each one of them is responsible for a specific resource or functionality. Spryker, by default, is shipped with the following clients:
 
@@ -109,8 +109,8 @@ The real execution time in your project depends on the environment, the performa
 
 The request from Yves to Zed involves two important classes:
 
-* The _stub_ represents the remote methods in the client.
-* The _gateway controller_ represents the entry point on the Zed side.
+* The *stub* represents the remote methods in the client.
+* The *gateway controller* represents the entry point on the Zed side.
 
 ## Next step
 

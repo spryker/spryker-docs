@@ -14,7 +14,7 @@ Oryx components are web components built with [Lit](https://lit.dev). Lit's a li
 
 This document describes how to implement a component using Lit. Lit's standard concepts are not covered. To learn more about them, see [Components overview](https://lit.dev/docs/components/overview/).
 
-We use the product _ID_ component as an example. It is a simple component that shows the basic concepts. The component already exists in the Oryx product package.
+We use the product *ID* component as an example. It is a simple component that shows the basic concepts. The component already exists in the Oryx product package.
 
 In Oryx, components are organized in folders, like `src/product/id`, with some component logic located in separate files. However, you can create a component as a single file. To allow for lazy loading of the component, you still need to separate out its definition.
 
@@ -42,13 +42,13 @@ Oryx is built in TypeScript with strict typing configuration. This ensures high-
 
 ### 2. Integrating backend data
 
-In this step, you're going to resolve the product data and render the `id` field of the data. The product data comes from the backend API and is loaded asynchronously. Once the data is loaded, it's part of the _application state_. The state might change over time—for example, when a user navigates from one product page to another. To be able to render the state efficiently, the component must support [reactivity](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html).
+In this step, you're going to resolve the product data and render the `id` field of the data. The product data comes from the backend API and is loaded asynchronously. Once the data is loaded, it's part of the *application state*. The state might change over time—for example, when a user navigates from one product page to another. To be able to render the state efficiently, the component must support [reactivity](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html).
 
 Oryx provides standard [application layers](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/reactivity/key-concepts-of-reactivity.html#application-layers) to load and resolve the backend data. The service layer is intended to be used by components, and product components interact with `ProductService`. The integration with the product service and reactivity is simplified by using `ProductMixin`. Mixins provide component properties and methods, which you can use in components.
 
 {% info_block infoBox "Inheritance versus composition" %}
 
-While component classes extend from a base class, Oryx mostly avoids inheritance and uses the _composition_ design pattern. Not all the component logic can be composed, which is why mixins are used.
+While component classes extend from a base class, Oryx mostly avoids inheritance and uses the *composition* design pattern. Not all the component logic can be composed, which is why mixins are used.
 
 {% endinfo_block %}
 
@@ -67,8 +67,8 @@ export class ProductIdComponent extends ProductMixin(LitElement) {
 
 This code shows the ease of use, but there's a lot going on in the background:
 
-1. The product _context_ (sku) is resolved from the URL or any of the component's ancestor DOM elements, depending on where the component is used. When the component is used inside a product card or cart entry, the `sku` is added as an attribute. When the component is used on the Product Details Page, the `sku` is resolved from the URL. The current locale and currency are used as additional context. When the context is changing, the product data is reloaded automatically.
-2. `ProductService` is used to resolve the product data from the application state. When the product is not yet loaded from the backend, the service uses the `ProductAdapter` adapter to fetch the data. The HTTP response is converted to meet the client-side product model. _Command and Query_, Oryx's state management solution, prevents data reloading unless explicitly requested.
+1. The product *context* (sku) is resolved from the URL or any of the component's ancestor DOM elements, depending on where the component is used. When the component is used inside a product card or cart entry, the `sku` is added as an attribute. When the component is used on the Product Details Page, the `sku` is resolved from the URL. The current locale and currency are used as additional context. When the context is changing, the product data is reloaded automatically.
+2. `ProductService` is used to resolve the product data from the application state. When the product is not yet loaded from the backend, the service uses the `ProductAdapter` adapter to fetch the data. The HTTP response is converted to meet the client-side product model. *Command and Query*, Oryx's state management solution, prevents data reloading unless explicitly requested.
 3. The `$product` signal subscribes to the application state using `ProductService`. Whenever the product state is changed, the [signal](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/reactivity/signals.html) updates the associated DOM elements that are affected by the data.
 
 The preceding steps are a commonly used pattern across all Oryx domain components. It ensures efficient consumption of backend APIs and rendering of DOM elements.
@@ -105,7 +105,7 @@ You can provide default options in the component, in feature sets, or in the app
 
 ### 4. Styling the component DOM
 
-Oryx components are styled with standard CSS. The components have a separate DOM attached using the open [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM). The shadow DOM encapsulates the styles so that they cannot _leak_ into other components and prevents global styles from cascading down to the component.
+Oryx components are styled with standard CSS. The components have a separate DOM attached using the open [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM). The shadow DOM encapsulates the styles so that they cannot *leak* into other components and prevents global styles from cascading down to the component.
 
 Styling components in the shadow DOM is a big topic we recommend studying separately. However, there are a few things to know when it comes to Oryx and styling components:
 
@@ -132,7 +132,7 @@ If you do not use `ContentMixin`, you can use `I18nMixin` instead. If you choose
 
 ### 6. Using services inside the component
 
-You've seen how `ProductMixin` resolves the product data and hides the integration with the `ProductService`. It is also common to use services directly in components. Oryx _injects_ services using [dependency injection (DI)](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html). DI provides decoupling of components and shared business logic. This is a common design pattern that separates concerns and lets you customize services without touching the components or other depending services.
+You've seen how `ProductMixin` resolves the product data and hides the integration with the `ProductService`. It is also common to use services directly in components. Oryx *injects* services using [dependency injection (DI)](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html). DI provides decoupling of components and shared business logic. This is a common design pattern that separates concerns and lets you customize services without touching the components or other depending services.
 
 The Oryx DI container is used to register and resolve services using a token. You can read more about resolving services in [Dependency Injection: Using services](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-using-services.html). The following example shows how the pricing service is resolved.
 
@@ -155,7 +155,7 @@ If your application needs to be indexed by crawlers, such as Google Search or Pi
 
 When a component is server-side rendered, some of the browser APIs are not available. Most commonly known are the `window` and `document` objects. Take this into account when implementing custom components.
 
-Oryx renders pages on the server and returns the minimum amount of JavaScript needed. A component doesn't need JavaScript initially, but when a user start interacting with it, or when the component needs to reflect a certain application state, additional JavaScript needs to be loaded. Loading the component logic at the client side is called _hydration_. Because the component logic is loaded over the network and initialized in the application, hydration is costly. Additionally, the component might need to fetch data from a backend API. Oryx therefore tries to avoid or delay hydration till it's needed.
+Oryx renders pages on the server and returns the minimum amount of JavaScript needed. A component doesn't need JavaScript initially, but when a user start interacting with it, or when the component needs to reflect a certain application state, additional JavaScript needs to be loaded. Loading the component logic at the client side is called *hydration*. Because the component logic is loaded over the network and initialized in the application, hydration is costly. Additionally, the component might need to fetch data from a backend API. Oryx therefore tries to avoid or delay hydration till it's needed.
 
 When developing a component, you need to configure the hydration trigger using the `@hydrate` decorator that can take an event or context. The following example shows how to set up the component to be hydrated when the context is changed:
 

@@ -42,6 +42,7 @@ This guide aims to illustrate how to integrate React within Spryker Frontend.
   ...
 }
 ```
+
 {% endinfo_block %}
 
 2. Update webpack configuration.
@@ -96,6 +97,7 @@ By doing this, Webpack will know to place React source code inside the vendor ch
     ```php
     import(/* webpackMode: "lazy" */'./react-component');
     ```
+
       * `react-component.tsx` - contains the component implementation.
 
 ```php

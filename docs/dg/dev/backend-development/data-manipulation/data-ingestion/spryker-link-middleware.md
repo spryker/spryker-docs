@@ -521,7 +521,7 @@ Many predefined validators can be used in `ValidationRuleSet`.
 
 | VALIDATOR NAME | DESCRIPTION | OPTIONS |
 | --- | --- | --- |
-| DateTime | Validates that a value is a valid _datetime_, meaning a string (or an object that can be cast into a string) that follows a specific format. | format (opt, string) |
+| DateTime | Validates that a value is a valid *datetime*, meaning a string (or an object that can be cast into a string) that follows a specific format. | format (opt, string) |
 | EqualTo | Validates that a value is equal to another value, defined in the options. | value (req, mixed) |
 | GreaterOrEqualThan | Validates that a value is equal to or greater than another value, defined in the options. | value (req, mixed) |
 | GreaterThan | Validates that a value is greater than another value, defined in the options. | value (req, mixed) |

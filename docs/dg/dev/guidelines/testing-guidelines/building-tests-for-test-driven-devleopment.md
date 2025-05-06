@@ -81,6 +81,7 @@ class StringReverserDependencyProvider extends AbstractBundleDependencyProvider
 
 4. Add the `Business` folder inside `tests/PyzTest/Zed/StringReverser`.
 5. From `Codeception`, generate the needed test classes:
+
 ```bash
 vendor/bin/codecept build -c tests/PyzTest/Zed/StringReverser
 ```
@@ -162,11 +163,13 @@ Data builders cannot even be generated if the transfer object is not there. In `
 ```
 
 9. Generate the transfer object first:
+
 ```bash
 console transfer:generate
 ```
 
 10. Generate the data builder:
+
 ```bash
 console transfer:databuilder:generate
 ```
@@ -301,6 +304,7 @@ class StringReverser implements StringReverserInterface
 </details>
 
 3. Run the test again
+
 ```bash
 vendor/bin/codecept run -c tests/PyzTest/Zed/StringReverser
 ```

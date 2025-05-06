@@ -29,7 +29,7 @@ Before adding a component, you need to locate it. There are 3 helper functions p
 The functions are implemented similarly and have the same arguments:
 
 * **name** (required): Specifies the component name,
-* **module** (optional): Specifies the name of the Spryker module where the component is implemented. Use this argument if you have two or more components with the same name and at the same level in different modules. If you don't pass this argument, _ShopUi_ is used by default.
+* **module** (optional): Specifies the name of the Spryker module where the component is implemented. Use this argument if you have two or more components with the same name and at the same level in different modules. If you don't pass this argument, *ShopUi* is used by default.
 
 The function returns the fully qualified component name that can be used in Twig, for example:
 
@@ -41,16 +41,16 @@ The function returns the fully qualified component name that can be used in Twig
 
 ## Arguments
 
-_Include_ or _Embed_ needs to be called with 2 arguments:
+*Include* or *Embed* needs to be called with 2 arguments:
 
 * `with {}`: Defines the context to pass to the component;
-* `only` (_Important_): This mandatory attribute closes the context so that everything you pass via with `{}` is passed to the included object _only_.
+* `only` (*Important*): This mandatory attribute closes the context so that everything you pass via with `{}` is passed to the included object *only*.
 
-The `with{}` attribute must pass the objects and variables that are defined in the component. They need to follow the contracts defined by the component itself. The most important of them is the _data_ object that defines the data contract.
+The `with{}` attribute must pass the objects and variables that are defined in the component. They need to follow the contracts defined by the component itself. The most important of them is the *data* object that defines the data contract.
 
 {% info_block errorBox %}
 
-You must always pass _required_ properties; otherwise, the component you are including will fail.
+You must always pass *required* properties; otherwise, the component you are including will fail.
 
 {% endinfo_block %}
 
@@ -63,7 +63,7 @@ The most common attributes to include are:
 
 {% info_block infoBox %}
 
-For more details, see section _Twig_ in [Atomic Frontend](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/atomic-frontend.html#twig).
+For more details, see section *Twig* in [Atomic Frontend](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/atomic-frontend.html#twig).
 
 {% endinfo_block %}
 

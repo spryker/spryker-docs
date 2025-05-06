@@ -108,6 +108,7 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Collate:
 
 ### DataTransformerConfiguratorConfig
+
 - `configurator`—the object with the Data Transformer configurator type and additional properties.  
 - `filter`—the object based on a specific data property (`filterId`) that defines the properties on which the initial data object is filtered via `DataTransformerFilterConfig`.
 - `search`—defines the properties on which the initial data object is filtered via `DataTransformerFilterConfig`.  
@@ -118,6 +119,7 @@ Below you can find interfaces for the Data Transformer Collate:
 `type`—the declared name of the module whose data needs to be transformed.  
 
 ### DataTransformerFilterConfig
+
 - `type`—the name of a filter, for example, `range`.  
 - `propNames`—the array with the property names to which the filter is applied.
 

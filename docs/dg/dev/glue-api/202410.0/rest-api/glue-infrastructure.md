@@ -63,7 +63,7 @@ Every request needs to be routed to the corresponding `Resource` module responsi
 
 {% info_block infoBox %}
 
-The plugin should not map the _OPTIONS_ verb which is mapped automatically.
+The plugin should not map the *OPTIONS* verb which is mapped automatically.
 
 {% endinfo_block %}
 
@@ -71,7 +71,7 @@ The plugin must provide routing information for the following:
 
 | RESOURCE | DESCRIPTION |
 | --- | --- |
-| Resource Type | Type of the resource implemented by the current `Resource` module. Resource types are extracted by Glue from the request URL. For example, if the URL is `/carts/1`, the resource type is `carts`. To be able to process calls to this URL, Glue will need a route plugin for the resource type _carts_. |
+| Resource Type | Type of the resource implemented by the current `Resource` module. Resource types are extracted by Glue from the request URL. For example, if the URL is `/carts/1`, the resource type is `carts`. To be able to process calls to this URL, Glue will need a route plugin for the resource type *carts*. |
 | Controller Name | Name of the controller that handles a specific resource type. |
 | Mapping of Verbs to Actions | List of REST verbs that the resource supports and the respective controller actions used to handle them. Allowed verbs are GET, POST, PATCH, and DELETE. The OPTIONS verb is supported by all resources and should not be mapped. |
 | Resource Attributes <br>Transfer Class Name | FQCN of the Resource Attributes Transfer that is used to handle request attributes for the given resource type. |
@@ -81,9 +81,9 @@ Each route plugin implements `ResourceRoutePluginInterface`, which provides a se
 
 | FUNCTION  |  DESCRIPTION |  RETURN TYPE |  EXAMPLE |
 | --- | --- | --- | --- |
-| `getResourceType` | 	Gets the resource type. | string | _carts_ |
+| `getResourceType` | 	Gets the resource type. | string | *carts* |
 | `configure` | Configures a mapping of the HTTP verbs supported by the resource to the corresponding controller methods responsible for handling them. Also, it defines which of the verbs require authentication to use. | `ResourceRouteCollectionInterface` |  |
-| `getController` | Gets the name of the resource controller responsible for handling requests to the resource. The name must be provided in _kebab-case_, hyphen-separated | string | If the controller name is _CartsResourceController.php_, this function should return _carts-resource_. |
+| `getController` | Gets the name of the resource controller responsible for handling requests to the resource. The name must be provided in *kebab-case*, hyphen-separated | string | If the controller name is *CartsResourceController.php*, this function should return *carts-resource*. |
 | `getResourceAttributesClassName` | Gets the FQCN of the Resource Attributes Transfer that is used to handle request attributes for the given resource type. | string | See details in [5. Describe Fields for Post and Patch Calls](/docs/dg/dev/glue-api/{{page.version}}/glue-api-tutorials/implement-a-rest-api-resource.html#describe-fields-for-post-and-patch-calls). |
 
 For more details on how to implement a route plugin, see [6. Route Requests to Your Controller](/docs/dg/dev/glue-api/{{page.version}}/glue-api-tutorials/implement-a-rest-api-resource.html#route-requests-to-your-controller).
@@ -110,13 +110,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 ### Resource modules
 
-A _Resource module_ is a module that implements a single resource or a set of resources. It is responsible for accepting a request in the form of _Request Objects_ and providing responses in the form of _Response Objects_. For this purpose, the module can communicate with the Storage or Search, for which purpose it implements a [Client](/docs/dg/dev/backend-development/client/client.html). It can also communicate with the Spryker Commerce OS (Zed), however, it's recommended to avoid round trips to the database as much as possible as that can reduce API performance considerably.
+A *Resource module* is a module that implements a single resource or a set of resources. It is responsible for accepting a request in the form of *Request Objects* and providing responses in the form of *Response Objects*. For this purpose, the module can communicate with the Storage or Search, for which purpose it implements a [Client](/docs/dg/dev/backend-development/client/client.html). It can also communicate with the Spryker Commerce OS (Zed), however, it's recommended to avoid round trips to the database as much as possible as that can reduce API performance considerably.
 
-Resource modules must implement all logic related to processing a request. It is not recommended having any of the Business Logic, or a part of it, in the _GlueApplication Module_. In case you need to extend any of the built-in Glue functionality, it's always safer to extend the relevant _Resource module_ than infrastructure.
+Resource modules must implement all logic related to processing a request. It is not recommended having any of the Business Logic, or a part of it, in the *GlueApplication Module*. In case you need to extend any of the built-in Glue functionality, it's always safer to extend the relevant *Resource module* than infrastructure.
 
 #### Module structure
 
-By default, all Resource modules are located in `vendor/spryker/resources-rest-api` at the core level. At the project level, you can place your Resource module implementations in `src/Pyz/Glue/ResourcesRestApi`. The naming convention for such modules is _**Resources**RestApi_, where **Resources** is a name of the feature that the module implements.
+By default, all Resource modules are located in `vendor/spryker/resources-rest-api` at the core level. At the project level, you can place your Resource module implementations in `src/Pyz/Glue/ResourcesRestApi`. The naming convention for such modules is ***Resources**RestApi*, where **Resources** is a name of the feature that the module implements.
 
 Recommended module structure:
 
@@ -142,6 +142,7 @@ The resulting folder structure on the example of the WishlistsRestApi Resource m
 ![Wishlists REST API](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/wishlists-rest-api.png)
 
 #### Resource controller
+
 This controller provides actions for all HTTP verbs that a resource implements. It is responsible for:
 * Handling requests for a specific resource.
 * Validating data.
@@ -156,7 +157,7 @@ Each resource controller must extend `\Spryker\Glue\Kernel\Controller\AbstractCo
 
 #### Generic rest request
 
-After deserializing a request, Glue passes it to _Resource modules_ as an internal API request representation object. It stores all information that relates to the request. The object is passed directly to the resource controller class and supports `Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface`.
+After deserializing a request, Glue passes it to *Resource modules* as an internal API request representation object. It stores all information that relates to the request. The object is passed directly to the resource controller class and supports `Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface`.
 
 The interface provides the following helper methods:
 
@@ -183,7 +184,7 @@ The interface provides the following helper methods:
 | --- | --- | --- | --- |
 | `addResource` | `addResource(RestResourceInterface $restResource): self` | Adds a resource to the response object. | The `$restResource` parameter specifies an instance of the `RestResourceInterface` interface that represents the resource to add. |
 | `addError` | `addError(RestErrorMessageTransfer $error): self` | Adds a business logic error to the response. | A business logic error is any error that occurred during request procession but does not relate to the REST request format. For example, such an error can occur when a resource with the specified ID is not found or when an attempt is made to assign a value that is not allowed by database or other restrictions. The `$error` parameter specifies an instance of the `RestErrorMessageTransfer` interface that contains information about the error (HTTP status, error code and error message). |
-| `addLink` | `addLink(string $name, string $uri): self` | Adds a link to the response. | The parameters are as follows:<br><ul><li>`$name` - specifies a link name. Possible values: _first, last, next, prev, related, self, href, meta_.</li><li>`$uri` - specifies a link URL without the domain part.</li></ul>For example, if you specify first for `$name` and `/catalog-search?q=canon&include=&page[offset]=0&page[limit]=12` for URL, the link will look as follows in the response: <code><br>{<br>"data": {...},<br>"links": {<br>...<br>"first": "http://mysprykershop.com/catalog-search?q=canon&amp;include=&amp;page[offset]=0&amp;page[limit]=12",<br>...<br>}<br>}</code> |
+| `addLink` | `addLink(string $name, string $uri): self` | Adds a link to the response. | The parameters are as follows:<br><ul><li>`$name` - specifies a link name. Possible values: *first, last, next, prev, related, self, href, meta*.</li><li>`$uri` - specifies a link URL without the domain part.</li></ul>For example, if you specify first for `$name` and `/catalog-search?q=canon&include=&page[offset]=0&page[limit]=12` for URL, the link will look as follows in the response: <code><br>{<br>"data": {...},<br>"links": {<br>...<br>"first": "http://mysprykershop.com/catalog-search?q=canon&amp;include=&amp;page[offset]=0&amp;page[limit]=12",<br>...<br>}<br>}</code> |
 | `setStatus` | `setStatus(int $status): self` |  Sets the HTTP status of the response (for example, **200 OK**).| The `status`parameter specifies the HTTP status code. |
 | `addHeader` | `addHeader(string $key, string $value): self` | Adds an HTTP header to the response. | The `$key` parameter specifies the header type, and the $value parameter specifies the header value. |
 
@@ -208,7 +209,7 @@ Business errors are returned as the `RestErrorMessageTransfer` objects with the 
 
 ### Nested resources
 
-Glue API allows creating resources with parent-child relationships or, in other words, nested resources. For example, a request to `/customers/1/addresses` returns addresses for a customer with ID 1. To enable such behavior, it's necessary to define how resources depend on each other. This is done by configuring resource route plugins. When processing an URL, the _GlueApplication Module_ tries to find a correct route to a child resource. For this reason, all modules in the nesting chain should be arranged in a sequence using **ResourceWithParentPluginInterface**. Then, while handling a request to a child resource, business logic can access the parent resource identifier and process the request in the correct context.
+Glue API allows creating resources with parent-child relationships or, in other words, nested resources. For example, a request to `/customers/1/addresses` returns addresses for a customer with ID 1. To enable such behavior, it's necessary to define how resources depend on each other. This is done by configuring resource route plugins. When processing an URL, the *GlueApplication Module* tries to find a correct route to a child resource. For this reason, all modules in the nesting chain should be arranged in a sequence using **ResourceWithParentPluginInterface**. Then, while handling a request to a child resource, business logic can access the parent resource identifier and process the request in the correct context.
 
 #### ResourceWithParentPluginInterface
 
@@ -332,6 +333,7 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
     ]
 }
 ```
+
 </details>
 
 #### Possible implementations
@@ -342,7 +344,7 @@ To add relationships between two resources, you can either implement the Resourc
 
 ![implementation-wiht-separate-module.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/implementation-wiht-separate-module.png)
 
-_Option 2: Without module_
+*Option 2: Without module*
 
 ![implementation-without-module.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/implementation-without-module.png)
 
@@ -443,6 +445,7 @@ Example:
 * in storage and responses: 1985-06-30T23:22:11+00:00
 
 ### Prices
+
 Prices are always returned both in cents and as an integer.
 
 ### Request header

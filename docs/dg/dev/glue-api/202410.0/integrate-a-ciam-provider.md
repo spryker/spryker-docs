@@ -10,7 +10,7 @@ redirect_from:
 
 ---
 
-This document describes how to integrate a third-party _customer identity and access management (CIAM)_ provider into a Spryker project.
+This document describes how to integrate a third-party *customer identity and access management (CIAM)* provider into a Spryker project.
 
 The following steps help you integrate between a Spryker project and CIAM leveraging standard APIs that the CIAM provider exposes, which can be used in the context of a customer whose data is to be read or updated.
 

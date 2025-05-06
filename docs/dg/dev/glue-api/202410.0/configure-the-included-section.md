@@ -21,8 +21,8 @@ For more details, see [Compound Documents](https://jsonapi.org/format/#document-
 
 You can decide whether Glue REST API includes the sections in all responses by default:
 
-* If you **enable** the option, API endpoints return all related resources by default. With the help of the _include_ query string you can filter out the unnecessary included resources and request only the information you need.
-* If you **disable** the option, responses of API endpoints do not contain the _included_ and _relationships_ sections unless you specify the related resources you need via the include query string. When the string is specified, only the resources passed by it are returned.
+* If you **enable** the option, API endpoints return all related resources by default. With the help of the *include* query string you can filter out the unnecessary included resources and request only the information you need.
+* If you **disable** the option, responses of API endpoints do not contain the *included* and *relationships* sections unless you specify the related resources you need via the include query string. When the string is specified, only the resources passed by it are returned.
 
 | |REQUEST WITH 'INCLUDE' QUERY STRING | REQUEST WITHOUT 'INCLUDE' QUERY STRING |
 | --- | --- | --- |
@@ -42,7 +42,7 @@ To configure the behavior of the **included** and **relationships** sections:
 
 ## Prerequisites
 
-To make the option possible, you need to have at least version _1.12.0_ of the `GlueApplication` module installed in your project. For details on how to upgrade, see the Integration Guide.
+To make the option possible, you need to have at least version *1.12.0* of the `GlueApplication` module installed in your project. For details on how to upgrade, see the Integration Guide.
 
 ## Configure
 

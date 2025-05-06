@@ -127,7 +127,7 @@ class CmsContentWidgetDependencyProvider extends SprykerCmsContentWidgetDependen
 
 1. Create the CMS blocks:
     * BlockA with some text.
-    * BlockB with the code: `{% raw %}{{{% endraw %} cms_block(['BlockA']) {% raw %}}}{% endraw %}`.    
+    * BlockB with the code: `{% raw %}{{{% endraw %} cms_block(['BlockA']) {% raw %}}}{% endraw %}`.
 2. Add BlockB to a CMS Page.
 3. Make sure that the CMS block widget is rendered correctly on the Storefront.
 

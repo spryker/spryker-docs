@@ -66,9 +66,9 @@ Now, let us customize the template of the source component. The original templa
 
 Apart from changing the icon, we are going to use different colors. This can be done via styles.
 
-First of all, we need to inherit the styles of the source component (_side-drawer_). It has a mixin called **shop-ui-side-drawer**. Since it's a core component shipped with Spryker Shop Suite, this mixin is shared. Therefore, it can be accessed everywhere in Shop UI. To inherit the styles, we need to include the mixin in the _SCSS_ file of our new component. To render the block, elements and modifiers with the class name of the new component, we need to pass its class name to the mixin.
+First of all, we need to inherit the styles of the source component (*side-drawer*). It has a mixin called **shop-ui-side-drawer**. Since it's a core component shipped with Spryker Shop Suite, this mixin is shared. Therefore, it can be accessed everywhere in Shop UI. To inherit the styles, we need to include the mixin in the *SCSS* file of our new component. To render the block, elements and modifiers with the class name of the new component, we need to pass its class name to the mixin.
 
-Let us create file `new-existing-component-side-drawer.scss`, include the original mixin of the _side-drawer_ component, and pass the class name of the new component we are creating:
+Let us create file `new-existing-component-side-drawer.scss`, include the original mixin of the *side-drawer* component, and pass the class name of the new component we are creating:
 
 ```css
 @include shop-ui-side-drawer('.new-existing-component-side-drawer') {

@@ -20,9 +20,9 @@ related:
 Spryker Frontend user interface can be customized and extended to meet the needs of your business. You can change the layout, styles, and behavior of existing components, as well as create components on your own.
 
 There are three aspects of the Spryker user interface that can be extended:
-* Views, templates, and layout of components comprising the frontend (_Twig_)
-* Styles (_SASS_)
-* Component behavior (_Typescript_ or _Javascript_)
+* Views, templates, and layout of components comprising the frontend (*Twig*)
+* Styles (*SASS*)
+* Component behavior (*Typescript* or *Javascript*)
 
 This guide reviews customizing Spryker UI on each of these levels.
 
@@ -210,7 +210,7 @@ Let's see how to extend the Twig template of a molecule. By default, the front p
 
 3. Open the start page of Spryker Shop. It looks as follows:
 
-In addition to extending templates of existing components, you can create components on your own. When creating a component, you can define what it looks like in Twig. For detailed information, see the _2. Define a template_ section in [Tutorial: Frontend - Create a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/creating-components.html#define-a-template).
+In addition to extending templates of existing components, you can create components on your own. When creating a component, you can define what it looks like in Twig. For detailed information, see the *2. Define a template* section in [Tutorial: Frontend - Create a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/creating-components.html#define-a-template).
 
 ## Styles
 
@@ -222,7 +222,7 @@ Another important aspect you can override is styles. The global styles are defin
 
 {% info_block infoBox %}
 
-For detailed information about global styles, see the _SASS Layer_ section in [Atomic Frontend general overview](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/atomic-frontend.html#sass-layer).
+For detailed information about global styles, see the *SASS Layer* section in [Atomic Frontend general overview](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/atomic-frontend.html#sass-layer).
 
 {% endinfo_block %}
 
@@ -262,7 +262,7 @@ In addition to global styles, each component can have its own styles. For inform
 
 ## Behavior
 
-The behavior of different components is defined by Javascript. For stricter typing and better code quality, we recommend using a strong-typed subset of Javascript called _Typescript_. It is enforced by default. However, you can always switch to regular ES6-ES7 Javascript by modifying the `tsconfig.json` file located in the root folder of your local Spryker code installation. You need to add the `allowJs` option to the `compilerOptions` section and set it to `true`:
+The behavior of different components is defined by Javascript. For stricter typing and better code quality, we recommend using a strong-typed subset of Javascript called *Typescript*. It is enforced by default. However, you can always switch to regular ES6-ES7 Javascript by modifying the `tsconfig.json` file located in the root folder of your local Spryker code installation. You need to add the `allowJs` option to the `compilerOptions` section and set it to `true`:
 
 ```json
 {
@@ -277,9 +277,9 @@ All component assets are compiled using a bundler called Webpack. Spryker Shop A
 
 * `vendor.ts`. It contains external dependencies for the system. We recommend using this file for dependencies as Webpack loads the dependency code only once, and then references are provided per request.
 
-You can add your own dependencies depending on the project needs—for example, _jquery_, _react_, _vue_).
+You can add your own dependencies depending on the project needs—for example, *jquery*, *react*, *vue*).
 
-* `app.ts`. This file contains the bootstrap code, which simply loads the components. You can change the logic of how the application starts here. For example, this file can be used to add `document.ready` for _jquery_, main `conatiner/fragment` rendering for _react_ and so on.
+* `app.ts`. This file contains the bootstrap code, which simply loads the components. You can change the logic of how the application starts here. For example, this file can be used to add `document.ready` for *jquery*, main `conatiner/fragment` rendering for *react* and so on.
 
 **Default Bootstrap**
 
@@ -297,7 +297,7 @@ Apart from Webpack bootstrap, each component can have its own logic defined in t
 
 ## Installing dependencies
 
-Spryker Shop Application comes with a set of dependencies required to run the application. The dependency list can be found in the `package.json` file. You can add dependencies on your own. For example, you can add _react_, _foundation_, _jquery_, or customize Webpack with _file-loader_. For this purpose, create an SSH session to your virtual machine with `vagrant ssh` and execute the following commands:
+Spryker Shop Application comes with a set of dependencies required to run the application. The dependency list can be found in the `package.json` file. You can add dependencies on your own. For example, you can add *react*, *foundation*, *jquery*, or customize Webpack with *file-loader*. For this purpose, create an SSH session to your virtual machine with `vagrant ssh` and execute the following commands:
 * `npm install --save dependency-name`—for application dependencies.
 * `npm install --save-dev dev-dependency-name`—or Webpack and tooling dependencies.
 

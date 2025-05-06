@@ -24,9 +24,9 @@ related:
     link: docs/dg/dev/backend-development/yves/yves-routes.html
 ---
 
-_Controllers_ are placed inside the `Controllers` folder in Yves; they provide an entry point to the system for requests submitted by the D users.
+*Controllers* are placed inside the `Controllers` folder in Yves; they provide an entry point to the system for requests submitted by the D users.
 
-Methods inside a controller are called _actions_. Usually, an action reads the incoming request data, maybe validates it with a form, delegates it to a client, and writes the response.
+Methods inside a controller are called *actions*. Usually, an action reads the incoming request data, maybe validates it with a form, delegates it to a client, and writes the response.
 
 The following controller provides two actions: `indexAction()` and `testAction()`.
 

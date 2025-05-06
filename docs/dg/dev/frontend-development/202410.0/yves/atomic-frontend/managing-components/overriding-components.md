@@ -32,7 +32,7 @@ Also, we need to create an entry point for Webpack. Create an empty `index.ts` 
 
 The first thing we need to do is to override the Twig of the default component. To do this, we need to create a Twig file for the component on the project level. Since the project level has priority over the global level, the newly created project-side Twig will override the global one. In other words, whenever the component is used on a page, your implementation will be used instead of the default one.
 
-To override the global component, the Twig file name on the project level must be the same as on the global level. Also, component _name_ and _tag_ name specified in the config property must be the same as on the global level. In our case, the file name on the project level must be `simple-carousel.twig`, and the **config** property will look as follows:
+To override the global component, the Twig file name on the project level must be the same as on the global level. Also, component *name* and *tag* name specified in the config property must be the same as on the global level. In our case, the file name on the project level must be `simple-carousel.twig`, and the **config** property will look as follows:
 
 ```twig
 {% raw %}{%{% endraw %} define config = {

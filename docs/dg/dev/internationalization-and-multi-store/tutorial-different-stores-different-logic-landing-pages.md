@@ -112,6 +112,7 @@ class IndexController extends AbstractController
 
 2. Restart Nginx by running `sudo /etc/init.d/nginx restart`.
 3. Create a store record in your `spy_store database` table:
+
 ```bash
 console data:import:store
 ```

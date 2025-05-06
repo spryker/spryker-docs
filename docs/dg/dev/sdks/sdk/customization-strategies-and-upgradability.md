@@ -45,7 +45,7 @@ Spryker generally allows changing private APIs and core code. However in this ca
 
 What is a Private API?
 
-A [Private API](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html#private-api) in SCOS is everything that is not a [Public API](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html#public-api). For example, it can be a _Business model_, or any file in the _Persistence_ layer, except for _QueryContainer_.
+A [Private API](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html#private-api) in SCOS is everything that is not a [Public API](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html#public-api). For example, it can be a *Business model*, or any file in the *Persistence* layer, except for *QueryContainer*.
 
 ## Project customization and release types in terms of upgradability
 

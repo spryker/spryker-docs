@@ -16,14 +16,14 @@ The Inquiry Management feature allows customers to submit and track different ty
 Back Office users can manage inquiries, update statuses, and communicate with customers through an organized workflow.
 
 
-## Storefront functionalities 
+## Storefront functionalities
 
 * Submit an inquiry with relevant details
 * Attach supporting documents and images
 * Track the status of submitted inquiries
 * Get inquiry resolution details via email
 
-## Back Office functionalities 
+## Back Office functionalities
 
 * View and manage all customer inquiries
 * Filter and search inquiries by type, status, or customer
@@ -107,14 +107,14 @@ On the submit inquiry page, the user needs to enter the following details:
 * Description
 * Optional: files
 
-After an inquiry is submitted, the user can find it in Customer Account > Self-Service Portal > Inquires. 
+After an inquiry is submitted, the user can find it in Customer Account > Self-Service Portal > Inquires.
 
 The company user can also cancel an inquiry while it's in the Pending status.
 
 
 ## Inquiry creation in the Back Office
 
-In the Back Office, inquires are located in **Customer Portal** > **Inquires**. In this section, you can filter by inquiry type and status and search by customer or inquiry reference. 
+In the Back Office, inquires are located in **Customer Portal** > **Inquires**. In this section, you can filter by inquiry type and status and search by customer or inquiry reference.
 
 From here, click **View** to open the inquiry details page. If the inquiry has attached files, click **Download** to access them.
 

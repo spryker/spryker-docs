@@ -10,7 +10,7 @@ redirect_from:
 
 ## Use case 1: Long waiting time until Request for Quote gets processed
 
-The [Request for Quote](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html) (RFQ) process is currently not fully efficient because it's manual. As a result, sometimes customers have to wait a long time until their RFQ gets approved or denied. 
+The [Request for Quote](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html) (RFQ) process is currently not fully efficient because it's manual. As a result, sometimes customers have to wait a long time until their RFQ gets approved or denied.
 
 ### Solution
 
@@ -22,7 +22,7 @@ To solve this issue, merchants may need to react faster to quote requests. For e
 
 ## Use case 2: Marketplace customers must create separate carts and RFQs for each merchant
 
-In Marketplace, if customers have several items from different merchants in their cart, they have to send an RFQ for each item separately. This means they have to create separate carts for products from different merchants they want to request quotes from. 
+In Marketplace, if customers have several items from different merchants in their cart, they have to send an RFQ for each item separately. This means they have to create separate carts for products from different merchants they want to request quotes from.
 
 ### Solution
 

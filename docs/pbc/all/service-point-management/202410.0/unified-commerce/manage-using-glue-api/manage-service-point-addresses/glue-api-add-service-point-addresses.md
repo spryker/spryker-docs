@@ -51,6 +51,7 @@ Request sample: `GET https://glue-backend.mysprykershop.com/service-points/262fe
 ### Response
 
 Response sample:
+
 ```json
 {
     "data": {

@@ -155,9 +155,9 @@ In Elasticsearch 7, among other changes, the mapping types removal started in ve
 
 To communicate with Elasticsearch, Spryker uses a third-party library called `ruflin/elastica`. To be able to interact with Elaticsearch 7.x, `ruffling/elastica:7.*.*` must be used (major version of this package so far refer to major versions of Elasticsearch itself). This version has some drastic changes in its API compared to the previous major versions. Among those changes are:
 
-- removal of several query type classes, for example, `\Elastica\Query\Type` and `\Elastica\Query\GeohashCell`
-- removal of `the_parent` field in favor of the `join` field
-- various changes in the existing classes APIs (`\Elastica\Document`, `\Elastica\Query\Terms` etc.)
+* removal of several query type classes, for example, `\Elastica\Query\Type` and `\Elastica\Query\GeohashCell`
+* removal of `the_parent` field in favor of the `join` field
+* various changes in the existing classes APIs (`\Elastica\Document`, `\Elastica\Query\Terms` etc.)
 
 For the full list of changes,check [Elasticsearch 7.0.0 release notes](https://elastica.io/2019/10/31/release-7-dot-0-0-beta1/). All the project code that's not compatible with these changes, must be adjusted accordingly before running Elasticsearch 7.
 

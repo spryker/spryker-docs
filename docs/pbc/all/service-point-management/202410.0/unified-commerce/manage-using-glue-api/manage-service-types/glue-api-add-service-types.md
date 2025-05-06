@@ -24,6 +24,7 @@ This endpoint lets you add service types.
 | Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
 Request sample: `POST https://glue-backend.mysprykershop.com/service-types`
+
 ```json
 {
     "data": {
@@ -46,6 +47,7 @@ Request sample: `POST https://glue-backend.mysprykershop.com/service-types`
 ### Response
 
 Response sample:
+
 ```json
 {
     "data": {

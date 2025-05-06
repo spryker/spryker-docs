@@ -148,6 +148,7 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
+
 </details>
 
 

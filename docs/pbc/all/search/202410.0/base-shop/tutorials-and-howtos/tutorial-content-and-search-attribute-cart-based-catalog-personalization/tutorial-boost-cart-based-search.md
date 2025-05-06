@@ -216,6 +216,7 @@ class CartBoostQueryExpanderPlugin extends AbstractPlugin implements QueryExpand
 
 }
 ```
+
 </details>
 
 {% endinfo_block %}

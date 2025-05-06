@@ -446,6 +446,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -724,6 +725,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -1130,6 +1132,7 @@ To search by products, send the request:
     ]
 }
 ```
+
 </details>
 
 
@@ -1409,6 +1412,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -1828,6 +1832,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -2201,6 +2206,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -2522,6 +2528,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -2811,6 +2818,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -3130,6 +3138,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -3486,6 +3495,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -3759,6 +3769,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -4003,6 +4014,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -4217,6 +4229,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -4445,6 +4458,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -4867,6 +4881,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -5185,6 +5200,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -5484,6 +5500,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -5800,6 +5817,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 <details><summary>Response sample: sort the search results by popularity (This is valid for Master Suite only and has not been integrated into B2B/B2C Suites yet.)</summary>
@@ -6053,6 +6071,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -6312,6 +6331,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -6620,6 +6640,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 

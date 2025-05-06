@@ -70,6 +70,7 @@ To create a return for a registered user, send the Request sample:
     }
 }
 ```
+
 </details>
 
 <details><summary>Request sample: create a return with return items</summary>
@@ -92,6 +93,7 @@ To create a return for a registered user, send the Request sample:
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -176,6 +178,7 @@ To create a return for a registered user, send the Request sample:
     ]
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -441,6 +444,7 @@ To retrieve returns, send the Request sample:
     ]
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve all returns with the respective merchants included</summary>
@@ -532,6 +536,7 @@ To retrieve returns, send the Request sample:
     ]
 }
 ```
+
 </details>
 
 
@@ -637,6 +642,7 @@ To retrieve a return, send the Request sample:
     }
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve a return with the return items included</summary>
@@ -756,6 +762,7 @@ To retrieve a return, send the Request sample:
     ]
 }
 ```
+
 </details>
 
 For the attributes, see [Retrieving returns](#retrieve-returns).

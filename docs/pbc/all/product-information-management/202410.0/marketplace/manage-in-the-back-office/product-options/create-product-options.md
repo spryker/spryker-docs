@@ -72,7 +72,7 @@ To assign products to a product option, follow these steps:
 
 To display the product option on the Storefront, in the top right corner of the page, activate it by selecting **Activate** .
 
-{% endinfo_block %}     
+{% endinfo_block %}
 
 **Tips and tricks**
 

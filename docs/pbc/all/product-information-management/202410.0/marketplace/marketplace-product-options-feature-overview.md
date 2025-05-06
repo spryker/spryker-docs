@@ -47,6 +47,7 @@ Product option groups created by merchants can have the following statuses:
 Currently, you can only import the Marketplace options approval statuses. For details, see [File details: merchant product option group](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-option-group.csv.html).
 
 ## Marketplace product options in the Back Office
+
 In the Back Office, a Marketplace administrator can:
 * [create general product options](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/product-options/create-product-options.html);
 * [manage general product options](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/product-options/create-product-options.html);

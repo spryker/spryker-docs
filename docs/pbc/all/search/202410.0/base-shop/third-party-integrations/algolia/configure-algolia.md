@@ -28,9 +28,9 @@ This document describes how to connect your Algolia account with Spryker and con
 ![algolia-keys](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-keys.png)
 
 7. In the **Your API Keys** tab, take note of following keys:
-    - **Application ID**
-    - **Search API Key**
-    - **Admin API Key**
+    * **Application ID**
+    * **Search API Key**
+    * **Admin API Key**
 8. In the Back Office, go to the Algolia app details page.
 9. In the top right corner of the Algolia app details page, click **Configure**.
 10. In the **Configure** pane, for **APPLICATION ID**, **SEARCH API KEY**, and **ADMIN API KEY**, enter the values you've retrieved in step 7.
@@ -45,8 +45,8 @@ This document describes how to connect your Algolia account with Spryker and con
 
 The Algolia app is now added to your store and starts exporting product data. For a product to be exported, it must fulfill the following requirements:
 
-- Product is `approved` and `isActive`
-- Product has `prices` unless **Products without prices** is selected
+* Product is `approved` and `isActive`
+* Product has `prices` unless **Products without prices** is selected
 
 {% info_block infoBox "" %}
 

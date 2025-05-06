@@ -316,7 +316,7 @@ You have to respond with an object, supporting an array-based or `get`-based ind
 }
 ```
 
-</details>   
+</details>
 
 Returning this JSON data as an object shows you an empty result page.
 

@@ -1722,10 +1722,10 @@ Make sure the following modules have been installed:
 
 Add the following configuration to your project:
 
-| CONFIGURATION                                                            | SPECIFICATION                                                                                                                                                                    | NAMESPACE                          |
-|--------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
-| SalesOrderAmendmentWidgetConfig::ORDER_AMENDMENT_CART_REORDER_STRATEGY   | Defines the cart reorder strategy for order amendment, e.g., `replace`, `new`. The corresponding strategy plugin handling the specified value must be registered in the project. | Pyz\Yves\SalesOrderAmendmentWidget |
-| SalesOrderAmendmentWidgetConfig::IS_ORDER_AMENDMENT_CONFIRMATION_ENABLED | Defines if the order amendment confirmation popup window is displayed.                                                                                                           | Pyz\Yves\SalesOrderAmendmentWidget |
+| CONFIGURATION                                                            | SPECIFICATION                                                                                                                                                                          | NAMESPACE                          |
+|--------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
+| SalesOrderAmendmentWidgetConfig::ORDER_AMENDMENT_CART_REORDER_STRATEGY   | Defines the cart reorder strategy for order amendment, for example `replace`, `new`. The corresponding strategy plugin handling the specified value must be registered in the project. | Pyz\Yves\SalesOrderAmendmentWidget |
+| SalesOrderAmendmentWidgetConfig::IS_ORDER_AMENDMENT_CONFIRMATION_ENABLED | Defines if the order amendment confirmation popup window is displayed.                                                                                                                 | Pyz\Yves\SalesOrderAmendmentWidget |
 
 **src/Pyz/Yves/SalesOrderAmendmentWidget/SalesOrderAmendmentWidgetConfig.php**
 

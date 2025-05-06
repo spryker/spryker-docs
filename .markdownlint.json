@@ -1,11 +1,14 @@
 {
   "MD041": false,
-  "MD012": false,  
-  "MD010": false,    
+  "MD012": false,
+  "MD010": false,
   "MD013": false,
-  "MD024": false,  
-  "MD032": false,  
+  "MD024": false,
+  "MD032": false,
   "MD033": false,
+  "MD049": {
+    "style": "asterisk"
+  },
   "MD040": {
     "enabled": true,
     "fenced_code_language": true

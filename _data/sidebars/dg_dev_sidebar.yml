@@ -1193,6 +1193,8 @@ entries:
       url: /docs/dg/dev/data-import/implementing-data-installers.html
     - title: Implement incremental installers
       url: /docs/dg/dev/data-import/implement-incremental-installers.html
+      include_versions:
+      - "202404.0"  
 
   - title: Guidelines
     url: /docs/dg/dev/guidelines/guidelines.html
@@ -1709,3 +1711,4 @@ entries:
     url: /docs/dg/dev/example-modules.html
   - title: Supported versions of PHP
     url: /docs/dg/dev/supported-versions-of-php.html
+    

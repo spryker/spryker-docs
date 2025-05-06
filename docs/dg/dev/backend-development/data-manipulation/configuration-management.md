@@ -81,9 +81,9 @@ You can retrieve the configuration from the configuration files with a static me
 ```php
 <?php
 ...
- use Spryker\Shared\Config;
+	use Spryker\Shared\Config;
 ...
- $value = Config::get($key);
+	$value = Config::get($key);
 ```
 
 Each module ships with specific classes, which gives access to the configuration. Here you can also add more configuration which needs more programming. For instance, when you need to parse a CSV file to get more configuration, this code would be here. Although you can use the same global mechanism as in Yves to read the documentation, it's a better practice to access it through the module config file. This snippet can be used to create a new module config. Just replace `MyModule` with your current module name.
@@ -156,7 +156,7 @@ use Spryker\Zed\Kernel\AbstractBundleConfig;
 
  The same way it can also be included in `Yves`, `Client` configuration classes.
 
-## Related Spryks
+ ## Related Spryks
 
 You might use the following definitions to generate related code:
 

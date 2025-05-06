@@ -100,25 +100,25 @@ However, it will not contain the actual data that has changed. See the following
 
 ```json
 {
- "listenerClassName":"Spryker\\Zed\\UrlStorage\\Communication\\Plugin\\Event\\Listener\\UrlStorageListener",
- "transferClassName":"Generated\\Shared\\Transfer\\EventEntityTransfer",
- "transferData":{
-  "event":"Entity.spy_url.update",
-  "name":"spy_url",
-  "id":488,
-  "foreign_keys":{
-   "spy_url.fk_resource_page":7,
-   "spy_url.fk_resource_product_abstract":null,
-   "spy_url.fk_resource_redirect":null,
-   "spy_url.fk_resource_product_set":null,
-   "spy_url.fk_resource_categorynode":null,
-   "spy_url.fk_locale":46
-  },
- "modified_columns":[
-  "spy_url.url"
- ]
- },
- "eventName":"Entity.spy_url.update"
+	"listenerClassName":"Spryker\\Zed\\UrlStorage\\Communication\\Plugin\\Event\\Listener\\UrlStorageListener",
+	"transferClassName":"Generated\\Shared\\Transfer\\EventEntityTransfer",
+	"transferData":{
+		"event":"Entity.spy_url.update",
+		"name":"spy_url",
+		"id":488,
+		"foreign_keys":{
+			"spy_url.fk_resource_page":7,
+			"spy_url.fk_resource_product_abstract":null,
+			"spy_url.fk_resource_redirect":null,
+			"spy_url.fk_resource_product_set":null,
+			"spy_url.fk_resource_categorynode":null,
+			"spy_url.fk_locale":46
+		},
+	"modified_columns":[
+		"spy_url.url"
+	]
+	},
+	"eventName":"Entity.spy_url.update"
 }
 ```
 
@@ -130,51 +130,51 @@ The transformed data is stored in a dedicated database table. It serves as a _mi
 
 ## Synchronize
 
-When a change happens in the mirror table, its _synchronization behavior_ sends the updated rows as messages to one of the Sync Queues. After consuming a message, the data is pushed to Redis or Elastisearch.
+When a change happens in the mirror table, its *synchronization behavior* sends the updated rows as messages to one of the Sync Queues. After consuming a message, the data is pushed to Redis or Elastisearch.
 
 ```json
 {
- "write":{
-  "key":"url:de:\/de\/mypage",
-  "value":{
-   "fk_resource_categorynode":null,
-   "fk_resource_page":7,
-   "fk_resource_product_set":null,
-   "fk_resource_product_abstract":null,
-   "id_url":488,
-   "fk_locale":46,
-   "url":"\/de\/mypage",
-   "fk_resource_redirect":null,
-   "locale_urls":[
-    {
-     "fk_resource_categorynode":null,
-     "fk_resource_page":7,
-     "fk_resource_product_set":null,
-     "fk_resource_product_abstract":null,
-     "id_url":488,
-     "fk_locale":46,
-     "url":"\/de\/mypage",
-     "fk_resource_redirect":null,
-     "localeName":"de_DE"
-    },
-    {
-     "fk_resource_categorynode":null,
-     "fk_resource_page":7,
-     "fk_resource_product_set":null,
-     "fk_resource_product_abstract":null,
-     "id_url":487,
-     "fk_locale":66,
-     "url":"\/en\/mypage",
-     "fk_resource_redirect":null,
-     "localeName":"en_US"
-    }
-   ],
-   "_timestamp":1526033491.2159581
-   },
-  "resource":"url",
-  "params":[
-  ]
- }
+	"write":{
+		"key":"url:de:\/de\/mypage",
+		"value":{
+			"fk_resource_categorynode":null,
+			"fk_resource_page":7,
+			"fk_resource_product_set":null,
+			"fk_resource_product_abstract":null,
+			"id_url":488,
+			"fk_locale":46,
+			"url":"\/de\/mypage",
+			"fk_resource_redirect":null,
+			"locale_urls":[
+				{
+					"fk_resource_categorynode":null,
+					"fk_resource_page":7,
+					"fk_resource_product_set":null,
+					"fk_resource_product_abstract":null,
+					"id_url":488,
+					"fk_locale":46,
+					"url":"\/de\/mypage",
+					"fk_resource_redirect":null,
+					"localeName":"de_DE"
+				},
+				{
+					"fk_resource_categorynode":null,
+					"fk_resource_page":7,
+					"fk_resource_product_set":null,
+					"fk_resource_product_abstract":null,
+					"id_url":487,
+					"fk_locale":66,
+					"url":"\/en\/mypage",
+					"fk_resource_redirect":null,
+					"localeName":"en_US"
+				}
+			],
+			"_timestamp":1526033491.2159581
+			},
+		"resource":"url",
+		"params":[
+		]
+	}
 }
 ```
 
@@ -244,8 +244,8 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 ### Environment limitations related to DMS
 
 When Dynamic Multi-Store (DMS) is disabled, the Direct Sync feature has the following limitations:  
-* Single-store configuration: The feature is only supported for configurations with a single store.
-* Multi-store configuration with namespace consistency: For configurations with multiple stores, all stores must use the same Storage and Search namespaces.
+- Single-store configuration: The feature is only supported for configurations with a single store.
+- Multi-store configuration with namespace consistency: For configurations with multiple stores, all stores must use the same Storage and Search namespaces.
 
 Example configuration for multiple stores:
 
@@ -286,15 +286,15 @@ P&S inspires intelligent solutions and smart architecture designs!
 {% endinfo_block %}
 
 When designing a solution using P&S we need to consider the following concerns in our applications
-* eventual consistency for data available in storefronts
-* horizontal scalability of publish process (native) and sync process (requires development)
-* data object limitations
+- eventual consistency for data available in storefronts
+- horizontal scalability of publish process (native) and sync process (requires development)
+- data object limitations
 
 ### Data Object Limitations
 
 In order to build a healthy commerce system, we need to make sure that P&S process is healthy at all times. And first we start with healthy NFRs for P&S.
-* storage sync message size should not be over 256Kb - this prevents us from problems in data processing, but even more important in data comsumption, when an API consumer might experience failure when reviceing an aggregated object of a high size.
-* do not exceed the request limitations for the storage (eg. Redis) and search (eg. OpenSearch) systems, while sending data in sync process
+- storage sync message size should not be over 256Kb - this prevents us from problems in data processing, but even more important in data comsumption, when an API consumer might experience failure when reviceing an aggregated object of a high size.
+- do not exceed the request limitations for the storage (eg. Redis) and search (eg. OpenSearch) systems, while sending data in sync process
 
 {% info_block infoBox "Are these really limitations?"%}
 

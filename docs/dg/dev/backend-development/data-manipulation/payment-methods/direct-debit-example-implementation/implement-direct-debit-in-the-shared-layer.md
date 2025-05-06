@@ -35,8 +35,8 @@ namespace Pyz\Shared\PaymentMethods;
 
 interface PaymentMethodsConstants
 {
- public const PROVIDER = 'PaymentMethods';
- public const PAYMENT_METHOD_DIRECTDEBIT = 'paymentMethodsDirectDebit';
+	public const PROVIDER = 'PaymentMethods';
+	public const PAYMENT_METHOD_DIRECTDEBIT = 'paymentMethodsDirectDebit';
 }
 ```
 

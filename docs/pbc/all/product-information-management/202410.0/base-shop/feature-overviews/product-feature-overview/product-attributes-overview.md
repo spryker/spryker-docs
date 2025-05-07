@@ -59,11 +59,13 @@ Product variants of the same abstract product can differ by different super attr
     * D:  `size = 45`
 
 ## Predefined product attribute values
+
 A *predefined product attribute value* is a product attribute value that a Back Office user defines when managing product attributes.
 
 A Back Office user can configure a product attribute to accept only predefined values. In this case, when [assigning product attributes to products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html), they choose from the predefined values. Otherwise, they can enter any value for the attribute.
 
 ## Product attribute translations
+
 A Back Office user can localize product attributes. They can add translations for attribute names and values. For example, in the attribute `Color = White`, both `Color` and `White` can be localized.
 
 There are different ways to handle translations of attributes. See the following examples.
@@ -83,15 +85,16 @@ As a result, the following is displayed on the Storefront:
 * German version of the shop: Gewicht = 63.5 g  
 
 ### Example 2: localized attributes and values
+
   In a shop with two languages Product X exists with an attribute `Protection Feature` and an attribute value `waterproof`.
 
 We localize them as follows:
 * Attribute key:
-    * en_EN: `Protection Feature`
-    * de_DE: `Schutzfunktion`
+  * en_EN: `Protection Feature`
+  * de_DE: `Schutzfunktion`
 * Attribute value:
-    * en_EN: `Waterproof`
-    * de_DE: `Wasserdicht`
+  * en_EN: `Waterproof`
+  * de_DE: `Wasserdicht`
 
 As a result, the following is displayed on the Storefront:
 * English version of the shop: Protection Feature = Waterproof
@@ -106,14 +109,15 @@ There are two ways to handle this:
 * Add localized attribute keys and values for each language.
 
 #### Non-localized key and localized key for the US
+
 In the DB, the `attribute.length` key is saved for non-localized values, and a localized key `attribute.length.us` is saved for the translations in the metric system:
 
 We localize two attribute keys:
 * Key = attribute.length
-    * Value (en_IE) = Length
-    * Value (de_DE) = Länge
+  * Value (en_IE) = Length
+  * Value (de_DE) = Länge
 * Key = attribute.length.us
-    * Value (en_US) = Length
+  * Value (en_US) = Length
 
 For the key `attribute.length` the value is `1.5 meter`. For the key `attribute.length.us` the value is `4.92 feet`.
 

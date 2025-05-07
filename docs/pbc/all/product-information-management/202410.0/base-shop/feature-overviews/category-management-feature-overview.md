@@ -56,6 +56,7 @@ On the Storefront, the standard filters let buyers narrow down the search result
 Compared to standard filters, dynamic filters and facets allow the creation of more advanced filter options. For example, you can customize facet filters for any product attribute: the design, quantity of filters, or order criteria by which filters are displayed on the Storefront. For more details about how to configure the filter preferences in the Back Office, see [Edit filter preferences](/docs/pbc/all/search/{{page.version}}/base-shop/manage-in-the-back-office/filter-preferences/edit-filter-preferences.html).
 
 ## Video tutorial
+
 Check out this video on managing categories:
 
 {% wistia g3l3c7xt93 960 720 %}

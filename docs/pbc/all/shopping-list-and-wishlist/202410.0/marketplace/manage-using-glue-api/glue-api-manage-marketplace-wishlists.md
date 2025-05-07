@@ -120,6 +120,7 @@ To retrieve all wishlists of a customer, send the request:
 		}
 	}
 ```
+
 </details>
 
 <details>
@@ -148,6 +149,7 @@ To retrieve all wishlists of a customer, send the request:
 		}
 	}
 ```
+
 </details>
 
 <details>
@@ -197,6 +199,7 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -296,6 +299,7 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -416,6 +420,7 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
+
 </details>
 
 | ATTRIBUTE     | TYPE    | DESCRIPTION  |
@@ -492,6 +497,7 @@ To retrieve a specific wishlist, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -536,6 +542,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -628,6 +635,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -743,6 +751,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -868,6 +877,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1004,6 +1014,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1342,6 +1353,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1704,6 +1716,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -2088,6 +2101,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -2212,6 +2226,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 | ATTRIBUTE  | TYPE  | DESCRIPTION     |

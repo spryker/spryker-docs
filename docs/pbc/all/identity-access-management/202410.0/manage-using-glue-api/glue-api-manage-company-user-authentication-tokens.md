@@ -89,6 +89,7 @@ Request sample: refresh a company user authentication token
     }
 }
 ```
+
 </details>
 
 
@@ -137,7 +138,7 @@ The tokens are marked as expired on the date and time of the request. You can co
 
 | CODE  | REASON |
 | --- | --- |
-| 001 | Access token is invalid. |    
+| 001 | Access token is invalid. |
 | 004 | Failed to refresh the token. |
 | 901 | Refresh token is not specified or empty. |
 

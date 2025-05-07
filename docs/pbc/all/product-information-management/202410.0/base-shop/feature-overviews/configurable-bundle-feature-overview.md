@@ -19,6 +19,7 @@ A *configurable bundle* is a [product bundle](/docs/pbc/all/product-information-
 For example, when buying a kitchen set, a customer selects pieces of furniture, like drawers, cupboards, or cabinets, from suggested options.
 
 ## Configurable bundle template
+
 Every configurable bundle is created per a template. A *configurable bundle template* is a model with configuration details for a bundle, like a number of [slots](#configurable-bundle-slot) or product lists assigned to a slot. There can be multiple templates in a shop, like a sports suit, a car, or a kitchen set.
 
 A Back Office User creates the templates in the Back Office. See [Сreate configurable bundle templates](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/configurable-bundle-templates/create-configurable-bundle-templates.html) to learn how they do it.
@@ -31,6 +32,7 @@ To create a configurable bundle on the Storefront, a Shop User selects a configu
 
 
 The following example illustrates how the configurable bundle data is saved to the database:
+
 ```php
 {
      "id_configurable_bundle_template": 2,
@@ -105,6 +107,7 @@ A Storefront User can add a note to a configurable bundle. The note is displayed
 ![Configurable bundle note](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configurable-bundle-note.png)
 
 ## Product bundle configurator
+
 **Product bundle configurator** is a page where a Storefront User selects products for a configurable bundle.
 
 ## Configurable bundle quantity, stock, and price
@@ -115,37 +118,37 @@ On the **Cart** page, a Storefront User can change the quantity of a configured 
 
 For example, a Storefront User adds a configurable bundle with the following products:
 * Item A:
-    * Item price: 40 EUR
-    * Item total: 2
-    * Price: 80 EUR
+  * Item price: 40 EUR
+  * Item total: 2
+  * Price: 80 EUR
 * Item B:
-    * Item price: 20 EUR
-    * Item total: 1
-    * Price: 20 EUR
+  * Item price: 20 EUR
+  * Item total: 1
+  * Price: 20 EUR
 Total price is 100 EUR
 
 If you change the quantity to 2, the following is changed:
 
 * Item A:
-    * Item price: 40 EUR
-    * Item total: 4
-    * Price: 160 EUR
+  * Item price: 40 EUR
+  * Item total: 4
+  * Price: 160 EUR
 * Item B:
-    * Item price: 20 EUR
-    * Item total: 2
-    * Price: 40 EUR
+  * Item price: 20 EUR
+  * Item total: 2
+  * Price: 40 EUR
 Total price is 200 EUR
 
 If you change the quantity to 3, the following is changed:
 
 * Item A:
-    * Item price: 40 EUR
-    * Item total: 6
-    * Price: 240 EUR
+  * Item price: 40 EUR
+  * Item total: 6
+  * Price: 240 EUR
 * Item B:
-    * Item price: 20 EUR
-    * Item total: 3
-    * Price: 60 EUR
+  * Item price: 20 EUR
+  * Item total: 3
+  * Price: 60 EUR
 Total price is 300 EUR
 
 
@@ -159,12 +162,15 @@ Configurable bundle stock is updated in the same way as stock for concrete produ
 Product availability is taken into account when calculating the total.
 
 ## Configurable bundle reorder
+
 A Storefront User can reorder items from a configurable bundle as separate order items.
 
 ## Configurable bundle and quotation process
+
 A Storefront User can include a configurable bundle into the [quotation process](/docs/pbc/all/request-for-quote/{{page.version}}/request-for-quote.html) and change the price of one or more items in a bundle. The price of the configurable bundle is re-calculated based on the new prices.
 
 ## Configurable bundle and splittable order items
+
 A Storefront User can add splittable and non-splittable products to a configurable bundle.
 
 If a configurable bundle contains splittable products and its quantity is above 1, the order is split into separate configured bundle items with its items also split. For example:
@@ -172,29 +178,29 @@ If a configurable bundle contains splittable products and its quantity is above 
 For example, a Storefront User places the order with the following item:
 
 * Configured Bundle A x2:
-    * Product A x 6
-    * Product B x 2
+  * Product A x 6
+  * Product B x 2
 
 The order looks as follows:
 
 * Configured bundle A x 1
-    * Product A x 1
-    * Product A x 1
-    * Product A x 1
-    * Product A x 1
-    * Product A x 1
-    * Product A x 1
-    * Product B x 1
-    * Product B x 1
+  * Product A x 1
+  * Product A x 1
+  * Product A x 1
+  * Product A x 1
+  * Product A x 1
+  * Product A x 1
+  * Product B x 1
+  * Product B x 1
 * Configured bundle A x 1
-    * Product A x 1
-    * Product A x 1
-    * Product A x 1
-    * Product A x 1
-    * Product A x 1
-    * Product A x 1
-    * Product B x 1
-    * Product B x1
+  * Product A x 1
+  * Product A x 1
+  * Product A x 1
+  * Product A x 1
+  * Product A x 1
+  * Product A x 1
+  * Product B x 1
+  * Product B x1
 
 
 If a configurable bundle contains non-splittable products and its quantity is above 1, it's not split.
@@ -202,20 +208,20 @@ If a configurable bundle contains non-splittable products and its quantity is ab
 For example, a Storefront User places the order with the following item:
 
 * Configured bundle B x2:
-    * Product A x 3: non-splittable
-    * Product B x 2: splittable
+  * Product A x 3: non-splittable
+  * Product B x 2: splittable
 
 The order looks as follows:
 
 * Configured bundle B x 1
-    * Product A x 3
-    * Product B x 1
-    * Product B x1
+  * Product A x 3
+  * Product B x 1
+  * Product B x1
 
 * Configured bundle B x 1
-    * Product A x 3
-    * Product B x 1
-    * Product B x1
+  * Product A x 3
+  * Product B x 1
+  * Product B x1
 
 {% info_block errorBox "Packaging units are not supported" %}
 
@@ -235,13 +241,13 @@ The feature has the following functional constraints which are going to be resol
 * On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) or [wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/wishlist-feature-overview.html).
 * A Storefront User cannot return to the **Configurator** page from the **Cart**, **Reorder**, or **Shopping List** pages.
 * The following products cannot be displayed in the configurator:
-    - Products with [measurement](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/measurement-units-feature-overview.html) or [packaging units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/packaging-units-feature-overview.html)
-    - [Product bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html)
-    - [Gift cards](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html)
+  * Products with [measurement](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/measurement-units-feature-overview.html) or [packaging units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/packaging-units-feature-overview.html)
+  * [Product bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html)
+  * [Gift cards](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html)
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
-    * [Product options](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-options-feature-overview.html)
-    * [Product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html)
-    * [Product quantity restrictions](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/non-splittable-products-feature-overview.html)
+  * [Product options](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-options-feature-overview.html)
+  * [Product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html)
+  * [Product quantity restrictions](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/non-splittable-products-feature-overview.html)
 * The **Slot** page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.
 

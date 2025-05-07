@@ -36,10 +36,10 @@ Make sure the following modules have been installed:
 
 ## 2) Set up configuration
 
-Set up the following configuration. 
+Set up the following configuration.
 
 
-### 2.1) Configure code length 
+### 2.1) Configure code length
 
 To configure the length of the authentication code, extend the `MultiFactorAuthConfig` class:
 
@@ -99,6 +99,7 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
     }
 }
 ```
+
 </details>
 
 ### 2.3) Configure brute-force protection limit
@@ -131,6 +132,7 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
     }
 }
 ```
+
 </details>
 
 ### 2.4) Configure protected routes and forms
@@ -163,6 +165,7 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "" %}
@@ -179,6 +182,7 @@ Apply database changes and generate entity and transfer changes:
 console propel:install
 console transfer:generate
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in the database:
@@ -248,6 +252,7 @@ multi_factor_auth.verify_code,"Code überprüfen",de_DE
 multi_factor_auth.required_options,"You must choose one option to continue!",en_US
 multi_factor_auth.required_options,"Sie müssen eine Option auswählen, um fortzufahren!",de_DE
 ```
+
 </details>
 
 2. Import data:
@@ -293,6 +298,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     }
 }
 ```
+
 </details>
 
 ### 6) Set up behavior
@@ -307,7 +313,7 @@ Enable the following behaviors by registering the plugins:
 
 <details>
 <summary>src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php</summary>
-    
+
 ```php
 namespace Pyz\Yves\CustomerPage;
 
@@ -324,6 +330,7 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
     }
 }
 ```
+
 </details>
 
 <details>
@@ -345,6 +352,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
     }
 }
 ```
+
 </details>
 
 <details>
@@ -366,6 +374,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
     }
 }
 ```
+
 </details>
 
 ### 7) Set up the frontend

@@ -61,6 +61,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 
 
 **SalesPayment/config/Zed/Oms/Subprocess/PaymentCancel01.xml**
+
 ```xml
 <state name="payment cancellation pending" display="oms.state.reservation-cancellation-pending">
     <flag>exclude from customer</flag>
@@ -74,6 +75,7 @@ The `exclude from customer` flag is used to prevent cancelled payment orders fro
 Test the implementation by executing the following tests.
 
 ### Basic flow test
+
 1. Add products to cart  
 2. Proceed to checkout  
 3. Reach the payment step and get redirected to hosted payment page  
@@ -113,14 +115,14 @@ Solutions to common issues.
 
 ### Order still visible in customer account
 
-- Verify that the `exclude from customer` flag is properly set in the state machine configuration  
-- Check if the order state transition to `payment cancellation pending` is executed successfully
-- Verify that the state is properly configured in the OMS  
+* Verify that the `exclude from customer` flag is properly set in the state machine configuration  
+* Check if the order state transition to `payment cancellation pending` is executed successfully
+* Verify that the state is properly configured in the OMS  
 
 ### Stock issues
   
-- Verify that the order cancellation workflow works properly
-- Verify stock update triggers
+* Verify that the order cancellation workflow works properly
+* Verify stock update triggers
 
 
 

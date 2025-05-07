@@ -63,7 +63,7 @@ To retrieve general information about a concrete product, send the request:
 
 * If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units&fields[concrete-products]=name,description&fields[sales-units]=conversion,precision`.
 
-{% endinfo_block %}   
+{% endinfo_block %}
 
 | REQUEST  | USAGE |
 | --- | --- |
@@ -127,6 +127,7 @@ To retrieve general information about a concrete product, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -219,6 +220,7 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -266,6 +268,7 @@ To retrieve general information about a concrete product, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -345,6 +348,7 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -416,6 +420,7 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve information about a concrete product with the details on the default product prices</summary>
@@ -506,6 +511,7 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve information about a concrete product with the details on the default and volume prices</summary>
@@ -605,6 +611,7 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -696,6 +703,7 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -802,6 +810,7 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1013,6 +1022,7 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
+
 </details>
 
 
@@ -1617,6 +1627,7 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
+
 </details>
 
 

@@ -102,8 +102,8 @@ Merchant product offer with all the related offer information is visible on the 
 
 1. The merchant who owns the offer is *Active*.
 2. The product offer status is:
-   - Approved
-   - Active
+   * Approved
+   * Active
 3. The product offer is defined for the current store.
 4. The current store is defined for the provided offer.
 5. The current day is within the range of the product offer validity dates.

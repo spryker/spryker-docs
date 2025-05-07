@@ -58,7 +58,7 @@ Make sure the following modules have been installed:
 
 | MODULE           | EXPECTED DIRECTORY                 |
 |------------------|------------------------------------|
-| CategoryStorage  | vendor/spryker/category-storage    | 
+| CategoryStorage  | vendor/spryker/category-storage    |
 | CmsStorage       | vendor/spryker/cms-storage         |
 | MerchantStorage  | vendor/spryker/merchant-storage    |
 | ProductSetStorage| vendor/spryker/product-set-storage |
@@ -69,7 +69,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-## 2) Adjust configuration 
+## 2) Adjust configuration
 
 
 Adjust the following configuration.
@@ -87,6 +87,7 @@ Add the configuration for regular and caching filesystems:
 
 
 **config/Shared/config_default.php**
+
 ```php
 use Spryker\Shared\Sitemap\SitemapConstants;
 
@@ -105,6 +106,7 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
         'path' => '/',
     ],
 ```
+
 </details>
 
 For more details on sitemap caching, see [Configure Sitemap caching interval](#configure-the-sitemap-caching-interval).

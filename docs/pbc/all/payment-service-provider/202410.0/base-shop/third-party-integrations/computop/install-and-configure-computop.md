@@ -196,5 +196,5 @@ $config[ComputopShipmentConstants::PAYPAL_EXPRESS_DEFAULT_SHIPMENT_METHOD_KEY] =
 | `$config[ComputopApiConstants::CRIF_PRODUCT_NAME]`  | string  | `QuickCheckConsumer` or <br> `CreditCheckConsumer` or <br> `QuickCheckBusiness`  or  <br>`CreditCheckBusiness`  or <br>`IdentCheckConsume`.  |
 | `$config[ComputopApiConstants::CRIF_LEGAL_FORM]`  | string  | `PERSON`, `COMPANY`, or `UNKNOWN`.  |
 | `$config[ComputopConstants::CRIF_GREEN_AVAILABLE_PAYMENT_METHODS]`  | array  | Payment methods available with a green response code.  |
-| `$config[ComputopConstants::CRIF_YELLOW_AVAILABLE_PAYMENT_METHODS] ` | array  | Payment methods available with a yellow response code.  |
+| `$config[ComputopConstants::CRIF_YELLOW_AVAILABLE_PAYMENT_METHODS]` | array  | Payment methods available with a yellow response code.  |
 | `$config[ComputopConstants::CRIF_RED_AVAILABLE_PAYMENT_METHODS]`  | array  | Payment methods available with a red response code.  |

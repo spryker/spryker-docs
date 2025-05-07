@@ -142,6 +142,7 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve information about an abstract product with the details about the default and volume prices included</summary>
@@ -256,6 +257,7 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
+
 </details>
 
 

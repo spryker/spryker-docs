@@ -35,7 +35,7 @@ The detailed information about managing shopping lists is represented in the [Mu
 
 ## Permissions management for shared shopping lists
 
-Users of companies with business units can **share** their shopping lists within the company business units. The shopping lists can either be shared with the entire business unit or its members. Company users can view shopping lists shared with them on **My Account&nbsp;<span aria-label="and then">></span> Shopping lists**. The shopping lists can be shared by clicking **Share** on this page as well. The **Share _[SHOPPING LIST NAME]_** page consists of two sections: **Business Units** and **Users**. Here, the shopping list owner can select either the entire business unit or individual users to share the shopping list with.
+Users of companies with business units can **share** their shopping lists within the company business units. The shopping lists can either be shared with the entire business unit or its members. Company users can view shopping lists shared with them on **My Account&nbsp;<span aria-label="and then">></span> Shopping lists**. The shopping lists can be shared by clicking **Share** on this page as well. The **Share *[SHOPPING LIST NAME]*** page consists of two sections: **Business Units** and **Users**. Here, the shopping list owner can select either the entire business unit or individual users to share the shopping list with.
 To view how to share shopping lists with business units or their members, see the [Multiple and Shared Shopping Lists on the Storefront](#multiple-and-shared-shopping-lists-on-the-storefront) section.
 
 Three types of shopping list access rights can be granted:

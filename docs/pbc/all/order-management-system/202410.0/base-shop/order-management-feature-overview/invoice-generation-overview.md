@@ -34,6 +34,7 @@ By default, the invoice can be generated only for the whole order (not for indiv
 
 
 ## Invoice template
+
 The invoice template is not provided out of the box and needs to be added in the SalesInvoiceConfig.php file. Otherwise, the exception is thrown, and the invoice is not generated.
 
 Check out the example of the Spryker invoice template:

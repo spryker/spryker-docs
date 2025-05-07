@@ -78,6 +78,7 @@ Request sample: refresh an agent assist authentication token
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

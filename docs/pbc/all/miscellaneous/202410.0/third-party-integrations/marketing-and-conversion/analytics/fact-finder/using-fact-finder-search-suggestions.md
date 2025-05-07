@@ -50,6 +50,7 @@ Basic parameters:
 * `sid` - FACT-Finder session id.
 
 Controller example:
+
 ```php
 <?php
 

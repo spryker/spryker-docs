@@ -26,6 +26,7 @@ related:
 ## Workflow Scenarios
 
 Payments from Payolution to Merchant are not included in the sequence diagrams since they occur on a regular basis, such as every week.
+
 ```html
 <table>
         <col>
@@ -85,7 +86,7 @@ To integrate invoice payments, two simple steps are needed: setting Payolution i
 
 The configuration to integrate invoice payments using Payolution is:
 * `TRANSACTION_GATEWAY_URL`: the gateway URL to connect with Payolution services (required).
-* `TRANSACTION_SECURITY_SENDER `: the sender id (required).
+* `TRANSACTION_SECURITY_SENDER`: the sender id (required).
 * `TRANSACTION_USER_LOGIN`: the sender username (required).
 * `TRANSACTION_USER_PASSWORD`: the sender password (required).
 * `TRANSACTION_MODE`: the mode of the transaction, either test or live (required).

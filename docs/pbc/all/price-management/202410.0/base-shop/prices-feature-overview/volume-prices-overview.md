@@ -25,7 +25,7 @@ The following schema illustrates the connection between `spy_price_product_store
 
 ![Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Volume+Prices/Volume+Prices+Feature+Overview/volume-prices-dbschema.png)
 
-`price_data` in` spy_price_product_store` table contains a JSON with prices per mode, currency and type.
+`price_data` in`spy_price_product_store` table contains a JSON with prices per mode, currency and type.
 
 {% info_block infoBox %}
 
@@ -86,6 +86,7 @@ After the import is completed the volume prices are shown on the product detail 
 Once the product is added to the shopping list or to the cart, the item price corresponding to the volume price is displayed for that quantity. If the user increases or decreases the quantity in cart (but not in shopping list since here we don't really change quantities), the price is updated once the user goes over or under a threshold defined by the volume prices.
 
 ## Threshold
+
 Volume pricing is applied when a certain threshold is reached.
 
 Threshold is a minimum value that serves as a benchmark/boundary for a discounted price when the product is dependent on the volume bought—for example, the number of units of the product.
@@ -123,7 +124,7 @@ That is a particular case of electricity bills where you pay more if you use mor
 
 {% endinfo_block %}
 
-##  Current Constraints
+## Current Constraints
 
 {% info_block infoBox %}
 

@@ -189,6 +189,7 @@ Running this code inside a DB transaction make the lock entries inaccessible. Th
 
 
 To regenerate the cache, run the following command:
+
 ```bash
 vendor/bin/console oms:process-cache:warm-up
 ```

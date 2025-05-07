@@ -34,6 +34,7 @@ As the Marketplace order contains details about offers and products a customer h
 ![Merchant order in the Merchant Portal](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+order+feature+overview/merchant-order-in-merchant-portal.png)
 
 ## Marketplace and merchant order states machines
+
 You can coordinate the Marketplace and merchant orders processing by triggering the state machine events.
 
 For details about the Marketplace and merchant order state machines, see [Marketplace and merchant state machines](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
@@ -41,6 +42,7 @@ For details about the Marketplace and merchant order state machines, see [Market
 For details about how the two state machines interact, see [Marketplace and merchant state machine interactions](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html).
 
 ## Marketplace order calculation
+
 By default, calculations for the Marketplace order items are performed using the item price (product offer price or the price inherited from the concrete or abstract product), their totals, subtotal aggregation, and tax information.
 
 The Marketplace order contains all the [totals from the Merchant orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html) and is defined by the following formula:
@@ -65,6 +67,7 @@ The sum of Merchant Order Expense Totals may not equal the Marketplace Sales Ord
 ![Marketplace order calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+order+feature+overview/marketplace-order-calculation.png)
 
 ### Rounding
+
 Rounding rules for a regular SCOS sales order also apply to the Marketplace order. The rules imply:
 
 * The rounding is performed on the third decimal number.
@@ -90,23 +93,24 @@ Make sure that Merchants do not modify the order directly, but instead use [Merc
 In the Merchant Portal, merchants can view and manage their `MerchantOrders`.
 
 The information in the Merchant Portal is limited and includes:
-- Customer information
-- Shipment address
-- Merchant order overview
-- Totals
+* Customer information
+* Shipment address
+* Merchant order overview
+* Totals
 
 Merchant order uses its own totals based on order totals, restricted by the Merchant Order Item:
-- refundTotal
-- grandTotal
-- taxTotal
-- expenseTotal
-- subtotal
-- discountTotal
-- canceledTotal
+* refundTotal
+* grandTotal
+* taxTotal
+* expenseTotal
+* subtotal
+* discountTotal
+* canceledTotal
 
 The *merchant order total* is the sum of the totals of items of an order relating to the merchant order.
 
 ## Next steps
+
 * [Learn about the merchant orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html)
 * [Learn about the Marketplace and merchant state machines](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html)
 

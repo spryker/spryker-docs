@@ -70,8 +70,8 @@ This opens the **Edit category** page with a success message displayed.
 {% info_block infoBox "Adding multiple images" %}
 
 You can add multiple image sets and multiple images to an image set. However, by default, in the Back Office and on the Storefront, multiple images are not displayed for categories. If there are multiple image sets or images for a category, the image displayed is defined as follows:
-  * The image set going first or named `default` is displayed.
-  * The image with the lowest **SORT ORDER** is displayed. If several images have the same **SORT ORDER**, the image going first is displayed.
+* The image set going first or named `default` is displayed.
+* The image with the lowest **SORT ORDER** is displayed. If several images have the same **SORT ORDER**, the image going first is displayed.
 
 {% endinfo_block %}
 

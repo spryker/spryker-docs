@@ -39,6 +39,7 @@ related:
 Composer dependency:
 
 To install Spryker's FactFinder module, use [composer](https://getcomposer.org/):
+
 ```php
 composer require spryker-eco/fact-finder-sdk
 composer require spryker-eco/fact-finder
@@ -47,11 +48,14 @@ composer require spryker-eco/fact-finder
 If you faced an issue with the FACT-Finder library dependency and it's not installed,  use the following instructions:
 
 1. Add `composer.json`> file to the respective section of your project, `FACT-Finder/FACT-Finder-PHP-Library": "1.3.*`
-2. Add to the repositories section: 
+2. Add to the repositories section:
+
  ```json
 {"type": "git","url": "git@github.com:FACT-Finder/FACT-Finder-PHP-Library.git"}
 ```
+
 3. Run `composer update` command:
+
 ```bash
 composer update
 ```

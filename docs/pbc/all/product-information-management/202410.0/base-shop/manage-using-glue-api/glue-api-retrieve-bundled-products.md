@@ -103,6 +103,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
     }
 }
 ```
+
 </details>
 
 <details>
@@ -302,6 +303,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -785,6 +787,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/bundled-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/bundled-products-response-attributes.md -->

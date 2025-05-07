@@ -151,6 +151,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     }
 }
 ```
+
 </details>
 
 <details>
@@ -245,6 +246,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
+
 </details>
 
 
@@ -331,6 +333,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve information about an abstract product with the details about abstract product prices</summary>
@@ -436,6 +439,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve information about an abstract product with the details about the default and volume prices included</summary>
@@ -550,6 +554,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -730,6 +735,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
+
 </details>
 
 
@@ -892,6 +898,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
+
 </details>
 
 
@@ -950,6 +957,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
+
 </details>
 
 
@@ -1063,6 +1071,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
+
 </details>
 
 
@@ -1170,6 +1179,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
+
 </details>
 
 
@@ -1293,6 +1303,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
+
 </details>
 
 
@@ -1918,6 +1929,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
+
 </details>
 
 

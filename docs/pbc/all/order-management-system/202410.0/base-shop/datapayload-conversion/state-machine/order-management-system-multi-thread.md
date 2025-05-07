@@ -32,16 +32,19 @@ Order management system (OMS) heavily relies on state machine-related concepts l
 Out of the box, both of these commands process their respective entities sequentially. Each of them grabs and processes all the available entities one by one. Both commands support the `limit` option and thus can do the processing in batches. But still, all the work is done synchronously. Because of this, order management could become a bottleneck for shops with lots of orders being placed and managed. The OMS multi-thread improves this by introducing the ability to process both timeouts and conditions in parallel.
 
 ## How OMS multi-thread works
+
 Each order is assigned a randomly generated positive number called a *processor identifier*. This number is saved in the `spy_sales_order` table. During the order management processing, both preceding commands are triggered with the new command option `processor-identifier` (`p`). The value of this option must match a processor identifier from `spy_sales_table`. Then the commands process only those timeouts and conditions that are related to the orders with the matching processor identifier. This way, one can, for example, trigger the `oms:check-timeout` command several times simultaneously, each time providing different processor identifiers, thus creating several PHP processes for managing a large number of orders in parallel. With the new option in place, the command looks like this:
 
 ```bash
 console oms:check-timeout -p 5 -l 10000
 ```
+
 Instead of providing a single value as the `processor-identifier` option value, one can provide several values separated by a comma.
 
 ```bash
 console oms:check-timeout -p 1,2,3 -l 10000
 ```
+
 {% info_block warningBox %}
 
 If you have a large database, for performance reasons, it's not recommended to specify several comma-separated processor identifiers.
@@ -59,6 +62,7 @@ composer require spryker/oms-multi-thread
 ```
 
 2. Apply the database changes:
+
 ```bash
 console propel:install
 ```

@@ -13,7 +13,7 @@ This document describes technical details of the [PriceProduct](https://github.c
 
 ## Price dimension
 
-Starting from version 2.0.0 of the PriceProduct module, _Default Price Dimension_ was implemented inside the PriceProduct to save BC. All prices imported by the new PriceProductDataImport would be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html) to learn more about the price dimension.
+Starting from version 2.0.0 of the PriceProduct module, *Default Price Dimension* was implemented inside the PriceProduct to save BC. All prices imported by the new PriceProductDataImport would be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html) to learn more about the price dimension.
 
 ## PriceProductService
 
@@ -44,9 +44,9 @@ The `PriceProduct` module has a set of plugins necessary for work with the price
 
 ### Zed
 
-- `PriceDimensionAbstractSaverPluginInterface` — saves price for abstract product in the DB for the selected price dimension (based on `PriceProductTransfer->getPriceDimension())`
-- `PriceDimensionConcreteSaverPluginInterface` — saves price for concrete product in the DB for the selected price dimension (based on `PriceProductTransfer->getPriceDimension())`
-- `PriceDimensionQueryCriteriaPluginInterface` — is used for expanding `PriceProductStoreQuery` using the new transfer object `QueryCriteriaTransfer`.
+* `PriceDimensionAbstractSaverPluginInterface` — saves price for abstract product in the DB for the selected price dimension (based on `PriceProductTransfer->getPriceDimension())`
+* `PriceDimensionConcreteSaverPluginInterface` — saves price for concrete product in the DB for the selected price dimension (based on `PriceProductTransfer->getPriceDimension())`
+* `PriceDimensionQueryCriteriaPluginInterface` — is used for expanding `PriceProductStoreQuery` using the new transfer object `QueryCriteriaTransfer`.
 
 Based on `PriceProductCriteria`, you can build your own `QueryCriteria` to get prices using joins—all prices can be selected from needed price dimensions using only one SQL query. See the DB scheme:
 ![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+PriceProduct/priece-dimensions-diagram.png)
@@ -104,8 +104,8 @@ Another option is to run `console price-product-store:optimize` from time to tim
 
 ### Service
 
-- `PriceProductFilterPluginInterface` — filters array of prices based on `PriceProductFilterTransfer`.
-- `PriceProductDimensionExpanderStrategyPluginInterface` — expands `PriceProductDimension` transfer basing on some properties of this transfer (like `idPriceProductDefault`).
+* `PriceProductFilterPluginInterface` — filters array of prices based on `PriceProductFilterTransfer`.
+* `PriceProductDimensionExpanderStrategyPluginInterface` — expands `PriceProductDimension` transfer basing on some properties of this transfer (like `idPriceProductDefault`).
 
 Reading prices from Storage is implemented in the `PriceProductStorage` module, plugins for reading prices reside in the `PriceProductStorageExtension` module (`/Spryker/Client/PriceProductStorageExtension/Dependency/Plugin/PriceProductStoragePriceDimensionPluginInterface`) which has two methods for reading prices from Storage: `findProductConcretePrices($id)` and `findProductAbstractPrices($id)`
 
@@ -113,5 +113,5 @@ Prices for price dimension inside Storage are supposed to be stored as a separat
 
 All plugins can be added on the project level in:
 
-- `PriceProductDependencyProvider` for the Zed and Service layers.
-- `PriceProductStorageDependencyProvider` for the Client layer.
+* `PriceProductDependencyProvider` for the Zed and Service layers.
+* `PriceProductStorageDependencyProvider` for the Client layer.

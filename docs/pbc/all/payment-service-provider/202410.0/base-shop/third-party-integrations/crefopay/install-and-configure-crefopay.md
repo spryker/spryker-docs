@@ -51,20 +51,20 @@ All necessary configurations can be found in `vendor/spryker-eco/crefo-pay/confi
 |CONFIGURATION KEY | TYPE  |  DESCRIPTION|
 | --- | --- | --- |
 | `$config [CrefoPayConstants::MERCHANT_ID]`| int | Merchant ID assigned by CrefoPay. |
-|` $config [CrefoPayConstants::STORE_ID]` |string  |Store ID of the merchant assigned by CrefoPay as a merchant can have more than one store.|
+|`$config [CrefoPayConstants::STORE_ID]` |string  |Store ID of the merchant assigned by CrefoPay as a merchant can have more than one store.|
 | `$config [CrefoPayConstants::REFUND_DESCRIPTION]` | string | Description to be shown to the end user on the refund.|
-| `$config [CrefoPayConstants::SECURE_FIELDS_API_ENDPOINT] `| string | Secure fields API endpoint.|
-|`$config [CrefoPayConstants::IS_BUSINESS_TO_BUSINESS] `|bool  | Set true in case of b2b model. |
-| `$config [CrefoPayConstants::CAPTURE_EXPENSES_SEPARATELY] `|bool  | If set true, allows capturing expenses in different transactions. |
+| `$config [CrefoPayConstants::SECURE_FIELDS_API_ENDPOINT]`| string | Secure fields API endpoint.|
+|`$config [CrefoPayConstants::IS_BUSINESS_TO_BUSINESS]`|bool  | Set true in case of b2b model. |
+| `$config [CrefoPayConstants::CAPTURE_EXPENSES_SEPARATELY]`|bool  | If set true, allows capturing expenses in different transactions. |
 | `$config [CrefoPayConstants::REFUND_EXPENSES_WITH_LAST_ITEM]`|bool|If set true, allows refunding expenses when the last item is refunded. |
 |` $config [CrefoPayConstants::SECURE_FIELDS_PLACEHOLDERS] ` | array  | Placeholders for CC payment method fields (account name, card number, cvv).  |
 | `$config [CrefoPayApiConstants::CREATE_TRANSACTION_API_ENDPOINT]`  | string  | Create Transaction API endpoint.  |
-| `$config [CrefoPayApiConstants::RESERVE_API_ENDPOINT] ` | string  |  Reserve API endpoint. |
+| `$config [CrefoPayApiConstants::RESERVE_API_ENDPOINT]` | string  |  Reserve API endpoint. |
 | `$config [CrefoPayApiConstants::CAPTURE_API_ENDPOINT]`  | string  |  Capture API endpoint. |
 | `$config [CrefoPayApiConstants::CANCEL_API_ENDPOINT]`  | string  | Cancel API endpoint.  |
 |`$config [CrefoPayApiConstants::REFUND_API_ENDPOINT]`  | string  | Refund API endpoint.  |
 | `$config [CrefoPayApiConstants::FINISH_API_ENDPOINT]`  | string  | Finish API endpoint.  |
-| `$config [CrefoPayApiConstants::PRIVATE_KEY] ` | string  | Integration private key. Provided by CrefoPay.  |
+| `$config [CrefoPayApiConstants::PRIVATE_KEY]` | string  | Integration private key. Provided by CrefoPay.  |
 | `$config [CrefoPayApiConstants::PUBLIC_KEY]`  | string  | Integration public key. Provided by CrefoPay.  |
 
 ### Specific Configuration

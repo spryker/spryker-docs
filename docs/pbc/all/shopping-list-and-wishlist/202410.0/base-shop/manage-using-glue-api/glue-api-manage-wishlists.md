@@ -86,6 +86,7 @@ Request sample: create a wishlist
 		}
 	}
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/wishlists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/wishlists-response-attributes.md -->
@@ -130,6 +131,7 @@ To retrieve all wishlists of a customer, send the request:
 		}
 	}
 ```
+
 </details>
 
 <details>
@@ -157,6 +159,7 @@ To retrieve all wishlists of a customer, send the request:
 	}
 }
 ```
+
 </details>
 
 <details>
@@ -206,6 +209,7 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
+
 </details>
 
 
@@ -306,6 +310,7 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -426,6 +431,7 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/wishlists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/wishlists-response-attributes.md -->
@@ -489,6 +495,7 @@ To retrieve wishlist items, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -533,6 +540,7 @@ To retrieve wishlist items, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -625,6 +633,7 @@ To retrieve wishlist items, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -740,6 +749,7 @@ To retrieve wishlist items, send the request:
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/wishlists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/wishlists-response-attributes.md -->

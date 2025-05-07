@@ -128,6 +128,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
     }
 }
 ```
+
 </details>
 
 <details>
@@ -666,6 +667,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -717,6 +719,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
     ]
 }
 ```
+
 </details>
 
 

@@ -71,6 +71,7 @@ To retrieve the product offers, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -134,6 +135,7 @@ To retrieve the product offers, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -180,6 +182,7 @@ To retrieve the product offers, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -242,6 +245,7 @@ To retrieve the product offers, send the request:
     ]
 }
 ```
+
 </details>
 
 <a name="product-offers-response-attributes"></a>
@@ -266,11 +270,11 @@ For the response attributes of the other included resources, see the following:
 
 You can use the product offers resource as follows:
 
-- [Retrieve product offers of a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-product-offers-of-concrete-products.html)
-- Add product offers to a guest cart—[Creating a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html#retrieve-a-guest-cart).
-- Retrieve information for the product offers in a guest cart—[Retrieving a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html#retrieve-a-guest-cart).
-- Add product offers to a registered user's cart—[Adding items to a cart of a registered user](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
-- Retrieve information for the product offers in registered users' carts—[Retrieving all carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts).
+* [Retrieve product offers of a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-product-offers-of-concrete-products.html)
+* Add product offers to a guest cart—[Creating a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html#retrieve-a-guest-cart).
+* Retrieve information for the product offers in a guest cart—[Retrieving a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html#retrieve-a-guest-cart).
+* Add product offers to a registered user's cart—[Adding items to a cart of a registered user](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
+* Retrieve information for the product offers in registered users' carts—[Retrieving all carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts).
 
 ## Possible errors
 

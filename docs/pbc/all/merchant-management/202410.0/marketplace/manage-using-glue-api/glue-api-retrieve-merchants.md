@@ -200,6 +200,7 @@ This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.ver
     }
 }
 ```
+
 </details>
 
 
@@ -293,6 +294,7 @@ This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.ver
     }
 }
 ```
+
 </details>
 
 <a name="merchants-response-attributes"></a>
@@ -629,6 +631,7 @@ This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.ver
     ]
 }
 ```
+
 </details>
 
 For the merchant attributes, see [Retrieve merchants](#merchants-response-attributes).

@@ -35,7 +35,7 @@ This opens the **Edit Product Attributes** page.
     * Next to the values you want to remove, select **x**.
 4. For **ALLOW INPUT ANY VALUE OTHER THAN PREDEFINED ONES**, do one of the following:
     * To start accepting custom values for this attribute, select the checkbox.
-    * To stop accepting custom values for this attribute, clear the checkbox.    
+    * To stop accepting custom values for this attribute, clear the checkbox.
 5. Select **Save**.
     This opens the **2. Translations** tab with a success message displayed.
 6. For the **ATTRIBUTE KEY** of each locale, enter a **TRANSLATION**.

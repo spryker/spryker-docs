@@ -30,11 +30,11 @@ To start editing product labels, do the following:
     * **NAME**
     * **FRONT-END REFERENCE**
     * **PRIORITY**
-3. Select or clear the **IS ACTIVE** checkbox.    
+3. Select or clear the **IS ACTIVE** checkbox.
 4. In the **BEHAVIOR** pane, update any of the following:
     * **VALID FROM**
     * **VALID TO**
-5. Select or clear the **IS EXCLUSIVE** checkbox.        
+5. Select or clear the **IS EXCLUSIVE** checkbox.
 6. In the **STORE RELATION** pane, do any of the following:
     * Clear the checkboxes next to the stores you want to stop displaying the label in.
     * Select the checkboxes next to the stores you want to start displaying the label in.

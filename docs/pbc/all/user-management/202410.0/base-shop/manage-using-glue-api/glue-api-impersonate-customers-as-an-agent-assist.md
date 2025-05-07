@@ -91,6 +91,7 @@ Request sample: impersonate a customer
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

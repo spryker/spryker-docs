@@ -39,6 +39,7 @@ The shop must implement the Calculation Request operation to calculate an exampl
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay-installment-payment-flow.png)
 
 ### Cancellation Flow
+
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay-installment-cancellation-flow.png)
 
 ### Partial Cancellation Flow

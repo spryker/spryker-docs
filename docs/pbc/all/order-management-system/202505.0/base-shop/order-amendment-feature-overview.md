@@ -11,7 +11,7 @@ template: concept-topic-template
 
 ## Related Developer documents
 
-| INSTALLATION GUIDES | 
+| INSTALLATION GUIDES |
 |---------|
 | [Install the Order Amendment feature]  |
 | [Install the Multiple Carts feature]  |

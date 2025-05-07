@@ -23,6 +23,7 @@ Before implementing the Unzer payment method, make sure to check and fulfill the
 1. Add PayPal to the OMS process list and payment methods `state-machine` mappings:
 
 **config/Shared/config_default.php**
+
 ```php
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     ...
@@ -141,6 +142,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 1. Extend `PaymentTransfer` with new property:
 
 **src/Pyz/Shared/Payment/Transfer/payment.transfer.xml**
+
 ```xml
 <?xml version="1.0"?>
 <transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
@@ -434,7 +436,7 @@ class UnzerFactory extends EcoUnzerFactory
 
 </details>
 
-10.  Introduce `PayPalPaymentProcessor`:
+10. Introduce `PayPalPaymentProcessor`:
 
 <details><summary>src/Pyz/Zed/Unzer/Business/Payment/Processor/PayPalPaymentProcessor.php</summary>
 
@@ -674,6 +676,7 @@ class UnzerConfig extends EcoUnzerConfig
     ];
 }
 ```
+
 </details>
 
 ## Implemented payment method on the Storefront

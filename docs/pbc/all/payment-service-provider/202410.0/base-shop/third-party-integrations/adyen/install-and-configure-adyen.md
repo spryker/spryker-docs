@@ -43,6 +43,7 @@ The `SprykerEco.Adyen` module provides the following payment methods:
 ## Installation
 
 To install the Adyen module, run the command:
+
 ```
 composer require spryker-eco/adyen
 ```
@@ -76,7 +77,7 @@ The table below describes all general configuration keys and their values.
 | `AdyenApiConstants::API_KEY` | string | API key, provided by Adyen. |
 | `AdyenApiConstants::GET_PAYMENT_METHODS_ACTION_URL` | string | URL for the API call to get available payment methods. |
 | `AdyenApiConstants::MAKE_PAYMENT_ACTION_URL` | string | URL for the API call to make payment. |
-|` AdyenApiConstants::PAYMENTS_DETAILS_ACTION_URL` | string | URL for the API call to retrieve payment details . |
+|`AdyenApiConstants::PAYMENTS_DETAILS_ACTION_URL` | string | URL for the API call to retrieve payment details . |
 | `AdyenApiConstants::AUTHORIZE_ACTION_URL` | string | URL for the authorization API call. |
 | `AdyenApiConstants::AUTHORIZE_3D_ACTION_URL` | string | URL for the 3D authorization API call. |
 | `AdyenApiConstants::CAPTURE_ACTION_URL` | string | URL for the capture API call. |
@@ -132,6 +133,7 @@ The table below describes all general configuration keys and their values.
  ```
 
 2. Based on the Adyen API version, you need to configure Session Frontend:
+
 ```php
  // >>> SESSION FRONTEND
  ...

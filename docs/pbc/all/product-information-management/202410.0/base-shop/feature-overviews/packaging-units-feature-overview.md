@@ -37,7 +37,7 @@ redirect_from:
 
 {% endinfo_block %}
 
-The _Packaging Unit_ feature introduces a *packaging unit* that is a unit of measure used as packaging for a product. It allows including the amount of stock in a product a customer wants to buy. A shop owner can sell the same product in different packaging units—for example, apples can be sold as an "Item", a "Bag", or "Pallet" of apples. The "bag", "pallet", and "box" are referred to as *packaging unit types*.
+The *Packaging Unit* feature introduces a *packaging unit* that is a unit of measure used as packaging for a product. It allows including the amount of stock in a product a customer wants to buy. A shop owner can sell the same product in different packaging units—for example, apples can be sold as an "Item", a "Bag", or "Pallet" of apples. The "bag", "pallet", and "box" are referred to as *packaging unit types*.
 
 Each packaging unit is defined on an abstract product level and is represented by one product variant—for example:
 

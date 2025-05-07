@@ -81,6 +81,7 @@ Request sample: retrieve image sets of an abstract product
     }
 }
 ```
+
 </details>
 
 <a name="abstract-product-sets-response-attributes"></a>

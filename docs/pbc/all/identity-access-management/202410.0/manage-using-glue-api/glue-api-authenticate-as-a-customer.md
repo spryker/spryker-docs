@@ -112,6 +112,7 @@ Note that depending on the Login feature configuration for your project, too man
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

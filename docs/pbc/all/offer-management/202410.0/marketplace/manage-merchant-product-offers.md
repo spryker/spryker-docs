@@ -58,7 +58,7 @@ To view an offer, on the **Offers** page, in the **Actions** column, next to the
 
 ### Reference information: Viewing an offers
 
-The following table describes the attributes on the **View Offer: _[Offer Reference]_** page:
+The following table describes the attributes on the **View Offer: *[Offer Reference]*** page:
 
 | SECTION | ATTRIBUTE | DESCRIPTION |
 |-|-|-|

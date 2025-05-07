@@ -100,6 +100,7 @@ Fill in the `merchant_oms_process.csv` as shown in the following example:
 merchant_reference,merchant_oms_process_name
 MER000001,MainMerchantStateMachine
 ```
+
 and run the following command:
 
 ```bash

@@ -90,9 +90,9 @@ If [Google Tag Manager](https://developers.google.com/tag-platform/tag-manager) 
 
 To use Usercentrics with the Google Tag Manager, do the following:
 
-- In the [Usercentrics Admin Interface](https://admin.usercentrics.eu/), go to **Service Settings&nbsp;<span aria-label="and then">></span> Data Processing Services** and define the data processing services you have in Google Tag Manager.
+* In the [Usercentrics Admin Interface](https://admin.usercentrics.eu/), go to **Service Settings&nbsp;<span aria-label="and then">></span> Data Processing Services** and define the data processing services you have in Google Tag Manager.
 
-- In the Google Tag Manager UI, configure the variables and triggers to work with Usercentrics. For instructions, see [Google Tag Manager Configuration](https://docs.usercentrics.com/#/browser-sdk-google-tag-manager-configuration).
+* In the Google Tag Manager UI, configure the variables and triggers to work with Usercentrics. For instructions, see [Google Tag Manager Configuration](https://docs.usercentrics.com/#/browser-sdk-google-tag-manager-configuration).
 
 ## Configure Usercentrics
 

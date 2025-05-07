@@ -53,9 +53,9 @@ Onboarding happens in the following steps:
 
 #### Notes for the Marketplace Operator about merchant onboarding
 
-- Merchants disabled in the Spryker Marketplace aren't automatically removed from the Stripe App. If you need to disable a merchant from receiving payouts, you need to do it in the Stripe Dashboard.
-- A merchant needs to onboard once to enable Stripe for all merchant users.
-- All merchant users belonging to a merchant have access to the **Payment Setting** page with Stripe onboarding.
+* Merchants disabled in the Spryker Marketplace aren't automatically removed from the Stripe App. If you need to disable a merchant from receiving payouts, you need to do it in the Stripe Dashboard.
+* A merchant needs to onboard once to enable Stripe for all merchant users.
+* All merchant users belonging to a merchant have access to the **Payment Setting** page with Stripe onboarding.
 
 ## Marketplace payments and merchant payouts
 
@@ -98,4 +98,5 @@ Payouts with Spryker's commissions engine work as follows:
 
 
 ## Next step
+
 [Install and configure Stripe prerequisites for marketplace](/docs/pbc/all/payment-service-provider/202404.0/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html)

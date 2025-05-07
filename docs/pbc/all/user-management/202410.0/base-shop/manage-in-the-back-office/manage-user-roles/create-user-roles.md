@@ -97,6 +97,7 @@ See the example of the `navigation.xml` file of the AvailabilityGui module:
     </product>
 </config>
 ```
+
 </details>
 
 

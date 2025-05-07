@@ -59,7 +59,7 @@ The status of the Marketplace order is an aggregated state of the Marketplace or
 
 {% info_block infoBox "Info" %}
 
-In the Marketplace Dummy Payment, only the _invoice_ type of payment is supported by default.
+In the Marketplace Dummy Payment, only the *invoice* type of payment is supported by default.
 
 {% endinfo_block %}
 

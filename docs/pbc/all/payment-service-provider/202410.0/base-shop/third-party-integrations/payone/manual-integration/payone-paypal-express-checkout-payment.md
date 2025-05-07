@@ -24,9 +24,10 @@ Add the following code below the checkout button or anywhere you want, depending
 ```bash
 {% raw %}{{{% endraw %} render(path('payone-checkout-with-paypal-button')) {% raw %}}}{% endraw %}
 ```
+
 You can also implement your own button if you want the button to be loaded without a separate call to the controller or if you want to change the design.
 
-## Paypal Express Checkout flow description:
+## Paypal Express Checkout flow description
 
 * Once you click the **Checkout with PayPal** button, the genericpayment request is sent to Payone with `setexpresscheckout` action and success, failure and back URLs.
 * In the response we receive a workorderid which is used for all other operations until the capture request and PayPal redirect URL.
@@ -64,7 +65,7 @@ You can find all needed configuration parameters in `config.dist.php` file insid
 
 {% endinfo_block %}
 
-## Configuration parameters description:
+## Configuration parameters description
 
 To understand where to go, if control over express checkout process should be handed over to the project,
 Payone module needs several URLs to be configured in the global config:
@@ -94,7 +95,7 @@ $config[PayoneConstants::PAYONE][PayoneConstants::PAYONE_EXPRESS_CHECKOUT_BACK_U
 
 ```
 
-## Extra configuration:
+## Extra configuration
 
 To add a possibility to skip standard checkout steps for a guest customer, the customer step should be extended:
 Open `Yves/CheckoutPage/Process/Steps/CustomerStep.php` file in your project and add the following code to the `postCondition` and `requireInput` methods:

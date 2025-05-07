@@ -40,8 +40,8 @@ Review the reference information before you start, or look up the necessary info
 To edit a product variant:
 
 1. Navigate to the *Edit Concrete Product* page using one of the following paths:
-   * **Products&nbsp;<span aria-label="and then">></span> View** in the _Actions_ column for a specific abstract product **>** scroll down to the **Variants tab&nbsp;<span aria-label="and then">></span> Edit** in the _Actions_ column for a specific product variant.
-    * **Products&nbsp;<span aria-label="and then">></span> Edit** in the _Actions_ column for a specific abstract product **Variants tab&nbsp;<span aria-label="and then">></span> Edit** in the _Actions_ column for a specific product variant.
+   * **Products&nbsp;<span aria-label="and then">></span> View** in the *Actions* column for a specific abstract product **>** scroll down to the **Variants tab&nbsp;<span aria-label="and then">></span> Edit** in the *Actions* column for a specific product variant.
+    * **Products&nbsp;<span aria-label="and then">></span> Edit** in the *Actions* column for a specific abstract product **Variants tab&nbsp;<span aria-label="and then">></span> Edit** in the *Actions* column for a specific product variant.
 2. On the *Edit Concrete Product* page, update the following tabs:
     1. *General* tab: populate name and description, valid from and to dates, make the product searchable by selecting the Searchable checkbox for the appropriate locale (or all locales).
     2. *Price & Stock* tab: define the default/original, gross/net prices, and stock.

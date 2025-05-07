@@ -56,6 +56,7 @@ The defined steps are wired up through the parameters that are passed when creat
 `StepEngine` takes care of executing the steps defined in your `StepCollection`. To start the multi-step workflow, you need to call the `StepEngine::process()` operation from your controller and pass the request object to it; optionally, you can pass `FormCollectionHandlerInterface` to it.
 
 ## Processing the workflow
+
 When `StepEngine` starts to process the multi-step workflow, it iterates through the steps contained in the step collection.
 
 For the current step, it checks if it meets the assigned preconditions by calling `StepInterface::preCondition()`.

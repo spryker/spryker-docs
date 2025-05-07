@@ -19,7 +19,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-labels-feature-overview.html
 ---
 
-The _Product Label_ feature lets product catalog managers highlight the needed products by adding a special type of information—product labels.
+The *Product Label* feature lets product catalog managers highlight the needed products by adding a special type of information—product labels.
 
 ## Product label
 

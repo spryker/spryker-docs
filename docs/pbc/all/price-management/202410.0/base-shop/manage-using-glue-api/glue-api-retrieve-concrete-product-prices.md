@@ -100,6 +100,7 @@ To retrieve prices of a concrete product, send the request:
     }
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve default and volume prices of a concrete product</summary>
@@ -152,6 +153,7 @@ To retrieve prices of a concrete product, send the request:
     }
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve a gross price in Swiss Franc of a concrete product</summary>
@@ -197,6 +199,7 @@ To retrieve prices of a concrete product, send the request:
     }
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/concrete-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-product-prices-response-attributes.md -->

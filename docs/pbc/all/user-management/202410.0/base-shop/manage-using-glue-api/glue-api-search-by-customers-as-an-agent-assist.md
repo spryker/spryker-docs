@@ -146,6 +146,7 @@ To search by customers, send the request:
     }
 }
 ```
+
 </details>
 
 <details><summary>Response sample: search for a customer with page limit and page offset</summary>
@@ -204,6 +205,7 @@ To search by customers, send the request:
     }
 }
 ```
+
 </details>
 
 <details><summary>Response sample: search for a customer by email address</summary>
@@ -236,6 +238,7 @@ To search by customers, send the request:
     }
 }    
 ```
+
 </details>
 
 <details><summary>Response sample: search for a customer by name</summary>
@@ -268,6 +271,7 @@ To search by customers, send the request:
     }
 }   
 ```
+
 </details>
 
 <details><summary>Response sample: search for a customer by customer reference</summary>
@@ -300,6 +304,7 @@ To search by customers, send the request:
     }
 }    
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

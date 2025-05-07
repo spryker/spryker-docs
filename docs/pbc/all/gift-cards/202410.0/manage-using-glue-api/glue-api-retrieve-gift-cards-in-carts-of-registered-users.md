@@ -112,7 +112,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -215,7 +216,8 @@ To retrieve a particular cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->

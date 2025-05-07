@@ -33,12 +33,12 @@ The login process with MFA looks as follows:
 2. Fetch enabled MFA types: If MFA is enabled, the system retrieves the customer's enabled MFA types from `multi-factor-auth/get-customer-enabled-types`.
 
 3. Evaluate the number of enabled MFA methods:
-  * Multiple MFA methods: the system presents a selection screen where the user selects a preferred authentication method
-  * One MFA method: the system proceeds to verify the user using their only MFA method
+* Multiple MFA methods: the system presents a selection screen where the user selects a preferred authentication method
+* One MFA method: the system proceeds to verify the user using their only MFA method
 
-4. Send the authentication code via `multi-factor-auth/send-customer-code`: 
-  * Multiple MFA methods: the authentication code is sent to the platform selected by the user
-  * One MFA method: the authentication code is sent to the method's platform
+4. Send the authentication code via `multi-factor-auth/send-customer-code`:
+* Multiple MFA methods: the authentication code is sent to the platform selected by the user
+* One MFA method: the authentication code is sent to the method's platform
 
 5. Code validation: After the authentication code is sent, the system presents a code validation form to the user. The user enters the received authentication code in the form.  
   If the code is correct, authentication is successful. If incorrect, the user needs to double-check the code and try entering again.
@@ -61,9 +61,9 @@ For the login MFA flow, MFA is triggered only after validating credentials to pr
 MFA is used for authenticating customer login and critical customer profile actions.
 
 Examples of protected actions:
-- Update email address
-- Change password
-- Delete account
+* Update email address
+* Change password
+* Delete account
 
 You can configure other actions to be protected with MFA according to your requirements. For instructions on integrating MFA into forms and actions, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html#configure-enabled-routes-and-forms).
 
@@ -80,9 +80,9 @@ For details on configuring the grace period, see [Install the Multi-Factor Authe
 The Multi-Factor Authentication system includes protection against brute force attacks. This mechanism limits the number of failed MFA code entry attempts a customer can make within a single validation flow.
 
 If a customer reaches the configured number of failed attempts to enter the code, the following happens:
-- The system resets the MFA flow
-- The page is refreshed, and the customer must start the authentication process from the beginning
-- All previously generated codes become invalid
+* The system resets the MFA flow
+* The page is refreshed, and the customer must start the authentication process from the beginning
+* All previously generated codes become invalid
 
 For instructions on configuring brute force protection, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html#configure-brute-force-protection-limit).
 
@@ -94,9 +94,9 @@ You can set up your own methods by implementing a custom MFA type plugin. For in
 
 ## Managing Multi-Factor Authentication in the customer profile
 
-New customers are prompted to set up MFA on the profile overview page. To activate an MFA method, they need to verify that it's woking by entering an authentication code. This prevents them from getting locked out of their account. 
+New customers are prompted to set up MFA on the profile overview page. To activate an MFA method, they need to verify that it's woking by entering an authentication code. This prevents them from getting locked out of their account.
 
-Once MFA methods are set up, a user can activate and deactivate individual MFA methods. This action is protected by default. 
+Once MFA methods are set up, a user can activate and deactivate individual MFA methods. This action is protected by default.
 
 
 

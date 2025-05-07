@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/scheduled-prices-feature-overview.html
 ---
 
-The _Scheduled Prices_ feature lets shop administrators schedule price changes, which are to happen in the future for multiple products simultaneously.
+The *Scheduled Prices* feature lets shop administrators schedule price changes, which are to happen in the future for multiple products simultaneously.
 
 Instead of changing prices manually, you can prepare a list of prices with time frames that are to be applied automatically. For example, if you want to increase the prices of the products that are in great demand on a certain date before Christmas eve and decrease them on a certain date afterward. The Scheduled Prices feature lets you specify prices and the dates beforehand.
 

@@ -108,7 +108,7 @@ If you don't want to display the Service products in the Storefront so buyers ca
     8. Go back to the **Merchandising&nbsp;<span aria-label="and then">></span> Configurable Bundle Templates** section and click **Edit** for the just created Configurable bundle template.
     9. Click **Add slot** and add the Service product to it.
     10. Click **Save**. The Configurable bundle template with two slots, one for physical products and one for service, is now created.
- 3. Activate the Configurable Bundle Template by clicking **Activate** in the *Actions* column of the *Configurable Bundle Templates* page.
+3. Activate the Configurable Bundle Template by clicking **Activate** in the *Actions* column of the *Configurable Bundle Templates* page.
  The configurable bundle now appears on the *Configurable Bundle List* page on the Storefront. Buyers can select the products and add the service if they want:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Creating+Service+Offerings/configurable-bundle-list.png)

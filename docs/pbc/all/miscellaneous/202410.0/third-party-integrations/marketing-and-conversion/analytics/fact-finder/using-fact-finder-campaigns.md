@@ -204,6 +204,7 @@ class ProductController extends AbstractController
     } {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```
+
 Additionally, you might need to add some more feedback widgets to general layout in `src/Pyz/Yves/Application/Theme/default/layout/layout.twig`
 5. Inject pushed products campaign template into product details template, e.g.:
 

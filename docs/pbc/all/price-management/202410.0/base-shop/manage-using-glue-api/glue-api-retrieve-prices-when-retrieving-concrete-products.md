@@ -133,6 +133,7 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve information about a concrete product with the details on the default and volume prices</summary>
@@ -232,6 +233,7 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
+
 </details>
 
 

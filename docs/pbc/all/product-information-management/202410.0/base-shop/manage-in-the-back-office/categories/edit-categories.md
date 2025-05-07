@@ -34,7 +34,7 @@ This doc describes how to edit categories in the Back Office.
 5. For **STORES**, do any of the following:
     * Select one or more stores.
     * Next to the stores you want to remove this category from, click **x**.  
-6. Select a **TEMPLATE**.    
+6. Select a **TEMPLATE**.
 7. Select or clear the following checkboxes:
     * ACTIVE
     * VISIBLE IN THE CATEGORY TREE

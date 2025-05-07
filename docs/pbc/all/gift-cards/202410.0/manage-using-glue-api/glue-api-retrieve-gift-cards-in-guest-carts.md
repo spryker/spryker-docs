@@ -128,6 +128,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 <a name="guest-cart-response-attributes"></a>

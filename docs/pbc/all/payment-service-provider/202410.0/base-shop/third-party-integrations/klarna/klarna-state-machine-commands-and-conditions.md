@@ -32,8 +32,8 @@ related:
 
 * Activates the reservation that corresponds to the given reference number
 * Response:
-  - Success: order activated
-  - Declined: capture failed. Need to update order
+  * Success: order activated
+  * Declined: capture failed. Need to update order
 * Plugin: `CapturePlugin`
 
 **Update**
@@ -53,8 +53,8 @@ related:
 
 * Performs a partial refund
 * Response:
-  - Success: Refund possible and accepted
-  - Declined: Some error occurred
+  * Success: Refund possible and accepted
+  * Declined: Some error occurred
 * Plugin: `RefundPlugin`
 
 ## Conditions

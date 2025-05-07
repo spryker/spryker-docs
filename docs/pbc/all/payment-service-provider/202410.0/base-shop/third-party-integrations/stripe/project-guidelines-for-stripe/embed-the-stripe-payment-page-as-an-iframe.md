@@ -66,6 +66,7 @@ Example: `/payment?url=base64-encoded-URL-for-iframe-src`.
 1. Create a controller to render the payment page:
 
 **src/Pyz/Yves/PaymentPage/Controller/PaymentController.php**
+
 ```php
 
 namespace Pyz\Yves\PaymentPage\Controller;
@@ -96,6 +97,7 @@ class PaymentController extends AbstractController
 2. Create a template for the page:
 
 **src/Pyz/Yves/PaymentPage/Theme/default/views/payment.twig**
+
 ```twig
 {% raw %}
 {% extends template('page-layout-checkout', 'CheckoutPage') %}
@@ -114,6 +116,7 @@ class PaymentController extends AbstractController
 3. Create a route for the controller:
 
 **src/Pyz/Yves/PaymentPage/Plugin/Router/EmbeddedPaymentPageRouteProviderPlugin.php**
+
 ```php
 namespace Pyz\Yves\PaymentPage\Plugin\Router;
 

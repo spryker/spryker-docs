@@ -99,7 +99,7 @@ The number of state machine flags in the `oms.xsd` file has been already predefi
 
 {% endinfo_block %}
 
-We use the `exclude from customer` flag that skips all orders having _ALL_ item states flagged with this flag. That means it's not displayed on customer Yves order details and list pages.
+We use the `exclude from customer` flag that skips all orders having *ALL* item states flagged with this flag. That means it's not displayed on customer Yves order details and list pages.
 
 ## Transitions
 
@@ -156,7 +156,7 @@ You can also set the date and time from when the timeout should be started. For 
 
 ### OMS timeout processor
 
-_Timeout processor_ is designed to set a custom timeout for an OMS event.
+*Timeout processor* is designed to set a custom timeout for an OMS event.
 
 Let's imagine today is Monday, and your shop plans to ship orders only on Friday. In this case, you can not specify the exact timeout (in days or hours) to start the shipping process. Even if you specify just the timeout, say, four days, for example, `<event name="ship" manual="" timeout="96 hour"/>`, the scheduler will be regularly checking if the event happened. This creates an unnecessary load on the OMS and is bad for your shop's performance, especially if you have many orders. For this specific case, it would be enough to start running the check in four days. This is when a timeout processor comes in handy: you use it to specify from when the timeout should be calculated.
 
@@ -240,6 +240,7 @@ class InitiationTimeoutProcessorPlugin extends AbstractPlugin implements Timeout
     }
 }
 ```
+
 </details>
 
 With this implementation of the plugin, if the timeout is set to 1 hour, the event will be triggered 1 hour after the previous event.
@@ -304,6 +305,7 @@ use Spryker\Zed\OmsExtension\Dependency\Plugin\TimeoutProcessorPluginInterface;c
     }
 }
 ```
+
 </details>
 
 With this implementation of the plugin, if the timeout is set to 1 hour, the event will be triggered at 1:00 AM on November 15, 2021.
@@ -428,6 +430,7 @@ Example:
 The mapping between this string and the actual implementation of the command is done through the state machine handler `StateMachineHandlerInterface::getCommandPlugins()`.
 
 Example of `\Pyz\Zed\Oms\OmsDependencyProvider`:
+
 ```php
 <?php
 ...

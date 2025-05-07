@@ -44,7 +44,7 @@ For more details about how to add multiple delivery addresses to order items in 
 
 ## Split Delivery in the Back Office
 
-In the Back Office, the shipments are displayed on the **View Order: _[Order ID]_** page, in the **Order Items** section.
+In the Back Office, the shipments are displayed on the **View Order: *[Order ID]*** page, in the **Order Items** section.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Split+Delivery/Split+Delivery+Feature+Overview/shipments-zed.png)
 

@@ -12,7 +12,7 @@ related:
     link: docs/pbc/all/multi-factor-authentication/page.version/install-customer-email-multi-factor-authentication-method.html
 ---
 
-This document describes how to create and implement Multi-Factor Authentication (MFA) methods. 
+This document describes how to create and implement Multi-Factor Authentication (MFA) methods.
 
 To lean more about MFA methods, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html).
 
@@ -26,7 +26,7 @@ An MFA method consists of two components:
 [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html)
 
 ## 1) Create an MFA type plugin
- 
+
 Create a plugin that implements `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface`:
 
 <details>

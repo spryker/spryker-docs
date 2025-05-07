@@ -49,7 +49,7 @@ On the **Change password** drawer, you see the following attributes:
 
 | ATTRIBUTE        | DESCRIPTION        |
 | ---------------- | ---------------------- |
-| Current password | Field to enter the current password.|   
+| Current password | Field to enter the current password.|
 |  New password | Field to enter the new password for the Merchant Portal user account. |
 | Repeat new password | Field to confirm the new password.|
 

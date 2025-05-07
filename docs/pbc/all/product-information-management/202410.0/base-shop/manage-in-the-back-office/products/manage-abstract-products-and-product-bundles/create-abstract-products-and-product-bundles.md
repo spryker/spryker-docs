@@ -122,7 +122,7 @@ On the **Variants** tab, depending on the product type, do one of the following:
     <video width="100%" height="auto" controls>
     <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.md/defining-product-variants.mp4" type="video/mp4">
   </video>
-</figure>    
+</figure>
 
 ### Reference information: Define product variants
 

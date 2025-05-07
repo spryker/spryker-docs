@@ -70,6 +70,7 @@ To refresh an authentication token, send the request:
   }
 }
 ```
+
 </details>
 
 
@@ -98,6 +99,7 @@ To refresh an authentication token, send the request:
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

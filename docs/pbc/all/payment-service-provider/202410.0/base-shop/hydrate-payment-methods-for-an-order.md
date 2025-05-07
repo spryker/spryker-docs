@@ -68,4 +68,4 @@ Plugins must populate the `PaymentTransfer` object and return it back. After thi
 To enable it, follow these steps:
 
 1. Go to `\Pyz\Zed\Sales\SalesConfig::getSalesDetailExternalBlocksUrls`.
-2. Add` ‘payments’ => ‘/payment/sales/list’`, to the `$projectExternalBlocks` array.
+2. Add`‘payments’ => ‘/payment/sales/list’`, to the `$projectExternalBlocks` array.

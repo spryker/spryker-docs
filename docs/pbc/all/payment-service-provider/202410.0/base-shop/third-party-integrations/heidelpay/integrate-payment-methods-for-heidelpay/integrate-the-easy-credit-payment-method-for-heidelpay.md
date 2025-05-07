@@ -528,6 +528,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 	</div>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
 <br>
 </details>
 

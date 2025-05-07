@@ -116,8 +116,8 @@ Performing this action triggers the scheduled prices cron job to be run for the 
 
 {% info_block errorBox %}
 
-- All the scheduled prices in an import are deleted when the import is deleted.
-- Performing this action triggers the scheduled prices cron job to be run for the products which have had corresponding scheduled prices in this import.
+* All the scheduled prices in an import are deleted when the import is deleted.
+* Performing this action triggers the scheduled prices cron job to be run for the products which have had corresponding scheduled prices in this import.
 
 {% endinfo_block %}
 

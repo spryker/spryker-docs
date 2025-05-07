@@ -139,4 +139,4 @@ You can find the affected modules of the float stock update in the following lis
 | spryker-shop/shopping-list-page | 0.7.0 | [Migration Guide - ShoppingListPage](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglistpage-module.html) |
 | spryker-shop/shopping-list-widget | 0.5.0 | [Upgrade the ShoppingListWidget module](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglistwidget-module.html) |
 
-</details>   
+</details>

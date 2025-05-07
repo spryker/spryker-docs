@@ -23,8 +23,8 @@ When configuration starts on Yves, from the product details page (PDP), the prod
 * A customer is on a PDP—the page with the product configuration.
 * The product configuration can be a complete configuration or use an incomplete pre-configuration defined by the shop owner.
 * The product configuration can be taken from two sources:
-  - A session for complete configuration.
-  - Storage (Redis) for the pre-configuration.
+  * A session for complete configuration.
+  * Storage (Redis) for the pre-configuration.
 
 The following table shows the configuration data that is stored in the Session and Storage.
 
@@ -63,8 +63,8 @@ The customer clicks the configuration button, and the request is redirected to t
 1. The configuration data is read from the session or storage for the given SKU.
 2. A plugin that handles the request is selected based on the configurator type.
 3. The plugin expands the request with additional necessary data:
-  - store, locale, currency, customer, price mode.
-  - `backUrl`—based on the referer header.
+* store, locale, currency, customer, price mode.
+* `backUrl`—based on the referer header.
 4. The plugin generates the URL that points to the configurator page together with all of the necessary data.
 
 ### Phase 4
@@ -108,8 +108,8 @@ The customer clicks the configuration button, and the request is redirected to t
 
 1. The gateway page receives data.
 2. The data is checked through the execution of the validator plugins stack for received data.
-  - If validation is not successful, the request is redirected to the `backUrl` without saving the configuration. A warning message is displayed.
-  - If the validation part is successful, the configuration is saved to the session.
+* If validation is not successful, the request is redirected to the `backUrl` without saving the configuration. A warning message is displayed.
+* If the validation part is successful, the configuration is saved to the session.
 3. All applicable plugins that can handle the configurator response are executed. A plugin that applies to the PDP source type resolves the back URL according to the response data.
 
 ### Phase 8
@@ -150,10 +150,10 @@ When configuration starts on Yves, from the **Cart** page, the product configura
 1. The configuration data is read from the quote for the given `ItemGroupKey` and `SKU`.
 2. A plugin that handles the request is selected based on the configurator type.
 3. The plugin expands the request with additional necessary data:
-  - store, locale, currency, customer, price mode.
-  - `CheckSum`—calculates the CRC32 polynomial of a request data as a string.
-  - `timestamp`—the timestamp when the request is created.
-  - `backUrl`—based on the `Referer` header.
+* store, locale, currency, customer, price mode.
+* `CheckSum`—calculates the CRC32 polynomial of a request data as a string.
+* `timestamp`—the timestamp when the request is created.
+* `backUrl`—based on the `Referer` header.
 4. The plugin generates the URL that points to the configurator page together with all the necessary data.
 
 ### Phase 4
@@ -188,8 +188,8 @@ Redirects the customer to the configurator page using the GET request.
 
 1. The gateway page receives data.
 2. The data is checked through the execution of the validator plugins stack for received data.
-  - If validation is not successful, the request is redirected to `backUrl` without saving the configuration. A warning message is displayed.
-  - If validation is successful, the framework updates the cart item configuration in the cart.
+* If validation is not successful, the request is redirected to `backUrl` without saving the configuration. A warning message is displayed.
+* If validation is successful, the framework updates the cart item configuration in the cart.
 3. All applicable plugins that can handle the configurator response are executed. A plugin that applies to the cart page source type resolves the back URL according to the response data.
 
 ### Phase 8

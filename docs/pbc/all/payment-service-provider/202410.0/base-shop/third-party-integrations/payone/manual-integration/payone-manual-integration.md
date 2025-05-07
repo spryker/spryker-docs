@@ -64,7 +64,7 @@ The configuration to integrate payments using Payone is:
 * `PAYONE_EXPRESS_CHECKOUT_BACK_URL`: if user presses back button(if so exists) on payone side, this urs is used to redirect user back to shop.
 * `PAYONE_EXPRESS_CHECKOUT_FAILURE_URL`: if something goes wrong when the user is on payone side, redirect here is done.
 
-## Integration with Checkout module (CheckoutDependencyProvider):
+## Integration with Checkout module (CheckoutDependencyProvider)
 
 Project (demoshop) level `\Pyz\Yves\Checkout\CheckoutDependencyProvider` method `provideDependencies` container has to be extended with the `static::PAYMENT_SUB_FORMS` and `static::PAYMENT_METHOD_HANDLER` keys which have to contain information about PSP payment methods SubForms and SubForms Handlers accordingly.
 
@@ -212,6 +212,7 @@ $config[OmsConstants::PROCESS_LOCATION] = [
 ```
 
 Add Payone controller provider to Yves bootstrap (this is required to provide endpoint URL for transaction status callbacks) in `src/Pyz/Yves/Application/YvesBootstrap.php`.
+
 ```php
 <?php
 use Spryker\Yves\Payone\Plugin\Provider\PayoneControllerProvider;
@@ -393,6 +394,7 @@ class OrderController extends AbstractCustomerController
  ];
  }
 ```
+
 ---
 
 ## Copyright and Disclaimer

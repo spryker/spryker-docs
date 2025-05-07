@@ -45,11 +45,11 @@ To create an abstract product:
 The **Create a Product** page opens.
 2. On the **General** tab, define general settings:
 
- 1. Select one or more **Store relations**.
- 2. In **SKU Prefix**, enter an SKU prefix.
- 3. In **Name** and **Description**, enter a name and description for all the locales.
- 4. Optional: Select **New from** and **New to** dates.
- 5. Click **Next >** and follow [Defining prices](#defining-prices).
+1. Select one or more **Store relations**.
+2. In **SKU Prefix**, enter an SKU prefix.
+3. In **Name** and **Description**, enter a name and description for all the locales.
+4. Optional: Select **New from** and **New to** dates.
+5. Click **Next >** and follow [Defining prices](#defining-prices).
   This opens the **Prices & Tax** tab.
 
 ### Reference information: Defining general settings
@@ -118,9 +118,9 @@ Optional: Add meta information:
 1. Switch to the **SEO** tab.
 2. Enter the following for the desired locales:
 
- * **Title**
- * **Keywords**
- * **Description**
+* **Title**
+* **Keywords**
+* **Description**
 
 3. Select **Save** and follow [Adding images](#adding-images).
 
@@ -146,9 +146,9 @@ Optional: Add images for the product:
 5. Repeat steps *2* and *3* until you add the desired number of image sets.
 6. In the desired image set, enter the following:
 
- *  **Small Image URL**
- *  **Large Image URL**
- *  **Sort order**
+* **Small Image URL**
+* **Large Image URL**
+* **Sort order**
 
 7. Optional: Select **Add image** and repeat the previous step until you add all the desired images for this locale.
 8. Repeat steps *1* to *6* until you add images for all the desired locales.

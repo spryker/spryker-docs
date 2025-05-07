@@ -24,10 +24,10 @@ This document describes how to edit merchants in the Back Office.
 
 1. On the the **Edit Merchant: {MERCHANT_ID}** page, click the **General** tab.
 2. Enter the following information:
-  * **NAME**.
-  * Optional: **REGISTRATION NUMBER**.
-  * **MERCHANT REFERENCE**.
-  * **EMAIL**.
+* **NAME**.
+* Optional: **REGISTRATION NUMBER**.
+* **MERCHANT REFERENCE**.
+* **EMAIL**.
 3. Optional: To activate the merchant after creating it, select **IS ACTIVE**.
 4. Optional: For **STORE RELATION**, select one or more stores to assign the merchant to.
 5. For **MERCHANT URL**, enter the URLs of merchant profile per store.
@@ -64,26 +64,26 @@ In this tab, all the fields are optional.
 
 1. On the the **Edit Merchant: {MERCHANT_ID}** page, click the **Merchant Profile** tab.
 2. Enter the following information:
-  * **PUBLIC EMAIL**
-  * **PUBLIC PHONE**
-  * **FAX NUMBER**
-  * **LOGO URL**
+* **PUBLIC EMAIL**
+* **PUBLIC PHONE**
+* **FAX NUMBER**
+* **LOGO URL**
 
 3. Enter the following information per locale:
-  * **DESCRIPTION**
-  * **AVERAGE DELIVERY TIME**
-  * **BANNER URL**
+* **DESCRIPTION**
+* **AVERAGE DELIVERY TIME**
+* **BANNER URL**
 
 4. Select a **COUNTRY**.
 
 5. Enter the following information:
-  * **STREET**
-  * **NUMBER**
-  * **ZIP CODE**
-  * **CITY**
-  * **ADDITION TO ADDRESS**
-  * **LATITUDE**
-  * **LONGITUDE**
+* **STREET**
+* **NUMBER**
+* **ZIP CODE**
+* **CITY**
+* **ADDITION TO ADDRESS**
+* **LATITUDE**
+* **LONGITUDE**
 
 6. Click **Save**.  
     This opens the **Overview of Merchants** page with a success message displayed.
@@ -113,10 +113,10 @@ In this tab, all the fields are optional.
 
 1. On the the **Edit Merchant: {MERCHANT_ID}** page, click the **Legal Information** tab.
 2. Enter the following information per locale:
-  * **CANCELLATION POLICY**
-  * **TERMS AND CONDITIONS**
-  * **DATA PRIVACY**
-  * **IMPRINT**
+* **CANCELLATION POLICY**
+* **TERMS AND CONDITIONS**
+* **DATA PRIVACY**
+* **IMPRINT**
 3. Click **Save**.  
     This opens the **Overview of Merchants** page with a success message displayed.  
 

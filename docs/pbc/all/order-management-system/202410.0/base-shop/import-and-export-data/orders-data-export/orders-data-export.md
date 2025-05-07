@@ -88,7 +88,7 @@ For an example, see the default configuration file: [order_export_config.yml](ht
 
 To define the stores you want to export the order data for, specify them in `destination` for the specific data entities.
 
-You _must_ create individual files for each data entity and each store if your filter criteria include `store_name`.
+You *must* create individual files for each data entity and each store if your filter criteria include `store_name`.
 
 For example, to export the `order-expenses` data for the DE store and `order-items` data for DE and AT stores, the YML file looks like this:
 

@@ -327,6 +327,7 @@ Adding the `happy` attribute does not interfere with the behavior of the state m
 {% endinfo_block %}
 
 ### Implement the commands and conditions
+
 Now you can visualize the transitions defined in your state machine and you have an idea about the business processes that are involved when a prepaid order is submitted, but your state machine doesn't do much for the moment. You need to attach the logic that gets executed when an event is fired or condition to check if a transition is possible. Update the XML file that defines your state machine by adding the necessary commands and conditions to it.
 
 ```xml
@@ -505,9 +506,11 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
+
 Now check again the [Prepayment](http://zed.mysprykershop.com/oms/index/draw?process=Prepayment&format=svg&font=14) state machine in Zed. The implementation is linked to the state machine.
 
 ## Integrate the state machine
+
 You can have more than one state machine defined in your application and apply them according to the details of the order that gets submitted.
 
 For example, you can have a state machine that doesn't involve shipping for goods that are delivered electronics. Also, you can have a dedicated state machine for each payment method (invoice payment method involves other patterns than credit card payment does).

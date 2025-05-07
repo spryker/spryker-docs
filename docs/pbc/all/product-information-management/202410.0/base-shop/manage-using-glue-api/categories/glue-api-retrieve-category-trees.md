@@ -165,6 +165,7 @@ Request sample: retrieve a category tree
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

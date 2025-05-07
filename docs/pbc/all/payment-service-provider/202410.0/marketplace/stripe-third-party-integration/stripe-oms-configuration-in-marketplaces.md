@@ -145,9 +145,9 @@ In the default OMS configuration, a payout to merchants is initiated after the O
 
 1. A customer pays for an order.
 2. The money is transferred from the customer's account, like a bank account, to the marketplace Stripe account.
-- The marketplace calculates the commission for the merchant.
-- The marketplace initiates a payout to the merchant.
-- The money is transferred from the marketplace Stripe account to the merchant's Stripe account.
+* The marketplace calculates the commission for the merchant.
+* The marketplace initiates a payout to the merchant.
+* The money is transferred from the marketplace Stripe account to the merchant's Stripe account.
 
 ### When a payout fails
 

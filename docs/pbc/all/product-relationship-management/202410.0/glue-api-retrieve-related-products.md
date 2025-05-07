@@ -289,6 +289,7 @@ To get related items of an abstract product, send the request:
   }
 }
 ```
+
 </details>
 
 
@@ -577,6 +578,7 @@ To get related items of an abstract product, send the request:
     ]
 }
 ```
+
 </details>
 
 <a name="related-product-attributes"></a>
@@ -861,6 +863,7 @@ To get upselling items for all products in a cart of a registered customer, send
     }
 }
 ```
+
 </details>
 
 <details>
@@ -953,6 +956,7 @@ To get upselling items for all products in a cart of a registered customer, send
     ]
 }
 ```
+
 </details>
 
 {% include /pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
@@ -1190,6 +1194,7 @@ To retrieve upselling products of a guest cart, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -1290,6 +1295,7 @@ To retrieve upselling products of a guest cart, send the request:
     ]
 }
 ```
+
 </details>
 
 {% include /pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->

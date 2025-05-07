@@ -25,6 +25,7 @@ related:
 ## Installation
 
 To install Episerver, install the required module:
+
 ```bash
 composer require spryker-eco/episerver
 ```

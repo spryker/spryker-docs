@@ -40,7 +40,7 @@ This document describes how to create product options. Product options are addit
 10. In the **Translation** section, enter a **GROUP NAME** per locale.
 11. Enter an **OPTION NAME** for each option per locale.
 12. Click **Next**.
-13. On the **Products** tab, select one or more products to assign the option to.     
+13. On the **Products** tab, select one or more products to assign the option to.
     The option will be displayed on the pages of the products.
 14. Click **Save**.
     The page refreshes with a success message displayed.

@@ -83,6 +83,7 @@ Request sample: retrieve image sets of a concrete product
     }
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/concrete-product-image-sets-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-product-image-sets-response-attributes.md -->

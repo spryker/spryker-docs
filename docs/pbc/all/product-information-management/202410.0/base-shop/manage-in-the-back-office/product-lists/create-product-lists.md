@@ -63,7 +63,7 @@ This doc describes how to create product lists. Product lists are used to allow 
 2. Click **Choose File**.
 3. Select the product list file to be uploaded. The file should contain the `product_list_key` and `concrete_sku` columns.
 4. Click **Save**.
-    The page refreshes with the success message displayed. The assigned products are displayed in the **Products in this list** subtab.    
+    The page refreshes with the success message displayed. The assigned products are displayed in the **Products in this list** subtab.
 
 
 ## Next steps

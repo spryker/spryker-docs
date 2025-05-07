@@ -84,4 +84,5 @@ The **Orders** widget provides the following information:
 The total number of orders that are available for each store.
 
 #### New
+
 The total number of orders that were placed in the last 5 days.

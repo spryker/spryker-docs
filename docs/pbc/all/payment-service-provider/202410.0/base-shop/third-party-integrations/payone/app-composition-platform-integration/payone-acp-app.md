@@ -34,9 +34,9 @@ The Payone App supports the B2B and B2C business models and the following paymen
 
 For the *Payone Credit Card* payment method, the following modes are supported:
 
-- *Preauthorization and Capture*: After a customer entered the credit card details during the checkout, the seller preauthorizes or reserves the payable amount on the customer's credit card. As soon as the items have shipped, this amount is captured. Capture kicks off the process of moving money from the customer's credit card to the seller's account. The preauthorization and capture mode is the best choice for physical goods. It ensures that in case the ordered items are not available anymore or the customer cancels the order before it's shipped, the seller does not have to transfer the money back to the customer's account and thereby avoids a chargeback.
-- *3DS*: Messaging protocol that enables consumer authentication with their card issuer when making online purchases.
-- *PCI DSS Compliance via SAQ A*: A set of security standards designed to ensure that you accept, process, and transmit credit card information in a secure environment.
+* *Preauthorization and Capture*: After a customer entered the credit card details during the checkout, the seller preauthorizes or reserves the payable amount on the customer's credit card. As soon as the items have shipped, this amount is captured. Capture kicks off the process of moving money from the customer's credit card to the seller's account. The preauthorization and capture mode is the best choice for physical goods. It ensures that in case the ordered items are not available anymore or the customer cancels the order before it's shipped, the seller does not have to transfer the money back to the customer's account and thereby avoids a chargeback.
+* *3DS*: Messaging protocol that enables consumer authentication with their card issuer when making online purchases.
+* *PCI DSS Compliance via SAQ A*: A set of security standards designed to ensure that you accept, process, and transmit credit card information in a secure environment.
 
 For the *Payone Paypal* payment method, we support only *Preauthorization and Capture*.
 
@@ -59,9 +59,9 @@ When using PayOne's hosted payment page, customers might use their browser's bac
 
 ## Current limitations
 
-- Payments can be properly canceled only from the Back Office and not from the Payone PMI.
-- Payments can't be partially canceled. One payment intent is created per order, and it can either be authorized or fully cancelled.
-- When an item is canceled on the order details page, all order items are canceled.
+* Payments can be properly canceled only from the Back Office and not from the Payone PMI.
+* Payments can't be partially canceled. One payment intent is created per order, and it can either be authorized or fully cancelled.
+* When an item is canceled on the order details page, all order items are canceled.
 
 ## Next steps
 

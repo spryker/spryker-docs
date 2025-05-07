@@ -57,6 +57,7 @@ For detailed information about the modules that provide the API functionality an
 }
 
 ```
+
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | id | String | &check; | Unique identifier of the item to pick. To get it, [retrieve picklists](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-retrieve-picklists.html) with `picking-list-items` included.   |

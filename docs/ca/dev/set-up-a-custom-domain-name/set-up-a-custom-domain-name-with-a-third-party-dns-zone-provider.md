@@ -51,6 +51,7 @@ groups:
                     {domain_name}:
                         store: {store_relation}
 ```
+
 Example:
 
 ```yaml

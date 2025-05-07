@@ -156,7 +156,7 @@ use Spryker\Zed\Kernel\AbstractBundleConfig;
 
  The same way it can also be included in `Yves`, `Client` configuration classes.
 
- ## Related Spryks
+## Related Spryks
 
 You might use the following definitions to generate related code:
 

@@ -70,11 +70,12 @@ All the Spryker assets are divided into CSS, JS files, and images and are added 
       * Named scripts of used web components compiled in ES6 modes.
     * `images`: folder for the images.
 * `static`: static assets source folder.
-    * `images`: folder for the static images.
+  * `images`: folder for the static images.
 
 Depending on the usage of scripts and *CSS Lazy Load* feature, the following variants are loading in the `head` and `body` tags exist:
 
 `<head>`
+
 ```html
 <head>
 ...
@@ -101,6 +102,7 @@ Depending on the usage of scripts and *CSS Lazy Load* feature, the following var
 ```
 
 `<body>`
+
 ```html
 <body>
 ...

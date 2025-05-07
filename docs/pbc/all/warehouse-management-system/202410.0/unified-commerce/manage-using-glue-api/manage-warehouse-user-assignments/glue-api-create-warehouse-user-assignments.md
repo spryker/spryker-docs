@@ -37,6 +37,7 @@ For detailed information about the modules that provide the API functionality an
 | `POST http://glue-backend.mysprykershop.com/warehouse-user-assignments?include=users` | Create a warehouse user assignment. Include information about the user in the response.  |
 
 Request sample:
+
 ```json
 {
     "data": {

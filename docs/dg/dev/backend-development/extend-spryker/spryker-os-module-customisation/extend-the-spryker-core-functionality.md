@@ -67,6 +67,7 @@ Each module contains one folder for every layer of the application:
 * `Presentation`
 
 ## Extending SprykerCore Functionality
+
 To extend the functionality of a class from SprykerCore, a new class with the same name must be added to the corresponding location on the project side.
 
 Replacement rules, described in the [Extend the core](/docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html) document work for the next classes in the Spryker module:

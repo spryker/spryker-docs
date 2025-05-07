@@ -23,6 +23,7 @@ In this example, there is an existing DE store with a dedicated database, and yo
 ### Define a database
 
 1. In the needed deploy file, define the AT database:
+
 ```yaml
 ...
 
@@ -68,7 +69,7 @@ regions:
                         namespace: at_search
                     database:
                         name: eu-region-at-database
-```                        
+```
 
 ### Deploy the database
 
@@ -86,6 +87,7 @@ To remove a database of a store, you need to remove its configuration from the n
 ### Remove the configuration of the database
 
 1. In the needed deploy file, remove the definition the AT database:
+
 ```yaml
 ...
 
@@ -120,7 +122,7 @@ regions:
                         namespace: de_search
                     database:
                         name: eu-region-existing-database
-```                        
+```
 
 
 ### Deploy the application without the removed database

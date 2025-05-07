@@ -101,10 +101,10 @@ The main components of the solution are:
 - NewWorker custom worker implementation.
 - SystemResourcesManager - a class to provide the system and worker memory information.
 - Strategy - several implementations possible, a class decides which queue is next for processing, depending on any custom logic. We have implemented two:
-    - `\Pyz\Zed\Queue\Business\Strategy\OrderedQueuesStrategy` strategy which processes queues in the order these were defined in `\Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins`.
-    - `\Pyz\Zed\Queue\Business\Strategy\BiggestFirstStrategy` - first processes those queues which have the biggest amount of messages.
+  - `\Pyz\Zed\Queue\Business\Strategy\OrderedQueuesStrategy` strategy which processes queues in the order these were defined in `\Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins`.
+  - `\Pyz\Zed\Queue\Business\Strategy\BiggestFirstStrategy` - first processes those queues which have the biggest amount of messages.
 - QueueScanner component - scans queues to get such information as amount of messages to provide this info to a strategy.
-- Custom RabbitMQ client to expose the [queue_declare method ](https://www.rabbitmq.com/amqp-0-9-1-reference.html#queue.declare) to the Business layer code. This method returns queue statistics for the existing queue and doesn't change anything in a queue.
+- Custom RabbitMQ client to expose the [queue_declare method](https://www.rabbitmq.com/amqp-0-9-1-reference.html#queue.declare) to the Business layer code. This method returns queue statistics for the existing queue and doesn't change anything in a queue.
 - Slightly modified `\Spryker\Zed\Queue\Business\Process\ProcessManager` to store information about a queue in the context of a store.
 
 <details>
@@ -255,6 +255,7 @@ class NewWorker implements WorkerInterface
 
     // ...
 ```
+
 </details>
 
 ### System resource manager
@@ -336,6 +337,7 @@ class SystemResourcesManager implements SystemResourcesManagerInterface
         return $memory ?? 0;
     }
 ```
+
 </details>
 
 ### QueueScanner
@@ -406,6 +408,7 @@ class QueueScanner implements QueueScannerInterface
 
     // ...
 ```
+
 </details>
 
 ### Customized process manager
@@ -434,6 +437,7 @@ class ProcessManager extends SprykerProcessManager implements ProcessManagerInte
     }
 }
 ```
+
 </details>
 
 ### Simple ordered strategy
@@ -485,4 +489,5 @@ class OrderedQueuesStrategy implements QueueProcessingStrategyInterface
         return $this->queueScanner->scanQueues();
     }
 ```
+
 </details>

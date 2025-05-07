@@ -48,6 +48,7 @@ There are four levels of security vulnerabilities:
 * Critical
 
 By default, the npm checker evaluates the code against the high and critical levels. To define the levels to be checked, create or update `tooling.yml` in the project's root directory. Here's an exemplary configuration for evaluating against all vulnerability errors:
+
 ```yaml
 evaluator:
     checkerConfiguration:
@@ -62,7 +63,9 @@ To resolve the issue, update the npm dependencies with vulnerabilities to the ve
 
 
 ## Run only this checker
+
 To run only this checker, include `NPM_CHECKER` into the checkers list. Example:
+
 ```bash
 vendor/bin/evaluator evaluate --checkers=NPM_CHECKER
 ```

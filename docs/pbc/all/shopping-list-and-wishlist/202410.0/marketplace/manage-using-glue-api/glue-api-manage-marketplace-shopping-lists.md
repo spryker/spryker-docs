@@ -131,7 +131,8 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     }
 }  
 ```
-</details>    
+
+</details>
 
 <details>
 <summary>Response sample: retrieve own and shared shopping lists</summary>
@@ -187,6 +188,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     }
 }
 ```
+
 </details>
 
 <details>
@@ -327,6 +329,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
@@ -401,7 +404,8 @@ To retrieve product offers in a shopping list, include `shopping-list-items` and
     }
 }
 ```
-</details>   
+
+</details>
 
 <details>
 <summary>Response sample: retrieve a shopping list with its items</summary>
@@ -454,6 +458,7 @@ To retrieve product offers in a shopping list, include `shopping-list-items` and
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -594,6 +599,7 @@ To retrieve product offers in a shopping list, include `shopping-list-items` and
     ]
 }
 ```
+
 </details>  
 
 <details>
@@ -709,6 +715,7 @@ To retrieve product offers in a shopping list, include `shopping-list-items` and
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -796,6 +803,7 @@ To retrieve product offers in a shopping list, include `shopping-list-items` and
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
@@ -880,6 +888,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     }
 }
 ```
+
 </details>
 
 <details>
@@ -1016,6 +1025,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->

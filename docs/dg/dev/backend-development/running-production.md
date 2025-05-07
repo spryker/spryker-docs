@@ -31,8 +31,8 @@ Even with good ACL use, the Back Office contains sensitive data which must be se
 {% info_block warningBox "System requirement" %}
 
 To protect the application and user data, the Back Office Application must be secured in the internet. The following options are available by default:
-- Basic Auth
-- IP allowlisting
+* Basic Auth
+* IP allowlisting
 
 {% endinfo_block %}
 

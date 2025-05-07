@@ -135,8 +135,8 @@ To edit product images, do the following:
     * To add a new image, select **Add image**.
     * To update an image, update the following:
         * **Small Image URL**
-        *  **Large Image URL**
-        *  **Sort order**
+        * **Large Image URL**
+        * **Sort order**
     * To delete large and small images, select **Delete image**.
     * To delete an image set with its images, select **Delete image set**.
 5. Repeat step *4* until you update images for all the desired locales.

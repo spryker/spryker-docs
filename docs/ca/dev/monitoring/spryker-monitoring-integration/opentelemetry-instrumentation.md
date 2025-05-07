@@ -10,9 +10,11 @@ redirect_from:
 This document describes how to configure and instrument application for OpenTelemetry (OTel). It contains a brief overview of basic OTel concepts, but reading [OpenTelemetry documentation](https://opentelemetry.io/docs/concepts/) first is recommended.
 
 ## Convention
+
 The current implementation follows [OpenTelemetry Semantic Conventions 1.30.0](https://opentelemetry.io/docs/specs/semconv/).
 
 ## Trace
+
 A trace represents a single transaction. It has a unique ID and all spans are related to it. Each trace has a name that is defined automatically or can be changed as described in [Integration](#integration).
 
 ## Span
@@ -114,6 +116,7 @@ If you want to register a hook for a class, make sure the registration is execut
 </details>
 
 ## Collector
+
 Collector collects traces and sends them to a monitoring platform. Traces are sent to collector after that request is sent so it doesn't affect response time. Collector operates separately from the application and should be set up by a Cloud engineer or you can add one for you local setup yourself.
 
 ## Integration
@@ -134,10 +137,10 @@ Install third-party packages at your own risk.
 
 
 The [spryker/opentelemetry](https://packagist.org/packages/spryker/opentelemetry) package covers the essential parts of the integration:
-* The entry point for instrumentation
-* Plugin to wire in your monitoring service
-* A console command to generate [hooks](https://opentelemetry.io/docs/zero-code/php/#how-it-works) for project's code, which creates spans automatically
-* Instrumentation of Propel, Redis, ElasticSearch, RabbitMQ, and Guzzle calls
+- The entry point for instrumentation
+- Plugin to wire in your monitoring service
+- A console command to generate [hooks](https://opentelemetry.io/docs/zero-code/php/#how-it-works) for project's code, which creates spans automatically
+- Instrumentation of Propel, Redis, ElasticSearch, RabbitMQ, and Guzzle calls
 
 ### Optional: Install the Monitoring module
 
@@ -373,9 +376,9 @@ The same logic applies to console commands, but with a separate configuration va
 
 On start, each span is checked whether it should be started using the algorithm similar to that used for trace sampling. The differences between algorithms are as follows:  
 
-* A different configuration value is used for span sampling
-* A random number is generated for each span
-* Different span types have different sampling probabilities based on their criticality
+- A different configuration value is used for span sampling
+- A random number is generated for each span
+- Different span types have different sampling probabilities based on their criticality
 
 If a span is not sampled, an empty span is created instead. Empty spans act as placeholders to maintain the trace structure and always appear in the trace.
 
@@ -412,6 +415,7 @@ Only Propel `SELECT` calls spans marked as `no_critical` because every request g
 
 
 #### Regular spans
+
 All other spans are considered as `regular`.
 
 
@@ -507,7 +511,7 @@ If no service name is explicitly set, the integration first checks `OTEL_SERVICE
 
 ## Trace name
 
-The trace name (or root span name) shows which request or command was executed. 
+The trace name (or root span name) shows which request or command was executed.
 
 Default behavior:
 - For web requests: The default trace name includes the HTTP method and route name
@@ -531,13 +535,13 @@ $config[\Spryker\Shared\Opentelemetry\OpentelemetryConstants::SHOW_HTTP_METHOD_I
 
 Tracing is resource-intensive and can slow down your application. Follow these recommendations to minimize performance impact:
 
-- Minimize the number of generated spans per request: 
+- Minimize the number of generated spans per request:
   - OTel docs recommend keeping span count below 1000 per trace
   - Configure irrelevant spans to be skipped
   - Errors are processed even if a method is not instrumented because error events are attached to the root span
 
 - Use sampling to reduce trace volume:
-  - Full traces for every request are unnecessary in most cases 
+  - Full traces for every request are unnecessary in most cases
   - Refer to the [sampling configuration](#sampling-configuration) section to fine-tune trace collection
 
 - Skip unnecessary traces:

@@ -418,8 +418,8 @@ You can keep moving the item until the order is closed.
 
 Besides manual tests, we recommend implementing automated tests for state machine. The default test helpers can help you build your tests:
 
-- `\SprykerTest\Zed\Oms\Helper\OmsHelper`: provides hooks to add your commands and conditions to tests
-- `\SprykerTest\Shared\Sales\Helper\SalesOmsHelper`: provides methods to test the state machine
+* `\SprykerTest\Zed\Oms\Helper\OmsHelper`: provides hooks to add your commands and conditions to tests
+* `\SprykerTest\Shared\Sales\Helper\SalesOmsHelper`: provides methods to test the state machine
 
 #### 5.1 Add the test helper
 
@@ -449,13 +449,13 @@ suites:
 
 ```
 
-There're also default commands and conditions, which can be used as placeholders for commands and conditions. The key is the name used in `OmsDependencyProvider` to set up the state machine. 
+There're also default commands and conditions, which can be used as placeholders for commands and conditions. The key is the name used in `OmsDependencyProvider` to set up the state machine.
 
 Default commands and conditions:
-- `\SprykerTest\Zed\Oms\Helper\Mock\AlwaysTrueConditionPluginMock`: condition that always returns true
-- `\SprykerTest\Zed\Oms\Helper\Mock\AlwaysFalseConditionPluginMock`: condition that always returns true
-- `\SprykerTest\Zed\Oms\Helper\Mock\CommandByItemPluginMock`: a mock for `CommandByItemInterface` that always returns an empty array
-- `\SprykerTest\Zed\Oms\Helper\Mock\CommandByOrderPluginMock`: a mock for `CommandByOrderInterface` that always returns an empty array
+* `\SprykerTest\Zed\Oms\Helper\Mock\AlwaysTrueConditionPluginMock`: condition that always returns true
+* `\SprykerTest\Zed\Oms\Helper\Mock\AlwaysFalseConditionPluginMock`: condition that always returns true
+* `\SprykerTest\Zed\Oms\Helper\Mock\CommandByItemPluginMock`: a mock for `CommandByItemInterface` that always returns an empty array
+* `\SprykerTest\Zed\Oms\Helper\Mock\CommandByOrderPluginMock`: a mock for `CommandByOrderInterface` that always returns an empty array
 
 
 

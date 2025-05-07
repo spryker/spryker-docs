@@ -285,6 +285,7 @@ The general look of the `page-layout-catalog.twig` template is as follows:
     </form>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
 </details>
 
 Standard product filters are represented in the form of filter-section organism (`filter-section.twig` in particular) inclusion.
@@ -416,6 +417,7 @@ When you look closer at the `filter-section.twig` template, you may notice that 
     {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
 </details>
 
 As you may see from the following code snippet, this part is responsible for rendering a single filter (extra code removed):

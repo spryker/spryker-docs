@@ -75,7 +75,7 @@ A Back Office user can create returns for the [returnable items](/docs/pbc/all/r
 
 ## Marketplace Return Management in the Merchant Portal
 
-Merchants process their returns in the Merchant Portal. For details about how to manage the merchant returns, see [Merchant Portal guide: Managing merchant orders ](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-merchant-orders.html).
+Merchants process their returns in the Merchant Portal. For details about how to manage the merchant returns, see [Merchant Portal guide: Managing merchant orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-merchant-orders.html).
 
 ## Related Business User documents
 
@@ -89,4 +89,4 @@ Merchants process their returns in the Merchant Portal. For details about how to
 | INSTALLATION GUIDES      | GLUE API GUIDES     |
 | -------------------- | -------------- |
 | [Install the Marketplace Return Management feature](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-feature.html) | [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-marketplace-returns.html) |
-| [Install the Marketplace Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html) |              
+| [Install the Marketplace Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html) |

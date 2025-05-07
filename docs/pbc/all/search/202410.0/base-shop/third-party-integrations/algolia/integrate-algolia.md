@@ -523,8 +523,8 @@ Examples of such functionality include:
 
 To trigger custom events in Spryker, use the `EventFacade::trigger('event-name', $payload)` or `EventFacade::triggerBulk('event-name', $payloads)` method. Also, you can use the existing events:
 
- - For one product: `ProductEvents::PRODUCT_CONCRETE_UPDATE`
- - For multiple products assigned to one abstract product: `ProductEvents::PRODUCT_ABSTRACT_UPDATE`
+- For one product: `ProductEvents::PRODUCT_CONCRETE_UPDATE`
+- For multiple products assigned to one abstract product: `ProductEvents::PRODUCT_ABSTRACT_UPDATE`
 
 {% endinfo_block %}
 

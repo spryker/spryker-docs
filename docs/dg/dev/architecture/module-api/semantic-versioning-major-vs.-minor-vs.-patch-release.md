@@ -29,14 +29,14 @@ When we make a change to the [external API of a module](/docs/dg/dev/architectur
 Our customers need to change their `composer.json` file to get major versions of modules.
 
 We have two types of major releases:
-* A _maxi-major_. When the release effort is higher than four hours for clients who did not extend the module. This typically happens when data needs to be migrated. In case of a maxi-major release, the previous version automatically gets all bug fixes and security patches (LTS) as long as anyone uses this version.
-* A _mini-major_. When the release effort is lower than four hours for clients who did not extend the module.
+* A *maxi-major*. When the release effort is higher than four hours for clients who did not extend the module. This typically happens when data needs to be migrated. In case of a maxi-major release, the previous version automatically gets all bug fixes and security patches (LTS) as long as anyone uses this version.
+* A *mini-major*. When the release effort is lower than four hours for clients who did not extend the module.
 
 ## Minor release
 
 A release is *minor* when the internal API is changed. For example, when the signature of internal models or constructors is changed, or classes are renamed. Actually, it's anything that can break extensions using inheritance or composition on a project level.
 
-Our customers get all new minor releases automatically during composer update if they use the _^_ (caret) symbol in `composer.json`—for example, `"spryker/category": "^4.1.2"`. We recommend using the _~_ (tilde) symbol for all modules that have been extended at the project level to make sure that nothing breaks after a release—for example, `"spryker/category": "~4.1.0"`. For mode details about how you can easily detect _^_ in the extended modules and update them with _~_, see [Using ~ Composer Constraint for Customized Modules](/docs/dg/dev/architecture/module-api/use-composer-constraint-for-customized-modules.html)
+Our customers get all new minor releases automatically during composer update if they use the *^* (caret) symbol in `composer.json`—for example, `"spryker/category": "^4.1.2"`. We recommend using the *~* (tilde) symbol for all modules that have been extended at the project level to make sure that nothing breaks after a release—for example, `"spryker/category": "~4.1.0"`. For mode details about how you can easily detect *^* in the extended modules and update them with *~*, see [Using ~ Composer Constraint for Customized Modules](/docs/dg/dev/architecture/module-api/use-composer-constraint-for-customized-modules.html)
 
 ## Patch release
 

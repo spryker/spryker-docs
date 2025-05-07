@@ -33,7 +33,7 @@ $config[SchedulerJenkinsConstants::JENKINS_CONFIGURATION] = [
 $config[SchedulerJenkinsConstants::JENKINS_TEMPLATE_PATH] = getenv('SPRYKER_JENKINS_TEMPLATE_PATH');
 ```
 
-2. Using the example in `src/Pyz/Zed/Scheduler/SchedulerDependencyProvider.php`, put the template where  `SPRYKER_JENKINS_TEMPLATE_PATH ` points to:
+2. Using the example in `src/Pyz/Zed/Scheduler/SchedulerDependencyProvider.php`, put the template where  `SPRYKER_JENKINS_TEMPLATE_PATH` points to:
 
 ```php
 {% raw %}{%{% endraw %} extends 'jenkins-job.default.xml.twig' {% raw %}%}{% endraw %}
@@ -55,8 +55,8 @@ You can define additional store-specific variables if needed.
 
 {% endinfo_block %}
 
-3. Set up deployment, so that the following environment variables are set in the container where  `console scheduler:setup ` is run:
+3. Set up deployment, so that the following environment variables are set in the container where  `console scheduler:setup` is run:
 
-* `SPRYKER_SCHEDULER_HOST `
-* `SPRYKER_SCHEDULER_PORT `
-* `SPRYKER_JENKINS_TEMPLATE_PATH `
+* `SPRYKER_SCHEDULER_HOST`
+* `SPRYKER_SCHEDULER_PORT`
+* `SPRYKER_JENKINS_TEMPLATE_PATH`

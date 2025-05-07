@@ -59,12 +59,14 @@ vendor/bin/console sync:data cms_block
 ```
 
 To trigger data re-sync for a resource, there must be a corresponding sync plugin created for this resource. To learn how to create it, see [Implement synchronization plugins](/docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-synchronization-plugins.html)
+
 ## Published data re-generation
 
 
 You can regenerate published data from scratch. For example, something went wrong during a product import and you want to re-publish the data. In other words, you need to update `Storage` and `Search` tables and sync the data in Redis and Elasticsearch.
 
 To regenerate published data, run the following command:
+
 ```bash
 vendor/bin/console publish:trigger-events
 ```

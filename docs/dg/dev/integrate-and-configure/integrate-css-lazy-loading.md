@@ -180,6 +180,7 @@ npm install
     ```js
     const [componentEntryPoints, styles] = await Promise.all([componentEntryPointsPromise, stylesPromise]);
     ```
+
     To:
 
     ```js
@@ -274,6 +275,7 @@ Make sure your styles from `node_modules` are included in `.scss` files (not in 
 {% endinfo_block %}
 
 8. Rebuild the frontend with the new settings:
+
 ```bash
 npm run yves
 ```

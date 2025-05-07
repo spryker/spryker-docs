@@ -80,6 +80,7 @@ To expand search data with a `foo` entity, do the following:
         }
     }    
     ```
+
     </details>
 
 2. Expand `ProductAbstractPageSearch` object with `foo` data:
@@ -190,6 +191,7 @@ class ProductFooMapExpanderPlugin implements ProductAbstractMapExpanderPluginInt
     }
 }
 ```
+
 </details>
 
 
@@ -237,6 +239,7 @@ class FooSortConfigTransferBuilderPlugin extends AbstractPlugin implements SortC
     }
 }
 ```
+
 </details>
 
 

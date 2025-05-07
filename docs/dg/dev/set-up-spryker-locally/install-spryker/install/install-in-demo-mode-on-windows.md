@@ -68,7 +68,7 @@ Product images, product data, other images or fonts displaced in a demo shop are
 
 Make sure that you are in the Demo Shop's folder by running the `pwd` command.
 
-{% endinfo_block %}    
+{% endinfo_block %}
 
 5. Clone the Docker SDK repository into the same folder:
 

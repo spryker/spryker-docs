@@ -24,21 +24,21 @@ According to [Semantic Versioning](http://semver.org/), we release a major versi
 In the Spryker Commerce OS's core, the following is the public API:
 
 * Public methods in these locatable classes:
-    * [Facades](/docs/dg/dev/backend-development/zed/business-layer/facade/facade.html)
-    * [Clients](/docs/dg/dev/backend-development/client/client.html)
-    * [Query Containers](/docs/dg/dev/backend-development/zed/persistence-layer/query-container/query-container.html)
-    * [Services](/docs/dg/dev/backend-development/messages-and-errors/registering-a-new-service.html)
+  * [Facades](/docs/dg/dev/backend-development/zed/business-layer/facade/facade.html)
+  * [Clients](/docs/dg/dev/backend-development/client/client.html)
+  * [Query Containers](/docs/dg/dev/backend-development/zed/persistence-layer/query-container/query-container.html)
+  * [Services](/docs/dg/dev/backend-development/messages-and-errors/registering-a-new-service.html)
 
 * Interfaces:
-    * Plugin interfaces
-    * Plugins
+  * Plugin interfaces
+  * Plugins
 
 * Other classes:
-    * Module Config [`Client/Yves/Zed/Shared/Service`](/docs/dg/dev/backend-development/data-manipulation/configuration-management.html)
-    * Controllers
-    * Twig functions
-    * [CLI commands](/docs/dg/dev/backend-development/console-commands/implement-console-commands.html)
-    * Public constants that define environment configuration in [Constant Interfaces](/docs/dg/dev/backend-development/data-manipulation/configuration-management.html)
+  * Module Config [`Client/Yves/Zed/Shared/Service`](/docs/dg/dev/backend-development/data-manipulation/configuration-management.html)
+  * Controllers
+  * Twig functions
+  * [CLI commands](/docs/dg/dev/backend-development/console-commands/implement-console-commands.html)
+  * Public constants that define environment configuration in [Constant Interfaces](/docs/dg/dev/backend-development/data-manipulation/configuration-management.html)
 * [Database](/docs/dg/dev/backend-development/zed/persistence-layer/database-schema-definition.html)
 * Search
 * [Storage](/docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage.html)

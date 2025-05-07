@@ -139,7 +139,7 @@ class MyResourceRoutePlugin extends AbstractPlugin implements ResourceRoutePlugi
 
 All data related to API authentication functionality is stored in the following tables:
 
-|TABLE|	PURPOSE|
+|TABLE| PURPOSE|
 | --- | --- |
 | spy_oauth_access_token| Stores all issued tokens.<br>The table is not used for token verification, it's added for audit purposes only.  |
 |  spy_oauth_client|Contains a list of clients that are currently using OAuth, one record for each frontend customer. The `is_confidental` field identifies whether a specific client must provide a password.  |
@@ -147,7 +147,7 @@ All data related to API authentication functionality is stored in the following 
 
 The `OAuth` and `OAuthExtension` modules also provides the following extension points:
 
-|EXTENSION POINT	| METHOD | INTERFACE |
+|EXTENSION POINT | METHOD | INTERFACE |
 | --- | --- | --- |
 |User provider plugins|`getUserProviderPlugins()`|`\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthUserProviderPluginInterface`|
 |Scope provider plugins|`getScopeProviderPlugins()`|`\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthScopeProviderPluginInterface`|

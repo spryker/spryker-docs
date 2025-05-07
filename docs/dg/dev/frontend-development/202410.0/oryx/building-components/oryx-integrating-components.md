@@ -8,7 +8,7 @@ redirect_from:
 
 ---
 
-Oryx components are _framework agnostic_, so they can be used in other web frameworks.
+Oryx components are *framework agnostic*, so they can be used in other web frameworks.
 
 Oryx components are build as [web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components). Web components are a suite of standard web technologies supported by most browser vendors. The purpose of web components is to provide components in isolation so that they can easily integrate with other web technologies.
 

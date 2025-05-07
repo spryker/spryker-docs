@@ -45,9 +45,9 @@ Component configuration:
 
 - `enabled`—enables the feature via the config.  
 - `noActionsMessage`—error message text.  
-- `actions`—an array with actions that are displayed in the top bar, and their type of the registered [action](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/actions/ui-components-library-actions.html).   
+- `actions`—an array with actions that are displayed in the top bar, and their type of the registered [action](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/actions/ui-components-library-actions.html).
 - `rowIdPath`—gets a row `id` via the column `id` (in the following example, `Sku` column).  
-- `availableActionsPath`—path to an array with available action IDs in the top bar (supports nested objects using dot notation for ex. `prop.nestedProp`).   
+- `availableActionsPath`—path to an array with available action IDs in the top bar (supports nested objects using dot notation for ex. `prop.nestedProp`).
 
 ```html
 <spy-table

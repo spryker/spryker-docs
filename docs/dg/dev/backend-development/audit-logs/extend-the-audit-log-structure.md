@@ -216,6 +216,7 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
     }
 }
 ```
+
 Now when you log in as a customer with a business unit, the corresponding business unit name will be added to the log data.
 
 ## Extend the audit log structure by pass the data to the specific log context

@@ -80,6 +80,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block infoBox %}

@@ -161,6 +161,7 @@ To avoid synchronization issues, do not push any changes to the CodeCommit repos
 {% endinfo_block %}
 
 ### Prerequisites
+
 Prepare for configuration:
 
 1. Ensure that your GitLab account has *Admin* permissions in the code repository.

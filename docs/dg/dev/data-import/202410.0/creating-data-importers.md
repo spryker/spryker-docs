@@ -160,6 +160,7 @@ public function createProductImageImporter(DataImportConfigurationActionTransfer
 	return $dataImporter;
 }
 ```
+
 2. Add the new DataImporter in `DataImportBusinessFactory::getDataImporterByType()`:
 
 ```php
@@ -424,7 +425,7 @@ protected function updateOrCreateImageToImageSetRelation(SpyProductImageSet $ima
 }
 ```
 
-### 3. Fill the Execute Method:
+### 3. Fill the Execute Method
 
 ```php
 /**

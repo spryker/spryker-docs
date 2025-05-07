@@ -112,10 +112,10 @@ Synchronization mount modes, such as mutagen or docker-sync, use algorithms to s
 
 ![mutagen-diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+SDK/Choosing+a+mount+mode/mutagen-diagram.png)
 
-- Mutagen daemon listens to the host file system changes.
-- Mutagen sidecar container listens to the VM file system changes.
-- The daemon and the sidecar interact and update files on each side.
-- Applications work with the docker volume directly, which is almost equal to a direct file system access.
+* Mutagen daemon listens to the host file system changes.
+* Mutagen sidecar container listens to the VM file system changes.
+* The daemon and the sidecar interact and update files on each side.
+* Applications work with the docker volume directly, which is almost equal to a direct file system access.
 
 ### Things to keep in mind when using synchronization mount modes
 

@@ -186,6 +186,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
     .....
 }
 ```
+
 </details>
 
 Pay attention to the `::setImportGroup()` method call on the data importer instance. By calling this method, an import group can be set for each separate data import. Import groups allow you to run importers separately on a per-group basis by supplying the group name as an option for the data import console command. Three groups are supported out of the box: *FULL*, *QUEUE_READERS*, *QUEUE_WRITERS*. With no call to `::setImportGroup`, the data importer is placed into the FULL group by default.

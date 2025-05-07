@@ -193,6 +193,7 @@ Request sample: create a return
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -326,6 +327,7 @@ Request sample: retrieve returns
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -477,6 +479,7 @@ Request sample: retrieve a return
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

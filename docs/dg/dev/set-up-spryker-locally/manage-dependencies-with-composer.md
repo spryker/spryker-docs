@@ -77,6 +77,7 @@ Pulling hundreds of composer dependencies declared in `composer.json` file takes
 
 * **Stay Up-to-Date with the PHP version**
 Staring from November 2021, all Spryker modules require PHP 7.4 as a minimum version. Please make sure to upgrade your server to the latest stable PHP version and adjust (or remove) config section in *composer.json*:
+
 ```bash
 "config": {
   	"platform": {

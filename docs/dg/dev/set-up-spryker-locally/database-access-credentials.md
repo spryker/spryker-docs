@@ -30,7 +30,7 @@ You can change the credentials in the [Deploy file](/docs/dg/dev/sdks/the-docker
 You can find the credentials in your project with this command:
 
 ```bash
-$ grep SPRYKER_DB_ docker/deployment/default/env/cli/de.env | grep -v ROOT
+grep SPRYKER_DB_ docker/deployment/default/env/cli/de.env | grep -v ROOT
 ```
 
 Example output:

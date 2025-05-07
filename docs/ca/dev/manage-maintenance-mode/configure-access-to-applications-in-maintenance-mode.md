@@ -73,7 +73,7 @@ For more information about the deploy file configuration, see [docker: maintenan
 ## Deploy the changes
 
 Deploy the application with the updated configuration by following one of the following docs:
-  * [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
-  * [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
+* [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+* [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
 
 Now you can access the applications from the `192.158.1.38` and `192.0.2.1` IP addresses.

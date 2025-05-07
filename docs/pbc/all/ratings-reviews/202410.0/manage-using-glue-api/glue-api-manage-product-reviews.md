@@ -91,6 +91,7 @@ Request sample: retrieve product ratings and reviews: `GET http://glue.myspryker
     }
 }
 ```
+
 </details>
 
 <a name="product-reviews-response-attributes"></a>

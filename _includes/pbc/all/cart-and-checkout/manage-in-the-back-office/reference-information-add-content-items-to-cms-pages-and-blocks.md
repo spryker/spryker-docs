@@ -53,11 +53,12 @@ See how the **Big Banner w/Middle Title and Subtitle** template looks like on Yv
 ![Big banner w/middle title and subtitle](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+templates:+Reference+Information/banner-with-link-b2c.png)
 
 ### Banner content item widget template: Big banner w/middle title and subtitle without link  
+
 Displays a title and a subtitle of the banner in the middle of the image and makes it non-clickable.
 
 See how the **Big Banner w/Middle Title and Subtitle without link** template looks like on Yves:
 
- * **B2C Shop**   
+* **B2C Shop**
 ![Banner without link](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+templates:+Reference+Information/banner-without-link-b2c.png)
 
 ### Banner content item widget template: Big banner left title, subtitle and button
@@ -213,7 +214,7 @@ See how the **Text link** template looks like on Yves:
 * **White Label**
 ![File list text link](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+templates:+Reference+Information/file-list-text-link-white-label.png)
 
-*  **B2B Shop**
+* **B2B Shop**
 ![Text link B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+templates:+Reference+Information/file-list-text-link-b2b.png)
 
 * **B2C Shop**

@@ -207,7 +207,7 @@ In `package.json`, do the following:
         }
         ```
 
-    5. In `utils.js`, delete import from `'@angular-devkit/core'` and replace it with custom function:
+   5. In `utils.js`, delete import from `'@angular-devkit/core'` and replace it with custom function:
 
     ```js
         const glob = require('fast-glob');
@@ -286,9 +286,11 @@ In `package.json`, do the following:
 2. In the root of the project, do the following:
 
    1. Add `.nx/cache` to `.gitignore` and `.prettierignore`.
+
     ```text
         .nx/cache
     ```
+
    2. Delete `angular.json`.
    3. Add the `target` option to `tsconfig.mp.json`:
 
@@ -446,7 +448,7 @@ In `package.json`, do the following:
 
 ## 4) Manual Spryker module updating
 
-If you can't update the modules automatically with the `composer update` command, update all angular dependencies in the root of the module inside `package.json` to `^17.3.0` version and all `@spryker/*` dependencies to the next `major.0.0` version, for example, ` 1.1.0 => ^2.0.0`,` 0.1.4 => ^1.0.0`).
+If you can't update the modules automatically with the `composer update` command, update all angular dependencies in the root of the module inside `package.json` to `^17.3.0` version and all `@spryker/*` dependencies to the next `major.0.0` version, for example, `1.1.0 => ^2.0.0`,`0.1.4 => ^1.0.0`).
 
 To add a single entry point support, add `// spy/merchant-portal:single-entry-marker` line in the `entry.ts` file, for example, like this:
 

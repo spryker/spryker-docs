@@ -64,7 +64,7 @@ Product images, product data, other images or fonts displaced in a demo shop are
     ```shell
     git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202410.0 --single-branch ./b2b-demo-marketplace && \
     cd b2b-demo-marketplace
-    ```    
+    ```
 
 3. Clone the Docker SDK:
 

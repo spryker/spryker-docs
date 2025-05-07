@@ -48,9 +48,11 @@ This document shows how to install and use the Spryker Jarvis tool for the analy
 To migrate your project to the latest version of Spryker using the Spryker Jarvis tool, follow these steps:
 
 1. Inside the Spryker Jarvis folder, run the command
+
 ```
 node jarvis.js <path to your spryker project folder>
 ```
+
 2. Follow the terminal script about your project name.
 3. In your browser, open `http://localhost:7777` and enjoy the migration analysis.
 
@@ -71,7 +73,7 @@ To migrate to a newer product release, use the Jarvis *basic* view. This view li
 This view is especially useful when:
 
 * You have a Spryker-based product and finished the main development part of it.
-* Your project uses feature repositories, or the project is based on the Spyker[ B2B Demo Shop](/docs/about/all/b2b-suite.html) or the [B2C Demo Shop](/docs/about/all/b2c-suite.html).
+* Your project uses feature repositories, or the project is based on the Spyker[B2B Demo Shop](/docs/about/all/b2b-suite.html) or the [B2C Demo Shop](/docs/about/all/b2c-suite.html).
 
 Use this view if you want to stay up-to-date with Spryker and get new features of every Spryker product release.
 

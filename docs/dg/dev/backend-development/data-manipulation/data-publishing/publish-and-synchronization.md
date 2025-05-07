@@ -59,9 +59,9 @@ There are 2 ways to start the Publish process: automated and manual.
 
 ### Automated event emitting
 
-Any changes done to an entity implementing the _event_ Propel behavior triggers a publish event immediately. CUD (create, update, delete) operations are covered by this Propel behavior. So you can expect these three types of events on creation, update, and deletion of DB entities managed by Propel ORM.
+Any changes done to an entity implementing the *event* Propel behavior triggers a publish event immediately. CUD (create, update, delete) operations are covered by this Propel behavior. So you can expect these three types of events on creation, update, and deletion of DB entities managed by Propel ORM.
 
-For example, saving an abstract product triggers the _create abstract product_ event:
+For example, saving an abstract product triggers the *create abstract product* event:
 
 ```php
 $productAbstractEntity = SpyProductAbstractQuery::create()->findOne();
@@ -122,11 +122,11 @@ However, it will not contain the actual data that has changed. See the following
 }
 ```
 
-Each event is consumed by a publisher plugin that is mapped to it. The number of events depends on how many publisher plugins are configured for a specific update. For example, when the last product item is sold, its availability status should be changed to _not available_. The availability status of the product bundle it belongs to should be changed as well. Two publishers are required for this purpose: one for product availability and another for product bundle availability. As a result, two events are posted into the queue.
+Each event is consumed by a publisher plugin that is mapped to it. The number of events depends on how many publisher plugins are configured for a specific update. For example, when the last product item is sold, its availability status should be changed to *not available*. The availability status of the product bundle it belongs to should be changed as well. Two publishers are required for this purpose: one for product availability and another for product bundle availability. As a result, two events are posted into the queue.
 
 To consume an event, the queue adapter calls the publisher plugin specified in the `listenerClassName` field of the event message. The publisher is a plugin class implemented in one of the modules. It queries the data affected by an event and transforms it into a format suitable for frontend data storage (Redis or Elasticsearch).
 
-The transformed data is stored in a dedicated database table. It serves as a _mirror table_ for the respective Redis or Elasticsearch storage. The `data` column of the table contains the data to be synced to the front end, defining [the storage and the key](/docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html). It is stored in JSON for easy and fast synchronization. The table also contains the foreign keys used to backtrack data and the timestamp of the last change for each row. The timestamp is used to track changes rapidly.
+The transformed data is stored in a dedicated database table. It serves as a *mirror table* for the respective Redis or Elasticsearch storage. The `data` column of the table contains the data to be synced to the front end, defining [the storage and the key](/docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html). It is stored in JSON for easy and fast synchronization. The table also contains the foreign keys used to backtrack data and the timestamp of the last change for each row. The timestamp is used to track changes rapidly.
 
 ## Synchronize
 
@@ -244,8 +244,8 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 ### Environment limitations related to DMS
 
 When Dynamic Multi-Store (DMS) is disabled, the Direct Sync feature has the following limitations:  
-- Single-store configuration: The feature is only supported for configurations with a single store.
-- Multi-store configuration with namespace consistency: For configurations with multiple stores, all stores must use the same Storage and Search namespaces.
+* Single-store configuration: The feature is only supported for configurations with a single store.
+* Multi-store configuration with namespace consistency: For configurations with multiple stores, all stores must use the same Storage and Search namespaces.
 
 Example configuration for multiple stores:
 
@@ -286,15 +286,15 @@ P&S inspires intelligent solutions and smart architecture designs!
 {% endinfo_block %}
 
 When designing a solution using P&S we need to consider the following concerns in our applications
-- eventual consistency for data available in storefronts
-- horizontal scalability of publish process (native) and sync process (requires development)
-- data object limitations
+* eventual consistency for data available in storefronts
+* horizontal scalability of publish process (native) and sync process (requires development)
+* data object limitations
 
 ### Data Object Limitations
 
 In order to build a healthy commerce system, we need to make sure that P&S process is healthy at all times. And first we start with healthy NFRs for P&S.
-- storage sync message size should not be over 256Kb - this prevents us from problems in data processing, but even more important in data comsumption, when an API consumer might experience failure when reviceing an aggregated object of a high size.
-- do not exceed the request limitations for the storage (eg. Redis) and search (eg. OpenSearch) systems, while sending data in sync process
+* storage sync message size should not be over 256Kb - this prevents us from problems in data processing, but even more important in data comsumption, when an API consumer might experience failure when reviceing an aggregated object of a high size.
+* do not exceed the request limitations for the storage (eg. Redis) and search (eg. OpenSearch) systems, while sending data in sync process
 
 {% info_block infoBox "Are these really limitations?"%}
 

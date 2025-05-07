@@ -49,7 +49,7 @@ When running commands described in this document, use absolute paths. For exampl
 Follow the steps below to install and configure the required software with WSL1.
 
 
-### Install Docker Desktop    
+### Install Docker Desktop
 
 1. Download [Docker Desktop for Windows](https://download.docker.com/win/static/stable/x86_64/).
 
@@ -256,9 +256,9 @@ cd unison-2.51.2
 5. Compile and install Unison:
 
 ```bash
-$ make UISTYLE=text
-$ sudo cp src/unison /usr/local/bin/unison
-$ sudo cp src/unison-fsmonitor /usr/local/bin/unison-fsmonitor
+make UISTYLE=text
+sudo cp src/unison /usr/local/bin/unison
+sudo cp src/unison-fsmonitor /usr/local/bin/unison-fsmonitor
 ```
 
 You've installed and configured the required software.

@@ -25,17 +25,20 @@ To get indexes for the foreign key columns, follow these steps:
    * `Spryker\Zed\IndexGenerator\Communication\Console\PostgresIndexGeneratorConsole`
    * `Spryker\Zed\IndexGenerator\Communication\Console\PostgresIndexRemoverConsole`
 3. Copy and merge all schema files from the core and the project:
+
 ```bash
 console propel:schema:copy
 ```
 
 4. Generate new schema files with the missing indexes:
+
 ```bash
 console propel:postgres-indexes:generate
 ```
 
 5. In `src/{PROJECT-NAMESPACE}/Zed/IndexGenerator/Persistence/Propel/Schema/*`,check the generated schema files.
 6. Merge the generated index schema files:
+
 ```bash
 console propel:schema:copy
 ```

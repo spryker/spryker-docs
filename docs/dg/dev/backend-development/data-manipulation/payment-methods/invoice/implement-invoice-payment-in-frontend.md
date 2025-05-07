@@ -264,6 +264,7 @@ Add the Twig template that's rendered when the invoice payment method is selecte
     {% raw %}{{{% endraw %} form_errors(form.paymentmethods_invoice) {% raw %}}}{% endraw %}
 </div>
 ```
+
 </details>
 
 {% info_block errorBox %}

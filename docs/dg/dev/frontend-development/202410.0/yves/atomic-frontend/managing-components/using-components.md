@@ -29,7 +29,7 @@ Before adding a component, you need to locate it. There are 3 helper functions p
 The functions are implemented similarly and have the same arguments:
 
 * **name** (required): Specifies the component name,
-* **module** (optional): Specifies the name of the Spryker module where the component is implemented. Use this argument if you have two or more components with the same name and at the same level in different modules. If you don't pass this argument, _ShopUi_ is used by default.
+* **module** (optional): Specifies the name of the Spryker module where the component is implemented. Use this argument if you have two or more components with the same name and at the same level in different modules. If you don't pass this argument, *ShopUi* is used by default.
 
 The function returns the fully qualified component name that can be used in Twig, for example:
 
@@ -41,7 +41,7 @@ The function returns the fully qualified component name that can be used in Twig
 
 ## Arguments
 
-_Include_ or _Embed_ needs to be called with 2 arguments:
+*Include* or *Embed* needs to be called with 2 arguments:
 
 * `with {}`: Defines the context to pass to the component;
 * `only` (*Important*): This mandatory attribute closes the context so that everything you pass via with `{}` is passed to the included object *only*.
@@ -63,7 +63,7 @@ The most common attributes to include are:
 
 {% info_block infoBox %}
 
-For more details, see section _Twig_ in [Atomic Frontend](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/atomic-frontend.html#twig).
+For more details, see section *Twig* in [Atomic Frontend](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/atomic-frontend.html#twig).
 
 {% endinfo_block %}
 

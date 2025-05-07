@@ -44,6 +44,7 @@ Warehouse allocation shouldn't be confused with the reservation process, meaning
 ## Warehouse picklists
 
 A *warehouse picklist* is a document available in Fulfillment App that contains a list of items to be picked and shipped to fulfill and order. It includes the following information:
+
 * Product name
 * Product image
 * Quantity to be picked
@@ -65,6 +66,7 @@ The default generation strategy is an example of how it can work. A developer ca
 ## The picking process
 
 Picking is semi-automated and follows the steps:
+
 1. The customer places an order.
 2. A warehouse is assigned to the order.
 3. The picklist is generated.

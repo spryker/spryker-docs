@@ -224,4 +224,4 @@ When you deprecate a method, class, or alike, it's recommended to add a short se
 | Retrieves a transfer object of a propel object (`PyzUserEntityTransfer`) | getUserEntity() |
 | Retrieves a custom user transfer object | getUser()<br>getUserTransfer() |
 | Get an indexed array of single values/objects (one key - one value) | getXXXIndexedByYYY() <br> For example, getProductNamesIndexedByIdProduct(array $productAbstracts) |
-| Get an array of value/object collection grouped by some criteria (one key - multiple values)	| getXXXGroupedByYYY()<br> For example, getOrderItemsGroupedByIdShipment(array $orderItems) |
+| Get an array of value/object collection grouped by some criteria (one key - multiple values) | getXXXGroupedByYYY()<br> For example, getOrderItemsGroupedByIdShipment(array $orderItems) |

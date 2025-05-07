@@ -33,7 +33,7 @@ Sometimes it's needed to manually [synchronize or re-syncrhonize](/docs/dg/dev/b
 
 Follow these steps to implement and register a synchronization plugin.
 
-1.  Implement the synchronization(sync) plugin:
+1. Implement the synchronization(sync) plugin:
 
 <details><summary>Pyz\Zed\HelloWorldStorage\Communication\Plugin\Synchronization</summary>
 

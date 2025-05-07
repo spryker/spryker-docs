@@ -16,7 +16,7 @@ The [Bazaarvoice](https://www.bazaarvoice.com/?ref=spryker-documentation) app le
 
 {% wistia fhyuouxbpp 960 720 %}
 
-The Bazaarvoice service offers the following UGC: 
+The Bazaarvoice service offers the following UGC:
 
 - [Rating summaries](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#rating-summary?ref=spryker-documentation), or star ratings
 - [Product reviews](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#reviews?ref=spryker-documentation)  
@@ -39,4 +39,5 @@ If you have Bazaarvoice integrated, the Spryker default the [Ratings and Reviews
 {% endinfo_block %}
 
 ## Next step
+
 [Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/{{page.version}}/third-party-integrations/integrate-bazaarvoice.html)

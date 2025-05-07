@@ -122,6 +122,7 @@ The RFQ version is updated when:
 * The RFQ is revised by a sales representative.
 
 ## Unblocking cart (resetting quote lock)
+
 Converting the RFQ into a Shopping Cart adds a lock on it. A sales representative or a buyer cannot make any changes or updates to a locked cart. When the cart is locked, the only possible option is to proceed to checkout.
 
 If your project has only the Persistent Cart module, which means that only one shopping cart can exist in the customer account, when the buyer clicks **Convert to Cart**, the products from the existing cart are replaced with the ones that were in the RFQ.

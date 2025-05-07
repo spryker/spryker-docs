@@ -11,6 +11,7 @@ This document describes how to switch the version of a Demo Shop. You can switch
 
 
 1. Stop the environment, clear cache and resources:
+
 ```shell
 docker/sdk clean-data && \
 rm -Rf data/cache && rm -Rf src/Orm/Zed/*/Persistence/Base/ && rm -Rf src/Orm/Zed/*/Persistence/Map/ && rm -rf vendor/

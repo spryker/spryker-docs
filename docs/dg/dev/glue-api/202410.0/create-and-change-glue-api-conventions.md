@@ -135,6 +135,7 @@ class CustomConventionPlugin extends AbstractPlugin implements ConventionPluginI
 ```
 
 ## Use a convention
+
 To use the newly created convention, you must add it to the `GlueApplicationDependencyProvider::getConventionPlugins()`.
 
 ```php

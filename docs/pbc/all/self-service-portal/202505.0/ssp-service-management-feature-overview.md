@@ -47,7 +47,7 @@ Product types are imported using the console importer:
 
 
 
-### Adding product type to products 
+### Adding product type to products
 
 To add a product type to a product in the Back Office, go to **Catalog** and click the needed product.
 
@@ -78,7 +78,7 @@ Alternatively, you can import product type assignments using the console importe
 1. In the Back Office, go to **Catalog**.
 2. Click a product to select shipment types for.
 3. In the **Variants** section, click a product variant to select shipment types for.
-5. For **Allowed Shipment Types**, select one or more shipment types. 
+5. For **Allowed Shipment Types**, select one or more shipment types.
   A product requires at least one allowed shipment type to be displayed on the Storefront.
 
 <!-- Alternatively, shipment types can be imported using the standard console importer. See *Import file details: product-type.csv*. -->
@@ -94,7 +94,7 @@ Alternatively, you can import product type assignments using the console importe
 |---------------------|-------------|
 | Offer status        | Active or inactive. |
 | Stores              | Spryker Marketplace is a multi-store environment, and an operator can define which stores to display their offers in. |
-| Stock               | Offer's stock that's not dependent on the respective product's stock. 
+| Stock               | Offer's stock that's not dependent on the respective product's stock.
 | Quantity | Always in Stock |
 | Validity Dates      | Specifies the period during which the product offer is visible on the Storefront. Concrete product validity dates have higher priority over the Offer validity dates. |
 | Service Point       | A service point is a physical location where services are provided. Depending on the services provided, there can be different kinds of service points, such as a warehouse or a physical store. |
@@ -115,7 +115,7 @@ On the Services View page, the following information is displayed:
 * State
 
 
-Customers can use the search to filter purchased services by product name, SKU, or order reference. 
+Customers can use the search to filter purchased services by product name, SKU, or order reference.
 
 Also, customers can filter the view according to who purchased services:
 * My booked services

@@ -77,13 +77,13 @@ Spryker Cloud Commerce OS does not support forks of the Docker SDK. Your project
 
 Depending on your project requirements, choose one of the following ways to configure a Docker SDK version:
 
-* Git submodule:
-  * To contribute in the Docker SDK.
-  * To have a simple way to fetch a particular version of the Docker SDK.
-  * To use the hash as a versioning approach.
-* Reference file:
-  * To use a branch as a versioning approach.
-  * When Git Submodule is not supported.
+- Git submodule:
+  - To contribute in the Docker SDK.
+  - To have a simple way to fetch a particular version of the Docker SDK.
+  - To use the hash as a versioning approach.
+- Reference file:
+  - To use a branch as a versioning approach.
+  - When Git Submodule is not supported.
 
 
 {% info_block warningBox "Spryker Cloud Commerce OS" %}
@@ -200,6 +200,7 @@ cd ..
 If you're using CI and store the commit hash in `.git.docker`, make sure the reference and submodule hashes match.
 
 The following is an example of what the code can look like:
+
 ```bash
 git submodule | grep docker | grep `cat .git.docker` || (echo "Installed submodule hash doesn't match the reference hash from .git.docker"; exit 1)
 ```

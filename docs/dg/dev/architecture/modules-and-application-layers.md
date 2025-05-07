@@ -33,21 +33,21 @@ Each layer serves a single purpose inside an application layer.
 
 ### Persistence layer
 
-The _Persistence_ layer is responsible for defining and dealing with the database in a module. Database table schemas and query objects are defined in this layer. The Persistence layer cannot access any other layer above it.
+The *Persistence* layer is responsible for defining and dealing with the database in a module. Database table schemas and query objects are defined in this layer. The Persistence layer cannot access any other layer above it.
 
 ### Business layer
 
-All the business logic is implemented in the _Business_ layer. It usually has several business models to serve the necessary functionality. The Business Layer is located directly above the Persistence layer, so it can access it for the read and write operations.
+All the business logic is implemented in the *Business* layer. It usually has several business models to serve the necessary functionality. The Business Layer is located directly above the Persistence layer, so it can access it for the read and write operations.
 
 ### Communication layer
 
-The _Communication_ layer is the entry point of a module. When a frontend application communicates with the Commerce OS, it accesses the Communication layer first. Then, depending on the request functionality, the request is passed further from the Communication layer.
+The *Communication* layer is the entry point of a module. When a frontend application communicates with the Commerce OS, it accesses the Communication layer first. Then, depending on the request functionality, the request is passed further from the Communication layer.
 
 The Communication Layer is located above the Business layer, so it can access all the business logic in a module. That's how the Communication layer invokes the right business logic when requested.
 
 ### Presentation layer
 
-On the _Presentation_ layer, the view-related content is implemented. To get the needed data, the layer sends requests to the Communication layer. Then, it shows the data using the templates.
+On the *Presentation* layer, the view-related content is implemented. To get the needed data, the layer sends requests to the Communication layer. Then, it shows the data using the templates.
 
 ## Modularity
 

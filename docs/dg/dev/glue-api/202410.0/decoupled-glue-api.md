@@ -36,6 +36,7 @@ With the current setup out of the box, we have an additional Glue Backend API (B
 For more details about the difference between SAPI and BAPI, refer to [Backend and storefront API module differences](/docs/dg/dev/glue-api/{{page.version}}/backend-and-storefront-api-module-differences.html).
 
 ### Authentication servers
+
 Current infrastructure lets you switch between different authentication servers. For example, this can be useful if you want to use Auth0 or any other server in addition to implemented servers.
 
 For more details and examples, see [Use authentication servers with Glue API](/docs/dg/dev/glue-api/{{page.version}}/use-authentication-servers-with-glue-api.html).
@@ -102,8 +103,9 @@ BAPI resources can use direct facade access through the dependency provider and 
 ### Module naming
 
 Resource modules have their own naming pattern to follow:
-- Storefront resources must use the simple `Api` suffix and resource name in plural—for example, `ProductsApi`.
-- Backend resources must use the `BackendApi` suffix and resource name in plural—for example, `ProductsBackendApi`.
+* Storefront resources must use the simple `Api` suffix and resource name in plural—for example, `ProductsApi`.
+* Backend resources must use the `BackendApi` suffix and resource name in plural—for example, `ProductsBackendApi`.
+
 ### Module structure
 
 Recommended module structure:
@@ -226,7 +228,7 @@ Example:
 | HEADER | SAMPLE VALUE | USED FOR | WHEN NOT PRESENT |
 | --- | --- | --- | --- |
 | Accept | application/vnd.api+json |Indicates the data format of the expected API response.  | 406 Not acceptable |
-| Content-Type | application/vnd.api+json; version=1.1 | 	Indicates the request content-type and resource version. | 415 Unsupported |
+| Content-Type | application/vnd.api+json; version=1.1 |  Indicates the request content-type and resource version. | 415 Unsupported |
 | Accept-Language | de;, en;q=0.5 | Indicates the desired language in which the content should be returned. |  |
 
 ## Response header

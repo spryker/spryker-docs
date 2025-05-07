@@ -69,12 +69,12 @@ If **FULL TEXT BOOSTED** is enabled for two attributes with the same value, in t
 
 ### SUGGESTION TERMS
 
-Defines if alternative search terms are provided if a search item is misspelled. For example, the *storage_media* attribute has the *SSD* and *Flash* values. With **SUGGESTION TERMS** enabled, when a customer searches for `flashs`, the search results page contains a a suggested search term _flash_.
+Defines if alternative search terms are provided if a search item is misspelled. For example, the *storage_media* attribute has the *SSD* and *Flash* values. With **SUGGESTION TERMS** enabled, when a customer searches for `flashs`, the search results page contains a a suggested search term *flash*.
 ![Include for suggestion](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/include-for-suggestion.png)
 
 ### COMPLETION TERMS
 
 Defines if auto-completion suggestions appear when customers search for the values of this attribute.
 
-For example, the _storage_media_ attribute has *SSD* and *Flash* values. With  **COMPLETION TERMS** enabled, when a customer enters `fla` in the search field, the search term is autocompleted with `sh`, and there is a list of suggested terms in the search results.
+For example, the *storage_media* attribute has *SSD* and *Flash* values. With  **COMPLETION TERMS** enabled, when a customer enters `fla` in the search field, the search term is autocompleted with `sh`, and there is a list of suggested terms in the search results.
 ![Completion terms](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/completion-terms.png)

@@ -183,6 +183,7 @@ jobs:
               run: vendor/bin/console security:check
 ...
 ```
+
 </details>
 
 ## Configuring groups of tests via the Docker SDK
@@ -221,6 +222,7 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/d
 2. Glue API tests: To fill the storage with the data used by Glue API, add the following commands to load fixtures to the `Run docker` action as shown in the code snippet:
 * `docker/sdk testing codecept fixtures`
 * `docker/sdk testing console queue:worker:start --stop-when-empty`
+
 ```yaml
 ...
             - name: Run docker
@@ -259,6 +261,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
 
 1. Update the desired deploy file:
     1. Define the Docker image tag:
+
         ```yaml
         ...
         image:
@@ -267,6 +270,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
         ```
 
     2. Define the MySQL database engine:
+
         ```yaml
         ...
         services:
@@ -274,15 +278,19 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
                 engine: mysql
                 ...
         ```
+
     3. Bootstrap docker setup:
+
         ```bash
         docker/sdk boot {deploy_file.yml}
         ```
 
     4. Run the application with the new configuration:
+
         ```bash
         docker/sdk up
         ```
+
 2. Update the desired workflow configuration file:
 
 ```yaml
@@ -320,6 +328,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
 To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 1. Update the desired deploy file:
     1. Define the Docker image tag:
+
         ```yaml
         ...
         image:
@@ -328,6 +337,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
         ```
 
     2. Define the PostgreSQL database engine:
+
         ```yaml
         ...
         services:
@@ -337,14 +347,19 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
         ```
 
     3. Bootstrap docker setup:
+
         ```bash
         docker/sdk boot {deploy_file.yml}
         ```
+
     4. Run the application with the new configuration:
+
         ```bash
         docker/sdk up
         ```
+
 2. Update the desired workflow configuration file:
+
 ```yaml
 ...
     php-80-postgresql-glue-debian:
@@ -388,6 +403,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 To run acceptance tests on Alpine with MariaDB and PHP 7.4, follow these steps:
 
 1. In the desired deploy file, define the Docker image tag:
+
 ```yaml
 ...
 image:
@@ -396,6 +412,7 @@ image:
 ```
 
 2. Update the desired workflow configuration file:
+
 ```yaml
 ...
     php-7.4-mariadb-acceptance-alpine:
@@ -586,6 +603,7 @@ jobs:
               run: vendor/bin/console security:check
 ...
 ```
+
 </details>
 
 ## Configuring groups of tests via the Docker SDK
@@ -624,6 +642,7 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/d
 2. Glue API tests: To fill the storage with the data used by Glue API, add the following commands to load fixtures to the `Run docker` action as shown in the code snippet:
 * `docker/sdk testing codecept fixtures`
 * `docker/sdk testing console queue:worker:start --stop-when-empty`
+
 ```yaml
 ...
             - name: Run docker
@@ -662,6 +681,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
 
 1. Update the desired deploy file:
     1. Define the Docker image tag:
+
         ```yaml
         ...
         image:
@@ -670,6 +690,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
         ```
 
     2. Define the MySQL database engine:
+
         ```yaml
         ...
         services:
@@ -677,15 +698,19 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
                 engine: mysql
                 ...
         ```
+
     3. Bootstrap docker setup:
+
         ```bash
         docker/sdk boot {deploy_file.yml}
         ```
 
     4. Run the application with the new configuration:
+
         ```bash
         docker/sdk up
         ```
+
 2. Update the desired workflow configuration file:
 
 ```yaml
@@ -723,6 +748,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
 To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 1. Update the desired deploy file:
     1. Define the Docker image tag:
+
         ```yaml
         ...
         image:
@@ -731,6 +757,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
         ```
 
     2. Define the PostgreSQL database engine:
+
         ```yaml
         ...
         services:
@@ -740,14 +767,19 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
         ```
 
     3. Bootstrap docker setup:
+
         ```bash
         docker/sdk boot {deploy_file.yml}
         ```
+
     4. Run the application with the new configuration:
+
         ```bash
         docker/sdk up
         ```
+
 2. Update the desired workflow configuration file:
+
 ```yaml
 ...
     php-80-postgresql-glue-debian:
@@ -791,6 +823,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 To run acceptance tests on Alpine with MariaDB and PHP 7.4, follow these steps:
 
 1. In the desired deploy file, define the Docker image tag:
+
 ```yaml
 ...
 image:
@@ -799,6 +832,7 @@ image:
 ```
 
 2. Update the desired workflow configuration file:
+
 ```yaml
 ...
     php-7.4-mariadb-acceptance-alpine:
@@ -1046,6 +1080,7 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/d
 2. Glue API tests: To fill the storage with the data used by Glue API, add the following commands to load fixtures to the `Run docker` action as shown in the code snippet:
 * `docker/sdk testing codecept fixtures`
 * `docker/sdk testing console queue:worker:start --stop-when-empty`
+
 ```yaml
 ...
             - name: Run docker
@@ -1084,6 +1119,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3:
 
 1. Update the desired deploy file:
     1. Define the Docker image tag:
+
         ```yaml
         ...
         image:
@@ -1092,6 +1128,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3:
         ```
 
     2. Define the MySQL database engine:
+
         ```yaml
         ...
         services:
@@ -1099,15 +1136,19 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3:
                 engine: mysql
                 ...
         ```
+
     3. Bootstrap docker setup:
+
         ```bash
         docker/sdk boot {deploy_file.yml}
         ```
 
     4. Run the application with the new configuration:
+
         ```bash
         docker/sdk up
         ```
+
 2. Update the desired workflow configuration file:
 
 ```yaml
@@ -1145,6 +1186,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3:
 To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
 1. Update the desired deploy file:
     1. Define the Docker image tag:
+
         ```yaml
         ...
         image:
@@ -1153,6 +1195,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
         ```
 
     2. Define the PostgreSQL database engine:
+
         ```yaml
         ...
         services:
@@ -1162,14 +1205,19 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
         ```
 
     3. Bootstrap docker setup:
+
         ```bash
         docker/sdk boot {deploy_file.yml}
         ```
+
     4. Run the application with the new configuration:
+
         ```bash
         docker/sdk up
         ```
+
 2. Update the desired workflow configuration file:
+
 ```yaml
 ...
     php-80-postgresql-glue-debian:
@@ -1213,6 +1261,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
 To run acceptance tests on Alpine with MariaDB and PHP 7.4:
 
 1. In the desired deploy file, define the Docker image tag:
+
 ```yaml
 ...
 image:
@@ -1221,6 +1270,7 @@ image:
 ```
 
 2. Update the desired workflow configuration file:
+
 ```yaml
 ...
     php-7.4-mariadb-acceptance-alpine:

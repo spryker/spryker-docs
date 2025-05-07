@@ -59,6 +59,7 @@ For information on how to work with RabbitMQ, see [Rabbit MQ tutorial](https://w
 ## Set up RabbitMQ connection
 
 You can override the default connection settings by specifying this config:
+
 ```php
 $config[RabbitMqEnv::RABBITMQ_CONNECTIONS] = [
     'DE' => [

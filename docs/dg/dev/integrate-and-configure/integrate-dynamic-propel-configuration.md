@@ -100,5 +100,5 @@ return [
 Run native Propel commands with the following argument:
 
 ```bash
-$ propel migration:down --config-dir src/Orm/Propel/
+propel migration:down --config-dir src/Orm/Propel/
 ```

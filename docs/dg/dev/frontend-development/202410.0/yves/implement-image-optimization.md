@@ -24,6 +24,7 @@ Popular image formats may have multiple plugins to choose from.
 | imagemin-svgo | ~7.1.0 |
 
 2. Install the added plugins:
+
 ```bash
 npm install
 ```

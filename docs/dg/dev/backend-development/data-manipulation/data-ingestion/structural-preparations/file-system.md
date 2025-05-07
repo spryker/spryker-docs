@@ -127,6 +127,7 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 ```
 
 **Staging/Production environment example:**
+
 ```php
 <?php
 

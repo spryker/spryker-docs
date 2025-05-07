@@ -43,4 +43,5 @@ $config[LogConstants::LOG_LEVEL] = getenv('SPRYKER_DEBUG_ENABLED') ? Logger::INF
 Extended logs are enabled and you can check them in the AWS Management Console. See [Working with logs](/docs/ca/dev/monitoring/working-with-logs.html) for more details.
 
 ## Next step
+
 [Working with logs](/docs/ca/dev/monitoring/working-with-logs.html)

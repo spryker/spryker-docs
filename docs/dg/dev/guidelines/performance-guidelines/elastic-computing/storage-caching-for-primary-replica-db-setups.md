@@ -52,14 +52,14 @@ Plugins can contain any functionality to extend Propel object and query instance
 
 * `PropelOrm`:
 
-    * Lets extend Propel query objects to adjust save method generation with additional functionality.
+  * Lets extend Propel query objects to adjust save method generation with additional functionality.
 
-    * Lets extend Propel entity objects to adjust `find*()` methods generation with additional functionality.
+  * Lets extend Propel entity objects to adjust `find*()` methods generation with additional functionality.
 
 * `PropelOrmExtension`
 
-    * Lets extend the `PropelOrm` module with plugins to expand its functionality.
+  * Lets extend the `PropelOrm` module with plugins to expand its functionality.
 
-    * Introduced a `FindExtensionPluginInterface` to expand data reading from the DB.
+  * Introduced a `FindExtensionPluginInterface` to expand data reading from the DB.
 
-    * Introduced a `PostSaveExtensionPluginInterface` to expand data saving to the DB.
+  * Introduced a `PostSaveExtensionPluginInterface` to expand data saving to the DB.

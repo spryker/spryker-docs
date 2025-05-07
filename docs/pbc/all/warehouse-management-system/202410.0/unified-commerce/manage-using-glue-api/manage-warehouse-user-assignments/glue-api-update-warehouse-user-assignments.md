@@ -42,6 +42,7 @@ For detailed information about the modules that provide the API functionality an
 | `PATCH https://glue-backend.mysprykershop.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2?include=users` | Update the warehouse user assignment with the specified ID. Include information about the authenticated user in the response.  |
 
 Request sample:
+
 ```json
 {
     "data": {

@@ -29,17 +29,17 @@ Also, you can create DB snapshots manually.
 
 ## Create a DB snapshot
 
-1.  In the AWS Management Console, go to **Services** > [**RDS**](https://console.aws.amazon.com/rds/).
+1. In the AWS Management Console, go to **Services** > [**RDS**](https://console.aws.amazon.com/rds/).
 
-2.  In the navigation pane, click **Databases**.
+2. In the navigation pane, click **Databases**.
 
-3.  In the **Databases** pane, select the DB you want to take a snapshot of.
+3. In the **Databases** pane, select the DB you want to take a snapshot of.
 
-4.  Click**Actions&nbsp;<span aria-label="and then">></span> Take snapshot**.
+4. Click**Actions&nbsp;<span aria-label="and then">></span> Take snapshot**.
 
     This opens the **Take DB snapshot** page.
 
-5.  Enter a **Snapshot name**.
+5. Enter a **Snapshot name**.
     Make sure to enter a meaningful **Snapshot name**. It is used as an identifier when restoring the DB.
 
 6. Click **Take snapshot**.
@@ -112,9 +112,9 @@ This takes you to the **Restore snapshot** page.
 
 Make sure to configure the following:
 
-*   **DB instance identifier** corresponds to the name of the original DB _before_ you renamed it.
+* **DB instance identifier** corresponds to the name of the original DB _before_ you renamed it.
 
-*   The settings exactly replicate those of the original DB. Otherwise, the DB may fail to restore correctly or work with the application.
+* The settings exactly replicate those of the original DB. Otherwise, the DB may fail to restore correctly or work with the application.
 
 {% endinfo_block %}
 
@@ -199,28 +199,28 @@ Restored DB is created and modified.
 
 ### Re-sync data from the restored database to Elasticsearch and Redis
 
-1.  Connect to OpenVPN.
+1. Connect to OpenVPN.
 
-2.  Open Jenkins web interface at `http://jenkins.{environment_hostname}`.
+2. Open Jenkins web interface at `http://jenkins.{environment_hostname}`.
 
-3.  Select **New Item**.
+3. Select **New Item**.
 
-4.  For **Enter an item name**, enter a job name.
+4. For **Enter an item name**, enter a job name.
 
-5.  Select **Freestyle project**.
+5. Select **Freestyle project**.
 
-6.  Select **OK**.
+6. Select **OK**.
 
-7.  In the **Build** section, select **Add build step** > **Execute shell**.
+7. In the **Build** section, select **Add build step** > **Execute shell**.
 
-8.  In the **Execute shell** pane, for **Command**, enter the script with the `vendor/bin/console sync:data` command. You can add the command to the script from another Jenkins job in your environment.
+8. In the **Execute shell** pane, for **Command**, enter the script with the `vendor/bin/console sync:data` command. You can add the command to the script from another Jenkins job in your environment.
 
-9.  Select **Save**.  
+9. Select **Save**.  
 
 
 ![Set up a jenkins job](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Creating+and+restoring+database+backups/set-up-a-jenkins-job.png)
 
-10.  On the page that opens, select **Build Now**.  
+10. On the page that opens, select **Build Now**.  
     Give it a few minutes to execute the job. You can track the execution in the **Build History** pane.  
 
 

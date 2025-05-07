@@ -22,4 +22,5 @@ Within CodePipeline, there are several deployment types:
 For more information about deployment process and its states, see [Deployment in states](/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.html).
 
 ## Next step
+
 [Define environment variables](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-define-environment-variables.html)

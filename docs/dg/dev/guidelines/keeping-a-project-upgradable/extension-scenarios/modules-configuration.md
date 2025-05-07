@@ -59,6 +59,7 @@ class CustomerConfig extends SprykerCustomerConfig
 ```
 
 The following is an example of how to have the method return a string:
+
 ```php
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 
@@ -104,7 +105,8 @@ class DevelopmentConfig extends SprykerDevelopmentConfig
     }
 }
 ```
-##  Array as a return
+
+## Array as a return
 
 There's a multitude of ways to view arrays as the return. Manifests support the following array types:
 
@@ -210,6 +212,7 @@ class MultiCartConfig extends SprykerMultiCartConfig
     }
 }
 ```
+
 multidimensional arrays of up to two levels are also supported, but to use them, you must use the wrapped function.
 
 The following is an example of how to have the method return a multidimensional array (with constants, wrap methods call and array merging):
@@ -244,6 +247,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 }
 ```
+
 * variables
 
 ## Null as the return

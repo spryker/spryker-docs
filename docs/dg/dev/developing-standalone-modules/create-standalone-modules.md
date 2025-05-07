@@ -26,10 +26,11 @@ You can extend Spryker functionality from a module using one of the following op
 ### Extend functionality using an existing extension point
 
 1. Extend the product table with a **Categories** column that shows the list of categories, which a product is added to. For this, use the following extension points in the existing modules:
-  - [ProductTableConfigurationExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableConfigurationExpanderPluginInterface.php): to extend table headers with **Categories** column.
-  - [ProductTableDataBulkExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableDataBulkExpanderPluginInterface.php): to extend table content with the corresponding column
+* [ProductTableConfigurationExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableConfigurationExpanderPluginInterface.php): to extend table headers with **Categories** column.
+* [ProductTableDataBulkExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableDataBulkExpanderPluginInterface.php): to extend table content with the corresponding column
 
 2. Create a module:
+
 ```shell
 vendor/bin/spryker-dev-console dev:module:create your-company-name.product-category
 ```

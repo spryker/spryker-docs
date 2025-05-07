@@ -55,11 +55,13 @@ To define your strategy when implementing updates, learn about our [module and f
 You will use the following commands to manage modules with Composer:
 
 * Install the dependencies listed in `composer.json`:
+
 ```bash
 composer install
 ```
 
 * Update all the installed modules:
+
 ```bash
 composer update "spryker/*"
 ```
@@ -67,6 +69,7 @@ composer update "spryker/*"
 We recommend updating modules weekly to ensure you have the latest fixes. We also recommend [subscribing to our release notes newsletter](https://now.spryker.com/release-notes) to stay up to date with the improvements.
 
 * Update a specific module:
+
 ```bash
 composer update "spryker/{MODULE_NAME}"
 ```
@@ -146,6 +149,7 @@ On the project level, you add your own rules and exclude the default rules.
         <exclude name="Spryker.Commenting.DocBlock"/>
 </rule>
 ```
+
 ### PHPStan
 
 When using PHPStan, we recommend version 1.2.* or later. These versions help you avoid memory and other issues.
@@ -164,7 +168,7 @@ To disable cache indexing, in the PhpStorm, right-click the folder and select **
 
 It is safe to disable cache indexing for the following files:
 
-* `data/cache `
+* `data/cache`
 * `data/tmp`
 * `public/(Yves/Zed/Marketlace)/assets`
 

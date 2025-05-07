@@ -40,20 +40,20 @@ There's an inherent delay in horizontal scaling on application tasks. So, try to
 ## Example load test
 
 1. Warm-up period (0-10 minutes):
-- Traffic: Start with 10-20% of the expected peak traffic.
-- Purpose: Gradually ramp up the load to avoid sudden spikes and allow the system to stabilize.
+* Traffic: Start with 10-20% of the expected peak traffic.
+* Purpose: Gradually ramp up the load to avoid sudden spikes and allow the system to stabilize.
 
 2. Scale-up period (10-20 minutes):
-- Traffic: Ramp up the traffic to 50% of the expected traffic peak.
-- Purpose: The vertical buffer should now be overwhelmed and horizontal autoscaling will provide additional containers to spread out the load.
+* Traffic: Ramp up the traffic to 50% of the expected traffic peak.
+* Purpose: The vertical buffer should now be overwhelmed and horizontal autoscaling will provide additional containers to spread out the load.
 
 3. Peak load period (20-30 minutes):
-- Traffic: Increase to 80-100% of the expected peak traffic.
-- Purpose: Test the system's ability to handle maximum load and trigger auto-scaling.
+* Traffic: Increase to 80-100% of the expected peak traffic.
+* Purpose: Test the system's ability to handle maximum load and trigger auto-scaling.
 
 4. Break period (30-40 minutes)
-- Traffic: Reduce to 10-20% of the peak traffic.
-- Purpose: Allow the system to scale down and observe how it handles reduced load.
+* Traffic: Reduce to 10-20% of the peak traffic.
+* Purpose: Allow the system to scale down and observe how it handles reduced load.
 
 Repeat steps 1-4 two times and check your results.
 

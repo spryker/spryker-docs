@@ -68,7 +68,7 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 Delete the  `Spryker\* Zed || Yves *\Application\Communication\Plugin\
-Provider\AssertUrlConfigurationServiceProvider ` dependency:
+Provider\AssertUrlConfigurationServiceProvider` dependency:
 
 **src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
 
@@ -137,7 +137,7 @@ public function isDevelopmentConsoleCommandsEnabled(): bool
 ...
 ```
 
-3. Adjust  `Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands() ` by replacing  `Environment::isDevelopment() || Environment::isTesting() ` with  `$this->getConfig()->isDevelopmentConsoleCommandsEnabled() `:
+3. Adjust  `Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands()` by replacing  `Environment::isDevelopment() || Environment::isTesting()` with  `$this->getConfig()->isDevelopmentConsoleCommandsEnabled()`:
 
 ```php
 ...

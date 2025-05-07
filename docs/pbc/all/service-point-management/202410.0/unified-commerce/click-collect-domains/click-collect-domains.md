@@ -81,13 +81,13 @@ The entity-relationship diagram shows how domain entities are mapped to database
 
 ## Domains and subdomains
 
-- [Service Point](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-service-points-domain.html)
-  - [Service Point Cart](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-service-point-cart-subdomain.html)
-- [Shipment Type](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-shipment-types-domain.html)
-  - [Shipment Type Service Point](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-shipment-type-service-point-subdomain.html)
-- Product Offer
-  - [Product Offer Service Point](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-product-offer-service-point-subdomain.html)
-    - [Product Offer Service Point Availability](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-product-offer-service-point-availability-subdomain.html)
-      - [Marketplace Merchant Product Offer Service Point Availability](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-marketplace-merchant-product-offer-service-point-availability-subdomain.html)
-  - [Product Offer Shipment Type](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-product-offer-shipment-type-subdomain.html)
-    - [Product Offer Shipment Type Availability](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-product-offer-shipment-type-availability-subdomain.html)
+* [Service Point](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-service-points-domain.html)
+  * [Service Point Cart](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-service-point-cart-subdomain.html)
+* [Shipment Type](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-shipment-types-domain.html)
+  * [Shipment Type Service Point](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-shipment-type-service-point-subdomain.html)
+* Product Offer
+  * [Product Offer Service Point](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-product-offer-service-point-subdomain.html)
+    * [Product Offer Service Point Availability](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-product-offer-service-point-availability-subdomain.html)
+      * [Marketplace Merchant Product Offer Service Point Availability](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-marketplace-merchant-product-offer-service-point-availability-subdomain.html)
+  * [Product Offer Shipment Type](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-product-offer-shipment-type-subdomain.html)
+    * [Product Offer Shipment Type Availability](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-product-offer-shipment-type-availability-subdomain.html)

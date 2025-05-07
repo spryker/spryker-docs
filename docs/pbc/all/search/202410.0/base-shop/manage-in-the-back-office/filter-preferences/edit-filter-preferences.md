@@ -26,7 +26,7 @@ Review the [reference information](#reference-information-edit-filter-preference
     * Select a **FILTER TYPE**
     * Enter a **FILTER NAME** for any locale.
 3. Click **Save**.
-    This opens the **View Filter** page with a success message displayed.    
+    This opens the **View Filter** page with a success message displayed.
 4. Optional: Sync the filter preferences of the category filter you've updated with the other filters:
     1. Click **List of filters**.
     2. On the **Filter preferences** page, click **Synchronize filter preferences**.

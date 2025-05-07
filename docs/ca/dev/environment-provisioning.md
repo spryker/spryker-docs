@@ -59,23 +59,23 @@ If `myshop` is the customer, then `myshop-PROD` is an environment name, where `m
 The *AWS region* indicates where customers want their infrastructure resources to be available. For more information about available options for the AWS region, refer to the AWS [official documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html). For information about the AWS region you are entitled to use, check your contract.
 
 The following AWS regions are supported:
-- Asia Pacific (Tokyo)
-- Asia Pacific (Seoul)
-- Asia Pacific (Mumbai)
-- Asia Pacific (Singapore)
-- Asia Pacific (Sydney)
-- Canada (Central)
-- Europe (Frankfurt am Main)
-- Europe (Stockholm)
-- Europe (Milan)
-- Europe (Ireland)
-- Europe (London)
-- Europe (Paris)
-- South America (São Paulo)
-- US East (Ohio)
-- US East (N. Virginia)
-- US West (N. California)
-- US West (Oregon)
+* Asia Pacific (Tokyo)
+* Asia Pacific (Seoul)
+* Asia Pacific (Mumbai)
+* Asia Pacific (Singapore)
+* Asia Pacific (Sydney)
+* Canada (Central)
+* Europe (Frankfurt am Main)
+* Europe (Stockholm)
+* Europe (Milan)
+* Europe (Ireland)
+* Europe (London)
+* Europe (Paris)
+* South America (São Paulo)
+* US East (Ohio)
+* US East (N. Virginia)
+* US West (N. California)
+* US West (Oregon)
 
 ### Repository
 
@@ -121,20 +121,22 @@ Customer and partner users can have access to the following:
 This section explains what additional attributes you can specify at the beginning of your provisioning, as well as accesses you can request.
 
 ### Optional: SFTP
+
 SFTP is implemented on top of EFS. You can use SFTP for any third-party integrations or for explicit data imports via Jenkins jobs if required on the project level. Note that SFTP is only available on Bastion and Jenkins. This feature is disabled by default. You can also request it later via the support ticket, but it's preferred to validate this option during provisioning.
 
 For data import, we recommend using S3 buckets.
 
 ### Optional: Site to Site VPN
+
 A Site-to-Site VPN (Virtual Private Network) is a type of network connection that enables secure communication between two or more geographically separated networks. This type of VPN allows two or more sites to establish a secure and encrypted connection over the internet or other public networks, creating a virtual private network between the two sites.
 The following configuration parameters are required to set up the Site-to-Site VPN tunnel:
-- Customer gateway IP address
-- IP ranges on the customer side that would need access to Spryker VPC
+* Customer gateway IP address
+* IP ranges on the customer side that would need access to Spryker VPC
 The following configuration parameters are optional:
-- Device name on customer gateway
-- Custom BGP(Border Gateway Protocol) ASN
-- Dynamic BGP routes
-- Other Parameters of tunnels
+* Device name on customer gateway
+* Custom BGP(Border Gateway Protocol) ASN
+* Dynamic BGP routes
+* Other Parameters of tunnels
 
 {% info_block infoBox "Site to Site VPN" %}
 
@@ -143,11 +145,12 @@ If you need Site to Site VPN, provide your internal subnet CIDR, so our Spryker 
 {% endinfo_block %}
 
 ### Optional: Default network settings
+
 Each Spryker Cloud Commerce environment uses a dedicated Virtual Private Cloud (VPC).
 The default Classless Inter-Domain Routings (CIDRs) are as follows:
-- For the first non-production environment: `10.105.0.0/16`.
-- For the first production environment: `10.106.0.0/16`.
-- Subsequent environment of any type: `10.107.0.0/16` - `10.200.0.0/16`.
+* For the first non-production environment: `10.105.0.0/16`.
+* For the first production environment: `10.106.0.0/16`.
+* Subsequent environment of any type: `10.107.0.0/16` - `10.200.0.0/16`.
 
 To change the default CIDRs, request it with your environment.
 

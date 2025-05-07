@@ -19,7 +19,7 @@ This document describes how Redis is used within Spryker. The current functional
 
 ## About Redis
 
-_Redis_ is a key-value data storage, and for the values, it supports a large collection of data structures, such as strings, hashes, lists, or sets.
+*Redis* is a key-value data storage, and for the values, it supports a large collection of data structures, such as strings, hashes, lists, or sets.
 
 The following table shows how translations are stored:
 

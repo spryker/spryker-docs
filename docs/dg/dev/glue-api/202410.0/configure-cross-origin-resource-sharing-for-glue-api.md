@@ -47,7 +47,7 @@ glue_eu:
             store: AT
 ```
 
-*  `*`: allow CORS requests from any domain. Example:
+* `*`: allow CORS requests from any domain. Example:
 
 ```yml
     glue_eu:
@@ -77,7 +77,7 @@ glue_eu:
 
 ## Verify the CORS configuration
 
-1. Make an _OPTIONS_ pre-flight request to any valid Glue API resource with the correct `Origin` header, for example, `http://www.example1.com`:
+1. Make an *OPTIONS* pre-flight request to any valid Glue API resource with the correct `Origin` header, for example, `http://www.example1.com`:
 
 ```bash
 curl -X OPTIONS -H "Origin: http://www.example1.com" -i http://glue.de.mysprykershop.com

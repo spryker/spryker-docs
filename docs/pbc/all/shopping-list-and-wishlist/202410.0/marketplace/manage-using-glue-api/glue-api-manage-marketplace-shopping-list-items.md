@@ -57,6 +57,7 @@ To add items to a shopping list, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -76,6 +77,7 @@ To add items to a shopping list, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -95,6 +97,7 @@ To add items to a shopping list, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -115,6 +118,7 @@ To add items to a shopping list, send the request:
         }
 }
 ```
+
 </details>
 
 
@@ -144,6 +148,7 @@ To add items to a shopping list, send the request:
     }
 }  
 ```
+
 </details>
 
 <details>
@@ -215,6 +220,7 @@ To add items to a shopping list, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -237,6 +243,7 @@ To add items to a shopping list, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -259,6 +266,7 @@ To add items to a shopping list, send the request:
     }
 }
 ```
+
 </details>
 
 <a name="shopping-list-items-response-attributes"></a>
@@ -312,6 +320,7 @@ To change the item quantity in a shopping list, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -330,6 +339,7 @@ To change the item quantity in a shopping list, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -348,6 +358,7 @@ To change the item quantity in a shopping list, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -366,6 +377,7 @@ To change the item quantity in a shopping list, send the request:
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -393,7 +405,8 @@ To change the item quantity in a shopping list, send the request:
     }
 }
 ```
-</details>     
+
+</details>
 
 <details>
 <summary>Response sample: change the quantity of the items in the shopping list, and include concrete products</summary>
@@ -459,6 +472,7 @@ To change the item quantity in a shopping list, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -481,6 +495,7 @@ To change the item quantity in a shopping list, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -503,6 +518,7 @@ To change the item quantity in a shopping list, send the request:
     }
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->

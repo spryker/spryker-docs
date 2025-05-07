@@ -35,6 +35,7 @@ This also includes any dependencies that may appear between the deployment eleme
 Changes to the platform infrastructure and application infrastructure are carefully evaluated because mistakes in this area can cause critical problems. To reduce risks, when submitting a deployment standard service request, make sure to carefully document the intention behind each impact on infrastructure.
 
 ### Expected behavior
+
 In special cases, like technical debts, functional debts, or accepted risks, a release can lead to release specific, temporary, expected critical or warning states that doesn't have to be handled or mitigated by the operations team. To decrease unnecessary fire-fighting on both sides, list and explain these scenarios when submitting a deployment standard service request.
 
 ### Example for deployment standard service request
@@ -84,18 +85,22 @@ The following guidelines apply to operating applications or for special failure 
 Given the size and complexity of a large applications, which delivers many features with each release, unexpected errors can have multiple potential resolutions. To ensure that the most effective resolution is chosen with minimal disruption to the functionality of a successfully deployed release, implement the following operation guidelines.
 
 ### Main workflows
+
 To understand the main and critical workflows in the application, operational guidelines should outline the normal behavior of
 important features and workflows at the logical, component, and infrastructure levels.
 
 This forms a general overview of the logic, components, and infrastructure. This overview is necessary for making informed operational decisions and building project-specific operational dashboards, for example—to to identify and highlight project-specific bottlenecks. Also, it's needed for analyzing, answering, and resolving requests.
 
 ### Risks, early warnings, and counter actions
+
 Building a large application is usually coupled with massive application-level logging. In some cases, a critical system issue can be prevented or minimized with timely warning signals. By using regular signals, like logs and metrics, from identified business or technical bottlenecks or risks, the operations team can improve the application's stability. We recommend maintaining a list of such signals and risks in the operational guidelines. This includes recommended actions to take in order to deliver the best mitigation strategy. For more information on these guidelines, see [Operatable feature guidelines](/docs/dg/dev/best-practices/non-functional-requirement-templates/operatable-feature-guidelines.html).
 
 ### Silent undesired scenario
+
 Although monitoring systems are used to detect unwanted states, some business functionality may be within acceptable metrics but not desirable under certain conditions. For example, the minimum daily browsing customer count is 10, but 11 customers during Black Friday is not considered normal. To monitor such cases, these scenarios need to be documented for the operations team.
 
 ### User guide
+
 To minimize the impact of resolution efforts and optimize the process, make sure to provide the operations team with the necessary business context. For example, resolving a small number of errors through the Back Office may be more optimal than rolling back an entire release.
 
 ### Entity size expectations

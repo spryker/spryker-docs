@@ -58,7 +58,7 @@ Add the `spy_payment_direct_debit.schema.xml` file with the following content to
     </database>
 ```
 
-### 2. Perform a database migration and generate the query object:
+### 2. Perform a database migration and generate the query object
 
 Run the following command:
 
@@ -66,7 +66,7 @@ Run the following command:
 vendor/bin/console propel:install
 ```
 
-### 3. Save the Direct Debit payment details in the persistence layer:
+### 3. Save the Direct Debit payment details in the persistence layer
 
 1. Create the `PaymentMethodsPersistenceFactory` class on the persistence layer:
 
@@ -122,7 +122,7 @@ class PaymentMethodsQueryContainer extends AbstractQueryContainer
 
 To add the logic for saving and viewing the Direct Debit payment details on the business layer and expose them using `PaymentMethodsFacade`, do the following:
 
-1. In the `Business/Reader/ ` folder, add the `DirectDebitReader` class. This implements the logic for *viewing* the Direct Debit payment details.
+1. In the `Business/Reader/` folder, add the `DirectDebitReader` class. This implements the logic for *viewing* the Direct Debit payment details.
 
 <details><summary>Code sample</summary>
 
@@ -179,6 +179,7 @@ class DirectDebitReader
 
 }
 ```
+
 </details>
 
 1. In the `Business/Writer/` folder, add the `DirectDebitWriter` class. This implements the logic for *saving* the Direct Debit payment details.
@@ -595,7 +596,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 
 ## Integrate the Direct Debit Payment Method into a state machine
 
-After the preceding procedures have been completed, set up a state machine, which is dedicated for processing orders that use Direct Debit as a payment type. For this purpose, add the `paymentMethodsDirectDebit.xml ` file with the following content to the `config/Zed/oms/` folder:
+After the preceding procedures have been completed, set up a state machine, which is dedicated for processing orders that use Direct Debit as a payment type. For this purpose, add the `paymentMethodsDirectDebit.xml` file with the following content to the `config/Zed/oms/` folder:
 
 <details><summary>Code sample</summary>
 

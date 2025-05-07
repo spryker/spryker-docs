@@ -20,8 +20,8 @@ In your development, this endpoint can help you to:
 ## Installation
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see the following documents:
-- [Install the Catalog Glue API](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html#install-feature-api)
-- [Install the Catalog + Merchant Product Restrictions feature](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-merchant-product-restrictions-feature.html)
+* [Install the Catalog Glue API](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html#install-feature-api)
+* [Install the Catalog + Merchant Product Restrictions feature](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-merchant-product-restrictions-feature.html)
 
 ## Search by products
 
@@ -78,7 +78,8 @@ To search by products, send the request:
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&page=3` | Set a page to retrieve the search results from. |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&ipp=24` | Set a number of products per page.   |
 | `GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker` | Filter the results by the *Spryker* merchant name. |
-| `GET https://glue.mysprykershop.com/catalog-search?q=001&include=abstract-products,concrete-products,product-offers/` | Search for a product by SKU `001` including its concrete products and product offers.
+| `GET https://glue.mysprykershop.com/catalog-search?q=001&include=abstract-products,concrete-products,product-offers/` | Search for a product by SKU `001` including its concrete products and product offers. |
+
 ### Response
 
 
@@ -1400,6 +1401,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -1817,6 +1819,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -2188,6 +2191,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -2507,6 +2511,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -2794,6 +2799,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -3111,6 +3117,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -3465,6 +3472,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -3736,6 +3744,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -3978,6 +3987,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -4190,6 +4200,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -4417,6 +4428,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -4837,6 +4849,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -5153,6 +5166,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -5450,6 +5464,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -5764,6 +5779,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -6022,6 +6038,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -6328,6 +6345,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -6743,6 +6761,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -7191,6 +7210,7 @@ To search by products, send the request:
     ]
 }
 ```
+
 </details>
 
 <a name="sorting"></a>
@@ -7279,9 +7299,9 @@ To search by products, send the request:
 
 For details of the included resources, see:
 
-- [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html)
-- [Glue API: Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html)
-- [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html)
+* [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html)
+* [Glue API: Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html)
+* [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html)
 
 ## Possible errors
 

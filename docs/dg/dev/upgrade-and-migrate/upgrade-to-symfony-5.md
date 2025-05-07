@@ -54,6 +54,7 @@ Once Rector is installed, run it on your codebase using the following command:
 ```bash
 vendor/bin/rector process path/to/files -c path/to/configuration
 ```
+
 We have refactored our code with two configurations. The first one uses some default sets provided by Rector:
 
 ```php

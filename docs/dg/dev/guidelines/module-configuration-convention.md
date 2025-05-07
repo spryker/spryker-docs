@@ -119,6 +119,7 @@ interface AnotherNameConstants
 ```
 
 **config/Shared/config_*.php**
+
 ```php
  $config[ModuleNameConstants::EXAMPLE_KEY] =
  $config[AnotherNameConstants::EXAMPLE_KEY] = 'some-shared-value';

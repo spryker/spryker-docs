@@ -82,7 +82,8 @@ To resolve a SEF URL into a Glue API URL, send the request:
         "self": "https://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134"
     }
 }
-```    
+```
+
 </details>
 
 <details>
@@ -108,6 +109,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -133,6 +135,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -158,6 +161,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

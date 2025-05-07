@@ -484,6 +484,7 @@ class ProductSetDetailPageDependencyProvider extends AbstractBundleDependencyPro
 	}
 }
 ```
+
 {% endinfo_block %}
 
 ### Activate a widget in another widget

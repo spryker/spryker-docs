@@ -128,6 +128,7 @@ use Generated\Shared\Transfer\SearchConfigurationTransfer;
 
 // ...
 ```
+
 </details>
 
 You can create and add as many `FacetConfigTransfers` as you need. Let's analyze this transfer's options:
@@ -266,6 +267,7 @@ use Generated\Shared\Transfer\SortConfigTransfer;
 
 // ...
 ```
+
 </details>
 
 Similar to facet filters, you can create and add as many `SortConfigTransfers` as you need. The transfer's options are the following:
@@ -330,6 +332,7 @@ use Generated\Shared\Transfer\PaginationConfigTransfer;
 
 // ...
 ```
+
 </details>
 
 Here, create only one instance from `PaginationConfigTransfer` and pass it to the `$searchConfigurationTransfer->setPaginationConfig()`. The transfer's options are the following:

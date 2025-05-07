@@ -174,6 +174,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 ```
 
 5. If you need original values or an additional data set in `EventEntityTransfer`, provide the configuration in the Entity class. `getOriginalValueColumnNames` is called only on a save event.
+
 ```php
 <?php
 

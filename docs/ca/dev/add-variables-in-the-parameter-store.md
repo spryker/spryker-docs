@@ -41,8 +41,6 @@ The following customer-owned variables can be updated only with the help of Spry
 
 * /{project}/{environment}/secret/pipeline/limited/{variable_name}
 
-* /{project}/{environment}/secret/infra/limited/{variable_name}
-
 * /{project}/{environment}/secret/common/limited/{variable_name}
 
 * /{project}/{environment}/secret/app/limited/{variable_name}
@@ -50,8 +48,6 @@ The following customer-owned variables can be updated only with the help of Spry
 * /{project}/{environment}/config/scheduler/limited/{variable_name}
 
 * /{project}/{environment}/config/pipeline/limited/{variable_name}
-
-* /{project}/{environment}/config/infra/limited/{variable_name}
 
 * /{project}/{environment}/config/common/limited/{variable_name}
 

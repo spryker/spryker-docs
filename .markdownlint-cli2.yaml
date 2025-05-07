@@ -1,5 +1,8 @@
 defaultConfig: .markdownlint.json
 
+customRules:
+  - ./mdlint/bare-links.js
+
 ignores:
   - "**/202311.0/**"
   - "**/202404.0/**"

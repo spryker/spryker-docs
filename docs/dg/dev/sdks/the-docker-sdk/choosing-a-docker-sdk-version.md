@@ -69,7 +69,7 @@ Depending on your project requirements, choose one of the versioning approaches:
 
 {% info_block infoBox "Forking the Docker SDK" %}
 
-[Spryker Cloud Commerce OS](https://cloud.spryker.com/) does not support forks of the Docker SDK. Your project's code must be compatible with the Docker SDK's main branch for a successful deployment.
+Spryker Cloud Commerce OS does not support forks of the Docker SDK. Your project's code must be compatible with the Docker SDK's main branch for a successful deployment.
 
 {% endinfo_block %}
 

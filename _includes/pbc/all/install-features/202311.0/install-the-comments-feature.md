@@ -29,7 +29,7 @@ Make sure the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Set up configuration
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |

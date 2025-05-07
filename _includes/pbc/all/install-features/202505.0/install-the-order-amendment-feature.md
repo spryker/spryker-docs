@@ -41,14 +41,16 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION                                                               | SPECIFICATION                                                                                                 | NAMESPACE                   |
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|-----------------------------|
-| A regular expression, see in `config/Shared/config_default.php`.      | Closes access for non-logged-in users.                                                             |                         |
-| MultiCartConfig::getQuoteFieldsAllowedForCustomerQuoteCollectionInSession() | Configures the quote fields that are allowed for saving in quote collection in a customer's session. | Pyz\Client\MultiCart        |
-| QuoteConfig::getQuoteFieldsAllowedForSaving()                               | Allows saving order amendment related fields of the quote to the database.                             | Pyz\Zed\Quote               |
-| SalesOrderAmendmentConfig::getQuoteFieldsAllowedForSaving()                 | Allows saving quote related fields of the quote to the database.                                       | Pyz\Zed\SalesOrderAmendment |
+| A regular expression, see `config/Shared/config_default.php`.      | Closes access for non-logged-in users.                                                             |                         |
+| MultiCartConfig::getQuoteFieldsAllowedForCustomerQuoteCollectionInSession() | Defines which quote fields can be saved in the quote collection of a customer's session. | Pyz\Client\MultiCart        |
+| QuoteConfig::getQuoteFieldsAllowedForSaving()                               | Enables saving order amendment-related quote fields to the database.
+                             | Pyz\Zed\Quote               |
+| SalesOrderAmendmentConfig::getQuoteFieldsAllowedForSaving()                 | Enables saving quote-related fields to the database.
+                                       | Pyz\Zed\SalesOrderAmendment |
 
 **config/Shared/config_default.php**
 
@@ -60,7 +62,7 @@ $config[CustomerConstants::CUSTOMER_SECURED_PATTERN] = '(^(/en|/de)?/order-amend
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `mysprykershop.com/order-amendment` with a guest user redirects to login page.
+Make sure that accessing `https://mysprykershop.com/order-amendment` as a guest user redirects to login page.
 
 {% endinfo_block %}
 
@@ -1720,7 +1722,7 @@ Make sure the following modules have been installed:
 
 ### 2) Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION                                                            | SPECIFICATION                                                                                                                                                                          | NAMESPACE                          |
 |--------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
@@ -1828,7 +1830,7 @@ To enable widgets, register the following plugins:
 | PLUGIN                     | SPECIFICATION                                | PREREQUISITES | NAMESPACE                                         |
 |----------------------------|----------------------------------------------|---------------|---------------------------------------------------|
 | OrderAmendmentWidget       | Enables customers to edit existing orders.   |               | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
-| CancelOrderAmendmentWidget | Enables customers to cancel order amendment. |               | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
+| CancelOrderAmendmentWidget | Enables customers to cancel order amendment requests. |               | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1862,13 +1864,51 @@ Make sure the following widgets have been registered:
 | MODULE                     | TEST                                                                            |
 |----------------------------|---------------------------------------------------------------------------------|
 | OrderAmendmentWidget       | Make sure the edit order button is displayed on orders and order details pages. |
-| CancelOrderAmendmentWidget | Make sure the cancel order amendment button is displayed on cart page.          |
+| CancelOrderAmendmentWidget | Make sure the cancel order amendment button is displayed on the cart page.          |
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
 - Make sure that after clicking the edit order button the specified reorder strategy for order amendment is applied (the current cart items are replaced by the amended order items in case the `replace` strategy is applied, new cart is created in case the `new` strategy is applied).
-- Make sure that the order amendment confirmation popup window is displayed if the `IS_ORDER_AMENDMENT_CONFIRMATION_ENABLED` configuration is set to `true`.
+
+* Ensure that clicking the "Edit Order" button applies the specified reorder strategy for order amendment:  
+  * `replace` strategy: current cart items are replaced with amended order items
+  * `new` strategy: a new cart is created
+* If the `IS_ORDER_AMENDMENT_CONFIRMATION_ENABLED` configuration is set to `true`, make sure that the order amendment confirmation popup window is displayed.
 
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

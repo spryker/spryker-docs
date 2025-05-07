@@ -96,7 +96,7 @@ Ensure the following transfers have been created:
 
 ## 3) Set up the configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION                                           | SPECIFICATION                                                                                                                | NAMESPACE                 |
 |---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------|

@@ -1274,7 +1274,7 @@ Make sure the following widgets were registered:
 
 ### 4) Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |

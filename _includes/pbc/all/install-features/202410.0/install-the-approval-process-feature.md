@@ -36,7 +36,7 @@ Make sure that the following module has been installed:
 
 ### 2) Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 **src/Pyz/Shared/QuoteApproval/QuoteApprovalConfig.php**
 
@@ -69,7 +69,7 @@ Make sure that the configuration returns the billing address and payment keys.
 
 {% endinfo_block %}
 
-If you are using [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/multiple-carts-feature-overview.html), add the following configuration to your project:
+If you are using [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/multiple-carts-feature-overview.html), Add the following configuration:
 
 **src/Pyz/Client/MultiCart/MultiCartConfig.php**
 

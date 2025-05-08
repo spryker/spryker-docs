@@ -1,6 +1,6 @@
 extends: existence
 message: "Put `Optional:` in front of the heading or step."
-level: warning
+level: error
 ignorecase: true
 nonword: true
 scope: raw

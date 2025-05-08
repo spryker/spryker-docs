@@ -1,0 +1,17 @@
+extends: existence
+message: "Avoid using pronouns in headings—use concise, action-based phrasing instead."
+level: error
+scope: heading
+ignorecase: true
+tokens:
+  - '\bI\b'
+  - '\bme\b'
+  - '\bmy\b'
+  - '\bwe\b'
+  - '\bus\b'
+  - '\bour\b'
+  - '\byou\b'
+  - '\byour\b'
+  - '\bthey\b'
+  - '\btheir\b'
+  - '\bthem\b'

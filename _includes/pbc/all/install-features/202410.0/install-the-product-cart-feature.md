@@ -36,7 +36,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up transfer objects
 
-Run the following command to generate transfer objects:
+Generate transfer objects:
 
 ```bash
 console transfer:generate

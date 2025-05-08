@@ -234,15 +234,15 @@ You can switch the language in the **Back Office > User Control > User section >
 
 1. Set up event listeners. By doing this step, you enable tables to be published upon a change—create, edit, or delete.
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| CmsStorageEventSubscriber | Registers listeners that are responsible for publishing CMS pages to storage when a related entity changes. | None | Spryker\Zed\CmsStorage\Communication\Plugin\Event\Subscriber |
-| CmsBlockStorageEventSubscriber | Registers listeners that are responsible for publishing CMS blocks to storage when a related entity changes. | None | Spryker\Zed\CmsBlockStorage\Communication\Plugin\Event\Subscriber |
-| CmsPageSearchEventSubscriber | Registers listeners that are responsible for publishing CMS pages to Elasticsearch when a related entity changes. | None | Spryker\Zed\CmsPageSearch\Communication\Plugin\Event\Subscriber |
-| CmsSlotStorageEventSubscriber | Registers listeners that are responsible for publishing slots to storage when a related entity changes. | None | Spryker\Zed\CmsSlotStorage\Communication\Plugin\Event\Subscriber |
-| CmsSlotBlockStorageEventSubscriber | Registers listeners that are responsible for publishing slots to CMS block relations to storage when a related entity changes. | None | Spryker\Zed\CmsSlotBlockStorage\Communication\Plugin\Event\Subscriber | ContentStorageEventSubscriber | Registers listeners that are responsible for publishing content items to storage when a related entity changes. | None | Spryker\Zed\ContentStorage\Communication\Plugin\Event\Subscriber
-| CmsBlockCategoryStorageEventSubscriber | Registers listeners that are responsible for publishing category to CMS block relations to storage when a related entity changes (optional) | None | Spryker\Zed\CmsBlockCategoryStorage\Communication\Plugin\Event\Subscriber |
-| CmsBlockProductStorageEventSubscriber | Registers listeners that are responsible for publishing product to CMS block relations to storage when a related entity changes (optional) | None | Spryker\Zed\CmsBlockProductStorage\Communication\Plugin\Event\Subscriber |
+| PLUGIN | SPECIFICATION | REQUIRED | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- | --- |
+| CmsStorageEventSubscriber | Registers listeners that are responsible for publishing CMS pages to storage when a related entity changes. | v |  | Spryker\Zed\CmsStorage\Communication\Plugin\Event\Subscriber |
+| CmsBlockStorageEventSubscriber | Registers listeners that are responsible for publishing CMS blocks to storage when a related entity changes. | v |  | Spryker\Zed\CmsBlockStorage\Communication\Plugin\Event\Subscriber |
+| CmsPageSearchEventSubscriber | Registers listeners that are responsible for publishing CMS pages to Elasticsearch when a related entity changes. | v  |   | Spryker\Zed\CmsPageSearch\Communication\Plugin\Event\Subscriber |
+| CmsSlotStorageEventSubscriber | Registers listeners that are responsible for publishing slots to storage when a related entity changes. | v  |  | Spryker\Zed\CmsSlotStorage\Communication\Plugin\Event\Subscriber |
+| CmsSlotBlockStorageEventSubscriber | Registers listeners that are responsible for publishing slots to CMS block relations to storage when a related entity changes. | v |  | Spryker\Zed\CmsSlotBlockStorage\Communication\Plugin\Event\Subscriber | ContentStorageEventSubscriber | Registers listeners that are responsible for publishing content items to storage when a related entity changes. | v  |   | Spryker\Zed\ContentStorage\Communication\Plugin\Event\Subscriber
+| CmsBlockCategoryStorageEventSubscriber | Registers listeners that are responsible for publishing category to CMS block relations to storage when a related entity changes |     |   | Spryker\Zed\CmsBlockCategoryStorage\Communication\Plugin\Event\Subscriber |
+| CmsBlockProductStorageEventSubscriber | Registers listeners that are responsible for publishing product to CMS block relations to storage when a related entity changes |   v  |   | Spryker\Zed\CmsBlockProductStorage\Communication\Plugin\Event\Subscriber |
 
 <details>
 <summary>Pyz\Zed\Event\EventDependencyProvider</summary>

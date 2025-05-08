@@ -33,7 +33,7 @@ module.exports = {
               onError({
                 lineNumber: token.lineNumber,
                 detail:
-                  "Avoid bare links. If the link should be clickable, use the link syntax; otherwise, use inline code.",
+                  "Avoid bare links. If the link should be clickable, use the link syntax; otherwise, inline code.",
                 context: match[0]
               });
             }

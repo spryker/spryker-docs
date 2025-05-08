@@ -1,5 +1,5 @@
 extends: existence
-message: "Replace with a specific action or outcome."
+message: "Don't mention 'running a command'. Specify a specific action or outcome."
 level: error
 ignorecase: true
 scope: sentence

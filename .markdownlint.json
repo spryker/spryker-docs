@@ -1,4 +1,7 @@
 {
+  "MD004": {
+    "style": "dash"
+  },    
   "MD041": false,
   "MD012": false,
   "MD010": false,
@@ -7,6 +10,7 @@
   "MD032": false,
   "MD033": false,
   "MD034": false,  
+  "MD047": false,
   "MD049": {
     "style": "asterisk"
   },

@@ -1,5 +1,5 @@
 extends: existence
-message: "Put `Optional:` in front of the heading or step."
+message: "In headigns and steps, put `Optional:` in front. In tables, add a `Required` column. "
 level: error
 ignorecase: true
 nonword: true

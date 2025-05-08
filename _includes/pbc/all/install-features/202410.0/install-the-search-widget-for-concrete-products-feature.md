@@ -6,11 +6,11 @@
 
 To start the feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-| --- | --- |
-| Cart | {{page.version}} |
-| Product | {{page.version}} |
-| Non-splittable Products (optional) | {{page.version}} |
+| NAME |       REQUIRED |   VERSION |
+| --- | --- | --- |
+| Cart |       v        |      {{page.version}} |
+| Product | v       |{{page.version}} |
+| Non-splittable Products |              | {{page.version}} |
 
 ### 1) Check the installed modules
 

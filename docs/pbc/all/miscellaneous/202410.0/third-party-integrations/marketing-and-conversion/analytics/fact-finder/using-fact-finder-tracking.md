@@ -48,7 +48,7 @@ By default, you can use the `/fact-finder/track` route. According to the FACT-Fi
 
 * **General Parameters**:
   - `id` - ID of the item for which information is to be sent.
-  - `masterId` (optional) - If your shop contains item versions and you need to transmit the item version number with the id parameter, you will need to transmit the master item number using this parameter to ensure that the products and the possible events can be assigned to each other.
+  - Optional: `masterId` - If your shop contains item versions and you need to transmit the item version number with the id parameter, you will need to transmit the master item number using this parameter to ensure that the products and the possible events can be assigned to each other.
   - `channel` - The name of the FACT-Finder channel in which the search was conducted.
   - `sid` - Use it to pass the user's session identifier.
   - `event` - This parameter specifies the event type. Use the following values for the various types:
@@ -58,9 +58,9 @@ By default, you can use the `/fact-finder/track` route. According to the FACT-Fi
     + login
     + recommendationClick
     + feedback
-  - `title` (optional) - The item name.
-  - `userId` (optional) - Use it to pass a user identifier. As with the session ID, it can be anonymized.
-  - `cookieId` (optional) - You use this parameter to pass a token that identifies the user over a longer period of time, even when not being logged in to the shop.
+  - Optional: `title` - The item name.
+  - Optional: `userId` - Use it to pass a user identifier. As with the session ID, it can be anonymized.
+  - Optional: `cookieId` - You use this parameter to pass a token that identifies the user over a longer period of time, even when not being logged in to the shop.
 * <b>Click on the detail page</b>:
   - `sid` - Use it to pass the user's session identifier.
   - `query` - The search term for which the user has searched.
@@ -69,11 +69,11 @@ By default, you can use the `/fact-finder/track` route. According to the FACT-Fi
   - `page` - The number of the search result page on which the selected product was displayed.
   - `pageSize` (optional) - The number of products per search result page at the time the click was executed.
   - `origPageSize` - The default number of products per search result page.
-  - `simi` (optional) - The FACT-Finder similarity value for the respective product.
+  - Optional: `simi`  - The FACT-Finder similarity value for the respective product.
   - `campaign` - This field has the campaign ID as its value.
 * <b>Shopping basket and purchase information</b>:
   - `count` - Quantity of product purchased.
-  - `price` (optional) - Product price.
+  - Optional: `price`  - Product price.
   - `campaign` - The search result via a campaign. This field has the campaign ID as its value.
 * <b>User login</b>:
   - `sid` - Use this to pass the user's session identifier.
@@ -83,7 +83,7 @@ By default, you can use the `/fact-finder/track` route. According to the FACT-Fi
 * <b>Search result feedback</b>:
   - `query` - The search term for which a search was conducted and on which feedback has been provided.
   - `positive` - Send the value true at this point if the customer provided positive feedback. Send false if negative feedback was provided on the result.
-  - `message` (optional) - If the customer left a message as justification of their opinion, you can send it using this parameter.
+  - Optional: `message`  - If the customer left a message as justification of their opinion, you can send it using this parameter.
 * <b>Shop cachehit</b>:
   - `page` - The number of the search result page on which the selected product was displayed.
   - `pageSize` - The number of products per search result page at the time the click was executed.
@@ -92,10 +92,10 @@ By default, you can use the `/fact-finder/track` route. According to the FACT-Fi
   - `searchTime` - The time which was needed to create the search result.
   - `bestSimi` - Similarity of the best product.
   - `minSimi` - Similarity of the last product.
-  - `filterfieldName` (optional) - Information about active filters in the search result.
-  - `searchField` (optional) - The field for which the search was performed in case the search was limited to a specific field.
-  - `customSorting` (optional) - If the default sorting was not used for the search result, then  send a true.
-  - `additionalInfo`` (optional) - You may use this parameter to add something to the log entry, such as to enable searching the log for a specific entry.
+  - Optional: `filterfieldName`  - Information about active filters in the search result.
+  - Optional: `searchField`  - The field for which the search was performed in case the search was limited to a specific field.
+  - Optional: `customSorting`  - If the default sorting was not used for the search result, then  send a true.
+  - Optional: `additionalInfo` - You may use this parameter to add something to the log entry, such as to enable searching the log for a specific entry.
 * <b>Suggest Tracking</b>:
   - `queryFromSuggest` - This parameter indicates that the FACT-Finder query was triggered through a selection from the suggestion list. In this case send the parameter with the value true.
   - `userInput` - Use this parameter to send the order of letters the shop user entered until the search query was triggered.

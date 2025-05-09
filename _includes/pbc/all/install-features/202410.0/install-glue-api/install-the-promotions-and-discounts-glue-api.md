@@ -94,7 +94,7 @@ Make sure that `SpyDiscountPromotion` is extended with UUID behavior using the f
 
 ### Generate UUIDs for existing discount promotion records that do not have them
 
-Run the following command:
+Generate UUIDs:
 ```bash
 console uuid:generate DiscountPromotion spy_discount_promotion
 ```

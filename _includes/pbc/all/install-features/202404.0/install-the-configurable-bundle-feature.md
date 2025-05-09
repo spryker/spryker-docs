@@ -751,7 +751,7 @@ Don't forget to replace sample node keys with ones relevant for your project.
 
 {% endinfo_block %}
 
-Run the following command to import data:
+Import data:
 
 ```bash
 console data:import navigation-node

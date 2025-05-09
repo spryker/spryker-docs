@@ -19,6 +19,10 @@ related:
 
 This document describes the data security guidelines you need to follow on the application level. In cloud environments, infrastructure security measures are implemented by default, so they're not described.
 
+## PHP Images
+
+For PaaS customers, only these [PHP images](https://github.com/spryker/docker-php?tab=readme-ov-file#tags) are allowed. Custom images can not be used when deploying to Spryker Cloud.
+
 ## Passwords
 
 The most important about password security is to not save passwords in plain text. Therefore, Spryker uses BCrypt based on Blowfish to hash passwords and add a random salt to each hash, preventing rainbow table attacks. To prevent dictionary and brute force attacks, you can force users to use special characters by adding validation rules to needed forms. For even higher security, use two-factor authentication and CAPTCHA.

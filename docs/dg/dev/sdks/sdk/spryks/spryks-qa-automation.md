@@ -34,7 +34,7 @@ qa_tasks:
 
 ## Use QA automation
 
-To execute all of the QA automation tasks, run the following command:
+Execute all of the QA automation tasks:
 
 ```bash
 spryker-sdk sdk:qa:run

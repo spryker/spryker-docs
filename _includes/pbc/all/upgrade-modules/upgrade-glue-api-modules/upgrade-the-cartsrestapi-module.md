@@ -128,7 +128,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 }
 ```
 
-Run the following command:
+Generate transfer objects:
 
 ```bash
 vendor/bin/console transfer:generate

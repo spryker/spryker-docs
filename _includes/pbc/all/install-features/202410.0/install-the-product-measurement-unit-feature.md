@@ -1017,7 +1017,7 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 | --- | --- |
 |Controls base unit => sales unit calculations. Applies product quantity restrictions on sales unit level. Offers recommendation when invalid quantity is selected. Maintains stock-based quantity and sales unit information for posting  |vendor/spryker-shop/product-measurement-unit-widget/src/SprykerShop/Yves/ProductMeasurementUnitWidget/Theme/default/components/molecules/measurement-quantity-selector/measurement-quantity-selector.ts  |
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

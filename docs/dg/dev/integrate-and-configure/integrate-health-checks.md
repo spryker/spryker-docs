@@ -239,7 +239,7 @@ class HealthCheckDependencyProvider extends SprykerHealthCheckDependencyProvider
 
 ### 4) Set up transfer objects
 
-Run the following command to apply transfer changes:
+Apply transfer changes:
 
 ```bash
 vendor/bin/console transfer:generate

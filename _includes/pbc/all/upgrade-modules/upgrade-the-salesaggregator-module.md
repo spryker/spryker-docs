@@ -10,7 +10,7 @@ There are two steps to the two migration process.
 
 To learn how to migrate to the new structure, see [Upgrade the Calculation module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html).
 
-### Enable the `SalesAggregator` in your project
+### Enable `SalesAggregator`
 
 The `SalesAggregator` module has been deprecated but all calculators are still provided. If you want to keep them you can do so with a few changes to the code.
 All `SalesAggregator` plugins were moved to the `SalesAggregator` module's, final core plugins list.

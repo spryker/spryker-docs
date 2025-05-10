@@ -60,7 +60,7 @@ plugins: [
 
 `ProvidePlugin` will inject JQuery as a global variable into the DOM, allowing any plugin/usage to rely on `$`,  `window.jQuery` or `window.$` variables.
 
-### Add JQuery declaration for Typescript (optional)
+### Optional: Add JQuery declaration for Typescript
 
 If you're using Typescript, you need to tell it how to resolve the "$" symbol, or the transpiling will fail. In order to do so, you can use 2 approaches:
 
@@ -83,7 +83,7 @@ import 'jquery';
 
 By doing this, we make Webpack know to place JQuery source code into the vendor chunk and require it from there whenever needed.
 
-### Add jquery-countdown to vendor.ts (optional)
+### Optional: Add jquery-countdown to vendor.ts
 
 If you want to serve _jquery-countdown_ as global and simply use it in every component you need, add the following line to `./src/Pyz/Yves/ShopUi/Theme/default/vendor.ts`:
 
@@ -162,7 +162,7 @@ $(async () => {
 
 ## Usage
 
-### Add jquery-countdown to the component (optional)
+### Optional: Add jquery-countdown to the component
 
 {% info_block infoBox %}
 

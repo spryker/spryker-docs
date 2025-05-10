@@ -27,7 +27,8 @@ Make sure that the following modules have been installed:
 </div></section>
 
 ### 2) Set up database schema and transfer objects
-Run the following command to apply database changes and generate entity and transfer changes:
+
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -55,7 +56,8 @@ Make sure the following changes have been applied in transfer objects:
 
 ### 3) Set up Behavior
 #### Generate UUIDs for existing records
-Run the following command:
+
+Generates UUIDs for all entries in the spy_tax_set table:
 
 ```bash
 console tax-sets:uuid:update

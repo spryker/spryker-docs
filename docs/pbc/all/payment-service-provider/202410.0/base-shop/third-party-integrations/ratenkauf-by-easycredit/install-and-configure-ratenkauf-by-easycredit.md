@@ -18,7 +18,7 @@ related:
 
 ## Installation
 
-To install Easycredit, run the following command in  console:
+Install Easycredit:
 
 ```bash
 composer require spryker-eco/easycredit

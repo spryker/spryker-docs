@@ -65,7 +65,7 @@
     ```
 
 
-5. Enable CMS Block Key support for categories and products (optional):
+5. Optional: Enable CMS Block Key support for categories and products:
 
     1. Install CMS block key support for `CmsBlockCategoryStorage` and `CmsBlockProductStorage` modules:
 

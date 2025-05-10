@@ -57,10 +57,11 @@ Make sure the following changes have been applied in transfer objects:
 
 ### 3) Set up Behavior
 #### Generate UUIDs for existing records
-Run the following command:
+
+Generates new UUIDs for existing entries in the `spy_tax_set` table:
 
 ```bash
-console uuid:generate Tex spy_tax_set
+console uuid:generate Tax spy_tax_set
 ```
 
 {% info_block warningBox "Verification" %}

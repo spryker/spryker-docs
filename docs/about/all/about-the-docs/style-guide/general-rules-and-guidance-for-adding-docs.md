@@ -212,7 +212,7 @@ To delete an unnecessary or outdated page from the website, make sure to set up 
 This section contains most coming issues that you may face while working with docs and expected ways how to resolve the problem.
 
 ### Filename too long in Git for Windows
-If you face the "Filename too long" error, or an error like this one *"spryker.github.io/vendor/bundle/ruby/2.7.0/gems/jekyll-4.2.0/lib/jekyll/convertible.rb:222:in `write': No such file or directory @ rb_sysopen - E:/Jekyll/spryker.github.io/_site/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html (Errno::ENOENT)"*, run the following command to circumvent it:
+If you face the "Filename too long" error, or an error like this one *"spryker.github.io/vendor/bundle/ruby/2.7.0/gems/jekyll-4.2.0/lib/jekyll/convertible.rb:222:in `write': No such file or directory @ rb_sysopen - E:/Jekyll/spryker.github.io/_site/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html (Errno::ENOENT)"*, enable support for long file paths in Git on Windows:
 
 ```bash
 git config --system core.longpaths true

@@ -153,7 +153,7 @@ When importing the component, the **eager** keyword is used, as the component i
 
 ## 5. Build frontend
 
-Now, let us build the frontend. Run the following command in the console: `npm run yves`.
+Now, let us build the frontend: `npm run yves`.
 
 As soon as the frontend has been compiled, replace the original side drawer with the new implementation. To do this:
 

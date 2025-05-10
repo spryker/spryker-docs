@@ -53,7 +53,7 @@ There are several new interfaces, for which search provider-specific modules may
 
 1. `Spryker\Client\SearchExtension\Dependency\Plugin\SearchAdapterPluginInterface` (mandatory).  This API is used by the *Search* module to interact with the search provider-specific module.
 
-2. `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextExpanderPluginInterface` (optional). This API is used to expand search context with various vendor specific information/configuration, which is needed to handle a particular search request.
+2. Optional: `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextExpanderPluginInterface`. This API is used to expand search context with various vendor specific information/configuration, which is needed to handle a particular search request.
 
 3. `Spryker\Zed\SearchExtension\Dependency\Plugin\InstallPluginInterface`. This API is used to create the infrastructure for a particular search provider–for example, create indexes and index maps for Elasticsearch.
 

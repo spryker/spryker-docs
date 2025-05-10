@@ -202,7 +202,7 @@ class ResourceSharePageDependencyProvider extends SprykerResourceSharePageDepend
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

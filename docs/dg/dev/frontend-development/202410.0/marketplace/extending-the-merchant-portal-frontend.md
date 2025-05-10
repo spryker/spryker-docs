@@ -20,15 +20,15 @@ This document can help you understand how you can extend the frontend project.
 
 Prior to starting the project extension, verify that the Merchant Portal modules are up-to-date:
 
-| NAME                                        | VERSION   |
-| ------------------------------------------- | --------- |
-| ZedUi                                       | >= 0.4.1  |
-| DashboardMerchantPortalGui (optional)       | >= 0.4.1  |
-| MerchantProfileMerchantPortalGui (optional) | >= 0.7.1  |
-| ProductMerchantPortalGui (optional)         | >= 0.6.1  |
-| ProductOfferMerchantPortalGui (optional)    | >= 0.10.2 |
-| SalesMerchantPortalGui (optional)           | >= 0.8.1  |
-| SecurityMerchantPortalGui (optional)        | >= 0.4.2  |
+| NAME                   | REQUIRED                     | VERSION   |
+| -------------------------------| ------------ | --------- |
+| ZedUi                      |                 | >= 0.4.1  |
+| DashboardMerchantPortalGui |       | >= 0.4.1  |
+| MerchantProfileMerchantPortalGui | | >= 0.7.1  |
+| ProductMerchantPortalGui |         | >= 0.6.1  |
+| ProductOfferMerchantPortalGui |    | >= 0.10.2 |
+| SalesMerchantPortalGui |           | >= 0.8.1  |
+| SecurityMerchantPortalGui |        | >= 0.4.2  |
 
 ## Extending/customizing configuration modules
 

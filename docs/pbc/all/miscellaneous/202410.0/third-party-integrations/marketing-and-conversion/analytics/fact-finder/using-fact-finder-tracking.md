@@ -67,7 +67,7 @@ By default, you can use the `/fact-finder/track` route. According to the FACT-Fi
   - `pos` - The position of the product in the search results.
   - `origPos` - It transmits the original position of the item in the search result.
   - `page` - The number of the search result page on which the selected product was displayed.
-  - `pageSize` (optional) - The number of products per search result page at the time the click was executed.
+  - Optional: `pageSize` - The number of products per search result page at the time the click was executed.
   - `origPageSize` - The default number of products per search result page.
   - Optional: `simi`  - The FACT-Finder similarity value for the respective product.
   - `campaign` - This field has the campaign ID as its value.

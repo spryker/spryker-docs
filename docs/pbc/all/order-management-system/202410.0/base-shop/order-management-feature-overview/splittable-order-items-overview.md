@@ -38,9 +38,12 @@ Product concrete with `is_quantity_splittable = false` is counted as one sales i
 
 You can import splittable information for product concretes in the `product_concrete.csv` file by setting the value of the `is_splittable` field to either 1 or 0.
 
-To import concrete products, run the following command:
+Import concrete products:
 
-`console data:import product-concrete`
+```bash
+console data:import product-concrete
+```
+
 
 For non-splittable order items, a Back Office user sees just one product per non-splittable item in the Back Office. For example, if a customer makes an order containing a non-splittable product in the quantity of 2, just 1 sales item with quantity = 2 (1 line) is created in the database. A Back Office user also sees just one sales order item (1 line) in the **Number of Items** column of the **Order Overview** page, and the actual quantity of items in the order is shown in the **Quantity** field of the **Order Details** page.
 

@@ -28,10 +28,10 @@ Review the [reference information](#reference-information-edit-search-preference
 
 1. Next to the attribute you want to edit the search preferences for, click **Edit**.
 2. On the **Edit search preferences** page, select **Yes** or **No** for the following:
-    * **FULL TEXT**
-    * **FULL TEXT BOOSTED**
-    * **SUGGESTION TERMS**
-    * **COMPLETION TERMS**
+    - **FULL TEXT**
+    - **FULL TEXT BOOSTED**
+    - **SUGGESTION TERMS**
+    - **COMPLETION TERMS**
 3. Click **Save**.
 This opens the **Search Preferences** page with a success message displayed.
 4. Optional: To apply the changes, click **Synchronize search preferences**.

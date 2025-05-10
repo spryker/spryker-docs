@@ -11,22 +11,22 @@ To enable the default implementation of Click & Collect, follow the steps.
 
 Install the following features:
 
-* [Service Points Cart + Checkout](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-cart-checkout-feature.html)
-* [Service Points Cart](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-cart-feature.html)
-* [Service Points + Customer Account Management](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-customer-account-management-feature.html)
-* [Service Points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)
-* [Service Points + Order Management](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-order-management-feature.html)
-* [Service Points + Product Offer](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-product-offer-feature.html)
-* [Service Points Cart + Shipment](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-shipment-feature.html)
-* [Marketplace Merchant Portal Product Offer Service Points](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-marketplace-merchant-portal-product-offer-service-points-feature.html)
-* [Marketplace Merchant + Product Offer Service Points Availability](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-marketplace-merchant-product-offer-service-points-availability-feature.html)
-* [Marketplace Product Offer + Service Points](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-marketplace-product-offer-service-points-feature.html)
-* [Product Offer Service Points Availability](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html)
-* [Product Offer Service Points](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-product-offer-service-points-feature.html)
-* [Shipment Cart](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/install-features/install-the-shipment-cart-feature.html)
-* [Shipment Product Offer Service Points Availability](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/install-features/install-the-shipment-product-offer-service-points-availability-feature.html)
-* [Shipment Service Points](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/install-features/install-the-shipment-service-points-feature.html)
-* [Install the Product Offer Shipment Availability feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-availability-feature.html)
+- [Service Points Cart + Checkout](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-cart-checkout-feature.html)
+- [Service Points Cart](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-cart-feature.html)
+- [Service Points + Customer Account Management](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-customer-account-management-feature.html)
+- [Service Points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)
+- [Service Points + Order Management](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-order-management-feature.html)
+- [Service Points + Product Offer](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-product-offer-feature.html)
+- [Service Points Cart + Shipment](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-shipment-feature.html)
+- [Marketplace Merchant Portal Product Offer Service Points](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-marketplace-merchant-portal-product-offer-service-points-feature.html)
+- [Marketplace Merchant + Product Offer Service Points Availability](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-marketplace-merchant-product-offer-service-points-availability-feature.html)
+- [Marketplace Product Offer + Service Points](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-marketplace-product-offer-service-points-feature.html)
+- [Product Offer Service Points Availability](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html)
+- [Product Offer Service Points](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-product-offer-service-points-feature.html)
+- [Shipment Cart](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/install-features/install-the-shipment-cart-feature.html)
+- [Shipment Product Offer Service Points Availability](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/install-features/install-the-shipment-product-offer-service-points-availability-feature.html)
+- [Shipment Service Points](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/install-features/install-the-shipment-service-points-feature.html)
+- [Install the Product Offer Shipment Availability feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-availability-feature.html)
 
 
 ## 1. Add service points and their addresses

@@ -23,12 +23,12 @@ You can also create and manage returns via Glue API. For details, see [Managing 
 
 The return items can have the following states in the Marketplace Order Management System (Marketplace OMS):
 
-* *Waiting for return*: a buyer created a return, but a merchant user has not confirmed it in the Merchant Portal yet.
-* *Returned*: the return has been received and confirmed by the merchant user.
-* *Refunded*: A merchant user has made a refund for the returned items.
-* *Return Canceled*: the return has been canceled by a merchant user because of the return policy or for any other reason.
-* *Shipped to customer*: the canceled return has been shipped back to the buyer.
-* *Delivered*: the buyer has received the shipped return.
+- *Waiting for return*: a buyer created a return, but a merchant user has not confirmed it in the Merchant Portal yet.
+- *Returned*: the return has been received and confirmed by the merchant user.
+- *Refunded*: A merchant user has made a refund for the returned items.
+- *Return Canceled*: the return has been canceled by a merchant user because of the return policy or for any other reason.
+- *Shipped to customer*: the canceled return has been shipped back to the buyer.
+- *Delivered*: the buyer has received the shipped return.
 
 The relation of the sales order items statuses and the return states is as follows:
 
@@ -38,9 +38,9 @@ The relation of the sales order items statuses and the return states is as follo
 
 Buyers and Back Office users (Marketplace administrator and [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html)) can have a paper version of the return by printing the automatically generated *return slip*. The return slip contains:
 
-* The return and marketplace sales order references.
-* Details about the returnable marketplace sales order items.
-* A barcode generated based on the return reference.
+- The return and marketplace sales order references.
+- Details about the returnable marketplace sales order items.
+- A barcode generated based on the return reference.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Return+Management/marketplace-return-slip.png)
 

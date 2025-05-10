@@ -10,14 +10,14 @@ related:
 
 The Return Management API lets developers retrieve return information and create returns. The list of retrievable information includes:
 
-* Sales order items that a customer can return.
-* Returns per customer.
-* Predefined reasons stored in the database.
+- Sales order items that a customer can return.
+- Returns per customer.
+- Predefined reasons stored in the database.
 
 In your development, the API can help you:
-* View order details, including returnable or non-returnable items.
-* Create returns for the returnable items.
-* View return details of a specific customer.
+- View order details, including returnable or non-returnable items.
+- Create returns for the returnable items.
+- View return details of a specific customer.
 
 Specify reasons for returning the sales order items.
 
@@ -557,8 +557,8 @@ To retrieve returns, send the Request sample:
 | return-items | orderItemUuid | String | Unique identifier of the order item. |
 
 For the attributes of the other other included resources, see the following:
-* [Retrieving marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)
-* [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html)
+- [Retrieving marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)
+- [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html)
 
 ## Retrieve a return
 

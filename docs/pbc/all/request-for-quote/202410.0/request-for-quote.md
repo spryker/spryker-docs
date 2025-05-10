@@ -34,19 +34,19 @@ To view how to create and manage RFQs, see [Quotation process & RFQ on the Store
 
 The RFQ can have the following statuses:
 
-* `Draft`: The RFQ is successfully created but not sent to a sales representative or customer (see RFQ Workflows to understand the RFQ process).
-* `Waiting`: The status appears after the RFQ has been sent to a sales representative. At this moment, the buyer can't edit the RFQ after it has been sent, but they can cancel it.
-* `In Progress`: This status appears when the sales representative edits the RFQ.
-* `Ready`: A buyer receives the RFQ with this status when the sales representative has finished editing and sent the RFQ back to the buyer.
-* `Canceled`: Indicates a canceled RFQ.
-* `Closed`: Appears when the customer has placed the order from the RFQ.
+- `Draft`: The RFQ is successfully created but not sent to a sales representative or customer (see RFQ Workflows to understand the RFQ process).
+- `Waiting`: The status appears after the RFQ has been sent to a sales representative. At this moment, the buyer can't edit the RFQ after it has been sent, but they can cancel it.
+- `In Progress`: This status appears when the sales representative edits the RFQ.
+- `Ready`: A buyer receives the RFQ with this status when the sales representative has finished editing and sent the RFQ back to the buyer.
+- `Canceled`: Indicates a canceled RFQ.
+- `Closed`: Appears when the customer has placed the order from the RFQ.
 
 ## RFQ workflows
 
 The process of requesting the quote includes two workflows depending on the role the user has. A workflow is defined as the sequence of steps the user can go through to complete the process successfully. These are:
 
-* [Buyer workflow](#buyer-workflow)
-* [Sales representative workflow](#sales-representative-workflow)
+- [Buyer workflow](#buyer-workflow)
+- [Sales representative workflow](#sales-representative-workflow)
 
 ### Buyer workflow
 
@@ -57,11 +57,11 @@ To view how to create and manage RFQs, see [Quotation process & RFQ on the Store
 After submitting the request, RFQ gets to the status `Draft`.
 
 For the Draft RFQ, a buyer can do the following:
-* Add one or multiple delivery addresses.
-* Select shipment methods to quote request items.
-* Check the version information.
-* Edit, add, and remove products.
-* Change product quantity and update meta information.
+- Add one or multiple delivery addresses.
+- Select shipment methods to quote request items.
+- Check the version information.
+- Edit, add, and remove products.
+- Change product quantity and update meta information.
 
 Once the buyers are done editing the Draft RFQ, they can send it to a sales representative. After that, they wait until the RFQ gets processed by a sales representative. The status of the RFQ changes to `Waiting`. Request for Quote cannot be edited at this point. It can only be canceled.
 
@@ -75,17 +75,17 @@ Schematically, the workflow is shown in the following diagram:
 ### Sales representative workflow
 
 A sales representative can create an RFQ using two working procedures:
-* By an [agent](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) account.
-* On behalf of a company user.
+- By an [agent](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) account.
+- On behalf of a company user.
 
 #### By an agent account
 
 Being logged in to an Agent account, a sales representative has access to the list of all the RFQs within the company. The RFQs are sorted by date and are displayed in all statuses. A sales representative can revise the requests that are in the `Waiting` status. For the revising RFQ, a sales representative can perform the following actions:
-* Change the meta information.
-* Add and remove the products.
-* Change product default price and quantity.
-* Edit shipment details, including a shipment cost.
-* Set the lifetime for a particular RFQ.
+- Change the meta information.
+- Add and remove the products.
+- Change product default price and quantity.
+- Edit shipment details, including a shipment cost.
+- Set the lifetime for a particular RFQ.
 
 *RFQ Life Time* restricts the buyer by date and time until which the RFQ is considered valid. If the buyer hasn't placed the order using the RFQ with Life Time, the RFQ automatically obtains the status `Closed`.
 
@@ -111,15 +111,15 @@ When a sales representative creates an RFQ, it has the **Show the latest version
 
 Versioning implies the management of multiple variants of the same RFQ, all of which have the same general details but include customized data—for example, prices for the same products in the different versions of the RFQ can vary. Every RFQ receives specific identifiers, such as `DE--1-Y-X`, where:
 
-* `DE--1`—customer reference.
-* `Y`—number of the request of the customer.
-* `X`—version of the RFQ.
+- `DE--1`—customer reference.
+- `Y`—number of the request of the customer.
+- `X`—version of the RFQ.
 ![RFQ versions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/rfq-versions.png)
 
 The RFQ version is updated when:
-* The RFQ is created for the first time—for example, the version is `DE-21-8-1`.
-* The RFQ is revised and negotiated by the buyer.
-* The RFQ is revised by a sales representative.
+- The RFQ is created for the first time—for example, the version is `DE-21-8-1`.
+- The RFQ is revised and negotiated by the buyer.
+- The RFQ is revised by a sales representative.
 
 ## Unblocking cart (resetting quote lock)
 
@@ -217,8 +217,8 @@ Agents can perform the same actions (on company users' behalf) as company users.
 
 ## Current constraints
 
-* According to the current setup, shipping cost is not included in the RFQ process and is added afterward during checkout.
-* Request for Quote does not work with the product bundles.
+- According to the current setup, shipping cost is not included in the RFQ process and is added afterward during checkout.
+- Request for Quote does not work with the product bundles.
 
 
 ## Related Developer documents

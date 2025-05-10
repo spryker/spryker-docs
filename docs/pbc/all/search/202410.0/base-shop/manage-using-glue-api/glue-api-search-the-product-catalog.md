@@ -21,8 +21,8 @@ The implementation of the search API offers you the same search experience as in
 
 In your development, this endpoint can help you to:
 
-* Implement catalog search functionality, including the category tree, facets, and pagination.
-* Retrieve a list of products to be displayed anywhere you want.
+- Implement catalog search functionality, including the category tree, facets, and pagination.
+- Retrieve a list of products to be displayed anywhere you want.
 
 ## Installation
 

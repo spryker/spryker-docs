@@ -89,9 +89,9 @@ To disable the default mapping installation, override the core configuration def
 {% endinfo_block %}
 
 Each configured store has its index, which is installed automatically. An index name consists of the following parts:
-* An optional prefix, which is defined by the `SearchElasticsearchConstants::INDEX_PREFIX` configuration option.
-* A store name.
-* A configuration file name.
+- An optional prefix, which is defined by the `SearchElasticsearchConstants::INDEX_PREFIX` configuration option.
+- A store name.
+- A configuration file name.
 
 Index name components are delimited with an underscore—for example, `spryker_de_page`.
 

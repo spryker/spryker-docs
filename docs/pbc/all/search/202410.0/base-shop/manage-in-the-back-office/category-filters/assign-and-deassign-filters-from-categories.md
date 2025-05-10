@@ -46,8 +46,8 @@ This topic describes how to assign and deassign filters from categories in the B
 2. In the **CATEGORY TREE** pane, select the category you want to deassign filters from.
     This displays the **CATEGORY FILTERS FOR {Category name}** pane.
 3. Deassign filters via one of the following ways:
-    * Deassign all filters by clicking **Remove all**.
-    * Next to the filters you want to deassign, click *Remove* <span class="inline-img">![category filter remove icon](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/category-filters/assign-and-deassign-filters-from-categories.md/category-filter-remove-icon.png)</span>.
+    - Deassign all filters by clicking **Remove all**.
+    - Next to the filters you want to deassign, click *Remove* <span class="inline-img">![category filter remove icon](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/category-filters/assign-and-deassign-filters-from-categories.md/category-filter-remove-icon.png)</span>.
     This moves the filters to the **INACTIVE FILTERS** section.
 
 <figure class="video_container">

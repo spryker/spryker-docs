@@ -339,10 +339,10 @@ To handle search update events, use the instructions from the following sections
 
 To handle search update events, you have to implement the following methods of the `SearchAdapterPluginInterface`:
 
-* `deleteDocument`—when a single document is supposed to be removed. You will receive an internal identifier as a key
-* `deleteDocuments`—when documents are supposed to be removed in bulk. You will receive a list of internal identifiers
-* `writeDocument`
-* `writeDocuments`
+- `deleteDocument`—when a single document is supposed to be removed. You will receive an internal identifier as a key
+- `deleteDocuments`—when documents are supposed to be removed in bulk. You will receive a list of internal identifiers
+- `writeDocument`
+- `writeDocuments`
 
 #### 2. Handle the events
 

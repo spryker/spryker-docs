@@ -17,9 +17,9 @@ The *Service Management* feature enables customers to book a service, either for
 
 ## Prerequisites for selling services in the catalog
 
-* Add service points and their addresses. A service point is a physical location where services are provided. For more information on service points, see [Service point](/docs/pbc/all/service-point-management/202410.0/unified-commerce/service-points-feature-overview.html#service-point).
-* Enable the Service Visit service type for service points as a unique service. For more information on services, see [Service](/docs/pbc/all/service-point-management/202410.0/unified-commerce/service-points-feature-overview.html#service).
-* Configure a shipment method with the On-Site Service shipment type. For more information on shipment types, see [Shipment type](/docs/pbc/all/carrier-management/202410.0/base-shop/shipment-feature-overview.html#shipment-type).
+- Add service points and their addresses. A service point is a physical location where services are provided. For more information on service points, see [Service point](/docs/pbc/all/service-point-management/202410.0/unified-commerce/service-points-feature-overview.html#service-point).
+- Enable the Service Visit service type for service points as a unique service. For more information on services, see [Service](/docs/pbc/all/service-point-management/202410.0/unified-commerce/service-points-feature-overview.html#service).
+- Configure a shipment method with the On-Site Service shipment type. For more information on shipment types, see [Shipment type](/docs/pbc/all/carrier-management/202410.0/base-shop/shipment-feature-overview.html#shipment-type).
 
 ## Selling services as products
 
@@ -108,19 +108,19 @@ Alternatively, you can import product type assignments using the console importe
 Customers can review previously purchased service products in **My Account** > **Services**.
 
 On the Services View page, the following information is displayed:
-* Order Reference
-* Service
-* Time and Date
-* Created At
-* State
+- Order Reference
+- Service
+- Time and Date
+- Created At
+- State
 
 
 Customers can use the search to filter purchased services by product name, SKU, or order reference.
 
 Also, customers can filter the view according to who purchased services:
-* My booked services
-* Booked services of a specific business unit
-* Booked services of a specific company
+- My booked services
+- Booked services of a specific business unit
+- Booked services of a specific company
 
 The latter two require respective permissions. For more information on company permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/202410.0/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html).
 
@@ -134,15 +134,15 @@ Back Office users can view previously purchased service products in **Orders** >
 
 The SSP checkout flow adds the following functionality:
 
-* Customers can switch between single-address and multi-address checkout for items with the **Delivery** shipment type
-* Items delivered with the **On-Site Service** shipment type are displayed as a separate group
-* For **On-Site Service** items, customers can change the service point but not the shipment type
+- Customers can switch between single-address and multi-address checkout for items with the **Delivery** shipment type
+- Items delivered with the **On-Site Service** shipment type are displayed as a separate group
+- For **On-Site Service** items, customers can change the service point but not the shipment type
 
 ## Current constraints
 
-* Product prices for product offers can't be added in the Back Office; they can only be imported.
-* Some B2B features, such as Merchant Relations, are not supported by product offers. For more information, see [Product Offer constraints](/docs/pbc/all/offer-management/202410.0/marketplace/marketplace-product-offer-feature-overview.html#current-constraints).
-* Customers can't change shipment type in cart and checkout.
+- Product prices for product offers can't be added in the Back Office; they can only be imported.
+- Some B2B features, such as Merchant Relations, are not supported by product offers. For more information, see [Product Offer constraints](/docs/pbc/all/offer-management/202410.0/marketplace/marketplace-product-offer-feature-overview.html#current-constraints).
+- Customers can't change shipment type in cart and checkout.
 
 
 

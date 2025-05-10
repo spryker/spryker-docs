@@ -32,9 +32,9 @@ This article describes the changes made to add support of Elasticsearch 6 and cr
 
 The central place of the Spryker's search sub-system is the *Search* module. This module provides APIs for:
 
-* installing the infrastructure for search (creating/updating Elasticsearch indexes)
-* searching for data
-* storing the data for search (indexing documents in Elasticsearch)
+- installing the infrastructure for search (creating/updating Elasticsearch indexes)
+- searching for data
+- storing the data for search (indexing documents in Elasticsearch)
 
 Old versions of the Search module were highly coupled to Elasticsearch 5 as the search provider.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Migration+Concepts/Current+Search+state+Copy.png)
@@ -44,8 +44,8 @@ From now on, all the search provider-specific tasks are performed by the dedicat
 
 To achieve this in the backward-compatible way, a new concept called **search context** was introduced, which is represented by the `SearchContextTransfer` object. The search context is needed to determine the search provider, which should respond to a particular search request, as well as to store information/configuration needed to handle this request. The main and mandatory part of this search context is the source identifier. The source identifier is used in two scenarios:
 
-* resolving a search provider to handle the search request
-* resolving a source (index, in terms of Elasticsearch) to perform search/storing of data
+- resolving a search provider to handle the search request
+- resolving a source (index, in terms of Elasticsearch) to perform search/storing of data
 
 In addition to this, `SearchContextTransfer` can be expanded by search provider-specific modules with various pieces of data needed by those modules to handle a search request.
 
@@ -133,11 +133,11 @@ class SomeProjectLevelSearchQueryPlugin extends AbstractPlugin implements QueryI
 The main idea here is that a query plugin must be able to set up and store the search context internally, and this search context could later be changed from outside of the plugin.
 Here is how the SearchElastisearch module resolves a source (index name) from the source identifier:
 
-* `ElasticsearchSearchContextTransfer` is introduced, which has a property for storing index name for the current search operation
-* New property is added to `SearchContextTransfer`, which is of type `ElasticsearchSearchContextTransfer`
-* Source identifier is extracted from the passed `SearchContextTransfer` object, transformed into an index name
-* A new `ElasticsearchSearchContextTransfer` object is created, and the index name is set as its property
-* This new transfer object is set as the property of the passed `SearchContextTransfer` object, which is then returned back to the *Search* module
+- `ElasticsearchSearchContextTransfer` is introduced, which has a property for storing index name for the current search operation
+- New property is added to `SearchContextTransfer`, which is of type `ElasticsearchSearchContextTransfer`
+- Source identifier is extracted from the passed `SearchContextTransfer` object, transformed into an index name
+- A new `ElasticsearchSearchContextTransfer` object is created, and the index name is set as its property
+- This new transfer object is set as the property of the passed `SearchContextTransfer` object, which is then returned back to the *Search* module
 
 ### Storing data for search
 
@@ -155,9 +155,9 @@ In Elasticsearch 7, among other changes, the mapping types removal started in ve
 
 To communicate with Elasticsearch, Spryker uses a third-party library called `ruflin/elastica`. To be able to interact with Elaticsearch 7.x, `ruffling/elastica:7.*.*` must be used (major version of this package so far refer to major versions of Elasticsearch itself). This version has some drastic changes in its API compared to the previous major versions. Among those changes are:
 
-* removal of several query type classes, for example, `\Elastica\Query\Type` and `\Elastica\Query\GeohashCell`
-* removal of `the_parent` field in favor of the `join` field
-* various changes in the existing classes APIs (`\Elastica\Document`, `\Elastica\Query\Terms` etc.)
+- removal of several query type classes, for example, `\Elastica\Query\Type` and `\Elastica\Query\GeohashCell`
+- removal of `the_parent` field in favor of the `join` field
+- various changes in the existing classes APIs (`\Elastica\Document`, `\Elastica\Query\Terms` etc.)
 
 For the full list of changes,check [Elasticsearch 7.0.0 release notes](https://elastica.io/2019/10/31/release-7-dot-0-0-beta1/). All the project code that's not compatible with these changes, must be adjusted accordingly before running Elasticsearch 7.
 
@@ -192,13 +192,13 @@ That being done, the migration to Elasticsearch 7 from Elasticsearch 5 is comple
 
 The Search migration effort implies an upgrade of the following modules:
 
-* [Search](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-search–module.html#upgrading-from-version-89-to-version-810)
-* [Console](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade–the-console-module.html)
-* [CmsPageSearch](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html#upgrading-from-version-21-to-version-22)
-* [Catalog](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html#upgrading-from-version-55-to-version-56)
-* [ProductPageSearch](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html#upgrading-from-version-311-to-version-312)
-* [ProductReviewSearch](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html#upgrading-from-version-13-to-version-14)
-* [ProductLabelSearch](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html#upgrading-from-version-12-to-version-13)
-* [ProductSetPageSearch](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html#upgrading-from-version-13-to-version-14)
-* [CategoryPageSearch](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html#upgrading-from-version-14-to-version-15)
-* [ProductNew](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productnew-module.html)
+- [Search](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-search–module.html#upgrading-from-version-89-to-version-810)
+- [Console](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade–the-console-module.html)
+- [CmsPageSearch](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html#upgrading-from-version-21-to-version-22)
+- [Catalog](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html#upgrading-from-version-55-to-version-56)
+- [ProductPageSearch](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html#upgrading-from-version-311-to-version-312)
+- [ProductReviewSearch](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html#upgrading-from-version-13-to-version-14)
+- [ProductLabelSearch](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html#upgrading-from-version-12-to-version-13)
+- [ProductSetPageSearch](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html#upgrading-from-version-13-to-version-14)
+- [CategoryPageSearch](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html#upgrading-from-version-14-to-version-15)
+- [ProductNew](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productnew-module.html)

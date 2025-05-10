@@ -245,7 +245,7 @@ class FooSortConfigTransferBuilderPlugin extends AbstractPlugin implements SortC
 
 1. On the project level, wire the implemented plugins to the providers in `Pyz\Zed\ProductPageSearch\ProductPageSearchDependencyProvider` and `Pyz\Client\Catalog\CatalogDependencyProvider`:
 
-* `ProductPageSearchDependencyProvider::getDataExpanderPlugins()`
+- `ProductPageSearchDependencyProvider::getDataExpanderPlugins()`
 
 ```php
 /**
@@ -261,7 +261,7 @@ protected function getDataExpanderPlugins()
 }
 ```
 
-* `ProductPageSearchDependencyProvider::getProductAbstractMapExpanderPlugins()`
+- `ProductPageSearchDependencyProvider::getProductAbstractMapExpanderPlugins()`
 
 ```php
 /**
@@ -276,7 +276,7 @@ protected function getProductAbstractMapExpanderPlugins(): array
 }
 ```
 
-* `ProductPageSearchDependencyProvider::getDataLoaderPlugins()`
+- `ProductPageSearchDependencyProvider::getDataLoaderPlugins()`
 
 ```php
 /**
@@ -291,7 +291,7 @@ protected function getDataLoaderPlugins()
 }
 ```
 
-* `CatalogDependencyProvider::getSortConfigTransferBuilderPlugins()` (optional)
+- `CatalogDependencyProvider::getSortConfigTransferBuilderPlugins()` (optional)
 
 ```
 /**

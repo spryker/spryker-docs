@@ -62,9 +62,9 @@ The following table describes the states you can select for order items.
 | Refund | Select this state after you refunded a returned item.|
 
 States flow:
-* **waiting for return**: the initial order stated for returns.
-* When you select **Return**, the state becomes **returned**.
-* When you select **Refund**, the status becomes **refunded**.
+- **waiting for return**: the initial order stated for returns.
+- When you select **Return**, the state becomes **returned**.
+- When you select **Refund**, the status becomes **refunded**.
 
 ### State names
 

@@ -23,7 +23,7 @@ With Standard Filters, you can filter the products according to the specified pr
 
 In Spryker Commerce OS, the following filter types exist:
 
-* **Single-select**—lets a user select only one filter option.
+- **Single-select**—lets a user select only one filter option.
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -31,7 +31,7 @@ In Spryker Commerce OS, the following filter types exist:
   </video>
 </figure>
 
-* **Multi-select**—allows selecting several variants simultaneously.
+- **Multi-select**—allows selecting several variants simultaneously.
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -39,7 +39,7 @@ In Spryker Commerce OS, the following filter types exist:
   </video>
 </figure>
 
-* **Range**—filters data in the dimension from the maximum and minimum value. In the current implementation of our demo shop, the range filter is applied to the abstract product prices.
+- **Range**—filters data in the dimension from the maximum and minimum value. In the current implementation of our demo shop, the range filter is applied to the abstract product prices.
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>

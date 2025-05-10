@@ -21,11 +21,11 @@ This document describes the default search types shipped with the *Search* featu
 
 The default full-site search has the following functionality:
 
-* *Fuzzy search*: Suggests search results that do not exactly match the search request.
-* *Auto-completion*: Helps customers by predicting the rest of a search string and offers a list of matching options.
-* *Search suggestions*: Proposes on-the-fly page suggestions for products, categories, or CMS Pages.
-* *Did-you-mean*: Offers typo corrections for the search string.
-* *Mimic a dynamic category* by saving a search result and embedding it like a category page in your navigation.
+- *Fuzzy search*: Suggests search results that do not exactly match the search request.
+- *Auto-completion*: Helps customers by predicting the rest of a search string and offers a list of matching options.
+- *Search suggestions*: Proposes on-the-fly page suggestions for products, categories, or CMS Pages.
+- *Did-you-mean*: Offers typo corrections for the search string.
+- *Mimic a dynamic category* by saving a search result and embedding it like a category page in your navigation.
 
 ## Multi-language search
 
@@ -41,8 +41,8 @@ For details about how you can manage the search preferences, see [Managing searc
 
 The feature has the following functional constraints:
 
-* Search preference attributes are shared across all the stores in a project.
-* You cannot define a search preference for a single store.
+- Search preference attributes are shared across all the stores in a project.
+- You cannot define a search preference for a single store.
 
 ## Related Business User documents
 

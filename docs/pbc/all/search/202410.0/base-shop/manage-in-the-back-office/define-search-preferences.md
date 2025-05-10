@@ -41,10 +41,10 @@ Review the [reference information](#reference-information-add-product-attributes
 1. On the **Search Preferences** page, click **Add attribute to search**.
 2. On the **Add Attribute to Search** page, enter an **ATTRIBUTE KEY**.
 3. Select **Yes** or **No** for the following:
-    * **FULL TEXT**
-    * **FULL TEXT BOOSTED**
-    * **SUGGESTION TERMS**
-    * **COMPLETION TERMS**
+    - **FULL TEXT**
+    - **FULL TEXT BOOSTED**
+    - **SUGGESTION TERMS**
+    - **COMPLETION TERMS**
 4. Click **Save**.
     This opens the **Search Preferences** page with a success message displayed.
 5. Optional: To start using the created search attribute, click **Synchronize search preferences**.

@@ -21,8 +21,8 @@ To make the process of managing permissions easier, instead of assigning roles t
 
 For instructions on creating user roles and groups, see the following documents:
 
-* [Create user roles](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-user-roles/create-user-roles.html)
-* [Create user groups](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html)
+- [Create user roles](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-user-roles/create-user-roles.html)
+- [Create user groups](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html)
 
 ## Agent assist
 
@@ -41,8 +41,8 @@ composer require spryker-feature/agent-assist:"{{site.version}}" spryker-feature
 ```
 
 2. Follow the integration guides for the individual features:
-* [User Management](#related-developer-documents)
-* [Agent Assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html#related-developer-documents)
+- [User Management](#related-developer-documents)
+- [Agent Assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html#related-developer-documents)
 
 ## Related Business User documents
 

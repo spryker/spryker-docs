@@ -27,9 +27,9 @@ When customers click on **More** in the dialog, they can consent to or reject ea
 
 ## Prerequisites
 
-* [Create a Usercentrics account](https://usercentrics.com/free-trial-web/).
-* [Integrate Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html).
-* Integrate and configure the necessary tracking tools in the [Usercentrics Admin Interface](https://admin.usercentrics.eu/).
+- [Create a Usercentrics account](https://usercentrics.com/free-trial-web/).
+- [Integrate Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html).
+- Integrate and configure the necessary tracking tools in the [Usercentrics Admin Interface](https://admin.usercentrics.eu/).
 
 
 ### Configure data processing services in Usercentrics
@@ -51,9 +51,9 @@ When customers click on **More** in the dialog, they can consent to or reject ea
 ## Integrating Usercentrics into frontend
 
 There are three ways to integrate Usecentrics into frontend:
-* Manually
-* Using the [Usercentrics Smart Data Protector](https://docs.usercentrics.com/#/smart-data-protector)
-* With [Google Tag Manager](https://developers.google.com/tag-platform/tag-manager)
+- Manually
+- Using the [Usercentrics Smart Data Protector](https://docs.usercentrics.com/#/smart-data-protector)
+- With [Google Tag Manager](https://developers.google.com/tag-platform/tag-manager)
 
 If you are not using a third-party tracking management tool, like Google Tag Manager, and want a code-free integration, we recommend integrating using the Smart Data Protector.
 
@@ -64,7 +64,7 @@ ACP does not support a direct integration, so you won't be able to manage Userce
 
 To integrate manually, you need to do the following:
 
-* Inject the Usercentrics JavaScrip tag with the setting ID into your frontend. Example script tag for the direct integration:
+- Inject the Usercentrics JavaScrip tag with the setting ID into your frontend. Example script tag for the direct integration:
 
 ```
 <script id="usercentrics-cmp" data-settings-id="apXtrZ9ec" src="https://app.usercentrics.eu/browser-ui/latest/bundle.js" defer></script>
@@ -72,7 +72,7 @@ To integrate manually, you need to do the following:
 
 `apXtrZ9ec` is the setting ID that identifies configuration of the data processing services for your store in the Usercentrics Admin Interface.
 
-* Deactivate the JavaScript code of all the tracking tools on the shop pages and give tools the names that match those in the Usercentrics Admin Interface.
+- Deactivate the JavaScript code of all the tracking tools on the shop pages and give tools the names that match those in the Usercentrics Admin Interface.
 
 For more details about the manual integration, see [Direct integration of Usercentrics into your website](https://docs.usercentrics.com/#/direct-implementation-guide).
 
@@ -90,9 +90,9 @@ If [Google Tag Manager](https://developers.google.com/tag-platform/tag-manager) 
 
 To use Usercentrics with the Google Tag Manager, do the following:
 
-* In the [Usercentrics Admin Interface](https://admin.usercentrics.eu/), go to **Service Settings&nbsp;<span aria-label="and then">></span> Data Processing Services** and define the data processing services you have in Google Tag Manager.
+- In the [Usercentrics Admin Interface](https://admin.usercentrics.eu/), go to **Service Settings&nbsp;<span aria-label="and then">></span> Data Processing Services** and define the data processing services you have in Google Tag Manager.
 
-* In the Google Tag Manager UI, configure the variables and triggers to work with Usercentrics. For instructions, see [Google Tag Manager Configuration](https://docs.usercentrics.com/#/browser-sdk-google-tag-manager-configuration).
+- In the Google Tag Manager UI, configure the variables and triggers to work with Usercentrics. For instructions, see [Google Tag Manager Configuration](https://docs.usercentrics.com/#/browser-sdk-google-tag-manager-configuration).
 
 ## Configure Usercentrics
 

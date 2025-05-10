@@ -22,9 +22,9 @@ This document describes how to create user roles in the Back Office.
 
 ## Prerequisites
 
-* If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
+- If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
 
-* Review the [reference information](#reference-information-create-user-roles) before you start, or look up the necessary information as you go through the process.
+- Review the [reference information](#reference-information-create-user-roles) before you start, or look up the necessary information as you go through the process.
 
 ## Create user roles
 

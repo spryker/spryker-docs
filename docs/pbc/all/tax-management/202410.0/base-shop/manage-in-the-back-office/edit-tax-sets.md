@@ -19,8 +19,8 @@ To edit a [tax set](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-
 2. Next to the tax set you want to edit, click **Edit**.
 3. On the **Edit Tax Set** page, enter a **NAME**.
 4. For **TAX RATES**, do any of the following:
-    * Clear the checkboxes next to the tax rates you want to unassign from the tax set.
-    * Select the checkboxes next to the tax rates you want to assign to the tax set.
+    - Clear the checkboxes next to the tax rates you want to unassign from the tax set.
+    - Select the checkboxes next to the tax rates you want to assign to the tax set.
 5. Click **Save**.
 
 ## Reference information: Edit tax sets

@@ -82,8 +82,6 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 
 ### 3) Set up transfer objects
 
-Run the following command:
-
 ```bash
 console transfer:generate
 ```

@@ -118,7 +118,7 @@ You can switch to MySQL or PostgreSQL as described in the following sections.
 
 ### MariaDB
 
-[MariaDB](https://mariadb.org/) is a community-developed, commercially supported fork of the [MySQL](https://www.mysql.com/) relational database management system.
+[MariaDB](https://mariadb.org/) is a community-developed, commercially supported fork of the [MySQL](www.mysql.com) relational database management system.
 
 For more details, see [MariaDB knowledge base](https://mariadb.com/kb/en/).
 
@@ -156,7 +156,7 @@ docker/sdk up --build --data
 
 ### MySQL
 
-[MySQL](https://www.mysql.com) is an open-source relational database management system based on Structured Query Language (SQL). MySQL allows data to be stored and accessed across multiple storage engines, including InnoDB, CSV, and NDB. Also, MySQL can replicate data and partition tables for better performance and durability.
+[MySQL](www.mysql.com) is an open-source relational database management system based on Structured Query Language (SQL). MySQL allows data to be stored and accessed across multiple storage engines, including InnoDB, CSV, and NDB. Also, MySQL can replicate data and partition tables for better performance and durability.
 
 For more details, see [MySQL documentation](https://dev.mysql.com/doc/).
 

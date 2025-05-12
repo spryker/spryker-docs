@@ -108,9 +108,9 @@ To edit meta information, do the following:
 1. Next to the product you want to edit, select **Edit**.
 2. On the **Edit Product Abstract [SKU]** page, switch to the **SEO** tab.
 3. Update the following for the desired locales:
-    * **Title**
-    * **Keywords**
-    * **Description**
+    - **Title**
+    - **Keywords**
+    - **Description**
 4. Select **Save**. The page refreshes with the success message displayed.
 
 ### Reference information: Editing meta information of an abstract product
@@ -131,14 +131,14 @@ To edit product images, do the following:
 2. On the **Edit Product Abstract [SKU]** page, switch to the **Image** tab.
 3. Select a locale you want to update images for.
 4. Update images:
-    * To add a new image set, select **Add image set**
-    * To add a new image, select **Add image**.
-    * To update an image, update the following:
-        * **Small Image URL**
-        * **Large Image URL**
-        * **Sort order**
-    * To delete large and small images, select **Delete image**.
-    * To delete an image set with its images, select **Delete image set**.
+    - To add a new image set, select **Add image set**
+    - To add a new image, select **Add image**.
+    - To update an image, update the following:
+        - **Small Image URL**
+        - **Large Image URL**
+        - **Sort order**
+    - To delete large and small images, select **Delete image**.
+    - To delete an image set with its images, select **Delete image set**.
 5. Repeat step *4* until you update images for all the desired locales.
 6. Select **Save**. The page refreshes with the success message displayed.
 

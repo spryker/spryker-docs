@@ -153,10 +153,10 @@ To implement the solution, follow these steps:
     ```
 
 	2. Introduce a new type of price document with the following parameters:
-	* parent document ID
-    * price
-	* currency
-	* unique identifier
+	- parent document ID
+    - price
+	- currency
+	- unique identifier
 
     The example of the price document:
 
@@ -193,8 +193,8 @@ The following issues related to a slow publish process have been added:
 
 1. Memory limit and performance issues. As a product abstract can stand for about forty thousand prices, a table with 25,000,000 rows is parsed every time to find them. The default message chunk size of an event queue is 500. With this size, about two million rows of data have to be published per one bulk.
 2. The following has to be done simultaneously:
-    * Trigger product abstract events to update their structure in ES.
-    * Trigger their child documents to be published.
+    - Trigger product abstract events to update their structure in ES.
+    - Trigger their child documents to be published.
 3. RabbitMQ connection issues. The connection is getting closed after fetching a bunch of messages because the PHP process takes too long to be executed. After processing the messages, PHP tries to acknowledge them using the old connection, which has been closed by RabbitMQ. Being single-threaded, the PHP library cannot asynchronously send any heartbeats when the thread is busy with something else.
    For more information, see [Detecting Dead TCP Connections with Heartbeats and TCP Keepalives](https://www.rabbitmq.com/heartbeats.html).
 
@@ -277,6 +277,7 @@ UNION ALL
 SELECT inserted.id_pyz_price_product_concrete_group_specific_search
 FROM   inserted;
 ```
+
 </details>
 
 ### Price events quick lane
@@ -375,6 +376,6 @@ create index IF NOT exists csv_data_merchant_relationship_prices_net_price ON cs
 ## Conclusion
 
 With the configuration and customizations described in this document, Spryker can hold and manage millions of prices in one instance. RabbitMQ, internal APIs, data import modules, and Glue API allow building a custom data import to do the following:
-* Fetch a lot of data from a third-party system.
-* Successfully import it into the database.
-* Denormalize and replicate it to be used by quick storages, such as Redis and ES.
+- Fetch a lot of data from a third-party system.
+- Successfully import it into the database.
+- Denormalize and replicate it to be used by quick storages, such as Redis and ES.

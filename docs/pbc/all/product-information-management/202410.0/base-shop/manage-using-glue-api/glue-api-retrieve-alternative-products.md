@@ -20,14 +20,14 @@ The *Alternative Products* feature allows customers to find a substitute for a p
 
 The Product Alternatives API provides access to alternative products via REST API requests. In particular, you can:
 
-* Find out whether a concrete product is discontinued.
-* Retrieve a list of alternative products of a product.
+- Find out whether a concrete product is discontinued.
+- Retrieve a list of alternative products of a product.
 
 In your development, the endpoints help to:
 
-* Provide alternatives for a product that runs out or unavailable, for example, because of local restrictions.
-* Provide alternatives if a product is discontinued.
-* Make alternative products available to customers in their shopping list or suggestions area to make searching and comparing similar products easier.
+- Provide alternatives for a product that runs out or unavailable, for example, because of local restrictions.
+- Provide alternatives if a product is discontinued.
+- Make alternative products available to customers in their shopping list or suggestions area to make searching and comparing similar products easier.
 
 
 ## Installation

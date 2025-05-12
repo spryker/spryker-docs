@@ -59,24 +59,24 @@ In order to integrate installment payment, two simple steps are needed: set Rate
 The installment requests use two additional types of requests called Configuration and Calculation Requests.
 
 Three groups of configuration are defined:
-* transaction configuration for handling the basic requests (init-payment, payment-request, etc)
-* installment configuration for handling configuration
-* calculation for handling calculation requests.
+- transaction configuration for handling the basic requests (init-payment, payment-request, etc)
+- installment configuration for handling configuration
+- calculation for handling calculation requests.
 
 The configuration to integrate Installment payment method using RatePAY is:
-* `PROFILE_ID`: merchant's login (required).
-* `SECURITY_CODE`: merchant's password (required).
-* `SHOP_ID`: shop identifier (required).
-* `SYSTEM_ID`: system identifier (required).
-* `CLIENT_VERSION`: client system version.
-* `CLIENT_NAME`: client name.
-* `RATEPAY_REQUEST_VERSION`: request version.
-* R `ATEPAY_REQUEST_XMLNS_URN`: request XMLNS urn.
-* `MODE`: the mode of the transaction, either test or live (required).
-* `API_TEST_URL`: test mode API url.
-* `API_LIVE_URL`: live mode API url.
-* `DEBIT_PAY_TYPES`: debit pay types, can be DIRECT-DEBIT or BANK-TRANSFER.
-* `INSTALLMENT_CALCULATION_TYPES`: installment calculator types, can be by time or by date.
+- `PROFILE_ID`: merchant's login (required).
+- `SECURITY_CODE`: merchant's password (required).
+- `SHOP_ID`: shop identifier (required).
+- `SYSTEM_ID`: system identifier (required).
+- `CLIENT_VERSION`: client system version.
+- `CLIENT_NAME`: client name.
+- `RATEPAY_REQUEST_VERSION`: request version.
+- R `ATEPAY_REQUEST_XMLNS_URN`: request XMLNS urn.
+- `MODE`: the mode of the transaction, either test or live (required).
+- `API_TEST_URL`: test mode API url.
+- `API_LIVE_URL`: live mode API url.
+- `DEBIT_PAY_TYPES`: debit pay types, can be DIRECT-DEBIT or BANK-TRANSFER.
+- `INSTALLMENT_CALCULATION_TYPES`: installment calculator types, can be by time or by date.
 
 You can copy over configs to your config from the RatePAY module's `config.dist.php` file.
 

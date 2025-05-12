@@ -39,11 +39,11 @@ To create a product variant:
 2. On the *Edit Abstract* page, select **Add Variant**.
 3. In the *General* tab, do the following:
     1. Define a **SKU**:
-        * Enter a **SKU**.<br>OR
-        * Select **Autogenerate SKU**.
+        - Enter a **SKU**.<br>OR
+        - Select **Autogenerate SKU**.
     2. Under *Super attributes*, define one or more super attributes:
-        * Select a value.
-        * Select **Use custom value** and, in the field the appears below, enter the value.
+        - Select a value.
+        - Select **Use custom value** and, in the field the appears below, enter the value.
     3. Add product name and description and select **Searchable** if you want your product to be searchable by its name in the online store.
     4. **Optionally**: Enter **Valid From** and **Valid To** dates to specify when the product should go online in the web-shop.
     5. Go to the *Price & Stock* tab.
@@ -132,8 +132,8 @@ The only field available is **Add Product Alternative by Name or SKU**. Here it'
 
 On this tab, you see a table with the scheduled prices imported via a CSV file. The following information is available:
 
-* Currency, store, net, and gross price values
-* Start from (included) and Finish at (included) values that identify a period of time when a specific price is going to be set for a product automatically.
+- Currency, store, net, and gross price values
+- Start from (included) and Finish at (included) values that identify a period of time when a specific price is going to be set for a product automatically.
 
 
 **What's next?**

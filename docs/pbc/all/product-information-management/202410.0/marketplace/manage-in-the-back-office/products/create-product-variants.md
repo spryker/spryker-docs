@@ -30,11 +30,11 @@ To create a product variant:
 2. On the **Edit Abstract** page, select **Add Variant**.
 3. On the **General** tab, do the following:
     1. Define a **SKU**:
-        * Enter a **SKU**.<br>OR
-        * Select **Autogenerate SKU**.
+        - Enter a **SKU**.<br>OR
+        - Select **Autogenerate SKU**.
     2. Under **Super attributes**, define one or more super attributes:
-        * Select a value.
-        * Select **Use custom value** and, in the field the appears below, enter the value.
+        - Select a value.
+        - Select **Use custom value** and, in the field the appears below, enter the value.
     3. Add product name and description and select **Searchable** if you want your product to be searchable by its name in the online store.
     4. Optional: Enter **Valid From** and **Valid To** dates to specify when the product should go online in the web-shop.
     5. Go to the **Price & Stock** tab.

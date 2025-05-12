@@ -132,11 +132,11 @@ The feature has the following functional constraints which are going to be resol
 
 {% endinfo_block %}
 
-* Unlike other prices in Spryker which support both price types (DEFAULT and ORIGINAL), volume price supports only DEFAULT price type.
+- Unlike other prices in Spryker which support both price types (DEFAULT and ORIGINAL), volume price supports only DEFAULT price type.
 
-* As volume price does not support ORIGINAL price type, you cannot define a promotion for a volume price.
+- As volume price does not support ORIGINAL price type, you cannot define a promotion for a volume price.
 
-* Volume prices cannot be applied to the [prices per merchant relation](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html).
+- Volume prices cannot be applied to the [prices per merchant relation](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html).
 
 ## Related Business User documents
 

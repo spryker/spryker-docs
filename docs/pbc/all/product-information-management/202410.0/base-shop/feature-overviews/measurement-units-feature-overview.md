@@ -50,8 +50,8 @@ Let's take an example to better understand the feature. Suppose, 1 apple (1=fact
 
 There can be two types of conversions in the system:
 
-* *Global conversions*—are defined in the code already (like from cm to meter).
-* *Product-specific conversions*—are defined per product (like from one meter of cable to its weight).
+- *Global conversions*—are defined in the code already (like from cm to meter).
+- *Product-specific conversions*—are defined per product (like from one meter of cable to its weight).
 
 If a global unit conversion exists between the base and sales unit, then factor and precision fields are optional. If no global unit conversion exists between the base and sales unit, then factor and precision fields are mandatory. If precision is "null", then the information is taken from the product measurement unit is default_precision (default value is 1).
 
@@ -61,11 +61,11 @@ If a global unit conversion exists between the base and sales unit, then factor 
 
 ## Current constraints
 
-* In the Spryker Commerce OS, you cannot define measurement units for products. They are imported into the database manually.
-* We strive to shift all business logic to our backend; however, with Measurements Units, a part of the calculations (for example, quantity restrictions) are performed on Yves.
-* On the shopping cart as well as the shopping list page, products do not have a dropdown to change the measurement units. You can select a measurement unit on the product details page only.
-* A shopper cannot reorder items with the selected measurement units as they are not added automatically. They must be added manually on the product details page.
-* In the [Quick Order](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/quick-add-to-cart-feature-overview.html) form and [Search](/docs/pbc/all/search/{{page.version}}/base-shop/search-feature-overview/search-feature-overview.html), the products use the default measurement units that cannot be changed.
+- In the Spryker Commerce OS, you cannot define measurement units for products. They are imported into the database manually.
+- We strive to shift all business logic to our backend; however, with Measurements Units, a part of the calculations (for example, quantity restrictions) are performed on Yves.
+- On the shopping cart as well as the shopping list page, products do not have a dropdown to change the measurement units. You can select a measurement unit on the product details page only.
+- A shopper cannot reorder items with the selected measurement units as they are not added automatically. They must be added manually on the product details page.
+- In the [Quick Order](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/quick-add-to-cart-feature-overview.html) form and [Search](/docs/pbc/all/search/{{page.version}}/base-shop/search-feature-overview/search-feature-overview.html), the products use the default measurement units that cannot be changed.
 
 ## Related Developer documents
 

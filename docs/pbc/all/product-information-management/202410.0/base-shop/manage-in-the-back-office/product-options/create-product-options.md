@@ -23,8 +23,8 @@ This document describes how to create product options. Product options are addit
 
 ## Prerequisites
 
-* [Create a tax set](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html) to apply to the product options.
-* Review the [reference information](#reference-information-create-product-options) before you start, or look up the necessary information as you go through the process.
+- [Create a tax set](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html) to apply to the product options.
+- Review the [reference information](#reference-information-create-product-options) before you start, or look up the necessary information as you go through the process.
 
 ## Create product options
 

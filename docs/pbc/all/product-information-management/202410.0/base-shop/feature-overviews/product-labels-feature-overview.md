@@ -49,15 +49,15 @@ A developer can create [dynamic product labels](#dynamic-product-label).
 *Dynamic product label* is a product label that follows the condition rules defined on a code level. Unlike the regular product label, the dynamic product label is automatically applied to the product that fulfills the condition rules. A developer can edit the rules or create new dynamic product labels.
 The following dynamic product labels are shipped by default:
 
-* *Discontinued*
+- *Discontinued*
 <br>The *Discontinued* product label is added when you discontinue a product. The label is active until the product becomes inactive. To learn more, see [Discontinuing a product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html).
-* *Alternatives available*
+- *Alternatives available*
 <br>The *Alternatives available* product label goes along with the *Discontinued* product label. It is added when you discontinue a product that has existing [alternative products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html). The label is active until the product becomes inactive. To learn more, see [Adding product alternatives](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html).
 
-* *NEW*
+- *NEW*
 <br>The *NEW* label is added when you create a product. It is active for the time period defined inclusively in the **New from** and **New to** fields. To learn more, see [Creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 
-* *SALE*
+- *SALE*
 <br>The *SALE* product label is added to a product automatically when the product's original price is superior to the default price. To learn more, see [Creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 
 {% info_block infoBox "Prices" %}
@@ -133,8 +133,8 @@ A developer can also [import store relations for product labels](/docs/pbc/all/p
 ## Product label statuses
 
 A product label can have the following statuses:
-* Active
-* Inactive
+- Active
+- Inactive
 
 If a product label is active, it's displayed on all the product pages it's applied to. If a product label is inactive, it's still applied to the selected product, but it's not displayed on the respective product pages. This might be useful when you want to prepare for an event beforehand. You can create an inactive product label and apply it to the needed products. When the event starts, you just need to activate the label to show it on all the product pages it's applied to.
 

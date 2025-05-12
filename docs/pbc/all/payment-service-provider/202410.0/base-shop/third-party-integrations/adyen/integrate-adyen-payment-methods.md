@@ -21,8 +21,8 @@ related:
 ## Credit card
 
 Adyen module provides the following integration options:
-* Simple
-* With 3D Secure authorization
+- Simple
+- With 3D Secure authorization
 
 3D Secure integration requires adjustments on the project level. Do the following:
 

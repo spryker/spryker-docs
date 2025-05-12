@@ -24,38 +24,38 @@ related:
 
 **Check**
 
-* Checks order Status
-* Update order status
-* Plugin: `CheckPlugin`
+- Checks order Status
+- Update order status
+- Plugin: `CheckPlugin`
 
 **Capture**
 
-* Activates the reservation that corresponds to the given reference number
-* Response:
-  * Success: order activated
-  * Declined: capture failed. Need to update order
-* Plugin: `CapturePlugin`
+- Activates the reservation that corresponds to the given reference number
+- Response:
+  - Success: order activated
+  - Declined: capture failed. Need to update order
+- Plugin: `CapturePlugin`
 
 **Update**
 
-* Updates a reservation
-* Response:
-* Success: Reservation updated
-* Declined: Some error occurred
-* Plugin: `UpdatePlugin`
+- Updates a reservation
+- Response:
+- Success: Reservation updated
+- Declined: Some error occurred
+- Plugin: `UpdatePlugin`
 
 **Cancel**
 
-* Cancels a reservation
-* Plugin: `CancelPlugin`
+- Cancels a reservation
+- Plugin: `CancelPlugin`
 
 **Refund**
 
-* Performs a partial refund
-* Response:
-  * Success: Refund possible and accepted
-  * Declined: Some error occurred
-* Plugin: `RefundPlugin`
+- Performs a partial refund
+- Response:
+  - Success: Refund possible and accepted
+  - Declined: Some error occurred
+- Plugin: `RefundPlugin`
 
 ## Conditions
 

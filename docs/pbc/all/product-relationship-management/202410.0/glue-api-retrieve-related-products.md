@@ -19,12 +19,12 @@ Using the [Product Relations](/docs/pbc/all/product-relationship-management/{{pa
 Only [abstract](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/pbc/all/product-relationship-management/{{page.version}}/product-relationship-management.html).
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
-* Retrieve related products of an abstract product.
-* Retrieve related products of the items in guest carts and carts of registered users.
+- Retrieve related products of an abstract product.
+- Retrieve related products of the items in guest carts and carts of registered users.
 
 In your development, the endpoints can help you to:
-* Provide comparable products on the product details pages and in search results to make it easier for customers to compare.
-* Provide additional product items in a customer's cart to offer upscale variations, accessories, and other additional items for products in the cart.
+- Provide comparable products on the product details pages and in search results to make it easier for customers to compare.
+- Provide additional product items in a customer's cart to offer upscale variations, accessories, and other additional items for products in the cart.
 
 ## Installation
 

@@ -27,17 +27,17 @@ To start editing product labels, do the following:
 
 1. Click the **Settings** tab.
 2. Update any of the following:
-    * **NAME**
-    * **FRONT-END REFERENCE**
-    * **PRIORITY**
+    - **NAME**
+    - **FRONT-END REFERENCE**
+    - **PRIORITY**
 3. Select or clear the **IS ACTIVE** checkbox.
 4. In the **BEHAVIOR** pane, update any of the following:
-    * **VALID FROM**
-    * **VALID TO**
+    - **VALID FROM**
+    - **VALID TO**
 5. Select or clear the **IS EXCLUSIVE** checkbox.
 6. In the **STORE RELATION** pane, do any of the following:
-    * Clear the checkboxes next to the stores you want to stop displaying the label in.
-    * Select the checkboxes next to the stores you want to start displaying the label in.
+    - Clear the checkboxes next to the stores you want to stop displaying the label in.
+    - Select the checkboxes next to the stores you want to start displaying the label in.
 7. In the **TRANSLATIONS** pane, update the **NAME** for the needed locales.
 8. Click **Save**.
     This refreshes the page with a success message displayed.
@@ -53,8 +53,8 @@ To start editing product labels, do the following:
 
 **Tips and tricks**
 
-* When assigning a label to multiple products, it might be useful to switch to the **Selected products to assign** subtab to double-check your selection.
-* When deassigning a label from multiple products, it might be useful to switch to the **Selected products to de-assign** subtab to double-check your selection.
+- When assigning a label to multiple products, it might be useful to switch to the **Selected products to assign** subtab to double-check your selection.
+- When deassigning a label from multiple products, it might be useful to switch to the **Selected products to de-assign** subtab to double-check your selection.
 
 
 ## Reference information: Edit product labels

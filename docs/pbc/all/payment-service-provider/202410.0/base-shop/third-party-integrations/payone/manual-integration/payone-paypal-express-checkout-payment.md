@@ -29,16 +29,16 @@ You can also implement your own button if you want the button to be loaded witho
 
 ## Paypal Express Checkout flow description
 
-* Once you click the **Checkout with PayPal** button, the genericpayment request is sent to Payone with `setexpresscheckout` action and success, failure and back URLs.
-* In the response we receive a workorderid which is used for all other operations until the capture request and PayPal redirect URL.
-* We store workorerid to quote and redirect customer to the URL provided by Payone.
-* On the *PayPal* page, customer has to log in and approve the intention of paying for the desired goods.
-* After clicking the button, the customer is redirected to the success or failure URL, provided by the shop in the first request to Payone.
-* After redirection to success action, one more generic payment request to Payone is made with action `getexpresscheckoutdetails`.
-* Payone sends us information about the customer, like email and shipment data.
-* The user is redirected to the page(summary page as default) of standard checkout.
-* After placing the order, the pre-authorization call is sent to Payone (and through it to PayPal). Workorderid is sent to Payone with this request.
-* Order status becomes "pre-authorized pending" after the response with status OK is received.
+- Once you click the **Checkout with PayPal** button, the genericpayment request is sent to Payone with `setexpresscheckout` action and success, failure and back URLs.
+- In the response we receive a workorderid which is used for all other operations until the capture request and PayPal redirect URL.
+- We store workorerid to quote and redirect customer to the URL provided by Payone.
+- On the *PayPal* page, customer has to log in and approve the intention of paying for the desired goods.
+- After clicking the button, the customer is redirected to the success or failure URL, provided by the shop in the first request to Payone.
+- After redirection to success action, one more generic payment request to Payone is made with action `getexpresscheckoutdetails`.
+- Payone sends us information about the customer, like email and shipment data.
+- The user is redirected to the page(summary page as default) of standard checkout.
+- After placing the order, the pre-authorization call is sent to Payone (and through it to PayPal). Workorderid is sent to Payone with this request.
+- Order status becomes "pre-authorized pending" after the response with status OK is received.
 
 ## State machine integration
 

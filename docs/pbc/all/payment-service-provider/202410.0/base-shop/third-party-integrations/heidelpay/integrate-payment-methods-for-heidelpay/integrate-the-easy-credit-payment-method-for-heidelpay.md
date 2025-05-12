@@ -547,9 +547,9 @@ Once the customer is redirected back to us, the response from Easy Credit's sent
 After that, the customer can see the order summary page, where they can review all related data.
 
 There the user will see:
-* Rate plan (`CRITERION.EASYCREDIT_AMORTISATIONTEXT`)
-* Interest fees (`CRITERION_EASYCREDIT_ACCRUINGINTEREST`)
-* Total sum including the interest fees (`CRITERION.EASYCREDIT_TOTALAMOUNT`)
+- Rate plan (`CRITERION.EASYCREDIT_AMORTISATIONTEXT`)
+- Interest fees (`CRITERION_EASYCREDIT_ACCRUINGINTEREST`)
+- Total sum including the interest fees (`CRITERION.EASYCREDIT_TOTALAMOUNT`)
 
 If the customer has not yet completed the HP.IN they must do that again.
 

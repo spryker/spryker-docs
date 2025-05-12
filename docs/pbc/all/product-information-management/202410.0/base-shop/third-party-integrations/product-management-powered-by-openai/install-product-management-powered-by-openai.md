@@ -6,9 +6,9 @@ template: feature-integration-guide-template
 ---
 
 AI-powered product management adds the following functionality to the Back Office:
-* Automates product categorization in the Back Office.  
-* Automates the translation of product information in the Back Office.  
-* Generates alt text for product images in the Back Office to improve accessibility and SEO.
+- Automates product categorization in the Back Office.  
+- Automates the translation of product information in the Back Office.  
+- Generates alt text for product images in the Back Office to improve accessibility and SEO.
 
 
 This document describes how to install Product Management powered by OpenAI.
@@ -198,10 +198,10 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 ## Install feature frontend
 
 1. Integrate the frontend part using the example integration in Demo Shops:
-* B2B: https://github.com/spryker-shop/b2b-demo-shop/pull/491/files
-* B2C: https://github.com/spryker-shop/b2c-demo-shop/pull/544/files
-* B2B-MP: https://github.com/spryker-shop/b2b-demo-marketplace/pull/438/files
-* B2C-MP: https://github.com/spryker-shop/b2c-demo-marketplace/pull/422/files
+- B2B: https://github.com/spryker-shop/b2b-demo-shop/pull/491/files
+- B2C: https://github.com/spryker-shop/b2c-demo-shop/pull/544/files
+- B2B-MP: https://github.com/spryker-shop/b2b-demo-marketplace/pull/438/files
+- B2C-MP: https://github.com/spryker-shop/b2c-demo-marketplace/pull/422/files
 
 2. Apply the frontend changes:
 

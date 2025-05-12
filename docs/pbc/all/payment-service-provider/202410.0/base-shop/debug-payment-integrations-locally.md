@@ -13,8 +13,8 @@ Most payment integrations rely on a push notification to send feedback to reques
 
 ## Prerequisites
 
-* Read access to your code base.
-* Get a free account for [NGROK](https://ngrok.com).
+- Read access to your code base.
+- Get a free account for [NGROK](https://ngrok.com).
 
 ## Debug payment integrations locally
 

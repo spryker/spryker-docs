@@ -32,10 +32,10 @@ This section describes how the marketplace operator can set up and onboard thems
 After [prerequisites are installed](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html), to connect Spryker to Stripe via the Stripe App, the operator needs to follow [Connect and configure Stripe for Marketplace](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html).
 
 Once the marketplace is connected to Stripe, we recommend that the Operator does the following before going live:
-* In the Stripe Dashboard, enable the needed payment methods.
-* Test the payment flow.
-* Complete [Stripe's account checklist](https://docs.stripe.com/get-started/account/checklist).
-* Adhere to [Stripe's risk management best practices](https://docs.stripe.com/connect/risk-management/best-practices#fraud).
+- In the Stripe Dashboard, enable the needed payment methods.
+- Test the payment flow.
+- Complete [Stripe's account checklist](https://docs.stripe.com/get-started/account/checklist).
+- Adhere to [Stripe's risk management best practices](https://docs.stripe.com/connect/risk-management/best-practices#fraud).
 
 
 ### Onboarding merchants to Stripe
@@ -53,9 +53,9 @@ Onboarding happens in the following steps:
 
 #### Notes for the Marketplace Operator about merchant onboarding
 
-* Merchants disabled in the Spryker Marketplace aren't automatically removed from the Stripe App. If you need to disable a merchant from receiving payouts, you need to do it in the Stripe Dashboard.
-* A merchant needs to onboard once to enable Stripe for all merchant users.
-* All merchant users belonging to a merchant have access to the **Payment Setting** page with Stripe onboarding.
+- Merchants disabled in the Spryker Marketplace aren't automatically removed from the Stripe App. If you need to disable a merchant from receiving payouts, you need to do it in the Stripe Dashboard.
+- A merchant needs to onboard once to enable Stripe for all merchant users.
+- All merchant users belonging to a merchant have access to the **Payment Setting** page with Stripe onboarding.
 
 ## Marketplace payments and merchant payouts
 
@@ -66,9 +66,9 @@ This section describes the marketplace payment flow and how to set up commission
 The Stripe app in the marketplace uses separate charges and transfers fund flow. This fund flow works great for marketplaces that need to split payments between multiple merchants. With this flow, Stripe requires that the marketplace operator and the merchants are in the same region. If they're not in the same region, payments will result in errors. If you want to set up a marketplace with merchants in different regions, contact your customer success representative to set up a proper fund flow.
 
 The payment flow is as follows:
-* For an order in the marketplace, a customer make a single payment.
-* Refunds are handled by Spryker Marketplace because the payment contract is between the marketplace operator and the customer.
-* Payouts to merchants fulfilled through them are issued later.
+- For an order in the marketplace, a customer make a single payment.
+- Refunds are handled by Spryker Marketplace because the payment contract is between the marketplace operator and the customer.
+- Payouts to merchants fulfilled through them are issued later.
 
 
 ### Managing merchant payouts using Spryker's commissions engine
@@ -93,8 +93,8 @@ Payouts with Spryker's commissions engine work as follows:
 
 ## Important notes about Stripe
 
-* Actions performed on a payment, such as cancellation or capture, must be triggered from Spryker either using the Back Office or OMS. Because OMS information is stored in Spryker, triggering such actions from Stripe Dashboard will result in failures.
-* The Marketplace business model doesn't support multi-capture. Before transfers can be made to merchants, the marketplace owner must capture a payment. For more information on multi-capture, see [Capture a payment multiple times](https://docs.stripe.com/payments/multicapture).
+- Actions performed on a payment, such as cancellation or capture, must be triggered from Spryker either using the Back Office or OMS. Because OMS information is stored in Spryker, triggering such actions from Stripe Dashboard will result in failures.
+- The Marketplace business model doesn't support multi-capture. Before transfers can be made to merchants, the marketplace owner must capture a payment. For more information on multi-capture, see [Capture a payment multiple times](https://docs.stripe.com/payments/multicapture).
 
 
 ## Next step

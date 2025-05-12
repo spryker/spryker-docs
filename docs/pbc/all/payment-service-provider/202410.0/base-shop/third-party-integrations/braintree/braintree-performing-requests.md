@@ -25,33 +25,33 @@ In order to perform the necessary requests in the project based on Spryker Comme
 
 **Authorize**
 
-* Authorize the payment by validating the given payment data
-* Response:
-  * Success: Payment Details accepted
-  * Declined: Request format error, payment details not accepted
-* Plugin: `AuthorizePlugin`
+- Authorize the payment by validating the given payment data
+- Response:
+  - Success: Payment Details accepted
+  - Declined: Request format error, payment details not accepted
+- Plugin: `AuthorizePlugin`
 
 **Revert**
 
-* Revert a previous pre-authorization call
-* Always reverts the complete pre-check or authorization
-* Plugin: `RevertPlugin`
+- Revert a previous pre-authorization call
+- Always reverts the complete pre-check or authorization
+- Plugin: `RevertPlugin`
 
 **Capture**
 
-* Capture of previous (p)re-authorization call Response:
-  * Success: Previous (p)re-authorization still valid and accepted
-  * Declined: Previous (p)re- authorization expired, request format error, or internal error
-* Plugin: `CapturePlugin`
+- Capture of previous (p)re-authorization call Response:
+  - Success: Previous (p)re-authorization still valid and accepted
+  - Declined: Previous (p)re- authorization expired, request format error, or internal error
+- Plugin: `CapturePlugin`
 
 **Refund**
 
-* Refund previous captured amount
-* Full and partial refunds possible
-* Response:
-  * Success: Refund possible and accepted
-  * Declined: Previous capture to far in the past, request format error, or internal
-* Plugin: `RefundPlugin`
+- Refund previous captured amount
+- Full and partial refunds possible
+- Response:
+  - Success: Refund possible and accepted
+  - Declined: Previous capture to far in the past, request format error, or internal
+- Plugin: `RefundPlugin`
 
 ## Braintree State Machine Conditions
 

@@ -51,9 +51,9 @@ If you upgrade to the float stock concept, you should also review your project c
 
 Here are some typical occurrences of working with stocks and quantities and tips to make them compatible with the float type:
 
-* Product stock and availability management - use `UtilQuantityService` to handle arithmetic operations with float quantity values.
-* Cart item management - use `UtilQuantityService` to handle arithmetic operations with float quantity values.
-* Price calculations - use `UtilPriceService` to handle rounding of price values in a centralized way and avoid handling money fractions.
+- Product stock and availability management - use `UtilQuantityService` to handle arithmetic operations with float quantity values.
+- Cart item management - use `UtilQuantityService` to handle arithmetic operations with float quantity values.
+- Price calculations - use `UtilPriceService` to handle rounding of price values in a centralized way and avoid handling money fractions.
 
 ## Migration Process
 
@@ -75,8 +75,8 @@ console transfer:generate
 
 3. Manually upgrade the following modules:
 
-* `ProductQuantityStorage`
-* `ShoppingListWidget`
+- `ProductQuantityStorage`
+- `ShoppingListWidget`
 
 You can find the affected modules of the float stock update in the following list.
 

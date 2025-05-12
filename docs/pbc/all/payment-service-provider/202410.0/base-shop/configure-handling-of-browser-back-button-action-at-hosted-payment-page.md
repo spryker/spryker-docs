@@ -12,9 +12,9 @@ When integrating payment service providers (PSPs) that use hosted payment pages,
 When a customer is redirected from the Spryker checkout summary page to an external PSP's hosted payment page, using the back button creates an order persistence issue. The order is already created in the system with a unique OrderReference, preventing the customer from completing the purchase if they attempt to proceed again through checkout.
 
 This issue is particularly critical in the following cases:
-* The last item in stock was part of the order
-* The customer wants to change their order after being redirected to the payment page
-* The order reference is already generated and persisted
+- The last item in stock was part of the order
+- The customer wants to change their order after being redirected to the payment page
+- The order reference is already generated and persisted
 
 ## Solution
 
@@ -82,8 +82,8 @@ Test the implementation by executing the following tests.
 4. Use the browser back button  
 
 Make sure the following applies:
-* The original order has been cancelled  
-* You can place a new order with the same items
+- The original order has been cancelled  
+- You can place a new order with the same items
 
 ### Stock verification test
 
@@ -93,8 +93,8 @@ Make sure the following applies:
 4. Use the browser back button  
 
 Make sure the following applies:
-* The item becomes available
-* You can place a new order with the same item
+- The item becomes available
+- You can place a new order with the same item
 
 ### Order status test
 
@@ -105,8 +105,8 @@ Make sure the following applies:
 5. Use the browser back button  
 
 Make sure the following applies:
-* In the Back Office, order status changes to **payment cancellation pending**
-* Order is not displayed in customer account
+- In the Back Office, order status changes to **payment cancellation pending**
+- Order is not displayed in customer account
 
 ## Troubleshooting
 
@@ -115,14 +115,14 @@ Solutions to common issues.
 
 ### Order still visible in customer account
 
-* Verify that the `exclude from customer` flag is properly set in the state machine configuration  
-* Check if the order state transition to `payment cancellation pending` is executed successfully
-* Verify that the state is properly configured in the OMS  
+- Verify that the `exclude from customer` flag is properly set in the state machine configuration  
+- Check if the order state transition to `payment cancellation pending` is executed successfully
+- Verify that the state is properly configured in the OMS  
 
 ### Stock issues
   
-* Verify that the order cancellation workflow works properly
-* Verify stock update triggers
+- Verify that the order cancellation workflow works properly
+- Verify stock update triggers
 
 
 

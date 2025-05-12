@@ -17,15 +17,15 @@ For more information about the ForeignPayment OMS configuration, see [Project gu
 
 In addition to the base shop implementation, the Stripe App in Marketplaces requires the following OMS configuration:
 
-* The `MerchantCommission/Calculate` command triggers the calculation of the commission for the merchant. By default, this command is initiated when an order is moved to the `payment captured` state. This command calculates the commission based on your projects settings. For more details on configuration, see  [Marketplace Merchant Commission feature overview](/docs/pbc/all/merchant-management/202410.0/marketplace/marketplace-merchant-commission-feature-overview.html).
+- The `MerchantCommission/Calculate` command triggers the calculation of the commission for the merchant. By default, this command is initiated when an order is moved to the `payment captured` state. This command calculates the commission based on your projects settings. For more details on configuration, see  [Marketplace Merchant Commission feature overview](/docs/pbc/all/merchant-management/202410.0/marketplace/marketplace-merchant-commission-feature-overview.html).
 
-* The `SalesPaymentMerchant/Payout` command initiates the payout to merchant action. By default, this command is initiated after the OMS is in the `delivered` state and the commission was calculated.
+- The `SalesPaymentMerchant/Payout` command initiates the payout to merchant action. By default, this command is initiated after the OMS is in the `delivered` state and the commission was calculated.
 
-* The `SalesPaymentMerchant/ReversePayout` command initiates the reversal of the payout to the merchant action. By default, this command is initiated after the OMS is in the `payment refunded` state.
+- The `SalesPaymentMerchant/ReversePayout` command initiates the reversal of the payout to the merchant action. By default, this command is initiated after the OMS is in the `payment refunded` state.
 
-* The validation of the payout status is done by the `SalesPaymentMerchant/IsMerchantPaidOut` condition. By default, this condition is triggered after a payout is done. When a payout is successful, the OMS moves to the `closed` state. If a payout fails, the OMS moves to the `payout failed` state.
+- The validation of the payout status is done by the `SalesPaymentMerchant/IsMerchantPaidOut` condition. By default, this condition is triggered after a payout is done. When a payout is successful, the OMS moves to the `closed` state. If a payout fails, the OMS moves to the `payout failed` state.
 
-* The `SalesPaymentMerchant/IsMerchantPayoutReversed` condition validates the reverse payout status. By default, this condition is triggered after the reverse payout is done. When a reverse payout is successful, the OMS moves to the `canceled` state. If a reverse payout fails, the OMS moves to the `reverse payout failed` state.
+- The `SalesPaymentMerchant/IsMerchantPayoutReversed` condition validates the reverse payout status. By default, this condition is triggered after the reverse payout is done. When a reverse payout is successful, the OMS moves to the `canceled` state. If a reverse payout fails, the OMS moves to the `reverse payout failed` state.
 
 You can change and configure your own payment OMS based on `ForeignPaymentStateMachine01.xml` from the core package. For more information about the OMS feature and its configuration, see [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html).
 
@@ -145,16 +145,16 @@ In the default OMS configuration, a payout to merchants is initiated after the O
 
 1. A customer pays for an order.
 2. The money is transferred from the customer's account, like a bank account, to the marketplace Stripe account.
-* The marketplace calculates the commission for the merchant.
-* The marketplace initiates a payout to the merchant.
-* The money is transferred from the marketplace Stripe account to the merchant's Stripe account.
+- The marketplace calculates the commission for the merchant.
+- The marketplace initiates a payout to the merchant.
+- The money is transferred from the marketplace Stripe account to the merchant's Stripe account.
 
 ### When a payout fails
 
 A payout can fail for many reasons. Examples:
-* The merchant's account isn't verified
-* The merchant's account isn't connected to the marketplace Stripe account
-* The merchant's account isn't active
+- The merchant's account isn't verified
+- The merchant's account isn't connected to the marketplace Stripe account
+- The merchant's account isn't active
 
 You can identify the cause of a failure in the Stripe Dashboard. After resolving the issue, the payout can be reinitiated.
 

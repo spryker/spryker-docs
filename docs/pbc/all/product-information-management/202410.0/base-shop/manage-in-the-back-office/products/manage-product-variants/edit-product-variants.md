@@ -40,8 +40,8 @@ Review the reference information before you start, or look up the necessary info
 To edit a product variant:
 
 1. Navigate to the *Edit Concrete Product* page using one of the following paths:
-   * **Products&nbsp;<span aria-label="and then">></span> View** in the *Actions* column for a specific abstract product **>** scroll down to the **Variants tab&nbsp;<span aria-label="and then">></span> Edit** in the *Actions* column for a specific product variant.
-    * **Products&nbsp;<span aria-label="and then">></span> Edit** in the *Actions* column for a specific abstract product **Variants tab&nbsp;<span aria-label="and then">></span> Edit** in the *Actions* column for a specific product variant.
+   - **Products&nbsp;<span aria-label="and then">></span> View** in the *Actions* column for a specific abstract product **>** scroll down to the **Variants tab&nbsp;<span aria-label="and then">></span> Edit** in the *Actions* column for a specific product variant.
+    - **Products&nbsp;<span aria-label="and then">></span> Edit** in the *Actions* column for a specific abstract product **Variants tab&nbsp;<span aria-label="and then">></span> Edit** in the *Actions* column for a specific product variant.
 2. On the *Edit Concrete Product* page, update the following tabs:
     1. *General* tab: populate name and description, valid from and to dates, make the product searchable by selecting the Searchable checkbox for the appropriate locale (or all locales).
     2. *Price & Stock* tab: define the default/original, gross/net prices, and stock.
@@ -114,8 +114,8 @@ The only field available is **Add Product Alternative by Name or SKU**. Here it'
 #### Scheduled Prices tab
 
 On this tab, you see a table with the scheduled prices imported via a CSV file. The following information is available:
-* Currency, store, net, and gross price values.
-* Start from (included) and Finish at (included) values that identify a period of time when a specific price is going to be set for a product automatically.
+- Currency, store, net, and gross price values.
+- Start from (included) and Finish at (included) values that identify a period of time when a specific price is going to be set for a product automatically.
 
 **What's next?**
 <br>Following the same steps, you will update all variants that you have added to your abstract product.

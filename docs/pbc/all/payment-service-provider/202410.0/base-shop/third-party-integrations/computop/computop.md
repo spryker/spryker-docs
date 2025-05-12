@@ -43,16 +43,16 @@ Founded in 1997, Computop is a global player for the twenty first century. Headq
 
 The Computop payment partner is shipped with the following payment methods:
 
-* Credit Card
-* Direct Debit
-* EasyCredit
-* iDeal
-* Paydirekt
-* PayNow
-* PayPal
-* SofortÜberweisung
-* PayU CEE Single
-* PayPal Express
+- Credit Card
+- Direct Debit
+- EasyCredit
+- iDeal
+- Paydirekt
+- PayNow
+- PayPal
+- SofortÜberweisung
+- PayU CEE Single
+- PayPal Express
 
 ### PSD2 compatibility
 
@@ -64,16 +64,16 @@ Push notifications speed up order placement process for customers. They allow to
 
 ## Related Developer guides
 
-* [Installing and configuring Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/install-and-configure-computop.html)
-* [Integrating Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-computop.html)
-* [Computop API calls](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/computop-api-calls.html)
-* [Computop - OMS plugins](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/computop-oms-plugins.html)
-* [Integrating the Сredit Сard payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-credit-card-payment-method-for-computop.html)
-* [Integrating the CRIF payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-crif-payment-method-for-computop.html)
-* [Integrating the Direct Debit payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-direct-debit-payment-method-for-computop.html)
-* [Integrating the Easy Credit payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-easy-credit-payment-method-for-computop.html)
-* [Integrating the iDeal payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-ideal-payment-method-for-computop.html)
-* [Integrating the Paydirekt payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paydirekt-payment-method-for-computop.html)
-* [Integrating the PayNow payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paynow-payment-method-for-computop.html)
-* [Integrating the PayPal payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paypal-payment-method-for-computop.html)
-* [Integrating the Sofort payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-sofort-payment-method-for-computop.html)
+- [Installing and configuring Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/install-and-configure-computop.html)
+- [Integrating Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-computop.html)
+- [Computop API calls](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/computop-api-calls.html)
+- [Computop - OMS plugins](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/computop-oms-plugins.html)
+- [Integrating the Сredit Сard payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-credit-card-payment-method-for-computop.html)
+- [Integrating the CRIF payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-crif-payment-method-for-computop.html)
+- [Integrating the Direct Debit payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-direct-debit-payment-method-for-computop.html)
+- [Integrating the Easy Credit payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-easy-credit-payment-method-for-computop.html)
+- [Integrating the iDeal payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-ideal-payment-method-for-computop.html)
+- [Integrating the Paydirekt payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paydirekt-payment-method-for-computop.html)
+- [Integrating the PayNow payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paynow-payment-method-for-computop.html)
+- [Integrating the PayPal payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paypal-payment-method-for-computop.html)
+- [Integrating the Sofort payment method for Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-sofort-payment-method-for-computop.html)

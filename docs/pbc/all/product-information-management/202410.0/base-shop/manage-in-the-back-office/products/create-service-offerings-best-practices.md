@@ -44,9 +44,9 @@ Now that you have the product, you can proceed with offering services to it.
 
 There are two ways of how you can create a product with a service offering:
 
-* Offer the service as a product option.
-* Create a configurable bundle that would include the product and the service.
-* Custom solution for your project.
+- Offer the service as a product option.
+- Create a configurable bundle that would include the product and the service.
+- Custom solution for your project.
 
 See below for information and step-by-step guides on each of the approaches.
 

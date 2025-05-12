@@ -114,8 +114,8 @@ Meaning it will be one sales order containing multiple order items.
 ## Stock calculation and definition
 
 In Spryker Commerce OS, customers can buy a product defined by the following elements:
-* Quantity. The number of times a customer adds the product to cart.
-* Amount (only for packaged products). How many items the packaged product contains.
+- Quantity. The number of times a customer adds the product to cart.
+- Amount (only for packaged products). How many items the packaged product contains.
 
 The stock will then be calculated as follows:
 *Reserved stock = Quantity x Amount*
@@ -159,8 +159,8 @@ If a customer selects **Ring**, they can set only quantity (in our example, 3) b
 
 After the customer places the order, in the Back Office, we see the following:
 
-* Availability for the leading product (**VGA cables as long as you want**) decreased by 4.5 (amount of reserved products)
-* Availablity for the non-leading product (**VGA cables**) decreased by 3 (quantity of reserved products).
+- Availability for the leading product (**VGA cables as long as you want**) decreased by 4.5 (amount of reserved products)
+- Availablity for the non-leading product (**VGA cables**) decreased by 3 (quantity of reserved products).
 Then, the customer decided to select the **As long as you want** packaging unit type. In this case, they can set quantity and specify how many meters or centimeters of cables there will be in the packaging unit amount. This is possible because **Amount** is a variable for this packaging unit type.
 
 ![Case3-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+&+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/case3-1.png)
@@ -169,26 +169,26 @@ In our example, the customer set the **meter** for a sales unit, selected **3.5*
 
 Once the order has been placed, we can navigate to the Back Office and see the following:
 
-* Availability for the leading product (**VGA cables as long as you want**) decreased by 11.5 (amount of reserved products)
-* Availability for the non-leading product (**VGA cables**) didn't change from the previous time.
+- Availability for the leading product (**VGA cables as long as you want**) decreased by 11.5 (amount of reserved products)
+- Availability for the non-leading product (**VGA cables**) didn't change from the previous time.
 The following figure shows how these items and packaging units appear in the cart.
 
 ![Cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/cart-with-items.png)
 
 In our example, the following conditions are met:
 
-* We put different packaging units into the cart.
-* The products have different sales units.
-* The amount has different sales units.
-* There are products with a fixed and a variable amount of stock.
+- We put different packaging units into the cart.
+- The products have different sales units.
+- The amount has different sales units.
+- There are products with a fixed and a variable amount of stock.
 
 ## Current constraints
 
-* In the Spryker Commerce OS, you cannot define packaging units for products in the Back Office. They are imported to the database manually. See [HowTo: Import Packaging Units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.html) for more details.
-* We strive to shift all business logic to our backend, however, with Packaging Units, calculations are performed on Yves.
-* On the shopping cart as well as the shopping list page, products do not have a drop-down to change the packaging units. You can select a packaging unit on the product details page only.
-* A shopper cannot reorder the items with the selected packaging units as they are not added automatically. They must be added manually on the product details page.
-* In the Quick Order form and search widget, the products use the default packaging units that cannot be changed. Flexible packaging units are not supported on the **Quick Order** page.
+- In the Spryker Commerce OS, you cannot define packaging units for products in the Back Office. They are imported to the database manually. See [HowTo: Import Packaging Units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.html) for more details.
+- We strive to shift all business logic to our backend, however, with Packaging Units, calculations are performed on Yves.
+- On the shopping cart as well as the shopping list page, products do not have a drop-down to change the packaging units. You can select a packaging unit on the product details page only.
+- A shopper cannot reorder the items with the selected packaging units as they are not added automatically. They must be added manually on the product details page.
+- In the Quick Order form and search widget, the products use the default packaging units that cannot be changed. Flexible packaging units are not supported on the **Quick Order** page.
 
 {% info_block infoBox "Example:" %}
 

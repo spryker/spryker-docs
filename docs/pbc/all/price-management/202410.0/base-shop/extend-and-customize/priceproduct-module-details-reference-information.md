@@ -21,8 +21,8 @@ Starting from version 2.0.0 of the `PriceProduct` module, we have added the Serv
 
 The prices list can come from Yves (Storage) and Zed (DB).
 
-* In case with Yves, the `PriceProductFilterTransfer` object must be created for filtering, which contains named values (store name, currency code, named price mode, named price type).
-* In case with Zed, the `PriceProductCriteriaTransfer` object must be created for filtering, which contains IDs as values (store ID, currency ID, and price type ID).
+- In case with Yves, the `PriceProductFilterTransfer` object must be created for filtering, which contains named values (store name, currency code, named price mode, named price type).
+- In case with Zed, the `PriceProductCriteriaTransfer` object must be created for filtering, which contains IDs as values (store ID, currency ID, and price type ID).
 
 If you need to add additional fields to one of these objects, add it to another one (if you added QTY to filter, criteria must be updated). So that `PriceProductFilterTransfer` could always be converted to `PriceProductCriteriaTransfer`.
 
@@ -44,9 +44,9 @@ The `PriceProduct` module has a set of plugins necessary for work with the price
 
 ### Zed
 
-* `PriceDimensionAbstractSaverPluginInterface` — saves price for abstract product in the DB for the selected price dimension (based on `PriceProductTransfer->getPriceDimension())`
-* `PriceDimensionConcreteSaverPluginInterface` — saves price for concrete product in the DB for the selected price dimension (based on `PriceProductTransfer->getPriceDimension())`
-* `PriceDimensionQueryCriteriaPluginInterface` — is used for expanding `PriceProductStoreQuery` using the new transfer object `QueryCriteriaTransfer`.
+- `PriceDimensionAbstractSaverPluginInterface` — saves price for abstract product in the DB for the selected price dimension (based on `PriceProductTransfer->getPriceDimension())`
+- `PriceDimensionConcreteSaverPluginInterface` — saves price for concrete product in the DB for the selected price dimension (based on `PriceProductTransfer->getPriceDimension())`
+- `PriceDimensionQueryCriteriaPluginInterface` — is used for expanding `PriceProductStoreQuery` using the new transfer object `QueryCriteriaTransfer`.
 
 Based on `PriceProductCriteria`, you can build your own `QueryCriteria` to get prices using joins—all prices can be selected from needed price dimensions using only one SQL query. See the DB scheme:
 ![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+PriceProduct/priece-dimensions-diagram.png)
@@ -104,8 +104,8 @@ Another option is to run `console price-product-store:optimize` from time to tim
 
 ### Service
 
-* `PriceProductFilterPluginInterface` — filters array of prices based on `PriceProductFilterTransfer`.
-* `PriceProductDimensionExpanderStrategyPluginInterface` — expands `PriceProductDimension` transfer basing on some properties of this transfer (like `idPriceProductDefault`).
+- `PriceProductFilterPluginInterface` — filters array of prices based on `PriceProductFilterTransfer`.
+- `PriceProductDimensionExpanderStrategyPluginInterface` — expands `PriceProductDimension` transfer basing on some properties of this transfer (like `idPriceProductDefault`).
 
 Reading prices from Storage is implemented in the `PriceProductStorage` module, plugins for reading prices reside in the `PriceProductStorageExtension` module (`/Spryker/Client/PriceProductStorageExtension/Dependency/Plugin/PriceProductStoragePriceDimensionPluginInterface`) which has two methods for reading prices from Storage: `findProductConcretePrices($id)` and `findProductAbstractPrices($id)`
 
@@ -113,5 +113,5 @@ Prices for price dimension inside Storage are supposed to be stored as a separat
 
 All plugins can be added on the project level in:
 
-* `PriceProductDependencyProvider` for the Zed and Service layers.
-* `PriceProductStorageDependencyProvider` for the Client layer.
+- `PriceProductDependencyProvider` for the Zed and Service layers.
+- `PriceProductStorageDependencyProvider` for the Client layer.

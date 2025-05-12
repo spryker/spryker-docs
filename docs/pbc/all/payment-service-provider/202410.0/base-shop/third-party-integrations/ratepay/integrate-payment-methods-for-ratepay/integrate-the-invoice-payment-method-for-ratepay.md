@@ -56,27 +56,27 @@ To integrate invoice payment, you need to: RatePAY invoice payment configuration
 
 The configuration to integrate invoice payments using RatePAY is:
 
-* `PROFILE_ID`: merchant's login (required).
+- `PROFILE_ID`: merchant's login (required).
 
-* `SECURITY_CODE`: merchant's password (required).
+- `SECURITY_CODE`: merchant's password (required).
 
-* `SHOP_ID`: shop identifier (required).
+- `SHOP_ID`: shop identifier (required).
 
-* `SYSTEM_ID`: system identifier (required).
+- `SYSTEM_ID`: system identifier (required).
 
-* `CLIENT_VERSION`: client system version.
+- `CLIENT_VERSION`: client system version.
 
-* `CLIENT_NAME`: client name.
+- `CLIENT_NAME`: client name.
 
-* `RATEPAY_REQUEST_VERSION`: request version.
+- `RATEPAY_REQUEST_VERSION`: request version.
 
-* `RATEPAY_REQUEST_XMLNS_URN`: request XMLNS urn.
+- `RATEPAY_REQUEST_XMLNS_URN`: request XMLNS urn.
 
-* `MODE`: the mode of the transaction, either test or live (required).
+- `MODE`: the mode of the transaction, either test or live (required).
 
-* `API_TEST_URL`: test mode API url.
+- `API_TEST_URL`: test mode API url.
 
-* `API_LIVE_URL`: live mode API url.
+- `API_LIVE_URL`: live mode API url.
 
 ## Perform Requests
 

@@ -19,9 +19,9 @@ redirect_from:
 ---
 
 The *Product Relations* feature lets product catalog managers create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes:
-* Promote products in cart.
-* Recommend product alternatives.
-* Display comparable or additional products to the product a customer is viewing.
+- Promote products in cart.
+- Recommend product alternatives.
+- Display comparable or additional products to the product a customer is viewing.
 
 Product relations are established only between abstract products. An abstract product can have multiple product relations.
 
@@ -122,8 +122,8 @@ A product catalog manager can select this option when [creating](/docs/pbc/all/p
 
 A developer can do the following:
 
-* Manually update the list of related products by running the `console product-relation:update` command.
-* Change the default behavior of the cronjob that updates related products in `config/Zed/cronjobs/jenkins.php`.
+- Manually update the list of related products by running the `console product-relation:update` command.
+- Change the default behavior of the cronjob that updates related products in `config/Zed/cronjobs/jenkins.php`.
 
 ## Store relation
 

@@ -20,8 +20,8 @@ An in-built cron job switches the prices on the specified dates for all the spec
 ## Price types
 
 The feature only works with the following price types:
-* Default
-* Original
+- Default
+- Original
 
 A *default price* is the one that is shown as the real price of the product.
 
@@ -67,26 +67,26 @@ Unlike imported price schedules, the price schedules added, deleted, or edited f
 ## Scheduled price application logic
 
 You can schedule multiple prices on overlapping dates. For example, you define the following schedule:
-* Scheduled price #1 takes effect between 01.01 and 31.07.
-* Scheduled price #2 takes effect between 25.02 and 08.06.
-* Scheduled price #3 takes effect between 01.03 and 01.04.
+- Scheduled price #1 takes effect between 01.01 and 31.07.
+- Scheduled price #2 takes effect between 25.02 and 08.06.
+- Scheduled price #3 takes effect between 01.03 and 01.04.
 
 In this case:
-* Scheduled price #1 is applied on 01.01 and remains active till scheduled price #2 gets applied on 25.02.
-* Scheduled price #2 remains active until scheduled price #3 gets applied on 01.03.
-* When the active period of scheduled price #3 ends on 01.04, the price reverts back to scheduled price #2.
-* When the active period of scheduled price #2 ends on 08.06, the price reverts back to scheduled price #1.
+- Scheduled price #1 is applied on 01.01 and remains active till scheduled price #2 gets applied on 25.02.
+- Scheduled price #2 remains active until scheduled price #3 gets applied on 01.03.
+- When the active period of scheduled price #3 ends on 01.04, the price reverts back to scheduled price #2.
+- When the active period of scheduled price #2 ends on 08.06, the price reverts back to scheduled price #1.
 ![Price application diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Scheduled+Prices/Scheduled+Prices+Feature+Overview/price-application-diagram.png)
 
-* When there are no scheduled prices left to apply, the ORIGINAL price specified outside of the scheduled price logic gets applied.
-* When there are no scheduled prices left to apply, and the ORIGINAL price is not specified outside of the scheduled price logic, you can add the product to the cart, and its price won't be displayed.
+- When there are no scheduled prices left to apply, the ORIGINAL price specified outside of the scheduled price logic gets applied.
+- When there are no scheduled prices left to apply, and the ORIGINAL price is not specified outside of the scheduled price logic, you can add the product to the cart, and its price won't be displayed.
 
 ## Current constraints
 
 The feature has the following functional constraints which are going to be resolved in the future.
 
-* The default number of prices that the cron job can process at a time is 1000.
-* The feature does not work with merchant prices ([relations](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html)) and [volume prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/volume-prices-overview.html).
+- The default number of prices that the cron job can process at a time is 1000.
+- The feature does not work with merchant prices ([relations](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html)) and [volume prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/volume-prices-overview.html).
 
 ## Related Business User documents
 

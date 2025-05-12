@@ -42,9 +42,9 @@ Example: `/payment?url=base64-encoded-URL-for-iframe-src`.
 
 2. Depending on your frontend setup, create a page to render the Stripe payment page in one of the following ways:
 
-* Use the following minimal page, which can be set up with any frontend technology.
-* With a third-party frontend, follow the documentation of your framework to create a page to render the Stripe payment page using query parameters from the redirect URL provided in the Glue API `POST /checkout` response.
-* With Yves, follow [Create an Yves page for rendering the Stripe payment page](#create-an-yves-page-for-rendering-the-stripe-payment-page).
+- Use the following minimal page, which can be set up with any frontend technology.
+- With a third-party frontend, follow the documentation of your framework to create a page to render the Stripe payment page using query parameters from the redirect URL provided in the Glue API `POST /checkout` response.
+- With Yves, follow [Create an Yves page for rendering the Stripe payment page](#create-an-yves-page-for-rendering-the-stripe-payment-page).
 
 ```php
 <!DOCTYPE html>

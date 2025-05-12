@@ -33,9 +33,9 @@ related:
 
 ## Authorization Call
 
-* Authorize money.
-* There is no partial authorization. Please make one API call to make authorization for all items in the order.
-* It is not possible to Authorize a higher amount than in the ORDER.
+- Authorize money.
+- There is no partial authorization. Please make one API call to make authorization for all items in the order.
+- It is not possible to Authorize a higher amount than in the ORDER.
 
 ## Inquire Call
 
@@ -43,21 +43,21 @@ Status inquiries within Paygate give detailed information about the amounts that
 
 ## Reverse Call
 
-* Reverse.aspx does not only reverse authorizations, but also any last transaction stage. If the last transaction was a capture, `Reverse.aspx` initiates the reverse–for example, a credit. Therefore, the utmost caution is urged. Use it at your own risk. We recommend checking the transaction status with Inquire.aspx before using Reverse.aspx.
-* Use it just after "Inquire" call if it returns the previous action as "Authorization".
+- Reverse.aspx does not only reverse authorizations, but also any last transaction stage. If the last transaction was a capture, `Reverse.aspx` initiates the reverse–for example, a credit. Therefore, the utmost caution is urged. Use it at your own risk. We recommend checking the transaction status with Inquire.aspx before using Reverse.aspx.
+- Use it just after "Inquire" call if it returns the previous action as "Authorization".
 
 ## Capture Call
 
-* Capture money.
-* Shipment price is captured with the first capture request.
-* Please contact the helpdesk, if you want to capture amounts < 100 (the smallest currency unit).
-* It is not possible to capture a higher amount than in the ORDER or Auth.
+- Capture money.
+- Shipment price is captured with the first capture request.
+- Please contact the helpdesk, if you want to capture amounts < 100 (the smallest currency unit).
+- It is not possible to capture a higher amount than in the ORDER or Auth.
 
 ## Refund Call
 
-* Refund money.
-* The merchant has the chance to refund more money to the customer than captured.
-* Shipment price will be refunded with the last possible refund request. If You do not need to refund shipment price:
-  * Create `Pyz\Zed\Computop\ComputopConfig`.
-  * Extend it from original `SprykerEco\Zed\Computop\ComputopConfig`.
-  * Update `isRefundShipmentPriceEnabled` method (set up "false").
+- Refund money.
+- The merchant has the chance to refund more money to the customer than captured.
+- Shipment price will be refunded with the last possible refund request. If You do not need to refund shipment price:
+  - Create `Pyz\Zed\Computop\ComputopConfig`.
+  - Extend it from original `SprykerEco\Zed\Computop\ComputopConfig`.
+  - Update `isRefundShipmentPriceEnabled` method (set up "false").

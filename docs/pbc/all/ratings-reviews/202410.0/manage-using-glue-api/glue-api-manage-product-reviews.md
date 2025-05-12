@@ -18,9 +18,9 @@ related:
 
 Products and ratings API helps you to:
 
-* Retrieve average rating of any product.
-* Retrieve a list of ratings and reviews of a product.
-* Allow customers to review and rate products.
+- Retrieve average rating of any product.
+- Retrieve a list of ratings and reviews of a product.
+- Allow customers to review and rate products.
 
 ## Installation
 
@@ -162,8 +162,8 @@ Request sample: provide a rating and a review of products
 ## Other management options
 
 You can retrieve the average rating of a product as follows:
-* [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#retrieve-an-abstract-product)
-* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product)
+- [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#retrieve-an-abstract-product)
+- [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product)
 
 Also, all the endpoints that accept `abstract-products` and `concrete-products` resources as included resources in requests, return the average product rating.
 

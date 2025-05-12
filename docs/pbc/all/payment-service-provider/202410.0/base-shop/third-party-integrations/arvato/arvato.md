@@ -21,9 +21,9 @@ related:
 
 ## Related Developer guides
 
-* [Installing and configuring Arvato](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/arvato/install-and-configure-arvato.html)
-* [Arvato - Risk Check](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/arvato/arvato-risk-check.html)
-* [Arvato - Store Order](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/arvato/arvato-store-order.html)  
+- [Installing and configuring Arvato](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/arvato/install-and-configure-arvato.html)
+- [Arvato - Risk Check](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/arvato/arvato-risk-check.html)
+- [Arvato - Store Order](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/arvato/arvato-store-order.html)  
 
 
 ---

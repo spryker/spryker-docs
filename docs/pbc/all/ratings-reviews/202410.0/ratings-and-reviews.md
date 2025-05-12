@@ -38,8 +38,8 @@ For more details about managing ratings and reviews, check the video:
 ## Current constraints
 
 The feature has the following functional constraints, which are going to be resolved in the future:
-* Product reviews are linked to locales but not stores.
-* A review is available in all the stores that share the locale of the store in which it has been originally created.
+- Product reviews are linked to locales but not stores.
+- A review is available in all the stores that share the locale of the store in which it has been originally created.
 
 
 ## Related Business User documents

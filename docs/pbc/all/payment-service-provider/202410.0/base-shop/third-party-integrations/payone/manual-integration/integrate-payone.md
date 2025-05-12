@@ -17,9 +17,9 @@ PayOne is not compatible with gift cards. We will update this document once the 
 {% endinfo_block %}
 
 **Objectives:**
-* Place order with PayPal express checkout.
-* Be redirected to summary page of standard checkout.
-* Have a shipping method selector on summary page.
+- Place order with PayPal express checkout.
+- Be redirected to summary page of standard checkout.
+- Have a shipping method selector on summary page.
 
 ## Frontend Update
 

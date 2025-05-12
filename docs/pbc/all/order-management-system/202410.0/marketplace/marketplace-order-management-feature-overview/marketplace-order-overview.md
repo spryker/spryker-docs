@@ -55,12 +55,12 @@ Marketplace Sales Order Total = ∑ Merchant Order Totals + ∑ Marketplace Sale
 
 At the same time, each Marketplace Order Total includes the sum of the respective Merchant Order Totals, for example:
 
-* Marketplace Sales Order Subtotal = Merchant Order Subtotal 1 + Merchant Order Subtotal 2 + Merchant Order Subtotal n.
-* Marketplace Sales Order Discount Total = ∑ Discount Totals included in all Merchant Orders. Check [Marketplace Promotions and Discounts feature overview](/docs/pbc/all/discount-management/{{page.version}}/marketplace/marketplace-promotions-discounts-feature-overview.html) to learn how the discounts are calculated.
-* Marketplace Sales Order Tax Total= ∑ Merchant Order Tax Totals.
-* Marketplace Sales Order Grand Total = ∑ Merchant Order Grand Totals.
-* Marketplace Sales Order Refund Total = ∑ Merchant Order Refund Totals.
-* Marketplace Sales Order Canceled Total = ∑ Merchant Order Canceled Totals.
+- Marketplace Sales Order Subtotal = Merchant Order Subtotal 1 + Merchant Order Subtotal 2 + Merchant Order Subtotal n.
+- Marketplace Sales Order Discount Total = ∑ Discount Totals included in all Merchant Orders. Check [Marketplace Promotions and Discounts feature overview](/docs/pbc/all/discount-management/{{page.version}}/marketplace/marketplace-promotions-discounts-feature-overview.html) to learn how the discounts are calculated.
+- Marketplace Sales Order Tax Total= ∑ Merchant Order Tax Totals.
+- Marketplace Sales Order Grand Total = ∑ Merchant Order Grand Totals.
+- Marketplace Sales Order Refund Total = ∑ Merchant Order Refund Totals.
+- Marketplace Sales Order Canceled Total = ∑ Merchant Order Canceled Totals.
 
 The sum of Merchant Order Expense Totals may not equal the Marketplace Sales Order Expense Total, as the Marketplace order itself may have additional expenses or fees that do not relate to Merchant orders.
 
@@ -70,9 +70,9 @@ The sum of Merchant Order Expense Totals may not equal the Marketplace Sales Ord
 
 Rounding rules for a regular SCOS sales order also apply to the Marketplace order. The rules imply:
 
-* The rounding is performed on the third decimal number.
-* If the number you are rounding is followed by 5, 6, 7, 8, or 9, round the number up. Example: The number  325.78<u>7</u>21 will be rounded to 325.79.
-* If the number you are rounding is followed by 0, 1, 2, 3, or 4, round the number down. Example:  The number 62.53<u>4</u>7 will be rounded to 62.53.
+- The rounding is performed on the third decimal number.
+- If the number you are rounding is followed by 5, 6, 7, 8, or 9, round the number up. Example: The number  325.78<u>7</u>21 will be rounded to 325.79.
+- If the number you are rounding is followed by 0, 1, 2, 3, or 4, round the number down. Example:  The number 62.53<u>4</u>7 will be rounded to 62.53.
 
 {% info_block warningBox "Warning" %}
 
@@ -82,8 +82,8 @@ In some cases, because of rounding, the amounts of Marketplace order totals can 
 
 ## Next steps
 
-* [Learn about the merchant orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html)
-* [Learn about the Marketplace and merchant state machines](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html)
+- [Learn about the merchant orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html)
+- [Learn about the Marketplace and merchant state machines](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html)
 
 ## Related Business User documents
 

@@ -24,7 +24,7 @@ Implement a mechanism to detect and handle cases where customers return from a h
 
 1. To support browser back button behavior for hosted payment pages, register `PaymentAppCancelOrderOnSummaryPageAfterRedirectFromHostedPaymentPagePlugin` in your project's `CheckoutPageDependencyProvider`.
 
-Add the following methods to `src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php`:
+Add the following method to `src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php`:
 
 ```php
 <?php
@@ -39,16 +39,6 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
      * @return array<\SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\CheckoutStepPreConditionPluginInterface>
      */
     protected function getCheckoutSummaryStepPreConditionPlugins(): array
-    {
-        return [
-            new PaymentAppCancelOrderOnSummaryPageAfterRedirectFromHostedPaymentPagePlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\CheckoutStepPostConditionPluginInterface>
-     */
-    protected function getCheckoutSummaryStepPostConditionPlugins(): array
     {
         return [
             new PaymentAppCancelOrderOnSummaryPageAfterRedirectFromHostedPaymentPagePlugin(),

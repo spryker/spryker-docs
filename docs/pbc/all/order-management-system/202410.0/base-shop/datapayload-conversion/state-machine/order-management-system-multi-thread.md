@@ -26,8 +26,8 @@ related:
 
 Order management system (OMS) heavily relies on state machine-related concepts like [event timeouts](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html#timeout) and [conditions](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html#conditions). When an order is managed, a lot of the timeout and condition entities are processed. The following two console command do the processsing of timeouts and conditions in Spryker:
 
-* `oms:check-timeout`
-* `oms:check-condition`
+- `oms:check-timeout`
+- `oms:check-condition`
 
 Out of the box, both of these commands process their respective entities sequentially. Each of them grabs and processes all the available entities one by one. Both commands support the `limit` option and thus can do the processing in batches. But still, all the work is done synchronously. Because of this, order management could become a bottleneck for shops with lots of orders being placed and managed. The OMS multi-thread improves this by introducing the ability to process both timeouts and conditions in parallel.
 
@@ -119,5 +119,5 @@ $jobs[] = [
 
 Regarding performance, there are a few things to keep in mind when running the OMS commands:
 
-* The limit options: commands `oms:check-timeout` and `oms:check-condition` have an option that allows specifying the maximum number of order items to be handled during a single command run. It's recommended to provide this option for speeding up the database-related activities.
-* You can specify more than one processor identifier for a single command run. But for large databases, this is generally not recommended. Specifying more than one process identifier affects the SQL query running under the hood and might disable a table index needed for this query to be executed in the most performant way.
+- The limit options: commands `oms:check-timeout` and `oms:check-condition` have an option that allows specifying the maximum number of order items to be handled during a single command run. It's recommended to provide this option for speeding up the database-related activities.
+- You can specify more than one processor identifier for a single command run. But for large databases, this is generally not recommended. Specifying more than one process identifier affects the SQL query running under the hood and might disable a table index needed for this query to be executed in the most performant way.

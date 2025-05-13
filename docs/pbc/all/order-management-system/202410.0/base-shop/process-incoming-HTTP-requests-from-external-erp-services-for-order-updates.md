@@ -21,9 +21,9 @@ Easy to implement, understand, and maintain.
 
 **Cons**
 
-* Long-running requests can fail because of an HTTP connection timeout.
-* Heavy operations require scaling the hardware for the application, which can lead to extra costs.
-* Retry mechanism should be implemented on the caller's side.
+- Long-running requests can fail because of an HTTP connection timeout.
+- Heavy operations require scaling the hardware for the application, which can lead to extra costs.
+- Retry mechanism should be implemented on the caller's side.
 
 ### Asynchronous handling of incoming requests
 
@@ -41,16 +41,16 @@ An incoming request handler must not only store the event context but also trigg
 
 **Pros**
 
-* The worker is available by default.
-* More transparency with the logic that is represented in OMS.
-* Easy to understand, maintain, and support.
-* Default fault tolerance and retry logic support.
+- The worker is available by default.
+- More transparency with the logic that is represented in OMS.
+- Easy to understand, maintain, and support.
+- Default fault tolerance and retry logic support.
 
 **Cons**
 
-* Can run logic in OMS plugins only.
-* Cannot trigger OMS events for the same order.
-* Extra OMS elements can make the graph harder to understand and maintain.
+- Can run logic in OMS plugins only.
+- Cannot trigger OMS events for the same order.
+- Extra OMS elements can make the graph harder to understand and maintain.
 
 ##### Incoming request handling and passing control to the worker
 
@@ -81,12 +81,12 @@ The Jenkins worker listens to the storage and begins processing when an event ap
 
 **Pros**
 
-* Can handle any kind of logic, such as triggering an OMS event, working with multiple orders, and processing non-OMS-related logic.
+- Can handle any kind of logic, such as triggering an OMS event, working with multiple orders, and processing non-OMS-related logic.
 
 **Cons**
 
-* Requires custom implementation on the project level.
-* Requires custom monitoring, operating tools, and procedures.
+- Requires custom implementation on the project level.
+- Requires custom monitoring, operating tools, and procedures.
 
 If the worker works with OMS, the workflow is as follows:
 

@@ -45,10 +45,10 @@ Campaigns are a powerful tool for visual merchandising. One of their numerous fu
 
 These types of the campaign can be created with the Campaign Assistant:
 
-* **Feedback Campaigns**: Display preset texts and banners with search results. Also used for pushed products.
-* **Redirect Campaigns**: Redirect the user to the specific pages for certain search terms.
-* **Advisor Campaigns**: Manages questions and answers that are presented to the shop visitor. Answers lead to specific product sets.
-* **Product Campaigns**: Allows you to place campaigns on product pages instead of search result pages.
+- **Feedback Campaigns**: Display preset texts and banners with search results. Also used for pushed products.
+- **Redirect Campaigns**: Redirect the user to the specific pages for certain search terms.
+- **Advisor Campaigns**: Manages questions and answers that are presented to the shop visitor. Answers lead to specific product sets.
+- **Product Campaigns**: Allows you to place campaigns on product pages instead of search result pages.
 
 ### Feedback Campaign
 

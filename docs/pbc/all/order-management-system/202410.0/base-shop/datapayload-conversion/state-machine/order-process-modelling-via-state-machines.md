@@ -45,10 +45,10 @@ The order is being shipped if the payment is successful.
 
 You can tailor the State Machine to your needs to trigger certain processes automatically or execute them manually.
 
-* Model and visualize the process as a state machine in XML.
-* Reusable sub-processes, such as return-process, programmable commands and conditions.
-* Events can be triggered manually or fully automated.
-* Timeouts.
+- Model and visualize the process as a state machine in XML.
+- Reusable sub-processes, such as return-process, programmable commands and conditions.
+- Events can be triggered manually or fully automated.
+- Timeouts.
 
 ## State machine module
 
@@ -70,8 +70,8 @@ There is already an example state machine implemented in Legacy Demoshop. Look f
 
 How are the states modeled in the XML?
 
-* A list of state elements can be easily defined in an XML file, as in the following example.
-* A state is defined by a name.
+- A list of state elements can be easily defined in an XML file, as in the following example.
+- A state is defined by a name.
 
 {% info_block infoBox %}
 
@@ -133,10 +133,10 @@ Events tell when a transition from one OMS state to another can be triggered. Ev
 
 The events can be fired as follows:
 
-* Automatically: If an event has the `onEnter="true"` attribute associated, then the event is fired automatically when the source state is reached. For example, `<event name="authorize" onEnter="true"/>` means that the OMS state-authorized is triggered automatically.
-* By setting the `manual` attribute to `true`: This adds a button in the **Back Office → View Order [Order ID**] page that allows you to manually trigger the corresponding transition by clicking the button. For example, `<event name="cancel" manual="true"/>` means that the OMS state canceled can only be triggered by clicking the **cancel** button for the order state.
-* Via an API call: The `triggerEvent`method allows triggering an event for a given process instance. For example, if a message from the payment provider is received that the capture was successful, the corresponding process instance can be triggered via the API call.
-* By a timeout: Events are triggered after the defined time has passed. For example, `<event name="close" manual="true" timeout="1 hour"/>` means that the OMS state closed will be triggered in 1 hour, if not triggered manually from the Back Office earlier. Now let's assume we are trying to define the prepayment process, in which if after 15 days no payment is received, `reminder sent` is fired because of the timeout. How is the reminder then technically sent? This can be implemented through a command attached to the `sendFirstReminder` event. The command attribute references a PHP class that implements a specific interface. Every time the event is fired (automatically, after the timeout), Zed makes sure the associated command is executed. If an exception occurs in the command coding, the order/order item stays in the source state.
+- Automatically: If an event has the `onEnter="true"` attribute associated, then the event is fired automatically when the source state is reached. For example, `<event name="authorize" onEnter="true"/>` means that the OMS state-authorized is triggered automatically.
+- By setting the `manual` attribute to `true`: This adds a button in the **Back Office → View Order [Order ID**] page that allows you to manually trigger the corresponding transition by clicking the button. For example, `<event name="cancel" manual="true"/>` means that the OMS state canceled can only be triggered by clicking the **cancel** button for the order state.
+- Via an API call: The `triggerEvent`method allows triggering an event for a given process instance. For example, if a message from the payment provider is received that the capture was successful, the corresponding process instance can be triggered via the API call.
+- By a timeout: Events are triggered after the defined time has passed. For example, `<event name="close" manual="true" timeout="1 hour"/>` means that the OMS state closed will be triggered in 1 hour, if not triggered manually from the Back Office earlier. Now let's assume we are trying to define the prepayment process, in which if after 15 days no payment is received, `reminder sent` is fired because of the timeout. How is the reminder then technically sent? This can be implemented through a command attached to the `sendFirstReminder` event. The command attribute references a PHP class that implements a specific interface. Every time the event is fired (automatically, after the timeout), Zed makes sure the associated command is executed. If an exception occurs in the command coding, the order/order item stays in the source state.
 
 ```xml
 <transition command="Oms/sendFirstReminder">
@@ -322,8 +322,8 @@ For example, a payment subprocess and cancellation subprocess.
 
 There are several reasons for introducing subprocesses when modeling a state machine process:
 
-* The flow of the process is easier to follow.
-* If more than one process needs to be defined–for example, orders that are being paid before delivery and orders that are paid on delivery–then the common parts of the processes can be extracted into subprocesses and reused.
+- The flow of the process is easier to follow.
+- If more than one process needs to be defined–for example, orders that are being paid before delivery and orders that are paid on delivery–then the common parts of the processes can be extracted into subprocesses and reused.
 
 To introduce a subprocess in the main process, you need to specify it's name under the subprocesses tag as in the following example:
 
@@ -469,5 +469,5 @@ A transition from one state to another can be conditioned: it's possible to make
 
 Regarding performance, there are a few things to keep in mind when determining state machine to decrease order creation response time:
 
-* It would be better not to determine any additional attributes for state `new`, such as `reserved="true"`, because additional action can increase time costs significantly.
-* To move high time cost operation from handling HTTP-request for order creation to the background, you can use `timeout="1 second"` instead of `onEnter="true"` for the event in transition from the first state of order.
+- It would be better not to determine any additional attributes for state `new`, such as `reserved="true"`, because additional action can increase time costs significantly.
+- To move high time cost operation from handling HTTP-request for order creation to the background, you can use `timeout="1 second"` instead of `onEnter="true"` for the event in transition from the first state of order.

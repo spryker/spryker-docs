@@ -42,10 +42,10 @@ This section holds reference information related to viewing marketplace orders.
 The last created order goes on top of the table by default. However, you can sort the table by the order number, order reference, date of creation, customer emails, or the number of items ordered.
 
 On the **Orders** page, you see the following:
-* Order number, reference, and the creation date.
-* Customer name and email.
-* Order state, the grand total of the order, and the number of items ordered.
-* Actions that you can do on this page.
+- Order number, reference, and the creation date.
+- Customer name and email.
+- Order state, the grand total of the order, and the number of items ordered.
+- Actions that you can do on this page.
 
 By default, the last created order goes on top of the table. However, you can sort and search **List of orders**.
 
@@ -149,8 +149,8 @@ You can set different states for your order by clicking the action buttons. The 
 
 For reference information about the **Orders** and **View Order: *[Order ID]*** pages, on this page, see:
 
-* [Orders page](#orders-page)
-* [View Order: [Order ID](#view-order-order-id)
+- [Orders page](#orders-page)
+- [View Order: [Order ID](#view-order-order-id)
 
 
 ## Creating a marketplace return
@@ -167,10 +167,10 @@ To create a return:
 
 1. On the **View Order: *[Order ID]*** page, click **Return** in the top right corner. This opens the **Create Return** page.
 2. On the **Create Return** page, select the items you want to return and optionally the return reason for the items. The following return reasons are provided out of the box:
-* Damaged
-* Wrong item
-* No longer needed
-* Custom reason
+- Damaged
+- Wrong item
+- No longer needed
+- Custom reason
 
 {% info_block infoBox "Info" %}
 
@@ -317,10 +317,10 @@ The page refreshes to show the success message about comment creation. Your mess
 
 **Tips and tricks**
 
-* To send an email to a customer, on the **Overview of Orders** page, click the hyperlinked customer email in the Email column.
-* To view customer details:
-  * On the **Overview of Orders** page, click the hyperlinked customer name in the **Customer Full Name** column.
-  * On the **View Order** page, scroll down to the **Customer** section and click the hyperlinked **Reference**.
+- To send an email to a customer, on the **Overview of Orders** page, click the hyperlinked customer email in the Email column.
+- To view customer details:
+  - On the **Overview of Orders** page, click the hyperlinked customer name in the **Customer Full Name** column.
+  - On the **View Order** page, scroll down to the **Customer** section and click the hyperlinked **Reference**.
 
 ## Editing a billing address in the marketplace order
 

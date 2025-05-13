@@ -66,9 +66,9 @@ Channel Management in FACT-Finder admin panel can be used for creating and remov
 
 By default, channel settings should be the following:
 
-* File encoding - `UTF-8`
-* Enclosing (quote) character - `"`
-* Field separator - `,`
-* Number of header lines - `1`
-* Data record ID - `ProductNumber`
-* Product number for tracking - `ProductNumber`
+- File encoding - `UTF-8`
+- Enclosing (quote) character - `"`
+- Field separator - `,`
+- Number of header lines - `1`
+- Data record ID - `ProductNumber`
+- Product number for tracking - `ProductNumber`

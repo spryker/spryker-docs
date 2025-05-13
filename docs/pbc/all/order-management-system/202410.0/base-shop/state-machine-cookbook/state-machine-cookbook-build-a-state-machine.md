@@ -40,12 +40,12 @@ To illustrate how to create and implement a state machine, let's create one that
 
 This use case scenario must implement the following behaviors:
 
-* The payment must be done before packing the order.
-* After the order is paid, it can be packed and shipped to the customer.
-* The customer can return order items within 100 days since the order was placed.
-* If the customer returns the order items, the refund process must be initiated.
-* After 100 days have passed, the order is considered completed.
-* After a return, the order is considered completed.
+- The payment must be done before packing the order.
+- After the order is paid, it can be packed and shipped to the customer.
+- The customer can return order items within 100 days since the order was placed.
+- If the customer returns the order items, the refund process must be initiated.
+- After 100 days have passed, the order is considered completed.
+- After a return, the order is considered completed.
 
 To model the prepaid state machine, follow these steps:
 

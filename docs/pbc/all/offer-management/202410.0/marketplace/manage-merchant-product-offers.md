@@ -36,15 +36,15 @@ You can sort by offers belonging to a certain Merchant:
 
 On the **Offers** page, there is a table with all the offers available in the Marketplace. The table includes:
 
-* Offer ID
-* Reference  
-* Merchant
-* SKU
-* Name
-* Status
-* Visibility
-* Stores
-* Actions
+- Offer ID
+- Reference  
+- Merchant
+- SKU
+- Name
+- Status
+- Visibility
+- Stores
+- Actions
 
 By default, the table is sorted by the **Offer ID** value.
 

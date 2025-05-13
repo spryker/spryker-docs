@@ -18,15 +18,15 @@ SAP and other ERP systems to eCommerce solutions, such as those required for rea
 Integration projects can therefore be implemented very efficiently. In addition to connecting ERP systems to online shops, IntegrationMan can also be used to flexibly integrate PIM, CRM or payment systems.
 
 YOUR ADVANTAGES:
-* Standardized solution for many requirements in ERP / Spryker integration
-* Optimization of all internal data and processes for eCommerce
-* Fully automated transactions
-* Automatic and secure data transmission
-* Easy entry, flexibly expandable
-* Marketplace and logistics connection possible
-* Live monitoring and error handling
-* Increased efficiency and cost savings
-* SAP-certified solution
+- Standardized solution for many requirements in ERP / Spryker integration
+- Optimization of all internal data and processes for eCommerce
+- Fully automated transactions
+- Automatic and secure data transmission
+- Easy entry, flexibly expandable
+- Marketplace and logistics connection possible
+- Live monitoring and error handling
+- Increased efficiency and cost savings
+- SAP-certified solution
 
 ---
 

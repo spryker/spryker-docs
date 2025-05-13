@@ -19,11 +19,11 @@ Trustpilot is a leading independent review platform – free and open to all. Wi
 
 YOUR ADVANTAGES:
 
-* Trustpilot creates the trust that makes potential customers paying customers
-* Trustpilot generates traffic, increases click-through rates, lowers bounce rates and increases conversion rates
-* Trustpilot increases domain presence in organic search results (Google, Bing, Yahoo)
-* Trustpilot can help improve Google Adwords performance (CTR and CVR)
-* Trustpilot provides improved customer understanding and insights
+- Trustpilot creates the trust that makes potential customers paying customers
+- Trustpilot generates traffic, increases click-through rates, lowers bounce rates and increases conversion rates
+- Trustpilot increases domain presence in organic search results (Google, Bing, Yahoo)
+- Trustpilot can help improve Google Adwords performance (CTR and CVR)
+- Trustpilot provides improved customer understanding and insights
 
 ---
 

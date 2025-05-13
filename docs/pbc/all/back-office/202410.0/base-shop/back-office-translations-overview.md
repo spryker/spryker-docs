@@ -22,10 +22,10 @@ Translations are added by means of uploading CSV extension files to the folders 
 
 The following are file name examples:
 
-* `en_US.csv`
-* `en_UK.csv`
-* `de_DE.csv`
-* `fr_FR.csv`
+- `en_US.csv`
+- `en_UK.csv`
+- `de_DE.csv`
+- `fr_FR.csv`
 
 Once a new translation file is uploaded, regenerate the translation cache to reflect the changes:
 

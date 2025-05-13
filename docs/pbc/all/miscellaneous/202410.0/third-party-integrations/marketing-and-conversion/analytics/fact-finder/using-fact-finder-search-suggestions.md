@@ -46,8 +46,8 @@ It will return a `FactFinderSdkSuggestResponseTransfer` object that contains an 
 
 Basic parameters:
 
-* `query` - Query text.
-* `sid` - FACT-Finder session id.
+- `query` - Query text.
+- `sid` - FACT-Finder session id.
 
 Controller example:
 

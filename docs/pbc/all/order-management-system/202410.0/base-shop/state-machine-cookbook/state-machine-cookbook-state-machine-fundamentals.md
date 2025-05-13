@@ -64,8 +64,8 @@ Furthermore, a state can contain several flags.
 ### Flagged items
 
 Sometimes you need to have the ability to check if items are in a certain state. For determining if an order is flagged, `OmsFacade` exposes two operations:
-* `isOrderFlagged($idOrder, $flag)`—checks if an order contains at least a flag (at least one order item is flagged).
-* `isOrderFlaggedAll($idOrder, $flag)`—checks if the entire order is flagged (all order items are flagged).
+- `isOrderFlagged($idOrder, $flag)`—checks if an order contains at least a flag (at least one order item is flagged).
+- `isOrderFlaggedAll($idOrder, $flag)`—checks if the entire order is flagged (all order items are flagged).
 
 **Example:**
 
@@ -255,10 +255,10 @@ You can also set the date and time when the timeout is started. For details, see
 
 Events can be triggered through the following:
 
-* timeout automatically
-* onEnter
-* facade calls
-* oms:check-conditions
+- timeout automatically
+- onEnter
+- facade calls
+- oms:check-conditions
 
 **Events triggered through timeout**
 
@@ -306,17 +306,17 @@ In the preceding example, after an order is paid, the invoice is automatically c
 
 The Order Management System facade contains several methods that allow triggering an event:
 
-* `triggerEvent`
-* `triggerEventForNewItem`
-* `triggerEventForNewOrderItems`
-* `triggerEventForOneOrderItem`
-* `triggerEventForOrderItems`
+- `triggerEvent`
+- `triggerEventForNewItem`
+- `triggerEventForNewOrderItems`
+- `triggerEventForOneOrderItem`
+- `triggerEventForOrderItems`
 
 This is typically used if an external event is raised.
 
 Examples of external events are as follows:
-* An asynchronous payment response.
-* A fulfillment message from the ERP.
+- An asynchronous payment response.
+- A fulfillment message from the ERP.
 
 Therefore you can implement a service that receives such a message. The next step is to correlate the event with a sales order or with the sales order items. That means you need to find the Sales Order for which the event has been raised. Correlation criteria can be the Sales Order ID or a payment transaction code that was previously saved in Zed. Afterward, the methods `triggerEventForOrderItems` or `triggerEventForNewOrderItems` can be used to trigger an event.
 
@@ -332,9 +332,9 @@ Every time the event is triggered, a dedicated lock based on the order item IDs 
 
 Every time an attempt to trigger an event takes place, the locking process works as follows:
 
-* Try to acquire a lock for target order items.
-* If the lock doesn't exist already, proceed with the process; fail otherwise—the event has already been triggered by another request.
-* When the process is finished (successfully or not), the lock is released.
+- Try to acquire a lock for target order items.
+- If the lock doesn't exist already, proceed with the process; fail otherwise—the event has already been triggered by another request.
+- When the process is finished (successfully or not), the lock is released.
 
 Additionally, a cronjob cleans outdated locks for which the process did not finish successfully. You can configure the desired lock timeout interval in a module configuration file `Zed\Oms\OmsConfig::getStateMachineLockerTimeoutInterval()` and the frequency of the cleanup job in the cronjob configuration.
 
@@ -368,8 +368,8 @@ In the preceding example, `Oms/SendPaymentRequest` is mapped to `Plugin/Oms/Comm
 
 There are two types of commands:
 
-* Commands by order item—they get executed for each order item; implements `CommandByItemInterface`.
-* Commands by order—executed for all items of the order which are in the same transition; implements `CommandByOrderInterface`.
+- Commands by order item—they get executed for each order item; implements `CommandByItemInterface`.
+- Commands by order—executed for all items of the order which are in the same transition; implements `CommandByOrderInterface`.
 
 Depending on whether you want to execute the command for all sales order items that undergo the transition or separately for each sales order item, you choose the interface you want to implement. The fully qualified class name (including namespace) is added to the corresponding event.
 
@@ -400,9 +400,9 @@ A process represents a model for things that are happening in a shop. In essence
 For example, when submitting a new order, if the payment is made, the shipment subprocess can be initiated; if the payment was not performed, the state machine moves to the `cancelled` status.
 
 Basically, a state machine can be described as a directed connected graph. It has a single starting state and a final state. The graphs that model the state machines are being defined in XML files that are placed under the `config/Zed/oms` folder. The XML file contains the definition of the OMS process, but in order to have a valid and functional state machine to what's configured in the XML files, the following items must be implemented:
-* Implement the defined commands.
-* Implement the defined conditions.
-* Trigger events through API calls.
+- Implement the defined commands.
+- Implement the defined conditions.
+- Trigger events through API calls.
 
 #### Starting a process
 
@@ -420,8 +420,8 @@ A process can be split into multiple subprocesses, and each relates to a single 
 
 There are several reasons for introducing subprocesses when modeling a state machine process:
 
-* The flow of the process is easier to follow.
-* If more than one process needs to be defined—for example, orders that are paid before delivery and orders that are paid on delivery—then the common parts of the processes can be extracted into subprocesses and reused.
+- The flow of the process is easier to follow.
+- If more than one process needs to be defined—for example, orders that are paid before delivery and orders that are paid on delivery—then the common parts of the processes can be extracted into subprocesses and reused.
 
 To introduce a subprocess in the main process, specify its name under the subprocesses tag, as in the following example:
 
@@ -514,9 +514,9 @@ A transition from one state to another can be conditioned. It's only possible to
 
 Spryker has three dedicated console commands for managing orders:
 
-* Check timeout (oms:check-timeout).
-* Check condition (oms:check-condition).
-* Clear locks (oms:clear-locks).
+- Check timeout (oms:check-timeout).
+- Check condition (oms:check-condition).
+- Clear locks (oms:clear-locks).
 
 The `check timeout` console command checks if the timeout was reached for orders that are in a state that's a source for a transition that has an event with a timeout attached. If the timeout is reached, the order moves to the next state.
 

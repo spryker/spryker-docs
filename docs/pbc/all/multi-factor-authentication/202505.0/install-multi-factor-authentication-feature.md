@@ -438,8 +438,8 @@ docker/sdk up --assets
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the **Set up Multi-Factor Authentication** menu item is displayed in the navigation menu.
-* Clicking the menu should open the following page: `https://yves.mysprykershop.com/multi-factor-auth/set`.
+- Make sure the **Set up Multi-Factor Authentication** menu item is displayed in the navigation menu.
+- Clicking the menu should open the following page: `https://yves.mysprykershop.com/multi-factor-auth/set`.
 
 {% endinfo_block %}
 

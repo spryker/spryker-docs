@@ -18,8 +18,8 @@ To lean more about MFA methods, see [Multi-Factor Authentication feature overvie
 
 An MFA method consists of two components:
 
-* MFA type plugin
-* Code Sender Strategy
+- MFA type plugin
+- Code Sender Strategy
 
 ## Prerequisites
 

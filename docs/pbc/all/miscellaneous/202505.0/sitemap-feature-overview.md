@@ -18,11 +18,11 @@ The Sitemap feature generates sitemaps for your Spryker applications to improve 
 ## Supported entities
 
 The following entities can be included in a sitemap by default:
-* Products
-* Categories
-* Product sets
-* CMS pages
-* Merchant pages
+- Products
+- Categories
+- Product sets
+- CMS pages
+- Merchant pages
 
 You can configure more entities to be included on the project level.
 

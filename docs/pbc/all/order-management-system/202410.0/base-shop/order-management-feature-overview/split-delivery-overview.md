@@ -18,9 +18,9 @@ redirect_from:
 
 Each shipment defines:
 
-* Delivery address
-* Shipment method
-* Delivery date requested from a customer
+- Delivery address
+- Shipment method
+- Delivery date requested from a customer
 
 In the Storefront, Split Delivery lets you, as a customer, set different delivery addresses for the order items, specify the date when you want the items to be delivered, and select shipment methods per each shipment.
 
@@ -50,10 +50,10 @@ In the Back Office, the shipments are displayed on the **View Order: *[Order ID]
 
 Here you can perform the following actions on shipments:
 
-* Create a new shipment for the whole order.
-* Modify a delivery address, a shipment method (without any impact on order totals), and a delivery date.
-* Move items between shipments.
-* Change the state of each item or all items per shipment.
+- Create a new shipment for the whole order.
+- Modify a delivery address, a shipment method (without any impact on order totals), and a delivery date.
+- Move items between shipments.
+- Change the state of each item or all items per shipment.
 
 For more details about how to create and manage shipments in the Back Office, see [Creating shipments](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/create-shipments.html).
 

@@ -62,10 +62,17 @@ Deploy file name depends on the project and environment you are working with.
 
 The variables in the `image: environment:` section of `deploy.yml` are injected into the Docker image built with [Spryker Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html).
 
+{% info_block warningBox "supported PHP images" %}
+
+Custom images are not supported. For the list of suppported PHP images, see [PHP-FPM](https://github.com/spryker/docker-php?tab=readme-ov-file#tags).
+
+{% endinfo_block %}
+
+
 ```yaml
 ...
 image:
-  tag: spryker/php:8.0-alpine3.16
+  tag: spryker/php:8.0-alpine3.20
   environment:
     SPRYKER_DEFAULT_STORE: "US"
     SPRYKER_ACTIVE_STORES: "US"

@@ -201,15 +201,15 @@ task :check_changed_files, [:file_list] do |t, args|
   # Split by spaces and clean up paths
   files = args[:file_list].split(/\s+/).map(&:strip).reject(&:empty?)
   
-  # Convert file paths to _site paths
+  # Convert markdown file paths to their corresponding HTML paths in _site
   site_files = files.map do |file|
     if file.start_with?('_includes/')
       # Handle _includes files
-      file = file.sub(/^_includes\//, '')
+      file = file.sub(/^_includes\//, '').sub(/\.md$/, '.html')
       "_site/_includes/#{file}"
     else
-      # Handle docs files
-      file = file.sub(/^docs\//, '')
+      # Handle docs files - convert .md to .html
+      file = file.sub(/^docs\//, '').sub(/\.md$/, '.html')
       "_site/docs/#{file}"
     end
   end
@@ -223,7 +223,7 @@ task :check_changed_files, [:file_list] do |t, args|
   
   if existing_files.empty?
     puts "No files to check - all specified files were not found in _site directory"
-    return
+    next # Use 'next' instead of 'return' in Rake tasks
   end
   
   puts "Checking files: #{existing_files.join(', ')}"

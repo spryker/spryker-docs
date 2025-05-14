@@ -105,7 +105,7 @@ related:
 | template               | [Template](#templates) based on which the page was created. |  Name of the template from [Github repository](https://github.com/spryker/spryker-docs/tree/master/_templates) without the extension of the file (.md). | feature-integration-guide-template | *✓*       |
 | tags                   | Tag names. |  The name of the tag in brackets. |  [B2B], [B2C] |           |
 | redirect_from          | Allows setting up redirects for pages whose location changes or pages that are completely deleted from the documentation. To set up a redirect, press the **tab** button and enter the path starting with `/docs` and containing the exact version, if the document is [versioned](#page-version). | - /path/to/a/file.html  | -/docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting.html  |          |
-| related                | Shows the list of articles related to the page you are on. To add a related article, press the **tab** button and enter the name of the article in the `title` parameter and the link to the file in the `link` parameter. |  Mind the _link_ parameter: no dash before _link_, no slash before _docs_. Always use _page.version_ in the link for related articles that have versions, even for unversioned articles! | - title: Title of the related page<br/>   link: path/to/a/file.html |           |
+| related                | Shows the list of articles related to the page you are on. To add a related article, press the **tab** button and enter the name of the article in the `title` parameter and the link to the file in the `link` parameter. |  Mind the *link* parameter: no dash before *link*, no slash before *docs*. Always use *page.version* in the link for related articles that have versions, even for unversioned articles! | - title: Title of the related page<br/>   link: path/to/a/file.html |           |
 
 For more information about front matter, see the [Jekyll's official website](https://jekyllrb.com/docs/front-matter/).
 
@@ -115,7 +115,7 @@ After creating a new document, you must add it to the sidebar navigation. Keep i
 
 ### Sidebars
 
-Each _product/realm_ set has its own sidebar, which is represented by a YAML file in the `[_data/sidebar](https://github.com/spryker/spryker-docs/tree/master/_data/sidebars)` directory. The sidebar name is `{product}_{realm}_sidebar.yml`. So, for example, for the marketplace user documentation, the sidebar file is called `marketplace_user_sidebar.html`. The sidebar consists of the list of files that are present in the navigation. As a best practice, as soon as you create a new page, add it to your sidebar (so you don't forget about the page).
+Each *product/realm* set has its own sidebar, which is represented by a YAML file in the `[_data/sidebar](https://github.com/spryker/spryker-docs/tree/master/_data/sidebars)` directory. The sidebar name is `{product}_{realm}_sidebar.yml`. So, for example, for the marketplace user documentation, the sidebar file is called `marketplace_user_sidebar.html`. The sidebar consists of the list of files that are present in the navigation. As a best practice, as soon as you create a new page, add it to your sidebar (so you don't forget about the page).
 
 ```
 - product: SCOS
@@ -212,6 +212,7 @@ To delete an unnecessary or outdated page from the website, make sure to set up 
 This section contains most coming issues that you may face while working with docs and expected ways how to resolve the problem.
 
 ### Filename too long in Git for Windows
+
 If you face the "Filename too long" error, or an error like this one *"spryker.github.io/vendor/bundle/ruby/2.7.0/gems/jekyll-4.2.0/lib/jekyll/convertible.rb:222:in `write': No such file or directory @ rb_sysopen - E:/Jekyll/spryker.github.io/_site/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html (Errno::ENOENT)"*, run the following command to circumvent it:
 
 ```bash

@@ -62,9 +62,9 @@ On the Storefront, a user could change their email address without verifying the
 
 ### Affected modules
 
-* `spryker-shop/customer-page`: 1.0.0 - 2.58.0
-* `spryker/customer`: 1.0.0 - 7.66.0
-* `spryker/customer-extension`: 1.0.0 - 1.5.0
+- `spryker-shop/customer-page`: 1.0.0 - 2.58.0
+- `spryker/customer`: 1.0.0 - 7.66.0
+- `spryker/customer-extension`: 1.0.0 - 1.5.0
 
 ### Fix the vulnerability
 
@@ -85,6 +85,7 @@ composer update spryker-shop/customer-page spryker/customer spryker/customer-ext
 2. Update the data import files:
 
 **data/import/common/STORE_NAME/cms_block_store.cs**
+
 ```csv
 cms-block-email--customer_email_change_verification--html,STORE_NAME
 cms-block-email--customer_email_change_verification--text,STORE_NAME

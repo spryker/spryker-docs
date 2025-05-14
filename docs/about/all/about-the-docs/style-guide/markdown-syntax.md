@@ -85,7 +85,7 @@ Example:
 Make sure to fulfill the requirements:
 
 - `{drop-down toggle button}` in `<summary>{drop-down toggle button}</summary>` should not undergo any kind of formatting. For example, `<summary>`code.php`</summary>` or `<summary><var>code.php</var></summary>`. Otherwise, the code snippet will be corrupted.
-- Put a blank row between `<summary>{drop-down toggle button}</summary>` and _```{programming language}_. This will ensure that the code snippet is displayed correctly on the documentation website.
+- Put a blank row between `<summary>{drop-down toggle button}</summary>` and *```{programming language}*. This will ensure that the code snippet is displayed correctly on the documentation website.
 
 {% endinfo_block %}
 
@@ -152,6 +152,7 @@ The verification step
 
 {% raw %} {% endinfo_block %}{% endraw %}
 ```
+
 Verification example:
 
 {% info_block warningBox "Verification" %}
@@ -303,6 +304,7 @@ Published table:
 	}
 }
 ```
+
 </details>
 
 <details>
@@ -334,6 +336,7 @@ Published table:
 	}
 }
 ```
+
 </details>
 
 ### Mixed content
@@ -368,6 +371,7 @@ Published table:
 } %}
 {% endraw %}
 ```
+
 </details>
 
 
@@ -429,6 +433,7 @@ where
 720 - is the video's height
 
 ## Adding other videos
+
 To add a link to a video in the .mp4 format that originates not from Wistia, add this block with the link to your video:
 
 ```

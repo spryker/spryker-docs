@@ -47,7 +47,7 @@ In the B2B industry, approvals are referred to shopping carts and items in the c
 
 For the approval process, you can set specific permissions for the Approver and Buyer roles:
 
-* The *Buy up to grand total* permission that restricts the cart checkout when the cart grand total amount reaches the limit specified in this permission.
+- The *Buy up to grand total* permission that restricts the cart checkout when the cart grand total amount reaches the limit specified in this permission.
 
 {% info_block warningBox "Note" %}
 
@@ -57,14 +57,14 @@ It is mandatory to set this permission for the Buyer role if you want to use the
 
 To configure this permission, use [this step-by-step instruction](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/approval-process-feature-overview.html#approval-process-on-the-storefront).
 
-* The *Send cart for approval* permission, which lets a buyer send a cart for approval to their manager. Without this permission, a buyer cannot see the *Request for Approval* widget.
+- The *Send cart for approval* permission, which lets a buyer send a cart for approval to their manager. Without this permission, a buyer cannot see the *Request for Approval* widget.
 
-* The *Approve up to grand total* permission, which lets an approver approve the carts that do not hit the cart grand total limit specified there. To learn how to set up the permission in the Storefront, see [Configuring the Approve up to grand total permission](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/approval-process-feature-overview.html#approval-process-on-the-storefront).
+- The *Approve up to grand total* permission, which lets an approver approve the carts that do not hit the cart grand total limit specified there. To learn how to set up the permission in the Storefront, see [Configuring the Approve up to grand total permission](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/approval-process-feature-overview.html#approval-process-on-the-storefront).
 
 Every approval request can have three statuses:
-* *Waiting*—the approver has been assigned, but the approval hasn't been confirmed.
-* *Approved*—the cart has been approved.
-* *Declined*—the cart has been rejected.
+- *Waiting*—the approver has been assigned, but the approval hasn't been confirmed.
+- *Approved*—the cart has been approved.
+- *Declined*—the cart has been rejected.
 
 ## Approval Process workflow
 
@@ -161,13 +161,14 @@ After the quote is submitted for approval, it gets locked for both the buyer and
 Quote lock is fulfilled with the help of the `isLocked` bool parameter that has been added to the Cart module. The `IsLocked` parameter is added to `/Spryker/Zed/Quote/QuoteConfig::getQuoteFieldsAllowedForSaving()`.
 
 When the `isLocked` parameter is set to true, then:
-* Items cannot be added or removed from the quote.
-* Quote validation is not allowed.
-* Currency change is not available.
-* Discount change is not available.
-* The quote cannot be shared.
+- Items cannot be added or removed from the quote.
+- Quote validation is not allowed.
+- Currency change is not available.
+- Discount change is not available.
+- The quote cannot be shared.
 
 ## Approval Process on the Storefront
+
 Company users can perform the following actions using the Approval Process feature on the Storefront:
 
 <details>

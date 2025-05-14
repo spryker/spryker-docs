@@ -21,15 +21,15 @@ Unlike guest carts, carts of registered users have an unlimited lifetime. Also, 
 ## Installation
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html)
-* [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
-* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
-* [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
-* [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)
-* [Install the Merchant Offers Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
-* [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
-* [Install the Marketplace Product Offer Volume Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-volume-prices-glue-api.html)
+- [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+- [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html)
+- [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
+- [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+- [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
+- [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)
+- [Install the Merchant Offers Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
+- [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
+- [Install the Marketplace Product Offer Volume Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-volume-prices-glue-api.html)
 
 ## Create a cart
 
@@ -157,12 +157,12 @@ To retrieve all carts, send the request:
 
 {% info_block infoBox "Info" %}
 
-* To retrieve all the product options of the item in a cart, include `items`, `concrete-products`, and `product-options`.
-* To retrieve information about the company user a cart is shared with, include `shared-carts` and `company-users`.
-* To retrieve product labels of the products in a cart, include `items`, `concrete-products`, and `product-labels`.
-* To retrieve product offers, include `items`, `concrete-products`, and `product-offers`.
-* To retrieve product offer availabilities, include `items`, `concrete-products`, and `product-offer-availabilities`.
-* To retrieve product offer prices, include `items`, `concrete-products`, and `product-offer-prices`.
+- To retrieve all the product options of the item in a cart, include `items`, `concrete-products`, and `product-options`.
+- To retrieve information about the company user a cart is shared with, include `shared-carts` and `company-users`.
+- To retrieve product labels of the products in a cart, include `items`, `concrete-products`, and `product-labels`.
+- To retrieve product offers, include `items`, `concrete-products`, and `product-offers`.
+- To retrieve product offer availabilities, include `items`, `concrete-products`, and `product-offer-availabilities`.
+- To retrieve product offer prices, include `items`, `concrete-products`, and `product-offer-prices`.
 
 {% endinfo_block %}
 
@@ -197,7 +197,8 @@ To retrieve all carts, send the request:
         "self": "https://glue.mysprykershop.com/carts"
     }
 }
-```    
+```
+
 </details>
 
 <details>
@@ -261,7 +262,8 @@ To retrieve all carts, send the request:
         "self": "https://glue.mysprykershop.com/carts"
     }
 }
-```   
+```
+
 </details>
 
 
@@ -555,7 +557,8 @@ To retrieve all carts, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -692,7 +695,8 @@ To retrieve all carts, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -829,7 +833,8 @@ To retrieve all carts, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -934,6 +939,7 @@ To retrieve all carts, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1064,7 +1070,8 @@ To retrieve all carts, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -1135,6 +1142,7 @@ To retrieve all carts, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1200,7 +1208,8 @@ To retrieve all carts, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -1270,7 +1279,8 @@ To retrieve all carts, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -1523,7 +1533,8 @@ To retrieve all carts, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -1683,6 +1694,7 @@ To retrieve all carts, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1850,6 +1862,7 @@ To retrieve all carts, send the request:
     ]
 }
 ```
+
 </details>
 
 
@@ -2039,7 +2052,8 @@ To retrieve all carts, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -2254,6 +2268,7 @@ To retrieve all carts, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -2375,6 +2390,7 @@ To retrieve all carts, send the request:
     ]
 }
 ```
+
 </details>
 
 <a name="retrieve-registered-users-carts-response-attributes"></a>
@@ -2453,12 +2469,12 @@ To retrieve all carts, send the request:
 
 For the attributes of the included resources, see:
 
-* [Add an item to a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
-* [Managing gift cards of registered users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html)
-* [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html)
-* [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
-* [Retrieving product offer prices](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
-* [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
+- [Add an item to a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
+- [Managing gift cards of registered users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html)
+- [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html)
+- [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
+- [Retrieving product offer prices](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
+- [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
 
 ## Retrieve a registered user's cart
 
@@ -2485,11 +2501,11 @@ To retrieve a registered user's cart, send the request:
 
 {% info_block infoBox "Info" %}
 
-* To retrieve all the product options of the item in a cart, include `items`, `concrete-products`, and `product-options`.
-* To retrieve product labels of the products in a cart, include `items`, `concrete-products`, and `product-labels`.
-* To retrieve product offers, include `items`, `concrete-products`, and `product-offers`.
-* To retrieve product offer availabilities, include `items`, `concrete-products`, `product-offers`, and `product-offer-availabilities`.
-* To retrieve product offer prices, include `items`, `concrete-products`, `product-offers`, and `product-offer-prices`.
+- To retrieve all the product options of the item in a cart, include `items`, `concrete-products`, and `product-options`.
+- To retrieve product labels of the products in a cart, include `items`, `concrete-products`, and `product-labels`.
+- To retrieve product offers, include `items`, `concrete-products`, and `product-offers`.
+- To retrieve product offer availabilities, include `items`, `concrete-products`, `product-offers`, and `product-offer-availabilities`.
+- To retrieve product offer prices, include `items`, `concrete-products`, `product-offers`, and `product-offer-prices`.
 
 {% endinfo_block %}
 
@@ -2549,7 +2565,8 @@ To retrieve a registered user's cart, send the request:
         }
     }
 }
-```    
+```
+
 </details>
 
 
@@ -2677,7 +2694,8 @@ To retrieve a registered user's cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -2738,7 +2756,8 @@ To retrieve a registered user's cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -2800,7 +2819,8 @@ To retrieve a registered user's cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -2877,6 +2897,7 @@ To retrieve a registered user's cart, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -2942,7 +2963,8 @@ To retrieve a registered user's cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -3004,7 +3026,8 @@ To retrieve a registered user's cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -3070,7 +3093,8 @@ To retrieve a registered user's cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -3318,7 +3342,8 @@ To retrieve a registered user's cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -3389,6 +3414,7 @@ To retrieve a registered user's cart, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -3543,6 +3569,7 @@ To retrieve a registered user's cart, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -3716,7 +3743,8 @@ To retrieve a registered user's cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -3935,6 +3963,7 @@ To retrieve a registered user's cart, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -4336,6 +4365,7 @@ To retrieve a registered user's cart, send the request:
     ]
 }
 ```
+
 </details>
 
 For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-registered-users-carts-response-attributes).
@@ -4345,14 +4375,14 @@ For the attributes of carts of registered users and included resources, see [Ret
 {% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
 For the attributes of the included resources, see:
-* [Add an item to a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
-* [Managing gift cards of registered users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html).
-* [Cart permission groups](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html).
-* [Managing items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html).
-* [Retrieve product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html)
-* [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
-* [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
-* [Retrieving product offers](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
+- [Add an item to a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
+- [Managing gift cards of registered users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html).
+- [Cart permission groups](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html).
+- [Managing items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html).
+- [Retrieve product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html)
+- [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
+- [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
+- [Retrieving product offers](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
 
 ## Edit a cart
 
@@ -4371,7 +4401,7 @@ You can edit the name of the cart, change the currency and price mode. To do tha
 
 {% info_block infoBox "Info" %}
 
-* You can change the price mode only of an empty cart.
+- You can change the price mode only of an empty cart.
 
 {% endinfo_block %}
 

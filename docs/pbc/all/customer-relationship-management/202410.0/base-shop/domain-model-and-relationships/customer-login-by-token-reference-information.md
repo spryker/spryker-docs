@@ -20,7 +20,7 @@ Every token consists of three sections separated by periods.
 
 ![Token structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Customer+Login+by+Token/Customer+Login+by+Token+Feature+Overview/token-structure.png)
 
-* The *header* contains the information about the token type (JWT) and the encryption algorithm (RS256). For example:
+- The *header* contains the information about the token type (JWT) and the encryption algorithm (RS256). For example:
 
 ```json
 {
@@ -36,7 +36,7 @@ Once the header is encoded, we get the part of the token:
 eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjljZWQ2NmFjNWNlZmUxNzY4MTU3NmJmOTViODAwMDc4ZTMwMjAxNDJmYWFhNTI0ZGE4NzFmZmIyYTYzNTA4OTUyMDQ1ZTEwNDUzMTM2YmRlIn0
 ```
 
-* The *payload* stores multiple claims (statements) about the user's identity and additional data—for example, permissions. Here, you can find the needed information for transmission. The `id_customer` and `idcompanyuser` identifiers are included by default. However, you can extend the payload with any data according to your project requirements.
+- The *payload* stores multiple claims (statements) about the user's identity and additional data—for example, permissions. Here, you can find the needed information for transmission. The `id_customer` and `idcompanyuser` identifiers are included by default. However, you can extend the payload with any data according to your project requirements.
 
 Example payload:
 
@@ -58,7 +58,7 @@ The example above contains six [registered claims](https://www.iana.org/assignme
 eyJhdWQiOiJmcm9udGVuZCIsImp0aSI6IjljZWQ2NmFjNWNlZmUxNzY4MTU3NmJmOTViODAwMDc4ZTMwMjAxNDJmYWFhNTI0ZGE4NzFmZmIyYTYzNTA4OTUyMDQ1ZTEwNDUzMTM2YmRlIiwiaWF0IjoxNTU3OTI2NjIwLCJuYmYiOjE1NTc5MjY2MjAsImV4cCI6MTU1Nzk1NTQyMCwic3ViIjoie1wiY3VzdG9tZXJfcmVmZXJlbmNlXCI6bnVsbCxcImlkX2N1c3RvbWVyXCI6NixcImlkX2NvbXBhbnlfdXNlclwiOlwiMVwiLFwicGVybWlzc2lvbnNcIjpudWxsfSIsInNjb3BlcyI6W119
 ```
 
-* The *signature* contains the hash of the header, payload, and secret needed.
+- The *signature* contains the hash of the header, payload, and secret needed.
 
 The following is an example signature:
 

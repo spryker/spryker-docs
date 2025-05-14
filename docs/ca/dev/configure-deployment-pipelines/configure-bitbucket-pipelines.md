@@ -37,10 +37,10 @@ To make the values of environment variables hidden in logs, set up secured varia
 
 Configure services and a basic validation of:
 
-* code style
-* architecture
-* security
-* database schema
+- code style
+- architecture
+- security
+- database schema
 
 <details>
     <summary>Example of bitbucket-pipelines.yml</summary>

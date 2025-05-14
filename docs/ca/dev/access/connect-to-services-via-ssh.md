@@ -13,8 +13,8 @@ redirect_from:
 
 {% info_block warningBox "Restrictions apply" %}
 
-* The following instruction are for personnel to connect to the cloud infrastructure and should not be used to connect other infrastructure components and systems to the cloud infrastructure.
-* A direct RDS connection can be established only from Spryker services. Direct connection to RDS database outside of the the application's internal networks is prohibited.
+- The following instruction are for personnel to connect to the cloud infrastructure and should not be used to connect other infrastructure components and systems to the cloud infrastructure.
+- A direct RDS connection can be established only from Spryker services. Direct connection to RDS database outside of the the application's internal networks is prohibited.
 
 {% endinfo_block %}
 
@@ -22,8 +22,8 @@ We add your SSH public key to the [bastion host](https://docs.aws.amazon.com/man
 
 You can use SSH in two ways:
 
-* Connect to the bastion host and, subsequently, connect to other supported infrastructure components
-* Set up SSH port forwarding through bastion host to access a specific service from your computer
+- Connect to the bastion host and, subsequently, connect to other supported infrastructure components
+- Set up SSH port forwarding through bastion host to access a specific service from your computer
 
 
 ## Prerequisites

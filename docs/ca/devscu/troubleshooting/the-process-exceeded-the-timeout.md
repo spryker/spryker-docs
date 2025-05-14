@@ -21,12 +21,12 @@ The process ... exceeded the timeout of ... seconds.
 
 Check that your access token is still active and has correct permissions. For token requirements, see one of the following documents:
 
-* [GitHub access token requirements](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html#prerequisites)
-* [GitLab access token requirements](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html#prerequisites)
-* [GitLab access token requirements for self-hosted projects](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-project-self-hosted-with-gitlab.html#prerequisites)
-* [Azure access token requirements](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-an-azure-managed-project.html#prerequisites)
+- [GitHub access token requirements](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html#prerequisites)
+- [GitLab access token requirements](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html#prerequisites)
+- [GitLab access token requirements for self-hosted projects](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-project-self-hosted-with-gitlab.html#prerequisites)
+- [Azure access token requirements](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-an-azure-managed-project.html#prerequisites)
 
 ## Support for Spryker CI
 
-* For help with Spryker CI, [contact support](https://spryker.force.com/support/s/).
-* To learn more about Buddy, see their [docs](https://buddy.works/docs).
+- For help with Spryker CI, [contact support](https://spryker.force.com/support/s/).
+- To learn more about Buddy, see their [docs](https://buddy.works/docs).

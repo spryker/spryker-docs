@@ -24,9 +24,9 @@ Spryker supports only the cloud variants of the repositories listed below. To co
 
 Spryker supports the following version control systems:
 
-* [GitHub](https://github.com/)
-* [Bitbucket](https://bitbucket.org/)
-* [GitLab](https://gitlab.com/)
+- [GitHub](https://github.com/)
+- [Bitbucket](https://bitbucket.org/)
+- [GitLab](https://gitlab.com/)
 
 Spryker also supports all the Git repositories that support AWS CodeCommit push mirroring. Similar to the GitLab setup, you can configure all the commits from your version control system to be mirrored to Spryker and consumed by our pipelines to build and deploy your system.
 
@@ -97,13 +97,13 @@ Ensure that your BitBucket account has *Admin* permissions in the code repositor
 
 AWS CodeStar integrates via OAuth 2.0 and requires the following permissions:
 
-* Read your account information.
+- Read your account information.
 
-* Read your repositories and their pull requests.
+- Read your repositories and their pull requests.
 
-* Administer your repositories.
+- Administer your repositories.
 
-* Read and modify your repositories.
+- Read and modify your repositories.
 
 
 ### Retrieve a connection ARN
@@ -166,8 +166,8 @@ Prepare for configuration:
 
 1. Ensure that your GitLab account has *Admin* permissions in the code repository.
 2. Request the following details via [support](https://spryker.force.com/support/s/):
-    * CodeCommit repository URL
-    * Username and password for HTTPS authorization in CodeCommit repository
+    - CodeCommit repository URL
+    - Username and password for HTTPS authorization in CodeCommit repository
 
 
 ### GitLab mirroring

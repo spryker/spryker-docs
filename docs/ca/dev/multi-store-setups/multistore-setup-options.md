@@ -177,7 +177,7 @@ This setup is recommended for the following cases:
 In terms of infrastructure, this setup is the most flexible way of scaling and deploying your setups independently since all of the infrastructure parts are separate cloud resources:
 
 - You can host single stores in different AWS regions. For example, you can host the US store in N. Virginia and the DE store—in Frankfurt.
-- Traffic distribution is _independent_ for every store* because of ALB+NLBs (ALB-->NLB-->Nginx-->PHP-FPM).
+- Traffic distribution is *independent* for every store* because of ALB+NLBs (ALB-->NLB-->Nginx-->PHP-FPM).
 
 {% info_block infoBox "Info" %}
 

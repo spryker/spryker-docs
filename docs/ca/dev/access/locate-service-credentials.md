@@ -40,4 +40,4 @@ The credentials are located in the *Environment Variables* section.
 
 ## Next step
 
-* [Connecting to services via SSH](/docs/ca/dev/access/connect-to-services-via-ssh.html)
+- [Connecting to services via SSH](/docs/ca/dev/access/connect-to-services-via-ssh.html)

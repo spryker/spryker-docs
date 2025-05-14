@@ -75,8 +75,8 @@ regions:
 
 Run a destructive pipeline for the application. Based on the environment, follow the instructions in one of the following docs:
 
-* [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
-* [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
+- [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+- [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
 
 
 ## Remove a database of store
@@ -129,5 +129,5 @@ regions:
 
 Run a destructive pipeline for the application. Based on the environment, follow the instructions in one of the following docs:
 
-* [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
-* [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
+- [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+- [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)

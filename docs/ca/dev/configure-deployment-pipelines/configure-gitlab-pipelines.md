@@ -72,8 +72,8 @@ default:
 ```
 
 3. Glue API tests: To fill the storage with the data used by Glue API, add the following commands to load fixtures to the `Run docker` action as shown in the code snippet:
-* `docker/sdk testing codecept fixtures -d`
-* `docker/sdk testing console queue:worker:start --stop-when-empty`
+- `docker/sdk testing codecept fixtures -d`
+- `docker/sdk testing console queue:worker:start --stop-when-empty`
 
 ```yaml
 {tests_type}:
@@ -99,10 +99,10 @@ default:
 
 6. In the end of the file, add the job that performs the basic validation like:
 
-* code style
-* architecture
-* security
-* database schema
+- code style
+- architecture
+- security
+- database schema
 
 ```yaml
 ...

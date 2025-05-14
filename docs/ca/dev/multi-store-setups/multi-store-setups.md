@@ -11,8 +11,8 @@ The Multi-Store is a capability in the Spryker Cloud Commerce OS that gives you 
 
 The Spryker Cloud Commerce OS supports following multi-store setups:
 
-* Separated: a codebase with dedicated databases per store.
-* Shared: a codebase with all the stores sharing a database.
+- Separated: a codebase with dedicated databases per store.
+- Shared: a codebase with all the stores sharing a database.
 
 
 ## Shared setup
@@ -29,9 +29,9 @@ We recommend this setup for simple shops that have two to three stores that foll
 
 ### Shared setup: Advantages
 
-* Products, customers, orders, and so on are stored in the same database, which simplifies collaborative management.
+- Products, customers, orders, and so on are stored in the same database, which simplifies collaborative management.
 
-* All stores are hosted in the same AWS region.
+- All stores are hosted in the same AWS region.
 
 For more details on this setup, see [Setup 1: Shared infrastructure resources (default)](/docs/ca/dev/multi-store-setups/multistore-setup-options.html#setup-1-shared-infrastructure-resources-default)
 
@@ -49,26 +49,26 @@ With Dynamic Multistore, the separated setup is only possible with stores belong
 
 ### Separated setup: When to use
 
-* The stores are completely different from the perspective of the following:
+- The stores are completely different from the perspective of the following:
 
-  * Design
+  - Design
 
-  * Business logic
+  - Business logic
 
-  * Features or modules
+  - Features or modules
 
-* Separated data management for products, customers, orders, etc. Data sharing and synchronization requires external systems.
+- Separated data management for products, customers, orders, etc. Data sharing and synchronization requires external systems.
 
 
 ### Separated setup: Advantages
 
-* Flexible deployment: since stores are independent of one another, deploy, remove, and scale each store without affecting other stores.
+- Flexible deployment: since stores are independent of one another, deploy, remove, and scale each store without affecting other stores.
 
-* Flexible URL management. For example, the same product in different stores can have the same URL.
+- Flexible URL management. For example, the same product in different stores can have the same URL.
 
-* Flexible management of the configuration of stores: distinct category navigation, product schema details, and users.
+- Flexible management of the configuration of stores: distinct category navigation, product schema details, and users.
 
-* Separate deployment of each database per store: deploy a new version of a store's database without affecting the other stores' databases.
+- Separate deployment of each database per store: deploy a new version of a store's database without affecting the other stores' databases.
 
 ### Separated setup: Integration
 

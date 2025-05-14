@@ -499,8 +499,8 @@ To run a new load test:
 2. Select the instance you want to run the test for. See [Managing instances](#managing-instances) for information on how you can create and manage instances.
 3. In the *Test* field, select the test you want to run.
 4. In the *Type* field, select one of the test types:
- - *Ramp*: Test type with the growing load (request per second), identifies a Peak Load capacity.
- - *Steady*: Test type with the constant load, confirms reliance of a system under the Peak Load.
+- *Ramp*: Test type with the growing load (request per second), identifies a Peak Load capacity.
+- *Steady*: Test type with the constant load, confirms reliance of a system under the Peak Load.
 5. In the *Target RPS* field, set the test RPS (request per second) value.
 6. In the *Duration* field, set the test duration.
 7. Optional: In the *Description*, provide the test description.

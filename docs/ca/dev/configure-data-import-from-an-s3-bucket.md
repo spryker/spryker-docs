@@ -17,16 +17,16 @@ This document describes how to replace the original CsvReader with the one based
 
 Before you start, make sure that you have the following:
 
-* The following modules are installed:
+- The following modules are installed:
 
 | NAME                                 | VERSION |
 |--------------------------------------|---------|
 | spryker/data-import                  | ^1.25.0 |
 | spryker/flysystem-aws3v3-file-system | ^3.0.0  |
 
-* Write permissions in the SCCOS repository
+- Write permissions in the SCCOS repository
 
-* An S3 bucket with write permissions
+- An S3 bucket with write permissions
 
 ## 1. Configure a data entity to be imported from an S3 bucket
 

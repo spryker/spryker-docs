@@ -37,8 +37,8 @@ $config[LogConstants::LOG_LEVEL] = getenv('SPRYKER_DEBUG_ENABLED') ? Logger::INF
 ```
 
 3. Commit the changes and deploy the application in the desired environment:
-    * [Deploy in the production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
-    * [Deploy in the staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+    - [Deploy in the production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
+    - [Deploy in the staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
 
 Extended logs are enabled and you can check them in the AWS Management Console. See [Working with logs](/docs/ca/dev/monitoring/working-with-logs.html) for more details.
 

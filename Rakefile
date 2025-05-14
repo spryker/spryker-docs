@@ -198,20 +198,38 @@ end
 task :check_changed_files, [:file_list] do |t, args|
   puts "Running link validation on changed files..."
   
-  # Convert the comma-separated string to an array and clean up paths
-  files = args[:file_list].split(',').map(&:strip)
+  # Split by spaces and clean up paths
+  files = args[:file_list].split(/\s+/).map(&:strip).reject(&:empty?)
   
   # Convert file paths to _site paths
   site_files = files.map do |file|
-    # Remove 'docs/' prefix if present and add '_site/docs/'
-    file = file.sub(/^docs\//, '')
-    "_site/docs/#{file}"
+    if file.start_with?('_includes/')
+      # Handle _includes files
+      file = file.sub(/^_includes\//, '')
+      "_site/_includes/#{file}"
+    else
+      # Handle docs files
+      file = file.sub(/^docs\//, '')
+      "_site/docs/#{file}"
+    end
   end
   
-  puts "Checking files: #{site_files.join(', ')}"
+  # Filter out non-existent files
+  existing_files = site_files.select do |file|
+    exists = File.exist?(file)
+    puts "Warning: File not found: #{file}" unless exists
+    exists
+  end
+  
+  if existing_files.empty?
+    puts "No files to check - all specified files were not found in _site directory"
+    return
+  end
+  
+  puts "Checking files: #{existing_files.join(', ')}"
   
   options = commonOptions.dup
-  options[:files] = site_files
+  options[:files] = existing_files
   
   run_htmlproofer_with_retry("./_site", options)
   

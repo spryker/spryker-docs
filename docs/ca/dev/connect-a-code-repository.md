@@ -166,7 +166,7 @@ Prepare for configuration:
 1. Ensure that your GitLab account has *Admin* permissions in the code repository.
 2. Request the following details via [support](https://spryker.force.com/support/s/):
     * CodeCommit repository URL
-    * Username and password for HTTPS authorization in CodeCommit repository
+    * Username and password for HTTPS authorization in CodeCommit repository (a separate user will be created with this kind of permissions, will not proceed with custom access to perform any codecommit.)
 
 
 ### GitLab mirroring

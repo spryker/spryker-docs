@@ -80,8 +80,8 @@ This section describes how to add the configuration and deployment recipes for a
 
 | ENTITY | SECTION |
 | Database | `regions.<region_name>.services.DBs` |
- | Store | `regions.<region_name>.stores`|
-| Domains | `groups.<region_name>.applications`  |
+| Store | `regions.<region_name>.stores` |
+| Domains | `groups.<region_name>.applications` |
 
 * In `stores.php`, add the configuration for the new store. For instructions, see [Integrate multi-DB logic](/docs/dg/dev/integrate-and-configure/integrate-multi-database-logic.html).
 * Prepare data import configurations and data files for the new store.

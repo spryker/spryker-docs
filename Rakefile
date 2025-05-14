@@ -13,7 +13,7 @@ end
 require 'html-proofer'
 
 # Method to run HTMLProofer with retries
-def run_htmlproofer_with_retry(directory, options, max_tries = 3, delay = 5)
+def run_htmlproofer_with_retry(directory, options, max_tries = 1, delay = 5)
   options[:typhoeus] ||= {}
   options[:typhoeus][:timeout] = 60
   options[:typhoeus][:headers] = {
@@ -22,7 +22,11 @@ def run_htmlproofer_with_retry(directory, options, max_tries = 3, delay = 5)
 
   retries = max_tries
   begin
-    HTMLProofer.check_directory(directory, options).run
+    if options[:files]
+      HTMLProofer.check_files(options[:files], options.reject { |k| k == :files }).run
+    else
+      HTMLProofer.check_directory(directory, options).run
+    end
   rescue SystemExit => e
     retries -= 1
     if retries >= 0
@@ -185,4 +189,44 @@ task :check_dg do
     /docs\/dg\/\w+\/[\w-]+\/202411\.0\/.+/
   ]
   run_htmlproofer_with_retry("./_site", options)
+end
+
+task :check_changed_files, [:file_list] do |t, args|
+  puts "Running link validation on changed files..."
+  
+  # Convert the comma-separated string to an array and clean up paths
+  files = args[:file_list].split(',').map(&:strip)
+  
+  # Convert file paths to _site paths
+  site_files = files.map do |file|
+    # Remove 'docs/' prefix if present and add '_site/docs/'
+    file = file.sub(/^docs\//, '')
+    "_site/docs/#{file}"
+  end
+  
+  puts "Checking files: #{site_files.join(', ')}"
+  
+  options = commonOptions.dup
+  options[:files] = site_files
+  
+  run_htmlproofer_with_retry("./_site", options)
+  
+  puts "Link validation completed for changed files"
+end
+
+task :check_all do
+  puts "Running all link validation checks..."
+  
+  [:check_ca, :check_about, :check_pbc, :check_dg].each do |check|
+    begin
+      puts "\nRunning #{check}..."
+      Rake::Task[check].invoke
+      puts "#{check} completed successfully"
+    rescue => e
+      puts "#{check} failed: #{e.message}"
+      raise e
+    end
+  end
+  
+  puts "\nAll link validation checks completed successfully"
 end

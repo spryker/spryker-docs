@@ -23,7 +23,11 @@ def run_htmlproofer_with_retry(directory, options, max_tries = 1, delay = 5)
   retries = max_tries
   begin
     if options[:files]
-      HTMLProofer.check_files(options[:files], options.reject { |k| k == :files }).run
+      # Check each file individually since HTMLProofer doesn't support multiple files in one call
+      options[:files].each do |file|
+        puts "Checking file: #{file}"
+        HTMLProofer.check_file(file, options.reject { |k| k == :files }).run
+      end
     else
       HTMLProofer.check_directory(directory, options).run
     end

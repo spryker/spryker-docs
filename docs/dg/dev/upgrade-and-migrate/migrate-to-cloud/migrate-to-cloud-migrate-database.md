@@ -47,11 +47,11 @@ For additional information about this step, see [Importing data from a MariaDB o
 5. Connect to the EC2 instance. For details on how to do this, see [Create an Amazon EC2 instance and copy the compressed database](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.NonRDSRepl.html#MySQL.Procedural.Importing.Import.Database).
 
 Optional: For the Spryker Cloud environment, we recommend using a Scheduler instance for backup/restore purposes. Do the following
-* In AWS, go to **EC2 → Instances → <env_name>-<[/d/w]*> → Connect via Session Manager**
+- In AWS, go to **EC2 → Instances → <env_name>-<[/d/w]*> → Connect via Session Manager**
   ![Scheduler Container example](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/migration-concepts/migrate-to-paas/scheduler-container-example.png)
-* Copy the AWS credentials from here:
+- Copy the AWS credentials from here:
   ![AWS S3 credentials](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/migration-concepts/migrate-to-paas/aws-s3-credentials.png)
-* Run the following command to copy the DB dump from S3 bucket to the Scheduler container:
+- Run the following command to copy the DB dump from S3 bucket to the Scheduler container:
 
 ```bash
 sudo su

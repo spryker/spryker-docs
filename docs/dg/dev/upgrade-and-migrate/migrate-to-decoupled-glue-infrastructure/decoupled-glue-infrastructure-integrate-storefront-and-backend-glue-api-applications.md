@@ -451,9 +451,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 ```
 
 If the console commands are setup correctly, the following commands are available:
-* `vendor/bin/glue glue-api:controller:cache:warm-up`
-* `vendor/bin/glue router:debug [application_name]`
-* `vendor/bin/glue api:router:cache:warm-up [application_name]`
+- `vendor/bin/glue glue-api:controller:cache:warm-up`
+- `vendor/bin/glue router:debug [application_name]`
+- `vendor/bin/glue api:router:cache:warm-up [application_name]`
 
 <details>
 <summary>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
@@ -641,5 +641,5 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 </details>
 
 If everything is set up correctly, you can access it as follows:
-* Glue Backend API application: `http://glue-backend.mysprykershop.com`.
-* Glue Storefront API application: `http://glue-storefront.mysprykershop.com`.
+- Glue Backend API application: `http://glue-backend.mysprykershop.com`.
+- Glue Storefront API application: `http://glue-storefront.mysprykershop.com`.

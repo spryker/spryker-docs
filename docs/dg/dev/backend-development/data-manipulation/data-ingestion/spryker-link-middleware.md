@@ -85,11 +85,11 @@ class AkeneoPimConfigurationProfilePlugin extends AbstractPlugin implements Conf
 
 Each process is a separate plugin that consists of the following methods (`ProcessConfigurationPluginInterface`):
 
-* `getProcessName`—returns the process name which is used to find the necessary process with the parameter (transferred with the `-p` option).
-* `getInputStreamPlugin`—configures the source where the data is read from.
-* `getOutputStreamPlugin`—configures the target where the data is written.
+- `getProcessName`—returns the process name which is used to find the necessary process with the parameter (transferred with the `-p` option).
+- `getInputStreamPlugin`—configures the source where the data is read from.
+- `getOutputStreamPlugin`—configures the target where the data is written.
 
-* `getIteratorPlugin`—either does nothing and releases the input stream for processing as is, or alters the data for further processing. For example, if the input stream is just a file, the iterator does nothing and lets the data be processed further. If the input stream is, for example, a file catalog, `getInputStreamPlugin` returns the file name, the iterator goes through all the files, and if each file is in the JSON format, the iterator returns each JSON file of the catalog for processing to the pipeline.
+- `getIteratorPlugin`—either does nothing and releases the input stream for processing as is, or alters the data for further processing. For example, if the input stream is just a file, the iterator does nothing and lets the data be processed further. If the input stream is, for example, a file catalog, `getInputStreamPlugin` returns the file name, the iterator goes through all the files, and if each file is in the JSON format, the iterator returns each JSON file of the catalog for processing to the pipeline.
 
 You can use one of two iterators that are provided out of the box (`NullIterator`, `JsonDirectoryIterator`) or implement your own.
 
@@ -247,31 +247,31 @@ For more information about the process implementation, see [DefaultProductImport
 You can view the results of the Spryker Middleware processes in the Middleware **Reports** section under the **Maintenance** menu of the Administration interface. This **Middleware Reports** section provides an overview of all the processes run with Middleware, the overview of the process results (start time, duration, item count, and status of each process), as well as detailed information about each process. The detailed information includes the following:
 
 **Process details:**
-* Process name
-* Process start/end times
-* Process duration
-* Items count
-* Processed items
-* Skipped items
-* Status
-* Duration
+- Process name
+- Process start/end times
+- Process duration
+- Items count
+- Processed items
+- Skipped items
+- Status
+- Duration
 
 **Configuration details:**
-* Iterator plugin
-* Post process hook plugins
-* Input stream plugin
-* Output stream plugin
-* Logger plugin
-* Stage plugins
-* Preprocess hook plugins
-* Paths (if applicable)
+- Iterator plugin
+- Post process hook plugins
+- Input stream plugin
+- Output stream plugin
+- Logger plugin
+- Stage plugins
+- Preprocess hook plugins
+- Paths (if applicable)
 
 **Process stage results:**
-* Stage name
-* Input item count
-* Output item count
-* Total execution time
-* Average item execution time
+- Stage name
+- Input item count
+- Output item count
+- Total execution time
+- Average item execution time
 
 ### Integrate reports
 
@@ -351,11 +351,11 @@ By default, Middleware supports two strategies:
 | SprykerMiddleware\Zed\Process\Business\Mapper\Map\MapInterface::MAPPER_STRATEGY_COPY_UNKNOWN | This strategy copies keys with values which are not mentioned in the mapper configuration from the payload. |
 
 There are five ways to set mapper rules:
-* `ArrayMapRule`. This rule lets you use the given payload as an array with a recursive call.
-* `DynamicMapRule`. This rule lets you use the value from the payload as a key.
-* `ClosureMapRule`. This rule lets you use a custom function for the payload array.
-* `DynamicArrayMapRule`. This rule lets you use the value from the payload as a key and works with the payload as with an array with recursive calls.
-* `KeyMapeRule`. This simplest rule for the mapper that gets the value using the key from the payload. You can use the *. (period)* symbol as a key separator for getting value from the payload.
+- `ArrayMapRule`. This rule lets you use the given payload as an array with a recursive call.
+- `DynamicMapRule`. This rule lets you use the value from the payload as a key.
+- `ClosureMapRule`. This rule lets you use a custom function for the payload array.
+- `DynamicArrayMapRule`. This rule lets you use the value from the payload as a key and works with the payload as with an array with recursive calls.
+- `KeyMapeRule`. This simplest rule for the mapper that gets the value using the key from the payload. You can use the *. (period)* symbol as a key separator for getting value from the payload.
 
 You can check the examples of each rule in the following snippet. It's a final mapper example with examples of payload and their result.
 

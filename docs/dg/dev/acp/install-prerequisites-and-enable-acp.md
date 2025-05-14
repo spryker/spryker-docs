@@ -25,13 +25,13 @@ Update modules and set up the configuration as described in the following sectio
 
 Update the following modules to meet the ACP requirements:
 
-* `spryker/app-catalog-gui:^1.4.1`
-* `spryker/kernel-app:^1.4.0`
-* `spryker/message-broker:^1.15.0`
-* `spryker/message-broker-aws:^1.9.0`
-* `spryker/session:^4.15.1`
-* `spryker/oauth-client:^1.5.0`
-* `spryker/oauth-auth0:^1.1.1`
+- `spryker/app-catalog-gui:^1.4.1`
+- `spryker/kernel-app:^1.4.0`
+- `spryker/message-broker:^1.15.0`
+- `spryker/message-broker-aws:^1.9.0`
+- `spryker/session:^4.15.1`
+- `spryker/oauth-client:^1.5.0`
+- `spryker/oauth-auth0:^1.1.1`
 
 
 {% info_block infoBox "ACP app modules" %}

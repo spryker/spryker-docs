@@ -67,10 +67,10 @@ The following are recommendations on splitting functionality into modules:
 
 ## Next steps
 
-* To learn about the building blocks of Spryker, see [Programming concepts](/docs/dg/dev/architecture/programming-concepts.html).
-* To learn about application layers, see [Concept overview](/docs/dg/dev/architecture/conceptual-overview.html).
-* To learn about modular programming, see [Modular programming](https://en.wikipedia.org/wiki/Modular_programming).
-* To learn about the layered architecture pattern, see [Multitier architecture](https://en.wikipedia.org/wiki/Multitier_architecture).
-* To learn about packaging principles, see [Packaging principles](http://principles-wiki.net/collections:robert_c._martin_s_principle_collection).
-* To learn about quality attributes, see [Quality attributes](https://en.wikipedia.org/wiki/List_of_system_quality_attributes).
-* To learn about modularity, see [Software Modularity](https://www.modularmanagement.com/blog/software-modularity).
+- To learn about the building blocks of Spryker, see [Programming concepts](/docs/dg/dev/architecture/programming-concepts.html).
+- To learn about application layers, see [Concept overview](/docs/dg/dev/architecture/conceptual-overview.html).
+- To learn about modular programming, see [Modular programming](https://en.wikipedia.org/wiki/Modular_programming).
+- To learn about the layered architecture pattern, see [Multitier architecture](https://en.wikipedia.org/wiki/Multitier_architecture).
+- To learn about packaging principles, see [Packaging principles](http://principles-wiki.net/collections:robert_c._martin_s_principle_collection).
+- To learn about quality attributes, see [Quality attributes](https://en.wikipedia.org/wiki/List_of_system_quality_attributes).
+- To learn about modularity, see [Software Modularity](https://www.modularmanagement.com/blog/software-modularity).

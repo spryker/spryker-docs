@@ -33,17 +33,17 @@ Multi-layered code inheritance in Spryker lets projects extend and customize cor
 
 Code inheritance consists of the following layers:
 
-* Core code: the base level located in `vendor/spryker/`.
-  * *Default* code bucket on the project level. It's inherited from the core and located in `src/`. The source code on the project level, which is not explicitly part of a code bucket, is considered to be part of the default code bucket.
-  * *Custom* code bucket on the project level. It's inherited from the project level or the core level, or from both. All the source code related to a custom business logic is located here.
+- Core code: the base level located in `vendor/spryker/`.
+  - *Default* code bucket on the project level. It's inherited from the core and located in `src/`. The source code on the project level, which is not explicitly part of a code bucket, is considered to be part of the default code bucket.
+  - *Custom* code bucket on the project level. It's inherited from the project level or the core level, or from both. All the source code related to a custom business logic is located here.
 
 ![Code bucket inheritance](https://confluence-connect.gliffy.net/embed/image/bc410fba-1311-446a-90b2-9b8830ee8ebc.png?utm_medium=live&utm_source=custom)
 
 The inheritance concept applies on a per module basis. You can define a different code bucket for each module. When multiple modules implement the same code bucket, they are used accordingly during runtime. Also, you can implement multiple code buckets of the same module—for example:
 
-* `Checkout`: default implementation.
-* `CheckoutFOO`: *FOO* code bucket implementation.
-* `CheckoutBAR` *BAR* code bucket implementation.
+- `Checkout`: default implementation.
+- `CheckoutFOO`: *FOO* code bucket implementation.
+- `CheckoutBAR` *BAR* code bucket implementation.
 
 
 The inheritance concept consists of two parts: *physical* and *logical* inheritance.

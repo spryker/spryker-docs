@@ -23,9 +23,9 @@ This document shows how to add and configure cronjobs in Jenkins.
 
 We use [Jenkins](https://jenkins-ci.org/) for cronjob scheduling. Compared to Crontab, there are several benefits:
 
-* Jobs are queued and can be manually executed.
-* Job definitions are under version control and can be changed by any developer.
-* Console output is available for debugging.
+- Jobs are queued and can be manually executed.
+- Job definitions are under version control and can be changed by any developer.
+- Console output is available for debugging.
 
 ## Add a new job and run it
 

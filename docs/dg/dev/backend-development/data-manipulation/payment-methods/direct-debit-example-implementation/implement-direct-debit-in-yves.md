@@ -317,7 +317,7 @@ class DirectDebitHandler
 
 To plug this payment handler into the checkout, add a plugin to the following folders:
 
-* the `Plugin/` folder:
+- the `Plugin/` folder:
 
 ```php
 <?php
@@ -349,7 +349,7 @@ class DirectDebitHandlerPlugin extends AbstractPlugin implements StepHandlerPlug
 }
 ```
 
-* the `Handler/` folder:
+- the `Handler/` folder:
 
 ```php
 <?php

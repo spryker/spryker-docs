@@ -469,7 +469,7 @@ SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
 Make sure the output contains one record.
 
 
-* To verify that you can authenticate as a customer, send the request:
+- To verify that you can authenticate as a customer, send the request:
 
 ```
 POST /token/ HTTP/1.1
@@ -484,7 +484,7 @@ grant_type=password&username={customer_username}&password={customer_password}
 Make sure the output contains the 201 response with a valid token.
 
 
-* To verify that you can authenticate as a user, send the request:
+- To verify that you can authenticate as a user, send the request:
 
 ```
 POST /token/ HTTP/1.1

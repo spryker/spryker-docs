@@ -57,6 +57,6 @@ You can define additional store-specific variables if needed.
 
 3. Set up deployment, so that the following environment variables are set in the container where  `console scheduler:setup` is run:
 
-* `SPRYKER_SCHEDULER_HOST`
-* `SPRYKER_SCHEDULER_PORT`
-* `SPRYKER_JENKINS_TEMPLATE_PATH`
+- `SPRYKER_SCHEDULER_HOST`
+- `SPRYKER_SCHEDULER_PORT`
+- `SPRYKER_JENKINS_TEMPLATE_PATH`

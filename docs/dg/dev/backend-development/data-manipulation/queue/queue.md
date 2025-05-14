@@ -15,10 +15,10 @@ related:
 
 ## Concepts
 
-* Sender - a program that sends messages.
-* Receiver - a program that waits to receive messages.
-* Message - a string or binary data passed from Sender to Receiver.
-* Queue - similar to Mailbox; here you can store, send, and receive messages.
+- Sender - a program that sends messages.
+- Receiver - a program that waits to receive messages.
+- Message - a string or binary data passed from Sender to Receiver.
+- Queue - similar to Mailbox; here you can store, send, and receive messages.
 
 ## Introduction
 

@@ -18,8 +18,8 @@ The Router is responsible for matching a request to a route and generating URLs 
 
 You can find the list of all the modules related to the service below:
 
-* Router - `spryker/router`
-* RouterExtension - `spryker/router-extension`
+- Router - `spryker/router`
+- RouterExtension - `spryker/router-extension`
 
 ### Installation
 
@@ -31,8 +31,8 @@ For information on the installation, see [Upgrade the Router module](/docs/dg/de
 
 Routers are added to the `\Pyz\Yves\Router\RouterDependencyProvider::getRouterPlugins()` method. Spryker provides two build-in routers:
 
-* `\Spryker\Yves\Router\Plugin\Router\YvesRouterPlugin` - this is the main router which is required for Yves routing.
-* `\Spryker\Yves\Router\Plugin\Router\ZedDevelopmentRouterPlugin` - this router is not required and is only a fallback router for development.
+- `\Spryker\Yves\Router\Plugin\Router\YvesRouterPlugin` - this is the main router which is required for Yves routing.
+- `\Spryker\Yves\Router\Plugin\Router\ZedDevelopmentRouterPlugin` - this router is not required and is only a fallback router for development.
 
 ### RouteProviderPlugins
 
@@ -42,10 +42,10 @@ Routers are added to the `\Pyz\Yves\Router\RouterDependencyProvider::getRouterPl
 
 The Router can be configured with the following `\Spryker\Yves\Router\RouterEnvironmentConfigConstantsYves` options:
 
-* `\Spryker\Shared\Router\RouterConstants::YVES_IS_CACHE_ENABLED` - use this option to enable/disable the cache. By default, it's enabled.
-* `\Spryker\Shared\Router\RouterConstants::YVES_CACHE_PATH` - use this option if you want to change the path to the generated cache files.
-* `\Spryker\Shared\Router\RouterConstants::YVES_IS_SSL_ENABLED` - use this option to enable/disable the Router's SSL capabilities.
-* `\Spryker\Shared\Router\RouterConstants::YVES_SSL_EXCLUDED_ROUTE_NAMES` - use this option to disable SSL for the specific route names when SSL is enabled.
+- `\Spryker\Shared\Router\RouterConstants::YVES_IS_CACHE_ENABLED` - use this option to enable/disable the cache. By default, it's enabled.
+- `\Spryker\Shared\Router\RouterConstants::YVES_CACHE_PATH` - use this option if you want to change the path to the generated cache files.
+- `\Spryker\Shared\Router\RouterConstants::YVES_IS_SSL_ENABLED` - use this option to enable/disable the Router's SSL capabilities.
+- `\Spryker\Shared\Router\RouterConstants::YVES_SSL_EXCLUDED_ROUTE_NAMES` - use this option to disable SSL for the specific route names when SSL is enabled.
 
 For further information, check out the specifications for the Router.
 
@@ -228,8 +228,8 @@ Use this plugin to hook into the match and to generate processes of the Router.
 
 The Router module provides the following console commands:
 
-* `\Spryker\Yves\Router\Plugin\Console\RouterDebugZedConsole` - lists all routes and can be used to see detailed information about each route.
-* `\Spryker\Yves\Router\Plugin\Console\RouterCacheWarmUpConsole` - can be used to warm or refresh the generated cache files.
+- `\Spryker\Yves\Router\Plugin\Console\RouterDebugZedConsole` - lists all routes and can be used to see detailed information about each route.
+- `\Spryker\Yves\Router\Plugin\Console\RouterCacheWarmUpConsole` - can be used to warm or refresh the generated cache files.
 
 ## Route manipulator plugins
 

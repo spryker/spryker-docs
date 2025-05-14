@@ -24,8 +24,8 @@ related:
 ## Checkout plugins
 
 To integrate the invoice payment method into the checkout, you need to provide implementations for the following plugins:
-* `CheckoutPreCondition`
-* `PaymentSaveOrder`
+- `CheckoutPreCondition`
+- `PaymentSaveOrder`
 
 Perform the following steps:
 

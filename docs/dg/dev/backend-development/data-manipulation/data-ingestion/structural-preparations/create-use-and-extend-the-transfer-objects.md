@@ -367,5 +367,5 @@ The only valid attribute value of the root `<transfers></transfers>` element is 
 
 You can use the following definitions to generate the related code:
 
-* Add shared transfer schema. For details, see [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html).
+- Add shared transfer schema. For details, see [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html).
 

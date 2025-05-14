@@ -30,9 +30,9 @@ The *client's* job is to connect the frontend application to all of the surround
 
 For each of these resources, there is a client. So, it's not only one client, but many of them. Each one of them is responsible for a specific resource or functionality. Spryker, by default, is shipped with the following clients:
 
-* SearchClient: to connect to Elasticsearch using its API.
-* StorageClient: to connect to Redis using the Redis protocol; RESP.
-* Commerce OS clients: every functional unit, a module as it's called in Spryker, has its client. For example, there are separated clients for the cart (CartClient), checkout (CheckoutClient), and customer (CustomerClient). The same applies to all the other modules in Spryker.
+- SearchClient: to connect to Elasticsearch using its API.
+- StorageClient: to connect to Redis using the Redis protocol; RESP.
+- Commerce OS clients: every functional unit, a module as it's called in Spryker, has its client. For example, there are separated clients for the cart (CartClient), checkout (CheckoutClient), and customer (CustomerClient). The same applies to all the other modules in Spryker.
 
 Commerce OS clients communicate with the Commerce OS using HTTP. They mainly perform RPCs (remote procedure calls) using HTTP POST requests with a serialized JSON payload. They also do all the necessary authorization and authentication between the two applications.
 The client's purpose is to encapsulate the logic that runs the shop independent from the overlying application. So in case you want to use a different technology stack, you can reuse the client.
@@ -109,8 +109,8 @@ The real execution time in your project depends on the environment, the performa
 
 The request from Yves to Zed involves two important classes:
 
-* The *stub* represents the remote methods in the client.
-* The *gateway controller* represents the entry point on the Zed side.
+- The *stub* represents the remote methods in the client.
+- The *gateway controller* represents the entry point on the Zed side.
 
 ## Next step
 

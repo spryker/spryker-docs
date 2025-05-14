@@ -40,13 +40,13 @@ To access data rapidly, the Shop App client uses Redis as a key-value storage an
 
 The advantages of the approach are:
 
-* High performance and fast (semi-real-time) sync, with changes synced every second by default.
-* Possibility to stack and optimize SQL queries while publishing data.
-* Possibility to trigger updates automatically by manipulating Propel entities and without triggering the sync manually.
-* Easy data transformation into the format that can be consumed by a frontend application.
-* Updates can be done incrementally without doing full exports.
-* Data is always available in the SQL database, even if Redis or Elasticsearch storage is corrupted or outdated. You can re-sync the data at any time.
-* Data can be localized and targeted at a specific store.
+- High performance and fast (semi-real-time) sync, with changes synced every second by default.
+- Possibility to stack and optimize SQL queries while publishing data.
+- Possibility to trigger updates automatically by manipulating Propel entities and without triggering the sync manually.
+- Easy data transformation into the format that can be consumed by a frontend application.
+- Updates can be done incrementally without doing full exports.
+- Data is always available in the SQL database, even if Redis or Elasticsearch storage is corrupted or outdated. You can re-sync the data at any time.
+- Data can be localized and targeted at a specific store.
 
 
 Both Publish and Synchronize implement the queue pattern. See [Spryker Queue Module](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html) to learn more.
@@ -89,11 +89,11 @@ Publish and Synchronize Process schema:
 ## Publish
 
 When the publish process is triggered, an event or events are posted to a queue. Each event message posted to the queue contains the following information on the event that triggered it:
-* Event name
-* ID
-* Names of the corresponding publisher and transfer classes
-* The list of modified columns
-* The foreign keys used to backtrack the updated Propel entities
+- Event name
+- ID
+- Names of the corresponding publisher and transfer classes
+- The list of modified columns
+- The foreign keys used to backtrack the updated Propel entities
 
 
 However, it will not contain the actual data that has changed. See the following example:
@@ -244,8 +244,8 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 ### Environment limitations related to DMS
 
 When Dynamic Multi-Store (DMS) is disabled, the Direct Sync feature has the following limitations:  
-* Single-store configuration: The feature is only supported for configurations with a single store.
-* Multi-store configuration with namespace consistency: For configurations with multiple stores, all stores must use the same Storage and Search namespaces.
+- Single-store configuration: The feature is only supported for configurations with a single store.
+- Multi-store configuration with namespace consistency: For configurations with multiple stores, all stores must use the same Storage and Search namespaces.
 
 Example configuration for multiple stores:
 
@@ -286,15 +286,15 @@ P&S inspires intelligent solutions and smart architecture designs!
 {% endinfo_block %}
 
 When designing a solution using P&S we need to consider the following concerns in our applications
-* eventual consistency for data available in storefronts
-* horizontal scalability of publish process (native) and sync process (requires development)
-* data object limitations
+- eventual consistency for data available in storefronts
+- horizontal scalability of publish process (native) and sync process (requires development)
+- data object limitations
 
 ### Data Object Limitations
 
 In order to build a healthy commerce system, we need to make sure that P&S process is healthy at all times. And first we start with healthy NFRs for P&S.
-* storage sync message size should not be over 256Kb - this prevents us from problems in data processing, but even more important in data comsumption, when an API consumer might experience failure when reviceing an aggregated object of a high size.
-* do not exceed the request limitations for the storage (eg. Redis) and search (eg. OpenSearch) systems, while sending data in sync process
+- storage sync message size should not be over 256Kb - this prevents us from problems in data processing, but even more important in data comsumption, when an API consumer might experience failure when reviceing an aggregated object of a high size.
+- do not exceed the request limitations for the storage (eg. Redis) and search (eg. OpenSearch) systems, while sending data in sync process
 
 {% info_block infoBox "Are these really limitations?"%}
 

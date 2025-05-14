@@ -26,17 +26,17 @@ In this guide, you will learn how to integrate and extend the service in your pr
 
 The following modules are related to the service:
 
-* `spryker/form`
-* `spryker/form-extension`
-* `spryker/validator`
-* `spryker/validator-extension`
+- `spryker/form`
+- `spryker/form-extension`
+- `spryker/validator`
+- `spryker/validator-extension`
 
 ## Installation
 
 For information on how to install and integrate *Form* and *Validator* in your project, perform the steps detailed in the following guides:
 
-* [Upgrade the Form module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-form-module.html)
-* [Upgrade the Validator module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-validator-module.html)
+- [Upgrade the Form module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-form-module.html)
+- [Upgrade the Validator module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-validator-module.html)
 
 ## Extending the form
 

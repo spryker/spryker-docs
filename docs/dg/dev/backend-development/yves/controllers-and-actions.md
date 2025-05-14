@@ -99,13 +99,13 @@ To learn more about URL routing in Yves, see [Implement URL routing in Yves](/do
 
 Each action which returns `$this->viewResponse()` must have a dedicated Twig template:
 
-* Controller and action:
+- Controller and action:
 
 ```twig
 MyNamespace/Yves/MyBundle/Controller/TestController::doSomethingAction()
 ```
 
-* The expected path of a template:
+- The expected path of a template:
 
 ```twig
 MyNamespace/Yves/MyBundle/Theme/{ThemeName}/Test/do-something.twig

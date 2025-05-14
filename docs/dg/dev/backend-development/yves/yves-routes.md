@@ -115,9 +115,9 @@ Routers are responsible for finding a matching controller action for each reques
 
 By default we provide three routers:
 
-* *The `YvesRouterPlugin` router: Tries to match the path with the registered `RouteProviders`.
-* The `StorageRouterPlugin` router: Tries to match the path with the key-value storage (Redis).
-* The default `YvesDevelopmentRouterPlugin` router: Tries to match the path with the registered `RouteProviders`.
+- *The `YvesRouterPlugin` router: Tries to match the path with the registered `RouteProviders`.
+- The `StorageRouterPlugin` router: Tries to match the path with the key-value storage (Redis).
+- The default `YvesDevelopmentRouterPlugin` router: Tries to match the path with the registered `RouteProviders`.
 
 If you want to add a new router, add it to `RouterDependencyProvider` but make sure you do it in the right ordering.
 

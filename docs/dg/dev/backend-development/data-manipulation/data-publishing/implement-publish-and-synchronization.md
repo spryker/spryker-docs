@@ -174,12 +174,12 @@ Sample Elasticsearch synchronization table (see `data/shop/development/current/s
 The *Synchronization* behavior added by the above schema files adds a column that stores the actual data to synchronize to Redis or Elasticsearch (in JSON format). The column name is *data*.
 
 Synchronization behavior parameters:
-* `resource`—specifies the Redis or Elasticsearch namespace to synchronize with.
-* `store`—specifies whether it's necessary to specify a store for an entity.
-* `locale`—specifies whether it's necessary to specify a locale for an entity.
-* `key_suffix_column`—specifies the name of the column that will be appended to the Redis or Elasticsearch key to make the key unique. If this parameter is omitted, then all entities will be stored under the same key.
-* `queue_group`—specifies the queue group for synchronization.
-* `params`—specifies search parameters (Elasticsearch only).
+- `resource`—specifies the Redis or Elasticsearch namespace to synchronize with.
+- `store`—specifies whether it's necessary to specify a store for an entity.
+- `locale`—specifies whether it's necessary to specify a locale for an entity.
+- `key_suffix_column`—specifies the name of the column that will be appended to the Redis or Elasticsearch key to make the key unique. If this parameter is omitted, then all entities will be stored under the same key.
+- `queue_group`—specifies the queue group for synchronization.
+- `params`—specifies search parameters (Elasticsearch only).
 
 
 ## 5. Trigger Publish events
@@ -208,10 +208,10 @@ To implement Event Behavior, add the behavior called *event* to your Propel mode
 
 The `parameter` element specifies when events should be triggered. It has four attributes:
 
-* `name`: the parameter name. It must be unique in your Propel model.
-* `column`: the column that needs to be updated to trigger an event. To track all columns, use the *** (asterisk) symbol.
-* `value`: a value to compare.
-* `operator`: the comparison operator. You can use any PHP comparison operators (===, ==, !=, !==, <, >, <=, >=, <>) for this purpose.
+- `name`: the parameter name. It must be unique in your Propel model.
+- `column`: the column that needs to be updated to trigger an event. To track all columns, use the *** (asterisk) symbol.
+- `value`: a value to compare.
+- `operator`: the comparison operator. You can use any PHP comparison operators (===, ==, !=, !==, <, >, <=, >=, <>) for this purpose.
 
 The *value* and *operator* attributes are optional. You can use them to filter changes based on certain criteria. The following example triggers an event only if the value of the `quantity` column is `0`:
 
@@ -299,8 +299,8 @@ class GlossaryWritePublisherPlugin extends AbstractPlugin implements PublisherPl
 A listener class must implement `PublisherPluginInterface` and contain the `handleBulk` method.
 
 The `handleBulk` method is called by the event queue for the defined events in the `getSubscribedEvents` method. The method accepts two parameters:
-* `$eventEntityTransfers`: specifies an array of event transfers that represent the events to consume;
-* `eventName`: specifies the event name.
+- `$eventEntityTransfers`: specifies an array of event transfers that represent the events to consume;
+- `eventName`: specifies the event name.
 
 {% info_block infoBox "Info"%}
 
@@ -394,8 +394,8 @@ For the full code, see `data/shop/development/current/vendor/spryker/glossary-st
 
 Recommended naming for the `write{targetEntityName}CollectionBy{triggeredEvent}Events` and `delete{targetEntityName}CollectionBy{triggeredEvent}Events` methods:
 
-* `$targetEntityName`: a unique name of the entity in Redis or Elasticsearch. We recommend leaving this placeholder empty if this publish and synchronize module is responsible for handling exactly one entity.
-* `$triggeredEvent`: a logical name for the group of events that makes it easy to identify the origin of the trigger. We recommend using the name of the entity in persistence that triggered the publish and synchronize process.
+- `$targetEntityName`: a unique name of the entity in Redis or Elasticsearch. We recommend leaving this placeholder empty if this publish and synchronize module is responsible for handling exactly one entity.
+- `$triggeredEvent`: a logical name for the group of events that makes it easy to identify the origin of the trigger. We recommend using the name of the entity in persistence that triggered the publish and synchronize process.
 
 {% endinfo_block %}
 
@@ -405,8 +405,8 @@ The changes over the *storage* or *search* database tables trigger the correspon
 
 Spryker implemented two generic synchronization message processor plugins for synchronizing data to the frontend:
 
-* `SynchronizationStorageQueueMessageProcessorPlugin` for synchronizing data to Redis, and
-* `SynchronizationSearchQueueMessageProcessorPlugin` for synchronizing data to Elasticsearch.
+- `SynchronizationStorageQueueMessageProcessorPlugin` for synchronizing data to Redis, and
+- `SynchronizationSearchQueueMessageProcessorPlugin` for synchronizing data to Elasticsearch.
 
 You need to map your synchronization queue names to one of the plugins depending on which storage you want to use it for. You must map the queues in `QueueDependencyProvider::getProcessorMessagePlugins()`. For details, see [Queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html#queue-message-processor-plugin).
 
@@ -442,9 +442,9 @@ The recommended module structure for the Publish and Synchronize module is as fo
 ## Perform additional tasks
 
 There are some additional tasks for the Publish and Synchronize that you can perform:
-* Viewing the event mapping.
-* Debugging Publish and Synchronize.
-*
+- Viewing the event mapping.
+- Debugging Publish and Synchronize.
+-
 
 ### View event mapping
 

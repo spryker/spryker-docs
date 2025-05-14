@@ -200,8 +200,8 @@ The skeleton of the order process is done now. Refresh the graph and check your 
 The order process usually needs PHP implementations for certain functionalities like calling a payment provider or checking if payment is authorized or not.
 To do so, Spryker introduces *Commands* and *Conditions*:
 
-* Commands are used for any implementation of any functionality used in the process.
-* Conditions are used to replace an if-then statement in your process.
+- Commands are used for any implementation of any functionality used in the process.
+- Conditions are used to replace an if-then statement in your process.
 
 They are both implemented in PHP and injected into the state machine skeleton.
 
@@ -418,8 +418,8 @@ You can keep moving the item until the order is closed.
 
 Besides manual tests, we recommend implementing automated tests for state machine. The default test helpers can help you build your tests:
 
-* `\SprykerTest\Zed\Oms\Helper\OmsHelper`: provides hooks to add your commands and conditions to tests
-* `\SprykerTest\Shared\Sales\Helper\SalesOmsHelper`: provides methods to test the state machine
+- `\SprykerTest\Zed\Oms\Helper\OmsHelper`: provides hooks to add your commands and conditions to tests
+- `\SprykerTest\Shared\Sales\Helper\SalesOmsHelper`: provides methods to test the state machine
 
 #### 5.1 Add the test helper
 
@@ -452,18 +452,18 @@ suites:
 There're also default commands and conditions, which can be used as placeholders for commands and conditions. The key is the name used in `OmsDependencyProvider` to set up the state machine.
 
 Default commands and conditions:
-* `\SprykerTest\Zed\Oms\Helper\Mock\AlwaysTrueConditionPluginMock`: condition that always returns true
-* `\SprykerTest\Zed\Oms\Helper\Mock\AlwaysFalseConditionPluginMock`: condition that always returns true
-* `\SprykerTest\Zed\Oms\Helper\Mock\CommandByItemPluginMock`: a mock for `CommandByItemInterface` that always returns an empty array
-* `\SprykerTest\Zed\Oms\Helper\Mock\CommandByOrderPluginMock`: a mock for `CommandByOrderInterface` that always returns an empty array
+- `\SprykerTest\Zed\Oms\Helper\Mock\AlwaysTrueConditionPluginMock`: condition that always returns true
+- `\SprykerTest\Zed\Oms\Helper\Mock\AlwaysFalseConditionPluginMock`: condition that always returns true
+- `\SprykerTest\Zed\Oms\Helper\Mock\CommandByItemPluginMock`: a mock for `CommandByItemInterface` that always returns an empty array
+- `\SprykerTest\Zed\Oms\Helper\Mock\CommandByOrderPluginMock`: a mock for `CommandByOrderInterface` that always returns an empty array
 
 
 
 {% info_block infoBox %}
 
-* Commands and conditions can't be defined at runtime during tests. Instead, they must be specified in `codeception.yml`.
-* Test scenarios support only a single item.
-* Timeouts can't be tested.
+- Commands and conditions can't be defined at runtime during tests. Instead, they must be specified in `codeception.yml`.
+- Test scenarios support only a single item.
+- Timeouts can't be tested.
 
 {% endinfo_block %}
 

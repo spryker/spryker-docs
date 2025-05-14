@@ -27,10 +27,10 @@ This tutorial explains the Spryker architecture and how things work altogether. 
 
 ## Challenge description
 
-* Build a `HelloSpryker` module in Zed that renders the `Hello Spryker!` string in reverse order on the screen: `!rekyrpS olleH`.
-* Build the `HelloSpryker` module in Yves that communicates with Zed using the client to retrieve the same reversed string `!rekyrpS olleH` and shows the string on a webpage in the shop.
-* Add Zed persistence layer in the `HelloSpryker` module to store and get the reversed string to and from the database.
-* Move the functionality that returns the reversed string to a new module (`StringFormat`), then provide the string to the `HelloSpryker` module.
+- Build a `HelloSpryker` module in Zed that renders the `Hello Spryker!` string in reverse order on the screen: `!rekyrpS olleH`.
+- Build the `HelloSpryker` module in Yves that communicates with Zed using the client to retrieve the same reversed string `!rekyrpS olleH` and shows the string on a webpage in the shop.
+- Add Zed persistence layer in the `HelloSpryker` module to store and get the reversed string to and from the database.
+- Move the functionality that returns the reversed string to a new module (`StringFormat`), then provide the string to the `HelloSpryker` module.
 
 {% info_block infoBox "" %}
 
@@ -91,9 +91,9 @@ Because reversing a string belongs to the business logic, you need to build a `B
 
 1. Inside the `HelloSpryker` module, add a folder called `Business`.
    The `Business` layer needs three main classes:
-    * `Facade` to work as the main API.
-    * `Factory` to instantiate the needed objects and inject their dependencies.
-    * `Model` to perform the actual business logic.
+    - `Facade` to work as the main API.
+    - `Factory` to instantiate the needed objects and inject their dependencies.
+    - `Model` to perform the actual business logic.
 
 2. Build the facade class, and don't forget the facade interface:
 
@@ -335,9 +335,9 @@ To connect Yves to Zed, you need a *client*. Building a client for `HelloSpryker
 To build a client, follow these steps:
 1. Under `/src/Pyz/Client`, add a new folder and call it `HelloSpryker`.
    <br>The Client structure consists of three main classes:
-    * `Client` to function as the main API to the client.
-    * `Factory` to instantiate the needed objects and inject their dependencies.
-    * `Stub` to do the actual call to Zed with the right payload.
+    - `Client` to function as the main API to the client.
+    - `Factory` to instantiate the needed objects and inject their dependencies.
+    - `Stub` to do the actual call to Zed with the right payload.
 
 2. Create the client class inside the `HelloSpryker` client folder:
 
@@ -366,7 +366,7 @@ To build a client, follow these steps:
     }
 	```
 
- 4. Add the stub. As the client is calling Zed, create a folder called `Zed` and add the stub inside it:
+4. Add the stub. As the client is calling Zed, create a folder called `Zed` and add the stub inside it:
 
     ```php
     namespace Pyz\Client\HelloSpryker\Zed;
@@ -377,7 +377,7 @@ To build a client, follow these steps:
     {
 	    // Your code goes here
     }									
-    ```					
+    ```
 
 5. To provide the `ZedRequest Client` to your `HelloSpryker Client`, inside the `HelloSpryker` module, add the `HelloSprykerDependencyProvider` class.
 

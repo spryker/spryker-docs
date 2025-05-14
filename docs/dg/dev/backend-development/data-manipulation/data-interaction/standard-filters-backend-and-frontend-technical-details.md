@@ -18,9 +18,9 @@ related:
 
 The backend part of the Standard Filters feature is located in the following modules:
 
-* ProductCategoryFilter (`spryker/product-category-filter`)
-* ProductCategoryFilterGui (`spryker/product-category-filter-gui`)
-* ProductCategoryFilterStorage (`spryker/product-category-filter-storage`)
+- ProductCategoryFilter (`spryker/product-category-filter`)
+- ProductCategoryFilterGui (`spryker/product-category-filter-gui`)
+- ProductCategoryFilterStorage (`spryker/product-category-filter-storage`)
 
 Category Filters management is described in the [Back Office guide](/docs/pbc/all/search/{{site.version}}/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html).
 

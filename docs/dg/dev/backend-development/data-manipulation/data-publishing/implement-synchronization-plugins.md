@@ -112,20 +112,20 @@ class HelloWorldSynchronizationDataRepositoryPlugin extends AbstractPlugin imple
 
 
 The method descriptions:
-* `HelloWorldSynchronizationDataRepositoryPlugin::getResourceName()`—defines a resource name of the storage or search module for key generation.
-* `HelloWorldSynchronizationDataRepositoryPlugin::hasStore()`—defines if the entity implements a multi-store concept.
-* `HelloWorldSynchronizationDataRepositoryPlugin::getData()`—retrieves a collection of sync transfers based on the provided offset and limit.
-* `HelloWorldSynchronizationDataRepositoryPlugin::getParams()`—defines additional sync parameters for Redis or Elasticsearch.
-* `HelloWorldSynchronizationDataRepositoryPlugin::getQueueName()`—defines a queue name for synchonization.
-* `HelloWorldSynchronizationDataRepositoryPlugin::getSynchronizationQueuePoolName()`—defines the name of the synchronization queue pool for broadcasting messages.
+- `HelloWorldSynchronizationDataRepositoryPlugin::getResourceName()`—defines a resource name of the storage or search module for key generation.
+- `HelloWorldSynchronizationDataRepositoryPlugin::hasStore()`—defines if the entity implements a multi-store concept.
+- `HelloWorldSynchronizationDataRepositoryPlugin::getData()`—retrieves a collection of sync transfers based on the provided offset and limit.
+- `HelloWorldSynchronizationDataRepositoryPlugin::getParams()`—defines additional sync parameters for Redis or Elasticsearch.
+- `HelloWorldSynchronizationDataRepositoryPlugin::getQueueName()`—defines a queue name for synchonization.
+- `HelloWorldSynchronizationDataRepositoryPlugin::getSynchronizationQueuePoolName()`—defines the name of the synchronization queue pool for broadcasting messages.
 
 {% info_block infoBox %}
 
 Make sure to fulfill the requirements:
 
-* The resource name must be the same as in the Propel schema definition.
+- The resource name must be the same as in the Propel schema definition.
 
-* The plugin has to implement`\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataBulkRepositoryPluginInterface`.
+- The plugin has to implement`\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataBulkRepositoryPluginInterface`.
 
 {% endinfo_block %}
 

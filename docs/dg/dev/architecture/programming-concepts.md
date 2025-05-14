@@ -93,5 +93,5 @@ Directories:
 
 ## Next steps
 
-* To find out how data flows are separated in Spryker Commerce OS, see [Conceptual overview](/docs/dg/dev/architecture/conceptual-overview.html).
-* To learn about application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/dg/dev/architecture/modules-and-application-layers.html).
+- To find out how data flows are separated in Spryker Commerce OS, see [Conceptual overview](/docs/dg/dev/architecture/conceptual-overview.html).
+- To learn about application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/dg/dev/architecture/modules-and-application-layers.html).

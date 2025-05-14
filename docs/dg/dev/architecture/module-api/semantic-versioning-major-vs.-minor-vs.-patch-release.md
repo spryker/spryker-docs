@@ -29,8 +29,8 @@ When we make a change to the [external API of a module](/docs/dg/dev/architectur
 Our customers need to change their `composer.json` file to get major versions of modules.
 
 We have two types of major releases:
-* A *maxi-major*. When the release effort is higher than four hours for clients who did not extend the module. This typically happens when data needs to be migrated. In case of a maxi-major release, the previous version automatically gets all bug fixes and security patches (LTS) as long as anyone uses this version.
-* A *mini-major*. When the release effort is lower than four hours for clients who did not extend the module.
+- A *maxi-major*. When the release effort is higher than four hours for clients who did not extend the module. This typically happens when data needs to be migrated. In case of a maxi-major release, the previous version automatically gets all bug fixes and security patches (LTS) as long as anyone uses this version.
+- A *mini-major*. When the release effort is lower than four hours for clients who did not extend the module.
 
 ## Minor release
 

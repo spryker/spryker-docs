@@ -21,9 +21,9 @@ Once the S3 bucket has been established, you can manually upload asset files to 
 ## 3. Update URLs in the database
 
 To ensure the seamless transition to the new image URLs, execute an SQL update query within the Spryker cloud database. The query should update the old image URLs with the new ones. The list of tables that store images includes:
-* spy_product_image
-* spy_category_image
-* Any other tables related to images
+- spy_product_image
+- spy_category_image
+- Any other tables related to images
 
 ## 4. Publish new URLs to Redis and Elasticsearch
 

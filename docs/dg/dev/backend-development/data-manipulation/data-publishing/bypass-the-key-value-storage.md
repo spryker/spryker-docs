@@ -10,8 +10,8 @@ redirect_from:
 ---
 
 One of the main ways of transferring data from Zed to Yves is the *Publish & Synchronization* mechanism. It works as follows:
-* Storing the denormalized data that is saved in Zed and must be shared with Yves in specific infrastructural database tables.
-* Synchronizing that data to fast key-value storage, like Redis, with the help of message queues.
+- Storing the denormalized data that is saved in Zed and must be shared with Yves in specific infrastructural database tables.
+- Synchronizing that data to fast key-value storage, like Redis, with the help of message queues.
 
 Yves then reads the synchronized data directly from the storage. However, sometimes, you might need to exclude the second step and read data directly from the database. This document describes how to do that.
 
@@ -36,8 +36,8 @@ This new module is responsible for interacting with the database in read-only mo
 
 There are two limitations of using the database as storage on Yves compared to the default storage engine. The following are scenarios when Yves actually writes data to storage:
 
-* Caching of requests to storage: while using the database as storage, it's not possible to cache anything in Yves.
-* Concurrent requests and caching for the Glue API.
+- Caching of requests to storage: while using the database as storage, it's not possible to cache anything in Yves.
+- Concurrent requests and caching for the Glue API.
 
 {% endinfo_block %}
 

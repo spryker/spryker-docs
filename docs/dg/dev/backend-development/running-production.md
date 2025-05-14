@@ -14,10 +14,10 @@ Spryker OS is capable of providing simple and advanced production scenarios: sin
 ## Applications
 
 Spryker OS provides the following applications:
-* Storefront (Yves)
-* Back Office (Zed)
-* Storefront API (Glue Storefront)
-* Backend API (Glue Backend)
+- Storefront (Yves)
+- Back Office (Zed)
+- Storefront API (Glue Storefront)
+- Backend API (Glue Backend)
 
 Applications can be run and scaled independently. For more information on the provided applications and application layers, see [Conceptual overview](/docs/dg/dev/architecture/conceptual-overview.html).
 
@@ -31,8 +31,8 @@ Even with good ACL use, the Back Office contains sensitive data which must be se
 {% info_block warningBox "System requirement" %}
 
 To protect the application and user data, the Back Office Application must be secured in the internet. The following options are available by default:
-* Basic Auth
-* IP allowlisting
+- Basic Auth
+- IP allowlisting
 
 {% endinfo_block %}
 

@@ -36,9 +36,9 @@ This document shows how P&S works and how to export data using a HelloWorld P&S 
 ## 1. Module and table
 
 Follow these steps to create the following:
-* Data source module
-* Zed database table
-* Data publishing module
+- Data source module
+- Zed database table
+- Data publishing module
 
 1. Create the `HelloWorld` module by creating the `HelloWorld` folder in Zed. The module is the source of data for publishing.
 
@@ -71,8 +71,8 @@ Follow these steps to create the following:
 {% info_block infoBox "Naming conventions" %}
 
 The following P&S naming conventions are applied:
-* All the modules related to Redis should have the `Storage` suffix.
-* All the modules related to Elasticsearch should have the `Search` suffix.
+- All the modules related to Redis should have the `Storage` suffix.
+- All the modules related to Elasticsearch should have the `Search` suffix.
 
 {% endinfo_block %}
 
@@ -486,12 +486,12 @@ Ensure that the triggered event has the correct structure:
 
 2. Verify the data required for the publisher to process it:
 
-* Event name: `Entity.spy_hello_spryker_message.create`
-* Listener: `HelloWorldWritePublisherPlugin`
-* Table name: `spy_hello_spryker_message`
-* Modified columns: `spy_hello_spryker_message.name` and `spy_hello_spryker_message.message`
-* ID: the primary key of the record
-* ForeignKey: the key to backtrack the updated Propel entities
+- Event name: `Entity.spy_hello_spryker_message.create`
+- Listener: `HelloWorldWritePublisherPlugin`
+- Table name: `spy_hello_spryker_message`
+- Modified columns: `spy_hello_spryker_message.name` and `spy_hello_spryker_message.message`
+- ID: the primary key of the record
+- ForeignKey: the key to backtrack the updated Propel entities
 
 {% endinfo_block %}
 
@@ -540,8 +540,8 @@ Hello World Writer!
 {% info_block warningBox "Verification" %}
 
 Ensure that the event has been processed correctly:
-* You can see a message from the publisher in the event.
-* The `publish.hello_world` queue is empty:
+- You can see a message from the publisher in the event.
+- The `publish.hello_world` queue is empty:
 ![empty-rabbitmq-queue](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/empty-rabbitmq-queue.png)
 
 For debugging purposes, use the `-k` option to keep messages in the queue `queue:task:start publish.hello_world -k`.
@@ -590,17 +590,17 @@ console propel:install
 
 The schema file defines the table as follows:
 
-* `ID` is a primary key of the table (`id_hello_world_message_storage` in the example).
-* `ForeignKey` is a foreign key to the main resource that you want to export (`fk_hello_world_message` for `spy_hello_world_message`).
-* `SynchronizationBehaviour` modifies the table as follows:
-  * Adds the `Data` column that stores data in the format that can be sent directly to Redis. The database field type is `TEXT`.
-  * Adds the `Key` column that stores the Redis Key. The data type is `VARCHAR`.
-  * Defines `Resource` name for key generation.
-  * Defines `Store` value for store-specific data.
-  * Defines `Locale` value for localizable data.
-  * Defines `Key Suffix Column` value for key generation.
-  * Defines `queue_group` to send a copy of the `data` column.
-* Timestamp behavior is added to keep timestamps and use an incremental sync strategy.
+- `ID` is a primary key of the table (`id_hello_world_message_storage` in the example).
+- `ForeignKey` is a foreign key to the main resource that you want to export (`fk_hello_world_message` for `spy_hello_world_message`).
+- `SynchronizationBehaviour` modifies the table as follows:
+  - Adds the `Data` column that stores data in the format that can be sent directly to Redis. The database field type is `TEXT`.
+  - Adds the `Key` column that stores the Redis Key. The data type is `VARCHAR`.
+  - Defines `Resource` name for key generation.
+  - Defines `Store` value for store-specific data.
+  - Defines `Locale` value for localizable data.
+  - Defines `Key Suffix Column` value for key generation.
+  - Defines `queue_group` to send a copy of the `data` column.
+- Timestamp behavior is added to keep timestamps and use an incremental sync strategy.
 
 {% info_block infoBox "Incremental sync" %}
 
@@ -632,9 +632,9 @@ To do this, create facade and model classes to handle the logic of the publish p
 
 The Facade methods are:
 
-* `writeCollectionByHelloWorldEvents(array $eventTransfers)`
+- `writeCollectionByHelloWorldEvents(array $eventTransfers)`
 
-* `deleteCollectionByHelloWorldEvents(array $eventTransfers)`
+- `deleteCollectionByHelloWorldEvents(array $eventTransfers)`
 
 1. Create the `HelloWorldStorageWriter` model and implement the following method:
 

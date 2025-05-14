@@ -267,9 +267,9 @@ Make sure only the "storefront" application documentation was generated.
 
 Make sure `DocumentationGeneratorOpenApiSchemaFormatterPlugin` works by inspecting the content of the generated documentation.
 It should contain relevant information in the following sections:
-* info
-* servers
-* tags
+- info
+- servers
+- tags
 
 ***
 

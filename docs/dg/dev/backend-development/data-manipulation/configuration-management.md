@@ -13,10 +13,10 @@ A configuration file is a set of key-value pairs, properties, and methods that d
 
 The directory includes the following subfolders with configuration files:
 
-* `install`
-* `Shared`
-* `Yves`
-* `Zed`
+- `install`
+- `Shared`
+- `Yves`
+- `Zed`
 
 These configuration files are used only for the global environment configuration, like database credentials, URLs, or search engine ports. For settings that are used inside a specific module, use the module configuration instead.
 
@@ -160,12 +160,12 @@ use Spryker\Zed\Kernel\AbstractBundleConfig;
 
 You might use the following definitions to generate related code:
 
-* `console spryk:run AddZedConfig`: Adds a new module config to the Zed application.
-* `console spryk:run AddZedConfigMethod`: Adds a new method to the Zed module config.
-* `console spryk:run AddYvesConfig`: Adds a new module config to the Yves application.
-* `console spryk:run AddYvesConfigMethod`: Adds a new method to the Yves module config.
-* `console spryk:run AddGlueConfig`: Adds a new module config to the Glue application.
-* `console spryk:run AddGlueConfigMethod`: Adds a new method to the Glue module config.
-* `console spryk:run AddClientConfig`: Adds a new module config to the Client application.
-* `console spryk:run AddClientConfigMethod`: Adds a new method to the Client module config.
-* `console spryk:run AddSharedConstantsInterface`: Adds a Shared Constants Interface. For details, see the [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html) documentation
+- `console spryk:run AddZedConfig`: Adds a new module config to the Zed application.
+- `console spryk:run AddZedConfigMethod`: Adds a new method to the Zed module config.
+- `console spryk:run AddYvesConfig`: Adds a new module config to the Yves application.
+- `console spryk:run AddYvesConfigMethod`: Adds a new method to the Yves module config.
+- `console spryk:run AddGlueConfig`: Adds a new module config to the Glue application.
+- `console spryk:run AddGlueConfigMethod`: Adds a new method to the Glue module config.
+- `console spryk:run AddClientConfig`: Adds a new module config to the Client application.
+- `console spryk:run AddClientConfigMethod`: Adds a new method to the Client module config.
+- `console spryk:run AddSharedConstantsInterface`: Adds a Shared Constants Interface. For details, see the [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html) documentation

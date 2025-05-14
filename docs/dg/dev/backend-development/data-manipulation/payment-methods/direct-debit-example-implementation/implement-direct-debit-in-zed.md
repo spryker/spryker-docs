@@ -411,9 +411,9 @@ Information is available here: `/payment-methods/sales/list?id-sales-order=1`
 ### Integrate the Direct Debit method into the checkout
 
 To integrate the Direct Debit method into the checkout, implement these plugins:
-* `PaymentMethodsDirectDebitCheckoutPreConditionPlugin`
-* `PaymentMethodsDirectDebitCheckoutDoSaveOrderPlugin`
-* `PaymentMethodsDirectDebitCheckoutPostSavePlugin`
+- `PaymentMethodsDirectDebitCheckoutPreConditionPlugin`
+- `PaymentMethodsDirectDebitCheckoutDoSaveOrderPlugin`
+- `PaymentMethodsDirectDebitCheckoutPostSavePlugin`
 
 To do this, take the following steps:
 

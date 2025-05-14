@@ -34,6 +34,7 @@ Install the required modules using Composer:
 ```bash
 composer require spryker/symfony-mailer:^1.1.0 --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
@@ -51,6 +52,7 @@ Generate transfers:
 ```bash
 console transfer:generate
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure the following changes have been applied in transfer objects:

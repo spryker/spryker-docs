@@ -18,11 +18,11 @@ A Back Office user can import commissions by following [Import merchant commissi
 Conditions are used to identify which commission is to be applied. Conditions can be applied to individual items or orders.
 
 Conditions are based on the following criteria:
-* Product attribute, like brand or color.
-* Product category, like Electronics.
-* Item price, for example—a price range of 100€ to 200€.
-* Product SKU
-* Merchant, like ACME Inc.
+- Product attribute, like brand or color.
+- Product category, like Electronics.
+- Item price, for example—a price range of 100€ to 200€.
+- Product SKU
+- Merchant, like ACME Inc.
 
 For a commission to be applied to an item or order, the item or order needs to fulfill all the conditions defined for a commission.
 
@@ -39,9 +39,9 @@ To specify conditions based on attributes, the following format is used: `attrib
 
 Examples:
 
-* Apply commission to all black products: `attribute.color = 'black'`
+- Apply commission to all black products: `attribute.color = 'black'`
 
-* Apply commission to all black and blue products: `attribute.color IS IN 'black;blue'`
+- Apply commission to all black and blue products: `attribute.color IS IN 'black;blue'`
 
 
 ### Product category conditions
@@ -55,8 +55,8 @@ To specify conditions based on categories, the following format is used: `catego
 
 
 Examples:
-* Apply commission to all products in the Electronics category: `category IS IN 'electronics'`
-* Apply commission to all products in the Smartphones and Smartwatches categories: `category IS IN 'smartphones;smartwatches'`.
+- Apply commission to all products in the Electronics category: `category IS IN 'electronics'`
+- Apply commission to all products in the Smartphones and Smartwatches categories: `category IS IN 'smartphones;smartwatches'`.
 
 
 If a category has child categories, applying a commission to the category applies it to the child categories too. For example, applying commission to the Electronics category also apply it to the Smart Watches category. So, you might want to set up conditions using child categories or exclude some child categories.
@@ -101,8 +101,8 @@ This can be useful if you want different commissions to be applied to orders in 
 
 Conditions can be combined using `AND` and `OR` operators. Examples:
 
-* `category IS IN 'electronics';smart-watches' AND attribute.color IS IN 'black;blue'`
-* `category IS IN 'electronics';smart-watches' OR attribute.color IS IN 'black;blue'`
+- `category IS IN 'electronics';smart-watches' AND attribute.color IS IN 'black;blue'`
+- `category IS IN 'electronics';smart-watches' OR attribute.color IS IN 'black;blue'`
 
 When conditions are combined by the `OR` operator, they don't exclude each other. If an order fulfills both such conditions, the commission is still applied.
 
@@ -170,8 +170,8 @@ You might want to change how commission is calculated on the project level by ap
 This customization is factored into the application design. A developer can change this logic within two hours by following [Create merchant commission calculator type plugins](/docs/pbc/all/merchant-management/202410.0/marketplace/tutorials-and-howtos/create-merchant-commission-calculator-type-plugins.html).
 
 Other use cases might be as follows:
-* Differently calculate commission for product price, including product options.
-* Differently calculate commission for special products like bundles or configurable products.
+- Differently calculate commission for product price, including product options.
+- Differently calculate commission for special products like bundles or configurable products.
 
 
 Multiple ways to calculate commissions affect commission totals, so you might want to set up different commission rules accordingly. For example, 10% commission for the Net mode and 12% commission for the Gross mode.

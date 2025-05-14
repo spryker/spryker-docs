@@ -15,8 +15,8 @@ This document describes how to add items with discounts to guest carts. For full
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see the following docs:
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+- [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+- [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
 
 
 ## Add items to a guest cart
@@ -29,8 +29,8 @@ To add items to a guest cart, send the following request:
 
 {% info_block infoBox "Creating a guest cart" %}
 
-* If a guest cart does not exist for the current user, and you send a request to add items, a guest cart is created automatically. Otherwise, the items are added to the existing guest cart.
-* Guest users have one cart by default. You can optionally specify its ID by using the following endpoint. The information in this section is valid for both endpoints.
+- If a guest cart does not exist for the current user, and you send a request to add items, a guest cart is created automatically. Otherwise, the items are added to the existing guest cart.
+- Guest users have one cart by default. You can optionally specify its ID by using the following endpoint. The information in this section is valid for both endpoints.
 
 `POST` **/guest-carts/*{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*/guest-cart-items**
 
@@ -75,6 +75,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 
@@ -95,6 +96,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 
@@ -151,6 +153,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 <details>
@@ -429,6 +432,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     ]
 }
 ```
+
 </details>
 
 
@@ -533,6 +537,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -676,6 +681,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-carts-response-attributes.md -->

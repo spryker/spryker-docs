@@ -41,7 +41,7 @@ Gift Card is available in the Spryker shop as an abstract product with its varia
 
 {% info_block warningBox "Note" %}
 
-To prevent fraud, the payment method _invoice_ is not accepted if a cart contains a gift card.
+To prevent fraud, the payment method *invoice* is not accepted if a cart contains a gift card.
 
 {% endinfo_block %}
 
@@ -162,7 +162,7 @@ Response sample: redeem the gift card code
 To remove the gift card code from the cart, send the request:
 
 ***
-`DELETE` **/carts/**{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}**/cart-codes/_{% raw %}{{{% endraw %}gift_card_code{% raw %}}}{% endraw %}_**
+`DELETE` **/carts/**{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}**/cart-codes/*{% raw %}{{{% endraw %}gift_card_code{% raw %}}}{% endraw %}***
 ***
 
 | PATH PARAMETER | DESCRIPTION |

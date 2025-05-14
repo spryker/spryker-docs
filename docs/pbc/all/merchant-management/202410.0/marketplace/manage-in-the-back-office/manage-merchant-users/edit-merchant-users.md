@@ -20,9 +20,9 @@ A [merchant user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace
 4. Next to the merchant user you want to edit, click **Edit**.
 
 5. On the **Edit Merchant user** page, enter any of the following:
-* **E-MAIL**
-* **FIRST NAME**
-* **LAST NAME**
+- **E-MAIL**
+- **FIRST NAME**
+- **LAST NAME**
 
 6. Select a **STATUS**.
 

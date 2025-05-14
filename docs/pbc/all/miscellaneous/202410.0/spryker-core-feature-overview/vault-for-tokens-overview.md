@@ -26,9 +26,9 @@ redirect_from:
 
 The database structure includes the following fields:
 
-* `dataType`
-* `dataKey`
-* `data`
+- `dataType`
+- `dataKey`
+- `data`
 
 `dataType` and `dataKey` entries are used for the distinction between the provided data. Thus, multiple and various entries of data can be filtered and stored in the vault.
 

@@ -9,13 +9,13 @@ In a B2B business model, the partnership is usually based on contracts, or relat
 
 In the context of merchant relations in a Marketplace, there are three key actors: marketplace operator, merchant, and buyer:
 
-* The marketplace operator owns the platform and acts as a broker between merchants and buyers.
-* The [merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) are sellers in the marketplace.
-* The buyers are represented through [business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) of [companies](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html#company) that purchase products or services from the merchants. Individual employees of the business units are called *company users*.
+- The marketplace operator owns the platform and acts as a broker between merchants and buyers.
+- The [merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) are sellers in the marketplace.
+- The buyers are represented through [business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) of [companies](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html#company) that purchase products or services from the merchants. Individual employees of the business units are called *company users*.
 
 There are two ways to establish a merchant relation:
-* Marketplace operator manually creates a merchant relation in the Back Office.
-* Company user submits a relation request on the Storefront. The merchant relation is created once the merchant or marketplace operator approves this request.
+- Marketplace operator manually creates a merchant relation in the Back Office.
+- Company user submits a relation request on the Storefront. The merchant relation is created once the merchant or marketplace operator approves this request.
 
 
 ## Creation of a merchant relation by a marketplace operator
@@ -37,9 +37,9 @@ Company user can request a merchant relation from a merchant. Once a merchant ap
 ### Merchant relation request creation by a company user
 
 Company user can initiate the merchant relation by creating a merchant relation request on the Storefront. There are several ways for a company user to create the relation request:
-* From the merchant profile page, by clicking **Send request**.
-* From the product details page, by clicking **Merchant Relation Request** under the name of the merchant selling the product.
-* From the *Company Account page*, in *Merchant Relation Requests*, by clicking **Create request** and selecting the relevant merchant.
+- From the merchant profile page, by clicking **Send request**.
+- From the product details page, by clicking **Merchant Relation Request** under the name of the merchant selling the product.
+- From the *Company Account page*, in *Merchant Relation Requests*, by clicking **Create request** and selecting the relevant merchant.
 
 In the merchant relation request form, the company user has to specify the business units for which they want to create the merchant relation and the business unit owner. This business unit will have the formal contract for this relation. Optionally, the company user can also leave a message for the merchant with more details regarding the relation request. After the company user submits the relation request, it appears with a *Pending* status on the *Company Account* page.
 

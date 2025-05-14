@@ -116,8 +116,8 @@ For more details on sitemap caching, see [Configure Sitemap caching interval](#c
 
 The following configuration ensures that the application uses the correct hostnames based on the mode it's operating in:
 
-* When Dynamic Store is disabled, `STORE_TO_YVES_HOST_MAPPING` is used to map stores to hostnames
-* When Dynamic Store is enabled, `REGION_TO_YVES_HOST_MAPPING` is used to map regions to hostnames
+- When Dynamic Store is disabled, `STORE_TO_YVES_HOST_MAPPING` is used to map stores to hostnames
+- When Dynamic Store is enabled, `REGION_TO_YVES_HOST_MAPPING` is used to map regions to hostnames
 
 **config/Shared/config_default.php**
 

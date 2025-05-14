@@ -23,8 +23,8 @@ This document describes the `product_stock.csv` file to configure [Product Stock
 
 ## Import file dependencies
 
-* [product_concrete.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
-* [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse.csv.html)
+- [product_concrete.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
+- [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse.csv.html)
 
 ## Import file parameters
 
@@ -52,6 +52,6 @@ data:import:product-stock
 
 ## Additional information
 
-* The `product_stock.csv` file contains information about the amount of product articles stored in the warehouses.
-* The product is identified by `concrete_sku` field (imported from `product_concrete.csv`), field name is a valid name of a warehouse (imported from `warehouse.csv`), field quantity is a number of product items/articles remaining in stock.
-* When you update stock via the data import and some products do not have the records in the `product_stock.csv`  file, then stock of these products are not updated.
+- The `product_stock.csv` file contains information about the amount of product articles stored in the warehouses.
+- The product is identified by `concrete_sku` field (imported from `product_concrete.csv`), field name is a valid name of a warehouse (imported from `warehouse.csv`), field quantity is a number of product items/articles remaining in stock.
+- When you update stock via the data import and some products do not have the records in the `product_stock.csv`  file, then stock of these products are not updated.

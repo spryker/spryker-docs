@@ -45,9 +45,9 @@ Warehouse allocation shouldn't be confused with the reservation process, meaning
 
 A *warehouse picklist* is a document available in Fulfillment App that contains a list of items to be picked and shipped to fulfill and order. It includes the following information:
 
-* Product name
-* Product image
-* Quantity to be picked
+- Product name
+- Product image
+- Quantity to be picked
 
 Based on a picklist, the warehouse user gathers and prepares the items for shipping.
 
@@ -97,11 +97,11 @@ The offline mode is enabled by the [Push Notification](/docs/pbc/all/miscellaneo
 
 ## Current constraints
 
-* Supports only concrete products. Doesn't support bundles and configurable products.
-* Doesn't support partial picking of non-splittable order items. If a customer orders an item with quantity 1, a warehouse user can either pick 1 full item or not pick at all.
-* Doesn't support the business logic for picking of bundle products. However, if all concrete products of a bundle product are picked, it can be processed by the State Machine.
-* Visualization of configurable bundles in Fulfillment App is not implemented, but picking of individual items in bundles is possible.
-* Picking of random-weight products is not available.
+- Supports only concrete products. Doesn't support bundles and configurable products.
+- Doesn't support partial picking of non-splittable order items. If a customer orders an item with quantity 1, a warehouse user can either pick 1 full item or not pick at all.
+- Doesn't support the business logic for picking of bundle products. However, if all concrete products of a bundle product are picked, it can be processed by the State Machine.
+- Visualization of configurable bundles in Fulfillment App is not implemented, but picking of individual items in bundles is possible.
+- Picking of random-weight products is not available.
 
 
 

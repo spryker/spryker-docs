@@ -47,14 +47,14 @@ data:import:discount-voucher
 
 ## Import file dependencies
 
-This file has the following dependency: [ discount.csv ](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount.csv.html).
+This file has the following dependency: [discount.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount.csv.html).
 
 ## Additional information
 
 The generated voucher code consists of two parts:
 
-* `custom_code` which is a prefix of the voucher code that can be set directly at `custom_code`, and
-* a random part with the amount of random symbols equals to the value of `random_generated_code_length` field.
+- `custom_code` which is a prefix of the voucher code that can be set directly at `custom_code`, and
+- a random part with the amount of random symbols equals to the value of `random_generated_code_length` field.
 
 If a quantity is equal to or greater than 1, then `random_generated_code_length` should be non-empty as the generated code is unique.
 

@@ -638,8 +638,8 @@ For the merchant attributes, see [Retrieve merchants](#merchants-response-attrib
 
 For the attributes of the included resources, see:
 
-* [Retrieving merchant addresses](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html#merchant-addresses-response-attributes).
-* [Retrieving merchant opening hours](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-opening-hours.html#merchant-opening-hours-response-attributes).
+- [Retrieving merchant addresses](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html#merchant-addresses-response-attributes).
+- [Retrieving merchant opening hours](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-opening-hours.html#merchant-opening-hours-response-attributes).
 
 
 
@@ -648,11 +648,11 @@ For the attributes of the included resources, see:
 
 Retrieve merchant information as a relationship when sending the following requests:
 
-* [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html#retrieve-an-abstract-product)
-* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product)
-* [Retrieve a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html#retrieve-a-wishlist)
-* [Retrieve a product offer]
-* [Retrieve marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)
+- [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html#retrieve-an-abstract-product)
+- [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product)
+- [Retrieve a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html#retrieve-a-wishlist)
+- [Retrieve a product offer]
+- [Retrieve marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)
 
 Search by merchants in the product catalog. For details, see [Searching the product catalog](/docs/pbc/all/search/{{page.version}}/marketplace/glue-api-search-the-product-catalog.html).
 Resolve a search engine friendly URL of a merchant page. For details, see [Resolving search engine friendly URLs](/docs/dg/dev/glue-api/{{page.version}}/rest-api/marketplace-glue-api-resolve-search-engine-friendly-urls.html).

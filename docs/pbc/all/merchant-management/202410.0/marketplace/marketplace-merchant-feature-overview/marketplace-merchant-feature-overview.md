@@ -20,16 +20,16 @@ You can [create merchants in the Back Office](/docs/pbc/all/merchant-management/
 
 The Marketplace administrator manages merchants and sets their statuses in the Back Office. Merchant statuses define the level of access of the specific merchant to:
 
-* The Merchant Portal:
-  * *Waiting for approval*. Once the merchant record is created, this status is applied.
-  * *Approved*. Once the record is approved, the merchant receives an email with the password information required to access the Merchant Portal. When the merchant is approved, merchant users can log in and create offers and products in the Merchant Portal. <a name="denied"></a>
-  * *Denied*. A Marketplace administrator can deny access to the approved merchant. If denied, the merchant cannot log in to the Merchant Portal.
+- The Merchant Portal:
+  - *Waiting for approval*. Once the merchant record is created, this status is applied.
+  - *Approved*. Once the record is approved, the merchant receives an email with the password information required to access the Merchant Portal. When the merchant is approved, merchant users can log in and create offers and products in the Merchant Portal. <a name="denied"></a>
+  - *Denied*. A Marketplace administrator can deny access to the approved merchant. If denied, the merchant cannot log in to the Merchant Portal.
 
 <a name=active-merchants></a>
 
-* The merchant profile page, product offers and marketplace products on the Storefront:
-  * *Active*. This status can be set only for the approved merchants. It indicates that the merchant's profile page is online, and the merchant can create offers and products. A merchant can also create offers and products and manage their sales activity.
-  * *Inactive*. This status indicates that the merchant's profile page, products, and offers are offline. It is the default status for the created merchant. With this status, the merchant can not perform their selling online.
+- The merchant profile page, product offers and marketplace products on the Storefront:
+  - *Active*. This status can be set only for the approved merchants. It indicates that the merchant's profile page is online, and the merchant can create offers and products. A merchant can also create offers and products and manage their sales activity.
+  - *Inactive*. This status indicates that the merchant's profile page, products, and offers are offline. It is the default status for the created merchant. With this status, the merchant can not perform their selling online.
 
 
 | STATUS | MERCHANT PORTAL ACCESS | STOREFRONT PROFILE PAGE, OFFERS, AND PRODUCTS |
@@ -70,9 +70,9 @@ The merchant profile page is available only if the merchant is [Active](#merchan
 
 The information for a merchant profile can be defined:
 
-* By the Marketplace administrator in the Back Office when [creating merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html) or [editing merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html).
-* By importing the merchant profile data. For more information, see [File details: merchant_profile.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-profile.csv.html) and [File details: merchant_profile_address.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-profile-address.csv.html).
-* By the merchant in the Merchant Portal:
+- By the Marketplace administrator in the Back Office when [creating merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html) or [editing merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html).
+- By importing the merchant profile data. For more information, see [File details: merchant_profile.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-profile.csv.html) and [File details: merchant_profile_address.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-profile-address.csv.html).
+- By the merchant in the Merchant Portal:
 ![Merchant profile page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-profile-page.png)
 
 <figure class="video_container">
@@ -89,19 +89,19 @@ To make the selling activity efficient, merchants can provide their working sche
 
 Marketplace Storefront lets buyers check what merchants are the owners of the offers and products the customers are buying. The respective merchant names with the link to the merchant profile page are available:
 
-* On the product detail page
+- On the product detail page
 
 ![Merchant link on the PDP](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-link-on-pdp.png)
 
-* On the cart page
+- On the cart page
 
 ![Merchant link on the cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-link-on-the-cart-page.png)
 
-* On the summary checkout page
+- On the summary checkout page
 
 ![Merchant link on the summary checkout page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-link-on-summary-page.png)
 
-* On the order details page
+- On the order details page
 
 ![Merchant link on the order details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-link-on-order-details.png)
 

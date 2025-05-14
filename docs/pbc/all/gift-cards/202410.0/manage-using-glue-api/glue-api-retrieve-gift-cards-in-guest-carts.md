@@ -13,7 +13,7 @@ This document describes how to retrieve gift cards in guest carts using Glue API
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+- [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
 
 ## Retrieve a guest cart
 

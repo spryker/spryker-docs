@@ -16,9 +16,9 @@ A [merchant user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace
 3. Click the **Users** tab.
 4. Click **Add Merchant User**.
 5. On the **CREATE MERCHANT USER** page, enter the following details:
-* **E-MAIL**
-* **FIRST NAME**
-* **LAST NAME**  
+- **E-MAIL**
+- **FIRST NAME**
+- **LAST NAME**  
 6. Click **Create**.
     This opens the **Edit Merchant: {MERCHANT_ID}** page with a success message displayed. The merchant user is displayed in the list.
 

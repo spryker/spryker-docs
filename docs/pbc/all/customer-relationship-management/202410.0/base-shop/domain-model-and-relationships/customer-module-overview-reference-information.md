@@ -29,8 +29,8 @@ One customer can have many customer addresses stored in the database.
 
 There are two types of customer addresses:
 
-* Billing Address: the address to which the invoice or bill is registered.
-* Shipping Address: the address to where the order is shipped.
+- Billing Address: the address to which the invoice or bill is registered.
+- Shipping Address: the address to where the order is shipped.
 
 Customers are assigned a default billing and a default shipping address. Customers can update their addresses through their account (from Yves) or have them updated by the Back Office user (from the Back Office).
 

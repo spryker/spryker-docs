@@ -12,8 +12,8 @@ This document explains how to set up *XDebug profiling* in a local development e
 
 ## Prerequisites
 
-* An integrated development environment (IDE) of your choice—for example, PHPStorm or Visual Studio Code.
-* A plugin or software to view cachegrind files: kqachegrind, qcachegrind, or a plugin for your IDE.
+- An integrated development environment (IDE) of your choice—for example, PHPStorm or Visual Studio Code.
+- A plugin or software to view cachegrind files: kqachegrind, qcachegrind, or a plugin for your IDE.
 
 ## 1. Prepare the deploy.yml file for XDebug
 

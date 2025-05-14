@@ -56,13 +56,13 @@ npm ci
 
 2. Execute the formatter in:
 
-* validation mode:
+- validation mode:
 
 ```bash
 npm run formatter
 ```
 
-* fix mode
+- fix mode
 
 ```bash
 npm run formatter:fix
@@ -72,13 +72,13 @@ npm run formatter:fix
 
 The default file types for formatting are:
 
-* *.scss
-* *.css
-* *.less
-* *.js
-* *.ts
-* *.json
-* *.html
+- *.scss
+- *.css
+- *.less
+- *.js
+- *.ts
+- *.json
+- *.html
 
 To change the list of file extensions, adjust `/frontend/settings.js`:
 
@@ -110,14 +110,14 @@ The Prettier formatter uses the ignore file `/.prettierignore` that includes dir
 
 The Formatter is integrated into:
 
-* Pre-commit hooks.
+- Pre-commit hooks.
 The function that executes Formatter before the commit resides in `/.githook`
 
 ```
 - GitHook\Command\FileCommand\PreCommit\FrontendFormatterCommand
 ```
 
-* Travis.
+- Travis.
 The command to run the Formatter is integrated into `.travis.yml`
 
 ```

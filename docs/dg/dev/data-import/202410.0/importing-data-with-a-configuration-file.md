@@ -21,8 +21,8 @@ To **import individual data**, you need to run `console data:import:{data_entity
 
 There are two ways of how you can **run import in bulk**:
 
-* Import all data specified in the default YML import configuration file.
-* Import data specified in a custom YML import configuration file.
+- Import all data specified in the default YML import configuration file.
+- Import data specified in a custom YML import configuration file.
 
 As you can see, for both of the import types you need a **data import YML configuration file**.  The .yml import configuration file defines the data importers that will be executed (`data_entity: {data_type_value_1}`), as well as indicates the path to a CSV file with the import data (`source: {source_value_1}`).
 

@@ -48,8 +48,8 @@ In the testing mode, you can run tests in isolation, with full control of the sy
 
 You can activate the testing mode in one of the following ways:
 
-* Switch a running environment into the testing mode without rebuilding containers.
-* Rebuild containers and run or restart an environment with the testing mode activated.
+- Switch a running environment into the testing mode without rebuilding containers.
+- Rebuild containers and run or restart an environment with the testing mode activated.
 
 ### Activating the testing mode in a running environment
 
@@ -99,9 +99,9 @@ codecept run
 
 There are three categories of Spryker tests:
 
-* Acceptance
-* Functional
-* Api
+- Acceptance
+- Functional
+- Api
 
 To run a specific category, run `codecept` with the respective configuration file:
 

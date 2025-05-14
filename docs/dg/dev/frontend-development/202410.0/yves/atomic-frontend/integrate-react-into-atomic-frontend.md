@@ -92,13 +92,13 @@ By doing this, Webpack will know to place React source code inside the vendor ch
 1. Create your first React component.
     a. Create the example folder `./src/Pyz/Yves/ShopUi/Theme/default/components/molecules/react-component`.
     b. In this folder, create 2 files:
-      * `index.ts` - will be used as the component entry point, automatically globbed by the application and injected into the DOM;
+      - `index.ts` - will be used as the component entry point, automatically globbed by the application and injected into the DOM;
 
     ```php
     import(/* webpackMode: "lazy" */'./react-component');
     ```
 
-      * `react-component.tsx` - contains the component implementation.
+      - `react-component.tsx` - contains the component implementation.
 
 ```php
 import * as React from 'react';

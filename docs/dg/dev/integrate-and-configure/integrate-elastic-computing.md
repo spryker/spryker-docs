@@ -65,9 +65,9 @@ To intagrate elastic batch for the glossary data import as an example, follow th
 
 1. In `Pyz\Zed\DataImport\DataImportConfig`, add the following configuration:
 
-* `BulkWriteGradualityFactor`: estimates an upper limit of memory that can be safely utilized by operations. A bigger value enables a more precise approximation but requires more iterations. A smaller value gives a less precise approximation but requires less iterations.
+- `BulkWriteGradualityFactor`: estimates an upper limit of memory that can be safely utilized by operations. A bigger value enables a more precise approximation but requires more iterations. A smaller value gives a less precise approximation but requires less iterations.
 
-* `BulkWriteMemoryThresholdPercent`: defines a margin of PHP memory limit configured in PHP.
+- `BulkWriteMemoryThresholdPercent`: defines a margin of PHP memory limit configured in PHP.
 
 
 ```php

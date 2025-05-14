@@ -91,7 +91,7 @@ imports:
 
 You can include a deploy file into an application's configuration using one of the following import types.
 
-* File path:
+- File path:
 
 ```yaml
 imports:
@@ -99,7 +99,7 @@ imports:
     deploy.project.template.yml:
 ```
 
-* Named array:
+- Named array:
 
 ```yaml
 imports:
@@ -111,7 +111,7 @@ last_updated: Nov 21, 2023
 last_updated: Nov 21, 2023
 ```
 
-* Unnamed array:
+- Unnamed array:
 
 ```yaml
 imports:
@@ -162,8 +162,8 @@ To check how the final deploy file looks without stopping containers, run `docke
 {% endinfo_block %}
 
 The deploy file builder parses deploy files from the following layers:
-* `Project layer`: located on a project layer at`./config/deploy-templates`.
-* `Base layer`: located on the Docker SDK layer at`./{DOCKER_SDK_DIRECTORY}/generator/deploy-file-generator/templates`.
+- `Project layer`: located on a project layer at`./config/deploy-templates`.
+- `Base layer`: located on the Docker SDK layer at`./{DOCKER_SDK_DIRECTORY}/generator/deploy-file-generator/templates`.
 
 
 Deploy files are merged in the following order:

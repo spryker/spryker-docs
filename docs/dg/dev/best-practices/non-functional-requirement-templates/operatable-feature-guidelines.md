@@ -30,12 +30,12 @@ To enable the operations team to effectively address such events or explore alte
 ## Readability
 
 Code readability is a major quality attribute that can impact various aspects of a project, such as the following:
-* Code review time
-* Code fix time
-* Feature delivery time
-* Developer onboarding time
-* Error evaluation time
-* The number of human errors
+- Code review time
+- Code fix time
+- Feature delivery time
+- Developer onboarding time
+- Error evaluation time
+- The number of human errors
 
 To improve the efficiency and effectiveness of the team, it's important to establish a set of readability rules that need to be followed. This ensures that the codebase is easy to understand and maintain, which can lead to faster delivery of features and fewer errors.
 

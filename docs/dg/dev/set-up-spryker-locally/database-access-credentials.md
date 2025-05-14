@@ -13,17 +13,17 @@ In this document, you can find credentials for accessing your database. By defau
 
 MySQL or MariaDB database:
 
-* `host` - `localhost`
-* `port` - `3306`
-* `user` - `spryker`
-* `pw` - `secret`
+- `host` - `localhost`
+- `port` - `3306`
+- `user` - `spryker`
+- `pw` - `secret`
 
 PostgreSQL database:
 
-* `host` - `localhost`
-* `port` - `5432`
-* `user` - `spryker`
-* `pw` - `secret`
+- `host` - `localhost`
+- `port` - `5432`
+- `user` - `spryker`
+- `pw` - `secret`
 
 You can change the credentials in the [Deploy file](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html).
 

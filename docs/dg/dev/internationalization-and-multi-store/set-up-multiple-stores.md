@@ -15,10 +15,10 @@ redirect_from:
 
 You can create multiple stores per your business requirements for different scenarios. The multi-store setup is very versatile and customizable—for example, you can do the following:
 
-* Build one store for multiple countries and languages or separate stores for each region.
-* Make abstract products, discounts, and other logic and code shared between stores or create a dedicated setup for each of them.
-* Define separate search preferences to create an entirely different set of rankings, rules, and settings per store—for example, a date format or a currency.
-* Set up a default store.
+- Build one store for multiple countries and languages or separate stores for each region.
+- Make abstract products, discounts, and other logic and code shared between stores or create a dedicated setup for each of them.
+- Define separate search preferences to create an entirely different set of rankings, rules, and settings per store—for example, a date format or a currency.
+- Set up a default store.
 
 For details on all the multi-store infrastructure options, see [Multistore setup options](/docs/ca/dev/multi-store-setups/multistore-setup-options.html).
 
@@ -231,8 +231,8 @@ regions:
 
 The following configuration parameters are used in this example:
 
-* The `regions` parameter defines one or more isolated instances of the Spryker applications that have only one persistent database to work with. The visibility of the project's stores is limited to operating only with the stores that belong to a region, which refers to geographical terms like data centers, regions, and continents in the real world.
-* The `stores` parameter defines the list of stores and store-specific settings for `services`.
+- The `regions` parameter defines one or more isolated instances of the Spryker applications that have only one persistent database to work with. The visibility of the project's stores is limited to operating only with the stores that belong to a region, which refers to geographical terms like data centers, regions, and continents in the real world.
+- The `stores` parameter defines the list of stores and store-specific settings for `services`.
 
 For more information about deploy file configuration, see [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html).
 

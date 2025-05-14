@@ -29,18 +29,18 @@ Spryker API infrastructure is implemented as a separate layer of Spryker Cloud C
 {% info_block infoBox %}
 
 Consider studying the following documents before you begin:
-* [JSON API Specification](https://jsonapi.org/format/) implemented in Spryker
-* [Swagger Tools Reference](https://swagger.io/) to know how to document your API
-* [REST API Modelling Reference](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling)
+- [JSON API Specification](https://jsonapi.org/format/) implemented in Spryker
+- [Swagger Tools Reference](https://swagger.io/) to know how to document your API
+- [REST API Modelling Reference](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling)
 
 {% endinfo_block %}
 
 Logically, the Glue layer can be divided into 3 parts:
-* **GlueApplication module**
+- **GlueApplication module**
     <br>The `GlueApplication` module provides a framework for constructing API resources. It intercepts all HTTP requests at resource URLs–for example, `http://mysprykershop.com/resource/1`, handles call semantics, verifies requests, and also provides several utility interfaces that can be used to construct API responses.
-* **Resource modules**
+- **Resource modules**
     <br>Each `Resource` module implements a separate resource or a set of resources. Such a module handles requests to a particular resource and provides them with responses. In the process of doing so, the module can communicate with the Storage, Search or Spryker Commerce OS (Zed). The modules do not handle request semantics or rules. Their only task is to provide the necessary data in a format that can be converted by the `GlueApplication` module into an API response.
-* **Relationship modules**
+- **Relationship modules**
     <br>Such modules represent relationships between two different resources. Their task is to extend the response of one of the resources with data of related resources.
 
 To be able to process API requests correctly, Resource modules need to implement resource route plugins that facilitate routing of requests to the module. Such plugins need to be registered in the `GlueApplication` module.
@@ -144,10 +144,10 @@ The resulting folder structure on the example of the WishlistsRestApi Resource m
 #### Resource controller
 
 This controller provides actions for all HTTP verbs that a resource implements. It is responsible for:
-* Handling requests for a specific resource.
-* Validating data.
-* Executing business flow logic.
-* Returning responses or error messages.
+- Handling requests for a specific resource.
+- Validating data.
+- Executing business flow logic.
+- Returning responses or error messages.
 
 All operations must be delegated to the corresponding layers, the controller is responsible only for controlling the workflow.
 
@@ -365,9 +365,9 @@ As REST does not implement a strict versioning concept, by default, all Spryker 
 If you want to introduce versioning in your project, in the route plugin of your module, you need to implement `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceVersionableInterface`. This interface exposes the `getVersion()` method, using which you can specify which version of the resource is supported by the current route plugin. In other words, you need to implement a plugin for each resource version.
 
 When versioning is in place, clients can pass the version they require in the request header: `application/vnd.api+json; version=2.1`. The Glue will respond to clients as follows:
-* If no version is specified in the header, the newest version is returned.
-* If a version is specified and it exists on the server, that specific version is returned.
-* If a version is specified, but it does not exist, the **404 Not Found** error is returned.
+- If no version is specified in the header, the newest version is returned.
+- If a version is specified and it exists on the server, that specific version is returned.
+- If a version is specified, but it does not exist, the **404 Not Found** error is returned.
 
 ### HTTP status codes
 
@@ -441,8 +441,8 @@ The current version uses JSON for responses. The request header from the client 
 For date formatting, [ISO-8601](https://www.iso.org/iso-8601-date-and-time-format.html) date/time format is used. For requests, any time zone is accepted, however, dates are stored and returned in UTC.
 
 Example:
-* request: 1985-07-01T01:22:11+02:00
-* in storage and responses: 1985-06-30T23:22:11+00:00
+- request: 1985-07-01T01:22:11+02:00
+- in storage and responses: 1985-06-30T23:22:11+00:00
 
 ### Prices
 

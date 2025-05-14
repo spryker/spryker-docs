@@ -47,43 +47,43 @@ docker/sdk robot-framework robot -v env:{ENVIRONMENT} {PATH}`
 
 ### CLI examples
 
-* Execute all tests in the `api/b2b` folder, that is, all Glue and BAPI tests that exist:
+- Execute all tests in the `api/b2b` folder, that is, all Glue and BAPI tests that exist:
 
 ```sh
 docker/sdk robot-framework robot -v env:api_b2b -d results -s tests.api.b2b .
 ```
 
-* Execute all tests in a specific folder, that is, all API tests that exist inside the folder and subfolders:
+- Execute all tests in a specific folder, that is, all API tests that exist inside the folder and subfolders:
 
 ```sh
 docker/sdk robot-framework robot -v env:api_b2b -d results -s tests.api.b2b.glue.access_token_endpoints .
 ```
 
-* Execute only positive tests in the `api` folder, that is, all positive API tests that exist, from all folders:
+- Execute only positive tests in the `api` folder, that is, all positive API tests that exist, from all folders:
 
 ```sh
 docker/sdk robot-framework robot -v env:api_suite -d results -s positive .
 ```
 
-* Execute all positive and negative API tests in the `tests/api/suite/glue/abstract_product_endpoints` folder. Subfolders, that is, other endpoints, will be executed as well:
+- Execute all positive and negative API tests in the `tests/api/suite/glue/abstract_product_endpoints` folder. Subfolders, that is, other endpoints, will be executed as well:
 
 ```sh
 docker/sdk robot-framework robot -v env:api_suite -d results -s tests.api.suite.glue.abstract_product_endpoints .
 ```
 
-* Execute all positive and negative API tests in `tests/api/suite/glue/abstract_product_endpoints/abstract_products`:
+- Execute all positive and negative API tests in `tests/api/suite/glue/abstract_product_endpoints/abstract_products`:
 
 ```sh
 docker/sdk robot-framework robot -v env:api_suite -d results -s tests.api.suite.glue.abstract_product_endpoints.abstract_products .
 ```
 
-* Execute all E2E UI tests for MP-B2B in a specific cloud environment:
+- Execute all E2E UI tests for MP-B2B in a specific cloud environment:
 
 ```sh
 docker/sdk robot-framework robot -v env:ui_mp_b2b -v yves_env:http://yves.example.com -v zed_env:http://zed.example.com -v mp_env:http://mp.example.com -d results tests/ui/e2e/e2e_mp_b2b.robot
 ```
 
-* Execute all API tests for B2B in a specific cloud environment with a custom database configuration:
+- Execute all API tests for B2B in a specific cloud environment with a custom database configuration:
 
 ```sh
 docker/sdk robot-framework robot -v env:api_b2b -v db_engine:postgresql -v db_host:124.1.2.3 -v db_port:5336 -v db_user:fake_user -v db_password:fake_password -v db_name:fake_name -s tests.api.b2b.glue .
@@ -124,13 +124,13 @@ For local testing, all tests are executed against the default hosts. To avoid ty
 
 ### Helper examples
 
-* Run all API tests for B2B in the local environment:
+- Run all API tests for B2B in the local environment:
 
 ```sh
 docker/sdk robot-framework make test_api_b2b
 ```
 
-* Run all API tests for B2B in a cloud environment:
+- Run all API tests for B2B in a cloud environment:
 
 ```sh
 docker/sdk robot-framework make test_api_b2c glue_env=http://glue.example.com bapi_env=http://bapi.example.com
@@ -140,9 +140,9 @@ docker/sdk robot-framework make test_api_b2c glue_env=http://glue.example.com ba
 ## Automatic execution of failed tests
 
 To re-execute a subset of tests, for example, after fixing a bug in the system or in the tests themselves, select test cases by the following:
-* Names: `--test` and `--suite`
-* Tags: `--include` and `--exclude`
-* Previous status: `--rerunfailed` or `--rerunfailedsuites`
+- Names: `--test` and `--suite`
+- Tags: `--include` and `--exclude`
+- Previous status: `--rerunfailed` or `--rerunfailedsuites`
 
 Combining re-execution results with the original results using the default combining outputs approach doesn't work well. The main issue is that you get separate test suites, and possibly already fixed failures are also shown. In this situation, it's better to use the `--merge (-R)` option to tell Rebot to merge the results instead. In practice, this means that tests from the latter test runs replace the tests in the original.
 

@@ -22,6 +22,7 @@ Spryker uses our proprietary licenses and common open-source licenses. In genera
 
 
 ## Preconditions
+
 - You must have a [GitHub account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github).
 - You must agree to the Spryker Contribution Terms located in each repository.
 

@@ -27,8 +27,8 @@ Spryker Profiler is based on *Symfony Profiler*. For details, see [Profiler doc
 
 The following modules provide the profiler functionality:
 
-* **WebProfilerWidget** -`spryker/web-profiler`
-* **WebProfilerExtension** -`spryker/web-profiler-extension`
+- **WebProfilerWidget** -`spryker/web-profiler`
+- **WebProfilerExtension** -`spryker/web-profiler-extension`
 
 ## Installation
 
@@ -46,8 +46,8 @@ To be able to use *Web Profiler*, add  `\Spryker\Zed\WebProfiler\Communication\
 
 The below options can be used in the Router to configure *WebProfiler*. The options are contained in `\Spryker\Shared\WebProfiler\WebProfilerConstants`.
 
-* `\Spryker\Shared\WebProfiler\WebProfilerConstants::IS_WEB_PROFILER_ENABLED`- use this option to enable/disable *Web Profiler*. By default, the widget is **disabled**.
-* `Spryker\Shared\WebProfiler\WebProfilerConstants::PROFILER_CACHE_DIRECTORY`- use this option to specify the path where the *Web Profiler* stores its cache.
+- `\Spryker\Shared\WebProfiler\WebProfilerConstants::IS_WEB_PROFILER_ENABLED`- use this option to enable/disable *Web Profiler*. By default, the widget is **disabled**.
+- `Spryker\Shared\WebProfiler\WebProfilerConstants::PROFILER_CACHE_DIRECTORY`- use this option to specify the path where the *Web Profiler* stores its cache.
 
 ## Extending WebProfilerWidget
 

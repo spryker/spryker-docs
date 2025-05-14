@@ -39,8 +39,8 @@ To run a health check, either open the URL of an application endpoint in a brows
 
 Depending on the application status, you will see:
 
-* status code 200 and the list of application services with the `available` status;
-* status code 503 and the list of application services where at least one service has the `unavailable` status.
+- status code 200 and the list of application services with the `available` status;
+- status code 503 and the list of application services where at least one service has the `unavailable` status.
 
 ## Running Application Service Health Checks
 

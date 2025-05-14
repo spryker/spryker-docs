@@ -30,8 +30,8 @@ Let's consider an example illustrating the impact of a bad architecture design w
 
 During the project implementation, sometimes developers might execute similar queries that return the same result or subset of data from it in one transaction. Therefore, architects should ensure that the database interactions are set to the lowest possible number. They can achieve this by:
 
-* Merging several queries into one query with a bigger result (unfiltered).
-* Aggregating the duplicate query to one query and sharing the result with the stack of the code execution (memory).
+- Merging several queries into one query with a bigger result (unfiltered).
+- Aggregating the duplicate query to one query and sharing the result with the stack of the code execution (memory).
 
 {% info_block warningBox %}
 
@@ -45,8 +45,8 @@ Sometimes, developers use explicit locks to prevent race conditions or other iss
 
 Some of the pessimistic locking use cases are:
 
-* Concurrent session problems (Redis, File)
-* Generating unique numbers (database)
+- Concurrent session problems (Redis, File)
+- Generating unique numbers (database)
 
 To avoid performance issues, architects can recommend using optimistic locking with several different implementations according to the faced problems.
 
@@ -84,13 +84,13 @@ Plugin n ....
 
 You can solve this issue by:
 
-* Using IN condition instead of = in query:
+- Using IN condition instead of = in query:
 
 ```sql
 SELECT * FROM SPY_PRODUCT_ABSTRACT WHERE SKU IN (?,?,?,....)
 ```
 
-* Running only 1 query and providing the result to other plugins:
+- Running only 1 query and providing the result to other plugins:
 
 ```sql
 Plugin 1. QUERY
@@ -114,17 +114,17 @@ For more information about improving data import performance, see [Data importer
 
 Features affected by the ORM approach:
 
-* [Data import](/docs/dg/dev/data-import/{{site.version}}/data-import.html)
-* [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html)
+- [Data import](/docs/dg/dev/data-import/{{site.version}}/data-import.html)
+- [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html)
 
 ### Database query optimization
 
 Database queries are the slowest parts of each application. They have different dependencies such as database engines, hardware, configurations, etc. Spryker prevents any database execution for popular endpoints like Home, PDP, Search. However, this preventive measure is not avoidable for some endpoints, for example, Cart or Checkout. There are several ways to make sure such endpoints are handling the database queries most effectively in terms of performance:
 
-* Cache result for the duplicate queries.
-* Aggregate several queries to only one query if possible.
-* Change single inserts to bulk inserts.
-* Break down heavy or slow queries into smaller queries and use PHP native functionalities for result calculations (like sorting, group by, filtering, validations, etc.).
+- Cache result for the duplicate queries.
+- Aggregate several queries to only one query if possible.
+- Change single inserts to bulk inserts.
+- Break down heavy or slow queries into smaller queries and use PHP native functionalities for result calculations (like sorting, group by, filtering, validations, etc.).
 
 ### Pagination
 
@@ -186,10 +186,10 @@ CPU: 4
 
 Publishers use different chunks to consume messages from queues. Even though the optimal size of chunk heavily depends on each entity and the hardware, as a best practice, we recommend choosing one of these numbers:
 
-* 500 (Default)
-* 1000
-* 1500
-* 2000 (Max)
+- 500 (Default)
+- 1000
+- 1500
+- 2000 (Max)
 
 {% info_block warningBox %}
 
@@ -212,16 +212,16 @@ time vendor/bin/console queue:task:start publisher.product_abstract // Ouput 30.
 
 As the Spryker boilerplate comes with most of the features enabled, make sure you clean up the unnecessary plugins from the Cart and Checkout plugin stack:
 
-* [Cart plugins](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Cart/CartDependencyProvider.php)
+- [Cart plugins](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Cart/CartDependencyProvider.php)
 
-* [Checkout plugins](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php)
+- [Checkout plugins](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php)
 
 ### Zed calls
 
 Zed calls are necessary when it comes to executing a database-related operation like Cart and Checkout requests. As an RPC mechanism handles these calls, it's necessary to reduce the number of calls to maximum one call to Zed. You can achieve this by:
 
-* Exporting necessary data, only product-related ones, from Zed to Redis at the pre-calculation phase with the help of Publish and Synchronization.
-* Merging duplicate Zed requests to only one customer request (AddToCart + Validations + …).
+- Exporting necessary data, only product-related ones, from Zed to Redis at the pre-calculation phase with the help of Publish and Synchronization.
+- Merging duplicate Zed requests to only one customer request (AddToCart + Validations + …).
 
 {% info_block infoBox "" %}
 
@@ -235,8 +235,8 @@ OMS processes are the template of the order fulfillment in Spryker. The first st
 
 You can avoid using the unnecessary transitions as follows:
 
-* Remove the `Reservation` flag from the `NEW` and other steps in the OMS.
-* Remove the `Timeout` transition from the `NEW` step in the OMS.
+- Remove the `Reservation` flag from the `NEW` and other steps in the OMS.
+- Remove the `Timeout` transition from the `NEW` step in the OMS.
 
 For more ways to optimize OMS, see [Slow checkout endpoint](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html#slow-checkout-endpoint).
 
@@ -244,10 +244,10 @@ For more ways to optimize OMS, see [Slow checkout endpoint](/docs/pbc/all/order-
 
 Make sure to check the following articles on how to optimize the performance of your application:
 
-* [Performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html)
-* [Data importer speed optimization](/docs/dg/dev/data-import/{{site.version}}/data-import-optimization-guidelines.html)
-* [Integrating multi-queue publish structure](/docs/dg/dev/integrate-and-configure/integrate-multi-queue-publish-structure.html)
-* [Performance testing in staging environments](/docs/ca/dev/performance-testing-in-staging-enivronments.html)
+- [Performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html)
+- [Data importer speed optimization](/docs/dg/dev/data-import/{{site.version}}/data-import-optimization-guidelines.html)
+- [Integrating multi-queue publish structure](/docs/dg/dev/integrate-and-configure/integrate-multi-queue-publish-structure.html)
+- [Performance testing in staging environments](/docs/ca/dev/performance-testing-in-staging-enivronments.html)
 
 ## Application performance and load tests
 
@@ -257,8 +257,8 @@ For the best performance, before going live, we highly recommend performing all 
 
 Each project must have its benchmark tests for the API and Frontend shops before going live. Having these tests in place ensures that the project follows the best performance state for each request. You can use any tools for this type of test, for example:
 
-* Apache Benchmark
-* Apache jMeter
+- Apache Benchmark
+- Apache jMeter
 
 ### Load test
 

@@ -16,8 +16,8 @@ If the configuration changed, it was necessary to run the command again for Prop
 
 To avoid running the command each time the configuration changes, we introduce a dynamic propel configuration that is:
 
-* real-time available;
-* fetched from the current environment configuration without running any commands.
+- real-time available;
+- fetched from the current environment configuration without running any commands.
 
 ## Integration
 

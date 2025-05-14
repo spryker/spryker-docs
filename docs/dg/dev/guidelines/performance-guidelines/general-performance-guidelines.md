@@ -24,10 +24,10 @@ Spryker is a fast application by design. These guidelines explain how to optimiz
 
 ## Hosting recommendations
 
-* *CPU*: Spryker's execution time depends on the CPU of the server. In general, more CPU capacity supports faster response times and allows a higher load.
-* *Memory (Databases)*: Databases (Redis, Elasticsearch, and PostgreSQL) mainly consume RAM. When there is not enough RAM, you can face performance issues. The best amount of RAM depends on the amount of data that you have and needs to be measured from time to time.
-* *Memory (PHP)*: The amount of memory does not impact on the execution time of PHP, but to squeeze everything out of your server, you need to define the `pm.max_children` configuration value of PHP-FPM. The max amount of parallel processes must not be higher than the available memory divided by the maximum consumption per process.
-* *Latency*: You can see the highest speed of Spryker when Redis is installed on the same machine as the application, which helps to avoid latency. Redis has a blazing fast response time of 0.1 ms, but in cloud environments, you can often get additional 1-3ms of latency per `get()`. A caching mechanism that uses Spryker is described in the following sections of this document.
+- *CPU*: Spryker's execution time depends on the CPU of the server. In general, more CPU capacity supports faster response times and allows a higher load.
+- *Memory (Databases)*: Databases (Redis, Elasticsearch, and PostgreSQL) mainly consume RAM. When there is not enough RAM, you can face performance issues. The best amount of RAM depends on the amount of data that you have and needs to be measured from time to time.
+- *Memory (PHP)*: The amount of memory does not impact on the execution time of PHP, but to squeeze everything out of your server, you need to define the `pm.max_children` configuration value of PHP-FPM. The max amount of parallel processes must not be higher than the available memory divided by the maximum consumption per process.
+- *Latency*: You can see the highest speed of Spryker when Redis is installed on the same machine as the application, which helps to avoid latency. Redis has a blazing fast response time of 0.1 ms, but in cloud environments, you can often get additional 1-3ms of latency per `get()`. A caching mechanism that uses Spryker is described in the following sections of this document.
 
 ## Disable Xdebug
 
@@ -101,8 +101,8 @@ During the synchronization part of Publish & Sync, each time the `queue:task:sta
 For backward compatibility reasons, `RabbitMqEnv::RABBITMQ_ENABLE_RUNTIME_SETTING_UP` is enabled by default in the module configuration class: `\Spryker\Client\RabbitMq\RabbitMqConfig::isRuntimeSettingUpEnabled`. For production environments, we recommend disabling it by setting it to `false` in `config_default.php` or another config file.
 
 Side effects:
-* The application doesn't try to recreate queues and exchanges "on the fly" while interacting with RabbitMQ. If a queue is deleted, and the application attempts to access it, there will be an exception.
-* The only way to create queues and exchanges to configure RabbitMQ is to run the `console queue:setup` CLI command defined in `\Spryker\Zed\RabbitMq\Communication\Console\QueueSetupConsole`. Make sure to *adjust your deploy scripts* accordingly.
+- The application doesn't try to recreate queues and exchanges "on the fly" while interacting with RabbitMQ. If a queue is deleted, and the application attempts to access it, there will be an exception.
+- The only way to create queues and exchanges to configure RabbitMQ is to run the `console queue:setup` CLI command defined in `\Spryker\Zed\RabbitMq\Communication\Console\QueueSetupConsole`. Make sure to *adjust your deploy scripts* accordingly.
 
 ## Disable INFO event logs
 
@@ -110,11 +110,11 @@ Publish & Sync process can work slower and generate hundreds of megabytes of `IN
 
 There are a few options to avoid this in production environments:
 
-* Disable event logs using one of the following:
-  * Set `EventConstants::LOG_FILE_PATH` to `null`.
-  * Set `EventConstants::LOGGER_ACTIVE` to `false` in the appropriate config files, like `config_default.php`.
-* Change the events log level in any config file, by setting `EventConstants::EVENT_LOGGER_LEVEL` to, for example, `\Monolog\Logger::WARNING` in newer (> 2.9.2) versions of `spryker/event`.
-* For versions up to `spryker/event:2.9.2`: Override `LoggerConfig::createStreamHandler` to change the [event logger level](https://github.com/spryker/event/blob/master/src/Spryker/Zed/Event/Business/Logger/LoggerConfig.php).
+- Disable event logs using one of the following:
+  - Set `EventConstants::LOG_FILE_PATH` to `null`.
+  - Set `EventConstants::LOGGER_ACTIVE` to `false` in the appropriate config files, like `config_default.php`.
+- Change the events log level in any config file, by setting `EventConstants::EVENT_LOGGER_LEVEL` to, for example, `\Monolog\Logger::WARNING` in newer (> 2.9.2) versions of `spryker/event`.
+- For versions up to `spryker/event:2.9.2`: Override `LoggerConfig::createStreamHandler` to change the [event logger level](https://github.com/spryker/event/blob/master/src/Spryker/Zed/Event/Business/Logger/LoggerConfig.php).
 
 ## Activate Twig compiler
 
@@ -251,8 +251,8 @@ Split navigation significantly enhances performance for both ZED and the Merchan
 This feature is shipped by default but existing projects may need to install it using the following steps:
 For projects that began before this feature was introduced, the following steps should be taken:
 1. Install or update the following modules:
-* `spryker/merchant-portal-application:^1.4.0`
-* `spryker/zed-ui: ^3.1.0`
+- `spryker/merchant-portal-application:^1.4.0`
+- `spryker/zed-ui: ^3.1.0`
 
 2. Move merchant portal related navigation from `config/Zed/navigation.xml` to `config/Zed/navigation-main-merchant-portal.xml`.
 3. Rename `config/Zed/navigation-secondary.xml` to `config/Zed/navigation-secondary-merchant-portal.xml`.
@@ -336,8 +336,8 @@ When using Gateway for Twig rendering–for example, for sending emails–you ca
 
 Check if you require all features you currently use and check all applied plugins if you need them. Some plugins can probably be removed. Specifically, check the following ones:
 
-* `CheckoutDependencyProvider`
-* `CalculationDependencyProvider`
+- `CheckoutDependencyProvider`
+- `CalculationDependencyProvider`
 
 There might be other DependencyProvider, and you must check if you can remove default applied features. Not all of them are used in all projects.
 
@@ -350,23 +350,23 @@ Check if you need the `can` method calls from Twig. For example, `{% raw %}{%{% 
 Try to update the Spryker modules where you can, as we constantly add performance optimizations. Ideally, always use the latest versions of the Spryker modules.
 
 Performance optimizations in the Merchant Portal:
-* [spryker/category:^5.18.2](https://github.com/spryker/category/releases/tag/5.18.2)
-* [spryker/acl:^3.22.0](https://github.com/spryker/acl/releases/tag/3.22.0)
-* [spryker/acl-entity:^1.13.0](https://github.com/spryker/acl-entity/releases/tag/1.13.0)
+- [spryker/category:^5.18.2](https://github.com/spryker/category/releases/tag/5.18.2)
+- [spryker/acl:^3.22.0](https://github.com/spryker/acl/releases/tag/3.22.0)
+- [spryker/acl-entity:^1.13.0](https://github.com/spryker/acl-entity/releases/tag/1.13.0)
 
 Performance optimizations in the order placement:
-* [spryker/calculation:^4.14.0](https://github.com/spryker/calculation/releases/tag/4.14.0)
-* [spryker/discount-calculation-connector:^5.4.0](https://github.com/spryker/discount-calculation-connector/releases/tag/5.4.0)
-* [spryker/merchant:^3.15.0](https://github.com/spryker/merchant/releases/tag/3.15.0)
-* [spryker/sales:^11.60.0](https://github.com/spryker/sales/releases/tag/11.60.0)
-* [spryker/product:^6.49.0](https://github.com/spryker/product/releases/tag/6.49.0)
-* [spryker/discount:^9.42.1](https://github.com/spryker/discount/releases/tag/9.42.1)
-* [spryker/product-cart-connector:^4.13.0](https://github.com/spryker/product-cart-connector/releases/tag/4.13.0)
+- [spryker/calculation:^4.14.0](https://github.com/spryker/calculation/releases/tag/4.14.0)
+- [spryker/discount-calculation-connector:^5.4.0](https://github.com/spryker/discount-calculation-connector/releases/tag/5.4.0)
+- [spryker/merchant:^3.15.0](https://github.com/spryker/merchant/releases/tag/3.15.0)
+- [spryker/sales:^11.60.0](https://github.com/spryker/sales/releases/tag/11.60.0)
+- [spryker/product:^6.49.0](https://github.com/spryker/product/releases/tag/6.49.0)
+- [spryker/discount:^9.42.1](https://github.com/spryker/discount/releases/tag/9.42.1)
+- [spryker/product-cart-connector:^4.13.0](https://github.com/spryker/product-cart-connector/releases/tag/4.13.0)
 
 Performance optimizations in the OMS availability check and order item reservation:
-* [spryker/availability:^9.27.0](https://github.com/spryker/availability/releases/tag/9.27.0)
-* [spryker/stock:^8.10.1](https://github.com/spryker/stock/releases/tag/8.10.1)
-* [spryker/oms:^11.44.0](https://github.com/spryker/oms/releases/tag/11.44.0)
+- [spryker/availability:^9.27.0](https://github.com/spryker/availability/releases/tag/9.27.0)
+- [spryker/stock:^8.10.1](https://github.com/spryker/stock/releases/tag/8.10.1)
+- [spryker/oms:^11.44.0](https://github.com/spryker/oms/releases/tag/11.44.0)
 
 
 ## Performance profiling

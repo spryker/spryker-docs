@@ -10,8 +10,8 @@ To publish a module on Packagist, take the following steps.
 
 ## Prerequisites
 
-* Install PHP
-* Install composer
+- Install PHP
+- Install composer
 
 ## Initialize Composer
 
@@ -28,13 +28,13 @@ composer init
 ```
 
 You'll be prompted to fill out details like the following:
-* Package name, for example—`vendor/package-name`
-* Description
-* Author
-* Minimum stability
-* Package type
-* License
-* Optional: Dependencies
+- Package name, for example—`vendor/package-name`
+- Description
+- Author
+- Minimum stability
+- Package type
+- License
+- Optional: Dependencies
 
 ## Add the package metadata
 
@@ -98,8 +98,8 @@ git push -u origin master
 ```
 
 5. Add a new tag in one of the following ways:
-* Recommended: Create a new release using the GitHub web interface. For instructions, see [Creating a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository).
-* Manually:
+- Recommended: Create a new release using the GitHub web interface. For instructions, see [Creating a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository).
+- Manually:
 
 ```bash
 git tag v1.0.0

@@ -44,11 +44,11 @@ Integrating microdata into code offers a number of potential advantages. First, 
 
 Considering that Spryker is an e-commerce platform, the most important types of information are:
 
-* Product: any offered product or service
-* Offer: an offer to transfer some rights to an item or to provide a service
-* Review: a review of an item
-* AggregateRating: the average rating based on multiple ratings or reviews
-* PropertyValue: a property-value pair represents a feature of a product or place
+- Product: any offered product or service
+- Offer: an offer to transfer some rights to an item or to provide a service
+- Review: a review of an item
+- AggregateRating: the average rating based on multiple ratings or reviews
+- PropertyValue: a property-value pair represents a feature of a product or place
 
 Here is an example of the [Schema.org](https://schema.org/) microdata implementation for a page:
 

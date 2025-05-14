@@ -15,8 +15,8 @@ There is a synchronization issue.
 
 ## Solution
 
-* Restart your OS.
-* Run the commands:
+- Restart your OS.
+- Run the commands:
 
 ```
 docker/sdk trouble

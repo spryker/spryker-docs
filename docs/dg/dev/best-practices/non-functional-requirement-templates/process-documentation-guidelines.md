@@ -47,22 +47,22 @@ This request is for the deployment of version 1.2.3 of the MyProject application
 
 **Requested Changes**:
 
-* Deployment of version 1.2.3 of the MyProject application
-* Update of the following environment variables:
-  * Expected environment variable name: `DATABASE_URL`<br/>
+- Deployment of version 1.2.3 of the MyProject application
+- Update of the following environment variables:
+  - Expected environment variable name: `DATABASE_URL`<br/>
     Expected value: `postgresql://user:password@localhost:5432/mydatabase`
-  * Expected environment variable name: `API_KEY`<br/>
+  - Expected environment variable name: `API_KEY`<br/>
     Expected value: `abcd1234`
-  * Expected environment variable name: `DEBUG`<br/>
+  - Expected environment variable name: `DEBUG`<br/>
     Expected value: `false`
-* Special manual steps:
-  * **Step 1**: Run the database migration script before starting the application.
-  * **Step 2**: Update the DNS records for the new application version.
-* Infrastructure changes:
-  * Add an additional application server to the load balancer pool.
-  * Increase the size of the database server's disk.
+- Special manual steps:
+  - **Step 1**: Run the database migration script before starting the application.
+  - **Step 2**: Update the DNS records for the new application version.
+- Infrastructure changes:
+  - Add an additional application server to the load balancer pool.
+  - Increase the size of the database server's disk.
 *Expected behavior:
-  * There may be a temporary increase in error log entries because of a known issue with the new version that will be fixed in the next release.
+  - There may be a temporary increase in error log entries because of a known issue with the new version that will be fixed in the next release.
 
 **Impact**:<br/>
 This deployment will include updates to the application's database connection and API key, as well as changes to the infrastructure. There is a low risk of downtime during the deployment.
@@ -74,9 +74,9 @@ In the event of an issue during the deployment, we will roll back to the previou
 This release has been thoroughly tested in the staging environment. A final validation on the production environment to verify that the expected setup changes match the actual state will be performed before the deployment.
 
 **Approvals**:
-* Lead developer: approved
-* QA team: approved
-* Operations team: approved
+- Lead developer: approved
+- QA team: approved
+- Operations team: approved
 
 ## Operational guidelines
 
@@ -114,6 +114,6 @@ To properly handle and monitor the cooperation between local and remote or third
 
 For example, a payment provider connected to the project needs to be monitored to ensure its availability. The following communication protocol is used:
 
-* The local service sends an HTTP GET request to the remote service's API endpoint, along with any necessary headers and query parameters.
-* The remote service responds with an HTTP status code and a JSON payload containing the requested data.
-* The local service processes the data and displays it to the user or performs any necessary actions.
+- The local service sends an HTTP GET request to the remote service's API endpoint, along with any necessary headers and query parameters.
+- The remote service responds with an HTTP status code and a JSON payload containing the requested data.
+- The local service processes the data and displays it to the user or performs any necessary actions.

@@ -9,9 +9,9 @@ template: concept-topic-template
 
 Functionality:
 
-* PHPMD rules tailored to Spryker projects
-* Architecture Sniffer rules for enforcing core-specific conventions
-* Rules that address the challenges unique to Spryker projects
+- PHPMD rules tailored to Spryker projects
+- Architecture Sniffer rules for enforcing core-specific conventions
+- Rules that address the challenges unique to Spryker projects
 
 ## Architecture violation priority levels
 

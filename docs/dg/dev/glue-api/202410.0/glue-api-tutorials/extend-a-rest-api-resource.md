@@ -26,9 +26,9 @@ The following guide relies on your knowledge of the structure of the Glue REST A
 
 ## Prerequisites
 
-* [Install Spryker Development Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html).
-* [Enable Glue Rest API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
-* [Integrate Products API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
+- [Install Spryker Development Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html).
+- [Enable Glue Rest API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
+- [Integrate Products API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 {% info_block infoBox %}
 
@@ -82,8 +82,8 @@ vendor/bin/console transfer:generate
 ```
 
 4. Check that generated transfers contain the attribute you have added:
-* `src/Generated/Shared/Transfer/AbstractProductsRestAttributesTransfer.php`—for abstract products.
-* `src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer.php`—for concrete products.
+- `src/Generated/Shared/Transfer/AbstractProductsRestAttributesTransfer.php`—for abstract products.
+- `src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer.php`—for concrete products.
 
 {% info_block infoBox %}
 

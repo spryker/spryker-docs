@@ -9,9 +9,9 @@ last_updated: Nov 4, 2022
 ---
 
 Spryker SDK has three types of settings:
-* Shared
-* Local (private)
-* SDK
+- Shared
+- Local (private)
+- SDK
 
 ## Shared settings
 
@@ -33,4 +33,4 @@ This is the SDK setting. SDK settings are generated at the SDK *init* step and e
 
 There are the following settings inheritance rules:
 
-* The SDK setting can be overwritten by the Shared or Local setting. That is, `SDK -> Shared -> Local`.
+- The SDK setting can be overwritten by the Shared or Local setting. That is, `SDK -> Shared -> Local`.

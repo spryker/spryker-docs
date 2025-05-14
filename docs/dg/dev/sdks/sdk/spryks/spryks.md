@@ -28,9 +28,9 @@ The majority of Spryks need to execute other Spryks before the called Spryk can 
 
 We support the following Spryk definition types:
 
-* *Template definitions.* A template definition adds a new file to your file system and uses Twig as a render engine, which enables you to create files from templates with placeholders. A template definition needs at least a template argument defined. The argument tells Spryk which template to use. Template definitions can have as many arguments as needed.
-* *Structure definitions.* A structure definition lets you define a directory structure. For example, the `CreateSprykerModule` definition contains the description of the created directories. The main argument of a structure definition is directories, which enables you to add a list of directories to be created.
-* *Method definitions.* A method definition can add methods to a specified target, such as `Spryker\Zed\FooBar\Business\FooBarFacade`. This type of definition needs more arguments to do its job.
+- *Template definitions.* A template definition adds a new file to your file system and uses Twig as a render engine, which enables you to create files from templates with placeholders. A template definition needs at least a template argument defined. The argument tells Spryk which template to use. Template definitions can have as many arguments as needed.
+- *Structure definitions.* A structure definition lets you define a directory structure. For example, the `CreateSprykerModule` definition contains the description of the created directories. The main argument of a structure definition is directories, which enables you to add a list of directories to be created.
+- *Method definitions.* A method definition can add methods to a specified target, such as `Spryker\Zed\FooBar\Business\FooBarFacade`. This type of definition needs more arguments to do its job.
 
 ## Install Spryk
 
@@ -127,8 +127,8 @@ Some Spryks have interactive arguments, like interface name, which can't be pass
 
 The difference between the Core and Project modes is the place where your code is generated.
 
-* *Core* has the `vendor/spryker/{% raw %}{{{% endraw %} organization {% raw %}}}{% endraw %}/ root` path;
-* *Project* has the `src/{% raw %}{{{% endraw %} organization {% raw %}}}{% endraw %}/ root` path.
+- *Core* has the `vendor/spryker/{% raw %}{{{% endraw %} organization {% raw %}}}{% endraw %}/ root` path;
+- *Project* has the `src/{% raw %}{{{% endraw %} organization {% raw %}}}{% endraw %}/ root` path.
 
 Put the organization option into the namespaces config files (Core or Project).
 
@@ -186,6 +186,6 @@ Spryks need some project-related configurations. These are passed automatically 
 
 The following configurations are passed to the Spryk tool:
 
-* `Spryker\Shared\Kernel\KernelConstants::PROJECT_NAMESPACE`
-* `Spryker\Shared\Kernel\KernelConstants::PROJECT_NAMESPACES`
-* `Spryker\Shared\Kernel\KernelConstants::CORE_NAMESPACES`
+- `Spryker\Shared\Kernel\KernelConstants::PROJECT_NAMESPACE`
+- `Spryker\Shared\Kernel\KernelConstants::PROJECT_NAMESPACES`
+- `Spryker\Shared\Kernel\KernelConstants::CORE_NAMESPACES`

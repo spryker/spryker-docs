@@ -22,14 +22,14 @@ To use a component, in Spryker Shop, you need to add it to a layout template (Tw
 
 Before adding a component, you need to locate it. There are 3 helper functions provided for this purpose. They are implemented the same way. Use the one that matches the component you want to add.
 
-* atom (name, module)
-* molecule (name, module)
-* organism (name, module)
+- atom (name, module)
+- molecule (name, module)
+- organism (name, module)
 
 The functions are implemented similarly and have the same arguments:
 
-* **name** (required): Specifies the component name,
-* **module** (optional): Specifies the name of the Spryker module where the component is implemented. Use this argument if you have two or more components with the same name and at the same level in different modules. If you don't pass this argument, *ShopUi* is used by default.
+- **name** (required): Specifies the component name,
+- **module** (optional): Specifies the name of the Spryker module where the component is implemented. Use this argument if you have two or more components with the same name and at the same level in different modules. If you don't pass this argument, *ShopUi* is used by default.
 
 The function returns the fully qualified component name that can be used in Twig, for example:
 
@@ -43,8 +43,8 @@ The function returns the fully qualified component name that can be used in Twig
 
 *Include* or *Embed* needs to be called with 2 arguments:
 
-* `with {}`: Defines the context to pass to the component;
-* `only` (*Important*): This mandatory attribute closes the context so that everything you pass via with `{}` is passed to the included object *only*.
+- `with {}`: Defines the context to pass to the component;
+- `only` (*Important*): This mandatory attribute closes the context so that everything you pass via with `{}` is passed to the included object *only*.
 
 The `with{}` attribute must pass the objects and variables that are defined in the component. They need to follow the contracts defined by the component itself. The most important of them is the *data* object that defines the data contract.
 
@@ -56,10 +56,10 @@ You must always pass *required* properties; otherwise, the component you are inc
 
 The most common attributes to include are:
 
-* `data` (required): Specifies the data passed to the component;
-* `attributes` (optional): Specifies the attributes to be passed;
-* `class` (optional): Used to inject custom class names into the component tag,
-* `modifiers` (optional): Used to enable component modifiers.
+- `data` (required): Specifies the data passed to the component;
+- `attributes` (optional): Specifies the attributes to be passed;
+- `class` (optional): Used to inject custom class names into the component tag,
+- `modifiers` (optional): Used to enable component modifiers.
 
 {% info_block infoBox %}
 

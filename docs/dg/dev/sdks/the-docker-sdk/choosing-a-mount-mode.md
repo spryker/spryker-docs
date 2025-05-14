@@ -46,28 +46,28 @@ Depending on your operating system (OS), choose one of the mount modes in the ta
 | mutagen      | ✔️      |                    |                         |                    |
 | docker-sync  | ✅      |                    | ✔️      |                    |
 
-* (✔️) - recommended solution
-* (✅) - supported solution
-* (☑️) - supported solution with very slow performance
+- (✔️) - recommended solution
+- (✅) - supported solution
+- (☑️) - supported solution with very slow performance
 
 ## Supported mount modes
 
 The Docker SDK supports the following mount modes:
 
-* baked
+- baked
 Copies source files into image, so they *cannot* be changed from host machine.
 The file or directory is referenced by its absolute path on the host machine.
 This mount mode is default for the Demo mode. It is not suitable for the application Development mode.
 
-* native
+- native
 Mounts source files directly from host machine into containers.
 Works perfectly with Linux and Windows (WSL2).
 
-* mutagen
+- mutagen
 Synchronizes source files between your host machine and a container in an effective real-time way that combines the performance of the rsync algorithm with bidirectionality and low-latency filesystem watching.
 This mount mode is stable with MacOS.
 
-* docker-sync
+- docker-sync
 Synchronizes source files from host machine into running containers.
 This mount mode is stable with MacOS and Windows (WSL1).
 
@@ -112,22 +112,22 @@ Synchronization mount modes, such as mutagen or docker-sync, use algorithms to s
 
 ![mutagen-diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+SDK/Choosing+a+mount+mode/mutagen-diagram.png)
 
-* Mutagen daemon listens to the host file system changes.
-* Mutagen sidecar container listens to the VM file system changes.
-* The daemon and the sidecar interact and update files on each side.
-* Applications work with the docker volume directly, which is almost equal to a direct file system access.
+- Mutagen daemon listens to the host file system changes.
+- Mutagen sidecar container listens to the VM file system changes.
+- The daemon and the sidecar interact and update files on each side.
+- Applications work with the docker volume directly, which is almost equal to a direct file system access.
 
 ### Things to keep in mind when using synchronization mount modes
 
 Keep the following in mind:
 
-* When you change one or more files, it may take several seconds to synchronize them.
-* When performing big file operations, like `git checkout` or `composer install`, make sure to wait for synchronization by looking at the synchronization status.
-* To check synchronization session status, use `docker/sdk sync logs`. It works for mutagen and docker-sync.
-* When you finish working, make sure to terminate the synchronization session by running `docker/sdk down`.
+- When you change one or more files, it may take several seconds to synchronize them.
+- When performing big file operations, like `git checkout` or `composer install`, make sure to wait for synchronization by looking at the synchronization status.
+- To check synchronization session status, use `docker/sdk sync logs`. It works for mutagen and docker-sync.
+- When you finish working, make sure to terminate the synchronization session by running `docker/sdk down`.
 
 ## See also
 
-* [Manage data in Docker](https://docs.docker.com/storage/)
-* [Mutagen documentation](https://mutagen.io/documentation/introduction)
-* [Docker-sync documentation](https://docker-sync.readthedocs.io/)
+- [Manage data in Docker](https://docs.docker.com/storage/)
+- [Mutagen documentation](https://mutagen.io/documentation/introduction)
+- [Docker-sync documentation](https://docker-sync.readthedocs.io/)

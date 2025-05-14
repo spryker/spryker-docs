@@ -29,8 +29,8 @@ The widget is based on *Symfony Profiler*. For details, see [Profiler documenta
 
 The following modules provide the profiler functionality:
 
-* **WebProfilerWidget** -`spryker-shop/web-profiler-widget`
-* **WebProfilerExtension** -`spryker/web-profiler-extension`
+- **WebProfilerWidget** -`spryker-shop/web-profiler-widget`
+- **WebProfilerExtension** -`spryker/web-profiler-extension`
 
 ## Installation
 
@@ -48,8 +48,8 @@ To be able to use the *Web Profiler Widget*, add `\SprykerShop\Yves\WebProfiler
 
 The below options can be used in the Router to configure *WebProfilerWidget*. The options are contained in `\SprykerShop\Shared\WebProfilerWidget\WebProfilerWidgetConstants`.
 
-* `\SprykerShop\Shared\WebProfilerWidget\WebProfilerWidgetConstants::IS_WEB_PROFILER_ENABLED`\- use this option to enable/disable *WebProfilerWidget*. By default, the widget is disabled.
-* `\SprykerShop\Shared\WebProfilerWidget\WebProfilerWidgetConstants::PROFILER_CACHE_DIRECTORY`\- use this option to specify the path where the *WebProfiler* stores its cache.
+- `\SprykerShop\Shared\WebProfilerWidget\WebProfilerWidgetConstants::IS_WEB_PROFILER_ENABLED`\- use this option to enable/disable *WebProfilerWidget*. By default, the widget is disabled.
+- `\SprykerShop\Shared\WebProfilerWidget\WebProfilerWidgetConstants::PROFILER_CACHE_DIRECTORY`\- use this option to specify the path where the *WebProfiler* stores its cache.
 
 ## Extending WebProfilerWidget
 

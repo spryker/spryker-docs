@@ -206,9 +206,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 Manifests fully support multiple plugins registration in an associative array. As a key, you can use:
 
-* string
-* constant
-* function call with arguments
+- string
+- constant
+- function call with arguments
 
 The following is an example of how to have multiple plugins registration in an indexed array:
 
@@ -375,12 +375,12 @@ Manifests fully support the possibility of merging the results of calling multip
 
 Inside of array merge function call you can use:
 
-* wrap methods calls
-* parent method call
-* indexed arrays
-* associative arrays
-* multidimensional arrays
-* variables
+- wrap methods calls
+- parent method call
+- indexed arrays
+- associative arrays
+- multidimensional arrays
+- variables
 
 Multidimensional associative arrays are supported inside of the `array_merge()` up to two levels, but to use them, you must use the wrapped functions.
 
@@ -460,10 +460,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 ## Special situations
 
-* If the target dependency provider class doesn't exist in the project, it's created and all required methods are created automatically as well.
+- If the target dependency provider class doesn't exist in the project, it's created and all required methods are created automatically as well.
 
-* If the target dependency provider class exists in the project without the target method, but such method exists in the parent class, the method is created and the changes are applied.
+- If the target dependency provider class exists in the project without the target method, but such method exists in the parent class, the method is created and the changes are applied.
 
-* If the target dependency provider class exists in the project without the target method, and such method also doesn't exist in the parent class, the method is NOT created and the changes is NOT applied.
+- If the target dependency provider class exists in the project without the target method, and such method also doesn't exist in the parent class, the method is NOT created and the changes is NOT applied.
 
-* If the target method inside of the dependency provider class was modified on the project level and for example array was extracted into the separated method, the upgrader won't find the array, and the changes won't be applied.
+- If the target method inside of the dependency provider class was modified on the project level and for example array was extracted into the separated method, the upgrader won't find the array, and the changes won't be applied.

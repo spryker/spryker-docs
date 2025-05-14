@@ -22,8 +22,8 @@ To get indexes for the foreign key columns, follow these steps:
 
 1. Install the `IndexGenerator` module.
 2. In your project's namespace, add the console commands to the `ConsoleDependencyProvider` class.
-   * `Spryker\Zed\IndexGenerator\Communication\Console\PostgresIndexGeneratorConsole`
-   * `Spryker\Zed\IndexGenerator\Communication\Console\PostgresIndexRemoverConsole`
+   - `Spryker\Zed\IndexGenerator\Communication\Console\PostgresIndexGeneratorConsole`
+   - `Spryker\Zed\IndexGenerator\Communication\Console\PostgresIndexRemoverConsole`
 3. Copy and merge all schema files from the core and the project:
 
 ```bash

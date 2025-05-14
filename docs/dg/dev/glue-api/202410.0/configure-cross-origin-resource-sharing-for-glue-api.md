@@ -35,7 +35,7 @@ glue_eu:
 
  Configuration options:
 
-* CORS is disabled. Example:
+- CORS is disabled. Example:
 
 ```yml
 glue_eu:
@@ -47,7 +47,7 @@ glue_eu:
             store: AT
 ```
 
-* `*`: allow CORS requests from any domain. Example:
+- `*`: allow CORS requests from any domain. Example:
 
 ```yml
     glue_eu:
@@ -61,7 +61,7 @@ glue_eu:
             cors-allow-origin: '*'
 ```
 
-* `{ORIGIN}: allow CORS requests only from the specified origin. Example:
+- `{ORIGIN}: allow CORS requests only from the specified origin. Example:
 
 ```yml
     glue_eu:
@@ -85,8 +85,8 @@ curl -X OPTIONS -H "Origin: http://www.example1.com" -i http://glue.de.myspryker
 
 2. Check that the response contains the following:
 
-* The `Access-Control-Allow-Origin` header is the same as set in the configuration.
-* The `Access-Control-Allow-Methods` header contains all available REST methods.
+- The `Access-Control-Allow-Origin` header is the same as set in the configuration.
+- The `Access-Control-Allow-Methods` header contains all available REST methods.
 
 ```bash
 Content-Type: text/plain; charset=utf-8

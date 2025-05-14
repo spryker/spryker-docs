@@ -143,7 +143,7 @@ Content-Type: application/vnd.api+json; version=3.0
 
 Here's a version matching rule-set:
 
-* PHP version:
+- PHP version:
 
 ```php
 (new RestVersionTransfer())
@@ -153,9 +153,9 @@ Here's a version matching rule-set:
 
 Then use the version as follows:
 
-* In the header: *Content-Type: application/vnd.api+json; version=A.B*
+- In the header: *Content-Type: application/vnd.api+json; version=A.B*
 
-* In the path: */vA.B*
+- In the path: */vA.B*
 
 
 
@@ -168,9 +168,9 @@ PHP version:
 
 Then, use the version as follows:
 
-* In the header: *Content-Type: application/vnd.api+json; version=A*
+- In the header: *Content-Type: application/vnd.api+json; version=A*
 
-* In the path: */vA*
+- In the path: */vA*
 
 There's no fall-back to the latest minor, a version can only be be matched exactly.
 

@@ -39,14 +39,14 @@ This section describes parts of the application you need to take into account wh
 
 ### Integrations and third-party systems
 
-* Review and adjust all third-party integrations to ensure they work with the new store setup. This mainly concerns data and its isolation across virtual DBs. Teams working with both sides of the system, such as backend, frontend, merchant portal and APIs, should have access to all the needed data.
-* Integrations, such as single sign-on, payment gateways, or inventory systems, may require updates. Teams responsible for those systems should be available and ready to do the needed changes on time.
+- Review and adjust all third-party integrations to ensure they work with the new store setup. This mainly concerns data and its isolation across virtual DBs. Teams working with both sides of the system, such as backend, frontend, merchant portal and APIs, should have access to all the needed data.
+- Integrations, such as single sign-on, payment gateways, or inventory systems, may require updates. Teams responsible for those systems should be available and ready to do the needed changes on time.
 
 ### Data import
 
-* Handle the data import process carefully, breaking it down into specific tasks such as configuring DBs and adjusting the data import setup to work with the new store.
-* Make sure existing DBs, for example–a DB from another country, are correctly renamed or adjusted to fit the multi-DB structure.
-* Anticipate and plan for potential updates that may arise after end-to-end testing of the project data migration.
+- Handle the data import process carefully, breaking it down into specific tasks such as configuring DBs and adjusting the data import setup to work with the new store.
+- Make sure existing DBs, for example–a DB from another country, are correctly renamed or adjusted to fit the multi-DB structure.
+- Anticipate and plan for potential updates that may arise after end-to-end testing of the project data migration.
 
 ### Code buckets
 
@@ -54,8 +54,8 @@ If code buckets are used, investigate and adjust their configurations, making su
 
 ### Cloud environment and monitoring
 
-* Consider and adjust application performance monitoring tools, such as NewRelic and CloudWatch, to accommodate the new store. Check that all alerts and metrics are correctly configured to monitor the health and performance of the new store.
-* Consider adjusting AWS services, for example–introduce S3 buckets for the new store.
+- Consider and adjust application performance monitoring tools, such as NewRelic and CloudWatch, to accommodate the new store. Check that all alerts and metrics are correctly configured to monitor the health and performance of the new store.
+- Consider adjusting AWS services, for example–introduce S3 buckets for the new store.
 
 ### Frontend considerations
 
@@ -79,20 +79,20 @@ This section describes how to add the configuration and deployment recipes for a
 
 #### Add the configuration for the new store
 
-* Using [Add and remove DBs of stores](/docs/ca/dev/multi-store-setups/add-and-remove-databases-of-stores.html), define the following new entities in your deploy file:
+- Using [Add and remove DBs of stores](/docs/ca/dev/multi-store-setups/add-and-remove-databases-of-stores.html), define the following new entities in your deploy file:
 
 | ENTITY | SECTION |
 | Database | `regions.<region_name>.services.DBs` |
  | Store | `regions.<region_name>.stores`|
 | Domains | `groups.<region_name>.applications`  |
 
-* In `stores.php`, add the configuration for the new store. For instructions, see [Integrate multi-DB logic](/docs/dg/dev/integrate-and-configure/integrate-multi-database-logic.html).
-* Prepare data import configurations and data files for the new store.
-* Adjust the local environment setup as needed, including configurations and environment variables. Examples:
-  * Frontend router configuration
-  * Code bucket configuration
-  * Create new Back Office users
-* To make these steps repeatable in future, document them.
+- In `stores.php`, add the configuration for the new store. For instructions, see [Integrate multi-DB logic](/docs/dg/dev/integrate-and-configure/integrate-multi-database-logic.html).
+- Prepare data import configurations and data files for the new store.
+- Adjust the local environment setup as needed, including configurations and environment variables. Examples:
+  - Frontend router configuration
+  - Code bucket configuration
+  - Create new Back Office users
+- To make these steps repeatable in future, document them.
 
 #### Running initial setup locally
 
@@ -211,13 +211,13 @@ Prepare the production environment's configuration similarly to the staging setu
 
 #### Apply the configuration
 
-* Open a support request to deploy the new store configuration to production.
-* Execute the deployment, closely monitoring the process to catch any issues early.
+- Open a support request to deploy the new store configuration to production.
+- Execute the deployment, closely monitoring the process to catch any issues early.
 
 #### Post-deployment
 
-* Verify that the new store is fully operational and that no data or services for existing stores have been affected.
-* If you updated an existing installation recipe during environment configuration, revert it back to its original state.
+- Verify that the new store is fully operational and that no data or services for existing stores have been affected.
+- If you updated an existing installation recipe during environment configuration, revert it back to its original state.
 
 ## Releasing multiple stores in a row
 

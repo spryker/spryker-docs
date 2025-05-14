@@ -86,10 +86,10 @@ Request::setTrustedHosts($trustedHosts);
 
 Code injection refers to any mean that allows the attacker to inject malicious code into a web application so that it gets interpreted and executed. PHP Code Inclusions Vulnerabilities PHP code inclusion vulnerabilities refer to allowing to influence either a part or the entire file name used in an include or require statement. Possible targets for this kind of attack are:
 
-* `include()`
-* `include_once()`
-* `require()`
-* `require_once()`
+- `include()`
+- `include_once()`
+- `require()`
+- `require_once()`
 
 Untrusted input should be prevented to be used to determine the path to the parameter that's passed to these functions.
 
@@ -101,9 +101,9 @@ This class of vulnerabilities can cause execution of malicious code from remote.
 
 Possible targets for this kind of attacks are:
 
-* `eval()`
-* `assert()`
-* `unserialize()`
-* `exec()`
+- `eval()`
+- `assert()`
+- `unserialize()`
+- `exec()`
 
 Untrusted input should be prevented to be passed to the PHP functions that are possible targets for these kind of attacks.

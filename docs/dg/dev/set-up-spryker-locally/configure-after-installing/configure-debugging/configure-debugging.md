@@ -168,9 +168,9 @@ If you set unlimited timeout, this affects all Zed requests, not only debugging 
 
 There are several ways to switch to the debugging mode:
 
-* To debug a web application, pass the `XDEBUG_SESSION` cookie with a string value. If you are using the Xdebug helper browser extension, in the extension menu, select **debug**.
-* To run all applications in the debugging mode, run `docker/sdk {run|start|up} -x`.
-* To debug a console command in cli, run it with the `-x` option.
+- To debug a web application, pass the `XDEBUG_SESSION` cookie with a string value. If you are using the Xdebug helper browser extension, in the extension menu, select **debug**.
+- To run all applications in the debugging mode, run `docker/sdk {run|start|up} -x`.
+- To debug a console command in cli, run it with the `-x` option.
 
 ## Debugging with Xdebug
 
@@ -196,10 +196,10 @@ To debug a console command or a test in a debugging mode, run it with the `-x` o
 
 Find several examples below:
 
-* `docker/sdk cli -x`
-* `docker/sdk cli -x console queue:worker:start`
-* `docker/sdk console -x queue:worker:start`
-* `docker/sdk testing -x codecept run -codeception.yml`
+- `docker/sdk cli -x`
+- `docker/sdk cli -x console queue:worker:start`
+- `docker/sdk console -x queue:worker:start`
+- `docker/sdk testing -x codecept run -codeception.yml`
 
 The [PHPMD](https://github.com/phpmd/phpmd/blob/master/src/bin/phpmd#L29) command requires the `PHPMD_ALLOW_XDEBUG` env variable for debug mode:
 

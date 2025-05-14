@@ -42,10 +42,10 @@ Read more: https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-u
 ## Configuration
 
 There are four levels of security vulnerabilities:
-* Low
-* Moderate
-* High
-* Critical
+- Low
+- Moderate
+- High
+- Critical
 
 By default, the npm checker evaluates the code against the high and critical levels. To define the levels to be checked, create or update `tooling.yml` in the project's root directory. Here's an exemplary configuration for evaluating against all vulnerability errors:
 

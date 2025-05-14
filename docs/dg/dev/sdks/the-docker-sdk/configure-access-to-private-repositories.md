@@ -38,7 +38,7 @@ This document describes how to configure an environment to allow the Docker SDK 
 
 You need to configure access to private repositories in the following cases:
 
-* You have a private repository mentioned in `composer.json`:
+- You have a private repository mentioned in `composer.json`:
 
 ```json
 {
@@ -54,7 +54,7 @@ You need to configure access to private repositories in the following cases:
 }
 ```
 
-* Running `docker/sdk up` returns an error similar to the following:
+- Running `docker/sdk up` returns an error similar to the following:
 
 ```
 Cloning into '/data/vendor/my-org/my-repo'...
@@ -77,8 +77,8 @@ gitlab.my-org.com
 
 2. Configure authentication of Composer to VCS services using one of the following options:
 
-* [Configure SSH agent authentication for Composer](#configure-ssh-agent-authentication-for-composer). We recommend this option for development purposes.
-* [Configure the Composer authentication environment variable](#configure-the-composer-authentication-environment-variable). We recommend this option for setting up CI/CD pipelines.
+- [Configure SSH agent authentication for Composer](#configure-ssh-agent-authentication-for-composer). We recommend this option for development purposes.
+- [Configure the Composer authentication environment variable](#configure-the-composer-authentication-environment-variable). We recommend this option for setting up CI/CD pipelines.
 
 
 ### Configure SSH agent authentication for Composer
@@ -110,7 +110,7 @@ docker/sdk up --build
 1. Create access tokens in your VCS services.
 2. Prepare a `COMPOSER_AUTH` environment variable with the VCS tokens you've created in JSON:
 
-   * GitHub:
+   - GitHub:
 
     ```json
     {
@@ -120,7 +120,7 @@ docker/sdk up --build
     }
     ```
 
-   * BitBucket:
+   - BitBucket:
 
     ```json
     {
@@ -133,7 +133,7 @@ docker/sdk up --build
     }
     ```
 
-    * GitLab
+    - GitLab
 
     ```json
     {
@@ -147,13 +147,13 @@ To learn about Composer authentication variables, see [COMPOSER_AUTH](https://ge
 
 3. Enable the environment variable using one of the following options:
 
-* Export the environment variable taking Bash escaping rules into consideration:
+- Export the environment variable taking Bash escaping rules into consideration:
 
 ```bash
 export COMPOSER_AUTH="{\"github-oauth\":{\"github.com\":\"{GITHUB_TOKEN}\"},\"gitlab-oauth\":{\"gitlab.com\":\"{GITLAB_TOKEN}\"},\"bitbucket-oauth\":{\"bitbucket.org\": {\"consumer-key\": \"{BITBUCKET_KEY}\", \"consumer-secret\": \"{BITBUCKET_SECRET}\"{% raw %}}}{% endraw %}}"
 ```
 
-* Add the environment variable to your development environment by editing `~/.bash_profile` or `~/.zshenv`:
+- Add the environment variable to your development environment by editing `~/.bash_profile` or `~/.zshenv`:
 
 ```bash
 export COMPOSER_AUTH="{\"github-oauth\":{\"github.com\":\"{GITHUB_TOKEN}\"},\"gitlab-oauth\":{\"gitlab.com\":\"{GITLAB_TOKEN}\"},\"bitbucket-oauth\":{\"bitbucket.org\": {\"consumer-key\": \"{BITBUCKET_KEY}\", \"consumer-secret\": \"{BITBUCKET_SECRET}\"{% raw %}}}{% endraw %}}"

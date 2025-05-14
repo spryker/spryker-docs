@@ -14,16 +14,16 @@ last_updated: Nov 21, 2023
 This endpoint allows resolving Search Engine Friendly (SEF) URLs into a resource URL in Glue API.
 
 For SEO purposes, Spryker automatically generates SEF URLs for products and categories. The URLs are returned as a `url` attribute in responses related to abstract products and product categories. For examples of such responses, see:
-* [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)
-* [Retrieve a category tree](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html)
-* [Retrieve a category node](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html)
-* [Retrieve a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-cms-pages.html)
-* [Retrieve a merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#retrieve-a-merchant)
+- [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)
+- [Retrieve a category tree](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html)
+- [Retrieve a category node](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html)
+- [Retrieve a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-cms-pages.html)
+- [Retrieve a merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#retrieve-a-merchant)
 
 In your development, the endpoints can help you to:
 
-* Significantly boost the SEO presence of your product store.
-* Increase the search engine ranking of your online store.
+- Significantly boost the SEO presence of your product store.
+- Increase the search engine ranking of your online store.
 
 To facilitate their usage, Spryker Glue provides an endpoint that allows resolving an SEO-friendly URL, for example, `http://mysprykershop.com/en/canon-powershot-n-35`, into a URL of the relevant product resource in Glue API, for example, `https://glue.mysprykershop.com/abstract-products/035`. This capability is provided by the URLs API.
 
@@ -170,10 +170,10 @@ To resolve a SEF URL into a Glue API URL, send the request:
 | entityId | String | Unique resource identifier. |
 
 Using the information from the response and the Glue server name, you can construct the Glue resource URLs. For example:
-* `https://glue.mysprykershop.com/abstract-products/134`
-* `https://glue.mysprykershop.com/category-nodes/5`
-* `https://glue.mysprykershop.com/cms-pages/8d378933-22f9-54c7-b45e-db68f2d5d9a3`
-* `https://glue.mysprykershop.com/merchants/MER000005`
+- `https://glue.mysprykershop.com/abstract-products/134`
+- `https://glue.mysprykershop.com/category-nodes/5`
+- `https://glue.mysprykershop.com/cms-pages/8d378933-22f9-54c7-b45e-db68f2d5d9a3`
+- `https://glue.mysprykershop.com/merchants/MER000005`
 
 ## Possible errors
 

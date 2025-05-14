@@ -26,7 +26,7 @@ npm install
 
 3. Make the following adjustments to the `frontend/settings.js` file:
 
-   * Define `criticalPatterns`:
+   - Define `criticalPatterns`:
 
     ```js
     ...
@@ -40,7 +40,7 @@ npm install
     ...
     ```
 
-   * Add `criticalPatterns` to the returned settings object:
+   - Add `criticalPatterns` to the returned settings object:
 
     ```js
     ...
@@ -56,7 +56,7 @@ npm install
     ...   
     ```
 
-   * Extend the definition of the setting for the frontend builder with the following style entry point patterns for components `stylesEntryPoints`:
+   - Extend the definition of the setting for the frontend builder with the following style entry point patterns for components `stylesEntryPoints`:
 
    ```js
    ...

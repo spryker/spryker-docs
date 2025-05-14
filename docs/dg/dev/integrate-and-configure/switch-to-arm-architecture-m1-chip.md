@@ -52,13 +52,13 @@ docker/sdk cli
 ```
 
 6. Update `package-lock.json` and install dependencies based on your package manager:
-    * npm:
+    - npm:
 
     ```bash
     npm install
     ```
 
-    * yarn:
+    - yarn:
 
     ```bash
     yarn install

@@ -63,5 +63,5 @@ Together with the [root configuration](/docs/dg/dev/guidelines/testing-guideline
 
 ## Next steps
 
-* Learn about the [available test helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html).
-* [Create or enable a test helper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html).
+- Learn about the [available test helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html).
+- [Create or enable a test helper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html).

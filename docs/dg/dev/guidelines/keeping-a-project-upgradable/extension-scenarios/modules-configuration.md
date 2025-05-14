@@ -189,10 +189,10 @@ Manifests fully support merging the results of calling multiple methods.
 
 Inside of an array merge function call you can use the following:
 
-* wrap methods calls
-* parent method call
-* indexed arrays
-* associative arrays
+- wrap methods calls
+- parent method call
+- indexed arrays
+- associative arrays
 
 The following is an example of how to have the method return an associative array (with constants, parent method call and array merging):
 
@@ -248,7 +248,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-* variables
+- variables
 
 ## Null as the return
 

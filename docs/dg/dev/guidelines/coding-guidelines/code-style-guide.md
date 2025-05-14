@@ -50,8 +50,8 @@ $ vendor/bin/console code:sniff:style ... -s Spryker.Commenting.FullyQualifiedCl
 
 Additional options:
 
-* `-v:` Verbose output
-* `-d:` Dry-run, only output the command to be run
+- `-v:` Verbose output
+- `-d:` Dry-run, only output the command to be run
 
 {% info_block warningBox "Important" %}
 

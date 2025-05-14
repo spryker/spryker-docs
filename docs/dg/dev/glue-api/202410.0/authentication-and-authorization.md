@@ -68,5 +68,5 @@ Response sample with an error:
 ```
 
 For more details, see:
-* [Create protected Glue API endpoints](/docs/dg/dev/glue-api/{{page.version}}/create-protected-glue-api-endpoints.html)
-* [Use API Key authorization](/docs/dg/dev/glue-api/{{page.version}}/use-api-key-authorization.html)
+- [Create protected Glue API endpoints](/docs/dg/dev/glue-api/{{page.version}}/create-protected-glue-api-endpoints.html)
+- [Use API Key authorization](/docs/dg/dev/glue-api/{{page.version}}/use-api-key-authorization.html)

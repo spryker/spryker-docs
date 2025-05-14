@@ -17,17 +17,17 @@ This article provides information about how to prepare assets, like CSS, js or i
 
 The builder has several modes to build frontend:
 
-* `npm run yves`—builds assets in the development mode with all the namespaces and themes.
-* `npm run yves:watch`—builds assets in the watch mode. It will be watching for CSS and JS files and rebuilding the assets immediately after all the namespaces and themes are changed.
-* `npm run yves:production`—builds assets in the production mode (minified files, remove comments, etc.) for all namespaces and themes.
-* `npm run yves:help`—displays all available parameters for building.
+- `npm run yves`—builds assets in the development mode with all the namespaces and themes.
+- `npm run yves:watch`—builds assets in the watch mode. It will be watching for CSS and JS files and rebuilding the assets immediately after all the namespaces and themes are changed.
+- `npm run yves:production`—builds assets in the production mode (minified files, remove comments, etc.) for all namespaces and themes.
+- `npm run yves:help`—displays all available parameters for building.
 
 ## Parameters
 
-* `-n <namespace name> or --namespace  <namespace name>`—generates the assets for all themes of this `<namespace name>`. To generate several namespaces, use this parameter several times. For example, `npm run yves – -n DE -n US`.
-* `-t <theme name> or --theme <theme name>`—generates assets for all the namespaces which contain `<theme name>`. To generate several themes, use this parameter several times. For example, `npm run yves – -t default -t red-theme`
-* `-c <path> or --config <path>`—ability to define the path to the config JSON file that overwrites the default config JSON file.
-* `-i or --info`—displays a list of namespaces with all the available themes.
+- `-n <namespace name> or --namespace  <namespace name>`—generates the assets for all themes of this `<namespace name>`. To generate several namespaces, use this parameter several times. For example, `npm run yves – -n DE -n US`.
+- `-t <theme name> or --theme <theme name>`—generates assets for all the namespaces which contain `<theme name>`. To generate several themes, use this parameter several times. For example, `npm run yves – -t default -t red-theme`
+- `-c <path> or --config <path>`—ability to define the path to the config JSON file that overwrites the default config JSON file.
+- `-i or --info`—displays a list of namespaces with all the available themes.
 
 ## Configuring
 
@@ -100,8 +100,8 @@ For example, for the `DE` namespace and default theme, it's`/public/Yves/assets/
 
 All incoming files (images, fonts, etc.) are copied from `global` (for every namespace) and `DE` folders:
 
-* `frontend/assets/global/default`
-* `frontend/assets/DE/default`
+- `frontend/assets/global/default`
+- `frontend/assets/DE/default`
 
  {% info_block infoBox "Info" %}
 
@@ -115,9 +115,9 @@ If the assets were generated earlier for this namespace and theme, these assets 
 
 The builder is looking for entry points for components on several levels (from smaller to higher priority):
 
-* Core (`/vendor/spryker-shop`)
-* Eco (`/vendor/spryker-eco`)
-* Project (`/src/Pyz/Yves`)
+- Core (`/vendor/spryker-shop`)
+- Eco (`/vendor/spryker-eco`)
+- Project (`/src/Pyz/Yves`)
 
 Also, modules with a specific suffix namespace have higher priority over the module without it, for instance:
 

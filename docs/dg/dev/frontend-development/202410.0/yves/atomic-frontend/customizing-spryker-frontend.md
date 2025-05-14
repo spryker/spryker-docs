@@ -20,9 +20,9 @@ related:
 Spryker Frontend user interface can be customized and extended to meet the needs of your business. You can change the layout, styles, and behavior of existing components, as well as create components on your own.
 
 There are three aspects of the Spryker user interface that can be extended:
-* Views, templates, and layout of components comprising the frontend (*Twig*)
-* Styles (*SASS*)
-* Component behavior (*Typescript* or *Javascript*)
+- Views, templates, and layout of components comprising the frontend (*Twig*)
+- Styles (*SASS*)
+- Component behavior (*Typescript* or *Javascript*)
 
 This guide reviews customizing Spryker UI on each of these levels.
 
@@ -216,9 +216,9 @@ In addition to extending templates of existing components, you can create compon
 
 Another important aspect you can override is styles. The global styles are defined in the following folder: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles`. The same as Twig, you can extend the global styles on your local project level or even replace them. For this purpose, you need to create your own style files in the following folder `src/Pyz/Yves/ShopUi/Theme/default/styles`. You can use the following files for your project styles:
 
-* `shared.scss`. You can use it for global SASS variables, functions, and mixins and for overriding the topmost styles and settings of your project, like background color and foreground colors, fonts, spacings, grid settings, visual effects, and splitters.
-* `basic.scss`. You can use it for global styles like reset or typography.
-* `util.scss`. You can use it for utility stYles, like reset, align, or is-hidden implementations.
+- `shared.scss`. You can use it for global SASS variables, functions, and mixins and for overriding the topmost styles and settings of your project, like background color and foreground colors, fonts, spacings, grid settings, visual effects, and splitters.
+- `basic.scss`. You can use it for global styles like reset or typography.
+- `util.scss`. You can use it for utility stYles, like reset, align, or is-hidden implementations.
 
 {% info_block infoBox %}
 
@@ -228,13 +228,13 @@ For detailed information about global styles, see the *SASS Layer* section in [
 
 Typical implementations on the project level look as follows:
 
-* **`shared.scss`**
+- **`shared.scss`**
 
 ```SCSS
 @import '~ShopUi/styles/shared';
 ```
 
-* **`basic.scss`**
+- **`basic.scss`**
 
 ```SCSS
 @import '~ShopUi/styles/basic';
@@ -245,7 +245,7 @@ Typical implementations on the project level look as follows:
 @include basic-animation;
 ```
 
-* **`util.scss`**
+- **`util.scss`**
 
 ```SCSS
 @import '~ShopUi/styles/util';
@@ -257,8 +257,8 @@ Typical implementations on the project level look as follows:
 ```
 
 In addition to global styles, each component can have its own styles. For information about defining styles for a component, see the following tutorials:
-* [Tutorial: Frontend - Create a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/creating-components.html)
-* [Tutorial: Frontend - Override a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/overriding-components.html)
+- [Tutorial: Frontend - Create a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/creating-components.html)
+- [Tutorial: Frontend - Override a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/overriding-components.html)
 
 ## Behavior
 
@@ -275,11 +275,11 @@ The behavior of different components is defined by Javascript. For stricter typi
 
 All component assets are compiled using a bundler called Webpack. Spryker Shop Application (Shop UI) can have three entry points for Webpack on the project level. They are located in the root folder of the Shop UI (`src/Pyz/Yves/ShopUi/Theme/default`). The entry points are as follows (in processing order):
 
-* `vendor.ts`. It contains external dependencies for the system. We recommend using this file for dependencies as Webpack loads the dependency code only once, and then references are provided per request.
+- `vendor.ts`. It contains external dependencies for the system. We recommend using this file for dependencies as Webpack loads the dependency code only once, and then references are provided per request.
 
 You can add your own dependencies depending on the project needs—for example, *jquery*, *react*, *vue*).
 
-* `app.ts`. This file contains the bootstrap code, which simply loads the components. You can change the logic of how the application starts here. For example, this file can be used to add `document.ready` for *jquery*, main `conatiner/fragment` rendering for *react* and so on.
+- `app.ts`. This file contains the bootstrap code, which simply loads the components. You can change the logic of how the application starts here. For example, this file can be used to add `document.ready` for *jquery*, main `conatiner/fragment` rendering for *react* and so on.
 
 **Default Bootstrap**
 
@@ -291,14 +291,14 @@ bootstrap();
 You can find additional information about bootstrap implementation in the application folder `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/app`.
 
 Apart from Webpack bootstrap, each component can have its own logic defined in the dedicated component Javascript or Typescript. For information about defining component behavior, see the folloing tutorials:
-* [Tutorial: Frontend - Create a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/creating-components.html)
-* [Tutorial: Frontend - Extend a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/extending-components.html)
-* [Tutorial: Frontend - Override a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/overriding-components.html)
+- [Tutorial: Frontend - Create a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/creating-components.html)
+- [Tutorial: Frontend - Extend a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/extending-components.html)
+- [Tutorial: Frontend - Override a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/overriding-components.html)
 
 ## Installing dependencies
 
 Spryker Shop Application comes with a set of dependencies required to run the application. The dependency list can be found in the `package.json` file. You can add dependencies on your own. For example, you can add *react*, *foundation*, *jquery*, or customize Webpack with *file-loader*. For this purpose, create an SSH session to your virtual machine with `vagrant ssh` and execute the following commands:
-* `npm install --save dependency-name`—for application dependencies.
-* `npm install --save-dev dev-dependency-name`—or Webpack and tooling dependencies.
+- `npm install --save dependency-name`—for application dependencies.
+- `npm install --save-dev dev-dependency-name`—or Webpack and tooling dependencies.
 
 The dependencies are installed and written to `package.json` and `package-lock.json` files.

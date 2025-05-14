@@ -37,8 +37,8 @@ To be able to add Twig, we created `TwigApplicationPlugin`. It initializes the T
 
 You can find the list of all the modules related to the service below:
 
-* Twig - spryker/twig
-* TwigExtension - spryker/twig-extension
+- Twig - spryker/twig
+- TwigExtension - spryker/twig-extension
 
 ### Installation
 

@@ -20,9 +20,9 @@ This document shows how to implement a REST API resource in your project.
 
 Read the following documents:
 
-* [JSON API Specification](https://jsonapi.org/format/) implemented in Spryker;
-* [Swagger Tools Reference](https://swagger.io/) to know how to document your API;
-* [REST API Modeling Reference](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling).
+- [JSON API Specification](https://jsonapi.org/format/) implemented in Spryker;
+- [Swagger Tools Reference](https://swagger.io/) to know how to document your API;
+- [REST API Modeling Reference](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling).
 
 {% endinfo_block %}
 
@@ -322,9 +322,9 @@ To map the controller actions to the verbs they implement, implement the functio
 
 To map the actions, you can use such methods as `addPost`, `addDelete`, `addPatch`, and `addGet`, which are supported by `ResourceRouteCollectionInterface`. Each function has three parameters:
 
-* `action`: Specifies the action name to map the verb to the Resource controller method.
-* `protected` (optional): Specifies whether authentication is required to access the resource. If this parameter is not specified, then the verb requires authentication.
-* `context` (optional): An array of additional parameters that can be passed to the action. Use this parameter to perform additional configuration of your actions.
+- `action`: Specifies the action name to map the verb to the Resource controller method.
+- `protected` (optional): Specifies whether authentication is required to access the resource. If this parameter is not specified, then the verb requires authentication.
+- `context` (optional): An array of additional parameters that can be passed to the action. Use this parameter to perform additional configuration of your actions.
 
 In the following example, the plugin maps `GET`, `POST`, `DELETE` and `PATCH` to the controller actions created in step 4. All the verbs except `GET` require authentication. This means that unauthenticated users can read the resource but can not create, modify, or delete items.
 

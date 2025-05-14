@@ -45,9 +45,9 @@ To install the app on a dedicated web server, follow these steps:
 
 where:
 
-* `<Glue_IP>`—the IP of the Glue REST API server.
-* `glue.de.project-name.local`—the local hostname of the Glue REST AP server.
-* `react.local`—the local hostname of the B2C API React Example application.
+- `<Glue_IP>`—the IP of the Glue REST API server.
+- `glue.de.project-name.local`—the local hostname of the Glue REST AP server.
+- `react.local`—the local hostname of the B2C API React Example application.
 
 4. Clone the B2C API React Example repository:
 

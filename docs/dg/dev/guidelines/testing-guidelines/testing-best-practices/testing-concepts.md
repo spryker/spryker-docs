@@ -58,16 +58,16 @@ Generally, errors happen from the following reasons:
 
 We have compiled a short checklist to use while creating the specification and during the implementation of a feature:
 
-* Did I completely understand what the feature does?
-* How should the user use the feature?
-* What are the benefits of having this feature?
-* Did I consider misuse of this feature?
-* Can this feature compromise the security or performance of the system?
-* Did I think about all implementation aspects: how it matches the architecture, does it require any global changes in code or configuration?
-* Did I document my code well? Does anyone require additional information about my changes?
-* Did I clearly describe any discrepancies between the specification and my implementation?
-* Did I inform the testers of specific areas which need to be double checked?
-* Do the testers need any kind of help to perform the tests (for example, scripts for generating specific data)?
+- Did I completely understand what the feature does?
+- How should the user use the feature?
+- What are the benefits of having this feature?
+- Did I consider misuse of this feature?
+- Can this feature compromise the security or performance of the system?
+- Did I think about all implementation aspects: how it matches the architecture, does it require any global changes in code or configuration?
+- Did I document my code well? Does anyone require additional information about my changes?
+- Did I clearly describe any discrepancies between the specification and my implementation?
+- Did I inform the testers of specific areas which need to be double checked?
+- Do the testers need any kind of help to perform the tests (for example, scripts for generating specific data)?
 
 ## High-quality software
 
@@ -108,12 +108,12 @@ If you do not have a team or a person dedicated for testing, from the first days
 
 Here are the steps you should follow:
 
-* As a feature is introduced and all details are formulated, before ending the planning and implementation process, state the acceptance criteria as a list of use cases (or scenarios). If you know how many acceptance scenarios you have you will be better equipped to assess how long the check will take.
-* Prioritize test scenarios. Sometimes you will not have enough time to run a full regression test scope for all existing features. In this case, knowing which are the highest priority scenarios helps you to concentrate on them to pass.
-* Using TDD for implementation can be a good practice. First, write the acceptance tests and then implement until tests are all passed.
-* Also make sure to manually test the feature at least once.
-* Testing each module as soon as it's ready. It is best not to wait until the project is more or less done. Instead, adopt the approach that if a feature is ready - test it. Use manual tests and follow your test scenarios to make the process fast and effective.
-* By our estimate, testing a module such as the Product Category module with some positive and some negative cases takes 30 - 40 minutes for an experienced tester. An inexperienced person would probably take an hour. Use these estimates to help calculate the time you need for testing in your plans. Planning projects with development time and test time together, helps to create a more realistic timeline. It will also help you to be able to predict your launch date a bit better as a well-tested project is likely to have less surprises towards the end.
+- As a feature is introduced and all details are formulated, before ending the planning and implementation process, state the acceptance criteria as a list of use cases (or scenarios). If you know how many acceptance scenarios you have you will be better equipped to assess how long the check will take.
+- Prioritize test scenarios. Sometimes you will not have enough time to run a full regression test scope for all existing features. In this case, knowing which are the highest priority scenarios helps you to concentrate on them to pass.
+- Using TDD for implementation can be a good practice. First, write the acceptance tests and then implement until tests are all passed.
+- Also make sure to manually test the feature at least once.
+- Testing each module as soon as it's ready. It is best not to wait until the project is more or less done. Instead, adopt the approach that if a feature is ready - test it. Use manual tests and follow your test scenarios to make the process fast and effective.
+- By our estimate, testing a module such as the Product Category module with some positive and some negative cases takes 30 - 40 minutes for an experienced tester. An inexperienced person would probably take an hour. Use these estimates to help calculate the time you need for testing in your plans. Planning projects with development time and test time together, helps to create a more realistic timeline. It will also help you to be able to predict your launch date a bit better as a well-tested project is likely to have less surprises towards the end.
 
 The following diagram illustrates what a test process looks like without a QA team.
 ![Testing concepts without QA](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Guidelines/Testing+Concepts/testing-concepts-noqa.png)
@@ -148,7 +148,7 @@ Another important moment - testware such as test cases or manuals should always 
 
 Real example:
 
-* If the procedure or accessing the DB has changed, like passwords or names and nobody except the developer knows about it, it can also cause time loss and introduce frustration when a person unaware of these changes tries to test with old steps and has no clue whether the current problems are local or something was secretly changed. Yes, everybody can ask if something doesn't work as before, but this is human psychology to try figure things out themselves before asking others.
+- If the procedure or accessing the DB has changed, like passwords or names and nobody except the developer knows about it, it can also cause time loss and introduce frustration when a person unaware of these changes tries to test with old steps and has no clue whether the current problems are local or something was secretly changed. Yes, everybody can ask if something doesn't work as before, but this is human psychology to try figure things out themselves before asking others.
 
 Link tickets and documents with feature changes to the original features. Make sure that it's easy to find initial functionality and how it's connected to the new changes. Be sure that support documentation is also updated and does not stay in initial state without new changes.
 
@@ -172,17 +172,17 @@ Here is a sample of what the test should include:
 
 Positive cases:
 
-* Create something
-* Edit it
-* Activate/ deactivate it
-* Delete it
-* Run validation with allowed characters
+- Create something
+- Edit it
+- Activate/ deactivate it
+- Delete it
+- Run validation with allowed characters
 
 Negative cases:
 
-* Not allowed character validation
-* Create the same thing twice
-* Create an empty thing (edited)
+- Not allowed character validation
+- Create the same thing twice
+- Create an empty thing (edited)
 
 Remember to list the steps that were done during the test to remember what needs to be done to pass.
 
@@ -212,10 +212,10 @@ The mindset during testing is different than the mindset and view during develop
 
 A certain degree of independence often makes the tester more effective at finding defects and failures. We can define several levels from low to high:
 
-* Test by the author (developer)
-* Test by another developer not involved in implementing this feature
-* Test by internal tester or test team as people familiar with the software but having a mindset of a user rather than a developer
-* Test by a person from a different organization or company–for example, externally invited test team
+- Test by the author (developer)
+- Test by another developer not involved in implementing this feature
+- Test by internal tester or test team as people familiar with the software but having a mindset of a user rather than a developer
+- Test by a person from a different organization or company–for example, externally invited test team
 
 [*ISTQB Syllabus Released Version 2011*]
 

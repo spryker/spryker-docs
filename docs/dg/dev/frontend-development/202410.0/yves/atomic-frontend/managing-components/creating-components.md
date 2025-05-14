@@ -24,10 +24,10 @@ First of all, you need to create a folder on the file system where all componen
 
 Open the `new-component-counter` folder and create the following files:
 
-* `index.ts` - Webpack entry point;
-* `new-component-counter.scss` - styles;
-* `new-component-counter.ts` - Javascript code;
-* `new-component-counter.twig` - component template.
+- `index.ts` - Webpack entry point;
+- `new-component-counter.scss` - styles;
+- `new-component-counter.ts` - Javascript code;
+- `new-component-counter.twig` - component template.
 
 ## 2. Define a template
 
@@ -35,13 +35,13 @@ The first thing to do when creating a component is to define a template for it. 
 
 First, we need to define the inheritance of the component. A component can inherit from a model or another component. Since we are creating a new component, it can be inherited from the following models defined in Spryker Shop Application:
 
-* atoms, molecules and organisms extend model **component**:
+- atoms, molecules and organisms extend model **component**:
 
 ```twig
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
 ```
 
-* templates and views extend model **template**
+- templates and views extend model **template**
 
 ```twig
 {% raw %}{%{% endraw %} extends model('template') {% raw %}%}{% endraw %}
@@ -55,8 +55,8 @@ As we are creating a molecule, it must inherit the **component** model. For this
 
 After that, we need to define a configuration object for our new component. A configuration consists of the following:
 
-* **name** - specifies the component name. It is also used as the class name of the component.
-* **tag** (optional) - specifies the name of the DOM tag that will be used to render the component. It also defines the component Javascript class name (**jsName**) automatically.
+- **name** - specifies the component name. It is also used as the class name of the component.
+- **tag** (optional) - specifies the name of the DOM tag that will be used to render the component. It also defines the component Javascript class name (**jsName**) automatically.
 
 {% info_block infoBox %}
 
@@ -64,7 +64,7 @@ If the tag name is not defined, **div** is used by default.
 
 {% endinfo_block %}
 
-* **jsName** (optional) - explicitly specifies the Javascript class name (**.js-classname**) of the component.
+- **jsName** (optional) - explicitly specifies the Javascript class name (**.js-classname**) of the component.
 
 {% info_block warningBox "Separation of Logic from Styles" %}
 
@@ -222,9 +222,9 @@ export default class NewComponentCounter extends Component {
 
 After implementing the behavior, we also need to bind the Javascript class to the DOM. For this purpose, we need to use the **register** function of the Spryker Shop application. It accepts **2** arguments:
 
-* **name** - specifies the component name. This name will be associated with the component and can be used in Twig to insert the component in a template. Also, it will be used in the DOM as a tag name. Whenever a tag with the specified name occurs in the DOM, the Shop Application will load the component. It must be the same as the `data.tag` specified in the component Twig on step **2**.
+- **name** - specifies the component name. This name will be associated with the component and can be used in Twig to insert the component in a template. Also, it will be used in the DOM as a tag name. Whenever a tag with the specified name occurs in the DOM, the Shop Application will load the component. It must be the same as the `data.tag` specified in the component Twig on step **2**.
 
-* **importer** - must be a call of Webpack's **import** function to import Typescript code for the component.
+- **importer** - must be a call of Webpack's **import** function to import Typescript code for the component.
 
 The call must include a Webpack magic comment that specifies which type of import you want for the component, 'lazy' or 'eager'. For details, see [Dynamic Imports](https://webpack.js.org/guides/code-splitting/#dynamic-imports).
 
@@ -247,9 +247,9 @@ Our component is almost complete. The only thing left is to compile it. Execute 
 
 When done, you can include it into other components, views and templates.
 
-* Copy file `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/page-layout-main/page-layout-main.twig` to `src/Pyz/Yves/ShopUi/Theme/default/page-layout-main/page-layout-main.twig`. Doing so overrides the default main page on the project level.
+- Copy file `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/page-layout-main/page-layout-main.twig` to `src/Pyz/Yves/ShopUi/Theme/default/page-layout-main/page-layout-main.twig`. Doing so overrides the default main page on the project level.
 
-* Add the following code to the very beginning of the `<main>` block. It will include our new component and configure it to count **a** tags:
+- Add the following code to the very beginning of the `<main>` block. It will include our new component and configure it to count **a** tags:
 
 ```twig
 {% raw %}{%{% endraw %} include molecule('new-component-counter') with {

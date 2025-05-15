@@ -208,12 +208,14 @@ task :check_changed_files, [:file_list] do |t, args|
     else
       file.sub(/^docs\//, '_site/docs/').sub(/\.md$/, '.html')
     end
-  end.select { |f| File.exist?(f) }
+  end.select { |f| File.exist?(f) && File.file?(f) }  # Only select files, not directories
 
   if html_files.empty?
     puts "No valid files to check"
     next
   end
+
+  puts "Processing files: #{html_files.join(', ')}"
 
   # Create a temporary directory to store only the files we want to check
   require 'tmpdir'
@@ -223,15 +225,17 @@ task :check_changed_files, [:file_list] do |t, args|
     
     # Copy only the files we want to check and their direct dependencies
     html_files.each do |file|
-      # Create the target directory structure
-      target_file = File.join(temp_dir, file)
-      FileUtils.mkdir_p(File.dirname(target_file))
-      
-      # Copy the file
-      FileUtils.cp(file, target_file)
-      
-      # Find and copy direct dependencies (images, CSS, etc.)
-      if File.exist?(file)
+      begin
+        next unless File.file?(file)  # Skip if not a regular file
+        
+        # Create the target directory structure
+        target_file = File.join(temp_dir, file)
+        FileUtils.mkdir_p(File.dirname(target_file))
+        
+        # Copy the file
+        FileUtils.cp(file, target_file)
+        
+        # Find and copy direct dependencies (images, CSS, etc.)
         content = File.read(file)
         # Find all local references (href="..." and src="...")
         refs = content.scan(/(?:href|src)="([^"]+)"/).flatten
@@ -245,13 +249,19 @@ task :check_changed_files, [:file_list] do |t, args|
             File.expand_path(File.join(File.dirname(file), ref))
           end
           
-          # Copy the dependency if it exists
-          if File.exist?(dep_path)
+          # Copy the dependency if it exists and is a file
+          if File.exist?(dep_path) && File.file?(dep_path)
             target_dep = File.join(temp_dir, dep_path)
             FileUtils.mkdir_p(File.dirname(target_dep))
             FileUtils.cp(dep_path, target_dep)
           end
         end
+      rescue Errno::EISDIR
+        puts "Warning: Skipping directory #{file}"
+        next
+      rescue => e
+        puts "Warning: Error processing #{file}: #{e.message}"
+        next
       end
     end
 

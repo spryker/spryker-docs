@@ -59,7 +59,7 @@ As installment requests use additional type of requests called Calculation Reque
 | `TRANSACTION_CHANNEL_PRE_CHECK`    | A Payolution channel for handling pre-check requests, if using Pre-check                                       |          |
 | `TRANSACTION_CHANNEL_INSTALLMENT`  | A Payolution channel for handling installment requests except Pre-check and calculation                         | v        |
 | `CALCULATION_CHANNEL`              | A Payolution channel for handling calculation requests                                                           | v        |
-| `MIN_ORDER_GRAND_TOTAL_INSTALLMENT`| The minimum order grand total amount for installment payments (e.g., $2)                                        | v        |
-| `MAX_ORDER_GRAND_TOTAL_INSTALLMENT`| The maximum order grand total amount for installment payments (e.g., $5000)                                     | v        |
+| `MIN_ORDER_GRAND_TOTAL_INSTALLMENT`| The minimum order grand total amount for installment payments–for example, $2.                                        | v        |
+| `MAX_ORDER_GRAND_TOTAL_INSTALLMENT`| The maximum order grand total amount for installment payments–for example, $5000.                                     | v        |
 | `PAYOLUTION_BCC_EMAIL_ADDRESS`     | Payolution email address to send copies of payment details                                                      |          |
 

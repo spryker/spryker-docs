@@ -17,7 +17,7 @@ With the Marketplace Shipment feature, every merchant can define delivery price 
 ## Marketplace Shipment on the Storefront
 
 In the *Address* checkout step, buyers can define a common delivery address where all the shipments are to be delivered.
-Then, in the *Shipment* checkout step, buyers can see that the products are grouped by a merchant into different shipments  by default. For each shipment, they can select a shipping method and a delivery date (optional).
+Then, in the *Shipment* checkout step, buyers can see that the products are grouped by a merchant into different shipments  by default. For each shipment, they can select a shipping method and, optionally, a delivery date.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Shipment/shipment-to-single-address.png)
 

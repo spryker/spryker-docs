@@ -201,39 +201,57 @@ task :check_changed_files, [:file_list] do |t, args|
   # Split by spaces and clean up paths
   files = args[:file_list].split(/\s+/).map(&:strip).reject(&:empty?)
   
-  # Convert markdown file paths to their corresponding HTML paths in _site
-  site_files = files.map do |file|
+  # Convert markdown file paths to their HTML equivalents
+  html_files = files.map do |file|
     if file.start_with?('_includes/')
-      # Handle _includes files
-      file = file.sub(/^_includes\//, '').sub(/\.md$/, '.html')
-      "_site/_includes/#{file}"
+      file.sub(/^_includes\//, '_site/_includes/').sub(/\.md$/, '.html')
     else
-      # Handle docs files - convert .md to .html
-      file = file.sub(/^docs\//, '').sub(/\.md$/, '.html')
-      "_site/docs/#{file}"
+      file.sub(/^docs\//, '_site/docs/').sub(/\.md$/, '.html')
     end
   end
   
-  # Filter out non-existent files
-  existing_files = site_files.select do |file|
-    exists = File.exist?(file)
-    puts "Warning: File not found: #{file}" unless exists
-    exists
+  # Find all internal links in the modified files to create a dependency list
+  required_files = Set.new(html_files)
+  html_files.each do |file|
+    next unless File.exist?(file)
+    
+    content = File.read(file)
+    # Find all internal links (href="/docs/..." or href="/_includes/...")
+    internal_links = content.scan(/href="(\/(?:docs|_includes)\/[^"]+)"/).flatten
+    internal_links.each do |link|
+      # Convert link path to _site path
+      site_path = "_site#{link}"
+      # Add HTML extension if missing
+      site_path = "#{site_path}.html" unless site_path.end_with?('.html')
+      required_files.add(site_path) if File.exist?(site_path)
+    end
   end
   
-  if existing_files.empty?
-    puts "No files to check - all specified files were not found in _site directory"
-    next # Use 'next' instead of 'return' in Rake tasks
-  end
-  
-  puts "Checking files: #{existing_files.join(', ')}"
+  puts "Will check the following files: #{required_files.to_a.join(', ')}"
   
   options = commonOptions.dup
-  options[:files] = existing_files
+  options[:files] = required_files.to_a
   
-  run_htmlproofer_with_retry("./_site", options)
-  
-  puts "Link validation completed for changed files"
+  begin
+    run_htmlproofer_with_retry("./_site", options)
+    puts "Link validation completed successfully"
+  rescue StandardError => e
+    # Only show errors from our originally modified files
+    if e.is_a?(RuntimeError) && e.message.include?("HTML-Proofer found")
+      error_lines = e.message.split("\n")
+      relevant_errors = error_lines.select do |line|
+        html_files.any? { |file| line.include?(file) }
+      end
+      
+      if relevant_errors.any?
+        puts "\nErrors in changed files:"
+        puts relevant_errors.join("\n")
+        raise "HTML-Proofer found errors in changed files"
+      end
+    else
+      raise e
+    end
+  end
 end
 
 task :check_all do

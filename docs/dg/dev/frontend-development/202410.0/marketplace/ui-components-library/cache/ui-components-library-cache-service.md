@@ -38,7 +38,7 @@ Cache Service uses Cache Strategy to define caching algorithm (static, cache fir
 >
 </spy-select>
 ```
-<!-- vale on -->
+<!-- vale off -->
 
 
 ## Cache Storage Factory Service

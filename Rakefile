@@ -208,48 +208,68 @@ task :check_changed_files, [:file_list] do |t, args|
     else
       file.sub(/^docs\//, '_site/docs/').sub(/\.md$/, '.html')
     end
+  end.select { |f| File.exist?(f) }
+
+  if html_files.empty?
+    puts "No valid files to check"
+    next
   end
-  
-  # Find all internal links in the modified files to create a dependency list
-  required_files = Set.new(html_files)
-  html_files.each do |file|
-    next unless File.exist?(file)
+
+  # Create a temporary directory to store only the files we want to check
+  require 'tmpdir'
+  Dir.mktmpdir do |temp_dir|
+    # Create necessary subdirectories
+    FileUtils.mkdir_p(File.join(temp_dir, '_site'))
     
-    content = File.read(file)
-    # Find all internal links (href="/docs/..." or href="/_includes/...")
-    internal_links = content.scan(/href="(\/(?:docs|_includes)\/[^"]+)"/).flatten
-    internal_links.each do |link|
-      # Convert link path to _site path
-      site_path = "_site#{link}"
-      # Add HTML extension if missing
-      site_path = "#{site_path}.html" unless site_path.end_with?('.html')
-      required_files.add(site_path) if File.exist?(site_path)
-    end
-  end
-  
-  puts "Will check the following files: #{required_files.to_a.join(', ')}"
-  
-  options = commonOptions.dup
-  options[:files] = required_files.to_a
-  
-  begin
-    run_htmlproofer_with_retry("./_site", options)
-    puts "Link validation completed successfully"
-  rescue StandardError => e
-    # Only show errors from our originally modified files
-    if e.is_a?(RuntimeError) && e.message.include?("HTML-Proofer found")
-      error_lines = e.message.split("\n")
-      relevant_errors = error_lines.select do |line|
-        html_files.any? { |file| line.include?(file) }
-      end
+    # Copy only the files we want to check and their direct dependencies
+    html_files.each do |file|
+      # Create the target directory structure
+      target_file = File.join(temp_dir, file)
+      FileUtils.mkdir_p(File.dirname(target_file))
       
-      if relevant_errors.any?
-        puts "\nErrors in changed files:"
-        puts relevant_errors.join("\n")
-        raise "HTML-Proofer found errors in changed files"
+      # Copy the file
+      FileUtils.cp(file, target_file)
+      
+      # Find and copy direct dependencies (images, CSS, etc.)
+      if File.exist?(file)
+        content = File.read(file)
+        # Find all local references (href="..." and src="...")
+        refs = content.scan(/(?:href|src)="([^"]+)"/).flatten
+        refs.each do |ref|
+          next if ref.start_with?('http://', 'https://', '//', 'mailto:', 'tel:')
+          
+          # Convert relative paths to absolute
+          dep_path = if ref.start_with?('/')
+            "_site#{ref}"
+          else
+            File.expand_path(File.join(File.dirname(file), ref))
+          end
+          
+          # Copy the dependency if it exists
+          if File.exist?(dep_path)
+            target_dep = File.join(temp_dir, dep_path)
+            FileUtils.mkdir_p(File.dirname(target_dep))
+            FileUtils.cp(dep_path, target_dep)
+          end
+        end
       end
-    else
-      raise e
+    end
+
+    # Run HTMLProofer on the temporary directory
+    options = commonOptions.dup
+    options[:disable_external] = true  # Only check internal links since we have a limited set of files
+    
+    begin
+      run_htmlproofer_with_retry(temp_dir, options)
+      puts "Link validation completed successfully"
+    rescue StandardError => e
+      if e.is_a?(RuntimeError) && e.message.include?("HTML-Proofer found")
+        puts "\nErrors found in changed files:"
+        puts e.message
+        raise "HTML-Proofer found errors in changed files"
+      else
+        raise e
+      end
     end
   end
 end

@@ -32,7 +32,8 @@ The following modules provide the profiler functionality:
 
 ## Installation
 
-Install _WebProfilerWidget_ and the extension module:
+Install *WebProfilerWidget* and the extension module:
+
 ```bash
 composer require spryker/web-profiler --dev
 ```

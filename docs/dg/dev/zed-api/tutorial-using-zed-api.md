@@ -23,8 +23,8 @@ Spryker shops expose module business logic through a simple API in Zed. The API 
 
 This tutorial describes how to the following:
 
-* Create a simple client library to authorize and talk to Zed through API.
-* Extract the controller endpoint from Zed authorization or provide another authorization mechanism.
+- Create a simple client library to authorize and talk to Zed through API.
+- Extract the controller endpoint from Zed authorization or provide another authorization mechanism.
 
 ## Preparation
 
@@ -40,11 +40,11 @@ Reflection is used here for educational purposes, blindly exposing internal code
 
 We recommend recapping the following topics before starting the challenge:
 
-* [PHP Reflection](http://php.net/manual/en/book.reflection.php)
-* [Facades](/docs/dg/dev/backend-development/zed/business-layer/facade/facade.html)
-* [Transfer objects](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html)
-* ["Tutorial: Add a new module](/docs/dg/dev/backend-development/extend-spryker/create-modules.html)
-* [Controllers in Zed](/docs/dg/dev/backend-development/zed/communication-layer/communication-layer.html)
+- [PHP Reflection](http://php.net/manual/en/book.reflection.php)
+- [Facades](/docs/dg/dev/backend-development/zed/business-layer/facade/facade.html)
+- [Transfer objects](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html)
+- ["Tutorial: Add a new module](/docs/dg/dev/backend-development/extend-spryker/create-modules.html)
+- [Controllers in Zed](/docs/dg/dev/backend-development/zed/communication-layer/communication-layer.html)
 
 {% info_block infoBox %}
 

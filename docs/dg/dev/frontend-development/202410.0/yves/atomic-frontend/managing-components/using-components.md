@@ -28,8 +28,8 @@ Before adding a component, you need to locate it. There are 3 helper functions p
 
 The functions are implemented similarly and have the same arguments:
 
-* **name**: Specifies the component name,
-* Optional: **module**: Specifies the name of the Spryker module where the component is implemented. Use this argument if you have two or more components with the same name and at the same level in different modules. If you don't pass this argument, _ShopUi_ is used by default.
+- **name**: Specifies the component name,
+- Optional: **module**: Specifies the name of the Spryker module where the component is implemented. Use this argument if you have two or more components with the same name and at the same level in different modules. If you don't pass this argument, *ShopUi* is used by default.
 
 The function returns the fully qualified component name that can be used in Twig, for example:
 
@@ -56,10 +56,10 @@ You must always pass *required* properties; otherwise, the component you are inc
 
 The most common attributes to include are:
 
-* `data`: Specifies the data passed to the component;
-* Optional: `attributes`: Specifies the attributes to be passed;
-* Optional: `class`: Used to inject custom class names into the component tag,
-* Optional: `modifiers`: Used to enable component modifiers.
+- `data`: Specifies the data passed to the component;
+- Optional: `attributes`: Specifies the attributes to be passed;
+- Optional: `class`: Used to inject custom class names into the component tag,
+- Optional: `modifiers`: Used to enable component modifiers.
 
 {% info_block infoBox %}
 

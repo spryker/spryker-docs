@@ -75,11 +75,11 @@ To replace Silex, follow the instructions below,
 
 Update the following modules using Composer:
 
-* `spryker/application` >= `3.13.2`
-* `spryker/container` >= `1.1.0`
-* `spryker/silex` >= `2.1.0`
-* `spryker/symfony` >= `3.2.2`
-* `spryker-shop/shop-application` >= `1.4.1`
+- `spryker/application` >= `3.13.2`
+- `spryker/container` >= `1.1.0`
+- `spryker/silex` >= `2.1.0`
+- `spryker/symfony` >= `3.2.2`
+- `spryker-shop/shop-application` >= `1.4.1`
 
 The versions above are the minimum requirements. We recommend updating all the modules to the latest versions.
 

@@ -61,6 +61,7 @@ The new Variants section in Merchant Portal streamlines the management of concre
 
 
 ### Business benefits
+
 - Reduces the complexity of managing concrete products
 - Improves operational efficiency
 
@@ -215,6 +216,7 @@ Dynamic Multistore is an enhanced version of the multi-store capability. This fe
 ![dynamic-multistore](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/managing-stores.png)
 
 ### Business benefits
+
 - Empowers you to make changes faster.
 - Provides flexibility in managing stores.
 - Reduces complexity.
@@ -235,6 +237,7 @@ Product comparison enables customers to easily compare products on mobile and de
 ![compare-products-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/feature-overviews/product-comparison-feature-overview.md/compare-products-page.png)
 
 ### Business benefits
+
 - Increases conversion rates and customer satisfaction
 - Reduces the likelihood of returns
 
@@ -322,6 +325,7 @@ Such attributes are displayed with all of their values across the platform, incl
 ![storefront-multi-value-attribute](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/storefront-multi-value-product-attribute.png)
 
 ### Business benefits
+
 - Customers get a complete picture of products by all values being presented per attribute.
 - Enhanced product filtering: Customers can search and filter products based on multiple attribute values and combinations, enabling them to find products faster and with specific requirements.
 - Efficient data management: Back Office users can organize complex products more efficiently.
@@ -340,6 +344,7 @@ Back Office users can now view all relevant merchant information at a glance wit
 ![view-merchant-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/view-merchant-page.png)
 
 ### Business benefits
+
 - Simplifies data review processes by consolidating key merchant information in a single, non-editable page.
 - Eliminates accidental changes when viewing merchant information.
 
@@ -360,6 +365,7 @@ Back Office is now more accessible to everyone, enabling all types of users to i
 Back Office areas and actions are now predefined. When managing access of user roles, you can select areas and actions instead of manually entering them.
 
 ### Business benefits
+
 - Simplifies the management of user access.
 - Reduces the risk of errors when providing and restricting access.
 
@@ -386,6 +392,7 @@ Publish and Sync (P\&S) process has been improved as follows:
 - Prevent performance issues and system overload by proactively addressing potential bottlenecks.
 
 ### Documentation
+
 - [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html)
 - [Queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html)
 

@@ -44,6 +44,7 @@ The In order to integrate installment payment, two simple steps are needed: sett
 ### Setting Payolution Installment Configuration
 
 As installment requests use additional type of requests called Calculation Requests, two groups of configuration are defined: transaction configuration for handling the basic requests (pre-authorization, re-authorization, etc), and calculation configuration for handling calculation requests. The configuration to integrate installment payments using Payolution is:
+
 | Key                                 | Description                                                                                                     | Required |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------------|----------|
 | `TRANSACTION_GATEWAY_URL`          | The gateway URL to connect with Payolution services                                                             | v        |

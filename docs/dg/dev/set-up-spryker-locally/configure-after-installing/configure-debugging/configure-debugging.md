@@ -214,6 +214,7 @@ Issue: Receiving no connection in PhpStorm or similar
 
 In rare cases, docker containers running in the debug mode stop XDebug connections after waking computer from the sleep mode.
 So if you don't get a banner "Debug session was finished without being paused", restart the containers:
+
 ```bash
 docker/sdk stop && docker/sdk run -x
 ```

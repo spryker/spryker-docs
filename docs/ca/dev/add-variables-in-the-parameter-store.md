@@ -29,7 +29,7 @@ For complex or system-critical changes to variables, we recommend consulting wit
 
 There are two types of environment variables: customer-owned and Spryker-owned.
 
-Spryker-owned variables are managed and can be updated only with the help of Spryker Cloud or support teams. To request a variable change, in [Support Portal](https://support.spryker.com/), create the following request: Infrastructure Change Request > Change to existing parameter store variable.
+Spryker-owned variables are managed and can be updated only with the help of Spryker Cloud or support teams. To request a variable change, in [Support Portal](https://support.spryker.testing.com/), create the following request: Infrastructure Change Request > Change to existing parameter store variable.
 
 Customer-owned variables are created and managed by you or implementation partner. You have full control over these variables and can add or edit them according to your needs. Changes to these variables don't automatically propagate into a running environment. To apply changes made to your environment variables, you need to run an ECS-updater-* pipeline to bring them to the containers or run a full redeploy. You can do this whole process without creating support tickets.
 

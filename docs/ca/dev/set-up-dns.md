@@ -3,6 +3,7 @@ title: Set up DNS
 description: Set up DNS for your Spryker Cloud Commerce OS application by adding CNAME or A records, ensuring proper domain routing and TLS certificate configuration.
 template: concept-topic-template
 last_updated: Dec 18, 2023
+test: test
 ---
 
 You normally add a CNAME record in your DNS Management for the domains you want to use for your application. This CNAME corresponds to the DNS name of the load balancer of your environment to make your application accessible to the outside world. You can get the load balancer information from our support team. Generally, the DNS setup has these steps:
@@ -23,5 +24,8 @@ To use a root domain for your application (for example, spryker.com), use an IP 
 {% info_block infoBox "Info" %}
 
 We do not normally support full delegation of your DNS to us and, therefore, do not suggest that you change your domain's NS records to ours.
+
+test-test
+    test
 
 {% endinfo_block %}

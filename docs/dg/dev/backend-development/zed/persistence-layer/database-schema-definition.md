@@ -61,7 +61,7 @@ When you need to use a composed name for a field, you define it in your table. F
 
 ## Migrations
 
-To apply a change in the DB schema, run the following command:
+Apply a change in the DB schema:
 
 ```php
 vendor/bin/console propel:install

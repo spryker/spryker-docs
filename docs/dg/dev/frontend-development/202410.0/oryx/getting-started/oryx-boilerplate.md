@@ -49,6 +49,8 @@ When you create a project in Oryx, there is a small amount of boilerplate code b
 
 The boilerplate contains the following files, with the server side rendering (SSR) files being optional.
 
+<!-- vale on -->
+
 ```
 oryx-app/
 ├── src
@@ -59,6 +61,8 @@ oryx-app/
 │   ├──render.ts
 │   └──server.ts
 ```
+
+<!-- vale off -->
 
 The following is a breakdown of the different bits of the boilerplate code.
 

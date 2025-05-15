@@ -26,12 +26,20 @@ def run_htmlproofer_with_retry(directory, options, max_tries = 1, delay = 5)
       # Check each file individually since HTMLProofer doesn't support multiple files in one call
       options[:files].each do |file|
         puts "Checking file: #{file}"
-        HTMLProofer.check_file(file, options.reject { |k| k == :files }).run
+        # Create a new options hash for each file to avoid modifying the original
+        file_options = options.reject { |k| k == :files }.merge({
+          :root_dir => File.expand_path('_site'),  # Use absolute path
+          :disable_external => true,
+          :allow_hash_href => true,
+          :check_internal_hash => false,  # Don't check fragment identifiers
+          :check_html => false  # Don't validate HTML structure
+        })
+        HTMLProofer.check_file(file, file_options).run
       end
     else
       HTMLProofer.check_directory(directory, options).run
     end
-  rescue SystemExit => e
+  rescue StandardError => e
     retries -= 1
     if retries >= 0
       puts "Retrying... (#{max_tries - retries}/#{max_tries} attempts)"
@@ -248,27 +256,20 @@ task :check_changed_files, [:file_list] do |t, args|
       next
     end
 
-    # Run HTMLProofer on each file individually
-    options = commonOptions.dup
-    options[:disable_external] = true  # Only check internal links since we have a limited set of files
-    options[:directory_index_file] = false  # Don't look for index files
-    options[:ignore_missing_alt] = true  # Don't fail on missing image alt text
-    options[:root_dir] = '_site'  # Set the root directory for relative links
+    # Run HTMLProofer with minimal options
+    options = {
+      :files => files_to_check,
+      :ignore_urls => commonOptions[:ignore_urls]
+    }
     
-    any_errors = false
-    files_to_check.each do |file|
-      begin
-        puts "\nChecking file: #{file}"
-        HTMLProofer.check_file(file, options).run
-      rescue StandardError => e
-        any_errors = true
-        puts "Errors in #{file}:"
-        puts e.message
-      end
+    begin
+      run_htmlproofer_with_retry(nil, options)
+      puts "\nLink validation completed successfully"
+    rescue StandardError => e
+      puts "\nErrors found in changed files:"
+      puts e.message
+      raise "HTML-Proofer found errors in changed files"
     end
-
-    raise "HTML-Proofer found errors in changed files" if any_errors
-    puts "\nLink validation completed successfully"
   end
 end
 

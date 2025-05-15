@@ -161,17 +161,16 @@ To avoid synchronization issues, do not push any changes to the CodeCommit repos
 {% endinfo_block %}
 
 ### Prerequisites
-Prepare for configuration:
 
-1. Ensure that your GitLab account has *Admin* permissions in the code repository.
+1. Make sure your GitLab account has *Admin* permissions in the code repository.
 2. Request the following details via [support](https://spryker.force.com/support/s/):
     * CodeCommit repository URL
     * Username and password for HTTPS authorization in CodeCommit repository
 
+A dedicated user will be created for this task. The user will only have the permissions to connect the repository.
 
-### GitLab mirroring
 
-To configure GitLab mirroring:
+### Configure GitLab mirroring
 
 1. In the GitLab account, go to the code repository.
 2. Select **Settings** > **Repository**.

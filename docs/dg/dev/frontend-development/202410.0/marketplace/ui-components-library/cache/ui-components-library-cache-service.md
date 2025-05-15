@@ -23,7 +23,6 @@ This lets backend systems use caching without changing the front-end at all (ex.
 Cache Service uses Cache Strategy to define caching algorithm (static, cache first, freshness first).
 
 <!-- vale on -->
-
 ```html
 <spy-select
     [datasource]="{
@@ -39,7 +38,6 @@ Cache Service uses Cache Strategy to define caching algorithm (static, cache fir
 >
 </spy-select>
 ```
-
 <!-- vale on -->
 
 

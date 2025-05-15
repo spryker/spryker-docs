@@ -364,7 +364,7 @@ For detailed information about the modules that provide the API functionality an
 ---
 `GET` **/picking-lists/*{% raw %}{{picklist_id}}{% endraw %}***
 
----  
+---
 
 
 | PATH PARAMETER | DESCRIPTION |

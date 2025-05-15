@@ -17,9 +17,10 @@ For detailed information about the modules that provide the API functionality an
 
 ## Start picking of a picklist
 
-***
+---
 `POST` **/picking-lists/*{% raw %}{{picklist_id}}{% endraw %}*/start-picking**
-***  
+
+---
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |

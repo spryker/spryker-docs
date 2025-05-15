@@ -225,9 +225,9 @@ The following example triggers an event when the value of any column is less tha
 <parameter name="spy_mymodule_all" column="*" value="10" operator="<="/>
 ```
 
-After making changes to your Propel schema, run the following command:
+Initializes the Propel ORM database layer:
 
-```
+```bash
 console propel:install
 ```
 

@@ -44,7 +44,7 @@ This updates PHPUnit to version 11.4.0 and the specified Codeception packages to
 
 {% info_block warningBox "Resolve dependency conflicts" %}
 
-If errors are returned during the installation, run the following command to identify conflicting dependencies:
+If errors are returned during the installation, identify conflicting dependencies:
 
 ```bash
 composer why-not phpunit/phpunit:11.4.0

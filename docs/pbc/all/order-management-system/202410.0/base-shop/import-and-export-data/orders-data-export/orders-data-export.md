@@ -188,7 +188,7 @@ actions:
 
 ## Creating the export files
 
-To generate data export files, run the following command:
+Generate data export files:
 
 ```bash
 console data:export --config {{CONFIG_FILE_NAME}}

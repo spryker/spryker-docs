@@ -81,7 +81,7 @@ To verify that `BuildValidationCacheConsole` is activated, make sure that the fo
 
 ### Generate Validation Cache
 
-Run the following command to generate the validation cache:
+Generate the validation cache:
 
 ```bash
 console glue:rest:build-request-validation-cache

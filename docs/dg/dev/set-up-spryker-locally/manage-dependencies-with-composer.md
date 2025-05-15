@@ -96,7 +96,7 @@ Make sure every minor or patch release is applied before upgrading to a major re
 
 <a name="composer-update"></a>
 
-To update all the modules, run the following command:
+Update all the modules:
 
 ```bash
 composer update "spryker/*"

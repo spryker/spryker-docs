@@ -289,10 +289,10 @@ When defining a component template with Twig, you need to use the following defa
 
 **Attributes:**
 
-- `name` (required). It specifies the component name. This name is also used as the main class name for the component; therefore, the HTML element and modifiers have this name as the base.
-- `jsName` (optional): It is a Javascript name of the component. By convention, whenever Javascript behavior is added to a component, the DOM addressing for elements must be performed using dedicated classnames starting with the `-js` prefix. This prevents confusion in who-does-what: a classname starting with `js-` has no style attached to it, but only Javascript behaviour. On the other hand, any classname that does not start with `js-` is a pure style. If `jsName` is not defined explicitly, it's created automatically by prefing `js-` to the component name.
-- `tag` (optional). It specifies the HTML tag name for the component. Every component is defined in the DOM as an HTML class with its dedicated tag name. Therefore, a tag name must be specified. You can use either a standard HTML5 tag name (for example, `p` or `td`) or have a custom element tag name in order to attach Javascript behavior. To create a component with custom behavior defined in Javascript, Web Component specification, specify a custom tag name. If tag name is not specified, `div`is used by default.
-- `data`. It is the variable defining the data contract for the component. This variable is used the data contract for the component. The contract consists of the attributes required for the component to function properly. The attributes provided by this variable can be either required or optional. Required attributes must always be defined whenever a component is used, while optional ones can be left undefined. Nevertheless, by convention, attributes cannot have their value undefined. For this reason, if you define an optional attribute in your contract, you must set a default value for it. The default value is used if an attribute value is not set explicitly or by context.
+  * `name`: It specifies the component name. This name is also used as the main class name for the component; therefore, the HTML element and modifiers have this name as the base.
+  * Optional: `jsName`: It is a Javascript name of the component. By convention, whenever Javascript behavior is added to a component, the DOM addressing for elements must be performed using dedicated classnames starting with the `-js` prefix. This prevents confusion in who-does-what: a classname starting with `js-` has no style attached to it, but only Javascript behaviour. On the other hand, any classname that does not start with `js-` is a pure style. If `jsName` is not defined explicitly, it's created automatically by prefing `js-` to the component name.
+  * Optional: `tag`. It specifies the HTML tag name for the component. Every component is defined in the DOM as an HTML class with its dedicated tag name. Therefore, a tag name must be specified. You can use either a standard HTML5 tag name (for example, `p` or `td`) or have a custom element tag name in order to attach Javascript behavior. To create a component with custom behavior defined in Javascript, Web Component specification, specify a custom tag name. If tag name is not specified, `div`is used by default.
+  * `data`. It is the variable defining the data contract for the component. This variable is used the data contract for the component. The contract consists of the attributes required for the component to function properly. The attributes provided by this variable can be either required or optional. Required attributes must always be defined whenever a component is used, while optional ones can be left undefined. Nevertheless, by convention, attributes cannot have their value undefined. For this reason, if you define an optional attribute in your contract, you must set a default value for it. The default value is used if an attribute value is not set explicitly or by context.
 
 Whenever possible, use primitive types—for example, strings or numbers. Avoid complex objects as a change in the object might lead to a broken component outside the contract itself.
 
@@ -341,47 +341,47 @@ It returns a string in the following format: `@ShopUi/models/modelName.twig`.
 
 The string is used internally to resolve the model location within the `ShopUi` module.
 
-`$modelName` (required): model name.
+`$modelName`: model name.
 
 **`function atom($componentName: string, $componentModule: string = "ShopUi"): string`**
 
 The function is used to resolve atom paths. It returns a string in the following format: `@componentModule/components/atoms/componentName/componentName.twig`.
 
 The string is used internally to resolve the component location within the provided module.
-- `$componentName` (required): component name.
-- `$componentModule` (optional): Spryker module in which the component is located. If `$componentModule` is not specified, `ShopUi` is used.
+* `$componentName`: component name.
+* Optional: `$componentModule`: Spryker module in which the component is located. If `$componentModule` is not specified, `ShopUi` is used.
 
 **`function molecule($componentName: string, $componentModule: string = "ShopUi"): string`**
 
 The function is used to resolve molecule paths. It returns a string in the following format: `@componentModule/components/molecules/componentName/componentName.twig`.
 
 The string is used internally to resolve the component location within the provided module.
-- `$componentName` (required): component name.
-- `$componentModule` (optional): Spryker module in which the component is located. If `$componentModule` is not specified, `ShopUi` is used.
+* `$componentName`: component name.
+* Optional: `$componentModule`: Spryker module in which the component is located. If `$componentModule` is not specified, `ShopUi` is used.
 
 **`function organism($componentName: string, $componentModule: string = "ShopUi"): string`**
 
 The function is used to resolve organism paths. It returns a string in the following format: `@componentModule/components/organisms/componentName/componentName.twig`.
 
 The string is used internally to resolve the component location within the provided module.
-- `$componentName` (required): component name.
-- `$componentModule` (optional): the Spryker module in which the component is located. If `$componentModule` is not specified, `ShopUi` is used.
+* `$componentName`: component name.
+* Optional: `$componentModule`: the Spryker module in which the component is located. If `$componentModule` is not specified, `ShopUi` is used.
 
 **`function template($templateName: string, $templateModule: string = "ShopUi"): string`**
 
 The function is used to resolve template paths. It returns a string in the following format: `@templateModule/templates/templateName/templateModule.twig`.
 
 The string is used internally to resolve the component location within the provided module.
-- `$templateName` - template name (required)
-- `$templateModule` - Spryker module in which the template is located (optional). If `$templateModule` is not specified, `ShopUi` is used.
+* `$templateName` - template name
+* Optional: `$templateModule` - Spryker module in which the template is located. If `$templateModule` is not specified, `ShopUi` is used.
 
 **`function view($viewName: string, $viewModule: string = "ShopUi"): string`**
 
 The function is used to resolve view paths. It returns a string in the following format: `@viewModule/views/viewName/viewName`.
 
 The string is used internally to resolve the component location within the provided module.
-- `$viewName` (required): view name.
-- `$viewModule` (optional): Spryker module in which the view is located. If `$viewModule` is not specified, `ShopUi` is used.
+* `$viewName`: view name.
+* Optional: `$viewModule: Spryker module in which the view is located. If `$viewModule` is not specified, `ShopUi` is used.
 
 **`function publicPath($relativePath: string): string`**
 
@@ -389,7 +389,7 @@ The function is used to provide a safe way to access the public folder where com
 
 The string is used internally to resolve the component location within the provided module.
 
-`$relativePath` (required): asset relative path.
+`$relativePath`: asset relative path.
 
 **`function qa($qaValues: string[] = []): string`**
 

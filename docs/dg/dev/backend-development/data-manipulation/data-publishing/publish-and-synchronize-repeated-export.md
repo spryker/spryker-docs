@@ -35,7 +35,7 @@ Automatic execution of the [Publish & Synchronize process](/docs/dg/dev/backend
 
 In some cases, you might want to re-export data into Redis and Elasticsearch. For example, if Redis has been flushed and the data in Redis and/or Elasticsearch is lost.
 
-To re-export data, run the following command:
+Reexport data:
 
 ```bash
 vendor/bin/console sync:data
@@ -65,7 +65,7 @@ To trigger data re-sync for a resource, there must be a corresponding sync plugi
 
 You can regenerate published data from scratch. For example, something went wrong during a product import and you want to re-publish the data. In other words, you need to update `Storage` and `Search` tables and sync the data in Redis and Elasticsearch.
 
-To regenerate published data, run the following command:
+Regenerate published data:
 
 ```bash
 vendor/bin/console publish:trigger-events

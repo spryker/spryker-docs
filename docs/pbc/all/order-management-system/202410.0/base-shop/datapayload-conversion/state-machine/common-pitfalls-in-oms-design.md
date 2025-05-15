@@ -188,8 +188,7 @@ Running this code inside a DB transaction make the lock entries inaccessible. Th
 **Solution:** OMS processes are cached by default. If `OmsConstants::ENABLE_PROCESS_CACHE` is not set to false in configuration files, you need to regenerate the cache every time you update OMS configuration.
 
 
-To regenerate the cache, run the following command:
-
+Regenerate cache:
 ```bash
 vendor/bin/console oms:process-cache:warm-up
 ```

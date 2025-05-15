@@ -55,8 +55,8 @@ As we are creating a molecule, it must inherit the **component** model. For this
 
 After that, we need to define a configuration object for our new component. A configuration consists of the following:
 
-- **name** - specifies the component name. It is also used as the class name of the component.
-- **tag** (optional) - specifies the name of the DOM tag that will be used to render the component. It also defines the component Javascript class name (**jsName**) automatically.
+* **name** - specifies the component name. It is also used as the class name of the component.
+* Optional: **tag** - specifies the name of the DOM tag that will be used to render the component. It also defines the component Javascript class name (**jsName**) automatically.
 
 {% info_block infoBox %}
 
@@ -64,7 +64,7 @@ If the tag name is not defined, **div** is used by default.
 
 {% endinfo_block %}
 
-- **jsName** (optional) - explicitly specifies the Javascript class name (**.js-classname**) of the component.
+* Optional: **jsName** - explicitly specifies the Javascript class name (**.js-classname**) of the component.
 
 {% info_block warningBox "Separation of Logic from Styles" %}
 

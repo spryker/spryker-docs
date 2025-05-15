@@ -60,7 +60,7 @@ Add the `spy_payment_direct_debit.schema.xml` file with the following content to
 
 ### 2. Perform a database migration and generate the query object
 
-Run the following command:
+Sets up the Propel ORM database:
 
 ```bash
 vendor/bin/console propel:install

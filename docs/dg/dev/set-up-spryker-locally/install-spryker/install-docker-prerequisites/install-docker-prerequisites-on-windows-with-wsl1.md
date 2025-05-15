@@ -182,7 +182,7 @@ sudo gem install docker-sync
 3. Set your Docker for Windows host as an ENV variable:
 
     a. Open the **Docker for Windows** settings and select **Expose daemon on tcp://localhost:2375 without TLS**.
-    b. Run the following command in your WSL shell:
+    b. Set the DOCKER_HOST variable in WSL shell:
 
     ```bash
     echo "export DOCKER_HOST=tcp://127.0.0.1:2375" >> ~/.bashrc

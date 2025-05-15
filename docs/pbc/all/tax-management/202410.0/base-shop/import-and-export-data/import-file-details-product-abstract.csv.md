@@ -27,8 +27,6 @@ This document describes how to import taxes for abstract products via  `product_
 
 ## Import the file
 
-Run the following command:
-
 ```bash
 data:import:product-abstract
 ```

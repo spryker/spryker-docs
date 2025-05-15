@@ -28,7 +28,8 @@ To ensure the seamless transition to the new image URLs, execute an SQL update q
 ## 4. Publish new URLs to Redis and Elasticsearch
 
 Trigger the publish events for images. This process ensures that the image URLs are republished not only in Redis and Elasticsearch but also in the `_search` and `_storage` tables.
-To trigger the publish events, run the following command:
+
+Trigger the publish events:
 
 ```bash
 console publisher:trigger-events -r product_abstract_image,product_concrete_image,configurable_bundle_template_image,category_image

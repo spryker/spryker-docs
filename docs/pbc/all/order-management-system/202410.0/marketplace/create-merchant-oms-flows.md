@@ -101,7 +101,7 @@ merchant_reference,merchant_oms_process_name
 MER000001,MainMerchantStateMachine
 ```
 
-and run the following command:
+Import merchant OMS data:
 
 ```bash
 data:import merchant-oms-process

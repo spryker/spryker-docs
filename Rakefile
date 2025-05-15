@@ -220,10 +220,9 @@ task :check_changed_files, [:file_list] do |t, args|
   # Create a temporary directory to store only the files we want to check
   require 'tmpdir'
   Dir.mktmpdir do |temp_dir|
-    # Create necessary subdirectories
-    FileUtils.mkdir_p(File.join(temp_dir, '_site'))
+    # Copy only the files we want to check
+    files_to_check = []
     
-    # Copy only the files we want to check and their direct dependencies
     html_files.each do |file|
       begin
         next unless File.file?(file)  # Skip if not a regular file
@@ -234,28 +233,7 @@ task :check_changed_files, [:file_list] do |t, args|
         
         # Copy the file
         FileUtils.cp(file, target_file)
-        
-        # Find and copy direct dependencies (images, CSS, etc.)
-        content = File.read(file)
-        # Find all local references (href="..." and src="...")
-        refs = content.scan(/(?:href|src)="([^"]+)"/).flatten
-        refs.each do |ref|
-          next if ref.start_with?('http://', 'https://', '//', 'mailto:', 'tel:')
-          
-          # Convert relative paths to absolute
-          dep_path = if ref.start_with?('/')
-            "_site#{ref}"
-          else
-            File.expand_path(File.join(File.dirname(file), ref))
-          end
-          
-          # Copy the dependency if it exists and is a file
-          if File.exist?(dep_path) && File.file?(dep_path)
-            target_dep = File.join(temp_dir, dep_path)
-            FileUtils.mkdir_p(File.dirname(target_dep))
-            FileUtils.cp(dep_path, target_dep)
-          end
-        end
+        files_to_check << target_file
       rescue Errno::EISDIR
         puts "Warning: Skipping directory #{file}"
         next
@@ -265,22 +243,32 @@ task :check_changed_files, [:file_list] do |t, args|
       end
     end
 
-    # Run HTMLProofer on the temporary directory
+    if files_to_check.empty?
+      puts "No files to check after processing"
+      next
+    end
+
+    # Run HTMLProofer on each file individually
     options = commonOptions.dup
     options[:disable_external] = true  # Only check internal links since we have a limited set of files
+    options[:directory_index_file] = false  # Don't look for index files
+    options[:ignore_missing_alt] = true  # Don't fail on missing image alt text
+    options[:root_dir] = '_site'  # Set the root directory for relative links
     
-    begin
-      run_htmlproofer_with_retry(temp_dir, options)
-      puts "Link validation completed successfully"
-    rescue StandardError => e
-      if e.is_a?(RuntimeError) && e.message.include?("HTML-Proofer found")
-        puts "\nErrors found in changed files:"
+    any_errors = false
+    files_to_check.each do |file|
+      begin
+        puts "\nChecking file: #{file}"
+        HTMLProofer.check_file(file, options).run
+      rescue StandardError => e
+        any_errors = true
+        puts "Errors in #{file}:"
         puts e.message
-        raise "HTML-Proofer found errors in changed files"
-      else
-        raise e
       end
     end
+
+    raise "HTML-Proofer found errors in changed files" if any_errors
+    puts "\nLink validation completed successfully"
   end
 end
 

@@ -9,9 +9,9 @@ Follow the steps below to install the Multiple Carts feature core.
 
 ### Prerequisites
 
-* Enable the database storage strategy in the Quote module.
+- Enable the database storage strategy in the Quote module.
 
-* Install the required features:
+- Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -288,6 +288,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Client/Quote/QuoteDependencyProvider.php**
@@ -648,6 +649,7 @@ multi_cart_widget.cart.updated.success,"Einkaufswagen wurde erfolgreich aktualis
 multi_cart_widget.cart.was-deleted-before,Dieser Warenkorb wurde bereits gelöscht,de_DE
 multi_cart_widget.cart.was-deleted-before,This cart was already deleted,en_US
 ```
+
 </details>
 
 2. Import data:

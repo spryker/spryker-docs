@@ -33,9 +33,9 @@ Spryker Shop Suite contains GLUE out of the box. If your project has the latest 
     composer require spryker/glue-application --update-with-dependencies
     ```
 
- 2. Add a Front Controller for GLUE:
-    * In the directory where your code is installed, locate a directory public and create a subdirectory Glue in it.
-    * Create a file index.php in the Glue directory with the following content:
+2. Add a Front Controller for GLUE:
+    - In the directory where your code is installed, locate a directory public and create a subdirectory Glue in it.
+    - Create a file index.php in the Glue directory with the following content:
 
 ```php
 <?php
@@ -61,8 +61,8 @@ $bootstrap
 ```
 
 3. Create GLUE application bootstrap:
-    * In the `src/Pyz` directory of your Spryker code installation, create a folder Glue, then create a subfolder `GlueApplication/Bootstrap` in it.
-    * In the GlueApplication/Bootstrap folder, create file GlueBootstrap.php with the following content:
+    - In the `src/Pyz` directory of your Spryker code installation, create a folder Glue, then create a subfolder `GlueApplication/Bootstrap` in it.
+    - In the GlueApplication/Bootstrap folder, create file GlueBootstrap.php with the following content:
 
 ```php
 <?php
@@ -151,6 +151,7 @@ use Spryker\Shared\GlueApplication\GlueApplicationConstants;
 $config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN] = '<your_glue_domain>';
 $config[GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG] = false;
 ```
+
 where  **<your_glue_domain>**  is the URL domain you want to use for GLUE. If you want to use the default domain of the Spryker shop, you can leave it empty.
 
 {% info_block infoBox "Tip" %}
@@ -163,13 +164,13 @@ If you want to enable GLUE application debugging, set the `GLUE_APPLICATION_REST
 
 GLUE provides the possibility to authenticate customer users with the help of OAuth tokens. If you are going to use customer authentication, you will also need to perform the following additional steps:
 
-* Install the `AuthRestApi` and `OauthCustomerConnector` modules:
+- Install the `AuthRestApi` and `OauthCustomerConnector` modules:
 
 ```yaml
 composer require spryker/auth-rest-api spryker/oauth-customer-connector --update-with-dependencies
 ```
 
-* Add OAuth plugins to the GLUE dependency provider. To do this, open file `src/Pyz/GlueApplication/GlueApplicationDependencyProvider.php` and make the following changes:
+- Add OAuth plugins to the GLUE dependency provider. To do this, open file `src/Pyz/GlueApplication/GlueApplicationDependencyProvider.php` and make the following changes:
 Add use statements for the required OAuth plugins:
 
 ```php
@@ -232,7 +233,7 @@ protected function getRestUserFinderPlugins(): array
 }
 ```
 
-* Add OAuth dependency provider. To do this, create file `Pyz/Zed/Oauth/OauthDependencyProvider.php` as follows:
+- Add OAuth dependency provider. To do this, create file `Pyz/Zed/Oauth/OauthDependencyProvider.php` as follows:
 
 ```php
 <?php
@@ -267,8 +268,8 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 }
 ```
 
-* Add OAuth public and private keys. For development purposes, you can use the keys supplied with Spryker Shop Suite. In production, you will need your own keys generated per the following instructions: [Generating public and private keys](https://oauth2.thephpleague.com/installation/#generating-public-and-private-keys). The keys need to be placed in the `config/Zed` directory of your code installation (in the Shop Suite, `dev_only_private.key` and `dev_only_public.key` are used).
-* Add OAuth constants to your environment configuration file. In the development environment, you can use the following:
+- Add OAuth public and private keys. For development purposes, you can use the keys supplied with Spryker Shop Suite. In production, you will need your own keys generated per the following instructions: [Generating public and private keys](https://oauth2.thephpleague.com/installation/#generating-public-and-private-keys). The keys need to be placed in the `config/Zed` directory of your code installation (in the Shop Suite, `dev_only_private.key` and `dev_only_public.key` are used).
+- Add OAuth constants to your environment configuration file. In the development environment, you can use the following:
 
 ```php
 use Spryker\Shared\Oauth\OauthConstants;
@@ -282,6 +283,7 @@ $config[OauthConstants::ENCRYPTION_KEY] = 'lxZFUEsBCJ2Yb14IF2ygAHI5N4+ZAUXXaSeeJ
 $config[OauthConstants::OAUTH_CLIENT_IDENTIFIER] = 'frontend';
 $config[OauthConstants::OAUTH_CLIENT_SECRET] = 'abc123';
 ```
+
 ## 2. Enabling GLUE
 
 To use GLUE in your project, configure an Nginx host to serve REST API requests:
@@ -292,7 +294,7 @@ To use GLUE in your project, configure an Nginx host to serve REST API requests:
 sudo nano /etc/nginx/sites-enabled/DE_development_glue
 ```
 
-In the _nano_ console that opens, paste the following:
+In the *nano* console that opens, paste the following:
 
 ```php
 server {
@@ -332,11 +334,12 @@ Add the following line to the end of the file:
 ```bash
 ip glue.de.project-name.local
 ```
+
 After performing this change, you should be able to access `https://glue.mysprykershop.com` with a 404 error and JSON response indicating that the resource is not found.
 
 If you are running your project in the Spryker VM, you also need to make changes to the Vagrant file of the virtual machine. To do so:
 
-1. Open the file `~/.vagrant.d/boxes/devvm[version]/0/virtualbox/include/_Vagrantfile`, where _[version]_ is the VM version. On Windows, you can find the `.vagrant.d` folder in your user profile folder.
+1. Open the file `~/.vagrant.d/boxes/devvm[version]/0/virtualbox/include/_Vagrantfile`, where *[version]* is the VM version. On Windows, you can find the `.vagrant.d` folder in your user profile folder.
 
 2. Find the following line:
 
@@ -345,6 +348,7 @@ HOSTS.push [ "www#{host_suffix}.#{store}.#{domain}", "zed#{host_suffix}.#{store}
 ```
 
 3. Change it as follows:
+
 ```bash
 HOSTS.push [ "www#{host_suffix}.#{store}.#{domain}", "glue#{host_suffix}.#{store}.#{domain}", "zed#{host_suffix}.#{store}.#{domain}",]
 ```
@@ -352,10 +356,12 @@ HOSTS.push [ "www#{host_suffix}.#{store}.#{domain}", "glue#{host_suffix}.#{store
 **3. Set correct OAuth key permissions**
 
 If you are using the OAuth module for user authentication, change permissions for the OAuth keys:
+
 ```yaml
 chmod 660 config/Zed/dev_only_public.key
 chmod 660 config/Zed/dev_only_private.key
 ```
+
 ## Integrate REST API resources
 
 After installing and enabling GLUE, you can integrate various REST API resources with it. It is not required to integrate all modules for REST API to work. You can integrate only the modules you need.

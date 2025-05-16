@@ -32,7 +32,7 @@ Make sure that the following modules have been installed:
 
 ## 2) Set up configuration
 
-1.  Add a CMS slot template to the condition key relation:
+1. Add a CMS slot template to the condition key relation:
 
 **Pyz\Zed\CmsSlotBlock\CmsSlotBlockConfig**
 

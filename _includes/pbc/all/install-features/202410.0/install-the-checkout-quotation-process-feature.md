@@ -116,6 +116,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Verify that when you add/edit shipping information in RFQ as an agent or a buyer you have access only to the address step and the shipment step.

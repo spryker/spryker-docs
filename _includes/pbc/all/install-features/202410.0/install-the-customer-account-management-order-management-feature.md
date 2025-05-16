@@ -3,6 +3,7 @@
 ## Install feature core
 
 ### Prerequisites
+
 Install the required features:
 
 | NAME | VERSION |
@@ -12,6 +13,7 @@ Install the required features:
 | Spryker Core | {{page.version}} |
 
 ### 1) Set up configuration
+
 To enable order search functionality, adjust config as shown below.
 
 **src/Pyz/Yves/CustomerPage/CustomerPageConfig.php**

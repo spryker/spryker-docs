@@ -323,6 +323,7 @@ Install the required modules using Composer:
 ```bash
 composer require spryker-feature/comments: "{{site.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:

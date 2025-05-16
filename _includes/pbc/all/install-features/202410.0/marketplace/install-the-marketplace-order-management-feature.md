@@ -425,8 +425,8 @@ console navigation:build-cache
 {% info_block warningBox "Verification" %}
 
 Make sure that the Back Office navigation menu has the following items:
-* **Marketplace&nbsp;<span aria-label="and then">></span> Orders**
-* **Sales&nbsp;<span aria-label="and then">></span> My Orders**
+- **Marketplace&nbsp;<span aria-label="and then">></span> Orders**
+- **Sales&nbsp;<span aria-label="and then">></span> My Orders**
 
 {% endinfo_block %}
 
@@ -1094,11 +1094,11 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Make sure the following applies:
 
-* After an order was split, the Merchant State Machine is executed on merchant orders.
+- After an order was split, the Merchant State Machine is executed on merchant orders.
 
-* When retrieving an order in the *Sales* module, it's split by the merchant order and the order state is derived from the Merchant State Machine.
+- When retrieving an order in the *Sales* module, it's split by the merchant order and the order state is derived from the Merchant State Machine.
 
-* After splitting an order into merchant orders, their IDs are displayed on the order details page on the Storefront.
+- After splitting an order into merchant orders, their IDs are displayed on the order details page on the Storefront.
 
 {% endinfo_block %}
 

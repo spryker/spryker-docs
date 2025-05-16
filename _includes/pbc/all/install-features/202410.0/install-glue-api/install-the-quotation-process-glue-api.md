@@ -111,6 +111,7 @@ Check that resources specified in `AgentAuthRestApiConfig::getAgentResources()` 
 
 
 ### 3) Set up transfer objects
+
 Generate transfers:
 
 ```bash
@@ -277,6 +278,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Glue/QuoteRequestsRestApi/QuoteRequestsRestApiDependencyProvider.php**
@@ -315,9 +317,9 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
 
 {% info_block warningBox "Verification" %}
 
-* To verify that the `QuoteRequestsResourceRoutePlugin` resource route plugin and `CompanyUserByQuoteRequestResourceRelationshipPlugin`, `CompanyByQuoteRequestResourceRelationshipPlugin`, `CompanyBusinessUnitByQuoteRequestResourceRelationshipPlugin`, `CustomerByQuoteRequestResourceRelationshipPlugin` and `ConcreteProductByQuoteRequestResourceRelationshipPlugin` relationship plugins are set up correctly, make sure that the `https://glue.mysprykershop.com/quote-requests?include=company-users,companies,company-business-units,customer,concrete-products` endpoint is available for authenticated company user.
+- To verify that the `QuoteRequestsResourceRoutePlugin` resource route plugin and `CompanyUserByQuoteRequestResourceRelationshipPlugin`, `CompanyByQuoteRequestResourceRelationshipPlugin`, `CompanyBusinessUnitByQuoteRequestResourceRelationshipPlugin`, `CustomerByQuoteRequestResourceRelationshipPlugin` and `ConcreteProductByQuoteRequestResourceRelationshipPlugin` relationship plugins are set up correctly, make sure that the `https://glue.mysprykershop.com/quote-requests?include=company-users,companies,company-business-units,customer,concrete-products` endpoint is available for authenticated company user.
 
-* To verify that `ProductOptionsRestQuoteRequestAttributesExpanderPlugin`, `SalesUnitRestQuoteRequestAttributesExpanderPlugin`, `ConfiguredBundleRestQuoteRequestAttributesExpanderPlugin`, `ShipmentsRestQuoteRequestAttributesExpanderPlugin`, `MerchantProductOffersRestQuoteRequestAttributesExpanderPlugin` and `DiscountsRestQuoteRequestAttributesExpanderPlugin` plugins are set up correctly, make sure that the following properties are present in the response body and contain correct data:
+- To verify that `ProductOptionsRestQuoteRequestAttributesExpanderPlugin`, `SalesUnitRestQuoteRequestAttributesExpanderPlugin`, `ConfiguredBundleRestQuoteRequestAttributesExpanderPlugin`, `ShipmentsRestQuoteRequestAttributesExpanderPlugin`, `MerchantProductOffersRestQuoteRequestAttributesExpanderPlugin` and `DiscountsRestQuoteRequestAttributesExpanderPlugin` plugins are set up correctly, make sure that the following properties are present in the response body and contain correct data:
   - data[].attributes.shownVersion.cart.items[].productOfferReference
   - data[].attributes.shownVersion.cart.items[].merchantReference
   - data[].attributes.shownVersion.cart.items[].configuredBundle
@@ -1122,16 +1124,17 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
     ]
   }
   ```
+
   </details>
 
 
-* To verify that the `QuoteRequestCancelResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-requests/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-request-cancel` endpoint is available for an authenticated company user.
+- To verify that the `QuoteRequestCancelResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-requests/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-request-cancel` endpoint is available for an authenticated company user.
 
-* To verify that the `QuoteRequestReviseResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-requests/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-request-revise` endpoint is available for an authenticated company user.
+- To verify that the `QuoteRequestReviseResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-requests/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-request-revise` endpoint is available for an authenticated company user.
 
-* To verify that the `QuoteRequestSendResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-requests/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-request-send-to-customer` endpoint is available for an authenticated company user.
+- To verify that the `QuoteRequestSendResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-requests/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-request-send-to-customer` endpoint is available for an authenticated company user.
 
-* To verify that the `QuoteRequestAgentsResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents` endpoint is available for authenticated agent.
+- To verify that the `QuoteRequestAgentsResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents` endpoint is available for authenticated agent.
 
   <details>
   <summary>Example</summary>
@@ -1347,12 +1350,13 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
       }
   }
   ```
+
   </details>
 
-* To verify that the `QuoteRequestAgentCancelResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-agent-request-cancel` endpoint is available for an authenticated agent.
+- To verify that the `QuoteRequestAgentCancelResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-agent-request-cancel` endpoint is available for an authenticated agent.
 
-* To verify that the `QuoteRequestAgentReviseResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-agent-request-cancel` endpoint is available for an authenticated agent.
+- To verify that the `QuoteRequestAgentReviseResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-agent-request-cancel` endpoint is available for an authenticated agent.
 
-* To verify that the `QuoteRequestAgentSendResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-agent-request-cancel` endpoint is available for an authenticated company user.
+- To verify that the `QuoteRequestAgentSendResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-agent-request-cancel` endpoint is available for an authenticated company user.
 
 {% endinfo_block %}

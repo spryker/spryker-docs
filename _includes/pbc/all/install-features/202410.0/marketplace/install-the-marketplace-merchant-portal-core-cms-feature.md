@@ -13,6 +13,7 @@ Install the required features:
 ## 1) Create merchant restore password email templates
 
 **src/Pyz/Zed/MerchantUserPasswordResetMail/Presentation/Mail/merchant_restore_password.html.twig**
+
 ```twig
 {% raw %}{{ renderCmsBlockAsTwig({% endraw %}
 'merchant_restore_password--html',
@@ -22,6 +23,7 @@ mail.locale.localeName,
 ```
 
 **src/Pyz/Zed/MerchantUserPasswordResetMail/Presentation/Mail/merchant_restore_password.text.twig**
+
 ```twig
 {% raw %}{{ renderCmsBlockAsTwig({% endraw %}
 'merchant_restore_password--text',
@@ -70,6 +72,7 @@ block_key,store_name
 cms-block-email--merchant_restore_password--html,DE
 cms-block-email--merchant_restore_password--text,DE
 ```
+
 **data/import/common/US/cms_block_store.csv**
 
 ```csv
@@ -88,7 +91,7 @@ console data:import:cms-block-store
 
 Make sure that the imported data has been added to the following database tables:
 
-* `spy_cms_block`
-* `spy_cms_block_store`
+- `spy_cms_block`
+- `spy_cms_block_store`
 
 {% endinfo_block %}

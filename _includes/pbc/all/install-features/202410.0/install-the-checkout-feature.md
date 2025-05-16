@@ -1,6 +1,6 @@
 
 
-This document describes how to install the Checkout feature. 
+This document describes how to install the Checkout feature.
 
 
 {% info_block warningBox %}
@@ -119,7 +119,7 @@ sales-order-threshold.soft-minimum-threshold.de.eur.message,"You need to add ite
 sales-order-threshold.soft-minimum-threshold.de.eur.message,"Sie sollten Waren im Wert von {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} dem Warenkorb hinzufügen um die empfohlene Schwelle zu erreichen. Sie können trotzdem weiter zur Kasse.",de_DE
 sales-order-threshold.soft-minimum-threshold.de.chf.message,"You need to add items for {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} to pass a recommended threshold, but if you want can proceed to checkout.",en_US
 sales-order-threshold.soft-minimum-threshold.de.chf.message,"Sie sollten Waren im Wert von {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} dem Warenkorb hinzufügen um die empfohlene Schwelle zu erreichen. Sie können trotzdem weiter zur Kasse.",de_DE
-```    
+```
 
 3. Import data:
 
@@ -497,19 +497,19 @@ class SalesOrderThresholdGuiDependencyProvider extends SprykerSalesOrderThreshol
 
 Ensure that:
 
-*     After adding an item to the cart, if the quote subtotal is below the defined global threshold, `QuoteTransfer.expenses[]` has an item with a threshold expense type.
-*     After adding an item to the cart, if the quote subtotal is below the defined global threshold, `QuoteTransfer.expenses[]` doesn't have an item with a threshold expense type.
-*     After adding an item to the cart, if the order subtotal is below the defined global threshold, the defined threshold message is displayed on the *Cart* page.
-*     If the order subtotal is below the defined hard global threshold, you cannot place it.
-*     If the order subtotal is above the defined maximum hard global threshold, you cannot place it.
-*     If the order subtotal is below the defined soft global threshold, you cannot place it, and the threshold expenses are saved to the `spy_sales_expense` table.
-*     If the order subtotal is below the defined soft global threshold with a fixed or flexible fee, the threshold fee is added to the order.
-*     *Edit Global threshold* page in Back Office contains settings for:
-    *         Hard threshold
-    *         Hard maximum threshold
-    *         Soft threshold with a message
-    *         Soft threshold with a fixed fee
-    *         Soft threshold with a flexible fee
+-     After adding an item to the cart, if the quote subtotal is below the defined global threshold, `QuoteTransfer.expenses[]` has an item with a threshold expense type.
+-     After adding an item to the cart, if the quote subtotal is below the defined global threshold, `QuoteTransfer.expenses[]` doesn't have an item with a threshold expense type.
+-     After adding an item to the cart, if the order subtotal is below the defined global threshold, the defined threshold message is displayed on the *Cart* page.
+-     If the order subtotal is below the defined hard global threshold, you cannot place it.
+-     If the order subtotal is above the defined maximum hard global threshold, you cannot place it.
+-     If the order subtotal is below the defined soft global threshold, you cannot place it, and the threshold expenses are saved to the `spy_sales_expense` table.
+-     If the order subtotal is below the defined soft global threshold with a fixed or flexible fee, the threshold fee is added to the order.
+-     *Edit Global threshold* page in Back Office contains settings for:
+  -         Hard threshold
+  -         Hard maximum threshold
+  -         Soft threshold with a message
+  -         Soft threshold with a fixed fee
+  -         Soft threshold with a flexible fee
 
 
 {% endinfo_block %}

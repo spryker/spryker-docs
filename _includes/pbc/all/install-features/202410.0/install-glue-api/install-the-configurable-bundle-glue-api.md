@@ -130,15 +130,16 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
 
 Make sure that:
 
-*   The `/configurable-bundle-templates` resource is available by sending the request: `GET https://glue.mysprykershop.com/configurable-bundle-templates`.
-*   Each `configurable-bundle-template` resource has a relationship to `configurable-bundle-template-slots` by sending the request:  `GET https://glue.mysprykershop.com/configurable-bundle-templates?include=configurable-bundle-template-slots`.
-*   Each `configurable-bundle-template` resource has a relationship to `configurable-bundle-template-image-sets` by sending the request:`GET https://glue.mysprykershop.com/configurable-bundle-templates?include=configurable-bundle-template-image-sets`.
+- The `/configurable-bundle-templates` resource is available by sending the request: `GET https://glue.mysprykershop.com/configurable-bundle-templates`.
+- Each `configurable-bundle-template` resource has a relationship to `configurable-bundle-template-slots` by sending the request:  `GET https://glue.mysprykershop.com/configurable-bundle-templates?include=configurable-bundle-template-slots`.
+- Each `configurable-bundle-template` resource has a relationship to `configurable-bundle-template-image-sets` by sending the request:`GET https://glue.mysprykershop.com/configurable-bundle-templates?include=configurable-bundle-template-image-sets`.
 
 
 **src/Pyz/Glue/OrdersRestApi/OrdersRestApiDependencyProvider.php**
@@ -170,9 +171,9 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-1.  Create an order with a configurable bundle.
+1. Create an order with a configurable bundle.
 
-2.  Retrieve the order by sending the request: `GET https://glue.mysprykershop.com/order/:orderReference`  
+2. Retrieve the order by sending the request: `GET https://glue.mysprykershop.com/order/:orderReference`  
     Make sure the endpoint returns the sections: `data.attributes.items.salesOrderConfiguredBundle` and `data.attributes.items.salesOrderConfiguredBundleItem`.
 
 {% endinfo_block %}

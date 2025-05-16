@@ -15,7 +15,7 @@ Install the required features:
 | Spryker Core | {{page.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html)
 
-###  1) Install the required modules
+### 1) Install the required modules
 
 Install the required modules using Composer:
 
@@ -189,7 +189,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-# Register the synchronization queue and synchronization error queue:
+# Register the synchronization queue and synchronization error queue
 
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
@@ -343,6 +343,7 @@ class MerchantOpeningHoursStorageConfig extends SprykerMerchantOpeningHoursStora
    ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -416,6 +417,7 @@ MER000005,2023-11-27,13:00:00,18:00:00,merchant_weekday_schedule.sunday_opening
 MER000005,2023-12-31,10:00:00,13:00:00,
 MER000005,2023-12-31,14:00:00,17:00:00,
 ```
+
 </details>
 
 | COLUMN              | REQUIRED | DATA TYPE | DATA EXAMPLE                                  | DATA EXPLANATION                                                                  |
@@ -531,6 +533,7 @@ Import data:
 console data:import merchant-opening-hours-date-schedule
 console data:import merchant-opening-hours-weekday-schedule
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the opening hours data is added to the `spy_merchant_opening_hours_weekday_schedule` and `spy_merchant_opening_hours_date_schedule` tables in the database.

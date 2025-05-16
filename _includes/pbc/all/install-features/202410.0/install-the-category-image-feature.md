@@ -421,6 +421,7 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}

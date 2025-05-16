@@ -319,6 +319,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 
 </statemachine>
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -391,9 +392,11 @@ console setup:init-db
 {% info_block warningBox "Verification" %}
 
 To verify the OAuth client exists in the database, run the following SQL query:
+
 ```sql
 SELECT * FROM spy_oauth_client WHERE identifier = 'the-client-identifier-of-your-app';
 ```
+
   Make sure the output contains one record and the redirect URI is not empty. If the record doesn't exist, create it.
 
 {% endinfo_block %}
@@ -402,8 +405,9 @@ SELECT * FROM spy_oauth_client WHERE identifier = 'the-client-identifier-of-your
 
 1. Prepare your data according to your requirements using our demo data:
 
-* Base shop:
+- Base shop:
 **data/import/common/common/warehouse.csv**
+
 ```csv
 name,is_active,picking_list_strategy
 Warehouse1,1,multi-shipment
@@ -411,9 +415,10 @@ Warehouse2,1,multi-shipment
 Warehouse3,0,multi-shipment
 ```
 
-* Marketplace:
+- Marketplace:
 
 **data/import/common/common/marketplace/warehouse.csv**
+
 ```csv
 name,is_active,picking_list_strategy
 Warehouse1,1,multi-shipment
@@ -545,6 +550,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/PickingList/PickingListDependencyProvider.php**
@@ -868,23 +874,23 @@ As a prerequisite, do the following:
 
 Make sure that you can send the following requests:
 
-* Retrieve picklists: `GET https://glue-backend.mysprykershop.com/picking-lists`.
+- Retrieve picklists: `GET https://glue-backend.mysprykershop.com/picking-lists`.
 
-* Retrieve picklists with picking list items included: `GET https://glue-backend.mysprykershop.com/picking-lists?include=picking-list-items`.
+- Retrieve picklists with picking list items included: `GET https://glue-backend.mysprykershop.com/picking-lists?include=picking-list-items`.
 
-* Retrieve picklists with the users information included:  `GET https://glue-backend.mysprykershop.com/picking-lists?include=users`.
+- Retrieve picklists with the users information included:  `GET https://glue-backend.mysprykershop.com/picking-lists?include=users`.
 
-* Retrieve picklists with warehouse information included: `GET https://glue-backend.mysprykershop.com/picking-lists?include=warehouses`.
+- Retrieve picklists with warehouse information included: `GET https://glue-backend.mysprykershop.com/picking-lists?include=warehouses`.
 
-* Retrieve a picking list: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`.
+- Retrieve a picking list: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`.
 
-* Start picking: `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/start-picking`
+- Start picking: `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/start-picking`
 
-* Retrieve items from a picklist: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items`.
+- Retrieve items from a picklist: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items`.
 
-* Retrieve an item from a picklist: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`.
+- Retrieve an item from a picklist: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`.
 
-* Pick one or more items from a picklist:
+- Pick one or more items from a picklist:
 
 `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`
 

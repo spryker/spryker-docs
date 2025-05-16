@@ -424,6 +424,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -795,6 +796,7 @@ Make sure that the following endpoints are available:
     }
 }
 ```
+
 </details>
 
 `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews/{% raw %}{{{% endraw %}review_id{% raw %}}}{% endraw %}`
@@ -819,6 +821,7 @@ Make sure that the following endpoints are available:
   }
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -1061,6 +1064,7 @@ Make sure that `averageRating` and `reviewCount` attributes are present in `conc
   ]
 }
 ```
+
 </details>
 
 Make a request to `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=product-reviews`.
@@ -1207,6 +1211,7 @@ Make sure that the response contains product-reviews as a relationship and produ
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}

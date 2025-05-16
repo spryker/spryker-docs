@@ -1,6 +1,7 @@
 
 
 ## Prerequisites
+
 To prepare your project to work with Navigation:
 
 1. Require the Navigation modules in your `composer.json`.
@@ -11,12 +12,12 @@ To prepare your project to work with Navigation:
 
     It's important to make sure that they extend the base classes from the Spryker core, e.g.:
 
-    * `\Orm\Zed\Navigation\Persistence\SpyNavigation` extends `\Spryker\Zed\Navigation\Persistence\Propel\AbstractSpyNavigation`
-    * `\Orm\Zed\Navigation\Persistence\SpyNavigationNode` extends `\Spryker\Zed\Navigation\Persistence\Propel\AbstractSpyNavigationNode`
-    * `\Orm\Zed\Navigation\Persistence\SpyNavigationNodeLocalizedAttributes` extends `\Spryker\Zed\Navigation\Persistence\Propel\AbstractSpyNavigationNodeLocalizedAttributes`
-    * `\Orm\Zed\Navigation\Persistence\SpyNavigationQuery` extends `\Spryker\Zed\Navigation\Persistence\Propel\AbstractSpyNavigationQuery`
-    * `\Orm\Zed\Navigation\Persistence\SpyNavigationNodeQuery` extends `\Spryker\Zed\Navigation\Persistence\Propel\AbstractSpyNavigationNodeQuery`
-    * `\Orm\Zed\Navigation\Persistence\SpyNavigationNodeLocalizedAttributesQuery` extends `\Spryker\Zed\Navigation\Persistence\Propel\AbstractSpyNavigationNodeLocalizedAttributesQuery`
+    - `\Orm\Zed\Navigation\Persistence\SpyNavigation` extends `\Spryker\Zed\Navigation\Persistence\Propel\AbstractSpyNavigation`
+    - `\Orm\Zed\Navigation\Persistence\SpyNavigationNode` extends `\Spryker\Zed\Navigation\Persistence\Propel\AbstractSpyNavigationNode`
+    - `\Orm\Zed\Navigation\Persistence\SpyNavigationNodeLocalizedAttributes` extends `\Spryker\Zed\Navigation\Persistence\Propel\AbstractSpyNavigationNodeLocalizedAttributes`
+    - `\Orm\Zed\Navigation\Persistence\SpyNavigationQuery` extends `\Spryker\Zed\Navigation\Persistence\Propel\AbstractSpyNavigationQuery`
+    - `\Orm\Zed\Navigation\Persistence\SpyNavigationNodeQuery` extends `\Spryker\Zed\Navigation\Persistence\Propel\AbstractSpyNavigationNodeQuery`
+    - `\Orm\Zed\Navigation\Persistence\SpyNavigationNodeLocalizedAttributesQuery` extends `\Spryker\Zed\Navigation\Persistence\Propel\AbstractSpyNavigationNodeLocalizedAttributesQuery`
 
 6. To get the new transfer objects, run `vendor/bin/console transfer:generate`.
 7. Make sure that the new Zed UI assets are also prepared for use by running the `npm run zed` command (or `antelope build zed` for older versions).
@@ -68,8 +69,8 @@ The `Navigation` module ships with a twig extension that provides the `spyNaviga
 
 `spyNavigation()` accepts two parameters:
 
-* `$navigationKey`: Reference of a navigation menu by its key field (for example, "MAIN_NAVIGATION").
-* `$template`: Template path used to render the navigation menu (for example, `"@application/layout/navigation/main.twig"`).
+- `$navigationKey`: Reference of a navigation menu by its key field (for example, "MAIN_NAVIGATION").
+- `$template`: Template path used to render the navigation menu (for example, `"@application/layout/navigation/main.twig"`).
 
 To enable the navigation twig function, register `\Spryker\Yves\Navigation\Plugin\Provider\NavigationTwigServiceProvider` in your application's bootstrap.
 

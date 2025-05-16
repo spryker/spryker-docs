@@ -37,6 +37,7 @@ Generate transfer changes:
 ```bash
 console transfer:generate
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure the following changes have been applied in transfer objects:

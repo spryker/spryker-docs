@@ -3,6 +3,7 @@
 ## Install feature core
 
 ### Prerequisites
+
 Install the required features:
 
 | NAME | VERSION |

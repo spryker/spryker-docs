@@ -126,24 +126,33 @@ ssp-news-block-1,News Banner-1,Title and Content,@CmsBlock/template/title_and_co
 
 
 4. Append `cms_block_store.csv`:
+
 ```csv
 ssp-news-block-1,DE
 cms-sales_rep:default,DE
 ```
+
 5. Append `cms_slot.csv`:
+
 ```csv
 ssp-news,ssp-news-block-1,"SSP News.",SprykerCmsSlotBlock,@SspDashboardManagement/views/dashboard/dashboard.twig,1
 ```
+
 6. Append `cms_slot_block.csv`:
+
 ```csv
 slt-mobile-header,blck-9,1,@ShopUi/templates/page-layout-main/page-layout-main.twig,,,,,,,
 ssp-news,ssp-news-block-1,1,@SspDashboardManagement/views/dashboard/dashboard.twig,,,,,,,
 ```
+
 7. Append `cms_slot_template.csv`:
+
 ```csv
 SSP Dashboard,Dashboard Page.,@SspDashboardManagement/views/dashboard/dashboard.twig
 ```
+
 8. Append `content_banner.csv`:
+
 ```csv
 ssp-br-1,SSP Banner Name 1,SSP Banner Description 1, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
 ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
@@ -153,7 +162,8 @@ ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/defa
 
 1. Create a new CMS template to be used for dashboard content sourced from the CMS:
 
-**src/Pyz/Shared/CmsBlock/Theme/default/template/title_and_content_block.twig** 
+**src/Pyz/Shared/CmsBlock/Theme/default/template/title_and_content_block.twig**
+
 ```twig
 {% raw %}{% block content %}{% endraw %}
     <!-- CMS_BLOCK_PLACEHOLDER : "title" -->
@@ -179,8 +189,8 @@ console data:import cms-slot-block
 ```
 
 {% info_block warningBox "Verification" %}
-* Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
-* Make sure that the imported data on CMS blocks, CMS slots, and content banners is present in the Back Office.
+- Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
+- Make sure that the imported data on CMS blocks, CMS slots, and content banners is present in the Back Office.
 {% endinfo_block %}
 
 
@@ -333,10 +343,10 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-1. In the Back Office, go to **Customers** > **Company Roles**. 
+1. In the Back Office, go to **Customers** > **Company Roles**.
 2. Click **Add Company User Role**.
 3. Select a company.
-4. Enter a name for the role. 
+4. Enter a name for the role.
 5. In **Unassigned Permissions**, enable the **View Dashboard** permission.
 6. Click **Submit**.
 7. Go to **Customers** > **Company Users**.
@@ -350,8 +360,8 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 1. On the Storefront, log in with the company user you've assigned the role to.
   Make sure the **Dashboard** menu item is displayed.
 2. Go to **Customer Account** > **Dashboard**. Make sure the page shows the following:
-  * Correct company account information
-  * Widgets for Assets, Inquiries, and Files
+- Correct company account information
+- Widgets for Assets, Inquiries, and Files
 3. Log out and log in with a compnay user without the role you've created.
   Make sure the **Dashboard** menu item is not displayed and you can't access the **Dashboard** page.
 

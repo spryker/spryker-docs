@@ -312,6 +312,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     }
 }
 ```
+
 </details>
 
 2. Apply scheduled prices:
@@ -323,7 +324,7 @@ console price-product-schedule:apply
 {% info_block warningBox "Verification" %}
 
 In the Back Office, make sure that the following conditions are met:
-1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Products** and check the following: 
+1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Products** and check the following:
    1. Check that scheduled prices have been correctly applied.
    2. Click **Edit** to check that you can edit any abstract or concrete product.
    3. On the **Edit Product** page, you can find the **Scheduled Prices** tab with your scheduled prices which you can create, update, and delete.

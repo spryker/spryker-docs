@@ -18,6 +18,7 @@ To start the feature integration, overview and install the necessary features:
 ## 1) Install the required modules
 
 Install the required modules using Composer:
+
 ```bash
 composer require spryker/configurable-bundle-carts-rest-api:"^0.1.0" --update-with-dependencies
 ```
@@ -142,8 +143,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Make sure that:
 
-* The `configured-bundles` resource is available by sending the request: `POST https://glue.mysprykershop.com/carts/:uuid/configured-bundles`.
-* The `guest-configured-bundles` resource is available by sending the request: `POST https://glue.mysprykershop.com/guest-carts/:uuid/guest-configured-bundles`.
+- The `configured-bundles` resource is available by sending the request: `POST https://glue.mysprykershop.com/carts/:uuid/configured-bundles`.
+- The `guest-configured-bundles` resource is available by sending the request: `POST https://glue.mysprykershop.com/guest-carts/:uuid/guest-configured-bundles`.
 
 {% endinfo_block %}
 
@@ -174,14 +175,14 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-1.  Create a guest cart with a configurable bundle.
+1. Create a guest cart with a configurable bundle.
 
-2.  Retrieve the guest cart with the items included by sending the request: `https://glue.mysprykershop.com/guest-carts/:uuid?include=guest-cart-items`.  
+2. Retrieve the guest cart with the items included by sending the request: `https://glue.mysprykershop.com/guest-carts/:uuid?include=guest-cart-items`.  
     Make sure that the endpoint returns the sections: `data.attributes.items.configuredBundle` and `data.attributes.items.configuredBundleItem`.
 
-3.  Create a cart with a configurable bundle.
+3. Create a cart with a configurable bundle.
 
-4.  Retrieve the guest cart with the items included by sending the request: `https://glue.mysprykershop.com/carts/:uuid?include=items`.  
+4. Retrieve the guest cart with the items included by sending the request: `https://glue.mysprykershop.com/carts/:uuid?include=items`.  
     Make sure that the endpoint returns the sections: `data.attributes.items.configuredBundle` and `data.attributes.items.configuredBundleItem`.
 
 {% endinfo_block %}

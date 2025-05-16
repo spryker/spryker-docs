@@ -36,7 +36,7 @@ Keep in mind that Split Delivery works *only* if there are several product items
 
 In the *Address* checkout step, the **Define to multiple addresses** drop-down option lets you assign a delivery address per cart item.
 
-Then, in the *Shipment* checkout step, you can see the products grouped by the same delivery address. The number of shipments equals the number of the same delivery addresses. For each shipment, you can select a delivery date (optional) and a shipment method.
+Then, in the *Shipment* checkout step, you can see the products grouped by the same delivery address. The number of shipments equals the number of the same delivery addresses. For each shipment, you can select a shipment method and, optionally, a delivery date.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Summary+Step/summary-step-new.png)
 

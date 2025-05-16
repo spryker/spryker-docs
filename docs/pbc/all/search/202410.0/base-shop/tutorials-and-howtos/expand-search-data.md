@@ -288,7 +288,7 @@ protected function getDataLoaderPlugins()
 }
 ```
 
-* `CatalogDependencyProvider::getSortConfigTransferBuilderPlugins()` (optional)
+* Optional: `CatalogDependencyProvider::getSortConfigTransferBuilderPlugins()`
 
 ```
 /**

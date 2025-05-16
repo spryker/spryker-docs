@@ -15,7 +15,6 @@ This document describes how to install and configure the Seven Senders technolog
 
 ## Installation
 
-To install Seven Senders, run the following command in the console:
 ```bash
 composer require spryker-eco/sevensenders:1.0.0
 ```

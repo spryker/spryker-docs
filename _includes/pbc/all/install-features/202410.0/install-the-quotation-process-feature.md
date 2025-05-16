@@ -614,6 +614,7 @@ quote_request_page.quote_request.cta_edit_shipment_method,Versandart bearbeiten,
 quote_request_page.quote_request.item,%count% item(s),en_US
 quote_request_page.quote_request.item,%count% artikel,de_DE
 ```
+
 </details>
 
 Import data:

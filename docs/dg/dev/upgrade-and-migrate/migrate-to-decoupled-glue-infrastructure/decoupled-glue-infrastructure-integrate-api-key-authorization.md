@@ -114,6 +114,7 @@ namespace Pyz\Zed\Authorization;
      }
  }
 ```
+
 </details>
 
 ### 4) Set up behavior
@@ -150,6 +151,7 @@ class GlueBackendApiApplicationAuthorizationConnectorDependencyProvider extends 
 }
 
 ```
+
 </details>
 
 <details>
@@ -177,6 +179,7 @@ class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProv
 }
 
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}

@@ -27,47 +27,47 @@ To perform the needed requests, you can easily use the implemented state machine
 
 **PreAuthorize**
 
-* Send order and customer data to Payolution
-* Risk check performed by Payolution
-* Response:
+- Send order and customer data to Payolution
+- Risk check performed by Payolution
+- Response:
   - Success: Risk check passed
   - Declined: Request format error or risk check failed
-* Plugin: `PreAuthorizePlugin`
+- Plugin: `PreAuthorizePlugin`
 
 **ReAuthorize**
 
-* Send updated order data–for example, a new price
-* New risk check (taking into account the previous pre-authorization call)
-* Full and partial reauthorization possible.
-* Response:
+- Send updated order data–for example, a new price
+- New risk check (taking into account the previous pre-authorization call)
+- Full and partial reauthorization possible.
+- Response:
   - Success: Risk check passed and update accepted
   - Declined: Request format error, update not accepted, because–for example, price too high, or risk check failed
-* Plugin: `ReAuthorizePlugin`
+- Plugin: `ReAuthorizePlugin`
 
 **Revert**
 
-* Revert a previous pre-authorization call
-* Always reverts the complete pre-authorization
-* Full and partial revert possible.
-* Plugin: `RevertPlugin`
+- Revert a previous pre-authorization call
+- Always reverts the complete pre-authorization
+- Full and partial revert possible.
+- Plugin: `RevertPlugin`
 
 **Capture**
 
-* Capture of previous (p)re-authorization call
-* Full and partial capture possible. Captured amount cannot exceed the authorized amount.
-* Response:
+- Capture of previous (p)re-authorization call
+- Full and partial capture possible. Captured amount cannot exceed the authorized amount.
+- Response:
   - Success: Previous (p)re-authorization still valid and accepted
   - Declined: Previous (p)re- authorization expired, request format error, or internal error
-* Plugin: `CapturePlugin`
+- Plugin: `CapturePlugin`
 
 **Refund**
 
-* Refund previously captured amount
-* Full and partial refunds possible
-* Response:
+- Refund previously captured amount
+- Full and partial refunds possible
+- Response:
   - Success: Refund possible and accepted
   - Declined: Previous capture to far in the past, request format error, or internal
-* Plugin: `RefundPlugin`
+- Plugin: `RefundPlugin`
 
 ## Payolution State Machine Conditions
 

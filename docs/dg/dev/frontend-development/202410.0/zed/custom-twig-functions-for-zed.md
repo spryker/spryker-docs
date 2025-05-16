@@ -78,6 +78,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
     }
   }
 ```
+
 </details>
 
 | FUNCTION NAME | DESCRIPTION | METHOD SIGNATURE | USAGE EXAMPLE |

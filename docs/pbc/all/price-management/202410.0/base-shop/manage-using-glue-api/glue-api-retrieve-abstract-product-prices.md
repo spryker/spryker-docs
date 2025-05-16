@@ -37,6 +37,7 @@ To retrieve prices of an abstract product, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*** | SKU of an abstract product to retrieve the prices of.|
+
 ### Request
 
 | REQUEST | USAGE |
@@ -95,12 +96,13 @@ To retrieve prices of an abstract product, send the request:
     }
 }
 ```
+
 </details>
 
 <details>  
 <summary>Response sample: retrieve default and volume prices of an abstract product</summary>
 
-```json    
+```json
 {
     "data": [
         {
@@ -148,6 +150,7 @@ To retrieve prices of an abstract product, send the request:
     }
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve a gross price in Swiss Franc of an abstract product</summary>
@@ -193,6 +196,7 @@ To retrieve prices of an abstract product, send the request:
     }
 }
 ```
+
 </details>
 
 <a name="abstract-product-prices-response-attributes"></a>

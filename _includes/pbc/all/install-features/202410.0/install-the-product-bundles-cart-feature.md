@@ -175,7 +175,7 @@ Make sure that bundled products have an images that are displayed correctly in t
 
 {% endinfo_block %}
 
-### 2) Adjust a non-splittable quantity threshold for bundled items in the `SalesQuantity` module config.
+### 2) Adjust a non-splittable quantity threshold for bundled items in the `SalesQuantity` module config
 
 To create an order successfully with a large number of product bundles in the cart, the `SalesQuantityConfig::BUNDLED_ITEM_NONSPLIT_QUANTITY_THRESHOLD` constant in the `SalesQuantity` module config must be also set to a lower number—for example, 10.
 This constant controls the bundle quantity threshold. When the threshold is reached, it keeps bundled items from splitting into individual items and adds them to the order as a single shipment.

@@ -26,12 +26,12 @@ We gained worldwide payments expertise that delivers results for our merchants. 
 <br>mPOS21 allows businesses to maximize their sales by accepting credit and debit cards on the go mPOS21 uses a MIURA card reader / PIN pad that connects via Bluetooth to a mobile phone. A customized mPOS21 app is available for Android and iOS, allowing Visa and MasterCard Chip and Pin card present transactions.
 
 YOUR ADVANTAGES:
-* Omni-channel merchant payment solutions: Whether it's payments online, in-person or over the phone
-* Global and localized payment solutions
-* Advanced Risk and Fraud Management
-* Superior reporting tools
-* PCI-DSS Level 1 Certified gateway for data security
-* Commitment to outstanding service
+- Omni-channel merchant payment solutions: Whether it's payments online, in-person or over the phone
+- Global and localized payment solutions
+- Advanced Risk and Fraud Management
+- Superior reporting tools
+- PCI-DSS Level 1 Certified gateway for data security
+- Commitment to outstanding service
 
 ---
 

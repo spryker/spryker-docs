@@ -12,7 +12,7 @@ This document describes how to retrieve gift cards in carts of registered users 
 
 ## Installation
 
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+- [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
 
 
 ## Retrieve registered user's carts
@@ -112,7 +112,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -215,7 +216,8 @@ To retrieve a particular cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->

@@ -39,8 +39,8 @@ In your project, you can also implement the QR code functionality by creating si
 Barcodes are dynamically generated for concrete products, which ensures that barcodes are immediately valid.
 
 Also, depending on whether a customer chooses a product bundle or configurable bundle, the number of barcodes differs:
-* If a customer purchases a product bundle, it's always assigned only one barcode, regardless of the quantity of the products within the bundle.
-* If a customer purchases a configurable bundle, each product within the configurable bundle is assigned a separate unique barcode.
+- If a customer purchases a product bundle, it's always assigned only one barcode, regardless of the quantity of the products within the bundle.
+- If a customer purchases a configurable bundle, each product within the configurable bundle is assigned a separate unique barcode.
 
 The following image demonstrates how barcodes are assigned depending on whether it's a product bundle or a configurable bundle.
 

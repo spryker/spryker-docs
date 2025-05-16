@@ -15,8 +15,8 @@ This document describes how to edit customers in the Back Office.
 
 ## Prerequisites
 
-* Optional: To select billing and shipping addresses, [add customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/add-customer-addresses.html).
-* Review the [reference information](#reference-information-edit-a-customer) before you start or look up the necessary information as you go through the process.
+- Optional: To select billing and shipping addresses, [add customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/add-customer-addresses.html).
+- Review the [reference information](#reference-information-edit-a-customer) before you start or look up the necessary information as you go through the process.
 
 
 ## Edit a customer

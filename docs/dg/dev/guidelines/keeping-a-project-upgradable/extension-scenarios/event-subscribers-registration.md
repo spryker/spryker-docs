@@ -39,6 +39,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
     }
 }
 ```
+
 Manifests fully support the registration of event subscribers in the collection. Restrictions to the order of the plugins in collection are *not supported*. New plugin is added to the end of the collection.
 
 The following is an example of how to register event subscribers in collection with a chain of method calls in a dependency provider:

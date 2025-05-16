@@ -31,7 +31,7 @@ A module remains zero-major until it reaches version *1.0.0*, at which point it 
 
 ## Business characteristics
 
-From a business perspective, zero-major modules are *not feature-complete* and *subject to change*. 
+From a business perspective, zero-major modules are *not feature-complete* and *subject to change*.
 
 - ⚠️ Liability is limited because of Early Access functionality  
 - ⚠️ Functional gaps may exist: not all use cases or workflows may be supported

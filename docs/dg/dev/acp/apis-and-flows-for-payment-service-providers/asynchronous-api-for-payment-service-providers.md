@@ -21,6 +21,7 @@ related:
 All PSP integrations are based on a asynchronous API. The asynchronous API is used to process payments and refunds. The following asynchronous messages are used.
 
 ## Messages sent from the app
+
 | Message                             | Description                                  |
 |--------------------------------------|----------------------------------------------|
 | AddPaymentMethod                  | A new payment method is added.              |

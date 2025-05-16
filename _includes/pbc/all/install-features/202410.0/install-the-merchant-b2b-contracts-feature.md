@@ -261,6 +261,7 @@ $companyUserTransfer = $this->companyUserFacade->findCompanyUserById($idCompanyU
 dd($companyUserTransfer->getCompanyBusinessUnit()->getMerchantRelationships());
 
 ```
+
 4. Make sure the `CompanyBusinessUnit.merchantRelationships` property was updated with the merchant relationship data.
 
 {% endinfo_block %}

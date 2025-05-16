@@ -18,14 +18,14 @@ We gave up the `Auth` module in favor of using `Symfony Security`. `Symfony Secu
 
 More details are listed below:
 
-* All public API for modules `Auth`, `AuthMailConnector`, `AuthMailConnectorExtension` is deprecated.
-* `AuthFacade::login()` and `AuthFacade::logout()` were replaced with the implementation of `Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface`. The Back Office authentication was implemented at `SecurityGui` module with `ZedUserSecurityPlugin`.
-* `AuthFacade::isAuthenticated()`is replaced with `SecurityFacade::isUserLoggedIn()`.
-* `AuthFacade::requestPasswordReset()` is replaced with `UserPasswordResetFacade::requestPasswordReset()`.
-* `AuthFacade::isValidPasswordResetToken()` is replaced with `UserPasswordResetFacade::isValidPasswordResetToken()`.
-* `AuthFacade::resetPassword()` is replaced with `UserPasswordResetFacade::setNewPassword()`.
-* `UserFacade::expandMailWithUserData()` was deprecated. Handling of user password reset mail is implemented in `UserPasswordReset` module.
-* Zed Back Office login URL was changed to `/security-gui/login`.
+- All public API for modules `Auth`, `AuthMailConnector`, `AuthMailConnectorExtension` is deprecated.
+- `AuthFacade::login()` and `AuthFacade::logout()` were replaced with the implementation of `Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface`. The Back Office authentication was implemented at `SecurityGui` module with `ZedUserSecurityPlugin`.
+- `AuthFacade::isAuthenticated()`is replaced with `SecurityFacade::isUserLoggedIn()`.
+- `AuthFacade::requestPasswordReset()` is replaced with `UserPasswordResetFacade::requestPasswordReset()`.
+- `AuthFacade::isValidPasswordResetToken()` is replaced with `UserPasswordResetFacade::isValidPasswordResetToken()`.
+- `AuthFacade::resetPassword()` is replaced with `UserPasswordResetFacade::setNewPassword()`.
+- `UserFacade::expandMailWithUserData()` was deprecated. Handling of user password reset mail is implemented in `UserPasswordReset` module.
+- Zed Back Office login URL was changed to `/security-gui/login`.
 
 *Estimated migration time: 2 hours.*
 
@@ -47,19 +47,19 @@ The steps in this section show you how to re-configure the YVES system user and 
 
 2. Adjust `config/Shared/common/config_oauth-development.php`.
 
-    * Remove:
+    - Remove:
 
     ```php
     use Spryker\Shared\Auth\AuthConstants;
     ```
 
-    * Add:
+    - Add:
 
     ```php
     use Spryker\Shared\SecuritySystemUser\SecuritySystemUserConstants;
     ```
 
-    * Change:
+    - Change:
 
     ```php
     $config[AuthConstants::AUTH_DEFAULT_CREDENTIALS]['yves_system']['token'] = 'JDJ5JDEwJFE0cXBwYnVVTTV6YVZXSnVmM2l1UWVhRE94WkQ4UjBUeHBEWTNHZlFRTEd4U2F6QVBqejQ2';
@@ -73,19 +73,19 @@ The steps in this section show you how to re-configure the YVES system user and 
 
 3. Adjust `config/Shared/config_default.php`.
 
-    *  Remove:
+    - Remove:
 
     ```php
     use Spryker\Shared\Auth\AuthConstants;
     ```
 
-    *  Add:
+    - Add:
 
     ```php
     use Spryker\Shared\SecuritySystemUser\SecuritySystemUserConstants;
     ```
 
-    *  Change:
+    - Change:
 
     ```php
     $config[AuthConstants::AUTH_DEFAULT_CREDENTIALS] = [
@@ -112,7 +112,7 @@ The steps in this section show you how to re-configure the YVES system user and 
     ];
     ```
 
-    * Change:
+    - Change:
 
     ```php
     $config[AuthConstants::SYSTEM_USER_SESSION_REDIS_LIFE_TIME] = 20;
@@ -126,30 +126,31 @@ The steps in this section show you how to re-configure the YVES system user and 
 
 4. Adjust `tests/PyzTest/Zed/Console/_data/cli_sandbox/config/Shared/config_default.php`.
 
-    *  Remove:
+    - Remove:
 
     ```php
     use Spryker\Shared\Auth\AuthConstants;
     ```
 
-    *  Add:
+    - Add:
 
     ```php
     use Spryker\Shared\SecuritySystemUser\SecuritySystemUserConstants;
     ```
 
-    *  Change:
+    - Change:
 
     ```php
     $config[AuthConstants::AUTH_ZED_ENABLED]
     ```
+
     to:
 
     ```php
     $config[ZedRequestConstants::AUTH_ZED_ENABLED]
     ```
 
-    * Change:
+    - Change:
 
     ```php
     $config[AuthConstants::AUTH_DEFAULT_CREDENTIALS] = [
@@ -176,7 +177,7 @@ The steps in this section show you how to re-configure the YVES system user and 
     ];
     ```
 
-    * If you are using the plugin `Spryker/Zed/Auth/Communication/Plugin/SessionRedis/SystemUserSessionRedisLifeTimeCalculatorPlugin` in `src/Pyz/Zed/SessionRedis/SessionRedisDependencyProvider::getSessionRedisLifeTimeCalculatorPlugins()`,  replace it with `Spryker/Zed/SecuritySystemUser/Communication/Plugin/SessionRedis/SystemUserSessionRedisLifeTimeCalculatorPlugin`.
+    - If you are using the plugin `Spryker/Zed/Auth/Communication/Plugin/SessionRedis/SystemUserSessionRedisLifeTimeCalculatorPlugin` in `src/Pyz/Zed/SessionRedis/SessionRedisDependencyProvider::getSessionRedisLifeTimeCalculatorPlugins()`,  replace it with `Spryker/Zed/SecuritySystemUser/Communication/Plugin/SessionRedis/SystemUserSessionRedisLifeTimeCalculatorPlugin`.
 
 ## Update the Security module  
 
@@ -208,7 +209,7 @@ composer require spryker-feature/spryker-core-back-office:dev-master
 
 2. Adjust `config/Shared/config_default.php`.
 
-    * Change:
+    - Change:
 
     ```php
     $config[AclConstants::ACL_DEFAULT_RULES] = [
@@ -249,6 +250,7 @@ Add `Spryker\Zed\Security\Communication\Plugin\Application\ZedSecurityApplicatio
     }
 
 ```
+
 4. Adjust `src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php`.
 
 Remove `AuthorizationEventDispatcherPlugin()` and `RedirectAfterLoginEventDispatcherPlugin()` from `getEventDispatcherPlugins()`.
@@ -334,7 +336,7 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 }
 ```
 
-8. Update `src/Pyz/Zed/UserPasswordReset/UserPasswordResetDependencyProvider.php` with the following code:   
+8. Update `src/Pyz/Zed/UserPasswordReset/UserPasswordResetDependencyProvider.php` with the following code:
 
 ```php
 <?php
@@ -403,7 +405,7 @@ composer update spryker/application --with-dependencies
 
 2. Adjust `tests/PyzTest/Zed/Console/_data/cli_sandbox/config/Shared/config_default.php`.
 
-    * Change:
+    - Change:
 
     ```php
     $config[AclConstants::ACL_DEFAULT_CREDENTIALS] = [
@@ -429,7 +431,8 @@ composer update spryker/application --with-dependencies
     ],
     ];
     ```
-    * Change:
+
+    - Change:
 
     ```php
     $config[AclConstants::ACL_DEFAULT_RULES] = [
@@ -471,7 +474,7 @@ composer update spryker/application --with-dependencies
     ],
     ```
 
-    * Change:
+    - Change:
 
     ```php
         [
@@ -495,7 +498,7 @@ composer update spryker/application --with-dependencies
     ];
     ```
 
-    * Change:
+    - Change:
 
     ```php
     $config[AclConstants::ACL_USER_RULE_WHITELIST] = [

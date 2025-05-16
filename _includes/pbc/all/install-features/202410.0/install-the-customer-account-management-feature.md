@@ -5,13 +5,13 @@ This document describes how to install the [Customer Account Management](/docs/p
 {% info_block errorBox "Included features" %}
 
 This guide expects the basic feature to be in place. This guide adds the following functionalities:
-* Redirect support for Customer login functionality.
-* Password set and reset console commands for customers.
-* Double opt-in for customer registration.
-* OAuth
-* Improved password security
-* Session validation
-* Audit logging
+- Redirect support for Customer login functionality.
+- Password set and reset console commands for customers.
+- Double opt-in for customer registration.
+- OAuth
+- Improved password security
+- Session validation
+- Audit logging
 
 {% endinfo_block %}
 
@@ -472,6 +472,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Client/Oauth/OauthDependencyProvider.php**
@@ -612,7 +613,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Verify the OAuth client has been added to the `spy_oauth_client` table by running the following SQL query:
- 
+
 ```sql
 SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
 ```
@@ -636,6 +637,7 @@ To verify `OauthRefreshTokenRemoverPlugin`, remove expired refresh tokens:
 ```bash
 console oauth:refresh-token:remove-expired
 ```
+
 Make sure all expired refresh tokens that are older than defined by the removal interval you've configured in `Spryker\Shared\Oauth\OauthConfig::getRefreshTokenRetentionInterval()` have been removed.
 
 {% endinfo_block %}
@@ -725,8 +727,8 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-* Make sure that the customer confirmation email is sent to the newly registered customers upon registration.
-* Make sure that the password restore email is sent to the customers who requested a password reset.
+- Make sure that the customer confirmation email is sent to the newly registered customers upon registration.
+- Make sure that the password restore email is sent to the customers who requested a password reset.
 
 {% endinfo_block %}
 
@@ -847,9 +849,9 @@ console setup:init-db
 
 Make sure the following applies:
 
-* The `spy_oauth_client` table is populated with the OAuth client or clients you've configured in `\Spryker\Shared\Oauth\OauthConstants::OAUTH_CLIENT_CONFIGURATION` of environment config files.
+- The `spy_oauth_client` table is populated with the OAuth client or clients you've configured in `\Spryker\Shared\Oauth\OauthConstants::OAUTH_CLIENT_CONFIGURATION` of environment config files.
 
-* The `spy_oauth_scope` tables are filled with customer scopes.
+- The `spy_oauth_scope` tables are filled with customer scopes.
 
 {% endinfo_block %}
 
@@ -873,6 +875,7 @@ Install the required modules using Composer:
 ```bash
 composer require spryker-feature/customer-account-management: "{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
@@ -1045,8 +1048,8 @@ console data:import glossary
 {% info_block warningBox "Verification" %}
 
 Make sure the following applies:
-* The `spy_glossary_key` table has new translation keys.
-* The `spy_glossary_translation` table has the corresponding translations.
+- The `spy_glossary_key` table has new translation keys.
+- The `spy_glossary_translation` table has the corresponding translations.
 
 {% endinfo_block %}
 

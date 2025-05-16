@@ -120,6 +120,7 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 
 }
 ```
+
 </details>
 
 <details><summary>src/Pyz/Glue/WishlistsRestApi/WishlistsRestApiDependencyProvider.php</summary>
@@ -145,6 +146,7 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
     }
 }
 ```
+
 </details>
 
 <details><summary>src/Pyz/Zed/WishlistsRestApi/WishlistsRestApiDependencyProvider.php</summary>
@@ -171,6 +173,7 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}

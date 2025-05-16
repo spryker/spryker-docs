@@ -80,8 +80,8 @@ Use `SprykerTest\Shared\Testify\Helper\DataCleanupHelper` instead to clean up da
 
 {% info_block infoBox %}
 
-* Spryker\Zed\Propel\Communication\Console\DatabaseExportConsole is deprecated.
-* Spryker\Zed\Propel\Communication\Console\DatabaseImportConsole is deprecated.
+- Spryker\Zed\Propel\Communication\Console\DatabaseExportConsole is deprecated.
+- Spryker\Zed\Propel\Communication\Console\DatabaseImportConsole is deprecated.
 
 {% endinfo_block %}
 

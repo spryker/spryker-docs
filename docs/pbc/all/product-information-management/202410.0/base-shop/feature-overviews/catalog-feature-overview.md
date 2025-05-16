@@ -26,8 +26,8 @@ With this information, we can build navigation and display product pages that dy
 Catalogs have full translation and SEO support in addition to other necessary dimensions such as stock level management and pricing.
 
 Building a custom category strategy lets you leverage your product information to create and manage product-based content in your store: stock levels and pricing. You can dynamically create category pages and include category filters. This will help you to display all your products on a page by category that lists all electronics in one place (with details and images). An advanced filter will provide customers with the option to further drill down by one of the following:
-* Sub-categories—for example, TVs, Cameras, and Mobile Phones for the electronics category.
-* Attributes—for example, size, color, and capacity.
+- Sub-categories—for example, TVs, Cameras, and Mobile Phones for the electronics category.
+- Attributes—for example, size, color, and capacity.
 
 To keep your catalog dynamic, you can include auto-generated pages based on categories and create templates for these dynamic pages. This lets you flexibly support the growth of your product range while maintaining an up-to-date catalog.
 

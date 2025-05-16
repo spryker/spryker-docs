@@ -33,9 +33,9 @@ To create a CMS page, follow the steps:
 8. Enter **NAME** and **URL** for each locale.
 9. Click the **SEO** tab.
 10. Optional: enter the following meta information:
-  * **META TITLE**
-  * **META KEYWORDS**
-  * **META DESCRIPTION**
+- **META TITLE**
+- **META KEYWORDS**
+- **META DESCRIPTION**
 
 11. To keep the changes, click **Save**.
     This opens the **Edit Placeholders: {PAGE_NAME}** page.
@@ -47,8 +47,8 @@ To create a CMS page, follow the steps:
 
 **Tips and tricks**
 
-* If **IS SEARCHABLE** is selected, and no **STORE RELATION** is selected, the CMS page will not be displayed and will not be searchable.
-* If **IS SEARCHABLE** is not selected, and one or more stores are selected for **STORE RELATION**, the CMS page will be shown but will not be searchable.
+- If **IS SEARCHABLE** is selected, and no **STORE RELATION** is selected, the CMS page will not be displayed and will not be searchable.
+- If **IS SEARCHABLE** is not selected, and one or more stores are selected for **STORE RELATION**, the CMS page will be shown but will not be searchable.
 
 ## Reference information: Create CMS pages
 
@@ -68,6 +68,6 @@ To create a CMS page, follow the steps:
 
 ## Next steps
 
-* [Add content items to CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html)
-* [Edit CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/edit-cms-pages.html)
-* [Preview CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/preview-cms-pages.html)
+- [Add content items to CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html)
+- [Edit CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/edit-cms-pages.html)
+- [Preview CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/preview-cms-pages.html)

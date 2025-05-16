@@ -339,6 +339,7 @@ Make sure that `product-offer-shipment-type` synchronization plugin works correc
 Make sure that when a product offer shipment type relation is created or edited through BAPI, it's exported to Redis accordingly.
 
 In Redis, make sure data is represented in the following format:
+
 ```json
 {
     "product_offer_reference": "offer1",
@@ -347,6 +348,7 @@ In Redis, make sure data is represented in the following format:
     ]
 }
 ```
+
 {% endinfo_block %}
 
 ### 4) Import shipment types for product offers
@@ -354,6 +356,7 @@ In Redis, make sure data is represented in the following format:
 1. Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/spryker/Bundles/ProductOfferShipmentTypeDataImport/data/import/product_offer_shipment_type.csv**
+
 ```csv
 product_offer_reference,shipment_type_key
 offer1,delivery
@@ -374,6 +377,7 @@ offer4,pickup
 | ProductOfferShipmentTypeDataImportPlugin | Imports product offer shipment types data from the specified file. | None          | \Spryker\Zed\ProductOfferShipmentTypeDataImport\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+
 ```php
 <?php
 
@@ -519,6 +523,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
         ];
     }
 ```
+
 </details>
 
 **src/Pyz/Client/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**

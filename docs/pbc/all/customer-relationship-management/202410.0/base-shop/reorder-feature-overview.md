@@ -18,7 +18,7 @@ redirect_from:
   - /docs/scos/user/features/202204.0/reorder-feature-overview.html
 ---
 
-One of the biggest factors that influences customer loyalty and persuades them to repeatedly buy from your shop is shopping convenience. Reorder feature simplifies the order placement process for your customers: it lets them reorder their previous orders in just one click. All the customers need to do is go to the **Order History** page in their _Customer Account_ and reorder either the entire order or individual items from it.
+One of the biggest factors that influences customer loyalty and persuades them to repeatedly buy from your shop is shopping convenience. Reorder feature simplifies the order placement process for your customers: it lets them reorder their previous orders in just one click. All the customers need to do is go to the **Order History** page in their *Customer Account* and reorder either the entire order or individual items from it.
 
 ![Reorder orders on the View order page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Reorder/reorder_view_orders.png)
 

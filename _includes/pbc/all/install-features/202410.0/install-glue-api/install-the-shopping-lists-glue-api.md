@@ -31,7 +31,7 @@ composer require spryker/shopping-lists-rest-api:"^1.0.0" --update-with-dependen
 Make sure that the following module is installed:
 
 | MODULE | EXPECTED DIRECTORY |
-| --- | --- |   
+| --- | --- |
 | ShoppingListsRestApi | vendor/spryker/shopping-lists-rest-api |
 
 {% endinfo_block %}
@@ -79,7 +79,7 @@ Make sure the following changes have been applied in transfer objects:
 Set up the following behavior.
 
 
-### Generate UUIDs for existing records that do not have IDs:
+### Generate UUIDs for existing records that do not have IDs
 
 Run the following commands:
 
@@ -170,13 +170,14 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
 
 To verify that the `ShoppingListsResourcePlugin` resource route plugin and the `ShoppingListItemByShoppingListResourceRelationshipPlugin`, `ConcreteProductBySkuResourceRelationshipPlugin` relationship plugins are set up correctly, make sure that following endpoint and relationships are available:
 
-* https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}?include=shopping-list-items,concrete-products
+- https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}?include=shopping-list-items,concrete-products
 
 Check the response:
 <details>
@@ -277,6 +278,7 @@ Check the response:
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -285,7 +287,7 @@ Check the response:
 
 To verify that the `ShoppingListItemsResourcePlugin` is set up correctly, make sure that the following endpoint is available:
 
-* https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items
+- https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items
 
 Post a request with the following body:
 
@@ -322,4 +324,5 @@ Check the response:
     }
 }
 ```
+
 {% endinfo_block %}

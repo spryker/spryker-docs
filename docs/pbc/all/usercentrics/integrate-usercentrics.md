@@ -19,10 +19,10 @@ You can configure the data processing services and the visual representation of 
 
 - The UserCentrics app requires the following Spryker modules:
 
-* `spryker/asset: ^1.6.0`
-* `spryker/asset-storage: ^1.2.1`
-* `spryker-shop/asset-widget: ^1.0.0`
-* `spryker-shop/shop-ui: ^1.71.0`
+- `spryker/asset: ^1.6.0`
+- `spryker/asset-storage: ^1.2.1`
+- `spryker-shop/asset-widget: ^1.0.0`
+- `spryker-shop/shop-ui: ^1.71.0`
 
 Make sure your installation meets these requirements.
 

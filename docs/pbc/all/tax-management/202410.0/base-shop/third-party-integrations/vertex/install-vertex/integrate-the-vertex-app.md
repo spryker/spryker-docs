@@ -316,7 +316,7 @@ class ProductOfferStockDependencyProvider extends SprykerProductOfferStockDepend
 
 ```
 
-## 5. Optional: Configure custom seller and buyer countries.
+## 5. Optional: Configure custom seller and buyer countries
 
 If a user doesn't choose a country during the checkout Address step, the system automatically usse the first country listed in the selected Spryker store. The same rule applies to sellers, except that the country is taken from the first warehouse address of a product stock.
 
@@ -410,4 +410,5 @@ The following table reflects the mapping of the Spryker Quote and Order transfer
 
 
 ## Next step
+
 [Configure Vertex in the Back Office](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html)

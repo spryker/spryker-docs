@@ -28,8 +28,8 @@ This document describes the `payment_method_store.csv` file to configure Payment
 
 ## Import file dependencies
 
-* [payment_method.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/import-and-export-data/import-file-details-payment-method.csv.html)
-* *stores.php* configuration file of the demo shop PHP project
+- [payment_method.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/import-and-export-data/import-file-details-payment-method.csv.html)
+- *stores.php* configuration file of the demo shop PHP project
 
 ## Import file parameters
 

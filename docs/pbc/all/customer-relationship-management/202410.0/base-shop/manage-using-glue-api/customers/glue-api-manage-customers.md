@@ -36,11 +36,11 @@ The Customer API allows creating customers and manage their account data. This i
 
 In your development, these resources can help you:
 
-* Retrieve relevant customer information. for any page where it's needed.
-* Retrieve customer subscriptions to availability notifications.
-* Enable customer registration.
-* Allow customer login and authentication.
-* Enrich customer profiles with additional data such as addresses.
+- Retrieve relevant customer information. for any page where it's needed.
+- Retrieve customer subscriptions to availability notifications.
+- Enable customer registration.
+- Allow customer login and authentication.
+- Enrich customer profiles with additional data such as addresses.
 
 ## Installation
 
@@ -95,6 +95,7 @@ Request sample: retrieve customers
     }
 }
 ```
+
 </details>
 
 {% include /pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md -->
@@ -148,6 +149,7 @@ Request sample: Retrieve a customer
 		}
 	}
 ```
+
 </details>
 
 {% include /pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md -->
@@ -210,6 +212,7 @@ Request sample: edit a customer
 		}
 	}
 ```
+
 </details>
 
 {% include /pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md -->
@@ -291,6 +294,7 @@ Request sample: retrieve subscriptions to availability notifications
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -326,5 +330,5 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ## Next steps
 
-* [Authenticate as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html)
-* [Manage customer passwords](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html)
+- [Authenticate as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html)
+- [Manage customer passwords](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html)

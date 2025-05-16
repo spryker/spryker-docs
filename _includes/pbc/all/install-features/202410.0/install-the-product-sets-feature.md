@@ -13,6 +13,7 @@ composer require spryker/product-set spryker/product-set-collector spryker/produ
 
 2. If you want to enable the Product Sets search powered by Elasticsearch, install the `spryker/search-elasticsearch` module:
 3.
+
 ```bash
 composer require spryker/search-elasticsearch
 ```
@@ -22,6 +23,7 @@ composer require spryker/search-elasticsearch
 ```bash
 vendor/bin/console propel:diff
 ```
+
 Propel should generate a migration file with the changes.
 
 4. Apply the database changes:
@@ -39,20 +41,20 @@ vendor/bin/console propel:model:build
 {% info_block warningBox "Verification" %}
 
 Make sure that:
-* New classes have been added to `\Orm\Zed\ProductSet\Persistence`.
-* They extend the base classes from the Spryker core. For example:
+- New classes have been added to `\Orm\Zed\ProductSet\Persistence`.
+- They extend the base classes from the Spryker core. For example:
 
-    * `\Orm\Zed\ProductSet\Persistence\SpyProductSet` extends `\Spryker\Zed\ProductSet\Persistence\Propel\AbstractSpyProductSet`
+  - `\Orm\Zed\ProductSet\Persistence\SpyProductSet` extends `\Spryker\Zed\ProductSet\Persistence\Propel\AbstractSpyProductSet`
 
-    * `\Orm\Zed\ProductSet\Persistence\SpyProductSetData` extends `\Spryker\Zed\ProductSet\Persistence\Propel\AbstractSpyProductSetData`
+  - `\Orm\Zed\ProductSet\Persistence\SpyProductSetData` extends `\Spryker\Zed\ProductSet\Persistence\Propel\AbstractSpyProductSetData`
 
-    * `\Orm\Zed\ProductSet\Persistence\SpyProductAbstractSet` extends `\Spryker\Zed\ProductSet\Persistence\Propel\AbstractSpyProductAbstractSet`
+  - `\Orm\Zed\ProductSet\Persistence\SpyProductAbstractSet` extends `\Spryker\Zed\ProductSet\Persistence\Propel\AbstractSpyProductAbstractSet`
 
-    * `\Orm\Zed\ProductSet\Persistence\SpyProductSetQuery` extends `\Spryker\Zed\ProductSet\Persistence\Propel\AbstractSpyProductSetQuery`
+  - `\Orm\Zed\ProductSet\Persistence\SpyProductSetQuery` extends `\Spryker\Zed\ProductSet\Persistence\Propel\AbstractSpyProductSetQuery`
 
-    * `\Orm\Zed\ProductSet\Persistence\SpyProductSetDataQuery` extends `\Spryker\Zed\ProductSet\Persistence\Propel\AbstractSpyProductSetDataQuery`
+  - `\Orm\Zed\ProductSet\Persistence\SpyProductSetDataQuery` extends `\Spryker\Zed\ProductSet\Persistence\Propel\AbstractSpyProductSetDataQuery`
 
-    * `\Orm\Zed\ProductSet\Persistence\SpyProductAbstractSetQuery` extends `\Spryker\Zed\ProductSet\Persistence\Propel\AbstractSpyProductAbstractSetQuery`
+  - `\Orm\Zed\ProductSet\Persistence\SpyProductAbstractSetQuery` extends `\Spryker\Zed\ProductSet\Persistence\Propel\AbstractSpyProductAbstractSetQuery`
 
 {% endinfo_block %}
 

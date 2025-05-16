@@ -145,8 +145,8 @@ In this example, EU region has DE and AT stores. US region has a US store. Dynam
 ### Store context in different applications with Dynamic Multistore
 
 All the applications work with the several stores within one region with the following differences:
-* Back Office and Merchant Portal operate with data from all the stores within a region and don't require a store context.
-* Storefront, GlueStorefront, and Glue require a store context and operate within only one provided store. If a store isn't provided, the default one is used.
+- Back Office and Merchant Portal operate with data from all the stores within a region and don't require a store context.
+- Storefront, GlueStorefront, and Glue require a store context and operate within only one provided store. If a store isn't provided, the default one is used.
 
 ### Cloud infrastructure differences
 
@@ -209,6 +209,7 @@ regions:
         session:
           namespace: 4
 ```
+
 DMS on:
 
 ```yaml

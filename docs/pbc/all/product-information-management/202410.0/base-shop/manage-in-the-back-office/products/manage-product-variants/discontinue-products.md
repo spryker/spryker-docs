@@ -75,4 +75,4 @@ You will discontinue this product variant and set up other products to be displa
 
 ## Next steps
 
-Review the other articles in the _Products_ section to know more about product management.
+Review the other articles in the *Products* section to know more about product management.

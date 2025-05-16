@@ -17,8 +17,8 @@ To install Spryker on Windows, follow these steps:
 
 Install the following applications:
 
-* [Ubuntu](https://apps.microsoft.com/detail/9pdxgncfsczv)
-* [Docker](https://www.docker.com/)
+- [Ubuntu](https://apps.microsoft.com/detail/9pdxgncfsczv)
+- [Docker](https://www.docker.com/)
 
 
 ## 1. Clone the Demo Shop of your choice

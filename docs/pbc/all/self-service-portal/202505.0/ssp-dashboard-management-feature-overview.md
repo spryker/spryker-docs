@@ -13,7 +13,7 @@ Self-Service Portal is currently running under an Early Access Release. Early Ac
 {% endinfo_block %}
 
 
-The Dashboard provides company users with a consolidated view of key metrics, assets, inquiries, services, and other relevant information. 
+The Dashboard provides company users with a consolidated view of key metrics, assets, inquiries, services, and other relevant information.
 
 Dashboard access is role-based, meaning each user can see the data they're authorized to access.
 

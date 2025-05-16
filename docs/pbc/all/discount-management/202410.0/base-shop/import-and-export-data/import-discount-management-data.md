@@ -18,10 +18,10 @@ redirect_from:
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Discount Management PBC:
 
-* [discount.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount.csv.html): allows you to import general information about the discounts and their attributes.
-* [discount_amount.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount-amount.csv.html):  allows you to import data used to set the values of the discounts imported with *discount.csv*.
-* [discount_store.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount-store.csv.html): allows you to link the discounts with the stores.
-* [discount_voucher.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount-voucher.csv.html) allows you to import information about vouchers.
+- [discount.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount.csv.html): allows you to import general information about the discounts and their attributes.
+- [discount_amount.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount-amount.csv.html):  allows you to import data used to set the values of the discounts imported with *discount.csv*.
+- [discount_store.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount-store.csv.html): allows you to link the discounts with the stores.
+- [discount_voucher.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount-voucher.csv.html) allows you to import information about vouchers.
 
 The following table provides details about Discount Management data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 

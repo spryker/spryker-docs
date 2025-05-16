@@ -21,8 +21,8 @@ When merging without a review, we recommend building the docs locally and checki
 
 Add the following labels to the PR:
 
-* **Updated**: because you can merge PRs with updated and not new docs.
-* **Bypassed TW Review**: this lets us track and retrospectively review such PRs.
+- **Updated**: because you can merge PRs with updated and not new docs.
+- **Bypassed TW Review**: this lets us track and retrospectively review such PRs.
 
 ## Fix CI
 
@@ -49,17 +49,17 @@ In the context of fixing broken links, you are going to deal with internal and e
 #### Fixing external links
 
 For external links, there is a high chance for false positives. So, when a check fails because of an external link, check if it's available by accessing the link in your browser. If the page is available, you can consider it a false positive and ignore it. If the link is not available, there are a few things to do:
-* If you know it's a temporary bug that's going to be resolved within a few days, ignore the link.
-* If it's a 404, check if the page is available at another location on the website.
-* If the website is completely down or broken, find an alternative source of information.
-* If the cause of the issue is unclear, and there are no alternative sources of information, comment out or remove the link. Make sure to update the paragraph to retain the context of the information without the link being available.
+- If you know it's a temporary bug that's going to be resolved within a few days, ignore the link.
+- If it's a 404, check if the page is available at another location on the website.
+- If the website is completely down or broken, find an alternative source of information.
+- If the cause of the issue is unclear, and there are no alternative sources of information, comment out or remove the link. Make sure to update the paragraph to retain the context of the information without the link being available.
 
 #### Fixing internal links
 
 For fixing internal links, you need to understand their structure:
 
-* Non-versioned link example: `/docs/about/all/about-the-docs/run-the-docs-locally.html`.
-* Versioned link example: `/docs/dg/dev/frontend-development/{{site.version}}/create-angular-modules.html`
+- Non-versioned link example: `/docs/about/all/about-the-docs/run-the-docs-locally.html`.
+- Versioned link example: `/docs/dg/dev/frontend-development/{{site.version}}/create-angular-modules.html`
 
 If you have a broken link, the easiest way to fix it's as follows:
 1. Copy the relative path to the target document, starting from `docs`: `docs/dg/dev/frontend-development/202404.0/create-angular-modules.md`.

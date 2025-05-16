@@ -30,9 +30,9 @@ A development strategy is the approach you follow when customizing a project. Wh
 
 To keep your project upgradable, we recommend using the following development strategies:
 
-* Configuration
-* Plug and play
-* Project modules
+- Configuration
+- Plug and play
+- Project modules
 
 For more information about these strategies and how they affect upgradability, see [Development strategies](/docs/dg/dev/backend-development/extend-spryker/development-strategies.html).
 
@@ -49,9 +49,9 @@ The manifest files cover a list of the ways code changes can be done.
 
 To ensure the successful delivery of Spryker updates, we recommend using the following extension points:
 
-* [Plugins registration](/docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html)
-* [Event subscribers registration](/docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html)
-* [Modules configuration](/docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/modules-configuration.html)
+- [Plugins registration](/docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html)
+- [Event subscribers registration](/docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html)
+- [Modules configuration](/docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/modules-configuration.html)
 
 {% info_block infoBox "" %}
 

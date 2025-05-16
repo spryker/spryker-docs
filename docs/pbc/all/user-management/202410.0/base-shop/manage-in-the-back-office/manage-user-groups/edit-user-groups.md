@@ -25,9 +25,9 @@ Review the [reference information](#reference-information-edit-user-groups) befo
 
 1. Next to the group you want to edit, click **Edit**.
 2. On the **Edit Group** page, do any of the following:
-    * Update the **TITLE**.
-    * Remove one or more **ASSIGNED ROLES** from the group by clicking **x** next to the groups you want to remove.
-    * Select one or more roles to assign.  
+    - Update the **TITLE**.
+    - Remove one or more **ASSIGNED ROLES** from the group by clicking **x** next to the groups you want to remove.
+    - Select one or more roles to assign.  
 3. Click **Save**.
 
 To de-assign a user from the group, in the **Users** section, click **Delete** next to the user you want to deassign.

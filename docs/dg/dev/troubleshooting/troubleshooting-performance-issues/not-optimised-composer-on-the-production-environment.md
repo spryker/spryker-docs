@@ -24,7 +24,7 @@ As can be seen, there are many *file_exists* checks and *findFilewithExtension* 
 
 Optimize the Composer autoloader. Follow the [general performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#opcache-activation) and [Composer guidelines](https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-1-class-map-generation).
 
-For example, you can run the `dump-autoload` command with `-o ` or `--optimize`.
+For example, you can run the `dump-autoload` command with `-o` or `--optimize`.
 
 After running the command defined in the guidelines, the profile can look like this:
 

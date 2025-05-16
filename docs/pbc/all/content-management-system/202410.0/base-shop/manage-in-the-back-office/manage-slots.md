@@ -18,10 +18,10 @@ related:
 This topic describes how to manage slots.
 
 You can:
-* Activate or deactivate (depending on the current status) slots by clicking respective buttons in the *Actions* column in *List of Slots for [Name] Template*.
-* Assign CMS blocks to slots by selecting them from the drop-down menu in *List of Blocks for [Name] Slot*.
-* Move up, move down, delete (remove the block assignment) and view CMS blocks by clicking respective buttons in *List of Blocks for [Name] Slot*.
-* Select the Storefront pages in which CMS blocks will be displayed in *List of Blocks for [Name] Slot*.
+- Activate or deactivate (depending on the current status) slots by clicking respective buttons in the *Actions* column in *List of Slots for [Name] Template*.
+- Assign CMS blocks to slots by selecting them from the drop-down menu in *List of Blocks for [Name] Slot*.
+- Move up, move down, delete (remove the block assignment) and view CMS blocks by clicking respective buttons in *List of Blocks for [Name] Slot*.
+- Select the Storefront pages in which CMS blocks will be displayed in *List of Blocks for [Name] Slot*.
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ To activate a slot, click **Activate** in the *Actions* column in the *List of S
 
 To deactivate a slot, click **Deactivate** in the *Actions* column in the *List of Slots for [Name] Template* section. This will change the status to *Inactive*. The content of this slot will be removed from the corresponding Storefront pages.
 
-### Reference information: Activating and deactivating slots:
+### Reference information: Activating and deactivating slots
 
 In the *List of Slots for [name] Template* section, you see the following:
 
@@ -67,11 +67,11 @@ Repeat step 2 for each CMS block that you want to assign.
 
 {% info_block infoBox %}
 
-* The **+Add** button is not active until a CMS block is selected.
-* In the drop-down menu, start typing the name of a CMS block to filter the list.
-* You can only add one CMS block at a time. When you click on a CMS block in the drop-down menu to select it, the drop-down menu closes with the selected CMS Block shown in the drop-down field. If you do not click  **+Add** and select another CMS block, the previous CMS Block is replaced with the new one. If you click **+Add** after replacing one CMS block with another, only the last selected CMS block is added.
-* Newly added CMS blocks are placed on top of *List of Blocks for [Name] Slot*.
-* You can add an inactive CMS block to a slot. The content of the inactive CMS block won't be displayed until the CMS block is activated.
+- The **+Add** button is not active until a CMS block is selected.
+- In the drop-down menu, start typing the name of a CMS block to filter the list.
+- You can only add one CMS block at a time. When you click on a CMS block in the drop-down menu to select it, the drop-down menu closes with the selected CMS Block shown in the drop-down field. If you do not click  **+Add** and select another CMS block, the previous CMS Block is replaced with the new one. If you click **+Add** after replacing one CMS block with another, only the last selected CMS block is added.
+- Newly added CMS blocks are placed on top of *List of Blocks for [Name] Slot*.
+- You can add an inactive CMS block to a slot. The content of the inactive CMS block won't be displayed until the CMS block is activated.
 
 {% endinfo_block %}
 
@@ -91,9 +91,9 @@ In the *List of Templates* section, you see the following:
 | Number of Slots | Number of slots in this template. |
 
 In this section, you can:
-* Sort templates by ID and Name.
-* Filter templates by ID, Name, and Description.
-* Filter slots displayed in the *List of Slots for [name] Template* section by templates.
+- Sort templates by ID and Name.
+- Filter templates by ID, Name, and Description.
+- Filter slots displayed in the *List of Slots for [name] Template* section by templates.
 
 In the *List of Slots for [Name] Template* section, you see the following:
 
@@ -107,9 +107,9 @@ In the *List of Slots for [Name] Template* section, you see the following:
 | Actions | Set of actions that can be performed with a Slot. |
 
 In this section, you can:
-* Sort slots by ID, Name, Content Provider and Status.
-* Filter slots by ID, Name, Description, and Content Provider.
-* Filter CMS blocks displayed in the *List of Blocks for [name] Slot* section by slots.
+- Sort slots by ID, Name, Content Provider and Status.
+- Filter slots by ID, Name, Description, and Content Provider.
+- Filter CMS blocks displayed in the *List of Blocks for [name] Slot* section by slots.
 
 {% info_block infoBox "Info" %}
 

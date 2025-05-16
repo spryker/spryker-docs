@@ -21,16 +21,16 @@ To avoid unexpected downtime and data loss, perform and test *all* of the follow
 
 
 1. Replace `StoreClient::getCurrentStore()` and `StoreFacade::getCurrentStore()` methods with `StoreStorageClient:getStoreNames()`, `StoreStorageClient::findStoreByName()`, or `StoreFacade::getStoreCollection()` in the following:
-  * Back Office
-  * Merchant Portal
-  * Console Commands
-  * Gateway
-  * BackendAPI
+- Back Office
+- Merchant Portal
+- Console Commands
+- Gateway
+- BackendAPI
 
 2. Update custom console commands to meet the following rules:
-  - `Store(Facade|Client)::getCurrentStore()` isn't used in the code a console command executes.
-  - All store-aware commands implement `Spryker\Zed\Kernel\Communication\Console\StoreAwareConsole` and execute actions for a specific store if a store parameter is provided; if not provided, actions are executed for all the stores in the region.
-  - Optional: We recommend using the `--store` parameter instead of `APPLICATION_STORE` env variable; both methods are supported.
+- `Store(Facade|Client)::getCurrentStore()` isn't used in the code a console command executes.
+- All store-aware commands implement `Spryker\Zed\Kernel\Communication\Console\StoreAwareConsole` and execute actions for a specific store if a store parameter is provided; if not provided, actions are executed for all the stores in the region.
+- Optional: We recommend using the `--store` parameter instead of `APPLICATION_STORE` env variable; both methods are supported.
 
 3. After enabling DMS, the basic domain structure will change from store to region for all the applications. For example, `https://yves.de.mysprykershop.com` will change to `https://yves.eu.mysprykershop.com`. To prevent negative SEO effects, set up the needed redirects.
 4. DMS changes the structure of RabbitMQ messages. When you're ready for the migration, wait for all the remaining messages in the queue to be processed. When the queue is empty, enable the maintenance mode.
@@ -39,6 +39,7 @@ The downtime associated with the maintenance mode is limited to the deployment t
 5. Update AWS deployment files to DMS mode using the example:
 
 Original environment variables section:
+
 ```yaml
 SPRYKER_HOOK_BEFORE_DEPLOY: 'vendor/bin/install -r pre-deploy.dynamic-store-off -vvv'
 SPRYKER_HOOK_AFTER_DEPLOY: 'true'
@@ -60,6 +61,7 @@ SPRYKER_YVES_HOST_EU: yves.eu.{{DOMAIN_ZONE}}
 ```
 
 Original regions section:
+
 ```yaml
 regions:
   stores:
@@ -130,6 +132,7 @@ To avoid unexpected downtime and data loss, perform and test *all* of the follow
 3. Revert changes in deploy files to disable DMS:
 
 Original environment variables section:
+
 ```yaml
 SPRYKER_HOOK_BEFORE_DEPLOY: 'vendor/bin/install -r pre-deploy -vvv'
 SPRYKER_HOOK_AFTER_DEPLOY: 'true'
@@ -138,7 +141,9 @@ SPRYKER_HOOK_DESTRUCTIVE_INSTALL: 'vendor/bin/install -r destructive --no-ansi -
 SPRYKER_DYNAMIC_STORE_MODE: true
 SPRYKER_YVES_HOST_EU: yves.eu.{{DOMAIN_ZONE}}
 ```
+
 Updated environment variables section:
+
 ```yaml
 SPRYKER_HOOK_BEFORE_DEPLOY: 'vendor/bin/install -r pre-deploy.dynamic-store-off -vvv'
 SPRYKER_HOOK_AFTER_DEPLOY: 'true'
@@ -149,6 +154,7 @@ SPRYKER_YVES_HOST_AT: at.{{DOMAIN_ZONE}}
 ```
 
 Original regions section:
+
 ```yaml
 regions:
   broker:
@@ -160,6 +166,7 @@ regions:
 ```
 
 Updated regions section:
+
 ```yaml
 regions:
   stores:

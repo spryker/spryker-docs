@@ -18,22 +18,22 @@ High performance in E-commerce is our daily bread - yours too? Econda collects b
 
 YOUR ADVANTAGES:
 
-* Spryker Industry Partner – interface to Spryker
-* Data ownership with customers, TÜV certified data protection, according to the EU data protection regulations (in force as of 05/2018) and eprivacy regulation
-* Web and app data acquisitions, Tag Management
-* Cross-channel and cross-device tracking, analyses and personalization
-* Data imports and exports from third party systems with automated matching
-* All in real time: analyses, recommendations and personalization
-* Item-2-item recommendations, thanks to the most innovative data mining and machine learning process (up to 25% of turnover share with good recommendations)
-* Personalization and individualization with the very latest KI methods (up to 40% increase in turnover share, an increase of up to 800% in mailing success.)
+- Spryker Industry Partner – interface to Spryker
+- Data ownership with customers, TÜV certified data protection, according to the EU data protection regulations (in force as of 05/2018) and eprivacy regulation
+- Web and app data acquisitions, Tag Management
+- Cross-channel and cross-device tracking, analyses and personalization
+- Data imports and exports from third party systems with automated matching
+- All in real time: analyses, recommendations and personalization
+- Item-2-item recommendations, thanks to the most innovative data mining and machine learning process (up to 25% of turnover share with good recommendations)
+- Personalization and individualization with the very latest KI methods (up to 40% increase in turnover share, an increase of up to 800% in mailing success.)
 
 ## Related Developer guides
 
-* [Installing Econda](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/install-econda.html)
-* [Integrating Econda](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/integrate-econda.html)
-* [Integrating Econda cross-selling](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/integrate-econda-cross-selling.html)
-* [Adding the Econda tracking code](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/add-the-econda-tracking-code.html)
-* [Exporting Econda data](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/export-econda-data.html)
+- [Installing Econda](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/install-econda.html)
+- [Integrating Econda](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/integrate-econda.html)
+- [Integrating Econda cross-selling](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/integrate-econda-cross-selling.html)
+- [Adding the Econda tracking code](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/add-the-econda-tracking-code.html)
+- [Exporting Econda data](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/export-econda-data.html)
 
 
 

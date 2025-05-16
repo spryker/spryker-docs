@@ -41,7 +41,7 @@ Review the [reference information](#reference-information-edit-general-settings-
     4. For **PRICES**, enter needed prices for the option.
 6. Repeat step 5 until you add the needed options.
 7. In the **Translation** section, enter a **GROUP NAME** per locale.
-8. Enter an **OPTION NAME** per locale.     
+8. Enter an **OPTION NAME** per locale.
 9. Click **Save**.
     The page refreshes with a success message displayed.
 

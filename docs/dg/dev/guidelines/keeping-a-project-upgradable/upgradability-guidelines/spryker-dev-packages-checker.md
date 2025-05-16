@@ -16,6 +16,7 @@ Projects contain the Spryker packages dependencies in the `require` section of t
 ## Example of code that causes the evaluator error
 
 composer.json
+
 ```json
 {
     "name": "spryker-shop/b2b-demo-shop",

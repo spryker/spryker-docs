@@ -16,8 +16,8 @@ This document explains how to limit the memory usage of this process.
 ## Prerequisites
 
 Ensure that you have the latest versions:
-* Windows 10 or Windows 11
-* Docker for Windows
+- Windows 10 or Windows 11
+- Docker for Windows
 
 ## Limit the memory usage of VMmem
 

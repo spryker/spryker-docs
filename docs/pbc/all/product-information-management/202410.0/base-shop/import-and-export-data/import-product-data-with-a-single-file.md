@@ -12,9 +12,9 @@ redirect_from:
 
 Besides importing product-related data with multiple .csv files, like [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html), [product_abstract_store.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract-store.csv.html), [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html), [product_price.csv](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-product-price.csv.html), etc., you can use a single product data import file, which allows you to import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful if you:
 
-* Have different environments (production, staging, etc.), and you need to populate them all with the product data.
-* Frequently import product data.
-* Want to provide more autonomy to employees dealing with the administration of the products.
+- Have different environments (production, staging, etc.), and you need to populate them all with the product data.
+- Frequently import product data.
+- Want to provide more autonomy to employees dealing with the administration of the products.
 
 {% info_block warningBox "Prerequisites" %}
 
@@ -24,20 +24,21 @@ Before you can import all main product data, make sure that *combined_product* [
 
 To import combined product data via a single file, you need to:
 
-* Populate a [CSV file for product data import](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-product-data-with-a-single-file.html#single-csv-file-for-combined-product-data-import).
-* Prepare a [YML file](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-product-data-with-a-single-file.html#yml-configuration-file-for-product-data-import) with `data_entity` items for import.
-* Run a [console command](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-product-data-with-a-single-file.html#console-commands-for-product-data-import) for product data import.
+- Populate a [CSV file for product data import](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-product-data-with-a-single-file.html#single-csv-file-for-combined-product-data-import).
+- Prepare a [YML file](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-product-data-with-a-single-file.html#yml-configuration-file-for-product-data-import) with `data_entity` items for import.
+- Run a [console command](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-product-data-with-a-single-file.html#console-commands-for-product-data-import) for product data import.
 
 ## Single .csv file for combined product data import
+
 <a name="single-csv-file-for-combined-product-data-import"></a>
 
 The CSV file for the main product data import contains product-related data that you can import into your system. Check out the [template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Importing+Product+Data+With+a+Single+File/TEMPLATE+Product+import+with+single+file.csv) of the file for details on the data it contains.
 
 The headers in this file are prefixed with the names of the individual product-related import CSV files where they originally belong and contain field names that match those in the individual product import CSV files. The prefixes are separated from the field names by a dot, for example:
 
-* `product_abstract_store.store_name` - corresponds to the `store_name` field in the `product_abstract_store.csv` file
-* `product_abstract.category_key` - corresponds to the `category_key` field in the `product_abstract.csv` file
-* `product_concrete.is_quantity_splittable` -  corresponds to the `is_quantity_splittable` field in the `product_concrete.csv` file
+- `product_abstract_store.store_name` - corresponds to the `store_name` field in the `product_abstract_store.csv` file
+- `product_abstract.category_key` - corresponds to the `category_key` field in the `product_abstract.csv` file
+- `product_concrete.is_quantity_splittable` -  corresponds to the `is_quantity_splittable` field in the `product_concrete.csv` file
 
 The only exceptions are `abstract_sku` and `concrete_sku` headers that are not prefixed.
 
@@ -51,18 +52,18 @@ By default, the import CSV file resides in data/import/common/{STORE}/. As, for 
 
 If you import only abstract products, the following fields must be populated in the combined product data import file:
 
-* abstract_sku
-* product_abstract.category_key
-* product_abstract.url.{LOCALE}
+- abstract_sku
+- product_abstract.category_key
+- product_abstract.url.{LOCALE}
 
 For details on these and other product abstract-related fields, see [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html).
 
 If you import concrete products as well, the following fields are also mandatory:
 
-* concrete_sku
-* product.name.{LOCALE}
-* product.attribute_key_{NUMBER}
-* product.value_{NUMBER}
+- concrete_sku
+- product.name.{LOCALE}
+- product.attribute_key_{NUMBER}
+- product.value_{NUMBER}
 
 For details on these and other concrete product-related fields, see [File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html).
 
@@ -84,9 +85,9 @@ If you need to import other product data as well, for example, prices, images, e
 
 The combined product data import file contains three additional fields that are not available in individual product import files:
 
-* product.assigned_product_type
-* product_price.assigned_product_type
-* product_image.assigned_product_type
+- product.assigned_product_type
+- product_price.assigned_product_type
+- product_image.assigned_product_type
 
 These fields can have the following values: *abstract, concrete*, and *both* that indicate what product types you import the data for. For example, if you have set *both* for the `product.assigned_product_type` field, it means that data from all fields with prefix `product.` (for example, `product.name.{LOCALE}`, `product.attribute_key_{NUMBER}`) will be imported for both abstract and concrete products. Likewise, you can import data for fields with prefix `product., product_price.`, `product_image.` for just *abstract* or *concrete* products.
 
@@ -97,6 +98,7 @@ Depending on the product types you specified for the `product.assigned_product_t
 {% endinfo_block %}
 
 ## YML configuration file for product data import
+
 <a href="#yml-configuration-file-for-product-data-import"></a>
 
 The YML configuration file for product data import allows sequentially running importers for product data. This file can be used to import all product-related data sets, or just some of them. See [Console Commands for Product Data Import](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-product-data-with-a-single-file.html#console-commands-for-product-data-import) for details.

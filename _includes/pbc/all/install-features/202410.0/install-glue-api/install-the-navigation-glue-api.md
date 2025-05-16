@@ -14,7 +14,7 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} | 
+| Spryker Core | {{page.version}} |
 | Navigation | {{page.version}} |
 
 ### 1) Install the required modules
@@ -445,6 +445,7 @@ Make sure that the response contains `category-nodes` as a relationship and `cat
 	]
 }
 ```
+
 </details>
 
 {% endinfo_block %}

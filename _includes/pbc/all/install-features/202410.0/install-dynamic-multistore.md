@@ -45,7 +45,7 @@ Make sure the following modules have been installed:
 | CountryDataImport | vendor/spryker/country-data-import |
 | СountryGui | vendor/spryker/country-gui |
 | LocaleDataImport | vendor/spryker/locale-data-import |
-| LocaleGui | vendor/spryker/locale-gui |   
+| LocaleGui | vendor/spryker/locale-gui |
 | SecurityBlockerStorefrontCustomer  |spryker/security-blocker-storefront-customer |
 | StoreDataImport | vendor/spryker/store-data-import |
 | StoreGui | vendor/spryker/store-gui |
@@ -261,6 +261,7 @@ To preserve the availability of old links in search engines, we recommend making
 **config/Shared/config_default.php**
 
 Original configuration:
+
 ```php
 <?php
 
@@ -277,6 +278,7 @@ foreach ($rabbitConnections as $key => $connection) {
 ```
 
 Updated configuration:
+
 ```php
 $config[RabbitMqEnv::RABBITMQ_CONNECTIONS] = [];
 $connectionKeys = array_keys($rabbitConnections);
@@ -382,6 +384,7 @@ Run `vendor/bin/console queue:worker:start` and make sure RabbitMQ connection er
 With the dynamic store setup, commands for Jenkins are executed per region instead of per store. The command for Jenkins uses the `SPRYKER_CURRENT_REGION` variable instead of `APPLICATION_STORE`.
 
 1. In `config/Zed/cronjobs/jenkins.php`, remove the `$allStores` variable and its usage in the configuration of the jobs through the `stores` parameter. Example of updated job configuration:
+
 ```php
 $jobs[] = [
     'name' => 'job-name',
@@ -618,7 +621,7 @@ Make sure the following changes have been applied in transfer objects:
 
 ### 4) Configure export to Storage
 
-1.  Set up publisher plugins and trigger plugins:
+1. Set up publisher plugins and trigger plugins:
 
 | PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -739,7 +742,7 @@ Example expected data fragment:
 
 Import locale, store, and country data:
 
-1.  Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using our demo data:
 
 Example of locales configuration for the DE store:
 
@@ -748,6 +751,7 @@ Example of locales configuration for the DE store:
 |name        | ✓ | string | DE | Define store name. |
 
 **data/import/common/{REGION}/store.csv**
+
 ```csv
 name
 DE
@@ -760,6 +764,7 @@ AT
 |name        | ✓ |string | DE | Define store name. |
 
 **data/import/common/DE/locale_store.csv**
+
 ```csv
 locale_name,store_name
 en_US,DE
@@ -776,6 +781,7 @@ de_DE,DE
 Example of the default locale configuration for the DE store:
 
 **data/import/common/DE/default_locale_store.csv**
+
 ```
 locale_name,store_name
 en_US,DE
@@ -805,6 +811,7 @@ DE,FR
 | store_name |✓ |string | DE | Store name. |
 
 **data/import/common/DE/store_context.csv**
+
 ```csv
 store_name,application_context_collection
 DE,"[{""application"": null, ""timezone"": ""Europe/Berlin""}]"
@@ -821,16 +828,16 @@ DE,"[{""application"": null, ""timezone"": ""Europe/Berlin""}]"
 
 Make sure the following applies:
 
-*  For each `store_name` entry in the imported CSV files, a respective `name` entry has been added to the `spy_store` database table.
-*  For each `locale_name` entry in the imported CSV files, a respective `locale_name` entry has been added to the `spy_locale` database table.
+- For each `store_name` entry in the imported CSV files, a respective `name` entry has been added to the `spy_store` database table.
+- For each `locale_name` entry in the imported CSV files, a respective `locale_name` entry has been added to the `spy_locale` database table.
 
 {% endinfo_block %}
 
 
 2. Update the following import action files with the following action:
-    * `data/import/common/commerce_setup_import_config_{REGION\STORE}.yml`
-    * `data/import/local/full\_{REGION\STORE}.yml`
-    * `data/import/production/full\_{SPRYKER\STORE}.yml`
+    - `data/import/common/commerce_setup_import_config_{REGION\STORE}.yml`
+    - `data/import/local/full\_{REGION\STORE}.yml`
+    - `data/import/production/full\_{SPRYKER\STORE}.yml`
 
 ```yaml
 data_import:
@@ -1083,6 +1090,7 @@ Make sure `store` and `locale` metadata is provided with Zed requests.
 {% endinfo_block %}
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
 ```php
 <?php
 namespace Pyz\Zed\Console;
@@ -1363,7 +1371,7 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
 - Make sure the default locale ISO code is displayed on the Store view page.
 - Make sure the table with assigned locales is displayed on the Store view page.
 - Make sure the table with assigned countries is displayed on the Store view page.
-- Make sure the locale codes are displayed in the store table.   
+- Make sure the locale codes are displayed in the store table.
 - Make sure the countries are displayed in the store table.
 
 {% endinfo_block %}
@@ -1404,6 +1412,7 @@ Make sure the following modules have been installed:
 1. Append the glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
+
 ```csv
 store_widget.switcher.store,Store:,en_US
 store_widget.switcher.store,Shop:,de_DE

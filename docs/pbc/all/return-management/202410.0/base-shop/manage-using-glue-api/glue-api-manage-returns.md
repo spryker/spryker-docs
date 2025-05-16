@@ -16,15 +16,15 @@ related:
 ---
 
 The Return Management API allows developers to retrieve return information and create returns. The list of retrievable information includes:
-* Sales order items that a customer can return.
-* Returns per customer.
-* Predefined reasons stored in the database.
+- Sales order items that a customer can return.
+- Returns per customer.
+- Predefined reasons stored in the database.
 
 In your development, the API can help you:
-* View order details, including returnable or non-returnable items.
-* Create returns for the returnable items.
-* View return details of a specific customer.
-* Specify reasons for returning the sales order items.
+- View order details, including returnable or non-returnable items.
+- Create returns for the returnable items.
+- View return details of a specific customer.
+- Specify reasons for returning the sales order items.
 
 ## Installation
 
@@ -193,6 +193,7 @@ Request sample: create a return
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -326,6 +327,7 @@ Request sample: retrieve returns
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -477,6 +479,7 @@ Request sample: retrieve a return
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

@@ -105,9 +105,9 @@ The result should be 0 records.
 
 {% info_block infoBox "" %}
 
-* `SharedCartsResourceRoutePlugin` is a protected resource for the following requests: `POST`, `PATCH`, `DELETE`.
+- `SharedCartsResourceRoutePlugin` is a protected resource for the following requests: `POST`, `PATCH`, `DELETE`.
 
-* `CartPermissionGroupsResourceRoutePlugin` is a protected resource for the `GET` request.
+- `CartPermissionGroupsResourceRoutePlugin` is a protected resource for the `GET` request.
 
 For more details, see the `configure` function in [Resource Routing](/docs/dg/dev/glue-api/{{page.version}}/rest-api/glue-infrastructure.html).
 
@@ -394,7 +394,7 @@ To make sure that `SharedCartsResourceRoutePlugin` is installed correctly, check
 }
 ```
 
-</details>   
+</details>
 
 {% endinfo_block %}
 

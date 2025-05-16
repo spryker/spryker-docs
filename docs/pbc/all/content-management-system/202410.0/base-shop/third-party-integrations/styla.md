@@ -22,12 +22,12 @@ Styla is a content commerce suite that automatically designs content and makes i
 
 YOUR ADVANTAGES:
 
-* Design Automation
-* Shoppable Content
-* Unique brand experience all along customer journey
-* Seamless Commerce Integration
-* Plugin-based (fast Go-to-market)
-* Detailed analytics
+- Design Automation
+- Shoppable Content
+- Unique brand experience all along customer journey
+- Seamless Commerce Integration
+- Plugin-based (fast Go-to-market)
+- Detailed analytics
 
 ---
 

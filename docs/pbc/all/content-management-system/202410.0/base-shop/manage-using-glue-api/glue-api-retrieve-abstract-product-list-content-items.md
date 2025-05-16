@@ -67,6 +67,7 @@ To retrieve information about an abstract product list content item, send the re
     }
 }
 ```
+
 </details>
 
 <details>
@@ -206,6 +207,7 @@ To retrieve information about an abstract product list content item, send the re
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
@@ -231,7 +233,7 @@ To retrieve an Abstract Product List content item with its abstract products, yo
 
 Request sample: retrieve Abstract Product List with its abstract products
 
-` GET https://mysprykershop.com/content-product-abstract-lists/apl-1/abstract-products`
+`GET https://mysprykershop.com/content-product-abstract-lists/apl-1/abstract-products`
 
 ### Response
 

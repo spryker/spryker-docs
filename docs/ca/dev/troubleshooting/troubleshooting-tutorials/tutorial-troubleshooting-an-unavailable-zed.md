@@ -19,12 +19,12 @@ To troubleshoot this issue, you need to go through all the stages of information
 ## 1. Check logs
 
 Check front-end, gateway, and Zed logs described below. Filter log groups by the following:
-* `frontend`
-* `backgw`
-* `boffice`
-* `mportal`
-* `backapi`
-* `zed`
+- `frontend`
+- `backgw`
+- `boffice`
+- `mportal`
+- `backapi`
+- `zed`
 
 {% info_block warningBox "Troubleshooting error 504" %}
 
@@ -48,12 +48,12 @@ Check logs via Log groups:
 ## 2. Check multiple log groups at once
 
 Check front-end, gateway, and Zed logs described below. Select the log groups containing the following:
-* `frontend`
-* `backgw`
-* `boffice`
-* `mportal`
-* `backapi`
-* `zed`
+- `frontend`
+- `backgw`
+- `boffice`
+- `mportal`
+- `backapi`
+- `zed`
 
 Check logs via Logs Insights:
 
@@ -62,13 +62,13 @@ Check logs via Logs Insights:
 ## 3. Check ECS services and tasks
 
 Check the ECS services and tasks that are postfixed with the following:
-* Front-end: `frontend`
-* If gateway is deployed:
-  * `backgw`
-  * `boffice`
-  * `mportal`
-  * `backapi`
-* Zed: `zed`
+- Front-end: `frontend`
+- If gateway is deployed:
+  - `backgw`
+  - `boffice`
+  - `mportal`
+  - `backapi`
+- Zed: `zed`
 
 To check the services and tasks, do the following:
 

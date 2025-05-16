@@ -49,7 +49,7 @@ When running commands described in this document, use absolute paths. For exampl
 Follow the steps below to install and configure the required software with WSL1.
 
 
-### Install Docker Desktop    
+### Install Docker Desktop
 
 1. Download [Docker Desktop for Windows](https://download.docker.com/win/static/stable/x86_64/).
 
@@ -256,9 +256,9 @@ cd unison-2.51.2
 5. Compile and install Unison:
 
 ```bash
-$ make UISTYLE=text
-$ sudo cp src/unison /usr/local/bin/unison
-$ sudo cp src/unison-fsmonitor /usr/local/bin/unison-fsmonitor
+make UISTYLE=text
+sudo cp src/unison /usr/local/bin/unison
+sudo cp src/unison-fsmonitor /usr/local/bin/unison-fsmonitor
 ```
 
 You've installed and configured the required software.
@@ -268,6 +268,6 @@ You've installed and configured the required software.
 
 To choose an installation mode, see [Choose an installation mode](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html).
 If you've already selected an installation mode, follow one of the guides below:
-* [Install in Development mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-windows.html)
-* [Install in Demo mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html)
-* [Integrating Docker into existing projects](/docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html)
+- [Install in Development mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-windows.html)
+- [Install in Demo mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html)
+- [Integrating Docker into existing projects](/docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html)

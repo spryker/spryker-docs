@@ -22,8 +22,8 @@ This endpoint lets you manage shopping list items.
 ## Installation
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see these integration guides:
-* [Install the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
-* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+- [Install the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
+- [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 
 ## Add items to a shopping list
 
@@ -64,6 +64,7 @@ To add items to a shopping list, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -82,6 +83,7 @@ To add items to a shopping list, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -175,6 +177,7 @@ To add items to a shopping list, send the request:
     }
 }  
 ```
+
 </details>
 
 <details>
@@ -246,6 +249,7 @@ To add items to a shopping list, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -306,6 +310,7 @@ To add items to a shopping list, send the request:
     }
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-list-items-response-attributes.md -->
@@ -430,6 +435,7 @@ To change item quantity in a shopping list, send the request:
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -462,7 +468,8 @@ To change item quantity in a shopping list, send the request:
     }
 }
 ```
-</details>     
+
+</details>
 
 <details>
 <summary>Response sample: change item quantity in a shopping list with the details on concrete products.</summary>
@@ -529,6 +536,7 @@ To change item quantity in a shopping list, send the request:
 }
 
 ```
+
 </details>
 
 <details>
@@ -589,6 +597,7 @@ To change item quantity in a shopping list, send the request:
     }
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-list-items-response-attributes.md -->

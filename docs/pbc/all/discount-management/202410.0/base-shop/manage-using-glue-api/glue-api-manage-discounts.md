@@ -36,9 +36,9 @@ For detailed information on the modules that provide the API functionality and r
 
 You can do the following actions on the promotional items via API:
 
-* Retrieve the promotional items available for a cart.
-* Add any applicable promotional items to cart.
-* Remove the added promotional items from cart.
+- Retrieve the promotional items available for a cart.
+- Add any applicable promotional items to cart.
+- Remove the added promotional items from cart.
 
 ## Retrieving promotional items available for cart
 

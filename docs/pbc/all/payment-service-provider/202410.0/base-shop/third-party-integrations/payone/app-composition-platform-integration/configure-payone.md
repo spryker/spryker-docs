@@ -30,7 +30,7 @@ Once you have [integrated the Payone app](/docs/pbc/all/payment-service-provider
 2. Click **Payone**.
    This opens the Payone app details page.
 3. In the top right corner, click **Connect app**.
-   This displays a message about the successful connection of the app to your SCCOS. The Payone app's status changes to **Connection pending**.   
+   This displays a message about the successful connection of the app to your SCCOS. The Payone app's status changes to **Connection pending**.
 4. Go to [Payone](https://www.payone.com/DE-en) and obtain the credentials.
 5. Go back to your store's Back Office, to the Payone app details page.
 6. In the top right corner of the Payone app details page, click **Configure**.

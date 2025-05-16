@@ -18,14 +18,14 @@ When sharing media, use any convenient form of sharing: directly upload content 
 For images, any format is accepted.
 For animated content, MP4 is preferred.
 
-* For more guidelines, see [Google's guide to media](https://developers.google.com/style/images).
-* For instructions on adding diagrams, see [Add and edit diagrams](/docs/about/all/about-the-docs/contribute-to-the-docs/add-and-edit-diagrams-in-the-docs.html).
+- For more guidelines, see [Google's guide to media](https://developers.google.com/style/images).
+- For instructions on adding diagrams, see [Add and edit diagrams](/docs/about/all/about-the-docs/contribute-to-the-docs/add-and-edit-diagrams-in-the-docs.html).
 
 ## Add media to a PR
 
 1. Create a PR for the document you want to add media to using one of the following guides:
-  * [Edit the docs locally](/docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-locally.html)
-  * [Edit the docs using a web browser](/docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-using-a-web-browser.html)
+- [Edit the docs locally](/docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-locally.html)
+- [Edit the docs using a web browser](/docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-using-a-web-browser.html)
 
   In the document you are creating a PR for, make sure to add a few empty lines in the place where you want to add media to. We'll use these lines to add the code for displaying the media.
 

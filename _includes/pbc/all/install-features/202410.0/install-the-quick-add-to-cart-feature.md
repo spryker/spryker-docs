@@ -277,9 +277,9 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 Make sure that the following URLs are available on Yves:
 
-* `https://mysprykershop.com/quick-order`
-* `https://mysprykershop.com/en/quick-order`
-* `https://mysprykershop.com/de/quick-order`
+- `https://mysprykershop.com/quick-order`
+- `https://mysprykershop.com/en/quick-order`
+- `https://mysprykershop.com/de/quick-order`
 
 ... and for all other configured languages.
 
@@ -347,9 +347,9 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 
 Make the following checks at https://mysprykershop.com/quick-order:
 
-* `QuickOrderCsvFileTemplateStrategyPlugin` provides a template for CSV file uploading. Check if the link for CSV file template is displayed on the Quick Add To Cart page.
-* `QuickOrderCsvUploadedFileParserStrategyPlugin` is needed for CSV files parsing. Upload CSV file on the Quick Add To Cart page using the provided template and make sure that products appear in the Quick Add To Cart Page form afterward.
-* `QuickOrderCsvUploadedFileValidatorStrategyPlugin` serves for CSV file validation. It checks header presence and validates mandatory columns depending on the header.
+- `QuickOrderCsvFileTemplateStrategyPlugin` provides a template for CSV file uploading. Check if the link for CSV file template is displayed on the Quick Add To Cart page.
+- `QuickOrderCsvUploadedFileParserStrategyPlugin` is needed for CSV files parsing. Upload CSV file on the Quick Add To Cart page using the provided template and make sure that products appear in the Quick Add To Cart Page form afterward.
+- `QuickOrderCsvUploadedFileValidatorStrategyPlugin` serves for CSV file validation. It checks header presence and validates mandatory columns depending on the header.
 
 {% endinfo_block %}
 

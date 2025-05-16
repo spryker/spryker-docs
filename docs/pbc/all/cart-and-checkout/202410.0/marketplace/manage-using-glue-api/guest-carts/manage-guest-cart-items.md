@@ -15,11 +15,11 @@ This endpoint lets you manage guest cart items.
 ## Installation
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
-* [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)
-* [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
-* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
-* [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
-* [Glue API: Marketplace Product Offers feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
+- [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)
+- [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
+- [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+- [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
+- [Glue API: Marketplace Product Offers feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
 
 
 ## Add items to a guest cart
@@ -33,8 +33,8 @@ To add items to a guest cart, send the request:
 
 {% info_block infoBox "Creating a guest cart" %}
 
-* If a guest cart does not exist for the current user, and you send a request to add items, the guest cart is created automatically. Otherwise, the items are added to the existing guest cart.
-* Guest users have one cart by default. You can optionally specify its ID by using the following endpoint. The information in this section is valid for both endpoints.
+- If a guest cart does not exist for the current user, and you send a request to add items, the guest cart is created automatically. Otherwise, the items are added to the existing guest cart.
+- Guest users have one cart by default. You can optionally specify its ID by using the following endpoint. The information in this section is valid for both endpoints.
 
 `POST` {% raw %}**/guest-carts/*{{guest_cart_id}}*/guest-cart-items**{% endraw %}
 
@@ -57,8 +57,8 @@ To add items to a guest cart, send the request:
 
 {% info_block infoBox "Included resources" %}
 
-* To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
-* To retrieve product measurement units, include `sales-units` and `product-measurement-units`.
+- To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
+- To retrieve product measurement units, include `sales-units` and `product-measurement-units`.
 
 {% endinfo_block %}
 
@@ -80,6 +80,7 @@ To add items to a guest cart, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -105,6 +106,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 <details>
@@ -123,6 +125,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 <details>
@@ -145,6 +148,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 <details>
@@ -163,6 +167,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 <details>
@@ -181,6 +186,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 
@@ -207,7 +213,8 @@ To add the promotional product to cart, make sure that the cart fulfills the car
         }
     }
 }
-```    
+```
+
 </details>
 
 
@@ -227,7 +234,8 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
   }
 }
-```    
+```
+
 </details>
 
 <details>
@@ -247,6 +255,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 <details>
@@ -266,6 +275,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 
@@ -277,7 +287,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 | idPromotionalItem | String |  | Unique identifier of a promotional item to add to the cart. |
 | salesUnit | Object |  | List of attributes defining the sales unit to be used for item amount calculation. |
 | salesUnit.id | Integer |  | Unique identifier of the sales units to calculate the item amount in. |
-| salesUnit.amount | Decimal |  | Amount of the product in the defined sales units. |    
+| salesUnit.amount | Decimal |  | Amount of the product in the defined sales units. |
 | productOptions | Array |  | List of attributes defining the product options to add to the cart. |
 | productOptions.sku | String |  | Unique identifier of the product option to add to the cart.  |
 | productOfferReference | String |Required when adding a product offer. |Unique identifier of the product offer to add to the cart. |
@@ -369,6 +379,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -691,6 +702,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 
@@ -810,6 +822,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 
@@ -1062,6 +1075,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1180,6 +1194,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1281,6 +1296,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1423,6 +1439,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1509,6 +1526,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 
@@ -1657,6 +1675,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 **General cart information**
@@ -1742,12 +1761,12 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 For the attributes of the included resources, see:
-* [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html#retrieve-a-guest-cart)
-* [Retrieve gift cards of guest users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html)
-* [Retrieve concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html)
-* [Retrieve abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html)
-* [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
-* [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
+- [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html#retrieve-a-guest-cart)
+- [Retrieve gift cards of guest users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html)
+- [Retrieve concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html)
+- [Retrieve abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html)
+- [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
+- [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
 
 ## Change item quantity in a guest cart
 
@@ -1776,15 +1795,15 @@ To change item quantity, send the request:
 
 {% info_block infoBox "Included resources" %}
 
-* To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
-* To retrieve product measurement units, include `sales-units` and `product-measurement units`
+- To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
+- To retrieve product measurement units, include `sales-units` and `product-measurement units`
 
 {% endinfo_block %}
 
 <details>
 <summary>Request sample: change item quantity in a guest cart</summary>
 
-`PATCH https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`    
+`PATCH https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
 
 ```json
 {
@@ -1797,6 +1816,7 @@ To change item quantity, send the request:
 	}
 }
 ```
+
 </details>
 
 

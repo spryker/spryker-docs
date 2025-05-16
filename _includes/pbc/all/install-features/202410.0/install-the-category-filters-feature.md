@@ -5,11 +5,12 @@
 Prepare your project to work with Category Filters:
 
 1. Require the Category Filters modules in your composer by running the following commands:
-   * `composer require spryker/product-category-filter`
-   * `composer require spryker/product-category-filter-collector`
-   * `composer require spryker/product-category-filter-gui`
+   - `composer require spryker/product-category-filter`
+   - `composer require spryker/product-category-filter-collector`
+   - `composer require spryker/product-category-filter-gui`
 
 2. Install the new database:
+
 ```shell
 vendor/bin/console propel:diff
 ```
@@ -17,11 +18,13 @@ vendor/bin/console propel:diff
 Propel generates a migration file with the changes.
 
 3. Apply the database changes:
+
 ```shell
 vendor/bin/console propel:migrate
 ```
 
 4. Generate ORM models:
+
 ```shell
 vendor/bin/console propel:model:build
 ```
@@ -32,12 +35,13 @@ This command generates some new classes in your project under the `\Orm\Zed\Prod
 
 Make sure that they extend the base classes from the Spryker core—for example:
 
-* `\Orm\Zed\ProductCategoryFilter\Persistence\SpyProductCategoryFilter` extends `\Spryker\Zed\ProductCategoryFilter\Persistence\Propel\AbstractSpyProductCategoryFilter`
-* `\Orm\Zed\ProductReview\Persistence\SpyProductCategoryFilterQuery` extends `\Spryker\Zed\ProductCategoryFilter\Persistence\Propel\AbstractSpyProductCategoryFilterQuery`
+- `\Orm\Zed\ProductCategoryFilter\Persistence\SpyProductCategoryFilter` extends `\Spryker\Zed\ProductCategoryFilter\Persistence\Propel\AbstractSpyProductCategoryFilter`
+- `\Orm\Zed\ProductReview\Persistence\SpyProductCategoryFilterQuery` extends `\Spryker\Zed\ProductCategoryFilter\Persistence\Propel\AbstractSpyProductCategoryFilterQuery`
 
 {% endinfo_block %}
 
 5. Generate the new transfer objects:
+
 ```shell
 vendor/bin/console transfer:generate
 ```
@@ -81,14 +85,17 @@ vendor/bin/console transfer:generate
         }
     }
 ```
+
 </details>
 
 7. Make sure the new Zed user interface assets are built:
+
 ```shell
 npm run zed
 ```
 
 8. Update Zed's navigation cache to show the new items for the Product Category Filter management user interface:
+
 ```shell
 vendor/bin/console application:build-navigation-cache
 ```

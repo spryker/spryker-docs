@@ -43,8 +43,8 @@ class MyBundleQueryContainer extends AbstractQueryContainer implements MyBundleQ
 ## Conventions for query containers
 
 These are conventions to follow:
-* All methods have the prefix `query*()`.
-* All public methods are exposed in the related interface—for example, `MyBundleQueryContainerInterface`.
-* Queries are returned unterminated, so that the user can add restrictions (limit, offset) and can choose how to terminate (`count()`, `find()`, `findAll()`).
-* Query containers do not access higher layers. So no usage of a facade here.
-* Query containers do not contain any logic which is not needed to build queries.
+- All methods have the prefix `query*()`.
+- All public methods are exposed in the related interface—for example, `MyBundleQueryContainerInterface`.
+- Queries are returned unterminated, so that the user can add restrictions (limit, offset) and can choose how to terminate (`count()`, `find()`, `findAll()`).
+- Query containers do not access higher layers. So no usage of a facade here.
+- Query containers do not contain any logic which is not needed to build queries.

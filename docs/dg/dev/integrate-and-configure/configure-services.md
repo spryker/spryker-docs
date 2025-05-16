@@ -224,12 +224,13 @@ docker/sdk up --build --data
 
 For more information, see the following documents:
 
-* [Configure Elasticsearch](/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
-* [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)—provides detailed information about Elasticsearch.
+- [Configure Elasticsearch](/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
+- [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)—provides detailed information about Elasticsearch.
 
 ### Configure Elasticsearch
 
 In `deploy.*.yml`, adjust the `services` section to open the port used for accessing Elasticsearch:
+
 ```yaml
 services:
     search:
@@ -275,6 +276,7 @@ echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 ### Configure RabbitMQ
 
 In `deploy.*.yml`, adjust the `services` section to open the port used for accessing RabbitMQ:
+
 ```yaml
 services:
     broker:
@@ -339,6 +341,7 @@ services:
 ```
 
 ## Redis GUI
+
 [Redis Commander](http://joeferner.github.io/redis-commander/) is a web management tool that provides a graphical user interface to access Redis databases and perform basic operations like view keys as a tree, view CRUD keys, or import and export databases.
 
 ### Configure Redis GUI
@@ -367,15 +370,15 @@ echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 [MailHog](https://github.com/mailhog/MailHog) is a mail catcher service that is used with Spryker in Docker for Demo and Development environments. Developers use this email testing tool to catch and show emails locally without an SMTP (Simple Mail Transfer Protocol) server.
 
 With the MailHog service, developers can do the following:
-* Configure an application to use MailHog for SMTP delivery.
-* View messages in the web UI or retrieve them via JSON API.
+- Configure an application to use MailHog for SMTP delivery.
+- View messages in the web UI or retrieve them via JSON API.
 
 {% info_block infoBox %}
 
 By default, the following applies:
 
-* `http://mail.demo-spryker.com/` is used to see incoming emails.
-* Login is not required.
+- `http://mail.demo-spryker.com/` is used to see incoming emails.
+- Login is not required.
 
 {% endinfo_block %}
 
@@ -488,10 +491,10 @@ The solution consists of a client and a server. The client is used to collect da
 
 ### Prerequisites
 
-* [New Relic license key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/): `NEWRELIC_LICENSE`
-* NewRelic account ID: `NEWRELIC_ACCOUNT_ID`
-* NewRelic insights key: `NEWRELIC_INSIGHTS_KEY`
-* The New Relic module.
+- [New Relic license key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/): `NEWRELIC_LICENSE`
+- NewRelic account ID: `NEWRELIC_ACCOUNT_ID`
+- NewRelic insights key: `NEWRELIC_INSIGHTS_KEY`
+- The New Relic module.
 
 ### Install the New Relic module
 
@@ -520,15 +523,15 @@ image:
 
 2. Push and deploy the changes using one of the following guides:
 
-  * [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
-  * [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
+- [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+- [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
 
 
 
 3. Submit an infrastructure change request via the [Support Portal](/docs/about/all/support/using-the-support-portal.html). Set up a Change Request for existing Parameter Store values and request your values to be set for the following parameters:
-  * NEWRELIC_LICENSE
-  * NEWRELIC_ACCOUNT_ID
-  * NEWRELIC_INSIGHTS_KEY
+- NEWRELIC_LICENSE
+- NEWRELIC_ACCOUNT_ID
+- NEWRELIC_INSIGHTS_KEY
 
 Once New Relic is enabled, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name setup in the configuration files.
 
@@ -641,9 +644,9 @@ class NewRelicMonitoringExtensionPlugin extends SprykerNewRelicMonitoringExtensi
 
 {% info_block infoBox %}
 
-* Some builds have the Monitoring service built into the Yves application. If `src/Pyz/Service/Monitoring/MonitoringDependencyProvider.php` does not exist, you may want to check `src/Pyz/Yves/Monitoring/`.
+- Some builds have the Monitoring service built into the Yves application. If `src/Pyz/Service/Monitoring/MonitoringDependencyProvider.php` does not exist, you may want to check `src/Pyz/Yves/Monitoring/`.
 
-* If the class is missing from the Monitoring service, create it.
+- If the class is missing from the Monitoring service, create it.
 
 
 {% endinfo_block %}
@@ -657,6 +660,7 @@ With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin(
 ### Track deployments
 
 To notify New Relic about new deployments, include the console command `\SprykerEco\Zed\NewRelic\Communication\Console\RecordDeploymentConsole` in `\Pyz\Zed\Console\ConsoleDependencyProvider` as follows:
+
 ```php
 namespace Pyz\Zed\Console;
 
@@ -686,6 +690,7 @@ From now on you can use the record deployment functionality built-in in the cons
 ```bash
 vendor/bin/console newrelic:record-deployment <AppName>
 ```
+
 where `AppName` corresponds to the preconfigured in NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY.
 For more details, see [Upgrade the Monitoring module](/docs/scos/dev/module-migration-guides/migration-guide-monitoring.html)
 

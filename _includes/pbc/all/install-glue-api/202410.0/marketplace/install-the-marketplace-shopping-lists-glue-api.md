@@ -110,6 +110,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -242,6 +243,7 @@ Response sample:
    ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}

@@ -19,8 +19,8 @@ This document describes the `product_abstract_store.csv` file to configure Produ
 
 ## Import file dependencies
 
-* [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
-* *stores.php* configuration file of the demo shop PHP project
+- [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
+- *stores.php* configuration file of the demo shop PHP project
 
 
 ## Import file parameters

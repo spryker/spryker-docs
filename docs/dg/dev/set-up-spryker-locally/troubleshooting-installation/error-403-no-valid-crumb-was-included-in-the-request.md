@@ -40,7 +40,7 @@ services:
   scheduler:
     csrf-protection-enabled: true
 ...
-```    
+```
 
 2. In the config file, enable Jenkins CSRF protection by defining the CSRF variable:
 

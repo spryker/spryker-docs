@@ -43,9 +43,9 @@ Product abstract card:
 
 **Product Details** page:
 
-* Holding the pointer over a color circle changes the abstract product image.
-* Once you stop Holding the pointer over a color circle, the image changes back to the image of the product you are viewing.
-* Clicking on a color circle redirects the shop user to the page of the corresponding abstract product.
+- Holding the pointer over a color circle changes the abstract product image.
+- Once you stop Holding the pointer over a color circle, the image changes back to the image of the product you are viewing.
+- Clicking on a color circle redirects the shop user to the page of the corresponding abstract product.
 
 
 ![Product group - product details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/feature-overviews/product-groups-feature-overview.md/product-group-product-details-page.mp4)
@@ -65,8 +65,8 @@ Only a developer can create product groups by [importing them](/docs/pbc/all/pro
 
 The feature has the following functional constraints which are going to be resolved in the future:
 
-* There is no user interface to manage product groups in the Back Office.
-* Products can only be grouped by the color attribute.
+- There is no user interface to manage product groups in the Back Office.
+- Products can only be grouped by the color attribute.
 
 ## Video tutorial
 

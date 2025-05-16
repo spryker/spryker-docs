@@ -43,6 +43,7 @@ Make sure the following modules have been installed:
 | AclConfig::getInstallerRules()                                 | The default ACL rules that are added to a respective database table after executing `setup:init-db`. | Pyz\Zed\Acl              |
 
 **config/Shared/config_default.php**
+
 ```php
 
 use Spryker\Shared\Acl\AclConstants;
@@ -149,10 +150,10 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the page is available: `https://mp.mysprykershop.com/agent-security-merchant-portal-gui/login`.
-* Enter incorrect login details for more than nine times within 900 seconds. Make sure this locks you out of the login page for 360 seconds.
-* Log in as a merchant agent into the Merchant Portal. Make sure you have access to `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users`.
-* Make sure Back Office users don't have access to `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users`.
+- Make sure the page is available: `https://mp.mysprykershop.com/agent-security-merchant-portal-gui/login`.
+- Enter incorrect login details for more than nine times within 900 seconds. Make sure this locks you out of the login page for 360 seconds.
+- Log in as a merchant agent into the Merchant Portal. Make sure you have access to `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users`.
+- Make sure Back Office users don't have access to `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users`.
 
 {% endinfo_block %}
 
@@ -166,6 +167,7 @@ console setup:init-db
 | AclConfig::getInstallerUsers()  | Default ACL groups for users.                                              | Pyz\Zed\Acl  |
 
 **src/Pyz/Zed/User/UserConfig.php**
+
 ```php
 <?php
 
@@ -196,6 +198,7 @@ class UserConfig extends SprykerUserConfig
 ```
 
 **src/Pyz/Zed/Acl/AclConfig.php**
+
 ```php
 <?php
 
@@ -328,6 +331,7 @@ If `SecurityDependencyProvider::getSecurityPlugins()` already contains plugins, 
 
 {% endinfo_block %}
 **src/Pyz/Zed/Security/SecurityDependencyProvider.php**
+
 ```php
 <?php
 
@@ -572,9 +576,9 @@ class UserMerchantPortalGuiDependencyProvider extends SprykerUserMerchantPortalG
 7. Log in with the login details of the user you've added the agent merchant role to.
     Make sure this opens `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users` and there is a **Merchant Users** table.
 
-* Make sure you can see and assist the users regardless of their status.
-* Make sure the **Assist User** button  isn't displayed for merchant users with the **root** role.
-* Make sure you can assist the users that have the **Assist User** button next to them.
+- Make sure you can see and assist the users regardless of their status.
+- Make sure the **Assist User** button  isn't displayed for merchant users with the **root** role.
+- Make sure you can assist the users that have the **Assist User** button next to them.
 
 {% endinfo_block %}
 

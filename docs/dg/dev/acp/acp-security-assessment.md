@@ -159,8 +159,8 @@ The diagram below demonstrates the security assessment procedure:
 
 - As soon as a review is cleared, an app is marked as approved, and a badge is displayed on the marketplace listing.
 - During subsequent full reviews (typically annually), the app will retain its badge while it's in the test cycles. Nevertheless, in the following scenarios, the badge will be removed, and customers notified of it:
-	- The app developer fails to respond to repeated requests for annual re-assessments.
-	- During the re-assessment,  the app fails repeatedly (about 5 times), and the app developer isn't able to fix the reported issues.
+ 	- The app developer fails to respond to repeated requests for annual re-assessments.
+ 	- During the re-assessment,  the app fails repeatedly (about 5 times), and the app developer isn't able to fix the reported issues.
 - At this time, customers can choose to look at an alternate application or work with the developer to remedy the issues.
 - Spryker can also decide to terminate the partner contract in such a scenario.
 

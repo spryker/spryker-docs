@@ -42,10 +42,10 @@ Make sure the following modules have been installed:
 
 1. Add one of the following QuickSight asset bundles to the project level, for example–to `src/Pyz/Zed/AmazonQuicksight/data/asset-bundle.zip`.
 Preconfigured asset bundles per demo shop:
-  - [B2B Marketplace](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2b-mp-asset-bundle.zip)
-  - [B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2b-asset-bundle.zip)
-  - [B2C Marketplace](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-mp-asset-bundle.zip)
-  - [B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-asset-bundle.zip)
+- [B2B Marketplace](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2b-mp-asset-bundle.zip)
+- [B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2b-asset-bundle.zip)
+- [B2C Marketplace](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-mp-asset-bundle.zip)
+- [B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/install-amazon-quicksight.md/b2c-asset-bundle.zip)
 
 {% info_block infoBox "SELECT statements in custom SQL queries" %}
 
@@ -138,6 +138,7 @@ class AmazonQuicksightConfig extends SprykerEcoAmazonQuicksightConfig
     protected const DEFAULT_DATA_SOURCE_ID = 'SprykerB2BMPDefaultDataSource';
 }
 ```
+
 </details>
 
 <details>
@@ -186,6 +187,7 @@ class AmazonQuicksightConfig extends SprykerEcoAmazonQuicksightConfig
     protected const DEFAULT_DATA_SOURCE_ID = 'SprykerB2BDefaultDataSource';
 }
 ```
+
 </details>
 
 <details>
@@ -237,6 +239,7 @@ class AmazonQuicksightConfig extends SprykerEcoAmazonQuicksightConfig
     protected const DEFAULT_DATA_SOURCE_ID = 'SprykerB2CMPDefaultDataSource';
 }
 ```
+
 </details>
 
 <details>
@@ -281,6 +284,7 @@ class AmazonQuicksightConfig extends SprykerEcoAmazonQuicksightConfig
     protected const DEFAULT_DATA_SOURCE_ID = 'SprykerB2CDefaultDataSource';
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -540,9 +544,11 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 1. Create a QuickSight user in QuickSight.
 2. Sync QuickSight to Back Office users:
+
 ```bash
 console quicksight-user:sync:create
 ```
+
 In the `spy_quicksight_user` table, make sure that the corresponding QuickSight user has been added.
 
 {% endinfo_block %}
@@ -550,6 +556,7 @@ In the `spy_quicksight_user` table, make sure that the corresponding QuickSight 
 3. Optional: To sync users automatically during deployment, configure the installation stage of a pipeline, for example–destructive pipeline. Add the following command to the end of the `demodata` section:
 
 **config/install/destructive.yml**
+
 ```yaml
 sections:
     demodata:
@@ -583,11 +590,12 @@ Install the required features:
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Enable Javascript and CSS changes:
+### 1) Enable Javascript and CSS changes
 
 1. Update `package.json`:
 
 **package.json**
+
 ```json
 {
     "workspaces": [

@@ -1,6 +1,7 @@
 
 
 ## Install Feature API
+
 Follow the steps to install the Product Relations feature API.
 
 ### Prerequisites
@@ -21,6 +22,7 @@ Install the required modules using Composer:
 ```bash
 composer require spryker/related-products-rest-api:"^1.0.0" spryker/up-selling-products-rest-api:"^1.0.0" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:

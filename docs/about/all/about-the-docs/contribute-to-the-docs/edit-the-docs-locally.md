@@ -5,7 +5,7 @@ last_updated: Jan 23, 2023
 template: howto-guide-template
 redirect_from:
 - /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.html
-
+- /docs/about/all/about-the-docs/contribute-to-the-docs/merge-docs-pull-requests
 ---
 
 

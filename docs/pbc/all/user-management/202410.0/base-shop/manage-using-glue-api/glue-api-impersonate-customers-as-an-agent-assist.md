@@ -64,8 +64,8 @@ Request sample: impersonate a customer
 ```
 
 
-| ATTRIBUTE | TYPE |
-| --- | --- |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
+| --- | --- | --- | --- |
 | customerReference | String | v | Defines the customer to impersonate. [Search by customers](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html#search-by-customers) to get it. |
 
 

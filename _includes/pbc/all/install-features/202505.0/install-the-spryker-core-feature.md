@@ -90,7 +90,7 @@ Add the configuration:
 
 {% info_block errorBox "Security measures" %}
 
-To prevent the backend from being compromised, make sure that, in production environments, `SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS` is secured.
+To prevent the backend from being compromised, make sure `SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS` is secured in production environments.
 
 {% endinfo_block %}
 
@@ -388,7 +388,7 @@ $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_MERCHANT_PORTAL] = [
 
 After finishing the installation, make sure the following applies:
 * Security actions in Zed, Glue, Glue Backend, and Merchant Portal applications can be logged.
-* The configured log file paths contain the corresponding logs for each application.
+* The configured log file paths contain the logs for each application.
 Example:
 
 ```php
@@ -1175,15 +1175,15 @@ class SecurityBlockerPageConfig extends SprykerSecurityBlockerPageConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, when the login form for the customer or agent is submitted, the URL it uses contains a locale code. Examples of default values:
-* For customer: `/de/login_check`
-* For agent: `/de/agent/login_check`
+Make sure that, when a customer or agent submits a login form, the request URL includes a locale code. Examples of default values:
+* Customer: `/de/login_check`  
+* Agent: `/de/agent/login_check`
 
 {% endinfo_block %}
 
 {% info_block infoBox "" %}
 
-All locale-related configs in `CustomerPage`, `AgentPage`, and `SecurityBlockerPage` are deprecated; in future releases, only locale-specific URLs will be used.
+All locale-related configs in `CustomerPage`, `AgentPage`, and `SecurityBlockerPage` are deprecated. In future releases, only locale-specific URLs will be used.
 
 {% endinfo_block %}
 
@@ -1205,8 +1205,8 @@ $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_YVES] = [
 
 After finishing the installation, make sure the following applies:
 
-* Security actions in the Yves applications can be logged.
-* The configured log file path contains the corresponding log.
+* Security actions in the Yves applications can be logged
+* The configured log file path contains the corresponding log
 Example:
 
 ```php
@@ -1297,9 +1297,9 @@ class SessionRedisConfig extends SprykerSessionRedisConfig
 
 {% info_block warningBox "Validation" %}
 
-Make sure that the Redis session locking is skipped for the URLs and user agents specified in the configuration.
-* For example, if the URL `/error-page` is accessed, the Redis session locking should be skipped.
-* If the user agent `Googlebot` is used, the Redis session locking should be skipped.
+Make sure Redis session locking is skipped for the URLs and user agents specified in the configuration. Examples of when the locking should be skipped:
+* When the `/error-page` URL is accessed
+* When the `Googlebot` user agent is used
 
 {% endinfo_block %}
 
@@ -1431,13 +1431,22 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 {% info_block warningBox "Validation" %}
 
-1. Make sure `SecurityBlockerCustomerEventDispatcherPlugin` is activated by attempting to sign in with as a customer the incorrect credentials. After making the number of attempts specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account should get blocked for the period of time specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR`. Consequent login attempts should return the `429 Too many requests` error.
+1. Make sure  is activated by 
 
-2. To verify `SecurityBlockerAgentEventDispatcherPlugin`, repeat step 2 for the agent sign-in to check. The security behavior should match the configuration you've set up in [Set up configuration](#set-up-configuration).
+2. To verify , 
+
+
+| Plugin | Verification |
+|------|-------------|
+| `SecurityBlockerCustomerEventDispatcherPlugin` | Attempt to sign in as a customer with incorrect credentials. After making the number of attempts specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account should get blocked for the period of time specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR`. Consequent login attempts should return the `429 Too many requests` error. |
+| `SecurityBlockerAgentEventDispatcherPlugin` | Repeat the prior verification using an agent agent account. The security behavior should match the configuration you've set up in [Set up configuration](#set-up-configuration). |
+
 
 {% endinfo_block %}
 
-**src/Pyz/Yves/Log/LogDependencyProvider.php**
+
+<details>
+  <summary>src/Pyz/Yves/Log/LogDependencyProvider.php</summary>
 
 ```php
 use Spryker\Yves\Log\LogDependencyProvider as SprykerLogDependencyProvider;
@@ -1478,11 +1487,13 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
 }
 ```
 
+</details>
+
 {% info_block warningBox "Verification" %}
 
 Make sure the following applies:
-* The logs data has been expanded with the registered plugins: environment, server, request.
-* The log type sections exists and contains the corresponding data.
+* The logs data has been expanded with the registered plugins: environment, server, request
+* The log type section exists and contains the corresponding data
 
 {% endinfo_block %}
 

@@ -15,6 +15,11 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202108.0/feature-walkthroughs.html  
   - /docs/scos/dev/feature-walkthroughs/202212.0/feature-walkthroughs.html  
   - /docs/pbc/all/pbc-landing.html
+  - /docs/pbc/all/usercentrics/configure-usercentrics.html
+  - /docs/pbc/all/usercentrics/disconnect-usercentrics.html
+  - /docs/pbc/all/usercentrics/integrate-usercentrics.html
+  - /docs/pbc/all/usercentrics/usercentrics.html
+  - /docs/pbc/all/miscellaneous/202311.0/third-party-integrations/operational-tools-monitoring-legal/usercentrics.md
 ---
 
 Packaged Business Capabilities (PBCs) are capabilities that enclose a certain functionality with the Spryker system. PBCs provide a good foundation for decision makers throughout multiple business entities.

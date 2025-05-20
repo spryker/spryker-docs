@@ -1352,7 +1352,7 @@ Install the plugins and modules:
 | ResponseProcessorPlugin                                | Removes response data from the log data.                                                                                                             |               | Spryker\Yves\Log\Plugin\Processor                             |
 | AuditLogMetaDataProcessorPlugin                        | Adds the `audit_log` log type to the log data.                                                                                                       |               | Spryker\Yves\Log\Plugin\Log                                   |
 | UrlSessionRedisLockingExclusionConditionPlugin         | Skips Redis session locking when the request URI matches any of the URL patterns from the module configuration.                                      |               | Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion |
-| BotSessionRedisLockingExclusionConditionPlugin         | Skips Redis session locking when the request’s User-Agent header contains any of the patterns returned by the module configuration.                  |               | Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion |
+| BotSessionRedisLockingExclusionConditionPlugin         | Skips Redis session locking when the requests User-Agent header contains any of the patterns returned by the module configuration.                   |               | Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion |
 
 **src/Pyz/Yves/Session/SessionDependencyProvider.php**
 

@@ -329,11 +329,13 @@ When using Gateway for Twig rendering–for example, for sending emails–you ca
 1. Update `spryker/twig` to version `3.28.0` or higher.
 2. In `src/Pyz/Zed/Application/ApplicationDependencyProvider.php:getBackendGatewayApplicationPlugins()` replace `TwigApplicationPlugin()` with `TwigGatewayApplicationPlugin()`.
 
-## Order Placement Performance
+## Order placement performance
+
 You can place order items in batches to improve performance when the cart contains many items.
 
-#### Prerequisites
-1. Update the spryker/sales package and its dependencies to version [spryker/sales:^11.63.0](https://github.com/spryker/sales/releases/tag/11.63.0) .
+### Prerequisites
+
+1. Update `spryker/sales` and its dependencies to version [spryker/sales:^11.63.0](https://github.com/spryker/sales/releases/tag/11.63.0) .
 2. Add the following configuration to `src/Pyz/Zed/Sales/SalesConfig.php`:
 ```php
 <?php
@@ -354,15 +356,17 @@ class SalesConfig extends SprykerSalesConfig
 }
 
 ```
-#### Choose a Unique Column
-The example above uses the `OrderItemReference` column, which Spryker provides out of the box. You may specify a different column, but the chosen column must:
-- Contain a unique value for every order item in the database.
-- Be generated before the order is saved.
 
-#### Enable `OrderItemReference` Generation (if required)
-If your project does not yet generate the OrderItemReference value, complete these steps:
-1. Open `src/Pyz/Zed/Sales/SalesDependencyProvider.php` and locate the `getOrderItemExpanderPreSavePlugins()` method.
-2. Add the `OrderItemReferenceExpanderPreSavePlugin`
+### Choose a Unique Column
+
+The prior example uses the `OrderItemReference` column provided by default. You may define a different column if it meets the following requirements:
+- Contain a unique value for every order item in the database
+- Be generated before an order is saved
+
+### Enable `OrderItemReference` Generation (if required)
+
+To generate the `OrderItemReference` value, add `OrderItemReferenceExpanderPreSavePlugin` to the `getOrderItemExpanderPreSavePlugins()` method:
+**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
 ```php
 use Spryker\Zed\SalesOms\Communication\Plugin\OrderItemReferenceExpanderPreSavePlugin;
 
@@ -375,7 +379,8 @@ protected function getOrderItemExpanderPreSavePlugins(): array
     ];
 }
 ```
-After you enable the plugin and configure the unique column, Spryker saves order items in batches, which reduces database overhead and improves checkout performance.
+
+After enabling the plugin and configuring the unique column, Spryker saves order items in batches, which reduces database overhead and improves checkout performance.
 
 ## Reduce functionality
 

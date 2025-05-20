@@ -62,7 +62,7 @@ To assign products to a product option, follow these steps:
 4. Select **Save**
     This refreshes the page with the success message displayed.
 
-**Tips and tricks**
+### Tips and tricks
 - To select all the products on the page, select **Deselect all on the page**. This is usually useful when you filter the products using the search field.
 - After selecting products, you can view the products to be assigned in the **Products to be assigned** subtab. To unselect a product from being assigned, select **Remove** next to the desired product.
 

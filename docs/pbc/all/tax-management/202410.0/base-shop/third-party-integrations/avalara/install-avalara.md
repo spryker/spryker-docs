@@ -141,7 +141,7 @@ Make sure that the following changes have been applied by checking your databa
 | spy_tax_avalara_sales_order_item | table | created |
 | spy_tax_avalara_sales_detail | table | created |
 | spy_product_abstract.avalara_tax_code | column | created |
-| spy_product.avalara_tax_code | column | created
+| spy_product.avalara_tax_code | column | created |
 
 {% endinfo_block %}
 

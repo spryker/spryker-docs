@@ -483,6 +483,7 @@ ITEM,218
 | --- | --- | --- | --- | --- |
 | code | ✓ | string | METR |  An existing measurement unit code that will be the base of measurement unit calculations for this product abstract. |
 |abstract_sku|mandatory|virtual-unique, string|215|An existing product abstract SKU. 1 product abstract can have only 1 base unit; multiple occurrences will override older ones.|
+
 Register the following plugin to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |

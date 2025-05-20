@@ -36,6 +36,7 @@ This document describes the `product_image.csv` file to configure [Product Image
 | sort_order |  | Integer |   | Order of image presentation. |
 | product_image_key | &check; | String |   | Product image identifier. |
 | product_image_set_key |  | String |   | Key of the product image set. |
+
 *N/A: Not applicable.
 
 

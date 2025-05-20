@@ -187,7 +187,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 | PLUGIN | VERIFICATION |
 | - | - |
-| `ProductCategoryAbstractFormExpanderPlugin` |  Edit and create abstract product forms contain `categoryIds` field.
+| `ProductCategoryAbstractFormExpanderPlugin` |  Edit and create abstract product forms contain `categoryIds` field. |
 | `ProductCategoryProductAbstractAfterUpdatePlugin` |  After updating an abstract product, the categories from `categoryIds` field are assigned to the corresponding abstract product. |
 | `ProductCategoryProductAbstractPostCreatePlugin` |  After creating an abstract product, the categories from `categoryIds` field are assigned to the corresponding abstract product. |
 | `ImageAltTextProductAbstractFormExpanderPlugin` | The edit abstract product form contains the `alt_text` field for each image. After saving the form, the value is saved to the `spy_product_image.alt_text` database column. |

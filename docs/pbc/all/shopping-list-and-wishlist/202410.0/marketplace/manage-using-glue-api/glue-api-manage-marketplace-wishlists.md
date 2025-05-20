@@ -2300,11 +2300,10 @@ The following sample changes the name of a wishlist.
 
 To delete a wishlist, send the request:
 
-------
-
+---
 `DELETE` **/wishlists/*{{wishlist_id}}***
 
-------
+---
 
 | PATH PARAMETER   | DESCRIPTION     |
 | --------- | ------------------- |

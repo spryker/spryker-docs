@@ -39,7 +39,7 @@ To create a product option, follow these steps:
     This refreshes the page with the success message displayed.
 10. [Assign products to the product option](#assigning-products-to-a-product-option).  
 
-**Tips and tricks**
+### Tips and tricks
 - To remove an option value, next to the **Option name translation key** and **SKU** fields, click **Remove**.
 - To copy a **Group name** or **Option name** from one locale to another, select the **Copy** icon next to the desired value.
 
@@ -74,7 +74,7 @@ To display the product option on the Storefront, in the top right corner of the 
 
 {% endinfo_block %}
 
-**Tips and tricks**
+### Tips and tricks
 
 - To select all the products on the page, select **Deselect all on the page**. This is usually useful when you filter the products using the search field.
 - After selecting products, you can view the products to be assigned on the **Products to be assigned** subtab. To unselect a product from being assigned, select **Remove** next to the desired product.

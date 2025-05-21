@@ -58,7 +58,11 @@ Set up the following configuration.
 
 #### Optional: Set up Router
 
-To user router cache, add the following configuration:
+Router is a core module that provides the routing functionality for the Spryker platform.
+It is responsible for mapping URLs to specific controllers and actions within the application.
+The router cache is used to improve the performance of the routing system by caching the routing information.
+
+To enable it, add the following configuration:
 
 ```php
 <?php
@@ -311,7 +315,9 @@ $config[SessionFileConstants::ZED_SESSION_FILE_PATH] = session_save_path();
 
 #### Configure SecurityBlocker
 
-1. `SecurityBlocker` stores information about blocked accounts in Redis. So, it needs connection information. You can get it in the environment configuration of your project:
+The `SecurityBlocker` module provides the functionality to block a user for a certain period of time if the number of failed login attempts exceeds the configured threshold.
+
+1. Enable it in the environment configuration of your project:
 
 **config/Shared/config_default.php**
 
@@ -346,8 +352,8 @@ $config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_NUMBER_OF_
 
 | CONFIGURATION                                             | SPECIFICATION                                                                                                  | NAMESPACE          |
 |-----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|--------------------|
-| LogConstants::LOG_FILE_PATH_ZED                           | Absolute path to the log file to be used by the stream handler.                                                | Spryker\Shared\Log |
-| LogConstants::LOG_FILE_PATH_GLUE                          | Absolute path to the log file to be used by the stream handler.                                                | Spryker\Shared\Log |
+| LogConstants::LOG_FILE_PATH_ZED                           | Absolute path to the log file of the Zed application to be used by the stream handler.                         | Spryker\Shared\Log |
+| LogConstants::LOG_FILE_PATH_GLUE                          | Absolute path to the log file of the Glue application to be used by the stream handler.                        | Spryker\Shared\Log |
 | LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_ZED             | Provides plugin class names providing the configuration for audit logging for the Zed application.             | Spryker\Shared\Log |
 | LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_MERCHANT_PORTAL | Provides plugin class names providing the configuration for audit logging for the Merchant Portal application. | Spryker\Shared\Log |
 | LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_GLUE            | Provides plugin class names providing the configuration for audit logging for the Glue application.            | Spryker\Shared\Log |
@@ -899,7 +905,11 @@ To verify that the navigation for Store GUI is successfully generated, make sure
 
 ### 6) Set up Publish and Synchronize
 
-1. Update the RabbitMQ configuration:
+RabbitMQ is used for event handling in Spryker.
+The default event queues are used to handle events that are published by the system.
+
+1. Enable the default event queues in the RabbitMQ configuration:
+
 
 <details>
 <summary>Pyz/Client/RabbitMq/RabbitMqConfig.php</summary>
@@ -1063,7 +1073,7 @@ $config[SessionRedisConstants::YVES_SESSION_TIME_TO_LIVE] = SessionConfig::SESSI
 
 `SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING`, `SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING` and `SessionRedisConfig::SESSION_HANDLER_REDIS` can be used as values for the session handler configuration option.
 
-The latest option is the `SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING`, providing the most flexibility. It allows you to use the Redis session handler with or without locking, depending on the configuration.
+The following option `SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING`, providing the most flexibility. It allows you to use the Redis session handler with or without locking, depending on the configuration.
 
 {% endinfo_block %}
 
@@ -1236,6 +1246,8 @@ class AuditLogger
 
 {% endinfo_block %}
 
+**src/Pyz/Yves/SessionRedis/SessionRedisConfig.php**
+
 ```php
 <?php
 
@@ -1295,14 +1307,6 @@ class SessionRedisConfig extends SprykerSessionRedisConfig
 }
 ```
 
-{% info_block warningBox "Validation" %}
-
-Make sure Redis session locking is skipped for the URLs and user agents specified in the configuration. Examples of when the locking should be skipped:
-* When the `/error-page` URL is accessed
-* When the `Googlebot` user agent is used
-
-{% endinfo_block %}
-
 ### 3) Add translations
 
 1. Append the glossary according to your configuration:
@@ -1348,7 +1352,7 @@ Install the plugins and modules:
 | ResponseProcessorPlugin                                | Removes response data from the log data.                                                                                                             |               | Spryker\Yves\Log\Plugin\Processor                             |
 | AuditLogMetaDataProcessorPlugin                        | Adds the `audit_log` log type to the log data.                                                                                                       |               | Spryker\Yves\Log\Plugin\Log                                   |
 | UrlSessionRedisLockingExclusionConditionPlugin         | Skips Redis session locking when the request URI matches any of the URL patterns from the module configuration.                                      |               | Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion |
-| BotSessionRedisLockingExclusionConditionPlugin         | Skips Redis session locking when the request’s User-Agent header contains any of the patterns returned by the module configuration.                  |               | Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion |
+| BotSessionRedisLockingExclusionConditionPlugin         | Skips Redis session locking when the request's User-Agent header contains any of the patterns returned by the module configuration.                   |               | Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion |
 
 **src/Pyz/Yves/Session/SessionDependencyProvider.php**
 
@@ -1431,9 +1435,9 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 {% info_block warningBox "Validation" %}
 
-1. Make sure  is activated by 
+1. Make sure  is activated by
 
-2. To verify , 
+2. To verify ,
 
 
 | Plugin | Verification |
@@ -1525,7 +1529,7 @@ class SessionRedisDependencyProvider extends SprykerSessionRedisDependencyProvid
             new BotSessionRedisLockingExclusionConditionPlugin(),
         ];
     }
-} 
+}
 ```
 
 {% info_block warningBox "Validation" %}
@@ -1535,4 +1539,3 @@ Make sure that the Redis session locking is skipped for the URLs and user agents
 * If the user agent `Googlebot` is used, the Redis session locking should be skipped.
 
 {% endinfo_block %}
-

@@ -335,8 +335,10 @@ You can place order items in batches to improve performance when the cart contai
 
 ### Prerequisites
 
-1. Update `spryker/sales` and its dependencies to version [spryker/sales:^11.63.0](https://github.com/spryker/sales/releases/tag/11.63.0) .
-2. Add the following configuration to `src/Pyz/Zed/Sales/SalesConfig.php`:
+1. Update `spryker/sales` and its dependencies to version [spryker/sales:^11.63.0](https://github.com/spryker/sales/releases/tag/11.63.0).
+2. Configure columns to be returned for each order item:
+
+**src/Pyz/Zed/Sales/SalesConfig.php**
 ```php
 <?php
 
@@ -357,9 +359,9 @@ class SalesConfig extends SprykerSalesConfig
 
 ```
 
-### Choose a Unique Column
+### Set up a unique column
 
-The prior example uses the `OrderItemReference` column provided by default. You may define a different column if it meets the following requirements:
+The prior example uses the `OrderItemReference` column, which is provided by default. You can define a different column if it meets the following requirements:
 - Contain a unique value for every order item in the database
 - Be generated before an order is saved
 

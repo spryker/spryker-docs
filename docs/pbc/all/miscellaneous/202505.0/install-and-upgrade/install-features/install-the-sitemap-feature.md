@@ -229,7 +229,7 @@ It does not determine the final number of URLs in the sitemap file (see [Configu
 
 The default limit can be overridden by extending the `SitemapConfig` class and redefining the `getGeneratorEnitityLimit()` method.
 
-**src/Pyz/Shared/Sitemap/SitemapConfig.php**
+**src/Pyz/Zed/Sitemap/SitemapConfig.php**
 
 ```php
 <?php

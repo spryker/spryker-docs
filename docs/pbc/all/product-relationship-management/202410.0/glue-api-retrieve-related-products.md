@@ -610,8 +610,8 @@ To get upselling items for all products in a cart of a registered customer, send
 
 | REQUEST | USAGE |
 | --- | --- |
-| GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products | Retrieve upselling products of the specified cart. |
-| GET https://glue.mysprykershop.com/carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/up-selling-products?include=product-labels | Retrieve upselling products of the specified cart. Product labels assigned to the upselling products are included. |
+| `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products` | Retrieve upselling products of the specified cart. |
+| `GET https://glue.mysprykershop.com/carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/up-selling-products?include=product-labels` | Retrieve upselling products of the specified cart. Product labels assigned to the upselling products are included. |
 
 ### Response
 
@@ -990,8 +990,8 @@ To retrieve upselling products of a guest cart, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| GET https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products | Retrieve upselling products of the specified cart. |
-| GET https://glue.mysprykershop.com/guest-carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/up-selling-products?include=product-labels | Retrieve upselling products of the specified cart. Product labels assigned to the upselling products are included. |
+| `GET https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products` | Retrieve upselling products of the specified cart. |
+| `GET https://glue.mysprykershop.com/guest-carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/up-selling-products?include=product-labels` | Retrieve upselling products of the specified cart. Product labels assigned to the upselling products are included. |
 
 ### Response
 

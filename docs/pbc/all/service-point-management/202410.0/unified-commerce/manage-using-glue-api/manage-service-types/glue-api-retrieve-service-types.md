@@ -95,7 +95,7 @@ Request sample: `GET https://glue-backend.mysprykershop.com/service-points`
 |-|-|-|-|
 | Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
-Request sample: https://glue-backend.mysprykershop.com/service-types/7a263a50-12a3-5ef4-86f4-366f20783180
+Request sample: `https://glue-backend.mysprykershop.com/service-types/7a263a50-12a3-5ef4-86f4-366f20783180`
 
 ### Response
 

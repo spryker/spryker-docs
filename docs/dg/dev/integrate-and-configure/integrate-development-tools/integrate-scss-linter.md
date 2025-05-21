@@ -48,7 +48,7 @@ To update the scripts:
 
 1. Add the SCSS lint script to `/frontend/libs/stylelint.js`
 
-```
+```js
 const stylelint = require('stylelint');
 const { globalSettings } = require('../settings');
 const commandLineParser = require('commander');
@@ -84,7 +84,7 @@ Check [here](https://github.com/spryker-shop/suite/blob/master/frontend/libs/sty
 
 2. Adjust the `/package.json` scripts:
 
-```
+```json
 "scripts": {
     ....
     "yves:stylelint": "node ./frontend/libs/stylelint",
@@ -94,7 +94,7 @@ Check [here](https://github.com/spryker-shop/suite/blob/master/frontend/libs/sty
 
 3. Add the ignore `file /.stylelintignore`:
 
-```
+```text
 # Ignore paths
 **/node_modules/**
 **/DateTimeConfiguratorPageExample/**

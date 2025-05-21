@@ -39,7 +39,7 @@ npm install @spryker/frontend-config.prettier --save-dev
 
 3. Install the CLI parser:
 
-```
+```bash
 npm install commander@4.0.x --save-dev
 ```
 
@@ -49,18 +49,20 @@ To update the scripts:
 
 1. Add formatting file extensions to the global settings `/frontend/settings.js`:
 
-```const globalSettings = {
-    ....
+```js
+const globalSettings = {
+    // ...
 
     formatter: [
-        `**/*.(scss|css|less|js|ts|json|html)`,
+        '**/*.{scss,css,less,js,ts,json,html}',
     ],
 };
+
 ```
 
 2. Add the formatter script to `/frontend/libs/formatter.js`:
 
-```
+```js
 const { spawn } = require('child_process');
 const { globalSettings } = require('../settings');
 const commandLineParser = require('commander');
@@ -87,7 +89,7 @@ spawn(
 
 3. Adjust the `/package.json` scripts:
 
-```
+```json
 "scripts": {
     ....
     "formatter": "node ./frontend/libs/formatter",
@@ -97,7 +99,7 @@ spawn(
 
 4. Add the ignore file `/.prettierignore`:
 
-```
+```text
 # Ignore paths
 /.github/
 /.yarn/

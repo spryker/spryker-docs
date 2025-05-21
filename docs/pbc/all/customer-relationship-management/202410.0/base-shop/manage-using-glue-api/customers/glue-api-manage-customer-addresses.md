@@ -168,7 +168,7 @@ To edit an address, send the request:
 
 Request sample: edit an address
 
-`PATCH` http://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b
+`PATCH http://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b`
 
 <details>
 <summary>Request sample body</summary>

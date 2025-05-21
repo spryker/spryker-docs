@@ -17,7 +17,7 @@ Install the required features:
 
 Install the required modules using Composer:
 
-```
+```bash
 composer require spryker/categories-rest-api:"^1.1.3" --update-with-dependencies
 ```
 

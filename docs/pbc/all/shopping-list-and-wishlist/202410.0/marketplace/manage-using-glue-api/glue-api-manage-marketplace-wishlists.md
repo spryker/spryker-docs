@@ -96,12 +96,13 @@ To retrieve all wishlists of a customer, send the request:
 | -------------- | ------------- | ----------- |
 | include         | Adds resource relationships to the request. | <ul><li>wishlist-items</li><li>concrete-products</li><li>product-labels</li></ul> |
 
-| REQUEST SAMPLE  | USAGE    |
-| ------------ | ------------ |
-| GET https://glue.mysprykershop.com/wishlists   | Retrieve all the wishlists of a customer.  |
-| GET https://glue.mysprykershop.com/wishlists?include=wishlist-items | Retrieve all the wishlists of a customer with wishlist items. |
-| GET https://glue.mysprykershop.com/wishlists?include=wishlist-items,concrete-products | Retrieve all the wishlists of a customer with wishlist items and respective concrete products. |
-| GET https://glue.mysprykershop.com/wishlists?include=wishlist-items,concrete-products,product-labels | Retrieve all the wishlists of a customer with wishlist items, respective concrete products, and their product labels. |
+| REQUEST SAMPLE | USAGE |
+| -------------- | ----- |
+| `GET https://glue.mysprykershop.com/wishlists` | Retrieve all the wishlists of a customer. |
+| `GET https://glue.mysprykershop.com/wishlists?include=wishlist-items` | Retrieve all the wishlists of a customer with wishlist items. |
+| `GET https://glue.mysprykershop.com/wishlists?include=wishlist-items,concrete-products` | Retrieve all the wishlists of a customer with wishlist items and respective concrete products. |
+| `GET https://glue.mysprykershop.com/wishlists?include=wishlist-items,concrete-products,product-labels` | Retrieve all the wishlists of a customer with wishlist items, respective concrete products, and their product labels. |
+
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION |
 | ------------ | ----------- | -------- | --------- |

@@ -168,9 +168,10 @@ Ensure that:
 
 | RESOURCE | REQUEST TO CHECK |
 | --- | --- |
-| /agent-access-tokens | POST https://glue.mysprykershop.com/agent-access-tokens |
-| /agent-customer-impersonation-access-tokens | POST https://glue.mysprykershop.com/agent-customer-impersonation-access-tokens |
-| /agent-customer-search | GET https://glue.mysprykershop.com/agent-customer-search |
+| `/agent-access-tokens` | `POST https://glue.mysprykershop.com/agent-access-tokens` |
+| `/agent-customer-impersonation-access-tokens` | `POST https://glue.mysprykershop.com/agent-customer-impersonation-access-tokens` |
+| `/agent-customer-search` | `GET https://glue.mysprykershop.com/agent-customer-search` |
+
 
 {% endinfo_block %}
 

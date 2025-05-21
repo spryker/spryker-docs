@@ -782,7 +782,7 @@ Example of the default locale configuration for the DE store:
 
 **data/import/common/DE/default_locale_store.csv**
 
-```
+```csv
 locale_name,store_name
 en_US,DE
 

@@ -91,8 +91,8 @@ When configuring a service, you need to define its version. The Docker SDK suppo
 |       |          | 3.9           | &check;     |    |
 | session         | redis    | 5.0           | &check;     |    |
 | key_value_store | redis    | 5.0           | &check;     |    |
-| search          | elastic  | 5.6*          | &check;     | https://www.elastic.co/support/eol |
-|                 |          | 6.8           | &check;     | https://www.elastic.co/support/eol |
+| search          | elastic  | 5.6*          | &check;     | [Policy and Product End of Life Dates](https://www.elastic.co/support/eol) |
+|                 |          | 6.8           | &check;     | [Policy and Product End of Life Dates](https://www.elastic.co/support/eol) |
 |                 |          | 7.6           | &check;     |    |
 |                 |          | 7.10          | &check;     |    |
 |                 | opensearch | 1.3           | &check;     |    |
@@ -103,8 +103,8 @@ When configuring a service, you need to define its version. The Docker SDK suppo
 |                 | chromedriver | latest        | &check;      |    |
 | mail_catcher    | mailhog  | 1.0           | &check;     |    |
 | swagger         | swagger-ui   | v3.24         | &check;      |    |
-| kibana          | kibana   | 5.6*          | &check;     | https://www.elastic.co/support/eol |
-|                 |          | 6.8           | &check;     | https://www.elastic.co/support/eol |
+| kibana          | kibana   | 5.6*          | &check;     |  |
+|                 |          | 6.8           | &check;     |  |
 |                 |          | 7.6           | &check;     |    |
 |                 |          | 7.10          | &check;     |    |
 | blackfire       | blackfire  | latest        | &check;      |      |

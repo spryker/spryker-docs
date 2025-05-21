@@ -15,14 +15,14 @@ To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/pa
 
 ## Fulfill Stripe's prerequisites
 
-* Create a Stripe account.
-* Make sure [your countries are supported by Stripe](https://stripe.com/global).
-* Make sure [your business is not restricted by Stripe](https://stripe.com/legal/restricted-businesses).
+- Create a Stripe account.
+- Make sure [your countries are supported by Stripe](https://stripe.com/global).
+- Make sure [your business is not restricted by Stripe](https://stripe.com/legal/restricted-businesses).
 
 ## Fulfill ACP prerequisites
 
-* Connect your Stripe account to the Spryker Platform account. Request this link by [creating a support case](https://support.spryker.com/s/).
-* Enable ACP in your project. For instructions, see [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html). Make sure you are using the latest version of the Message Bus. We'll verify this during onboarding, and a migration may be necessary to enable the Stripe app.
+- Connect your Stripe account to the Spryker Platform account. Request this link by [creating a support case](https://support.spryker.com/s/).
+- Enable ACP in your project. For instructions, see [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html). Make sure you are using the latest version of the Message Bus. We'll verify this during onboarding, and a migration may be necessary to enable the Stripe app.
 
 ## Install packages and add configuration
 

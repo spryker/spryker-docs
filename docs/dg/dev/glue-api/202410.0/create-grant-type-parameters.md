@@ -136,9 +136,10 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-* Ensure that you can authenticate as a user:
+- Ensure that you can authenticate as a user:
 
     1. Send the request to get the authorization code:
+
     ```
     POST /token/ HTTP/1.1
     Host: glue-backend.mysprykershop.com
@@ -150,6 +151,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     ```  
 
     2. Send the following request to the access token:
+
     ```
     POST /token/ HTTP/1.1
     Host: glue-backend.mysprykershop.com

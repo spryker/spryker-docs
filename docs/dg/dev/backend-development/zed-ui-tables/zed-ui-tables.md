@@ -13,5 +13,5 @@ related:
 ---
 
 The *Zed UI tables* section contains the information you need to work with UI tables in Zed in Spryker Commerce OS. In this section, you can find the following documents:
-* [Add buttons to Zed tables](/docs/dg/dev/backend-development/zed-ui-tables/adding-buttons-to-zed-tables.html)
-* [Create and configure Zed tables](/docs/dg/dev/backend-development/zed-ui-tables/create-and-configure-zed-tables.html)
+- [Add buttons to Zed tables](/docs/dg/dev/backend-development/zed-ui-tables/adding-buttons-to-zed-tables.html)
+- [Create and configure Zed tables](/docs/dg/dev/backend-development/zed-ui-tables/create-and-configure-zed-tables.html)

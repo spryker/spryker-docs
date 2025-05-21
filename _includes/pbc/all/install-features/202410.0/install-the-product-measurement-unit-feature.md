@@ -319,6 +319,7 @@ Run the following console command to execute registered installer plugins and in
 ```
 console setup:init-db
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that in the database that the configured infrastructural measurement units are added to the `spy_product_measurement_unit` table.
@@ -892,6 +893,7 @@ Install the following required features:
 | Spryker Core E-commerce | {{page.version}} |
 |Checkout| {{page.version}} |
 |   |   |
+
 ### 1) Install the required modules
 
 Install the required modules using Composer:

@@ -19,6 +19,7 @@ composer require spryker/product-offer-prices-rest-api: "^2.0.0" --update-with-d
 ```
 
 2. Update the generated classes:
+
 ```bash
 console transfer:generate
 ```

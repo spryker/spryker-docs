@@ -46,6 +46,7 @@ The following diagram illustrates the dependencies between the modules for the *
 | [MerchantSalesOrderExtension](https://github.com/spryker/merchant-sales-order-extension) | Extension point for the `MerchantSalesOrder`. |
 | [MerchantSalesOrderThresholdGui](https://github.com/spryker/merchant-sales-order-threshold-gui) | Provides Zed UI interface for Merchant Order threshold management. |
 | [SalesMerchantPortalGui](https://github.com/spryker/sales-merchant-portal-gui) | Provides UI for managing Merchant Sales in the Merchant Portal. |
+
 </div>
 
 ## Domain model

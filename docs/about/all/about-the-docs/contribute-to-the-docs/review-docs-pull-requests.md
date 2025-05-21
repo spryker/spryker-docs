@@ -62,4 +62,4 @@ Before you submit your review, your line comments are pending and only visible t
 5. Once you are done reviewing all the files, click **Review changes** in the top right corner and select either *Comment*, *Approve* or *Request changes*.
 
 6. Click **Submit review**:
-![Submit review](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/submit-review.png)   
+![Submit review](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/submit-review.png)

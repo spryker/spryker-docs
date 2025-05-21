@@ -15,10 +15,10 @@ A *marketplace operator* is a company that owns the marketplace. In a marketplac
 
 Merchant accounts are created in the Back Office, and a [marketplace administrator](/docs/about/all/spryker-marketplace/marketplace-personas.html#marketplace-administrator) is required to facilitate their creation. In the **Marketplace&nbsp;<span aria-label="and then">></span> Merchants** section of the Back Office, a marketplace operator manages merchants as follows:
 
-* Creates merchants
-* Edits merchants
-* Approves and denies merchants
-* Activates and deactivates merchants
+- Creates merchants
+- Edits merchants
+- Approves and denies merchants
+- Activates and deactivates merchants
 
 For detailed instructions about managing merchants, see [Managing merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html).
 
@@ -26,8 +26,8 @@ For detailed instructions about managing merchants, see [Managing merchants](/do
 
 In a marketplace, multiple merchants can sell the same product. That's why, instead of creating duplicate products, merchants create offers. Only the offers approved by a marketplace administrator are displayed in the Storefront. In the **Marketplace&nbsp;<span aria-label="and then">></span> Offers** section of the Back Office, a marketplace administrator manages offers as follows:
 
-* Views offers
-* Approves and denies offers
+- Views offers
+- Approves and denies offers
 
 For detailed instructions about managing offers, see [Managing merchant product offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/manage-merchant-product-offers.html).
 
@@ -35,14 +35,14 @@ For detailed instructions about managing offers, see [Managing merchant product 
 
 Since many merchants sell products simultaneously, the order management of a marketplace is complex and requires a marketplace operator to facilitate their fulfillment. In **Marketplace&nbsp;<span aria-label="and then">></span> Orders** of the Back Office, a marketplace administrator manages marketplace orders as follows:
 
-* Views marketplace orders.
-* Changes marketplace order states.
-* Creates marketplace returns.
-* Views marketplace returns.
-* Edits custom order references of marketplace orders.
-* Claims marketplace orders.
-* Comments on marketplace orders.
-* Edits billing addresses of marketplace orders.
+- Views marketplace orders.
+- Changes marketplace order states.
+- Creates marketplace returns.
+- Views marketplace returns.
+- Edits custom order references of marketplace orders.
+- Claims marketplace orders.
+- Comments on marketplace orders.
+- Edits billing addresses of marketplace orders.
 
 For detailed instructions on managing orders, see [Managing marketplace orders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html).
 
@@ -50,8 +50,8 @@ For detailed instructions on managing orders, see [Managing marketplace orders](
 
 As a part of order management, a marketplace administrator helps merchants manage marketplace order returns. In the **Marketplace&nbsp;<span aria-label="and then">></span> Returns** section of the Back Office, a marketplace administrator manages marketplace order returns as follows:
 
-* Sets marketplace return states
-* Prints marketplace return slips
+- Sets marketplace return states
+- Prints marketplace return slips
 
 For detailed instructions on managing returns, see [Managing marketplace returns](/docs/pbc/all/return-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-marketplace-returns.html).
 

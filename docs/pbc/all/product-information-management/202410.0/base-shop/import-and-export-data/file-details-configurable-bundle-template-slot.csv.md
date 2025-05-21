@@ -12,8 +12,8 @@ This document describes the `configurable_bundle_template_slot.csv` file to conf
 
 ## Import file dependencies
 
-* [File details: configurable_bundle_template.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-configurable-bundle-template.csv.html)
-* [File details: product_list.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-list.csv.html)
+- [File details: configurable_bundle_template.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-configurable-bundle-template.csv.html)
+- [File details: product_list.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-list.csv.html)
 
 ## Import file parameters
 

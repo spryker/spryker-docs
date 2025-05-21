@@ -20,8 +20,8 @@ redirect_from:
 ---
 
 All textual elements can be created in various languages to support content creation for multiple language setups—for example, for your international stores.
-* Customers can switch locales in the shop.
-* Locales can be shared among stores.
+- Customers can switch locales in the shop.
+- Locales can be shared among stores.
 
 The `Glossary` module is responsible for managing glossary keys that hold the localized content in the database.
 
@@ -91,9 +91,9 @@ The localized attributes are loaded in the key-value data storage by the Collect
 
 The following details are stored localized in Demoshop for both abstract and concrete products:
 
-* Name
-* Short description
-* Long description
+- Name
+- Short description
+- Long description
 
 #### Importing products with localized attributes
 
@@ -101,12 +101,12 @@ When importing product data in your application. you need to consider the list o
 
 The CSV file containing the product data that needs to be imported must contain the name of the product for each locale:
 
-* `name.en_US, name.de_DE`
+- `name.en_US, name.de_DE`
 
 The CSV file that contains the attributes for the products that need to be imported must contain a short and long description for each locale:
 
-* `short_description.en_US, short_description.de_DE`
-* `long_description.en_US, long_description.de_DE`
+- `short_description.en_US, short_description.de_DE`
+- `long_description.en_US, long_description.de_DE`
 
 ### Categories with localized attributes
 
@@ -116,9 +116,9 @@ The attributes are loaded in the key-value data storage by the Collectors so tha
 
 The following category details are stored localized:
 
-* `meta_title`
-* `meta_description`
-* `category_image_name`
+- `meta_title`
+- `meta_description`
+- `category_image_name`
 
 #### Importing categories with localized attributes
 
@@ -128,9 +128,9 @@ Similar to importing product data, you need to consider each locale defined in t
 
 A CSV file containing the product data that needs to be imported must contain the name of the product for each locale:
 
-* `category_name.en_US, category_name.de_DE`
-* `low_pic.en_US, low_pic.de_DE`
-* `category_description.en_US, category_description.de_DE`
+- `category_name.en_US, category_name.de_DE`
+- `low_pic.en_US, low_pic.de_DE`
+- `category_description.en_US, category_description.de_DE`
 
 ### Importing CMS blocks and pages
 
@@ -209,9 +209,9 @@ The XML file structure for loading static pages is similar to the one for import
 
 The `spy_url` table stores the URLs that correspond to:
 
-* Category pages
-* Product details pages
-* Static pages defined in CMS
+- Category pages
+- Product details pages
+- Static pages defined in CMS
 
 Each category has a distinct URL for each configured locale and product details page. These URLs are automatically created and stored in the DB when importing products and categories through the `Importer` module.
 
@@ -223,7 +223,7 @@ For example, `/en/computers` and `/de/computers` are the URLs for the same categ
 
 The URLs assigned for each imported CMS static page are distinct for each defined locale.
 
-* `/en/privacy` and `/de/datenschutz` point to the same template; when rendered, they are loaded with the glossary values that correspond to the associated locale.
+- `/en/privacy` and `/de/datenschutz` point to the same template; when rendered, they are loaded with the glossary values that correspond to the associated locale.
 
 The XML file structure for loading static pages is similar to the one for importing blocks; the only differences are that a page has also an associated URL for each locale, and it doesn't have a name linked to it.
 

@@ -15,7 +15,7 @@ To order products in a category in the Back Office, follow the steps:
     This opens the **Assign products to category** page.
 3. On the **Products in this category** subtab, enter **ORDER** for needed products.
 4. Click **Save**.
-    The page refreshes with a success message displayed. On the **Products in this category** subtab, the products are ordered per the updated **ORDER**. That's the order they will be displayed in on the Storefront. 
+    The page refreshes with a success message displayed. On the **Products in this category** subtab, the products are ordered per the updated **ORDER**. That's the order they will be displayed in on the Storefront.
 
 ## Reference information: ORDER
 

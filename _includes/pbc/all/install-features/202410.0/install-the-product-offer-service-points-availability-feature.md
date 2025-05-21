@@ -142,11 +142,11 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-1.  Add a product offer with a service point to cart.
+1. Add a product offer with a service point to cart.
 
-2.  In the `spy_product_offer_service` database table, delete the connection between the product offer and the service point.
+2. In the `spy_product_offer_service` database table, delete the connection between the product offer and the service point.
 
-3.  Try to create an order.
+3. Try to create an order.
     Make sure you get the error message about the product being unavailable.
 
 {% endinfo_block %}
@@ -222,6 +222,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Send the following request:
 
 `POST https://glue.mysprykershop.com/product-offer-service-point-availabilities`
+
 ```json
   {
       "data": {

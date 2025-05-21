@@ -167,6 +167,7 @@ Set up the following configuration.
 
 </statemachine>
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -328,6 +329,7 @@ Verify the invoice state machine configuration in the following step.
 
 </statemachine>
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -335,8 +337,8 @@ Verify the invoice state machine configuration in the following step.
 1. In the Back Office, go to **Administration&nbsp;<span aria-label="and then">></span> OMS**.
 
 2. Select **DummyPayment01 [preview-version]** and check the following:
-  - The `new`, `payment pending`, `paid`, and `confirmed` states have the `cancellable` tag inside.
-  - The `invoice generated` state exists.
+- The `new`, `payment pending`, `paid`, and `confirmed` states have the `cancellable` tag inside.
+- The `invoice generated` state exists.
 
 {% endinfo_block %}
 
@@ -620,6 +622,7 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
 </html>
 {% endraw %}
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -764,6 +767,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 }
 ```
+
 </details>
 
 <details><summary>src/Pyz/Zed/SalesPayment/SalesPaymentDependencyProvider.php</summary>
@@ -791,6 +795,7 @@ class SalesPaymentDependencyProvider extends SprykerSalesPaymentDependencyProvid
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -845,6 +850,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -904,6 +910,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
     }
 }
 ```
+
 </details>
 
 
@@ -944,6 +951,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
+
 </details>
 
 #### Set up an order invoice OMS command
@@ -1006,10 +1014,10 @@ vendor/bin/console scheduler:resume
 
 {% info_block warningBox "Verification" %}
 
-* Move at least one item in an order to the `invoice generated` state.
+- Move at least one item in an order to the `invoice generated` state.
   Make sure that, according to your `DummyInvoice01.xml` and `SalesInvoiceConfig::getOrderInvoiceTemplatePath()` configuration, the correct order invoice template has been assigned to the order: `spy_sales_order_invoice`.
 
-* Place an order with an invoice. Make sure that you receive an invoice within the time configured in the scheduler.
+- Place an order with an invoice. Make sure that you receive an invoice within the time configured in the scheduler.
 
 {% endinfo_block %}
 

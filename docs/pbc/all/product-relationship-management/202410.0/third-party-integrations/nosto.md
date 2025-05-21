@@ -18,16 +18,16 @@ implementation process. Over 2,500 brands in over 100 countries use Nosto to gro
 
 YOUR ADVANTAGES:
 
-* No complicated back-end integration or product feed needed for technical setup and deployment
-* Products are automatically indexed (faster go-to-market)
-* Beautifully-designed and intuitive UI
-* Ecommerce professionals can easily access and use different marketing technologies
-* Proprietary machine learning algorithms trained solely on ecommerce data, analyze both online and offline transactional and behavioral data
-* Highly scalable infrastructure capable of dealing with 3Mil concurrent sessions in real time
-* Integrates seamlessly with leading ecommerce technology providers and platforms
-* Segments can be created individually and via Nosto and directly exported to the Facebook, ESP, Google accounts
-* Product recommendations can be used in pop-ups, emails and Facebook ads
-* Extensive technical onboarding, strong support, in-house frontend design team
+- No complicated back-end integration or product feed needed for technical setup and deployment
+- Products are automatically indexed (faster go-to-market)
+- Beautifully-designed and intuitive UI
+- Ecommerce professionals can easily access and use different marketing technologies
+- Proprietary machine learning algorithms trained solely on ecommerce data, analyze both online and offline transactional and behavioral data
+- Highly scalable infrastructure capable of dealing with 3Mil concurrent sessions in real time
+- Integrates seamlessly with leading ecommerce technology providers and platforms
+- Segments can be created individually and via Nosto and directly exported to the Facebook, ESP, Google accounts
+- Product recommendations can be used in pop-ups, emails and Facebook ads
+- Extensive technical onboarding, strong support, in-house frontend design team
 
 ---
 

@@ -38,11 +38,13 @@ State machines can model problems that involve performing a predetermined sequen
 
 
 ## State machine components
+
 E-Commerce companies need to implement highly individual processes that need to be continuously improved. Instead of building a code for every process or adapting the standard functionality of a shop system, Spryker takes a totally different approach. The order process is modeled with states and transitions, and it's then transferred to an XML notation. The XML format is understood and executed by Spryker's Zed engine. Zed executes the process model; no need to program a specification anymore.
 
 You can define a state machine for each process you identify in your application. For example, the process of managing orders that use a credit card as a payment type differs from those that use invoices. You can define a separate state machine for each, and when a new order is submitted, you can choose which of the available state machines you want to manage.
 
 ### States
+
 What are the relevant elements of a state machine? States lets you describe in which state a sales order according to the sales order item is. States can reflect everything that needs to be considered in your order processing. If you have a build-to-order process, one state can be `waiting for production finished`. If you sell digital goods, one state can be `download for customer activated`. In case of physical goods, a state called `shipped` reflects that the sales order or some items have been shipped.
 
 How are the states modeled in XML? A list of state elements can be defined with this simple XML. First, the state has a name that allows referencing the state. The display attribute allows defining a glossary key that contains the translation for the state name.
@@ -62,8 +64,8 @@ Furthermore, a state can contain several flags.
 ### Flagged items
 
 Sometimes you need to have the ability to check if items are in a certain state. For determining if an order is flagged, `OmsFacade` exposes two operations:
-* `isOrderFlagged($idOrder, $flag)`—checks if an order contains at least a flag (at least one order item is flagged).
-* `isOrderFlaggedAll($idOrder, $flag)`—checks if the entire order is flagged (all order items are flagged).
+- `isOrderFlagged($idOrder, $flag)`—checks if an order contains at least a flag (at least one order item is flagged).
+- `isOrderFlaggedAll($idOrder, $flag)`—checks if the entire order is flagged (all order items are flagged).
 
 **Example:**
 
@@ -77,6 +79,7 @@ Sometimes you need to have the ability to check if items are in a certain state.
 ```
 
 ### Transitions
+
 States can be connected one to another through transitions, similar to a finite graph. Such a transition is bound to an event, which tells when the order or order item can leave the current state. For example, the states `waiting for credit card capture` and `captured` are connected with a transition that expects an external event `capture successful`. States and transition define the possible flow a sales order can take and also which flow is actually not possible.
 
 Technically, transitions are very simple. A source and a target state are defined. The event tells when the transition can be fired.
@@ -101,6 +104,7 @@ You can attach the following attributes to a transition:
 | condition | Allows adding PHP coding that double checks whether this transition can be fired or not. The condition is evaluated when the defined event has been fired. | `condition="PackageName/ClassName"` |
 
 ### Conditions
+
 A transition can be conditioned: the state machine can move from one state to another if a certain condition associated with that transition is being satisfied. This can be modeled in the XML file that describes the process, as in the following example:
 
 ```xml
@@ -182,6 +186,7 @@ The use case is when you want to wait for something—for example, *wait in this
 ```
 
 #### Transition representation
+
 ![Transition representation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/State+Machine+Cookbook/State+Machine+Cookbook+-+Part+I+-+State+Machine+Fundamentals/state-machine-transition-representation.png)
 
 For performance reasons, it's not recommended to create scenarios where a lot of items wait. This check is executed every minute and can be time-consuming.
@@ -243,16 +248,17 @@ Let's assume you are trying to define the prepayment process, in which if, after
 ...
 </events>
 ```
+
 You can also set the date and time when the timeout is started. For details, see [OMS Timeout Processor](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#oms-timeout-processor)
 
 #### Invoking an event
 
 Events can be triggered through the following:
 
-* timeout automatically
-* onEnter
-* facade calls
-* oms:check-conditions
+- timeout automatically
+- onEnter
+- facade calls
+- oms:check-conditions
 
 **Events triggered through timeout**
 
@@ -300,17 +306,17 @@ In the preceding example, after an order is paid, the invoice is automatically c
 
 The Order Management System facade contains several methods that allow triggering an event:
 
-* `triggerEvent`
-* `triggerEventForNewItem`
-* `triggerEventForNewOrderItems`
-* `triggerEventForOneOrderItem`
-* `triggerEventForOrderItems`
+- `triggerEvent`
+- `triggerEventForNewItem`
+- `triggerEventForNewOrderItems`
+- `triggerEventForOneOrderItem`
+- `triggerEventForOrderItems`
 
 This is typically used if an external event is raised.
 
 Examples of external events are as follows:
-* An asynchronous payment response.
-* A fulfillment message from the ERP.
+- An asynchronous payment response.
+- A fulfillment message from the ERP.
 
 Therefore you can implement a service that receives such a message. The next step is to correlate the event with a sales order or with the sales order items. That means you need to find the Sales Order for which the event has been raised. Correlation criteria can be the Sales Order ID or a payment transaction code that was previously saved in Zed. Afterward, the methods `triggerEventForOrderItems` or `triggerEventForNewOrderItems` can be used to trigger an event.
 
@@ -326,13 +332,14 @@ Every time the event is triggered, a dedicated lock based on the order item IDs 
 
 Every time an attempt to trigger an event takes place, the locking process works as follows:
 
-* Try to acquire a lock for target order items.
-* If the lock doesn't exist already, proceed with the process; fail otherwise—the event has already been triggered by another request.
-* When the process is finished (successfully or not), the lock is released.
+- Try to acquire a lock for target order items.
+- If the lock doesn't exist already, proceed with the process; fail otherwise—the event has already been triggered by another request.
+- When the process is finished (successfully or not), the lock is released.
 
 Additionally, a cronjob cleans outdated locks for which the process did not finish successfully. You can configure the desired lock timeout interval in a module configuration file `Zed\Oms\OmsConfig::getStateMachineLockerTimeoutInterval()` and the frequency of the cleanup job in the cronjob configuration.
 
 ### Commands
+
 A transition from one state to another has an event associated with it. The event can have a command associated with it, which is a piece of logic that gets executed when the event is fired. The attached command is specified in the XML file that describes the state machine, where the event is being defined:
 
 ```xml
@@ -361,8 +368,8 @@ In the preceding example, `Oms/SendPaymentRequest` is mapped to `Plugin/Oms/Comm
 
 There are two types of commands:
 
-* Commands by order item—they get executed for each order item; implements `CommandByItemInterface`.
-* Commands by order—executed for all items of the order which are in the same transition; implements `CommandByOrderInterface`.
+- Commands by order item—they get executed for each order item; implements `CommandByItemInterface`.
+- Commands by order—executed for all items of the order which are in the same transition; implements `CommandByOrderInterface`.
 
 Depending on whether you want to execute the command for all sales order items that undergo the transition or separately for each sales order item, you choose the interface you want to implement. The fully qualified class name (including namespace) is added to the corresponding event.
 
@@ -387,14 +394,15 @@ class SendPaymentRequest extends AbstractCommand implements CommandByOrderInterf
 ```
 
 ### Processes
+
 A process represents a model for things that are happening in a shop. In essence, it's a graph on which the nodes are possible statuses of the order, and the vertices that connect the nodes are the transitions.
 
 For example, when submitting a new order, if the payment is made, the shipment subprocess can be initiated; if the payment was not performed, the state machine moves to the `cancelled` status.
 
 Basically, a state machine can be described as a directed connected graph. It has a single starting state and a final state. The graphs that model the state machines are being defined in XML files that are placed under the `config/Zed/oms` folder. The XML file contains the definition of the OMS process, but in order to have a valid and functional state machine to what's configured in the XML files, the following items must be implemented:
-* Implement the defined commands.
-* Implement the defined conditions.
-* Trigger events through API calls.
+- Implement the defined commands.
+- Implement the defined conditions.
+- Trigger events through API calls.
 
 #### Starting a process
 
@@ -412,8 +420,8 @@ A process can be split into multiple subprocesses, and each relates to a single 
 
 There are several reasons for introducing subprocesses when modeling a state machine process:
 
-* The flow of the process is easier to follow.
-* If more than one process needs to be defined—for example, orders that are paid before delivery and orders that are paid on delivery—then the common parts of the processes can be extracted into subprocesses and reused.
+- The flow of the process is easier to follow.
+- If more than one process needs to be defined—for example, orders that are paid before delivery and orders that are paid on delivery—then the common parts of the processes can be extracted into subprocesses and reused.
 
 To introduce a subprocess in the main process, specify its name under the subprocesses tag, as in the following example:
 
@@ -440,6 +448,7 @@ And specify the path to the file in which the transitions of that subprocess are
 In the main process, add the corresponding transitions between the starting and ending states of the included subprocesses and other states (that are defined in other subprocesses or in the main process).
 
 ### Putting it all together
+
 The following snippet shows how all elements are brought together in an XML file. Note that you can also define subprocesses. This lets you reuse a subprocess from several processes. Therefore, `subprocess` used is declared in the `<subprocesses>` section. For each subprocess, you need to define a process element that contains the name and file location as attributes.
 
 ```xml
@@ -475,6 +484,7 @@ The following snippet shows how all elements are brought together in an XML file
 ```
 
 ## Linking processes with code
+
 Events can have commands attached to them, which is logic that gets executed when that event is fired.
 
 Example:
@@ -501,11 +511,12 @@ A transition from one state to another can be conditioned. It's only possible to
 ```
 
 ## Configure OMS cronjobs
+
 Spryker has three dedicated console commands for managing orders:
 
-* Check timeout (oms:check-timeout).
-* Check condition (oms:check-condition).
-* Clear locks (oms:clear-locks).
+- Check timeout (oms:check-timeout).
+- Check condition (oms:check-condition).
+- Clear locks (oms:clear-locks).
 
 The `check timeout` console command checks if the timeout was reached for orders that are in a state that's a source for a transition that has an event with a timeout attached. If the timeout is reached, the order moves to the next state.
 
@@ -556,6 +567,7 @@ In the preceding example, `check timeout` and `check condition` jobs are configu
 For more information on how to define a cron expression, see the [CRON expression](https://en.wikipedia.org/wiki/Cron#CRON_expression) section.
 
 ## Versioning the state machines
+
 The ideal case would be that after designing your state machines and you start using them in the production environment, they stay the same and don't need any further adjustments.
 
 However, you all know that a software product is subject to change in time. The state machines that model the order processing touch many critical parts of the system, so it might need updates in the future.

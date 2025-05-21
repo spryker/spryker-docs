@@ -50,7 +50,8 @@ As expected,  only products with at least one concrete matching selected super-a
 The following solutions require [Product Page Search 3.0.0](https://github.com/spryker/product-page-search/releases/tag/3.0.0) or newer.
 
 ### Solution 1. Concrete products index as a support call
-The solution consists of several steps: the idea, the implementation plan, and the possible downsides of the solution. 
+
+The solution consists of several steps: the idea, the implementation plan, and the possible downsides of the solution.
 
 #### Idea
 
@@ -62,11 +63,11 @@ The Search is done in two steps:
 
 1. Extend `ProductConcretePageSearchTransfer` with the new field *attributes*, where the desired attributes are stored as an array of string values:
 
-```
+```XML
 <property name="attributes" type="string[]" singular="attribute"/>
 ```
 
-2. Implement the Data expander with the interface `\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductConcretePageDataExpanderPluginInterface` to fill into `ProductConcretePageSearchTransfer` super attributes from the concrete. 
+2. Implement the Data expander with the interface `\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductConcretePageDataExpanderPluginInterface` to fill into `ProductConcretePageSearchTransfer` super attributes from the concrete.
 3. Add this plugin in `ProductPageSearchDependencyProvider` into the plugins list `getProductConcretePageDataExpanderPlugins`.
 3. Implement the query expander `ConcreteProductSearchQueryExpanderPlugin`, implementing the interface `QueryExpanderPluginInterface`. You have to add this plugin before `FacetQueryExpanderPlugin` in `CatalogDependencyProvider` into list `createCatalogSearchQueryExpanderPlugins`.
 
@@ -75,19 +76,9 @@ This plugin does the following:
 - Makes a sub-search request such as  `CatalogClient::searchProductConcretesByFullText`, but searches by facets of super attributes from the request.
 - Adds a list of unique abstract product IDs into the query.
 
-An example implementation looks as follows:
-
-```
-some code here
-```
 
 4. Extend `FacetQueryExpanderPlugin`, which doesn't take into account facets used in the plugin `ConcreteProductSearchQueryExpanderPlugin`.
 
-An example implementation looks as follows:
-
-```
-some code here
-```
 
 Make sure to use updated plugin in `CatalogDependencyProvider`.
 
@@ -98,7 +89,7 @@ As you see from the implementation, the results of the last query abstract produ
 
 ### Solution 2: Concrete products index is used as a main search index
 
-The solution consists of several steps: the idea, implementation plan, and possible downsides of the solution. 
+The solution consists of several steps: the idea, implementation plan, and possible downsides of the solution.
 
 #### Idea
 

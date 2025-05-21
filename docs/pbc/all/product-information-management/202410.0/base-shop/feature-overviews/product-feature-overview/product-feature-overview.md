@@ -19,9 +19,9 @@ The *Product* feature lets you create products, and manage their characteristics
 
 In Spryker Commerce OS, you create and manage products in the [Back Office](/docs/pbc/all/back-office/{{page.version}}/base-shop/spryker-core-back-office-feature-overview.html). The product information you specify serves multiple purposes:
 
-* Defines product characteristics.
-* Affects shop behavior. For example, filtering and search on the Storefront are based on product attributes.
-* It's used for internal calculations, like delivery costs based on the product weight.
+- Defines product characteristics.
+- Affects shop behavior. For example, filtering and search on the Storefront are based on product attributes.
+- It's used for internal calculations, like delivery costs based on the product weight.
 
 
 ## Abstract products and product variants
@@ -71,8 +71,8 @@ To sell a product in blue and green colors, you create an abstract product and t
 Suppose the green variant is more expensive than the blue one. In this case, you add the price to the green product variant. The blue variant inherits the price from the abstract product.
 
 The product information is structured as follows:
-* The abstract product contains all the information about the product.
-* The concrete products contain the following information:
+- The abstract product contains all the information about the product.
+- The concrete products contain the following information:
   - The blue variant holds the stock information and the super attribute: `color = blue`.
   - The green variant holds:
     - The stock information.
@@ -96,9 +96,9 @@ Besides the Back Office, you can maintain product information in an external Pro
 
 The Spryker Commerce OS supports integration of the following PIM systems:
 
-* [Akeneo](/docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html)
-* [Censhare PIM](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/censhare-pim.html)
-* [Xentral](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/xentral.html)
+- [Akeneo](/docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html)
+- [Censhare PIM](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/censhare-pim.html)
+- [Xentral](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/xentral.html)
 
 
 ## Related Business User documents

@@ -14,10 +14,10 @@ Spryker OS is capable of providing simple and advanced production scenarios: sin
 ## Applications
 
 Spryker OS provides the following applications:
-* Storefront (Yves)
-* Back Office (Zed)
-* Storefront API (Glue Storefront)
-* Backend API (Glue Backend)
+- Storefront (Yves)
+- Back Office (Zed)
+- Storefront API (Glue Storefront)
+- Backend API (Glue Backend)
 
 Applications can be run and scaled independently. For more information on the provided applications and application layers, see [Conceptual overview](/docs/dg/dev/architecture/conceptual-overview.html).
 

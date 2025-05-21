@@ -166,6 +166,7 @@ Now you need to register your tracking module in econda.js by adding
 var econdaTracking = require('./econda-tracking');
 econdaTracking.init();
 ```
+
 to `econda.js`.
 
 ### Adding a Tracking Code to Twig

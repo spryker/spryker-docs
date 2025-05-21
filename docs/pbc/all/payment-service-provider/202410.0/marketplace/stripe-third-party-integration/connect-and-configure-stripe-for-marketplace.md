@@ -9,10 +9,10 @@ This document describes how to connect and configure the Stripe app in the Back 
 
 ## Prerequisites
 
-* [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
-* Obtain Stripe account details in [Stripe Dashboard](https://dashboard.stripe.com):
-  * Stripe account ID. For more details, see [Stripe account ID](https://stripe.com/docs/payments/account).
-  * Stripe publishable and secret keys. For more details, see [Secret and publishable keys](https://docs.stripe.com/keys#obtain-api-keys).
+- [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
+- Obtain Stripe account details in [Stripe Dashboard](https://dashboard.stripe.com):
+  - Stripe account ID. For more details, see [Stripe account ID](https://stripe.com/docs/payments/account).
+  - Stripe publishable and secret keys. For more details, see [Secret and publishable keys](https://docs.stripe.com/keys#obtain-api-keys).
 
 
 ## Connect and configure the Stripe app

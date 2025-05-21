@@ -8,9 +8,9 @@ originalArticleId: ff253743-a10f-4866-8047-a6c8357a88a7
 
 The data stored in the key-value storage can be used for multiple purposes:
 
-* URL mappings
-* Localized product details
-* Localized product categories details
+- URL mappings
+- Localized product details
+- Localized product categories details
 
 ## Using twig translator
 
@@ -20,8 +20,8 @@ The format of the glossary keys is as follows: `{store}.{locale}.glossary.transl
 
 Example:
 
-* **key** : `demo.de_de.glossary.translation.catalog.next`
-* **value** : `weiter`
+- **key** : `demo.de_de.glossary.translation.catalog.next`
+- **value** : `weiter`
 
 ```twig
 <div class="catalog__pagination">

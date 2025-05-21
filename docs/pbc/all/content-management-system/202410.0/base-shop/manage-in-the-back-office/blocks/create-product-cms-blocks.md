@@ -12,11 +12,11 @@ related:
 
 ## Prerequisites
 
-* [Install product CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-product-cms-blocks.html).
+- [Install product CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-product-cms-blocks.html).
 
-* Create the abstract products whose pages you want to show the block on. For instructions, see [Create abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
+- Create the abstract products whose pages you want to show the block on. For instructions, see [Create abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 
-* Review the [reference information](#reference-information-create-product-cms-blocks) before you start, or look up the necessary information as you go through the process.
+- Review the [reference information](#reference-information-create-product-cms-blocks) before you start, or look up the necessary information as you go through the process.
 
 ## Create a product CMS block
 

@@ -1,6 +1,7 @@
 
 
 ## Install feature core
+
 Follow the steps below to install the CMS + Catalog feature core.
 
 ### Prerequisites
@@ -14,7 +15,7 @@ Install the required features:
 
 ### 1) Set up behavior
 
-#### Configure the CMS page search query.
+#### Configure the CMS page search query
 
 Add the following Query Expander Plugins to your project:
 
@@ -187,6 +188,7 @@ Once you have finished the full integration of the feature, make sure that the a
 {% endinfo_block %}
 
 ## Install feature frontend
+
 Follow the steps below to install the CMS + Catalog feature frontend.
 
 ### Prerequisites
@@ -291,7 +293,7 @@ Verify the changes by opening the CMS search page with, for example: `http://mys
 
 {% endinfo_block %}
 
-### 4)Set up widgets
+### 4) Set up widgets
 
 #### Configure widgets
 
@@ -299,7 +301,8 @@ Add the following plugins to your project:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-| FullTextSearchProductsTabPlugin |Adds a tab item to the Catalog Page full-text search results.|None| \SprykerShop\Yves\CatalogPage\Plugin\FullTextSearchProductsTabPlugin |FullTextSearchCmsPageTabPlugin |Adds a tab item for CMS Search Page full-text search results.|None|\SprykerShop\Yves\CmsSearchPage\Plugin\FullTextSearchCmsPageTabPlugin|
+| FullTextSearchProductsTabPlugin | Adds a tab item to the Catalog Page full-text search results. | None | \SprykerShop\Yves\CatalogPage\Plugin\FullTextSearchProductsTabPlugin |
+|FullTextSearchCmsPageTabPlugin | Adds a tab item for CMS Search Page full-text search results.| None | \SprykerShop\Yves\CmsSearchPage\Plugin\FullTextSearchCmsPageTabPlugin |
 
 **src/Pyz/Yves/TabsWidget/TabsWidgetDependencyProvider.php**
 
@@ -371,6 +374,6 @@ Make sure the following widgets have been registered:
 
 | MODULE | TEST |
 | --- | --- |
-| FullTextSearchTabsWidget | * Go to the full-text search page (by searching for something in the search bar and search for a term that matches some products and CMS pages as well.<br>* Make sure that the tabs component displays the activated tab items properly at the top of the search results. |
+| FullTextSearchTabsWidget | <ul><li>Go to the full-text search page (by searching for something in the search bar and search for a term that matches some products and CMS pages as well.</li><li>Make sure that the tabs component displays the activated tab items properly at the top of the search results.</li></ul> |
 
 {% endinfo_block %}

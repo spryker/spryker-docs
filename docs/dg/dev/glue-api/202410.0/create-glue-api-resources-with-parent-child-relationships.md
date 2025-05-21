@@ -84,6 +84,7 @@ class ModuleRestResource extends AbstractResourcePlugin implements ResourceInter
     }
 }
 ```
+
 </details>
 
 4. Declare the resource:

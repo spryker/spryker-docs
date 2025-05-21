@@ -40,6 +40,7 @@ Make sure that the following modules have been installed:
 Set up the following configuration:
 
 **src/Pyz/Zed/PriceCartConnector/PriceCartConnectorConfig.php**
+
 ```php
 <?php
 
@@ -79,6 +80,7 @@ Apply the following changes only if you have the [Marketplace Product Offer Pric
 {% endinfo_block %}
 
 **src/Pyz/Zed/PriceCartConnector/PriceCartConnectorConfig.php**
+
 ```php
 <?php
 
@@ -205,4 +207,5 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     }
 }
 ```
+
 </details>

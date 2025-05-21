@@ -14,8 +14,8 @@ redirect_from:
 
 In Spryker, the default folders of static assets are:
 
-* `public/Yves/assets/`
-* `public/Zed/assets/`
+- `public/Yves/assets/`
+- `public/Zed/assets/`
 
 For organizational or cost and speed optimization purposes, you may need to change the location of static assets to an external source, like a CDN (content delivery network).
 

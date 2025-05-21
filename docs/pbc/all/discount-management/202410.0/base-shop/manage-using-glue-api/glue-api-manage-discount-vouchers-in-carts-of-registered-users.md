@@ -60,6 +60,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -77,6 +78,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -120,6 +122,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -184,6 +187,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->

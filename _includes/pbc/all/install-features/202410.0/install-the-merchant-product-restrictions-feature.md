@@ -3,6 +3,7 @@
 ## Install feature core
 
 ### Prerequisites
+
 Install the required features:
 
 | NAME | VERSION |
@@ -39,6 +40,7 @@ Run the following commands to apply database changes, as well as generate entity
 console propel:install
 console transfer:generate
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure the following changes have been applied in the database:

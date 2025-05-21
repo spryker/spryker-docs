@@ -35,9 +35,9 @@ Only customers can request Support Portal access because it's part of their cont
 Support cases can no longer be created in Spryker Partner Portal. Use the Support Portal instead.
 
 Using the Support Portal over the Partner Portal has the following advantages:
-* Partners and customers can see their cases and collaborate on them.
-* Advanced relation between change requests, support cases, and infrastructure environments.
-* When creating a case, you can select a needed environment from a list of owned environments, preventing human errors.
+- Partners and customers can see their cases and collaborate on them.
+- Advanced relation between change requests, support cases, and infrastructure environments.
+- When creating a case, you can select a needed environment from a list of owned environments, preventing human errors.
 
  <!-- Upcoming support for MFA -->
 
@@ -45,9 +45,9 @@ Using the Support Portal over the Partner Portal has the following advantages:
 
 To make sure our quick responses don't end up in spam and reach you, whitelist the email addresses we're using to provide updates on your cases:
 
-* support@spryker.com
+- support@spryker.com
 
-* noreply@spryker.com
+- noreply@spryker.com
 
 If you need help with whitelisting the email addresses, forward this request to your IT department or help desk.
 

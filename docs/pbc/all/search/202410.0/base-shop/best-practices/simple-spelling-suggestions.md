@@ -47,7 +47,7 @@ related:
 
 Spelling suggestions provide the users with alternative search terms when the search query does not return any results:
 
-![Spell checking](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Simple+Spelling+Suggestions/spell-checking.png) 
+![Spell checking](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Simple+Spelling+Suggestions/spell-checking.png)
 
 Translation: *Unfortunately there were 0 results for your exact search term "**hammer holk**". Did you possibly mean **hammer holz**?*
 

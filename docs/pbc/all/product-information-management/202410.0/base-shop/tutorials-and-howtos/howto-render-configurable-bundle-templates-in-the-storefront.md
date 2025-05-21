@@ -21,9 +21,9 @@ redirect_from:
 
 The configurable bundle functionality is implemented by 3 widgets:
 
-* `QuoteConfiguredBundleWidget`
-* `SalesConfiguredBundleWidget`
-* `ConfiguredBundleNoteWidget`
+- `QuoteConfiguredBundleWidget`
+- `SalesConfiguredBundleWidget`
+- `ConfiguredBundleNoteWidget`
 
 By adding these widgets to respective templates, you can render the Configurable Bundle Templates on the Storefront, on the Cart, Checkout Summary, Order Details, and Quote Request pages specifically. This document provides information about how to do that.
 

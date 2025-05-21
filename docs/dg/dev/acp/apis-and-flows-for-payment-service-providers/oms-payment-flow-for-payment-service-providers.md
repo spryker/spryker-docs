@@ -23,6 +23,6 @@ The following diagram shows the flow of an order in the OMS with an app.
 ![oms-payment-flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.md/oms-payment-flow.png)
 
 Optional elements:
-* `/payments/transfers` transfers request: used only in marketplaces.
-* `CancelPayment` message: used only when a payment needs to be canceled.
-* `RefundPayment` message: used only when the refund process is triggered for one or more order items.
+- `/payments/transfers` transfers request: used only in marketplaces.
+- `CancelPayment` message: used only when a payment needs to be canceled.
+- `RefundPayment` message: used only when the refund process is triggered for one or more order items.

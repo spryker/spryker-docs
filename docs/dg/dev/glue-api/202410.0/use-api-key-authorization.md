@@ -115,6 +115,7 @@ curl --location 'http://glue-backend.de.spryker.local/dynamic-entity/countries \
 --header 'Accept: application/json' \
 --header 'X-Api-Key: 6264714260f980fe38c6be2439b0a8e9'
 ```
+
 </details>
 
 <details>
@@ -125,4 +126,5 @@ curl --location 'http://glue-backend.de.spryker.local/dynamic-entity/countries?a
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json'
 ```
+
 </details>

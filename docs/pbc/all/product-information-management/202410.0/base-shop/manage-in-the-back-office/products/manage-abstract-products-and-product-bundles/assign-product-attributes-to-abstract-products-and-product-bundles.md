@@ -50,4 +50,4 @@ Review the [reference information](#reference-information-assign-product-attribu
 |-|-|
 | ATTRIBUTE KEY | [Product attribute](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html) to add to the abstract product. |
 | KEY | Product attribute key. |
-| **DEFAULT** locale | Default value of the product attribute. This value is displayed on the Storefront if a locale specific value is not specified. |     
+| **DEFAULT** locale | Default value of the product attribute. This value is displayed on the Storefront if a locale specific value is not specified. |

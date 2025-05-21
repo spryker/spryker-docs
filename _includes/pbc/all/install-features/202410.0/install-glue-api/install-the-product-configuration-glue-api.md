@@ -44,6 +44,7 @@ Make sure that the following modules have been installed:
 ## 2) Set up transfer objects
 
 Generate transfers:
+
 ```bash
 vendor/bin/console transfer:generate
 ```
@@ -190,6 +191,7 @@ Make sure that the `concrete-products` resource is expanded with the product con
     }
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -555,6 +557,7 @@ Make sure that the `orders` resource is expanded with the product configuration 
     }
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -638,6 +641,7 @@ Make sure that the `items` resource is expanded with the product configuration p
     }
 }
 ```
+
 </details>
 
 <details>
@@ -761,6 +765,7 @@ Make sure that the `items` resource is expanded with the product configuration p
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}

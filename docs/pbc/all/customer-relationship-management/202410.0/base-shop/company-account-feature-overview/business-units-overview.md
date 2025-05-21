@@ -21,9 +21,9 @@ The very first step of defining the company structure is setting up business uni
 
 The **business units hierarchy** poses a system in which business units are arranged into levels:
 
-* Upper level
-* Lower level
-* Same level
+- Upper level
+- Lower level
+- Same level
 
 The business unit of the upper level is referred to as a *parent business unit*, and the business units below it are its *child business units*.
 
@@ -57,8 +57,8 @@ Example:
 
 The following are special characteristics of business units:
 
-* You can't assign a parent business unit to its child.
-* Deleting a parent business unit does not delete its children. The hierarchy is kept and just goes one level up.
+- You can't assign a parent business unit to its child.
+- Deleting a parent business unit does not delete its children. The hierarchy is kept and just goes one level up.
 
 {% info_block infoBox %}
 
@@ -66,12 +66,12 @@ A business unit is children that are one level below it, become 0 level parent b
 
 {% endinfo_block %}
 
-* A business unit can be assigned with one or multiple addresses.
-* The existing addresses can be assigned to business units right at the stage of their creation, and the new addresses can be added on the **Edit Business Unit** page.
+- A business unit can be assigned with one or multiple addresses.
+- The existing addresses can be assigned to business units right at the stage of their creation, and the new addresses can be added on the **Edit Business Unit** page.
 
 ![business-units-address.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/business-units-address.png)
 
-*  The addresses can also be unassigned by clearing the check box of the respective address under the **Assign Addresses** section and clicking **Submit**.
+- The addresses can also be unassigned by clearing the check box of the respective address under the **Assign Addresses** section and clicking **Submit**.
 
 ![unassign-address.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/unassign-address.png)
 

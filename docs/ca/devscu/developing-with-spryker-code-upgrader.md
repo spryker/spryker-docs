@@ -14,8 +14,8 @@ Spryker Code Upgrader works best when it's strategically integrated into your de
 
 When the Upgrader is integrated into your development process, we recommend processing updates during the following scrum activities:
 
-* Sprint planning: review, prioritize, and select the upgrade suggestions to be installed in the upcoming sprint.
-* Sprint execution: review, validate, modify, and merge the upgrades using the [Git flow](#git-flow-for-code-upgrades).
+- Sprint planning: review, prioritize, and select the upgrade suggestions to be installed in the upcoming sprint.
+- Sprint execution: review, validate, modify, and merge the upgrades using the [Git flow](#git-flow-for-code-upgrades).
 
 This approach lets you break up big upgrades into smaller pieces. Each smaller piece can be processed within a sprint ensuring the continuity of the process.
 
@@ -37,15 +37,15 @@ Following your usual development process, the development team deploys the updat
 
 ## Responsibilities of the development team
 
-* Prepare your project for the Upgrader. For instructions, see [Prepare a project for Spryker Code Upgrader](/docs/ca/devscu/prepare-a-project-for-spryker-code-upgrader.html).
+- Prepare your project for the Upgrader. For instructions, see [Prepare a project for Spryker Code Upgrader](/docs/ca/devscu/prepare-a-project-for-spryker-code-upgrader.html).
 
-* Connect the Upgrader to your code hosting service. For instructions, see [Connect Spryker Code Upgrader to your project](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-your-project.html).
+- Connect the Upgrader to your code hosting service. For instructions, see [Connect Spryker Code Upgrader to your project](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-your-project.html).
 
-* Cover customizations with automated tests.
+- Cover customizations with automated tests.
 
-* Cover the Upgrader PRs with tests. For information about different kinds of tests, see [Testing updates](/docs/dg/dev/updating-spryker/testing-updates.html).
+- Cover the Upgrader PRs with tests. For information about different kinds of tests, see [Testing updates](/docs/dg/dev/updating-spryker/testing-updates.html).
 
-* Apply major upgrades manually.
+- Apply major upgrades manually.
 
 ## Next steps
 

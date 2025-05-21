@@ -53,13 +53,13 @@ interface CalculatorPluginInterface
 }
 ```
 
-* `RemoveTotalsCalculatorPlugin` resets quote totals, sets `TotalsTransfer` empty.
-* `RemoveAllCalculatedDiscountsCalculatorPlugin` resets every `CalculatedDiscountTransfer`.
-* `ItemGrossAmountsCalculatorPlugin` calculates `sumGrossPrice` for each `ItemTransfer`.
+- `RemoveTotalsCalculatorPlugin` resets quote totals, sets `TotalsTransfer` empty.
+- `RemoveAllCalculatedDiscountsCalculatorPlugin` resets every `CalculatedDiscountTransfer`.
+- `ItemGrossAmountsCalculatorPlugin` calculates `sumGrossPrice` for each `ItemTransfer`.
 
-**`ItemTransfer::sumGrossPrice`** ` = ItemTransfer::unitGrossPrice * ItemTransfer::quantity`
+**`ItemTransfer::sumGrossPrice`** `= ItemTransfer::unitGrossPrice * ItemTransfer::quantity`
 
-* `ProductOptionGrossSumCalculatorPlugin` calculates `unitGrossPriceWithProductOptions`, `sumGrossPriceWithProductOptions` for `ItemTransfer` and `sumGrossPrice` for `ProductOptionTransfer` calculates `unitGrossPriceWithProductOptions`, `sumGrossPriceWithProductOptions` for `ItemTransfer` and `sumGrossPrice` for `ProductOptionTransfer`.
+- `ProductOptionGrossSumCalculatorPlugin` calculates `unitGrossPriceWithProductOptions`, `sumGrossPriceWithProductOptions` for `ItemTransfer` and `sumGrossPrice` for `ProductOptionTransfer` calculates `unitGrossPriceWithProductOptions`, `sumGrossPriceWithProductOptions` for `ItemTransfer` and `sumGrossPrice` for `ProductOptionTransfer`.
 
 ```php
 ProductOptionTransfer::sumGrossPrice = ProductOptionTransfer::unitGrossPrice * ProductOptionTransfer::quantity
@@ -67,13 +67,13 @@ ItemTransfer::unitGrossPriceWithProductOptions = sum(ProductOptionTransfer::unit
 ItemTransfer::sumGrossPriceWithProductOptions = sum(ProductOptionTransfer::sumGrossPrice) + ItemTransfer:sumGrossPrice
 ```
 
-* `SubtotalTotalsCalculatorPlugin` sums each of the `sumGrossPriceWithProductOptions` items.
+- `SubtotalTotalsCalculatorPlugin` sums each of the `sumGrossPriceWithProductOptions` items.
 `TotalsTransfer::subtotal = sum(ItemTransfer::sumGrossPriceWithProductOptions)`
-* `ExpensesGrossSumAmountCalculatorPlugin` calculates `sumGrossPrice` for each item.
+- `ExpensesGrossSumAmountCalculatorPlugin` calculates `sumGrossPrice` for each item.
 `ExpenseTransfer::sumGrossPrice = ExpenseTransfer::unitGrossPrice * ExpenseTransfer::quantity`
-* `ExpenseTotalsCalculatorPlugin` calculates `expenseTotal` in `TotalsTransfer`.
+- `ExpenseTotalsCalculatorPlugin` calculates `expenseTotal` in `TotalsTransfer`.
 `TotalsTransfer::expenseTotal = sum(ExpenseTransfer::sumGrossPrice)`
-* `DiscountCalculatorPlugin` applies discounts to current `QuoteTransfer`, and each discountable item with the property `calculatedDiscounts` gets discounts filled. Also, `voucherDiscounts` and `cartRuleDiscounts` are populated with additional used discount data for order level.
+- `DiscountCalculatorPlugin` applies discounts to current `QuoteTransfer`, and each discountable item with the property `calculatedDiscounts` gets discounts filled. Also, `voucherDiscounts` and `cartRuleDiscounts` are populated with additional used discount data for order level.
 
 {% info_block infoBox "Discount Calculation" %}
 
@@ -82,14 +82,14 @@ Discount calculation is a separate topic and is explained in the [Discount](/doc
 {% endinfo_block %}
 
 
-* `SumGrossCalculatedDiscountAmountCalculatorPlugin` calculates and sets `ItemTransfer` amounts after discounts to `sumGrossPriceWithProductOptionAndDiscountAmounts` and `unitGrossPriceWithProductOptionAndDiscountAmounts`; it also sets expense amounts after discounts to `unitGrossPriceWithDiscounts` and `sumGrossPriceWithDiscounts`.
+- `SumGrossCalculatedDiscountAmountCalculatorPlugin` calculates and sets `ItemTransfer` amounts after discounts to `sumGrossPriceWithProductOptionAndDiscountAmounts` and `unitGrossPriceWithProductOptionAndDiscountAmounts`; it also sets expense amounts after discounts to `unitGrossPriceWithDiscounts` and `sumGrossPriceWithDiscounts`.
 
 ```php
 ItemTransfer::unitGrossPriceWithProductOptionAndDiscountAmounts = ItemTransfer::unitGrossPriceWithProductOptions - (sum(ItemTransfer:calculatedDiscounts::unitGrossPrice) + sum(ProductOptionTransfer::calculatedDiscounts::unitGrossPrice))
 ItemTransfer::sumGrossPriceWithProductOptionAndDiscountAmounts = ItemTransfer::sumGrossPriceWithProductOptions - (sum(ItemTransfer:calculatedDiscounts::sumGrossPrice) + sum(ProductOptionTransfer::calculatedDiscounts::sumGrossPrice))
 ```
 
-* `DiscountTotalsCalculatorPlugin` calculates the total for used discount and sets it to `totalDiscount` in `TotalsTransfer`. The sum of all discountable items `CalculatedDiscountTransfer` gross amounts is as follows:
+- `DiscountTotalsCalculatorPlugin` calculates the total for used discount and sets it to `totalDiscount` in `TotalsTransfer`. The sum of all discountable items `CalculatedDiscountTransfer` gross amounts is as follows:
 
 ```php
 TotalsTransfer:discountTotal += sum(ItemTransfer::CalculateDiscountTransfer::sumGrossAmount +
@@ -98,9 +98,9 @@ GrandTotalTotalsCalculatorPlugin—Calculates grandTotal in TotalsTransfer.
 TotalsTransfer:grandTotal = TotalsTransfer::subtotal + TotalsTransfer:expenseTotal
 ```
 
-* `GrandTotalWithDiscountsCalculatorPlugin` calculates `GrandTotal` after discounts in `TotalsTransfer`.
+- `GrandTotalWithDiscountsCalculatorPlugin` calculates `GrandTotal` after discounts in `TotalsTransfer`.
 `TotalsTransfer:grandTotal = TotalsTransfer::subtotal + TotalsTransfer:expenseTotal - TotalsTransfer::discountTotal`
-* `TaxTotalsCalculatorPlugin`calculates `taxTotal` and `taxRate` used from `TotalTransfer::grandTotal` and sets it in `TotalsTransfer::TaxTotalsTransfer`.
+- `TaxTotalsCalculatorPlugin`calculates `taxTotal` and `taxRate` used from `TotalTransfer::grandTotal` and sets it in `TotalsTransfer::TaxTotalsTransfer`.
 
 `TaxableItems = ItemTransfer, ProductOptionTransfer, ExpenseTransfer. TaxTotalsTransfer::taxRate = sum(TaxableItems) / TaxableItems TaxTotalsTransfer::taxAmount = round((TotalsTransfer::grandTotal * TaxTotalsTransfer::taxRate) / TaxTotalsTransfer::taxRate / 100)`
 

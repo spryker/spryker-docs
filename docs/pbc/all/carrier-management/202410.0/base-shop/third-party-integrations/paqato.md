@@ -20,9 +20,9 @@ PAQATO is an intelligent solution for customer communication and shipping analys
 
 YOUR ADVANTAGES:
 
-* Customer satisfaction and cost reduction through real-time packet monitoring and early identification of shipping problems
-* Numerous customer touch points through automated and proactive customer communication in the look & feel of online retailers
-* High potential for cross-selling through Track & Trace in the retailer's online shop
+- Customer satisfaction and cost reduction through real-time packet monitoring and early identification of shipping problems
+- Numerous customer touch points through automated and proactive customer communication in the look & feel of online retailers
+- High potential for cross-selling through Track & Trace in the retailer's online shop
 
 ---
 

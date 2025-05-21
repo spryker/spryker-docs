@@ -14,6 +14,7 @@ Accessibility improvements include the following changes:
 To install Yves keyboard accessibility improvements, take the following steps:
 
 1. Update the required modules:
+
 ```bash
   composer require spryker-shop/shop-ui:^1.84.0
 ```
@@ -40,6 +41,7 @@ To install Yves keyboard accessibility improvements, take the following steps:
 
 
 3. Import the glossary:
+
 ```bash
   console data:import glossary
 ```
@@ -59,7 +61,7 @@ To install Yves keyboard accessibility improvements, take the following steps:
 <!-- {% endraw %} -->
 
 5. To enable `skip-link`, pass `navigationId` into the `header` organism:
- 
+
 **src/Pyz/Yves/ShopUi/Theme/default/templates/page-layout-main/page-layout-main.twig**
 <!-- {% raw %} -->
 ```twig

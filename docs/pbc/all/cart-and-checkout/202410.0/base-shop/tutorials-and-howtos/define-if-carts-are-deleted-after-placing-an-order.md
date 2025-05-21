@@ -16,8 +16,8 @@ After placing an order, the cart can either be deleted or saved. If you configur
 
 To define this behavior, in `CheckoutPageConfig`, set `cleanCartAfterOrderCreation()` to one of the following:
 
-* `true`: after placing an order, the cart is deleted.
-* `false`: after placing an order, the cart is saved.
+- `true`: after placing an order, the cart is deleted.
+- `false`: after placing an order, the cart is saved.
 
 **Pyz\Shared\CheckoutPage\CheckoutPageConfig**
 

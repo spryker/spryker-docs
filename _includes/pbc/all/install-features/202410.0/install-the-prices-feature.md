@@ -53,7 +53,7 @@ Make sure that the following changes in transfer objects:
 | PriceProductVolume | class |  created | src/Generated/Shared/Transfer/PriceProductVolumeTransfer |
 | PriceProductVolumeCollection | class |  created | src/Generated/Shared/Transfer/PriceProductVolumeCollectionTransfer |
 | PriceProduct.volumeQuantity | column |  added | src/Generated/Shared/Transfer/PriceProductTransfer |
-| ProductViewTransfer.currentPriceProduct | column |  added | src/Generated/Shared/Transfer/CurrentProductPriceTransfer |   
+| ProductViewTransfer.currentPriceProduct | column |  added | src/Generated/Shared/Transfer/CurrentProductPriceTransfer |
 
 {% endinfo_block %}
 

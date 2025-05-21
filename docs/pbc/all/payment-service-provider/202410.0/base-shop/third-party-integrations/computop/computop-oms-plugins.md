@@ -35,11 +35,11 @@ related:
 
 The following plugins are used for performing calls to Paygate during OMS operation.
 
-## Authorize Plugin:
+## Authorize Plugin
 
 Makes an Authorize call to Computop.
 
-## Cancel Plugin:
+## Cancel Plugin
 
 Follow these steps to cancel the item in the order in case all the items or the last possible one got canceled:
 
@@ -48,10 +48,10 @@ Follow these steps to cancel the item in the order in case all the items or the 
 3. Change the status of the current item in our DB in case the Inquire call returned that "Authorization" was not the last action. No API calls are needed.
 4. If there is any item that is not canceled yet, change the status of the current item in our DB. No API calls are needed. There is no API call to change the order in Computop.
 
-## Capture Plugin:
+## Capture Plugin
 
 Makes a Capture call to Computop.
 
-## Refund Plugin:
+## Refund Plugin
 
 Makes a Refund call to Computop.

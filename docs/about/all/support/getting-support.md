@@ -24,6 +24,6 @@ If you need technical help for issues that can't be resolved with the help of th
 
 
 Depending on the types of issues, there are several ways to report them and request support from us:
-* For bug reports and product issues, feel free to create a case for our support team at the [support portal](https://support.spryker.com).
-* For security-related issues, follow the instructions at [Security Support](/docs/about/all/support/reporting-and-handling-security-issues.html).
-* For general discussions of Spryker-related questions, join the Spryker community at [CommerceQuest](https://commercequest.space/).
+- For bug reports and product issues, feel free to create a case for our support team at the [support portal](https://support.spryker.com).
+- For security-related issues, follow the instructions at [Security Support](/docs/about/all/support/reporting-and-handling-security-issues.html).
+- For general discussions of Spryker-related questions, join the Spryker community at [CommerceQuest](https://commercequest.space/).

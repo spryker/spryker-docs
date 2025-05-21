@@ -10,12 +10,13 @@ redirect_from:
 
 Inxmail module has four different commands:
 
-* `\SprykerEco\Zed\Inxmail\Communication\Plugin\Oms\Command\InxmailNewOrderPlugin`
-* `\SprykerEco\Zed\Inxmail\Communication\Plugin\Oms\Command\InxmailOrderCanceledPlugin`
-* `\SprykerEco\Zed\Inxmail\Communication\Plugin\Oms\Command\InxmailPaymentNotReceivedPlugin`
-* `\SprykerEco\Zed\Inxmail\Communication\Plugin\Oms\Command\InxmailShippingConfirmationPlugin`
+- `\SprykerEco\Zed\Inxmail\Communication\Plugin\Oms\Command\InxmailNewOrderPlugin`
+- `\SprykerEco\Zed\Inxmail\Communication\Plugin\Oms\Command\InxmailOrderCanceledPlugin`
+- `\SprykerEco\Zed\Inxmail\Communication\Plugin\Oms\Command\InxmailPaymentNotReceivedPlugin`
+- `\SprykerEco\Zed\Inxmail\Communication\Plugin\Oms\Command\InxmailShippingConfirmationPlugin`
 
 You can use this commands in `\Pyz\Zed\Oms\OmsDependencyProvider::getCommandPlugins`
+
 ```php
  ...
  use SprykerEco\Zed\Inxmail\Communication\Plugin\Oms\Command\InxmailNewOrderPlugin;
@@ -39,6 +40,7 @@ You can use this commands in `\Pyz\Zed\Oms\OmsDependencyProvider::getCommandPlu
  ```
 
 After that you are ready to use commands in OMS setup:
+
 ```php
  <events>
  <event name="authorize" onEnter="true" manual="true" command="Inxmail/SendNewOrderRequest"/>

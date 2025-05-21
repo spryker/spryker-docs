@@ -197,14 +197,14 @@ At Contorion, this is how we send the same product as in the preceding example t
 
 That's a lot of redundant information! For example, the manufacturer, `hammer_weight` and name attributes are repeated in five top-level fields. However, these attributes are used very differently in various search operations, which require different analyzers and query strategies:
 
-* _Search result rendering_: the field `search_result_data` contains all the information that is returned as a result of a query for rendering a search result page or completion popup.
-* _Full-text search_: the fields `search_data/full_text` and `search_data/full_text_boosted` contain all text content the product is found for in a full-text search.
-* _Faceted navigation_: `search_data/string_facet` and `search_data/number_facet` contain all attributes the search results should be grouped and filtered for.
-* _Completion_: `completion_terms` contains terms that are shown as a completion as the user types a query.
-* _Spell checking_: `suggestion_terms` contains terms that might be suggested as an alternative spelling when a user makes a typo.
-* _Static sorting_: `number_sort` and `string_sort` are used for sorting by name or price.
-* _Dynamic result ranking_: scores contains numeric indicators of user relevancy, past performance and product quality.
-* _Category navigation_: category contains information about the position of a product in a category tree/graph.
+- *Search result rendering*: the field `search_result_data` contains all the information that is returned as a result of a query for rendering a search result page or completion popup.
+- *Full-text search*: the fields `search_data/full_text` and `search_data/full_text_boosted` contain all text content the product is found for in a full-text search.
+- *Faceted navigation*: `search_data/string_facet` and `search_data/number_facet` contain all attributes the search results should be grouped and filtered for.
+- *Completion*: `completion_terms` contains terms that are shown as a completion as the user types a query.
+- *Spell checking*: `suggestion_terms` contains terms that might be suggested as an alternative spelling when a user makes a typo.
+- *Static sorting*: `number_sort` and `string_sort` are used for sorting by name or price.
+- *Dynamic result ranking*: scores contains numeric indicators of user relevancy, past performance and product quality.
+- *Category navigation*: category contains information about the position of a product in a category tree/graph.
 
 ## Complete schema
 

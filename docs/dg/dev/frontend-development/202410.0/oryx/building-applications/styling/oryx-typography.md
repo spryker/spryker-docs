@@ -13,7 +13,7 @@ redirect_from:
 
 Typography is an important part of the look and feel of a web page. It contributes to the readability of text but also defines how page structure is perceived. Big headers typically go first and are perceived as more important, whereas smaller text seems less important.
 
-The typography system lets you set up font size, weight, and line height globally. Components don't define _values_ for fonts directly in their CSS but use _design tokens_ to connect to the font values. Design tokens are CSS variables that you can configure in your project implementation.
+The typography system lets you set up font size, weight, and line height globally. Components don't define *values* for fonts directly in their CSS but use *design tokens* to connect to the font values. Design tokens are CSS variables that you can configure in your project implementation.
 
 Like all design tokens, the typography system is configurable by themes, so that selecting of a certain theme applies a unique set of typography settings to all components.
 
@@ -35,7 +35,7 @@ The values are based on design tokens, whcih can be configured in a theme. Theme
 
 {% info_block infoBox "" %}
 
-Setting the _root font size_ is an exception in Oryx. Oryx avoids opinions about the root element and only provides styles to the `oryx-app` component. However, the `rem` unit requires the root font size to be set up in a web page. To ensure a configurable approach, Oryx uses `ThemeMetaInitializer` to accomplish this.
+Setting the *root font size* is an exception in Oryx. Oryx avoids opinions about the root element and only provides styles to the `oryx-app` component. However, the `rem` unit requires the root font size to be set up in a web page. To ensure a configurable approach, Oryx uses `ThemeMetaInitializer` to accomplish this.
 
 {% endinfo_block %}
 
@@ -47,7 +47,7 @@ Application themes in Oryx are typically configured with relative sizes for font
 
 ### `rem` for font size
 
-The `rem` unit, short for _root em_, is relative to the root font size of a document. By defining the root font size, all other font sizes specified using `rem` adapt proportionally.
+The `rem` unit, short for *root em*, is relative to the root font size of a document. By defining the root font size, all other font sizes specified using `rem` adapt proportionally.
 
 For example, if the font size token of an `h3` is set to `1.2rem`, and the root font size is `15px`, the calculated font size for the `h3` becomes `18px`: `1.2 * 15`.
 
@@ -59,7 +59,7 @@ Using `rem` for font size provides several benefits:
 
 ### `em` for line height
 
-The `em` unit, short for _element em_, is relative to the font size of the current element. When line height is defined using `em`, the value is multiplied by the font size to determine the final line height.
+The `em` unit, short for *element em*, is relative to the font size of the current element. When line height is defined using `em`, the value is multiplied by the font size to determine the final line height.
 
 For example, if the line height token of an `h3` is set to `1.5em`, and the font size is `18px`, the calculated line height for the `h3` becomes `27px`: `1.5 * 18`. The font size can be driven by a `rem` unit, and the browser calculates the rem value of the font size before calculating the line height.
 

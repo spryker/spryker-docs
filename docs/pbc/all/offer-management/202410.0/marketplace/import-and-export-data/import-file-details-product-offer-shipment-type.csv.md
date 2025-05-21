@@ -9,8 +9,8 @@ This document describes the `product_offer_shipment_type.csv` file to assign pro
 
 ## Import file dependencies
 
-* [merchant_product_offer.csv](/docs/pbc/all/offer-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-combined-merchant-product-offer.csv.html)
-* [shipment_type.csv](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html)
+- [merchant_product_offer.csv](/docs/pbc/all/offer-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-combined-merchant-product-offer.csv.html)
+- [shipment_type.csv](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html)
 
 
 

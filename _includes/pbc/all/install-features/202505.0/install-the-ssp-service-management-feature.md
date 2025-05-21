@@ -496,13 +496,13 @@ console data:import shipment
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
-* Make sure the following tables contain the imported data:
-    - `spy_product_shipment_type`
-    - `spy_sales_product_abstract_type`
-    - `spy_sales_order_item_product_abstract_type`
-    - `spy_product_abstract_type`
-    - `spy_product_abstract_to_product_abstract_type`
+- Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
+- Make sure the following tables contain the imported data:
+  - `spy_product_shipment_type`
+  - `spy_sales_product_abstract_type`
+  - `spy_sales_order_item_product_abstract_type`
+  - `spy_product_abstract_type`
+  - `spy_product_abstract_to_product_abstract_type`
 
 {% endinfo_block %}
 
@@ -1068,13 +1068,13 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 1. In the Back Office, go to **Catalog** > **Products**.
 2. Create an abstract product with a **service** product type.
 3. For the abstract product you've created, create a concrete product with the following settings:
-  * Enable **Service Date and Time**
-  * Add **Delivery** and **On-Site Service** shipment types
+- Enable **Service Date and Time**
+- Add **Delivery** and **On-Site Service** shipment types
 4. Go to **Merchandising** > **Offers**.
 5. Generate one or more product offers for the service product you've created. Make sure the following applies on the offer create page:
-   * The offer creation form is automatically prepopulated with information from the product
-   * You can assign one or more service points to the product offer
-   * The on-site service shipment type is available
+   - The offer creation form is automatically prepopulated with information from the product
+   - You can assign one or more service points to the product offer
+   - The on-site service shipment type is available
   
 
 {% endinfo_block %}
@@ -1136,28 +1136,28 @@ console frontend:zed:build
   Make sure the product is available in the catalog.
 
 2. Click the product to open its details page. Make sure the following applies on the product details page:
-  - A service point selector is displayed
-  - A date and time selector is displayed
-  - Delivery and service-on-site shipment types are available
+- A service point selector is displayed
+- A date and time selector is displayed
+- Delivery and service-on-site shipment types are available
 
-3. Select a service point. 
+3. Select a service point.
 4. Select a service date and time.
-5. Add the product to cart. 
+5. Add the product to cart.
 6. Add several other service and regular products to cart.
 7. Go to the cart page and make sure the following applies:
-  - The cart items display the selected service points
-  - Items are grouped by shipment type
-  - Selected service points are displayed
+- The cart items display the selected service points
+- Items are grouped by shipment type
+- Selected service points are displayed
 7. Place the order.
   Make sure the order is places successfully and the order summary includes service-specific details.
 
 8. Go to **Customer Account** > **Services**. Make sure the following applies:
-  - The service associated with the order you've placed is displayed in the list with all the relevant service details
-  - You can change service date and time
+- The service associated with the order you've placed is displayed in the list with all the relevant service details
+- You can change service date and time
 9. Next to the service, click **View**. Make sure the following applies on the service details page:
-  - Service point and shipment type are displayed
-  - Buttons to reschedule and cancel the service are displayed
-  - When changing the scheduled time, the updated information is saved and immediately reflected in the order view page.
+- Service point and shipment type are displayed
+- Buttons to reschedule and cancel the service are displayed
+- When changing the scheduled time, the updated information is saved and immediately reflected in the order view page.
 
   {% endinfo_block %}
 
@@ -1165,8 +1165,8 @@ console frontend:zed:build
 
 1. In the Back Office, go to **Services**.
   Make sure the following applies:
-  - All service orders from multiple customers are listed correctly
-  - Each service entry includes detailed information such as the product, customer, company, and scheduled date and time
+- All service orders from multiple customers are listed correctly
+- Each service entry includes detailed information such as the product, customer, company, and scheduled date and time
 2. Open an order's details page by clicking on its order reference.
    On the order details page, make sure you can update the scheduled service date and time.
 3. Make changes to a service order.

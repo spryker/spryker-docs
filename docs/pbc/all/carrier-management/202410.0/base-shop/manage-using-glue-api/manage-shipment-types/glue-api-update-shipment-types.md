@@ -24,6 +24,7 @@ This endpoint lets you update shipment types.
 | Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
 Request sample: `PATCH https://glue-backend.mysprykershop.com/shipment-types/fa575a58-5119-5407-a00b-d1aa01fec63d`
+
 ```json
 {
     "data": {
@@ -49,6 +50,7 @@ Request sample: `PATCH https://glue-backend.mysprykershop.com/shipment-types/fa5
 ### Response
 
 Response sample:
+
 ```json
 {
     "data": {

@@ -17,7 +17,7 @@ redirect_from:
   - /docs/scos/user/features/202204.0/customer-access-feature-overview.html
 ---
 
-_Customer Access_ lets store administrators define whether certain information is visible to logged-out users.
+*Customer Access* lets store administrators define whether certain information is visible to logged-out users.
 
 The feature lets you give your customers the ability to hide content from customers that are not logged in to their shop. You can restrict access to prices, products, product availability, carts, and shopping lists.
 
@@ -28,20 +28,20 @@ A Back Office user can manage customer access in **Customer&nbsp;<span aria-labe
 
 ![content-types.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Hide+Content+from+Logged+out+Users/Hide+Content+from+Logged+out+Users+Overview/content-types.png)
 
-* price: a customer does not see the price if they are not logged in:
+- price: a customer does not see the price if they are not logged in:
 
 Settings in Admin UI (on the left)
 <br>Shop application (on the right)
 
 ![price_not_shown_for_non_logged_in_user.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Hide+Content+from+Logged+out+Users/Hide+Content+from+Logged+out+Users+Overview/price_not_shown_for_non_logged_in_user.png)
 
-* order-place-submit: after selecting **Checkout**, the customer is taken to the login page.
+- order-place-submit: after selecting **Checkout**, the customer is taken to the login page.
 
-* add-to-cart: to add an item to the cart, a customer needs to log in.
+- add-to-cart: to add an item to the cart, a customer needs to log in.
 
-* wishlist: **Add to wishlist** button is not available for a logged-out user.
+- wishlist: **Add to wishlist** button is not available for a logged-out user.
 
-* shopping-list: Add to shopping list button is not available for a logged-out user.
+- shopping-list: Add to shopping list button is not available for a logged-out user.
 
 By default, all content types are hidden for a logged-out user.
 

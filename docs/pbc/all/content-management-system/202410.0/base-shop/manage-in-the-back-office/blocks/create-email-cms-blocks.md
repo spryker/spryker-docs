@@ -56,9 +56,9 @@ You don't need to activate the email CMS block, as the deactivated status of the
 
 **Tips and tricks**
 
-* Add a [glossary key](/docs/pbc/all/miscellaneous/{{page.version}}/manage-in-the-back-office/add-translations.html) to the email block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. To learn how to add translations, see [Managing glossary](/docs/pbc/all/miscellaneous/{{page.version}}/manage-in-the-back-office/add-translations.html).
+- Add a [glossary key](/docs/pbc/all/miscellaneous/{{page.version}}/manage-in-the-back-office/add-translations.html) to the email block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. To learn how to add translations, see [Managing glossary](/docs/pbc/all/miscellaneous/{{page.version}}/manage-in-the-back-office/add-translations.html).
 
-* Add variables to the email CMS block to replace them with customer and order specific details. When the email is sent, the variables are replaced with the actual details. For example, add *firstName*, and it's replaced with the name of the customer the email is sent to. A developer can provide a full list of variables and create new ones.
+- Add variables to the email CMS block to replace them with customer and order specific details. When the email is sent, the variables are replaced with the actual details. For example, add *firstName*, and it's replaced with the name of the customer the email is sent to. A developer can provide a full list of variables and create new ones.
 
 
 ## Reference information: Create an email CMS block

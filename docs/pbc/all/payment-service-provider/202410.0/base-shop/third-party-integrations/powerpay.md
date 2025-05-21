@@ -17,7 +17,7 @@ Omni-channel payment solutions for the twenty first century, powerpay21, is a Gl
 We gained worldwide payments expertise that delivers results for our merchants. From delivering omni-channel payment solutions to controlling risk and fraud to delivering higher conversion ratios, businesses across the world have trusted us and have benefited from our merchant solutions. powerpay21 is committed to outstanding service, out-of-the box solutions and long-lasting relationships.
 
 **Acquiring through powercash21:**
-<br>Operating as a Payments Institution with a license granted by the Central Bank of Cyprus. (Company No: `HE289380`; License No: `115.1.2.9/2018`) (https://www.centralbank.cy/) Principal member of Visa and MasterCard Certified on the Omnipay platform for card present and card not present.
+<br>Operating as a Payments Institution with a license granted by the [Central Bank of Cyprus](https://www.centralbank.cy/). (Company No: `HE289380`; License No: `115.1.2.9/2018`)  Principal member of Visa and MasterCard Certified on the Omnipay platform for card present and card not present.
 
 **Prepaid debit cards via powercard21 – both Visa and MasterCard:**
 <br>Boutique prepaid issuing programs, White labelled programs and a Bespoke Bank Management Suite (BMS) providing financial institutions, customer service and program administrators with a comprehensive online suite of functions and reports.
@@ -26,12 +26,12 @@ We gained worldwide payments expertise that delivers results for our merchants. 
 <br>mPOS21 allows businesses to maximize their sales by accepting credit and debit cards on the go mPOS21 uses a MIURA card reader / PIN pad that connects via Bluetooth to a mobile phone. A customized mPOS21 app is available for Android and iOS, allowing Visa and MasterCard Chip and Pin card present transactions.
 
 YOUR ADVANTAGES:
-* Omni-channel merchant payment solutions: Whether it's payments online, in-person or over the phone
-* Global and localized payment solutions
-* Advanced Risk and Fraud Management
-* Superior reporting tools
-* PCI-DSS Level 1 Certified gateway for data security
-* Commitment to outstanding service
+- Omni-channel merchant payment solutions: Whether it's payments online, in-person or over the phone
+- Global and localized payment solutions
+- Advanced Risk and Fraud Management
+- Superior reporting tools
+- PCI-DSS Level 1 Certified gateway for data security
+- Commitment to outstanding service
 
 ---
 

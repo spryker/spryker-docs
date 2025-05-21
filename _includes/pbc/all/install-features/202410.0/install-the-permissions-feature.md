@@ -52,4 +52,4 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 3. Synchronize permission plugins with storage:
 
 Go to the Administration interface, **Maintenance** menu and click **Sync permissions**.
- 
+

@@ -69,4 +69,4 @@ Product blocks are blocks that can be embedded in the product template, for whic
 
 ## See next
 
-* [Templates and slots](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html)
+- [Templates and slots](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html)

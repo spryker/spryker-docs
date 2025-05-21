@@ -50,7 +50,7 @@ To enable widgets, register the following plugins:
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
-```php    
+```php
 <?php
 
 namespace Pyz\Yves\ShopApplication;

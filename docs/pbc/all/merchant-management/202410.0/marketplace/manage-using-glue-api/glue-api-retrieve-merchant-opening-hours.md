@@ -189,6 +189,7 @@ Request sample: retrieve merchant opening hours
     }
 }
 ```
+
 </details>
 
 <a name="merchant-opening-hours-response-attributes"></a>

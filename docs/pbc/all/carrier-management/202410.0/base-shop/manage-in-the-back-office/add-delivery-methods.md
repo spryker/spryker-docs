@@ -27,9 +27,9 @@ This doc describes how to add delivery methods in the Back Office.
 
 ## Prerequisites
 
-* [Create a tax set](/docs/pbc/all/tax-management/{{page.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html).
-* [Add a carrier company](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-in-the-back-office/add-carrier-companies.html).
-* Review the [reference information](#reference-information-add-delivery-methods) before you start, or look up the necessary information as you go through the process.
+- [Create a tax set](/docs/pbc/all/tax-management/{{page.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html).
+- [Add a carrier company](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-in-the-back-office/add-carrier-companies.html).
+- Review the [reference information](#reference-information-add-delivery-methods) before you start, or look up the necessary information as you go through the process.
 
 ## Add a delivery method
 

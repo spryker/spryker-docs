@@ -264,14 +264,15 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
 
 Ensure that following applies:
-* After creating a product label, you can find the corresponding record in the `spy_product_label_dictionary_storage` table.
-* After creating or updating a product label or assigning a new locale to a store, the corresponding localized attributes are stored in the `spy_product_label_localized_attributes` table.
-* After assigning a product label to a product, the corresponding product record contains the assigned label in the `spy_product_abstract_label_storage` table.
+- After creating a product label, you can find the corresponding record in the `spy_product_label_dictionary_storage` table.
+- After creating or updating a product label or assigning a new locale to a store, the corresponding localized attributes are stored in the `spy_product_label_localized_attributes` table.
+- After assigning a product label to a product, the corresponding product record contains the assigned label in the `spy_product_abstract_label_storage` table.
 
 {% endinfo_block %}
 

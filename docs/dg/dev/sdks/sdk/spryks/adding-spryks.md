@@ -86,6 +86,7 @@ postSpryks:
                   value: "get{{dependentModule | ucfirst }}{{ dependencyType | ucfirst }}"
               ...
 ```
+
 ## The wrapper Spryk
 
 To merge some Spryks into a bigger structure to enable execution of all of them with a single command, you can use a wrapper Spryk.

@@ -22,13 +22,13 @@ redirect_from:
 Xentral is a flexible ERP / CRM software that can be configured according to individual requirements. Xentral is available in four basic versions with different range of functions. The App-Store contains over 100 modules such as sales cockpit, automated warehouse management or major manufacturing programs that can be installed with just a few clicks. In addition, Xentral offers interfaces to all common online shop systems and marketplaces, shipping service providers, payment providers and much more.
 
 YOUR ADVANTAGES:
-* Flexible ERP software in 4 basic versions
-* Connected to our own Xentral App-Store
-* More than 100 modules and interfaces can be installed with just a few clicks
-* Xentral is based on open-source technologies: opportunity to develop own interfaces
-* that can be connected to Xentral
-* Xentral provides interfaces to all common online shop systems, shipping service
-* providers, payment providers and more
+- Flexible ERP software in 4 basic versions
+- Connected to our own Xentral App-Store
+- More than 100 modules and interfaces can be installed with just a few clicks
+- Xentral is based on open-source technologies: opportunity to develop own interfaces
+- that can be connected to Xentral
+- Xentral provides interfaces to all common online shop systems, shipping service
+- providers, payment providers and more
 
 ---
 

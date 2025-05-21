@@ -40,6 +40,6 @@ This opens the **Edit Tax Rate** page with a success message displayed.
 
 ## Next steps
 
-* Assign tax rates to tax sets by [creating tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html).
+- Assign tax rates to tax sets by [creating tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html).
 
-* Assign tax rates to existing tax sets by [editing tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/edit-tax-sets.html).
+- Assign tax rates to existing tax sets by [editing tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/edit-tax-sets.html).

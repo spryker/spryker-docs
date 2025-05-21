@@ -295,6 +295,7 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/ProductOptionStorage/ProductOptionStorageDependencyProvider.php**
@@ -366,15 +367,16 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
 
 Make sure the following is true:
-* Merchants can create product option groups and values in the Merchant Portal.
-* Merchant product option information is shown on a product details page when it's approved and active.
-* Merchant product option information is displayed in the cart, checkout, and user account.
-* Merchant product options are a part of the marketplace or merchant order, and all totals are calculated correctly.
+- Merchants can create product option groups and values in the Merchant Portal.
+- Merchant product option information is shown on a product details page when it's approved and active.
+- Merchant product option information is displayed in the cart, checkout, and user account.
+- Merchant product options are a part of the marketplace or merchant order, and all totals are calculated correctly.
 
 {% endinfo_block %}
 

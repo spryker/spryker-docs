@@ -16,8 +16,8 @@ redirect_from:
 
 The *Customer Login* feature with an enhanced secure password policy lets you prevent brute-force login attacks by configuring your project in the following ways:
 
-* Block a Storefront user account for some time after a certain number of login attempts.
-* Enforce the use of strong passwords by defining requirements for a password, like its length and allowed and forbidden characters.
+- Block a Storefront user account for some time after a certain number of login attempts.
+- Enforce the use of strong passwords by defining requirements for a password, like its length and allowed and forbidden characters.
 
 You can define separate settings for a Storefront user and agent.
 

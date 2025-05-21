@@ -17,10 +17,12 @@ SPRYKER_KEY_VALUE_STORE_HOST={VALUE_FROM_THE_CONNECTION_CONFIGURATION} SPRYKER_K
 ```
 
 4. Get Redis system information using one of the following commands:
-  * ```bash
+
+- ```bash
     redis-cli -h ${SPRYKER_KEY_VALUE_STORE_HOST} -p ${SPRYKER_KEY_VALUE_STORE_PORT} INFO
     ```
-  * ```bash
+
+- ```bash
     (printf "INFO\r\n";) | nc ${SPRYKER_KEY_VALUE_STORE_HOST} ${SPRYKER_KEY_VALUE_STORE_PORT}
     ```
 

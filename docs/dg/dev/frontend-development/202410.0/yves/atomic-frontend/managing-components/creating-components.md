@@ -20,14 +20,14 @@ As Spryker Shop implements the [Component Model](/docs/dg/dev/frontend-developm
 
 ## 1. Create a component folder
 
-First of all, you need to create a folder on the file system where all component files will be located. By default, project level components are located under `src/Pyz/Yves/ShopUi/Theme/default/components`. This folder should contain subfolders for each component type (_atoms_, _molecules_, _organisms_). A links counter is a simple molecule, so it will be created under the **molecules** subfolder. Per naming conventions, the folder name follows [Kebab Case](http://wiki.c2.com/?KebabCase): `src/Pyz/Yves/ShopUi/Theme/default/components/molecules/new-component-counter`.
+First of all, you need to create a folder on the file system where all component files will be located. By default, project level components are located under `src/Pyz/Yves/ShopUi/Theme/default/components`. This folder should contain subfolders for each component type (*atoms*, *molecules*, *organisms*). A links counter is a simple molecule, so it will be created under the **molecules** subfolder. Per naming conventions, the folder name follows [Kebab Case](http://wiki.c2.com/?KebabCase): `src/Pyz/Yves/ShopUi/Theme/default/components/molecules/new-component-counter`.
 
 Open the `new-component-counter` folder and create the following files:
 
-* `index.ts` - Webpack entry point;
-* `new-component-counter.scss` - styles;
-* `new-component-counter.ts` - Javascript code;
-* `new-component-counter.twig` - component template.
+- `index.ts` - Webpack entry point;
+- `new-component-counter.scss` - styles;
+- `new-component-counter.ts` - Javascript code;
+- `new-component-counter.twig` - component template.
 
 ## 2. Define a template
 
@@ -35,13 +35,13 @@ The first thing to do when creating a component is to define a template for it. 
 
 First, we need to define the inheritance of the component. A component can inherit from a model or another component. Since we are creating a new component, it can be inherited from the following models defined in Spryker Shop Application:
 
-* atoms, molecules and organisms extend model **component**:
+- atoms, molecules and organisms extend model **component**:
 
 ```twig
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
 ```
 
-* templates and views extend model **template**
+- templates and views extend model **template**
 
 ```twig
 {% raw %}{%{% endraw %} extends model('template') {% raw %}%}{% endraw %}
@@ -55,8 +55,8 @@ As we are creating a molecule, it must inherit the **component** model. For this
 
 After that, we need to define a configuration object for our new component. A configuration consists of the following:
 
-* **name** - specifies the component name. It is also used as the class name of the component.
-* Optional: **tag** - specifies the name of the DOM tag that will be used to render the component. It also defines the component Javascript class name (**jsName**) automatically.
+- **name** - specifies the component name. It is also used as the class name of the component.
+- Optional: **tag** - specifies the name of the DOM tag that will be used to render the component. It also defines the component Javascript class name (**jsName**) automatically.
 
 {% info_block infoBox %}
 
@@ -64,7 +64,7 @@ If the tag name is not defined, **div** is used by default.
 
 {% endinfo_block %}
 
-* Optional: **jsName** - explicitly specifies the Javascript class name (**.js-classname**) of the component.
+- Optional: **jsName** - explicitly specifies the Javascript class name (**.js-classname**) of the component.
 
 {% info_block warningBox "Separation of Logic from Styles" %}
 
@@ -74,7 +74,7 @@ To enforce separation between logic and visual styles and achieve clear understa
 
 The same as with files and folders, Kebab Case should be used
 
-We will use a custom tag for the component. It will have the same name as the name of the component. Add the _config_ element as follows:
+We will use a custom tag for the component. It will have the same name as the name of the component. Add the *config* element as follows:
 
 ```twig
 {% raw %}{%{% endraw %} define config = {
@@ -86,9 +86,9 @@ We will use a custom tag for the component. It will have the same name as the na
 } {% raw %}%}{% endraw %}
 ```
 
-Now, we need to define a contract for the component. Contract consists of the attributes required for the component to function properly. Attributes can be either **required** or **optional**. _Required_ attributes must always be defined whenever a component is used, while _optional_ ones can be left undefined. Nevertheless, by convention, attributes cannot have their value undefined. For this reason, if you define an optional attribute in your contract, you must set a default value for it.
+Now, we need to define a contract for the component. Contract consists of the attributes required for the component to function properly. Attributes can be either **required** or **optional**. *Required* attributes must always be defined whenever a component is used, while *optional* ones can be left undefined. Nevertheless, by convention, attributes cannot have their value undefined. For this reason, if you define an optional attribute in your contract, you must set a default value for it.
 
-Let us define 2 attributes. They will be used to pass the component title and description displayed on a page. _Title_ will be required and _description_ will be optional with the default value of _no description_.
+Let us define 2 attributes. They will be used to pass the component title and description displayed on a page. *Title* will be required and *description* will be optional with the default value of *no description*.
 
 ```twig
 {% raw %}{%{% endraw %} define data = {
@@ -99,7 +99,7 @@ Let us define 2 attributes. They will be used to pass the component title and de
 
 In addition to the data contract, you can also add attributes that will be passed in the HTML tag of the component. The same as **data** attributes, they can be required or not.
 
-For our component, we will use an attribute called _element-selector_. It will be used to specify the type of HTML elements to count. Let us add the attribute and make it required:
+For our component, we will use an attribute called *element-selector*. It will be used to specify the type of HTML elements to count. Let us add the attribute and make it required:
 
 ```twig
 {% raw %}{%{% endraw %} define attributes = {
@@ -138,7 +138,7 @@ Finally, let us define the template. You can do this like you would normally do 
 
 ## 3. Create styles
 
-Now, let us create visual styles used to display the component on a page. When creating styles, use [BEM methodology](https://en.bem.info/methodology/css/). To link the style to the new component, the class name must be the same as the component name, also in _Kebab Case_.
+Now, let us create visual styles used to display the component on a page. When creating styles, use [BEM methodology](https://en.bem.info/methodology/css/). To link the style to the new component, the class name must be the same as the component name, also in *Kebab Case*.
 
 Open file `new-component-counter.scss` file and add the following code:
 
@@ -165,7 +165,7 @@ Open file `new-component-counter.scss` file and add the following code:
 
 {% info_block infoBox %}
 
-As shown in the example, you can use global variables, functions and mixins in your styles, for example `$setting-color-alt` or `$setting-color-dark`. They can be found in the `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles` folder. For more details, see the [SASS Layer](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/atomic-frontend.html#sass-layer) section in _Atomic Frontend_.
+As shown in the example, you can use global variables, functions and mixins in your styles, for example `$setting-color-alt` or `$setting-color-dark`. They can be found in the `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles` folder. For more details, see the [SASS Layer](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/atomic-frontend.html#sass-layer) section in *Atomic Frontend*.
 
 {% endinfo_block %}
 
@@ -179,7 +179,7 @@ import './new-component-counter.scss';
 
 Finally, we need to implement the actual code that will count the elements. Open the `new-component-counter.ts` file.
 
-The component we are creating is a molecule which is inherited from the _Component_ model. Because of this, it must extend the Component base class defined in the `ShopUI` module. First, we need to import the base class:
+The component we are creating is a molecule which is inherited from the *Component* model. Because of this, it must extend the Component base class defined in the `ShopUI` module. First, we need to import the base class:
 
 ```css
 import Component from 'ShopUi/models/component';
@@ -193,9 +193,9 @@ It is recommended to use **ready** callback. This callback is triggered when t
 
 {% endinfo_block %}
 
-Let us implement the **ready** callback. Upon receiving the callback, the component will count the number of tags defined by _element-selector_.
+Let us implement the **ready** callback. Upon receiving the callback, the component will count the number of tags defined by *element-selector*.
 
-To fulfill our goal, we can use keyword _this_. It provides direct access to the public API of the HTML element associated with the component.
+To fulfill our goal, we can use keyword *this*. It provides direct access to the public API of the HTML element associated with the component.
 
 Names of Javascript classes follow [Camel Case](http://wiki.c2.com/?CamelCase), thus, the behavior of our component will be implemented by Javascript class `NewComponentCounter`:
 
@@ -222,9 +222,9 @@ export default class NewComponentCounter extends Component {
 
 After implementing the behavior, we also need to bind the Javascript class to the DOM. For this purpose, we need to use the **register** function of the Spryker Shop application. It accepts **2** arguments:
 
-* **name** - specifies the component name. This name will be associated with the component and can be used in Twig to insert the component in a template. Also, it will be used in the DOM as a tag name. Whenever a tag with the specified name occurs in the DOM, the Shop Application will load the component. It must be the same as the `data.tag` specified in the component Twig on step **2**.
+- **name** - specifies the component name. This name will be associated with the component and can be used in Twig to insert the component in a template. Also, it will be used in the DOM as a tag name. Whenever a tag with the specified name occurs in the DOM, the Shop Application will load the component. It must be the same as the `data.tag` specified in the component Twig on step **2**.
 
-* **importer** - must be a call of Webpack's **import** function to import Typescript code for the component.
+- **importer** - must be a call of Webpack's **import** function to import Typescript code for the component.
 
 The call must include a Webpack magic comment that specifies which type of import you want for the component, 'lazy' or 'eager'. For details, see [Dynamic Imports](https://webpack.js.org/guides/code-splitting/#dynamic-imports).
 
@@ -247,9 +247,9 @@ Our component is almost complete. The only thing left is to compile it. Execute 
 
 When done, you can include it into other components, views and templates.
 
-* Copy file `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/page-layout-main/page-layout-main.twig` to `src/Pyz/Yves/ShopUi/Theme/default/page-layout-main/page-layout-main.twig`. Doing so overrides the default main page on the project level.
+- Copy file `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/page-layout-main/page-layout-main.twig` to `src/Pyz/Yves/ShopUi/Theme/default/page-layout-main/page-layout-main.twig`. Doing so overrides the default main page on the project level.
 
-* Add the following code to the very beginning of the `<main>` block. It will include our new component and configure it to count **a** tags:
+- Add the following code to the very beginning of the `<main>` block. It will include our new component and configure it to count **a** tags:
 
 ```twig
 {% raw %}{%{% endraw %} include molecule('new-component-counter') with {
@@ -354,6 +354,7 @@ When done, you can include it into other components, views and templates.
     {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
 </details>
 
 Now, open the front page of Spryker Shop. The new component will appear on the top of the page, below the header.

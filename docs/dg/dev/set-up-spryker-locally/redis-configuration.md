@@ -16,8 +16,8 @@ related:
 
 In Spryker, Redis is used in two scenarios:
 
-* Key-value storage. Modules: `Spryker.Storage`, `Spryker.Collector`, and `Spryker.Heartbeat`.
-* Session data storage. Module: `Spryker.Session`.
+- Key-value storage. Modules: `Spryker.Storage`, `Spryker.Collector`, and `Spryker.Heartbeat`.
+- Session data storage. Module: `Spryker.Session`.
 
 Each scenario uses a separate set of configuration values.
 
@@ -115,6 +115,7 @@ The standard Redis client configuration uses environment variables defined as co
 Compression support is available starting from `spryker/redis:2.9.1`.  
 
 By default Redis compression is disabled:
+
 ```php
 $config[RedisConstants::REDIS_COMPRESSION_ENABLED] = getenv('SPRYKER_KEY_VALUE_COMPRESSING_ENABLED') ?: false;
 ```

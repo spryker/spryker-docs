@@ -126,9 +126,9 @@ P&S is a concept for transferring data from Zed database to Yves databases like 
 
 When you are creating a new listener you should consider these rules:
 
-* Run your logic against a chunk of event messages not per each.
-* Don't run the query inside of for-loop
-* Try to save them with a bulk operation, not one by one
+- Run your logic against a chunk of event messages not per each.
+- Don't run the query inside of for-loop
+- Try to save them with a bulk operation, not one by one
 
 Take a look at this example:
 
@@ -157,8 +157,8 @@ public function publish(array $productAbstractIds): void
 
 Another point that we need to be very careful here is to call Facade API without any thinking through, we must make sure that these APIs will not run queries inside same as DataImport rule. You are allowed to call Facade API but if:
 
-* There is no query inside
-* Facade API designed for batch operation (`findPriceForSku` vs `findPricesForSkus`)
+- There is no query inside
+- Facade API designed for batch operation (`findPriceForSku` vs `findPricesForSkus`)
 
 ### Triggering events
 
@@ -198,13 +198,13 @@ Sometimes the amount of the data which needs be synced is very high, for this re
 
 These examples only tested for PostgreSQL.
 
-* `src/Pyz/Zed/PriceProductStorage/Business/Storage/PriceProductAbstractStorageWriter.php`
-* `src/Pyz/Zed/PriceProductStorage/Business/Storage/PriceProductConcreteStorageWriter.php`
-* `src/Pyz/Zed/ProductPageSearch/Business/Publisher/ProductAbstractPagePublisher.php`
-* `src/Pyz/Zed/ProductPageSearch/Business/Publisher/ProductConcretePageSearchPublisher.php`
-* `src/Pyz/Zed/ProductStorage/Business/Storage/ProductAbstractStorageWriter.php`
-* `src/Pyz/Zed/ProductStorage/Business/Storage/ProductConcreteStorageWriter.php`
-* `src/Pyz/Zed/UrlStorage/Business/Storage/UrlStorageWriter.php`
+- `src/Pyz/Zed/PriceProductStorage/Business/Storage/PriceProductAbstractStorageWriter.php`
+- `src/Pyz/Zed/PriceProductStorage/Business/Storage/PriceProductConcreteStorageWriter.php`
+- `src/Pyz/Zed/ProductPageSearch/Business/Publisher/ProductAbstractPagePublisher.php`
+- `src/Pyz/Zed/ProductPageSearch/Business/Publisher/ProductConcretePageSearchPublisher.php`
+- `src/Pyz/Zed/ProductStorage/Business/Storage/ProductAbstractStorageWriter.php`
+- `src/Pyz/Zed/ProductStorage/Business/Storage/ProductConcreteStorageWriter.php`
+- `src/Pyz/Zed/UrlStorage/Business/Storage/UrlStorageWriter.php`
 
 Example classes are going to be replaced with a Core CTE solution.
 
@@ -214,9 +214,9 @@ Example classes are going to be replaced with a Core CTE solution.
 
 When we are facing some batch operation, we need to think about big data and performance under heavy loading, we are not allowed to write same code that only does the job, it needs to be scalable and fast for high usages. Below you can find our main points:
 
-* Create batch queries and processes
-* Don't use ORM for batch processing as it's slow by design
-* Don't run separated queries for each data-set
-* Don't call any facade logic if they are slow or run internal queries
-* Release memory after each bulk operations to prevent memory issues
-* Use CTE technique (supported by PostgreSQL or MySQL >= 8, and MariaDB >= 10.2)
+- Create batch queries and processes
+- Don't use ORM for batch processing as it's slow by design
+- Don't run separated queries for each data-set
+- Don't call any facade logic if they are slow or run internal queries
+- Release memory after each bulk operations to prevent memory issues
+- Use CTE technique (supported by PostgreSQL or MySQL >= 8, and MariaDB >= 10.2)

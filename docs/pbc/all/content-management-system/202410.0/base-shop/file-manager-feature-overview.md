@@ -17,19 +17,19 @@ redirect_from:
 ---
 
 The *File Manager* feature lets you upload and manage your assets (media files) effectively. You can do the following:
-* Upload and delete files in bulk.
-* Add and delete files manually through the Back Office.
-* Maintain multiple versions of individual files.
-* Drag and drop to create and update your assets' file structure.
-* Manage files from a list view.
+- Upload and delete files in bulk.
+- Add and delete files manually through the Back Office.
+- Maintain multiple versions of individual files.
+- Drag and drop to create and update your assets' file structure.
+- Manage files from a list view.
 
 A Back Office user can upload files then add them to CMS pages and blocks to display on the Storefront.
 
 Apart from images, you can add many different types of assets to your project, including but not limited to the following ones:
-* Presentations
-* PDF documents
-* Graphics
-* Banners
+- Presentations
+- PDF documents
+- Graphics
+- Banners
 
 Digital assets let content managers create rich, compelling, and attractive content for your customers. They also let you offer your customers additional information like user manuals or instructions.
 
@@ -98,15 +98,15 @@ Except for the error handling files, there are no Glue-related assets.
 
 By default, static assets are stored locally in the following folders:
 
-* `public/Yves/assets/`
-* `public/Zed/assets/`
+- `public/Yves/assets/`
+- `public/Zed/assets/`
 
 For organizational or cost and speed optimization purposes, the location of static assets can be changed to an external source.
 
 The following environment variables are used for that:
 
-* `SPRYKER_ZED_ASSETS_BASE_URL`
-* `SPRYKER_YVES_ASSETS_URL_PATTERN`
+- `SPRYKER_ZED_ASSETS_BASE_URL`
+- `SPRYKER_YVES_ASSETS_URL_PATTERN`
 
 See [Integrating custom location for static assets](/docs/dg/dev/integrate-and-configure/integrate-custom-location-for-static-assets.html) for more details.
 

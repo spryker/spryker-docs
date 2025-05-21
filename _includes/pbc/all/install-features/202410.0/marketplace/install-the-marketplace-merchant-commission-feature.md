@@ -173,10 +173,10 @@ class SalesPaymentMerchantSalesMerchantCommissionConfig extends SprykerSalesPaym
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the tax deduction is properly configured for the store and price mode for the Merchant Payment Commission by
+- Make sure the tax deduction is properly configured for the store and price mode for the Merchant Payment Commission by
 setting the `SalesPaymentMerchantSalesMerchantCommissionConfig::TAX_DEDUCTION_ENABLED_FOR_STORE_AND_PRICE_MODE`
 configuration.
-* Create an order with a marketplace payment and verify that the tax deduction is working as expected by checking the
+- Create an order with a marketplace payment and verify that the tax deduction is working as expected by checking the
 details in the `spy_sales_payment_merchant_payout` and `spy_sales_payment_merchant_payout_reversal` tables.
 
 {% endinfo_block %}
@@ -1272,7 +1272,7 @@ details in the `spy_sales_payment_merchant_payout` and `spy_sales_payment_mercha
 
 {% endinfo_block %}
 
-### Prepare order state machines for the Merchant Commission process.
+### Prepare order state machines for the Merchant Commission process
 
 In this step, you can customize your order state machine to charge the Merchant Commission commissions.
 This step prepares the `DummyPayment` and `MarketplacePayment01` state machine for the Merchant Commission process.
@@ -1549,8 +1549,8 @@ To import data follow the steps in the following sections.
 
 Some of the commission rule expressions provided in the following examples are based on optional feature extensions. For commissions to work properly, these extensions need to be enabled:
 
-* `item-price`: the condition for the order item from the [Install the Marketplace Merchant Commission + Prices feature](/docs/pbc/all/merchant-management/202410.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-prices-feature.html).
-* `category`: the condition for the order item from the [Install the Marketplace Merchant Commission + Category Management feature](/docs/pbc/all/merchant-management/202410.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-category-management-feature.html).
+- `item-price`: the condition for the order item from the [Install the Marketplace Merchant Commission + Prices feature](/docs/pbc/all/merchant-management/202410.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-prices-feature.html).
+- `category`: the condition for the order item from the [Install the Marketplace Merchant Commission + Category Management feature](/docs/pbc/all/merchant-management/202410.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-category-management-feature.html).
 
 All related extensions are listed in [Install related features](#install-related-features).
 
@@ -2104,11 +2104,11 @@ Make sure the configured plugins have been registered and are working as expecte
 
 Place an order with products from different merchants and make sure the following applies:
 
-* In the `spy_sales_merchant_commission` database table, merchants commissions have been applied to each merchant product in the order.
-* The commission amount for each order item matches the commission rules you've set up for each merchant.
+- In the `spy_sales_merchant_commission` database table, merchants commissions have been applied to each merchant product in the order.
+- The commission amount for each order item matches the commission rules you've set up for each merchant.
    The commission amounts may vary depending on the commission rules you've set up for each merchant. If the commission
    amounts don't match your expectations, review the commission rules in the `spy_merchant_commission` table.
-* The `spy_sales_merchant_commission` table has entries similar to the following:
+- The `spy_sales_merchant_commission` table has entries similar to the following:
 
 | id_sales_merchant_commission | uuid | fk_sales_order | fk_sales_order_item | name  | amount | refunded_amount |
 |------------------------------|------|----------------|---------------------|-------|--------|-----------------|

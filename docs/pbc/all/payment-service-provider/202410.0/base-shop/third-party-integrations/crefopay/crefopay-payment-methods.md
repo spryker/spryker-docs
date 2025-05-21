@@ -63,10 +63,10 @@ Direct Debit's processed by the bank system once it's transferred to the bank ga
 
 As a result of the reconciliation process, the bank system provides feedback which is evaluated automatically within CrefoPay system:
 
-* In case of a positive feedback, the status of the order is set to Paid.
-* In case of a negative return, it gets the Paymentfailed status.
-* In case CrefoPay does not receive any feedback (which is a rare case), CrefoPay system waits for the so-called grace period to pass.
-* In case CrefoPay system does not receive a negative feedback within this grace period, the status of the order is set to Paid.
+- In case of a positive feedback, the status of the order is set to Paid.
+- In case of a negative return, it gets the Paymentfailed status.
+- In case CrefoPay does not receive any feedback (which is a rare case), CrefoPay system waits for the so-called grace period to pass.
+- In case CrefoPay system does not receive a negative feedback within this grace period, the status of the order is set to Paid.
 
 In case CrefoPay does not receive any feedback (which is a rare case), CrefoPay system waits for the so-called grace period to pass. If CrefoPay system does not receive a negative feedback within this grace period, the status of the order is set to Paid.
 

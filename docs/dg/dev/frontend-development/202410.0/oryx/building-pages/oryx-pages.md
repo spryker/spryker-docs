@@ -160,7 +160,7 @@ Using this syntax gives you the flexibility to apply changes in multiple, any, o
 
 When you do not provide a merge `type`, by default, the selected component is replaced. Alternative types can be configured in the `merge.type` field.
 
-The following example shows how to _merge_ content in an existing component.
+The following example shows how to *merge* content in an existing component.
 
 ```ts
 import { appBuilder } from "@spryker-oryx/application";

@@ -40,13 +40,13 @@ To access data rapidly, the Shop App client uses Redis as a key-value storage an
 
 The advantages of the approach are:
 
-* High performance and fast (semi-real-time) sync, with changes synced every second by default.
-* Possibility to stack and optimize SQL queries while publishing data.
-* Possibility to trigger updates automatically by manipulating Propel entities and without triggering the sync manually.
-* Easy data transformation into the format that can be consumed by a frontend application.
-* Updates can be done incrementally without doing full exports.
-* Data is always available in the SQL database, even if Redis or Elasticsearch storage is corrupted or outdated. You can re-sync the data at any time.
-* Data can be localized and targeted at a specific store.
+- High performance and fast (semi-real-time) sync, with changes synced every second by default.
+- Possibility to stack and optimize SQL queries while publishing data.
+- Possibility to trigger updates automatically by manipulating Propel entities and without triggering the sync manually.
+- Easy data transformation into the format that can be consumed by a frontend application.
+- Updates can be done incrementally without doing full exports.
+- Data is always available in the SQL database, even if Redis or Elasticsearch storage is corrupted or outdated. You can re-sync the data at any time.
+- Data can be localized and targeted at a specific store.
 
 
 Both Publish and Synchronize implement the queue pattern. See [Spryker Queue Module](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html) to learn more.
@@ -59,9 +59,9 @@ There are 2 ways to start the Publish process: automated and manual.
 
 ### Automated event emitting
 
-Any changes done to an entity implementing the _event_ Propel behavior triggers a publish event immediately. CUD (create, update, delete) operations are covered by this Propel behavior. So you can expect these three types of events on creation, update, and deletion of DB entities managed by Propel ORM.
+Any changes done to an entity implementing the *event* Propel behavior triggers a publish event immediately. CUD (create, update, delete) operations are covered by this Propel behavior. So you can expect these three types of events on creation, update, and deletion of DB entities managed by Propel ORM.
 
-For example, saving an abstract product triggers the _create abstract product_ event:
+For example, saving an abstract product triggers the *create abstract product* event:
 
 ```php
 $productAbstractEntity = SpyProductAbstractQuery::create()->findOne();
@@ -89,11 +89,11 @@ Publish and Synchronize Process schema:
 ## Publish
 
 When the publish process is triggered, an event or events are posted to a queue. Each event message posted to the queue contains the following information on the event that triggered it:
-* Event name
-* ID
-* Names of the corresponding publisher and transfer classes
-* The list of modified columns
-* The foreign keys used to backtrack the updated Propel entities
+- Event name
+- ID
+- Names of the corresponding publisher and transfer classes
+- The list of modified columns
+- The foreign keys used to backtrack the updated Propel entities
 
 
 However, it will not contain the actual data that has changed. See the following example:
@@ -122,11 +122,11 @@ However, it will not contain the actual data that has changed. See the following
 }
 ```
 
-Each event is consumed by a publisher plugin that is mapped to it. The number of events depends on how many publisher plugins are configured for a specific update. For example, when the last product item is sold, its availability status should be changed to _not available_. The availability status of the product bundle it belongs to should be changed as well. Two publishers are required for this purpose: one for product availability and another for product bundle availability. As a result, two events are posted into the queue.
+Each event is consumed by a publisher plugin that is mapped to it. The number of events depends on how many publisher plugins are configured for a specific update. For example, when the last product item is sold, its availability status should be changed to *not available*. The availability status of the product bundle it belongs to should be changed as well. Two publishers are required for this purpose: one for product availability and another for product bundle availability. As a result, two events are posted into the queue.
 
 To consume an event, the queue adapter calls the publisher plugin specified in the `listenerClassName` field of the event message. The publisher is a plugin class implemented in one of the modules. It queries the data affected by an event and transforms it into a format suitable for frontend data storage (Redis or Elasticsearch).
 
-The transformed data is stored in a dedicated database table. It serves as a _mirror table_ for the respective Redis or Elasticsearch storage. The `data` column of the table contains the data to be synced to the front end, defining [the storage and the key](/docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html). It is stored in JSON for easy and fast synchronization. The table also contains the foreign keys used to backtrack data and the timestamp of the last change for each row. The timestamp is used to track changes rapidly.
+The transformed data is stored in a dedicated database table. It serves as a *mirror table* for the respective Redis or Elasticsearch storage. The `data` column of the table contains the data to be synced to the front end, defining [the storage and the key](/docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html). It is stored in JSON for easy and fast synchronization. The table also contains the foreign keys used to backtrack data and the timestamp of the last change for each row. The timestamp is used to track changes rapidly.
 
 ## Synchronize
 

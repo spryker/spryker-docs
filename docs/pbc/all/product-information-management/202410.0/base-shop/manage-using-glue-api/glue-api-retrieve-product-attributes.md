@@ -147,6 +147,7 @@ Request sample: retrieve all product attributes
     }
 }
 ```
+
 </details>
 
 
@@ -221,6 +222,7 @@ Request sample: retrieve a product attribute
     }
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/product-management-attributes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-management-attributes-response-attributes.md -->

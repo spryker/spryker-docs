@@ -35,7 +35,7 @@ Lazy loading components is the recommended technique as it avoids loading all th
 
 {% info_block warningBox "Static import of component files" %}
 
-To prevent breaking the lazy loading principals, do not import component files _statically_.
+To prevent breaking the lazy loading principals, do not import component files *statically*.
 
 {% endinfo_block %}
 
@@ -49,7 +49,7 @@ To build a [responsive design](/docs/dg/dev/frontend-development/{{page.version}
 }
 ```
 
-CSS, however, supports only _static assignment_ of the minimum and maximum width. Because Oryx supports customizing the minimum and maximum of each screen size, using static minimum and maximum for width doesn't work. This is why hard-coded minimum and maximum values in stylesheets are avoided in Oryx. Instead, we recommend adding stylesheets per screen size _inline_ in the component definition. Alternatively, you can provide stylesheets per screen size as a dynamic import to gain a lazy-loaded experience.
+CSS, however, supports only *static assignment* of the minimum and maximum width. Because Oryx supports customizing the minimum and maximum of each screen size, using static minimum and maximum for width doesn't work. This is why hard-coded minimum and maximum values in stylesheets are avoided in Oryx. Instead, we recommend adding stylesheets per screen size *inline* in the component definition. Alternatively, you can provide stylesheets per screen size as a dynamic import to gain a lazy-loaded experience.
 
 The stylesheets written in component definitions are added on top of stylesheets that are added statically as part of the component implementation.
 

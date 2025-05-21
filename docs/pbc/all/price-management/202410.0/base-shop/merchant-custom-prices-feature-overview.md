@@ -50,8 +50,8 @@ The Merchant Custom Prices feature relates specifically to prices set for indivi
 
 {% info_block warningBox %}
 
-* If the default product price is lower than any of the merchant relation prices for a given product, the default price is displayed in Storefront. You can adjust this behavior on the project level by customizing the business logic for the price display.
-* If a business unit of a customer has several merchant relations with different prices for the same product, the lowest price is offered.
+- If the default product price is lower than any of the merchant relation prices for a given product, the default price is displayed in Storefront. You can adjust this behavior on the project level by customizing the business logic for the price display.
+- If a business unit of a customer has several merchant relations with different prices for the same product, the lowest price is offered.
 
 {% endinfo_block %}
 

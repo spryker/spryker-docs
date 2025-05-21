@@ -21,9 +21,9 @@ This section describes how the availability modules works.
 
 A product's availability is checked with the following operations:
 
-* The product details page doesn't show the **Add to cart** button when a concrete product is out of stock. Instead, a message about the product being out of stock is displayed.
-* `\Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin` checks if all items in cart are available. It's executed after the "Add to cart" operation. If an item is not available, an error message is sent to Yves.
-* `Spryker\Zed\Availability\Communication\Plugin\ProductsAvailableCheckoutPreConditionPlugin` checks if all items in the cart are available before placing the order. If one or more items are not available, order placing is aborted and an error message is displayed.
+- The product details page doesn't show the **Add to cart** button when a concrete product is out of stock. Instead, a message about the product being out of stock is displayed.
+- `\Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin` checks if all items in cart are available. It's executed after the "Add to cart" operation. If an item is not available, an error message is sent to Yves.
+- `Spryker\Zed\Availability\Communication\Plugin\ProductsAvailableCheckoutPreConditionPlugin` checks if all items in the cart are available before placing the order. If one or more items are not available, order placing is aborted and an error message is displayed.
 
 ### Reserved flag
 
@@ -108,15 +108,15 @@ With Spryker shop, you can actually have several scenarios pertain to product wa
 2. Each store has its own database, but a warehouse is shared between the stores. This means that reservation and availabilities are synced. For the case when stores do not share a database, but reservations must be shared, three new database tables have been created.
 ![Scenario 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/Scenario_2.png)
 
-* spy_oms_product_reservation_store - this table will store reservation request from other stores.
-* spy_oms_reservation_change_version - this table will store information about when last reservation occurred.
-* spy_oms_reservation_last_exported_version - this table will store information about when reservations were exported to other stores last time.
+- spy_oms_product_reservation_store - this table will store reservation request from other stores.
+- spy_oms_reservation_change_version - this table will store information about when last reservation occurred.
+- spy_oms_reservation_last_exported_version - this table will store information about when reservations were exported to other stores last time.
 
 Also, we provide a few plugins to help implement synchronization:
 
-* `\Spryker\Zed\Oms\Communication\Plugin\Oms\ReservationHandler\ReservationVersionHandlerPlugin` - this plugin will be called when customer makes an order and a reservation is made. It will store the reservation to the spy_oms_reservation_change_version database table. This plugin should be registered in the `\Pyz\Zed\Oms\OmsDependencyProvider::getReservationHandlerPlugins` plugin stack.
-* `\Spryker\Zed\Oms\Communication\Plugin\Oms\ReservationImport\ReservationExportPlugin` - is the plugin which will be called when a reservation export to another store is called. This plugin decides if the export should be accepted. The delivery mechanism is not provided, and instead could be done with files or a queue. For example, when ReservationExportPlugin is called, you could write a file copy to another server and then read it there. Similarly would be with the use of a queue called "publish", with another named "consume" on other end.
-* When reading export data on another store, you can then use `\Spryker\Zed\Oms\Business\OmsFacadeInterface::importReservation` which will store reservation information to the `spy_oms_product_reservation_store` table and update all timestamps accordingly.
+- `\Spryker\Zed\Oms\Communication\Plugin\Oms\ReservationHandler\ReservationVersionHandlerPlugin` - this plugin will be called when customer makes an order and a reservation is made. It will store the reservation to the spy_oms_reservation_change_version database table. This plugin should be registered in the `\Pyz\Zed\Oms\OmsDependencyProvider::getReservationHandlerPlugins` plugin stack.
+- `\Spryker\Zed\Oms\Communication\Plugin\Oms\ReservationImport\ReservationExportPlugin` - is the plugin which will be called when a reservation export to another store is called. This plugin decides if the export should be accepted. The delivery mechanism is not provided, and instead could be done with files or a queue. For example, when ReservationExportPlugin is called, you could write a file copy to another server and then read it there. Similarly would be with the use of a queue called "publish", with another named "consume" on other end.
+- When reading export data on another store, you can then use `\Spryker\Zed\Oms\Business\OmsFacadeInterface::importReservation` which will store reservation information to the `spy_oms_product_reservation_store` table and update all timestamps accordingly.
 
 There is a console command to export all reservations: `\Spryker\Zed\Oms\Communication\Console\ExportReservationConsole`. It will trigger `ReservationExportPlugin` with reservations amounts to export. This command can be added to cronjob and run periodically.
 

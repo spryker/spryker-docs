@@ -16,8 +16,8 @@ This document describes how to make a controller action accessible in the naviga
 
 There are two places to define the navigation configuration:
 
-* In the global configuration file: `config/Zed/navigation.xml`.
-* In a module configuration file: `src/Pyz/Zed/{moduleName}/Communication/navigation.xml`.
+- In the global configuration file: `config/Zed/navigation.xml`.
+- In a module configuration file: `src/Pyz/Zed/{moduleName}/Communication/navigation.xml`.
 
 {% info_block infoBox "Replace a placeholder" %}
 

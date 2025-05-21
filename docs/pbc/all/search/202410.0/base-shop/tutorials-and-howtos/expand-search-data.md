@@ -80,6 +80,7 @@ To expand search data with a `foo` entity, do the following:
         }
     }    
     ```
+
     </details>
 
 2. Expand `ProductAbstractPageSearch` object with `foo` data:
@@ -190,6 +191,7 @@ class ProductFooMapExpanderPlugin implements ProductAbstractMapExpanderPluginInt
     }
 }
 ```
+
 </details>
 
 
@@ -237,12 +239,13 @@ class FooSortConfigTransferBuilderPlugin extends AbstractPlugin implements SortC
     }
 }
 ```
+
 </details>
 
 
 1. On the project level, wire the implemented plugins to the providers in `Pyz\Zed\ProductPageSearch\ProductPageSearchDependencyProvider` and `Pyz\Client\Catalog\CatalogDependencyProvider`:
 
-* `ProductPageSearchDependencyProvider::getDataExpanderPlugins()`
+- `ProductPageSearchDependencyProvider::getDataExpanderPlugins()`
 
 ```php
 /**
@@ -258,7 +261,7 @@ protected function getDataExpanderPlugins()
 }
 ```
 
-* `ProductPageSearchDependencyProvider::getProductAbstractMapExpanderPlugins()`
+- `ProductPageSearchDependencyProvider::getProductAbstractMapExpanderPlugins()`
 
 ```php
 /**
@@ -273,7 +276,7 @@ protected function getProductAbstractMapExpanderPlugins(): array
 }
 ```
 
-* `ProductPageSearchDependencyProvider::getDataLoaderPlugins()`
+- `ProductPageSearchDependencyProvider::getDataLoaderPlugins()`
 
 ```php
 /**
@@ -288,7 +291,7 @@ protected function getDataLoaderPlugins()
 }
 ```
 
-* Optional: `CatalogDependencyProvider::getSortConfigTransferBuilderPlugins()`
+- Optional: `CatalogDependencyProvider::getSortConfigTransferBuilderPlugins()`
 
 ```
 /**

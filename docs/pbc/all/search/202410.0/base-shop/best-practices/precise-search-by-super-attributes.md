@@ -63,7 +63,7 @@ The Search is done in two steps:
 
 1. Extend `ProductConcretePageSearchTransfer` with the new field *attributes*, where the desired attributes are stored as an array of string values:
 
-```
+```XML
 <property name="attributes" type="string[]" singular="attribute"/>
 ```
 
@@ -76,19 +76,9 @@ This plugin does the following:
 - Makes a sub-search request such as  `CatalogClient::searchProductConcretesByFullText`, but searches by facets of super attributes from the request.
 - Adds a list of unique abstract product IDs into the query.
 
-An example implementation looks as follows:
-
-```
-some code here
-```
 
 4. Extend `FacetQueryExpanderPlugin`, which doesn't take into account facets used in the plugin `ConcreteProductSearchQueryExpanderPlugin`.
 
-An example implementation looks as follows:
-
-```
-some code here
-```
 
 Make sure to use updated plugin in `CatalogDependencyProvider`.
 

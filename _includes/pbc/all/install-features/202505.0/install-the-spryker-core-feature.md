@@ -58,11 +58,9 @@ Set up the following configuration.
 
 #### Optional: Set up Router
 
-Router is a core module that provides the routing functionality for the Spryker platform.
-It is responsible for mapping URLs to specific controllers and actions within the application.
-The router cache is used to improve the performance of the routing system by caching the routing information.
+Router is a core module that mapps URLs to specific controllers and actions. The router cache is used to improve the performance of the routing system by caching the routing information.
 
-To enable it, add the following configuration:
+To set up Router, add the following configuration:
 
 ```php
 <?php
@@ -315,9 +313,9 @@ $config[SessionFileConstants::ZED_SESSION_FILE_PATH] = session_save_path();
 
 #### Configure SecurityBlocker
 
-The `SecurityBlocker` module provides the functionality to block a user for a certain period of time if the number of failed login attempts exceeds the configured threshold.
+The SecurityBlocker module provides the functionality to block a user for a certain period of time if the number of failed login attempts exceeds the configured threshold.
 
-1. Enable it in the environment configuration of your project:
+1. To set up SecurityBlocker, add the following environment configuration:
 
 **config/Shared/config_default.php**
 
@@ -905,8 +903,7 @@ To verify that the navigation for Store GUI is successfully generated, make sure
 
 ### 6) Set up Publish and Synchronize
 
-RabbitMQ is used for event handling in Spryker.
-The default event queues are used to handle events that are published by the system.
+RabbitMQ is used for event handling in Spryker. The default event queues are used to handle events that are published by the system.
 
 1. Enable the default event queues in the RabbitMQ configuration:
 
@@ -1071,9 +1068,15 @@ $config[SessionRedisConstants::YVES_SESSION_TIME_TO_LIVE] = SessionConfig::SESSI
 
 {% info_block warningBox "" %}
 
-`SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING`, `SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING` and `SessionRedisConfig::SESSION_HANDLER_REDIS` can be used as values for the session handler configuration option.
+You can configure the session handler using one of the following options:
 
-The following option `SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING`, providing the most flexibility. It allows you to use the Redis session handler with or without locking, depending on the configuration.
+- `SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING`
+- `SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING`
+- `SessionRedisConfig::SESSION_HANDLER_REDIS`
+
+The most flexible option is `SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING`, which allows enabling or disabling Redis locking based on your configuration.
+
+
 
 {% endinfo_block %}
 
@@ -1246,7 +1249,9 @@ class AuditLogger
 
 {% endinfo_block %}
 
-**src/Pyz/Yves/SessionRedis/SessionRedisConfig.php**
+
+<details>
+  <summary>src/Pyz/Yves/SessionRedis/SessionRedisConfig.php</summary>
 
 ```php
 <?php
@@ -1306,6 +1311,9 @@ class SessionRedisConfig extends SprykerSessionRedisConfig
     }
 }
 ```
+
+</details>
+
 
 ### 3) Add translations
 

@@ -84,7 +84,7 @@ Make sure that the following changes have been applied in the transfer objec
 | RestItemsAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestItemsAttributesTransfer |
 | RestConfiguredBundleTransfer | class | created | src/Generated/Shared/Transfer/RestConfiguredBundleTransfer |
 | RestConfiguredBundleItemTransfer | class | created | src/Generated/Shared/Transfer/RestConfiguredBundleItemTransfer |
-| RestConfigurableBundleTemplateTransfer | class | created| src/Generated/Shared/Transfer/RestConfigurableBundleTemplateTransfer
+| RestConfigurableBundleTemplateTransfer | class | created| src/Generated/Shared/Transfer/RestConfigurableBundleTemplateTransfer |
 | RestConfigurableBundleTemplateSlotTransfer | class | created | src/Generated/Shared/Transfer/RestConfigurableBundleTemplateSlotTransfer |
 | RestErrorMessageTransfer | class | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer |
 | ItemTransfer.configuredBundle | property | created | src/Generated/Shared/Transfer/ItemTransfer |

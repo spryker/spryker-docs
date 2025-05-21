@@ -475,7 +475,7 @@ Make sure that the following plugins have been activated:
 
 | PLUGIN                                                | TEST                                                                                                                                                                            |
 |-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CheckoutDataResourcePlugin                            | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout-data` request.
+| CheckoutDataResourcePlugin                            | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout-data` request. |
 | CheckoutResourcePlugin                                | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout` request.         |
 | OrderRelationshipByOrderReferencePlugin               | Check if you get order information from the `orders` resource by sending the `POST https://glue.mysprykershop.com/checkout?include=orders` request.       |
 | CartByRestCheckoutDataResourceRelationshipPlugin      | Check if you get cart data as a relationship from the `checkout-data` resource by sending the `POST https://glue.mysprykershop.com/checkout-data?include=carts` request.        |

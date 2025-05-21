@@ -970,7 +970,7 @@ Make sure the following applies:
 
 Verify that `OauthRefreshTokenReaderPlugin` and `OauthRefreshTokenRevokerPlugin` are set up:
 
-1. Send the request: `DELETE https://glue.mysprykershop.com/refresh-tokens/{% raw %}{{{% endraw %}refresh_token}`[.](#)
+1. Send the request: `DELETE https://glue.mysprykershop.com/refresh-tokens/{% raw %}{{{% endraw %}refresh_token}`.
 2. To check that the refresh token has been revoked, run the following SQL query:
 
 ```sql

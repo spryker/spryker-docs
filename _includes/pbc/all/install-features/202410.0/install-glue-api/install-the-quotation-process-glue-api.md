@@ -174,13 +174,13 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN     | SPECIFICATION  | PREREQUISITES | NAMESPACE     |
 |------------------|--------------------|---------------|-------------------------------|
-| QuoteRequestAgentCancelResourceRoutePlugin      | Registers the `agent-quote-request-cancel` resource.   | Spryker\Glue\QuoteRequestAgentsRestApi\Plugin\GlueApplication  |
-| QuoteRequestAgentReviseResourceRoutePlugin     | Registers the `agent-quote-request-revise` resource.     | Spryker\Glue\QuoteRequestAgentsRestApi\Plugin\GlueApplication    |
-| QuoteRequestAgentSendResourceRoutePlugin    | Registers the `agent-quote-request-send-to-customer` resource.  | Spryker\Glue\QuoteRequestAgentsRestApi\Plugin\GlueApplication    |
-| QuoteRequestAgentsResourceRoutePlugin    | Registers the `agent-quote-requests` resource.    | Spryker\Glue\QuoteRequestAgentsRestApi\Plugin\GlueApplication  |
-| QuoteRequestCancelResourceRoutePlugin   | Registers the `quote-request-cancel` resource.  | Spryker\Glue\QuoteRequestsRestApi\Plugin\GlueApplication     |
-| QuoteRequestReviseResourceRoutePlugin     | Registers the `quote-request-revise` resource.   | Spryker\Glue\QuoteRequestsRestApi\Plugin\GlueApplication  |
-| QuoteRequestSendResourceRoutePlugin    | Registers the `quote-request-send-to-customer` resource.   | Spryker\Glue\QuoteRequestsRestApi\Plugin\GlueApplication   |
+| QuoteRequestAgentCancelResourceRoutePlugin      | Registers the `agent-quote-request-cancel` resource.   | | Spryker\Glue\QuoteRequestAgentsRestApi\Plugin\GlueApplication  |
+| QuoteRequestAgentReviseResourceRoutePlugin     | Registers the `agent-quote-request-revise` resource.     | | Spryker\Glue\QuoteRequestAgentsRestApi\Plugin\GlueApplication    |
+| QuoteRequestAgentSendResourceRoutePlugin    | Registers the `agent-quote-request-send-to-customer` resource.  | | Spryker\Glue\QuoteRequestAgentsRestApi\Plugin\GlueApplication    |
+| QuoteRequestAgentsResourceRoutePlugin    | Registers the `agent-quote-requests` resource.    | | Spryker\Glue\QuoteRequestAgentsRestApi\Plugin\GlueApplication  |
+| QuoteRequestCancelResourceRoutePlugin   | Registers the `quote-request-cancel` resource.  | | Spryker\Glue\QuoteRequestsRestApi\Plugin\GlueApplication     |
+| QuoteRequestReviseResourceRoutePlugin     | Registers the `quote-request-revise` resource.   | | Spryker\Glue\QuoteRequestsRestApi\Plugin\GlueApplication  |
+| QuoteRequestSendResourceRoutePlugin    | Registers the `quote-request-send-to-customer` resource.   | | Spryker\Glue\QuoteRequestsRestApi\Plugin\GlueApplication   |
 | QuoteRequestsResourceRoutePlugin    | Registers the `quote-requests` resource.                                                            |               | Spryker\Glue\QuoteRequestsRestApi\Plugin\GlueApplication    |
 | CompanyUserByQuoteRequestResourceRelationshipPlugin    | Adds the `company-users` resource as relationship to the `quote-request` resource.    |               | Spryker\Glue\CompanyUsersRestApi\Plugin\GlueApplication    |
 | CompanyByQuoteRequestResourceRelationshipPlugin               | Adds the `companies` resource as relationship to the `quote-request` resource.    |               | Spryker\Glue\CompaniesRestApi\Plugin\GlueApplication      |

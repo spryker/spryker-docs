@@ -222,7 +222,7 @@ Make sure that propel entities have been generated successfully by checking thei
 | src/Orm/Zed/GiftCardBalance/Persistence/SpyGiftCardBalanceLog.php | Orm\\Zed\\GiftCardBalance\\Persistence\\Base\\SpyGiftCardBalanceLog |
 | src/Orm/Zed/GiftCardBalance/Persistence/SpyGiftCardBalanceLogQuery.php | Orm\\Zed\\GiftCardBalance\\Persistence\\Base\\SpyGiftCardBalanceLogQuery |
 | src/Orm/Zed/Sales/Persistence/SpySalesOrderItemGiftCard.php | Spryker\\Zed\\Sales\\Persistence\\Propel\\AbstractSpySalesOrderItemGiftCard |
-| Spryker\\Zed\\Sales\\Persistence\\Propel\\AbstractSpySalesOrderItemGiftCardQuery |
+| | Spryker\\Zed\\Sales\\Persistence\\Propel\\AbstractSpySalesOrderItemGiftCardQuery |
 
 {% endinfo_block %}
 
@@ -1162,7 +1162,7 @@ Install the required features:
 | --- | --- | --- |
 | Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
-| Checkout | {{site.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)
+| Checkout | {{site.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
 
 ### 1) Install the required modules
 

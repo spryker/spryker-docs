@@ -166,7 +166,7 @@ Tables that aren't allowed for configuration are defined in `Spryker\Zed\Dynamic
 
 <details><summary>src/Pyz/Zed/DynamicEntity/data/installer/configuration.json</summary>
 
-##### Example
+#### Example
 
 ```json
 [

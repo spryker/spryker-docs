@@ -62,7 +62,8 @@ Make sure that the following changes have been applied in transfer objects:
 | ItemTransfer.salesOrderConfiguredBundleItem | property | created | src/Generated/Shared/Transfer/ItemTransfer |
 | RestSalesOrderConfiguredBundleTransfer | class | created | src/Generated/Shared/Transfer/RestSalesOrderConfiguredBundleTransfer |
 | RestSalesOrderConfiguredBundleItemTransfer | class | created | src/Generated/Shared/Transfer/RestSalesOrderConfiguredBundleItemTransfer |
-| RestOrderItemsAttributesTransfer.salesOrderConfiguredBundle | property | created | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer | |RestOrderItemsAttributesTransfer.salesOrderConfiguredBundleItem | property | created | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer |
+| RestOrderItemsAttributesTransfer.salesOrderConfiguredBundle | property | created | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer | 
+|RestOrderItemsAttributesTransfer.salesOrderConfiguredBundleItem | property | created | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer |
 | SalesOrderConfiguredBundleTransfer | class | created | src/Generated/Shared/Transfer/SalesOrderConfiguredBundleTransfer |
 | SalesOrderConfiguredBundleTranslationTransfer | class | created | src/Generated/Shared/Transfer/SalesOrderConfiguredBundleTranslationTransfer |
 | SalesOrderConfiguredBundleItemTransfer | class | created | src/Generated/Shared/Transfer/SalesOrderConfiguredBundleItemTransfer |
@@ -79,7 +80,7 @@ Activate the following plugins:
 | ConfigurableBundleTemplateSlotByConfigurableBundleTemplateResourceRelationshipPlugin | Adds `configurable-bundle-template-slots` resource as a relationship by configurable bundle template. | None | Spryker\Glue\ConfigurableBundlesRestApi\Plugin\GlueApplication |
 | ConfigurableBundleTemplateImageSetByConfigurableBundleTemplateResourceRelationshipPlugin | Adds `configurable-bundle-template-image-sets` resource as a relationship by configurable bundle template. | None | Spryker\Glue\ConfigurableBundlesRestApi\Plugin\GlueApplication |
 | ConfigurableBundleTemplatesResourceRoutePlugin | Provides the `/configurable-bundle-templates` resource route. | None | Spryker\Glue\ConfigurableBundlesRestApi\Plugin\GlueApplication |
-SalesConfiguredBundleRestOrderItemsAttributesMapperPlugin | Maps the additional information from the`ItemTransfer` to `RestOrderItemsAttributesTransfer`. | None | Spryker\Glue\ConfigurableBundlesRestApi\Plugin\OrdersRestApi |
+| SalesConfiguredBundleRestOrderItemsAttributesMapperPlugin | Maps the additional information from the`ItemTransfer` to `RestOrderItemsAttributesTransfer`. | None | Spryker\Glue\ConfigurableBundlesRestApi\Plugin\OrdersRestApi |
 
 <details>
 <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>

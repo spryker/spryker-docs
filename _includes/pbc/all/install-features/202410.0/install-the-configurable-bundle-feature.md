@@ -1171,8 +1171,8 @@ Take the following steps to install the feature frontend.
 
 Install the required features.
 
-| Feature | Version |
-| --- | --- |
+| Feature | Version | Installation guide |
+| --- | --- | --- |
 | -------------- | ----------------- | ----------------- |
 | Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|

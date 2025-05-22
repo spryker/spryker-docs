@@ -1,6 +1,6 @@
 ---
-title: Self-Service Portal Service Management feature overview
-description: Let customers book services for delivery or on-site at service points, with configurable products, shipment types, and review options in Storefront and Back Office.
+title: Self-Service Portal Assets Management feature overview
+description: The Asset Management feature allows customers abd Back Office users to manage assets within the organization.
 template: concept-topic-template
 last_updated: Apr 10, 2025
 ---

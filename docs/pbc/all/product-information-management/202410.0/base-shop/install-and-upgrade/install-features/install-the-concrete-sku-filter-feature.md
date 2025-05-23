@@ -1,7 +1,7 @@
 ---
 title: Concrete SKU product filter feature overview
 description: The document describes the Concrete SKU product filter feature.
-last_updated: Jul 23, 2025
+last_updated: May 23, 2025
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/202505.0/docs/concrete-sku-product-filter-feature-overview
 ---

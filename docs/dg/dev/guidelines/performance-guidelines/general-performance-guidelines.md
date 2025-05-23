@@ -331,7 +331,7 @@ When using Gateway for Twig rendering–for example, for sending emails–you ca
 
 ## Order placement performance
 
-You can place order items in batches to improve performance when the cart contains many items.
+For carts with big numbers of items, you can configure order items to be placed in batches for better performance. Take the steps in the following sections to do it.
 
 ### Prerequisites
 
@@ -361,13 +361,14 @@ class SalesConfig extends SprykerSalesConfig
 
 ### Set up a unique column
 
-The prior example uses the `OrderItemReference` column, which is provided by default. You can define a different column if it meets the following requirements:
-- Contain a unique value for every order item in the database
-- Be generated before an order is saved
+The prior example uses the `OrderItemReference` column, which is provided by default. You can define a different column if needed, but it must meet the following requirements:
+- Contains a unique value for every order item in the database
+- Generated before an order is saved
 
-### Enable `OrderItemReference` Generation (if required)
+### Enable the generation of column value
 
 To generate the `OrderItemReference` value, add `OrderItemReferenceExpanderPreSavePlugin` to the `getOrderItemExpanderPreSavePlugins()` method:
+
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
 ```php
 use Spryker\Zed\SalesOms\Communication\Plugin\OrderItemReferenceExpanderPreSavePlugin;

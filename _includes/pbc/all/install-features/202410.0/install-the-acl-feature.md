@@ -19,14 +19,14 @@ composer require spryker-feature/acl:"{{page.version}}" --update-with-dependenci
 
 Make sure the following modules have been installed:
 
-| MODULE                         | EXPECTED DIRECTORY                    |
-|--------------------------------|---------------------------------------|
-| Acl                            | vendor/spryker/acl                    |
-| AclDataImport                  | vendor/spryker/acl-data-import        |
-| AclEntity                      | vendor/spryker/acl-entity             |
-| AclEntityDataImport            | vendor/spryker/acl-entity-data-import |
-| AclEntityExtension  (optional) | vendor/spryker/acl-entity-extension   |
-| AclExtension  (optional)       | vendor/spryker/acl-extension          |
+| MODULE            | REQUIRED             | EXPECTED DIRECTORY                    |
+|-------------------|-------------|---------------------------------------|
+| Acl                |   v         | vendor/spryker/acl                    |
+| AclDataImport      |   v         | vendor/spryker/acl-data-import        |
+| AclEntity          |     v       | vendor/spryker/acl-entity             |
+| AclEntityDataImport     |    v   | vendor/spryker/acl-entity-data-import |
+| AclEntityExtension  |            | vendor/spryker/acl-entity-extension   |
+| AclExtension         |    v       | vendor/spryker/acl-extension          |
 
 {% endinfo_block %}
 

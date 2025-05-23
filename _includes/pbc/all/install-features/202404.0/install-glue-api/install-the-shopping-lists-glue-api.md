@@ -20,7 +20,7 @@ Install the required features:
 
 ## 1) Install the required modules
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/shopping-lists-rest-api:"^1.0.0" --update-with-dependencies
@@ -108,7 +108,7 @@ SELECT COUNT(*) FROM spy_shopping_list_item WHERE uuid IS NULL;
 
 {% info_block infoBox %}
 
-`ShoppingListsResourcePlugin` GET, POST, PATCH and DELETE, `ShoppingListItemsResourcePlugin` POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/glue-infrastructure.html).
+`ShoppingListsResourcePlugin` GET, POST, PATCH and DELETE, `ShoppingListItemsResourcePlugin` POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](/docs/dg/dev/glue-api/{{page.version}}/rest-api/glue-infrastructure.html).
 
 {% endinfo_block %}
 

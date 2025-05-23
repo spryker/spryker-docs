@@ -276,7 +276,7 @@ and add a client call to the execute method:
  }
  ```
 
-### Twig Extension (Optional)
+### Optional: Twig Extension
 
 To populate the [Billpay JS widget](https://techdocs.billpay.de/v1/en/For_developers/JavaScript-Widget.html)  with data, use the Twig extension provided in the Billpay module.
 

@@ -14,7 +14,7 @@ Install the required features:
 
 ### 1) Install the required modules
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/wishlists-rest-api:"^1.0.0" --update-with-dependencies
@@ -72,7 +72,7 @@ The following steps generate UUIDs for existing entities in the `spy_wishlist` t
 
 {% endinfo_block %}
 
-Run the following command:
+Assign UUIDs to existing records in the `spy_wishlist` table and stores them in the corresponding `uuid` column:
 
 ```bash
 console uuid:update Wishlist spy_wishlist

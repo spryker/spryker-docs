@@ -58,7 +58,7 @@ Install the required features:
 
 ### 1) Install the required modules
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/spryker-core: "^{{page.version}}" --update-with-dependencies
@@ -239,7 +239,7 @@ class HealthCheckDependencyProvider extends SprykerHealthCheckDependencyProvider
 
 ### 4) Set up transfer objects
 
-Run the following command to apply transfer changes:
+Apply transfer changes:
 
 ```bash
 vendor/bin/console transfer:generate

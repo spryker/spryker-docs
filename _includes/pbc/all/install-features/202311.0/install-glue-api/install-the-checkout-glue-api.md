@@ -41,7 +41,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up configuration
 
-1. Add the following configuration to your project:
+1. Add the following configuration:
 
 | CONFIGURATION                                                           | SPECIFICATION                                                                                                             | NAMESPACE                |
 |-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|--------------------------|

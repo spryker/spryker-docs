@@ -261,7 +261,7 @@ You can define stores to Yves hosts mapping. This allows generating correct URLs
 
 {% endinfo_block %}
 
-1. Add the following configuration to your project:
+1. Add the following configuration:
 
 | CONFIGURATION                                                 | SPECIFICATION                                                                                                                                            | NAMESPACE                               |
 |---------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|

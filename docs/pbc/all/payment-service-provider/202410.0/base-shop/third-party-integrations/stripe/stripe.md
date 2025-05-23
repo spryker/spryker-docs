@@ -41,6 +41,9 @@ However, our team only tested the following payment methods:
 - Giropay
 - US, UK, CA, AU, NZ: AfterPay
 
+## Browser back button handling
+
+Using the browser back button at Stripe's hosted payment page may lead to issues with order persistence and stock management. For instructions on configuring your application to handle this scenario and prevent duplicate orders, see [Configure handling of browser back button action at hosted payment page](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/configure-handling-of-browser-back-button-action-at-hosted-payment-page.html).
 
 ## Current limitations
 
@@ -51,3 +54,34 @@ However, our team only tested the following payment methods:
 ## Next step
 
 [Install and configure the Stripe App prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

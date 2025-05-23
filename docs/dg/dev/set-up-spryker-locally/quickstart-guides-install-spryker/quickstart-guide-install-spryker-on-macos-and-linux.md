@@ -26,6 +26,12 @@ brew list | grep mutagen | xargs brew remove && brew install mutagen-io/mutagen/
 
 ## 1. Clone the Demo Shop of your choice
 
+{% info_block warningBox %}
+
+Product images, product data, other images or fonts displaced in a demo shop are examples, and you may need to purchase your own licenses to use any of them.
+
+{% endinfo_block %}
+
 - B2B Demo Shop:
 
 ```shell

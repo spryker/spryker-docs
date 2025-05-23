@@ -54,7 +54,10 @@ We recommend mapping your branches to environments as follows:
 
 7. For **Action provider**, select **GitHub(via GitHub App)**.
 This adds GitHub related fields to the window.
-8. Click **Connect to GitHub** and authorize AWS CodePipeline to access your GitHub repository.
+8. For **Connection** choose an existing connection or click **Connect to GitHub** to create a new one and authorize AWS CodePipeline to access your GitHub repository.
+
+![connection](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/connect-a-code-repository.md/connection.png)
+
 9. For **Repository name**, enter and select the repository you want to connect.
 10. For **Branch name**, enter and select the branch you want to connect.
 11. Click **Done**.
@@ -63,6 +66,24 @@ This adds GitHub related fields to the window.
 14. In the **Save pipeline changes** window, click **Save**.
 
 Your GitHub repository is now successfully connected!
+
+### Optional: Disable automatic pipeline triggers
+
+By default, pipelines are automatically triggered on every push event using predefined triggers and filters.  
+To manage the rollout manually or prevent a specific pipeline from starting, do the following:
+
+1. On the page of the pipeline, click **Edit**.
+2. In the **Edit: Git triggers** pane, click **Edit stage**.
+
+![edit-triggers](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/connect-a-code-repository.md/edit-git-triggers.png)
+
+3. Clear the **Webhook** checkbox.
+
+![edit-filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/connect-a-code-repository.md/edit-filter.png)
+
+4. Click **Save**.
+5. In the **Save pipeline changes** window, click **Save**.
+
 
 
 ## Connect a Bitbucket code repository
@@ -140,17 +161,16 @@ To avoid synchronization issues, do not push any changes to the CodeCommit repos
 {% endinfo_block %}
 
 ### Prerequisites
-Prepare for configuration:
 
-1. Ensure that your GitLab account has *Admin* permissions in the code repository.
+1. Make sure your GitLab account has *Admin* permissions in the code repository.
 2. Request the following details via [support](https://spryker.force.com/support/s/):
     * CodeCommit repository URL
     * Username and password for HTTPS authorization in CodeCommit repository
 
+A dedicated user will be created for this task. The user will only have the permissions to connect the repository.
 
-### GitLab mirroring
 
-To configure GitLab mirroring:
+### Configure GitLab mirroring
 
 1. In the GitLab account, go to the code repository.
 2. Select **Settings** > **Repository**.

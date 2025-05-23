@@ -82,7 +82,7 @@ Set up the following behaviors.
 
 ### Generate UUIDs for the existing company records without them
 
-Run the following command:
+Generate UUIDs for the existing company records without them:
 
 ```bash
 console uuid:generate SharedCart spy_quote_company_user
@@ -90,7 +90,7 @@ console uuid:generate SharedCart spy_quote_company_user
 
 {% info_block warningBox "Verification" %}
 
-To make sure that, in the `spy_quote_company_user` table, the `uuid` field is populated for all the records, run the following command:
+Verify that, in the `spy_quote_company_user` table, the `uuid` field is populated for all the records:
 
 ```bash
 select count(*) from spy_quote_company_user where uuid is NULL;
@@ -109,7 +109,7 @@ The result should be 0 records.
 
 * `CartPermissionGroupsResourceRoutePlugin` is a protected resource for the `GET` request.
 
-For more details, see the `configure` function in [Resource Routing](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/glue-infrastructure.html).
+For more details, see the `configure` function in [Resource Routing](/docs/dg/dev/glue-api/{{page.version}}/rest-api/glue-infrastructure.html).
 
 {% endinfo_block %}
 

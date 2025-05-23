@@ -1,7 +1,6 @@
 ---
 title: Integrate the Vertex app
 description: Find out how you can integrate the Vertex app into your Spryker shop
-draft: true
 last_updated: May 17, 2024
 template: howto-guide-template
 related:

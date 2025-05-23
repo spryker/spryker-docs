@@ -8,7 +8,11 @@ redirect_from:
 ---
 Zed didn't restart after a deployment or you can't access it.
 
+
+<!-- vale on -->
 To troubleshoot this issue, you need to go through all the stages of information flow. The default information flow is:  Front end > Gateway(optional) > Zed > ElastiCache, Elasticsearch, RMQ, and RDS.
+<!-- vale off -->
+
 
 ![information flow diagram](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/_includes/informatin-flow-diagram.png)
 

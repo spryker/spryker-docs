@@ -213,7 +213,7 @@ class EcondaConfig extends SprykerEcondaConfig
 }
 ```
 
-## How is my query mapped to CSV output ?
+## How query data maps to CSV output
 
 If you need to modify the CSV column mapping for any reason you will have to extend the `EcondaProductCollector` and `EcondaCategoryCollector` from the Econda module and implement your own `collectData` and `collectItem` methods.
 

@@ -47,7 +47,7 @@ related:
 This article provides a whole overview of what needs to be done to have the multi-currency feature running in your Spryker shop. The multi-currency feature affects many Spryker modules so we split it into smaller parts. Here you will find the information that will help get you started with the multi-currency feature.
 There is a chance that you already have the multi-currency enabled in some of the modules. In the list below you will find versions of the modules from when it has first been implemented as well as a link to an appropriate migration guide.
 
-First run the following command to update your all modules to the latest minor version:
+Update your all modules to the latest minor version:
 
 ```bash
 composer update spryker/*

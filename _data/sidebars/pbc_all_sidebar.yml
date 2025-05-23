@@ -23,6 +23,8 @@ entries:
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-the-back-office-number-formatting.html
                   - title: Upgrade the Chart module
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-chart-module.html
+                  - title: Upgrade the Back Office to Bootstrap 5
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-back-office-to-bootstrap-5.html                    
                   - title: Install Backoffice accessibility improvements
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-accessibility-improvements.html
                     include_versions:
@@ -37,7 +39,6 @@ entries:
                 nested:
                   - title: Spryker Core Back Office + Warehouse User Management
                     url: /docs/pbc/all/back-office/unified-commerce/install-and-upgrade/install-the-spryker-core-back-office-warehouse-user-management-feature.html
-
 
       - title: Business Intelligence
         url: /docs/pbc/all/business-intelligence/business-intelligence.html
@@ -1090,9 +1091,6 @@ entries:
             include_versions:
             - "202410.0"
 
-          - title: Data Exchange FAQ
-            url: /docs/pbc/all/data-exchange/data-exchange-faq.html
-
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:
@@ -1674,6 +1672,7 @@ entries:
                 nested:
                   - title: ChannelPilot Marketplace
                     url: /docs/pbc/all/merchant-management/marketplace/third-party-integrations/channelpilot-marketplace.html
+
       - title: Miscellaneous
         nested:
           - title: Spryker Core feature overview
@@ -1690,6 +1689,10 @@ entries:
 
           - title: Push Notification feature overview
             url: /docs/pbc/all/miscellaneous/push-notification-feature-overview.html
+          - title: Sitemap feature overview
+            url: /docs/pbc/all/miscellaneous/sitemap-feature-overview.html            
+            include_versions:
+            - "202505.0"  
           - title: Install and upgrade
             nested:
               - title: Install features
@@ -1699,7 +1702,11 @@ entries:
                   - title: Queue Data Import
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
                   - title: Spryker Core
-                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html                    
+                  - title: Sitemap
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-sitemap-feature.html
+                    include_versions:
+                    - "202505.0"  
                   - title: Push Notification
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-push-notification-feature.html
 
@@ -1885,6 +1892,18 @@ entries:
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/data-virtuality.html
                 - title: Mindcurv
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/mindcurv.html
+
+      - title: Multi-factor authentication
+        url: /docs/pbc/all/multi-factor-authentication/multi-factor-authentication.html
+        include_versions:
+        - "202505.0"
+        nested:
+          - title: Install the Multi-Factor Authentication feature
+            url: /docs/pbc/all/multi-factor-authentication/install-multi-factor-authentication-feature.html
+          - title: Install customer email Multi-Factor Authentication method
+            url: /docs/pbc/all/multi-factor-authentication/install-customer-email-multi-factor-authentication-method.html
+          - title: Create Multi-Factor Authentication methods
+            url: /docs/pbc/all/multi-factor-authentication/create-multi-factor-authentication-methods.html                    
 
       - title: Offer Management
         url: /docs/pbc/all/offer-management/offer-management.html
@@ -2324,6 +2343,11 @@ entries:
                   - title: View payment methods
                     url: /docs/pbc/all/payment-service-provider/base-shop/manage-in-the-back-office/view-payment-methods.html
 
+
+              - title: Configure handling of browser back button action at hosted payment page
+                url: /docs/pbc/all/payment-service-provider/base-shop/configure-handling-of-browser-back-button-action-at-hosted-payment-page.html
+                include_versions:
+                - "202410.0"
               - title: Define return URLs for payments
                 url: /docs/pbc/all/payment-service-provider/base-shop/define-return-urls-for-payments.html
                 include_versions:
@@ -3903,6 +3927,35 @@ entries:
               - title: "Glue API: Retrieve autocomplete and search suggestions"
                 url: /docs/pbc/all/search/marketplace/glue-api-retrieve-autocomplete-and-search-suggestions.html
 
+
+      - title: Self-Service Portal
+        url: /docs/pbc/all/self-service-portal/self-service-portal.html
+        include_versions:
+        - "202505.0"
+        nested:
+          - title: Self-Service Portal Service Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-service-management-feature-overview.html
+          - title: Self-Service Portal Inquiry Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-inquiry-management-feature-overview.html
+          - title: Self-Service Portal Dashboard Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-dashboard-management-feature-overview.html          
+          - title: Install
+            nested:
+              - title: Install Self-Service Portal
+                url: /docs/pbc/all/self-service-portal/install/install-self-service-portal.html
+              - title: Install the SSP Asset Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-asset-management-feature.html
+              - title: Install the SSP Dashboard Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-dashboard-management-feature.html
+              - title: Install the SSP File Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-file-management-feature.html
+              - title: Install the SSP Inquiry Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-inquiry-management-feature.html
+              - title: Install the SSP Service Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-service-management-feature.html
+          
+
+
       - title: Service Point Management
         url: /docs/pbc/all/service-point-management/service-point-management.html
         nested:
@@ -4209,9 +4262,8 @@ entries:
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html
                           - title: Integrate Vertex
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
-                            nested:
-                              - title: Integrate Taxamo
-                                url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-taxamo.html
+                          - title: Integrate Vertex Validator
+                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex-validator.html
 
                       - title: Project configuration for Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/project-configuration-for-vertex.html
@@ -4221,6 +4273,9 @@ entries:
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
                       - title: FAQ
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex-faq.html
+                        include_versions:
+                        - "202311.0"
+                        - "202404.0"                          
                       - title: Disconnect
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
 
@@ -4328,7 +4383,6 @@ entries:
                 include_versions:
                 - "202404.0"
                 - "202410.0"
-
 
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html

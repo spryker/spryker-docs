@@ -12,11 +12,11 @@ To integrate GLUE API in your project, you need to:
 
 GLUE infrastructure is shipped with the following modules:
 
-| MODULE | DESCRIPTION  |
-| --- | --- |
-| [GlueApplication](https://github.com/spryker/glue-application) | Provides API infrastructure for Spryker features.|
-| [GlueApplicationExtension](https://github.com/spryker/glue-application-extension) |Provides extension point/plugin interfaces for the Glue Application module.  |
-| [AuthRestApi](https://github.com/spryker/auth-rest-api) (optional)| Provides API endpoints to obtain an authentication token to use for subsequent requests. |
+| MODULE | REQUIRED | DESCRIPTION  |
+| --- | --- | --- |
+| [GlueApplication](https://github.com/spryker/glue-application) | v |Provides API infrastructure for Spryker features.|
+| [GlueApplicationExtension](https://github.com/spryker/glue-application-extension) |   v |Provides extension point/plugin interfaces for the Glue Application module.  |
+| [AuthRestApi](https://github.com/spryker/auth-rest-api) |       |  Provides API endpoints to obtain an authentication token to use for subsequent requests. |
 
 To install it, you need to do the following:
 
@@ -26,7 +26,7 @@ Spryker Shop Suite contains GLUE out of the box. If your project has the latest 
 
 {% endinfo_block %}
 
-1. Install the necessary modules using composer:
+1. Install the required modules using Composer:
 
     ```bash
     composer update "spryker/*" "spryker-shop/*" --update-with-dependencies
@@ -159,7 +159,7 @@ If you want to enable GLUE application debugging, set the `GLUE_APPLICATION_REST
 
 {% endinfo_block %}
 
-6. Enable customer authentication via OAuth tokens (optional)
+6. Optional: Enable customer authentication via OAuth tokens:
 
 GLUE provides the possibility to authenticate customer users with the help of OAuth tokens. If you are going to use customer authentication, you will also need to perform the following additional steps:
 

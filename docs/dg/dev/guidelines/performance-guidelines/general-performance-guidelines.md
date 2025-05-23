@@ -1,7 +1,7 @@
 ---
 title: General performance guidelines
 description: This guideline explains how to optimize the server-side execution time for your Spryker based projects.
-last_updated: Apr 24, 2025
+last_updated: May 16, 2025
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-guidelines
 originalArticleId: 5feb83b8-5196-44f9-8f6a-ffb208a2c162
@@ -329,6 +329,62 @@ When using Gateway for Twig rendering–for example, for sending emails–you ca
 1. Update `spryker/twig` to version `3.28.0` or higher.
 2. In `src/Pyz/Zed/Application/ApplicationDependencyProvider.php:getBackendGatewayApplicationPlugins()` replace `TwigApplicationPlugin()` with `TwigGatewayApplicationPlugin()`.
 
+## Order placement performance
+
+For carts with big numbers of items, you can configure order items to be placed in batches for better performance. Take the steps in the following sections to do it.
+
+### Prerequisites
+
+1. Update `spryker/sales` and its dependencies to version [spryker/sales:^11.63.0](https://github.com/spryker/sales/releases/tag/11.63.0).
+2. Configure columns to be returned for each order item:
+
+**src/Pyz/Zed/Sales/SalesConfig.php**
+```php
+<?php
+
+namespace Pyz\Zed\Sales;
+
+use Spryker\Zed\Sales\SalesConfig as SprykerSalesConfig;
+
+class SalesConfig extends SprykerSalesConfig
+{
+    /**
+     * Returns the column that stores a unique identifier for each order item.
+     */
+    public function getItemHashColumn(): string
+    {
+        return 'OrderItemReference';
+    }
+}
+
+```
+
+### Set up a unique column
+
+The prior example uses the `OrderItemReference` column, which is provided by default. You can define a different column if needed, but it must meet the following requirements:
+- Contains a unique value for every order item in the database
+- Generated before an order is saved
+
+### Enable the generation of column value
+
+To generate the `OrderItemReference` value, add `OrderItemReferenceExpanderPreSavePlugin` to the `getOrderItemExpanderPreSavePlugins()` method:
+
+**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+```php
+use Spryker\Zed\SalesOms\Communication\Plugin\OrderItemReferenceExpanderPreSavePlugin;
+
+// ...
+
+protected function getOrderItemExpanderPreSavePlugins(): array
+{
+    return [
+        new OrderItemReferenceExpanderPreSavePlugin(),
+    ];
+}
+```
+
+After enabling the plugin and configuring the unique column, Spryker saves order items in batches, which reduces database overhead and improves checkout performance.
+
 ## Reduce functionality
 
 Check if you require all features you currently use and check all applied plugins if you need them. Some plugins can probably be removed. Specifically, check the following ones:
@@ -357,13 +413,20 @@ Performance optimizations in the order placement:
 - [spryker/merchant:^3.15.0](https://github.com/spryker/merchant/releases/tag/3.15.0)
 - [spryker/sales:^11.60.0](https://github.com/spryker/sales/releases/tag/11.60.0)
 - [spryker/product:^6.49.0](https://github.com/spryker/product/releases/tag/6.49.0)
-- [spryker/discount:^9.42.1](https://github.com/spryker/discount/releases/tag/9.42.1)
+- [spryker/discount:^9.43.0](https://github.com/spryker/discount/releases/tag/9.43.0)
 - [spryker/product-cart-connector:^4.13.0](https://github.com/spryker/product-cart-connector/releases/tag/4.13.0)
+- [spryker/company-role:^1.9.1](https://github.com/spryker/company-role/releases/tag/1.9.1)
+- [spryker/propel:^3.43.0](https://github.com/spryker/propel/releases/tag/3.43.0)
+- [spryker/sales:^11.63.0](https://github.com/spryker/sales/releases/tag/11.63.0)
+- [spryker/sales-product-connector:^1.11.1](https://github.com/spryker/sales-product-connector/releases/tag/1.11.1)
+- [spryker/shipment:^8.24.0](https://github.com/spryker/shipment/releases/tag/8.24.0)
 
 Performance optimizations in the OMS availability check and order item reservation:
 - [spryker/availability:^9.27.0](https://github.com/spryker/availability/releases/tag/9.27.0)
 - [spryker/stock:^8.10.1](https://github.com/spryker/stock/releases/tag/8.10.1)
-- [spryker/oms:^11.44.0](https://github.com/spryker/oms/releases/tag/11.44.0)
+- [spryker/oms:^11.45.1](https://github.com/spryker/oms/releases/tag/11.45.1)
+- [spryker/propel:^3.43.0](https://github.com/spryker/propel/releases/tag/3.43.0)
+- [spryker/sales:^11.63.0](https://github.com/spryker/sales/releases/tag/11.63.0)
 
 
 ## Performance profiling

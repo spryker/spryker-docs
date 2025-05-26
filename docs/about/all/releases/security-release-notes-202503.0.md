@@ -251,12 +251,12 @@ A secret related to the "Remember Me" functionality was found to be hardcoded in
 
 2. Update `.git.docker` with hash commit `ac17ea980d151c6b4dd83b7093c0c05a9205c244` or higher.
 
-3. Add `SPRYKER_CUSTOMER_REMEMBER_ME_SECRET` environment variable in the cloud. For instructions, see [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html).
+3. Add `CUSTOMER_REMEMBER_ME_SECRET` environment variable in the cloud. For instructions, see [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html).
 
 4. Update `config/Shared/config_default.php`:
 
 ```php
-$config[CustomerPageConstants::CUSTOMER_REMEMBER_ME_SECRET] = getenv('SPRYKER_CUSTOMER_REMEMBER_ME_SECRET');
+$config[CustomerPageConstants::CUSTOMER_REMEMBER_ME_SECRET] = getenv('CUSTOMER_REMEMBER_ME_SECRET');
 ```
 
 

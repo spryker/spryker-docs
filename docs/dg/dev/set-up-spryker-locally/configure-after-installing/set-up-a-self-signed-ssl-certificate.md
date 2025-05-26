@@ -12,7 +12,7 @@ redirect_from:
 
 ## This HowTo describes the steps to import a self-signed SSL (Secure Sockets Layer) certificate.
 
-A *self-signed SSL certificate* is an identity certificate that is signed by the same entity whose identity it certificates. Such a certificate is used only for development purposes. For production purposes, we recommend generating a valid SSL certificate signed by an official certification center like [letsEncrypt](https://letsencrypt.org/).
+A *self-signed SSL certificate* is an identity certificate that is signed by the same entity whose identity it certificates. Such a certificate is used only for development purposes. For production purposes, we recommend generating a valid SSL certificate signed by an official certification center like [Let's Encrypt](https://letsencrypt.org/).
 
 There is a self-signed SSL certificate shipped with Spryker. It is located in `docker/deployment/default/spryker_ca.crt.` To access your instance via a secure connection, add the certificate to trusted authorities in the host system.
 

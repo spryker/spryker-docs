@@ -94,7 +94,7 @@ Alternatively, you can import product type assignments using the console importe
 |---------------------|-------------|
 | Offer status        | Active or inactive. |
 | Stores              | Spryker Marketplace is a multi-store environment, and an operator can define which stores to display their offers in. |
-| Stock               | Offer's stock that's not dependent on the respective product's stock.
+| Stock               | Offer's stock that's not dependent on the respective product's stock. |
 | Quantity | Always in Stock |
 | Validity Dates      | Specifies the period during which the product offer is visible on the Storefront. Concrete product validity dates have higher priority over the Offer validity dates. |
 | Service Point       | A service point is a physical location where services are provided. Depending on the services provided, there can be different kinds of service points, such as a warehouse or a physical store. |

@@ -293,7 +293,7 @@ protected function getDataLoaderPlugins()
 
 - Optional: `CatalogDependencyProvider::getSortConfigTransferBuilderPlugins()`
 
-```
+```php
 /**
  * @return \Spryker\Client\Catalog\Dependency\Plugin\SortConfigTransferBuilderPluginInterface[]
  */

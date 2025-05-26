@@ -7255,8 +7255,8 @@ To search by products, send the request:
 | abstractProducts.prices.currency.symbol | String | Currency symbol. |
 | abstractProducts.prices.grossAmount | Integer | Gross price in cents. |
 | abstractProducts.images | Array | Images of the abstract product. |
-| abstractProducts.images.externalUrlLarge | URL of the large image. |
-| abstractProducts.images.externalUrlSmall | URL of the small image. |
+| abstractProducts.images.externalUrlLarge | String   | URL of the large image. |
+| abstractProducts.images.externalUrlSmall | String   | URL of the small image. |
 
 
 **Value facets**

@@ -31,7 +31,7 @@ This endpoint lets you add service point addresses.
 
 Request sample: `GET https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e/service-point-addresses`
 
-```
+```json
 {
     "data": {
         "type": "service-point-address",

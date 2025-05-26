@@ -3939,12 +3939,17 @@ entries:
         include_versions:
         - "202505.0"
         nested:
-          - title: Self-Service Portal Service Management feature overview
+          - title: SSP Service Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-service-management-feature-overview.html
-          - title: Self-Service Portal Inquiry Management feature overview
+          - title: SSP Inquiry Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-inquiry-management-feature-overview.html
-          - title: Self-Service Portal Dashboard Management feature overview
-            url: /docs/pbc/all/self-service-portal/ssp-dashboard-management-feature-overview.html          
+          - title: SSP Dashboard Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-dashboard-management-feature-overview.html
+          - title: SSP Asset Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-asset-management-feature-overview.html
+          - title: SSP File Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-file-management-feature-overview.html                                  
+                      
           - title: Install
             nested:
               - title: Install Self-Service Portal
@@ -3959,8 +3964,15 @@ entries:
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-inquiry-management-feature.html
               - title: Install the SSP Service Management feature
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-service-management-feature.html
-          
-
+        
+          - title: Manage in the Back Office
+            nested:          
+              - title: Add SSP assets
+                url: /docs/pbc/all/self-service-portal/manage-in-the-back-office/back-office-add-ssp-assets.html
+              - title: Upload SSP files
+                url: /docs/pbc/all/self-service-portal/manage-in-the-back-office/back-office-upload-ssp-files.html
+              - title: Attach SSP files to assets and company entities
+                url: /docs/pbc/all/self-service-portal/manage-in-the-back-office/back-office-attach-ssp-files-to-assets-and-entities.html  
 
       - title: Service Point Management
         url: /docs/pbc/all/service-point-management/service-point-management.html

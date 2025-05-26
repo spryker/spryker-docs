@@ -10,11 +10,36 @@ redirect_from:
 ---
 
 
-This HowTo describes the steps to import a self-signed SSL (Secure Sockets Layer) certificate.
+## This HowTo describes the steps to import a self-signed SSL (Secure Sockets Layer) certificate.
 
 A *self-signed SSL certificate* is an identity certificate that is signed by the same entity whose identity it certificates. Such a certificate is used only for development purposes. For production purposes, we recommend generating a valid SSL certificate signed by an official certification center like [letsEncrypt](https://letsencrypt.org/).
 
 There is a self-signed SSL certificate shipped with Spryker. It is located in `docker/deployment/default/spryker_ca.crt.` To access your instance via a secure connection, add the certificate to trusted authorities in the host system.
+
+## This HowTo describes the steps to use a custom SSL certificate (Secure Sockets Layer).
+
+To use *your own custom SSL certificate* with Spryker, place two files in the `$HOME/.spryker/certs/` folder:
+
+- **default.crt** – your public X.509 certificate
+- **default.key** – the matching private key
+
+> **Note:**
+> > Spryker’s Docker setup looks specifically for `default.crt` and `default.key` in `$HOME/.spryker/certs/`.
+> >
+> > Secure your private key so only you can read it:
+> >
+> > ```bash
+> > chmod 600 "$HOME/.spryker/certs/default.key"
+> > ```
+> >
+> > If you have an intermediate CA chain, concatenate them (leaf first, then intermediates) into `default.crt`:
+> >
+> > ```bash
+> > cat leaf.crt intermediate.crt >> "$HOME/.spryker/certs/default.crt"
+> > ```
+> >
+
+With those in place, Spryker will load your custom cert/key; otherwise it falls back to the built-in `spryker_ca.crt`.
 
 Depending on the OS, follow the instructions:
 - [Set up a self-signed SSL certificate on Windows](#set-up-a-self-signed-ssl-certificate-on-windows)

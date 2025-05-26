@@ -147,7 +147,7 @@ export class ProductIdComponent extends ProductMixin(LitElement) {
 }
 ```
 
-You can now use the pricing service API in the component. Service methods always return observables (using [RxJS](https://rxjs.dev/)), so that the service can be lazy loaded and the response can be used by [signals](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/reactivity/signals.html) to update the DOM efficiently.
+You can now use the pricing service API in the component. Service methods always return observables (using [RxJS](https://www.learnrxjs.io/)), so that the service can be lazy loaded and the response can be used by [signals](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/reactivity/signals.html) to update the DOM efficiently.
 
 ### 7. Configuring the component for server-side rendering and hydration
 

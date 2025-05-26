@@ -1,6 +1,6 @@
 This document describes how to install the [Concrete SKU product filter feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/concrete-sku-product-filter-feature-overview.html).
 
-### 1) Install the required modules
+## 1) Install the required modules
 
 ```bash
 composer require spryker/product-management:^0.19.48 --update-with-dependencies
@@ -15,10 +15,9 @@ Make sure that the following modules have been installed:
 | ProductModule                | vendor/spryker/product-management              |
 {% endinfo_block %}
 
-### 2) Enable the feature in the config
+## 2) Enable the feature in the config
 
-Extend `isConcreteSkuSearchInProductTableEnabled` method in  `ProductManagementConfig` on project level and make it return `true`.
-
+Extend the `isConcreteSkuSearchInProductTableEnabled` method in the `ProductManagementConfig` class at the project level and return `true`:
 
 **src/Pyz/Zed/ProductManagement/ProductManagementConfig.php**
 

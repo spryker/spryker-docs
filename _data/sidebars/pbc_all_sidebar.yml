@@ -10,7 +10,7 @@ entries:
                 url: /docs/pbc/all/back-office/base-shop/spryker-core-back-office-feature-overview.html
               - title: Back Office Translations overview
                 url: /docs/pbc/all/back-office/base-shop/back-office-translations-overview.html
-              - title: Concrete SKU product filter feature
+              - title: Concrete SKU product filter feature overview
                 url: /docs/pbc/all/product-information-management/202410.0/base-shop/feature-overviews/concrete-sku-product-filter-feature-overview.md
               - title: Install and upgrade
                 nested:

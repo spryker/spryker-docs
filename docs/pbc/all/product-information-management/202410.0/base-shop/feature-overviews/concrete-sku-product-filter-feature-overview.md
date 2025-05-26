@@ -1,18 +1,13 @@
 ---
 title: Concrete SKU product filter feature overview
-description: The document describes the Concrete SKU product filter feature.
+description: Filter abrtract products by concrete products SKUs in the Back Office.
 last_updated: May 23, 2025
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/202505.0/docs/concrete-sku-product-filter-feature-overview
 ---
 
-The *Concrete SKU product filter* feature lets a Back Office user filter the list of Abstract products by the SKUs of the concrete products.
+The *Concrete SKU product filter* feature lets a Back Office user filter abstract products by SKUs of concrete products.
 
-Example:
-
-* an abstract product with the SKU `ABCD` has two concrete products with the SKUs `ABCD-1` and `ABCD-2`.
-* with the feaure off, the Back Office user can only find this Abstract product by the SKU `ABCD`.
-* with the feature on, the Back Office user can find this Abstract product by the SKUs `ABCD`, `ABCD-1`, and `ABCD-2`.
+For example, an abstract product with the `ABCD` SKU has two concrete products with the `ABCD-1` and `ABCD-2` SKUs. Without this feature, you can find this abstract product only by the `ABCD` SKU. With this feature, you can find this product by the `ABCD`, `ABCD-1`, and `ABCD-2` SKUs.
 
 ## Related Developer documents
 

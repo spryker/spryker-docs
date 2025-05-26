@@ -5,13 +5,13 @@ last_updated: May 26, 2025
 template: feature-integration-guide-template
 ---
 
-## Integrate Automated SVG Icon Sprite Extraction
+Integrate Automated SVG Icon Sprite Extraction
 
 This guide helps you enable automated SVG sprite extraction for scalable icon management in your Spryker Yves project.
 
 ---
 
-### 1. Update `composer.json` to require the right ShopUi version
+1. Update `composer.json` to require the right ShopUi version
 
 Make sure you have at least the following version:
 ```bash
@@ -20,7 +20,7 @@ composer require spryker-shop/shop-ui:^1.93.1
 
 ---
 
-### 2. Add or Update the Icon Sprite Twig File
+2. Add or Update the Icon Sprite Twig File
 
 **File:**  
 `src/Pyz/Yves/ShopUi/Theme/default/components/atoms/icon-sprite/icon-sprite.twig`
@@ -49,7 +49,7 @@ _Update or add your individual symbols as needed._
 
 ---
 
-### 3. Add or Update the Icon Component Twig File
+3. Add or Update the Icon Component Twig File
 
 **File:**  
 `src/Pyz/Yves/ShopUi/Theme/default/components/atoms/icon/icon.twig`
@@ -66,7 +66,7 @@ _Update or add your individual symbols as needed._
 
 ---
 
-### 4. Add the Icon Sprite Extractor Script
+4. Add the Icon Sprite Extractor Script
 
 **File:**  
 `frontend/libs/icon-sprite-extractor.js`
@@ -132,7 +132,7 @@ module.exports = extractIconSprites;
 
 ---
 
-### 5. Update Frontend Settings
+5. Update Frontend Settings
 
 **File:**  
 `frontend/settings.js`
@@ -154,7 +154,7 @@ module.exports = extractIconSprites;
 
 ---
 
-### 6. Update the Frontend Build Config
+6. Update the Frontend Build Config
 
 **File:**  
 `frontend/configs/development.js`
@@ -191,7 +191,7 @@ const getConfiguration = async (appSettings) => {
 
 ---
 
-### 7. Update `.gitignore`
+7. Update `.gitignore`
 
 Add this line to avoid committing the generated sprite:
 
@@ -201,7 +201,7 @@ Add this line to avoid committing the generated sprite:
 
 ---
 
-### 8. Rebuild the Frontend
+8. Rebuild the Frontend
 
 Run:
 ```bash
@@ -209,7 +209,7 @@ console frontend:project:install-dependencies
 console frontend:yves:build -e production
 ```
 
-### 9. Rebuild twig cache
+9. Rebuild twig cache
 ```bash
 console t:c:w
 ```

@@ -25,7 +25,7 @@ The following DB backups are created automatically:
 - Hourly snapshots by SCCOS tools with a default retention of 35 days.
 
 
-Also, you can create DB snapshots manually.
+Also, you can create DB snapshots manually. Manual snapshots expire in 90 days and are removed automatically.
 
 ## Create a DB snapshot
 

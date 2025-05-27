@@ -13,7 +13,7 @@ end
 require 'html-proofer'
 
 # Method to run HTMLProofer with retries
-def run_htmlproofer_with_retry(directory, options, max_tries = 3, delay = 5)
+def run_htmlproofer_with_retry(directory, options, max_tries = 1, delay = 5)
   options[:typhoeus] ||= {}
   options[:typhoeus][:timeout] = 60
   options[:typhoeus][:headers] = {
@@ -22,8 +22,24 @@ def run_htmlproofer_with_retry(directory, options, max_tries = 3, delay = 5)
 
   retries = max_tries
   begin
-    HTMLProofer.check_directory(directory, options).run
-  rescue SystemExit => e
+    if options[:files]
+      # Check each file individually since HTMLProofer doesn't support multiple files in one call
+      options[:files].each do |file|
+        puts "Checking file: #{file}"
+        # Create a new options hash for each file to avoid modifying the original
+        file_options = options.reject { |k| k == :files }.merge({
+          :root_dir => File.expand_path('_site'),  # Use absolute path
+          :disable_external => true,
+          :allow_hash_href => true,
+          :check_internal_hash => false,  # Don't check fragment identifiers
+          :check_html => false  # Don't validate HTML structure
+        })
+        HTMLProofer.check_file(file, file_options).run
+      end
+    else
+      HTMLProofer.check_directory(directory, options).run
+    end
+  rescue StandardError => e
     retries -= 1
     if retries >= 0
       puts "Retrying... (#{max_tries - retries}/#{max_tries} attempts)"
@@ -185,4 +201,91 @@ task :check_dg do
     /docs\/dg\/\w+\/[\w-]+\/202411\.0\/.+/
   ]
   run_htmlproofer_with_retry("./_site", options)
+end
+
+task :check_changed_files, [:file_list] do |t, args|
+  puts "Running link validation on changed files..."
+  
+  # Split by spaces and clean up paths
+  files = args[:file_list].split(/\s+/).map(&:strip).reject(&:empty?)
+  
+  # Convert markdown file paths to their HTML equivalents
+  html_files = files.map do |file|
+    if file.start_with?('_includes/')
+      file.sub(/^_includes\//, '_site/_includes/').sub(/\.md$/, '.html')
+    else
+      file.sub(/^docs\//, '_site/docs/').sub(/\.md$/, '.html')
+    end
+  end.select { |f| File.exist?(f) && File.file?(f) }  # Only select files, not directories
+
+  if html_files.empty?
+    puts "No valid files to check"
+    next
+  end
+
+  puts "Processing files: #{html_files.join(', ')}"
+
+  # Create a temporary directory to store only the files we want to check
+  require 'tmpdir'
+  Dir.mktmpdir do |temp_dir|
+    # Copy only the files we want to check
+    files_to_check = []
+    
+    html_files.each do |file|
+      begin
+        next unless File.file?(file)  # Skip if not a regular file
+        
+        # Create the target directory structure
+        target_file = File.join(temp_dir, file)
+        FileUtils.mkdir_p(File.dirname(target_file))
+        
+        # Copy the file
+        FileUtils.cp(file, target_file)
+        files_to_check << target_file
+      rescue Errno::EISDIR
+        puts "Warning: Skipping directory #{file}"
+        next
+      rescue => e
+        puts "Warning: Error processing #{file}: #{e.message}"
+        next
+      end
+    end
+
+    if files_to_check.empty?
+      puts "No files to check after processing"
+      next
+    end
+
+    # Run HTMLProofer with minimal options
+    options = {
+      :files => files_to_check,
+      :ignore_urls => commonOptions[:ignore_urls]
+    }
+    
+    begin
+      run_htmlproofer_with_retry(nil, options)
+      puts "\nLink validation completed successfully"
+    rescue StandardError => e
+      puts "\nErrors found in changed files:"
+      puts e.message
+      raise "HTML-Proofer found errors in changed files"
+    end
+  end
+end
+
+task :check_all do
+  puts "Running all link validation checks..."
+  
+  [:check_ca, :check_about, :check_pbc, :check_dg].each do |check|
+    begin
+      puts "\nRunning #{check}..."
+      Rake::Task[check].invoke
+      puts "#{check} completed successfully"
+    rescue => e
+      puts "#{check} failed: #{e.message}"
+      raise e
+    end
+  end
+  
+  puts "\nAll link validation checks completed successfully"
 end

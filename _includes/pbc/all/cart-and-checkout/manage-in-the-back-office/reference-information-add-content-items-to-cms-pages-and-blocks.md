@@ -1,4 +1,4 @@
-Content item widget template defines how a content item looks on the Storefront. The following templates are available by default. If you need a different template, a developer can create it by following [HowTo:  Create a content item widget template](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#content-item-widget-template).
+Test change. Content item widget template defines how a content item looks on the Storefront. The following templates are available by default. If you need a different template, a developer can create it by following [HowTo:  Create a content item widget template](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#content-item-widget-template).
 
 ### Banner content item widget template: Bottom title
 

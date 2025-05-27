@@ -16,6 +16,6 @@ Example:
 
 ## Related Developer documents
 
-| INSTALLATION GUIDES | UPGRADE GUIDES | DATA IMPORT |
-|---------|---------|---------|
-| [Install the Concrete SKU product filter feature](/docs/pbc/all/product-information-management/202410.0/base-shop/install-and-upgrade/install-features/install-the-concrete-sku-filter-feature.md)  
+| INSTALLATION GUIDES                                                                                                                                                                                |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Install the Concrete SKU product filter feature](/docs/pbc/all/product-information-management/202410.0/base-shop/install-and-upgrade/install-features/install-the-concrete-sku-filter-feature.md) |

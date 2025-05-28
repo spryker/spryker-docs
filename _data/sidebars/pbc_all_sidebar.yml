@@ -32,9 +32,9 @@ entries:
                     include_versions:
                       - "202410.0"
                   - title: Install Concrete SKU product filter feature
-                    url: /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-concrete-sku-filter-feature.md
+                    url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-concrete-sku-filter-feature.md
                     include_versions:
-                      - "202410.0"
+                      - "202507.0"
 
               - title: Configure the timezone in the Back Office
                 url: /docs/pbc/all/back-office/base-shop/configure-the-timezone-in-the-back-office.html

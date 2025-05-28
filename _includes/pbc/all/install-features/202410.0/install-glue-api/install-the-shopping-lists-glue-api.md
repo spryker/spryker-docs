@@ -177,7 +177,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 To verify that the `ShoppingListsResourcePlugin` resource route plugin and the `ShoppingListItemByShoppingListResourceRelationshipPlugin`, `ConcreteProductBySkuResourceRelationshipPlugin` relationship plugins are set up correctly, make sure that following endpoint and relationships are available:
 
-- https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}?include=shopping-list-items,concrete-products
+- `https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}?include=shopping-list-items,concrete-products`
 
 Check the response:
 <details>
@@ -287,7 +287,7 @@ Check the response:
 
 To verify that the `ShoppingListItemsResourcePlugin` is set up correctly, make sure that the following endpoint is available:
 
-- https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items
+- `https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items`
 
 Post a request with the following body:
 
@@ -307,7 +307,7 @@ Post a request with the following body:
 
 Check the response:
 
-**POST https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items**
+`POST https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items`
 
 ```json
 {

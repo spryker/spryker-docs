@@ -842,7 +842,7 @@ console data:import merchant-profile-address
 
 **/data/import/common/common/marketplace/merchant_user.csv**
 
-```
+```csv
 merchant_reference,username
 MER000006,michele@sony-experts.com
 ```

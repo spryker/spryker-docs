@@ -269,6 +269,7 @@ Make sure that it's impossible to delete a Product List if it's used by Merchant
 | ProductListMerchantRelationshipCreateFormExpanderPlugin | Adds Product List multi-select field to merchant relationship create form. | None | Spryker\Zed\MerchantRelationshipProductListGui\Communication\Plugin\MerchantRelationshipGui |
 | ProductListMerchantRelationshipEditFormExpanderPlugin | Adds Product List multi-select field to merchant relationship create form. | None | Spryker\Zed\MerchantRelationshipProductListGui\Communication\Plugin\MerchantRelationshipGui |
 |   |   |   |   |
+
 {% info_block warningBox "Verification" %}
 
 Make sure that additional field **Assigned Product Lists** is present at **Merchant Relationship create/edit** pages.

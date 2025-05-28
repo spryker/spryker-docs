@@ -46,7 +46,7 @@ The feature has the following functional constraints, which are going to be reso
 
 | BACK OFFICE USER GUIDES | THIRD-PARTY INTEGRATIONS |
 | - | - |
-| [Manage product reviews in the Back Office](/docs/pbc/all/ratings-reviews/{{page.version}}/manage-product-reviews-in-the-back-office.html) | [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html) | |
+| [Manage product reviews in the Back Office](/docs/pbc/all/ratings-reviews/{{page.version}}/manage-product-reviews-in-the-back-office.html) | [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html)| |
 | [Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html) | |
 | [Configure Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/configure-bazaarvoice.html) | |
 | [Disconnect Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/disconnect-bazaarvoice.html) | |

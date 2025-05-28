@@ -57,7 +57,7 @@ Register the following plugins:
 | --- | --- | --- | --- |
 | ItemMetadataSearchOrderExpanderPlugin | Expands items of each order with metadata information. | None | Spryker\Zed\SalesProductConnector\Communication\Plugin\Sales |
 | MetadataOrderItemExpanderPlugin | Expands order items with metadata information. | None | Spryker\Zed\SalesProductConnector\Communication\Plugin\Sales |
-| ProductIdOrderItemExpanderPlugin | Expands order items with abstract and concrete product ids. | None | Spryker\Zed\SalesProductConnector\Communication\Plugin\Sales
+| ProductIdOrderItemExpanderPlugin | Expands order items with abstract and concrete product ids. | None | Spryker\Zed\SalesProductConnector\Communication\Plugin\Sales |
 
 **/src/Pyz/Zed/Sales/SalesDependencyProvider.php**
 

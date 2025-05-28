@@ -15,7 +15,7 @@ Install the required features:
 | Spryker Core                | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
 | Cart                        | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                                    |
 | Prices                      | {{site.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                      |
-| Product                     | {{site.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)
+| Product                     | {{site.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 
 ### 1) Install the required modules
@@ -496,7 +496,7 @@ Workstations,WorkstationsDE--21
 | --- | --- | --- | --- | --- |
 | shopping_list_key        | ✓        | string    | Laptops      | This identifier is used to refer to a shopping list in other imports. |
 | name                     | ✓        | string    | Laptops      | Name of the shopping list.                                                    |
-| owner_customer_reference | ✓        | string    | DE--21       | Customer reference of the shopping list owner.
+| owner_customer_reference | ✓        | string    | DE--21       | Customer reference of the shopping list owner. |
 
 2. Register the following plugin to enable data import:
 

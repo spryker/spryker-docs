@@ -18,7 +18,7 @@ Install the required features:
 
 **data/import/common/common/glossary.csv**
 
-```
+```csv
 page.checkout.address.single_address,Single address,en_US
 page.checkout.address.single_address,Eine Adresse,de_DE
 page.checkout.address.multiple_addresses,Multiple addresses,en_US

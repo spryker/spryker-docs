@@ -1222,9 +1222,9 @@ Follow the steps below to install the Order Management feature frontend.
 
 Install the required features:
 
-| NAME                        | VERSION          |
-|-----------------------------|------------------|
-| Spryker Core                | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                            |
+| NAME                        | VERSION          | INSTALLATION GUIDE |
+|-----------------------------|------------------| - |
+| Spryker Core                | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
 | Checkout | {{site.version}} |[Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
 | Customer Account Management | {{site.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
@@ -1249,7 +1249,7 @@ Make sure the following modules have been installed:
 
 1. Append the glossary according to your configuration:
 
-```
+```csv
 order_cancel_widget.cancel_order,Cancel Order,en_US
 order_cancel_widget.cancel_order,Bestellung stornieren,de_DE
 order_cancel_widget.order.cancelled,Order was canceled successfully.,en_US

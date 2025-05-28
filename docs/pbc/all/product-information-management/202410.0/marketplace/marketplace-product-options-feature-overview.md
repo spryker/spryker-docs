@@ -95,4 +95,4 @@ Currently, the feature has the following functional constraints which are going 
 | INSTALLATION GUIDES          | DATA IMPORT         |
 |--------------------------------|----------------|
 | [Install the Marketplace Product Options feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-feature.html)                                        | [File details: merchant product option group](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-option-group.csv.html)  |
-| [Merchant Portal - Marketplace Product Options Management integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-options-feature.html) |  
+| [Merchant Portal - Marketplace Product Options Management integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-options-feature.html) |   |

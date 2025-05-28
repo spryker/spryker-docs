@@ -316,7 +316,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 
 Run the following console command to execute registered installer plugins and install infrastructural data:
 
-```
+```bash
 console setup:init-db
 ```
 
@@ -459,6 +459,7 @@ ITEM,218
 | --- | --- | --- | --- | --- |
 | code | ✓ | string | METR |  An existing measurement unit code that will be the base of measurement unit calculations for this product abstract. |
 |abstract_sku|mandatory|virtual-unique, string|215|An existing product abstract SKU. 1 product abstract can have only 1 base unit; multiple occurrences will override older ones.|
+
 Register the following plugin to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -652,6 +653,7 @@ sales_unit_19,AT
 | --- | --- | --- | --- | --- |
 | sales_unit_key |mandatory  | string | sales_unit_1 |A reference used for the product measurement sales unit data import.  |
 |store_name|mandatory|string|DE|Contains the store name where the sales unit is available.|
+
 Register the following plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |

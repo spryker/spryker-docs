@@ -28,110 +28,107 @@ In this document, we expand the search data with a `foo` entity as an example. Y
 
 To expand search data with a `foo` entity, do the following:
 
-1. Expand `ProductPageLoadTransfer` object with `foo` data:
+1. To expand the `ProductPageLoadTransfer` object with `foo` data, add the data to the transfer:
 
-    1. Add your data to the transfer:
+```xml
+<transfer name="ProductPayload">
+    <property name="foo" type="int"/>
+</transfer>
+```
 
-    ```xml
-    <transfer name="ProductPayload">
-        <property name="foo" type="int"/>
-    </transfer>
-    ```
+2. Implement `ProductPageDataLoaderPluginInterface`. This plugin expands `ProductPageLoadTransfer` with data and returns the modified object.
 
-    1. Implement `ProductPageDataLoaderPluginInterface` as follows. This plugin expands `ProductPageLoadTransfer` with data and returns the modified object.
+<details><summary>ProductPageDataLoaderPluginInterface implementation example</summary>
 
-    <details><summary>ProductPageDataLoaderPluginInterface implementation example</summary>
+```php
+class FooPageDataLoaderPlugin implements ProductPageDataLoaderPluginInterface
+{
+    ...
 
-    ```php
-    class FooPageDataLoaderPlugin implements ProductPageDataLoaderPluginInterface
-    {
-        ...
+    /**
+     * @param \Generated\Shared\Transfer\ProductPageLoadTransfer $productPageLoadTransfer
+     *
+     * @return \Generated\Shared\Transfer\ProductPageLoadTransfer
+     */
+    public function expandProductPageDataTransfer(
+    ProductPageLoadTransfer $productPageLoadTransfer
+    ): ProductPageLoadTransfer {
 
-        /**
-         * @param \Generated\Shared\Transfer\ProductPageLoadTransfer $productPageLoadTransfer
-         *
-         * @return \Generated\Shared\Transfer\ProductPageLoadTransfer
-         */
-        public function expandProductPageDataTransfer(
-        ProductPageLoadTransfer $productPageLoadTransfer
-        ): ProductPageLoadTransfer {
+        $payloadTransfers = $this->updatePayloadTransfers(
+        $productPageLoadTransfer->getPayloadTransfers()
+        );
 
-            $payloadTransfers = $this->updatePayloadTransfers(
-            $productPageLoadTransfer->getPayloadTransfers()
-            );
+        $productPageLoadTransfer->setPayloadTransfers($payloadTransfers);
 
-            $productPageLoadTransfer->setPayloadTransfers($payloadTransfers);
-
-            return $productPageLoadTransfer;
-        }
-
-        /**
-         * @param \Generated\Shared\Transfer\ProductPayloadTransfer[] $productPageLoadTransfers
-         *
-         * @return \Generated\Shared\Transfer\ProductPayloadTransfer[] updated payload transfers
-         */
-        protected function updatePayloadTransfers(array $productPageLoadTransfers): array
-        {
-            foreach ($productPageLoadTransfers as $productPageLoadTransfer) {
-            $productPageLoadTransfer->sefFoo('Some value');
-            }
-
-            return $productPageLoadTransfers;
-        }
-    }    
-    ```
-
-    </details>
-
-2. Expand `ProductAbstractPageSearch` object with `foo` data:
-
-    1. Add your data to transfer:
-
-  ```xml
-  <transfer name="ProductPageSearch">
-      <property name="foo" type="int"/>
-  </transfer>
-  ```
-
-    2. Implement `ProductPageDataExpanderPluginInterface` as follows. This plugin expands the provided `ProductAbstractPageSearchTransfer` object's data by `foo`.
-
-    <details><summary>ProductPageDataExpanderPluginInterface implementation example</summary>
-
-    ```php
-    class ProductFooDataExpanderPlugin implements ProductPageDataExpanderPluginInterface
-    {
-        /**
-         * {@inheritDoc}
-         * - Expands the provided ProductAbstractPageSearch transfer object's data by foo.
-         *
-         * @api
-         *
-         * @param mixed[] $productData
-         * @param \Generated\Shared\Transfer\ProductPageSearchTransfer $productAbstractPageSearchTransfer
-         *
-         * @return void
-         */
-        public function expandProductPageData(array $productData, ProductPageSearchTransfer $productAbstractPageSearchTransfer)
-        {
-            $productPayloadTransfer = $this->getProductPayloadTransfer($productData);
-
-            $productAbstractPageSearchTransfer->setFoo($productPayloadTransfer->getFoo());
-        }
-
-        /**
-         * @param mixed[] $productData
-         *
-         * @return \Generated\Shared\Transfer\ProductPayloadTransfer
-         */
-        protected function getProductPayloadTransfer(array $productData): ProductPayloadTransfer
-        {
-            return $productData[ProductPageSearchConfig::PRODUCT_ABSTRACT_PAGE_LOAD_DATA];
-        }
+        return $productPageLoadTransfer;
     }
-    ```
-    </details>
 
-3. Expand the `PageMapTransfer` object with `foo` data by implementing `ProductAbstractMapExpanderPluginInterface` as follows. This plugin expands `foo`-related data in product abstract search data.
+    /**
+     * @param \Generated\Shared\Transfer\ProductPayloadTransfer[] $productPageLoadTransfers
+     *
+     * @return \Generated\Shared\Transfer\ProductPayloadTransfer[] updated payload transfers
+     */
+    protected function updatePayloadTransfers(array $productPageLoadTransfers): array
+    {
+        foreach ($productPageLoadTransfers as $productPageLoadTransfer) {
+        $productPageLoadTransfer->sefFoo('Some value');
+        }
+
+        return $productPageLoadTransfers;
+    }
+}    
+```
+
+</details>
+
+3. To expand the `ProductAbstractPageSearch` object with `foo` data, add the data to the transfer:
+
+```xml
+<transfer name="ProductPageSearch">
+    <property name="foo" type="int"/>
+</transfer>
+```
+
+4. Implement `ProductPageDataExpanderPluginInterface` as follows. This plugin expands the provided `ProductAbstractPageSearchTransfer` object's data by `foo`.
+
+<details><summary>ProductPageDataExpanderPluginInterface implementation example</summary>
+
+```php
+class ProductFooDataExpanderPlugin implements ProductPageDataExpanderPluginInterface
+{
+    /**
+     * {@inheritDoc}
+     * - Expands the provided ProductAbstractPageSearch transfer object's data by foo.
+     *
+     * @api
+     *
+     * @param mixed[] $productData
+     * @param \Generated\Shared\Transfer\ProductPageSearchTransfer $productAbstractPageSearchTransfer
+     *
+     * @return void
+     */
+    public function expandProductPageData(array $productData, ProductPageSearchTransfer $productAbstractPageSearchTransfer)
+    {
+        $productPayloadTransfer = $this->getProductPayloadTransfer($productData);
+
+        $productAbstractPageSearchTransfer->setFoo($productPayloadTransfer->getFoo());
+    }
+
+    /**
+     * @param mixed[] $productData
+     *
+     * @return \Generated\Shared\Transfer\ProductPayloadTransfer
+     */
+    protected function getProductPayloadTransfer(array $productData): ProductPayloadTransfer
+    {
+        return $productData[ProductPageSearchConfig::PRODUCT_ABSTRACT_PAGE_LOAD_DATA];
+    }
+}
+```
+
+</details>
+
+5. Expand the `PageMapTransfer` object with `foo` data by implementing `ProductAbstractMapExpanderPluginInterface` as follows. This plugin expands `foo`-related data in product abstract search data.
 
 
 {% info_block infoBox  %}
@@ -195,7 +192,7 @@ class ProductFooMapExpanderPlugin implements ProductAbstractMapExpanderPluginInt
 </details>
 
 
-1. To allow customers to sort products by `foo`, implement `SortConfigTransferBuilderPluginInterface` by building a `SortConfigTransfer` with a `foo` parameter:
+6. To allow customers to sort products by `foo`, implement `SortConfigTransferBuilderPluginInterface` by building a `SortConfigTransfer` with a `foo` parameter:
 
 <details><summary>SortConfigTransferBuilderPluginInterface implementation example</summary>
 
@@ -243,7 +240,7 @@ class FooSortConfigTransferBuilderPlugin extends AbstractPlugin implements SortC
 </details>
 
 
-1. On the project level, wire the implemented plugins to the providers in `Pyz\Zed\ProductPageSearch\ProductPageSearchDependencyProvider` and `Pyz\Client\Catalog\CatalogDependencyProvider`:
+7. On the project level, wire the implemented plugins to the providers in `Pyz\Zed\ProductPageSearch\ProductPageSearchDependencyProvider` and `Pyz\Client\Catalog\CatalogDependencyProvider`:
 
 - `ProductPageSearchDependencyProvider::getDataExpanderPlugins()`
 

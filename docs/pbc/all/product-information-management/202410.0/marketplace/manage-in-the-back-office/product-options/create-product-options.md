@@ -40,6 +40,7 @@ To create a product option, follow these steps:
 10. [Assign products to the product option](#assigning-products-to-a-product-option).  
 
 ### Tips and tricks
+
 - To remove an option value, next to the **Option name translation key** and **SKU** fields, click **Remove**.
 - To copy a **Group name** or **Option name** from one locale to another, select the **Copy** icon next to the desired value.
 

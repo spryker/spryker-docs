@@ -149,7 +149,7 @@ Add translations as follows:
 
 1. Append glossary for the feature:
 
-```
+```csv
 quote_request.validation.error.is_not_applicable,Quote request is not applicable for the given quote.,en_US
 quote_request.validation.error.is_not_applicable,Die Angebotsanfrage gilt nicht für das angegebene Angebot.,de_DE
 quote_request.validation.error.cart_is_empty,The cart is empty.,en_US

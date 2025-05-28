@@ -842,10 +842,10 @@ Make sure the following widgets were registered:
 | --- | --- |
 | QuoteRequestMenuItemWidget | Log in as a company user, go to **My Account** page, make sure that you see "Requests for Quote" link. |
 | QuoteRequestCreateWidget| Log in as a company user, go to **Quote** page, make sure that you have some products in the cart. Make sure that you see **Request For Quote** button. |
-QuoteRequestCartWidget | After you've pressed the **Edit Items** button on request for a quote, make sure that you see "Save" and **Send To Agent** buttons on a cart page. |
+| QuoteRequestCartWidget | After you've pressed the **Edit Items** button on request for a quote, make sure that you see "Save" and **Send To Agent** buttons on a cart page. |
 | QuoteRequestCancelWidget | Make sure that you see the **Cancel** button on the quote request page. |
 | QuoteRequestAgentOverviewWidget | When you logged in as an agent make sure that you see a list of quote requests. |
 | QuoteRequestAgentCancelWidget | Make sure that when you logged in as an agent you can see the **Cancel** button for each quote request. |
 | QuoteRequestActionsWidget | Make sure that when you edit RFQ shipping data as a buyer, you can see **Cancel**, **Save**, and **Back** buttons on the shipment method page and **Back** button on the shipping address page. |
-|
+
 {% endinfo_block %}

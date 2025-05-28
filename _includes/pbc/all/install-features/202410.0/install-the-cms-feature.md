@@ -241,7 +241,7 @@ You can switch the language in the **Back Office > User Control > User section >
 | CmsPageSearchEventSubscriber | Registers listeners that are responsible for publishing CMS pages to Elasticsearch when a related entity changes. | v  |   | Spryker\Zed\CmsPageSearch\Communication\Plugin\Event\Subscriber |
 | CmsSlotStorageEventSubscriber | Registers listeners that are responsible for publishing slots to storage when a related entity changes. | v  |  | Spryker\Zed\CmsSlotStorage\Communication\Plugin\Event\Subscriber |
 | CmsSlotBlockStorageEventSubscriber | Registers listeners that are responsible for publishing slots to CMS block relations to storage when a related entity changes. | v |  | Spryker\Zed\CmsSlotBlockStorage\Communication\Plugin\Event\Subscriber | 
-| ContentStorageEventSubscriber | Registers listeners that are responsible for publishing content items to storage when a related entity changes. | v  |   | Spryker\Zed\ContentStorage\Communication\Plugin\Event\Subscriber
+| ContentStorageEventSubscriber | Registers listeners that are responsible for publishing content items to storage when a related entity changes. | v  |   | Spryker\Zed\ContentStorage\Communication\Plugin\Event\Subscriber |
 | CmsBlockCategoryStorageEventSubscriber | Registers listeners that are responsible for publishing category to CMS block relations to storage when a related entity changes |     |   | Spryker\Zed\CmsBlockCategoryStorage\Communication\Plugin\Event\Subscriber |
 | CmsBlockProductStorageEventSubscriber | Registers listeners that are responsible for publishing product to CMS block relations to storage when a related entity changes |   v  |   | Spryker\Zed\CmsBlockProductStorage\Communication\Plugin\Event\Subscriber |
 
@@ -1189,9 +1189,9 @@ Make sure the following:
 
 - The expanded data for CMS Page and CMS Block content is present in storage.
 - You have the **Preview** button in the following sections:
-    - In the Back Office, in **Content Management > Pages > List of CMS pages**.
-    - In the Back Office, in **Content Management > Pages/Blocks** > *create* or *edit placeholder* pages.
- - You can use the twig function `renderCmsBlockAsTwig` in the Back Office templates—for example, in email templates.
+  - In the Back Office, in **Content Management > Pages > List of CMS pages**.
+  - In the Back Office, in **Content Management > Pages/Blocks** > *create* or *edit placeholder* pages.
+- You can use the twig function `renderCmsBlockAsTwig` in the Back Office templates—for example, in email templates.
 
 {% endinfo_block %}
 

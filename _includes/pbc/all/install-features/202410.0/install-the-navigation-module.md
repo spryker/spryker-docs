@@ -97,7 +97,7 @@ class YvesBootstrap
 
 Example of rendering navigation in an Yves twig template:
 
-```
+```twig
 {% raw %}{{{% endraw %} spyNavigation('MAIN_NAVIGATION', '@application/layout/navigation/main.twig') {% raw %}}}{% endraw %}
 ```
 

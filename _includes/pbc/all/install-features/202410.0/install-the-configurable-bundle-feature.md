@@ -1253,7 +1253,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 | ConfigurableBundleWidgetRouteProviderPlugin | You can change the quantity and remove a configurable bundle from cart. |
 | ConfigurableBundleWidgetAsyncRouteProviderPlugin | You can change the quantity and remove a configurable bundle from cart with the cart actions AJAX mode enabled. |
 | ConfigurableBundlePageRouteProviderPlugin | You can go to the `/configurator/template-selection` page. |
-| ConfigurableBundleNoteWidgetAsyncRouteProviderPlugin | You can add a configurable item note with the cart actions AJAX mode enabled.
+| ConfigurableBundleNoteWidgetAsyncRouteProviderPlugin | You can add a configurable item note with the cart actions AJAX mode enabled. |
 
 {% endinfo_block %}
 

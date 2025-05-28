@@ -303,7 +303,7 @@ In this step, the category template is configured to display category images.
 
 **data/import/category_template.csv**
 
-```
+```csv
 template_name,template_path
 "Sub Categories grid","@CatalogPage/views/sub-categories-grid/sub-categories-grid.twig"
 ```

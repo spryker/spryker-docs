@@ -582,6 +582,7 @@ Make sure the following modules have been installed:
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | ProductLabelWidget | vendor/spryker-shop/product-label-widget |
+
 {% endinfo_block %}
 
 ### 2) Set up widgets

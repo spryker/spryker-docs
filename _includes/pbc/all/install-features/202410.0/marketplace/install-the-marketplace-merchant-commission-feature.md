@@ -1073,7 +1073,7 @@ class MerchantCommissionGuiDependencyProvider extends SprykerMerchantCommissionG
 | PLUGIN                                            | SPECIFICATION                                                           | PREREQUISITES                                                                       | NAMESPACE                                                      |
 |---------------------------------------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------------------|----------------------------------------------------------------|
 | PayoutAmountMerchantPayoutCalculatorPlugin        | Calculates the payout amount for the provided sales order item.         |                                                                                     | Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine |
-| PayoutReverseAmountMerchantPayoutCalculatorPlugin | Calculates the payout reverse amount for the provided sales order item. | This document describes how to install the Marketplace Merchant Commission feature.
+| PayoutReverseAmountMerchantPayoutCalculatorPlugin | Calculates the payout reverse amount for the provided sales order item. | This document describes how to install the Marketplace Merchant Commission feature. |
 
 ## Prerequisites
 

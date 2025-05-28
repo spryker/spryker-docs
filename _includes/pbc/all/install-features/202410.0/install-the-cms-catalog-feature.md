@@ -340,9 +340,10 @@ Make sure that one tab item is displayed correctly per each registered plugin, a
 
 Register the following global widgets:
 
-| WIDGET | DESCRIPTION | NAMESPACE|
-|---|---|---|
-| FullTextSearchTabsWidget |Displays a tabs component with its items configured by a stack of plugins implementing|  FullTextSearchTabPluginInterface | \SprykerShop\Yves\TabsWidget\Widget\FullTextSearchTabsWidget |
+| Widget                     | Description                                                                                      | Namespace                                                             |
+|----------------------------|--------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| FullTextSearchTabsWidget  | Displays a tabs component with items configured by plugins implementing FullTextSearchTabPluginInterface. | \SprykerShop\Yves\TabsWidget\Widget\FullTextSearchTabsWidget         |
+
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 

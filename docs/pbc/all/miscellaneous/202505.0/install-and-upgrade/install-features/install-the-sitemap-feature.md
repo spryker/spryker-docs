@@ -7,12 +7,6 @@ redirect_from:
   - /docs/dg/dev/integrate-and-configure/integrate-sitemap-generation.html
 ---
 
-{% info_block warningBox %}
-
-Sitemap is running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
-
 
 The Sitemap feature generates sitemaps for your Spryker application, enhancing SEO by helping search engines index your pages efficiently. It offers various configuration options to customize sitemap generation. This document explains how to integrate the Sitemap module into a Spryker project.
 
@@ -31,7 +25,7 @@ Install the required features:
 1. Install the required modules using Composer:
 
 ```bash
-composer require spryker/sitemap:"^0.1.0" spryker/sitemap-extension:"^1.0.0" spryker-shop/shop-ui:"^1.85.0" --update-with-dependencies
+composer require spryker/sitemap:"^1.0.0" spryker/sitemap-extension:"^1.1.0" spryker-shop/shop-ui:"^1.85.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -49,7 +43,7 @@ Make sure the following modules have been installed:
 2. Optional: To enable sitemap functionality to include additional types of data, install the following modules using Composer:
 
 ```bash
-composer require spryker/category-storage:"^2.10.0" spryker/cms-storage:"^2.8.0" spryker/merchant-storage:"^1.3.0" spryker/product-set-storage:"^1.11.0" spryker/product-storage:"^1.42.0" --update-with-dependencies
+composer require spryker/category-storage:"^2.11.0" spryker/cms-storage:"^2.9.0" spryker/merchant-storage:"^1.4.0" spryker/product-set-storage:"^1.12.0" spryker/product-storage:"^1.43.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -225,6 +219,31 @@ class SitemapConfig extends SprykerSitemapConfig
 }
 ```
 
+### 2.7) Configure sitemap generator entity limit
+
+The sitemap generator entity limit defines how many entities are fetched from the data provider per generator iteration. This is particularly useful for memory-optimized sitemap generation using generators and lets yuo  fine-tune performance depending on your infrastructure.
+
+The value is the maximum number of entities returned by one generator step before yielding control back to the generator loop. If you need to define the final number of URLs in the sitemap file, see [Configure Sitemap URL Limit](#25-configure-sitemap-url-limit).
+
+To override the default limit, extend the `SitemapConfig` class and redefine the `getGeneratorEnitityLimit()` method:
+
+**src/Pyz/Zed/Sitemap/SitemapConfig.php**
+
+```php
+<?php
+namespace Pyz\Zed\Sitemap;
+
+use Spryker\Zed\Sitemap\SitemapConfig as SprykerSitemapConfig;
+
+class SitemapConfig extends SprykerSitemapConfig
+{
+    public function getGeneratorEnitityLimit(): int
+    {
+        return 5000;
+    }
+}
+```
+
 ## 3) Set up the transfer objects
 
 Generate transfer changes:
@@ -284,15 +303,15 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Register the following plugins:
 
-| PLUGIN                                   | SPECIFICATION                             | PREREQUISITES                                                                | NAMESPACE                                                  |
-|------------------------------------------|-------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------|
-| SitemapRouteProviderPlugin               | Provides routing for sitemap generation.  |                                                                              | Spryker\Yves\Sitemap\Plugin\Router                         |
-| SitemapGenerateConsole                   | A console command to generate sitemaps.     |                                                                              | Spryker\Zed\Sitemap\Communication\Console                  |
-| CategoryNodeSitemapDataProviderPlugin    | Provides sitemap data for category nodes. | Requires the [CategoryStorage](#install-modules) module.   | Spryker\Zed\CategoryStorage\Communication\Plugin\Sitemap   |
-| CmsPageSitemapDataProviderPlugin         | Provides sitemap data for CMS pages.      | Requires the [CmsStorage](#install-modules) module.        | Spryker\Zed\CmsStorage\Communication\Plugin\Sitemap        |
-| MerchantSitemapDataProviderPlugin        | Provides sitemap data for merchants.      | Requires the [MerchantStorage](#install-modules) module.   | Spryker\Zed\MerchantStorage\Communication\Plugin\Sitemap   |
-| ProductAbstractSitemapDataProviderPlugin | Provides sitemap data for products.        | Requires the [ProductStorage](#install-modules) module.    | Spryker\Zed\ProductStorage\Communication\Plugin\Sitemap    |
-| ProductSetSitemapDataProviderPlugin      | Provides sitemap data for product sets.   | Requires the [ProductSetStorage](#install-modules) module. | Spryker\Zed\ProductSetStorage\Communication\Plugin\Sitemap |
+| PLUGIN                                            | SPECIFICATION                             | PREREQUISITES                                                                | NAMESPACE                                                  |
+|---------------------------------------------------|-------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------|
+| SitemapRouteProviderPlugin                        | Provides routing for sitemap generation.  |                                                                              | Spryker\Yves\Sitemap\Plugin\Router                         |
+| SitemapGenerateConsole                            | A console command to generate sitemaps.     |                                                                              | Spryker\Zed\Sitemap\Communication\Console                  |
+| CategoryNodeSitemapGeneratorDataProviderPlugin    | Provides sitemap data for category nodes. | Requires the [CategoryStorage](#install-modules) module.   | Spryker\Zed\CategoryStorage\Communication\Plugin\Sitemap   |
+| CmsPageSitemapGeneratorDataProviderPlugin         | Provides sitemap data for CMS pages.      | Requires the [CmsStorage](#install-modules) module.        | Spryker\Zed\CmsStorage\Communication\Plugin\Sitemap        |
+| MerchantSitemapGeneratorDataProviderPlugin        | Provides sitemap data for merchants.      | Requires the [MerchantStorage](#install-modules) module.   | Spryker\Zed\MerchantStorage\Communication\Plugin\Sitemap   |
+| ProductAbstractSitemapGeneratorDataProviderPlugin | Provides sitemap data for products.        | Requires the [ProductStorage](#install-modules) module.    | Spryker\Zed\ProductStorage\Communication\Plugin\Sitemap    |
+| ProductSetSitemapGeneratorDataProviderPlugin      | Provides sitemap data for product sets.   | Requires the [ProductSetStorage](#install-modules) module. | Spryker\Zed\ProductSetStorage\Communication\Plugin\Sitemap |
 
 <details>
 <summary>src/Pyz/Yves/Router/RouterDependencyProvider.php</summary>
@@ -343,18 +362,18 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 </details>
 
 <details>
-<summary>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Sitemap/SitemapDependencyProvider.php</summary>
 
 ```php
 <?php
 
 namespace Pyz\Zed\Sitemap;
 
-use Spryker\Zed\CategoryStorage\Communication\Plugin\Sitemap\CategoryNodeSitemapDataProviderPlugin;
-use Spryker\Zed\CmsStorage\Communication\Plugin\Sitemap\CmsPageSitemapDataProviderPlugin;
-use Spryker\Zed\MerchantStorage\Communication\Plugin\Sitemap\MerchantSitemapDataProviderPlugin;
-use Spryker\Zed\ProductSetStorage\Communication\Plugin\Sitemap\ProductSetSitemapDataProviderPlugin;
-use Spryker\Zed\ProductStorage\Communication\Plugin\Sitemap\ProductAbstractSitemapDataProviderPlugin;
+use Spryker\Zed\CategoryStorage\Communication\Plugin\Sitemap\CategoryNodeSitemapGeneratorDataProviderPlugin;
+use Spryker\Zed\CmsStorage\Communication\Plugin\Sitemap\CmsPageSitemapGeneratorDataProviderPlugin;
+use Spryker\Zed\MerchantStorage\Communication\Plugin\Sitemap\MerchantSitemapGeneratorDataProviderPlugin;
+use Spryker\Zed\ProductSetStorage\Communication\Plugin\Sitemap\ProductSetSitemapGeneratorDataProviderPlugin;
+use Spryker\Zed\ProductStorage\Communication\Plugin\Sitemap\ProductAbstractSitemapGeneratorDataProviderPlugin;
 use Spryker\Zed\Sitemap\SitemapDependencyProvider as SprykerSitemapDependencyProvider;
 
 class SitemapDependencyProvider extends SprykerSitemapDependencyProvider
@@ -362,11 +381,11 @@ class SitemapDependencyProvider extends SprykerSitemapDependencyProvider
     protected function getSitemapDataProviderPlugins(): array
     {
         return [
-            new ProductAbstractSitemapDataProviderPlugin(),
-            new CategoryNodeSitemapDataProviderPlugin(),
-            new CmsPageSitemapDataProviderPlugin(),
-            new ProductSetSitemapDataProviderPlugin(),
-            new MerchantSitemapDataProviderPlugin(),
+            new ProductAbstractSitemapGeneratorDataProviderPlugin(),
+            new CategoryNodeSitemapGeneratorDataProviderPlugin(),
+            new CmsPageSitemapGeneratorDataProviderPlugin(),
+            new ProductSetSitemapGeneratorDataProviderPlugin(),
+            new MerchantSitemapGeneratorDataProviderPlugin(),
         ];
     }
 }

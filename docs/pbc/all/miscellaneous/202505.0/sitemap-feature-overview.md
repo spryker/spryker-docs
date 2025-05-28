@@ -6,12 +6,6 @@ template: concept-topic-template
 ---
 
 
-{% info_block warningBox %}
-
-Sitemap is running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
-
 The Sitemap feature generates sitemaps for your Spryker applications to improve SEO by helping search engines index your pages efficiently. The feature is configurable to tailor the sitemap generation to your project's needs.
 
 

@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 
-A *self-signed SSL certificate* is an identity certificate that is signed by the same entity whose identity it certificates. Such a certificate is used only for development purposes. For production purposes, we recommend generating a valid SSL certificate signed by an official certification center like [Let's Encrypt](https://letsencrypt.org/).
+A *self-signed SSL certificate* is an identity certificate that is signed by the same entity whose identity it certificates. Such a certificate is used only for local development. For production, we recommend generating a valid SSL certificate signed by an official certification center like [Let's Encrypt](https://letsencrypt.org/).
 
 There is a self-signed SSL certificate shipped with Spryker. It is located in `docker/deployment/default/spryker_ca.crt.` To access your instance via a secure connection, add the certificate to trusted authorities in the host system.
 
@@ -33,7 +33,7 @@ chmod 600 "$HOME/.spryker/certs/default.key"
 cat leaf.crt intermediate.crt >> "$HOME/.spryker/certs/default.crt"
 ```
 
-Now Spryker can loads your custom certificate and key.
+Now the local docker SDK loads your custom certificate and key.
 
 
 ## Set up a self-signed SSL certificate on MacOS

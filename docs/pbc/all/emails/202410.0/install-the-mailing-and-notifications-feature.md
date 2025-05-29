@@ -25,7 +25,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |---|---|---|
-| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
+| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules
 
@@ -71,7 +71,7 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| SymfonyMailerProviderPlugin | Provides mail sending using `SymfonyMailer` component. | None | Spryker\Zed\SymfonyMailer\Communication\Plugin\Mail |
+| SymfonyMailerProviderPlugin | Provides mail sending using `SymfonyMailer` component. | Spryker\Zed\SymfonyMailer\Communication\Plugin\Mail |
 
 **src/Pyz/Zed/Mail/MailDependencyProvider.php**
 

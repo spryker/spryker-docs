@@ -104,6 +104,6 @@ If all the steps were correct you should be able to see the `fact-finder:export:
 
 Running `vendor/bin/console fact-finder:export:products` will create several CSV files (one per locale) in the folder you specified in
 
-```
+```php
 $config[FactFinderSdkConstants::CSV_DIRECTORY]
 ```

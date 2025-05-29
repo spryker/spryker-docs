@@ -325,7 +325,7 @@ This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.ver
 | legalInformation.dataPrivacy            | String   | Merchant's data privacy conditions.|
 | categories             | Array    | List of categories where the merchant belongs.    |
 | categories.categoryKey            | String   | Category key used for the merchant.  |
-| categories.name                   | String   | Name of the merchant category.
+| categories.name                   | String   | Name of the merchant category. |
 
 ## Retrieve a merchant
 

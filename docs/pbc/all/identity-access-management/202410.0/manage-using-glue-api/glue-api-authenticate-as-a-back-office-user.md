@@ -14,8 +14,8 @@ For detailed information on the modules that provide the API functionality and r
 ## Authenticate as a Back Office user
 
 ---
-
 `POST` **/token**
+
 ---
 
 ### Request

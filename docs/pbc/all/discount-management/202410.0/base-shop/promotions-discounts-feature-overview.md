@@ -338,8 +338,8 @@ Between the exclusive discounts, the discount with the higher priority is chosen
 
 Cart subtotal: €100
 
-| DISCOUNT NAME|  DESCRIPTION|  DISCOUNT TYPE| DISCOUNT AMOUNT| DISCOUNT PRIORITY| EXCLUSIVENESS|
-| --- | --- | --- | --- | --- |--- |
+| DISCOUNT NAME|  DESCRIPTION|  DISCOUNT TYPE| DISCOUNT AMOUNT| DISCOUNT PRIORITY| EXCLUSIVENESS| NOTES |
+| --- | --- | --- | --- | --- |--- | --- |
 | 10SOCKS|  10% off Nike socks| Percentage| 10%|  100|  No| Nike socks cost €40|
 | 20PANTS|  Save €20 on all white pants|  Fixed amount| €20|100|  No| White pants cost €60|
 
@@ -366,7 +366,7 @@ Cart subtotal: €100
 | --- | --- | --- | --- | --- |--- |--- |
 |10SOCKS | 10% off Nike socks | Percentage | 10% | |Exclusive | Nike socks cost €40 |
 |5PANTS|Save €5 on all pants| Fixed amount | €5 | | Exclusive |  |
-|SITE10|10% off everything in the store| Percentage | €10 | |  Non-exclusive | €10 | |
+|SITE10|10% off everything in the store| Percentage | €10 | |  Non-exclusive | |
 
 In the presence of exclusive discounts, all non-exclusive discounts are excluded.
 Since the remaining exclusive discounts do not have priorities and the discount 5PANTS provides more free value than the discount 10SOCKS, this discount is applied.

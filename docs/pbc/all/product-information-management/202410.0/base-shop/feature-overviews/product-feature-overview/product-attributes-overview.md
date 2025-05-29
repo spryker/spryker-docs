@@ -51,19 +51,21 @@ When creating a product attribute, a Back Office user selects if it's a super at
 Product variants of the same abstract product can differ by different super attributes. Check the following super attribute examples:
 
 1. Abstract product X has concrete products A and B:
-    * A: `color = blue`
-    * B: `color = green`
+    - A: `color = blue`
+    - B: `color = green`
 
 2. Abstract product Y has concrete products C and D:
-    * C:  `color = red`
-    * D:  `size = 45`
+    - C:  `color = red`
+    - D:  `size = 45`
 
 ## Predefined product attribute values
+
 A *predefined product attribute value* is a product attribute value that a Back Office user defines when managing product attributes.
 
 A Back Office user can configure a product attribute to accept only predefined values. In this case, when [assigning product attributes to products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html), they choose from the predefined values. Otherwise, they can enter any value for the attribute.
 
 ## Product attribute translations
+
 A Back Office user can localize product attributes. They can add translations for attribute names and values. For example, in the attribute `Color = White`, both `Color` and `White` can be localized.
 
 There are different ways to handle translations of attributes. See the following examples.
@@ -73,47 +75,49 @@ There are different ways to handle translations of attributes. See the following
 In a shop with German and English languages, product Y has the `weight` attribute name with the `63.5 g` value. We want to translate only the attribute name.
 
 We localize the key as follows:
-* en_EN: `Weight`
-* de_DE: `Gewicht`
+- en_EN: `Weight`
+- de_DE: `Gewicht`
 
 The attribute value `63.5 g` is not localized.
 
 As a result, the following is displayed on the Storefront:
-* English version of the shop: Weight = 63.5 g
-* German version of the shop: Gewicht = 63.5 g  
+- English version of the shop: Weight = 63.5 g
+- German version of the shop: Gewicht = 63.5 g  
 
 ### Example 2: localized attributes and values
+
   In a shop with two languages Product X exists with an attribute `Protection Feature` and an attribute value `waterproof`.
 
 We localize them as follows:
-* Attribute key:
-    * en_EN: `Protection Feature`
-    * de_DE: `Schutzfunktion`
-* Attribute value:
-    * en_EN: `Waterproof`
-    * de_DE: `Wasserdicht`
+- Attribute key:
+  - en_EN: `Protection Feature`
+  - de_DE: `Schutzfunktion`
+- Attribute value:
+  - en_EN: `Waterproof`
+  - de_DE: `Wasserdicht`
 
 As a result, the following is displayed on the Storefront:
-* English version of the shop: Protection Feature = Waterproof
-* German version of the shop: Schutzfunktion = Wasserdicht  
+- English version of the shop: Protection Feature = Waterproof
+- German version of the shop: Schutzfunktion = Wasserdicht  
 
 ### Example 3: different localized attributes and values for different languages
 
 Product Z has the `length` attribute and is sold in 3 countries: Germany, Ireland, and the US. Since the US does not use the metric system, in the US, we want to display the attribute values in feet. In Germany and Ireland, we want to display the values in meteres.
 
 There are two ways to handle this:
-* Add a non-localized attribute key for Germany and Ireland, and a localized key for the US. Two languages can share the same translation for the attribute, like in the [Example 1](#example-1-localized-attributes-and-non-localized-values).
-* Add localized attribute keys and values for each language.
+- Add a non-localized attribute key for Germany and Ireland, and a localized key for the US. Two languages can share the same translation for the attribute, like in the [Example 1](#example-1-localized-attributes-and-non-localized-values).
+- Add localized attribute keys and values for each language.
 
 #### Non-localized key and localized key for the US
+
 In the DB, the `attribute.length` key is saved for non-localized values, and a localized key `attribute.length.us` is saved for the translations in the metric system:
 
 We localize two attribute keys:
-* Key = attribute.length
-    * Value (en_IE) = Length
-    * Value (de_DE) = Länge
-* Key = attribute.length.us
-    * Value (en_US) = Length
+- Key = attribute.length
+  - Value (en_IE) = Length
+  - Value (de_DE) = Länge
+- Key = attribute.length.us
+  - Value (en_US) = Length
 
 For the key `attribute.length` the value is `1.5 meter`. For the key `attribute.length.us` the value is `4.92 feet`.
 
@@ -122,14 +126,14 @@ For the key `attribute.length` the value is `1.5 meter`. For the key `attribute.
 In the DB, the following localized keys are saved: `attribute.length.de`, `attribute.length.ie`, and `attribute.length.us`.
 
 
-* Key = attribute.length.de
-* Value (de_DE) = Länge
+- Key = attribute.length.de
+- Value (de_DE) = Länge
 
-* Key = attribute.length.ie
-* Value (en_IE) = Length
+- Key = attribute.length.ie
+- Value (en_IE) = Length
 
-* Key = attribute.length.us
-* Value (en_US) = Length
+- Key = attribute.length.us
+- Value (en_US) = Length
 
 Now for each of the attribute keys we add the attribute values.
 
@@ -156,11 +160,11 @@ Length = 4.92 feet
 
 The feature has the following functional constraints which are going to be resolved in the future.
 
-* When adding a product variant to an existing abstract product, you can only use the existing super attributes.
+- When adding a product variant to an existing abstract product, you can only use the existing super attributes.
 
-* To add another super attribute to variants, you need to recreate the abstract product with its concrete products from scratch.
+- To add another super attribute to variants, you need to recreate the abstract product with its concrete products from scratch.
 
-* If you import a product without defining its attributes, you cannot edit the attributes in the Back Office.
+- If you import a product without defining its attributes, you cannot edit the attributes in the Back Office.
 
 {% info_block warningBox %}
 

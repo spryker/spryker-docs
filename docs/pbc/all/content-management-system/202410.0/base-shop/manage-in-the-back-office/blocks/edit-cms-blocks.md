@@ -31,18 +31,18 @@ Review the [reference information](#reference-information-edit-a-cms-block) befo
 2. Next to the block you want to edit, click **Edit Block**.
 This opens the **Edit CMS Block** page.
 3. For **STORE RELATION**, do the following:
-    * Clear the checkboxes next to the stores you want to stop displaying the block in.
-    * Select the stores you want to start displaying the block in.
+    - Clear the checkboxes next to the stores you want to stop displaying the block in.
+    - Select the stores you want to start displaying the block in.
 4. Select a **TEMPLATE**.
 5. Enter a **NAME**.
 6. Select a **VALID FROM** date.
 7. Select a **VALID TO** date.  
 8. For **PRODUCTS**, do the following:
-    * Next to the products you want to deassign, click **x**.
-    * Enter and select products you want to assign.
+    - Next to the products you want to deassign, click **x**.
+    - Enter and select products you want to assign.
 9. Click **Save**.
     This refreshes the page with a success message displayed.
-10. Email blocks: If you've updated the **NAME**, pass it to your development team to update the name of the respective [email template](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html).    
+10. Email blocks: If you've updated the **NAME**, pass it to your development team to update the name of the respective [email template](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html).
 
 ## Reference information: Edit a CMS block
 

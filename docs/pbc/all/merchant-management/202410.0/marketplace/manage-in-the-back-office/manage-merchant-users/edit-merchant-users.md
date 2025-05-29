@@ -15,14 +15,14 @@ A [merchant user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace
 2. Next to the merchant you want to edit a merchant user for, click **Edit**.
     This opens the **Edit Merchant: {Merchant_ID}** page.
 
-3. Click the **Users** tab.   
+3. Click the **Users** tab.
 
 4. Next to the merchant user you want to edit, click **Edit**.
 
 5. On the **Edit Merchant user** page, enter any of the following:
-  * **E-MAIL**
-  * **FIRST NAME**
-  * **LAST NAME**
+- **E-MAIL**
+- **FIRST NAME**
+- **LAST NAME**
 
 6. Select a **STATUS**.
 
@@ -31,5 +31,5 @@ A [merchant user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
-| E-MAIL | This email address is used as a username to log into the Merchant Portal.  |    
+| E-MAIL | This email address is used as a username to log into the Merchant Portal.  |
 | STATUS | Only users with the **Active** status have access to the Merchant Portal. To be able to active merchant users, the merchant needs to be approved. |

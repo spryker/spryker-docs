@@ -190,6 +190,7 @@ $bootstrap
     </body>
 </html>
 ```
+
 </details>
 
 <details><summary>public/Backoffice/errorpage/5xx.html</summary>
@@ -234,6 +235,7 @@ $bootstrap
     </body>
 </html>
 ```
+
 </details>
 
 3. Configure a maintenance page:
@@ -304,9 +306,9 @@ The maintenance page is not yet compatible with Spryker Cloud.
 
 1. Replace `ApplicationDependencyProvider::getApplicationPlugins();` with separate plugin stacks per endpoint:
 
-  -  `ApplicationDependencyProvider::getBackofficeApplicationPlugins()`
-  - `ApplicationDependencyProvider::getBackendGatewayApplicationPlugins()`
-  - `ApplicationDependencyProvider::getBackendApiApplicationPlugins()`
+- `ApplicationDependencyProvider::getBackofficeApplicationPlugins()`
+- `ApplicationDependencyProvider::getBackendGatewayApplicationPlugins()`
+- `ApplicationDependencyProvider::getBackendApiApplicationPlugins()`
 
 2. Add the following methods:
 
@@ -377,6 +379,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
   }
 }
 ```
+
 </details>
 
 ## 5) Separate event dispatcher plugin stacks
@@ -513,7 +516,7 @@ sections:
         router-cache-warmup-backend-gateway:
             command: 'vendor/bin/console router:cache:warm-up:backend-gateway'
         ...
-```        
+```
 
 ## 8) Configure the application
 
@@ -570,6 +573,7 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
     ],
 ...
 ```
+
 </details>
 
 2. To open new entry points for external API systems, add the following paths to `src/Pyz/Zed/SecurityGui/SecurityGuiConfig.php`:
@@ -584,10 +588,10 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 3. Adjust the server configuration of the application according to the added endpoints.
 
 4. To configure your cloud environment to be compatible with separate endpoint bootstraps, [contact us](https://spryker.com/en/support/) and provide the following information:
-    * Updated deploy file
-    * List of the new endpoints
+    - Updated deploy file
+    - List of the new endpoints
 
-Make sure to do this at least 5 working days prior to the planned change.    
+Make sure to do this at least 5 working days prior to the planned change.
 
 
 ## 9) Update the Docker SDK
@@ -650,6 +654,7 @@ groups:
             entry-point: BackendApi      
 ...
 ```
+
 </details>
 
 1. Update the hosts file by running the `docker/sdk boot {deploy_file}` or `docker/sdk install` command and following the instructions in the output.

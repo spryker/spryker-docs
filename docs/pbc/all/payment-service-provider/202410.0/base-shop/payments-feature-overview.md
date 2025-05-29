@@ -19,8 +19,8 @@ The *Payments* feature lets your customers pay for orders with none (for example
 With different payment gateways, like Amazon Pay, PayPal, and BS Payone, you can adapt to your customers' needs and define the availability of payment methods based on customer preferences and country-specific regulations.
 
 So that your customers can select a payment method during the checkout, you must fulfill the following conditions:
-* Make the payment method active.
-* Assign the payment method to specific stores.
+- Make the payment method active.
+- Assign the payment method to specific stores.
 
 These settings can be configured in the Back Office.
 
@@ -30,22 +30,22 @@ The Spryker Commerce OS offers integrations with several payment providers that 
 
 The Spryker Commerce OS supports the integration of the following payment providers, which are our official partners:
 
-* [Adyen](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/adyen.html)
-* [AfterPay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/afterpay/afterpay.html)
-* [Amazon Pay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/amazon-pay/amazon-pay.html)
-* [Arvato](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/arvato/arvato.html)
-* [Billie](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/billie.html)
-* [Billpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/billpay/billpay.html)
-* [Braintree](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/braintree/braintree.html)
-* [BS Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/payone.html)
-* [Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/computop.html)
-* [CrefoPay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/crefopay/crefopay.html)
-* [Heidelpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/heidelpay.html)
-* [Klarna](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/klarna/klarna.html)
-* [Payolution](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payolution/payolution.html)
-* [Powerpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/powerpay.html)
-* [ratenkauf by easyCredit](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
-* [RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay.html)
+- [Adyen](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/adyen.html)
+- [AfterPay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/afterpay/afterpay.html)
+- [Amazon Pay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/amazon-pay/amazon-pay.html)
+- [Arvato](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/arvato/arvato.html)
+- [Billie](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/billie.html)
+- [Billpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/billpay/billpay.html)
+- [Braintree](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/braintree/braintree.html)
+- [BS Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/payone.html)
+- [Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/computop.html)
+- [CrefoPay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/crefopay/crefopay.html)
+- [Heidelpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/heidelpay.html)
+- [Klarna](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/klarna/klarna.html)
+- [Payolution](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payolution/payolution.html)
+- [Powerpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/powerpay.html)
+- [ratenkauf by easyCredit](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
+- [RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay.html)
 
 ## Dummy payment
 

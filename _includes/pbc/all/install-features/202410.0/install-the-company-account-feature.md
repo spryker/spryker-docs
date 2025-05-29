@@ -62,7 +62,7 @@ Adjust the schema definition so that entity changes trigger events.
     </table>
 
     </database>
-```   
+```
 
 **src/Pyz/Zed/Company/Persistence/Propel/Schema/spy_company.schema.xml**
 

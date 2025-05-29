@@ -10,6 +10,7 @@ This document describes how to install the [Dynamic Multistore](/docs/pbc/all/dy
 If you are using the `renderCmsBlockAsTwig()` Twig function in Twig templates, make sure to provide `storeName` name as a parameter. Otherwise, the function throws an exception.
 
 Example:
+
 ```twig
  {% raw %}
 {{ renderCmsBlockAsTwig(

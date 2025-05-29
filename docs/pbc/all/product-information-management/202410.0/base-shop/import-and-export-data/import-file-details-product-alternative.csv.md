@@ -18,8 +18,8 @@ This document describes the `product_alternative.csv` file to configure [Alterna
 
 ## Import file dependencies
 
-* [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
-* [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
+- [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
+- [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
 
 
 ## Import file parameters
@@ -36,7 +36,7 @@ This document describes the `product_alternative.csv` file to configure [Alterna
 
 It does not exist by default on the project level. You can create it to override the CSV file from module:
 
-* `vendor/spryker/product-alternative-data-import/data/import/product_alternative.csv`
+- `vendor/spryker/product-alternative-data-import/data/import/product_alternative.csv`
 
 ## Import template file and content example
 

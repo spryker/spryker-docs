@@ -4,10 +4,10 @@
 {% info_block errorBox %}
 
 The following feature installation guide expects the basic feature to be in place. It only adds the following functionalities:
-* Shipment Back Office UI
-* Delivery method per store
-* Shipment data import
-* Sales order item extension
+- Shipment Back Office UI
+- Delivery method per store
+- Shipment data import
+- Sales order item extension
 
 {% endinfo_block %}
 
@@ -129,7 +129,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 }
 ```
 
-### 3) To enable the Storefront API, register the following plugins:
+### 3) To enable the Storefront API, register the following plugins
 
 | PLUGIN                                                   | SPECIFICATION                                                                                            | PREREQUISITES | NAMESPACE                                                             |
 |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------|
@@ -189,8 +189,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 - Make sure that you can send the following requests:
 
-* `GET https://glue.mysprykershop.com/shipment-types`
-* `GET https://glue.mysprykershop.com/shipment-types/{{shipment-type-uuid}}`
+- `GET https://glue.mysprykershop.com/shipment-types`
+- `GET https://glue.mysprykershop.com/shipment-types/{{shipment-type-uuid}}`
 
 {% endinfo_block %}
 
@@ -372,6 +372,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% endinfo_block %}
 
 **src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
+
 ```php
 <?php
 
@@ -501,6 +502,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 {% endinfo_block %}
 
 **src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
+
 ```php
 <?php
 
@@ -684,6 +686,7 @@ Deactivate one of the shipment types and send a request with the corresponding s
 ```
 
 2. Apply database changes and generate entity and transfer changes:
+
 ```bash
 console propel:install
 console transfer:generate
@@ -929,6 +932,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+
 </details>
 
 5. Set up synchronization plugins:
@@ -979,6 +983,7 @@ Make sure that `shipment-type` synchronization plugin works correctly:
 Make sure that when a shipment type is created or edited through BAPI, it's exported to Redis accordingly.
 
 In Redis, make sure data is represented in the following format:
+
 ```json
 {
     "id_shipment_type": 1,
@@ -1002,6 +1007,7 @@ The following imported entities are used as shipment methods in Spryker OS.
 1. Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/spryker/Bundles/ShipmentDataImport/data/import/shipment.csv**
+
 ```yaml
 shipment_method_key,name,carrier,taxSetName
 spryker_dummy_shipment-standard,Standard,Spryker Dummy Shipment,Shipment Taxes
@@ -1021,6 +1027,7 @@ free_pickup,Free Pickup,pickup,Tax Exempt
 | taxSetName          | ✓ | string    | Shipment Taxes                  | Tax set name.                 |
 
 **vendor/spryker/spryker/Bundles/ShipmentDataImport/data/import/shipment_method_store.csv**
+
 ```yaml
 shipment_method_key,store
 spryker_dummy_shipment-standard,AT
@@ -1049,6 +1056,7 @@ spryker_no_shipment,US
 | store               | ✓ | string    | DE                              | Existing store name.          |
 
 **vendor/spryker/spryker/Bundles/ShipmentDataImport/data/import/shipment_price.csv**
+
 ```yaml
 shipment_method_key,store,currency,value_net,value_gross
 spryker_dummy_shipment-standard,AT,EUR,290,390
@@ -1102,6 +1110,7 @@ spryker_no_shipment,US,CHF,0,0
 | value_gross         | optional  | integer   | 490                             | Gross price, in coins.               |
 
 **vendor/spryker/spryker/Bundles/ShipmentTypeDataImport/data/import/shipment_type.csv**
+
 ```yaml
 key,name,is_active
 pickup,Pickup,1
@@ -1115,6 +1124,7 @@ delivery,Delivery,1
 | is_active | ✓ | string    | 1            | Status of the shipment type. |
 
 **vendor/spryker/spryker/Bundles/ShipmentTypeDataImport/data/import/shipment_type_store.csv**
+
 ```yaml
 shipment_type_key,store_name
 pickup,AT
@@ -1131,6 +1141,7 @@ delivery,US
 | store_name        | ✓ | string    | DE           | Name of an existing store.        |
 
 **vendor/spryker/spryker/Bundles/ShipmentTypeDataImport/data/import/shipment_method_shipment_type.csv**
+
 ```yaml
 shipment_method_key,shipment_type_key
 spryker_dummy_shipment-standard,delivery
@@ -1254,6 +1265,7 @@ Make sure that the configured data has been added to the `spy_shipment_method`, 
 1. Configure the data import to use your data on the project level:
 
 **src/Pyz/Zed/ShipmentDataImport/ShipmentDataImportConfig**
+
 ```php
 <?php
 
@@ -1283,6 +1295,7 @@ class ShipmentDataImportConfig extends SprykerShipmentDataImportConfig
 ```
 
 **src/Pyz/Zed/ShipmentTypeDataImport/ShipmentTypeDataImportConfig**
+
 ```php
 <?php
 
@@ -1328,6 +1341,7 @@ class ShipmentTypeDataImportConfig extends SprykerShipmentTypeDataImportConfig
 | ShipmentTotalCalculatorPlugin     | Calculates shipment total using expenses.                                                                  | None          | Spryker\Zed\Shipment\Communication\Plugin\Calculation |
 
 **src/Pyz/Zed/ShipmentGui/ShipmentGuiDependencyProvider.php**
+
 ```php
 <?php
 
@@ -1660,9 +1674,9 @@ class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider 
 
 1. Make sure that you can send the following requests:
 
-* `GET https://glue-backend.mysprykershop.com/shipment-types`
-* `GET https://glue-backend.mysprykershop.com/shipment-types/{% raw %}{{{% endraw %}shipment-types-uuid{% raw %}}{{% endraw %}`
-* `POST https://glue-backend.mysprykershop.com/shipment-types`
+- `GET https://glue-backend.mysprykershop.com/shipment-types`
+- `GET https://glue-backend.mysprykershop.com/shipment-types/{% raw %}{{{% endraw %}shipment-types-uuid{% raw %}}{{% endraw %}`
+- `POST https://glue-backend.mysprykershop.com/shipment-types`
 
     ```json
     {
@@ -1678,7 +1692,7 @@ class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider 
     }
     ```
 
-* `PATCH https://glue-backend.mysprykershop.com/shipment-types/{% raw %}{{{% endraw %}shipment-types{% raw %}}{{% endraw %}`
+- `PATCH https://glue-backend.mysprykershop.com/shipment-types/{% raw %}{{{% endraw %}shipment-types{% raw %}}{{% endraw %}`
 
     ```json
     {

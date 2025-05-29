@@ -12,12 +12,13 @@ This document explains how to set up *XDebug profiling* in a local development e
 
 ## Prerequisites
 
-* An integrated development environment (IDE) of your choice—for example, PHPStorm or Visual Studio Code.
-* A plugin or software to view cachegrind files: kqachegrind, qcachegrind, or a plugin for your IDE.
+- An integrated development environment (IDE) of your choice—for example, PHPStorm or Visual Studio Code.
+- A plugin or software to view cachegrind files: kqachegrind, qcachegrind, or a plugin for your IDE.
 
 ## 1. Prepare the deploy.yml file for XDebug
 
 Spryker's `deploy.yml` file brings native support for all the configurations you need to activate the profiling mode of XDebug and route the created profiling snapshots to a location of your choice. The following code is an example that you can adjust according to your needs:
+
 ```yml
 environment: docker.dev
 image:
@@ -39,6 +40,7 @@ To use XDebug with your IDE, configure your IDE so it can connect to your applic
 ## 3. Bring up your application and start profiling
 
 1. Once your application is setup, you can start everything up:
+
 ```bash
 # Bootstrap your adjusted deploy.yml file. Here you have used deploy.dev.yml
 docker/sdk boot deploy.dev.yml
@@ -49,6 +51,7 @@ docker/sdk up -x
 2. When the application is running, you can navigate the shop. This creates cachegrind files in the folder created and specified in the `deploy.yml` file.
 
 To create profiles for console commands, start the command line interface (CLI):
+
 ```bash
 # We can start up CLI in debugging mode too:
 docker/sdk cli -x

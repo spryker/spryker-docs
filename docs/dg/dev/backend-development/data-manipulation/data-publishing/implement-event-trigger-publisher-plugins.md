@@ -90,11 +90,11 @@ class HelloWorldPublisherTriggerPlugin extends AbstractPlugin implements Publish
 </details>
 
 Find method descriptions below:
-* `HelloWorldPublisherTriggerPlugin::getResourceName()`—defines the resource name for key generation.
-* `HelloWorldPublisherTriggerPlugin::getData()`—retrieves a collection of data transfer objects for publishing according to a provided offset and limit.
-* `HelloWorldPublisherTriggerPlugin::getEventName()`—defines an event name for publishing.
+- `HelloWorldPublisherTriggerPlugin::getResourceName()`—defines the resource name for key generation.
+- `HelloWorldPublisherTriggerPlugin::getData()`—retrieves a collection of data transfer objects for publishing according to a provided offset and limit.
+- `HelloWorldPublisherTriggerPlugin::getEventName()`—defines an event name for publishing.
 
-* `HelloWorldPublisherTriggerPlugin::getIdColumnName()`—defines an ID column name for publishing.
+- `HelloWorldPublisherTriggerPlugin::getIdColumnName()`—defines an ID column name for publishing.
 
 {% info_block infoBox %}
 

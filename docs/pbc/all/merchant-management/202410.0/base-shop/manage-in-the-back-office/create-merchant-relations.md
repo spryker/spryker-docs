@@ -24,10 +24,10 @@ This document describes how to create merchant relations in the Back Office.
 
 ## Prerequisites
 
-* [Create a merchant](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchants.html).
-* [Create a company](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-companies.html).
-* Optional: [Create a product list](/docs/pbc/all/product-information-management/{{page.version}}/base-shop//manage-in-the-back-office/product-lists/create-product-lists.html). It's needed to allow or deny a company access to certain products.
-* Review the [reference information](#reference-information-create-a-merchant-relation) before you start, or look up the necessary information as you go through the process.
+- [Create a merchant](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchants.html).
+- [Create a company](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-companies.html).
+- Optional: [Create a product list](/docs/pbc/all/product-information-management/{{page.version}}/base-shop//manage-in-the-back-office/product-lists/create-product-lists.html). It's needed to allow or deny a company access to certain products.
+- Review the [reference information](#reference-information-create-a-merchant-relation) before you start, or look up the necessary information as you go through the process.
 
 ## Create a merchant relation
 
@@ -54,5 +54,5 @@ This document describes how to create merchant relations in the Back Office.
 
 ## Next steps
 
-* Define merchant-specific prices. For instructions, see [Creating abstract products and product bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) and [Creating a product variant](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/create-product-variants.html).
-* Define order thresholds for merchants. For instructions, see [Manage merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html).
+- Define merchant-specific prices. For instructions, see [Creating abstract products and product bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) and [Creating a product variant](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/create-product-variants.html).
+- Define order thresholds for merchants. For instructions, see [Manage merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html).

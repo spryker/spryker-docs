@@ -15,22 +15,22 @@ To integrate Bazaarvoice, follow these guidelines.
 
 - The Bazaarvoice app requires the following Spryker modules:
 
-* `spryker/asset: ^1.6.0`
-* `spryker/asset-storage: ^1.2.1`
-* `spryker/merchant-profile: ^1.2.1` (Marketplace only)
-* `spryker/oms: ^11.25.0`
-* `spryker/product-review: ^2.11.2`
-* `spryker/product-review-gui: ^1.6.0`
-* `spryker-shop/asset-widget: ^1.0.0`
-* `spryker-shop/cart-page: ^3.38.0`
-* `spryker-shop/product-detail-page: ^3.19.1`
-* `spryker-shop/product-category-widget: ^1.7.0`
-* `spryker-shop/shop-ui: ^1.71.0`
-* `spryker-shop/checkout-page: ^3.23.0`
-* `spryker-shop/merchant-page: ^1.1.0` (Marketplace only)
-* `spryker-shop/merchant-profile-widget: ^1.1.0` (Marketplace only)
-* `spryker-shop/merchant-widget: ^1.3.0` (Marketplace only)
-* `spryker-shop/payment-page: ^1.3.0`
+- `spryker/asset: ^1.6.0`
+- `spryker/asset-storage: ^1.2.1`
+- `spryker/merchant-profile: ^1.2.1` (Marketplace only)
+- `spryker/oms: ^11.25.0`
+- `spryker/product-review: ^2.11.2`
+- `spryker/product-review-gui: ^1.6.0`
+- `spryker-shop/asset-widget: ^1.0.0`
+- `spryker-shop/cart-page: ^3.38.0`
+- `spryker-shop/product-detail-page: ^3.19.1`
+- `spryker-shop/product-category-widget: ^1.7.0`
+- `spryker-shop/shop-ui: ^1.71.0`
+- `spryker-shop/checkout-page: ^3.23.0`
+- `spryker-shop/merchant-page: ^1.1.0` (Marketplace only)
+- `spryker-shop/merchant-profile-widget: ^1.1.0` (Marketplace only)
+- `spryker-shop/merchant-widget: ^1.3.0` (Marketplace only)
+- `spryker-shop/payment-page: ^1.3.0`
 
 Make sure your installation meets these requirements.
 
@@ -81,13 +81,14 @@ Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.t
 | product.name                 | productName          | Yes      | Camera Pro 123                                                                   |
 | product.description          | productDescription   | No       | Lorem ipsum dolor sit amet, consectetur adipiscing elit.                         |
 | product.image                | productImageURL      | Yes      | `https://www.example.com/img/gallery/camera-pro-123.jpg` (always use absolute URL) |
-| product.url                  | productPageURL       | Yes      | `https://www.example.com/office-chair` (always use absolute URL)                   |    
+| product.url                  | productPageURL       | Yes      | `https://www.example.com/office-chair` (always use absolute URL)                   |
 | product.brand.name           | brandId, brandName   | No       | Xyz Brand                                                                        |
 | product.category             | categoryPath         | No       | [{"id":1,"name":"Cameras & Camcorders"},{"id":4,"name":"Digital Cameras"}]       |
 | product.gtin12               | upcs                 | No       | 123456789876                                                                     |
 | product.inProductGroupWithID | family               | No       | 6                                                                                |
 
 Example:
+
 ```html
 <section itemscope="" itemtype="https://schema.org/Product">
     <meta itemprop="name" content="Camera Pro 123">
@@ -123,6 +124,7 @@ Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/
 | organization.logo       | productImageURL      | Yes      | `https://www.example.com/merchant/merchant-logo.png` (always use absolute URL) |
 
 Example:
+
 ```html
 <section itemscope="" itemtype="https://schema.org/Organization">
     <meta itemprop="identifier" content="MER000001">
@@ -134,11 +136,12 @@ Example:
 #### Ratings and reviews (for Product)
 
 Core templates:
-* `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
-* `SprykerShop/Yves/ProductReviewWidget/Theme/default/views/pdp-review-rating/pdp-review-rating.twig`
-* `SprykerShop/Yves/ProductReviewWidget/Theme/default/components/organisms/review-summary/review-summary.twig`
+- `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
+- `SprykerShop/Yves/ProductReviewWidget/Theme/default/views/pdp-review-rating/pdp-review-rating.twig`
+- `SprykerShop/Yves/ProductReviewWidget/Theme/default/components/organisms/review-summary/review-summary.twig`
 
 Example:
+
 ```html
 <section itemscope itemtype="https://schema.org/Product">
    <meta itemprop="sku" content="{some_sku}">
@@ -158,6 +161,7 @@ Core template:
 `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
 Example:
+
 ```html
 <section itemscope itemtype="https://schema.org/Organization">
    <meta itemprop="identifier" content="{merchant_reference}"/>
@@ -172,11 +176,12 @@ Example:
 #### Inline ratings
 
 Core templates:
-* `SprykerShop/Yves/ShopUi/Theme/default/components/molecules/product-item/product-item.twig`
-* `SprykerShop/Yves/ProductReviewWidget/Theme/default/views/product-review-display/product-review-display.twig`
-* `SprykerShop/Yves/ProductReviewWidget/Theme/default/components/molecules/rating-selector/rating-selector.twig`
+- `SprykerShop/Yves/ShopUi/Theme/default/components/molecules/product-item/product-item.twig`
+- `SprykerShop/Yves/ProductReviewWidget/Theme/default/views/product-review-display/product-review-display.twig`
+- `SprykerShop/Yves/ProductReviewWidget/Theme/default/components/molecules/rating-selector/rating-selector.twig`
 
 Example:
+
 ```html
 <section itemscope itemtype="https://schema.org/Product">
    <meta itemprop="sku" content="{some_sku}">

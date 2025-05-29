@@ -70,6 +70,7 @@ To refresh an authentication token, send the request:
   }
 }
 ```
+
 </details>
 
 
@@ -98,6 +99,7 @@ To refresh an authentication token, send the request:
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -148,5 +150,5 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ## Next steps
 
-* [Authenticate as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html)
-* [Manage customer passwords](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html)
+- [Authenticate as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html)
+- [Manage customer passwords](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html)

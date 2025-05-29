@@ -25,11 +25,11 @@ This document describes how to edit merchant relations in the Back Office.
 
 1. Next to the merchant relation you want to edit, click **Edit**.
 2. On the **Edit Merchant Relation** page, update any of the following:
-    * Select a **BUSINESS UNIT OWNER**.
-    * Enter and select **ASSIGNED BUSINESS UNITS**.
-    * Deassign **ASSIGNED BUSINESS UNITS** by clicking **x** next to the business units you want to deassign.
-    * Enter and select **ASSIGNED PRODUCT LISTS**.
-    * Deassign **ASSIGNED PRODUCT LISTS** by clicking **x** next to the business units you want to deassign.
+    - Select a **BUSINESS UNIT OWNER**.
+    - Enter and select **ASSIGNED BUSINESS UNITS**.
+    - Deassign **ASSIGNED BUSINESS UNITS** by clicking **x** next to the business units you want to deassign.
+    - Enter and select **ASSIGNED PRODUCT LISTS**.
+    - Deassign **ASSIGNED PRODUCT LISTS** by clicking **x** next to the business units you want to deassign.
 3. Once done, click **Save**.
 
 

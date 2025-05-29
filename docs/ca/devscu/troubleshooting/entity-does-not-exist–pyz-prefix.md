@@ -14,10 +14,10 @@ Constant does not exist because the existent constant has `PYZ_` prefix.
 ## Solution
 
 Remove `pyz` from the names of the entities:
-* Constant
-* Class
-* Method
-* Property
+- Constant
+- Class
+- Method
+- Property
 
 ### Rename constants
 
@@ -29,8 +29,8 @@ Remove `pyz` from the names of the entities:
 ### Rename transfers
 
 1. In the `shared` folder, replace the following for `*.xml` transfers files:
-   * `"(pyz)(.)(\w*)` with `"\L$2\E$3`
-   * `"(Pyz)(.)(\w*)` with `"$2E$3`
+   - `"(pyz)(.)(\w*)` with `"\L$2\E$3`
+   - `"(Pyz)(.)(\w*)` with `"$2E$3`
 
 2. In `*.php` files, replace the `Transfer\->(get|set|require)Pyz` regexpa with `Transfer->$1`.
 3. In `*.twig` files, remove `pyz` in transfer getters like `.getPyz` or `.pyz`.

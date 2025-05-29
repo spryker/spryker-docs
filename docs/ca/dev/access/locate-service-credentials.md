@@ -39,4 +39,5 @@ The credentials are located in the *Environment Variables* section.
 ![environment variables](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Access/Locating+service+credentials/environment+variables.png)
 
 ## Next step
-* [Connecting to services via SSH](/docs/ca/dev/access/connect-to-services-via-ssh.html)
+
+- [Connecting to services via SSH](/docs/ca/dev/access/connect-to-services-via-ssh.html)

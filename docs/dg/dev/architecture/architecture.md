@@ -24,9 +24,9 @@ One of the main tasks of a commerce platform is the possibility to customize, ex
 
 In this section, you can learn the following topics:
 
-* The Spryker architecture and concepts.
-* What technologies we use.
-* What applications the Spryker Commerce OS is composed of.
-* How we enable the development of high-performance applications and their scalability.
+- The Spryker architecture and concepts.
+- What technologies we use.
+- What applications the Spryker Commerce OS is composed of.
+- How we enable the development of high-performance applications and their scalability.
 
 Also, this guide is especially useful for developers, architects, and integrators dealing with Spryker Cloud Commerce OS.

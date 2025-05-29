@@ -14,10 +14,10 @@ redirect_from:
 
 A *customer account* contains the following customer information about the Storefront:
 
-* Contact details
-* Addresses
-* Order history
-* Preferences, such as language and shipping options
+- Contact details
+- Addresses
+- Order history
+- Preferences, such as language and shipping options
 
 There are slight differences in customer accounts' information for the B2B and B2C shops. The following table describes such differences and similarities:
 
@@ -48,19 +48,20 @@ Deleting a customer account does not affect billing and order-related informatio
 
 A Back Office user can do the following:
 
-* Add notes attached for customers.
-* Set a preferred locale per customer.
-* Deleting customer data using an anonymization mechanism.
-* Configure a non-linear customer reference for external communication.
-* Set address books with default addresses for billing and shipping.
-* Send a password token by email.
-* Check the last orders of a customer in the shop.
+- Add notes attached for customers.
+- Set a preferred locale per customer.
+- Deleting customer data using an anonymization mechanism.
+- Configure a non-linear customer reference for external communication.
+- Set address books with default addresses for billing and shipping.
+- Send a password token by email.
+- Check the last orders of a customer in the shop.
 
 For details, see the following:
-* [Create customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/create-customers.html)
-* [Add notes to customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/add-notes-to-customers.html)
+- [Create customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/create-customers.html)
+- [Add notes to customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/add-notes-to-customers.html)
 
 ## Customer account on the Storefront
+
 A customer can perform the following actions on the Storefront:
 
 <details>

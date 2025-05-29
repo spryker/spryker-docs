@@ -54,8 +54,8 @@ The page refreshes with a success message displayed.
 2. In the **Soft Threshold** pane, select a soft threshold type.
 3. For **ENTER THRESHOLD VALUE**, enter a price value.
 4. If you selected a threshold with fee, do one of the following:
-   * **SOFT THRESHOLD WITH FIXED FEE**: For **ENTER FIXED FEE**, enter a price value.
-   * **SOFT THRESHOLD WITH FLEXIBLE FEE**: For **ENTER FLEXIBLE FEE**, enter a price value.
+   - **SOFT THRESHOLD WITH FIXED FEE**: For **ENTER FIXED FEE**, enter a price value.
+   - **SOFT THRESHOLD WITH FLEXIBLE FEE**: For **ENTER FLEXIBLE FEE**, enter a price value.
 5. Enter a **MESSAGE** for all the locales.
 6. Select **Save**.
 
@@ -71,6 +71,6 @@ In the **Message** field, enter *{% raw %}{{{% endraw %}threshold{% raw %}}}{% e
 | --- | --- |
 | STORE AND CURRENCY | Defines the store to which the threshold is applied and the currency in which it's displayed. |
 | ENTER THRESHOLD VALUE | Depending on the threshold type, defines the value that should be reached or not reached.|
-|MESSAGE |Short message that informs the customer about the threshold conditions. For example, _You should add items for {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} to pass a recommended threshold. You can't proceed with checkout._ <br><br> Enter {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} or {% raw %}{{{% endraw %}fee{% raw %}}}{% endraw %} to reference the threshold name or the defined fee respectively. When the message is rendered on the Storefront, the placeholders are replaced with the values from **Enter threshold value** and **Enter flexible fee** or **Enter fixed fee** fields. |
+|MESSAGE |Short message that informs the customer about the threshold conditions. For example, *You should add items for {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} to pass a recommended threshold. You can't proceed with checkout.* <br><br> Enter {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} or {% raw %}{{{% endraw %}fee{% raw %}}}{% endraw %} to reference the threshold name or the defined fee respectively. When the message is rendered on the Storefront, the placeholders are replaced with the values from **Enter threshold value** and **Enter flexible fee** or **Enter fixed fee** fields. |
 | ENTER FIXED FEE | Adds this value to cart if the threshold is not reached. |
 | ENTER FLEXIBLE FEE | Percentage of an order's sub-total that is added to cart if the threshold is not reached.|

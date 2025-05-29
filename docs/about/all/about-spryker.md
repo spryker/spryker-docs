@@ -39,10 +39,10 @@ For a complete list of modules, see the [Spryker repository](https://github.com/
 
 ### Benefits of the modular architecture
 
-* You take only the modules or features needed for your project, without overloading it with redundant code and investing effort into something you don't need.
-* You can easily grow your project by adding new modules at any time.
-* You can add, delete, and test new features without worrying about breaking or pausing your live shop.
-* Thanks to the atomic release approach, each module is released independently, has its own version, and is backward compatible. You can install and update the needed modules right after they are released without having to update any other installed modules.
+- You take only the modules or features needed for your project, without overloading it with redundant code and investing effort into something you don't need.
+- You can easily grow your project by adding new modules at any time.
+- You can add, delete, and test new features without worrying about breaking or pausing your live shop.
+- Thanks to the atomic release approach, each module is released independently, has its own version, and is backward compatible. You can install and update the needed modules right after they are released without having to update any other installed modules.
 
 ## Layered architecture
 
@@ -50,20 +50,20 @@ Layered architecture separates your commercial offering and sales channels. When
 
 Spryker is split into four different layers:
 
-* The *presentation layer* is a selling point that can be an online store, a mobile app, a voice skill, and anything else used to fulfill a commercial transaction.
-* The *business layer* includes your products, pricing, stock, and general information surrounding your commercial offering.
-* The *communication layer* connects the presentation layer to the business layer and transfers information between the business layer and the different presentation layers you may have.
-* The *persistence layer* covers all the data storage and processing, such as database queries and advanced calculations.
+- The *presentation layer* is a selling point that can be an online store, a mobile app, a voice skill, and anything else used to fulfill a commercial transaction.
+- The *business layer* includes your products, pricing, stock, and general information surrounding your commercial offering.
+- The *communication layer* connects the presentation layer to the business layer and transfers information between the business layer and the different presentation layers you may have.
+- The *persistence layer* covers all the data storage and processing, such as database queries and advanced calculations.
 
 ![spryker-layers](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/spryker_layers_s.png)
 
 
 ### Benefits of the layered architecture
 
-* We confine long and resource-intensive processes to the business and persistence layers, which ensures high performance on the presentation layer. The presentation side is separated from the rest of the OS to make sure that only lean processes are executed there. Anything that can impact the purchase process is offloaded to an area that does not impact the performance.
-* Separate frontend and backend means developers can work in parallel, allowing for faster implementation, testing, and better optimization—all for less internal cost.
-* Because your commercial offering is not dependent on a single channel, you can focus your effort on growth and improvement, rather than on solutions, extensions, and sometimes workarounds to make things work.
-* Essential information is not tied up with the presentation. You can easily swap out, extend, replace this information, as well as change the ways it's presented.
+- We confine long and resource-intensive processes to the business and persistence layers, which ensures high performance on the presentation layer. The presentation side is separated from the rest of the OS to make sure that only lean processes are executed there. Anything that can impact the purchase process is offloaded to an area that does not impact the performance.
+- Separate frontend and backend means developers can work in parallel, allowing for faster implementation, testing, and better optimization—all for less internal cost.
+- Because your commercial offering is not dependent on a single channel, you can focus your effort on growth and improvement, rather than on solutions, extensions, and sometimes workarounds to make things work.
+- Essential information is not tied up with the presentation. You can easily swap out, extend, replace this information, as well as change the ways it's presented.
 
 
 ## Managed cloud platform
@@ -74,12 +74,12 @@ We take care of the infrastructure security and provide you with guidelines for 
 
 ### Benefits of cloud infrastructure
 
-* Infrastructure scales with your project and traffic
-* Increased speed
-* Better control over costs
-* Enhanced security
-* CI/CD pipelines speed up development
-* Flexible management of resources
+- Infrastructure scales with your project and traffic
+- Increased speed
+- Better control over costs
+- Enhanced security
+- CI/CD pipelines speed up development
+- Flexible management of resources
 
 ## Customizable system
 
@@ -91,14 +91,14 @@ Demo Shops are fully functional shops with collections of features that match di
 
 If you want to check out how Spryker works, Demo Shops also quick to install on your machine. The following Demo Shops are available:
 
-* [B2B](/docs/about/all/b2b-suite.html)
-* [B2C](/docs/about/all/b2c-suite.html)
-* [Marketplace B2B](/docs/about/all/spryker-marketplace/marketplace-b2b-suite.html)
-* [Marketplace B2C](/docs/about/all/spryker-marketplace/marketplace-b2c-suite.html)
+- [B2B](/docs/about/all/b2b-suite.html)
+- [B2C](/docs/about/all/b2c-suite.html)
+- [Marketplace B2B](/docs/about/all/spryker-marketplace/marketplace-b2b-suite.html)
+- [Marketplace B2C](/docs/about/all/spryker-marketplace/marketplace-b2c-suite.html)
 
 Demo Shops are covered by the same commercial license and the same support and long-term support rules as individual modules.
 
 ## Next steps
 
-* To start developing your project or check out how Spryker works, [set up Spryker locally](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
-* For the catalog of functionality and related guides, see [Packaged Business Capabilities](/docs/pbc/all/pbc.html).
+- To start developing your project or check out how Spryker works, [set up Spryker locally](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
+- For the catalog of functionality and related guides, see [Packaged Business Capabilities](/docs/pbc/all/pbc.html).

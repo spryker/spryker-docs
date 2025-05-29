@@ -29,6 +29,7 @@ related:
 If you don't have the multi-currency feature in your project and want to migrate, you have to follow certain steps to migrate your system. First, [migrate Price](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html) and [modules related to multi-currency](/docs/pbc/all/search/{{page.version}}/base-shop/tutorials-and-howtos/configure-search-for-multi-currency.html) before proceeding with the search for multi-currency.
 
 In the multi-currency feature we store prices grouped by price mode and currency, so prices are as follows:
+
 ```php
 {
  EUR : {
@@ -43,6 +44,7 @@ In the multi-currency feature we store prices grouped by price mode and currency
    }
 }
 ```
+
 The `price` field has the same structure, but the value has a different meaning. This value now stores a *default price*. Default price is the price having the default price type, currency, and price mode, which is defined in the price configuration. The price is stored grouped in elastic search, but before returning it for the view, we format it and return prices based on the currently selected currency, price mode, and price type. So the resulting structure or schema you get from the earch client is the same as before the multi-currency change:
 
 ```php
@@ -52,7 +54,7 @@ The `price` field has the same structure, but the value has a different meaning.
  }
    ```
 
-The value is adjusted according to the customer state (currency, price mode, and price type). Because of this, you have to decorate `RawCatalogSearchResultFormatterPlugin` with `\Spryker\Client\CatalogPriceProductConnector\Plugin\CurrencyAwareCatalogSearchResultFormatterPlugin` in modules using it. For `\Pyz\Client\Catalog\CatalogDependencyProvider`:   
+The value is adjusted according to the customer state (currency, price mode, and price type). Because of this, you have to decorate `RawCatalogSearchResultFormatterPlugin` with `\Spryker\Client\CatalogPriceProductConnector\Plugin\CurrencyAwareCatalogSearchResultFormatterPlugin` in modules using it. For `\Pyz\Client\Catalog\CatalogDependencyProvider`:
 
 <details><summary>Pyz\Client\Catalog</summary>
 
@@ -107,6 +109,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
    }
 }
 ```
+
 </details>
 
 For `\Pyz\Client\ProductNew\ProductNewDependencyProvider`:
@@ -278,6 +281,7 @@ public function expandProductPageMap(
 }
 
 ```
+
 </details>
 
 Inject a new dependency:
@@ -428,6 +432,7 @@ class CatalogSearchConfigBuilder extends AbstractPlugin implements SearchConfigB
 }
 
 ```
+
 </details>
 
 Inject a new dependency:

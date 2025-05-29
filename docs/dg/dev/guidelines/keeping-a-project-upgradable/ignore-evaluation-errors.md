@@ -23,6 +23,7 @@ evaluator:
     You can specify errors to ignore globally or per specific checker.
 
 **tooling.yml**
+
 ```yaml
 
 evaluator:

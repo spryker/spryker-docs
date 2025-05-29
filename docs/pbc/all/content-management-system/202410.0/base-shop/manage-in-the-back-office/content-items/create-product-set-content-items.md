@@ -26,8 +26,8 @@ Make sure to review [reference information](#reference-information-create-produc
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* A locale-specific product set overwrites the default product set when the product set content item is rendered on a Storefront page with the [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html) selected.
-* If no product set is selected for a locale, the default product set is displayed on a Storefront page with the locale selected.
+- A locale-specific product set overwrites the default product set when the product set content item is rendered on a Storefront page with the [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html) selected.
+- If no product set is selected for a locale, the default product set is displayed on a Storefront page with the locale selected.
 
 {% endinfo_block %}
 
@@ -51,10 +51,10 @@ The widget allows you to add a Product Set content item to any placeholders of a
 
 You can view how it looks like on the store website:
 
-* **B2C**
+- **B2C**
 Template used: Images left side, products right side and only add all button)
 ![Product set content item widget B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/product-set-yves-b2c.png)
 
-* **B2B**
+- **B2B**
 Template used: Product Set for landing pages
 ![Product set content item widget B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/product-set-template-b2b.png)

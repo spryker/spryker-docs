@@ -69,13 +69,13 @@ npm ci
 
 2. Execute the TS Linter in:
 
-* validation mode:
+- validation mode:
 
 ```bash
 npm run yves:tslint
 ```
 
-* fix mode:
+- fix mode:
 
 ```bash
 npm run yves:tslint:fix
@@ -96,7 +96,7 @@ The TS Linter rules related to formatting aren't included in `tslint.json` to av
 
 The TS Linter is integrated into:
 
-* Pre-commit hooks.
+- Pre-commit hooks.
 
 The function that executes TS Linter before the commit resides in `/.githook`
 
@@ -104,7 +104,7 @@ The function that executes TS Linter before the commit resides in `/.githook`
 - GitHook\Command\FileCommand\PreCommit\TsLintCommand
 ```
 
-* Travis.
+- Travis.
 
 Command to run the TS Linter is integrated into `.travis.yml`
 

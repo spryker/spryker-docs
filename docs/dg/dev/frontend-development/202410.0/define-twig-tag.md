@@ -50,6 +50,6 @@ If the defined object does not contain the required fields, we may not transfer 
 
 The tag works as follows:
 
-* If the variable does not exist in the current twig context, it will be created with an empty array value.
-* All values from the array declared by the *define* tag are replaced with the values from the existing context array in the current twig.
-* Checks the resulting array and throws an exception if one of the required fields is not set.
+- If the variable does not exist in the current twig context, it will be created with an empty array value.
+- All values from the array declared by the *define* tag are replaced with the values from the existing context array in the current twig.
+- Checks the resulting array and throws an exception if one of the required fields is not set.

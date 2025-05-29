@@ -75,4 +75,4 @@ To receive the security updates, request a subscription at [support@spryker.com]
 
 ## Next steps
 
-* [Release notes](/docs/about/all/releases/product-and-code-releases.html)
+- [Release notes](/docs/about/all/releases/product-and-code-releases.html)

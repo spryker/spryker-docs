@@ -21,14 +21,14 @@ There are modules with adapters for Local, FTP, and AWS3 filesystems.
 
 Quote from [Flysytem's official documentation](http://flysystem.thephpleague.com/):
 
-* Generic API for handling common tasks across multiple file storage engines.
-* A consistent output that you can rely on.
-* Integrate well with other packages and frameworks.
-* Be cacheable.
-* Emulate directories in systems that support none, like AwsS3.
-* Support third-party plugins.
-* Make it easy to test your filesystem interactions.
-* Support streams for big file handling.
+- Generic API for handling common tasks across multiple file storage engines.
+- A consistent output that you can rely on.
+- Integrate well with other packages and frameworks.
+- Be cacheable.
+- Emulate directories in systems that support none, like AwsS3.
+- Support third-party plugins.
+- Make it easy to test your filesystem interactions.
+- Support streams for big file handling.
 
 ### Module dependency graph
 

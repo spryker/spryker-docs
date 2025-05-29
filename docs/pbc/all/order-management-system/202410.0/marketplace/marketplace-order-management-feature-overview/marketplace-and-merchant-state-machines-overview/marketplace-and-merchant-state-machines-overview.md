@@ -31,14 +31,14 @@ You can set up as many state machines as you need and let your Marketplace admin
 The Marketplace can have one or several state machines assigned to the marketplace orders. Marketplace State Machine processes marketplace order items.
 Our exemplary Marketplace state machine provides the following states:
 
-* New
-* Paid
-* Canceled
-* Refunded
-* Sent to Merchant
-* Shipped by Merchant
-* Delivered
-* Closed
+- New
+- Paid
+- Canceled
+- Refunded
+- Sent to Merchant
+- Shipped by Merchant
+- Delivered
+- Closed
 
 To learn more about states, see [State Machine Fundamentals](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html).
 
@@ -59,7 +59,7 @@ The status of the Marketplace order is an aggregated state of the Marketplace or
 
 {% info_block infoBox "Info" %}
 
-In the Marketplace Dummy Payment, only the _invoice_ type of payment is supported by default.
+In the Marketplace Dummy Payment, only the *invoice* type of payment is supported by default.
 
 {% endinfo_block %}
 
@@ -73,8 +73,8 @@ If there are no manually executable events applicable to any of the items, there
 
 The Marketplace administrator can define one or several state machines for merchants:
 
-* One as the default, which applies automatically to merchant order items in every merchant order.
-* Another state machine for a specific merchant.
+- One as the default, which applies automatically to merchant order items in every merchant order.
+- Another state machine for a specific merchant.
 
 Merchant state machine processes merchant order items and works in parallel with the Marketplace state machine.
 The status of the merchant order is aggregated from the merchant order item statuses. The merchant order status gets properly updated when the state of the items changes.

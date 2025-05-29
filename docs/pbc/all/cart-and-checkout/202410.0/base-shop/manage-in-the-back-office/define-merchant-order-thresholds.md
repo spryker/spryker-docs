@@ -28,8 +28,8 @@ This doc describes how to manage [merchant order thresholds](/docs/pbc/all/cart-
 
 ## Prerequisites
 
-* [Create a merchant](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchants.html).
-* Review the [reference information](#reference-information-define-merchant-order-thresholds) before you start, or look up the necessary information as you go through the process.
+- [Create a merchant](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchants.html).
+- Review the [reference information](#reference-information-define-merchant-order-thresholds) before you start, or look up the necessary information as you go through the process.
 
 To start working with merchant order thresholds, do the following:
 1. Go to **Administration&nbsp;<span aria-label="and then">></span> Merchant Relationships Threshold**.
@@ -61,8 +61,8 @@ The page refreshes with a success message displayed.
 2. In the **Soft Threshold** pane, select a soft threshold type.
 3. Fill the **ENTER THRESHOLD VALUE** field.
 4. Based on the threshold type you have selected:
-   *  For the **Soft Threshold with fixed fee**, enter a **Enter fixed fee**.
-   * For the **Soft Threshold with flexible fee**, enter a **Enter flexible fee**.
+   - For the **Soft Threshold with fixed fee**, enter a **Enter fixed fee**.
+   - For the **Soft Threshold with flexible fee**, enter a **Enter flexible fee**.
 5. Enter a **MESSAGE** for all the locales.
 6. Select **Save**.
 
@@ -75,7 +75,7 @@ The page refreshes with a success message displayed.
 | --- | --- |
 | STORE AND CURRENCY | Defines the store to which the threshold is applied and the currency in which it's displayed. |
 | ENTER THRESHOLD VALUE | Depending on the threshold type, defines the value that should be reached or not reached.|
-|MESSAGE |Short message that informs the customer about the threshold conditions. For example, _You should add items for {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} to pass a recommended threshold. You can't proceed with checkout._ <br><br> Enter {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} or {% raw %}{{{% endraw %}fee{% raw %}}}{% endraw %} to reference the threshold name or the defined fee respectively. When the message is rendered on the Storefront, the placeholders are replaced with the values from **Enter threshold value** and **Enter flexible fee** or **Enter fixed fee** fields. |
+|MESSAGE |Short message that informs the customer about the threshold conditions. For example, *You should add items for {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} to pass a recommended threshold. You can't proceed with checkout.* <br><br> Enter {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} or {% raw %}{{{% endraw %}fee{% raw %}}}{% endraw %} to reference the threshold name or the defined fee respectively. When the message is rendered on the Storefront, the placeholders are replaced with the values from **Enter threshold value** and **Enter flexible fee** or **Enter fixed fee** fields. |
 | ENTER FIXED FEE | Adds this value to cart if the threshold is not reached. |
 | ENTER FLEXIBLE FEE | Percentage of an order's sub-total that is added to cart if the threshold is not reached.|
 

@@ -26,11 +26,11 @@ The following schema shows how a request is handled:
 ## Project structure overview
 
 The code is divided into three parts:
-* The `src/` folder contains the code of the current project.
-* The `vendor/spryker/` folder contains the Spryker OS.
-* The `vendor/spryker-eco/` folder contains the Spryker Ecosystem modules, which are distributed separately from the core.
-* The `vendor/spryker-sdk/` folder contains the development tools.
-* The `vendor/spryker-shop/` folder contains the Shop App (Yves).
+- The `src/` folder contains the code of the current project.
+- The `vendor/spryker/` folder contains the Spryker OS.
+- The `vendor/spryker-eco/` folder contains the Spryker Ecosystem modules, which are distributed separately from the core.
+- The `vendor/spryker-sdk/` folder contains the development tools.
+- The `vendor/spryker-shop/` folder contains the Shop App (Yves).
 
 All projects, *SprykerCore* and *SprykerEco* parts follow a very similar directory structure:
 
@@ -38,13 +38,13 @@ For example, if `CustomerFacade` is extended on the project side, it has the fol
 
 In Spryker Core:
 
-* Location: `vendor/spryker/customer/src/Spryker/Zed/Customer/Business`
-* Namespace: `Spryker\Zed\Customer\Business`
+- Location: `vendor/spryker/customer/src/Spryker/Zed/Customer/Business`
+- Namespace: `Spryker\Zed\Customer\Business`
 
 On the Project layer:
 
-* Location: `src/Pyz/Zed/Customer/Business`
-* Namespace: `Pyz\Zed\Customer\Business`
+- Location: `src/Pyz/Zed/Customer/Business`
+- Namespace: `Pyz\Zed\Customer\Business`
 
 As it can be observed from the preceding example, the location of the file reflects the namespace it's located in.
 
@@ -54,29 +54,30 @@ As it can be observed from the preceding example, the location of the file refle
 
 Depending on where and how the code is intended to be used, it can be placed in one of the following folders:
 
-* `Client`: The code placed here handles communication between Yves and Zed.
-* `Shared`: The code placed here is used both by Yves and Zed (to avoid code duplication).
-* `Zed`: The code here is meant only for the backend application.
-* `Yves`: The frontend code.
-* `Glue`: The code placed here handles communication between Glue API and Client.
+- `Client`: The code placed here handles communication between Yves and Zed.
+- `Shared`: The code placed here is used both by Yves and Zed (to avoid code duplication).
+- `Zed`: The code here is meant only for the backend application.
+- `Yves`: The frontend code.
+- `Glue`: The code placed here handles communication between Glue API and Client.
 
 Each module contains one folder for every layer of the application:
-* `Business`
-* `Communication`
-* `Persistence`
-* `Presentation`
+- `Business`
+- `Communication`
+- `Persistence`
+- `Presentation`
 
 ## Extending SprykerCore Functionality
+
 To extend the functionality of a class from SprykerCore, a new class with the same name must be added to the corresponding location on the project side.
 
 Replacement rules, described in the [Extend the core](/docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html) document work for the next classes in the Spryker module:
 
-* `Facade`
-* `BusinessFactory`
-* `Controller`
-* `QueryContainer`
-* `DependencyProvider`
-* `Config`
+- `Facade`
+- `BusinessFactory`
+- `Controller`
+- `QueryContainer`
+- `DependencyProvider`
+- `Config`
 
 The following example illustrates how `CategoryFacade` can be extended on the project side:
 

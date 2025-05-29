@@ -128,6 +128,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 ...
 }
 ```
+
 </details>
 
 3. Set `Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins()` to use the `publish` queue.
@@ -172,7 +173,7 @@ We introduce the GlossaryStorage publish queue as an example. Adjust the publish
 
 To introduce the GlossaryStorage publish queue:
 
-1.  Update the `GlossaryStorage` module:
+1. Update the `GlossaryStorage` module:
 
 ```bash
 composer update spryker/glossary-storage:"1.8.0" --update-with-dependencies
@@ -280,6 +281,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     ...
 }
 ```
+
 </details>
 
 ### Publish events using the default publish queue
@@ -354,4 +356,5 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     ...
 }
 ```
+
 </details>

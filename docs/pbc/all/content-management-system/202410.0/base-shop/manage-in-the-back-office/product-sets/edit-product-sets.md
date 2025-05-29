@@ -41,9 +41,9 @@ Some section below contain reference information. Review it before you start or 
 
 1. Click the **General** tab.
 2. Update any of the following for the needed locales:
-    * **NAME**
-    * **URL**
-    * **DESCRIPTION**
+    - **NAME**
+    - **URL**
+    - **DESCRIPTION**
 3. Update **PRODUCT SET KEY**.
 4. Update **WEIGHT**.
 5. To activate the product set, select the **ACTIVE** checkbox.
@@ -80,9 +80,9 @@ Some section below contain reference information. Review it before you start or 
 
 1. Click the **SEO** tab.
 2. Update any of the following for the needed locales:
-    * **TITLE**
-    * **KEYWORDS**
-    * **DESCRIPTION**
+    - **TITLE**
+    - **KEYWORDS**
+    - **DESCRIPTION**
 3. Click **Save**.
     This opens the **View Product Set** page with a success message displayed. The updated information is displayed in the **SEO** pane.
 

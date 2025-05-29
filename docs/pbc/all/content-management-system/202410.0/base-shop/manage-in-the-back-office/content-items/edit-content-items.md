@@ -28,25 +28,25 @@ Review the reference information before you start, or look up the necessary info
 
 To edit a content item:
 1. On the left-side navigation bar, navigate to  **Content&nbsp;<span aria-label="and then">></span> Content Items**.
-2. In the _Actions_ column of the *List of Content Items* table, click **Edit** next to the item you want to modify. The *Edit Content Item Type: Content Item Key* page opens.
+2. In the *Actions* column of the *List of Content Items* table, click **Edit** next to the item you want to modify. The *Edit Content Item Type: Content Item Key* page opens.
 3. Make changes to the needed attributes.
-4. To save the updates, click **Save**. The updated content item will be displayed on the grid of _List of Content Items_, and the following message is displayed: "_Content item has been successfully updated_".
+4. To save the updates, click **Save**. The updated content item will be displayed on the grid of *List of Content Items*, and the following message is displayed: "*Content item has been successfully updated*".
 
 **Tips and tricks**
 <br>On the *Edit Content Item Type: Content Item Key* page, you can clear all the fields in the current locale by clicking **Clear locale**.
 
 Clicking **Back to Content Items** in the top right corner of the page can trigger different actions:
-* Selecting this option *prior to* saving the changes will discard all the changes and then take you to the _List of Content Items_ page.
-* Selecting this option *after* the changes have been saved will redirect you to the _List of Content Items_ page.
+- Selecting this option *prior to* saving the changes will discard all the changes and then take you to the *List of Content Items* page.
+- Selecting this option *after* the changes have been saved will redirect you to the *List of Content Items* page.
 
 ## Reference information: Editing a content item
 
 This section describes atribbutes on the *Overview of Content Items* page and attribbutes of the following content item pages:
-* [Edit Content Item Banner: [Content Item Key]](#edit-content-item-banner-content-item-key-page)
-* [Edit a Content Item Abstract Product List: [Content Item Key]](#edit-content-item-abstract-product-list-content-item-key-page)
-* [Edit Content Item Product Set: [Content Item Key]](#edit-content-item-product-set-content-item-key-page)
-* [Edit Content Item File List: [Content Item Key]](#edit-content-item-file-list-content-item-key-page)
-* [Edit Navigation: [Content Item Key]](#edit-content-item-navigation-content-item-key-page)
+- [Edit Content Item Banner: [Content Item Key]](#edit-content-item-banner-content-item-key-page)
+- [Edit a Content Item Abstract Product List: [Content Item Key]](#edit-content-item-abstract-product-list-content-item-key-page)
+- [Edit Content Item Product Set: [Content Item Key]](#edit-content-item-product-set-content-item-key-page)
+- [Edit Content Item File List: [Content Item Key]](#edit-content-item-file-list-content-item-key-page)
+- [Edit Navigation: [Content Item Key]](#edit-content-item-navigation-content-item-key-page)
 
 The following table describes the attributes on the *Overview of Content Items* page.
 
@@ -60,14 +60,14 @@ The following table describes the attributes on the *Overview of Content Items* 
 | Updated | Date when a content item was last updated. |
 | Actions | Set of actions that can be performed on a content item. |
 
-By default, the latest created content item is displayed and sorted by the _Name_ column on the grid of content items.
+By default, the latest created content item is displayed and sorted by the *Name* column on the grid of content items.
 
 On the *Overview of Content Items* page, you can:
 
-* Create a new content item.
-* Sort content items by *Content Item Key*, *Name*, *Content type*, *Created*, and *Updated* dates.
-* Filter content items using the search by *Content Item Key*, *Name*, *Description*, *Content type*, *Created*, and *Updated* dates.
-* Edit a content item.
+- Create a new content item.
+- Sort content items by *Content Item Key*, *Name*, *Content type*, *Created*, and *Updated* dates.
+- Filter content items using the search by *Content Item Key*, *Name*, *Description*, *Content type*, *Created*, and *Updated* dates.
+- Edit a content item.
 
 ### Edit content Item Banner: [Content Item Key] page
 
@@ -139,4 +139,4 @@ On the *Overview of Content Items* page, you can:
 **What's next?**
 <br>When content item is updated, you can add it via content item widgets to a block or a page if needed.
 
-* To learn more about adding content item widgets to a block or page, see [Add content items to CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html).
+- To learn more about adding content item widgets to a block or page, see [Add content items to CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html).

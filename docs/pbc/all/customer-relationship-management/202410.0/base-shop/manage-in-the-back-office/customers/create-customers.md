@@ -62,5 +62,5 @@ Once you create a customer, a verification email is sent to their email address,
 
 ## Next steps
 
-* [Add customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/add-customer-addresses.html)
-* [Add notes to customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/add-notes-to-customers.html)
+- [Add customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/add-customer-addresses.html)
+- [Add notes to customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/add-notes-to-customers.html)

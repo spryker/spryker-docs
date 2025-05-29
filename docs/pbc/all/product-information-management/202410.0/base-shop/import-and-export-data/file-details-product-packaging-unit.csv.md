@@ -13,8 +13,8 @@ This document describes the `product_packaging_unit.csv` file to configure infor
 
 ## Import file dependencies
 
-* [File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
-* [product_packaging_unit_type.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-packaging-unit-type.csv.html)
+- [File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
+- [product_packaging_unit_type.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-packaging-unit-type.csv.html)
 
 ## Import file parameters
 

@@ -47,6 +47,7 @@ To adjust the frontend appearance, provide the following templates in your theme
 The Computop provides a demo state machine for Direct Debit payment method which implements Authorization/Capture flow.
 
 To enable the demo state machine, extend the configuration with the following values:
+
 ```php
  <?php
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
@@ -60,17 +61,17 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 ];
 ```
 
-## Direct Debit Payment Flow:
+## Direct Debit Payment Flow
 
 1. There is a radio button on "Payment" step. After submitting the order the customer will be redirected to the Computop (Paygate form implementation). The GET consists of 3 parameters:
-  - Data (encrypted parameters, such as currency, amount, description)
-  - Length (length of 'data' parameter)
-  - Merchant id (assigned by Computop)
+- Data (encrypted parameters, such as currency, amount, description)
+- Length (length of 'data' parameter)
+- Merchant id (assigned by Computop)
 Customer sets up all data just after the redirect to Computop. Init action: "Authorization". There is no Order call provided for this payment method. But Authorization call is working as Order call - without holding money. There is no call for holding money for this payment method.
 2. By default, on success the customer  will be redirected to "Success" step. The response contains `payId`. On error, the customer  will be redirected to "Payment" step with the error message by default. Response data is stored in the DB.
 3. Capture/Refund and Cancel actions are implemented in the admin panel (on manage order). On requests, Spryker will use `payId` parameter stored in the DB to identify a payment.
 
-## Set Up Details:
+## Set Up Details
 
 For partial refunds:
 1. Partial refunds are possible for direct debit transactions.

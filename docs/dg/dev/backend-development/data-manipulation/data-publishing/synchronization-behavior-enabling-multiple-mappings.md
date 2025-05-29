@@ -35,14 +35,17 @@ During the [Publish and Synchronization](/docs/dg/dev/backend-development/data-m
  ```php
  kv:product_abstract:de:de_de:123
  ```
+
  where *123* is the product ID from the database. Now, we can get that product's data straight away by querying storage for this particular key. But what if we don't know ID of a product, but know its SKU? What if we don't want to expose database IDs to the outer world? In these cases, we could make some heavy changes to the Publish & Synchronize mechanism on the project level, or we could use *mappings*.
 
-##  What are mappings
+## What are mappings
+
 You can instruct Publish & Synchronize facilities to create mappings for any resource. Mapping is a relation between a resource's database ID and some other unique piece of information about that resource. In terms of storage, it's an extra-record, related to some resource entity, which stores its ID, and is saved with its own key. This key, of course, does not have database ID as its part. To understand the mappings better, read on how mappings are [defined](#defining) and [used](#using).
 
 <a name="defining"></a>
 
 ## Defining mappings
+
 Mappings are defined in Propel schema files.
 
 To illustrate the process, we'll stick to our example abstract product and create a mapping between its ID and SKU.
@@ -57,6 +60,7 @@ Suppose we have an abstract product with ID *123* and SKU *xyz*. To create a map
   </behavior>
 </table>
 ```
+
 The value of this parameter is a string composer of the source (SKU in our example), and the destination (abstract product ID) separated by a colon. Source (SKU) and destination (ID) data is eventually taken from the entity's payload, that is, the data that is saved to storage. Therefore, the source's and destination's names in a schema definition must match the keys in the payload.
 
 After rebuilding the abstract product Propel entity class and synchronizing data to storage, a new storage record is created:
@@ -64,11 +68,13 @@ After rebuilding the abstract product Propel entity class and synchronizing data
 ```php
 {"id":123,"_timestamp":1599741494.2676899}
 ```
+
 The key with which this record is stored, looks like this:
 
 ```php
 kv:product_abstract:de:de_de:sku:xyz
 ```
+
 where *`xyz`* is the SKU of the particular product.
 
 After that, the product's SKU is mapped to the product's ID.
@@ -86,6 +92,7 @@ Once you have the mappings, to get the actual product data, you need to make som
 However, overall, this is pretty reasonable and doesn't bring any notable performance penalties (of course, if you're using some fast storage like Redis).
 
 ## Multiple mappings
+
 Because of the way Propel schema files are parsed and merged, previously you could not define several mappings for the same resource. Now you can. For this, multiple source-destination pairs have to be defined as a value of the same `mappings` parameter, separated by a configurable delimiter (`;` by default):
 
 ```xml
@@ -95,6 +102,7 @@ Because of the way Propel schema files are parsed and merged, previously you cou
     ...
 </behavior>
 ```
+
 {% info_block infoBox "Delimeter" %}
 
 You can configure the delimiter to separate mappings by overriding `\Spryker\Zed\SynchronizationBehavior\SynchronizationBehaviorConfig::MAPPINGS_DELIMITER`.

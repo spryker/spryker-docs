@@ -60,7 +60,7 @@ All the order management options that you can invoke from the **Actions** column
 
 #### Merchant Order Overview page
 
-The following table describes the attributes on the **View Order _[Order ID]_** page when you *view* an order.
+The following table describes the attributes on the **View Order *[Order ID]*** page when you *view* an order.
 
 <table>
 <thead>
@@ -261,7 +261,7 @@ The following table describes the attributes you enter and select when creating 
 You can edit the existing details for the shipment in the Back Office. To do that:
 
 1. In the **List of Orders** table, click **View** next to the order you want to edit the shipment of.
-2. In the **Merchant Order Items** section of the **Merchant Order Overview** page, click **Edit Shipment**. This takes you to the **Edit shipment for Order: _[Order ID]_** page.
+2. In the **Merchant Order Items** section of the **Merchant Order Overview** page, click **Edit Shipment**. This takes you to the **Edit shipment for Order: *[Order ID]*** page.
 3. Update the main merchant shipment.
 4. Click **Save**.
 

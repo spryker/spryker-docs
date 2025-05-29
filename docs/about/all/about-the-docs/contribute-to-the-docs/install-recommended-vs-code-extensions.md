@@ -20,9 +20,9 @@ related:
 ---
 
 We recommend the following VS Code extensions for writing and reviewing documents:
-* *Grammarly*: Checks grammar, spelling, and punctuation in real-time as you write.
-* *Vale*: Customizable linter that checks for style and grammar issues in Markdown and other supported files.
-* *Markdown Shortcuts*: Provides shortcuts for formatting Markdown text.
+- *Grammarly*: Checks grammar, spelling, and punctuation in real-time as you write.
+- *Vale*: Customizable linter that checks for style and grammar issues in Markdown and other supported files.
+- *Markdown Shortcuts*: Provides shortcuts for formatting Markdown text.
 
 ## Install extensions
 

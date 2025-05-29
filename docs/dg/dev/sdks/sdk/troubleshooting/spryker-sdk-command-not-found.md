@@ -9,7 +9,7 @@ last_updated: Jan 18, 2023
 ---
 ## Troubleshooting
 
-### `spryker-sdk` command not found.
+### `spryker-sdk` command not found
 
 The `spryker-sdk` command cannot be found.
 

@@ -32,35 +32,35 @@ related:
 
 ## ConfirmDelivery command
 
-* Send delivery confirmation data to RatePAY
-* Response:
+- Send delivery confirmation data to RatePAY
+- Response:
   - Success: Delivery confirmed
   - Declined: Request format error or delivery confirmation error
-* Plugin: `ConfirmDeliveryPlugin`
+- Plugin: `ConfirmDeliveryPlugin`
 
 ## ConfirmPayment command
 
-* Send payment confirmation data to RatePAY
-* Response:
+- Send payment confirmation data to RatePAY
+- Response:
   - Success: Payment confirmed
   - Declined: Request format error or payment confirmation error
-* Plugin: `ConfirmPaymentPlugin`
+- Plugin: `ConfirmPaymentPlugin`
 
 ## CancelPayment command
 
-* Send order items cancellation data to RatePAY
-* Response:
+- Send order items cancellation data to RatePAY
+- Response:
   - Success: Order items canceled successfully
   - Declined: Request format error or order items cancellation error
-* Plugin: `CancelPaymentPlugin`
+- Plugin: `CancelPaymentPlugin`
 
 ## RefundPayment command
 
-* Send refund order items data to RatePAY
-* Response:
+- Send refund order items data to RatePAY
+- Response:
   - Success: Order items refunded successfully
   - Declined: Request format error or order items refund error
-* Plugin: `RefundPaymentPlugin`
+- Plugin: `RefundPaymentPlugin`
 
 ## Conditions
 

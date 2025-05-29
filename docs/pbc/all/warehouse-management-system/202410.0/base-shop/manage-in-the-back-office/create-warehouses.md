@@ -48,8 +48,7 @@ If you clear all checkboxes for stores assigned to a specific warehouse, this wa
 {% endinfo_block %}
 
 6. Click **Save**.
-
-    This opens the **Warehouses** page with a success message displayed. The create warehouse is displayed in the table.
+  This opens the **Warehouses** page with a success message displayed. The create warehouse is displayed in the table.
 
 ## Reference information: Create warehouses
 

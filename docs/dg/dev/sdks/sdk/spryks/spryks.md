@@ -28,9 +28,9 @@ The majority of Spryks need to execute other Spryks before the called Spryk can 
 
 We support the following Spryk definition types:
 
-* *Template definitions.* A template definition adds a new file to your file system and uses Twig as a render engine, which enables you to create files from templates with placeholders. A template definition needs at least a template argument defined. The argument tells Spryk which template to use. Template definitions can have as many arguments as needed.
-* *Structure definitions.* A structure definition lets you define a directory structure. For example, the `CreateSprykerModule` definition contains the description of the created directories. The main argument of a structure definition is directories, which enables you to add a list of directories to be created.
-* *Method definitions.* A method definition can add methods to a specified target, such as `Spryker\Zed\FooBar\Business\FooBarFacade`. This type of definition needs more arguments to do its job.
+- *Template definitions.* A template definition adds a new file to your file system and uses Twig as a render engine, which enables you to create files from templates with placeholders. A template definition needs at least a template argument defined. The argument tells Spryk which template to use. Template definitions can have as many arguments as needed.
+- *Structure definitions.* A structure definition lets you define a directory structure. For example, the `CreateSprykerModule` definition contains the description of the created directories. The main argument of a structure definition is directories, which enables you to add a list of directories to be created.
+- *Method definitions.* A method definition can add methods to a specified target, such as `Spryker\Zed\FooBar\Business\FooBarFacade`. This type of definition needs more arguments to do its job.
 
 ## Install Spryk
 
@@ -85,6 +85,7 @@ This is a Graphical User Interface (GUI) built inside the Back Office applicatio
 ```bash
 composer require --dev spryker-sdk/spryk-gui
 ```
+
 {% info_block infoBox "Info" %}
 
 We recommend installing it as a development dependency, since changes in the code on the production environment must not be allowed, and may lead to a nonworking application.
@@ -96,6 +97,7 @@ Once SprykGUI is installed, you can navigate to it through the Back Office. Ther
 ### Non-interactive mode
 
 After running `console spryk:dump {SPRYK NAME}`, you get a list of options required for the chosen Spryk:
+
 ```bash
 ╰─$ console spryk:dump AddYvesPage
  List of all "AddYvesPage" options:
@@ -109,9 +111,11 @@ theme
 ```
 
 Knowing these parameters enables you to run this Spryk in a non-interactive mode:
+
 ```bash
 console spryk:run AddYvesPage --controller=Test --controllerMethod=index --mode=project --module=Test --organization=Pyz --theme=default
 ```
+
 {% info_block infobox %}
 
 Some Spryks have interactive arguments, like interface name, which can't be passed as a command line argument.

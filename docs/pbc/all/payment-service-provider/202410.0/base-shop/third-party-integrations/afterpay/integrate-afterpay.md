@@ -104,6 +104,7 @@ $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $
 ```
 
 with this:
+
 ```php
 $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
  $commandCollection->add(new SendOrderConfirmationPlugin(), 'Oms/SendOrderConfirmation');

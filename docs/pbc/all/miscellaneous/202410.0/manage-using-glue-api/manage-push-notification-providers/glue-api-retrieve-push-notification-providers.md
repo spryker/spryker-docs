@@ -100,6 +100,7 @@ Request sample: `GET https://glue-backend.b2c-eu.demo-spryker.com/push-notificat
 ### Response
 
 Response sample:
+
 ```json
 {
     "data": {

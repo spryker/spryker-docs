@@ -79,6 +79,7 @@ Request sample: retrieve return reasons
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

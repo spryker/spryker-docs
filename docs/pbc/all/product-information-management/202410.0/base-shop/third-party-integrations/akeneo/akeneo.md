@@ -26,21 +26,21 @@ related:
 Akeneo is the next-generation PIM - a PIM that quickly integrates with the existing IT environment through a powerful API, and is a great fit with Spryker's technologies. Also, Akeneo is uncomplicated, flexible, scalable, easy to use and not expensive. Today, more than 48,000 users worldwide use Akeneo PIM. More than 200 companies in the retail and industry sectors, including many leading brands and marketplaces, rely on Akeneo's Enterprise Edition, which is available as an on-premise and cloud edition.
 
 YOUR ADVANTAGES:
-* Central multi-channel product data management
-* Control of data quality from web to print
-* Efficient collaboration between all departments and the channel
-* Available as OnPremise, PaaS or SaaS
-* No user-dependent licenses
-* Optimization of all processes around the product information
-* Perfect variant handling
-* Simple translation workflows
-* Supplier / dealer portal functionalities
+- Central multi-channel product data management
+- Control of data quality from web to print
+- Efficient collaboration between all departments and the channel
+- Available as OnPremise, PaaS or SaaS
+- No user-dependent licenses
+- Optimization of all processes around the product information
+- Perfect variant handling
+- Simple translation workflows
+- Supplier / dealer portal functionalities
 
 ## Related Developer guides
 
 Discontinued - Akeneo Connector (Eco module):
-* [Installing and configuring Akeneo Connector (Eco module)](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html)
-* [Akeneo Connector (Eco module) — Console commands](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html)
+- [Installing and configuring Akeneo Connector (Eco module)](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html)
+- [Akeneo Connector (Eco module) — Console commands](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html)
 
 
 ---

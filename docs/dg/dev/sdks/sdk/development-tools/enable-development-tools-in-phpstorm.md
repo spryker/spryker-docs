@@ -34,12 +34,14 @@ The installation script supports only MacOS.
 2. In terminal, go to the root project directory.
 3. Depending on your project configuration, configure development tools by running one of the following commands:
 
-* Configure tools to run in Docker SDK containers:
+- Configure tools to run in Docker SDK containers:
+
 ```bash
 vendor/bin/phpstorm-command-line-tools.sh
 ```
 
-* Configure tools tools to run on your local machine:
+- Configure tools tools to run on your local machine:
+
 ```bash
 vendor/bin/phpstorm-command-line-tools.sh --platform=local
 ```

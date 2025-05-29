@@ -30,5 +30,5 @@ Once the customer decides to buy a product, they can add it to cart directly fro
 
 | INSTALLATION GUIDES | GLUE API GUIDES  |
 | ------------- | -------------- |
-| [Install the Marketplace Wishlist feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html) | [Managing wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html)
+| [Install the Marketplace Wishlist feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html) | [Managing wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html) |
 | [Install the Marketplace Product Offer + Wishlist Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-wishlist-glue-api.html) | [Managing wishlist items](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html) |

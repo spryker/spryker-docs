@@ -196,6 +196,7 @@ Add the following configuration:
 
 </statemachine>
 ```
+
 </details>
 
 **config/Zed/oms/MarketplacePayment01.xml**
@@ -323,6 +324,7 @@ Add the following configuration:
 
 </statemachine>
 ```
+
 </details>
 
 ### 3) Set up database schema and transfer objects
@@ -499,6 +501,7 @@ abstract class AbstractTriggerOmsEventCommandPlugin extends AbstractPlugin imple
 }
 
 ```
+
 </details>
 
 **src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/CancelReturnMarketplaceOrderItemCommandPlugin.php**
@@ -661,6 +664,7 @@ class ReturnMerchantOrderItemCommandPlugin extends AbstractPlugin implements Com
 }
 
 ```
+
 </details>
 
 **src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ShipReturnMarketplaceOrderItemCommandPlugin.php**
@@ -745,6 +749,7 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
     }
 }
 ```
+
 </details>
 
 <details>
@@ -793,6 +798,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/MerchantOms/Communication/MerchantOmsCommunicationFactory.php**
@@ -933,6 +939,7 @@ Add marketplace section to `navigation.xml`:
 ```
 
 Execute the following command:
+
 ```bash
 console navigation:build-cache
 ```

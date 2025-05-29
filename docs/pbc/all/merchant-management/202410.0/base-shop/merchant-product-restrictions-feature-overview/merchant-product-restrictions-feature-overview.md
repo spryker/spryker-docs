@@ -14,15 +14,15 @@ redirect_from:
   - /docs/scos/user/features/202204.0/merchant-product-restrictions-feature-overview.html
 ---
 
-The _Product Restrictions_ feature lets merchants define the products that are available to each of their B2B customers.
+The *Product Restrictions* feature lets merchants define the products that are available to each of their B2B customers.
 
 In terms of the [Merchant concept](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html), a *merchant* is an entity that sells products in a B2B environment.
 
 Product Restrictions from a merchant to a buyer give merchants [another layer](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-access-feature-overview.html) of control over the information a customer can see in the shop application. Based on product restrictions, you can do the following actions:
 
-* Create a list of products.
-* Hide the product information for the products (pricing, appearance in the search/filters).
-* Limit access to a product details page.
+- Create a list of products.
+- Hide the product information for the products (pricing, appearance in the search/filters).
+- Limit access to a product details page.
 
 Product Restriction works on the basis of allowlist and excludelist lists. That means that products that are added to an allowlist are always shown to a customer while products from an excludelist are hidden from the customer view.
 
@@ -35,7 +35,7 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
 ## Current constraints
 
 - When a single product from the product set is added to an excludelist, the other items are displayed in the shop. We are going to update the logic in a way that in case any of the items in the product set is added to the excludelist, all relevant product sets containing this item will be added to the excludelist too.
--  The current functionality allows displaying the whole product bundle even if it contains the customer-specific products from the excludelist. We are working on updating the logic so that if the bundle product includes an item from the excludelist, the whole bundle will also also be hidden from a customer.
+- The current functionality allows displaying the whole product bundle even if it contains the customer-specific products from the excludelist. We are working on updating the logic so that if the bundle product includes an item from the excludelist, the whole bundle will also also be hidden from a customer.
 
 ## Related Business User documents
 

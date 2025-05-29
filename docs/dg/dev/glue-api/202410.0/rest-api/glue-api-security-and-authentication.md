@@ -92,9 +92,9 @@ $restRequest->getRestUser()->getNaturalIdentifier();
 
 In the B2B scenario, a user can be associated with an additional scope, `company_user`. This scope is added in the following cases:
 
-* the user has impersonated as a Company User via the `/company-user-access-tokens` endpoint;
-* the user is associated with a **single** Company User account;
-* the user is associated with **several** Company User accounts and there is a default one.
+- the user has impersonated as a Company User via the `/company-user-access-tokens` endpoint;
+- the user is associated with a **single** Company User account;
+- the user is associated with **several** Company User accounts and there is a default one.
 
 Using this additional scope, you can perform additional checks to identify whether a resource should be available to a user. For this purpose, you can identify which Company User account is currently active, and also what company and business unit it belongs to. This can be done using the following helper methods:
 

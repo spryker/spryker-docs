@@ -7,9 +7,9 @@ This document describes how to install the [Inventory Management](/docs/pbc/all/
 The following feature integration guide expects the basic feature to be in place.
 
 The current feature integration guide adds the following functionality:
-* [Warehouse Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html#warehouse-management)
-* [Add to cart from catalog page](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
-* [Warehouse address](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html#defining-a-warehouse-address)
+- [Warehouse Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html#warehouse-management)
+- [Add to cart from catalog page](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
+- [Warehouse address](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html#defining-a-warehouse-address)
 
 {% endinfo_block %}
 
@@ -333,15 +333,15 @@ Sony Experts MER000006 Warehouse 1,Wallstrasse 58,,,53507,Dernau,,DE,+49 2643 48
 {% info_block warningBox "Verification" %}
 
 Make sure the following:
-* The CSV files have an empty line at the end.
-* Each `warehouse_name` entry in `warehouse_address.csv` has a respective `name` entry in the `warehouse.csv`.
+- The CSV files have an empty line at the end.
+- Each `warehouse_name` entry in `warehouse_address.csv` has a respective `name` entry in the `warehouse.csv`.
 
 {% endinfo_block %}
 
 2. Update the following import action files with the following action:
-   * `data/import/common/commerce_setup_import_config_{SPRYKER_STORE}.yml`
-   * `data/import/local/full\_{SPRYKER\_STORE}.yml`
-   * `data/import/production/full\_{SPRYKER\_STORE}.yml`
+   - `data/import/common/commerce_setup_import_config_{SPRYKER_STORE}.yml`
+   - `data/import/local/full\_{SPRYKER\_STORE}.yml`
+   - `data/import/production/full\_{SPRYKER\_STORE}.yml`
 
 ```yaml
   - data_entity: stock-address
@@ -570,6 +570,7 @@ class StockDependencyProvider extends SprykerStockDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -627,6 +628,7 @@ Make sure that after the order is created, order items gain the `warehouse alloc
 {% endinfo_block %}
 
 ## Implement and integrate the warehouse allocation process for product and product offer order items
+
 This section describes an example of how to implement and integrate the warehouse allocation process for product and product offer order items and how this process work.
 
 Follow the steps below to install an example for product and product offer warehouse allocations.

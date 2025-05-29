@@ -119,6 +119,7 @@ Request sample: retrieve a category node
     }
 }
 ```
+
 </details>
 
 {% include /pbc/all/glue-api-guides/{{page.version}}/category-nodes-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/category-nodes-response-attributes.md -->

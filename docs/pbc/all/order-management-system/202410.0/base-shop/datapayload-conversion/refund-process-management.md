@@ -34,8 +34,8 @@ Refund manages the retour refund process.
 
 `RefundFacade` contains the following methods:
 
-* `calculateRefund(array $salesOrderItems, SpySalesOrder $salesOrderEntity)`: Calculates the refundable amount for the sales order
-* `saveRefund(RefundTransfer $refundTransfer)` persists the calculated refund amount. `RefundFacade::calculateRefund($salesOrderItems, $salesOrderEntity)` returns `RefundTransfer` that contains the calculated refundable amount.
+- `calculateRefund(array $salesOrderItems, SpySalesOrder $salesOrderEntity)`: Calculates the refundable amount for the sales order
+- `saveRefund(RefundTransfer $refundTransfer)` persists the calculated refund amount. `RefundFacade::calculateRefund($salesOrderItems, $salesOrderEntity)` returns `RefundTransfer` that contains the calculated refundable amount.
 
 ## Using the `Refund` module
 

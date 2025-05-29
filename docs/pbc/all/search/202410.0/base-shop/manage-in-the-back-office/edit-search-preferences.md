@@ -28,10 +28,10 @@ Review the [reference information](#reference-information-edit-search-preference
 
 1. Next to the attribute you want to edit the search preferences for, click **Edit**.
 2. On the **Edit search preferences** page, select **Yes** or **No** for the following:
-    * **FULL TEXT**
-    * **FULL TEXT BOOSTED**
-    * **SUGGESTION TERMS**
-    * **COMPLETION TERMS**
+    - **FULL TEXT**
+    - **FULL TEXT BOOSTED**
+    - **SUGGESTION TERMS**
+    - **COMPLETION TERMS**
 3. Click **Save**.
 This opens the **Search Preferences** page with a success message displayed.
 4. Optional: To apply the changes, click **Synchronize search preferences**.
@@ -69,12 +69,12 @@ If **FULL TEXT BOOSTED** is enabled for two attributes with the same value, in t
 
 ### SUGGESTION TERMS
 
-Defines if alternative search terms are provided if a search item is misspelled. For example, the *storage_media* attribute has the *SSD* and *Flash* values. With **SUGGESTION TERMS** enabled, when a customer searches for `flashs`, the search results page contains a a suggested search term _flash_.
+Defines if alternative search terms are provided if a search item is misspelled. For example, the *storage_media* attribute has the *SSD* and *Flash* values. With **SUGGESTION TERMS** enabled, when a customer searches for `flashs`, the search results page contains a a suggested search term *flash*.
 ![Include for suggestion](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/include-for-suggestion.png)
 
 ### COMPLETION TERMS
 
 Defines if auto-completion suggestions appear when customers search for the values of this attribute.
 
-For example, the _storage_media_ attribute has *SSD* and *Flash* values. With  **COMPLETION TERMS** enabled, when a customer enters `fla` in the search field, the search term is autocompleted with `sh`, and there is a list of suggested terms in the search results.
+For example, the *storage_media* attribute has *SSD* and *Flash* values. With  **COMPLETION TERMS** enabled, when a customer enters `fla` in the search field, the search term is autocompleted with `sh`, and there is a list of suggested terms in the search results.
 ![Completion terms](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/completion-terms.png)

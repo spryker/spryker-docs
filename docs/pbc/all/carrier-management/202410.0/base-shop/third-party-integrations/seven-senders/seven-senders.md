@@ -19,24 +19,24 @@ SEVEN SENDERS optimizes international cross-border shipments by serving as Europ
 
 YOUR ADVANTAGES:
 
-* Seamless integration into the services offered by SEVEN SENDERS
-* Full control over the customer experience during the delivery process
-* Proactively creating the customer journey during delivery
-* Tracking page in the shop design - in no time and without IT support
-* Direct delivery updates to the customer: the right information at the right time
-* 25% reduction of customer service efforts through proactive customer communication
-* Harmonization of shipment data including all shipping providers and warehouse locations
-* Access to all premium parcel delivery providers through one platform
-* Multi-carrier solution: the optimal carrier for each parcel
-* Straightforward connection to the own online shop through our APIs and partner plugins
+- Seamless integration into the services offered by SEVEN SENDERS
+- Full control over the customer experience during the delivery process
+- Proactively creating the customer journey during delivery
+- Tracking page in the shop design - in no time and without IT support
+- Direct delivery updates to the customer: the right information at the right time
+- 25% reduction of customer service efforts through proactive customer communication
+- Harmonization of shipment data including all shipping providers and warehouse locations
+- Access to all premium parcel delivery providers through one platform
+- Multi-carrier solution: the optimal carrier for each parcel
+- Straightforward connection to the own online shop through our APIs and partner plugins
 
 ## Related Developer guides
 
-* [Install and configure Seven Senders](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/seven-senders/install-and-configure-seven-senders.html)
-* [Integrate Seven Senders](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/seven-senders/integrate-seven-senders.html)
-* [Seven Senders — API requests](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/seven-senders/seven-senders-api-requests.html)
-* [Seven Senders — Mappers](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/seven-senders/seven-senders-mappers.html)
-* [Seven Senders — Persistence layer](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/seven-senders/seven-senders-persistance-layer.html)
+- [Install and configure Seven Senders](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/seven-senders/install-and-configure-seven-senders.html)
+- [Integrate Seven Senders](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/seven-senders/integrate-seven-senders.html)
+- [Seven Senders — API requests](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/seven-senders/seven-senders-api-requests.html)
+- [Seven Senders — Mappers](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/seven-senders/seven-senders-mappers.html)
+- [Seven Senders — Persistence layer](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/seven-senders/seven-senders-persistance-layer.html)
 
 ---
 

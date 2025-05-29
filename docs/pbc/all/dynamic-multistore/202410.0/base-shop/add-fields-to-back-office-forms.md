@@ -14,6 +14,7 @@ To add the `contactEmail` field to `StoreContextApplicationTransfer` and configu
 1. Add the field to `StoreContextApplicationTransfer`:
 
 **src/Pyz/Shared/StoreContext/Transfer/store_context.transfer.xml**
+
 ```xml
 <?xml version="1.0"?>
 <transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
@@ -61,6 +62,7 @@ class СontactEmailRule implements StoreContextValidatorRuleInterface
 }
 
 ```
+
 3. Add a rule to the validator by extending `StoreContextBusinessFactory`:
 
 <details>
@@ -221,9 +223,9 @@ class StoreContextGuiCommunicationFactory extends SprykerStoreContextGuiCommunic
 2. On the **Stores** page, click **Edit store** next to a store.
 3. On the **Edit store** page, click the **Settings** tab.
 In the **Settings** tab, make sure the following applies:
-  * The default block with the **APPLICATION** value set to **Default** is displayed.
-  * The **CONTACT EMAIL** field is displayed.
-  * The **CONTACT EMAIL** field is required and accepts only valid email addresses.
+- The default block with the **APPLICATION** value set to **Default** is displayed.
+- The **CONTACT EMAIL** field is displayed.
+- The **CONTACT EMAIL** field is required and accepts only valid email addresses.
 
 ![contact-email-field](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/add-fields-to-back-office-forms.md/contact-email-field.png)
 

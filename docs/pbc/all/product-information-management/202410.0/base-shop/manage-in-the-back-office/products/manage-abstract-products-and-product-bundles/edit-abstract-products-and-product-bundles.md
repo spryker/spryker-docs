@@ -32,8 +32,8 @@ Each section contains reference information. Make sure to look up the necessary 
 
 1. On the **Edit Product Abstract: {SKU}** page, click the **General** tab.
 2. For **STORE RELATION**, do the following:
-    * Select the checkboxes next to the stores you want to start displaying this product in.
-    * Clear the checkboxes next to the stores you want to stop displaying this product in.
+    - Select the checkboxes next to the stores you want to start displaying this product in.
+    - Clear the checkboxes next to the stores you want to stop displaying this product in.
 3. Enter a **NAME** for needed locales.
 4. Enter a **DESCRIPTION** for needed locales.
 5. Select **NEW FROM** and **NEW TO** dates.
@@ -99,9 +99,9 @@ To create a product variant, see [Create product variants](/docs/pbc/all/product
 
 1. On the **Edit Product Abstract: {SKU}** page, click the **SEO** tab.
 2. Enter any of the following for needed locales:
-    * **TITLE**
-    * **KEYWORDS**
-    * **DESCRIPTION**
+    - **TITLE**
+    - **KEYWORDS**
+    - **DESCRIPTION**
 4. Select **Save**.
     The page refreshes with the success message displayed.
 

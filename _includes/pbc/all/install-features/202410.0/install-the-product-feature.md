@@ -28,6 +28,7 @@ Install the required features:
 ```bash
 composer require spryker-feature/product:"{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:

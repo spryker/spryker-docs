@@ -21,8 +21,8 @@ related:
 ## Credit card
 
 Adyen module provides the following integration options:
-  * Simple
-  * With 3D Secure authorization
+- Simple
+- With 3D Secure authorization
 
 3D Secure integration requires adjustments on the project level. Do the following:
 
@@ -415,6 +415,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
     }
 }
 ```
+
 {% info_block infoBox "Info" %}
 
 The state machine example is available in `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenCreditCard01.xml`.

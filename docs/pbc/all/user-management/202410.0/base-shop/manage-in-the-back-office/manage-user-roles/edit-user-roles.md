@@ -43,7 +43,7 @@ Review the [reference information](#reference-information-editing-roles) before 
 | NAME | Unique identifier of the role. You use this name to assign roles when managing users. |
 | BUNDLE | Depending on the **PERMISSION**, allows or denies access to a section of the Back Office. You can check this value by going to the needed section and looking it up in the URL. For example, in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`, `product-attribute-gui` is a bundle. |
 | CONTROLLER | Depending on the **PERMISSION**, allows or denies access to a  subsection of the Back Office. You can check this value by going to the needed subsection and looking it up in the URL. For example, in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`, `attribute` is a controller. |
-| ACTION | Depending on the **PERMISSION**, allows or denies access to making actions. You can check this value by going to the needed action and looking it up in the URL. For example, in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`, `create` is an action.
+| ACTION | Depending on the **PERMISSION**, allows or denies access to making actions. You can check this value by going to the needed action and looking it up in the URL. For example, in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`, `create` is an action. |
 | PERMISSION | Denies or allows access to the **BUNDLE**, **CONTROLLER**, and **ACTION**. |
 
 **Tips and tricks**
@@ -92,4 +92,5 @@ See the example of the `navigation.xml` file of the `AvailabilityGui` module:
     </product>
 </config>
 ```
+
 </details>

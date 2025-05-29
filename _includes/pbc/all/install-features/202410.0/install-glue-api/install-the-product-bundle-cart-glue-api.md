@@ -16,6 +16,7 @@ To start the feature integration, overview and install the necessary features:
 ## 1) Install the required modules
 
 Install the required modules using Composer:
+
 ```bash
 composer require spryker/product-bundle-carts-rest-api:"^1.0.0" --update-with-dependencies
 ```
@@ -58,7 +59,7 @@ Ensure that the following changes have been applied in the transfer objects:
 
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |       
+| Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | ProductBundleCartItemFilterPlugin | Filters bundle items off the list of simple cart items. | None | Spryker\Glue\ProductBundleCartsRestApi\Plugin\CartsRestApi |
 | BundleItemByQuoteResourceRelationshipPlugin |Adds the `bundle-items` resource as a relationship by `QuoteTransfer` provided as a payload. |None |Spryker\Glue\ProductBundleCartsRestApi\Plugin\GlueApplication|
@@ -123,6 +124,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 
@@ -202,8 +204,8 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 
 Ensure that you can:
 
-*   Edit bundle item quantity: `PATCH https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}bundleItemGroupKey{% raw %}}}{% endraw %}`.
-*   Delete a bundle from cart: `DELETE https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}bundleItemGroupKey{% raw %}}}{% endraw %}`.
+- Edit bundle item quantity: `PATCH https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}bundleItemGroupKey{% raw %}}}{% endraw %}`.
+- Delete a bundle from cart: `DELETE https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}bundleItemGroupKey{% raw %}}}{% endraw %}`.
 
 {% endinfo_block %}
 

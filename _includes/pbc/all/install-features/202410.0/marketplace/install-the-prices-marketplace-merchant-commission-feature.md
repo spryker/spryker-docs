@@ -63,8 +63,8 @@ class MerchantCommissionDependencyProvider extends SprykerMerchantCommissionDepe
 1. Import a new merchant commission via data import or GUI import with item condition defined as a query string with an `item-price` field. For example,  `item-price >= '500'`.
 2. Add a merchant product with the corresponding price to cart and place the order.
 3. Make sure the following applies:
-  * The `commission-calculate` OMS event has been triggered.
-  * In the `spy_sales_merchant_commission` database table, a record with the merchant commission applied to corresponding sales order item has been created.
+- The `commission-calculate` OMS event has been triggered.
+- In the `spy_sales_merchant_commission` database table, a record with the merchant commission applied to corresponding sales order item has been created.
 
 
 {% endinfo_block %}

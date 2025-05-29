@@ -19,11 +19,11 @@ Namogoo is pioneering the market of customer hijacking prevention. Namogoo's dis
 
 YOUR ADVANTAGES:
 
-* Immediate Conversion Uplift of 2-5%
-* Improve cart abandonment and customer retention KPIs
-* Protect brand equity and customer experience
-* Easy deployment, integrated reporting, zero maintenance
-* Cloud-based platform uses AI and machine learning
+- Immediate Conversion Uplift of 2-5%
+- Improve cart abandonment and customer retention KPIs
+- Protect brand equity and customer experience
+- Easy deployment, integrated reporting, zero maintenance
+- Cloud-based platform uses AI and machine learning
 
 ---
 

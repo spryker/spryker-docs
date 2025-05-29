@@ -74,8 +74,8 @@ There are two levels of the Sniffer's severity: Level 1 (normal, used by default
 
 Additional options:
 
-* `-v`: Verbose output
-* `-d`: Dry-run, only output the command to be run
+- `-v`: Verbose output
+- `-d`: Dry-run, only output the command to be run
 
 Remember to always commit your changes before executing this command!
 

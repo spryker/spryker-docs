@@ -69,8 +69,8 @@ Before building aggregations, document attributes that can serve as facets need 
 
 While this approach might be okay for filtering, it doesn't work well for faceting because queries need to explicitly list all the field names for which you want to create aggregations. It can be done in two ways:
 
-* Always send all possible field names as part of your faceted query. This is not very practical when having 1000s of different facets. The query becomes huge (and possibly slow) while the list of all possible field names needs to be maintained outside of Elasticsearch.
-* Run a first query that fetches the most common field names and attributes for a specific search request and then use those results to build a second query that does the faceting (and fetching of the document). In that case, the second query looks like this:
+- Always send all possible field names as part of your faceted query. This is not very practical when having 1000s of different facets. The query becomes huge (and possibly slow) while the list of all possible field names needs to be maintained outside of Elasticsearch.
+- Run a first query that fetches the most common field names and attributes for a specific search request and then use those results to build a second query that does the faceting (and fetching of the document). In that case, the second query looks like this:
 
 ```js
 "aggregations": {

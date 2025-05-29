@@ -25,12 +25,12 @@ iAdvize is a conversational marketing platform that allows more than 1,500 brand
 
 YOUR ADVANTAGES:
 
-* Conversational Platform
-* Engage your customers proactively thanks to smart targeting
-* Omni-Channel: Website Chat, Call, Video & Messaging
-* Optimize your conversion rate and customer live time value
-* connectors to your favorite CRM
-* supported by our customer success team
+- Conversational Platform
+- Engage your customers proactively thanks to smart targeting
+- Omni-Channel: Website Chat, Call, Video & Messaging
+- Optimize your conversion rate and customer live time value
+- connectors to your favorite CRM
+- supported by our customer success team
 
 ---
 

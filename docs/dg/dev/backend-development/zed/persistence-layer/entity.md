@@ -62,6 +62,6 @@ Usually, entities are used in the module's `Business` layer to persist data. In 
 
 You might use the following definitions to generate the related code:
 
-* `vendor/bin/console spryk:run AddZedPersistencePropelAbstractEntity`: Add Zed Persistence Propel Abstract Entity
+- `vendor/bin/console spryk:run AddZedPersistencePropelAbstractEntity`: Add Zed Persistence Propel Abstract Entity
 
 For details, see [Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks.html).

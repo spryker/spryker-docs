@@ -19,7 +19,7 @@ The URL is generated with the following structure: `your_domain/cart/preview/UII
 
 The cart can be shared with internal users, the users of the business unit, and external users, and non-company users (friends, relatives, followers on social media). By accessing the provided URL, a user can perform the actions depending on the permissions level:
 
-* *Preview*: this option is available for external users that do not belong to the company account, or are not logged in.
+- *Preview*: this option is available for external users that do not belong to the company account, or are not logged in.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Unique+URL+per+Cart+for+Easy+Sharing/external-users-interface.png)
 
@@ -34,8 +34,8 @@ The preview link is the only available option for the B2C environment. B2C users
 
 {% endinfo_block %}
 
-* *Read-only*: for details, see [Read only](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html#read-only).
-* *Full access*: for details, see [Full access](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html#full-access).
+- *Read-only*: for details, see [Read only](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html#read-only).
+- *Full access*: for details, see [Full access](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html#full-access).
 
 {% info_block warningBox %}
 
@@ -46,7 +46,7 @@ Sharing cart with read-Only or full access permissions is available only for int
 ![internal-users-interface.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Unique+URL+per+Cart+for+Easy+Sharing/internal-users-interface.png)
 The link allows displaying prices according to the selected currency. The cart shared by the link displays the prices in the currency that the owner has set up. For example, if the default currency is set to EUR and the owner changes the currency to CHF, the shopping cart shared through the link also displays the prices in CHF.
 
-If a customer selects a link of the cart that's not available, the _This cart is unavailable_ message is displayed.
+If a customer selects a link of the cart that's not available, the *This cart is unavailable* message is displayed.
 
 ## Related Developer documents
 

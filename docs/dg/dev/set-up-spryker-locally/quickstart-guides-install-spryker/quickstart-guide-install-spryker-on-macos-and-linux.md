@@ -15,9 +15,9 @@ To install Spryker on macOS or Linux, follow these steps:
 
 ## Prerequisites
 
-* Install [Docker](https://www.docker.com/) or [OrbStack](https://orbstack.dev/)(macOS only).
+- Install [Docker](https://www.docker.com/) or [OrbStack](https://orbstack.dev/)(macOS only).
 
-* macOS: Install or update Mutagen and Mutagen Compose:
+- macOS: Install or update Mutagen and Mutagen Compose:
 
 ```bash
 brew list | grep mutagen | xargs brew remove && brew install mutagen-io/mutagen/mutagen mutagen-io/mutagen/mutagen-compose && mutagen daemon stop && mutagen daemon start

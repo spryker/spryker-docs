@@ -93,6 +93,7 @@ Content-Length: 174
 ```
 
 3. Make sure that after updating the stock data, the product availability is updated as well:
+
 ```sql
 SELECT * from spy_availability WHERE sku='PRODUCT_SKU';
 ```

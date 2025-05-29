@@ -21,6 +21,7 @@ To implement Econda plugin you should be familiar with the concept of [extending
 ## Zed Output Folder
 
 We need to define the output folder where the generated CSV files will be saved. This is done by adding a line in your config.
+
 ```php
 config [EcondaConstants::CSV_FOLDER_PATH] = APPLICATION_ROOT_DIR . '' ;
 ```
@@ -244,7 +245,7 @@ public function getConsoleCommands(Container $container)
 
 ## Checking Your Setup
 
- If all the steps are  followed correctly, you should be able to see the` econda:file:export` command in Econda section when you run `vendor/bin/console` from the project's root folder.
+ If all the steps are  followed correctly, you should be able to see the`econda:file:export` command in Econda section when you run `vendor/bin/console` from the project's root folder.
 Running `vendor/bin/console econda:file:export` will create several CSV files in the folder you have specified in `$config[EcondaConstants::ECONDA_CSV_FOLDER_PATH]`.
 
 ## Exporting Data to Econda
@@ -275,6 +276,7 @@ class AuthConfig extends SprykerAuthConfig
 
 }
 ```
+
 and a rule in your `config_default.php`:
 
 ```php
@@ -290,6 +292,7 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
 ];
 
 ```
+
 {% info_block errorBox "Warning" %}
 
 ZED should never be accessible from public network. You should make a firewall exception to allow econda to connect to your ZED.
@@ -297,6 +300,7 @@ ZED should never be accessible from public network. You should make a firewall e
 {% endinfo_block %}
 
 ## Testing your Setup
+
 To test if your ZED is reachable without login you can use CURL, running:
 
 ```bash

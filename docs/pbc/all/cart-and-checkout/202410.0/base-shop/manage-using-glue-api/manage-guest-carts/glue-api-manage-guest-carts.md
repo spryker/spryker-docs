@@ -23,10 +23,10 @@ This endpoint lets you manage guest carts.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
-* [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
-* [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html)
+- [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+- [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+- [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
+- [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html)
 
 ## Create a guest cart
 
@@ -71,9 +71,9 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 {% info_block infoBox "Included resources" %}
 
-* To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
-* To retrieve product measurement units, include `sales-units` and `product-measurement-units`.
-* To retrieve product labels assigned to the products in a cart, include `concrete-products` and `product-labels`.
+- To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
+- To retrieve product measurement units, include `sales-units` and `product-measurement-units`.
+- To retrieve product labels assigned to the products in a cart, include `concrete-products` and `product-labels`.
 
 {% endinfo_block %}
 
@@ -134,6 +134,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     }
 }
 ```
+
 </details>
 
 
@@ -230,6 +231,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 
@@ -304,6 +306,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 
@@ -377,6 +380,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 
@@ -635,6 +639,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -764,6 +769,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 
@@ -834,6 +840,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -981,6 +988,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 <a name="guest-cart-response-attributes"></a>
@@ -1025,8 +1033,8 @@ class CartsRestApiConfig extends SprykerCartsRestApiConfig
 
 Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/multiple-carts-feature-overview.html) environment:
 
-* In a **single cart** environment, the products in the guest cart are added to the customers' own cart;
-* In a **multiple cart** environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.
+- In a **single cart** environment, the products in the guest cart are added to the customers' own cart;
+- In a **multiple cart** environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.
 
 The workflow is displayed in the following diagram:
 <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers tags lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2022-08-01T11:03:23.652Z\&quot; agent=\&quot;5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\&quot; etag=\&quot;QnmmQ9E2tNcSC_Frfojm\&quot; version=\&quot;20.2.2\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;C5RBs43oDa-KdzZeNtuy\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>

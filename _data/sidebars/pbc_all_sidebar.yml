@@ -30,6 +30,7 @@ entries:
                     include_versions:
                       - "202410.0"
 
+
               - title: Configure the timezone in the Back Office
                 url: /docs/pbc/all/back-office/base-shop/configure-the-timezone-in-the-back-office.html
 
@@ -2878,6 +2879,10 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/timed-product-availability-overview.html
                       - title: Search widget for concrete products
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/search-widget-for-concrete-products-overview.html
+                      - title: Concrete SKU product filter feature overview
+                        url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/concrete-sku-product-filter-feature-overview.html
+                        include_versions:
+                        - "202505.0"
 
                   - title: Alternative Products
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/alternative-products-feature-overview.html
@@ -2938,6 +2943,11 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-image-feature.html
                       - title: Category Management
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html
+                      - title: Install Concrete SKU product filter feature
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-concrete-sku-filter-feature.html
+                        include_versions:
+                        - "202505.0"       
+                                       
                       - title: Install the Category Management + Catalog feature
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-management-catalog-feature.html
                       - title: Category Management + CMS

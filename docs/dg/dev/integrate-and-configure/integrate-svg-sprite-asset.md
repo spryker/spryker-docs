@@ -20,36 +20,22 @@ composer require spryker-shop/shop-ui:^1.93.1
 
 ---
 
-2. Add or Update the Icon Sprite Twig File
+2. Create an svg sprite file at /frontend/assets/global/default/icons/sprite.svg.
 
-**File:**  
-`src/Pyz/Yves/ShopUi/Theme/default/components/atoms/icon-sprite/icon-sprite.twig`
+3. Put your SVG icons into the `sprite.svg` file. Get all the symbols from the `src/Pyz/Yves/ShopUi/Theme/default/components/atoms/icon-sprite/icon-sprite.twig` file and put it into newly created /frontend/assets/global/default/icons/sprite.svg:
 
-**Content:**
-```twig
-...
-{% define data = {
-    isSpriteGenerationEnabled: true,
-} %}
-...
+**File:**
+`/frontend/assets/global/default/icons/sprite.svg`
+
+**Content Example:**
+
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
+    <!-- Put SVG icons here -->
+</svg>
 ```
 
-> This file should contain all your SVG `<symbol>` definitions, wrapped in `{% apply spaceless %} ... {% endapply %}`.
-
-_Example structure:_
-```twig
-{% apply spaceless %}
-  <symbol id="icon-example" viewBox="0 0 24 24">
-    <!-- SVG content -->
-  </symbol>
-  {# Add more <symbol> elements here #}
-{% endapply %}
-```
-_Update or add your individual symbols as needed._
-
----
-
-3. Add or Update the Icon Component Twig File
+4. Add or Update the Icon Component Twig File
 
 **File:**  
 `src/Pyz/Yves/ShopUi/Theme/default/components/atoms/icon/icon.twig`
@@ -64,157 +50,50 @@ _Update or add your individual symbols as needed._
 } %}
 ```
 
----
+5. Use the icon component in your Twig templates:
 
-4. Add the Icon Sprite Extractor Script
+The new approach uses a pre-generated or manually created SVG sprite. You no longer need to maintain or update `icon-sprite.twig`.
 
-**File:**  
-`frontend/libs/icon-sprite-extractor.js`
+**Usage Example:**
 
-**Content:**
-```js
-const fs = require('fs').promises;
-const path = require('path');
-const { existsSync } = require('fs');
+The usage of the new svg sprite is still working in the same way:
 
-/**
- * Extracts SVG sprites from the first available Twig file and saves them to the target location
- * @param {Object} options Configuration options
- * @param {string|string[]} options.sourcePath Path or paths to the source Twig file(s)
- * @param {string} options.targetPath Path where the SVG file should be saved
- * @returns {Promise<void>}
- */
-const extractIconSprites = async ({ sourcePath, targetPath }) => {
-    try {
-        console.info('Extracting icon sprites...');
-
-        const sourcePaths = Array.isArray(sourcePath) ? sourcePath : [sourcePath];
-        let twigContent = null;
-        let usedPath = null;
-
-        for (const path of sourcePaths) {
-            if (existsSync(path)) {
-                twigContent = await fs.readFile(path, 'utf8');
-                usedPath = path;
-                console.info(`Using icon sprite from: ${path}`);
-                break;
-            }
-        }
-
-        if (!twigContent) {
-            throw new Error('None of the provided icon sprite paths exist');
-        }
-
-        const spacelessRegex = /{% apply spaceless %}([\s\S]*?)(?:{% endapply %}|$)/;
-        const match = twigContent.match(spacelessRegex);
-
-        if (!match || !match[1]) {
-            throw new Error(`Could not find content within spaceless block in the Twig file: ${usedPath}`);
-        }
-
-        const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
-${match[1]}
-</svg>`;
-
-        const targetDir = path.dirname(targetPath);
-        await fs.mkdir(targetDir, { recursive: true });
-
-        await fs.writeFile(targetPath, svgContent, 'utf8');
-
-        console.info('Icon sprites successfully extracted to', targetPath);
-    } catch (error) {
-        console.error('Error extracting icon sprites:', error.message);
-    }
-};
-
-module.exports = extractIconSprites;
-```
-
----
-
-5. Update Frontend Settings
-
-**File:**  
-`frontend/settings.js`
-
-**Add the following inside your `globalSettings` paths:**
-```js
-    iconSprite: {
-        sources: [
-            './src/Pyz/Yves/ShopUi/Theme/default/components/atoms/icon-sprite/icon-sprite.twig',
-            './vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/components/atoms/icon-sprite/icon-sprite.twig',
-        ],
-        target: './frontend/assets/global/default/icons/sprite.svg',
+```twig
+{% include atom('icon') with {
+    data: {
+        name: 'search',
     },
-```
-**And inside `getAppSettingsByTheme`:**
-```js
-    iconSprite: globalSettings.paths.iconSprite,
-```
+} only %}```
 
 ---
 
-6. Update the Frontend Build Config
+6. Customizing the Sprite Path (Optional)
+
+If your sprite is located at a different path, you can create or update an `icon.twig` component to use a custom path:
 
 **File:**  
-`frontend/configs/development.js`
+`src/Pyz/Yves/ShopUi/Theme/default/components/atoms/icon/icon.twig`
 
-**Add or update:**
-```js
-let isExtractIconSpritesEnabled = false;
-let extractIconSprites = null;
+**Content Example:**
 
-try {
-    extractIconSprites = require('../libs/icon-sprite-extractor');
-    isExtractIconSpritesEnabled = true;
-} catch (e) {
-    console.info('Icon sprite extraction is disabled.');
-}
+```twig
+{% extends atom('icon', '@SprykerShop:ShopUi') %}
 
-const getConfiguration = async (appSettings) => {
-    // ...existing code...
+{% define data = {
+    name: required,
+    isSpriteGenerationEnabled: true,
+} %}
 
-    if (isExtractIconSpritesEnabled) {
-        try {
-            await extractIconSprites({
-                sourcePath: appSettings.paths.iconSprite.sources.map((src) => join(process.cwd(), src)),
-                targetPath: join(process.cwd(), appSettings.paths.iconSprite.target),
-            });
-        } catch (error) {
-            console.error('Error extracting icon sprites:', error);
-        }
-    }
-
-    // ...rest of your function...
-};
+{% block body %}
+    <use xlink:href="{{ publicPath('icons/sprite.svg#:' ~ data.name) }}"></use>
+{% endblock %}
 ```
+
+This allows you to use a different sprite path, if needed.
 
 ---
 
-7. Update `.gitignore`
+**Notes:**
+- The old `icon-sprite.twig` is no longer required and can be removed.
+- Make sure your sprite file is accessible at the specified path.
 
-Add this line to avoid committing the generated sprite:
-
-```
-/frontend/assets/global/default/icons/sprite.svg
-```
-
----
-
-8. Rebuild the Frontend
-
-Run:
-```bash
-console frontend:project:install-dependencies
-console frontend:yves:build -e production
-```
-
-9. Rebuild twig cache
-```bash
-console t:c:w
-```
-
----
-
-**You’re all set!**  
-The system now automatically extracts SVG symbols from your Twig file and generates a sprite for use in the frontend. Icons can be managed simply by editing `icon-sprite.twig` and running the build.

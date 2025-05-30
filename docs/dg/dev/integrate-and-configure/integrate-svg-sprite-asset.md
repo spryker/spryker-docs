@@ -5,29 +5,24 @@ last_updated: May 26, 2025
 template: feature-integration-guide-template
 ---
 
-Integrate Automated SVG Icon Sprite Extraction
+This guide describes how to integrated automated SVG sprite extraction for scalable icon management in Yves.
 
-This guide helps you enable automated SVG sprite extraction for scalable icon management in your Spryker Yves project.
+1. Update ShopUi to 1.93.1 or higher:
 
----
-
-1. Update `composer.json` to require the right ShopUi version
-
-Make sure you have at least the following version:
 ```bash
 composer require spryker-shop/shop-ui:^1.93.1
 ```
 
----
 
-2. Create an svg sprite file at /frontend/assets/global/default/icons/sprite.svg.
+2. Create the sprite file: `/frontend/assets/global/default/icons/sprite.svg`.
 
 3. Put your SVG icons into the `sprite.svg` file. Get all the symbols from the `src/Pyz/Yves/ShopUi/Theme/default/components/atoms/icon-sprite/icon-sprite.twig` file and put it into newly created /frontend/assets/global/default/icons/sprite.svg:
 
 **File:**
-`/frontend/assets/global/default/icons/sprite.svg`
 
-**Content Example:**
+Example:
+
+**/frontend/assets/global/default/icons/sprite.svg**
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
@@ -35,48 +30,41 @@ composer require spryker-shop/shop-ui:^1.93.1
 </svg>
 ```
 
-4. Add or Update the Icon Component Twig File
+4. Add or update the icon component file:
 
-**File:**  
-`src/Pyz/Yves/ShopUi/Theme/default/components/atoms/icon/icon.twig`
+**src/Pyz/Yves/ShopUi/Theme/default/components/atoms/icon/icon.twig**
 
-**Content:**
 ```twig
+{% raw %}
 {% extends atom('icon', '@SprykerShop:ShopUi') %}
 
 {% define data = {
     name: required,
     isSpriteGenerationEnabled: true,
 } %}
+{% endraw %}
 ```
 
-5. Use the icon component in your Twig templates:
-
-The new approach uses a pre-generated or manually created SVG sprite. You no longer need to maintain or update `icon-sprite.twig`.
-
-**Usage Example:**
-
-The usage of the new svg sprite is still working in the same way:
+5. Use the icon component in your Twig templates. The new approach uses a pregenerated or manually created SVG sprite. You no longer need to maintain or update `icon-sprite.twig`.
+Usage example:
 
 ```twig
+{% raw %}
 {% include atom('icon') with {
     data: {
         name: 'search',
     },
-} only %}```
+} only %}
+{% endraw %}
+```
 
----
 
-6. Customizing the Sprite Path (Optional)
+6. Optional: If your sprite is located at a different path, you can create or update the `icon.twig` component to use a custom path:
 
-If your sprite is located at a different path, you can create or update an `icon.twig` component to use a custom path:
-
-**File:**  
-`src/Pyz/Yves/ShopUi/Theme/default/components/atoms/icon/icon.twig`
-
-**Content Example:**
+**src/Pyz/Yves/ShopUi/Theme/default/components/atoms/icon/icon.twig**
 
 ```twig
+{% raw %}
 {% extends atom('icon', '@SprykerShop:ShopUi') %}
 
 {% define data = {
@@ -87,13 +75,33 @@ If your sprite is located at a different path, you can create or update an `icon
 {% block body %}
     <use xlink:href="{{ publicPath('icons/sprite.svg#:' ~ data.name) }}"></use>
 {% endblock %}
+{% endraw %}
 ```
 
-This allows you to use a different sprite path, if needed.
+- You can remove the old `icon-sprite.twig` because it's no longer required
+- Make sure your sprite file is accessible at the specified path
 
----
 
-**Notes:**
-- The old `icon-sprite.twig` is no longer required and can be removed.
-- Make sure your sprite file is accessible at the specified path.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

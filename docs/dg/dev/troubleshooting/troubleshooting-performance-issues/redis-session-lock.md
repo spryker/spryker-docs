@@ -199,7 +199,7 @@ class SessionRedisDependencyProvider extends SprykerSessionRedisDependencyProvid
 }
 ```
 
-Read more in feature in the [release documentation](https://github.com/spryker/session-redis/releases/tag/1.10.0)
+Read more about Exclusion Condition Plugins in the [release documentation](https://github.com/spryker/session-redis/releases/tag/1.10.0)
 
 ### Lock TTL configuration
 

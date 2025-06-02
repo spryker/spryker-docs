@@ -23,41 +23,36 @@ def run_htmlproofer_with_retry(directory, options, max_tries = 1, delay = 5)
   retries = max_tries
   begin
     if options[:files]
-      # Check each file individually since HTMLProofer doesn't support multiple files in one call
-      options[:files].each do |file|
-        puts "Checking file: #{file}"
-        # Create a new options hash for each file to avoid modifying the original
-        file_options = options.reject { |k| k == :files }.merge({
-          :root_dir => '_site',  # Use _site as root since Jekyll builds there
+      puts "Checking #{options[:files].length} files..."
+      
+      # Create a temporary directory for the files to check
+      Dir.mktmpdir do |temp_dir|
+        # Copy all files to check into the temp directory maintaining their structure
+        options[:files].each do |file|
+          relative_path = file.sub(/^_site\//, '')
+          target_file = File.join(temp_dir, relative_path)
+          FileUtils.mkdir_p(File.dirname(target_file))
+          FileUtils.cp(file, target_file)
+        end
+
+        # Copy the entire _site directory structure for proper link resolution
+        FileUtils.cp_r(Dir.glob('_site/*'), temp_dir)
+
+        # Configure HTMLProofer options
+        check_options = options.reject { |k| k == :files }.merge({
           :disable_external => true,
           :allow_hash_href => true,
-          :check_internal_hash => true,  # Enable internal hash checking
-          :check_html => false,  # Don't validate HTML structure
+          :check_internal_hash => true,
+          :check_html => false,
           :log_level => :info,
-          :url_swap => {
-            # Convert URLs to match the _site directory structure
-            %r{^/} => '/_site/'  # Prepend _site to absolute paths
-          },
           :validation => {
-            :links => true,  # Check all links
-            :fragments => true  # Check fragment identifiers
+            :links => true,
+            :fragments => true
           }
         })
 
-        # Create a temporary directory for cache
-        cache_dir = File.join(Dir.tmpdir, 'htmlproofer_cache')
-        FileUtils.mkdir_p(cache_dir)
-        
-        # Set up caching with proper configuration
-        file_options[:cache] = {
-          :timeframe => {
-            :external => '1h',
-            :internal => '1h'
-          },
-          :storage_dir => cache_dir
-        }
-
-        HTMLProofer.check_file(file, file_options).run
+        # Check all files in the temporary directory
+        HTMLProofer.check_directory(temp_dir, check_options).run
       end
     else
       HTMLProofer.check_directory(directory, options).run
@@ -259,11 +254,7 @@ task :check_changed_files, [:file_list] do |t, args|
       %r{^#$},        # Ignore standalone hash links
       %r{^/$}         # Ignore root path
     ],
-    :parallel => { :in_processes => 3 },  # Run checks in parallel for speed
-    :swap_urls => {
-      # Handle fragment identifiers properly
-      %r{#.*$} => ''  # Remove fragments before checking file existence
-    }
+    :parallel => { :in_processes => 3 }  # Run checks in parallel for speed
   }
   
   begin

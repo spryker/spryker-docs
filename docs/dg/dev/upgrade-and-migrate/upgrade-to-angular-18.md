@@ -4,9 +4,7 @@ description: Learn how to upgrade your Spryker project to Angular 18 to benefit 
 template: module-migration-guide-template
 ---
 
-This document describes how to upgrade Angular to version 18 in your Spryker project.
-
-Spryker's previous version used Angular v17. Angular 18 provides improved developer experience, performance optimizations, and tooling enhancements.
+This document describes how to upgrade Angular to version 18. Angular 18 provides improved developer experience, performance optimizations, and tooling enhancements.
 
 This upgrade affects the following Marketplace modules, which have been updated with minor changes:
 
@@ -31,23 +29,19 @@ This upgrade affects the following Marketplace modules, which have been updated 
 
 ---
 
-## Estimated migration time: ~15 minutes
+Estimated migration time: ~15 minutes
 
 ## 1) Update Spryker modules
 
-Update the Marketplace modules by executing the following command:
+Update the Marketplace modules:
 
 ```bash
 composer update spryker/agent-dashboard-merchant-portal-gui spryker/agent-security-merchant-portal-gui spryker/comment-merchant-portal-gui spryker/dashboard-merchant-portal-gui spryker/dummy-merchant-portal-gui spryker/gui-table spryker/merchant-app-merchant-portal-gui spryker/merchant-profile-merchant-portal-gui spryker/merchant-relation-request-merchant-portal-gui spryker/merchant-relationship-merchant-portal-gui spryker/product-merchant-portal-gui spryker/product-offer-merchant-portal-gui spryker/sales-merchant-portal-gui spryker/security-merchant-portal-gui spryker/user-merchant-portal-gui spryker/zed-ui
 ```
 
----
-
 ## 2) Update `package.json`
 
-Only add or update the following fields in your `package.json`:
-
-### Add or update `engines` block:
+1. In `package.json`, update the `engines` block:
 
 ```json
 "engines": {
@@ -56,7 +50,7 @@ Only add or update the following fields in your `package.json`:
 },
 ```
 
-### Add or update dependencies:
+2. In `package.json`, add or update dependencies:
 
 ```json
 "dependencies": {
@@ -75,7 +69,7 @@ Only add or update the following fields in your `package.json`:
 }
 ```
 
-### Add or update devDependencies:
+3. In `package.json`, add or update devDependencies:
 
 ```json
 "devDependencies": {
@@ -96,7 +90,6 @@ Then run:
 npm install
 ```
 
----
 
 ## Hint: Check for broken hoisting
 

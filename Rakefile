@@ -28,11 +28,12 @@ def run_htmlproofer_with_retry(directory, options, max_tries = 1, delay = 5)
         puts "Checking file: #{file}"
         # Create a new options hash for each file to avoid modifying the original
         file_options = options.reject { |k| k == :files }.merge({
-          :root_dir => File.expand_path('_site'),  # Use absolute path
+          :root_dir => File.expand_path('.'),  # Use the project root as the base directory
           :disable_external => true,
           :allow_hash_href => true,
-          :check_internal_hash => false,  # Don't check fragment identifiers
-          :check_html => false  # Don't validate HTML structure
+          :check_internal_hash => true,  # Enable internal hash checking
+          :check_html => false,  # Don't validate HTML structure
+          :log_level => :info
         })
         HTMLProofer.check_file(file, file_options).run
       end
@@ -225,51 +226,24 @@ task :check_changed_files, [:file_list] do |t, args|
 
   puts "Processing files: #{html_files.join(', ')}"
 
-  # Create a temporary directory to store only the files we want to check
-  require 'tmpdir'
-  Dir.mktmpdir do |temp_dir|
-    # Copy only the files we want to check
-    files_to_check = []
-    
-    html_files.each do |file|
-      begin
-        next unless File.file?(file)  # Skip if not a regular file
-        
-        # Create the target directory structure
-        target_file = File.join(temp_dir, file)
-        FileUtils.mkdir_p(File.dirname(target_file))
-        
-        # Copy the file
-        FileUtils.cp(file, target_file)
-        files_to_check << target_file
-      rescue Errno::EISDIR
-        puts "Warning: Skipping directory #{file}"
-        next
-      rescue => e
-        puts "Warning: Error processing #{file}: #{e.message}"
-        next
-      end
-    end
-
-    if files_to_check.empty?
-      puts "No files to check after processing"
-      next
-    end
-
-    # Run HTMLProofer with minimal options
-    options = {
-      :files => files_to_check,
-      :ignore_urls => commonOptions[:ignore_urls]
-    }
-    
-    begin
-      run_htmlproofer_with_retry(nil, options)
-      puts "\nLink validation completed successfully"
-    rescue StandardError => e
-      puts "\nErrors found in changed files:"
-      puts e.message
-      raise "HTML-Proofer found errors in changed files"
-    end
+  # Run HTMLProofer with minimal options
+  options = {
+    :files => html_files,
+    :ignore_urls => commonOptions[:ignore_urls],
+    :url_ignore => [
+      /\{\{.*?\}\}/,  # Ignore template variables
+      %r{^#$},        # Ignore standalone hash links
+      %r{^/$}         # Ignore root path
+    ]
+  }
+  
+  begin
+    run_htmlproofer_with_retry(nil, options)
+    puts "\nLink validation completed successfully"
+  rescue StandardError => e
+    puts "\nErrors found in changed files:"
+    puts e.message
+    raise "HTML-Proofer found errors in changed files"
   end
 end
 

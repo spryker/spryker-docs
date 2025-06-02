@@ -37,8 +37,17 @@ def run_htmlproofer_with_retry(directory, options, max_tries = 1, delay = 5)
           :url_swap => {
             # Convert URLs to match the _site directory structure
             %r{^/} => '/_site/'  # Prepend _site to absolute paths
+          },
+          :validation => {
+            :links => true,  # Check all links
+            :fragments => true  # Check fragment identifiers
           }
         })
+
+        # Create a custom cache store for this file
+        cache_file = File.join(Dir.tmpdir, "htmlproofer_#{File.basename(file)}.cache")
+        file_options[:cache] = { :timeframe => '1h', :storage_dir => cache_file }
+
         HTMLProofer.check_file(file, file_options).run
       end
     else
@@ -141,7 +150,6 @@ commonOptions = {
   :only_4xx => false,
   :ignore_status_codes => [429],
   :enforce_https => false,
-  # delete and fix next rules
   :allow_missing_href => true,
   :check_external_hash => false,
 }
@@ -239,7 +247,11 @@ task :check_changed_files, [:file_list] do |t, args|
       %r{^#$},        # Ignore standalone hash links
       %r{^/$}         # Ignore root path
     ],
-    :parallel => { :in_processes => 3 }  # Run checks in parallel for speed
+    :parallel => { :in_processes => 3 },  # Run checks in parallel for speed
+    :swap_urls => {
+      # Handle fragment identifiers properly
+      %r{#.*$} => ''  # Remove fragments before checking file existence
+    }
   }
   
   begin

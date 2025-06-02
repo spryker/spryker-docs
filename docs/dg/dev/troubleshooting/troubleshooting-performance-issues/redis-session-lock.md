@@ -199,6 +199,8 @@ class SessionRedisDependencyProvider extends SprykerSessionRedisDependencyProvid
 }
 ```
 
+Read more in feature in the [release documentation](https://github.com/spryker/session-redis/releases/tag/1.10.0)
+
 ### Lock TTL configuration
 
 Time-To-Live (TTL) parameter is a safeguard used to instruct Redis or other storage to remove the lock if an application wasn't able to do it.

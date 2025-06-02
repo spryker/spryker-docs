@@ -160,6 +160,10 @@ class SessionDependencyProvider extends SprykerSessionDependencyProvider
     }
 }
 ```
+{% info_block warningBox "" %}
+Only one Redis Locking Session Handler plugin must be here to avoid conflicting behaviour.
+{% endinfo_block %}
+
 
 **config/Shared/config_default.php**
 
@@ -171,7 +175,6 @@ use Spryker\Shared\SessionRedis\SessionRedisConfig;
 
 // ---------- Session
 $config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING;
-$config[SessionRedisConstants::YVES_SESSION_TIME_TO_LIVE] = SessionConfig::SESSION_LIFETIME_1_HOUR;
 ```
 
 ```php

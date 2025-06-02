@@ -87,7 +87,7 @@ Currently, the feature has the following functional constraints which are going 
 
 |BACK OFFICE USER GUIDES |
 |---------|
-| [Creating a product option](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/product-options/create-product-options.html)  
+| [Creating a product option](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/product-options/create-product-options.html)  |
 | [Managing product options](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/product-options/create-product-options.html)|
 
 ## Related Developer documents

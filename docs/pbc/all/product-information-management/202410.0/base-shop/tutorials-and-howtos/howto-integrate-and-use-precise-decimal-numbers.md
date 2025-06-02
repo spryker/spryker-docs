@@ -44,7 +44,7 @@ To install the `{% raw %}{{{% endraw %}decimal-object{% raw %}}}{% endraw %}` li
 
 You can specify Decimal as a type of your Data Transfer Object's property. To define it, use the `decimal` type:  
 
-```
+```xml
 <transfer name="StockProduct">
     <property name="quantity" type="decimal"/>
 </transfer>

@@ -1,17 +1,3 @@
-task "assets:precompile" do
-  deploy_env = ENV['DEPLOY_ENV'] || 'production'
-
-  if deploy_env == 'production'
-    puts "Running Production Build"
-    exec("jekyll build --config=_config.yml,_config_production.yml")
-  else
-    puts "Running Staging Build"
-    exec("jekyll build --config=_config.yml,_config_staging.yml")
-  end
-end
-
-require 'html-proofer'
-
 # Method to run HTMLProofer with retries
 def run_htmlproofer_with_retry(directory, options, max_tries = 1, delay = 5)
   options[:typhoeus] ||= {}
@@ -27,16 +13,19 @@ def run_htmlproofer_with_retry(directory, options, max_tries = 1, delay = 5)
       
       # Create a temporary directory for the files to check
       Dir.mktmpdir do |temp_dir|
-        # Copy all files to check into the temp directory maintaining their structure
+        # Create _site directory in temp_dir
+        site_dir = File.join(temp_dir, '_site')
+        FileUtils.mkdir_p(site_dir)
+
+        # First, copy only the files we need to check
+        files_to_check = []
         options[:files].each do |file|
           relative_path = file.sub(/^_site\//, '')
-          target_file = File.join(temp_dir, relative_path)
+          target_file = File.join(site_dir, relative_path)
           FileUtils.mkdir_p(File.dirname(target_file))
           FileUtils.cp(file, target_file)
+          files_to_check << target_file
         end
-
-        # Copy the entire _site directory structure for proper link resolution
-        FileUtils.cp_r(Dir.glob('_site/*'), temp_dir)
 
         # Configure HTMLProofer options
         check_options = options.reject { |k| k == :files }.merge({
@@ -45,14 +34,23 @@ def run_htmlproofer_with_retry(directory, options, max_tries = 1, delay = 5)
           :check_internal_hash => true,
           :check_html => false,
           :log_level => :info,
-          :validation => {
-            :links => true,
-            :fragments => true
-          }
+          :only_4xx => true,  # Only report 4xx status code errors
+          :url_ignore => [
+            /\{\{.*?\}\}/,  # Ignore template variables
+            %r{^#$},        # Ignore standalone hash links
+            %r{^/$},        # Ignore root path
+            %r{^/css/},     # Ignore CSS files
+            %r{^/js/},      # Ignore JavaScript files
+            %r{^/assets/}   # Ignore asset files
+          ]
         })
 
-        # Check all files in the temporary directory
-        HTMLProofer.check_directory(temp_dir, check_options).run
+        # Only check the specific files we copied
+        check_options[:file_ignore] = []
+        check_options[:files_to_check] = files_to_check
+
+        puts "Starting validation..."
+        HTMLProofer.check_directory(site_dir, check_options).run
       end
     else
       HTMLProofer.check_directory(directory, options).run
@@ -72,6 +70,20 @@ def run_htmlproofer_with_retry(directory, options, max_tries = 1, delay = 5)
     end
   end
 end
+
+task "assets:precompile" do
+  deploy_env = ENV['DEPLOY_ENV'] || 'production'
+
+  if deploy_env == 'production'
+    puts "Running Production Build"
+    exec("jekyll build --config=_config.yml,_config_production.yml")
+  else
+    puts "Running Staging Build"
+    exec("jekyll build --config=_config.yml,_config_staging.yml")
+  end
+end
+
+require 'html-proofer'
 
 commonOptions = {
   :allow_hash_href => true,

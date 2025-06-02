@@ -133,19 +133,68 @@ Session locking is disabled as follows:
 $config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSION_HANDLER_REDIS;
 ```
 
-### Dynamically choosing Session Lock Handler
-Alternatively, we can let the application decide when to use a locking handler and when to use a non-locking one. It is easy to do in a project's `config_*.php` file:
-```php
-$config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = CONDITION ?
-    SessionRedisConfig::SESSION_HANDLER_REDIS :
-    SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING;
+### Configurable Session Lock Handler
+
+Use `SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING`, which allows enabling or disabling Redis locking based on your configuration.
+
+```bash
+composer require spryker/session-redis:"^1.10.0" --update-with-dependencies
 ```
 
-In this example, `CONDITION` can be any operation with a boolean result, but it's impostant to keep it quickly executed, not to make a bottleneck from configuration declartion.
-Here's one of the possible examples of a condition:
-- `str_contains($_SERVER['HTTP_USER_AGENT'] ?? '', 'Googlebot')` or
-- `str_contains($_SERVER['REQUEST_URI'] ?? '', '/some-url')` or
-- any other pattern known as not requiring exclusive session data access and modification.
+```php
+namespace Pyz\Yves\Session;
+
+use Spryker\Yves\Session\SessionDependencyProvider as SprykerSessionDependencyProvider;
+use Spryker\Yves\SessionRedis\Plugin\Session\SessionHandlerRedisProviderPlugin;
+use Spryker\Yves\SessionRedis\Plugin\Session\SessionHandlerConfigurableRedisLockingProviderPlugin;
+
+
+class SessionDependencyProvider extends SprykerSessionDependencyProvider
+{
+    protected function getSessionHandlerPlugins(): array
+    {
+        return [
+            new SessionHandlerRedisProviderPlugin(),
+            new SessionHandlerConfigurableRedisLockingProviderPlugin(), // !!! replace `SessionHandlerRedisLockingProviderPlugin`
+        ];
+    }
+}
+```
+
+**config/Shared/config_default.php**
+
+```php
+<?php
+
+use Spryker\Shared\Session\SessionConstants;
+use Spryker\Shared\SessionRedis\SessionRedisConfig;
+
+// ---------- Session
+$config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING;
+$config[SessionRedisConstants::YVES_SESSION_TIME_TO_LIVE] = SessionConfig::SESSION_LIFETIME_1_HOUR;
+```
+
+```php
+namespace Pyz\Yves\SessionRedis;
+
+use Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion\BotSessionRedisLockingExclusionConditionPlugin;
+use Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion\UrlSessionRedisLockingExclusionConditionPlugin;
+use Spryker\Yves\SessionRedis\SessionRedisDependencyProvider as SprykerSessionRedisDependencyProvider;
+
+class SessionRedisDependencyProvider extends SprykerSessionRedisDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Yves\SessionRedisExtension\Dependency\Plugin\SessionRedisLockingExclusionConditionPluginInterface>
+     */
+    protected function getSessionRedisLockingExclusionConditionPlugins(): array
+    {
+        return [
+            new UrlSessionRedisLockingExclusionConditionPlugin(),
+            new BotSessionRedisLockingExclusionConditionPlugin(),
+        ];
+    }
+}
+```
 
 ### Lock TTL configuration
 

@@ -6,7 +6,7 @@ template: module-migration-guide-template
 
 This document describes how to upgrade Angular to version 18 in your Spryker project.
 
-Spryker’s previous version used Angular v17. Angular 18 provides improved developer experience, performance optimizations, and tooling enhancements.
+Spryker's previous version used Angular v17. Angular 18 provides improved developer experience, performance optimizations, and tooling enhancements.
 
 This upgrade affects the following Marketplace modules, which have been updated with minor changes:
 
@@ -35,7 +35,7 @@ This upgrade affects the following Marketplace modules, which have been updated 
 
 ## 1) Update Spryker modules
 
-Run the following command to upgrade all necessary Marketplace modules:
+Update the Marketplace modules by executing the following command:
 
 ```bash
 composer update spryker/agent-dashboard-merchant-portal-gui spryker/agent-security-merchant-portal-gui spryker/comment-merchant-portal-gui spryker/dashboard-merchant-portal-gui spryker/dummy-merchant-portal-gui spryker/gui-table spryker/merchant-app-merchant-portal-gui spryker/merchant-profile-merchant-portal-gui spryker/merchant-relation-request-merchant-portal-gui spryker/merchant-relationship-merchant-portal-gui spryker/product-merchant-portal-gui spryker/product-offer-merchant-portal-gui spryker/sales-merchant-portal-gui spryker/security-merchant-portal-gui spryker/user-merchant-portal-gui spryker/zed-ui

@@ -741,8 +741,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
 | configurable-bundle-template-slots | name | String | Name of the slot. |
 | configurable-bundle-template-image-sets | id | String | Unique identifier of the configurable bundle template image set. |
 | configurable-bundle-template-image-sets | name | String | Name of the image set. |
-| configurable-bundle-template-image-sets | images | Array | 	
-A list of images assigned to a configurable bundle template.  |
+| configurable-bundle-template-image-sets | images | Array | 	A list of images assigned to a configurable bundle template.  |
 | configurable-bundle-template-image-sets | externalUrlLarge | String | URLs to the image per image set. |
 | configurable-bundle-template-image-sets | externalUrlSmall | String | URLs to the image per image set. |
 

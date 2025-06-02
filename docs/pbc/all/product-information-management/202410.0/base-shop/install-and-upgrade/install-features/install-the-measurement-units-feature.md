@@ -677,6 +677,7 @@ sales_unit_19,AT
 | --- | --- | --- | --- | --- |
 | sales_unit_key |mandatory  | string | sales_unit_1 |A reference used for the product measurement sales unit data import.  |
 |store_name|mandatory|string|DE|Contains the store name where the sales unit is available.|
+
 Register the following plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |

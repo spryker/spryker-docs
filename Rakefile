@@ -28,12 +28,16 @@ def run_htmlproofer_with_retry(directory, options, max_tries = 1, delay = 5)
         puts "Checking file: #{file}"
         # Create a new options hash for each file to avoid modifying the original
         file_options = options.reject { |k| k == :files }.merge({
-          :root_dir => File.expand_path('.'),  # Use the project root as the base directory
+          :root_dir => '_site',  # Use _site as root since Jekyll builds there
           :disable_external => true,
           :allow_hash_href => true,
           :check_internal_hash => true,  # Enable internal hash checking
           :check_html => false,  # Don't validate HTML structure
-          :log_level => :info
+          :log_level => :info,
+          :url_swap => {
+            # Convert URLs to match the _site directory structure
+            %r{^/} => '/_site/'  # Prepend _site to absolute paths
+          }
         })
         HTMLProofer.check_file(file, file_options).run
       end
@@ -234,7 +238,8 @@ task :check_changed_files, [:file_list] do |t, args|
       /\{\{.*?\}\}/,  # Ignore template variables
       %r{^#$},        # Ignore standalone hash links
       %r{^/$}         # Ignore root path
-    ]
+    ],
+    :parallel => { :in_processes => 3 }  # Run checks in parallel for speed
   }
   
   begin

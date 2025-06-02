@@ -44,9 +44,18 @@ def run_htmlproofer_with_retry(directory, options, max_tries = 1, delay = 5)
           }
         })
 
-        # Create a custom cache store for this file
-        cache_file = File.join(Dir.tmpdir, "htmlproofer_#{File.basename(file)}.cache")
-        file_options[:cache] = { :timeframe => '1h', :storage_dir => cache_file }
+        # Create a temporary directory for cache
+        cache_dir = File.join(Dir.tmpdir, 'htmlproofer_cache')
+        FileUtils.mkdir_p(cache_dir)
+        
+        # Set up caching with proper configuration
+        file_options[:cache] = {
+          :timeframe => {
+            :external => '1h',
+            :internal => '1h'
+          },
+          :storage_dir => cache_dir
+        }
 
         HTMLProofer.check_file(file, file_options).run
       end
@@ -54,6 +63,9 @@ def run_htmlproofer_with_retry(directory, options, max_tries = 1, delay = 5)
       HTMLProofer.check_directory(directory, options).run
     end
   rescue StandardError => e
+    puts "Error details: #{e.class} - #{e.message}"
+    puts e.backtrace.join("\n") if options[:log_level] == :debug
+    
     retries -= 1
     if retries >= 0
       puts "Retrying... (#{max_tries - retries}/#{max_tries} attempts)"

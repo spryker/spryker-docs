@@ -90,7 +90,7 @@ Only add or update the following fields in your `package.json`:
 }
 ```
 
-Then run:
+Then install npm dependencies:
 
 ```bash
 npm install

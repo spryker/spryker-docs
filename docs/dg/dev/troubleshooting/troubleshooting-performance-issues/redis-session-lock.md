@@ -133,56 +133,78 @@ Session locking is disabled as follows:
 $config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSION_HANDLER_REDIS;
 ```
 
-### Configurable Session Lock Handler
+### Configurable session lock handler
 
-Use `SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING`, which allows enabling or disabling Redis locking based on your configuration.
+There are multiple session handlers in Spryker
+- `SessionRedisConfig::SESSION_HANDLER_REDIS` - non locking Redis handler, does not lock sessions
+- `SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING` - locking Redis handler, lock all sessions for all requests
+- `SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING` 
+    - a locking **configurable** Redis handler. This handler allows you to bypass locking logic by falling back to the non-locking behavior of `SessionRedisConfig::SESSION_HANDLER_REDIS`, which reduces the chance of negative effects from session locks., 
+    - the decision to bypass is made by plugins, and the first plugin that returns `true` wins.
+
+To use this handler, follow these steps:
+
+1. Ensure the `spryker/session-redis` module has the required version. You can do this with Composer:
 
 ```bash
 composer require spryker/session-redis:"^1.10.0" --update-with-dependencies
 ```
 
+2. Register **one** session handling plugin in `SessionDependencyProvider`. This can be one of the following:
+
+- `SessionHandlerRedisProviderPlugin`
+- `SessionHandlerRedisLockingProviderPlugin`
+- `SessionHandlerConfigurableRedisLockingProviderPlugin`
+
+Example:
 ```php
-namespace Pyz\Yves\Session;
-
-use Spryker\Yves\Session\SessionDependencyProvider as SprykerSessionDependencyProvider;
-use Spryker\Yves\SessionRedis\Plugin\Session\SessionHandlerRedisProviderPlugin;
+...
 use Spryker\Yves\SessionRedis\Plugin\Session\SessionHandlerConfigurableRedisLockingProviderPlugin;
-
 
 class SessionDependencyProvider extends SprykerSessionDependencyProvider
 {
+    /**
+     * Warning: Only one of the following Redis handler must be defined here:
+     * - SessionHandlerRedisProviderPlugin
+     * - SessionHandlerRedisLockingProviderPlugin
+     * - SessionHandlerConfigurableRedisLockingProviderPlugin     * 
+     * @return array<\Spryker\Yves\SessionExtension\Dependency\Plugin\SessionHandlerProviderPluginInterface>
+     */ 
     protected function getSessionHandlerPlugins(): array
     {
         return [
-            new SessionHandlerRedisProviderPlugin(),
-            new SessionHandlerConfigurableRedisLockingProviderPlugin(), // !!! replace `SessionHandlerRedisLockingProviderPlugin`
+            new SessionHandlerConfigurableRedisLockingProviderPlugin(),
         ];
     }
 }
 ```
-{% info_block warningBox "" %}
-Only one Redis Locking Session Handler plugin must be here to avoid conflicting behaviour.
-{% endinfo_block %}
 
-
-**config/Shared/config_default.php**
+3. 3. Enable the previously defined session handling plugin in a project configuration:
 
 ```php
-<?php
-
+// config/Shared/config_default.php
 use Spryker\Shared\Session\SessionConstants;
 use Spryker\Shared\SessionRedis\SessionRedisConfig;
-
+...
 // ---------- Session
 $config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING;
+...
 ```
+
+4. Configure plugins that define the fallback logic. Out of the box, there are two plugins:
+
+- `UrlSessionRedisLockingExclusionConditionPlugin` - checks for error and 404 pages.
+- `BotSessionRedisLockingExclusionConditionPlugin` - checks user-agent header for bot-related names.
+
+You can also implement custom logic in your own project-level plugin and add it here to disable session locking.
 
 ```php
 namespace Pyz\Yves\SessionRedis;
 
+...
 use Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion\BotSessionRedisLockingExclusionConditionPlugin;
 use Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion\UrlSessionRedisLockingExclusionConditionPlugin;
-use Spryker\Yves\SessionRedis\SessionRedisDependencyProvider as SprykerSessionRedisDependencyProvider;
+...
 
 class SessionRedisDependencyProvider extends SprykerSessionRedisDependencyProvider
 {
@@ -199,7 +221,7 @@ class SessionRedisDependencyProvider extends SprykerSessionRedisDependencyProvid
 }
 ```
 
-Read more about Exclusion Condition Plugins in the [release documentation](https://github.com/spryker/session-redis/releases/tag/1.10.0)
+Read more about exclusion condition plugins in the [release notes](https://github.com/spryker/session-redis/releases/tag/1.10.0)
 
 ### Lock TTL configuration
 

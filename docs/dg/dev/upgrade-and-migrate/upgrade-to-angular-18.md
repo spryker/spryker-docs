@@ -105,4 +105,9 @@ You should **fully regenerate** the lock file and reinstall everything:
 rm -rf node_modules ./**/node_modules package-lock.json && npm install
 ```
 
+```
+rm -rf node_modules ./**/node_modules package-lock.json - drops node_modules everywhere
+npm install - installs npm dependencies
+```
+
 This ensures hoisting is correctly applied and all dependencies are installed to the root.

@@ -167,7 +167,8 @@ class SessionDependencyProvider extends SprykerSessionDependencyProvider
      * Warning: Only one of the following Redis handler must be defined here:
      * - SessionHandlerRedisProviderPlugin
      * - SessionHandlerRedisLockingProviderPlugin
-     * - SessionHandlerConfigurableRedisLockingProviderPlugin     * 
+     * - SessionHandlerConfigurableRedisLockingProviderPlugin
+     * 
      * @return array<\Spryker\Yves\SessionExtension\Dependency\Plugin\SessionHandlerProviderPluginInterface>
      */ 
     protected function getSessionHandlerPlugins(): array

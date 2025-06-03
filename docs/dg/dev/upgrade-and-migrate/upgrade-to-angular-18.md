@@ -2,6 +2,7 @@
 title: Upgrade to Angular 18
 description: Learn how to upgrade your Spryker project to Angular 18 to benefit from latest improvements and security updates.
 template: module-migration-guide-template
+last_updated: Jun 1, 2025
 ---
 
 This document describes how to upgrade Angular to version 18. Angular 18 provides improved developer experience, performance optimizations, and tooling enhancements.
@@ -27,11 +28,9 @@ This upgrade affects the following Marketplace modules, which have been updated 
 | UserMerchantPortalGui                       | 3.2.0 → 3.3.0 |
 | ZedUi                                       | 3.2.0 → 3.3.0 |
 
----
-
 Estimated migration time: ~15 minutes
 
-## 1) Update Spryker modules
+## Update Spryker modules
 
 Update the Marketplace modules:
 
@@ -39,7 +38,7 @@ Update the Marketplace modules:
 composer update spryker/agent-dashboard-merchant-portal-gui spryker/agent-security-merchant-portal-gui spryker/comment-merchant-portal-gui spryker/dashboard-merchant-portal-gui spryker/dummy-merchant-portal-gui spryker/gui-table spryker/merchant-app-merchant-portal-gui spryker/merchant-profile-merchant-portal-gui spryker/merchant-relation-request-merchant-portal-gui spryker/merchant-relationship-merchant-portal-gui spryker/product-merchant-portal-gui spryker/product-offer-merchant-portal-gui spryker/sales-merchant-portal-gui spryker/security-merchant-portal-gui spryker/user-merchant-portal-gui spryker/zed-ui
 ```
 
-## 2) Update `package.json`
+## Update engines and dependencies
 
 1. In `package.json`, update the `engines` block:
 
@@ -84,30 +83,64 @@ composer update spryker/agent-dashboard-merchant-portal-gui spryker/agent-securi
 }
 ```
 
-1. Install npm dependencies:
+4. Install npm dependencies:
 
 ```bash
 npm install
 ```
 
 
-## Hint: Check for broken hoisting
+## Optional: Check for broken hoisting
 
-If, after `npm install`, some dependencies end up in unexpected nested locations like (check in package-lock.json):
+After running `npm install`, some dependencies may end up in unexpected nested locations. Example:
 
-```
+**package-lock.json**
+
+```json
 vendor/spryker-shop/zed-ui/node_modules/@spryker/notification
 ```
 
-You should **fully regenerate** the lock file and reinstall everything:
+In this case, fully regenerate the lock file and reinstall the modules:
 
 ```bash
 rm -rf node_modules ./**/node_modules package-lock.json && npm install
 ```
 
-```
-rm -rf node_modules ./**/node_modules package-lock.json - drops node_modules everywhere
-npm install - installs npm dependencies
-```
-
 This ensures hoisting is correctly applied and all dependencies are installed to the root.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

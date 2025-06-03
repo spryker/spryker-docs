@@ -176,6 +176,7 @@ Making calculations on the PHP side can help here a lot, as well as using `{% ra
 
 Twig templates can be precompiled to speed up the performance of the first request.
 This is especially useful for production environments, where there's a probability of scaling the application to mutiple containers, which can lead to a situation where the first request to a container is slow because it needs to compile all Twig templates.
+
 This can be done by adding the following command to your deployment script, for example `config/install/docker.yml`.
 
 {% info_block warningBox "Warning" %}

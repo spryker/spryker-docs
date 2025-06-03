@@ -84,7 +84,7 @@ composer update spryker/agent-dashboard-merchant-portal-gui spryker/agent-securi
 }
 ```
 
-Then install npm dependencies:
+1. Install npm dependencies:
 
 ```bash
 npm install

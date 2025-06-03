@@ -43,11 +43,12 @@ The `SprykerEco.Adyen` module provides the following payment methods:
 ## Installation
 
 To install the Adyen module, run the command:
-```
+
+```bash
 composer require spryker-eco/adyen
 ```
 
-## General Configuration
+## General configuration
 
 You can find all necessary configurations in `vendor/spryker-eco/adyen/config/config.dist.php`.
 The table below describes all general configuration keys and their values.

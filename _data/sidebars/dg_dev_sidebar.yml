@@ -838,6 +838,8 @@ entries:
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html
         - title: Upgrade to Angular 17
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html
+        - title: Upgrade to Angular 18
+          url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-18.html
 
     - title: Upgrade to Webpack v5
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html

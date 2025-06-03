@@ -35,8 +35,7 @@ This file has the following dependency: [product_abstract.csv](/docs/pbc/all/pro
 | FILE | DESCRIPTION |
 | --- | --- |
 | [template_product_approval_status.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/202200.0/template_product_approval_status.csv) | Import file template with headers only. |
-| [product_approval_status.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/202200.0/product_approval_status.csv) | Import file template with headers only. |
-/product_approval_status.csv) | Exemplary import file with the Demo Shop data. |
+| [product_approval_status.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/202200.0/product_approval_status.csv) | Exemplary import file with the Demo Shop data. |
 
 ## Import command
 

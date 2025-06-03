@@ -172,16 +172,14 @@ For example, the `{% raw %}{{{% endraw %} data.foo.bar.firstName {% raw %}}}{% e
 
 Making calculations on the PHP side can help here a lot, as well as using `{% raw %}{{{% endraw %} set customer = data.foo.bar {% raw %}}}{% endraw %}` + `{% raw %}{{{% endraw %} customer.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} customer.lastName {% raw %}}}{% endraw %}`.
 
-## Activate Twig template warm-up during deployment
+## Twig template warmup during deployment
 
-Twig templates can be precompiled to speed up the performance of the first request.
-This is especially useful for production environments, where there's a probability of scaling the application to mutiple containers, which can lead to a situation where the first request to a container is slow because it needs to compile all Twig templates.
+Precompiling Twig templates can improve the performance of the first request, especially in production environments. This is helpful when scaling across multiple containers, where the first request may be slow due to on-demand compilation of all Twig templates.
 
-This can be done by adding the following command to your deployment script, for example `config/install/docker.yml`.
 
-{% info_block warningBox "Warning" %}
-Make sure that the command is executed after the `vendor/bin/console twig:cache:warmer` command.
-{% endinfo_block %}
+To activate the warmup, follow the steps:
+
+1. Add the following commands to your deployment script, such as `config/install/docker.yml`:
 
 ```yaml
     build-production:
@@ -192,7 +190,14 @@ Make sure that the command is executed after the `vendor/bin/console twig:cache:
             command: 'vendor/bin/yves twig:template:warmer'
 ```
 
-Zed command requires some of the classes to be registered in the `\Spryker\Zed\Console\ConsoleDependencyProvider`:
+{% info_block warningBox "" %}
+Make sure that the command is executed after the `vendor/bin/console twig:cache:warmer` command.
+{% endinfo_block %}
+
+
+2. Register the following classes for the Zed command:
+
+**\Spryker\Zed\Console\ConsoleDependencyProvider**
 
 ```php
 use Spryker\Zed\Form\Communication\Plugin\Application\FormApplicationPlugin;
@@ -221,7 +226,9 @@ use Spryker\Zed\Twig\Communication\Console\TwigTemplateWarmerConsole;
     }
 ```
 
-Yves command requires some of the classes to be registered in the `\Spryker\Yves\Console\ConsoleDependencyProvider`:
+2. Register the following classes for the Yves command
+
+**\Spryker\Yves\Console\ConsoleDependencyProvider**
 
 ```php
 use Spryker\Yves\Form\Plugin\Application\FormApplicationPlugin;

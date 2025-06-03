@@ -179,7 +179,7 @@ class SessionDependencyProvider extends SprykerSessionDependencyProvider
 }
 ```
 
-3. 3. Enable the previously defined session handling plugin in a project configuration:
+3. Enable the previously defined session handling plugin in a project configuration:
 
 ```php
 // config/Shared/config_default.php

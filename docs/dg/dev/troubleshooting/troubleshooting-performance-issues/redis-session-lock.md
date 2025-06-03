@@ -143,21 +143,96 @@ Session locking is disabled as follows:
 $config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSION_HANDLER_REDIS;
 ```
 
-### Dynamically choosing Session Lock Handler
+### Configurable session lock handler
 
-Alternatively, we can let the application decide when to use a locking handler and when to use a non-locking one. It is easy to do in a project's `config_*.php` file:
+There are multiple session handlers in Spryker
+- `SessionRedisConfig::SESSION_HANDLER_REDIS` - non locking Redis handler, does not lock sessions
+- `SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING` - locking Redis handler, lock all sessions for all requests
+- `SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING` 
+    - a locking **configurable** Redis handler. This handler allows you to bypass locking logic by falling back to the non-locking behavior of `SessionRedisConfig::SESSION_HANDLER_REDIS`, which reduces the chance of negative effects from session locks., 
+    - the decision to bypass is made by plugins, and the first plugin that returns `true` wins.
 
-```php
-$config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = CONDITION ?
-    SessionRedisConfig::SESSION_HANDLER_REDIS :
-    SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING;
+To use this handler, follow these steps:
+
+1. Ensure the `spryker/session-redis` module has the required version. You can do this with Composer:
+
+```bash
+composer require spryker/session-redis:"^1.10.0" --update-with-dependencies
 ```
 
-In this example, `CONDITION` can be any operation with a boolean result, but it's impostant to keep it quickly executed, not to make a bottleneck from configuration declartion.
-Here's one of the possible examples of a condition:
-- `str_contains($_SERVER['HTTP_USER_AGENT'] ?? '', 'Googlebot')` or
-- `str_contains($_SERVER['REQUEST_URI'] ?? '', '/some-url')` or
-- any other pattern known as not requiring exclusive session data access and modification.
+2. Register **one** session handling plugin in `SessionDependencyProvider`. This can be one of the following:
+
+- `SessionHandlerRedisProviderPlugin`
+- `SessionHandlerRedisLockingProviderPlugin`
+- `SessionHandlerConfigurableRedisLockingProviderPlugin`
+
+Example:
+```php
+...
+use Spryker\Yves\SessionRedis\Plugin\Session\SessionHandlerConfigurableRedisLockingProviderPlugin;
+
+class SessionDependencyProvider extends SprykerSessionDependencyProvider
+{
+    /**
+     * Warning: Only one of the following Redis handler must be defined here:
+     * - SessionHandlerRedisProviderPlugin
+     * - SessionHandlerRedisLockingProviderPlugin
+     * - SessionHandlerConfigurableRedisLockingProviderPlugin
+     * 
+     * @return array<\Spryker\Yves\SessionExtension\Dependency\Plugin\SessionHandlerProviderPluginInterface>
+     */ 
+    protected function getSessionHandlerPlugins(): array
+    {
+        return [
+            new SessionHandlerConfigurableRedisLockingProviderPlugin(),
+        ];
+    }
+}
+```
+
+3. Enable the previously defined session handling plugin in a project configuration:
+
+```php
+// config/Shared/config_default.php
+use Spryker\Shared\Session\SessionConstants;
+use Spryker\Shared\SessionRedis\SessionRedisConfig;
+...
+// ---------- Session
+$config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING;
+...
+```
+
+4. Configure plugins that define the fallback logic. Out of the box, there are two plugins:
+
+- `UrlSessionRedisLockingExclusionConditionPlugin` - checks for error and 404 pages.
+- `BotSessionRedisLockingExclusionConditionPlugin` - checks user-agent header for bot-related names.
+
+You can also implement custom logic in your own project-level plugin and add it here to disable session locking.
+
+```php
+namespace Pyz\Yves\SessionRedis;
+
+...
+use Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion\BotSessionRedisLockingExclusionConditionPlugin;
+use Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion\UrlSessionRedisLockingExclusionConditionPlugin;
+...
+
+class SessionRedisDependencyProvider extends SprykerSessionRedisDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Yves\SessionRedisExtension\Dependency\Plugin\SessionRedisLockingExclusionConditionPluginInterface>
+     */
+    protected function getSessionRedisLockingExclusionConditionPlugins(): array
+    {
+        return [
+            new UrlSessionRedisLockingExclusionConditionPlugin(),
+            new BotSessionRedisLockingExclusionConditionPlugin(),
+        ];
+    }
+}
+```
+
+Read more about exclusion condition plugins in the [release notes](https://github.com/spryker/session-redis/releases/tag/1.10.0)
 
 ### Lock TTL configuration
 

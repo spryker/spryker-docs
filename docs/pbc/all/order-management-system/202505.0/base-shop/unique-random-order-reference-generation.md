@@ -9,7 +9,7 @@ template: concept-topic-template
 
 > Available since **Sales Module v11.57.0**, Spryker introduces a new, performant, and customizable order reference generator based on the **NanoID** algorithm.
 
-## What's New?
+## What's New
 
 Spryker now offers a high-performance alternative to the traditional sequential order reference generation mechanism. The new generator, `UniqueRandomIdOrderReferenceGenerator`,
 allows you to generate **globally unique**, **non-sequential**, and **configurable** order references without database interaction.
@@ -50,7 +50,7 @@ class SalesConfig extends SprykerSalesConfig
     
     public function getUniqueRandomIdOrderReferenceSplitLength(): int
     {
-        return 4; // Optional: splits ID into chunks (e.g., XXXX-XXXX-XXXX-XXXX)
+        return 4; // Optional: splits ID into chunks, for example by 4 characters: XXXX-XXXX-XXXX-XXXX
     }
 }
 ```
@@ -58,7 +58,7 @@ class SalesConfig extends SprykerSalesConfig
 ## 🔐 How to Improve Random Entropy
 To avoid collisions in systems with **high order volume**, the entropy of the generated ID must be high enough. Entropy increases with:
 
-1. Larger Alphabet Size (e.g., alphanumeric vs. numeric only)
+1. Larger Alphabet Size (for example alphanumeric vs. numeric only)
 2. Longer ID Length (increase `getUniqueRandomIdOrderReferenceSize()`)
 
 ### Entropy Guidelines:
@@ -73,7 +73,7 @@ To avoid collisions in systems with **high order volume**, the entropy of the ge
 #### Recommendation for High-Volume Projects:
 
 - Use at least **16 characters**.
-- Use a **large alphabet** (e.g., alphanumeric).
+- Use a **large alphabet** (for example alphanumeric).
 - Avoid short numeric-only IDs (<12 digits) if generating thousands of orders per day.
 
 
@@ -90,7 +90,7 @@ To avoid collisions in systems with **high order volume**, the entropy of the ge
 | Customization  | 🎛️ Alphabet, size, split       | ⚙️ Custom prefixes only          |
 
 
-## 🧠 When to Use Which?
+## 🧠 When to Use Which
 
 ### Use Random ID Generator if:
 - Your project handles high concurrency or traffic

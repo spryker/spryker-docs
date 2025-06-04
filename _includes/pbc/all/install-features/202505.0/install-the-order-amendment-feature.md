@@ -47,11 +47,8 @@ Add the following configuration:
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|-----------------------------|
 | A regular expression, see `config/Shared/config_default.php`.      | Closes access for non-logged-in users.                                                             |                         |
 | MultiCartConfig::getQuoteFieldsAllowedForCustomerQuoteCollectionInSession() | Defines which quote fields can be saved in the quote collection of a customer's session. | Pyz\Client\MultiCart        |
-| QuoteConfig::getQuoteFieldsAllowedForSaving()                               | Enables saving order amendment-related quote fields to the database.
-
-                             | Pyz\Zed\Quote               |
-| SalesOrderAmendmentConfig::getQuoteFieldsAllowedForSaving()                 | Enables saving quote-related fields to the database.
-                                       | Pyz\Zed\SalesOrderAmendment |
+| QuoteConfig::getQuoteFieldsAllowedForSaving()                               | Enables saving order amendment-related quote fields to the database.   | Pyz\Zed\Quote               |
+| SalesOrderAmendmentConfig::getQuoteFieldsAllowedForSaving()                 | Enables saving quote-related fields to the database.   | Pyz\Zed\SalesOrderAmendment |
 
 **config/Shared/config_default.php**
 

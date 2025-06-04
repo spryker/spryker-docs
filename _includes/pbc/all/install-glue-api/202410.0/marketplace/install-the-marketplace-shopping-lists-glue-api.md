@@ -10,8 +10,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | - | - | - |
-| Spryker Core | {{page.version}} |  [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
-| Marketplace Shopping Lists | {{page.version}} | [Install the Marketplace Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html)
+| Spryker Core | {{page.version}} |  [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Marketplace Shopping Lists | {{page.version}} | [Install the Marketplace Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html) |
 
 ### 1) Install the required modules
 

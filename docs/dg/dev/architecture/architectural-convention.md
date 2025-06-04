@@ -160,7 +160,7 @@ Used components:
 
 Yves application layer provides a lightweight shop application.
 
-```
+```text
 [Organization]
 └── Yves
     └── [Module]
@@ -231,7 +231,7 @@ Used components:
 
 The Glue application layer provides data access points through APIs. It acts as an interface for external systems to interact with the application's data.
 
-```
+```text
 [Organization]
 └── Glue
     └── [Module]
@@ -448,7 +448,7 @@ An application layer can have up to four logical layers with clear purpose and c
 
 ### Controller
 
-```
+```text
 [Organization]
 ├── Zed
 │   └── [Module]
@@ -542,7 +542,7 @@ class TemplateController extends Spryker\Zed\ConfigurableBundleGui\Communication
 
 ### Dependency Provider
 
-```
+```text
 [Organization]
 ├── Zed
 │   └── [Module]        
@@ -748,7 +748,7 @@ class ConfigurableBundleDependencyProvider extends Spryker\Zed\ConfigurableBundl
 
 ### Entity
 
-```
+```text
 src
 ├── Generated
 │   └── Shared
@@ -873,7 +873,7 @@ Solutions in `Entity manager` can use raw SQL queries for performance reasons, b
 
 ### Facade design pattern
 
-```
+```text
 [Organization]
 ├── Client
 │   └── [Module]
@@ -1064,7 +1064,7 @@ interface ConfigurableBundleFacadeInterface
 
 ### Factory
 
-```
+```text
 [Organization]
 ├── Zed
 │   └── [Module]
@@ -1109,7 +1109,7 @@ No general conventions.
 
 ### Gateway Controller
 
-```
+```text
 [Organization]
 └── Zed
     └── [Module]
@@ -1127,7 +1127,7 @@ No general conventions.
 
 ### Layout
 
-```
+```text
 [Organization]
 ├── Yves
 │   └── [Module]
@@ -1239,7 +1239,7 @@ class ProductViewExpander implements ProductViewExpanderInterface
 
 ### Model
 
-```
+```text
 [Organization]
 ├── Zed
 │   └── [Module]
@@ -1297,7 +1297,7 @@ class ProductViewExpander implements ProductViewExpanderInterface
 
 ### Module Configurations
 
-```
+```text
 [Organization]
 ├── Zed
 │   └── [Module]
@@ -1380,7 +1380,7 @@ interface OmsConstants
 
 ### Navigation.xml
 
-```
+```text
 [Organization]
 └── Zed
     └── [Module]
@@ -1429,7 +1429,7 @@ The following example adds navigation elements under the existing `product` navi
 
 ### Permission Plugin
 
-```
+```text
 [Organization]
 ├── Zed
 │   └── [Module]
@@ -1498,7 +1498,7 @@ class QuotePermissionChecker implements QuotePermissionCheckerInterface
 
 ### Persistence Schema
 
-```
+```text
 [Organization]
 └── Zed
     └── [Module]
@@ -1590,7 +1590,7 @@ Injecting columns from `Product` to the `Url` `domain` by defining the `spy_url.
 
 ### Provider / Router
 
-```
+```text
 [Organization]
 └── Yves
     └── [Module]  
@@ -1616,7 +1616,7 @@ Controllers in the [Zed](#zed) application layer are autowired and don't require
 
 ### Query Object
 
-```
+```text
 src
 ├── Orm
 │   └── Zed   
@@ -1670,7 +1670,7 @@ In the following example, the `SpyProductQuery` is part of the `Product` `domain
 
 ### Repository
 
-```
+```text
 [Organization]
 └── Zed
     └── [Module]
@@ -1709,7 +1709,7 @@ Methods can use native PHP types as input arguments or result values. Because it
 
 ### Theme
 
-```
+```text
 [Organization]
 └── Yves
     └── [Module]
@@ -1749,7 +1749,7 @@ Spryker implements the concept of [atomic web design](https://bradfrost.com/blog
 
 ### Transfer Object
 
-```
+```text
 src
 ├── Generated
 │   └── Shared
@@ -1791,7 +1791,7 @@ For every defined table in [Peristence Schema](#persistence-schema), a matching 
 - BAPI resource names: `PickingListsBackendApiAttributes` for picking list, `PickingListItemsBackendApiAttributes` for picking list items.
 - SAPI resource names: `PickingListsApiAttributes` for picking list, `PickingListItemsApiAttributes` for picking list items.
 
-```
+```xml
 <?xml version="1.0"?>
 <transfers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="spryker:transfer-01" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
 
@@ -1985,7 +1985,7 @@ For `project development` and `module development`, these components are recomme
 
 ### Bridge
 
-```
+```text
 [Organization]
 ├── Zed
 │   └── [Module]
@@ -2092,7 +2092,7 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
 
 ### Plugin
 
-```
+```text
 [Organization]
 ├── Zed
 │   ├── [Module]
@@ -2172,7 +2172,7 @@ No general conventions.
 
 ### Plugin Interface
 
-```
+```text
 [Organization]
 ├── Zed
 │   ├── [Module]

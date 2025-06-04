@@ -1021,7 +1021,7 @@ Ensure that a new event is created in the `publish.hello_world` queue.
 
 5. To start processing the messages from the *Publisher* queue that have been published, run the queue:
 
-```
+```bash
 {vagrant@spryker-vagrant ➜  current git:(master) ✗  console queue:task:start publish.hello_world
 Store: DE | Environment: development
 ```
@@ -1362,14 +1362,10 @@ class MessageStorageReader implements MessageStorageReaderInterface
 
 Update the routes for the Back Office using the following command:
 
-```
+```bash
 docker/sdk console router:cache:warm-up:backoffice
 ```
 
 You should now have another endpoint to get a message from the Redis storage via the newly created HelloWorldClient.
 
-Check the redis-commander to get ID of the message object that actually exists. Then access the message via the following endpoint:
-
-```
-http://[YOUR_BACKOFFICE_URL]/hello-world/index/search?id=[ID_IN_REDIS]
-```
+Check the redis-commander to get ID of the message object that actually exists. Then access the message via the following endpoint: `http://[YOUR_BACKOFFICE_URL]/hello-world/index/search?id=[ID_IN_REDIS]`

@@ -52,7 +52,7 @@ Considering that Spryker is an e-commerce platform, the most important types of 
 
 Here is an example of the [Schema.org](https://schema.org/) microdata implementation for a page:
 
-```
+```html
 <div itemscope itemtype="https://schema.org/Product">
   <span itemprop="name">Product name</span>  
 </div>

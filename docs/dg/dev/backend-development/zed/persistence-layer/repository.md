@@ -113,7 +113,7 @@ class BlogPersistenceFactory extends AbstractPersistenceFactory
 
 ## Conventions
 
-#### Querying
+### Querying
 
 - When returning filtered collections by certain field, use `find{Entity}CollectionBy{field}($field, CriteriaTransfer $criteriaTransfer)`. For example, `findBlogCollectionByFirstName($firstName, CriteriaTransfer $criteriaTransfer = null)`
 - When returning a single item: `find{Entity}By{field}`. For example: `public function findBlogByName($firstName)`.

@@ -1,7 +1,7 @@
 ---
 title: Dynamic cart overview
 description: Learn how Spryker Cloud Commerce OS dynamic cart feature improves user experience with seamless cart management and a frictionless checkout process.
-last_updated: May 21, 2024
+last_updated: Jun 05, 2025
 template: concept-topic-template
 ---
 
@@ -14,6 +14,11 @@ The following video shows how a user can interact with different elements of a c
     <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202410.0.md/dynamic-cart-video.mp4" type="video/mp4">
   </video>
 </figure>
+
+## Configuration recommendation
+
+For good rendering performance, disable cart validation during rendering by setting `CartPageConfig::IS_QUOTE_VALIDATION_ENABLED_FOR_AJAX_CART_ITEMS = false`.
+With this configuration, the cart is still validated when the page is opened, and the user will see all required validation messages; however, it is not validated when cart items are rendered.
 
 ## Related Developer documents
 

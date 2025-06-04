@@ -734,7 +734,7 @@ $config[AclConstants::ACL_DEFAULT_RULES][] = [
 
 **data/import/common/common/glossary.csv**
 
-```
+```csv
 mail.merchant.restore_password.subject,Neues Passwort für Ihren Spryker Merchant Portal Account,de_DE
 mail.merchant.restore_password.subject,New password for your Spryker Merchant Portal account,en_US
 mail.merchant.restore_password.text,"""Es wurde ein neues Passwort für Ihren Spryker Merchant Portal Account angefordert. Wenn Sie nicht um um eine Neueinrichtung des Passworts gebeten haben, ignorieren Sie bitte diese Email. Klicken Sie auf den folgedenen Link, um Ihr Passwort zu ändern:""",de_DE

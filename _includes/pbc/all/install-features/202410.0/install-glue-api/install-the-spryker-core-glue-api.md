@@ -463,7 +463,7 @@ HEADER If-Match: cc1eb2e0b45ee5026b72d21dbded0090
 }
 ```
 
-    Make sure that the returned resource contains an updated `ETag`.
+Make sure that the returned resource contains an updated `ETag`.
 
 {% endinfo_block %}
 
@@ -519,7 +519,7 @@ To verify `ProductAbstractRestUrlResolverAttributesTransferProviderPlugin`, send
 }
 ```
 
-    Make sure you receive the correct resource identifier in the response.
+Make sure you receive the correct resource identifier in the response.
 
 {% endinfo_block %}
 

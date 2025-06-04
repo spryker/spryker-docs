@@ -838,15 +838,16 @@ To verify `MerchantReturnExpanderPlugin`, make sure that you can see merchant or
 
 Make sure that when you create and process a return for merchant order items, its statuses are synced between state machines in the following way:
 
-| MARKETPLACE SM | DEFAULT MERCHANT SM | MAIN MERCHANT SM |
-| --- | ---| --- |
-| Used by an operator	 | Used by a third-party merchant. | Used by a main merchant. |
-| start-return (can be started by entering in the Return Flow; it's not manually executable as a button)&nbsp;<span aria-label="and then">></span> waiting for return | start-return (can be started by entering in the Return Flow, it's not manually executable as a button)&nbsp;<span aria-label="and then">></span> waiting for return | start-return (can be started by entering in the Return Flow, it's not manually executable as a button)&nbsp;<span aria-label="and then">></span> waiting for return
-| execute return&nbsp;<span aria-label="and then">></span> returned   | execute return (manually executable)&nbsp;<span aria-label="and then">></span> returned  execute return (manually executable)&nbsp;<span aria-label="and then">></span> returned
-| refund&nbsp;<span aria-label="and then">></span> refunded | refund (manually executable)&nbsp;<span aria-label="and then">></span> refunded	 | refund (manually executable)&nbsp;<span aria-label="and then">></span> refunded
-| cancel return&nbsp;<span aria-label="and then">></span> return canceled | cancel return (manually executable)&nbsp;<span aria-label="and then">></span> return canceled | cancel return (manually executable)&nbsp;<span aria-label="and then">></span> return canceled
-| ship return&nbsp;<span aria-label="and then">></span> shipped to customer | ship return (manually executable)&nbsp;<span aria-label="and then">></span> shipped to customer	 | ship return (manually executable)&nbsp;<span aria-label="and then">></span> shipped to customer
-| deliver return&nbsp;<span aria-label="and then">></span> delivered | deliver return (manually executable)&nbsp;<span aria-label="and then">></span> delivered	 | deliver return (manually executable)&nbsp;<span aria-label="and then">></span> delivered
+| MARKETPLACE SM   | DEFAULT MERCHANT SM                                                                 | MAIN MERCHANT SM                                                                   |
+|------------------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| Used by an operator | Used by a third-party merchant.                                                      | Used by a main merchant.                                                            |
+| start-return → waiting for return | start-return (can be started by entering the Return Flow, not manually executable) → waiting for return | start-return (can be started by entering the Return Flow, not manually executable) → waiting for return |
+| execute return → returned | execute return (manually executable) → returned                                  | execute return (manually executable) → returned                                     |
+| refund → refunded | refund (manually executable) → refunded                                              | refund (manually executable) → refunded                                             |
+| cancel return → return canceled | cancel return (manually executable) → return canceled                           | cancel return (manually executable) → return canceled                               |
+| ship return → shipped to customer | ship return (manually executable) → shipped to customer                         | ship return (manually executable) → shipped to customer                             |
+| deliver return → delivered | deliver return (manually executable) → delivered                                | deliver return (manually executable) → delivered                                     |
+
 
 {% endinfo_block %}
 

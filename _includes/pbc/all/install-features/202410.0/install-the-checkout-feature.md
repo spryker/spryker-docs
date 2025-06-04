@@ -631,9 +631,9 @@ console frontend:yves:build
 
 Ensure that the `SalesOrderThresholdWidget` widget has been registered:
 
-1.     Define a minimum soft global threshold.
-2.     Create a cart with a subtotal that is below the threshold.
-3.     The threshold fee should be added to the cart automatically.
+1. Define a minimum soft global threshold.
+2. Create a cart with a subtotal that is below the threshold.
+3. The threshold fee should be added to the cart automatically.
 
 {% endinfo_block %}
 

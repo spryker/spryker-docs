@@ -144,7 +144,7 @@ class AclMerchantAgentConfig extends SprykerAclMerchantAgentConfig
 
 2. Execute the registered installer plugins:
 
-```
+```bash
 console setup:init-db
 ```
 

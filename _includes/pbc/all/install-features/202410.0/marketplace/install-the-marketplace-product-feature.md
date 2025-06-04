@@ -660,7 +660,7 @@ Make sure that the following is true:
 
 **data/import/common/common/glossary.csv**
 
-```
+```csv
 merchant_product.message.invalid,Product "%sku%" with Merchant "%merchant_reference%" not found.,en_US
 merchant_product.message.invalid,Der Produkt "%sku%" mit dem Händler "%merchant_reference%" ist nicht gefunden.,de_DE
 merchant_product.sold_by,Sold by,en_US

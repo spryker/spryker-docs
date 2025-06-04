@@ -13,10 +13,11 @@ Follow the steps below to install the Multiple Carts feature core.
 
 - Install the required features:
 
-| NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
-|--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                           |
+|--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Cart         | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)   | 
+| Cart         | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)   |
+
 
 ### 1) Install the required modules
 

@@ -1042,7 +1042,7 @@ offer418,AT
 
 **data/import/common/common/marketplace/product_offer_validity.csv**
 
-```
+```csv
 product_offer_reference,valid_from,valid_to
 offer1,,2020-01-20 00:00:00.000000
 offer2,,2020-01-20 00:00:00.000000
@@ -1657,7 +1657,7 @@ Verify that the following modules have been installed:
 
 **data/import/common/common/glossary.csv**
 
-```
+```csv
 merchant_product_offer.view_seller,View Seller,en_US
 merchant_product_offer.view_seller,Händler ansehen,de_DE
 merchant_product_offer.sold_by,Sold by,en_US

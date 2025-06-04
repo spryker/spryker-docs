@@ -339,6 +339,78 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% endinfo_block %}
 
+### 4.4) For Glue Rest API
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                            | SPECIFICATION                                                                                                                                  | PREREQUISITES | NAMESPACE                                                        |
+|---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------|
+| CustomerEmailMultiFactorAuthPlugin                | Handles email-based MFA authentication, enabling customers to verify their identity via an authentication code sent to their registered email. |               | Spryker\Yves\MultiFactorAuth\Plugin\Factors\Email              |
+| CustomerEmailMultiFactorAuthMailTypeBuilderPlugin | Builds and processes an email template for sending MFA codes to customers.                                                                     |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Mail\Customer   |
+| CustomerEmailCodeSenderStrategyPlugin             | Sends the authentication code to the customer's email address.                                                                                 |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Sender\Customer |
+
+src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthDependencyProvider.php
+
+```php
+
+use Spryker\Glue\MultiFactorAuth\MultiFactorAuthDependencyProvider as SprykerGlueApplicationDependencyProvider;
+use Spryker\Yves\MultiFactorAuth\Plugin\Factors\Email\CustomerEmailMultiFactorAuthPlugin;
+
+class MultiFactorAuthDependencyProvider extends SprykerGlueApplicationDependencyProvider
+{
+    protected function getCustomerMultiFactorAuthPlugins(): array
+    {
+        return [
+            new CustomerEmailMultiFactorAuthPlugin(),
+        ];
+    }
+}
+```
+
+
+src/Pyz/Zed/Mail/MailDependencyProvider.php
+
+```php
+namespace Pyz\Zed\Mail;
+
+use Spryker\Zed\Mail\MailDependencyProvider as SprykerMailDependencyProvider;
+use Spryker\Zed\MultiFactorAuth\Communication\Plugin\Mail\Customer\CustomerEmailMultiFactorAuthMailTypeBuilderPlugin;
+
+class MailDependencyProvider extends SprykerMailDependencyProvider
+{
+    protected function getMailTypeBuilderPlugins(): array
+    {
+        return [
+            new CustomerEmailMultiFactorAuthMailTypeBuilderPlugin(),
+        ];
+    }
+}
+```
+
+src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php
+
+```php
+namespace Pyz\Zed\MultiFactorAuth;
+
+use Spryker\Zed\MultiFactorAuth\MultiFactorAuthDependencyProvider as SprykerMultiFactorAuthDependencyProvider;
+use Spryker\Zed\MultiFactorAuth\Communication\Plugin\Sender\Customer\CustomerEmailCodeSenderStrategyPlugin;
+
+class MailDependencyProvider extends SprykerMailDependencyProvider
+{
+    protected function getCustomerSendStrategyPlugins(): array
+    {
+        return [
+            new CustomerEmailCodeSenderStrategyPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Follow the link [How to Use Multi-Factor Authentication with Glue API](/docs/pbc/all/multi-factor-authentication/{{page.version}}/howto-use-multi-factor-authentication-with-glue-api.html) for verification.
+
+{% endinfo_block %}
 
 
 

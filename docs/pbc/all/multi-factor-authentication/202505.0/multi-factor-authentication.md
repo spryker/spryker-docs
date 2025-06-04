@@ -86,7 +86,6 @@ MFA adds an additional authentication layer for critical operations, protecting 
 You can configure other actions to be protected with MFA according to your requirements. For instructions on integrating MFA into forms and actions, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html#configure-enabled-routes-and-forms).
 
 
-
 ## MFA grace period
 
 After a customer/user successfully enters a valid MFA code, there's a configurable time interval during which MFA validation isn't required for subsequent actions. This improves user experience because users sometimes need to perform multiple protected actions within a short period of time.
@@ -109,6 +108,32 @@ For instructions on configuring brute force protection, see [Install the Multi-F
 The feature is shipped with the email authentication method. For instructions on installing this method, see [Install email Multi-Factor Authentication method](/docs/pbc/all/multi-factor-auth/{{site.version}}/howto-install-email-mfa.html).
 
 You can set up your own methods by implementing a custom MFA type plugin. For instructions, see [Create custom Multi-Factor Authentication methods](/docs/pbc/all/multi-factor-auth/{{site.version}}/howto-create-custom-mfa.html).
+
+
+## Multi-Factor Authentication in Glue API
+
+Spryker’s Glue API supports Multi-Factor Authentication (MFA) to enhance security for sensitive operations performed by authenticated customers. 
+
+### Scope of MFA Enforcement in Glue
+
+To clarify the extent of Multi-Factor Authentication (MFA) enforcement in the Glue API, consider the following:
+- Access Token Authentication Only: MFA is enforced only for customers who are authenticated via an access token. It does not apply to guest users or publicly accessible endpoints.
+- Non-GET Requests Only: MFA protection is applied only to HTTP methods that modify data or perform sensitive actions (e.g., POST, PATCH, DELETE). GET requests are not subject to MFA validation.
+
+### Default Protected Endpoints
+
+By default, the following Glue API endpoints are protected by MFA:
+- customer-password
+- customers
+- addresses
+- carts
+- checkout
+- order-payments
+
+These endpoints require a valid MFA code to be provided in the `X-MFA-Code` header when performing sensitive operations.
+To customize which endpoints are protected by MFA, refer to [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html#configure-enabled-routes-and-forms).
+
+For a comprehensive guide on activating, deactivating, and utilizing MFA through the Glue API, see [How to Use Multi-Factor Authentication with Glue API](/docs/pbc/all/multi-factor-authentication/{{page.version}}/howto-use-multi-factor-authentication-with-glue-api.html).
 
 ## Managing Multi-Factor Authentication 
 

@@ -18,9 +18,9 @@ This guide explains how to activate, deactivate, and use Multi-Factor Authentica
 
 To lean more about MFA methods, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html).
 
-{% info_block infoBox “MFA Type Used in This Guide” %}
+{% info_block infoBox "MFA Type Used in This Guide" %}
 
-This guide demonstrates the Multi-Factor Authentication (MFA) flow using the email MFA method. If you’re implementing other MFA types (e.g., SMS, TOTP), adapt the type field in the request payloads accordingly.
+This guide demonstrates the Multi-Factor Authentication (MFA) flow using the email MFA method. If you're implementing other MFA types, adapt the type field in the request payloads accordingly.
 
 {% endinfo_block %}
 
@@ -31,7 +31,7 @@ This guide demonstrates the Multi-Factor Authentication (MFA) flow using the ema
 
 ## 1) Get Available MFA Methods
 
-To determine the user’s current MFA status, request the list of available methods.
+To determine the user's current MFA status, request the list of available methods.
 
 **Why?**
 
@@ -76,7 +76,7 @@ If the method status is 0 (not enabled), you need to activate MFA.
 
 ### 2.1) Trigger activation
 
-This sends a code to the user via the selected method (e.g. email).
+This sends a code to the user via the selected method (for example, email).
 
 **Request**
 
@@ -99,9 +99,9 @@ Content-Type: application/json
 
 ### 2.2) Verify the code
 
-After the activation request, the system sends a verification code to the user’s email address (or the method specified). The user should retrieve the code from their email inbox.
+After the activation request, the system sends a verification code to the user's email address (or the method specified). The user should retrieve the code from their email inbox.
 
-{% info_block infoBox “Note” %}
+{% info_block infoBox "Note" %}
 
 💡 For email MFA, the code is typically sent to the email address associated with the authenticated user.
 
@@ -137,7 +137,7 @@ If the user already has an active method, and they attempt a protected action, y
 
 This sends the MFA code via the selected method (email, etc.).
 
-{% info_block infoBox “Note” %}
+{% info_block infoBox "Note" %}
 
 MFA codes are valid for a limited time. By default, Spryker uses a 30-minute grace period after successful MFA verification, 
 during which the user can perform protected actions without re-triggering the new code sending and just entering the existing code.
@@ -208,7 +208,7 @@ If the MFA code is missing or incorrect, you will receive an error response indi
 }
 ```
 
-{% info_block infoBox “Note” %}
+{% info_block infoBox "Note" %}
 
 To review all Glue API endpoints protected by default, visit the following link [Multi-Factor Authentication in Glue API](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication-in-glue-api.html).
 

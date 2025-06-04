@@ -178,7 +178,7 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
 }
 ```
 
-{% info_block infoBox “Registering MFA plugins for agents and Backoffice users” %}
+{% info_block infoBox "Registering MFA plugins for agents and Backoffice users" %}
 
 If you are implementing Multi-Factor Authentication plugins for **agents**, you must register them in using the `MultiFactorAuthDependencyProvider::getAgentMultiFactorAuthPlugins()` method.
 
@@ -210,7 +210,7 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
 }
 ```
 
-{% info_block infoBox “Registering MFA plugins for agents and Backoffice users” %}
+{% info_block infoBox "Registering MFA plugins for agents and Backoffice users" %}
 
 If you are implementing Multi-Factor Authentication plugins for **agents** or **Backoffice users**, you must register them in using the `MultiFactorAuthDependencyProvider::getUserSendStrategyPlugins()` method.
 

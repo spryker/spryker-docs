@@ -45,7 +45,7 @@ Set up the following configuration.
 {% info_block infoBox "Customer and User configuration separation" %}
 
 Multi-Factor Authentication settings for **customers** and **users** are configured independently. 
-Ensure that your project explicitly defines values for both user types by implementing the corresponding methods in the `MultiFactorAuthConfig` class (e.g., `getCustomerCodeLength()` and `getUserCodeLength()`).
+Ensure that your project explicitly defines values for both user types by implementing the corresponding methods in the `MultiFactorAuthConfig` class (for example, `getCustomerCodeLength()` and `getUserCodeLength()`).
 
 This separation allows for fine-grained control of security settings based on context and user type.
 

@@ -112,13 +112,13 @@ You can set up your own methods by implementing a custom MFA type plugin. For in
 
 ## Multi-Factor Authentication in Glue API
 
-Spryker’s Glue API supports Multi-Factor Authentication (MFA) to enhance security for sensitive operations performed by authenticated customers. 
+Spryker's Glue API supports Multi-Factor Authentication (MFA) to enhance security for sensitive operations performed by authenticated customers. 
 
 ### Scope of MFA Enforcement in Glue
 
 To clarify the extent of Multi-Factor Authentication (MFA) enforcement in the Glue API, consider the following:
 - Access Token Authentication Only: MFA is enforced only for customers who are authenticated via an access token. It does not apply to guest users or publicly accessible endpoints.
-- Non-GET Requests Only: MFA protection is applied only to HTTP methods that modify data or perform sensitive actions (e.g., POST, PATCH, DELETE). GET requests are not subject to MFA validation.
+- Non-GET Requests Only: MFA protection is applied only to HTTP methods that modify data or perform sensitive actions (for example, POST, PATCH, DELETE). GET requests are not subject to MFA validation.
 
 ### Default Protected Endpoints
 
@@ -166,11 +166,11 @@ Agent users can manage their MFA settings through their Agent profile interface.
 Backoffice administrators can disable Multi-Factor Authentication (MFA) for individual customers directly from the Backoffice.
 
 This functionality is useful in scenarios where:
-- A customer is locked out due to MFA issues (e.g., lost access to their authentication method)
+- A customer is locked out due to MFA issues (for example, lost access to their authentication method)
 - Support intervention is required to reset the customer's MFA configuration
 
 To disable MFA for a customer:
-1. Navigate to the customer’s profile in the Backoffice.
+1. Navigate to the customer's profile in the Backoffice.
 2. Use the **Remove MFA** action to deactivate currently enabled MFA methods for the selected customer.
 
 Once MFA is disabled, the customer can log in using just their credentials. They can reconfigure MFA from their profile at any time.

@@ -19,11 +19,12 @@ Most payment integrations rely on a push notification to send feedback to reques
 
 1. Set up your local development environment in SSL/TLS mode. Most payment providers do not work without this. In the `deploy.yml` file you want to use, change the following setup:
 
-```
+```yml
 ssl:
        enabled: true
        redirect: true
 ```
+
 2. Boot your edited `deploy.yml` file and start your application.
 3. Install and start up NGROK to receive the public URL:
 

@@ -97,9 +97,9 @@ commonOptions = {
     /www.jetbrains.com\/[\.\w\-\/\?]+/,
     /docs.spring.io\/[\.\w\-\/\?]+/,
     /redisdesktop.com\/[\.\w\-\/\?]+/,
-    /jwt.io\/[\.\w\-\/\?]+/,
     /developer.computop.com\/[\.\w\-\/\?]+/,
     /www.centralbank.cy\/[\.\w\-\/\?]+/,
+    /centralbank.cy\/[\.\w\-\/\?]+/,
     /www.mysql.com\/[\.\w\-\/\?]+/,
     /www.gnu.org\/[\.\w\-\/\?]+/,
     /algolia.com\/[\.\w\-\/\?]+/,
@@ -108,6 +108,7 @@ commonOptions = {
     /www.centralbank.cy\/[\.\w\-\/\?]+/,
     /dev.mysql.com\/[\.\w\-\/\?]+/,        
     /jwt.io\/[\.\w\-\/\?]+/,
+    /www.jwt.io\/[\.\w\-\/\?]+/,
     /auth0.com\/[\.\w\-\/\?]+/,    
     /www.facebook.com\/[\.\w\-\/\?]+/
 

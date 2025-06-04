@@ -15,6 +15,11 @@ The following video shows how a user can interact with different elements of a c
   </video>
 </figure>
 
+## Configuration recommendation
+
+For good rendering performance, disable cart validation during rendering by setting `CartPageConfig::IS_QUOTE_VALIDATION_ENABLED_FOR_AJAX_CART_ITEMS = false`.
+With this configuration, the cart is still validated when the page is opened, and the user will see all required validation messages; however, it is not validated when cart items are rendered.
+
 ## Related Developer documents
 
 | INSTALLATION GUIDES |

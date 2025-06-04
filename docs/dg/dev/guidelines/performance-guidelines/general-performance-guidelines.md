@@ -200,10 +200,10 @@ Make sure that the command is executed after the `vendor/bin/console twig:cache:
 **\Spryker\Zed\Console\ConsoleDependencyProvider**
 
 ```php
+...
 use Spryker\Zed\Form\Communication\Plugin\Application\FormApplicationPlugin;
 use Spryker\Zed\Security\Communication\Plugin\Application\ConsoleSecurityApplicationPlugin;
 use Spryker\Zed\Twig\Communication\Console\TwigTemplateWarmerConsole;
-
 ...
 
     protected function getConsoleCommands(Container $container): array
@@ -226,11 +226,12 @@ use Spryker\Zed\Twig\Communication\Console\TwigTemplateWarmerConsole;
     }
 ```
 
-2. Register the following classes for the Yves command
+3. Register the following classes for the Yves console context to allow Twig properly compile templates.
 
 **\Spryker\Yves\Console\ConsoleDependencyProvider**
 
 ```php
+...
 use Spryker\Yves\Form\Plugin\Application\FormApplicationPlugin;
 use Spryker\Yves\Locale\Plugin\Application\ConsoleLocaleApplicationPlugin;
 use Spryker\Yves\Security\Plugin\Application\ConsoleSecurityApplicationPlugin;

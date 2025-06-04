@@ -16,11 +16,7 @@ composer require spryker-shop/shop-ui:^1.93.1
 
 2. Create the sprite file: `/frontend/assets/global/default/icons/sprite.svg`.
 
-3. Put your SVG icons into the `sprite.svg` file. Get all the symbols from the `src/Pyz/Yves/ShopUi/Theme/default/components/atoms/icon-sprite/icon-sprite.twig` file and put it into newly created /frontend/assets/global/default/icons/sprite.svg:
-
-**File:**
-
-Example:
+3. Add all symbols from `src/Pyz/Yves/ShopUi/Theme/default/components/atoms/icon-sprite/icon-sprite.twig` as SVG icons to `sprite.svg`:
 
 **/frontend/assets/global/default/icons/sprite.svg**
 
@@ -78,9 +74,7 @@ Usage example:
 {% endraw %}
 ```
 
-- You can remove the old `icon-sprite.twig` because it's no longer required
-- Make sure your sprite file is accessible at the specified path
-
+7. Optional: Remove `icon-sprite.twig` because it's no longer used.
 
 
 

@@ -1001,8 +1001,8 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html
     - title: Services
       url: /docs/dg/dev/integrate-and-configure/configure-services.html
-    - title: SVG sprite asset extraction
-      url: /docs/dg/dev/integrate-and-configure/integrate-svg-sprite-asset.html
+    - title: Automated SVG sprite asset extraction
+      url: /docs/dg/dev/integrate-and-configure/integrate-automated-svg-sprite-extraction.html
     - title: Twig and TwigExtension
       url: /docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
 

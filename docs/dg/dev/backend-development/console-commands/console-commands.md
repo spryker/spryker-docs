@@ -224,31 +224,33 @@ To use the npm commands, download and install [Node.js](https://docs.npmjs.com/d
 
 {% endinfo_block %}
 
-| ENVIRONMENT | COMMAND DESCRIPTION | LOCAL COMMAND | DOCKER CLI COMMAND |
-|---|---|---|---|
-| Project/Core |  |  |  |
-|  | Removes the entire content from the cache directories. |  | console cache:empty-all |
-|  | Executes your importers (full-import). |  | console data:import  |
-|  | Imports all text translations for the core/project level. |  | console data:import:glossary |
-|  | Generates transfer objects from transfer XML definition files. |  | console transfer:generate |
-|  | Generates a cache file for the twig templates. |  | console twig:cache:warmer |
-| Yves | Dependencies installation (from the project level). | npm install | console frontend:project:install-dependencies |
-|  | Builds the core/project scripts, styles, fonts, and images to the `public/Yves/assets` folder. | npm run yves | console frontend:yves:build  |
-|  | Runs a build command every time the core/project scripts or style files change during the development. | npm run yves:watch |  |
-|  | Runs a production build which compresses and minifies the core/project scripts, styles, fonts, and images to the `public/Yves/assets` folder. | npm run yves:production  | console frontend:yves:build --environment production  |
-| Zed | Dependencies installation. Installs and packages all modules from the `vendor/spryker` (for the split version) and `vendor/spryker/spryker` (for the nonsplit version) folders. |  | console frontend:project:install-dependencies |
-|  | Builds Zed scripts, styles, fonts, and images to the `public/Zed/assets` folder. | npm run zed | console frontend:zed:build  |
-|  | Runs a build command every time when Zed scripts or style files change during the development. | npm run zed:watch |  |
-|  | Runs a production build which compresses and minifies Zed scripts, styles, fonts, and images to the `public/Zed/assets` folder. | npm run zed:production | console frontend:zed:build --environment production |
-| Merchant Portal | Dependencies installation. Installs and packages all modules from the `vendor/spryker` (for the split version) and `vendor/spryker/spryker` (for the nonsplit version) folders. |  | console frontend:project:install-dependencies |
-|  | Builds Merchant Portal scripts, styles, fonts, and images to the `public/MerchantPortal/assets` folder. | npm run mp:build | console frontend:mp:build  |
-|  | Runs a build command every time when Merchant Portal scripts or style files change during the development. | npm run mp:build:watch |  |
-|  | Runs a production build which compresses and minifies Merchant Portal scripts, styles, fonts, and images to the `public/MerchantPortal/assets` folder. | npm run mp:build:production | console frontend:mp:build --environment production |
-| Legacy Demoshop Yves | Dependencies installation (from the project level). | npm install | console frontend:project:install-dependencies |
-|  | Builds the core/project scripts, styles, fonts, and images to the `public/Yves/assets/default` folder. | npm run yves | console frontend:yves:build  |
-|  | Runs a build command every time when the core/project scripts or style files change during the development. | npm run yves:dev |  |
-|  | Runs a production build which compresses and minifies the core/project scripts, styles, fonts, and images to the `public/Yves/assets/default` folder. | npm run yves:prod | console frontend:yves:build --environment production |
-| Legacy Demoshop Zed | Dependencies installation. Installs and packages all modules from the `vendor/spryker` (for the split version) and `vendor/spryker/spryker` (for the nonsplit version) folder. |  | console frontend:project:install-dependencies |
-|  | Builds Zed scripts, styles, fonts, and images to the `public/Zed/assets` folder. | npm run zed | console frontend:zed:build |
-|  | Runs a build command every time Zed scripts or styles files change during development. | npm run zed:dev |  |
-|  | Runs a production build which compresses and minifies Zed scripts, styles, fonts, and images to the `public/Zed/assets` folder. | npm run zed:prod |  |
+| ENVIRONMENT          | COMMAND DESCRIPTION                                                                                                                                          | LOCAL COMMAND               | DOCKER CLI COMMAND                                   |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|------------------------------------------------------|
+| Project/Core         |                                                                                                                                                              |                             |                                                      |
+|                      | Removes all content from the cache directories.                                                                                                              |                             | console cache:empty-all                              |
+|                      | Executes importers (full-import).                                                                                                                            |                             | console data:import                                  |
+|                      | Imports all text translations for both core and project level.                                                                                               |                             | console data:import:glossary                         |
+|                      | Generates transfer objects from transfer XML definition files.                                                                                               |                             | console transfer:generate                            |
+|                      | Generates a cache file for twig templates.                                                                                                                   |                             | console twig:cache:warmer                            |
+| Yves                 | Installs dependencies from the project level.                                                                                                                | npm install                 | console frontend:project:install-dependencies        |
+|                      | Builds both core and project scripts, styles, fonts, and images to the `public/Yves/assets` folder.                                                          | npm run yves                | console frontend:yves:build                          |
+|                      | Runs a build command every time either core or project scripts or style files change during the development.                                                 | npm run yves:watch          |                                                      |
+|                      | Runs a production build which compresses and minifies both core and project scripts, styles, fonts, and images to the `public/Yves/assets` folder.           | npm run yves:production     | console frontend:yves:build --environment production |
+|                      | Precompiles Twig templates on Yves to improve performance by avoiding on-the-fly compilation during the first page load.                                     |                             | vendor/bin/yves twig:template:warmer                 |
+| Zed                  | Installs dependencies. Installs and packages all modules from `vendor/spryker` for the split version and `vendor/spryker/spryker` for the non-split version. |                             | console frontend:project:install-dependencies        |
+|                      | Builds Zed scripts, styles, fonts, and images to the `public/Zed/assets` folder.                                                                             | npm run zed                 | console frontend:zed:build                           |
+|                      | Runs a build command every time when Zed scripts or style files change during development.                                                                   | npm run zed:watch           |                                                      |
+|                      | Runs a production build which compresses and minifies Zed scripts, styles, fonts, and images to the `public/Zed/assets` folder.                              | npm run zed:production      | console frontend:zed:build --environment production  |
+|                      | Precompiles Twig templates on Zed to improve performance by avoiding on-the-fly compilation during the first page load.                                      |                             | console twig:template:warmer                         |
+| Merchant Portal      | Installs dependencies. Installs and packages all modules from `vendor/spryker` for the split version and `vendor/spryker/spryker` for the nonsplit version.  |                             | console frontend:project:install-dependencies        |
+|                      | Builds Merchant Portal scripts, styles, fonts, and images to the `public/MerchantPortal/assets` folder.                                                      | npm run mp:build            | console frontend:mp:build                            |
+|                      | Runs a build command every time when Merchant Portal scripts or style files change during the development.                                                   | npm run mp:build:watch      |                                                      |
+|                      | Runs a production build which compresses and minifies Merchant Portal scripts, styles, fonts, and images to the `public/MerchantPortal/assets` folder.       | npm run mp:build:production | console frontend:mp:build --environment production   |
+| Legacy Demoshop Yves | Installs dependencies (from the project level).                                                                                                              | npm install                 | console frontend:project:install-dependencies        |
+|                      | Builds both core and project scripts, styles, fonts, and images to the `public/Yves/assets/default` folder.                                                  | npm run yves                | console frontend:yves:build                          |
+|                      | Runs a build command every time either core or project scripts or style files change during the development.                                                 | npm run yves:dev            |                                                      |
+|                      | Runs a production build which compresses and minifies both core and project scripts, styles, fonts, and images to the `public/Yves/assets/default` folder.   | npm run yves:prod           | console frontend:yves:build --environment production |
+| Legacy Demoshop Zed  | Installs and packages all modules from `vendor/spryker` for the split version and `vendor/spryker/spryker` for the non-split version.                        |                             | console frontend:project:install-dependencies        |
+|                      | Builds Zed scripts, styles, fonts, and images to the `public/Zed/assets` folder.                                                                             | npm run zed                 | console frontend:zed:build                           |
+|                      | Runs a build command every time Zed scripts or styles files change during development.                                                                       | npm run zed:dev             |                                                      |
+|                      | Runs a production build that compresses and minifies Zed scripts, styles, fonts, and images to the `public/Zed/assets` folder.                               | npm run zed:prod            |                                                      |

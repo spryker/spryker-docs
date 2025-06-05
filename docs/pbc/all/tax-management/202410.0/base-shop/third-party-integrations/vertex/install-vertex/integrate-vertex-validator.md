@@ -11,11 +11,10 @@ To integrate Vertex Validator, follow these steps.
 
 ## 1. Install required modules
 
-Update [spryker/tax-app](https://github.com/spryker/tax-app) to `^0.4.2`, update [spryker/glossary-storage](https://github.com/spryker/glossary-storage) to `^1.11.2`, and install the [spryker/tax-app-rest-api](https://github.com/spryker/tax-app-rest-api) module:
+Update [spryker/tax-app](https://github.com/spryker/tax-app) to `^0.4.2` and install the [spryker/tax-app-rest-api](https://github.com/spryker/tax-app-rest-api) module:
 
 ```bash
-composer require spryker/tax-app:"^0.4.2" spryker/tax-app-rest-api:"^0.2.0" spryker/glossary-storage:"^1.11.2" --update-with-dependencies
-```
+composer require spryker/tax-app:"^0.4.2" spryker/tax-app-rest-api:"^0.2.0" --update-with-dependencies
 
 ## 2. Add glossary keys
 

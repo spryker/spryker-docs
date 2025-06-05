@@ -135,9 +135,11 @@ The implementation described in this document is exemplary and may require addit
     </div>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
 </details>
 
 5. In `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig`, adjust the form definition by replacing `enable: data.isPlaceableOrder and can('WriteSharedCartPermissionPlugin', data.cart.idQuote)` with the following:
+
 ```twig
 enable: data.isPlaceableOrder
 and can('SeeOrderPlaceSubmitPermissionPlugin')

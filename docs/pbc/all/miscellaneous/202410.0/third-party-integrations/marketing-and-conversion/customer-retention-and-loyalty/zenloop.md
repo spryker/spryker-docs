@@ -19,11 +19,11 @@ At zenloop, the focus is on the customer – the SaaS platform for customer rete
 
 YOUR ADVANTAGES:
 
-* collect actionable feedback at high response rates up to 25-30%
-* excite and engage your organization with feedback livestreams
-* identify immediate insights and trends with Smart Labels (text analytics)
-* delight promoters and critics with personalized replies to reduce churn
-* empower improvements - route feedback alerts to colleagues
+- collect actionable feedback at high response rates up to 25-30%
+- excite and engage your organization with feedback livestreams
+- identify immediate insights and trends with Smart Labels (text analytics)
+- delight promoters and critics with personalized replies to reduce churn
+- empower improvements - route feedback alerts to colleagues
 
 ---
 

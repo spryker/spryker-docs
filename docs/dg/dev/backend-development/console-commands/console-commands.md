@@ -22,9 +22,9 @@ The [list of console commands](/docs/dg/dev/backend-development/console-commands
 
 Collector commands are responsible for exporting the data in the SQL database to the frontend data storages (Redis and Elasticsearch):
 
-* `collector:search:export`—exports data to the Elasticsearch storage.
-* `collector:search:update`—updates the data in the Elasticsearch storage.
-* `collector:storage:export`—exports data to Key-Value storage (Redis).
+- `collector:search:export`—exports data to the Elasticsearch storage.
+- `collector:search:update`—updates the data in the Elasticsearch storage.
+- `collector:storage:export`—exports data to Key-Value storage (Redis).
 
 ## Order Management System commands
 
@@ -36,14 +36,14 @@ console oms:check-condition
 
 Options:
 
-* `-s`, `--store=store`—filters by the given store.
-* `-l`, `--limit=limit`—limits the number of orders.
+- `-s`, `--store=store`—filters by the given store.
+- `-l`, `--limit=limit`—limits the number of orders.
 
 Examples:
 
 ```bash
-$ console oms:check-condition -s DE
-$ console oms:check-condition --limit=100 --store=DE
+console oms:check-condition -s DE
+console oms:check-condition --limit=100 --store=DE
 ```
 
 ---
@@ -55,14 +55,14 @@ console oms:check-timeout
 
 Options:
 
-* `-s`, `--store=store`—filter by the given store
-* `-l`, `--limit=limit`—limit the number of orders
+- `-s`, `--store=store`—filter by the given store
+- `-l`, `--limit=limit`—limit the number of orders
 
 Examples:
 
 ```bash
-$ console oms:check-timeout --store=DE --limit=100
-$ console oms:check-timeout -l 100
+console oms:check-timeout --store=DE --limit=100
+console oms:check-timeout -l 100
 ```
 
 ## Installation setup commands
@@ -135,6 +135,7 @@ setup:install:demo-data
 ```bash
 setup:propel
 ```
+
   The following steps are performed when running this command:
 
   1. Write propel configuration:
@@ -183,25 +184,25 @@ setup:propel
 
 Cron jobs are scheduled by using Jenkins. For setting up Jenkins, the following console commands can be used from the command line:
 
-* Start the Jenkins service:
+- Start the Jenkins service:
 
 ```bash
 scheduler:resume
 ```
 
-* Shut down the Jenkins service:
+- Shut down the Jenkins service:
 
 ```bash
 scheduler:suspend
 ```
 
-* Set up the cron jobs based on the definitions contained in the configuration file (the config file for jobs is placed in `/config/Zed/cronjobs/jobs.php`):
+- Set up the cron jobs based on the definitions contained in the configuration file (the config file for jobs is placed in `/config/Zed/cronjobs/jobs.php`):
 
 ```bash
 scheduler:setup
 ```
 
-* Clean Jenkins jobs:
+- Clean Jenkins jobs:
 
 ```bash
 scheduler:clean

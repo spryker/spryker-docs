@@ -169,6 +169,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -281,6 +282,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -349,6 +351,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -533,6 +536,7 @@ sku,merchant_reference,is_shared
 208,MER000002,1
 209,MER000002,1
 ```
+
 </details>
 
 | COLUMN  | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION  |
@@ -645,8 +649,8 @@ console frontend:yves:build
 {% info_block warningBox "Verification" %}
 
 Make sure that the following is true:
-* For the merchant products, you can see the merchant name on the product details page.
-* When you add a merchant product to the cart, it has the **Sold By** widget displayed on the cart page.
+- For the merchant products, you can see the merchant name on the product details page.
+- When you add a merchant product to the cart, it has the **Sold By** widget displayed on the cart page.
 
 {% endinfo_block %}
 
@@ -656,7 +660,7 @@ Make sure that the following is true:
 
 **data/import/common/common/glossary.csv**
 
-```
+```csv
 merchant_product.message.invalid,Product "%sku%" with Merchant "%merchant_reference%" not found.,en_US
 merchant_product.message.invalid,Der Produkt "%sku%" mit dem Händler "%merchant_reference%" ist nicht gefunden.,de_DE
 merchant_product.sold_by,Sold by,en_US

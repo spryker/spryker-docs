@@ -14,12 +14,13 @@ The current Spryker Cloud Commerce OS solution doesn't support advanced rollout 
 
 Within CodePipeline, there are several deployment types:
 
-* **Build:** Used solely for image verification during the building process and does not involve any rollout.
-* **Rollout Scheduler:** This pipeline specifically handles the deployment through Jenkins.
-* **Normal:** The primary pipeline for application deployment.
-* **Destructive:** Similar to the Normal pipeline but includes the process of clearing and then populating data in the RDS. This pipeline is mandatory for the initial deployment or when data needs to be refreshed.
+- **Build:** Used solely for image verification during the building process and does not involve any rollout.
+- **Rollout Scheduler:** This pipeline specifically handles the deployment through Jenkins.
+- **Normal:** The primary pipeline for application deployment.
+- **Destructive:** Similar to the Normal pipeline but includes the process of clearing and then populating data in the RDS. This pipeline is mandatory for the initial deployment or when data needs to be refreshed.
 
 For more information about deployment process and its states, see [Deployment in states](/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.html).
 
 ## Next step
+
 [Define environment variables](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-define-environment-variables.html)

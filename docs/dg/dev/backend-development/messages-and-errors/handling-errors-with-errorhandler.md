@@ -42,9 +42,9 @@ You can change the ErrorRenderer error output to suit the environment you work i
 
 Change the renderer in your configuration files as follows:
 
-* To change the renderer, use the `ErrorHandlerConstants::ErrorRenderer` constant.
-* To display a formatted HTML page in production environments, use `WebErrorHtmlRenderer`.
-* To display exception details in a development environment, use `WebExceptionErrorRenderer`. This displays the relevant developer messages and the exception's stack trace.
+- To change the renderer, use the `ErrorHandlerConstants::ErrorRenderer` constant.
+- To display a formatted HTML page in production environments, use `WebErrorHtmlRenderer`.
+- To display exception details in a development environment, use `WebExceptionErrorRenderer`. This displays the relevant developer messages and the exception's stack trace.
 
 The following example shows how to change the error renderer for a development environment:
 

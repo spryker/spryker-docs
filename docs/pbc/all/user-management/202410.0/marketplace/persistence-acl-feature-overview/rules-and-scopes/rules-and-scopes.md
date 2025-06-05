@@ -9,6 +9,7 @@ The functionality of this feature is based on such fundamental concepts as Rule 
 It is important to understand that the rule, in contrast to the configuration, is tied to the user (and his role) and determines the user's rights towards the entity.
 
 ## Rule
+
 One of the fundamental concepts of the Persistence ACL module is an entity rule. It determines the capabilities and permissions of the current user. The rule is an entry in the `spy_acl_entity_rule` table.
 
 | COLUMN | DESCRIPTION | DATA EXAMPLE |
@@ -63,6 +64,7 @@ We recommend keeping the default permission for global context as 0 (no permissi
 {% endinfo_block %}
 
 ## Permission concept
+
 Permission mask (`spy_acl_entity_rule.permission_mask)` is a binary representation of the operations that this rule allows.
 Every CRUD operation has its own binary mask.
 

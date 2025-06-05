@@ -56,13 +56,13 @@ Plugins are used in many different places in Spryker. They're a great way to ext
 
 With modularity, different modules need functionalities from other modules. This builds dependencies between modules, which is okay as long as the dependencies make sense. To allow for the necessary functionality, a dependent module gets an object from the other module. As Facades are the main APIs of modules in Spryker, the dependent module gets the Facade of the other module. In some cases, a Client in a module needs another Client from another module. So, the dependent Client gets the Client object from the other module. To manage this kind of module-to-module dependencies, we use *Dependency Providers*.
 
-A _Dependency Provider_ is a place where the module-to-module dependencies are defined in a module. Every module has only one Dependency Provider per application layer, except the Shared layer. So, a module can have a Dependency Provider in the Commerce OS, another one in the front end, and another one in the Client.
+A *Dependency Provider* is a place where the module-to-module dependencies are defined in a module. Every module has only one Dependency Provider per application layer, except the Shared layer. So, a module can have a Dependency Provider in the Commerce OS, another one in the front end, and another one in the Client.
 
 The main difference between Factories and Dependency Providers is that Factories are responsible for in-module dependencies, while Dependency Providers are responsible for module-to-module dependencies.
 
 ## Transfer object
 
-To manage data transfer between the frontend and the Commerce OS applications and between module-to-module communication, we use *Data Transfer Objects* (or Transfer Objects). In Spryker, a _Transfer Object_ is an object with getters, setters, and helper functions to make data transfers clear and simple to use.
+To manage data transfer between the frontend and the Commerce OS applications and between module-to-module communication, we use *Data Transfer Objects* (or Transfer Objects). In Spryker, a *Transfer Object* is an object with getters, setters, and helper functions to make data transfers clear and simple to use.
 
 Transfer Objects are defined as XML files. Every module can define its own Transfer Objects or extend Transfer Objects from other modules when a dependency to that data is needed. The XML files are merged and transformed into auto-generated PHP objects.
 
@@ -93,5 +93,5 @@ Directories:
 
 ## Next steps
 
-* To find out how data flows are separated in Spryker Commerce OS, see [Conceptual overview](/docs/dg/dev/architecture/conceptual-overview.html).
-* To learn about application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/dg/dev/architecture/modules-and-application-layers.html).
+- To find out how data flows are separated in Spryker Commerce OS, see [Conceptual overview](/docs/dg/dev/architecture/conceptual-overview.html).
+- To learn about application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/dg/dev/architecture/modules-and-application-layers.html).

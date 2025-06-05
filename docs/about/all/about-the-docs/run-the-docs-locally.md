@@ -20,7 +20,7 @@ related:
     link: docs/about/all/about-the-docs/style-guide/markdown-syntax.html
 ---
 
-This document describes how to run Spryker docs locally using Docker. You may want to run docs locally to preview your changes, but it's not required for contributing. 
+This document describes how to run Spryker docs locally using Docker. You may want to run docs locally to preview your changes, but it's not required for contributing.
 
 For instructions on contributing, see [Edit the docs locally](/docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-locally.html)
 
@@ -43,6 +43,7 @@ cd Documents/GitHub/spryker-docs
 ```  
 
 3. Run the docs:
+
 ```bash
 docker compose up
 ```

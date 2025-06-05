@@ -6,9 +6,9 @@ template: feature-integration-guide-template
 ---
 
 AI-powered product management adds the following functionality to the Back Office:
-* Automates product categorization in the Back Office.  
-* Automates the translation of product information in the Back Office.  
-* Generates alt text for product images in the Back Office to improve accessibility and SEO.
+- Automates product categorization in the Back Office.  
+- Automates the translation of product information in the Back Office.  
+- Generates alt text for product images in the Back Office to improve accessibility and SEO.
 
 
 This document describes how to install Product Management powered by OpenAI.
@@ -187,7 +187,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 | PLUGIN | VERIFICATION |
 | - | - |
-| `ProductCategoryAbstractFormExpanderPlugin` |  Edit and create abstract product forms contain `categoryIds` field.
+| `ProductCategoryAbstractFormExpanderPlugin` |  Edit and create abstract product forms contain `categoryIds` field. |
 | `ProductCategoryProductAbstractAfterUpdatePlugin` |  After updating an abstract product, the categories from `categoryIds` field are assigned to the corresponding abstract product. |
 | `ProductCategoryProductAbstractPostCreatePlugin` |  After creating an abstract product, the categories from `categoryIds` field are assigned to the corresponding abstract product. |
 | `ImageAltTextProductAbstractFormExpanderPlugin` | The edit abstract product form contains the `alt_text` field for each image. After saving the form, the value is saved to the `spy_product_image.alt_text` database column. |
@@ -198,10 +198,10 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 ## Install feature frontend
 
 1. Integrate the frontend part using the example integration in Demo Shops:
-- B2B: https://github.com/spryker-shop/b2b-demo-shop/pull/491/files
-- B2C: https://github.com/spryker-shop/b2c-demo-shop/pull/544/files
-- B2B-MP: https://github.com/spryker-shop/b2b-demo-marketplace/pull/438/files
-- B2C-MP: https://github.com/spryker-shop/b2c-demo-marketplace/pull/422/files
+- [B2B integration PR](https://github.com/spryker-shop/b2b-demo-shop/pull/491/files)
+- [B2C integration PR](https://github.com/spryker-shop/b2c-demo-shop/pull/544/files)
+- [B2B-MP integration PR](https://github.com/spryker-shop/b2b-demo-marketplace/pull/438/files)
+- [B2C-MP integration PR](https://github.com/spryker-shop/b2c-demo-marketplace/pull/422/files)
 
 2. Apply the frontend changes:
 

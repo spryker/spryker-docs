@@ -46,6 +46,7 @@ Example (for testing only):
 ```php
 $config[HeidelpayConstants::CONFIG_HEIDELPAY_TRANSACTION_CHANNEL_PAYPAL] = '31HA07BC8142C5A171749A60D979B6E4';
 ```
+
 <sub>This value should be taken from HEIDELPAY</sub>
 
 ### Checkout Payment Step Display
@@ -62,7 +63,7 @@ No extra actions needed, quote being filled with payment method selection as def
 
 **On "save order" event** - save Heidelpay payment per order and items, as usual.
 
-**When state machine is initialized**, an event "send debit request" will trigger debit request. In case of success, payment system will return a redirect url for customer, where the payment can be completed. Request and response will be fully persisted in the database (`spy_payment_heidelpay_transaction_log`). 
+**When state machine is initialized**, an event "send debit request" will trigger debit request. In case of success, payment system will return a redirect url for customer, where the payment can be completed. Request and response will be fully persisted in the database (`spy_payment_heidelpay_transaction_log`).
 
 **On "post save hook" event**, we check in transaction log table if the debit request was sent successfully and if so, we set external redirect response (URL is obtained from the previous step) and redirect customer to the Paypal website where the customer confirms the payment.
 
@@ -89,8 +90,8 @@ class HeidelpayPostSavePlugin extends BaseAbstractPlugin implements CheckoutPost
 
 **On payment confirmation** response is sent to the Heidelpay and Heidelpay makes an asynchronous POST request to the shop's `CONFIG_HEIDELPAY_PAYMENT_RESPONSE_URL` URL (Yves), with the result of payment (see `HeidelpayController::paymentAction()` ). This is called "external response transaction", the result will be persisted in `spy_payment_heidelpay_transaction_log` as usual.
 
- The most important data here is the payment reference ID which can be used for further transactions like capture/cancel/etc. 
+ The most important data here is the payment reference ID which can be used for further transactions like capture/cancel/etc.
 
-In the response Heidelpay expects an URL string which shows where customer has to be redirected. In case  if customer successfully confirmed payment, there should be a link to checkout order success step, in case of failure - checkout payment failed action with error code (see`HeidelpayController::paymentFailedAction()` and [Heidelpay workflow for errors](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/heidelpay-workflow-for-errors.html) section). Heidelpay redirects customer to the given URL and payment process is finished. 
+In the response Heidelpay expects an URL string which shows where customer has to be redirected. In case  if customer successfully confirmed payment, there should be a link to checkout order success step, in case of failure - checkout payment failed action with error code (see`HeidelpayController::paymentFailedAction()` and [Heidelpay workflow for errors](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/heidelpay-workflow-for-errors.html) section). Heidelpay redirects customer to the given URL and payment process is finished.
 
 Now the order can be considered as "paid".

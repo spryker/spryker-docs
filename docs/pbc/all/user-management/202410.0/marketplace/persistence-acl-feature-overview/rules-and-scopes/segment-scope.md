@@ -39,11 +39,13 @@ There are few examples of data segments:
 | 1115 | 3 |
 
 Query before the Persistence ACL:
+
 ```sql
 SELECT * FROM `spy_sales_order` ORDER BY `updated_at` DESC;
 ```
 
 Query after the Persistence ACL:
+
 ```sql
 SELECT `spy_sales_order`.*
 FROM `spy_sales_order`
@@ -54,6 +56,7 @@ ORDER BY `spy_sales_order`.`updated_at` DESC;
 ```
 
 ## Dynamic segments
+
 Since segments are defined using a many-to-many table, projects can create dynamic segments.
 
 By handling events such as `Product created` and `Product updated`, you can maintain a special segment of products (for example,red products).

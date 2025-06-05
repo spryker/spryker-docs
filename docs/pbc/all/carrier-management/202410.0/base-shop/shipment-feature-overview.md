@@ -24,10 +24,10 @@ For instructions on adding carrier companies in the Back Office, see [Add carrie
 ## Shipment type
 
 A *shipment type* is a way in which a customer receives an order after placing it. Shipment type examples:
-* Home delivery: products are delivered to the customer's residence.
-* In-store pickup: customer places an order online and picks it up at a selected physical store.
-* Curbside pickup: customer places an order online and drives the the selected physical store. They park at a designated area, and the store's associate brings out the order directly to the car.
-* Locker pickup: customer places an order online and picks it up from a selected secure locker using a key or code provided by the store.
+- Home delivery: products are delivered to the customer's residence.
+- In-store pickup: customer places an order online and picks it up at a selected physical store.
+- Curbside pickup: customer places an order online and drives the the selected physical store. They park at a designated area, and the store's associate brings out the order directly to the car.
+- Locker pickup: customer places an order online and picks it up from a selected secure locker using a key or code provided by the store.
 
 Shipment types are used by service points. For more information about service points, see [Service Points feature overview](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html).
 
@@ -40,10 +40,10 @@ To import shipment types, see [Import file details: shipment_type.csv](/docs/pbc
 
 A *shipment method* is a way in which a carrier company delivers an order to a customer. Delivery method examples:
 
-* Ground shipping
-* Expedited shipping
-* Overnight shipping
-* Air freight
+- Ground shipping
+- Expedited shipping
+- Overnight shipping
+- Air freight
 
 There are also branded shipment methods like like DHL Express, DHL Standard, or Hermes Next Day. They are essentially variations of the regular shipment methods that refer to a particular carrier.
 
@@ -56,8 +56,8 @@ For instructions on adding shipment methods in the Back Office, see [Add deliver
 
 If a Back Office user creates or edits a shipment of an order created by a customer, the grand total paid by the customer is not affected:
 
-* If a new shipment method is added, its price is 0.
-* If a shipment method is changed, the price of the shipment method stays the same for that order.
+- If a new shipment method is added, its price is 0.
+- If a shipment method is changed, the price of the shipment method stays the same for that order.
 
 {% endinfo_block %}
 
@@ -73,9 +73,9 @@ You can give shipment discounts based on the carrier, shipment method, or cart v
 
 ## Current constraints
 
-* Product catalog can't be filtered by a shipment type.
-* Customers can't add products with preselected shipment types to cart. They can select shipment types only during checkout.
-* If a product is added to cart without a product offer attached to it, this product can be purchased only with the *Delivery* shipment type.
+- Product catalog can't be filtered by a shipment type.
+- Customers can't add products with preselected shipment types to cart. They can select shipment types only during checkout.
+- If a product is added to cart without a product offer attached to it, this product can be purchased only with the *Delivery* shipment type.
 
 
 ## Related Business User documents

@@ -56,13 +56,13 @@ npm ci
 
 2. Execute the SCSS Linter in:
 
-* validation mode:
+- validation mode:
 
 ```bash
 npm run yves:stylelint
 ```
 
-*  fix mode:
+- fix mode:
 
 ```bash
 npm run yves:stylelint:fix
@@ -90,18 +90,18 @@ SCSS Linter rules related to formatting aren't included in the [stylelint config
 
 The SCSS Linter is integrated into:
 
-* Pre-commit hooks
+- Pre-commit hooks
 The function that executes the SCSS Linter before the commit resides in `/.githook`:
 
-```
+```text
 - GitHook\Command\FileCommand\PreCommit\StyleLintCommand
 ```
 
-* Travis
+- Travis
 Command to run the SCSS Linter is integrated into `.travis.yml`
 
-```
-- node ./frontend/libs/stylelint
+```bash
+node ./frontend/libs/stylelint
 ```
 
 {% info_block warningBox "Important" %}

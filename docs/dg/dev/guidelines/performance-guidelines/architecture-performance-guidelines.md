@@ -30,8 +30,8 @@ Let's consider an example illustrating the impact of a bad architecture design w
 
 During the project implementation, sometimes developers might execute similar queries that return the same result or subset of data from it in one transaction. Therefore, architects should ensure that the database interactions are set to the lowest possible number. They can achieve this by:
 
-* Merging several queries into one query with a bigger result (unfiltered).
-* Aggregating the duplicate query to one query and sharing the result with the stack of the code execution (memory).
+- Merging several queries into one query with a bigger result (unfiltered).
+- Aggregating the duplicate query to one query and sharing the result with the stack of the code execution (memory).
 
 {% info_block warningBox %}
 
@@ -145,10 +145,13 @@ Propel instance pooling is a  Propel feature that determines whether object inst
 If you encounter memory leak issues while running console commands, consider temporarily disabling instance pooling:
 
 1. Before executing a memory-intensive script, disable instance pooling:
+
 ```php
 \Propel\Runtime\Propel::disableInstancePooling();
 ```
+
 2. After the memory-intensive script has been executed, reenable instance pooling:
+
 ```php
 \Propel\Runtime\Propel::enableInstancePooling();
 ```

@@ -190,6 +190,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 3. Configure channels in the `MessageBroker` configuration:
 
 **src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php**
+
 ```php
 namespace Pyz\Zed\MessageBroker;
 
@@ -216,6 +217,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 4. Configure the `Payment` module:
 
 **src/Pyz/Zed/Payment/PaymentConfig.php**
+
 ```php
 namespace Pyz\Zed\Payment;
 
@@ -251,6 +253,7 @@ class PaymentConfig extends SprykerPaymentConfig
 5. Configure plugins in `Checkout`:
 
 **src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
+
 ```php
 namespace Pyz\Zed\Checkout;
 
@@ -277,6 +280,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 6. Configure plugins in `CheckoutPage`:
 
 **src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php**
+
 ```php
 namespace Pyz\Yves\CheckoutPage;
 
@@ -301,6 +305,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 7. Configure plugins in `Router`:
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
+
 ```php
 namespace Pyz\Yves\Router;
 
@@ -325,6 +330,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 8. Configure plugins in `Oms`:
 
 **\Pyz\Zed\Oms\OmsDependencyProvider**
+
 ```php
 use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCommandPlugin;
 use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCapturePaymentMessageCommandPlugin;
@@ -344,6 +350,7 @@ protected function extendCommandPlugins(Container $container): Container
     });
 }
 ```
+
 9. In `src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php`, add or update the following plugins:
 
 

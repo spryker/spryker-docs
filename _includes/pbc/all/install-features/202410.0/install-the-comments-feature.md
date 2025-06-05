@@ -314,7 +314,7 @@ Install the required features:
 | NAME                        | VERSION          | INSTALLATION GUIDE |
 |-----------------------------|------------------|--|
 | Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Customer Account Management | {{site.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-shipment-feature.html)
+| Customer Account Management | {{site.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-shipment-feature.html) |
 
 ### 1) Install the required modules
 
@@ -323,6 +323,7 @@ Install the required modules using Composer:
 ```bash
 composer require spryker-feature/comments: "{{site.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
@@ -424,7 +425,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {% info_block warningBox "Verification" %}
 
 - Log in as a customer and open `https://mysprykershop.com/comment/0adafdf4-cb26-477d-850d-b26412fbd382/tag/add?returnUrl=/cart`. Make sure that the error flash message is displayed.
-- Open `https://mysprykershop.com/comment/0adafdf4-cb26-477d-850d-b26412fbd382/tag/async/add and make sure that the JSON with messages is displayed.
+- Open `https://mysprykershop.com/comment/0adafdf4-cb26-477d-850d-b26412fbd382/tag/async/add` and make sure that the JSON with messages is displayed.
 
 {% endinfo_block %}
 

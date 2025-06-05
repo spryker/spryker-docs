@@ -13,9 +13,9 @@ This document includes the information you need to know when working with the **
 
 On the **Overview of Products Availability** page, you see the following:
 
-* The SKUs and names of the abstract products and SKU values are a hyperlink to this product's **Edit** page.
-* The number of products in current stock and the number of reserved products (meaning ordered ones).
-* The identifier for the bundled product and those that are *never out of stock* (Yes/No values).
+- The SKUs and names of the abstract products and SKU values are a hyperlink to this product's **Edit** page.
+- The number of products in current stock and the number of reserved products (meaning ordered ones).
+- The identifier for the bundled product and those that are *never out of stock* (Yes/No values).
 
 {% info_block infoBox "Info" %}
 
@@ -41,8 +41,8 @@ For the [Marketplace](/docs/about/all/spryker-marketplace/marketplace-concept.ht
 
 On the **View Product Availability** page, you see two sections:
 
-* Abstract product availability
-* Variant availability
+- Abstract product availability
+- Variant availability
 
 The **Abstract Product availability** section is not modifiable. It only provides basic information. As the abstract product itself does not have any stock, the **Current Stock** value reflects the summarized value of all its variants.
 
@@ -63,9 +63,9 @@ Unlike the abstract product availability, the variant availability provides you 
 
 Both sections contain the following info:
 
-* The SKU and name of the abstract product/product variant.
-* The availability value, the number of products in the current stock, and the number of the reserved products (meaning the ordered ones).
-* The identifier for the *never out of stock* (Yes/No values).
+- The SKU and name of the abstract product/product variant.
+- The availability value, the number of products in the current stock, and the number of the reserved products (meaning the ordered ones).
+- The identifier for the *never out of stock* (Yes/No values).
 
 ---
 

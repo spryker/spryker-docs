@@ -13,7 +13,7 @@ Running a CLI command with a long execution time returns a `Killed` message.
 
 ## Solution
 
-* In PHP settings, increase `max_execution_time`. In Docker based projects, you can do it via a Deploy file as follows:
+- In PHP settings, increase `max_execution_time`. In Docker based projects, you can do it via a Deploy file as follows:
 
 ```yaml
 image:
@@ -23,7 +23,7 @@ image:
       'max_execution_time': 300
 ```
 
-* Increase `PropelConfig` class timeout:
+- Increase `PropelConfig` class timeout:
 
 **/b2c/vendor/spryker/propel/src/Spryker/Zed/Propel/PropelConfig.php**
 

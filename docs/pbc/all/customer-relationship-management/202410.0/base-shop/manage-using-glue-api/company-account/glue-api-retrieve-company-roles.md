@@ -90,6 +90,7 @@ To retrieve a company role, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -111,6 +112,7 @@ To retrieve a company role, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -151,6 +153,7 @@ To retrieve a company role, send the request:
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/company-roles-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/company-roles-response-attributes.md -->
@@ -169,7 +172,7 @@ To retrieve a company role, send the request:
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
 
-##  Next steps
+## Next steps
 
-* [Retrieve business unit addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html)
-* [Manage company user authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html)
+- [Retrieve business unit addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html)
+- [Manage company user authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html)

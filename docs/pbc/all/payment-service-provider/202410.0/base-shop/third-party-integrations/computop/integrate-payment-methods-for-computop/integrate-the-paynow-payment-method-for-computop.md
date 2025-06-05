@@ -46,6 +46,7 @@ To adjust the frontend appearance, provide the following templates in your theme
 The Computop provides a demo state machine for the PayNow payment method which implements `Authorization/Capture` flow.
 
 To enable the demo state machine, extend the configuration with the following values:
+
 ```php
 <?php
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
@@ -192,10 +193,12 @@ class PayNowStep extends AbstractBaseStep
  }
 }
 ```
+
 <br>
 </details>
 
 Then you need to add it to `Yves/Checkout/Process/StepFactory.php` right after the `PlaceOrder` step and before the `Success` step.
+
 ```php
 protected function createPayNowStep()
 {
@@ -223,6 +226,7 @@ public function createStepCollection()
 ```
 
 Also you need to add action to `Yves/Checkout/Controller/CheckoutController.php`
+
 ```php
 public function paynowAction(Request $request)
 {
@@ -231,6 +235,7 @@ public function paynowAction(Request $request)
 ```
 
 And define this action in `Yves/Checkout/Plugin/Provider/CheckoutControllerProvider.php`
+
 ```php
 protected function defineControllers(Application $app)
 {
@@ -295,10 +300,12 @@ The final step is to create a template for rendering `PayNow` step in `Yves/Chec
 </div>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
  ```
+
  <br>
 </details>
 
 To make this specific step work only with PayNow payment method we have to update `Yves/Checkout/Process/Steps/PlaceOrderStep.php`
+
 ```php
 public function execute(Request $request, AbstractTransfer $quoteTransfer)
 {
@@ -329,6 +336,7 @@ protected function isComputopPaymentExist(QuoteTransfer $quoteTransfer)
 ```
 
 Also, you will need to add `ComputopClient` to `PlaceOrderSpet` dependecy `Yves/Checkout/Process/StepFactory.php`
+
 ```php
 public function getComputopClient()
 {
@@ -354,13 +362,13 @@ protected function createPlaceOrderStep()
 ## PayNow Payment Flow
 
 1. There is a radio button on **Payment** step. After submitting the order, the customer is redirected to the to PayNow checkout step. The step contains Credit Card form with the following fields:
-  - Credit Card brand choice
-  - Credit Card number
-  - Credit Card expires date (in the format `YYYYMM`–for example, 201807)
-  - Credit Card security code (CVV)
-  - Data (hidden field, encrypted parameters, such as currency, amount, or description)
-  - Length (hidden field, length of `data` parameter)
-  - Merchant id (hidden field, assigned by Computop)
+- Credit Card brand choice
+- Credit Card number
+- Credit Card expires date (in the format `YYYYMM`–for example, 201807)
+- Credit Card security code (CVV)
+- Data (hidden field, encrypted parameters, such as currency, amount, or description)
+- Length (hidden field, length of `data` parameter)
+- Merchant id (hidden field, assigned by Computop)
 
 Form posts directly to Computop paygate. After the process is requested, Computop redirects the customer to success or failure URL.
 

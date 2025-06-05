@@ -68,12 +68,12 @@ Because HTTP is a textual protocol having no built-in encryption, passwords and 
 In most cases, it prevents eavesdropping on traffic of users in local public networks like free Wi-Fi hotspots. Besides, it can be used to authenticate users using third-party integrations by requiring a client certificate to be trusted.
 
 You can force HTTPS for the Storefront, Back Office, and Glue using the `Strict-Transport-Security` header:
-* `HttpConstants::ZED_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
-* `HttpConstants::YVES_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
-* `HttpConstants::ZED_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG`
-* `HttpConstants::YVES_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG`
-* `HttpConstants::GLUE_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
-* `HttpConstants::GLUE_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG`
+- `HttpConstants::ZED_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
+- `HttpConstants::YVES_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
+- `HttpConstants::ZED_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG`
+- `HttpConstants::YVES_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG`
+- `HttpConstants::GLUE_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
+- `HttpConstants::GLUE_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG`
 
 ## Access to the Back Office and Merchant Portal
 
@@ -160,35 +160,35 @@ Content-Security-Policy: frame-ancestors 'self'
 
 You can enable custom Cache-Control header for the Storefront, Back Office, and Glue using the following plugins:
 
-* `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`:
-  * Add the plugin into an application specific method for Zed using `\Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
-  * Plugin configuration:
-    * `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_ENABLED`  
-    * `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_CONFIG`
+- `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`:
+  - Add the plugin into an application specific method for Zed using `\Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
+  - Plugin configuration:
+    - `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_ENABLED`  
+    - `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_CONFIG`
 
-* `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`:
-  * Add the plugin into an application specific method for Yves using `\Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
-  * Plugin configuration:
-    * `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_ENABLED`
-    * `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_CONFIG`
+- `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`:
+  - Add the plugin into an application specific method for Yves using `\Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
+  - Plugin configuration:
+    - `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_ENABLED`
+    - `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_CONFIG`
 
-* `Spryker\Glue\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`
-  * Add the plugin into an application specific method for Glue using `\Pyz\Glue\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
-  * Plugin configuration:
-  * `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_ENABLED`
-  * `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_CONFIG`
+- `Spryker\Glue\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`
+  - Add the plugin into an application specific method for Glue using `\Pyz\Glue\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
+  - Plugin configuration:
+  - `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_ENABLED`
+  - `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_CONFIG`
 
 
 ## Session security and hijacking
 
 Websites include many third-party JavaScript libraries that can access the content of a page.
 
-* To prevent access to session cookies from Javascript, the HttpOnly attribute of the session cookie is set by default. We recommend setting this attribute for all sensitive cookies.
-* When using TLS, you can use a `secure` cookie flag to instruct a browser to send this cookie back to the server only via an encrypted connection. To configure it, use the `*_SESSION_COOKIE_SECURE` configuration keys.
-* To prevent session fixation, session identifier is refreshed on login and logout events. We recommend implementing the same behavior for other sensitive cookies if you use them in your shop.
-* Make sure that your web server configuration does not cut these flags from cookie headers.
-* Make sure that `*_SESSION_COOKIE_DOMAIN` matches only your domain to disallow a browser to send the cookie to another domain or subdomain.
-* Never send a session ID as a GET parameter of a URL, because the ID can be logged in logs or forwarded to external websites in HTTP Referer header.
+- To prevent access to session cookies from Javascript, the HttpOnly attribute of the session cookie is set by default. We recommend setting this attribute for all sensitive cookies.
+- When using TLS, you can use a `secure` cookie flag to instruct a browser to send this cookie back to the server only via an encrypted connection. To configure it, use the `*_SESSION_COOKIE_SECURE` configuration keys.
+- To prevent session fixation, session identifier is refreshed on login and logout events. We recommend implementing the same behavior for other sensitive cookies if you use them in your shop.
+- Make sure that your web server configuration does not cut these flags from cookie headers.
+- Make sure that `*_SESSION_COOKIE_DOMAIN` matches only your domain to disallow a browser to send the cookie to another domain or subdomain.
+- Never send a session ID as a GET parameter of a URL, because the ID can be logged in logs or forwarded to external websites in HTTP Referer header.
 
 ## Cross-site request forgery (CSRF)
 
@@ -208,27 +208,27 @@ Additionally, you can set [X-XSS-Protection](https://developer.mozilla.org/en-US
 
 The Storefront uses HTTP RPC calls to communicate with the Back Office. Secure these calls by enabling Back Office authorization for Storefront requests:
 
-* Set `ZedRequestConstants::AUTH_ZED_ENABLED` and `AuthConstants::AUTH_ZED_ENABLED` to true.
-* Set a random value of `AuthConstants::AUTH_DEFAULT_CREDENTIALS[‘zed_request’][‘token’]` for each environment.
-* Optional: Change the username used by Storefront in `UserConstants::USER_SYSTEM_USERS`.
+- Set `ZedRequestConstants::AUTH_ZED_ENABLED` and `AuthConstants::AUTH_ZED_ENABLED` to true.
+- Set a random value of `AuthConstants::AUTH_DEFAULT_CREDENTIALS[‘zed_request’][‘token’]` for each environment.
+- Optional: Change the username used by Storefront in `UserConstants::USER_SYSTEM_USERS`.
 
 ## Remote code execution
 
 Avoid triggering remote code execution as follows:
 
-* Local file inclusion: using unsanitized paths in `include` statements. To limit locations of files to be included, use the `include_path` PHP configuration option.
-* Remote file inclusion: avoid using unsanitized URLs or user input in `include` statements.
-* Unsafe deserialization. Serialized data should not be sent to the browser and should not be accepted back by the server. During deserialization of serialized data, PHP might instantiate classes mentioned in the payload and invoke some actions. Avoid this behavior or implement signature verification methods to validate this input.
-* Command injection: avoid forwarding user input to `exec`, `system`, `passthru`, or similar functions.
+- Local file inclusion: using unsanitized paths in `include` statements. To limit locations of files to be included, use the `include_path` PHP configuration option.
+- Remote file inclusion: avoid using unsanitized URLs or user input in `include` statements.
+- Unsafe deserialization. Serialized data should not be sent to the browser and should not be accepted back by the server. During deserialization of serialized data, PHP might instantiate classes mentioned in the payload and invoke some actions. Avoid this behavior or implement signature verification methods to validate this input.
+- Command injection: avoid forwarding user input to `exec`, `system`, `passthru`, or similar functions.
 
 ## SQL injection
 
 SQL injections are happening when unsanitized user input is embedded into an SQL statement. Use the following mechanisms to prevent SQL injections:
 
-* Propel to build queries and avoid plain SQL.
-* Prepared statements (used by Propel by default) and typed placeholders.
-* Casting incoming data to concrete data types like integer or string.
-* The `CastId` method in Zed controllers.
+- Propel to build queries and avoid plain SQL.
+- Prepared statements (used by Propel by default) and typed placeholders.
+- Casting incoming data to concrete data types like integer or string.
+- The `CastId` method in Zed controllers.
 
 ## Clickjacking
 
@@ -252,9 +252,9 @@ Make sure that, in your production environment, the debugging mode is disabled, 
 
 
 Debug mode is configured with the following:
-* `ApplicationConstants::ENABLE_APPLICATION_DEBUG`
-* `ShopApplicationConstants::ENABLE_APPLICATION_DEBUG`
-* `GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG`
+- `ApplicationConstants::ENABLE_APPLICATION_DEBUG`
+- `ShopApplicationConstants::ENABLE_APPLICATION_DEBUG`
+- `GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG`
 
 ## Demo data
 
@@ -263,6 +263,7 @@ Debug mode is configured with the following:
 ## OAuth configuration
 
 We recommend using environment variables to define security configuration. Example:
+
 ```php
 $config[OauthConstants::PRIVATE_KEY_PATH] = getenv('SPRYKER_OAUTH_KEY_PRIVATE');
 $config[OauthConstants::PUBLIC_KEY_PATH]
@@ -281,6 +282,7 @@ Set up the ACL configuration according to your requirements and restrict access 
 
 Gateway is used for communication between the frontend and the backend. In most cases, it doesn't expect any communication from the internet. To protect this endpoint, you need to extend `deploy.{project}-{env}.yml` as follows:
 1. Add backend auths:
+
 ```yaml
 x-backend-auth: &backend-auth
   <<: *real-ip
@@ -292,6 +294,7 @@ x-backend-auth: &backend-auth
 ```
 
 2. Add this auth to gateway endpoints:
+
 ```yaml
 backgw:
     application: backend-gateway
@@ -308,13 +311,13 @@ To verify the configuration, redeploy the environment and make sure that accessi
 
 To sum up, the main points to keep the data secure are the following:
 
-* Educate: Learn and spread [OWASP guidelines](https://owasp.org/www-pdf-archive/OWASP_SCP_Quick_Reference_Guide_v2.pdf) in your team.
-* Check the presence of security-related HTTP headers.
-* Check cookie settings.
-* Configure TLS.
-* Secure the Back Office.
-* Check the Spryker configuration and change default authentication parameters like users and passwords.
-* Protect your Backend GATEWAY from direct access.
-* Keep systems and applications up to date.
-* Make sure that exceptions are not shown and debug mode is disabled on production.
-* Make sure that the keys data is taken from secure environment variables and is not embedded into the configuration files.
+- Educate: Learn and spread [OWASP guidelines](https://owasp.org/www-pdf-archive/OWASP_SCP_Quick_Reference_Guide_v2.pdf) in your team.
+- Check the presence of security-related HTTP headers.
+- Check cookie settings.
+- Configure TLS.
+- Secure the Back Office.
+- Check the Spryker configuration and change default authentication parameters like users and passwords.
+- Protect your Backend GATEWAY from direct access.
+- Keep systems and applications up to date.
+- Make sure that exceptions are not shown and debug mode is disabled on production.
+- Make sure that the keys data is taken from secure environment variables and is not embedded into the configuration files.

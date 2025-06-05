@@ -39,7 +39,7 @@ Add translations as follows:
 
 1. Append glossary for the feature:
 
-```
+```csv
 product_comparison_page.page_title,Artikel vergleichen,de_DE
 product_comparison_page.page_title,Compare products,en_US
 product_comparison_page.empty_comparison,Vergleichsliste ist leer.,de_DE

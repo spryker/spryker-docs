@@ -76,10 +76,10 @@ The `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMes
 
 State transitions occur automatically through asynchronous ACP messages, processed by the `spryker/message-broker` module. The following sub-processes have auto-transitions:
 
-* `PaymentAuthorization`
-* `PaymentCapture`
-* `PaymentRefund`
-* `PaymentCancel`
+- `PaymentAuthorization`
+- `PaymentCapture`
+- `PaymentRefund`
+- `PaymentCancel`
 
 The MessageBroker worker runs in the background as a cron job, checking for new messages and triggering OMS events based on the configuration in `Spryker\Zed\Payment\PaymentConfig::getSupportedOrderPaymentEventTransfersList()`. You can change this configuration to fit your project's needs.  
 
@@ -244,6 +244,7 @@ You have several options to customize your business flow:
 - Without payment authorization and cancellation
 
 ### OMS without shipping
+
 If your project doesn't involve product shipping, customize the main .XML file and each subprocess in the .XML file.
 For example, you can change the transition from `"invoiced"` to `"payment capture ready"` state, making a direct transition
 from `"invoiced"` to `"payment capture pending"` with `event = start payment capture`, which has the command `"Payment/Capture"` on-enter:

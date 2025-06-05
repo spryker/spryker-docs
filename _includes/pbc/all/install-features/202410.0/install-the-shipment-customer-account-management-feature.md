@@ -18,7 +18,7 @@ Install the required features:
 
 **data/import/common/common/glossary.csv**
 
-```
+```csv
 page.checkout.address.single_address,Single address,en_US
 page.checkout.address.single_address,Eine Adresse,de_DE
 page.checkout.address.multiple_addresses,Multiple addresses,en_US
@@ -186,11 +186,11 @@ Adjust TWIG templates to display the shipment types:
 
 {% info_block infoBox "Attribute description" %}
 
-* `deliveryContainerClassName`: class name of the container delivery form and address selector.
-* `billingSameAsShippingContainerClassName`: container class name for the **Billing same as shipping** checkbox.
-* `validatorTriggerClassName`: trigger class name for the `validate-next-checkout-step` molecule.
-* `shippingValidationContainerClassName`: container class name for the shipping validation.
-* `deliverySelectClassName`: class name of the address selector.
+- `deliveryContainerClassName`: class name of the container delivery form and address selector.
+- `billingSameAsShippingContainerClassName`: container class name for the **Billing same as shipping** checkbox.
+- `validatorTriggerClassName`: trigger class name for the `validate-next-checkout-step` molecule.
+- `shippingValidationContainerClassName`: container class name for the shipping validation.
+- `deliverySelectClassName`: class name of the address selector.
 
 {% endinfo_block %}
 
@@ -211,9 +211,9 @@ Adjust TWIG templates to display the shipment types:
 
        {% info_block infoBox "Attribute description" %}
 
-        * `isMultipleShipmentSelected`: flag that indicates if the multiple shipment is selected.
-        * `singleDeliveryContainerClassName`: class name of the container address selector and the `ShipmentTypeAddressFormWidget`.
-        * `deliverySelectClassName`: class name of the address selector.
+        - `isMultipleShipmentSelected`: flag that indicates if the multiple shipment is selected.
+        - `singleDeliveryContainerClassName`: class name of the container address selector and the `ShipmentTypeAddressFormWidget`.
+        - `deliverySelectClassName`: class name of the address selector.
 
        {% endinfo_block %}
 

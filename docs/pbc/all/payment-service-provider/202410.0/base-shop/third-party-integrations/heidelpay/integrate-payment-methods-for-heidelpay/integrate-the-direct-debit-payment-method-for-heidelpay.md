@@ -59,6 +59,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 HeidelpayConfig::PAYMENT_METHOD_DIRECT_DEBIT => 'HeidelpayDirectDebit01',
 ];
 ```
+
 ## The Process of a Direct Debit Account Registration
 
 Payment flow with direct debit's divided into two workflows - based on the new "Registration," and without/with the existing "Registration." Existing "Registration" means that customer's bank account data (IBAN, Account Holder and so on) will be persisted in the database to use it again next time if customer uses the same shipping address. Otherwise, use the new "Registration" option.

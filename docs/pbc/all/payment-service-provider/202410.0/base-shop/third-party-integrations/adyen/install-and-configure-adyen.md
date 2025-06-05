@@ -26,19 +26,19 @@ The `spryker-eco/adyen` module provides integration of Spryker e-commerce system
 
 The `SprykerEco.Adyen` module includes integration with:
 
-* Checkout process - payment forms with all necessary fields that are required to make payment request, save order information and so on.
-* OMS (Order Management System) - state machines, all necessary commands for making modification requests and conditions for changing orders status accordingly.
+- Checkout process - payment forms with all necessary fields that are required to make payment request, save order information and so on.
+- OMS (Order Management System) - state machines, all necessary commands for making modification requests and conditions for changing orders status accordingly.
 
 The `SprykerEco.Adyen` module provides the following payment methods:
-* [Credit Card](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#credit-card)
-* [Direct Debit](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#direct-debit-sepa-direct-debit)
-* [Klarna Invoice](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#klarna-invoice)
-* [Prepayment](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#prepayment-bank-transfer-iban)
-* [Sofort](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#sofort)
-* [PayPal](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#paypal)
-* [iDeal](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#ideal)
-* [AliPay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#alipay)
-* [WeChatPay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#wechatpay)
+- [Credit Card](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#credit-card)
+- [Direct Debit](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#direct-debit-sepa-direct-debit)
+- [Klarna Invoice](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#klarna-invoice)
+- [Prepayment](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#prepayment-bank-transfer-iban)
+- [Sofort](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#sofort)
+- [PayPal](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#paypal)
+- [iDeal](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#ideal)
+- [AliPay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#alipay)
+- [WeChatPay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#wechatpay)
 
 ## Installation
 
@@ -77,7 +77,7 @@ The table below describes all general configuration keys and their values.
 | `AdyenApiConstants::API_KEY` | string | API key, provided by Adyen. |
 | `AdyenApiConstants::GET_PAYMENT_METHODS_ACTION_URL` | string | URL for the API call to get available payment methods. |
 | `AdyenApiConstants::MAKE_PAYMENT_ACTION_URL` | string | URL for the API call to make payment. |
-|` AdyenApiConstants::PAYMENTS_DETAILS_ACTION_URL` | string | URL for the API call to retrieve payment details . |
+|`AdyenApiConstants::PAYMENTS_DETAILS_ACTION_URL` | string | URL for the API call to retrieve payment details . |
 | `AdyenApiConstants::AUTHORIZE_ACTION_URL` | string | URL for the authorization API call. |
 | `AdyenApiConstants::AUTHORIZE_3D_ACTION_URL` | string | URL for the 3D authorization API call. |
 | `AdyenApiConstants::CAPTURE_ACTION_URL` | string | URL for the capture API call. |
@@ -133,6 +133,7 @@ The table below describes all general configuration keys and their values.
  ```
 
 2. Based on the Adyen API version, you need to configure Session Frontend:
+
 ```php
  // >>> SESSION FRONTEND
  ...
@@ -147,7 +148,7 @@ To complete the payment modification requests (cancel, capture, refund), it's ne
 
 You can get more information form [Adyen documentation](https://docs.adyen.com).
 
-The link to accept notifications from Adyen looks like https://mysprykershop.com/adyen/notification.
+The link to accept notifications from Adyen looks like `https://mysprykershop.com/adyen/notification`.
 
 ## Adyen Configuration
 

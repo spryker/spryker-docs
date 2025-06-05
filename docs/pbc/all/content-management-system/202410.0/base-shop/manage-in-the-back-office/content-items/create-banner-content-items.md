@@ -22,18 +22,18 @@ Make sure to review [reference information](#reference-information-create-banner
 3. On the **Create Content Item: Banner** page, enter a **NAME**.
 4. Optional: Enter a **DESCRIPTION**.
 5. On the **Default** tab, enter the following:
-    * **TITLE**.
-    * **SUBTITLE**
-    * **IMAGE URL**
-    * **CLICK URL**
-    * **ALT-TEXT**
+    - **TITLE**.
+    - **SUBTITLE**
+    - **IMAGE URL**
+    - **CLICK URL**
+    - **ALT-TEXT**
 6. Optional: Repeat the previous step on the needed locale-specific tabs.
 
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific values overwrite the default values when the banner is rendered on a Storefront page with the [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html) selected.
-* If the fields are not filled out for a locale, the default values are displayed on a Storefront page with the locale selected.
+- Locale-specific values overwrite the default values when the banner is rendered on a Storefront page with the [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html) selected.
+- If the fields are not filled out for a locale, the default values are displayed on a Storefront page with the locale selected.
 
 {% endinfo_block %}
 
@@ -66,7 +66,7 @@ The widget allows you to display a Banner content item on the defined sections o
 
 You can view how it looks like on the store website:
 
-* **B2C**
+- **B2C**
     Template used: Big Banner w/Middle Title and Subtitle
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -74,6 +74,6 @@ You can view how it looks like on the store website:
   </video>
 </figure>
 
-* **B2B**
+- **B2B**
     Template used: Big Banner Left Title, Subtitle and Button
 ![Banner content item widget B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/banner-template-b2b.png)

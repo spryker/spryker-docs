@@ -37,8 +37,8 @@ Review the [reference information](#reference-information-edit-warehouses) befor
 3. For **IS THIS WAREHOUSE AVAILABLE?**, select **YES** or **NO**.
 4. Click the **Store Relation** tab.
 5. For **AVAILABLE IN THE FOLLOWING STORE(S)**, do the following:
-    * Clear the checkboxes next to the stores you want to stop displaying the warehouse in.
-    * Select the checkboxes next to the stores you want to start displaying the warehouse in.
+    - Clear the checkboxes next to the stores you want to stop displaying the warehouse in.
+    - Select the checkboxes next to the stores you want to start displaying the warehouse in.
 6. Click **Save**.
 
     This opens the **Warehouses** page with a success message displayed. The create warehouse is displayed in the table.

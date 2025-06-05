@@ -78,6 +78,7 @@ To update payment with a payload from a third-party payment provider, send the r
   }
 }
 ```
+
 </details>
 
 

@@ -26,9 +26,9 @@ The Wishlists API allows creating list and deleting [wishlists](/docs/pbc/all/sh
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Install the Wishlist Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-wishlist-glue-api.html)
-* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
-* [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html)
+- [Install the Wishlist Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-wishlist-glue-api.html)
+- [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+- [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html)
 
 ## Create a wishlist
 
@@ -86,6 +86,7 @@ Request sample: create a wishlist
 		}
 	}
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/wishlists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/wishlists-response-attributes.md -->
@@ -130,6 +131,7 @@ To retrieve all wishlists of a customer, send the request:
 		}
 	}
 ```
+
 </details>
 
 <details>
@@ -157,6 +159,7 @@ To retrieve all wishlists of a customer, send the request:
 	}
 }
 ```
+
 </details>
 
 <details>
@@ -206,6 +209,7 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
+
 </details>
 
 
@@ -306,6 +310,7 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -426,6 +431,7 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/wishlists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/wishlists-response-attributes.md -->
@@ -458,10 +464,10 @@ To retrieve wishlist items, send the request:
 
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
-| GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1 | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. |
-| GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items into the response. |
-| GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items and respective concrete products into the response. |
-| GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products,product-labels | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items, respective concrete products and their product labels into the response. |
+| `GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1` | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. |
+| `GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items` | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items into the response. |
+| `GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products` | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items and respective concrete products into the response. |
+| `GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products,product-labels` | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items, respective concrete products and their product labels into the response. |
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
@@ -489,6 +495,7 @@ To retrieve wishlist items, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -533,6 +540,7 @@ To retrieve wishlist items, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -625,6 +633,7 @@ To retrieve wishlist items, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -740,6 +749,7 @@ To retrieve wishlist items, send the request:
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/wishlists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/wishlists-response-attributes.md -->

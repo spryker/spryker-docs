@@ -32,7 +32,7 @@ The abstract product is inactive until at least one product variant is activated
 To activate a product:
 1. Navigate to the product variant of the product that you want to activate:
     **Edit&nbsp;<span aria-label="and then">></span> Variants&nbsp;<span aria-label="and then">></span> Edit product variant**
-2.  In the top right corner of the *Edit Concrete Product* page, click **Activate**.
+2. In the top right corner of the *Edit Concrete Product* page, click **Activate**.
 The product turns visible to the customers of your online store.
 
 {% info_block infoBox "Note" %}

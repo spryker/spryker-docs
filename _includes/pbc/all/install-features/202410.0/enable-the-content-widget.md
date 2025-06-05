@@ -5,6 +5,7 @@ CMS content widgets is a CMS feature for adding  dynamic content to CMS pages/bl
 For example, you can list a single product, product lists, product groups or product sets.
 
 ## Integration
+
 First of all you need to install the `cms-content-widget` module with Composer (update composer.json with `"cms-content-widget": "^1.0.0"` or use Composer require).
 
 To enable the feature, configure it in your project.
@@ -15,7 +16,8 @@ Integration of CMS widget consists of three main parts:
 2. Providing configuration in module shared directory so that Yves and Zed can read it.
 3. (Optionally) Providing CMS content function parameter mapper plugins.
 
-### Step 1: Registering twig function in Yves.
+### Step 1: Registering twig function in Yves
+
 The CMS content widget is a twig function. Therefore, twig syntax rules apply and must be followed when including the inside content.
 For example, `{% raw %}{{{% endraw %} product(['012', '013', '321']) {% raw %}}}{% endraw %}` will include carousel component with three products.
 
@@ -24,7 +26,7 @@ where **key** is the function name you want to use in a template and **value** i
 
 To enable the feature for CMS blocks, you have to configure twig rendering plugin `\Spryker\Yves\CmsContentWidget\Plugin\CmsTwigContentRendererPlugin` and add it to `\Pyz\Yves\CmsBlock\CmsBlockDependencyProvider::getCmsBlockTwigContentRendererPlugin`. This will enable twig function rendering in CMS blocks.
 
-### Step 2: Providing CMS content widget configuration.
+### Step 2: Providing CMS content widget configuration
 
 Some information needs to be shared between Yves and Zed. Therefore, the configuration plugin must be placed in a shared namespace.
 
@@ -34,11 +36,11 @@ When used in Yves, inject this plugin directly to your plugin and use configurat
 
 The configuration provider requires implementation of the following methods:
 
-* `getFunctionName` is the name of function when used in CMS content.
-* `getAvailableTemplates` is the list of supported templates, it's a key value pair where key is the template identifier which is passed to function and value is a path to twig template.
-* `getUsageInformation` is a plain text usage information, displayed when rendering help pane below the content editor.
+- `getFunctionName` is the name of function when used in CMS content.
+- `getAvailableTemplates` is the list of supported templates, it's a key value pair where key is the template identifier which is passed to function and value is a path to twig template.
+- `getUsageInformation` is a plain text usage information, displayed when rendering help pane below the content editor.
 
-### Step 3: Function mapping plugins - optional.
+### Step 3: Function mapping plugins - optional
 
 When defining functions, you may want to accept "natural identifiers", such as "sku" for products or "set_key" for product sets. It is preferable that the content manager provides the identifiers instead of relying on surrogate keys. The problem arises when you need to read data from the Yves data store as the Yves data store uses "surrogate key/primary keys". Therefore, to read data, convert/map those natural identifiers to surrogate keys.
 
@@ -50,7 +52,7 @@ For `CmsBlockCollector`, add plugin `\Spryker\Zed\CmsContentWidget\Communication
 
 For `CmsCollector`, add plugin `\Spryker\Zed\CmsContentWidget\Communication\Plugin\CmsPageCollector\CmsPageCollectorParameterMapExpanderPlugin` to `\Pyz\Zed\CmsCollector\CmsCollectorDependencyProvider::getCollectorDataExpanderPlugins`.
 
-Make sure to update the `CmsBlockCollector` and `CmsCollector` modules as expander plugins were added during this feature release. It's exported to `\Spryker\Shared\CmsContentWidget\CmsContentWidgetConstants::CMS_CONTENT_WIDGET_PARAMETER_MAP`.	You can access parameter mapping inside the ` $contex` variable when implementing the CMS content function plugin in Yves.
+Make sure to update the `CmsBlockCollector` and `CmsCollector` modules as expander plugins were added during this feature release. It's exported to `\Spryker\Shared\CmsContentWidget\CmsContentWidgetConstants::CMS_CONTENT_WIDGET_PARAMETER_MAP`.	You can access parameter mapping inside the `$contex` variable when implementing the CMS content function plugin in Yves.
 
 The `$context` is a special twig function variable that uses twig to pass the data you normally send to the template. This variable has a `cmsContent` key. This key has data from the Yves store. This can be either a CMS page or block data.
 
@@ -105,11 +107,12 @@ class CmsWidgetPlugin extends AbstractPlugin implements CmsContentWidgetPluginIn
 ```
 
 ## Provided Plugins
+
 We provide three CMS content widget plugins . All are currently implemented in the demoshop so you can take them from our repository and integrate in your project.
 
 Plugin configuration is described below.
 
-### Zed Plugins:
+### Zed Plugins
 
 ```php
 namespace Pyz\Zed\CmsContentWidget;
@@ -131,7 +134,7 @@ class CmsContentWidgetConfig extends SprykerCmsContentConfig
 }
 ```
 
-### Zed CMS Configuration Providers:
+### Zed CMS Configuration Providers
 
 ```php
 namespace Pyz\Zed\CmsContentWidget;
@@ -153,7 +156,7 @@ class CmsContentWidgetConfig extends SprykerCmsContentConfig
 }
 ```
 
-### Zed CMS Collector Parameter Mapper Plugins:
+### Zed CMS Collector Parameter Mapper Plugins
 
 ```php
 namespace Pyz\Zed\CmsContentWidget;
@@ -236,6 +239,7 @@ class YvesBootstrap
 -->
 
 ### Version Check When Using the Widget for CMS Blocks
+
 If you use this widget for CMS Blocks, then check that you have proper versions of your modules as follows: `cms-block >= 1.2.0, cms-block-collector >= 1.1.0, cms-block-gui >= 1.1.0`.
 
 <!-- Last review date: Sep 20, 2017 -->

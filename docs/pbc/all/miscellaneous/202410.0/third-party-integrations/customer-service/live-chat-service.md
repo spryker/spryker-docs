@@ -23,7 +23,7 @@ their data behind. It works faster, friendlier and easier.
 
 YOUR ADVANTAGES:
 
-* Outsourcing chat to LiveChat Service.
+- Outsourcing chat to LiveChat Service.
   - More sales: increasing conversion by answering questions of website visitors
 real time.
   - More service: live chat is an approachable contact channel that you can use
@@ -32,13 +32,13 @@ from 07:00 - 23:00 during the week and from 09:00 - 23:00 during weekends.
   - Less phone calls: by answering questions on the website, we're reducing
 incoming calls.
 
-* LiveChat Software (Knowler).
+- LiveChat Software (Knowler).
   - For companies that wish to chat with their own employees we offer reliable
 and innovative chat software.
   - Available in 6 languages, including support.
   - The software allows chat operators to chat efficiently and effective.
 
-* Hybrid chat
+- Hybrid chat
   - We offer hybrid chat, because we can provide clients with both chat services and chat software. This allows companies to chat by themselves but forward chats to our service when they are too busy and/or we chat for them outside office hours.
 
 ---

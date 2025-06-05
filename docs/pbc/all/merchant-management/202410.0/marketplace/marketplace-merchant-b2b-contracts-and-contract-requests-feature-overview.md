@@ -9,9 +9,9 @@ In a B2B business model, the partnership is usually based on contracts, or relat
 
 In the context of merchant relations in a Marketplace, there are three key actors: marketplace operator, merchant, and buyer:
 
-* The marketplace operator owns the platform and acts as a broker between merchants and buyers.
-* The [merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) are sellers in the marketplace.
-* The buyers are represented through [business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) of [companies](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html#company) that purchase products or services from the merchants. Individual employees of the business units are called *company users*.
+- The marketplace operator owns the platform and acts as a broker between merchants and buyers.
+- The [merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) are sellers in the marketplace.
+- The buyers are represented through [business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) of [companies](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html#company) that purchase products or services from the merchants. Individual employees of the business units are called *company users*.
 
 There are two ways to establish a merchant relation:
 - Marketplace operator manually creates a merchant relation in the Back Office.
@@ -57,9 +57,11 @@ Even though it's usually a merchant who approves or rejects a merchant relation 
 
 
 ## Automatic creation of a merchant relation
+
 Based on the data in a request, one or multiple merchant relations are automatically created for approved requests and displayed in the Back Office, in the Merchant Portal, and on the Storefront.
 
 ## Merchant relations in business operations
+
 Based on merchant relations, you can assign buyer-specific product prices in the [Back Office](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices) and in the [Merchant Portal](/docs/pbc/all/price-management/{{page.version}}/marketplace/marketplace-merchant-custom-prices-feature-overview.html). You can also define [buyer-specific products](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html) and [merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html) in the Back Office.
 
 The following demonstrates the Marketplace Merchant B2B Contracts and Contract Requests features features:
@@ -76,11 +78,11 @@ The following demonstrates the Marketplace Merchant B2B Contracts and Contract R
 |---|
 | [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html)   |
 | [Install the Merchant B2B Contracts + Company Account feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-company-account-feature.html) |
-|   [Install the Marketplace Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-b2b-contracts-feature.html)  |   
-|   [Install the Merchant B2B Contract Requests feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-feature.html)  |   
-|   [Install the Merchant B2B Contract Requests + Company Account feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-company-account-feature.html)  |   
-|  [Install the Marketplace Merchant B2B Contract Requests feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-b2b-contract-requests-feature.html)   |   
-|   [Install the Comments feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html)  |   
-|  [Install the Comments + Spryker Core Back Office feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-spryker-core-back-office-feature.html)   |   
-|   [Install the Comments + Merchant B2B Contracts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contracts-feature.html)  |   
-|   [Install the Comments + Merchant B2B Contract Requests feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contract-requests-feature.html)  |   
+|   [Install the Marketplace Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-b2b-contracts-feature.html)  |
+|   [Install the Merchant B2B Contract Requests feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-feature.html)  |
+|   [Install the Merchant B2B Contract Requests + Company Account feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-company-account-feature.html)  |
+|  [Install the Marketplace Merchant B2B Contract Requests feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-b2b-contract-requests-feature.html)   |
+|   [Install the Comments feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html)  |
+|  [Install the Comments + Spryker Core Back Office feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-spryker-core-back-office-feature.html)   |
+|   [Install the Comments + Merchant B2B Contracts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contracts-feature.html)  |
+|   [Install the Comments + Merchant B2B Contract Requests feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contract-requests-feature.html)  |

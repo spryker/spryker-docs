@@ -16,13 +16,13 @@ This endpoint allows retrieving general information about concrete products.
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
 
-* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
-* [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
-* [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
-* [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html)
-* [Install the Marketplace Product Offer Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
-* [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
-* [Install the Marketplace Product Offer Volume Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html
+- [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+- [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
+- [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
+- [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html)
+- [Install the Marketplace Product Offer Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
+- [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
+- [Install the Marketplace Product Offer Volume Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html
 
 
 ## Retrieve a concrete product
@@ -52,9 +52,9 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 
 {% info_block infoBox "Filtering" %}
 
-* For performance and bandwidth usage optimization, we recommend filtering out only the needed information using the `fields` string parameter.
+- For performance and bandwidth usage optimization, we recommend filtering out only the needed information using the `fields` string parameter.
 
-* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET https://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units&fields[concrete-products]=name,description&fields[sales-units]=conversion,precision`.
+- If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET https://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units&fields[concrete-products]=name,description&fields[sales-units]=conversion,precision`.
 
 {% endinfo_block %}
 
@@ -72,7 +72,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 | `GET https://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Retrieve information about the `fish-1-1` product with the information on its sales units and product measurement units included. |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels` | Retrieve information about the `001_25904006` product with product labels included.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Retrieve information about a concrete product with the SKU `001_25904006` with the product offers for this product included. |
-| `GET https://glue.mysprykershop.com/concrete-products/076_24394207?include=product-offers,product-offer-prices` | Retrieve information about a concrete product with the SKU `076_24394207` with product offers and the product offer prices included.
+| `GET https://glue.mysprykershop.com/concrete-products/076_24394207?include=product-offers,product-offer-prices` | Retrieve information about a concrete product with the SKU `076_24394207` with product offers and the product offer prices included. |
 | `GET https://glue.mysprykershop.com/concrete-products/111_12295890?include=abstract-products,merchants` | Retrieve information about the concrete product with SKU `111_12295890` with its abstract product and the merchant who sells it.|
 
 ### Response
@@ -122,6 +122,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
     }
 }
 ```
+
 </details>
 
 <details>
@@ -201,6 +202,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
     ]
 }
 ```
+
 </details>
 
 
@@ -273,6 +275,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
     ]
 }
 ```
+
 </details>
 
 
@@ -364,6 +367,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
     ]
 }
 ```
+
 </details>
 
 
@@ -464,6 +468,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -555,6 +560,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -660,7 +666,8 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -753,6 +760,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
     ]
 }
 ```
+
 </details>
 
 
@@ -801,6 +809,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
     }
 }
 ```
+
 </details>
 
 <details>
@@ -872,6 +881,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
     ]
 }
 ```
+
 </details>
 
 
@@ -987,6 +997,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1100,6 +1111,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
@@ -1113,16 +1125,16 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 
 For attributes of the other included resources, see the following:
 
-* [Retrieve sales units of a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html)
-* [Retrieve image sets of a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html)
-* [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-availability.html)
-* [Retrieve prices of a concrete product](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html)
-* [Retrieve a product label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html)
-* [Retrieve product ratings and reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/manage-using-glue-api/glue-api-manage-product-reviews.html)
-* [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
-* [Retrieving product offer prices](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
-* [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html#response)
-* [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
+- [Retrieve sales units of a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html)
+- [Retrieve image sets of a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html)
+- [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-availability.html)
+- [Retrieve prices of a concrete product](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html)
+- [Retrieve a product label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html)
+- [Retrieve product ratings and reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/manage-using-glue-api/glue-api-manage-product-reviews.html)
+- [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
+- [Retrieving product offer prices](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
+- [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html#response)
+- [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
 
 
 ## Possible errors

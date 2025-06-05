@@ -29,7 +29,7 @@ related:
 
 Running the `docker/sdk up` console command might return a similar error:
 
-```
+```bash
 Error response from daemon: Bad response from Docker engine
 ```
 

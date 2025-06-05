@@ -14,6 +14,7 @@ redirect_from:
 `\SprykerEco\Zed\Inxmail\Business\Api\Adapter\EventAdapter` extending `\SprykerEco\Zed\Sevensenders\Business\Api\Adapter\SevensendersApiAdapter` contains everything for sending data to Seven Senders system for events.
 
 You should use `\Generated\Shared\Transfer\SevensendersRequestTransfer` for request and `\Generated\Shared\Transfer\SevensendersResponseTransfer`
+
 ```xml
 <?xml version="1.0"?>
 <transfers xmlns="http://xsd.spryker.com"

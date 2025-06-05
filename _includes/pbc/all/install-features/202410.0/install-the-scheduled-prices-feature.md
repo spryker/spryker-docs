@@ -15,7 +15,7 @@ Install the required features:
 |---|---|---|
 | Spryker Core | {{page.version}}  | [Install the Spryker Сore feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product | {{page.version}}  | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
-| Price | {{page.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)
+| Price | {{page.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) |
 
 ### 1) Install the required modules
 
@@ -312,6 +312,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     }
 }
 ```
+
 </details>
 
 2. Apply scheduled prices:
@@ -323,7 +324,7 @@ console price-product-schedule:apply
 {% info_block warningBox "Verification" %}
 
 In the Back Office, make sure that the following conditions are met:
-1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Products** and check the following: 
+1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Products** and check the following:
    1. Check that scheduled prices have been correctly applied.
    2. Click **Edit** to check that you can edit any abstract or concrete product.
    3. On the **Edit Product** page, you can find the **Scheduled Prices** tab with your scheduled prices which you can create, update, and delete.

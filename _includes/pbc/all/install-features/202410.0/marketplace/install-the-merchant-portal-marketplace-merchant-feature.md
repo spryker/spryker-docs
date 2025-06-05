@@ -47,11 +47,13 @@ Generate a new translation cache for Zed:
 ```bash
 console translator:generate-cache
 ```
+
 ### 4) Configure navigation
 
 Build navigation cache
 
 Execute the following command:
+
 ```bash
 console navigation:build-cache
 ```

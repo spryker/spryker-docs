@@ -56,11 +56,11 @@ For instructions, see [Back Office: Add assets](/docs/pbc/all/self-service-porta
 
 A company user can have the following permissions related to asset management:
 
-* View company assets
-* View business unit assets
-* Update assets
-* Unassign business unit assets
-* Create assets
+- View company assets
+- View business unit assets
+- Update assets
+- Unassign business unit assets
+- Create assets
 
 For more information on company account permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/202410.0/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview).
 

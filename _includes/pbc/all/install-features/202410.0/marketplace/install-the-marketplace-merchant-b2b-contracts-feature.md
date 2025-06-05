@@ -98,8 +98,8 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-* The following page is available for Merchant Portal users: `https://mp.mysprykershop.com/merchant-relationship-merchant-portal-gui/merchant-relationship`.
-* Back Office users don't have access to `https://mp.mysprykershop.com/merchant-relationship-merchant-portal-gui/merchant-relationship`.
+- The following page is available for Merchant Portal users: `https://mp.mysprykershop.com/merchant-relationship-merchant-portal-gui/merchant-relationship`.
+- Back Office users don't have access to `https://mp.mysprykershop.com/merchant-relationship-merchant-portal-gui/merchant-relationship`.
 
 {% endinfo_block %}
 

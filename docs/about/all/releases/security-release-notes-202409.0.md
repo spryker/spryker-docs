@@ -14,8 +14,8 @@ For additional support with this content, [contact our support](https://support.
 Because of an access controls vulnerability in the "role assignment" function, it was possible for attackers with access to the vulnerable functionality to assign users to roles created by other customers.
 
 Also, this fix resolves the following vulnerabilities:
-* Administrators can assign additional or hidden roles. Because of an access controls vulnerability in the "permission management" function, it was possible for attackers with an admin role to assign users with permissions that don't exist in the UI.
-* B2B Marketplace: Customers can change customer details related to a company they don't belong to.
+- Administrators can assign additional or hidden roles. Because of an access controls vulnerability in the "permission management" function, it was possible for attackers with an admin role to assign users with permissions that don't exist in the UI.
+- B2B Marketplace: Customers can change customer details related to a company they don't belong to.
 
 ### Affected modules
 
@@ -42,28 +42,28 @@ It was possible to induce the application to perform server-side HTTP requests t
 
 Depending on the current version of the `spryker/kernel` module, update it in one of the following ways:
 
-* If 3.72.0, update to 3.72.1:
+- If 3.72.0, update to 3.72.1:
 
 ```bash
 composer require spryker/kernel:"~3.72.1"
 composer show spryker/kernel # Verify the version
 ```
 
-* If 3.71.0 or 3.71.1, update to 3.71.2:
+- If 3.71.0 or 3.71.1, update to 3.71.2:
 
 ```bash
 composer require spryker/kernel:"~3.71.2"
 composer show spryker/kernel # Verify the version
 ```
 
-* If 3.70.0, update to 3.70.1:
+- If 3.70.0, update to 3.70.1:
 
 ```bash
 composer require spryker/kernel:"~3.70.1"
 composer show spryker/kernel # Verify the version
 ```
 
-* If earlier than 3.69.0, update to 3.68.1:
+- If earlier than 3.69.0, update to 3.68.1:
 
 ```bash
 composer require spryker/kernel:"~3.68.1"

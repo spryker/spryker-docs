@@ -21,11 +21,11 @@ The endpoint also provides information on whether it's necessary to redirect the
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Install the Checkout Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
-* [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
-* [Install the Configurable Bundle Glue API](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
-* [Install the Configurable Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
-* [Install the Configurable Bundle + Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html)
+- [Install the Checkout Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
+- [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
+- [Install the Configurable Bundle Glue API](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
+- [Install the Configurable Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
+- [Install the Configurable Bundle + Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html)
 
 
 
@@ -125,6 +125,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
     }
 }
 ```
+
 </details>
 
 <details>
@@ -211,6 +212,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
     }
 }
 ```
+
 </details>
 
 
@@ -279,6 +281,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
     }
 }
 ```
+
 </details>
 
 
@@ -335,6 +338,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
     }
 }
 ```
+
 </details>
 
 
@@ -364,6 +368,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
     }
 }
 ```
+
 </details>
 
 <details>
@@ -385,6 +390,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
     }
 }
 ```
+
 </details>
 
 <details>
@@ -602,6 +608,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1192,7 +1199,8 @@ To retrieve order shipments, include `orders` and `order-shipments`.
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -1227,4 +1235,4 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 ## Next steps
 
-* [Update payment data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html)
+- [Update payment data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html)

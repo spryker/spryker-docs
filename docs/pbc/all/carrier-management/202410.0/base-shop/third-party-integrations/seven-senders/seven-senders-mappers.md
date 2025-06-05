@@ -10,6 +10,7 @@ redirect_from:
 ---
 
 For mapping data from Spryker to Seven Senders, `\SprykerEco\Zed\Sevensenders\Business\Mapper\OrderMapper` and `\SprykerEco\Zed\Sevensenders\Business\Mapper\ShipmentMapper` are used by default.
+
 ```php
 <?php
 

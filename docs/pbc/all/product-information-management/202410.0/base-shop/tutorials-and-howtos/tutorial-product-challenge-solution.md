@@ -191,6 +191,7 @@ class ProductCountryManager implements ProductCountryManagerInterface
     //...
 }
 ```
+
 </details>
 
 ## Collector module (Zed)
@@ -214,7 +215,7 @@ LEFT JOIN spy_country ON (spy_country.id_country = spy_product_country.fk_countr
 ...
 ```
 
-Add the new selected column `product_country` to the` collectItem` list in `Pyz\Zed\Collector\Business\Storage\ProductCollector`.
+Add the new selected column `product_country` to the`collectItem` list in `Pyz\Zed\Collector\Business\Storage\ProductCollector`.
 
 The code sample:
 

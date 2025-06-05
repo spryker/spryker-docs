@@ -50,9 +50,9 @@ When the customer has found the products they need, they can set the quantity of
 
 Once the products and their quantities have been selected, the order can be:
 
-* Moved to a shopping list
-* Added to a shopping cart
-* Checked out
+- Moved to a shopping list
+- Added to a shopping cart
+- Checked out
 
 {% info_block infoBox %}
 
@@ -62,10 +62,10 @@ For both Moved and Added to a Shopping List options, in a drop-down list, you ca
 
 It is also possible to add products to the cart in bulk. To do so, the customer adds SKUs and quantities of products in the **Paste your order** form, separating SKUs and quantities by one of the following separators, depending on the specific project configuration:
 
-* Spaces
-* Semicolons
-* Commas
-* Other separators
+- Spaces
+- Semicolons
+- Commas
+- Other separators
 
 
 {% info_block warningBox %}
@@ -123,11 +123,11 @@ If there are already products added to the quick order list, the products from t
 ## Quick Order on the Storefront
 
 Using the Quick Order feature on the Storefront, company users can do the following:
-* Create a new quick order.
-* Add products to the quick order in bulk.
-* Upload products using the upload form.
-* Add a quick order o a shopping list.
-* Add a quick order to a shopping cart.
+- Create a new quick order.
+- Add products to the quick order in bulk.
+- Upload products using the upload form.
+- Add a quick order o a shopping list.
+- Add a quick order to a shopping cart.
 
 The following figure shows how to perform these actions:
 

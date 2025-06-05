@@ -23,11 +23,11 @@ Dixa is a truly international company with 14+ nationalities working together in
 
 YOUR ADVANTAGES:
 
-* Personalized conversations with insights across all channels - so you can lift customer experience dramatically.
-* Intelligent routing and automation of conversations based on context &amp; data - so you can increase agent efficiency significantly.
-* Channel-neutral conversational CE platform with unified data - so you can emposer data-driven decision making on CX.
-* "One Window Wonder" and effortless onboarding of agents - secure fast risk-free shift towards true omni-channel.
-* Agent availability and presence in real-time across all channels and conversations - so you can enable agent/channel blending and boosting agent productivity.
+- Personalized conversations with insights across all channels - so you can lift customer experience dramatically.
+- Intelligent routing and automation of conversations based on context &amp; data - so you can increase agent efficiency significantly.
+- Channel-neutral conversational CE platform with unified data - so you can emposer data-driven decision making on CX.
+- "One Window Wonder" and effortless onboarding of agents - secure fast risk-free shift towards true omni-channel.
+- Agent availability and presence in real-time across all channels and conversations - so you can enable agent/channel blending and boosting agent productivity.
 
 ---
 

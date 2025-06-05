@@ -23,9 +23,9 @@ The Spryker Multi-Store solution is designed to represent several business chann
 
 - Localization: Involves supporting different locales, currencies, and languages for each store to ensure customers see the correct information and pricing based on their location. The localization channel can include the following:
 
-    - Different regions: Americas, EU, MENA, APAC, etc.
-    - Different countries: DE, FR, ES, NL, etc.
-    - Combination of regions and countries.
+  - Different regions: Americas, EU, MENA, APAC, etc.
+  - Different countries: DE, FR, ES, NL, etc.
+  - Combination of regions and countries.
 
 - Custom functionality per store: Allows offering a customized shopping experience to customers by displaying relevant products, content, and promotions based on their location or interest. This can include different brands under a single franchise, such as Swatch, Omega, etc., or different business models, like new cars, used cars, and spare parts.
 - Sales and marketing: The ability to track sales and customer data for each store to monitor performance and make data-driven decisions about future expansion.
@@ -42,7 +42,7 @@ Don't use the Spryker Multistore concept as a representation of a physical store
 {% endinfo_block %}
 
 
- ## Select the appropriate setup
+## Select the appropriate setup
 
 There are three types of setups you can choose from.
 
@@ -53,11 +53,12 @@ When setting up multiple stores, we recommended to group stores that share the s
 {% endinfo_block %}
 
 ### Setup 1: Shared infrastructure resources (default)
+
 ![setup-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/multi-store-setups/setup-1.png)
 
 This setup has the following characteristics:
 
-- One store or multiple stores. 
+- One store or multiple stores.
 - Each store has a dedicated index for ES and its own key-value storage namespace (Redis).
 {% info_block infoBox "Info" %}
 
@@ -107,7 +108,7 @@ If Dynamic Multistore is enabled, separate databases can be used only per region
 
 This setup has the following characteristics:
 
-- Multiple stores. 
+- Multiple stores.
 - Each store has a dedicated Elasticsearch index and its own Redis key-value storage namespace.
 
 {% info_block infoBox "Info" %}
@@ -153,19 +154,20 @@ You can apply the virtually isolated database to setup one and setup three too. 
 {% endinfo_block %}
 
 ### Setup 3: Separate Infrastructure resources (AWS accounts)
+
 ![setup-3](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/multi-store-setups/setup-3.png)
 
 This setup has the following characteristics:
 
-- Multiple stores. 
+- Multiple stores.
 - Each store has dedicated key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services.
 - Separate database per account.
 - Allows for different regions.
 - Lets you use themes for a different visual look and feel.
 - Possibility of an isolated codebase for each store. In this case, it's possible to have fully independent development teams.
 - In the case of a shared codebase:
-    - Use of code buckets for store customization (logic).
-    - Centralized third-party integrations.
+  - Use of code buckets for store customization (logic).
+  - Centralized third-party integrations.
 
 This setup is recommended for the following cases:
 - Your shops look completely different—not only from the design perspective but also from business logic and used features/modules because of completely separated code.
@@ -175,7 +177,7 @@ This setup is recommended for the following cases:
 In terms of infrastructure, this setup is the most flexible way of scaling and deploying your setups independently since all of the infrastructure parts are separate cloud resources:
 
 - You can host single stores in different AWS regions. For example, you can host the US store in N. Virginia and the DE store—in Frankfurt.
-- Traffic distribution is _independent_ for every store* because of ALB+NLBs (ALB-->NLB-->Nginx-->PHP-FPM).
+- Traffic distribution is *independent* for every store* because of ALB+NLBs (ALB-->NLB-->Nginx-->PHP-FPM).
 
 {% info_block infoBox "Info" %}
 

@@ -15,9 +15,9 @@ related:
 
 Queue data import allows you to import data via message queues. It increases data import performance by using performance-related abilities and properties of message queues, like:
 
-* Parallel message consumption by multiple consumers using round-robin.
-* Fast transmitting of large amounts of data.
-* Bulk message processing.
+- Parallel message consumption by multiple consumers using round-robin.
+- Fast transmitting of large amounts of data.
+- Bulk message processing.
 
 Also, queue data import allows you to use different import groups.
 
@@ -43,8 +43,8 @@ To import data into a message queue, use an instance of `Spryker\Zed\DataImport\
 
 Do the following:
 1. Provide two pieces of configuration to a queue writer's `::write()` method:
-* Queue name—the name of the resource-based queue, which stores the imported data between the steps (for example, `import.product_abstract`).
-* Chunk size—the size of the chunks in which data is written to a queue.
+- Queue name—the name of the resource-based queue, which stores the imported data between the steps (for example, `import.product_abstract`).
+- Chunk size—the size of the chunks in which data is written to a queue.
 2. Define a dedicated configuration method in `Pyz\Zed\DataImport\DataImportConfig`:
 
 **Pyz\Zed\DataImport\DataImportConfig**
@@ -74,8 +74,8 @@ class DataImportConfig extends SprykerDataImportConfig
 
 Here, you specify the names for the queues:
 
-* The main queue, which holds the data.
-* The error queue (the name of the main queue suffixed with .error).
+- The main queue, which holds the data.
+- The error queue (the name of the main queue suffixed with .error).
 
 3. Specify the name for the method, which creates an instance of `DataImportQueueWriterConfigurationTransfer` and initializes it with the main queue name and the size of a chunk data is written in.
 
@@ -186,6 +186,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
     .....
 }
 ```
+
 </details>
 
 Pay attention to the `::setImportGroup()` method call on the data importer instance. By calling this method, an import group can be set for each separate data import. Import groups allow you to run importers separately on a per-group basis by supplying the group name as an option for the data import console command. Three groups are supported out of the box: *FULL*, *QUEUE_READERS*, *QUEUE_WRITERS*. With no call to `::setImportGroup`, the data importer is placed into the FULL group by default.

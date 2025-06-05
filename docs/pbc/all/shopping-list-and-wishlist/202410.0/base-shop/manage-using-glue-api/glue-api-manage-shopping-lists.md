@@ -26,8 +26,8 @@ In your development, the resources can help you to enable the shopping list func
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Install the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
-* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+- [Install the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
+- [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 
 
 ## Create a shopping list
@@ -87,6 +87,7 @@ Request sample: create a shopping list
     }
 }
 ```
+
  <br>
 </details>
 
@@ -135,7 +136,8 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     }
 }  
 ```
-</details>    
+
+</details>
 
 
 <details>
@@ -192,6 +194,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     }
 }
 ```
+
 </details>
 
 <details>
@@ -332,6 +335,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-lists-response-attributes.md -->
@@ -399,7 +403,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 }
 ```
 
-</details>   
+</details>
 
 <details>
 <summary>Response sample: retrieve a shopping list with the details on the shopping list items</summary>
@@ -452,6 +456,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -592,7 +597,8 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     ]
 }
 ```
-</details>    
+
+</details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-lists-response-attributes.md -->
 
@@ -651,6 +657,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 | name | String | ✓ | New name of the shopping list. |
 
 ### Response
+
 <details>
 <summary>Response sample: edit a shopping list</summary>
 
@@ -672,6 +679,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     }
 }
 ```
+
 </details>
 
 <details>
@@ -808,6 +816,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-lists-response-attributes.md -->

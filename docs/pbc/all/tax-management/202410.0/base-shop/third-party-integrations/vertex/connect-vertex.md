@@ -88,6 +88,7 @@ Successful response: HTTP code: 200.
   "links": []
 }
 ```
+
 Unsuccessful response: HTTP code: 400, 422.
 
 ```json
@@ -115,4 +116,4 @@ To run a destructive deployment, follow the steps:
 
 ## Next steps
 
-* [Troubleshooting Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html)
+- [Troubleshooting Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html)

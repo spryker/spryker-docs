@@ -18,46 +18,55 @@ redirect_from:
 The following console commands are available in your project after successful [installation](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html) of the Akeneo Connector Eco module. Run them one by one.
 
 1) Command to import super attributes:
+
 ```bash
 vendor/bin/console middleware:process:run -p SUPER_ATTRIBUTE_IMPORT_PROCESS -o data/import/maps/super_attribute_map.json
 ```
 
 2) Command to prepare locale mapping:
+
 ```bash
 vendor/bin/console middleware:process:run -p LOCALE_MAP_IMPORT_PROCESS -o data/import/maps/locale_map.json
 ```
 
 3) Command to prepare products attributes mapping:
+
 ```bash
 vendor/bin/console middleware:process:run -p ATTRIBUTE_MAP_PROCESS -o data/import/maps/attribute_map.json
 ```
 
 4) Command to import categories:
+
 ```bash
 vendor/bin/console middleware:process:run -p DEFAULT_CATEGORY_IMPORT_PROCESS
 ```
 
 5) Command to import products attributes:
+
 ```bash
 vendor/bin/console middleware:process:run -p ATTRIBUTE_IMPORT_PROCESS
 ```
 
 6) Command to prepare product models data in local file:
+
 ```bash
 vendor/bin/console middleware:process:run -p PRODUCT_MODEL_PREPARATION_PROCESS -o data/import/maps/product_models.json
 ```
 
 7) Command to import product model data (abstract products):
+
 ```bash
 vendor/bin/console middleware:process:run -p DEFAULT_PRODUCT_MODEL_IMPORT_PROCESS -i data/import/maps/product_models.json
 ```
 
 8) Command to prepare products data in local file:
+
 ```bash
 vendor/bin/console middleware:process:run -p PRODUCT_PREPARATION_PROCESS -o data/import/maps/products.json
 ```
 
 9) Command to import product data (concrete products):
+
 ```bash
 vendor/bin/console middleware:process:run -p DEFAULT_PRODUCT_IMPORT_PROCESS -i data/import/maps/products.json
 ```

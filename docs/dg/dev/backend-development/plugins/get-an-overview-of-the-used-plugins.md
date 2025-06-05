@@ -25,7 +25,7 @@ Print all used plugins by running the command without any argument or option.
 
 This searches for all `DependencyProvider` plugins in the project code and all used plugins in there. The header of the table is `DepenencyProvider` in which the plugins are found.
 
-```
+```bash
 $ vendor/bin/console dev:plugin-usage:dump
 ...
 Pyz\Zed\User\UserDependencyProvider
@@ -40,7 +40,7 @@ Spryker\Zed\CustomerUserConnectorGui\Communication\Plugin\UserTableActionExpande
 
 Another way of execution is to add the "module" option which can be used to shrink the list to a more readable one.
 
-```
+```bash
 $ vendor/bin/console dev:plugin-usage:dump User
 
 Pyz\Zed\User\UserDependencyProvider  
@@ -55,7 +55,7 @@ Spryker\Zed\CustomerUserConnectorGui\Communication\Plugin\UserTableActionExpande
 
 You can also print a list of used plugins in applications.
 
-```
+```bash
 $ vendor/bin/console dev:plugin-usage:dump Pyz.Client.*
 Pyz\Zed\User\UserDependencyProvider
 Spryker\Zed\Acl\Communication\Plugin\GroupPlugin  

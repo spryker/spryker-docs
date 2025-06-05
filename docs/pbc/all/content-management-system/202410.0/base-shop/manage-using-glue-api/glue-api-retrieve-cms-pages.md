@@ -25,8 +25,8 @@ related:
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Install the Content Items feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html)
-* [Glue API: CMS feature integration](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html)
+- [Install the Content Items feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html)
+- [Glue API: CMS feature integration](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html)
 
 <a name="all-cms-pages"></a>
 
@@ -174,6 +174,7 @@ To retrieve abstract products for the `content-product-abstract-lists` relations
     }
 }
 ```
+
 </details>
 
 <details>
@@ -219,6 +220,7 @@ To retrieve abstract products for the `content-product-abstract-lists` relations
     }
 }
 ```
+
 </details>
 
 {% info_block infoBox %}
@@ -341,6 +343,7 @@ When paging is enabled, the links section of the response contains links for the
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -580,6 +583,7 @@ When paging is enabled, the links section of the response contains links for the
     ]
 }
 ```
+
 </details>
 
 
@@ -640,6 +644,7 @@ To retrieve abstract products for the `content-product-abstract-lists` relations
     }
 }
 ```
+
 </details>
 
 <details>
@@ -704,6 +709,7 @@ To retrieve abstract products for the `content-product-abstract-lists` relations
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -873,6 +879,7 @@ To retrieve abstract products for the `content-product-abstract-lists` relations
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/cms-pages-response-attributes.md -->

@@ -48,7 +48,7 @@ To carry out a CRIF order check via a Server-to-Server connection, go to [that U
 
 For security reasons, Paygate rejects all payment requests with formatting errors. Therefore  use the correct data type for each parameter.
 
-## Integration with Checkout.
+## Integration with Checkout
 
 Integrated into Computop module CRIF provides risk check functionality based on customer, cart, address and other data. CRIF analyzes information and provides result as color response code (GREEN, YELLOW, RED) which corresponds to potential risks. Based on this result payment methods should be filtered. Only allowed payment methods should be displayed on checkout payment page. Module provides possibility to configure list of allowed payment methods for each response color.
 

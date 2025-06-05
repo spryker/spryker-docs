@@ -18,7 +18,7 @@ The *Shopping List Notes* feature lets buyers manage notes for individual items 
 
 When customer transfers shopping list items to the cart, their notes are taken over as well, under the following conditions:
 
-* If an item *with notes* exists in a shopping list and is transferred to the cart, where the same item *does not exist*, the item is added with notes.
-* If an item *with notes* exists in a shopping list and is transferred to the cart, where the same item *already exists* (with or without notes), the item is added as a *separate item* with notes.
-* If an item *without notes* exists in a shopping list and is transferred to the cart, where the same item already exists *without notes*, the items are *merged*.
-* If an item *without notes* exists in a shopping list and is transferred to the cart, where the same item *already exists with a note*, the item is added as a *separate item*.
+- If an item *with notes* exists in a shopping list and is transferred to the cart, where the same item *does not exist*, the item is added with notes.
+- If an item *with notes* exists in a shopping list and is transferred to the cart, where the same item *already exists* (with or without notes), the item is added as a *separate item* with notes.
+- If an item *without notes* exists in a shopping list and is transferred to the cart, where the same item already exists *without notes*, the items are *merged*.
+- If an item *without notes* exists in a shopping list and is transferred to the cart, where the same item *already exists with a note*, the item is added as a *separate item*.

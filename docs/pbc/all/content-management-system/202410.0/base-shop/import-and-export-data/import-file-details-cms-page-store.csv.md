@@ -20,8 +20,8 @@ This document describes the `cms_page_store.csv` file to configure CMS Page Stor
 ## Import file dependencies
 
 
-* [cms_page.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-cms-page.csv.html)
-* *stores.php* configuration file of the demo shop PHP project
+- [cms_page.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-cms-page.csv.html)
+- *stores.php* configuration file of the demo shop PHP project
 
 
 ## Import file parameters

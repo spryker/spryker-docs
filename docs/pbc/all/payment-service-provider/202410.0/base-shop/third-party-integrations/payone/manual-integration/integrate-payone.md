@@ -17,9 +17,9 @@ PayOne is not compatible with gift cards. We will update this document once the 
 {% endinfo_block %}
 
 **Objectives:**
-* Place order with PayPal express checkout.
-* Be redirected to summary page of standard checkout.
-* Have a shipping method selector on summary page.
+- Place order with PayPal express checkout.
+- Be redirected to summary page of standard checkout.
+- Have a shipping method selector on summary page.
 
 ## Frontend Update
 
@@ -155,6 +155,7 @@ $this->getFactory()
 return $this->redirectResponseInternal(CheckoutPageControllerProvider::CHECKOUT_SUMMARY);
 }
 ```
+
 2. Register a new controller action in controller provider:
 
 ```php
@@ -171,6 +172,7 @@ $this->createController('/{checkout}/paypal-express-checkout-entry-point', self:
 ...
 }
 ```
+
 3. Create `ExpressCheckoutHandler` class `src/Pyz/Yves/CheckoutPage/Handler/ExpressCheckoutHandler.php` with corresponding interface:
 
 ```php
@@ -338,6 +340,7 @@ Move `"form_start"` expression to the top of a content section and `"form_end"` 
       {% raw %}{%{% endraw %} include '@checkout/checkout/partials/shipment.twig' {% raw %}%}{% endraw %}
       ...
 ```
+
 10. Add shipment form data provider and remove voucher form from summary form collection(It is just an example, if you need voucher form, you need to adjust summary page on your own). In `src/Pyz/Yves/CheckoutPage/Form/FormFactory.php`:
 
 ```php

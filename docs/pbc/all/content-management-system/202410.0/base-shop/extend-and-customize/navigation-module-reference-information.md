@@ -14,19 +14,19 @@ The `Navigation` module manages multiple navigation menus that can be displayed 
 
 The following node types are available:
 
-* **Label**: These nodes do not link to any specific URL, and are used for grouping other nodes.
-* **Category**: Nodes can be assigned to category node URLs.
-* **CMS Page**: Nodes can be assigned to CMS page URLs.
-* **Link**: These nodes link to internal pages in Yves—for example, login or registration.
-* **External URL**: These nodes link to external URLs (typically tabs opened in a new browser).
+- **Label**: These nodes do not link to any specific URL, and are used for grouping other nodes.
+- **Category**: Nodes can be assigned to category node URLs.
+- **CMS Page**: Nodes can be assigned to CMS page URLs.
+- **Link**: These nodes link to internal pages in Yves—for example, login or registration.
+- **External URL**: These nodes link to external URLs (typically tabs opened in a new browser).
 
 You can control and adjust Navigation node appearance and add icons by assigning custom CSS classes to them.
 
 This feature is shipped with three modules:
 
-* **Navigation module** provides database structure and a public API to manage what's in the database. It also provides a small toolkit for rendering navigation menus in the frontend.
-* **NavigationGui** provides a Zed UI to manage navigation menus.
-* **NavigationCollector** provides full collector logic for exporting navigation menus to the KV storage (Redis).
+- **Navigation module** provides database structure and a public API to manage what's in the database. It also provides a small toolkit for rendering navigation menus in the frontend.
+- **NavigationGui** provides a Zed UI to manage navigation menus.
+- **NavigationCollector** provides full collector logic for exporting navigation menus to the KV storage (Redis).
 
 ## Database schema
 

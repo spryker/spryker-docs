@@ -97,6 +97,7 @@ Request sample: retrieve stores
 		}
 }
 ```
+
 </details>
 
 

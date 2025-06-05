@@ -975,6 +975,7 @@ return.create_return.validation.store_error,Retoure kann nicht angestellt werden
 return.create_return.validation.items_error,Return cannot be cretaed for this set of items,en_US
 return.create_return.validation.items_error,Für dieses Set der Artikel kann die Retoure nicht erstellt werden,de_DE
 ```
+
 </details>
 
 2. Import data:
@@ -1064,7 +1065,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Ensure that:
 
-* The `BarcodeWidget` widget has been registered.
-* The barcode (with return reference encoded) is shown on the return print screen.
+- The `BarcodeWidget` widget has been registered.
+- The barcode (with return reference encoded) is shown on the return print screen.
 
 {% endinfo_block %}

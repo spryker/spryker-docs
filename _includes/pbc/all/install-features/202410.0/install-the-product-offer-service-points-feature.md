@@ -43,6 +43,7 @@ Make sure that the following modules have been installed:
 | spy_product_offer_service     | Entity.spy_product_offer_service.create<br>Entity.spy_product_offer_service.delete                                            |
 
 **src/Pyz/Zed/ProductOfferServicePoint/Persistence/Propel/Schema/spy_product_offer_service.schema.xml**
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\ProductOfferServicePoint\Persistence" package="src.Orm.Zed.ProductOfferServicePoint.Persistence">
@@ -417,6 +418,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+
 </details>
 
 5. Set up synchronization plugins:
@@ -476,6 +478,7 @@ Make sure that, in Redis, data is displayed in the following format:
     "_timestamp": 1683216744.8334839
 }
 ```
+
 {% endinfo_block %}
 
 ### 7) Set up behavior
@@ -539,6 +542,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Client/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**

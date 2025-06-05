@@ -25,8 +25,8 @@ This doc describes how to edit delivery methods.
 5. Select a **PRICE PLUGIN**.
 6. Select a **DELIVERY TIME PLUGIN**.
 7. For **IS ACTIVE**, do one of the following:
-    * To make the delivery method available on the Storefront, select the checkbox.
-    * To make the delivery method unavailable on the Storefront, clear the checkbox.
+    - To make the delivery method available on the Storefront, select the checkbox.
+    - To make the delivery method unavailable on the Storefront, clear the checkbox.
 8. Click **Save**.
     This opens the **Delivery Methods** page with a success message displayed.
 
@@ -43,8 +43,8 @@ This doc describes how to edit delivery methods.
 
 1. On the **Edit** page, click the **Store Relation** tab.
 2. For **AVAILABLE IN THE FOLLOWING STORE(S)**, do any of the following:
-    * Select the checkboxes next to the stores you want to make the method available for.
-    * Clear the checkboxes next to the stores you want to make the method unavailable for.
+    - Select the checkboxes next to the stores you want to make the method available for.
+    - Clear the checkboxes next to the stores you want to make the method unavailable for.
 3. Click **Save**.
     This opens the **Delivery Methods** page with a success message displayed.
 

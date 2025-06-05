@@ -19,11 +19,11 @@ As one of the leading chat service providers in Europe, optimise-it focuses prim
 
 YOUR ADVANTAGES:
 
-* Innovative and technically flexible chat solution, custom tailored to the needs and use cases of the customer
-* Integration of messengers (WhatsApp, Facebook, Apple Business Chat), chatbots etc.
-* Popular and modern expansions like video chat, conversational ad, co-browsing, screen sharing and more
-* optimise-it Chat Lab: Experienced and performance driven chat experts for full service projects
-* 100% Privacy and GDPR compliant. All dedicated servers are hosted exceptionally in german data centres
+- Innovative and technically flexible chat solution, custom tailored to the needs and use cases of the customer
+- Integration of messengers (WhatsApp, Facebook, Apple Business Chat), chatbots etc.
+- Popular and modern expansions like video chat, conversational ad, co-browsing, screen sharing and more
+- optimise-it Chat Lab: Experienced and performance driven chat experts for full service projects
+- 100% Privacy and GDPR compliant. All dedicated servers are hosted exceptionally in german data centres
 ---
 
 ## Copyright and Disclaimer

@@ -54,7 +54,7 @@ glue_eu:
             cors-allow-headers: "accept,content-type,content-language,accept-language,authorization,If-Match,Cache-Control,If-Modified-Since,User-Agent,newrelic,traceparent,tracestate,X-Device-Id"
 ```
 
-* CORS is disabled. Example:
+- CORS is disabled. Example:
 
 ```yml
 glue_eu:
@@ -66,7 +66,7 @@ glue_eu:
             store: AT
 ```
 
-*  `*`: allow CORS requests from any domain. Example:
+- `*`: allow CORS requests from any domain. Example:
 
 ```yml
 glue_eu:
@@ -80,7 +80,7 @@ glue_eu:
             cors-allow-origin: '*'
 ```
 
-* Allow CORS requests only from a specific origin. Example:
+- Allow CORS requests only from a specific origin. Example:
 
 ```yml
 glue_eu:
@@ -109,8 +109,8 @@ curl -X OPTIONS -H "Origin: http://www.example1.com" -i http://glue.mysprykersho
 
 3. Using the following example, verify the headers:
 
-* The `access-control-allow-origin` header is present and is the same as set in the deploy file.
-* The `access-control-allow-methods` header is present and contains all available methods.
+- The `access-control-allow-origin` header is present and is the same as set in the deploy file.
+- The `access-control-allow-methods` header is present and contains all available methods.
 
 
 ```bash
@@ -282,6 +282,7 @@ server {
 4. Update the hosts configuration. Replace `{IP}` with your server's IP address:
 
 **/etc/hosts**
+
 ```bash
 {IP} glue.mysprykershop.com
 ```
@@ -291,6 +292,7 @@ server {
 Make sure you can access `https://glue.mysprykershop.com` and get the following JSON response:
 
 **Default JSON Response**
+
 ```json
 {
     "errors": [
@@ -301,6 +303,7 @@ Make sure you can access `https://glue.mysprykershop.com` and get the following 
     ]
 }
 ```
+
 {% endinfo_block %}
 
 
@@ -377,6 +380,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 **\Pyz\Glue\UrlsRestApi\UrlsRestApiDependencyProvider.php**
@@ -445,6 +449,7 @@ Make a request to `https://glue.mysprykershop.com` with the header `[{"key":"Acc
 2. To verify `EntityTagRestRequestValidatorPlugin`, send the following request with the `If-Match` header equal the value of the `ETag` value from the response to the previous request:
 
 `PATCH https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identitifer{% raw %}}}{% endraw %}`
+
 ```json
 HEADER If-Match: cc1eb2e0b45ee5026b72d21dbded0090
 
@@ -457,7 +462,8 @@ HEADER If-Match: cc1eb2e0b45ee5026b72d21dbded0090
     }
 }
 ```
-    Make sure that the returned resource contains an updated `ETag`.
+
+Make sure that the returned resource contains an updated `ETag`.
 
 {% endinfo_block %}
 
@@ -490,6 +496,7 @@ Make sure you can send requests to the `https://glue.mysprykershop.com/stores` e
 To verify `ProductAbstractRestUrlResolverAttributesTransferProviderPlugin`, send the following request:
 
 `POST https://glue.mysprykershop.com/url-resolver/?url=/product-abstract-url`
+
 ```json
 
 {
@@ -511,7 +518,8 @@ To verify `ProductAbstractRestUrlResolverAttributesTransferProviderPlugin`, send
     }
 }
 ```
-    Make sure you receive the correct resource identifier in the response.
+
+Make sure you receive the correct resource identifier in the response.
 
 {% endinfo_block %}
 
@@ -549,10 +557,10 @@ Make sure the response contains the correct resource identifier.
 
 {% info_block warningBox "Verification" %}
 
-* To verify `SecurityBlockerCustomerControllerAfterActionPlugin` and `SecurityBlockerCustomerRestRequestValidatorPlugin`, [authenticate as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) with incorrect credentials for as many times as you've specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`.
+- To verify `SecurityBlockerCustomerControllerAfterActionPlugin` and `SecurityBlockerCustomerRestRequestValidatorPlugin`, [authenticate as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) with incorrect credentials for as many times as you've specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`.
     Make sure the account gets blocked for the number of seconds you've specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR`. Consequent login attempts should return the `429 Too many requests` error.
 
-* To verify `SecurityBlockerAgentRestRequestValidatorPlugin` and `SecurityBlockerAgentControllerAfterActionPlugin`, [authenticate as an agent assist](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) with incorrect credentials.
+- To verify `SecurityBlockerAgentRestRequestValidatorPlugin` and `SecurityBlockerAgentControllerAfterActionPlugin`, [authenticate as an agent assist](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) with incorrect credentials.
     The agent account should get blocked according to the configured you've set up.
 
 {% endinfo_block %}

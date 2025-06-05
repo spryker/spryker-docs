@@ -49,6 +49,7 @@ Replace x86 based Sass with an ARM based one:
 ```
 
 4. In `frontend/configs/development.js`, add configuration for `saas-loader`:
+
 ```js
 loader: 'sass-loader',
 options: {
@@ -63,14 +64,18 @@ docker/sdk cli
 ```
 
 6. Update `package-lock.json` and install dependencies based on your package manager:
-    * npm:
+    - npm:
+
     ```bash
     npm install
     ```
-    * yarn:
+
+    - yarn:
+
     ```bash
     yarn install
     ```
+
 7. Rebuild Yves:
 
 ```bash

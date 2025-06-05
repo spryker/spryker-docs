@@ -135,6 +135,7 @@ class HelloWorldStub implements HelloWorldStubInterface
 
 }
 ```
+
 </details>
 
 {% info_block infoBox "Request parameter" %}
@@ -193,6 +194,7 @@ class HelloWorldDependencyProvider extends SprykerCustomerDependencyProvider
 
 }
 ```
+
 </details>
 
 {% endinfo_block %}

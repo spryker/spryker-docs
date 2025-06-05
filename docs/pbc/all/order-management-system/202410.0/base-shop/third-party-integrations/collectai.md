@@ -23,12 +23,12 @@ collectAI is a software platform providing digitised, AI-based payments and coll
 
 YOUR ADVANTAGES:
 
-* Self-Learning AI for continuously better results
-* Numerous Communication Channels for an individual customer approach
-* Large Selection of Payment Solutions increases the conversion rate
-* Landing Page in your Branding for an individual brand experience - even when paying
-* Customer Orientation (UX / UI) leads to optimal services and satisfied customers
-* Flexible Integration across Platforms for easy implementation in your System
+- Self-Learning AI for continuously better results
+- Numerous Communication Channels for an individual customer approach
+- Large Selection of Payment Solutions increases the conversion rate
+- Landing Page in your Branding for an individual brand experience - even when paying
+- Customer Orientation (UX / UI) leads to optimal services and satisfied customers
+- Flexible Integration across Platforms for easy implementation in your System
 
 ---
 

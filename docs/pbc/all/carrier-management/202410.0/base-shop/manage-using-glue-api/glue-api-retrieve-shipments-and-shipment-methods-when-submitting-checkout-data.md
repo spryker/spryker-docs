@@ -13,8 +13,8 @@ This document describes how to retrieve shipments and shipment methods when subm
 ## Installation
 
 For detailed information about the modules that provide the API functionality and any related installation instructions, see the following guides:
-* [Install the Checkout Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
-* [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)
+- [Install the Checkout Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
+- [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)
 
 
 ## Submit checkout data
@@ -37,6 +37,7 @@ To submit checkout data without an order confirmation, send the following reques
 | --- | --- | --- |
 | Include | Adds resource relationships to the request.	 | shipments, shipment-methods |
 | sort | Sorts included shipment and payment methods by an attribute. | {% raw %}{{{% endraw %}included_resource{% raw %}}}{% endraw %}.{% raw %}{{{% endraw %}attribute{% raw %}}}{% endraw %}, {% raw %}{{{% endraw %}included_resource{% raw %}}}{% endraw %}.{% raw %}{{{% endraw %}attribute{% raw %}}}{% endraw %} |
+
 {% info_block infoBox "Included resources" %}
 
 To retrieve all available shipment methods, submit checkout data with one or more shipments and include `shipments` and `shipment-methods` resources.
@@ -130,6 +131,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
     }
 }
 ```
+
 </details>
 
 
@@ -267,6 +269,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -517,6 +520,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
     ]
 }
 ```
+
 </details>
 
 

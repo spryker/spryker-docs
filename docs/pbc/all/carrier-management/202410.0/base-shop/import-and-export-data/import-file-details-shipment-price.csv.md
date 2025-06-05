@@ -39,9 +39,9 @@ data:import:shipment-price
 
 
 
-* [shipment.csv](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html)
-* [currency.csv](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-currency.csv.html)
-* *stores.ph*p configuration file of the demo shop PHP project
+- [shipment.csv](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html)
+- [currency.csv](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-currency.csv.html)
+- *stores.ph*p configuration file of the demo shop PHP project
 
 ## Additional information
 

@@ -18,7 +18,7 @@ A *container* is a class which holds one or more object collections or definitio
 
 The container is used to add services and allow other application plugins access them. Services are integrations like Twig or Symfony components like Security or Form. To be able to configure or change the services easily, they are added to the applications as a part of [application plugins](/docs/dg/dev/upgrade-and-migrate/silex-replacement/application.html).
 
-It's important that almost everything that is accessible through the container should only be instantiated when it's requested. It's not as important for static values like `isDebugMode` as it's important for expensive instantiations.                
+It's important that almost everything that is accessible through the container should only be instantiated when it's requested. It's not as important for static values like `isDebugMode` as it's important for expensive instantiations.
 
 ## Container usage
 

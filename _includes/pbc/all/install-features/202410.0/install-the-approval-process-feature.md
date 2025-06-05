@@ -274,17 +274,17 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 }
 ```
 
-#### Synchronize permission plugins with storage:
+#### Synchronize permission plugins with storage
 
 Go to the Back Office, **Maintenance** menu, and click **Sync permissions**.
 
 {% info_block warningBox "Verification" %}
 
 Check that the following happens:
-* The customer, with the `RequestQuoteApprovalPermission` permission, can request approval.
-* The customer, with the `ApproveQuotePermission` permission, can approve the request.
-* The customer, with the `PlaceOrderPermissionPlugin` permission, can place an order from the quote with the approved request for approval.
-* When you reset the cart lock, all the approval process-related data is removed from the quote.
+- The customer, with the `RequestQuoteApprovalPermission` permission, can request approval.
+- The customer, with the `ApproveQuotePermission` permission, can approve the request.
+- The customer, with the `PlaceOrderPermissionPlugin` permission, can place an order from the quote with the approved request for approval.
+- When you reset the cart lock, all the approval process-related data is removed from the quote.
 
 {% endinfo_block %}
 
@@ -347,9 +347,9 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure the following:
-* The quote is expanded with data from the database table `spy_quote_approval` on quote loading.
-* The records from the database table `spy_quote_approval` related to the quote are removed before the quote deletion.
-* The billing address and payment are saved with the quote in the `spy_quote` table after sending an approval request.
+- The quote is expanded with data from the database table `spy_quote_approval` on quote loading.
+- The records from the database table `spy_quote_approval` related to the quote are removed before the quote deletion.
+- The billing address and payment are saved with the quote in the `spy_quote` table after sending an approval request.
 
 {% endinfo_block %}
 
@@ -532,8 +532,8 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 {% info_block warningBox "Verification" %}
 
 On the storefront, make sure the following:
-* The customer with the sent approval request can't open the address step on the cart page.
-* The customer with the sent approval request can't open the payment step on the cart page.
+- The customer with the sent approval request can't open the address step on the cart page.
+- The customer with the sent approval request can't open the payment step on the cart page.
 
 {% endinfo_block %}
 
@@ -641,6 +641,6 @@ Make sure that the plugin has been registered:
 4. Open `https://mysprykershop.com/cart/`.
 5. Click the **Approve** button. Quote approval status becomes approved and the **Proceed to checkout** button must be displayed.
 6. Create a new quote with items.
-7. Open ` https://mysprykershop.com/cart/` and click the **Request for Approval** button. The quote approval status must become waiting, and the approver functionality must be shown.
+7. Open `https://mysprykershop.com/cart/` and click the **Request for Approval** button. The quote approval status must become waiting, and the approver functionality must be shown.
 
 {% endinfo_block %}

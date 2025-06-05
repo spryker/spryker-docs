@@ -47,8 +47,8 @@ Faster maintenance. You can enable maintenance mode more quickly, reducing downt
 
 #### Documentation
 
-* [Enable and disable maintenance mode](/docs/ca/dev/manage-maintenance-mode/enable-and-disable-maintenance-mode.html)
-* [Configure access to applications in maintenance mode](/docs/ca/dev/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html)
+- [Enable and disable maintenance mode](/docs/ca/dev/manage-maintenance-mode/enable-and-disable-maintenance-mode.html)
+- [Configure access to applications in maintenance mode](/docs/ca/dev/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html)
 
 
 ### Deployment optimization of RabbitMQ <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
@@ -62,8 +62,8 @@ Upgraded MariaDB, Redis, Jenkins, and their dependencies.
 
 Benefits:
 
-* Improved performance and reliability
-* Improved security
+- Improved performance and reliability
+- Improved security
 
 
 ## August 2022
@@ -78,8 +78,8 @@ This feature lets you quickly delete logical databases and associated resources,
 
 Benefits:
 
-* Improved efficiency: delete logical databases and associated resources more quickly and easily, streamlining the process and saving time.
-* Improved flexibility: delete logical databases and associated resources according to a needed schedule, rather than having to coordinate it with Spryker Support & Operations teams.
+- Improved efficiency: delete logical databases and associated resources more quickly and easily, streamlining the process and saving time.
+- Improved flexibility: delete logical databases and associated resources according to a needed schedule, rather than having to coordinate it with Spryker Support & Operations teams.
 
 
 ### Deployment optimization of Jenkins
@@ -92,16 +92,16 @@ Optimized deployment pipeline images to speed up the build of Jenkins.
 Introduced a multi-database setup for multi-store environments. Now you can create databases per store in the same AWS environment.
 
 Benefits of a multi-store setup:
-* Each store has a dedicated index for Elasticsearch and its own virtual key-value storage (Redis).
-* Shared virtual separated database per store.
-* A cluster can share the same or use different database setups.
-* One region can have multiple stores.
-* Use code buckets for store customization logic.
-* Use themes for different visual look and feel per store.
-* Optimized environment instances usage and costs.
-* Solves the uniqueness problem with URLs for different locales with the same language.
-* Enables distinct category navigation, product schema details, and users.
-* Improves privacy store management: one store has no knowledge about the users of another.
+- Each store has a dedicated index for Elasticsearch and its own virtual key-value storage (Redis).
+- Shared virtual separated database per store.
+- A cluster can share the same or use different database setups.
+- One region can have multiple stores.
+- Use code buckets for store customization logic.
+- Use themes for different visual look and feel per store.
+- Optimized environment instances usage and costs.
+- Solves the uniqueness problem with URLs for different locales with the same language.
+- Enables distinct category navigation, product schema details, and users.
+- Improves privacy store management: one store has no knowledge about the users of another.
 
 ### Documentation
 
@@ -133,12 +133,12 @@ Increased the stability of Jenkins deployment. This update addresses critical is
 
 ## February 2021
 
-* **Documentation about Docker SDK installation on Windows**: updated Docker prerequisites for Windows with instructions for WSL2. See [Installing Docker prerequisites on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
+- **Documentation about Docker SDK installation on Windows**: updated Docker prerequisites for Windows with instructions for WSL2. See [Installing Docker prerequisites on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
 
-* **Documentation about Onboarding deliverables**: updated the cloud administration getting started page with the deliverables provided after the onboarding. See [Getting started with cloud administration](/docs/ca/dev/getting-started-with-cloud-administration.html).
+- **Documentation about Onboarding deliverables**: updated the cloud administration getting started page with the deliverables provided after the onboarding. See [Getting started with cloud administration](/docs/ca/dev/getting-started-with-cloud-administration.html).
 
-* **Documentation about GitLab**: published the instructions on connecting a GitLab repository to the CD Pipeline. See [Connect a GitLab code repository](/docs/ca/dev/connect-a-code-repository.html#connect-a-gitlab-code-repository).
+- **Documentation about GitLab**: published the instructions on connecting a GitLab repository to the CD Pipeline. See [Connect a GitLab code repository](/docs/ca/dev/connect-a-code-repository.html#connect-a-gitlab-code-repository).
 
-* **Documentation about Docker SDK**: published new and updated existing pages covering the following Docker SDK topics: deploy file reference, choosing a version, quick start guide, installation, services, modes overview, mount options, debugging, running tests, and troubleshooting. See [Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html).
+- **Documentation about Docker SDK**: published new and updated existing pages covering the following Docker SDK topics: deploy file reference, choosing a version, quick start guide, installation, services, modes overview, mount options, debugging, running tests, and troubleshooting. See [Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html).
 
-* **Load and stress test tool**: released a tool that contains predefined Spryker-specific test scenarios. The tool is based on [Gatling.io](http://gatling.io/) and can be used as a package integrated into a Spryker project or as a standalone package.
+- **Load and stress test tool**: released a tool that contains predefined Spryker-specific test scenarios. The tool is based on [Gatling.io](http://gatling.io/) and can be used as a package integrated into a Spryker project or as a standalone package.

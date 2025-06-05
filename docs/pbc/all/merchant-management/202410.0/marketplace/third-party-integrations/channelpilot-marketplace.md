@@ -18,12 +18,12 @@ ChannelPilot is an innovative, cloud-based marketing solution for online merchan
 
 YOUR ADVANTAGES:
 
-* Easy-to-use tool
-* Automated product listing
-* Targeted modulation of activities
-* Full control over activities
-* Reliable forecasts
-* Single interface for each channel
+- Easy-to-use tool
+- Automated product listing
+- Targeted modulation of activities
+- Full control over activities
+- Reliable forecasts
+- Single interface for each channel
 
 ---
 

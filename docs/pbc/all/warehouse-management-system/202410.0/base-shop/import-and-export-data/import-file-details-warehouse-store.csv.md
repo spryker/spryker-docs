@@ -20,8 +20,8 @@ This document describes the `warehouse_store.csv` file to configure the relation
 
 ## Import file dependencies
 
-* [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse.csv.html)
-* `stores.php` configuration file of demo shop PHP project, where stores are defined initially
+- [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse.csv.html)
+- `stores.php` configuration file of demo shop PHP project, where stores are defined initially
 
 ## Import file parameters
 
@@ -48,6 +48,6 @@ data:import:stock-store
 
 ## Additional information
 
-* The console command `data:import:stock-store` uses `…/vendor/spryker/stock-data-import/data/import/warehouse_store.csv`.
+- The console command `data:import:stock-store` uses `…/vendor/spryker/stock-data-import/data/import/warehouse_store.csv`.
 
-* You can also create `warehouse_store.csv` in `…/data/import`.
+- You can also create `warehouse_store.csv` in `…/data/import`.

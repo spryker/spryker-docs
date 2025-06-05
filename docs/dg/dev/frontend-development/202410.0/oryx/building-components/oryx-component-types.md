@@ -13,7 +13,7 @@ Oryx applications are built completely out of components. Whether it's a page or
 Oryx supports three types of components:
 
 - Design system components: highly reusable components that are used to build consistent user interfaces (UIs).
-- Domain components: functional components that are concerned with a specific _domain_, like the product or cart domains.
+- Domain components: functional components that are concerned with a specific *domain*, like the product or cart domains.
 - Composition components: containers that are used to render pages or sections by providing a list of components and their layout.
 
 Even though Oryx does not implement [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), the component types can be roughly mapped to the Atomic Design levels:
@@ -38,7 +38,7 @@ Design system components are available in the `ui` package: `@spryker-oryx/ui`. 
 
 ## Domain components
 
-Oryx functionality is organized in domains. Domain packages contain functional components, also know as _domain components_. For example, all product-related components are organized in the product package.
+Oryx functionality is organized in domains. Domain packages contain functional components, also know as *domain components*. For example, all product-related components are organized in the product package.
 
 Domain components leverage the design system components to ensure a consistent UI/UX. The design system components are integrated with inputs (properties), and all of their events are handled by domain components.
 

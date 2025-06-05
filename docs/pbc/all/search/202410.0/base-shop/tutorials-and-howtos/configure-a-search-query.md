@@ -68,7 +68,7 @@ The `QueryInterface` instance is a stateful class; sometimes, the `getSearchQuer
 
 {% endinfo_block %}
 
-Besides, this new `QueryInterface ` instance has to implement `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. To be compliant with this interface, implementations for the `::setSearchContext()` and `::getSearchContext()` methods must be provided. This is needed for setting and maintaining a search context that is later used during the search process, particularly for resolving the correct Elasticsearch index for search. For more information, see [Search migration concept](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/search-migration-concept.html).
+Besides, this new `QueryInterface` instance has to implement `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. To be compliant with this interface, implementations for the `::setSearchContext()` and `::getSearchContext()` methods must be provided. This is needed for setting and maintaining a search context that is later used during the search process, particularly for resolving the correct Elasticsearch index for search. For more information, see [Search migration concept](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/search-migration-concept.html).
 
 
 <details>
@@ -184,6 +184,7 @@ class MatchAllQueryPlugin extends AbstractPlugin implements QueryInterface, Sear
 
 }
 ```
+
 </details>
 
 In the preceding example, a simple query is created, which returns all the documents from your mapping type.
@@ -230,6 +231,7 @@ To expand a base query with a collection of expanders, use `expandQuery()` metho
 
     // ...
 ```
+
 ### Query expander plugins
 
 Spryker provides the following query expander plugins.
@@ -307,6 +309,7 @@ It looks up for products even if a customer makes typos and spelling mistakes in
 Before enabling this plugin for the primary search (not a suggestions search), make sure that you are not using the `cross_fields` search type, which is not allowed in conjunction with the [fuzzy search in Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-match-query.html#crossfields-fuzziness).
 You can change this behavior by overriding `\Spryker\Client\Catalog\Plugin\Elasticsearch\Query\CatalogSearchQueryPlugin` on the project level and adjusting the `createMultiMatchQuery` method.
 For example, you can change the type to the `best_fields`:
+
 ```php
  /**
      * @param array<string> $fields
@@ -324,7 +327,8 @@ For example, you can change the type to the `best_fields`:
             ->setType(MultiMatch::TYPE_BEST_FIELDS);
     }
 ```
-Check [official Elastic Search documentation]{https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-match-query.html#multi-match-types} in order to pick most preferable type for the multi-match search query.
+
+Check [official Elastic Search documentation]{<https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-match-query.html#multi-match-types}> in order to pick most preferable type for the multi-match search query.
 
 #### Suggestions by page type
 
@@ -390,6 +394,7 @@ Keep in mind that for existing indexes, changing the analyzers is not possible, 
   }
 }
 ```
+
 </details>
 
 <a name="process"></a>
@@ -456,6 +461,7 @@ class DummyResultFormatterPlugin extends AbstractElasticsearchResultFormatterPlu
 
 }
 ```
+
 </details>
 
 To execute the previously created query along with this result formatter plugin, you need to call the `search()` method of `SearchClient` and provide this formatter to its second parameter.

@@ -17,23 +17,23 @@ With nearly 20 years of experience, we are a pioneer in software development for
 
 YOUR ADVANTAGES:
 
-* Broad portfolio of technology, service and know-how - from the standard solution to individual solution packages
-* E-mail delivery solutions for highly personalized newsletters, transaction mails, and automated e-mail campaigns
-* Delivery security via whitelisted mail server even with high mail volumes
-* Powerful interfaces for seamless integration into existing system landscapes
-* Software made and hosted in Germany
-* DSGVO-compliant e-mail marketing
-* Co-founder and member of the Certified Senders Alliance (CSA)
-* Award Winning: Competent, Fast and Reliable Customer Service and Support
-* Personal advice and contact person
+- Broad portfolio of technology, service and know-how - from the standard solution to individual solution packages
+- E-mail delivery solutions for highly personalized newsletters, transaction mails, and automated e-mail campaigns
+- Delivery security via whitelisted mail server even with high mail volumes
+- Powerful interfaces for seamless integration into existing system landscapes
+- Software made and hosted in Germany
+- DSGVO-compliant e-mail marketing
+- Co-founder and member of the Certified Senders Alliance (CSA)
+- Award Winning: Competent, Fast and Reliable Customer Service and Support
+- Personal advice and contact person
 
 
 ## Related Developer guides
 
-* [Inxmail API requests](/docs/pbc/all/emails/{{page.version}}/third-party-integrations/inxmail-api-requests.html)
-* [Inxmail order reference commands](/docs/pbc/all/emails/{{page.version}}/third-party-integrations/inxmail-order-referenced-commands.html)
-* [Installing and configuring Inxmail](/docs/pbc/all/emails/{{page.version}}/third-party-integrations/install-and-configure-inxmail.html)
-* [Integrating Inxmail](/docs/pbc/all/emails/{{page.version}}/third-party-integrations/integrate-inxmail.html)
+- [Inxmail API requests](/docs/pbc/all/emails/{{page.version}}/third-party-integrations/inxmail-api-requests.html)
+- [Inxmail order reference commands](/docs/pbc/all/emails/{{page.version}}/third-party-integrations/inxmail-order-referenced-commands.html)
+- [Installing and configuring Inxmail](/docs/pbc/all/emails/{{page.version}}/third-party-integrations/install-and-configure-inxmail.html)
+- [Integrating Inxmail](/docs/pbc/all/emails/{{page.version}}/third-party-integrations/integrate-inxmail.html)
 
 
 ---

@@ -91,6 +91,7 @@ class YourConsole extends Console
     }
 }
 ```
+
 </details>
 
 ### Add a console command

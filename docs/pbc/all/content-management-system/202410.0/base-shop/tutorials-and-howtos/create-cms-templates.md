@@ -119,10 +119,10 @@ A content manager can apply this template when [creating a CMS block](/docs/pbc/
 [Content item widget](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html) template is a Twig file that defines the layout of the content item it renders on Storefront.
 
 By default, two content item widget templates are shipped per each content item:
-* Banner widget
-* Abstract Product List widget
-* Product Set widget
-* File widget
+- Banner widget
+- Abstract Product List widget
+- Product Set widget
+- File widget
 
 Create a content item widget template:
 
@@ -130,21 +130,21 @@ Create a content item widget template:
 
 Depending on the content item widget you create the template for, make sure to install the respective Content Item Widget module:
 
-* [ContentBannerWidget](https://github.com/spryker-shop/content-banner-widget)
-* [ContentProductWidget](https://github.com/spryker-shop/content-product-widget)
-* [ContentProductSetWidget](https://github.com/spryker-shop/content-product-set-widget)
-* [ContentFileWidget](https://github.com/spryker-shop/content-file-widget)
+- [ContentBannerWidget](https://github.com/spryker-shop/content-banner-widget)
+- [ContentProductWidget](https://github.com/spryker-shop/content-product-widget)
+- [ContentProductSetWidget](https://github.com/spryker-shop/content-product-set-widget)
+- [ContentFileWidget](https://github.com/spryker-shop/content-file-widget)
 
 {% endinfo_block %}
 
 1. Create `src/Pyz/Yves/{ModuleWidget}/Theme/default/views/{template-folder}/{new-template}.twig`, where:
-   * `{new-template}` is the template name.
-   * `{ModuleWidget}` is the name of the respective Content Item Widget module.
-   * `{template-folder}` is the template folder name. Based on the content item widget, choose:
-       * banner
-       * cms-product-abstract
-       * content-product-set
-       * content-file
+   - `{new-template}` is the template name.
+   - `{ModuleWidget}` is the name of the respective Content Item Widget module.
+   - `{template-folder}` is the template folder name. Based on the content item widget, choose:
+       - banner
+       - cms-product-abstract
+       - content-product-set
+       - content-file
 
 The default templates located on the core level of each module can be used as examples.
 

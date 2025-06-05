@@ -13,7 +13,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
 ---
 
-_Transfer objects_ are simple data containers. Their purpose is to retrieve a standardized way to access data and get more expressive method signatures. Transfer objects are available everywhere in the system.
+*Transfer objects* are simple data containers. Their purpose is to retrieve a standardized way to access data and get more expressive method signatures. Transfer objects are available everywhere in the system.
 
 This document shows how to create and use transfer objects.
 
@@ -44,7 +44,7 @@ The following example describes a Customer with email, first name, last name, an
 ### Available types
 
 You can use any name for your transfer objects. However, make sure that the property names start with a small letter and use the camelCase format.
-As for the types, you can use PHP native types: `int`, `string`, `bool`, and `array`. To create a nested transfer object, use the name of the transfer object as the type. You can also define collections of objects with the _[]_ symbols.
+As for the types, you can use PHP native types: `int`, `string`, `bool`, and `array`. To create a nested transfer object, use the name of the transfer object as the type. You can also define collections of objects with the *[]* symbols.
 
 ```xml
 <transfer name="MyTransfer" strict="true">
@@ -124,6 +124,7 @@ echo $customerTransfer->getFirstName(); // echos 'John'
 ```
 
 ## Nest transfer objects
+
 Transfer objects can be nested—for example, a cart object contains several items like this:
 
 ```php
@@ -366,5 +367,5 @@ The only valid attribute value of the root `<transfers></transfers>` element is 
 
 You can use the following definitions to generate the related code:
 
-* Add shared transfer schema. For details, see [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html).
- 
+- Add shared transfer schema. For details, see [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html).
+

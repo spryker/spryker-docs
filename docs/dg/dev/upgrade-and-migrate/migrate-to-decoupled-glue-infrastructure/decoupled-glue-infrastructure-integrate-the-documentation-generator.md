@@ -81,6 +81,7 @@ Ensure the following transfers have been created:
 {% endinfo_block %}
 
 ### 4) Set up behaviors
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                | SPECIFICATION                                                                                                                                             | NAMESPACE                                                                                                   |
@@ -136,7 +137,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {% info_block warningBox "Verification" %}
 
 If everything is set up correctly, a new console command will be available.
-```
+
+```bash
 vendor/bin/glue api:generate:documentation
 ```
 
@@ -254,28 +256,28 @@ If the second parameter `array $apiApplications` for `$contextExpanderCollection
 
 In order to make sure that `StorefrontApiApplicationProviderPlugin` and `BackendApiApplicationProviderPlugin` are setup correctly,
 attempt to generate the documentation for `storerfront` or `backend`. Do so by passing the optional `--application` parameter:
-```
+
+```bash
 vendor/bin/glue api:generate:documentation --application storefront
 ```
+
 Make sure only the "storefront" application documentation was generated.
 
 ***
 
 Make sure `DocumentationGeneratorOpenApiSchemaFormatterPlugin` works by inspecting the content of the generated documentation.
 It should contain relevant information in the following sections:
-* info
-* servers
-* tags
+- info
+- servers
+- tags
 
-***
 
 A sure sign that `JsonApiSchemaFormatterPlugin` and `RestApiSchemaFormatterPlugin` are setup correctly are the content types on the responses of the paths being correct.
 
-***
 
 `ContextExpanderPlugin`s are responsible for adding parts of the API data into the documentation generation context.
 
 {% endinfo_block %}
-```
+
 
 For more details, see [Document Glue API endpoints](/docs/dg/dev/glue-api/{{site.version}}/document-glue-api-endpoints.html).

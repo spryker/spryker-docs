@@ -43,7 +43,7 @@ Each variant needs to be activated in order to be visible to your customers.
 
 To make the newly created products visible on the Storefront, the marketplace administrator should approve them. If the marketplace administrator does not want to display the products on the Storefront, they deny the products.
 
-To update the approval status of the product, in the _Actions_ column of the abstract product do the following:
+To update the approval status of the product, in the *Actions* column of the abstract product do the following:
 
 - For the product with status *Waiting for Approval*:
   - click **Approve** to approve the product.

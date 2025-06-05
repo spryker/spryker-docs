@@ -52,4 +52,4 @@ When assigning many customers at a time, it might be useful to click the **Custo
 
 **Tips and tricks**
 
-When deassigning many customers at a time, it might be useful to click the **Customers to be deassigned tab** and review your selection.    
+When deassigning many customers at a time, it might be useful to click the **Customers to be deassigned tab** and review your selection.

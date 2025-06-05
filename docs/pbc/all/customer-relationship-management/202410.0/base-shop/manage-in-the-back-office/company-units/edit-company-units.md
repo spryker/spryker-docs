@@ -17,8 +17,8 @@ This document describes how to edit company units in the Back Office. You can ad
 
 ## Prerequisites
 
-* Optional: [Create company unit addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-unit-addresses/create-company-unit-addresses.html). They will be needed to assign addresses to the company unit you are going to edit.
-* Review the [reference information](#reference-information-edit-a-company-unit) before you start, or look up the necessary information as you go through the process.
+- Optional: [Create company unit addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-unit-addresses/create-company-unit-addresses.html). They will be needed to assign addresses to the company unit you are going to edit.
+- Review the [reference information](#reference-information-edit-a-company-unit) before you start, or look up the necessary information as you go through the process.
 
 
 ## Edit a company unit

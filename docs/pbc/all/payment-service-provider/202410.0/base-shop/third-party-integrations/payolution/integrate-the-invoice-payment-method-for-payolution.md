@@ -26,6 +26,7 @@ related:
 ## Workflow Scenarios
 
 Payments from Payolution to Merchant are not included in the sequence diagrams since they occur on a regular basis, such as every week.
+
 ```html
 <table>
         <col>
@@ -84,16 +85,16 @@ To integrate invoice payments, two simple steps are needed: setting Payolution i
 ### Setting Payolution Invoice Configuration
 
 The configuration to integrate invoice payments using Payolution is:
-* `TRANSACTION_GATEWAY_URL`: the gateway URL to connect with Payolution services.
-* `TRANSACTION_SECURITY_SENDER `: the sender id.
-* `TRANSACTION_USER_LOGIN`: the sender username.
-* `TRANSACTION_USER_PASSWORD`: the sender password.
-* `TRANSACTION_MODE`: the mode of the transaction, either test or live.
-* Optional: `TRANSACTION_CHANNEL_PRE_CHECK`: a Payolution channel for handling pre-check requests, in case of using Pre-check.
-* `TRANSACTION_CHANNEL_INVOICE`: a Payolution channel for handling invoice requests except Pre-check as it has its own channel.
-* `MIN_ORDER_GRAND_TOTAL_INVOICE`: the allowed minimum order grand total amount for invoice payments in the shop–for example, the minimum allowed payment is $2.
-* `MAX_ORDER_GRAND_TOTAL_INVOICE`: the allowed maximum order grand total amount for invoice payments in the shop–for example, the maximum allowed payment is $5000.
-* `PAYOLUTION_BCC_EMAIL_ADDRESS`: Payolution email address to send copies of payment details to Payolution.
+- `TRANSACTION_GATEWAY_URL`: the gateway URL to connect with Payolution services.
+- `TRANSACTION_SECURITY_SENDER`: the sender id.
+- `TRANSACTION_USER_LOGIN`: the sender username.
+- `TRANSACTION_USER_PASSWORD`: the sender password.
+- `TRANSACTION_MODE`: the mode of the transaction, either test or live.
+- Optional: `TRANSACTION_CHANNEL_PRE_CHECK`: a Payolution channel for handling pre-check requests, in case of using Pre-check.
+- `TRANSACTION_CHANNEL_INVOICE`: a Payolution channel for handling invoice requests except Pre-check as it has its own channel.
+- `MIN_ORDER_GRAND_TOTAL_INVOICE`: the allowed minimum order grand total amount for invoice payments in the shop–for example, the minimum allowed payment is $2.
+- `MAX_ORDER_GRAND_TOTAL_INVOICE`: the allowed maximum order grand total amount for invoice payments in the shop–for example, the maximum allowed payment is $5000.
+- `PAYOLUTION_BCC_EMAIL_ADDRESS`: Payolution email address to send copies of payment details to Payolution.
 
 ### Performing Requests
 

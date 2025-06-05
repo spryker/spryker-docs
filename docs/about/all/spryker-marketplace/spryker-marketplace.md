@@ -20,11 +20,11 @@ If you are new to Spryker, first see our [Intro to Spryker](/docs/about/all/abou
 
 To learn what Spryker Marketplace is, read the following documents:
 
-* [Marketplace concept](/docs/about/all/spryker-marketplace/marketplace-concept.html)
-* [Marketplace personas](/docs/about/all/spryker-marketplace/marketplace-personas.html)
-* [Back Office for Marketplace Operator](/docs/about/all/spryker-marketplace/back-office-for-marketplace-operator.html)
-* [Marketplace Storefront](/docs/about/all/spryker-marketplace/marketplace-storefront.html)
-* [Merchant Portal](/docs/about/all/spryker-marketplace/marketplace-storefront.html)
+- [Marketplace concept](/docs/about/all/spryker-marketplace/marketplace-concept.html)
+- [Marketplace personas](/docs/about/all/spryker-marketplace/marketplace-personas.html)
+- [Back Office for Marketplace Operator](/docs/about/all/spryker-marketplace/back-office-for-marketplace-operator.html)
+- [Marketplace Storefront](/docs/about/all/spryker-marketplace/marketplace-storefront.html)
+- [Merchant Portal](/docs/about/all/spryker-marketplace/marketplace-storefront.html)
 
 
 ## First steps with a Spryker Marketplace

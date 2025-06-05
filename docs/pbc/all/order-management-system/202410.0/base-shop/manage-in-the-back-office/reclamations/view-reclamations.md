@@ -36,7 +36,7 @@ On the **Reclamations** page, next to the reclamation you want to view, click **
     This opens the **View reclamation** page.
 
 **Tips and tricks**
-To go to the order a reclamation was created for, click the order reference.    
+To go to the order a reclamation was created for, click the order reference.
 
 ### Reference information: Viewing reclamations
 

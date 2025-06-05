@@ -15,10 +15,10 @@ Update [spryker/tax-app](https://github.com/spryker/tax-app) to `^0.4.2` and ins
 
 ```bash
 composer require spryker/tax-app:"^0.4.2" spryker/tax-app-rest-api:"^0.2.0" --update-with-dependencies
-
+```
 ## 2. Add glossary keys
 
-Add the following keys to your existing glossary file:
+1. Add the following keys to your existing glossary file:
 
 <details>
 <summary>Click to view all glossary keys</summary>
@@ -62,7 +62,7 @@ tax_app.vertex.invalid-credentials,Ungültige Anmeldeinformationen.,de_DE
 ```
 </details>
 
-After adding the glossary keys, import them by running the following command:
+2. Import the updated glossary:
 
 ```bash
 console data:import:glossary

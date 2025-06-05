@@ -704,6 +704,7 @@ php -S localhost:8000
 ```bash
 docker/sdk console send-push-notifications
 ```
+
   The notification is displayed with content from the `spy_push_notification.payload` database field.
   
 13. Change the `spy_push_notification_subscription.expired_at` subscription expiration date to the previous year's date.

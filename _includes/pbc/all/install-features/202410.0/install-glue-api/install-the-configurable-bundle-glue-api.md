@@ -62,7 +62,7 @@ Make sure that the following changes have been applied in transfer objects:
 | ItemTransfer.salesOrderConfiguredBundleItem | property | created | src/Generated/Shared/Transfer/ItemTransfer |
 | RestSalesOrderConfiguredBundleTransfer | class | created | src/Generated/Shared/Transfer/RestSalesOrderConfiguredBundleTransfer |
 | RestSalesOrderConfiguredBundleItemTransfer | class | created | src/Generated/Shared/Transfer/RestSalesOrderConfiguredBundleItemTransfer |
-| RestOrderItemsAttributesTransfer.salesOrderConfiguredBundle | property | created | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer | 
+| RestOrderItemsAttributesTransfer.salesOrderConfiguredBundle | property | created | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer |
 |RestOrderItemsAttributesTransfer.salesOrderConfiguredBundleItem | property | created | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer |
 | SalesOrderConfiguredBundleTransfer | class | created | src/Generated/Shared/Transfer/SalesOrderConfiguredBundleTransfer |
 | SalesOrderConfiguredBundleTranslationTransfer | class | created | src/Generated/Shared/Transfer/SalesOrderConfiguredBundleTranslationTransfer |

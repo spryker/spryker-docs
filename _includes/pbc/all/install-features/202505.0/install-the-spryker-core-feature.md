@@ -7,12 +7,12 @@ This document describes how to install the [Spryker Core feature](/docs/pbc/all/
 
 
 This guide expects the basic feature to be installed. This guide adds the following functionalities:
-* Vault
-* Redis Session
-* Store GUI
-* Blocking too many failed login attempts
-* Audit logging
-* Rule engine
+- Vault
+- Redis Session
+- Store GUI
+- Blocking too many failed login attempts
+- Audit logging
+- Rule engine
 
 {% endinfo_block %}
 
@@ -391,8 +391,8 @@ $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_MERCHANT_PORTAL] = [
 {% info_block warningBox "Verification" %}
 
 After finishing the installation, make sure the following applies:
-* Security actions in Zed, Glue, Glue Backend, and Merchant Portal applications can be logged.
-* The configured log file paths contain the logs for each application.
+- Security actions in Zed, Glue, Glue Backend, and Merchant Portal applications can be logged.
+- The configured log file paths contain the logs for each application.
 Example:
 
 ```php
@@ -840,8 +840,8 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure the following applies:
-* Logs data has been expanded with the registered plugins: environment, server, request.
-* Log type sections exist and contain the corresponding data.
+- Logs data has been expanded with the registered plugins: environment, server, request.
+- Log type sections exist and contain the corresponding data.
 
 {% endinfo_block %}
 
@@ -958,6 +958,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 }
 ```
+
 </details>
 
 2. Add `PublisherTriggerEventsConsole` to `ConsoleDependencyProvider`:
@@ -1189,8 +1190,8 @@ class SecurityBlockerPageConfig extends SprykerSecurityBlockerPageConfig
 {% info_block warningBox "Verification" %}
 
 Make sure that, when a customer or agent submits a login form, the request URL includes a locale code. Examples of default values:
-* Customer: `/de/login_check`  
-* Agent: `/de/agent/login_check`
+- Customer: `/de/login_check`  
+- Agent: `/de/agent/login_check`
 
 {% endinfo_block %}
 
@@ -1218,8 +1219,8 @@ $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_YVES] = [
 
 After finishing the installation, make sure the following applies:
 
-* Security actions in the Yves applications can be logged
-* The configured log file path contains the corresponding log
+- Security actions in the Yves applications can be logged
+- The configured log file path contains the corresponding log
 Example:
 
 ```php
@@ -1504,8 +1505,8 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure the following applies:
-* The logs data has been expanded with the registered plugins: environment, server, request
-* The log type section exists and contains the corresponding data
+- The logs data has been expanded with the registered plugins: environment, server, request
+- The log type section exists and contains the corresponding data
 
 {% endinfo_block %}
 
@@ -1543,7 +1544,7 @@ class SessionRedisDependencyProvider extends SprykerSessionRedisDependencyProvid
 {% info_block warningBox "Validation" %}
 
 Make sure that the Redis session locking is skipped for the URLs and user agents specified in the configuration.
-* For example, if the URL `/error-page` is accessed, the Redis session locking should be skipped.
-* If the user agent `Googlebot` is used, the Redis session locking should be skipped.
+- For example, if the URL `/error-page` is accessed, the Redis session locking should be skipped.
+- If the user agent `Googlebot` is used, the Redis session locking should be skipped.
 
 {% endinfo_block %}

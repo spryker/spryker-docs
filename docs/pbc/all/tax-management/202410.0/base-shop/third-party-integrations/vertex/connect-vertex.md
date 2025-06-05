@@ -11,7 +11,7 @@ This document describes how to connect a Spryker project to Vertex.
 
 - [Install Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html).
 - Create an account with [Vertex](https://www.vertexinc.com/). If you need support getting a Vertex account, [contact support](https://support.spryker.com/) or your Customer Success Manager.
-- Optional: For Taxamo integration, create an account with [Taxamo](https://www.taxamo.com/). If you need help getting a Taxamo account, [contact support](https://support.spryker.com/) or your Customer Success Manager.
+- Optional: For Vertex Validator integration, create an account with [Vertex Validator](https://www.vertexinc.com/). If you need help getting a Vertex Validator account, [contact support](https://support.spryker.com/) or your Customer Success Manager.
 
 ## Connect Vertex
 
@@ -27,10 +27,10 @@ This document describes how to connect a Spryker project to Vertex.
 8. For **CLIENT ID**, enter the Vertex client ID. For details on obtaining the ID, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html).
 9. For **CLIENT SECRET**, enter the Vertex client secret. For details on obtaining the secret, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html).
 10. For **DEFAULT TAXPAYER COMPANY CODE**, enter the company code you set in your Vertex account.
-11. Optional: Enable Taxamo:
-  1. Select **ENABLE TAX ID VALIDATION (TAXAMO)**.
-  2. For **API URL (V3)**, enter the API URI of your Taxamo environment. For details on the API URI, see [Standalone Vertex Validator](https://docs.marketplace.taxamo.com/docs/standalone#useful-links).
-  3. For **SELLER TOKEN**, enter your Taxamo seller token. For details on obtaining the token, see [Accessing the APIs](https://docs.marketplace.taxamo.com/docs/getting-started-1).
+11. Optional: Enable Vertex Validator:
+  1. Select **ENABLE TAX ID VALIDATION (VERTEX VALIDATOR)**.
+  2. For **API URL (V3)**, enter the API URI of your Vertex Validator environment. For details on the API URI, see [Standalone Vertex Validator](https://developer.vertexinc.com/vertex-marketplaces/docs/standalone#useful-links).
+  3. For **SELLER TOKEN**, enter your Vertex Validator seller token. For details on obtaining the token, see [Accessing the APIs](https://developer.vertexinc.com/vertex-marketplaces/docs/getting-started-1).
 12. Optional: To enable invoice saving in Vertex, select **ENABLE INVOICE SAVE IN VERTEX**.
 13. Click **Save**.
 
@@ -60,7 +60,7 @@ If you configured invoices to be saved in Vertex, you can view the taxes process
 ![invoice-in-vertex](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/invoice-in-vertex.png)
 
 
-## Verify Taxamo tax ID validation
+## Verify Vertex Validator tax ID validation
 
 Validate a tax ID by sending a request to `/tax-id-validate` using Glue API.
 

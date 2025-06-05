@@ -56,7 +56,7 @@ You need to configure access to private repositories in the following cases:
 
 - Running `docker/sdk up` returns an error similar to the following:
 
-```
+```bash
 Cloning into '/data/vendor/my-org/my-repo'...
 git@github.com: Permission denied (publickey).
 fatal: Could not read from remote repository.
@@ -69,7 +69,7 @@ and the repository exists.
 
 1. Add the `.known_hosts` file with the list of domains of VCS services into the project root. Example:
 
-```
+```text
 github.com
 bitbucket.org
 gitlab.my-org.com

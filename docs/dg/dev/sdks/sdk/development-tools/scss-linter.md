@@ -93,15 +93,15 @@ The SCSS Linter is integrated into:
 - Pre-commit hooks
 The function that executes the SCSS Linter before the commit resides in `/.githook`:
 
-```
+```text
 - GitHook\Command\FileCommand\PreCommit\StyleLintCommand
 ```
 
 - Travis
 Command to run the SCSS Linter is integrated into `.travis.yml`
 
-```
-- node ./frontend/libs/stylelint
+```bash
+node ./frontend/libs/stylelint
 ```
 
 {% info_block warningBox "Important" %}

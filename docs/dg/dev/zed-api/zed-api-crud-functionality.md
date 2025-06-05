@@ -55,7 +55,7 @@ You can pass any kind of complex query including AND/OR into the `filter` query 
 
 For limiting fields you can use the fields query string:
 
-```
+```text
 /api/rest/customers?fields=name,id
 ```
 
@@ -95,7 +95,7 @@ The following meta and link blocks will be included in the response:
 
 The core also ships with a header range solution, setting the range to `0-9` (page 1), `10-19` (page 2), etc. The header to be sent by the client would look like this:
 
-```
+```text
 Range: customers=0-9
 ```
 

@@ -471,7 +471,7 @@ Make sure the output contains one record.
 
 - To verify that you can authenticate as a customer, send the request:
 
-```
+```http
 POST /token/ HTTP/1.1
 Host: glue-storefront.mysprykershop.com
 Content-Type: application/x-www-form-urlencoded
@@ -486,7 +486,7 @@ Make sure the output contains the 201 response with a valid token.
 
 - To verify that you can authenticate as a user, send the request:
 
-```
+```http
 POST /token/ HTTP/1.1
 Host: glue-backend.mysprykershop.com
 Content-Type: application/x-www-form-urlencoded

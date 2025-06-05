@@ -51,7 +51,7 @@ To start running tests, you require a single `codeception.yml` file. Configurati
 
 Here is an example of the `codeception.yml` file:
 
-```
+```yaml
 namespace: PyzTest
 actor: Tester
 
@@ -87,7 +87,7 @@ For more information, see [Codeception configuration documentation](https://code
 
 You can specify `.env` files with environment variables in the `codeception.yml` file. The environment variables help configure your system for specific conditions. For example, they can define the store under which tests should be executed:
 
-```
+```yml
 params:
     - .env
     - .env.store-a.testing
@@ -99,7 +99,7 @@ params:
 
 In numerous scenarios, you will need to improve your test setup by separating it into logical groups. By default, all test groups are located in `tests/Pyz`.  The structure of items within this directory mirrors that of the `src` code:
 
-```
+```text
 tests/
 -- Pyz/
 ---- Glue/
@@ -107,6 +107,7 @@ tests/
 ---- Yves/
 ---- Zed/
 ```
+
 This structure is foundational in nearly all Spryker projects. All of the tests inside those directories are executed based on the configuration in the root `codeception.yml` file.
 
 ### Separating tests by namespace
@@ -115,7 +116,7 @@ Especially in the development environment, it often makes sense to separate test
 
 Here is an example of the `codeception.yml` file illustrating namespace-based separation:
 
-```
+```yml
 namespace: PyzTest
 actor: Tester
 

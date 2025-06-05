@@ -213,7 +213,7 @@ wrap the `{% raw %}{{{% endraw %} data.nickname | e('html'){% raw %}}}{% endraw 
 
 introduce the `itemprop` microdata directive to the `div` tag:
 
-```
+```html
 <div itemprop="reviewBody" class="{% raw %}{{{% endraw %} config.name {% raw %}}}{% endraw %}__description">
     {% raw %}{{{% endraw %} data.description | e('html'){% raw %}}}{% endraw %}
 </div>

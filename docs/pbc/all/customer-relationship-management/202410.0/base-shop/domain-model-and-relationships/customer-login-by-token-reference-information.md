@@ -32,7 +32,7 @@ Every token consists of three sections separated by periods.
 
 Once the header is encoded, we get the part of the token:
 
-```
+```text
 eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjljZWQ2NmFjNWNlZmUxNzY4MTU3NmJmOTViODAwMDc4ZTMwMjAxNDJmYWFhNTI0ZGE4NzFmZmIyYTYzNTA4OTUyMDQ1ZTEwNDUzMTM2YmRlIn0
 ```
 
@@ -54,7 +54,7 @@ Example payload:
 
 The example above contains six [registered claims](https://www.iana.org/assignments/jwt/jwt.xhtml) that, when encoded, correspond to the following:
 
-```
+```text
 eyJhdWQiOiJmcm9udGVuZCIsImp0aSI6IjljZWQ2NmFjNWNlZmUxNzY4MTU3NmJmOTViODAwMDc4ZTMwMjAxNDJmYWFhNTI0ZGE4NzFmZmIyYTYzNTA4OTUyMDQ1ZTEwNDUzMTM2YmRlIiwiaWF0IjoxNTU3OTI2NjIwLCJuYmYiOjE1NTc5MjY2MjAsImV4cCI6MTU1Nzk1NTQyMCwic3ViIjoie1wiY3VzdG9tZXJfcmVmZXJlbmNlXCI6bnVsbCxcImlkX2N1c3RvbWVyXCI6NixcImlkX2NvbXBhbnlfdXNlclwiOlwiMVwiLFwicGVybWlzc2lvbnNcIjpudWxsfSIsInNjb3BlcyI6W119
 ```
 
@@ -72,13 +72,13 @@ RSASHA256(
 
 The final part of the encoded token looks like this:
 
-```
+```text
 v6kvCtNMM-_x-sRWugigT2j7qXVXQ9Ds5a-65sD_d4Oaun0toGnM_A-458mCyV1FCdyOHU572hdz7w3SFcIHzFw4zGGr_cqMdBmCF6VJS21lcOK401j2Li4NJB-8TmOHMk1XmjrJ92EyBScvycTg8TCkY3w4jcIGN7TPGAwzvEWaJhIwqYGjEUcTWtsiIemeWijTWVYd4qE6gnXdzMeyekFLon9syLnXdxeAQ8qNM7BML5QfvazvuMBvFQWfatDcRd2SFfIkNmMrxEQ6daEaPEfyqpdXpHfhpzvuQpA0hQQ9BfYBrwvTskpH_CWTht7IsOqlY4KYRNIg-t3tcZYt6Q
 ```
 
 Combining the three parts, an example URL with the full token looks like the following:
 
-```
+```text
 http://mysprykershop.com/access-token/eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjljZWQ2NmFjNWNlZmUxNzY4MTU3NmJmOTViODAwMDc4ZTMwMjAxNDJmYWFhNTI0ZGE4NzFmZmIyYTYzNTA4OTUyMDQ1ZTEwNDUzMTM2YmRlIn0.eyJhdWQiOiJmcm9udGVuZCIsImp0aSI6IjljZWQ2NmFjNWNlZmUxNzY4MTU3NmJmOTViODAwMDc4ZTMwMjAxNDJmYWFhNTI0ZGE4NzFmZmIyYTYzNTA4OTUyMDQ1ZTEwNDUzMTM2YmRlIiwiaWF0IjoxNTU3OTI2NjIwLCJuYmYiOjE1NTc5MjY2MjAsImV4cCI6MTU1Nzk1NTQyMCwic3ViIjoie1wiY3VzdG9tZXJfcmVmZXJlbmNlXCI6bnVsbCxcImlkX2N1c3RvbWVyXCI6NixcImlkX2NvbXBhbnlfdXNlclwiOlwiMVwiLFwicGVybWlzc2lvbnNcIjpudWxsfSIsInNjb3BlcyI6W119.v6kvCtNMM-_x-sRWugigT2j7qXVXQ9Ds5a-65sD_d4Oaun0toGnM_A-458mCyV1FCdyOHU572hdz7w3SFcIHzFw4zGGr_cqMdBmCF6VJS21lcOK401j2Li4NJB-8TmOHMk1XmjrJ92EyBScvycTg8TCkY3w4jcIGN7TPGAwzvEWaJhIwqYGjEUcTWtsiIemeWijTWVYd4qE6gnXdzMeyekFLon9syLnXdxeAQ8qNM7BML5QfvazvuMBvFQWfatDcRd2SFfIkNmMrxEQ6daEaPEfyqpdXpHfhpzvuQpA0hQQ9BfYBrwvTskpH_CWTht7IsOqlY4KYRNIg-t3tcZYt6Q
 ```
 

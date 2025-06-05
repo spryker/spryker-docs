@@ -55,6 +55,7 @@ To add items to a cart, send the request:
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUE |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | <ul><li>items</li><li>product-measurement-units</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>concrete-products</li><li>product-options</li><li>bundle-items</li><li>bundled-items</li><li>abstract-products</li></ul>|
+
 {% info_block infoBox "Included resources" %}
 
 To retrieve all the product options of the item in a cart, include `concrete-products` and `product-options`.

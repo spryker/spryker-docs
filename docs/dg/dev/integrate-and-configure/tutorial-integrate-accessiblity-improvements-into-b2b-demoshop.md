@@ -152,14 +152,14 @@ Make sure that the following modules have been installed:
 6. Enable the `accessibility` parameter for the image slider configuration:
 
 **src/Pyz/Yves/ProductImageWidget/Theme/default/components/molecules/image-gallery/image-gallery.ts**
-  <!-- {% raw %} -->
-    ```twig
-    {% define attributes = {
-      'config-thumbnail-slider': '{
-        ...
-        "accessibility": true,
-    ```
-  <!-- {% endraw %} -->
+<!-- {% raw %} -->
+```twig
+{% define attributes = {
+  'config-thumbnail-slider': '{
+    ...
+    "accessibility": true,
+```
+<!-- {% endraw %} -->
 
 7. Adjust `mapEvents` and add a `browseFileLabelHandler` method:
 

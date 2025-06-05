@@ -2930,6 +2930,7 @@ To change item quantity, send the request:
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | guest-cart-items, concrete-products, product-options, sales-units, product-measurement-units |
+
 {% info_block infoBox "Included resources" %}
 
 - To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.

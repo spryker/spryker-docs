@@ -45,8 +45,11 @@ npm install commander@4.0.x --save-dev
 ## 2. Update the scripts
 
 To update the scripts:
-Add the TS lint script to `/frontend/libs/tslint.js`:
+Add the TS lint script:
 
+<details>
+  <summary>/frontend/libs/tslint.js<summary>
+    
 ```js
 const path = require('path');
 const { Linter, Configuration } = require('tslint');
@@ -118,11 +121,13 @@ const exitProcess = errorCount => {
 runTSLint();
 ```
 
+</details>
+
 For a file example, see [tslint.js](https://github.com/spryker-shop/suite/blob/master/frontend/libs/tslint.js).
 
 2. Adjust the `/package.json` scripts:
 
-```
+```json
 "scripts": {
     ....
     "yves:tslint": "node ./frontend/libs/tslint",
@@ -132,7 +137,7 @@ For a file example, see [tslint.js](https://github.com/spryker-shop/suite/blob/m
 
 3. Add the lint rules `file /tslint.json`:
 
-```
+```josn
 {
     "extends": "./node_modules/@spryker/frontend-config.tslint/tslint.json",
     "linterOptions": {

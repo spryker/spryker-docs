@@ -51,7 +51,7 @@ To retrieve information about an abstract product list content item, send the re
 | --- | --- |
 | `GET https://glue.mysprykershop.com/content-product-abstract-lists/apl-1` | Retrieve information about the abstract product list with ID `apl-1`. |
 | `GET https://glue.mysprykershop.com/content-product-abstract-lists/apl-1?include=abstract-products` | Retrieve information about the abstract product list with id `apl-1`. Include information about its abstract products. |
-.
+
 
 <details>
 <summary>Response sample: retrieve Abstract Product List content item</summary>

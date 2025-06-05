@@ -188,7 +188,7 @@ This helper has the following methods:
 Lets you mock and access business layer classes like `BusinessFactory` inside a mocked facade.
 Example of usage:
 
-```
+```php
 $this->tester->mockFacadeMethod('reloadItems', function(){ return new QuoteTransfer()});
 $this->tester->mockFactoryMethod('createQuoteReloader', function() { return ... });
 $facade = $this->tester->getFacade();

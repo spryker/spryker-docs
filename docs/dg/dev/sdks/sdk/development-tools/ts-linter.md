@@ -100,7 +100,7 @@ The TS Linter is integrated into:
 
 The function that executes TS Linter before the commit resides in `/.githook`
 
-```
+```text
 - GitHook\Command\FileCommand\PreCommit\TsLintCommand
 ```
 

@@ -37,6 +37,7 @@ To submit checkout data without an order confirmation, send the following reques
 | --- | --- | --- |
 | Include | Adds resource relationships to the request.	 | shipments, shipment-methods |
 | sort | Sorts included shipment and payment methods by an attribute. | {% raw %}{{{% endraw %}included_resource{% raw %}}}{% endraw %}.{% raw %}{{{% endraw %}attribute{% raw %}}}{% endraw %}, {% raw %}{{{% endraw %}included_resource{% raw %}}}{% endraw %}.{% raw %}{{{% endraw %}attribute{% raw %}}}{% endraw %} |
+
 {% info_block infoBox "Included resources" %}
 
 To retrieve all available shipment methods, submit checkout data with one or more shipments and include `shipments` and `shipment-methods` resources.

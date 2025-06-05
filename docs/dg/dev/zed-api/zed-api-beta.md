@@ -75,7 +75,7 @@ The override header is only accepted on POST requests. GET requests should never
 
 The Spryker `UtilEncoding` module provides a service and by default ships with the following flags enabled:
 
-```
+```text
 JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT |
 JSON_PARTIAL_OUTPUT_ON_ERROR | JSON_PRETTY_PRINT
 ```

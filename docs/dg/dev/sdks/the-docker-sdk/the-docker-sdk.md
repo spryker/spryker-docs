@@ -237,23 +237,23 @@ To extend Docker/sdk, you can do the following:
 
 - To use a custom PHP or Nginx image and add extensions or libraries, you can change the application image:
 
-   ```
-   environment: docker.dev
-   image:
-      tag: spryker/php 8.0
-      tag: registry.gitlab.com/my-company/spryker:1.0-php8debsap
-   ```
+ ```yaml
+ environment: docker.dev
+ image:
+    tag: spryker/php 8.0
+    tag: registry.gitlab.com/my-company/spryker:1.0-php8debsap
+ ```
 
   This approach is compatible with SCCOS, but provides limited customization possibilities.
 
 - To introduce "mocks" for development and CI/CD testing, you can use the [Docker-compose extension](https://docs.docker.com/compose/extends/):
 
-  ```
-  docker:
-   compose:
-      yamls:
-         - {custom_compose_file_name}
+```yaml
+docker:
+ compose:
+    yamls:
+       - {custom_compose_file_name}
 
-  ```
+```
 
   This approach works for development and CI/CD only, but it's not compatible with SCCOS setup.

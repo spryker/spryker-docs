@@ -78,12 +78,26 @@ Disadvantages:
 
 ### Change data type of autoincrement ID column
 
-If a table has meaningful data that can’t be removed - change the field time of the auto-incremented field from INT (2 bln, 2^31-1 limit) to BIGINT (2^63-1 limit), practically making this issue unrealistically for the future.
+If a table has meaningful data that can’t be removed - change the field type of the auto-incremented field from INT (2 bln, 2^31-1 limit) to BIGINT (2^63-1 limit), practically making this issue unrealistically for the future.
 
 ```sql
 ALTER TABLE spy_oms_transition_log
 MODIFY COLUMN id_oms_transition_log BIGINT auto_increment NOT NULL
 ```
+
+```xml
+<table name="spy_oms_transition_log" identifierQuoting="true">
+    <column name="id_oms_transition_log" required="true" type="BIGINT" autoIncrement="true" primaryKey="true"/>
+</table>
+```
+
+{% info_block infoBox "" %}
+
+[spryker/oms:11.34.0](https://github.com/spryker/oms/releases/tag/11.34.0) is minimal recommended version to avoid the problem with overflows within the `spy_oms_state_machine_lock` table.
+
+It is recommended to upgrade Spryker modules as soon as Spryker releases important updates. Recommended interval is 3 months.
+
+{% endinfo_block %}
 
 Advantages:
 

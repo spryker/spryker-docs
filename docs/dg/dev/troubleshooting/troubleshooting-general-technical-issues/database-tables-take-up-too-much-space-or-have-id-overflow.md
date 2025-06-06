@@ -78,7 +78,7 @@ Disadvantages:
 
 ### Change data type of autoincrement ID column
 
-If a table has meaningful data that can’t be removed - change the field type of the auto-incremented field from INT (2 bln, 2^31-1 limit) to BIGINT (2^63-1 limit), practically making this issue unrealistically for the future.
+If a table has meaningful data that can't be removed - change the field type of the auto-incremented field from INT (2 bln, 2^31-1 limit) to BIGINT (2^63-1 limit), practically making this issue unrealistically for the future.
 
 ```sql
 ALTER TABLE spy_oms_transition_log

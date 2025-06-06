@@ -7,7 +7,7 @@ redirect_from:
   - /docs/pbc/all/tax-management/202410.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-taxamo.html
 ---
 
-To integrate Vertex Validator, follow these steps.
+To integrate Vertex Validator, take the following steps.
 
 ## 1. Install required modules
 
@@ -16,6 +16,7 @@ Update [spryker/tax-app](https://github.com/spryker/tax-app) to `^0.4.2` and ins
 ```bash
 composer require spryker/tax-app:"^0.4.2" spryker/tax-app-rest-api:"^0.2.0" --update-with-dependencies
 ```
+
 ## 2. Add glossary keys
 
 1. Add the following keys to your existing glossary file:
@@ -60,6 +61,7 @@ tax_app.vertex.request-failed,Anfrage an die Vertex-API fehlgeschlagen.,de_DE
 tax_app.vertex.invalid-credentials,Invalid credentials.,en_US
 tax_app.vertex.invalid-credentials,Ungültige Anmeldeinformationen.,de_DE
 ```
+
 </details>
 
 2. Import the updated glossary:
@@ -98,7 +100,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 ## 4. Use translations
 
-To use translations, send requests with the `Accept-Language` header. For example, to use German translations, include the header `Accept-Language: de`.
+To use translations, send requests with the `Accept-Language` header. For example, to use German translations, include the `Accept-Language: de` header.
 
 ## Next step
 

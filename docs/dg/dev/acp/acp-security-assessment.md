@@ -7,7 +7,7 @@ redirect_from:
 - /docs/acp/user/intro-to-acp/aop-security-assessment.html
 ---
 
-This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker's app catalog or the app store. It covers the following app types:
+Test change. This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker's app catalog or the app store. It covers the following app types:
 
 - Pure API integrations (with third-party services and vendors)
 - Apps extending the Spryker Cloud Commerce Operating System (SCCOS)
@@ -70,7 +70,7 @@ Other apps (those without the approval) could be listed on the catalog, but they
 Penetration testing should be conducted in accordance with or based on the following methodologies and recommendations:
 
 - Web Security Testing Guide – [OWASP WSTG](https://owasp.org/www-project-web-security-testing-guide/)
-- The Penetration Testing Execution Standard – [PTES](http://www.pentest-standard.org/index.php/Main_Page)
+- The Penetration Testing Execution Standard – [PTES](https://www.isecom.org/OSSTMM.3.pdf)
 - Open Source Security Testing Methodology Manual – [OSSTMM](https://www.isecom.org/OSSTMM.3.pdf)
 - Payment Card Industry Data Security Standard – [PCI DSS](https://www.pcisecuritystandards.org/document_library?category=pcidss&document=pci_dss)
 

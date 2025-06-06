@@ -1,3 +1,76 @@
+# Method to run HTMLProofer with retries
+def run_htmlproofer_with_retry(directory, options, max_tries = 1, delay = 5)
+  options[:typhoeus] ||= {}
+  options[:typhoeus][:timeout] = 60
+  options[:typhoeus][:headers] = {
+    "User-Agent" => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+  }
+
+  retries = max_tries
+  begin
+    if options[:files]
+      puts "Checking #{options[:files].length} files..."
+      
+      # Create a temporary directory for the files to check
+      Dir.mktmpdir do |temp_dir|
+        # Create _site directory in temp_dir
+        site_dir = File.join(temp_dir, '_site')
+        FileUtils.mkdir_p(site_dir)
+
+        # First, copy only the files we need to check
+        files_to_check = []
+        options[:files].each do |file|
+          relative_path = file.sub(/^_site\//, '')
+          target_file = File.join(site_dir, relative_path)
+          FileUtils.mkdir_p(File.dirname(target_file))
+          FileUtils.cp(file, target_file)
+          files_to_check << target_file
+        end
+
+        # Configure HTMLProofer options
+        check_options = options.reject { |k| k == :files }.merge({
+          :disable_external => true,
+          :allow_hash_href => true,
+          :check_internal_hash => true,
+          :check_html => false,
+          :log_level => :info,
+          :only_4xx => true,  # Only report 4xx status code errors
+          :url_ignore => [
+            /\{\{.*?\}\}/,  # Ignore template variables
+            %r{^#$},        # Ignore standalone hash links
+            %r{^/$},        # Ignore root path
+            %r{^/css/},     # Ignore CSS files
+            %r{^/js/},      # Ignore JavaScript files
+            %r{^/assets/}   # Ignore asset files
+          ]
+        })
+
+        # Only check the specific files we copied
+        check_options[:file_ignore] = []
+        check_options[:files_to_check] = files_to_check
+
+        puts "Starting validation..."
+        HTMLProofer.check_directory(site_dir, check_options).run
+      end
+    else
+      HTMLProofer.check_directory(directory, options).run
+    end
+  rescue StandardError => e
+    puts "Error details: #{e.class} - #{e.message}"
+    puts e.backtrace.join("\n") if options[:log_level] == :debug
+    
+    retries -= 1
+    if retries >= 0
+      puts "Retrying... (#{max_tries - retries}/#{max_tries} attempts)"
+      sleep(delay) # Wait before retrying
+      retry
+    else
+      puts "HTMLProofer failed after #{max_tries} retries."
+      raise e
+    end
+  end
+end
+
 task "assets:precompile" do
   deploy_env = ENV['DEPLOY_ENV'] || 'production'
 
@@ -11,30 +84,6 @@ task "assets:precompile" do
 end
 
 require 'html-proofer'
-
-# Method to run HTMLProofer with retries
-def run_htmlproofer_with_retry(directory, options, max_tries = 3, delay = 5)
-  options[:typhoeus] ||= {}
-  options[:typhoeus][:timeout] = 60
-  options[:typhoeus][:headers] = {
-    "User-Agent" => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
-  }
-
-  retries = max_tries
-  begin
-    HTMLProofer.check_directory(directory, options).run
-  rescue SystemExit => e
-    retries -= 1
-    if retries >= 0
-      puts "Retrying... (#{max_tries - retries}/#{max_tries} attempts)"
-      sleep(delay) # Wait before retrying
-      retry
-    else
-      puts "HTMLProofer failed after #{max_tries} retries."
-      raise e
-    end
-  end
-end
 
 commonOptions = {
   :allow_hash_href => true,
@@ -122,7 +171,6 @@ commonOptions = {
   :only_4xx => false,
   :ignore_status_codes => [429],
   :enforce_https => false,
-  # delete and fix next rules
   :allow_missing_href => true,
   :check_external_hash => false,
 }
@@ -187,4 +235,65 @@ task :check_dg do
     /docs\/dg\/\w+\/[\w-]+\/202411\.0\/.+/
   ]
   run_htmlproofer_with_retry("./_site", options)
+end
+
+task :check_changed_files, [:file_list] do |t, args|
+  puts "Running link validation on changed files..."
+  
+  # Split by spaces and clean up paths
+  files = args[:file_list].split(/\s+/).map(&:strip).reject(&:empty?)
+  
+  # Convert markdown file paths to their HTML equivalents
+  html_files = files.map do |file|
+    if file.start_with?('_includes/')
+      file.sub(/^_includes\//, '_site/_includes/').sub(/\.md$/, '.html')
+    else
+      file.sub(/^docs\//, '_site/docs/').sub(/\.md$/, '.html')
+    end
+  end.select { |f| File.exist?(f) && File.file?(f) }  # Only select files, not directories
+
+  if html_files.empty?
+    puts "No valid files to check"
+    next
+  end
+
+  puts "Processing files: #{html_files.join(', ')}"
+
+  # Run HTMLProofer with minimal options
+  options = {
+    :files => html_files,
+    :ignore_urls => commonOptions[:ignore_urls],
+    :url_ignore => [
+      /\{\{.*?\}\}/,  # Ignore template variables
+      %r{^#$},        # Ignore standalone hash links
+      %r{^/$}         # Ignore root path
+    ],
+    :parallel => { :in_processes => 3 }  # Run checks in parallel for speed
+  }
+  
+  begin
+    run_htmlproofer_with_retry(nil, options)
+    puts "\nLink validation completed successfully"
+  rescue StandardError => e
+    puts "\nErrors found in changed files:"
+    puts e.message
+    raise "HTML-Proofer found errors in changed files"
+  end
+end
+
+task :check_all do
+  puts "Running all link validation checks..."
+  
+  [:check_ca, :check_about, :check_pbc, :check_dg].each do |check|
+    begin
+      puts "\nRunning #{check}..."
+      Rake::Task[check].invoke
+      puts "#{check} completed successfully"
+    rescue => e
+      puts "#{check} failed: #{e.message}"
+      raise e
+    end
+  end
+  
+  puts "\nAll link validation checks completed successfully"
 end

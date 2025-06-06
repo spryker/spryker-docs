@@ -56,7 +56,7 @@ If `myshop` is the customer, then `myshop-PROD` is an environment name, where `m
 
 ### AWS region
 
-The *AWS region* indicates where customers want their infrastructure resources to be available. For more information about available options for the AWS region, refer to the AWS [official documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html). For information about the AWS region you are entitled to use, check your contract.
+AWS region is not part of the provisioning request but is defined in the order form. For information about the AWS region you are entitled to use, check your contract. The *AWS region* indicates where customers want their infrastructure resources to be available. For more information about available options for the AWS region, refer to the AWS [official documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
 
 The following AWS regions are supported:
 - Asia Pacific (Tokyo)

@@ -33,4 +33,4 @@ This document describes how to add assets managed by companies.
 9. Optional: For **BUSINESS UNIT OWNER**, select business unit that owns the asset.
 10. Optional: To upload an image for the asset, click UPLOAD and select the image from your computer.
 11. Click **Save**.
-  This opens the view asset page with a success message displayed.  
+ This opens the view asset page with a success message displayed.  

@@ -84,7 +84,7 @@ Request sample: redeem the gift card code
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| code | String | |&check; | Code of the gift card sent to the specified email address after the gift card was purchased. |
+| code | String | &check; | Code of the gift card sent to the specified email address after the gift card was purchased. |
 
 ### Response
 

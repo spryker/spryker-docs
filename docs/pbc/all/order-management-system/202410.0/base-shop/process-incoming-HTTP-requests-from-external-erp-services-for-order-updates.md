@@ -119,12 +119,13 @@ The following comparison table illustrates the various quality attributes of the
 
 ## Storage engines quality attributes comparison
 
-| Quality attribute                                     | DB Storage                                                                          | RabbitMQ Storage                                                      | Redis                                                  |
-|-------------------------------------------------------|-------------------------------------------------------------------------------------|-----------------------------------------------------------------------|--------------------------------------------------------|
-| Modifiability / Flexibility                           | -                                                                                   | &#9989; Supports TTL if needed                             | &#9989; Supports TTL if needed              |
-| Performance                                           | &#10071; Can lead to performance issues with huge amount of data or huge message size | &#9989;                                                    | &#9989;                                    |
-| Usability / Understandability / Simplicity            | &#9989;                                                                 | &#10071; Needs experience                                               | &#10071; Needs experience                                |
-| Fault-tolerance / Correctness / Recoverability        | &#9989;                                                                 | &#10071; DLQ can be used to implement retry logic, but no OOTB solution | ❌ Cannot store messages long period of time | ❌ Can lost messages on cluster failure | ❌ Lost messages on restart |
+| Quality attribute                          | DB Storage                                                                 | RabbitMQ Storage                                                                 | Redis                                                                  |
+|-------------------------------------------|----------------------------------------------------------------------------|----------------------------------------------------------------------------------|------------------------------------------------------------------------|
+| Modifiability / Flexibility               | -                                                                          | ✅ Supports TTL if needed                                                        | ✅ Supports TTL if needed                                              |
+| Performance                               | ❗ Can cause issues with large data volumes or message sizes                | ✅                                                                               | ✅                                                                     |
+| Usability / Understandability / Simplicity| ✅                                                                          | ❗ Requires experience                                                            | ❗ Requires experience                                                  |
+| Fault-tolerance / Correctness / Recoverability | ✅                                                                      | ❗ DLQ can enable retries, but no out-of-the-box solution                         | ❌ Not suitable for long-term message storage<br>❌ Risk of message loss on cluster failure or restart |
+
 
 ## Conclusion
 

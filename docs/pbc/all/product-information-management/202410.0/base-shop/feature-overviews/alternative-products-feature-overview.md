@@ -48,11 +48,12 @@ On the product details page of a product that's a product alternative for anothe
 
 ## Related Developer documents
 
-|INSTALLATION GUIDES  | GLUE API GUIDES  | DATA IMPORT |
-|---------|---------|---------|
-| [Install the Alternative Products feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-discontinued-products-feature.html)  | [Retrieving alternative products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html)  | [File details: product_alternative.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-alternative.csv.html)  |
-| [Alternative Products + Discontinued Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-discontinued-products-feature.html) |   |
-| [Install the Alternative Products + Product Labels feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-product-labels-feature.html) |   |
-| [Install the Alternative Products + Inventory Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html)   |   |
-| [Install the Alternative products + Wishlist feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-wishlist-feature.html) |   |
-| [Install the Alternative Products Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html) |   |
+| INSTALLATION GUIDES | GLUE API GUIDES | DATA IMPORT |
+|---------------------|-----------------|-------------|
+| [Install the Alternative Products feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html) | [Retrieve alternative products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html) | [product_alternative.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-alternative.csv.html) |
+| [Install the Alternative + Discontinued Products feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-discontinued-products-feature.html) | | |
+| [Install the Alternative + Product Labels feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-product-labels-feature.html) | | |
+| [Install the Alternative + Inventory Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html) | | |
+| [Install the Alternative + Wishlist feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-wishlist-feature.html) | | |
+| [Install the Alternative Products Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html) | | |
+

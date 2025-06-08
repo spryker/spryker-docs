@@ -37,7 +37,7 @@ To install and configure the Unzer module, follow the steps below.
 
 ### Install Unzer modules
 
-```
+```bash
 composer require spryker-eco/unzer spryker-eco/unzer-gui
 ```
 

@@ -239,7 +239,7 @@ Append glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
 
-```
+```csv
 oms.state.authorize-succeeded,Authorization succeeded,en_US
 oms.state.authorize-succeeded,Authorization succeeded,de_DE
 oms.state.payment-completed,Payment completed,en_US

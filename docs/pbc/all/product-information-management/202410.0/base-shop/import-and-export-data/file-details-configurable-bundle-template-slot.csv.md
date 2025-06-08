@@ -17,13 +17,14 @@ This document describes the `configurable_bundle_template_slot.csv` file to conf
 
 ## Import file parameters
 
-| PARAMETER                                | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION                                          |
-| ---------------------------------------- | -------- | ---- | ------------- | ----------------------- | ---------------------------------------------------- |
-| configurable_bundle_template_slot_key    | &check; | string |  | Internal data import identifier of the configurable bundle template slot. |
-| configurable_bundle_template_slot_name   | &check; | string |  |Name (glossary key) of the configurable bundle template slot.  |
-| configurable_bundle_template_slot_uuid   |         | string |  |Unique identifier of the configurable bundle template slot.  |
-| configurable_bundle_template_key         | &check; | string |  | Internal data import identifier of the configurable bundle template. |
-| product_list_key                         | &check; | string |  | Internal data import identifier of the product list for allowed products of the slot. |
+| PARAMETER                             | REQUIRED | TYPE   | DESCRIPTION                                                                 |
+|---------------------------------------|----------|--------|-----------------------------------------------------------------------------|
+| configurable_bundle_template_slot_key | ✓        | string | Internal identifier of the configurable bundle template slot.              |
+| configurable_bundle_template_slot_name| ✓        | string | Glossary key name of the configurable bundle template slot.                |
+| configurable_bundle_template_slot_uuid|          | string | Unique identifier of the configurable bundle template slot.                |
+| configurable_bundle_template_key      | ✓        | string | Internal identifier of the configurable bundle template.                   |
+| product_list_key                      | ✓        | string | Internal identifier of the product list for allowed products of the slot.  |
+
 
 ## Import file template and content example
 

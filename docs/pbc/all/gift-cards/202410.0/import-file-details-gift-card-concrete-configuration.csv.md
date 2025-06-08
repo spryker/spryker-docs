@@ -31,7 +31,7 @@ data:import:gift-card-concrete-configuration
 | PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS AND COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
 | sku | &check; | String |  | SKU identifier of the Concrete Gift Card Product. |
-| value | &check; | Integer |  |The amount of money that will be loaded in the Gift Card.  |
+| value | &check; | Integer |  | The amount of money that will be loaded in the Gift Card.  |
 
 ## Import file dependencies
 

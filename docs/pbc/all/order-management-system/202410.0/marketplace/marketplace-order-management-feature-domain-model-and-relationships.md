@@ -33,7 +33,7 @@ The following diagram illustrates the dependencies between the modules for the *
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
 | [MerchantOms](https://github.com/spryker/merchant-oms) | Provides the order management system functionality for the merchant orders. |
-| [MerchantOmsDataImport](https://github.com/spryker/merchant-oms-data-import) | Data importer for the `MerchantOms`. | Backoffice UI interface for the Merchant Oms management. |
+| [MerchantOmsDataImport](https://github.com/spryker/merchant-oms-data-import) | Data importer for the `MerchantOms`. |
 | [MerchantSalesOrder](https://github.com/spryker/merchant-sales-order)  | Provides functionality for managing merchant orders. |
 | [MerchantSalesOrderDataExport](https://github.com/spryker/merchant-sales-order-data-export) | Provides possibility to export data related to the merchant orders. |
 | [MerchantSalesOrderMerchantUserGui](https://github.com/spryker/merchant-sales-order-merchant-user-gui) | Back Office UI for managing merchant sales orders for the Marketplace operator. |

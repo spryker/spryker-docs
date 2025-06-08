@@ -72,6 +72,6 @@ To implement Arvato RSS you should be familiar with concept of extending the Spr
 
 To install Arvato RSS module, use [Composer](https://getcomposer.org/):
 
-```
+```bash
 composer require spryker-eco/arvato-rss
 ```

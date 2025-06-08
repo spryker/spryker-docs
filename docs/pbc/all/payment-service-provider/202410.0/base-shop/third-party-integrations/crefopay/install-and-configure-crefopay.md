@@ -39,7 +39,7 @@ This document describes how to install and configure CrefoPay.
 
 To install the CrefoPay module, run:
 
-```
+```bash
 composer require spryker-eco/crefo-pay
 ```
 

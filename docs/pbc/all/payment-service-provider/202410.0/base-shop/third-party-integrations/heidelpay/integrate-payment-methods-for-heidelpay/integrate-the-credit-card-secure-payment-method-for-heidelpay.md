@@ -91,7 +91,7 @@ Each payment option has its own template. You can find and customize it under `Y
 
 **On "post save hook" event**, we check in transaction log table if the authorize request was sent successfully and if so, we set external redirect response (URL is obtained from the previous step) and redirect the customer to the payment website, where customer confirms the payment using 3D secure validation and so on. Below is the code sample from `HeidelpayPostSavePlugin`:
 
-```
+```php
 /**
  * @method \SprykerEco\Zed\Heidelpay\Business\HeidelpayFacadeInterface getFacade()
  * @method \SprykerEco\Zed\Heidelpay\Business\HeidelpayBusinessFactory getFactory()

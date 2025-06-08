@@ -148,7 +148,7 @@ interface ConditionPluginInterface
 
 ## Command Plugin Interface
 
-```
+```php
 <?php
 interface CommandPluginInterface
 {

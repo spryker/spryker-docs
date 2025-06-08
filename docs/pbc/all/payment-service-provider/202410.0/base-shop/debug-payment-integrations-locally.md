@@ -29,7 +29,7 @@ ssl:
 2. Boot your edited `deploy.yml` file and start your application.
 3. Install and start up NGROK to receive the public URL:
 
-```
+```bash
 ./ngrok http --host-header=rewrite YOUR.APPLICATION_BASE.TLD:443
 //Example:
 ./ngrok http --host-header=rewrite yves.de.spryker.local:443

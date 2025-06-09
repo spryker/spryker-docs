@@ -18,6 +18,8 @@ related:
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
   - title: Web Profiler for Zed
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
+  - title: Integrate automated SVG sprite extraction
+    link: docs/dg/dev/integrate-and-configure/integrate-automated-svg-sprite-extraction.html    
 ---
 
 Spryker is a fast application by design. These guidelines explain how to optimize the server-side execution time.
@@ -78,7 +80,7 @@ You can also optimize the autoloader by enabling some options in `composer.json`
  "classmap-authoritative": true
 ```
 
-For more details about composer autoloader optimization, see the [autoloader documentation.](https://getcomposer.org/doc/articles/autoloader-optimization.md)
+For more details about composer autoloader optimization, see the [autoloader documentation](https://getcomposer.org/doc/articles/autoloader-optimization.md).
 
 ## Deactivate all debug functions and the Symfony toolbar
 

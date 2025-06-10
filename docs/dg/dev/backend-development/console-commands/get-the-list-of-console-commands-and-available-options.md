@@ -27,7 +27,7 @@ vendor/bin/console
 
 To get a list of all available options, use the `-h` option:
 
-```
+```bash
 vagrant@spryker-vagrant ➜  current git:(develop) vendor/bin/console gitflow:finish -h
 Store: DE | Environment: development
 Usage:

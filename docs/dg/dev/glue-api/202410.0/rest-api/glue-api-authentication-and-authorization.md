@@ -114,7 +114,7 @@ Below, you can find a list of the default protected resources. As Glue API is hi
 
 To access a protected resource, pass the access token in the `Authorization` header of your request. Example:
 
-```
+```html
 GET /carts HTTP/1.1
 Host: mysprykershop.com:10001
 Content-Type: application/json

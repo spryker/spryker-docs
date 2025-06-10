@@ -834,7 +834,7 @@ class SpyConfigurableBundleTemplate extends Spryker\Zed\ConfigurableBundle\Persi
 
 ## Entity Manager
 
-```
+```text
 [Organization]
 └── Zed
     └── [Module]
@@ -1808,7 +1808,7 @@ For every defined table in [Peristence Schema](#persistence-schema), a matching 
 
 ### Widget
 
-```
+```text
 [Organization]
 └── Yves
     └── [Module]
@@ -1890,7 +1890,7 @@ class CurrencyWidget extends \Spryker\Yves\Kernel\Widget\AbstractWidget
 
 ### Zed Stub
 
-```
+```text
 [Organization]
 └── Client
     └── [Module]

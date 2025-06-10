@@ -69,7 +69,7 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 |ShoppingListItemProductOptionRequestMapperPlugin|Provides the ability to map product options from request parameters to `ShoppingListItemTransfer`.|None|Spryker\Client\ShoppingListProductOptionConnector\ShoppingList|
-| ProductOptionQuoteItemToItemMapperPlugin |Provides the ability to map an item product option to a shopping list item product option when transferring items from a shopping list to a cart. | None |                    |Spryker\Client\ShoppingListProductOptionConnector\ShoppingListShoppingListItem|
+| ProductOptionQuoteItemToItemMapperPlugin |Provides the ability to map an item product option to a shopping list item product option when transferring items from a shopping list to a cart. | None |      |Spryker\Client\ShoppingListProductOptionConnector\ShoppingListShoppingListItem|
 |ProductOptionToItemProductOptionMapperPlugin|Provides the ability to map a shopping list item product option to an item product option when transferring items from a shopping list to a cart.|None|Spryker\Client\ShoppingListProductOptionConnector\ShoppingList|
 
 **src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php**

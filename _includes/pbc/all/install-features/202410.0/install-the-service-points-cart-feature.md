@@ -112,8 +112,10 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 {% info_block warningBox "Verification" %}
 
 1. Prepare two product offers for the same product:
+
   1. With support for the pickup shipment type and a connection to a service point.
   2. Without support for the pickup shipment type.
+
 2. Using Glue API, add the product offer 2 to cart.
 3. Using the `checkout-data` endpoint, select a service point for the item.
   Make sure the selected service point is returned in the response. Make sure the product offer 2 has been replaced with the product offer 1.

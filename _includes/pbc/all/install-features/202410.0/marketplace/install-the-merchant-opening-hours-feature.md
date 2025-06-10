@@ -189,7 +189,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-# Register the synchronization queue and synchronization error queue
+#### Register the synchronization queue and synchronization error queue
 
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 

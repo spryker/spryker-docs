@@ -83,7 +83,7 @@ class MyResourceHandler implements MyResourceInterface
 
 To identify the user, you can use the `getSurrogateIdentifier` and `getNaturalIdentifier` functions:
 
-```
+```php
 $restRequest->getRestUser()->getSurrogateIdentifier();
 $restRequest->getRestUser()->getNaturalIdentifier();
 ```

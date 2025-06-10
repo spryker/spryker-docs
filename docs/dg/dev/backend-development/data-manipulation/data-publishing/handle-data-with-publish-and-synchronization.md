@@ -531,7 +531,7 @@ console queue:task:start publish.hello_world
 
 The command is executed by the worker, which is defined as a job in Jenkins:
 
-```
+```bash
 {vagrant@spryker-vagrant ➜  current git:(master) ✗  console queue:task:start publish.hello_world
 Store: DE | Environment: development
 Hello World Writer!

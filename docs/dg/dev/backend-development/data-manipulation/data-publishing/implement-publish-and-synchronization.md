@@ -35,7 +35,7 @@ To implement *Publish and Synchronize* in your code, follow these steps:
 
 We recommend creating a separate module for the publish & synchronize purpose. To create an empty module, execute the following commands:
 
-```
+```bash
 console code:generate:module:zed MyModuleStorage
 console code:generate:module:client MyModuleStorage
 console code:generate:module:shared MyModuleStorage
@@ -416,7 +416,7 @@ After implementing the preceding steps, the data storage of your frontend app sy
 
 The recommended module structure for the Publish and Synchronize module is as follows:
 
-```
+```text
 + src/
   + Spryker/
     + Shared/

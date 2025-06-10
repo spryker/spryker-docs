@@ -51,7 +51,7 @@ The boilerplate contains the following files, with the server side rendering (SS
 
 <!-- vale on -->
 
-```
+```text
 oryx-app/
 ├── src
 │   ├──app.ts

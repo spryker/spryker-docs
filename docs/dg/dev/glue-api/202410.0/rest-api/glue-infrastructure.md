@@ -172,7 +172,7 @@ The interface provides the following helper methods:
 | `getFields` | `getFields(): array` | Returns sparse fields that can be used to filter out certain parts of the relationships tree from a response. Each field is represented by `\Spryker\Glue\GlueApplication\Rest\Request\Data\SparseFieldInterface`. |  |
 | `getMetadata` | `getMetadata(): MetadataInterface` | Gets additional metadata about the request such as resource version, method, locale etc. |  |
 | `getInclude` | `getInclude(): array` | Gets an array of `include` options for the request. |  |
-| `getUser` | `getUser(): ?UserInterface` | Get the user associated with the request. |
+| `getUser` | `getUser(): ?UserInterface` | Get the user associated with the request. |    |
 
 #### Generic REST response
 

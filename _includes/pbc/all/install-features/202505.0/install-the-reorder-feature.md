@@ -573,7 +573,7 @@ Make sure the following widgets have been registered:
 
 | MODULE                        | TEST                                                                                                                  |
 |-------------------------------|-----------------------------------------------------------------------------------------------------------------------|
-| CartReorderWidget             | Go to the **Order List** page and make sure you can reorder an existing order by clicking the reorder button.
+| CartReorderWidget             | Go to the **Order List** page and make sure you can reorder an existing order by clicking the reorder button. |
 | CartReorderItemCheckboxWidget | Go to the **Order Details** page and make sure you can select and reorder items clicking the reorder button. |
 | CartReorderItemsWidget        | Go to the **Order Details** page and make sure you can reorder all items by clicking the reorder all button.   |
 

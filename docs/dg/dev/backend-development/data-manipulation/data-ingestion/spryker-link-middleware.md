@@ -277,7 +277,7 @@ You can view the results of the Spryker Middleware processes in the Middleware *
 
 Install the `Report` module:
 
-```
+```bash
 composer require spryker-middleware/report
 ```
 
@@ -526,8 +526,7 @@ Many predefined validators can be used in `ValidationRuleSet`.
 | GreaterOrEqualThan | Validates that a value is equal to or greater than another value, defined in the options. | value (req, mixed) |
 | GreaterThan | Validates that a value is greater than another value, defined in the options. | value (req, mixed) |
 | InList | Validates that a value is included in a list of values defined in the options. | values (req, array) |
-| Length | Validates that a value's length is greater than a minimum or less than a maximum defined in options. | min (opt, int)  |
-| max (opt, int) |
+| Length | Validates that a value's length is greater than a minimum or less than a maximum defined in options. | min (opt, int) max (opt, int) |
 | LessOrEqualThan | Validates that a value is equal to or less than another value, defined in the options. | value (req, mixed) |
 | LessThan | Validates that a value is less than another value, defined in the options. | value (req, mixed) |
 | NotBlank | Validates that a value is not blank. |   |

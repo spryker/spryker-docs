@@ -48,7 +48,7 @@ As we are not going to change the component template, let us copy the whole of t
 <details>
 <summary>simple-carousel.twig</summary>
 
-```
+```twig
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} define config = {

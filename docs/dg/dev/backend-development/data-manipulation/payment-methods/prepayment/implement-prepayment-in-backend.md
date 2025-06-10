@@ -154,7 +154,7 @@ Use the prepayment state machine that's delivered with Demoshop.
 
 In the `SalesConfig` class, add this configuration:
 
-```
+```php
 /**
      * @var array
      */

@@ -48,7 +48,7 @@ The following diagram illustrates the dependencies between the core modules and 
 
 Create a separate CIAM provider Client layer with the following structure:
 
-```
+```text
 + Client/
   + CiamProvider/
     + Decoder/
@@ -237,7 +237,7 @@ Depending on the attributes that you plan to use from the CIAM provider in the c
 
 The following are the Customer `Zed` layer's touchpoints required to be extended or created. In a standard integration, more changes might be required depending on the implementation:
 
-```
+```text
 + Zed/
   + Customer/
     + Business/
@@ -295,7 +295,7 @@ The adjustment of Glue modules to include the new authorization functionality is
 
 In the `OauthApi` module, extend the access token validation step with your CIAM provider token parsing service.
 
-```
+```text
 + Glue/
   + OauthApi/
     + Processor/
@@ -342,7 +342,7 @@ It triggers the CIAM token parser, the CIAM token decoder, and the Customer crea
 
 The folder structure is similar to the following:
 
-```
+```text
 + Glue/
   + CiamProviderRestApi/
     + Plugin/

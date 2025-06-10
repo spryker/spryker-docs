@@ -1042,7 +1042,7 @@ Add the following configuration:
 | CONFIGURATION                                               | SPECIFICATION                                                                                                  | NAMESPACE                   |
 |-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|-----------------------------|
 | SessionFileConstants::YVES_SESSION_FILE_PATH                | Defines the filesystem path for storing Yves sessions.                                                         | Spryker\Shared\SessionFile  |
-| SessionRedisConstants::YVES_SESSION_REDIS_SCHEME            | Defines a scheme|protocol for Redis connection when used as Yves session storage.                                   | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::YVES_SESSION_REDIS_SCHEME            | Defines a scheme protocol for Redis connection when used as Yves session storage.                                   | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::YVES_SESSION_REDIS_PASSWORD          | Defines the password used while connecting to Redis as Yves session storage.                                   | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::YVES_SESSION_REDIS_HOST              | Defines the host used while connecting to Redis as Yves session storage.                                       | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::YVES_SESSION_REDIS_PORT              | Defines the port used while connecting to Redis as Yves session storage.                                       | Spryker\Shared\SessionRedis |

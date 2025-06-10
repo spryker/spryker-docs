@@ -89,7 +89,7 @@ The main components of the solution are
   - `\Pyz\Zed\Queue\Business\Strategy\OrderedQueuesStrategy` strategy which processes queues in the order these were defined in `\Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins`,
   - `\Pyz\Zed\Queue\Business\Strategy\BiggestFirstStrategy` - processes those queues which have the biggest amount of messages first
 - QueueScanner component - scannes queues to get such information as amount of messages to provide this info to a Strategy
-- custom RabbitMQ client to expose `queue_declare` (https://www.rabbitmq.com/amqp-0-9-1-reference.html#queue.declare) method to the Business layer code, this method returns queue statistics for existing queue and does not change anything in a queue.
+- custom RabbitMQ client to expose [queue_declare](https://www.rabbitmq.com/amqp-0-9-1-reference.html#queue.declare) method to the Business layer code, this method returns queue statistics for existing queue and does not change anything in a queue.
 - slightly modified `\Spryker\Zed\Queue\Business\Process\ProcessManager` - to store information about a queue in a context of store
 
 <details>

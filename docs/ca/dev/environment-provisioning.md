@@ -54,6 +54,8 @@ Production: PROD-LIKE, PROD
 
 If `myshop` is the customer, then `myshop-PROD` is an environment name, where `myshop` is the project name, and `PROD` is the environment type.
 
+<!-- No longer in the request form 
+
 ### AWS region
 
 AWS region is not part of the provisioning request but is defined in the order form. For information about the AWS region you are entitled to use, check your contract. The *AWS region* indicates where customers want their infrastructure resources to be available. For more information about available options for the AWS region, refer to the AWS [official documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
@@ -76,6 +78,8 @@ The following AWS regions are supported:
 - US East (N. Virginia)
 - US West (N. California)
 - US West (Oregon)
+
+-->
 
 ### Repository
 

@@ -27,7 +27,7 @@ This document describes the `product_concrete_pre_configuration.csv` file to c
 | --- | --- | --- | --- | --- | --- |
 | concrete_sku | ✓ | String | | Must be an SKU of an existing product. | Unique product identifier. |
 | configurator_key | ✓ | String | | Multiple products can use the same `configurator_key`. | Unique identifier of a product configurator to be used for this product. |
-| is_complete | ✓ | Boolean | 0 | True = `1` <br> False = `0` | Defines if product configuration is complete by default.
+| is_complete | ✓ | Boolean | 0 | True = `1` <br> False = `0` | Defines if product configuration is complete by default. |
 | default_configuration | | String |  | Accepts JSON. | Defines the configuration customers start configuring the product with. |
 | default_display_data | | String |  | Accepts JSON. | Defines the configuration to be displayed to customers when they start configuring the product. The parameters are taken from `default_configuration`. |
 

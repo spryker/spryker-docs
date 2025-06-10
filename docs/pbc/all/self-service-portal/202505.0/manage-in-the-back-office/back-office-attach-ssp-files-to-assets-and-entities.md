@@ -5,7 +5,7 @@ last_updated: May 23, 2025
 template: back-office-user-guide-template
 ---
 
-This document describes how to add assets managed by companies. 
+This document describes how to add assets managed by companies.
 
 ## Prerequisites
 

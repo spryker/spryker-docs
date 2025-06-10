@@ -394,7 +394,7 @@ The following table reflects the mapping of the Spryker Quote and Order transfer
 | billingAddress     | lineItems[].customer.administrativeDestination |                                  |
 | expenses.sumPrice (either GROSS or NET depending on the selected mode)                       | lineItems[].extendedPrice |       |
 | expenses.sumDiscountAmountAggregation             | lineItems[].discount.discountValue | Prices are converted from the Spryker's cent-based format to the Vertex decimal format. | 
-| lineItems[].discount.discountType  | Always `DiscountAmount`. Spryker stores discounts based on amount, so there is no need to use percentage-based discounts.  | priceMode|  |
+| lineItems[].discount.discountType  | Always `DiscountAmount`. Spryker stores discounts based on amount, so there is no need to use percentage-based discounts.  | priceMode|
 | lineItems[].taxIncludedIndicator           |                              | NET mode: false; GROSS mode: true. |
 
 ### Location mapping

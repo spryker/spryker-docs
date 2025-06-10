@@ -8,10 +8,48 @@
         apiKey: '8cbd2a0a179df1123898430a33e6938b',
         indexName: 'spryker',
         container: '.js-docsearch',
-        placeholder: 'Search documentation',
+        placeholder: 'Search documentation ⏎',
         maxResultsPerGroup: 45,
         searchParameters: {
             hitsPerPage: 45,
-        }
+            attributesToSnippet: [
+                'hierarchy.lvl1:20',
+                'headers:20',
+            ],
+            attributesToRetrieve: [
+                'hierarchy.lvl0',
+                'hierarchy.lvl1',
+                'headers',
+                'type',
+                'url',
+            ],
+        },
+        transformItems(items) {
+            items = items.map(item => {
+                const snippetResults = item._snippetResult;
+                const hierarchyLv1 = snippetResults?.hierarchy?.lvl1 || {};
+                if (hierarchyLv1?.matchLevel !== 'none') {
+                    return item;
+                }
+
+                const headers = snippetResults?.headers?.filter(header => header.matchLevel !== 'none') || [];
+                if (headers.length === 0) {
+                    return item;
+                }
+
+                item._snippetResult.hierarchy['lvl1'] = headers[0];
+                return item;
+            });
+            const input = document.querySelector('#docsearch-input');
+            if (input && !input.hasEnterListener) {
+                input.addEventListener('keydown', function(event) {
+                    if (event.key === 'Enter' || event.keyCode === 13) {
+                        window.location.href = '/oryx-search.html?q=' + encodeURIComponent(event.target.value);
+                    }
+                });
+                input.hasEnterListener = true;
+            }
+            return items;
+        },
     });
 </script>

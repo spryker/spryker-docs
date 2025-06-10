@@ -1,0 +1,121 @@
+---
+product-type: none
+search: exclude
+layout: default
+title: Search
+permalink: /oryx-search.html
+---
+
+<div class="full-text-search">
+    <h1>Oryx Search</h1>
+    <div id="searchbox"></div>
+    <div id="hits"></div>
+    <div id="pagination"></div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/satellite-min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialQuery = urlParams.get('q') || '';
+    let debounceTimer;
+
+    const search = instantsearch({
+        indexName: 'spryker_full_content',
+        searchClient: algoliasearch('SF7W0R2XNG', '8f2c94685deea955c12e82e73f333f4a'),
+        routing: true,
+        searchFunction(helper) {
+            const query = helper.state.query.trim();
+            if (query.length < 3) {
+                return
+            }
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                helper.search();
+            }, 500);
+        },
+    });
+
+    search.addWidgets([
+        instantsearch.widgets.searchBox({
+            container: '#searchbox',
+            placeholder: 'Enter search query...',
+            searchAsYouType: true,
+            autofocus: true,
+        }),
+
+        instantsearch.widgets.hits({
+            container: '#hits',
+            templates: {
+                item(hit) {
+                    const url = hit.url_without_anchor;
+                    const title = hit.title ? hit.title : hit.url_without_anchor;
+
+                    const highlight = hit._highlightResult || {};
+                    const headers = Array.isArray(highlight.headers)
+                        ? highlight.headers
+                            .filter(header => header?.matchLevel !== 'none')
+                            .filter(header => header?.value)
+                            .map(header => `<p class="header">${header.value}</p>`)
+                            .join('')
+                        : '';
+
+                    const keywords = Array.isArray(highlight.keywords)
+                        ? highlight.keywords
+                            .filter(keyword => keyword?.matchLevel !== 'none')
+                            .filter(keyword => keyword?.value)
+                            .map(k => `<p class="header">${keyword.value}</p>`)
+                            .join('')
+                        : '';
+
+                    const contentSnippets = extractMarkedSnippets(
+                        highlight.content?.matchLevel !== 'none' ? highlight.content.value : ''
+                    ).join(' ... ');
+
+                    const contentSnippetsHtml = contentSnippets.length ? `<div class="highlight-content">...${contentSnippets}</div>` : '';
+
+                    return `
+                        <div class="hit">
+                            <a href="${url}">${title}</a>
+                                ${headers || `<p class="header">${title}</p>`}
+                                ${keywords}
+                                ${contentSnippetsHtml}
+                        </div>
+                    `;
+                }
+            }
+        }),
+        instantsearch.widgets.pagination({
+            container: '#pagination'
+        })
+
+    ]);
+
+    search.start();
+
+    function extractMarkedSnippets(text) {
+        const regex = /((?:\S+\s+){0,3})?<mark>([^<]+)<\/mark>((?:\s+\S+){0,3})?/g;
+        const results = [];
+        let match;
+
+        while ((match = regex.exec(text)) !== null) {
+            const before = match[1]?.trim() || '';
+            const highlight = match[2].trim();
+            const after = match[3]?.trim() || '';
+            const snippet = `${before} <mark>${highlight}</mark> ${after}`.trim();
+            results.push(snippet);
+        }
+
+        return results;
+    }
+
+    if (initialQuery) {
+        search.setUiState({
+            [search.indexName]: {
+                query: initialQuery
+            }
+        });
+    }
+</script>

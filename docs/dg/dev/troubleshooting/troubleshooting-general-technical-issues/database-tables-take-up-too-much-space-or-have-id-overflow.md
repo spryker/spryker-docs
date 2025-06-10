@@ -10,34 +10,34 @@ redirect_from:
 - /docs/the-spy-oms-transition-log-table-takes-up-too-much-space.html
 ---
 
-Certain database tables may require periodic monitoring, particularly in large-scale projects with a high volume of orders. Potential issues include excessive table size or the risk of an ID column reaching its maximum value.
+Some database tables may require periodic monitoring, particularly in large-scale projects with a high volume of orders. Potential issues include excessive table size or the risk of an ID column reaching its maximum value.
 
 {% info_block errorBox "Manipulating tables" %}
 
-Table manipulations can affect a shop greatly. It is not safe to do so, and we recommend double-checking all the details before you proceed. The instructions below can help you solve issues. Make sure to follow them exactly.
+When solving issues using the following examples, make sure to follow them exactly. Table manipulations can affect a shop greatly and we recommend double-checking all the details before you proceed.
 
 {% endinfo_block %}
 
 ## Cause
 
-By default, nothing limits the table size or deletes old records.
+By default, table size is not limited and old records are not deleted.
 
 ## Tables to monitor
 
-- `spy_oms_transition_log`;
-- `spy_oms_state_machine_lock`;
-- all tables that application frequently inserts into.
+- `spy_oms_transition_log`
+- `spy_oms_state_machine_lock`
+- All tables the application frequently inserts into
 
 ## What to monitor
 
-- disk space occupied by big tables;
-- ID overflow (over integer field capacity, usually 2B for signed ints and 4B for unsigned).
+- Disk space occupied by big tables
+- ID overflow: over integer field capacity, usually 2B for signed ints and 4B for unsigned
 
 ## Solutions
 
 ### Delete old records
 
-If historical data in the table is no longer relevant and only recent records need to be retained, an SQL query can be used to remove the outdated entries.
+If historical data in the table is no longer relevant and only recent records need to be retained, the following SQL query can remove the outdated entries:
 
 ```sql
 DELETE FROM
@@ -48,9 +48,9 @@ WHERE
 
 Advantages:
 
-- reduces table size;
-- simple and fast solution;
-- allows retaining records from the most recent period.
+- reduces table size
+- simple and fast solution
+- allows retaining records from the most recent period
 
 Disadvantages:
 

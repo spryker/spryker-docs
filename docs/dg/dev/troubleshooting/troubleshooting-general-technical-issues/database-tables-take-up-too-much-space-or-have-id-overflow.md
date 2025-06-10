@@ -59,7 +59,7 @@ Disadvantages:
 
 ### Truncate table
 
-If the table data is no longer needed, it can be truncated to free up space and reset the ID counter.
+If the table data is no longer needed, you can truncated it to free up space and reset the ID counter:
 
 ```sql
 TRUNCATE TABLE spy_oms_transition_log;
@@ -78,7 +78,7 @@ Disadvantages:
 
 ### Change data type of autoincrement ID column
 
-If a table has meaningful data that can't be removed - change the field type of the auto-incremented field from INT (2 bln, 2^31-1 limit) to BIGINT (2^63-1 limit), practically making this issue unrealistically for the future.
+If a table has meaningful data that can't be removed, change the field type of the auto-incremented field from `INT` (2 bln, 2^31-1 limit) to `BIGINT` (2^63-1 limit), practically making this issue unrealistically for the future.
 
 ```sql
 ALTER TABLE spy_oms_transition_log
@@ -93,9 +93,9 @@ MODIFY COLUMN id_oms_transition_log BIGINT auto_increment NOT NULL
 
 {% info_block infoBox "" %}
 
-[spryker/oms:11.34.0](https://github.com/spryker/oms/releases/tag/11.34.0) is minimal recommended version to avoid the problem with overflows within the `spy_oms_state_machine_lock` table.
+[spryker/oms:11.34.0](https://github.com/spryker/oms/releases/tag/11.34.0) is the minimum recommended version to avoid the problem with overflows in the `spy_oms_state_machine_lock` table.
 
-It is recommended to upgrade Spryker modules as soon as Spryker releases important updates. Recommended interval is 3 months.
+We recommend upgrading Spryker modules as soon as Spryker releases important updates. The recommended interval is three months.
 
 {% endinfo_block %}
 
@@ -108,3 +108,29 @@ Disadvantages:
 
 - Does not reduce table size.
 - if the table is large enough, this operation may be resource-intensive and require a maintenance window outside of business hours.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

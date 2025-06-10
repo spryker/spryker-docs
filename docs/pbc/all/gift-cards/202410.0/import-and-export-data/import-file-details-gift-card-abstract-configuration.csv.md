@@ -26,7 +26,7 @@ This document describes the `gift_card_abstract_configuration.csv` file to conf
 ## Import file parameters
 
 | PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | DESCRIPTION |
-| --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- |
 | abstract_sku | &check; | String |  | SKU identifier of the Gift Card Abstract Product. |
 | pattern |  | String |  | Pattern that is used to create the unique code of the produced Gift Card after the purchase. |
 

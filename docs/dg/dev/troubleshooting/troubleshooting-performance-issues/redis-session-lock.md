@@ -148,9 +148,9 @@ $config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSI
 There are multiple session handlers in Spryker
 - `SessionRedisConfig::SESSION_HANDLER_REDIS` - non locking Redis handler, does not lock sessions
 - `SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING` - locking Redis handler, lock all sessions for all requests
-- `SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING` 
-    - a locking **configurable** Redis handler. This handler allows you to bypass locking logic by falling back to the non-locking behavior of `SessionRedisConfig::SESSION_HANDLER_REDIS`, which reduces the chance of negative effects from session locks., 
-    - the decision to bypass is made by plugins, and the first plugin that returns `true` wins.
+- `SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING`
+  - a locking **configurable** Redis handler. This handler allows you to bypass locking logic by falling back to the non-locking behavior of `SessionRedisConfig::SESSION_HANDLER_REDIS`, which reduces the chance of negative effects from session locks.,
+  - the decision to bypass is made by plugins, and the first plugin that returns `true` wins.
 
 To use this handler, follow these steps:
 
@@ -167,6 +167,7 @@ composer require spryker/session-redis:"^1.10.0" --update-with-dependencies
 - `SessionHandlerConfigurableRedisLockingProviderPlugin`
 
 Example:
+
 ```php
 ...
 use Spryker\Yves\SessionRedis\Plugin\Session\SessionHandlerConfigurableRedisLockingProviderPlugin;

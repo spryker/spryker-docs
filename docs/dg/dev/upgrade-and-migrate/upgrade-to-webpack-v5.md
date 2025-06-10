@@ -38,7 +38,7 @@ To unblock future upgrades of other dependencies, we need to migrate as well.
 }
 ```
 
-   - If Merchant Portal is used:
+- If Merchant Portal is used:
 
         ```json
         {

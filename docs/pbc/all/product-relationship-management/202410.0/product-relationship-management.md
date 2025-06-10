@@ -138,8 +138,8 @@ Stores are defined when creating or editing a product relation in the Back Offic
 |BACK OFFICE USER GUIDES|
 |---|
 | [Get a general idea of the Product Relations feature](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html)  |  
-| [Create product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/view-product-relations.html)  | 
-| [Edit product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/edit-product-relations.html)  | 
+| [Create product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/view-product-relations.html)  |
+| [Edit product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/edit-product-relations.html)  |
 
 ## Related Developer documents
 

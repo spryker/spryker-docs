@@ -443,6 +443,7 @@ For carts with big numbers of items, you can configure order items to be placed 
 2. Configure columns to be returned for each order item:
 
 **src/Pyz/Zed/Sales/SalesConfig.php**
+
 ```php
 <?php
 
@@ -474,6 +475,7 @@ The prior example uses the `OrderItemReference` column, which is provided by def
 To generate the `OrderItemReference` value, add `OrderItemReferenceExpanderPreSavePlugin` to the `getOrderItemExpanderPreSavePlugins()` method:
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+
 ```php
 use Spryker\Zed\SalesOms\Communication\Plugin\OrderItemReferenceExpanderPreSavePlugin;
 

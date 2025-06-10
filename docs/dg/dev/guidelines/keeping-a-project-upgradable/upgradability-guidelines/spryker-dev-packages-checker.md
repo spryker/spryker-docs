@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html
 ---
 
-Spryker dev packages checker checks the project Spryker dependencies for the _dev-*_ constraints.
+Spryker dev packages checker checks the project Spryker dependencies for the *dev-** constraints.
 
 ## Problem description
 

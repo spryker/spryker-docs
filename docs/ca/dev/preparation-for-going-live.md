@@ -122,7 +122,7 @@ Update them if plans change.        | This is critical for Domain Name System (D
 | ID     | CATEGORY                                     | NAME                                         | DESCRIPTION                                                                    | NOTE                                                                         |
 |--------|----------------------------------------------|----------------------------------------------|--------------------------------------------------------------------------------|------------------------------------------------------------------------------|
 | TES-12 | Testing | Perform end-to-end testing on production | Perform smoke testing on production. Because its final the stage, test the main business flows and third-party integrations. |
-| CLO-16 | Cloud    | Disable email sending restrictions           | Disable email sending restrictions. | 
+| CLO-16 | Cloud    | Disable email sending restrictions           | Disable email sending restrictions. |
 | CLO-17 | Cloud    | Remove basic auth                            | Remove basic authentication from the frontend part and deploy the change. |
 | GEN-9  | General  | Run the go-live communication plan           | Run the go-live communication plan. |
 | CLO-18 | Cloud    | Disable destructive pipeline                 | Disable the destructive pipeline after a successful go-live. |

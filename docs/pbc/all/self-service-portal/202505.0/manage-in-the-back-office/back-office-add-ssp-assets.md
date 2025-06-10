@@ -5,7 +5,7 @@ last_updated: May 23, 2025
 template: back-office-user-guide-template
 ---
 
-This document describes how to add assets managed by companies. 
+This document describes how to add assets managed by companies.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ This document describes how to add assets managed by companies.
     - **Pending**: The asset is added and awaits a review
     - **In Review**: The asset is being reviewed by a company user with admin permissions
     - **Approved**: The asset is approved and ready to be used
-    - **Deactivated**: The asset can't be used 
+    - **Deactivated**: The asset can't be used
   
 6. Optional: For **NOTE**, enter any useful information about the asset.
 7. Optional: For **COMPANY**, enter and select one or more companies to add the asset to.

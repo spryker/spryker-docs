@@ -20,15 +20,15 @@ Make sure to review [reference information](#reference-information-create-file-l
 3. On the **Create Content Item: Product Set** page, enter a **NAME**
 4. Optional: Enter a **DESCRIPTION**.
 5. On the **Default** tab, add files to the list:
-  1. In the **Available Files** table, click **+Add to list** next to the needed files.
-  2. In the **Selected Files** table, arrange the files by clicking **Move Down** or **Move Up** next to the files you want to move.
+1. In the **Available Files** table, click **+Add to list** next to the needed files.
+2. In the **Selected Files** table, arrange the files by clicking **Move Down** or **Move Up** next to the files you want to move.
 6. Optional: Repeat the previous step on the needed locale-specific tabs.
 
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific values overwrite the default values when the banner is rendered on a Storefront page with the [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html) selected.
-* If the fields are not filled out for a locale, the default values are displayed on a Storefront page with the locale selected.
+- Locale-specific values overwrite the default values when the banner is rendered on a Storefront page with the [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html) selected.
+- If the fields are not filled out for a locale, the default values are displayed on a Storefront page with the locale selected.
 
 {% endinfo_block %}
 
@@ -60,7 +60,7 @@ The widget allows you to insert a File List content item that will be displayed 
 
 {% info_block infoBox %}
 
-You can add only files uploaded to **File Manager**. Thus, if you make any changes to files in the File Manager section, for example, remove the file, these changes will be applied in the Content Items section as well. <br>See the _File Uploader Feature Overview_ article to learn more about file types that can be uploaded to File Manager.
+You can add only files uploaded to **File Manager**. Thus, if you make any changes to files in the File Manager section, for example, remove the file, these changes will be applied in the Content Items section as well. <br>See the *File Uploader Feature Overview* article to learn more about file types that can be uploaded to File Manager.
 
 {% endinfo_block %}
 
@@ -68,7 +68,7 @@ You can add only files uploaded to **File Manager**. Thus, if you make any chang
 
 You can view how it looks like on the store website:
 
-* **B2C**
+- **B2C**
     <br>Template used: File icon and size
 
 <figure class="video_container">
@@ -78,7 +78,7 @@ You can view how it looks like on the store website:
 </figure>
 
 
-* **B2B**
+- **B2B**
     <br>Template used: Text Link
 
 <figure class="video_container">

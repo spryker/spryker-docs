@@ -49,7 +49,7 @@ Add the TS lint script:
 
 <details>
   <summary>/frontend/libs/tslint.js<summary>
-    
+
 ```js
 const path = require('path');
 const { Linter, Configuration } = require('tslint');

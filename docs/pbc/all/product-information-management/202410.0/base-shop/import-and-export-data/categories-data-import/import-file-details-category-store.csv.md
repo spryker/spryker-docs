@@ -29,8 +29,8 @@ The file has the following dependency: *stores.php* configuration file of the De
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |-|-|-|-|-|
 | category_key | &check; | String |   | Category key of the category. |
-| included_store_names |   | String |   | To accept all stores, use the asterisk (*) symbol. | Holds store names to include separated by a comma. |
-| excluded_store_names |   | String |   | To remove all stores, use the asterisk (*) symbol. | Holds store names to exclude separated by a comma. |
+| included_store_names |   | String   | To accept all stores, use the asterisk (*) symbol. | Holds store names to include separated by a comma. |
+| excluded_store_names |   | String | To remove all stores, use the asterisk (*) symbol. | Holds store names to exclude separated by a comma. |
 
 
 

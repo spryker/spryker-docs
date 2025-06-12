@@ -118,7 +118,7 @@ To manage a file in File Tree:
 
         - *File versions tab*: Here you can manage multiple version of the file. You can view each version's information. in the *Actions* column, you can download the file version by clicking **Download** and also delete a version.
 
-     - **Delete** to immediately delete a file.
+    - **Delete** to immediately delete a file.
 
 {% info_block warningBox "Warning" %}
 

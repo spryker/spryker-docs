@@ -62,6 +62,7 @@ To add items to a guest cart, send the request:
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | <ul><li>guest-cart-items</li><li>concrete-products</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>product-options</li><li>sales-units</li><li>product-measurement-units</li><li>bundle-items</li><li>bundled-items</li><li>abstract-products</li></ul> |
+
 {% info_block infoBox "Included resources" %}
 
 - To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
@@ -2715,8 +2716,7 @@ To add a configurable bundle to a guest cart, send the request:
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Integer | &check; | Number of the configurable bundles to add. |
-| templateUuid | 	
-String | &check; | The unique ID of the [Configurable Bundle Template](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html). To get it, retrieve all Configurable Bundle Templates. |
+| templateUuid | 	String | &check; | The unique ID of the [Configurable Bundle Template](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html). To get it, retrieve all Configurable Bundle Templates. |
 | sku | String | &check; | Specifies the SKU of a product to add to the cart. To use promotions, specify the SKU of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to add to the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
 | slotUuid | String | &check; | The unique ID of the slot in the configurable bundle. |

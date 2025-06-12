@@ -152,7 +152,7 @@ This video explains how to use shopping carts in the Spryker [B2B Demo Shop](/do
 </figure>
 
 
-https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/multiple-carts-feature-overview.md/How+to+Use+Shopping+Carts+in+Spryker+B2B-s776wlo9ds.mp4
+
 
 ## Related Developer documents
 

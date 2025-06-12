@@ -442,7 +442,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 Finally the challenge is finished, now we can finally play with our API, here are a couple of examples of calling the facade of the `CustomerGroup` module:
 
-```
+```text
 -> http://ZED_HOST/api/v1/execute?bundle=customerGroup&method=add&arguments[customerGroupTransfer]={% raw %}{%{% endraw %}22name%22:%22test98597435%22}
 
 <- {"id_customer_group":13,"name":"test98597435","description":null,"customers":{% raw %}{}}{% endraw %}

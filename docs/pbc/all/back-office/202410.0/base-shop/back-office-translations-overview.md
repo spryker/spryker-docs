@@ -29,7 +29,7 @@ The following are file name examples:
 
 Once a new translation file is uploaded, regenerate the translation cache to reflect the changes:
 
-```
+```bash
 translator:clean-cache
 translator:generate-cache
 ```

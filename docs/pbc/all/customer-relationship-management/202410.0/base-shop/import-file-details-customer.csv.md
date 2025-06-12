@@ -33,7 +33,7 @@ This document describes the `customer.csv` file to configure [Customer](/docs/pb
 | first_name | &check; | String |   | Customer's first name. |
 | last_name | &check; | String |   | Customer's last name. |
 | company |  | String |   | Customer's Company |
-| gender | &check; | String |  Values must be:<ul><li>Male, or </li><li>Female</li></ul> | Customer's gender.<br>The value must be within the list of values predefined in the `spyCustomerTableMap.php`file. | Gender definition.|
+| gender | &check; | String | Customer's gender.<br>The value must be within the list of values predefined in the `spyCustomerTableMap.php`file. | Gender definition.|
 | date_of_birth |  | Date |   | Customer's date of birth. |
 | password |  | String |  | Customer's password. |
 | registered |  | Date |  | Customer's date of registration. |

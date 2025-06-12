@@ -46,6 +46,7 @@ By default, if checkout is successful, the order is placed, and the cart is dele
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request.	 | orders, order-shipments |
+
 {% info_block infoBox "Included resources" %}
 
 To retrieve order shipments, include `orders` and `order-shipments`.

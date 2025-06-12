@@ -43,6 +43,7 @@ data:import:discount-voucher
 | max_number_of_uses |  | Number | If empty, this will be set to 0. | The maximum amount of times this voucher can be used. |
 | voucher_batch | &check; | Number |`voucher_batch` must be previously created during *discount.csv* import, then the batch value must be a different number for each row in the file. | This groups vouchers into batches. It identifies a voucher belonging to the same voucher pool. |
 | is_active |  | Boolean | If empty, will be set to False = 0.<ul><li>True = 1</li><li>False = 0</li></ul>  | If true, the discount is active. |
+
 *N/A: Not applicable.
 
 ## Import file dependencies

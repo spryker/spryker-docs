@@ -61,5 +61,5 @@ This doc describes how to add delivery methods in the Back Office.
 |  PRICE PLUGIN | The plugin that calculates the price of delivery. If you select a price  plugin, it will override the prices specified in the **Price & Tax** tab. A developer can create plugins. |
 | DELIVERY TIME PLUGIN | The plugin that calculates the estimated delivery time. A developer can create plugins. |
 | IS ACTIVE | Defines if customers will be able to choose the delivery method on the Storefront. |
-| TAX SET | The tax set to apply to the price of the method. To create tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{page.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html).
+| TAX SET | The tax set to apply to the price of the method. To create tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{page.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html). |
 | AVAILABLE IN THE FOLLOWING STORE(S) | Defines which stores the method will be available for. |

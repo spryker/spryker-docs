@@ -255,15 +255,15 @@ These plugins can be used in three stages of the Router lifecycle.
 2. `RouterEnhancerPluginInterface::afterMatch()`
 3. `RouterEnhancerPluginInterface::afterGenerate()`
 
-#### BeforeMatch
+### BeforeMatch
 
 This method is executed before the Router tries to match it to a `Route`. As mentioned earlier, `Route`s have a defined URL, for example, `/cart`. Suppose your shop allows a language prefix in the URL's, so the current URL will be `/en/cart`. In this case, to match `/en/cart` to the defined `/cart`, we need to manipulate this URL information before the `Router` tries to match it. The `RouterEnhancer` plugin needs to remember the extracted information for later processing.
 
-#### AfterMatch
+### AfterMatch
 
 This method is executed after the `Router` was able to match an incoming URL to a `Route`. To forward all necessary information that was extracted in the `RouterEnhancerPluginInterface::beforeMatch()` to the application, this method adds the information to the `Route` parameters.
 
-#### AfterGenerate
+### AfterGenerate
 
 This method is executed after the `Router` was able to generate a URL by its name. The `Router` is able to generate URL's by a route name, for example, `cart`. The Router would now return you the defined URL for it, for example, `/cart`. If your shop works with a language prefix in the URLs, you need to get a different URL generated, in our case `/en/cart`. This is done in the `RouterEnhancerPluginInterface::afterGenerate()` method.
 

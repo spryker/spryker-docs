@@ -50,7 +50,7 @@ The parent and child business units are visually differentiated by means of inde
 | 0 level business units (parents) | Have no indents before their lines. |
 | 1 level business units | Have a single indent before them. |
 | 2 level business units | Have a double indent. |
-| And so on |
+| ... | ... |
 
 Example:
 ![business-units-hierarchy.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/business-units-hierarchy.png)

@@ -32,6 +32,10 @@ entries:
         url: /docs/about/all/releases/security-release-notes-202304.0.html
       - title: Security release notes 202302.0
         url: /docs/about/all/releases/security-release-notes-202302.0.html
+        
+    - title: Upcoming major module releases
+      url: /docs/about/all/releases/upcoming-major-module-releases.html
+
 
     - title: Security audit reports
       nested:

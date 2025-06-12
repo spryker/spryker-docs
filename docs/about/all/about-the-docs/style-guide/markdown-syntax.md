@@ -145,7 +145,7 @@ This section describes the Markdown syntax of the notes used only in certain sce
 
 Verification notes are usually used in guides. They describe what a reader can do to find out if the action they have performed was successful. Use the following Markdown syntax for the verification notes:
 
-```
+```md
 {% raw %}{% info_block warningBox "Verification" %}{% endraw %}
 
 The verification step
@@ -173,7 +173,7 @@ Make sure that the following modules have been installed in `vendor/spryker`:
 
 - Info syntax:
 
-```
+```md
 {% raw %}{% info_block infoBox "Info" %}{% endraw %}
 
 Your content
@@ -183,7 +183,7 @@ Your content
 
 Info example:
 
-```
+```md
 {% raw %}{% info_block infoBox "Secured variables" %}{% endraw %}
 
 To make the values of environment variables hidden in logs, set up secured variables.
@@ -193,7 +193,7 @@ To make the values of environment variables hidden in logs, set up secured varia
 
 - Warning syntax:
 
-```
+```md
 {% raw %}{% info_block warningBox "Warning" %}{% endraw %}
 
 Your content
@@ -204,7 +204,7 @@ Your content
 
 Warning example:
 
-```
+```md
 {% raw %}{% info_block warningBox "Important Note" %}{% endraw %}
 
 Ensure that Back Office is protected by a secure VPN connection.
@@ -214,7 +214,7 @@ Ensure that Back Office is protected by a secure VPN connection.
 
 - Error syntax:
 
-```
+```md
 {% raw %}{% info_block errorBox "Error" %}{% endraw %}
 
 Your content
@@ -225,7 +225,7 @@ Your content
 
 Error example:
 
-```
+```md
 {% raw %}{% info_block errorBox %}{% endraw %}
 
 An entity cannot have a store relation and SynchronizationPool defined for it simultaneously.

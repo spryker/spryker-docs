@@ -44,7 +44,7 @@ To check the WAF rule that triggered the error, do the following:
 An example of a blocking request from the WAF log file:
 
 
-```
+```text
 {
 "timestamp":1639057983286,
 "formatVersion":1,

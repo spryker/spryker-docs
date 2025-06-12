@@ -113,14 +113,14 @@ The Formatter is integrated into:
 - Pre-commit hooks.
 The function that executes Formatter before the commit resides in `/.githook`
 
-```
+```text
 - GitHook\Command\FileCommand\PreCommit\FrontendFormatterCommand
 ```
 
 - Travis.
 The command to run the Formatter is integrated into `.travis.yml`
 
-```
+```text
 - node ./frontend/libs/formatter
 ```
 

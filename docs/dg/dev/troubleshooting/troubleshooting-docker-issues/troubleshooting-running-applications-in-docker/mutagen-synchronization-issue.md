@@ -18,7 +18,7 @@ There is a synchronization issue.
 - Restart your OS.
 - Run the commands:
 
-```
+```bash
 docker/sdk trouble
 mutagen sync list
 mutagen sync terminate <all sessions in the list>

@@ -238,69 +238,69 @@ $bootstrap
 
 </details>
 
-3. Configure a maintenance page:
+3. To configure a maintenance page, add the page:
 
 {% info_block warningBox %}
 
-The maintenance page is not yet compatible with Spryker Cloud.
+The maintenance page is not compatible with Spryker Cloud.
 
-{% endinfo_block %}
+{% endinfo_block %}    
 
-    1. Add the maintenance page:
+**public/Backoffice/maintenance/index.html**
 
-    **public/Backoffice/maintenance/index.html**
+```html
+    <!DOCTYPE html>
+    <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+            <title>Spryker Zed - Maintenance</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta name="description" content="" />
+            <meta name="keywords" content="" />
+            <link href="http://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet" type="text/css" />
+        </head>
+        <style>
+            body {
+                font-family: 'PT Mono', sans-serif;
+            }
+            #so-doc {
+                margin: 0 auto;
+                width: 960px;
+            }
+        </style>
+        <body>
+            <div id="so-doc">
+                <div>
+                    <pre>
+                    PAGE UNDER CONSTRUCTION!
 
-    ```html
-        <!DOCTYPE html>
-        <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-            <head>
-                <title>Spryker Zed - Maintenance</title>
-                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                <meta name="description" content="" />
-                <meta name="keywords" content="" />
-                <link href="http://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet" type="text/css" />
-            </head>
-            <style>
-                body {
-                    font-family: 'PT Mono', sans-serif;
-                }
-                #so-doc {
-                    margin: 0 auto;
-                    width: 960px;
-                }
-            </style>
-            <body>
-                <div id="so-doc">
-                    <div>
-                        <pre>
-                        PAGE UNDER CONSTRUCTION!
-
-                        Come back in a few minutes...
-                        </pre>
-                    </div>
+                    Come back in a few minutes...
+                    </pre>
                 </div>
-            </body>
-        </html>
-    ```
+            </div>
+        </body>
+    </html>
+```
 
-    2. Configure the page you've added in step 1 to be displayed when the error `503` occurs:
+2. Configure the page you've added in step 3 to be displayed when the error `503` occurs:
 
-    **public/Backoffice/maintenance/maintenance.php**
+**public/Backoffice/maintenance/maintenance.php**
 
-    ```php
-    <?php
+```php
+<?php
 
-    /**
-     * Copyright © 2017-present Spryker Systems GmbH. All rights reserved.
-     * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
-     */
+/**
+ * Copyright © 2017-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
 
-    if (file_exists(__DIR__ . '/maintenance.marker')) {
-        http_response_code(503);
-        echo file_get_contents(__DIR__ . '/index.html');
-        exit(1);
-    }
-    ```
+if (file_exists(__DIR__ . '/maintenance.marker')) {
+    http_response_code(503);
+    echo file_get_contents(__DIR__ . '/index.html');
+    exit(1);
+}
+```
+    
+
 
 ## 4) Separate application plugin stacks
 

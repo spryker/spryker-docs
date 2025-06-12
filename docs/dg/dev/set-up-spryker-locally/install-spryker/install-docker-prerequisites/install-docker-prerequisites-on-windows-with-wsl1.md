@@ -27,10 +27,10 @@ This document describes the prerequisites for installing Spryker on Windows.
 | Windows | 10 or 11 (64bit)  | Pro, Enterprise, or Education (1607 Anniversary Update, Build 14393 or later). |
 | BIOS Virtualization | Enabled           | Typically, virtualization is enabled by default. Note that having the virtualization enabled is different from having Hyper-V enabled. You can check it in **Task Manager&nbsp;<span aria-label="and then">></span> Performance** tab. For more details, see [Virtualization must be enabled](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled). |
 | CPU SLAT-capable feature | Enabled   |  SLAT is CPU related feature. It is called Rapid Virtualization Indexing (RVI). |
-| Docker | 18.09.1 or higher |
-| Docker Compose | 2.0 or higher      |  
-| RAM  | 16GB or more       |
-| Swap  | 4GB or more       |
+| Docker | 18.09.1 or higher | |
+| Docker Compose | 2.0 or higher      |  |
+| RAM  | 16GB or more       | |
+| Swap  | 4GB or more       | |
 
 ## Install and configure the required software
 

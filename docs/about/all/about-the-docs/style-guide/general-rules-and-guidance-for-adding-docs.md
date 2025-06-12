@@ -79,7 +79,7 @@ Make sure that the front matter of your document contains the name of the templa
 
 Every document must have a YAML front matter block. This block consists of key-value pairs delimited by 3 dashes from each side and must come before any content in the document. The supported parameters on our documentation website are:
 
-```
+```text
 ---
 title: Foo bar document
 description: Exemplary description text.
@@ -117,7 +117,7 @@ After creating a new document, you must add it to the sidebar navigation. Keep i
 
 Each *product/realm* set has its own sidebar, which is represented by a YAML file in the `[_data/sidebar](https://github.com/spryker/spryker-docs/tree/master/_data/sidebars)` directory. The sidebar name is `{product}_{realm}_sidebar.yml`. So, for example, for the marketplace user documentation, the sidebar file is called `marketplace_user_sidebar.html`. The sidebar consists of the list of files that are present in the navigation. As a best practice, as soon as you create a new page, add it to your sidebar (so you don't forget about the page).
 
-```
+```text
 - product: SCOS
   nested:
   - title: Sample category
@@ -171,14 +171,14 @@ To add a new version for the versioned categories:
 
 You can make a reference to the currently opened version of the versioned page using the `{% raw %}{{page.version}}{% endraw %}` variable in text and links. For example, if you open a document in version `202108.0` in the editor and write there the following:
 
-```
+```md
 This feature requires version {{page.version}} of the Merchants feature.
 For details on the feature, see [Merchant feature overview](/docs/marketplace/user/features/{% raw %}{{page.version}}{% endraw %}/merchants/merchants-feature-overview.html).
 ```
 
 On the website, your text looks like this:
 
-```
+```md
 This feature requires version 202108.0 of the Merchants feature.
 For details on the feature, see Merchant feature overview(link to merchants-feature-overview.html version 202108.0).
 ```
@@ -197,7 +197,7 @@ The *global version* is the main website version. Usually, we make the version o
 
 To make a reference to the main (last) website version on either versioned or unversioned pages, use `{% raw %}{{site.version}}{% endraw %}`. For example, if the main version of your website is 2020109.0, if you write the following
 
-```
+```md
 For details on the feature, see [Merchant feature overview](/docs/marketplace/user/features/{% raw %}{{site.version}}{% endraw %}/merchants/merchants-feature-overview.html).
 ```
 

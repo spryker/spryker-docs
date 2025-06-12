@@ -18,7 +18,7 @@ Spryker uses our proprietary licenses and common open-source licenses. In genera
 
 - [Spryker](https://github.com/spryker)
 - [Spryker-shop](https://github.com/spryker-shop)
-- [Spryker-SDK]https://github.com/spryker-sdk
+- [Spryker-SDK](https://github.com/spryker-sdk)
 
 
 ## Preconditions
@@ -41,9 +41,9 @@ Spryker uses our proprietary licenses and common open-source licenses. In genera
    - [B2B Demo Marketplace](https://github.com/spryker-shop/b2b-demo-marketplace)
 
 6. Make sure that the automated tests and code quality tools active in the Demo Shop pass on your code.
-7. Create a PR as detailed [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork). Make sure the PR name and description clearly reflect the context and the changes.
+7. Create a PR as described in [Creating a pull-request from a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork). Make sure the PR name and description clearly reflect the context and the changes.
 
-For example, here is a result of this flow: https://github.com/spryker/product-configurations-rest-api/pull/1.
+[Example pull request](https://github.com/spryker/product-configurations-rest-api/pull/1).
 
 If we can't merge a PR because of our release process, we manually introduce the change. Once the change is released, we inform you by closing the PR.
 
@@ -57,3 +57,23 @@ If you create a pull request and feel that the issue is important, [contact supp
 ## Any further questions?
 Contact us!
 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

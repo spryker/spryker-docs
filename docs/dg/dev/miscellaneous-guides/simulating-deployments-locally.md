@@ -71,6 +71,6 @@ To obtain all these things, follow these steps:
 
 With this information, you can connect to the database from any SQL client and create a database dump which you can then import locally. After you have imported the data, don't forget to publish events so that all the data gets imported to Redis and Elastic Search as well. You can use the following command to achieve that.
 
-```
+```bash
 command publish:trigger-events
 ```

@@ -85,7 +85,7 @@ spawn(
 );
 ```
 
- Check [here](https://github.com/spryker-shop/suite/blob/master/frontend/libs/formatter.js) for the example file.
+See this example file [formatter.js](https://github.com/spryker-shop/suite/blob/master/frontend/libs/formatter.js).
 
 3. Adjust the `/package.json` scripts:
 

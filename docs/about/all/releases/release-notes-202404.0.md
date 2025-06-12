@@ -129,8 +129,8 @@ Based on your input in the UX research, we restructured the layout of Pull Reque
 ![scu-prs](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202404.0.md/scu-prs.png)
 
 PR examples to compare:
-Before: https://github.com/spryker-shop/b2c-demo-shop/pull/297
-Now: https://github.com/spryker-shop/b2c-demo-shop/pull/441
+Before: <https://github.com/spryker-shop/b2c-demo-shop/pull/297>
+Now: <https://github.com/spryker-shop/b2c-demo-shop/pull/441>
 
 ### Business benefit
 

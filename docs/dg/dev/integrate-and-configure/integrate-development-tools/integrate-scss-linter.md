@@ -80,7 +80,7 @@ stylelint.lint({
 });
 ```
 
-Check [here](https://github.com/spryker-shop/suite/blob/master/frontend/libs/stylelint.js) for the file example.
+See this example file: [stylelint.js](https://github.com/spryker-shop/suite/blob/master/frontend/libs/stylelint.js).
 
 2. Adjust the `/package.json` scripts:
 

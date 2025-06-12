@@ -580,9 +580,9 @@ This chart displays the active users during the simulation: total and per scenar
 
 "Active users" is neither "concurrent users" or "users arrival rate". It's a kind of mixed metric that serves for both open and closed workload models, and that represents "users who were active on the system under load at a given second".
 
-It's computed as:
+It's computed as follows:
 
-```
+```text
 (number of alive users at previous second)
 + (number of users that were started during this second)
 - (number of users that were terminated during the previous second)

@@ -6,13 +6,13 @@ Version 2.0.0 of the `ContentBannerGui` module introduces the [Content Items](/d
 
 With the `ContentBannerGui` version 2.0, we have made the following changes:
 
-* Changed twig expression template.
-* Changed the parameter ID to KEY.
-* Changed the issue with saving relative URL for click and image URLs.
+- Changed twig expression template.
+- Changed the parameter ID to KEY.
+- Changed the issue with saving relative URL for click and image URLs.
 
 You can find more details about the changes on the [ContentBannerGui module release notes](https://github.com/spryker/content-banner-gui/releases/tag/2.0.0) page.
 
-_Estimated migration time: 30 minutes_
+*Estimated migration time: 30 minutes*
 
 To upgrade to the new version of the module, do the following:
 

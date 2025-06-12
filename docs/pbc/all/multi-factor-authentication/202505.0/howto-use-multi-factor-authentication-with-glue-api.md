@@ -14,7 +14,7 @@ related:
     link: docs/pbc/all/multi-factor-authentication/page.version/create-multi-factor-authentication-methods.html
 ---
 
-This guide explains how to activate, deactivate, and use Multi-Factor Authentication (MFA) through Glue API. 
+This guide explains how to activate, deactivate, and use Multi-Factor Authentication (MFA) through Glue REST API. 
 
 To lean more about MFA methods, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html).
 
@@ -31,7 +31,8 @@ This guide demonstrates the Multi-Factor Authentication (MFA) flow using the ema
 
 ## 1) Get Available MFA Methods
 
-To determine the user's current MFA status, request the list of available methods.
+To determine the list of all available MFA methods in the system (regardless of whether they've been activated or not) and the user's status for each method, request the list of available methods.
+
 
 **Why?**
 
@@ -64,11 +65,12 @@ Authorization: Bearer <access_token>
 
 **What the status means:**
 
-| Status | Description               |
-|--------|---------------------------|
-| 0      | Disabled                  |
-| 1      | Activation is in progress |
-| 2      | Enabled                   |
+| Status | Name                      | Description                                                                                                                                                                                         |
+|--------|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 0      | Disabled                  | MFA method is available but not configured for the user. Protected actions are completed without additional verification.                                                                           |
+| 1      | Activation is in progress | User has initiated the MFA setup process but hasn't completed verification. The method cannot be used for protected actions until verification is complete.                                         |
+| 2      | Enabled                   | MFA method is fully configured and active. The system will require additional verification using this method for all protected actions and other sensitive operations defined in the configuration. |
+
 
 ## 2) Activating MFA (First-time Setup)
 
@@ -107,7 +109,7 @@ After the activation request, the system sends a verification code to the user's
 
 {% endinfo_block %}
 
-Once the code is received, verify it using the following request:
+Once the code is received, verify it using the following request. The verification code must be provided in the `X-MFA-Code` header:
 
 **Request**
 
@@ -164,6 +166,12 @@ Content-Type: application/json
 ```
 
 **Response**: 204 No Content — code has been sent.
+
+{% info_block infoBox "Error Handling" %}
+
+For potential errors (like when the provided MFA method is not found, etc.), see the [Error Codes](#error-codes) section at the end of this document.
+
+{% endinfo_block %}
 
 ### 3.2) Call the protected endpoint with the MFA code
 

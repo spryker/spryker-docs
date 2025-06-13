@@ -1,5 +1,5 @@
 ---
-title: Install the Back Office dropdown navigation
+title: Install Back Office dropdown navigation
 description: Learn how to install and upgrade the Back Office dropdown navigation in Spryker Cloud Commerce OS
 template: howto-guide-template
 last_updated: Jun 04, 2025
@@ -9,7 +9,7 @@ This document explains how to add support of settable dropdown navigation in the
 
 ## Prerequisites
 
-To add support of settable dropdown navigation in the Back Office, integrate the following features:
+Install the following features:
 
 | NAME         | REQUIRED   | VERSION          | INTEGRATION  GUIDE                                                                                                                                          |
 |--------------|------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -34,7 +34,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-## 3) Set up transfer objects
+## 2) Set up transfer objects
 
 Generate transfers:
 
@@ -59,7 +59,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                   | SPECIFICATION                                                                                   | PREREQUISITES | NAMESPACE                                 |
 |--------------------------|-------------------------------------------------------------------------------------------------|---------------|-------------------------------------------|
-| NavigationLinkTwigPlugin | Extends twig with `layout_navigation_items` function to generate navigation items from plugins. | None          | Spryker\Zed\Gui\Communication\Plugin\Twig |
+| NavigationLinkTwigPlugin | Extends Twig with the `layout_navigation_items` function to generate navigation items from plugins. |           | Spryker\Zed\Gui\Communication\Plugin\Twig |
 
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
@@ -88,9 +88,73 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1. Create the plugin implementing `\Spryker\Shared\GuiExtension\Dependency\Plugin\NavigationPluginInterface`.
+1. Create a plugin implementing `\Spryker\Shared\GuiExtension\Dependency\Plugin\NavigationPluginInterface`.
 2. Register the plugin in the `getDropdownNavigationPlugins()` method of the `GuiDependencyProvider` class.
-3. Go to https://backoffice.mysprykershop.com/ and check that the menu item is listed in the dropdown navigation.
+
+Make sure that, in the Back Office, the menu item is displayed in the dropdown navigation.
 
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

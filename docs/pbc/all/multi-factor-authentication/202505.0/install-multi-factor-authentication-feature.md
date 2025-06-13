@@ -745,6 +745,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
     }
 }
 ```
+
 </details>
 
 <details>
@@ -766,13 +767,15 @@ class GuiDependencyProvider extends SprykerGuiDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% warning_block warningBox "Verification" %}
 
 Make sure the following [Install the Backoffice dropdown navigation](/docs/pbc/all/back-office/{{page.version}}/base-shop/howto-guides/howto-install-the-backoffice-dropdown-navigation.html)feature is installed.
 
-{% endwarning_block %}
+{% endinfo_block %}
+
 
 <details>
 <summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php</summary>

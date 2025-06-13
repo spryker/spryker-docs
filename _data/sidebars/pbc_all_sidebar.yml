@@ -2077,7 +2077,11 @@ entries:
               - title: Order Amendment feature overview
                 url: /docs/pbc/all/order-management-system/base-shop/order-amendment-feature-overview.html      
                 include_versions:
-                - "202505.0"                        
+                - "202505.0"
+              - title: Unique random order reference generator
+                url: /docs/pbc/all/order-management-system/base-shop/unique-random-order-reference-generator.html
+                include_versions:
+                  - "202505.0"
               - title: Reclamations feature overview
                 url: /docs/pbc/all/order-management-system/base-shop/reclamations-feature-overview.html
               - title: Refunds feature overview

@@ -838,6 +838,8 @@ entries:
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html
         - title: Upgrade to Angular 17
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html
+        - title: Upgrade to Angular 18
+          url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-18.html
 
     - title: Upgrade to Webpack v5
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
@@ -998,7 +1000,9 @@ entries:
     - title: Separate endpoint bootstraps
       url: /docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html
     - title: Services
-      url: /docs/dg/dev/integrate-and-configure/configure-services.html 
+      url: /docs/dg/dev/integrate-and-configure/configure-services.html
+    - title: Automated SVG sprite asset extraction
+      url: /docs/dg/dev/integrate-and-configure/integrate-automated-svg-sprite-extraction.html
     - title: Twig and TwigExtension
       url: /docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
 

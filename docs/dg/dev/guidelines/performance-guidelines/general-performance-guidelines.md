@@ -18,6 +18,8 @@ related:
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
   - title: Web Profiler for Zed
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
+  - title: Integrate automated SVG sprite extraction
+    link: docs/dg/dev/integrate-and-configure/integrate-automated-svg-sprite-extraction.html    
 ---
 
 Spryker is a fast application by design. These guidelines explain how to optimize the server-side execution time.
@@ -78,7 +80,7 @@ You can also optimize the autoloader by enabling some options in `composer.json`
  "classmap-authoritative": true
 ```
 
-For more details about composer autoloader optimization, see the [autoloader documentation.](https://getcomposer.org/doc/articles/autoloader-optimization.md)
+For more details about composer autoloader optimization, see the [autoloader documentation](https://getcomposer.org/doc/articles/autoloader-optimization.md).
 
 ## Deactivate all debug functions and the Symfony toolbar
 
@@ -171,6 +173,105 @@ Twig, together with [Atomic Frontend](/docs/dg/dev/frontend-development/{{site.v
 For example, the `{% raw %}{{{% endraw %} data.foo.bar.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} data.foo.bar.lastName {% raw %}}}{% endraw %}` trigger many calls to the `Template::getAttribute()` method which is very slow.
 
 Making calculations on the PHP side can help here a lot, as well as using `{% raw %}{{{% endraw %} set customer = data.foo.bar {% raw %}}}{% endraw %}` + `{% raw %}{{{% endraw %} customer.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} customer.lastName {% raw %}}}{% endraw %}`.
+
+## Twig template warmup during deployment
+
+Precompiling Twig templates can improve the performance of the first request, especially in production environments. This is helpful when scaling across multiple containers, where the first request may be slow due to on-demand compilation of all Twig templates.
+
+
+To activate the warmup, follow the steps:
+
+1. Add the following commands to your deployment script, such as `config/install/docker.yml`:
+
+```yaml
+    build-production:
+        twig-template-warmup-zed:
+            command: 'vendor/bin/console twig:template:warmer'
+
+        twig-template-warmup-yves:
+            command: 'vendor/bin/yves twig:template:warmer'
+```
+
+{% info_block warningBox "" %}
+Make sure that the command is executed after the `vendor/bin/console twig:cache:warmer` command.
+{% endinfo_block %}
+
+
+2. Register the following classes for the Zed command:
+
+**\Spryker\Zed\Console\ConsoleDependencyProvider**
+
+```php
+...
+use Spryker\Zed\Form\Communication\Plugin\Application\FormApplicationPlugin;
+use Spryker\Zed\Security\Communication\Plugin\Application\ConsoleSecurityApplicationPlugin;
+use Spryker\Zed\Twig\Communication\Console\TwigTemplateWarmerConsole;
+...
+
+    protected function getConsoleCommands(Container $container): array
+    {
+        return [
+            // other commands
+            new TwigTemplateWarmerConsole(),
+        ];
+    }
+    
+    public function getApplicationPlugins(Container $container): array
+    {
+        // other application plugins
+        $applicationPlugins[] = new ConsoleLocaleApplicationPlugin();
+        $applicationPlugins[] = new ConsoleSecurityApplicationPlugin();
+        $applicationPlugins[] = new TwigApplicationPlugin();
+        $applicationPlugins[] = new FormApplicationPlugin();
+
+        return $applicationPlugins;
+    }
+```
+
+3. Register the following classes for the Yves console context to allow Twig properly compile templates.
+
+**\Spryker\Yves\Console\ConsoleDependencyProvider**
+
+```php
+...
+use Spryker\Yves\Form\Plugin\Application\FormApplicationPlugin;
+use Spryker\Yves\Locale\Plugin\Application\ConsoleLocaleApplicationPlugin;
+use Spryker\Yves\Security\Plugin\Application\ConsoleSecurityApplicationPlugin;
+use Spryker\Yves\Session\Plugin\Application\ConsoleSessionApplicationPlugin;
+use Spryker\Yves\Twig\Plugin\Application\TwigApplicationPlugin;
+use Spryker\Yves\Twig\Plugin\Console\TwigTemplateWarmerConsole;
+use Spryker\Yves\Twig\Plugin\Console\TwigTemplateWarmingModeEventSubscriberPlugin;
+
+...
+
+    protected function getConsoleCommands(Container $container): array
+    {
+        return [
+            // other commands
+            new TwigTemplateWarmerConsole(),
+        ];
+    }
+
+    public function getApplicationPlugins(Container $container): array
+    {
+        // other application plugins
+        $applicationPlugins[] = new ConsoleLocaleApplicationPlugin();
+        $applicationPlugins[] = new ConsoleSecurityApplicationPlugin();
+        $applicationPlugins[] = new ConsoleSessionApplicationPlugin();
+        $applicationPlugins[] = new TwigApplicationPlugin();
+        $applicationPlugins[] = new FormApplicationPlugin();
+
+        return $applicationPlugins;
+    }
+
+    protected function getEventSubscriber(Container $container): array
+    {
+        return [
+            // other event subscribers
+            new TwigTemplateWarmingModeEventSubscriberPlugin(),
+        ];
+    }
+```
 
 ## Activate Zed navigation cache
 

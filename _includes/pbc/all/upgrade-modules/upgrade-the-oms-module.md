@@ -85,8 +85,8 @@ Find the usage of `\Spryker\Zed\Oms\Business\OmsBusinessFactory::createOrderStat
 Find the usage of `\Spryker\Zed\Oms\Business\OmsBusinessFactory::createOrderStateMachineBuilder($xmlFolder = null)` and move the value of `$xmlFolder` to `\Spryker\Zed\Oms\OmsConfig::getProcessDefinitionLocation()`. From now on this function doesn't have $xmlFolder as a parameter.
 Find the usage of `\Spryker\Zed\Oms\Business\OrderStateMachine\LockedOrderStateMachine::buildIdentifierForOrderItemsLock` and replace it with the two calls: `::collectIdentifiersForOrderItemsLock(array $orderItems)` and `::buildIdentifierForOrderItemIdsLock($orderItemIds)`.
 Find the usage of `Spryker\Zed\Oms\Persistence\OmsQueryContainerInterface::countSalesOrderItemsForSku` and replace it with `::collectIdentifiersForOrderItemsLock(array $orderItems)`.
-Find the usage of `Spryker\Zed\Oms\Persistence\OmsQueryContainerInterface::queryLockedItemsByIdentifierAndExpirationDate`and use your own implementation (based on `OmsQueryContainer`).
-Find the usage of `Spryker\Zed\Oms\Persistence\OmsQueryContainerInterface::queryLockedItemsByIdentifierAndExpirationDate`and use your own implementation (based on `OmsQueryContainer`).
+Find the usage of `Spryker\Zed\Oms\Persistence\OmsQueryContainerInterface::queryLockedItemsByIdentifierAndExpirationDate` and use your own implementation (based on `OmsQueryContainer`).
+Find the usage of `Spryker\Zed\Oms\Persistence\OmsQueryContainerInterface::queryLockedItemsByIdentifierAndExpirationDate` and use your own implementation (based on `OmsQueryContainer`).
 
 In the **OMS** module version 8, we have also added support for stock reservations per store. We have added a few more database tables as well as a new column to the `spy_oms_reservation` table.
 

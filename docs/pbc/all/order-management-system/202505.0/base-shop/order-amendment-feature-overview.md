@@ -28,40 +28,41 @@ For instructions on configuring the grace period, see [Install the Order Amendme
 
 ## Order amendment flow
 
-Order amendment works as follows
+A customer can change their order as follows:
 
-1. When a customer clicks the **Edit Order** button, one of the following order amendment strategies is applied:
-  - Replace: The current cart items are replaced with the amended order items
+1. Customer clicks the **Edit Order** button
+2. One of the following order amendment strategies is applied:
+  - Replace: The current cart items are replaced with amendment order items
   - New: A new cart is created with the items from the amended order
 2. Customers can add, remove, or modify items in the cart
 3. Checkout proceeds via the standard flow.
 4. Upon confirmation, the original order is updated with the amendments.
 
-> New strategies can be added at the project level.
+On the project level, you can add other strategies to process order amendment.
 
 
-The following details are carried over to the cart during an amendment:
-- Order Reference (B2B/B2B Marketplace only; shown in cart name)
+When a customer initiates an amendment, the following details are carried over from the order to cart:
+- B2B/B2B Marketplace: Order reference
 - Cart notes
 - Item notes
 - Comments
-- Custom Order Reference
+- Custom order reference
 
-> This list can be customized at the project level.
+You can customize what details are carried over on the project level.
 
----
+## Price replacement strategies
 
-## Price Replacement Strategies
+Prices at the time of initiating an amendment may differ from the prices used to place the order. To handle such cases, you can use one of the following default strategies:
 
-Product prices may differ from the original order. The system supports the following pricing strategies during amendments:
+- Current catalog prices: catalog prices at the time of initiating order amendment are applied to all items.
+- Original order prices: catalog prices at the time of placing the original order are applied to all items.
+- Best price: If a product's price dropped since the order had been placed, the new lower price is used; otherwise, the original prices is used. 
 
-- **Current catalog prices**
-- **Original order prices**
-- **Best price**  – If the product price has dropped since the order was placed, the reduced price will be applied.
 
-> ⚠️ These strategies currently apply only to Shopping Cart and Product Details pages. Product Catalog and Search Suggestions always display current prices.
 
----
+During the order amendment process, the prices for cart items are displayed according to the strategy only on Cart and Product Details pages. On all other pages, such as Product Catalog or Search Results pages, the current prices ar displayed.
+
+
 
 ## Gift Cards and Vouchers
 
@@ -99,3 +100,34 @@ Email notifications for order amendments can be configured to reflect changes an
 | [Install the Order Management feature](/docs/pbc/all/order-management-system/202505.0/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature.html)  |
 | [Install the Product Bundles + Cart feature](/docs/pbc/all/product-information-management/202505.0/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html)  |
 | [Install the Reorder feature](/docs/pbc/all/customer-relationship-management/202505.0/base-shop/install-and-upgrade/install-features/install-the-reorder-feature.html)  |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

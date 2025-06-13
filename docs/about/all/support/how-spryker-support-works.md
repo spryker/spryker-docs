@@ -78,4 +78,4 @@ This table lists these stages that Spryker Support Cases go through and gives an
 | Received | Your case was successfully created in our case system. Spryker Support Personnel can now pick up your case. |
 | Diagnosis | Spryker Support Agent has taken over your case and is evaluating your input. It is common that Support Agents get in contact with you on this stage to clarify open questions. |
 | Solution Proposed | Good News! We think that we have a solution for your problem and have communicated that solution to you. We ask you to confirm whether the solution provided is acceptable |
-| Closed | You confirmed our solution, or closed the case because we could not get feedback from you.
+| Closed | You confirmed our solution, or closed the case because we could not get feedback from you. |

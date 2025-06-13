@@ -3,7 +3,7 @@
 
 module.exports = {
   names: ["CUSTOM_NO_SPACE_IN_EMPHASIS"],
-  description: "Disallow spaces just inside * or _ for emphasis, but skip headings",
+  description: "Remove spaces from emphasis",
   tags: ["emphasis", "whitespace"],
   function: function(params, onError) {
     params.tokens.forEach(token => {

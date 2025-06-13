@@ -920,7 +920,7 @@ Make sure that you can send the following requests:
 Make sure push notification generation works:
 
 1. Place an order with a product from the warehouse with the `multi-shipment` picking strategy.
-2. In the Back Office, go to **Sales&nbsp;<span aria-label="and then">></span> Orders&nbsp;**.
+2. In the Back Office, go to **Sales&nbsp;<span aria-label="and then">></span>Orders&nbsp;**.
 3. On the **Orders** page, next the order you've placed, click **View**.
 4. To make the order ready for picking, manually change the state of the order. For instructions, see [Change the state of order items](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html).
   The order state should be **ready for picking**.

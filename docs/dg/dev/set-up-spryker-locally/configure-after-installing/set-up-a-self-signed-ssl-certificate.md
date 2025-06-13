@@ -1,7 +1,7 @@
 ---
 title: Set up a self-signed SSL certificate
 description: Learn how to import a self-signed SSL certificate to access your instance via a secure connection.
-last_updated: Jun 16, 2021
+last_updated: May 28, 2025
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/setting-up-a-self-signed-ssl-certificate
 originalArticleId: 2991edda-38a5-4dd9-b03c-f87b05a32949

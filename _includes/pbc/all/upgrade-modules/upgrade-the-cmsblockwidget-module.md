@@ -4,14 +4,14 @@
 
 In the `CmsBlockWidget` module version 2.0.0, we have:
 
-* updated `CmsBlockWidgetTwigPlugin` with the support of getting CMS blocks by keys and names;
-* increased the version of `spryker/cms-block-storage` in `composer.json`;
-* removed the `TwigCmsBlock` plugin;
-* introduced `CmsBlockWidgetToCmsBlockStorageClient::findBlocksByKeys()` that finds blocks by keys;
-* introduced `CmsBlockWidgetToCmsBlockStorageClient::findBlockKeysByOptions()` that finds block keys by provided options;
-* deprecated `CmsBlockWidgetToCmsBlockStorageClient::findBlocksByNames()`;
-* removed `CmsBlockWidgetToCmsBlockStorageClient::findBlockNamesByOptions()`;
-* removed `CmsBlockWidgetToCmsBlockStorageClient::generateBlockNameKey()`.
+- updated `CmsBlockWidgetTwigPlugin` with the support of getting CMS blocks by keys and names;
+- increased the version of `spryker/cms-block-storage` in `composer.json`;
+- removed the `TwigCmsBlock` plugin;
+- introduced `CmsBlockWidgetToCmsBlockStorageClient::findBlocksByKeys()` that finds blocks by keys;
+- introduced `CmsBlockWidgetToCmsBlockStorageClient::findBlockKeysByOptions()` that finds block keys by provided options;
+- deprecated `CmsBlockWidgetToCmsBlockStorageClient::findBlocksByNames()`;
+- removed `CmsBlockWidgetToCmsBlockStorageClient::findBlockNamesByOptions()`;
+- removed `CmsBlockWidgetToCmsBlockStorageClient::generateBlockNameKey()`.
 
 *Estimated migration time: 30m-1h*
 
@@ -34,16 +34,19 @@ Use the new widget:
 ```twig
 {% raw %}{{{% endraw %} spyCmsBlock(keys: ['blck-1']) {% raw %}}}{% endraw %}
 ```
+
 2. with the `name` parameter (deprecated functionality):
 
 ```twig
 {% raw %}{{{% endraw %} spyCmsBlock(name: 'Block name') {% raw %}}}{% endraw %}
 ```
+
 3. with the `category` and `position` parameters:
 
 ```twig
 {% raw %}{{{% endraw %} spyCmsBlock({ category: category_id, position: 'top' }) {% raw %}}}{% endraw %}
 ```
+
 4. with the `product` parameter:
 
 ```twig

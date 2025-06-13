@@ -172,10 +172,10 @@ class SalesConfig extends SprykerSalesConfig
 
 {% info_block warningBox "Verification" %}
 After you finish the [Setup Behavior](#install-the-required-modules) step, make sure the following applies:
-* The `NoPayment01` state machine has been activated successfully.
-* When using a gift card to pay for an entire order, the configured order state machine is used—for example, `Nopayment01`.
-* You can't use denied payment methods when using a gift card.
-* In the Back office, on the order details page, the gift cards used in an order are displayed.
+- The `NoPayment01` state machine has been activated successfully.
+- When using a gift card to pay for an entire order, the configured order state machine is used—for example, `Nopayment01`.
+- You can't use denied payment methods when using a gift card.
+- In the Back office, on the order details page, the gift cards used in an order are displayed.
 
 {% endinfo_block %}
 
@@ -222,7 +222,7 @@ Make sure that propel entities have been generated successfully by checking thei
 | src/Orm/Zed/GiftCardBalance/Persistence/SpyGiftCardBalanceLog.php | Orm\\Zed\\GiftCardBalance\\Persistence\\Base\\SpyGiftCardBalanceLog |
 | src/Orm/Zed/GiftCardBalance/Persistence/SpyGiftCardBalanceLogQuery.php | Orm\\Zed\\GiftCardBalance\\Persistence\\Base\\SpyGiftCardBalanceLogQuery |
 | src/Orm/Zed/Sales/Persistence/SpySalesOrderItemGiftCard.php | Spryker\\Zed\\Sales\\Persistence\\Propel\\AbstractSpySalesOrderItemGiftCard |
-| Spryker\\Zed\\Sales\\Persistence\\Propel\\AbstractSpySalesOrderItemGiftCardQuery |
+| | Spryker\\Zed\\Sales\\Persistence\\Propel\\AbstractSpySalesOrderItemGiftCardQuery |
 
 {% endinfo_block %}
 
@@ -237,6 +237,7 @@ The following step imports abstract and concrete gift card configurations. Imple
 1. Prepare your data according to your requirements using the demo data:
 
 **data/import/gift_card_abstract_configuration.csv**
+
 ```yaml
 abstract_sku,pattern
 1234,{prefix}-{randomPart}-{suffix}
@@ -318,16 +319,16 @@ Make sure that a shipment method with the `NoShipment` name exists in `spy_shipm
 {% info_block infoBox "" %}
 
 To represent and display gift cards as products in your shop, you need to import data into your database depending on your project configuration and needs. The following list contains the points that can be used to get an idea of what gift card-related data you might want to use:
-* *Product Attribute Key* to create a gift card `value` super attribute that defines gift card variants.
-* *Abstract Product* that represents gift cards in your catalog.
-* *Abstract Product Store Relation* to manage store-specific gift cards.
-* *Concrete Product* that represents gift cards with a specific price value.
-* *Product Image* for abstract and concrete products to display gift cards.
-* *Product Price* for concrete gift card products where the price value matches the "value" super attribute.
-* *Product Stock* data for concrete gift card products.
-* *Product Management Attribute* to define the previously created "value" product attribute for the PIM.
-* *Category* that represents all gift cards.
-* *Navigation item* to display the gift card category or gift card product details page directly.
+- *Product Attribute Key* to create a gift card `value` super attribute that defines gift card variants.
+- *Abstract Product* that represents gift cards in your catalog.
+- *Abstract Product Store Relation* to manage store-specific gift cards.
+- *Concrete Product* that represents gift cards with a specific price value.
+- *Product Image* for abstract and concrete products to display gift cards.
+- *Product Price* for concrete gift card products where the price value matches the "value" super attribute.
+- *Product Stock* data for concrete gift card products.
+- *Product Management Attribute* to define the previously created "value" product attribute for the PIM.
+- *Category* that represents all gift cards.
+- *Navigation item* to display the gift card category or gift card product details page directly.
 
 {% endinfo_block %}
 
@@ -513,6 +514,7 @@ The `DummyPayment` order state machine example:
     </process>
 </statemachine>
 ```
+
 </details>
 
 
@@ -767,6 +769,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
     ...
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/Discount/DiscountDependencyProvider.php**
@@ -893,6 +896,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php**
@@ -925,11 +929,11 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 {% info_block warningBox "Verification" %}
 
 After completing the [frontend integration](#install-feature-frontend), make sure the following applies:
-* You can add a gift card to cart.
-* Discounts are not applied to the card.
-* During the checkout process, because there is only a gift card in the cart, shipment method selection is optional.
-* You can place the order successfully.
-* You receive a gift card code to your mailbox.
+- You can add a gift card to cart.
+- Discounts are not applied to the card.
+- During the checkout process, because there is only a gift card in the cart, shipment method selection is optional.
+- You can place the order successfully.
+- You receive a gift card code to your mailbox.
 
 {% endinfo_block %}
 
@@ -1046,6 +1050,7 @@ class GiftCardDependencyProvider extends SprykerGiftCardDependencyProvider
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/Mail/MailDependencyProvider.php**
@@ -1136,11 +1141,11 @@ class SalesPaymentDependencyProvider extends SprykerSalesPaymentDependencyProvid
 
 After completing the [frontend integration](#install-feature-frontend), make sure the following applies:
 
-* You can activate a gift card using its generated code.
-* You can activate more than one gift card simultaneously using the generated codes.
-* You can't activate a gift card with a depleted balance.
-* During the checkout process, payment method selection is skipped if the gift card covers the grand total.
-* Having made a successful purchase with the help of a gift card, you receive a gift card balance notification email.
+- You can activate a gift card using its generated code.
+- You can activate more than one gift card simultaneously using the generated codes.
+- You can't activate a gift card with a depleted balance.
+- During the checkout process, payment method selection is skipped if the gift card covers the grand total.
+- Having made a successful purchase with the help of a gift card, you receive a gift card balance notification email.
 
 
 {% endinfo_block %}
@@ -1157,7 +1162,7 @@ Install the required features:
 | --- | --- | --- |
 | Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
-| Checkout | {{site.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)
+| Checkout | {{site.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
 
 ### 1) Install the required modules
 

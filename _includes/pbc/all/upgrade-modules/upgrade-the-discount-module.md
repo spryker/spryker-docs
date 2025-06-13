@@ -36,8 +36,8 @@ vendor/bin/console propel:model:build
 
 This command will generate some new classes in your project under the  `\Orm\Zed\Discount\Persistence` namespace. It is important to make sure that they extend the base classes from the Spryker core, e.g.:
 
-* `\Orm\Zed\Discount\Persistence\SpyDiscountStore` extends `\Spryker\Zed\Discount\Persistence\Propel\AbstractSpyDiscountStore`
-* `\Orm\Zed\Discount\Persistence\SpyDiscountStoreQuery` extends `\Spryker\Zed\Discount\Persistence\Propel\AbstractSpyDiscountStoreQuery`
+- `\Orm\Zed\Discount\Persistence\SpyDiscountStore` extends `\Spryker\Zed\Discount\Persistence\Propel\AbstractSpyDiscountStore`
+- `\Orm\Zed\Discount\Persistence\SpyDiscountStoreQuery` extends `\Spryker\Zed\Discount\Persistence\Propel\AbstractSpyDiscountStoreQuery`
 
 6. Each row in the newly created `spy_discount_store` table represents a connection between a `Store` and a `Discount`, meaning that a specific discount is available in that specific Store.
 
@@ -124,45 +124,45 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```
 
-10.  The following classes' constructor dependencies were altered,  check if you have customized any of them or their constructor method:
+10. The following classes' constructor dependencies were altered,  check if you have customized any of them or their constructor method:
 
-* `Calculator/Discount`
-* `DiscountConfigurationHydrate`
-* `DiscountPersist`
-* `GeneralForm`
-* `DiscountsTable`
+- `Calculator/Discount`
+- `DiscountConfigurationHydrate`
+- `DiscountPersist`
+- `GeneralForm`
+- `DiscountsTable`
 
 11. The following methods were enhanced,  check if you have customized any of them:
 
-* `Calculator/Discount::retrieveActiveCartAndVoucherDiscounts()`
-* `DiscountFormDataProvider::createDiscountGeneralTransferDefaults()`
-* `DiscountConfigurationHydrate::getByIdDiscount()`
-* `DiscountCommunicationFactory::getVoucherForm()`
+- `Calculator/Discount::retrieveActiveCartAndVoucherDiscounts()`
+- `DiscountFormDataProvider::createDiscountGeneralTransferDefaults()`
+- `DiscountConfigurationHydrate::getByIdDiscount()`
+- `DiscountCommunicationFactory::getVoucherForm()`
 
 12. The following methods/classes were removed or renamed,  check if you have customized any of them:
 
-* `DiscountConfigurationHydrate::setDiscountConfigurationExpanderPlugins()`
-* `DiscountPersist::setDiscountPostCreatePlugins()`
-* `DiscountPersist::setDiscountPostUpdatePlugins()`
-* `DiscountQueryContainerInterface::queryDiscountsBySpecifiedVouchers()`
-* `DiscountQueryContainerInterface::queryActiveCartRules()`
-* `Business/Persistence/DiscountOrderSaver`
-* `Business/Persistence/DiscountOrderSaverInterface`
-* `Communication/Plugin/Sales/DiscountOrderSavePlugin`
-* `DiscountFacadeInterface::saveOrderDiscounts()`
-* `DiscountFacade::saveOrderDiscounts()`
-* `DiscountCommunicationFactory::createGeneralFormType()`
-* `DiscountCommunicationFactory::createCalculatorFormType()`
-* `DiscountCommunicationFactory::createConditionsFormType()`
-* `DiscountCommunicationFactory::createVoucherFormType()`
-* `DiscountCommunicationFactory::createVoucherForm()`
-* `CalculatorForm::getName()`
-* `ConditionsForm::getName()`
-* `DiscountForm::getName()`
-* `GeneralForm::getName()`
-* `VoucherForm::getName()`
-* `DiscountCommunicationFactory::createDiscountForm()`
-* `DiscountCommunicationFactory::createVoucherForm()`
+- `DiscountConfigurationHydrate::setDiscountConfigurationExpanderPlugins()`
+- `DiscountPersist::setDiscountPostCreatePlugins()`
+- `DiscountPersist::setDiscountPostUpdatePlugins()`
+- `DiscountQueryContainerInterface::queryDiscountsBySpecifiedVouchers()`
+- `DiscountQueryContainerInterface::queryActiveCartRules()`
+- `Business/Persistence/DiscountOrderSaver`
+- `Business/Persistence/DiscountOrderSaverInterface`
+- `Communication/Plugin/Sales/DiscountOrderSavePlugin`
+- `DiscountFacadeInterface::saveOrderDiscounts()`
+- `DiscountFacade::saveOrderDiscounts()`
+- `DiscountCommunicationFactory::createGeneralFormType()`
+- `DiscountCommunicationFactory::createCalculatorFormType()`
+- `DiscountCommunicationFactory::createConditionsFormType()`
+- `DiscountCommunicationFactory::createVoucherFormType()`
+- `DiscountCommunicationFactory::createVoucherForm()`
+- `CalculatorForm::getName()`
+- `ConditionsForm::getName()`
+- `DiscountForm::getName()`
+- `GeneralForm::getName()`
+- `VoucherForm::getName()`
+- `DiscountCommunicationFactory::createDiscountForm()`
+- `DiscountCommunicationFactory::createVoucherForm()`
 
 13. You can find additional information on the [Discount module release page](https://github.com/spryker/discount/releases) or by checking out our [Demoshop implementation](https://github.com/spryker/demoshop) for implementation example and idea.
 14. You are ready now to use Discount Zed Admin UI and manage discounts per Store.
@@ -171,12 +171,12 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 
 In the `Discount` module version 5, we have introduced multi-currency support for fixed discount calculation. This update also includes:
 
-* Support for net/gross amounts.
-* Currency decision rule -  to filter discounts by currency.
-* PriceMode decision rule - to filter discounts by price mode(net/gross).
-* Database schema changes to store discount amounts and fk_store for later multi store support.
-* Sales table changed deprecated column type from decimal to int as discount amounts were already stored as integers.
-* `CalculatorInterface` renamed to `CalculatorTypeInterface`, concrete calculators Fixed and Percentage rename to `FixedType` and `PercentageType` accordingly.
+- Support for net/gross amounts.
+- Currency decision rule -  to filter discounts by currency.
+- PriceMode decision rule - to filter discounts by price mode(net/gross).
+- Database schema changes to store discount amounts and fk_store for later multi store support.
+- Sales table changed deprecated column type from decimal to int as discount amounts were already stored as integers.
+- `CalculatorInterface` renamed to `CalculatorTypeInterface`, concrete calculators Fixed and Percentage rename to `FixedType` and `PercentageType` accordingly.
 
 1. Run the following command:
 

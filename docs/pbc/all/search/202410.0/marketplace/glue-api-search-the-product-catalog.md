@@ -14,8 +14,8 @@ related:
 The implementation of the search API offers you the same search experience as in the Spryker Demo Shops. The search engine used is Elasticsearch, and search results go beyond the simple listing of products in the results section. The list of search results is paginated according to your configuration, and spelling suggestions are offered when needed. In addition, sorting and facets are supported to narrow down the search results.
 In your development, this endpoint can help you to:
 
-* Implement catalog search functionality, including the category tree, facets, and pagination.
-* Retrieve a list of products to be displayed anywhere you want.
+- Implement catalog search functionality, including the category tree, facets, and pagination.
+- Retrieve a list of products to be displayed anywhere you want.
 
 ## Installation
 
@@ -78,7 +78,8 @@ To search by products, send the request:
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&page=3` | Set a page to retrieve the search results from. |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&ipp=24` | Set a number of products per page.   |
 | `GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker` | Filter the results by the *Spryker* merchant name. |
-| `GET https://glue.mysprykershop.com/catalog-search?q=001&include=abstract-products,concrete-products,product-offers/` | Search for a product by SKU `001` including its concrete products and product offers.
+| `GET https://glue.mysprykershop.com/catalog-search?q=001&include=abstract-products,concrete-products,product-offers/` | Search for a product by SKU `001` including its concrete products and product offers. |
+
 ### Response
 
 
@@ -1400,6 +1401,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -1817,6 +1819,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -2188,6 +2191,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -2507,6 +2511,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -2794,6 +2799,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -3111,6 +3117,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -3465,6 +3472,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -3736,6 +3744,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -3978,6 +3987,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -4190,6 +4200,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -4417,6 +4428,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -4837,6 +4849,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -5153,6 +5166,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -5450,6 +5464,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -5764,6 +5779,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -6022,6 +6038,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -6328,6 +6345,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -6743,6 +6761,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -7191,6 +7210,7 @@ To search by products, send the request:
     ]
 }
 ```
+
 </details>
 
 <a name="sorting"></a>
@@ -7235,8 +7255,8 @@ To search by products, send the request:
 | abstractProducts.prices.currency.symbol | String | Currency symbol. |
 | abstractProducts.prices.grossAmount | Integer | Gross price in cents. |
 | abstractProducts.images | Array | Images of the abstract product. |
-| abstractProducts.images.externalUrlLarge | URL of the large image. |
-| abstractProducts.images.externalUrlSmall | URL of the small image. |
+| abstractProducts.images.externalUrlLarge | String   | URL of the large image. |
+| abstractProducts.images.externalUrlSmall | String   | URL of the small image. |
 
 
 **Value facets**

@@ -29,18 +29,18 @@ To learn how pipelines work in Spryker Cloud Commerce OS, see [Deployment pipeli
 
 A regular production pipeline contains the following steps. Highlighted in *italic* are the steps that may break or impact the application.
 
-* Source
-* Please_approve
-* Build_and_Prepare
-* *Configure_RabbitMQ_Vhosts_and_Permissions*
-* *Run_pre-deploy_hook*
-* Pre_Deployment_Configuration
-* *Deploy_Scheduler*
-* *Run_install*
-* *Deploy_Spryker_services*
-* UpdateDeployedVersion
-* Post_Deployment_Configuration
-* *Run_post-deploy_hook*
+- Source
+- Please_approve
+- Build_and_Prepare
+- *Configure_RabbitMQ_Vhosts_and_Permissions*
+- *Run_pre-deploy_hook*
+- Pre_Deployment_Configuration
+- *Deploy_Scheduler*
+- *Run_install*
+- *Deploy_Spryker_services*
+- UpdateDeployedVersion
+- Post_Deployment_Configuration
+- *Run_post-deploy_hook*
 
 The following sections describe the potential issues applications can encounter during each step of deployment. To cover all the issues, we use pessimistic scenarios. During an actual deployment, an application is more likely to encounter one of the issues than all of them.
 
@@ -75,8 +75,8 @@ In this step, Rabbit MQ vhosts, users, and permissions are updated. Usually, the
 ## Run_pre-deploy_hook
 
 In this step, the following happens:
-* The scripts you defined for this step in the `SPRYKER_HOOK_BEFORE_DEPLOY` are run. The default command is `vendor/bin/install -r pre-deploy -vvv`.
-* The `vendor/bin/console scheduler:suspend -vvv --no-ansi` command is run to stop the scheduler. It waits for the currently running jobs to finish and gracefully shuts down. Stopping the scheduler prevents data corruption or errors for the duration of the deployment.
+- The scripts you defined for this step in the `SPRYKER_HOOK_BEFORE_DEPLOY` are run. The default command is `vendor/bin/install -r pre-deploy -vvv`.
+- The `vendor/bin/console scheduler:suspend -vvv --no-ansi` command is run to stop the scheduler. It waits for the currently running jobs to finish and gracefully shuts down. Stopping the scheduler prevents data corruption or errors for the duration of the deployment.
 
 ![Suspend the scheduler](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/suspend-scheduler.jpg)
 
@@ -120,6 +120,7 @@ The script runs all the propel database migrations, so the database is updated t
 From this point on, all the V1 services that are communicating with the database may respond to requests incorrectly. For each request, it depends on what data was migrated. For example, Glue V1 retrieves information about a product from Redis V1 and Search V1. Then Glue V1 makes a request to the database to put the product to cart. If the product still exists in the database, it will be added to cart. Otherwise, this request will result in an error.
 
 At the end of this step, the following command re-enables the scheduler and sets up new jobs:
+
 ```shell
 vendor/bin/console scheduler:setup -vvv --no-ansi
 ```

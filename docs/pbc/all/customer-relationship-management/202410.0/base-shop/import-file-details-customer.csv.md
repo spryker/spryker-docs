@@ -29,11 +29,11 @@ This document describes the `customer.csv` file to configure [Customer](/docs/pb
 | locale_name |  | String |  | Locale name. |
 | phone |  | String |  | Customer's phone number. |
 | email | &check; | String | Must be unique. | Customer's e-mail. |
-| salutation | &check; | String | Values must be:<ul><li>Mr</li><li>Mrs</li><li>Dr, or </li><li>Ms</li></ul> | The value must be within the list of values predefined in the `spyCustomerTableMap.php` file. | Used salutation. |
+| salutation | &check; | String | Values must be:<ul><li>Mr</li><li>Mrs</li><li>Dr, or </li><li>Ms</li></ul> .The value must be within the list of values predefined in the `spyCustomerTableMap.php` file. | Used salutation. |
 | first_name | &check; | String |   | Customer's first name. |
 | last_name | &check; | String |   | Customer's last name. |
 | company |  | String |   | Customer's Company |
-| gender | &check; | String |  Values must be:<ul><li>Male, or </li><li>Female</li></ul> | Customer's gender.<br>The value must be within the list of values predefined in the `spyCustomerTableMap.php`file. | Gender definition.|
+| gender | &check; | String | Customer's gender.<br>The value must be within the list of values predefined in the `spyCustomerTableMap.php`file. | Gender definition.|
 | date_of_birth |  | Date |   | Customer's date of birth. |
 | password |  | String |  | Customer's password. |
 | registered |  | Date |  | Customer's date of registration. |

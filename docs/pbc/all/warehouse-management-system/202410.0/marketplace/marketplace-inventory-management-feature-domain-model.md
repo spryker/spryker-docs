@@ -5,7 +5,7 @@ template: feature-walkthrough-template
 last_updated: Nov 21, 2023
 ---
 
-The _Marketplace Inventory Management_ implies stock & availability management as well as multiple warehouse stock management for product offers and marketplace products.
+The *Marketplace Inventory Management* implies stock & availability management as well as multiple warehouse stock management for product offers and marketplace products.
 
 ## Module dependency graph
 

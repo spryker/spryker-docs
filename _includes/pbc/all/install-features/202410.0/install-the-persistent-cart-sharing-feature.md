@@ -11,6 +11,7 @@ Install the required features:
 | Spryker Core | {{page.version}} |
 | Resource Sharing | {{page.version}} |
 |   |   |
+
 ### 1) Install the required modules
 
 Install the required modules using Composer:

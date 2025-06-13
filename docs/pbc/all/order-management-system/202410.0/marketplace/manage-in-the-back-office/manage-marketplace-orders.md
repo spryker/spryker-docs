@@ -23,7 +23,7 @@ Each section contains reference information. Make sure to review it before you s
 ## Viewing marketplace orders
 
 To view a marketplace order, in the **List of orders** table, next to the order you want to check, click **View**.
-You are taken to the **View Order: _[Order ID]_** page.
+You are taken to the **View Order: *[Order ID]*** page.
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -42,10 +42,10 @@ This section holds reference information related to viewing marketplace orders.
 The last created order goes on top of the table by default. However, you can sort the table by the order number, order reference, date of creation, customer emails, or the number of items ordered.
 
 On the **Orders** page, you see the following:
-* Order number, reference, and the creation date.
-* Customer name and email.
-* Order state, the grand total of the order, and the number of items ordered.
-* Actions that you can do on this page.
+- Order number, reference, and the creation date.
+- Customer name and email.
+- Order state, the grand total of the order, and the number of items ordered.
+- Actions that you can do on this page.
 
 By default, the last created order goes on top of the table. However, you can sort and search **List of orders**.
 
@@ -56,11 +56,11 @@ All columns with headers having arrows in **List of orders** are sortable.
 
 | ACTION | DESCRIPTION |
 |---|---|
-| View | Takes you to the **View Order: _[Return ID]_** page. Here, you can find all the information about the chosen order. |
+| View | Takes you to the **View Order: *[Return ID]*** page. Here, you can find all the information about the chosen order. |
 | Claim | Takes you to the **Create reclamation** page, where you can [create a reclamation](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html#claiming-marketplace-orders) for the order. |
 
-**<a id="view-order-order-id"></a>View Order: _[Order ID]_**
-<br>The following table describes the attributes on the **View Order: _[Order ID]_** page when you view an order.
+**<a id="view-order-order-id"></a>View Order: *[Order ID]***
+<br>The following table describes the attributes on the **View Order: *[Order ID]*** page when you view an order.
 
 | SECTION | ATTRIBUTE | DESCRIPTION |
 |---|---|---|
@@ -106,7 +106,7 @@ All columns with headers having arrows in **List of orders** are sortable.
 To change the state of several items in the order:
 
 1. In the **List of orders** table, in the **Actions** column, click **View** next to the order you want to change the state of.
-You are taken to the **View Order: _[Order ID]_** page.
+You are taken to the **View Order: *[Order ID]*** page.
 2. In the **Trigger all matching states inside this order** section, click **the next available state**. For details about the available states, see [Marketplace and Merchant state machines feature overview](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
 The page refreshes to show the message about the successful state change. The order will obtain the updated state. In the **Trigger all matching states inside this order** section, you can see the **Cancel** button.
 3. Repeat step 2 until you get the desired order state.
@@ -114,7 +114,7 @@ The page refreshes to show the message about the successful state change. The or
 To change the state of the order items in a shipment:
 
 1. In **List of orders**, click **View** next to the order possessing the items you want to change the state of.
-You are taken to the **View Order: _[Order ID]_** page.
+You are taken to the **View Order: *[Order ID]*** page.
 2. Scroll down to the desired shipment.
 3. Select the checkbox next to the products you want to change the state of.
 4. In the **Trigger all matching states of order inside this shipment** section, click **the next available state**.  For details about the available states, see [Marketplace and Merchant state machines feature overview](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
@@ -124,7 +124,7 @@ The page refreshes to show the message about the successful state change. In the
 To change the state of an item in the merchant order:
 
 1. In **List of orders**, click **View** next to the order possessing the items you want to change the state of.
-You are taken to the **View Order: _[Order ID]_** page.
+You are taken to the **View Order: *[Order ID]*** page.
 2. Scroll down to the desired item.
 3. In the **Trigger event** column next to the desired product, click **the next available state**. For details about the available states, see [Marketplace and Merchant state machines feature overview](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
 The page refreshes to show the message about the successful state change. In the **Trigger event** column next to the product, you can see the **Cancel** button.
@@ -147,10 +147,10 @@ You can set different states for your order by clicking the action buttons. The 
 **Tips & tricks**
 <br>To change the state of all the items inside a shipment at once, in the **Trigger all matching states of order inside this shipment** section of the corresponding shipment, click **the next available state**.
 
-For reference information about the **Orders** and **View Order: _[Order ID]_** pages, on this page, see:
+For reference information about the **Orders** and **View Order: *[Order ID]*** pages, on this page, see:
 
-* [Orders page](#orders-page)
-* [View Order: [Order ID](#view-order-order-id)
+- [Orders page](#orders-page)
+- [View Order: [Order ID](#view-order-order-id)
 
 
 ## Creating a marketplace return
@@ -165,12 +165,12 @@ If an order item is **[returnable](/docs/pbc/all/return-management/{{page.versio
 
 To create a return:
 
-1. On the **View Order: _[Order ID]_** page, click **Return** in the top right corner. This opens the **Create Return** page.
+1. On the **View Order: *[Order ID]*** page, click **Return** in the top right corner. This opens the **Create Return** page.
 2. On the **Create Return** page, select the items you want to return and optionally the return reason for the items. The following return reasons are provided out of the box:
-  * Damaged
-  * Wrong item
-  * No longer needed
-  * Custom reason
+- Damaged
+- Wrong item
+- No longer needed
+- Custom reason
 
 {% info_block infoBox "Info" %}
 
@@ -178,7 +178,7 @@ The products from one merchant can be returned at a time.
 
 {% endinfo_block %}
 
-3. Click **Create return**. This creates the return and takes you to the **Overview of Return _[Return reference]_** page, where you can change the return states. For details about the return states you can trigger, see Marketplace return item states.<!-- when https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2464809228/Back+Office+Managing+marketplace+returns+MP-4080 published, add-a-link-to https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2464809228/Back+Office+Managing+marketplace+returns+MP-4080#Marketplace-return-item-state-->
+3. Click **Create return**. This creates the return and takes you to the **Overview of Return *[Return reference]*** page, where you can change the return states. For details about the return states you can trigger, see Marketplace return item states.<!-- when https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2464809228/Back+Office+Managing+marketplace+returns+MP-4080 published, add-a-link-to https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2464809228/Back+Office+Managing+marketplace+returns+MP-4080#Marketplace-return-item-state-->
 
 {% info_block infoBox "Info" %}
 
@@ -217,7 +217,7 @@ Once a return has been created, it acquires the *Waiting for return* state. You 
 
 ## Viewing the returns for marketplace orders
 
-If returns have been created for a marketplace order, they are displayed on the **View Order: _[Order ID]_** page, in the **Returns** section.
+If returns have been created for a marketplace order, they are displayed on the **View Order: *[Order ID]*** page, in the **Returns** section.
 
 To view details about a return, navigate to the **Returns** page, and in the **Actions** column of the **List of Returns** table, click **View**.
 This takes you to the **Overview of Return: [Return ID]** page.
@@ -225,7 +225,7 @@ For information about how you can manage the returns on this page, see Managing 
 
 ### Reference information: Viewing the returns for marketplace orders
 
-The following tables describe the attributes on the **Overview of Return: _[Return reference]_** page when you view a return.
+The following tables describe the attributes on the **Overview of Return: *[Return reference]*** page when you view a return.
 
 ![reference-information-marketplace-return-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Back+Office+user+guides/Marketplace/Orders/Managing+marketplace+orders/reference-information-marketplace-return-back-office.png)
 
@@ -275,7 +275,7 @@ The **Total** section displays the total amount of items to be returned.
 To edit a custom order reference:
 
 1. In the **List of orders** table, next to the order you want to update the custom order reference of, click **View**.
-2. In the **Custom Order Reference** section of the **View Order: _[Order ID]_** page, click **Edit Reference**.
+2. In the **Custom Order Reference** section of the **View Order: *[Order ID]*** page, click **Edit Reference**.
 3. Update the custom order reference.
 4. Click **Save**.
 
@@ -300,7 +300,7 @@ To claim a marketplace order:
 
 | ATTRIBUTE | DESCRIPTION |
 |---|---|
-| Product | Contains information about the product: the product image, name, SKU, color. Clicking the product name takes you to the **View Product Abstract: _[Product ID]_** page. |
+| Product | Contains information about the product: the product image, name, SKU, color. Clicking the product name takes you to the **View Product Abstract: *[Product ID]*** page. |
 | Unit Price (GROSS_MODE) | Item price without taxes. |
 | Item total | Total amount paid for the item. |
 | State | Current state of the item. Clicking the state shows the state machine diagram. |
@@ -310,17 +310,17 @@ To claim a marketplace order:
 To comment on the marketplace order:
 
 1. Click **View** next to the order you want to comment on.
-2. On the **View Order: _[Order ID]_** page, scroll down to the **Comments** section.
+2. On the **View Order: *[Order ID]*** page, scroll down to the **Comments** section.
 3. Enter the comment in the **Message** field.
 4. Click **Send Message**.
 The page refreshes to show the success message about comment creation. Your message is displayed in the **Comments** section.
 
 **Tips and tricks**
 
-* To send an email to a customer, on the **Overview of Orders** page, click the hyperlinked customer email in the Email column.
-* To view customer details:
-  * On the **Overview of Orders** page, click the hyperlinked customer name in the **Customer Full Name** column.
-  * On the **View Order** page, scroll down to the **Customer** section and click the hyperlinked **Reference**.
+- To send an email to a customer, on the **Overview of Orders** page, click the hyperlinked customer email in the Email column.
+- To view customer details:
+  - On the **Overview of Orders** page, click the hyperlinked customer name in the **Customer Full Name** column.
+  - On the **View Order** page, scroll down to the **Customer** section and click the hyperlinked **Reference**.
 
 ## Editing a billing address in the marketplace order
 

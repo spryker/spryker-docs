@@ -15,19 +15,19 @@ The *Marketplace Promotions and Discounts* feature ensures that discounts are ap
 
 There are two discount types:
 
-* Voucher
-* Cart rule
+- Voucher
+- Cart rule
 
 A product catalog manager selects a discount type when [creating a discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
 
 
 Based on the business logic, discounts can be applied in the following ways:
 
-* The discount is applied to the whole Marketplace order. In such a scenario, the discount is distributed among all the merchant orders and calculated according to the total volume of each of the items.
+- The discount is applied to the whole Marketplace order. In such a scenario, the discount is distributed among all the merchant orders and calculated according to the total volume of each of the items.
 
 ![Merchant discount 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Order+Management/mp-discount-1.png)
 
-* The discount is related to a single product item in the Marketplace order. In this case, the whole discount is assigned only to the merchant order that contains the discounted item.
+- The discount is related to a single product item in the Marketplace order. In this case, the whole discount is assigned only to the merchant order that contains the discounted item.
 
 ![Merchant discount 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Order+Management/mp-discount-2.png)
 
@@ -59,6 +59,7 @@ The cart rule is applied automatically. If the decision rules of a discount are 
 To learn how a product catalog manager can create a cart rule in the Back Office, see [Create discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
 
 ### Decision rule
+
 A decision rule is a condition assigned to a discount that should be fulfilled for the discount to be applied.
 
 A discount can have one or more decision rules. Find an exemplary combination below:
@@ -125,6 +126,7 @@ With the rule groups, you can build multiple levels of rule hierarchy. When a ca
 When a cart is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The following diagram shows how a cart is evaluated against the rules in the previous screenshot.
 
 ### Discount threshold
+
 A *threshold* is a minimum number of items in the cart that should fulfill all the specified decision rules for the discount to be applied.
 The default value is *1*. It means that a discount is applied if at least one item fulfills the discount's decision rules.
 
@@ -145,15 +147,15 @@ The discount in the following example applies to white products.
 ![Query collection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-query.png)
 
 The product selection based on the query string is dynamic:
-* If at some point, the color attribute of a product changes from white to anything else, the product is no longer eligible to be discounted.
-* If at some point, a product receives the white color attribute, it becomes eligible for the discount.
+- If at some point, the color attribute of a product changes from white to anything else, the product is no longer eligible to be discounted.
+- If at some point, a product receives the white color attribute, it becomes eligible for the discount.
 
 ## Discount calculation
 
 Calculation defines the value to be deducted from a product's original price. There are two types of discount calculation:
 
-* Calculator percentage
-* Calculator fixed
+- Calculator percentage
+- Calculator fixed
 
 {% info_block infoBox "Info" %}
 

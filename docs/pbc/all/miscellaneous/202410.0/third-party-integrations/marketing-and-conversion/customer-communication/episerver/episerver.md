@@ -27,16 +27,16 @@ Episerver Intelligent Campaigns is a suite of intelligent marketing automation p
 
 YOUR ADVANTAGES:
 
-* Omnichannel campaigns: Episerver Campaign helps you easily create, automate and personalize campaigns across all channels.
-* Powered by AI: Personalize every experience based on artificial intelligence, customer data and real-time behavior.
-* Increased engagement: Deliver seamless experiences, get smarter segmentation, and increase engagement and conversions.
+- Omnichannel campaigns: Episerver Campaign helps you easily create, automate and personalize campaigns across all channels.
+- Powered by AI: Personalize every experience based on artificial intelligence, customer data and real-time behavior.
+- Increased engagement: Deliver seamless experiences, get smarter segmentation, and increase engagement and conversions.
 
 ## Related Developer guides
 
-* [Episerver API](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-api.html)
-* [Episerver order reference commands](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html)
-* [Installing and configuring Episerver](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/install-and-configure-episerver.html)
-* [Integrating Episerver](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/integrate-episerver.html)
+- [Episerver API](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-api.html)
+- [Episerver order reference commands](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html)
+- [Installing and configuring Episerver](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/install-and-configure-episerver.html)
+- [Integrating Episerver](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/integrate-episerver.html)
 
 
 ---

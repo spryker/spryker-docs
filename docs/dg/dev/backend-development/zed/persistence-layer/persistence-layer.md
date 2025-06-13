@@ -34,7 +34,7 @@ Zed's `Persistence` layer is the owner of the schema, entities, and queries. Thi
 
 Propel Fast and simple ORM Framework MySQL or PostgreSQL. Both databases are supported.
 
-## Persistence layer elements:
+## Persistence layer elements
 
 | ELEMENT   | DESCRIPTION |
 | ----------------- | ------------------------------------------------------------ |

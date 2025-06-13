@@ -43,7 +43,7 @@ In the Storefront, authentication is used to authenticate as a *customer*, and t
 
 To access a protected resource, pass the access token in the `Authorization` header of your request—example:
 
-```
+```html
 GET /protected-resource HTTP/1.1
 Host: glue-storefront.mysprykershop.com or glue-backend.mysprykershop.com
 Content-Type: application/json
@@ -68,5 +68,5 @@ Response sample with an error:
 ```
 
 For more details, see:
-* [Create protected Glue API endpoints](/docs/dg/dev/glue-api/{{page.version}}/create-protected-glue-api-endpoints.html)
-* [Use API Key authorization](/docs/dg/dev/glue-api/{{page.version}}/use-api-key-authorization.html)
+- [Create protected Glue API endpoints](/docs/dg/dev/glue-api/{{page.version}}/create-protected-glue-api-endpoints.html)
+- [Use API Key authorization](/docs/dg/dev/glue-api/{{page.version}}/use-api-key-authorization.html)

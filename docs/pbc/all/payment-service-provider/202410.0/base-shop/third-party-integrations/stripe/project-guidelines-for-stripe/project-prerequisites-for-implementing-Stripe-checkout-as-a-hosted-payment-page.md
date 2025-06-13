@@ -50,7 +50,7 @@ If your shop is live or `@CheckoutPage/views/payment/payment.twig` is overwritte
 
    2. Add translations to your glossary data import file:
 
-   ```
+   ```csv
    Stripe,Pay Online with Stripe,en_US
    ```
 

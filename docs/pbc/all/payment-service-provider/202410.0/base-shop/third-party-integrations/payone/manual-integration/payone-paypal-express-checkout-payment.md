@@ -24,20 +24,21 @@ Add the following code below the checkout button or anywhere you want, depending
 ```bash
 {% raw %}{{{% endraw %} render(path('payone-checkout-with-paypal-button')) {% raw %}}}{% endraw %}
 ```
+
 You can also implement your own button if you want the button to be loaded without a separate call to the controller or if you want to change the design.
 
-## Paypal Express Checkout flow description:
+## Paypal Express Checkout flow description
 
-* Once you click the **Checkout with PayPal** button, the genericpayment request is sent to Payone with `setexpresscheckout` action and success, failure and back URLs.
-* In the response we receive a workorderid which is used for all other operations until the capture request and PayPal redirect URL.
-* We store workorerid to quote and redirect customer to the URL provided by Payone.
-* On the *PayPal* page, customer has to log in and approve the intention of paying for the desired goods.
-* After clicking the button, the customer is redirected to the success or failure URL, provided by the shop in the first request to Payone.
-* After redirection to success action, one more generic payment request to Payone is made with action `getexpresscheckoutdetails`.
-* Payone sends us information about the customer, like email and shipment data.
-* The user is redirected to the page(summary page as default) of standard checkout.
-* After placing the order, the pre-authorization call is sent to Payone (and through it to PayPal). Workorderid is sent to Payone with this request.
-* Order status becomes "pre-authorized pending" after the response with status OK is received.
+- Once you click the **Checkout with PayPal** button, the genericpayment request is sent to Payone with `setexpresscheckout` action and success, failure and back URLs.
+- In the response we receive a workorderid which is used for all other operations until the capture request and PayPal redirect URL.
+- We store workorerid to quote and redirect customer to the URL provided by Payone.
+- On the *PayPal* page, customer has to log in and approve the intention of paying for the desired goods.
+- After clicking the button, the customer is redirected to the success or failure URL, provided by the shop in the first request to Payone.
+- After redirection to success action, one more generic payment request to Payone is made with action `getexpresscheckoutdetails`.
+- Payone sends us information about the customer, like email and shipment data.
+- The user is redirected to the page(summary page as default) of standard checkout.
+- After placing the order, the pre-authorization call is sent to Payone (and through it to PayPal). Workorderid is sent to Payone with this request.
+- Order status becomes "pre-authorized pending" after the response with status OK is received.
 
 ## State machine integration
 
@@ -64,7 +65,7 @@ You can find all needed configuration parameters in `config.dist.php` file insid
 
 {% endinfo_block %}
 
-## Configuration parameters description:
+## Configuration parameters description
 
 To understand where to go, if control over express checkout process should be handed over to the project,
 Payone module needs several URLs to be configured in the global config:
@@ -94,7 +95,7 @@ $config[PayoneConstants::PAYONE][PayoneConstants::PAYONE_EXPRESS_CHECKOUT_BACK_U
 
 ```
 
-## Extra configuration:
+## Extra configuration
 
 To add a possibility to skip standard checkout steps for a guest customer, the customer step should be extended:
 Open `Yves/CheckoutPage/Process/Steps/CustomerStep.php` file in your project and add the following code to the `postCondition` and `requireInput` methods:

@@ -63,9 +63,9 @@ In case you have `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category_te
 
 5. From `\Pyz\Zed\Category\CategoryDependencyProvider`, remove the deprecated plugin stacks:
 
-* `\Pyz\Zed\Category\CategoryDependencyProvider::getCategoryFormPlugins()`
-* `\Pyz\Zed\Category\CategoryDependencyProvider::getCategoryFormTabExpanderPlugins()`
-* `\Pyz\Zed\Category\CategoryDependencyProvider::getRelationReadPluginStack()`
+- `\Pyz\Zed\Category\CategoryDependencyProvider::getCategoryFormPlugins()`
+- `\Pyz\Zed\Category\CategoryDependencyProvider::getCategoryFormTabExpanderPlugins()`
+- `\Pyz\Zed\Category\CategoryDependencyProvider::getRelationReadPluginStack()`
 
 6. In `\Pyz\Zed\Category\CategoryDependencyProvider` on the project level, register the plugin that describes the strategy of attaching a category to a store:  
 
@@ -90,7 +90,7 @@ In case you have `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category_te
    }
    ```
 
-7.  if you are using the data import:
+7. if you are using the data import:
 
     1. Update the `CategoryDataImport` module:
 
@@ -205,16 +205,16 @@ The fourth version of the `Category` module introduced the changes described bel
 
 Added:
 
-* category templates functionality
-* category view functionality
-* tests for the module
-* dependencies for Storage and Event modules
+- category templates functionality
+- category view functionality
+- tests for the module
+- dependencies for Storage and Event modules
 
 Removed:
 
-* category `is_clickable` functionality
+- category `is_clickable` functionality
 
-_Estimated migration time: 1 hour. The time may vary depending on project-specific factors._
+*Estimated migration time: 1 hour. The time may vary depending on project-specific factors.*
 
 ### Update modules
 

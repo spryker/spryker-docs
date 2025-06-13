@@ -87,7 +87,7 @@ class FactFinderGuiRouteProviderPlugin extends AbstractRouteProviderPlugin
 }
 ```
 
-2. Then add the created route provider to the `RouterDependencyProvider` file:    Expand a code sample   
+2. Then add the created route provider to the `RouterDependencyProvider` file:    Expand a code sample
 
 ```php
 <?php
@@ -115,6 +115,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
     // ...
 }
 ```
+
 3. Copy the config example from `vendor/spryker-eco/fact-finder-sdk/config/config_default.php.dist` to your project config file.
 
 ### FactFinderSdk Module
@@ -168,6 +169,7 @@ class YourBundleDependencyProvider extends AbstractBundleDependencyProvider
 
 }
 ```
+
 2. Add it to your factory:
 
 ```php

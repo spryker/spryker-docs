@@ -53,6 +53,7 @@ interface PaymentMethodsConstants
 
 }
 ```
+
 </details>
 
 2. Enrich the `Payment` transfer file with a new property that corresponds to the new payment method. Add `Shared/PaymentMethods/Transfer/invoicepayment.transfer.xml` file with the following content:
@@ -73,9 +74,11 @@ interface PaymentMethodsConstants
     </transfer>
     </transfers>
 ```
+
 </details>
 
 3. Update the `PaymentTransfer` class:
-```
+
+```bash
 vendor/bin/console transfer:generate
 ``

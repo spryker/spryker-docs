@@ -116,6 +116,7 @@ Set both the major and minor versions of a resource; otherwise, requests to this
 After implementing a specific resource version, you can query the resource by specifying the needed version. Send a request to the following endpoint of version 2.0.
 
 **PATCH /customer-restore-password**
+
 ```json
 {
   "data": {
@@ -135,13 +136,15 @@ Content-Type: application/vnd.api+json; version=2.0
 If `getPathVersionResolving` is set to `true`, set a value for `\Pyz\Glue\GlueApplication\GlueApplicationConfig::getPathVersionPrefix`. In the example, the value is `v`. The resource path should look like this: `PATCH /v2.0/customer-restore-password`.
 
 Because the resource is configured to version 2.0 only requests with this version specified are processed correctly. For example, the following request will fail with the `404 Not Found` error.
+
 ```json
 Content-Type: application/vnd.api+json; version=3.0
 ```
 
 Here's a version matching rule-set:
 
-* PHP version:
+- PHP version:
+
 ```php
 (new RestVersionTransfer())
             ->setMajor(A)
@@ -150,13 +153,14 @@ Here's a version matching rule-set:
 
 Then use the version as follows:
 
-* In the header: *Content-Type: application/vnd.api+json; version=A.B*
+- In the header: *Content-Type: application/vnd.api+json; version=A.B*
 
-* In the path: */vA.B*
+- In the path: */vA.B*
 
 
 
 PHP version:
+
 ```php
 (new RestVersionTransfer())
             ->setMajor(A);
@@ -164,9 +168,9 @@ PHP version:
 
 Then, use the version as follows:
 
-* In the header: *Content-Type: application/vnd.api+json; version=A*
+- In the header: *Content-Type: application/vnd.api+json; version=A*
 
-* In the path: */vA*
+- In the path: */vA*
 
 There's no fall-back to the latest minor, a version can only be be matched exactly.
 

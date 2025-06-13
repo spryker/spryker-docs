@@ -24,9 +24,9 @@ This tutorial is also available on the Spryker Training website. For more inform
 ## Challenge description
 
 This task helps you learn how to do the following:
-* Work with Checkout and the Step Engine.
-* Apply and use discounts.
-* Extend the Spryker core code and functionalities.
+- Work with Checkout and the Step Engine.
+- Apply and use discounts.
+- Extend the Spryker core code and functionalities.
 
 {% info_block infoBox "Info" %}
 
@@ -513,9 +513,11 @@ Add the voucher field in the `Quote` transfer.
 ```
 
 6. Generate the new transfer object:
+
  ```bash
  console transfer:generate
  ```
+
 7. Return to the controller and use the new form instead of the returned string.
 
 To create the process for the voucher step and use the form collection, modify the voucher action.

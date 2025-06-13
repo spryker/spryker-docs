@@ -18,10 +18,10 @@ redirect_from:
 The *Product Options* feature lets a Back Office user create and assign product options to abstract products. Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, or warranty. Product options do not have stock but an SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.
 
 Each product option is defined by:
-* Product option group name
-* Tax set assigned on the product option group
-* Option value
-* Translation
+- Product option group name
+- Tax set assigned on the product option group
+- Option value
+- Translation
 
 *Product option group* holds all available options or *option values* that buyers select. For example, you can have the "Warranty" product option group and create the `1-year warranty` and `2-year warranty` values for it.
 
@@ -32,12 +32,12 @@ In the Storefront, customers can select and add options to products on the produ
 ## Product Options in the Back Office
 
 In the Back Office, you can perform the following actions on product options:
-* Create a product option.
-* Update, view, activate, or deactivate product options.
-* Create multiple option values in one option group.
-* Specify gross and net prices for options values.
-* Assign product option groups to products.
-* Activate product options to make them visible in the Storefront.
+- Create a product option.
+- Update, view, activate, or deactivate product options.
+- Create multiple option values in one option group.
+- Specify gross and net prices for options values.
+- Assign product option groups to products.
+- Activate product options to make them visible in the Storefront.
 
 To learn more about how to work with product options in the Back Office, see [Create product options](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/product-options/create-product-options.html) and [Edit product options](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/product-options/edit-product-options.html).
 
@@ -46,9 +46,9 @@ To learn more about how to work with product options in the Back Office, see [Cr
 {% info_block infoBox %}
 
 Each product option group may contain as many product options as you need. For example, you can offer insurance services (*product option group*) for the product with several *product options*:
-* One-year coverage insurance $100.
-* Two-year coverage insurance $150.
-* Three-year coverage insurance $200.
+- One-year coverage insurance $100.
+- Two-year coverage insurance $150.
+- Three-year coverage insurance $200.
 
 {% endinfo_block %}
 
@@ -66,12 +66,12 @@ The feature has the following functional constraints, which are going to be reso
 
 {% endinfo_block %}
 
-* Product options are available in all the stores where the corresponding concrete product is available.
-* Unlike [Cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/shared-carts-feature-overview.html), [Shopping Lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) does not support product options.
-* If you add a product with an option to a shopping list, the product option gets discarded.
-* You cannot define product option prices in a per-merchant manner.
-* If you create a product option, the price remains the same for all merchants.
-* Unlike other prices in Spryker, the product option price is not bound to any of the available price types. (DEFAULT or ORIGINAL)
+- Product options are available in all the stores where the corresponding concrete product is available.
+- Unlike [Cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/shared-carts-feature-overview.html), [Shopping Lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) does not support product options.
+- If you add a product with an option to a shopping list, the product option gets discarded.
+- You cannot define product option prices in a per-merchant manner.
+- If you create a product option, the price remains the same for all merchants.
+- Unlike other prices in Spryker, the product option price is not bound to any of the available price types. (DEFAULT or ORIGINAL)
 
 ## Related Business User documents
 

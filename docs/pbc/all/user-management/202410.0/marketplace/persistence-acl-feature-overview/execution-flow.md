@@ -58,11 +58,13 @@ All rules with ID `1`, `3`, `4` are filtered out since they do not belong to `Or
 The Persistence ACL modifies the query so that only records that the user has access to are returned:
 
 Query before the Persistence ACL:
+
 ```sql
 SELECT * FROM `spy_merchant` order by `updated_at`;
 ```
 
 Query after the Persistence ACL:
+
 ```sql
 SELECT `spy_merchant`.*
 FROM `spy_merchant`

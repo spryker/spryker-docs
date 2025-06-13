@@ -17,8 +17,8 @@ This endpoint allows finalizing the checkout process by placing an order. After 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Install the Checkout Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
-* [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)
+- [Install the Checkout Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
+- [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)
 
 ## Place an order
 
@@ -46,6 +46,7 @@ By default, if checkout is successful, the order is placed, and the cart is dele
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request.	 | orders, order-shipments |
+
 {% info_block infoBox "Included resources" %}
 
 To retrieve order shipments, include `orders` and `order-shipments`.
@@ -118,6 +119,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
     }
 }
 ```
+
 </details>
 
 
@@ -342,6 +344,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
     ]
 }
 ```
+
 </details>
 
 

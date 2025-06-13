@@ -27,14 +27,14 @@ Focus fully on your core business — Billie takes care of your debtor managemen
 Offer your business customers their preferred payment option, fully integrated into your online store's checkout process: easily integrate our B2B-PayAfterDelivery module and experience dramatically improved conversion rates by allowing your customers to pay by invoice. Experience reliable payouts to your bank account on the next business day.
 
 YOUR ADVANTAGES:
-* Fully automated PayAfterDelivery module for your B2B-eCommerce store
-* Credit checks and decisions in real time
-* Improved conversion rates during checkout by providing the most preferred B2B-payment method
-* Payouts to your bank account on the next working day
-* 100% protection against payment defaults for all processed invoices
-* Full service coverage of dunning & collection process in your design and wording
-* Holistic management of your debtors
-* Reduced accounting overhead by automated and secure processing of all incoming cash flows
+- Fully automated PayAfterDelivery module for your B2B-eCommerce store
+- Credit checks and decisions in real time
+- Improved conversion rates during checkout by providing the most preferred B2B-payment method
+- Payouts to your bank account on the next working day
+- 100% protection against payment defaults for all processed invoices
+- Full service coverage of dunning & collection process in your design and wording
+- Holistic management of your debtors
+- Reduced accounting overhead by automated and secure processing of all incoming cash flows
 
 ---
 

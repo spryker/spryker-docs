@@ -38,15 +38,15 @@ For more details about managing ratings and reviews, check the video:
 ## Current constraints
 
 The feature has the following functional constraints, which are going to be resolved in the future:
-* Product reviews are linked to locales but not stores.
-* A review is available in all the stores that share the locale of the store in which it has been originally created.
+- Product reviews are linked to locales but not stores.
+- A review is available in all the stores that share the locale of the store in which it has been originally created.
 
 
 ## Related Business User documents
 
 | BACK OFFICE USER GUIDES | THIRD-PARTY INTEGRATIONS |
 | - | - |
-| [Manage product reviews in the Back Office](/docs/pbc/all/ratings-reviews/{{page.version}}/manage-product-reviews-in-the-back-office.html) | [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html) | |
+| [Manage product reviews in the Back Office](/docs/pbc/all/ratings-reviews/{{page.version}}/manage-product-reviews-in-the-back-office.html) | [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html)|
 | [Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html) | |
 | [Configure Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/configure-bazaarvoice.html) | |
 | [Disconnect Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/disconnect-bazaarvoice.html) | |

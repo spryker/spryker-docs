@@ -23,8 +23,8 @@ Spryker shops expose module business logic through a simple API in Zed. The API 
 
 This tutorial describes how to the following:
 
-* Create a simple client library to authorize and talk to Zed through API.
-* Extract the controller endpoint from Zed authorization or provide another authorization mechanism.
+- Create a simple client library to authorize and talk to Zed through API.
+- Extract the controller endpoint from Zed authorization or provide another authorization mechanism.
 
 ## Preparation
 
@@ -40,11 +40,11 @@ Reflection is used here for educational purposes, blindly exposing internal code
 
 We recommend recapping the following topics before starting the challenge:
 
-* [PHP Reflection](http://php.net/manual/en/book.reflection.php)
-* [Facades](/docs/dg/dev/backend-development/zed/business-layer/facade/facade.html)
-* [Transfer objects](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html)
-* ["Tutorial: Add a new module](/docs/dg/dev/backend-development/extend-spryker/create-modules.html)
-* [Controllers in Zed](/docs/dg/dev/backend-development/zed/communication-layer/communication-layer.html)
+- [PHP Reflection](http://php.net/manual/en/book.reflection.php)
+- [Facades](/docs/dg/dev/backend-development/zed/business-layer/facade/facade.html)
+- [Transfer objects](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html)
+- ["Tutorial: Add a new module](/docs/dg/dev/backend-development/extend-spryker/create-modules.html)
+- [Controllers in Zed](/docs/dg/dev/backend-development/zed/communication-layer/communication-layer.html)
 
 {% info_block infoBox %}
 
@@ -255,6 +255,7 @@ class ApiEntry
 
 }
 ```
+
 </details>
 
 The resulting structure of the array is following:
@@ -303,6 +304,7 @@ Now modify template to output the array:
     </table>
 </html>
 ```
+
 </details>
 
 Open `http://ZED_HOST/api/v1/doc?bundle=customerGroup` to see the results.
@@ -440,7 +442,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 Finally the challenge is finished, now we can finally play with our API, here are a couple of examples of calling the facade of the `CustomerGroup` module:
 
-```
+```text
 -> http://ZED_HOST/api/v1/execute?bundle=customerGroup&method=add&arguments[customerGroupTransfer]={% raw %}{%{% endraw %}22name%22:%22test98597435%22}
 
 <- {"id_customer_group":13,"name":"test98597435","description":null,"customers":{% raw %}{}}{% endraw %}

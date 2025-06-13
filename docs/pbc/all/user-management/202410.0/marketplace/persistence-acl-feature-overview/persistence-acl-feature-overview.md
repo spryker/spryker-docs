@@ -12,6 +12,7 @@ With the Persistence ACL feature, you can manage authorization at the database e
 Persistence ACL runs in the Persistence layer, as its name suggests.
 
 ## Limitations
+
 The module is based on the Propel ORM (namely Propel Behavior and Propel Hooks). If you are not using `PropelOrm` to interact with data in your system, this module will not work.
 
 

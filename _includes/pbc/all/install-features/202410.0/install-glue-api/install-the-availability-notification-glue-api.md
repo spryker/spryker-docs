@@ -93,9 +93,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Make sure that you can send the following requests:
 
-* `GET https://glue.mysprykershop.com/my-availability-notifications`
-* `GET https://glue.mysprykershop.com/customers/{customerReference}/availability-notifications`
-* `POST https://glue.mysprykershop.com/availability-notifications`
+- `GET https://glue.mysprykershop.com/my-availability-notifications`
+- `GET https://glue.mysprykershop.com/customers/{customerReference}/availability-notifications`
+- `POST https://glue.mysprykershop.com/availability-notifications`
 
 ```json
 {
@@ -109,6 +109,6 @@ Make sure that you can send the following requests:
 }
 ```
 
-* `DELETE https://glue.mysprykershop.com/availability-notifications/{subscription_key}`.
+- `DELETE https://glue.mysprykershop.com/availability-notifications/{subscription_key}`.
 
 {% endinfo_block %}

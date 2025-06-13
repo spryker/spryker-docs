@@ -61,13 +61,13 @@ To connect the Upgrader manually using the GitHub access token, take the followi
 
 To enable the Upgrader to analyze the project and create PRs, the GitHub personal access token (Fine-grained token) should have the following permissions:
 
-* **Metadata**: Access: Read-only
+- **Metadata**: Access: Read-only
 
-* **Webhooks**: Access: Read-only
+- **Webhooks**: Access: Read-only
 
-* **Contents**: Access: Read and write
+- **Contents**: Access: Read and write
 
-* **Pull requests**: Access: Read and write
+- **Pull requests**: Access: Read and write
 
 
 ### Configure the integration with GitHub

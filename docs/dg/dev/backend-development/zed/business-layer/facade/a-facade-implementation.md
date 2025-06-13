@@ -45,15 +45,15 @@ class GlossaryFacade extends AbstractFacade
 
 When you look at the `deleteKey()` method, observe the following:
 
-* The method's name expresses exactly what happens. It uses the terms of the related terminology, but it's easy to grasp what happens ("A key is deleted").
-* The method does not contain any control logic, like `if` or `foreach` statements; it just delegates to the business model and calls the right method.
-* The business model KeyManager is created using the factory, so it does not need to know how the class is created.
+- The method's name expresses exactly what happens. It uses the terms of the related terminology, but it's easy to grasp what happens ("A key is deleted").
+- The method does not contain any control logic, like `if` or `foreach` statements; it just delegates to the business model and calls the right method.
+- The business model KeyManager is created using the factory, so it does not need to know how the class is created.
 
 ## Parameters and return values
 
 The main idea of the facade is to hide the implementation details. Typical return values of facade methods are the following:
-* Native types (bool, int, float, string, array)
-* Transfer objects
+- Native types (bool, int, float, string, array)
+- Transfer objects
 
 To hide and protect the underlying models and data structure, business models, or any propel entities and queries are never returned.
 
@@ -86,13 +86,13 @@ The idea of the `Business` layer is to present a facade to all clients and hide 
 
 You might use the following definitions to generate related code:
 
-* Add Zed Business facade.
-* Add Zed Business facade interface.
-* Add Zed Business facade interface method.
-* Add Zed Business facade method.
-* Add Zed Business facade method test.
-* Add Zed Business facade test.
-* Add Zed Business factory.
-* Add Zed Business factory method.
+- Add Zed Business facade.
+- Add Zed Business facade interface.
+- Add Zed Business facade interface method.
+- Add Zed Business facade method.
+- Add Zed Business facade method test.
+- Add Zed Business facade test.
+- Add Zed Business factory.
+- Add Zed Business factory method.
 
 For details, see the [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html) documentation.

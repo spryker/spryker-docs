@@ -163,9 +163,9 @@ console data:import:product-abstract
 {% info_block warningBox "Verification" %}
 
 Make sure the following:
-* The data is in the database.
-* The data is synchronized to the storage.
-* You can see the color selector on the product card of the product in the group.
+- The data is in the database.
+- The data is synchronized to the storage.
+- You can see the color selector on the product card of the product in the group.
 
 {% endinfo_block %}
 

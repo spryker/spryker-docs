@@ -32,8 +32,8 @@ Each section contains reference information. Make sure to look up the necessary 
 
 1. On the **Edit Product Abstract: {SKU}** page, click the **General** tab.
 2. For **STORE RELATION**, do the following:
-    * Select the checkboxes next to the stores you want to start displaying this product in.
-    * Clear the checkboxes next to the stores you want to stop displaying this product in.
+    - Select the checkboxes next to the stores you want to start displaying this product in.
+    - Clear the checkboxes next to the stores you want to stop displaying this product in.
 3. Enter a **NAME** for needed locales.
 4. Enter a **DESCRIPTION** for needed locales.
 5. Select **NEW FROM** and **NEW TO** dates.
@@ -66,7 +66,7 @@ Each section contains reference information. Make sure to look up the necessary 
 | --- | --- |
 | MERCHANT PRICE DIMENSION | [Merchant relation](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html) the prices apply to. <br>To create one, see [Create merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html). <br>If you select **Default prices**, the prices will apply to all customers. |
 | Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter for the abstract product. |
-| DEFAULT price | Default price is the price a customer pays for the product.
+| DEFAULT price | Default price is the price a customer pays for the product. |
 | ORIGINAL price | An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
 | TAX SET | Conditions under which the product is taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-rates.html). |
 
@@ -99,9 +99,9 @@ To create a product variant, see [Create product variants](/docs/pbc/all/product
 
 1. On the **Edit Product Abstract: {SKU}** page, click the **SEO** tab.
 2. Enter any of the following for needed locales:
-    * **TITLE**
-    * **KEYWORDS**
-    * **DESCRIPTION**
+    - **TITLE**
+    - **KEYWORDS**
+    - **DESCRIPTION**
 4. Select **Save**.
     The page refreshes with the success message displayed.
 

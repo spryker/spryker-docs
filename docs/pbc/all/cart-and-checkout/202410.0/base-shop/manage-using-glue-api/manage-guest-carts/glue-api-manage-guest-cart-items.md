@@ -21,15 +21,15 @@ This endpoint allows you to manage guest cart items.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
-* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
-* [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
-* [Install the Product Bundles Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
-* [Install the Product Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html)
-* [Install the Configurable Bundle Glue API](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
-* [Install the Configurable Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
-* [Install the Configurable Bundle + Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html)
+- [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+- [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
+- [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+- [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
+- [Install the Product Bundles Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
+- [Install the Product Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html)
+- [Install the Configurable Bundle Glue API](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
+- [Install the Configurable Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
+- [Install the Configurable Bundle + Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html)
 
 
 ## Add items to a guest cart
@@ -42,8 +42,8 @@ To add items to a guest cart, send the request:
 
 {% info_block infoBox "Creating a guest cart" %}
 
-* If a guest cart does not exist for the current user, and you send a request to add items, the guest cart is created automatically. Otherwise, the items are added to the existing guest cart.
-* Guest users have one cart by default. You can optionally specify its ID by using the following endpoint. The information in this section is valid for both endpoints.
+- If a guest cart does not exist for the current user, and you send a request to add items, the guest cart is created automatically. Otherwise, the items are added to the existing guest cart.
+- Guest users have one cart by default. You can optionally specify its ID by using the following endpoint. The information in this section is valid for both endpoints.
 
 `POST` **/guest-carts/*{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*/guest-cart-items**
 
@@ -62,10 +62,11 @@ To add items to a guest cart, send the request:
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | <ul><li>guest-cart-items</li><li>concrete-products</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>product-options</li><li>sales-units</li><li>product-measurement-units</li><li>bundle-items</li><li>bundled-items</li><li>abstract-products</li></ul> |
+
 {% info_block infoBox "Included resources" %}
 
-* To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
-* To retrieve product measurement units, include `sales-units` and `product-measurement-units`.
+- To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
+- To retrieve product measurement units, include `sales-units` and `product-measurement-units`.
 
 {% endinfo_block %}
 
@@ -85,6 +86,7 @@ To add items to a guest cart, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -110,6 +112,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 <details>
@@ -128,6 +131,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 <details>
@@ -150,6 +154,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 <details>
@@ -168,6 +173,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 <details>
@@ -186,6 +192,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 
@@ -212,7 +219,8 @@ To add the promotional product to cart, make sure that the cart fulfills the car
         }
     }
 }
-```    
+```
+
 </details>
 
 <details>
@@ -231,6 +239,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 
@@ -251,6 +260,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 <details>
@@ -269,6 +279,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 <details>
@@ -287,6 +298,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 <details>
@@ -306,6 +318,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -315,7 +328,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 | idPromotionalItem | String |  | The promotional item's ID. You need to specify the ID to apply the promotion's benefits. |
 | salesUnit | Object |  | A list of attributes defining the sales unit to be used for item amount calculation. |
 | salesUnit.id | Integer |  | The unique ID of the sales units to calculate the item amount in. |
-| salesUnit.amount | Decimal |  | The amount of the product in the defined sales units. |    
+| salesUnit.amount | Decimal |  | The amount of the product in the defined sales units. |
 | productOptions | Array |  | A list of attributes defining the product option to add to the cart. |
 | productOptions.sku | String |  | The unique ID of the product option to add to the cart.  |
 
@@ -408,6 +421,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -451,6 +465,7 @@ It is the responsibility of the API Client to track whether the selected items a
     }
 }
 ```
+
 </details>
 
 <details>
@@ -729,6 +744,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -848,6 +864,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 
@@ -1101,6 +1118,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1220,6 +1238,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 
@@ -1323,6 +1342,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1466,6 +1486,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 
@@ -1557,6 +1578,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1782,6 +1804,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -2533,6 +2556,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -2581,6 +2605,7 @@ It is the responsibility of the API Client to track whether the selected items a
     }
 }
 ```
+
 </details>
 
 <details>
@@ -2622,6 +2647,7 @@ It is the responsibility of the API Client to track whether the selected items a
     }
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/guest-cart-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-cart-items-response-attributes.md -->
@@ -2658,7 +2684,7 @@ To add a configurable bundle to a guest cart, send the request:
 <details>
 <summary>Request sample: add a configurable bundle to a guest cart</summary>
 
-`POST https://glue.mysprykershop.com/guest-configurable-bundles?include=items`    
+`POST https://glue.mysprykershop.com/guest-configurable-bundles?include=items`
 
 ```json
 {
@@ -2683,14 +2709,14 @@ To add a configurable bundle to a guest cart, send the request:
     }
 }
 ```
+
 </details>
 
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Integer | &check; | Number of the configurable bundles to add. |
-| templateUuid | 	
-String | &check; | The unique ID of the [Configurable Bundle Template](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html). To get it, retrieve all Configurable Bundle Templates. |
+| templateUuid | 	String | &check; | The unique ID of the [Configurable Bundle Template](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html). To get it, retrieve all Configurable Bundle Templates. |
 | sku | String | &check; | Specifies the SKU of a product to add to the cart. To use promotions, specify the SKU of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to add to the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
 | slotUuid | String | &check; | The unique ID of the slot in the configurable bundle. |
@@ -2850,6 +2876,7 @@ String | &check; | The unique ID of the [Configurable Bundle Template](/docs/pbc
     ]
 }
 ```
+
 </details>
 
 
@@ -2903,10 +2930,11 @@ To change item quantity, send the request:
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | guest-cart-items, concrete-products, product-options, sales-units, product-measurement-units |
+
 {% info_block infoBox "Included resources" %}
 
-* To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
-* To retrieve product measurement units, include `sales-units` and `product-measurement units`
+- To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
+- To retrieve product measurement units, include `sales-units` and `product-measurement units`
 
 {% endinfo_block %}
 
@@ -2914,7 +2942,7 @@ To change item quantity, send the request:
 <details>
 <summary>Request sample: change item quantity in a guest cart</summary>
 
-`PATCH https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`    
+`PATCH https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
 
 ```json
 {
@@ -2927,6 +2955,7 @@ To change item quantity, send the request:
 	}
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -2962,6 +2991,7 @@ To change the quantity of the configurable bundles in a guest cart, send the req
 Request sample: change quantity of configurable bundles in a guest cart
 
 `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/guest-configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530?include=items`
+
 ```json
 {
     "data": {
@@ -3246,6 +3276,7 @@ Request sample: change quantity of configurable bundles in a guest cart
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/guest-cart-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-cart-items-response-attributes.md -->

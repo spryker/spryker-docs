@@ -40,16 +40,17 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the following changes have been applied in transfer objects:
+- Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                                    | TYPE  | EVENT   | PATH                                                                                              |
 |-------------------------------------------------------------|-------|---------|---------------------------------------------------------------------------------------------------|
 | RestProductOfferServicePointAvailabilitiesRequestAttributes | class | created | src/Generated/Shared/Transfer/RestProductOfferServicePointAvailabilitiesRequestAttributesTransfer |
 | ProductOfferServicePointAvailabilityConditions              | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointAvailabilityConditionsTransfer              |
 
-* Make sure you can use the `shipmentTypeUuid` filter when sending requests to the  `product-offer-service-point-availabilities` resource. Example:
+- Make sure you can use the `shipmentTypeUuid` filter when sending requests to the  `product-offer-service-point-availabilities` resource. Example:
 
 `POST https://glue.mysprykershop.com/product-offer-service-point-availabilities`
+
 ```json
   {
       "data": {

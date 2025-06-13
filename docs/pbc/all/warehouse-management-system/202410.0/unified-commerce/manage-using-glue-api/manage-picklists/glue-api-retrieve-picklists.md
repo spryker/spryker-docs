@@ -11,15 +11,16 @@ This endpoint allows retrieving picklists.
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
 
-* [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
-* [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html)
+- [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
+- [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html)
 
 
 ## Retrieve picklists
 
-***
+---
 `GET` **/picking-lists**
-***  
+
+---
 
 ### Request
 
@@ -360,9 +361,10 @@ For detailed information about the modules that provide the API functionality an
 
 ## Retrieve a picklist
 
-***
+---
 `GET` **/picking-lists/*{% raw %}{{picklist_id}}{% endraw %}***
-***  
+
+---
 
 
 | PATH PARAMETER | DESCRIPTION |

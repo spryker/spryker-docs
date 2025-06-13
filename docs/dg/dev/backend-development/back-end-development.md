@@ -9,28 +9,28 @@ redirect_from:
 
 This section contains overviews and instructions for back-end developing on the the Spryker Commerce OS. It includes the following components and topics:
 
-* [Client](/docs/dg/dev/backend-development/client/client.html)
+- [Client](/docs/dg/dev/backend-development/client/client.html)
 
-* [Yves](/docs/dg/dev/backend-development/yves/yves.html)
+- [Yves](/docs/dg/dev/backend-development/yves/yves.html)
 
-* [Zed](/docs/dg/dev/backend-development/zed/zed.html)
+- [Zed](/docs/dg/dev/backend-development/zed/zed.html)
 
-* [Cronjobs](/docs/dg/dev/backend-development/cronjobs/cronjobs.html)
+- [Cronjobs](/docs/dg/dev/backend-development/cronjobs/cronjobs.html)
 
-* [Forms](/docs/dg/dev/backend-development/forms/forms.html)
+- [Forms](/docs/dg/dev/backend-development/forms/forms.html)
 
-* [Plugins](/docs/dg/dev/backend-development/plugins/plugins.html)
+- [Plugins](/docs/dg/dev/backend-development/plugins/plugins.html)
 
-* [Session management](/docs/dg/dev/backend-development/session-management.html)
+- [Session management](/docs/dg/dev/backend-development/session-management.html)
 
-* [Running production](/docs/dg/dev/backend-development/running-production.html)
+- [Running production](/docs/dg/dev/backend-development/running-production.html)
 
-* [Console commands](/docs/dg/dev/backend-development/console-commands/console-commands.html)
+- [Console commands](/docs/dg/dev/backend-development/console-commands/console-commands.html)
 
-* [Extending Spryker](/docs/dg/dev/backend-development/extend-spryker/development-strategies.html)
+- [Extending Spryker](/docs/dg/dev/backend-development/extend-spryker/development-strategies.html)
 
-* [Zed UI tables](/docs/dg/dev/backend-development/zed-ui-tables/zed-ui-tables.html)
+- [Zed UI tables](/docs/dg/dev/backend-development/zed-ui-tables/zed-ui-tables.html)
 
-* [Messages and errors](/docs/dg/dev/backend-development/messages-and-errors/messages-and-errors.html)
+- [Messages and errors](/docs/dg/dev/backend-development/messages-and-errors/messages-and-errors.html)
 
-* [Factory](/docs/dg/dev/backend-development/factory/factory.html)
+- [Factory](/docs/dg/dev/backend-development/factory/factory.html)

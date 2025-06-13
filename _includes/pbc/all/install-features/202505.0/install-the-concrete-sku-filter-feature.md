@@ -13,6 +13,7 @@ Make sure that the following modules have been installed:
 | MODULE                       | EXPECTED DIRECTORY                             |
 |------------------------------|------------------------------------------------|
 | ProductModule                | vendor/spryker/product-management              |
+
 {% endinfo_block %}
 
 ## 2) Enable the feature in the config

@@ -38,8 +38,8 @@ The template layer contains packages that can be used as quick starters for demo
 |                                                                        |                             |
 | [Application](https://www.npmjs.com/package/@spryker-oryx/application) | `@spryker-oryx/application` |
 | [Presets](https://www.npmjs.com/package/@spryker-oryx/presets)         | `@spryker-oryx/presets`     |
-| [Labs ](https://www.npmjs.com/package/@spryker-oryx/labs)              | `@spryker-oryx/labs`        |
-| [Themes ](https://www.npmjs.com/package/@spryker-oryx/themes)          | `@spryker-oryx/themes`      |
+| [Labs](https://www.npmjs.com/package/@spryker-oryx/labs)              | `@spryker-oryx/labs`        |
+| [Themes](https://www.npmjs.com/package/@spryker-oryx/themes)          | `@spryker-oryx/themes`      |
 | [Resources](https://www.npmjs.com/package/@spryker-oryx/resources)     | `@spryker-oryx/resources`   |
 
 {% info_block infoBox %}
@@ -108,6 +108,6 @@ To continue innovating and keep the ecosystem healthy, we follow the guidelines:
 
 - Use peer dependencies: enables application owners to choose specific versions of dependencies while maintaining compatibility with the framework.
 
-- Document version resolutions: when known security concerns or significant improvements can only be solved with a breaking change to the dependencies, we add _version resolutions_ to the Oryx documentation. Application owners can change their `package.json` accordingly to override specific dependencies.
+- Document version resolutions: when known security concerns or significant improvements can only be solved with a breaking change to the dependencies, we add *version resolutions* to the Oryx documentation. Application owners can change their `package.json` accordingly to override specific dependencies.
 
 By following these guidelines, Oryx aims to maintain a stable and secure ecosystem while providing flexibility for application developers to choose the versions of dependencies that suit their needs.

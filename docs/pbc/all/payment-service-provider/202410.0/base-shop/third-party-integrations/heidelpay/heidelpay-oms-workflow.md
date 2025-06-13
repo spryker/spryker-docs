@@ -21,8 +21,8 @@ To use Heidelpay, [create a new OMS](/docs/dg/dev/backend-development/data-manip
 
 Some examples of the basic and fully functional state machines for each payment method were already built: `vendor/spryker-eco/heidelpay/config/Zed/Oms`
 
-* `HeidelpaySofort01.xml`
-* `HeidelpayPaypalDebit01.xml`
-* `HeidelpayIdeal01.xml`
-* `HeidelpaySofort01.xml`
-* `HeidelpayCreditCardSecureAuthorize01.xml`
+- `HeidelpaySofort01.xml`
+- `HeidelpayPaypalDebit01.xml`
+- `HeidelpayIdeal01.xml`
+- `HeidelpaySofort01.xml`
+- `HeidelpayCreditCardSecureAuthorize01.xml`

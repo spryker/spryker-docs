@@ -6,14 +6,14 @@ Version 2.0.0 of the `ContentGui` module introduces the [Content Items](/docs/pb
 
 The `ContentGui` module version 2.0.0 introduced the following changes:
 
-* Adjusted models to support parameter KEY of Content.
-* Introduced the `ContentTransfer::$key` transfer object property.
-* Changed a header in `EditContent/index.twig` to use a key instead of the ID.
-* Increased the version of `spryker/content` in composer.json.
+- Adjusted models to support parameter KEY of Content.
+- Introduced the `ContentTransfer::$key` transfer object property.
+- Changed a header in `EditContent/index.twig` to use a key instead of the ID.
+- Increased the version of `spryker/content` in composer.json.
 
 You can find more details about the changes on the [ContentGui module release notes](https://github.com/spryker/content-gui/releases/tag/2.0.0) page.
 
-_Estimated migration time: 30 minutes_
+*Estimated migration time: 30 minutes*
 
 To upgrade to the new version of the module, do the following:
 

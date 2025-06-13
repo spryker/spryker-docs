@@ -257,8 +257,8 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure the following actions take place as expected:
-* When you retrieve a merchant using `MerchantFacade::get()`, the response transfer contains merchant stocks.
-* When you create a merchant in the Back Office, its stock also gets created in the `spy_merchant_stock` table.
+- When you retrieve a merchant using `MerchantFacade::get()`, the response transfer contains merchant stocks.
+- When you create a merchant in the Back Office, its stock also gets created in the `spy_merchant_stock` table.
 
 {% endinfo_block %}
 
@@ -372,9 +372,9 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
 {% info_block warningBox "Verification" %}
 
 Make sure the following actions take place as expected:
-* When you create a product offer using `ProductOfferFacade::create()` with provided stock data, it persists to `spy_product_offer_stock`.
-* When you update a product offer using `ProductOfferFacade::create()` with provided stock data, it updates stock data in `spy_product_offer_stock`.
-* When you retrieve a product offer using `ProductOfferFacade::findOne()`, the response data contains info about product offer stocks.
+- When you create a product offer using `ProductOfferFacade::create()` with provided stock data, it persists to `spy_product_offer_stock`.
+- When you update a product offer using `ProductOfferFacade::create()` with provided stock data, it updates stock data in `spy_product_offer_stock`.
+- When you retrieve a product offer using `ProductOfferFacade::findOne()`, the response data contains info about product offer stocks.
 
 {% endinfo_block %}
 
@@ -611,8 +611,8 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure the following actions take place as expected:
-* The command `console sync:data merchant_profile` exports data from the `spy_product_offer_availability_storage` table to Redis.
-* When a product offer availability entity gets created or updated through ORM, it's exported to Redis accordingly.
+- The command `console sync:data merchant_profile` exports data from the `spy_product_offer_availability_storage` table to Redis.
+- When a product offer availability entity gets created or updated through ORM, it's exported to Redis accordingly.
 
 {% endinfo_block %}
 
@@ -626,7 +626,7 @@ Prepare your data according to your requirements using the demo data:
 
 **data/import/common/common/marketplace/merchant_stock.csv**
 
-```
+```csv
 merchant_reference,stock_name
 MER000001,Spryker MER000001 Warehouse 1
 MER000002,Video King MER000002 Warehouse 1
@@ -646,7 +646,7 @@ MER000006,Sony Experts MER000006 Warehouse 1
 <details>
 <summary>Prepare your data according to your requirements using the demo data:</summary>
 
-```
+```csv
 product_offer_reference,stock_name,quantity,is_never_out_of_stock
 offer1,Spryker MER000001 Warehouse 1,10,1
 offer2,Video King MER000002 Warehouse 1,0,0

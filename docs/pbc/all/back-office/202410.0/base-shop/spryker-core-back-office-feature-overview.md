@@ -27,22 +27,22 @@ The Spryker Back Office provides you with a variety of sections that are logical
 
 {% info_block infoBox "Spryker Back Office" %}
 
-It provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (_for B2B users_), and merchant-buyer contracts' setup.
+It provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (*for B2B users*), and merchant-buyer contracts' setup.
 
 {% endinfo_block %}
 
 With Spryker Back Office, you can do the following:
-* Manage orders placed by your customers as well as create orders for customers.
-* Create and manage customers.
-* Build and manage product categories.
-* Create and manage CMS blocks and pages.
-* Handle translations.
-* Manage products and all elements related to them (availability, labels, options, types).
-* Customize search and filters for the online store.
-* Create and manage discounts.
-* Build and manage the main navigation of your online store.
-* Create new carrier companies and shipment methods as well as manage those.
-* Create admin users, and add roles and user groups.
+- Manage orders placed by your customers as well as create orders for customers.
+- Create and manage customers.
+- Build and manage product categories.
+- Create and manage CMS blocks and pages.
+- Handle translations.
+- Manage products and all elements related to them (availability, labels, options, types).
+- Customize search and filters for the online store.
+- Create and manage discounts.
+- Build and manage the main navigation of your online store.
+- Create new carrier companies and shipment methods as well as manage those.
+- Create admin users, and add roles and user groups.
 
 Depending on the roles and teams in your project, you can limit the access of different Back Office users to specific Back Office areas.
 

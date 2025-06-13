@@ -22,9 +22,9 @@ This document describes the `product_abstract.csv` file to configure [Abstract P
 
 ## Import file dependencies
 
-* [category.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/import-file-details-category.csv.html)
-* [glossary.csv](/docs/pbc/all/miscellaneous/{{page.version}}/import-and-export-data/import-file-details-glossary.csv.html)
-* [tax.csv](/docs/pbc/all/tax-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html)
+- [category.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/import-file-details-category.csv.html)
+- [glossary.csv](/docs/pbc/all/miscellaneous/{{page.version}}/import-and-export-data/import-file-details-glossary.csv.html)
+- [tax.csv](/docs/pbc/all/tax-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html)
 
 
 
@@ -65,8 +65,8 @@ This document describes the `product_abstract.csv` file to configure [Abstract P
 
 For each attribute, where N is a number starting in 1, it's mandatory to have both fields:
 
-* `attribute_key_N`
-* `value_N`
+- `attribute_key_N`
+- `value_N`
 
 The amount of attributes is not limited.
 

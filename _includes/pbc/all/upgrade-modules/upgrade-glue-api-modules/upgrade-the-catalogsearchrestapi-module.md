@@ -7,6 +7,7 @@ CatalogSearchRestApi version 2 has been improved to work properly with the curre
 Make sure that API consumers expect a correct response:
 
 **search**
+
 ```yaml
 RestCatalogSearchAbstractProducts:
 		properties:
@@ -68,6 +69,6 @@ RestCatalogSearchAbstractProducts:
 				type: array
 ```
 
-_Estimated migration time: 30 minutes_
+*Estimated migration time: 30 minutes*
 
 <!-- Last review date: Dec 10, 2018-- by Oleh Hladchenko, Yuliia Boiko -->

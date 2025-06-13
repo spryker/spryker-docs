@@ -18,10 +18,10 @@ To add service point addresses using Glue API, see [Add service point addresses]
 ## Service type
 
 A *service type* is a classification of services that a business offers to its customers. Service types are determined by the nature of the business. Service type examples:
-* Pickup service
-* Return service
-* Rental service
-* Repair service
+- Pickup service
+- Return service
+- Rental service
+- Repair service
 
 To add service types using Glue API, see [Add service types](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html).
 
@@ -41,18 +41,18 @@ To import services, see [Import file details: service.csv](/docs/pbc/all/service
 
 
 With the help of service points, types, and services, a store operator can model different use cases depending on their business needs. Here are some examples of services that can be implemented at the project level:
-* Ship from store
-* Car maintenance or installations services
-* Product demonstration at a retail location
-* Repair service at a retail location
+- Ship from store
+- Car maintenance or installations services
+- Product demonstration at a retail location
+- Repair service at a retail location
 
 
 ## Service points on the Storefront
 
 When checking out, customers select a service point they want the order to be processes at. The feature is shipped with a search widget that lets them search service points by the following:
-* Service point name
-* Zip code
-* City
+- Service point name
+- Zip code
+- City
 
 By default, search results are sorted by city.
 
@@ -67,11 +67,11 @@ After placing an order, the customer can see the selected service point on the O
 
 ## Current constraints
 
-* Services can be configured only for product offers.
-* Product catalog can't be filtered by a service type or a service provided in a specific service point.
-* The product offer widget on the product details page is not supported. It doesn't show the differences between product offers based on the services assigned to them. As a result, differnt product offers are displayed as duplicates.
-* Customers can't add products with preselected service points to cart. They can select service points only during checkout.
-* If a product is added to cart without a product offer attached to it, this product can be purchased only with the *Delivery* shipment type.
+- Services can be configured only for product offers.
+- Product catalog can't be filtered by a service type or a service provided in a specific service point.
+- The product offer widget on the product details page is not supported. It doesn't show the differences between product offers based on the services assigned to them. As a result, differnt product offers are displayed as duplicates.
+- Customers can't add products with preselected service points to cart. They can select service points only during checkout.
+- If a product is added to cart without a product offer attached to it, this product can be purchased only with the *Delivery* shipment type.
 
 
 ## Related Business User documents

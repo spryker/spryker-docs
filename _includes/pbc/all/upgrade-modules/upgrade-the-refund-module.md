@@ -20,8 +20,8 @@ Check your code and where you make use of the `RefundFacade` change your impleme
 
 These methods are:
 
-* `RefundFacade::calculateRefund(array $salesOrderItems`, SpySalesOrder $salesOrderEntity)`
-* `RefundFacade::saveRefund(RefundTransfer $refundTransfer)`
+- `RefundFacade::calculateRefund(array $salesOrderItems`, SpySalesOrder $salesOrderEntity)`
+- `RefundFacade::saveRefund(RefundTransfer $refundTransfer)`
 
 **You need to:**
 

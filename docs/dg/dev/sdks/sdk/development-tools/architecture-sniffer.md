@@ -61,9 +61,9 @@ $ vendor/bin/console code:sniff:architecture -m Customer
 
 Additional options:
 
-* `-p`: Priority [1 (highest), 2 (medium), 3 (experimental)] (defaults to 2)
-* `-s`: Strict (to also report those nodes with a @SuppressWarnings annotation)
-* `-d`: Dry-run, only output the command to be run
+- `-p`: Priority [1 (highest), 2 (medium), 3 (experimental)] (defaults to 2)
+- `-s`: Strict (to also report those nodes with a @SuppressWarnings annotation)
+- `-d`: Dry-run, only output the command to be run
 
 Run `–help` or `-h` to get help about usage of all options available.
 

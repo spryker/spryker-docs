@@ -82,6 +82,7 @@ class CmsBlockDependencyProvider extends SprykerCmsBlockDependencyProvider
 4. Register the category relation update plugin:
 
 **src/Pyz/Zed/Category/CategoryDependencyProvider.php**
+
 ```php
 <?php
 

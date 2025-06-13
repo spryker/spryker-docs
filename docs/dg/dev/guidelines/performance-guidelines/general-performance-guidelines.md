@@ -26,10 +26,10 @@ Spryker is a fast application by design. These guidelines explain how to optimiz
 
 ## Hosting recommendations
 
-* *CPU*: Spryker's execution time depends on the CPU of the server. In general, more CPU capacity supports faster response times and allows a higher load.
-* *Memory (Databases)*: Databases (Redis, Elasticsearch, and PostgreSQL) mainly consume RAM. When there is not enough RAM, you can face performance issues. The best amount of RAM depends on the amount of data that you have and needs to be measured from time to time.
-* *Memory (PHP)*: The amount of memory does not impact on the execution time of PHP, but to squeeze everything out of your server, you need to define the `pm.max_children` configuration value of PHP-FPM. The max amount of parallel processes must not be higher than the available memory divided by the maximum consumption per process.
-* *Latency*: You can see the highest speed of Spryker when Redis is installed on the same machine as the application, which helps to avoid latency. Redis has a blazing fast response time of 0.1 ms, but in cloud environments, you can often get additional 1-3ms of latency per `get()`. A caching mechanism that uses Spryker is described in the following sections of this document.
+- *CPU*: Spryker's execution time depends on the CPU of the server. In general, more CPU capacity supports faster response times and allows a higher load.
+- *Memory (Databases)*: Databases (Redis, Elasticsearch, and PostgreSQL) mainly consume RAM. When there is not enough RAM, you can face performance issues. The best amount of RAM depends on the amount of data that you have and needs to be measured from time to time.
+- *Memory (PHP)*: The amount of memory does not impact on the execution time of PHP, but to squeeze everything out of your server, you need to define the `pm.max_children` configuration value of PHP-FPM. The max amount of parallel processes must not be higher than the available memory divided by the maximum consumption per process.
+- *Latency*: You can see the highest speed of Spryker when Redis is installed on the same machine as the application, which helps to avoid latency. Redis has a blazing fast response time of 0.1 ms, but in cloud environments, you can often get additional 1-3ms of latency per `get()`. A caching mechanism that uses Spryker is described in the following sections of this document.
 
 ## Disable Xdebug
 
@@ -51,7 +51,7 @@ Make sure that Opcache is activated and properly configured:
 | `opcache.max_accelerated_files` | Spryker and all the used open-source libraries contain a lot of PHP classes, so this value should be high (max is 100k).                                                                                                                                                              | ?          | 8192        |
 | `opcache.memory_consumption`    | To avoid an automatic reset of the Opcache, these values must be high enough. You can look into the PHP info (for exaample, in Zed, browse to `/maintenance/php-info`) to see the current usage. You can count the number of classes in your codebase to get an idea of a good value. | ?          |             |
 | `opcache.validate_timestamps`   | Boolean values that activate the check for the updated code. This check is time-consuming and must be disabled in production environments. However, you need to flush the cache during deployments—for example, by restarting PHP.                                                    | 0          | 1           |
-| `opcache.revalidate_freq`       | Configures the frequency of checks if enabled by the `validate_timestamps` configuration. *0* means *on every request*,  which is recommended for development environments if you want to program with activated Opcache.	0	0                                                         | 0          | 0           |
+| `opcache.revalidate_freq`       | Configures the frequency of checks if enabled by the `validate_timestamps` configuration. *0* means *on every request*,  which is recommended for development environments if you want to program with activated Opcache. 0 0                                                         | 0          | 0           |
 
 ```php
 zend_extension=opcache.so
@@ -112,11 +112,11 @@ Publish & Sync process can work slower and generate hundreds of megabytes of `IN
 
 There are a few options to avoid this in production environments:
 
-* Disable event logs using one of the following:
-  * Set `EventConstants::LOG_FILE_PATH` to `null`.
-  * Set `EventConstants::LOGGER_ACTIVE` to `false` in the appropriate config files, like `config_default.php`.
-* Change the events log level in any config file, by setting `EventConstants::EVENT_LOGGER_LEVEL` to, for example, `\Monolog\Logger::WARNING` in newer (> 2.9.2) versions of `spryker/event`.
-* For versions up to `spryker/event:2.9.2`: Override `LoggerConfig::createStreamHandler` to change the [event logger level](https://github.com/spryker/event/blob/master/src/Spryker/Zed/Event/Business/Logger/LoggerConfig.php).
+- Disable event logs using one of the following:
+  - Set `EventConstants::LOG_FILE_PATH` to `null`.
+  - Set `EventConstants::LOGGER_ACTIVE` to `false` in the appropriate config files, like `config_default.php`.
+- Change the events log level in any config file, by setting `EventConstants::EVENT_LOGGER_LEVEL` to, for example, `\Monolog\Logger::WARNING` in newer (> 2.9.2) versions of `spryker/event`.
+- For versions up to `spryker/event:2.9.2`: Override `LoggerConfig::createStreamHandler` to change the [event logger level](https://github.com/spryker/event/blob/master/src/Spryker/Zed/Event/Business/Logger/LoggerConfig.php).
 
 ## Activate Twig compiler
 
@@ -283,6 +283,7 @@ Zed navigation cache is activated by default:
 $config[\Spryker\Shared\ZedNavigation\ZedNavigationConstants::ZED_NAVIGATION_CACHE_ENABLED] = true;
 
 ```
+
 ## Enable Zed and Merchant Portal router caching
 
 Routing for ZED and the Merchant Portal can either be cached or generated on each request.
@@ -290,6 +291,7 @@ Routing for ZED and the Merchant Portal can either be cached or generated on eac
 For optimal performance, we recommend building routing cache once during deployment.
 
 To configure this, update the configuration in `src/Pyz/Zed/Router/RouterConfig.php`:
+
 ```php
    public function isRoutingCacheEnabled(): bool
     {
@@ -324,6 +326,7 @@ Additionally, you need to build the cache file during your deployment. Add `\Spr
 ```bash
 vendor/bin/console cache:class-resolver:build
 ```
+
 This command builds a cache file, which is used by the `ClassResolver`.
 
 ### Activate resolved instance cache
@@ -349,8 +352,8 @@ Split navigation significantly enhances performance for both ZED and the Merchan
 This feature is shipped by default but existing projects may need to install it using the following steps:
 For projects that began before this feature was introduced, the following steps should be taken:
 1. Install or update the following modules:
- - `spryker/merchant-portal-application:^1.4.0`
- - `spryker/zed-ui: ^3.1.0`
+- `spryker/merchant-portal-application:^1.4.0`
+- `spryker/zed-ui: ^3.1.0`
 
 2. Move merchant portal related navigation from `config/Zed/navigation.xml` to `config/Zed/navigation-main-merchant-portal.xml`.
 3. Rename `config/Zed/navigation-secondary.xml` to `config/Zed/navigation-secondary-merchant-portal.xml`.
@@ -440,6 +443,7 @@ For carts with big numbers of items, you can configure order items to be placed 
 2. Configure columns to be returned for each order item:
 
 **src/Pyz/Zed/Sales/SalesConfig.php**
+
 ```php
 <?php
 
@@ -471,6 +475,7 @@ The prior example uses the `OrderItemReference` column, which is provided by def
 To generate the `OrderItemReference` value, add `OrderItemReferenceExpanderPreSavePlugin` to the `getOrderItemExpanderPreSavePlugins()` method:
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+
 ```php
 use Spryker\Zed\SalesOms\Communication\Plugin\OrderItemReferenceExpanderPreSavePlugin;
 

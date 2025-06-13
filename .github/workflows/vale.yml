@@ -1,4 +1,4 @@
-name: Is formatting great?
+name: Is style great?
 
 on:
   push:

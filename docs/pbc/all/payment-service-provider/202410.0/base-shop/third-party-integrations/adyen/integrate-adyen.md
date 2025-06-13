@@ -222,6 +222,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
+
 </details>
 
 ### Router
@@ -256,6 +257,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block infoBox "Note" %}
@@ -319,6 +321,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
     }
 }
 ```
+
 </details>
 
 2. Add the subforms of the desired payment methods:
@@ -418,6 +421,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     }
 }
 ```
+
 </details>
 
 ### Filtering
@@ -455,6 +459,7 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
     }
 }
 ```
+
 </details>
 
 ### Frontend
@@ -496,4 +501,5 @@ Add the form templates of the desired payment methods to customForms:
        },
     }
 ```
+
 </details>

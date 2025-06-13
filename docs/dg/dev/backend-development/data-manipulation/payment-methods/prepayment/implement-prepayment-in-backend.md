@@ -23,8 +23,8 @@ related:
 
 To integrate the prepayment method into the checkout, you need to provide implementations for these two plugins:
 
-* `CheckoutPreCondition`
-* `PaymentSaveOrder`
+- `CheckoutPreCondition`
+- `PaymentSaveOrder`
 
 Perform the following steps:
 
@@ -154,7 +154,7 @@ Use the prepayment state machine that's delivered with Demoshop.
 
 In the `SalesConfig` class, add this configuration:
 
-```
+```php
 /**
      * @var array
      */

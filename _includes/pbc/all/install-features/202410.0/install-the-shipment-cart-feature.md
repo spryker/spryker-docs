@@ -20,6 +20,7 @@ Install the required modules:
 ```bash
 composer require spryker/shipment-cart-connector: "^2.1.0" spryker/shipment-type-cart: "^1.0.0" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
@@ -38,6 +39,7 @@ Apply transfer changes:
 ```bash
 console transfer:generate
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure the following changes have been applied in transfer objects:
@@ -149,8 +151,8 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-* Make sure that if you change items in the cart (add, remove or change quantity) then all the shipping methods are sanitized.
-* Make sure that if you deactivate shipment type selected during the checkout, you will receive a validation error on checkout summary page. 
+- Make sure that if you change items in the cart (add, remove or change quantity) then all the shipping methods are sanitized.
+- Make sure that if you deactivate shipment type selected during the checkout, you will receive a validation error on checkout summary page.
 
 {% endinfo_block %}
 
@@ -163,7 +165,7 @@ Follow the steps below to install the feature frontend.
 
 Install the required features:
 
-| NAME     | VERSION          | 
+| NAME     | VERSION          |
 |----------|------------------|
 | Shipment | {{page.version}} |
 | Cart     | {{page.version}} |

@@ -111,6 +111,7 @@ To retrieve company users of the current authenticated customer, send the reques
     }
 }
 ```
+
 </details>
 
 <details>
@@ -281,6 +282,7 @@ To retrieve company users of the current authenticated customer, send the reques
     ]
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -306,4 +308,4 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ## Next steps
 
-* [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html)
+- [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html)

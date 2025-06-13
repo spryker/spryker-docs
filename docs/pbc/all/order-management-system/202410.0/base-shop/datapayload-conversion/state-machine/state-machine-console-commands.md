@@ -129,6 +129,7 @@ interface StateMachineHandlerInterface
 ```
 
 ## Condition Plugin Interface
+
 ```php
 <?php
 interface ConditionPluginInterface
@@ -144,8 +145,10 @@ interface ConditionPluginInterface
 
 }
 ```
+
 ## Command Plugin Interface
-```
+
+```php
 <?php
 interface CommandPluginInterface
 {

@@ -29,7 +29,7 @@ related:
 
 The `frontend:project:install-dependencies` command returns an error similar to the following:
 
-```
+```bash
 -->  DEVELOPMENT MODE
 Store: US | Environment: docker
 Install Project dependencies

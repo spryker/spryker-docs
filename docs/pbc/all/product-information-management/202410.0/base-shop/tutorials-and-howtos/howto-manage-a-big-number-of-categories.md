@@ -25,7 +25,7 @@ redirect_from:
 
 ## Overview
 
-The default Zed UI for the **Category** section comes in the form of a tree, which is handy for managing nested categories but impossible to use with a large number of categories. To cope with such cases, we've introduced a new _Category_ section view in the form of a table, where categories are listed, paginated, and can be easily found by searching.
+The default Zed UI for the **Category** section comes in the form of a tree, which is handy for managing nested categories but impossible to use with a large number of categories. To cope with such cases, we've introduced a new *Category* section view in the form of a table, where categories are listed, paginated, and can be easily found by searching.
 
 ## Installation
 

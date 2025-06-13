@@ -29,8 +29,8 @@ Currently, Stripe app supports B2C and B2B modes. We are working on enabling Str
 
 ### Technical prerequisites
 
-* [App Composition Platform](/docs/dg/dev/acp/app-composition-platform-installation.html)
-* [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
+- [App Composition Platform](/docs/dg/dev/acp/app-composition-platform-installation.html)
+- [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
 
 
 ## Agent Assist in Merchant Portal <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
@@ -93,9 +93,9 @@ Available for cloud environments.
 ## Merchant Portal UI/UX improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 We introduced the following Merchant Portal improvements:
-* Color adjustments
-* Updated icons
-* A reorganized sidebar.
+- Color adjustments
+- Updated icons
+- A reorganized sidebar.
 
 The sidebar's state, whether expanded or collapsed, is now saved.
 
@@ -129,8 +129,8 @@ Based on your input in the UX research, we restructured the layout of Pull Reque
 ![scu-prs](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202404.0.md/scu-prs.png)
 
 PR examples to compare:
-Before: https://github.com/spryker-shop/b2c-demo-shop/pull/297
-Now: https://github.com/spryker-shop/b2c-demo-shop/pull/441
+Before: <https://github.com/spryker-shop/b2c-demo-shop/pull/297>
+Now: <https://github.com/spryker-shop/b2c-demo-shop/pull/441>
 
 ### Business benefit
 
@@ -150,19 +150,19 @@ In this release, we added the support of CRUD for combined entities allowing to 
 
 ### Business benefits
 
-* Faster data imports
-* Friendlier API interface to import data into Spryker
+- Faster data imports
+- Friendlier API interface to import data into Spryker
 
 
 ### Documentation
 
-* [Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api/data-exchange-api-integration.html)
-* [Data Exchange](/docs/pbc/all/data-exchange/{{site.version}}/data-exchange.html#data-importers-and-data-exporters)
+- [Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api/data-exchange-api-integration.html)
+- [Data Exchange](/docs/pbc/all/data-exchange/{{site.version}}/data-exchange.html#data-importers-and-data-exporters)
 
 ### Technical prerequisites
 
-* [Data Exchange API integration](/docs/pbc/all/data-exchange/{{site.version}}/install-and-upgrade/install-the-data-exchange-api.html#prerequisites)
-* [Data Exchange API + Install the Inventory Management feature](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api-inventory-management-feature.html)
+- [Data Exchange API integration](/docs/pbc/all/data-exchange/{{site.version}}/install-and-upgrade/install-the-data-exchange-api.html#prerequisites)
+- [Data Exchange API + Install the Inventory Management feature](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api-inventory-management-feature.html)
 
 
 ## Symfony 6.4 LTS support <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
@@ -182,8 +182,8 @@ The latest Symfony framework LTS version provides enhanced stability, security, 
 
 ### Documentation
 
-* [Upgrade to Symfony 6](https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html)
-* [Symfony blog posts related to new features](https://symfony.com/blog/category/living-on-the-edge/7.0-6.4)
+- [Upgrade to Symfony 6](https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html)
+- [Symfony blog posts related to new features](https://symfony.com/blog/category/living-on-the-edge/7.0-6.4)
 
 ### Technical prerequisites
 

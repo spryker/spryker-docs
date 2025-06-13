@@ -64,7 +64,7 @@ class MerchantCommissionDependencyProvider extends SprykerMerchantCommissionDepe
 2. Add a merchant product assigned to the defined category to cart and place the order.
 
 Make sure the following applies:
-* The `commission-calculate` OMS event has been triggered.
-* In the `spy_sales_merchant_commission` database table, there's a new record with your merchant commission applied to corresponding sales order item.
+- The `commission-calculate` OMS event has been triggered.
+- In the `spy_sales_merchant_commission` database table, there's a new record with your merchant commission applied to corresponding sales order item.
 
 {% endinfo_block %}

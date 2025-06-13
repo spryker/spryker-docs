@@ -6,10 +6,10 @@ The main update of the `Merchant` v3.0.0 is the ability to create stores and URL
 
 Other changes are:
 
-* Removed `MerchantCriteriaFilter` transfer.
-* Added required merchant reference in the database.
-* Added is active column.
-* Changed names and signatures in the merchant facade.
+- Removed `MerchantCriteriaFilter` transfer.
+- Added required merchant reference in the database.
+- Added is active column.
+- Changed names and signatures in the merchant facade.
 
 ```php
 namespace Spryker\Zed\Merchant\Business;
@@ -202,15 +202,15 @@ We also removed the ability to delete the seller from the database.
 
 Other changes are listed below:
 
-* Added `registrationNumber`, `email` (unique), `merchantReference` (unique), and `status` to the Merchant database entity.
-* Added the same attributes to the `MerchantTransfer`.
-* Reworked `MerchantFacade` to remove the permanent deletion of a Merchant entity from the database.
-* Reworked `MerchantFacade` functions to take from `MerchantTransfer` and return the `MerchantResponseTransfer`.
-* Added `MerchantFacade::find and MerchantFacade::findOne` functions with `MerchantCriteriaFilterTransfer` as input.
-* Added Merchant status manipulation configuration and validation reflected in the `MerchantConfig`.
-* Added the default status for the merchant on creation logic.
-* Added Merchant expander plugins on fetch action.
-* Added Merchant post save plugins after create and update actions.
+- Added `registrationNumber`, `email` (unique), `merchantReference` (unique), and `status` to the Merchant database entity.
+- Added the same attributes to the `MerchantTransfer`.
+- Reworked `MerchantFacade` to remove the permanent deletion of a Merchant entity from the database.
+- Reworked `MerchantFacade` functions to take from `MerchantTransfer` and return the `MerchantResponseTransfer`.
+- Added `MerchantFacade::find and MerchantFacade::findOne` functions with `MerchantCriteriaFilterTransfer` as input.
+- Added Merchant status manipulation configuration and validation reflected in the `MerchantConfig`.
+- Added the default status for the merchant on creation logic.
+- Added Merchant expander plugins on fetch action.
+- Added Merchant post save plugins after create and update actions.
 
 {% info_block infoBox "Info" %}
 
@@ -289,6 +289,6 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 }
 ```
 
-* `MerchantPostCreatePluginInterface`plugins are responsible for post creation action for merchants.
-* `MerchantPostUpdatePluginInterface`plugins are responsible for post updating action for merchants.
-* `MerchantExpanderPluginInterfaceplugins`are responsible for expanding merchant by additional data.
+- `MerchantPostCreatePluginInterface`plugins are responsible for post creation action for merchants.
+- `MerchantPostUpdatePluginInterface`plugins are responsible for post updating action for merchants.
+- `MerchantExpanderPluginInterfaceplugins`are responsible for expanding merchant by additional data.

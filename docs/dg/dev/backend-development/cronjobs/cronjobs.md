@@ -19,7 +19,7 @@ related:
     link: docs/scos/dev/sdk/cronjob-scheduling.html
 ---
 
-Spryker applications demand performing repetitive background operations called _jobs_. Such operations are necessary for synchronizing denormalized data into the search engine or key-value store. For Spryker applications to operate properly, we recommend running predefined jobs.
+Spryker applications demand performing repetitive background operations called *jobs*. Such operations are necessary for synchronizing denormalized data into the search engine or key-value store. For Spryker applications to operate properly, we recommend running predefined jobs.
 
 While setting up and configuring a scheduler, a developer is to solve the following tasks:
 
@@ -61,6 +61,7 @@ $config[SchedulerConstants::ENABLED_SCHEDULERS] = [
 // Sets up schedulers that will be executed
 vendor/bin/console scheduler:setup -s {scheduler_name} -s ...
 ```
+
 Suspend jobs:
 
 ```php
@@ -73,6 +74,7 @@ vendor/bin/console scheduler:suspend -s {scheduler_name} -s ...
 // Suspends one or several jobs for specific scheduler
 vendor/bin/console scheduler:suspend -s {scheduler_name} -j {job_name}
 ```
+
 Resume jobs:
 
 ```php
@@ -85,6 +87,7 @@ vendor/bin/console scheduler:resume -s {scheduler_name} -s ...
 // Resumes one or several jobs for specific scheduler
 vendor/bin/console scheduler:resume -s {scheduler_name} -j {job_name} -j ...
 ```
+
 Clean jobs:
 
 ```php

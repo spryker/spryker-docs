@@ -43,18 +43,19 @@ data:import:discount-voucher
 | max_number_of_uses |  | Number | If empty, this will be set to 0. | The maximum amount of times this voucher can be used. |
 | voucher_batch | &check; | Number |`voucher_batch` must be previously created during *discount.csv* import, then the batch value must be a different number for each row in the file. | This groups vouchers into batches. It identifies a voucher belonging to the same voucher pool. |
 | is_active |  | Boolean | If empty, will be set to False = 0.<ul><li>True = 1</li><li>False = 0</li></ul>  | If true, the discount is active. |
+
 *N/A: Not applicable.
 
 ## Import file dependencies
 
-This file has the following dependency: [ discount.csv ](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount.csv.html).
+This file has the following dependency: [discount.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount.csv.html).
 
 ## Additional information
 
 The generated voucher code consists of two parts:
 
-* `custom_code` which is a prefix of the voucher code that can be set directly at `custom_code`, and
-* a random part with the amount of random symbols equals to the value of `random_generated_code_length` field.
+- `custom_code` which is a prefix of the voucher code that can be set directly at `custom_code`, and
+- a random part with the amount of random symbols equals to the value of `random_generated_code_length` field.
 
 If a quantity is equal to or greater than 1, then `random_generated_code_length` should be non-empty as the generated code is unique.
 

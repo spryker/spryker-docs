@@ -9,9 +9,9 @@ template: concept-topic-template
 
 Functionality:
 
-* PHPMD rules tailored to Spryker projects
-* Architecture Sniffer rules for enforcing core-specific conventions
-* Rules that address the challenges unique to Spryker projects
+- PHPMD rules tailored to Spryker projects
+- Architecture Sniffer rules for enforcing core-specific conventions
+- Rules that address the challenges unique to Spryker projects
 
 ## Architecture violation priority levels
 
@@ -34,6 +34,7 @@ composer require --dev spryker/project-architecture-sniffer
 
 
 Run the sniffer from CLI:
+
 ```bash
 vendor/bin/phpmd src/Pyz/ text vendor/spryker/project-architecture-sniffer/src/ruleset.xml --minimumpriority 3
 ```

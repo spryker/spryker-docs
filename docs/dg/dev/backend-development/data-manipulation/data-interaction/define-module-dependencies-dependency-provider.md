@@ -16,10 +16,10 @@ related:
 
 Each module ships with a `DependencyProvider` class, which explicitly defines services and external dependencies to other modules. For example, when the `Cms` module requires the `Glossary` module, this is configured here. The `DependencyProvider` defines dependencies for each layer. Usually, you need some of these classes:
 
-* Services (Common functionality for Client, Yves, and Zed)
-* Plugins
-* Facades
-* Queries
+- Services (Common functionality for Client, Yves, and Zed)
+- Plugins
+- Facades
+- Queries
 
 As you can see in the example, these required classes are wrapped into a closure to enable lazy loading. Inside of the closure you get a `$container` variable which gives you access to a so-called [service locator](https://en.wikipedia.org/wiki/Service_locator_pattern) to retrieve the required classes like this: `$container->getLocator()->glossary()->facade()`.
 
@@ -145,30 +145,30 @@ The same is true for services.
 
 You might use the following definitions to generate related code:
 
-* Add Zed Dependency Client Bridge
-* Add Zed Dependency Client Bridge Interface Method
-* Add Zed Dependency Client Bridge Method
-* Add Zed Dependency Client Business Factory Method
-* Add Zed Dependency Client Dependency Provider Constant
-* Add Zed Dependency Client Dependency Provider Method
-* Add Zed Dependency Client Interface
-* Add Zed Dependency Facade Bridge
-* Add Zed Dependency Facade Bridge Interface Method
-* Add Zed Dependency Facade Bridge Method
-* Add Zed Dependency Facade Business Factory Method
-* Add Zed Dependency Facade Dependency Provider Constant
-* Add Zed Dependency Facade Dependency Provider Method
-* Add Zed Dependency Facade Interface
-* Add Zed Dependency Facade Interface Method
-* Add Zed Dependency Facade Method
-* Add Zed Dependency Provider
-* Add Zed Dependency Service Bridge
-* Add Zed Dependency Service Bridge Interface Method
-* Add Zed Dependency Service Bridge Method
-* Add Zed Dependency Service Business Factory Method
-* Add Zed Dependency Service Dependency Provider Constant
-* Add Zed Dependency Service Dependency Provider Method
-* Add Zed Dependency Service Interface
-* Add Client Dependency Provider
+- Add Zed Dependency Client Bridge
+- Add Zed Dependency Client Bridge Interface Method
+- Add Zed Dependency Client Bridge Method
+- Add Zed Dependency Client Business Factory Method
+- Add Zed Dependency Client Dependency Provider Constant
+- Add Zed Dependency Client Dependency Provider Method
+- Add Zed Dependency Client Interface
+- Add Zed Dependency Facade Bridge
+- Add Zed Dependency Facade Bridge Interface Method
+- Add Zed Dependency Facade Bridge Method
+- Add Zed Dependency Facade Business Factory Method
+- Add Zed Dependency Facade Dependency Provider Constant
+- Add Zed Dependency Facade Dependency Provider Method
+- Add Zed Dependency Facade Interface
+- Add Zed Dependency Facade Interface Method
+- Add Zed Dependency Facade Method
+- Add Zed Dependency Provider
+- Add Zed Dependency Service Bridge
+- Add Zed Dependency Service Bridge Interface Method
+- Add Zed Dependency Service Bridge Method
+- Add Zed Dependency Service Business Factory Method
+- Add Zed Dependency Service Dependency Provider Constant
+- Add Zed Dependency Service Dependency Provider Method
+- Add Zed Dependency Service Interface
+- Add Client Dependency Provider
 
 For details, see [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html).

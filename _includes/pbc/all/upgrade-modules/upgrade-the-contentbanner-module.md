@@ -7,17 +7,17 @@ Version 2.0.0 of the `ContentGui` module introduces the [Content Items](/docs/pb
 
 With the `ContentBanner` version 2.0, the following changes have been made:
 
-* Removed the deprecated `ContentBannerTransfer` definition.
-* Removed deprecated `ContentBannerClient::execute()`.
-* Removed `ContentBannerClient::executeBannerTypeById()`.
-* Introduced `ContentProductClient::executeBannerTypeByKey()` to find content with a type banner by content key.
-* Introduced the `ContentTypeContextTransfer::$key` transfer object property.
-* Removed URL validation for `clickUrl` and `imageUrl ContentBannerFacade::validateContentBannerTerm()`.
-* Increased the version of `spryker/content-storage` in composer.json.
+- Removed the deprecated `ContentBannerTransfer` definition.
+- Removed deprecated `ContentBannerClient::execute()`.
+- Removed `ContentBannerClient::executeBannerTypeById()`.
+- Introduced `ContentProductClient::executeBannerTypeByKey()` to find content with a type banner by content key.
+- Introduced the `ContentTypeContextTransfer::$key` transfer object property.
+- Removed URL validation for `clickUrl` and `imageUrl ContentBannerFacade::validateContentBannerTerm()`.
+- Increased the version of `spryker/content-storage` in composer.json.
 
 You can find more details about the changes on the [ContentBanner module release notes](https://github.com/spryker/content-banner/releases/tag/2.0.0) page.
 
-_Estimated migration time: 30minutes-1h_
+*Estimated migration time: 30minutes-1h*
 
 To upgrade to the new version of the module, do the following:
 

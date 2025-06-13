@@ -38,7 +38,7 @@ Request sample:
 
 `GET http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab`
 
-```
+```http
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNhO...
 ...
@@ -46,7 +46,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNhO...
 
 Response sample:
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 Date: Thu, 18 Jun 2019 12:55:31 GMT
@@ -58,7 +58,7 @@ When updating the resource, the client must pass the Etag in the `If-Match` h
 
 `PATCH http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab`
 
-```
+```http
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNhO...
 If-Match: "cc89022a51522f705c44fcfced188cc8"
@@ -67,7 +67,7 @@ If-Match: "cc89022a51522f705c44fcfced188cc8"
 
 If the resource is updated successfully, the server returns a new ETag:
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 Date: Thu, 18 Jun 2019 12:55:31 GMT

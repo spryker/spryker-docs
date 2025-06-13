@@ -179,6 +179,7 @@ Request sample: retrieve abstract products in an abstract product list
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE    | TYPE   | DESCRIPTION   |

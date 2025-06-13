@@ -21,43 +21,46 @@ related:
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
 ---
 
-The _Web Profiler Widget_ provides a toolbar for debugging and for informational purposes. The toolbar is located at the bottom of a loaded page.
+The *Web Profiler Widget* provides a toolbar for debugging and for informational purposes. The toolbar is located at the bottom of a loaded page.
 
-The widget is based on _Symfony Profiler_. For details, see [Profiler documentation](https://symfony.com/doc/current/profiler.html).
+The widget is based on *Symfony Profiler*. For details, see [Profiler documentation](https://symfony.com/doc/current/profiler.html).
 
 ## Modules
 
 The following modules provide the profiler functionality:
 
-*   **WebProfilerWidget** -`spryker-shop/web-profiler-widget`
-*   **WebProfilerExtension** -`spryker/web-profiler-extension`
+- **WebProfilerWidget** -`spryker-shop/web-profiler-widget`
+- **WebProfilerExtension** -`spryker/web-profiler-extension`
 
 ## Installation
 
-Install _WebProfilerWidget_ and the extension module:
+Install *WebProfilerWidget* and the extension module:
+
 ```bash
 composer require spryker-shop/web-profiler-widget --dev
 ```
+
 ## Integration
 
-To be able to use the _Web Profiler Widget_, add `\SprykerShop\Yves\WebProfilerWidget\Plugin\Application\WebProfilerApplicationPlugin`of the`spryker-shop/web-profiler-widget`module to `\Pyz\Yves\ShopApplication\ShopApplicationDependencyProvider::getApplicationPlugins()`.
+To be able to use the *Web Profiler Widget*, add `\SprykerShop\Yves\WebProfilerWidget\Plugin\Application\WebProfilerApplicationPlugin`of the`spryker-shop/web-profiler-widget`module to `\Pyz\Yves\ShopApplication\ShopApplicationDependencyProvider::getApplicationPlugins()`.
 
 ## Configure WebProfilerWidget per environment
 
-The below options can be used in the Router to configure _WebProfilerWidget_. The options are contained in `\SprykerShop\Shared\WebProfilerWidget\WebProfilerWidgetConstants`.
+The below options can be used in the Router to configure *WebProfilerWidget*. The options are contained in `\SprykerShop\Shared\WebProfilerWidget\WebProfilerWidgetConstants`.
 
-*   `\SprykerShop\Shared\WebProfilerWidget\WebProfilerWidgetConstants::IS_WEB_PROFILER_ENABLED`\- use this option to enable/disable _WebProfilerWidget_. By default, the widget is disabled.
-*   `\SprykerShop\Shared\WebProfilerWidget\WebProfilerWidgetConstants::PROFILER_CACHE_DIRECTORY`\- use this option to specify the path where the _WebProfiler_ stores its cache.
+- `\SprykerShop\Shared\WebProfilerWidget\WebProfilerWidgetConstants::IS_WEB_PROFILER_ENABLED`\- use this option to enable/disable *WebProfilerWidget*. By default, the widget is disabled.
+- `\SprykerShop\Shared\WebProfilerWidget\WebProfilerWidgetConstants::PROFILER_CACHE_DIRECTORY`\- use this option to specify the path where the *WebProfiler* stores its cache.
 
 ## Extending WebProfilerWidget
 
-You can extend _WebProfiler_ with the `\Spryker\Shared\WebProfilerExtension\Dependency\Plugin\WebProfilerDataCollectorPluginInterface` interface. It can be used for adding _Data Collectors_ to the profiler.
+You can extend *WebProfiler* with the `\Spryker\Shared\WebProfilerExtension\Dependency\Plugin\WebProfilerDataCollectorPluginInterface` interface. It can be used for adding *Data Collectors* to the profiler.
 
-Individual _Data Collectors_ can be added to `\Pyz\Yves\WebProfilerWidget\WebProfilerWidgetDependencyProvider::getDataCollectorPlugins()`.
+Individual *Data Collectors* can be added to `\Pyz\Yves\WebProfilerWidget\WebProfilerWidgetDependencyProvider::getDataCollectorPlugins()`.
 
 Spryker provides a lot of build-in collectors. You can locate them in `WebProfilerWidget/src/SprykerShop/Yves/WebProfilerWidget/Plugin/WebProfiler/`.
 
 ### Additional collectors
+
 Starting from version 3.17.0, the `spryker/zed-request` module allows you to collect data about all the requests to Zed sent from Yves.
 To enable the data collection, add `\Spryker\Yves\ZedRequest\Plugin\WebProfiler\WebProfilerZedRequestDataCollectorPlugin` to the stack returned by `\Pyz\Yves\WebProfilerWidget\WebProfilerWidgetDependencyProvider::getDataCollectorPlugins()`.
 

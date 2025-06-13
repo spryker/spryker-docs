@@ -72,7 +72,8 @@ To redeem a gift card, send the request:
         }
     }
 }
-```    
+```
+
 </details>
 
 
@@ -157,7 +158,7 @@ Response sample: redeem a gift card in a guest cart
 To remove the gift card code from the cart, send the request:
 
 ***
-`DELETE` **/guest-carts/_{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}_/cart-codes/_{% raw %}{{{% endraw %}gift_card_code{% raw %}}}{% endraw %}_**
+`DELETE` **/guest-carts/*{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*/cart-codes/*{% raw %}{{{% endraw %}gift_card_code{% raw %}}}{% endraw %}***
 ***
 
 | PATH PARAMETER | DESCRIPTION |

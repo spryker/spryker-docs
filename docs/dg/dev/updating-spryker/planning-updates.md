@@ -34,9 +34,9 @@ As any feature update can take a while, the best approach is to split the update
 ## Build up update iterations
 
 From the list of the outdated packages, you've got in the previous step, create the update iterations. We recommend including the following number of updates into each of the update iterations:
-* 30+ bugfix updates or
-* around 10 minor updates or
-* 1-5 major updates
+- 30+ bugfix updates or
+- around 10 minor updates or
+- 1-5 major updates
 
 The numbers depend on how many customizations for the respective modules you've done on your project or how complicated the migration effort is.
 

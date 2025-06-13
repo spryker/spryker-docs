@@ -15,10 +15,11 @@ This document describes how to integrate the Seven Senders technology partner.
 
 Seven Senders module has two different commands:
 
-* `\SprykerEco\Zed\Sevensenders\Communication\Plugin\Oms\Command\SevensendersOrderPlugin`
-* `\SprykerEco\Zed\Sevensenders\Communication\Plugin\Oms\Command\SevensendersShipmentPlugin`
+- `\SprykerEco\Zed\Sevensenders\Communication\Plugin\Oms\Command\SevensendersOrderPlugin`
+- `\SprykerEco\Zed\Sevensenders\Communication\Plugin\Oms\Command\SevensendersShipmentPlugin`
 
 You can use this commands in `\Pyz\Zed\Oms\OmsDependencyProvider::getCommandPlugins`
+
 ```php
 ...
 use Spryker\Zed\Oms\Communication\Plugin\Oms\Command\SendOrderConfirmationPlugin;
@@ -44,6 +45,7 @@ protected function getCommandPlugins(Container $container)
 ```
 
 After you are ready to use commands in OMS setup:
+
 ```xml
 <events>
  <event name="shipping_confirmed" onEnter="true" command="Sevensenders/NewOrder"/>
@@ -55,10 +57,11 @@ After you are ready to use commands in OMS setup:
 
 Sevensenders module has two different conditions:
 
-* `SprykerEco\Zed\Sevensenders\Communication\Plugin\Oms\Condition\IsSuccessfulPreviousOrderResponseConditionPlugin`
-* `SprykerEco\Zed\Sevensenders\Communication\Plugin\Oms\Condition\IsSuccessfulPreviousShipmentResponseConditionPlugin`
+- `SprykerEco\Zed\Sevensenders\Communication\Plugin\Oms\Condition\IsSuccessfulPreviousOrderResponseConditionPlugin`
+- `SprykerEco\Zed\Sevensenders\Communication\Plugin\Oms\Condition\IsSuccessfulPreviousShipmentResponseConditionPlugin`
 
 You can use these commands in `\Pyz\Zed\Oms\OmsDependencyProvider::getConditionPlugins`
+
 ```php
 ...
 use SprykerEco\Zed\Sevensenders\Communication\Plugin\Oms\Condition\IsSuccessfulPreviousOrderResponseConditionPlugin;
@@ -84,6 +87,7 @@ protected function getConditionPlugins(Container $container)
 ```
 
 After you are ready to use commands in OMS setup:
+
 ```xml
 <transition happy="true" condition="Sevensenders/IsSuccessfulResponse">
  <source>new</source>

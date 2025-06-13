@@ -19,50 +19,59 @@ composer require spryker/merchant-product-offer-storage: "^2.0.0" --update-with-
 ```
 
 2. Update the generated classes:
+
 ```bash
 console transfer:generate
 ```
 
 3. Replace the deleted plugins from `src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php`
+
  ```php
 Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Synchronization\ProductConcreteProductOffersSynchronizationDataBulkRepositoryPlugin
 Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Synchronization\ProductOfferSynchronizationDataBulkRepositoryPlugin
 ```
 
 To `src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php`
+
 ```php
 Spryker\Zed\ProductOfferStorage\Communication\Plugin\Synchronization\ProductConcreteProductOffersSynchronizationDataBulkRepositoryPlugin
 Spryker\Zed\ProductOfferStorage\Communication\Plugin\Synchronization\ProductOfferSynchronizationDataBulkRepositoryPlugin
 ```
 
 4. Replace the deleted plugins from `src/Pyz/Client/MerchantProductOfferStorage/ProductOfferStorageDependencyProvider.php`
+
  ```php
 Spryker\Client\MerchantProductOfferStorage\Plugin\ProductOfferStorage\DefaultProductOfferReferenceStrategyPlugin
 Spryker\Client\MerchantProductOfferStorage\Plugin\ProductOfferStorage\ProductOfferReferenceStrategyPlugin
 ```
 
 To `src/Pyz/Client/ProductOfferStorage/ProductOfferStorageDependencyProvider.php`
+
 ```php
 Spryker\Client\ProductOfferStorage\Plugin\ProductOfferStorage\DefaultProductOfferReferenceStrategyPlugin
 Spryker\Client\ProductOfferStorage\Plugin\ProductOfferStorage\ProductOfferReferenceStrategyPlugin
 ```
 
 5. Replace the deleted plugins from `src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php`
+
  ```php
 Spryker\Client\MerchantProductOfferStorage\Plugin\ProductStorage\ProductViewProductOfferExpanderPlugin
 ```
 
 To `src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php`
+
 ```php
 Spryker\Client\ProductOfferStorage\Plugin\ProductStorage\ProductViewProductOfferExpanderPlugin
 ```
 
 6. Replace the deleted plugins from `src/Pyz/Zed/Event/EventDependencyProvider.php`
+
  ```php
 Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber\MerchantProductOfferStorageEventSubscriber
 ```
 
 To `src/Pyz/Zed/Publisher/PublisherDependencyProvider.php`
+
 ```php
 Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers\ProductConcreteProductOffersDeletePublisherPlugin
 Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers\ProductConcreteProductOffersWritePublisherPlugin

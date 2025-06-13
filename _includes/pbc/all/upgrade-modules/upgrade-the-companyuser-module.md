@@ -5,7 +5,7 @@
 `CompanyUser` module version 2.0.0 brings one major change - new `is_active` column in `spy_company_user` database table. The main purpose of this field is to store information about company users and make it possible to enable/disable them.
 Also, `CompanyUserTransfer` object got a new `isActive` field, since it represents `CompanyUser` from the database (and you aren't allowed to use database entities directly).
 
-_Estimated migration time: 2,5 to 4 hours. The time may vary depending on project-specific factors_
+*Estimated migration time: 2,5 to 4 hours. The time may vary depending on project-specific factors*
 
 To upgrade to the new version of the module, do the following:
 
@@ -15,6 +15,7 @@ To upgrade to the new version of the module, do the following:
 ALTER TABLE "spy_company_user"
 ADD "is_active" BOOLEAN DEFAULT 't';
 ```
+
 As a result, all existing company users will receive a new column `is_active`. By default, the value is `true` and it's `required`.
 
 2. Rebuild `Propel2` models:
@@ -84,8 +85,8 @@ A newly registered company user `is active` by default. That means, that the use
 Action that can be performed by each user, are determined by permissions they have. These permissions are set by their roles in the company.
 
 The methods below now have additional checks which verify if company user is active or not.
-* `\Spryker\Zed\CompanyUser\Persistence\CompanyUserRepository::findActiveCompanyUserByCustomerId()`
-* `\SprykerShop\Yves\CompanyPage\Form\DataProvider\CompanyUserAccountSelectorFormDataProvider::mapCompanyUserCollectionToChoiceArray()`
+- `\Spryker\Zed\CompanyUser\Persistence\CompanyUserRepository::findActiveCompanyUserByCustomerId()`
+- `\SprykerShop\Yves\CompanyPage\Form\DataProvider\CompanyUserAccountSelectorFormDataProvider::mapCompanyUserCollectionToChoiceArray()`
 
 ### Updated Company Role Permissions Management page
 
@@ -101,8 +102,8 @@ To achieve this, some some changes have been made. Take a time to check the list
 
 The changes are:
 
-* `CompanyRolePermissionController::manageAction()` method has been removed.
+- `CompanyRolePermissionController::manageAction()` method has been removed.
   Replace all usages with `CompanyRoleController::updateAction()`.
-* `SprykerShop/Yves/CompanyPage/Plugin/Provider/CompanyPageControllerProvider::ROUTE_COMPANY_ROLE_PERMISSION_MANAGE` constant that represented the old _Company Role Permissions Management_ page, has been removed and is no longer available.
+- `SprykerShop/Yves/CompanyPage/Plugin/Provider/CompanyPageControllerProvider::ROUTE_COMPANY_ROLE_PERMISSION_MANAGE` constant that represented the old *Company Role Permissions Management* page, has been removed and is no longer available.
 Use `SprykerShop/Yves/CompanyPage/Plugin/Provider/CompanyPageControllerProvider::ROUTE_COMPANY_ROLE_UPDATE` instead;
-* Manage permissions button link on Company Role Details page has been changed from `company/company-role-permission/manage` to `company/company-role/update`.
+- Manage permissions button link on Company Role Details page has been changed from `company/company-role-permission/manage` to `company/company-role/update`.

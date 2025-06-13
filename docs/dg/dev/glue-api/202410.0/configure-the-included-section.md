@@ -21,8 +21,8 @@ For more details, see [Compound Documents](https://jsonapi.org/format/#document-
 
 You can decide whether Glue REST API includes the sections in all responses by default:
 
-* If you **enable** the option, API endpoints return all related resources by default. With the help of the _include_ query string you can filter out the unnecessary included resources and request only the information you need.
-* If you **disable** the option, responses of API endpoints do not contain the _included_ and _relationships_ sections unless you specify the related resources you need via the include query string. When the string is specified, only the resources passed by it are returned.
+- If you **enable** the option, API endpoints return all related resources by default. With the help of the *include* query string you can filter out the unnecessary included resources and request only the information you need.
+- If you **disable** the option, responses of API endpoints do not contain the *included* and *relationships* sections unless you specify the related resources you need via the include query string. When the string is specified, only the resources passed by it are returned.
 
 | |REQUEST WITH 'INCLUDE' QUERY STRING | REQUEST WITHOUT 'INCLUDE' QUERY STRING |
 | --- | --- | --- |
@@ -48,8 +48,8 @@ To make the option possible, you need to have at least version *1.12.0* of the `
 
 1. Open or create the `Pyz\Glue\GlueApplication\GlueApplicationConfig.php` file on your project level.
 2. Set the value of the `getIsEagerRelatedResourcesInclusionEnabled` parameter according to the desired behavior:
-  * `true`: Eables related resources everywhere.
-  * `false`: Returns related resources per request only.
+- `true`: Eables related resources everywhere.
+- `false`: Returns related resources per request only.
 
 **Sample implementation**
 
@@ -80,171 +80,171 @@ class GlueApplicationConfig extends SprykerGlueApplicationConfig
 
 1. Send a `GET` request as follows: `http://mysprykershop.com/concrete-products/177_24867659?include=concrete-product-image-sets`.
 
-    Make sure that the **included** and **relationships** sections of the response contain the `concrete-product-image-sets` resource only.
+Make sure that the **included** and **relationships** sections of the response contain the `concrete-product-image-sets` resource only.
 
  <details><summary>Sample response</summary>
 
-  ```json
-  {
-    data: {
-      type: concrete-products,
+```json
+{
+  data: {
+    type: concrete-products,
+    id: 177_24867659,
+    attributes: {...},
+    links: {...},
+    relationships: {
+      concrete-product-image-sets: {
+        data: [
+          {
+            type: concrete-product-image-sets,
+            id: 177_24867659
+          }
+        ]
+      }
+    }
+  },
+  included: [
+    {
+      type: concrete-product-image-sets,
       id: 177_24867659,
-      attributes: {...},
-      links: {...},
-      relationships: {
-        concrete-product-image-sets: {
-          data: [
-            {
-              type: concrete-product-image-sets,
-              id: 177_24867659
-            }
-          ]
-        }
+      attributes: {
+        imageSets: [
+          {
+            name: default,
+            images: [
+              {
+                externalUrlLarge: //images.icecat.biz/img/norm/high/24867659-4916.jpg,
+                externalUrlSmall: //images.icecat.biz/img/norm/medium/24867659-4916.jpg
+              }
+            ]
+          }
+        ]
+      },
+      links: {
+        self: http://mysprykershop.com/concrete-products/177_24867659/concrete-product-image-sets
       }
-    },
-    included: [
-      {
-        type: concrete-product-image-sets,
-        id: 177_24867659,
-        attributes: {
-          imageSets: [
-            {
-              name: default,
-              images: [
-                {
-                  externalUrlLarge: //images.icecat.biz/img/norm/high/24867659-4916.jpg,
-                  externalUrlSmall: //images.icecat.biz/img/norm/medium/24867659-4916.jpg
-                }
-              ]
-            }
-          ]
-        },
-        links: {
-          self: http://mysprykershop.com/concrete-products/177_24867659/concrete-product-image-sets
-        }
-      }
-    ]
-  }
-  ```
+    }
+  ]
+}
+```
 
 </details>
 
 2. Send a `GET` request as follows: `http://mysprykershop.com/concrete-products/177_24867659`
 
-    Make sure that the endpoint responds in accordance with your configuration:
+Make sure that the endpoint responds in accordance with your configuration:
 
-  * If the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `true`, the included section of the response contains all related resources.
+- If the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `true`, the included section of the response contains all related resources.
 
 <details><summary>Sample response</summary>
 
-    ```json
-    {
-      data: {
-        type: concrete-products,
-        id: 177_24867659,
-        attributes: {...},
-        links: {...},
-        relationships: {
-          concrete-product-image-sets: {
-            data: [
-              {
-                type: concrete-product-image-sets,
-                id: 177_24867659
-              }
-            ]
-          },
-          concrete-product-availabilities: {
-            data: [
-              {
-                type: concrete-product-availabilities,
-                id: 177_24867659
-              }
-            ]
-          },
-          concrete-product-prices: {
-            data: [
-              {
-                type: concrete-product-prices,
-                id: 177_24867659
-              }
-            ]
+```json
+{
+  data: {
+    type: concrete-products,
+    id: 177_24867659,
+    attributes: {...},
+    links: {...},
+    relationships: {
+      concrete-product-image-sets: {
+        data: [
+          {
+            type: concrete-product-image-sets,
+            id: 177_24867659
           }
-        }
+        ]
       },
-      included: [
-        {
-          type: concrete-product-image-sets,
-          id: 177_24867659,
-          attributes: {
-            imageSets: [
-              {
-                name: default,
-                images: [
-                  {
-                    externalUrlLarge: //images.icecat.biz/img/norm/high/24867659-4916.jpg,
-                    externalUrlSmall: //images.icecat.biz/img/norm/medium/24867659-4916.jpg
-                  }
-                ]
-              }
-            ]
-          },
-          links: {
-            self: http://mysprykershop.com/concrete-products/177_24867659/concrete-product-image-sets
+      concrete-product-availabilities: {
+        data: [
+          {
+            type: concrete-product-availabilities,
+            id: 177_24867659
           }
-        },
-        {
-          type: concrete-product-availabilities,
-          id: 177_24867659,
-          attributes: {
-            availability: true,
-            quantity: 20,
-            isNeverOutOfStock: false
-          },
-          links: {
-            self: http://mysprykershop.com/concrete-products/177_24867659/concrete-product-availabilities
+        ]
+      },
+      concrete-product-prices: {
+        data: [
+          {
+            type: concrete-product-prices,
+            id: 177_24867659
           }
-        },
-        {
-          type: concrete-product-prices,
-          id: 177_24867659,
-          attributes: {
-            price: 42502,
-            prices: [
-              {
-                priceTypeName: DEFAULT,
-                netAmount: null,
-                grossAmount: 42502,
-                currency: {
-                  code: EUR,
-                  name: Euro,
-                  symbol: €
-                }
-              }
-            ]
-          },
-          links: {
-            self: http://mysprykershop.com/concrete-products/177_24867659/concrete-product-prices
-          }
-        }
-      ]
+        ]
+      }
     }
+  },
+  included: [
+    {
+      type: concrete-product-image-sets,
+      id: 177_24867659,
+      attributes: {
+        imageSets: [
+          {
+            name: default,
+            images: [
+              {
+                externalUrlLarge: //images.icecat.biz/img/norm/high/24867659-4916.jpg,
+                externalUrlSmall: //images.icecat.biz/img/norm/medium/24867659-4916.jpg
+              }
+            ]
+          }
+        ]
+      },
+      links: {
+        self: http://mysprykershop.com/concrete-products/177_24867659/concrete-product-image-sets
+      }
+    },
+    {
+      type: concrete-product-availabilities,
+      id: 177_24867659,
+      attributes: {
+        availability: true,
+        quantity: 20,
+        isNeverOutOfStock: false
+      },
+      links: {
+        self: http://mysprykershop.com/concrete-products/177_24867659/concrete-product-availabilities
+      }
+    },
+    {
+      type: concrete-product-prices,
+      id: 177_24867659,
+      attributes: {
+        price: 42502,
+        prices: [
+          {
+            priceTypeName: DEFAULT,
+            netAmount: null,
+            grossAmount: 42502,
+            currency: {
+              code: EUR,
+              name: Euro,
+              symbol: €
+            }
+          }
+        ]
+      },
+      links: {
+        self: http://mysprykershop.com/concrete-products/177_24867659/concrete-product-prices
+      }
+    }
+  ]
+}
 
-    ```
+```
 
 </details>
 
-  * If the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `false`, the included and relationships sections are absent.
+- If the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `false`, the included and relationships sections are absent.
 
-    **Sample response**
+**Sample response**
 
-    ```json
-    {
-      data: {
-        type: concrete-products,
-        id: 177_24867659,
-        attributes: {...},
-        links: {...},
-    }
-    ```
+```json
+{
+  data: {
+    type: concrete-products,
+    id: 177_24867659,
+    attributes: {...},
+    links: {...},
+}
+```
 
 {% endinfo_block %}

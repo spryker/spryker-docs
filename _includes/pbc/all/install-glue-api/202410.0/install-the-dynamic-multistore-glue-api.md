@@ -65,8 +65,8 @@ Send one of the following requests:
 | `https://glue.mysprykershop.com?_store=DE` | [{"key":"Accept-Language","value":"de_DE"}] |
 
 Make sure the response contains the following:
-* The `content-language` header set to `de_DE`.
-* Proper locale and stores header.
+- The `content-language` header set to `de_DE`.
+- Proper locale and stores header.
 
 {% endinfo_block %}
 

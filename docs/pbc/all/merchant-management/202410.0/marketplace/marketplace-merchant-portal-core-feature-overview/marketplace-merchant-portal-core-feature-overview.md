@@ -49,7 +49,7 @@ The following table lists optional MerchantPortal Core modules:
 | [DashboardMerchantPortalGui](https://github.com/spryker/dashboard-merchant-portal-gui) | This module contains the dashboard and its related components for the Merchant Portal.  |
 | [DashboardMerchantPortalGuiExtension](https://github.com/spryker/dashboard-merchant-portal-gui-extension) | This module provides extension interfaces for the `DashboardMerchantPortalGui` module.|
 | [MerchantUserExtension](https://github.com/spryker/merchant-user-extension) | This module provides plugin interfaces to extend `MerchantUser` module from another modules.  |
-| [UserMerchantPortalGuiExtension](https://github.com/spryker/user-merchant-portal-gui-extension) | This module provides plugin interfaces to extend the `UserMerchantPortalGui` module from the other modules.
+| [UserMerchantPortalGuiExtension](https://github.com/spryker/user-merchant-portal-gui-extension) | This module provides plugin interfaces to extend the `UserMerchantPortalGui` module from the other modules. |
 
 ## Domain model
 

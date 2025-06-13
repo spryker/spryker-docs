@@ -2,16 +2,16 @@
 
 To override or expand core JS, SCSS, you need to expand the `oryx-for-zed` building system with an additional config:
 
-* To adjust the Webpack config and create aliases for core modules, see [Webpack](#webpack). 
-* To create a new entry point and file naming and extend core JS files and path for entry points, see [JS](#js). 
-* To create a new file with styles and build it with Webpack, see [SCSS](#scss).
-* To add output JS and CSS on a page, see [TWIG](#twig).
+- To adjust the Webpack config and create aliases for core modules, see [Webpack](#webpack).
+- To create a new entry point and file naming and extend core JS files and path for entry points, see [JS](#js).
+- To create a new file with styles and build it with Webpack, see [SCSS](#scss).
+- To add output JS and CSS on a page, see [TWIG](#twig).
 
 ## Webpack
 
 {% info_block infoBox %}
 
-The minimum required versions: 
+The minimum required versions:
 
 - `@spryker/oryx-for-zed`: 2.13.0
 - `webpack`: 5.*
@@ -43,7 +43,7 @@ oryxForZed.getConfiguration(myCustomZedSettings)
     .catch(error => console.error('An error occurred while creating configuration', error));
 ```
 
-The `oryx-for-zed` building settings must be expanded with a path to ZED modules on the project level (`entry.dirs`). 
+The `oryx-for-zed` building settings must be expanded with a path to ZED modules on the project level (`entry.dirs`).
 Because of `mergeWithStrategy`, the default config with core paths is expanded with a path to the project level.
 
 {% info_block infoBox %}
@@ -65,7 +65,7 @@ const myCustomZedSettings = mergeWithStrategy(oryxForZed.settings, {
 });
 ```
 
-After creating the new build for ZED, specify the new commands in root `package.json`. 
+After creating the new build for ZED, specify the new commands in root `package.json`.
 
 Example:
 

@@ -19,8 +19,8 @@ related:
 ---
 
 This section contains the information you need to work with messages and errors in Spryker Commerce OS:
-* [Handling errors with ErrorHandler](/docs/dg/dev/backend-development/messages-and-errors/handling-errors-with-errorhandler.html)
-* [Handling Internal Server messages](/docs/dg/dev/backend-development/messages-and-errors/handling-internal-server-messages.html)
-* [Messages and errors](/docs/dg/dev/backend-development/messages-and-errors/messages-and-errors.html)
-* [Registering a new service](/docs/dg/dev/backend-development/messages-and-errors/registering-a-new-service.html)
-* [Showing messages in Zed](/docs/dg/dev/backend-development/messages-and-errors/show-messages-in-the-back-office.html)
+- [Handling errors with ErrorHandler](/docs/dg/dev/backend-development/messages-and-errors/handling-errors-with-errorhandler.html)
+- [Handling Internal Server messages](/docs/dg/dev/backend-development/messages-and-errors/handling-internal-server-messages.html)
+- [Messages and errors](/docs/dg/dev/backend-development/messages-and-errors/messages-and-errors.html)
+- [Registering a new service](/docs/dg/dev/backend-development/messages-and-errors/registering-a-new-service.html)
+- [Showing messages in Zed](/docs/dg/dev/backend-development/messages-and-errors/show-messages-in-the-back-office.html)

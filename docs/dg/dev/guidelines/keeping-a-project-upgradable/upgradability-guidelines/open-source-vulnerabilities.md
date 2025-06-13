@@ -48,7 +48,9 @@ To resolve the error:
 
 
 ## Run only this checker
+
 To run only this checker, include `OPEN_SOURCE_VULNERABILITIES_CHECKER` into the checkers list. Example:
+
 ```bash
 vendor/bin/evaluator evaluate --checkers=OPEN_SOURCE_VULNERABILITIES_CHECKER
 ```

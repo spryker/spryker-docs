@@ -13,12 +13,12 @@ related:
 
 The *Warehouse Picking* feature enables [Fulfillment App](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app-overview.html) by adding the following:
 
-* The *picking list* entity.
-* `picking-lists` and `picking-list-items` Glue API resources.
-* Support for [push notifications](/docs/pbc/all/miscellaneous/{{page.version}}/push-notification-feature-overview.html).
-* An OMS example.
-* Picklist generation strategies.
-* OAuth.
+- The *picking list* entity.
+- `picking-lists` and `picking-list-items` Glue API resources.
+- Support for [push notifications](/docs/pbc/all/miscellaneous/{{page.version}}/push-notification-feature-overview.html).
+- An OMS example.
+- Picklist generation strategies.
+- OAuth.
 
 
 ## Example of a picklist generation strategy

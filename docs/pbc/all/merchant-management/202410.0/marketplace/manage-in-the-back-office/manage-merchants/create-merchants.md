@@ -15,10 +15,10 @@ To create a merchant in the Back Office, follow the steps:
 1. Go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchants**.
 2. On the **Overview of Merchants** page, click **Add Merchant**.
 3. On the **Create Merchant** page in the **General** tab, enter the following information:
-  * **NAME**.
-  * Optional: **REGISTRATION NUMBER**.
-  * **MERCHANT REFERENCE**.
-  * **EMAIL**.
+- **NAME**.
+- Optional: **REGISTRATION NUMBER**.
+- **MERCHANT REFERENCE**.
+- **EMAIL**.
 3. Optional: To activate the merchant after creating it, select **IS ACTIVE**.
 4. Optional: For **STORE RELATION**, select one or more stores to assign the merchant to.
 5. For **MERCHANT URL**, enter the URLs of merchant profile per store.

@@ -8,7 +8,7 @@ This migration guide is a part of the [Search migration effort](/docs/pbc/all/se
 
 {% endinfo_block %}
 
-_Estimated migration time: 30 minutes_
+*Estimated migration time: 30 minutes*
 
 To upgrade the module, do the following:
 

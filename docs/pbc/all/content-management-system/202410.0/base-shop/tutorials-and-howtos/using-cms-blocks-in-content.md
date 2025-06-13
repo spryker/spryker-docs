@@ -49,7 +49,7 @@ To add a CMS block with a hello message, follow these steps:
 
 The new block is now ready to be used and integrated in other Twig templates.
 
-```
+```twig
 {% raw %}{{{% endraw %} spyCmsBlock({name: 'HelloMessage'}) {% raw %}}}{% endraw %}
 ```
 

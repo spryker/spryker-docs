@@ -21,9 +21,9 @@ Install the required features:
 | - | - | - |
 | Spryker Core | {{page.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Payments | {{page.version}}   | [Install the Payments feature](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-feature.html) |
-| Checkout | {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)
-| Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html)
-| Marketplace Order Management | {{page.version}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html)
+| Checkout | {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Marketplace Order Management | {{page.version}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
 
 
 ### 1) Install required modules using Сomposer
@@ -137,7 +137,7 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 
 **data/import/payment_method.csv**
 
-```
+```csv
 payment_method_key,payment_method_name,payment_provider_key,payment_provider_name,is_active
 dummyMarketplacePaymentInvoice,Invoice,DummyMarketplacePayment,Dummy Marketplace Payment,1
 ```
@@ -154,7 +154,7 @@ dummyMarketplacePaymentInvoice,Invoice,DummyMarketplacePayment,Dummy Marketplace
 
 **data/import/payment_method_store.csv**
 
-```
+```csv
 payment_method_key,store
 dummyMarketplacePaymentInvoice,DE
 dummyMarketplacePaymentInvoice,AT

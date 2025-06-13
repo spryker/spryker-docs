@@ -45,6 +45,7 @@ Make sure that the following modules have been installed:
 2. To enable the `skip-link` feature, pass the `navigationId` attribute (using the `navigationId` variable from the core) from `page-layout-main.twig` to the `header` organism:
 
 **src/Pyz/Yves/ShopUi/Theme/default/components/organisms/header/header.twig**
+
 ```twig
   {% embed organism('header') with {
       data: {
@@ -61,10 +62,11 @@ Make sure that the following modules have been installed:
 
 <!-- {% endraw %} -->
 
-3. Define the `navigationId` attribute and use it as an ID for the navigation component. 
+3. Define the `navigationId` attribute and use it as an ID for the navigation component.
 
 <!-- {% raw %} -->
 **src/Pyz/Yves/ShopUi/Theme/default/components/organisms/header/header.twig**
+
 ```twig
   {% define attributes = {
     navigationId: '',
@@ -76,7 +78,7 @@ Make sure that the following modules have been installed:
 ```
 <!-- {% endraw %} -->
 
-4. Add `skip-link` and ID attribute for its target: 
+4. Add `skip-link` and ID attribute for its target:
 
 **src/Pyz/Yves/CatalogPage/Theme/default/templates/page-layout-catalog/page-layout-catalog.twig**
 <!-- {% raw %} -->
@@ -133,8 +135,9 @@ Make sure that the following modules have been installed:
 <!-- {% endraw %} -->
 
 5. Adjust `mapEvents` method by adding the `tabIndex` attribute and `focusin` event listener:
- 
-**src/Pyz/Yves/ProductImageWidget/Theme/default/components/molecules/image-gallery/image-gallery.ts** 
+
+**src/Pyz/Yves/ProductImageWidget/Theme/default/components/molecules/image-gallery/image-gallery.ts**
+
 ```js
     protected mapEvents(): void {
       this.thumbnailSlider.on('mouseenter', '.slick-slide', (event: Event) => this.onThumbnailHover(event));
@@ -149,18 +152,19 @@ Make sure that the following modules have been installed:
 6. Enable the `accessibility` parameter for the image slider configuration:
 
 **src/Pyz/Yves/ProductImageWidget/Theme/default/components/molecules/image-gallery/image-gallery.ts**
-  <!-- {% raw %} -->
-    ```twig
-    {% define attributes = {
-      'config-thumbnail-slider': '{
-        ...
-        "accessibility": true,
-    ```
-  <!-- {% endraw %} -->
+<!-- {% raw %} -->
+```twig
+{% define attributes = {
+  'config-thumbnail-slider': '{
+    ...
+    "accessibility": true,
+```
+<!-- {% endraw %} -->
 
 7. Adjust `mapEvents` and add a `browseFileLabelHandler` method:
 
 **src/Pyz/Yves/QuickOrderPage/Theme/default/components/molecules/quick-order-file-upload/quick-order-file-upload.ts**
+
 ```js
   protected mapEvents(): void {
     ...
@@ -180,6 +184,7 @@ Make sure that the following modules have been installed:
 8. Add `focusin` and `focusout` event listeners:
 
 **src/Pyz/Yves/ShopUi/Theme/default/components/molecules/navigation-multilevel/navigation-multilevel.ts**
+
 ```js
  protected mapEvents(): void {
   this.triggers.forEach((trigger: HTMLElement) => {
@@ -204,7 +209,7 @@ Make sure that the following modules have been installed:
       ...
 ```
 <!-- {% endraw %} -->
- 
+
 10. Improve text to background contrast in the following files:
 - `src/Pyz/Yves/ShopUi/Theme/default/components/atoms/checkbox/checkbox.scss`  
 - `src/Pyz/Yves/ShopUi/Theme/default/components/molecules/custom-select/custom-select.scss`  

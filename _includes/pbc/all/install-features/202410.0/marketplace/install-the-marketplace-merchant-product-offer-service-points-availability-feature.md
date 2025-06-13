@@ -41,7 +41,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the following changes have been applied in transfer objects:
+- Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                                       | TYPE  | EVENT   | PATH                                                                                                 |
 |----------------------------------------------------------------|-------|---------|------------------------------------------------------------------------------------------------------|
@@ -49,9 +49,10 @@ console transfer:generate
 | ProductOfferServicePointAvailabilityResponseItem               | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointAvailabilityResponseItemTransfer               |
 | RestProductOfferServicePointAvailabilityRequestItemsAttributes | class | created | src/Generated/Shared/Transfer/RestProductOfferServicePointAvailabilityRequestItemsAttributesTransfer |
 
-* Make sure you can use the  `merchantReference` filter when sending requests to the `product-offer-service-point-availabilities` resource. Example:
+- Make sure you can use the  `merchantReference` filter when sending requests to the `product-offer-service-point-availabilities` resource. Example:
 
 `POST https://glue.mysprykershop.com/product-offer-service-point-availabilities`
+
 ```json
   {
       "data": {

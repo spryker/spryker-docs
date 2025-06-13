@@ -49,7 +49,7 @@ Review the [reference information](#reference-information-changing-the-state-of-
 1. Select the items you want to change the state of.
 2. Next to **Trigger all matching states of {number of selected items} selected items** pane, click **Execute return**.
     This refreshes the page with a success message displayed. The updated **State** is displayed for the selected items.
-3. Repeat steps 1-2 until you get the needed state.         
+3. Repeat steps 1-2 until you get the needed state.
 
 
 ## Reference information: Changing the state of order items in returns
@@ -62,9 +62,9 @@ The following table describes the states you can select for order items.
 | Refund | Select this state after you refunded a returned item.|
 
 States flow:
-* **waiting for return**: the initial order stated for returns.
-* When you select **Return**, the state becomes **returned**.
-* When you select **Refund**, the status becomes **refunded**.
+- **waiting for return**: the initial order stated for returns.
+- When you select **Return**, the state becomes **returned**.
+- When you select **Refund**, the status becomes **refunded**.
 
 ### State names
 

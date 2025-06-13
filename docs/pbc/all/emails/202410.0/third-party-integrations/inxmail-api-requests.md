@@ -13,6 +13,7 @@ This document contains API requests for Inxmail.
 `\SprykerEco\Zed\Inxmail\Business\Api\Adapter\EventAdapter` which extend `\SprykerEco\Zed\Inxmail\Business\Api\Adapter\AbstractAdapter` contains all needed data for sending data to Inxmail for events.
 
 It sends the request via `&#xA0;\Generated\Shared\Transfer\InxmailRequestTransfer`
+
 ```xml
  <?xml version="1.0"?>
  <transfers xmlns="http://xsd.spryker.com"

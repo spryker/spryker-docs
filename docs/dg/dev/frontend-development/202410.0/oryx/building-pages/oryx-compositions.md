@@ -21,7 +21,7 @@ Compositions take a data-driven approach, letting you configure the composition 
 
 - Avoid hard-coded page layout: By using data to configure compositions, you can avoid hardcoding the page layout in your application code. Instead, you can define the structure and layout of your pages using external data, making it more flexible and easier to customize.
 
-- Upgradable composition: A configurable data set is easier to upgrade. Instead of upgrading to a hardcoded component structure, you can select an alternative data set that will hold new components. This makes it easier to _opt in_ to alternative compositions.
+- Upgradable composition: A configurable data set is easier to upgrade. Instead of upgrading to a hardcoded component structure, you can select an alternative data set that will hold new components. This makes it easier to *opt in* to alternative compositions.
 
 - No-code customizations: The data-driven approach enables no-code customizations of the compositions. With the use of a What You See Is What You Get (WYSIWYG) tool, non-technical users can easily modify a composition by adjusting the data configuration without the need to edit the underlying code.
 

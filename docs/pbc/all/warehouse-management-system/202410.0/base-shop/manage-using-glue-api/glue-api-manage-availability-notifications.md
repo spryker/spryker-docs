@@ -52,6 +52,7 @@ To subscribe to availability notifications for an out-of-stock product, send the
   }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -80,6 +81,7 @@ To subscribe to availability notifications for an out-of-stock product, send the
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

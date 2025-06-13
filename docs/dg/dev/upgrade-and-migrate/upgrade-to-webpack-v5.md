@@ -38,13 +38,13 @@ To unblock future upgrades of other dependencies, we need to migrate as well.
 }
 ```
 
-   - If Merchant Portal is used:
+- If Merchant Portal is used:
 
-        ```json
-        {
-            "@types/webpack": "~5.28.0"
-        }
-        ```
+```json
+{
+    "@types/webpack": "~5.28.0"
+}
+```
 
 2. Update and install package dependencies:
 

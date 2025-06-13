@@ -36,15 +36,15 @@ To check the WAF rule that triggered the error, do the following:
 5. To download the file, select **Download**.
 
 6. Open the file in an editor and find the triggered WAF rule by the following parameters:
-* `clientIp`
-* `"action":"BLOCK"`
-* `uri`
-* `requestId`
+- `clientIp`
+- `"action":"BLOCK"`
+- `uri`
+- `requestId`
 
 An example of a blocking request from the WAF log file:
 
 
-```
+```text
 {
 "timestamp":1639057983286,
 "formatVersion":1,

@@ -152,11 +152,13 @@ Make sure that `ValidateRestRequestAttributesPlugin` has been activated:
         password:
           - NotBlank
     ```
+
     c. Collect the validation cache:
 
     ```bash
     console glue:rest:build-request-validation-cache
     ```
+
 3. Make a call to the endpoint you described in the validation file with invalid data. Request sample:
 `POST http://example.org/access-tokens`
 

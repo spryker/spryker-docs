@@ -9,7 +9,7 @@ Follow the steps below to install the Multiple Carts feature core.
 
 ### Prerequisites
 
-* Enable database storage strategy in the Quote module
+- Enable database storage strategy in the Quote module
 
 To enable database storage strategy for customer quotes, override the `getStorageStrategy()` method in the Quote module's shared configuration.
 Create or modify the `src/Pyz/Shared/Quote/QuoteConfig.php` file:
@@ -42,12 +42,12 @@ To verify the database storage strategy is properly enabled:
 
 {% endinfo_block %}
 
-* Install the required features:
+- Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Cart         | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)   | |
+| Cart         | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)   |
 
 ### 1) Install the required modules
 
@@ -346,6 +346,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Client/Quote/QuoteDependencyProvider.php**
@@ -553,7 +554,7 @@ Install the required features:
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Cart         | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)   | |
+| Cart         | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)   |
 
 ### 1) Install the required modules
 
@@ -680,6 +681,7 @@ multi_cart_widget.cart.updated.success,"Einkaufswagen wurde erfolgreich aktualis
 multi_cart_widget.cart.was-deleted-before,Dieser Warenkorb wurde bereits gelöscht,de_DE
 multi_cart_widget.cart.was-deleted-before,This cart was already deleted,en_US
 ```
+
 </details>
 
 2. Import data:

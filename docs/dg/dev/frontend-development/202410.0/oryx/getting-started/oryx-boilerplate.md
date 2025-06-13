@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 
-Boilerplate refers to the _template_ code that is used to generate application code which can be further customized. At first sight, changing boilerplate is convenient as the code is at hand, generated in your project repository. However, when upgrading to newer versions of the original code, it becomes challenging. If you customized the boilerplate code and want to reapply a new version of the boilerplate, you have to merge the customizations with the new version during every update. This is a time-consuming and error-prone process that can slow down your development process and increase the risk of bugs.
+Boilerplate refers to the *template* code that is used to generate application code which can be further customized. At first sight, changing boilerplate is convenient as the code is at hand, generated in your project repository. However, when upgrading to newer versions of the original code, it becomes challenging. If you customized the boilerplate code and want to reapply a new version of the boilerplate, you have to merge the customizations with the new version during every update. This is a time-consuming and error-prone process that can slow down your development process and increase the risk of bugs.
 
 The Oryx boilerplate is provided in the [Composable Frontend repository](https://github.com/spryker/oryx-starter).
 
@@ -51,7 +51,7 @@ The boilerplate contains the following files, with the server side rendering (SS
 
 <!-- vale on -->
 
-```
+```text
 oryx-app/
 ├── src
 │   ├──app.ts
@@ -70,7 +70,7 @@ The following is a breakdown of the different bits of the boilerplate code.
 
 `package.json` contains all the dependencies of the project. To simplify the dependency management, all dependencies are pulled through a single preset package. The preset package contains dependencies to all available Oryx packages. This might not be the most optimal setup over time, as it might contain a lot of "dead code", but it's a convenient starting point. As you are getting experienced with Oryx, you can consider creating a narrowed down list of dependencies.
 
-That being said, having unused dependencies in your project does _not_ affect the build time or run time of your project. It is only an overhead during the installation process.
+That being said, having unused dependencies in your project does *not* affect the build time or run time of your project. It is only an overhead during the installation process.
 
 The bare minimum `package.json` includes the following dependencies:
 
@@ -90,7 +90,7 @@ The bare minimum `package.json` includes the following dependencies:
 
 {% info_block infoBox %}
 
-We recommend fronting the dependencies with a caret notation (`^`), so that the latest _minor_ release is pulled on each installation.
+We recommend fronting the dependencies with a caret notation (`^`), so that the latest *minor* release is pulled on each installation.
 
 {% endinfo_block %}
 
@@ -135,7 +135,7 @@ export const app = appBuilder()
   .create();
 ```
 
-This configuration uses a standard _feature set_ and _theme_. The feature set and theme are opinionated and might not be the production setup you're looking for, but it's a great starting point.
+This configuration uses a standard *feature set* and *theme*. The feature set and theme are opinionated and might not be the production setup you're looking for, but it's a great starting point.
 
 ### SSR boilerplate
 

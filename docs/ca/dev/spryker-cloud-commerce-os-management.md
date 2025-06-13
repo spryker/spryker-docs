@@ -42,7 +42,7 @@ This RACI Matrix defines responsibilities, consultation and reporting obligation
 | Optimize application performance by applying best practices. | I/C | R/A | I |
 | Maintain application up to date and secure. | I/C | R/A | I |
 | Adhering to industry-standard security best practices, especially related to accesses, credentials, and secrets related to applications and users | R/A | R/A | I |
-| <b>Infrastructure configuration and scaling.	</b> |
+| <b>Infrastructure configuration and scaling. </b> |
 | Resize environments according to changing needs. | - | C | R/A |
 | Maintain the infrastructure up to date and secure. | I | I | R/A |
 | Configure infrastructure for applications. | I | C | R/A |

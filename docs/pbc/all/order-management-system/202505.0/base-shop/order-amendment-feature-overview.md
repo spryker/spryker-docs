@@ -32,7 +32,7 @@ A customer can change their order as follows:
 
 1. Customer clicks the **Edit Order** button
 2. One of the following order amendment strategies is applied:
-  - Replace: The current cart items are replaced with amendment order items
+  - Replace: All current cart items are replaced with the items from the order the customer wants to amend
   - New: A new cart is created with the items from the amended order
 2. Customers can add, remove, or modify items in the cart
 3. Checkout proceeds via the standard flow.
@@ -50,7 +50,7 @@ When a customer initiates an amendment, the following details are carried over f
 
 You can customize what details are carried over on the project level.
 
-## Price replacement strategies
+## Pricing
 
 Prices at the time of initiating an amendment may differ from the prices used to place the order. To handle such cases, you can use one of the following default strategies:
 
@@ -58,18 +58,22 @@ Prices at the time of initiating an amendment may differ from the prices used to
 - Original order prices: catalog prices at the time of placing the original order are applied to all items.
 - Best price: If a product's price dropped since the order had been placed, the new lower price is used; otherwise, the original prices is used. 
 
-
-
 During the order amendment process, the prices for cart items are displayed according to the strategy only on Cart and Product Details pages. On all other pages, such as Product Catalog or Search Results pages, the current prices ar displayed.
 
-
+Orders created through [request for quote](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html) can't be amended.
 
 ## Gift Cards and Vouchers
 
 - If a **gift card** was used, it is unapplied during amendment. Its balance is restored and re-applied after the process completes.
 - The same applies to **limited-use vouchers**.
 
----
+## Products
+
+When a customer initiates an order amendment, the following happens to products:
+
+- Abstract and concrete products are added to cart
+- Out-of-stock, disabled, and removed products are excluded from the cart
+- [Configurable products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html) are reset, and the customer needs to configure them again
 
 ## Notifications
 
@@ -77,17 +81,6 @@ Email notifications for order amendments can be configured to reflect changes an
 
 ---
 
-## Known Limitations
-
-- Only **Product Price** and **Product Offer Price** are supported. **Volume Prices** are not.
-- Price strategy does **not** apply to:
-  - Product Options
-  - Product Catalog
-  - Search Suggestions
-- Only **product abstract** and **product concrete** are supported.
-- **Configurable products** must be reconfigured by the customer during amendment.
-- **Out-of-stock, disabled, or removed products** are excluded automatically from the cart.
-- Orders created through **Request for Quote** cannot be amended.
 
 
 ## Related Developer documents

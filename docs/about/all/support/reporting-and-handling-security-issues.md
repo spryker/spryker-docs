@@ -13,7 +13,7 @@ If you find a security issue in a Spryker product, report it to us.
 
 ## Reporting a security issue
 
-Please do not use public Slack channels or any other public forums to report security issues. Instead, send an email to [security@spryker.com](mailto:security@spryker.com). When submitting a report, be sure to follow the guidelines outlined below under 'Crafting a report' section to help us understand and address the issue effectively. Your message will be forwarded to our internal security team, and we will confirm receipt and follow up with any additional questions if necessary.
+Do not use public Slack channels or any other public forums to report security issues. Instead, send an email to [security@spryker.com](mailto:security@spryker.com). When submitting a report, be sure to follow the guidelines outlined below under 'Crafting a report' section to help us understand and address the issue effectively. Your message will be forwarded to our internal security team, and we will confirm receipt and follow up with any additional questions if necessary.
 
 ## Vulnerability Disclosure Program (VDP)
 
@@ -21,18 +21,18 @@ Spryker operates a Vulnerability Disclosure Program (VDP) through HackerOne, ena
 
 ## Crafting a report
 
-To help streamline our review process, please ensure your submission meets the following criteria:
+To help streamline our review process, ensure your submission meets the following criteria:
 
 1. Submit one vulnerability per report, unless multiple vulnerabilities need to be chained to demonstrate impact
 2. Provide a clear description of the vulnerability
 3. Include detailed steps on how to reproduce the issue
-4. Supply proof of exploitability (e.g., screenshots or video evidence)
+4. Supply proof of exploitability (for example screenshots or video evidence)
 5. Explain the potential impact on users or the organization
 6. Provide a proposed CVSSv3.1 vector and score (excluding environmental and temporal modifiers)
 7. List URLs and affected parameters
 8. Include any other vulnerable URLs, additional payloads, and Proof-of-Concept code, if applicable
 9. Mention the browser, OS, or application version used during testing
-10. Do not use shortened URLs (e.g., tiny URLs) in your reports. Please submit your findings in English. All evidence and supporting materials must be included directly within the report submission. Hosting files on external services is not permitted. Failure to adhere to these requirements may delay the evaluation of your submission. Additionally, when assessing reports, we prioritize contributions that positively enhance the security community. This is a key factor in our evaluation process.
+10. Do not use shortened URLs (for example tiny URLs) in your reports. Submit your findings in English. All evidence and supporting materials must be included directly within the report submission. Hosting files on external services is not permitted. Failure to adhere to these requirements may delay the evaluation of your submission. Additionally, when assessing reports, we prioritize contributions that positively enhance the security community. This is a key factor in our evaluation process.
 
 ## How we are handling security reports
 

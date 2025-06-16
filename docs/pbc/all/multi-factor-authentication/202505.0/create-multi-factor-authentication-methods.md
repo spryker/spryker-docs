@@ -151,6 +151,8 @@ class YourMfaCodeSenderStrategyPlugin extends AbstractPlugin implements SendStra
 
 Register the plugins in the dependency providers:
 
+* Back Office users: register them in the **Zed** layer. Use the `MultiFactorAuthDependencyProvider::getUserMultiFactorAuthPlugins()` class in the Zed module.
+
 **src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
 ```php
@@ -179,7 +181,7 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
 
 If you are implementing MFA plugins for **agents**, you must register them in using the `MultiFactorAuthDependencyProvider::getAgentMultiFactorAuthPlugins()` method.
 
-If you are implementing MFA plugins for **Backoffice users**, you must register them in the **Zed** layer. Use the `MultiFactorAuthDependencyProvider::getUserMultiFactorAuthPlugins()` class in the Zed module.
+If you are implementing MFA plugins for **Backoffice users**, you must 
 
 {% endinfo_block %}
 

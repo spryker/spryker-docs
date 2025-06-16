@@ -12,7 +12,7 @@ The *Order Amendment* feature enables customers to make changes to previously pl
 
 Only registered customers can make changes to placed orders because guest users don't have access to order history. 
 
-A customer can change an order once it reaches a state that allows amendments.
+A customer can change an order once it reaches a state that allows amendments. By default, customers can initiate an amendment when an order is in the `grace period started` state.
 
 You can customize which states allow amendments in the state machine. For instructions, on customizing state machines, see [Configure OMS](https://docs.spryker.com/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature#set-up-configuration).
 
@@ -66,6 +66,8 @@ Orders created through [request for quote](/docs/pbc/all/request-for-quote/{{sit
 
 - If a **gift card** was used, it is unapplied during amendment. Its balance is restored and re-applied after the process completes.
 - The same applies to **limited-use vouchers**.
+
+For better user experience, we recommend implementing a way to inform customers about gift cards and vouchers being unapplied.
 
 ## Products
 

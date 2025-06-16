@@ -32,8 +32,7 @@ For instructions on configuring the interval, see [Install the Sitemap feature](
 
 ## Domain verification
 
-The domain name of your website must be verified on the project level to use this feature. For instructions, see [Verify your site ownership
-](https://support.google.com/webmasters/answer/9008080?hl=en).
+The domain name of your website must be verified on the project level to use this feature. For instructions, see [Verify your site ownership](https://support.google.com/webmasters/answer/9008080?hl=en).
 
 
 ## Current constraints

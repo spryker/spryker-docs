@@ -52,7 +52,7 @@ To successfully migrate to the new OMS version, perform the following steps:
 
 1. Migrate the database:
 
-   - `vendor/bin/console propel:diff`
+- `vendor/bin/console propel:diff`
 
 {% info_block warningBox "Note" %}
 
@@ -60,24 +60,25 @@ Manual review is necessary for the generated migration file.
 
 {% endinfo_block %}
 
-   - `vendor/bin/console propel:migrate`;    
-   - `vendor/bin/console propel:model:build`;
+- `vendor/bin/console propel:migrate`;    
+- `vendor/bin/console propel:model:build`;
 
 2. Migrate the configuration file and the constants:
 
-   - `Spryker\Shared\Oms\OmsConstants::INITIAL_STATUS` should be replaced by `Spryker\Zed\Oms\OmsConfig::getInitialStatus()`.
-   - `Spryker\Shared\Oms\OmsConstants::NAME_CREDIT_MEMO_REFERENCE` was deprecated and removed.
+- `Spryker\Shared\Oms\OmsConstants::INITIAL_STATUS` should be replaced by `Spryker\Zed\Oms\OmsConfig::getInitialStatus()`.
+- `Spryker\Shared\Oms\OmsConstants::NAME_CREDIT_MEMO_REFERENCE` was deprecated and removed.
 
 3. Migrate the deprecated classes / interfaces:
 
-   - Find the usage of `Spryker\Zed\Oms\Communication\Plugin\Oms\Condition\ConditionCollectionInterface`and change the interface to `Spryker\Zed\Oms\Dependency\Plugin\Condition\ConditionCollectionInterface`.
-   - Find the usage of `Spryker\Zed\Oms\Communication\Console\ClearLocks` and change the interface to `Spryker\Zed\Oms\Communication\ClearLocksConsole`.
-   - Find the usage of `Spryker\Zed\Oms\Communication\Plugin\Oms\Command\CommandByItemInterface` and change the interface to `Spryker\Zed\Oms\Dependency\Plugin\Command\CommandByItemInterface`.
-   - Find the usage of `Spryker\Zed\Oms\Communication\Plugin\Oms\Command\CommandByOrderInterface` and change the interface to `Spryker\Zed\Oms\Dependency\Plugin\Command\CommandByOrderInterface`.
-   - Find the usage of `Spryker\Zed\Oms\Communication\Plugin\Oms\Command\CommandInterface`and change the interface to `Spryker\Zed\Oms\Dependency\Plugin\Command\CommandInterface`.
-   - Find the usage of `Spryker\Zed\Oms\Communication\Plugin\Oms\Condition\ConditionInterface` and change the interface to `Spryker\Zed\Oms\Dependency\Plugin\Condition\ConditionInterface`.
+- Find the usage of `Spryker\Zed\Oms\Communication\Plugin\Oms\Condition\ConditionCollectionInterface`and change the interface to `Spryker\Zed\Oms\Dependency\Plugin\Condition\ConditionCollectionInterface`.
+- Find the usage of `Spryker\Zed\Oms\Communication\Console\ClearLocks` and change the interface to `Spryker\Zed\Oms\Communication\ClearLocksConsole`.
+- Find the usage of `Spryker\Zed\Oms\Communication\Plugin\Oms\Command\CommandByItemInterface` and change the interface to `Spryker\Zed\Oms\Dependency\Plugin\Command\CommandByItemInterface`.
+- Find the usage of `Spryker\Zed\Oms\Communication\Plugin\Oms\Command\CommandByOrderInterface` and change the interface to `Spryker\Zed\Oms\Dependency\Plugin\Command\CommandByOrderInterface`.
+- Find the usage of `Spryker\Zed\Oms\Communication\Plugin\Oms\Command\CommandInterface`and change the interface to `Spryker\Zed\Oms\Dependency\Plugin\Command\CommandInterface`.
+- Find the usage of `Spryker\Zed\Oms\Communication\Plugin\Oms\Condition\ConditionInterface` and change the interface to `Spryker\Zed\Oms\Dependency\Plugin\Condition\ConditionInterface`.
 
 4. Migrate the methods:
+
 The methods did not change the interface but the naming changed. You need to migrate only in case you extended `Spryker\Zed\Oms\Persistence\OmsQueryContainerInterface` or `Spryker\Zed\Oms\Business\Process\ProcessInterface`.
 The classes that implement `Spryker\Zed\Oms\Business\Process\ProcessInterface should be named as setIsMain` instead of `setMain` and `getIsMain` instead of `getMain`.
 The classes that implement `Spryker\Zed\Oms\Persistence\OmsQueryContainerInterface` should be named as `queryActiveProcesses` instead of `getActiveProcesses` and `queryOrderItemStates` instead of `getOrderItemStates`.
@@ -92,7 +93,9 @@ In the **OMS** module version 8, we have also added support for stock reservatio
 
 Run the database migrations:
 
-**Code sample:**
+
+<details>
+  <summary>Code sample</summary>
 
 ```sql
 ALTER TABLE "spy_oms_product_reservation"
@@ -145,6 +148,8 @@ CREATE TABLE "spy_oms_product_reservation_last_exported_version"
      "updated_at" TIMESTAMP
   );
 ```
+
+</details>
 
 ## Upgrading from version 6.* to version 7.*
 

@@ -139,7 +139,7 @@ For each main category, like *Setup*, *Feature integration guides*, or *HowTos*,
 1. In `docs/marketplace/dev/glue-api-guides`, add the `index.md` file. Make sure you specify the title in the file.
 2. In the `marketplace_dev_sidebar.yml` file, add the URL for the **Glue API guides** element. You don't have to write `index.html` at the end of the link, the link works without it:
 
-```
+```yml
 - title: Glue API guides         
   url: /docs/marketplace/dev/glue-api-guides/
 ```

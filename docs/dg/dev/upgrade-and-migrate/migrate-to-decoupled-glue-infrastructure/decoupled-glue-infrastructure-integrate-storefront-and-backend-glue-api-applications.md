@@ -222,7 +222,7 @@ $bootstrap
 
 **deploy****.yml**
 
-```
+```yml
 groups:
   EU:
     applications:

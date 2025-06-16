@@ -25,18 +25,18 @@ To create a product offer in the Merchant Portal, follow the steps:
 8. Optional: To always display the product offer as available on the Storefront, select **Always in Stock**.
 9. To add prices, in the **Price** section, do the following:
 
-  1. Select **Add**.
-  2. Select a **STORE**.
-  3. Select a **CURRENCY**.
-  4. Optional: Enter any of the prices:
+    1. Select **Add**.
+    2. Select a **STORE**.
+    3. Select a **CURRENCY**.
+    4. Optional: Enter any of the prices:
   
-    * **NET DEFAULT**
-    * **GROSS DEFAULT**
-    * **NET ORIGINAL**
-    * **GROSS ORIGINAL**
+      - **NET DEFAULT**
+      - **GROSS DEFAULT**
+      - **NET ORIGINAL**
+      - **GROSS ORIGINAL**
   
-  5. Optional: Enter a **VOLUME QUANTITY**.
-  6. Repeat steps 1-5 until you add all the needed prices.
+    5. Optional: Enter a **VOLUME QUANTITY**.
+    6. Repeat steps 1-5 until you add all the needed prices.
   
 10. Optional: Select **Validity Dates**.
 11. Scroll up and select **Create**.

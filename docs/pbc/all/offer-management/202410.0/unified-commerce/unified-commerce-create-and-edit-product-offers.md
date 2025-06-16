@@ -9,9 +9,9 @@ This document describes how to create and edit product offers in the Merchant Po
 
 ## Prerequisites
 
-* To start managing product offers, in the Merchant Portal, go to **Offers**.
+- To start managing product offers, in the Merchant Portal, go to **Offers**.
 
-* Review the [reference information](#reference-information-create-and-edit-product-offers) before you start, or look up the necessary information as you go through the process.
+- Review the [reference information](#reference-information-create-and-edit-product-offers) before you start, or look up the necessary information as you go through the process.
 
 ## Create a product offer
 

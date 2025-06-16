@@ -120,9 +120,9 @@ This section describes the calculation data structure.
 | --- | --- |
 | totals ([TotalsTransfer](#totals-transfer))|Order totals.|
 |items ([ItemTransfer](#item-transfer)[])|CartItem collection.|
-|voucherDiscounts ([DiscountTransfer](#discount-transfer)[])|
-|cartRuleDiscounts ([DiscountTransfer](#discount-transfer)[])|
-expenses ([ExpenseTransfer](#expense-transfer))|
+|voucherDiscounts ([DiscountTransfer](#discount-transfer)[])|   |
+|cartRuleDiscounts ([DiscountTransfer](#discount-transfer)[])| |
+| expenses ([ExpenseTransfer](#expense-transfer))| |
 |billingAddress (AddressTransfer)|The current checkout customer's billing address.|
 |shippingAddress (AddressTransfer)|The current checkout customer's shipment address.|
 |customer (CustomerTransfer)|The current checkout customer's details.|

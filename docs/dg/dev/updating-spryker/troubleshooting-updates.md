@@ -66,7 +66,7 @@ spryker/symfony 3.2.0 requires symfony/stopwatch (^4.0.0)
 myProject/platform dev-develop does not require symfony/stopwatch (but v2.8.34 is installed)
 ```
 
-		Update the required packages, then try updating the original module again.
+Update the required packages, then try updating the original module again.
 
 ## Inherited class is updated on the core level
 

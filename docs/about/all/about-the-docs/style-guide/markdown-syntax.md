@@ -416,7 +416,7 @@ To integrate GLUE API in your project, you need to:
 
 To add an inline image, use this wrapper: `<span class="inline-img"></span>`. For example:
 
-```
+```md
 Click **More** <span class="inline-img">![google-chrome-more-button](link-to-an-image)</span>.
 ```
 
@@ -436,7 +436,7 @@ where
 
 To add a link to a video in the .mp4 format that originates not from Wistia, add this block with the link to your video:
 
-```
+```html
 <figure class="video_container">
     <video width="100%" height="auto" controls>
     <source src="link-to-your-video.mp4" type="video/mp4">
@@ -460,7 +460,7 @@ where `http://example.com/the.pdf` is the link to your .pdf file.
 
 Glossary syntax:
 
-```
+```text
 **{glossary item}**
 
 >{glossary item description}

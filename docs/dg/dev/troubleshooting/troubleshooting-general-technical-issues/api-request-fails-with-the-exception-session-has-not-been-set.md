@@ -18,7 +18,7 @@ Most probably, you're using a code that is relying on session. However, obviousl
 
 Switch the session storage for the Messenger module to `IN MEMORY`:
 
-```
+```php
 use Spryker\Shared\Messenger\MessengerConfig as SharedMessengerConfig;
 use Spryker\Zed\Messenger\MessengerConfig;
 ....

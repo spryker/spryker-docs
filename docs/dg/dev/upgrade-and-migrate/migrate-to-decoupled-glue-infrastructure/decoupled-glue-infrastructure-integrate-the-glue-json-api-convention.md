@@ -68,7 +68,7 @@ $config[GlueJsonApiConventionConstants::GLUE_DOMAIN]
 
 Generate transfers:
 
-```
+```bash
 vendor/bin/console transfer:generate
 ```
 

@@ -72,8 +72,7 @@ Download and install [OrbStack](https://orbstack.dev/download).
 
 
 To migrate from Docker Desktop to OrbStack, see [Migrate from Docker to OrbStack](https://docs.orbstack.dev/install#docker-migration).
-To run Docker Desktop and OrbStack side-by-side and switch between them, see [Side-by-side
-](https://docs.orbstack.dev/install#docker-context).
+To run Docker Desktop and OrbStack side-by-side and switch between them, see [Side-by-side](https://docs.orbstack.dev/install#docker-context).
 
 ## Install Mutagen for development mode
 

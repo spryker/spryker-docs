@@ -139,22 +139,22 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 10. Refill storage:
 
-    1.  Truncate the `spy_product_abstract_category_storage` database table:
+    1. Truncate the `spy_product_abstract_category_storage` database table:
 
     ```sql
     TRUNCATE TABLE spy_product_abstract_category_storage;
     ```
-    2.  Remove all the data:
+    2. Remove all the data:
 
     ```bash
     console sync:data product_abstract_category
     ```
-    3.  Trigger the event:
+    3. Trigger the event:
 
     ```bash
     console publish:trigger-events -r product_abstract_category
     ```
-    4.  Sync all table storage data to the storage:
+    4. Sync all table storage data to the storage:
 
     ```bash
     console sync:data product_abstract_category

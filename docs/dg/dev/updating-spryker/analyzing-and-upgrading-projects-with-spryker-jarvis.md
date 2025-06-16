@@ -49,7 +49,7 @@ To migrate your project to the latest version of Spryker using the Spryker Jarvi
 
 1. Inside the Spryker Jarvis folder, run the command
 
-```
+```bash
 node jarvis.js <path to your spryker project folder>
 ```
 

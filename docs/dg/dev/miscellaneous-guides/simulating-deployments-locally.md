@@ -38,7 +38,7 @@ You must have the following `deploy.yml` files in your project (it may vary, dep
 
 Bootstrap your `deploy.yml`:
 
-```
+```bash
 docker/sdk boot DEPLOY_FILE.yml && docker/sdk up
 ```
 

@@ -61,7 +61,7 @@ Shared helpers can be used for all application tests.
 This helper lets you easily mock configurations and gives you access to `ModuleConfig`.
 To find out `ModuleConfig` of the current module under test, run the following:
 
-```
+```php
 $this->tester->getModuleConfig()
 ```
 

@@ -39,7 +39,7 @@ To get all the things working, you need to prepare a proper organization for you
 
 To organize your tests, follow this structure of the tests directory:
 
-```
+```text
 tests/
     PyzTest/
         ApplicationA/

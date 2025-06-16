@@ -23,7 +23,7 @@ The Glue JSON:API convention provides some parameter parsing out of the box. The
 
 Glue uses an offset-based pagination style: the client passes two values, `offset` and `limit`, where the limit's the number of records to display, and offset is the number of records to skip. Here is an example:
 
-```
+```json
 ?page[offset]=0&page[limit]=10 # display 10 records starting at 0 (AKA page #1)
 ?page[offset]=10&page[limit]=10 # display 10 records starting at 10 (AKA page #2)
 ```
@@ -41,7 +41,7 @@ In JSON:API responses, the calculation of the next, previous, last, and first pa
 
 When pagination parameters are passed from the client, `GlueRequestTransfer` is available as the Glue controller action parameter contains `pagination`. Access them like this:
 
-```
+```php
 $glueRequestTransfer->getPagination()->getOffset();
 $glueRequestTransfer->getPagination()->getLimit();
 ```
@@ -50,7 +50,7 @@ Use these to pass them to the clients and facades (the latter must support the p
 
 In order for the response links to be formed correctly, `GlueResponseTransfer` transfer must contain the information about the requested (and applied, if changed by the code) pagination parameters and the total number of results in the set.
 
-```
+```php
 $glueResponseTransfer->getPagination()->setOffset();
 $glueResponseTransfer->getPagination()->setLimit();
 $glueResponseTransfer->getPagination()->setNbResults();

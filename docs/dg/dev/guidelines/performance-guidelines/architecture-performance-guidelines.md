@@ -172,7 +172,7 @@ Publishers use queues to propagate events and let workers consume them to provid
 
 The default Spryker configuration comes with one worker per publisher queue. Nevertheless, you can increase this configuration to the maximum number of CPUs for a specific queue if other queues do not receive any loads. For example:
 
-```
+```text
 Publisher.ProductAbstract 10000 msg/minute (2 workers)
 Publisher.ProductConcrete 10000 msg/minute (2 workers)
 Publisher.Translation 10 msg/minute (1 worker)
@@ -203,7 +203,7 @@ Spryker also recommends enabling the benchmark tests for each publisher queue an
 
 Example of benchmark for each queue:
 
-```
+```text
 time vendor/bin/console queue:task:start publisher.product_abstract // Ouput 30.00s
 ....
 ```

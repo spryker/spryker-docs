@@ -33,10 +33,10 @@ This document describes how to create and edit product offers in the Merchant Po
     3. Select a **CURRENCY**.
     4. Optional: Enter any of the prices:
   
-        * **NET DEFAULT**
-        * **GROSS DEFAULT**
-        * **NET ORIGINAL**
-        * **GROSS ORIGINAL**
+        - **NET DEFAULT**
+        - **GROSS DEFAULT**
+        - **NET ORIGINAL**
+        - **GROSS ORIGINAL**
 
     5. Optional: Enter a **VOLUME QUANTITY**.
     6. Repeat steps 1-5 until you add all the needed prices.

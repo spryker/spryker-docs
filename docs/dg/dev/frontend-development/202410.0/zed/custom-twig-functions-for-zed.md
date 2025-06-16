@@ -81,6 +81,8 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 </details>
 
+<!-- markdownlint-disable -->
+
 | FUNCTION NAME | DESCRIPTION | METHOD SIGNATURE | USAGE EXAMPLE |
 | --- | --- | --- | --- |
 | `assetsPath` | <ul><li>Provides a safe way to access the `public` folder where compiled assets are located. Returns a string in the following format: <br>`{publicAssetsPath}{namespaceName}{themeName}{relativeAssetPath}`. For example, `/assets/css/spryker-zed-gui-main.js`.<br>`/assets/css/spryker-zed-gui-main.css`.<br>The string is used internally to resolve a component/resource location within a provided module.</li><li>Provides a safe way to access a remote folder where compiled assets are located—for example, a Content Delivery Network (CDN) resource. For more details, see [Custom Location for Static Assets](/docs/dg/dev/integrate-and-configure/integrate-custom-location-for-static-assets.html) f.</li></ul> | `function assetsPath($relativePath: string): string`<ul><li>`$relativePath` - relative asset path (*required*).</li></ul> | `{% raw %}{{{% endraw %} assetsPath('js/spryker-zed-gui-main.js') {% raw %}}}{% endraw %}`<br>`{% raw %}{{{% endraw %} assetsPath('css/spryker-zed-gui-main.css') {% raw %}}}{% endraw %}` |
@@ -97,3 +99,6 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 | `viewActionButton` | Generates a custom action button. | `function ($url: string, $title: string, $options: array): string`<ul><li>`$url` - relative URL (*required*).</li><li>`$title` - name (*required*).</li><li>`$options` - sets additional options (*optional*). The default value is `[]`. The options are:<ul><li>`id`</li><li>`class`</li><li>`default_css_classes`</li><li>`button_class`</li><li>`icon`</li></ul></li></ul> | `{% raw %}{{ viewActionButton('/user/view', 'key.to.translate' | trans) }}{% endraw %}` |
 | `submit_button` | Renders a custom submit button by the defined template: `@Gui/Form/button/submit_button.twig`. | `function ($value: string, $attr: array): string`<ul><li>`$value` - defines the initial button value (*required*).</li><li>`$attr` - defines button attributes (*optional*). The default value is `[]`.</li></ul> | `{% raw %}{{ submit_button('key.to.transfer|trans', {}) }}{% endraw %}` |
 | `groupActionButtons` | Generates a group of action buttons. | `function ($buttons: array, $title: string, $options: array): string` | `{% raw %}{%{% endraw %} set linksData = {`<br>`{'url' : '/gui/create', 'title' : 'key.to.trans | trans'},`<br>`{'url' : '/gui/edit', 'title' : 'key.to.trans | trans'}`<br>`} {% raw %}%}{% endraw %}`<br>`{% raw %}{{ groupActionButtons(linksData,'key.to.translate' | trans) }}{% endraw %}` |
+
+<!-- markdownlint-enable -->
+

@@ -62,7 +62,7 @@ Add a new store and a new home page for it.
 
 1. Add a new store and call it `DEMO` by adding a new array key to the store configuration file in `config/Shared/stores.php`.
 
-```
+```php
 $stores['DEMO'] = $stores['DE'];
 ```
 

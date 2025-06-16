@@ -68,6 +68,8 @@ Find B2B and B2C deploy file examples for [development](/docs/dg/dev/set-up-spry
 
 ***
 
+<!-- markdownlint-disable -->
+
 ### version:
 
 Defines the version of the Deploy file format.
@@ -1051,6 +1053,8 @@ A **Service** to control user agents.
     * `webdriver: engine:`—possible values are `chromedriver,` `phantomjs`. This variable is optional with the default value of `phantomjs`.
 
 ***
+
+<!-- markdownlint-enable -->
 
 ## Change log
 

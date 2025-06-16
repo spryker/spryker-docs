@@ -27,7 +27,10 @@ An MFA method consists of two components:
 
 ## 1) Create an MFA type plugin
  
-Create a plugin that implements `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface`:
+Create one of the following plugins: 
+ 
+* Yves: Implements `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface` and calls a client method
+* Zed: Resides in the Zed layer, implements `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface`, and delegates the logic through the Facade
 
 <details>
 <summary>Pyz\Yves\MultiFactorAuth\Plugin\Factors\YourMultiFactorAuthType\YourMfaTypePlugin.php</summary>
@@ -90,15 +93,9 @@ class YourMfaTypePlugin extends AbstractPlugin implements MultiFactorAuthPluginI
     }
 }
 ```
+
 </details>
 
-{% info_block infoBox "Creating MFA type plugins for Backoffice users" %}
-
-If you are implementing a Multi-Factor Authentication plugin for **Backoffice users**, you must place the plugin in the **Zed** layer and implement `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface`.
-
-Unlike the Yves plugin which typically calls a client method, the Zed implementation should delegate the logic through the **Facade**.
-
-{% endinfo_block %}
 
 ## 2) Create a code sender strategy plugin
 
@@ -180,9 +177,9 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
 
 {% info_block infoBox "Registering MFA plugins for agents and Backoffice users" %}
 
-If you are implementing Multi-Factor Authentication plugins for **agents**, you must register them in using the `MultiFactorAuthDependencyProvider::getAgentMultiFactorAuthPlugins()` method.
+If you are implementing MFA plugins for **agents**, you must register them in using the `MultiFactorAuthDependencyProvider::getAgentMultiFactorAuthPlugins()` method.
 
-If you are implementing Multi-Factor Authentication plugins for **Backoffice users**, you must register them in the **Zed** layer. Use the `MultiFactorAuthDependencyProvider::getUserMultiFactorAuthPlugins()` class in the Zed module.
+If you are implementing MFA plugins for **Backoffice users**, you must register them in the **Zed** layer. Use the `MultiFactorAuthDependencyProvider::getUserMultiFactorAuthPlugins()` class in the Zed module.
 
 {% endinfo_block %}
 
@@ -212,6 +209,6 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
 
 {% info_block infoBox "Registering MFA plugins for agents and Backoffice users" %}
 
-If you are implementing Multi-Factor Authentication plugins for **agents** or **Backoffice users**, you must register them in using the `MultiFactorAuthDependencyProvider::getUserSendStrategyPlugins()` method.
+If you are implementing MFA plugins for **agents** or **Backoffice users**, you must register them in using the `MultiFactorAuthDependencyProvider::getUserSendStrategyPlugins()` method.
 
 {% endinfo_block %}

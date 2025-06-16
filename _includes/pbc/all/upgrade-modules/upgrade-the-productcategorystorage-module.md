@@ -149,11 +149,13 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
     ```bash
     console sync:data product_abstract_category
     ```
+    
     3. Trigger the event:
 
     ```bash
     console publish:trigger-events -r product_abstract_category
     ```
+    
     4. Sync all table storage data to the storage:
 
     ```bash

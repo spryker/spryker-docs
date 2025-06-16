@@ -15,12 +15,12 @@ ISO 27001 is a specification for an information security management system (ISMS
 [Read more](https://spryker.com/about-us/trust-security/)
 
 ## SOC 2 Type 1
-SOC 2 (System and Organization Controls) is a regularly refreshed report that focuses on non-financial reporting controls as they relate to the security of our cloud service. Spryker holds a SOC 2 Type 1 report. If you would like to receive our SOC-2 Type 1 report, please send us an email to certificates@spryker.com and explain your use case and request in a few sentences. We will then send you a link to download a personal version of our report. Click on the “Request Report” link below to get started.
+SOC 2 (System and Organization Controls) is a regularly refreshed report that focuses on non-financial reporting controls as they relate to the security of our cloud service. Spryker holds a SOC 2 Type 1 report. If you would like to receive our SOC-2 Type 1 report, send us an email to certificates@spryker.com and explain your use case and request in a few sentences. We will then send you a link to download a personal version of our report. Click on the "Request Report" link below to get started.
 
 [Read more](https://spryker.com/about-us/trust-security/)
 
 ## SOC 2 Type 2
-SOC 2 (System and Organization Controls) is a regularly refreshed report that focuses on non-financial reporting controls as they relate to the security of our cloud service. Spryker holds a SOC 2 Type 2 report. If you would like to receive our SOC-2 Type 2 report, please send us an email to certificates@spryker.com and explain your use case and request in a few sentences. We will then send you a link to download a personal version of our report. Click on the “Request Report” link below to get started.
+SOC 2 (System and Organization Controls) is a regularly refreshed report that focuses on non-financial reporting controls as they relate to the security of our cloud service. Spryker holds a SOC 2 Type 2 report. If you would like to receive our SOC-2 Type 2 report, send us an email to certificates@spryker.com and explain your use case and request in a few sentences. We will then send you a link to download a personal version of our report. Click on the "Request Report" link below to get started.
 
 [Read more](https://spryker.com/about-us/trust-security/)
 

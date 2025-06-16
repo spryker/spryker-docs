@@ -15,24 +15,30 @@ If you find a security issue in a Spryker product, report it to us.
 
 Do not use public Slack channels or any other public forums to report security issues. Instead, send an email to [security@spryker.com](mailto:security@spryker.com). When submitting a report, be sure to follow the guidelines outlined below under 'Crafting a report' section to help us understand and address the issue effectively. Your message will be forwarded to our internal security team, and we will confirm receipt and follow up with any additional questions if necessary.
 
-## Vulnerability Disclosure Program (VDP)
+## Vulnerability Disclosure Program
 
-Spryker operates a Vulnerability Disclosure Program (VDP) through HackerOne, enabling security researchers to report potential security vulnerabilities responsibly. Researchers interested in participating in the VDP and submitting a vulnerability report via the HackerOne platform are encouraged to contact us by email at [security@spryker.com](mailto:security@spryker.com).
+Spryker operates a Vulnerability Disclosure Program (VDP) through HackerOne, enabling security researchers to report potential security vulnerabilities responsibly. To participate in the VDP program and submit vulnerability reports via the HackerOne platform, contact us at [security@spryker.com](mailto:security@spryker.com).
 
 ## Crafting a report
 
 To help streamline our review process, ensure your submission meets the following criteria:
 
-1. Submit one vulnerability per report, unless multiple vulnerabilities need to be chained to demonstrate impact
-2. Provide a clear description of the vulnerability
-3. Include detailed steps on how to reproduce the issue
-4. Supply proof of exploitability (for example screenshots or video evidence)
-5. Explain the potential impact on users or the organization
-6. Provide a proposed CVSSv3.1 vector and score (excluding environmental and temporal modifiers)
-7. List URLs and affected parameters
-8. Include any other vulnerable URLs, additional payloads, and Proof-of-Concept code, if applicable
-9. Mention the browser, OS, or application version used during testing
-10. Do not use shortened URLs (for example tiny URLs) in your reports. Submit your findings in English. All evidence and supporting materials must be included directly within the report submission. Hosting files on external services is not permitted. Failure to adhere to these requirements may delay the evaluation of your submission. Additionally, when assessing reports, we prioritize contributions that positively enhance the security community. This is a key factor in our evaluation process.
+* Submit reports in English
+* Submit one vulnerability per report, unless multiple vulnerabilities need to be chained to demonstrate impact
+* Provide a clear description of the vulnerability
+* Include detailed steps on how to reproduce the issue
+* Provide proof of exploitability, such as screenshots or video evidence
+* Explain the potential impact on users or the organization
+* Provide a proposed CVSSv3.1 vector and score, excluding environmental and temporal modifiers
+* List URLs and affected parameters
+* Include any other vulnerable URLs, additional payloads, and Proof-of-Concept code
+* Specify the browser, OS, and application version used during testing
+* Include full URLs and do not use URL shorteners, such as tiny URL
+* Attach all evidence and supporting materials directly in the report; don't user external file hosting services 
+
+Failure to adhere to these requirements may delay the evaluation of your submission. 
+
+Additionally, when assessing reports, we prioritize contributions that positively enhance the security community. This is a key factor in our evaluation process.
 
 ## How we are handling security reports
 
@@ -54,3 +60,26 @@ To help streamline our review process, ensure your submission meets the followin
      - After seven working days, we release the fix in public Demo Shops.
      - After at least seven working days we are publishing the information about the issue on our documentation website.
 5. We do not send any of the above notifications on Friday, Saturday, or Sunday to let subscribers have at least one working day to react.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

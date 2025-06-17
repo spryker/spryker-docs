@@ -14,7 +14,7 @@ redirect_from:
 
 Installation recipes contain the commands that are ran during the [install stage of deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/deployment-pipelines.html#install-stage). The recipes are located in `config/install/`.  For example, this is how they look in the [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/config/install):
 
-```
+```text
 config
 ├── install
 │   ├── ci.yml

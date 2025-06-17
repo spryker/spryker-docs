@@ -154,7 +154,7 @@ To implement the solution, follow these steps:
 
 	2. Introduce a new type of price document with the following parameters:
 	- parent document ID
-    - price
+  - price
 	- currency
 	- unique identifier
 

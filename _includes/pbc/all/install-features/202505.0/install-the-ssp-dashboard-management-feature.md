@@ -301,9 +301,10 @@ class CmsBlockStorageDependencyProvider extends SprykerCmsBlockStorageDependency
 
 ## Set up widgets
 
-| PLUGIN                  | SPECIFICATION                                                   | PREREQUISITES | NAMESPACE                                    |
-|-------------------------|-----------------------------------------------------------------|---------------|----------------------------------------------|
-| DashboardMenuItemWidget | Provides a menu item widget for the customer account side menu. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| PLUGIN                  | SPECIFICATION                                                                                             | PREREQUISITES | NAMESPACE                                    |
+|-------------------------|-----------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------|
+| DashboardMenuItemWidget | Provides a menu item widget for the customer account side menu.                                           |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspFileListWidget       | Displays the file attachment available to the company user on the dashboard page in the customer account. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -313,6 +314,7 @@ class CmsBlockStorageDependencyProvider extends SprykerCmsBlockStorageDependency
 namespace Pyz\Yves\ShopApplication;
 
 use SprykerFeature\Yves\SelfServicePortal\Widget\DashboardMenuItemWidget;
+use SprykerFeature\Yves\SelfServicePortal\Widget\SspFileListWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -324,6 +326,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     {
         return [
             DashboardMenuItemWidget::class,
+            SspFileListWidget::class
         ];
     }
 }

@@ -20,7 +20,7 @@ redirect_from:
 
 This document is a starting point for managing your Spryker Cloud Commerce OS (SCCOS) cloud environments.
 
-SCCOS is a fully managed solution. Before you start developing, we set up environments, tools, and services based on your Onboarding Questionnaire. If you didn't request something in the questionnaire, you can always do it via [support](https://spryker.force.com/support/s/).
+SCCOS is a fully managed solution. Before you start developing, we set up environments, tools, and services based on your Onboarding Questionnaire. If you didn't request something in the questionnaire, you can always do it via [support](https://support.spryker.com).
 
 After the initial setup, the following is configured and available:
 

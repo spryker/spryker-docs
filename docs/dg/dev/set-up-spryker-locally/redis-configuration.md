@@ -159,3 +159,4 @@ class RedisConfig extends AbstractBundleConfig
 }
 ```
 Utility command: `SPRYKER_REDIS_IS_DEV_MODE=0 console storage:redis:re-save` — used to re-save storage data directly after enabling the compression feature. If you use separate storage databases for each store, this command should be executed for each store individually.
+Available starting from `spryker/storage-redis:1.7.0`

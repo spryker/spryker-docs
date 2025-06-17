@@ -138,4 +138,4 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-For further information on this partner and integration into Spryker,  [contact us](https://spryker.force.com/support/s/).
+For further information on this partner and integration into Spryker,  [contact us](https://support.spryker.com).

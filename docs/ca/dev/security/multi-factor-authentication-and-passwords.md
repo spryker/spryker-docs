@@ -61,7 +61,7 @@ AWS supports the following types of MFA devices:
 
 {% info_block infoBox "Changing and removing MFA" %}
 
-For security and auditing purposes, you can only add MFA. If you need to update or remove MFA, create a [Password Reset Change Request](https://spryker.force.com/support/s/) and specify the necessary details.
+For security and auditing purposes, you can only add MFA. If you need to update or remove MFA, create a [Password Reset Change Request](https://support.spryker.com) and specify the necessary details.
 
 {% endinfo_block %}
 

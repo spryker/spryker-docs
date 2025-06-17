@@ -9,57 +9,73 @@ redirect_from:
 - /docs/scos/user/intro-to-spryker/support/handling-security-issues.html
 ---
 
-If you find a security issue in a Spryker product, report it to us.
+Spryker is committed to maintaining a secure platform for all users. This document describes how to report security issues and what to expect during our security issue review and resolution process.
 
 ## Reporting a security issue
 
-Do not use public Slack channels or any other public forums to report security issues. Instead, send an email to [security@spryker.com](mailto:security@spryker.com). When submitting a report, be sure to follow the guidelines outlined below under 'Crafting a report' section to help us understand and address the issue effectively. Your message will be forwarded to our internal security team, and we will confirm receipt and follow up with any additional questions if necessary.
+To report a security issue, always send an email to [security@spryker.com](mailto:security@spryker.com). When submitting a report, follow [Vulnerability report submission guidelines](#vulnerability-report-submission-guidelines) to help us understand and process the issue effectively. Our internal security team will get back to you with a confirmation and any follow-up questions if necessary.
+ 
+Do not use public Slack channels or any other public forums to report security issues.
 
 ## Vulnerability Disclosure Program
 
 Spryker operates a Vulnerability Disclosure Program (VDP) through HackerOne, enabling security researchers to report potential security vulnerabilities responsibly. To participate in the VDP program and submit vulnerability reports via the HackerOne platform, contact us at [security@spryker.com](mailto:security@spryker.com).
 
-## Crafting a report
+## Vulnerability report submission guidelines
 
 To help streamline our review process, ensure your submission meets the following criteria:
 
 * Submit reports in English
 * Submit one vulnerability per report, unless multiple vulnerabilities need to be chained to demonstrate impact
 * Provide a clear description of the vulnerability
-* Include detailed steps on how to reproduce the issue
-* Provide proof of exploitability, such as screenshots or video evidence
-* Explain the potential impact on users or the organization
+* Describe detailed steps to reproduce the issue
+* Provide proof of exploitability such as screenshots or video
+* Describe the potential impact on users or the organization
 * Provide a proposed CVSSv3.1 vector and score, excluding environmental and temporal modifiers
 * List URLs and affected parameters
 * Include any other vulnerable URLs, additional payloads, and Proof-of-Concept code
 * Specify the browser, OS, and application version used during testing
-* Include full URLs and do not use URL shorteners, such as tiny URL
+* Include full URLs and do not use URL shorteners such as tiny URL
 * Attach all evidence and supporting materials directly in the report; don't user external file hosting services 
-
-Failure to adhere to these requirements may delay the evaluation of your submission. 
-
-Additionally, when assessing reports, we prioritize contributions that positively enhance the security community. This is a key factor in our evaluation process.
 
 ## How we are handling security reports
 
-1. We try to confirm the issue and inform the reporter about it.
-2. We determine and discuss with the reporter the severity and impact of the issue.
-3. To protect our customers, we are not going to disclose the issue until we develop a fix and be ready to make it publicly available.
-4. We develop a fix and publish relevant details:
-   - Spryker Core (under `vendor/spryker*`).
-     - If applicable, we prepare a code snippet, which lets us fix the vulnerability on the project level immediately.
-     - We prepare a code release.
-   - We verify the fix with the reporter.
-   - The security code release is not marked in any special way in the module release notes.
-     - We contact our customers and inform them about the update available via the security newsletter.
-     - After at least 7 working days we are publishing the same information on our documentation website.
-   - Spryker Demo Shops (spryker-shop/suite, spryker-shop/b2b-demo-shop, spryker-shop/b2c-demo-shop).
-     - We prepare a code snippet, that allows fixing the vulnerability on the project level immediately.
-     - We verify the fix with the reporter.
-   - We contact our customers and inform them about the patch available via the security newsletter.
-     - After seven working days, we release the fix in public Demo Shops.
-     - After at least seven working days we are publishing the information about the issue on our documentation website.
-5. We do not send any of the above notifications on Friday, Saturday, or Sunday to let subscribers have at least one working day to react.
+We process all reports as follows:
+
+1. Confirm the reported issue and notify the reporter.
+2. Assess the severity and impact in discussion with the reporter.  
+3. Develop a fix and coordinate publication:
+- For Spryker Core (`vendor/spryker*`):
+    - Prepare a project-level code snippet if applicable
+    - Create a code release
+    - Verify the fix with the reporter
+    - Inform customers via the security newsletter
+    - After at least seven working days, publish the fix details in the docs
+      Security releases are not mentioned in product release notes
+- For Spryker Demo Shops (`spryker-shop/suite`, `b2b-demo-shop`, `b2c-demo-shop`):
+    - Prepare a project-level code snippet
+    - Verify the fix with the reporter
+    - Inform customers via the security newsletter
+    - Release the fix in public Demo Shops after seven working days
+    - Publish issue details in the docs after at least seven working days
+
+We avoid sending notifications on Friday, Saturday, or Sunday to ensure recipients have at least one working day to act.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

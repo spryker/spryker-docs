@@ -32,7 +32,7 @@ To help streamline our review process, ensure your submission meets the followin
 7. List URLs and affected parameters
 8. Include any other vulnerable URLs, additional payloads, and Proof-of-Concept code, if applicable
 9. Mention the browser, OS, or application version used during testing
-10. Do not use shortened URLs (for example tiny URLs) in your reports. Submit your findings in English. All evidence and supporting materials must be included directly within the report submission. Hosting files on external services is not permitted. Failure to adhere to these requirements may delay the evaluation of your submission. Additionally, when assessing reports, we prioritize contributions that positively enhance the security community. This is a key factor in our evaluation process.
+10. Do not use shortened URLs (for example tiny URLs) in your reports. Submit your findings in English. All evidence and supporting materials must be included directly within the report submission. Hosting files on external services is not permitted. Failure to adhere to these requirements may delay the evaluation of your submission.
 
 ## How we are handling security reports
 

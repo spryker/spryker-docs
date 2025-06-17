@@ -566,6 +566,31 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 }
 ```
 
+**src/Pyz/Zed/FileManager/FileManagerDependencyProvider.php**
+
+```php
+<?php
+
+
+namespace Pyz\Zed\FileManager;
+
+use Spryker\Zed\FileManager\FileManagerDependencyProvider as SprykerFileManagerDependencyProvider;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\FileManager\SspAssetManagementFilePreDeletePlugin;
+
+class FileManagerDependencyProvider extends SprykerFileManagerDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\FileManagerExtension\Dependency\Plugin\FilePreDeletePluginInterface>
+     */
+    protected function getFilePreDeletePlugins(): array
+    {
+        return [
+            new SspAssetManagementFilePreDeletePlugin(),
+        ];
+    }
+}
+```
+
 ### Set up widgets
 
 | PLUGIN                     | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                    |

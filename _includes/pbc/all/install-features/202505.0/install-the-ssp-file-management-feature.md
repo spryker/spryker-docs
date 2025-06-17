@@ -249,7 +249,7 @@ Make sure the data has been added to the `spy_glossary_key` and `spy_glossary_tr
 | ViewCompanyBusinessUnitFilesPermissionPlugin | Allows access to files uploaded within the same business unit.   |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
 | ViewCompanyFilesPermissionPlugin             | Allows access to all files within the same company.              |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
 | SelfServicePortalPageRouteProviderPlugin     | Provides Yves routes for the SSP files feature.                  |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                           |
-| SspCompanyFilesMenuItemWidget                 | Provides a menu item widget for the customer account side menu.  |               | SprykerFeature\Yves\SelfServicePortal\Widget                                  |
+| SspCompanyFilesMenuItemWidget                | Provides a menu item widget for the customer account side menu.  |               | SprykerFeature\Yves\SelfServicePortal\Widget                                  |
 | FileAttachmentFilePreDeletePlugin            | Ensures files are deleted when a file is removed.                |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\FileManager         |
 | FileSizeFormatterTwigPlugin                  | Adds a Twig filter to format file sizes in a human-readable way. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Twig\FileSizeFormatterTwigPlugin |
 
@@ -385,7 +385,6 @@ class FileManagerDependencyProvider extends SprykerFileManagerDependencyProvider
 }
 ```
 
-
 **src/Pyz/Yves/Twig/TwigDependencyProvider.php**
 
 ```php
@@ -405,6 +404,41 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
     {
         return [
             new FileSizeFormatterTwigPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/SelfServicePortal/SelfServicePortalDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SelfServicePortal;
+
+use SprykerFeature\Zed\SelfServicePortal\SprykerSelfServicePortalDependencyProvider as SprykerSelfServicePortalDependencyProvider;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement\SspFileDashboardDataExpanderPlugin;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspAssetManagement\SspFileSspAssetManagementExpanderPlugin;
+
+class SelfServicePortalDependencyProvider extends SprykerSelfServicePortalDependencyProvider
+{
+    /**
+     * @return array<int, \SprykerFeature\Zed\SelfServicePortal\Dependency\Plugin\DashboardDataExpanderPluginInterface>
+     */
+    protected function getDashboardDataExpanderPlugins(): array
+    {
+        return [
+            new SspFileDashboardDataExpanderPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\SprykerFeature\Zed\SspAssetManagement\Dependency\Plugin\SspAssetManagementExpanderPluginInterface>
+     */
+    protected function getSspAssetManagementExpanderPlugins(): array
+    {
+        return [
+            new SspFileSspAssetManagementExpanderPlugin(),
         ];
     }
 }

@@ -32,7 +32,7 @@ This section gives answers to common troubleshooting questions and includes the 
 - [Troubleshooting general technical issues](/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-general-technical-issues.html)
 - [Troubleshooting Docker issues](/docs/dg/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-issues.html)
 
-If you can not find answer to your questions and require technical support, you can create a Support ticket via our [Support portal](https://spryker.force.com/support/s/). If your case is not an emergency, check the following articles to understand how the Spryker support works and how the support requests are processed:
+If you can not find answer to your questions and require technical support, you can create a Support ticket via our [Support portal](https://support.spryker.com). If your case is not an emergency, check the following articles to understand how the Spryker support works and how the support requests are processed:
 
 - [How Spryker support works](/docs/about/all/support/how-spryker-support-works.html)
 - [How to get the most out of support](/docs/about/all/support/getting-the-most-out-of-spryker-support.html)

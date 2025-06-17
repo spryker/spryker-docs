@@ -32,7 +32,7 @@ This section helps you troubleshoot general technical issues you might encounter
 
 {% info_block infoBox %}
 
-If you encounter a general technical issue that is not addressed on this page, try searching by an error output or keywords, or visit the [Spryker Support Portal](https://spryker.force.com/support/s/) for technical support.
+If you encounter a general technical issue that is not addressed on this page, try searching by an error output or keywords, or visit the [Spryker Support Portal](https://support.spryker.com) for technical support.
 
 If you found a solution to a repetitive issue,  suggest a change to this page by clicking the **Edit or Report** button.
 

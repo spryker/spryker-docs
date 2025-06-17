@@ -31,7 +31,7 @@ Spryker uses our proprietary licenses and common open-source licenses. In genera
 1. Identify the module you would like to contribute to:
    - In the `vendor/` directory there is the organization and the module name. For example, `spryker/acl`.
    - Find this module on Spryker's GitHub: [acl](https://github.com/spryker/acl).
-2. Review CONTRIBUTING.md and agree to the contribution terms. In case you cannot find them, [contact us](https://spryker.force.com/support/s/).
+2. Review CONTRIBUTING.md and agree to the contribution terms. In case you cannot find them, [contact us](https://support.spryker.com).
 3. Fork the relevant repository as described in [Fork a repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo).
 4. Apply your code changes. Make sure the commit description clearly reflects the changes.
 5. Validate your code changes in at least one Demo Shop that is relevant to your contribution:
@@ -51,7 +51,7 @@ If we can't merge a PR because of our release process, we manually introduce the
 
 Spryker endeavors to acknowledge all pull requests within two weeks. If an important change is submitted, we usually process it within a day.
 
-If you create a pull request and feel that the issue is important, [contact support](https://spryker.force.com/support/s/) to speed up the process.
+If you create a pull request and feel that the issue is important, [contact support](https://support.spryker.com) to speed up the process.
 
 <!--
 ## Any further questions?

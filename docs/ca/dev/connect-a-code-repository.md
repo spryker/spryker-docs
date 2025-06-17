@@ -146,7 +146,7 @@ In the *Connections* pane, you can see the created connection and its ARN.
 
 ![connections](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Connecting+code+repository/connections.png)
 
-11. Provide the connection ARN via [support](https://spryker.force.com/support/s/).
+11. Provide the connection ARN via [support](https://support.spryker.com).
 
 We connect the repository shortly after you provide the details.
 
@@ -164,8 +164,8 @@ To avoid synchronization issues, do not push any changes to the CodeCommit repos
 
 1. Make sure your GitLab account has *Admin* permissions in the code repository.
 2. Request the following details via [support](https://spryker.force.com/support/s/):
-    - CodeCommit repository URL
-    - Username and password for HTTPS authorization in CodeCommit repository
+* CodeCommit repository URL
+* Username and password for HTTPS authorization in CodeCommit repository
 
 A dedicated user will be created for this task. The user will only have the permissions to connect the repository.
 

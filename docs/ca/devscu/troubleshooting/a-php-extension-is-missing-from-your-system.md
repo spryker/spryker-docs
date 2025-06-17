@@ -81,9 +81,9 @@ Installation failed, reverting ./composer.json and ./composer.lock to their orig
 
 ## Solution
 
-Request the missing extension to be added by [contacting us](https://spryker.force.com/support/s/). Make sure to include the name of the required extension and your project's name in the request.
+Request the missing extension to be added by [contacting us](https://support.spryker.com). Make sure to include the name of the required extension and your project's name in the request.
 
 ## Support for Spryker CI
 
-- For help with Spryker CI, [contact support](https://spryker.force.com/support/s/).
+- For help with Spryker CI, [contact support](https://support.spryker.com).
 - To learn more about Buddy, see their [docs](https://buddy.works/docs).

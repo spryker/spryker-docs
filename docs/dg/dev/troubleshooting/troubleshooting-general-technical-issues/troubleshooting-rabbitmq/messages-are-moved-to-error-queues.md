@@ -29,5 +29,5 @@ The solution depends on the error the consumer encounters. You can check what th
 
 ![Access RabbitMQ Error Queues](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/rabbit_mq_troubleshooting_access-rabbitmq-error-queues.gif)
 
-1. Either the request size needs to be reduced, or your Elasticsearch instance needs to be upscaled. [Get in touch with our support](https://spryker.force.com/support/s/), so we can determine the best course of action in your particular case.
+1. Either the request size needs to be reduced, or your Elasticsearch instance needs to be upscaled. [Get in touch with our support](https://support.spryker.com), so we can determine the best course of action in your particular case.
 2. To make the messages consumable, mitigate the error. This is best done in your local development environment as your options to debug the publish and sync process, and the consumption process of the listeners are much better. For this, you can import your staging or production database (that contains the data that you cannot publish correctly) locally, as described in [HowTo: Do better deployments](https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#ingest-staging-or-production-data).

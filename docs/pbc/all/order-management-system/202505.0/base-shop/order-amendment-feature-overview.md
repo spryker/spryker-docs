@@ -3,7 +3,10 @@ title: Order Amendment feature overview
 description: 
 last_updated: Mar 28, 2025
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/order-management-system/202505.0/base-shop/order-management-feature-overview/order-management-feature-overview.html
 ---
+
 
 Enable customers to submit requests to change orders.
 

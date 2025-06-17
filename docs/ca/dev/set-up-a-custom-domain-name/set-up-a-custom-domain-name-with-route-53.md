@@ -15,7 +15,7 @@ This document describes how to set up a custom domain name (domain) with its DNS
 
 ## 1. Set up hosted zones
 
-To set up a hosted zone, provide the domain name via [support](https://spryker.force.com/support/s/).
+To set up a hosted zone, provide the domain name via [support](https://support.spryker.com).
 
 ## 2. Point domain names to Route 53
 
@@ -82,7 +82,7 @@ See [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-
 - [Deploy the application in the staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html).
 
 
-5. Let us know about the desired change via [support](https://spryker.force.com/support/s/).
+5. Let us know about the desired change via [support](https://support.spryker.com).
 
 Give the DNS configuration 24-48 hours to propagate and you will be able to access your application via the domain.
 

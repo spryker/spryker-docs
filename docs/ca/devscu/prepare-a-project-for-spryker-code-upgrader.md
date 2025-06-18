@@ -32,7 +32,7 @@ Upgrades are provided as PRs that are automatically created in a project's repos
 
 ## Migrate to a supported version control system
 
-Currently, the Upgrader supports GitHub, GitLab, and Azure. If you want to use a different version control system, [contact support](https://spryker.force.com/support/s/), so we can implement its support in future.
+Currently, the Upgrader supports GitHub, GitLab, and Azure. If you want to use a different version control system, [contact support](https://support.spryker.com), so we can implement its support in future.
 
 ## Migrate to cloud
 

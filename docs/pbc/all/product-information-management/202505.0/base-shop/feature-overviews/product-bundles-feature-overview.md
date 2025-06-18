@@ -97,7 +97,7 @@ If bundled items have quantity&nbsp;<span aria-label="and then">></span> 1 then 
 {% info_block infoBox %}
 
 When a bundle product is added to cart with a big number of items–for example, 150–users may experience slow cart operations.  
-To improve performance in such cases, configure bundles to not be split in cart by following [Alternative setup for handling large quantities of bundled products in the cart](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-product-bundles-feature.html#alternative-setup-for-handling-large-quantities-of-bundled-products-in-the-cart).  
+To improve performance in such cases, configure bundles to not be split in cart by following [Alternative setup for handling large quantities of bundled products in the cart](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html#alternative-setup-for-handling-large-quantities-of-bundled-products-in-the-cart).  
 
 
 {% endinfo_block %}

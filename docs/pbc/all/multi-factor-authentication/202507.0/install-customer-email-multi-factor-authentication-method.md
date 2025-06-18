@@ -3,6 +3,8 @@ title: Install customer email Multi-Factor Authentication method
 description: Learn how to install and configure customer email multi-factor authentication in Spryker.
 template: howto-guide-template
 last_updated: Mar 6, 2025
+redirect_from:
+  - /docs/pbc/all/multi-factor-authentication/202505.0/install-customer-email-multi-factor-authentication-method.html
 ---
 
 Email Multi-Factor Authentication (MFA) is a security mechanism that requires users to verify their identity through an authentication code sent to their registered email. This document describes how to install and configure email MFA.

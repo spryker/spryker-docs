@@ -3,6 +3,8 @@ title: Concrete SKU product filter feature overview
 description: Filter abrtract products by concrete products SKUs in the Back Office.
 last_updated: May 23, 2025
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/product-information-management/202505.0/base-shop/feature-overviews/concrete-sku-product-filter-feature-overview.html
 ---
 
 The *Concrete SKU product filter* feature lets a Back Office user filter abstract products by SKUs of concrete products.

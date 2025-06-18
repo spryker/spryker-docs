@@ -3,6 +3,8 @@ title: Unique random order reference generator
 description: 
 last_updated: Jun 15, 2025
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/order-management-system/202505.0/base-shop/unique-random-order-reference-generator.html
 ---
 
 

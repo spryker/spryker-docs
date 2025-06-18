@@ -10,6 +10,9 @@ related:
     link: docs/pbc/all/multi-factor-authentication/page.version/install-multi-factor-authentication-feature.html
   - title: Install Customer Email Multi-Factor Authentication method
     link: docs/pbc/all/multi-factor-authentication/page.version/install-customer-email-multi-factor-authentication-method.html
+
+redirect_from:
+  - /docs/pbc/all/multi-factor-authentication/202505.0/create-multi-factor-authentication-methods.html
 ---
 
 This document describes how to create and implement Multi-Factor Authentication (MFA) methods.

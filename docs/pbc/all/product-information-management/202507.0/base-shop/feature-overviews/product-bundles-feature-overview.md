@@ -11,6 +11,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/product-bundles-feature-overview.html
   - /docs/scos/user/features/202005.0/product-bundles-feature-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-bundles-feature-overview.html
+  - /docs/pbc/all/product-information-management/202505.0/base-shop/feature-overviews/product-bundles-feature-overview.html
 ---
 
 With the *Product Bundles* feature you can tie individual items together and sell them as a package. As opposed to a set, in which products are loosely grouped, the items in a bundle are always sold together. You can choose to create a special bundle price to make the purchase more attractive. Since each bundle's product is still handled like an individual item in the Order Management Process, bundle availability is always calculated and displayed based on the item with the smallest available stock to avoid overselling.

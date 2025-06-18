@@ -532,4 +532,4 @@ Performance optimizations in the OMS availability check and order item reservati
 
 ## Performance profiling
 
-We constantly check the performance of Spryker by using profiling tools and work on optimizations whenever we see the need for it. We fix the performance issues as soon as possible when we see them or get informed about them. Therefore, whenever you see a performance issue feel free to [contact us](https://support.spryker.comcreate-request-case), ideally with a performance profile that can look at.
+We constantly check the performance of Spryker by using profiling tools and work on optimizations whenever we see the need for it. We fix the performance issues as soon as possible when we see them or get informed about them. Therefore, whenever you see a performance issue feel free to [contact us](https://support.spryker.com), ideally with a performance profile that can look at.

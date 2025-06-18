@@ -137,7 +137,7 @@ sections:
 A minimal recipe for removing a store:
 **config/install/EU/delete-store.yml**
 
-```
+```yml
 env:
     NEW_RELIC_ENABLED: 0
 command-timeout: 7200

@@ -15,5 +15,5 @@ To disconnect the Bazaarvoice app from your store, do the following
 
 1. In your store's Back Office, go to **Apps&nbsp;<span aria-label="and then">></span> Catalog**.
 2. Click **Bazaarvoice**.
-3. On the Bazaarvoice app details page, next to the **Configure** button, hold the pointer over <span class="inline-img"><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/bazzarvoice/disconnect-button.png"></span> and click **Disconnect**.
+3. On the Bazaarvoice app details page, next to the **Configure** button, hold the pointer over <span class="inline-img"><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/bazzarvoice/disconnect-button.png"></span> and click **Disconnect**. <!-- markdownlint-disable-line -->
 4. In the message that appears, click **Disconnect**. This removes the Bazaarvoice configurations from the Back Office and Storefront.

@@ -135,43 +135,42 @@ To implement the solution, follow these steps:
 }
 ```
 
-2. Make the product-price relation work:
-	1. Extend product abstract documents with the required `joined_price` section:
+2. To make the product-price relation work, extend product abstract documents with the required `joined_price` section:
 
-    ```json
-    product_abstract:abc:en_us:876
-    {
-        "store": "ABC",
-        "locale": "en_US",
-        "type": "product_abstract",
-        "is-active": true,
-        .....
-        "joined_price": {
-            "name": "product_price"
-        }
+```json
+product_abstract:abc:en_us:876
+{
+    "store": "ABC",
+    "locale": "en_US",
+    "type": "product_abstract",
+    "is-active": true,
+    .....
+    "joined_price": {
+        "name": "product_price"
     }
-    ```
+}
+```
 
-	2. Introduce a new type of price document with the following parameters:
-	- parent document ID
-  - price
-	- currency
-	- unique identifier
+3. Introduce a new type of price document with the following parameters:
+- parent document ID
+- price
+- currency
+- unique identifier
 
-    The example of the price document:
+The example of the price document:
 
-    ```json
-    price_product_concrete_group_specific:abc:50445:foo-bar:en_us
-    {
-        "joined_price": {
-            "name": "specific_price",
-            "parent": "product_abstract:abc:en_us:50504"
-        },
-        "kg_ekg": "FOO-BAR",
-        "currency": "EUR",
-        "price": 101
-    }
-    ```
+```json
+price_product_concrete_group_specific:abc:50445:foo-bar:en_us
+{
+    "joined_price": {
+        "name": "specific_price",
+        "parent": "product_abstract:abc:en_us:50504"
+    },
+    "kg_ekg": "FOO-BAR",
+    "currency": "EUR",
+    "price": 101
+}
+```
 
 These two documents can be viewed as two tables with a foreign key in terms of relational databases.
 

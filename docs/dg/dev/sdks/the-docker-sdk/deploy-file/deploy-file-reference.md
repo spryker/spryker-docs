@@ -1058,4 +1058,4 @@ A **Service** to control user agents.
 
 ## Change log
 
-* Initial reference document is introduced.
+Initial reference document is introduced.

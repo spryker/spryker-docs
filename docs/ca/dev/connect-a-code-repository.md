@@ -163,7 +163,7 @@ To avoid synchronization issues, do not push any changes to the CodeCommit repos
 ### Prerequisites
 
 1. Make sure your GitLab account has *Admin* permissions in the code repository.
-2. Request the following details via [support](https://spryker.force.com/support/s/):
+2. Request the following details via [support](https://support.spryker.com):
 - CodeCommit repository URL
 - Username and password for HTTPS authorization in CodeCommit repository
 

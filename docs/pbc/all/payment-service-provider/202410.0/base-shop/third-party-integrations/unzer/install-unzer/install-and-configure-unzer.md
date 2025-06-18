@@ -20,16 +20,16 @@ It requires the `SprykerEco.UnzerApi` `spryker-eco/unzer-api` module, which prov
 It also requires the `SprykerEco.UnzerGui` `spryker-eco/unzer-gui` module, which provides Back Office functionality to configure Unzer credentials.
 
 The `SprykerEco.Unzer` module includes integration with the following:
-* Checkout process—payment forms with all necessary fields that are required to make payment request and save order information.
-* Order Management System (OMS)—state machines with all necessary commands for making modification requests and conditions for changing orders status accordingly.
+- Checkout process—payment forms with all necessary fields that are required to make payment request and save order information.
+- Order Management System (OMS)—state machines with all necessary commands for making modification requests and conditions for changing orders status accordingly.
 
 The `SprykerEco.Unzer` module provides the following payment methods:
-* Credit Card
-* Sofort
-* Bank Transfer
-* Marketplace Credit Card
-* Marketplace Sofort
-* Marketplace Bank Transfer
+- Credit Card
+- Sofort
+- Bank Transfer
+- Marketplace Credit Card
+- Marketplace Sofort
+- Marketplace Bank Transfer
 
 ## Install and configure Unzer
 
@@ -37,7 +37,7 @@ To install and configure the Unzer module, follow the steps below.
 
 ### Install Unzer modules
 
-```
+```bash
 composer require spryker-eco/unzer spryker-eco/unzer-gui
 ```
 
@@ -162,9 +162,9 @@ Example:
 ### Select expense refund strategy
 
 You can choose one of the provided refund strategies for your payment flow (the configuration key: `UnzerConstants::EXPENSES_REFUND_STRATEGY_KEY`):
-* `UnzerConstants::LAST_SHIPMENT_ITEM_EXPENSES_REFUND_STRATEGY`—expense costs are refunded with the last item in corresponding shipment.
-* `UnzerConstants::LAST_ORDER_ITEM_EXPENSES_REFUND_STRATEGY`—expense costs are refunded with the last item in the whole order.
-* `UnzerConstants::NO_EXPENSES_REFUND_STRATEGY`—expense costs are not refunded.
+- `UnzerConstants::LAST_SHIPMENT_ITEM_EXPENSES_REFUND_STRATEGY`—expense costs are refunded with the last item in corresponding shipment.
+- `UnzerConstants::LAST_ORDER_ITEM_EXPENSES_REFUND_STRATEGY`—expense costs are refunded with the last item in the whole order.
+- `UnzerConstants::NO_EXPENSES_REFUND_STRATEGY`—expense costs are not refunded.
 
 ### Check payment after return request
 

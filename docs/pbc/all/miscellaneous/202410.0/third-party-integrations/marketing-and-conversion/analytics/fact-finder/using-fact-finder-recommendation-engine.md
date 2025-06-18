@@ -43,9 +43,11 @@ The FACT-Finder recommendation engine analyzes product and category relationship
 ## Usage
 
 To add recommendations widget to product page, insert the following code into `src/Pyz/Yves/Product/Theme/default/product/detail.twig`:
+
 ```html
 {% raw %}{{{% endraw %} fact_finder_recommendations({id: product.sku, mainId: product.idProductAbstract}, '@FactFinder/recommendations/products.twig') {% raw %}}}{% endraw %}
 ```
+
 To add recommendations widget to cart page, modify cart controller  (`src/Pyz/Yves/Cart/Controller/CartController.php`) to add array of product ids into template variables:
 
 <details>
@@ -123,6 +125,7 @@ class CartController extends AbstractController
 
 ...
 ```
+
 <br>
 </details>
 

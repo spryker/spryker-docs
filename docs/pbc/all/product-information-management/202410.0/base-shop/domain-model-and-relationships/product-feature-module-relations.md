@@ -25,7 +25,7 @@ The following schema illustrates the relations between discontinued products, as
 </div>
 
 
-The following schema represents module relations of the _Quick Order_ page:
+The following schema represents module relations of the *Quick Order* page:
 
 <div class="width-100">
 

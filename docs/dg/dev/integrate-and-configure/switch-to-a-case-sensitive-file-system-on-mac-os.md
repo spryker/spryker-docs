@@ -46,7 +46,7 @@ To avoid manually mounting the disk image every time you restart your system, cr
 To create a Launch Agent, follow these steps:
 1. Create a new file for the definition of the Launch Agent under—for example, `~Library/LaunchAgents/local.mount-case-sensitive-file-system.plist`.
 
-```
+```plist
 vim ~Library/LaunchAgents/local.mount-case-sensitive-file-system.plist
 ```
 

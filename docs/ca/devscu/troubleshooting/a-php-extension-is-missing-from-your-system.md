@@ -13,55 +13,55 @@ Spryker Code Upgrader supports the most common PHP extensions. If your applicati
 
 By default Spryker Code Upgrader supports the following PHP extensions:
 
-* apcu
-* bcmath
-* bz2
-* ctype
-* curl
-* date
-* dom
-* fileinfo
-* filter
-* ftp
-* gd
-* gmp
-* hash
-* iconv
-* intl
-* json
-* libxml
-* mbstring
-* mysqli
-* mysqlnd
-* newrelic
-* openssl
-* pcntl
-* pcre
-* pdo
-* pdo_mysql
-* pdo_pgsql
-* pdo_sqlite
-* pgsql
-* phar
-* posix
-* readline
-* redis
-* reflection
-* session
-* simplexml
-* soap
-* sockets
-* sodium
-* spl
-* sqlite3
-* standard
-* tokenizer
-* xml
-* xmlreader
-* xmlwriter
-* xsl
-* zip
-* zlib
+- apcu
+- bcmath
+- bz2
+- ctype
+- curl
+- date
+- dom
+- fileinfo
+- filter
+- ftp
+- gd
+- gmp
+- hash
+- iconv
+- intl
+- json
+- libxml
+- mbstring
+- mysqli
+- mysqlnd
+- newrelic
+- openssl
+- pcntl
+- pcre
+- pdo
+- pdo_mysql
+- pdo_pgsql
+- pdo_sqlite
+- pgsql
+- phar
+- posix
+- readline
+- redis
+- reflection
+- session
+- simplexml
+- soap
+- sockets
+- sodium
+- spl
+- sqlite3
+- standard
+- tokenizer
+- xml
+- xmlreader
+- xmlwriter
+- xsl
+- zip
+- zlib
 
 ## Error
 
@@ -85,5 +85,5 @@ Request the missing extension to be added by [contacting us](https://support.spr
 
 ## Support for Spryker CI
 
-* For help with Spryker CI, [contact support](https://support.spryker.com).
-* To learn more about Buddy, see their [docs](https://buddy.works/docs).
+- For help with Spryker CI, [contact support](https://support.spryker.com).
+- To learn more about Buddy, see their [docs](https://buddy.works/docs).

@@ -30,6 +30,6 @@ These callbacks are used only for payment methods that redirect to a different p
 
 Callback URLs can be configured in merchant back end and must have the following format:
 
-* Confirmation URL: `http://de.mysprykershop.com/crefo-pay/callback/confirmation `
-* Success URL: `http://de.mysprykershop.com/crefo-pay/callback/success`
-* Failure URL: `http://de.mysprykershop.com/crefo-pay/callback/failure`
+- Confirmation URL: `http://de.mysprykershop.com/crefo-pay/callback/confirmation`
+- Success URL: `http://de.mysprykershop.com/crefo-pay/callback/success`
+- Failure URL: `http://de.mysprykershop.com/crefo-pay/callback/failure`

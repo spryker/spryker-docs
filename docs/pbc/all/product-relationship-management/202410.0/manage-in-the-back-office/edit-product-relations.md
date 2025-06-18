@@ -29,26 +29,26 @@ Review the [reference information](#reference-information-edit-product-relations
 ## Edit general information of a product relation
 
 1. Click the **Settings** tab and do any of the following:
-    * Select a **RELATION TYPE**.
-    * Select or clear the **UPDATE REGULARLY** checkbox.
-    * Select or clear the **IS ACTIVE** checkbox.
-    * In the **Product owning the relation** pane, next to the product you want to own the relation, click **Select**.
+    - Select a **RELATION TYPE**.
+    - Select or clear the **UPDATE REGULARLY** checkbox.
+    - Select or clear the **IS ACTIVE** checkbox.
+    - In the **Product owning the relation** pane, next to the product you want to own the relation, click **Select**.
         This shows the product for **Selected product**.
-    * In the **Store relation** pane, select or clear the checkboxes next to the stores you want to start or stop displaying the product relation in.
+    - In the **Store relation** pane, select or clear the checkboxes next to the stores you want to start or stop displaying the product relation in.
 2. Click **Save**.
     This refreshes the page with a success message displayed.
 
 ## Edit condition rules of a product relation
 
 1. Click the **Products** tab and do any of the following:
-    * To add a rule, do the following:
+    - To add a rule, do the following:
         1. Click **Add rule**.
         2. Select a parameter.
         3. Select a relation operator.
         4. Select a value.
-    * To delete a rule, next to the rule you want to delete, click **Delete**
-    * To add a rule group, click **Add group**.
-    * To delete a rule group, in the top-right corner of the group you want to delete, click **Delete**.
+    - To delete a rule, next to the rule you want to delete, click **Delete**
+    - To add a rule group, click **Add group**.
+    - To delete a rule group, in the top-right corner of the group you want to delete, click **Delete**.
 2. Click **Save**.
     This refreshes the page with a success message displayed.
 

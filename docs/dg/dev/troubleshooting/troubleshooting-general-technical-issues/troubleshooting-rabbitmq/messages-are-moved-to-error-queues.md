@@ -20,8 +20,8 @@ Some or all messages are not processed and consumed from the queue as normal, bu
 ## Cause
 
 The following causes this problem:
-* You are exceeding the request entity size restriction of Elasticsearch. In this case, you can find the error message Request entity too large in the RabbitMQ error queues. To check that, see the [Solution](#solution) section.
-* Data issues like unmet dependencies. You try to publish a product that references a category that is not in Elasticsearch, or you try to publish information that does not meet the data schema in Redis are frequent causes.
+- You are exceeding the request entity size restriction of Elasticsearch. In this case, you can find the error message Request entity too large in the RabbitMQ error queues. To check that, see the [Solution](#solution) section.
+- Data issues like unmet dependencies. You try to publish a product that references a category that is not in Elasticsearch, or you try to publish information that does not meet the data schema in Redis are frequent causes.
 
 ## Solution
 

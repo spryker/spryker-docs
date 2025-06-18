@@ -26,8 +26,8 @@ Configure `DataImportConfig` and add a constant to it. You can add a new constan
 
 The method must call `Spryker\Zed\DataImport::buildQueueDataImporterConfiguration()`, passing three arguments:
 
-* Import type
-* Queue consumer options
+- Import type
+- Queue consumer options
 
 **Pyz\Zed\DataImport\DataImportConfig.php**
 
@@ -146,6 +146,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
     .....
 }
 ```
+
 </details>
 
 ## 4. Adjust writers
@@ -199,6 +200,7 @@ class ProductAbstractBulkPdoDataSetWriter implements DataSetWriterInterface
     }
 }
 ```
+
 </details>
 
 

@@ -25,10 +25,10 @@ Make sure to review the [reference information](#reference-information-create-na
 2. In the **Create child node** pane, select the node **TYPE**.
 3. Enter a **TITLE**.
 4. Depending on the node **TYPE**, do one of the following:
-    * **Category**: enter and select a **CATEGORY URL**.
-    * **CMS page**: enter and select a **CMS PAGE URL**.
-    * **Link**: enter a **LINK**.
-    * **External URL**: enter an **EXTERNAL URL**.
+    - **Category**: enter and select a **CATEGORY URL**.
+    - **CMS page**: enter and select a **CMS PAGE URL**.
+    - **Link**: enter a **LINK**.
+    - **External URL**: enter an **EXTERNAL URL**.
 5. Optional: Enter a **CUSTOM CSS CLASS**.
 6. Select **VALID FROM** and **VALID TO** dates.
 7. To display the node on the Storefront, select the **ACTIVE** checkbox.
@@ -44,10 +44,10 @@ This displays a success message. The **NAVIGATION TREE** refreshes with the crea
 4. In the **Create child node** pane, select the node **TYPE**.
 5. Enter a **TITLE**.
 6. Depending on the node **TYPE**, do one of the following:
-    * **Category**: enter and select a **CATEGORY URL**.
-    * **CMS page**: enter and select a **CMS PAGE URL**.
-    * **Link**: enter a **LINK**.
-    * **External URL**: enter an **EXTERNAL URL**.
+    - **Category**: enter and select a **CATEGORY URL**.
+    - **CMS page**: enter and select a **CMS PAGE URL**.
+    - **Link**: enter a **LINK**.
+    - **External URL**: enter an **EXTERNAL URL**.
 7. Optional: Enter a **CUSTOM CSS CLASS**.
 8. Select **VALID FROM** and **VALID TO** dates.
 9. To display the node on the Storefront, select the **ACTIVE** checkbox.
@@ -67,4 +67,5 @@ This displays a success message. The **NAVIGATION TREE** refreshes with the crea
 | ACTIVE | Checkbox to define if the navigation node will be active. Inactive navigation nodes and their sub-nodes are not displayed on the Storefront.  |
 
 ## Reference information: Navigation node types
+
 {% include pbc/all/content-management-system/manage-in-the-back-office/navigation/reference-information-navigation-node-types.md %} <!-- To edit, see /_includes/pbc/all/content-management-system/manage-in-the-back-office/navigation/reference-information-navigation-node-types.md -->

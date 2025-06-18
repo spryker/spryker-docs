@@ -173,6 +173,7 @@ class CustomCustomerRegistrationMailTypeBuilderPlugin extends AbstractPlugin imp
     }
 }
 ```
+
 </details>
 
 ## 3. Registering a plugin

@@ -53,7 +53,7 @@ Usage example:
 </spy-select>
 ```
 
-The dependent element, being `SelectComponent` in the example, must implement a `DatasourceDependableElement` abstract class (token) and return a component value using the  `getValueChanges()` abstract method:   
+The dependent element, being `SelectComponent` in the example, must implement a `DatasourceDependableElement` abstract class (token) and return a component value using the  `getValueChanges()` abstract method:
 
 ```ts
 @Component({

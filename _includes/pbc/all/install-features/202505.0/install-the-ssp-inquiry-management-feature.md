@@ -58,6 +58,7 @@ Update your `config/Shared/config_default.php`:
 | SspInquiryManagementConfig::getPendingStatus()                                  | Identifies the status that will be considered `Pending`.                                | SprykerFeature\Zed\SspInquiryManagement    |
 
 **config/Shared/config_default.php**
+
 ```php
 <?php
 
@@ -142,6 +143,7 @@ class SspInquiryManagementConfig extends SprykerSspInquiryConfig
 </details>
 
 **src/Pyz/Zed/Sales/SalesConfig.php**
+
 ```php
 <?php
 
@@ -542,6 +544,7 @@ ssp_dashboard.general.inquiries,Ausstehende Ansprüche,de_DE
 
 
 2. Append `ssp_inquiry.csv`:
+
 ```csv
 DE-INQR--1,DE,general,Spryker--8,Request for documentation,Please provide detailed documentation on the warranty and return policies for the products purchased under my account.
 DE-INQR--2,DE,general,Spryker--8,Product catalog issue,I noticed that several products in the catalog are missing specifications and images. This makes it difficult to make informed purchasing decisions. Please update the product details.
@@ -564,6 +567,7 @@ cms-block-email--ssp-inquiry-rejected--text,ssp-inquiry-rejected--text,TEXT Emai
 </details>
 
 4. Append `cms_block_store.csv`:
+
 ```csv
 cms-block-email--ssp-inquiry-approved--html,DE
 cms-block-email--ssp-inquiry-approved--text,DE
@@ -585,9 +589,9 @@ console data:import cms-block-store
 {% info_block warningBox "Verification" %}
 
 Make sure the following applies:
-* Glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
-* The `ssp_inquiry` table contains the new inquiries.
-* The new CMS blocks are assigned to correct stores.
+- Glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
+- The `ssp_inquiry` table contains the new inquiries.
+- The new CMS blocks are assigned to correct stores.
 
 {% endinfo_block %}
 
@@ -997,8 +1001,8 @@ Make sure the **Inquiries** menu item is not displayed and you can't access the 
 Verify inquiries in the Back Office:
 
 1. In the Back Office, go to **Sales** > **Inquiries** page. Make sure the following applies:
- * The inquiry you've created on the Storefront is displayed in the list.
- * You can filter the list by **Inquiry status** and **Inquiry type**.
+- The inquiry you've created on the Storefront is displayed in the list.
+- You can filter the list by **Inquiry status** and **Inquiry type**.
 2. Click **View** next to an inquiry.
   Make sure that, in the **Status** section, **Start review** and **Reject** buttons are displayed.
 3. Click **Start review**.

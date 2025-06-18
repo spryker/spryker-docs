@@ -76,6 +76,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 	}
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}

@@ -13,7 +13,7 @@ This document describes technical details of the [PriceProduct](https://github.c
 
 ## Price dimension
 
-Starting from version 2.0.0 of the PriceProduct module, _Default Price Dimension_ was implemented inside the PriceProduct to save BC. All prices imported by the new PriceProductDataImport would be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html) to learn more about the price dimension.
+Starting from version 2.0.0 of the PriceProduct module, *Default Price Dimension* was implemented inside the PriceProduct to save BC. All prices imported by the new PriceProductDataImport would be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html) to learn more about the price dimension.
 
 ## PriceProductService
 
@@ -21,8 +21,8 @@ Starting from version 2.0.0 of the `PriceProduct` module, we have added the Serv
 
 The prices list can come from Yves (Storage) and Zed (DB).
 
-* In case with Yves, the `PriceProductFilterTransfer` object must be created for filtering, which contains named values (store name, currency code, named price mode, named price type).
-* In case with Zed, the `PriceProductCriteriaTransfer` object must be created for filtering, which contains IDs as values (store ID, currency ID, and price type ID).
+- In case with Yves, the `PriceProductFilterTransfer` object must be created for filtering, which contains named values (store name, currency code, named price mode, named price type).
+- In case with Zed, the `PriceProductCriteriaTransfer` object must be created for filtering, which contains IDs as values (store ID, currency ID, and price type ID).
 
 If you need to add additional fields to one of these objects, add it to another one (if you added QTY to filter, criteria must be updated). So that `PriceProductFilterTransfer` could always be converted to `PriceProductCriteriaTransfer`.
 

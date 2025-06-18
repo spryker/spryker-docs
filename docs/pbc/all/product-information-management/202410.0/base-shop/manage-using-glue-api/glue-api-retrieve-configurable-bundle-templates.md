@@ -24,9 +24,9 @@ In your development, this resource can help you to let the customers set up the 
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Install the Configurable Bundle Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html)
-* [Install the Configurable Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
-* [Install the Configurable Bundle + Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html)
+- [Install the Configurable Bundle Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html)
+- [Install the Configurable Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
+- [Install the Configurable Bundle + Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html)
 
 ## Retrieve all configurable bundle templates
 
@@ -128,6 +128,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
     }
 }
 ```
+
 </details>
 
 <details>
@@ -666,6 +667,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -717,6 +719,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
     ]
 }
 ```
+
 </details>
 
 
@@ -738,8 +741,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
 | configurable-bundle-template-slots | name | String | Name of the slot. |
 | configurable-bundle-template-image-sets | id | String | Unique identifier of the configurable bundle template image set. |
 | configurable-bundle-template-image-sets | name | String | Name of the image set. |
-| configurable-bundle-template-image-sets | images | Array | 	
-A list of images assigned to a configurable bundle template.  |
+| configurable-bundle-template-image-sets | images | Array | 	A list of images assigned to a configurable bundle template.  |
 | configurable-bundle-template-image-sets | externalUrlLarge | String | URLs to the image per image set. |
 | configurable-bundle-template-image-sets | externalUrlSmall | String | URLs to the image per image set. |
 
@@ -753,11 +755,11 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 You can use the configurable bundle resource in the following way:
 
-* [Add a configurable bundle to a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html#add-a-configurable-bundle-to-a-guest-cart)
-* [Change the quantity of the configurable bundles in a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html#change-quantity-of-configurable-bundles-in-a-guest-cart)
-* [Remove a configurable bundle from a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html#remove-a-configurable-bundle-from-a-guest-cart)
-* [Add a configurable bundle to a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#add-a-configurable-bundle-to-a-registered-users-cart)
-* [Change the quantity of the configurable bundles in a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-users-cart)
-* [Remove a configurable bundle from a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-users-cart)
-* [Checking our purchases with configurable bundles](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html)
-* [Retrieving orders with configurable bundles](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html)
+- [Add a configurable bundle to a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html#add-a-configurable-bundle-to-a-guest-cart)
+- [Change the quantity of the configurable bundles in a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html#change-quantity-of-configurable-bundles-in-a-guest-cart)
+- [Remove a configurable bundle from a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html#remove-a-configurable-bundle-from-a-guest-cart)
+- [Add a configurable bundle to a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#add-a-configurable-bundle-to-a-registered-users-cart)
+- [Change the quantity of the configurable bundles in a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-users-cart)
+- [Remove a configurable bundle from a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-users-cart)
+- [Checking our purchases with configurable bundles](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html)
+- [Retrieving orders with configurable bundles](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html)

@@ -24,7 +24,7 @@ Before adding a new external package to your project, make sure to comply with t
 
 ### Regularly check security
 
-1. Check that the package has no known security vulnerabilities. 
+1. Check that the package has no known security vulnerabilities.
 2. To regularly check all packages, add an automated SAST&SCA tool to your CI/CD.
 
 ### Perform regular compliance checks
@@ -33,4 +33,4 @@ Every package comes with a license. Do the following:
 1. Check with your legal team that you can use the package with its license.
 2. To regularly check all packages, add an automated tool to your CI/CD.
 
-We recommend [Snyk](https://snyk.io/) for all the listed recommendations. However, you are free to use any other tool. 
+We recommend [Snyk](https://snyk.io/) for all the listed recommendations. However, you are free to use any other tool.

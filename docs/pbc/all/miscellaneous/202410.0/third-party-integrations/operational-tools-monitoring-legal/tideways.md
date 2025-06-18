@@ -16,12 +16,12 @@ redirect_from:
 Monitoring, Profiling and Exception Tracking. Tideways is an Application-Performance-Monitoring (APM) solution with built-in profiler and automated error tracking. All services are tailor-made for E-commerce systems like Spryker. Your customers are looking for a fast and painless online shopping experiences. Tideways helps you to create that experience through detailed insights about your shop's performance from fronted, checkout and backend to background processes. In addition to a weekly report and overview over your performance, you have the possibility to analyse single database queries or functions in detail.
 
 YOUR ADVANTAGES:
-* Smooth integration into Spryker software with automatic analysis (no further installation or code changes required).
-* Weekly reporting to detect tendencies within your performance.
-* Codeontinuous monitoring with intelligent data segmentation (shops, languages, backend or frontend...).
-* Automated regularly profiling with detailed performance data of outlier requests.
-* Multiple options to prioritize profiling data based on your own criteria.
-* Automated recognition of errors with precise and detailed leads to causes and bugfixing tips.
+- Smooth integration into Spryker software with automatic analysis (no further installation or code changes required).
+- Weekly reporting to detect tendencies within your performance.
+- Codeontinuous monitoring with intelligent data segmentation (shops, languages, backend or frontend...).
+- Automated regularly profiling with detailed performance data of outlier requests.
+- Multiple options to prioritize profiling data based on your own criteria.
+- Automated recognition of errors with precise and detailed leads to causes and bugfixing tips.
 
 ## Copyright and Disclaimer
 

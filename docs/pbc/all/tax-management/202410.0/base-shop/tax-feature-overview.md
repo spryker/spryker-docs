@@ -84,9 +84,9 @@ To use Avalara, [set up the AvaTax platform](https://help.avalara.com/Avalara_Av
 
 You can set the Avalara tax codes for the following entities by importing the codes:
 
-* Abstract product: For details about import, see [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html).
-* Product option: For details about import, see [File details: product_option.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html).
-* Shipment: For details about import, see [File details: shipment.csv](/docs/pbc/all/tax-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html).
+- Abstract product: For details about import, see [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html).
+- Product option: For details about import, see [File details: product_option.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html).
+- Shipment: For details about import, see [File details: shipment.csv](/docs/pbc/all/tax-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html).
 
 {% info_block infoBox %}
 
@@ -114,8 +114,8 @@ Tax in the checkout:
 
 The capability has the following functional constraints:
 
-* There is no Back Office UI for the Avalara tax codes.
-* Many Avalara features are not supported yet. This will be resolved in the future.
+- There is no Back Office UI for the Avalara tax codes.
+- Many Avalara features are not supported yet. This will be resolved in the future.
 
 
 ## Related Business User documents

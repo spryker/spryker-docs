@@ -22,5 +22,5 @@ Merge or close the existing PR and delete the branch.
 
 ## Support for Spryker CI
 
-* For help with Spryker CI, [contact support](https://support.spryker.com).
-* To learn more about Buddy, see their [docs](https://buddy.works/docs).
+- For help with Spryker CI, [contact support](https://support.spryker.com).
+- To learn more about Buddy, see their [docs](https://buddy.works/docs).

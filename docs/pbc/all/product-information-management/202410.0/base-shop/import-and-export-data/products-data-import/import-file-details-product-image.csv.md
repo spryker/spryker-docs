@@ -19,8 +19,8 @@ This document describes the `product_image.csv` file to configure [Product Image
 
 ## Import file dependencies
 
-* [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
-* [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
+- [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
+- [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
 
 
 ## Import file parameters
@@ -31,11 +31,12 @@ This document describes the `product_image.csv` file to configure [Product Image
 | external_url_large | &check; | String |  | External link to the large image of the product. Used, for example, to display the image in the product detail page (PDP).  |
 | external_url_small | &check; | String |  |External link to the small image of the product. Used, for example, to display the (thumbnail) images in the product listing page (PLP).  |
 | locale | &check; | String |  | Locale of the image.  |
-| abstract_sku | &check; (if there is no product concrete SKU) | String |  | For each image there should be at least one value of an SKU from either `abstract_sku` or`concrete_sku`. | SKU of the abstract product. |
-| concrete_sku | &check; (if there is no product abstract SKU) | String |  | For each image there should be at least one value of an SKU from either `abstract_sku` or `concrete_sku`. | SKU of the concrete product. |
+| abstract_sku | &check; (if there is no product concrete SKU) | String | For each image there should be at least one value of an SKU from either `abstract_sku` or`concrete_sku`. | SKU of the abstract product. |
+| concrete_sku | &check; (if there is no product abstract SKU) | String | For each image there should be at least one value of an SKU from either `abstract_sku` or `concrete_sku`. | SKU of the concrete product. |
 | sort_order |  | Integer |   | Order of image presentation. |
 | product_image_key | &check; | String |   | Product image identifier. |
 | product_image_set_key |  | String |   | Key of the product image set. |
+
 *N/A: Not applicable.
 
 

@@ -16,7 +16,7 @@ related:
 
 The [Customer Access API](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-protected-resources.html) allows storefront owners to prevent unauthorized (guest) users from accessing certain REST API resources. This capability is tied up to the [Customer Access](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-customer-access.html) feature that allows you to restrict access to certain content items in *Spryker Back Office*.
 
-The access to resources protected by the API depends on the setup of the *(Customer Access)[/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/customer-access-feature-overview.hrml]* feature. If a certain type of information is restricted to *customer access only*, all API resources associated with it are protected from unauthorized access. If the access is unrestricted, the respective resources are available to guest users as well. For example, if you restrict the *can place an order* functionality to customer access only, customers can check out an order only when authenticated. Alongside that, the associated API resources (`checkout` and `checkout-data)` are available only upon authentication. If you don't restrict access, everyone can use the resources. In other words, you can prevent access only to the resources that belong to one of the Customer Access feature items.
+The access to resources protected by the API depends on the setup of the *[Customer Access](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/customer-access-feature-overview.html)* feature. If a certain type of information is restricted to *customer access only*, all API resources associated with it are protected from unauthorized access. If the access is unrestricted, the respective resources are available to guest users as well. For example, if you restrict the *can place an order* functionality to customer access only, customers can check out an order only when authenticated. Alongside that, the associated API resources (`checkout` and `checkout-data)` are available only upon authentication. If you don't restrict access, everyone can use the resources. In other words, you can prevent access only to the resources that belong to one of the Customer Access feature items.
 
 This document shows how to map API resources to the Customer Access feature items.
 
@@ -24,10 +24,10 @@ This document shows how to map API resources to the Customer Access feature item
 
 The Customer Access feature items available out of the box are mapped to API resource types by default. The corresponding resource types are as follows:
 
-* *price*: `abstract-product-prices` and `concrete-product-prices`
-* *add-to-cart*: `guest-cart-items`
-* *wishlist*: `wishlists` and `wishlist-items`
-* *can place an order*: `checkout` and `checkout-data`
+- *price*: `abstract-product-prices` and `concrete-product-prices`
+- *add-to-cart*: `guest-cart-items`
+- *wishlist*: `wishlists` and `wishlist-items`
+- *can place an order*: `checkout` and `checkout-data`
 
 {% endinfo_block %}
 

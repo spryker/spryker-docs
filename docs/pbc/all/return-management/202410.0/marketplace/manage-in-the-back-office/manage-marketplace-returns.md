@@ -28,8 +28,8 @@ To set and track the return statuses, you trigger the return states.
 
 To trigger the return states:
 
-1. On the **Returns** page, in the **Actions** column, click **View**. This takes you to the **Overview of Return: _[Return reference]_**.
-2. In the **Trigger all matching state section** of the **Overview of Return: _[Return reference]_** page, click the necessary state. The return state changes, and the new states that you can trigger appear. For information about the return item states and the flow, see [Marketplace return item states](#marketplace-return-item-states).
+1. On the **Returns** page, in the **Actions** column, click **View**. This takes you to the **Overview of Return: *[Return reference]***.
+2. In the **Trigger all matching state section** of the **Overview of Return: *[Return reference]*** page, click the necessary state. The return state changes, and the new states that you can trigger appear. For information about the return item states and the flow, see [Marketplace return item states](#marketplace-return-item-states).
 
  {% info_block infoBox "Info" %}
 
@@ -72,7 +72,7 @@ All the return management options that you can invoke from the **Actions** colum
 
 #### Overview of Return: [Return Reference] page
 
-The following table describes the attributes on the **Overview of Return: _[Return reference]_** page when you view a return.
+The following table describes the attributes on the **Overview of Return: *[Return reference]*** page when you view a return.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Back+Office+user+guides/Sales/marketplace-return-back-office.png)
 
@@ -135,8 +135,8 @@ For all returns, irrespective of their statuses, you can print the automatically
 
 To print the return slip:
 - In the **Actions** column on the **List of Returns** page, click **Print slip**.
-- On the **Return Overview _[Return reference]_** page, click **Print Return Slip**.
+- On the **Return Overview *[Return reference]*** page, click **Print Return Slip**.
 
 This takes you to the page with the print version of the return slip.
 
-For reference information about **the List of Returns** and **Return Overview _[Return reference]_** pages, on this page, see [List of Returns](#list-of-returns-page) and [Overview [Return reference](#list-of-returns-page), respectively.
+For reference information about **the List of Returns** and **Return Overview *[Return reference]*** pages, on this page, see [List of Returns](#list-of-returns-page) and [Overview [Return reference](#list-of-returns-page), respectively.

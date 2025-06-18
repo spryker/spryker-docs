@@ -20,6 +20,7 @@ Add the following plugins to your project:
 | ProductQuantityRestrictionCheckoutPreConditionPlugin | Validates if quote items fulfill all quantity restriction rules during checkout. |               | Spryker\Zed\ProductQuantity\Communication\Plugin\Checkout |
 
 **src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
+
 ```php
 <?php
 

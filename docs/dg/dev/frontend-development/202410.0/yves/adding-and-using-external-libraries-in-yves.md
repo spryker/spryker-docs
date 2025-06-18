@@ -37,7 +37,7 @@ export default class NameOfYourComponent extends Component {
 
 You can also import SCSS, CSS:
 
-**index.ts**    
+**index.ts**
 
 ```typescript
 import 'name-of-library/path-to-the-styles/name-of-file.scss';

@@ -32,6 +32,7 @@ Make sure that the following modules have been installed:
 | ProductAlternativeDataImport | vendor/spryker/product-alternative-data-import |
 | ProductAlternativeGui | vendor/spryker/product-alternative-gui |
 | ProductAlternativeStorage | vendor/spryker/product-alternative-storage |
+
 {% endinfo_block %}
 
 ### 2) Set up database schema and transfer objects
@@ -428,6 +429,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
  }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}

@@ -90,7 +90,7 @@ Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
-```
+```csv
 shopping_list.pre.check.product_offer,Product Offer is not found.,en_US
 shopping_list.pre.check.product_offer,Produktangebot wurde nicht gefunden.,de_DE
 shopping_list.pre.check.product_offer.approved,Product Offer is not approved.,en_US
@@ -175,7 +175,7 @@ Prepare import data according to your requirements using demo data:
 
 **data/import/common/common/marketplace/product_offer_shopping_list_item.csv**
 
-```
+```csv
 shopping_list_item_key,product_offer_reference
 shopping-list-item-key-38,offer2
 shopping-list-item-key-39,offer402

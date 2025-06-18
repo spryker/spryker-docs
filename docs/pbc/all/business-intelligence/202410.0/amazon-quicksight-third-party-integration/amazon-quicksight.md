@@ -9,11 +9,11 @@ Amazon QuickSight brings customizable and powerful business intelligence tools t
 
 Highlights:
 
-* Default dashboards let you start using the feature right away
-* Direct access within the Back Office
-* Data from your Spryker projects is connected by default
-* Highly customizable, offering multiple options to tailor reports & analytics workflows
-* Aggregate data across various systems
+- Default dashboards let you start using the feature right away
+- Direct access within the Back Office
+- Data from your Spryker projects is connected by default
+- Highly customizable, offering multiple options to tailor reports & analytics workflows
+- Aggregate data across various systems
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -42,9 +42,9 @@ You can extend the data available to datasets on the project level. For more det
 
 SPICE (Super-fast, Parallel, In-memory Calculation Engine) is a robust in-memory engine used by Amazon QuickSight to calculate and serve data. All data in datasets is stored as SPICE data, which has the following advantages:
 
-* Your analytical queries process faster.
-* You don't need to wait for a direct query to process.
-* Data stored in SPICE can be reused multiple times without incurring additional costs. If you use a data source that charges per query, you're charged for querying the data when you first create the dataset and later when you refresh the dataset.
+- Your analytical queries process faster.
+- You don't need to wait for a direct query to process.
+- Data stored in SPICE can be reused multiple times without incurring additional costs. If you use a data source that charges per query, you're charged for querying the data when you first create the dataset and later when you refresh the dataset.
 
 You can check your SPICE storage capacity in the Back Office > **Analytics** > **Datasets** > **New dataset**.
 
@@ -92,14 +92,14 @@ You can share dashboards with authors and readers, and analyses – only with au
 ## User management and permissions
 
 User roles define what assets a user has access to, including the following:
-* Analyses
-* Dashboards
-* Datasets
-* Data sources
+- Analyses
+- Dashboards
+- Datasets
+- Data sources
 
 When working with analytics, users can have the following roles:
-* Author: can view, create, and edit assets.
-* Reader: can view dashboards.
+- Author: can view, create, and edit assets.
+- Reader: can view dashboards.
 
 The analytics roles are derived from Amazon QuickSight and are separate from the [Back Office user roles](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
 
@@ -116,10 +116,10 @@ The default dashboard contains the following sheets.
 
 #### Sales sheet
 
-* Track sales performance over time
-* Gain insights into orders and return rate
-* Monitor discounts, product categories, brands
-* Monitor the usage of payment and shipping methods
+- Track sales performance over time
+- Gain insights into orders and return rate
+- Monitor discounts, product categories, brands
+- Monitor the usage of payment and shipping methods
 
 <details>
   <summary>Visuals in the sales sheet</summary>
@@ -152,9 +152,9 @@ The default dashboard contains the following sheets.
 
 #### Products sheet
 
-* Track performance of products
-* Monitor availability and returns
-* Analyze top-selling items, category distribution, and trends in shopping lists and customer carts
+- Track performance of products
+- Monitor availability and returns
+- Analyze top-selling items, category distribution, and trends in shopping lists and customer carts
 
 <details>
   <summary>Visuals in the products sheet</summary>
@@ -181,9 +181,9 @@ The default dashboard contains the following sheets.
 #### Customers sheet
 
 Track the following customer metrics:
-* Order number and value per customer and B2B company
-* Registration trends
-* Locations with the most customers
+- Order number and value per customer and B2B company
+- Registration trends
+- Locations with the most customers
 
 
 <details>
@@ -206,8 +206,8 @@ Track the following customer metrics:
 
 #### Marketplace sheet
 
-* Track marketplace performance with insights into merchant status and commission
-* Get an overview of merchant orders, products, and offers
+- Track marketplace performance with insights into merchant status and commission
+- Get an overview of merchant orders, products, and offers
 
 <details>
   <summary>Visuals in the marketplace sheet</summary>
@@ -240,8 +240,8 @@ When you need to share analytics data with users outside of Back Office, you can
 
 For instructions, see the following docs:
 
-* [Exporting data from visuals](https://docs.aws.amazon.com/quicksight/latest/user/exporting-data.html)
-* [Exporting Amazon QuickSight analyses or dashboards as PDFs](https://docs.aws.amazon.com/quicksight/latest/user/export-dashboard-to-pdf.html)
+- [Exporting data from visuals](https://docs.aws.amazon.com/quicksight/latest/user/exporting-data.html)
+- [Exporting Amazon QuickSight analyses or dashboards as PDFs](https://docs.aws.amazon.com/quicksight/latest/user/export-dashboard-to-pdf.html)
 
 
 
@@ -252,10 +252,10 @@ Sometimes you might want to start from scratch and get a fresh analytics account
 
 {% info_block warningBox %}
 
-* Resetting Analytics returns all default assets, such as dashboards, analyses, and datasets, to their original state, erasing any changes you've made.
-* The user performing the reset becomes the owner of the default assets, and all other users lose access to them.
-* Custom assets created by other users remain under their ownership.
-* Custom analyses will lose access to the default datasets. If the default datasets are used in custom analyses, duplicate the datasets and configure the analyses to use the copies. For instructions, see [Duplicating datasets](https://docs.aws.amazon.com/quicksight/latest/user/duplicate-a-data-set.html).
+- Resetting Analytics returns all default assets, such as dashboards, analyses, and datasets, to their original state, erasing any changes you've made.
+- The user performing the reset becomes the owner of the default assets, and all other users lose access to them.
+- Custom assets created by other users remain under their ownership.
+- Custom analyses will lose access to the default datasets. If the default datasets are used in custom analyses, duplicate the datasets and configure the analyses to use the copies. For instructions, see [Duplicating datasets](https://docs.aws.amazon.com/quicksight/latest/user/duplicate-a-data-set.html).
 
 {% endinfo_block %}
 

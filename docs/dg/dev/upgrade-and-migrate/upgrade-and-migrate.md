@@ -12,6 +12,6 @@ redirect_from:
 This section explains how to handle migration when a new feature requires an extensive migration effort for modules, or some technical solution used in Spryker needs to be replaced with a new one.
 
 Here you will find instructions on how to implement these changes in your project:
-* [Search migration concept](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/search-migration-concept.html)
-* [Migrating from Twig v1 to Twig v3](/docs/dg/dev/upgrade-and-migrate/migrating-from-twig-v1-to-twig-v3.html)
-* [Silex Replacement migration concept](/docs/dg/dev/upgrade-and-migrate/silex-replacement/silex-replacement.html)
+- [Search migration concept](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/search-migration-concept.html)
+- [Migrating from Twig v1 to Twig v3](/docs/dg/dev/upgrade-and-migrate/migrating-from-twig-v1-to-twig-v3.html)
+- [Silex Replacement migration concept](/docs/dg/dev/upgrade-and-migrate/silex-replacement/silex-replacement.html)

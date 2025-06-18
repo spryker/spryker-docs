@@ -41,6 +41,7 @@ Make sure the following modules have been installed:
 | SspFileManagementConstants::STORAGE_NAME     | Flysystem SspFileManagement used for uploaded files storage.  | SprykerFeature\Shared\SspFileManagement |
 
 **config/Shared/config_default.php**
+
 ```php
 use Spryker\Service\FlysystemLocalFileSystem\Plugin\Flysystem\LocalFilesystemBuilderPlugin;
 use Spryker\Shared\FileSystem\FileSystemConstants;
@@ -398,12 +399,12 @@ Verify file upload and attachment:
 2. Click **Upload**.
 3. Drag and drop three files into the upload area.
 4. Click **Upload**.
-  Make sure the File Attachments list page shows the files you've uploaded. 
+  Make sure the File Attachments list page shows the files you've uploaded.
 5. Next to the first file you've uploaded, click **Attach**.
 6. For **Company**, enter and select the company you want to attach the file to.
-7. Click **Save**. 
+7. Click **Save**.
 8. Click **Attach** next to the second file you've uploaded.
-9. For **Company User**, enter and select the business unit you want to attach the file to. 
+9. For **Company User**, enter and select the business unit you want to attach the file to.
 10. Click **Save**.
 11. Attach the third file to a company user.
 

@@ -34,10 +34,10 @@ To set up a custom SSL:
 
 1. Register an SSL.
 2. Provide the following details via [support](https://support.spryker.com):
-    * Domain name
-    * Certificate body
-    * Certificate private key
-    * Optional: Certificate chain
+- Domain name
+- Certificate body
+- Certificate private key
+- Optional: Certificate chain
 
 {% info_block warningBox "Format" %}
 
@@ -49,4 +49,5 @@ We set up the SSL shortly after you have provided it.
 
 
 ## Next step
+
 [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)

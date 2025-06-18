@@ -13,16 +13,16 @@ This version defines connection between abstract products and stores, allowing u
     This command will generate some new classes in your project under `\Orm\Zed\Product\Persistence` namespace.
     It is important to make sure that they extend the base classes from the Spryker core, e.g.:
 
-    * `\Orm\Zed\Product\Persistence\SpyProductAbstractStore extends \Spryker\Zed\Product\Persistence\Propel\AbstractSpyProductAbstractStore`
-    * `\Orm\Zed\Product\Persistence\SpyProductAbstractStoreQuery extends \Spryker\Zed\Product\Persistence\Propel\AbstractSpyProductAbstractStoreQuery`
+    - `\Orm\Zed\Product\Persistence\SpyProductAbstractStore extends \Spryker\Zed\Product\Persistence\Propel\AbstractSpyProductAbstractStore`
+    - `\Orm\Zed\Product\Persistence\SpyProductAbstractStoreQuery extends \Spryker\Zed\Product\Persistence\Propel\AbstractSpyProductAbstractStoreQuery`
 
 7. The newly created `spy_product_abstract_store` table defines 1 row per `abstract product-store` association. Populate this table according to your requirements.
 
 **Example data**
 Assumptions:
 
-* You have the following abstract products: AP1, AP2.
-* You have the following stores: S1, S2, S3.
+- You have the following abstract products: AP1, AP2.
+- You have the following stores: S1, S2, S3.
 Then `spy_product_abstract_store` will have the following rows as association definition:
 
 | FK_PRODUCT_ABSTRACT | FK_STORE |
@@ -170,31 +170,32 @@ class SpyProduct extends BaseSpyProduct
 
 Remove the following Propel classes (from all namespaces) which were deleted from the database.
 
-* `SpyProductAttributesMetadata` and `SpyProductAttributesMetadataQuery`. Use `SpyProductAttributeKey` instead to store attribute keys.
-* `SpyProductAttributeType` and `SpyProductAttributeTypeQuery`. The concept of common types for attributes was removed. We store attribute types now separately for each domain, for example, `SpyProductManagementAttribute` for PIM and `SpyProductSearchAttribute` for search filters.
-* `SpyProductAttributeTypeValue` and `SpyProductAttributeTypeValueQuery`.
+- `SpyProductAttributesMetadata` and `SpyProductAttributesMetadataQuery`. Use `SpyProductAttributeKey` instead to store attribute keys.
+- `SpyProductAttributeType` and `SpyProductAttributeTypeQuery`. The concept of common types for attributes was removed. We store attribute types now separately for each domain, for example, `SpyProductManagementAttribute` for PIM and `SpyProductSearchAttribute` for search filters.
+- `SpyProductAttributeTypeValue` and `SpyProductAttributeTypeValueQuery`.
 
 ### 2. Major class changes
 
-* `Spryker\Zed\Product\Communication\Plugin\Installer` plugin got removed. Please make sure to remove usages in your project from `Pyz\Zed\Installer\InstallerDependencyProvider`.
-* `Spryker\Zed\Product\Business\Attribute\AttributeManager` was removed. Use the `ProductFacade` from the `Product` module or `Spryker\Zed\Product\Business\Attribute\AttributeKeyManager` inside the `Product` module instead.
+- `Spryker\Zed\Product\Communication\Plugin\Installer` plugin got removed. Please make sure to remove usages in your project from `Pyz\Zed\Installer\InstallerDependencyProvider`.
+- `Spryker\Zed\Product\Business\Attribute\AttributeManager` was removed. Use the `ProductFacade` from the `Product` module or `Spryker\Zed\Product\Business\Attribute\AttributeKeyManager` inside the `Product` module instead.
 
 ### 3. Major transfer changes
 
-* `ProductAbstractTransfer`:
-    * `productImagesSets` are renamed to `imageSets`.
-    * `taxRate` are removed, use `idTaxSet` instead.
-* `ProductConcreteTransfer`:
-    * `productImagesSets` are renamed to `imageSets`.
-    * `productImageUrl` are removed, use `imageSets` instead.
-    * `productAbstractSku` is renamed to abstractSku.
-    * `idProductAbstract` is renamed to `fkProductAbstract`.
-    * `name` is removed, use `localizedAttributes.name` instead.
-* `ProductImageTransfer`:
-    * `sort` is renamed to `sortOrder`.
-    * `idProductImageSetToProductImage` is removed.
+- `ProductAbstractTransfer`:
+  - `productImagesSets` are renamed to `imageSets`.
+  - `taxRate` are removed, use `idTaxSet` instead.
+- `ProductConcreteTransfer`:
+  - `productImagesSets` are renamed to `imageSets`.
+  - `productImageUrl` are removed, use `imageSets` instead.
+  - `productAbstractSku` is renamed to abstractSku.
+  - `idProductAbstract` is renamed to `fkProductAbstract`.
+  - `name` is removed, use `localizedAttributes.name` instead.
+- `ProductImageTransfer`:
+  - `sort` is renamed to `sortOrder`.
+  - `idProductImageSetToProductImage` is removed.
 
 ### 4. Introduced product plugins
+
 Add product reader, creator and updater plugins in `Pyz\Zed\Product\ProductDependencyProvider`. The example below comes from the Spryker Demoshop and the used plugins are responsible for stock, price and image handling of the products. To hook in any of the read, create or update processes of abstract and concrete products you should use these extension points if the future.
 
 <details>
@@ -365,6 +366,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 
 }
 ```
+
 </details>
 
 ### 5. Troubleshooting

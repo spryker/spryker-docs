@@ -114,7 +114,7 @@ Below, you can find a list of the default protected resources. As Glue API is hi
 
 To access a protected resource, pass the access token in the `Authorization` header of your request. Example:
 
-```
+```html
 GET /carts HTTP/1.1
 Host: mysprykershop.com:10001
 Content-Type: application/json
@@ -141,9 +141,9 @@ Response sample with an error:
 ## User types
 
 Different endpoints require the client to be authenticated as different users. By default, you can:
-* [Authenticate as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html)
-* [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html)
-* [Authenticate as an agent assist](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html)
+- [Authenticate as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html)
+- [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html)
+- [Authenticate as an agent assist](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html)
 
 ## Next steps
 

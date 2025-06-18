@@ -27,14 +27,14 @@ Review the [reference information](#reference-information-edit-merchants) before
     This opens the **Overview of Merchants** page.
 2. Next to the merchant you want to edit, click **Edit**.
 3. On the **Edit Merchant** page, update any of the following:
-    * Enter a **NAME**.
-    * Enter a **REGISTRATION NUMBER**.
-    * Enter an **EMAIL**.
-    * To activate the merchant, select the **IS ACTIVE** checkbox.
-    * To deactivate the merchant, clear the **IS ACTIVE** checkbox.
-    * For **STORE RELATION**, select or clear the checkboxes next to the needed stores.
-    * Enter a **MERCHANT URL** for the needed locales.
-4. Click **Save**.     
+    - Enter a **NAME**.
+    - Enter a **REGISTRATION NUMBER**.
+    - Enter an **EMAIL**.
+    - To activate the merchant, select the **IS ACTIVE** checkbox.
+    - To deactivate the merchant, clear the **IS ACTIVE** checkbox.
+    - For **STORE RELATION**, select or clear the checkboxes next to the needed stores.
+    - Enter a **MERCHANT URL** for the needed locales.
+4. Click **Save**.
 
 The page refreshes with a success message displayed.
 

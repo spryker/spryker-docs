@@ -32,6 +32,7 @@ By default, Spryker supports Algolia Personalization only for Yves. To integrate
 ```bash
 composer require --with-dependencies spryker-shop/traceable-event-widget:^1.0.2
 ```
+
 If the command doesn't work, try running it with the `--with-all-dependencies` flag.
 
 
@@ -49,6 +50,7 @@ If the command doesn't work, try running it with the `--with-all-dependencies` f
 ### Enable features
 
 1. Update the project config:
+
 ```php
 // config_default.php
 
@@ -58,6 +60,7 @@ $config[KernelAppConstants::TENANT_IDENTIFIER]
 ```
 
 2. Enable a widget that triggers events for user actions and sends them to [Algolia Insights](https://www.algolia.com/doc/guides/sending-events/getting-started/):
+
 ```php
 // src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
 
@@ -74,6 +77,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 3. Enable the plugin that generates an anonymous token for guest users in the session:
+
 ```php
 // src/Pyz/Yves/EventDispatcher/EventDispatcherDependencyProvider.php
 
@@ -90,6 +94,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 ```
 
 4. Build JavaScript assets for Yves using one of the following commands:
+
 ```bash
 npm ci && npm run yves
 ```
@@ -99,6 +104,7 @@ console frontend:project:install-dependencies && console frontend:yves:build
 ```
 
 5. Install the `search-insights` dependency:
+
 ```bash
 npm i search-insights
 ```
@@ -160,6 +166,7 @@ Quick Order page cases:
 | If applicable: save cart items to a shopping list. | `ADD_TO_SHOPPING_LIST` |
 
 Order Success page cases:
+
 | CASE | EVENT |
 | - | - |
 | Open the **Order Success** page | `PAGE_LOAD` with currency, order total, SKUs, prices, and quantities of purchased products. |
@@ -232,7 +239,7 @@ Configuration for built-in components is provided by default. For more details, 
 
 You can view event payload in the console under `Adapter Data:`. If payload is incorrect, check and adjust static and dynamic data configuration.
 
-* Adjust static data in the `eventTracker` block:
+- Adjust static data in the `eventTracker` block:
 
 ```twig
 {% raw %}{% block eventTracker %}{% endraw %}
@@ -248,7 +255,7 @@ You can view event payload in the console under `Adapter Data:`. If payload is i
 {% raw %}{% endblock %}{% endraw %}
 ```
 
-* Adjust the configuration for dynamic data for the needed triggers.
+- Adjust the configuration for dynamic data for the needed triggers.
 
 <details>
   <summary>Dynamic data configuration example</summary>
@@ -365,11 +372,11 @@ If a user doesn't consent to data tracking, no user data should be sent from the
   This action updates your project config to be able to send events to Algolia.
 
 3. On the Storefront, do the following as a guest user:
-  * Search products
-  * Filter search results
-  * From search results, go to a product's page
-  * Add products to cart
-  * Place orders
+- Search products
+- Filter search results
+- From search results, go to a product's page
+- Add products to cart
+- Place orders
 4. Repeat step 3 as a logged-in user.  
 5. In the [Algolia Dashboard](https://dashboard.algolia.com/users/sign_in), go to **Data Sources**>**Events**.
   Make sure the events you've triggered are displayed.

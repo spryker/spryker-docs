@@ -48,12 +48,12 @@ To edit a discount, do the following:
 1. Click the **Discount calculation** tab.
 2. Select a **CALCULATOR TYPE**.
 3. Based on the selected calculator type, do one of the following:
-    * **Fixed amount**: Update the discounted prices.
-    * **Percentage**: For **VALUE**, update the percentage to be discounted.
+    - **Fixed amount**: Update the discounted prices.
+    - **Percentage**: For **VALUE**, update the percentage to be discounted.
 4. Select a **DISCOUNT APPLICATION TYPE**.
 5. Depending on the discount application type you've selected, do the following:
-    * **QUERY STRING**: Update the query using the query builder or by entering a plain query.
-    * **PROMOTIONAL PRODUCT**:
+    - **QUERY STRING**: Update the query using the query builder or by entering a plain query.
+    - **PROMOTIONAL PRODUCT**:
         1. Enter **ABSTRACT PRODUCT SKU**.
         2. Enter a **QUANTITY**.
 6. Click **Save**.
@@ -103,8 +103,8 @@ This section contains information for defining discount calculations and the pro
 ### CALCULATOR TYPE
 
 The discount can be calculated in two ways:
-* **Percentage**: The discount is calculated as a percentage of the discounted items.
-* **Fixed amount**: A fixed amount is discounted.
+- **Percentage**: The discount is calculated as a percentage of the discounted items.
+- **Fixed amount**: A fixed amount is discounted.
 
 Example:
 
@@ -124,9 +124,9 @@ Plain query:
 ![Discount_Calculation_Plain Query](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/discount-calculation-plain-query.png)
 
 A decision rule consists of the following:
-* Attribute. For example, *attribute.color*.
-* Relation operator. For example, *equal*.
-* Value. For example, *black*.
+- Attribute. For example, *attribute.color*.
+- Relation operator. For example, *equal*.
+- Value. For example, *black*.
 
 
 You can find query examples in the following table.

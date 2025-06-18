@@ -39,8 +39,8 @@ data:import:shipment-method-store
 
 
 
-* [shipment.csv](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html)
-* *stores.php* The configuration file of the Spryker Demo Shop PHP project
+- [shipment.csv](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html)
+- *stores.php* The configuration file of the Spryker Demo Shop PHP project
 
 ## Import template file and content example
 

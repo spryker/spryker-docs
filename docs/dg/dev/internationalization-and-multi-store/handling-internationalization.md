@@ -10,16 +10,16 @@ redirect_from:
 
 In international business, it's important to fine-tune a shop's behavior according to the country. Functionality that needs to be configured:
 
-* Design and layout
-* Currency and price
-* Tax calculation
-* Languages
-* Expense calculation
-* Available Stocks from a different ERP/client
-* Availability of shipment methods and providers
-* Availability of payment methods and providers
-* Order processing
-* Format of time and numbers
+- Design and layout
+- Currency and price
+- Tax calculation
+- Languages
+- Expense calculation
+- Available Stocks from a different ERP/client
+- Availability of shipment methods and providers
+- Availability of payment methods and providers
+- Order processing
+- Format of time and numbers
 
 At the same time, the product import from a PIM system cart calculation and the product structure is identical in all stores. Spryker offers full support to allow localization of the content from its web pages; this is done in an optimized manner that brings speed in rendering the web content.
 

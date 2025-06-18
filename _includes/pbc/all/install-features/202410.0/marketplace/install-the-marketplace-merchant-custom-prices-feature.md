@@ -135,6 +135,7 @@ class ProductMerchantPortalGuiDependencyProvider extends SprykerProductMerchantP
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -171,6 +172,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -218,6 +220,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     }     
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}

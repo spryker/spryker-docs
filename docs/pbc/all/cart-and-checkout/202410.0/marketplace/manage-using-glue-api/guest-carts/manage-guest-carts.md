@@ -17,14 +17,15 @@ related:
 This endpoint lets you manage guest carts.
 
 ## Installation
+
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
-* [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
-* [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html)
-* [Install the Marketplace Poruduct Offer Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
-* [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
-* [Install the Marketplace Product Offer Volume Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
+- [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+- [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+- [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
+- [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html)
+- [Install the Marketplace Poruduct Offer Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
+- [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
+- [Install the Marketplace Product Offer Volume Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
 
 ## Create a guest cart
 
@@ -69,12 +70,12 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 {% info_block infoBox "Included resources" %}
 
-* To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
-* To retrieve product measurement units, include `sales-units` and `product-measurement-units`.
-* To retrieve product labels assigned to the products in a cart, include `concrete-products` and `product-labels`.
-* To retrieve product offers, include `items` and `concrete-products`.
-* To retrieve product offer availabilities, include `items`, `concrete-products`, and `product-offer-availabilities`.
-* To retrieve product offer prices, include `items`, `concrete-products`, and `product-offer-prices`.
+- To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
+- To retrieve product measurement units, include `sales-units` and `product-measurement-units`.
+- To retrieve product labels assigned to the products in a cart, include `concrete-products` and `product-labels`.
+- To retrieve product offers, include `items` and `concrete-products`.
+- To retrieve product offer availabilities, include `items`, `concrete-products`, and `product-offer-availabilities`.
+- To retrieve product offer prices, include `items`, `concrete-products`, and `product-offer-prices`.
 
 {% endinfo_block %}
 
@@ -138,6 +139,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     }
 }
 ```
+
 </details>
 
 
@@ -233,6 +235,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 
@@ -306,6 +309,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 
@@ -378,6 +382,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -763,6 +768,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 
@@ -833,6 +839,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -979,6 +986,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 
@@ -1288,6 +1296,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1495,7 +1504,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -1758,6 +1768,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1875,6 +1886,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 <a name="guest-cart-response-attributes"></a>
@@ -1937,14 +1949,14 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 For the attributes of other included resources, see:
-* [Manage guest cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html)
-* [Retrieve measurement units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
-* [Retrieve concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html)
-* [Retrieve gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html)
-* [Retrieve product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html)
-* [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
-* [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
-* [Retrieving product offers](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
+- [Manage guest cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html)
+- [Retrieve measurement units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
+- [Retrieve concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html)
+- [Retrieve gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html)
+- [Retrieve product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html)
+- [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
+- [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
+- [Retrieving product offers](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
 
 ## Assign a guest cart to a registered customer
 
@@ -1969,8 +1981,8 @@ class CartsRestApiConfig extends SprykerCartsRestApiConfig
 
 Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/multiple-carts-feature-overview.html) environment:
 
-* In a *single cart* environment, the products in the guest cart are added to the customers' own cart.
-* In a *multiple cart* environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.
+- In a *single cart* environment, the products in the guest cart are added to the customers' own cart.
+- In a *multiple cart* environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.
 
 The workflow is displayed in the following diagram:
 
@@ -2015,6 +2027,7 @@ Response sample:
     "included": [...]
 }
 ```
+
 1. The customer logs in.
 
 Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
@@ -2053,9 +2066,10 @@ Response sample:
     }
 }
 ```
+
 3. The customer requests a list of his own carts.
 
-Request sample: 
+Request sample:
 
 `GET https://glue.myspsrykershop.com/carts`
 

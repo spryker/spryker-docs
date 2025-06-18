@@ -22,6 +22,7 @@ This release is a part of the **Decimal Stock** concept migration. When you upgr
 ```bash
 composer require spryker/product-availabilities-rest-api: "^4.1.0" --update-with-dependencies
 ```
+
 2. Update the database entity schema for each store in the system:
 
 ```bash
@@ -29,12 +30,14 @@ APPLICATION_STORE=DE console propel:schema:copy
 APPLICATION_STORE=US console propel:schema:copy
 ...
 ```
+
 3. Run the database migration:
 
 ```bash
 console propel:install
 console transfer:generate
 ```
+
 4. Update the apps and integrations that use the product availabilities API. From now on, support of high precision availability quantity is required in string representation (15 becomes '15.0000000000'). The API response changed as follows:
 
 ```bash
@@ -42,6 +45,7 @@ GET /concrete-products/sku/concrete-product-availabilities
 ```
 
 Was:
+
 ```bash
 {
     "data": [
@@ -65,6 +69,7 @@ Was:
 ```
 
 Becomes:
+
 ```bash
 {
     "data": [
@@ -92,6 +97,7 @@ GET /abstract-products/sku/abstract-product-availabilities
 ```
 
 Was:
+
 ```bash
 {
     "data": [
@@ -114,6 +120,7 @@ Was:
 ```
 
 Becomes:
+
 ```bash
 {
     "data": [

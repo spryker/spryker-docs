@@ -51,6 +51,7 @@ Add the following configuration to `config/Shared/config_default.php`:
 | SspAssetManagementConfig::getStorageName() | Defines the Storage name for asset Flysystem files. | SprykerFeature\Zed\SspAssetManagement    |
 
 **config/Shared/config_default.php**
+
 ```php
 use Spryker\Service\FlysystemLocalFileSystem\Plugin\Flysystem\LocalFilesystemBuilderPlugin;
 use Spryker\Shared\FileSystem\FileSystemConstants;
@@ -68,6 +69,7 @@ $config[SspAssetManagementConstants::BASE_URL_YVES] = 'https://your-yves-url';
 ```
 
 **src/Pyz/Shared/SspInquiryManagement/SspInquiryManagementConfig.php**
+
 ```php
 <?php
 
@@ -499,7 +501,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 6. Go to **Customer Account** > **My Assets**.
   Make sure the asset you've created is displayed in the list.
 7. Go to **Customer Account** > **Dashboard**.
-  Make sure the **My Assets** widget displays the asset you've created. 
+  Make sure the **My Assets** widget displays the asset you've created.
 8. Log out and log in with a compnay user without the role you've created.
   Make sure the **My Assets** menu item is not displayed and you can't access the **My Assets** page.
 

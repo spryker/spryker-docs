@@ -11,17 +11,17 @@ To provide maximum selling activity, merchants can provide their working schedul
 
 A merchant has the following:
 
-* Default opening hours—defined per weekday and time including:
+- Default opening hours—defined per weekday and time including:
 
-    * Lunch break time
-    * Open/Closed state
+  - Lunch break time
+  - Open/Closed state
 
-* Special opening hours are relevant for cases:
+- Special opening hours are relevant for cases:
 
-    * Merchant is opened on a usually closed day—for example, Sunday.
-    * Merchant has different opening hours in comparison to a normal schedule—for example, December 31 has shorter opening hours.
+  - Merchant is opened on a usually closed day—for example, Sunday.
+  - Merchant has different opening hours in comparison to a normal schedule—for example, December 31 has shorter opening hours.
 
-* Public holidays—special days when the Merchant is not available because of the public holidays
+- Public holidays—special days when the Merchant is not available because of the public holidays
 
 To display merchant opening hours on the Storefront, you should import the open hours information. For information about how to do that, see [File details: merchant_open_hours_date_schedule.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-open-hours-date-schedule.csv.html) and [File details: merchant_open_hours_week_day_schedule.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-open-hours-week-day-schedule.csv.html).
 

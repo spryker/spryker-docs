@@ -18,10 +18,10 @@ redirect_from:
   - /docs/scos/user/features/202204.0/product-relations-feature-overview.html
 ---
 
-The _Product Relations_ feature lets product catalog managers create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes:
-* Promote products in cart.
-* Recommend product alternatives.
-* Display comparable or additional products to the product a customer is viewing.
+The *Product Relations* feature lets product catalog managers create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes:
+- Promote products in cart.
+- Recommend product alternatives.
+- Display comparable or additional products to the product a customer is viewing.
 
 Product relations are established only between abstract products. An abstract product can have multiple product relations.
 
@@ -122,8 +122,8 @@ A product catalog manager can select this option when [creating](/docs/pbc/all/p
 
 A developer can do the following:
 
-* Manually update the list of related products by running the `console product-relation:update` command.
-* Change the default behavior of the cronjob that updates related products in `config/Zed/cronjobs/jenkins.php`.
+- Manually update the list of related products by running the `console product-relation:update` command.
+- Change the default behavior of the cronjob that updates related products in `config/Zed/cronjobs/jenkins.php`.
 
 ## Store relation
 
@@ -137,9 +137,9 @@ Stores are defined when creating or editing a product relation in the Back Offic
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Product Relations feature](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html)  |   |
-| [Create product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/view-product-relations.html)  |   |
-| [Edit product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/edit-product-relations.html)  |   |
+| [Get a general idea of the Product Relations feature](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html)  |  
+| [Create product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/view-product-relations.html)  |
+| [Edit product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/edit-product-relations.html)  |
 
 ## Related Developer documents
 

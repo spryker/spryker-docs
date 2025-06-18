@@ -10,17 +10,20 @@ This document describes how to install and run the IncrementalInstaller module t
 ## Install the IncrementalInstaller module
 
 1. Require the package:
+
 ```bash
 composer require spryker/incremental-installer
 ```
 
 2. Run the database migration and generate transfers:
+
 ```bash
 console propel:install
 console transfer:generate
 ```
 
 3. Add a console command to `src/Pyz/Zed/Console/ConsoleDependencyProvider.php`:
+
 ```php
 <?php
 

@@ -29,8 +29,8 @@ Review the [reference information](#reference-information-editing-shipments) bef
 
 If you create or edit a shipment of an order created by a customer, the grand total paid by the customer is not affected:
 
-* If a new shipment method is added, its price is 0.
-* If the shipment method is changed, the price of the previous shipment method is displayed.
+- If a new shipment method is added, its price is 0.
+- If the shipment method is changed, the price of the previous shipment method is displayed.
 
 {% endinfo_block %}
 

@@ -67,11 +67,11 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1.  Add a product offer with the service point shipment type to cart.
+1. Add a product offer with the service point shipment type to cart.
 
-2.  Place the order.
+2. Place the order.
 
-3.  Check that the `spy_sales_order_item_service_point` database table contains a record with the product and the selected service point.
+3. Check that the `spy_sales_order_item_service_point` database table contains a record with the product and the selected service point.
 
 {% endinfo_block %}
 
@@ -316,6 +316,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Add the widget to a Twig template:
+
 ```twig
 {% raw %}{%{% endraw %} widget 'SalesServicePointNameForShipmentGroupWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} widget 'ServicePointNameForShipmentGroupWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}

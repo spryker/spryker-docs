@@ -25,16 +25,16 @@ e-Spirit's FirstSpirit Digital Experience Platform, offered through a SaaS or on
 
 YOUR ADVANTAGES:
 
-* Easy to use content editing: No coding needed to add content for experience-driven commerce, such as promotional banners, product teasers, interactive images and videos, user generated content.
-* Rapid start-up.
-* Deep partnership with Spryker.
-* Many leading e-commerce customers globally: Reitmans, Carter's, Converse, L'Oreal Luxe brands, Karstadt, TSI Holdings, Hugo Boss, etc.
-* Content-driven commerce that simplifies connections across people, processes and technology to enable compelling digital experiences anytime, anywhere.
-* Dynamic content experiences: Create content-rich online stores that increase engagement and influence buying behavior.
-* AI-Powered, Personalized Content Delivery: Use the FirstSpirit Intelligent Content Engine to deliver personalized, relevant content that differentiates and compels customers to action
-* Omnichannel Marketing: Deliver connected digital experiences on websites, mobile or other channels or devices to boost online and retail store sales.
-* Digital Signage: Optimize the in-store experience with interactive digital signage that bridges the gap between the physical and digital world.
-* Globalization & Localization: Ensure brand consistency across multiple regions, sites and languages to support local marketing efforts and global business objectives.
+- Easy to use content editing: No coding needed to add content for experience-driven commerce, such as promotional banners, product teasers, interactive images and videos, user generated content.
+- Rapid start-up.
+- Deep partnership with Spryker.
+- Many leading e-commerce customers globally: Reitmans, Carter's, Converse, L'Oreal Luxe brands, Karstadt, TSI Holdings, Hugo Boss, etc.
+- Content-driven commerce that simplifies connections across people, processes and technology to enable compelling digital experiences anytime, anywhere.
+- Dynamic content experiences: Create content-rich online stores that increase engagement and influence buying behavior.
+- AI-Powered, Personalized Content Delivery: Use the FirstSpirit Intelligent Content Engine to deliver personalized, relevant content that differentiates and compels customers to action
+- Omnichannel Marketing: Deliver connected digital experiences on websites, mobile or other channels or devices to boost online and retail store sales.
+- Digital Signage: Optimize the in-store experience with interactive digital signage that bridges the gap between the physical and digital world.
+- Globalization & Localization: Ensure brand consistency across multiple regions, sites and languages to support local marketing efforts and global business objectives.
 
 ---
 

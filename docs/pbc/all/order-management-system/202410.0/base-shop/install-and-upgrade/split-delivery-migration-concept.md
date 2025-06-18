@@ -63,8 +63,8 @@ console transfer:generate
 
 4. Follow individual migration guides of the modules listed below:
 
-* [Shipment](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html#upgrading-from-version-6-to-version-7)
-* [CustomerPage](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-customerpage-module.html#upgrading-from-version-1-to-version-200)
+- [Shipment](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html#upgrading-from-version-6-to-version-7)
+- [CustomerPage](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-customerpage-module.html#upgrading-from-version-1-to-version-200)
 
 The following table lists the modules affected by the Split Delivery update:
 

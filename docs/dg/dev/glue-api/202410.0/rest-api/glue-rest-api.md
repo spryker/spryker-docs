@@ -45,8 +45,8 @@ The Glue REST API comes with a set of predefined APIs, which you can extend or a
 
 For more details, see REST API reference:
 
-* [REST API B2B Demo Shop reference](/docs/dg/dev/glue-api/{{site.version}}/rest-api/rest-api-b2b-demo-shop-reference.html)
-* [REST API B2C Demo Shop reference](/docs/dg/dev/glue-api/{{site.version}}/rest-api/rest-api-b2c-demo-shop-reference.html)
+- [REST API B2B Demo Shop reference](/docs/dg/dev/glue-api/{{site.version}}/rest-api/rest-api-b2b-demo-shop-reference.html)
+- [REST API B2C Demo Shop reference](/docs/dg/dev/glue-api/{{site.version}}/rest-api/rest-api-b2c-demo-shop-reference.html)
 
 ## B2C API React example
 
@@ -63,15 +63,15 @@ For more deatails about installing and running, see [B2C API React example](/doc
 ### Use cases for Glue API
 
 Glue API helps you to connect your Spryker Commerce OS with new or existing touch points. These touchpoints can be headless like voice commerce devices and chat bots, or they may come with a user interface like a mobile app. Alternative front ends also benefit from the APIs. Here are some examples:
-* New frontend: Build a new frontend or use a frontend framework like Progressive Web Apps and power it by the Glue API.
-* Mobile app: a mobile app, no matter if it's native, hybrid or just a web-view, can support the same functionality as the existing demo shops do.
-* Voice commerce: Leverage the APIs for order history to inform your customers about the status of their delivery.
-* Chatbot: Use chatbots to identify the customer that are trying to reach out to you and help them answer basic questions about your products.
+- New frontend: Build a new frontend or use a frontend framework like Progressive Web Apps and power it by the Glue API.
+- Mobile app: a mobile app, no matter if it's native, hybrid or just a web-view, can support the same functionality as the existing demo shops do.
+- Voice commerce: Leverage the APIs for order history to inform your customers about the status of their delivery.
+- Chatbot: Use chatbots to identify the customer that are trying to reach out to you and help them answer basic questions about your products.
 
 ## Business advantages of using the Glue API
 
 You can benefit from the APIs in these aspects:
-* Reach more customers: APIs empower you to create any number of touchpoints to connect with your customers, regardless of the device.
-* Customization:  You can reach out to different customer segments via different touchpoints. APIs enable you to offer a tailored customer experience for your audience, wherever it may be.
-* Integrations: APIs are not only used to deliver custom experiences, but you can also leverage APIs to integrate to different platforms; from offering your products on Amazon to leveraging mapping services for customers to find your offline store.
-* Testing ideas: APIs are the quickest way to test your ideas and get a head start before the competition does. Consider them as building blocks for your developers to assemble your new ideas. New applications only need to follow the API contracts, but even those can be extended for your purposes.
+- Reach more customers: APIs empower you to create any number of touchpoints to connect with your customers, regardless of the device.
+- Customization:  You can reach out to different customer segments via different touchpoints. APIs enable you to offer a tailored customer experience for your audience, wherever it may be.
+- Integrations: APIs are not only used to deliver custom experiences, but you can also leverage APIs to integrate to different platforms; from offering your products on Amazon to leveraging mapping services for customers to find your offline store.
+- Testing ideas: APIs are the quickest way to test your ideas and get a head start before the competition does. Consider them as building blocks for your developers to assemble your new ideas. New applications only need to follow the API contracts, but even those can be extended for your purposes.

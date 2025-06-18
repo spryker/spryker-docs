@@ -22,7 +22,7 @@ This document describes what Angular Services are, how to create and use them.
 The Angular Services are stateless objects which provide useful functionality. These functions can be invoked from any component of Angular, such as Components and Directives. It enables services to organize and share business logic, models, data and functions with other components of an Angular application and thus divide the web application into small, reusable logical units. A service typically encapsulates a particular aspect/function of the system (HTTP, part of business logic).
 Using Angular Services methods, the data is maintained throughout the life of an application, that is, it's never refreshed and is always available.
 
-#### Component communication using Angular services
+### Component communication using Angular services
 
 You can use services to manage the state of a set of related components (such as the Redux pattern). Reusable Angular services can also be used to establish communication between two components. Components can be siblings or in a parent-child relationship. No matter what type of relationship exists, the services can be used to share data between components. All you need is public properties in the service class that one component sets and the other consumes, and vice versa. A service that acts as a bridge between two components has to be injected into both components.
 

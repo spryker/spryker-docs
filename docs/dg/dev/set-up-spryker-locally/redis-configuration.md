@@ -112,9 +112,10 @@ $config[SessionConstants::ZED_SESSION_PREDIS_CLIENT_OPTION] = [
 
 The standard Redis client configuration uses environment variables defined as constants in `config/Shared/config_default.php`.  
 
-Compression support is available starting from `spryker/redis:2.9.1`.  
+Compression is supported starting from `spryker/redis:2.9.1`.  
 
 By default Redis compression is disabled:
+
 ```php
 $config[RedisConstants::REDIS_COMPRESSION_ENABLED] = getenv('SPRYKER_KEY_VALUE_COMPRESSING_ENABLED') ?: false;
 ```
@@ -158,5 +159,9 @@ class RedisConfig extends AbstractBundleConfig
     }
 }
 ```
-Utility command: `SPRYKER_REDIS_IS_DEV_MODE=0 console storage:redis:re-save` — used to re-save storage data directly after enabling the compression feature. If you use separate storage databases for each store, this command should be executed for each store individually.
-Available starting from `spryker/storage-redis:1.7.0`
+
+After enabling compression, we recommend resaving storage data using the command: `SPRYKER_REDIS_IS_DEV_MODE=0 console storage:redis:re-save`.
+
+With separate storage databases per store, execute the command for each store individually.
+
+The command is available starting from `spryker/storage-redis:1.7.0`.

@@ -144,6 +144,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
     ```sql
     TRUNCATE TABLE spy_product_abstract_category_storage;
     ```
+    
     2. Remove all the data:
 
     ```bash

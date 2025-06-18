@@ -2,7 +2,7 @@
 "use strict";
 
 module.exports = {
-  names: ["CUSTOM_NO_SPACE_IN_EMPHASIS"],
+  names: ["NO_SPACE_IN_EMPHASIS"],
   description: "Remove spaces from emphasis",
   tags: ["emphasis", "whitespace"],
   function: function(params, onError) {

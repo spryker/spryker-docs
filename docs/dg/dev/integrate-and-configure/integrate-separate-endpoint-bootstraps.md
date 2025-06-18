@@ -244,7 +244,7 @@ $bootstrap
 
 The maintenance page is not compatible with Spryker Cloud.
 
-{% endinfo_block %}    
+{% endinfo_block %}
 
 **public/Backoffice/maintenance/index.html**
 
@@ -299,7 +299,6 @@ if (file_exists(__DIR__ . '/maintenance.marker')) {
     exit(1);
 }
 ```
-    
 
 
 ## 4) Separate application plugin stacks

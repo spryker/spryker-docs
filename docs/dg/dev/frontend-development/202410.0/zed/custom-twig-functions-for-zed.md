@@ -101,4 +101,3 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 | `groupActionButtons` | Generates a group of action buttons. | `function ($buttons: array, $title: string, $options: array): string` | `{% raw %}{%{% endraw %} set linksData = {`<br>`{'url' : '/gui/create', 'title' : 'key.to.trans | trans'},`<br>`{'url' : '/gui/edit', 'title' : 'key.to.trans | trans'}`<br>`} {% raw %}%}{% endraw %}`<br>`{% raw %}{{ groupActionButtons(linksData,'key.to.translate' | trans) }}{% endraw %}` |
 
 <!-- markdownlint-enable -->
-

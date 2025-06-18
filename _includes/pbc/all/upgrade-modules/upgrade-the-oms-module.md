@@ -60,8 +60,8 @@ Manual review is necessary for the generated migration file.
 
 {% endinfo_block %}
 
-- `vendor/bin/console propel:migrate`;    
-- `vendor/bin/console propel:model:build`;
+- `vendor/bin/console propel:migrate`
+- `vendor/bin/console propel:model:build`
 
 2. Migrate the configuration file and the constants:
 

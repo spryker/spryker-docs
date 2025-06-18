@@ -133,7 +133,7 @@ Open the created Codeception configuration file at `tests/PyzTest/AsyncApi/Hello
 
 The file should contain the following section:
 
-```
+```yml
 \Spryker\Zed\TestifyAsyncApi\Business\Codeception\Helper\AsyncApiHelper:
     asyncapi: resources/api/asyncapi.yml
     handlers:
@@ -148,7 +148,7 @@ When testing the asynchronous API, all messages must be sent to the local messag
 
 Add the following configuration to the `config/Shared/config_local.php` file:
 
-```
+```php
 use Spryker\Shared\MessageBroker\MessageBrokerConstants;
 
 $config[MessageBrokerConstants::IS_ENABLED] = true;
@@ -185,7 +185,7 @@ This section lists some example methods and explains what and how they test.
 
 Here is the example of handling the messages:
 
-```
+```php
 public function testUserCreatedMessageCreatesAUserEntity(): void
 {
     // Arrange
@@ -224,7 +224,7 @@ vendor/bin/codecept run -c tests/PyzTest/AsyncApi/HelloWorld/
 
 Here is the example of publishing the messages:
 
-```
+```php
 public function testGreetUserMessageIsEmittedWhenUserWasStoredInTheDatabase(): void
 {
     // Arrange

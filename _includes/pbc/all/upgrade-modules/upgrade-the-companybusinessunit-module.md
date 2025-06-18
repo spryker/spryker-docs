@@ -24,10 +24,10 @@ This change allowed company business units to have parent company business units
 
 To upgrade to the new version, do the following:
 
-1. Update modules
+1. Update modules:
 
     1. Update `spryker/company-business-unit` module version in your `composer.json`:
-   
+    
     ```bash
     {
       "require": {

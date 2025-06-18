@@ -111,7 +111,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 
 ## Configure Twig
 
-Twig provides wide configuration possibilities. For further information about Twig configuration, check out the [Environment options(https://twig.symfony.com/doc/2.x/api.html#environment-options) and [Loaders](https://twig.symfony.com/doc/2.x/api.html#loaders).
+Twig provides wide configuration possibilities. For further information about Twig configuration, check out the [Environment options](https://twig.symfony.com/doc/2.x/api.html#environment-options) and [Loaders](https://twig.symfony.com/doc/2.x/api.html#loaders).
 
 Some of the Twig options are predefined in our Twig service. You can check them in the TwigConfig files for Zed and Yves on core and project levels.
 

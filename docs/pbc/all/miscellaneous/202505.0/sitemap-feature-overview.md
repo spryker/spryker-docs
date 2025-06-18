@@ -28,7 +28,7 @@ Sitemaps can be generated for shops with [Dynamic Multistore](/docs/pbc/all/dyna
 
 To optimize performance, sitemaps are cached, and the cached version is used by search engines. The cached version is updated every 24 hours, and you can configure this time interval.
 
-For instructions on configuring the interval, see [Install the Sitemap feature](/docs/pbc/all/miscellaneous/202505.0/install-and-upgrade/install-features/install-the-sitemap-feature.html).
+For instructions on configuring the interval, see [Install the Sitemap feature](/docs/pbc/all/miscellaneous/202507.0/install-and-upgrade/install-features/install-the-sitemap-feature.html).
 
 ## Domain verification
 
@@ -44,7 +44,7 @@ Performance is limited when the number of entities exceeds 100,000 for a single 
 
 | INSTALLATION GUIDES |
 |---------|
-| [Install the Sitemap feature](/docs/pbc/all/miscellaneous/202505.0/install-and-upgrade/install-features/install-the-sitemap-feature.html) |
+| [Install the Sitemap feature](/docs/pbc/all/miscellaneous/202507.0/install-and-upgrade/install-features/install-the-sitemap-feature.html) |
 
 
 

@@ -41,14 +41,14 @@ On the Storefront, company account users can add assets in the **My Assets** sec
 
 All added assets receive a pending status by default. A company user with approve permissions need to approve the added asset to make it available. Once an asset is approved, company users can create inquiries about the asset.
 
-For more information on inquiries, see [Inquiry Management feature overview](/docs/pbc/all/self-service-portal/202505.0/ssp-inquiry-management-feature-overview.html)
+For more information on inquiries, see [Inquiry Management feature overview](/docs/pbc/all/self-service-portal/202507.0/ssp-inquiry-management-feature-overview.html)
 
 
 ## Adding assets in the Back Office
 
 If you need to add assets to multiple companies or business units simultaneously, it's more efficient to do it in the Back Office.
 
-For instructions, see [Back Office: Add assets](/docs/pbc/all/self-service-portal/202505.0/back-office-add-assets.html).
+For instructions, see [Back Office: Add assets](/docs/pbc/all/self-service-portal/202507.0/back-office-add-assets.html).
 
 
 

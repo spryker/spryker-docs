@@ -605,15 +605,15 @@ console data:import shipment
 | ServicePointQuoteExpanderPlugin                               | Expands quote data with service point information.                                                                                         |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Quote              |
 | ScheduleTimeOrderItemExpanderPreSavePlugin                    | Expands order item data with scheduled time information before saving.                                                                     |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales              |
 | ProductTypeOrderItemsPostSavePlugin                           | Processes product type information for order items after saving an order.                                                                  |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales              |
-| SspServiceShipmentTypePreReloadItemsPlugin                    | Checks and removes service items without a shipment type from the cart.                                                                    |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Cart               |
-| EditOfferProductOfferTableActionPlugin                        | Expands the product offer table with edit button.                                                                                          |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductOfferGui    |
+| SspServiceShipmentTypePreReloadItemsPlugin                    | Checks and removes service items without a shipment type from  cart.                                                                    |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Cart               |
+| EditOfferProductOfferTableActionPlugin                        | Expands the product offer table with an edit button.                                                                                          |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductOfferGui    |
 | ProductTypeProductConcreteStorageCollectionExpanderPlugin     | Expands `ProductConcreteStorage` transfers with product type information.                                                                  |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductStorage     |
 | ProductTypeOrderExpanderPlugin                                | Expands order items with product types.                                                                                                    |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales              |
-| ServiceDateTimeEnabledOrderItemsPostSavePlugin                | Persists `isServiceDateTimeEnabled` information from `ItemTransfer.isServiceDateTimeEnabled`.                                              |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales              |
+| ServiceDateTimeEnabledOrderItemsPostSavePlugin                | Persists the `isServiceDateTimeEnabled` information from `ItemTransfer.isServiceDateTimeEnabled`.                                              |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales              |
 | SspProductAbstractTypeSalesOrderItemCollectionPreDeletePlugin | Deletes related product abstract type entries for the given sales order items.                                                             |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales              |
-| SspServiceCancellableOrderItemExpanderPlugin                  | Expands order items with isCancellable property.                                                                                           |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales              |
-| ServiceSspAssetManagementExpanderPlugin                       | Expands the assets with services collection.                                                                                               |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspAssetManagement |
-| ProductServiceTypeNameTwigPlugin                              | Adds `productServiceTypeName` Twig global variable with the value from config.                                                             |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Twig               |
+| SspServiceCancellableOrderItemExpanderPlugin                  | Expands order items with an `isCancellable` property.                                                                                           |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales              |
+| ServiceSspAssetManagementExpanderPlugin                       | Expands assets with a services collection.                                                                                               |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspAssetManagement |
+| ProductServiceTypeNameTwigPlugin                              | Adds the `productServiceTypeName` Twig global variable with the value from config.                                                             |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Twig               |
 | FileSizeFormatterTwigPlugin                                   | Formats the file size into a human-readable format.                                                                                        |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Twig               |
 
 **src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
@@ -1140,7 +1140,8 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 }
 ```
 
-**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+<details>
+  <summary>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1210,6 +1211,8 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 }
 ```
+
+</details>
 
 **src/Pyz/Zed/SelfServicePortal/SelfServicePortalDependencyProvider.php**
 

@@ -606,7 +606,7 @@ Make sure the following applies:
 | ViewCompanySspInquiryPermissionPlugin      | Allows access to inquiries in the same company.                                |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
 | SspInquiryRouteProviderPlugin              | Provides Yves routes for the SSP files feature.                                |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                              |
 | SspInquiryRestrictionHandlerPlugin         | Restricts access to inquiries and inquiry details pages for non-company users. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication                     |
-| FileSizeFormatterTwigPlugin                | Adds a Twig filter to format file sizes in a human-readable way.               |               | SprykerFeature\Zed\SelfServicePortal\Communication\Twig                          |
+| FileSizeFormatterTwigPlugin                | Adds a Twig filter to format file sizes in a human-readable format.               |               | SprykerFeature\Zed\SelfServicePortal\Communication\Twig                          |
 | SspInquiryDataImportPlugin                 | Introduces the `ssp-inquiry` import type.                                      |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport             |
 | SspInquiryManagementFilePreDeletePlugin    | Ensures files are deleted when an inquiry is removed.                          |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\FileManager            |
 | SspInquiryApprovedMailTypeBuilderPlugin    | Sends an email on inquiry approval.                                            |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Mail                   |
@@ -961,7 +961,7 @@ Verify permissions on Storefront:
 6. Click **Submit Inquiry**.
    Make sure this saves the inquiry and opens the inquiry details page.
 7. Go to **Customer Account** > **Inquiries**.
-   Make sure that you've created is displayed in the list.
+   Make sure the inquiry you've created is displayed in the list.
 8. Go to **Customer Account** > **Dashboard**.
    Make sure the Inquiry widget displays the inquiry you've created.
 9. Log out and log in with another company user that doesn't have the role.

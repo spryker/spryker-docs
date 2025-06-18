@@ -246,12 +246,12 @@ Make sure the data has been added to the `spy_glossary_key` and `spy_glossary_tr
 |----------------------------------------------|------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
 | DownloadCompanyFilesPermissionPlugin         | Enables downloading of files.                                    |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
 | ViewCompanyUserFilesPermissionPlugin         | Enables company users to view the files they uploaded.           |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
-| ViewCompanyBusinessUnitFilesPermissionPlugin | Allows access to files uploaded within the same business unit.   |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
-| ViewCompanyFilesPermissionPlugin             | Allows access to all files within the same company.              |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
-| SelfServicePortalPageRouteProviderPlugin     | Provides Yves routes for the SSP files feature.                  |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                           |
+| ViewCompanyBusinessUnitFilesPermissionPlugin | Allows access to files uploaded within a business unit.   |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
+| ViewCompanyFilesPermissionPlugin             | Allows access to all files within a company.              |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
+| SelfServicePortalPageRouteProviderPlugin     | Provides Yves routes for the [SSP file management feature](/docs/pbc/all/self-service-portal/202505.0/ssp-file-management-feature-overview.html).                  |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                           |
 | SspCompanyFilesMenuItemWidget                | Provides a menu item widget for the customer account side menu.  |               | SprykerFeature\Yves\SelfServicePortal\Widget                                  |
 | FileAttachmentFilePreDeletePlugin            | Ensures files are deleted when a file is removed.                |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\FileManager         |
-| FileSizeFormatterTwigPlugin                  | Adds a Twig filter to format file sizes in a human-readable way. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Twig\FileSizeFormatterTwigPlugin |
+| FileSizeFormatterTwigPlugin                  | Adds a Twig filter to format file sizes in a human-readable format. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Twig\FileSizeFormatterTwigPlugin |
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 

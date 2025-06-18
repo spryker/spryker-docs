@@ -304,7 +304,7 @@ class CmsBlockStorageDependencyProvider extends SprykerCmsBlockStorageDependency
 | PLUGIN                  | SPECIFICATION                                                                                             | PREREQUISITES | NAMESPACE                                    |
 |-------------------------|-----------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------|
 | DashboardMenuItemWidget | Provides a menu item widget for the customer account side menu.                                           |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspFileListWidget       | Displays the file attachment available to the company user on the dashboard page in the customer account. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspFileListWidget       | Displays a file attachment available to a company user on the dashboard page in the customer account. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 

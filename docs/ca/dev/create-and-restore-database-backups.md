@@ -53,7 +53,7 @@ The following sections describe how to restore databases from snapshots and back
 
 {% info_block warningBox "Expected downtime" %}
 
-During database restoration, your application is not accessible. For production environments, we recommend setting up a maintenance page. To do that, provide your custom HTML page or request to set up a generic one via [support](https://spryker.force.com/support/s/create-request-case).
+During database restoration, your application is not accessible. For production environments, we recommend setting up a maintenance page. To do that, provide your custom HTML page or request to set up a generic one via [support](https://support.spryker.com).
 
 {% endinfo_block %}
 

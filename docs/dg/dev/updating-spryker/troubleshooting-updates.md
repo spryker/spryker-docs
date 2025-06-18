@@ -81,6 +81,6 @@ Let us know if anything goes wrong with an update:
 
 Reach out to us using one of the following channels:
 * Support and community: share your issue or solution and learn from others in our [community slack](https://sprykercommunity.slack.com/join/shared_invite/zt-gdakzwk3-~B_gJXbUxMdzkBwTQVjNgg#/).
-* Create a request on our [support portal](https://spryker.force.com/support/s/).
+* Create a request on our [support portal](https://support.spryker.com).
 * Contribute to code: share your fix with us. We can implement the fix and make it available for other projects. To contribute, create a pull request on the module's [Github repository](https://github.com/spryker).
 * Contribute to the docs: if you found any issue in an upgrade guide or any other document,  you can edit the document by clicking **Edit on GitHub** next to the document's name.

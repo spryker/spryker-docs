@@ -214,4 +214,4 @@ APPLICATION_STORE=DE console publish:trigger-events
 APPLICATION_STORE=DE console sync:data
 ```
 
-For help with more specific cases, engage with [Spryker community](https://commercequest.space/) or [contact support](https://spryker.force.com/support/s/).
+For help with more specific cases, engage with [Spryker community](https://commercequest.space/) or [contact support](https://support.spryker.com).

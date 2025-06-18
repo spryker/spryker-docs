@@ -3,6 +3,8 @@ title: Sitemap feature overview
 description: Generate SEO-optimized sitemaps for your Spryker apps with customizable entity support, multistore compatibility, and configurable caching intervals.
 last_updated: Apr 10, 2025
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/miscellaneous/202505.0/sitemap-feature-overview.html
 ---
 
 

@@ -5,6 +5,7 @@ last_updated: March 4, 2025
 template: howto-guide-template
 redirect_from: 
   - /docs/dg/dev/integrate-and-configure/integrate-sitemap-generation.html
+  - /docs/pbc/all/miscellaneous/202505.0/install-and-upgrade/install-features/install-the-sitemap-feature.html
 ---
 
 

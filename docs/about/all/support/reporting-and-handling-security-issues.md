@@ -36,7 +36,7 @@ To help streamline our review process, ensure your submission meets the followin
 - Include any other vulnerable URLs, additional payloads, and Proof-of-Concept code
 - Specify the browser, OS, and application version used during testing
 - Include full URLs and do not use URL shorteners such as tiny URL
-- Attach all evidence and supporting materials directly in the report; don't user external file hosting services 
+- Attach all evidence and supporting materials directly in the report; don't user external file hosting services
 
 ## How we are handling security reports
 

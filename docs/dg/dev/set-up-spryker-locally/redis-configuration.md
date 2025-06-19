@@ -161,6 +161,30 @@ class RedisConfig extends AbstractBundleConfig
 ```
 
 After enabling compression, we recommend resaving storage data using the command: `SPRYKER_REDIS_IS_DEV_MODE=0 console storage:redis:re-save`.
+The following is the default compression configuration:
+
+```php
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\StorageRedis\Communication\Console\StorageRedisDataReSaveConsole;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container): array
+    {
+        $commands = [
+            //....
+            new StorageRedisDataReSaveConsole(),
+            //....
+        ];
+    }
+}
+```
 
 With separate storage databases per store, execute the command for each store individually.
 

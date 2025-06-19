@@ -8,9 +8,9 @@ This document describes the security-related issues that have been recently reso
 
 For additional support with this content, [contact our support](https://support.spryker.com/). If you found a new security vulnerability, contact us at [security@spryker.com](mailto:security@spryker.com).
 
-## Improved Password Policy
+## Improved password policy
 
-The password policy enforced by our applications was improved to map the latest NIST standards and guidelines. The password policy is now also enforced in a consistent way across all password-related functionalities.
+The password policy enforced by our applications was improved to adhere to the latest NIST standards and guidelines. All password-related functionalities now consistently enforce these guidelines.
 
 
 ### Affected modules
@@ -47,17 +47,14 @@ composer update spryker-shop/customer-page spryker-shop/company-page spryker/cus
 
 2. Update the glossary:
 
-<details>
-  <summary>data/import/common/common/glossary.csv</summary>
+**data/import/common/common/glossary.csv**
 
 ```csv
 global.password.invalid_password,"Your password must include at least one uppercase letter, one lowercase letter, one number, and one special character from the following list: !@#$%^&*()_-+=[]{}|;:<>.,/?\~. Non-Latin and other special characters are not allowed.",en_US
 global.password.invalid_password,"Das Passwort muss mindestens einen Großbuchstaben, einen Kleinbuchstaben, eine Zahl und ein Sonderzeichen aus der folgenden Liste enthalten: !@#$%^&*()_-+=[]{}|;:<>.,/?\~. Nicht-lateinische und andere Sonderzeichen sind nicht erlaubt.",de_DE
 ```
 
-</details>
-
-3. Update the `src/Pyz/Glue/CustomersRestApi/Validation/customers.validation.yaml` file:
+3. Update `src/Pyz/Glue/CustomersRestApi/Validation/customers.validation.yaml`:
 
 ```bash
 customers:

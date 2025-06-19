@@ -16,7 +16,7 @@ redirect_from:
 
 Handling order claims are the reality of doing business for most ecommerce sites. A customer might have bought an item and then discovered that it does not fit, or they might have stumbled upon another item and want to order it instead of the order already placed, or an item is faulty, or additional parts are needed.
 
-The _Reclamations_ feature provides a way for administrators to handle all the customer order claims. The shop administrators can create, view, and edit the reclamations in the dedicated section of the Administration Interface. The editing implies making a refund (depending on your state machine configuration) or closing the reclamation. Thus, the Reclamation feature makes the process of claims-handling easier, faster, and more efficient for the store administrators, as well as helps to improve customer service.
+The *Reclamations* feature provides a way for administrators to handle all the customer order claims. The shop administrators can create, view, and edit the reclamations in the dedicated section of the Administration Interface. The editing implies making a refund (depending on your state machine configuration) or closing the reclamation. Thus, the Reclamation feature makes the process of claims-handling easier, faster, and more efficient for the store administrators, as well as helps to improve customer service.
 
 Once a Back Office user has received a claim regarding an order from the customer, they can go to [Overview of Orders](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/reclamations/create-reclamations.html) in the Back Office and click **Claim** to register the claim for the order (for all items or separate items of the order).
 

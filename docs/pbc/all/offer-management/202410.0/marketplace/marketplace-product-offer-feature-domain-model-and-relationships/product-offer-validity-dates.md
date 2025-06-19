@@ -22,6 +22,7 @@ The following schema illustrates module relations in the Product Offer Validity 
 
 
 ## Domain model
+
 The following schema illustrates the ProductOffer-ProductOfferValidity domain model:
 
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/b20c2abe-77c4-4c33-b361-48034e64dc7b.png?utm_medium=live&utm_source=custom)

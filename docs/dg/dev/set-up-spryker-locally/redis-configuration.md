@@ -16,8 +16,8 @@ related:
 
 In Spryker, Redis is used in two scenarios:
 
-* Key-value storage. Modules: `Spryker.Storage`, `Spryker.Collector`, and `Spryker.Heartbeat`.
-* Session data storage. Module: `Spryker.Session`.
+- Key-value storage. Modules: `Spryker.Storage`, `Spryker.Collector`, and `Spryker.Heartbeat`.
+- Session data storage. Module: `Spryker.Session`.
 
 Each scenario uses a separate set of configuration values.
 

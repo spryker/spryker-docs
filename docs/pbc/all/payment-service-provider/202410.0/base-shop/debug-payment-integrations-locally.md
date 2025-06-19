@@ -12,8 +12,9 @@ Unlike [cloud](/docs/ca/dev/getting-started-with-cloud-administration.html) envi
 Most payment integrations rely on a push notification to send feedback to requests made by your application. Normally, these push notifications would never reach your local development environment because the payment provider would not be able to resolve its DNS name. You can use tools like NGROK to set up a publicly available reverse proxy that gives you a publicly reachable URL that you can add to the configuration on your payment provider's management console.
 
 ## Prerequisites
-* Read access to your code base.
-* Get a free account for [NGROK](https://ngrok.com).
+
+- Read access to your code base.
+- Get a free account for [NGROK](https://ngrok.com).
 
 ## Debug payment integrations locally
 
@@ -28,7 +29,7 @@ ssl:
 2. Boot your edited `deploy.yml` file and start your application.
 3. Install and start up NGROK to receive the public URL:
 
-```
+```bash
 ./ngrok http --host-header=rewrite YOUR.APPLICATION_BASE.TLD:443
 //Example:
 ./ngrok http --host-header=rewrite yves.de.spryker.local:443

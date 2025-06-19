@@ -20,9 +20,9 @@ Multi-Factor Authentication (MFA) adds an extra layer of security for Storefront
 
 Benefits of MFA:
 
-* Enhanced security with an an extra layer of protection
-* Enhanced privacy with better protected personal data
-* Supports compliance with security regulations and industry standards
+- Enhanced security with an an extra layer of protection
+- Enhanced privacy with better protected personal data
+- Supports compliance with security regulations and industry standards
 
 
 ## MFA flow for protected actions
@@ -34,12 +34,12 @@ The login process with MFA looks as follows:
 2. Fetch enabled MFA types: If MFA is enabled, the system retrieves the customer's enabled MFA types from `multi-factor-auth/get-customer-enabled-types`.
 
 3. Evaluate the number of enabled MFA methods:
-  * Multiple MFA methods: the system presents a selection screen where the user selects a preferred authentication method
-  * One MFA method: the system proceeds to verify the user using their only MFA method
+- Multiple MFA methods: the system presents a selection screen where the user selects a preferred authentication method
+- One MFA method: the system proceeds to verify the user using their only MFA method
 
-4. Send the authentication code via `multi-factor-auth/send-customer-code`: 
-  * Multiple MFA methods: the authentication code is sent to the platform selected by the user
-  * One MFA method: the authentication code is sent to the method's platform
+4. Send the authentication code via `multi-factor-auth/send-customer-code`:
+- Multiple MFA methods: the authentication code is sent to the platform selected by the user
+- One MFA method: the authentication code is sent to the method's platform
 
 5. Code validation: After the authentication code is sent, the system presents a code validation form to the user. The user enters the received authentication code in the form.  
   If the code is correct, authentication is successful. If incorrect, the user needs to double-check the code and try entering again.
@@ -95,9 +95,9 @@ You can set up your own methods by implementing a custom MFA type plugin. For in
 
 ## Managing Multi-Factor Authentication in the customer profile
 
-New customers are prompted to set up MFA on the profile overview page. To activate an MFA method, they need to verify that it's woking by entering an authentication code. This prevents them from getting locked out of their account. 
+New customers are prompted to set up MFA on the profile overview page. To activate an MFA method, they need to verify that it's woking by entering an authentication code. This prevents them from getting locked out of their account.
 
-Once MFA methods are set up, a user can activate and deactivate individual MFA methods. This action is protected by default. 
+Once MFA methods are set up, a user can activate and deactivate individual MFA methods. This action is protected by default.
 
 
 

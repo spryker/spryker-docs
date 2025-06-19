@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-for-number-formatting-in-the-storefront.html
 ---
 
-Number formats can vary by locales. For example, if in the DE locale there is a number _123.456,78_, in the US locale it would be _123,456.78_. To enable the proper number formatting by locale in your store, follow the instructions in this document.
+Number formats can vary by locales. For example, if in the DE locale there is a number *123.456,78*, in the US locale it would be *123,456.78*. To enable the proper number formatting by locale in your store, follow the instructions in this document.
 
 ## Prerequisites
 

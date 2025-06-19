@@ -16,19 +16,19 @@ The Inquiry Management feature allows customers to submit and track different ty
 Back Office users can manage inquiries, update statuses, and communicate with customers through an organized workflow.
 
 
-## Storefront functionalities 
+## Storefront functionalities
 
-* Submit an inquiry with relevant details
-* Attach supporting documents and images
-* Track the status of submitted inquiries
-* Get inquiry resolution details via email
+- Submit an inquiry with relevant details
+- Attach supporting documents and images
+- Track the status of submitted inquiries
+- Get inquiry resolution details via email
 
-## Back Office functionalities 
+## Back Office functionalities
 
-* View and manage all customer inquiries
-* Filter and search inquiries by type, status, or customer
-* Update inquiry status and provide resolution details
-* Attach internal notes visible only to Back Office users for internal collaboration
+- View and manage all customer inquiries
+- Filter and search inquiries by type, status, or customer
+- Update inquiry status and provide resolution details
+- Attach internal notes visible only to Back Office users for internal collaboration
 
 
 ## Inquiry types
@@ -41,27 +41,27 @@ You can add more inquiry types on the project level.
 
 Used for non-order and non-asset-related questions. Examples:
 
-* Product information requests
-* Shipping policy clarifications
-* Account-related questions
+- Product information requests
+- Shipping policy clarifications
+- Account-related questions
 
 
 ### Asset inquiry
 
 Used to ask questions or report problems with a specific asset. Examples:
 
-* Warranty claims
-* Malfunctioning or defective product reports
-* Asset replacement requests
+- Warranty claims
+- Malfunctioning or defective product reports
+- Asset replacement requests
 
 
 ### Order claim
 
 Used to report issues with orders. Examples:
 
-* Wrong item was received
-* Damaged product upon delivery
-* Missing items in the shipment
+- Wrong item was received
+- Damaged product upon delivery
+- Missing items in the shipment
 
 
 ## Inquiry statuses
@@ -98,23 +98,23 @@ On the Storefront, access to inquiry actions is restricted based on user permiss
 ## Inquiry creation on Storefront
 
 Company users can create different types of inquiries as follows:
-* General inquiry: Customer Account > Self-Service Portal > Inquires > Create inquiry
-* Asset inquiry: Customer Account > Self-Service Portal > Assets > Asset Details page > Create inquiry
-* Order claim: Customer Account > Order History > Order Details page > Claim
+- General inquiry: Customer Account > Self-Service Portal > Inquires > Create inquiry
+- Asset inquiry: Customer Account > Self-Service Portal > Assets > Asset Details page > Create inquiry
+- Order claim: Customer Account > Order History > Order Details page > Claim
 
 On the submit inquiry page, the user needs to enter the following details:
-* Subject
-* Description
-* Optional: files
+- Subject
+- Description
+- Optional: files
 
-After an inquiry is submitted, the user can find it in Customer Account > Self-Service Portal > Inquires. 
+After an inquiry is submitted, the user can find it in Customer Account > Self-Service Portal > Inquires.
 
 The company user can also cancel an inquiry while it's in the Pending status.
 
 
 ## Inquiry creation in the Back Office
 
-In the Back Office, inquires are located in **Customer Portal** > **Inquires**. In this section, you can filter by inquiry type and status and search by customer or inquiry reference. 
+In the Back Office, inquires are located in **Customer Portal** > **Inquires**. In this section, you can filter by inquiry type and status and search by customer or inquiry reference.
 
 From here, click **View** to open the inquiry details page. If the inquiry has attached files, click **Download** to access them.
 

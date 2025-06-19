@@ -4,16 +4,16 @@
 
 Version 2.0.0 of the `ContentStorage` module introduces the following changes:
 
-* Changed storage key structure from `content:locale:id` to `content:locale:key`.
-* Introduced the `spy_content_storage.content_key` field to store the identifier of content entities.
-* Removed deprecated `ExecutedContentStorageTransfer`.
-* Removed deprecated `ContentStorageClientInterface::findContentById()`.
-* Replaced `ContentStorageClientInterface::findContentTypeContext()` with `ContentStorageClientInterface::findContentTypeContextByKey()`.
-* Introduced the `ContentTypeContextTransfer::$key` transfer object property.
-* Introduced the `ContentStorageTransfer::$contentKey` transfer object property.
-* Increased the version of `spryker/content` in composer.json.
+- Changed storage key structure from `content:locale:id` to `content:locale:key`.
+- Introduced the `spy_content_storage.content_key` field to store the identifier of content entities.
+- Removed deprecated `ExecutedContentStorageTransfer`.
+- Removed deprecated `ContentStorageClientInterface::findContentById()`.
+- Replaced `ContentStorageClientInterface::findContentTypeContext()` with `ContentStorageClientInterface::findContentTypeContextByKey()`.
+- Introduced the `ContentTypeContextTransfer::$key` transfer object property.
+- Introduced the `ContentStorageTransfer::$contentKey` transfer object property.
+- Increased the version of `spryker/content` in composer.json.
 
-_Estimated migration time: 30 minutes - 1h_
+*Estimated migration time: 30 minutes - 1h*
 
 To upgrade to the new version of the module, do the following:
 

@@ -17,16 +17,16 @@ Minubo is the Commerce Intelligence Company for omni-channel brands and retailer
 
 YOUR ADVANTAGES:
 
-* Out-of-the-box integration of all relevant data sources into one omni-channel data warehouse.
-* Low cost of ownership: The solution is hosted in the cloud and the high level of standardization enables the immediate implementation of a data-driven working environment.
-* Easy-to-use analytics tools for every user group – dashboarding, customer segmentation, Web Pivot for ad-hoc analyses, best practice reports, proactive insights und action recommendation among others.
-* Standardized commerce data model based on industry best practices enables a data-driven working environment from day one.
-* The minubo data feeds and already developed integrations to third-party systems enables flexible use of the data.
-* Implementation and enablement is conducted by our in-house advisory and support team.
+- Out-of-the-box integration of all relevant data sources into one omni-channel data warehouse.
+- Low cost of ownership: The solution is hosted in the cloud and the high level of standardization enables the immediate implementation of a data-driven working environment.
+- Easy-to-use analytics tools for every user group – dashboarding, customer segmentation, Web Pivot for ad-hoc analyses, best practice reports, proactive insights und action recommendation among others.
+- Standardized commerce data model based on industry best practices enables a data-driven working environment from day one.
+- The minubo data feeds and already developed integrations to third-party systems enables flexible use of the data.
+- Implementation and enablement is conducted by our in-house advisory and support team.
 
 ## Related Developer guides
 
-* [Installing and configuring Minubo](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/analytics/minubo/install-and-integrate-minubo.html)
+- [Installing and configuring Minubo](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/analytics/minubo/install-and-integrate-minubo.html)
 
 ---
 

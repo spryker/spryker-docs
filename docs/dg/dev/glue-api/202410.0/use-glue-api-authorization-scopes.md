@@ -87,9 +87,9 @@ vendor/bin/console oauth:scope-collection-file:generate
 
 {% info_block warningBox "Verification" %}
 
-* Ensure that when accessing `https://glue-storefront.mysprykershop.com/module` or `https://glue-backend.mysprykershop.com/module/bar` without an access token, you receive the `403` response with the message `Unauthorized request`.
+- Ensure that when accessing `https://glue-storefront.mysprykershop.com/module` or `https://glue-backend.mysprykershop.com/module/bar` without an access token, you receive the `403` response with the message `Unauthorized request`.
 
-* Ensure that you can authenticate as a customer:
+- Ensure that you can authenticate as a customer:
    1. Send the request:
 
     ```yaml
@@ -105,7 +105,7 @@ vendor/bin/console oauth:scope-collection-file:generate
    2. Check that the output contains the 201 response with a valid token.
    3. Enter a valid access token to access `https://glue-storefront.mysprykershop.com/module`.
 
-* Ensure that you can authenticate as a user:
+- Ensure that you can authenticate as a user:
    1. Send the request:
 
     ```yaml

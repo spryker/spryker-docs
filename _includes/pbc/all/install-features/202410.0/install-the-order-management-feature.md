@@ -152,6 +152,7 @@ Set up the following configuration.
 
 </statemachine>
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -313,6 +314,7 @@ Verify the invoice state machine configuration in the following step.
 
 </statemachine>
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -606,6 +608,7 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
 </html>
 {% endraw %}
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -638,6 +641,7 @@ By default, in state machine names, the following applies:
 <details><summary>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
 
 **src/data/import/glossary.csv**
+
 ```csv
 sales.error.customer_order_not_found,Customer Order not found.,en_US
 sales.error.customer_order_not_found,Die Bestellung wurde nicht gefunden.,de_DE
@@ -680,6 +684,7 @@ order_custom_reference.form.placeholder,Ihre Bestellreferenz hinzufügen,de_DE
 order_custom_reference.save,Save,en_US
 order_custom_reference.save,Speichern,de_DE
 ```
+
 </details>
 
  2. Import data:
@@ -746,6 +751,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -800,6 +806,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -859,6 +866,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
     }
 }
 ```
+
 </details>
 
 
@@ -899,6 +907,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
+
 </details>
 
 #### Set up an order invoice OMS command
@@ -961,10 +970,10 @@ vendor/bin/console scheduler:resume
 
 {% info_block warningBox "Verification" %}
 
-* Move at least one item in an order to the `invoice generated` state.
+- Move at least one item in an order to the `invoice generated` state.
   Make sure that, according to your `DummyInvoice01.xml` and `SalesInvoiceConfig::getOrderInvoiceTemplatePath()` configuration, the correct order invoice template has been assigned to the order: `spy_sales_order_invoice`.
 
-* Place an order with an invoice. Make sure that you receive an invoice within the time configured in the scheduler.
+- Place an order with an invoice. Make sure that you receive an invoice within the time configured in the scheduler.
 
 {% endinfo_block %}
 
@@ -1213,9 +1222,9 @@ Follow the steps below to install the Order Management feature frontend.
 
 Install the required features:
 
-| NAME                        | VERSION          |
-|-----------------------------|------------------|
-| Spryker Core                | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                            |
+| NAME                        | VERSION          | INSTALLATION GUIDE |
+|-----------------------------|------------------| - |
+| Spryker Core                | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
 | Checkout | {{site.version}} |[Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
 | Customer Account Management | {{site.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
@@ -1240,7 +1249,7 @@ Make sure the following modules have been installed:
 
 1. Append the glossary according to your configuration:
 
-```
+```csv
 order_cancel_widget.cancel_order,Cancel Order,en_US
 order_cancel_widget.cancel_order,Bestellung stornieren,de_DE
 order_cancel_widget.order.cancelled,Order was canceled successfully.,en_US

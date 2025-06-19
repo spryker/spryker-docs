@@ -21,8 +21,8 @@ This endpoint allows you to add and remove items from wishlists.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Wishlist API Feature Integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-wishlist-glue-api.html)
-* [Install the Product Configuration Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-configuration-glue-api.html)
+- [Wishlist API Feature Integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-wishlist-glue-api.html)
+- [Install the Product Configuration Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-configuration-glue-api.html)
 
 ## Add an item to a wishlist
 
@@ -109,6 +109,7 @@ Request sample: add an item to a wishlist
     }
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/wishlist-items-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/wishlist-items-request-attributes.md -->
@@ -198,6 +199,7 @@ Response sample: add an item to a wishlist
     }
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/wishlist-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/wishlist-items-response-attributes.md -->
@@ -284,6 +286,7 @@ To update a wishlist item, send the request:
     }
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/wishlist-items-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/wishlist-items-request-attributes.md -->
@@ -356,6 +359,7 @@ To update a wishlist item, send the request:
     }
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/wishlist-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/wishlist-items-response-attributes.md -->

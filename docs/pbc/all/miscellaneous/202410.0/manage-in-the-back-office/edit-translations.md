@@ -14,7 +14,7 @@ To edit a translation in the Back Office, follow the steps:
 3. On the **Edit Translation** page, enter translations per locale.
 4. Click **Save**.
     This opens the **Glossary** page with a success message displayed.
-5. Ask your development team to apply the changes on the code level.    
+5. Ask your development team to apply the changes on the code level.
 
 ## Reference information: NAME
 

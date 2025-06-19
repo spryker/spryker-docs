@@ -39,19 +39,19 @@ Each placeholder in a page has locale-specific content (for as many locales as y
 ## CMS content widgets
 
 When you edit a CMS page, you can add CMS content widgets. A CMS content widget is a dynamic piece of reusable content. The following CMS content widgets are shipped with the CMS feature:
-* Chart
-* Product
-* Product set
-* Product group
-* CMS file
-* CMS block
+- Chart
+- Product
+- Product set
+- Product group
+- CMS file
+- CMS block
 
 With the CMS Pages feature, you can:
 
-* Localize your CMS pages, including the name and HTML meta header information.
-* Adding SEO meta information to CMS pages.
-* Specify validity dates for CMS Pages.
-* Assign a CMS Page to a specific locale, thus making it visible or hidden for a specific store (the Multi-store CMS feature).
+- Localize your CMS pages, including the name and HTML meta header information.
+- Adding SEO meta information to CMS pages.
+- Specify validity dates for CMS Pages.
+- Assign a CMS Page to a specific locale, thus making it visible or hidden for a specific store (the Multi-store CMS feature).
 
 ## Related Business User documents
 
@@ -65,4 +65,4 @@ With the CMS Pages feature, you can:
 
 ## See next
 
-* [CMS block](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-blocks-overview.html)
+- [CMS block](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-blocks-overview.html)

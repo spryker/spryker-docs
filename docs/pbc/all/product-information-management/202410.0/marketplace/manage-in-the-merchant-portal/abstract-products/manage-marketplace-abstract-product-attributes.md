@@ -22,7 +22,7 @@ This document contains reference information. Make sure to review it before you 
 
 To add an attribute to a marketplace abstract product:
 
-1. Next to the abstract product you want to create an attribute for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the **_[Product name]_**, **Abstract Product Details** tab.
+1. Next to the abstract product you want to create an attribute for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the ***[Product name]***, **Abstract Product Details** tab.
 2. Scroll down to the **Attributes** pane.
 3. In the **Attributes** pane, click **+Add**. The empty cells appear in the following table.
 4. From the drop-down menu **Attribute**, select a predefined value or enter your own when allowed by the Marketplace operator.
@@ -37,7 +37,7 @@ To add an attribute to a marketplace abstract product:
 
 To edit attributes for a marketplace abstract product:
 
-1. Next to the abstract product you want to edit an attribute for, hover over the three dots, or just click the line. This takes you to the **_[Product name]_**, **Abstract Product Details** tab.
+1. Next to the abstract product you want to edit an attribute for, hover over the three dots, or just click the line. This takes you to the ***[Product name]***, **Abstract Product Details** tab.
 2. Scroll down to the **Attributes** pane.
 3. In the **Attributes** pane, hover over the table and update the necessary cells.
 
@@ -50,7 +50,7 @@ You can rearrange the columns' order, hide and show the columns by clicking the 
 
 To remove an attribute from an abstract product:
 
-1. Next to the abstract product you want to delete an attribute for, hover over the three dots, or just click the line. This takes you to the **_[Product name]_**, **Abstract Product Details** tab.
+1. Next to the abstract product you want to delete an attribute for, hover over the three dots, or just click the line. This takes you to the ***[Product name]***, **Abstract Product Details** tab.
 2. Scroll down to the **Attributes** pane.
 3. In the **Attributes** pane, next to the attribute you want to delete, hover over the three dots and click **Delete**.
 

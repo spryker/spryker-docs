@@ -15,8 +15,8 @@ This document describes how to generate access keys. Access keys are used to acc
 
 {% info_block infoBox %}
 
-* You can only generate an access key for your own account. If you want to create another account and generate an access key for that account, [contact support](https://support.spryker.com). 
-* These keys are strictly intended for local development and personal AWS CLI access, and should not be used for any type of automations.
+- You can only generate an access key for your own account. If you want to create another account and generate an access key for that account, [contact support](https://support.spryker.com).
+- These keys are strictly intended for local development and personal AWS CLI access, and should not be used for any type of automations.
 
 {% endinfo_block %}
 

@@ -189,12 +189,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-* To verify `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, send a `POST https://glue.mysprykershop.com/checkout-data?include=payment-methods` and request and make sure that `checkout-data` resource has a relationship to the `payment-methods` resources.
-* To verify `PaymentCustomersResourceRoutePlugin` is activated, send a `POST https://glue.mysprykershop.com/payment-customers` request and make sure that customer data is returned.
+- To verify `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, send a `POST https://glue.mysprykershop.com/checkout-data?include=payment-methods` and request and make sure that `checkout-data` resource has a relationship to the `payment-methods` resources.
+- To verify `PaymentCustomersResourceRoutePlugin` is activated, send a `POST https://glue.mysprykershop.com/payment-customers` request and make sure that customer data is returned.
 
 Here is an example request for the PayOne PayPal Express payment method used by a guest or authorized customer to retrieve user data such as addresses from the PSP:
 
 `POST https://glue.mysprykershop.com/payment-customers`
+
 ```json
 {
   "data": {

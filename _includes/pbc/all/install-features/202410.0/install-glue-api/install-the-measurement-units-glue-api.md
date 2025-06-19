@@ -86,8 +86,8 @@ console event:trigger -r product_concrete
 
 Make sure that the following Redis keys exist and there is data in them:
 
-* `kv:product_measurement_unit:code:{% raw %}{{{% endraw %}product_measurement_unit_code{% raw %}}}{% endraw %}`
-* `kv:product_concrete:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_concrete{% raw %}}}{% endraw %}`
+- `kv:product_measurement_unit:code:{% raw %}{{{% endraw %}product_measurement_unit_code{% raw %}}}{% endraw %}`
+- `kv:product_concrete:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_concrete{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}
 
@@ -172,6 +172,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 
@@ -197,6 +198,7 @@ Make sure that the `ProductMeasurementUnitsResourceRoutePlugin` plugin is set up
     }
 }
 ```
+
 {% endinfo_block %}
 
 
@@ -257,6 +259,7 @@ Make sure that the `SalesUnitsResourceRoutePlugin` and `ProductMeasurementUnitsB
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -403,6 +406,7 @@ Make sure that the `ProductMeasurementUnitsByProductConcreteResourceRelationship
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -520,6 +524,7 @@ Make sure that the `SalesUnitsByCartItemResourceRelationshipPlugin` relationship
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -616,8 +621,8 @@ Make sure that the plugins have been set up:
 ```
 
 2. Send the request `GET https://glue.mysprykershop.com/carts?include=items` and make sure that the following attributes are included:
-    * `salesUnits.id`
-    * `salesUnits.amount`
+    - `salesUnits.id`
+    - `salesUnits.amount`
 
 
 {% endinfo_block %}

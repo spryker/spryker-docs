@@ -13,8 +13,8 @@ redirect_from:
 
 {% info_block warningBox "Restrictions apply" %}
 
-* The following instruction are for personnel to connect to the cloud infrastructure and should not be used to connect other infrastructure components and systems to the cloud infrastructure. 
-* A direct RDS connection can be established only from Spryker services. Direct connection to RDS database outside of the the application's internal networks is prohibited.
+- The following instruction are for personnel to connect to the cloud infrastructure and should not be used to connect other infrastructure components and systems to the cloud infrastructure.
+- A direct RDS connection can be established only from Spryker services. Direct connection to RDS database outside of the the application's internal networks is prohibited.
 
 {% endinfo_block %}
 
@@ -22,8 +22,8 @@ We add your SSH public key to the [bastion host](https://docs.aws.amazon.com/man
 
 You can use SSH in two ways:
 
-* Connect to the bastion host and, subsequently, connect to other supported infrastructure components
-* Set up SSH port forwarding through bastion host to access a specific service from your computer
+- Connect to the bastion host and, subsequently, connect to other supported infrastructure components
+- Set up SSH port forwarding through bastion host to access a specific service from your computer
 
 
 ## Prerequisites
@@ -57,51 +57,54 @@ In the following instructions we use the Jenkins service as an example. Adjust t
     5. Connect to the copied endpoint via SSH.
 5. Optional: Set up SSH port forwarding:
     1. In the bastion host, get the IP address of the endpoint by resolving the copied endpoint:
+
     ```shell
     dig +short staging.cxg4btdhhsrr.eu-central-1.example.amazonaws.com
     10.111.4.63
     ```
+
     2. Set up SSH port forwarding using the IP address. For example:
+
     ```shell
     ssh -A ubuntu@<private_bastion_ip> -L 0.0.0.0:8080:<private_scheduler_ip>:80
     ```
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

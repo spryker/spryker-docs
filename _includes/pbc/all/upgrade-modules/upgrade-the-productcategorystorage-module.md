@@ -6,32 +6,32 @@ This document describes how to update the `ProductCategoryStorage` module.
 
 Version `2.*` of the `ProductCategoryStorage` module changes the storage data structure to maintain the relation of categories to stores.
 
-_Estimated migration time: 1 hour._ 
+*Estimated migration time: 1 hour.*
 
 To upgrade the `ProductCategoryStorage` module from version `1.*` to `2.*`:
 
-1.  Upgrade the `ProductCategoryStorage` module to version `2.0.0`:
+1. Upgrade the `ProductCategoryStorage` module to version `2.0.0`:
 
-```bash    
+```bash
 composer require spryker/product-category-storage:"^2.0.0" --update-with-dependencies
-```    
+```
 
-2.  On the project level in `Pyz/Zed/ProductCategoryStorage/Persistence/Propel/Schema/spy_product_category_storage.schema.xml`, remove the synchronization behavior setup from the `spy_product_abstract_category_storage` table.
+2. On the project level in `Pyz/Zed/ProductCategoryStorage/Persistence/Propel/Schema/spy_product_category_storage.schema.xml`, remove the synchronization behavior setup from the `spy_product_abstract_category_storage` table.
 
-3.  Update the database schema and the generated classes:
+3. Update the database schema and the generated classes:
 
-```bash    
+```bash
 console propel:install
 console transfer:generate
 ```
 
-4.  From `Pyz\Zed\Event\EventDependencyProvider`, remove the deprecated subscriber: `ProductCategoryStorageEventSubscriber`.
-5.  From `Pyz\EventBehavior\EventBehaviorDependencyProvider`, remove the deprecated plugin:`ProductCategoryEventResourceQueryContainerPlugin` .
-6.  Add the new plugins:
+4. From `Pyz\Zed\Event\EventDependencyProvider`, remove the deprecated subscriber: `ProductCategoryStorageEventSubscriber`.
+5. From `Pyz\EventBehavior\EventBehaviorDependencyProvider`, remove the deprecated plugin:`ProductCategoryEventResourceQueryContainerPlugin` .
+6. Add the new plugins:
 
 <details><summary>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
 
-```php    
+```php
 <?php
 
 namespace Pyz\Zed\Publisher;
@@ -84,11 +84,12 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+
 </details>
 
 7. Add the trigger plugin to `Pyz\Zed\Publisher\PublisherDependencyProvider`:
 
-```php    
+```php
 <?php
 
 namespace Pyz\Zed\Publisher;
@@ -108,13 +109,13 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         ];
     }
 }
-```    
+```
 
 8. From `Pyz\Zed\Synchronization\SynchronizationDependencyProvider`, remove the deprecated plugin: `ProductCategorySynchronizationDataPlugin`.
 
 9. Add the new synchronization plugin to `Pyz\Zed\Synchronization\SynchronizationDependencyProvider`:
 
-```php    
+```php
 <?php
 
 namespace Pyz\Zed\Synchronization;
@@ -136,24 +137,27 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-10.  Refill storage:
+10. Refill storage:
 
-    1.  Truncate the `spy_product_abstract_category_storage` database table:
+    1. Truncate the `spy_product_abstract_category_storage` database table:
 
     ```sql
     TRUNCATE TABLE spy_product_abstract_category_storage;
     ```
-    2.  Remove all the data:
+
+    2. Remove all the data:
 
     ```bash
     console sync:data product_abstract_category
     ```
-    3.  Trigger the event:
+
+    3. Trigger the event:
 
     ```bash
     console publish:trigger-events -r product_abstract_category
     ```
-    4.  Sync all table storage data to the storage:
+
+    4. Sync all table storage data to the storage:
 
     ```bash
     console sync:data product_abstract_category

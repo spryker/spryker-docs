@@ -150,6 +150,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
        }
 }
 ```
+
 </details>
 
 **Changing the displayed calculated values**
@@ -299,9 +300,9 @@ COMMIT;
 
 3. Run the console commands:
 
-* `vendor/bin/console transfer:generate`
-* `vendor/bin/console propel:diff`
-* `vendor/bin/console propel:model:build`
+- `vendor/bin/console transfer:generate`
+- `vendor/bin/console propel:diff`
+- `vendor/bin/console propel:model:build`
 
 {% info_block infoBox %}
 
@@ -355,7 +356,7 @@ The Sales module does not depend on the `SalesAggregator` anymore. Therefore, yo
 
 {% endinfo_block %}
 
-### Template changes in the SalesBundle >= 6.\*:
+### Template changes in the SalesBundle >= 6.\*
 
 Item and Item option display have been split into three separate template files:
 

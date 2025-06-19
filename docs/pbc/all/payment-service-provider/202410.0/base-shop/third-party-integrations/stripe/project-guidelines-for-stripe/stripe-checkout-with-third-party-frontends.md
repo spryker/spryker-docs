@@ -33,18 +33,18 @@ When Stripe is integrated into a headless application, orders are processed usin
 
 1. The customer either selects Stripe as the payment method or [Stripe Elements](https://docs.stripe.com/payments/elements) is loaded by default.
 2. The `InitializePreOrderPayment` Glue API endpoint (`glue.mysprykershop.com/payments`) is called with the following parameters:
-  * Payment provider name: Stripe
-  * Payment method name: Stripe
-  * Payment amount
-  * Quote data
+- Payment provider name: Stripe
+- Payment method name: Stripe
+- Payment amount
+- Quote data
 3. Back Office sends the quote data and the payment amount to Stripe app through an API.
 4. The payment with the given data is persisted in the Stripe app.
 5. Stripe app requests `ClientSecret` and `PublishableKey` keys from Stripe through an API.
 6. Stripe returns a JSON response with the following parameters:
-  * TransactionId
-  * ClientSecret
-  * PublishableKey
-  * Only for marketplaces: AccountId
+- TransactionId
+- ClientSecret
+- PublishableKey
+- Only for marketplaces: AccountId
 7. Stripe Elements is rendered on the order summary page. See [Rendering the Stripe Elements on the summary page](#rendering-the-stripe-elements-on-the-summary-page) for rendering Stripe Elements.
 8. The customer selects a payment method in Stripe Elements and submits the data.
 9. The customer is redirected to the configured `return_url`, which makes an API request to persist the order in the Back Office: `glue.mysprykershop.com/checkout`.
@@ -53,8 +53,8 @@ When Stripe is integrated into a headless application, orders are processed usin
   The `order_reference` is passed to the Stripe app to be connected with `transaction_id`.
 12. Stripe app processes the payment and sends a `PaymentUpdated` message to Spryker.
 13. Depending on payment status, one of the following messages is returned through an asynchronous API:
-  *  Payment is successful: `PaymentAuthorized` message.
-  *  Payment is failed: `PaymentAuthorizationFailed` message.
+- Payment is successful: `PaymentAuthorized` message.
+- Payment is failed: `PaymentAuthorizationFailed` message.
 14. Further on, the order is processed through the OMS.
 
 All payment related messages mentioned above are handled by `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin`, which is registered in `MessageBrokerDependencyProvider`.

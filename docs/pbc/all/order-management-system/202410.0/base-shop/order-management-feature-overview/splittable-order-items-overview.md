@@ -19,7 +19,7 @@ As a final step of checkout, for each item in the cart, sales order items are cr
 
 Depending on the `is_quantity_splittable` value, a different number of splittable order items (SOI) is created. But the following is always true:
 
-```
+```text
 cart item quantity = sum(SOI[i].quantity)
 ```
 

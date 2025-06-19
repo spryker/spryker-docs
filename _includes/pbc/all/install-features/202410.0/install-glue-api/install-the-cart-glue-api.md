@@ -99,6 +99,7 @@ Ensure that, in the `spy_quote` table, the `uuid` field is populated for all the
 ```sql
 SELECT COUNT(*) FROM spy_quote WHERE uuid IS NULL;
 ```
+
 The result is `0 records`.
 
 {% endinfo_block %}
@@ -292,6 +293,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}

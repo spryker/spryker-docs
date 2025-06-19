@@ -30,10 +30,10 @@ Merchants can define product offer stock in the Merchant Portal. For details, se
 
 Also, you can do the following using the data import:
 
-* Manage stock of product offers for a merchant by importing the product offer and stock data separately: [File details: product_offer_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/import-and-export-data/import-file-details-product-offer-stock.csv.html).
-* Define stock when importing the product offer data: [File details: combined_merchant_product_offer.csv](/docs/pbc/all/offer-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-combined-merchant-product-offer.csv.html).
-* Import merchant stock data: [File details: merchant_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-stock.csv.html).
-* Import stock of merchant products: [File details: product_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-stock.csv.html).
+- Manage stock of product offers for a merchant by importing the product offer and stock data separately: [File details: product_offer_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/import-and-export-data/import-file-details-product-offer-stock.csv.html).
+- Define stock when importing the product offer data: [File details: combined_merchant_product_offer.csv](/docs/pbc/all/offer-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-combined-merchant-product-offer.csv.html).
+- Import merchant stock data: [File details: merchant_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-stock.csv.html).
+- Import stock of merchant products: [File details: product_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-stock.csv.html).
 
 ## Marketplace availability management
 
@@ -47,9 +47,9 @@ Product offer availability calculation differs from the calculation of concrete 
 
 Offer availability is considered on the Storefront:
 
-* On the product details page: While adding the offer to cart.
-* On the cart page: The product stays in the cart if the attached offer is not available anymore, and a hint is shown.
-* During the checkout: When clicking **Buy now**, the availability is rechecked.
+- On the product details page: While adding the offer to cart.
+- On the cart page: The product stays in the cart if the attached offer is not available anymore, and a hint is shown.
+- During the checkout: When clicking **Buy now**, the availability is rechecked.
 
 {% info_block infoBox "Example" %}
 

@@ -91,6 +91,7 @@ $config[QueueConstants::QUEUE_ADAPTER_CONFIGURATION] = [
     ],
 ];
 ```
+
 Import jobs, as well as Publish and Sync-related processes, can be taxing on the database. Make sure that you conduct profiling with a realistic dataset. You can take a database dump from your PaaS environments or use AI to generate test data in realistic quantities.
 
 ### Imports and Publish and Synchronize
@@ -105,6 +106,7 @@ While fine-tuning your chunk size, check out the following articles:
 A valuable general recommendation is to [split up publishing queues](https://docs.spryker.com/docs/dg/dev/integrate-and-configure/integrate-multi-queue-publish-structure.html#set-up-a-publish-queue-for-a-publisher-plugin) for improved performance and precise control. You will observe varying memory and CPU demands for different messages in your queues, and by dividing the queues to accommodate various events, you can establish appropriate chunk sizes for each of them.
 
 ### CPU credits
+
 Standard-sized non-production environments aren't intended to handle long periods of high load. Most infrastructure components in this package size operate with a burst configuration, allowing for increased performance during limited periods. However, if these environments are under heavy load for an extended duration, the components will eventually run out of "burst credits" and throttle until the load decreases and the credits can replenish over time. When an instance is throttled, its CPU performance is capped at 20%. Consequently, the instance may struggle to complete standard tasks, resulting in the following common symptoms:
 
 - Deployment-related steps in the Deploy_Scheduler pipeline may encounter issues because of insufficient processing capacity.
@@ -124,6 +126,7 @@ Make sure the following criteria are met:
 - You've configured the chunk size of the queues you are working with to align with the memory constraints of your environment.
 
 ## Jenkins job configuration
+
 With all the preparation work listed in this document, you should already notice a significant improvement in Jenkins stability. To further enhance the resilience of your setup, we have gathered the following general recommendations for you.
 
 When the Jenkins host crashes and requires re-provisioning, there is a risk of losing all manually created jobs. To mitigate this risk, we recommend persisting important jobs in code. This ensures that when `vendor/bin/console scheduler:setup` is executed during recovery, all your critical jobs are reinstalled.

@@ -162,6 +162,7 @@ class YourCommand implements ExecutableCommandInterface
     }
 }
 ```
+
 <a name="implement-placeholders"></a>
 
 4. Implement placeholders.<br>

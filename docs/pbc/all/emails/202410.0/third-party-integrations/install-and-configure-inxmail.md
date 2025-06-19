@@ -13,6 +13,7 @@ This document describes how to install and configure Inxmail.
 ## Installation
 
 To install Inxmail run the command in the console:
+
 ```php
  composer require spryker-eco/inxmail:1.1.0
  ```
@@ -26,6 +27,7 @@ The module supports only a subset of Inxmail REST API—transactional emails (ev
 {% endinfo_block %}
 
 To set up the Inxmail initial configuration, use the credentials you received from your Inxmail server. Key ID and secret you can get from Settings → API keys panel on Inxmail server:
+
 ```php
  $config[InxmailConstants::API_EVENT_URL] = '';
  $config[InxmailConstants::KEY_ID] = '';
@@ -33,6 +35,7 @@ To set up the Inxmail initial configuration, use the credentials you received fr
  ```
 
 Event names depend on your events names on Inxmail server:
+
 ```php
  $config[InxmailConstants::EVENT_CUSTOMER_REGISTRATION] = '';
  $config[InxmailConstants::EVENT_CUSTOMER_RESET_PASSWORD] = '';

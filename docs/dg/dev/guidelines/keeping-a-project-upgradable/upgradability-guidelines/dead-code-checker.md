@@ -48,7 +48,9 @@ Remove the unused dead code in project.
 
 
 ## Run only this checker
+
 To run only this checker, include `DEAD_CODE_CHECKER` into the checkers list. Example:
+
 ```bash
 vendor/bin/evaluator evaluate --checkers=DEAD_CODE_CHECKER
 ```

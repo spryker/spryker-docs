@@ -28,6 +28,7 @@ For detailed information on the modules that provide the API functionality and r
 
 
 ## Share a cart
+
 To share a cart, send the request:
 
 ***
@@ -107,4 +108,4 @@ Response sample:
 
 ## Next steps
 
-* [Manage shared company user carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-manage-shared-company-user-carts.html)
+- [Manage shared company user carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-manage-shared-company-user-carts.html)

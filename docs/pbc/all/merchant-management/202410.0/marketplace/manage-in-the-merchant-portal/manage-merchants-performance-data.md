@@ -58,9 +58,9 @@ Offline—the total number of offline offers.
 
 The total number of offers that are available on the Storefront, that is, all of the orders that meet the following criteria:
 
-* Have no validity dates or **Valid From & Valid To** includes today's date.
-* Are online.
-* Have stock.
+- Have no validity dates or **Valid From & Valid To** includes today's date.
+- Are online.
+- Have stock.
 
 ## Managing orders in Dashboard
 
@@ -84,4 +84,5 @@ The **Orders** widget provides the following information:
 The total number of orders that are available for each store.
 
 #### New
+
 The total number of orders that were placed in the last 5 days.

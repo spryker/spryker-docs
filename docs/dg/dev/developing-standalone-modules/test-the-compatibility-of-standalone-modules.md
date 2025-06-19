@@ -8,10 +8,11 @@ template: howto-guide-template
 To test a third-party module's compatibility with a Spryker Demo Shop, follow the steps:
 
 1. From one of the following, choose one Demo Shop to test the compatibility of your module with:
-- https://github.com/spryker-shop/b2c-demo-shop
-- https://github.com/spryker-shop/b2b-demo-shop
-- https://github.com/spryker-shop/b2c-demo-marketplace
-- https://github.com/spryker-shop/b2b-demo-marketplace
+
+- [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop)
+- [B2B Demo Shop](https://github.com/spryker-shop/b2b-demo-shop)
+- [B2C Demo Marketplace](https://github.com/spryker-shop/b2c-demo-marketplace)
+- [B2B Demo Marketplace](https://github.com/spryker-shop/b2b-demo-marketplace)
 
 2. Pull the latest version of the Demo Shop you've selected.
 3. Install your module using Composer.

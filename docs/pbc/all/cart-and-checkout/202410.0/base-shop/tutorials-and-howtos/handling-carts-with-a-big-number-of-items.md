@@ -49,14 +49,14 @@ While not every session request requires cart data, a big cart being part of a s
 
 Storefront: Move cart data to separate Redis entries, leaving only the key reference in the session.
 
-## Concurrency in shared carts    
+## Concurrency in shared carts
 
 Sharing big carts among multiple users can lead to concurrency issues.
 
 Backend: implement the following:
 - Business-level limitations for working in a shared mode with big carts.
 - Locking mechanisms to manage concurrent updates more efficiently. Focus on optimistic locking.
-- A versioning system for carts where changes are tracked, and real-time feedback is provided to users when conflicts occur.                      
+- A versioning system for carts where changes are tracked, and real-time feedback is provided to users when conflicts occur.
 
 ## UI challenges
 
@@ -77,7 +77,7 @@ Glue: Implement API endpoints that support sorting, searching, pagination, or as
 
 ## Placement of big orders
 
-Converting big carts into orders results in orders with many items, complicating order management.   
+Converting big carts into orders results in orders with many items, complicating order management.
 
 Backend:
 - Plan the OMS design with a focus on bulk processing and asynchronous (background) operations. Be cautious with functionalities like [Splittable Order Items](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/splittable-order-items-overview.html) to avoid creating too big orders.

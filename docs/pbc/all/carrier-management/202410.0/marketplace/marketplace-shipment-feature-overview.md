@@ -28,13 +28,13 @@ Alternatively, buyers can use the **Deliver to multiple addresses** drop-down op
 
 ## Marketplace Shipment in the Back Office
 
-In the Back Office, the shipments are displayed in the **Order Items** section on the **View Order: _[Order ID]_** page. A Marketplace administrator can view them.
+In the Back Office, the shipments are displayed in the **Order Items** section on the **View Order: *[Order ID]*** page. A Marketplace administrator can view them.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Shipment/shipments-back-office.png)
 
 ## Marketplace Shipment in the Merchant Portal
 
-On the **Order _[Order ID]_** drawer, every merchant can view only the shipment of their product offers and products.
+On the **Order *[Order ID]*** drawer, every merchant can view only the shipment of their product offers and products.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Shipment/shipment-merchant-portal.png)
 
@@ -42,8 +42,7 @@ On the **Order _[Order ID]_** drawer, every merchant can view only the shipment 
 
 |INSTALLATION GUIDES  |
 |---------|
-| [Install the Marketplace Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-feature.html) |  |
-| [Install the Marketplace Shipment + Cart feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-cart-feature.html) |  |
-| [Install the Marketplace Shipment + Customer feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-customer-feature.html) |   |
-| [Install the Marketplace Shipment + Checkout feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-checkout-feature.html) |  |
-|    |    |    |    |
+| [Install the Marketplace Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-feature.html) |
+| [Install the Marketplace Shipment + Cart feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-cart-feature.html) |
+| [Install the Marketplace Shipment + Customer feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-customer-feature.html) |
+| [Install the Marketplace Shipment + Checkout feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-checkout-feature.html) |

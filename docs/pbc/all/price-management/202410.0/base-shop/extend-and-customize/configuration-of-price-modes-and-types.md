@@ -71,6 +71,7 @@ $config[PriceConstants::DEFAULT_PRICE_MODE] = PriceConfig::PRICE_MODE_GROSS;
 4. Create a template for the component:
 
 **Pyz/Yves/Price/Theme/default/partial/price_mode_switcher.twig**
+
 ```html
    {% raw %}{%{% endraw %} if price_modes|length > 1 {% raw %}%}{% endraw %}
    	<form method="GET" action="{% raw %}{{{% endraw %} path('price-mode-switch') {% raw %}}}{% endraw %}" data-component="price-mode-switch">
@@ -92,6 +93,7 @@ The switch works only when cart contains at least one item.
 To show only NET prices in the catalog, but use gross prices in cart and checkout, override `getDefaultPriceMode` and change to `PRICE_MODE_NET` in the `\Spryker\Shared\Price\PriceConfig` class.
 
 Example of changing the mode for all stores:
+
 ```php
 <?php
 

@@ -11,19 +11,19 @@ redirect_from:
 
 
 
-A _feature set_ is a group of related features that can be added to an Oryx application with a single reference. Feature sets simplify the process of setting up an application by reducing the amount of [boilerplate code](/docs/dg/dev/frontend-development/{{page.version}}/oryx/getting-started/oryx-boilerplate.html) required to configure and initialize the application.
+A *feature set* is a group of related features that can be added to an Oryx application with a single reference. Feature sets simplify the process of setting up an application by reducing the amount of [boilerplate code](/docs/dg/dev/frontend-development/{{page.version}}/oryx/getting-started/oryx-boilerplate.html) required to configure and initialize the application.
 
 There are two types of feature sets: domain and application feature sets.
 
 ## Domain feature sets
 
-A _domain feature set_ is an aggregation of the features related to a certain functionality or domain. For example, the product feature set exposes all available product features. This includes components and the associated business logic.
+A *domain feature set* is an aggregation of the features related to a certain functionality or domain. For example, the product feature set exposes all available product features. This includes components and the associated business logic.
 
 ## Application feature sets
 
-An _application feature set_ is an aggregation of the features related to a certain business model, such as B2C, B2B, marketplace, or fulfillment. Such feature sets are usually bigger and can include features from different domain feature sets.
+An *application feature set* is an aggregation of the features related to a certain business model, such as B2C, B2B, marketplace, or fulfillment. Such feature sets are usually bigger and can include features from different domain feature sets.
 
-Application feature sets can be seen as _demo apps_, because one such set lets you quickly set up a project without developing. However, a standard feature set might be too opinionated for your production application, which is why you might want to extend an existing set or create your own. For more details about creating feature sets, see [Create feature sets](#create-feature-sets).
+Application feature sets can be seen as *demo apps*, because one such set lets you quickly set up a project without developing. However, a standard feature set might be too opinionated for your production application, which is why you might want to extend an existing set or create your own. For more details about creating feature sets, see [Create feature sets](#create-feature-sets).
 
 ### Available application feature sets
 

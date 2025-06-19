@@ -111,7 +111,7 @@ Make sure only the backend application documentation has been generated with rel
 
 **src/Pyz/Glue/GlueJsonApiConvention/GlueJsonApiConventionDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\GlueJsonApiConvention;

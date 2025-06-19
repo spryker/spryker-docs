@@ -197,6 +197,7 @@ class AttributeCartBasedBoostingQueryExpanderPlugin extends AbstractPlugin imple
     }
 }
 ```
+
 </details>
 
 1. `CartClient` does not exist as a dependency for `CatalogClient`. Add this dependency, so your query plugin works. For this, in `src/Pyz/Client/Catalog`, open `CatalogDependencyProvider` and add `CartClient` as a dependency:
@@ -247,6 +248,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 ...
 }
 ```
+
 </details>
 
 1. Get the `CartClient` dependency using `CatalogFactory`.
@@ -315,6 +317,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
     }
 ... }
 ```
+
 </details>
 
 <details><summary>Pyz\Client\Catalog</summary>
@@ -336,6 +339,7 @@ class CatalogFactory extends SprykerCatalogFactory {
     }
 }
 ```
+
 </details>
 
 ### 2. Extend the catalog's search queries stack

@@ -42,30 +42,31 @@ related:
 
 To define a multi-step process using the StepEngine feature, you need to implement the following interfaces:
 
-* `StepInterface`: Implements the logic that needs to get executed when the defined step takes place
-* `SubFormInterface`: Defines the name of the form and `pathProperty`, which is used to fill the property of a transfer object for the current step.
-* `DataContainerInterface`: Holds the transfer object you are working on.
+- `StepInterface`: Implements the logic that needs to get executed when the defined step takes place
+- `SubFormInterface`: Defines the name of the form and `pathProperty`, which is used to fill the property of a transfer object for the current step.
+- `DataContainerInterface`: Holds the transfer object you are working on.
 
 ## Defining steps
 
 The defined steps are wired up through the parameters that are passed when creating `StepEngine`:
 
-* `StepCollectionInterface`: Contains all the steps that are used in the`StepEngine::process()`
-* `DataContainerInterface`: Holds the main transfer object and knows how to persist the data during the requests
+- `StepCollectionInterface`: Contains all the steps that are used in the`StepEngine::process()`
+- `DataContainerInterface`: Holds the main transfer object and knows how to persist the data during the requests
 
 `StepEngine` takes care of executing the steps defined in your `StepCollection`. To start the multi-step workflow, you need to call the `StepEngine::process()` operation from your controller and pass the request object to it; optionally, you can pass `FormCollectionHandlerInterface` to it.
 
 ## Processing the workflow
+
 When `StepEngine` starts to process the multi-step workflow, it iterates through the steps contained in the step collection.
 
 For the current step, it checks if it meets the assigned preconditions by calling `StepInterface::preCondition()`.
 
-* The preconditions are not satisfied: `StepEngine` returns `RedirectResponse` to the defined `StepInterface::getEscapeRoute()`.
-* The preconditions are satisfied: `StepEngine` asks `StepCollection` if the current step can be accessed.
+- The preconditions are not satisfied: `StepEngine` returns `RedirectResponse` to the defined `StepInterface::getEscapeRoute()`.
+- The preconditions are satisfied: `StepEngine` asks `StepCollection` if the current step can be accessed.
 
 If the preconditions are satisfied and the current step can be accessed, `StepEngine` needs to verify if the current step needs user input:
-* The current step doesn't need user input: `StepEngine` returns `RedirectResponse` to the next step.
-* The current step needs user input: `StepEngine` takes the Request object and passes it to `FormCollectionHandlerInterface`.
+- The current step doesn't need user input: `StepEngine` returns `RedirectResponse` to the next step.
+- The current step needs user input: `StepEngine` takes the Request object and passes it to `FormCollectionHandlerInterface`.
 
 If you have a submitted form, `FormCollectionHandlerInterface` handles the request, and if the form validation passes `StepEngine`, the execution of the workflow continues.
 

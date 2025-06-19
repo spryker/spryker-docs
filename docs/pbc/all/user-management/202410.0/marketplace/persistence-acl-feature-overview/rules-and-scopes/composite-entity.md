@@ -33,11 +33,13 @@ If a user requests a sub entity, the main entity will be joined, and the rules f
 | 18 | Merchant Video King | merchant-video-king |
 
 Query before the Persistence ACL:
+
 ```sql
 SELECT * FROM `spy_merchant_profile`;
 ```
 
 Query after the Persistence ACL:
+
 ```sql
 SELECT `spy_merchant_profile`.* 
 FROM `spy_merchant_profile`
@@ -49,7 +51,7 @@ FROM `spy_merchant_profile`
 
 Although the composite entity has similar functionality to the internalized scope, there are some differences.
 
-## Inherited scope vs Composite entity 
+## Inherited scope vs Composite entity
 
 | FUNCTIONALITY | INHERITED SCOPE | COMPOSITE ENTITY |
 |-----|-----|-----|
@@ -57,4 +59,4 @@ Although the composite entity has similar functionality to the internalized scop
 | Permission mask is defined by | Rule | Inherit from Composite root |
 | Assigned to | User (through the role) | Common for all users |
 | Inherit permissions from the composite object | No | Yes |
-| Require additional relation condition | At least `Read` permission rule for the parent | No | 
+| Require additional relation condition | At least `Read` permission rule for the parent | No |

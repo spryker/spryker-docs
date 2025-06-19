@@ -52,9 +52,9 @@ Set up the following behaviors:
 
 | PLUGIN                                               | SPECIFICATION                                                                        | PREREQUISITES | NAMESPACE                                                               |
 |------------------------------------------------------|--------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------|
-| CustomerReferenceDecisionRulePlugin              | Checks if the customer reference matches the discount's condition.       |               | Spryker\Zed\CustomerDiscountConnector\Communication\Plugin\Discount |
-| CustomerOrderAmountDecisionRulePlugin              | Checks if the customer's order number matches the discount's condition.       |               | Spryker\Zed\CustomerDiscountConnector\Communication\Plugin\Discount |
-| CustomerDiscountOrderSavePlugin              | Stores the relationship between customer and discount.       |               | Spryker\Zed\CustomerDiscountConnector\Communication\Plugin\Checkout |
+| CustomerReferenceDecisionRulePlugin              | Checks if a customer reference matches the discount's condition.       |               | Spryker\Zed\CustomerDiscountConnector\Communication\Plugin\Discount |
+| CustomerOrderAmountDecisionRulePlugin              | Checks if a customer's order number matches the discount's condition.       |               | Spryker\Zed\CustomerDiscountConnector\Communication\Plugin\Discount |
+| CustomerDiscountOrderSavePlugin              | Stores the relationship between a customer and discount.       |               | Spryker\Zed\CustomerDiscountConnector\Communication\Plugin\Checkout |
 
 **src/Pyz/Zed/Discount/DiscountDependencyProvider.php**
 
@@ -112,9 +112,62 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {% info_block warningBox "Verification" %}
 
 1. [Create a discount](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a `customer-reference` field.
-2. Add the `max-uses-per-customer` condition to the discount with value 1.
-3. Log in as a customer with a customer reference defined in the discount you've created. Make sure that the discount is applied to the cart.
-4. Place an order and make sure a relationship between the customer and the discount is created in the `spy_customer_discount` database table.
+2. Add the `max-uses-per-customer` condition with value `1`.
+3. Log in as a customer with a customer reference defined in the discount you've created. Make sure that the discount is applied to the cart automatically.
+4. Place an order. Make sure a relationship between the customer and the discount is created in the `spy_customer_discount` database table.
 5. Make sure that the discount is not applied to the cart for the same customer again.
 
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

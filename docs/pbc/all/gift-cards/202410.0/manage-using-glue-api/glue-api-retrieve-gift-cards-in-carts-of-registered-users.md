@@ -12,7 +12,7 @@ This document describes how to retrieve gift cards in carts of registered users 
 
 ## Installation
 
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+- [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
 
 
 ## Retrieve registered user's carts
@@ -112,7 +112,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -146,7 +147,7 @@ To retrieve a particular cart, send the request:
 | include | Adds resource relationships to the request. | gift-cards |
 
 
-| GET https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d?include=gift-cards | Retrieve the `8ef901fe-fe47-5569-9668-2db890dbee6` cart with detailed information on its gift cards. |
+| `GET https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d?include=gift-cards` | Retrieve the `8ef901fe-fe47-5569-9668-2db890dbee6` cart with detailed information on its gift cards. |
 
 
 ### Response
@@ -215,7 +216,8 @@ To retrieve a particular cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->

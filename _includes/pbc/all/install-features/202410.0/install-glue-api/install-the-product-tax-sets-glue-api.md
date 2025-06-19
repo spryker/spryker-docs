@@ -1,7 +1,9 @@
 
 
 ## Install feature API
+
 ### Prerequisites
+
 Install the required features:
 
 | Name | Version | INSTALLATION GUIDE |
@@ -11,6 +13,7 @@ Install the required features:
 | Tax | 201903.0 | |
 
 ### 1) Install the required modules
+
 Install the required modules using Composer:
 
 ```bash
@@ -24,6 +27,7 @@ Make sure that the following modules have been installed:
 | --- | --- |
 | `ProductTaxSetsRestApi` | `vendor/spryker/product-tax-sets-rest-api` |
 |`ProductsProductTaxSetsResourceRelationship`  | `vendor/spryker/products-product-tax-sets-resource-relationship` |
+
 </div></section>
 
 ### 2) Set up database schema and transfer objects
@@ -42,6 +46,7 @@ Make sure that the following changes have been applied by checking your database
 | Database entity | Type | Event |
 | --- | --- | --- |
 | `spy_tax_set.uuid` | column |added  |
+
 </div></section>
 
 <section contenteditable="false" class="warningBox"><div class="content">
@@ -52,9 +57,11 @@ Make sure the following changes have been applied in transfer objects:
 |`RestProductTaxRateTransfer`  | class | created | `src/Generated/Shared/Transfer/RestProductTaxRateTransfer` |
 | `RestProductTaxSetsAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/RestProductTaxSetsAttributesTransfer` |
 |`TaxSetTransfer.uuid`  |property| added | `src/Generated/Shared/Transfer/TaxSetTransfer` |
+
 </div></section>
 
 ### 3) Set up Behavior
+
 #### Generate UUIDs for existing records
 
 Generates UUIDs for all entries in the spy_tax_set table:
@@ -69,6 +76,7 @@ Make sure that the uuid field is filled out for all records in the `spy_tax_set`
 {% endinfo_block %} FROM spy_tax_set WHERE uuid IS NULL;`)
 
 #### Enable resource and relationship
+
 Activate the following plugin:
 
 | Plugin | Specification | Prerequisites | Namespace |

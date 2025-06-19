@@ -15,8 +15,8 @@ This document describes how to add items with discounts to carts of registered u
 
 For detailed information on the modules that provide the API's functionality and related installation instructions, see:
 
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+- [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+- [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
 
 ## Add items to a registered user's cart
 
@@ -60,6 +60,7 @@ To add items to a cart, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -78,6 +79,7 @@ To add items to a cart, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -103,6 +105,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
+
 </details>
 
 
@@ -220,6 +223,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -363,6 +367,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -405,7 +410,8 @@ To add the promotional product to the cart, make sure that the cart fulfills the
         }
     }
 }
-```    
+```
+
 </details>
 
 <details>
@@ -683,7 +689,8 @@ To add the promotional product to the cart, make sure that the cart fulfills the
         }
     ]
 }
-```    
+```
+
 </details>
 
 

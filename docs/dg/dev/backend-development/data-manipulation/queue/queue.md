@@ -15,10 +15,10 @@ related:
 
 ## Concepts
 
-* Sender - a program that sends messages.
-* Receiver - a program that waits to receive messages.
-* Message - a string or binary data passed from Sender to Receiver.
-* Queue - similar to Mailbox; here you can store, send, and receive messages.
+- Sender - a program that sends messages.
+- Receiver - a program that waits to receive messages.
+- Message - a string or binary data passed from Sender to Receiver.
+- Queue - similar to Mailbox; here you can store, send, and receive messages.
 
 ## Introduction
 
@@ -59,6 +59,7 @@ For information on how to work with RabbitMQ, see [Rabbit MQ tutorial](https://w
 ## Set up RabbitMQ connection
 
 You can override the default connection settings by specifying this config:
+
 ```php
 $config[RabbitMqEnv::RABBITMQ_CONNECTIONS] = [
     'DE' => [

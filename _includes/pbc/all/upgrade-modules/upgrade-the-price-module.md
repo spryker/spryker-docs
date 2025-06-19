@@ -7,6 +7,7 @@ In this version, we've shifted the handling of product price related functionali
 Update all related modules to to work with the `PriceProduct` module:
 
 1. Install the `PriceProduct` module:
+
 ```bash
 composer require spryker/price-product
 ```
@@ -35,11 +36,13 @@ ADD "price_mode_configuration" INT2;
 `spy_price_product_store` is the table for price per store / currency. `price_mode_configuration` field is added to indicate to which mode price type assigned GROSS, NET, BOTH.
 
 3. Build propel models
+
 ```bash
 vendor/bin/console propel:model:build
 ```
 
 4. Generate new transfer objects
+
 ```bash
 vendor/bin/console transfer:generate
 ```
@@ -49,6 +52,7 @@ vendor/bin/console transfer:generate
 6. Check that all `Price` plugins registered in `ProductDependencyProvider` have been moved to the `PriceProduct` namespace:
 
 Original:
+
 ```php
 use Spryker\Zed\Price\Communication\Plugin\ProductAbstract\PriceProductAbstractAfterCreatePlugin;
 use Spryker\Zed\Price\Communication\Plugin\ProductAbstract\PriceProductAbstractAfterUpdatePlugin;
@@ -57,6 +61,7 @@ use Spryker\Zed\Price\Communication\Plugin\ProductConcrete\PriceProductConcreteA
 use Spryker\Zed\Price\Communication\Plugin\ProductConcrete\PriceProductConcreteAfterUpdatePlugin;
 use Spryker\Zed\Price\Communication\Plugin\ProductConcrete\PriceProductConcreteReadPlugin;
 ```
+
 Expected:
 
 ```php

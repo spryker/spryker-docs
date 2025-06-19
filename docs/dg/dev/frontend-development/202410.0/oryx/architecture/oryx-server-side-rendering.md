@@ -15,15 +15,15 @@ Server-side rendering (SSR), including Static Site Generation (SSG) as a variant
 
 ## Differences between server-side and client-side rendering
 
-* Speed and performance: With server-side rendering (SSR), the browser receives pre-rendered HTML, reducing the time taken to display meaningful content.
+- Speed and performance: With server-side rendering (SSR), the browser receives pre-rendered HTML, reducing the time taken to display meaningful content.
 
-* SEO: SSR is typically more favorable for SEO because search engine crawlers find it easier to index pre-rendered HTML content.
+- SEO: SSR is typically more favorable for SEO because search engine crawlers find it easier to index pre-rendered HTML content.
 
-* Social media integration: SSR significantly improves integration with social providers like Facebook and Twitter and bots like Slack. It enables the generation of link previews, rich snippets, and thumbnails, enhancing the visibility and appeal of shared content on these platforms.
+- Social media integration: SSR significantly improves integration with social providers like Facebook and Twitter and bots like Slack. It enables the generation of link previews, rich snippets, and thumbnails, enhancing the visibility and appeal of shared content on these platforms.
 
-* User experience (UX): By delivering pre-rendered content faster, SSR minimizes user waiting time, providing a superior user experience compared to client-side rendering (CSR).
+- User experience (UX): By delivering pre-rendered content faster, SSR minimizes user waiting time, providing a superior user experience compared to client-side rendering (CSR).
 
-* Resource allocation: While SSR enhances performance and user experience, it requires more server resources and processing power. CSR lightens the server load by offloading rendering to the client but at the cost of potentially increased load times and less effective SEO.
+- Resource allocation: While SSR enhances performance and user experience, it requires more server resources and processing power. CSR lightens the server load by offloading rendering to the client but at the cost of potentially increased load times and less effective SEO.
 
 
 ## Advantages and disadvantages of SSR
@@ -115,7 +115,7 @@ Oryx components are built with SSR in mind. They're designed to render correctly
 
 Oryx provides special decorators to address some SSR-related challenges:
 
-- The `@hydratable` decorator marks a component for late hydration. This allows the component to render on the server but delays its hydration until it's interacted with on the client. Hydration can be triggered programmatically, or automatically with events.   
+- The `@hydratable` decorator marks a component for late hydration. This allows the component to render on the server but delays its hydration until it's interacted with on the client. Hydration can be triggered programmatically, or automatically with events.
 
 - The `@ssrShim` decorator shims certain parts of the component API to make it work on the server. Specifically, it adjusts how the `toggleAttribute()` function and style property work.
 

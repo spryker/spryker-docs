@@ -57,7 +57,6 @@ These are the header fields included in the `order.csv` file:
 | 36 | order_totals_refund_total | No | Number | The original value is multiplied by 100, before stored in this field. | Refund total of the order totals. |
 | 37 | order_totals_subtotal | No | Number | The original value is multiplied by 100, before stored in this field. | Subtotal of the order totals. |
 | 38 | order_totals_tax_total | No | Number | The original value is multiplied by 100, before stored in this field. | Tax total of the order totals. |
-| 39 | order_comments | No | Object | The comments are presented in a  JSON array format:<br>*order_comments<br>{% raw %}{{{% endraw %}username, message, createdat, updated_at}, …}* | Comments added by the customer to the sales order.<br>Username may be a different name from the customer first, middle or last name, e. g. a nickname.
- |
+| 39 | order_comments | No | Object | The comments are presented in a  JSON array format:<br>*order_comments<br>{% raw %}{{{% endraw %}username, message, createdat, updated_at}, …}* | Comments added by the customer to the sales order.<br>Username may be a different name from the customer first, middle or last name, e. g. a nickname. |
 
  Check out the [orders.csv sample file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Data+Export/orders.csv).

@@ -15,8 +15,8 @@ This document describes how to interact with databases using the Data Exchange A
 
 ## Prerequisites
 
-* [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html)
-* [Configure the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/configure-data-exchange-api.html)
+- [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html)
+- [Configure the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/configure-data-exchange-api.html)
 
 
 The Data Exchange API is a non-resource-based API, and routes all specified endpoints directly to a controller. By default, all routes within the Data Exchange API are protected to ensure data security. To access the API, you need to obtain an access token by sending the `POST /token/` request with the appropriate credentials:
@@ -749,4 +749,4 @@ Error codes for `GET`, `POST`, `PATCH` and `PUT` requests:
 | 1315 | Filter field `field` for table alias `alias` not found.                                                                                          | Make sure that the field you're sending for the filter exist in configuration. |
 | 1316 | The URL is invalid. `entity[index]` field `field` must have a URL data format.                                                                   | Make sure that the URL is passed in relative format and starts with a `/`. |
 | 1317 | Failed to delete the data for `entity[index]`. The entity has a child entity and can not be deleted. Child entity: `entity[index]`.              | Make sure that the entity you want to delete doesn't have child entities. Delete child entities before deleting this entity. |
-| 1318 | Method not allowed for the entity `alias`.                                                                                                       | Make sure that the entity that you want to delete is set as `isDeletable: true` in the configuration.       | | The method is not allowed. Check the configuration for this entity.                                                                                                                                                                                                                                                  |
+| 1318 | Method not allowed for the entity `alias`.    | Make sure that the entity that you want to delete is set as `isDeletable: true` in the configuration.  The method is not allowed. Check the configuration for this entity.        |

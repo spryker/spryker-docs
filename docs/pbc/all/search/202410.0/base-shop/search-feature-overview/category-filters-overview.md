@@ -21,8 +21,8 @@ For details about how you can manage Category filters in the Back Office, see [M
 ## Current constraints
 
 The feature has the following functional constraints, which are going to be resolved in the future:
-* Category filters are shared across all the stores of a project.
-* You can't restrict the availability of a category filter to a store.
+- Category filters are shared across all the stores of a project.
+- You can't restrict the availability of a category filter to a store.
 
 ## Related Business User documents
 

@@ -44,6 +44,7 @@ The In order to integrate installment payment, two simple steps are needed: sett
 ### Setting Payolution Installment Configuration
 
 As installment requests use additional type of requests called Calculation Requests, two groups of configuration are defined: transaction configuration for handling the basic requests (pre-authorization, re-authorization, etc), and calculation configuration for handling calculation requests. The configuration to integrate installment payments using Payolution is:
+
 | Key                                 | Description                                                                                                     | Required |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------------|----------|
 | `TRANSACTION_GATEWAY_URL`          | The gateway URL to connect with Payolution services                                                             | v        |
@@ -62,4 +63,3 @@ As installment requests use additional type of requests called Calculation Reque
 | `MIN_ORDER_GRAND_TOTAL_INSTALLMENT`| The minimum order grand total amount for installment payments–for example, $2.                                        | v        |
 | `MAX_ORDER_GRAND_TOTAL_INSTALLMENT`| The maximum order grand total amount for installment payments–for example, $5000.                                     | v        |
 | `PAYOLUTION_BCC_EMAIL_ADDRESS`     | Payolution email address to send copies of payment details                                                      |          |
-

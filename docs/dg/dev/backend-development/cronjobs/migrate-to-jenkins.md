@@ -28,9 +28,9 @@ Jenkins is the default scheduler shipped with Spryker Demo Shops. Follow the ins
 
 Check `composer.json` and `package.json` to make sure that the following Composer packages are installed:
 
-* `spryker/scheduler: *`
-* `spryker/scheduler-extension: *`
-* `spryker/scheduler-jenkins: *`
+- `spryker/scheduler: *`
+- `spryker/scheduler-extension: *`
+- `spryker/scheduler-jenkins: *`
 
 ## 1. Configure Jenkins
 

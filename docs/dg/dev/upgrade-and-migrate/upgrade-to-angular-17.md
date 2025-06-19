@@ -64,108 +64,108 @@ console transfer:generate
 
 In `package.json`, do the following:
 
-   1. Adjust the npm scripts::
-
-        ```json
-        {
-            "scripts": {
-                "mp:build": "nx build",
-                "mp:build:watch": "nx build --watch",
-                "mp:build:production": "nx build --configuration production",
-                "mp:stylelint": "node ./frontend/merchant-portal/stylelint.mjs",
-                "mp:lint": "nx lint --no-eslintrc",
-                "mp:test": "nx test",
-            }
-        }
-        ```
-
-    2. Update or add the following dependencies:
+1. Adjust the npm scripts:
 
     ```json
     {
-        "dependencies": {
-            "@angular/animations": "~17.3.0",
-            "@angular/cdk": "~17.3.0",
-            "@angular/common": "~17.3.0",
-            "@angular/compiler": "~17.3.0",
-            "@angular/core": "~17.3.0",
-            "@angular/elements": "~17.3.0",
-            "@angular/forms": "~17.3.0",
-            "@angular/platform-browser": "~17.3.0",
-            "@angular/platform-browser-dynamic": "~17.3.0",
-            "@angular/router": "~17.3.0",
-            "rxjs": "~7.8.1",
-            "zone.js": "~0.14.4"
+        "scripts": {
+            "mp:build": "nx build",
+            "mp:build:watch": "nx build --watch",
+            "mp:build:production": "nx build --configuration production",
+            "mp:stylelint": "node ./frontend/merchant-portal/stylelint.mjs",
+            "mp:lint": "nx lint --no-eslintrc",
+            "mp:test": "nx test",
         }
     }
     ```
 
-    3. Update or add the following dev dependencies:
+2. Update or add the following dependencies:
 
-        ```json
-        {
-            "devDependencies": {
-                "@angular-devkit/build-angular": "~17.3.2",
-                "@angular-builders/custom-webpack": "~17.0.1",
-                "@angular-eslint/eslint-plugin": "~17.3.0",
-                "@angular-eslint/eslint-plugin-template": "~17.3.0",
-                "@angular-eslint/template-parser": "17.3.0",
-                "@angular/cli": "~17.3.0",
-                "@angular/compiler-cli": "~17.3.0",
-                "@angular/language-service": "~17.3.0",
-                "@nx/angular": "~18.1.1",
-                "@nx/eslint": "~18.1.2",
-                "@nx/eslint-plugin": "~18.1.2",
-                "@nx/jest": "~18.1.2",
-                "@types/jest": "~29.5.12",
-                "@types/node": "~18.16.9",
-                "@typescript-eslint/eslint-plugin": "~7.3.1",
-                "@typescript-eslint/parser": "~7.3.1",
-                "babel-loader": "~9.1.3",
-                "eslint": "~8.57.0",
-                "eslint-plugin-deprecation": "~2.0.0",
-                "fast-glob": "~3.3.2",
-                "jest": "~29.7.0",
-                "jest-environment-jsdom": "~29.7.0",
-                "jest-preset-angular": "~13.1.6",
-                "nx": "~18.1.2",
-                "reflect-metadata": "~0.2.1",
-                "tslib": "~2.6.2",
-                "typescript": "~5.4.2",
-            }
+```json
+{
+    "dependencies": {
+        "@angular/animations": "~17.3.0",
+        "@angular/cdk": "~17.3.0",
+        "@angular/common": "~17.3.0",
+        "@angular/compiler": "~17.3.0",
+        "@angular/core": "~17.3.0",
+        "@angular/elements": "~17.3.0",
+        "@angular/forms": "~17.3.0",
+        "@angular/platform-browser": "~17.3.0",
+        "@angular/platform-browser-dynamic": "~17.3.0",
+        "@angular/router": "~17.3.0",
+        "rxjs": "~7.8.1",
+        "zone.js": "~0.14.4"
+    }
+}
+```
+
+3. Update or add the following dev dependencies:
+
+    ```json
+    {
+        "devDependencies": {
+            "@angular-devkit/build-angular": "~17.3.2",
+            "@angular-builders/custom-webpack": "~17.0.1",
+            "@angular-eslint/eslint-plugin": "~17.3.0",
+            "@angular-eslint/eslint-plugin-template": "~17.3.0",
+            "@angular-eslint/template-parser": "17.3.0",
+            "@angular/cli": "~17.3.0",
+            "@angular/compiler-cli": "~17.3.0",
+            "@angular/language-service": "~17.3.0",
+            "@nx/angular": "~18.1.1",
+            "@nx/eslint": "~18.1.2",
+            "@nx/eslint-plugin": "~18.1.2",
+            "@nx/jest": "~18.1.2",
+            "@types/jest": "~29.5.12",
+            "@types/node": "~18.16.9",
+            "@typescript-eslint/eslint-plugin": "~7.3.1",
+            "@typescript-eslint/parser": "~7.3.1",
+            "babel-loader": "~9.1.3",
+            "eslint": "~8.57.0",
+            "eslint-plugin-deprecation": "~2.0.0",
+            "fast-glob": "~3.3.2",
+            "jest": "~29.7.0",
+            "jest-environment-jsdom": "~29.7.0",
+            "jest-preset-angular": "~13.1.6",
+            "nx": "~18.1.2",
+            "reflect-metadata": "~0.2.1",
+            "tslib": "~2.6.2",
+            "typescript": "~5.4.2",
         }
-        ```
-
-   4. Remove the following dependencies:
-
-        ```json
-        {
-            "dependencies": {
-                "core-js": "~3.29.1",
-            },
-            "devDependencies": {
-                "@angular-devkit/build-angular": "~15.2.9",
-                "@angular-eslint/builder": "~15.0.0",
-                "@angular-eslint/schematics": "~15.0.0",
-                "@nrwl/cli": "~15.0.7",
-                "@nrwl/jest": "~15.0.7",
-                "@nrwl/workspace": "~15.0.7",
-            }
-        }
-        ```
-
-    5. Update and install the package dependencies:
-
-    ```bash
-    rm -rf node_modules
-    npm install
+    }
     ```
 
-    {% info_block warningBox "Verification" %}
+4. Remove the following dependencies:
 
-    Ensure that the `package-lock.json` file and the `node_modules` folder have been updated.
+    ```json
+    {
+        "dependencies": {
+            "core-js": "~3.29.1",
+        },
+        "devDependencies": {
+            "@angular-devkit/build-angular": "~15.2.9",
+            "@angular-eslint/builder": "~15.0.0",
+            "@angular-eslint/schematics": "~15.0.0",
+            "@nrwl/cli": "~15.0.7",
+            "@nrwl/jest": "~15.0.7",
+            "@nrwl/workspace": "~15.0.7",
+        }
+    }
+    ```
 
-    {% endinfo_block %}
+5. Update and install the package dependencies:
+
+```bash
+rm -rf node_modules
+npm install
+```
+
+{% info_block warningBox "Verification" %}
+
+Ensure that the `package-lock.json` file and the `node_modules` folder have been updated.
+
+{% endinfo_block %}
 
 ## 3) Update the Angular configuration
 
@@ -207,7 +207,7 @@ In `package.json`, do the following:
         }
         ```
 
-    5. In `utils.js`, delete import from `'@angular-devkit/core'` and replace it with custom function:
+   5. In `utils.js`, delete import from `'@angular-devkit/core'` and replace it with custom function:
 
     ```js
         const glob = require('fast-glob');
@@ -286,9 +286,11 @@ In `package.json`, do the following:
 2. In the root of the project, do the following:
 
    1. Add `.nx/cache` to `.gitignore` and `.prettierignore`.
+
     ```text
         .nx/cache
     ```
+
    2. Delete `angular.json`.
    3. Add the `target` option to `tsconfig.mp.json`:
 
@@ -446,7 +448,7 @@ In `package.json`, do the following:
 
 ## 4) Manual Spryker module updating
 
-If you can't update the modules automatically with the `composer update` command, update all angular dependencies in the root of the module inside `package.json` to `^17.3.0` version and all `@spryker/*` dependencies to the next `major.0.0` version, for example, ` 1.1.0 => ^2.0.0`,` 0.1.4 => ^1.0.0`).
+If you can't update the modules automatically with the `composer update` command, update all angular dependencies in the root of the module inside `package.json` to `^17.3.0` version and all `@spryker/*` dependencies to the next `major.0.0` version, for example, `1.1.0 => ^2.0.0`,`0.1.4 => ^1.0.0`).
 
 To add a single entry point support, add `// spy/merchant-portal:single-entry-marker` line in the `entry.ts` file, for example, like this:
 

@@ -45,9 +45,9 @@ To install the app on a dedicated web server, follow these steps:
 
 where:
 
-* `<Glue_IP>`—the IP of the Glue REST API server.
-* `glue.de.project-name.local`—the local hostname of the Glue REST AP server.
-* `react.local`—the local hostname of the B2C API React Example application.
+- `<Glue_IP>`—the IP of the Glue REST API server.
+- `glue.de.project-name.local`—the local hostname of the Glue REST AP server.
+- `react.local`—the local hostname of the B2C API React Example application.
 
 4. Clone the B2C API React Example repository:
 
@@ -59,7 +59,7 @@ git clone https://github.com/spryker-shop/b2c-api-react-example
 6. Change the `DEV_SERVER_HOST` variable to point to the example app hostname—for example, `react.local`—and the `API_URL` variable to point to the local hostname of the Glue REST API server. Also, you can change the example app page title. It is specified using the `APP_TITLE` variable.
 The sample `local_outside_vm.env` file implementation is as follows:
 
-```
+```env
 NODE_ENV=development
 DEV_SERVER_HOST=localhost
 DEV_SERVER_PORT=3000

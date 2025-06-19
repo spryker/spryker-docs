@@ -19,6 +19,7 @@ Install the required features:
 ### 1) Set up transfer objects
 
 Generate transfer changes:
+
 ```bash
 console transfer:generate
 ```

@@ -570,13 +570,13 @@ console data:import shipment
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
-* Make sure the following tables contain the imported data:
-    - `spy_product_shipment_type`
-    - `spy_sales_product_abstract_type`
-    - `spy_sales_order_item_product_abstract_type`
-    - `spy_product_abstract_type`
-    - `spy_product_abstract_to_product_abstract_type`
+- Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
+- Make sure the following tables contain the imported data:
+  - `spy_product_shipment_type`
+  - `spy_sales_product_abstract_type`
+  - `spy_sales_order_item_product_abstract_type`
+  - `spy_product_abstract_type`
+  - `spy_product_abstract_to_product_abstract_type`
 
 {% endinfo_block %}
 
@@ -1270,15 +1270,15 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 2. Create an abstract product with a **service** product type.
 3. For the abstract product you've created, create a concrete product with the following settings:
 
-* Enable **Service Date and Time**
-* Add **Delivery** and **On-Site Service** shipment types
+- Enable **Service Date and Time**
+- Add **Delivery** and **On-Site Service** shipment types
 
 4. Go to **Merchandising** > **Offers**.
 5. Generate one or more product offers for the service product you've created. Make sure the following applies on the
    offer create page:
-    * The offer creation form is automatically prepopulated with information from the product
-    * You can assign one or more service points to the product offer
-    * The on-site service shipment type is available
+- The offer creation form is automatically prepopulated with information from the product
+- You can assign one or more service points to the product offer
+- The on-site service shipment type is available
 
 {% endinfo_block %}
 

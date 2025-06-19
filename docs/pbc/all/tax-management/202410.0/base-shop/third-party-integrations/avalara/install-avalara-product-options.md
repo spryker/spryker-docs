@@ -118,7 +118,7 @@ class AvalaraTaxDependencyProvider extends SprykerAvalaraTaxDependencyProvider
 2. Proceed to checkout.
 3. On the summary page, you should see the calculated tax amount for your order, including taxes for product options.
 
-{% endinfo_block %}    
+{% endinfo_block %}
 
 2. Update the following data import files:
 
@@ -129,12 +129,13 @@ class AvalaraTaxDependencyProvider extends SprykerAvalaraTaxDependencyProvider
 3. To handle the new field, adjust `ProductOption` data importer using the following example:
 
 **data/import/common/common/product\_option.csv**
+
 ```csv
 shipment_method_key,name,carrier,taxSetName,avalaraTaxCode
 spryker_dummy_shipment-standard,Standard,Spryker Dummy Shipment,Shipment Taxes,PC040111
 ```
 
-### 4) Import data:
+### 4) Import data
 
 ```bash
 console data:import product-option

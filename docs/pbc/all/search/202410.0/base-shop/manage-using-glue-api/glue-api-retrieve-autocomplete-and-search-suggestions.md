@@ -215,6 +215,7 @@ To retrieve a search suggestion, send the request:
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

@@ -27,7 +27,7 @@ To create a new abstract product:
 3. Enter a **Name** for the default locale. The rest of the locales are defined once the product is created.
 4. Depending on whether your abstract product requires adding variants or no, take one of the following steps:
 
-  - If you are creating an abstract product that doesn't require variants, select **Abstract product has 1 concrete product**. The **Create an Abstract Product with 1 Concrete Product** drawer opens.
+- If you are creating an abstract product that doesn't require variants, select **Abstract product has 1 concrete product**. The **Create an Abstract Product with 1 Concrete Product** drawer opens.
       1. On the **Create an Abstract Product with 1 Concrete Product** drawer, enter a **Concrete Product SKU**.
       2. Enter a **Concrete Product Name**.
       3. To finish the product creation, click **Create**.

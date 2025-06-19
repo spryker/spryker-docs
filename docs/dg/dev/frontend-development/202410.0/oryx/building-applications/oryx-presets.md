@@ -18,7 +18,7 @@ Presets are typically used to demonstrate or try out Oryx applications. In produ
 
 Presets are provided in a separate [npm package](https://www.npmjs.com/package/@spryker-oryx/oryx-presets.html).
 
-The standard boilerplate uses the presets as the single package to install Oryx applications. To simplify the installation, the preset application contains dependencies on _all_ [Oryx npm packages](https://www.npmjs.com/org/spryker-oryx). Because a production application is unlikely to use all the packages, it makes sense to leave out the unneeded ones.
+The standard boilerplate uses the presets as the single package to install Oryx applications. To simplify the installation, the preset application contains dependencies on *all* [Oryx npm packages](https://www.npmjs.com/org/spryker-oryx). Because a production application is unlikely to use all the packages, it makes sense to leave out the unneeded ones.
 
 ## Feature sets
 
@@ -48,7 +48,7 @@ For more information about feature sets, see [Feature sets](/docs/dg/dev/fronten
 
 ## Themes
 
-A _theme_ represents the global visual appearance of an application, including typography, colors, and other specific design elements, such as the color of a form field's placeholder. Themes are built with [design tokens](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html), which are configurable values that are used in CSS properties. Configuring these design tokens lets you customize a theme and align the application and its components with your brand identity or specific design requirements.
+A *theme* represents the global visual appearance of an application, including typography, colors, and other specific design elements, such as the color of a form field's placeholder. Themes are built with [design tokens](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html), which are configurable values that are used in CSS properties. Configuring these design tokens lets you customize a theme and align the application and its components with your brand identity or specific design requirements.
 
 To apply a theme to your Oryx application, you can import it from the preset package and use it during the application setup:
 

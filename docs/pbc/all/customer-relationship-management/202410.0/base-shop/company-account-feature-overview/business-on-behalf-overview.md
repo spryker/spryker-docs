@@ -28,9 +28,9 @@ Only customers having more than one Company user can make use of the feature.
 
 When you have access to multiple business units, you can:
 
-* Capture company information.
-* Create orders on behalf of a business unit your account has been associated with.
-* Manage business unit workflow.
+- Capture company information.
+- Create orders on behalf of a business unit your account has been associated with.
+- Manage business unit workflow.
 
 The following table describes some workflows where assigning a company user to multiple business units is helpful:
 
@@ -69,4 +69,5 @@ Company users can assign and unassign a company business unit to their accounts 
 
 
 ## See next
+
 [Customer Login by Token overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/customer-login-by-token-overview.html)

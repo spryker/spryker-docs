@@ -20,9 +20,9 @@ related:
 
 Spryker is a Commerce Operating System, mainly composed of several applications, such as Storefront (Yves), Back Office (Zed) and Storefront API (Glue).
 
-* *Storefront*—Frontend-presentation layer for customers, provided by Yves Application Layer based on [Symfony Components](https://symfony.com/components).
-* *Back Office*—an application that contains all business logic and the backend GUI, provided by Zed Application Layer, and also uses the Symfony Components.
-* *Storefront API*—an application providing resources for customers' interaction, provided by the Glue Application Layer, and can work based on either REST or [JSON API convention](https://jsonapi.org/).
+- *Storefront*—Frontend-presentation layer for customers, provided by Yves Application Layer based on [Symfony Components](https://symfony.com/components).
+- *Back Office*—an application that contains all business logic and the backend GUI, provided by Zed Application Layer, and also uses the Symfony Components.
+- *Storefront API*—an application providing resources for customers' interaction, provided by the Glue Application Layer, and can work based on either REST or [JSON API convention](https://jsonapi.org/).
 
 The following diagram shows the conceptual parts of the application and their connections:
 
@@ -30,12 +30,12 @@ The following diagram shows the conceptual parts of the application and their co
 
 The Spryker OS provides the following Application Layers:
 
-* [Yves](/docs/dg/dev/backend-development/yves/yves.html) — provides twig-based (PHP) frontend functionality with the light-weight data access.
-* [Zed](/docs/dg/dev/backend-development/zed/zed.html) — provides back office/backend functionality with business logic and complex calculations.
-* [Glue](/docs/dg/dev/glue-api/{{site.version}}/rest-api/glue-infrastructure.html) — provides infrastructure for API endpoints.
-* [Client](/docs/dg/dev/backend-development/client/client.html) — provides data access infrastructure.
-* Shared — provides shared code abstractions to be used in other Application Layers of the same module.
-* Service — provides infrastructure for the stateless operations, usually utils.
+- [Yves](/docs/dg/dev/backend-development/yves/yves.html) — provides twig-based (PHP) frontend functionality with the light-weight data access.
+- [Zed](/docs/dg/dev/backend-development/zed/zed.html) — provides back office/backend functionality with business logic and complex calculations.
+- [Glue](/docs/dg/dev/glue-api/{{site.version}}/rest-api/glue-infrastructure.html) — provides infrastructure for API endpoints.
+- [Client](/docs/dg/dev/backend-development/client/client.html) — provides data access infrastructure.
+- Shared — provides shared code abstractions to be used in other Application Layers of the same module.
+- Service — provides infrastructure for the stateless operations, usually utils.
 
 Application Layers structure supports you in a better conceptual decoupling and not always represent a bootstrapped Application.
 
@@ -87,5 +87,5 @@ For more details on how Publish & Sync works, see [Publish and Synchronization](
 
 ## Next steps
 
-* To know more about the application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/dg/dev/architecture/modules-and-application-layers.html).
-* To know more about the building blocks of Spryker, see [Programming Concepts](/docs/dg/dev/architecture/programming-concepts.html).
+- To know more about the application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/dg/dev/architecture/modules-and-application-layers.html).
+- To know more about the building blocks of Spryker, see [Programming Concepts](/docs/dg/dev/architecture/programming-concepts.html).

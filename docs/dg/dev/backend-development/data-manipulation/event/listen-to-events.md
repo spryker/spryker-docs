@@ -56,6 +56,7 @@ class ProductRelationAbstractProductChangeListener extends AbstractPlugin implem
 Add this listener to `\Pyz\Zed\Event\EventDependencyProvider::getEventListenerCollection`
 
 Example:
+
 ```php
 $eventCollection->addListener(ProductEvents::PRODUCT_ABSTRACT_BEFORE_CREATE, new ProductRelationAbstractProductChangeListener())`
 ```

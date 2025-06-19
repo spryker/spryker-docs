@@ -22,10 +22,10 @@ The Timed Product Availability feature is implemented through the `isActive` fie
 {% info_block infoBox %}
 
 Which means that, if, for example, the following **conditions** are met:
-  - a product has been manually set to *Deactivated*
-  - this product has **Valid from** and **Valid to** values specified
-  - **Valid to** date lies in the future
-  - The **result** is: the product will be displayed until after the time set in "Valid to" field.
+- a product has been manually set to *Deactivated*
+- this product has **Valid from** and **Valid to** values specified
+- **Valid to** date lies in the future
+- The **result** is: the product will be displayed until after the time set in "Valid to" field.
  To deactivate the product in this case, it would be necessary to clear the values in the **Valid from** and **Valid to** fields.
 
 {% endinfo_block %}

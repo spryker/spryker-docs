@@ -18,8 +18,8 @@ The Identity Access Management capability enables all types of users in a Spryke
 
 Back Office supports login via two types of accounts:
 
-* Back Office account.
-* Account of a third-party service that is configured as a single sign-on.
+- Back Office account.
+- Account of a third-party service that is configured as a single sign-on.
 
 ### Login with a Back Office account
 
@@ -50,9 +50,9 @@ Depending on your access and security requirements, you can have one of the foll
 #### Registration is required only with the SSO service
 
 If a user logs in with an SSO but does not have a Back Office account, the following happens:
-* Based on the third-party system's user data, such as first name, last name, and email, a Back Office account is created.
-* The user is assigned to the default user group.
-* The user is logged into the Back Office.
+- Based on the third-party system's user data, such as first name, last name, and email, a Back Office account is created.
+- The user is assigned to the default user group.
+- The user is logged into the Back Office.
 
 The login process looks like this:
 

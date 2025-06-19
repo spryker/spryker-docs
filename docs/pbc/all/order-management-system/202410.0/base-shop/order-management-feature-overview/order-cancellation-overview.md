@@ -56,6 +56,7 @@ To learn how a Back Office user can skip timeout or cancel an order by changing 
 <a name="storefront"></a>
 
 ## Order cancellation on the Storefront
+
 This is how the Order Cancellation feature works on the Spryker Demo Shop Storefront:
 
 <figure class="video_container">

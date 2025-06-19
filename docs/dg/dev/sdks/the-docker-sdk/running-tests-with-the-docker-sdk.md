@@ -48,8 +48,8 @@ In the testing mode, you can run tests in isolation, with full control of the sy
 
 You can activate the testing mode in one of the following ways:
 
-* Switch a running environment into the testing mode without rebuilding containers.
-* Rebuild containers and run or restart an environment with the testing mode activated.
+- Switch a running environment into the testing mode without rebuilding containers.
+- Rebuild containers and run or restart an environment with the testing mode activated.
 
 ### Activating the testing mode in a running environment
 
@@ -66,6 +66,7 @@ codecept build
 codecept fixtures
 codecept run
 ```
+
 {% info_block infoBox "" %}
 
 Same as other CLI commands, you can run the preceding commands as a single command: `docker/sdk testing codecept run`.
@@ -98,9 +99,9 @@ codecept run
 
 There are three categories of Spryker tests:
 
-* Acceptance
-* Functional
-* Api
+- Acceptance
+- Functional
+- Api
 
 To run a specific category, run `codecept` with the respective configuration file:
 
@@ -129,7 +130,7 @@ The Chromedriver configuration looks as follows in the deploy file:
 services:
     webdriver:
         engine: chromedriver
-```        
+```
 
 See [webdriver:](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html#webdriver) to learn more about webdriver configuration in the deploy file.
 

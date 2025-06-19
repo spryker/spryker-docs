@@ -53,6 +53,7 @@ Request sample: `PATCH https://glue-backend.b2c-eu.demo-spryker.com/push-notific
 ### Response
 
 Response sample:
+
 ```json
 {
     "data": {

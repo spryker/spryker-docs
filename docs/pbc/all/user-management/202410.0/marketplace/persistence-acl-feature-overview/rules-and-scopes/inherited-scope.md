@@ -42,11 +42,13 @@ Here is an example where a user has a configuration where `SpyMerchantProductAbs
 | 112 | 5 |
 
 Query before the Persistence ACL:
+
 ```sql
 SELECT * FROM `spy_merchant_product_abstract` ORDER BY `updated_at` DESC;
 ```
 
 Query after the Persistence ACL:
+
 ```sql
 SELECT `spy_merchant_product_abstract`.*
 FROM `spy_merchant_product_abstract`

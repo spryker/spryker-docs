@@ -16,7 +16,7 @@ Install the required features:
 | Marketplace Order Management | {{page.version}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
 | Promotions & Discounts       | {{page.version}}   | [Install the Promotions & Discounts feature](https://github.com/spryker-feature/promotions-discounts) |
 
-###  1) Install the required modules
+### 1) Install the required modules
 
 Install the required modules using Composer:
 

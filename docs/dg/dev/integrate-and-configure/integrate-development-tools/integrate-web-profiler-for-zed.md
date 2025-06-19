@@ -19,39 +19,40 @@ related:
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
 ---
 
-The _Web Profiler_ provides a toolbar for debugging and informational purposes. The toolbar is located at the bottom of a loaded page.
+The *Web Profiler* provides a toolbar for debugging and informational purposes. The toolbar is located at the bottom of a loaded page.
 
-Spryker Profiler is based on _Symfony Profiler_. For details, see [Profiler documentation](https://symfony.com/doc/current/profiler.html).
+Spryker Profiler is based on *Symfony Profiler*. For details, see [Profiler documentation](https://symfony.com/doc/current/profiler.html).
 
 ## Modules
 
 The following modules provide the profiler functionality:
 
-*   **WebProfilerWidget** -`spryker/web-profiler`
-*   **WebProfilerExtension** -`spryker/web-profiler-extension`
+- **WebProfilerWidget** -`spryker/web-profiler`
+- **WebProfilerExtension** -`spryker/web-profiler-extension`
 
 ## Installation
 
-Install _WebProfilerWidget_ and the extension module:
+Install *WebProfilerWidget* and the extension module:
+
 ```bash
 composer require spryker/web-profiler --dev
 ```
 
 ## Integration
 
-To be able to use _Web Profiler_, add  `\Spryker\Zed\WebProfiler\Communication\Plugin\Application\WebProfilerApplicationPlugin`of the`spryker-shop/web-profiler`module to `\Pyz\Zed\Application\ApplicationDependencyProvider::getApplicationPlugins()`.
+To be able to use *Web Profiler*, add  `\Spryker\Zed\WebProfiler\Communication\Plugin\Application\WebProfilerApplicationPlugin`of the`spryker-shop/web-profiler`module to `\Pyz\Zed\Application\ApplicationDependencyProvider::getApplicationPlugins()`.
 
 ## Configure the Web Profiler per Environment
 
-The below options can be used in the Router to configure _WebProfiler_. The options are contained in `\Spryker\Shared\WebProfiler\WebProfilerConstants`.
+The below options can be used in the Router to configure *WebProfiler*. The options are contained in `\Spryker\Shared\WebProfiler\WebProfilerConstants`.
 
-*   `\Spryker\Shared\WebProfiler\WebProfilerConstants::IS_WEB_PROFILER_ENABLED`- use this option to enable/disable _Web Profiler_. By default, the widget is **disabled**.
-*   `Spryker\Shared\WebProfiler\WebProfilerConstants::PROFILER_CACHE_DIRECTORY`- use this option to specify the path where the _Web Profiler_ stores its cache.
+- `\Spryker\Shared\WebProfiler\WebProfilerConstants::IS_WEB_PROFILER_ENABLED`- use this option to enable/disable *Web Profiler*. By default, the widget is **disabled**.
+- `Spryker\Shared\WebProfiler\WebProfilerConstants::PROFILER_CACHE_DIRECTORY`- use this option to specify the path where the *Web Profiler* stores its cache.
 
 ## Extending WebProfilerWidget
 
-You can extend _WebProfiler_ with `\Spryker\Shared\WebProfilerExtension\Dependency\Plugin\WebProfilerDataCollectorPluginInterface`. The interface can be used for adding _Data Collectors_ to the profiler.
+You can extend *WebProfiler* with `\Spryker\Shared\WebProfilerExtension\Dependency\Plugin\WebProfilerDataCollectorPluginInterface`. The interface can be used for adding *Data Collectors* to the profiler.
 
-Individual _Data Collectors_ can be added to `\Pyz\Zed\WebProfiler\WebProfilerDependencyProvider::getDataCollectorPlugins()`.
+Individual *Data Collectors* can be added to `\Pyz\Zed\WebProfiler\WebProfilerDependencyProvider::getDataCollectorPlugins()`.
 
 Spryker provides a lot of build-in collectors. You can locate them in `WebProfiler/src/Spryker/Zed/WebProfiler/Communication/Plugin/WebProfiler/`.

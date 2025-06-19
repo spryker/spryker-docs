@@ -23,8 +23,8 @@ The *minimum* value defines the smallest allowable quantity of a specific item i
 ## Current constraints
 
 The feature has the following functional constraints:
-* According to the current setup, quantity suggestions in the quantity restrictions do not work with the shopping lists. A buyer can add any quantity of the product to the shopping list. It can lead to a situation where the customer is forced to guess what amount to add from a shopping list because they do not see quantity suggestions on the shopping list page. However, when they add this product from a shopping list to a shopping cart, an error message appears notifying the customer that a selected amount cannot be added (if any quantity restrictions were set up for this product).
-* There is no UI for the product restrictions in the Back Office.
+- According to the current setup, quantity suggestions in the quantity restrictions do not work with the shopping lists. A buyer can add any quantity of the product to the shopping list. It can lead to a situation where the customer is forced to guess what amount to add from a shopping list because they do not see quantity suggestions on the shopping list page. However, when they add this product from a shopping list to a shopping cart, an error message appears notifying the customer that a selected amount cannot be added (if any quantity restrictions were set up for this product).
+- There is no UI for the product restrictions in the Back Office.
 
 | DATA IMPORT |
 |---------|

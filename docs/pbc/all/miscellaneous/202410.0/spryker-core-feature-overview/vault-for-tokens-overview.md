@@ -26,15 +26,15 @@ redirect_from:
 
 The database structure includes the following fields:
 
-* `dataType`
-* `dataKey`
-* `data`
+- `dataType`
+- `dataKey`
+- `data`
 
 `dataType` and `dataKey` entries are used for the distinction between the provided data. Thus, multiple and various entries of data can be filtered and stored in the vault.
 
 The database fields are mandatory and must contain either an empty string or a string with a value.
 
-By default, we provide the encryption algorithm AES256. The encryption functionality won't be used until ` ENCRYPTION_KEY` is set in the project configuration file. You can change the encryption algorithm in the module configuration on the project level.
+By default, we provide the encryption algorithm AES256. The encryption functionality won't be used until `ENCRYPTION_KEY` is set in the project configuration file. You can change the encryption algorithm in the module configuration on the project level.
 
 The feature supports special characters and different [writing systems](https://en.wikipedia.org/wiki/Writing_system#Logographic_systems).
 

@@ -591,9 +591,9 @@ console data:import cms-block-store
 
 Make sure the following applies:
 
-* Glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
-* The `ssp_inquiry` table contains the new inquiries.
-* The new CMS blocks are assigned to correct stores.
+- Glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
+- The `ssp_inquiry` table contains the new inquiries.
+- The new CMS blocks are assigned to correct stores.
 
 {% endinfo_block %}
 
@@ -975,8 +975,8 @@ Verify inquiries in the Back Office:
 
 1. In the Back Office, go to **Sales** > **Inquiries** page. Make sure the following applies:
 
-* The inquiry you've created on the Storefront is displayed in the list.
-* You can filter the list by **Inquiry status** and **Inquiry type**.
+- The inquiry you've created on the Storefront is displayed in the list.
+- You can filter the list by **Inquiry status** and **Inquiry type**.
 
 2. Click **View** next to an inquiry.
    Make sure that, in the **Status** section, **Start review** and **Reject** buttons are displayed.

@@ -11,13 +11,14 @@ redirect_from:
 Executing an API command leads to the exception `Session has not been set`.
 
 ## Cause
+
 Most probably, you're using a code that is relying on session. However, obviously, in case of an API, you don't have the session.
 
 ## Solution
 
 Switch the session storage for the Messenger module to `IN MEMORY`:
 
-```
+```php
 use Spryker\Shared\Messenger\MessengerConfig as SharedMessengerConfig;
 use Spryker\Zed\Messenger\MessengerConfig;
 ....

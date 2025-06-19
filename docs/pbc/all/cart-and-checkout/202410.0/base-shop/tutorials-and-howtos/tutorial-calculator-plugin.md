@@ -21,8 +21,8 @@ You can get the tax amount from `grandTotal`. For this, add a new calculator to 
 
 1. First, there are some data structure changes that you need to make. Modify the `ItemTransfer` object by adding two new properties:
 
-  * `unitTaxAmount`—for a single item.
-  * `sumTaxAmount`—tax amount for the sum of items.
+- `unitTaxAmount`—for a single item.
+- `sumTaxAmount`—tax amount for the sum of items.
 
 2. As this is tax-related, you have to add it on a project level in the `Tax` module.
 

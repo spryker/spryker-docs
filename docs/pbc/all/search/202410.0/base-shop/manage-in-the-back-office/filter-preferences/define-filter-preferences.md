@@ -53,5 +53,5 @@ Review the [reference information](#reference-information-create-a-category-filt
 
 ## Next steps
 
-* [Reorder filter preferences](/docs/pbc/all/search/{{page.version}}/base-shop/manage-in-the-back-office/filter-preferences/reorder-filter-preferences.html)
-* [Assign and dessign filters from categories](/docs/pbc/all/search/{{page.version}}/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html)
+- [Reorder filter preferences](/docs/pbc/all/search/{{page.version}}/base-shop/manage-in-the-back-office/filter-preferences/reorder-filter-preferences.html)
+- [Assign and dessign filters from categories](/docs/pbc/all/search/{{page.version}}/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html)

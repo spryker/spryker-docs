@@ -19,9 +19,9 @@ related:
 
 *Visibility Condition* is a [Templates & Slots](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html) feature functionality that lets you define when a CMS block is displayed on a page. The [Spryker CMS Blocks content provider](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html#spryker-cms-blocks) for slots has the following [visibility conditions](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) by default:
 
-* Category condition for the **Category** page.
-* Product and category conditions for the product details page.
-* CMS page condition for the **CMS** page.
+- Category condition for the **Category** page.
+- Product and category conditions for the product details page.
+- CMS page condition for the **CMS** page.
 
 Each page type has a dedicated template with several [slot widgets](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html#slot-widget). The visibility conditions of each template are defined in module configuration.
 
@@ -53,9 +53,9 @@ class CmsSlotBlockConfig extends SprykerCmsSlotBlockConfig
 ```
 
 As shown in the preceding example, the visibility condition configuration is an array, so you can have a combination of visibility conditions in a template. For example, the product details page template can have `productCategory` and `customer` visibility conditions. It means that the CMS block for which these conditions are defined  is only displayed when both of the defined conditions are fulfilled. In particular, the CMS block is displayed in the following cases:
-* On the product details pages belonging to a defined categories and products.
-* When the user login status is equal to the defined login status.
-* When user account details are equal to the defined account details.
+- On the product details pages belonging to a defined categories and products.
+- When the user login status is equal to the defined login status.
+- When user account details are equal to the defined account details.
 
 ## Visibility condition for a template
 
@@ -153,14 +153,15 @@ class CustomerSlotBlockConditionFormPlugin extends AbstractPlugin implements Cms
     }
 }
 ```
+
 </details>
 
 2. Put `CustomerSlotBlockConditionFormPlugin` into the `src/Pyz/Zed/CmsSlotBlockCustomerGui` module.
 
 3. Create `CustomerSlotBlockConditionForm`. It is a regular Symfony Form class that implements `\Symfony\Component\Form\FormBuilderInterface`. For details, see the following:
-   * [Forms](https://symfony.com/doc/current/forms.html) for more information about Symfony forms.
-   * [Creating Forms](/docs/dg/dev/backend-development/forms/create-forms.html) to learn about form creation procedure in Spryker.
-   * A form example in `\Spryker\Zed\CmsSlotBlockProductCategoryGui\Communication\Form\ProductCategorySlotBlockConditionForm`.
+   - [Forms](https://symfony.com/doc/current/forms.html) for more information about Symfony forms.
+   - [Creating Forms](/docs/dg/dev/backend-development/forms/create-forms.html) to learn about form creation procedure in Spryker.
+   - A form example in `\Spryker\Zed\CmsSlotBlockProductCategoryGui\Communication\Form\ProductCategorySlotBlockConditionForm`.
 
 {% info_block errorBox %}
 
@@ -171,11 +172,11 @@ Child form elements can have any names and subsequent child form elements.
 {% endinfo_block %}
 
 In this case, the created form has five elements:
-* `customer` parent form with four children:
-    * `isGuest` radio button.
-    * `fromAge` numeric input field.
-    * `toAge` numeric input field.
-    * `city` dropdown with the city list fetched from database.
+- `customer` parent form with four children:
+  - `isGuest` radio button.
+  - `fromAge` numeric input field.
+  - `toAge` numeric input field.
+  - `city` dropdown with the city list fetched from database.
 
 ```php
 /**
@@ -316,12 +317,12 @@ class CustomerSlotBlockConditionResolverPlugin extends AbstractPlugin implements
 {% info_block warningBox "Verification" %}
 
 On the Storefront, open the product details page that contains the CMS block for which you have selected the visibility conditions.
-* Make sure that you fulfill the visibility conditions and see the CMS block content.
-* Make sure that you do not fulfill the visibility conditions and do not see the CMS block content.
+- Make sure that you fulfill the visibility conditions and see the CMS block content.
+- Make sure that you do not fulfill the visibility conditions and do not see the CMS block content.
 
 For example, you can select and check the content against the following visibility conditions:
-* Login status
-* Location
-* Age
+- Login status
+- Location
+- Age
 
 {% endinfo_block %}

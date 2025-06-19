@@ -68,7 +68,7 @@ $config[GlueJsonApiConventionConstants::GLUE_DOMAIN]
 
 Generate transfers:
 
-```
+```bash
 vendor/bin/console transfer:generate
 ```
 
@@ -104,7 +104,7 @@ Enable the following behaviors by registering the plugins:
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\GlueApplication;
@@ -128,7 +128,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 **src/Pyz/Glue/GlueJsonApiConvention/GlueJsonApiConventionDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\GlueJsonApiConvention;

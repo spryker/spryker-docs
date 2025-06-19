@@ -102,8 +102,8 @@ class PersonalizedProductRouteProviderPlugin extends AbstractRouteProviderPlugin
 
 {% info_block infoBox %}
 
-* The `value()` method gives a default value if the limit value is not passed from the URL.
-* The `assert()` method checks if the limit value is a positive integer.
+- The `value()` method gives a default value if the limit value is not passed from the URL.
+- The `assert()` method checks if the limit value is a positive integer.
 
 {% endinfo_block %}
 

@@ -16,15 +16,15 @@ related:
     link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/integrate-react-into-atomic-frontend.html
 ---
 
-This guide aims to illustrate how to use _JQuery_ and any _JQuery_ plugin inside Spryker components.
+This guide aims to illustrate how to use *JQuery* and any *JQuery* plugin inside Spryker components.
 
-To do so, we will show how to integrate a plugin called _jquery-countdown._
+To do so, we will show how to integrate a plugin called *jquery-countdown.*
 
 ## Setup
 
 ### Install JQuery and jquery-countdown plugin
 
-First of all, you need to add _JQuery_ and _jquery-countdown_ as dependencies to the project. To do so, from the root folder, type in the terminal:
+First of all, you need to add *JQuery* and *jquery-countdown* as dependencies to the project. To do so, from the root folder, type in the terminal:
 
 ```php
 npm install jquery jquery-countdown --save
@@ -85,7 +85,7 @@ By doing this, we make Webpack know to place JQuery source code into the vendor 
 
 ### Optional: Add jquery-countdown to vendor.ts
 
-If you want to serve _jquery-countdown_ as global and simply use it in every component you need, add the following line to `./src/Pyz/Yves/ShopUi/Theme/default/vendor.ts`:
+If you want to serve *jquery-countdown* as global and simply use it in every component you need, add the following line to `./src/Pyz/Yves/ShopUi/Theme/default/vendor.ts`:
 
 ```php
 import 'jquery-countdown';
@@ -99,7 +99,7 @@ If you want to include the plugin as a local resource used only by certain speci
 
 ## Configure application
 
-The main integration step is to be implemented in `./src/Pyz/Yves/ShopUi/Theme/default/app.ts`. This file defines the entry point for the whole Atomic Frontend, therefore it needs to be updated in order to properly integrate with _JQuery_. The main reason is that JQuery needs some time to load itself in the DOM; every plugin or code that uses it must wait for `document.ready` event before doing anything.
+The main integration step is to be implemented in `./src/Pyz/Yves/ShopUi/Theme/default/app.ts`. This file defines the entry point for the whole Atomic Frontend, therefore it needs to be updated in order to properly integrate with *JQuery*. The main reason is that JQuery needs some time to load itself in the DOM; every plugin or code that uses it must wait for `document.ready` event before doing anything.
 
 Same goes for this component: In order to safely have JQuery available in the component, you need to be sure that the `mountCallback` (or `readyCallback` which is deprecated now) is called after the `document.ready` event.
 
@@ -170,7 +170,7 @@ If you already added the plugin to `vendor.ts` as a global resource, ignore this
 
 {% endinfo_block %}
 
-If you want to serve _jquery-countdown_ as a local plugin used only in the current component, add the following line to the specific `component-name.ts file`:
+If you want to serve *jquery-countdown* as a local plugin used only in the current component, add the following line to the specific `component-name.ts file`:
 
 ```php
 import 'jquery-countdown';
@@ -178,7 +178,7 @@ import 'jquery-countdown';
 
 ### Use the plugin
 
-At this point, you can start using the _jquery-countdownplugin_ in the necessary components. The following code is used to load the plugin:
+At this point, you can start using the *jquery-countdownplugin* in the necessary components. The following code is used to load the plugin:
 
 ```php
 $('.any-target-selector').countdown('2100/01/01', function (event: any) {

@@ -65,9 +65,9 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 ## Sofort Payment Flow
 
 1. There is a radio button on "Payment" step. After submitting the order the customer will be redirected to the Computop (Paygate form implementation). The GET consists of 3 parameters:
-  - Data (encrypted parameters, such as currency, amount, description)
-  - Length (length of `data` parameter)
-  - Merchant id (assigned by Computop)
+- Data (encrypted parameters, such as currency, amount, description)
+- Length (length of `data` parameter)
+- Merchant id (assigned by Computop)
 Customer sets up all data just after the redirect to Computop.
 Init action: "Capture". There are no Order and Authorization calls provided for this payment method.
 2. By default, on success the customer  will be redirected to "Success" step. The response contains `payId`. On error, the customer  will be redirected to "Payment" step with the error message by default. Response data is stored in the DB.

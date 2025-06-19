@@ -28,6 +28,7 @@ This document describes how to install Self-Service Portal (SSP).
 | KernelConstants::CORE_NAMESPACES                               | Adds the SprykerFeature namespace to the Core namespaces.                                                       | Spryker\Shared\Kernel\KernelConstants       |
 
 **config/Shared/config_default.php**
+
 ```php
 
 use Spryker\Shared\Kernel\KernelConstants;

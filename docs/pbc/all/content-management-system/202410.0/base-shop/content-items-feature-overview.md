@@ -23,19 +23,19 @@ The *Content Items* feature creates an abstraction layer for content management 
 ## Content item
 
 A *content item* is the smallest content unit in Spryker. There are four content item types shipped by default:
-* Banner
-* Abstract Product List
-* Product Set
-* File List
-* Navigation
+- Banner
+- Abstract Product List
+- Product Set
+- File List
+- Navigation
 
 You can use each content item for different purposes. For example, A *Banner content item* can be used to promote a specific brand or collection. A *Product Set content* item can be added to the landing page to display a product set as a slider or carousel. The File List adds a link or icon to download a selected file. The Navigation content item can be used to add different types of navigation elements to different shop pages.
 
 A content manager can [create content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section.
 A developer can do the following:
-* [Import content items](/docs/dg/dev/data-import/{{page.version}}/data-importers-implementation.html)
-* [Retrieve banner content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html)
-* [Retrieve abstract product list content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html)
+- [Import content items](/docs/dg/dev/data-import/{{page.version}}/data-importers-implementation.html)
+- [Retrieve banner content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html)
+- [Retrieve abstract product list content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html)
 
 For more information about each content item type and module relations, see [Content Items feature overview](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/content-items-feature-overview.html).
 
@@ -77,7 +77,7 @@ To learn more about working with content item widgets in the WYSIWYG editor, see
 The content item design on Storefront depends on the template you select for the content item widget in the WYSIWYG editor. There are several content item widget templates shipped by default per each content item type.
 
 You can select a template when inserting a content item widget into a CMS block. Below, you can see the difference between the default templates for the Abstract product list content item:
-* *Product Slider for store/landing pages*:
+- *Product Slider for store/landing pages*:
 
 <details><summary>Content item widget template—the Back Office</summary>
 
@@ -91,7 +91,7 @@ You can select a template when inserting a content item widget into a CMS block.
 
 </details>
 
-* *Top Title*:
+- *Top Title*:
 
 <details>
     <summary>Content item widget template—the Back Office</summary>
@@ -110,6 +110,7 @@ You can select a template when inserting a content item widget into a CMS block.
 A developer can create and customize templates. For more details, see [Adding a Template for a Content Item Widget](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#content-item-widget-template).
 
 ## Content Database Schema
+
 CMS content is an item that can contain different content based on its type (banner, products, product set, file). Content items can be added to blocks and pages with a Twig function.
 
 ![Content Database Schema]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/content-database-schema.png )
@@ -117,15 +118,15 @@ CMS content is an item that can contain different content based on its type (ban
 
 Structure:
 
-* CMS Content has the following:
+- CMS Content has the following:
   - Key—a unique content item identifier.
   - Content type and content term to identify its content type.
   - Came and description.
-* CMS Content Item can be toggled per Locale.
-* Localized Content Item is used to separate content by locales:
+- CMS Content Item can be toggled per Locale.
+- Localized Content Item is used to separate content by locales:
   - fk_content is a content item identifier.
   - fk_locale is a locale identifier.
-* Parameters are settings or data for a content item.
+- Parameters are settings or data for a content item.
 
 ## Related Business User documents
 
@@ -144,7 +145,7 @@ Structure:
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|---|
-| [Install the Content Items feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html) |  [ContentBanner migration guide](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentbanner-module.html) | [Retrieve abstract product list content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html) | [File details: content_banner.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-banner.csv.html) | [HowTo: Create a custom content item](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-a-custom-content-item.html) | [Content item types: module relations](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/domain-model-and-relationships/content-item-types-module-relations.html)  |  |
+| [Install the Content Items feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html) |  [ContentBanner migration guide](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentbanner-module.html) | [Retrieve abstract product list content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html) | [File details: content_banner.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-banner.csv.html) | [HowTo: Create a custom content item](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-a-custom-content-item.html) | [Content item types: module relations](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/domain-model-and-relationships/content-item-types-module-relations.html)  |
 | [Install the Content Items Glue API](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html) | [Content migration guide](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-content-module.html) | [Retrieve banner content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html) | [File details: content_navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-navigation.csv.html) |  |  |
 |  | [ContentBannerGui migration guide](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentbannergui-module.html) |  | [File details: content_product_abstract_list.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-product-abstract-list.csv.html) |  |  |
 |  | [ContentStorage migration guide](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentstorage-module.html) |  | [File details: content_product_set.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-product-set.csv.html) |  |  |

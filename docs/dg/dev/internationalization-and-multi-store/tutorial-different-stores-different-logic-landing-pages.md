@@ -62,7 +62,7 @@ Add a new store and a new home page for it.
 
 1. Add a new store and call it `DEMO` by adding a new array key to the store configuration file in `config/Shared/stores.php`.
 
-```
+```php
 $stores['DEMO'] = $stores['DE'];
 ```
 
@@ -112,6 +112,7 @@ class IndexController extends AbstractController
 
 2. Restart Nginx by running `sudo /etc/init.d/nginx restart`.
 3. Create a store record in your `spy_store database` table:
+
 ```bash
 console data:import:store
 ```

@@ -26,11 +26,11 @@ There are multiple ways to register a customer. Regardless of how customers are 
 
 There are five customer registration options:
 
-* Regular registration
-* Checkout registration
-* Registration by creating an account in the Back Office
-* Registration by Glue API
-* Registration by import
+- Regular registration
+- Checkout registration
+- Registration by creating an account in the Back Office
+- Registration by Glue API
+- Registration by import
 
 ### Regular registration
 

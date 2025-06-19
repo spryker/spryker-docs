@@ -180,8 +180,8 @@ console data:import cms-slot-block
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
-* Make sure that the imported data on CMS blocks, CMS slots, and content banners is present in the Back Office.
+- Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
+- Make sure that the imported data on CMS blocks, CMS slots, and content banners is present in the Back Office.
   {% endinfo_block %}
 
 ## Set up behavior
@@ -352,8 +352,8 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
    Make sure the **Dashboard** menu item is displayed.
 2. Go to **Customer Account** > **Dashboard**. Make sure the page shows the following:
 
-* Correct company account information
-* Widgets for Assets, Inquiries, and Files
+- Correct company account information
+- Widgets for Assets, Inquiries, and Files
 
 3. Log out and log in with a compnay user without the role you've created.
    Make sure the **Dashboard** menu item is not displayed and you can't access the **Dashboard** page.

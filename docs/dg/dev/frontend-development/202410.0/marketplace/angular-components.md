@@ -84,7 +84,7 @@ The `@Component` decorator identifies the class immediately below it as a compon
 
 In addition to containing or pointing to the template, the `@Component` metadata configures, for example, how the component can be referenced in the HTML and what services it requires.
 
-#### Main properties
+### Main properties
 
 `selector`  
 It is the CSS selector that identifies the component in a template. It corresponds to the HTML tag that is included in the parent component. You can create your own HTML tag. However, the same has to be included in the parent component.

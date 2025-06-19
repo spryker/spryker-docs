@@ -60,6 +60,7 @@ const routes = [
 
 appBuilder().withProviders([provideLitRoutes({ routes })]);
 ```
+
 {% info_block infoBox %}
 
 This is a basic example, and you may need to adjust the routing config to fit your specific use case.

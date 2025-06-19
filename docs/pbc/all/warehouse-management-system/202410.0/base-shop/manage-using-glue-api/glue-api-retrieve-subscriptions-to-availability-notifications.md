@@ -29,6 +29,7 @@ To retrieve subscriptions to availability notifications, send the request:
 
 ---
 `GET` **/my-availability-notifications/**
+
 ---
 
 ### Request
@@ -76,6 +77,7 @@ Request sample: retrieve subscriptions to availability notifications
     "links": []
 }
 ```
+
 </details>
 
 ## Other management options

@@ -21,8 +21,8 @@ related:
 
 Both credit card and PayPal utilize the same request flow in:
 
-* **Pre-check**: to check the user information to make sure that all the needed information is correct before doing the actual pre-authorization.
-* **Authorize**: to perform a payment risk check which is a mandatory step before every payment. The payment is considered accepted when it's authorized.
-* **Revert**: to cancel the authorization step which cancels the payment before capturing.
-* **Capture**: to capture the payment and receive money from the buyer.
-* **Refund**: to refund the buyer when returning products.
+- **Pre-check**: to check the user information to make sure that all the needed information is correct before doing the actual pre-authorization.
+- **Authorize**: to perform a payment risk check which is a mandatory step before every payment. The payment is considered accepted when it's authorized.
+- **Revert**: to cancel the authorization step which cancels the payment before capturing.
+- **Capture**: to capture the payment and receive money from the buyer.
+- **Refund**: to refund the buyer when returning products.

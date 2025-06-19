@@ -40,8 +40,8 @@ Review the reference information before you start, or look up the necessary info
 To edit a product variant:
 
 1. Navigate to the *Edit Concrete Product* page using one of the following paths:
-   * **Products&nbsp;<span aria-label="and then">></span> View** in the _Actions_ column for a specific abstract product **>** scroll down to the **Variants tab&nbsp;<span aria-label="and then">></span> Edit** in the _Actions_ column for a specific product variant.
-    * **Products&nbsp;<span aria-label="and then">></span> Edit** in the _Actions_ column for a specific abstract product **Variants tab&nbsp;<span aria-label="and then">></span> Edit** in the _Actions_ column for a specific product variant.
+    - **Products&nbsp;<span aria-label="and then">></span> View** in the *Actions* column for a specific abstract product **>** scroll down to the **Variants tab&nbsp;<span aria-label="and then">></span> Edit** in the *Actions* column for a specific product variant.
+    - **Products&nbsp;<span aria-label="and then">></span> Edit** in the *Actions* column for a specific abstract product **Variants tab&nbsp;<span aria-label="and then">></span> Edit** in the *Actions* column for a specific product variant.
 2. On the *Edit Concrete Product* page, update the following tabs:
     1. *General* tab: populate name and description, valid from and to dates, make the product searchable by selecting the Searchable checkbox for the appropriate locale (or all locales).
     2. *Price & Stock* tab: define the default/original, gross/net prices, and stock.
@@ -71,7 +71,7 @@ This section describes the attributes you enter and select when  creating a prod
 | SKU Prefix | A number that you assign to the product will help to track unique information related to that product. | **Yes**|**Display Only**|
 | Autogenerate SKU | Allows the system to autogenerate the SKU once you click **Save**. | **Yes**|**No**|
 | Super Attributes | This section is only available if you have added more than one super attribute and defined more than one value for it.<br>For example, if you selected the **color** to be a super attribute and defined **green**, **white**, and **black**, you will see "**color**" in this section and a drop-down with the colors you defined.<br>Only one value can be selected. |**Yes**|**No**|
-| Name | The name of your product that will be displayed in the online store for your customers. | | **Yes**|**Yes** |
+| Name | The name of your product that will be displayed in the online store for your customers. | **Yes** | **Yes** |
 | Description | The description of the product that your customer sees in the online store. | **Yes** |**Yes** |
 | Searchable | A checkbox that defines if the concrete product can be searched via the Search function in the online store. If not selected, no values will be displayed when searching for this product. | **Yes** | **Yes**|
 | Valid from<br>Valid to  | Defines the period of time when the product is in active state. The **Valid from** date triggers the activation, while the **Valid to** date triggers the deactivation. Either no dates can be selected, or both. |**Yes** |**Yes** |
@@ -114,8 +114,8 @@ The only field available is **Add Product Alternative by Name or SKU**. Here it'
 #### Scheduled Prices tab
 
 On this tab, you see a table with the scheduled prices imported via a CSV file. The following information is available:
-* Currency, store, net, and gross price values.
-* Start from (included) and Finish at (included) values that identify a period of time when a specific price is going to be set for a product automatically.
+- Currency, store, net, and gross price values.
+- Start from (included) and Finish at (included) values that identify a period of time when a specific price is going to be set for a product automatically.
 
 **What's next?**
 <br>Following the same steps, you will update all variants that you have added to your abstract product.

@@ -30,8 +30,8 @@ Let's consider an example illustrating the impact of a bad architecture design w
 
 During the project implementation, sometimes developers might execute similar queries that return the same result or subset of data from it in one transaction. Therefore, architects should ensure that the database interactions are set to the lowest possible number. They can achieve this by:
 
-* Merging several queries into one query with a bigger result (unfiltered).
-* Aggregating the duplicate query to one query and sharing the result with the stack of the code execution (memory).
+- Merging several queries into one query with a bigger result (unfiltered).
+- Aggregating the duplicate query to one query and sharing the result with the stack of the code execution (memory).
 
 {% info_block warningBox %}
 
@@ -145,10 +145,13 @@ Propel instance pooling is a  Propel feature that determines whether object inst
 If you encounter memory leak issues while running console commands, consider temporarily disabling instance pooling:
 
 1. Before executing a memory-intensive script, disable instance pooling:
+
 ```php
 \Propel\Runtime\Propel::disableInstancePooling();
 ```
+
 2. After the memory-intensive script has been executed, reenable instance pooling:
+
 ```php
 \Propel\Runtime\Propel::enableInstancePooling();
 ```
@@ -169,7 +172,7 @@ Publishers use queues to propagate events and let workers consume them to provid
 
 The default Spryker configuration comes with one worker per publisher queue. Nevertheless, you can increase this configuration to the maximum number of CPUs for a specific queue if other queues do not receive any loads. For example:
 
-```
+```text
 Publisher.ProductAbstract 10000 msg/minute (2 workers)
 Publisher.ProductConcrete 10000 msg/minute (2 workers)
 Publisher.Translation 10 msg/minute (1 worker)
@@ -200,7 +203,7 @@ Spryker also recommends enabling the benchmark tests for each publisher queue an
 
 Example of benchmark for each queue:
 
-```
+```text
 time vendor/bin/console queue:task:start publisher.product_abstract // Ouput 30.00s
 ....
 ```

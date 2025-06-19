@@ -36,7 +36,7 @@ Review the [reference information](#reference-information-changing-the-state-of-
 ## Changing the state of items in a shipment
 
 1. On the **Orders** page, click **View** next to the order containing the shipment you want to change the state of.
-    This opens the **Order Overview** page.    
+    This opens the **Order Overview** page.
 2. In the **ORDER ITEMS** pane, in the desired shipment, select the checkboxes next to the products you want to change the state of. If you want to change the state of all the items in the shipment, don't select any checkboxes.
 3. In the **TRIGGER ALL MATCHING STATES OF ORDER INSIDE THIS SHIPMENT** pane, click **Pay**.
     The page refreshes with the success message displayed.
@@ -49,7 +49,7 @@ Review the [reference information](#reference-information-changing-the-state-of-
     This opens the **Order Overview** page.
 2. In the **ORDER ITEMS** pane, next to the needed item, click **Pay**.
     The page refreshes with the success message displayed.
-3. Repeat step 2 until you get the needed order state.         
+3. Repeat step 2 until you get the needed order state.
 
 ## Reference information: Changing the state of order items
 

@@ -115,7 +115,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 2. Add the `max-uses-per-customer` condition with value `1`.
 3. Log in as a customer with a customer reference defined in the discount you've created. Make sure that the discount is applied to the cart automatically.
 4. Place an order. Make sure a relationship between the customer and the discount is created in the `spy_customer_discount` database table.
-5. Create a new cart. Make sure that the discount is not applied to the cart for the same customer again.
+5. Create a new cart and add some items. Make sure the same discount is not applied.
 
 {% endinfo_block %}
 

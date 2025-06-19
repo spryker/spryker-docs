@@ -5,6 +5,7 @@ last_updated: Dec 18, 2023
 template: concept-topic-template
 redirect_from:
 - /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html
+- /docs/about/all/releases/security-release-notes-202312.0.html
 
 ---
 

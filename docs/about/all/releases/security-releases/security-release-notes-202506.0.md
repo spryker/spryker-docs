@@ -2,6 +2,8 @@ title: Security release notes 202506.0
 description: Security updates released for version 202506.0
 last_updated: Jun 20, 2025
 template: concept-topic-template
+redirect_from:
+  - /docs/about/all/releases/security-release-notes-202506.0.html
 ---
 
 This document describes the security-related issues that have been recently resolved.

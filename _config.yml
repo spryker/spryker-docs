@@ -240,4 +240,4 @@ redirect_from:
 form_endpoints:
   feedback: 'https://formspree.io/f/xdoboyro'
 
-noindex: false
+noindex: true

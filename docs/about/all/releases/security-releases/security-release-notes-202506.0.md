@@ -1,3 +1,4 @@
+---
 title: Security release notes 202506.0
 description: Security updates released for version 202506.0
 last_updated: Jun 20, 2025
@@ -127,7 +128,7 @@ customer-restore-password:
                   max: 128
 ```
 
-4. Update the `src/Pyz/Yves/CustomerPage/CustomerPageConfig.php` file:
+4. Update `src/Pyz/Yves/CustomerPage/CustomerPageConfig.php`:
 
 ```bash
 namespace Pyz\Yves\CustomerPage;
@@ -190,7 +191,7 @@ class CustomerPageConfig extends SprykerCustomerPageConfig
 ...
 ```
 
-5. Update the `src/Pyz/Zed/Customer/CustomerConfig.php` file:
+5. Update `src/Pyz/Zed/Customer/CustomerConfig.php`:
 
 ```bash
 namespace Pyz\Zed\Customer;

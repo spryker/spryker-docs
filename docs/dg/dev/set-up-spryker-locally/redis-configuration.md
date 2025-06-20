@@ -161,7 +161,7 @@ class RedisConfig extends AbstractBundleConfig
 ```
 
 After enabling compression, we recommend resaving storage data using the command: `SPRYKER_REDIS_IS_DEV_MODE=0 console storage:redis:re-save`.
-The following is the default compression configuration:
+The following is the configuration to enable the `StorageRedisDataReSaveConsole` command:
 
 ```php
 namespace Pyz\Zed\Console;

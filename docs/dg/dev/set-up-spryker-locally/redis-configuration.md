@@ -114,7 +114,7 @@ The standard Redis client configuration uses environment variables defined as co
 
 Compression is supported starting from `spryker/redis:2.9.1`.  
 
-By default Redis compression is disabled:
+By default, Redis compression is disabled:
 
 ```php
 $config[RedisConstants::REDIS_COMPRESSION_ENABLED] = getenv('SPRYKER_KEY_VALUE_COMPRESSING_ENABLED') ?: false;
@@ -160,8 +160,10 @@ class RedisConfig extends AbstractBundleConfig
 }
 ```
 
-After enabling compression, we recommend resaving storage data using the command: `SPRYKER_REDIS_IS_DEV_MODE=0 console storage:redis:re-save`.
-The following is the configuration to enable the `StorageRedisDataReSaveConsole` command:
+After enabling compression, we recommend resaving storage data.
+
+The command to resave storage data is available starting from `spryker/storage-redis:1.7.0`. To enable the command for resaving storage data, add the following configuration:
+
 
 ```php
 namespace Pyz\Zed\Console;
@@ -186,6 +188,71 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
+To resave storage data, run the command:
+
+```bash
+SPRYKER_REDIS_IS_DEV_MODE=0 console storage:redis:re-save
+```
+
 With separate storage databases per store, execute the command for each store individually.
 
-The command is available starting from `spryker/storage-redis:1.7.0`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

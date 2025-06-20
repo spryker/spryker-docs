@@ -18,7 +18,7 @@ Due to missing authorization controls, it was possible for a user with appropria
 
 ### Affected modules
 
-* `spryker-shop/company-page`: 1.0.0 - 2.34.0
+- `spryker-shop/company-page`: 1.0.0 - 2.34.0
 
 ### Fix the vulnerability
 

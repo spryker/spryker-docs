@@ -19,9 +19,9 @@ The File Management feature enables company users to access files available with
 
 Back Office users can upload files to share with companies, business units, and company users.
 
-For instructions on uploading files in the Back Office, see [Upload SSP files](/docs/pbc/all/self-service-portal/202505.0/manage-in-the-back-office/back-office-upload-ssp-files.html).
+For instructions on uploading files in the Back Office, see [Upload SSP files](/docs/pbc/all/self-service-portal/202507.0/manage-in-the-back-office/back-office-upload-ssp-files.html).
 
-After uploading files, Back Office users can attach them to individual companies, units, users, and assets. For instructions, see [Attach SSP files to assets and company entities](/docs/pbc/all/self-service-portal/202505.0/manage-in-the-back-office/back-office-attach-ssp-files-to-assets-and-entities.html).
+After uploading files, Back Office users can attach them to individual companies, units, users, and assets. For instructions, see [Attach SSP files to assets and company entities](/docs/pbc/all/self-service-portal/202507.0/manage-in-the-back-office/back-office-attach-ssp-files-to-assets-and-entities.html).
 
 
 ## Accessing SSP files

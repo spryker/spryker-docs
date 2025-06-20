@@ -216,7 +216,7 @@ class CustomerConfig extends SprykerCustomerConfig
 
 ## Authorization Bypass on Cent Amount Parameter
 
-Due to missing authorization controls, it was possible for a user with appropriate privileges to modify the cent amount of a role belonging to a different company.
+Due to missing authorization controls, it was possible for a user with appropriate privileges to modify the spending limit (cent amount) of a role belonging to a different company.
 
 ### Affected modules
 

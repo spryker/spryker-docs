@@ -58,7 +58,7 @@ The mapping type in our schema is called `page`, not `product` or something else
 
 {% endinfo_block %}
 
-We do this because we think that different page types—for example, brand pages, category pages, or CMS pages—can be relevant for the same search. There is no reason why somebody interested in [shipping prices](https://www.contorion.de/versandkosten) should not be able to find corresponding information using the search bar of a website (unfortunately, this is rarely the case), so we put it in the same index as products, using the same document structure:
+We do this because we think that different page types—for example, brand pages, category pages, or CMS pages—can be relevant for the same search. There is no reason why somebody interested in shipping prices should not be able to find corresponding information using the search bar of a website (unfortunately, this is rarely the case), so we put it in the same index as products, using the same document structure:
 
 ```php
 {
@@ -80,7 +80,7 @@ We do this because we think that different page types—for example, brand pages
 }
 ```
 
-Furthermore, our generic page-based schema allows for other search operations such as rendering a *staple page* (an overview of different variants of a product; often with their own facet navigation such as the aforementioned [Senkkopf-Holzbauschraube](https://www.contorion.de/)):
+Furthermore, our generic page-based schema allows for other search operations such as rendering a *staple page* (an overview of different variants of a product; often with their own facet navigation such as the aforementioned Senkkopf-Holzbauschraube):
 ![Staple page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Other+Best+Practices/staple.png)
 
 The query looks very similar to a normal faceted navigation, except that it searches only within a specific staple.

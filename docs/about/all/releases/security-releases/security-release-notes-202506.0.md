@@ -30,9 +30,9 @@ composer show spryker-shop/company-page # verify the version
 ```
 
 
-## Regular Expression Denial of Service (ReDoS) in cross-spawn
+## Regular expression denial of service (ReDoS) in cross-spawn
 
-`cross-spawn` third-party dependency was vulnerable to Regular Expression Denial of Service (ReDoS) due to improper input sanitization. An attacker can increase the CPU usage and perform a Denial of Service attack by crafting a very large and well crafted string.
+The `cross-spawn` third-party dependency was vulnerable to regular expression denial of service (ReDoS) because of improper input sanitization. An attacker could increase the CPU usage and perform a denial of service attack by crafting a very large and complicated string.
 
 ### Fix the vulnerability
 
@@ -42,7 +42,7 @@ Update the `cross-spawn` package to version 7.0.5 or higher:
 npm update cross-spawn@7.0.5
 ```
 
-In case there is no a `cross-spawn` dependency in your `package.json`file, add an override section into it:
+If your `package.json` doesn't have a `cross-spawn` dependency, add an override section:
 
 ```bash
 "overrides": {

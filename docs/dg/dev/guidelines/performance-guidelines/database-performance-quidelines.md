@@ -9,6 +9,10 @@ related:
 ---
 
 ## Performance Guidance: Batch Processing Traits in Propel ORM
+
+### Prerequirements
+Update your Propel package to the: [spryker/propel:^3.45.0](https://github.com/spryker/propel/releases/tag/3.45.0)
+
 ### ActiveRecordBatchProcessorTrait
 - This trait provides performance optimizations for database operations by allowing you to save Propel entities in batches.
 - It enables saving multiple records in a single operation, helping to resolve the - https://docs.spryker.com/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/n+1-problem.html
@@ -114,8 +118,6 @@ class AbstractSpyProductOfferStorage extends BaseSpyProductOfferStorage implemen
     }
 ```
 When saving the `SpyProductOfferStorage` entity using `ActiveRecordBatchProcessorTrait`, the P&S event is triggered after the batch save completes.
-
-
 
 #### Limitations and Suggestions:
 Limitations and Recommendations

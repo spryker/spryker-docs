@@ -1,6 +1,6 @@
 ---
 title: Performance Guidance -  Batch Processing Traits in Propel ORM
-description: Learn about optimization if database request with ActiveRecordBatchProcessorTrait, CascadeActiveRecordBatchProcessorTrait and BatchEntityHooksInterface usage
+description: Learn how to optimize Propel ORM performance using ActiveRecordBatchProcessorTrait and CascadeActiveRecordBatchProcessorTrait for efficient batch processing, reduced database load, and support for complex entity relationships. Includes usage examples and best practices.
 last_updated: Jun 20, 2025
 template: concept-topic-template
 related:
@@ -51,6 +51,7 @@ class EntityManager {
 ```php
 class AbstractSpySalesOrderItem extends BaseSpySalesOrderItem implements BatchEntityPostSaveInterface
 {
+    // properties re-declared protected to prevent their direct use from an entity
     use CascadeActiveRecordBatchProcessorTrait {
         persist as protected;
         commit as protected;

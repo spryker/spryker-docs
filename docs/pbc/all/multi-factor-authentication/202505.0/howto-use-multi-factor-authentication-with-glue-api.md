@@ -24,6 +24,33 @@ This guide demonstrates the Multi-Factor Authentication (MFA) flow using the ema
 
 {% endinfo_block %}
 
+{% info_block infoBox "Applicable Glue APIs" %}
+
+This guide is applicable to all types of Glue APIs in Spryker:
+- **Glue REST API**
+- **Glue Storefront API**
+- **Glue Backend API**
+
+The request structure and headers remain consistent across all APIs. The only difference is the **domain (host)** used for the request.
+
+To find the correct domain for your environment:
+
+1. Open your project's `deploy.yml` file.
+2. Locate the `groups` section and navigate to the appropriate region/application.
+3. Find your domain under the `endpoints:` key of the relevant Glue application:
+
+| API Type             | Application Key         | Example Domain                         |
+|----------------------|-------------------------|----------------------------------------|
+| Glue REST API        | `glue_eu`               | `glue.eu.mysprykershop.com`            |
+| Glue Storefront API  | `glue_storefront_eu`    | `glue-storefront.eu.mysprykershop.com` |
+| Glue Backend API     | `glue_backend_eu`       | `glue-backend.eu.mysprykershop.com`    |
+
+Your actual hostnames may differ depending on the region, environment, and project setup.
+
+Make sure the domain is accessible and properly routed in your infrastructure.
+
+{% endinfo_block %}
+
 ## Prerequisites
 
 [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html)

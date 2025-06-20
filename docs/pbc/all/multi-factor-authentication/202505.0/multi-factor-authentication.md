@@ -6,17 +6,7 @@ last_updated: Jun 02, 2026
 keywords: mfa
 ---
 
-{% info_block warningBox "Beta feature" %}
-
-The multi-factor auth module is in beta. It's not stable and *may be significantly changed in future releases*.
-
-By using this feature, you accept full responsibility for any potential issues, including breaking changes, limited support, and incomplete functionality.
-
-*We don't recommend using this in production environments*. You may have to adapt this implementation for future releases.
-
-{% endinfo_block %}
-
-Multi-Factor Authentication (MFA) adds an extra layer of security for customers, backoffice users, and agent users by requiring multiple methods of authentication before allowing an action.
+Multi-Factor Authentication (MFA) adds an extra layer of security for customers, backoffice users, agent users, merchant and merchant agent users by requiring multiple methods of authentication before allowing an action.
 
 Benefits of MFA:
 
@@ -29,7 +19,7 @@ Benefits of MFA:
 
 The login process with MFA looks as follows:
 
-1. Initial MFA check: The system checks if MFA is enabled for the user (customer, backoffice user, or agent). If no MFA methods are enabled, the authentication process continues without additional validation.
+1. Initial MFA check: The system checks if MFA is enabled for the user (customer, backoffice user, agent, merchant, or merchant agent). If no MFA methods are enabled, the authentication process continues without additional validation.
 
 2. Fetch enabled MFA types: The system retrieves the user's enabled MFA methods from a specific endpoint depending on the user type:
   * For ustomers: `multi-factor-auth/get-customer-enabled-types`
@@ -112,7 +102,12 @@ You can set up your own methods by implementing a custom MFA type plugin. For in
 
 ## Multi-Factor Authentication in Glue API
 
-Spryker's Glue API supports Multi-Factor Authentication (MFA) to enhance security for sensitive operations performed by authenticated customers. 
+Spryker’s Glue API supports Multi-Factor Authentication (MFA) to enhance security for sensitive operations performed by authenticated customers.
+
+MFA is supported in all types of Glue APIs:
+- Glue REST API
+- Glue Storefront API
+- Glue Backend API
 
 ### Scope of MFA Enforcement in Glue
 
@@ -123,12 +118,17 @@ To clarify the extent of Multi-Factor Authentication (MFA) enforcement in the Gl
 ### Default Protected Endpoints
 
 By default, the following Glue API endpoints are protected by MFA:
+
+#### For Glue REST API
 - customer-password
 - customers
 - addresses
 - carts
 - checkout
 - order-payments
+
+#### For Glue Backend API
+- warehouse-user-assignments
 
 These endpoints require a valid MFA code to be provided in the `X-MFA-Code` header when performing sensitive operations.
 To customize which endpoints are protected by MFA, refer to [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html#configure-enabled-routes-and-forms).
@@ -137,13 +137,13 @@ For a comprehensive guide on activating, deactivating, and utilizing MFA through
 
 ## Managing Multi-Factor Authentication 
 
-{% info_block infoBox "Important note about Agent and Backoffice users" %}
+{% info_block infoBox "Important note about Agent and Backoffice, Merchant and Merchant Agent users" %}
 
-Agent users and Backoffice users are technically the same underlying user account. Any Multi-Factor Authentication (MFA) configuration applied in one interface will automatically apply in the other.
+Agents, Merchant users, and Merchant Agent users, as well as Backoffice users are technically the same underlying user account. Any Multi-Factor Authentication (MFA) configuration applied in one interface will automatically apply in the other.
 
 For example:
-- If an agent sets up MFA in their Agent profile, the same configuration will affect how they authenticate when logging in to the Backoffice.
-- Conversely, changes made to MFA settings in the Backoffice user profile will reflect in the Agent interface.
+- If an agent sets up MFA in their Agent profile (same as in the Merchant Portal or Merchant Agent Portal), the same configuration will affect how they authenticate when logging in to the Backoffice.
+- Conversely, changes made to MFA settings in the Backoffice user profile will reflect in the Agent, Merchant Portal, and Merchant Agent Portal interfaces.
 
 This ensures consistent and secure authentication across both environments.
 
@@ -159,6 +159,9 @@ Backoffice users can manage their MFA settings in their user profile section wit
 
 ### For Agents
 Agent users can manage their MFA settings through their Agent profile interface. The setup process follows the same principles as for other user types to ensure security and prevent account lockouts.
+
+### For Merchant and Merchant Agent Users
+Merchant and Merchant Agent users can manage their MFA settings in the Merchant Portal or Merchant Agent Portal. The setup process is similar to that of other user types, ensuring a consistent experience across the platform.
 
 
 ## Admin control over MFA for customers

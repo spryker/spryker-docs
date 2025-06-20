@@ -3,6 +3,8 @@ title: Security release notes 202409.0
 description: Security updates released for version 202409.0
 last_updated: Sep 27, 2024
 template: concept-topic-template
+redirect_from:
+  - /docs/about/all/releases/security-release-notes-202409.0.html
 ---
 
 This document describes the security-related issues that have been recently resolved.

@@ -6,7 +6,7 @@ template: concept-topic-template
 redirect_from:
     - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html
     - /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202306.0.html
-
+    - /docs/about/all/releases/security-release-notes-202306.0.html
 ---
 
 The following information pertains to security-related issues that have been recently resolved. All issues are listed by description and affected modules.

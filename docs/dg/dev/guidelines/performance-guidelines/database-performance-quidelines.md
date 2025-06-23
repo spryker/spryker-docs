@@ -51,7 +51,7 @@ class EntityManager {
 ```php
 class AbstractSpySalesOrderItem extends BaseSpySalesOrderItem implements BatchEntityPostSaveInterface
 {
-    // properties re-declared protected to prevent their direct use from an entity
+    // properties re-declared protected to prevent their direct use out from an entity
     use CascadeActiveRecordBatchProcessorTrait {
         persist as protected;
         commit as protected;
@@ -75,33 +75,36 @@ class AbstractSpySalesOrderItem extends BaseSpySalesOrderItem implements BatchEn
 ```
 With this implementation, the following code:
 ```php 
-public function updateOrCreateSalesOrderItems(array $salesOrderItemsData): vois
+class SalesEntityManager extends AbstractEntityManager implements SalesEntityManagerInterface
 {
-    // Use batch processor trait for efficient processing
-    foreach ($salesOrderItemsData as $orderItemData) {
-        // Find or create the sales order item
-        $salesOrderItem = $this->findOrCreateSalesOrderItem($orderItemData);
-
-        // Update item attributes
-        $this->updateSalesOrderItemAttributes($salesOrderItem, $orderItemData);
-
-        // Collect for batch processing
-        $this->persist($salesOrderItem);
-    }
-
-    // Commit all collected items in a single batch operation
+    public function updateOrCreateSalesOrderItems(array $salesOrderItemsData): void
+    {
+        // Use batch processor trait for efficient processing
+        foreach ($salesOrderItemsData as $orderItemData) {
+            // Find or create the sales order item
+            $salesOrderItem = $this->findOrCreateSalesOrderItem($orderItemData);
+    
+            // Update item attributes
+            $this->updateSalesOrderItemAttributes($salesOrderItem, $orderItemData);
+    
+            // Collect for batch processing
+            $this->persist($salesOrderItem);
+        }
+    
+        // Commit all collected items in a single batch operation
     $this->commit();
+    }
 }
 ```
 
 Performs the following actions:
 - Loads all required entities from the database in a single query.
 - Creates or updates `salesOrderItem` entities in a single batch. 
-- Creates related `OrderItemStateHistoryEntity` instances during the post-save process and saves them in a single operation after the main entity save is complete.
+- Creates related `OrderItemStateHistoryEntity` instances during the post-save process execution (method `batchPostSave` declared by `BatchEntityPostSaveInterface`) and saves them in a single operation after the main entity save is complete.
 
 ### BatchEntityHooksInterface
 - Enables `postSave` hooks similar to publish-and-synchronize (P&S) events.
-- Should be implemented for storage and search entities to ensure proper event handling during batch operations.
+- To ensure proper event handling during batch operations, the corresponding interface must be implemented for storage and search entities when used with `ActiveRecordBatchProcessorTrait` or` CascadeActiveRecordBatchProcessorTrait`. These traits do not automatically trigger Publish & Synchronize (P&S) events for storage or search entities. Therefore, explicit implementation is required to handle such events correctly during batch processing.
 
 #### Basic Usage Example:
 
@@ -120,14 +123,20 @@ class AbstractSpyProductOfferStorage extends BaseSpyProductOfferStorage implemen
 ```
 When saving the `SpyProductOfferStorage` entity using `ActiveRecordBatchProcessorTrait`, the P&S event is triggered after the batch save completes.
 
-#### Limitations and Suggestions:
+### Troubleshooting and error handling
+When the `commit()` method is called, each type of database operation is executed within its own dedicated transaction:
+
+- **Insert operations** are performed in a separate transaction.
+- **Update operations** are performed in another separate transaction.
+
+If an error occurs during the execution of any operation, the corresponding transaction is **rolled back**, and an **exception is thrown**. This ensures data consistency and prevents partial writes in case of failure.
+
+### Limitations and Suggestions:
 Limitations and Recommendations
 1. **Entity ID Access**: The `ActiveRecordBatchProcessorTrait` does not return entity IDs after saving. If you need the ID, perform a separate database query.
 
-2. **P&S Event Compatibility**: `ActiveRecordBatchProcessorTrait` does not trigger publish-and-synchronize events for storage or search entities. Always implement `BatchEntityHooksInterface` for each such entity.
+2. **Memory Usage**: The `$entityList` property stores entities in memory. To avoid memory issues, keep batch sizes reasonable and call `commit()` periodically.
 
-3. **Memory Usage**: The `$entityList` property stores entities in memory. To avoid memory issues, keep batch sizes reasonable and call `commit()` periodically.
+3. **Insert Limits**: The trait does not enforce a limit on the number of entities you can insert in one operation. However, databases have limits on payload size. Use sensible chunk sizes.
 
-4. **Insert Limits**: The trait does not enforce a limit on the number of entities you can insert in one operation. However, databases have limits on payload size. Use sensible chunk sizes.
-
-5. **Update Limits**: The default update limit is 200 entities per batch. This is defined by `ActiveRecordBatchProcessorTrait::UPDATE_CHUNK_SIZE`. You can override this limit by extending the trait in your `EntityManager`.
+4. **Update Limits**: The default update limit is 200 entities per batch. This is defined by `ActiveRecordBatchProcessorTrait::UPDATE_CHUNK_SIZE`. You can override this limit by extending the trait in your `EntityManager`.

@@ -104,4 +104,4 @@ To use translations, send requests with the `Accept-Language` header. For exampl
 
 ## Next step
 
-[Connect Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html)
+[Connect Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/connect-vertex.html)

@@ -17,8 +17,8 @@ redirect_from:
 - Laws, rules, and jurisdiction boundaries.
 - Special circumstances like tax holidays and product exemptions.
 
-When calculating taxes, Avalara takes the items' [warehouse addresses](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html#defining-a-warehouse-address) into account. Therefore, each order item you calculate a tax for, must have a warehouse assigned. To learn how warehouses are assigned to order items by default, see [Avalara: Warehouse assignment to order items](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html#avalara-warehouse-assignment-to-order-items).
+When calculating taxes, Avalara takes the items' [warehouse addresses](/docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html#defining-a-warehouse-address) into account. Therefore, each order item you calculate a tax for, must have a warehouse assigned. To learn how warehouses are assigned to order items by default, see [Avalara: Warehouse assignment to order items](/docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html#avalara-warehouse-assignment-to-order-items).
 
 ## Next steps
 
-[Install Avalara](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara.html)
+[Install Avalara](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/avalara/install-avalara.html)

@@ -10,7 +10,7 @@ related:
 
 ---
 
-To [install Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html), you need to integrate the [spryker/tax-app](https://github.com/spryker/tax-app) ACP connector module first.
+To [install Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html), you need to integrate the [spryker/tax-app](https://github.com/spryker/tax-app) ACP connector module first.
 
 To integrate the connector module for the Vertex app, follow these steps.
 
@@ -425,4 +425,4 @@ The refund functionality will only work if the OMS event is called `refund`.
 
 ## Next step
 
-[Integrate the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html)
+[Integrate the Vertex app](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html)

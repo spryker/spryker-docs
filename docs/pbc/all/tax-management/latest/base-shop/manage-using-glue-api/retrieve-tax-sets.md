@@ -25,7 +25,7 @@ This endpoint allows retrieving detailed information about tax sets of abstract 
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 ## Retrieve tax sets
 
@@ -150,7 +150,7 @@ Request sample: retrieve tax sets
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/product-tax-sets-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-tax-sets-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/product-tax-sets-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/product-tax-sets-response-attributes.md -->
 
 
 ## Possible errors
@@ -160,4 +160,4 @@ Request sample: retrieve tax sets
 | 310 | Could not get tax set, product abstract with provided id not found. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

@@ -9,7 +9,7 @@ related:
 
 ---
 
-After you have [integrated the ACP connector module](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html) for tax calculation, you can integrate the Vertex app.
+After you have [integrated the ACP connector module](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html) for tax calculation, you can integrate the Vertex app.
 
 Spryker doesn't have the same data model as Vertex, which is necessary for accurate tax calculations. Therefore, the integration requires project developers to add some missing information to the Quote object before sending a calculation request.
 
@@ -411,7 +411,7 @@ The following table reflects the mapping of the Spryker Quote and Order transfer
 
 ## Next step
 
-[Configure Vertex in the Back Office](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html)
+[Configure Vertex in the Back Office](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/connect-vertex.html)
 
 
 

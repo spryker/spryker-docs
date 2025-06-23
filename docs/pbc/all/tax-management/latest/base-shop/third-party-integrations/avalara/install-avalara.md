@@ -24,12 +24,12 @@ To enable the Avalara partner integration, use the [spryker-eco/avalara-tax](htt
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-|Cart | master | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
-|Product  | master | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Spryker Core | master | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+|Cart | master | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+|Product  | master | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 |Tax  | master | |
-| Inventory Management | master | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
-|Glue API: Checkout  | master | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)|
+| Inventory Management | master | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+|Glue API: Checkout  | master | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)|
 
 ## 1) Install the required modules
 
@@ -477,9 +477,9 @@ Make sure the data has been imported to `spy_product_abstract` and `spy_product`
 
 | INSTALLATION | REQUIRED FOR THE CURRENT INSTALLATION | INSTALLATION GUIDE |
 | ---  |---  |---  |
-|Avalara Tax + Product Option  |✓| [Install the Avalara Tax + Product Options feature](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara-product-options.html) |
-|Avalara Tax + Shipment |✓ |[Install Avalara Tax + the Shipment feature](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara-shipment.html) |
+|Avalara Tax + Product Option  |✓| [Install the Avalara Tax + Product Options feature](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/avalara/install-avalara-product-options.html) |
+|Avalara Tax + Shipment |✓ |[Install Avalara Tax + the Shipment feature](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/avalara/install-avalara-shipment.html) |
 
 ## Next steps
 
-[Install Avalara + Product Options](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara-product-options.html)
+[Install Avalara + Product Options](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/avalara/install-avalara-product-options.html)

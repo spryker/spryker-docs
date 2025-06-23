@@ -8,7 +8,7 @@ This document contains common issues related to the Vertex app.
 
 ## Your project is using the default Spryker Tax feature and not tax calculated by Vertex
 
-Make sure that you have added your configuration details. See [Configure Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html) for more details about configuring Vertex in the ACP catalog.
+Make sure that you have added your configuration details. See [Configure Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/connect-vertex.html) for more details about configuring Vertex in the ACP catalog.
 
 Also, make sure that the Vertex app is activated in the ACP catalog:
 

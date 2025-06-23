@@ -25,7 +25,7 @@ The Spryker Vertex app, based on the *Vertex O Series*, performs automatic, near
 
 For more information about how Vertex calculates taxes, see the [Vertex O Series website](https://www.vertexinc.com/solutions/products/vertex-indirect-tax-o-series).
 
-The Spryker Vertex app offers the following features that are worth considering when comparing it to the default Spryker [Tax Management capability](/docs/pbc/all/tax-management/{{page.version}}/tax-management.html):
+The Spryker Vertex app offers the following features that are worth considering when comparing it to the default Spryker [Tax Management capability](/docs/pbc/all/tax-management/latest/tax-management.html):
 
 - *Configure Vertex in Spryker*: Add your Vertex configurations, including your company code, in the App Composition catalog to connect your Spryker project to Vertex.
 - *Tax determination and calculation*: View tax estimates during checkout and calculated taxes before generating an invoice. This feature works across all regions, including countries where taxes are included in the price.
@@ -89,4 +89,4 @@ The Spryker OMS transition command is used as an execution point to send a full 
 
 ## Next steps
 
-[Install Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html)
+[Install Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html)

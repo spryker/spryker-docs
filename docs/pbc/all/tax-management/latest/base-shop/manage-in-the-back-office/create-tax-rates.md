@@ -21,7 +21,7 @@ related:
     link: docs/pbc/all/tax-management/page.version/base-shop/tax-feature-overview.html
 ---
 
-To create a [tax rate](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html) in the Back Office, follow the steps:
+To create a [tax rate](/docs/pbc/all/tax-management/latest/base-shop/tax-feature-overview.html) in the Back Office, follow the steps:
 
 1. Go to **Administration&nbsp;<span aria-label="and then">></span> Tax Rates**.
 2. On the **Overview of Tax Rates** page, click **Create Tax Rate**.
@@ -40,6 +40,6 @@ This opens the **Edit Tax Rate** page with a success message displayed.
 
 ## Next steps
 
-- Assign tax rates to tax sets by [creating tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html).
+- Assign tax rates to tax sets by [creating tax sets](/docs/pbc/all/tax-management/latest/base-shop/manage-in-the-back-office/create-tax-sets.html).
 
-- Assign tax rates to existing tax sets by [editing tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/edit-tax-sets.html).
+- Assign tax rates to existing tax sets by [editing tax sets](/docs/pbc/all/tax-management/latest/base-shop/manage-in-the-back-office/edit-tax-sets.html).

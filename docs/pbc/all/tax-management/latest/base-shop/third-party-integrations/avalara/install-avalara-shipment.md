@@ -28,8 +28,8 @@ Install the necessary features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Shipment | master | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
-| Avalara Tax | master | [Avalara Tax integration](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara.html) |
+| Shipment | master | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
+| Avalara Tax | master | [Avalara Tax integration](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/avalara/install-avalara.html) |
 
 ### Install the required modules
 
@@ -152,4 +152,4 @@ Make sure that the data has been imported to `spy_shipment_method`.
 
 ## Next steps
 
-[Apply Avalara tax codes](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/apply-avalara-tax-codes.html)
+[Apply Avalara tax codes](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/avalara/apply-avalara-tax-codes.html)

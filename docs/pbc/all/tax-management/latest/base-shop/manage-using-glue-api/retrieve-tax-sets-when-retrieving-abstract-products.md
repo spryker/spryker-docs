@@ -9,11 +9,11 @@ redirect_from:
   - /docs/pbc/all/tax-management/202204.0/base-shop/manage-using-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
 ---
 
-This document describes how to retrieve tax sets of abstract products. To retrieve full information of abstract products, see [Retrieve abstract products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html).
+This document describes how to retrieve tax sets of abstract products. To retrieve full information of abstract products, see [Retrieve abstract products](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html).
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 ## Retrieve tax sets of an abstract product
 
@@ -108,9 +108,9 @@ For detailed information on the modules that provide the API functionality and r
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/product-tax-sets-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-tax-sets-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/product-tax-sets-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-tax-sets-response-attributes.md -->
 
 ## Possible errors
 

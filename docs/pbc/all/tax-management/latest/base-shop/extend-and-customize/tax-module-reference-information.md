@@ -151,4 +151,4 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 
 ## Migration guide
 
-If you're migrating the Tax module from version 2 to version 3, you need to follow the steps described in the [Upgrade the Tax module](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-tax-module.html).
+If you're migrating the Tax module from version 2 to version 3, you need to follow the steps described in the [Upgrade the Tax module](/docs/pbc/all/tax-management/latest/base-shop/install-and-upgrade/upgrade-the-tax-module.html).

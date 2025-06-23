@@ -12,7 +12,7 @@ redirect_from:
     - /docs/pbc/all/tax-management/202204.0/base-shop/manage-in-the-back-office/edit-tax-sets.html
 ---
 
-To edit a [tax set](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html) in the Back Office, follow the steps:
+To edit a [tax set](/docs/pbc/all/tax-management/latest/base-shop/tax-feature-overview.html) in the Back Office, follow the steps:
 
 1. Go to **Administration&nbsp;<span aria-label="and then">></span> Tax Sets**.
     This opens the **Overview of Tax Sets** page.
@@ -28,4 +28,4 @@ To edit a [tax set](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
 | NAME | You use the name when assigning the tax set to products, delivery methods, and thresholds. |
-| TAX RATES | Tax rates to assign to the tax set. For instructions on creating tax rates, see [Create tax rates](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-rates.html). |
+| TAX RATES | Tax rates to assign to the tax set. For instructions on creating tax rates, see [Create tax rates](/docs/pbc/all/tax-management/latest/base-shop/manage-in-the-back-office/create-tax-rates.html). |

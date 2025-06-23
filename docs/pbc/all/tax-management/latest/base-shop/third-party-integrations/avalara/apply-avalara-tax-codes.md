@@ -13,9 +13,9 @@ To automate tax calculations for your shop, you need to apply the tax codes by i
 
 | ENTITY | IMPORT FILE DETAILS |
 |-|-|
-| Abstract product | [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html) |
-| Product option | [File details: product_option.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html) |
-| Shipment | [File details: shipment.csv](/docs/pbc/all/tax-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html) |
+| Abstract product | [File details: product_abstract.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html) |
+| Product option | [File details: product_option.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html) |
+| Shipment | [File details: shipment.csv](/docs/pbc/all/tax-management/latest/base-shop/import-and-export-data/import-file-details-shipment.csv.html) |
 
 {% info_block infoBox %}
 

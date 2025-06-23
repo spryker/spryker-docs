@@ -10,8 +10,6 @@ redirect_from:
 
 The *Order Amendment* feature enables customers to make changes to previously placed orders before they enter processing. Customers can adjust items, quantities, delivery details, and payment options.
 
-
-
 Only registered customers can make changes to placed orders because guest users don't have access to order history. 
 
 A customer can change an order once it reaches a state that allows amendments. By default, customers can initiate an amendment when an order is in the `grace period started` state.
@@ -19,31 +17,27 @@ A customer can change an order once it reaches a state that allows amendments. B
 You can customize which states allow amendments in the state machine. For instructions, on customizing state machines, see [Configure OMS](https://docs.spryker.com/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature#set-up-configuration).
 
 
-
-
-## Grace period
-
-A *grace period* lets you restrict order amendments to a certain time period after an order reaches an amendable state. For example, you can allow customers to change orders for two hours. This can be useful for shops that process orders quickly but want to give their customers enough time to change orders if needed, preventing order cancellations during processing. 
-
-For instructions on configuring the grace period, see [Install the Order Amendment feature](https://docs.spryker.com/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature#set-up-configuration).
-
-
 ## Order amendment flow
 
 A customer can change their order as follows:
 
 1. Customer clicks the **Edit Order** button
-2. One of the following order amendment strategies is applied:
-  - Replace: All current cart items are replaced with the items from the order the customer wants to amend
-  - New: A new cart is created with the items from the amended order
+2. This adds the order's items to cart and opens the cart page
 2. Customers can add, remove, or modify items in the cart
 3. Checkout proceeds via the standard flow.
 4. Upon confirmation, the original order is updated with the amendments.
 
+
+## Cart strategies
+
+Order amendment uses the cart functionality as an interface. When a customer initiates an amendment, the order is carried over to cart for making changes. There're two default strategies to handle this process:
+
+- Replace: All current cart items are replaced with the items from the order the customer wants to amend
+- New: A new cart is created with the items from the amended order
+
 On the project level, you can add other strategies to process order amendment.
 
-
-When a customer initiates an amendment, the following details are carried over from the order to cart:
+The following details are carried over from the order to cart:
 - B2B/B2B Marketplace: Order reference
 - Cart notes
 - Item notes
@@ -51,6 +45,16 @@ When a customer initiates an amendment, the following details are carried over f
 - Custom order reference
 
 You can customize what details are carried over on the project level.
+
+
+## Products
+
+When a customer initiates an order amendment, the following happens to products:
+
+- Abstract and concrete products are added to cart
+- Out-of-stock, disabled, and removed products are excluded from the cart
+- [Configurable products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html) are reset, and the customer needs to configure them again
+
 
 ## Pricing
 
@@ -64,27 +68,19 @@ During the order amendment process, the prices for cart items are displayed acco
 
 Orders created through [request for quote](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html) can't be amended.
 
-## Gift Cards and Vouchers
 
-- If a **gift card** was used, it is unapplied during amendment. Its balance is restored and re-applied after the process completes.
-- The same applies to **limited-use vouchers**.
+## Gift cards and vouchers
+
+When a customer initiates order amendment, gift cards and vouchers are unapplied from the order. The balance of all unapplied gift cards and vouchers is restored once order amendment is complete. They can be used for new orders but not for the order they were unapplied from.
 
 For better user experience, we recommend implementing a way to inform customers about gift cards and vouchers being unapplied.
 
-## Products
 
-When a customer initiates an order amendment, the following happens to products:
+## Grace period
 
-- Abstract and concrete products are added to cart
-- Out-of-stock, disabled, and removed products are excluded from the cart
-- [Configurable products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html) are reset, and the customer needs to configure them again
+A *grace period* lets you restrict order amendments to a certain time period after an order reaches an amendable state. For example, you can allow customers to change orders for two hours. This can be useful for shops that process orders quickly but want to give their customers enough time to change orders if needed, preventing order cancellations during processing. 
 
-## Notifications
-
-Email notifications for order amendments can be configured to reflect changes and confirmation steps.
-
----
-
+For instructions on configuring the grace period, see [Install the Order Amendment feature](https://docs.spryker.com/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature#set-up-configuration).
 
 
 ## Related Developer documents

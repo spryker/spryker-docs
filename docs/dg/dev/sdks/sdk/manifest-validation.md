@@ -17,5 +17,5 @@ spryker-sdk sdk:validate:task
 ```
 
 Task validation displays all the errors in the output. For details about the structure of tasks and task sets, see the following documents:
- - [Task structure](/docs/dg/dev/sdks/sdk/task.html)
- - [Task set structure](/docs/dg/dev/sdks/sdk/task-set.html)
+- [Task structure](/docs/dg/dev/sdks/sdk/task.html)
+- [Task set structure](/docs/dg/dev/sdks/sdk/task-set.html)

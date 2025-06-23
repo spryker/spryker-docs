@@ -36,35 +36,35 @@ related:
 RatePAY is a German Fintech company that offers intelligent payment solutions with 100% loss protection for the handling of the most popular paylater models like invoice and instalments on the internet for the DACH region. Our easy payment methods are among the most popular payment solutions in Germany. One of the reasons lies in the flexibility of our products, since the customer pays only for the goods he decides to keep. As one of only a few payment service companies, RatePAY has been granted a license under the German Payment Services Oversight Act (ZAG) by the Federal Financial Supervisory Authority (BaFin) and is now able to offer customers an even more comprehensive service. Founded in December 2009, the start-up from Berlin has developed itself into a profitable company with more than 140 employees. In April 2017, RatePAY was acquired by the investors Advent International and Bain Capital.
 
 YOUR ADVANTAGES:
-* Complete solutions for unsecured methods of payment as invoice, instalments, direct debit and prepayment
-* White label solution
-* B2B and B2C customers
-* Risk and customer management, customer service
-* Individual service packages for large online retailers
-* No hidden charges for buyers and traders
-* Continuous development of innovative features
-* Seamless integration
+- Complete solutions for unsecured methods of payment as invoice, instalments, direct debit and prepayment
+- White label solution
+- B2B and B2C customers
+- Risk and customer management, customer service
+- Individual service packages for large online retailers
+- No hidden charges for buyers and traders
+- Continuous development of innovative features
+- Seamless integration
 
 RatePAY is an online service provider that allows merchants to provide their customers secure, customized payment methods. It bears the full risk and takes over the complete processing.
 
 RatePAY provides four methods of payment
-* Invoice
-* Prepayment
-* Direct Debit (ELV)
-* Installment
+- Invoice
+- Prepayment
+- Direct Debit (ELV)
+- Installment
 
 ## Related Developer guides
 
-* [RatePay Core module structure diagram](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay-core-module-structure-diagram.html)
-* [RatePay state machines](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay-state-machines.html)
-* [Integrating the Direct Debit payment method for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html)
-* [Integrating the Installment payment method for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-installment-payment-method-for-ratepay.html)
-* [Integrating the Invoice payment method for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-invoice-payment-method-for-ratepay.html)
-* [Integrating the Prepayment payment method for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-prepayment-payment-method-for-ratepay.html)
-* [Disabling address updates from the backend application for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/disable-address-updates-from-the-backend-application-for-ratepay.html)
-* [RatePay facade methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay-facade-methods.html)
-* [RatePay payment workflow](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay-payment-workflow.html)
-* [RatePay state machine commands and conditions](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html)
+- [RatePay Core module structure diagram](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay-core-module-structure-diagram.html)
+- [RatePay state machines](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay-state-machines.html)
+- [Integrating the Direct Debit payment method for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html)
+- [Integrating the Installment payment method for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-installment-payment-method-for-ratepay.html)
+- [Integrating the Invoice payment method for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-invoice-payment-method-for-ratepay.html)
+- [Integrating the Prepayment payment method for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-prepayment-payment-method-for-ratepay.html)
+- [Disabling address updates from the backend application for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/disable-address-updates-from-the-backend-application-for-ratepay.html)
+- [RatePay facade methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay-facade-methods.html)
+- [RatePay payment workflow](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay-payment-workflow.html)
+- [RatePay state machine commands and conditions](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html)
 ---
 
 ## Copyright and Disclaimer

@@ -36,7 +36,7 @@ HydrateOrderPluginInterface—this is an action which happens when the `SalesFac
 
 There are already few plugins provided:
 
-* `DiscountOrderHydratePlugin`—populates `OrderTransfer` with discount related data as it was stored when order is placed.
-* `ProductOptionOrderHydratePlugin`—populates `OrderTransfer` with product option related data.
-* `ProductBundleOrderHydratePlugin`—populates `OrderTransfer` with product bundle related data.
-* `ShipmentOrderHydratePlugin`—populates `OrderTransfer` with shipment related data.
+- `DiscountOrderHydratePlugin`—populates `OrderTransfer` with discount related data as it was stored when order is placed.
+- `ProductOptionOrderHydratePlugin`—populates `OrderTransfer` with product option related data.
+- `ProductBundleOrderHydratePlugin`—populates `OrderTransfer` with product bundle related data.
+- `ShipmentOrderHydratePlugin`—populates `OrderTransfer` with shipment related data.

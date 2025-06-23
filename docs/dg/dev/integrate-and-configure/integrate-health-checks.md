@@ -39,8 +39,8 @@ To run a health check, either open the URL of an application endpoint in a brows
 
 Depending on the application status, you will see:
 
-* status code 200 and the list of application services with the `available` status;
-* status code 503 and the list of application services where at least one service has the `unavailable` status.
+- status code 200 and the list of application services with the `available` status;
+- status code 503 and the list of application services where at least one service has the `unavailable` status.
 
 ## Running Application Service Health Checks
 
@@ -173,7 +173,7 @@ class HealthCheckDependencyProvider extends SprykerHealthCheckDependencyProvider
 | SessionHealthCheckPlugin | Performs a health check for the Session service. | None | Spryker\Yves\Session\Plugin\HealthCheck |
 | KeyValueStoreHealthCheckPlugin | Performs a health check for the Storage service. | None | Spryker\Yves\Storage\Plugin\HealthCheck |
 | SearchHealthCheckPlugin |Performs a health check for the Search service.| None | Spryker\Yves\Search\Plugin\HealthCheck |
-| ZedRequestHealthCheckPlugin | Performs a health check for the ZedRequest service. | None | Spryker\Yves\ZedRequest\Plugin\HealthCheck |    
+| ZedRequestHealthCheckPlugin | Performs a health check for the ZedRequest service. | None | Spryker\Yves\ZedRequest\Plugin\HealthCheck |
 
 ```php
 <?php

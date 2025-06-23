@@ -74,6 +74,7 @@ spryker-sdk --mode=docker sdk --help
 ```
 
 ## Manage the project configuration
+
 For details on the project configuration management, see the [Symfony configuration docs](https://symfony.com/doc/current/configuration.html).
 
 ## Troubleshooting issues with the Docker container

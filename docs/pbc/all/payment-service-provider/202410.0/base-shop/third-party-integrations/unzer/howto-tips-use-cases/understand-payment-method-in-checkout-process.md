@@ -22,9 +22,9 @@ Whenever a customer goes through the checkout process, Unzer is called to know a
 
 All payment methods enabled for a marketplace business model in Unzer are displayed:
 
-* Credit Card
-* Sofort
-* Unzer Bank Transfer
+- Credit Card
+- Sofort
+- Unzer Bank Transfer
 
 We display all the payment methods enabled for the merchant that are not yet compatible with a marketplace business model.
 
@@ -32,21 +32,21 @@ We display all the payment methods enabled for the merchant that are not yet com
 
 In your Unzer account, the following payment methods are enabled for the marketplace business model:
 
-* Credit Card
-* Sofort
+- Credit Card
+- Sofort
 
 For merchant A, the following payment methods are enabled:
 
-* Credit Card
-* PayPal
-* Apple Pay
+- Credit Card
+- PayPal
+- Apple Pay
 
 The customers in the checkout process see the following payment methods in the checkout process:
 
-* Credit Card
-* Sofort
-* PayPal
-* Apple Pay
+- Credit Card
+- Sofort
+- PayPal
+- Apple Pay
 
 {% info_block infoBox %}
 
@@ -60,32 +60,32 @@ Based on the preceding example, Spryker uses the marketplace Unzer credentials f
 
 All payment methods enabled for a marketplace business model in Unzer are displayed:
 
-* Credit Card
-* Sofort
-* Unzer Bank Transfer
+- Credit Card
+- Sofort
+- Unzer Bank Transfer
 
 #### Example
 
 In your Unzer account, the following payment methods are enabled for the marketplace business model.
 
-* Credit Card
-* Unzer Bank Transfer
+- Credit Card
+- Unzer Bank Transfer
 
 For merchant A, the following payment methods are enabled:
 
-* Credit Card
-* PayPal
-* Apple Pay
+- Credit Card
+- PayPal
+- Apple Pay
 
 For merchant B, the following payment methods are enabled:
 
-* Credit Card
-* Google Pay
+- Credit Card
+- Google Pay
 
 The customers in the checkout process see the following payment methods in the checkout process:
 
-* Credit Card
-* Unzer Bank Transfer
+- Credit Card
+- Unzer Bank Transfer
 
 {% info_block infoBox %}
 

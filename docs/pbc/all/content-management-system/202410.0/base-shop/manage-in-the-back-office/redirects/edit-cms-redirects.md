@@ -17,9 +17,9 @@ To edit a CMS redirect in the Back Office, follow the steps:
 1. Go to **Content&nbsp;<span aria-label="and then">></span> Redirects**.
 2. On the **Redirects** page, click **Edit** next to the redirect you want to update.
 3. On the **Edit CMS Redirect** page, update any of the following:
-    * **URL**
-    * **TO URL**
-    * **REDIRECT STATUS CODE**
+    - **URL**
+    - **TO URL**
+    - **REDIRECT STATUS CODE**
 4. To save the changes, click **Save**.
   This opens the **Redirects** page with a success message displayed. The changes are reflected in the list of redirects.
 

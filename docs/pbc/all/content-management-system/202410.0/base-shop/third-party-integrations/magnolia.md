@@ -23,10 +23,10 @@ Magnolia - the CMS that connects content and commerce. Magnolia CMS is a platfor
 
  YOUR ADVANTAGES:
 
-* **Enterprise grade** Magnolia has the robust features needed for enterprise-scale multi-everything digital experiences.
-* **Flexible** Robust integration capabilities let you enjoy the benefits of headless while still building on your existing solutions.
-* **Engaging personalization** Magnolia's personalization tools build on the easy-to-use authoring tools, making personalizing content as easy as creating it.
-* **Powerful**Combine features to produce campaigns driven by date and visitor demographics.
+- **Enterprise grade** Magnolia has the robust features needed for enterprise-scale multi-everything digital experiences.
+- **Flexible** Robust integration capabilities let you enjoy the benefits of headless while still building on your existing solutions.
+- **Engaging personalization** Magnolia's personalization tools build on the easy-to-use authoring tools, making personalizing content as easy as creating it.
+- **Powerful**Combine features to produce campaigns driven by date and visitor demographics.
 
 ---
 

@@ -22,9 +22,9 @@ This document describes how to create user roles in the Back Office.
 
 ## Prerequisites
 
-* If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
+- If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
 
-* Review the [reference information](#reference-information-create-user-roles) before you start, or look up the necessary information as you go through the process.
+- Review the [reference information](#reference-information-create-user-roles) before you start, or look up the necessary information as you go through the process.
 
 ## Create user roles
 
@@ -48,7 +48,7 @@ This document describes how to create user roles in the Back Office.
 | NAME | Unique identifier of the role. You use this name to assign roles when managing users. |
 | BUNDLE | Depending on the **PERMISSION**, allows or denies access to a section of the Back Office. You can check this value by going to the needed section and looking it up in the URL. For example, in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`, `product-attribute-gui` is a bundle. |
 | CONTROLLER | Depending on the **PERMISSION**, allows or denies access to a subsection of the Back Office. You can check this value by going to the needed subsection and looking it up in the URL. For example, in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`, `attribute` is a controller. |
-| ACTION | Depending on the **PERMISSION**, allows or denies access to making actions. You can check this value by going to the needed action and looking it up in the URL. For example, in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`, `create` is an action.
+| ACTION | Depending on the **PERMISSION**, allows or denies access to making actions. You can check this value by going to the needed action and looking it up in the URL. For example, in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`, `create` is an action. |
 | PERMISSION | Denies or allows access to the **BUNDLE**, **CONTROLLER**, and **ACTION**. |
 
 **Tips and tricks**
@@ -97,6 +97,7 @@ See the example of the `navigation.xml` file of the AvailabilityGui module:
     </product>
 </config>
 ```
+
 </details>
 
 

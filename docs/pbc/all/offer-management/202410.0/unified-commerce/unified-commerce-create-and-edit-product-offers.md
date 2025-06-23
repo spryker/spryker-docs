@@ -9,9 +9,9 @@ This document describes how to create and edit product offers in the Merchant Po
 
 ## Prerequisites
 
-* To start managing product offers, in the Merchant Portal, go to **Offers**.
+- To start managing product offers, in the Merchant Portal, go to **Offers**.
 
-* Review the [reference information](#reference-information-create-and-edit-product-offers) before you start, or look up the necessary information as you go through the process.
+- Review the [reference information](#reference-information-create-and-edit-product-offers) before you start, or look up the necessary information as you go through the process.
 
 ## Create a product offer
 
@@ -27,17 +27,20 @@ This document describes how to create and edit product offers in the Merchant Po
 6. Enter a **Quantity**.
 7. Optional: To always display the product offer as available on the Storefront, select **Always in Stock**.
 8. To add prices, in the **Price** section, do the following:
-  1. Click **Add**.
-  2. Select a **STORE**.
-  3. Select a **CURRENCY**.
-  4. Optional: Enter any of the prices:
-      * **NET DEFAULT**
-      * **GROSS DEFAULT**
-      * **NET ORIGINAL**
-      * **GROSS ORIGINAL**
 
-  5. Optional: Enter a **VOLUME QUANTITY**.
-  6. Repeat steps 1-5 until you add all the needed prices.
+    1. Click **Add**.
+    2. Select a **STORE**.
+    3. Select a **CURRENCY**.
+    4. Optional: Enter any of the prices:
+  
+        - **NET DEFAULT**
+        - **GROSS DEFAULT**
+        - **NET ORIGINAL**
+        - **GROSS ORIGINAL**
+
+    5. Optional: Enter a **VOLUME QUANTITY**.
+    6. Repeat steps 1-5 until you add all the needed prices.
+  
 9. Optional: Select **Validity Dates**.
 10. For **SERVICE POINT**, start typing and select a service point.
 11. Select one or more **SERVICES**.

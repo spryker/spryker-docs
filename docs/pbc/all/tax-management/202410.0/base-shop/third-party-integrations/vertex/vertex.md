@@ -19,9 +19,9 @@ The Spryker-Vertex integration is part of the tax Category of Spryker's App Comp
 
 The Spryker Vertex app, based on the *Vertex O Series*, performs automatic, near-real-time tax calculations at the point of purchase while accounting for the following:
 
-* Tax rates in each state, county, and city.  
-* Laws, rules, and jurisdiction boundaries.  
-* Special circumstances like tax holidays and product exemptions.
+- Tax rates in each state, county, and city.  
+- Laws, rules, and jurisdiction boundaries.  
+- Special circumstances like tax holidays and product exemptions.
 
 For more information about how Vertex calculates taxes, see the [Vertex O Series website](https://www.vertexinc.com/solutions/products/vertex-indirect-tax-o-series).
 
@@ -44,6 +44,7 @@ The Spryker Vertex app offers the following features that are worth considering 
 </figure>
 
 ## Supported Use Cases and Business Models
+
 1. Tax Calculation in Regions where taxes are excluded from prices. For example, in the US and Canada.
 2. Tax Calculation in Regions where taxes are included in the price. For example, in the EU.
 3. Marketplace: Every line item sent from Spryker to Vertex includes the customer's shipping address and the merchant's warehouse address, which Vertex uses for tax calculation.

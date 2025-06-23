@@ -17,7 +17,7 @@ The following video shows how a user can interact with different elements of a c
 
 ## Cart validation and performance
 
-On the cart page, the cart is validated when you open or refresh the page. Cart items are validated when you open the page, refresh it, or perform any actions that trigger a dynamic cart update. For projects that expect big numbers of cart items, such as in the B2B model, we recommend disabling cart item validation to improve performanece. Disabled cart item validation introduces a minimal risk of an item becoming unavailable as a customer finalizes their purchase, but enables more smooth interactions with the cart. 
+On the cart page, the cart is validated when you open or refresh the page. Cart items are validated when you open the page, refresh it, or perform any actions that trigger a dynamic cart update. For projects that expect big numbers of cart items, such as in the B2B model, we recommend disabling cart item validation to improve performanece. Disabled cart item validation introduces a minimal risk of an item becoming unavailable as a customer finalizes their purchase, but enables more smooth interactions with the cart.
 
 For instructions on disabling cart item validation, see [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html).
 

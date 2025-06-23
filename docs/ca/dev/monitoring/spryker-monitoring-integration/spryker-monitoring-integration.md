@@ -57,6 +57,7 @@ hc_rabbitmq: Reports 0 or 1 for RabbitMQ health.
 #### Metrics with dimensions
 
 These metrics have the following labels:
+
 ```yaml
 hc_rabbitmq_message_count_sum: A count of RabbitMQ messages [dimension_queue, dimension_virtualhost].
 hc_jenkins_builds_success_build_count_total.count: A count of successful Jenkins jobs [jenkins_job].

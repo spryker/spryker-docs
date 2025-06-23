@@ -24,10 +24,10 @@ related:
 
 The Episerver module has four different commands:
 
-* `\SprykerEco\Zed\Episerver\Communication\Plugin\Oms\Command\EpiserverNewOrderPlugin`
-* `\SprykerEco\Zed\Episerver\Communication\Plugin\Oms\Command\EpiserverOrderCanceledPlugin`
-* `\SprykerEco\Zed\Episerver\Communication\Plugin\Oms\Command\EpiserverPaymentNotReceivedPlugin`
-* `\SprykerEco\Zed\Episerver\Communication\Plugin\Oms\Command\EpiserverShippingConfirmationPlugin`
+- `\SprykerEco\Zed\Episerver\Communication\Plugin\Oms\Command\EpiserverNewOrderPlugin`
+- `\SprykerEco\Zed\Episerver\Communication\Plugin\Oms\Command\EpiserverOrderCanceledPlugin`
+- `\SprykerEco\Zed\Episerver\Communication\Plugin\Oms\Command\EpiserverPaymentNotReceivedPlugin`
+- `\SprykerEco\Zed\Episerver\Communication\Plugin\Oms\Command\EpiserverShippingConfirmationPlugin`
 
 
 You can use these commands in `\Pyz\Zed\Oms\OmsDependencyProvider::getCommandPlugins`

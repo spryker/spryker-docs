@@ -29,20 +29,21 @@ Unlike guest carts, carts of registered users have an unlimited lifetime. If the
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html)
-* [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
-* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
-* [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
-* [Shared Carts feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)
+- [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+- [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html)
+- [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
+- [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+- [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
+- [Shared Carts feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)
 
 ## Create a cart
 
 To create a cart, send the request:
 
-***
+---
 `POST` **/carts**
-***
+
+---
 
 {% info_block infoBox %}
 
@@ -111,6 +112,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts`
         }
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
@@ -121,9 +123,10 @@ Request sample: `POST https://glue.mysprykershop.com/carts`
 
 To retrieve all carts, send the request:
 
-***
+---
 `GET` **/carts**
-***
+
+---
 
 {% info_block infoBox "Note" %}
 
@@ -141,9 +144,9 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 {% info_block infoBox "Included resources" %}
 
-* To retrieve all the product options of the item in a cart, include `items`, `concrete-products`, and `product-options`.
-* To retrieve information about the company user a cart is shared with, include `shared-carts` and `company-users`.
-* To retrieve product labels of the products in a cart, include `items`, `concrete-products`, and `product-labels`.
+- To retrieve all the product options of the item in a cart, include `items`, `concrete-products`, and `product-options`.
+- To retrieve information about the company user a cart is shared with, include `shared-carts` and `company-users`.
+- To retrieve product labels of the products in a cart, include `items`, `concrete-products`, and `product-labels`.
 
 {% endinfo_block %}
 
@@ -173,7 +176,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         "self": "https://glue.mysprykershop.com/carts"
     }
 }
-```    
+```
+
 </details>
 
 <details>
@@ -239,7 +243,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         "self": "https://glue.mysprykershop.com/carts"
     }
 }
-```   
+```
+
 </details>
 
 
@@ -538,7 +543,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -678,7 +684,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -818,7 +825,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -1059,7 +1067,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -1198,7 +1207,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -1269,7 +1279,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -1523,7 +1534,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -1684,6 +1696,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
     ]
 }
 ```
+
 </details>
 
 
@@ -1720,9 +1733,10 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 To retrieve a particular cart, send the request:
 
-***
+---
 `GET` **/carts/*{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}***
-***
+
+---
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
@@ -1740,8 +1754,8 @@ To retrieve a particular cart, send the request:
 
 {% info_block infoBox "Included resources" %}
 
-* To retrieve all the product options of the item in a cart, include `items`, `concrete-products`, and `product-options`.
-* To retrieve product labels of the products in a cart, include `items`, `concrete-products`, and `product-labels`.
+- To retrieve all the product options of the item in a cart, include `items`, `concrete-products`, and `product-options`.
+- To retrieve product labels of the products in a cart, include `items`, `concrete-products`, and `product-labels`.
 
 {% endinfo_block %}
 
@@ -1798,7 +1812,8 @@ To retrieve a particular cart, send the request:
         }
     }
 }
-```    
+```
+
 </details>
 
 
@@ -1927,7 +1942,8 @@ To retrieve a particular cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -1989,7 +2005,8 @@ To retrieve a particular cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -2052,7 +2069,8 @@ To retrieve a particular cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -2130,6 +2148,7 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -2196,7 +2215,8 @@ To retrieve a particular cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -2259,7 +2279,8 @@ To retrieve a particular cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -2325,7 +2346,8 @@ To retrieve a particular cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -2574,7 +2596,8 @@ To retrieve a particular cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -2646,6 +2669,7 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -2801,6 +2825,7 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -2849,6 +2874,7 @@ To retrieve a particular cart, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -2922,8 +2948,8 @@ You can edit the name of the cart, change the currency and price mode. To do tha
 
 {% info_block infoBox "Info" %}
 
-* You can change the price mode of an empty cart but not the one that has items in it.
-* Currency and store can be changed for an empty cart and for a cart with items anytime.
+- You can change the price mode of an empty cart but not the one that has items in it.
+- Currency and store can be changed for an empty cart and for a cart with items anytime.
 
 {% endinfo_block %}
 

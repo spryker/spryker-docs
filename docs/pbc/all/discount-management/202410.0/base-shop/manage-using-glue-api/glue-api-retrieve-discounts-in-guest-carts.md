@@ -15,8 +15,8 @@ This document describes how to retrieve cart rules, vouchers, and promotional it
 
 For detailed information on the modules that provide the API's functionality and any related installation instructions, see:
 
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+- [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+- [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
 
 ## Retrieve a guest cart
 
@@ -135,6 +135,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 
@@ -205,6 +206,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
+
 </details>
 
 <a name="guest-cart-response-attributes"></a>

@@ -126,6 +126,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 	}
 }
 ```
+
 </details>
 
 
@@ -319,6 +320,7 @@ To verify that `OrderRelationshipByOrderReferencePlugin` is set up correctly, ma
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}

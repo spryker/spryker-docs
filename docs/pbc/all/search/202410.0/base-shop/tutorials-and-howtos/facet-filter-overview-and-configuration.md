@@ -47,7 +47,7 @@ Facets provide aggregated data based on a search query. For example, you need to
 
 `CatalogClient` enables creating a search query when a request is submitted. `CatalogClient` exposes the operation:
 
-* `catalogSearch($searchString, array $requestParameters = [])`
+- `catalogSearch($searchString, array $requestParameters = [])`
 
 The operation can contain other facet filters (such as color or size)  in the request.
 

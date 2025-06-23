@@ -425,8 +425,8 @@ console navigation:build-cache
 {% info_block warningBox "Verification" %}
 
 Make sure that the Back Office navigation menu has the following items:
-* **Marketplace&nbsp;<span aria-label="and then">></span> Orders**
-* **Sales&nbsp;<span aria-label="and then">></span> My Orders**
+- **Marketplace&nbsp;<span aria-label="and then">></span> Orders**
+- **Sales&nbsp;<span aria-label="and then">></span> My Orders**
 
 {% endinfo_block %}
 
@@ -503,7 +503,7 @@ Make sure the following changes have been triggered in transfer objects:
 
 **data/import/common/common/glossary.csv**
 
-```
+```csv
 merchant_sales_order.merchant_order_id,Merchant Order ID,en_US
 merchant_sales_order.merchant_order_id,Händlerbestell-ID,de_DE
 ```
@@ -532,7 +532,7 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 
 **data/import/common/common/marketplace/merchant_oms_process.csv**
 
-```
+```csv
 merchant_reference,merchant_oms_process_name
 MER000001,MainMerchantStateMachine
 MER000002,MerchantDefaultStateMachine
@@ -680,7 +680,7 @@ actions:
 
 2. Register the following plugins to enable data export.
 
- PLUGIN | SPECIFICATION | PREREQUISITES| NAMESPACE|
+| PLUGIN | SPECIFICATION | PREREQUISITES| NAMESPACE|
 | --------------- | -------------- | ------ | -------------- |
 | MerchantOrderDataEntityExporterPlugin | Exports merchant order data. |   | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport|
 | MerchantOrderItemDataEntityExporterPlugin | Exports merchant order items data. |     | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
@@ -1094,11 +1094,11 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Make sure the following applies:
 
-* After an order was split, the Merchant State Machine is executed on merchant orders.
+- After an order was split, the Merchant State Machine is executed on merchant orders.
 
-* When retrieving an order in the *Sales* module, it's split by the merchant order and the order state is derived from the Merchant State Machine.
+- When retrieving an order in the *Sales* module, it's split by the merchant order and the order state is derived from the Merchant State Machine.
 
-* After splitting an order into merchant orders, their IDs are displayed on the order details page on the Storefront.
+- After splitting an order into merchant orders, their IDs are displayed on the order details page on the Storefront.
 
 {% endinfo_block %}
 

@@ -46,7 +46,7 @@ related:
     link: docs/pbc/all/search/page.version/base-shop/best-practices/usage-driven-schema-and-document-structure.html
 ---
 
-_Full-text search_ is a feature where a user enters arbitrary text into a search field and then gets documents relevant to that query. It is normally combined with faceted navigation. In the following example, a user searches for "hammer" and then further filters for hammer weights of 2000 grams and prices between 10€ and 50€:
+*Full-text search* is a feature where a user enters arbitrary text into a search field and then gets documents relevant to that query. It is normally combined with faceted navigation. In the following example, a user searches for "hammer" and then further filters for hammer weights of 2000 grams and prices between 10€ and 50€:
 
 ![Full-text search](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Full-Text+Search/fulltext-search.png)
 
@@ -127,9 +127,9 @@ Elasticsearch is now going to take a textual field (in this case `full_text`) an
 
 The following is an example of a query that does the following:
 
-1. Matches a broad number of products using an analyzer that strips most information from the text (_must_ part of the bool query)
+1. Matches a broad number of products using an analyzer that strips most information from the text (*must* part of the bool query)
 
-2. Scores products higher that are also matching other analyzers (those that match the search term but without stemming and decompounding) (_should_ part of the bool query)
+2. Scores products higher that are also matching other analyzers (those that match the search term but without stemming and decompounding) (*should* part of the bool query)
 
 ```js
 {

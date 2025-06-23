@@ -31,6 +31,7 @@ Before proceeding with the integration, make sure you have [installed and config
 ## Frontend integration
 
 **src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**
+
 ```js
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
 
@@ -121,6 +122,7 @@ Before proceeding with the integration, make sure you have [installed and config
 ```
 
 Add to `summary.twig`:
+
 ```js
 {% raw %}{%{% endraw %} define data = {
     ...

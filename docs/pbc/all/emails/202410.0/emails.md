@@ -35,9 +35,9 @@ Automated Emails regarding order status, shipping, or transactions are just a fe
 
 The following links provide additional information about the Mail module, plugins, and procedures:
 
-* `MailTypePlugin` creation and registration—[HowTo: Create and register a `MailTypePlugin`](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mailtypeplugin.html)
-* `MailProviderPlugin` general overview and the registration procedure—[HowTo: Create and register a mail provider](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mail-provider.html)
-* The tutorial that helps understand the procedure for sending an email—[Tutorial: Sending a mail](/docs/pbc/all/emails/{{page.version}}/tutorial-sending-an-email.html).
+- `MailTypePlugin` creation and registration—[HowTo: Create and register a `MailTypePlugin`](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mailtypeplugin.html)
+- `MailProviderPlugin` general overview and the registration procedure—[HowTo: Create and register a mail provider](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mail-provider.html)
+- The tutorial that helps understand the procedure for sending an email—[Tutorial: Sending a mail](/docs/pbc/all/emails/{{page.version}}/tutorial-sending-an-email.html).
 
 
 ## Related Developer documents

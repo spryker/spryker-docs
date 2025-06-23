@@ -49,7 +49,7 @@ On the **Change password** drawer, you see the following attributes:
 
 | ATTRIBUTE        | DESCRIPTION        |
 | ---------------- | ---------------------- |
-| Current password | Field to enter the current password.|   
+| Current password | Field to enter the current password.|
 |  New password | Field to enter the new password for the Merchant Portal user account. |
 | Repeat new password | Field to confirm the new password.|
 
@@ -61,10 +61,10 @@ To change the interface language of the Merchant Portal, on **My account** page,
 ## Reference information
 
 This section describes attributes you see when performing the following actions:
-* Accessing **My account** in the Merchant Portal.
-* Changing the personal details.
-* Changing the email address.
-* Changing the interface language for the Merchant Portal.
+- Accessing **My account** in the Merchant Portal.
+- Changing the personal details.
+- Changing the email address.
+- Changing the interface language for the Merchant Portal.
 
 ### My account page
 

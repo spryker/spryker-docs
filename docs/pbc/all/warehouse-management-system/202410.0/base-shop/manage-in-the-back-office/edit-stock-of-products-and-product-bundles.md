@@ -22,8 +22,8 @@ Review the [reference information](#reference-information-edit-stock-of-products
 3. Next to the product variant you want to edit the stock of, click **Edit Stock**.
 4. On the **Edit Stock** page, enter **QUANTITY** per needed **STOCK TYPE**.
 5. For **NEVER OUT OF STOCK** per **STOCK TYPE**, do the following:
-      * To make the product available regardless of its stock, select the checkbox.
-      * To make the product available only if its stock is more than 0, clear the checkbox.
+      - To make the product available regardless of its stock, select the checkbox.
+      - To make the product available only if its stock is more than 0, clear the checkbox.
 6. Click **Save**.
     This refreshes the page with a success message displayed.
 
@@ -37,8 +37,8 @@ Review the [reference information](#reference-information-edit-stock-of-products
 4. Next to the product variant you want to edit the stock of, click **Edit Stock**.
 5. On the **Edit Stock** page, enter **QUANTITY** per needed **STOCK TYPE**.
 6. For **NEVER OUT OF STOCK** per **STOCK TYPE**, do the following:
-      * To make the product available regardless of its stock, select the checkbox.
-      * To make the product available only if its stock is more than 0, clear the checkbox.
+      - To make the product available regardless of its stock, select the checkbox.
+      - To make the product available only if its stock is more than 0, clear the checkbox.
 7. Click **Save**.
     This refreshes the page with a success message displayed.
 
@@ -57,7 +57,7 @@ Review the [reference information](#reference-information-edit-stock-of-products
 Let's say you have two products: a smartphone and three glass screen protectors for it. They are sold both as separate products and as a bundle. This means that a customer can buy each of the products separately or buy a "smartphone+3 glass screen protectors" bundle.
 
 Each product has its own stock and availability value. Also, there is the availability of the bundle which is calculated based on each separate item's availability. The bundle consists of one smartphone and three glasses. This means that the bundle is only available when the following separate products meet the requirements:
-* Smartphone: at least one in stock.
-* Glass screen protector: at least three in stock.
+- Smartphone: at least one in stock.
+- Glass screen protector: at least three in stock.
 
 If only two screen protectors are available, regardless of the smartphone's stock, the bundle is not available.

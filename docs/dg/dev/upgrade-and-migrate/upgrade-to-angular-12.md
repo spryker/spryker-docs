@@ -285,6 +285,7 @@ module.exports = { ...nxPreset };
     "defaultProject": "merchant-portal"
 }
 ```
+
 </details>
 
 `jest.config.js` in the `frontend/merchant-portal/` folder:

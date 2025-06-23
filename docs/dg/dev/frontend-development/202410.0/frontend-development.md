@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 This section is dedicated to frontend development. Included topics:
-* [Zed](/docs/dg/dev/frontend-development/{{page.version}}/zed/zed-frontend.html)
-* [Yves](/docs/dg/dev/frontend-development/{{page.version}}/yves/yves-frontend.html)
-* [Marketplace](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/marketplace-frontend.html)
-* [Oryx](/docs/dg/dev/frontend-development/{{page.version}}/oryx/oryx.html)
+- [Zed](/docs/dg/dev/frontend-development/{{page.version}}/zed/zed-frontend.html)
+- [Yves](/docs/dg/dev/frontend-development/{{page.version}}/yves/yves-frontend.html)
+- [Marketplace](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/marketplace-frontend.html)
+- [Oryx](/docs/dg/dev/frontend-development/{{page.version}}/oryx/oryx.html)

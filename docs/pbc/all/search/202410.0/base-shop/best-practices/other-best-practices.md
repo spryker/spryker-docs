@@ -58,7 +58,7 @@ The mapping type in our schema is called `page`, not `product` or something else
 
 {% endinfo_block %}
 
-We do this because we think that different page types—for example, brand pages, category pages, or CMS pages—can be relevant for the same search. There is no reason why somebody interested in [shipping prices](https://www.contorion.de/versandkosten) should not be able to find corresponding information using the search bar of a website (unfortunately, this is rarely the case), so we put it in the same index as products, using the same document structure:
+We do this because we think that different page types—for example, brand pages, category pages, or CMS pages—can be relevant for the same search. There is no reason why somebody interested in shipping prices should not be able to find corresponding information using the search bar of a website (unfortunately, this is rarely the case), so we put it in the same index as products, using the same document structure:
 
 ```php
 {
@@ -80,7 +80,7 @@ We do this because we think that different page types—for example, brand pages
 }
 ```
 
-Furthermore, our generic page-based schema allows for other search operations such as rendering a _staple page_ (an overview of different variants of a product; often with their own facet navigation such as the aforementioned [Senkkopf-Holzbauschraube](https://www.contorion.de/)):
+Furthermore, our generic page-based schema allows for other search operations such as rendering a *staple page* (an overview of different variants of a product; often with their own facet navigation such as the aforementioned Senkkopf-Holzbauschraube):
 ![Staple page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Other+Best+Practices/staple.png)
 
 The query looks very similar to a normal faceted navigation, except that it searches only within a specific staple.
@@ -118,13 +118,13 @@ This is an excerpt of the actual input we got from various stakeholders at Conto
 | makita             | I expect standard power tools on top (for example, drilling machines), not a jacket and laser.                          | Enhance WHF.                                                                         |
 | akkuschrauber      | I expect more search word suggestions, not just Akkuschrauber-Set.                                                      | PM: In specification.                                                                |
 | schleifscheibe     | No top sellers on top.                                                                                                  | Add all categories, add popularity score to category ranking.                        |
-| latt hammer        | Decompounder (I believe) not working correctly–must return _Latthammers_ first.                                         | Decompunder works perfect, but we might need to recalibrate the search a little bit. |
-| blindnietwerkzeug  | Only returns products called _Blindnietwerkzeug_ but no Blindnietzange or Blindnietmutter-Handgerät                     | Add tokens to list.                                                                  |
-| bohrmaschine bosch | Top categories must be the ones that actually have _Bohrmaschine_ as their name, not _Bohrständer_ and stuff like that. | Fixed                                                                                |  |  |  |
-| tiefenmesschieber  | Customers missing an _s_ don't get any results for _TiefenmesSschieber_.                                                | Very hard to fix.                                                                    |
-| bügelmessschraube  | Doesn't find the right products because products are abbreviated as _Bügelmessschr_.                                    | Product data issue.                                                                  |
-| klopapier          | Synonym for _Toilettenpapier_.                                                                                          | Set up synonyms yourself.                                                            |
-| duebel             | Doesn't find products when _ä_ is _ae_–that must work for all _Umlaute_.                                                | Fixed                                                                                |
+| latt hammer        | Decompounder (I believe) not working correctly–must return *Latthammers* first.                                         | Decompunder works perfect, but we might need to recalibrate the search a little bit. |
+| blindnietwerkzeug  | Only returns products called *Blindnietwerkzeug* but no Blindnietzange or Blindnietmutter-Handgerät                     | Add tokens to list.                                                                  |
+| bohrmaschine bosch | Top categories must be the ones that actually have *Bohrmaschine* as their name, not *Bohrständer* and stuff like that. | Fixed                                                                                |
+| tiefenmesschieber  | Customers missing an *s* don't get any results for *TiefenmesSschieber*.                                                | Very hard to fix.                                                                    |
+| bügelmessschraube  | Doesn't find the right products because products are abbreviated as *Bügelmessschr*.                                    | Product data issue.                                                                  |
+| klopapier          | Synonym for *Toilettenpapier*.                                                                                          | Set up synonyms yourself.                                                            |
+| duebel             | Doesn't find products when *ä* is *ae*–that must work for all *Umlaute*.                                                | Fixed                                                                                |
 | Fein               | Fein electronics, since they are an A brand.                                                                            | There is a ticket for manufacturer boost in the backlog.                             |
 | Handwaschpaste     | Doesn't find category.                                                                                                  | bug                                                                                  |
 

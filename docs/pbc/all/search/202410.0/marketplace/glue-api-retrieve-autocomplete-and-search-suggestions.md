@@ -82,6 +82,7 @@ To retrieve a search suggestion, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -128,6 +129,7 @@ To retrieve a search suggestion, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -251,6 +253,7 @@ To retrieve a search suggestion, send the request:
     ]
 }
 ```
+
 </details>
 
 
@@ -404,6 +407,7 @@ To retrieve a search suggestion, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -608,6 +612,7 @@ To retrieve a search suggestion, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -761,6 +766,7 @@ To retrieve a search suggestion, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -806,6 +812,7 @@ To retrieve a search suggestion, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -957,6 +964,7 @@ To retrieve a search suggestion, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -1119,6 +1127,7 @@ To retrieve a search suggestion, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -1281,6 +1290,7 @@ To retrieve a search suggestion, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -1442,6 +1452,7 @@ To retrieve a search suggestion, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -1626,6 +1637,7 @@ To retrieve a search suggestion, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -1779,6 +1791,7 @@ To retrieve a search suggestion, send the request:
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE| TYPE | DESCRIPTION |

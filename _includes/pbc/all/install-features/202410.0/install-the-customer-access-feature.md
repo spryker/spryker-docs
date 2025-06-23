@@ -383,6 +383,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}

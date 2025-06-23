@@ -71,8 +71,8 @@ To edit a file's attributes:
 
 {% info_block infoBox "Creating a new version of a file" %}
 
-* A new version is created when you upload a new file.
-* If you only edit the attributes, no new version is created.
+- A new version is created when you upload a new file.
+- If you only edit the attributes, no new version is created.
 
 {% endinfo_block %}
 
@@ -82,8 +82,8 @@ The *Edit File* page also displays an additional tab named *File versions*. The 
 
 In the *File versions* tab, you can manage versions of a file by:
 
-* Removing unneeded versions. To permanently remove a version of the file, click **Delete** in the *Actions* column. Before deleting, read [Deleting files](#deleting-files) below.
-* Downloading a specific version of the file. Click **Download** in the *Actions* column.
+- Removing unneeded versions. To permanently remove a version of the file, click **Delete** in the *Actions* column. Before deleting, read [Deleting files](#deleting-files) below.
+- Downloading a specific version of the file. Click **Download** in the *Actions* column.
 
 ## Deleting files
 

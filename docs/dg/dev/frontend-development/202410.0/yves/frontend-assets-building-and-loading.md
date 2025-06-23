@@ -33,9 +33,9 @@ As mentioned above, all the Yves CSS are split into critical, non-critical, and 
 Building the JS chunks using a code-splitting Webpack feature lets you split JS code into various bundles. It builds a smaller bundle size and lets you control the resource load prioritization impact on a page load time.
 
 There are three general approaches to code splitting:
-* Entry Points: manual split of code using entry configuration.
-* Prevent Duplication: using the `SplitChunksPlugin` to dedupe and split chunks.
-* Dynamic Imports: splitting code by inline function calls within modules.
+- Entry Points: manual split of code using entry configuration.
+- Prevent Duplication: using the `SplitChunksPlugin` to dedupe and split chunks.
+- Dynamic Imports: splitting code by inline function calls within modules.
 
 The approaches are implemented with the `RuntimeChunkPlugin`, `SplitChunksPlugin` plugins, and by using the `WebpackChunkName`. The `RuntimeChunkPlugin` is needed for multiple entry points that are being used on a single HTML page. The `SplitChunksPlugin` lets you extract common dependencies into entirely new chunks. `WebpackChunkName` uses a component name as a chunk name. As a result, at first, Webpack builds a single runtime JS chunk and creates named chunks for all components on the page using the components' names as names for chunks.
 
@@ -56,25 +56,26 @@ The page-blank layout has the `isCssLazyLoadSupported` Twig variable on the core
 
 All the Spryker assets are divided into CSS, JS files, and images and are added to the `public/Yves/assets` folder after the frontend is built. The `assets` folder has the following structure:
 
-* `current`: assets folder for the current namespace (`current` by default).
-  * `default`: assets folder for the current theme in the namespace.
-    * `css`: folder for styles.
-      * `yves_default.critical.css`: styles loaded at the start of the page loading.
-      * `yves_default.non-critical.css`: styles loaded after full page loading.
-      * `yves_default.util.css`: service styles.
-      * `yves_default.app.css`: all the styles used for cases when CSS Lazy Load feature is turned off.
-    * `js`: folder for scripts.
-      * `yves_default.runtime.js`: scripts executed on runtime and compiled in ES6 modes.
-      * `yves_default.app.js`: compiled Spryker Frontend application script in ES6 modes.
-      * `yves_default.vendor.js`: contains scripts of polyfills compiled in ES6 modes.
-      * Named scripts of used web components compiled in ES6 modes.
-    * `images`: folder for the images.
-* `static`: static assets source folder.
-    * `images`: folder for the static images.
+- `current`: assets folder for the current namespace (`current` by default).
+  - `default`: assets folder for the current theme in the namespace.
+    - `css`: folder for styles.
+      - `yves_default.critical.css`: styles loaded at the start of the page loading.
+      - `yves_default.non-critical.css`: styles loaded after full page loading.
+      - `yves_default.util.css`: service styles.
+      - `yves_default.app.css`: all the styles used for cases when CSS Lazy Load feature is turned off.
+    - `js`: folder for scripts.
+      - `yves_default.runtime.js`: scripts executed on runtime and compiled in ES6 modes.
+      - `yves_default.app.js`: compiled Spryker Frontend application script in ES6 modes.
+      - `yves_default.vendor.js`: contains scripts of polyfills compiled in ES6 modes.
+      - Named scripts of used web components compiled in ES6 modes.
+    - `images`: folder for the images.
+- `static`: static assets source folder.
+  - `images`: folder for the static images.
 
 Depending on the usage of scripts and *CSS Lazy Load* feature, the following variants are loading in the `head` and `body` tags exist:
 
 `<head>`
+
 ```html
 <head>
 ...
@@ -101,6 +102,7 @@ Depending on the usage of scripts and *CSS Lazy Load* feature, the following var
 ```
 
 `<body>`
+
 ```html
 <body>
 ...

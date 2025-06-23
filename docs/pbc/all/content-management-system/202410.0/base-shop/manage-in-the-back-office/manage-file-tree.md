@@ -80,10 +80,10 @@ To upload a file:
 1. Click on the directory into which you will upload the file.
 2. In the top right corner of the *Files List* section, click **Add File**.
 3. On the *Add a file* page, do the following:
-    * Enter the file name. Alternately, leave this field blank and select the *use file name* checkbox if you do not want to change the file's existing name.
-    * Browse and select the file to upload.
-    * Make sure the *use file name* checkbox is selected if you do not want to change the file's existing name.
-    * Optionally, populate the *Alt* and *Title* fields for each locale.
+    - Enter the file name. Alternately, leave this field blank and select the *use file name* checkbox if you do not want to change the file's existing name.
+    - Browse and select the file to upload.
+    - Make sure the *use file name* checkbox is selected if you do not want to change the file's existing name.
+    - Optionally, populate the *Alt* and *Title* fields for each locale.
 4. Once done, click **Save**.
 The file is uploaded to the selected folder.
 
@@ -93,18 +93,18 @@ The file is uploaded to the selected folder.
 
 Once the file is uploaded, you can manage it from two locations:
 
-* File List (for more details, see [Manage file List](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-file-list.html))
-* File Tree
+- File List (for more details, see [Manage file List](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-file-list.html))
+- File Tree
 
 To manage a file in File Tree:
 
 1. Click on the folder where the file is located.
 2. In the *Files List* section, select one of the following in the *Actions* column for the file:
-    * **View** to view the file. You are redirected to the *View file* page. You can download the file by clicking **Download** in the *Actions* column.
+    - **View** to view the file. You are redirected to the *View file* page. You can download the file by clicking **Download** in the *Actions* column.
 
-    * **Edit** to edit the file and manage multiple versions of the file. You are redirected to the *Edit file* page.
+    - **Edit** to edit the file and manage multiple versions of the file. You are redirected to the *Edit file* page.
 
-        * *File tab*: Here you can update the file name information. Click **Save** to apply your updates.
+        - *File tab*: Here you can update the file name information. Click **Save** to apply your updates.
 
         You can also upload another version of a file.
 
@@ -116,9 +116,9 @@ To manage a file in File Tree:
 
         To upload another version of a file, click **Choose File**, optionally change the file name and the *Alt* and *Title* fields for each locale, then click **Save**.
 
-        * *File versions tab*: Here you can manage multiple version of the file. You can view each version's information. in the *Actions* column, you can download the file version by clicking **Download** and also delete a version.
+        - *File versions tab*: Here you can manage multiple version of the file. You can view each version's information. in the *Actions* column, you can download the file version by clicking **Download** and also delete a version.
 
-     * **Delete** to immediately delete a file.
+    - **Delete** to immediately delete a file.
 
 {% info_block warningBox "Warning" %}
 

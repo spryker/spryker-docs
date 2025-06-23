@@ -96,12 +96,13 @@ To retrieve all wishlists of a customer, send the request:
 | -------------- | ------------- | ----------- |
 | include         | Adds resource relationships to the request. | <ul><li>wishlist-items</li><li>concrete-products</li><li>product-labels</li></ul> |
 
-| REQUEST SAMPLE  | USAGE    |
-| ------------ | ------------ |
-| GET https://glue.mysprykershop.com/wishlists   | Retrieve all the wishlists of a customer.  |
-| GET https://glue.mysprykershop.com/wishlists?include=wishlist-items | Retrieve all the wishlists of a customer with wishlist items. |
-| GET https://glue.mysprykershop.com/wishlists?include=wishlist-items,concrete-products | Retrieve all the wishlists of a customer with wishlist items and respective concrete products. |
-| GET https://glue.mysprykershop.com/wishlists?include=wishlist-items,concrete-products,product-labels | Retrieve all the wishlists of a customer with wishlist items, respective concrete products, and their product labels. |
+| REQUEST SAMPLE | USAGE |
+| -------------- | ----- |
+| `GET https://glue.mysprykershop.com/wishlists` | Retrieve all the wishlists of a customer. |
+| `GET https://glue.mysprykershop.com/wishlists?include=wishlist-items` | Retrieve all the wishlists of a customer with wishlist items. |
+| `GET https://glue.mysprykershop.com/wishlists?include=wishlist-items,concrete-products` | Retrieve all the wishlists of a customer with wishlist items and respective concrete products. |
+| `GET https://glue.mysprykershop.com/wishlists?include=wishlist-items,concrete-products,product-labels` | Retrieve all the wishlists of a customer with wishlist items, respective concrete products, and their product labels. |
+
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION |
 | ------------ | ----------- | -------- | --------- |
@@ -120,6 +121,7 @@ To retrieve all wishlists of a customer, send the request:
 		}
 	}
 ```
+
 </details>
 
 <details>
@@ -148,6 +150,7 @@ To retrieve all wishlists of a customer, send the request:
 		}
 	}
 ```
+
 </details>
 
 <details>
@@ -197,6 +200,7 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -296,6 +300,7 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -416,6 +421,7 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
+
 </details>
 
 | ATTRIBUTE     | TYPE    | DESCRIPTION  |
@@ -457,16 +463,16 @@ To retrieve a specific wishlist, send the request:
 
 | REQUEST SAMPLE   | USAGE   |
 | ------------- | ------------ |
-| GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1 | Retrieve a wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. |
-| GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items in the response. |
-| GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items and respective concrete products in the response. |
-| GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products,product-labels | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items, respective concrete products and their product labels in the response. |
-| GET https://glue.mysprykershop.com/wishlists/bb7dbe75-d892-582f-b438-d7f6cbfd3fc4?include=wishlist-items,concrete-products,concrete-product-availabilities | Retrieve the wishlist with the `bb7dbe75-d892-582f-b438-d7f6cbfd3fc4`identifier. Include wishlist items, concrete products and concrete product availabilities in the response. |
-| GET https://glue.mysprykershop.com/wishlists/bb7dbe75-d892-582f-b438-d7f6cbfd3fc4?include=wishlist-items,concrete-products,concrete-product-prices | Retrieve the wishlist with the `bb7dbe75-d892-582f-b438-d7f6cbfd3fc4`identifier. Include wishlist items, concrete products, and their prices. |
-| GET https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d/wishlist-items,concrete-products,product-offers | Retrieve the wishlist with the `13c813a3-8916-5444-9f1b-e4d8c56a085d`identifier. Include wishlist items, concrete products and product offers for these products. |
-| GET https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d?include=wishlist-items,concrete-products,product-offers,product-offer-availabilities | Retrieve the wishlist with the `13c813a3-8916-5444-9f1b-e4d8c56a085d`identifier. Include wishlist items and product offer availabilities. |
-| GET https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d?include=wishlist-items,concrete-products,product-offers,product-offer-prices | Retrieve the wishlist with the `13c813a3-8916-5444-9f1b-e4d8c56a085d`identifier. Include wishlist items and product offer prices. |
-| GET https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094?include=wishlist-items,merchants | Retrieve the wishlist with the `57c96d55-8a37-5998-927f-7bb663b69094`identifier. Include wishlist items and merchant information. |
+| `GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1` | Retrieve a wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. |
+| `GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items` | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items in the response. |
+| `GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products` | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items and respective concrete products in the response. |
+| `GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products,product-labels` | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items, respective concrete products and their product labels in the response. |
+| `GET https://glue.mysprykershop.com/wishlists/bb7dbe75-d892-582f-b438-d7f6cbfd3fc4?include=wishlist-items,concrete-products,concrete-product-availabilities` | Retrieve the wishlist with the `bb7dbe75-d892-582f-b438-d7f6cbfd3fc4`identifier. Include wishlist items, concrete products and concrete product availabilities in the response. |
+| `GET https://glue.mysprykershop.com/wishlists/bb7dbe75-d892-582f-b438-d7f6cbfd3fc4?include=wishlist-items,concrete-products,concrete-product-prices` | Retrieve the wishlist with the `bb7dbe75-d892-582f-b438-d7f6cbfd3fc4`identifier. Include wishlist items, concrete products, and their prices. |
+| `GET https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d/wishlist-items,concrete-products,product-offers` | Retrieve the wishlist with the `13c813a3-8916-5444-9f1b-e4d8c56a085d`identifier. Include wishlist items, concrete products and product offers for these products. |
+| `GET https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d?include=wishlist-items,concrete-products,product-offers,product-offer-availabilities` | Retrieve the wishlist with the `13c813a3-8916-5444-9f1b-e4d8c56a085d`identifier. Include wishlist items and product offer availabilities. |
+| `GET https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d?include=wishlist-items,concrete-products,product-offers,product-offer-prices` | Retrieve the wishlist with the `13c813a3-8916-5444-9f1b-e4d8c56a085d`identifier. Include wishlist items and product offer prices. |
+| `GET https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094?include=wishlist-items,merchants` | Retrieve the wishlist with the `57c96d55-8a37-5998-927f-7bb663b69094`identifier. Include wishlist items and merchant information. |
 
 
 
@@ -492,6 +498,7 @@ To retrieve a specific wishlist, send the request:
     }
 }
 ```
+
 </details>
 
 <details>
@@ -536,6 +543,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -628,6 +636,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -743,6 +752,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -868,6 +878,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1004,6 +1015,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1342,6 +1354,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1704,6 +1717,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -2088,6 +2102,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -2212,6 +2227,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 | ATTRIBUTE  | TYPE  | DESCRIPTION     |
@@ -2285,11 +2301,10 @@ The following sample changes the name of a wishlist.
 
 To delete a wishlist, send the request:
 
-------
-
+---
 `DELETE` **/wishlists/*{{wishlist_id}}***
 
-------
+---
 
 | PATH PARAMETER   | DESCRIPTION     |
 | --------- | ------------------- |

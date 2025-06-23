@@ -10,8 +10,8 @@ This document describes how to delete stores.
 
 {% info_block warningBox %}
 
-* When taking the following steps, consider `xxx` and `XXX` as the name of the store you are deleting.
-* We recommend taking these steps in a test environment. Make sure to create a backup of the database and other storages.
+- When taking the following steps, consider `xxx` and `XXX` as the name of the store you are deleting.
+- We recommend taking these steps in a test environment. Make sure to create a backup of the database and other storages.
 
 {% endinfo_block %}
 
@@ -35,6 +35,7 @@ Back up the store's database and make sure it's recoverable. For instructions, s
 ## Suspend Publish and Sync
 
 1. Enable the maintenance mode:
+
 ```bash
 vendor/bin/console maintenance:enable
 ```
@@ -98,41 +99,44 @@ With the Redis key-value storage, data is stored as keys that contain the store 
 
 1. Delete the following data in Redis:
 
-  - Stock information:
-     - `kv:availability:xxx:*`
-  - Product details:
-      - `kv:price_product_abstract:xxx:*`
-      - `kv:price_product_abstract_merchant_relationship:xxx:*`
-      - `kv:price_product_concrete:xxx:*`
-      - `kv:price_product_concrete_merchant_relationship:xxx:*`
-      - `kv:product_abstract:xxx:*`
-      - `kv:product_abstract_category:xxx:*`
-      - `kv:product_abstract_option:xxx:*`
-      - `kv:product_abstract_relation:xxx:*`
-      - `kv:product_concrete_measurement_unit:xxx:*`
-      - `kv:product_concrete_product_offer_price:xxx:*`
-      - `kv:product_concrete_product_offers:xxx:*`
-      - `kv:product_label_dictionary:xxx:*`
-      - `kv:product_offer:xxx:*`
-      - `kv:product_offer_availability:xxx:*`
-  - Product category details:
-      - `kv:category_node:xxx:*`
-      - `kv:category_tree:at:*`
-  - CMS pages and blocks:
-      - `kv:cms_block:xxx:*`
-      - `kv:cms_page:xxx:*`
-  - Merchant:
-      - `kv:merchant:xxx:*`
-      - `kv:price_product_abstract_merchant_relationship:xxx:*`
+- Stock information:
+  - `kv:availability:xxx:*`
+- Product details:
+  - `kv:price_product_abstract:xxx:*`
+  - `kv:price_product_abstract_merchant_relationship:xxx:*`
+  - `kv:price_product_concrete:xxx:*`
+  - `kv:price_product_concrete_merchant_relationship:xxx:*`
+  - `kv:product_abstract:xxx:*`
+  - `kv:product_abstract_category:xxx:*`
+  - `kv:product_abstract_option:xxx:*`
+  - `kv:product_abstract_relation:xxx:*`
+  - `kv:product_concrete_measurement_unit:xxx:*`
+  - `kv:product_concrete_product_offer_price:xxx:*`
+  - `kv:product_concrete_product_offers:xxx:*`
+  - `kv:product_label_dictionary:xxx:*`
+  - `kv:product_offer:xxx:*`
+  - `kv:product_offer_availability:xxx:*`
+- Product category details:
+  - `kv:category_node:xxx:*`
+  - `kv:category_tree:at:*`
+- CMS pages and blocks:
+  - `kv:cms_block:xxx:*`
+  - `kv:cms_page:xxx:*`
+- Merchant:
+  - `kv:merchant:xxx:*`
+  - `kv:price_product_abstract_merchant_relationship:xxx:*`
 
 
 2. Adjust `kv:store_list` by removing the store's name from it's value.
 
 For example, you have AT, DE, and XXX stores.
+
 ```json
 {"stores":["AT","DE","XXX"],"_timestamp":111111111111}
 ```
+
 To remove the XXX store, update `kv:store_list` as follows:
+
 ```json
 {"stores":["AT","DE"],"_timestamp":111111111111}
 ```
@@ -140,6 +144,7 @@ To remove the XXX store, update `kv:store_list` as follows:
 3. Delete the `kv:store:xxx` key with the store data.
 
 For example, you have `kv:store:xxx` in storage with some data. You need to delete it by the key.
+
 ```json
 {"id_store":3,"name":"XXX","default_locale_iso_code":"en_US","default_currency_iso_code":"EUR","available_currency_iso_codes":["EUR"],"available_locale_iso_codes":["de_DE","en_US"],"stores_with_shared_persistence":[],"countries":["DE"],"country_names":["Germany"],"_timestamp":11111111111}
 ```
@@ -169,11 +174,13 @@ Index name components are delimited with an underscore—for example, `spryker_x
 ## Resume P&S
 
 1. Restart the Cronjob scheduler:
+
 ```bash
 vendor/bin/console scheduler:resume
 ```
 
 2. Disable the maintenance mode:
+
 ```bash
 vendor/bin/console maintenance:disable
 ```

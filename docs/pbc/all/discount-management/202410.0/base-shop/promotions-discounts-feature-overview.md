@@ -18,8 +18,8 @@ The *Discount Management* feature lets shop owners provide free value to their c
 ## Discount types
 
 There are two discount types:
-* Voucher
-* Cart rule
+- Voucher
+- Cart rule
 
 A Back Office user selects a discount type when [creating a discount](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
 
@@ -121,8 +121,8 @@ In the following example, the discount is applied if there are four items with a
 *Discount application* is a discount configuration option that defines the products to which a discount is applied.
 
 There are two types of the discount application:
-* Query string
-* Promotional product
+- Query string
+- Promotional product
 
 ### Query string
 
@@ -133,8 +133,8 @@ The discount in the example below applies to white color products.
 ![Query collection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-query.png)
 
 The product selection based on the query string is dynamic:
-* If at some point the color attribute of a product changes from white to anything else, the product is no longer eligible for a discount.
-* If at some point a product receives the white color attribute, it becomes eligible for a discount.
+- If at some point the color attribute of a product changes from white to anything else, the product is no longer eligible for a discount.
+- If at some point a product receives the white color attribute, it becomes eligible for a discount.
 
 ### Promotional product
 
@@ -162,8 +162,8 @@ A Back Office user can either give away promotional products for free or provide
 ## Discount calculation types
 
 Calculation defines the value to be deducted from a product's default price. There are two types of discount calculations:
-* Percentage
-* Fixed amount
+- Percentage
+- Fixed amount
 
 {% info_block infoBox %}
 
@@ -226,10 +226,10 @@ In cases when several discounts can apply to a customer's order, a Back Office u
 
 Discount prioritization behavior does not depend on the [discount type](#discount-types). For example, you might have the following priorities for different types:
 
-* Cart rule discount with priority 1
-* Voucher code discount with priority 2
-* Voucher code discount with priority 3
-* Cart rule discount with priority 4
+- Cart rule discount with priority 1
+- Voucher code discount with priority 2
+- Voucher code discount with priority 3
+- Cart rule discount with priority 4
 
 In this case, discounts are applied based on their priority, regardless of type.
 
@@ -243,10 +243,10 @@ If you have a voucher code and a cart rule with the same priority, both discount
 
 The discount calculation logic follows these rules:
 
-* All discounts are calculated sequentially based on their [priority value](#discount-priority). Thus, discounts with the highest priority value are considered first.
-* Discounts without priority values are treated with the last possible priority.
-* Discounts with the same priority value are calculated independently of each other.
-* If there is a set of discounts with [exclusive](#exclusive-discount) and [non-exclusive](#non-exclusive-discount) discounts, the non-exclusive discounts are ignored. The remaining exclusive discounts are handled according to their priority values as shown in the schema:
+- All discounts are calculated sequentially based on their [priority value](#discount-priority). Thus, discounts with the highest priority value are considered first.
+- Discounts without priority values are treated with the last possible priority.
+- Discounts with the same priority value are calculated independently of each other.
+- If there is a set of discounts with [exclusive](#exclusive-discount) and [non-exclusive](#non-exclusive-discount) discounts, the non-exclusive discounts are ignored. The remaining exclusive discounts are handled according to their priority values as shown in the schema:
 
 ![discounts-calculation-logic](https://confluence-connect.gliffy.net/embed/image/ad6c6c4c-9ccb-42ae-a9dc-5944300bdf91.png?utm_medium=live&utm_source=custom)
 
@@ -256,7 +256,7 @@ The discount calculation logic follows these rules:
 
 The following scenarios illustrate how the discount calculation logic works.
 
-#### Scenario 1: Multiple non-exclusive discounts, the mix of fixed amount and percentage discount calculation types.
+#### Scenario 1: Multiple non-exclusive discounts, the mix of fixed amount and percentage discount calculation types
 
 Cart subtotal: €500
 
@@ -287,7 +287,7 @@ As customers are not aware of the logic behind discount prioritization, they may
 
 {% endinfo_block %}
 
-#### Scenario 2: Multiple non-exclusive discounts, percentage discount calculation types.
+#### Scenario 2: Multiple non-exclusive discounts, percentage discount calculation types
 
 Cart subtotal: $100
 
@@ -316,7 +316,7 @@ STORE5: -$4.70
 
 Grand total: $84.60
 
-#### Scenario 3: Multiple discounts, both exclusive and non-exclusive.
+#### Scenario 3: Multiple discounts, both exclusive and non-exclusive
 
 Cart subtotal: $100
 
@@ -338,8 +338,8 @@ Between the exclusive discounts, the discount with the higher priority is chosen
 
 Cart subtotal: €100
 
-| DISCOUNT NAME|  DESCRIPTION|  DISCOUNT TYPE| DISCOUNT AMOUNT| DISCOUNT PRIORITY| EXCLUSIVENESS|
-| --- | --- | --- | --- | --- |--- |
+| DISCOUNT NAME|  DESCRIPTION|  DISCOUNT TYPE| DISCOUNT AMOUNT| DISCOUNT PRIORITY| EXCLUSIVENESS| NOTES |
+| --- | --- | --- | --- | --- |--- | --- |
 | 10SOCKS|  10% off Nike socks| Percentage| 10%|  100|  No| Nike socks cost €40|
 | 20PANTS|  Save €20 on all white pants|  Fixed amount| €20|100|  No| White pants cost €60|
 
@@ -366,7 +366,7 @@ Cart subtotal: €100
 | --- | --- | --- | --- | --- |--- |--- |
 |10SOCKS | 10% off Nike socks | Percentage | 10% | |Exclusive | Nike socks cost €40 |
 |5PANTS|Save €5 on all pants| Fixed amount | €5 | | Exclusive |  |
-|SITE10|10% off everything in the store| Percentage | €10 | |  Non-exclusive | €10 | |
+|SITE10|10% off everything in the store| Percentage | €10 | |  Non-exclusive | |
 
 In the presence of exclusive discounts, all non-exclusive discounts are excluded.
 Since the remaining exclusive discounts do not have priorities and the discount 5PANTS provides more free value than the discount 10SOCKS, this discount is applied.

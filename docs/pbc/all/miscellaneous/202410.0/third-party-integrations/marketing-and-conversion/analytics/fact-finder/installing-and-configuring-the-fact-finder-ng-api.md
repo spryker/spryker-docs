@@ -35,17 +35,22 @@ related:
 ---
 
 ## Installation
+
 To install the package use `composer require spryker-eco/fact-finder-ng` command.
 
 ## Configuration
+
 For using the package you have to set configuration parameters.
+
 ```php
 $config[FactFinderNgConstants::FACT_FINDER_URL] = ''; # Fact-Finder URL
 $config[FactFinderNgConstants::FACT_FINDER_CHANNEL] = ''; # Fact-Finder channel value
 $config[FactFinderNgConstants::FACT_FINDER_USERNAME] = ''; # Fact-Finder user for authorization.
 $config[FactFinderNgConstants::FACT_FINDER_PASSWORD] = ''; # Fact-Finder password for authorization.
 ```
+
 ## Import Usage
+
 Fact-Finder has an import API call. It can be used to update product information by URL set on the Fact-Finder side. To trigger the import, you have to add Console command to `ConsoleDependecyProvider`.
 
 **ConsoleDependencyProvider.php**
@@ -73,6 +78,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 You can import using the console fact-finder-ng:import:search command.
 
 ## Tracking Usage
+
 There are tracking functions at the Client layer in the module.
 
 **FactFinderNgClientInterface.php**
@@ -177,6 +183,7 @@ class SuccessStep extends SprykerSuccessStep
 ```
 
 ## Search, Suggestion, Navigation Usage
+
 For using search functions, you have to extend SearchClient on the project level. If you want to use different search engines, you might need to create search router, for choosing the right engine.
 
 **SearchRouter**
@@ -453,13 +460,17 @@ class SuggestionController extends SprykerSuggestionController
 ```
 
 ## Pagination, Sorting, and Filters
+
 ### Pagination
+
 For the Yves layer, pagination should work out of the box. Request mapper cares about page and ipp (items for page) parameters and map it to Fact-Finder parameters.
 
 If you use the Glue layer, you have to add page and ipp value to request parameters.
 
 ### Sorting
+
 By default, the Yves layer doesn't care about sort options which suggested by Fact-Finder. If you want to use them, you have to change `SortedResultFormatterPlugin` in `CatalogDependencyProvider`.
+
 ```php
 <?php
 
@@ -492,7 +503,9 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
     ...
 }
 ```
+
 If you use the Glue layer, you have to check a response where you can find a sortItems key. There you can see all the available sort options. You can use them to sort your results. The typical response looks like:
+
  ```php
 "sortItems": [
         {
@@ -523,12 +536,15 @@ If you use the Glue layer, you have to check a response where you can find a sor
         }
 ]
 ```
+
 and you have to use it as a request parameter sort. The format is sort=lowercase({name})_{order}.
 
 ### Filters and Navigation
+
 Navigation works in the same way as filters. By default, `FactFinderNg` module doesn't care about showing filters. You can find the list of available filters in the Fact-Finder response. You can map and display it on your pages as you wish.
 
 The typical response of filters looks like:
+
 ```php
 "facets": [
         {
@@ -568,4 +584,5 @@ The typical response of filters looks like:
 		}
 	]
 ```
-You can add the values to request parameters as `?{name}={elements.text}`–for example, `?CategoryPath=Kameras+%26+Camcorders`. Request mapper cares about these filter params and will map them to Fact-Finder understandable list. 
+
+You can add the values to request parameters as `?{name}={elements.text}`–for example, `?CategoryPath=Kameras+%26+Camcorders`. Request mapper cares about these filter params and will map them to Fact-Finder understandable list.

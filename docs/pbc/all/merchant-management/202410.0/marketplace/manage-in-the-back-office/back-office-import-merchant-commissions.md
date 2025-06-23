@@ -26,8 +26,8 @@ To import [merchant commissions](/docs/pbc/all/merchant-management/202410.0/mark
 
 {% info_block infoBox "" %}
 
-* Some editors change the symbols based on your location. To make sure you can import commissions, we recommend using Google Sheets to edit import files.
-* For an example of a filled out file, you can export the existing default commissions by clicking **Export** on the **Merchant Commissions** page.
+- Some editors change the symbols based on your location. To make sure you can import commissions, we recommend using Google Sheets to edit import files.
+- For an example of a filled out file, you can export the existing default commissions by clicking **Export** on the **Merchant Commissions** page.
 
 
 {% endinfo_block %}

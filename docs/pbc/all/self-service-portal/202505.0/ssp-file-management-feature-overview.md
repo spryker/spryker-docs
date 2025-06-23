@@ -35,10 +35,10 @@ On the Storefront, users can access and download the uploaded files on the **Fil
 
 A company user can have the following permissions related to file management:
 
-* Open My Files page
-* View My Files
-* View Business Unit Files
-* View Company Files
+- Open My Files page
+- View My Files
+- View Business Unit Files
+- View Company Files
 
 For more information on company account permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/202410.0/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview).
 

@@ -49,11 +49,11 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
 3. Select an existing order and click the reorder button.
 
 Make sure the following applies:
-* On the Storefront: 
-    - A new cart has been created
-    - The cart name follows the format: `Cart from order {Order reference}`
-    - All available items from the original order have been added to the cart
-* In the `spy_quote` database table, the newly created quote record contains the `name` field in the format: `Cart from order {Original order reference}`
+- On the Storefront:
+  - A new cart has been created
+  - The cart name follows the format: `Cart from order {Order reference}`
+  - All available items from the original order have been added to the cart
+- In the `spy_quote` database table, the newly created quote record contains the `name` field in the format: `Cart from order {Original order reference}`
 
 {% endinfo_block %}
 

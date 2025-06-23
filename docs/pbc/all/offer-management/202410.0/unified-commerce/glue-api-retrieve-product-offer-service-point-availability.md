@@ -20,6 +20,7 @@ This endpoint lets you product offer availability per service points.
 ### Request
 
 Request sample: `POST https://glue.mysprykershop.com/product-offer-service-point-availabilities`
+
 ```json
 {
     "data": {

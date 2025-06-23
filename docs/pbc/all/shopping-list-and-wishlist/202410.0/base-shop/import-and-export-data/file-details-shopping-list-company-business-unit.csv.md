@@ -12,8 +12,8 @@ This document describes the `shopping_list_company_business_unit.csv` file to co
 
 ## Import file dependencies
 
-* [file-details-company-business-unit.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/import-and-export-data/file-details-company-business-unit.csv.html)
-* [shopping_list.csv](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/import-and-export-data/file-details-shopping-list.csv.html)
+- [file-details-company-business-unit.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/import-and-export-data/file-details-company-business-unit.csv.html)
+- [shopping_list.csv](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/import-and-export-data/file-details-shopping-list.csv.html)
 
 ## Import file parameters
 

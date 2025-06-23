@@ -904,6 +904,10 @@ entries:
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature-dynamic-multistore.html
                       - title: Customer Account Management + Order Management
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
+                      - title: Customer Account Management + Promotions & Discounts feature
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-promotions-and-discounts-feature.html                     
+                        include_versions:
+                        - "202505.0"   
 
                   - title: Install Glue API
                     nested:
@@ -2114,6 +2118,10 @@ entries:
                         - "202505.0"
                       - title: Reclamations
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-reclamations-feature.html
+                      - title: Reorder
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-reorder-feature.html
+                        include_versions:
+                        - "202505.0"                                                
                       - title: Quick Add to Cart + Non-splittable Products
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html
                       - title: Splittable Order Items
@@ -4290,6 +4298,8 @@ entries:
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
                           - title: Integrate Vertex Validator
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex-validator.html
+                            include_versions:
+                            - "202410.0"          
 
                       - title: Project configuration for Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/project-configuration-for-vertex.html

@@ -41,7 +41,7 @@ Check out an example usage of the Table Feature Sync State in the `@spryker/tabl
 
 Component configuration:
 
-- `enabled`—enables the feature via config.   
+- `enabled`—enables the feature via config.
 - `tableId`—an `id` of the table that syncs the state of the table with the browser URL (also can be assigned to the table via HTML).  
 
 ```html

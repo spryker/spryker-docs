@@ -70,6 +70,7 @@ $stores['DE'] = [
 2. To configure Avalara credentials, add the following template to configuration:
 
 **config/Shared/config\_default.php**
+
 ```php
     <?php
 
@@ -99,7 +100,7 @@ $stores['DE'] = [
 
 ## 3) Add translations
 
-1.  Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **data/import/glossary.csv**
 
@@ -128,6 +129,7 @@ Apply database changes, generate entity and transfer changes:
 console propel:install
 console transfer:generate
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied by checking your database:
@@ -139,7 +141,7 @@ Make sure that the following changes have been applied by checking your databa
 | spy_tax_avalara_sales_order_item | table | created |
 | spy_tax_avalara_sales_detail | table | created |
 | spy_product_abstract.avalara_tax_code | column | created |
-| spy_product.avalara_tax_code | column | created
+| spy_product.avalara_tax_code | column | created |
 
 {% endinfo_block %}
 
@@ -170,7 +172,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ## 5) Set up behavior
 
-1.  Activate the following plugins:
+1. Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -228,7 +230,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 1. Add items to a cart and proceed to checkout.
 2. On the summary page, make sure the taxes are calculated and displayed for your order.
 
-{% endinfo_block %}    
+{% endinfo_block %}
 
 
 
@@ -386,8 +388,8 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-1.  Send an incorrect address to the `/checkout-data` endpoint.  
-2.  Make sure that request with the incorrect shipping address does not pass the validation check:
+1. Send an incorrect address to the `/checkout-data` endpoint.  
+2. Make sure that request with the incorrect shipping address does not pass the validation check:
 
 Request:
 
@@ -452,6 +454,7 @@ Response:
    - `data/import/common/common/product_concrete.csv`
 
 **data/import/common/common/product\_abstract.csv**
+
 ```csv
 category_key,category_product_order,abstract_sku,name.en_US,name.de_DE,url.en_US,url.de_DE,attribute_key_1,value_1,attribute_key_1.en_US,value_1.en_US,attribute_key_1.de_DE,value_1.de_DE,attribute_key_2,value_2,attribute_key_2.en_US,value_2.en_US,attribute_key_2.de_DE,value_2.de_DE,attribute_key_3,value_3,attribute_key_3.en_US,value_3.en_US,attribute_key_3.de_DE,value_3.de_DE,attribute_key_4,value_4,attribute_key_4.en_US,value_4.en_US,attribute_key_4.de_DE,value_4.de_DE,attribute_key_5,value_5,attribute_key_6,value_6,attribute_key_6.en_US,value_6.en_US,attribute_key_6.de_DE,value_6.de_DE,color_code,description.en_US,description.de_DE,tax_set_name,meta_title.en_US,meta_title.de_DE,meta_keywords.en_US,meta_keywords.de_DE,meta_description.en_US,meta_description.de_DE,new_from,new_to,avalaraTaxCode
 digital-cameras,16,001,Canon IXUS 160,Canon IXUS 160,/en/canon-ixus-160-1,/de/canon-ixus-160-1,megapixel,20 MP,,,,,flash_range_tele,1.3-1.5 m,flash_range_tele,4.2-4.9 ft,,,memory_slots,1,,,,,usb_version,2,,,,,brand,Canon,,,color,Red,color,Weinrot,#DC2E09,"Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7") LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.","Beeindruckende Aufnahmen, ganz einfach Smart Auto ermöglicht die mühelose Aufnahme von fantastischen Fotos und Movies – die Kamera wählt in diesem Modus automatisch die idealen Einstellungen für die jeweilige Aufnahmesituation. Sie müssen nur noch das Motiv anvisieren und auslösen. Ein Druck auf die Hilfe-Taste führt zu leicht verständlichen Erklärungen der Kamerafunktionen. Zahlreiche Kreativfilter laden zum Experimentieren ein und bieten echten Fotospaß. So lässt sich neben vielen anderen Optionen der Verzeichnungseffekt eines Fisheye-Objektivs nachempfinden oder in Fotos und Movies werden die Dinge wie Miniaturmodelle dargestellt.",Entertainment Electronics,Canon IXUS 160,Canon IXUS 160,"Canon,Entertainment Electronics","Canon,Entertainment Electronics",Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi,"Beeindruckende Aufnahmen, ganz einfach Smart Auto ermöglicht die mühelose Aufnahme von fantastischen Fotos und Movies – die Kamera wählt in diesem Modus au","",2020-01-01 00:00:00.000000,PC040111

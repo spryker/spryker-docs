@@ -189,13 +189,14 @@ Request sample: retrieve merchant opening hours
     }
 }
 ```
+
 </details>
 
 <a name="merchant-opening-hours-response-attributes"></a>
 
 | ATTRIBUTE | DESCRIPTION |
 | --------------- | --------------------- |
-| weekdaySchedule | Array of the schedule for weekdays.
+| weekdaySchedule | Array of the schedule for weekdays. |
 | weekdaySchedule.day | Name of the day. |
 | weekdaySchedule.timeFrom | Time when the merchant starts working on a usual day. |
 | weekdaySchedule.timeTo | Time when the merchant stops working on a usual day. |

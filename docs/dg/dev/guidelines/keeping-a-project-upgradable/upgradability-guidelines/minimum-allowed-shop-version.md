@@ -50,7 +50,9 @@ Update the outdated dependencies to make it correspond to the minimum required v
 
 
 ## Run only this checker
+
 To run only this checker, include `MINIMUM_ALLOWED_SHOP_VERSION` into the checkers list. Example:
+
 ```bash
 vendor/bin/evaluator evaluate --checkers=MINIMUM_ALLOWED_SHOP_VERSION
 ```

@@ -84,6 +84,7 @@ class OauthAuthenticationServerPlugin extends AbstractPlugin implements Authenti
 }
 
 ```
+
 </details>
 
 This plugin is run by `AuthenticationFacade::authenticate()`.

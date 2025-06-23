@@ -32,9 +32,9 @@ To edit an import:
 
 1. On the *Scheduled Prices* page, next to the import that you want to update, click **Edit**.
 2. On the *Edit Import* page that opens, you can perform the following actions:
-    * Change the scheduled price import name.
-    * Edit a scheduled price.
-    * Delete a scheduled price.
+    - Change the scheduled price import name.
+    - Edit a scheduled price.
+    - Delete a scheduled price.
 
 ### Reference information: Viewing and editing scheduled price imports
 
@@ -76,10 +76,10 @@ Since the *View Import* and *Edit Import* pages have almost the same attributes,
 1. On the *Scheduled Prices* page, click **Edit** next to the import in which the scheduled price that you want to update is located.
 2. On the *Edit Import* page, click **Edit** next to the scheduled price that you want to update.
 3. On the *Edit Scheduled Price* page, you can perform the following actions:
-    * Change store relation.
-    * Change currency.
-    * Specify Net and Gross prices.
-    * Specify the validity period.
+    - Change store relation.
+    - Change currency.
+    - Specify Net and Gross prices.
+    - Specify the validity period.
 
 {% info_block errorBox %}
 

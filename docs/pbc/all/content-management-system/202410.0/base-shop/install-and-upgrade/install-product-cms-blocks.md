@@ -20,7 +20,7 @@ Product blocks are CMS blocks that are embedded in the product template and rend
 
 To integrate product blocks, follow the steps:
 
-1. Install the CMS Block Product Connector module using Composer: 
+1. Install the CMS Block Product Connector module using Composer:
 
 ```bash
 composer require spryker/cms-block-product-connector:"^1.4.0"

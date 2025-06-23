@@ -16,18 +16,18 @@ related:
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/alternative-products-feature-overview.html
 ---
 
-The _Alternative Products_ feature allows customers to find a substitute for a product that runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually look for an up-to-date generation of the same product, and suggesting possible alternatives is crucial. For more details, see [Alternative Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html) and [Discontinued Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html).
+The *Alternative Products* feature allows customers to find a substitute for a product that runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually look for an up-to-date generation of the same product, and suggesting possible alternatives is crucial. For more details, see [Alternative Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html) and [Discontinued Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html).
 
 The Product Alternatives API provides access to alternative products via REST API requests. In particular, you can:
 
-* Find out whether a concrete product is discontinued.
-* Retrieve a list of alternative products of a product.
+- Find out whether a concrete product is discontinued.
+- Retrieve a list of alternative products of a product.
 
 In your development, the endpoints help to:
 
-* Provide alternatives for a product that runs out or unavailable, for example, because of local restrictions.
-* Provide alternatives if a product is discontinued.
-* Make alternative products available to customers in their shopping list or suggestions area to make searching and comparing similar products easier.
+- Provide alternatives for a product that runs out or unavailable, for example, because of local restrictions.
+- Provide alternatives if a product is discontinued.
+- Make alternative products available to customers in their shopping list or suggestions area to make searching and comparing similar products easier.
 
 
 ## Installation
@@ -134,6 +134,7 @@ To retrieve abstract alternative products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -223,6 +224,7 @@ To retrieve abstract alternative products, send the request:
     ]
 }
 ```
+
 </details>
 
 
@@ -293,6 +295,7 @@ To retrieve concrete alternative products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -361,6 +364,7 @@ To retrieve concrete alternative products, send the request:
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->

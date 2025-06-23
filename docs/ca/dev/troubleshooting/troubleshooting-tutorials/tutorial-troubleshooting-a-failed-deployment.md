@@ -72,9 +72,11 @@ To locate the deploy file in which the script is located and check its commands,
 In this example, the value `vendor/bin/install -r EU/pre-deploy -vvv` means that the script of the build step is located in `config/install/EU/pre-deploy.yml`.
 
 If the variable isn't set, the default script is executed:
+
 ```bash
 vendor/bin/install -r pre-deploy -vvv
 ```
+
 This default scripts are located in `config/install/`. This particular one is located in `config/install/pre-deploy.yml`.
 
 {% info_block infoBox "Deploy file" %}

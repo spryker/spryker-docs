@@ -17,9 +17,9 @@ To quickly populate an external system like ERP or OMS with data from your Spryk
 
 You can export any of the following data in the CSV format:
 
-* Orders
-* Order items
-* Order expenses
+- Orders
+- Order items
+- Order expenses
 
 Spryker Data Export supports the multi-store functionality, so you can define which stores to export data for.
 
@@ -31,9 +31,9 @@ Spryker Data Export supports the multi-store functionality, so you can define wh
 ## Defining the data to export
 
 The YML export configuration file lets you define what information to export. The root of data export files is configured globally, and data export does not change it. The following can be exported:
-* order
-* order-item
-* order-expense
+- order
+- order-item
+- order-expense
 
 
 By default, the YML export configuration file resides in `./data/export/config/`. The structure of the YML export configuration file is as follows:
@@ -77,9 +77,9 @@ actions:
 ```
 
 The type of content to export is defined in the `actions` section by `data_entity` and can be any of the following:
-* `order`
-* `order-item`
-* `order-expense`.
+- `order`
+- `order-item`
+- `order-expense`.
 
 For an example, see the default configuration file: [order_export_config.yml](https://github.com/spryker-shop/suite/blob/master/data/export/production/order_export_config.yml).
 
@@ -88,7 +88,7 @@ For an example, see the default configuration file: [order_export_config.yml](ht
 
 To define the stores you want to export the order data for, specify them in `destination` for the specific data entities.
 
-You _must_ create individual files for each data entity and each store if your filter criteria include `store_name`.
+You *must* create individual files for each data entity and each store if your filter criteria include `store_name`.
 
 For example, to export the `order-expenses` data for the DE store and `order-items` data for DE and AT stores, the YML file looks like this:
 

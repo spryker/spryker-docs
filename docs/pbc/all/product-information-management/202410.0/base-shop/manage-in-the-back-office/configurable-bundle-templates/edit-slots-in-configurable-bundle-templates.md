@@ -38,8 +38,8 @@ This document describes how to edit slots in configurable bundle templates in th
 
 1. Click the **Assign Categories** tab.
 2. For **CATEGORIES**, do any of the following:
-    * Assign categories by entering and selecting the names of the needed categories.
-    * Deassign categories by clicking **x** next to the categories you want to deassign.
+    - Assign categories by entering and selecting the names of the needed categories.
+    - Deassign categories by clicking **x** next to the categories you want to deassign.
 3. Select **Save**
     The page refreshes with the success message displayed.
 

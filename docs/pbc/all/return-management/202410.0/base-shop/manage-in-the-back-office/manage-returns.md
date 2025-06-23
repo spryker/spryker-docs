@@ -39,7 +39,7 @@ On the **Returns** page, next to the return you want to view, click **View**.
 Next to the return you want to generate a [return slip](/docs/pbc/all/return-management/{{page.version}}/base-shop/return-management-feature-overview.html#return-slip) for, click **Print Slip**.
     This opens the page with an auto-generated slip.
 
-## Reference information: Managing returns     
+## Reference information: Managing returns
 
 
 The following table describes the attributes you see when viewing a return.

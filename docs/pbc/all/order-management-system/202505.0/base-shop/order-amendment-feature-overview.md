@@ -3,6 +3,8 @@ title: Order Amendment feature overview
 description: 
 last_updated: Jun 03, 2025
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/order-management-system/202505.0/base-shop/order-management-feature-overview/order-management-feature-overview.html
 ---
 
 
@@ -87,7 +89,7 @@ Email notifications for order amendments can be configured to reflect changes an
 
 ## Related Developer documents
 
-| INSTALLATION GUIDES | 
+| INSTALLATION GUIDES |
 |---------|
 | [Install the Order Amendment feature](/docs/pbc/all/order-management-system/202505.0/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature.html)  |
 | [Install the Multiple Carts feature](/docs/pbc/all/cart-and-checkout/202410.0/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html)  |

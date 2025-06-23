@@ -7,4 +7,4 @@ redirect_from:
   - /docs/pbc/all/offer-management/202505.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-promotions-and-discounts-feature.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-product-offer-promotions-and-discounts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/latest/marketplace/install-the-marketplace-product-offer-promotions-and-discounts-feature.md -->
+{% include pbc/all/install-features/latest/marketplace/install-the-marketplace-product-offer-promotions-and-discounts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/latest/marketplace/install-the-marketplace-product-offer-promotions-and-discounts-feature.md -->

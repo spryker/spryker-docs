@@ -7,4 +7,4 @@ redirect_from:
   - /docs/pbc/all/order-management-system/202505.0/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-order-amendment-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/install-the-order-amendment-feature.md -->
+{% include pbc/all/install-features/latest/install-the-order-amendment-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/install-the-order-amendment-feature.md -->

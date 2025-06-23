@@ -26,4 +26,4 @@ related:
       link: docs/pbc/all/miscellaneous/page.version/spryker-core-feature-overview/spryker-core-feature-overview.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-spryker-core-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/latest/install-the-spryker-core-feature.md -->
+{% include pbc/all/install-features/latest/install-the-spryker-core-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/latest/install-the-spryker-core-feature.md -->

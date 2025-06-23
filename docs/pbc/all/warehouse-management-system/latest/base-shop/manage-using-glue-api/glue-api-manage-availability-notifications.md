@@ -23,7 +23,7 @@ This endpoint allows managing availability notifications of registered and guest
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Availability Notification Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Availability Notification Glue API](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html).
 
 ## Subscribe to availability notifications
 
@@ -123,4 +123,4 @@ If a customer's subscription is deleted successfully, the endpoint returns the `
 | 4603 | Subscription doesn't exist. |
 | 4606 | Request is not authorized. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

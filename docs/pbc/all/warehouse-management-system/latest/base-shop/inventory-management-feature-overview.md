@@ -3,7 +3,7 @@ title: Inventory Management feature overview
 description: Learn how you can manage warehouse, stock, and availability with the Inventory Management feature
 last_updated: Jul 22, 2021
 template: concept-topic-template
-originalLink: /docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html-feature-overview
+originalLink: /docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html-feature-overview
 originalArticleId: 6aaacd72-1ca1-4406-8614-0cacf94459d4
 redirect_from:
   - /2021080/docs/inventory-management-feature-overview
@@ -21,23 +21,23 @@ Stock does not always reflect the real availability of products, as not all the 
 
 ## Warehouse management
 
-You can [create warehouses in the Back Office](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/create-warehouses.html) or [import them](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse.csv.html).
+You can [create warehouses in the Back Office](/docs/pbc/all/warehouse-management-system/latest/base-shop/manage-in-the-back-office/create-warehouses.html) or [import them](/docs/pbc/all/warehouse-management-system/latest/base-shop/import-and-export-data/import-file-details-warehouse.csv.html).
 
-A warehouse can be assigned to a single store or shared between several stores. For the warehouse and stock management scenarios you can set up for your project, see [Manage stocks in a multi-store environment: Best practices](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html). You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. For details about managing warehouses and stores in the back office, see [Managing warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-warehouses.html). For details about importing the warehouse and store data, see [File details: warehouse_store.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse-store.csv.html).
+A warehouse can be assigned to a single store or shared between several stores. For the warehouse and stock management scenarios you can set up for your project, see [Manage stocks in a multi-store environment: Best practices](/docs/pbc/all/warehouse-management-system/latest/base-shop/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html). You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. For details about managing warehouses and stores in the back office, see [Managing warehouses](/docs/pbc/all/warehouse-management-system/latest/base-shop/manage-in-the-back-office/edit-warehouses.html). For details about importing the warehouse and store data, see [File details: warehouse_store.csv](/docs/pbc/all/warehouse-management-system/latest/base-shop/import-and-export-data/import-file-details-warehouse-store.csv.html).
 
 ### Defining a warehouse address
 
-You can define the warehouse address that will be used as the shipping origin address by importing the warehouse address data. For details about the import file, see [File details: warehouse_address.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse-address.csv.html).
+You can define the warehouse address that will be used as the shipping origin address by importing the warehouse address data. For details about the import file, see [File details: warehouse_address.csv](/docs/pbc/all/warehouse-management-system/latest/base-shop/import-and-export-data/import-file-details-warehouse-address.csv.html).
 
 ### Avalara: Warehouse assignment to order items
 
 {% info_block warningBox %}
 
-By default, a warehouse is not linked to a sales order item. The logic described below applies only when [Avalara](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html) is integrated into your project. That is, it's used to get warehouse addresses to calculate taxes in the USA.
+By default, a warehouse is not linked to a sales order item. The logic described below applies only when [Avalara](/docs/pbc/all/tax-management/latest/base-shop/tax-feature-overview.html) is integrated into your project. That is, it's used to get warehouse addresses to calculate taxes in the USA.
 
 {% endinfo_block %}
 
-During the checkout, once a buyer entered delivery addresses for all order items, be it a [single delivery](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/split-delivery-overview.html) or a split delivery, the order items are assigned to warehouses to fulfill them.
+During the checkout, once a buyer entered delivery addresses for all order items, be it a [single delivery](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/split-delivery-overview.html) or a split delivery, the order items are assigned to warehouses to fulfill them.
 
 By default, if a buyer orders several items of the same SKU, the requested item's stock is checked in all the warehouses of the store. Based on the item stock, the warehouses are sorted in descending order—for example:
 
@@ -65,8 +65,8 @@ Schematically, the process looks like this:
 
 When the order is made, the stock is not updated automatically in the system, and you have to set it manually. You can define stock only for concrete products. You can set stock by doing the following:
 
-- Editing product stock in the Back Office. For details, see [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).
-- Importing the quantities of items stored in each of the warehouses. For details, see [Import file details: product_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-stock.csv.html).
+- Editing product stock in the Back Office. For details, see [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/latest/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).
+- Importing the quantities of items stored in each of the warehouses. For details, see [Import file details: product_stock.csv](/docs/pbc/all/warehouse-management-system/latest/base-shop/import-and-export-data/import-file-details-product-stock.csv.html).
 
 ## Availability management
 
@@ -82,7 +82,7 @@ Product availability after the order:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/after-order-placement.png)
 
-For details about checking product availability in the Back Office, see [Check availability of products](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/check-availability-of-products.html).
+For details about checking product availability in the Back Office, see [Check availability of products](/docs/pbc/all/warehouse-management-system/latest/base-shop/manage-in-the-back-office/check-availability-of-products.html).
 
 {% info_block infoBox %}
 
@@ -90,7 +90,7 @@ The availability of a product bundle is defined by the availability of each prod
 
 {% endinfo_block %}
 
-In the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can use the `reserved` parameter to define the states at which the order items are reserved. There can also be states that release an item. For example, when the payment fails and the order is canceled, the item is not reserved anymore:
+In the [state machine](/docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can use the `reserved` parameter to define the states at which the order items are reserved. There can also be states that release an item. For example, when the payment fails and the order is canceled, the item is not reserved anymore:
 
 <details>
 <summary>State machine example</summary>
@@ -109,17 +109,17 @@ For SEO purposes, products that are not available can still be displayed on the 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/create-warehouses.html)  |
-| [Edit warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-warehouses.html) |
-| [Check availability of products](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/check-availability-of-products.html)  |
-| [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html)  |
+| [Create warehouses](/docs/pbc/all/warehouse-management-system/latest/base-shop/manage-in-the-back-office/create-warehouses.html)  |
+| [Edit warehouses](/docs/pbc/all/warehouse-management-system/latest/base-shop/manage-in-the-back-office/edit-warehouses.html) |
+| [Check availability of products](/docs/pbc/all/warehouse-management-system/latest/base-shop/manage-in-the-back-office/check-availability-of-products.html)  |
+| [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/latest/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html)  |
 
 ## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
 |---|---|---|---|-|
-| [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) | [Upgrade the Availability module](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html) | [Retrieve abstract product availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html) | [File details: product_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-stock.csv.html) |  |
-| [Install the Inventory Management + Alternative Products feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-alternative-products-feature.html) | [Upgrade the AvailabilityCartConnector module](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitycartconnector-module.html) | [Retrieve concrete product availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-availability.html) | [File details: warehouse_address.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse-address.csv.html) | [Manage stocks in a multi-store environment: Best practices](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html) |
-| [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html) | [Upgrade the AvailabilityGui module](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html) | [Retrieve availability when retrieving abstract products](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-availability-when-retrieving-abstract-products.html) | [File details: warehouse_store.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse-store.csv.html) |  |
-|| [Upgrade the AvailabilityOfferConnector module](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html) | [Retrieve availability when retrieving concrete products](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-availability-when-retrieving-concrete-products.html) | ["Import file details: warehouse.csv"](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse.csv.html) | |
-| | [Upgrade the AvailabilityStorage module](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitystorage-module.html) | | | |
+| [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) | [Upgrade the Availability module](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html) | [Retrieve abstract product availability](/docs/pbc/all/warehouse-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html) | [File details: product_stock.csv](/docs/pbc/all/warehouse-management-system/latest/base-shop/import-and-export-data/import-file-details-product-stock.csv.html) |  |
+| [Install the Inventory Management + Alternative Products feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-alternative-products-feature.html) | [Upgrade the AvailabilityCartConnector module](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitycartconnector-module.html) | [Retrieve concrete product availability](/docs/pbc/all/warehouse-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-availability.html) | [File details: warehouse_address.csv](/docs/pbc/all/warehouse-management-system/latest/base-shop/import-and-export-data/import-file-details-warehouse-address.csv.html) | [Manage stocks in a multi-store environment: Best practices](/docs/pbc/all/warehouse-management-system/latest/base-shop/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html) |
+| [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html) | [Upgrade the AvailabilityGui module](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html) | [Retrieve availability when retrieving abstract products](/docs/pbc/all/warehouse-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-availability-when-retrieving-abstract-products.html) | [File details: warehouse_store.csv](/docs/pbc/all/warehouse-management-system/latest/base-shop/import-and-export-data/import-file-details-warehouse-store.csv.html) |  |
+|| [Upgrade the AvailabilityOfferConnector module](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html) | [Retrieve availability when retrieving concrete products](/docs/pbc/all/warehouse-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-availability-when-retrieving-concrete-products.html) | ["Import file details: warehouse.csv"](/docs/pbc/all/warehouse-management-system/latest/base-shop/import-and-export-data/import-file-details-warehouse.csv.html) | |
+| | [Upgrade the AvailabilityStorage module](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitystorage-module.html) | | | |

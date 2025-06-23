@@ -35,4 +35,4 @@ This is how the Agent Assist in Merchant Portal feature works in the Merchant Po
 
 ## Related Developer Documents
 
-[Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html)
+[Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/latest/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html)

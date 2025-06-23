@@ -13,13 +13,13 @@ To enable the support of Fulfillment App in your project, install the following 
 
 | NAME  | VERSION          | INSTALLATION GUIDE |
 |----------|------------------|--------------------|
-| Warehouse picking               | {{page.version}} | [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)                     |
-| Warehouse User Management               | {{page.version}} | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html)                     |
-| Warehouse picking + Product               | {{page.version}} | [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html)                     |
+| Warehouse picking               | latest | [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)                     |
+| Warehouse User Management               | latest | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html)                     |
+| Warehouse picking + Product               | latest | [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html)                     |
 
 ## Install Fulfillment App
 
-For instructions on installing Fulfillment App, see [Set up Oryx](/docs/dg/dev/frontend-development/{{page.version}}/oryx/getting-started/set-up-oryx.html).
+For instructions on installing Fulfillment App, see [Set up Oryx](/docs/dg/dev/frontend-development/latest/oryx/getting-started/set-up-oryx.html).
 
 ## Connect Fulfillment App
 

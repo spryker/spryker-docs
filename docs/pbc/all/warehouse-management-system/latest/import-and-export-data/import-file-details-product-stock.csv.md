@@ -19,12 +19,12 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `product_stock.csv` file to configure [Product Stock](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_stock.csv` file to configure [Product Stock](/docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html) information in your Spryker Demo Shop.
 
 ## Import file dependencies
 
-- [product_concrete.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
-- [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse.csv.html)
+- [product_concrete.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
+- [warehouse.csv](/docs/pbc/all/warehouse-management-system/latest/base-shop/import-and-export-data/import-file-details-warehouse.csv.html)
 
 ## Import file parameters
 

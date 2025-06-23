@@ -13,7 +13,7 @@ Inherited scope rules apply when you need to grant access to an entity (child) t
 
 ![Inherited scope](https://confluence-connect.gliffy.net/embed/image/e473a9ca-2eb7-481d-b0c4-72d2563ec466.png?utm_medium=live&utm_source=custom)
 
-Inheritance rules (child-parent relationship) are set in the configuration. For more details, see [Persistence ACL configuration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html).
+Inheritance rules (child-parent relationship) are set in the configuration. For more details, see [Persistence ACL configuration](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html).
 
 Inherited scope functionality has one unique feature: it's sufficient to have **read** access to the parent for successful inheritance for any operation (create/read/update/delete).
 
@@ -59,7 +59,7 @@ FROM `spy_merchant_product_abstract`
 ORDER BY `spy_merchant_product_abstract`.`updated_at` DESC;
 ```
 
-It is important to understand that the permissions are checked in the context of roles. Rules of one role do not affect the rules of another. For details, see [Execution Flow](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/execution-flow.html). Below is an example of the two roles:
+It is important to understand that the permissions are checked in the context of roles. Rules of one role do not affect the rules of another. For details, see [Execution Flow](/docs/pbc/all/user-management/latest/marketplace/persistence-acl-feature-overview/execution-flow.html). Below is an example of the two roles:
 
 1. DE product manager (Full CRUD for products in the DE store)
 2. US product viewer (View only for products in the US store)

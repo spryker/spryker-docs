@@ -11,8 +11,8 @@ This endpoint lets you pick picklist items.
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
 
-- [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
-- [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html)
+- [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
+- [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html)
 
 
 ## Pick a picklist item
@@ -23,14 +23,14 @@ For detailed information about the modules that provide the API functionality an
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{picklist_id}}***{% endraw %} | ID of the picklist to to pick an item of. To get it, [retrieve picklists](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-retrieve-picklists.html).     |
+| {% raw %}***{{picklist_id}}***{% endraw %} | ID of the picklist to to pick an item of. To get it, [retrieve picklists](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-retrieve-picklists.html).     |
 
 
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html).  |
 
 | STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ For detailed information about the modules that provide the API functionality an
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| id | String | &check; | Unique identifier of the item to pick. To get it, [retrieve picklists](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-retrieve-picklists.html) with `picking-list-items` included.   |
+| id | String | &check; | Unique identifier of the item to pick. To get it, [retrieve picklists](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-retrieve-picklists.html) with `picking-list-items` included.   |
 | numberOfPicked | Integer | &check; | Quantity of the item that was collected.  |
 | numberOfNotPicked.uuid | Integer | &check; | Quantity of the item that was not found. |
 
@@ -272,13 +272,13 @@ For detailed information about the modules that provide the API functionality an
 </details>  
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/picking-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/picking-lists-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/picking-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/picking-lists-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/picking-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/picking-list-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/picking-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/picking-list-items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/users-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/users-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/users-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/users-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/warehouses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/warehouses-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/warehouses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/warehouses-response-attributes.md -->
 
 ## Possible errors
 
@@ -287,4 +287,4 @@ For detailed information about the modules that provide the API functionality an
 | 5303 | The picklist with the specified ID doesn't exist.  |
 | 5304 | The picklist item with the specified ID doesn't exist.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

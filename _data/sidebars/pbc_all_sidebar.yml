@@ -1460,7 +1460,7 @@ entries:
                       - title: Marketplace Merchant + Promotions & Discounts
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-promotions-and-discounts-feature.html
                         include_versions:
-                        - "202507.0"
+                        - "latest"
                       - title: Marketplace Merchant B2B Contract Requests
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-b2b-contract-requests-feature.html
                         include_versions:
@@ -1693,7 +1693,7 @@ entries:
           - title: Sitemap feature overview
             url: /docs/pbc/all/miscellaneous/sitemap-feature-overview.html            
             include_versions:
-            - "202507.0"  
+            - "latest"  
           - title: Install and upgrade
             nested:
               - title: Install features
@@ -1707,7 +1707,7 @@ entries:
                   - title: Sitemap
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-sitemap-feature.html
                     include_versions:
-                    - "202507.0"  
+                    - "latest"  
                   - title: Push Notification
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-push-notification-feature.html
 
@@ -1897,7 +1897,7 @@ entries:
       - title: Multi-factor authentication
         url: /docs/pbc/all/multi-factor-authentication/multi-factor-authentication.html
         include_versions:
-        - "202507.0"
+        - "latest"
         nested:
           - title: Install the Multi-Factor Authentication feature
             url: /docs/pbc/all/multi-factor-authentication/install-multi-factor-authentication-feature.html
@@ -1947,7 +1947,7 @@ entries:
                       - title: Marketplace Product Offer + Promotions & Discounts feature
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-promotions-and-discounts-feature.html
                         include_versions:
-                        - "202507.0"
+                        - "latest"
                       - title: Product Offer Shipment Availability
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-availability-feature.html
                       - title: Product Offer Shipment
@@ -2077,11 +2077,11 @@ entries:
               - title: Order Amendment feature overview
                 url: /docs/pbc/all/order-management-system/base-shop/order-amendment-feature-overview.html      
                 include_versions:
-                - "202507.0"
+                - "latest"
               - title: Unique random order reference generator
                 url: /docs/pbc/all/order-management-system/base-shop/unique-random-order-reference-generator.html
                 include_versions:
-                  - "202507.0"
+                  - "latest"
               - title: Reclamations feature overview
                 url: /docs/pbc/all/order-management-system/base-shop/reclamations-feature-overview.html
               - title: Refunds feature overview
@@ -2111,7 +2111,7 @@ entries:
                       - title: Order Amendment
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature.html                        
                         include_versions:
-                        - "202507.0"
+                        - "latest"
                       - title: Reclamations
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-reclamations-feature.html
                       - title: Quick Add to Cart + Non-splittable Products
@@ -2886,7 +2886,7 @@ entries:
                       - title: Concrete SKU product filter feature overview
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/concrete-sku-product-filter-feature-overview.html
                         include_versions:
-                        - "202507.0"
+                        - "latest"
 
                   - title: Alternative Products
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/alternative-products-feature-overview.html
@@ -2950,7 +2950,7 @@ entries:
                       - title: Install Concrete SKU product filter feature
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-concrete-sku-filter-feature.html
                         include_versions:
-                        - "202507.0"       
+                        - "latest"       
                                        
                       - title: Install the Category Management + Catalog feature
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-management-catalog-feature.html
@@ -3945,7 +3945,7 @@ entries:
       - title: Self-Service Portal
         url: /docs/pbc/all/self-service-portal/self-service-portal.html
         include_versions:
-        - "202507.0"
+        - "latest"
         nested:
           - title: SSP Service Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-service-management-feature-overview.html

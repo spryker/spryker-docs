@@ -24,7 +24,7 @@ If we share a onetimesecret link with you, use the password provided in the Link
 
 ## Share a secret
 
-1. Using [One-Time Secret](https://onetimesecret.com/), create a secret message by entering the secret and configuring a passphrase.
+1. Using [One-Time Secret](https://eu.onetimesecret.com/), create a secret message by entering the secret and configuring a passphrase.
 
 {% info_block warningBox %}
 

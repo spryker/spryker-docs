@@ -11,14 +11,17 @@ related:
 ## Performance Guidance: Batch Processing Traits in Propel ORM
 
 ### Prerequirements
+
 Update your Propel package to the: [spryker/propel:^3.45.0](https://github.com/spryker/propel/releases/tag/3.45.0)
 
 ### ActiveRecordBatchProcessorTrait
+
 - This trait provides performance optimizations for database operations by allowing you to save Propel entities in batches.
-- It enables saving multiple records in a single operation, helping to resolve the - https://docs.spryker.com/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/n+1-problem.html
+- It enables saving multiple records in a single operation, helping to resolve the - [N+1 problem](https://docs.spryker.com/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/n+1-problem.html)
 - It reduces database round trips and improves overall performance.
 
-#### Basic Usage Example:
+#### Basic Usage Example
+
 ``` php
 class EntityManager {
     use ActiveRecordBatchProcessorTrait;
@@ -37,16 +40,19 @@ class EntityManager {
     }
 }
 ```
-#### Key Methods:
+
+#### Key Methods
+
 - `persist($entity)`: Adds an entity to the batch queue. Handles separation for insert and update operations.
 - `commit()`: Commits all queued entities to the database in a single batch.
 
 ### CascadeActiveRecordBatchProcessorTrait
-- Extends `ActiveRecordBatchProcessorTrait` by adding recursive cascade-saving functionality for related entities. 
-- Helps manage complex entity relationships during batch processing. 
+
+- Extends `ActiveRecordBatchProcessorTrait` by adding recursive cascade-saving functionality for related entities.
+- Helps manage complex entity relationships during batch processing.
 - Works with `BatchEntityPostSaveInterface`, which enables organizing `postSave` events for related entities in a batch-safe manner.
 
-#### Basic Usage Example:
+#### Basic Usage Example
 
 ```php
 class AbstractSpySalesOrderItem extends BaseSpySalesOrderItem implements BatchEntityPostSaveInterface
@@ -73,8 +79,10 @@ class AbstractSpySalesOrderItem extends BaseSpySalesOrderItem implements BatchEn
     }
 }
 ```
+
 With this implementation, the following code:
-```php 
+
+```php
 class SalesEntityManager extends AbstractEntityManager implements SalesEntityManagerInterface
 {
     public function updateOrCreateSalesOrderItems(array $salesOrderItemsData): void
@@ -99,14 +107,15 @@ class SalesEntityManager extends AbstractEntityManager implements SalesEntityMan
 
 Performs the following actions:
 - Loads all required entities from the database in a single query.
-- Creates or updates `salesOrderItem` entities in a single batch. 
+- Creates or updates `salesOrderItem` entities in a single batch.
 - Creates related `OrderItemStateHistoryEntity` instances during the post-save process execution (method `batchPostSave` declared by `BatchEntityPostSaveInterface`) and saves them in a single operation after the main entity save is complete.
 
 ### BatchEntityHooksInterface
-- Enables `postSave` hooks similar to publish-and-synchronize (P&S) events.
-- To ensure proper event handling during batch operations, the corresponding interface must be implemented for storage and search entities when used with `ActiveRecordBatchProcessorTrait` or` CascadeActiveRecordBatchProcessorTrait`. These traits do not automatically trigger Publish & Synchronize (P&S) events for storage or search entities. Therefore, explicit implementation is required to handle such events correctly during batch processing.
 
-#### Basic Usage Example:
+- Enables `postSave` hooks similar to publish-and-synchronize (P&S) events.
+- To ensure proper event handling during batch operations, the corresponding interface must be implemented for storage and search entities when used with `ActiveRecordBatchProcessorTrait` or`CascadeActiveRecordBatchProcessorTrait`. These traits do not automatically trigger Publish & Synchronize (P&S) events for storage or search entities. Therefore, explicit implementation is required to handle such events correctly during batch processing.
+
+#### Basic Usage Example
 
 ```php
 class AbstractSpyProductOfferStorage extends BaseSpyProductOfferStorage implements BatchEntityHooksInterface
@@ -121,9 +130,11 @@ class AbstractSpyProductOfferStorage extends BaseSpyProductOfferStorage implemen
         }
     }
 ```
+
 When saving the `SpyProductOfferStorage` entity using `ActiveRecordBatchProcessorTrait`, the P&S event is triggered after the batch save completes.
 
 ### Troubleshooting and error handling
+
 When the `commit()` method is called, each type of database operation is executed within its own dedicated transaction:
 
 - **Insert operations** are performed in a separate transaction.
@@ -131,7 +142,8 @@ When the `commit()` method is called, each type of database operation is execute
 
 If an error occurs during the execution of any operation, the corresponding transaction is **rolled back**, and an **exception is thrown**. This ensures data consistency and prevents partial writes in case of failure.
 
-### Limitations and Suggestions:
+### Limitations and Suggestions
+
 Limitations and Recommendations
 1. **Entity ID Access**: The `ActiveRecordBatchProcessorTrait` does not return entity IDs after saving. If you need the ID, perform a separate database query.
 

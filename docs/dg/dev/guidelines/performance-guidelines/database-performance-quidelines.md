@@ -27,8 +27,8 @@ class EntityManager {
     use ActiveRecordBatchProcessorTrait;
 
     public function processItems(array $itemTransfers): void {
-        // Load or create all entities at once
-        $items = $this->findOrCreateEntities($itemTransfers);
+
+        $items = // Load or create all entities at once from database
 
         // Queue entities for batch processing
         foreach ($items as $item) {
@@ -44,7 +44,12 @@ class EntityManager {
 #### Key Methods
 
 - `persist($entity)`: Adds an entity to the batch queue. Handles separation for insert and update operations.
-- `commit()`: Commits all queued entities to the database in a single batch.
+- `commit()`: When this method is called, each type of database operation is executed within its own dedicated transaction:
+
+  - **Insert operations** are performed in a separate transaction.
+  - **Update operations** are performed in another separate transaction.
+
+    If an error occurs during the execution of any operation, the corresponding transaction is **rolled back**, and an **exception is thrown**. This ensures data consistency and prevents partial writes in case of failure.
 
 ### CascadeActiveRecordBatchProcessorTrait
 
@@ -129,18 +134,19 @@ class AbstractSpyProductOfferStorage extends BaseSpyProductOfferStorage implemen
             $this->setGeneratedAliasKeys();
         }
     }
+
+    public function batchPostSaveHook(): void
+    {
+        if (method_exists($this, 'isSynchronizationEnabled') && $this->isSynchronizationEnabled()) {
+            // synchronization behavior
+            $this->syncPublishedMessage();
+            $this->syncPublishedMessageForMappingResource();
+            $this->syncPublishedMessageForMappings();
+        }
+    }
 ```
 
 When saving the `SpyProductOfferStorage` entity using `ActiveRecordBatchProcessorTrait`, the P&S event is triggered after the batch save completes.
-
-### Troubleshooting and error handling
-
-When the `commit()` method is called, each type of database operation is executed within its own dedicated transaction:
-
-- **Insert operations** are performed in a separate transaction.
-- **Update operations** are performed in another separate transaction.
-
-If an error occurs during the execution of any operation, the corresponding transaction is **rolled back**, and an **exception is thrown**. This ensures data consistency and prevents partial writes in case of failure.
 
 ### Limitations and Suggestions
 

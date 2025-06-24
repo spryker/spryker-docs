@@ -53,7 +53,7 @@ To modify meta information for a product:
 
 ## Next steps
 
-- [Edit abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html)
-- [Manage abstract product prices](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html)
-- [Manage abstract product attributes](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-attributes.html)
-- [Manage abstract product image sets](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-image-sets.html)
+- [Edit abstract product](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html)
+- [Manage abstract product prices](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html)
+- [Manage abstract product attributes](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-attributes.html)
+- [Manage abstract product image sets](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-image-sets.html)

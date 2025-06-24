@@ -37,7 +37,7 @@ To solve the challenge, use instructions from the following sections.
 
 Full-text search engines like Elasticsearch provide a possibility to influence the sorting of products by tweaking the scoring function. The scoring function assigns weights to each result based on a formula, which in its turn is usually based on text similarity or synonyms, but we can change it to boost specific products higher than others. In this challenge, you will try to affect the scoring function based on the products that are already in the cart.
 
-The second idea leverages the fact that Spryker's implementation of [search](/docs/pbc/all/search/{{site.version}}/base-shop/search-feature-overview/search-feature-overview.html) is very flexible and allows configuring additional plugins that are used to build search queries.
+The second idea leverages the fact that Spryker's implementation of [search](/docs/pbc/all/search/latest/base-shop/search-feature-overview/search-feature-overview.html) is very flexible and allows configuring additional plugins that are used to build search queries.
 
 To solve this task, you will work in the client layer of the `Catalog` module located in `src/Pyz/Client/Catalog/`.
 

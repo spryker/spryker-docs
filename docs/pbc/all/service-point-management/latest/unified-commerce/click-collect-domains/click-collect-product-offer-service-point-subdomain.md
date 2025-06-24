@@ -10,7 +10,7 @@ The Product Offer Service Point subdomain refers to the connection between produ
 
 ## Installation
 
-[Install the Product Offer Service Points feature](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-product-offer-service-points-feature.html)
+[Install the Product Offer Service Points feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-feature.html)
 
 ## Modules
 

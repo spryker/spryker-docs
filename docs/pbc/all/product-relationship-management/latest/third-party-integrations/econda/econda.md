@@ -29,11 +29,11 @@ YOUR ADVANTAGES:
 
 ## Related Developer guides
 
-- [Installing Econda](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/install-econda.html)
-- [Integrating Econda](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/integrate-econda.html)
-- [Integrating Econda cross-selling](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/integrate-econda-cross-selling.html)
-- [Adding the Econda tracking code](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/add-the-econda-tracking-code.html)
-- [Exporting Econda data](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/export-econda-data.html)
+- [Installing Econda](/docs/pbc/all/product-relationship-management/latest/third-party-integrations/econda/install-econda.html)
+- [Integrating Econda](/docs/pbc/all/product-relationship-management/latest/third-party-integrations/econda/integrate-econda.html)
+- [Integrating Econda cross-selling](/docs/pbc/all/product-relationship-management/latest/third-party-integrations/econda/integrate-econda-cross-selling.html)
+- [Adding the Econda tracking code](/docs/pbc/all/product-relationship-management/latest/third-party-integrations/econda/add-the-econda-tracking-code.html)
+- [Exporting Econda data](/docs/pbc/all/product-relationship-management/latest/third-party-integrations/econda/export-econda-data.html)
 
 
 

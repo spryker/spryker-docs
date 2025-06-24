@@ -24,8 +24,8 @@ This document describes how to create product relations in the Back Office.
 
 ## Prerequisites
 
-1. Learn how [related product rules](/docs/pbc/all/product-relationship-management/{{page.version}}/product-relationship-management.html#related-product-rules) work.
-2. If you are new to product relations, you might want to start with [Best practices: Promote products with product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/best-practices-promote-products-with-product-relations.html).
+1. Learn how [related product rules](/docs/pbc/all/product-relationship-management/latest/product-relationship-management.html#related-product-rules) work.
+2. If you are new to product relations, you might want to start with [Best practices: Promote products with product relations](/docs/pbc/all/product-relationship-management/latest/manage-in-the-back-office/best-practices-promote-products-with-product-relations.html).
 3. To start working with product relations, go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Relations**.
 
 ## Define general settings of a product relation

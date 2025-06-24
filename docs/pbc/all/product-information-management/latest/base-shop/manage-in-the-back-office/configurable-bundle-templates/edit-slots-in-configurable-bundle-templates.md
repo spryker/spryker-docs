@@ -18,7 +18,7 @@ This document describes how to edit slots in configurable bundle templates in th
 
 ## Prerequisites
 
-1. [Create a slot](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-configurable-bundle-templates.html#create-slots-in-a-configurable-bundle-template).
+1. [Create a slot](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-configurable-bundle-templates.html#create-slots-in-a-configurable-bundle-template).
 2. To start editing slots, do the following:
     1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Configurable Bundle Templates**.
         This opens the **Configurable Bundle Templates** page.

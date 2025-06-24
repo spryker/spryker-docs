@@ -23,7 +23,7 @@ This document describes how to create product options. Product options are addit
 
 ## Prerequisites
 
-- [Create a tax set](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html) to apply to the product options.
+- [Create a tax set](/docs/pbc/all/tax-management/latest/base-shop/manage-in-the-back-office/create-tax-sets.html) to apply to the product options.
 - Review the [reference information](#reference-information-create-product-options) before you start, or look up the necessary information as you go through the process.
 
 ## Create product options
@@ -59,7 +59,7 @@ This document describes how to create product options. Product options are addit
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | GROUP NAME TRANSLATION KEY | Glossary key for the name of product option group. For example, `product.option.group.name.wrapping`. It will be used for identifying and translating the group name per locale. |
-| TAX SET | Tax set to apply to the product options. To create one, see [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html). |
+| TAX SET | Tax set to apply to the product options. To create one, see [Create tax sets](/docs/pbc/all/tax-management/latest/base-shop/manage-in-the-back-office/create-tax-sets.html). |
 | OPTION NAME TRANSLATION KEY | Glossary key for a product option. For example, `product.option.paper.wrapping`. It will be used for identifying and translating the option name per locale. |
 | SKU | Unique identifier to assign to a product option. |
 | PRICES | Gross and net prices per currency per locale to sell product options for. When a price is set to 0, the options is *free of charge*.  |
@@ -78,4 +78,4 @@ Product options:
 
 ## Next steps
 
-[Edit product options](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/product-options/edit-product-options.html)
+[Edit product options](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/product-options/edit-product-options.html)

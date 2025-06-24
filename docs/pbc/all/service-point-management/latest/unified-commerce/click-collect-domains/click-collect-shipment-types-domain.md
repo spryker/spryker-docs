@@ -9,7 +9,7 @@ Shipment types offer different options for customers to receive their orders.
 
 ## Installation
 
-[Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
+[Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
 
 ## Modules
 

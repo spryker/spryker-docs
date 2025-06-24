@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html
 ---
 
-The following console commands are available in your project after successful [installation](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html) of the Akeneo Connector Eco module. Run them one by one.
+The following console commands are available in your project after successful [installation](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html) of the Akeneo Connector Eco module. Run them one by one.
 
 1) Command to import super attributes:
 

@@ -5,11 +5,11 @@ template: data-import-template
 last_updated: Jun 1, 2023
 ---
 
-This document describes the `quote_request.csv` file to configure information about [quote requests](/docs/pbc/all/request-for-quote/{{page.version}}/request-for-quote.html) in your Spryker shop.
+This document describes the `quote_request.csv` file to configure information about [quote requests](/docs/pbc/all/request-for-quote/latest/request-for-quote.html) in your Spryker shop.
 
 ## Import file dependencies
 
-[File details: company_user.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/import-and-export-data/file-details-company-user.csv.html)
+[File details: company_user.csv](/docs/pbc/all/customer-relationship-management/latest/base-shop/import-and-export-data/file-details-company-user.csv.html)
 
 ## Import file parameters
 

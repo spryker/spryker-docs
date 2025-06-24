@@ -16,7 +16,7 @@ redirect_from:
 
 To help your customers locate items in your shop more easily, you can add customizable *category filters* to the catalog pages or simply fall back to the standard category filters. You can add, rearrange and define filters for any given parameter in the category tree, such as price or brand.
 
-For details about how you can manage Category filters in the Back Office, see [Managing category filters](/docs/pbc/all/search/{{page.version}}/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html)
+For details about how you can manage Category filters in the Back Office, see [Managing category filters](/docs/pbc/all/search/latest/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html)
 
 ## Current constraints
 
@@ -28,4 +28,4 @@ The feature has the following functional constraints, which are going to be reso
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage category filters](/docs/pbc/all/search/{{page.version}}/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html)  |
+| [Manage category filters](/docs/pbc/all/search/latest/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html)  |

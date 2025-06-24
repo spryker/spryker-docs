@@ -9,12 +9,12 @@ redirect_from:
 
 This section contains the guides on managing returns in the Back Office:
 
-- [Change the state of order items in returns](/docs/pbc/all/return-management/{{page.version}}/base-shop/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html)
-- [Manage returns](/docs/pbc/all/return-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-returns.html)
+- [Change the state of order items in returns](/docs/pbc/all/return-management/latest/base-shop/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html)
+- [Manage returns](/docs/pbc/all/return-management/latest/base-shop/manage-in-the-back-office/manage-returns.html)
 
 {% include pbc/all/manage-in-the-back-office/log-into-the-back-office.md %} <!-- To edit, see /_includes/pbc/all/manage-in-the-back-office/log-into-the-back-office.md -->
 
 ## Next steps
 
-- [Change the state of order items in returns](/docs/pbc/all/return-management/{{page.version}}/base-shop/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html)
-- [Manage returns](/docs/pbc/all/return-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-returns.html)
+- [Change the state of order items in returns](/docs/pbc/all/return-management/latest/base-shop/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html)
+- [Manage returns](/docs/pbc/all/return-management/latest/base-shop/manage-in-the-back-office/manage-returns.html)

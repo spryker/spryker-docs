@@ -94,4 +94,4 @@ You can add multiple image sets and multiple images to an image set. However, by
 
 ## Next Steps
 
-[Assign product to categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html)
+[Assign product to categories](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html)

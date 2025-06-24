@@ -12,11 +12,11 @@ redirect_from:
 
 The *Return Management* capability lets you create and manage returns for a sales order.
 
-Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole order or its individual items. For details about how to create return, see [Creating returns](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/create-returns.html).
+Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole order or its individual items. For details about how to create return, see [Creating returns](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/create-returns.html).
 
 {% info_block warningBox "Note" %}
 
-You can also create and manage returns using Glue API. For details, see [Manging the returns](/docs/pbc/all/return-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-returns.html).
+You can also create and manage returns using Glue API. For details, see [Manging the returns](/docs/pbc/all/return-management/latest/base-shop/manage-using-glue-api/glue-api-manage-returns.html).
 
 {% endinfo_block %}
 
@@ -31,7 +31,7 @@ The *Return Policy* is a set of rules that defines what items can be returned: i
 
 {% info_block infoBox "Info" %}
 
-For now, you can set the Return Policy period in code only. There is no UI for that. For details, see [HowTo: Set the number of days for a return policy](/docs/pbc/all/return-management/{{page.version}}/base-shop/set-number-of-days-for-a-return-policy.html).
+For now, you can set the Return Policy period in code only. There is no UI for that. For details, see [HowTo: Set the number of days for a return policy](/docs/pbc/all/return-management/latest/base-shop/set-number-of-days-for-a-return-policy.html).
 
 {% endinfo_block %}
 
@@ -68,12 +68,12 @@ The *guest users* can not initiate returns of their orders, as the return manage
 
 {% info_block warningBox "Note" %}
 
-For a [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html), you can't select to return an entire Configurable Bundle, but you can select to return separate items from it.
-The [Product Bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
+For a [Configurable Bundle](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/configurable-bundle-feature-overview.html), you can't select to return an entire Configurable Bundle, but you can select to return separate items from it.
+The [Product Bundles](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-bundles-feature-overview.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}
 
-Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/create-returns.html). For details about the return states, see [Return items states](/docs/pbc/all/return-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-returns.html).
+Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/create-returns.html). For details about the return states, see [Return items states](/docs/pbc/all/return-management/latest/base-shop/manage-in-the-back-office/manage-returns.html).
 
 {% info_block infoBox "Info" %}
 
@@ -87,11 +87,11 @@ The following figure shows how to create a return, view its details and print a 
 
 ## Return Management in the Back Office
 
-A Back Office user can create returns for the [returnable items](#returnable-items-and-a-return-policy) from the order details page of the Back Office. For details, see [Back Office user guide - Managing orders](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/create-returns.html). Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns. For details about how to manage the returns in the Back Office, see [Back Office user guide - Manging returns](/docs/pbc/all/return-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-returns.html).
+A Back Office user can create returns for the [returnable items](#returnable-items-and-a-return-policy) from the order details page of the Back Office. For details, see [Back Office user guide - Managing orders](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/create-returns.html). Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns. For details about how to manage the returns in the Back Office, see [Back Office user guide - Manging returns](/docs/pbc/all/return-management/latest/base-shop/manage-in-the-back-office/manage-returns.html).
 
 {% info_block infoBox "Return management process" %}
 
-To define the most suitable return management process for your project, to learn how you can use the default Spryker Return Management feature, and what custom development you might need to implement it, check out [Building a return management process: Best practices](/docs/pbc/all/return-management/{{page.version}}/base-shop/build-a-return-management-process-best-practices.html).
+To define the most suitable return management process for your project, to learn how you can use the default Spryker Return Management feature, and what custom development you might need to implement it, check out [Building a return management process: Best practices](/docs/pbc/all/return-management/latest/base-shop/build-a-return-management-process-best-practices.html).
 
 {% endinfo_block %}
 
@@ -125,21 +125,21 @@ composer require spryker-feature/return-management:"{{site.version}}" spryker/sa
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create returns in the Back Office](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/create-returns.html)  |
-| [View return details, set return statuses and print return slips in the Back Office](/docs/pbc/all/return-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-returns.html)  |
-| [Choose a suitable return management process for your project](/docs/pbc/all/return-management/{{page.version}}/base-shop/build-a-return-management-process-best-practices.html)  |
+| [Create returns in the Back Office](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/create-returns.html)  |
+| [View return details, set return statuses and print return slips in the Back Office](/docs/pbc/all/return-management/latest/base-shop/manage-in-the-back-office/manage-returns.html)  |
+| [Choose a suitable return management process for your project](/docs/pbc/all/return-management/latest/base-shop/build-a-return-management-process-best-practices.html)  |
 
 ## Related Developer documents
 
 | INSTALLATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---|---|---|
-| [Install the Return Management feature](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-feature.html) | [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-marketplace-returns.html) | [HowTo: Set number of days for a return policy](/docs/pbc/all/return-management/{{page.version}}/base-shop/set-number-of-days-for-a-return-policy.html) |
-| [Install the Configurable Bundle + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-order-management-feature.html) |  |  |
-| [Install the Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-glue-api.html) |  |  |
-| [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |  |  |
-| [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |  |  |
-| [Install the Product Bundles + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-order-management-feature.html) |  |  |
-| [Install the Product Bundles + Return Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-return-management-feature.html) |  |  |
-| [Product Measurement Unit feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |  |  |
-| [Install the Product Options + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html) |  |  |
-| [Install the Product Packaging Unit feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html) |  |  |
+| [Install the Return Management feature](/docs/pbc/all/return-management/latest/base-shop/install-and-upgrade/install-the-return-management-feature.html) | [Managing the returns](/docs/pbc/all/return-management/latest/marketplace/glue-api-manage-marketplace-returns.html) | [HowTo: Set number of days for a return policy](/docs/pbc/all/return-management/latest/base-shop/set-number-of-days-for-a-return-policy.html) |
+| [Install the Configurable Bundle + Order Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-order-management-feature.html) |  |  |
+| [Install the Return Management Glue API](/docs/pbc/all/return-management/latest/base-shop/install-and-upgrade/install-the-return-management-glue-api.html) |  |  |
+| [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |  |  |
+| [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |  |  |
+| [Install the Product Bundles + Order Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-bundles-order-management-feature.html) |  |  |
+| [Install the Product Bundles + Return Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-bundles-return-management-feature.html) |  |  |
+| [Product Measurement Unit feature integration](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |  |  |
+| [Install the Product Options + Order Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html) |  |  |
+| [Install the Product Packaging Unit feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html) |  |  |

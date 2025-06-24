@@ -9,7 +9,7 @@ redirect_from:
 
 This section contains the guides on managing filters and search preferences in the Back Office:
 
-- [Best practices: Promote products with search preferences](/docs/pbc/all/search/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-promote-products-with-search-preferences.html)
+- [Best practices: Promote products with search preferences](/docs/pbc/all/search/latest/base-shop/manage-in-the-back-office/best-practices-promote-products-with-search-preferences.html)
 - [Define search preferences](/docs/pbc/all/search/202404.0/base-shop/manage-in-the-back-office/define-search-preferences.html)
 - [Define filter preferences](/docs/pbc/all/search/202404.0/base-shop/manage-in-the-back-office/filter-preferences/define-filter-preferences.html)
 
@@ -17,6 +17,6 @@ This section contains the guides on managing filters and search preferences in t
 
 ## Next steps
 
-- [Best practices: Promote products with search preferences](/docs/pbc/all/search/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-promote-products-with-search-preferences.html)
+- [Best practices: Promote products with search preferences](/docs/pbc/all/search/latest/base-shop/manage-in-the-back-office/best-practices-promote-products-with-search-preferences.html)
 - [Define search preferences](/docs/pbc/all/search/202404.0/base-shop/manage-in-the-back-office/define-search-preferences.html)
 - [Define filter preferences](/docs/pbc/all/search/202404.0/base-shop/manage-in-the-back-office/filter-preferences/define-filter-preferences.html)

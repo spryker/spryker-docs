@@ -98,7 +98,7 @@ If bundled items have quantity&nbsp;<span aria-label="and then">></span> 1 then 
 {% info_block infoBox %}
 
 When a bundle product is added to cart with a big number of items–for example, 150–users may experience slow cart operations.  
-To improve performance in such cases, configure bundles to not be split in cart by following [Alternative setup for handling large quantities of bundled products in the cart](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html#alternative-setup-for-handling-large-quantities-of-bundled-products-in-the-cart).  
+To improve performance in such cases, configure bundles to not be split in cart by following [Alternative setup for handling large quantities of bundled products in the cart](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html#alternative-setup-for-handling-large-quantities-of-bundled-products-in-the-cart).  
 
 
 {% endinfo_block %}
@@ -115,13 +115,13 @@ If bundled item moves to reserved state machine state then corresponding bundle 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)  |
+| [Create product bundles](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)  |
 
 ## Related Developer documents
 
 |INSTALLATION GUIDES | GLUE API GUIDES  |
 |---------|---------|
-|[Install the Product Bundles feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html) | [Retrieving bundled products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-bundled-products.html) |
+|[Install the Product Bundles feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html) | [Retrieving bundled products](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-bundled-products.html) |
 
 
 

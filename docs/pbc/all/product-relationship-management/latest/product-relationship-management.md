@@ -25,7 +25,7 @@ The *Product Relations* feature lets product catalog managers create logical rel
 
 Product relations are established only between abstract products. An abstract product can have multiple product relations.
 
-To learn how a Back Office user can create a product relation, see [Creating a product relation](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/view-product-relations.html).
+To learn how a Back Office user can create a product relation, see [Creating a product relation](/docs/pbc/all/product-relationship-management/latest/manage-in-the-back-office/view-product-relations.html).
 
 A developer can import<!-- link to new import page --> product relations.
 
@@ -51,7 +51,7 @@ With Upselling, when the product owing the relation is added to the cart, relate
   </video>
 </figure>
 
-A product catalog manager can select a product relation type when [creating](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/view-product-relations.html) or [editing](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/edit-product-relations.html) a product relation in the Back Office.
+A product catalog manager can select a product relation type when [creating](/docs/pbc/all/product-relationship-management/latest/manage-in-the-back-office/view-product-relations.html) or [editing](/docs/pbc/all/product-relationship-management/latest/manage-in-the-back-office/edit-product-relations.html) a product relation in the Back Office.
 
 ## Product types in product relations
 
@@ -118,7 +118,7 @@ If selected, the product catalog is automatically evaluated against the defined 
 
 If you do not select this option, the product catalog is evaluated against the defined rules only at the stage of product relation creation.
 
-A product catalog manager can select this option when [creating](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/view-product-relations.html) a product relation.
+A product catalog manager can select this option when [creating](/docs/pbc/all/product-relationship-management/latest/manage-in-the-back-office/view-product-relations.html) a product relation.
 
 A developer can do the following:
 
@@ -137,13 +137,13 @@ Stores are defined when creating or editing a product relation in the Back Offic
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Product Relations feature](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html)  |  
-| [Create product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/view-product-relations.html)  |
-| [Edit product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/edit-product-relations.html)  |
+| [Get a general idea of the Product Relations feature](/docs/pbc/all/ratings-reviews/latest/ratings-and-reviews.html)  |  
+| [Create product relations](/docs/pbc/all/product-relationship-management/latest/manage-in-the-back-office/view-product-relations.html)  |
+| [Edit product relations](/docs/pbc/all/product-relationship-management/latest/manage-in-the-back-office/edit-product-relations.html)  |
 
 ## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---------|---------|
-|[Install the Product Relations feature](/docs/pbc/all/product-relationship-management/{{page.version}}/install-and-upgrade/install-the-product-relations-glue-api.html) | [ProductRelation migration guide](/docs/pbc/all/product-relationship-management/{{page.version}}/install-and-upgrade/upgrade-the-productrelation-module.html) |
-| [Install the Product Relations Glue API](/docs/pbc/all/product-relationship-management/{{page.version}}/install-and-upgrade/install-the-product-relations-glue-api.html) | [ProductRelationStorage migration guide](/docs/pbc/all/product-relationship-management/{{page.version}}/install-and-upgrade/upgrade-the-productrelationstorage-module.html) |
+|[Install the Product Relations feature](/docs/pbc/all/product-relationship-management/latest/install-and-upgrade/install-the-product-relations-glue-api.html) | [ProductRelation migration guide](/docs/pbc/all/product-relationship-management/latest/install-and-upgrade/upgrade-the-productrelation-module.html) |
+| [Install the Product Relations Glue API](/docs/pbc/all/product-relationship-management/latest/install-and-upgrade/install-the-product-relations-glue-api.html) | [ProductRelationStorage migration guide](/docs/pbc/all/product-relationship-management/latest/install-and-upgrade/upgrade-the-productrelationstorage-module.html) |

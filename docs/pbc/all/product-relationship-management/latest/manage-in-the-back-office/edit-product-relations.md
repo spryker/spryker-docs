@@ -18,7 +18,7 @@ This document describes how to edit product relations in the Back Office.
 
 ## Prerequisites
 
-1. If you are new to product relations, you might want to start with [Best practices: Promote products with product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/best-practices-promote-products-with-product-relations.html).
+1. If you are new to product relations, you might want to start with [Best practices: Promote products with product relations](/docs/pbc/all/product-relationship-management/latest/manage-in-the-back-office/best-practices-promote-products-with-product-relations.html).
 2. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Relations**.
     This opens the **Product Relations** page.
 3. Next to the product relation you want to edit, click **Edit**.

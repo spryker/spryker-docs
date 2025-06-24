@@ -16,8 +16,8 @@ This doc describes how to create product lists. Product lists are used to allow 
 
 ## Prerequisites
 
-- If you want to assign categories to the product list, [create the categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html).
-- If you want to assign or import products for the product list, [create the products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html).
+- If you want to assign categories to the product list, [create the categories](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/categories/create-categories.html).
+- If you want to assign or import products for the product list, [create the products](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html).
 
 ## Create a product list
 
@@ -68,6 +68,6 @@ This doc describes how to create product lists. Product lists are used to allow 
 
 ## Next steps
 
-- Allow or deny the company access to the product list by [creating a new merchant relation](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html).
-- Allow or deny the company access to the product list by [editing a merchant relation](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchant-relations.html).
-- [Edit product lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/product-lists/edit-product-lists.html).
+- Allow or deny the company access to the product list by [creating a new merchant relation](/docs/pbc/all/merchant-management/latest/base-shop/manage-in-the-back-office/create-merchant-relations.html).
+- Allow or deny the company access to the product list by [editing a merchant relation](/docs/pbc/all/merchant-management/latest/base-shop/manage-in-the-back-office/edit-merchant-relations.html).
+- [Edit product lists](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/product-lists/edit-product-lists.html).

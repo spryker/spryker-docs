@@ -9,7 +9,7 @@ The Shipment Type Service Point subdomain establishes the connection between shi
 
 ## Installation
 
-[Install the Shipment Service Points feature](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/install-features/install-the-shipment-service-points-feature.html)
+[Install the Shipment Service Points feature](/docs/pbc/all/carrier-management/latest/unified-commerce/install-features/install-the-shipment-service-points-feature.html)
 
 ## Modules
 

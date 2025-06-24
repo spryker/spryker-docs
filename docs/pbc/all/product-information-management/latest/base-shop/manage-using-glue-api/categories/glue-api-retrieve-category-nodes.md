@@ -20,7 +20,7 @@ This endpoint allows retrieving category nodes.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html).
 
 ## Retrieve a category node
 
@@ -33,7 +33,7 @@ To retrieve a category node, send the request:
 
 |PATH PARAMETER | DESCRIPTION |
 |---|---|
-| ***node_id*** | ID of a node to get information for. [Retrieve a category tree](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html#retrieve-a-category-tree) to get a full list of node IDs. |
+| ***node_id*** | ID of a node to get information for. [Retrieve a category tree](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html#retrieve-a-category-tree) to get a full list of node IDs. |
 
 ### Request
 
@@ -122,7 +122,7 @@ Request sample: retrieve a category node
 
 </details>
 
-{% include /pbc/all/glue-api-guides/{{page.version}}/category-nodes-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/category-nodes-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/latest/category-nodes-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/category-nodes-response-attributes.md -->
 
 
 ## Possible errors
@@ -132,4 +132,4 @@ Request sample: retrieve a category node
 | 701 | Node ID not specified or invalid. |
 | 703 | Node with the specified ID was not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

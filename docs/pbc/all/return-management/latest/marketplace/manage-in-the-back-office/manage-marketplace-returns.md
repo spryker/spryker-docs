@@ -10,7 +10,7 @@ related:
       link: docs/pbc/all/return-management/page.version/marketplace/marketplace-return-management-feature-overview.html
 ---
 
-After a [marketplace return](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html) has been created by a Back Office user or by a [shop user](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html#marketplace-return-management-on-the-storefront), it appears on the **Sales&nbsp;<span aria-label="and then">></span> Returns** page. On this page, you can manage the returns as follows:
+After a [marketplace return](/docs/pbc/all/return-management/latest/marketplace/marketplace-return-management-feature-overview.html) has been created by a Back Office user or by a [shop user](/docs/pbc/all/return-management/latest/marketplace/marketplace-return-management-feature-overview.html#marketplace-return-management-on-the-storefront), it appears on the **Sales&nbsp;<span aria-label="and then">></span> Returns** page. On this page, you can manage the returns as follows:
 - Set the return states.
 - Print the return slip.
 
@@ -131,7 +131,7 @@ The **Total** section displays the total amount of items to be returned.
 
 ## Printing a marketplace return slip
 
-For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/pbc/all/return-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-returns.html#marketplace-return-item-states).
+For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/pbc/all/return-management/latest/marketplace/manage-in-the-back-office/manage-marketplace-returns.html#marketplace-return-item-states).
 
 To print the return slip:
 - In the **Actions** column on the **List of Returns** page, click **Print slip**.

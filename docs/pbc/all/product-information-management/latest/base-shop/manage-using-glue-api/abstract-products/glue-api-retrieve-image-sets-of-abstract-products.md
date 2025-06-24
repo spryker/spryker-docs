@@ -25,7 +25,7 @@ This endpoint allows retrieving image sets of abstract products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-- [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
+- [Install the Product Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 
 ## Retrieve image sets of an abstract product
@@ -86,7 +86,7 @@ Request sample: retrieve image sets of an abstract product
 
 <a name="abstract-product-sets-response-attributes"></a>
 
-{% include /pbc/all/glue-api-guides/{{page.version}}/abstract-product-image-sets-reponse-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/abstract-product-image-sets-reponse-attributes.md -->
+{% include /pbc/all/glue-api-guides/latest/abstract-product-image-sets-reponse-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/abstract-product-image-sets-reponse-attributes.md -->
 
 
 
@@ -97,4 +97,4 @@ Request sample: retrieve image sets of an abstract product
 | 303 | Can't find abstract product image sets. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

@@ -17,8 +17,8 @@ This document describes how to assign product attributes to product variants in 
 
 ## Prerequisites
 
-1. Create the product attributes you want to add to the product variant. For instructions, see [Create product attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html).
-2. Create a product variant by [creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) or by [adding a product variant to an existing abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).  
+1. Create the product attributes you want to add to the product variant. For instructions, see [Create product attributes](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html).
+2. Create a product variant by [creating an abstract product](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) or by [adding a product variant to an existing abstract product](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).  
 3. To start working with products, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 Review the [reference information](#reference-information-assign-product-attributes-to-product-variants) before you start, or look up the necessary information as you go through the process.
@@ -47,6 +47,6 @@ This section describes the attributes you see when creating a return.
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
-| ATTRIBUTE KEY | [Product attribute](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html) to add to the product variant. |
+| ATTRIBUTE KEY | [Product attribute](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html) to add to the product variant. |
 | KEY | Product attribute key. |
 | DEFAULT | Default value of the product attribute. This value is displayed on the Storefront if locale specific value is not specified. |

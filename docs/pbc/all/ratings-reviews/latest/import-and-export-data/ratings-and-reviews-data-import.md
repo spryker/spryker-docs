@@ -8,4 +8,4 @@ redirect_from:
 ---
 
 
-To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Ratings and Reviews PBC: ["Import file details: product_review.csv"](/docs/pbc/all/ratings-reviews/{{page.version}}/import-and-export-data/import-file-details-product-review.csv.html).
+To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/latest/data-import.html). This section describes the data import files that are used to import data related to the Ratings and Reviews PBC: ["Import file details: product_review.csv"](/docs/pbc/all/ratings-reviews/latest/import-and-export-data/import-file-details-product-review.csv.html).

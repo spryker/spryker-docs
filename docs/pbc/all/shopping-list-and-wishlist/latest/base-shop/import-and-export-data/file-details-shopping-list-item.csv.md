@@ -8,12 +8,12 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `shopping_list_item.csv` file to configure information about [shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) items in your Spryker shop.
+This document describes the `shopping_list_item.csv` file to configure information about [shopping list](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) items in your Spryker shop.
 
 ## Import file dependencies
 
-- [shopping_list.csv](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/import-and-export-data/file-details-shopping-list.csv.html)
-- [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
+- [shopping_list.csv](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/import-and-export-data/file-details-shopping-list.csv.html)
+- [product_concrete.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
 
 ## Import file parameters
 

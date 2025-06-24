@@ -11,9 +11,9 @@ The *Service Points* feature lets you create and manage service points, service 
 
 A *service point* is a physical location where services are provided. Depending on the services provided, there can be different kinds of service points, like a warehouse or a physical store. The definition of a service point ultimately depends on the services it provides.
 
-To add service points using Glue API, see [Add service points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-add-service-points.html). To import service points, see [Import file details: service_point.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service-point.csv.html).
+To add service points using Glue API, see [Add service points](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-add-service-points.html). To import service points, see [Import file details: service_point.csv](/docs/pbc/all/service-point-management/latest/unified-commerce/import-and-export-data/import-file-details-service-point.csv.html).
 
-To add service point addresses using Glue API, see [Add service point addresses](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-add-service-point-addresses.html). To import service point addresses, see [Import file details: service_point_address.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service-point-address.csv.html)
+To add service point addresses using Glue API, see [Add service point addresses](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-add-service-point-addresses.html). To import service point addresses, see [Import file details: service_point_address.csv](/docs/pbc/all/service-point-management/latest/unified-commerce/import-and-export-data/import-file-details-service-point-address.csv.html)
 
 ## Service type
 
@@ -23,18 +23,18 @@ A *service type* is a classification of services that a business offers to its c
 - Rental service
 - Repair service
 
-To add service types using Glue API, see [Add service types](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html).
+To add service types using Glue API, see [Add service types](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html).
 
-To import service types, see [Import file details: service_type.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service-type.csv.html).
+To import service types, see [Import file details: service_type.csv](/docs/pbc/all/service-point-management/latest/unified-commerce/import-and-export-data/import-file-details-service-type.csv.html).
 
 
 ## Service
 
 A *service* represents a specific service type that is provided at a specific service point. Because each service is unique, if two service points provide services with the same service type, like pickup, those services are represented as two separate entities and are managed accordingly. For example, a pickup service at a retail location at Julie-Wolfthorn-Straße 1, 10115, Berlin is a unique service.
 
-To add services using Glue API, see [Add services](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html).
+To add services using Glue API, see [Add services](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html).
 
-To import services, see [Import file details: service.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service.csv.html).
+To import services, see [Import file details: service.csv](/docs/pbc/all/service-point-management/latest/unified-commerce/import-and-export-data/import-file-details-service.csv.html).
 
 
 ## Service points use cases
@@ -78,7 +78,7 @@ After placing an order, the customer can see the selected service point on the O
 
 | FEATURE OVERVIEWS | MERCHANT PORTAL GUIDES |
 | - | - |
-| [Shipment feature overview](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) | [Create and edit product offers](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/unified-commerce-create-and-edit-product-offers.html) |
+| [Shipment feature overview](/docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html) | [Create and edit product offers](/docs/pbc/all/offer-management/latest/unified-commerce/unified-commerce-create-and-edit-product-offers.html) |
 
 
 
@@ -86,15 +86,15 @@ After placing an order, the customer can see the selected service point on the O
 
 | INSTALLATION GUIDES | GLUE API GUIDES   |
 | - | - |
-| [Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html) | [Add service points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-add-service-points.html) |
-| [Install the Service Points + Shipment feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-shipment-feature.html) |  [Retrieve service points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-retrieve-service-points.html)  |
-| [Install the Service Points + Customer Account Management feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-customer-account-management-feature.html) | [Update service points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-update-service-points.html) |
-| [Install the Service Points + Order Management feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-order-management-feature.html) | [Add service types](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html) |
-| [Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html) | [Retrieve service types](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-retrieve-service-types.html) |
-| [Install the Shipment + Customer Account Management feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-customer-account-management-feature.html) | [Update service types](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-update-service-types.html) |
-| |  [Add service point addresses](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-add-service-point-addresses.html) |
-| |  [Retrieve service point addresses](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-retrieve-service-point-addresses.html) |
-| |  [Add service point addresses](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-update-service-point-addresses.html) |
-| | [Add services](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html) |
-| |  [Retrieve services](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html) |
-| | [Update services](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html) |
+| [Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html) | [Add service points](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-add-service-points.html) |
+| [Install the Service Points + Shipment feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-shipment-feature.html) |  [Retrieve service points](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-retrieve-service-points.html)  |
+| [Install the Service Points + Customer Account Management feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-customer-account-management-feature.html) | [Update service points](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-update-service-points.html) |
+| [Install the Service Points + Order Management feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-order-management-feature.html) | [Add service types](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html) |
+| [Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html) | [Retrieve service types](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-retrieve-service-types.html) |
+| [Install the Shipment + Customer Account Management feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-customer-account-management-feature.html) | [Update service types](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-update-service-types.html) |
+| |  [Add service point addresses](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-add-service-point-addresses.html) |
+| |  [Retrieve service point addresses](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-retrieve-service-point-addresses.html) |
+| |  [Add service point addresses](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-update-service-point-addresses.html) |
+| | [Add services](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html) |
+| |  [Retrieve services](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html) |
+| | [Update services](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html) |

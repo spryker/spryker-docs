@@ -21,7 +21,7 @@ This document describes the `product_search_attribute_map.csv` file to configure
 
 ## Import file dependencies
 
-[product_attribute_key.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-attribute-key.csv.html).
+[product_attribute_key.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-attribute-key.csv.html).
 
 ## Import file parameters
 

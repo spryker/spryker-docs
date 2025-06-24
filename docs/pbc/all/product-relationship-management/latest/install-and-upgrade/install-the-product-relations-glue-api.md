@@ -15,4 +15,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-product-relations-feature-integration.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-product-relations-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-product-relations-glue-api.md -->
+{% include pbc/all/install-features/latest/install-glue-api/install-the-product-relations-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-product-relations-glue-api.md -->

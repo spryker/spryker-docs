@@ -31,5 +31,5 @@ To create a configurable bundle template, follow the steps:
 
 ## Next steps
 
-- [Edit configurable bundle templates](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-configurable-bundle-templates.html)
-- [Edit slots in configurable bundle templates](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)
+- [Edit configurable bundle templates](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-configurable-bundle-templates.html)
+- [Edit slots in configurable bundle templates](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)

@@ -23,9 +23,9 @@ Install the required features:
 
 | NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                   |
 |---------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| OpenAI              | {{page.version}} | [Integrate OpenAI](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/open-ai/integrate-openai.html)                                      |
-| Product             | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                         |
-| Category Management | {{page.version}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
+| OpenAI              | {{page.version}} | [Integrate OpenAI](/docs/pbc/all/miscellaneous/latest/third-party-integrations/open-ai/integrate-openai.html)                                      |
+| Product             | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                         |
+| Category Management | {{page.version}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
 
 ### 1) Install the required modules
 

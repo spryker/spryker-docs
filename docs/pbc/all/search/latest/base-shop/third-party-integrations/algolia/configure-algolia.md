@@ -13,7 +13,7 @@ This document describes how to connect your Algolia account with Spryker and con
 ## Prerequisites
 
 - To sign up for Algolia, contact your Customer Success Manager
-- [Integrate the Algolia app](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html)
+- [Integrate the Algolia app](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html)
 
 
 ## Configure Algolia
@@ -72,4 +72,4 @@ Verify that your index is populated with data from your store:
 
 {% endinfo_block %}
 
-For details about the created index data, see [Indexes](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia.html#indexes).
+For details about the created index data, see [Indexes](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia.html#indexes).

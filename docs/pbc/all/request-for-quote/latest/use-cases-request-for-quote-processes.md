@@ -10,7 +10,7 @@ redirect_from:
 
 ## Use case 1: Long waiting time until Request for Quote gets processed
 
-The [Request for Quote](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html) (RFQ) process is currently not fully efficient because it's manual. As a result, sometimes customers have to wait a long time until their RFQ gets approved or denied.
+The [Request for Quote](/docs/pbc/all/request-for-quote/latest/request-for-quote.html) (RFQ) process is currently not fully efficient because it's manual. As a result, sometimes customers have to wait a long time until their RFQ gets approved or denied.
 
 ### Solution
 
@@ -28,5 +28,5 @@ In Marketplace, if customers have several items from different merchants in thei
 
 To solve this issue, Spryker needs to introduce Marketplace support for RFQ. To achieve this, the following actions are required:
 - Introduce the Split Quote feature so that different carts and quotes per merchant are automatically created.
-- Display quote requests in Merchant Portal so that merchants can manage the requests—for example, replying to the requests and changing prices—or allow merchants to log in as an [agent](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) with the limitation of only seeing quote requests for their products or offers.
+- Display quote requests in Merchant Portal so that merchants can manage the requests—for example, replying to the requests and changing prices—or allow merchants to log in as an [agent](/docs/pbc/all/user-management/latest/base-shop/agent-assist-feature-overview.html) with the limitation of only seeing quote requests for their products or offers.
 - Add support for frontend and backend APIs.

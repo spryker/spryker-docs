@@ -16,4 +16,4 @@ This feature enables information about service points to be displayed in the Bac
 
 | INSTALLATION GUIDES|
 | -------------- |
-| [Install the Service Points + Order Management feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-order-management-feature.html) |
+| [Install the Service Points + Order Management feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-order-management-feature.html) |

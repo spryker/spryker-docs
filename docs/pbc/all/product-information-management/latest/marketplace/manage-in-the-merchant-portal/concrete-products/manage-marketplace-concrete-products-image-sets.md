@@ -73,6 +73,6 @@ To delete an image set with its images for the concrete product, click **Delete 
 
 ## Next steps
 
-- [Manage a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/create-marketplace-concrete-products.html)
-- [Manage concrete product prices](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html)
-- [Manage concrete product attributes](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-attributes.html)
+- [Manage a concrete product](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/create-marketplace-concrete-products.html)
+- [Manage concrete product prices](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html)
+- [Manage concrete product attributes](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-attributes.html)

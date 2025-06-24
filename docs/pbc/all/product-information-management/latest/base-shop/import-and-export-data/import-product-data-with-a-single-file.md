@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/import-product-data-with-a-single-file.html
 ---
 
-Besides importing product-related data with multiple .csv files, like [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html), [product_abstract_store.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract-store.csv.html), [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html), [product_price.csv](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-product-price.csv.html), etc., you can use a single product data import file, which allows you to import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful if you:
+Besides importing product-related data with multiple .csv files, like [product_abstract.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html), [product_abstract_store.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract-store.csv.html), [product_concrete.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html), [product_price.csv](/docs/pbc/all/price-management/latest/base-shop/import-and-export-data/import-file-details-product-price.csv.html), etc., you can use a single product data import file, which allows you to import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful if you:
 
 - Have different environments (production, staging, etc.), and you need to populate them all with the product data.
 - Frequently import product data.
@@ -18,15 +18,15 @@ Besides importing product-related data with multiple .csv files, like [product_a
 
 {% info_block warningBox "Prerequisites" %}
 
-Before you can import all main product data, make sure that *combined_product* [importer is enabled](/docs/dg/dev/data-import/{{page.version}}/data-importers-implementation.html#implementation) in your project.
+Before you can import all main product data, make sure that *combined_product* [importer is enabled](/docs/dg/dev/data-import/latest/data-importers-implementation.html#implementation) in your project.
 
 {% endinfo_block %}
 
 To import combined product data via a single file, you need to:
 
-- Populate a [CSV file for product data import](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-product-data-with-a-single-file.html#single-csv-file-for-combined-product-data-import).
-- Prepare a [YML file](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-product-data-with-a-single-file.html#yml-configuration-file-for-product-data-import) with `data_entity` items for import.
-- Run a [console command](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-product-data-with-a-single-file.html#console-commands-for-product-data-import) for product data import.
+- Populate a [CSV file for product data import](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/import-product-data-with-a-single-file.html#single-csv-file-for-combined-product-data-import).
+- Prepare a [YML file](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/import-product-data-with-a-single-file.html#yml-configuration-file-for-product-data-import) with `data_entity` items for import.
+- Run a [console command](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/import-product-data-with-a-single-file.html#console-commands-for-product-data-import) for product data import.
 
 ## Single .csv file for combined product data import
 
@@ -42,7 +42,7 @@ The headers in this file are prefixed with the names of the individual product-r
 
 The only exceptions are `abstract_sku` and `concrete_sku` headers that are not prefixed.
 
-Thus, the CSV file for the main product data import is a combination of data from separate product-related CSV files (except for a [few fields specific for just this file](#specific-fields)). Because of this, when importing corresponding data, the same [dependencies and mandatory fields](#mandatory-fields) as for the separate files, apply to the combined product data import file. For example, if you want to import product image data via the combined product data file (headers *productimage.imageset_name*, *productimage.externalurl_large*, etc.), you should mind the dependencies and mandatory fields as for [product_image.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-image.csv.html).
+Thus, the CSV file for the main product data import is a combination of data from separate product-related CSV files (except for a [few fields specific for just this file](#specific-fields)). Because of this, when importing corresponding data, the same [dependencies and mandatory fields](#mandatory-fields) as for the separate files, apply to the combined product data import file. For example, if you want to import product image data via the combined product data file (headers *productimage.imageset_name*, *productimage.externalurl_large*, etc.), you should mind the dependencies and mandatory fields as for [product_image.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-image.csv.html).
 
 By default, the import CSV file resides in data/import/common/{STORE}/. As, for example, the [combined_product_DE.csv](https://github.com/spryker-shop/suite/blob/master/data/import/common/DE/combined_product.csv) file in Spryker Master Suite.
 
@@ -56,7 +56,7 @@ If you import only abstract products, the following fields must be populated in 
 - product_abstract.category_key
 - product_abstract.url.{LOCALE}
 
-For details on these and other product abstract-related fields, see [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html).
+For details on these and other product abstract-related fields, see [File details: product_abstract.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html).
 
 If you import concrete products as well, the following fields are also mandatory:
 
@@ -65,7 +65,7 @@ If you import concrete products as well, the following fields are also mandatory
 - product.attribute_key_{NUMBER}
 - product.value_{NUMBER}
 
-For details on these and other concrete product-related fields, see [File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html).
+For details on these and other concrete product-related fields, see [File details: product_concrete.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html).
 
 All other fields with prefixes `product_abstract` and `product.` are optional.
 
@@ -74,10 +74,10 @@ If you need to import other product data as well, for example, prices, images, e
 
 | FIELDS IN THE COMBINED PRODUCT DATA FILE | CSV FILE WITH DEPENDENCIES AND DETAILS ABOUT THE FIELD |
 | --- | --- |
-| <ul><li>product_group.group_key</li><li>product_group.position</li></ul> | [File details: product_group.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-group.csv.html) |
-|<ul><li>product_image.image_set_name</li><li>product_image.external_url_large</li><li>product_image.external_url_small</li><li>product_image.locale</li><li>product_image.sort_order</li><li>product_image.product_image_key</li><li>product_image.product_image_set_key</li></ul> | [File details: product_image.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-image.csv.html) |
-| <ul><li>product_price.price_type</li><li>product_price.store</li><li>product_price.currency</li><li>product_price.value_net</li><li>product_price.value_gross</li><li>product_price.price_data.volume_prices</li></ul> | [File details: product_price.csv](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-product-price.csv.html) |
-| <ul><li>product_stock.name</li><li>product_stock.quantity</li><li>product_stock.is_never_out_of_stock</li><li>product_stock.is_bundle</li></ul> | [File details: product_stock.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/import-and-export-data/import-file-details-product-stock.csv.html) |
+| <ul><li>product_group.group_key</li><li>product_group.position</li></ul> | [File details: product_group.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/import-file-details-product-group.csv.html) |
+|<ul><li>product_image.image_set_name</li><li>product_image.external_url_large</li><li>product_image.external_url_small</li><li>product_image.locale</li><li>product_image.sort_order</li><li>product_image.product_image_key</li><li>product_image.product_image_set_key</li></ul> | [File details: product_image.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-image.csv.html) |
+| <ul><li>product_price.price_type</li><li>product_price.store</li><li>product_price.currency</li><li>product_price.value_net</li><li>product_price.value_gross</li><li>product_price.price_data.volume_prices</li></ul> | [File details: product_price.csv](/docs/pbc/all/price-management/latest/base-shop/import-and-export-data/import-file-details-product-price.csv.html) |
+| <ul><li>product_stock.name</li><li>product_stock.quantity</li><li>product_stock.is_never_out_of_stock</li><li>product_stock.is_bundle</li></ul> | [File details: product_stock.csv](/docs/pbc/all/warehouse-management-system/latest/base-shop/import-and-export-data/import-file-details-product-stock.csv.html) |
 
 <a name="specific-fields"></a>
 
@@ -101,7 +101,7 @@ Depending on the product types you specified for the `product.assigned_product_t
 
 <a href="#yml-configuration-file-for-product-data-import"></a>
 
-The YML configuration file for product data import allows sequentially running importers for product data. This file can be used to import all product-related data sets, or just some of them. See [Console Commands for Product Data Import](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-product-data-with-a-single-file.html#console-commands-for-product-data-import) for details.
+The YML configuration file for product data import allows sequentially running importers for product data. This file can be used to import all product-related data sets, or just some of them. See [Console Commands for Product Data Import](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/import-product-data-with-a-single-file.html#console-commands-for-product-data-import) for details.
 
 The `data_entity` names in the YML file match the prefixes (text before `.` ) in the combined product data import CSV file, with `combined-` added before them:
 

@@ -18,11 +18,11 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `category.csv` file to configure [categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html) in your Spryker shop.
+This document describes the `category.csv` file to configure [categories](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/category-management-feature-overview.html) in your Spryker shop.
 
 ## Import file dependencies
 
-[category_template.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/import-file-details-category-template.csv.html).
+[category_template.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/categories-data-import/import-file-details-category-template.csv.html).
 
 ## Import file parameters
 

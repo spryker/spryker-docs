@@ -11,13 +11,13 @@ related:
     link: docs/pbc/all/search/page.version/marketplace/glue-api-search-the-product-catalog.html
 ---
 
-In addition to [catalog search](/docs/pbc/all/search/{{page.version}}/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html), Glue API lets you retrieve autocomplete suggestions for products, categories, and CMS pages. The feature lets developers predict search strings and provide customers with available options.
+In addition to [catalog search](/docs/pbc/all/search/latest/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html), Glue API lets you retrieve autocomplete suggestions for products, categories, and CMS pages. The feature lets developers predict search strings and provide customers with available options.
 
 In your development, this resource can help you to enhance the customer experience by providing the relevant information for search, product filters, shopping cart, checkout, order history, wishlist, and many more.
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [Install the Catalog Glue API](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html).
+For detailed information about the modules that provide the API functionality and related installation instructions, see [Install the Catalog Glue API](/docs/pbc/all/search/latest/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html).
 
 ## Retrieve a search suggestion
 
@@ -1820,4 +1820,4 @@ Although CMS pages also expose the `url` parameter, resolving of CMS page SEF UR
 
 {% endinfo_block %}
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

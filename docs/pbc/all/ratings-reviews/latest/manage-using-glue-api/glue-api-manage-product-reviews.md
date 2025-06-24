@@ -14,7 +14,7 @@ related:
     link: docs/pbc/all/ratings-reviews/page.version/ratings-and-reviews.html
 ---
 
-[Ratings and reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
+[Ratings and reviews](/docs/pbc/all/ratings-reviews/latest/ratings-and-reviews.html) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
 
 Products and ratings API helps you to:
 
@@ -24,7 +24,7 @@ Products and ratings API helps you to:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/{{site.version}}/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/latest/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)
 
 ## Retrieve product reviews
 
@@ -96,7 +96,7 @@ Request sample: retrieve product ratings and reviews: `GET http://glue.myspryker
 
 <a name="product-reviews-response-attributes"></a>
 
-{% include /pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/latest/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/product-reviews-response-attributes.md -->
 
 ## Submit a product review
 
@@ -115,7 +115,7 @@ To submit a product review, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user).  |
 
 Request sample: provide a rating and a review of products
 
@@ -135,7 +135,7 @@ Request sample: provide a rating and a review of products
 }
 ```
 
-{% include /pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/latest/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/product-reviews-response-attributes.md -->
 
 ### Response
 
@@ -157,13 +157,13 @@ Request sample: provide a rating and a review of products
 }
 ```
 
-{% include /pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/latest/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/product-reviews-response-attributes.md -->
 
 ## Other management options
 
 You can retrieve the average rating of a product as follows:
-- [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#retrieve-an-abstract-product)
-- [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product)
+- [Retrieve an abstract product](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#retrieve-an-abstract-product)
+- [Retrieve a concrete product](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product)
 
 Also, all the endpoints that accept `abstract-products` and `concrete-products` resources as included resources in requests, return the average product rating.
 
@@ -177,4 +177,4 @@ Also, all the endpoints that accept `abstract-products` and `concrete-products` 
 | 311 | Abstract product ID is not specified. |
 | 901 | One or more of the following reasons:<ul><li>The `nickname` attribute is empty or not specified.</li><li>The `rating` attribute is empty or not specified.</li><li>The `summary` attribute is empty or not specified.</li></ul> |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

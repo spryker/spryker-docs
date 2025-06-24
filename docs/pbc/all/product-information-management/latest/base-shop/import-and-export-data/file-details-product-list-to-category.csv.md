@@ -8,12 +8,12 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `product_list_to_category.csv` file to configure information about [product lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-lists-feature-overview.html) and respective categories in your Spryker shop.
+This document describes the `product_list_to_category.csv` file to configure information about [product lists](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-lists-feature-overview.html) and respective categories in your Spryker shop.
 
 ## Import file dependencies
 
-- [File details - product_list.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-list.csv.html)
-- [File details - category.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/import-file-details-category.csv.html)
+- [File details - product_list.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/file-details-product-list.csv.html)
+- [File details - category.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/categories-data-import/import-file-details-category.csv.html)
 
 ## Import file parameters
 

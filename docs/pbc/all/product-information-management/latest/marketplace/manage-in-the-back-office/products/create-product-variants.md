@@ -51,13 +51,13 @@ To create a product variant:
     3. **B2B only:** In **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation.
     4. Select **Quantity** for the product and then select **Never out of stock** if you want the product to never go out of stock.
 5. Optional: Click **Next** to go to **Image** to add images for the product and define the image order.
-6. Optional: Click **Next** of select the **Assign bundled products** tab to create a bundles product. For more information, see [Creating and managing product bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
+6. Optional: Click **Next** of select the **Assign bundled products** tab to create a bundles product. For more information, see [Creating and managing product bundles](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 7. Click **Save**.
-The page is refreshed and you can see two additional tabs: *Discontinue* and *Product Alternatives*. See [Discontinuing products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html) and [Adding product alternatives](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html) to know more.
+The page is refreshed and you can see two additional tabs: *Discontinue* and *Product Alternatives*. See [Discontinuing products](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html) and [Adding product alternatives](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html) to know more.
 
 {% info_block errorBox "Important" %}
 
-To make sure your product will be shown and searchable in your online store, we highly recommend you to go through the checklist in [HowTo - Make a Product Searchable and Shown on the Storefront](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/make-products-searchable-and-shown-on-the-storefront.html).
+To make sure your product will be shown and searchable in your online store, we highly recommend you to go through the checklist in [HowTo - Make a Product Searchable and Shown on the Storefront](/docs/pbc/all/product-information-management/latest/base-shop/tutorials-and-howtos/make-products-searchable-and-shown-on-the-storefront.html).
 
 {% endinfo_block %}
 
@@ -114,4 +114,4 @@ The only field available is **Add Product Alternative by Name or SKU**. Here it'
 
 **What's next?**
 
-Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/manage-products.html) section.
+Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing products](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/manage-products.html) section.

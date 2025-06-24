@@ -8,7 +8,7 @@ redirect_from:
   - /docs/pbc/all/ratings-reviews/202204.0/third-party-integrations/configure-bazaarvoice.html
 ---
 
-After you have [integrated the Bazaarvoice app](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html), you can configure the following for your store:
+After you have [integrated the Bazaarvoice app](/docs/pbc/all/ratings-reviews/latest/third-party-integrations/integrate-bazaarvoice.html), you can configure the following for your store:
 - Bazaarvoice services you need
 - Stores you want the Bazaarvoice  user-generated content (UGC) to be displayed in
 

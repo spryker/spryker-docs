@@ -52,15 +52,15 @@ Editing concrete products in bulk lets you change the status and validity period
 | Description           |  | This description is displayed on the Storefront. |           |
 |              |  Use Abstract Product description for all locales.    | Inherits the description of the abstract product for all locales of the concrete product. Unselect to define descriptions for the concrete product per locale. |       |
 | Validity Dates & Time |  | Time period during which the product is active. |           |
-| Price                 |  | To define prices, see [Managing marketplace concrete product prices](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage marketplace-concrete-product-prices.html) for more details. |           |
-| Images                |  | To add images, see [Managing concrete product image sets](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products-image-sets.html) for more details. |           |
-| Attributes            |  | To add attributes, see [Managing concrete product attributes](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-attributes.html) for more details. |           |
+| Price                 |  | To define prices, see [Managing marketplace concrete product prices](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/manage marketplace-concrete-product-prices.html) for more details. |           |
+| Images                |  | To add images, see [Managing concrete product image sets](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products-image-sets.html) for more details. |           |
+| Attributes            |  | To add attributes, see [Managing concrete product attributes](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-attributes.html) for more details. |           |
 | Searchability         |  | Defines if the product is displayed in the search results on the Storefront. |           |
 
 
 
 ## Next steps
 
-- [Manage concrete product prices](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html)
-- [Manage concrete product image sets](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products-image-sets.html)
-- [Manage concrete product attributes](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-attributes.html)
+- [Manage concrete product prices](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html)
+- [Manage concrete product image sets](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products-image-sets.html)
+- [Manage concrete product attributes](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-attributes.html)

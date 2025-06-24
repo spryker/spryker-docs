@@ -23,7 +23,7 @@ Specify reasons for returning the sales order items.
 
 ## Installation
 
-For details about the modules that provide the API functionality and how to install them, [see Install the Marketplace Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html).
+For details about the modules that provide the API functionality and how to install them, [see Install the Marketplace Return Management Glue API](/docs/pbc/all/return-management/latest/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html).
 
 ## Create a return
 
@@ -38,7 +38,7 @@ To create a return for a registered user, send the Request sample:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |---|---|---|---|
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 |---|---|---|
@@ -197,7 +197,7 @@ To create a return for a registered user, send the Request sample:
 | return-items | reason | String | Predefined reason why the return was created. |
 | return-items | orderItemUuid | String | Unique identifier of the order item. |
 
-For the attributes of the included resources, see [Retrieving marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html).
+For the attributes of the included resources, see [Retrieving marketplace orders](/docs/pbc/all/order-management-system/latest/marketplace/glue-api-retrieve-marketplace-orders.html).
 
 ## Retrieve returns
 
@@ -211,7 +211,7 @@ To retrieve returns, send the Request sample:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |---|---|---|---|
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 |---|---|---|
@@ -557,8 +557,8 @@ To retrieve returns, send the Request sample:
 | return-items | orderItemUuid | String | Unique identifier of the order item. |
 
 For the attributes of the other other included resources, see the following:
-- [Retrieving marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)
-- [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html)
+- [Retrieving marketplace orders](/docs/pbc/all/order-management-system/latest/marketplace/glue-api-retrieve-marketplace-orders.html)
+- [Retrieving merchants](/docs/pbc/all/merchant-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html)
 
 ## Retrieve a return
 
@@ -576,7 +576,7 @@ To retrieve a return, send the Request sample:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |---|---|---|---|
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 |---|---|---|

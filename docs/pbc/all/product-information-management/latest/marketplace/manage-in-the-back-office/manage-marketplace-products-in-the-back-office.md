@@ -9,15 +9,15 @@ redirect_from:
 
 This section contains guides on managing marketplace products in the Back Office:
 
-- [Create abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/abstract-products/create-abstract-products.html)
-- [Create product variants](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/create-product-variants.html)
-- [Create product options](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/product-options/create-product-options.html)
+- [Create abstract products](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/abstract-products/create-abstract-products.html)
+- [Create product variants](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/create-product-variants.html)
+- [Create product options](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/product-options/create-product-options.html)
 
 
 {% include pbc/all/manage-in-the-back-office/log-into-the-back-office.md %} <!-- To edit, see /_includes/pbc/all/manage-in-the-back-office/log-into-the-back-office.md -->
 
 ## Next steps
 
-- [Create abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/abstract-products/create-abstract-products.html)
-- [Create product variants](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/create-product-variants.html)
-- [Create product options](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/product-options/create-product-options.html)
+- [Create abstract products](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/abstract-products/create-abstract-products.html)
+- [Create product variants](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/create-product-variants.html)
+- [Create product options](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/product-options/create-product-options.html)

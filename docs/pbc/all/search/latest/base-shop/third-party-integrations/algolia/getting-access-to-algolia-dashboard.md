@@ -11,4 +11,4 @@ In the request, provide the email address of the user who you want to make the m
 
 Algolia supports up to 19 dashboard users.
 
-For information on setting up Algolia, see [Algolia](/docs/pbc/all/search/{{site.version}}/base-shop/third-party-integrations/algolia/algolia.html).
+For information on setting up Algolia, see [Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia.html).

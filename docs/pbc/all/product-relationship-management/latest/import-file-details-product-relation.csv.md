@@ -13,7 +13,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `product_relation.csv` file to configure [Product Relation](/docs/pbc/all/product-relationship-management/{{page.version}}/product-relationship-management.html) information in your Spryker Demo Shop.
+This document describes the `product_relation.csv` file to configure [Product Relation](/docs/pbc/all/product-relationship-management/latest/product-relationship-management.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -36,7 +36,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html).
+This file has the following dependency: [product_abstract.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html).
 
 ## Import template file and content example
 

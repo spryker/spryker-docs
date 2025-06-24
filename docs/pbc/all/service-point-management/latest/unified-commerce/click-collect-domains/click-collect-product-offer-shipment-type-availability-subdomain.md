@@ -9,7 +9,7 @@ The Product Offer Shipment Type Availability subdomain focuses on the availabili
 
 ## Installation
 
-[Install the Product Offer Shipment Availability feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-availability-feature.html)
+[Install the Product Offer Shipment Availability feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-availability-feature.html)
 
 ## Modules
 

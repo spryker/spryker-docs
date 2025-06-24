@@ -40,7 +40,7 @@ related:
 
 This document explains how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the `Search` module.
 
-This configuration is only relevant if you enable the three query expanders and the result formatters. For details, see [Configure a search query](/docs/pbc/all/search/{{page.version}}/base-shop/tutorials-and-howtos/configure-a-search-query.html)
+This configuration is only relevant if you enable the three query expanders and the result formatters. For details, see [Configure a search query](/docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-a-search-query.html)
 
 To build configuration for the search features, provide implementation for `\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigBuilderPluginInterface`:
 

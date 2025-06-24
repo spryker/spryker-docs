@@ -9,7 +9,7 @@ The Marketplace Merchant Product Offer Service Point Availability subdomain is u
 
 ## Installation
 
-[Marketplace Merchant Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-marketplace-merchant-product-offer-service-points-availability-feature.html)
+[Marketplace Merchant Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-marketplace-merchant-product-offer-service-points-availability-feature.html)
 
 ## Modules
 

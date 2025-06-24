@@ -52,7 +52,7 @@ Review the [reference information](#reference-information-edit-general-settings-
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | GROUP NAME TRANSLATION KEY | Glossary key of the product option group. |
-| TAX SET | Tax set to apply to the product options. To create one, see [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html). |
+| TAX SET | Tax set to apply to the product options. To create one, see [Create tax sets](/docs/pbc/all/tax-management/latest/base-shop/manage-in-the-back-office/create-tax-sets.html). |
 | OPTION NAME TRANSLATION KEY | Glossary key of a product option. |
 | SKU | Unique identifier of a product option. |
 | PRICES | Gross and net values per currency per locale. When a price is set to 0, the options is *free of charge*.  |

@@ -18,7 +18,7 @@ related:
 
 ## Prerequisites
 
-To start managing the returns for the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html), navigate to **Sales&nbsp;<span aria-label="and then">></span> My Returns**.
+To start managing the returns for the [main merchant](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/main-merchant.html), navigate to **Sales&nbsp;<span aria-label="and then">></span> My Returns**.
 
 Each section contains reference information. Make sure to review it before you start or look up the necessary information as you go through the process.
 
@@ -137,7 +137,7 @@ You can trigger the following states for the returns on the **Overview of Return
 
 ## Printing a main merchant return slip
 
-For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html#marketplace-return-slip).
+For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/pbc/all/return-management/latest/marketplace/marketplace-return-management-feature-overview.html#marketplace-return-slip).
 
 To print the return slip, take one of the following steps:
 

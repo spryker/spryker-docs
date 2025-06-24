@@ -11,7 +11,7 @@ redirect_from:
 
 ---
 
-This document describes the `product_packaging_unit_type.csv` file to configure information about [product packaging units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/packaging-units-feature-overview.html).
+This document describes the `product_packaging_unit_type.csv` file to configure information about [product packaging units](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/packaging-units-feature-overview.html).
 
 
 ## Import file parameters

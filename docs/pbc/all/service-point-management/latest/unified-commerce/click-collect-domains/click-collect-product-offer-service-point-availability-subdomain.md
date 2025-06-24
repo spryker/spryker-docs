@@ -9,7 +9,7 @@ The Product Offer Service Point Availability subdomain is used to calculate prod
 
 ## Installation
 
-[Install the Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html)
+[Install the Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html)
 
 ## Modules
 

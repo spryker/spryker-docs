@@ -14,7 +14,7 @@ related:
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html
 ---
 
-The Product Management Attributes API allows you to retrieve all predefined [product attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) available in your shop system.
+The Product Management Attributes API allows you to retrieve all predefined [product attributes](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) available in your shop system.
 
 {% info_block infoBox %}
 
@@ -24,7 +24,7 @@ Only preset attributes are retrieved. So if an attribute allows custom input ( `
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 <a name="{all-attributes}"></a>
 
@@ -151,7 +151,7 @@ Request sample: retrieve all product attributes
 </details>
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/product-management-attributes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-management-attributes-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/product-management-attributes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/product-management-attributes-response-attributes.md -->
 
 
 ## Retrieve a product attribute
@@ -225,7 +225,7 @@ Request sample: retrieve a product attribute
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/product-management-attributes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-management-attributes-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/product-management-attributes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/product-management-attributes-response-attributes.md -->
 
 ## Possible errors
 
@@ -233,4 +233,4 @@ Request sample: retrieve a product attribute
 | --- | --- |
 | 4201 | Attribute not found. |
 
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

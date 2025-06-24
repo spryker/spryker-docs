@@ -15,12 +15,12 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `product_image.csv` file to configure [Product Image](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-images-overview.html) information on your Spryker Demo Shop.
+This document describes the `product_image.csv` file to configure [Product Image](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-images-overview.html) information on your Spryker Demo Shop.
 
 ## Import file dependencies
 
-- [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
-- [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
+- [product_abstract.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
+- [product_concrete.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
 
 
 ## Import file parameters

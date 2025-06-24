@@ -23,7 +23,7 @@ related:
     link: docs/pbc/all/return-management/page.version/return-management.html
 ---
 
-This document describes how to manage returns in the Back Office. To learn how Back Office user create returns, see [Creating returns](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/create-returns.html). To learn how customers create returns, see [Return Management on the Storefront](/docs/pbc/all/return-management/{{page.version}}/base-shop/return-management-feature-overview.html#return-management-on-the-storefront).
+This document describes how to manage returns in the Back Office. To learn how Back Office user create returns, see [Creating returns](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/create-returns.html). To learn how customers create returns, see [Return Management on the Storefront](/docs/pbc/all/return-management/latest/base-shop/return-management-feature-overview.html#return-management-on-the-storefront).
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ On the **Returns** page, next to the return you want to view, click **View**.
 ## Printing return slips
 
 
-Next to the return you want to generate a [return slip](/docs/pbc/all/return-management/{{page.version}}/base-shop/return-management-feature-overview.html#return-slip) for, click **Print Slip**.
+Next to the return you want to generate a [return slip](/docs/pbc/all/return-management/latest/base-shop/return-management-feature-overview.html#return-slip) for, click **Print Slip**.
     This opens the page with an auto-generated slip.
 
 ## Reference information: Managing returns

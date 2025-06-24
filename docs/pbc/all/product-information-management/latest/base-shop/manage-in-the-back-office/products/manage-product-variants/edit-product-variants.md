@@ -31,7 +31,7 @@ The described procedure is also valid for an existing product variant.
 
 To start working with product variants, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
-The procedure you are going to perform is very similar to the procedure described in the Creating a product variant article. For details, see  [Creating a product variant](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).
+The procedure you are going to perform is very similar to the procedure described in the Creating a product variant article. For details, see  [Creating a product variant](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
@@ -53,9 +53,9 @@ To edit a product variant:
     {% endinfo_block %}
 
     3. *Image* tab: define one or more images, image sets, and the image order for you product variant.
-    4. *Assign bundled products* tab: this tab is used in case you need to create a product bundle. See [Creating Product Bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) for details.
-    5. *Discontinue* tab: This tab is used in case you want to discontinue the product. See [Discontinuing a Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html) to know more.
-    6. *Product Alternatives* tab: This tab is used to define the product alternatives for the product. See [Adding Product Alternatives](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html) to know more.
+    4. *Assign bundled products* tab: this tab is used in case you need to create a product bundle. See [Creating Product Bundles](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) for details.
+    5. *Discontinue* tab: This tab is used in case you want to discontinue the product. See [Discontinuing a Product](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html) to know more.
+    6. *Product Alternatives* tab: This tab is used to define the product alternatives for the product. See [Adding Product Alternatives](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html) to know more.
     7. *Scheduled Prices* tab: here you can only review scheduled prices imported via a CSV file if any. The actual import is done in **Prices&nbsp;<span aria-label="and then">></span> Scheduled Prices**.
 3. Click **Save**.
 
@@ -120,4 +120,4 @@ On this tab, you see a table with the scheduled prices imported via a CSV file. 
 **What's next?**
 <br>Following the same steps, you will update all variants that you have added to your abstract product.
 
-You may also want to add more product variants. Learn how you do that by navigating to [Creating a product variant](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).
+You may also want to add more product variants. Learn how you do that by navigating to [Creating a product variant](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).

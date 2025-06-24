@@ -68,7 +68,7 @@ The `QueryInterface` instance is a stateful class; sometimes, the `getSearchQuer
 
 {% endinfo_block %}
 
-Besides, this new `QueryInterface` instance has to implement `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. To be compliant with this interface, implementations for the `::setSearchContext()` and `::getSearchContext()` methods must be provided. This is needed for setting and maintaining a search context that is later used during the search process, particularly for resolving the correct Elasticsearch index for search. For more information, see [Search migration concept](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/search-migration-concept.html).
+Besides, this new `QueryInterface` instance has to implement `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. To be compliant with this interface, implementations for the `::setSearchContext()` and `::getSearchContext()` methods must be provided. This is needed for setting and maintaining a search context that is later used during the search process, particularly for resolving the correct Elasticsearch index for search. For more information, see [Search migration concept](/docs/pbc/all/search/latest/base-shop/install-and-upgrade/search-migration-concept.html).
 
 
 <details>
@@ -260,7 +260,7 @@ You also must export `active-from` and `active-to` by your search collector. The
 
 The *Faceted navigation and filtering* feature lets you refilter search results by specific criteria. The filters are commonly displayed on the left side of the catalog page.
 
-`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is responsible for adding necessary aggregations to your query based on a predefined configuration (see [Configure search features](/docs/pbc/all/search/{{page.version}}/base-shop/tutorials-and-howtos/configure-search-features.html). Use this plugin to get the necessary data for the faceted navigation of your search results.
+`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is responsible for adding necessary aggregations to your query based on a predefined configuration (see [Configure search features](/docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-search-features.html). Use this plugin to get the necessary data for the faceted navigation of your search results.
 
 {% info_block warningBox "Note" %}
 

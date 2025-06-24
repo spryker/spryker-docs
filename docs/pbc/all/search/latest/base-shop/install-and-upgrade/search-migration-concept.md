@@ -192,13 +192,13 @@ That being done, the migration to Elasticsearch 7 from Elasticsearch 5 is comple
 
 The Search migration effort implies an upgrade of the following modules:
 
-- [Search](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-search–module.html#upgrading-from-version-89-to-version-810)
-- [Console](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade–the-console-module.html)
-- [CmsPageSearch](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html#upgrading-from-version-21-to-version-22)
-- [Catalog](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html#upgrading-from-version-55-to-version-56)
-- [ProductPageSearch](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html#upgrading-from-version-311-to-version-312)
-- [ProductReviewSearch](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html#upgrading-from-version-13-to-version-14)
-- [ProductLabelSearch](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html#upgrading-from-version-12-to-version-13)
-- [ProductSetPageSearch](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html#upgrading-from-version-13-to-version-14)
-- [CategoryPageSearch](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html#upgrading-from-version-14-to-version-15)
-- [ProductNew](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productnew-module.html)
+- [Search](/docs/pbc/all/search/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-search–module.html#upgrading-from-version-89-to-version-810)
+- [Console](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/upgrade-modules/upgrade–the-console-module.html)
+- [CmsPageSearch](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html#upgrading-from-version-21-to-version-22)
+- [Catalog](/docs/pbc/all/search/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html#upgrading-from-version-55-to-version-56)
+- [ProductPageSearch](/docs/pbc/all/search/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html#upgrading-from-version-311-to-version-312)
+- [ProductReviewSearch](/docs/pbc/all/search/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html#upgrading-from-version-13-to-version-14)
+- [ProductLabelSearch](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html#upgrading-from-version-12-to-version-13)
+- [ProductSetPageSearch](/docs/pbc/all/search/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html#upgrading-from-version-13-to-version-14)
+- [CategoryPageSearch](/docs/pbc/all/search/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html#upgrading-from-version-14-to-version-15)
+- [ProductNew](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productnew-module.html)

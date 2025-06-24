@@ -20,11 +20,11 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html    
 ---
 
-This document describes the `product_label_store.csv` file to configure [Product Label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html) and store assignment information in your Spryker Demo Shop.
+This document describes the `product_label_store.csv` file to configure [Product Label](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-labels-feature-overview.html) and store assignment information in your Spryker Demo Shop.
 
 ## Import file dependencies
 
-[product_label.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-label.csv.html).
+[product_label.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/import-file-details-product-label.csv.html).
 
 
 ## Import file parameters

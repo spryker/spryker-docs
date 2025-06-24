@@ -66,7 +66,7 @@ The following table describes the attributes you see, select, or enter while edi
 | NAME | Unique identifier of the product label for the Back Office and Storefront. If you don't specify a locale specific name, this name is used by default on the Storefront.  |
 | FRONT-END REFERENCE | Defines the location and design of the product label. By default, the following designs are available: *alternative*, *discontinued*, *top*, *new*, *sale*. |
 | PRIORITY | Defines the order in which labels appear on a product card and product details page. The product label with the lowest number has the highest priority. |
-| IS DYNAMIC | Defines if this label is [dynamic](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html#dynamic-product-label). Only developers can create dynamic product labels. |
+| IS DYNAMIC | Defines if this label is [dynamic](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-labels-feature-overview.html#dynamic-product-label). Only developers can create dynamic product labels. |
 | IS ACTIVE |  Defines if the label is displayed on the Storefront.  |
 | VALID FROM and VALID TO | Inclusively defines the time period when the product label is  displayed on the Storefront. If no dates are selected, the label is always displayed. |
 | IS EXCLUSIVE | Defines if this product label is to be exclusive. If an exclusive product label is applied to a product, all the other non-exclusive labels assigned to the product are  not displayed on the product card. |

@@ -53,4 +53,4 @@ To start editing a configurable bundle template, do the following:
 
 ## Next steps
 
-[Edit slots in configurable bundle templates](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)
+[Edit slots in configurable bundle templates](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)

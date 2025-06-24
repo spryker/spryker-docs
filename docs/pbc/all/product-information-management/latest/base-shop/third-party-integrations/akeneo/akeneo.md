@@ -39,8 +39,8 @@ YOUR ADVANTAGES:
 ## Related Developer guides
 
 Discontinued - Akeneo Connector (Eco module):
-- [Installing and configuring Akeneo Connector (Eco module)](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html)
-- [Akeneo Connector (Eco module) — Console commands](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html)
+- [Installing and configuring Akeneo Connector (Eco module)](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html)
+- [Akeneo Connector (Eco module) — Console commands](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html)
 
 
 ---

@@ -459,4 +459,4 @@ upcs,select,yes,yes,,UPCs,UPCs,,
 
 ## Next steps
 
-[Configure the Bazaarvoice app](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/configure-bazaarvoice.html) for your store.
+[Configure the Bazaarvoice app](/docs/pbc/all/ratings-reviews/latest/third-party-integrations/configure-bazaarvoice.html) for your store.

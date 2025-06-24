@@ -14,19 +14,19 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `product_offer_shopping_list.csv` file to configure [shopping lists with product offers](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/marketplace-shopping-lists-feature-overview.html) in your Spryker shop.
+This document describes the `product_offer_shopping_list.csv` file to configure [shopping lists with product offers](/docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/marketplace-shopping-lists-feature-overview.html) in your Spryker shop.
 
 
 ## Import file dependencies
 
-[merchant_product_offer.csv](/docs/pbc/all/offer-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html)
+[merchant_product_offer.csv](/docs/pbc/all/offer-management/latest/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html)
 
 ## Import file parameters
 
 | PARAMETER   | REQUIRED | TYPE  | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |--------------|-----------|---------|---------------|------------|
 | shopping_list_item_key  | &check;   | String  | Unique  | Identifier of the shopping list item in the system. |
-| product_offer_reference | &check;   | String  |         | Identifier of the [product offer](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-product-offer-feature-overview.html) in the system. |
+| product_offer_reference | &check;   | String  |         | Identifier of the [product offer](/docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html) in the system. |
 
 
 

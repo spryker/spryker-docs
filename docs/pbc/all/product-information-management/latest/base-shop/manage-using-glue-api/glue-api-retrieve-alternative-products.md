@@ -16,7 +16,7 @@ related:
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/alternative-products-feature-overview.html
 ---
 
-The *Alternative Products* feature allows customers to find a substitute for a product that runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually look for an up-to-date generation of the same product, and suggesting possible alternatives is crucial. For more details, see [Alternative Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html) and [Discontinued Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html).
+The *Alternative Products* feature allows customers to find a substitute for a product that runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually look for an up-to-date generation of the same product, and suggesting possible alternatives is crucial. For more details, see [Alternative Products](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/alternative-products-feature-overview.html) and [Discontinued Products](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html).
 
 The Product Alternatives API provides access to alternative products via REST API requests. In particular, you can:
 
@@ -32,12 +32,12 @@ In your development, the endpoints help to:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Alternative Products Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Alternative Products Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html).
 
 
 ## Check if a product is discontinued
 
-Before suggesting an alternative product, check if a product is discontinued by [retrieving a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product).
+Before suggesting an alternative product, check if a product is discontinued by [retrieving a concrete product](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product).
 
 {% info_block infoBox %}
 
@@ -367,11 +367,11 @@ To retrieve concrete alternative products, send the request:
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
 
-{% include /pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/latest/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/product-labels-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
 
 ## Possible errors
@@ -382,4 +382,4 @@ To retrieve concrete alternative products, send the request:
 | 312 | Concrete product is ID not specified. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

@@ -66,7 +66,7 @@ The following table describes attributes you select and enter in the **Attribute
 
 ## Next steps
 
-- [Edit abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html)
-- [Manage abstract product prices](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html)
-- [Manage abstract product image sets](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-image-sets.html)
-- [Manage abstract product meta information](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-meta-information.html)
+- [Edit abstract product](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html)
+- [Manage abstract product prices](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html)
+- [Manage abstract product image sets](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-image-sets.html)
+- [Manage abstract product meta information](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-meta-information.html)

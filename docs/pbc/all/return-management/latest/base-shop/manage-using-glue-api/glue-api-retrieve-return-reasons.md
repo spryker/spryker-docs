@@ -19,7 +19,7 @@ This endpoint allows retrieving returns reasons.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Install the Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-glue-api.html)
+For details on the modules that provide the API functionality and how to install them, see [Install the Return Management Glue API](/docs/pbc/all/return-management/latest/base-shop/install-and-upgrade/install-the-return-management-glue-api.html)
 
 ## Retrieve return reasons
 
@@ -86,4 +86,4 @@ Request sample: retrieve return reasons
 | --- | --- | --- |
 | reason | String | Predefined return reason. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

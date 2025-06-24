@@ -57,16 +57,16 @@ To create a product variant:
     {% endinfo_block %}
 
     2. Otherwise, enter Original and eventually Default prices for the product for Gross and Net price modes.
-    3. **B2B only:** In **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation. See [Merchants](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html) for more information.
+    3. **B2B only:** In **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation. See [Merchants](/docs/pbc/all/price-management/latest/base-shop/merchant-custom-prices-feature-overview.html) for more information.
     4. Select **Quantity** for the product and then select **Never out of stock** if you want the product to never go out of stock.
 5. **Optionally**: Click **Next** to go to the *Image* to add images for the product and define the image order.
-6. **Optionally**: Click **Next** of select the *Assign bundled products* tab to create a bundles product. See [Creating and Managing Product Bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) to know more.
+6. **Optionally**: Click **Next** of select the *Assign bundled products* tab to create a bundles product. See [Creating and Managing Product Bundles](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) to know more.
 7. Click **Save**.
-The page is refreshed and you can see two additional tabs: *Discontinue* and*Product Alternatives*. See  [Discontinuing products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html) and [Adding product alternatives](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html) to know more.
+The page is refreshed and you can see two additional tabs: *Discontinue* and*Product Alternatives*. See  [Discontinuing products](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html) and [Adding product alternatives](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html) to know more.
 
 {% info_block errorBox "Important" %}
 
-To make sure your product will be shown and searchable in your online store, we highly recommend you to go through the checklist in [HowTo - Make a Product Searchable and Shown on the Storefront](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/make-products-searchable-and-shown-on-the-storefront.html).
+To make sure your product will be shown and searchable in your online store, we highly recommend you to go through the checklist in [HowTo - Make a Product Searchable and Shown on the Storefront](/docs/pbc/all/product-information-management/latest/base-shop/tutorials-and-howtos/make-products-searchable-and-shown-on-the-storefront.html).
 
 {% endinfo_block %}
 
@@ -137,4 +137,4 @@ On this tab, you see a table with the scheduled prices imported via a CSV file. 
 
 
 **What's next?**
-<br>Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-products.html) section.
+<br>Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing products](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-products.html) section.

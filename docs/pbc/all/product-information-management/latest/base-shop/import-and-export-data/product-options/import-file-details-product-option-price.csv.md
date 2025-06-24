@@ -21,7 +21,7 @@ This document describes the `product_option_price.csv` file to configure Produc
 
 ## Import file dependencies
 
-[product_option.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html).
+[product_option.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html).
 
 ## Import file parameters
 

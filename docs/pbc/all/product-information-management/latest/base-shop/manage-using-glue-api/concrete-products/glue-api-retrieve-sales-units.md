@@ -27,8 +27,8 @@ This endpoint allows retrieving sales units of concrete products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-- [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
-- [Glue API: Measurement Units Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html).
+- [Install the Product Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
+- [Glue API: Measurement Units Feature Integration](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html).
 
 ## Retrieve sales units
 
@@ -94,10 +94,10 @@ Request sample: retrieve sales units
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/sales-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/sales-units-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/sales-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/sales-units-response-attributes.md -->
 
 
-See [Retrieve measurement units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html) for more information on managing the sales units.
+See [Retrieve measurement units](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html) for more information on managing the sales units.
 
 ## Possible errors
 
@@ -106,4 +106,4 @@ See [Retrieve measurement units](/docs/pbc/all/product-information-management/{{
 | 302 | Concrete product is not found. |
 | 312  | Concrete product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

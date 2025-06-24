@@ -19,4 +19,4 @@ related:
   - title: Product Rating & Reviews feature overview
     link: docs/pbc/all/ratings-reviews/page.version/ratings-and-reviews.html
 ---
-{% include pbc/all/install-features/{{page.version}}/install-the-product-rating-and-reviews-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-rating-and-reviews-feature.md -->
+{% include pbc/all/install-features/latest/install-the-product-rating-and-reviews-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-rating-and-reviews-feature.md -->

@@ -26,7 +26,7 @@ related:
     link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 ---
 
-If you don't have the multi-currency feature in your project and want to migrate, you have to follow certain steps to migrate your system. First, [migrate Price](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html) and [modules related to multi-currency](/docs/pbc/all/search/{{page.version}}/base-shop/tutorials-and-howtos/configure-search-for-multi-currency.html) before proceeding with the search for multi-currency.
+If you don't have the multi-currency feature in your project and want to migrate, you have to follow certain steps to migrate your system. First, [migrate Price](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html) and [modules related to multi-currency](/docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-search-for-multi-currency.html) before proceeding with the search for multi-currency.
 
 In the multi-currency feature we store prices grouped by price mode and currency, so prices are as follows:
 

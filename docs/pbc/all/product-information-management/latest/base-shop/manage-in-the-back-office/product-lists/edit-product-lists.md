@@ -16,8 +16,8 @@ This doc describes how to edit product lists in the Back Office.
 
 ## Prerequisites
 
-- If you want to assign categories to a product list, [create the categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html).
-- If you want to assign or import products for a product list, [create the products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html).
+- If you want to assign categories to a product list, [create the categories](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/categories/create-categories.html).
+- If you want to assign or import products for a product list, [create the products](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html).
 - To start editing product lists, follow the steps:
     1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Product Lists**.
     2. Next to the product list you want to edit, click **Edit List**.
@@ -33,7 +33,7 @@ This doc describes how to edit product lists in the Back Office.
 
 {% info_block warningBox "Blacklists in configurable bundles" %}
 
-If a product list is used by a [configurable bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html) and its type is changed to **Blacklist**, it stops being displayed for the [configurable bundle slot](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html#configurable-bundle-slot) on the Storefront. To check if a product list is used by a configurable bundle, on the *Edit Product List: {product list ID}* page, switch to the *Used by* tab.
+If a product list is used by a [configurable bundle](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/configurable-bundle-feature-overview.html) and its type is changed to **Blacklist**, it stops being displayed for the [configurable bundle slot](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/configurable-bundle-feature-overview.html#configurable-bundle-slot) on the Storefront. To check if a product list is used by a configurable bundle, on the *Edit Product List: {product list ID}* page, switch to the *Used by* tab.
 
 {% endinfo_block %}
 
@@ -76,7 +76,7 @@ If products are already assigned to a list, and you import products, the existin
 1. On the **Edit Product List: {product list ID}**  page, click the **Assign Products** tab.
 2. Click **Choose File**.
 3. Select the file with the list you want to import.
-    To learn about the format of the file, see ["Import file details: content_product_abstract_list.csv"](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-product-abstract-list.csv.html).
+    To learn about the format of the file, see ["Import file details: content_product_abstract_list.csv"](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-content-product-abstract-list.csv.html).
 4. Click **Save**.
     The page refreshes with a success message displayed. The list is displayed in the **Products in the list** subtab.
 

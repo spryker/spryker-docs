@@ -14,9 +14,9 @@ redirect_from:
 - /docs/scos/dev/glue-api-guides/202204.0/retrieve-related-products.html
 ---
 
-Using the [Product Relations](/docs/pbc/all/product-relationship-management/{{page.version}}/product-relationship-management.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
+Using the [Product Relations](/docs/pbc/all/product-relationship-management/latest/product-relationship-management.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
 
-Only [abstract](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/pbc/all/product-relationship-management/{{page.version}}/product-relationship-management.html).
+Only [abstract](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/pbc/all/product-relationship-management/latest/product-relationship-management.html).
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
 - Retrieve related products of an abstract product.
@@ -28,7 +28,7 @@ In your development, the endpoints can help you to:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Relations Glue API](/docs/pbc/all/product-relationship-management/{{page.version}}/install-and-upgrade/install-the-product-relations-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Relations Glue API](/docs/pbc/all/product-relationship-management/latest/install-and-upgrade/install-the-product-relations-glue-api.html).
 
 ## Retrieve related items of an abstract product
 
@@ -583,10 +583,10 @@ To get related items of an abstract product, send the request:
 
 <a name="related-product-attributes"></a>
 
-{% include /pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/latest/abstract-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/abstract-products-response-attributes.md -->
 
 
-{% include /pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/latest/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/product-labels-response-attributes.md -->
 
 
 ## Retrieve upselling products of a registered user's cart
@@ -600,7 +600,7 @@ To get upselling items for all products in a cart of a registered customer, send
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 
 ### Request
 
@@ -959,10 +959,10 @@ To get upselling items for all products in a cart of a registered customer, send
 
 </details>
 
-{% include /pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/latest/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/product-labels-response-attributes.md -->
 
 
-{% include /pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/latest/abstract-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/abstract-products-response-attributes.md -->
 
 
 
@@ -1298,9 +1298,9 @@ To retrieve upselling products of a guest cart, send the request:
 
 </details>
 
-{% include /pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/latest/abstract-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/abstract-products-response-attributes.md -->
 
-{% include /pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/latest/concrete-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/concrete-products-response-attributes.md -->
 
 
 ## Possible errors
@@ -1313,4 +1313,4 @@ To retrieve upselling products of a guest cart, send the request:
 | 301 | Abstract product is not found. |
 | 311 | Abstract product ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

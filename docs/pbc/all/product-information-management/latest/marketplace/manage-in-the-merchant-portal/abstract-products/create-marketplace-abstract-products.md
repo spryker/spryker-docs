@@ -76,7 +76,7 @@ To create a new abstract product:
 
 6. Click **Next**.
 
-Only active marketplace products are displayed on the Marketplace Storefront. To activate your marketplace product, see [Managing marketplace concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html).
+Only active marketplace products are displayed on the Marketplace Storefront. To activate your marketplace product, see [Managing marketplace concrete products](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html).
 
 ### Reference information: Create Abstract Product drawer
 
@@ -120,11 +120,11 @@ For the new product to be available on the Storefront, it needs to be approved. 
 
 {% info_block infoBox "Info" %}
 
-This button is only displayed if the product status is *Draft*. To learn more about the product statuses, see, [Marketplace Product Approval feature overview](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-approval-process-feature-overview.html).
+This button is only displayed if the product status is *Draft*. To learn more about the product statuses, see, [Marketplace Product Approval feature overview](/docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-approval-process-feature-overview.html).
 
 {% endinfo_block %}
 
 ## Next steps
 
-- [Approve the marketplace product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html#sending-the-product-for-approval)
-- [Manage abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html)
+- [Approve the marketplace product](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html#sending-the-product-for-approval)
+- [Manage abstract product](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html)

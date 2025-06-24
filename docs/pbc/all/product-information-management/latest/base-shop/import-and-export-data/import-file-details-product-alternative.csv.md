@@ -14,12 +14,12 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `product_alternative.csv` file to configure [Alternative Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_alternative.csv` file to configure [Alternative Product](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/alternative-products-feature-overview.html) information in your Spryker Demo Shop.
 
 ## Import file dependencies
 
-- [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
-- [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
+- [product_concrete.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
+- [product_abstract.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
 
 
 ## Import file parameters

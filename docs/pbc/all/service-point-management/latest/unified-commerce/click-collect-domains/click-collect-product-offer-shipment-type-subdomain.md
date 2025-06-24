@@ -10,7 +10,7 @@ The Product Offer Shipment Type subdomain establishes the connection between pro
 
 ## Installation
 
-[Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html)
+[Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html)
 
 ## Modules
 

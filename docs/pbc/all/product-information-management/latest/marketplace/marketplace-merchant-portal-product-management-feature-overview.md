@@ -13,4 +13,4 @@ The *Marketplace Merchant Portal Product Management* feature lets merchants mana
 
 |INSTALLATION GUIDES  |
 |---------|
-|[Marketplace Merchant Portal Product Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-merchant-portal-feature.html) |
+|[Marketplace Merchant Portal Product Management feature integration](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-merchant-portal-feature.html) |

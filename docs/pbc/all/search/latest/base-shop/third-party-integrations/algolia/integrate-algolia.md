@@ -9,7 +9,7 @@ redirect_from:
 - /docs/pbc/all/search/202311.0/third-party-integrations/integrate-algolia.html
 ---
 
-This document describes how to integrate [Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia.html) into a Spryker shop.
+This document describes how to integrate [Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia.html) into a Spryker shop.
 
 ## Prerequisites
 
@@ -727,4 +727,4 @@ The order of execution of those plugins can be customized on the project level. 
 
 ## Next steps
 
-[Configure the Algolia app](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/configure-algolia.html) for your store.
+[Configure the Algolia app](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html) for your store.

@@ -33,4 +33,4 @@ To assign and deassign products from categories in the Back Office, follow the s
 
 ## Next steps
 
-[Order products in categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/order-products-in-categories.html)
+[Order products in categories](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/categories/order-products-in-categories.html)

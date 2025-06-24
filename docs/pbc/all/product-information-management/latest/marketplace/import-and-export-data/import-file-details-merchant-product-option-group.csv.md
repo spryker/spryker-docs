@@ -14,7 +14,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `merchant_product_option_group` file to create [merchant product option groups](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-options-feature-overview.html).
+This document describes the `merchant_product_option_group` file to create [merchant product option groups](/docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-options-feature-overview.html).
 
 ## Import file parameters
 
@@ -23,7 +23,7 @@ This document describes the `merchant_product_option_group` file to create [merc
 | ---------- | ---------- | ------- | ------------- | ------------------ | ------------- |
 | product_option_group_key | &check;  | String   | It should be either one word, or several words separated with underscore.    | Unique   | Glossary key for a product option group. |
 | merchant_reference | &check;     | String |      |      | Unique identifier of the merchant the product option group belongs to. |
-| approval_status  |     | String | waiting_for_approval     | Possible values: <ul><li>waiting_for_approval</li><li>approved</li><li>denied</li></ul>  | [Approval status](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-options-feature-overview.html#marketplace-product-options-approval-statuses) of the product option group.   |
+| approval_status  |     | String | waiting_for_approval     | Possible values: <ul><li>waiting_for_approval</li><li>approved</li><li>denied</li></ul>  | [Approval status](/docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-options-feature-overview.html#marketplace-product-options-approval-statuses) of the product option group.   |
 | merchant_sku  |     | String |      | External merchant SKU in the merchant's ERP.   | |
 
 

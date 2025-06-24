@@ -17,7 +17,7 @@ This endpoint lets you add and remove items from wishlists.
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [Install the Marketplace Wishlist feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html).
+For detailed information about the modules that provide the API functionality and related installation instructions, see [Install the Marketplace Wishlist feature](/docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html).
 
 ## Add an item to a wishlist
 
@@ -30,7 +30,7 @@ To add an item to a wishlist, send the request:
 
 | PATH PARAMETER   | DESCRIPTION     |
 | --------------- | ---------------- |
-| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to add the items to. [Create a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html) to get it. |
+| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to add the items to. [Create a wishlist](/docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html) to get it. |
 
 ### Request
 
@@ -92,7 +92,7 @@ To add an item to a wishlist, send the request:
 | ATTRIBUTE  | TYPE   | REQUIRED | DESCRIPTION   |
 | ------------ | ----- | ---| ---------------- |
 | sku  | String | &check; | SKU of a concrete product or a merchant concrete product to add.|
-| productOfferReference | String | | Unique identifier of the product offer. You can get it by [retrieving the offers available for the concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-product-offers-of-concrete-products.html).|
+| productOfferReference | String | | Unique identifier of the product offer. You can get it by [retrieving the offers available for the concrete product](/docs/pbc/all/product-information-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-product-offers-of-concrete-products.html).|
 
 ### Response
 
@@ -216,7 +216,7 @@ To add an item to a wishlist, send the request:
 | availability    | Object  | Contains information about the product's availability. |
 | availability.isNeverOutOfStock | Boolean | Defines if the product is never out of stock. |
 | availability.availability  | Boolean | Defines if the product is available.  |
-| availability.quantity  | Integer | Aggregated stock of the item in all [warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html#warehouse-management).   |
+| availability.quantity  | Integer | Aggregated stock of the item in all [warehouses](/docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html#warehouse-management).   |
 | prices  | Array   | Contains information about prices.    |
 | prices.priceTypeName  | String  | Price type. |
 | prices.grossAmount  | Integer | Gross price in cents.  |
@@ -238,7 +238,7 @@ To delete wishlist item, send the request:
 
 | PATH PARAMETER | DESCRIPTION   |
 | -------------- | -------------- |
-| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html) to get it. |
+| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html) to get it. |
 | {% raw %}***{{item_sku}}***{% endraw %}    | Unique identifier of the product to delete.                  |
 
 ### Request
@@ -260,4 +260,4 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | 207  | Cannot remove the item.                                      |
 | 208  | An item with the provided SKU does not exist in the wishlist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

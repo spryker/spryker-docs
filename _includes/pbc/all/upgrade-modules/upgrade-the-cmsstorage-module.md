@@ -6,10 +6,10 @@ Version 2.0.0 of the `CmsStorage` module introduces the [multi-store functionali
 
 The main BC breaking changes are:
 
-* Synchronization behavior
-* CMS Storage Dependency Provider return annotation
+- Synchronization behavior
+- CMS Storage Dependency Provider return annotation
 
-_Estimated migration time: 30 minutes_
+*Estimated migration time: 30 minutes*
 
 To upgrade to the new version of the module, do the following:
 
@@ -53,11 +53,11 @@ class CmsStorageDependencyProvider extends SprykerCmsStorageDependencyProvider
 4. Apply the database change:
 
 ```bash
-$ console propel:install
+console propel:install
 ```
 
 5. Generate the new transfers:
 
 ```bash
-$ console transfer:generate
+console transfer:generate
 ```

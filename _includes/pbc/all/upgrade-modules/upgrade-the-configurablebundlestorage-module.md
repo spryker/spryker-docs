@@ -3,13 +3,13 @@
 
 In the `ConfigurableBundleStorage` version 2.0.0, we have introduced these backward-incompatible changes:
 
-* Added `spryker/locale` module to dependencies.
-* Added `spryker/product-image` module to dependencies.
-* Added `spryker/product-storage` module to dependencies for forward-compatibility reasons.
-* Increased `spryker/configurable-bundle` module version constraint for the new major.
-* Changed configurable bundle template storage structure by renaming `productListId` to `idProductList`.
-* Enriched configurable bundle template storage structure with name, `idConfigurableBundleTemplateSlot` and `idConfigurableBundleTemplate` properties.
-* Removed `PROPEL_QUERY_CONFIGURABLE_BUNDLE_TEMPLATE` from the dependency provider.
+- Added `spryker/locale` module to dependencies.
+- Added `spryker/product-image` module to dependencies.
+- Added `spryker/product-storage` module to dependencies for forward-compatibility reasons.
+- Increased `spryker/configurable-bundle` module version constraint for the new major.
+- Changed configurable bundle template storage structure by renaming `productListId` to `idProductList`.
+- Enriched configurable bundle template storage structure with name, `idConfigurableBundleTemplateSlot` and `idConfigurableBundleTemplate` properties.
+- Removed `PROPEL_QUERY_CONFIGURABLE_BUNDLE_TEMPLATE` from the dependency provider.
 
 *Estimated migration time: ~1hour*
 

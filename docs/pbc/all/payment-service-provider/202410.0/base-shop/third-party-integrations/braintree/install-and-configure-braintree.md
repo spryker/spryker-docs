@@ -49,6 +49,7 @@ console frontend:yves:build
 For an example of module configuration, refer to `config/config.dist.php`.
 
 To setup the initial Braintree configuration, use the credentials you received after registering your Braintree merchant account:
+
 ```php
 // the mode of the transaction, either development, integration, sandbox, production, qa (required)
 $config[BraintreeConstants::ENVIRONMENT] = '';
@@ -136,6 +137,7 @@ All subform and handler plugins are located in `SprykerEco\Yves\Braintree\Plugin
 ## OMS Configuration
 
 Activate the following Braintree process:
+
 ```php
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     'BraintreePayPal01',
@@ -160,6 +162,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 Default implementation for commands and options must be added to `Pyz/Zed/Oms/OmsDependencyProvider.php`.
 
 1. Commands:
+
 ```php
 $container->extend(OmsDependencyProvider::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
     $commandCollection
@@ -172,10 +175,12 @@ $container->extend(OmsDependencyProvider::COMMAND_PLUGINS, function (CommandColl
         ->add(new ItemsRefundPlugin(), 'Braintree/ItemsRefund')
         ->add(new OrderRefundPlugin(), 'Braintree/OrderRefund') return $commandCollection; });
 ```
+
 Also, plugins to split the logic for payment methods were added to the new version of the Braintree module. These plugins don't provide partial operation for the supported payment methods.
 You can use `ItemsCapture` and `ItemsRefund` plugins for Paypal payment methods and `OrderCapture` and `OrderRefund` for the Credit card payment method. `CapturePlugin` and `RefundPlugin` as well as relevevant facade methods are deprecated and will be removed with the next major relese.
 
 2. Conditions:
+
 ```php
 $container->extend(OmsDependencyProvider::CONDITION_PLUGINS, function (ConditionCollectionInterface $conditionCollection) {
     $conditionCollection
@@ -187,6 +192,7 @@ $container->extend(OmsDependencyProvider::CONDITION_PLUGINS, function (Condition
     return $conditionCollection;
 });
 ```
+
 All commands and conditions are located in `SprykerEco\Zed\Braintree\Communication\Plugin\Oms\` namespace.
 
 ## Payment Configuration

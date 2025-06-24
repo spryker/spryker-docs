@@ -90,6 +90,7 @@ Request sample: retrieve merchant addresses
     }
 }
 ```
+
 </details>
 
 <a name="merchant-addresses-response-attributes"></a>

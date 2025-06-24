@@ -20,9 +20,9 @@ Multi-Factor Authentication (MFA) adds an extra layer of security for customers,
 
 Benefits of MFA:
 
-* Enhanced security with an extra layer of protection
-* Enhanced privacy with better protected personal data
-* Supports compliance with security regulations and industry standards
+- Enhanced security with an extra layer of protection
+- Enhanced privacy with better protected personal data
+- Supports compliance with security regulations and industry standards
 
 
 ## MFA flow for protected actions
@@ -37,17 +37,17 @@ The login process with MFA looks as follows:
   * For users: `multi-factor-auth/user/get-enabled-types`
 
 3. Evaluate the number of enabled MFA methods:
-  * Multiple MFA methods: the system presents a selection screen where the user selects a preferred authentication method
-  * One MFA method: the system proceeds to verify the user using their only MFA method
+- Multiple MFA methods: the system presents a selection screen where the user selects a preferred authentication method
+- One MFA method: the system proceeds to verify the user using their only MFA method
 
 4. Send the authentication code: The system sends a verification code through the appropriate endpoint based on the user type:
-  * For customers: `multi-factor-auth/send-customer-code`
-  * For agents: `multi-factor-auth/send-user-code`
-  * For users: `multi-factor-auth/user/send-code`
+  - For customers: `multi-factor-auth/send-customer-code`
+  - For agents: `multi-factor-auth/send-user-code`
+  - For users: `multi-factor-auth/user/send-code`
 
    The delivery method depends on the MFA configuration:
-  * If multiple MFA methods are enabled, the authentication code is sent via the platform selected by the user
-  * If only one MFA method is enabled, the authentication code is sent via that method's platform
+  - If multiple MFA methods are enabled, the authentication code is sent via the platform selected by the user
+  - If only one MFA method is enabled, the authentication code is sent via that method's platform
 
 5. Code validation: After the authentication code is sent, the system presents a code validation form to the user. The user enters the received authentication code in the form.  
   If the code is correct, authentication is successful. If incorrect, the user needs to double-check the code and try entering again.

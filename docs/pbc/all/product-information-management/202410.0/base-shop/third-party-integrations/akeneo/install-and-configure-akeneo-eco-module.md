@@ -153,10 +153,10 @@ Firstly, extend the `AkeneoPimMiddlewareConnector` module on a project level. Cr
 
 Inside the module, implement plugins for writing data (categories, attributes, abstract and concrete products) into the shop. Add the following plugins to `src/Pyz/Zed/AkeneoPimMiddlewareConnector/Communication/Plugin`:
 
-* `AttributeDataImporterPlugin`
-* `CategoryDataImporterPlugin`
-* `ProductAbstractDataImporterPlugin`
-* `ProductDataImporterPlugin`
+- `AttributeDataImporterPlugin`
+- `CategoryDataImporterPlugin`
+- `ProductAbstractDataImporterPlugin`
+- `ProductDataImporterPlugin`
 
 Find an examplary plugin implementation below.
 

@@ -31,23 +31,23 @@ So far we discussed the client-side implementation provided by Amazon Pay. On th
 Another part of the implementation is the Handling orders with Amazon Pay API function wrapper, implemented as a Facade.
 
 Each API call involves similar classes from the module:
-* An adapter for adapting Amazon SDK that makes the rest of the module independent of the external library.
-* A converter from Amazon responses to Spryker OS transfer objects.
-* A logger for logging information about API calls.
-* A transaction for updating transfer objects.
+- An adapter for adapting Amazon SDK that makes the rest of the module independent of the external library.
+- A converter from Amazon responses to Spryker OS transfer objects.
+- A logger for logging information about API calls.
+- A transaction for updating transfer objects.
 
 Since it's a standard Spryker OS practice, an entry point is a public method of the Facade, so, the flow for a typical transaction includes the following steps:
 1. Logically grouping the affected order items, based on the transaction type:
-  * for authorize & capture - by `AuthorizationReferenceId`.
-  * for refund & capture status update - by `AmazonCaptureId`.
-  * no grouping is required for close and cancel since operations are performed for the whole order.
+- for authorize & capture - by `AuthorizationReferenceId`.
+- for refund & capture status update - by `AmazonCaptureId`.
+- no grouping is required for close and cancel since operations are performed for the whole order.
 2. The following steps are executed for each group separately:
-  * Calling Facade method.
-  * Facade creates a related transaction handler or a collection of transaction handlers.
-  * The transaction handler has execute method expecting an AmazonCallTransfer object as a parameter.
-  * The transaction handler passes a transfer object to the adapter which is responsible for direct communication with the Handling orders with Amazon Pay API. Using the provided SDK it converts API responses into transfer objects using converters. Apart from adapters and converters, the rest of the code does not know anything about Handling orders with Amazon Pay API details and only works with Spryker OS transfer objects.
-  * If not all order items, belonging to a logical group, where requested for the update, a new group is created for affected order items.
-  * The transaction handler returns a modified transfer object. All information related to Amazon Pay is stored into.
+- Calling Facade method.
+- Facade creates a related transaction handler or a collection of transaction handlers.
+- The transaction handler has execute method expecting an AmazonCallTransfer object as a parameter.
+- The transaction handler passes a transfer object to the adapter which is responsible for direct communication with the Handling orders with Amazon Pay API. Using the provided SDK it converts API responses into transfer objects using converters. Apart from adapters and converters, the rest of the code does not know anything about Handling orders with Amazon Pay API details and only works with Spryker OS transfer objects.
+- If not all order items, belonging to a logical group, where requested for the update, a new group is created for affected order items.
+- The transaction handler returns a modified transfer object. All information related to Amazon Pay is stored into.
 
 ## Initializing Quote Transfer Objects
 
@@ -80,8 +80,8 @@ Once all necessary information is selected, an order is ready to be placed.
 First, call all related API calls and then persist an order in the database.
 All API related jobs are covered by only one Facade method confirmPurchase() which encapsulates three Handling orders with Amazon Pay API calls to be executed one by one:
 1. `SetOrderReferenceDetails` for specifying order total amount.
-2.  `ConfirmOrderReference` for confirming the order.
-3.  `GetOrderReferenceDetails` for retrieving information about buyer (like name and shipping address).
+2. `ConfirmOrderReference` for confirming the order.
+3. `GetOrderReferenceDetails` for retrieving information about buyer (like name and shipping address).
 
 ```php
 /**

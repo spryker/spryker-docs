@@ -32,13 +32,13 @@ To start working with product alternatives, go to **Catalog&nbsp;<span aria-labe
 To added product alternatives for a product, do the following:
 
 1. On the *Edit Concrete Product* page, switch to the *Product Alternatives* tab.
-2. To add product alternatives, enter _Product Name_ or its _SKU_ in the **Add Product Alternative by Name** or **SKU** field.
+2. To add product alternatives, enter *Product Name* or its *SKU* in the **Add Product Alternative by Name** or **SKU** field.
 You can add multiple alternative products.
 ![Adding product alternatives](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Adding+Product+Alternatives/add-product-alternative.png)
 
 4. Click **Save**.
 The page is refreshed to display the table with the alternative products you have added.
-To remove any alternative product, in the _Actions_ column, click **Remove**.
+To remove any alternative product, in the *Actions* column, click **Remove**.
 
 **Tips and tricks**
 <br>The product alternatives is displayed on the concrete product page only when it's out of stock or discontinued. In any other case, no alternatives are displayed. However, for each product added as an alternative one, a *Replacement for* section is displayed:
@@ -49,4 +49,4 @@ In addition to the alternatives section, a dynamic label is assigned to the prod
 
 ## Next steps
 
-See the articles in the _References_ section for more examples of the alternative products.
+See the articles in the *References* section for more examples of the alternative products.

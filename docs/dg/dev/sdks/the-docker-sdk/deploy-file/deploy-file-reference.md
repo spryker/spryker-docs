@@ -68,6 +68,8 @@ Find B2B and B2C deploy file examples for [development](/docs/dg/dev/set-up-spry
 
 ***
 
+<!-- markdownlint-disable -->
+
 ### version:
 
 Defines the version of the Deploy file format.
@@ -1052,6 +1054,8 @@ A **Service** to control user agents.
 
 ***
 
+<!-- markdownlint-enable -->
+
 ## Change log
 
-* Initial reference document is introduced.
+Initial reference document is introduced.

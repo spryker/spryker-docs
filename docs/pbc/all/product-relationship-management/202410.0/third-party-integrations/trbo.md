@@ -15,15 +15,15 @@ Onsite. Realtime. Smart.trbo GmbH is a Munich-based technology company founded i
 
 YOUR ADVANTAGES:
 
-* Personalized and targeted user approach - via mobile, tablet and desktop
-* Analysis of more than 50 visitor characteristics in real-time
-* Self-optimizing and data-supported algorithm
-* Individualized layer content in the design of the web shop and tailored to its goals
-* Statistically valid A/B testing and multivariant testing directly in the trbo system
-* Intuitive tool & managed service enable fast implementation
-* Success cases: airberlin holidays (now airline holidays)
-* Newsletter subscription increased by 152 percent
-* ROSE Bikes - Bounce Rate reduced by 9.5 percent
+- Personalized and targeted user approach - via mobile, tablet and desktop
+- Analysis of more than 50 visitor characteristics in real-time
+- Self-optimizing and data-supported algorithm
+- Individualized layer content in the design of the web shop and tailored to its goals
+- Statistically valid A/B testing and multivariant testing directly in the trbo system
+- Intuitive tool & managed service enable fast implementation
+- Success cases: airberlin holidays (now airline holidays)
+- Newsletter subscription increased by 152 percent
+- ROSE Bikes - Bounce Rate reduced by 9.5 percent
 
 ---
 

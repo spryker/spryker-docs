@@ -37,9 +37,9 @@ To create a category in the Back Office, follow the steps below.
 10. Optional: To make the category searchable on the Storefront, select **ALLOW TO SEARCH FOR THIS CATEGORY**.
 11. In the **Translations** section, enter a **NAME** for each locale.
 12. Optional: Enter any of the following for needed locales:
-    * **META TITLE**
-    * **META DESCRIPTION**
-    * **META KEYWORDS**
+    - **META TITLE**
+    - **META DESCRIPTION**
+    - **META KEYWORDS**
 
 13. Click **Next** and follow [Add images to a category](#add-images-to-a-category).
 
@@ -70,8 +70,8 @@ This opens the **Edit category** page with a success message displayed.
 {% info_block infoBox "Adding multiple images" %}
 
 You can add multiple image sets and multiple images to an image set. However, by default, in the Back Office and on the Storefront, multiple images are not displayed for categories. If there are multiple image sets or images for a category, the image displayed is defined as follows:
-  * The image set going first or named `default` is displayed.
-  * The image with the lowest **SORT ORDER** is displayed. If several images have the same **SORT ORDER**, the image going first is displayed.
+- The image set going first or named `default` is displayed.
+- The image with the lowest **SORT ORDER** is displayed. If several images have the same **SORT ORDER**, the image going first is displayed.
 
 {% endinfo_block %}
 

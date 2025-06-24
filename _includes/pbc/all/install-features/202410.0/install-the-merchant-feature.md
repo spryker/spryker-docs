@@ -108,6 +108,7 @@ Make sure the following changes have occurred in transfer objects:
 ## 3) Add Zed translations
 
 Generate a new translation cache for Zed:
+
 ```bash
 console translator:generate-cache
 ```
@@ -140,6 +141,7 @@ MER000002,Video King,1234.4567,approved,martha@video-king.nl,1,/de/merchant/vide
 | url | optional(per locale) | string | /de/merchant/sony-experts | Unique Storefront identifier for a merchant's page. |
 
 **data/import/common/common/marketplace/merchant_store.csv**
+
 ```csv
 merchant_reference,store_name
 MER000001,DE
@@ -572,6 +574,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 | SynchronizationSearchQueueMessageProcessorPlugin | Configures merchant messages to sync with the Elastica search and marks messages as failed in case of an error. |               | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
+
 ```php
 <?php
 

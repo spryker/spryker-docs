@@ -40,7 +40,7 @@ Make sure the following modules have been installed:
 
 ## 2) Set up configuration
 
-Set up the following configuration. 
+Set up the following configuration.
 
 {% info_block infoBox "Customer and User configuration separation" %}
 
@@ -52,7 +52,7 @@ This separation allows for fine-grained control of security settings based on co
 {% endinfo_block %}
 
 
-### 2.1) Configure code length 
+### 2.1) Configure code length
 
 To configure the length of the authentication code, extend the `MultiFactorAuthConfig` class:
 
@@ -142,6 +142,7 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
     }
 }
 ```
+
 </details>
 
 #### 2.2.2) For Users
@@ -201,6 +202,7 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
     }
 }
 ```
+
 </details>
 
 #### 2.3.2) For Users
@@ -263,6 +265,7 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
     }
 }
 ```
+
 </details>
 
 #### 2.4.2) For Users
@@ -453,6 +456,7 @@ multi_factor_auth.invalid_csrf_token,"Ungültiges CSRF-Token.",de_DE
 multi_factor_auth.note_mfa_affects,"Note, any changes made here will also affect how MFA works in other environments like the Back Office, since your accounts are linked.",en_US
 multi_factor_auth.note_mfa_affects,"Hinweis: Alle hier vorgenommenen Änderungen wirken sich auch darauf aus, wie MFA in anderen Umgebungen wie dem Back Office funktioniert, da Ihre Konten verknüpft sind.",de_DE
 ```
+
 </details>
 
 2. Import data:
@@ -504,6 +508,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     }
 }
 ```
+
 </details>
 
 ### 6) Set up behavior
@@ -552,6 +557,7 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
     }
 }
 ```
+
 </details>
 
 <details>
@@ -594,6 +600,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
     }
 }
 ```
+
 </details>
 
 <details>
@@ -615,6 +622,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
     }
 }
 ```
+
 </details>
 
 #### 6.2) For agent users
@@ -924,9 +932,9 @@ docker/sdk up --assets
 
 {% info_block warningBox "Verification" %}
 
-* Integrate one of the supported Multi-Factor Authentication methods, see [Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/202505.0/multi-factor-authentication.md#multi-factor-authentication-methods).
-* Make sure the **Set up Multi-Factor Authentication** menu item is displayed in the navigation menu.
-* Clicking the menu should open the following page:
+- Integrate one of the supported Multi-Factor Authentication methods, see [Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/202505.0/multi-factor-authentication.md#multi-factor-authentication-methods).
+- Make sure the **Set up Multi-Factor Authentication** menu item is displayed in the navigation menu.
+- Clicking the menu should open the following page:
  - For customers:`https://yves.mysprykershop.com/multi-factor-auth/set`;
  - For agents: `https://yves.mysprykershop.com/agent/multi-factor-auth/set`;
  - For backoffice users: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`.

@@ -34,6 +34,7 @@ By default, the invoice can be generated only for the whole order (not for indiv
 
 
 ## Invoice template
+
 The invoice template is not provided out of the box and needs to be added in the SalesInvoiceConfig.php file. Otherwise, the exception is thrown, and the invoice is not generated.
 
 Check out the example of the Spryker invoice template:
@@ -41,10 +42,10 @@ Check out the example of the Spryker invoice template:
 
 In the generated invoice template, the following data is *not hardcoded*:
 
-* Customer billing address
-* Invoice creation date
-* Invoice number
-* All order data in the table
+- Customer billing address
+- Invoice creation date
+- Invoice number
+- All order data in the table
 
 All other text is hardcoded. This text is glossary keys, and you can change them for your project as you want.
 
@@ -56,8 +57,8 @@ Keep in mind that bundled product always has a 0-tax rate. However, all of the b
 
 ## Current constraints
 
-* Product options are not fully supported in the generated invoice for now. If product options have one tax rate and the product itself another, the tax rate difference is not reflected in the invoice. The invoice shows prices that already include tax rates of products and product options.
-* PDF files of the invoices are not generated.
+- Product options are not fully supported in the generated invoice for now. If product options have one tax rate and the product itself another, the tax rate difference is not reflected in the invoice. The invoice shows prices that already include tax rates of products and product options.
+- PDF files of the invoices are not generated.
 
 {% info_block infoBox "Liability" %}
 

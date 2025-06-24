@@ -3,6 +3,8 @@ title: Security release notes 202403.0
 description: Security release notes for 202403.0
 last_updated: Mar 26, 2024
 template: concept-topic-template
+redirect_from:
+  - /docs/about/all/releases/security-release-notes-202403.0.html
 ---
 
 The following information pertains to security-related issues that have been recently resolved.

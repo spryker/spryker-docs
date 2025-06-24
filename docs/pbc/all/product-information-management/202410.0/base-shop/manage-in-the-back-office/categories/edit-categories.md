@@ -29,21 +29,21 @@ This doc describes how to edit categories in the Back Office.
 2. Enter a **CATEGORY KEY**.
 3. For **PARENT**, select a parent category.
 4. For **ADDITIONAL PARENTS**, do any of the following:
-    * Select one or more additional parent categories.
-    * Next to the parent categories you want to deassign this category from, click **x**.
+    - Select one or more additional parent categories.
+    - Next to the parent categories you want to deassign this category from, click **x**.
 5. For **STORES**, do any of the following:
-    * Select one or more stores.
-    * Next to the stores you want to remove this category from, click **x**.  
-6. Select a **TEMPLATE**.    
+    - Select one or more stores.
+    - Next to the stores you want to remove this category from, click **x**.  
+6. Select a **TEMPLATE**.
 7. Select or clear the following checkboxes:
-    * ACTIVE
-    * VISIBLE IN THE CATEGORY TREE
-    * ALLOW TO SEARCH FOR THIS CATEGORY
+    - ACTIVE
+    - VISIBLE IN THE CATEGORY TREE
+    - ALLOW TO SEARCH FOR THIS CATEGORY
 8. In the **Translations** section, enter a **NAME** for needed locales.
 9. Enter any of the following for needed locales:
-    * **META TITLE**
-    * **META DESCRIPTION**
-    * **META KEYWORDS**
+    - **META TITLE**
+    - **META DESCRIPTION**
+    - **META KEYWORDS**
 10. Click **Save**.
 
 This refreshes the page with a success message displayed.

@@ -46,7 +46,7 @@ To manage MIME types, go to **Administration&nbsp;<span aria-label="and then">><
 3. Optional: Enter a *COMMENT*.
 4. To allow uploading of this file type, select *IS ALLOWED*.
 5. Click **Save**.
-    This opens the *MIME Type Setting* page with a success message displayed. The changes are reflected in the list.    
+    This opens the *MIME Type Setting* page with a success message displayed. The changes are reflected in the list.
 
 ## Reference information: MIME TYPE
 

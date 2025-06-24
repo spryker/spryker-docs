@@ -24,8 +24,8 @@ This topic describes how to add content to Storefront pages using templates with
 
 Let's say you have *Sticky Notes* and *Writing Materials* categories, and you want to cross-promote them. You set the following tasks:
 
-* All the products belonging to the *Sticky Notes* category should display a content block with a link to the *Writing Materials* category and a content block with featured products.
-* All the products belonging to the *Writing Materials* category should display a content block with a link to the *Writing Materials* category and a content block with top sellers.
+- All the products belonging to the *Sticky Notes* category should display a content block with a link to the *Writing Materials* category and a content block with featured products.
+- All the products belonging to the *Writing Materials* category should display a content block with a link to the *Writing Materials* category and a content block with top sellers.
 
 To do that, you need to create content items, insert them into CMS blocks, assign CMS blocks to slots and select the pages the CMS blocks will be displayed on.
 
@@ -43,8 +43,8 @@ Follow the steps below to add the content.
 
 Create the following content items:
 
-* Abstract product list of top sellers—*Best Selling Products*
-* Abstract product list of featured products—*Featured Products*
+- Abstract product list of top sellers—*Best Selling Products*
+- Abstract product list of featured products—*Featured Products*
 
 See [Creating content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html) for more details.
 
@@ -57,10 +57,10 @@ If the content item types shipped by default are not sufficient for your project
 Follow the steps to create the CMS blocks with the needed content:
 
 1. Create the following CMS blocks:
-    * Top selling products reference - *Homepage Top sellers Products*
-    * Featured products reference - *Homepage Featured Products*
-    * Writing materials reference - *Category Banner-2*
-    * Sticky notes reference - *Category Banner-3*
+    - Top selling products reference - *Homepage Top sellers Products*
+    - Featured products reference - *Homepage Featured Products*
+    - Writing materials reference - *Category Banner-2*
+    - Sticky notes reference - *Category Banner-3*
 
 See [Create CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html) for more details.
 
@@ -73,15 +73,15 @@ Make sure to activate the CMS blocks. Only active CMS blocks are rendered on Sto
 2. Insert the *Best Selling Products* content item into the *Homepage Top sellers Products* CMS block, and apply the *Product Slider for store/landing pages* template.
 3. Insert the *Featured Products* content item into the *Homepage Featured Products* CMS block and apply the Product Slider for store/landing pages template.
 4. Configure the *Category Banner-2* CMS block as follows:
-    * **Title**—"Writing Materials".
-    * **Content**—"Stock up on the perfect pens, pencils, and markers for every member of your team".
-    * **Link**—`/en/stationery/writing-materials`.
-    * **ImageURL**—`/assets/DE/default/images/category-banner-image-2@2x.jpg`.
+    - **Title**—"Writing Materials".
+    - **Content**—"Stock up on the perfect pens, pencils, and markers for every member of your team".
+    - **Link**—`/en/stationery/writing-materials`.
+    - **ImageURL**—`/assets/DE/default/images/category-banner-image-2@2x.jpg`.
 5. Configure the *Category Banner-3* CMS block as follows:
-    * Title—"Post-Its".
-    * Content—"Organize and prioritize yourself or your team using our great selection of Post-Its".
-    * Link—`/en/stationery/paper/sticky-notes`.
-    * ImageURL—`/assets/DE/default/images/category-banner-image-3@2x.jpg`.
+    - Title—"Post-Its".
+    - Content—"Organize and prioritize yourself or your team using our great selection of Post-Its".
+    - Link—`/en/stationery/paper/sticky-notes`.
+    - ImageURL—`/assets/DE/default/images/category-banner-image-3@2x.jpg`.
 
 See [Editing placeholders](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html) to learn about inserting content into CMS blocks.
 
@@ -158,8 +158,8 @@ When you add a CMS block to a slot, it always goes on top of the list. You can c
 When defining the order of CMS blocks in a slot that is located in many pages, take into account that each CMS block is displayed in different pages. So, when moving a CMS block, its position on the selected pages changes only in relation to the CMS blocks that are also displayed there. The position of the other CMS blocks are irrelevant.
 
 In our case, with all the CMS blocks assigned to a single slot, the correct order is as follows:
-* The *Category Banner-2* and *Category Banner-3* CMS blocks are on top.
-* *Homepage Top sellers Products* and *Homepage Featured Products* CMS blocks are below them.
+- The *Category Banner-2* and *Category Banner-3* CMS blocks are on top.
+- *Homepage Top sellers Products* and *Homepage Featured Products* CMS blocks are below them.
 
 
 | WRITING MATERIALS PRODUCT PAGES| STICKY NOTES PRODUCT PAGES|
@@ -169,13 +169,13 @@ In our case, with all the CMS blocks assigned to a single slot, the correct orde
 
 To achieve that, make sure to fulfill the following:
 
-* For the *Writing Materials* product pages, the *Homepage Featured products* CMS block is located above the *Category Banner-3* CMS block in the **List of Blocks for "Bottom" Slot**. Other CMS blocks can be disregarded as they are not displayed on the *Writing Materials* product pages. Any of the following order variants will work:
+- For the *Writing Materials* product pages, the *Homepage Featured products* CMS block is located above the *Category Banner-3* CMS block in the **List of Blocks for "Bottom" Slot**. Other CMS blocks can be disregarded as they are not displayed on the *Writing Materials* product pages. Any of the following order variants will work:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Slots/Adding+Content+to+Storefront+Pages+Using+Templates+%26+Slots/cms-block-order-in-slot-1.png)
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Slots/Adding+Content+to+Storefront+Pages+Using+Templates+%26+Slots/cms-block-order-in-slot-2.png)
 
-* For the *Sticky Notes* category pages, the *Homepage Top sellers* CMS block is located above the *Category Banner-2* CMS block in the **List of Blocks for "Bottom" Slot**. Other CMS blocks can be disregarded as they are not displayed in the *Sticky Notes* product pages. Any of the order variants above will work.
+- For the *Sticky Notes* category pages, the *Homepage Top sellers* CMS block is located above the *Category Banner-2* CMS block in the **List of Blocks for "Bottom" Slot**. Other CMS blocks can be disregarded as they are not displayed in the *Sticky Notes* product pages. Any of the order variants above will work.
 
 {% info_block warningBox "Saving changes" %}
 

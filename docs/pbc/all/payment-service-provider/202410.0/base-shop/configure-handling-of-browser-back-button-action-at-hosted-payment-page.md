@@ -12,9 +12,9 @@ When integrating payment service providers (PSPs) that use hosted payment pages,
 When a customer is redirected from the Spryker checkout summary page to an external PSP's hosted payment page, using the back button creates an order persistence issue. The order is already created in the system with a unique OrderReference, preventing the customer from completing the purchase if they attempt to proceed again through checkout.
 
 This issue is particularly critical in the following cases:
-* The last item in stock was part of the order
-* The customer wants to change their order after being redirected to the payment page
-* The order reference is already generated and persisted
+- The last item in stock was part of the order
+- The customer wants to change their order after being redirected to the payment page
+- The order reference is already generated and persisted
 
 ## Solution
 
@@ -51,6 +51,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 
 
 **SalesPayment/config/Zed/Oms/Subprocess/PaymentCancel01.xml**
+
 ```xml
 <state name="payment cancellation pending" display="oms.state.reservation-cancellation-pending">
     <flag>exclude from customer</flag>
@@ -64,14 +65,15 @@ The `exclude from customer` flag is used to prevent cancelled payment orders fro
 Test the implementation by executing the following tests.
 
 ### Basic flow test
+
 1. Add products to cart  
 2. Proceed to checkout  
 3. Reach the payment step and get redirected to hosted payment page  
 4. Use the browser back button  
 
 Make sure the following applies:
-* The original order has been cancelled  
-* You can place a new order with the same items
+- The original order has been cancelled  
+- You can place a new order with the same items
 
 ### Stock verification test
 
@@ -81,8 +83,8 @@ Make sure the following applies:
 4. Use the browser back button  
 
 Make sure the following applies:
-* The item becomes available
-* You can place a new order with the same item
+- The item becomes available
+- You can place a new order with the same item
 
 ### Order status test
 
@@ -93,8 +95,8 @@ Make sure the following applies:
 5. Use the browser back button  
 
 Make sure the following applies:
-* In the Back Office, order status changes to **payment cancellation pending**
-* Order is not displayed in customer account
+- In the Back Office, order status changes to **payment cancellation pending**
+- Order is not displayed in customer account
 
 ## Troubleshooting
 

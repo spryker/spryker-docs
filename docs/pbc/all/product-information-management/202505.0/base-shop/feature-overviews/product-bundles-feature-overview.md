@@ -13,7 +13,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-bundles-feature-overview.html
 ---
 
-With the _Product Bundles_ feature you can tie individual items together and sell them as a package. As opposed to a set, in which products are loosely grouped, the items in a bundle are always sold together. You can choose to create a special bundle price to make the purchase more attractive. Since each bundle's product is still handled like an individual item in the Order Management Process, bundle availability is always calculated and displayed based on the item with the smallest available stock to avoid overselling.
+With the *Product Bundles* feature you can tie individual items together and sell them as a package. As opposed to a set, in which products are loosely grouped, the items in a bundle are always sold together. You can choose to create a special bundle price to make the purchase more attractive. Since each bundle's product is still handled like an individual item in the Order Management Process, bundle availability is always calculated and displayed based on the item with the smallest available stock to avoid overselling.
 
 A bundle represents two or more products, sold as a set; it's a distinct product that incorporates other concrete products.
 
@@ -27,8 +27,8 @@ Bundles are handled in different ways:<br>For example, a marketing bundle of two
 {% endinfo_block %}
 
 
-* A bundle can contain multiple quantities of the same item.
-* The availability of a bundle product is equal to the item with the lowest availability.
+- A bundle can contain multiple quantities of the same item.
+- The availability of a bundle product is equal to the item with the lowest availability.
 
 ## Product-Bundle module
 
@@ -36,15 +36,15 @@ Product bundles are two or more existing products combined into a new type of pr
 
 ### Characteristics of product bundles
 
-* The quantity of each concrete product may be more than 1.
-* A product bundle has a localized name and description.
-* A product bundle has a sku.
-* A product bundle has a price and tax set.
-* A product bundle has a virtual stock that is dependent on the stock of the bundled products.
-* The stock level has a upper boundary (see Stock calculation).
-* A product bundle can have attributes with localized values.
-* A product bundle can have localized SEO information.
-* A product bundle can have multiple localized image sets.
+- The quantity of each concrete product may be more than 1.
+- A product bundle has a localized name and description.
+- A product bundle has a sku.
+- A product bundle has a price and tax set.
+- A product bundle has a virtual stock that is dependent on the stock of the bundled products.
+- The stock level has a upper boundary (see Stock calculation).
+- A product bundle can have attributes with localized values.
+- A product bundle can have localized SEO information.
+- A product bundle can have multiple localized image sets.
 
 ## Product bundle entity relationship diagram
 
@@ -56,11 +56,11 @@ Bundle availability is calculated from bundled product availability. When bundle
 
 Bundle is updated when:
 
-* Stock of bundled product is changed.
-* Availability of bundled product is changed.
-* When creating bundle.
-* Adding new bundled products to bundle.
-* When state machine sets flag reserved to bundled product.
+- Stock of bundled product is changed.
+- Availability of bundled product is changed.
+- When creating bundle.
+- Adding new bundled products to bundle.
+- When state machine sets flag reserved to bundled product.
 
 
 ## Stock calculation
@@ -71,13 +71,13 @@ For example, bundled item 1 quantity x **2**
 
 For given item stock is:
 
-* In Warehouse **1: Item 1 stock x 10**
-* In Warehouse 2: **Item 1 stock x 5**
+- In Warehouse **1: Item 1 stock x 10**
+- In Warehouse 2: **Item 1 stock x 5**
 
 Then product bundle stock is:
 
-* Warehouse 1: **Bundle stock x 5**
-* Warehouse 2: **Bundle stock x 2**
+- Warehouse 1: **Bundle stock x 5**
+- Warehouse 2: **Bundle stock x 2**
 
 ## Product bundle structure in cart
 
@@ -97,7 +97,7 @@ If bundled items have quantity&nbsp;<span aria-label="and then">></span> 1 then 
 {% info_block infoBox %}
 
 When a bundle product is added to cart with a big number of items–for example, 150–users may experience slow cart operations.  
-To improve performance in such cases, configure bundles to not be split in cart by following [Alternative setup for handling large quantities of bundled products in the cart](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-product-bundles-feature.html#alternative-setup-for-handling-large-quantities-of-bundled-products-in-the-cart).  
+To improve performance in such cases, configure bundles to not be split in cart by following [Alternative setup for handling large quantities of bundled products in the cart](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html#alternative-setup-for-handling-large-quantities-of-bundled-products-in-the-cart).  
 
 
 {% endinfo_block %}

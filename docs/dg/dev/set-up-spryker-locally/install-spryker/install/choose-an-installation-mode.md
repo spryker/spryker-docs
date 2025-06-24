@@ -21,13 +21,13 @@ You can install Spryker in Development and Demo modes.
 
 To install Spryker with all the tools for developing your project, go with the Development mode. Depending on your OS, see one of the following guides for installation instructions:
 
-* [Install in Development mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html)
-* [Install in Development mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-windows.html)
+- [Install in Development mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html)
+- [Install in Development mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-windows.html)
 
 To check out Spryker features and how Spryker works in general, go with the Demo mode. Depending on your OS, see one of the following guides for installation instructions:
 
-* [Install in Demo mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
-* [Install in Demo mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html)
+- [Install in Demo mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
+- [Install in Demo mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html)
 
 Find more details about each mode in the following sections.
 
@@ -39,16 +39,16 @@ Development mode is a configuration in which Spryker is built and running with d
 
 Development mode is used in the following cases:
 
-* To learn how Spryker works.
-* To develop a new functionality.
-* To debug a functionality.
+- To learn how Spryker works.
+- To develop a new functionality.
+- To debug a functionality.
 
 ### Development mode installation guides
 
 See one of the following guides to install Spryker in Development mode:
 
-* [Install in Development mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html)
-* [Install in Development mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-windows.html)
+- [Install in Development mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html)
+- [Install in Development mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-windows.html)
 
 ## Demo mode
 
@@ -64,22 +64,22 @@ In Demo mode, the following functionalities are missing or disabled:
 
 Demo mode is used in the following cases:
 
-* To check or show the functionalities of [B2B](/docs/about/all/b2b-suite.html)/[B2C demo shops](/docs/about/all/b2c-suite.html).
-* To check a custom build or a new feature.
-* To test or deploy an application using Continuous Integration and Continuous Delivery tools.
+- To check or show the functionalities of [B2B](/docs/about/all/b2b-suite.html)/[B2C demo shops](/docs/about/all/b2c-suite.html).
+- To check a custom build or a new feature.
+- To test or deploy an application using Continuous Integration and Continuous Delivery tools.
 
 ### Demo mode installation guides
 
 See one of the following guides to install Spryker in Demo mode:
 
-* [Install in Demo mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
-* [Install in Demo mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html)
+- [Install in Demo mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
+- [Install in Demo mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html)
 
 ## Next steps
 
 Once you've selected and installation mode, follow one of the guides below:
 
-* [Install in Development mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html)
-* [Install in Development mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-windows.html)
-* [Install in Demo mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
-* [Install in Demo mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html)
+- [Install in Development mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html)
+- [Install in Development mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-windows.html)
+- [Install in Demo mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
+- [Install in Demo mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html)

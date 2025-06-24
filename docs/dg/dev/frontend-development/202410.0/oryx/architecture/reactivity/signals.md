@@ -56,7 +56,7 @@ const values = signal(observable$, {
 
 ### Computed signals
 
-A _computed signal_ derives its value from other signals. When a signal it depends on changes, it automatically reevaluates its value.
+A *computed signal* derives its value from other signals. When a signal it depends on changes, it automatically reevaluates its value.
 
 Here's an example of a computed signal:
 

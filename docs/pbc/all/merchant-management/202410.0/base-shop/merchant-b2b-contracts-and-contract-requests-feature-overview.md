@@ -50,9 +50,11 @@ For details on how a merchant can process the merchant relation requests in the 
 
 
 ## Automatic creation of a merchant relation
+
 Based on the data in a request, one or multiple merchant relations are automatically created for approved requests and displayed in the Back Office and on the Storefront.
 
 ## Merchant relations in business operations
+
 Based on merchant relations, you can assign [buyer-specific products](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html), [product prices](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices), and [merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html) in the Back Office.
 
 

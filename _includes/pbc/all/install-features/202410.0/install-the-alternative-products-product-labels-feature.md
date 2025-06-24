@@ -22,6 +22,7 @@ Install the required modules using Composer:
 ```yaml
 composer require spryker/product-alternative-product-label-connector:"^1.0.0" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
@@ -44,7 +45,7 @@ Make sure that the following modules have been installed:
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 
-```php   
+```php
 <?php
 
 namespace Pyz\Zed\Installer;

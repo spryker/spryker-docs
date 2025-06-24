@@ -3,6 +3,8 @@ title: Security release notes 202503.0
 description: Security updates released for version 202503.0
 last_updated: Mar 24, 2025
 template: concept-topic-template
+redirect_from:
+  - /docs/about/all/releases/security-release-notes-202503.0.html
 ---
 
 This document describes the security-related issues that have been recently resolved.
@@ -62,9 +64,9 @@ On the Storefront, a user could change their email address without verifying the
 
 ### Affected modules
 
-* `spryker-shop/customer-page`: 1.0.0 - 2.58.0
-* `spryker/customer`: 1.0.0 - 7.66.0
-* `spryker/customer-extension`: 1.0.0 - 1.5.0
+- `spryker-shop/customer-page`: 1.0.0 - 2.58.0
+- `spryker/customer`: 1.0.0 - 7.66.0
+- `spryker/customer-extension`: 1.0.0 - 1.5.0
 
 ### Fix the vulnerability
 
@@ -85,6 +87,7 @@ composer update spryker-shop/customer-page spryker/customer spryker/customer-ext
 2. Update the data import files:
 
 **data/import/common/STORE_NAME/cms_block_store.cs**
+
 ```csv
 cms-block-email--customer_email_change_verification--html,STORE_NAME
 cms-block-email--customer_email_change_verification--text,STORE_NAME

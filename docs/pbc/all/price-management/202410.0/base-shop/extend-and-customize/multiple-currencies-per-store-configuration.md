@@ -50,14 +50,14 @@ The methods in `CurrencyFacade` always returns an instance of the `CurrencyTrans
 
 `CurrencyFacade` exposes the following methods:
 
-* `CurrencyFacade::fromIsoCode()`
-* `CurrencyFacade::getCurrent()`
+- `CurrencyFacade::fromIsoCode()`
+- `CurrencyFacade::getCurrent()`
 
 The methods defined in the `CurrencyFacade` return an instance of the `CurrencyTransfer`, that contains:
 
-* currency ISO code–for example, EUR
-* currency name–for example, Euro
-* currency symbol –for example, €
+- currency ISO code–for example, EUR
+- currency name–for example, Euro
+- currency symbol –for example, €
 
 In addition, `CurrencyTransfer` contains information that specifies if it's the default currency or not. `CurrencyTransfer::$isDefault` can be used to check if currency that was retrieved by `CurrencyFacade::fromIsoCode()` is the same as the one configured as default for the current store.
 

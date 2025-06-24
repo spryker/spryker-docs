@@ -50,8 +50,8 @@ Let's take an example to better understand the feature. Suppose, 1 apple (1=fact
 
 There can be two types of conversions in the system:
 
-* *Global conversions*—are defined in the code already (like from cm to meter).
-* *Product-specific conversions*—are defined per product (like from one meter of cable to its weight).
+- *Global conversions*—are defined in the code already (like from cm to meter).
+- *Product-specific conversions*—are defined per product (like from one meter of cable to its weight).
 
 If a global unit conversion exists between the base and sales unit, then factor and precision fields are optional. If no global unit conversion exists between the base and sales unit, then factor and precision fields are mandatory. If precision is "null", then the information is taken from the product measurement unit is default_precision (default value is 1).
 

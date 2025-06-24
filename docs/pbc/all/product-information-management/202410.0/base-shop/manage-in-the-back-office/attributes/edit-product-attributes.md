@@ -31,17 +31,17 @@ Review the [reference information](#reference-information-edit-product-attribute
 2. Next to the product attribute you want to edit, select **Edit**.
 This opens the **Edit Product Attributes** page.
 3. Update **PREDEFINED VALUES**:
-    * Enter and select the values you want to add.
-    * Next to the values you want to remove, select **x**.
+    - Enter and select the values you want to add.
+    - Next to the values you want to remove, select **x**.
 4. For **ALLOW INPUT ANY VALUE OTHER THAN PREDEFINED ONES**, do one of the following:
-    * To start accepting custom values for this attribute, select the checkbox.
-    * To stop accepting custom values for this attribute, clear the checkbox.    
+    - To start accepting custom values for this attribute, select the checkbox.
+    - To stop accepting custom values for this attribute, clear the checkbox.
 5. Select **Save**.
     This opens the **2. Translations** tab with a success message displayed.
 6. For the **ATTRIBUTE KEY** of each locale, enter a **TRANSLATION**.
 7. For **TRANSLATE PREDEFINED VALUES**, do one of the following:
-    * To add translations for attribute values, select the checkbox.
-    * To remove translations for attribute values, clear the checkbox.
+    - To add translations for attribute values, select the checkbox.
+    - To remove translations for attribute values, clear the checkbox.
 8. If you selected **TRANSLATE PREDEFINED VALUES**, for all the attribute values of each locale, enter a **TRANSLATION**.
 9. Click **Save**.
     This opens the **View Product Attribute** page with a success message displayed. Here you can see the updated attribute.

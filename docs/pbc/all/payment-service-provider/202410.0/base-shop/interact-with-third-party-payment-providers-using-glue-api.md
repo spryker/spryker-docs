@@ -29,12 +29,12 @@ To invoke third parties in the API payment process, proceed with the steps in th
 
 To implement third-party interactions, first create a new module or extend an existing one. Let us create one on the Project level. The module needs to interact with two layers of Spryker Commerce OS: `Glue` (API) and `Zed` (backend). Thus, you need to create the following folders for the `MyModule` module:
 
-* `src/Pyz/Glue/MyModule`
-* `src/Pyz/Zed/MyModule`
+- `src/Pyz/Glue/MyModule`
+- `src/Pyz/Zed/MyModule`
 
 The module needs to implement two plugins:
 
-* A plugin that maps the response of the `/checkout` API endpoint and fills it with the necessary attributes.
+- A plugin that maps the response of the `/checkout` API endpoint and fills it with the necessary attributes.
 
 {% info_block infoBox %}
 
@@ -42,7 +42,7 @@ The `redirectUrl` and `isExternalRedirect` attributes are auto-mapped out of the
 
 {% endinfo_block %}
 
-* A plugin to process the response of the payment service provider.
+- A plugin to process the response of the payment service provider.
 The overall interaction diagram between Glue API, the API Client, and the third party is as follows:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Glue+API/Tutorial+Interacting+with+Third+Party+Payment+Providers+via+Glue+API/multi-step-checkout-glue-infrastructure.png)
@@ -96,8 +96,8 @@ To process the data, we need to implement another plugin on the `Zed` layer. The
 
 The plugin must extend the `OrderPaymentUpdaterPluginInterface` and implement the following two functions:
 
-* `isAppplicable`: This function determines whether a specific payment is processed by the plugin. The function returns true if the payment must be processed; otherwise, it returns false.
-* `updateOrderPayment`: This function updates the payment data in the database.
+- `isAppplicable`: This function determines whether a specific payment is processed by the plugin. The function returns true if the payment must be processed; otherwise, it returns false.
+- `updateOrderPayment`: This function updates the payment data in the database.
 
 To help you understand which payments need to be processed, you can use the optional `paymentIdentifier` field in `POST` requests to the `/order-payments` endpoint. To make sure it's always present in a request, you may require the API client to set the field to a specific value to invoke your payment plugin. The value of the field can be retrieved using the `getPaymentIdentifier` helper function.
 

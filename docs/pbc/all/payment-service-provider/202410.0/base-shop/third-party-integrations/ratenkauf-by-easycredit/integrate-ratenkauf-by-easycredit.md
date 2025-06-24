@@ -27,7 +27,7 @@ This article provides step-by-step instruction on how to integrate ratenkauf by 
 To integrate Easycredit into a Spryker project, do the following:
 
 1. Update `CheckoutPageDependencyProvider` by adding a new payment subform and a payment method handler.
-To show the Easycredit payment method on the payment step, define `SubFormPlugin` and `StepHandlerPlugin`.   
+To show the Easycredit payment method on the payment step, define `SubFormPlugin` and `StepHandlerPlugin`.
 
 CheckoutPageDependencyProvider.php
 
@@ -97,7 +97,7 @@ public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
 ```
 
 2. The next dependency provider you should update is `OmsDependencyProvider`.
-To use commands and conditions for events in OMS,  define them.   
+To use commands and conditions for events in OMS,  define them.
 
 **OmsDependencyProvider**
 
@@ -111,7 +111,7 @@ $container->extend(self::CONDITION_PLUGINS, function (ConditionCollectionInterfa
 ```
 
 3. And one more dependency provider to be updated is `CheckoutDependencyProvider`.
-To send requests to Easycredit, you need the technical order identifier value. After adding this plugin, the order identifier will be saved to the database in table `spy_payment_easycredit_order_identifier`.   
+To send requests to Easycredit, you need the technical order identifier value. After adding this plugin, the order identifier will be saved to the database in table `spy_payment_easycredit_order_identifier`.
 
 **CheckoutDependencyProvider**
 
@@ -265,7 +265,7 @@ class StepFactory extends SprykerStepFactory
 ```
 
 3. Now you can extend the basic steps on the project level and can create your Easycredit step that will be called when a user takes Easycredit as `PaymentMethod`.
-Examples of steps implementations:   
+Examples of steps implementations:
 
 **EasycreditStep.php**
 
@@ -664,6 +664,7 @@ Payment step - `src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.tw
     {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
 </details>
 
 <a name="summary-step"></a>
@@ -840,6 +841,7 @@ Summary step - `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.tw
 	</div>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
 </details>
 <a name="pdp-page"></a>
 <details>
@@ -934,6 +936,7 @@ PDP page - `src/Pyz/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
 
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
 {% info_block infoBox "Note" %}
 
 You might want to configure the product detail page to add some validation and show the Easycredit badge in `src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-configurator/product-configurator.twig`
@@ -963,4 +966,5 @@ You might want to configure the product detail page to add some validation and s
     {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ...
 ```
+
 </details>

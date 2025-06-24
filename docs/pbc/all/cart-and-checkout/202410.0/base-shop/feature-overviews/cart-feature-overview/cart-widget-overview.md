@@ -17,12 +17,12 @@ The shopping cart is a part of the online shop where the record of the items a b
 For customers' convenience and ease of use, the shopping cart widget is placed in the very header of the webshop. When a customer puts the cursor on the **Carts** icon, a drop-down list with all their shopping carts is displayed.
 
 For each shopping cart, the following details are provided:
-* Shopping cart name
-* Number of items added to cart
-* Access level to a shopping cart (for more details, see [Shared Cart Feature Overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/shared-carts-feature-overview.html))
-* Price mode
-* Cart total
-* View all carts, which opens the **Shopping cart** menu in the customer account
-* Create a new cart, which adds a new list in the **Shopping cart** section
+- Shopping cart name
+- Number of items added to cart
+- Access level to a shopping cart (for more details, see [Shared Cart Feature Overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/shared-carts-feature-overview.html))
+- Price mode
+- Cart total
+- View all carts, which opens the **Shopping cart** menu in the customer account
+- Create a new cart, which adds a new list in the **Shopping cart** section
 
 ![Shopping Cart Widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shopping+Cart+Widget+Overview/shopping-cart-widget.png)

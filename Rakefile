@@ -108,6 +108,8 @@ commonOptions = {
     /www.centralbank.cy\/[\.\w\-\/\?]+/,
     /dev.mysql.com\/[\.\w\-\/\?]+/,        
     /jwt.io\/[\.\w\-\/\?]+/,
+    /contorion.de\/[\.\w\-\/\?]+/,
+    /www.contorion.de\/[\.\w\-\/\?]+/,
     /www.jwt.io\/[\.\w\-\/\?]+/,
     /auth0.com\/[\.\w\-\/\?]+/,    
     /www.facebook.com\/[\.\w\-\/\?]+/

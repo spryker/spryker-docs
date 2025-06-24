@@ -22,15 +22,15 @@ This endpoint allows you to manage items in the carts of registered users by add
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
-* [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
-* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
-* [Install the Product Bundles Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
-* [Install the Product Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html)
-* [Install the Configurable Bundle Glue API](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
-* [Install the Configurable Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
-* [Install the Configurable Bundle + Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html)
+- [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+- [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
+- [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
+- [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+- [Install the Product Bundles Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
+- [Install the Product Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html)
+- [Install the Configurable Bundle Glue API](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
+- [Install the Configurable Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
+- [Install the Configurable Bundle + Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html)
 
 
 
@@ -55,6 +55,7 @@ To add items to a cart, send the request:
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUE |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | <ul><li>items</li><li>product-measurement-units</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>concrete-products</li><li>product-options</li><li>bundle-items</li><li>bundled-items</li><li>abstract-products</li></ul>|
+
 {% info_block infoBox "Included resources" %}
 
 To retrieve all the product options of the item in a cart, include `concrete-products` and `product-options`.
@@ -65,6 +66,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 <summary>Request sample</summary>
 
 `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
+
 ```json
 {
     "data": {
@@ -76,6 +78,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
+
 </details>
 
 
@@ -99,6 +102,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
+
 </details>
 
 <details>
@@ -117,6 +121,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
+
 </details>
 
 <details>
@@ -135,6 +140,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
+
 </details>
 
 <details>
@@ -160,6 +166,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
+
 </details>
 
 <details>
@@ -186,6 +193,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
+
 </details>
 
 <details>
@@ -204,6 +212,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
+
 </details>
 
 <details>
@@ -222,6 +231,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
+
 </details>
 
 <details>
@@ -240,6 +250,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
+
 </details>
 
 <details>
@@ -258,6 +269,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
+
 </details>
 
 <details>
@@ -277,6 +289,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
+
 </details>
 
 
@@ -336,6 +349,7 @@ It is the responsibility of the API Client to track whether the selected items a
     }
 }
 ```
+
 </details>
 
 <details>
@@ -476,7 +490,8 @@ It is the responsibility of the API Client to track whether the selected items a
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -579,6 +594,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -722,6 +738,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -764,7 +781,8 @@ It is the responsibility of the API Client to track whether the selected items a
         }
     }
 }
-```    
+```
+
 </details>
 
 <details>
@@ -1042,7 +1060,8 @@ It is the responsibility of the API Client to track whether the selected items a
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -1282,6 +1301,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1372,6 +1392,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1597,6 +1618,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -2348,6 +2370,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -2396,6 +2419,7 @@ It is the responsibility of the API Client to track whether the selected items a
     }
 }
 ```
+
 </details>
 
 <details>
@@ -2437,6 +2461,7 @@ It is the responsibility of the API Client to track whether the selected items a
     }
 }
 ```
+
 </details>
 
 
@@ -2663,7 +2688,8 @@ Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1
         }
     ]
 }
-```    
+```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/items-response-attributes.md -->
@@ -2858,7 +2884,8 @@ Request sample:
         }
     ]
 }
-```    
+```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
@@ -2876,7 +2903,7 @@ To change quantity of configurable bundles in a registered user's cart, send the
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | A unique identifier of a cart.[ Create a cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | A unique identifier of a cart.[Create a cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 | ***{% raw %}{{{% endraw %}bundlegroupkey{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the Configurable Bundle Template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user's cart](#add-a-configurable-bundle-to-a-registered-users-cart). |
 
 ### Request
@@ -3173,7 +3200,8 @@ Request sample:
         }
     ]
 }
-```    
+```
+
 </details>
 
 For the attribute descriptions, see [Add a configurable bundle to a registered user's cart](#add-a-configurable-bundle-to-a-registered-users-cart)

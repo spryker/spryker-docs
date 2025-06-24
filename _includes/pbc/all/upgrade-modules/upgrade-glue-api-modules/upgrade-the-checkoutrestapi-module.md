@@ -46,6 +46,7 @@ This release is a part of the **Split delivery** concept migration. When you upg
 ```bash
 composer require spryker/checkout-rest-api: "^2.0.0" --update-with-dependencies
 ```
+
 2. Generate the transfer objects:
 
 ```bash

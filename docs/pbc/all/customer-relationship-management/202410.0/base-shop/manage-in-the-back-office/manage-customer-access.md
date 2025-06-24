@@ -29,11 +29,11 @@ Review the [reference information](#reference-information-manage-customer-access
 
 1. Go to **Customers&nbsp;<span aria-label="and then">></span> Customer Access**.
 2. On the **Customer Access** page, select or clear any of the following:
-    * **PRICE**
-    * **WISHLIST**
-    * **SHOPPING LIST**
-    * **CAN PLACE AN ORDER**
-    * **ADD TO CART**
+    - **PRICE**
+    - **WISHLIST**
+    - **SHOPPING LIST**
+    - **CAN PLACE AN ORDER**
+    - **ADD TO CART**
 3. Click **Save** to save the changes.
     This refreshes the page with a success message displayed.
 

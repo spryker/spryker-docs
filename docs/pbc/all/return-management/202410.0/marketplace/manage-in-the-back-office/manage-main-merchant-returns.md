@@ -26,7 +26,7 @@ Each section contains reference information. Make sure to review it before you s
 
 To view details about a return, in the **Actions** column of the return, click **View**.
 
-This takes you to the **Overview of Return: _[Return reference]_** page, where you can view the return details, set the return statuses, and [print the return slip](#printing-a-main-merchant-return-slip).
+This takes you to the **Overview of Return: *[Return reference]*** page, where you can view the return details, set the return statuses, and [print the return slip](#printing-a-main-merchant-return-slip).
 
 ## Setting the main merchant return states
 
@@ -34,8 +34,8 @@ To set and track the return statuses, you trigger the return states.
 
 To trigger the return states:
 
-1. On the **Returns** page, click **View** in the **Actions** column. This takes you to the **Return Overview _[Return reference]_**.
-2. In the **Trigger all matching state section** of the **Overview of Return: _[Return reference]_** page, click the necessary state. The return state changes, and the new states that you can trigger appear. For information about the return item states and the flow, see Main merchant return item states.
+1. On the **Returns** page, click **View** in the **Actions** column. This takes you to the **Return Overview *[Return reference]***.
+2. In the **Trigger all matching state section** of the **Overview of Return: *[Return reference]*** page, click the necessary state. The return state changes, and the new states that you can trigger appear. For information about the return item states and the flow, see Main merchant return item states.
 
 
 
@@ -77,12 +77,12 @@ All the return management options that you can invoke from the **Actions** colum
 
 | ACTION     | DESCRIPTION   |
 | --------- | ---------- |
-| View | Takes you to the **Overview of Return: _[Return reference]_** page. Here, you can find all the information about the chosen review. |
+| View | Takes you to the **Overview of Return: *[Return reference]*** page. Here, you can find all the information about the chosen review. |
 | Print Slip | Takes you to the print version of the return slip.           |
 
 #### Overview of Return: [Return Reference] page
 
-The following tables describe the attributes on the **Overview of Return: _[Return reference]_** page when you view a return.
+The following tables describe the attributes on the **Overview of Return: *[Return reference]*** page when you view a return.
 
 ##### Returned items section
 
@@ -123,7 +123,7 @@ The Total section displays the total amount of items to be returned.
 
 ##### Main merchant return item states
 
-You can trigger the following states for the returns on the **Overview of Return: _[Return reference]_** page:
+You can trigger the following states for the returns on the **Overview of Return: *[Return reference]*** page:
 
 
 | RETURN STATE   | DESCRIPTION             |
@@ -142,6 +142,6 @@ For all returns, irrespective of their statuses, you can print the automatically
 To print the return slip, take one of the following steps:
 
 - In the **Actions** column on the **My Returns** page, click **Print slip**.
-- On the **Overview of Return: _[Return reference]_** page, click **Print Return Slip**.
+- On the **Overview of Return: *[Return reference]*** page, click **Print Return Slip**.
 
 Any of these steps take you to the page with the print version of the return slip.

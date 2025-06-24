@@ -19,7 +19,7 @@ related:
 
 Implementing OMS processes can be challenging when they are complex, or requirements are not trivial. This can lead to hidden issues which are hard to debug. An example of such issues is race conditions.
 
-In some cases, OMS works incorrectly. In most cases, a *correct* flow can be run successfully, but the first run of a wrong path might reveal a problem. In other cases, there might be known limitations that can lead to incorrect transitions. There can also be cases that are valid but should be rewritten into a better readable process. If you discover more edge cases,  send those to our [support team](https://spryker.force.com/support/s/).
+In some cases, OMS works incorrectly. In most cases, a *correct* flow can be run successfully, but the first run of a wrong path might reveal a problem. In other cases, there might be known limitations that can lead to incorrect transitions. There can also be cases that are valid but should be rewritten into a better readable process. If you discover more edge cases,  send those to our [support team](https://support.spryker.com).
 
 This document describes the most common issues with OMS design and how you can fix them.
 
@@ -189,6 +189,7 @@ Running this code inside a DB transaction make the lock entries inaccessible. Th
 
 
 Regenerate cache:
+
 ```bash
 vendor/bin/console oms:process-cache:warm-up
 ```

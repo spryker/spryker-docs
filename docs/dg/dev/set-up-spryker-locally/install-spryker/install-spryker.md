@@ -30,10 +30,10 @@ To install Spryker with Docker locally, follow the steps.
 
 ## Install Docker prerequisites
 
-* [Install Docker prerequisites on MacOS](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html)
-* [Install Docker prerequisites on Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html)
-* [Install Docker prerequisites on Windows with WSL1](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html).
-* [Install Docker prerequisites on Windows with WSL2](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
+- [Install Docker prerequisites on MacOS](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html)
+- [Install Docker prerequisites on Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html)
+- [Install Docker prerequisites on Windows with WSL1](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html).
+- [Install Docker prerequisites on Windows with WSL2](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
 
 ## Install
 
@@ -41,16 +41,16 @@ There are several ways to install Spryker. For more details about them, see [Cho
 
 If you've already selected an installation mode, follow one of the guides below:
 
-* [Install in Development mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html)
-* [Install in Development mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-windows.html)
-* [Install in Demo mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
-* [Install in Demo mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html)
-* [Integrating Docker into existing projects](/docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html)
+- [Install in Development mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html)
+- [Install in Development mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-windows.html)
+- [Install in Demo mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
+- [Install in Demo mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html)
+- [Integrating Docker into existing projects](/docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html)
 
 ## Configure
 
 After installation, the instance can be customized further to meet your project requirements.
 The following documents detail these customizations:
 
-* [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
-* [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
+- [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
+- [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)

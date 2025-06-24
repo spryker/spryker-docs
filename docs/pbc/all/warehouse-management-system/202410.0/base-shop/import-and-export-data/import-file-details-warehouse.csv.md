@@ -46,13 +46,13 @@ data:import:stock
 ## Additional information
 
 
-* The `warehouse.csv` file replaces the `stock.csv` previously used.
+- The `warehouse.csv` file replaces the `stock.csv` previously used.
 
 
-* By default, `warehouse.csv` exists only in folder `…/vendor/spryker/stock-data-import/data/import/warehouse.csv`, but can be also be copied into `…/data/import` folder.
+- By default, `warehouse.csv` exists only in folder `…/vendor/spryker/stock-data-import/data/import/warehouse.csv`, but can be also be copied into `…/data/import` folder.
 
 ## Next steps
 
-* ["Import file details: warehouse_address.csv"](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse-address.csv.html)
-* ["Import file details: warehouse_store.csv"](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse-store.csv.html)
-* ["Import file details: product_stock.csv"](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-stock.csv.html)
+- ["Import file details: warehouse_address.csv"](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse-address.csv.html)
+- ["Import file details: warehouse_store.csv"](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse-store.csv.html)
+- ["Import file details: product_stock.csv"](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-stock.csv.html)

@@ -26,10 +26,10 @@ related:
 Klarna was founded in 2005 in Stockholm, Sweden with the aim of making it easier for people to shop online. In the last 12 years, technology has evolved, excited and transformed the world around us, yet our mission remains as relevant as ever, to make paying as simple, safe and above all, smooth as possible. Klarna is now one of Europe's largest banks and is providing payment solutions for 60 million consumers across 70,000 merchants in 18 countries. Klarna offers direct payments, pay after delivery options and installment plans in a smooth one-click purchase experience that lets consumers pay when and how they prefer to. When the company acquired SOFORT in 2014 the Klarna Group was formed.
 
 YOUR ADVANTAGES:
-* With Invoice:  With Installments increase of conversion rates and high acceptance rates  higher baskets and less cancellations easy and secure customer experience for shoppers  direct Direkter shipping thanks to real time-check offer germany´s most popular payment methods guaranteed payout to merchants .
-* Klarna is even cheaper than an inhouse solution.
-* Merchants never take over the risk and always receive their money.
-* Merchants never take over the risk and always receive their money.
+- With Invoice:  With Installments increase of conversion rates and high acceptance rates  higher baskets and less cancellations easy and secure customer experience for shoppers  direct Direkter shipping thanks to real time-check offer germany´s most popular payment methods guaranteed payout to merchants .
+- Klarna is even cheaper than an inhouse solution.
+- Merchants never take over the risk and always receive their money.
+- Merchants never take over the risk and always receive their money.
 
 ### Klarna Invoice
 
@@ -60,10 +60,10 @@ The [Klarna State Machine Commands and Conditions](klarna-state-machine.htm) tri
 
 ## Related Developer guides
 
-* [Klarna - Invoice Pay in 14 days](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/klarna/klarna-invoice-pay-in-14-days.html)
-* [Klarna - Part Payment Flexible](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/klarna/klarna-part-payment-flexible.html)
-* [Klarna payment workflow](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/klarna/klarna-payment-workflow.html)
-* [Klarna state machine commands and conditions](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html)
+- [Klarna - Invoice Pay in 14 days](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/klarna/klarna-invoice-pay-in-14-days.html)
+- [Klarna - Part Payment Flexible](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/klarna/klarna-part-payment-flexible.html)
+- [Klarna payment workflow](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/klarna/klarna-payment-workflow.html)
+- [Klarna state machine commands and conditions](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html)
 
 ---
 

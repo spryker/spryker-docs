@@ -365,6 +365,7 @@ Configure payment `config/Zed/oms/{your_payment_oms}.xml`as in the following exa
 ```
 
 #### Configure the Oms dependency provider
+
 Add the config to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
 
 ```php
@@ -423,4 +424,5 @@ The refund functionality will only work if the OMS event is called `refund`.
 
 
 ## Next step
+
 [Integrate the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html)

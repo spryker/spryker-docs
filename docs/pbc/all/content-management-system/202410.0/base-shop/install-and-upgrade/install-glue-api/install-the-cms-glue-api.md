@@ -16,9 +16,9 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html
 ---  
 related:
-  - title: Install the CMS feature
+- title: Install the CMS feature
     link: docs/scos/dev/feature-integration-guides/page.version/cms-feature-integration.html
-  - title: "Glue API: Retrieve CMS pages"
+- title: "Glue API: Retrieve CMS pages"
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-cms-pages.html
 ---
 

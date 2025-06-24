@@ -733,7 +733,8 @@ $config[AclConstants::ACL_DEFAULT_RULES][] = [
 1. Append glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
-```
+
+```csv
 mail.merchant.restore_password.subject,Neues Passwort für Ihren Spryker Merchant Portal Account,de_DE
 mail.merchant.restore_password.subject,New password for your Spryker Merchant Portal account,en_US
 mail.merchant.restore_password.text,"""Es wurde ein neues Passwort für Ihren Spryker Merchant Portal Account angefordert. Wenn Sie nicht um um eine Neueinrichtung des Passworts gebeten haben, ignorieren Sie bitte diese Email. Klicken Sie auf den folgedenen Link, um Ihr Passwort zu ändern:""",de_DE
@@ -1005,9 +1006,9 @@ wget -O tsconfig.json https://raw.githubusercontent.com/spryker-shop/suite/maste
 ```
 
 3. In `tslint.json`, add the following paths to exclude:
-  * `src/Pyz/Zed/*/Presentation/Components/**`
-  * `vendor/**`
-  * `**/node_modules/**`
+- `src/Pyz/Zed/*/Presentation/Components/**`
+- `vendor/**`
+- `**/node_modules/**`
 
 4. Add the `.eslintrc.mp.json` file:
 
@@ -1030,6 +1031,7 @@ npm i -D @angular-builders/custom-webpack@~15.0.0 @angular-devkit/build-angular@
 7. Update `package.json`:
 
 **package.json**
+
 ```json
 {
     "workspaces": [
@@ -1058,6 +1060,7 @@ npm i -D @angular-builders/custom-webpack@~15.0.0 @angular-devkit/build-angular@
 8. For Yves in `frontend/settings.js`, update the `globalSettings.paths` object to point to the updated `tsconfig`:
 
 **frontend/settings.js**
+
 ```js
 const globalSettings = {
     ...
@@ -1089,8 +1092,8 @@ npm install
 
 {% info_block infoBox "Troubleshooting" %}
 
-* Error: `Missing write access to node_modules/mp-profile`
-* Solution: Delete the `node_modules/mp-profile` file and create a *folder* with the same name.
+- Error: `Missing write access to node_modules/mp-profile`
+- Solution: Delete the `node_modules/mp-profile` file and create a *folder* with the same name.
 
 {% endinfo_block %}
 
@@ -1334,6 +1337,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 3. Add the Merchant Portal build commands:
 
 - build-static-production:
+
 ```yaml
 merchant-portal-build-frontend:
     command: 'vendor/bin/console frontend:mp:build -e production'
@@ -1341,6 +1345,7 @@ merchant-portal-build-frontend:
 ```
 
 - build-static-development:
+
 ```yaml
 merchant-portal-build-frontend:
     command: 'vendor/bin/console frontend:mp:build'
@@ -1714,16 +1719,16 @@ To adjust environment infrastructure, take the following steps.
 
 ### 1) Set up a docker container for the Merchant Portal
 
-* `MerchantPortal` *must be* placed into its own private subnet and *must have* access to the following:
+- `MerchantPortal` *must be* placed into its own private subnet and *must have* access to the following:
   - Primary database
   - Message broker
 
-* `MerchantPortal` *must not have* access to the following:
+- `MerchantPortal` *must not have* access to the following:
   - Search and Storage
   - Gateway
   - Scheduler
 
-* To set up a docker container, update the needed deploy file. Example:
+- To set up a docker container, update the needed deploy file. Example:
 
 <details>
   <summary>deploy.dev.yml</summary>
@@ -1774,8 +1779,8 @@ groups:
 
 ### 2) Create a database user for the Merchant Portal
 
-* Grant only default CRUD operations: `INSERT`, `DELETE`, `UPDATE`, and `SELECT`.
-* Don't grant `ALL PRIVILEGES`, `GRANT OPTION`, `DROP`, `CREATE`, and other admin-related grants.
+- Grant only default CRUD operations: `INSERT`, `DELETE`, `UPDATE`, and `SELECT`.
+- Don't grant `ALL PRIVILEGES`, `GRANT OPTION`, `DROP`, `CREATE`, and other admin-related grants.
 
 Create a user for a MySQL database:
 
@@ -1790,6 +1795,7 @@ FLUSH PRIVILEGES;
 1. Add Nginx configuration. Example:
 
 **/etc/nginx/merchant-portal.conf**
+
 ```text
 server {
     # { Your virtual host settings }
@@ -1850,11 +1856,11 @@ $config[PropelConstants::ZED_DB_PASSWORD] = getenv('SPRYKER_DB_PASSWORD');
 
 {% info_block warningBox "Verification" %}
 
-* The Merchant Portal login page is available at `https://your-merchant-portal.domain/security-merchant-portal-gui/login`.
+- The Merchant Portal login page is available at `https://your-merchant-portal.domain/security-merchant-portal-gui/login`.
 
-* The following pages *are not* available:
-  * `https://your-merchant-portal.domain/security-gui/login`
-  * `https://your-merchant-portal.domain/`.
+- The following pages *are not* available:
+  - `https://your-merchant-portal.domain/security-gui/login`
+  - `https://your-merchant-portal.domain/`.
 
 {% endinfo_block %}
 

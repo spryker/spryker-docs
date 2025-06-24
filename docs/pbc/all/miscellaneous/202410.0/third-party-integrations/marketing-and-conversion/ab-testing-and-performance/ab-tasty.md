@@ -19,13 +19,13 @@ AB Tasty is a complete tool for website and conversion rate optimization, person
 
 YOUR ADVANTAGES:
 
-* All-in-one solution: strong tool and many years of experience
-* Support and consulting by experienced conversion experts
-* Efficient and easy-to-use visual editor
-* Strong targeting and segmentation model
-* Extensive and intuitive reporting
-* Extensive and intuitive reporting
-* Company with a reliable infrastructure
+- All-in-one solution: strong tool and many years of experience
+- Support and consulting by experienced conversion experts
+- Efficient and easy-to-use visual editor
+- Strong targeting and segmentation model
+- Extensive and intuitive reporting
+- Extensive and intuitive reporting
+- Company with a reliable infrastructure
 
 ---
 

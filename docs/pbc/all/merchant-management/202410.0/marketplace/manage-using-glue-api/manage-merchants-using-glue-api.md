@@ -8,6 +8,6 @@ redirect_from:
 ---
 
 This section provides a collection of articles that explain the Merchant Glue API endpoints used when developing in Spryker Marketplace:
-* [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html)
-* [Retrieving merchant addresses](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html)
-* [Retrieving merchant opening hours](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-opening-hours.html)
+- [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html)
+- [Retrieving merchant addresses](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html)
+- [Retrieving merchant opening hours](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-opening-hours.html)

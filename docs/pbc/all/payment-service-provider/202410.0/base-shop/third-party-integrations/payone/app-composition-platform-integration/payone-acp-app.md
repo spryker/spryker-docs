@@ -21,14 +21,14 @@ You can have multiple accounts with Payone. For example, you can have different 
 
 The Payone App supports the B2B and B2C business models and the following payment methods:
 
-* Credit Card
-* PayPal Standard
-* PayPal Express
-* Klarna:
-  * Invoice: pay later
-  * Installments: slice it
-  * Direct Debit: pay now
-* Prepayment
+- Credit Card
+- PayPal Standard
+- PayPal Express
+- Klarna:
+  - Invoice: pay later
+  - Installments: slice it
+  - Direct Debit: pay now
+- Prepayment
 
 ## Payment methods explained
 
@@ -52,9 +52,9 @@ When using PayOne's hosted payment page, customers might use their browser's bac
 
 ## Payment method flows
 
-* [Credit Card](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-credit-card-payment-flow.html)
-* [PayPal](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-payment-flow.html)
-* [PayPal Express](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-express-payment-flow-in-headless-applications.html)
+- [Credit Card](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-credit-card-payment-flow.html)
+- [PayPal](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-payment-flow.html)
+- [PayPal Express](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-express-payment-flow-in-headless-applications.html)
 
 
 ## Current limitations

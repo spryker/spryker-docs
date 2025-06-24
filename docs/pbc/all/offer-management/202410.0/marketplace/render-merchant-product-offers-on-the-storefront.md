@@ -27,6 +27,7 @@ Widget code: {% widget 'MerchantProductOfferWidget' args [data.product] only %}{
 {% endraw %}
 
 ```
+
 ## Rendering product offers on the cart page
 
 To render the MerchantProductOfferWidget module to the *Cart* page, add it to the `product-cart-item.twig` molecule at the vendor level:
@@ -36,6 +37,7 @@ To render the MerchantProductOfferWidget module to the *Cart* page, add it to th
 Widget code: {% widget 'ProductOfferSoldByMerchantWidget' args [data.product] only %}{% endwidget %}
 {% endraw %}
 ```
+
 ## Rendering product offers on the checkout pages
 
 To render the MerchantProductOfferWidget module on the checkout pages, change the *summary-item* molecule at the summary (`/vendor/spryker/spryker-shop/Bundles/CheckoutPage/src/SprykerShop/Yves/CheckoutPage/Theme/default/views/summary/summary.twig`) and shipment (`/vendor/spryker/spryker-shop/Bundles/CheckoutPage/src/SprykerShop/Yves/CheckoutPage/Theme/default/views/shipment/shipment.twig`) steps to the *summery-note* molecule with the new data parameters:

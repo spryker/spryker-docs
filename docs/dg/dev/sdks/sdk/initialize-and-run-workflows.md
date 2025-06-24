@@ -19,6 +19,7 @@ If the project was initialized, it's limited to the workflows specified during i
 Add a workflow to an initialized project:
 
 **{PROJECT_FOLDER}/.ssdk/settings**
+
 ```yaml
 # {projectDir}/.ssdk/settings
 project_key: e9abab71-59f3-e9ff-468c-7a6d28e10724
@@ -38,16 +39,19 @@ Two identical top-level workflows can't run inside the same project.
 ## Workflow commands
 
 - List all available workflows:
+
 ```bash
 spryker-sdk sdk:workflow:list
 ```
 
 - Generate an SVG image for a specific workflow:
+
 ```bash
 spryker-sdk sdk:workflow:show {workflowName}
 ```
 
 - Initialize project settings with a workflow:
+
 ```bash
 spryker-sdk sdk:init:project --workflow={workflowName} --workflow={workflowName}
 ```
@@ -59,6 +63,7 @@ If you initialize workflows for a project, you can use only these workflows.
 {% endinfo_block %}
 
 - Run the workflow process:
+
 ```bash
 spryker-sdk sdk:workflow:run {workflowName}
 ```
@@ -138,4 +143,5 @@ framework:
           from: start
           to: done
 ```
+
 </details>

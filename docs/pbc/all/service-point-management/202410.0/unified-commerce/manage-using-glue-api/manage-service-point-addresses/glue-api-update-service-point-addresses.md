@@ -31,6 +31,7 @@ This endpoint lets you update service point addresses.
 | Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
 Request sample: `PATCH https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e/service-point-addresses/74768ee9-e7dd-5e3c-bafd-b654e7946c54`
+
 ```json
 {
     "data": {
@@ -52,6 +53,7 @@ Request sample: `PATCH https://glue-backend.mysprykershop.com/service-points/262
 ### Response
 
 Response sample:
+
 ```json
 {
     "data": {
@@ -82,6 +84,6 @@ Response sample:
 | --- | --- |
 | 5403 | The service point with the specified ID doesn't exist. |
 | 5400 | The service point address with the specified ID doesn't exist. |
-| 5415 | Zip code value is length from 4 to 15 characters
+| 5415 | Zip code value is length from 4 to 15 characters. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).

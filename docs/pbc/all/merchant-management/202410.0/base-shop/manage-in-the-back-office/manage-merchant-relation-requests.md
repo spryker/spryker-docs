@@ -9,7 +9,7 @@ A Back Office user can view, edit, approve, and reject merchant relation request
 
 Once a company user creates a merchant relation request, it appears in *B2B Contracts -> Merchant Relation Requests*.
 
-![merchant-relation-requests-in-back-office]https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/manage-in-the-back-office/manage-merchant-relation-requests/merchant-relation-requests-in-back-office.png)
+![merchant-relation-requests-in-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/manage-in-the-back-office/manage-merchant-relation-requests/merchant-relation-requests-in-back-office.png)
 
 To approve or reject a merchant relation request, do the following:
 

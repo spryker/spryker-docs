@@ -267,9 +267,9 @@ interface MyWidgetPluginInterface extends WidgetPluginInterface
 
 In the target widget module (MyWidget in the examples), you can implement the widget plugin. Extend your plugin from `\Spryker\Yves\Kernel\Widget\AbstractWidgetPlugin` and implement the following methods:
 
-* `getName()` - returns the name of the widget as it's used in the template. Most cases you can return `static::NAME;` in the method when the name is defined in the interface.
-* `getTemplate()` - returns the template file path to renter the widget.
-* `initialize()` - initializes the rendering of the widget template, by processing the input parameters and providing parameters for the template to be rendered. Also, sub-widgets can be registered here.
+- `getName()` - returns the name of the widget as it's used in the template. Most cases you can return `static::NAME;` in the method when the name is defined in the interface.
+- `getTemplate()` - returns the template file path to renter the widget.
+- `initialize()` - initializes the rendering of the widget template, by processing the input parameters and providing parameters for the template to be rendered. Also, sub-widgets can be registered here.
 
 {% info_block infoBox "Info" %}
 
@@ -344,9 +344,9 @@ In the widget template, the parameters are accessible through the `_widget` twig
 
 There are three ways of activating a widget, depending on their scope where they need to be rendered:
 
-* [Activate a widget in a Controller action](#activate-a-widget-in-a-controller-action)
-* [Activate a widget in another widget](#activate-a-widget-in-another-widget)
-* [Activate a widget to be available globally](#activate-a-widget-to-be-available-globally)
+- [Activate a widget in a Controller action](#activate-a-widget-in-a-controller-action)
+- [Activate a widget in another widget](#activate-a-widget-in-another-widget)
+- [Activate a widget to be available globally](#activate-a-widget-to-be-available-globally)
 
 ### Activate a widget in a controller action
 
@@ -484,6 +484,7 @@ class ProductSetDetailPageDependencyProvider extends AbstractBundleDependencyPro
 	}
 }
 ```
+
 {% endinfo_block %}
 
 ### Activate a widget in another widget

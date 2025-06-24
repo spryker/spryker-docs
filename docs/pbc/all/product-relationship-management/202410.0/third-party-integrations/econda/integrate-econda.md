@@ -70,7 +70,8 @@ CopyWebpackPlugin([
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
- ## Econda Cross Sell Integration
+## Econda Cross Sell Integration
+
 Extend `ProductController` on the project level.
 
 **ProductController**

@@ -14,13 +14,13 @@ This topic describes how to create category CMS blocks in the Back Office.
 
 ## Prerequisites
 
-* [Install category CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-category-cms-blocks.html).
+- [Install category CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-category-cms-blocks.html).
 
-* Create the categories whose pages you want to show the block on. For instructions, see [Create categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html).
+- Create the categories whose pages you want to show the block on. For instructions, see [Create categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html).
 
-* Create the abstract products you want to show in the block. For instructions, see [Create abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
+- Create the abstract products you want to show in the block. For instructions, see [Create abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 
-* Review the [reference information](#reference-information-create-category-cms-blocks) before you start, or look up the necessary information as you go through the process.
+- Review the [reference information](#reference-information-create-category-cms-blocks) before you start, or look up the necessary information as you go through the process.
 
 ## Create a category CMS block
 

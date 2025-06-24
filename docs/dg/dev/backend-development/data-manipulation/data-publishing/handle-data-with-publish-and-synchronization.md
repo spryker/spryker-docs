@@ -29,16 +29,16 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-_Publish and Synchronization_ (P&S) lets you export data from Spryker backend (Zed) to external endpoints. The default external endpoints are Redis and Elasticsearch. The endpoints are usually used by the frontend (Yves) or API (Glue).
+*Publish and Synchronization* (P&S) lets you export data from Spryker backend (Zed) to external endpoints. The default external endpoints are Redis and Elasticsearch. The endpoints are usually used by the frontend (Yves) or API (Glue).
 
 This document shows how P&S works and how to export data using a HelloWorld P&S module example. The module synchronizes the data stored in a Zed database table to Redis. When a record is changed, created, or deleted in the table, the module automatically makes changes in Redis.
 
 ## 1. Module and table
 
 Follow these steps to create the following:
-* Data source module
-* Zed database table
-* Data publishing module
+- Data source module
+- Zed database table
+- Data publishing module
 
 1. Create the `HelloWorld` module by creating the `HelloWorld` folder in Zed. The module is the source of data for publishing.
 
@@ -59,6 +59,7 @@ Follow these steps to create the following:
     {% endraw %}
 
     ```
+
     2. Based on the schema, create the table in the database:
 
     ```bash
@@ -81,7 +82,7 @@ The data for Yves is structured differently than the data for Zed. It's because 
 
 Follow these steps to create a transfer object that represents the target data structure of the frontend.
 
-1.  Create `\Pyz\Shared\HelloWorldStorage\Transfer\hello_world_storage.transfer.xml`:
+1. Create `\Pyz\Shared\HelloWorldStorage\Transfer\hello_world_storage.transfer.xml`:
 
 ```xml
 {% raw %}
@@ -99,6 +100,7 @@ console transfer:generate
 ```
 
 ## 3. Publish events
+
 To publish changes in the Zed database table automatically, you need to enable an event for each particular change. This example monitors the events of `SpyHelloWorldMessage`.
 
 To enable events, follow the steps:
@@ -119,7 +121,7 @@ To enable events, follow the steps:
 
 {% info_block infoBox "Info" %}
 
-To track changes in all the table columns, the _*_ (asterisk) for the `column` attribute is used. To track changes in particular columns, specify their names instead.
+To track changes in all the table columns, the *** (asterisk) for the `column` attribute is used. To track changes in particular columns, specify their names instead.
 
 {% endinfo_block %}
 
@@ -220,6 +222,7 @@ class HelloWorldWritePublisherPlugin extends AbstractPlugin implements Publisher
     }
 }
 ```
+
 </details>
 
 2. Create a plugin that handles the deletion of the `spy_hello_world_message` entity.
@@ -410,13 +413,14 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+
 </details>
 
 ## 5. Usage
 
 Now, you can manually trigger events. For this, do the following:
 
-1.  Stop all cron jobs or disable background queue processing in Jenkins:
+1. Stop all cron jobs or disable background queue processing in Jenkins:
 
 ```bash
 vendor/bin/console scheduler:suspend
@@ -482,12 +486,12 @@ Ensure that the triggered event has the correct structure:
 
 2. Verify the data required for the publisher to process it:
 
-* Event name: `Entity.spy_hello_spryker_message.create`
-* Listener: `HelloWorldWritePublisherPlugin`
-* Table name: `spy_hello_spryker_message`
-* Modified columns: `spy_hello_spryker_message.name` and `spy_hello_spryker_message.message`
-* ID: the primary key of the record
-* ForeignKey: the key to backtrack the updated Propel entities
+- Event name: `Entity.spy_hello_spryker_message.create`
+- Listener: `HelloWorldWritePublisherPlugin`
+- Table name: `spy_hello_spryker_message`
+- Modified columns: `spy_hello_spryker_message.name` and `spy_hello_spryker_message.message`
+- ID: the primary key of the record
+- ForeignKey: the key to backtrack the updated Propel entities
 
 {% endinfo_block %}
 
@@ -527,7 +531,7 @@ console queue:task:start publish.hello_world
 
 The command is executed by the worker, which is defined as a job in Jenkins:
 
-```
+```bash
 {vagrant@spryker-vagrant ➜  current git:(master) ✗  console queue:task:start publish.hello_world
 Store: DE | Environment: development
 Hello World Writer!
@@ -588,14 +592,14 @@ The schema file defines the table as follows:
 
 - `ID` is a primary key of the table (`id_hello_world_message_storage` in the example).
 - `ForeignKey` is a foreign key to the main resource that you want to export (`fk_hello_world_message` for `spy_hello_world_message`).
--  `SynchronizationBehaviour` modifies the table as follows:
-    - Adds the `Data` column that stores data in the format that can be sent directly to Redis. The database field type is `TEXT`.
-    - Adds the `Key` column that stores the Redis Key. The data type is `VARCHAR`.
-    - Defines `Resource` name for key generation.
-    - Defines `Store` value for store-specific data.
-    - Defines `Locale` value for localizable data.
-    - Defines `Key Suffix Column` value for key generation.
-    - Defines `queue_group` to send a copy of the `data` column.
+- `SynchronizationBehaviour` modifies the table as follows:
+  - Adds the `Data` column that stores data in the format that can be sent directly to Redis. The database field type is `TEXT`.
+  - Adds the `Key` column that stores the Redis Key. The data type is `VARCHAR`.
+  - Defines `Resource` name for key generation.
+  - Defines `Store` value for store-specific data.
+  - Defines `Locale` value for localizable data.
+  - Defines `Key Suffix Column` value for key generation.
+  - Defines `queue_group` to send a copy of the `data` column.
 - Timestamp behavior is added to keep timestamps and use an incremental sync strategy.
 
 {% info_block infoBox "Incremental sync" %}
@@ -919,6 +923,7 @@ class HelloWorldDeletePublisherPlugin extends AbstractPlugin implements Publishe
 
 }      
 ```
+
 ## 8. Queue
 
 This section describes how to create the queue to synchronize data to Redis.
@@ -1016,7 +1021,7 @@ Ensure that a new event is created in the `publish.hello_world` queue.
 
 5. To start processing the messages from the *Publisher* queue that have been published, run the queue:
 
-```
+```bash
 {vagrant@spryker-vagrant ➜  current git:(master) ✗  console queue:task:start publish.hello_world
 Store: DE | Environment: development
 ```
@@ -1067,7 +1072,7 @@ This section describes how to check the data synchronization in Redis.
 
 Follow the steps to check the data in Redis:
 1. Connect to Redis Desktop Manager at `http(s)://{host}:10009`.
-2. Check if the data is structured correctly:   
+2. Check if the data is structured correctly:
 ![data-structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/data-structure.jpeg)
 
 ## 10. Client
@@ -1274,6 +1279,7 @@ interface MessageStorageReaderInterface
     public function getMessageById(int $idMessage): HelloWorldStorageTransfer;
 }
 ```
+
 8. Add the `Pyz\Client\HelloWorldStorage\Reader\MessageStorageReader.php` class.
 
 ```php
@@ -1356,14 +1362,10 @@ class MessageStorageReader implements MessageStorageReaderInterface
 
 Update the routes for the Back Office using the following command:
 
-```
+```bash
 docker/sdk console router:cache:warm-up:backoffice
 ```
 
 You should now have another endpoint to get a message from the Redis storage via the newly created HelloWorldClient.
 
-Check the redis-commander to get ID of the message object that actually exists. Then access the message via the following endpoint:
-
-```
-http://[YOUR_BACKOFFICE_URL]/hello-world/index/search?id=[ID_IN_REDIS]
-```
+Check the redis-commander to get ID of the message object that actually exists. Then access the message via the following endpoint: `http://[YOUR_BACKOFFICE_URL]/hello-world/index/search?id=[ID_IN_REDIS]`

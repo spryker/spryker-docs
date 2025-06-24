@@ -38,16 +38,16 @@ This topic describes how to assign and deassign filters from categories in the B
 6. Click **Save**.
     This refreshes the page with a success message displayed. In the **CATEGORY TREE** pane, the category you've added the filters to has an *edited* icon next to it.
 
-![Assign and deassign filters from categories](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/category-filters/assign-and-deassign-filters-from-categories.md/assign-and-deassign-filters-from-categories.png)    
+![Assign and deassign filters from categories](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/category-filters/assign-and-deassign-filters-from-categories.md/assign-and-deassign-filters-from-categories.png)
 
 ## Deassign filters from categories
 
 1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Category Filters**.
 2. In the **CATEGORY TREE** pane, select the category you want to deassign filters from.
-    This displays the **CATEGORY FILTERS FOR {Category name}** pane.    
+    This displays the **CATEGORY FILTERS FOR {Category name}** pane.
 3. Deassign filters via one of the following ways:
-    * Deassign all filters by clicking **Remove all**.
-    * Next to the filters you want to deassign, click *Remove* <span class="inline-img">![category filter remove icon](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/category-filters/assign-and-deassign-filters-from-categories.md/category-filter-remove-icon.png)</span>.
+    - Deassign all filters by clicking **Remove all**.
+    - Next to the filters you want to deassign, click *Remove* <span class="inline-img">![category filter remove icon](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/category-filters/assign-and-deassign-filters-from-categories.md/category-filter-remove-icon.png)</span>.
     This moves the filters to the **INACTIVE FILTERS** section.
 
 <figure class="video_container">
@@ -58,8 +58,8 @@ This topic describes how to assign and deassign filters from categories in the B
 
 
 
-4. Click **Save**.    
-    This refreshes the page with a success message displayed.    
+4. Click **Save**.
+    This refreshes the page with a success message displayed.
 
 
 **Tips and tricks**

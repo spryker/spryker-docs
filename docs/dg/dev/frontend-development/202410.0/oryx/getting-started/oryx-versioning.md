@@ -40,7 +40,7 @@ The libraries are released as [packages](https://www.npmjs.com/org/spryker-oryx)
 
 The Oryx labs consist of experimental or demo functionality. Its version is tied to the current version of the libraries and is never considered stable. Therefore, the labs version number consists of three parts:
 
-```
+```text
 0.{libraries-version}.{patch}
 ```
 
@@ -49,7 +49,8 @@ For example, if the current libraries version is `1.5.2`, the version of the lab
 ## Upgrading Oryx
 
 To perform a minor or patch update of the Oryx framework, you need to update every Oryx-related package you are using to the latest version of the same major version. For example, if you want to update Oryx from version `1.2` to `1.3`, you should update all Oryx-related packages to version `1.3` using a command similar to the following:
-```
+
+```bash
 npm i @spryker-oryx/{package-name}@1.3
 ```
 
@@ -83,7 +84,7 @@ The `ORYX_FEATURE_VERSION` environment variable is used to opt into new function
 
 The following example shows how you can define a specific version:
 
-```
+```text
 ORYX_FEATURE_VERSION=1.1
 ```
 

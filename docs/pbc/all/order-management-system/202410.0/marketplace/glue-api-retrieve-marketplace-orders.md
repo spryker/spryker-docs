@@ -198,6 +198,7 @@ To retrieve a list of all orders made by a registered customer, send the request
     }
 }
 ```
+
 </details>
 
 <details>
@@ -507,6 +508,7 @@ To retrieve a list of all orders made by a registered customer, send the request
     ]
 }
 ```
+
 </details>
 
 {% include /pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->
@@ -1311,6 +1313,7 @@ To retrieve detailed information about an order, send the request:
     ]
 }
 ```
+
 </details>
 
 {% include /pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->

@@ -12,14 +12,14 @@ related:
     link: docs/pbc/all/multi-factor-authentication/page.version/install-customer-email-multi-factor-authentication-method.html
 ---
 
-This document describes how to create and implement Multi-Factor Authentication (MFA) methods. 
+This document describes how to create and implement Multi-Factor Authentication (MFA) methods.
 
 To lean more about MFA methods, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html).
 
 An MFA method consists of two components:
 
-* MFA type plugin
-* Code Sender Strategy plugin
+- MFA type plugin
+- Code Sender Strategy plugin
 
 ## Prerequisites
 
@@ -29,8 +29,8 @@ An MFA method consists of two components:
  
 Create one of the following plugins: 
  
-* Yves: Implements `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface` and calls a client method
-* Zed: Resides in the Zed layer, implements `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface`, and delegates the logic through the Facade
+- Yves: Implements `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface` and calls a client method
+- Zed: Resides in the Zed layer, implements `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface`, and delegates the logic through the Facade
 
 <details>
 <summary>Pyz\Yves\MultiFactorAuth\Plugin\Factors\YourMultiFactorAuthType\YourMfaTypePlugin.php</summary>

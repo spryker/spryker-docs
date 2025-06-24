@@ -41,7 +41,7 @@ For more information on using the composer replace, see [replace](https://getcom
 
 ## Composer configuration information
 
-```
+```json
 {
      "name": "<vendor>/ replace_<the name of the module you are replacing> ",
      "replace": {

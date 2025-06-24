@@ -37,21 +37,21 @@ Customer-owned variables are created and managed by you or implementation partne
 
 The following customer-owned variables can be updated only with the help of Spryker Cloud or support teams:
 
-* /{project}/{environment}/secret/scheduler/limited/{variable_name}
+- /{project}/{environment}/secret/scheduler/limited/{variable_name}
 
-* /{project}/{environment}/secret/pipeline/limited/{variable_name}
+- /{project}/{environment}/secret/pipeline/limited/{variable_name}
 
-* /{project}/{environment}/secret/common/limited/{variable_name}
+- /{project}/{environment}/secret/common/limited/{variable_name}
 
-* /{project}/{environment}/secret/app/limited/{variable_name}
+- /{project}/{environment}/secret/app/limited/{variable_name}
 
-* /{project}/{environment}/config/scheduler/limited/{variable_name}
+- /{project}/{environment}/config/scheduler/limited/{variable_name}
 
-* /{project}/{environment}/config/pipeline/limited/{variable_name}
+- /{project}/{environment}/config/pipeline/limited/{variable_name}
 
-* /{project}/{environment}/config/common/limited/{variable_name}
+- /{project}/{environment}/config/common/limited/{variable_name}
 
-* /{project}/{environment}/config/app/limited/{variable_name}
+- /{project}/{environment}/config/app/limited/{variable_name}
 
 
 ## Naming convention for variables
@@ -60,68 +60,68 @@ Variables must follow this naming convention: `/{project}/{environment}/{type}/{
 
 Placeholder description:
 
-* `type`: defines the type of a variable. Possible values:
-    * `config`: parameter
-    * `secret`: secret
+- `type`: defines the type of a variable. Possible values:
+  - `config`: parameter
+  - `secret`: secret
 
-* `bucket`: defines what services a variable is used for. Possible values:
-    * `common`: used by all the buckets.
-    * `app`: used only by application services.
-    * `scheduler`: used by the scheduler.
+- `bucket`: defines what services a variable is used for. Possible values:
+  - `common`: used by all the buckets.
+  - `app`: used only by application services.
+  - `scheduler`: used by the scheduler.
 
-* `grant`: Defines access permissions to variables. Possible values:
-    * `public`: readable and writable
-    * `limited`: readable
+- `grant`: Defines access permissions to variables. Possible values:
+  - `public`: readable and writable
+  - `limited`: readable
 
 Path examples:
 
-* /fashion_club_store/staging/config/common/limited/composer_pass
+- /fashion_club_store/staging/config/common/limited/composer_pass
 
-* /deans_jeans/prod/config/app/public/mail_host
+- /deans_jeans/prod/config/app/public/mail_host
 
 ### Reserved variables
 
 Reserved variables are reserved in Spryker for dedicated functions. These names can't be used to create more variables. If you're already using reserved variables in your code, you need to change their names to avoid any service issues.
 
 Reserved variables:
-* `SPRYKER_*`: Every variable name with this prefix
-* `ALLOWED_IP`
-* `BLACKFIRE_AGENT_SOCKET`
-* `BLACKFIRE_SERVER_ID`
-* `BLACKFIRE_SERVER_TOKEN`
-* `DATA_IMPORT_S3_BUCKET`
-* `DATA_IMPORT_S3_KEY`
-* `DATA_IMPORT_S3_SECRET`
-* `DUMMY_INIT`
-* `ENABLE_NRI_ECS`
-* `JAVA_OPTS`
-* `JENKINS_URL`
-* `NEWRELIC_APPNAME`
-* `NEWRELIC_ENABLED`
-* `NEWRELIC_LICENSE`
-* `NRIA_CUSTOM_ATTRIBUTES`
-* `NRIA_LICENSE_KEY`
-* `NRIA_OVERRIDE_HOST_ROOT`
-* `NRIA_PASSTHROUGH_ENVIRONMENT`
-* `NRIA_VERBOSE`
-* `ONEAGENT_INSTALLER_DOWNLOAD_TOKEN`
-* `ONEAGENT_INSTALLER_SCRIPT_URL`
-* `RABBITMQ_DEFAULT_PASS`
-* `RABBITMQ_DEFAULT_USER`
-* `RABBITMQ_DEFAULT_VHOST`
-* `RABBITMQ_ENDPOINT`
-* `RABBITMQ_EXCHANGE_REGEXES`
-* `RABBITMQ_INTEGRATIONS_INTERVAL`
-* `RABBITMQ_NODENAME`
-* `RABBITMQ_PASSWORD`
-* `RABBITMQ_PORT`
-* `RABBITMQ_QUEUES_REGEXES`
-* `RABBITMQ_USE_SSL`
-* `RABBITMQ_USERNAME`
-* `TIDEWAYS_APIKEY`
-* `TIDEWAYS_CLI_ENABLED`
-* `TIDEWAYS_DAEMON_URI`
-* `TIDEWAYS_ENVIRONMENT`
+- `SPRYKER_*`: Every variable name with this prefix
+- `ALLOWED_IP`
+- `BLACKFIRE_AGENT_SOCKET`
+- `BLACKFIRE_SERVER_ID`
+- `BLACKFIRE_SERVER_TOKEN`
+- `DATA_IMPORT_S3_BUCKET`
+- `DATA_IMPORT_S3_KEY`
+- `DATA_IMPORT_S3_SECRET`
+- `DUMMY_INIT`
+- `ENABLE_NRI_ECS`
+- `JAVA_OPTS`
+- `JENKINS_URL`
+- `NEWRELIC_APPNAME`
+- `NEWRELIC_ENABLED`
+- `NEWRELIC_LICENSE`
+- `NRIA_CUSTOM_ATTRIBUTES`
+- `NRIA_LICENSE_KEY`
+- `NRIA_OVERRIDE_HOST_ROOT`
+- `NRIA_PASSTHROUGH_ENVIRONMENT`
+- `NRIA_VERBOSE`
+- `ONEAGENT_INSTALLER_DOWNLOAD_TOKEN`
+- `ONEAGENT_INSTALLER_SCRIPT_URL`
+- `RABBITMQ_DEFAULT_PASS`
+- `RABBITMQ_DEFAULT_USER`
+- `RABBITMQ_DEFAULT_VHOST`
+- `RABBITMQ_ENDPOINT`
+- `RABBITMQ_EXCHANGE_REGEXES`
+- `RABBITMQ_INTEGRATIONS_INTERVAL`
+- `RABBITMQ_NODENAME`
+- `RABBITMQ_PASSWORD`
+- `RABBITMQ_PORT`
+- `RABBITMQ_QUEUES_REGEXES`
+- `RABBITMQ_USE_SSL`
+- `RABBITMQ_USERNAME`
+- `TIDEWAYS_APIKEY`
+- `TIDEWAYS_CLI_ENABLED`
+- `TIDEWAYS_DAEMON_URI`
+- `TIDEWAYS_ENVIRONMENT`
 
 
 
@@ -135,21 +135,21 @@ Path hierarchy is needed to cover the cases when several variables with the same
 
 The following variables are arranged from lower to higher priority:
 
-* /{project}/{environment}/config/common/limited/{variable_name}
+- /{project}/{environment}/config/common/limited/{variable_name}
 
-* /{project}/{environment}/config/common/public/{variable_name}
+- /{project}/{environment}/config/common/public/{variable_name}
 
-* /{project}/{environment}/config/{app | scheduler}/limited/{variable_name}
+- /{project}/{environment}/config/{app | scheduler}/limited/{variable_name}
 
-* /{project}/{environment}/config/{app | scheduler}/public/{variable_name}
+- /{project}/{environment}/config/{app | scheduler}/public/{variable_name}
 
-* /{project}/{environment}/secret/common/limited/{variable_name}
+- /{project}/{environment}/secret/common/limited/{variable_name}
 
-* /{project}/{environment}/secret/common/public/{variable_name}
+- /{project}/{environment}/secret/common/public/{variable_name}
 
-* /{project}/{environment}/secret/{app | scheduler}/limited/{variable_name}
+- /{project}/{environment}/secret/{app | scheduler}/limited/{variable_name}
 
-* /{project}/{environment}/secret/{app | scheduler}/public/{variable_name}
+- /{project}/{environment}/secret/{app | scheduler}/public/{variable_name}
 
 ## Add variables
 
@@ -163,10 +163,10 @@ The following sections describe how to add parameters and secrets for different 
 3. For **Name**, enter `/{project}/{environment}/config/common/public/{variable_name}`.
     Make sure to replace the placeholders based on your requirements.
 4. Optional: For **Description**, enter a description of the variable. This may be a note about what this variable is used for.
-5. For **Type**, select a type of the variable based on your requirements.    
+5. For **Type**, select a type of the variable based on your requirements.
 6. For **Value**, enter the value of the variable.
 7. Click **Create parameter**.
-    This opens the **Parameter Store** page with a success message displayed.    
+    This opens the **Parameter Store** page with a success message displayed.
 8. Go to **Services**&nbsp;<span aria-label="and then">></span> **CodePipeline**.
 9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
@@ -185,7 +185,7 @@ The following sections describe how to add parameters and secrets for different 
 5. For **Type**, select **SecureString**.
 6. For **Value**, enter the value of the variable.
 7. Click **Create parameter**.
-    This opens the **Parameter Store** page with a success message displayed.    
+    This opens the **Parameter Store** page with a success message displayed.
 8. Go to **Services&nbsp;<span aria-label="and then">></span> CodePipeline**.
 9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
@@ -201,10 +201,10 @@ The following sections describe how to add parameters and secrets for different 
     Make sure to replace the placeholders based on your requirements.
 4. Optional: For **Description**, enter a description of the variable. This may be a note about what this variable is used for.
     This may be a note about what this variable is used for.
-5. For **Type**, select a type of the variable based on your requirements.    
+5. For **Type**, select a type of the variable based on your requirements.
 6. For **Value**, enter the value of the variable.
 7. Click **Create parameter**.
-    This opens the **Parameter Store** page with a success message displayed.    
+    This opens the **Parameter Store** page with a success message displayed.
 8. Go to **Services&nbsp;<span aria-label="and then">></span> CodePipeline**.
 9. On the **Pipelines** page, select the **ECS-updater-{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
@@ -223,12 +223,12 @@ The following sections describe how to add parameters and secrets for different 
 5. For **Type**, select **SecureString**.
 6. For **Value**, enter the value of the variable.
 7. Click **Create parameter**.
-    This opens the **Parameter Store** page with a success message displayed.    
+    This opens the **Parameter Store** page with a success message displayed.
 8. Go to **Services**&nbsp;<span aria-label="and then">></span> **CodePipeline**.
 9. On the **Pipelines** page, select the **ECS-updater-{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
-    After the pipeline finishes running, the variable gets available for your application.    
+    After the pipeline finishes running, the variable gets available for your application.
 
 ### Add parameters and secrets to Scheduler
 
@@ -236,15 +236,15 @@ The following sections describe how to add parameters and secrets for different 
 2. In the **My parameters** pane, click **Create parameter**.
     This opens the **Create parameter** page.
 3. For **Name**, enter one of the following:
-    * Variable: `/{project}/{environment}/config/scheduler/public/{variable_name}`
-    * Secret: `/{project}/{environment}/secret/scheduler/public/{variable_name}`
+    - Variable: `/{project}/{environment}/config/scheduler/public/{variable_name}`
+    - Secret: `/{project}/{environment}/secret/scheduler/public/{variable_name}`
         Make sure to replace the placeholders based on your requirements.
 4. Optional: For **Description**, enter a description of the variable. This may be a note about what this variable is used for.
     This may be a note about what this variable is used for.
 5. For **Type**, select **SecureString**.
 6. For **Value**, enter the value of the variable.
 7. Click **Create parameter**.
-    This opens the **Parameter Store** page with a success message displayed.    
+    This opens the **Parameter Store** page with a success message displayed.
 8. Go to **Services&nbsp;<span aria-label="and then">></span> CodePipeline**.
 9. On the **Pipelines** page, select the **Rollout_Scheduler_{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.

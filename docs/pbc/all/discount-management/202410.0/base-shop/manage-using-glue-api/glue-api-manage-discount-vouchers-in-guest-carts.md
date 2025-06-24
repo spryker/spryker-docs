@@ -84,6 +84,7 @@ To apply a discount voucher to a guest cart, send the request:
     }
 }
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -128,6 +129,7 @@ To apply a discount voucher to a guest cart, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -194,6 +196,7 @@ To apply a discount voucher to a guest cart, send the request:
     ]
 }
 ```
+
 </details>
 
 

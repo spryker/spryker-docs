@@ -22,7 +22,7 @@ By sticking to the [recommended extension points](/docs/scos/dev/guidelines/keep
 
 ## Update all Spryker modules to version 2022.04 or higher
 
-The Upgrader provides automatic minor and patch updates for the current version of each module. Because most updates are released for the latest module versions, modules need to be of the latest major version. To do that, in `composer.json `, update all `spryker-feature-*` packages to version `2022.04` or higher.
+The Upgrader provides automatic minor and patch updates for the current version of each module. Because most updates are released for the latest module versions, modules need to be of the latest major version. To do that, in `composer.json`, update all `spryker-feature-*` packages to version `2022.04` or higher.
 
 To check if your module versions are supported by the Upgrader, [run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
 
@@ -32,7 +32,7 @@ Upgrades are provided as PRs that are automatically created in a project's repos
 
 ## Migrate to a supported version control system
 
-Currently, the Upgrader supports GitHub, GitLab, and Azure. If you want to use a different version control system, [contact support](https://spryker.force.com/support/s/), so we can implement its support in future.
+Currently, the Upgrader supports GitHub, GitLab, and Azure. If you want to use a different version control system, [contact support](https://support.spryker.com), so we can implement its support in future.
 
 ## Migrate to cloud
 
@@ -42,11 +42,11 @@ The Upgrader supports only projects that run in [cloud environments](/docs/ca/de
 
 For a smooth experience, make sure that your environments meet the minimum technical requirements:
 
-* PHP 8.3+. The Upgrader supports a minimum version of PHP 8.2. PHP 8.1 reached end of life in September 2024, so make sure to update PHP to the [recommended version](/docs/dg/dev/supported-versions-of-php.html). To check if your PHP version is supported, [run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
-* Composer 2.5+
-* Git 2.24+
-* PHPStan 1.9+
-* PHPCodeSniffer 3.6.2+
+- PHP 8.3+. The Upgrader supports a minimum version of PHP 8.2. PHP 8.1 reached end of life in September 2024, so make sure to update PHP to the [recommended version](/docs/dg/dev/supported-versions-of-php.html). To check if your PHP version is supported, [run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
+- Composer 2.5+
+- Git 2.24+
+- PHPStan 1.9+
+- PHPCodeSniffer 3.6.2+
 
 ## Optional: Implement headless design
 

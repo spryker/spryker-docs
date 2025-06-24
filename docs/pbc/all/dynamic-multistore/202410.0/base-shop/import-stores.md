@@ -109,6 +109,7 @@ abstract_sku,store_name
 002,DE
 003,DE
 ```
+
 - merchant-product-offer-store
 
 **data/import/common/DE/merchant_product_offer_store.csv**
@@ -119,6 +120,7 @@ offer1,DE
 offer2,DE
 offer3,DE
 ```
+
 - merchant-store
 
 **data/import/common/DE/merchant_store.csv**
@@ -128,6 +130,7 @@ merchant_reference,store_name
 MER000001,DE
 MER000002,DE
 ```
+
 - product-price
 
 **data/import/common/DE/product_price.csv**
@@ -151,6 +154,7 @@ shipment_type_key,store_name
 pickup,DE
 delivery,DE
 ```
+
 - shipment-method-store
 
 **data/import/common/DE/shipment_method_store.csv**
@@ -160,6 +164,7 @@ shipment_method_key,store
 spryker_dummy_shipment-standard,DE
 spryker_dummy_shipment-express,DE
 ```
+
 - shipment-price
 
 **data/import/common/DE/shipment_price.csv**
@@ -169,6 +174,7 @@ shipment_method_key,store,currency,value_net,value_gross
 spryker_dummy_shipment-standard,DE,EUR,390,490
 spryker_dummy_shipment-express,DE,EUR,490,590
 ```
+
 ## Payment
 
 - payment-method-store

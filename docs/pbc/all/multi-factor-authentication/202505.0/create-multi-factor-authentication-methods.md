@@ -29,7 +29,7 @@ An MFA method consists of two components:
  
 Create one of the following plugins: 
  
-- Yves: Implements `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface` and calls a client method
+- Yves: Implements `\Spryker\Shared\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthPluginInterface` and calls a client method
 - Zed: Resides in the Zed layer, implements `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface`, and delegates the logic through the Facade
 
 <details>
@@ -151,7 +151,11 @@ class YourMfaCodeSenderStrategyPlugin extends AbstractPlugin implements SendStra
 
 Register the plugins in the dependency providers:
 
-* Back Office users: register them in the **Zed** layer. Use the `MultiFactorAuthDependencyProvider::getUserMultiFactorAuthPlugins()` class in the Zed module.
+- Back Office users: Use the `MultiFactorAuthDependencyProvider::getUserMultiFactorAuthPlugins()` class in the Zed module
+- Agents: Use the `MultiFactorAuthDependencyProvider::getAgentMultiFactorAuthPlugins()` method
+
+When implementing MFA plugins for agents** and Back Office users, register them in using the `MultiFactorAuthDependencyProvider::getUserSendStrategyPlugins()` method.
+
 
 **src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
@@ -177,14 +181,6 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
 }
 ```
 
-{% info_block infoBox "Registering MFA plugins for agents and Backoffice users" %}
-
-If you are implementing MFA plugins for **agents**, you must register them in using the `MultiFactorAuthDependencyProvider::getAgentMultiFactorAuthPlugins()` method.
-
-If you are implementing MFA plugins for **Backoffice users**, you must 
-
-{% endinfo_block %}
-
 
 **src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
@@ -208,9 +204,3 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
     }
 }
 ```
-
-{% info_block infoBox "Registering MFA plugins for agents and Backoffice users" %}
-
-If you are implementing MFA plugins for **agents** or **Backoffice users**, you must register them in using the `MultiFactorAuthDependencyProvider::getUserSendStrategyPlugins()` method.
-
-{% endinfo_block %}

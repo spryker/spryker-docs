@@ -5,7 +5,7 @@ template: howto-guide-template
 last_updated: Jun 04, 2025
 ---
 
-This document explains how to add support of settable dropdown navigation in the Back Office.
+This document explains how to enable settable dropdown navigation in the Back Office.
 
 ## Prerequisites
 

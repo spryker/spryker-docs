@@ -5,7 +5,7 @@
 {% if total_versions > 1 %}
 
   {%- comment -%}
-  Remove the version from page.url → assume it's the first segment
+  Strip version from beginning of page.url
   {%- endcomment -%}
   {% assign url_segments = page.url | split: '/' %}
   {% assign page_path = '' %}
@@ -20,8 +20,9 @@
     </span>
     <span class="alt-nav__opener-label">Versions</span>
     <ul class="alt-nav__drop dropdown-menu" aria-labelledby="versionDropdownMenuLink">
-      {% for version_key in site.versions %}
-        {% assign version_label = site.versions[version_key] %}
+      {% for version_pair in site.versions %}
+        {% assign version_key = version_pair[0] %}
+        {% assign version_label = version_pair[1] %}
         <li>
           <a href="{{ site.baseurl }}/{{ version_key }}{{ page_path }}">{{ version_label }}</a>
         </li>

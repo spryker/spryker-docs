@@ -8,8 +8,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
-| Prices | {{page.version}} |
+| Spryker Core | 202507.0 |
+| Prices | 202507.0 |
 
 ### 1) Set up configuration
 

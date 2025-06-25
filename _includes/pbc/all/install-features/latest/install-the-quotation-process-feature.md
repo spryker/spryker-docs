@@ -8,11 +8,11 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-|Spryker Core  | {{page.version}} |
-| Cart | {{page.version}} |
-|Company Account  | {{page.version}} |
-|Prices  | {{page.version}} |
-| Agent Assist | {{page.version}} |
+|Spryker Core  | 202507.0 |
+| Cart | 202507.0 |
+|Company Account  | 202507.0 |
+|Prices  | 202507.0 |
+| Agent Assist | 202507.0 |
 
 ### 1) Install the required modules
 
@@ -409,11 +409,11 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-|Spryker Core  | {{page.version}} |
-| Cart | {{page.version}} |
-| Company Account | {{page.version}} |
-|Prices  | {{page.version}} |
-|Agent Assist  | {{page.version}} |
+|Spryker Core  | 202507.0 |
+| Cart | 202507.0 |
+| Company Account | 202507.0 |
+|Prices  | 202507.0 |
+|Agent Assist  | 202507.0 |
 
 ### 1) Install the required modules
 

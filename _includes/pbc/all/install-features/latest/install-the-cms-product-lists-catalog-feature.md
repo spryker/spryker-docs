@@ -6,10 +6,10 @@ Install the following required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cms | {{page.version}} |
-| Product lists | {{page.version}} |
-| Catalog | {{page.version}} |
-| Customer | {{page.version}} |
+| Cms | 202507.0 |
+| Product lists | 202507.0 |
+| Catalog | 202507.0 |
+| Customer | 202507.0 |
 
 ## 1) Install the required modules
 

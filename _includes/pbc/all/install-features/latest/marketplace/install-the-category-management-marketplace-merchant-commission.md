@@ -6,8 +6,8 @@ Install the required features:
 
 | NAME                            | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                          |
 |---------------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Category Management             | {{page.version}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html)        |
-| Marketplace Merchant Commission | {{page.version}} | [Install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html) |
+| Category Management             | 202507.0 | [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html)        |
+| Marketplace Merchant Commission | 202507.0 | [Install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html) |
 
 ## 1) Install the required modules
 

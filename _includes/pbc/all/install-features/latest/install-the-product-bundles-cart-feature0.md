@@ -12,9 +12,9 @@ Install the required features:
 
 | NAME | EXPECTED DIRECTORY | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
-| Product Bundles | {{page.version}} | [Install the Product Bundles feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html)|
-| Cart | {{page.version}} | |
+| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
+| Product Bundles | 202507.0 | [Install the Product Bundles feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html)|
+| Cart | 202507.0 | |
 
 
 ### Set up behavior

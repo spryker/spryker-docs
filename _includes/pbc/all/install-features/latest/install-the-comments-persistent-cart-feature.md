@@ -8,8 +8,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Comments | {{page.version}} |
-| Cart | {{page.version}} |
+| Comments | 202507.0 |
+| Cart | 202507.0 |
 
 
 ### 1) Set up behavior
@@ -58,8 +58,8 @@ Install the following required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Comments | {{page.version}} |
-| Cart | {{page.version}} |
+| Comments | 202507.0 |
+| Cart | 202507.0 |
 
 ### 1) Set up behavior
 

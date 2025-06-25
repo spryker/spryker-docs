@@ -6,7 +6,8 @@
 
 {% assign current_version_label = site.versions[current_version] | default: 'undefined' %}
 
-{% if page.all_versions.size > 1 %}
+{% assign total_versions = site.config.versions | size %}
+{% if total_versions > 1 %}
     <div class="alt-nav dropdown">
         <span class="alt-nav__opener nav-link dropdown-toggle" id="versionDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="alt-nav__opener-text">{{ current_version_label }}</span>
@@ -14,9 +15,12 @@
         </span>
         <span class="alt-nav__opener-label">Versions</span>
         <ul class="alt-nav__drop dropdown-menu" aria-labelledby="versionDropdownMenuLink">
-            {% for version in page.all_versions %}
-                {% assign version_label = site.versions[version.version] | default: 'undefined' %}
-                <li><a href="{{ site.baseurl }}{{ version.url }}">{{ version_label }}</a></li>
+            {% for version in site.config.versions %}
+                {% assign version_key = version[0] %}
+                {% assign version_label = version[1] %}
+                <li>
+                    <a href="{{ site.baseurl }}/{{ version_key }}{{ page.url }}">{{ version_label }}</a>
+                </li>
             {% endfor %}
         </ul>
     </div>
@@ -26,3 +30,4 @@
         <span class="alt-nav__opener">This document has only one version {{ current_version_label }}</span>
     </div>
 {% endif %}
+

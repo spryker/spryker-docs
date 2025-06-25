@@ -9,8 +9,8 @@ Install the required features:
 
 | NAME              | VERSION          | INSTALLATION GUIDE                                                                                                                                                 |
 |-------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Warehouse Picking | {{page.version}} | [Install the Warehouse Picking feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)                    |
-| Product           | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Warehouse Picking | 202507.0 | [Install the Warehouse Picking feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)                    |
+| Product           | 202507.0 | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 ## 1) Set up behavior
 

@@ -8,8 +8,8 @@ To start feature integration, review and install the necessary features:
 
 | NAME | VERSION |
 |---|---|
-|Quick Add To Cart| {{page.version}} |
-|Non-splittable Products| {{page.version}} |
+|Quick Add To Cart| 202507.0 |
+|Non-splittable Products| 202507.0 |
 
 ### 1) Set up behavior
 

@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME  | VERSION | INSTALLATION GUIDE |
 | ------------------ | ----------- | ----------|
-| Merchant Switcher | {{page.version}} | [Install the Merchant Switcher feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-feature.html)|
-| Customer Account Management  | {{page.version}}    | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Merchant Switcher | 202507.0 | [Install the Merchant Switcher feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-feature.html)|
+| Customer Account Management  | 202507.0 | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 
 ### 1) Set up the transfer objects
 

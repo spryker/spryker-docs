@@ -10,8 +10,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Product Group | {{page.version}} |
-| Product Labels | {{page.version}} |
+| Product Group | 202507.0 |
+| Product Labels | 202507.0 |
 
 
 ### Set up behavior

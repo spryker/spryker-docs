@@ -9,12 +9,12 @@ Install the required features:
 
 | NAME                                    | VERSION          | INSTALLATION GUIDE                                                                                                                                                                  |
 |-----------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Warehouse User Management               | {{page.version}} | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html)                     |
-| Order Management     | {{site.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
-| Inventory Management | {{site.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
-| Shipment                                | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                       |
-| Push Notification                       | {{page.version}} | [Install the Push Notification feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-push-notification-feature.html)                                     |
-| Spryker Core Back Office                | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html)                        |
+| Warehouse User Management               | 202507.0 | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html)                     |
+| Order Management     | 202507.0 | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
+| Inventory Management | 202507.0 | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+| Shipment                                | 202507.0 | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                       |
+| Push Notification                       | 202507.0 | [Install the Push Notification feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-push-notification-feature.html)                                     |
+| Spryker Core Back Office                | 202507.0 | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html)                        |
 
 ## 1) Install the required modules
 

@@ -8,10 +8,10 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME         | VERSION          |
 |--------------|------------------|
-| Spryker Core | {{page.version}} |
-| Shipment     | {{page.version}} |
-| Cart         | {{page.version}} |
-| Prices       | {{page.version}} |
+| Spryker Core | 202507.0 |
+| Shipment     | 202507.0 |
+| Cart         | 202507.0 |
+| Prices       | 202507.0 |
 
 ### Install the required modules using Composer
 
@@ -167,8 +167,8 @@ Install the required features:
 
 | NAME     | VERSION          |
 |----------|------------------|
-| Shipment | {{page.version}} |
-| Cart     | {{page.version}} |
+| Shipment | 202507.0 |
+| Cart     | 202507.0 |
 
 ### Add translations
 

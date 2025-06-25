@@ -13,7 +13,7 @@ To start feature integration, integrate the required feature:
 
 | NAME             | VERSION          | INSTALLATION GUIDE                                                                                                            |
 |------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Order Management | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
+| Order Management | 202507.0 | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
 
 ## 1) Install the required modules
 

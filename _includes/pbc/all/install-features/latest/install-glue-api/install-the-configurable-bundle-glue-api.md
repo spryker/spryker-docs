@@ -9,7 +9,7 @@ To start the feature integration, overview and install the necessary features:
 
 | FEATURE | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Spryker Core | 202507.0 | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 |Configurable Bundles |{{page.version}} | [Install the Configurable Bundle feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html)|
 |Order Management |{{page.version}} |[Install the Order Management Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)|
 

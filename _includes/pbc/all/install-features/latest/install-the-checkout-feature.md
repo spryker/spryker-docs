@@ -20,12 +20,12 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | {{page.version}} |
-| Checkout |  {{page.version}} |
-| Order Management | {{page.version}}  |
-| Prices | {{page.version}}  |
-| Spryker Core | {{page.version}} |
-| Tax | {{page.version}} |
+| Cart | 202507.0 |
+| Checkout | 202507.0 |
+| Order Management | 202507.0 |
+| Prices | 202507.0 |
+| Spryker Core | 202507.0 |
+| Tax | 202507.0 |
 
 ### 1) Install the required modules
 
@@ -525,7 +525,7 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | 202507.0 |
 
 ### 1) Install the required modules
 

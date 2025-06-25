@@ -7,10 +7,10 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core E-commerce | {{page.version}} |
-| Cart| {{page.version}} |
-| Product | {{page.version}}  |
-| Checkout | {{page.version}} |
+| Spryker Core E-commerce | 202507.0 |
+| Cart| 202507.0 |
+| Product | 202507.0 |
+| Checkout | 202507.0 |
 
 ### 1) Install the required modules
 
@@ -131,10 +131,10 @@ To start feature integration, review and install the necessary features:
 
 | NAME | VERSION |
 |---|---|
-|Spryker Core| {{page.version}} |
-|Cart| {{page.version}} |
-|Product| {{page.version}} |
-|Checkout| {{page.version}} |
+|Spryker Core| 202507.0 |
+|Cart| 202507.0 |
+|Product| 202507.0 |
+|Checkout| 202507.0 |
 
 ### 1) Install the required modules
 

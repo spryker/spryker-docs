@@ -12,7 +12,7 @@ To start the feature integration, review and install the necessary features:
 
 | NAME         | VERSION |
 | ----------- | ------ |
-| Spryker Core | {{page.version}}  |
+| Spryker Core | 202507.0 |
 
 ### 1) Install the required modules
 
@@ -739,7 +739,7 @@ To start the feature integration, review and install the necessary features:
 
 | NAME         | VERSION    |
 | ---------- | -------- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | 202507.0 |
 
 ### 1) Install the required modules
 

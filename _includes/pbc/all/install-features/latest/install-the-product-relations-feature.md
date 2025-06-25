@@ -10,8 +10,8 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
-| ProductRelations | {{page.version}} |
+| Spryker Core | 202507.0 |
+| ProductRelations | 202507.0 |
 
 ### 1) Install the required modules
 

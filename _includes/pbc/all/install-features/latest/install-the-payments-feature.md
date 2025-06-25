@@ -18,7 +18,7 @@ To start the feature integration, overview and install the necessary features:
 
 |  NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | 202507.0 |
 
 ### Prerequisites for PayPal Express by PayOne
 

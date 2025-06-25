@@ -8,9 +8,9 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Product Lists | {{page.version}} |
-| Catalog | {{page.version}} |
-| Customer | {{page.version}} |
+| Product Lists | 202507.0 |
+| Catalog | 202507.0 |
+| Customer | 202507.0 |
 
 ### 1) Install the required modules
 

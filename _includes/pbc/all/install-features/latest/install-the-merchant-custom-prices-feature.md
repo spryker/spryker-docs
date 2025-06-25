@@ -8,11 +8,11 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
-| Merchant | {{page.version}} |
-| Merchant Contracts | {{page.version}} |
-| Prices | {{page.version}} |
-| Product | {{page.version}} |
+| Spryker Core | 202507.0 |
+| Merchant | 202507.0 |
+| Merchant Contracts | 202507.0 |
+| Prices | 202507.0 |
+| Product | 202507.0 |
 
 ### 1) Install the required modules
 

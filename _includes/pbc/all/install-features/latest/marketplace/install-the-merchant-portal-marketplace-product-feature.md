@@ -12,9 +12,9 @@ Install the required features:
 
 | NAME                             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                                    |
 |----------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Product              | {{page.version}} | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)                |
-| Marketplace Merchant Portal Core | {{page.version}} | [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
-| Marketplace Inventory Management | {{page.version}} | [Install the Marketplace Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/marketplace/install-features/install-the-marketplace-inventory-management-feature.html)             |
+| Marketplace Product              | 202507.0 | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)                |
+| Marketplace Merchant Portal Core | 202507.0 | [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
+| Marketplace Inventory Management | 202507.0 | [Install the Marketplace Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/marketplace/install-features/install-the-marketplace-inventory-management-feature.html)             |
 
 
 ### 1) Install the required modules

@@ -10,8 +10,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --------- | ------ | -----------|
-| Marketplace Shipment | {{page.version}} | [Install the Marketplace Shipment feature](/docs/pbc/all/carrier-management/latest/marketplace/install-features/install-marketplace-shipment-feature.html) |
-| Checkout | {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Marketplace Shipment | 202507.0 | [Install the Marketplace Shipment feature](/docs/pbc/all/carrier-management/latest/marketplace/install-features/install-marketplace-shipment-feature.html) |
+| Checkout | 202507.0 | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
 
 ### 1) Set up behavior
 

@@ -6,11 +6,11 @@ Install the required features:
 
 | FEATURE                                 | VERSION          | INSTALLATION GUIDE                                                                                                                                                                      |
 |-----------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Spryker Core                  | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                           |
-| Glue API: Cart                          | {{page.version}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                             |
-| Glue API: Customer Account Management   | {{page.version}} | [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
-| Glue API: Payments                      | {{page.version}} | [Install the Payments Glue API](/docs/pbc/all/payment-service-provider/latest/base-shop/install-and-upgrade/install-the-payments-glue-api.html)                      |
-| Glue API: Shipment                      | {{page.version}} | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                   |
+| Glue API: Spryker Core                  | 202507.0 | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                           |
+| Glue API: Cart                          | 202507.0 | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                             |
+| Glue API: Customer Account Management   | 202507.0 | [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
+| Glue API: Payments                      | 202507.0 | [Install the Payments Glue API](/docs/pbc/all/payment-service-provider/latest/base-shop/install-and-upgrade/install-the-payments-glue-api.html)                      |
+| Glue API: Shipment                      | 202507.0 | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                   |
 
 ## 1) Install the required modules
 

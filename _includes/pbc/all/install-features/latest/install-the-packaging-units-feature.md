@@ -13,11 +13,11 @@ Install the required features:
 
 | NAME                 | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                |
 |----------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core         | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                      |
-| Order Management     | {{site.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)                                                     |
-| Inventory Management | {{site.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)     |
-| Product              | {{site.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                                                       |
-| Measurement Units    | {{page.version}} | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
+| Spryker Core         | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                      |
+| Order Management     | 202507.0 | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)                                                     |
+| Inventory Management | 202507.0 | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)     |
+| Product              | 202507.0 | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                                                       |
+| Measurement Units    | 202507.0 | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
 
 ### 1) Install the required modules
 
@@ -974,9 +974,9 @@ Install the required features:
 
 | NAME                    | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                |
 |-------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core            | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                      |
-| Measurement Units       | {{page.version}} | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
-| Non-splittable Products | {{page.version}} |                                                                                                                                                                                                  |
+| Spryker Core            | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                      |
+| Measurement Units       | 202507.0 | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
+| Non-splittable Products | 202507.0 |                                                                                                                                                                                                  |
 
 ### 1) Install the required modules
 

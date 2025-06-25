@@ -8,9 +8,9 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Multiple Carts | {{page.version}} |
-| Reorder | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Multiple Carts | 202507.0 |
+| Reorder | 202507.0 |
+| Spryker Core | 202507.0 |
 
 ### 1) Set up behavior
 

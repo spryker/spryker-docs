@@ -14,13 +14,13 @@ Install the following features:
 
 | FEATURE OR GLUE API                   | VERSION          | INSTALLATION GUIDE                                                                                                                                                                               |
 |---------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Spryker Core                | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                                    |
-| Company Account                       | {{page.version}} | [Install the Company account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)   |
-| Glue API: Customer Account Management | {{page.version}} | [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
-| Glue API: Glue Application            | {{page.version}} | [Install the Glue Application Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                       |
-| UUID Generation Console               | {{page.version}} | [Install the Uuid Generation Console feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature.html)  |
-| Glue API: Shipment                    | {{page.version}} | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                              |
-| Glue API: Checkout                    | {{page.version}} | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)                                                  |
+| Glue API: Spryker Core                | 202507.0 | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                                    |
+| Company Account                       | 202507.0 | [Install the Company account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)   |
+| Glue API: Customer Account Management | 202507.0 | [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
+| Glue API: Glue Application            | 202507.0 | [Install the Glue Application Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                       |
+| UUID Generation Console               | 202507.0 | [Install the Uuid Generation Console feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature.html)  |
+| Glue API: Shipment                    | 202507.0 | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                              |
+| Glue API: Checkout                    | 202507.0 | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)                                                  |
 
 
 

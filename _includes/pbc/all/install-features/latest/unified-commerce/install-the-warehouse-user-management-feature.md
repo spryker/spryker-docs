@@ -8,9 +8,9 @@ Install the required features:
 
 | NAME                           | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                         |
 |--------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                   | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                |
-| Spryker Core Back Office       | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                               |
-| Inventory Management           | {{page.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)        |
+| Spryker Core                   | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                |
+| Spryker Core Back Office       | 202507.0 | [Install the Spryker Core Back Office feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                               |
+| Inventory Management           | 202507.0 | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)        |
 
 ## 1) Install the required modules
 

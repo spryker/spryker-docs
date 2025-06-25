@@ -15,8 +15,8 @@ Install the required features:
 
 | FEATURE | VERSION | INSTALLATION GUIDE  |
 | --- | --- |--- |
-| Spryker Core	 | {{page.version}} |[Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Shopping Lists	 | {{page.version}} |[Install the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html) |
+| Spryker Core	 | 202507.0 |[Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Shopping Lists	 | 202507.0 |[Install the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html) |
 
 ## 1) Install the required modules
 

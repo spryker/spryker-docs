@@ -12,8 +12,8 @@ To start integration, integrate the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
-| Marketplace Product Options| {{page.version}} | [Install the Marketplace Product Options feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-feature.html) |
-| Merchant Portal Marketplace Order Management | {{page.version}} | [Install the Merchant Portal Marketplace Order Management feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-order-management-feature.html) |
+| Marketplace Product Options| 202507.0 | [Install the Marketplace Product Options feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-feature.html) |
+| Merchant Portal Marketplace Order Management | 202507.0 | [Install the Merchant Portal Marketplace Order Management feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-order-management-feature.html) |
 
 ### 1) Install the required modules
 

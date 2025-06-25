@@ -12,9 +12,9 @@ Install the required features:
 
 | NAME                     | VERSION            | INSTALLATION GUIDE                                                                                                                                                   |
 |--------------------------|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core             | {{page.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                         |
-| Marketplace Product      | {{page.version}}   | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)           |
-| Product Approval Process | {{page.version}}   | [Install the Product Approval Process feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html) |
+| Spryker Core             | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                         |
+| Marketplace Product      | 202507.0 | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)           |
+| Product Approval Process | 202507.0 | [Install the Product Approval Process feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html) |
 
 
 ### 1) Install the required modules using Сomposer

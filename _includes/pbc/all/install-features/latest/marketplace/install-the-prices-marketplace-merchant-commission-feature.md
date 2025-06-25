@@ -7,8 +7,8 @@ Install the required features:
 
 | NAME                            | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                          |
 |---------------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Merchant Commission | {{page.version}} | [Install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html) |
-| Prices                          | {{site.version}} | [Install the Prices feature](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                                                |
+| Marketplace Merchant Commission | 202507.0 | [Install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html) |
+| Prices                          | 202507.0 | [Install the Prices feature](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                                                |
 
 ## 1) Install the required modules
 

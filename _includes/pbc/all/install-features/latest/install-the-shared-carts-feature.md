@@ -8,11 +8,11 @@ Install the required features:
 
 | NAME | VERSION |
 |---|---|
-|Cart|{{page.version}}|
-|Persistent Cart |{{page.version}}|
-|Multiple Carts|{{page.version}}|
-|Company Account|{{page.version}}|
-|Spryker Core|{{page.version}}|
+|Cart| 202507.0 |
+|Persistent Cart | 202507.0 |
+|Multiple Carts| 202507.0 |
+|Company Account| 202507.0 |
+|Spryker Core| 202507.0 |
 
 ### 1) Install the required modules
 
@@ -560,10 +560,10 @@ Install the required features:
 
 | NAME | VERSION |
 |---|---|
-|Cart|{{page.version}}|
-|Persistent Cart|{{page.version}}|
-|Multiple Carts|{{page.version}}|
-|Spryker Core|{{page.version}}|
+|Cart| 202507.0 |
+|Persistent Cart| 202507.0 |
+|Multiple Carts| 202507.0 |
+|Spryker Core| 202507.0 |
 
 ### 1) Install the required modules
 

@@ -8,9 +8,9 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}}  |
-| Product Lists | {{page.version}} |
-| Merchant | {{page.version}} |
+| Spryker Core | 202507.0 |
+| Product Lists | 202507.0 |
+| Merchant | 202507.0 |
 
 ### 1) Install the required modules
 

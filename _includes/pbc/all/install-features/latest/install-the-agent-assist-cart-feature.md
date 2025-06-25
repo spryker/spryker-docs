@@ -8,9 +8,9 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME         | VERSION | INSTALLATION GUIDE                                            |
 | ------------ | ------- | ------------------------------------------------------------ |
-| Spryker Core | {{page.version}}  | [Install the Spryker Сore feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Agent Assist | {{page.version}}  | [Install the Agent Assist feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-feature.html) |
-| Cart         | {{page.version}}  | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html) |
+| Spryker Core | 202507.0 | [Install the Spryker Сore feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Agent Assist | 202507.0 | [Install the Agent Assist feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-feature.html) |
+| Cart         | 202507.0 | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html) |
 
 
 ## 1) Set up behavior

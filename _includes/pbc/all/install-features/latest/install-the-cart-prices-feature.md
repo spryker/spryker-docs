@@ -15,9 +15,9 @@ Install the required features:
 
 | NAME                                        | VERSION          |        REQUIRED |    INSTALLATION GUIDE                                                                                                                                                 |
 |---------------------------------------------|------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| Cart                                        | {{site.version}} |       v         |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                            |
-| Prices                                      | {{site.version}} |          v         |[Install the Prices feature](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)              |
-| Marketplace Product Offer Prices  | {{site.version}} |                 |  [Install the Marketplace Product Offer Prices feature](/docs/pbc/all/price-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html) |
+| Cart                                        | 202507.0 |       v         |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                            |
+| Prices                                      | 202507.0 |          v         |[Install the Prices feature](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)              |
+| Marketplace Product Offer Prices  | 202507.0 |                 |  [Install the Marketplace Product Offer Prices feature](/docs/pbc/all/price-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html) |
 
 ### 1) Install the required modules
 

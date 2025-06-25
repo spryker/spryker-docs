@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME    | VERSION    | INSTALLATION GUIDE    |
 |----------------|------------------|-------------------|
-| Merchant Custom Prices                         | {{page.version}} | [Install the Merchant Custom Prices feature](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html)                                    |
-| Marketplace Merchant Portal Product Management | {{page.version}} | [Install the Merchant Portal - Marketplace Product feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-feature.html) |
+| Merchant Custom Prices                         | 202507.0 | [Install the Merchant Custom Prices feature](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html)                                    |
+| Marketplace Merchant Portal Product Management | 202507.0 | [Install the Merchant Portal - Marketplace Product feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-feature.html) |
 
 ### 1) Install the required modules
 

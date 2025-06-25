@@ -6,8 +6,8 @@ Install the required features:
 
 | NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                   |
 |---------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Data Exchange API   | {{page.version}} | [Install the Data Exchange API](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html)                                                                 |
-| Category Management | {{page.version}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
+| Data Exchange API   | 202507.0 | [Install the Data Exchange API](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html)                                                                 |
+| Category Management | 202507.0 | [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
 
 ## 1) Install the required modules
 

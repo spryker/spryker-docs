@@ -23,7 +23,7 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                           |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules
 
@@ -639,7 +639,7 @@ To start integration, integrate the required features:
 
 | NAME                   | VERSION          | INSTALLATION GUIDE                                                 |
 |------------------------|------------------|-------------------------------------------------------------------|
-| Inventory Management   | {{page.version}} | [Inventory Mamagement feature integration](#install-feature-core) |
+| Inventory Management   | 202507.0 | [Inventory Mamagement feature integration](#install-feature-core) |
 
 ### 1) Install the required modules
 

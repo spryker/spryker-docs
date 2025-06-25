@@ -13,8 +13,8 @@ To start feature integration, integrate the required features and Glue APIs:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core Glue API | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Product Rating & Reviews  | {{page.version}} | [Install the Product Rating and Reviews feature](/docs/pbc/all/ratings-reviews/latest/install-and-upgrade/install-the-product-rating-and-reviews-feature.html) |
+| Spryker Core Glue API | 202507.0 | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Product Rating & Reviews  | 202507.0 | [Install the Product Rating and Reviews feature](/docs/pbc/all/ratings-reviews/latest/install-and-upgrade/install-the-product-rating-and-reviews-feature.html) |
 
 ### 1) Install the required modules
 

@@ -6,8 +6,8 @@ Install the required features:
 
 | NAME                   | VERSION          | INSTALLATION GUIDE                                                                                                                                                                             |
 |------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Company Account        | {{page.version}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
-| Merchant B2B Contracts | {{page.version}} | [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html)                 |
+| Company Account        | 202507.0 | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
+| Merchant B2B Contracts | 202507.0 | [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html)                 |
 
 ## 1) Set up behavior
 

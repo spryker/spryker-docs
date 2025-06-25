@@ -14,8 +14,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
-| Navigation | {{page.version}} |
+| Spryker Core | 202507.0 |
+| Navigation | 202507.0 |
 
 ### 1) Install the required modules
 

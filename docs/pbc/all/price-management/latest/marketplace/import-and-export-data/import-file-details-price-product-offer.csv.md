@@ -14,19 +14,19 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `price-product-offer.csv` file to configure [Merchant product offer price](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
+This document describes the `price-product-offer.csv` file to configure [Merchant product offer price](/docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
 
 ## Import file dependencies
 
-- [merchant_product_offer.csv](/docs/pbc/all/offer-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html)
-- [product_price.csv](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-price.csv.html)
+- [merchant_product_offer.csv](/docs/pbc/all/offer-management/latest/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html)
+- [product_price.csv](/docs/pbc/all/price-management/latest/base-shop/import-and-export-data/import-file-details-product-price.csv.html)
 
 
 ## Import file parameters
 
 | PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | ----------- | ---------- | ------- | ------------- | ----------------- | ------------- |
-| product_offer_reference  | &check;             | String   |                   | Unique                                                       | Identifier of the [merchant product offer](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-product-offer-feature-overview.html) in the system. |
+| product_offer_reference  | &check;             | String   |                   | Unique                                                       | Identifier of the [merchant product offer](/docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html) in the system. |
 | price_type               | &check;             | String   |                   | Can be DEFAULT or ORIGINAL                                   | Price type.                                                  |
 | store                    | &check;             | String   |                   | Value previously defined in the *stores.php* project configuration. | Store the price is defined for.                              |
 | currency                 | &check;             | String   |                   | Defined in the [ISO code](https://en.wikipedia.org/wiki/ISO_4217). | Currency of the price.                                       |

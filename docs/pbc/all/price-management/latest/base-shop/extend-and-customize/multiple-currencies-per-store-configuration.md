@@ -65,7 +65,7 @@ From currency version 3, we have introduced currency table where currencies are 
 
 {% info_block infoBox "Info" %}
 
-Check the [Curency migration guide](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html) to migrate to the latest  module version.
+Check the [Curency migration guide](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html) to migrate to the latest  module version.
 
 {% endinfo_block %}
 

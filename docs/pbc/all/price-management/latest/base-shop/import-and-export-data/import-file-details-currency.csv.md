@@ -14,7 +14,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `currency.csv` file to configure [Currency](/docs/pbc/all/price-management/{{site.version}}/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html) information in your Spryker Demo Shop.
+This document describes the `currency.csv` file to configure [Currency](/docs/pbc/all/price-management/latest/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 

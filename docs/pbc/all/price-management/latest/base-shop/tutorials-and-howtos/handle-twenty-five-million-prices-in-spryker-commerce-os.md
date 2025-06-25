@@ -17,7 +17,7 @@ Imagine you have thousands of products and customers with unique pricing terms a
 
 Such a number of prices cannot be managed manually, but it's defined by business rules based on which the prices can be generated automatically. For example, you might agree on the special terms with your B2B partner, and they receive their own prices for the whole catalog. It might be considered as a discount, but usually, it's not a single simple rule but a set of rules and their priorities for each partner. These rules exist in an ERP system, which can export data through SOAP or CSV files.
 
-In Spryker, each price is imported as a [price dimension](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html) and has a unique key, which determines its relation to a customer—for example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices must appear in Redis price entries and abstract product search documents so that facet filters can be applied in search and categories.
+In Spryker, each price is imported as a [price dimension](/docs/pbc/all/price-management/latest/base-shop/merchant-custom-prices-feature-overview.html) and has a unique key, which determines its relation to a customer—for example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices must appear in Redis price entries and abstract product search documents so that facet filters can be applied in search and categories.
 
 Price import flow:
 
@@ -178,7 +178,7 @@ These two documents can be viewed as two tables with a foreign key in terms of r
 
 The side effects of this solution are the following:
 
-1. The [Product Reviews feature](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) is disabled because it requires multiple document types per index.
+1. The [Product Reviews feature](/docs/pbc/all/ratings-reviews/latest/ratings-and-reviews.html) is disabled because it requires multiple document types per index.
 2. Performance requires additional attention. You can read about performance issues related to the feature in [Parent-join and performance](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html#_parent_join_and_performance).
 3. Because of ES limitations, you can't build proper queries to run sorting by prices. Only facet filtering is possible.
 
@@ -200,7 +200,7 @@ The following issues related to a slow publish process have been added:
 #### Evaluated solutions
 
 The following solutions were evaluated:
-1. To handle bulk insert and update operations in the `_search` table, use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries. We chose this solution because we had implemented it previously. To learn how this solution is used to optimize the speed of data importers, see [Data Importer Speed Optimization](/docs/dg/dev/data-import/{{site.version}}/data-import-optimization-guidelines.html).
+1. To handle bulk insert and update operations in the `_search` table, use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries. We chose this solution because we had implemented it previously. To learn how this solution is used to optimize the speed of data importers, see [Data Importer Speed Optimization](/docs/dg/dev/data-import/latest/data-import-optimization-guidelines.html).
 2. To fill the `search` table on the insert update operations in the `entity` table, see the [PostgreSQL trigger feature](https://www.postgresql.org/docs/9.1/sql-createtrigger.html).
 3. Implement a reconnection logic that establishes a new connection after catching an exception.
 

@@ -21,7 +21,7 @@ This document describes how to add volume prices to abstract products.
 
 ## Prerequisites
 
-- Define default or original gross prices for the stores you want to define volume prices for. To learn how to do that, see [Edit prices of an abstract product or product bundle](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html#edit-prices-of-an-abstract-product-or-product-bundle).
+- Define default or original gross prices for the stores you want to define volume prices for. To learn how to do that, see [Edit prices of an abstract product or product bundle](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html#edit-prices-of-an-abstract-product-or-product-bundle).
 
 - Review the [reference information](#reference-information-add-volume-prices-to-abstract-products) before you start, or look up the necessary information as you go through the process.
 

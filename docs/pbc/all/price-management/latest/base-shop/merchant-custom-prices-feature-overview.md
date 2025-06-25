@@ -93,10 +93,10 @@ console price-product-merchant-relationship:delete [-m X] . X = MR ID
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Set prices per merchant relations when creating abstract products and product bundles](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)   |
+| [Set prices per merchant relations when creating abstract products and product bundles](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)   |
 
 ## Related Developer documents
 
 |INSTALLATION GUIDES | MIGRATION GUIDES |
 |---------|---------|
-| [Install the Merchant custom prices feature](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html)  | [Upgrade the PriceProduct module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html) |
+| [Install the Merchant custom prices feature](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html)  | [Upgrade the PriceProduct module](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html) |

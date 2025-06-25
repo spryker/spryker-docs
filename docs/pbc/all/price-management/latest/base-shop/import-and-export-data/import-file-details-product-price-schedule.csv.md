@@ -17,7 +17,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This article contains content of the `product_price_schedule.csv` file to configure [Product Price Schedule](/docs/pbc/all/price-management/{{site.version}}/base-shop/scheduled-prices-feature-overview.html) information in your Spryker Demo Shop.
+This article contains content of the `product_price_schedule.csv` file to configure [Product Price Schedule](/docs/pbc/all/price-management/latest/base-shop/scheduled-prices-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -45,8 +45,8 @@ data:import:product-price-schedule
 
 
 
-- [product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
-- [product_concrete.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
+- [product_abstract.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
+- [product_concrete.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
 - *stores.php* configuration file of the Demo Shop PHP project
 
 ## Import template file and content example

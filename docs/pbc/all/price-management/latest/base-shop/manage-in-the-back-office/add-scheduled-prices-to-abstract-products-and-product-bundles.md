@@ -19,13 +19,13 @@ This doc describes how to add scheduled prices to abstract products and product 
 
 ## Prerequisites
 
-- [Create an abstract product or product bundle](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) to add scheduled prices to.
+- [Create an abstract product or product bundle](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) to add scheduled prices to.
 
 - Review the [reference information](#reference-information-add-scheduled-prices-to-abstract-products-and-product-bundles) before you start, or look up the necessary information as you go through the process.
 
 ## Import scheduled prices for abstract products and product bundles
 
-If you want to add more than five scheduled prices, it might be quicker to [import the scheduled prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-in-the-back-office/create-scheduled-prices.html).
+If you want to add more than five scheduled prices, it might be quicker to [import the scheduled prices](/docs/pbc/all/price-management/latest/base-shop/manage-in-the-back-office/create-scheduled-prices.html).
 
 ## Add a scheduled price to an abstract product or product bundle
 

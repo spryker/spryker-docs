@@ -27,4 +27,4 @@ related:
     link: docs/pbc/all/merchant-management/page.version/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-prices-feature.md -->
+{% include pbc/all/install-features/latest/install-the-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-prices-feature.md -->

@@ -136,10 +136,10 @@ The feature has the following functional constraints which are going to be resol
 
 - As volume price does not support ORIGINAL price type, you cannot define a promotion for a volume price.
 
-- Volume prices cannot be applied to the [prices per merchant relation](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html).
+- Volume prices cannot be applied to the [prices per merchant relation](/docs/pbc/all/price-management/latest/base-shop/merchant-custom-prices-feature-overview.html).
 
 ## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Add volume prices to abstract products](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html)  |
+| [Add volume prices to abstract products](/docs/pbc/all/price-management/latest/base-shop/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html)  |

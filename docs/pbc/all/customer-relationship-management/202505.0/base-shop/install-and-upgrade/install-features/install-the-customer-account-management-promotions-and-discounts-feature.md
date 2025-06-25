@@ -5,4 +5,4 @@ last_updated: Jun 19, 2025
 template: feature-integration-guide-template  
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-customer-account-management-promotions-and-discounts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202505.0/install-the-customer-account-management-promotions-and-discounts-feature.md -->
+{% include pbc/all/install-features/latest/install-the-customer-account-management-promotions-and-discounts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202505.0/install-the-customer-account-management-promotions-and-discounts-feature.md -->

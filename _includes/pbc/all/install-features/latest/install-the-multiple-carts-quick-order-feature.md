@@ -10,7 +10,7 @@ Install the required features:
 | --- | --- |
 | Multiple Carts | 202507.0 |
 | Quick Add To Cart | 202507.0 |
-| Spryker Core |{{page.version}} |
+| Spryker Core | 202507.0 |
 
 ### 1) Set up behavior
 

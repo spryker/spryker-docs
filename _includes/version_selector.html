@@ -1,33 +1,26 @@
-{% if page.version %}
-    {% assign current_version = page.version %}
-{% else %}
-    {% assign current_version = site.version %}
-{% endif %}
-
+{% assign current_version = page.version | default: site.version %}
 {% assign current_version_label = site.versions[current_version] | default: 'undefined' %}
 
-{% assign total_versions = site.config.versions | size %}
+{% assign total_versions = site.versions | size %}
 {% if total_versions > 1 %}
-    <div class="alt-nav dropdown">
-        <span class="alt-nav__opener nav-link dropdown-toggle" id="versionDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="alt-nav__opener-text">{{ current_version_label }}</span>
-            <i class="alt-nav__opener-icon icon-arrow-down"></i>
-        </span>
-        <span class="alt-nav__opener-label">Versions</span>
-        <ul class="alt-nav__drop dropdown-menu" aria-labelledby="versionDropdownMenuLink">
-            {% for version in site.config.versions %}
-                {% assign version_key = version[0] %}
-                {% assign version_label = version[1] %}
-                <li>
-                    <a href="{{ site.baseurl }}/{{ version_key }}{{ page.url }}">{{ version_label }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-    <div class="alt-nav__overlay"></div>
+  <div class="alt-nav dropdown">
+    <span class="alt-nav__opener nav-link dropdown-toggle" id="versionDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="alt-nav__opener-text">{{ current_version_label }}</span>
+      <i class="alt-nav__opener-icon icon-arrow-down"></i>
+    </span>
+    <span class="alt-nav__opener-label">Versions</span>
+    <ul class="alt-nav__drop dropdown-menu" aria-labelledby="versionDropdownMenuLink">
+      {% for version_key in site.versions %}
+        {% assign version_label = site.versions[version_key] %}
+        <li>
+          <a href="{{ site.baseurl }}/{{ version_key }}{{ page.url }}">{{ version_label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="alt-nav__overlay"></div>
 {% else %}
-    <div class="alt-nav">
-        <span class="alt-nav__opener">This document has only one version {{ current_version_label }}</span>
-    </div>
+  <div class="alt-nav">
+    <span class="alt-nav__opener">This document has only one version {{ current_version_label }}</span>
+  </div>
 {% endif %}
-

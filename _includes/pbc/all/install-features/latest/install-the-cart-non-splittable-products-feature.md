@@ -13,7 +13,7 @@ Install the required features:
 | NAME | VERSION |
 | --- | --- |
 | Cart | 202507.0 |
-| Non-splittable Products |{{page.version}} |
+| Non-splittable Products | 202507.0 |
 
 ### 1) Adjust concrete product quantity
 

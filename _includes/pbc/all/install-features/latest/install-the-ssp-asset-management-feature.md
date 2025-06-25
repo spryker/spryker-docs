@@ -11,8 +11,8 @@ This document describes how to install the Self-Service Portal (SSP) Asset Manag
 
 | FEATURE         | VERSION | INSTALLATION GUIDE  |
 |--------------| ------- | ------------------ |
-| Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
-| Self-Service Portal | {{site.version}}  | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
+| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
+| Self-Service Portal | 202507.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
 
 ## Install the required modules
 

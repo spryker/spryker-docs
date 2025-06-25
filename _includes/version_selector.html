@@ -3,8 +3,13 @@
 
 {% assign total_versions = site.versions | size %}
 {% if total_versions > 1 %}
-  {% assign url_suffix = page.url | remove_first: '/' | remove_first: current_version %}
-  {% assign cleaned_url = '/' | append: url_suffix %}
+  {%- comment -%}
+  Strip the first path segment (current_version) from the page URL
+  Example: /202404.0/guide/setup.html → /guide/setup.html
+  {%- endcomment -%}
+  {% assign url_parts = page.url | split: '/' %}
+  {% assign sliced_url_parts = url_parts | slice: 2, url_parts.size %}
+  {% assign cleaned_url = '/' | append: sliced_url_parts | join: '/' %}
 
   <div class="alt-nav dropdown">
     <span class="alt-nav__opener nav-link dropdown-toggle" id="versionDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

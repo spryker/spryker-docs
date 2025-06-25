@@ -3,13 +3,15 @@
 
 {% assign total_versions = site.versions | size %}
 {% if total_versions > 1 %}
+
   {%- comment -%}
-  Strip the first path segment (current_version) from the page URL
-  Example: /202404.0/guide/setup.html → /guide/setup.html
+  Remove the version from page.url → assume it's the first segment
   {%- endcomment -%}
-  {% assign url_parts = page.url | split: '/' %}
-  {% assign sliced_url_parts = url_parts | slice: 2, url_parts.size %}
-  {% assign cleaned_url = '/' | append: sliced_url_parts | join: '/' %}
+  {% assign url_segments = page.url | split: '/' %}
+  {% assign page_path = '' %}
+  {% for segment in url_segments offset:2 %}
+    {% assign page_path = page_path | append: '/' | append: segment %}
+  {% endfor %}
 
   <div class="alt-nav dropdown">
     <span class="alt-nav__opener nav-link dropdown-toggle" id="versionDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -21,7 +23,7 @@
       {% for version_key in site.versions %}
         {% assign version_label = site.versions[version_key] %}
         <li>
-          <a href="{{ site.baseurl }}/{{ version_key }}{{ cleaned_url }}">{{ version_label }}</a>
+          <a href="{{ site.baseurl }}/{{ version_key }}{{ page_path }}">{{ version_label }}</a>
         </li>
       {% endfor %}
     </ul>

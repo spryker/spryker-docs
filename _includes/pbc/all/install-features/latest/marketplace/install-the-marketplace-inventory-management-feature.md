@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Marketplace Inventory Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/marketplace-inventory-management-feature-overview.html) feature.
+This document describes how to install the [Marketplace Inventory Management](/docs/pbc/all/warehouse-management-system/latest/marketplace/marketplace-inventory-management-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -13,9 +13,9 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
-| Spryker Core | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)  |
-| Marketplace Product Offer | {{page.version}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)  |
-| Inventory Management | {{page.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)  |
+| Spryker Core | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)  |
+| Marketplace Product Offer | {{page.version}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)  |
+| Inventory Management | {{page.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)  |
 
 ### 1) Install the required modules
 
@@ -850,6 +850,6 @@ Make sure that the imported data is added to the `spy_merchant_stock` and `spy_p
 
 | FEATURE                                             | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                                                       |
 |-----------------------------------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Inventory Management + Order Management |                           | [Install the Marketplace Inventory Management + Order Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-packaging-units-feature.html) |
-| Marketplace Inventory Management + Packaging Units  |                                  | [Install the Marketplace Inventory Management + Packaging Units feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-packaging-units-feature.html)   |
-| Marketplace Product + Inventory Management          |                                  | [Install the Marketplace Product + Inventory Management feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-inventory-management-feature.html)                   |
+| Marketplace Inventory Management + Order Management |                           | [Install the Marketplace Inventory Management + Order Management feature](/docs/pbc/all/warehouse-management-system/latest/marketplace/install-features/install-the-marketplace-inventory-management-packaging-units-feature.html) |
+| Marketplace Inventory Management + Packaging Units  |                                  | [Install the Marketplace Inventory Management + Packaging Units feature](/docs/pbc/all/warehouse-management-system/latest/marketplace/install-features/install-the-marketplace-inventory-management-packaging-units-feature.html)   |
+| Marketplace Product + Inventory Management          |                                  | [Install the Marketplace Product + Inventory Management feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-inventory-management-feature.html)                   |

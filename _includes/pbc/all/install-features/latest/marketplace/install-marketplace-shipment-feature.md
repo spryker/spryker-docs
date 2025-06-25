@@ -10,8 +10,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
-| Merchant | {{page.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
-| Shipment | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
+| Merchant | {{page.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Shipment | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
 
 
 ### 1) Install the required modules
@@ -137,6 +137,6 @@ class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE| INSTALLATION GUIDE |
 |-|-|-|
-| Marketplace Shipment + Cart | | [Install the Marketplace Shipment + Cart feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-cart-feature.html) |
-| Marketplace Shipment + Checkout | | [Install the Marketplace Shipment + Checkout feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-checkout-feature.html) |
-| Marketplace Shipment + Customer | | [Install the Marketplace Shipment + Customer feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-customer-feature.html) |
+| Marketplace Shipment + Cart | | [Install the Marketplace Shipment + Cart feature](/docs/pbc/all/carrier-management/latest/marketplace/install-features/install-the-marketplace-shipment-cart-feature.html) |
+| Marketplace Shipment + Checkout | | [Install the Marketplace Shipment + Checkout feature](/docs/pbc/all/carrier-management/latest/marketplace/install-features/install-the-marketplace-shipment-checkout-feature.html) |
+| Marketplace Shipment + Customer | | [Install the Marketplace Shipment + Customer feature](/docs/pbc/all/carrier-management/latest/marketplace/install-features/install-marketplace-shipment-customer-feature.html) |

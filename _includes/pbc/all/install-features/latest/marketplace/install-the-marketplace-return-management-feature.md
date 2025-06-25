@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Marketplace Return Management](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html) feature.
+This document describes how to install the [Marketplace Return Management](/docs/pbc/all/return-management/latest/marketplace/marketplace-return-management-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -13,9 +13,9 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --------------- | ------- | ---------- |
-| Spryker Core                 | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Return Management            | {{page.version}} | [Install the Return Management feature](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-feature.html) |
-| Marketplace Order Management | {{page.version}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
+| Spryker Core                 | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Return Management            | {{page.version}} | [Install the Return Management feature](/docs/pbc/all/return-management/latest/base-shop/install-and-upgrade/install-the-return-management-feature.html) |
+| Marketplace Order Management | {{page.version}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
 
 ### 1) Install required modules using Composer
 
@@ -1030,4 +1030,4 @@ console frontend:yves:build
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | - | - | - |
-| Marketplace Return Management API | | [Install the Marketplace Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html) |
+| Marketplace Return Management API | | [Install the Marketplace Return Management Glue API](/docs/pbc/all/return-management/latest/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html) |

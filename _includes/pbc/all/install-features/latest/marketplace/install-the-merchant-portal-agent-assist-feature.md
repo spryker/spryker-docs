@@ -7,7 +7,7 @@ Install the required features:
 
 | NAME                             | VERSION | INSTALLATION GUIDE  |
 |----------------------------------| ------- | ------------------ |
-| Marketplace Merchant Portal Core | {{page.version}}  | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
+| Marketplace Merchant Portal Core | {{page.version}}  | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
 
 ### 1) Install the required modules
 
@@ -626,7 +626,7 @@ Log in as an agent to the Merchant Portal. Make sure there is the **Merchant Use
 
 ## Install feature frontend
 
-For installing frontend dependencies, follow [Set up the Merchant Portal](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/set-up-the-merchant-portal.html).
+For installing frontend dependencies, follow [Set up the Merchant Portal](/docs/dg/dev/frontend-development/latest/marketplace/set-up-the-merchant-portal.html).
 
 Once everything has been installed, you can access the UI of Merchant Portal Agent Assist at `$[local_domain]/agent-security-merchant-portal-gui/login`.
 

@@ -1,4 +1,4 @@
-This document describes how to install the [Concrete SKU product filter feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/concrete-sku-product-filter-feature-overview.html).
+This document describes how to install the [Concrete SKU product filter feature](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/concrete-sku-product-filter-feature-overview.html).
 
 ## 1) Install the required modules
 

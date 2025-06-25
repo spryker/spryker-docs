@@ -1,6 +1,6 @@
 
 
-This document describes how to install the [CMS](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-feature-overview.html) feature.
+This document describes how to install the [CMS](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -10,7 +10,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
 
 ### 1) Install the required modules
 
@@ -1301,7 +1301,7 @@ Enable Twig plugins:
 | --- | --- | --- |
 | CmsBlockTwigPlugin | Provides the list of plugins for CMS block widget. See the [table](#plugin-table). | SprykerShop\Yves\CmsBlockWidget\Plugin |
 | CmsTwigPlugin | Provides the `spyCms` function. | SprykerShop\Yves\CmsPage\Plugin\Twig |
-| CmsContentWidgetTwigPlugin | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html) instead. | Spryker\Yves\CmsContentWidget\Plugin\Twig |
+| CmsContentWidgetTwigPlugin | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](/docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html) instead. | Spryker\Yves\CmsContentWidget\Plugin\Twig |
 | ShopCmsSlotTwigPlugin | Provides the `cms_slot` Twig tag. | SprykerShop\Yves\ShopCmsSlot\Plugin\Twig |
 
 **Pyz\Yves\Twig\TwigDependencyProvider**
@@ -1534,14 +1534,14 @@ class ShopCmsSlotDependencyProvider extends SprykerShopShopCmsSlotDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Verify the changes by adding a slot widget to a page. See [Templates & Slots Feature Overview](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html) for references.
+Verify the changes by adding a slot widget to a page. See [Templates & Slots Feature Overview](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/templates-and-slots-overview.html) for references.
 
 {% endinfo_block %}
 
 ### Set up SprykerCmsBlocks content provider behavior
 
 {% info_block infoBox %}
-Follow the further steps only if you are going to use the [visibility conidtions](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
+Follow the further steps only if you are going to use the [visibility conidtions](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
 {% endinfo_block %}
 
 #### 1) Install the required modules
@@ -1649,7 +1649,7 @@ class CmsSlotBlockGuiDependencyProvider extends SprykerCmsSlotBlockGuiDependency
 1. In the Back Office, go to **Content Management > Slots**.
 2. In **List of Templates**, choose the template for which you've created the visibility condition.
 3. Choose a slot in the **List of Slots for [NAME] Template**.
-4. Select or [assign](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-slots.html#assigning-cms-blocks-to-slots) a CMS block to a slot in the **List of Blocks for [NAME] Slot**.
+4. Select or [assign](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-slots.html#assigning-cms-blocks-to-slots) a CMS block to a slot in the **List of Blocks for [NAME] Slot**.
 5. Make sure that for each CMS block, there is an additional form allowing you to define the visibility condition you have created.
 
 {% endinfo_block %}

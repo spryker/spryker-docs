@@ -6,8 +6,8 @@ Install the required features:
 
 | NAME                     | VERSION          | INSTALLATION GUIDE                                                                                                                                                  |
 |--------------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core             | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)         |
-| Spryker Core Back Office | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
+| Spryker Core             | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)         |
+| Spryker Core Back Office | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 
 ## 1) Install the required modules
 
@@ -451,7 +451,7 @@ Make sure the following works correctly:
 - The request to access the Merchant Portal doesn't succeed for users without permissions.
 - A marketplace user can see only the allowed Merchant Portal menu links.
 - `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.
-- You can edit a user's ACL groups when [editing users in the Back Office](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html).
+- You can edit a user's ACL groups when [editing users in the Back Office](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/edit-users.html).
 - When a `RoleTransfer` is saved and contains `AclEntityRules`, `AclEntityRule` is created in `spy_acl_entity_rule`.
 - `RolesTransfer` contains the needed `AclEntityRules`.
 - Users without permissions to access an entity or endpoint can't access them.

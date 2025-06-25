@@ -315,6 +315,6 @@ Make sure the following widgets were registered:
 | MODULE | TEST |
 | --- | --- |
 | ProductPriceVolumeWidget | Go to the product detail page for a product with Volume Prices set, and observe the table in the detail area that contains the Volume Prices data. |
-| PriceProductWidget | Could be checked on a slot configurator page of a [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html) feature. |
+| PriceProductWidget | Could be checked on a slot configurator page of a [Configurable Bundle](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/configurable-bundle-feature-overview.html) feature. |
 
 {% endinfo_block %}

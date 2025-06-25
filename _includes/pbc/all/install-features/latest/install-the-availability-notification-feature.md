@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Availability Notification](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/availability-notification-feature-overview.html).
+This document describes how to install the [Availability Notification](/docs/pbc/all/warehouse-management-system/latest/base-shop/availability-notification-feature-overview.html).
 
 ## Install feature core
 
@@ -13,10 +13,10 @@ Install the required features:
 
 | NAME                      | VERSION            | INSTALLATION GUIDE                                                                                                                                                                         |
 |---------------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Mailing and Notifications | {{site.version}}   | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/{{page.version}}/install-the-mailing-and-notifications-feature.html)                            |
-| Inventory Management      | {{site.version}}   | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
-| Product                   | {{site.version}}   | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                                                |
-| Spryker Core              | {{site.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |
+| Mailing and Notifications | {{site.version}}   | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/latest/install-the-mailing-and-notifications-feature.html)                            |
+| Inventory Management      | {{site.version}}   | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+| Product                   | {{site.version}}   | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                                                |
+| Spryker Core              | {{site.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |
 
 ### 1) Install the required modules
 
@@ -343,10 +343,10 @@ To start feature integration, integrate the required feature:
 
 | NAME                      | VERSION            | INSTALLATION GUIDE                                                                                                                                                                         |
 |---------------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Mailing and Notifications | {{site.version}}   | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/{{page.version}}/install-the-mailing-and-notifications-feature.html)                            |
-| Inventory Management      | {{site.version}}   | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
-| Product                   | {{site.version}}   | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                                                |
-| Spryker Core              | {{site.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |
+| Mailing and Notifications | {{site.version}}   | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/latest/install-the-mailing-and-notifications-feature.html)                            |
+| Inventory Management      | {{site.version}}   | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+| Product                   | {{site.version}}   | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                                                |
+| Spryker Core              | {{site.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |
 
 ### 1) Install the required modules
 

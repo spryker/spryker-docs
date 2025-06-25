@@ -6,8 +6,8 @@ Install the required features:
 
 | NAME                                | VERSION          | INSTALLATION GUIDE                                                                                                                                                             |
 |-------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Comments                            | {{page.version}} | [Install the Comments feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html)              |
-| Merchant B2B Contracts              | {{page.version}} | [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html) |
+| Comments                            | {{page.version}} | [Install the Comments feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html)              |
+| Merchant B2B Contracts              | {{page.version}} | [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html) |
 
 ## 1) Install the required modules
 

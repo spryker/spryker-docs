@@ -8,7 +8,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 
 
 ## 1)  Install the required modules using Composer
@@ -141,7 +141,7 @@ Make sure that `ValidateRestRequestAttributesPlugin` has been activated:
 1. Make sure that there is a Glue API feature that uses validation configuration in your project.
 2. Create validation configuration:
     a. Create `src/Pyz/Glue/YourModuleRestApi/Validation/{module}.validation.yaml`.
-    b. In the file, describe validation rules for endpoints. See [Validate REST request format](/docs/dg/dev/glue-api/{{page.version}}/glue-api-tutorials/validate-rest-request-format.html) for more details. Example:
+    b. In the file, describe validation rules for endpoints. See [Validate REST request format](/docs/dg/dev/glue-api/latest/glue-api-tutorials/validate-rest-request-format.html) for more details. Example:
 
     ```yaml
     access-tokens:

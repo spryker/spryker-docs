@@ -13,10 +13,10 @@ Install the required features:
 
 | NAME                 | VERSION           | INSTALLATION GUIDE                                                                                                                                                                             |
 |----------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core         | {{page.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                          |
-| Spryker Core BO      | {{page.version}}  | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)               |
-| Marketplace Merchant | {{page.version}}  | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
-| Acl                  | {{page.version}}  | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-acl-feature.html)                                                                    |
+| Spryker Core         | {{page.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                          |
+| Spryker Core BO      | {{page.version}}  | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html)               |
+| Marketplace Merchant | {{page.version}}  | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Acl                  | {{page.version}}  | [Install the ACL feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-acl-feature.html)                                                                    |
 
 ### 1) Install the required modules
 
@@ -1967,4 +1967,4 @@ console navigation:build-cache
 
 | FEATURE         | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                  |
 |-----------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Merchant Portal | &check;                          | [Install the Merchant Portal](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal.html) |
+| Merchant Portal | &check;                          | [Install the Merchant Portal](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-the-merchant-portal.html) |

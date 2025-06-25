@@ -9,9 +9,9 @@ To start feature integration, overview and install the following features and Gl
 
 | NAME |  VERSION |  INTEGRATION GUIDE |
 | - |  - |  -  |
-| Glue API: Spryker Core | {{page.version}}  | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Cart |  {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
-| Uuid generation console | {{page.version}} | [Install the Uuid Generation Console feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature.html) |
+| Glue API: Spryker Core | {{page.version}}  | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Cart |  {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| Uuid generation console | {{page.version}} | [Install the Uuid Generation Console feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature.html) |
 
 ## 1) Install the required modules
 
@@ -109,7 +109,7 @@ The result should be 0 records.
 
 - `CartPermissionGroupsResourceRoutePlugin` is a protected resource for the `GET` request.
 
-For more details, see the `configure` function in [Resource Routing](/docs/dg/dev/glue-api/{{page.version}}/rest-api/glue-infrastructure.html).
+For more details, see the `configure` function in [Resource Routing](/docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html).
 
 {% endinfo_block %}
 

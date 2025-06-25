@@ -8,7 +8,7 @@ This document describes how to add product variants, product images, and price v
 
 ## Prerequisites
 
-Read the concept of Spryker [super attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html#super-attributes).
+Read the concept of Spryker [super attributes](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html#super-attributes).
 
 ## UI changes
 

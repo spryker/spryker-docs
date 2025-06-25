@@ -1,4 +1,4 @@
-This document describes how to install the [Marketplace Product Options feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-options-feature-overview.html).
+This document describes how to install the [Marketplace Product Options feature](/docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-options-feature-overview.html).
 
 ## Install feature core
 
@@ -10,9 +10,9 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --------------- | ------- | ---------- |
-| Spryker Core         | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core         | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product Options      | {{page.version}} | [Install the Product Options feature](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/903151851/EMPTY+Product+Options+Feature+Integration+-+ongoing) |  
-| Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 
 
 ### 1) Install the required modules
@@ -384,5 +384,5 @@ Make sure the following is true:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
-| Marketplace Product Options + Cart | | [Install the Marketplace Product Options + Cart feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-cart-feature.html) |
-| Marketplace Product Options + Checkout | | [Install the Marketplace Product Options + Checkout feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-checkout-feature.html) |
+| Marketplace Product Options + Cart | | [Install the Marketplace Product Options + Cart feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-cart-feature.html) |
+| Marketplace Product Options + Checkout | | [Install the Marketplace Product Options + Checkout feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-checkout-feature.html) |

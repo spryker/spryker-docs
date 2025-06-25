@@ -17,7 +17,7 @@ redirect_from:
 
 This document describes how to create and implement Multi-Factor Authentication (MFA) methods.
 
-To lean more about MFA methods, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html).
+To lean more about MFA methods, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html).
 
 An MFA method consists of two components:
 
@@ -26,7 +26,7 @@ An MFA method consists of two components:
 
 ## Prerequisites
 
-[Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html)
+[Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html)
 
 ## 1) Create an MFA type plugin
 

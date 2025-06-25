@@ -5,7 +5,7 @@ This document describes how to install the Checkout feature.
 
 {% info_block warningBox %}
 
-This integration guide expects the basic feature to be in place. It only adds the [Order Threshold](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html) functionality.
+This integration guide expects the basic feature to be in place. It only adds the [Order Threshold](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html) functionality.
 
 {% endinfo_block %}
 
@@ -643,4 +643,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Glue API: Checkout |  | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html) |
+| Glue API: Checkout |  | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html) |

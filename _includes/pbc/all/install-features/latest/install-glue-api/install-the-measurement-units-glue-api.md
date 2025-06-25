@@ -8,8 +8,8 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION | LINK |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)  |
-| Product Measurement Units | {{page.version}} | [Install the Product Measurement Units feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)  |
+| Product Measurement Units | {{page.version}} | [Install the Product Measurement Units feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
 
 ## 1)  Install the required modules using Composer
 

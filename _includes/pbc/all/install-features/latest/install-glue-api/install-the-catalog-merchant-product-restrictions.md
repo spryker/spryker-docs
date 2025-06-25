@@ -4,8 +4,8 @@ Install the required features:
 
 | NAME                          | VERSION          | INSTALLATION GUIDE                                                                                                                                                                       |
 |-------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Spryker Core        | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                  |
-| Merchant Product Restrictions | {{page.version}} | [Install the Merchant Product Restrictions feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html)  |
+| Glue API: Spryker Core        | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                  |
+| Merchant Product Restrictions | {{page.version}} | [Install the Merchant Product Restrictions feature](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html)  |
 
 ### 1) Install the required modules
 

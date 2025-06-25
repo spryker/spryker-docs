@@ -1,4 +1,4 @@
-This document describes how to install the [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html) + the [CMS](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-feature-overview.html) feature, install the required features:
+This document describes how to install the [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/dynamic-multistore-feature-overview.html) + the [CMS](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-feature-overview.html) feature, install the required features:
 
 | NAME | VERSION |  
 | --- | --- |

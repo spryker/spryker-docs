@@ -14,7 +14,7 @@ To start feature integration, integrate the required features and Glue APIs:
 
 | NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
-|Alternative Products| {{page.version}} | [Install the Alternative Products feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html)|
+|Alternative Products| {{page.version}} | [Install the Alternative Products feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html)|
 |Wishlist|{{page.version}}| |
 
 ### 1) Add translations

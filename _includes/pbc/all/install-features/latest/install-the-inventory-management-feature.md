@@ -1,15 +1,15 @@
 
 
-This document describes how to install the [Inventory Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html) feature.
+This document describes how to install the [Inventory Management](/docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html) feature.
 
 {% info_block errorBox %}
 
 The following feature integration guide expects the basic feature to be in place.
 
 The current feature integration guide adds the following functionality:
-- [Warehouse Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html#warehouse-management)
-- [Add to cart from catalog page](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
-- [Warehouse address](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html#defining-a-warehouse-address)
+- [Warehouse Management](/docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html#warehouse-management)
+- [Add to cart from catalog page](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
+- [Warehouse address](/docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html#defining-a-warehouse-address)
 
 {% endinfo_block %}
 
@@ -23,7 +23,7 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                           |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules
 
@@ -810,5 +810,5 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 
 | FEATURE                  | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                                          |
 |--------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Inventory Management API |                                  | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)                |
-| Alternative Products     |                                  | [Install the Alternative Products + Inventory Management feature - ongoing](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html) |
+| Inventory Management API |                                  | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)                |
+| Alternative Products     |                                  | [Install the Alternative Products + Inventory Management feature - ongoing](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html) |

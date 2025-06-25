@@ -1,4 +1,4 @@
-This document describes how to install the Analytics feature. This feature enables the Back Office UI for [Amazon QuickSight](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/amazon-quicksight.html).
+This document describes how to install the Analytics feature. This feature enables the Back Office UI for [Amazon QuickSight](/docs/pbc/all/business-intelligence/latest/amazon-quicksight-third-party-integration/amazon-quicksight.html).
 
 ## Prerequisites
 
@@ -6,7 +6,7 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ## 1) Install the required modules
 

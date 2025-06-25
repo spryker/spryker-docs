@@ -1,4 +1,4 @@
-This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html).
+This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/dynamic-multistore-feature-overview.html).
 
 ## Install feature core
 
@@ -8,7 +8,7 @@ Follow the steps below to install the Dynamic Multistore feature core.
 
 {% info_block warningBox "Project version" %}
 
-If your project is of version 202307.0 or later, go to [Enable the dynamic store feature](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#enable-the-dynamic-store-feature).
+If your project is of version 202307.0 or later, go to [Enable the dynamic store feature](/docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#enable-the-dynamic-store-feature).
 
 {% endinfo_block %}
 
@@ -16,16 +16,16 @@ If your project is of version 202307.0 or later, go to [Enable the dynamic store
 
 | NAME     | VERSION |  UPGRADE GUIDE |
 |----------|---------|---|
-| Country  | ^4.0.0  | [Upgrade the Country module](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-country-module.html) |
-| Locale   | ^4.0.0  | [Upgrade the Locale module](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-locale-module.html) |
-| Currency | ^4.0.0  | [Upgrade the Currency module](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html) |
+| Country  | ^4.0.0  | [Upgrade the Country module](/docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-country-module.html) |
+| Locale   | ^4.0.0  | [Upgrade the Locale module](/docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-locale-module.html) |
+| Currency | ^4.0.0  | [Upgrade the Currency module](/docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html) |
 
 
 2. Install the following features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-|Spryker Core  | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+|Spryker Core  | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 
 3. Install the required modules:
@@ -1386,7 +1386,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-|Spryker Core  | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+|Spryker Core  | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules
 

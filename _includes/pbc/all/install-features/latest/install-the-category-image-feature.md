@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Category Image feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html).
+This document describes how to install the [Category Image feature](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/alternative-products-feature-overview.html).
 
 ## Install feature core
 
@@ -13,7 +13,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
-| Spryker Core | {{site.version}}| [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{site.version}}| [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Category | {{site.version}} | |
 
 ### 1) Install the required modules
@@ -440,7 +440,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |---|---|---|
-| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Category | {{site.version}} | |
 
 ### 1) Install the required modules

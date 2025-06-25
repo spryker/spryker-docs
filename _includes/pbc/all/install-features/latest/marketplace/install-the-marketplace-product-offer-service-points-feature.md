@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME                         | VERSION          | INSTALLATION GUIDE                                                                                                                                                                               |
 |------------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Product Offer    | {{page.version}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
-| Product Offer + Service Points | {{page.version}} | [Install the Product Offer + Service Points feature](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-product-offer-service-points-feature.html)                            |
+| Marketplace Product Offer    | {{page.version}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
+| Product Offer + Service Points | {{page.version}} | [Install the Product Offer + Service Points feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-feature.html)                            |
 
 ### 1) Set up behavior
 

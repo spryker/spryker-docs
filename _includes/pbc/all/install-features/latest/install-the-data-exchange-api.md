@@ -739,7 +739,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-Make sure you can operate data. For instructions, see [Requesting data using the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html)
+Make sure you can operate data. For instructions, see [Requesting data using the Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html)
 
 {% endinfo_block %}
 
@@ -774,7 +774,7 @@ vendor/bin/console scheduler:resume
 
 {% info_block warningBox "Verification" %}
 
-1. Configure at least one entity in `spy_dynamic_entity_configuration`. For instructions, see [How to configure Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/configure-data-exchange-api.html).
+1. Configure at least one entity in `spy_dynamic_entity_configuration`. For instructions, see [How to configure Data Exchange API](/docs/pbc/all/data-exchange/latest/configure-data-exchange-api.html).
 2. Make sure `src\Generated\GlueBackend\Specification\spryker_backend_api.schema.yml` has been generated and contains the corresponding endpoint with correct configurations.
 
 {% endinfo_block %}

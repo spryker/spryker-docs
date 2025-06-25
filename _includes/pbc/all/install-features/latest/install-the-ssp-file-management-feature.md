@@ -13,7 +13,7 @@ This document describes how to install the Self-Service Portal (SSP) File Manage
 
 | FEATURE         | VERSION | INSTALLATION GUIDE                                                                                                                                          |
 |--------------| ------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Self-Service Portal | {{site.version}}  | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
 
 ## 1) Install the required modules

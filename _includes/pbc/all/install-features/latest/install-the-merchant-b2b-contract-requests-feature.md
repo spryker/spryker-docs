@@ -10,10 +10,10 @@ Install the required features:
 
 | NAME                      | VERSION          | INSTALLATION GUIDE                                                                                                                                                             |
 |---------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Mailing and Notifications | {{page.version}} | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/{{page.version}}/install-the-mailing-and-notifications-feature.html)                                      |
-| Merchant                  | {{page.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html)                             |
-| Merchant B2B Contracts    | {{page.version}} | [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html) |
-| Spryker Core              | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                    |
+| Mailing and Notifications | {{page.version}} | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/latest/install-the-mailing-and-notifications-feature.html)                                      |
+| Merchant                  | {{page.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-feature.html)                             |
+| Merchant B2B Contracts    | {{page.version}} | [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html) |
+| Spryker Core              | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                    |
 
 ### 1) Install the required modules
 
@@ -405,9 +405,9 @@ Overview and install the necessary features before beginning the integration ste
 
 | NAME            | VERSION          | INSTALLATION GUIDE                                                                                                                                                                             |
 |-----------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Company Account | {{page.version}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
-| Merchant        | {{page.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                             |
-| Spryker Core    | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
+| Company Account | {{page.version}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
+| Merchant        | {{page.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                             |
+| Spryker Core    | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
 
 ### 1) Install the required modules
 

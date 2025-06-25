@@ -10,8 +10,8 @@ To start feature integration, integrate the required features and Glue APIs:
 
 | NAME                      | VERSION          | INSTALLATION GUIDE                                                                                                                                              |
 |---------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core Back Office  | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)   |
-| Warehouse User Management | {{page.version}} | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html) |
+| Spryker Core Back Office  | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)   |
+| Warehouse User Management | {{page.version}} | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html) |
 
 ## 1) Set up behavior
 

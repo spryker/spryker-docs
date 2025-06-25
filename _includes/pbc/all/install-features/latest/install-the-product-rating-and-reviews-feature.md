@@ -1,6 +1,6 @@
 
 
-This document describes how to install the [Product Rating and Reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) feature.
+This document describes how to install the [Product Rating and Reviews](/docs/pbc/all/ratings-reviews/latest/ratings-and-reviews.html) feature.
 
 ## Install feature core
 
@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                                            |
 |--------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Install Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                  |
-| Product      | {{page.version}} | [Install Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Spryker Core | {{page.version}} | [Install Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                  |
+| Product      | {{page.version}} | [Install Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 ### 1) Install the required modules
 
@@ -138,7 +138,7 @@ Make sure the following changes have been applied in transfer objects:
 
 ### 3) Import product reviews
 
-For details about this step, see [Ratings and Reviews data import](/docs/pbc/all/ratings-reviews/{{page.version}}/import-and-export-data/ratings-and-reviews-data-import.html).
+For details about this step, see [Ratings and Reviews data import](/docs/pbc/all/ratings-reviews/latest/import-and-export-data/ratings-and-reviews-data-import.html).
 
 ### 4) Add translations
 

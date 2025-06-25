@@ -6,9 +6,9 @@ Install the required features:
 
 | NAME                      | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                   |
 |---------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Promotions & Discounts      | {{page.version}} | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)    |
-| Customer Account Management | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)  |
-| Spryker Core                | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                          |
+| Promotions & Discounts      | {{page.version}} | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)    |
+| Customer Account Management | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)  |
+| Spryker Core                | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                          |
 
 ## 1) Install the required modules
 
@@ -111,7 +111,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1. [Create a discount](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a `customer-reference` field.
+1. [Create a discount](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a `customer-reference` field.
 2. Add the `max-uses-per-customer` condition with value `1`.
 3. Log in as a customer with a customer reference defined in the discount you've created. Make sure that the discount is applied to the cart automatically.
 4. Place an order. Make sure a relationship between the customer and the discount is created in the `spy_customer_discount` database table.

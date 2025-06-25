@@ -4,7 +4,7 @@
 
 The following feature integration guide expects the basic feature to be in place.
 
-The current feature installation guide only adds the [Add product to cart from the Catalog page](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/cart-feature-overview/quick-order-from-the-catalog-page-overview.html) and Dynamic cart page update functionality.
+The current feature installation guide only adds the [Add product to cart from the Catalog page](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/cart-feature-overview/quick-order-from-the-catalog-page-overview.html) and Dynamic cart page update functionality.
 
 {% endinfo_block %}
 
@@ -18,7 +18,7 @@ Install the required features:
 
 | NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules
 
@@ -75,7 +75,7 @@ Install the required features:
 
 | NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules
 

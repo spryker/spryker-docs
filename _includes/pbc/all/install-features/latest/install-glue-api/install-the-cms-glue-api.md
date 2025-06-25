@@ -8,8 +8,8 @@ Install the required features:
 
 | NAME     | VERSION | REQUIRED SUB-FEATURE     |
 | --------- | ------ | ------------------------ |
-| Spryker Core | {{page.version}}  | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| CMS          | {{page.version}}  | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
+| Spryker Core | {{page.version}}  | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| CMS          | {{page.version}}  | [Install the CMS feature](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
 
 ## 1) Install the required modules
 
@@ -198,5 +198,5 @@ Integrate the following related features:
 
 | FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE     |
 | ---------- | ----------------- | ---------------------------- |
-| Content items |                                  | [Install the Content Items feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html) |
-| CMS           | ✓                                | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
+| Content items |                                  | [Install the Content Items feature](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html) |
+| CMS           | ✓                                | [Install the CMS feature](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |

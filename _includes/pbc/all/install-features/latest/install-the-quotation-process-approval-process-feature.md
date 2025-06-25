@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME              | VERSION          | INSTALLATION GUIDE |
 |-------------------|------------------|------------------|
-| Quotation Process | {{page.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{page.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
-| Approval Process  | {{page.version}} | [Install the Approval Process feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html) |
+| Quotation Process | {{page.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/latest/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
+| Approval Process  | {{page.version}} | [Install the Approval Process feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html) |
 
 ### 1) Set up behavior
 

@@ -1,4 +1,4 @@
-This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html) + the [Availability Notification](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/availability-notification-feature-overview.html) feature.
+This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/dynamic-multistore-feature-overview.html) + the [Availability Notification](/docs/pbc/all/warehouse-management-system/latest/base-shop/availability-notification-feature-overview.html) feature.
 
 ## Install feature core
 

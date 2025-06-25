@@ -6,13 +6,13 @@ Install the required features:
 
 | NAME                         | VERSION          | INSTALLATION GUIDE                                                                                                                                                                            |
 |------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                 | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                   |
-| Merchant                     | {{site.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                            |
-| Acl                          | {{site.version}} | [Install the ACL feature](/docs/pbc/all/user-management/{{site.version}}/base-shop/install-and-upgrade/install-the-acl-feature.html)                                                          |
-| Cart                         | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                     |
-| Order Management             | {{site.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)       |
-| Marketplace Order Management | {{site.version}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
-| Marketplace Merchant         | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Spryker Core                 | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                   |
+| Merchant                     | {{site.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                            |
+| Acl                          | {{site.version}} | [Install the ACL feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-acl-feature.html)                                                          |
+| Cart                         | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                     |
+| Order Management             | {{site.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)       |
+| Marketplace Order Management | {{site.version}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
+| Marketplace Merchant         | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 
 ## 1) Install the required modules
 
@@ -1081,13 +1081,13 @@ Install the required features:
 
 | NAME                         | VERSION          | INSTALLATION GUIDE                                                                                                                                                                            |
 |------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                 | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                   |
-| Merchant                     | {{site.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                            |
-| Acl                          | {{site.version}} | [Install the ACL feature](/docs/pbc/all/user-management/{{site.version}}/base-shop/install-and-upgrade/install-the-acl-feature.html)                                                          |
-| Cart                         | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                     |
-| Order Management             | {{site.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)       |
-| Marketplace Order Management | {{site.version}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
-| Marketplace Merchant         | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Spryker Core                 | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                   |
+| Merchant                     | {{site.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                            |
+| Acl                          | {{site.version}} | [Install the ACL feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-acl-feature.html)                                                          |
+| Cart                         | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                     |
+| Order Management             | {{site.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)       |
+| Marketplace Order Management | {{site.version}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
+| Marketplace Merchant         | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 
 ## 1) Install the required modules
 

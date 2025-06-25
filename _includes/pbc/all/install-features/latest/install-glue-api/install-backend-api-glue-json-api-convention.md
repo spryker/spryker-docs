@@ -13,7 +13,7 @@ Install the required features:
 
 | NAME           | VERSION          | INSTALLATION GUIDE                                                                                                                     |
 |----------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core   | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
+| Spryker Core   | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
 
 ### 1) Install the required modules
 
@@ -135,6 +135,6 @@ class GlueJsonApiConventionDependencyProvider extends SprykerGlueJsonApiConventi
 
 {% info_block warningBox "Verification" %}
 
-To verify that everything is set up correctly and that you can access the endpoint, see [Create backend resources](/docs/dg/dev/glue-api/{{site.version}}/routing/create-backend-resources.html).
+To verify that everything is set up correctly and that you can access the endpoint, see [Create backend resources](/docs/dg/dev/glue-api/latest/routing/create-backend-resources.html).
 
 {% endinfo_block %}

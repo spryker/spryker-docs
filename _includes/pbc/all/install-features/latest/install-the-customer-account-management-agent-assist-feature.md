@@ -12,8 +12,8 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                  |
 |-----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Customer Account ManagemenT | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
-| Agent Assist                | {{page.version}} | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                               |
+| Customer Account ManagemenT | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Agent Assist                | {{page.version}} | [Install the Agent Assist feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                               |
 
 ### 1) Install the required modules
 
@@ -278,6 +278,6 @@ Install the following related features:
 
 | FEATURE                     | INSTALLATION GUIDE                                                                                                                                                 |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Customer Account Management | [Customer Acount Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
-| Agent Assist                | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                              |
-| Agent Assist API            | [Install the Agent Assist Glue API](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)  |
+| Customer Account Management | [Customer Acount Management feature integration](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Agent Assist                | [Install the Agent Assist feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                              |
+| Agent Assist API            | [Install the Agent Assist Glue API](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)  |

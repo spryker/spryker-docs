@@ -1,6 +1,6 @@
 
 
-This document describes how to add *multiple abstract products as promotional products* to the [Promotions & Discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/promotions-discounts-feature-overview.html) feature.
+This document describes how to add *multiple abstract products as promotional products* to the [Promotions & Discounts](/docs/pbc/all/discount-management/latest/base-shop/promotions-discounts-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Promotions & Discounts | {{page.version}} | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) |
-| Spryker Cart | {{page.version}}   | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| Promotions & Discounts | {{page.version}} | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) |
+| Spryker Cart | {{page.version}}   | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 
 ### 1) Install the required modules
 
@@ -151,7 +151,7 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 
 Ensure that the plugin works correctly:
 
-1. [Create a discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
+1. [Create a discount](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html).
 2. On the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**.
 3. Add **ABSTRACT PRODUCT SKU**.
 4. Create another discount with one or more identic promotional products.

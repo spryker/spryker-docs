@@ -10,9 +10,9 @@ Install the required features:
 
 | NAME                   | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                |
 |------------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Promotions & Discounts | {{page.version}} | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) |
-| Order Management       | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)           |
-| Spryker Core           | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                       |
+| Promotions & Discounts | {{page.version}} | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) |
+| Order Management       | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)           |
+| Spryker Core           | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                       |
 
 ### 1) Install the required modules
 
@@ -66,7 +66,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1. [Create a discount](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a `customer-order-count` field.
+1. [Create a discount](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a `customer-order-count` field.
 2. Log in as a customer with a number of orders that fulfills the discount condition.
 3. Add any product to the cart.
 4. Verify that the discount is applied to the cart.
@@ -147,7 +147,7 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
 
 {% info_block warningBox "Verification" %}
 
-1. [Create a discount](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a `customer-order-count` field.
+1. [Create a discount](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a `customer-order-count` field.
 2. Log in as a customer with a number of orders that fulfills the discount condition.
 3. Add any product offer (merchant product) to the cart.
 4. Verify that the discount is applied to the cart.

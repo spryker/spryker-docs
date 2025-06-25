@@ -1,4 +1,4 @@
-This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html) + the [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature.
+This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/dynamic-multistore-feature-overview.html) + the [Customer Account Management](/docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -44,7 +44,7 @@ class CustomerConfig extends SprykerCustomerConfig
 
 {% info_block warningBox "Verification" %}
 
-1. [Create a customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/create-customers.html).
+1. [Create a customer](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/customers/create-customers.html).
 2. On the **Customers** page, next to the created customer, click **View**.
 3. On the **View Customer** page, make sure that the **Customer Reference** contains the prefix you've configured.
 

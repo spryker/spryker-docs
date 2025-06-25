@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [File Manager feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/file-manager-feature-overview.html).
+This document describes how to install the [File Manager feature](/docs/pbc/all/content-management-system/latest/base-shop/file-manager-feature-overview.html).
 
 ## Install feature core
 
@@ -13,7 +13,7 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                           |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Install the Spryker core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules
 

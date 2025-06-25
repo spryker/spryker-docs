@@ -1,4 +1,4 @@
-This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html) + the [Prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/prices-feature-overview.html) feature.
+This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/dynamic-multistore-feature-overview.html) + the [Prices](/docs/pbc/all/price-management/latest/base-shop/prices-feature-overview/prices-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -18,7 +18,7 @@ Install the required features:
 Since Dynamic Multistore is now enabled, configuration of stores is stored in the database, making `config/Shared/stores.php` deprecated.
 
 The default store configuration is imported using new data import modules, like `CurrencyDataImport`. These modules populate the store configuration in the database.
-The `Currency` module is responsible for extending store data and configuring it in the database. For upgrade instructions, see [Upgrade the Currency module](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html).
+The `Currency` module is responsible for extending store data and configuring it in the database. For upgrade instructions, see [Upgrade the Currency module](/docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html).
 
 {% endinfo_block %}
 

@@ -1,6 +1,6 @@
 
 
-This document describes how to install the [Marketplace Product feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-feature-overview.html).
+This document describes how to install the [Marketplace Product feature](/docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html).
 
 ## Install feature core
 
@@ -12,9 +12,9 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE        |
 | --------------- | -------- | ------------------ |
-| Spryker Core         | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
-| Product   | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Spryker Core         | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Product   | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 ### 1) Install the required modules
 
@@ -818,8 +818,8 @@ Make sure you can filter concrete products by merchant reference while searching
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | - | - | - |
-| Marketplace Product API | | [Install the Marketplace Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-glue-api.html) |
-| Marketplace Product + Marketplace Product Offer | | [Install the Marketplace Product + Marketplace Product Offer feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-marketplace-product-offer-feature.html) |
-| Marketplace Product + Inventory Management | | [Install the Marketplace Product + Inventory Management feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-inventory-management-feature.html) |
-| Marketplace Product + Cart | | [Install the Marketplace Product + Cart feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-cart-feature.html) |
-| Marketplace Product + Quick Add to Cart | | [Install the Marketplace Product + Quick Add to Cart feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-quick-add-to-cart-feature.html) |
+| Marketplace Product API | | [Install the Marketplace Product Glue API](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-glue-api.html) |
+| Marketplace Product + Marketplace Product Offer | | [Install the Marketplace Product + Marketplace Product Offer feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-marketplace-product-offer-feature.html) |
+| Marketplace Product + Inventory Management | | [Install the Marketplace Product + Inventory Management feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-inventory-management-feature.html) |
+| Marketplace Product + Cart | | [Install the Marketplace Product + Cart feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-cart-feature.html) |
+| Marketplace Product + Quick Add to Cart | | [Install the Marketplace Product + Quick Add to Cart feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-quick-add-to-cart-feature.html) |

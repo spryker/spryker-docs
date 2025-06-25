@@ -652,7 +652,7 @@ class CompanyBusinessUnitGuiDependencyProvider extends SprykerCompanyBusinessUni
 
 Log in to a customer account which has multiple company users and a default one. In the session, check if the default company user is assigned to the customer and the `IsOnBehalf` property is set correctly for the customer.
 
-Make sure that token generation for a company user works. For more information, see [HowTo: Generate a Token for Login](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/generate-login-tokens.html).
+Make sure that token generation for a company user works. For more information, see [HowTo: Generate a Token for Login](/docs/pbc/all/customer-relationship-management/latest/base-shop/generate-login-tokens.html).
 
 To make sure the `CompanyBusinessUnitCompanyUserStorageExpanderPlugin` is set up correctly, check the data exported to the key-value storage key `kv:company_user:1` for the `id_company_business_unit:id`. `id_company_business_unit` must be set up to a correct foreign key of the business unit that the company user is assigned to.
 

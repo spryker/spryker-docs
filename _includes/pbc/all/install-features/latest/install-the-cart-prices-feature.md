@@ -15,9 +15,9 @@ Install the required features:
 
 | NAME                                        | VERSION          |        REQUIRED |    INSTALLATION GUIDE                                                                                                                                                 |
 |---------------------------------------------|------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| Cart                                        | {{site.version}} |       v         |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                            |
-| Prices                                      | {{site.version}} |          v         |[Install the Prices feature](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)              |
-| Marketplace Product Offer Prices  | {{site.version}} |                 |  [Install the Marketplace Product Offer Prices feature](/docs/pbc/all/price-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html) |
+| Cart                                        | {{site.version}} |       v         |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                            |
+| Prices                                      | {{site.version}} |          v         |[Install the Prices feature](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)              |
+| Marketplace Product Offer Prices  | {{site.version}} |                 |  [Install the Marketplace Product Offer Prices feature](/docs/pbc/all/price-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html) |
 
 ### 1) Install the required modules
 
@@ -75,7 +75,7 @@ The `PriceCartConnectorConfig::getItemFieldsForIdentifier()` lets you set up a l
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Marketplace Product Offer Prices](/docs/pbc/all/price-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html) feature installed.
+Apply the following changes only if you have the [Marketplace Product Offer Prices](/docs/pbc/all/price-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html) feature installed.
 
 {% endinfo_block %}
 

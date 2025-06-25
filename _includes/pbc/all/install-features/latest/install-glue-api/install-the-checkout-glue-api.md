@@ -1,4 +1,4 @@
-This document describes how to install the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html) Glue API.
+This document describes how to install the [Checkout](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html) Glue API.
 
 ## Prerequisites
 
@@ -6,11 +6,11 @@ Install the required features:
 
 | FEATURE                                 | VERSION          | INSTALLATION GUIDE                                                                                                                                                                      |
 |-----------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Spryker Core                  | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                           |
-| Glue API: Cart                          | {{page.version}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                             |
-| Glue API: Customer Account Management   | {{page.version}} | [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
-| Glue API: Payments                      | {{page.version}} | [Install the Payments Glue API](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-glue-api.html)                      |
-| Glue API: Shipment                      | {{page.version}} | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                   |
+| Glue API: Spryker Core                  | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                           |
+| Glue API: Cart                          | {{page.version}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                             |
+| Glue API: Customer Account Management   | {{page.version}} | [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
+| Glue API: Payments                      | {{page.version}} | [Install the Payments Glue API](/docs/pbc/all/payment-service-provider/latest/base-shop/install-and-upgrade/install-the-payments-glue-api.html)                      |
+| Glue API: Shipment                      | {{page.version}} | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                   |
 
 ## 1) Install the required modules
 
@@ -623,7 +623,7 @@ Make sure `GuestCartByRestCheckoutDataResourceRelationshipPlugin` has been activ
 
 {% endinfo_block %}
 
-For more details, see [Interact with third party payment providers using Glue API](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/interact-with-third-party-payment-providers-using-glue-api.html).
+For more details, see [Interact with third party payment providers using Glue API](/docs/pbc/all/payment-service-provider/latest/base-shop/interact-with-third-party-payment-providers-using-glue-api.html).
 
 ### Configure mapping
 
@@ -840,7 +840,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 Ensure that the plugins work correctly:
 
-1. [Set up a minimum hard threshold](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-in-the-back-office/define-global-thresholds.html#define-a-minimum-hard-threshold).
+1. [Set up a minimum hard threshold](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-in-the-back-office/define-global-thresholds.html#define-a-minimum-hard-threshold).
 2. Add a product to cart with a price lower than the threshold you've set.
 3. Send the request: `GET https://glue.mysprykershop.com/carts/{cart-uuid}`
     Make sure the message about threshold conditions not being met is returned. Example:
@@ -1003,5 +1003,5 @@ Activate the following plugins:
 
 | FEATURE            | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                      |
 |--------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Shipment | ✓                                | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                     |
-| Glue API: Payments | ✓                                | [Install the Payments Glue API](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-glue-api.html)      |
+| Glue API: Shipment | ✓                                | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                     |
+| Glue API: Payments | ✓                                | [Install the Payments Glue API](/docs/pbc/all/payment-service-provider/latest/base-shop/install-and-upgrade/install-the-payments-glue-api.html)      |

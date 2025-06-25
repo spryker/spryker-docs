@@ -15,8 +15,8 @@ Install the required features:
 
 | FEATURE | VERSION | INSTALLATION GUIDE  |
 | --- | --- |--- |
-| Spryker Core	 | {{page.version}} |[Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Shopping Lists	 | {{page.version}} |[Install the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html) |
+| Spryker Core	 | {{page.version}} |[Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Shopping Lists	 | {{page.version}} |[Install the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html) |
 
 ## 1) Install the required modules
 
@@ -108,7 +108,7 @@ SELECT COUNT(*) FROM spy_shopping_list_item WHERE uuid IS NULL;
 
 {% info_block infoBox %}
 
-`ShoppingListsResourcePlugin` GET, POST, PATCH and DELETE, `ShoppingListItemsResourcePlugin` POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](/docs/dg/dev/glue-api/{{page.version}}/rest-api/glue-infrastructure.html).
+`ShoppingListsResourcePlugin` GET, POST, PATCH and DELETE, `ShoppingListItemsResourcePlugin` POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](/docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html).
 
 {% endinfo_block %}
 

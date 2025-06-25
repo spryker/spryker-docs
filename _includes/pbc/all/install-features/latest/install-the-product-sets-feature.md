@@ -1,6 +1,6 @@
 
 
-This document describes how to install the [Product Sets feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/product-sets-feature-overview.html).
+This document describes how to install the [Product Sets feature](/docs/pbc/all/content-management-system/latest/base-shop/product-sets-feature-overview.html).
 
 ## Prerequisites
 
@@ -164,7 +164,7 @@ class ProductSetDependencyProvider extends SprykerProductSetDependencyProvider
 
 {% info_block warningBox "Sorting product sets" %}
 
-You can reorder product sets in the Back Office. See [Reorder product sets](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/product-sets/reorder-product-sets.html) for more details.
+You can reorder product sets in the Back Office. See [Reorder product sets](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/product-sets/reorder-product-sets.html) for more details.
 
 {% endinfo_block %}
 

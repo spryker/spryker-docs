@@ -15,9 +15,11 @@ This document describes how to activate MFA emthods to send requests to protecte
 
 
 
-## Activate MFA
+## Request MFA code
 
-To activate MFA, send the request:
+An MFA code is needed for both activating and deactivating MFA.
+
+To request an MFA code, send the request:
 
 ---
 `POST` **/multi-factor-auth-type-activate**
@@ -46,6 +48,8 @@ Content-Type: application/json
 `204 No Content` response means that the code has been sent to the method specified in the request.
 
 ## Submit MFA activation code
+
+To request an MFA activation code, see [Request MFA code](#request-mfa-code).
 
 To submit MFA verification code, send the request:
 
@@ -77,11 +81,16 @@ Content-Type: application/json
 
 
 
-## 4) Deactivate an MFA Method
+## Submit MFA deactivation code
 
-To remove an active MFA method, you must first [trigger the code](#3.1-trigger-mfa) (if needed), and then call the deactivation endpoint with the received code.
+To request an MFA deactivation code, see [Request MFA code](#request-mfa-code).
 
-Request
+To submit MFA verification code, send the request:
+
+`POST` **/multi-factor-auth-type-deactivate**
+
+
+### Request
 
 ```http
 POST /multi-factor-auth-type-deactivate
@@ -99,7 +108,7 @@ Content-Type: application/json
 }
 ```
 
-
+### Response
 
 
 

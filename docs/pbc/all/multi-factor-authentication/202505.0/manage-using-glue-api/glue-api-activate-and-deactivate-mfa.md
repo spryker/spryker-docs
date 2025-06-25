@@ -56,6 +56,9 @@ To submit MFA verification code, send the request:
 ---
 `POST` **/multi-factor-auth-type-verify**
 
+---
+
+
 ### Request
 
 ```http
@@ -87,7 +90,10 @@ To request an MFA deactivation code, see [Request MFA code](#request-mfa-code).
 
 To submit MFA verification code, send the request:
 
+---
 `POST` **/multi-factor-auth-type-deactivate**
+
+---
 
 
 ### Request

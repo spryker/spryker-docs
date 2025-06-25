@@ -1,12 +1,30 @@
-## 2) Activating MFA (First-time Setup)
+---
+title: "Glue API: Activate and deactivate MFA"
+description: This article explains how to activate and decativate MFA methods using Glue API
+last_updated: Jun 16, 2025
+template: glue-api-storefront-guide-template
+---
 
-If the method status is 0 (not enabled), you need to activate MFA.
+This document describes how to activate MFA emthods to send requests to protected resources. To check if MFA is activated for your user, see [Retrieve MFA methods](/docs/pbc/all/multi-factor-authentication/202505.0/manage-using-glue-api/glue-api-retrieve-mfa-methods.html).
 
-### 2.1) Trigger activation
 
-This sends a code to the user via the selected method (for example, email).
+## Installation
 
-**Request**
+- [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html)
+- [Install Customer Email Multi-Factor Authentication method](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-customer-email-multi-factor-authentication-method.html)
+
+
+
+## Activate MFA
+
+To activate MFA, send the request:
+
+---
+`POST` **/multi-factor-auth-type-activate**
+
+---
+
+### Request 
 
 ```http
 POST /multi-factor-auth-type-activate
@@ -23,21 +41,18 @@ Content-Type: application/json
 }
 ```
 
-**Response**: 204 No Content — code has been sent.
+### Response
 
-### 2.2) Verify the code
+`204 No Content` response means that the code has been sent to the method specified in the request.
 
-After the activation request, the system sends a verification code to the user's email address (or the method specified). The user should retrieve the code from their email inbox.
+## Submit MFA activation code
 
-{% info_block infoBox "Note" %}
+To submit MFA verification code, send the request:
 
-💡 For email MFA, the code is typically sent to the email address associated with the authenticated user.
+---
+`POST` **/multi-factor-auth-type-verify**
 
-{% endinfo_block %}
-
-Once the code is received, verify it using the following request. The verification code must be provided in the `X-MFA-Code` header:
-
-**Request**
+### Request
 
 ```http
 POST /multi-factor-auth-type-verify
@@ -55,10 +70,9 @@ Content-Type: application/json
 }
 ```
 
-**Response**: 204 No Content — the MFA method is now activated and enabled.
+### Response
 
-
-
+`204 No Content` response means that the the MFA method has been activated for the user.
 
 
 
@@ -67,7 +81,7 @@ Content-Type: application/json
 
 To remove an active MFA method, you must first [trigger the code](#3.1-trigger-mfa) (if needed), and then call the deactivation endpoint with the received code.
 
-**Request**
+Request
 
 ```http
 POST /multi-factor-auth-type-deactivate
@@ -84,3 +98,50 @@ Content-Type: application/json
   }
 }
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

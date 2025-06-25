@@ -98,4 +98,4 @@ The configuration to integrate invoice payments using Payolution is:
 
 ### Performing Requests
 
-In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. See [Payolution—Performing Requests](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payolution/payolution-performing-requests.html) for a summary. You can also use the facade methods directly which, however, are invoked by the state machine.
+In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. See [Payolution—Performing Requests](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/payolution-performing-requests.html) for a summary. You can also use the facade methods directly which, however, are invoked by the state machine.

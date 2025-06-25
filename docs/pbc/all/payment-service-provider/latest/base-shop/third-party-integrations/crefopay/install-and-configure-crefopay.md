@@ -100,8 +100,8 @@ CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_BILL => 'CrefoPayBill01',
 ];
 ```
 
-See [CrefoPay payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/crefopay/crefopay-payment-methods.html) for more information on the payment methods provided by CrefoPay.
+See [CrefoPay payment methods](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-payment-methods.html) for more information on the payment methods provided by CrefoPay.
 
 ## Next steps
 
-Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/crefopay/integrate-crefopay.html).
+Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/integrate-crefopay.html).

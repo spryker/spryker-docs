@@ -87,4 +87,4 @@ The following table describes the attributes you select and enter when adding Un
 | UNZER PUBLIC KEY | Unique public key which Unzer provides to each external merchant to accept payments. The key is store-specific. |
 | UNZER PRIVATE KEY | Unique private key which Unzer provides to each external merchant to accept payments. The key is store-specific. |
 | MERCHANT REFERENCE | Merchant ID on the Spryker side. |
-| PARTICIPANT ID | Merchant reference on the Unzer side, which identifies a merchant who receives money when the order is paid and gets the [status](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html#reference-information-changing-the-state-of-order-items) `payment completed`. |
+| PARTICIPANT ID | Merchant reference on the Unzer side, which identifies a merchant who receives money when the order is paid and gets the [status](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html#reference-information-changing-the-state-of-order-items) `payment completed`. |

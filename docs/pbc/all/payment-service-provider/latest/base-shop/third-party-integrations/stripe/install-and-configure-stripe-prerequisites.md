@@ -10,7 +10,7 @@ redirect_from:
 - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/sccos-prerequisites-for-the-stripe-app.html
 ---
 
-To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html), take the following steps.
+To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/stripe.html), take the following steps.
 
 
 ## Fulfill Stripe's prerequisites
@@ -328,4 +328,4 @@ If your application follows a headless design, enable CORS. For instructions, se
 
 ## Next step
 
-[Connect and configure Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/connect-and-configure-stripe.html)
+[Connect and configure Stripe](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/connect-and-configure-stripe.html)

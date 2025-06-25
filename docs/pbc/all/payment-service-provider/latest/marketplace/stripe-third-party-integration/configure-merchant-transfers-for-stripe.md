@@ -21,4 +21,4 @@ For more details on merchant commissions, see [Marketplace Merchant Commission f
 
 ## Next step
 
-[Connect and configure Stripe for Marketplace](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html)
+[Connect and configure Stripe for Marketplace](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html)

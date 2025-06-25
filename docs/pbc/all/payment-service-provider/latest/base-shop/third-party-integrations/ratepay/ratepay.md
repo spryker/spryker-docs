@@ -55,16 +55,16 @@ RatePAY provides four methods of payment
 
 ## Related Developer guides
 
-- [RatePay Core module structure diagram](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay-core-module-structure-diagram.html)
-- [RatePay state machines](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay-state-machines.html)
-- [Integrating the Direct Debit payment method for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html)
-- [Integrating the Installment payment method for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-installment-payment-method-for-ratepay.html)
-- [Integrating the Invoice payment method for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-invoice-payment-method-for-ratepay.html)
-- [Integrating the Prepayment payment method for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-prepayment-payment-method-for-ratepay.html)
-- [Disabling address updates from the backend application for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/disable-address-updates-from-the-backend-application-for-ratepay.html)
-- [RatePay facade methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay-facade-methods.html)
-- [RatePay payment workflow](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay-payment-workflow.html)
-- [RatePay state machine commands and conditions](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html)
+- [RatePay Core module structure diagram](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-core-module-structure-diagram.html)
+- [RatePay state machines](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-state-machines.html)
+- [Integrating the Direct Debit payment method for RatePay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html)
+- [Integrating the Installment payment method for RatePay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-installment-payment-method-for-ratepay.html)
+- [Integrating the Invoice payment method for RatePay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-invoice-payment-method-for-ratepay.html)
+- [Integrating the Prepayment payment method for RatePay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-prepayment-payment-method-for-ratepay.html)
+- [Disabling address updates from the backend application for RatePay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/disable-address-updates-from-the-backend-application-for-ratepay.html)
+- [RatePay facade methods](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-facade-methods.html)
+- [RatePay payment workflow](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-payment-workflow.html)
+- [RatePay state machine commands and conditions](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html)
 ---
 
 ## Copyright and Disclaimer

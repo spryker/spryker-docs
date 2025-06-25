@@ -14,7 +14,7 @@ This document describes how to connect and configure the Stripe app in the Back 
 
 ## Prerequisites
 
-- [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
+- [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
 - Obtain Stripe account ID in [Stripe Dashboard](https://dashboard.stripe.com). For more details, see [Stripe account ID](https://stripe.com/docs/payments/account).
 
 ## Connect and configure the Stripe app
@@ -57,4 +57,4 @@ To run a destructive deployment, follow the steps:
 
 ## Next steps
 
-Activate the Stripe payment method. For instructions, see [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html).
+Activate the Stripe payment method. For instructions, see [Edit payment methods](/docs/pbc/all/payment-service-provider/latest/base-shop/manage-in-the-back-office/edit-payment-methods.html).

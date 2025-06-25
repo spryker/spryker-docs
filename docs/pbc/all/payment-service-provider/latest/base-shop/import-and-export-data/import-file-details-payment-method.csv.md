@@ -20,7 +20,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `payment_method.csv` file to configure the [Payment Method](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/payments-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `payment_method.csv` file to configure the [Payment Method](/docs/pbc/all/payment-service-provider/latest/base-shop/payments-feature-overview.html) information in your Spryker Demo Shop.
 
 ## Import file parameters
 

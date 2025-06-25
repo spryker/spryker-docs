@@ -5,11 +5,11 @@ last_updated: Nov 1, 2024
 template: howto-guide-template
 ---
 
-To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html), take the following steps.
+To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/stripe.html), take the following steps.
 
 ## Prerequisites
 
-[Install and configure Stripe prerequisites for base shop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
+[Install and configure Stripe prerequisites for base shop](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
 
 ## Install and update modules
 

@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/user/features/202204.0/payments-feature-overview.html
 ---
 
-The *Payments* feature lets your customers pay for orders with none (for example, a [gift card](/docs/pbc/all/gift-cards/{{page.version}}/gift-cards.html)), one, or multiple payment methods during the checkout process. Most orders are paid with a single payment method, but in some cases, it may be useful to allow multiple payment methods. For example, the customer may want to use two credit cards or a gift card in addition to a traditional payment method.
+The *Payments* feature lets your customers pay for orders with none (for example, a [gift card](/docs/pbc/all/gift-cards/latest/gift-cards.html)), one, or multiple payment methods during the checkout process. Most orders are paid with a single payment method, but in some cases, it may be useful to allow multiple payment methods. For example, the customer may want to use two credit cards or a gift card in addition to a traditional payment method.
 
 With different payment gateways, like Amazon Pay, PayPal, and BS Payone, you can adapt to your customers' needs and define the availability of payment methods based on customer preferences and country-specific regulations.
 
@@ -30,22 +30,22 @@ The Spryker Commerce OS offers integrations with several payment providers that 
 
 The Spryker Commerce OS supports the integration of the following payment providers, which are our official partners:
 
-- [Adyen](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/adyen.html)
-- [AfterPay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/afterpay/afterpay.html)
-- [Amazon Pay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/amazon-pay/amazon-pay.html)
-- [Arvato](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/arvato/arvato.html)
-- [Billie](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/billie.html)
-- [Billpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/billpay/billpay.html)
-- [Braintree](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/braintree/braintree.html)
-- [BS Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/payone.html)
-- [Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/computop.html)
-- [CrefoPay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/crefopay/crefopay.html)
-- [Heidelpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/heidelpay.html)
-- [Klarna](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/klarna/klarna.html)
-- [Payolution](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payolution/payolution.html)
-- [Powerpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/powerpay.html)
-- [ratenkauf by easyCredit](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
-- [RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay.html)
+- [Adyen](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/adyen.html)
+- [AfterPay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/afterpay/afterpay.html)
+- [Amazon Pay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/amazon-pay.html)
+- [Arvato](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/arvato/arvato.html)
+- [Billie](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/billie.html)
+- [Billpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/billpay/billpay.html)
+- [Braintree](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/braintree.html)
+- [BS Payone](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/payone.html)
+- [Computop](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/computop.html)
+- [CrefoPay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay.html)
+- [Heidelpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/heidelpay.html)
+- [Klarna](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna.html)
+- [Payolution](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/payolution.html)
+- [Powerpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/powerpay.html)
+- [ratenkauf by easyCredit](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
+- [RatePay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay.html)
 
 ## Dummy payment
 
@@ -58,13 +58,13 @@ In the Back Office, you can view all payment methods available in the shop appli
 
 {% info_block warningBox "Note" %}
 
-Before managing payment methods in the Back Office, you need to create them by [importing payment methods data using a .CSV file](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/import-and-export-data/import-file-details-payment-method.csv.html).
+Before managing payment methods in the Back Office, you need to create them by [importing payment methods data using a .CSV file](/docs/pbc/all/payment-service-provider/latest/base-shop/import-and-export-data/import-file-details-payment-method.csv.html).
 
 {% endinfo_block %}
 
 ![List of payment methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Payment/Payment+Methods+Overview/payment-methods-list.png)
 
-To learn more on how to make a payment method available during the checkout and assign it to a different store, see [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html).
+To learn more on how to make a payment method available during the checkout and assign it to a different store, see [Edit payment methods](/docs/pbc/all/payment-service-provider/latest/base-shop/manage-in-the-back-office/edit-payment-methods.html).
 
 <!-- Managing Payment Methods in the Back Office
 
@@ -80,13 +80,13 @@ Hydrating payment methods for an order
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [View payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/view-payment-methods.html)   |
-| [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html)   |
+| [View payment methods](/docs/pbc/all/payment-service-provider/latest/base-shop/manage-in-the-back-office/view-payment-methods.html)   |
+| [Edit payment methods](/docs/pbc/all/payment-service-provider/latest/base-shop/manage-in-the-back-office/edit-payment-methods.html)   |
 
 ## Related Developer articles
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|---|
-| [Install the Payments feature](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-feature.html) | [Payment migration guide](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/upgrade-the-payment-module.html) | [Update payment data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html) | [File details: payment_method.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html) | [HowTo: Hydrate payment methods for an order](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/hydrate-payment-methods-for-an-order.html) | |
-|  |  |  | [File details: payment_method_store.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html) | [Implementing Direct Debit Payment](/docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html) |  |
-|  |  |  |  | [Interact with third party payment providers using Glue API](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/interact-with-third-party-payment-providers-using-glue-api.html) |  |
+| [Install the Payments feature](/docs/pbc/all/payment-service-provider/latest/base-shop/install-and-upgrade/install-the-payments-feature.html) | [Payment migration guide](/docs/pbc/all/payment-service-provider/latest/base-shop/install-and-upgrade/upgrade-the-payment-module.html) | [Update payment data](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html) | [File details: payment_method.csv](/docs/pbc/all/payment-service-provider/latest/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html) | [HowTo: Hydrate payment methods for an order](/docs/pbc/all/payment-service-provider/latest/base-shop/hydrate-payment-methods-for-an-order.html) | |
+|  |  |  | [File details: payment_method_store.csv](/docs/pbc/all/payment-service-provider/latest/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html) | [Implementing Direct Debit Payment](/docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html) |  |
+|  |  |  |  | [Interact with third party payment providers using Glue API](/docs/pbc/all/payment-service-provider/latest/base-shop/interact-with-third-party-payment-providers-using-glue-api.html) |  |

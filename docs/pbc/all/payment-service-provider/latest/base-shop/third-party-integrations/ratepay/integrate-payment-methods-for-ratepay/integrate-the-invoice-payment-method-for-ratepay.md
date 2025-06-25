@@ -80,4 +80,4 @@ The configuration to integrate invoice payments using RatePAY is:
 
 ## Perform Requests
 
-To perform the needed requests,  use the [RatePAY State Machine Commands and Conditions](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html) . You can also use the `facademethods`directly which, however, are invoked by the state machine.
+To perform the needed requests,  use the [RatePAY State Machine Commands and Conditions](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html) . You can also use the `facademethods`directly which, however, are invoked by the state machine.

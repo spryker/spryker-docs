@@ -49,10 +49,10 @@ Because of PCI compliance reasons, credit card data is communicated to the third
 
 ## Related Developer guides
 
-- [Installing and configuring Braintree](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/braintree/install-and-configure-braintree.html)
-- [Integrating Braintree](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/braintree/integrate-braintree.html)
-- [Braintree - Request workflow](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/braintree/braintree-request-workflow.html)
-- [Braintree - Performing requests](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/braintree/braintree-performing-requests.html)
+- [Installing and configuring Braintree](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/install-and-configure-braintree.html)
+- [Integrating Braintree](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/integrate-braintree.html)
+- [Braintree - Request workflow](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/braintree-request-workflow.html)
+- [Braintree - Performing requests](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/braintree-performing-requests.html)
 
 
 ---

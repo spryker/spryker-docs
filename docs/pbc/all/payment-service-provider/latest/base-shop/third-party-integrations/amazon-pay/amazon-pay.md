@@ -34,11 +34,11 @@ Subsequent all integration functionality is provided by Amazon Pay.
 
 ## Related Developer guides
 
-- [Configuring Amazon Pay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/amazon-pay/configure-amazon-pay.html)
-- [Amazon Pay - Sandbox Simulations](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/amazon-pay/amazon-pay-sandbox-simulations.html)
-- [Amazon Pay - State Machine](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/amazon-pay/amazon-pay-state-machine.html)
-- [Handling orders with Amazon Pay API](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/amazon-pay/handling-orders-with-amazon-pay-api.html)
-- [Obtaining an Amazon Order Reference and information about shipping addresses](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/amazon-pay/obtain-an-amazon-order-reference-and-information-about-shipping-addresses.html)
+- [Configuring Amazon Pay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/configure-amazon-pay.html)
+- [Amazon Pay - Sandbox Simulations](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/amazon-pay-sandbox-simulations.html)
+- [Amazon Pay - State Machine](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/amazon-pay-state-machine.html)
+- [Handling orders with Amazon Pay API](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/handling-orders-with-amazon-pay-api.html)
+- [Obtaining an Amazon Order Reference and information about shipping addresses](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/obtain-an-amazon-order-reference-and-information-about-shipping-addresses.html)
 ---
 
 ## Copyright and Disclaimer

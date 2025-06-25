@@ -8,7 +8,7 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/unzer/install-unzer/integrate-unzer-glue-api.html
 ---
 
-This document describes how to integrate [Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/unzer/unzer.html) Glue API into a Spryker project.
+This document describes how to integrate [Unzer](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/unzer.html) Glue API into a Spryker project.
 
 ## Install feature core
 
@@ -20,9 +20,9 @@ Install the required features:
 
 | NAME               | INSTALLATION GUIDE                                                                                                                                 |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unzer              | [Unzer feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/unzer/install-unzer/integrate-unzer.html)                                     |
-| Glue API: Checkout | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html) |
-| Glue API: Payments | [Install the Payments Glue API](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-glue-api.html) |
+| Unzer              | [Unzer feature integration](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/install-unzer/integrate-unzer.html)                                     |
+| Glue API: Checkout | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html) |
+| Glue API: Payments | [Install the Payments Glue API](/docs/pbc/all/payment-service-provider/latest/base-shop/install-and-upgrade/install-the-payments-glue-api.html) |
 
 ### 1) Install the required modules
 

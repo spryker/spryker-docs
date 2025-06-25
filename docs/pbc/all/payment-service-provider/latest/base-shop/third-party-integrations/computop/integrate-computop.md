@@ -21,7 +21,7 @@ This article provides step-by-step instructions on integrating the Computop modu
 
 ## Prerequisites
 
-Prior to integrating Computop into your project, make sure you [installed and configured the Computop module](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/install-and-configure-computop.html).
+Prior to integrating Computop into your project, make sure you [installed and configured the Computop module](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/install-and-configure-computop.html).
 
 ## Integrating Computop into your project
 
@@ -1578,7 +1578,7 @@ namespace Pyz\Yves\ShopApplication;
 
 ### CRIF configuration  
 
-To configure [CRIF](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-crif-payment-method-for-computop.html), do the following:
+To configure [CRIF](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-crif-payment-method-for-computop.html), do the following:
 
 1. Adjust `PaymentDependencyProvider` to use `ComputopPaymentMethodFilterPlugin`:  
 
@@ -1781,7 +1781,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 ## Integration into a project
 
-To integrate the Computop module, make sure you [installed and configured it](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/install-and-configure-computop.html).
+To integrate the Computop module, make sure you [installed and configured it](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/install-and-configure-computop.html).
 
 ## Test mode
 

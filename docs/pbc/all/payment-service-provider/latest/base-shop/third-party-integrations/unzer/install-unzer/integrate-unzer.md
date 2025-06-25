@@ -13,7 +13,7 @@ related:
 
 ## Unzer feature integration
 
-This document describes how to integrate [Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/unzer/unzer.html) into your project.
+This document describes how to integrate [Unzer](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/unzer.html) into your project.
 
 ### Install feature core
 
@@ -21,7 +21,7 @@ To integrate the Unzer, follow these steps.
 
 #### Prerequisites
 
-[Install and configure Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/unzer/install-unzer/install-and-configure-unzer.html).
+[Install and configure Unzer](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/install-unzer/install-and-configure-unzer.html).
 
 {% info_block infoBox "Exemplary content" %}
 

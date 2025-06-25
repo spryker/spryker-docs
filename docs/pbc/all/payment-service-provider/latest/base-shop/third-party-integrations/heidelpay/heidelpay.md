@@ -18,20 +18,20 @@ Heidelpay is an internationally operating payment institution, authorized and re
 
 ## Related Developer guides
 
-- [Installing Heidelpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/install-heidelpay.html)
-- [Integrating Heidelpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/integrate-heidelpay.html)
-- [Configuring Heidelpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/configure-heidelpay.html)
-- [Heidelpay OMS workflow](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/heidelpay-oms-workflow.html)
-- [Heidelpay workflow for errors](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/heidelpay-workflow-for-errors.html)
-- [Integrating the Credit Card Secure payment method for Heidelpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-credit-card-secure-payment-method-for-heidelpay.html)
-- [Integrating the Direct Debit payment method for Heidelpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-direct-debit-payment-method-for-heidelpay.html)
-- [Integrating the Easy Credit payment method for Heidelpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-easy-credit-payment-method-for-heidelpay.html)
-- [Integrating the iDeal payment method for Heidelpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-ideal-payment-method-for-heidelpay.html)
-- [Integrating the Invoice Secured B2C payment method for Heidelpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-invoice-secured-b2c-payment-method-for-heidelpay.html)
-- [Integrating the Paypal Authorize payment method for Heidelpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-paypal-authorize-payment-method-for-heidelpay.html)
-- [Integrating the Paypal Debit payment method for Heidelpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-paypal-debit-payment-method-for-heidelpay.html)
-- [Integrating the Sofort payment method for Heidelpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-sofort-payment-method-for-heidelpay.html)
-- [Integrating the Split-payment Marketplace payment method for Heidelpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-split-payment-marketplace-payment-method-for-heidelpay.html)
+- [Installing Heidelpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/install-heidelpay.html)
+- [Integrating Heidelpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-heidelpay.html)
+- [Configuring Heidelpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/configure-heidelpay.html)
+- [Heidelpay OMS workflow](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/heidelpay-oms-workflow.html)
+- [Heidelpay workflow for errors](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/heidelpay-workflow-for-errors.html)
+- [Integrating the Credit Card Secure payment method for Heidelpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-credit-card-secure-payment-method-for-heidelpay.html)
+- [Integrating the Direct Debit payment method for Heidelpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-direct-debit-payment-method-for-heidelpay.html)
+- [Integrating the Easy Credit payment method for Heidelpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-easy-credit-payment-method-for-heidelpay.html)
+- [Integrating the iDeal payment method for Heidelpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-ideal-payment-method-for-heidelpay.html)
+- [Integrating the Invoice Secured B2C payment method for Heidelpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-invoice-secured-b2c-payment-method-for-heidelpay.html)
+- [Integrating the Paypal Authorize payment method for Heidelpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-paypal-authorize-payment-method-for-heidelpay.html)
+- [Integrating the Paypal Debit payment method for Heidelpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-paypal-debit-payment-method-for-heidelpay.html)
+- [Integrating the Sofort payment method for Heidelpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-sofort-payment-method-for-heidelpay.html)
+- [Integrating the Split-payment Marketplace payment method for Heidelpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-split-payment-marketplace-payment-method-for-heidelpay.html)
 ---
 
 ## Copyright and Disclaimer

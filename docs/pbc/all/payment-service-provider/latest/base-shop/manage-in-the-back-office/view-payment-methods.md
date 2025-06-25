@@ -29,4 +29,4 @@ To view a payment methods in the Back Office, follow the steps:
 
 ## Next steps
 
-[Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html)
+[Edit payment methods](/docs/pbc/all/payment-service-provider/latest/base-shop/manage-in-the-back-office/edit-payment-methods.html)

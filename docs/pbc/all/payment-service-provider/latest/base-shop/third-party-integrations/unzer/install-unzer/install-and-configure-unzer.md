@@ -11,7 +11,7 @@ related:
   link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/unzer/install-unzer/integrate-unzer.html
 ---
 
-This document describes how to install and configure the Unzer module to [integrate the Unzer module](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/unzer/install-unzer/integrate-unzer.html) into your project.
+This document describes how to install and configure the Unzer module to [integrate the Unzer module](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/install-unzer/integrate-unzer.html) into your project.
 
 ## Overview
 

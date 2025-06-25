@@ -29,7 +29,7 @@ This section describes how the marketplace operator can set up and onboard thems
 
 ### Marketplace operator's onboarding to Stripe
 
-After [prerequisites are installed](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html), to connect Spryker to Stripe via the Stripe App, the operator needs to follow [Connect and configure Stripe for Marketplace](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html).
+After [prerequisites are installed](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html), to connect Spryker to Stripe via the Stripe App, the operator needs to follow [Connect and configure Stripe for Marketplace](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html).
 
 Once the marketplace is connected to Stripe, we recommend that the Operator does the following before going live:
 - In the Stripe Dashboard, enable the needed payment methods.
@@ -45,7 +45,7 @@ The merchant onboarding to Stripe is part of the general merchant onboarding pro
 Depending on your marketplace setup, merchant users will receive information on accessing the Merchant Portal via email or other means. We recommend using the same communication channel to inform merchants about Stripe and how to onboard to it. They can use Stripe as a payment method only after onboarding, so make sure to make this process clear to them.
 
 Onboarding happens in the following steps:
-1. To connect to the Marketplace Stripe account, a merchant follows [Onboard to Stripe in the Merchant Portal](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html).
+1. To connect to the Marketplace Stripe account, a merchant follows [Onboard to Stripe in the Merchant Portal](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html).
 2. A Stripe Express account is created for the merchant.
 3. Stripe verifies the merchant's KYC details.
 4. If the verification is successful, the status of the connection changes in the Stripe Dashboard.
@@ -88,7 +88,7 @@ To use Spryker's marketplace commissions engine, you need to [install the Market
 Payouts with Spryker's commissions engine work as follows:
 1. Set up the marketplace merchant commissions feature and the Stripe app.
 2. Configure OMS to suit your business logic.
-4. Set up a trigger for transfers using a timeout or [set up cronjobs that trigger transfers on a schedule](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html).
+4. Set up a trigger for transfers using a timeout or [set up cronjobs that trigger transfers on a schedule](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html).
 5. Test that the commissions are applied to the transfer amount.
 
 ## Important notes about Stripe

@@ -30,7 +30,7 @@ There is currently an issue when using giftcards with Payolution. Our team is de
 
 ## Prerequisites
 
-Before proceeding with the integration, make sure you have [installed and configured](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payolution/install-and-configure-payolution.html) the Payolution module.
+Before proceeding with the integration, make sure you have [installed and configured](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/install-and-configure-payolution.html) the Payolution module.
 
 ## Frontend Integration
 

@@ -37,7 +37,7 @@ related:
 
 {% info_block errorBox %}
 
-Heidelpay is not compatible with [gift cards](/docs/pbc/all/gift-cards/{{page.version}}/gift-cards.html). We are working on a solution.
+Heidelpay is not compatible with [gift cards](/docs/pbc/all/gift-cards/latest/gift-cards.html). We are working on a solution.
 
 {% endinfo_block %}
 

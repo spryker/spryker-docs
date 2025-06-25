@@ -27,10 +27,10 @@ Adyen is a global payment company that allows businesses to accept e-commerce, m
 
 ## Related Developer guides
 
-- [Installing and configuring Adyen](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/install-and-configure-adyen.html)
-- [Integrating Adyen](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen.html)
-- [Integrating Adyen payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html)
-- [Enabling filtering of payment methods for Ayden](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/enable-filtering-of-payment-methods-for-adyen.html)
+- [Installing and configuring Adyen](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/install-and-configure-adyen.html)
+- [Integrating Adyen](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen.html)
+- [Integrating Adyen payment methods](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html)
+- [Enabling filtering of payment methods for Ayden](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/enable-filtering-of-payment-methods-for-adyen.html)
 
 ## Copyright and Disclaimer
 

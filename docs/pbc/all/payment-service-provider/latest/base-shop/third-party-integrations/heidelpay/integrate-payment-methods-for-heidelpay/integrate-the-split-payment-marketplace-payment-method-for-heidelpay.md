@@ -37,7 +37,7 @@ related:
 
 ## Setup
 
-The following configuration should be made after Heidelpay has been [installed](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/install-heidelpay.html) and [integrated](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/heidelpay/configure-heidelpay.html).
+The following configuration should be made after Heidelpay has been [installed](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/install-heidelpay.html) and [integrated](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/configure-heidelpay.html).
 
 ## Configuration
 
@@ -50,7 +50,7 @@ $config[HeidelpayConstants::CONFIG_IS_SPLIT_PAYMENT_ENABLED_KEY] = true;
 
 ## Project Implementation
 
-A project level should set quote items and expenses information the field Heidelpay Item Channel Id. It could be done [using cart expander plugin](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/extend-and-customize/cart-module-reference-information.html#cart-expanders).
+A project level should set quote items and expenses information the field Heidelpay Item Channel Id. It could be done [using cart expander plugin](/docs/pbc/all/cart-and-checkout/latest/base-shop/extend-and-customize/cart-module-reference-information.html#cart-expanders).
 
 Example:
 

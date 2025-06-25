@@ -22,7 +22,7 @@ related:
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payolution/payolution-performing-requests.html
 ---
 
-Both [invoice](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payolution/integrate-the-invoice-payment-method-for-payolution.html) and [installment](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payolution/integrate-the-installment-payment-method-for-payolution.html) payment methods utilize the same request flow. It basically consists of the following requests:
+Both [invoice](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/integrate-the-invoice-payment-method-for-payolution.html) and [installment](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/integrate-the-installment-payment-method-for-payolution.html) payment methods utilize the same request flow. It basically consists of the following requests:
 - Calculation (for instalment only): to calculate the instalment amounts, dues, and durations.
 - Optional: Pre-check: to check the user information in order to make sure that all the needed information is correct before doing the actual pre-authorization.
 - Pre-authorize: to perform a payment risk check which is a mandatory step before every payment. The payment is basically considered accepted when it's authorized.
@@ -33,4 +33,4 @@ Both [invoice](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop
 
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-workflow.png)  
 
-See Payolution - [Performing Requests](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payolution/payolution-performing-requests.html) for detailed information on the requests.
+See Payolution - [Performing Requests](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/payolution-performing-requests.html) for detailed information on the requests.

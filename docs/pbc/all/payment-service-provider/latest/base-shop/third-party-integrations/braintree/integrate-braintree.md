@@ -26,7 +26,7 @@ Gift cards are not compatible with Braintree. We are working on resolving this c
 
 ## Prerequisites
 
-Before proceeding with the integration, make sure you have [installed and configured](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/braintree/install-and-configure-braintree.html) the Braintree module.
+Before proceeding with the integration, make sure you have [installed and configured](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/install-and-configure-braintree.html) the Braintree module.
 
 ## Frontend integration
 

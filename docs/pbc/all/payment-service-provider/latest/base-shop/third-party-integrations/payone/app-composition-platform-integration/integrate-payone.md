@@ -424,9 +424,9 @@ console data:import glossary
 
 
 1. Install the `spryker/sales-payment-detail: ^1.2.0` module.
-2. [Retrieve and use payment details from third-party PSPs](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html).
+2. [Retrieve and use payment details from third-party PSPs](/docs/pbc/all/payment-service-provider/latest/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html).
 
 
 ## Next steps
 
-[Configure the Payone app](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/configure-payone.html) for your store.
+[Configure the Payone app](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/app-composition-platform-integration/configure-payone.html) for your store.

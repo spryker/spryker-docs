@@ -22,14 +22,14 @@ The `SprykerEco.Computop` module includes the integrations:
 
 
 The `SprykerEco.Computop` module provides the following payment methods:
-- [Credit Card](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-credit-card-payment-method-for-computop.html)
-- [Direct Debit](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-direct-debit-payment-method-for-computop.html)
-- [EasyCredit](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-easy-credit-payment-method-for-computop.html)
-- [iDeal](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-ideal-payment-method-for-computop.html)
-- [Paydirekt](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paydirekt-payment-method-for-computop.html)
-- [PayNow](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paynow-payment-method-for-computop.html)
-- [PayPal](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paypal-payment-method-for-computop.html)
-- [SofortÜberweisung](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-sofort-payment-method-for-computop.html)
+- [Credit Card](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-credit-card-payment-method-for-computop.html)
+- [Direct Debit](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-direct-debit-payment-method-for-computop.html)
+- [EasyCredit](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-easy-credit-payment-method-for-computop.html)
+- [iDeal](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-ideal-payment-method-for-computop.html)
+- [Paydirekt](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paydirekt-payment-method-for-computop.html)
+- [PayNow](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paynow-payment-method-for-computop.html)
+- [PayPal](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paypal-payment-method-for-computop.html)
+- [SofortÜberweisung](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-sofort-payment-method-for-computop.html)
 - PayU CEE Single
 - PayPal Express
 

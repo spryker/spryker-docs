@@ -21,7 +21,7 @@ related:
 
 {% info_block errorBox %}
 
-Currently, AfterPay does not work correctly with [gift cards](/docs/pbc/all/gift-cards/{{page.version}}/gift-cards.html) AfterPay. We will update the document after resolving the conflict.
+Currently, AfterPay does not work correctly with [gift cards](/docs/pbc/all/gift-cards/latest/gift-cards.html) AfterPay. We will update the document after resolving the conflict.
 
 {% endinfo_block %}
 

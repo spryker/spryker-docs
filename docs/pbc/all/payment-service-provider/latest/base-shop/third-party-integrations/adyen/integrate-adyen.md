@@ -28,7 +28,7 @@ This article provides step-by-step instructions on integrating the Adyen module 
 
 ## Prerequisites
 
-Prior to integrating Adyen into your project, make sure you [installed and configured the Adyen module](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/install-and-configure-adyen.html).
+Prior to integrating Adyen into your project, make sure you [installed and configured the Adyen module](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/install-and-configure-adyen.html).
 
 ## Project integration
 
@@ -262,7 +262,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block infoBox "Note" %}
 
-If you provide the Credit Card payment method, you have to overwrite `CheckoutPageRouteProviderPlugin` with the one from the project level. For details, see [Adyen - Provided Payment Methods Credit Card (Step 7)](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#credit-card).
+If you provide the Credit Card payment method, you have to overwrite `CheckoutPageRouteProviderPlugin` with the one from the project level. For details, see [Adyen - Provided Payment Methods Credit Card (Step 7)](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#credit-card).
 
 {% endinfo_block %}
 

@@ -60,10 +60,10 @@ The [Klarna State Machine Commands and Conditions](klarna-state-machine.htm) tri
 
 ## Related Developer guides
 
-- [Klarna - Invoice Pay in 14 days](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/klarna/klarna-invoice-pay-in-14-days.html)
-- [Klarna - Part Payment Flexible](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/klarna/klarna-part-payment-flexible.html)
-- [Klarna payment workflow](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/klarna/klarna-payment-workflow.html)
-- [Klarna state machine commands and conditions](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html)
+- [Klarna - Invoice Pay in 14 days](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-invoice-pay-in-14-days.html)
+- [Klarna - Part Payment Flexible](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-part-payment-flexible.html)
+- [Klarna payment workflow](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-payment-workflow.html)
+- [Klarna state machine commands and conditions](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html)
 
 ---
 

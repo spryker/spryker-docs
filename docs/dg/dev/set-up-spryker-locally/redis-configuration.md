@@ -196,15 +196,18 @@ SPRYKER_REDIS_IS_DEV_MODE=0 console storage:redis:re-save
 
 With separate storage databases per store, execute the command for each store individually.
 
-## Storage Gui installation
+## Storage GUI installation
 
-StorageGui is supported starting from `spryker/storage-gui:1.1.0`.
-The module contains the ui changes. To build them you need to install dependencies and rebuild zed ui.
-- `console frontend:project:install-dependencies`
-- `console frontend:zed:build`
+The storage GUI lets you access original and compressed storage data in the Back Office, **Maintenance** > **Storage** menu. 
+
+StorageGui is supported starting from `spryker/storage-gui:1.1.0`. To build the UI changes, install dependencies and rebuild ZED UI:
+
+```bash
+console frontend:project:install-dependencies
+console frontend:zed:build
+```
 
 
-The storage page available in backoffice `Maintenance -> Storage` menu. You have access to the storage data, also if you use the compression feature you can also have access to the original data here.
 
 
 

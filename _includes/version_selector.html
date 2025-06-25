@@ -3,6 +3,9 @@
 
 {% assign total_versions = site.versions | size %}
 {% if total_versions > 1 %}
+  {% assign url_suffix = page.url | remove_first: '/' | remove_first: current_version %}
+  {% assign cleaned_url = '/' | append: url_suffix %}
+
   <div class="alt-nav dropdown">
     <span class="alt-nav__opener nav-link dropdown-toggle" id="versionDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="alt-nav__opener-text">{{ current_version_label }}</span>
@@ -13,7 +16,7 @@
       {% for version_key in site.versions %}
         {% assign version_label = site.versions[version_key] %}
         <li>
-          <a href="{{ site.baseurl }}/{{ version_key }}{{ page.url }}">{{ version_label }}</a>
+          <a href="{{ site.baseurl }}/{{ version_key }}{{ cleaned_url }}">{{ version_label }}</a>
         </li>
       {% endfor %}
     </ul>

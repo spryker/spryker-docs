@@ -7,4 +7,4 @@ redirect_from:
   - /docs/pbc/all/offer-management/202311.0/marketplace/install-and-upgrade/install-the-marketplace-product-offer-service-points-feature.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-product-offer-service-points-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-offer-service-points-feature.md -->
+{% include pbc/all/install-features/latest/marketplace/install-the-marketplace-product-offer-service-points-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-offer-service-points-feature.md -->

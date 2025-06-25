@@ -7,4 +7,4 @@ redirect_from:
 - /docs/pbc/all/offer-management/202311.0/marketplace/import-and-export-data/install-the-product-offer-shipment-availability-feature.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-product-offer-shipment-availability-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-offer-shipment-availability-feature.md -->
+{% include pbc/all/install-features/latest/install-the-product-offer-shipment-availability-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-offer-shipment-availability-feature.md -->

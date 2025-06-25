@@ -27,7 +27,7 @@ This document describes the `order-status.csv` file to configure the update of t
 |-|-|-|-|-|
 | Order_reference |   |  Must be unique. | Identifier of the order in the system. | |
 | order_item_reference | &check; | String | Must be unique. | Identifier of the  item in the order. |
-| order_item_event_oms | &check; | String |  OMS events depend on the  [state machine](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html) configured. | Desired order item state. Only this parameter is updated in the database |
+| order_item_event_oms | &check; | String |  OMS events depend on the  [state machine](/docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html) configured. | Desired order item state. Only this parameter is updated in the database |
 
 ## Additional information
 

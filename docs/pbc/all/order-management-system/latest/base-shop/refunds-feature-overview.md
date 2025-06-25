@@ -16,16 +16,16 @@ Refunds can be handled automatically in the Back Office once the order has been 
 
 All refunds can be listed per order or as a full overview. All sales order items contain information about how much money can be refunded in total and how much has been refunded so far.
 
-For the refunded items, you can use the default OMS states to be displayed on the **Return Details** pages on the Storefront or set custom state names so they would make more sense for the Storefront users. For details about setting the custom state names on the Storefront for refunded orders, see [HowTo: display custom names for order item states on the Storefront](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/display-custom-names-for-order-item-states-on-the-storefront.html).
+For the refunded items, you can use the default OMS states to be displayed on the **Return Details** pages on the Storefront or set custom state names so they would make more sense for the Storefront users. For details about setting the custom state names on the Storefront for refunded orders, see [HowTo: display custom names for order item states on the Storefront](/docs/pbc/all/order-management-system/latest/base-shop/display-custom-names-for-order-item-states-on-the-storefront.html).
 
 ## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [View refunds](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/view-refunds.html)  |
+| [View refunds](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/view-refunds.html)  |
 
 ## Related Developer documents
 
 | MIGRATION GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|
-| [Refund migration guide](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-refund-module.html) | [Refund process management](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/refund-process-management.html) |
+| [Refund migration guide](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-refund-module.html) | [Refund process management](/docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/refund-process-management.html) |

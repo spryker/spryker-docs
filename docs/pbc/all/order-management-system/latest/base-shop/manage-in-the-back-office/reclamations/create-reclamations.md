@@ -15,13 +15,13 @@ related:
     link: docs/pbc/all/order-management-system/page.version/base-shop/reclamations-feature-overview.html
 ---
 
-To create [order reclamations](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/reclamations-feature-overview.html) in the Back Office, follow the steps:
+To create [order reclamations](/docs/pbc/all/order-management-system/latest/base-shop/reclamations-feature-overview.html) in the Back Office, follow the steps:
 
 1. Go to **Sales&nbsp;<span aria-label="and then">></span> Orders**.
 2. On the **Orders** page, next to the order you want to create a reclamation for, click **Claim**.
 3. On the **Create reclamation** page, select one or more products you want to create a reclamation for.
 4. Click **Create Reclamation**.
-    The **View reclamation** page opens with the success message displayed. To learn what you can do on this page, see [Managing returns](/docs/pbc/all/return-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-returns.html).
+    The **View reclamation** page opens with the success message displayed. To learn what you can do on this page, see [Managing returns](/docs/pbc/all/return-management/latest/base-shop/manage-in-the-back-office/manage-returns.html).
 
 **Tips and tricks**
 Claiming an order does not change the state of the items in the order. When a reclamation is created, a sales team member processes the order manually.

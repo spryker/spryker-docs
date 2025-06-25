@@ -26,7 +26,7 @@ Spryker Data Export supports the multi-store functionality, so you can define wh
 
 ## Prerequisites
 
-[Install the Sales Data Export feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html).
+[Install the Sales Data Export feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html).
 
 ## Defining the data to export
 

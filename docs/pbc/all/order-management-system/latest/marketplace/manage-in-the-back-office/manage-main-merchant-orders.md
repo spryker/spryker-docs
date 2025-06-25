@@ -12,11 +12,11 @@ related:
     link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/main-merchant.html
 ---
 
-*My Orders* is a dedicated page for managing the orders that customers completed from the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html) (Marketplace owner) within the Marketplace.
+*My Orders* is a dedicated page for managing the orders that customers completed from the [main merchant](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/main-merchant.html) (Marketplace owner) within the Marketplace.
 
 ## Prerequisites
 
-To start managing merchant orders for the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html), navigate to **Sales&nbsp;<span aria-label="and then">></span> My orders**.
+To start managing merchant orders for the [main merchant](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/main-merchant.html), navigate to **Sales&nbsp;<span aria-label="and then">></span> My orders**.
 
 The instructions assume that there is an existing order with the *New* status.
 
@@ -24,14 +24,14 @@ Each section in this article contains reference information. Make sure to review
 
 ## Viewing main merchant orders
 
-To view the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html) orders, in the **List of Orders** table, click **View** next to the order you want to check.
+To view the [main merchant](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/main-merchant.html) orders, in the **List of Orders** table, click **View** next to the order you want to check.
 This takes you to the **Merchant Order Overview** page.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Back+Office+user+guides/Sales/main-merchant-order-back-office.png)
 
 ### Reference information: Viewing main merchant orders
 
-This section holds reference information related to viewing the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html) orders.
+This section holds reference information related to viewing the [main merchant](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/main-merchant.html) orders.
 
 #### Overview of Orders page
 
@@ -114,7 +114,7 @@ The following table describes the attributes on the **View Order *[Order ID]*** 
   </tr>
   <tr>
     <td>Trigger all matching states inside this order</td>
-    <td>Action button for changing the available states for all the items in the order. See <br><a href="/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html#changing-marketplace-order-states">Changing marketplace order states</a> for details.</td>
+    <td>Action button for changing the available states for all the items in the order. See <br><a href="/docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-marketplace-orders.html#changing-marketplace-order-states">Changing marketplace order states</a> for details.</td>
   </tr>
   <tr>
     <td rowspan="6">Customer</td>
@@ -179,7 +179,7 @@ The following table describes the attributes on the **View Order *[Order ID]*** 
   <tr>
     <td></td>
     <td>Trigger all matching states of order inside this shipment</td>
-    <td>Action button for changing the available states for all the items in the shipment. See <br><a href="/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html#changing-main-merchant-order-states">Changing main merchant order states</a> for the details.</td>
+    <td>Action button for changing the available states for all the items in the shipment. See <br><a href="/docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html#changing-main-merchant-order-states">Changing main merchant order states</a> for the details.</td>
   </tr>
   <tr>
     <td>Cart Notes</td>
@@ -200,7 +200,7 @@ To change the state of the order items in a shipment:
 1. In the **List of Orders** table, next to the order with items you want to change the state of, click **View**. This takes you to the **Merchant Order Overview** page.
 2. Scroll down to the desired shipment.
 3. Select the checkbox next to the products you want to change the state of.
-4. In the **Trigger all matching states of order inside this shipment** section, click **the next available state**. For details about the available states, see [Reference information: Changing main merchant order states](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html#reference-information-changing-main-merchant-order-states).
+4. In the **Trigger all matching states of order inside this shipment** section, click **the next available state**. For details about the available states, see [Reference information: Changing main merchant order states](/docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html#reference-information-changing-main-merchant-order-states).
    The page refreshes to show the message about the successful state change. In the **Trigger all matching states of order inside this shipment** section of the modified shipment, you can see the updated state.
 5. Repeat step 4 until you get the desired shipment state.
 
@@ -265,4 +265,4 @@ You can edit the existing details for the shipment in the Back Office. To do tha
 3. Update the main merchant shipment.
 4. Click **Save**.
 
-For reference information, on this page, see [Reference information: Creating a shipment for the main merchant order](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html#reference-information-creating-a-shipment-for-the-main-merchant-order).
+For reference information, on this page, see [Reference information: Creating a shipment for the main merchant order](/docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html#reference-information-creating-a-shipment-for-the-main-merchant-order).

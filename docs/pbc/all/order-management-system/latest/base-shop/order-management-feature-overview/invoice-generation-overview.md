@@ -22,15 +22,15 @@ You can send a hidden copy of the invoice to yourself or your employees. Keep in
 
 {% endinfo_block %}
 
-You can generate an invoice only once the order has acquired the `confirmed` state. The invoice generation and sending are triggered in the Back Office by initiating the `invoice-generate` event on the **View Order** page. For details about how a Back Office User initiates events for orders, see [Changing order statuses](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html). After generating the invoice, the OMS state of the order changes to `exported`.
+You can generate an invoice only once the order has acquired the `confirmed` state. The invoice generation and sending are triggered in the Back Office by initiating the `invoice-generate` event on the **View Order** page. For details about how a Back Office User initiates events for orders, see [Changing order statuses](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html). After generating the invoice, the OMS state of the order changes to `exported`.
 
 {% info_block infoBox "" %}
 
-You can use the default OMS states to be displayed on the **Order Details** pages on the Storefront or set custom states so they would make more sense for the Storefront users. For details about how to set the custom states for orders on the Storefront, see [HowTo: Display Custom Names for Order Item States on the Storefront](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/display-custom-names-for-order-item-states-on-the-storefront.html).
+You can use the default OMS states to be displayed on the **Order Details** pages on the Storefront or set custom states so they would make more sense for the Storefront users. For details about how to set the custom states for orders on the Storefront, see [HowTo: Display Custom Names for Order Item States on the Storefront](/docs/pbc/all/order-management-system/latest/base-shop/display-custom-names-for-order-item-states-on-the-storefront.html).
 
 {% endinfo_block %}
 
-By default, the invoice can be generated only for the whole order (not for individual order items) and only once. However, on the project level, you can set up a configuration that forces the repeated invoice generation by running a console command. For details, see [HowTo: Emailing Invoices Using BCC](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/email-invoices-using-bcc.html).
+By default, the invoice can be generated only for the whole order (not for individual order items) and only once. However, on the project level, you can set up a configuration that forces the repeated invoice generation by running a console command. For details, see [HowTo: Emailing Invoices Using BCC](/docs/pbc/all/order-management-system/latest/base-shop/email-invoices-using-bcc.html).
 
 
 ## Invoice template
@@ -71,7 +71,7 @@ The invoice generation feature can help streamline your operational processes bu
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Trigger invoice generation in the Back Office](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html)  |
+| [Trigger invoice generation in the Back Office](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html)  |
 
 
 

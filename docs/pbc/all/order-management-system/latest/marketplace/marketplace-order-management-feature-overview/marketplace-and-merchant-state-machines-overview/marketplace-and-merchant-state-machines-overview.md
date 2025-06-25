@@ -40,7 +40,7 @@ Our exemplary Marketplace state machine provides the following states:
 - Delivered
 - Closed
 
-To learn more about states, see [State Machine Fundamentals](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html).
+To learn more about states, see [State Machine Fundamentals](/docs/pbc/all/order-management-system/latest/base-shop/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html).
 
 {% info_block warningBox "Note" %}
 
@@ -65,7 +65,7 @@ In the Marketplace Dummy Payment, only the *invoice* type of payment is supporte
 
 ### Marketplace state machine in the Back Office
 
-Marketplace administrators manage the orders in the Back Office. For details, see [Managing marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html). In the Back Office, the Marketplace administrators can change the state of the marketplace order by triggering the states. However, they can do that only if there are manually executable events related to the marketplace order items. Triggering the states executes the corresponding event and moves the marketplace order item to the next state. There can be multiple triggering buttons corresponding to several items in the marketplace order. When you click one of those buttons, only the items with such a manually executable event execute it. The rest stay in the same state and need their trigger to be performed to move to the next state.
+Marketplace administrators manage the orders in the Back Office. For details, see [Managing marketplace orders](/docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-marketplace-orders.html). In the Back Office, the Marketplace administrators can change the state of the marketplace order by triggering the states. However, they can do that only if there are manually executable events related to the marketplace order items. Triggering the states executes the corresponding event and moves the marketplace order item to the next state. There can be multiple triggering buttons corresponding to several items in the marketplace order. When you click one of those buttons, only the items with such a manually executable event execute it. The rest stay in the same state and need their trigger to be performed to move to the next state.
 
 If there are no manually executable events applicable to any of the items, there is no button to click in the Back Office interface. In this case, the action is performed automatically.
 
@@ -96,4 +96,4 @@ Our exemplary merchant state machine provides the following states:
 
 ## Next steps
 
-[Learn how the marketplace and merchant state machines interact with each other](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html)
+[Learn how the marketplace and merchant state machines interact with each other](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html)

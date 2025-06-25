@@ -72,11 +72,11 @@ When working with the order in the Back Office, you, as a Back Office user, can 
 
 ## Custom Order Reference with the RFQ, approval process, and share cart by a link
 
-If you submit a [quote request](/docs/pbc/all/request-for-quote/{{page.version}}/request-for-quote.html) and then convert it to the shopping cart, the cart gets locked. However, you still can add and update the customer order reference for the locked cart.
+If you submit a [quote request](/docs/pbc/all/request-for-quote/latest/request-for-quote.html) and then convert it to the shopping cart, the cart gets locked. However, you still can add and update the customer order reference for the locked cart.
 
-In the [Approval Process](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/approval-process-feature-overview.html) scenarios, both an approver and buyer can add or edit the custom order reference during the checkout.
+In the [Approval Process](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/approval-process-feature-overview.html) scenarios, both an approver and buyer can add or edit the custom order reference during the checkout.
 
-When [sharing a cart by a link with external users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/persistent-cart-sharing-feature-overview.html), they can only view the custom order reference. However, when [sharing a cart by a link with internal users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/persistent-cart-sharing-feature-overview.html), they can update the custom order reference for the shopping cart with the read-only and full-access permissions.
+When [sharing a cart by a link with external users](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/persistent-cart-sharing-feature-overview.html), they can only view the custom order reference. However, when [sharing a cart by a link with internal users](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/persistent-cart-sharing-feature-overview.html), they can update the custom order reference for the shopping cart with the read-only and full-access permissions.
 
 
 ## Current constraints
@@ -87,4 +87,4 @@ If you added a custom order reference to the cart, submitted a request for quote
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Adding and removing custom order references](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/add-and-remove-custom-order-references.html) |
+| [Adding and removing custom order references](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/add-and-remove-custom-order-references.html) |

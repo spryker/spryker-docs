@@ -6,7 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-orders
 originalArticleId: 5774ec3a-945c-46f1-a51c-475e6e1d9df9
 redirect_from:
-  - /docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html
+  - /docs/scos/dev/glue-api-guides/latest/retrieving-orders.html
   - /docs/scos/dev/glue-api-guides/202204.0/retrieving-orders.html
 related:
   - title: Retrieving customer orders
@@ -27,13 +27,13 @@ In your development, this resource can help you to:
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
 - [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
-- [Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)
-- [Glue API: Measurement Units Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
-- [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
-- [Install the Product Bundles Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
-- [Install the Configurable Bundle Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html)
-- [Install the Configurable Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
-- [Install the Configurable Bundle + Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html)
+- [Install the Order Management Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)
+- [Glue API: Measurement Units Feature Integration](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
+- [Install the Product Options Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
+- [Install the Product Bundles Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
+- [Install the Configurable Bundle Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html)
+- [Install the Configurable Bundle + Cart Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
+- [Install the Configurable Bundle + Product Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html)
 
 ## Retrieve all orders
 
@@ -48,7 +48,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
 
 | STRING PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -99,7 +99,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/orders-response-attributes.md -->
 
 
 ## Retrieve an order
@@ -119,7 +119,7 @@ To retrieve detailed information on an order, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION                                                  |
 | ------------- | ------------ | -------- | ------------------------------------------------------------ |
-| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
+| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 | STRING PARAMETER | DESCRIPTION  | POSSIBLE VALUES    |
 | ---------------- | ---------------- | --------------- |
@@ -1205,9 +1205,9 @@ To retrieve detailed information on an order, send the request:
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/orders-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/order-shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/order-shipments-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/order-shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/order-shipments-response-attributes.md -->
 
 ## Possible errors
 
@@ -1217,4 +1217,4 @@ To retrieve detailed information on an order, send the request:
 |002| Access token is missing.  |
 |801| Order with the given order reference is not found.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

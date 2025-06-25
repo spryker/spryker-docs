@@ -16,7 +16,7 @@ related:
     link: docs/pbc/all/order-management-system/page.version/marketplace/manage-in-the-back-office/manage-marketplace-orders.html
 ---
 
-When a customer places an order on the Marketplace, the *Marketplace order* is created in the system. Compared to a regular order in Spryker Commerce OS, the Marketplace order contains information about merchants and one or several [merchant orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html). Thus, the Marketplace order represents a list of items a customer has bought from one or multiple merchants in a single order.
+When a customer places an order on the Marketplace, the *Marketplace order* is created in the system. Compared to a regular order in Spryker Commerce OS, the Marketplace order contains information about merchants and one or several [merchant orders](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html). Thus, the Marketplace order represents a list of items a customer has bought from one or multiple merchants in a single order.
 
 ![Marketplace order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+order+feature+overview/marketplace-order.png)
 
@@ -27,9 +27,9 @@ From the customer perspective, the Marketplace order is a single order with prod
 
 ![Marketplace order structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+order+management/Marketplace+Order+Management+feature+overview/Marketplace+Order+schema.png)
 
-The items in the Marketplace order are grouped by merchant and split into different shipments automatically by default. However, you can change this behavior on the project level according to your business requirements. During the checkout, customers can check how many shipments to expect and select different delivery addresses or methods based on their items. To learn more about multiple shipments, see the [Split Delivery feature overview](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/split-delivery-overview.html).
+The items in the Marketplace order are grouped by merchant and split into different shipments automatically by default. However, you can change this behavior on the project level according to your business requirements. During the checkout, customers can check how many shipments to expect and select different delivery addresses or methods based on their items. To learn more about multiple shipments, see the [Split Delivery feature overview](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/split-delivery-overview.html).
 
-As the Marketplace order contains details about offers and products a customer has bought from multiple merchants, the Marketplace order list with the related information is only available to the Marketplace administrator in the Back Office. <!---See LINK TO BACK OFFICE FOR ORDERS for details about how Marketplace administrators can manage Marketplace orders in the Back Office.--> Each [merchant order](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html) can be accessed and managed by the relevant merchant in the Merchant Portal.<!---See LINK TO MERCHANT PORTAL FOR ORDERS for details about how merchants can manage their orders in the Merchant Portal.-->
+As the Marketplace order contains details about offers and products a customer has bought from multiple merchants, the Marketplace order list with the related information is only available to the Marketplace administrator in the Back Office. <!---See LINK TO BACK OFFICE FOR ORDERS for details about how Marketplace administrators can manage Marketplace orders in the Back Office.--> Each [merchant order](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html) can be accessed and managed by the relevant merchant in the Merchant Portal.<!---See LINK TO MERCHANT PORTAL FOR ORDERS for details about how merchants can manage their orders in the Merchant Portal.-->
 
 ![Merchant order in the Merchant Portal](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+order+feature+overview/merchant-order-in-merchant-portal.png)
 
@@ -37,15 +37,15 @@ As the Marketplace order contains details about offers and products a customer h
 
 You can coordinate the Marketplace and merchant orders processing by triggering the state machine events.
 
-For details about the Marketplace and merchant order state machines, see [Marketplace and merchant state machines](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
+For details about the Marketplace and merchant order state machines, see [Marketplace and merchant state machines](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
 
-For details about how the two state machines interact, see [Marketplace and merchant state machine interactions](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html).
+For details about how the two state machines interact, see [Marketplace and merchant state machine interactions](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html).
 
 ## Marketplace order calculation
 
 By default, calculations for the Marketplace order items are performed using the item price (product offer price or the price inherited from the concrete or abstract product), their totals, subtotal aggregation, and tax information.
 
-The Marketplace order contains all the [totals from the Merchant orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html) and is defined by the following formula:
+The Marketplace order contains all the [totals from the Merchant orders](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html) and is defined by the following formula:
 
 {% info_block infoBox "Info" %}
 
@@ -56,7 +56,7 @@ Marketplace Sales Order Total = ∑ Merchant Order Totals + ∑ Marketplace Sale
 At the same time, each Marketplace Order Total includes the sum of the respective Merchant Order Totals, for example:
 
 - Marketplace Sales Order Subtotal = Merchant Order Subtotal 1 + Merchant Order Subtotal 2 + Merchant Order Subtotal n.
-- Marketplace Sales Order Discount Total = ∑ Discount Totals included in all Merchant Orders. Check [Marketplace Promotions and Discounts feature overview](/docs/pbc/all/discount-management/{{page.version}}/marketplace/marketplace-promotions-discounts-feature-overview.html) to learn how the discounts are calculated.
+- Marketplace Sales Order Discount Total = ∑ Discount Totals included in all Merchant Orders. Check [Marketplace Promotions and Discounts feature overview](/docs/pbc/all/discount-management/latest/marketplace/marketplace-promotions-discounts-feature-overview.html) to learn how the discounts are calculated.
 - Marketplace Sales Order Tax Total= ∑ Merchant Order Tax Totals.
 - Marketplace Sales Order Grand Total = ∑ Merchant Order Grand Totals.
 - Marketplace Sales Order Refund Total = ∑ Merchant Order Refund Totals.
@@ -86,7 +86,7 @@ In some cases, because of rounding, the amounts of Marketplace order totals can 
 {% info_block warningBox "Warning" %}
 
 Do not build the Merchant functionality around Orders, but rather around Merchant Orders.
-Make sure that Merchants do not modify the order directly, but instead use [MerchantOms](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/merchant-oms.html) for this purpose.
+Make sure that Merchants do not modify the order directly, but instead use [MerchantOms](/docs/pbc/all/order-management-system/latest/marketplace/merchant-oms.html) for this purpose.
 
 {% endinfo_block %}
 
@@ -111,20 +111,20 @@ The *merchant order total* is the sum of the totals of items of an order relatin
 
 ## Next steps
 
-- [Learn about the merchant orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html)
-- [Learn about the Marketplace and merchant state machines](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html)
+- [Learn about the merchant orders](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html)
+- [Learn about the Marketplace and merchant state machines](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html)
 
 ## Related Business User documents
 
 |FEATURE OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|---------|
-|[Merchant order overview](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html) |[Managing merchant orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-merchant-orders.html)  | <!---LINK TO BO ORDER MANAGEMENT-->|
-|[Marketplace and merchant state machines overview](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) | | |
-|[Marketplace and merchant state machines interaction](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html) | | |
+|[Merchant order overview](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html) |[Managing merchant orders](/docs/pbc/all/order-management-system/latest/marketplace/manage-merchant-orders.html)  | <!---LINK TO BO ORDER MANAGEMENT-->|
+|[Marketplace and merchant state machines overview](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) | | |
+|[Marketplace and merchant state machines interaction](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html) | | |
 
 ## Related Developer documents
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|
-| [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html)    | [Retrieving Marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)        | [File details: merchant_oms_process.csv](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-oms-process.csv.html)        |  [MerchantOms](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/merchant-oms.html)  |
-| [Install the Marketplace Order Management + Order Threshold feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-order-threshold-feature.html)    |         | [File details: merchant-order-status.csv](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-order-status.csv.html)        |  [Create MerchantOms flows](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/create-merchant-oms-flows.html)   |
+| [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html)    | [Retrieving Marketplace orders](/docs/pbc/all/order-management-system/latest/marketplace/glue-api-retrieve-marketplace-orders.html)        | [File details: merchant_oms_process.csv](/docs/pbc/all/order-management-system/latest/marketplace/import-and-export-data/import-file-details-merchant-oms-process.csv.html)        |  [MerchantOms](/docs/pbc/all/order-management-system/latest/marketplace/merchant-oms.html)  |
+| [Install the Marketplace Order Management + Order Threshold feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-order-threshold-feature.html)    |         | [File details: merchant-order-status.csv](/docs/pbc/all/order-management-system/latest/marketplace/import-and-export-data/import-file-details-merchant-order-status.csv.html)        |  [Create MerchantOms flows](/docs/pbc/all/order-management-system/latest/marketplace/create-merchant-oms-flows.html)   |

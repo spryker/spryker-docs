@@ -20,7 +20,7 @@ The **Marketplace Order Management API** lets you retrieve all orders made by a 
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [**Install the Order Management Glue API**](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)
+For detailed information about the modules that provide the API functionality and related installation instructions, see [**Install the Order Management Glue API**](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)
 
 ## Retrieve all orders
 
@@ -34,7 +34,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | HEADER KEY  | HEADER VALUE | REQUIRED | DESCRIPTION                                                  |
 | ------------- | ------------ | -------- | -------------------------------- |
-| Authorization | string   | &check;  | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
+| Authorization | string   | &check;  | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION  | POSSIBLE VALUES |
 | ---------------- | ---------------------- | ----------------------------- |
@@ -511,9 +511,9 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 </details>
 
-{% include /pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/latest/orders-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/orders-response-attributes.md -->
 
-For the attributes of the included resources, see [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html).
+For the attributes of the included resources, see [Retrieving merchants](/docs/pbc/all/merchant-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html).
 
 ## Retrieve an order
 
@@ -525,13 +525,13 @@ To retrieve detailed information about an order, send the request:
 
 | PATH PARAMETER | DESCRIPTION     |
 | ------------------ | ------------------------------ |
-| {% raw %}***{{order_id}}***{% endraw %}       | Unique identifier of an order. [Retrieve all orders](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/glue-api-retrieve-orders.html) to get it. |
+| {% raw %}***{{order_id}}***{% endraw %}       | Unique identifier of an order. [Retrieve all orders](/docs/pbc/all/order-management-system/latest/base-shop/glue-api-retrieve-orders.html) to get it. |
 
 ### Request
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION |
 | ------------- | ------------ | -------- | ---------------------- |
-| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 
 | String parameter | Description     | Possible values    |
@@ -1316,9 +1316,9 @@ To retrieve detailed information about an order, send the request:
 
 </details>
 
-{% include /pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/latest/orders-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/orders-response-attributes.md -->
 
-{% include /pbc/all/glue-api-guides/{{page.version}}/order-shipments-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/order-shipments-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/latest/order-shipments-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/order-shipments-response-attributes.md -->
 
 
-For the attributes of other included resources, see [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html).
+For the attributes of other included resources, see [Retrieving merchants](/docs/pbc/all/merchant-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html).

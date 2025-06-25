@@ -23,7 +23,7 @@ related:
     link: docs/pbc/all/order-management-system/page.version/base-shop/order-management-feature-overview/split-delivery-overview.html
 ---
 
-Sometimes payment service providers do not support multiple shipments for the same order, which contradicts the essence of the [Split Delivery feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/split-delivery-overview.html). In this case, you can disable the Split Delivery feature in the Checkout process; however, it will still work in the Back Office.
+Sometimes payment service providers do not support multiple shipments for the same order, which contradicts the essence of the [Split Delivery feature](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/split-delivery-overview.html). In this case, you can disable the Split Delivery feature in the Checkout process; however, it will still work in the Back Office.
 
 To disable the feature for the Checkout process in Yves, do the following:
 1. Open the `\Pyz\Shared\Shipment\ShipmentConfig.php` file.

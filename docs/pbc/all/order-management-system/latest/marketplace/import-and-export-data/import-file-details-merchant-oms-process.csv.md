@@ -14,7 +14,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `merchant_oms_process.csv` file to configure [Merchant state machines](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html#merchant-state-machine) in your Spryker shop.
+This document describes the `merchant_oms_process.csv` file to configure [Merchant state machines](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html#merchant-state-machine) in your Spryker shop.
 
 ## Import file dependencies
 

@@ -22,7 +22,7 @@ related:
     link: docs/pbc/all/order-management-system/page.version/base-shop/reclamations-feature-overview.html
 ---
 
-This document describes how to view [order reclamations](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/reclamations-feature-overview.html) in the Back Office.
+This document describes how to view [order reclamations](/docs/pbc/all/order-management-system/latest/base-shop/reclamations-feature-overview.html) in the Back Office.
 
 ## Prerequisites
 

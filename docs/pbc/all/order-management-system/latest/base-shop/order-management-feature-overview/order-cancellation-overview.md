@@ -35,7 +35,7 @@ A customer can cancel orders on the **Order History** and **Order Details** page
 
 To learn how B2B and B2C shoppers can cancel orders on the Storefront, see [Order cancellation on the Storefront](#storefront).
 
-To learn how a Back Office user can cancel orders, see [Changing Order Statuses](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html).
+To learn how a Back Office user can cancel orders, see [Changing Order Statuses](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html).
 
 ## Timeframes and statuses
 
@@ -43,7 +43,7 @@ A customer can cancel an order only within a defined time period. By default, th
 
 Also, they can cancel an order only if all the included items are in the states that are defined as cancellable. By default, the `payment pending` and `confirmed` states are cancellable. If at least one of the items in an order is in a different state, the buttons to cancel the order are not available.
 
-In the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can configure different order states to be cancellable and change the cancellation time period.
+In the [state machine](/docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can configure different order states to be cancellable and change the cancellation time period.
 
 {% info_block warningBox "State machine" %}
 
@@ -51,7 +51,7 @@ Ensure that, in your state machine, the *refunded* state always goes before the 
 
 {% endinfo_block %}
 
-To learn how a Back Office user can skip timeout or cancel an order by changing order statuses, see [Changing the state of order items](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html)
+To learn how a Back Office user can skip timeout or cancel an order by changing order statuses, see [Changing the state of order items](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html)
 
 <a name="storefront"></a>
 
@@ -70,4 +70,4 @@ This is how the Order Cancellation feature works on the Spryker Demo Shop Storef
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Changing the state of order items](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html)   |
+| [Changing the state of order items](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html)   |

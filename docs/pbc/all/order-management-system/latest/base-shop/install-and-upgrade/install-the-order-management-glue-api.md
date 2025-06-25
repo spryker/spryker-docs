@@ -27,4 +27,4 @@ related:
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-order-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-order-management-glue-api.md -->
+{% include pbc/all/install-features/latest/install-glue-api/install-the-order-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-order-management-glue-api.md -->

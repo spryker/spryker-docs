@@ -24,7 +24,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
 ---
 
-Order management system (OMS) heavily relies on state machine-related concepts like [event timeouts](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html#timeout) and [conditions](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html#conditions). When an order is managed, a lot of the timeout and condition entities are processed. The following two console command do the processsing of timeouts and conditions in Spryker:
+Order management system (OMS) heavily relies on state machine-related concepts like [event timeouts](/docs/pbc/all/order-management-system/latest/base-shop/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html#timeout) and [conditions](/docs/pbc/all/order-management-system/latest/base-shop/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html#conditions). When an order is managed, a lot of the timeout and condition entities are processed. The following two console command do the processsing of timeouts and conditions in Spryker:
 
 - `oms:check-timeout`
 - `oms:check-condition`

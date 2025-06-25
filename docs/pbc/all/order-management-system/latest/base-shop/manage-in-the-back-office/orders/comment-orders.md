@@ -11,7 +11,7 @@ related:
     link: docs/pbc/all/order-management-system/page.version/base-shop/order-management-feature-overview/order-management-feature-overview.html
 ---
 
-To add a [comment](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/comments-feature-overview.html) to an order in the Back Office, do the following:
+To add a [comment](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/comments-feature-overview.html) to an order in the Back Office, do the following:
 
 1. Go to **Sales&nbsp;<span aria-label="and then">></span> Orders**.
     This opens the **Orders** page.

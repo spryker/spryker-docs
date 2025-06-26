@@ -217,7 +217,7 @@ You need at least two plugins: one for handling the *Publish* events and another
 ### 4.1 Create a Publisher plugin
 
 A Publisher plugin is used to handle the *Publish* events. It is a plugin that implements the `Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface` interface and contains the `handleBulk` method. The method accepts an array of event transfers and an event name.
-The `handleBulk` method is meant to be called in order to prepare the data for the frontend and save it in the *Storage* or *Search* database tables.
+The `handleBulk` method is meant to be called in order to prepare the data for the storage or search tables and save it in the *Storage* or *Search* database tables.
 The `getSubscribedEvents` defines the events that the plugin listens to.
 
 ```php
@@ -257,7 +257,20 @@ class StoreWritePublisherPlugin extends AbstractPlugin implements PublisherPlugi
 }
 ```
 
-This plugin must be registered in the `PublisherDependencyProvider::getPublisherPlugins()` method. The plugins are listening to the default publish queue, which is defined in the `PublisherDependencyProvider::getDefaultQueueName()` method. Custom queue names can be set by providing a key as a queue name in the `PublisherDependencyProvider::getPublisherPlugins()` method.
+This plugin must be registered in the `Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins()` method. The plugins are listening to the default publish queue, which is defined in the `Pyz\Zed\Publisher\PublisherDependencyProvider::getDefaultQueueName()` method. Custom queue names can be set by providing a key as a queue name in the `Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins()` method.
+
+E.g.
+```php
+protected function getPublishAndSynchronizeHealthCheckPlugins(): array
+    {
+        return [
+            PublishAndSynchronizeHealthCheckConfig::PUBLISH_PUBLISH_AND_SYNCHRONIZE_HEALTH_CHECK => [
+                new PublishAndSynchronizeHealthCheckStorageWritePublisherPlugin(),
+                new PublishAndSynchronizeHealthCheckSearchWritePublisherPlugin(),
+            ],
+        ];
+    }
+```
 
 ### 4.2 Create a Synchronization plugin
 A Synchronization plugin is used to synchronize data to the frontend. It is a plugin that implements the `\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataBulkRepositoryPluginInterface` interface and contains the `getData` method. The method accepts an offset, limit, and an array of IDs and returns an array of `SynchronizationDataTransfer` objects. Those objects will be used to synchronize data to the frontend as they contain data from _storage or _search tables.
@@ -356,13 +369,13 @@ If the entity is store related - `hasStore()` method must return `true`, otherwi
 
 ## 5. Configure Publish & Synchronization queues
 
-If you want to use separate queues for your entity you need to configure it by providing a key as a queue name in `PublisherDependencyProvider::getPublisherPlugins()` as mentioned before and also in the `QueueDependencyProvider::getProcessorMessagePlugins()` by setting message and sync processors.
+If you want to use separate queues for your entity you need to configure it by providing a key as a queue name in `Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins()` as mentioned before and also in the `Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins()` by setting message and sync processors.
 
-To deliver the prepared data to the frontend, you need to configure synchronization queues in order. This can be also done in `QueueDependencyProvider::getProcessorMessagePlugins()`.
+To deliver the prepared data to the frontend, you need to configure synchronization queues in order. This can be also done in `Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins()`.
 Spryker implemented two generic synchronization message processor plugins for synchronizing data to the frontend:
 
-- `SynchronizationStorageQueueMessageProcessorPlugin` for synchronizing data to Redis, and
-- `SynchronizationSearchQueueMessageProcessorPlugin` for synchronizing data to Elasticsearch.
+- `Spryker\Zed\Synchronization\Communication\Plugin\Queue\SynchronizationStorageQueueMessageProcessorPlugin` for synchronizing data to Redis, and
+- `Spryker\Zed\Synchronization\Communication\Plugin\Queue\SynchronizationSearchQueueMessageProcessorPlugin` for synchronizing data to Elasticsearch.
 
 {% info_block infoBox "Naming convention"%}
 
@@ -393,85 +406,9 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-As you can see, for the Store entity, the `StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE` queue is used for synchronizing data to Redis. The queue name is defined in the `StoreStorageConfig` class.
-For the publishing we are using the default publish queue, which is defined in the `PublisherConfig::PUBLISH_QUEUE` constant. But it also can use a separate queue for publishing data, if you provide a key as a queue name in the `PublisherDependencyProvider::getPublisherPlugins()` method.
+As you can see, for the Store entity, the `Spryker\Shared\StoreStorage\StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE` queue is used for synchronizing data to Redis. The queue name is defined in the `Spryker\Shared\StoreStorage\StoreStorageConfig` class.
+For the publishing we are using the default publish queue, which is defined in the `Spryker\Shared\Publisher\PublisherConfig::PUBLISH_QUEUE` constant. But it also can use a separate queue for publishing data, if you provide a key as a queue name in the `Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins()` method.
 
 ## 6. Validate the implementation
 
-To validate the implementation, you can update a Propel entity and check if the data is published to the *Storage* or *Search* database. Id any errors occur during the process, you can check the error queue in the RabbitMQ management UI. The error queue is created automatically by adding an `error` suffix to the queue name.
-
-
-### Debug Publish and Synchronize
-
-1. To stop processing all queues, turn off [Jenkins](/docs/scos/dev/sdk/cronjob-scheduling.html). Use the following command:
-
-   ```bash
-   console setup:jenkins:disable
-   ```
-
-2. Trigger your Publish event. You can see the messages in the corresponding publish queue of the RabbitMQ management UI. To open it, use the following URL: `https://mysprykershop.com:15672/#/queues`.
-
-3. Set a breakpoint inside a listener mapped to the publish event and enable the PhpStorm debugging mode.
-
-4. Run the following command:
-
-   ```bash
-   XDEBUG_CONFIG="remote_host=10.10.0.1" PHP_IDE_CONFIG="serverName=~^zed\.de\..+\.local$" console queue:task:start event --no-ack
-   ```
-
-5. If you want to view the events stacked in the Publish queues, you can do this in the RabbitMQ management UI.
-
-6. Re-enable the queues after debugging:
-
-   ```bash
-   console setup:jenkins:enable
-   ```
-
-## Re-synchronize Storage and Search data to Redis or Elasticsearch
-
-There is no functionality for this purpose, but you can use the queue client to send data to sync queues.
-
-**Example:**
-
-```php
-$data = $productAbstractStorage->getData();
-$data["_timestamp"] = microtime(true); // Compare fresh copy of storage and search data
-$message = [
-    "write" => [
-        "key" => $productAbstractStorage->getKey(),
-        "value" => $data,
-        "resource" => "product_abstract",
-        "params" => [], // You can use this option to specify an Elasticsearch type, e.g. ["type" => "page"]
-    ]
-];
-
-$queueSendTransfer = new \Generated\Shared\Transfer\QueueSendMessageTransfer();
-$queueSendTransfer->setBody(json_encode($message));
-
-$queueClient = $this->getFactory()->getQueueClient();
-$queueClient->sendMessage("sync.storage.product", $queueSendTransfer);
-```
-
-## Re-trigger the Publish and Synchronize process
-
-Use the Event facade to trigger Publish events for specific entities:
-
-```php
-$productAbstracts = SpyProductAbstractQuery::create()->find();
-foreach ($productAbstracts as $productAbstract) {
-    $this->eventFacade->trigger(ProductEvents::PRODUCT_ABSTRACT_PUBLISH, (new EventEntityTransfer())->setId($productAbstract->getIdProductAbstract()));
-}
-```
-
-{% info_block infoBox "Info"%}
-
-This process only updates the target entities that exist in persistence. You must clean up obsolete entities in Redis or Elasticsearch separately.
-
-{% endinfo_block %}
-
-
-### Disable events
-
-To disable all events, call `EventBehaviorConfig::disableEvent()`.
-
-To disable events of a specific entity, call `$glossaryTranslationEntity->disableEvent()`.
+To validate the implementation, you can update a Propel entity in the backoffice and check if the data is published to the *Storage* or *Search* databases. If any errors occur during the process, you can check the error queue in the RabbitMQ management UI. The error queue is created automatically by adding an `error` suffix to the queue name.

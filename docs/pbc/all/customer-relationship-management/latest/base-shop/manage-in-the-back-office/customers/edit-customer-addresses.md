@@ -52,5 +52,5 @@ Review the [reference information](#reference-information-edit-a-customer-addres
 |ZIP CODE | ZIP code. |
 |COUNTRY | Country. |
 |PHONE| Phone number. |
-|COMPANY| Company. Not to be confused with a [B2B company](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html). |
+|COMPANY| Company. Not to be confused with a [B2B company](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-accounts-overview.html). |
 |COMMENT| Any comment about the address. For example, `Use only for billing`. |

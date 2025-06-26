@@ -26,7 +26,7 @@ This article provides step-by-step instructions on integrating the Episerver mod
 
 ## Prerequisites
 
-Prior to integrating Episerver into your project, make sure you [installed and configured](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/install-and-configure-episerver.html) the Episerver module.
+Prior to integrating Episerver into your project, make sure you [installed and configured](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/install-and-configure-episerver.html) the Episerver module.
 
 ## Customer Registration / Reset Password / Reset Rassword Confirm Event
 

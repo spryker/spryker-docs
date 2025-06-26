@@ -83,12 +83,12 @@ This moves the address to the **UNASSIGNED ADDRESSES** section.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create company units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-units/create-company-units.html) |
-| [Edit company units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-units/edit-company-units.html) |
-| [Create company unit addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-unit-addresses/create-company-unit-addresses.html) |
-| [Edit company unit addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-unit-addresses/edit-company-unit-addresses.html) |
+| [Create company units](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-units/create-company-units.html) |
+| [Edit company units](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-units/edit-company-units.html) |
+| [Create company unit addresses](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-unit-addresses/create-company-unit-addresses.html) |
+| [Edit company unit addresses](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-unit-addresses/edit-company-unit-addresses.html) |
 
 
 ## See next
 
-[Company user rules and permissions overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html)
+[Company user rules and permissions overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html)

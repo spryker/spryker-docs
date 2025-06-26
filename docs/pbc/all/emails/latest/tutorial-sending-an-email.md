@@ -119,7 +119,7 @@ protected function sendRegistrationToken()
 
 ## 2. Creating a MailTypeBuilderPlugin
 
-Create `MailTypeBuilderPlugin` implementing the `MailTypeBuilderPluginInterface`. For more information about creating a `MailTypeBuilderPlugin`, see [HowTo: Create and register a MailTypeBuilderPlugin](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mailtypeplugin.html):
+Create `MailTypeBuilderPlugin` implementing the `MailTypeBuilderPluginInterface`. For more information about creating a `MailTypeBuilderPlugin`, see [HowTo: Create and register a MailTypeBuilderPlugin](/docs/pbc/all/emails/latest/howto-create-and-register-a-mailtypeplugin.html):
 
 <details><summary>Code sample:</summary>
 

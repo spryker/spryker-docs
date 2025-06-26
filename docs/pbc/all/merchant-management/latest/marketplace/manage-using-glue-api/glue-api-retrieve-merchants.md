@@ -16,7 +16,7 @@ Merchant is an individual or an organization selling products on the Marketplace
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [Install the Marketplace Merchant Glue API](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html).
+For detailed information about the modules that provide the API functionality and related installation instructions, see [Install the Marketplace Merchant Glue API](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html).
 
 ## Retrieve merchants
 
@@ -29,7 +29,7 @@ To retrieve all merchants, send the request:
 
 {% info_block warningBox "Note" %}
 
-This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Edit merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html).
+This endpoint returns only [active](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Edit merchants](/docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html).
 
 {% endinfo_block %}
 
@@ -342,7 +342,7 @@ To retrieve a merchant, send the request:
 
 {% info_block warningBox "Note" %}
 
-This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Edit merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html).
+This endpoint returns only [active](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Edit merchants](/docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html).
 
 {% endinfo_block %}
 
@@ -638,8 +638,8 @@ For the merchant attributes, see [Retrieve merchants](#merchants-response-attrib
 
 For the attributes of the included resources, see:
 
-- [Retrieving merchant addresses](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html#merchant-addresses-response-attributes).
-- [Retrieving merchant opening hours](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-opening-hours.html#merchant-opening-hours-response-attributes).
+- [Retrieving merchant addresses](/docs/pbc/all/merchant-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html#merchant-addresses-response-attributes).
+- [Retrieving merchant opening hours](/docs/pbc/all/merchant-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-opening-hours.html#merchant-opening-hours-response-attributes).
 
 
 
@@ -648,16 +648,16 @@ For the attributes of the included resources, see:
 
 Retrieve merchant information as a relationship when sending the following requests:
 
-- [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html#retrieve-an-abstract-product)
-- [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product)
-- [Retrieve a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html#retrieve-a-wishlist)
+- [Retrieve an abstract product](/docs/pbc/all/product-information-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html#retrieve-an-abstract-product)
+- [Retrieve a concrete product](/docs/pbc/all/product-information-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product)
+- [Retrieve a wishlist](/docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html#retrieve-a-wishlist)
 - [Retrieve a product offer]
-- [Retrieve marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)
+- [Retrieve marketplace orders](/docs/pbc/all/order-management-system/latest/marketplace/glue-api-retrieve-marketplace-orders.html)
 
-Search by merchants in the product catalog. For details, see [Searching the product catalog](/docs/pbc/all/search/{{page.version}}/marketplace/glue-api-search-the-product-catalog.html).
-Resolve a search engine friendly URL of a merchant page. For details, see [Resolving search engine friendly URLs](/docs/dg/dev/glue-api/{{page.version}}/rest-api/marketplace-glue-api-resolve-search-engine-friendly-urls.html).
+Search by merchants in the product catalog. For details, see [Searching the product catalog](/docs/pbc/all/search/latest/marketplace/glue-api-search-the-product-catalog.html).
+Resolve a search engine friendly URL of a merchant page. For details, see [Resolving search engine friendly URLs](/docs/dg/dev/glue-api/latest/rest-api/marketplace-glue-api-resolve-search-engine-friendly-urls.html).
 
 
 ## Possible errors
 
-For statuses, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+For statuses, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

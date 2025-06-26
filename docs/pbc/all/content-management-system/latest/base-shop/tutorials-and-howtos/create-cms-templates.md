@@ -79,18 +79,18 @@ To learn how the template is created, check the following exemplary procedure:
 
 The text in the defined placeholders is replaced at runtime by the glossary keys assigned to them.
 
-A content manager can apply this template when [creating a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/create-cms-pages.html) in the Back Office.
+A content manager can apply this template when [creating a CMS page](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/create-cms-pages.html) in the Back Office.
 
 ## Template with slots
 
-[Template with slots](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html) is a Twig file that defines the layout of slots across a Storefront page and has at least one slot assigned.
+[Template with slots](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/templates-and-slots-overview.html) is a Twig file that defines the layout of slots across a Storefront page and has at least one slot assigned.
 
 Create a template with slots:
 1. Create a Twig template as described in [CMS Page Template](#cms-page-template).
-2. For each slot that you want to have in the template, insert a [slot widget](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html#slot-widget).
-3. [Import](/docs/dg/dev/data-import/{{site.version}}/data-importers-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html#correlation) section of the Templates & Slots feature overview.
+2. For each slot that you want to have in the template, insert a [slot widget](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/templates-and-slots-overview.html#slot-widget).
+3. [Import](/docs/dg/dev/data-import/latest/data-importers-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/templates-and-slots-overview.html#correlation) section of the Templates & Slots feature overview.
 
-Templates with slots are universal. In the Back Office, a content manager can apply this template when [creating a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/create-cms-pages.html) or [creating a category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html).
+Templates with slots are universal. In the Back Office, a content manager can apply this template when [creating a CMS page](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/create-cms-pages.html) or [creating a category](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/categories/create-categories.html).
 
 {% info_block warningBox %}
 
@@ -100,7 +100,7 @@ You can assign the template with slots to other page types only on a code level.
 
 ## CMS Block template
 
-CMS block template is a Twig file that, when applied to a [CMS Block](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-blocks-overview.html), defines its design and layout.
+CMS block template is a Twig file that, when applied to a [CMS Block](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-blocks-overview.html), defines its design and layout.
 
 Create the Twig template—`src/Pyz/Shared/CmsBlock/Theme/default/template//hello.twig`.
 
@@ -112,11 +112,11 @@ Create the Twig template—`src/Pyz/Shared/CmsBlock/Theme/default/template//hell
 </div>
 ```
 
-A content manager can apply this template when [creating a CMS block](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html) in the Back Office.
+A content manager can apply this template when [creating a CMS block](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html) in the Back Office.
 
 ## Content item widget template
 
-[Content item widget](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html) template is a Twig file that defines the layout of the content item it renders on Storefront.
+[Content item widget](/docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html) template is a Twig file that defines the layout of the content item it renders on Storefront.
 
 By default, two content item widget templates are shipped per each content item:
 - Banner widget

@@ -14,7 +14,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html
 ---
 
-Back Office users can manage the content of emails sent to customers through [CMS Blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-blocks-overview.html) in the Back Office. To use a CMS Block as an email, the Back Office user applies an email template.
+Back Office users can manage the content of emails sent to customers through [CMS Blocks](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-blocks-overview.html) in the Back Office. To use a CMS Block as an email, the Back Office user applies an email template.
 
 
 ## Types of email templates
@@ -31,7 +31,7 @@ The following CMS Block email templates are available by default:
 - Text email template with header and footer.
 - Empty email template.
 
-To learn how a Back Office User applies a CMS Block email template, see [Create email CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/create-email-cms-blocks.html).
+To learn how a Back Office User applies a CMS Block email template, see [Create email CMS blocks](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/create-email-cms-blocks.html).
 
 A Developer can create more CMS Block email templates.
 
@@ -53,7 +53,7 @@ When a developer creates an email template, inside the file, they enter the CMS 
 
 #### Email format
 
-There are two email formats by default: HTML and pure text. The format of the [default email templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html) is identified by one of the respective tales in the name of an Email CMS Block: `--html` or `--text`. For example, Email CMS Blocks with the following names are assigned to the customer registration email template:
+There are two email formats by default: HTML and pure text. The format of the [default email templates](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html) is identified by one of the respective tales in the name of an Email CMS Block: `--html` or `--text`. For example, Email CMS Blocks with the following names are assigned to the customer registration email template:
 
 - `customer-registration--html`
 - `customer-registration--text`
@@ -112,21 +112,21 @@ The following table contains the list of the default email templates, their Emai
 
 </details>
 
-To learn how a Back Office User manages the content of email templates by editing Email CMS Block, see [Edit placeholders in CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html).
+To learn how a Back Office User manages the content of email templates by editing Email CMS Block, see [Edit placeholders in CMS blocks](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html).
 
-After creating email templates, a developer can [import](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-cms-block.csv.html) their assigned Email CMS Blocks. See [an example of the import file](https://github.com/spryker-shop/suite/blob/master/data/import/common/common/cms_block.csv) with the Email CMS Blocks in Spryker Master Suite.
+After creating email templates, a developer can [import](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-cms-block.csv.html) their assigned Email CMS Blocks. See [an example of the import file](https://github.com/spryker-shop/suite/blob/master/data/import/common/common/cms_block.csv) with the Email CMS Blocks in Spryker Master Suite.
 
 ## Email content
 
-When [editing an email template using email CMS block](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html), you work in the WYSIWYG editor. Apart from the regular WYSIWYG editor tools, you can add glossary keys and variables.
+When [editing an email template using email CMS block](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html), you work in the WYSIWYG editor. Apart from the regular WYSIWYG editor tools, you can add glossary keys and variables.
 
 You can use the functionalities described in this section, regardless of the email format.
 
 ### Glossary keys in email templates
 
-You can add [glossary keys](/docs/pbc/all/miscellaneous/{{page.version}}/manage-in-the-back-office/add-translations.html) directly to email templates, and the respective translations are fetched automatically. When an email with a glossary key is sent, the key is replaced with the translation you defined for the locale selected by the customer. For example, you add the `cart.price.grand.total` glossary key to an email template. When the email is sent to the customer with the `de_DE` locale, the key is replaced with Summe.
+You can add [glossary keys](/docs/pbc/all/miscellaneous/latest/manage-in-the-back-office/add-translations.html) directly to email templates, and the respective translations are fetched automatically. When an email with a glossary key is sent, the key is replaced with the translation you defined for the locale selected by the customer. For example, you add the `cart.price.grand.total` glossary key to an email template. When the email is sent to the customer with the `de_DE` locale, the key is replaced with Summe.
 
-To learn how a Back Office User creates translations, see [Managing Glossary](/docs/pbc/all/miscellaneous/{{page.version}}/manage-in-the-back-office/add-translations.html).
+To learn how a Back Office User creates translations, see [Managing Glossary](/docs/pbc/all/miscellaneous/latest/manage-in-the-back-office/add-translations.html).
 
 ### Variables in Email Templates
 
@@ -136,10 +136,10 @@ A developer can provide a full list of variables and create new ones.
 
 ### Content items in email templates
 
-The CMS capability in Spryker lets you add [content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html) into CMS Blocks. Unlike the regular CMS Blocks, the Email CMS Blocks do not support content items. If you insert one, its content is not rendered when the email is sent.
+The CMS capability in Spryker lets you add [content items](/docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html) into CMS Blocks. Unlike the regular CMS Blocks, the Email CMS Blocks do not support content items. If you insert one, its content is not rendered when the email is sent.
 
 ## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create email CMS Blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/create-email-cms-blocks.html)  |
+| [Create email CMS Blocks](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/create-email-cms-blocks.html)  |

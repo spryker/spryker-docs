@@ -10,11 +10,11 @@ related:
     link: docs/pbc/all/product-information-management/page.version/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html
 ---
 
-This endpoint allows retrieving abstract products in [abstract product lists](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html).
+This endpoint allows retrieving abstract products in [abstract product lists](/docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html).
 
 ## Installation
 
-For details about the modules that provide the API functionality and how to install them, see [Content Items API](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html).
+For details about the modules that provide the API functionality and how to install them, see [Content Items API](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html).
 
 ## Retrieve abstract products in an abstract product list
 
@@ -33,7 +33,7 @@ To retrieve abstract products in an abstract product list, send the request:
 
 {% info_block warningBox "" %}
 
-Alternatively, you can [retrieve an abstract product list](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html#retrieve-abstract-product-list-content-item) with the `abstract-products` resource included.
+Alternatively, you can [retrieve an abstract product list](/docs/pbc/all/content-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html#retrieve-abstract-product-list-content-item) with the `abstract-products` resource included.
 
 {% endinfo_block %}
 

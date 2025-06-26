@@ -34,8 +34,8 @@ The preview link is the only available option for the B2C environment. B2C users
 
 {% endinfo_block %}
 
-- *Read-only*: for details, see [Read only](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html#read-only).
-- *Full access*: for details, see [Full access](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html#full-access).
+- *Read-only*: for details, see [Read only](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html#read-only).
+- *Full access*: for details, see [Full access](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html#full-access).
 
 {% info_block warningBox %}
 
@@ -52,8 +52,8 @@ If a customer selects a link of the cart that's not available, the *This cart is
 
 | INSTALLATION GUIDES  |
 |---|
-| [Install the Persistent Cart Sharing feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-persistent-cart-sharing-feature.html) |
-| [Install the Persistent Cart Sharing + Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-persistent-cart-sharing-shared-carts-feature.html) |
-| [Install the Customer Account Management feature](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
-| [Install the Resource Sharing feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-resource-sharing-feature.html) |
-| [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html) |
+| [Install the Persistent Cart Sharing feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-persistent-cart-sharing-feature.html) |
+| [Install the Persistent Cart Sharing + Shared Carts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-persistent-cart-sharing-shared-carts-feature.html) |
+| [Install the Customer Account Management feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
+| [Install the Resource Sharing feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-resource-sharing-feature.html) |
+| [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html) |

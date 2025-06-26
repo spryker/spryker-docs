@@ -8,7 +8,7 @@ redirect_from:
   - /docs/pbc/all/merchant-management/202311.0/marketplace/manage-in-the-back-office/manage-merchant-users.html
 ---
 
-A [merchant user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html) is a user that performs tasks on behalf of a merchant in the Merchant Portal. To create a merchant user in the Back Office, follow the steps:
+A [merchant user](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html) is a user that performs tasks on behalf of a merchant in the Merchant Portal. To create a merchant user in the Back Office, follow the steps:
 
 1. Go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchants**.
 2. Next to the merchant you want to create a merchant user for, click **Edit**.

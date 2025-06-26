@@ -76,7 +76,7 @@ On the **Product Sets** page, click **Create Product Set** and follow the instru
 | NAME | Unique identifier of the product set that will be displayed on the Storefront. |
 | URL | A relative URL address of the product set. When entering multi-word URLs, use hyphens and dashes.|
 | DESCRIPTION | This description will be displayed on the Storefront for the product set. |
-| PRODUCT SET KEY | Unique identifier of the product set for adding to [CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-pages-overview.html). When entering a multi-word key, use underscores and dashes instead of spaces. |
+| PRODUCT SET KEY | Unique identifier of the product set for adding to [CMS pages](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-pages-overview.html). When entering a multi-word key, use underscores and dashes instead of spaces. |
 | WEIGHT | A number that will define the position of the product set on a page relatively to the weight value of the other product sets. A product set with a bigger weight is displayed higher on a page. |
 | ACTIVE | Defines if the product set is to be activated after you create it. You can activate it later any time. |
 

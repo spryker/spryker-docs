@@ -24,7 +24,7 @@ This endpoint allows sharing carts with company users.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html).
 
 
 ## Share a cart
@@ -44,7 +44,7 @@ To share a cart, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | A string containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | A string containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample: `POST https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab/shared-carts`
 
@@ -63,7 +63,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-ae
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | idCompanyUser | String | ✓ | The unique ID of a company user to share the cart with.<br>The user must belong to the same company as the cart owner. |
-| idCartPermissionGroup | Integer | ✓ | The unique ID of a cart permission group that defines the permissions of the company user for the cart. To get the full list of cart permission groups, [retrieve permission groups](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html#retrieve-cart-permission-groups). |
+| idCartPermissionGroup | Integer | ✓ | The unique ID of a cart permission group that defines the permissions of the company user for the cart. To get the full list of cart permission groups, [retrieve permission groups](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html#retrieve-cart-permission-groups). |
 
 ### Response
 
@@ -85,7 +85,7 @@ Response sample:
 }
 ```
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shared-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shared-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/shared-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shared-carts-response-attributes.md -->
 
 
 ## Possible errors
@@ -108,4 +108,4 @@ Response sample:
 
 ## Next steps
 
-- [Manage shared company user carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-manage-shared-company-user-carts.html)
+- [Manage shared company user carts](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-manage-shared-company-user-carts.html)

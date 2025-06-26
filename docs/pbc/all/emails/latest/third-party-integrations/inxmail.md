@@ -30,10 +30,10 @@ YOUR ADVANTAGES:
 
 ## Related Developer guides
 
-- [Inxmail API requests](/docs/pbc/all/emails/{{page.version}}/third-party-integrations/inxmail-api-requests.html)
-- [Inxmail order reference commands](/docs/pbc/all/emails/{{page.version}}/third-party-integrations/inxmail-order-referenced-commands.html)
-- [Installing and configuring Inxmail](/docs/pbc/all/emails/{{page.version}}/third-party-integrations/install-and-configure-inxmail.html)
-- [Integrating Inxmail](/docs/pbc/all/emails/{{page.version}}/third-party-integrations/integrate-inxmail.html)
+- [Inxmail API requests](/docs/pbc/all/emails/latest/third-party-integrations/inxmail-api-requests.html)
+- [Inxmail order reference commands](/docs/pbc/all/emails/latest/third-party-integrations/inxmail-order-referenced-commands.html)
+- [Installing and configuring Inxmail](/docs/pbc/all/emails/latest/third-party-integrations/install-and-configure-inxmail.html)
+- [Integrating Inxmail](/docs/pbc/all/emails/latest/third-party-integrations/integrate-inxmail.html)
 
 
 ---

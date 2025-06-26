@@ -16,7 +16,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `glossary.csv` file to configure [Customer](/docs/pbc/all/miscellaneous/{{page.version}}/manage-in-the-back-office/add-translations.html) information in your Spryker Demo Shop.
+This document describes the `glossary.csv` file to configure [Customer](/docs/pbc/all/miscellaneous/latest/manage-in-the-back-office/add-translations.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 

@@ -16,9 +16,9 @@ redirect_from:
 
 The *Product Restrictions* feature lets merchants define the products that are available to each of their B2B customers.
 
-In terms of the [Merchant concept](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html), a *merchant* is an entity that sells products in a B2B environment.
+In terms of the [Merchant concept](/docs/pbc/all/merchant-management/latest/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html), a *merchant* is an entity that sells products in a B2B environment.
 
-Product Restrictions from a merchant to a buyer give merchants [another layer](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-access-feature-overview.html) of control over the information a customer can see in the shop application. Based on product restrictions, you can do the following actions:
+Product Restrictions from a merchant to a buyer give merchants [another layer](/docs/pbc/all/customer-relationship-management/latest/base-shop/customer-access-feature-overview.html) of control over the information a customer can see in the shop application. Based on product restrictions, you can do the following actions:
 
 - Create a list of products.
 - Hide the product information for the products (pricing, appearance in the search/filters).
@@ -28,9 +28,9 @@ Product Restriction works on the basis of allowlist and excludelist lists. That 
 
 To restrict the products, a shop administrator needs to create a product list, include the necessary products to the list and excludelist them for a specific merchant relationship. All other products will be available for that merchant relationship.
 
-To create product lists, follow [Create product lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop//manage-in-the-back-office/product-lists/create-product-lists.html).
+To create product lists, follow [Create product lists](/docs/pbc/all/product-information-management/latest/base-shop//manage-in-the-back-office/product-lists/create-product-lists.html).
 
-You can check more cases of product restrictions workflow on the [Restricted Products Behavior](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-product-restrictions-feature-overview/restricted-products-behavior.html) page.
+You can check more cases of product restrictions workflow on the [Restricted Products Behavior](/docs/pbc/all/merchant-management/latest/base-shop/merchant-product-restrictions-feature-overview/restricted-products-behavior.html) page.
 
 ## Current constraints
 
@@ -41,14 +41,14 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop//manage-in-the-back-office/product-lists/create-product-lists.html)  |
-| [Edit product lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/product-lists/edit-product-lists.html) |
-| [Create merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html) |
-| [Edit merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchant-relations.html) |
+| [Create product lists](/docs/pbc/all/product-information-management/latest/base-shop//manage-in-the-back-office/product-lists/create-product-lists.html)  |
+| [Edit product lists](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/product-lists/edit-product-lists.html) |
+| [Create merchant relations](/docs/pbc/all/merchant-management/latest/base-shop/manage-in-the-back-office/create-merchant-relations.html) |
+| [Edit merchant relations](/docs/pbc/all/merchant-management/latest/base-shop/manage-in-the-back-office/edit-merchant-relations.html) |
 
 ## Related Developer documents
 
 | INSTALLATION GUIDES |
 |---------|
-| [Merchant B2B Contracts feature integration](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html) |
-| [Install the Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html) |
+| [Merchant B2B Contracts feature integration](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html) |
+| [Install the Merchant feature](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-feature.html) |

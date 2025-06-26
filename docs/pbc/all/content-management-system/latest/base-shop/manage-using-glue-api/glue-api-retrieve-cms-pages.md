@@ -19,14 +19,14 @@ related:
     link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html
 ---
 
-[CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-pages-overview.html) are meant for creating customized content for your online shop. The CMS Pages API allows you to retrieve details on CMS pages, including information on Abstract Product List and Banner content items available for each of them.
+[CMS pages](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-pages-overview.html) are meant for creating customized content for your online shop. The CMS Pages API allows you to retrieve details on CMS pages, including information on Abstract Product List and Banner content items available for each of them.
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-- [Install the Content Items feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html)
-- [Glue API: CMS feature integration](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html)
+- [Install the Content Items feature](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html)
+- [Glue API: CMS feature integration](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html)
 
 <a name="all-cms-pages"></a>
 
@@ -72,9 +72,9 @@ To retrieve abstract products for the `content-product-abstract-lists` relations
 | `GET https://glue.mysprykershop.com/cms-pages` | Retrieve all active CMS pages. |
 | `GET https://glue.mysprykershop.com/cms-pages?page[limit]=24&page[offset]=0` | Return maximum 24 CMS pages. |
 | `GET https://glue.mysprykershop.com/cms-pages?page[limit]=12&page[offset]=12` | Return CMS pages 13 and further, maximum 12 pages. |
-| `GET https://glue.mysprykershop.com/cms-pages?include=content-product-abstract-lists` | Retrieve information about [Abstract Product List](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html#reference-information-abstract-product-list-content-item-widget) content item for CMS pages. |
+| `GET https://glue.mysprykershop.com/cms-pages?include=content-product-abstract-lists` | Retrieve information about [Abstract Product List](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html#reference-information-abstract-product-list-content-item-widget) content item for CMS pages. |
 | `GET https://glue.mysprykershop.com/cms-pages?include=content-product-abstract-list,abstract-products` | Retrieve information about Abstract Product List content item with its abstract products. |
-| `GET https://glue.mysprykershop.com/cms-pages?include=content-banners` | Retrieve information about [Banner](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html#reference-information-banner-content-item-widget) content item for CMS pages. |
+| `GET https://glue.mysprykershop.com/cms-pages?include=content-banners` | Retrieve information about [Banner](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html#reference-information-banner-content-item-widget) content item for CMS pages. |
 
 ### Response
 
@@ -587,10 +587,10 @@ When paging is enabled, the links section of the response contains links for the
 </details>
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/cms-pages-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/cms-pages-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/cms-pages-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
 
 
 ## Retrieve a CMS page
@@ -619,9 +619,9 @@ To retrieve abstract products for the `content-product-abstract-lists` relations
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
 | `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c` | Retrieve the specific CMS page. |
-| `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-product-abstract-lists` | Retrieve information about [Abstract Product List](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html#reference-information-abstract-product-list-content-item-widget) content item for the CMS page. |
+| `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-product-abstract-lists` | Retrieve information about [Abstract Product List](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html#reference-information-abstract-product-list-content-item-widget) content item for the CMS page. |
 | `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-product-abstract-list,abstract-products` | Retrieve information about Abstract Product List content item with its abstract products. |
-| `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-banners` | Retrieve information about [Banner](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html#reference-information-banner-content-item-widget) content item for the CMS page. |
+| `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-banners` | Retrieve information about [Banner](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html#reference-information-banner-content-item-widget) content item for the CMS page. |
 
 <details>
 <summary>Response sample: retrieve a specific CMS page</summary>
@@ -882,10 +882,10 @@ To retrieve abstract products for the `content-product-abstract-lists` relations
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/cms-pages-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/cms-pages-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/cms-pages-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
 
 ## Possible errors
 

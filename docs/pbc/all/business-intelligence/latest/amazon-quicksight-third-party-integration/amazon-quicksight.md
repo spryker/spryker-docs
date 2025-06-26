@@ -35,7 +35,7 @@ For more details on data sources, see [Supported data sources](https://docs.aws.
 
 Datasets represent the data from your project that's available for analytics. By default, only the data that is secure and can be useful for analytics is available in datasets from respective database tables. For example, the Customer dataset doesn't include customer names or passwords.
 
-You can extend the data available to datasets on the project level. For more details, see [Install Amazon QuickSight](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/install-amazon-quicksight.html).
+You can extend the data available to datasets on the project level. For more details, see [Install Amazon QuickSight](/docs/pbc/all/business-intelligence/latest/amazon-quicksight-third-party-integration/install-amazon-quicksight.html).
 
 
 ### SPICE data
@@ -61,7 +61,7 @@ You can refresh data manually or automatically by setting up a schedule per data
 
 ![refresh-dataset](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/refresh-dataset.png)
 
-For instructions on refreshing data, see [Refresh analytics datasets](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html).
+For instructions on refreshing data, see [Refresh analytics datasets](/docs/pbc/all/business-intelligence/latest/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html).
 
 
 ## Analyses and dashboards
@@ -101,7 +101,7 @@ When working with analytics, users can have the following roles:
 - Author: can view, create, and edit assets.
 - Reader: can view dashboards.
 
-The analytics roles are derived from Amazon QuickSight and are separate from the [Back Office user roles](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
+The analytics roles are derived from Amazon QuickSight and are separate from the [Back Office user roles](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
 
 The number of users with different roles depends on your contract.
 
@@ -261,4 +261,4 @@ Sometimes you might want to start from scratch and get a fresh analytics account
 
 ## Next step
 
-[Best practices: working with analytics](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/best-practices-working-with-analytics.html)
+[Best practices: working with analytics](/docs/pbc/all/business-intelligence/latest/amazon-quicksight-third-party-integration/best-practices-working-with-analytics.html)

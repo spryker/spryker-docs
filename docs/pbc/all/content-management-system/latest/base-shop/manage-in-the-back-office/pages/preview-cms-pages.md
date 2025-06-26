@@ -28,7 +28,7 @@ This document describes how to preview CMS pages from the Back Office. This lets
 
 ## Prerequisites
 
-1. [Assign a customer to your user](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html).
+1. [Assign a customer to your user](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html).
 2. On the Storefront, log in with the customer account you've assigned to your user.
 3. Log into the Back Office with the account you've assigned the customer to.
 

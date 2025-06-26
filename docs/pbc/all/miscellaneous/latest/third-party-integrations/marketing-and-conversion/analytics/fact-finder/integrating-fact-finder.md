@@ -34,7 +34,7 @@ related:
 ## Prerequisites
 
 To integrate with FACT-Finder, you will need your FACT-Finder account. If you do not have a FACT-Finder account,  contact [FACT-Finder](http://www.fact-finder.de/).
-Make sure, that FactFinder modules were [installed and configured](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html) before proceeding with the integration.
+Make sure, that FactFinder modules were [installed and configured](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html) before proceeding with the integration.
 
 ### FactFinder Module
 

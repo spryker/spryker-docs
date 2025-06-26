@@ -19,7 +19,7 @@ This document describes how to edit discounts in the Back Office.
 
 ## Prerequisites
 
-If you are new to discounts, you might want to start with [Best practices: Promote products with discounts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/best-practices-promote-products-with-discounts.html).
+If you are new to discounts, you might want to start with [Best practices: Promote products with discounts](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/best-practices-promote-products-with-discounts.html).
 
 Review the [reference information](#reference-information-edit-general-settings-of-a-discount) before you start, or look up the necessary information as you go through the process.
 
@@ -211,4 +211,4 @@ This section contains additional information for defining decision rules.
 
 ## Next steps
 
-[Edit discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-discounts.html)
+[Edit discounts](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/edit-discounts.html)

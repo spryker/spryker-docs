@@ -11,7 +11,7 @@ redirect_from:
 The *Merchant B2B Contracts* feature lets you set up contracts between a merchant and B2B customer.
 
 
-To learn more about the feature and to find out how end users use it, see [Merchant B2B Contracts feature overview](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Merchant B2B Contracts feature overview](/docs/pbc/all/merchant-management/latest/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html) for business users.
 
 
 ## Entity diagram

@@ -125,23 +125,23 @@ Every company role includes a set of permissions that can be enabled or disabled
 - **Add item to cart**: allows adding products to the cart. Without this permission, the user gets the "This action is forbidden" error when trying to add the product to the cart.
 - **Change item in cart**: allows changing products in the cart (changing the quantity or adding notes).
 - **Remove item from cart**: allows deleting the products from the cart.
-- **Place Order**: allows placing the order. Without this permission enabled, a user gets an error when trying to submit the order. If the [Approval Process](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/approval-process-feature-overview.html) feature is integrated into your project, then **Buy up to grand total** permission is also required to place an order.
-- **Buy up to grand total (Requires "Send cart for approval")**: sets a limit for the grand total of the cart. If the amount in the cart is larger than the limit set in this permission, the user can't proceed to checkout. Works with **Send cart for approval** permission. This permission is available after enabling the [Approval Process](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/approval-process-feature-overview.html) feature.
-- **Approve up to grand total**: with this permission enabled, a user can approve the cart. For more details, see [Approval Feature Overview](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/approval-process-feature-overview.html).
+- **Place Order**: allows placing the order. Without this permission enabled, a user gets an error when trying to submit the order. If the [Approval Process](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/approval-process-feature-overview.html) feature is integrated into your project, then **Buy up to grand total** permission is also required to place an order.
+- **Buy up to grand total (Requires "Send cart for approval")**: sets a limit for the grand total of the cart. If the amount in the cart is larger than the limit set in this permission, the user can't proceed to checkout. Works with **Send cart for approval** permission. This permission is available after enabling the [Approval Process](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/approval-process-feature-overview.html) feature.
+- **Approve up to grand total**: with this permission enabled, a user can approve the cart. For more details, see [Approval Feature Overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/approval-process-feature-overview.html).
 - **View Business Unit orders**: with this permission enabled, a user can see not only their own orders but also the orders of their business unit.
 - **View Company orders**: with this permission enabled, a user can see not only their own orders, orders of their business unit, but also the orders of their company.
-- **Send cart for approval (Requires "Buy up to grand total")**—lets a user send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/approval-process-feature-overview.html) for more details.
+- **Send cart for approval (Requires "Buy up to grand total")**—lets a user send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/approval-process-feature-overview.html) for more details.
 
 ## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create company roles](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-roles/create-company-roles.html) |
-| [Edit company roles](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-roles/edit-company-roles.html) |
-| [Create company users](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-users/create-company-users.html) |
-| [Edit company users](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-users/edit-company-users.html) |
+| [Create company roles](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-roles/create-company-roles.html) |
+| [Edit company roles](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-roles/edit-company-roles.html) |
+| [Create company users](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-users/create-company-users.html) |
+| [Edit company users](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-users/edit-company-users.html) |
 
 
 ## See next
 
-[Business on Behalf overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-on-behalf-overview.html)
+[Business on Behalf overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/business-on-behalf-overview.html)

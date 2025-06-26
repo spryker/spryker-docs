@@ -78,5 +78,5 @@ This section displays a list of users associated with the merchant and provides 
 ## Managing merchant users
 
 For instructions on managing merchant users, see the following documents:
-- [Create merchant users](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users/create-merchant-users.html)
-- [Edit merchant users](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users/edit-merchant-users.html)
+- [Create merchant users](/docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchant-users/create-merchant-users.html)
+- [Edit merchant users](/docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchant-users/edit-merchant-users.html)

@@ -197,7 +197,7 @@ Now you can use your plugin as a function in Twig files. If you've named your pl
 
 ## WYSIWYG editor plugin
 
-The **CMS Block Glossary Edit** and **Placeholder Edit** pages contain the WYSIWYG editor to put content into a CMS block or page. In the WYSIWYG toolbar, the **Content Item** drop-down menu contains all the content items which you can add. For more details, see [Add content items to CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html).
+The **CMS Block Glossary Edit** and **Placeholder Edit** pages contain the WYSIWYG editor to put content into a CMS block or page. In the WYSIWYG toolbar, the **Content Item** drop-down menu contains all the content items which you can add. For more details, see [Add content items to CMS blocks](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html).
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Feature+HowTos/HowTo+-+Create+a+New+Custom+Content+Item/content-item-menu.png)
 

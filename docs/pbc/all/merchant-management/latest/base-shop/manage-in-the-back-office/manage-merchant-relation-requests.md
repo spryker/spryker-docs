@@ -5,7 +5,7 @@ template: back-office-user-guide-template
 last_updated: Mar 26, 2024
 ---
 
-A Back Office user can view, edit, approve, and reject merchant relation requests created by buyers. For details on the merchant relation requests, see [Initiation of the merchant relation by a company user](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html#initiation-of-a-merchant-relation-by-a-company-user).
+A Back Office user can view, edit, approve, and reject merchant relation requests created by buyers. For details on the merchant relation requests, see [Initiation of the merchant relation by a company user](/docs/pbc/all/merchant-management/latest/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html#initiation-of-a-merchant-relation-by-a-company-user).
 
 Once a company user creates a merchant relation request, it appears in *B2B Contracts -> Merchant Relation Requests*.
 
@@ -36,4 +36,4 @@ This takes you to *Overview of the Merchant relation* page with the merchant rel
 
 ## What's next
 
-[Manage merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchant-relations.html)
+[Manage merchant relations](/docs/pbc/all/merchant-management/latest/base-shop/manage-in-the-back-office/edit-merchant-relations.html)

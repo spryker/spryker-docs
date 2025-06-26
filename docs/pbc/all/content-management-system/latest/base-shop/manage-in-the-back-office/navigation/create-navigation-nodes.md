@@ -11,7 +11,7 @@ related:
     link: docs/pbc/all/content-management-system/page.version/base-shop/navigation-feature-overview.html
 ---
 
-This document describes how to create [navigation nodes](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html#navigation-node).
+This document describes how to create [navigation nodes](/docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html#navigation-node).
 
 ## Prerequisites
 

@@ -14,7 +14,7 @@ redirect_from:
 
 The *Approval Process* feature lets B2B customers have multiple people contributing to the ordering process but requires the manager's approval to proceed with the checkout.
 
-Permissions related to the approval process are configured based on the restrictions applied to a [company role](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html). Generally, the approval process is initiated when the cart total exceeds a certain amount set in the *Buy up to grand total* permissions. For example, an employee in a company may have to send their order to the manager for approval if the total order cost is above a certain amount. Only after the manager has received the request and approved the order, the employee can proceed to the checkout.
+Permissions related to the approval process are configured based on the restrictions applied to a [company role](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html). Generally, the approval process is initiated when the cart total exceeds a certain amount set in the *Buy up to grand total* permissions. For example, an employee in a company may have to send their order to the manager for approval if the total order cost is above a certain amount. Only after the manager has received the request and approved the order, the employee can proceed to the checkout.
 
 {% info_block warningBox "Approvals within a business unit" %}
 
@@ -55,11 +55,11 @@ It is mandatory to set this permission for the Buyer role if you want to use the
 
 {% endinfo_block %}
 
-To configure this permission, use [this step-by-step instruction](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/approval-process-feature-overview.html#approval-process-on-the-storefront).
+To configure this permission, use [this step-by-step instruction](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/approval-process-feature-overview.html#approval-process-on-the-storefront).
 
 - The *Send cart for approval* permission, which lets a buyer send a cart for approval to their manager. Without this permission, a buyer cannot see the *Request for Approval* widget.
 
-- The *Approve up to grand total* permission, which lets an approver approve the carts that do not hit the cart grand total limit specified there. To learn how to set up the permission in the Storefront, see [Configuring the Approve up to grand total permission](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/approval-process-feature-overview.html#approval-process-on-the-storefront).
+- The *Approve up to grand total* permission, which lets an approver approve the carts that do not hit the cart grand total limit specified there. To learn how to set up the permission in the Storefront, see [Configuring the Approve up to grand total permission](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/approval-process-feature-overview.html#approval-process-on-the-storefront).
 
 Every approval request can have three statuses:
 - *Waiting*—the approver has been assigned, but the approval hasn't been confirmed.
@@ -74,11 +74,11 @@ Here's how approvals fit into the buying process:
 
 ### 1. Submitting the request for approval
 
-<br>The Approval Process workflow is flexible and starts when a buyer submits the request for approval through the company user account in the shop application. The approval request can be submitted after any step of the checkout, depending on the project configuration. The buyer requests approval from the appropriate approver through the Approver widget. For details about how to submit a request for approval, see [Approval Process on the Storefront](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/approval-process-feature-overview.html#approval-process-on-the-storefront). After the buyer has requested the approval, the request gets the **Waiting** status and cannot be edited.
+<br>The Approval Process workflow is flexible and starts when a buyer submits the request for approval through the company user account in the shop application. The approval request can be submitted after any step of the checkout, depending on the project configuration. The buyer requests approval from the appropriate approver through the Approver widget. For details about how to submit a request for approval, see [Approval Process on the Storefront](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/approval-process-feature-overview.html#approval-process-on-the-storefront). After the buyer has requested the approval, the request gets the **Waiting** status and cannot be edited.
 
 {% info_block warningBox "Note" %}
 
-There may be several approvers with different Approve up to grand total permissions created. By default, one Approver role is available after the feature has been [integrated](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html).
+There may be several approvers with different Approve up to grand total permissions created. By default, one Approver role is available after the feature has been [integrated](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html).
 
 {% endinfo_block %}
 
@@ -229,5 +229,5 @@ Company users can perform the following actions using the Approval Process featu
 
 | INSTALLATION GUIDES                                                                                                                                                                                    | TUTORIALS AND HOWTOS |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
-| [Approval Process feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html)                      | [HowTo: Implement customer approval process based on a generic state machine](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/tutorials-and-howtos/implement-a-customer-approval-process-based-on-a-generic-state-machine.html)  |
-| [Install the Shipment + Approval Process feature](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-approval-process-feature.html) |   |
+| [Approval Process feature integration](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html)                      | [HowTo: Implement customer approval process based on a generic state machine](/docs/pbc/all/cart-and-checkout/latest/base-shop/tutorials-and-howtos/implement-a-customer-approval-process-based-on-a-generic-state-machine.html)  |
+| [Install the Shipment + Approval Process feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-approval-process-feature.html) |   |

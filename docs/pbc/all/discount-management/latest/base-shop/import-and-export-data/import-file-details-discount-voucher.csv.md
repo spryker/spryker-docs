@@ -48,7 +48,7 @@ data:import:discount-voucher
 
 ## Import file dependencies
 
-This file has the following dependency: [discount.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount.csv.html).
+This file has the following dependency: [discount.csv](/docs/pbc/all/discount-management/latest/base-shop/import-and-export-data/import-file-details-discount.csv.html).
 
 ## Additional information
 

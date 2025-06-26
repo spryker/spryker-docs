@@ -8,11 +8,11 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `company_business_unit.csv` file to configure information about [business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) in your Spryker shop.
+This document describes the `company_business_unit.csv` file to configure information about [business units](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/business-units-overview.html) in your Spryker shop.
 
 ## Import file dependencies
 
-[File details: company.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/import-and-export-data/file-details-company.csv.html)
+[File details: company.csv](/docs/pbc/all/customer-relationship-management/latest/base-shop/import-and-export-data/file-details-company.csv.html)
 
 ## Import file parameters
 

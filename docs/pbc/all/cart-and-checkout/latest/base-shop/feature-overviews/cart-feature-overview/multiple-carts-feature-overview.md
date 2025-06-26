@@ -40,7 +40,7 @@ The table with shopping carts shows details for each of the carts, including the
 - Number of products added to cart
 - Price mode (Net or Gross)
 - Cart Total
-- Possible actions to manage shopping carts: edit name, duplicate, [share](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/shared-carts-feature-overview.html), dismiss, delete, switch cart to the shopping list (see the **Actions** table for details)
+- Possible actions to manage shopping carts: edit name, duplicate, [share](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/shared-carts-feature-overview.html), dismiss, delete, switch cart to the shopping list (see the **Actions** table for details)
 
 ![Multiple carts list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/multiple-cart-list.png)
 
@@ -59,7 +59,7 @@ To view how to create, edit, duplicate, and delete a cart and how to dismiss sha
 
 {% endinfo_block %}
 
-To learn more about sharing the shopping cart, see [Shared Cart documentation](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/shared-carts-feature-overview.html).
+To learn more about sharing the shopping cart, see [Shared Cart documentation](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/shared-carts-feature-overview.html).
 
 An active shopping cart is highlighted in bold.
 
@@ -136,11 +136,11 @@ On the storefront, company users can perform the following actions by using the 
 
 </details>
 
-- To share a cart with external and internal users by a link, see [Unique URL per Cart for Easy Sharing feature overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/persistent-cart-sharing-feature-overview.html).
-- To share a cart with users within one business unit, see [Shared Cart feature overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/shared-carts-feature-overview.html#shared-cart-on-the-storefront).
-- To add a custom order reference to a cart, see [Custom Order Reference feature overview](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/order-management-feature-overview/custom-order-reference-overview.html).
-- To add comments to a cart, see [Comments feature overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/comments-feature-overview.html#comments-on-the-storefront).
-- To add a customer order reference to an order, see [Custom Order Reference feature overview](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/order-management-feature-overview/custom-order-reference-overview.html).
+- To share a cart with external and internal users by a link, see [Unique URL per Cart for Easy Sharing feature overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/persistent-cart-sharing-feature-overview.html).
+- To share a cart with users within one business unit, see [Shared Cart feature overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/shared-carts-feature-overview.html#shared-cart-on-the-storefront).
+- To add a custom order reference to a cart, see [Custom Order Reference feature overview](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/custom-order-reference-overview.html).
+- To add comments to a cart, see [Comments feature overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/comments-feature-overview.html#comments-on-the-storefront).
+- To add a customer order reference to an order, see [Custom Order Reference feature overview](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/custom-order-reference-overview.html).
 
 
 This video explains how to use shopping carts in the Spryker [B2B Demo Shop](/docs/about/all/b2b-suite.html).
@@ -158,7 +158,7 @@ This video explains how to use shopping carts in the Spryker [B2B Demo Shop](/do
 
 |INSTALLATION GUIDES  |
 |---------|
-| [Install the Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html)  |
-| [Install Multiple Carts + Quick Order feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-quick-order-feature.html)  |
-| [Install Multiple Carts + Quotation Process feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-quotation-process-feature.html)  |
-| [Install the Multiple Carts + Reorder feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html)   |
+| [Install the Multiple Carts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html)  |
+| [Install Multiple Carts + Quick Order feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-quick-order-feature.html)  |
+| [Install Multiple Carts + Quotation Process feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-quotation-process-feature.html)  |
+| [Install the Multiple Carts + Reorder feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html)   |

@@ -5,4 +5,4 @@ description: This integration guide provides steps on how to integrate the B2B M
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-merchant-portal-marketplace-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-merchant-portal-marketplace-order-management-feature.md -->
+{% include pbc/all/install-features/latest/marketplace/install-the-merchant-portal-marketplace-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-merchant-portal-marketplace-order-management-feature.md -->

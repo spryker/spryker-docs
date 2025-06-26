@@ -32,7 +32,7 @@ Make sure to review [reference information](#reference-information-create-banner
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-- Locale-specific values overwrite the default values when the banner is rendered on a Storefront page with the [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html) selected.
+- Locale-specific values overwrite the default values when the banner is rendered on a Storefront page with the [locale](/docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/multi-language-setup.html) selected.
 - If the fields are not filled out for a locale, the default values are displayed on a Storefront page with the locale selected.
 
 {% endinfo_block %}

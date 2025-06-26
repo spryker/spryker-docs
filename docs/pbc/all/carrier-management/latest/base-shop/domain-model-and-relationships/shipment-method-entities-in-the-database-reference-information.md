@@ -20,4 +20,4 @@ The following schema shows how the sales order and shipment method entities are 
 
 ![Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shipment/Shipment+Overview/shipment-database-schema.png)
 
-/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/reference-information-shipment-method-entities-in-the-database.html
+/docs/scos/dev/feature-walkthroughs/latest/shipment-feature-walkthrough/reference-information-shipment-method-entities-in-the-database.html

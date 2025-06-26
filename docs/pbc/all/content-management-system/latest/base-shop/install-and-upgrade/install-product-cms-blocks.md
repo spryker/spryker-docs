@@ -140,4 +140,4 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```
 
-Now you can create product CMS blocks and add them to product pages. For instructions, see [Create product CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/create-product-cms-blocks.html).
+Now you can create product CMS blocks and add them to product pages. For instructions, see [Create product CMS blocks](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/create-product-cms-blocks.html).

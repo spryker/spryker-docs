@@ -16,7 +16,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `cms_slot_template.csv` file to configure  [CMS Slot Template](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#template-with-slots) information in your Spryker Demo Shop.
+This document describes the `cms_slot_template.csv` file to configure  [CMS Slot Template](/docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-cms-templates.html#template-with-slots) information in your Spryker Demo Shop.
 
 
 

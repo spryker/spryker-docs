@@ -25,7 +25,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |---|---|---|
-| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules
 
@@ -103,4 +103,4 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 }
 ```
 
-To verify that everything is set up correctly and send an email, see [How to create and register MailTypeBuilderPlugin](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mail-type-builder-plugin.html).
+To verify that everything is set up correctly and send an email, see [How to create and register MailTypeBuilderPlugin](/docs/pbc/all/emails/latest/howto-create-and-register-a-mail-type-builder-plugin.html).

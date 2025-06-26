@@ -17,7 +17,7 @@ Item notes in the Merchant Portal:
 
 ![Items notes in the Merchant Portal](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Cart+Notes/mp-item-notes-merchant-portal.png)
 
-The Marketplace administrator can see the special request in the [order details section of the Back Office](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html#merchant-order-overview-page):
+The Marketplace administrator can see the special request in the [order details section of the Back Office](/docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html#merchant-order-overview-page):
 
 ![Cart Notes in Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart+Notes/cart-notes-admin.png)
 
@@ -29,7 +29,7 @@ In a situation where the same product variants are added to the cart with differ
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |
 |---------|---------|---------|--------|
-| [Install the Marketplace Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/install/install-features/install-the-marketplace-cart-feature.html)          | [Manage carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html)          |
-|  | [Managing items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html) |
-|   |  [Manage guest carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html) |
-|   |  [Manage guest cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html) |
+| [Install the Marketplace Cart feature](/docs/pbc/all/cart-and-checkout/latest/marketplace/install/install-features/install-the-marketplace-cart-feature.html)          | [Manage carts of registered users](/docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html)          |
+|  | [Managing items in carts of registered users](/docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html) |
+|   |  [Manage guest carts](/docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html) |
+|   |  [Manage guest cart items](/docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html) |

@@ -26,7 +26,7 @@ Make sure to review [reference information](#reference-information-create-produc
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-- A locale-specific product set overwrites the default product set when the product set content item is rendered on a Storefront page with the [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html) selected.
+- A locale-specific product set overwrites the default product set when the product set content item is rendered on a Storefront page with the [locale](/docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/multi-language-setup.html) selected.
 - If no product set is selected for a locale, the default product set is displayed on a Storefront page with the locale selected.
 
 {% endinfo_block %}

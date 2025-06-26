@@ -57,11 +57,11 @@ Even if the **Add to Cart** button is available, an unauthenticated customer is 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage customer access](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-customer-access.html) |
+| [Manage customer access](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/manage-customer-access.html) |
 
 ## Related Developer documents
 
 |INSTALLATION GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|---------|
-| [Customer access feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-access-feature.html) | [Retrieving protected resources](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-protected-resources.html)  | [Managing customer access to Glue API resources](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/manage-customer-access-to-glue-api-resources.html) |
-| [Glue API Customer access feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-access-glue-api.html) | | |
+| [Customer access feature integration](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-access-feature.html) | [Retrieving protected resources](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-retrieve-protected-resources.html)  | [Managing customer access to Glue API resources](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/manage-customer-access-to-glue-api-resources.html) |
+| [Glue API Customer access feature integration](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-access-glue-api.html) | | |

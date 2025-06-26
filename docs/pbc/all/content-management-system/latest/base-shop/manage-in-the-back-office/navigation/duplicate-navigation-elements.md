@@ -11,7 +11,7 @@ related:
     link: docs/pbc/all/content-management-system/page.version/base-shop/navigation-feature-overview.html
 ---
 
-To duplicate a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html#navigation-element) in the Back Office, follow the steps:
+To duplicate a [navigation element](/docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html#navigation-element) in the Back Office, follow the steps:
 
 1. Go to **Content&nbsp;<span aria-label="and then">></span> Navigation**.
 2. On the **Overview of Navigation Elements** page, next to the navigation element you want to duplicate, click **Duplicate**.

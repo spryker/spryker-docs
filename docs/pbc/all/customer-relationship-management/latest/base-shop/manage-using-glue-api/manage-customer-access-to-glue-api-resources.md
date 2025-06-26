@@ -14,9 +14,9 @@ related:
     link: docs/pbc/all/identity-access-management/page.version/install-and-upgrade/install-the-customer-access-glue-api.html
 ---
 
-The [Customer Access API](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-protected-resources.html) allows storefront owners to prevent unauthorized (guest) users from accessing certain REST API resources. This capability is tied up to the [Customer Access](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-customer-access.html) feature that allows you to restrict access to certain content items in *Spryker Back Office*.
+The [Customer Access API](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-retrieve-protected-resources.html) allows storefront owners to prevent unauthorized (guest) users from accessing certain REST API resources. This capability is tied up to the [Customer Access](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/manage-customer-access.html) feature that allows you to restrict access to certain content items in *Spryker Back Office*.
 
-The access to resources protected by the API depends on the setup of the *[Customer Access](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/customer-access-feature-overview.html)* feature. If a certain type of information is restricted to *customer access only*, all API resources associated with it are protected from unauthorized access. If the access is unrestricted, the respective resources are available to guest users as well. For example, if you restrict the *can place an order* functionality to customer access only, customers can check out an order only when authenticated. Alongside that, the associated API resources (`checkout` and `checkout-data)` are available only upon authentication. If you don't restrict access, everyone can use the resources. In other words, you can prevent access only to the resources that belong to one of the Customer Access feature items.
+The access to resources protected by the API depends on the setup of the *[Customer Access](/docs/pbc/all/customer-relationship-management/latest/base-shop/customer-access-feature-overview.html)* feature. If a certain type of information is restricted to *customer access only*, all API resources associated with it are protected from unauthorized access. If the access is unrestricted, the respective resources are available to guest users as well. For example, if you restrict the *can place an order* functionality to customer access only, customers can check out an order only when authenticated. Alongside that, the associated API resources (`checkout` and `checkout-data)` are available only upon authentication. If you don't restrict access, everyone can use the resources. In other words, you can prevent access only to the resources that belong to one of the Customer Access feature items.
 
 This document shows how to map API resources to the Customer Access feature items.
 
@@ -61,7 +61,7 @@ For constants that represent the content item types, see file `src/Spryker/Share
 For constants that represent API resource types, see configuration files of the corresponding APIs.
 
 3. Save the file.
-4. You can restrict access to the Customer Access feature items that are mapped to the REST API resources you want to protect. This is done in Spryker Back Office*. For detailed instructions, see [Managing Customer Access](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-customer-access.html).
+4. You can restrict access to the Customer Access feature items that are mapped to the REST API resources you want to protect. This is done in Spryker Back Office*. For detailed instructions, see [Managing Customer Access](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/manage-customer-access.html).
 
 {% info_block infoBox %}
 

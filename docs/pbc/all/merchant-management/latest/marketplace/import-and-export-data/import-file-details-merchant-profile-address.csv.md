@@ -12,7 +12,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `merchant_profile_address.csv` file to configure [merchant profile addresses](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile) information in your Spryker shop.
+This document describes the `merchant_profile_address.csv` file to configure [merchant profile addresses](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile) information in your Spryker shop.
 
 To import the file, run:
 
@@ -39,7 +39,7 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant_profile.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant-profile.csv.html)
+- [merchant_profile.csv](/docs/pbc/all/merchant-management/latest/marketplace/import-and-export-data/import-file-details-merchant-profile.csv.html)
 
 ## Import template file and content example
 

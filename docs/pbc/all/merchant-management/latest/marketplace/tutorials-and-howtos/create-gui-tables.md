@@ -19,7 +19,7 @@ With this step by step instructions you will create a new Gui table with filters
 
 ## Prerequisites
 
-To install the Marketplace Merchant Portal Core feature providing the `GuiTable` module, follow the [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
+To install the Marketplace Merchant Portal Core feature providing the `GuiTable` module, follow the [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
 
 ## 1) Add GuiTable services to dependencies
 
@@ -306,7 +306,7 @@ class ProductsController extends AbstractController
 
 Create a corresponding Twig template, pass configuration to frontend component.
 
-To learn more about table components, see [Table Design](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-design.html).
+To learn more about table components, see [Table Design](/docs/dg/dev/frontend-development/latest/marketplace/table-design/table-design.html).
 
 ## 7) Data source
 

@@ -19,7 +19,7 @@ The *Shipment* feature lets you create and manage carrier companies, shipment ty
 
 A *carrier company* is a business that provides shipping services, like DHL, FedEx, or Hermes.
 
-For instructions on adding carrier companies in the Back Office, see [Add carrier companies](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/add-carrier-companies.html).
+For instructions on adding carrier companies in the Back Office, see [Add carrier companies](/docs/pbc/all/carrier-management/latest/base-shop/manage-in-the-back-office/add-carrier-companies.html).
 
 ## Shipment type
 
@@ -29,11 +29,11 @@ A *shipment type* is a way in which a customer receives an order after placing i
 - Curbside pickup: customer places an order online and drives the the selected physical store. They park at a designated area, and the store's associate brings out the order directly to the car.
 - Locker pickup: customer places an order online and picks it up from a selected secure locker using a key or code provided by the store.
 
-Shipment types are used by service points. For more information about service points, see [Service Points feature overview](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html).
+Shipment types are used by service points. For more information about service points, see [Service Points feature overview](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html).
 
-To add service types using Glue API, see [Backend API Marketplace B2C Demo Shop reference](/docs/dg/dev/glue-api/{{page.version}}/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
+To add service types using Glue API, see [Backend API Marketplace B2C Demo Shop reference](/docs/dg/dev/glue-api/latest/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
 
-To import shipment types, see [Import file details: shipment_type.csv](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html).
+To import shipment types, see [Import file details: shipment_type.csv](/docs/pbc/all/carrier-management/latest/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html).
 
 
 ## Shipment method
@@ -49,7 +49,7 @@ There are also branded shipment methods like like DHL Express, DHL Standard, or 
 
 A sales order can have multiple shipment methods from different carrier companies.
 
-For instructions on adding shipment methods in the Back Office, see [Add delivery methods](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html).
+For instructions on adding shipment methods in the Back Office, see [Add delivery methods](/docs/pbc/all/carrier-management/latest/base-shop/manage-in-the-back-office/add-delivery-methods.html).
 
 
 {% info_block warningBox %}
@@ -63,7 +63,7 @@ If a Back Office user creates or edits a shipment of an order created by a custo
 
 ### Shipment method plugins
 
-Additional behaviors can be attached to a shipment method from the Back Office by selecting specific plugins. For more information about shipment method plugins, see [Reference information: Shipment method plugins](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html).
+Additional behaviors can be attached to a shipment method from the Back Office by selecting specific plugins. For more information about shipment method plugins, see [Reference information: Shipment method plugins](/docs/pbc/all/carrier-management/latest/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html).
 
 ### Shipment method prices and discounts
 
@@ -82,17 +82,17 @@ You can give shipment discounts based on the carrier, shipment method, or cart v
 
 |BACK OFFICE USER GUIDES| THIRD-PARTY INTEGRATIONS |
 | - | - |
-| [Add carrier companies](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-in-the-back-office/add-carrier-companies.html)  | [Seven Senders](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/seven-senders/seven-senders.html) |
-| [Add delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html)  | [Paazl](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/paazl.html) |
-| [Edit delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-in-the-back-office/edit-delivery-methods.html)  | [Paqato](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/paqato.html) |
+| [Add carrier companies](/docs/pbc/all/carrier-management/latest/base-shop/manage-in-the-back-office/add-carrier-companies.html)  | [Seven Senders](/docs/pbc/all/carrier-management/latest/base-shop/third-party-integrations/seven-senders/seven-senders.html) |
+| [Add delivery methods](/docs/pbc/all/carrier-management/latest/base-shop/manage-in-the-back-office/add-delivery-methods.html)  | [Paazl](/docs/pbc/all/carrier-management/latest/base-shop/third-party-integrations/paazl.html) |
+| [Edit delivery methods](/docs/pbc/all/carrier-management/latest/base-shop/manage-in-the-back-office/edit-delivery-methods.html)  | [Paqato](/docs/pbc/all/carrier-management/latest/base-shop/third-party-integrations/paqato.html) |
 
 ## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES | TUTORIALS AND HOWTOS | DATA IMPORT | GLUE API GUIDES | REFERENCES |
 |---|---|---|---|---|---|
-| [Install the Shipment feature](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) | [Upgrade the Shipment module](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html) | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/{{page.version}}/base-shop/create-discounts-based-on-shipment.html) |  [Import file details: shipment_type.csv](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html)  | [Retrieve shipments and shipment methods when submitting checkout data](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-and-shipment-methods-when-submitting-checkout-data.html) | [Shipment method plugins: reference information](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html) |
-| [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html) | [Upgrade the ShipmentGui module](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentgui-module.html) | | [Import file details: shipment_type_store.csv](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment-type-store.csv.html) |  [Retrieve shipments in orders](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-in-orders.html)   |[Shipment method entities in the database: reference information](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/domain-model-and-relationships/shipment-method-entities-in-the-database-reference-information.html) |
-| [Integrate the Shipment + Approval Process feature](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-approval-process-feature.html) | [Upgrade the ShipmentCartConnector module](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentcartconnector-module.html) |  | [Import file details: shipment_method_shipment_type.csv](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment-method-shipment-type.csv.html) | [Retrieve shipments when checking out purchases](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-when-checking-out-purchases.html)  | |
-| [Integrate the Shipment + Cart feature](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-cart-feature.html) | [Upgrade the ShipmentCheckoutConnector module](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentcheckoutconnector-module.html) | | | [Add shipment types](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-add-shipment-types.html) | |
-|  | [Upgrade the ShipmentDiscountConnector module](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentdiscountconnector-module.html) | | | [Retrieve shipment types](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-retrieve-shipment-types.html) | |
-| | | | | [Update shipment types](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-update-shipment-types.html) | |
+| [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) | [Upgrade the Shipment module](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html) | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/latest/base-shop/create-discounts-based-on-shipment.html) |  [Import file details: shipment_type.csv](/docs/pbc/all/carrier-management/latest/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html)  | [Retrieve shipments and shipment methods when submitting checkout data](/docs/pbc/all/carrier-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-and-shipment-methods-when-submitting-checkout-data.html) | [Shipment method plugins: reference information](/docs/pbc/all/carrier-management/latest/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html) |
+| [Install the Shipment Glue API](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-the-shipment-glue-api.html) | [Upgrade the ShipmentGui module](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentgui-module.html) | | [Import file details: shipment_type_store.csv](/docs/pbc/all/carrier-management/latest/base-shop/import-and-export-data/import-file-details-shipment-type-store.csv.html) |  [Retrieve shipments in orders](/docs/pbc/all/carrier-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-in-orders.html)   |[Shipment method entities in the database: reference information](/docs/pbc/all/carrier-management/latest/base-shop/domain-model-and-relationships/shipment-method-entities-in-the-database-reference-information.html) |
+| [Integrate the Shipment + Approval Process feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-approval-process-feature.html) | [Upgrade the ShipmentCartConnector module](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentcartconnector-module.html) |  | [Import file details: shipment_method_shipment_type.csv](/docs/pbc/all/carrier-management/latest/base-shop/import-and-export-data/import-file-details-shipment-method-shipment-type.csv.html) | [Retrieve shipments when checking out purchases](/docs/pbc/all/carrier-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-when-checking-out-purchases.html)  | |
+| [Integrate the Shipment + Cart feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-cart-feature.html) | [Upgrade the ShipmentCheckoutConnector module](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentcheckoutconnector-module.html) | | | [Add shipment types](/docs/pbc/all/carrier-management/latest/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-add-shipment-types.html) | |
+|  | [Upgrade the ShipmentDiscountConnector module](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentdiscountconnector-module.html) | | | [Retrieve shipment types](/docs/pbc/all/carrier-management/latest/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-retrieve-shipment-types.html) | |
+| | | | | [Update shipment types](/docs/pbc/all/carrier-management/latest/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-update-shipment-types.html) | |

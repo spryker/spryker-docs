@@ -13,11 +13,11 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `merchant_open_hours_date_schedule.csv` file to configure [special merchant opening hours](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/merchant-opening-hours-feature-overview.html) in your Spryker shop.
+This document describes the `merchant_open_hours_date_schedule.csv` file to configure [special merchant opening hours](/docs/pbc/all/merchant-management/latest/marketplace/merchant-opening-hours-feature-overview.html) in your Spryker shop.
 
 ## Import file dependencies
 
-[merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant.csv.html)
+[merchant.csv](/docs/pbc/all/merchant-management/latest/marketplace/import-and-export-data/import-file-details-merchant.csv.html)
 
 ## Import file parameters
 

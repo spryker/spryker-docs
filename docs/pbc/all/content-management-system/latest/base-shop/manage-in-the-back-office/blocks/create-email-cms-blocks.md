@@ -17,11 +17,11 @@ related:
     link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html
 ---
 
-You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html).
+You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html).
 
-There is a number of default emails that are automatically sent on different occasions, like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS blocks. For the full list of the emails with their email CMS blocks, see [Default email templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html).
+There is a number of default emails that are automatically sent on different occasions, like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS blocks. For the full list of the emails with their email CMS blocks, see [Default email templates](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html).
 
-If a developer introduced a new email for your project, you need to create an email block for it. Blocks for the default email templates are already created, and you can [edit them as regular blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html).
+If a developer introduced a new email for your project, you need to create an email block for it. Blocks for the default email templates are already created, and you can [edit them as regular blocks](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html).
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ Review the [reference information](#reference-information-create-an-email-cms-bl
 
 {% info_block warningBox "Content items in email blocks" %}
 
-[Content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html) are not rendered in emails.
+[Content items](/docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html) are not rendered in emails.
 
 {% endinfo_block %}
 
@@ -56,7 +56,7 @@ You don't need to activate the email CMS block, as the deactivated status of the
 
 **Tips and tricks**
 
-- Add a [glossary key](/docs/pbc/all/miscellaneous/{{page.version}}/manage-in-the-back-office/add-translations.html) to the email block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. To learn how to add translations, see [Managing glossary](/docs/pbc/all/miscellaneous/{{page.version}}/manage-in-the-back-office/add-translations.html).
+- Add a [glossary key](/docs/pbc/all/miscellaneous/latest/manage-in-the-back-office/add-translations.html) to the email block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. To learn how to add translations, see [Managing glossary](/docs/pbc/all/miscellaneous/latest/manage-in-the-back-office/add-translations.html).
 
 - Add variables to the email CMS block to replace them with customer and order specific details. When the email is sent, the variables are replaced with the actual details. For example, add *firstName*, and it's replaced with the name of the customer the email is sent to. A developer can provide a full list of variables and create new ones.
 
@@ -66,7 +66,7 @@ You don't need to activate the email CMS block, as the deactivated status of the
 | ATTRIBUTE | DESCRIPTION: EMAIL CMS BLOCK |
 | --- | --- |
 | STORE RELATION | Irrelevant. |
-| TEMPLATE | Defines the layout of the Email CMS Block. A developer can [create more templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-block-template). |
+| TEMPLATE | Defines the layout of the Email CMS Block. A developer can [create more templates](/docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-block-template). |
 | NAME | The name should correspond to the name defined in the email template the block will be assigned to. |
 | VALID FROM and VALID TO | Irrelevant. |
 | PRODUCTS | Irrelevant. |

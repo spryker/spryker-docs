@@ -17,11 +17,11 @@ To add support of number formatting in the Back Office, integrate the following 
 
 | NAME   | REQUIRED | VERSION   | INTEGRATION  GUIDE    |
 |--|-----------|-------|--------------------------|
-| Spryker Core          |         &#9989;        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                           |
-| Promotions & Discounts |    | {{site.version}} | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)     |
-| Product Options |    | {{site.version}} | [Product Options feature walkthrough](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-options-feature-overview.html)                           |
-| Product + Order Management|   | {{site.version}} | [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |
-| Shipment   |   | {{site.version}} | [Shipment integration](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                           |
+| Spryker Core          |         &#9989;        | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                           |
+| Promotions & Discounts |    | 202507.0 | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)     |
+| Product Options |    | 202507.0 | [Product Options feature walkthrough](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-options-feature-overview.html)                           |
+| Product + Order Management|   | 202507.0 | [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |
+| Shipment   |   | 202507.0 | [Shipment integration](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                           |
 
 ## 1) Install the required modules
 
@@ -48,7 +48,7 @@ Extend the `Discount` configuration settings:
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Promotions & Discounts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/promotions-discounts-feature-overview.html) feature installed.
+Apply the following changes only if you have the [Promotions & Discounts](/docs/pbc/all/discount-management/latest/base-shop/promotions-discounts-feature-overview.html) feature installed.
 
 {% endinfo_block %}
 
@@ -174,7 +174,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Discount Management](/docs/pbc/all/discount-management/{{site.version}}/base-shop/promotions-discounts-feature-overview.html) feature installed.
+Apply the following changes only if you have the [Discount Management](/docs/pbc/all/discount-management/latest/base-shop/promotions-discounts-feature-overview.html) feature installed.
 
 {% endinfo_block %}
 
@@ -202,7 +202,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) feature installed.
+Apply the following changes only if you have the [Product](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) feature installed.
 
 {% endinfo_block %}
 
@@ -232,7 +232,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Product Options](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-options-feature-overview.html) feature installed.
+Apply the following changes only if you have the [Product Options](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-options-feature-overview.html) feature installed.
 
 {% endinfo_block %}
 
@@ -260,7 +260,7 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Carrier Management](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/shipment-feature-overview.html) feature installed.
+Apply the following changes only if you have the [Carrier Management](/docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html) feature installed.
 
 {% endinfo_block %}
 

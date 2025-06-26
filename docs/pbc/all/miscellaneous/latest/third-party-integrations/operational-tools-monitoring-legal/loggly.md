@@ -16,8 +16,8 @@ The [Loggly](https://github.com/spryker-eco/loggly) module provides a plugin to 
 ## Related Developer guides
 
 
-- [Loggly](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/operational-tools-monitoring-legal/loggly/loggly.html)
-- [Configuring Loggly](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/operational-tools-monitoring-legal/loggly/configure-loggly.html)
+- [Loggly](/docs/pbc/all/miscellaneous/latest/third-party-integrations/operational-tools-monitoring-legal/loggly/loggly.html)
+- [Configuring Loggly](/docs/pbc/all/miscellaneous/latest/third-party-integrations/operational-tools-monitoring-legal/loggly/configure-loggly.html)
 
 
 

@@ -22,7 +22,7 @@ This document describes the `cms_block_store.csv` file to configure CMS Block St
 ## Import file dependencies
 
 
-- [cms_block.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-cms-block.csv.html)
+- [cms_block.csv](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-cms-block.csv.html)
 - *stores.php* configuration file of the demo shop PHP project
 
 

@@ -16,7 +16,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `comment.csv` file to configure [Comment](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/comments-feature-overview.html)  information in your Spryker Demo Shop.
+This document describes the `comment.csv` file to configure [Comment](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/comments-feature-overview.html)  information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -38,7 +38,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [customer.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/import-file-details-customer.csv.html).
+This file has the following dependency: [customer.csv](/docs/pbc/all/customer-relationship-management/latest/base-shop/import-file-details-customer.csv.html).
 
 ## Import template file and content example
 

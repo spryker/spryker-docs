@@ -24,12 +24,12 @@ A *navigation element* is a page section that contains links to shop resources, 
 
 ![navigation-element](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/navigation+element.png)
 
-To learn how a Back Office user can create a navigation element, see [Creating a navigation element](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/navigation/create-navigation-elements.html).
+To learn how a Back Office user can create a navigation element, see [Creating a navigation element](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/navigation/create-navigation-elements.html).
 
 ### Navigation element duplication
 
 If you have a configured navigation element in a shop and want to use it as a basis for another navigation element, you can duplicate it. This is especially useful in a multi-shop scenario.
-To learn how a Back Office user can do that, see [Duplicating a navigation element](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/navigation/duplicate-navigation-elements.html).
+To learn how a Back Office user can do that, see [Duplicating a navigation element](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/navigation/duplicate-navigation-elements.html).
 
 ## Navigation tree
 
@@ -60,7 +60,7 @@ A navigation node can be both the parent and child type. For example, the parent
 
 ![child-parent-navigation-node](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/child-parent-navigation-node.png)
 
-To learn how a Back Office user can create navigation node, see [Creating a Navigation Node](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.html).
+To learn how a Back Office user can create navigation node, see [Creating a Navigation Node](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.html).
 
 ### Navigation node design
 
@@ -72,7 +72,7 @@ The only class you can use by default is *label*. This class capitalizes the nav
 
 A frontend developer can create more classes for navigation nodes.
 
-To learn how a Back office user can define a navigation node design, see [Creating a navigation node](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.html).
+To learn how a Back office user can define a navigation node design, see [Creating a navigation node](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.html).
 
 ## Navigation node validity period
 
@@ -80,17 +80,17 @@ You can define the time period a navigation node is valid for:
 - When the validity period ends, the navigation node with its child stops being displayed on the Storefront.
 - When the validity period starts, the navigation node with its child is displayed on the Storefront.
 
-To learn how a product catalog manager can define a navigation node validity period, see [Creating a Navigation Node](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.html).
+To learn how a product catalog manager can define a navigation node validity period, see [Creating a Navigation Node](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.html).
 
 ## Navigation as content item
 
-To publish a navigation element on the Storefront, you can add it to [CMS Blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-blocks-overview.html) and [CMS Pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-pages-overview.html) as a [content item](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html).
+To publish a navigation element on the Storefront, you can add it to [CMS Blocks](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-blocks-overview.html) and [CMS Pages](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-pages-overview.html) as a [content item](/docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html).
 The schema shows how the Navigation feature affects content management in a Spryker shop:
 
 ![navigation-as-content-item-schema](https://confluence-connect.gliffy.net/embed/image/a086fe4e-1d09-49ae-a181-ebd8b0f8c051.png?utm_medium=live&utm_source=custom)
 
-To learn how a Back Office user can create a Navigation content item, see [Create a Navigation Content Item](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-navigation-content-items.html).
-To learn how a marketing content manager can add content to the Storefront, see [Adding Content to Storefront Pages Using Templates & Slots](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html).
+To learn how a Back Office user can create a Navigation content item, see [Create a Navigation Content Item](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-navigation-content-items.html).
+To learn how a marketing content manager can add content to the Storefront, see [Adding Content to Storefront Pages Using Templates & Slots](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html).
 
 ### Navigation content item templates
 
@@ -134,17 +134,17 @@ For more details about navigation, check the video:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create navigation elements](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/navigation/create-navigation-elements.html) |
-| [Create navigation nodes](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.html) |
-| [Duplicate navigation elements](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/navigation/duplicate-navigation-elements.html) |
-| [Edit navigation elements](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/navigation/edit-navigation-elements.html) |
-| [Edit navigation nodes](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/navigation/edit-navigation-nodes.html) |
-| [Delete navigation nodes](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/navigation/delete-navigation-nodes.html) |
+| [Create navigation elements](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/navigation/create-navigation-elements.html) |
+| [Create navigation nodes](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.html) |
+| [Duplicate navigation elements](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/navigation/duplicate-navigation-elements.html) |
+| [Edit navigation elements](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/navigation/edit-navigation-elements.html) |
+| [Edit navigation nodes](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/navigation/edit-navigation-nodes.html) |
+| [Delete navigation nodes](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/navigation/delete-navigation-nodes.html) |
 
 ## Related Developer documents
 
 | INSTALLATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
 |---|---|---|---|
-| [Install the Navigation feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html) | [Retrieve navigation trees](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-navigation-trees.html) | [File details: navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-navigation.csv.html) | [Navigation module: Reference information](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/extend-and-customize/navigation-module-reference-information.html) |
-| [Glue API: Navigation feature integration](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html) |  | [File details: navigation_node.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-navigation-node.csv.html) | |
-| [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |  |  |  |
+| [Install the Navigation feature](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html) | [Retrieve navigation trees](/docs/pbc/all/content-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-navigation-trees.html) | [File details: navigation.csv](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-navigation.csv.html) | [Navigation module: Reference information](/docs/pbc/all/content-management-system/latest/base-shop/extend-and-customize/navigation-module-reference-information.html) |
+| [Glue API: Navigation feature integration](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html) |  | [File details: navigation_node.csv](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-navigation-node.csv.html) | |
+| [Install the CMS feature](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |  |  |  |

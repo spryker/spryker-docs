@@ -25,7 +25,7 @@ On the technical side, removing a store helps with the following:
 
 ## Prerequisites
 
-[Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html)
+[Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html)
 
 
 ## Back up the database

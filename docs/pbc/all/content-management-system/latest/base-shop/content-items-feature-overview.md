@@ -18,7 +18,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/content-items-feature-overview.html
 ---
 
-The *Content Items* feature creates an abstraction layer for content management in the Back Office. It lets content managers create and preserve small content pieces. Later, they are inserted into [CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-blocks-overview.html) and, subsequently, into Storefront pages. Content items are rendered on Storefront using [Content Item Widget](#content-item-widget).
+The *Content Items* feature creates an abstraction layer for content management in the Back Office. It lets content managers create and preserve small content pieces. Later, they are inserted into [CMS blocks](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-blocks-overview.html) and, subsequently, into Storefront pages. Content items are rendered on Storefront using [Content Item Widget](#content-item-widget).
 
 ## Content item
 
@@ -31,13 +31,13 @@ A *content item* is the smallest content unit in Spryker. There are four content
 
 You can use each content item for different purposes. For example, A *Banner content item* can be used to promote a specific brand or collection. A *Product Set content* item can be added to the landing page to display a product set as a slider or carousel. The File List adds a link or icon to download a selected file. The Navigation content item can be used to add different types of navigation elements to different shop pages.
 
-A content manager can [create content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section.
+A content manager can [create content items](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section.
 A developer can do the following:
-- [Import content items](/docs/dg/dev/data-import/{{page.version}}/data-importers-implementation.html)
-- [Retrieve banner content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html)
-- [Retrieve abstract product list content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html)
+- [Import content items](/docs/dg/dev/data-import/latest/data-importers-implementation.html)
+- [Retrieve banner content items](/docs/pbc/all/content-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html)
+- [Retrieve abstract product list content items](/docs/pbc/all/content-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html)
 
-For more information about each content item type and module relations, see [Content Items feature overview](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/content-items-feature-overview.html).
+For more information about each content item type and module relations, see [Content Items feature overview](/docs/pbc/all/content-management-system/latest/base-shop/content-items-feature-overview.html).
 
 ## Content Item Widget
 
@@ -70,7 +70,7 @@ The schema shows how the Content items feature affects content management in Spr
 
 ![image](https://confluence-connect.gliffy.net/embed/image/b2c37d9d-5350-4535-b437-677bffeb18da.png?utm_medium=live&utm_source=custom)
 
-To learn more about working with content item widgets in the WYSIWYG editor, see [Add content items to CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html).
+To learn more about working with content item widgets in the WYSIWYG editor, see [Add content items to CMS blocks](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html).
 
 ### Content Item Widget Template
 
@@ -107,7 +107,7 @@ You can select a template when inserting a content item widget into a CMS block.
 
 </details>
 
-A developer can create and customize templates. For more details, see [Adding a Template for a Content Item Widget](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#content-item-widget-template).
+A developer can create and customize templates. For more details, see [Adding a Template for a Content Item Widget](/docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-cms-templates.html#content-item-widget-template).
 
 ## Content Database Schema
 
@@ -132,20 +132,20 @@ Structure:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create abstract product list content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html) |
-| [Create banner content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html)   |
-| [Create file list content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-file-list-content-items.html) |
-| [Create navigation content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-navigation-content-items.html) |
-| [Create product set content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-product-set-content-items.html)     |
-|  [Edit content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/edit-content-items.html)  |
-|  [Add content items to CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html)  |
-|  [Add content items to CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html)   |
+| [Create abstract product list content items](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html) |
+| [Create banner content items](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html)   |
+| [Create file list content items](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-file-list-content-items.html) |
+| [Create navigation content items](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-navigation-content-items.html) |
+| [Create product set content items](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-product-set-content-items.html)     |
+|  [Edit content items](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/edit-content-items.html)  |
+|  [Add content items to CMS blocks](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html)  |
+|  [Add content items to CMS pages](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html)   |
 
 ## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|---|
-| [Install the Content Items feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html) |  [ContentBanner migration guide](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentbanner-module.html) | [Retrieve abstract product list content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html) | [File details: content_banner.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-banner.csv.html) | [HowTo: Create a custom content item](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-a-custom-content-item.html) | [Content item types: module relations](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/domain-model-and-relationships/content-item-types-module-relations.html)  |
-| [Install the Content Items Glue API](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html) | [Content migration guide](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-content-module.html) | [Retrieve banner content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html) | [File details: content_navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-navigation.csv.html) |  |  |
-|  | [ContentBannerGui migration guide](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentbannergui-module.html) |  | [File details: content_product_abstract_list.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-product-abstract-list.csv.html) |  |  |
-|  | [ContentStorage migration guide](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentstorage-module.html) |  | [File details: content_product_set.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-product-set.csv.html) |  |  |
+| [Install the Content Items feature](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html) |  [ContentBanner migration guide](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentbanner-module.html) | [Retrieve abstract product list content items](/docs/pbc/all/content-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html) | [File details: content_banner.csv](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-content-banner.csv.html) | [HowTo: Create a custom content item](/docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-a-custom-content-item.html) | [Content item types: module relations](/docs/pbc/all/content-management-system/latest/base-shop/domain-model-and-relationships/content-item-types-module-relations.html)  |
+| [Install the Content Items Glue API](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html) | [Content migration guide](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-content-module.html) | [Retrieve banner content items](/docs/pbc/all/content-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html) | [File details: content_navigation.csv](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-content-navigation.csv.html) |  |  |
+|  | [ContentBannerGui migration guide](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentbannergui-module.html) |  | [File details: content_product_abstract_list.csv](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-content-product-abstract-list.csv.html) |  |  |
+|  | [ContentStorage migration guide](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentstorage-module.html) |  | [File details: content_product_set.csv](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-content-product-set.csv.html) |  |  |

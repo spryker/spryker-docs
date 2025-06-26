@@ -13,12 +13,12 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `merchant-user.csv` file to configure [merchant user](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html) information in your Spryker shop.
+This document describes the `merchant-user.csv` file to configure [merchant user](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html) information in your Spryker shop.
 
 
 ## Import file dependencies
 
-[merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant.csv.html).
+[merchant.csv](/docs/pbc/all/merchant-management/latest/marketplace/import-and-export-data/import-file-details-merchant.csv.html).
 
 ## Import file parameters
 

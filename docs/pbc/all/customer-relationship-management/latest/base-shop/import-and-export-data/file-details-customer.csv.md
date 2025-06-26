@@ -21,7 +21,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `customer.csv` file to configure [Customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `customer.csv` file to configure [Customer](/docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html) information in your Spryker Demo Shop.
 
 ## Import file parameters
 

@@ -12,4 +12,4 @@ Business Intelligence capability provides you with powerful tools for extracting
 
 ## Next steps
 
-[Amazon QuickSight](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/amazon-quicksight.html)
+[Amazon QuickSight](/docs/pbc/all/business-intelligence/latest/amazon-quicksight-third-party-integration/amazon-quicksight.html)

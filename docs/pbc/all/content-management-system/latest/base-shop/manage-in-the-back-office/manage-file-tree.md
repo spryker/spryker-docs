@@ -35,7 +35,7 @@ To start working with file tree elements, navigate to **Content>File Tree** sect
 
 ## Prerequisites
 
-If there are no MIME types defined in the *MIME Type Settings* section, you can upload any type of file. If you have at least one MIME type defined as *Is Allowed*, you can upload only allowed file types, until you add more allowed types. See [Add and edit MIME types](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/add-and-edit-mime-types.html) for more details.
+If there are no MIME types defined in the *MIME Type Settings* section, you can upload any type of file. If you have at least one MIME type defined as *Is Allowed*, you can upload only allowed file types, until you add more allowed types. See [Add and edit MIME types](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/add-and-edit-mime-types.html) for more details.
 
 
 ## Creating file directories
@@ -93,7 +93,7 @@ The file is uploaded to the selected folder.
 
 Once the file is uploaded, you can manage it from two locations:
 
-- File List (for more details, see [Manage file List](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-file-list.html))
+- File List (for more details, see [Manage file List](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-file-list.html))
 - File Tree
 
 To manage a file in File Tree:

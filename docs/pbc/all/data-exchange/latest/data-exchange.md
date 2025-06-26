@@ -53,4 +53,4 @@ The difference between Backend API and Data Exchange API lies in their functiona
 Data Importers and Data Exporters are tools that let you bring external data into and send data from SCCOS, using .CSV files.  Data Importers and Data Exporters are part of the SCCOS platform core.
 Data Importers and Data Exporters require extensive customization development for each project and ongoing development effort, which makes them less suitable for demanding data exchange.
 
-For information on how Data importers and Exporters work, see [Data import](/docs/dg/dev/data-import/{{site.version}}/data-import.html) and [Data export](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/import-and-export-data/orders-data-export/orders-data-export.html).
+For information on how Data importers and Exporters work, see [Data import](/docs/dg/dev/data-import/latest/data-import.html) and [Data export](/docs/pbc/all/order-management-system/latest/base-shop/import-and-export-data/orders-data-export/orders-data-export.html).

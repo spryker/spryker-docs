@@ -6,13 +6,13 @@ description: Import merchant commission amounts
 template: import-file-template
 ---
 
-This document describes the `merchant_commission_amount.csv` file to configure [merchant commission amount](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-commission-feature-overview.html).
+This document describes the `merchant_commission_amount.csv` file to configure [merchant commission amount](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-commission-feature-overview.html).
 
 This data is needed when applying *fixed* commissions. For example, you might want to apply a 50 cents commission per item sold. This importer lets you define this fixed amount for gross and net modes per currency.
 
 ## Import file dependencies
 
-[merchant_commission.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant-comission.csv.html)
+[merchant_commission.csv](/docs/pbc/all/merchant-management/latest/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant-comission.csv.html)
 
 ## Import file parameters
 

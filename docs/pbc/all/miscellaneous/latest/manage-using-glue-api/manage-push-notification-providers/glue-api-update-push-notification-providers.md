@@ -9,7 +9,7 @@ This endpoint lets you update push notification providers.
 
 ## Installation
 
-[Install the Push Notification feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-push-notification-feature.html)
+[Install the Push Notification feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-push-notification-feature.html)
 
 ## Retrieve push notification providers
 
@@ -30,7 +30,7 @@ This endpoint lets you update push notification providers.
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
 
 
 Request sample: `PATCH https://glue-backend.b2c-eu.demo-spryker.com/push-notification-providers/ffb5875e-00d3-5436-ae67-08b7c9837f3e`
@@ -47,7 +47,7 @@ Request sample: `PATCH https://glue-backend.b2c-eu.demo-spryker.com/push-notific
 ```
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-request-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/push-notification-providers-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/push-notification-providers-request-attributes.md -->
 
 
 ### Response
@@ -71,7 +71,7 @@ Response sample:
 ```
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/push-notification-providers-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/push-notification-providers-response-attributes.md -->
 
 
 
@@ -81,4 +81,4 @@ Response sample:
 | --- | --- |
 |5001| The push notification provider with the specified ID doesn't exist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

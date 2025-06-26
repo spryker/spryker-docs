@@ -24,7 +24,7 @@ A navigation element with its child nodes forms a navigation tree. You can only 
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html).
 
 ## Retrieving a navigation tree
 
@@ -1113,7 +1113,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 | validTo | String | Specifies a date that the node is valid to. |
 | children | Array | Specifies an array of node elements that are nested within the current element. |
 
-{% include pbc/all/glue-api-guides/{{page.version}}/category-nodes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/category-nodes-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/category-nodes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/category-nodes-response-attributes.md -->
 
 
 ### Possible errors
@@ -1123,4 +1123,4 @@ If a navigation tree has a category child node, include the `category-nodes` res
 | 1601 | Navigation is not found. |
 | 1602 | Navigation ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

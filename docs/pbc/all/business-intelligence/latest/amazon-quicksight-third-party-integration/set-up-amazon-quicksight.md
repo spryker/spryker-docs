@@ -9,8 +9,8 @@ This document describes how to set up Amazon QuickSight.
 
 1. To request Business Intelligence powered by Amazon QuickSight, contact your Customer Success Manager at [the analytics contact page](https://now.spryker.com/contact-analytics).
   After the contract is signed, we activate Amazon QuickSight for your project.
-2. [Install the Analytics feature](/docs/pbc/all/business-intelligence/{{page.version}}/install-the-analytics-feature.html).
-3. [Install Amazon QuickSight](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/install-amazon-quicksight.html).
+2. [Install the Analytics feature](/docs/pbc/all/business-intelligence/latest/install-the-analytics-feature.html).
+3. [Install Amazon QuickSight](/docs/pbc/all/business-intelligence/latest/amazon-quicksight-third-party-integration/install-amazon-quicksight.html).
 
 4. Log into the Back Office with the user for which you've requested an Author analytics role.
 

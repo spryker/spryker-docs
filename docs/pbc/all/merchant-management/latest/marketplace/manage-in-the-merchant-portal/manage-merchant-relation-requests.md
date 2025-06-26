@@ -4,7 +4,7 @@ description: Learn how to approve, deny, and process merchant relation requests 
 last_updated: Mar 19, 2024
 template: back-office-user-guide-template
 ---
-This document describes how to process the [merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-b2b-contracts-and-contract-requests-feature-overview.html) created by a company user.
+This document describes how to process the [merchant relation requests](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-b2b-contracts-and-contract-requests-feature-overview.html) created by a company user.
 
 ## Approve or reject merchant relation requests
 
@@ -45,4 +45,4 @@ This takes you to the *Merchant Relations* page with the respective merchant rel
 
 ## What's next
 
-[Manage merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchant-relations.html)
+[Manage merchant relations](/docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-merchant-portal/manage-merchant-relations.html)

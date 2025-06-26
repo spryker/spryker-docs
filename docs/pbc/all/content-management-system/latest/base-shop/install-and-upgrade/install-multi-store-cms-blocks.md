@@ -19,4 +19,4 @@ related:
     link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-multi-store-cms-block-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-multi-store-cms-block-feature.md -->
+{% include pbc/all/install-features/latest/install-the-multi-store-cms-block-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-multi-store-cms-block-feature.md -->

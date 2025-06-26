@@ -15,7 +15,7 @@ A URL redirect is a special entity that consists of a source URL (which is provi
 
 ## Manual redirects
 
-In the Back Office, you can create custom URL redirects from not yet existing URLs to other internal or external URLs with different status codes. See [Creating CMS redirects](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/redirects/create-cms-redirects.html) for details.
+In the Back Office, you can create custom URL redirects from not yet existing URLs to other internal or external URLs with different status codes. See [Creating CMS redirects](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/redirects/create-cms-redirects.html) for details.
 
 ## Automatic redirects
 

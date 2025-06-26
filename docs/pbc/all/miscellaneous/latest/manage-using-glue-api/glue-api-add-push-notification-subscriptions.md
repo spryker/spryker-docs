@@ -9,7 +9,7 @@ This endpoint lets you subscribe to push notifications using Glue API.
 
 ## Installation
 
-[Install the Push Notification feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-push-notification-feature.html)
+[Install the Push Notification feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-push-notification-feature.html)
 
 ## Retrieve push notification providers
 
@@ -29,7 +29,7 @@ This endpoint lets you subscribe to push notifications using Glue API.
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
 
 
 Request sample: `POST https://glue-backend.b2c-eu.demo-spryker.com/push-notification-providers`
@@ -57,10 +57,10 @@ Request sample: `POST https://glue-backend.b2c-eu.demo-spryker.com/push-notifica
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| providerName | String | &check; | Name of the provider to subscribe to. To get it, [retrieve push notification providers](/docs/pbc/all/miscellaneous/{{page.version}}/manage-using-glue-api/manage-push-notification-providers/glue-api-retrieve-push-notification-providers.html) |
+| providerName | String | &check; | Name of the provider to subscribe to. To get it, [retrieve push notification providers](/docs/pbc/all/miscellaneous/latest/manage-using-glue-api/manage-push-notification-providers/glue-api-retrieve-push-notification-providers.html) |
 | group | Object | &check;  | Defines the entity to subscribe to. |
 | group.name | String | &check;  | The entity type to receive notifications about. |
-| group.identifier | String | &check;  | ID of the entity to receive notifications about. To get it, decode `accessToken` retrieved when [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
+| group.identifier | String | &check;  | ID of the entity to receive notifications about. To get it, decode `accessToken` retrieved when [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 | payload | Object | &check;  | The subscription details for establishing a communication channel between the server and the client. |
 | payload.endpoint | String | &check;  | The URL provided by the push service that is used to send a push message to the recipient's device. |
 | payload.publicKey | String | &check;  | A client public key that is used to encrypt the push message so that only the intended recipient can read it. |
@@ -114,4 +114,4 @@ Response sample:
 
 ## Possible errors
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

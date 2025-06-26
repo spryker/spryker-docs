@@ -57,7 +57,7 @@ To create a CMS page, follow the steps:
 | General |  |  |
 | | STORE RELATION | The stores in which the page is displayed. |
 | | IS SEARCHABLE | Defines if the page can be found on the web. |
-| | TEMPLATE | Defines the page layout. Templates are project-specific and created by developers. For instructions on creating CMS templates, see [Create CMS templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-page-template).  |
+| | TEMPLATE | Defines the page layout. Templates are project-specific and created by developers. For instructions on creating CMS templates, see [Create CMS templates](/docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-page-template).  |
 | | VALID FROM and VALID TO | Dates during which the page is displayed on the Storefront. |
 | | NAME | Name of the page. |
 | | URL | Address of the page on the web. |
@@ -68,6 +68,6 @@ To create a CMS page, follow the steps:
 
 ## Next steps
 
-- [Add content items to CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html)
-- [Edit CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/edit-cms-pages.html)
-- [Preview CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/preview-cms-pages.html)
+- [Add content items to CMS pages](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html)
+- [Edit CMS pages](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/edit-cms-pages.html)
+- [Preview CMS pages](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/preview-cms-pages.html)

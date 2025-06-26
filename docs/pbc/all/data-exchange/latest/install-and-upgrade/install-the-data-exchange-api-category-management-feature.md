@@ -7,4 +7,4 @@ redirect_from:
 - /docs/pbc/all/data-exchange/202403.0/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-data-exchange-api-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/install-the-data-exchange-api-category-management-feature.md -->
+{% include pbc/all/install-features/latest/install-the-data-exchange-api-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/install-the-data-exchange-api-category-management-feature.md -->

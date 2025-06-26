@@ -71,7 +71,7 @@ To edit the merchant's online profile, in the **Online Profile** tab, edit the n
 
 ### Reference information: Editing merchant's online profile
 
-This section describes attributes you see when editing the merchant's online profile on the **Online Profile** tab. This  tab contains the information displayed on the [Merchant Profile page on the Storefront](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile).
+This section describes attributes you see when editing the merchant's online profile on the **Online Profile** tab. This  tab contains the information displayed on the [Merchant Profile page on the Storefront](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile).
 
 #### Store Profile URL
 

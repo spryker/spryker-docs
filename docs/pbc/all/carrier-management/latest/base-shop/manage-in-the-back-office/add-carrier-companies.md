@@ -30,8 +30,8 @@ To add a carrier company in the Back Office, follow these steps:
 | ATTRIBUTE |DESCRIPTION|
 | --- | --- |
 | NAME | You will use the name for creating delivery methods for the company. |
-| ACTIVATE | Defines if you can [create delivery methods](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/add-carrier-companies.html) for the company. |
+| ACTIVATE | Defines if you can [create delivery methods](/docs/pbc/all/carrier-management/latest/base-shop/manage-in-the-back-office/add-carrier-companies.html) for the company. |
 
 ## Next steps
 
-Add shipment methods for the added company. For instructions, see [Add delivery methods](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html) and [Edit delivery methods](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-delivery-methods.html).
+Add shipment methods for the added company. For instructions, see [Add delivery methods](/docs/pbc/all/carrier-management/latest/base-shop/manage-in-the-back-office/add-delivery-methods.html) and [Edit delivery methods](/docs/pbc/all/carrier-management/latest/base-shop/manage-in-the-back-office/edit-delivery-methods.html).

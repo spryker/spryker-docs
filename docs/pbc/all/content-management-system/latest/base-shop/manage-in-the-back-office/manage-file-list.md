@@ -42,7 +42,7 @@ To view a file:
 
 {% info_block infoBox "Info" %}
 
-You can maintain multiple versions of any file. See [Versions](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/file-manager-feature-overview.html#versions) for more information. [Editing files](#editing-files) below explains how to add multiple versions of a file.
+You can maintain multiple versions of any file. See [Versions](/docs/pbc/all/content-management-system/latest/base-shop/file-manager-feature-overview.html#versions) for more information. [Editing files](#editing-files) below explains how to add multiple versions of a file.
 
 {% endinfo_block %}
 

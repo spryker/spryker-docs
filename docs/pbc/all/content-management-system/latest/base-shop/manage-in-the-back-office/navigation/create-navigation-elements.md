@@ -16,7 +16,7 @@ related:
     link: docs/pbc/all/content-management-system/page.version/base-shop/navigation-feature-overview.html
 ---
 
-To create a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html#navigation-element) in the Back Office, follow the steps:
+To create a [navigation element](/docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html#navigation-element) in the Back Office, follow the steps:
 
 1. Go to **Content&nbsp;<span aria-label="and then">></span> Navigation**.
 2. On the **Overview of Navigation Elements** page, click **+Create Navigation Element**.

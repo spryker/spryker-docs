@@ -29,9 +29,9 @@ This document describes how to create company users in the Back Office.
 
 ## Prerequisites
 
-1. [Create a company](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-companies.html).
-2. [Create a company unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-units/create-company-units.html).
-3. [Create a company role](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-roles/create-company-roles.html).
+1. [Create a company](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/manage-companies.html).
+2. [Create a company unit](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-units/create-company-units.html).
+3. [Create a company role](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-roles/create-company-roles.html).
 4. Review the [reference information](#reference-information-create-a-company-user) before you start, or look up the necessary information as you go through the process.
 
 ## Create a company user
@@ -63,7 +63,7 @@ This document describes how to create company users in the Back Office.
 | GENDER | Customer gender. |
 | DATE OF BIRTH | Date of birth. |
 | PHONE | Phone number. |
-| COMPANY  | A company to create this user for. To create one, see [Managing companies](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-companies.html). |
-| BUSINESS UNIT | A company unit to to assign the user to. To create one, see [Create company units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-units/create-company-units.html). |
+| COMPANY  | A company to create this user for. To create one, see [Managing companies](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/manage-companies.html). |
+| BUSINESS UNIT | A company unit to to assign the user to. To create one, see [Create company units](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-units/create-company-units.html). |
 | ASSIGNED ROLES  | Roles assigned to the user. |
 | UNASSIGNED ROLES | Roles that you can assign to the user. |

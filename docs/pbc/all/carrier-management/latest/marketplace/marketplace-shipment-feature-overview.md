@@ -8,11 +8,11 @@ redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/marketplace-shipment-feature-walkthrough.html
 ---
 
-The *Marketplace Shipment* feature allows splitting the [marketplace order](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) into different shipments based on merchants who will process them.
+The *Marketplace Shipment* feature allows splitting the [marketplace order](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) into different shipments based on merchants who will process them.
 
 A *shipment* is a set of two or more products combined by the same delivery address.
 
-With the Marketplace Shipment feature, every merchant can define delivery price and expected delivery time, tax sets, and availability of the delivery method per store. Thus, a [marketplace order](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-order-overview.html) has multiple delivery methods from different merchants.
+With the Marketplace Shipment feature, every merchant can define delivery price and expected delivery time, tax sets, and availability of the delivery method per store. Thus, a [marketplace order](/docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-overview.html) has multiple delivery methods from different merchants.
 
 ## Marketplace Shipment on the Storefront
 
@@ -42,7 +42,7 @@ On the **Order *[Order ID]*** drawer, every merchant can view only the shipment 
 
 |INSTALLATION GUIDES  |
 |---------|
-| [Install the Marketplace Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-feature.html) |
-| [Install the Marketplace Shipment + Cart feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-cart-feature.html) |
-| [Install the Marketplace Shipment + Customer feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-customer-feature.html) |
-| [Install the Marketplace Shipment + Checkout feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-checkout-feature.html) |
+| [Install the Marketplace Shipment feature](/docs/pbc/all/carrier-management/latest/marketplace/install-features/install-marketplace-shipment-feature.html) |
+| [Install the Marketplace Shipment + Cart feature](/docs/pbc/all/carrier-management/latest/marketplace/install-features/install-the-marketplace-shipment-cart-feature.html) |
+| [Install the Marketplace Shipment + Customer feature](/docs/pbc/all/carrier-management/latest/marketplace/install-features/install-marketplace-shipment-customer-feature.html) |
+| [Install the Marketplace Shipment + Checkout feature](/docs/pbc/all/carrier-management/latest/marketplace/install-features/install-the-marketplace-shipment-checkout-feature.html) |

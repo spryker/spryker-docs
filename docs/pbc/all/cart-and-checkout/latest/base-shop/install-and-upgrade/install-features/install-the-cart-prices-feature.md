@@ -5,4 +5,4 @@ last_updated: Mar 16, 2023
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-cart-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/install-the-cart-prices-feature.md -->
+{% include pbc/all/install-features/latest/install-the-cart-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/latest/install-the-cart-prices-feature.md -->

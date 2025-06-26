@@ -19,7 +19,7 @@ This endpoint allows retrieving information about banner content items.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html).
 
 ## Retrieve a banner content item
 
@@ -83,4 +83,4 @@ Response sample: retrieve a banner content item
 | 2202 | Content key is missing. |
 | 2203 | Content type is invalid. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

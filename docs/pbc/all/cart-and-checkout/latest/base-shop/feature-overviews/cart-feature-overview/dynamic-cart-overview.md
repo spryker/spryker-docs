@@ -21,19 +21,19 @@ The following video shows how a user can interact with different elements of a c
 
 On the cart page, the cart is validated when you open or refresh the page. Cart items are validated when you open the page, refresh it, or perform any actions that trigger a dynamic cart update. For projects that expect big numbers of cart items, such as in the B2B model, we recommend disabling cart item validation to improve performanece. Disabled cart item validation introduces a minimal risk of an item becoming unavailable as a customer finalizes their purchase, but enables more smooth interactions with the cart.
 
-For instructions on disabling cart item validation, see [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html).
+For instructions on disabling cart item validation, see [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html).
 
 ## Related Developer documents
 
 | INSTALLATION GUIDES |
 |---------|
-| [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
-| [Install the Comments feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html) |
-| [Install the Configurable Bundle feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html) |
-| [Install the Gift Cards feature](/docs/pbc/all/gift-cards/{{site.version}}/install-and-upgrade/install-the-gift-cards-feature.html) |
-| [Install the Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html) |
-| [Install the Order Management feature](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
-| [Install the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html) |
+| [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| [Install the Comments feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html) |
+| [Install the Configurable Bundle feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html) |
+| [Install the Gift Cards feature](/docs/pbc/all/gift-cards/latest/install-and-upgrade/install-the-gift-cards-feature.html) |
+| [Install the Multiple Carts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html) |
+| [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
+| [Install the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html) |
 
 
 

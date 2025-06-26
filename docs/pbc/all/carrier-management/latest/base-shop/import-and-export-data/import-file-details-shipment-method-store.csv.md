@@ -16,7 +16,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `shipment_method_store.csv` file to configure [Shipment Method](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/shipment-feature-overview.html) and Store relation to be added to your Spryker Demo Shop.
+This document describes the `shipment_method_store.csv` file to configure [Shipment Method](/docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html) and Store relation to be added to your Spryker Demo Shop.
 
 The `shipment_method_store.csv` file contains the links between each shipment method used by each existing store.
 
@@ -32,14 +32,14 @@ data:import:shipment-method-store
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| shipment_method_key | &check; | String | Can be imported from the content that was loaded using the [shipment.csv](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html) file.| Identifier of the shipment method. |
+| shipment_method_key | &check; | String | Can be imported from the content that was loaded using the [shipment.csv](/docs/pbc/all/carrier-management/latest/base-shop/import-and-export-data/import-file-details-shipment.csv.html) file.| Identifier of the shipment method. |
 | store | &check; | String | Must be one of the existing store names. The store names are initially already defined in the *stores.php* configuration file. | Name of the store. |
 
 ## Import file dependencies
 
 
 
-- [shipment.csv](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html)
+- [shipment.csv](/docs/pbc/all/carrier-management/latest/base-shop/import-and-export-data/import-file-details-shipment.csv.html)
 - *stores.php* The configuration file of the Spryker Demo Shop PHP project
 
 ## Import template file and content example

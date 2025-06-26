@@ -25,6 +25,6 @@ The Spryker Core feature is the very basis of all the functionality in Spryker.
 
 |INSTALLATION GUIDES | TUTORIALS AND HOWTOS | REFERENCES|
 |---------|---------|---------|
-| [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  | [Tutorial: Managing glossary key](/docs/dg/dev/internationalization-and-multi-store/managing-glossary-keys.html)  | [How translations are managed](/docs/pbc/all/miscellaneous/{{page.version}}/spryker-core-feature-overview/how-translations-are-managed.html) |
-|   |   | [URL redirects overview](/docs/pbc/all/miscellaneous/{{page.version}}/spryker-core-feature-overview/url-redirects-overview.html)  |
-|   |   | [Vault for Tokens overview](/docs/pbc/all/miscellaneous/{{page.version}}/spryker-core-feature-overview/vault-for-tokens-overview.html)  |
+| [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  | [Tutorial: Managing glossary key](/docs/dg/dev/internationalization-and-multi-store/managing-glossary-keys.html)  | [How translations are managed](/docs/pbc/all/miscellaneous/latest/spryker-core-feature-overview/how-translations-are-managed.html) |
+|   |   | [URL redirects overview](/docs/pbc/all/miscellaneous/latest/spryker-core-feature-overview/url-redirects-overview.html)  |
+|   |   | [Vault for Tokens overview](/docs/pbc/all/miscellaneous/latest/spryker-core-feature-overview/vault-for-tokens-overview.html)  |

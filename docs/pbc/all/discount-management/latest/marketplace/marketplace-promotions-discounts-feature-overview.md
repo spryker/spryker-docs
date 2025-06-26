@@ -19,7 +19,7 @@ There are two discount types:
 - Voucher
 - Cart rule
 
-A product catalog manager selects a discount type when [creating a discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
+A product catalog manager selects a discount type when [creating a discount](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html).
 
 
 Based on the business logic, discounts can be applied in the following ways:
@@ -48,7 +48,7 @@ You can enter codes manually or use the code generator in the Back Office.
 
 ![Generate codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/generate_codes.png)
 
-To learn how a product catalog manager can create a voucher in the Back Office, see [Creating a voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
+To learn how a product catalog manager can create a voucher in the Back Office, see [Creating a voucher](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html).
 
 ## Cart Rule
 
@@ -57,7 +57,7 @@ A *cart rule* is a discount that applies to the cart once all the [decision rule
 The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering the cart. Unlike with [vouchers](#voucher), the **Clear all** and **Remove** actions are not displayed.
 ![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Promotions+and+Discounts+feature+overview/cart-rule-storefront.png)
 
-To learn how a product catalog manager can create a cart rule in the Back Office, see [Create discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
+To learn how a product catalog manager can create a cart rule in the Back Office, see [Create discounts](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html).
 
 ### Decision rule
 
@@ -172,14 +172,14 @@ See examples in the following table.
 | €50 |  Calculator percentage | 10 | €5 | €45 |
 | €50 | Calculator fixed | 10 | €10 | €40 |
 
-A product catalog manager defines calculation when [creating a voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) or [Create discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
+A product catalog manager defines calculation when [creating a voucher](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html) or [Create discounts](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html).
 ![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png)
 
 ## Discount exclusiveness
 
 Discount exclusiveness defines if a discount value of a discount can be combined with the discount value of other discounts in a single order.
 
-A product catalog manager defines calculation when [creating a voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) or [Create discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
+A product catalog manager defines calculation when [creating a voucher](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html) or [Create discounts](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html).
 ![Exclusive discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/exclusivity.png)
 
 ### Exclusive discount
@@ -220,13 +220,13 @@ A *validity interval* is a time period during which a discount is active and can
 
 If a cart is eligible for a discount outside of its validity interval, the cart rule is not applied. If a customer enters a voucher code outside of its validity interval, they get a "Your voucher code is invalid." message.
 
-A product catalog manager defines the calculation when [creating a discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
+A product catalog manager defines the calculation when [creating a discount](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html).
 ![Validity interval](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/validity-interval.png)
 
 ## Related Developer articles
 
 | INSTALLATION GUIDES|
 | -------------- |
-| [Install the Marketplace Promotions & Discounts feature](/docs/pbc/all/discount-management/{{page.version}}/marketplace/install-the-marketplace-promotions-discounts-feature.html) |
-| [Install the Marketplace Merchant + Promotions & Discounts feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-promotions-and-discounts-feature.html) |
-| [Install the Marketplace Product Offer + Promotions & Discounts feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-promotions-and-discounts-feature.html) |
+| [Install the Marketplace Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/marketplace/install-the-marketplace-promotions-discounts-feature.html) |
+| [Install the Marketplace Merchant + Promotions & Discounts feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-promotions-and-discounts-feature.html) |
+| [Install the Marketplace Product Offer + Promotions & Discounts feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-promotions-and-discounts-feature.html) |

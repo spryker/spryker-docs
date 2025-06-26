@@ -9,7 +9,7 @@ This endpoint lets you update shipment types.
 
 ## Installation
 
-[Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
+[Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
 
 ## Update a shipment type
 
@@ -21,7 +21,7 @@ This endpoint lets you update shipment types.
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
-| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
+| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
 Request sample: `PATCH https://glue-backend.mysprykershop.com/shipment-types/fa575a58-5119-5407-a00b-d1aa01fec63d`
 
@@ -72,7 +72,7 @@ Response sample:
 }
 ```
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/shipment-types-response-attributes.md -->
 
 
 ## Possible errors
@@ -82,4 +82,4 @@ Response sample:
 | 5501 | The shipment type with the specified ID doesn't exist. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

@@ -18,7 +18,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `navigation.csv` file to configure [Navigation](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `navigation.csv` file to configure [Navigation](/docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html) information in your Spryker Demo Shop.
 
 ## Import file parameters
 

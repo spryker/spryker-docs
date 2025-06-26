@@ -33,10 +33,10 @@ YOUR ADVANTAGES:
 
 ## Related Developer guides
 
-- [Episerver API](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-api.html)
-- [Episerver order reference commands](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html)
-- [Installing and configuring Episerver](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/install-and-configure-episerver.html)
-- [Integrating Episerver](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/integrate-episerver.html)
+- [Episerver API](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-api.html)
+- [Episerver order reference commands](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html)
+- [Installing and configuring Episerver](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/install-and-configure-episerver.html)
+- [Integrating Episerver](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/integrate-episerver.html)
 
 
 ---

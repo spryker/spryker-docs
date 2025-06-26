@@ -24,7 +24,7 @@ You can configure more entities to be included on the project level.
 
 ## Dynamic Multistore
 
-Sitemaps can be generated for shops with [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{site.version}}/dynamic-multistore.html) enabled.
+Sitemaps can be generated for shops with [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/dynamic-multistore.html) enabled.
 
 ## Caching interval
 

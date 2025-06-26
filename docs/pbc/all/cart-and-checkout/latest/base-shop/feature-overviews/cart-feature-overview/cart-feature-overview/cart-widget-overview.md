@@ -19,7 +19,7 @@ For customers' convenience and ease of use, the shopping cart widget is placed i
 For each shopping cart, the following details are provided:
 - Shopping cart name
 - Number of items added to cart
-- Access level to a shopping cart (for more details, see [Shared Cart Feature Overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/shared-carts-feature-overview.html))
+- Access level to a shopping cart (for more details, see [Shared Cart Feature Overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/shared-carts-feature-overview.html))
 - Price mode
 - Cart total
 - View all carts, which opens the **Shopping cart** menu in the customer account

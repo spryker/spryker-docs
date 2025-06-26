@@ -57,12 +57,12 @@ With the CMS Pages feature, you can:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/create-cms-pages.html)  |
-| [View CMS pages and history](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/view-cms-pages-and-history.html)  |
-| [Edit CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/edit-cms-pages.html)  |
-| [Preview CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/preview-cms-pages.html)  |
+| [Create a CMS page](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/create-cms-pages.html)  |
+| [View CMS pages and history](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/view-cms-pages-and-history.html)  |
+| [Edit CMS pages](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/edit-cms-pages.html)  |
+| [Preview CMS pages](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/preview-cms-pages.html)  |
 
 
 ## See next
 
-- [CMS block](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-blocks-overview.html)
+- [CMS block](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-blocks-overview.html)

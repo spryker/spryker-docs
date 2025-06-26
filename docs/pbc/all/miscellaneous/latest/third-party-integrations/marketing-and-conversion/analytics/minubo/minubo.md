@@ -26,7 +26,7 @@ YOUR ADVANTAGES:
 
 ## Related Developer guides
 
-- [Installing and configuring Minubo](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/analytics/minubo/install-and-integrate-minubo.html)
+- [Installing and configuring Minubo](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/minubo/install-and-integrate-minubo.html)
 
 ---
 

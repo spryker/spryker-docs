@@ -19,7 +19,7 @@ This document describes the `cms_block_category.csv` file to configure CMS Block
 
 ## Import file dependencies
 
-This file has the following dependency: [cms_block_category_position.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-cms-block-category-postion.csv.html).
+This file has the following dependency: [cms_block_category_position.csv](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-cms-block-category-postion.csv.html).
 
 ## Import file parameters
 

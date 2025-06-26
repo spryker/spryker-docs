@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/user/features/202204.0/company-account-feature-overview/business-on-behalf-overview.html
 ---
 
-Every [business unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) includes some company users that have specific permissions within this business unit. The *Business on Behalf* feature lets you have multiple company users per customer account with the possibility to assign one company user to be a *default user*. This default user can switch between the assigned business units.
+Every [business unit](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/business-units-overview.html) includes some company users that have specific permissions within this business unit. The *Business on Behalf* feature lets you have multiple company users per customer account with the possibility to assign one company user to be a *default user*. This default user can switch between the assigned business units.
 
 For example, as a shop owner, you might have a financial manager in your company who, for audit purposes, can access company business units' accounts to check their order histories and shopping lists.
 
@@ -64,10 +64,10 @@ Company users can assign and unassign a company business unit to their accounts 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Assign a company user to a company unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-users/edit-company-users.html)  |
+| [Assign a company user to a company unit](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-users/edit-company-users.html)  |
 
 
 
 ## See next
 
-[Customer Login by Token overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/customer-login-by-token-overview.html)
+[Customer Login by Token overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/customer-login-by-token-overview.html)

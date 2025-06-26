@@ -54,7 +54,7 @@ The session ID is used just to show that products change when a new customer vis
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-2. In the Back Office, [Create a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/create-cms-pages.html). Select the template you've just created. For page URL, enter `/my-offers`.
+2. In the Back Office, [Create a CMS page](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/create-cms-pages.html). Select the template you've just created. For page URL, enter `/my-offers`.
 3. Publish the page.
 
 Now, you need to test the CMS page:

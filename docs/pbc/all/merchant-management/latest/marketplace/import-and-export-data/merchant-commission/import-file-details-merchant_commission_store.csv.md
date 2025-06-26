@@ -6,11 +6,11 @@ description: Import store relations for comissions.
 template: import-file-template
 ---
 
-This document describes the `merchant_commission_store.csv` file to configure [merchant commission](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-commission-feature-overview.html).
+This document describes the `merchant_commission_store.csv` file to configure [merchant commission](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-commission-feature-overview.html).
 
 ## Import file dependencies
 
-[merchant_commission.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant-comission.csv.html)
+[merchant_commission.csv](/docs/pbc/all/merchant-management/latest/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant-comission.csv.html)
 
 ## Import file parameters
 

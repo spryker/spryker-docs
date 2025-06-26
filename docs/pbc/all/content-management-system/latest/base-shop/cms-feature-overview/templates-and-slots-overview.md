@@ -19,9 +19,9 @@ redirect_from:
 {% info_block infoBox %}
 
 Templates and slots is a complex functionality that works in conjunction with other functionalities. To use it effectively, make sure you get familiar with the functionalities in the order they are presented:
-- [CMS Page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-pages-overview.html)
-- [CMS Block](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-blocks-overview.html)
-- [Content Items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html)
+- [CMS Page](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-pages-overview.html)
+- [CMS Block](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-blocks-overview.html)
+- [Content Items](/docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html)
 
 {% endinfo_block %}
 
@@ -54,7 +54,7 @@ The following templates with slots are shipped with the CMS feature:
 - Product details page template
 - CMS page template
 
-A content manager can [manage templates with slots](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
+A content manager can [manage templates with slots](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 <details><summary>Template representation—the Back Office</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-template.png)
@@ -62,7 +62,7 @@ A content manager can [manage templates with slots](/docs/pbc/all/content-manage
 
 </details>
 
-To learn about the creation of CMS templates, see [HowTo: Create CMS templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html).
+To learn about the creation of CMS templates, see [HowTo: Create CMS templates](/docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-cms-templates.html).
 
 
 
@@ -84,7 +84,7 @@ By importing a [slot list](#slot-list), a developer can do the following:
 - Delete slots.
 - Define slot configurations.
 
-A content manager can [manage slots](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
+A content manager can [manage slots](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
 <details><summary>Slot representation—the Back Office</summary>
 
@@ -95,7 +95,7 @@ A content manager can [manage slots](/docs/pbc/all/content-management-system/{{p
 
 ## CMS block
 
-[CMS block](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-blocks-overview.html), from the perspective of the templates and slots, is a piece of content that is inserted into a slot. When a CMS block is inserted into a slot, its content is displayed on the Storefront page space belonging to the slot. The position of CMS blocks on a page can be defined by a content manager in the Back Office.
+[CMS block](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-blocks-overview.html), from the perspective of the templates and slots, is a piece of content that is inserted into a slot. When a CMS block is inserted into a slot, its content is displayed on the Storefront page space belonging to the slot. The position of CMS blocks on a page can be defined by a content manager in the Back Office.
 
 <details><summary> CMS block representation—Storefront</summary>
 
@@ -104,7 +104,7 @@ A content manager can [manage slots](/docs/pbc/all/content-management-system/{{p
 
 </details>
 
-A content manager can [manage CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
+A content manager can [manage CMS blocks](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
 
 <details><summary> CMS block representation—the Back Office</summary>
@@ -115,12 +115,12 @@ A content manager can [manage CMS blocks](/docs/pbc/all/content-management-syste
 </details>
 
 
-CMS Block is a separate entity with a dedicated section in the Back Office. To learn what a content manager can do with CMS blocks in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Blocks** section, see [Creating CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html).
+CMS Block is a separate entity with a dedicated section in the Back Office. To learn what a content manager can do with CMS blocks in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Blocks** section, see [Creating CMS blocks](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html).
 
 
 ## Content item
 
-[Content Item](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html) is the smallest content unit in Spryker that is used in the WYSIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
+[Content Item](/docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html) is the smallest content unit in Spryker that is used in the WYSIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
 
 <details><summary>Content item representation—Storefront</summary>
 
@@ -129,20 +129,20 @@ CMS Block is a separate entity with a dedicated section in the Back Office. To l
 </details>
 
 From the perspective of templates and slots, a content item always comes as a part of the CMS block. That's why there is no place to manage it in the **Slots** section.
-To learn what a content manager can do with content items in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section, see [Content Items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html).
+To learn what a content manager can do with content items in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section, see [Content Items](/docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html).
 
 ### <a name="applying-templates-with-slots"></a>Applying templates with slots
 
 A template with slots can be applied to any page. Even though a content manager can manage all page types in the Back Office, they can only apply templates with slots to the following:
 
-- Category pages in the Back Office&nbsp;<span aria-label="and then">></span> **Category&nbsp;<span aria-label="and then">></span> Create category** section. For more information, see [Create categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html).
-- CMS pages in the Back Office&nbsp;<span aria-label="and then">></span> **Pages&nbsp;<span aria-label="and then">></span> Create new CMS page** section. For more information, see [Creating a CMS Page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/create-cms-pages.html).
+- Category pages in the Back Office&nbsp;<span aria-label="and then">></span> **Category&nbsp;<span aria-label="and then">></span> Create category** section. For more information, see [Create categories](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/categories/create-categories.html).
+- CMS pages in the Back Office&nbsp;<span aria-label="and then">></span> **Pages&nbsp;<span aria-label="and then">></span> Create new CMS page** section. For more information, see [Creating a CMS Page](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/create-cms-pages.html).
 
 A developer can apply templates with slots to all the other page types.
 
 ## Correlation
 
-The correlation between templates and slots is defined by importing template and slot lists into the database. Learn how to [import these lists](/docs/dg/dev/data-import/{{page.version}}/data-importers-implementation.html).
+The correlation between templates and slots is defined by importing template and slot lists into the database. Learn how to [import these lists](/docs/dg/dev/data-import/latest/data-importers-implementation.html).
 
 Using the information from the imported lists, the Slot Widget can understand which slots are assigned to a template, and from where to fetch content for each slot.
 
@@ -188,12 +188,12 @@ The slot list contains the following information:
 
 ## Content providers
 
-A content provider is a source from which Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront. With templates and slots, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (for example, [CoreMedia](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/coremedia.html), [E-spirit](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/e-spirit.html), [Styla](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/styla.html), [Magnolia](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/magnolia.html)).
+A content provider is a source from which Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront. With templates and slots, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (for example, [CoreMedia](/docs/pbc/all/content-management-system/latest/base-shop/third-party-integrations/coremedia.html), [E-spirit](/docs/pbc/all/content-management-system/latest/base-shop/third-party-integrations/e-spirit.html), [Styla](/docs/pbc/all/content-management-system/latest/base-shop/third-party-integrations/styla.html), [Magnolia](/docs/pbc/all/content-management-system/latest/base-shop/third-party-integrations/magnolia.html)).
 
 With templates and slots, the following applies:
 
 - Spryker CMS Blocks is the content provider for all the slots.
-- Slots embed content from [CMS Blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-blocks-overview.html).
+- Slots embed content from [CMS Blocks](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-blocks-overview.html).
 - Content for CMS blocks is created in the WYSIWYG Editor.
 - Templates with slots are managed in the Back Office&nbsp;<span aria-label="and then">></span> **Slots** section.
 
@@ -218,22 +218,22 @@ Page identifiers used to define visibility conditions depend on the page type to
 
 {% info_block infoBox "Product details page" %}
 
-For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html).
+For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html).
 
 {% endinfo_block %}
 
-To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID, or Navigation Nodes. To learn more, see [HowTo: Create Visibility Conditions for CMS Blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-a-visibility-condition-for-cms-blocks.html).
+To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID, or Navigation Nodes. To learn more, see [HowTo: Create Visibility Conditions for CMS Blocks](/docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-a-visibility-condition-for-cms-blocks.html).
 
 
-A content manager can define visibility conditions by [selecting pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-slots.html#selecting-pages) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
+A content manager can define visibility conditions by [selecting pages](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-slots.html#selecting-pages) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
-A developer can [import visibility conditions](/docs/dg/dev/data-import/{{page.version}}/data-importers-implementation.html).
+A developer can [import visibility conditions](/docs/dg/dev/data-import/latest/data-importers-implementation.html).
 
 ## Slot widget
 
 Slot widget is used to fetch content from a content provider and render it on specified pages. Content is fetched in the form of HTML code ready to be rendered in the Storefront. With the help of slot widgets, you can fetch and render content from the following content providers:
 
-- [CoreMedia](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/coremedia.html)
+- [CoreMedia](/docs/pbc/all/content-management-system/latest/base-shop/third-party-integrations/coremedia.html)
 - [Spryker CMS Blocks](#spryker-cms-blocks)
 
 
@@ -311,7 +311,7 @@ This section describes how Slot Widget works with the Spryker CMS Blocks content
 {% info_block infoBox %}
 
 
-- By default, names are used as unique identifiers of CMS blocks while Slot Widget requires keys. To enable Slot Widget to work with CMS blocks, [upgrade](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html#upgrading-from-version-2-to-version-3) the `CMSBlock` module in your project for CMS Blocks to have keys.
+- By default, names are used as unique identifiers of CMS blocks while Slot Widget requires keys. To enable Slot Widget to work with CMS blocks, [upgrade](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html#upgrading-from-version-2-to-version-3) the `CMSBlock` module in your project for CMS Blocks to have keys.
 
 
 {% endinfo_block %}
@@ -398,11 +398,11 @@ The functionality has the following functional constraints which are going to be
 
 |BACK OFFICE USER GUIDES| THIRD-PARTY INTEGRATIONS |
 | - | - |
-| [Add content to the Storefront using templates and slots](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html) |  [Learn about the CoreMedia technology partner integration](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/coremedia.html)  |
-| [Manage slots](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-slots.html)   | |
+| [Add content to the Storefront using templates and slots](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html) |  [Learn about the CoreMedia technology partner integration](/docs/pbc/all/content-management-system/latest/base-shop/third-party-integrations/coremedia.html)  |
+| [Manage slots](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-slots.html)   | |
 
 
 
 ## See next
 
-- [Email as a CMS block](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html)
+- [Email as a CMS block](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html)

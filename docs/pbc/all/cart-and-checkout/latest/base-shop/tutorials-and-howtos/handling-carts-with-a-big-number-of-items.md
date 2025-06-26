@@ -80,7 +80,7 @@ Glue: Implement API endpoints that support sorting, searching, pagination, or as
 Converting big carts into orders results in orders with many items, complicating order management.
 
 Backend:
-- Plan the OMS design with a focus on bulk processing and asynchronous (background) operations. Be cautious with functionalities like [Splittable Order Items](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/splittable-order-items-overview.html) to avoid creating too big orders.
+- Plan the OMS design with a focus on bulk processing and asynchronous (background) operations. Be cautious with functionalities like [Splittable Order Items](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/splittable-order-items-overview.html) to avoid creating too big orders.
 - If placing an order is inevitably complex and slow, consider making it asynchronously to prevent customers from waiting. Make sure to cover the cases of overbooking and failed order placements.
 
 Storefront: Consider UI changes, similar to the [cart UI changes](#ui-challenges).

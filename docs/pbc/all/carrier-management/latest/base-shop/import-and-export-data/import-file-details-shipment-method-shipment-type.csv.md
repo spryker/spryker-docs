@@ -12,8 +12,8 @@ This document describes the `shipment_method_shipment_type.csv` file to configur
 
 ## Import file dependencies
 
-- [`shipment.csv`](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html)
-- [`shipment-type.csv`](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html)
+- [`shipment.csv`](/docs/pbc/all/carrier-management/latest/base-shop/import-and-export-data/import-file-details-shipment.csv.html)
+- [`shipment-type.csv`](/docs/pbc/all/carrier-management/latest/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html)
 
 ## Import file parameters
 

@@ -17,11 +17,11 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `content_product_set.csv` file to configure [Content Product Set](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/content-items-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `content_product_set.csv` file to configure [Content Product Set](/docs/pbc/all/content-management-system/latest/base-shop/content-items-feature-overview.html) information in your Spryker Demo Shop.
 
 ## Import file dependencies
 
-This file has the following dependency: [product_set.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-set.csv.html).
+This file has the following dependency: [product_set.csv](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-product-set.csv.html).
 
 
 

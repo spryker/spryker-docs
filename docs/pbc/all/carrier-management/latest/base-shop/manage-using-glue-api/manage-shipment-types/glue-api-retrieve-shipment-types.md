@@ -9,7 +9,7 @@ This endpoint lets you retrieve shipment types.
 
 ## Installation
 
-[Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
+[Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
 
 ## Retrieve shipment types
 
@@ -21,7 +21,7 @@ This endpoint lets you retrieve shipment types.
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
-| Authorization | string | For backend API. | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
+| Authorization | string | For backend API. | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
 
 | REQUEST | API TYPE | USAGE |
@@ -119,7 +119,7 @@ This endpoint lets you retrieve shipment types.
 </details>
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/shipment-types-response-attributes.md -->
 
 
 
@@ -132,14 +132,14 @@ This endpoint lets you retrieve shipment types.
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{shipment_type_id}}***{% endraw %} | ID of a shipment type to retrieve. To get it, [add a shipment type](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-add-shipment-types.html) or [retrieve shipment types](#retrieve-shipment-types). |
+| {% raw %}***{{shipment_type_id}}***{% endraw %} | ID of a shipment type to retrieve. To get it, [add a shipment type](/docs/pbc/all/carrier-management/latest/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-add-shipment-types.html) or [retrieve shipment types](#retrieve-shipment-types). |
 
 
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
-| Authorization | string | For backend API. | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
+| Authorization | string | For backend API. | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
 | REQUEST | API TYPE | USAGE |
 | --- | --- | --- |
@@ -199,7 +199,7 @@ This endpoint lets you retrieve shipment types.
 </details>
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/shipment-types-response-attributes.md -->
 
 
 
@@ -209,4 +209,4 @@ This endpoint lets you retrieve shipment types.
 | --- | --- |
 | 5501 | The shipment type with the specified ID doesn't exist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

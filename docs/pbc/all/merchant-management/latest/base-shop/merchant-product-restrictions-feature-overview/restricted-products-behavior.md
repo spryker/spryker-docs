@@ -71,7 +71,7 @@ On this page, you can find commonly encountered cases of product restrictions be
             <p>Blacklist</p>
          </td>
          <td>
-            <p>During the <a href="/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/reorder-feature-overview.html">reorder</a> process, products that are restricted but exist in a previous order are automatically removed from the cart.</p>
+            <p>During the <a href="/docs/pbc/all/customer-relationship-management/latest/base-shop/reorder-feature-overview.html">reorder</a> process, products that are restricted but exist in a previous order are automatically removed from the cart.</p>
          </td>
          <td>
             <p><img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/reorder-blacklist.png" alt="" /></p>

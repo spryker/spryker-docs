@@ -10,7 +10,7 @@ Amazon QuickSight is a highly customizable and powerful business intelligence to
 
 ## Prerequisites
 
-[Set up Amazon QuickSight](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/set-up-amazon-quicksight.html)
+[Set up Amazon QuickSight](/docs/pbc/all/business-intelligence/latest/amazon-quicksight-third-party-integration/set-up-amazon-quicksight.html)
 
 
 ## Optional: Back up the default analysis
@@ -56,7 +56,7 @@ To refresh product related datasets, do the following:
 6. In the **Confirm refresh** window, click **REFRESH**
   This refreshes the page. A new refresh entry is displayed in the **History** pane. You can check the status of the refresh in the **Status** column.
 
-You've manually refreshed data and now it's ready to be used in an analysis. For most datasets, you might want to set up an automatic data refresh so that data is always up to date. For instructions, see [Refresh analytics datasets](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html).
+You've manually refreshed data and now it's ready to be used in an analysis. For most datasets, you might want to set up an automatic data refresh so that data is always up to date. For instructions, see [Refresh analytics datasets](/docs/pbc/all/business-intelligence/latest/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html).
 
 
 ## Create an analysis

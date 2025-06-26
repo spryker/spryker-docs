@@ -50,8 +50,8 @@ Review the [reference information](#reference-information-create-a-cms-block) be
 | ATTRIBUTE  | DESCRIPTION: REGULAR CMS BLOCK | DESCRIPTION: EMAIL CMS BLOCK |
 | --- | --- | --- |
 | STORE RELATION |  Stores to displayed the block in. | This option does not affect email CMS blocks, so choose any. |
-| TEMPLATE | Defines the layout of the CMS Block. A developer can [create more templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-block-template). | Defines the layout of the Email CMS Block. A developer can [create more templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-block-template). |
-| NAME | You will use this name when [assigning the block to a slot in a page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-slots.html#assigning-cms-blocks-to-slots). | The name should correspond to the name defined in the email template the block will be assigned to. |
+| TEMPLATE | Defines the layout of the CMS Block. A developer can [create more templates](/docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-block-template). | Defines the layout of the Email CMS Block. A developer can [create more templates](/docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-block-template). |
+| NAME | You will use this name when [assigning the block to a slot in a page](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-slots.html#assigning-cms-blocks-to-slots). | The name should correspond to the name defined in the email template the block will be assigned to. |
 | VALID FROM and VALID TO | Dates that inclusively specify when the block is to be visible on the Storefront. | Irrelevant. |
 | PRODUCTS | Products to assign the block to. The block will be displayed on the products' details pages. | Irrelevant. |
 
@@ -63,4 +63,4 @@ Review the [reference information](#reference-information-create-a-cms-block) be
 
 ## Next steps
 
-[Edit CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html)  
+[Edit CMS blocks](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html)  

@@ -16,7 +16,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `cms_block.csv` file to configure [CMS Block](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-blocks-overview.html) information on your Spryker Demo Shop.
+This document describes the `cms_block.csv` file to configure [CMS Block](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-blocks-overview.html) information on your Spryker Demo Shop.
 
 ## Import file command
 

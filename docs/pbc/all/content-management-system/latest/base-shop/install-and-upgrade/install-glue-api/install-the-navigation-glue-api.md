@@ -20,4 +20,4 @@ related:
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-navigation-trees.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-navigation-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-navigation-glue-api.md -->
+{% include pbc/all/install-features/latest/install-glue-api/install-the-navigation-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-navigation-glue-api.md -->

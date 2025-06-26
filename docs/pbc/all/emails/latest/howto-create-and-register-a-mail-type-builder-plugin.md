@@ -111,7 +111,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 {% info_block warningBox "Verification" %}
 
 In order to activate the mail functionality, follow these steps:
-1. To verify the mail provider is created and registered, go to [How to create and register a mail provider](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mail-provider.html).
+1. To verify the mail provider is created and registered, go to [How to create and register a mail provider](/docs/pbc/all/emails/latest/howto-create-and-register-a-mail-provider.html).
 2. Create and adjust `MailTransfer`:
 
 ```php
@@ -125,6 +125,6 @@ Call `MailFacade::handleMail($mailTransfer)`.
 
 If everything is set up properly the mail will be sent.
 
-Follow [Tutorial sending an email](/docs/pbc/all/emails/{{site.version}}/tutorial-sending-an-email.html) to get more information.
+Follow [Tutorial sending an email](/docs/pbc/all/emails/latest/tutorial-sending-an-email.html) to get more information.
 
 {% endinfo_block %}

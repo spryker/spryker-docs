@@ -18,7 +18,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/cms-feature-overview/cms-pages-in-search-results-overview.html
 ---
 
-Most often, shop visitors search for products; however, they also might need other information, like terms and conditions, legal information, or contacts, which are contained on [CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-pages-overview.html).
+Most often, shop visitors search for products; however, they also might need other information, like terms and conditions, legal information, or contacts, which are contained on [CMS pages](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-pages-overview.html).
 
 The *CMS pages in search results* functionality lets you search not only for products but for the content of CMS pages too. At the same time, the search results related to products and CMS pages do not intervene with each other. The search results page is split into two tabs: product pages and CMS pages. The latter tab displays CMS pages as a grid or as a list.
 

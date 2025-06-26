@@ -21,4 +21,4 @@ redirect_from:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage customer groups](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-customer-groups.html)   |
+| [Manage customer groups](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/manage-customer-groups.html)   |

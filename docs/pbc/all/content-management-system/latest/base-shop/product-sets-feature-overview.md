@@ -26,7 +26,7 @@ A Back Office user can define the following:
 - The order of products sets displayed on the Storefront. It's relevant if you have multiple product sets on the same page.
 - The unique product set URL.
 
-A Back Office user can add product sets to any page by [creating a product set content item](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html) and [adding it to CMS pages and blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html).
+A Back Office user can add product sets to any page by [creating a product set content item](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html) and [adding it to CMS pages and blocks](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html).
 
 
 For more details about product sets, watch the video:
@@ -44,12 +44,12 @@ The feature has the following functional constraints which are going to be resol
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Product Sets feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/product-sets-feature-overview.html) |
-| [Create product sets](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/product-sets/create-product-sets.html) |
-| [Manage product sets](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/product-sets/edit-product-sets.html) |
+| [Get a general idea of the Product Sets feature](/docs/pbc/all/content-management-system/latest/base-shop/product-sets-feature-overview.html) |
+| [Create product sets](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/product-sets/create-product-sets.html) |
+| [Manage product sets](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/product-sets/edit-product-sets.html) |
 
 ## Related Developer documents
 
 |INSTALLATION GUIDES | DATA IMPORT |
 |---------|---------|
-| [Product Sets feature integration](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-sets-feature.html)  | [File details: product_set.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-set.csv.html) |
+| [Product Sets feature integration](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-product-sets-feature.html)  | [File details: product_set.csv](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-product-set.csv.html) |

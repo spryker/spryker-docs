@@ -24,11 +24,11 @@ There is already a list of plugins that populate quote transfer with correspondi
 
 {% info_block infoBox %}
 
-For more details, check [Cart Data Flow](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/extend-and-customize/cart-module-reference-information.html#cart-data-flow) in the *Cart Functionality* section.
+For more details, check [Cart Data Flow](/docs/pbc/all/cart-and-checkout/latest/base-shop/extend-and-customize/cart-module-reference-information.html#cart-data-flow) in the *Cart Functionality* section.
 
 {% endinfo_block %}
 
-If manual recalculation of cart is required, then `CalculationFacade::recalculate` can be called from Zed or `CalculationClient::recalculate` from Yves with prepared [Calculation Data Structure](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/extend-and-customize/calculation-data-structure.html). When the recalculation operation is called, the calculator runs the calculator plugin stack and each plugin modifies the `QuoteTransfer` (calculates discounts, adds sum gross prices, calculates taxes). Most plugins require the `unitGrossPrice` and the `quantity` to be provided.
+If manual recalculation of cart is required, then `CalculationFacade::recalculate` can be called from Zed or `CalculationClient::recalculate` from Yves with prepared [Calculation Data Structure](/docs/pbc/all/cart-and-checkout/latest/base-shop/extend-and-customize/calculation-data-structure.html). When the recalculation operation is called, the calculator runs the calculator plugin stack and each plugin modifies the `QuoteTransfer` (calculates discounts, adds sum gross prices, calculates taxes). Most plugins require the `unitGrossPrice` and the `quantity` to be provided.
 
 {% info_block infoBox "Calculated amounts" %}
 
@@ -77,7 +77,7 @@ ItemTransfer::sumGrossPriceWithProductOptions = sum(ProductOptionTransfer::sumGr
 
 {% info_block infoBox "Discount Calculation" %}
 
-Discount calculation is a separate topic and is explained in the [Discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/promotions-discounts-feature-overview.html) article.
+Discount calculation is a separate topic and is explained in the [Discount](/docs/pbc/all/discount-management/latest/base-shop/promotions-discounts-feature-overview.html) article.
 
 {% endinfo_block %}
 

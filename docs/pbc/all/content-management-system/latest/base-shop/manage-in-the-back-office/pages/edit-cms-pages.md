@@ -71,7 +71,7 @@ To change the title and content of the page:
 
 {% info_block infoBox %}
 
-In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding content item widgets to a page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html) for more details.
+In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding content item widgets to a page](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html) for more details.
 
 {% endinfo_block %}
 

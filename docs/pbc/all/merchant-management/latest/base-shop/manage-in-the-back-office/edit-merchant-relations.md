@@ -18,7 +18,7 @@ This document describes how to edit merchant relations in the Back Office.
 ## Prerequisites
 
 
-1. Optional: [Create a product list](/docs/pbc/all/product-information-management/{{page.version}}/base-shop//manage-in-the-back-office/product-lists/create-product-lists.html). It's needed to allow or deny a company access to certain products.
+1. Optional: [Create a product list](/docs/pbc/all/product-information-management/latest/base-shop//manage-in-the-back-office/product-lists/create-product-lists.html). It's needed to allow or deny a company access to certain products.
 2. Review the [reference information](#reference-information-edit-a-merchant-relation) before you start, or look up the necessary information as you go through the process.
 
 ## Edit a merchant relation

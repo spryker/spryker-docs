@@ -5,4 +5,4 @@ description: Integrate the Marketplace Merchant B2B Contracts feature into a Spr
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-merchant-b2b-contracts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/marketplace/install-the-marketplace-merchant-b2b-contracts-feature.md -->
+{% include pbc/all/install-features/latest/marketplace/install-the-marketplace-merchant-b2b-contracts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/marketplace/install-the-marketplace-merchant-b2b-contracts-feature.md -->

@@ -15,7 +15,7 @@ redirect_from:
 
 Sometimes shop owners want their customers to buy less or more of specific products. For example, when selling to bulk buyers at wholesale prices or when running promotional campaigns and creating special offers, you might want not to allow buying less than a certain quantity. Also, for some products, it might be more convenient to sell particular quantities that are, for example, multiples of a specific number. For example, you don't sell less than three meters of a cable and don't want customers to buy cables with a length that is not a multiple of three.
 
-Product quantity restriction values define the number of items that customers can put into the cart. You can specify the product quantity restrictions by importing them for your project with the `data:import:product-quantity` command. For details about the import file, see [File details: product_quantity.csv](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/import-and-export-data/import-file-details-product-quantity.csv.html).
+Product quantity restriction values define the number of items that customers can put into the cart. You can specify the product quantity restrictions by importing them for your project with the `data:import:product-quantity` command. For details about the import file, see [File details: product_quantity.csv](/docs/pbc/all/cart-and-checkout/latest/base-shop/import-and-export-data/import-file-details-product-quantity.csv.html).
 
 In the import file, you can set three values for quantity restrictions: minimum, maximum, and interval.
 The *minimum* value defines the smallest allowable quantity of a specific item in the cart. The *maximum* quantity restricts the allowable quantity of items in the cart to a specific value. The *interval* value determines an increment value by which the quantity can be changed. For example, if you specify minimum quantity as 5, interval as 3, and maximum quantity as 14, a user can add 5, 8, 11, and 14 items to the cart. If a user adds an unacceptable quantity of items to the cart, they are suggested to buy another allowable quantity of items.
@@ -28,4 +28,4 @@ The feature has the following functional constraints:
 
 | DATA IMPORT |
 |---------|
-|[File details: product_quantity.csv](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/import-and-export-data/import-file-details-product-quantity.csv.html) |
+|[File details: product_quantity.csv](/docs/pbc/all/cart-and-checkout/latest/base-shop/import-and-export-data/import-file-details-product-quantity.csv.html) |

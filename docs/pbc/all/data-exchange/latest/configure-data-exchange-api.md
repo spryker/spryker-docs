@@ -127,7 +127,7 @@ and for `spy_tax_rate` table:
 
 {% info_block infoBox %}
 
-For configuration relations follow [Configure Dynamic Data installation](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html#configure-dynamic-data-installation) .
+For configuration relations follow [Configure Dynamic Data installation](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html#configure-dynamic-data-installation) .
 
 {% endinfo_block %}
 
@@ -177,7 +177,7 @@ For configuration relations follow [Configure Dynamic Data installation](/docs/p
 
 {% info_block infoBox %}
 
-If you don't see the needed table, it may be [excluded from configuring](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html#set-up-the-configuration).
+If you don't see the needed table, it may be [excluded from configuring](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html#set-up-the-configuration).
 
 {% endinfo_block %}
 
@@ -195,8 +195,8 @@ This opens the **Data Exchange API Configuration** page with the endpoint displa
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you can follow [How to send request in Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html) to discover how to request your API endpoint.
-Or if you're in the middle of the integration process for the Data Exchange API follow [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html) to proceed with it.
+If everything is set up correctly, you can follow [How to send request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html) to discover how to request your API endpoint.
+Or if you're in the middle of the integration process for the Data Exchange API follow [Install the Data Exchange API](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html) to proceed with it.
 
 {% endinfo_block %}
 
@@ -213,4 +213,4 @@ In case you've added new endpoints, the documentation will be automatically upda
 
 ## Next steps
 
-[Send request in Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html)
+[Send request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html)

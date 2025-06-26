@@ -20,4 +20,4 @@ related:
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/install-features/install-the-shipment-approval-process-feature.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-approval-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-approval-process-feature.md -->
+{% include pbc/all/install-features/latest/install-the-approval-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-approval-process-feature.md -->

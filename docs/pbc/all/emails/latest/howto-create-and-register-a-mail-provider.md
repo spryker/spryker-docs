@@ -34,8 +34,8 @@ related:
 {% info_block infoBox "Info" %}
 
 Spryker lets you send emails via the Symfony mailer component.
-Follow the instructions in this link in order to use it [Install the Mailing and Notifications feature guide](/docs/pbc/all/emails/{{page.version}}/install-the-mailing-and-notifications-feature.html).
-For information on how to you use, see [Install the Mailing and Notifications feature guide](/docs/pbc/all/emails/{{page.version}}/install-the-mailing-and-notifications-feature.html).
+Follow the instructions in this link in order to use it [Install the Mailing and Notifications feature guide](/docs/pbc/all/emails/latest/install-the-mailing-and-notifications-feature.html).
+For information on how to you use, see [Install the Mailing and Notifications feature guide](/docs/pbc/all/emails/latest/install-the-mailing-and-notifications-feature.html).
 {% endinfo_block %}
 
 This guide shows how to create and register a mail provider you want to use.
@@ -71,7 +71,7 @@ public function provideBusinessLayerDependencies(Container $container)
 
 By using `$container->extend()`, you get `MailProviderCollectionAddInterface`, where you can add your provider. `MailProviderCollectionAddInterface::addProvider()` takes the provider you want to use as the first argument, and as the second argument, a `MailType` or a list of `MailType` classes, which this provider must use.
 
-As you can see in the preceding example, the provider is registered to all `MailType` classes by using `MailConfig::MAIL_TYPE_ALL`. If you want the provider to handle only a specific `MailType`, use the `MailType` constant from your `MailTypePlugin`—for example, `CustomerRegistrationMailTypePlugin::MAIL_TYPE`. For information about creating and registering a `MailTypePlugin`, see [HowTo: Creating and registering a MailTypePlugin](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mailtypeplugin.html).
+As you can see in the preceding example, the provider is registered to all `MailType` classes by using `MailConfig::MAIL_TYPE_ALL`. If you want the provider to handle only a specific `MailType`, use the `MailType` constant from your `MailTypePlugin`—for example, `CustomerRegistrationMailTypePlugin::MAIL_TYPE`. For information about creating and registering a `MailTypePlugin`, see [HowTo: Creating and registering a MailTypePlugin](/docs/pbc/all/emails/latest/howto-create-and-register-a-mailtypeplugin.html).
 
 ## Use more than one provider
 

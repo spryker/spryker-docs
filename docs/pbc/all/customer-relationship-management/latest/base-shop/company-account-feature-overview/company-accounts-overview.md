@@ -143,9 +143,9 @@ Company users can perform the following actions on the Storefront:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage companies](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-companies.html) |
+| [Manage companies](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/manage-companies.html) |
 
 
 ## See next
 
-[Business Units overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html)
+[Business Units overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/business-units-overview.html)

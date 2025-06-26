@@ -29,4 +29,4 @@ To create a redirect in the Back Office, follow the steps:
 
 ## Next steps
 
-[Edit CMS redirects](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/redirects/edit-cms-redirects.html)
+[Edit CMS redirects](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/redirects/edit-cms-redirects.html)

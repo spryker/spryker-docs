@@ -14,7 +14,7 @@ This document describes how to edit placeholders in CMS blocks in the Back Offic
 
 ## Prerequisites
 
-- Optional: If you want to add content items to a block, [create content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html).
+- Optional: If you want to add content items to a block, [create content items](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html).
 - Review the [reference information](#reference-information-edit-placeholders-in-a-cms-block) before you start or look up the necessary information as you go through the process.
 
 

@@ -11,7 +11,7 @@ Approximate time to complete: 1 hour.
 
 ## Prerequisites
 
-[Install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
+[Install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
 
 
 ## 1) Adjust transfer definitions

@@ -9,7 +9,7 @@ This endpoint lets you retrieve push notification providers to further subscribe
 
 ## Installation
 
-[Install the Push Notification feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-push-notification-feature.html)
+[Install the Push Notification feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-push-notification-feature.html)
 
 ## Retrieve push notification providers
 
@@ -29,7 +29,7 @@ This endpoint lets you retrieve push notification providers to further subscribe
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
 
 
 Request sample: `GET https://glue-backend.b2c-eu.demo-spryker.com/push-notification-providers`
@@ -73,7 +73,7 @@ Request sample: `GET https://glue-backend.b2c-eu.demo-spryker.com/push-notificat
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/push-notification-providers-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/push-notification-providers-response-attributes.md -->
 
 
 ## Retrieve a push notification provider
@@ -93,7 +93,7 @@ Request sample: `GET https://glue-backend.b2c-eu.demo-spryker.com/push-notificat
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION                                                  |
 | ------------- | ------------ | -------- | ------------------------------------------------------------ |
-| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
 
 Request sample: `GET https://glue-backend.b2c-eu.demo-spryker.com/push-notification-providers/2a304ddf-d51b-514f-bd11-6e818a27fe23`
 
@@ -118,7 +118,7 @@ Response sample:
 ```
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/push-notification-providers-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/push-notification-providers-response-attributes.md -->
 
 
 
@@ -129,4 +129,4 @@ Response sample:
 | --- | --- |
 |5001| The push notification provider with the specified ID doesn't exist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

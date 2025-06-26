@@ -217,7 +217,7 @@ namespace Pyz\Glue\GlueStorefrontApiApplication;
 use Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider as SprykerGlueStorefrontApiApplicationDependencyProvider;
 use Spryker\Glue\OauthApi\Plugin\AccessTokenValidatorPlugin;
 use Spryker\Glue\OauthApi\Plugin\CustomerRequestBuilderPlugin;
-use Spryker\Glue\OauthBackendApi\Plugin\GlueApplication\OauthBackendApiTokenResource;
+use Spryker\Glue\OauthApi\Plugin\GlueApplication\OauthApiTokenResource;
 
 class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefrontApiApplicationDependencyProvider
 {
@@ -247,7 +247,7 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
     protected function getResourcePlugins(): array
     {
         return [
-            new OauthBackendApiTokenResource(),
+            new OauthApiTokenResource(),
         ];
     }
 }

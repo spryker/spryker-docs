@@ -6,6 +6,8 @@ template: glue-api-storefront-guide-template
 ---
 
 
+This document describes how to retrieve available Multi-Factor Authentication (MFA) methods. The endpoint also shows the status of each method for the user that requested them.
+
 ## Installation
 
 - [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html)
@@ -24,6 +26,10 @@ To retrieve MFA methods and the user's status for each of them, send the request
 
 
 ### Request
+
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
+| --- | --- | --- | --- |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. To get the value, [authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user), [authenticate as a customer](/docs/pbc/all/identity-access-management/202410.0/manage-using-glue-api/glue-api-authenticate-as-a-customer.html), or [authenticate as a Back Office user](/docs/pbc/all/identity-access-management/202410.0/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
 
 ```http
 GET /multi-factor-auth-types
@@ -46,8 +52,88 @@ Authorization: Bearer <access_token>
 }
 ```
 
-| Status | Name                      | Description                                                                                                                                                                                         |
+| Status | Name                      | DESCRIPTION |
 |--------|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0      | Disabled                  | MFA method is available but not configured for the user. Protected actions are completed without additional verification.                                                                           |
-| 1      | Activation is in progress | User has initiated the MFA setup process but hasn't completed verification. The method cannot be used for protected actions until verification is complete.                                         |
-| 2      | Enabled                   | MFA method is fully configured and active. The system will require additional verification using this method for all protected actions and other sensitive operations defined in the configuration. |
+| 0      | Disabled                  | MFA method is available but disabled for the user. Protected actions don't require MFA.
+| 1      | Activation is in progress | User initiated the MFA setup but didn't complete the verification. Protected actions don't require MFA.
+| 2      | Enabled                   | MFA method is enabled for the user. All protected actions require MFA. |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -36,98 +36,13 @@ Before you proceed, you need to know whether the user has any MFA methods config
 
 If the user already has an active method, and they attempt a protected action, you must first trigger the MFA flow.
 
-### 3.1) Trigger MFA
 
-This sends the MFA code via the selected method (email, etc.).
-
-{% info_block infoBox "Note" %}
-
-MFA codes are valid for a limited time. By default, Spryker uses a 30-minute grace period after successful MFA verification, 
-during which the user can perform protected actions without re-triggering the new code sending and just entering the existing code.
-
-In order to configure the grace period, see [Configure Code Validity Time](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html#configure-code-validity-time).
-
-{% endinfo_block %}
-
-**Request**
-
-```http
-POST /multi-factor-auth-trigger
-Authorization: Bearer <access_token>
-Content-Type: application/json
-
-{
-  "data": {
-    "type": "multi-factor-auth-trigger",
-    "attributes": {
-      "type": "email"
-    }
-  }
-}
-```
-
-**Response**: 204 No Content — code has been sent.
-
-{% info_block infoBox "Error Handling" %}
-
-For potential errors (like when the provided MFA method is not found, etc.), see the [Error Codes](#error-codes) section at the end of this document.
-
-{% endinfo_block %}
-
-### 3.2) Call the protected endpoint with the MFA code
-
-Once the code is received, include it in the `X-MFA-Code` header when calling protected endpoints.
-
-For example, if you are changing the password, you would include the MFA code in the request header:
-
-**Request**
-
-```http
-PATCH /customer-password/DE--42
-Authorization: Bearer <access_token>
-X-MFA-Code: <your_mfa_code>
-Content-Type: application/json
-
-{
-  "data": {
-    "type": "customer-password",
-    "attributes": {
-      "password": "oldPass123",
-      "newPassword": "NewPass456!",
-      "confirmPassword": "NewPass456!"
-    }
-  }
-}
-```
-**Response**: Get the appropriate response based on the endpoint you are calling. For example, if you are changing the password, you will receive a success message indicating that the password has been changed.
-
-If the MFA code is missing or incorrect, you will receive an error response indicating that the MFA verification failed.
-
-**Response**
-
-```json
-{
-  "errors": [
-    {
-      "status": 403,
-      "code": "5900",
-      "detail": "X-MFA-Code header is missing."
-    }
-  ]
-}
-```
-
-{% info_block infoBox "Note" %}
-
-To review all Glue API endpoints protected by default, visit the following link [Multi-Factor Authentication in Glue API](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication-in-glue-api.html).
-
-{% endinfo_block %}
 
 
 
 **Response**: 204 No Content — the MFA method has been deactivated.
 
-## Error Codes
+## Possible errors
 
 | Code | Constant                                           | Meaning                          |
 |------|----------------------------------------------------|----------------------------------|

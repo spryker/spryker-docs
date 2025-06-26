@@ -50,7 +50,7 @@ related:
 
 *Source*: <http://project-a.github.io/on-site-search-design-patterns-for-e-commerce/>
 
-By [Dr. Martin Loetzsch](http://martin-loetzsch.de/), ([Project A](https://www.project-a.com/)) and Krešimir Slugan ([Contorion](https://contorion.de/)).
+By [Dr. Martin Loetzsch](http://martin-loetzsch.de/), ([Project A](https://www.project-a.com/)) and Krešimir Slugan (Contorion).
 
 Providing users with a proper on-site search user experience is often one of the major technical challenges in building ecommerce websites. Although Elasticsearch is a fantastic search engine for the job, a lot of work needs to be done to adapt it to the specific business. This concept document introduces a few Elasticsearch design patterns around our notion of usage-driven schemas that will help you build a search for the folliwng purposes:
 

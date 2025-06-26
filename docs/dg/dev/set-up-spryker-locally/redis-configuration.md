@@ -1,7 +1,7 @@
 ---
 title: Redis configuration
 description: In Spryker, Redis is used as the key-value storage and the session data storage.
-last_updated: Jun 16, 2021
+last_updated: Jun 19, 2025
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/redis-configruation
 originalArticleId: ea89b3d3-30a2-41b6-8af7-cbd890ff5d18
@@ -114,7 +114,7 @@ The standard Redis client configuration uses environment variables defined as co
 
 Compression is supported starting from `spryker/redis:2.9.1`.  
 
-By default Redis compression is disabled:
+By default, Redis compression is disabled:
 
 ```php
 $config[RedisConstants::REDIS_COMPRESSION_ENABLED] = getenv('SPRYKER_KEY_VALUE_COMPRESSING_ENABLED') ?: false;
@@ -160,8 +160,109 @@ class RedisConfig extends AbstractBundleConfig
 }
 ```
 
-After enabling compression, we recommend resaving storage data using the command: `SPRYKER_REDIS_IS_DEV_MODE=0 console storage:redis:re-save`.
+After enabling compression, we recommend resaving storage data.
+
+The command to resave storage data is available starting from `spryker/storage-redis:1.7.0`. To enable the command for resaving storage data, add the following configuration:
+
+
+```php
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\StorageRedis\Communication\Console\StorageRedisDataReSaveConsole;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container): array
+    {
+        $commands = [
+            //....
+            new StorageRedisDataReSaveConsole(),
+            //....
+        ];
+    }
+}
+```
+
+To resave storage data, run the command:
+
+```bash
+SPRYKER_REDIS_IS_DEV_MODE=0 console storage:redis:re-save
+```
 
 With separate storage databases per store, execute the command for each store individually.
 
-The command is available starting from `spryker/storage-redis:1.7.0`.
+## Storage GUI installation
+
+The storage GUI lets you access original and compressed storage data in the Back Office, **Maintenance** > **Storage** menu. 
+
+StorageGui is supported starting from `spryker/storage-gui:1.1.0`. To build the UI changes, install dependencies and rebuild ZED UI:
+
+```bash
+console frontend:project:install-dependencies
+console frontend:zed:build
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

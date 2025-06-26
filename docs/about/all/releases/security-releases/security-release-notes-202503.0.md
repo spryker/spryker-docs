@@ -3,6 +3,8 @@ title: Security release notes 202503.0
 description: Security updates released for version 202503.0
 last_updated: Mar 24, 2025
 template: concept-topic-template
+redirect_from:
+  - /docs/about/all/releases/security-release-notes-202503.0.html
 ---
 
 This document describes the security-related issues that have been recently resolved.

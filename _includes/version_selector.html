@@ -5,13 +5,9 @@
 {% if total_versions > 1 %}
 
   {%- comment -%}
-  Strip version from beginning of page.url
+  Replace current version (in URL) with selected version
   {%- endcomment -%}
-  {% assign url_segments = page.url | split: '/' %}
-  {% assign page_path = '' %}
-  {% for segment in url_segments offset:2 %}
-    {% assign page_path = page_path | append: '/' | append: segment %}
-  {% endfor %}
+  {% assign base_url = page.url | replace: '/' | replace: current_version, 'VERSION_PLACEHOLDER' %}
 
   <div class="alt-nav dropdown">
     <span class="alt-nav__opener nav-link dropdown-toggle" id="versionDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -23,8 +19,9 @@
       {% for version_pair in site.versions %}
         {% assign version_key = version_pair[0] %}
         {% assign version_label = version_pair[1] %}
+        {% assign new_url = page.url | replace: current_version, version_key %}
         <li>
-          <a href="{{ site.baseurl }}/{{ version_key }}{{ page_path }}">{{ version_label }}</a>
+          <a href="{{ site.baseurl }}{{ new_url }}">{{ version_label }}</a>
         </li>
       {% endfor %}
     </ul>

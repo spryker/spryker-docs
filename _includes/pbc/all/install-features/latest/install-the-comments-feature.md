@@ -18,7 +18,7 @@ Install the required features:
 To install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/comments: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/comments: "202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -321,7 +321,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/comments: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/comments: "202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

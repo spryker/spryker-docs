@@ -20,7 +20,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/marketplace-merchant-custom-prices:"{{page.version}}" --with-dependencies
+composer require spryker-feature/marketplace-merchant-custom-prices:"202507.0" --with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

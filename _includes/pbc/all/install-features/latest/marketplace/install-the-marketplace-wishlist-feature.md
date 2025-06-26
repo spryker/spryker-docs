@@ -21,7 +21,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/marketplace-wishlist:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-wishlist:"202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

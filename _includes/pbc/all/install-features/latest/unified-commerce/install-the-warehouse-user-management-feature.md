@@ -15,7 +15,7 @@ Install the required features:
 ## 1) Install the required modules
 
 ```bash
-composer require spryker-feature/warehouse-user-management: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/warehouse-user-management: "202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

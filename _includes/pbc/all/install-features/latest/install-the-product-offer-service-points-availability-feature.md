@@ -20,7 +20,7 @@ Install the required features:
 1. Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/product-offer-service-points-availability: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/product-offer-service-points-availability: "202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

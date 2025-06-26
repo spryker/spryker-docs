@@ -21,7 +21,7 @@ To start feature integration, review and install the necessary features:
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/approval-process:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/approval-process:"202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -414,7 +414,7 @@ To start feature integration, review and install the necessary features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/approval-process: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/approval-process: "202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

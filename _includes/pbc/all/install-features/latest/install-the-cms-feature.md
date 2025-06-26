@@ -15,7 +15,7 @@ Install the required features:
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/cms:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/cms:"202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1202,7 +1202,7 @@ Follow the steps below to install the CMS feature frontend.
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/cms:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/cms:"202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

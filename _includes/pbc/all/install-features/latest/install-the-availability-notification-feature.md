@@ -21,7 +21,7 @@ Install the required features:
 ### 1) Install the required modules
 
 ```bash
-composer require "spryker-feature/availability-notification":"{{site.version}}" --update-with-dependencies
+composer require "spryker-feature/availability-notification":"202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -351,7 +351,7 @@ To start feature integration, integrate the required feature:
 ### 1) Install the required modules
 
 ```bash
-composer require "spryker-feature/availability-notification":"{{site.version}}" --update-with-dependencies
+composer require "spryker-feature/availability-notification":"202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

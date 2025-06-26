@@ -19,7 +19,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/merchant-custom-prices:"{{page.version}}" spryker/price-product-merchant-relationship-gui:"^1.0.0" --update-with-dependencies
+composer require spryker-feature/merchant-custom-prices:"202507.0" spryker/price-product-merchant-relationship-gui:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

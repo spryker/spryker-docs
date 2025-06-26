@@ -16,7 +16,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/return-management:"{{page.version}}" spryker/barcode:"^1.1.1" --update-with-dependencies
+composer require spryker-feature/return-management:"202507.0" spryker/barcode:"^1.1.1" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -785,7 +785,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/return-management:"{{page.version}}" spryker-shop/barcode-widget:"^1.0.0" --update-with-dependencies
+composer require spryker-feature/return-management:"202507.0" spryker-shop/barcode-widget:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -16,7 +16,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/service-points-cart: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/service-points-cart: "202507.0" --update-with-dependencies
 composer require spryker/service-point-carts-rest-api:"^1.0.0" --update-with-dependencies
 ```
 

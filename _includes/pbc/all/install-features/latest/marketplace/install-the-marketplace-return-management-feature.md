@@ -20,7 +20,7 @@ Install the required features:
 ### 1) Install required modules using Composer
 
 ```bash
-composer require spryker-feature/marketplace-return-management:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-return-management:"202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -958,7 +958,7 @@ Follow the steps below to install the Marketplace return management feature fron
 ### 1) Install required modules using Сomposer
 
 ```bash
-composer require spryker-feature/marketplace-return-management:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-return-management:"202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

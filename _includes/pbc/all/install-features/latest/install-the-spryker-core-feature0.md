@@ -23,7 +23,7 @@ Follow the steps below to install the Spryker Core feature core.
 ### 1) Install the required modules
 
 ```bash
-composer require "spryker-feature/spryker-core":"{{page.version}}" --update-with-dependencies
+composer require "spryker-feature/spryker-core":"202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1025,7 +1025,7 @@ Follow the steps below to install the Spryker Core feature frontend.
 ### 1) Install the required modules
 
 ```bash
-composer require "spryker-feature/spryker-core": "{{page.version}}"
+composer require "spryker-feature/spryker-core": "202507.0"
 ```
 
 ### 2) Set up configuration

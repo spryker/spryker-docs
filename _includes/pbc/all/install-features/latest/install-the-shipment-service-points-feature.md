@@ -17,7 +17,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/shipment-service-points: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/shipment-service-points: "202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

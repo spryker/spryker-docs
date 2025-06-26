@@ -28,7 +28,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require "spryker-feature/configurable-product":"{{page.version}}" --update-with-dependencies
+composer require "spryker-feature/configurable-product":"202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1462,7 +1462,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require "spryker-feature/configurable-product":"{{page.version}}" --update-with-dependencies
+composer require "spryker-feature/configurable-product":"202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

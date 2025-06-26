@@ -34,7 +34,7 @@ Make sure all payment methods can be used with your PayOne account before deploy
 Install the required modules using Composer:
 
 ```bash
-composer require "spryker-feature/payments:{{page.version}}" "spryker/checkout-rest-api:^3.0.0" "spryker/payment-cart-connector"  --update-with-dependencies
+composer require "spryker-feature/payments:202507.0" "spryker/checkout-rest-api:^3.0.0" "spryker/payment-cart-connector"  --update-with-dependencies
 ```
 
 

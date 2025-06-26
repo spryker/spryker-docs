@@ -19,7 +19,7 @@ To start the feature integration, review and install the necessary features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/content-item:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/content-item:"202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

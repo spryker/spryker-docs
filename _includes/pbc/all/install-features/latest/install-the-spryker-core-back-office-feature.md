@@ -21,7 +21,7 @@ Install the following required features:
 1. Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/spryker-core-back-office:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/spryker-core-back-office:"202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

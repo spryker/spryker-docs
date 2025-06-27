@@ -14,7 +14,8 @@ Some database tables may require periodic monitoring, particularly in large-scal
 
 {% info_block errorBox "Manipulating tables" %}
 
-When solving issues using the following examples, make sure to follow them exactly. Table manipulations can affect a shop greatly and we recommend double-checking all the details before you proceed.
+When solving issues using the following examples, make sure to follow them precisely. Table manipulations can significantly your shop. Always double-check all details before proceeding.
+
 
 {% endinfo_block %}
 
@@ -35,9 +36,12 @@ By default, table size is not limited and old records are not deleted.
 
 ## Solutions
 
+To prevent or mitigate issues related to table size or ID overflow, consider one of the following approaches based on your data retention needs and operational constraints.
+
+
 ### Delete old records
 
-If historical data in the table is no longer relevant and only recent records need to be retained, the following SQL query can remove the outdated entries:
+If historical data in the table is no longer relevant and only recent records need to be retained, remove the outdated entries:
 
 ```sql
 DELETE FROM
@@ -54,8 +58,8 @@ Advantages:
 
 Disadvantages:
 
-- Does not resolve the ID overflow issue;
-- Not suitable for tables containing important or critical data.
+- Doesn't resolve the ID overflow issue
+- Not suitable for tables containing important or critical data
 
 ### Truncate table
 
@@ -67,18 +71,18 @@ TRUNCATE TABLE spy_oms_transition_log;
 
 Advantages:
 
-- Reduces table size;
-- Resolves the ID overflow issue;
-- Simple and fast solution.
+- Reduces table size
+- Resolves the ID overflow issue
+- Simple and fast solution
 
 Disadvantages:
 
-- Does not allow retaining records from the most recent period;
-- Not suitable for tables containing important or critical data.
+- Doesn't allow retaining records from the most recent period
+- Not suitable for tables containing important or critical data
 
-### Change data type of autoincrement ID column
+### Change the data type of auto-increment ID column
 
-If a table has meaningful data that can't be removed, change the field type of the auto-incremented field from `INT` (2 bln, 2^31-1 limit) to `BIGINT` (2^63-1 limit), practically making this issue unrealistically for the future.
+If a table has meaningful data that can't be removed, change the field type of the auto-incremented field from `INT` (2 bln, 2^31-1 limit) to `BIGINT` (2^63-1 limit) to prevent future overflow issues.
 
 ```sql
 ALTER TABLE spy_oms_transition_log
@@ -101,13 +105,13 @@ We recommend upgrading Spryker modules as soon as Spryker releases important upd
 
 Advantages:
 
-- Resolves the ID overflow issue;
-- Allows all records to remain in the table.
+- Resolves the ID overflow issue
+- Allows all records to remain in the table
 
 Disadvantages:
 
-- Does not reduce table size.
-- If the table is large enough, this operation may be resource-intensive and require a maintenance window outside of business hours.
+- Doesn't reduce table size
+- If the table is large, this operation may be resource-intensive and require a maintenance window outside of business hours
 
 
 

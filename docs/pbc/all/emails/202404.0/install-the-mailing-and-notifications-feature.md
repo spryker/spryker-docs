@@ -17,7 +17,7 @@ This guide describes all the required steps in order to integrate a mailing prov
 
 {% info_block warningBox %}
 
-If you are migrating your project from Swift Mailer to Symfony Mailer, please check the section [Migration from SwiftMailer to Symfony Mailer](#Migration-from-SwiftMailer-to-Symfony-Mailer)
+If you are migrating your project from Swift Mailer to Symfony Mailer, please check the section [Migration from SwiftMailer to Symfony Mailer](#migration-from-swiftmailer-to-symfony-mailer)
 
 {% endinfo_block %}
 

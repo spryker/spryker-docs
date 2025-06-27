@@ -97,6 +97,7 @@ Utilize `\Spryker\Yves\SessionRedis\Resolver\SessionHandlerResolver::resolveConf
 namespace Pyz\Yves\SessionRedis\Resolver;
 
 use Spryker\Shared\SessionRedis\Handler\SessionHandlerFactory;
+use Spryker\Shared\SessionRedis\Redis\SessionRedisWrapperInterface;
 use Spryker\Yves\SessionRedis\Resolver\SessionHandlerResolver as SprykerSessionHandlerResolver;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -110,12 +111,12 @@ class SessionHandlerResolver extends SprykerSessionHandlerResolver
     protected function resolveConfigurableRedisLockingSessionHandler(SessionRedisWrapperInterface $sessionRedisWrapper): \SessionHandlerInterface
     {
         // For truly read-only GET requests, use a handler that only locks on writes.
-        if ($this->requestStack->>getCurrentRequest()->isMethod(Request::METHOD_GET)) {
+        if ($this->requestStack->getCurrentRequest()->isMethod(Request::METHOD_GET)) {
             return $this->sessionHandlerFactory->createSessionHandlerRedisWriteOnlyLocking($sessionRedisWrapper);
         }
 
         // For all other requests (POST, etc.), use the default locking handler.
-        return parent::resolveConfigurableRedisLockingSessionHandler();
+        return parent::resolveConfigurableRedisLockingSessionHandler($sessionRedisWrapper);
     }
 }
 ```

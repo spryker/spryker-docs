@@ -7,7 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/database-tables-tak
 originalArticleId: 5c025e16-bfc2-4dcf-ba35-137044daa486
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html
-- /docs/the-spy-oms-transition-log-table-takes-up-too-much-space.html
+- /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html
 ---
 
 Some database tables may require periodic monitoring, particularly in large-scale projects with a high volume of orders. Potential issues include excessive table size or the risk of an ID column reaching its maximum value.
@@ -48,14 +48,14 @@ WHERE
 
 Advantages:
 
-- reduces table size
-- simple and fast solution
-- allows retaining records from the most recent period
+- Reduces table size
+- Simple and fast solution
+- Allows retaining records from the most recent period
 
 Disadvantages:
 
-- does not resolve the ID overflow issue;
-- not suitable for tables containing important or critical data.
+- Does not resolve the ID overflow issue;
+- Not suitable for tables containing important or critical data.
 
 ### Truncate table
 
@@ -67,14 +67,14 @@ TRUNCATE TABLE spy_oms_transition_log;
 
 Advantages:
 
-- reduces table size;
-- resolves the ID overflow issue;
-- simple and fast solution.
+- Reduces table size;
+- Resolves the ID overflow issue;
+- Simple and fast solution.
 
 Disadvantages:
 
-- does not allow retaining records from the most recent period;
-- not suitable for tables containing important or critical data.
+- Does not allow retaining records from the most recent period;
+- Not suitable for tables containing important or critical data.
 
 ### Change data type of autoincrement ID column
 
@@ -101,13 +101,13 @@ We recommend upgrading Spryker modules as soon as Spryker releases important upd
 
 Advantages:
 
-- resolves the ID overflow issue;
-- allows all records to remain in the table.
+- Resolves the ID overflow issue;
+- Allows all records to remain in the table.
 
 Disadvantages:
 
 - Does not reduce table size.
-- if the table is large enough, this operation may be resource-intensive and require a maintenance window outside of business hours.
+- If the table is large enough, this operation may be resource-intensive and require a maintenance window outside of business hours.
 
 
 

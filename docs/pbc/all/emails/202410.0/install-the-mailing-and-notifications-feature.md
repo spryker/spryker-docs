@@ -121,7 +121,9 @@ $config[SymfonyMailerConstants::SMTP_PORT] = '465';
 ```   
 2. Create a support ticket to change **SPRYKER_SMTP_PORT** to 465
 
-3. Update the code and release it after the support ticket is resolved:
+3. Revert configuration to the previous state in order to use a port from the env variable:
 ```php
 $config[SymfonyMailerConstants::SMTP_PORT] = getenv('SPRYKER_SMTP_PORT') ?: null;
 ```
+
+4. Proceed with a new deployment.

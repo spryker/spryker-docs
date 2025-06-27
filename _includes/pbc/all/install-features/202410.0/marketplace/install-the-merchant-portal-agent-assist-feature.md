@@ -627,12 +627,14 @@ Log in as an agent to the Merchant Portal. Make sure there is the **Merchant Use
 ## Install feature frontend
 
 1. For installing frontend dependencies, follow [Set up the Merchant Portal](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/set-up-the-merchant-portal.html).
-2. Update glossary keys
+
+2. Update glossary keys:
 ```csv
 agent_security_blocker_merchant_portal_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
 agent_security_blocker_merchant_portal_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE 
 ```
-3. Adjust `compilerOptions.paths` values at tsconfig.mp.json with adding agent related paths:
+
+3. In `tsconfig.mp.json`, add agent related paths to `compilerOptions.paths`:
 ```json
 "compilerOptions": {
         "paths": {
@@ -643,6 +645,7 @@ agent_security_blocker_merchant_portal_gui.error.account_blocked,"Warten Sie bit
                 "vendor/spryker/spryker/Bundles/AgentSecurityMerchantPortalGui/mp.public-api.ts"
             ],...
 ```
+
 Once everything has been installed, you can access the UI of Merchant Portal Agent Assist at `$[local_domain]/agent-security-merchant-portal-gui/login`.
 
 ## Optional: Add extra security

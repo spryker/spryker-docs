@@ -28,7 +28,7 @@ related:
 
 This document describes how to create product sets in the Back Office.
 
-You create a product set to improve the customer's shopping experience. You collect similar products into a logical chunk that can be bought with a single click. Let's say you have a pen. The logically connected items to this product can be a pencil, notebook, and sticky notes. You can collect these products under a set named _Basic office supplies_. Instead of searching for each item, your customer will add this set to cart.
+You create a product set to improve the customer's shopping experience. You collect similar products into a logical chunk that can be bought with a single click. Let's say you have a pen. The logically connected items to this product can be a pencil, notebook, and sticky notes. You can collect these products under a set named *Basic office supplies*. Instead of searching for each item, your customer will add this set to cart.
 
 ## Prerequisites
 
@@ -58,9 +58,9 @@ On the **Product Sets** page, click **Create Product Set** and follow the instru
 ### 3. Enter SEO information for the product set
 
 1. On the **SEO** tab, enter the following for needed locales:
-    * **TITLE**
-    * **KEYWORDS**
-    * **DESCRIPTION**
+    - **TITLE**
+    - **KEYWORDS**
+    - **DESCRIPTION**
 2. Click **Next**.
 
 ### 4. Add images for the product set

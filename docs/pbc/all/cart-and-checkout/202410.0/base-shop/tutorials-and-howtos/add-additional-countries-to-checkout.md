@@ -21,9 +21,9 @@ To open up store to customers of more than the predefined counties, you must adj
 ## Prerequisites
 
 Ensure that you have an up-to-date installation of any of the following instances:
-* Spryker B2C Shop
-* Spryker B2B Shop
-* Spryker Suite
+- Spryker B2C Shop
+- Spryker B2B Shop
+- Spryker Suite
 
 ## Add countries to checkout
 

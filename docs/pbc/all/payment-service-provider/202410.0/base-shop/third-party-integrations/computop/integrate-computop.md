@@ -167,6 +167,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
+
 </details>
 
 ### Data import
@@ -1044,6 +1045,7 @@ class PaymentStep extends SprykerShopPaymentStep
     }
 }
 ```
+
 </details>
 
 9. For PayPalExpress payment method only: Adjust the `ShipmentStep` with the default shipment method check:
@@ -1138,6 +1140,7 @@ class ShipmentStep extends SprykerShipmentStep
     }
 }
 ```
+
 </details>
 
 10. For PayPal Express payment method only: Extend `QuoteDependencyProvider` with `DefaultShippingMethodQuoteTransferExpanderPlugin`:
@@ -1377,6 +1380,7 @@ class ComputopDependencyProvider extends SprykerComputopDependencyProvider
     {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
 </details>
 
 13. For PayPal Express payment method only: Extend `ProceedToCheckoutButtonWidget` and add the checkout button:
@@ -1428,6 +1432,7 @@ class ProceedToCheckoutButtonWidget extends SprykerProceedToCheckoutButtonWidget
     }
 }
 ```
+
 </details>
 
 14. For PayPal Express payment method only: Extend `CheckoutWidgetFactory`:
@@ -1515,7 +1520,7 @@ class CheckoutWidgetDependencyProvider extends SprykerCheckoutWidgetDependencyPr
 
 ```
 
-16.  For PayPal Express payment method only: Extend `ShopApplicationDependencyProvider` with created `ProceedToCheckoutButtonWidget`:
+16. For PayPal Express payment method only: Extend `ShopApplicationDependencyProvider` with created `ProceedToCheckoutButtonWidget`:
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1771,6 +1776,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     }
 }
 ```
+
 </details>
 
 ## Integration into a project

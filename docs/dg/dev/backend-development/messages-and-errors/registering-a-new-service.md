@@ -19,10 +19,10 @@ To support best practices, any services shared between bundles and applications 
 
 When creating a new service, under a newly created module, follow this file structure:
 
-* `src/Spryker/Service/`: Root directory.
-* `src/Spryker/Service/DemoService.php`: Main locatable service class. Should extend `Spryker/Service/Kernel/AbstractService`.
-* `src/Spryker/Service/DemoServiceFactory.php`: Service factory class. Should extend `Spryker/Service/Kernel/AbstractServiceFactory`.
-* `src/Spryker/Service/DemoDependencyProvider`: Service dependency provider. Extends `Spryker/Service/Kernel/AbstractBundleDependencyProvider`.
+- `src/Spryker/Service/`: Root directory.
+- `src/Spryker/Service/DemoService.php`: Main locatable service class. Should extend `Spryker/Service/Kernel/AbstractService`.
+- `src/Spryker/Service/DemoServiceFactory.php`: Service factory class. Should extend `Spryker/Service/Kernel/AbstractServiceFactory`.
+- `src/Spryker/Service/DemoDependencyProvider`: Service dependency provider. Extends `Spryker/Service/Kernel/AbstractBundleDependencyProvider`.
 
 **Sample service class**:
 

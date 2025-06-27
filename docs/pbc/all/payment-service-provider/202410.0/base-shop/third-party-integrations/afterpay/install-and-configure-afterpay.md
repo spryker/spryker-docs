@@ -44,8 +44,8 @@ The `API_ENDPOINT_BASE_URL` parameter should be a link: you should get it from A
 You should also get `API_CREDENTIALS_AUTH_KEY` and `PAYMENT_INVOICE_CHANNEL_ID` from your AfterPay account.
 
 You can use different Checkout Services; to select one, set up `$config[AfterPayConstants::AFTERPAY_AUTHORIZE_WORKFLOW]`:
-* One-Step Authorization → `AFTERPAY_AUTHORIZE_WORKFLOW_ONE_STEP`
-* Two-Step Authorization → `AFTERPAY_AUTHORIZE_WORKFLOW_TWO_STEPS`
+- One-Step Authorization → `AFTERPAY_AUTHORIZE_WORKFLOW_ONE_STEP`
+- Two-Step Authorization → `AFTERPAY_AUTHORIZE_WORKFLOW_TWO_STEPS`
 
 If you want to use Two-Step Authorization, in the Pyz layer, create the `Pyz\Yves\CheckoutPage\Process\Steps\PaymentStep.php` class and extend `SprykerShop\Yves\CheckoutPage\Process\Steps\PaymentStep.php` if `Pyz\Yves\CheckoutPage\Process\Steps\PaymentStep.php` does not exist. After that, you use `AfterPayClient`, call `getAvailablePaymentMethods()`, and handle the request for your specific logic.
 

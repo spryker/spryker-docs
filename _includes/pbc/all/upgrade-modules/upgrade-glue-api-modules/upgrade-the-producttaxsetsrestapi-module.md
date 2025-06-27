@@ -227,4 +227,4 @@ Find the `getProcessorMessagePlugins` method and change it.
 }
 ```
 
-_Estimated migration time: 0.5 hour_
+*Estimated migration time: 0.5 hour*

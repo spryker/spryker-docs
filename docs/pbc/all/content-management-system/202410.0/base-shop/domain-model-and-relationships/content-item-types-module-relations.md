@@ -48,8 +48,8 @@ The Abstract product list content item is a content piece that consists of text 
 
 The schema below shows the module relations of the Abstract product list content item and its components:
 
-* data importer
-* API
+- data importer
+- API
 
 ![Abstract Product List module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/abstract-product-list-module-relations.png)
 

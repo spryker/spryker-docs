@@ -184,6 +184,7 @@ class CustomApiApplicationFactory extends AbstractFactory
     }
 }
 ```
+
 </details>
 
 The dependency provider looks like this:
@@ -238,6 +239,7 @@ class CustomApiApplicationDependencyProvider extends AbstractBundleDependencyPro
     }
 }
 ```
+
 </details>
 
 The following example is what the `Application` can look like:
@@ -302,6 +304,7 @@ class GlueStorefrontApiApplication extends RequestFlowAwareApiApplication
 
 }
 ```
+
 </details>
 
 Each method in `CustomApiApplication` represents a step in the API application request flow. It can be used as an extension point in each of the steps.

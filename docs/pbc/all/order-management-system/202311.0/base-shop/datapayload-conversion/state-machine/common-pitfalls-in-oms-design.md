@@ -19,7 +19,7 @@ related:
 
 Implementing OMS processes can be challenging when they're complex or requirements aren't trivial. This can lead to hidden issues, which are hard to debug. An example of such issues is race conditions.
 
-In some cases, OMS works incorrectly. In most cases, a *correct* flow can be run successfully, but the first run of a wrong path might reveal a problem. In other cases, there might be known limitations that can lead to incorrect transitions. There can also be cases that are valid but should be rewritten into a more readable process. If you discover more edge cases, send them to our [support team](https://spryker.force.com/support/s/).
+In some cases, OMS works incorrectly. In most cases, a *correct* flow can be run successfully, but the first run of a wrong path might reveal a problem. In other cases, there might be known limitations that can lead to incorrect transitions. There can also be cases that are valid but should be rewritten into a more readable process. If you discover more edge cases, send them to our [support team](https://support.spryker.com).
 
 This document describes the most common issues with OMS design and how you can fix them.
 

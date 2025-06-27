@@ -33,7 +33,7 @@ Datasource Trigger is an Angular service in the components library that provides
 </spy-select>
 ```
 
-The trigger element, being `SelectComponent` in the example, must implement a `DatasourceTriggerElement` abstract class (token) and return a component instance using the `getTriggerElement()` abstract method:   
+The trigger element, being `SelectComponent` in the example, must implement a `DatasourceTriggerElement` abstract class (token) and return a component instance using the `getTriggerElement()` abstract method:
 
 ```ts
 @Component({

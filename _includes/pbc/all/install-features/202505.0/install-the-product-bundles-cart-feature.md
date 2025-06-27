@@ -191,14 +191,14 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-* Do the following as a guest user:
+- Do the following as a guest user:
   1. Add a product bundle to cart.
   2. Increase the bundle's quantity to a larger number—for example, 1,000 items.
   3. Decrease the quantity.
     Make sure that increase and decrease operations are performed without a significant delay and don't fail with an exception.  
   4. Repeat steps 1-3 as a registered user.
 
-* Make sure that the images of bundled products are displayed correctly in cart.
+- Make sure that the images of bundled products are displayed correctly in cart.
 
 {% endinfo_block %}
 

@@ -18,6 +18,8 @@ The B2B Self-Service Portal (SSP) is a centralized platform that streamlines aft
 Through SSP, users can submit and monitor inquiries, schedule maintenance, and access key documents like manuals and service reports. The dashboard provides a personalized overview of relevant activities and metrics, tailored by user roles and permissions. Overall, SSP enhances transparency, speeds up support processes, and ensures secure access to business-critical information.
 
 To learn more about SSP, see the following docs:
-* [Self-Service Portal Service Management feature overview](/docs/pbc/all/self-service-portal/202505.0/ssp-service-management-feature-overview.html)
-* [Self-Service Portal Inquiry Management feature overview](/docs/pbc/all/self-service-portal/202505.0/ssp-inquiry-management-feature-overview.html)
-* [Self-Service Portal Dashboard Management feature overview](/docs/pbc/all/self-service-portal/202505.0/ssp-dashboard-management-feature-overview.html)
+- [Self-Service Portal Service Management feature overview](/docs/pbc/all/self-service-portal/202505.0/ssp-service-management-feature-overview.html)
+- [Self-Service Portal Inquiry Management feature overview](/docs/pbc/all/self-service-portal/202505.0/ssp-inquiry-management-feature-overview.html)
+- [Self-Service Portal Dashboard Management feature overview](/docs/pbc/all/self-service-portal/202505.0/ssp-dashboard-management-feature-overview.html)
+- [Self-Service Portal File Management feature overview](/docs/pbc/all/self-service-portal/202505.0/ssp-file-management-feature-overview.html)
+- [Self-Service Portal Asset Management feature overview](/docs/pbc/all/self-service-portal/202505.0/ssp-asset-management-feature-overview.html)

@@ -26,14 +26,14 @@ Review the [reference information](#reference-information-edit-users) before you
 1. Go to **Users&nbsp;<span aria-label="and then">></span> Users**.
 2. Next to the user you want to edit, click **Edit**.
 3. On the **Edit User** page, update any of the following:
-    * **E-MAIL**
-    * **PASSWORD**
-    * **REPEAT PASSWORD**
-    * **FIRST NAME**
-    * **LAST NAME**
+    - **E-MAIL**
+    - **PASSWORD**
+    - **REPEAT PASSWORD**
+    - **FIRST NAME**
+    - **LAST NAME**
 4. For **ASSIGNED GROUPS**, do the following:
-    * Clear the checkboxes next to the groups you want to deassign this user from.
-    * Select one or more groups to assign this user to.
+    - Clear the checkboxes next to the groups you want to deassign this user from.
+    - Select one or more groups to assign this user to.
 5. Optional: Select or clear the **THIS USER IS AN AGENT** checkbox.
 6. Optional: Select or clear the **THIS USER IS A WAREHOUSE USER** checkbox.
 7. Select an **INTERFACE LANGUAGE**.

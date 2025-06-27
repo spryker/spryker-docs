@@ -17,28 +17,28 @@ redirect_from:
 BS PAYONE GmbH is headquartered in Frankfurt am Main and is one of the leading omnichannel-payment providers in Europe. In addition to providing customer support to numerous Savings Banks (Sparkasse) the full-service payment service provider also provides cashless payment transaction services to more than 255,000 customers from stationary trade to the automated and holistic processing of e-commerce and mobile payments.
 
 YOUR ADVANTAGES:
-* **One solution, one partner, one contract**
+- **One solution, one partner, one contract**
 <br>Simple & efficient. Technical processing and financial services from a single source.
-* **International payment processing**
+- **International payment processing**
 <br>Access to international and local payment methods.
-* **Automatic debtor management**
+- **Automatic debtor management**
 <br>Effective accounting support through transaction allocation and reconciliation.
-* **Credit entries independent of payment type**
+- **Credit entries independent of payment type**
 <br>Fast returns management. With automated refunds.
-* **Short time to market thanks to plug'n pay**
+- **Short time to market thanks to plug'n pay**
 <br>1-click checkout and seamless integration. For an increasing conversion rate.
 
 We use state machines for handling and managing orders and payments. To integrate Payone payments, a state machine for Payone should be created.
 
 A basic and fully functional state machine for each payment method is already built:
-* `PayoneCreditCard.xml`
-* `PayoneDirectDebit.xml`
-* `PayoneEWallet.xml`
-* `PayoneInvoice.xml`
-* `PayoneSecurityInvoice.xml`
-* `PayoneOnlineTransfer.xml`
-* `PayonePrePayment.xml`
-* `PayonePaypalExpressCheckout.xml`
+- `PayoneCreditCard.xml`
+- `PayoneDirectDebit.xml`
+- `PayoneEWallet.xml`
+- `PayoneInvoice.xml`
+- `PayoneSecurityInvoice.xml`
+- `PayoneOnlineTransfer.xml`
+- `PayonePrePayment.xml`
+- `PayonePaypalExpressCheckout.xml`
 
 You can use the same state machines or build new ones. The state machine commands and conditions trigger Payone facade calls in order to perform the needed requests to Payone API.
 
@@ -47,24 +47,24 @@ You can use the same state machines or build new ones. The state machine command
 You can copy over configs to your config from the Payone module's `config.dist.php` file.
 
 The configuration to integrate payments using Payone is:
-* `PAYONE_CREDENTIALS_KEY`: payment portal key (required).
-* `PAYONE_CREDENTIALS_MID`: merchant id (required).
-* `PAYONE_CREDENTIALS_AID`: sub-account id (required).
-* `PAYONE_CREDENTIALS_PORTAL_ID`: payment portal id (required).
-* `PAYONE_MODE`: the mode of the transaction, either test or live (required).
-* `PAYONE_BUSINESS_RELATION`: the business relation of the transaction, b2b or b2c (required).
-* `PAYONE_PAYMENT_GATEWAY_URL`: server-API-URL.
-* `PAYONE_REDIRECT_SUCCESS_URL`: return URL for successful result on redirect.
-* `PAYONE_REDIRECT_ERROR_URL`: return URL for error on redirect.
-* `PAYONE_REDIRECT_BACK_URL`: return URL that will be engaged when user cancels action on redirect.
-* `PAYONE_EMPTY_SEQUENCE_NUMBER`: sequence number that will be used in API requests when ommitted (0 by default).
-* `PAYONE_CREDENTIALS_ENCODING`: encoding of data sent in requests to Payone API ('UTF-8' for the
-* `HOST_YVES`: yves host in order to generate urls inside payone module.
-* `PAYONE_STANDARD_CHECKOUT_ENTRY_POINT_URL`: entry point url to standart checkout in project(or middleware url in project, depending on your implementation).
-* `PAYONE_EXPRESS_CHECKOUT_BACK_URL`: if user presses back button(if so exists) on payone side, this urs is used to redirect user back to shop.
-* `PAYONE_EXPRESS_CHECKOUT_FAILURE_URL`: if something goes wrong when the user is on payone side, redirect here is done.
+- `PAYONE_CREDENTIALS_KEY`: payment portal key (required).
+- `PAYONE_CREDENTIALS_MID`: merchant id (required).
+- `PAYONE_CREDENTIALS_AID`: sub-account id (required).
+- `PAYONE_CREDENTIALS_PORTAL_ID`: payment portal id (required).
+- `PAYONE_MODE`: the mode of the transaction, either test or live (required).
+- `PAYONE_BUSINESS_RELATION`: the business relation of the transaction, b2b or b2c (required).
+- `PAYONE_PAYMENT_GATEWAY_URL`: server-API-URL.
+- `PAYONE_REDIRECT_SUCCESS_URL`: return URL for successful result on redirect.
+- `PAYONE_REDIRECT_ERROR_URL`: return URL for error on redirect.
+- `PAYONE_REDIRECT_BACK_URL`: return URL that will be engaged when user cancels action on redirect.
+- `PAYONE_EMPTY_SEQUENCE_NUMBER`: sequence number that will be used in API requests when ommitted (0 by default).
+- `PAYONE_CREDENTIALS_ENCODING`: encoding of data sent in requests to Payone API ('UTF-8' for the
+- `HOST_YVES`: yves host in order to generate urls inside payone module.
+- `PAYONE_STANDARD_CHECKOUT_ENTRY_POINT_URL`: entry point url to standart checkout in project(or middleware url in project, depending on your implementation).
+- `PAYONE_EXPRESS_CHECKOUT_BACK_URL`: if user presses back button(if so exists) on payone side, this urs is used to redirect user back to shop.
+- `PAYONE_EXPRESS_CHECKOUT_FAILURE_URL`: if something goes wrong when the user is on payone side, redirect here is done.
 
-## Integration with Checkout module (CheckoutDependencyProvider):
+## Integration with Checkout module (CheckoutDependencyProvider)
 
 Project (demoshop) level `\Pyz\Yves\Checkout\CheckoutDependencyProvider` method `provideDependencies` container has to be extended with the `static::PAYMENT_SUB_FORMS` and `static::PAYMENT_METHOD_HANDLER` keys which have to contain information about PSP payment methods SubForms and SubForms Handlers accordingly.
 
@@ -103,9 +103,9 @@ $container[static::PAYMENT_METHOD_HANDLER] = function () {
 ```
 
 The project (Demo Shop) level `\Pyz\Zed\Checkout\CheckoutDependencyProvider` method `provideBusinessLayerDependencies` container has to be extended with the checkout plugins of Payone. This can be done by adding plugins to the related plugins stacks in these methods in `\Pyz\Zed\Checkout\CheckoutDependencyProvider`:
-* `getCheckoutPreConditions`
-* `getCheckoutOrderSavers`
-* `getCheckoutPostHooks`
+- `getCheckoutPreConditions`
+- `getCheckoutOrderSavers`
+- `getCheckoutPostHooks`
 
 Add the plugins to `\Pyz\Zed\Checkout\CheckoutDependencyProvider`:
 
@@ -212,6 +212,7 @@ $config[OmsConstants::PROCESS_LOCATION] = [
 ```
 
 Add Payone controller provider to Yves bootstrap (this is required to provide endpoint URL for transaction status callbacks) in `src/Pyz/Yves/Application/YvesBootstrap.php`.
+
 ```php
 <?php
 use Spryker\Yves\Payone\Plugin\Provider\PayoneControllerProvider;
@@ -393,6 +394,7 @@ class OrderController extends AbstractCustomerController
  ];
  }
 ```
+
 ---
 
 ## Copyright and Disclaimer

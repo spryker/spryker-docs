@@ -15,9 +15,9 @@ This document describes how to retrieve cart rules, vouchers, and promotional it
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see the following docs:
 
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+- [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
 
-* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+- [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
 
 
 ## Retrieve registered user's carts
@@ -63,7 +63,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         "self": "https://glue.mysprykershop.com/carts"
     }
 }
-```    
+```
+
 </details>
 
 
@@ -198,7 +199,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -337,7 +339,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -446,7 +449,8 @@ To retrieve a particular cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -509,7 +513,8 @@ To retrieve a particular cart, send the request:
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -581,6 +586,7 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->

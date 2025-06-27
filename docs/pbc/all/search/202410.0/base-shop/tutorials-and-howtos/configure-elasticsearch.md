@@ -89,15 +89,15 @@ To disable the default mapping installation, override the core configuration def
 {% endinfo_block %}
 
 Each configured store has its index, which is installed automatically. An index name consists of the following parts:
-* An optional prefix, which is defined by the `SearchElasticsearchConstants::INDEX_PREFIX` configuration option.
-* A store name.
-* A configuration file name.
+- An optional prefix, which is defined by the `SearchElasticsearchConstants::INDEX_PREFIX` configuration option.
+- A store name.
+- A configuration file name.
 
 Index name components are delimited with an underscore—for example, `spryker_de_page`.
 
 ## Adjust existing indexes
 
-The following example shows how the default schema configuration file for the main index `page` can be changed to allow searching for keywords containing the special character *&* (ampersand) by switching from a [`standard`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-standard-tokenizer.html) tokenizer to a combination of [`keyword`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-keyword-tokenizer.html) tokenizer and token filter of the [`word_delimiter_graph`](https://www.elastic.co/guide/en/elasticsearch/reference/8.2/analysis-word-delimiter-graph-tokenfilter.html) type.      
+The following example shows how the default schema configuration file for the main index `page` can be changed to allow searching for keywords containing the special character *&* (ampersand) by switching from a [`standard`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-standard-tokenizer.html) tokenizer to a combination of [`keyword`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-keyword-tokenizer.html) tokenizer and token filter of the [`word_delimiter_graph`](https://www.elastic.co/guide/en/elasticsearch/reference/8.2/analysis-word-delimiter-graph-tokenfilter.html) type.
 
 <details><summary>src/Pyz/Shared/Search/Schema/page.json</summary>
 
@@ -214,4 +214,4 @@ APPLICATION_STORE=DE console publish:trigger-events
 APPLICATION_STORE=DE console sync:data
 ```
 
-For help with more specific cases, engage with [Spryker community](https://commercequest.space/) or [contact support](https://spryker.force.com/support/s/).
+For help with more specific cases, engage with [Spryker community](https://commercequest.space/) or [contact support](https://support.spryker.com).

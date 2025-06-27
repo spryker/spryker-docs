@@ -49,9 +49,9 @@ To connect the Upgrader manually using the GitLab access token, take the followi
 
 GitLab access token should have the following repository permissions:
 
-* **api** for Spryker CI: grants complete read and write access to the scoped project API, including the Package Registry.
+- **api** for Spryker CI: grants complete read and write access to the scoped project API, including the Package Registry.
 
-* **write_repository** for Spryker Upgrader Service: grants read and write access to the repository to enable the Upgrader to analyze the project and create PRs.
+- **write_repository** for Spryker Upgrader Service: grants read and write access to the repository to enable the Upgrader to analyze the project and create PRs.
 
 
 ### Configure the integration with GitLab

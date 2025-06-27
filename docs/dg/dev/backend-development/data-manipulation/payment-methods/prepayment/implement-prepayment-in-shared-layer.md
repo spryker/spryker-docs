@@ -71,6 +71,7 @@ interface PaymentMethodsConstants
 ```
 
 3. Update the `PaymentTransfer` class:
+
 ```bash
 vendor/bin/console transfer:generate
 ```

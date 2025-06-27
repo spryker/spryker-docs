@@ -257,9 +257,9 @@ Verify that the order expenses are included in the merchant payout process:
   In the `spy_sales_payment_merchant_payout_reversal` database table, make sure the refunded merchant payout amounts have been applied to each merchant product in your order. If there're no merchant order items left for the refund, the refunded order expenses should be included in the merchant payout process as a separate entry in the `spy_sales_payment_merchant_payout_reversal` database table.
 
 4. Repeat steps 1-3 for a store with excluded expense types and make sure the following applies:
-* The order expenses with the excluded expense types are not included in the merchant payout process.
-* The order expenses are not included in the merchant payout process as a separate entry in the `spy_sales_payment_merchant_payout` database table.
-* The refunded order expenses are not included in the merchant reverse payout process as a separate entry in the `spy_sales_payment_merchant_payout_reversal` database table.
+- The order expenses with the excluded expense types are not included in the merchant payout process.
+- The order expenses are not included in the merchant payout process as a separate entry in the `spy_sales_payment_merchant_payout` database table.
+- The refunded order expenses are not included in the merchant reverse payout process as a separate entry in the `spy_sales_payment_merchant_payout_reversal` database table.
 
 {% endinfo_block %}
 
@@ -350,9 +350,9 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 
 Make sure the following applies:
 
-* When you create a merchant using `MerchantFacade::createMerchant()`, its profile also gets created.
-* When you update a merchant using `MerchantFacade::updateMerchant()`, its profile also gets updated.
-* When you fetch a merchant using `MerchantFacade::findOne()`, its profile data also gets fetched.
+- When you create a merchant using `MerchantFacade::createMerchant()`, its profile also gets created.
+- When you update a merchant using `MerchantFacade::updateMerchant()`, its profile also gets updated.
+- When you fetch a merchant using `MerchantFacade::findOne()`, its profile data also gets fetched.
 
 {% endinfo_block %}
 
@@ -426,10 +426,10 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 
 Make sure that, on the **Edit Merchant: `merchant_id`** and **View Merchant: `merchant_id`** pages in the Back Office, you can see the following tabs:
 
-* **Contact Person**
-* **Merchant Profile**
-* **Legal Information**
-* **Merchant User**
+- **Contact Person**
+- **Merchant Profile**
+- **Legal Information**
+- **Merchant User**
 
 {% endinfo_block %}
 
@@ -842,7 +842,7 @@ console data:import merchant-profile-address
 
 **/data/import/common/common/marketplace/merchant_user.csv**
 
-```
+```csv
 merchant_reference,username
 MER000006,michele@sony-experts.com
 ```
@@ -1091,9 +1091,9 @@ console data:import merchant-user
 
 Make sure the data has been added to the following tables:
 
-* `spy_merchant_profile`
-* `spy_merchant_profile_address`
-* `spy_merchant_user`
+- `spy_merchant_profile`
+- `spy_merchant_profile_address`
+- `spy_merchant_user`
 
 {% endinfo_block %}
 
@@ -1262,4 +1262,4 @@ Make sure merchant profile data is displayed at `https://mysprykershop.com/de/me
 
 | FEATURE                  | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                              |
 |--------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Merchant API | &check;                          | [Install the Marketplace Merchant feature ](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html) |
+| Marketplace Merchant API | &check;                          | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html) |

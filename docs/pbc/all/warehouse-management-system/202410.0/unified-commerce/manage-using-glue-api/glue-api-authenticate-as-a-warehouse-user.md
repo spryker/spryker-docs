@@ -39,6 +39,7 @@ Request sample: `POST http://glue-backend.mysprykershop.com/warehouse-tokens`
     }
 ]
 ```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

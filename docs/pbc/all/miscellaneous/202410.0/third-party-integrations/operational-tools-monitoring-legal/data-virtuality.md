@@ -17,15 +17,15 @@ Data Virtuality successfully became the fastest growing big data start-up in Ger
 
 YOUR ADVANTAGES:
 
-* Saves resources by 80%.
-* One programming language – SQL.
-* +150 pre-built connectors for data sources and BI tools.
-* Set up time for solutions in just one day.
-* High performance marketing automation.
-* Grows and changes anytime with customer requirements.
-* Endless compatibility with any data infrastructure.
-* One platform for BI starters, startups to enterprises.
-* Availability of real-time and persisted data.
+- Saves resources by 80%.
+- One programming language – SQL.
+- +150 pre-built connectors for data sources and BI tools.
+- Set up time for solutions in just one day.
+- High performance marketing automation.
+- Grows and changes anytime with customer requirements.
+- Endless compatibility with any data infrastructure.
+- One platform for BI starters, startups to enterprises.
+- Availability of real-time and persisted data.
 
 ---
 

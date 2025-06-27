@@ -24,9 +24,9 @@ Customers can manage their wishlists in the **Wishlist** section of the customer
 
 {% info_block warningBox "Warning" %}
 
-* Only logged-in customers can use the Wishlist functionality.
-* If the same item is added to the cart from multiple wishlists, then in the cart, this item will have the quantity value updated based on the number of times this specific item was added.
-* Each wishlist is an independent entity.
+- Only logged-in customers can use the Wishlist functionality.
+- If the same item is added to the cart from multiple wishlists, then in the cart, this item will have the quantity value updated based on the number of times this specific item was added.
+- Each wishlist is an independent entity.
 
 {% endinfo_block %}
 
@@ -43,8 +43,8 @@ In the **Wishlist** section, the customer can rename the existing wishlists' nam
 The direct-to-cart function lets your customers simply add items from their wishlist to a shopping cart with a single click.
 
 Specifically, the customer can do the following:
-* Add all the products from the wishlist to the cart by clicking **Add all available products to the cart**.
-* Add selected items from the wishlist to the cart by selecting the **Add to Cart** option for a specific item.
+- Add all the products from the wishlist to the cart by clicking **Add all available products to the cart**.
+- Add selected items from the wishlist to the cart by selecting the **Add to Cart** option for a specific item.
 
 <!---
 <figure class="video_container">
@@ -116,4 +116,4 @@ For more details about wishlists, check the video:
 | INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES  |
 |---------|---------|---------|
 | [Install the Wishlist + Alternative Products feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-wishlist-alternative-products-feature.html)  | [Upgrade the Wishlist module](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-wishlist-module.html) | [Manage wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html)  |
-| [Integrate the Wishlist Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-wishlist-glue-api.html)  |   |[ Manage wishlist items](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html)  |
+| [Integrate the Wishlist Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-wishlist-glue-api.html)  |   |[Manage wishlist items](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html)  |

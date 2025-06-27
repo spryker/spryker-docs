@@ -108,11 +108,11 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
 
 Make sure that availability plugin works correctly:
 
-1.  Add a product offer with the shipment type to your cart.
+1. Add a product offer with the shipment type to your cart.
 
-2.  Go to `spy_product_offer_shipment_type` and delete the connection between the product offer and the service point.
+2. Go to `spy_product_offer_shipment_type` and delete the connection between the product offer and the service point.
 
-3.  Try to create an order. You should see the error message that the product isn't available at the moment.
+3. Try to create an order. You should see the error message that the product isn't available at the moment.
 
 {% endinfo_block %}
 

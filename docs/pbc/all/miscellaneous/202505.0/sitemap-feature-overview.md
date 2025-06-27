@@ -12,17 +12,17 @@ The Sitemap feature generates sitemaps for your Spryker applications to improve 
 ## Supported entities
 
 The following entities can be included in a sitemap by default:
-* Products
-* Categories
-* Product sets
-* CMS pages
-* Merchant pages
+- Products
+- Categories
+- Product sets
+- CMS pages
+- Merchant pages
 
 You can configure more entities to be included on the project level.
 
 ## Dynamic Multistore
 
-Sitemaps can be generated for shops with [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{site.version}}/dynamic-multistore.html) enabled. 
+Sitemaps can be generated for shops with [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{site.version}}/dynamic-multistore.html) enabled.
 
 ## Caching interval
 
@@ -32,20 +32,19 @@ For instructions on configuring the interval, see [Install the Sitemap feature](
 
 ## Domain verification
 
-The domain name of your website must be verified on the project level to use this feature. For instructions, see [Verify your site ownership
-](https://support.google.com/webmasters/answer/9008080?hl=en).
+The domain name of your website must be verified on the project level to use this feature. For instructions, see [Verify your site ownership](https://support.google.com/webmasters/answer/9008080?hl=en).
 
 
-## Current constraints 
+## Current constraints
 
-Performance is limited when the number of entities exceeds 100,000 for a single store and locale. As the number of stores and locales increases, performance decreases proportionally. 
+Performance is limited when the number of entities exceeds 100,000 for a single store and locale. As the number of stores and locales increases, performance decreases proportionally.
 
 
 ## Related Developer documents
 
 | INSTALLATION GUIDES |
 |---------|
-| [Install the Sitemap feature](/docs/pbc/all/miscellaneous/202505.0/install-and-upgrade/install-features/install-the-sitemap-feature.html) | 
+| [Install the Sitemap feature](/docs/pbc/all/miscellaneous/202505.0/install-and-upgrade/install-features/install-the-sitemap-feature.html) |
 
 
 

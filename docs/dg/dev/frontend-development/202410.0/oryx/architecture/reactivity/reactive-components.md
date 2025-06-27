@@ -67,7 +67,7 @@ export class ProductPriceComponent {
 
 ## Multiple data streams
 
-Components often use multiple data streams. For example, the product price component renders a product price in a certain currency and a _local_ price format. The currency and locale are part of the application context and may change during the application's lifecycle. The product price changes from product to product. For managing these streams, you can leverage signals, which have the ability to combine multiple observables and operate on the combined results.
+Components often use multiple data streams. For example, the product price component renders a product price in a certain currency and a *local* price format. The currency and locale are part of the application context and may change during the application's lifecycle. The product price changes from product to product. For managing these streams, you can leverage signals, which have the ability to combine multiple observables and operate on the combined results.
 
 
 {% info_block infoBox "RxJS operators instead of signals" %}
@@ -77,7 +77,7 @@ If you want to manage more complex data stream operations, you can apply RxJS op
 {% endinfo_block %}
 
 
-In the following example, `ProductPriceComponent` observes the product data from `ProductService` and _combines_ it with the formatted price given by `PriceService`.
+In the following example, `ProductPriceComponent` observes the product data from `ProductService` and *combines* it with the formatted price given by `PriceService`.
 
 ```ts
 export class ProductPriceComponent {
@@ -97,7 +97,7 @@ export class ProductPriceComponent {
 }
 ```
 
-In the preceding example, the product data is observed from `ProductService` by creating the `$product` signal. Whenever the product and its route change, new product data is emitted and formatted. `PriceService` formats the sales and the original prices. `PriceService.format()` uses the current currency and locale for the formatting, which is why it also exposes an observable. Since there are two prices involved, the two streams are _combined_ in an object and exposed as a computed signal to the component.
+In the preceding example, the product data is observed from `ProductService` by creating the `$product` signal. Whenever the product and its route change, new product data is emitted and formatted. `PriceService` formats the sales and the original prices. `PriceService.format()` uses the current currency and locale for the formatting, which is why it also exposes an observable. Since there are two prices involved, the two streams are *combined* in an object and exposed as a computed signal to the component.
 
 ## Next steps
 

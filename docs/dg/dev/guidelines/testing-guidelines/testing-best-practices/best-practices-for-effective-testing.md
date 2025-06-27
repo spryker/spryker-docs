@@ -36,8 +36,8 @@ related:
 
 As a rule of thumb, [tests](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html) should be as follows:
 
-* Easy to read and maintain
-* Treated as if they were the production code
+- Easy to read and maintain
+- Treated as if they were the production code
 
 
 This article provides recommendations on how you can achieve that.
@@ -55,8 +55,8 @@ If the arrange section of a module API test becomes too complex, consider adding
 ## Method naming
 
 A good test starts with a good method name, which may be subjective. At Spryker, we try to use descriptive names that describe a test does. Examples:
-* testDoSomethingShouldReturnTrueWhen...()
-* testDoSomethingShouldReturnFalseWhen...()
+- testDoSomethingShouldReturnTrueWhen...()
+- testDoSomethingShouldReturnFalseWhen...()
 
 ## Three-step testing approach
 

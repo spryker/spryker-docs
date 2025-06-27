@@ -151,6 +151,7 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
     }
 }
 ```
+
 {% info_block infoBox "" %}
 
 Tables that aren't allowed for configuration are defined in `Spryker\Zed\DynamicEntity\Business\Reader\DisallowedTablesReader::getDefaultDisallowedTables()`.
@@ -165,7 +166,7 @@ Tables that aren't allowed for configuration are defined in `Spryker\Zed\Dynamic
 
 <details><summary>src/Pyz/Zed/DynamicEntity/data/installer/configuration.json</summary>
 
-##### Example:
+#### Example
 
 ```json
 [
@@ -288,6 +289,7 @@ Tables that aren't allowed for configuration are defined in `Spryker\Zed\Dynamic
     }
 ]
 ```
+
 </details>
 
 </details>
@@ -342,6 +344,7 @@ Response sample:
     ]
 }
 ```
+
 {% endinfo_block %}
 
 
@@ -626,6 +629,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
+
 </details>
 
 <details>
@@ -669,6 +673,7 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
     }
 }
 ```
+
 </details>
 
 {% info_block infoBox "" %}
@@ -702,6 +707,7 @@ class DocumentationGeneratorOpenApiDependencyProvider extends SprykerDocumentati
     }
 }
 ```
+
 </details>
 
 <details>
@@ -728,6 +734,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     }	    
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}

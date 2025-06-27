@@ -18,10 +18,10 @@ redirect_from:
 The *CMS* feature is lets you create and manage the content of custom pages that are not part of the product catalog.
 
 The main functionalities of the feature are the following:
-* Templates and slots
-* CMS page
-* CMS block
-* WYSIWYG editor
+- Templates and slots
+- CMS page
+- CMS block
+- WYSIWYG editor
 
 The WYSIWYG editor is a powerful tool that is used to create content for content items, and CMS pages and blocks. Templates and slots and CMS pages and blocks are used to manage content.
 

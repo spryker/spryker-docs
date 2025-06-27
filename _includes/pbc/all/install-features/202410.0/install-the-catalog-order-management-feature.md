@@ -113,6 +113,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 }
 ```
+
 </details>
 
 **/src/Pyz/Zed/Console/ConsoleDependencyProvider.php**

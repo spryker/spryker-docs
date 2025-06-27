@@ -18,6 +18,7 @@ composer require --dev phpcompatibility/php-compatibility --ignore-platform-reqs
 ```
 
 2. Configure `phpcs` to use `php-compatibility` rules:
+
 ```bash
 vendor/bin/phpcs --config-set installed_paths vendor/phpcompatibility/php-compatibility
 ```
@@ -97,6 +98,6 @@ docker/sdk boot && docker/sdk up --build
 
 Thoroughly test your application to identify any issues because of the PHP version upgrade:
 
- - Automated tests: Run unit, integration, and functional tests.
- - Manual testing: Test critical application functionality.
- - Monitor for deprecations: Check for deprecation notices or warnings that may arise from running on PHP 8.3.
+- Automated tests: Run unit, integration, and functional tests.
+- Manual testing: Test critical application functionality.
+- Monitor for deprecations: Check for deprecation notices or warnings that may arise from running on PHP 8.3.

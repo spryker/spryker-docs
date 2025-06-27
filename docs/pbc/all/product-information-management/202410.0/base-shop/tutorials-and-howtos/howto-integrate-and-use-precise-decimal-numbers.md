@@ -30,11 +30,11 @@ The `decimal-object` library lets you work with precise decimal numbers. A decim
 
 The benefits of using decimal numbers are as follows:
 
-* Managing long and short accurate values as needed.
-* Supporting arithmetic, comparing, rounding, and casting operations.
-* Representing objects instead of strings.
-* Supporting exponential representation of the value.
-* Being immutable: the operations construct a new decimal value, and the value of the original decimal stays unchangeable.
+- Managing long and short accurate values as needed.
+- Supporting arithmetic, comparing, rounding, and casting operations.
+- Representing objects instead of strings.
+- Supporting exponential representation of the value.
+- Being immutable: the operations construct a new decimal value, and the value of the original decimal stays unchangeable.
 
 ## Installation
 
@@ -44,7 +44,7 @@ To install the `{% raw %}{{{% endraw %}decimal-object{% raw %}}}{% endraw %}` li
 
 You can specify Decimal as a type of your Data Transfer Object's property. To define it, use the `decimal` type:  
 
-```
+```xml
 <transfer name="StockProduct">
     <property name="quantity" type="decimal"/>
 </transfer>
@@ -237,9 +237,9 @@ $isLessOrEquals = $decimalOne->lessThanOrEquals($decimalTwo); //true
 
 8. `compareTo()`: Returns the following:
 
-* `-1` if the decimal value is less than $value
-* `0` if the decimal value is equal to $value
-* `1` if the decimal value is greater than $value.
+- `-1` if the decimal value is less than $value
+- `0` if the decimal value is equal to $value
+- `1` if the decimal value is greater than $value.
 
 where `$value` is the value being transferred in the method.
 

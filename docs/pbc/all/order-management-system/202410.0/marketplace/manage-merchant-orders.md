@@ -79,14 +79,14 @@ This section describes attributes you see when you change merchant order states.
 
 By default, the last created order goes on top of the table. However, you can sort the table by:
 
-* Marketplace order reference
-* Merchant order reference
-* Created date
-* Customer's name
-* Customer's email address
-* Merchant order grand total
-* No. of items
-* Store
+- Marketplace order reference
+- Merchant order reference
+- Created date
+- Customer's name
+- Customer's email address
+- Merchant order grand total
+- No. of items
+- Store
 
 **Tips and tricks**
 <br>You can rearrange the order of the columns, hide and show the columns again by clicking the settings cogwheel next to the table.
@@ -163,6 +163,6 @@ To cancel an order:
 
 **Tips and tricks**
 <br>You can filter the existing merchant orders by:
-* Creation date
-* Stores where the order belongs
-* Merchant order states
+- Creation date
+- Stores where the order belongs
+- Merchant order states

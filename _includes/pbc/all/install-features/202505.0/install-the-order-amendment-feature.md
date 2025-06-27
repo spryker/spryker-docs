@@ -47,10 +47,8 @@ Add the following configuration:
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|-----------------------------|
 | A regular expression, see `config/Shared/config_default.php`.      | Closes access for non-logged-in users.                                                             |                         |
 | MultiCartConfig::getQuoteFieldsAllowedForCustomerQuoteCollectionInSession() | Defines which quote fields can be saved in the quote collection of a customer's session. | Pyz\Client\MultiCart        |
-| QuoteConfig::getQuoteFieldsAllowedForSaving()                               | Enables saving order amendment-related quote fields to the database.
-                             | Pyz\Zed\Quote               |
-| SalesOrderAmendmentConfig::getQuoteFieldsAllowedForSaving()                 | Enables saving quote-related fields to the database.
-                                       | Pyz\Zed\SalesOrderAmendment |
+| QuoteConfig::getQuoteFieldsAllowedForSaving()                               | Enables saving order amendment-related quote fields to the database.   | Pyz\Zed\Quote               |
+| SalesOrderAmendmentConfig::getQuoteFieldsAllowedForSaving()                 | Enables saving quote-related fields to the database.   | Pyz\Zed\SalesOrderAmendment |
 
 **config/Shared/config_default.php**
 
@@ -1248,8 +1246,8 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-* Place an order with different types of products–for exampale, physical or digital, and check if the order amendment is available.
-* Go to order detail and order list pages and check if the **edit order** button is displayed.
+- Place an order with different types of products–for exampale, physical or digital, and check if the order amendment is available.
+- Go to order detail and order list pages and check if the **edit order** button is displayed.
 
 {% endinfo_block %}
 
@@ -1451,7 +1449,7 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 
 1. Place an order with a product.  
 2. Increase the price of the product from the order.  
-3. Start the order amendment process for the order you've placed. 
+3. Start the order amendment process for the order you've placed.
   Make sure the product still has the original price.
 4. Go to the order details page and click the product to go to the product details page.
   Make sure that, on the product details page, the product still has the original price.
@@ -1518,7 +1516,7 @@ class PriceProductSalesOrderAmendmentDependencyProvider extends SprykerPriceProd
 
 1. Place an order with a product offer.  
 2. Increase the price of the offer from the order.  
-3. Start the order amendment process for the order you've placed. 
+3. Start the order amendment process for the order you've placed.
   Make sure the product offer still has the original price.
 4. Go to the order details page and click the product to go to the product details page.
   Make sure that, on the product details page, the product offer still has the original price.
@@ -1872,10 +1870,10 @@ Make sure the following widgets have been registered:
 
 - Make sure that after clicking the edit order button the specified reorder strategy for order amendment is applied (the current cart items are replaced by the amended order items in case the `replace` strategy is applied, new cart is created in case the `new` strategy is applied).
 
-* Ensure that clicking the "Edit Order" button applies the specified reorder strategy for order amendment:  
-  * `replace` strategy: current cart items are replaced with amended order items
-  * `new` strategy: a new cart is created
-* If the `IS_ORDER_AMENDMENT_CONFIRMATION_ENABLED` configuration is set to `true`, make sure that the order amendment confirmation popup window is displayed.
+- Ensure that clicking the "Edit Order" button applies the specified reorder strategy for order amendment:  
+  - `replace` strategy: current cart items are replaced with amended order items
+  - `new` strategy: a new cart is created
+- If the `IS_ORDER_AMENDMENT_CONFIRMATION_ENABLED` configuration is set to `true`, make sure that the order amendment confirmation popup window is displayed.
 
 {% endinfo_block %}
 

@@ -6,7 +6,7 @@ template: concept-topic-template
 redirect_from:
     - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html
     - /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202306.0.html
-
+    - /docs/about/all/releases/security-release-notes-202306.0.html
 ---
 
 The following information pertains to security-related issues that have been recently resolved. All issues are listed by description and affected modules.
@@ -85,28 +85,28 @@ Additional validation controls have been implemented to prevent an attacker from
 
 To implement a fix for this vulnerability, update the `kernel` module:
 
-* If your version of `spryker/kernel` is 3.72.0, update to version 3.72.1:
+- If your version of `spryker/kernel` is 3.72.0, update to version 3.72.1:
 
 ```bash
 composer require spryker/kernel:"~3.72.1"
 composer show spryker/kernel # Verify the version
 ```
 
-* If your version of `spryker/kernel` is 3.71.0 or 3.71.1, update to version 3.71.2:
+- If your version of `spryker/kernel` is 3.71.0 or 3.71.1, update to version 3.71.2:
 
 ```bash
 composer require spryker/kernel:"~3.71.2"
 composer show spryker/kernel # Verify the version
 ```
 
-* If your version of `spryker/kernel` is 3.70.0, update to version 3.70.1:
+- If your version of `spryker/kernel` is 3.70.0, update to version 3.70.1:
 
 ```bash
 composer require spryker/kernel:"~3.70.1"
 composer show spryker/kernel # Verify the version
 ```
 
-* If your version of `spryker/kernel` is earlier than 3.69.0, update to version 3.68.1:
+- If your version of `spryker/kernel` is earlier than 3.69.0, update to version 3.68.1:
 
 ```bash
 composer require spryker/kernel:"~3.68.1"
@@ -304,6 +304,7 @@ composer show spryker/security-blocker-merchant-portal-gui # Verify the version
 ```bash
 console transfer:generate
 ```
+
 4. Register plugins in `src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php`:
 
 ```php
@@ -378,11 +379,11 @@ The parameters related to the address field had insufficient server-side input v
 
 ### Affected modules
 
-* `spryker-shop/customer-page`: 0.1.0-2.41.0
-* `spryker-shop/company-page`: 0.0.1-2.22.0
-* `spryker/customer`: 0.20.0-7.51.2
-* `spryker/company-unit-address-gui`: 0.1.0-1.3.0
-* `spryker/merchant-profile-gui`: 0.1.0-1.2.0
+- `spryker-shop/customer-page`: 0.1.0-2.41.0
+- `spryker-shop/company-page`: 0.0.1-2.22.0
+- `spryker/customer`: 0.20.0-7.51.2
+- `spryker/company-unit-address-gui`: 0.1.0-1.3.0
+- `spryker/merchant-profile-gui`: 0.1.0-1.2.0
 
 ### Introduced changes
 
@@ -482,10 +483,10 @@ An outdated version of the `guzzlehttp/psr7` library was identified to affect Sp
 
 ### Affected modules
 
-* `spryker/guzzle`: 0.20.0-2.4.0
-* `spryker/message-broker-aws`: 1.0.0-1.4.2
-* `spryker/secrets-manager-aws`: 1.0.0-1.0.1
-* `spryker/oauth-auth0` : 1.0.0
+- `spryker/guzzle`: 0.20.0-2.4.0
+- `spryker/message-broker-aws`: 1.0.0-1.4.2
+- `spryker/secrets-manager-aws`: 1.0.0-1.0.1
+- `spryker/oauth-auth0` : 1.0.0
 
 ### Introduced changes
 
@@ -529,21 +530,21 @@ Security-related HTTP headers were missing from Spryker's applications. Adding t
 
 ### Affected modules
 
-* `spryker/event-dispatcher`: <=1.4.0
-* `spryker/glue-backend-api-application`: <=1.3.0
-* `spryker/glue-storefront-api-application`: <=1.2.0
-* `spryker/http`: <=1.10.0
-* `spryker/merchant-portal-application`: <=1.1.0
+- `spryker/event-dispatcher`: <=1.4.0
+- `spryker/glue-backend-api-application`: <=1.3.0
+- `spryker/glue-storefront-api-application`: <=1.2.0
+- `spryker/http`: <=1.10.0
+- `spryker/merchant-portal-application`: <=1.1.0
 
 ### Introduced changes
 
 The following security-related HTTP headers can be implemented:
-* `Strict-Transport-Security`
-* `Cache-Control`
-* `X-Content-Type-Options`
-* `X-Frame-Options`
-* `X-XSS-Protection`
-* `Content-Security-Policy`
+- `Strict-Transport-Security`
+- `Cache-Control`
+- `X-Content-Type-Options`
+- `X-Frame-Options`
+- `X-XSS-Protection`
+- `Content-Security-Policy`
 
 ### How to get the fix
 
@@ -569,7 +570,7 @@ composer update spryker/event-dispatcher spryker/glue-backend-api-application sp
 
 8. In `Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`, register `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`.
 
-9.  In `Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`, register `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\EnvironmentInfoHeaderEventDispatcherPlugin`.
+9. In `Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`, register `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\EnvironmentInfoHeaderEventDispatcherPlugin`.
 
 10. In `Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getMerchantPortalEventDispatcherPlugins()`, register `Spryker\Zed\MerchantPortalApplication\Communication\Plugin\EventDispatcher\HeadersSecurityEventDispatcherPlugin`.
 

@@ -1,39 +1,36 @@
-
-
-
 {% info_block warningBox %}
 
-Self-Service Portal is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+Self-Service Portal is currently running under an Early Access Release. Early Access Releases are subject to specific
+legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a
+General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory
+features.
 
 {% endinfo_block %}
-
-
-
 
 This document describes how to install the Self-Service Portal (SSP) Dashboard Management feature.
 
 ## Prerequisites
 
-| FEATURE         | VERSION | INSTALLATION GUIDE  |
-|--------------| ------- | ------------------ |
-| Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
-| Self-Service Portal | {{site.version}}  | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/202505.0/install/install-self-service-portal)          |
+| FEATURE             | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
+|---------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Self-Service Portal | {{site.version}} | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/202505.0/install/install-self-service-portal)                                               |
 
 ## Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/ssp-dashboard-management:"^0.1.1" --update-with-dependencies
+composer require spryker-feature/self-service-portal:"^0.1.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
 Make sure the following packages are now listed in `composer.lock`:
 
-| MODULE                 | EXPECTED DIRECTORY                               |
-|------------------------|--------------------------------------------------|
-| SspDashboardManagement | vendor/spryker-feature/ssp-dashboard-management       |
+| MODULE            | EXPECTED DIRECTORY                         |
+|-------------------|--------------------------------------------|
+| SelfServicePortal | vendor/spryker-feature/self-service-portal |
 
 {% endinfo_block %}
 
@@ -48,22 +45,19 @@ console transfer:generate
 {% info_block warningBox "Verification" %}
 Make sure the following transfer objects have been generated:
 
-| TRANSFER                          | TYPE | EVENT | PATH                                                             |
-|-----------------------------------|------|--------|------------------------------------------------------------------|
-| DashboardRequest                  | transfer | created | src/Generated/Shared/Transfer/DashboardRequestTransfer           |
-| DashboardComponentCriteria        | transfer | created | src/Generated/Shared/Transfer/DashboardComponentCriteriaTransfer |
-| DashboardResponse                 | transfer | created | src/Generated/Shared/Transfer/DashboardResponseTransfer          |
-| CmsBlockRequest                   | transfer | created | src/Generated/Shared/Transfer/CmsBlockRequestTransfer            |
-| CmsBlock                          | transfer | created | src/Generated/Shared/Transfer/CmsBlockTransfer                   |
-| SynchronizationData               | transfer | created | src/Generated/Shared/Transfer/SynchronizationDataTransfer        |
-| Customer                          | transfer | created | src/Generated/Shared/Transfer/CustomerTransfer                   |
-| CompanyUser                       | transfer | created | src/Generated/Shared/Transfer/CompanyUserTransfer                |
-| Store                             | transfer | created | src/Generated/Shared/Transfer/StoreTransfer                      |
-
+| TRANSFER                   | TYPE     | EVENT   | PATH                                                             |
+|----------------------------|----------|---------|------------------------------------------------------------------|
+| DashboardRequest           | transfer | created | src/Generated/Shared/Transfer/DashboardRequestTransfer           |
+| DashboardComponentCriteria | transfer | created | src/Generated/Shared/Transfer/DashboardComponentCriteriaTransfer |
+| DashboardResponse          | transfer | created | src/Generated/Shared/Transfer/DashboardResponseTransfer          |
+| CmsBlockRequest            | transfer | created | src/Generated/Shared/Transfer/CmsBlockRequestTransfer            |
+| CmsBlock                   | transfer | created | src/Generated/Shared/Transfer/CmsBlockTransfer                   |
+| SynchronizationData        | transfer | created | src/Generated/Shared/Transfer/SynchronizationDataTransfer        |
+| Customer                   | transfer | created | src/Generated/Shared/Transfer/CustomerTransfer                   |
+| CompanyUser                | transfer | created | src/Generated/Shared/Transfer/CompanyUserTransfer                |
+| Store                      | transfer | created | src/Generated/Shared/Transfer/StoreTransfer                      |
 
 {% endinfo_block %}
-
-
 
 ## Add translations
 
@@ -105,12 +99,9 @@ customer.account.files,Files,en_US
 customer.account.files,Dateien,de_DE
 customer.account.no_files,No Files,en_US
 customer.account.no_files,Keine Dateien,de_DE
-ssp_dashboard.overview.not_applicable,n/a,en_US
-ssp_dashboard.overview.not_applicable,n/a,de_DE
 ```
 
 </details>
-
 
 3. Append `cms_block.csv`:
 
@@ -124,26 +115,34 @@ ssp-news-block-1,News Banner-1,Title and Content,@CmsBlock/template/title_and_co
 
 </details>
 
-
 4. Append `cms_block_store.csv`:
+
 ```csv
 ssp-news-block-1,DE
 cms-sales_rep:default,DE
 ```
+
 5. Append `cms_slot.csv`:
+
 ```csv
-ssp-news,ssp-news-block-1,"SSP News.",SprykerCmsSlotBlock,@SspDashboardManagement/views/dashboard/dashboard.twig,1
+ssp-news,ssp-news-block-1,"SSP News.",SprykerCmsSlotBlock,@SelfServicePortal/views/dashboard/dashboard.twig,1
 ```
+
 6. Append `cms_slot_block.csv`:
+
 ```csv
 slt-mobile-header,blck-9,1,@ShopUi/templates/page-layout-main/page-layout-main.twig,,,,,,,
-ssp-news,ssp-news-block-1,1,@SspDashboardManagement/views/dashboard/dashboard.twig,,,,,,,
+ssp-news,ssp-news-block-1,1,@SelfServicePortal/views/dashboard/dashboard.twig,,,,,,,
 ```
+
 7. Append `cms_slot_template.csv`:
+
 ```csv
-SSP Dashboard,Dashboard Page.,@SspDashboardManagement/views/dashboard/dashboard.twig
+SSP Dashboard,Dashboard Page.,@SelfServicePortal/views/dashboard/dashboard.twig
 ```
+
 8. Append `content_banner.csv`:
+
 ```csv
 ssp-br-1,SSP Banner Name 1,SSP Banner Description 1, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
 ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
@@ -153,7 +152,8 @@ ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/defa
 
 1. Create a new CMS template to be used for dashboard content sourced from the CMS:
 
-**src/Pyz/Shared/CmsBlock/Theme/default/template/title_and_content_block.twig** 
+**src/Pyz/Shared/CmsBlock/Theme/default/template/title_and_content_block.twig**
+
 ```twig
 {% raw %}{% block content %}{% endraw %}
     <!-- CMS_BLOCK_PLACEHOLDER : "title" -->
@@ -179,26 +179,25 @@ console data:import cms-slot-block
 ```
 
 {% info_block warningBox "Verification" %}
-* Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
-* Make sure that the imported data on CMS blocks, CMS slots, and content banners is present in the Back Office.
-{% endinfo_block %}
 
+- Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
+- Make sure that the imported data on CMS blocks, CMS slots, and content banners is present in the Back Office.
+  {% endinfo_block %}
 
 ## Set up behavior
 
-| PLUGIN                                                 | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                           |
-|--------------------------------------------------------|------------------------------------------------------------|---------------|---------------------------------------------------------------------|
-| ViewDashboardPermissionPlugin                          | Provides access to the dashboard page.                     |               | SprykerFeature\Shared\SspDashboardManagement\Plugin\Permission      |
-| CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin | Enables business unit-specific CMS blocks.                 |               | SprykerFeature\Client\SspDashboardManagement\Plugin\CmsBlockStorage |
-| DashboardRouteProviderPlugin                           | Provides Yves routes for the SSP dashboard page.           |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\Router            |
-| SspDashboardFilterControllerEventHandlerPlugin         | Restricts access to dashboard pages for non-company users. |               | SprykerFeature\Yves\SspDashboardManagement\Plugin\ShopApplication   |
-
+| PLUGIN                                                 | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                      |
+|--------------------------------------------------------|------------------------------------------------------------|---------------|----------------------------------------------------------------|
+| ViewDashboardPermissionPlugin                          | Provides access to the dashboard page.                     |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission      |
+| CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin | Enables business unit-specific CMS blocks.                 |               | SprykerFeature\Client\SelfServicePortal\Plugin\CmsBlockStorage |
+| SelfServicePortalPageRouteProviderPlugin               | Provides Yves routes for the SSP dashboard page.           |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router            |
+| SspDashboardFilterControllerEventHandlerPlugin         | Restricts access to dashboard pages for non-company users. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication   |
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 
 ```php
 use Spryker\Zed\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
-use SprykerFeature\Shared\SspDashboardManagement\Plugin\Permission\ViewDashboardPermissionPlugin;
+use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewDashboardPermissionPlugin;
 
 class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 {
@@ -215,7 +214,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 
 ```php
 use Spryker\Client\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
-use SprykerFeature\Shared\SspDashboardManagement\Plugin\Permission\ViewDashboardPermissionPlugin;
+use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewDashboardPermissionPlugin;
 
 class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 {
@@ -238,7 +237,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 namespace Pyz\Yves\Router;
 
 use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
-use SprykerFeature\Yves\SspDashboardManagement\Plugin\Router\DashboardRouteProviderPlugin;
+use SprykerFeature\Yves\SelfServicePortal\Plugin\Router\SelfServicePortalPageRouteProviderPlugin;
 
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
@@ -248,7 +247,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
     protected function getRouteProvider(): array
     {
         return [
-            new DashboardRouteProviderPlugin(),
+            new SelfServicePortalPageRouteProviderPlugin(),
         ];
     }
 }
@@ -261,7 +260,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 namespace Pyz\Yves\ShopApplication;
 
-use SprykerFeature\Yves\SspDashboardManagement\Plugin\ShopApplication\SspDashboardFilterControllerEventHandlerPlugin;
+use SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication\SspDashboardFilterControllerEventHandlerPlugin;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -284,7 +283,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 namespace Pyz\Client\CmsBlockStorage;
 
 use Spryker\Client\CmsBlockStorage\CmsBlockStorageDependencyProvider as SprykerCmsBlockStorageDependencyProvider;
-use SprykerFeature\Client\SspDashboardManagement\Plugin\CmsBlockStorage\CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin;
+use SprykerFeature\Client\SelfServicePortal\Plugin\CmsBlockStorage\CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin;
 
 class CmsBlockStorageDependencyProvider extends SprykerCmsBlockStorageDependencyProvider
 {
@@ -302,10 +301,10 @@ class CmsBlockStorageDependencyProvider extends SprykerCmsBlockStorageDependency
 
 ## Set up widgets
 
-| PLUGIN                                                 | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                                           |
-|--------------------------------------------------------|---------------------------------------------------------------|---------------|---------------------------------------------------------------------|
-| DashboardMenuItemWidget                                | Provides a menu item widget for the customer account side menu. |               | SprykerFeature\Yves\SspDashboardManagement\Widget                   |
-
+| PLUGIN                  | SPECIFICATION                                                                                             | PREREQUISITES | NAMESPACE                                    |
+|-------------------------|-----------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------|
+| DashboardMenuItemWidget | Provides a menu item widget for the customer account side menu.                                           |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspFileListWidget       | Displays a file attachment available to a company user on the dashboard page in the customer account. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -314,7 +313,8 @@ class CmsBlockStorageDependencyProvider extends SprykerCmsBlockStorageDependency
 
 namespace Pyz\Yves\ShopApplication;
 
-use SprykerFeature\Yves\SspDashboardManagement\Widget\DashboardMenuItemWidget;
+use SprykerFeature\Yves\SelfServicePortal\Widget\DashboardMenuItemWidget;
+use SprykerFeature\Yves\SelfServicePortal\Widget\SspFileListWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -326,6 +326,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     {
         return [
             DashboardMenuItemWidget::class,
+            SspFileListWidget::class
         ];
     }
 }
@@ -333,10 +334,10 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-1. In the Back Office, go to **Customers** > **Company Roles**. 
+1. In the Back Office, go to **Customers** > **Company Roles**.
 2. Click **Add Company User Role**.
 3. Select a company.
-4. Enter a name for the role. 
+4. Enter a name for the role.
 5. In **Unassigned Permissions**, enable the **View Dashboard** permission.
 6. Click **Submit**.
 7. Go to **Customers** > **Company Users**.
@@ -348,11 +349,13 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 {% info_block warningBox "Verification" %}
 
 1. On the Storefront, log in with the company user you've assigned the role to.
-  Make sure the **Dashboard** menu item is displayed.
+   Make sure the **Dashboard** menu item is displayed.
 2. Go to **Customer Account** > **Dashboard**. Make sure the page shows the following:
-  * Correct company account information
-  * Widgets for Assets, Inquiries, and Files
+
+- Correct company account information
+- Widgets for Assets, Inquiries, and Files
+
 3. Log out and log in with a compnay user without the role you've created.
-  Make sure the **Dashboard** menu item is not displayed and you can't access the **Dashboard** page.
+   Make sure the **Dashboard** menu item is not displayed and you can't access the **Dashboard** page.
 
 {% endinfo_block %}

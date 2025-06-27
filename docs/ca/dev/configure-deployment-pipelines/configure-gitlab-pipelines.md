@@ -15,14 +15,17 @@ redirect_from:
 This document describes how to configure continuous integration using GitLab Pipelines.
 
 ## GitLab Pipelines
+
 GitLab pipelines automate steps in the SDLC like builds, tests, and deployments. When a team takes advantage of automated pipelines, they simplify the handoff process and decrease the chance of human error, creating faster iterations and better quality code. Everyone can see where code is in the process and identify problems long before they make it to production.
 
 For more information on Gitlab Pipelines, see [GitLab CI/CD](https://docs.gitlab.com/ee/ci/pipelines/).
 
 ## Prerequisites
+
 In the repository root, create the CI/CD configuration file: `.gitlab-ci.yml`.
 
 ## Configuring groups of tests via the Docker SDK
+
 To configure GitLab pipelines:
 
 1. To `.gitlab-ci.yml`, add the basic configuration:
@@ -69,8 +72,8 @@ default:
 ```
 
 3. Glue API tests: To fill the storage with the data used by Glue API, add the following commands to load fixtures to the `Run docker` action as shown in the code snippet:
-* `docker/sdk testing codecept fixtures -d`
-* `docker/sdk testing console queue:worker:start --stop-when-empty`
+- `docker/sdk testing codecept fixtures -d`
+- `docker/sdk testing console queue:worker:start --stop-when-empty`
 
 ```yaml
 {tests_type}:
@@ -96,10 +99,10 @@ default:
 
 6. In the end of the file, add the job that performs the basic validation like:
 
-* code style
-* architecture
-* security
-* database schema
+- code style
+- architecture
+- security
+- database schema
 
 ```yaml
 ...
@@ -125,9 +128,11 @@ validation:
 
 
 ## Running Docker SDK tests: Configuration examples
+
 This section describes examples of running groups of tests.
 
 Glue API tests:
+
 ```yaml
 api-tests:
   extends: .tests
@@ -141,6 +146,7 @@ api-tests:
 ```
 
 Functional tests:
+
 ```yaml
 functional-tests:
   extends: .tests
@@ -150,6 +156,7 @@ functional-tests:
   script:
     - bash docker/sdk testing codecept run -c codeception.functional.yml --xml /data/$JUNITREPORT
 ```
+
 Acceptance tests:
 
 ```yaml

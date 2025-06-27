@@ -10,8 +10,8 @@ redirect_from:
 ---
 
 One of the main ways of transferring data from Zed to Yves is the *Publish & Synchronization* mechanism. It works as follows:
-* Storing the denormalized data that is saved in Zed and must be shared with Yves in specific infrastructural database tables.
-* Synchronizing that data to fast key-value storage, like Redis, with the help of message queues.
+- Storing the denormalized data that is saved in Zed and must be shared with Yves in specific infrastructural database tables.
+- Synchronizing that data to fast key-value storage, like Redis, with the help of message queues.
 
 Yves then reads the synchronized data directly from the storage. However, sometimes, you might need to exclude the second step and read data directly from the database. This document describes how to do that.
 

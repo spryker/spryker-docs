@@ -23,9 +23,9 @@ Code Quality Spryker, PHPmetrics.org score in score points (x out of 100)
 
 ## The Results
 
-* *Maintainability*: Keeping code and architecture clean as crucial part of complex commerce development
-* *Accessibility*: Developers can easily understand and start working with Spryker Commerce OS's code base
-* *Bug probability*: Much lower error-proneness, resulting in fewer resources needed for bug-fixing
+- *Maintainability*: Keeping code and architecture clean as crucial part of complex commerce development
+- *Accessibility*: Developers can easily understand and start working with Spryker Commerce OS's code base
+- *Bug probability*: Much lower error-proneness, resulting in fewer resources needed for bug-fixing
 
 ## Understanding the Results
 

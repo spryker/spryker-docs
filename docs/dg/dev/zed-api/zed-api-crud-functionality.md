@@ -32,6 +32,7 @@ related:
 Zed API, initially released as a beta version, is now considered outdated and is no longer being developed. Instead of it, we recommend using [Glue Backend API](/docs/dg/dev/glue-api/{{site.version}}/decoupled-glue-api.html#new-type-of-application-glue-backend-api-application).
 
 {% endinfo_block %}
+
 ## Filtering
 
 For find action we return a paginated collection that can be limited and customized based on query string input or headers. So using the provided `FilterPreProcessors` one can enable filtering (conditions), sorting (and multi-sorting) and pagination.
@@ -54,7 +55,7 @@ You can pass any kind of complex query including AND/OR into the `filter` query 
 
 For limiting fields you can use the fields query string:
 
-```
+```text
 /api/rest/customers?fields=name,id
 ```
 
@@ -94,7 +95,7 @@ The following meta and link blocks will be included in the response:
 
 The core also ships with a header range solution, setting the range to `0-9` (page 1), `10-19` (page 2), etc. The header to be sent by the client would look like this:
 
-```
+```text
 Range: customers=0-9
 ```
 

@@ -56,6 +56,7 @@ On the Storefront, the standard filters let buyers narrow down the search result
 Compared to standard filters, dynamic filters and facets allow the creation of more advanced filter options. For example, you can customize facet filters for any product attribute: the design, quantity of filters, or order criteria by which filters are displayed on the Storefront. For more details about how to configure the filter preferences in the Back Office, see [Edit filter preferences](/docs/pbc/all/search/{{page.version}}/base-shop/manage-in-the-back-office/filter-preferences/edit-filter-preferences.html).
 
 ## Video tutorial
+
 Check out this video on managing categories:
 
 {% wistia g3l3c7xt93 960 720 %}
@@ -64,12 +65,12 @@ Check out this video on managing categories:
 
 The Category Management feature has the following functional constraints, which are going to be resolved in the future:
 
-* A category page is accessible by the same URL across all the stores. If the category is not available in the given store, the URL will lead to a 404.
-* Root categories cannot be created in the Back Office. They are imported through CSV files.
-* A store can only be linked to one root category tree, but in the future, a store can have multiple root category trees.
-* Category URLs are locale-dependent.
-* Category URLs are available in all the stores that share the same locales.
-* Price Range Filter is not supported with merchant relations. That is why this filter is not included in the [B2B demo shop](/docs/about/all/b2b-suite.html). However, in the [B2C demo shop](/docs/about/all/b2c-suite.html), you can still filter the products using the price range filter.
+- A category page is accessible by the same URL across all the stores. If the category is not available in the given store, the URL will lead to a 404.
+- Root categories cannot be created in the Back Office. They are imported through CSV files.
+- A store can only be linked to one root category tree, but in the future, a store can have multiple root category trees.
+- Category URLs are locale-dependent.
+- Category URLs are available in all the stores that share the same locales.
+- Price Range Filter is not supported with merchant relations. That is why this filter is not included in the [B2B demo shop](/docs/about/all/b2b-suite.html). However, in the [B2C demo shop](/docs/about/all/b2c-suite.html), you can still filter the products using the price range filter.
 
 ## Related Business User documents
 

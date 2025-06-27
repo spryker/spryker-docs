@@ -316,7 +316,7 @@ You have to respond with an object, supporting an array-based or `get`-based ind
 }
 ```
 
-</details>   
+</details>
 
 Returning this JSON data as an object shows you an empty result page.
 
@@ -339,10 +339,10 @@ To handle search update events, use the instructions from the following sections
 
 To handle search update events, you have to implement the following methods of the `SearchAdapterPluginInterface`:
 
-* `deleteDocument`—when a single document is supposed to be removed. You will receive an internal identifier as a key
-* `deleteDocuments`—when documents are supposed to be removed in bulk. You will receive a list of internal identifiers
-* `writeDocument`
-* `writeDocuments`
+- `deleteDocument`—when a single document is supposed to be removed. You will receive an internal identifier as a key
+- `deleteDocuments`—when documents are supposed to be removed in bulk. You will receive a list of internal identifiers
+- `writeDocument`
+- `writeDocuments`
 
 #### 2. Handle the events
 

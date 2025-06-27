@@ -32,7 +32,7 @@ The following table explains where you can take the values for populating the fi
 
 | Field   |      Where can you get this information in the Bazaarvoice Portal      |
 |----------|:-------------:|
-| Client name | This is the instance's name you want to connect to Spryker. You can find your list of instances [here](https://portal.bazaarvoice.com/configurations/sitemanager/clientselector).|
+| Client name | This is the instance's name you want to connect to Spryker. You can find your list of instances in the  [client selector](https://portal.bazaarvoice.com/configurations/sitemanager/clientselector). |
 | Site ID | The Site ID can be found on [this page](https://config.portal.bazaarvoice.com/siteManager). Select the Site ID that matches the deployment zone you want to connect to your Spryker project.   |
 | API Key | Select one of your API keys from [this page](https://portal.bazaarvoice.com/developer-tools/api-keys). If your account does not contain any API key, watch the video below for the details on how to create one. |
 

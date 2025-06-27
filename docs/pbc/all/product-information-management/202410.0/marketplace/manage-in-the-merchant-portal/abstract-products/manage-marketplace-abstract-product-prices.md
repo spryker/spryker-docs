@@ -24,7 +24,7 @@ This document contains reference information. Make sure to review it before you 
 
 To add a new price for a marketplace abstract product, follow these steps:
 
-1. Next to the abstract product, where you want to add a price for, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the **_[Product name]_**, **Abstract Product Details** tab.
+1. Next to the abstract product, where you want to add a price for, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the ***[Product name]***, **Abstract Product Details** tab.
 2. Scroll down to the **Price** pane.
 3. In the **Price** pane, click **+Add**. The empty cells appear in the following table.
 
@@ -55,7 +55,7 @@ Click **Cancel** to stop creating a new price.
 
 To edit a marketplace abstract product's prices, follow these steps:
 
-1. Next to the abstract product, the price of which you want to edit, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the **_[Product name]_**, **Abstract Product Details** tab.
+1. Next to the abstract product, the price of which you want to edit, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the ***[Product name]***, **Abstract Product Details** tab.
 2. Scroll down to the **Price** pane.
 3. Next to the price you want to edit, hover over the table and update the necessary cells.
 
@@ -68,7 +68,7 @@ You can sort the prices by stores and currencies. To do that, in the **Price** p
 
 To remove abstract product's price, follow these steps:
 
-1. Next to the abstract product, the price of which you want to delete, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the **_[Product name]_**, **Abstract Product Details** tab.
+1. Next to the abstract product, the price of which you want to delete, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the ***[Product name]***, **Abstract Product Details** tab.
 2. Scroll down to the **Price** pane.
 3. Next to the price you want to remove, hover over the three dots in the table, and click **Delete**.
 

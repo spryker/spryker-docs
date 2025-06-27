@@ -40,44 +40,62 @@ We use the *Hello World* example throughout this document. All code references t
 Make sure the following prerequisites are met:
 
 1. Spryker Testify version 3.50.0 or later is installed. The AsyncAPI SDK is required by this package, however, you don't need to install it manually.
-  - To verify the installation status and version of Spryker Testify, run the following command:
+- To verify the installation status and version of Spryker Testify, run the following command:
+
   ```bash
   composer info spryker/testify
   ```
-  - To install Spryker Testify, run the following command:
+
+- To install Spryker Testify, run the following command:
+
   ```bash
   composer require --dev "spryker/testify:^3.50.0"
   ```
-  - To update Spryker Testify, run the following command:
+
+- To update Spryker Testify, run the following command:
+
   ```bash
   composer update "spryker/testify:^3.50.0"
   ```
+
 2. Spryker Testify AsyncAPI version 0.1.1 or later is installed. The AsyncAPI SDK is required by this package, however, you don't need to install it manually.
-  - To verify the installation status and version of Spryker Testify AsyncAPI, run the following command:
+- To verify the installation status and version of Spryker Testify AsyncAPI, run the following command:
+
   ```bash
   composer info spryker/testify-async-api
   ```
-  - To install Spryker Testify AsyncAPI, run the following command:
+
+- To install Spryker Testify AsyncAPI, run the following command:
+
   ```bash
   composer require --dev "spryker/testify-async-api:^0.1.1"
   ```
-  - To update Spryker Testify AsyncAPI  run the following command:
+
+- To update Spryker Testify AsyncAPI  run the following command:
+
   ```bash
   composer update "spryker/testify-async-api:^0.1.1"
   ```
+
 3. Spryks version 0.5.2 or later is installed.
-  - To verify the installation status and version of Spryks, run the following command:
+- To verify the installation status and version of Spryks, run the following command:
+
   ``` bash
   composer info spryker-sdk/spryk
   ```
-  - To install Spryks, run the following command:
+
+- To install Spryks, run the following command:
+
   ```bash
   composer require --dev "spryker-sdk/spryk:^0.5.2"
   ```
-  - To update Spryks, run the following command:
+
+- To update Spryks, run the following command:
+
   ```bash
   composer update "spryker-sdk/spryk:^0.5.2"
   ```
+
 4. There is a valid AsyncAPI schema file in `resources/api/asyncapi.yml`. To create the file, you can use the example provided in Hello World App AsyncAPI.
 
 ## Testing the asynchronous API
@@ -115,7 +133,7 @@ Open the created Codeception configuration file at `tests/PyzTest/AsyncApi/Hello
 
 The file should contain the following section:
 
-```
+```yml
 \Spryker\Zed\TestifyAsyncApi\Business\Codeception\Helper\AsyncApiHelper:
     asyncapi: resources/api/asyncapi.yml
     handlers:
@@ -130,7 +148,7 @@ When testing the asynchronous API, all messages must be sent to the local messag
 
 Add the following configuration to the `config/Shared/config_local.php` file:
 
-```
+```php
 use Spryker\Shared\MessageBroker\MessageBrokerConstants;
 
 $config[MessageBrokerConstants::IS_ENABLED] = true;
@@ -142,6 +160,7 @@ $config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] = [
     'test-channel' => 'local',
 ];
 ```
+
 {% info_block warningBox "Warning" %}
 
 This is a very generic configuration and shouldn't be used in a production environment.
@@ -166,7 +185,7 @@ This section lists some example methods and explains what and how they test.
 
 Here is the example of handling the messages:
 
-```
+```php
 public function testUserCreatedMessageCreatesAUserEntity(): void
 {
     // Arrange
@@ -205,7 +224,7 @@ vendor/bin/codecept run -c tests/PyzTest/AsyncApi/HelloWorld/
 
 Here is the example of publishing the messages:
 
-```
+```php
 public function testGreetUserMessageIsEmittedWhenUserWasStoredInTheDatabase(): void
 {
     // Arrange

@@ -18,11 +18,13 @@ As long as the user has the corresponding global rule with permissions, the Pers
 | null | 15  | `Orm\Zed\Sales\Persistence\SpySalesOrder` | `AclEntityConstants::OPERATION_MASK_READ` | `AclEntityConstants::SCOPE_GLOBAL` |
 
 Query before the Persistence ACL:
+
 ```sql
 SELECT * FROM `spy_sales_order` ORDER BY `updated_at` DESC;
 ```
 
 Query after the Persistence ACL:
+
 ```sql
 SELECT * FROM `spy_sales_order` ORDER BY `updated_at` DESC;
 ```

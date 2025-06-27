@@ -3,6 +3,8 @@ title: Security release notes 202412.0
 description: Security updates released for version 202412.0
 last_updated: Dec 20, 2024
 template: concept-topic-template
+redirect_from:
+  - /docs/about/all/releases/security-release-notes-202412.0.html
 ---
 
 This document describes the security-related issues that have been recently resolved.
@@ -14,8 +16,8 @@ For additional support with this content, [contact our support](https://support.
 Because of a misconfiguration in the access controls of the application, it was possible to modify the email of a customer belonging to a different company by manipulating the `id_customer` parameter of a submitted form.
 
 Also, this fix resolves the following vulnerabilities:
-* Unrestricted address addition (BFLA) exposes organizations to manipulation. Because of an access controls vulnerability, it was possible to add new addresses to any organization within an application.
-* Unrestricted business unit modification (BFLA). Because of an access controls vulnerability, it was possible to manipulate business unit assignments for other users.
+- Unrestricted address addition (BFLA) exposes organizations to manipulation. Because of an access controls vulnerability, it was possible to add new addresses to any organization within an application.
+- Unrestricted business unit modification (BFLA). Because of an access controls vulnerability, it was possible to manipulate business unit assignments for other users.
 
 ### Affected modules
 
@@ -68,9 +70,9 @@ A user with the buyer role was able to enable and disable other users even if th
 
 ### Affected modules
 
-* `spryker-shop/company-page`: 1.0.0 - 2.28.0
-* `spryker/company-user` : 1.0.0 - 2.18.0
-* `spryker/company-role` : 1.0.0 - 1.8.0
+- `spryker-shop/company-page`: 1.0.0 - 2.28.0
+- `spryker/company-user` : 1.0.0 - 2.18.0
+- `spryker/company-role` : 1.0.0 - 1.8.0
 
 ### Fix the vulnerability
 
@@ -87,19 +89,20 @@ composer update spryker-shop/company-page spryker/company-user spryker/company-r
 ```
 
 2. In the `Pyz\Client\Permission\PermissionDependencyProvider::getPermissionPlugins()` method, register the following plugins:
-* Spryker\Client\CompanyRole\Plugin\Permission\CreateCompanyRolesPermissionPlugin
-* Spryker\Client\CompanyRole\Plugin\Permission\DeleteCompanyRolesPermissionPlugin
-* Spryker\Client\CompanyRole\Plugin\Permission\EditCompanyRolesPermissionPlugin
-* Spryker\Client\CompanyRole\Plugin\Permission\SeeCompanyRolesPermissionPlugin
-* Spryker\Client\CompanyUser\Plugin\CompanyUserStatusChangePermissionPlugin
-* Spryker\Client\CompanyUser\Plugin\Permission\DeleteCompanyUsersPermissionPlugin
-* Spryker\Client\CompanyUser\Plugin\Permission\EditCompanyUsersPermissionPlugin
-* Spryker\Shared\CompanyUser\Plugin\AddCompanyUserPermissionPlugin
-* Spryker\Shared\CompanyUserInvitation\Plugin\ManageCompanyUserInvitationPermissionPlugin
+- Spryker\Client\CompanyRole\Plugin\Permission\CreateCompanyRolesPermissionPlugin
+- Spryker\Client\CompanyRole\Plugin\Permission\DeleteCompanyRolesPermissionPlugin
+- Spryker\Client\CompanyRole\Plugin\Permission\EditCompanyRolesPermissionPlugin
+- Spryker\Client\CompanyRole\Plugin\Permission\SeeCompanyRolesPermissionPlugin
+- Spryker\Client\CompanyUser\Plugin\CompanyUserStatusChangePermissionPlugin
+- Spryker\Client\CompanyUser\Plugin\Permission\DeleteCompanyUsersPermissionPlugin
+- Spryker\Client\CompanyUser\Plugin\Permission\EditCompanyUsersPermissionPlugin
+- Spryker\Shared\CompanyUser\Plugin\AddCompanyUserPermissionPlugin
+- Spryker\Shared\CompanyUserInvitation\Plugin\ManageCompanyUserInvitationPermissionPlugin
 
 3. Update the data import file. Make sure to replace `test-company_Admin` with your company admin name. If you have multiple company admins, duplicate the provided permission set per admin.
 
 **data/import/common/common/company_role_permission.csv**
+
 ```csv
 Spryker_Admin,DeleteCompanyUsersPermissionPlugin,
 test-company_Admin,DeleteCompanyUsersPermissionPlugin,
@@ -113,6 +116,7 @@ trial-company_Admin,EditCompanyRolesPermissionPlugin,
 trial-company_Admin,ManageCompanyUserInvitationPermissionPlugin,
 trial-company_Admin,CompanyUserStatusChangePermissionPlugin,
 ```
+
 {% info_block warningBox %}
 
 This CSV import is only an example and will work exclusively for `test-company_Admin` and `trial-company_Admin`. For a real project, you will need to add these plugins to all company admin accounts, and make sure that a new admin account have those permissions.

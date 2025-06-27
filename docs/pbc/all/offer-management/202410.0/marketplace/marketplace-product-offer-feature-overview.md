@@ -52,17 +52,17 @@ Product offer status defines whether the offer is active and displayed on the St
 
 ### Offer approval status
 
-* *Waiting for Approval*: Default status that is applied to the offer after it has been created.
+- *Waiting for Approval*: Default status that is applied to the offer after it has been created.
 
-* *Approved*:  The approved offer can be displayed on the Storefront. Only the Marketplace administrator can approve the offer. For details about how a Marketplace administrator can approve offers in the Back Office, see [Approving or denying offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html#approving-or-denying-offers).
+- *Approved*:  The approved offer can be displayed on the Storefront. Only the Marketplace administrator can approve the offer. For details about how a Marketplace administrator can approve offers in the Back Office, see [Approving or denying offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html#approving-or-denying-offers).
 
-* *Denied*: If the offer is denied, it cannot be displayed on the Storefront. Only the Marketplace administrator can deny the offer. For details about how a Marketplace administrator can deny offers in the Back Office, see [Approving or denying offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html#approving-or-denying-offers).
+- *Denied*: If the offer is denied, it cannot be displayed on the Storefront. Only the Marketplace administrator can deny the offer. For details about how a Marketplace administrator can deny offers in the Back Office, see [Approving or denying offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html#approving-or-denying-offers).
 
 ### Visibility
 
-* *Active*: When an offer is active, it's displayed on the Storefront. Either merchant or Marketplace administrator can make the offer active.
+- *Active*: When an offer is active, it's displayed on the Storefront. Either merchant or Marketplace administrator can make the offer active.
 
-* *Inactive*: When an offer is inactive, it's not displayed on the Storefront. Either merchant or Marketplace administrator can make the offer inactive.
+- *Inactive*: When an offer is inactive, it's not displayed on the Storefront. Either merchant or Marketplace administrator can make the offer inactive.
 
 ![Offer approval flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Products+and+offers/Product+offer+feature+overview/offer-approval-flow.png)
 
@@ -71,10 +71,10 @@ Product offer status defines whether the offer is active and displayed on the St
 On the product detail page, a customer sees a list of product offers from one or several merchants. Each offer has its own price. This price is represented as the *product offer price* price dimension.
 The product offer prices support:
 
-* Mode (Net/Gross)
-* Volume
-* Store
-* Currency
+- Mode (Net/Gross)
+- Volume
+- Store
+- Currency
 
 Product offer price follows the [concrete product price inheritance model](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/prices-feature-overview.html). So if the Merchant doesn't set a price in the offer, it's taken from the concrete product. Otherwise, the product offer price has a higher priority and substitutes the concrete product price if it's indicated. If at least one price is defined for the offer (for example, original), it's valid for this offer even if the concrete product has a default price (sales price), but the offer does not. For details about price types, see [Price types](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/prices-feature-overview.html).
 
@@ -195,9 +195,9 @@ Note that the drop-down with merchants is not visible until the product offer is
 
 ## Current constraints
 
-* B2B Merchant-specific prices do not work with product offer prices.
-* All cart-related B2B features (for example, Quick Order, RFQ, Approval Process) will be supported later.
-* Availability Notification is not supported.
+- B2B Merchant-specific prices do not work with product offer prices.
+- All cart-related B2B features (for example, Quick Order, RFQ, Approval Process) will be supported later.
+- Availability Notification is not supported.
 
 ## Related Business User documents
 

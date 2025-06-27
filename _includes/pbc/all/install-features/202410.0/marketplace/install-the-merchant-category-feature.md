@@ -168,7 +168,7 @@ Make sure that the `MerchantFacade::get()` response contains merchant categories
 
 **src/Pyz/Zed/MerchantSearch/MerchantSearchDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Zed\MerchantSearch;

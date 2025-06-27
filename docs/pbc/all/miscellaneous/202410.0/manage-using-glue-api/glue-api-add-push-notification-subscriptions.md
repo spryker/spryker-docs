@@ -74,6 +74,7 @@ Request sample: `POST https://glue-backend.b2c-eu.demo-spryker.com/push-notifica
 ### Response
 
 Response sample:
+
 ```json
 {
    "data": {

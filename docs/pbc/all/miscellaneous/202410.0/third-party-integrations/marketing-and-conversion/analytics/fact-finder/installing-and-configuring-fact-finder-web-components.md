@@ -318,6 +318,7 @@ Add the required communication element:
 ```
 
 Add a widget:
+
 ```twig
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} include atom('communication', 'FactFinderWebComponents') with {

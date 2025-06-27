@@ -158,8 +158,8 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 {% info_block warningBox "Verification" %}
 
 1. On the Storefront, go to the MFA setup page: `https://yves.mysprykershop.com/multi-factor-auth/set`. Make sure the following applies:
-  * The **Set up Multi-Factor Authentication** menu item is displayed in the customer profile navigation menu
-  * The **Email** authentication method is displayed in the list of available authentication methods
+- The **Set up Multi-Factor Authentication** menu item is displayed in the customer profile navigation menu
+- The **Email** authentication method is displayed in the list of available authentication methods
 2. For **Email Multi-Factor Authentication**, click **Activate**.
  This sends a verification code to the customer's email address.
 3. Enter the received code in the confirmation form.
@@ -169,8 +169,8 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 5. Enter the code in the form.
   Make sure this logs you in successfully.
 6. In the customer profile, try updating the email address, password, or deleting the account. Make sure the following applies:
-  * Completing the actions requires entering an MFA code
-  * You can perform several actions without entering a code within the configured grace period.
+- Completing the actions requires entering an MFA code
+- You can perform several actions without entering a code within the configured grace period.
 
 {% endinfo_block %}
 

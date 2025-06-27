@@ -114,5 +114,5 @@ The following common Datasources are available in the UI components library as s
 | DATASOURCE | DESCRIPTION |
 | - | - |
 | [HTTP](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-http.html) | Allows fetching data from a URL configured in the configuration of the Datasource via HTTP. HTTP Datasource supports the [caching strategy](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/cache/ui-components-library-cache-service.html) that can be configured via config and used before the request is made. |
-| [Inline](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-inline.html)—allows passing data along with the configuration of the Datasource. |
-| [Inline.table](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-inline-table.html)—allows passing transformed for the table format data along with the configuration of the Datasource. |
+| [Inline](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-inline.html) | Allows passing data along with the configuration of the Datasource. |
+| [Inline.table](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-inline-table.html) | Allows passing transformed for the table format data along with the configuration of the Datasource. |

@@ -30,16 +30,19 @@ General structure of the frontend modules in the Spryker Marketplace can be foun
 The frontend of the Merchant Portal is built using the following commands:
 
 - default build
+
     ```bash
     npm run mp:build
     ```
 
 - build in the watch mode
+
     ```bash
     npm run mp:build:watch
     ```
 
 - production build
+
     ```bash
     npm run mp:build:production
     ```

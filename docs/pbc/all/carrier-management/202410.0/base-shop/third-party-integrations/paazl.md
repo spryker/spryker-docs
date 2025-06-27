@@ -28,14 +28,14 @@ In a nutshell, Paazl provides the tools to scale delivery and create more – an
 
 YOUR ADVANTAGES:
 
-* Carrier Management
-* Efficiency: All shipping information, labeling and tracking in one place
-* Flexibility: Adding and changing carriers and delivery options as needed
-* Connectivity: Seamless integration with warehouse and customer service
-* Delivery Experience
-* Real-time Calculation: Show best delivery option based on order details
-* Arrival times: The ETA is based on carrier and custom business rules
-* Integration: Easy and fully customizable with REST API
+- Carrier Management
+- Efficiency: All shipping information, labeling and tracking in one place
+- Flexibility: Adding and changing carriers and delivery options as needed
+- Connectivity: Seamless integration with warehouse and customer service
+- Delivery Experience
+- Real-time Calculation: Show best delivery option based on order details
+- Arrival times: The ETA is based on carrier and custom business rules
+- Integration: Easy and fully customizable with REST API
 
 ---
 

@@ -6,12 +6,12 @@ template: concept-topic-template
 ---
 
 SCCOS production email service has the following quotas:
-* Daily sending limit: 50.000 emails.
-* Sending limit messages per second: 14.
+- Daily sending limit: 50.000 emails.
+- Sending limit messages per second: 14.
 
 SCCOS non-production email service has the following quotas:
-* Daily sending limit: 200 emails.
-* Sending limit messages per second: 1
+- Daily sending limit: 200 emails.
+- Sending limit messages per second: 1
 
 Recipients of emails need to be individually [verified](/docs/ca/dev/email-service/verify-email-addresses.html) for non-production systems.
 

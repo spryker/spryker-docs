@@ -30,7 +30,7 @@ Suppose you are a clothing retailer and often get items returned within the 14-d
 
 You can have the following return process:
 
-* *Buyer* places an order, and after the order has been delivered, the Buyer decides to return it. The Buyer does the following:
+- *Buyer* places an order, and after the order has been delivered, the Buyer decides to return it. The Buyer does the following:
 
     1. Selects the items to return.
     2. Creates the return.
@@ -38,14 +38,14 @@ You can have the following return process:
     4. Prints the return label and adheres it to the box.
     5. Ships the order to the shop.
 
-* When the shop receives the return, the *Shop Administrator* checks the returned items. If all is good and if items meet the shop's policy for the condition of returned items, the Shop Administrator confirms the return and makes the refund. Otherwise, the Shop Administrator contacts the Buyer and either cancels the return, or clarifies the details and makes the refund.
+- When the shop receives the return, the *Shop Administrator* checks the returned items. If all is good and if items meet the shop's policy for the condition of returned items, the Shop Administrator confirms the return and makes the refund. Otherwise, the Shop Administrator contacts the Buyer and either cancels the return, or clarifies the details and makes the refund.
 ![image](https://confluence-connect.gliffy.net/embed/image/ceba5ea5-5ee2-4e8c-acce-65b64467421c.png?utm_medium=live&utm_source=custom)
 
 This scenario is typical for most B2C models, and its main advantages are:
 
-* Suits perfectly for the 14-days returns.
-* Requires minimum human intervention.
-* Can be implemented with the default Spryker [Return Management](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html) functionality, without extra development effort.
+- Suits perfectly for the 14-days returns.
+- Requires minimum human intervention.
+- Can be implemented with the default Spryker [Return Management](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html) functionality, without extra development effort.
 
 <a name="scenario2"></a>
 
@@ -61,12 +61,12 @@ Suppose you sell equipment the usage of which requires specific skills or knowle
 
 You can have the following return process:
 
-* *Buyer* creates a reclamation for items that have issues from the Order Details page in the Storefront.
-* *Shop Administrator* receives the reclamation and does the following:
+- *Buyer* creates a reclamation for items that have issues from the Order Details page in the Storefront.
+- *Shop Administrator* receives the reclamation and does the following:
 1. Contacts the customer to clarify the details of the claim.
 2. If the reclamation:
-    * Is resolved without the return, the reclamation is closed.
-    * Cannot be resolved without the return:
+    - Is resolved without the return, the reclamation is closed.
+    - Cannot be resolved without the return:
         1. Creates the return based on the reclamation.
         2. Sends the return slip and the return label to the Buyer so the Buyer can print it, adhere to the box and ship the items back.
 
@@ -86,9 +86,9 @@ You might have the *Return* button, but when clicking it, the Buyer would first 
 
 The workflow of this scenario has the following advantages:
 
-* If Buyer did not use the product correctly or misunderstood the product functionality, the reclamation allows resolving the issue through communication between the Customer Service and the Buyer. This helps reduce the number of erroneous returns.
-* You and Buyers do not have to pay the postage if there are actually no issues with the product.
-* Even though this workflow implies additional development effort, you can tailor it to the specific needs of your project.
+- If Buyer did not use the product correctly or misunderstood the product functionality, the reclamation allows resolving the issue through communication between the Customer Service and the Buyer. This helps reduce the number of erroneous returns.
+- You and Buyers do not have to pay the postage if there are actually no issues with the product.
+- Even though this workflow implies additional development effort, you can tailor it to the specific needs of your project.
 
 ## Scenario 3: Returns through Customer Service for B2C and B2B models
 
@@ -102,9 +102,9 @@ As in [scenario 2](#scenario2), suppose you sell products that require specific 
 
 The workflow for this scenario is:
 
-* If a *buyer* receives faulty items or has questions about them, they contact the *Customer Service*.
-* Customer Service either consults the Buyer about the items or creates a reclamation.
-* The reclamation is checked internally, and the decision about the return, exchange, or cancellation is made. Customer Service contacts Buyer with the results of the check.
+- If a *buyer* receives faulty items or has questions about them, they contact the *Customer Service*.
+- Customer Service either consults the Buyer about the items or creates a reclamation.
+- The reclamation is checked internally, and the decision about the return, exchange, or cancellation is made. Customer Service contacts Buyer with the results of the check.
 ![image](https://confluence-connect.gliffy.net/embed/image/fbcca843-0c8c-4f85-8cd9-9d2cf20b68e2.png?utm_medium=live&utm_source=custom)
 
 Like with scenario 2, this scenario is best to use for resolving disputes and handling the warranty cases. That is, when you can not do without the human intervention.
@@ -112,6 +112,6 @@ Like with scenario 2, this scenario is best to use for resolving disputes and ha
 You can also combine this scenario with [scenario 1](#scenario1). For example, you might have the *Return* option available for Buyers within 14 days after the delivery of the products, and then have some *Contact Customer Service* option, which would be active during the warranty period.
 
 The main advantages of this approach are:
-* You save Buyers' time by allowing them to quickly resolve their questions without having to create claims and wait for the responses.
-* You have only valid Buyer claims, which can be sorted and forwarded to the respective departments by the Customer Service. You also have only valid return requests, which saves your and Buyers' time and money.
-* Even though this workflow implies additional development effort, you can tailor it to the specific needs of your project.
+- You save Buyers' time by allowing them to quickly resolve their questions without having to create claims and wait for the responses.
+- You have only valid Buyer claims, which can be sorted and forwarded to the respective departments by the Customer Service. You also have only valid return requests, which saves your and Buyers' time and money.
+- Even though this workflow implies additional development effort, you can tailor it to the specific needs of your project.

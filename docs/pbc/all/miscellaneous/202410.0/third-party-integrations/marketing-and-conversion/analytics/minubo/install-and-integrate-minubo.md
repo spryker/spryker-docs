@@ -17,9 +17,11 @@ Export process runs in two modes:
 
 1. Automatic mode - every 15 minutes (default)
 2. Manual mode - using console command:
+
 ```bash
 vendor/bin/console minubo:export:data
 ```
+
 As a result, the module puts two files `Customer_TIMESTAMP.json and Order_TIMESTAMP.json` with updated data to Amazon S3 bucket. If there were no changes the module would put empty files.
 
 ## Installing and configuring Minubo
@@ -27,10 +29,13 @@ As a result, the module puts two files `Customer_TIMESTAMP.json and Order_TIMEST
 To install and configure Minubo, do the following:
 
 1. To install Minubo run next command in the console:
+
 ```bash
 composer require spryker-eco/minubo
 ```
+
 2. Copy over the content from `config/config.dist.php` to `config_default.php` and add the values:
+
 ```php
 ...
 use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
@@ -60,7 +65,9 @@ $config[MinuboConstants::MINUBO_CUSTOMER_SECURE_FIELDS] = [
 ];
 ...
 ```
-3. Copy over the content from `config/jobs.dist.php` to` jobs.php`:
+
+3. Copy over the content from `config/jobs.dist.php` to`jobs.php`:
+
 ```php
 ...
 $jobs[] = [
@@ -73,7 +80,9 @@ $jobs[] = [
 ];
 ...
 ```
+
 4. Add Minubo console to `ConsoleDependencyProder`:
+
 ```php
 ...
 use SprykerEco\Zed\Minubo\Communication\Console\MinuboConsole;
@@ -91,7 +100,9 @@ return $commands;
 }
 ...
 ```
+
 5. Add or update `FlysystemDependencyProvider` to project Service Layer:
+
 ```php
 <?php
 namespace Pyz\Service\Flysystem;

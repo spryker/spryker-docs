@@ -20,16 +20,16 @@ The *Customer Account Management* feature enables a wide range of management opt
 
 Customers create accounts to save their personal details. Back Office users manage the customer accounts: they can view and edit customer details, check orders, and add notes.  Customer accounts can have the following details:
 
-* Contact details
-* Addresses
-* Order history
-* Language and shipping preferences
+- Contact details
+- Addresses
+- Order history
+- Language and shipping preferences
 
 Password management enables basic password security for customer accounts. It lets customers do the following:
 
-* Specify the account password when registering.
-* Change the password in their customer account.
-* Request a password reset email.
+- Specify the account password when registering.
+- Change the password in their customer account.
+- Request a password reset email.
 
 Also, it lets you manage customer access, request a password change, or change it on your side. You can restrict the possibility for the customers to register with simple passwords and lock out accounts after several unsuccessful logins for a certain period of time.
 

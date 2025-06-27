@@ -31,9 +31,9 @@ related:
 To disable updates on addresses from the backend application, follow the steps described below:
 
 **Step 1**:
-* Overwrite on project side `/vendor/spryker/spryker/Bundles/Sales/src/Spryker/<br>Zed/Sales/Presentation/Detail/boxes/addresses.twig`.
-* Remove the `Edit` button.
+- Overwrite on project side `/vendor/spryker/spryker/Bundles/Sales/src/Spryker/<br>Zed/Sales/Presentation/Detail/boxes/addresses.twig`.
+- Remove the `Edit` button.
 
 **Step 2**:
-* Overwrite on project side `/vendor/spryker/spryker/Bundles/Sales/src/Spryker/<br>Zed/Sales/Communication/Controller/EditController.php`.
-* Disable `addressAction`.
+- Overwrite on project side `/vendor/spryker/spryker/Bundles/Sales/src/Spryker/<br>Zed/Sales/Communication/Controller/EditController.php`.
+- Disable `addressAction`.

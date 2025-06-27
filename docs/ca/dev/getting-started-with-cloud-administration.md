@@ -20,25 +20,25 @@ redirect_from:
 
 This document is a starting point for managing your Spryker Cloud Commerce OS (SCCOS) cloud environments.
 
-SCCOS is a fully managed solution. Before you start developing, we set up environments, tools, and services based on your Onboarding Questionnaire. If you didn't request something in the questionnaire, you can always do it via [support](https://spryker.force.com/support/s/).
+SCCOS is a fully managed solution. Before you start developing, we set up environments, tools, and services based on your Onboarding Questionnaire. If you didn't request something in the questionnaire, you can always do it via [support](https://support.spryker.com).
 
 After the initial setup, the following is configured and available:
 
-* [Environments](/docs/ca/dev/environments-overview.html): staging and production.
-* Services: RDS database, RDS backup, logs, SMTP, etc.
-* Access to AWS, internal resources, and services.
-* CD pipelines for staging and production environments.
-* Domain names and SSL certificates.
+- [Environments](/docs/ca/dev/environments-overview.html): staging and production.
+- Services: RDS database, RDS backup, logs, SMTP, etc.
+- Access to AWS, internal resources, and services.
+- CD pipelines for staging and production environments.
+- Domain names and SSL certificates.
 
 
 ## Accessing the cloud environments
 
 You can access your cloud environments via the following means:
 
-* IAM account: provides access to the AWS Management Console. For instructions, see [Access AWS Management Console](/docs/ca/dev/access/access-the-aws-management-console.html).
-* SSH: provides access to internal services via [bastion host](https://docs.aws.amazon.com/managedservices/latest/userguide/using-bastions.html). For instructions, see [Connect to services via SSH](/docs/ca/dev/access/connect-to-services-via-ssh.html).
-* VPN: provides access to internal services via [bastion host](https://docs.aws.amazon.com/managedservices/latest/userguide/using-bastions.html). You receive these access details during the onboarding.
-* SFTP: provides access to the SFTP folder mounted inside the Jenkins container. You receive these access details during the onboarding.
+- IAM account: provides access to the AWS Management Console. For instructions, see [Access AWS Management Console](/docs/ca/dev/access/access-the-aws-management-console.html).
+- SSH: provides access to internal services via [bastion host](https://docs.aws.amazon.com/managedservices/latest/userguide/using-bastions.html). For instructions, see [Connect to services via SSH](/docs/ca/dev/access/connect-to-services-via-ssh.html).
+- VPN: provides access to internal services via [bastion host](https://docs.aws.amazon.com/managedservices/latest/userguide/using-bastions.html). You receive these access details during the onboarding.
+- SFTP: provides access to the SFTP folder mounted inside the Jenkins container. You receive these access details during the onboarding.
 
 
 ## Service credentials

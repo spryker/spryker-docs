@@ -209,6 +209,7 @@ class DataExportDependencyProvider extends SprykerDataExportDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Run the export:
+
 ```bash
 vendor/bin/console data:export -c order_export_config.yml`
 ```

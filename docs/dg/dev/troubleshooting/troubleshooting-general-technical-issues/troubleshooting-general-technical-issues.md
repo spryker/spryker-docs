@@ -28,6 +28,7 @@ This section helps you troubleshoot general technical issues you might encounter
 - [Composer version 2 compatibility issues](/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/composer-version-2-compatibility-issues.html)
 - [Router generates absolute URL with localhost](/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/router-generates-absolute-url-with-localhost.html)
 - [PHPStan memory issues](/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/phpstan-memory-issues.html)
+- [Session locking issues](/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/session-locking-issues.html)
 
 
 {% info_block infoBox %}

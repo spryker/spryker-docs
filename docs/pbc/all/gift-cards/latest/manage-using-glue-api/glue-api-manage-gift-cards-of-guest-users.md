@@ -15,25 +15,25 @@ redirect_from:
   - /docs/pbc/all/gift-cards/202204.0/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html
 ---
 
-[Gift card](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html) is an alternative payment method. It is purchased as a regular product in the Spryker Commerce OS and is redeemed as a voucher code during checkout. When you apply the code of a gift card to a shopping cart, the money value of the gift card is deducted from the total sum of the cart items.
+[Gift card](/docs/pbc/all/gift-cards/latest/gift-cards.html) is an alternative payment method. It is purchased as a regular product in the Spryker Commerce OS and is redeemed as a voucher code during checkout. When you apply the code of a gift card to a shopping cart, the money value of the gift card is deducted from the total sum of the cart items.
 
 In your development, Gift Cards API provides resources for purchasing and redeeming gift cards.
 
 This endpoint allows managing gift cards of guest users.
 
-To manage the gift cards of the registered users, see [Managing gift cards of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html).
+To manage the gift cards of the registered users, see [Managing gift cards of registered users](/docs/pbc/all/gift-cards/latest/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html).
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Gift Cards API feature integration](/docs/pbc/all/gift-cards/{{site.version}}/install-and-upgrade/install-the-gift-cards-feature.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Gift Cards API feature integration](/docs/pbc/all/gift-cards/latest/install-and-upgrade/install-the-gift-cards-feature.html).
 
 ## Purchasing a gift card
 
 You can purchase a gift card as a regular product. To do that:
 
-1. Add a gift card to a guest cart. See [Add an item to a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html#add-items-to-a-guest-cart) for more details.
-2. [Submit the checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html#submit-checkout-data).
-3. [Place the order](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html#place-an-order).
+1. Add a gift card to a guest cart. See [Add an item to a guest cart](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html#add-items-to-a-guest-cart) for more details.
+2. [Submit the checkout data](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html#submit-checkout-data).
+3. [Place the order](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html#place-an-order).
 
 After placing the order, you receive the gift card code to the email address specified in the checkout. You can redeem this code to pay for the products.
 
@@ -48,7 +48,7 @@ To redeem a gift card, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to redeem the gift card in. To get it, [create](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html#create-a-guest-cart) or [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to redeem the gift card in. To get it, [create](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html#create-a-guest-cart) or [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html#retrieve-a-guest-cart). |
 
 ### Request
 
@@ -147,10 +147,10 @@ Response sample: redeem a gift card in a guest cart
 }
 ```
 
-{% include pbc/all/glue-api-guides/{{page.version}}/guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-carts-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/gift-cards-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/gift-cards-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/gift-cards-response-attributes.md -->
 
 
 ## Remove a gift card code
@@ -190,4 +190,4 @@ If the item is deleted successfully, the endpoint will respond with a `204 No C
 | 3302| Cart code can't be added. |
 | 3303| Cart code can't be removed. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

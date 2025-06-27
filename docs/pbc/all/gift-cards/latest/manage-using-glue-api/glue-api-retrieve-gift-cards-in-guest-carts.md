@@ -7,13 +7,13 @@ redirect_from:
 - /docs/pbc/all/gift-cards/202311.0/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html
 ---
 
-This document describes how to retrieve gift cards in guest carts using Glue API. To retrieve full information about guest carts, see [Manage guest carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html).
+This document describes how to retrieve gift cards in guest carts using Glue API. To retrieve full information about guest carts, see [Manage guest carts](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html).
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-- [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+- [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
 
 ## Retrieve a guest cart
 
@@ -133,10 +133,10 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 <a name="guest-cart-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-carts-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/gift-cards-response-attributes.md -->
+{% include pbc/all/glue-api-guides/latest/gift-cards-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/gift-cards-response-attributes.md -->
 
 
 
@@ -149,4 +149,4 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | 104 | Cart uuid is missing. |
 | 109 | Anonymous customer unique id is empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

@@ -355,24 +355,6 @@ Make sure that you can manage "multiselect" product attributes at `https://zed.d
 
 ### 5) Set up the product concrete table filter
 
-#### a) Install the required modules
-
-```bash
-composer require spryker/product-management:^0.19.48 --update-with-dependencies
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following modules have been installed:
-
-| MODULE                       | EXPECTED DIRECTORY                             |
-|------------------------------|------------------------------------------------|
-| ProductModule                | vendor/spryker/product-management              |
-
-{% endinfo_block %}
-
-#### b) Enable the feature in the config
-
 Extend the `isConcreteSkuSearchInProductTableEnabled` method in the `ProductManagementConfig` class at the project level and return `true`:
 
 **src/Pyz/Zed/ProductManagement/ProductManagementConfig.php**

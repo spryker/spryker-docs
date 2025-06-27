@@ -113,7 +113,7 @@ To verify that everything is set up correctly and send an email, see [How to cre
 
 ## Migration from SwiftMailer to Symfony Mailer
 
-If your application was using Swift Mailer before, and you also have SPRYKER_SMTP_ENCRYPTION='tls', please follow the next steps.
+If your application was using SwiftMailer before and you also have SPRYKER_SMTP_ENCRYPTION='tls', please follow the next steps.
 
 1. Force the port for SMTP to 465 and release this change with the migration release:
 ```php

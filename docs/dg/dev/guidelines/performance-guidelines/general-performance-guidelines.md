@@ -1,7 +1,7 @@
 ---
 title: General performance guidelines
 description: This guideline explains how to optimize the server-side execution time for your Spryker based projects.
-last_updated: May 16, 2025
+last_updated: Jun 20, 2025
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-guidelines
 originalArticleId: 5feb83b8-5196-44f9-8f6a-ffb208a2c162
@@ -534,6 +534,10 @@ Performance optimizations in the OMS availability check and order item reservati
 - [spryker/propel:^3.43.0](https://github.com/spryker/propel/releases/tag/3.43.0)
 - [spryker/sales:^11.63.0](https://github.com/spryker/sales/releases/tag/11.63.0)
 
+Performance optimizations in publish and synchronization (merchant related):
+- [spryker/merchant-product-offer-storage:^2.6.0](https://github.com/spryker/merchant-product-offer-storage/releases/tag/2.6.0)
+- [spryker/product-offer-storage:^1.8.0](https://github.com/spryker/product-offer-storage/releases/tag/1.8.0)
+- [spryker/propel:^3.45.0](https://github.com/spryker/propel/releases/tag/3.45.0)
 
 ## Performance profiling
 

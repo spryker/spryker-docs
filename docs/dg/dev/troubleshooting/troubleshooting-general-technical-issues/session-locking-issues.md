@@ -10,6 +10,8 @@ originalArticleId: c234b12e-5260-4f86-97b4-44c7ef5c8dbf
 
 This guide outlines a common performance issue related to session handling on high-traffic websites and provides both immediate mitigation strategies and a long-term architectural solution.
 
+**Note:** This guide applies specifically to the Yves (frontend) layer of Spryker-based projects and does not apply to Zed (backend).
+
 ## The Problem: Session Locking on Read-Only GET Requests
 
 A frequent performance bottleneck, especially under heavy crawler or bot traffic, is session contention in Redis.

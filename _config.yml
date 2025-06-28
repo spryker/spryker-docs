@@ -1,4 +1,4 @@
-version: "202410.0"
+version: "latest"
 
 repository: spryker/spryker-docs
 
@@ -135,8 +135,9 @@ defaults:
 versions:
   '202311.0': '202311.0'
   '202404.0': '202404.0'
-  '202505.0': '202505.0'  
-  '202410.0': '202410.0'
+  '202410.0': '202410.0'  
+  'latest': 'latest'  
+
 
 
 # versioned categories - these must match corresponding directories

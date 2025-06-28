@@ -9,7 +9,7 @@ This endpoint lets you product offer availability per service points.
 
 ## Installation
 
-[Install the Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html)
+[Install the Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html)
 
 ## Retrieve service points
 
@@ -52,13 +52,13 @@ Request sample: `POST https://glue.mysprykershop.com/product-offer-service-point
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| servicePointUuids | Object | &check; | The list of service points to retrieve the availability from. To get them, [retrieve service points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-retrieve-service-points.html) |
-| serviceTypeUuid | String | &check; | The service type to retrieve the product offer availability for. To get it, [retrieve service types](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-retrieve-service-types.html)|
-| productConcreteSku | String | &check; | The concrete product to retrieve the availability of. To get it, [retrieve concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html)|
-| productOfferReference | String | &check; | The product offer to retrieve the availability of. To get it, [retrieve product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html)|
+| servicePointUuids | Object | &check; | The list of service points to retrieve the availability from. To get them, [retrieve service points](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-retrieve-service-points.html) |
+| serviceTypeUuid | String | &check; | The service type to retrieve the product offer availability for. To get it, [retrieve service types](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-retrieve-service-types.html)|
+| productConcreteSku | String | &check; | The concrete product to retrieve the availability of. To get it, [retrieve concrete products](/docs/pbc/all/product-information-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html)|
+| productOfferReference | String | &check; | The product offer to retrieve the availability of. To get it, [retrieve product offers](/docs/pbc/all/offer-management/latest/marketplace/glue-api-retrieve-product-offers.html)|
 | quantity | String | &check; | The quantity to retrieve the availability for. |
-| merchantReference | String | &check; | The merchant to retrieve the product offer availability of. To get it, retrieve product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html)|
-| shipmentTypeUuid | String | &check; | The shipment type to check the product offer availability for. To get it, [retrieve shipment types](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-retrieve-shipment-types.html)|
+| merchantReference | String | &check; | The merchant to retrieve the product offer availability of. To get it, retrieve product offers](/docs/pbc/all/offer-management/latest/marketplace/glue-api-retrieve-product-offers.html)|
+| shipmentTypeUuid | String | &check; | The shipment type to check the product offer availability for. To get it, [retrieve shipment types](/docs/pbc/all/carrier-management/latest/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-retrieve-shipment-types.html)|
 
 
 ### Response
@@ -140,4 +140,4 @@ Request sample: `POST https://glue.mysprykershop.com/product-offer-service-point
 
 ## Possible errors
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

@@ -15,7 +15,7 @@ related:
     link: docs/pbc/all/identity-access-management/page.version/install-and-upgrade/install-the-customer-account-management-glue-api.html
 ---
 
-After an authentication refresh token is [revoked](/docs/dg/dev/glue-api/{{page.version}}/authentication-and-authorization.html) or expires, it remains in the database.
+After an authentication refresh token is [revoked](/docs/dg/dev/glue-api/latest/authentication-and-authorization.html) or expires, it remains in the database.
 
 For security reasons and to reduce the database storage space, we recommend deleting the tokens by setting their lifetime. Once they have a lifetime, you can configure a cron job to delete them automatically or do it manually.
 

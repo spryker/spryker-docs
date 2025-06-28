@@ -34,11 +34,11 @@ related:
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 ---
 
-After a customer has been created (to create a customer, see [Customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-manage-customers.html)), the registration must be confirmed. This endpoint allows you to do that by sending a confirmation code received by email.
+After a customer has been created (to create a customer, see [Customers](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-manage-customers.html)), the registration must be confirmed. This endpoint allows you to do that by sending a confirmation code received by email.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html).
 
 ## Confirm customer registration
 
@@ -79,8 +79,8 @@ If the customer email is confirmed successfully, the endpoint returns the `204 N
 | --- | --- |
 | 423 | Confirmation code is invalid or has been already used. |
 | 901 | Confirmation code is empty. |
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
 
 ## Next Steps
 
-[Authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html)
+[Authenticating as a customer](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html)

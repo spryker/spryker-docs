@@ -1,14 +1,6 @@
-{% assign current_version = page.version | default: site.version %}
-{% assign current_version_label = site.versions[current_version] | default: 'undefined' %}
-
-{% assign total_versions = site.versions | size %}
-{% if total_versions > 1 %}
-
-  {%- comment -%}
-  Replace current version (in URL) with selected version
-  {%- endcomment -%}
-  {% assign base_url = page.url | replace: '/' | replace: current_version, 'VERSION_PLACEHOLDER' %}
-
+{% if page.all_versions and page.all_versions.size > 1 %}
+  {% assign current_version = page.version %}
+  {% assign current_version_label = site.versions[current_version] | default: current_version %}
   <div class="alt-nav dropdown">
     <span class="alt-nav__opener nav-link dropdown-toggle" id="versionDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="alt-nav__opener-text">{{ current_version_label }}</span>
@@ -16,13 +8,9 @@
     </span>
     <span class="alt-nav__opener-label">Versions</span>
     <ul class="alt-nav__drop dropdown-menu" aria-labelledby="versionDropdownMenuLink">
-      {% for version_pair in site.versions %}
-        {% assign version_key = version_pair[0] %}
-        {% assign version_label = version_pair[1] %}
-        {% assign new_url = page.url | replace: current_version, version_key %}
-        <li>
-          <a href="{{ site.baseurl }}{{ new_url }}">{{ version_label }}</a>
-        </li>
+      {% for version_info in page.all_versions %}
+        {% assign version_label = site.versions[version_info.version] | default: version_info.version %}
+        <li><a href="{{ site.baseurl }}{{ version_info.url }}">{{ version_label }}</a></li>
       {% endfor %}
     </ul>
   </div>

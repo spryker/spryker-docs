@@ -9,7 +9,7 @@ This document describes how to authenticate through Multi-Factor Authentication 
 
 For the list of protected resources, see [Multi-Factor Authentication in Glue API](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication-in-glue-api.html).
 
-The email authentication method is used as an example.
+The email authentication method is used as an example. The endpoint supports all authentication methods implemented in your project.
 
 
 ## Installation

@@ -7,7 +7,7 @@ template: glue-api-storefront-guide-template
 
 This document describes how to activate Multi-Factor Authentication (MFA) methods to send requests to protected resources. To check if MFA is activated for your user, see [Retrieve MFA methods](/docs/pbc/all/multi-factor-authentication/202505.0/manage-using-glue-api/glue-api-retrieve-mfa-methods.html).
 
-The email authentication method is used as an example.
+The email authentication method is used as an example. The endpoint supports all authentication methods implemented in your project.
 
 
 ## Installation
@@ -154,8 +154,9 @@ Content-Type: application/json
 
 
 
+## Next step
 
-
+[Authenticate through MFA](/docs/pbc/all/multi-factor-authentication/202505.0/manage-using-glue-api/glue-api-authenticate-through-mfa.html)
 
 
 

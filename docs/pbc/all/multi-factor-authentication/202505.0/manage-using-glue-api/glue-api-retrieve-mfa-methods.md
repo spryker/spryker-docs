@@ -8,7 +8,7 @@ template: glue-api-storefront-guide-template
 
 This document describes how to retrieve available Multi-Factor Authentication (MFA) methods. The endpoint also shows the status of each method for the user that requested them.
 
-The email authentication method is used as an example.
+The email authentication method is used as an example. The endpoint supports all authentication methods implemented in your project.
 
 
 ## Installation
@@ -82,7 +82,9 @@ Authorization: Bearer <access_token>
 
 
 
+## Next step
 
+[Activate MFA](/docs/pbc/all/multi-factor-authentication/202505.0/glue-api-activate-and-deactivate-mfa.html)
 
 
 

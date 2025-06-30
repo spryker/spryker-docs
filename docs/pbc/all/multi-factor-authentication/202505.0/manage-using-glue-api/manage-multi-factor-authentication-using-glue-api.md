@@ -21,6 +21,6 @@ To learn more about MFA methods, see [Multi-Factor Authentication feature overvi
 
 The usual flow of using MFA is as follows:
 
-1. [Retrieve MFA methods and check the status of your user]()
-2. [Activate MFA for your user]
-3. [Authenticate through MFA and send requests to protected resources]
+1. [Retrieve available MFA methods and check their status for your user](/docs/pbc/all/multi-factor-authentication/202505.0/manage-using-glue-api/glue-api-retrieve-mfa-methods.html)
+2. [Activate MFA for your user](/docs/pbc/all/multi-factor-authentication/202505.0/glue-api-activate-and-deactivate-mfa.html)
+3. [Authenticate through MFA and send requests to protected resources](/docs/pbc/all/multi-factor-authentication/202505.0/manage-using-glue-api/glue-api-authenticate-through-mfa.html)

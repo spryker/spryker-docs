@@ -5,6 +5,8 @@ last_updated: Jun 16, 2025
 template: glue-api-storefront-guide-template
 ---
 
+This document describes how to authenticate through MFA to send requests to protected resources. 
+
 
 ## Grace period 
 
@@ -13,6 +15,16 @@ during which the user can perform protected actions without re-triggering the ne
 
 In order to configure the grace period, see [Configure Code Validity Time](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html#configure-code-validity-time).
 
+
+## Installation
+
+- [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html)
+- [Install Customer Email Multi-Factor Authentication method](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-customer-email-multi-factor-authentication-method.html)
+
+
+## Prerequisites
+
+[Activate MFA for your user](/docs/pbc/all/multi-factor-authentication/202505.0/manage-using-glue-api/glue-api-activate-and-deactivate-mfa.html)
 
 
 ## Request an MFA code
@@ -51,13 +63,18 @@ Content-Type: application/json
 `204 No Content` — means that the code has been sent through the requested method.
 
 
-### 3.2) Call the protected endpoint with the MFA code
+## Send requests to protected resources with MFA
 
-Once the code is received, include it in the `X-MFA-Code` header when calling protected endpoints.
+Include the MFA code you've received in the `X-MFA-Code` header when calling protected endpoints.
 
-For example, if you are changing the password, you would include the MFA code in the request header:
+### Example request
 
-**Request**
+| HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
+| --- | --- | --- | --- |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the user. To get the value, [authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user), [authenticate as a customer](/docs/pbc/all/identity-access-management/202410.0/manage-using-glue-api/glue-api-authenticate-as-a-customer.html), or [authenticate as a Back Office user](/docs/pbc/all/identity-access-management/202410.0/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
+| X-MFA-Code | string | ✓ | String containing digits, letters, and symbols that authorize the user through MFA. To get the value, [authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user), [authenticate as a customer](/docs/pbc/all/identity-access-management/202410.0/manage-using-glue-api/glue-api-authenticate-as-a-customer.html), or [authenticate as a Back Office user](/docs/pbc/all/identity-access-management/202410.0/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
+
+This example request shows how to change account password with MFA:
 
 ```http
 PATCH /customer-password/DE--42
@@ -99,3 +116,27 @@ If the MFA code is missing or incorrect, you will receive an error response indi
 To review all Glue API endpoints protected by default, visit the following link [Multi-Factor Authentication in Glue API](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication-in-glue-api.html).
 
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

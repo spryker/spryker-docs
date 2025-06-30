@@ -1,22 +1,28 @@
-{% if page.all_versions and page.all_versions.size > 1 %}
-  {% assign current_version = page.version %}
-  {% assign current_version_label = site.versions[current_version] | default: current_version %}
-  <div class="alt-nav dropdown">
-    <span class="alt-nav__opener nav-link dropdown-toggle" id="versionDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="alt-nav__opener-text">{{ current_version_label }}</span>
-      <i class="alt-nav__opener-icon icon-arrow-down"></i>
-    </span>
-    <span class="alt-nav__opener-label">Versions</span>
-    <ul class="alt-nav__drop dropdown-menu" aria-labelledby="versionDropdownMenuLink">
-      {% for version_info in page.all_versions %}
-        {% assign version_label = site.versions[version_info.version] | default: version_info.version %}
-        <li><a href="{{ site.baseurl }}{{ version_info.url }}">{{ version_label }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="alt-nav__overlay"></div>
+{% if page.version %}
+    {% assign current_version = page.version %}
 {% else %}
-  <div class="alt-nav">
-    <span class="alt-nav__opener">This document has only one version {{ current_version_label }}</span>
-  </div>
+    {% assign current_version = site.version %}
+{% endif %}
+
+{% assign current_version_label = site.versions[current_version] | default: 'undefined' %}
+
+{% if page.all_versions.size > 1 %}
+    <div class="alt-nav dropdown">
+        <span class="alt-nav__opener nav-link dropdown-toggle" id="versionDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="alt-nav__opener-text">{{ current_version_label }}</span>
+            <i class="alt-nav__opener-icon icon-arrow-down"></i>
+        </span>
+        <span class="alt-nav__opener-label">Versions</span>
+        <ul class="alt-nav__drop dropdown-menu" aria-labelledby="versionDropdownMenuLink">
+            {% for version in page.all_versions %}
+                {% assign version_label = site.versions[version.version] | default: 'undefined' %}
+                <li><a href="{{ site.baseurl }}{{ version.url }}">{{ version_label }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="alt-nav__overlay"></div>
+{% else %}
+    <div class="alt-nav">
+        <span class="alt-nav__opener">This document has only one version {{ current_version_label }}</span>
+    </div>
 {% endif %}

@@ -8,6 +8,9 @@ template: glue-api-storefront-guide-template
 
 This document describes how to retrieve available Multi-Factor Authentication (MFA) methods. The endpoint also shows the status of each method for the user that requested them.
 
+The email authentication method is used as an example.
+
+
 ## Installation
 
 - [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html)
@@ -62,7 +65,20 @@ Authorization: Bearer <access_token>
 
 
 
+## Possible errors
 
+| Code | Constant                                           | Meaning                          |
+|------|----------------------------------------------------|----------------------------------|
+| 5900 | ERROR_CODE_MULTI_FACTOR_AUTH_CODE_MISSING          | X-MFA-Code header is missing.    |
+| 5901 | ERROR_CODE_MULTI_FACTOR_AUTH_CODE_INVALID          | X-MFA-Code is invalid.           |
+| 5902 | ERROR_CODE_MULTI_FACTOR_AUTH_TYPE_MISSING          | MFA type is missing.             |
+| 5903 | ERROR_CODE_MULTI_FACTOR_AUTH_DEACTIVATION_FAILED   | Failed to deactivate MFA.        |
+| 5904 | ERROR_CODE_MULTI_FACTOR_AUTH_VERIFY_FAILED         | MFA type already activated.      |
+| 5905 | RESPONSE_CODE_NO_CUSTOMER_IDENTIFIER               | No customer identifier provided. |
+| 5906 | ERROR_CODE_MULTI_FACTOR_AUTH_TYPE_NOT_FOUND        | MFA type is not found.           |
+| 5907 | RESPONSE_CUSTOMER_NOT_FOUND                        | Customer not found.              |
+| 5908 | RESPONSE_USER_NOT_FOUND                            | User not found.                  |
+| 5909 | RESPONSE_CODE_NO_USER_IDENTIFIER                   | No user identifier provided.     |
 
 
 

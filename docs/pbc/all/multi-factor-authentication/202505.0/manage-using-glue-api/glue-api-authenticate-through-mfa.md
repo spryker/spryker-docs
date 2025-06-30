@@ -5,15 +5,11 @@ last_updated: Jun 16, 2025
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to authenticate through MFA to send requests to protected resources. 
+This document describes how to authenticate through Multi-Factor Authentication (MFA) to send requests to protected resources. 
 
+For the list of protected resources, see [Multi-Factor Authentication in Glue API](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication-in-glue-api.html).
 
-## Grace period 
-
-MFA codes are valid for a limited time. By default, Spryker uses a 30-minute grace period after successful MFA verification, 
-during which the user can perform protected actions without re-triggering the new code sending and just entering the existing code.
-
-In order to configure the grace period, see [Configure Code Validity Time](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html#configure-code-validity-time).
+The email authentication method is used as an example.
 
 
 ## Installation
@@ -62,6 +58,8 @@ Content-Type: application/json
 
 `204 No Content` — means that the code has been sent through the requested method.
 
+The default grace period allows the authenticated account to send requests to protected resources for 30 minutes. 
+
 
 ## Send requests to protected resources with MFA
 
@@ -72,7 +70,7 @@ Include the MFA code you've received in the `X-MFA-Code` header when calling pro
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the user. To get the value, [authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user), [authenticate as a customer](/docs/pbc/all/identity-access-management/202410.0/manage-using-glue-api/glue-api-authenticate-as-a-customer.html), or [authenticate as a Back Office user](/docs/pbc/all/identity-access-management/202410.0/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
-| X-MFA-Code | string | ✓ | String containing digits, letters, and symbols that authorize the user through MFA. To get the value, [authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user), [authenticate as a customer](/docs/pbc/all/identity-access-management/202410.0/manage-using-glue-api/glue-api-authenticate-as-a-customer.html), or [authenticate as a Back Office user](/docs/pbc/all/identity-access-management/202410.0/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
+| X-MFA-Code | string | ✓ | String containing digits, letters, and symbols that authorize the user through MFA. To get the value, [request an MFA code](#request-an-mfa-code).  |
 
 This example request shows how to change account password with MFA:
 
@@ -93,11 +91,10 @@ Content-Type: application/json
   }
 }
 ```
-**Response**: Get the appropriate response based on the endpoint you are calling. For example, if you are changing the password, you will receive a success message indicating that the password has been changed.
 
-If the MFA code is missing or incorrect, you will receive an error response indicating that the MFA verification failed.
+### Example error response 
 
-**Response**
+A successful response doesn't contain any MFA related information. However, an unsuccessful response might contain such information:
 
 ```json
 {
@@ -111,16 +108,21 @@ If the MFA code is missing or incorrect, you will receive an error response indi
 }
 ```
 
-{% info_block infoBox "Note" %}
 
-To review all Glue API endpoints protected by default, visit the following link [Multi-Factor Authentication in Glue API](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication-in-glue-api.html).
+## Possible errors
 
-{% endinfo_block %}
-
-
-
-
-
+| Code | Constant                                           | Meaning                          |
+|------|----------------------------------------------------|----------------------------------|
+| 5900 | ERROR_CODE_MULTI_FACTOR_AUTH_CODE_MISSING          | X-MFA-Code header is missing.    |
+| 5901 | ERROR_CODE_MULTI_FACTOR_AUTH_CODE_INVALID          | X-MFA-Code is invalid.           |
+| 5902 | ERROR_CODE_MULTI_FACTOR_AUTH_TYPE_MISSING          | MFA type is missing.             |
+| 5903 | ERROR_CODE_MULTI_FACTOR_AUTH_DEACTIVATION_FAILED   | Failed to deactivate MFA.        |
+| 5904 | ERROR_CODE_MULTI_FACTOR_AUTH_VERIFY_FAILED         | MFA type already activated.      |
+| 5905 | RESPONSE_CODE_NO_CUSTOMER_IDENTIFIER               | No customer identifier provided. |
+| 5906 | ERROR_CODE_MULTI_FACTOR_AUTH_TYPE_NOT_FOUND        | MFA type is not found.           |
+| 5907 | RESPONSE_CUSTOMER_NOT_FOUND                        | Customer not found.              |
+| 5908 | RESPONSE_USER_NOT_FOUND                            | User not found.                  |
+| 5909 | RESPONSE_CODE_NO_USER_IDENTIFIER                   | No user identifier provided.     |
 
 
 

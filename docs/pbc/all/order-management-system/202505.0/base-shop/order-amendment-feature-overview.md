@@ -10,7 +10,7 @@ redirect_from:
 
 The *Order Amendment* feature enables customers to make changes to previously placed orders before they enter processing. Customers can adjust items, quantities, delivery details, and payment options.
 
-Only registered customers can make changes to placed orders because guest users don't have access to order history. 
+Only registered customers can make changes to placed orders because guest users don't have access to order history.
 
 A customer can change an order once it reaches a state that allows amendments. By default, customers can initiate an amendment when an order is in the `grace period started` state.
 
@@ -62,7 +62,7 @@ Prices at the time of initiating an amendment may differ from the prices used to
 
 - Current catalog prices: catalog prices at the time of initiating order amendment are applied to all items.
 - Original order prices: catalog prices at the time of placing the original order are applied to all items.
-- Best price: If a product's price dropped since the order had been placed, the new lower price is used; otherwise, the original prices is used. 
+- Best price: If a product's price dropped since the order had been placed, the new lower price is used; otherwise, the original prices is used.
 
 During the order amendment process, the prices for cart items are displayed according to the strategy only on Cart and Product Details pages. On all other pages, such as Product Catalog or Search Results pages, the current prices ar displayed.
 
@@ -78,7 +78,7 @@ For better user experience, we recommend implementing a way to inform customers 
 
 ## Grace period
 
-A *grace period* lets you restrict order amendments to a certain time period after an order reaches an amendable state. For example, you can allow customers to change orders for two hours. This can be useful for shops that process orders quickly but want to give their customers enough time to change orders if needed, preventing order cancellations during processing. 
+A *grace period* lets you restrict order amendments to a certain time period after an order reaches an amendable state. For example, you can allow customers to change orders for two hours. This can be useful for shops that process orders quickly but want to give their customers enough time to change orders if needed, preventing order cancellations during processing.
 
 For instructions on configuring the grace period, see [Install the Order Amendment feature](https://docs.spryker.com/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature#set-up-configuration).
 

@@ -14,22 +14,25 @@ def setup_all_page_versions(page, config)
 
   versioned_page_urls = page.site.pages.select do |site_page|
     site_page.url.match(url_pattern)
-  end.map(&:url)
+  end.map(&:url).uniq
 
-  versions = get_versions(versioned_page_urls)
+  versions = get_versions(versioned_page_urls, page.site.config['versions'])
   config['page']['all_versions'] = versions.sort_by { |v| v['version'].to_s }.reverse
 end
 
-def get_versions(versioned_page_urls)
+def get_versions(urls, defined_versions)
   version_pattern = %r{/(?<page_version>(\d+\.\d+|latest))/}
 
-  versioned_page_urls.map do |url|
-    version_pattern.match(url)
+  urls.map do |url|
+    match = version_pattern.match(url)
+    version = match && match[:page_version]
+    next unless version && defined_versions.key?(version)
+
     {
-      'version' => Regexp.last_match(:page_version),
+      'version' => version,
       'url' => url
     }
-  end
+  end.compact
 end
 
 def can_be_versioned(page)
@@ -37,7 +40,7 @@ def can_be_versioned(page)
   role = page['role']
   versioned_categories = page.site.config['versioned_categories']
 
-  return false if versioned_categories[product].nil? || versioned_categories[product][role].nil?
+  return false if versioned_categories.dig(product, role).nil?
 
   page.url.match(%r{\A/docs/#{product}/#{role}/(?<category>[\w-]+)/})
   page_category = Regexp.last_match(:category)

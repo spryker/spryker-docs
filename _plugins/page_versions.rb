@@ -8,16 +8,16 @@ def setup_current_page_version(page, config)
 end
 
 def setup_all_page_versions(page, config)
-  # Normalize to numeric placeholder to detect all versions including 'latest'
-  normalized_url = page.url.gsub(%r{/(?:\d+\.\d+|latest)/}, '/\d+\\.\\d+/')
-  full_url_pattern = %r{\A#{normalized_url}\Z}
+  current_path = page.url
+  normalized_url = current_path.gsub(%r{/(?:\d+\.\d+|latest)/}, '/__VERSION__/')
+  url_pattern = Regexp.new("\\A" + Regexp.escape(normalized_url).gsub('__VERSION__', '(?:\\d+\\.\\d+|latest)') + "\\Z")
 
   versioned_page_urls = page.site.pages.select do |site_page|
-    site_page.url.match(full_url_pattern)
+    site_page.url.match(url_pattern)
   end.map(&:url)
 
   versions = get_versions(versioned_page_urls)
-  config['page']['all_versions'] = versions.sort_by { |version| version['version'] }.reverse!
+  config['page']['all_versions'] = versions.sort_by { |v| v['version'].to_s }.reverse
 end
 
 def get_versions(versioned_page_urls)

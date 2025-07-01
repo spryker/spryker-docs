@@ -24,12 +24,14 @@ def get_versions(versioned_page_urls)
   version_pattern = %r{/(?<page_version>(\d+\.\d+|latest))/}
 
   versioned_page_urls.map do |url|
-    version_pattern.match(url)
+    match = version_pattern.match(url)
+    next unless match && match[:page_version]
+
     {
-      'version' => Regexp.last_match(:page_version),
+      'version' => match[:page_version],
       'url' => url
     }
-  end
+  end.compact
 end
 
 def can_be_versioned(page)

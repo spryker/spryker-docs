@@ -29,12 +29,12 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-Usually in order to implement a module that will publish data to the frontend, you need to create a module that will handle those actions. We wecommend creating a separate module for the *Storage* and *Search* data.
+Usually in order to publish some data to the frontend from your database, you need to create a module that will handle those actions. Usual recommendation is to create a module that will handle the *Publish* and *Synchronize* processes. The module will contain the code that will handle the events, prepare data, and synchronize it to the frontend.
 All required steps are described in this article.
 
 ## 1. Create a base module
 
-We recommend to put a `Publish & Synchromization` related code in a separate module. A module usually represents one database or domain entity. E.g. `StoreStorage` module will populate storage with `Store` data and also with data from related tables like `StoreContext`. 
+We recommend putting a `Publish & Synchromization` related code in a separate module. A module usually represents one database or domain entity. E.g. `StoreStorage` module will populate storage with `Store` data and also with data from related tables like `StoreContext`. 
 
 You can create a module with a few options:
 - Create a module manually. For details, see [Create a module](/docs/dg/dev/backend-development/extend-spryker/create-modules).
@@ -55,12 +55,12 @@ At least a basic files structure of the module should be ready after this step.
 To automatically trigger events for the *Publish* and *Synchronize* processes, you need to enable the *Event* behavior in your Propel model. This behavior is used to trigger events when an entity is created, updated, or deleted.
 Without this behavior, you will have to trigger events manually.
 
-You can check how it can be done in the example below:
+Let's say you want to have stores data available in Storage. You need to enable the *Event* behavior for `spy_store` table in your Propel model XML schema file.
 
 ```xml
-<table name="spy_product_abstract">
+<table name="spy_store">
     <behavior name="event">
-        <parameter name="spy_product_abstract_all" column="*"/>
+        <parameter name="spy_stores_all" column="*"/>
     </behavior>
 </table>
 ```
@@ -90,54 +90,54 @@ Initializes the Propel ORM database layer:
 console propel:install
 ```
 
-Now create, update and delete events will be triggered automatically when you do those actions with Propel entities.
+Now `create`, `update` and `delete` events will be triggered automatically when you do those actions with Propel entities.
 
 {% info_block infoBox "Info"%}
 
 ```php
-$productAbstractEntity = SpyProductAbstractQuery::create()->findOne();
-$productAbstractEntity->setColorCode("#FFFFFF");
-$productAbstractEntity->save();
+$storeEntity = SpyStoreQuery::create()->findOne();
+$storeEntity->setName('Silpo');
+$storeEntity->save();
 ```
 
 {% endinfo_block %}
 
-This actions will trigger the `Entity.spy_product_abstract.update` event, which can be used to publish data.
+This actions will trigger the `Entity.spy_store.update` event, which can be used to publish data.
 
 `Entity.{table_name}.{action}` is a naming convention for the Publish events. The `{table_name}` part is the name of the Propel table that triggers the event, and `{action}` is one of the following actions: create, update, or delete.
 
-In the Spryker packages you can find that such events are defined in the shared `Config` class of the module. For example, the `GlossaryStorageConfig` class defines the events for the `spy_glossary_translation` table.
+In the Spryker packages you can find that such events are defined in the shared `Config` class of the module. For example, the `StoreStorageConfig` class can be created to define the events for the `spy_store` table.
 
 ```php
     /**
      * Specification:
-     * - Represents spy_glossary_translation entity creation event.
+     * - Represents spy_store entity creation event.
      *
      * @api
      *
      * @var string
      */
-    public const ENTITY_SPY_GLOSSARY_TRANSLATION_CREATE = 'Entity.spy_glossary_translation.create';
+    public const ENTITY_SPY_STORE_CREATE = 'Entity.spy_store.create';
 
     /**
      * Specification:
-     * - Represents spy_glossary_translation entity change event.
+     * - Represents spy_store entity change event.
      *
      * @api
      *
      * @var string
      */
-    public const ENTITY_SPY_GLOSSARY_TRANSLATION_UPDATE = 'Entity.spy_glossary_translation.update';
+    public const ENTITY_SPY_STORE_UPDATE = 'Entity.spy_store.update';
 
     /**
      * Specification:
-     * - Represents spy_glossary_translation entity deletion event.
+     * - Represents spy_store entity deletion event.
      *
      * @api
      *
      * @var string
      */
-    public const ENTITY_SPY_GLOSSARY_TRANSLATION_DELETE = 'Entity.spy_glossary_translation.delete';
+    public const ENTITY_SPY_STORE_DELETE = 'Entity.spy_store.delete';
 ```
 
 This is not a mandatory step, but it is a good idea to define event names in the code once and use it later.
@@ -155,7 +155,7 @@ As a naming convention, it's recommended to append `_storage` to the end of the 
 
 All mirror tables must implement the *Synchronization* behavior, that is used to synchronize data to *Storage* or *Search*. Also, the table must populate foreign keys necessary to backtrack the Propel entities.
 
-Sample Storage synchronization table:
+This is how a storage table for store entity can look. The *Synchronization* behavior will add a `data` and `key` columns automatically, so you don't need to define them in the table definition, but you still can do it if you want to specify the column type or other parameters. Also any fields that might be required for the synchronization process can be added to the table definition.
 
 ```xml
     <table name="spy_store_storage" identifierQuoting="true">
@@ -177,7 +177,7 @@ Sample Storage synchronization table:
       </table>
 ```
 
-Sample Elasticsearch synchronization table:
+Let's also take a look at the example of a search table:
 
 ```xml
     <table name="spy_cms_page_search" identifierQuoting="true">
@@ -211,7 +211,8 @@ Synchronization behavior parameters:
 
 ## 4. Create required plugins
 
-In order to implement the *Publish* and *Synchronize* process, you need to create a few plugins. The plugins are used to handle events, prepare data, and synchronize it to the frontend.
+After all required tables are in place, we need to add some code that will move data from the main table to the `_storage` or `_search` one. And the code that will send data from those table to actual Storage or Search databases.
+To implement the *Publish* and *Synchronize* process, you need to create a few plugins. The plugins are used to handle events, prepare data, and synchronize it to the frontend.
 You need at least two plugins: one for handling the *Publish* events and another one for synchronizing data to the frontend.
 
 ### 4.1 Create a Publisher plugin
@@ -273,7 +274,8 @@ protected function getPublishAndSynchronizeHealthCheckPlugins(): array
 ```
 
 ### 4.2 Create a Synchronization plugin
-A Synchronization plugin is used to synchronize data to the frontend. It is a plugin that implements the `\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataBulkRepositoryPluginInterface` interface and contains the `getData` method. The method accepts an offset, limit, and an array of IDs and returns an array of `SynchronizationDataTransfer` objects. Those objects will be used to synchronize data to the frontend as they contain data from _storage or _search tables.
+A Synchronization plugin is used to synchronize data to the frontend. 
+It is a plugin that implements the `\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataBulkRepositoryPluginInterface` interface and contains the `getData` method. The method accepts an offset, limit, and an array of IDs and returns an array of `SynchronizationDataTransfer` objects. Those objects will be used to synchronize data to the frontend as they contain data from _storage or _search tables. 
 
 ```php
 class StoreSynchronizationDataPlugin extends AbstractPlugin implements SynchronizationDataBulkRepositoryPluginInterface
@@ -367,6 +369,38 @@ class StoreSynchronizationDataPlugin extends AbstractPlugin implements Synchroni
 ```
 If the entity is store related - `hasStore()` method must return `true`, otherwise `getSynchronizationQueuePoolName()` need to return a string with the pool name. It should be the same as is provided in table definition `queue_pool` of Synchronization behavior.
 
+An example of the `getData()` method implementation:
+```php
+public function getStoreStorageSynchronizationDataTransfers(StoreStorageCriteriaTransfer $storeStorageCriteriaTransfer): array
+    {
+        $storeStorageQuery = $this->getFactory()->createStoreStorageQuery();
+
+        $storeStorageConditionsTransfer = $storeStorageCriteriaTransfer->getStoreStorageConditions();
+        if ($storeStorageConditionsTransfer && $storeStorageConditionsTransfer->getStoreIds()) {
+            $storeStorageQuery->filterByFkStore_In($storeStorageConditionsTransfer->getStoreIds());
+        }
+
+        $paginationTransfer = $storeStorageCriteriaTransfer->getPagination();
+        if ($paginationTransfer) {
+            $storeStorageQuery = $this->preparePagination($storeStorageQuery, $paginationTransfer);
+        }
+
+        $storeStorageEntities = $storeStorageQuery->find();
+
+        $synchronizationDataTransfers = [];
+        foreach ($storeStorageEntities as $storeStorageEntity) {
+            /** @var string $data */
+            $data = $storeStorageEntity->getData();
+
+            $synchronizationDataTransfers[] = (new SynchronizationDataTransfer())
+                ->setData($data)
+                ->setKey($storeStorageEntity->getKey());
+        }
+
+        return $synchronizationDataTransfers;
+    }
+```
+
 ## 5. Configure Publish & Synchronization queues
 
 If you want to use separate queues for your entity you need to configure it by providing a key as a queue name in `Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins()` as mentioned before and also in the `Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins()` by setting message and sync processors.
@@ -412,3 +446,6 @@ For the publishing we are using the default publish queue, which is defined in t
 ## 6. Validate the implementation
 
 To validate the implementation, you can update a Propel entity in the backoffice and check if the data is published to the *Storage* or *Search* databases. If any errors occur during the process, you can check the error queue in the RabbitMQ management UI. The error queue is created automatically by adding an `error` suffix to the queue name.
+
+For the Search you can check this [document](/docs/pbc/all/search/202410.0/base-shop/tutorials-and-howtos/configure-a-search-query) to get more info how you can work with data that you just sync.
+For the Storage on the other hand, you can check this [document](/docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage) to learn more.

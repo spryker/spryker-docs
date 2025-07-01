@@ -5,16 +5,9 @@ template: howto-guide-template
 last_updated: Mar 6, 2025
 ---
 
-Email Multi-Factor Authentication (MFA) is a security mechanism that requires users to verify their identity through an authentication code sent to their registered email. This document describes how to install and configure email MFA.
+Email Multi-Factor Authentication (MFA) is a security mechanism that verifies identity using an authentication code sent to an email address. This document describes how to install and configure email MFA.
 
 For more information about MFA, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html).
-
-
-## Email multi-factor authentication mechanism
-
-1. The user attempts to log in or perform a protected action.
-2. A one-time code is sent to their email.
-3. The user enters the received code to complete authentication.
 
 ## Prerequisites
 
@@ -69,7 +62,7 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 Import MFA email templates per store:
 
-data/import/common/AT/cms_block_store.csv
+**data/import/common/AT/cms_block_store.csv**
 
 ```csv
 cms-block-email--multi_factor_auth_email--html,AT
@@ -78,7 +71,7 @@ cms-block-email--multi_factor_auth_email--text,AT
 
 
 
-data/import/common/DE/cms_block_store.csv
+**data/import/common/DE/cms_block_store.csv**
 
 ```csv
 cms-block-email--multi_factor_auth_email--html,DE
@@ -87,7 +80,7 @@ cms-block-email--multi_factor_auth_email--text,DE
 
 
 
-data/import/common/US/cms_block_store.csv
+**data/import/common/US/cms_block_store.csv**
 
 ```csv
 cms-block-email--multi_factor_auth_email--html,US
@@ -108,17 +101,19 @@ cms-block-email--multi_factor_auth_email--text,customer_multi_factor_auth_email-
 
 ## 4) Set up behavior
 
-### 4.1) For Customers
+Set up the following behaviors.
+
+### 4.1) Set up email MFA for customers
 
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                            | SPECIFICATION                                                                                                                                  | PREREQUISITES | NAMESPACE                                                        |
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------|
-| CustomerEmailMultiFactorAuthPlugin                | Handles email-based MFA authentication, enabling customers to verify their identity via an authentication code sent to their registered email. |               | Spryker\Yves\MultiFactorAuth\Plugin\Factors\Email                |
+| CustomerEmailMultiFactorAuthPlugin                | Handles email MFA, enabling customers to verify their identity using a code sent to their registered email address. |               | Spryker\Yves\MultiFactorAuth\Plugin\Factors\Email                |
 | CustomerEmailMultiFactorAuthMailTypeBuilderPlugin | Builds and processes an email template for sending MFA codes to customers.                                                                     |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Mail\Customer   |
-| CustomerEmailCodeSenderStrategyPlugin             | Sends the authentication code to the customer's email address.                                                                                 |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Sender\Customer |
+| CustomerEmailCodeSenderStrategyPlugin             | Sends an authentication code to a customer's email address.                                                                                 |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Sender\Customer |
 
-src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthDependencyProvider.php
+**src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
 ```php
 namespace Pyz\Yves\MultiFactorAuth;
@@ -138,7 +133,7 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
 ```
 
 
-src/Pyz/Zed/Mail/MailDependencyProvider.php
+**src/Pyz/Zed/Mail/MailDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\Mail;
@@ -157,7 +152,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 }
 ```
 
-src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php
+**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\MultiFactorAuth;
@@ -185,27 +180,27 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
    This sends a verification code to the customer's email address.
 3. Enter the received code in the confirmation form.
    If the code is valid, Email MFA should be successfully activated.
-4. Log out and attempt to log in with the account with Email MFA enabled.
+4. Log out and attempt to log in with the same account.
    Make sure you're prompted to enter an MFA code.
 5. Enter the code in the form.
    Make sure this logs you in successfully.
 6. In the customer profile, try updating the email address, password, or deleting the account. Make sure the following applies:
 * Completing the actions requires entering an MFA code
-* You can perform several actions without entering a code within the configured grace period.
+* You can perform several actions without entering a code within the configured grace period
 
 {% endinfo_block %}
 
-### 4.2) For Backoffice Users
+### 4.2) Set up email MFA for Back Office users
 
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                        | SPECIFICATION                                                                                                                                 | PREREQUISITES | NAMESPACE                                                       |
 |-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------|
-| UserEmailMultiFactorAuthPlugin                | Handles email-based MFA authentication, enabling users to verify their identity via an authentication code sent to their registered email.    |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Factors\Email  |
-| UserEmailCodeSenderStrategyPlugin             | Sends the authentication code to the user's email address.                                                                                    |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Sender\User    |
+| UserEmailMultiFactorAuthPlugin                | Handles email MFA, enabling Back Office users to verify their identity using a code sent to their registered email address.    |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Factors\Email  |
+| UserEmailCodeSenderStrategyPlugin             | Sends an authentication code to a user's email address.                                                                                    |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Sender\User    |
 | UserEmailMultiFactorAuthMailTypeBuilderPlugin | Builds and processes an email template for sending MFA codes to users.                                                                        |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Mail\User  |
 
-src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php
+**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
 ```php
 
@@ -233,7 +228,7 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
 } 
 ```
 
-src/Pyz/Zed/Mail/MailDependencyProvider.php
+**src/Pyz/Zed/Mail/MailDependencyProvider.php**
 
 ```php
 
@@ -255,33 +250,33 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1. On the Storefront, go to the MFA setup page: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`. Make sure the following applies:
+1. In the Back Office, go to the MFA setup page: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`. Make sure the following applies:
 * The **Set up Multi-Factor Authentication** menu item is displayed in the user profile dropdown navigation menu
 * The **Email** authentication method is displayed in the list of available authentication methods
 2. For **Email Multi-Factor Authentication**, click **Activate**.
    This sends a verification code to the user's email address.
 3. Enter the received code in the confirmation form.
    If the code is valid, Email MFA should be successfully activated.
-4. Log out and attempt to log in with the account with Email MFA enabled.
+4. Log out and attempt to log in with the same account.
    Make sure you're prompted to enter an MFA code.
 5. Enter the code in the form.
    Make sure this logs you in successfully.
 6. In the user profile, try updating the email address, password, or deleting the account. Make sure the following applies:
 * Completing the actions requires entering an MFA code
-* You can perform several actions without entering a code within the configured grace period.
+* You can perform several actions without entering a code within the configured grace period
 
 {% endinfo_block %}
 
-### 4.3) For Agent Users
+### 4.3) Set up email MFA for agent users
 
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                         | SPECIFICATION                                                                                                                                    | PREREQUISITES | NAMESPACE                                                   |
 |------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------|
-| AgentUserEmailMultiFactorAuthPlugin            | Handles email-based MFA authentication, enabling agent users to verify their identity via an authentication code sent to their registered email. |               | Spryker\Yves\MultiFactorAuth\Plugin\Factors\Email           |
+| AgentUserEmailMultiFactorAuthPlugin            | Handles email MFA, enabling agents to verify their identity using a code sent to their registered email address.    |               | Spryker\Yves\MultiFactorAuth\Plugin\Factors\Email           |
 | UserEmailMultiFactorAuthMailTypeBuilderPlugin  | Builds and processes an email template for sending MFA codes to users.                                                                           |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Mail\User  |
 
-src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthDependencyProvider.php
+**src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
 ```php
 
@@ -301,7 +296,7 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
 } 
 ```
 
-src/Pyz/Zed/Mail/MailDependencyProvider.php
+**src/Pyz/Zed/Mail/MailDependencyProvider.php**
 
 ```php
 
@@ -330,26 +325,27 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
    This sends a verification code to the user's email address.
 3. Enter the received code in the confirmation form.
    If the code is valid, Email MFA should be successfully activated.
-4. Log out and attempt to log in with the account with Email MFA enabled.
+4. Log out and attempt to log in with the same account.
    Make sure you're prompted to enter an MFA code.
 5. Enter the code in the form.
    Make sure this logs you in successfully.
+6. In the user profile, try updating the email address, password, or deleting the account. Make sure the following applies:   
 * Completing the actions requires entering an MFA code
 * You can perform several actions without entering a code within the configured grace period.
 
 {% endinfo_block %}
 
-### 4.4) For Glue Rest API
+### 4.4) Set up email MFA for Glue API
 
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                            | SPECIFICATION                                                                                                                                  | PREREQUISITES | NAMESPACE                                                        |
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------|
-| CustomerEmailMultiFactorAuthPlugin                | Handles email-based MFA authentication, enabling customers to verify their identity via an authentication code sent to their registered email. |               | Spryker\Yves\MultiFactorAuth\Plugin\Factors\Email              |
+| CustomerEmailMultiFactorAuthPlugin                | Handles email MFA, enabling agents to verify their identity using a code sent to their registered email address. |               | Spryker\Yves\MultiFactorAuth\Plugin\Factors\Email              |
 | CustomerEmailMultiFactorAuthMailTypeBuilderPlugin | Builds and processes an email template for sending MFA codes to customers.                                                                     |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Mail\Customer   |
-| CustomerEmailCodeSenderStrategyPlugin             | Sends the authentication code to the customer's email address.                                                                                 |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Sender\Customer |
+| CustomerEmailCodeSenderStrategyPlugin             | Sends an authentication code to an customer's email address.                                                                                 |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Sender\Customer |
 
-src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthDependencyProvider.php
+**src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
 ```php
 
@@ -368,7 +364,7 @@ class MultiFactorAuthDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 
-src/Pyz/Zed/Mail/MailDependencyProvider.php
+**src/Pyz/Zed/Mail/MailDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\Mail;
@@ -387,7 +383,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 }
 ```
 
-src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php
+**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\MultiFactorAuth;

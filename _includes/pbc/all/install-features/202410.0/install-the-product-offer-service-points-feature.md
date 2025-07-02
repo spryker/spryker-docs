@@ -252,7 +252,7 @@ product_offer_service_point.validation.product_offer_not_unique,Ein Product Offe
 console data:import glossary
 ```
 
-### 5) Configure export to Redis
+### 5) Configure export to key-value storage (Redis or Valkey)
 
 Configure tables to be published and synchronized to the Storage on create, edit, and delete changes.
 
@@ -359,7 +359,7 @@ class ProductOfferServicePointStorageConfig extends SprykerProductOfferServicePo
 | ServiceWritePublisherPlugin                      | Publishes product offer services data by `SpyService` entity events.                                  |               | Spryker\Zed\ProductOfferServicePointStorage\Communication\Plugin\Publisher\Service             |
 | ServicePointWritePublisherPlugin                 | Publishes product offer services data by `SpyServicePoint` entity events.                             |               | Spryker\Zed\ProductOfferServicePointStorage\Communication\Plugin\Publisher\ServicePoint        |
 | ServicePointStoreWritePublisherPlugin            | Publishes product offer services data by `SpyServicePointStore` entity events.                        |               | Spryker\Zed\ProductOfferServicePointStorage\Communication\Plugin\Publisher\ServicePointStore   |
-| ProductOfferServicePublisherTriggerPlugin        | Allows to populate product offer service storage table with data and trigger further export to Redis. |               | Spryker\Zed\ProductOfferServicePointStorage\Communication\Plugin\Publisher                     |
+| ProductOfferServicePublisherTriggerPlugin        | Allows to populate product offer service storage table with data and trigger further export to key-value storage (Redis or Valkey). |               | Spryker\Zed\ProductOfferServicePointStorage\Communication\Plugin\Publisher                     |
 
 <details>
 <summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
@@ -425,7 +425,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 | PLUGIN                                                     | SPECIFICATION                                                                    | PREREQUISITES | NAMESPACE                                                                        |
 |------------------------------------------------------------|----------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------|
-| ProductOfferServiceSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the product offer service storage table content into Redis. |               | Spryker\Zed\ProductOfferServicePointStorage\Communication\Plugin\Synchronization |
+| ProductOfferServiceSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the product offer service storage table content into key-value storage (Redis or Valkey). |               | Spryker\Zed\ProductOfferServicePointStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -466,9 +466,9 @@ Make sure that the `product-offer-service` synchronization plugin works correctl
 2. Run the `console sync:data -r product_offer_service` command.
 3. Make sure that, in your system, storage entries are displayed with the `kv:product_offer_service:{store}:{product_offer_reference}` mask.
 
-Make sure when a product offer service is created via DataImport, it's exported to Redis accordingly.
+Make sure when a product offer service is created via DataImport, it's exported to key-value storage (Redis or Valkey) accordingly.
 
-Make sure that, in Redis, data is displayed in the following format:
+Make sure that, in key-value storage (Redis or Valkey), data is displayed in the following format:
 
 ```yaml
 {

@@ -89,4 +89,4 @@ The process of importing products can happen only once to reimport every product
 ./setup -i
 ```
 
-After this, you have the data containing your changes imported in the SQL database and Redis data store. The product details page also must display the new attribute.
+After this, you have the data containing your changes imported in the SQL database and (Redis or Valkey) data store. The product details page also must display the new attribute.

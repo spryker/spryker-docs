@@ -1,6 +1,6 @@
 ---
 title: Use and configure key-value storage (Redis or Valkey)
-description: This document describes how Redis is used within Spryker; the current functionality can be extended according to your needs.
+description: This document describes how key-value storage (Redis or Valkey) is used within Spryker; the current functionality can be extended according to your needs.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/redis-as-kv
@@ -15,11 +15,21 @@ related:
     link: docs/scos/dev/back-end-development/client/implement-a-client.html
 ---
 
-This document describes how Redis is used within Spryker. The current functionality can be extended according to your needs.
+This document describes how key-value storage (Redis or Valkey) is used within Spryker. The current functionality can be extended according to your needs.
 
-## About Redis
+Spryker supports both Redis and Valkey as key-value storage solutions. For detailed information about the differences, compatibility, and migration considerations, see [Key-value store architecture (Redis and Valkey)](/docs/dg/dev/architecture/redis-valkey-key-value-storage.html).
 
-*Redis* is a key-value data storage, and for the values, it supports a large collection of data structures, such as strings, hashes, lists, or sets.
+## About key-value storage (Redis and Valkey)
+
+**Redis** is an open-source, in-memory key-value data store that supports a large collection of data structures, including strings, hashes, lists, sets, and more. It provides high performance and flexibility for caching and data storage.
+
+**Valkey** is an open-source, high-performance key-value datastore that supports the Redis protocol and APIs. It's developed under the Linux Foundation and offers:
+- Full Redis compatibility
+- High performance and scalability
+- Active community development
+- Enterprise-grade reliability
+
+Both solutions provide the same functionality within Spryker and can be used interchangeably.
 
 The following table shows how translations are stored:
 
@@ -69,9 +79,11 @@ Every time you make an update delete insert request for data that is also stored
 
 ## Browse the data from the key-value store (Redis or Valkey)
 
-To browse the data that's stored in the key-value store (Redis or Valkey), you need to set up Redis Desktop Manager (RDS). [Install RDS](http://redisdesktop.com/download) and then configure it as shown on the following screenshot.
+To browse the data that's stored in the key-value store (Redis or Valkey), you can use Redis-compatible desktop managers such as Redis Desktop Manager (RDS) or RedisInsight. Since Valkey maintains full Redis protocol compatibility, any Redis client will work with both Redis and Valkey.
 
-Find the current Redis Port in `config/Shared/config_default-development.php`.
+For Redis Desktop Manager, [install RDS](http://redisdesktop.com/download) and then configure it as shown on the following screenshot.
+
+Find the current key-value store port in `config/Shared/config_default-development.php`.
 ![Redis setup](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Using+Redis+as+a+KV+Storage/redis-setup.png)
 
 Make sure that your virtual machine is up and running.
@@ -97,7 +109,7 @@ The caption for the button depends on the selected locale:
 
 ### Access the key-value store (Redis or Valkey) data storage
 
-Redis data storage is accessed using `StorageClient`.
+Key-value data storage (Redis or Valkey) is accessed using `StorageClient`. The `StorageClient` provides a unified interface that works seamlessly with both Redis and Valkey backends.
 
 The `StorageClient` can be obtained as an external dependency in the client layer for Yves. In the dependency provider of the client layer from your module, add the `StorageClient` dependency as in the following example:
 
@@ -142,17 +154,23 @@ To retrieve the value for a given key, you can use the `get($key)` operation fro
 $storedValue = $this->storageClient->get($myKey);
 ```
 
-## Use a password for accessing Redis
+## Use a password for accessing key-value storage
 
-You can define a password to restrict access to the key-value store (Redis or Valkey). Spryker provides the `\Spryker\Shared\Storage\StorageConstants::STORAGE_REDIS_PASSWORD` configuration option that can be used to configure the key-value store (Redis or Valkey) client to authenticate Spryker.
+You can define a password to restrict access to the key-value store (Redis or Valkey). Spryker provides the `\Spryker\Shared\Storage\StorageConstants::STORAGE_REDIS_PASSWORD` configuration option that can be used to configure the key-value store client to authenticate Spryker.
 
 To activate it, specify the `redis` protocol for `\Spryker\Shared\Storage\StorageConstants::STORAGE_REDIS_SCHEME` (the Spryker Demo Shop uses `tcp` by default).
 
-## Use and configure Redis cache
+{% info_block infoBox "Configuration compatibility" %}
+
+All Redis configuration parameters (prefixed with `REDIS_*`) work seamlessly with both Redis and Valkey since Valkey maintains full Redis protocol compatibility.
+
+{% endinfo_block %}
+
+## Use and configure key-value storage cache
 
 To boost the performance in Spryker even more, we have built a caching mechanism to cache all used key-value store keys on any page in the shop.
 
-A page in the shop often contains many different Redis entries for various content and information it has. For example, a product title, a description, and attributes on a product details page. All of this data is stored in many key-value store key-value pairs. To retrieve the data for a page, multiple Redis GET requests are needed, so if a page uses 100 key-value store key-value pairs, then 100 Redis GET requests are needed to retrieve the data.
+A page in the shop often contains many different key-value store entries for various content and information it has. For example, a product title, a description, and attributes on a product details page. All of this data is stored in many key-value store key-value pairs. To retrieve the data for a page, multiple GET requests are needed, so if a page uses 100 key-value store key-value pairs, then 100 GET requests are needed to retrieve the data.
 
 To optimize the data retrieval from the key-value store (Redis or Valkey), we designed an algorithm to store all the needed keys in a given page in the shop in only one key-value store key and then use one Redis MGET (multi-get) request to retrieve all the data. Using the implemented algorithm, only two requests to the key-value store (Redis or Valkey) are needed for most of the pages: one GET request to get the cache entry and one MGET requests to get all the data.
 

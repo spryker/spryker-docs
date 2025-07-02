@@ -31,15 +31,15 @@ Redis (Remote Dictionary Server) is an open-source, in-memory data structure sto
 
 ### What is Valkey?
 
-Valkey is a high-performance data store forked from the key-value store (Redis or Valkey) 7.2.4. It was created as a Linux Foundation project and maintains full compatibility with the key-value store (Redis or Valkey) protocols and APIs. Valkey emerged as a response to the key-value store (Redis or Valkey)'s licensing changes and is backed by major technology companies including AWS, Google Cloud, Oracle, Snap Inc., OVH, and Percona.
+Valkey is a high-performance data store forked from the Redis 7.2.4. It was created as a Linux Foundation project and maintains full compatibility with the Redis protocols and APIs. Valkey emerged as a response to the Redis's licensing changes and is backed by major technology companies including AWS, Google Cloud, Oracle, Snap Inc., OVH, and Percona.
 
 ### Compatibility between Redis and Valkey
 
-**Full Protocol Compatibility**: Valkey maintains 100% compatibility with the key-value store (Redis or Valkey) protocols, APIs, and data structures. This means:
+**Full Protocol Compatibility**: Valkey maintains 100% compatibility with the Redis protocols, APIs, and data structures. This means:
 
 - Existing Redis clients work seamlessly with Valkey
 - Redis commands and syntax remain unchanged
-- Data migration from the key-value store (Redis or Valkey) to Valkey is straightforward
+- Data migration from the Redis to Valkey is straightforward
 - Applications built for Redis require no code changes
 
 **Configuration Compatibility**: In Spryker, configuration parameters maintain their Redis naming convention even when using Valkey. For example:
@@ -69,7 +69,7 @@ Valkey is designed for better memory efficiency, which can contribute to optimiz
 
 ### Continued Security Patches, Simplified Licensing, and Strong Long-Term Support
 
-The version of Redis currently in use (6.2) has reached its end-of-life, meaning it no longer receives security patches. Migrating to Valkey not only restores ongoing maintenance and vital security updates but also offers a clear and simple BSD 3 license. This contrasts with the key-value store (Redis or Valkey)'s more recent complex triple licensing model (RSALv2, SSPLv1, AGPLv3). Valkey is a Linux Foundation project and enjoys broad industry backing from major tech leaders including AWS, Google Cloud, Oracle, Snap Inc., OVH, and Percona, ensuring robust long-term support and continuous innovation. This move future-proofs a critical component of your infrastructure.
+The version of Redis currently in use (6.2) has reached its end-of-life, meaning it no longer receives security patches. Migrating to Valkey not only restores ongoing maintenance and vital security updates but also offers a clear and simple BSD 3 license. This contrasts with the Redis's more recent complex triple licensing model (RSALv2, SSPLv1, AGPLv3). Valkey is a Linux Foundation project and enjoys broad industry backing from major tech leaders including AWS, Google Cloud, Oracle, Snap Inc., OVH, and Percona, ensuring robust long-term support and continuous innovation. This move future-proofs a critical component of your infrastructure.
 
 ## Technical implementation in Spryker
 
@@ -82,7 +82,7 @@ Throughout Spryker's codebase, you'll encounter references to "Redis" in:
 - Comments and documentation
 - Method names and variable names
 
-These naming conventions are intentionally preserved for backward compatibility. Whether you're using the key-value store (Redis or Valkey) or Valkey as your underlying key-value store, the Spryker application interfaces remain consistent.
+These naming conventions are intentionally preserved for backward compatibility. Whether you're using the Redis or Valkey as your underlying key-value store, the Spryker application interfaces remain consistent.
 
 ### Data structure and operations
 
@@ -98,7 +98,7 @@ All Redis commands used by Spryker (GET, SET, HGET, HSET, LPUSH, LPOP, SADD, ZAD
 
 ### Migration considerations
 
-When migrating from the key-value store (Redis or Valkey) to Valkey:
+When migrating from the Redis to Valkey:
 
 1. **No application code changes required** - Spryker applications continue to work without modification
 2. **Configuration remains the same** - Use existing Redis configuration parameters
@@ -111,4 +111,4 @@ You can read about further Valkey benefits in this dedicated article: [Valkey Tu
 
 ## Summary
 
-Spryker Commerce OS supports both Redis and Valkey as key-value storage solutions. While maintaining full backward compatibility with the key-value store (Redis or Valkey), Valkey offers significant performance improvements, enhanced reliability, better licensing terms, and long-term support. The transition to Valkey is seamless due to its protocol-level compatibility with the key-value store (Redis or Valkey), ensuring that existing Spryker installations can benefit from these improvements without breaking changes.
+Spryker Commerce OS supports both Redis and Valkey as key-value storage solutions. While maintaining full backward compatibility with the Redis, Valkey offers significant performance improvements, enhanced reliability, better licensing terms, and long-term support. The transition to Valkey is seamless due to its protocol-level compatibility with the Redis, ensuring that existing Spryker installations can benefit from these improvements without breaking changes.

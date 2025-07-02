@@ -73,7 +73,7 @@ console event:trigger -r product_concrete
 
 {% info_block warningBox "Verification" %}
 
-Make sure that there is data in Redis with keys:
+Make sure that there is data in (Redis or Valkey) with keys:
 
 - `kv:product_abstract:{% raw %}{{{% endraw %}store_name{% raw %}}}{% endraw %}:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_abstract{% raw %}}}{% endraw %}`
 - `kv:product_concrete:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_concrete{% raw %}}}{% endraw %}`

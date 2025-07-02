@@ -457,6 +457,6 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-When a file data is created, updated, or deleted, make sure it's exported or removed from Redis accordingly.
+When a file data is created, updated, or deleted, make sure it's exported or removed from key-value storage (Redis or Valkey) accordingly.
 
 {% endinfo_block %}

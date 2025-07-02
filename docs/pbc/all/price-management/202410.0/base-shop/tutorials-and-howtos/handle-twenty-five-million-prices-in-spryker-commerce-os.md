@@ -377,4 +377,4 @@ create index IF NOT exists csv_data_merchant_relationship_prices_net_price ON cs
 With the configuration and customizations described in this document, Spryker can hold and manage millions of prices in one instance. RabbitMQ, internal APIs, data import modules, and Glue API allow building a custom data import to do the following:
 - Fetch a lot of data from a third-party system.
 - Successfully import it into the database.
-- Denormalize and replicate it to be used by quick storages, such as Redis and ES.
+- Denormalize and replicate it to be used by quick storages, such as (Redis or Valkey) and ES.

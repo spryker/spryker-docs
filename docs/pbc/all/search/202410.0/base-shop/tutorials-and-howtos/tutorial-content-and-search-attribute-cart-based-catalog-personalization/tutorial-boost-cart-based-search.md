@@ -68,7 +68,7 @@ class CatalogFactory extends SprykerCatalogFactory
 }
 ```
 
-7. To get the color of a product from the cart, you need to read the product data from the key-value storage (Redis) using `\Spryker\Client\Product\ProductClientInterface::getProductConcreteByIdForCurrentLocale()`. The product client must be added to  `CatalogDependencyProvider` and provided to the plugin in the same way as in the previous step. See the full source code of [`CartBoostQueryExpanderPlugin`](#plugin).
+7. To get the color of a product from the cart, you need to read the product data from the key-value storage (Redis or Valkey) using `\Spryker\Client\Product\ProductClientInterface::getProductConcreteByIdForCurrentLocale()`. The product client must be added to  `CatalogDependencyProvider` and provided to the plugin in the same way as in the previous step. See the full source code of [`CartBoostQueryExpanderPlugin`](#plugin).
 8. Cleanup: the example code of `CartBoostQueryExpanderPlugin` is good for educational purposes, but needs a minor adjustment to match Spryker architecture: `FunctionScore` and `MultiMatch` objects must be instantiated in `CatalogFactory` of the catalog client. Now, move the instantiation of these objects to the factory and use the factory inside the plugin.
 
 <a name="plugin"></a>
@@ -187,7 +187,7 @@ class CartBoostQueryExpanderPlugin extends AbstractPlugin implements QueryExpand
      */
     protected function getProductColor(ItemTransfer $itemTransfer)
     {
-        // We get the concrete product from the key-value storage (Redis).
+        // We get the concrete product from the key-value storage (Redis or Valkey).
         $productData = $this->getFactory()
             ->getProductClient()
             ->getProductConcreteByIdForCurrentLocale($itemTransfer->getId());

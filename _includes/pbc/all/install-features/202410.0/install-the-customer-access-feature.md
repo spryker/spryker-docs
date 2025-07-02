@@ -132,7 +132,7 @@ Make sure that the changes were implemented successfully. To achieve this, trigg
 
 {% endinfo_block %}
 
-### 3) Configure export to Redis
+### 3) Configure export to key-value storage (Redis or Valkey)
 
 This step publishes tables on change (create, edit, delete) to the `spy_unauthenticated_customer_access_storage` and synchronizes the data to Storage.
 
@@ -170,7 +170,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a customer access rule is created, updated, or deleted, it's exported (or removed) to Redis.
+Make sure that when a customer access rule is created, updated, or deleted, it's exported (or removed) to key-value storage (Redis or Valkey).
 
 | TARGET ENTITY                       | EXAMPLE EXPECTED DATA IDENTIFIER   |
 |-------------------------------------|------------------------------------|

@@ -437,7 +437,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 
 {% endinfo_block %}
 
-### 5) Configure export to Redis
+### 5) Configure export to key-value storage (Redis or Valkey)
 
 Configure tables to be published and synchronized to the Storage on create, edit, and delete changes:
 
@@ -478,7 +478,7 @@ class ProductReviewStorageConfig extends SprykerProductReviewStorageConfig
 
 | PLUGIN                                   | SPECIFICATION                                                            | PREREQUISITES | NAMESPACE                                                             |
 |------------------------------------------|--------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------|
-| ProductReviewSynchronizationDataPlugin   | Allows synchronizing the product review search table content into Redis. | None          | Spryker\Zed\ProductReviewStorage\Communication\Plugin\Synchronization |
+| ProductReviewSynchronizationDataPlugin   | Allows synchronizing the product review search table content into key-value storage (Redis or Valkey). | None          | Spryker\Zed\ProductReviewStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -508,7 +508,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 | PLUGIN                                            | SPECIFICATION                                                                      | PREREQUISITES | NAMESPACE                                                   |
 |---------------------------------------------------|------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------|
-| ProductReviewEventResourceQueryContainerPlugin    | Allows synchronizing the product abstract review storage table content with Redis. | None          | Spryker\Zed\ProductReviewStorage\Communication\Plugin\Event |
+| ProductReviewEventResourceQueryContainerPlugin    | Allows synchronizing the product abstract review storage table content with key-value storage (Redis or Valkey). | None          | Spryker\Zed\ProductReviewStorage\Communication\Plugin\Event |
 
 **src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php**
 
@@ -571,7 +571,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 1. Fill the `spy_product_review` table with some data and run `console event:trigger -r product_abstract_review`.
 2. Make sure that the `spy_product_abstract_review_storage` table is filled with respective data.
 3. In the `spy_product_abstract_review_storage` table, change some records and run `console sync:data product_abstract_review`.
-4. Make sure that your changes have been synced to the Redis.
+4. Make sure that your changes have been synced to the key-value storage (Redis or Valkey).
 
 {% endinfo_block %}
 

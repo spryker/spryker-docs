@@ -781,7 +781,7 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 
 {% endinfo_block %}
 
-### 6) Configure export to Redis
+### 6) Configure export to key-value storage (Redis or Valkey)
 
 Configure tables to be published to `spy_shipment_type_storage` and synchronized to the Storage on create, edit, and delete changes:
 
@@ -876,7 +876,7 @@ class ShipmentTypeStorageConfig extends SprykerShipmentTypeStorageConfig
 | ShipmentMethodPublishShipmentTypeWriterPublisherPlugin | Publishes shipment type data by `ShipmentMethod` publish events.                                |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethod      |
 | ShipmentMethodShipmentTypeWriterPublisherPlugin        | Publishes shipment type data by `SpyShipmentMethod` entity events.                              |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethod      |
 | ShipmentMethodStoreShipmentTypeWriterPublisherPlugin   | Publishes shipment type data by `SpyShipmentMethodStore` entity events.                         |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethodStore |
-| ShipmentTypePublisherTriggerPlugin                     | Enables populating the shipment type storage table with data and triggering the export to Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher                     |
+| ShipmentTypePublisherTriggerPlugin                     | Enables populating the shipment type storage table with data and triggering the export to key-value storage (Redis or Valkey). |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher                     |
 
 <details><summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
@@ -939,7 +939,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 | PLUGIN                                              | SPECIFICATION                                                            | PREREQUISITES | NAMESPACE                                                            |
 |-----------------------------------------------------|--------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| ShipmentTypeSynchronizationDataBulkRepositoryPlugin | Enables synchronizing the shipment type storage table's content into Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization |
+| ShipmentTypeSynchronizationDataBulkRepositoryPlugin | Enables synchronizing the shipment type storage table's content into key-value storage (Redis or Valkey). |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -980,9 +980,9 @@ Make sure that `shipment-type` synchronization plugin works correctly:
 2. Run the `console sync:data -r shipment_type` command.
 3. Make sure that, in your system, storage entries are displayed with the `kv:shipment_type:{store}:{shipment_type_id}` mask.
 
-Make sure that when a shipment type is created or edited through BAPI, it's exported to Redis accordingly.
+Make sure that when a shipment type is created or edited through BAPI, it's exported to key-value storage (Redis or Valkey) accordingly.
 
-In Redis, make sure data is represented in the following format:
+In key-value storage (Redis or Valkey), make sure data is represented in the following format:
 
 ```json
 {

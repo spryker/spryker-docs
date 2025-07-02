@@ -134,7 +134,7 @@ Make sure that the following changes have been applied in transfer objects by ch
 
 {% endinfo_block %}
 
-### 3) Configure export to Redis
+### 3) Configure export to key-value storage (Redis or Valkey)
 
 The following plugins are responsible for publishing the content item to storage.
 
@@ -274,7 +274,7 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 
 | PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE   |
 | ---------------- | ------------------- | ---------- | -------------------- |
-| ContentStorageSynchronizationDataPlugin | Syncs all the content entries from the database to Redis. |               | Spryker\Zed\ContentStorage\Communication\Plugin\Synchronization |
+| ContentStorageSynchronizationDataPlugin | Syncs all the content entries from the database to key-value storage (Redis or Valkey). |               | Spryker\Zed\ContentStorage\Communication\Plugin\Synchronization |
 
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
@@ -314,14 +314,14 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, when content banners are exported or created, updated, deleted in the Back Office, they are exported or removed from Redis accordingly.
+Make sure that, when content banners are exported or created, updated, deleted in the Back Office, they are exported or removed from key-value storage (Redis or Valkey) accordingly.
 
 | STORAG TYPE | TARGET ENTITY    | EXAMPLE EXPECTED DATA IDENTIFIER        |
 | ---------- | ---------------------------- | ---------------------------------------------- |
-| Redis       | Content Banner                | content:en_us:br1                                 |
-| Redis       | Content Abstract Product List | content:en_us:apl2                                |
-| Redis       | Content Product Set           | content:en_us:ps-1                                |
-| Redis       | Content File List             | content:en_us:0d9f4722-d076-5acc-9d8e-e9daff7cd61 |
+| Redis or Valkey       | Content Banner                | content:en_us:br1                                 |
+| Redis or Valkey       | Content Abstract Product List | content:en_us:apl2                                |
+| Redis or Valkey       | Content Product Set           | content:en_us:ps-1                                |
+| Redis or Valkey       | Content File List             | content:en_us:0d9f4722-d076-5acc-9d8e-e9daff7cd61 |
 
 {% endinfo_block %}
 

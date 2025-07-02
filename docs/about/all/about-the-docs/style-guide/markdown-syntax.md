@@ -272,8 +272,8 @@ Published table:
 
 | Storage Type | Target Entity | Example Expected Data Identifier |
 | --- | --- | --- |
-| Redis | Product Abstract Price | kv:price_product_abstract_merchant_relationship:de:1:1 |
-| Redis | Product Concrete Price | kv:price_product_abstract_merchant_relationship:de:1:1 |
+| Key-value store (Redis or Valkey) | Product Abstract Price | kv:price_product_abstract_merchant_relationship:de:1:1 |
+| Key-value store (Redis or Valkey) | Product Concrete Price | kv:price_product_abstract_merchant_relationship:de:1:1 |
 
 <details>
 <summary>Example Expected Data Fragment: Product Abstract Price</summary>

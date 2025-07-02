@@ -11,7 +11,7 @@ redirect_from:
 related:
   - title: Manage dependencies with Composer
     link: docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
-  - title: Redis configuration
+  - title: Key-value store configuration
     link: docs/dg/dev/set-up-spryker-locally/redis-configuration.html
 ---
 

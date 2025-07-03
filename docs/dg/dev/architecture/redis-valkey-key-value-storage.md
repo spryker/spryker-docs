@@ -16,12 +16,12 @@ Spryker Commerce OS uses a key-value storage system for caching and data storage
 
 Key-value storage is a type of NoSQL database that stores data as key-value pairs. In Spryker, this storage system serves as:
 
-- A client-side data source for localized content
-- A high-performance cache to avoid costly SQL database queries
+- A client-side data source for localized content such as translations and region-specific data
+- A high-performance cache to reduce database queries and improve response times
 - Storage for session data and temporary data structures
 - A mechanism for data synchronization across distributed systems
 
-The key-value database keeps data in sync with the SQL database through specialized cronjobs and supports replication for scalability.
+The key-value database keeps data in sync with the SQL database through the Publish & Synchronize system and supports replication for scalability.
 
 ## Redis vs Valkey
 
@@ -94,7 +94,7 @@ Both Redis and Valkey support the same data structures used by Spryker:
 - Sets for unique collections
 - Sorted sets for scored collections
 
-All Redis commands used by Spryker (GET, SET, HGET, HSET, LPUSH, LPOP, SADD, ZADD, etc.) work identically with Valkey.
+All Redis commands used by Spryker (GET, SET, MGET, MSET, HGET, HSET, LPUSH, LPOP, SADD, ZADD, etc.) work identically with Valkey.
 
 ### Migration considerations
 

@@ -14,6 +14,66 @@ related:
     link: docs/pbc/all/multi-factor-authentication/page.version/create-multi-factor-authentication-methods.html
 ---
 
+
+Spryker's Glue API supports Multi-Factor Authentication (MFA) to enhance security for sensitive operations performed by authenticated customers. 
+
+## MFA Enforcement in Glue API
+
+MFA is enforced only for customers who are authenticated via an access token. It does not apply to guest users or publicly accessible endpoints.
+
+MFA protection is applied only to HTTP methods that modify data or perform sensitive actions, such as POST, PATCH, or DELETE. GET requests are not subject to MFA validation.
+
+## Default protected endpoints
+
+By default, the following Glue API endpoints are protected by MFA:
+- customer-password
+- customers
+- addresses
+- carts
+- checkout
+- order-payments
+
+To customize which endpoints are protected by MFA, see to [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html#configure-enabled-routes-and-forms).
+
+## MFA for customers
+
+New customers are prompted to set up MFA on the profile overview page. To activate an MFA method, they need to verify that it's working by entering an authentication code. This prevents them from getting locked out of their account.
+
+Once MFA methods are set up, a customer can activate and deactivate individual MFA methods. This action is protected by default.
+
+### MFA for Back Office users and agents
+
+Back Office users manage their MFA settings in user profile section in the Back Office.
+
+Agent users manage their MFA settings through their Agent profile interface.
+
+{% info_block warningBox %}
+
+Agent users and Back Office users are technically the same underlying user account. Any MFA configuration applied in one interface automatically applies in the other.
+
+{% endinfo_block %}
+
+
+## Admin control over MFA for customers
+
+Backoffice administrators can disable Multi-Factor Authentication (MFA) for individual customers directly from the Backoffice.
+
+This functionality is useful in scenarios where:
+- A customer is locked out due to MFA issues (for example, lost access to their authentication method)
+- Support intervention is required to reset the customer's MFA configuration
+
+To disable MFA for a customer:
+1. Navigate to the customer's profile in the Backoffice.
+2. Use the **Remove MFA** action to deactivate currently enabled MFA methods for the selected customer.
+
+Once MFA is disabled, the customer can log in using just their credentials. They can reconfigure MFA from their profile at any time.
+
+
+
+
+
+
+
 This section explains how to activate, deactivate, and use Multi-Factor Authentication (MFA) when sending requests to protected resources using Glue API.
 
 To learn more about MFA methods, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html).

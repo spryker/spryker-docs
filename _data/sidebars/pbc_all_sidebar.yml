@@ -25,10 +25,14 @@ entries:
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-chart-module.html
                   - title: Upgrade the Back Office to Bootstrap 5
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-back-office-to-bootstrap-5.html                    
-                  - title: Install Backoffice accessibility improvements
+                  - title: Install Back Office accessibility improvements
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-accessibility-improvements.html
                     include_versions:
                       - "202410.0"
+                  - title: Install Back Office dropdown navigation
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html
+                    include_versions:
+                      - "202505.0"
 
 
               - title: Configure the timezone in the Back Office

@@ -1907,13 +1907,17 @@ entries:
             url: /docs/pbc/all/multi-factor-authentication/install-multi-factor-authentication-feature.html
           - title: Install customer email Multi-Factor Authentication method
             url: /docs/pbc/all/multi-factor-authentication/install-customer-email-multi-factor-authentication-method.html
-          - title: Create Multi-Factor Authentication methods
+          - title: Create MFA methods
             url: /docs/pbc/all/multi-factor-authentication/create-multi-factor-authentication-methods.html          
           - title: Manage using Glue API
             url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/manage-multi-factor-authentication-using-glue-api.html      
             nested:
-              - 
-                                  
+              - title: Retrieve MFA methods
+                url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/glue-api-retrieve-mfa-methods.html
+              - title: Activate and deactivate MFA
+                url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/glue-api-activate-and-deactivate-mfa.html
+              - title: Authenticate through MFA
+                url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/glue-api-authenticate-through-mfa.html                                                  
 
       - title: Offer Management
         url: /docs/pbc/all/offer-management/offer-management.html

@@ -54,12 +54,11 @@ This separation allows for fine-grained control of security settings based on co
 
 ### 2.1) Configure code length
 
-To configure the length of the authentication code, extend the `MultiFactorAuthConfig` class:
+This section describes how to configure the length of the authentication code by extending the `MultiFactorAuthConfig` class.
 
-#### 2.1.1) For Customers
+#### For Customers
 
-<details>
-<summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
+**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
 
 ```php
 namespace Pyz\Zed\MultiFactorAuth;
@@ -83,12 +82,10 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 }
 ```
 
-</details>
 
-#### 2.1.2) For Users
+#### For Users
 
-<details>
-<summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
+**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
 
 ```php
 namespace Pyz\Zed\MultiFactorAuth;
@@ -111,15 +108,16 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
     }
 }
 ```
-</details>
+
+
 
 ### 2.2) Configure code validity time
 
-To configure the time interval in minutes during which an authentication code is valid, extend the `MultiFactorAuthConfig` class:
+This section describes how to configure the time interval in minutes during which an authentication code is valid by extending the `MultiFactorAuthConfig` class.
 
-#### 2.2.1) For Customers
-<details>
-<summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
+#### For Customers
+
+**>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
 
 ```php
 namespace Pyz\Zed\MultiFactorAuth;
@@ -143,11 +141,12 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 }
 ```
 
-</details>
 
-#### 2.2.2) For Users
-<details>
-<summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
+
+#### For Users
+
+
+**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
 
 ```php
 namespace Pyz\Zed\MultiFactorAuth;
@@ -170,16 +169,17 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
     }
 }
 ```
-</details>
+
+
 
 ### 2.3) Configure brute-force protection limit
 
-To configure the maximum number of failed MFA attempts a customer can make before brute force protection is triggered, extend the `MultiFactorAuthConfig` class:
+This section describes how to configure the maximum number of failed MFA attempts a customer can make before brute force protection is triggered. This is done by extending the `MultiFactorAuthConfig` class.
 
-#### 2.3.1) For Customers
+#### For Customers
 
-<details>
-<summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
+
+**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
 
 ```php
 namespace Pyz\Zed\MultiFactorAuth;
@@ -203,12 +203,12 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 }
 ```
 
-</details>
 
-#### 2.3.2) For Users
 
-<details>
-<summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
+#### For Users
+
+
+**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
 
 ```php
 namespace Pyz\Zed\MultiFactorAuth;
@@ -231,16 +231,16 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
     }
 }
 ```
-</details>
+
 
 ### 2.4) Configure protected routes and forms
 
 Extend the `MultiFactorAuthConfig` class and configure the needed routes and forms to require MFA:
 
-#### 2.4.1) For Customers
+#### For Customers
 
-<details>
-<summary>src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
+
+**src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthConfig.php**
 
 ```php
 namespace Pyz\Yves\MultiFactorAuth;
@@ -266,12 +266,12 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 }
 ```
 
-</details>
 
-#### 2.4.2) For Users
 
-<details>
-<summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
+#### For Users
+
+
+**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
 
 ```php
 namespace Pyz\Zed\MultiFactorAuth;
@@ -299,12 +299,12 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
     }
 }
 ```
-</details>
 
-#### 2.4.3) For Glue Rest API
 
-<details>
-<summary>src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
+#### For Glue Rest API
+
+
+**src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthConfig.php**
 
 ```php
 namespace Pyz\Glue\MultiFactorAuth;
@@ -324,7 +324,7 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
     }
 }
 ```
-</details>
+
 
 {% info_block warningBox "" %}
 
@@ -336,8 +336,8 @@ You can configure multiple forms on the same page to require MFA authentication.
 
 To allow access to Multi-Factor Authentication requests during the login process in the Backoffice, define a public ACL rule.
 
-<details>
-<summary>config/Shared/config_default.php</summary>
+
+**config/Shared/config_default.php**
 
 ```php
 $config[AclConstants::ACL_DEFAULT_RULES] = [
@@ -349,10 +349,10 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
     ],
 ];
 ```
-</details>
 
-<details>
-<summary>src/Pyz/Zed/SecurityGui/SecurityGuiConfig.php</summary>
+
+
+**src/Pyz/Zed/SecurityGui/SecurityGuiConfig.php**
 
 ```php
 <?php
@@ -368,7 +368,7 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
     protected const IGNORABLE_ROUTE_PATTERN = '^/(...|multi-factor-auth|...)';
 }
 ```
-</details>
+
 
 ## 3) Set up the database schema and transfer objects
 
@@ -538,8 +538,8 @@ Enable the following behaviors by registering the plugins:
 
 #### 6.1) For customers
 
-<details>
-<summary>src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php</summary>
+
+<summary>src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php
 
 ```php
 namespace Pyz\Yves\CustomerPage;
@@ -558,7 +558,7 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 }
 ```
 
-</details>
+
 
 <details>
 <summary>src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthDependencyProvider.php</summary>
@@ -581,8 +581,7 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
 ```
 </details>
 
-<details>
-<summary>src/Pyz/Yves/Router/RouterDependencyProvider.php</summary>
+**src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
 ```php
 namespace Pyz\Yves\Router;
@@ -603,8 +602,8 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 </details>
 
-<details>
-<summary>src/Pyz/Yves/Form/FormDependencyProvider.php</summary>
+
+**src/Pyz/Yves/Form/FormDependencyProvider.php**
 
 ```php
 namespace Pyz\Yves\Form;
@@ -623,12 +622,12 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 }
 ```
 
-</details>
+
 
 #### 6.2) For agent users
 
-<details>
-<summary>src/Pyz/Yves/AgentPage/AgentPageDependencyProvider.php</summary>
+
+**src/Pyz/Yves/AgentPage/AgentPageDependencyProvider.php**
 
 ```php
 namespace Pyz\Yves\AgentPage;
@@ -646,10 +645,10 @@ class AgentPageDependencyProvider extends SprykerShopAgentPageDependencyProvider
     }
 }
 ```
-</details>
 
-<details>
-<summary>src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthDependencyProvider.php</summary>
+
+
+**src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
 ```php
 namespace Pyz\Yves\MultiFactorAuth;
@@ -667,10 +666,10 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
     }
 }
 ```
-</details>
 
-<details>
-<summary>src/Pyz/Yves/Router/RouterDependencyProvider.php</summary>
+
+
+**rc/Pyz/Yves/Router/RouterDependencyProvider.php**
 
 ```php
 namespace Pyz\Yves\Router;
@@ -688,10 +687,10 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
     }
 }
 ```
-</details>
 
-<details>
-<summary>src/Pyz/Yves/Form/FormDependencyProvider.php</summary>
+
+
+**src/Pyz/Yves/Form/FormDependencyProvider.php**
 
 ```php
 namespace Pyz\Yves\Form;
@@ -709,12 +708,12 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
     }
 }
 ```
-</details>
+
 
 #### 6.3) For users in Backoffice
 
-<details>
-<summary>src/Pyz/Zed/Customer/CustomerDependencyProvider.php</summary>
+
+**src/Pyz/Zed/Customer/CustomerDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\Customer;
@@ -732,10 +731,9 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
     }
 }
 ```
-</details>
 
-<details>
-<summary>src/Pyz/Zed/Form/FormDependencyProvider.php</summary>
+
+**src/Pyz/Zed/Form/FormDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\Form;
@@ -754,10 +752,10 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 }
 ```
 
-</details>
 
-<details>
-<summary>src/Pyz/Zed/Gui/GuiDependencyProvider.php</summary>
+
+
+**src/Pyz/Zed/Gui/GuiDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\Gui;
@@ -776,7 +774,7 @@ class GuiDependencyProvider extends SprykerGuiDependencyProvider
 }
 ```
 
-</details>
+
 
 {% warning_block warningBox "Verification" %}
 
@@ -785,8 +783,8 @@ Make sure the following [Install the Backoffice dropdown navigation](/docs/pbc/a
 {% endinfo_block %}
 
 
-<details>
-<summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php</summary>
+
+**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\MultiFactorAuth;
@@ -804,10 +802,10 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
     }
 }
 ```
-</details>
 
-<details>
-<summary>src/Pyz/Zed/SecurityGui/SecurityGuiDependencyProvider.php</summary>
+
+
+**src/Pyz/Zed/SecurityGui/SecurityGuiDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\SecurityGui;
@@ -825,12 +823,12 @@ class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
     }
 }
 ```
-</details>
+
 
 #### 6.4) For Glue Rest API
 
-<details>
-<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 namespace Pyz\Glue\GlueApplication;

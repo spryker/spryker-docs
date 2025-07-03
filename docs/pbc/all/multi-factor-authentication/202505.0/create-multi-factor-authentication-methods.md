@@ -153,8 +153,7 @@ Register the plugins in the dependency providers:
 
 - Back Office users: Use the `MultiFactorAuthDependencyProvider::getUserMultiFactorAuthPlugins()` class in the Zed module
 - Agents: Use the `MultiFactorAuthDependencyProvider::getAgentMultiFactorAuthPlugins()` method
-
-When implementing MFA plugins for agents** and Back Office users, register them in using the `MultiFactorAuthDependencyProvider::getUserSendStrategyPlugins()` method.
+- Universal plugin for all users: Use the `MultiFactorAuthDependencyProvider::getUserSendStrategyPlugins()` method
 
 
 **src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**

@@ -12,7 +12,7 @@ related:
 
 Spryker Commerce OS uses a key-value storage system for caching and data storage to provide high-performance data access. This system has traditionally been based on Redis, but Spryker now supports both Redis and Valkey as compatible key-value storage solutions.
 
-## What is key-value storage?
+## Key-value storage overview
 
 Key-value storage is a type of NoSQL database that stores data as key-value pairs. In Spryker, this storage system serves as:
 
@@ -25,11 +25,11 @@ The key-value database keeps data in sync with the SQL database through speciali
 
 ## Redis vs Valkey
 
-### What is Redis?
+### Redis overview
 
 Redis (Remote Dictionary Server) is an open-source, in-memory data structure store used as a database, cache, and message broker. It has been the traditional key-value storage solution in Spryker Commerce OS.
 
-### What is Valkey?
+### Valkey overview
 
 Valkey is a high-performance data store forked from the Redis 7.2.4. It was created as a Linux Foundation project and maintains full compatibility with the Redis protocols and APIs. Valkey emerged as a response to the Redis's licensing changes and is backed by major technology companies including AWS, Google Cloud, Oracle, Snap Inc., OVH, and Percona.
 
@@ -77,7 +77,7 @@ The version of Redis currently in use (6.2) has reached its end-of-life, meaning
 
 Throughout Spryker's codebase, you'll encounter references to "Redis" in:
 
-- Configuration constants (e.g., `StorageConstants::STORAGE_REDIS_*`)
+- Configuration constants (for example, `StorageConstants::STORAGE_REDIS_*`)
 - Module names and class names
 - Comments and documentation
 - Method names and variable names

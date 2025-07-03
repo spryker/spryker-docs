@@ -6,27 +6,27 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization-reference
 originalArticleId: cdb95c33-1519-4323-9d27-7cba32a8ac82
 redirect_from:
-  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
-  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
+   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
+   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
 related:
-  - title: Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
-  - title: Handle data with Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
-  - title: Adding publish events
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
-  - title: Implement event trigger publisher plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
-  - title: Implement synchronization plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
-  - title: Debug listeners
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
-  - title: Publish and synchronize and multi-store shop systems
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
-  - title: Publish and Synchronize repeated export
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
-  - title: Synchronization behavior - enabling multiple mappings
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
+   - title: Publish and Synchronization
+     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
+   - title: Handle data with Publish and Synchronization
+     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
+   - title: Adding publish events
+     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
+   - title: Implement event trigger publisher plugins
+     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
+   - title: Implement synchronization plugins
+     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
+   - title: Debug listeners
+     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
+   - title: Publish and synchronize and multi-store shop systems
+     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
+   - title: Publish and Synchronize repeated export
+     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+   - title: Synchronization behavior - enabling multiple mappings
+     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
 To implement *Publish and Synchronize* in your code, follow these steps:
@@ -43,7 +43,7 @@ console code:generate:module:shared MyModuleStorage
 
 {% info_block infoBox "Naming convention"%}
 
-As a naming convention, names of modules that publish data to the key-value store (Redis or Valkey) end with Storage (for example, `MyModuleStorage`, and names of modules that publish to Elasticsearch end with Search (for example, `MyModuleSearch`).
+As a naming convention, names of modules that publish data to Redis end with Storage (for example, `MyModuleStorage`, and names of modules that publish to Elasticsearch end with Search (for example, `MyModuleSearch`).
 
 {% endinfo_block %}
 
@@ -103,7 +103,7 @@ To deliver the prepared data to the frontend, you need to configure synchronizat
 
 {% info_block infoBox "Naming convention"%}
 
-As a naming convention, names of queues that synchronize data to the key-value store (Redis or Valkey) start with *sync.storage*, and names of queues that synchronize data to Elasticsearch start with *sync.search*.
+As a naming convention, names of queues that synchronize data to Redis start with *sync.storage*, and names of queues that synchronize data to Elasticsearch start with *sync.search*.
 
 {% endinfo_block %}
 
@@ -126,7 +126,7 @@ The next step is to create a database table that is used as a mirror for the cor
 
 {% info_block infoBox "Naming convention"%}
 
-As a naming convention, it's recommended to append `_storage` to the end of the table name if it's synchronized with the key-value store (Redis or Valkey), and `_search` if it's synchronized with Elasticsearch.
+As a naming convention, it's recommended to append `_storage` to the end of the table name if it's synchronized with Redis, and `_search` if it's synchronized with Elasticsearch.
 
 {% endinfo_block %}
 
@@ -171,13 +171,13 @@ Sample Elasticsearch synchronization table (see `data/shop/development/current/s
     </table>
 ```
 
-The *Synchronization* behavior added by the above schema files adds a column that stores the actual data to synchronize to the key-value store (Redis or Valkey) or Elasticsearch (in JSON format). The column name is *data*.
+The *Synchronization* behavior added by the above schema files adds a column that stores the actual data to synchronize to Redis or Elasticsearch (in JSON format). The column name is *data*.
 
 Synchronization behavior parameters:
-- `resource`—specifies the key-value store (Redis or Valkey) or Elasticsearch namespace to synchronize with.
+- `resource`—specifies the Redis or Elasticsearch namespace to synchronize with.
 - `store`—specifies whether it's necessary to specify a store for an entity.
 - `locale`—specifies whether it's necessary to specify a locale for an entity.
-- `key_suffix_column`—specifies the name of the column that will be appended to the key-value store (Redis or Valkey) or Elasticsearch key to make the key unique. If this parameter is omitted, then all entities will be stored under the same key.
+- `key_suffix_column`—specifies the name of the column that will be appended to the Redis or Elasticsearch key to make the key unique. If this parameter is omitted, then all entities will be stored under the same key.
 - `queue_group`—specifies the queue group for synchronization.
 - `params`—specifies search parameters (Elasticsearch only).
 
@@ -394,7 +394,7 @@ For the full code, see `data/shop/development/current/vendor/spryker/glossary-st
 
 Recommended naming for the `write{targetEntityName}CollectionBy{triggeredEvent}Events` and `delete{targetEntityName}CollectionBy{triggeredEvent}Events` methods:
 
-- `$targetEntityName`: a unique name of the entity in the key-value store (Redis or Valkey) or Elasticsearch. We recommend leaving this placeholder empty if this publish and synchronize module is responsible for handling exactly one entity.
+- `$targetEntityName`: a unique name of the entity in Redis or Elasticsearch. We recommend leaving this placeholder empty if this publish and synchronize module is responsible for handling exactly one entity.
 - `$triggeredEvent`: a logical name for the group of events that makes it easy to identify the origin of the trigger. We recommend using the name of the entity in persistence that triggered the publish and synchronize process.
 
 {% endinfo_block %}
@@ -405,7 +405,7 @@ The changes over the *storage* or *search* database tables trigger the correspon
 
 Spryker implemented two generic synchronization message processor plugins for synchronizing data to the frontend:
 
-- `SynchronizationStorageQueueMessageProcessorPlugin` for synchronizing data to the key-value store (Redis or Valkey), and
+- `SynchronizationStorageQueueMessageProcessorPlugin` for synchronizing data to Redis, and
 - `SynchronizationSearchQueueMessageProcessorPlugin` for synchronizing data to Elasticsearch.
 
 You need to map your synchronization queue names to one of the plugins depending on which storage you want to use it for. You must map the queues in `QueueDependencyProvider::getProcessorMessagePlugins()`. For details, see [Queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html#queue-message-processor-plugin).
@@ -477,7 +477,7 @@ To see all listeners mapped for a certain event, press <kbd>Control</kbd> and cl
    console setup:jenkins:enable
    ```
 
-## Re-synchronize Storage and Search data to the key-value store (Redis or Valkey) or Elasticsearch
+## Re-synchronize Storage and Search data to Redis or Elasticsearch
 
 There is no functionality for this purpose, but you can use the queue client to send data to sync queues.
 
@@ -515,7 +515,7 @@ foreach ($productAbstracts as $productAbstract) {
 
 {% info_block infoBox "Info"%}
 
-This process only updates the target entities that exist in persistence. You must clean up obsolete entities in the key-value store (Redis or Valkey) or Elasticsearch separately.
+This process only updates the target entities that exist in persistence. You must clean up obsolete entities in Redis or Elasticsearch separately.
 
 {% endinfo_block %}
 

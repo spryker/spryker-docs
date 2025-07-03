@@ -2969,6 +2969,7 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-comparison-feature-overview.html
                     include_versions:
                     - "202410.0"
+                    - "latest"
                   - title: Product Groups
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-groups-feature-overview.html
                   - title: Product Labels
@@ -3073,6 +3074,7 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-comparison-feature.html
                         include_versions:
                         - "202410.0"
+                        - "latest"
 
                   - title: Install Glue API
                     nested:
@@ -3417,6 +3419,7 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai.html
                     include_versions:
                     - "202410.0"
+                    - "latest"
 
               - title: Tutorials and HowTos
                 nested:
@@ -3498,10 +3501,12 @@ entries:
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-category-management-marketplace-merchant-commission.html
                         include_versions:
                         - "202410.0"
+                        - "latest"
                       - title: Product + Marketplace Merchant Commission
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-product-marketplace-merchant-commission-feature.html
                         include_versions:
                         - "202410.0"
+                        - "latest"
 
                   - title: Install Glue API
                     nested:
@@ -3943,6 +3948,7 @@ entries:
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/customize-algolia.html
                       include_versions:
                       - "202410.0"
+                      - "latest"
                     - title: Disconnect Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/disconnect-algolia.html
                     - title: Getting access to Algolia Dashboard
@@ -3951,15 +3957,18 @@ entries:
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/integrate-algolia-personalization.html
                       include_versions:
                       - "202410.0"
+                      - "latest"
                     - title: Algolia Personalization with headless frontends
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/algolia-personalization-with-headless-frontends.html
                       include_versions:
                       - "202410.0"
+                      - "latest"
 
                 - title: Visual Search powered by OpenAI
                   url: /docs/pbc/all/search/base-shop/third-party-integrations/visual-search-powered-by-openai/install-visual-search-powered-by-openai.html
                   include_versions:
                   - "202410.0"
+                  - "latest"
 
               - title: Best practices
                 url: /docs/pbc/all/search/base-shop/best-practices/search-best-practices.html
@@ -4345,6 +4354,7 @@ entries:
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex-validator.html
                             include_versions:
                             - "202410.0"          
+                            - "latest"
 
                       - title: Project configuration for Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/project-configuration-for-vertex.html
@@ -4356,7 +4366,8 @@ entries:
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex-faq.html
                         include_versions:
                         - "202311.0"
-                        - "202404.0"                          
+                        - "202404.0"          
+                        - "latest"                
                       - title: Disconnect
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
 
@@ -4450,6 +4461,7 @@ entries:
                 include_versions:
                 - "202404.0"
                 - "202410.0"
+                - "latest"
 
               - title: Install and upgrade
                 nested:
@@ -4458,12 +4470,14 @@ entries:
                     include_versions:
                     - "202404.0"
                     - "202410.0"
+                    - "latest"
 
               - title: Create users
                 url: /docs/pbc/all/user-management/marketplace/back-office-create-users.html
                 include_versions:
                 - "202404.0"
                 - "202410.0"
+                - "latest"
 
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html

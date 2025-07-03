@@ -29,9 +29,9 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-*Publish and Synchronization* (P&S) lets you export data from Spryker backend (Zed) to external endpoints. The default external endpoints are Redis and Elasticsearch. The endpoints are usually used by the frontend (Yves) or API (Glue).
+*Publish and Synchronization* (P&S) lets you export data from Spryker backend (Zed) to external endpoints. The default external endpoints are key-value store (Redis or Valkey) and Elasticsearch. The endpoints are usually used by the frontend (Yves) or API (Glue).
 
-This document shows how P&S works and how to export data using a HelloWorld P&S module example. The module synchronizes the data stored in a Zed database table to Redis. When a record is changed, created, or deleted in the table, the module automatically makes changes in Redis.
+This document shows how P&S works and how to export data using a HelloWorld P&S module example. The module synchronizes the data stored in a Zed database table to the key-value store (Redis or Valkey). When a record is changed, created, or deleted in the table, the module automatically makes changes in the key-value store (Redis or Valkey).
 
 ## 1. Module and table
 
@@ -66,19 +66,19 @@ Follow these steps to create the following:
     console propel:install
     ```
 
-    3. Create the `HelloWorldStorage` module by creating the `HelloWorldStorage` folder in Zed. The module is responsible for exporting data to Redis.
+    3. Create the `HelloWorldStorage` module by creating the `HelloWorldStorage` folder in Zed. The module is responsible for exporting data to the key-value store (Redis or Valkey).
 
 {% info_block infoBox "Naming conventions" %}
 
 The following P&S naming conventions are applied:
-- All the modules related to Redis should have the `Storage` suffix.
+- All the modules related to the key-value store (Redis or Valkey) should have the `Storage` suffix.
 - All the modules related to Elasticsearch should have the `Search` suffix.
 
 {% endinfo_block %}
 
 ## 2. Data structure
 
-The data for Yves is structured differently than the data for Zed. It's because the data model used in Redis and Elasticsearch is optimized to be used by the frontend. With P&S, data is always carried in the form of [transfer objects](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html) between Zed and Yves.
+The data for Yves is structured differently than the data for Zed. It's because the data model used in the key-value store (Redis or Valkey) and Elasticsearch is optimized to be used by the frontend. With P&S, data is always carried in the form of [transfer objects](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html) between Zed and Yves.
 
 Follow these steps to create a transfer object that represents the target data structure of the frontend.
 
@@ -550,7 +550,7 @@ For debugging purposes, use the `-k` option to keep messages in the queue `queue
 
 ## 6. Storage table
 
-To synchronize data with Redis, an intermediate Zed database table is required. The table stores the data until it's sent to Redis. The data in the table is already structured for Redis.
+To synchronize data with the key-value store (Redis or Valkey), an intermediate Zed database table is required. The table stores the data until it's sent to the key-value store (Redis or Valkey). The data in the table is already structured for Redis.
 
 Follow the steps to create the table:
 
@@ -593,8 +593,8 @@ The schema file defines the table as follows:
 - `ID` is a primary key of the table (`id_hello_world_message_storage` in the example).
 - `ForeignKey` is a foreign key to the main resource that you want to export (`fk_hello_world_message` for `spy_hello_world_message`).
 - `SynchronizationBehaviour` modifies the table as follows:
-  - Adds the `Data` column that stores data in the format that can be sent directly to Redis. The database field type is `TEXT`.
-  - Adds the `Key` column that stores the Redis Key. The data type is `VARCHAR`.
+  - Adds the `Data` column that stores data in the format that can be sent directly to the key-value store (Redis or Valkey). The database field type is `TEXT`.
+  - Adds the `Key` column that stores the key-value store (Redis or Valkey) Key. The data type is `VARCHAR`.
   - Defines `Resource` name for key generation.
   - Defines `Store` value for store-specific data.
   - Defines `Locale` value for localizable data.
@@ -610,7 +610,7 @@ An *incremental sync* is a sync that only processes the data records that have c
 
 **Key generation strategy**
 
-| Resource | Store | Locale | Key suffix column | Redis key |
+| Resource | Store | Locale | Key suffix column | key-value store key |
 | --- | --- | --- | --- | --- |
 | message | x | x | -  | `message` |
 | message | v | v | - | `message.de.de_de` |
@@ -926,7 +926,7 @@ class HelloWorldDeletePublisherPlugin extends AbstractPlugin implements Publishe
 
 ## 8. Queue
 
-This section describes how to create the queue to synchronize data to Redis.
+This section describes how to create the queue to synchronize data to the key-value store (Redis or Valkey).
 
 To create the `sync.storage.hello` queue, do the following:
 
@@ -1048,7 +1048,7 @@ Ensure that the data has been exported to a secondary queue for the Synchronize 
 
 {% endinfo_block %}
 
-6. Synchronize data with Redis:
+6. Synchronize data with the key-value store (Redis or Valkey):
 
 ```bash
 console queue:task:start sync.storage.hello
@@ -1066,20 +1066,20 @@ To run all queues at once, run use the following command: `console queue:worker:
 
 {% endinfo_block %}
 
-## 9. Redis
+## 9. Key-value store (Redis or Valkey)
 
-This section describes how to check the data synchronization in Redis.
+This section describes how to check the data synchronization in the key-value store (Redis or Valkey).
 
-Follow the steps to check the data in Redis:
-1. Connect to Redis Desktop Manager at `http(s)://{host}:10009`.
+Follow the steps to check the data in the key-value store (Redis or Valkey):
+1. Connect to the key-value store (Redis or Valkey) Desktop Manager at `http(s)://{host}:10009`.
 2. Check if the data is structured correctly:
 ![data-structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/data-structure.jpeg)
 
 ## 10. Client
 
-This section describes how to read the data from Redis.
+This section describes how to read the data from the key-value store (Redis or Valkey).
 
-To read the data from Redis, follow these steps:
+To read the data from the key-value store (Redis or Valkey), follow these steps:
 
 1. Create the client interface in `Pyz\Client\HelloWorldStorage\HelloWorldStorageClientInterface.php`.
 
@@ -1171,7 +1171,7 @@ class HelloWorldStorageFactory extends AbstractFactory
 }
 ```
 
-4. The HelloWorldFactory needs a dependency provider to handle dependencies required by the Redis and reader classes. Add the `Pyz/Client/HelloWorldStorage/HelloWorldStorageDependencyProvider.php` dependency provider.
+4. The HelloWorldFactory needs a dependency provider to handle dependencies required by the key-value store (Redis or Valkey) and reader classes. Add the `Pyz/Client/HelloWorldStorage/HelloWorldStorageDependencyProvider.php` dependency provider.
 
 ```php
 <?php
@@ -1366,6 +1366,6 @@ Update the routes for the Back Office using the following command:
 docker/sdk console router:cache:warm-up:backoffice
 ```
 
-You should now have another endpoint to get a message from the Redis storage via the newly created HelloWorldClient.
+You should now have another endpoint to get a message from the key-value store (Redis or Valkey) via the newly created HelloWorldClient.
 
-Check the redis-commander to get ID of the message object that actually exists. Then access the message via the following endpoint: `http://[YOUR_BACKOFFICE_URL]/hello-world/index/search?id=[ID_IN_REDIS]`
+Check the key-value store (Redis or Valkey)-commander to get ID of the message object that actually exists. Then access the message via the following endpoint: `http://[YOUR_BACKOFFICE_URL]/hello-world/index/search?id=[ID_IN_REDIS]`

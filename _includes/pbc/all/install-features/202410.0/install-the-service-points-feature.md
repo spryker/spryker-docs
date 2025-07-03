@@ -853,7 +853,7 @@ class ServicePointSearchDependencyProvider extends SprykerServicePointSearchDepe
 
 {% endinfo_block %}
 
-### 6) Configure export to Redis
+### 6) Configure export to key-value storage (Redis or Valkey)
 
 Configure tables to be published and synced to the Storage on create, edit, and delete changes:
 
@@ -961,8 +961,8 @@ class ServicePointStorageConfig extends SprykerServicePointStorageConfig
 | ServicePointStoreWritePublisherPlugin   | Publishes service point data by service point store entity events.                            |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointStore   |
 | ServiceWritePublisherPlugin             | Publishes service point data by `SpyService` entity events.                                   |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\Service             |
 | ServiceTypeWritePublisherPlugin         | Publishes service type data by `SpyType` entity events.                                       |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServiceType         |
-| ServicePointPublisherTriggerPlugin      | Populates the service point storage table with data and triggers the export to Redis. |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher                     |
-| ServiceTypePublisherTriggerPlugin       | Populates the service type storage table with data and triggers the export to Redis.  |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher                     |
+| ServicePointPublisherTriggerPlugin      | Populates the service point storage table with data and triggers the export to key-value storage (Redis or Valkey). |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher                     |
+| ServiceTypePublisherTriggerPlugin       | Populates the service type storage table with data and triggers the export to key-value storage (Redis or Valkey).  |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher                     |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -1023,8 +1023,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 | PLUGIN                                                    | SPECIFICATION                                                            | PREREQUISITES | NAMESPACE                                                            |
 |-----------------------------------------------------------|--------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| ServicePointSynchronizationDataBulkRepositoryPlugin       | Synchronizes the content of the service point storage table into Redis. |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization |
-| ServiceTypeSynchronizationDataBulkRepositoryPlugin        | Synchronizes the content of the service type storage table into Redis.  |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization |
+| ServicePointSynchronizationDataBulkRepositoryPlugin       | Synchronizes the content of the service point storage table into key-value storage (Redis or Valkey). |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization |
+| ServiceTypeSynchronizationDataBulkRepositoryPlugin        | Synchronizes the content of the service type storage table into key-value storage (Redis or Valkey).  |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -1075,9 +1075,9 @@ Verify the `service-point` synchronization plugin works correctly:
 
 {% info_block warningBox "Verification" %}
 
-- Make sure that, when a service point is created or edited through BAPI, it's exported to Redis accordingly.
+- Make sure that, when a service point is created or edited through BAPI, it's exported to key-value storage (Redis or Valkey) accordingly.
 
-- Make sure that, in Redis, data is displayed in the following format:
+- Make sure that, in key-value storage (Redis or Valkey), data is displayed in the following format:
 
 ```yaml
 {
@@ -1149,9 +1149,9 @@ Verify the `service-type` synchronization plugin works correctly:
 
 {% info_block warningBox "Verification" %}
 
-- Make sure that when a service type is created or edited through BAPI, it's exported to Redis accordingly.
+- Make sure that when a service type is created or edited through BAPI, it's exported to key-value storage (Redis or Valkey) accordingly.
 
-- Make sure that, in Redis, data is displayed in the following format:
+- Make sure that, in key-value storage (Redis or Valkey), data is displayed in the following format:
 
 ```json
 {

@@ -166,7 +166,7 @@ class AttributeCartBasedBoostingQueryExpanderPlugin extends AbstractPlugin imple
      */
     protected function getProductColor(ItemTransfer $itemTransfer): ?string
     {
-        // You get the concrete product from the key-value storage (Redis).
+        // You get the concrete product from the key-value storage (Redis or Valkey).
         $productData = $this->getFactory()
             ->getProductStorageClient()
             ->getProductAbstractStorageData(
@@ -272,7 +272,7 @@ class CatalogFactory extends SprykerCatalogFactory
 }
 ```
 
-1. To get the color of a product from the cart, read the product data from the key-value storage Redis. For this, `ProductStorageClient` must be used with the `getProductAbstractStorageData()` method.
+1. To get the color of a product from the cart, read the product data from the key-value storage (Redis or Valkey). For this, `ProductStorageClient` must be used with the `getProductAbstractStorageData()` method.
 
 Like `CartClient`, `ProductStorageClient` needs to be added to the `CatalogDependencyProvider`. Then the `CatalogFactory` can get it from the dependency provider:
 

@@ -42,9 +42,9 @@ We created and updated 3 major modules:
 
 - `PropelReplicationCache`:
 
-  - Stores key in Redis after Propel inserted a data to the primary DB.
+  - Stores key in the key-value store (Redis or Valkey) after Propel inserted a data to the primary DB.
 
-  - Checks key in Redis when Propel is about to read data from DB.
+  - Checks key in the key-value store (Redis or Valkey) when Propel is about to read data from DB.
 
   - Contains plugins to extend PropelOrm module.
 

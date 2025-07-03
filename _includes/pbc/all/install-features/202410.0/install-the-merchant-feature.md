@@ -243,11 +243,11 @@ Make sure that the merchant edit and create forms contain a **Store** toggle for
 
 {% endinfo_block %}
 
-## 7) Configure export to Redis and Elasticsearch
+## 7) Configure export to key-value storage (Redis or Valkey) and Elasticsearch
 
 This step publishes tables on change (create, edit) to `spy_merchant_profile_storage` and synchronizes data to Storage.
 
-### Configure export to Redis
+### Configure export to key-value storage (Redis or Valkey)
 
 1. Set up event listeners and publishers:
 
@@ -257,7 +257,7 @@ This step publishes tables on change (create, edit) to `spy_merchant_profile_sto
 | MerchantStoragePublisherPlugin            | Publishes merchant data to the `spy_merchant_storage` table.                                                                            |                                                                       | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\Merchant\MerchantStoragePublisherPlugin |
 | MerchantProductOfferStorageExpanderPlugin | Returns the `ProductOfferStorage` transfer object expanded with `Merchant`.                                                             |                                                                       | Spryker\Client\MerchantStorage\Plugin\ProductOfferStorage                                          |
 | MerchantProductOfferStorageFilterPlugin   | Filters the `ProductOfferCollection` transfer object by an active and approved merchant.                                                |                                                                       | Spryker\Zed\MerchantStorage\Communication\Plugin\ProductOfferStorage                               |
-| UrlStorageMerchantMapperPlugin            | Provides access to merchant storage data in the controller related to the `https://mysprykershop.com/merchant/{merchantReference}` URL. | Publish URL storage data to Redis by running `console sync:data url`. | Spryker\Client\MerchantStorage\Plugin                                                              |
+| UrlStorageMerchantMapperPlugin            | Provides access to merchant storage data in the controller related to the `https://mysprykershop.com/merchant/{merchantReference}` URL. | Publish URL storage data to key-value storage (Redis or Valkey) by running `console sync:data url`. | Spryker\Client\MerchantStorage\Plugin                                                              |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -420,7 +420,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 | PLUGIN                                            | SPECIFICATION                                                                                                        | PREREQUISITES | NAMESPACE                                              |
 |---------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|
-| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant profile messages to synchronize with Redis and marks messages as failed in case of an error. |               | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant profile messages to synchronize with key-value storage (Redis or Valkey) and marks messages as failed in case of an error. |               | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/MerchantStorage/MerchantStorageConfig.php**
 
@@ -504,7 +504,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, when merchant profile entities are created or updated through ORM, they are exported to Redis accordingly.
+Make sure that, when merchant profile entities are created or updated through ORM, they are exported to key-value storage (Redis or Valkey) accordingly.
 
 {% endinfo_block %}
 

@@ -102,7 +102,7 @@ $config[StorageRedisConstants::STORAGE_REDIS_DATABASE] = getenv('SPRYKER_KEY_VAL
 ```
 
 {% info_block infoBox "Edge case with SPRYKER_KEY_VALUE_STORE_NAMESPACE" %}
-If the environment variable SPRYKER_KEY_VALUE_STORE_NAMESPACE is set in your setup, and you still want to be able to switch the Redis DB changing only the store, we recommend the following change:
+If the environment variable SPRYKER_KEY_VALUE_STORE_NAMESPACE is set in your setup, and you still want to be able to switch the key-value store (Redis or Valkey) DB changing only the store, we recommend the following change:
 
 ```php
 // >>> STORAGE

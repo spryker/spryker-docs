@@ -10,7 +10,7 @@ redirect_from:
 related:
   - title: Implementing a client
     link: docs/scos/dev/back-end-development/client/implement-a-client.html
-  - title: Use and configuring Redis as a key-value storage
+  - title: Use and configuring key-value storage (Redis or Valkey)
     link: docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html
 ---
 
@@ -31,7 +31,7 @@ The *client's* job is to connect the frontend application to all of the surround
 For each of these resources, there is a client. So, it's not only one client, but many of them. Each one of them is responsible for a specific resource or functionality. Spryker, by default, is shipped with the following clients:
 
 - SearchClient: to connect to Elasticsearch using its API.
-- StorageClient: to connect to Redis using the Redis protocol; RESP.
+- StorageClient: to connect to the key-value store (Redis or Valkey) using the key-value store (Redis or Valkey) protocol; RESP.
 - Commerce OS clients: every functional unit, a module as it's called in Spryker, has its client. For example, there are separated clients for the cart (CartClient), checkout (CheckoutClient), and customer (CustomerClient). The same applies to all the other modules in Spryker.
 
 Commerce OS clients communicate with the Commerce OS using HTTP. They mainly perform RPCs (remote procedure calls) using HTTP POST requests with a serialized JSON payload. They also do all the necessary authorization and authentication between the two applications.

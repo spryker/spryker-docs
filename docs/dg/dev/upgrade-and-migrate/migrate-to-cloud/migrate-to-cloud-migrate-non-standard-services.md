@@ -10,7 +10,7 @@ Spryker comes pre-configured with the following services by default:
 
 - RabbitMQ
 - Elasticsearch
-- Redis
+- Key-value store (Redis or Valkey)
 - MariaDB
 - Jenkins
 

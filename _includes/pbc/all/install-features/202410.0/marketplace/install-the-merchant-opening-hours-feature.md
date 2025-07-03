@@ -115,7 +115,7 @@ Generate a new translation cache for Zed:
 console translator:generate-cache
 ```
 
-### 4) Configure export to Redis
+### 4) Configure export to key-value storage (Redis or Valkey)
 
 This step publishes change events to `spy_merchant_opening_hours_storage` and synchronizes the data to the storage.
 
@@ -159,7 +159,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --------------- | --------------- | ------------ | ----------------- |
-| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant profile and merchant opening hours messages to sync with Redis storage, and marks messages as failed in case of error. |   | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant profile and merchant opening hours messages to sync with key-value storage (Redis or Valkey), and marks messages as failed in case of error. |   | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -272,9 +272,9 @@ class MerchantOpeningHoursStorageConfig extends SprykerMerchantOpeningHoursStora
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that after step 1 the command `console sync:data merchant_opening_hours` exports data from the `spy_merchant_opening_hours_storage` table to Redis.
+1. Make sure that after step 1 the command `console sync:data merchant_opening_hours` exports data from the `spy_merchant_opening_hours_storage` table to key-value storage (Redis or Valkey).
 
-2. Make sure that when merchant opening hours entities get created or updated through ORM, it's exported to Redis accordingly.
+2. Make sure that when merchant opening hours entities get created or updated through ORM, it's exported to key-value storage (Redis or Valkey) accordingly.
 
 | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | ---------------- | ----------------- |

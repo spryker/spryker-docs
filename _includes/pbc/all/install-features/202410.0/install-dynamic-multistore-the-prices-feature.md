@@ -82,7 +82,7 @@ Make sure you can add a currency to a store when editing a product in the Back O
 
 {% endinfo_block %}
 
-### 3) Configure export to Redis
+### 3) Configure export to key-value storage (Redis or Valkey)
 
 1. Set up publisher plugins:
 
@@ -130,7 +130,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 Using the following data, make sure that when you add, update, or delete a store currency, it's exported to or removed from Storage.
 
-Storage type: Redis
+Storage type: Redis or Valkey
 Target entity: Store
 
 Example expected data identifier: `kv:store:de`

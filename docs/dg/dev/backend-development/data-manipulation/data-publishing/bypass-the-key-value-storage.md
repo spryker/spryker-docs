@@ -11,7 +11,7 @@ redirect_from:
 
 One of the main ways of transferring data from Zed to Yves is the *Publish & Synchronization* mechanism. It works as follows:
 - Storing the denormalized data that is saved in Zed and must be shared with Yves in specific infrastructural database tables.
-- Synchronizing that data to fast key-value storage, like Redis, with the help of message queues.
+- Synchronizing that data to fast key-value storage, like key-value stores (Redis or Valkey), with the help of message queues.
 
 Yves then reads the synchronized data directly from the storage. However, sometimes, you might need to exclude the second step and read data directly from the database. This document describes how to do that.
 
@@ -24,11 +24,11 @@ Publish and Synchronize creates expected data duplication: the same data is stor
 The regular Publish & Synchronization flow has two steps:
 
 1. *Publish* the denormalized data to storage tables located in the database.
-2. *Synchronize* the data to the key-value storage (Redis) with the help of dedicated queues.
+2. *Synchronize* the data to the key-value storage (Redis or Valkey) with the help of dedicated queues.
 
-In the following diagram, you can see a typical implementation of Publish & Synchronization, where the high-level `StorageExtension` module is configured to work on top of the `StorageRedis` module. The latter handles all low-level read/write operations on the Redis as storage.
+In the following diagram, you can see a typical implementation of Publish & Synchronization, where the high-level `StorageExtension` module is configured to work on top of the `StorageRedis` module (which supports both Redis and Valkey). The latter handles all low-level read/write operations on the key-value store (Redis or Valkey) as storage.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+Disable+Key-value+Storage+and+use+the+Database+Instead/p-and-s-diagram.png)
-Key-Value Storage Bypass works by disabling the synchronization step and reading data directly from the database. This is done by using the newly created `StorageDatabase` module instead of `StorageRedis`.
+Key-Value Storage Bypass works by disabling the synchronization step and reading data directly from the database. This is done by using the newly created `StorageDatabase` module Instead of `StorageRedis` (which works with both Redis and Valkey).
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+Disable+Key-value+Storage+and+use+the+Database+Instead/key-value+bypass.png)
 This new module is responsible for interacting with the database in read-only mode and fetching the necessary data directly from storage tables. This makes the key-value storage unnecessary, allowing projects to avoid it. Any number of other vendor-specific modules can be created by providing implementations for interfaces from the `StorageExtension` module. The same is true for `StorageDatabase`, except that it interacts with the database.
 
@@ -216,7 +216,7 @@ class EntityTagsRestApiConfig extends SprykerEntityTagsRestApiConfig
 }
 ```
 
-6. Configure resource to storage table mapping. Unlike Redis, in RDBMs, the data is stored across different tables. The correct storage table name for a resource is resolved from a resource key, by which the data is fetched.
+6. Configure resource to storage table mapping. Unlike key-value stores (Redis or Valkey), in RDBMs, the data is stored across different tables. The correct storage table name for a resource is resolved from a resource key, by which the data is fetched.
 
 For example, by default (with no mappings) the key `product_concrete:de_de:1` is translated into `spy_product_concrete_storage`. The default prefix is `spy`, the default suffix is `storage`, and the actual name of the table is taken from the resource key prefix—`product_concrete` in this case. You can adjust the process of resolving the table name if you need to do so. If, in the preceding example, the data for the key `product_concrete:de_de:1` needs to be fetched from the tabled named `pyz_product_foo`, configure the corresponding mapping instead:
 

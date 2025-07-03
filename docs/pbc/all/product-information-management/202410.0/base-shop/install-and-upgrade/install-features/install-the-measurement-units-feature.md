@@ -213,7 +213,7 @@ Make sure that, in the database, the configured data are added to the `spy_gloss
 {% endinfo_block %}
 
 
-### 4) Configure export to Redis
+### 4) Configure export to the key-value store (Redis or Valkey)
 
 This step will publish tables on change (create, edit, delete) to the `spy_product_measurement_unit_storage` and `spy_product_concrete_measurement_unit_storage` and synchronise the data to Storage.
 

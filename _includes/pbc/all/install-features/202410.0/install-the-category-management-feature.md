@@ -460,7 +460,7 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
 }
 ```
 
-### 6) Configure export to Redis and Elasticsearch
+### 6) Configure export to key-value storage (Redis or Valkey) and Elasticsearch
 
 Configure tables to be published to `spy_category_image_storage`, `spy_category_node_storage`, `spy_category_tree_storage`, and `spy_category_node_page_search` and synchronized to the Storage on create, edit, and delete changes:
 
@@ -665,7 +665,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 | CategoryNodeSynchronizationDataBulkRepositoryPlugin | Retrieves a category node storage collection based on the provided offset, limit, and IDs.                            |               | Spryker\Zed\CategoryStorage\Communication\Plugin\Synchronization      |
 | CategoryTreeSynchronizationDataBulkRepositoryPlugin | Retrieves a category tree storage collection based on the provided offset, limit, and `categoryTreeStorageId` values. |               | Spryker\Zed\CategoryStorage\Communication\Plugin\Synchronization      |
 | CategoryPageSynchronizationDataBulkRepositoryPlugin | Retrieves a collection of synchronization data based on the provided offset, limit, and IDs.                          |               | Spryker\Zed\CategoryPageSearch\Communication\Plugin\Synchronization   |
-| CategoryImageSynchronizationDataBulkPlugin          | Synchronizes all category image entries from the database to Redis.                                                   |               | Spryker\Zed\CategoryImageStorage\Communication\Plugin\Synchronization |
+| CategoryImageSynchronizationDataBulkPlugin          | Synchronizes all category image entries from the database to key-value storage (Redis or Valkey).                                                   |               | Spryker\Zed\CategoryImageStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -714,14 +714,14 @@ Make sure that *category-node* and *category-tree* synchronization plugins works
 3. Run the `console sync:data -r category_tree` command.
 4. Check that, in your system, the storage entries are displayed with the `kv:category_node:{store}:{locale}:{id}` and `kv:category_tree:{store}:{locale}:{id}` masks.
 
-Make sure that, when a category is created or edited through ORM, it's exported to Redis and Elasticsearch accordingly.
+Make sure that, when a category is created or edited through ORM, it's exported to key-value storage (Redis or Valkey) and Elasticsearch accordingly.
 
 | STORAGE TYPE  | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 |---------------|---------------|----------------------------------|
 | Elasticsearch | CategoryNode  | category_node:at:en_us:2         |
-| Redis         | CategoryNode  | category_node:de:de_de:5         |
-| Redis         | CategoryTree  | category_tree:de:en_us           |
-| Redis         | CategoryImage | category_image:de_de:15          |
+| Redis or Valkey         | CategoryNode  | category_node:de:de_de:5         |
+| Redis or Valkey         | CategoryTree  | category_tree:de:en_us           |
+| Redis or Valkey         | CategoryImage | category_image:de_de:15          |
 
 **EXAMPLE EXPECTED DATA FRAGMENT: category_node:at:en_us:2**
 

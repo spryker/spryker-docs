@@ -126,7 +126,7 @@ Make sure that the changes have been implemented successfully. To do it, trigger
 
 {% endinfo_block %}
 
-### 3) Configure Export to Redis
+### 3) Configure Export to key-value storage (Redis or Valkey)
 
 This step will publish tables on change (create, edit, delete) to the `spy_product_abstract_group_storage` table and synchronize the data to Storage.
 

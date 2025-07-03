@@ -221,7 +221,7 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 {% endinfo_block %}
 
-### 4) Configure export to Redis
+### 4) Configure export to key-value storage (Redis or Valkey)
 
 This step publishes tables on change (create, edit, delete) to the `spy_shopping_list_storage` and syncs the data to Storage.
 
@@ -346,7 +346,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| SynchronizationStorageQueueMessageProcessorPlugin | Configures all shopping list messages to sync with Redis storage and marks messages as failed in case of an error. |           | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| SynchronizationStorageQueueMessageProcessorPlugin | Configures all shopping list messages to sync with key-value storage (Redis or Valkey) and marks messages as failed in case of an error. |           | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -415,11 +415,11 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure when shopping lists are exported or created, updated, deleted manually in the Back Office, they are exported (or removed) to Redis accordingly.
+Make sure when shopping lists are exported or created, updated, deleted manually in the Back Office, they are exported (or removed) to key-value storage (Redis or Valkey) accordingly.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- |  --- |
-| Redis | Shopping List |`shopping_list_customer:de--1` |
+| Redis or Valkey | Shopping List |`shopping_list_customer:de--1` |
 
 {% endinfo_block %}
 

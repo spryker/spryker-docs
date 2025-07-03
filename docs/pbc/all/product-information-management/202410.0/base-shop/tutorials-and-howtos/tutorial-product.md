@@ -58,8 +58,8 @@ console propel:install
 ### Collector module (Zed)
 
 1. Update the query that aggregates the product data and aggregation/processing logic.
-2. Add `product_country` to the data set that goes to Redis.
-3. Run the collectors to bring data to Redis.
+2. Add `product_country` to the data set that goes to the key-value store (Redis or Valkey).
+3. Run the collectors to bring data to the key-value store (Redis or Valkey).
 
 ### Product module (Yves)
 

@@ -9,7 +9,7 @@ Product Offer and data related to it's cached to enhance performance.
 
 {% info_block infoBox "" %}
 
-For details about how to use and configure Redis as a key-value storage, see [Using and configuring Redis as a key-value storage](/docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage.html).
+For details about how to use and configure key-value storage (Redis or Valkey), see [Using and configuring key-value storage (Redis or Valkey)](/docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage.html).
 
 {% endinfo_block %}
 

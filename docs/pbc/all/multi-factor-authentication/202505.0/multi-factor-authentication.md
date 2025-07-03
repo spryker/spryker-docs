@@ -16,7 +16,7 @@ By using this feature, you accept full responsibility for any potential issues, 
 
 {% endinfo_block %}
 
-Multi-Factor Authentication (MFA) adds an extra layer of security for customers, backoffice users, and agent users by requiring multiple methods of authentication before allowing an action.
+Multi-Factor Authentication (MFA) adds an extra layer of security for customers, Back Office users, and agent users by requiring multiple methods of authentication before allowing an action.
 
 Benefits of MFA:
 
@@ -29,7 +29,7 @@ Benefits of MFA:
 
 The login process with MFA looks as follows:
 
-1. Initial MFA check: The system checks if MFA is enabled for the user (customer, backoffice user, or agent). If no MFA methods are enabled, the authentication process continues without additional validation.
+1. Initial MFA check: The system checks if MFA is enabled for the user (customer, Back Office user, or agent). If no MFA methods are enabled, the authentication process continues without additional validation.
 
 2. Fetch enabled MFA types: The system retrieves the user's enabled MFA methods from a specific endpoint depending on the user type:
   * For ustomers: `multi-factor-auth/get-customer-enabled-types`

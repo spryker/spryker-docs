@@ -776,7 +776,7 @@ class GuiDependencyProvider extends SprykerGuiDependencyProvider
 
 
 
-{% warning_block warningBox "Verification" %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following [Install the Backoffice dropdown navigation](/docs/pbc/all/back-office/{{page.version}}/base-shop/howto-guides/howto-install-the-backoffice-dropdown-navigation.html)feature is installed.
 

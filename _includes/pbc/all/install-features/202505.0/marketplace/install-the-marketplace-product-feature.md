@@ -632,6 +632,7 @@ class ProductManagementConfig extends SprykerProductManagementConfig
     protected const PRODUCT_TABLE_FILTER_FORM_EXTERNAL_FIELD_NAMES = ['id-merchant'];
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the filter by merchants is available on the `/product-management` page.

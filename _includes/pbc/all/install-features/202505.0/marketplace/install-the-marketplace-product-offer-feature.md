@@ -1651,6 +1651,7 @@ class ProductOfferGuiConfig extends SprykerProductOfferGuiConfig
     ];
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the filter by merchants is available on the `/product-offer-gui/list` page.

@@ -7,4 +7,4 @@ redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202200.0/marketplace-product-offer-checkout-feature-integration.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-product-offer-checkout-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-offer-checkout-feature.md -->
+{% include pbc/all/install-features/latest/marketplace/install-the-marketplace-product-offer-checkout-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-offer-checkout-feature.md -->

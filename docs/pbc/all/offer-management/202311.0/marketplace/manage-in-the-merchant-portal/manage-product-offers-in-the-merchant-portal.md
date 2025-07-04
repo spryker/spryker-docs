@@ -11,5 +11,5 @@ last_updated: Jan 9, 2024
 
 ## Next steps
 
-* [Create product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/create-product-offers.html)
-* [Edit product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/edit-product-offers.html)
+* [Create product offers](/docs/pbc/all/offer-management/latest/marketplace/manage-in-the-merchant-portal/create-product-offers.html)
+* [Edit product offers](/docs/pbc/all/offer-management/latest/marketplace/manage-in-the-merchant-portal/edit-product-offers.html)

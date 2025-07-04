@@ -15,7 +15,7 @@ This document describes how to install the [Multi-Factor Authentication (MFA) fe
 | Spryker Core                | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                             |
 | Spryker Core Back Office    | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/back-office/202410.0/base-shop/install-and-upgrade/install-the-spryker-core-back-office-feature.html)                                                                      |
 | Customer Account Management | {{site.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)                  |
-| Agent assist                | {{site.version}} | [Install the Agent Assist feature](/docs/pbc/all/user-management/202404.0/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                                                                                          |    
+| Agent assist                | {{site.version}} | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                                                                                          |    
 | Glue Rest API               | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)   |
 
 
@@ -40,23 +40,9 @@ Make sure the following modules have been installed:
 
 ## 2) Set up configuration
 
-Set up the following configuration.
+MFA is configured separately for customers and users (Back Office users and agents). Make sure to defines values for both user types by implementing the corresponding methods in the `MultiFactorAuthConfig` class–for example, `getCustomerCodeLength()` and `getUserCodeLength()`.
 
-{% info_block infoBox "Customer and User configuration separation" %}
-
-Multi-Factor Authentication settings for **customers** and **users** are configured independently. 
-Ensure that your project explicitly defines values for both user types by implementing the corresponding methods in the `MultiFactorAuthConfig` class (for example, `getCustomerCodeLength()` and `getUserCodeLength()`).
-
-This separation allows for fine-grained control of security settings based on context and user type.
-
-{% endinfo_block %}
-
-
-### 2.1) Configure code length
-
-This section describes how to configure the length of the authentication code by extending the `MultiFactorAuthConfig` class.
-
-#### For Customers
+### Configure MFA code length for customers
 
 **src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
 
@@ -83,7 +69,7 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 ```
 
 
-#### For Users
+### Configure MFA code length for users
 
 **src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
 
@@ -111,11 +97,9 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 
 
 
-### 2.2) Configure code validity time
+### Configure MFA code validity time for customers
 
-This section describes how to configure the time interval in minutes during which an authentication code is valid by extending the `MultiFactorAuthConfig` class.
-
-#### For Customers
+Configure the time interval in minutes during which an authentication code is valid by extending the `MultiFactorAuthConfig` class:
 
 **>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
 
@@ -143,7 +127,9 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 
 
 
-#### For Users
+### Configure MFA code validity time for users
+
+Configure the time interval in minutes during which an authentication code is valid by extending the `MultiFactorAuthConfig` class:
 
 
 **src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
@@ -172,11 +158,9 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 
 
 
-### 2.3) Configure brute-force protection limit
+### Configure brute-force protection limit for customers
 
-This section describes how to configure the maximum number of failed MFA attempts a customer can make before brute force protection is triggered. This is done by extending the `MultiFactorAuthConfig` class.
-
-#### For Customers
+Configure the maximum number of failed MFA attempts a customer can make before brute force protection is triggered. This is done by extending the `MultiFactorAuthConfig` class:
 
 
 **src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
@@ -205,7 +189,9 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 
 
 
-#### For Users
+### Configure brute-force protection limit for users
+
+Configure the maximum number of failed MFA attempts a customer can make before brute force protection is triggered. This is done by extending the `MultiFactorAuthConfig` class:
 
 
 **src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
@@ -233,12 +219,7 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 ```
 
 
-### 2.4) Configure protected routes and forms
-
-Extend the `MultiFactorAuthConfig` class and configure the needed routes and forms to require MFA:
-
-#### For Customers
-
+### Configure protected routes and forms for customers
 
 **src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthConfig.php**
 
@@ -266,9 +247,14 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 }
 ```
 
+{% info_block warningBox "" %}
+
+You can configure multiple forms on the same page to require MFA authentication.
+
+{% endinfo_block %}
 
 
-#### For Users
+### Configure protected routes and forms for users
 
 
 **src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
@@ -300,8 +286,14 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 }
 ```
 
+{% info_block warningBox "" %}
 
-#### For Glue Rest API
+You can configure multiple forms on the same page to require MFA authentication.
+
+{% endinfo_block %}
+
+
+### Configure protected routes and forms for Glue API
 
 
 **src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthConfig.php**
@@ -332,9 +324,9 @@ You can configure multiple forms on the same page to require MFA authentication.
 
 {% endinfo_block %}
 
-### 2.5) Configure Backoffice ACL access
+### Configure Back Office ACL access
 
-To allow access to Multi-Factor Authentication requests during the login process in the Backoffice, define a public ACL rule.
+To allow access to MFA requests during the login process in the Back Office, define a public ACL rule.
 
 
 **config/Shared/config_default.php**
@@ -473,9 +465,9 @@ Make sure that, in the database, the configured data are added to the `spy_gloss
 
 ## 5) Set up widgets
 
-{% info_block warningBox "Scope" %}
+{% info_block warningBox "Only for customers or agents" %}
 
-This section is only applicable if you are integrating Multi-Factor Authentication (MFA) for **Customers** or **Agents** in the **Yves** (Storefront) application.
+Apply the changes in this section only if you're integrating MFA for customers or agents in Yves (Storefront).
 
 {% endinfo_block %}
 
@@ -486,8 +478,7 @@ Register the following plugins to enable widgets:
 | MultiFactorAuthHandlerWidget     | Provides MFA handling functionality.               |               | SprykerShop\Yves\MultiFactorAuth\Widget |
 | SetMultiFactorAuthMenuItemWidget | Adds an MFA menu item to the customer profile navigation. |               | SprykerShop\Yves\MultiFactorAuth\Widget |
 
-<details>
-<summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -509,7 +500,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-</details>
 
 ### 6) Set up behavior
 
@@ -520,23 +510,23 @@ Enable the following behaviors by registering the plugins:
 | CustomerMultiFactorAuthenticationHandlerPlugin         | Handles customer login MFA.                                               |               | Spryker\Yves\MultiFactorAuth\Plugin\AuthenticationHandler\Customer          |
 | UserMultiFactorAuthenticationHandlerPlugin             | Handles user login MFA.                                                   |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\AuthenticationHandler\User |
 | MultiFactorAuthCustomerRouteProviderPlugin             | Provides routes for customer MFA.                                         |               | Spryker\Yves\MultiFactorAuth\Plugin\Router\Customer                         |
-| MultiFactorAuthAgentRouteProviderPlugin                | Provides routes for agent user MFA.                                       |               | Spryker\Yves\MultiFactorAuth\Plugin\Router\Agent                            |
+| MultiFactorAuthAgentRouteProviderPlugin                | Provides routes for agent MFA.                                       |               | Spryker\Yves\MultiFactorAuth\Plugin\Router\Agent                            |
 | MultiFactorAuthExtensionFormPlugin                     | Provides customer form validation against corrupted requests.             |               | Spryker\Yves\MultiFactorAuth\Plugin\Form                                    |
 | MultiFactorAuthExtensionFormPlugin                     | Provides user form validation against corrupted requests.                 |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Form                       |
-| RemoveMultiFactorAuthCustomerTableActionExpanderPlugin | Removes the MFA table action from the customer table in BackOffice.       |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Customer                   |
-| PostCustomerLoginMultiFactorAuthenticationPlugin       | Handles customer MFA after successful login.                              |               | SprykerShop\Yves\CustomerPage\Plugin\MultiFactorAuth                        |
-| PostAgentLoginMultiFactorAuthenticationPlugin          | Handles agent user MFA after successful login.                            |               | SprykerShop\Yves\AgentPage\Plugin\MultiFactorAuth                           |
-| PostUserLoginMultiFactorAuthenticationPlugin           | Handles user MFA after successful login.                                  |               | Spryker\Zed\SecurityGui\Communication\Plugin\MultiFactorAuth                |
-| MultiFactorAuthSetupNavigationPlugin                   | Adds the optional MFA menu item to the dropdown navigation in BackOffice. |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Navigation                 |
+| RemoveMultiFactorAuthCustomerTableActionExpanderPlugin | Removes the MFA table action from the customer table in the Back Office.       |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Customer                   |
+| PostCustomerLoginMultiFactorAuthenticationPlugin       | Handles customer MFA after a successful login.                              |               | SprykerShop\Yves\CustomerPage\Plugin\MultiFactorAuth                        |
+| PostAgentLoginMultiFactorAuthenticationPlugin          | Handles agent user MFA after a successful login.                            |               | SprykerShop\Yves\AgentPage\Plugin\MultiFactorAuth                           |
+| PostUserLoginMultiFactorAuthenticationPlugin           | Handles user MFA after a successful login.                                  |               | Spryker\Zed\SecurityGui\Communication\Plugin\MultiFactorAuth                |
+| MultiFactorAuthSetupNavigationPlugin                   | Adds the optional MFA menu item to the dropdown navigation in the Back Office. |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Navigation                 |
 | MultiFactorAuthRestUserValidatorPlugin                 | Validates requests against MFA.                                           |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                 |
 | MultiFactorAuthTypesResourcePlugin                     | Provides available MFA methods.                                           |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                 |
 | MultiFactorAuthTriggerResourcePlugin                   | Triggers code sending for the provided enabled MFA method.                |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                 |
-| MultiFactorAuthActivateResourcePlugin                  | Triggers code sending the provided MFA method to be activated.            |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                 |
+| MultiFactorAuthActivateResourcePlugin                  | Triggers code sending for the provided MFA method to be activated.            |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                 |
 | MultiFactorAuthDeactivateResourcePlugin                | Deactivates the provided MFA method.                                      |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                 |
 | MultiFactorAuthTypeVerifyResourcePlugin                | Verifies MFA code and activates the provided MFA method.                  |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                 |
 
 
-#### 6.1) For customers
+#### Register the plugins for customers
 
 
 <summary>src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php
@@ -624,7 +614,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 
 
 
-#### 6.2) For agent users
+#### Register the plugins for agent users
 
 
 **src/Pyz/Yves/AgentPage/AgentPageDependencyProvider.php**
@@ -710,7 +700,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 ```
 
 
-#### 6.3) For users in Backoffice
+#### Register the plugins for Back Office users
 
 
 **src/Pyz/Zed/Customer/CustomerDependencyProvider.php**
@@ -778,7 +768,7 @@ class GuiDependencyProvider extends SprykerGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following [Install the Backoffice dropdown navigation](/docs/pbc/all/back-office/{{page.version}}/base-shop/howto-guides/howto-install-the-backoffice-dropdown-navigation.html)feature is installed.
+Make sure the following [Install the Backoffice dropdown navigation](/docs/pbc/all/back-office/{{page.version}}/base-shop/howto-guides/howto-install-the-backoffice-dropdown-navigation.html) feature is installed.
 
 {% endinfo_block %}
 

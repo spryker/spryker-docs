@@ -606,7 +606,7 @@ Make sure that the imported data is added to the `spy_merchant_product` table.
 
 ### 7) Set up the Back Office products filter by merchants
 
-Extend the `ProductManagementConfig::PRODUCT_TABLE_FILTER_FORM_EXTERNAL_FIELD_NAMES` at the project level and add an 'id-merchant' to the array:
+Overwrite the `ProductManagementConfig::PRODUCT_TABLE_FILTER_FORM_EXTERNAL_FIELD_NAMES` at the project level and add an 'id-merchant' to the array:
 
 **src/Pyz/Zed/ProductManagement/ProductManagementConfig.php**
 

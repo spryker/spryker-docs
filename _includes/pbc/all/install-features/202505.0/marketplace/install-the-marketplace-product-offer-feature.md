@@ -1623,7 +1623,7 @@ In the Back Office, make sure that, in Marketplace, the **Offers** menu item is 
 
 ### 8) Set up the Back Office products filter by merchants
 
-Extend the `ProductOfferGuiConfig::PRODUCT_OFFER_TABLE_FILTER_FORM_EXTERNAL_FIELD_NAMES` at the project level and add an 'id-merchant' to the array:
+Overwrite the `ProductOfferGuiConfig::PRODUCT_OFFER_TABLE_FILTER_FORM_EXTERNAL_FIELD_NAMES` at the project level and add an 'id-merchant' to the array:
 
 **src/Pyz/Zed/ProductOfferGui/ProductOfferGuiConfig.php**
 

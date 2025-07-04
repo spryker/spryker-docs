@@ -4366,8 +4366,7 @@ entries:
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex-faq.html
                         include_versions:
                         - "202311.0"
-                        - "202404.0"          
-                        - "latest"                
+                        - "202404.0"                    
                       - title: Disconnect
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
 

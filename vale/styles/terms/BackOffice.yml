@@ -3,5 +3,5 @@ message: "Use 'the Back Office' instead of '%s'."
 level: error
 ignorecase: true
 swap:
-  backoffice: the Back Office
-  Backoffice: the Back Office
+  backoffice: backoffice
+  Backoffice: Backoffice

@@ -40,7 +40,7 @@ Make sure the following modules have been installed:
 
 ## 2) Set up configuration
 
-MFA is configured separately for customers and users (Back Office users and agents). Make sure to defines values for both user types by implementing the corresponding methods in the `MultiFactorAuthConfig` class–for example, `getCustomerCodeLength()` and `getUserCodeLength()`.
+MFA is configured separately for customers and users (Back Office users and agents). Make sure to define values for both user types by implementing the corresponding methods in the `MultiFactorAuthConfig` class, such as `getCustomerCodeLength()` and `getUserCodeLength()`.
 
 ### Configure MFA code length for customers
 
@@ -342,8 +342,6 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
 ];
 ```
 
-
-
 **src/Pyz/Zed/SecurityGui/SecurityGuiConfig.php**
 
 ```php
@@ -501,7 +499,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 
-### 6) Set up behavior
+## 6) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -526,7 +524,7 @@ Enable the following behaviors by registering the plugins:
 | MultiFactorAuthTypeVerifyResourcePlugin                | Verifies MFA code and activates the provided MFA method.                  |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                 |
 
 
-#### Register the plugins for customers
+### Register the plugins for customers
 
 
 <summary>src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php
@@ -550,8 +548,7 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 
 
 
-<details>
-<summary>src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthDependencyProvider.php</summary>
+**src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
 ```php
 namespace Pyz\Yves\MultiFactorAuth;
@@ -569,7 +566,7 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
     }
 }
 ```
-</details>
+
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -614,7 +611,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 
 
 
-#### Register the plugins for agent users
+### Register the plugins for agent users
 
 
 **src/Pyz/Yves/AgentPage/AgentPageDependencyProvider.php**
@@ -659,7 +656,7 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
 
 
 
-**rc/Pyz/Yves/Router/RouterDependencyProvider.php**
+**src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
 ```php
 namespace Pyz\Yves\Router;
@@ -700,7 +697,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 ```
 
 
-#### Register the plugins for Back Office users
+### Register the plugins for Back Office users
 
 
 **src/Pyz/Zed/Customer/CustomerDependencyProvider.php**
@@ -815,7 +812,7 @@ class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
 ```
 
 
-#### 6.4) For Glue Rest API
+### Register the plugins for Glue API
 
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
@@ -852,15 +849,16 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
 
-Follow the link [How to Use Multi-Factor Authentication with Glue API](/docs/pbc/all/multi-factor-authentication/{{page.version}}/howto-use-multi-factor-authentication-with-glue-api.html) for verification.
+Make sure you can authenticate with MFA using Glue API. For instructions, see [Authenticate through MFA](/docs/pbc/all/multi-factor-authentication/202505.0/manage-using-glue-api/glue-api-authenticate-through-mfa.html).
 
 {% endinfo_block %}
 
-### 7) Set up the frontend
+## 7) Set up the frontend
 
 Add the following settings:
 
@@ -920,12 +918,12 @@ docker/sdk up --assets
 
 {% info_block warningBox "Verification" %}
 
-- Integrate one of the supported Multi-Factor Authentication methods, see [Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/202505.0/multi-factor-authentication.md#multi-factor-authentication-methods).
+- Integrate one of the supported MFA methods, see [Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/202505.0/multi-factor-authentication.md#multi-factor-authentication-methods).
 - Make sure the **Set up Multi-Factor Authentication** menu item is displayed in the navigation menu.
-- Clicking the menu should open the following page:
- - For customers:`https://yves.mysprykershop.com/multi-factor-auth/set`;
- - For agents: `https://yves.mysprykershop.com/agent/multi-factor-auth/set`;
- - For backoffice users: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`.
+- Clicking the menu should open one the following pages depending on your user:
+ - Customers:`https://yves.mysprykershop.com/multi-factor-auth/set`
+ - Agents: `https://yves.mysprykershop.com/agent/multi-factor-auth/set`
+ - Back Office users: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`
 
 {% endinfo_block %}
 

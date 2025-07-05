@@ -27,7 +27,7 @@ An MFA method consists of two components:
 
 ## 1) Create an MFA type plugin
  
-Create one of the following plugins: 
+Create one of the following plugins depending on the application: 
  
 - Yves: Implements `\Spryker\Shared\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthPluginInterface` and calls a client method
 - Zed: Resides in the Zed layer, implements `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface`, and delegates the logic through the Facade

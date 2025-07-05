@@ -88,8 +88,8 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1. Create a plugin implementing `\Spryker\Shared\GuiExtension\Dependency\Plugin\NavigationPluginInterface`.
-2. Register the plugin in the `getDropdownNavigationPlugins()` method of the `GuiDependencyProvider` class.
+1. Create a plugin implementing `\Spryker\Shared\GuiExtension\Dependency\Plugin\NavigationPluginInterface`
+2. Register the plugin in the `getDropdownNavigationPlugins()` method of the `GuiDependencyProvider` class
 
 Make sure that, in the Back Office, the menu item is displayed in the dropdown navigation.
 

@@ -404,7 +404,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure you can send all requests from [Manage Multi-Factor Authentication using Glue API](/docs/pbc/all/multi-factor-authentication/202505.0/manage-using-glue-api/manage-multi-factor-authentication-using-glue-api.html)
+Make sure you can authenticate with MFA using Glue API. For instructions, see [Authenticate through MFA](/docs/pbc/all/multi-factor-authentication/202505.0/manage-using-glue-api/glue-api-authenticate-through-mfa.html).
 
 {% endinfo_block %}
 

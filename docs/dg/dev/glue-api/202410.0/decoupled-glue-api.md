@@ -1,6 +1,6 @@
 ---
 title: Decoupled Glue API
-description: Learn about the process of handling API requests through GlueStorefront and GlueBackoffice layers.
+description: Learn about the process of handling API requests through GlueStorefront and GlueBack Office layers.
 last_updated: Jul 11, 2023
 template: glue-api-storefront-guide-template
 redirect_from:

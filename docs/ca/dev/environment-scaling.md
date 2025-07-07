@@ -25,7 +25,7 @@ In vertical scaling, we are making something "bigger". In the checkout analogy, 
 
 In horizontal scaling, we are "adding more of the same" to a resource to balance out load across multiple processors. In the checkout analogy, horizontal scaling means opening another checkout line. We "deploy" another clerk so they can open up another checkout line, and the waiting customers can spread out over the two lines.
 
-The cloud infrastructure is set up in a way that provides horizontal autoscaling based on AWS native ECS Service Auto Scaling. Horizontal autoscaling is currently configured for Spryker services, such as Yves, Glue, Backoffice, BackGW, and BackAPI, and enables these services to horizontally scale based on load. This is guard-railed by a setting that determines the minimum, desired, and maximum numbers of members of a service scaling group. A load balancer in front of each service is responsible for distributing the load across these services.
+The cloud infrastructure is set up in a way that provides horizontal autoscaling based on AWS native ECS Service Auto Scaling. Horizontal autoscaling is currently configured for Spryker services, such as Yves, Glue, Back Office, BackGW, and BackAPI, and enables these services to horizontally scale based on load. This is guard-railed by a setting that determines the minimum, desired, and maximum numbers of members of a service scaling group. A load balancer in front of each service is responsible for distributing the load across these services.
 
 ### Step scaling
 

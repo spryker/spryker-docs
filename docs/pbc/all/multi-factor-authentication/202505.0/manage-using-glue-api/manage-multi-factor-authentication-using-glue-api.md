@@ -56,14 +56,14 @@ Agent users and Back Office users are technically the same underlying user accou
 
 ## Admin control over MFA for customers
 
-Backoffice administrators can disable Multi-Factor Authentication (MFA) for individual customers directly from the Backoffice.
+Back Office administrators can disable Multi-Factor Authentication (MFA) for individual customers directly from the Back Office.
 
 This functionality is useful in scenarios where:
 - A customer is locked out due to MFA issues (for example, lost access to their authentication method)
 - Support intervention is required to reset the customer's MFA configuration
 
 To disable MFA for a customer:
-1. Navigate to the customer's profile in the Backoffice.
+1. Navigate to the customer's profile in the Back Office.
 2. Use the **Remove MFA** action to deactivate currently enabled MFA methods for the selected customer.
 
 Once MFA is disabled, the customer can log in using just their credentials. They can reconfigure MFA from their profile at any time.

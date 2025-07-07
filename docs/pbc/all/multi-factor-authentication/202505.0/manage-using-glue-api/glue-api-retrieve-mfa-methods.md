@@ -57,8 +57,8 @@ Authorization: Bearer <access_token>
 
 | Status | Name                      | DESCRIPTION |
 |--------|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0      | Disabled                  | MFA method is available but disabled for the user. Protected actions don't require MFA.
-| 1      | Activation is in progress | User initiated the MFA setup but didn't complete the verification. Protected actions don't require MFA.
+| 0      | Disabled                  | MFA method is available but disabled for the user. Protected actions don't require MFA. |
+| 1      | Activation is in progress | User initiated the MFA setup but didn't complete the verification. Protected actions don't require MFA. |
 | 2      | Enabled                   | MFA method is enabled for the user. All protected actions require MFA. |
 
 

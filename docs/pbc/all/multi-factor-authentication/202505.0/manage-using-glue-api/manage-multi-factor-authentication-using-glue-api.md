@@ -15,7 +15,7 @@ related:
 ---
 
 
-Spryker's Glue API supports Multi-Factor Authentication (MFA) to enhance security for sensitive operations performed by authenticated customers. 
+Spryker's Glue API supports Multi-Factor Authentication (MFA) to enhance security for sensitive operations performed by authenticated customers.
 
 ## MFA Enforcement in Glue API
 

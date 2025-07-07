@@ -913,9 +913,9 @@ docker/sdk up --assets
 - Integrate one of the supported MFA methods, see [Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/202505.0/multi-factor-authentication.md#multi-factor-authentication-methods).
 - Make sure the **Set up Multi-Factor Authentication** menu item is displayed in the navigation menu.
 - Clicking the menu should open one the following pages depending on your user:
-    - Customers:`https://yves.mysprykershop.com/multi-factor-auth/set`
-    - Agents: `https://yves.mysprykershop.com/agent/multi-factor-auth/set`
-    - Back Office users: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`
+  - Customers:`https://yves.mysprykershop.com/multi-factor-auth/set`
+  - Agents: `https://yves.mysprykershop.com/agent/multi-factor-auth/set`
+  - Back Office users: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`
 
 {% endinfo_block %}
 

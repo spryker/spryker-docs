@@ -17,7 +17,7 @@ This document describes how to install the [Multi-Factor Authentication (MFA) fe
 | Customer Account Management | {{site.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)                  |
 | Agent assist                | {{site.version}} | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                                                                                          |    
 | Glue Rest API               | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)   |
-
+| Back Office dropdown navigation | {{page.version}} | [Install Back Office dropdown navigation](/docs/pbc/all/back-office/{{page.version}}/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html) |
 
 ## 1) Install the required modules
 
@@ -760,14 +760,6 @@ class GuiDependencyProvider extends SprykerGuiDependencyProvider
     }
 }
 ```
-
-
-
-{% info_block warningBox "Verification" %}
-
-Make sure the following [Install the Backoffice dropdown navigation](/docs/pbc/all/back-office/{{page.version}}/base-shop/howto-guides/howto-install-the-backoffice-dropdown-navigation.html) feature is installed.
-
-{% endinfo_block %}
 
 
 

@@ -226,7 +226,7 @@ class SitemapConfig extends SprykerSitemapConfig
 
 The sitemap generator entity limit defines how many entities are fetched from the data provider per generator iteration. This is particularly useful for memory-optimized sitemap generation using generators and lets yuo  fine-tune performance depending on your infrastructure.
 
-The value is the maximum number of entities returned by one generator step before yielding control back to the generator loop. If you need to define the final number of URLs in the sitemap file, see [Configure Sitemap URL Limit](#25-configure-sitemap-url-limit).
+The value is the maximum number of entities returned by one generator step before yielding control back to the generator loop. If you need to define the final number of URLs in the sitemap file, see [Configure Sitemap URL Limit](#configure-sitemap-url-limit).
 
 To override the default limit, extend the `SitemapConfig` class and redefine the `getGeneratorEnitityLimit()` method:
 

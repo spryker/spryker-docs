@@ -15,4 +15,4 @@ For example, an abstract product with the `ABCD` SKU has two concrete products w
 
 | INSTALLATION GUIDES                                                                                                                                                                                |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Install the Concrete SKU product filter feature](/docs/pbc/all/product-information-management/202410.0/base-shop/install-and-upgrade/install-features/install-the-concrete-sku-filter-feature.md) |
+| [Install the Concrete SKU product filter feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-concrete-sku-filter-feature.html) |

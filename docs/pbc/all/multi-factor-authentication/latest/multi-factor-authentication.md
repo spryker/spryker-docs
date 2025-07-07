@@ -68,7 +68,7 @@ Examples of protected actions:
 - Change password
 - Delete account
 
-You can configure other actions to be protected with MFA according to your requirements. For instructions on integrating MFA into forms and actions, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html#configure-enabled-routes-and-forms).
+You can configure other actions to be protected with MFA according to your requirements. For instructions on integrating MFA into forms and actions, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html#configure-protected-routes-and-forms).
 
 
 
@@ -91,9 +91,9 @@ For instructions on configuring brute force protection, see [Install the Multi-F
 
 ## Multi-Factor Authentication methods
 
-The feature is shipped with the email authentication method. For instructions on installing this method, see [Install customer email Multi-Factor Authentication method](/docs/pbc/all/multi-factor-auth/latest/howto-install-customer-email-mfa.html).
+The feature is shipped with the email authentication method. For instructions on installing this method, see [Install customer email Multi-Factor Authentication method](/docs/pbc/all/multi-factor-authentication/latest/install-customer-email-multi-factor-authentication-method.html).
 
-You can set up your own methods by implementing a custom MFA type plugin. For instructions, see [Create custom Multi-Factor Authentication methods](/docs/pbc/all/multi-factor-auth/latest/howto-create-custom-mfa.html).
+You can set up your own methods by implementing a custom MFA type plugin. For instructions, see [Create custom Multi-Factor Authentication methods](/docs/pbc/all/multi-factor-authentication/latest/create-multi-factor-authentication-methods.html).
 
 ## Managing Multi-Factor Authentication in the customer profile
 

@@ -48,7 +48,7 @@ For more information on inquiries, see [Inquiry Management feature overview](/do
 
 If you need to add assets to multiple companies or business units simultaneously, it's more efficient to do it in the Back Office.
 
-For instructions, see [Back Office: Add assets](/docs/pbc/all/self-service-portal/latest/back-office-add-assets.html).
+For instructions, see [Add assets](/docs/pbc/all/self-service-portal/latest/manage-in-the-back-office/back-office-add-ssp-assets.html).
 
 
 

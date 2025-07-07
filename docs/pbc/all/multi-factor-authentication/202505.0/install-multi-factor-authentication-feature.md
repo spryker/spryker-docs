@@ -15,7 +15,7 @@ This document describes how to install the [Multi-Factor Authentication (MFA) fe
 | Spryker Core                | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                             |
 | Spryker Core Back Office    | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/back-office/202410.0/base-shop/install-and-upgrade/install-the-spryker-core-back-office-feature.html)                                                                      |
 | Customer Account Management | {{site.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)                  |
-| Agent assist                | {{site.version}} | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                                                                                          |    
+| Agent assist                | {{site.version}} | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                                                                                          |
 | Glue Rest API               | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)   |
 | Back Office dropdown navigation | {{page.version}} | [Install Back Office dropdown navigation](/docs/pbc/all/back-office/{{page.version}}/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html) |
 
@@ -913,9 +913,9 @@ docker/sdk up --assets
 - Integrate one of the supported MFA methods, see [Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/202505.0/multi-factor-authentication.md#multi-factor-authentication-methods).
 - Make sure the **Set up Multi-Factor Authentication** menu item is displayed in the navigation menu.
 - Clicking the menu should open one the following pages depending on your user:
- - Customers:`https://yves.mysprykershop.com/multi-factor-auth/set`
- - Agents: `https://yves.mysprykershop.com/agent/multi-factor-auth/set`
- - Back Office users: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`
+    - Customers:`https://yves.mysprykershop.com/multi-factor-auth/set`
+    - Agents: `https://yves.mysprykershop.com/agent/multi-factor-auth/set`
+    - Back Office users: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`
 
 {% endinfo_block %}
 

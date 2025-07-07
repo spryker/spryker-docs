@@ -251,8 +251,8 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 {% info_block warningBox "Verification" %}
 
 1. In the Back Office, go to the MFA setup page: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`. Make sure the following applies:
-* The **Set up Multi-Factor Authentication** menu item is displayed in the user profile dropdown navigation menu
-* The **Email** authentication method is displayed in the list of available authentication methods
+- The **Set up Multi-Factor Authentication** menu item is displayed in the user profile dropdown navigation menu
+- The **Email** authentication method is displayed in the list of available authentication methods
 2. For **Email Multi-Factor Authentication**, click **Activate**.
    This sends a verification code to the user's email address.
 3. Enter the received code in the confirmation form.
@@ -329,7 +329,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
    Make sure you're prompted to enter an MFA code.
 5. Enter the code in the form.
    Make sure this logs you in successfully.
-6. In the user profile, try updating the email address, password, or deleting the account. Make sure the following applies:   
+6. In the user profile, try updating the email address, password, or deleting the account. Make sure the following applies:
 - Completing the actions requires entering an MFA code
 - You can perform several actions without entering a code within the configured grace period.
 
@@ -444,7 +444,6 @@ Make sure you can authenticate with MFA using Glue API. For instructions, see [A
 
 
 
- 
 
 
 

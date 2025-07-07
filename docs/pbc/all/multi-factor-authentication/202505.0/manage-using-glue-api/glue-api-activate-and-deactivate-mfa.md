@@ -28,7 +28,7 @@ To request an MFA code, send the request:
 
 ---
 
-### Request 
+### Request
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |

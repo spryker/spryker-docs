@@ -5,7 +5,7 @@ last_updated: Jun 16, 2025
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to authenticate through Multi-Factor Authentication (MFA) to send requests to protected resources. 
+This document describes how to authenticate through Multi-Factor Authentication (MFA) to send requests to protected resources.
 
 For the list of protected resources, see [Multi-Factor Authentication in Glue API](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication-in-glue-api.html).
 
@@ -58,7 +58,7 @@ Content-Type: application/json
 
 `204 No Content` — means that the code has been sent through the requested method.
 
-The default grace period allows the authenticated account to send requests to protected resources for 30 minutes. 
+The default grace period allows the authenticated account to send requests to protected resources for 30 minutes.
 
 
 ## Send requests to protected resources with MFA
@@ -92,7 +92,7 @@ Content-Type: application/json
 }
 ```
 
-### Example error response 
+### Example error response
 
 A successful response doesn't contain any MFA related information. However, an unsuccessful response might contain such information:
 

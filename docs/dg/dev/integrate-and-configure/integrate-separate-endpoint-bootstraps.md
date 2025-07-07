@@ -246,7 +246,10 @@ The maintenance page is not compatible with Spryker Cloud.
 
 {% endinfo_block %}
 
+<!-- vale on -->
 **public/Backoffice/maintenance/index.html**
+
+<!-- vale off -->
 
 ```html
     <!DOCTYPE html>
@@ -283,7 +286,12 @@ The maintenance page is not compatible with Spryker Cloud.
 
 2. Configure the page you've added in step 3 to be displayed when the error `503` occurs:
 
+<!-- vale on -->
+
 **public/Backoffice/maintenance/maintenance.php**
+
+<!-- vale off -->
+
 
 ```php
 <?php

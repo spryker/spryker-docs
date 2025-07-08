@@ -17,10 +17,10 @@ The following diagram illustrates the dependencies between the modules for the *
 |------------|----------------------------|
 | PriceProductOffer | Provides product offer price-related functionality, price persistence, current price resolvers per currency/price mode.   |
 | PriceProductOfferDataImport | Imports data for product offer prices.    |
-| PriceProductOfferGui | Backoffice UI Interface for managing prices for product offers.    |
+| PriceProductOfferGui | Back Office UI for managing prices for product offers.    |
 | PriceProductOfferStorage | Provides functionality to store data about product offer prices in the storage.   |
 | PriceProductOfferVolume | Provides functionality to handle volume prices for product offers.    |
-| PriceProductOfferVolumeGui | Backoffice UI Interface for managing volume prices for product offers.    |
+| PriceProductOfferVolumeGui | Back Office UI for managing volume prices for product offers.    |
 | PriceProductOfferExtension | Provides plugin interfaces for extending `PriceProductOffer` module functionality.   |
 | PriceProductOfferStorageExtension | Provides plugin interfaces used by Price Product Offer Storage bundle.    |
 | PriceProductOfferVolumesRestApi | Provides plugins to add `product-offer-volume-prices` to the `product-offer-prices`.   |

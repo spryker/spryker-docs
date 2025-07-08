@@ -198,7 +198,7 @@ With separate storage databases per store, execute the command for each store in
 
 ## Storage GUI installation
 
-The storage GUI lets you access original and compressed storage data in the Back Office, **Maintenance** > **Storage** menu. 
+The storage GUI lets you access original and compressed storage data in the Back Office, **Maintenance** > **Storage** menu.
 
 StorageGui is supported starting from `spryker/storage-gui:1.1.0`. To build the UI changes, install dependencies and rebuild ZED UI:
 

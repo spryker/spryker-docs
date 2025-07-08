@@ -216,7 +216,7 @@ Make sure that, in the database, the configured data are added to the `spy_gloss
 
 ### 4) Add Zed translations
 
-Run the following command to generate a new translation cache for Zed:
+Generate a new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
@@ -353,7 +353,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-Run the following console command to execute registered installer plugins and install infrastructural data:
+Execute registered installer plugins and install infrastructural data:
 
 ```bash
 console setup:init-db

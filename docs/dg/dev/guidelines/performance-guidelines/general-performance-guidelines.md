@@ -534,7 +534,7 @@ Performance optimizations in the OMS availability check and order item reservati
 - [spryker/propel:^3.43.0](https://github.com/spryker/propel/releases/tag/3.43.0)
 - [spryker/sales:^11.63.0](https://github.com/spryker/sales/releases/tag/11.63.0)
 
-Performance optimizations in publish and synchronization (merchant related):
+Performance optimizations in publish and synchronization (merchant-related):
 - [spryker/merchant-product-offer-storage:^2.6.0](https://github.com/spryker/merchant-product-offer-storage/releases/tag/2.6.0)
 - [spryker/product-offer-storage:^1.8.0](https://github.com/spryker/product-offer-storage/releases/tag/1.8.0)
 - [spryker/propel:^3.45.0](https://github.com/spryker/propel/releases/tag/3.45.0)

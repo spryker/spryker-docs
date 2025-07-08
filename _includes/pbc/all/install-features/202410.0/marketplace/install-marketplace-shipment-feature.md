@@ -65,7 +65,7 @@ class ShipmentConfig extends SprykerShipmentConfig
 
 {% info_block warningBox "Verification" %}
 
-Place an order and check that items are grouped by merchant shipment in backoffice.
+Place an order and check that items are grouped by merchant shipment in Back Office.
 
 {% endinfo_block %}
 

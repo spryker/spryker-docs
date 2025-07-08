@@ -119,7 +119,11 @@ $bootstrap
     ->run();
 ```
 
+<!-- vale off -->
+
 **public/Backoffice/index.php**
+
+<!-- vale on -->
 
 ```php
 <?php
@@ -148,7 +152,11 @@ $bootstrap
 
 2. Add the following error pages:
 
+<!-- vale off -->
+
 <details><summary>public/Backoffice/errorpage/4xx.html</summary>
+
+<!-- vale on -->
 
 ```html
 <!DOCTYPE html>
@@ -193,7 +201,11 @@ $bootstrap
 
 </details>
 
+<!-- vale off -->
+
 <details><summary>public/Backoffice/errorpage/5xx.html</summary>
+
+<!-- vale on -->
 
 ```html
 <!DOCTYPE html>
@@ -246,7 +258,11 @@ The maintenance page is not compatible with Spryker Cloud.
 
 {% endinfo_block %}
 
+<!-- vale off -->
+
 **public/Backoffice/maintenance/index.html**
+
+<!-- vale on -->
 
 ```html
     <!DOCTYPE html>
@@ -283,7 +299,12 @@ The maintenance page is not compatible with Spryker Cloud.
 
 2. Configure the page you've added in step 3 to be displayed when the error `503` occurs:
 
+<!-- vale off -->
+
 **public/Backoffice/maintenance/maintenance.php**
+
+<!-- vale on -->
+
 
 ```php
 <?php

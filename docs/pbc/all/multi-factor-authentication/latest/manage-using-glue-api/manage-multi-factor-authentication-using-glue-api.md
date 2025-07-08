@@ -33,7 +33,7 @@ By default, the following Glue API endpoints are protected by MFA:
 - checkout
 - order-payments
 
-To customize which endpoints are protected by MFA, see to [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html#configure-enabled-routes-and-forms).
+To customize which endpoints are protected by MFA, see to [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html#configure-enabled-routes-and-forms).
 
 ## MFA for customers
 
@@ -76,11 +76,11 @@ Once MFA is disabled, the customer can log in using just their credentials. They
 
 This section explains how to activate, deactivate, and use Multi-Factor Authentication (MFA) when sending requests to protected resources using Glue API.
 
-To learn more about MFA methods, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html).
+To learn more about MFA methods, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html).
 
 
 The usual flow of using MFA is as follows:
 
-1. [Retrieve available MFA methods and check their status for your user](/docs/pbc/all/multi-factor-authentication/202505.0/manage-using-glue-api/glue-api-retrieve-mfa-methods.html)
-2. [Activate MFA for your user](/docs/pbc/all/multi-factor-authentication/202505.0/glue-api-activate-and-deactivate-mfa.html)
-3. [Authenticate through MFA and send requests to protected resources](/docs/pbc/all/multi-factor-authentication/202505.0/manage-using-glue-api/glue-api-authenticate-through-mfa.html)
+1. [Retrieve available MFA methods and check their status for your user](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-retrieve-mfa-methods.html)
+2. [Activate MFA for your user](/docs/pbc/all/multi-factor-authentication/latest/glue-api-activate-and-deactivate-mfa.html)
+3. [Authenticate through MFA and send requests to protected resources](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-authenticate-through-mfa.html)

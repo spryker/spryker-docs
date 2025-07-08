@@ -13,8 +13,8 @@ The email authentication method is used as an example. The endpoint supports all
 
 ## Installation
 
-- [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html)
-- [Install Customer Email Multi-Factor Authentication method](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-customer-email-multi-factor-authentication-method.html)
+- [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html)
+- [Install Customer Email Multi-Factor Authentication method](/docs/pbc/all/multi-factor-authentication/latest/install-customer-email-multi-factor-authentication-method.html)
 
 
 ## Retrieve MFA methods
@@ -32,7 +32,7 @@ To retrieve MFA methods and the user's status for each of them, send the request
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the user. To get the value, [authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user), [authenticate as a customer](/docs/pbc/all/identity-access-management/202410.0/manage-using-glue-api/glue-api-authenticate-as-a-customer.html), or [authenticate as a Back Office user](/docs/pbc/all/identity-access-management/202410.0/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the user. To get the value, [authenticate as a company user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user), [authenticate as a customer](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html), or [authenticate as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
 
 ```http
 GET /multi-factor-auth-types
@@ -84,7 +84,7 @@ Authorization: Bearer <access_token>
 
 ## Next step
 
-[Activate MFA](/docs/pbc/all/multi-factor-authentication/202505.0/glue-api-activate-and-deactivate-mfa.html)
+[Activate MFA](/docs/pbc/all/multi-factor-authentication/latest/glue-api-activate-and-deactivate-mfa.html)
 
 
 

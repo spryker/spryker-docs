@@ -848,7 +848,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure you can authenticate with MFA using Glue API. For instructions, see [Authenticate through MFA](/docs/pbc/all/multi-factor-authentication/202505.0/manage-using-glue-api/glue-api-authenticate-through-mfa.html).
+Make sure you can authenticate with MFA using Glue API. For instructions, see [Authenticate through MFA](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-authenticate-through-mfa.html).
 
 {% endinfo_block %}
 
@@ -912,7 +912,7 @@ docker/sdk up --assets
 
 {% info_block warningBox "Verification" %}
 
-- Integrate one of the supported MFA methods, see [Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/202505.0/multi-factor-authentication.md#multi-factor-authentication-methods).
+- Integrate one of the supported MFA methods, see [Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.md#multi-factor-authentication-methods).
 - Make sure the **Set up Multi-Factor Authentication** menu item is displayed in the navigation menu.
 - Clicking the menu should open one the following pages depending on your user:
   - Customers:`https://yves.mysprykershop.com/multi-factor-auth/set`

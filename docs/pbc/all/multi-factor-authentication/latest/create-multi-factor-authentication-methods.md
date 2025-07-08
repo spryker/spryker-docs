@@ -22,7 +22,7 @@ To lean more about MFA methods, see [Multi-Factor Authentication feature overvie
 An MFA method consists of two components:
 
 - MFA type plugin
-- Code Sender Strategy
+- Code Sender Strategy plugin
 
 ## Prerequisites
 
@@ -30,7 +30,10 @@ An MFA method consists of two components:
 
 ## 1) Create an MFA type plugin
 
-Create a plugin that implements `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface`:
+Create one of the following plugins depending on the application:
+
+- Yves: Implements `\Spryker\Shared\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthPluginInterface` and calls a client method
+- Zed: Resides in the Zed layer, implements `\Spryker\Zed\MultiFactorAuthExtension\Dependency\Plugin\MultiFactorAuthTypePluginInterface`, and delegates the logic through the Facade
 
 <details>
 <summary>Pyz\Yves\MultiFactorAuth\Plugin\Factors\YourMultiFactorAuthType\YourMfaTypePlugin.php</summary>
@@ -96,22 +99,24 @@ class YourMfaTypePlugin extends AbstractPlugin implements MultiFactorAuthPluginI
 
 </details>
 
-## 2) Create a code sender strategy
 
-Create a sender strategy that implements `\Spryker\Zed\MultiFactorAuth\Business\Strategy\SendStrategyInterface`. Here's an example based on the email implementation:
+## 2) Create a code sender strategy plugin
+
+Create a sender strategy that implements `\Spryker\Shared\MultiFactorAuthExtension\Dependency\Plugin\SendStrategyPluginInterface`. Here's an example based on the email implementation:
 
 <details>
-<summary>Pyz\Zed\MultiFactorAuth\Business\Strategy\Customer\YourMfaCodeSenderStrategy.php</summary>
+<summary>Pyz\Zed\MultiFactorAuth\Communication\Plugin\Sender\Customer\YourMfaCodeSenderStrategyPlugin.php</summary>
 
 ```php
 <?php
 
-namespace Pyz\Zed\MultiFactorAuth\Business\Strategy\Customer;
+namespace Pyz\Zed\MultiFactorAuth\Communication\Plugin\Sender\Customer;
 
 use Generated\Shared\Transfer\MultiFactorAuthTransfer;
-use Spryker\Zed\MultiFactorAuth\Business\Strategy\SendStrategyInterface;
+use Spryker\Shared\MultiFactorAuthExtension\Dependency\Plugin\SendStrategyPluginInterface;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 
-class YourMfaCodeSenderStrategy implements SendStrategyInterface
+class YourMfaCodeSenderStrategyPlugin extends AbstractPlugin implements SendStrategyPluginInterface
 {
     /**
      * @var string
@@ -137,7 +142,7 @@ class YourMfaCodeSenderStrategy implements SendStrategyInterface
     {
         // Implement your code sending logic here
         // For example, send via SMS, authenticator app, etc.
-        
+
         return $multiFactorAuthTransfer;
     }
 }
@@ -145,40 +150,16 @@ class YourMfaCodeSenderStrategy implements SendStrategyInterface
 
 </details>
 
-## 3) Wire strategy in factory
+## 3) Register the plugins
 
-Add your strategy to the factory so that it can be used by the MFA system to resolve the correct sender strategy based on the type of MFA method selected by a customer.
+Register the plugins in the dependency providers:
 
-**Pyz\Zed\MultiFactorAuth\Business\MultiFactorAuthBusinessFactory.php**
+- Back Office users: Use the `MultiFactorAuthDependencyProvider::getUserMultiFactorAuthPlugins()` class in the Zed module
+- Agents: Use the `MultiFactorAuthDependencyProvider::getAgentMultiFactorAuthPlugins()` method
+- Universal plugin for all users: Use the `MultiFactorAuthDependencyProvider::getUserSendStrategyPlugins()` method
 
-```php
-<?php
 
-namespace Pyz\Zed\MultiFactorAuth\Business;
-
-use Spryker\Zed\MultiFactorAuth\Business\MultiFactorAuthBusinessFactory as SprykerMultiFactorAuthBusinessFactory;
-use Pyz\Zed\MultiFactorAuth\Business\Strategy\Customer\YourMfaCodeSenderStrategy;
-
-class MultiFactorAuthBusinessFactory extends SprykerMultiFactorAuthBusinessFactory
-{
-    /**
-     * @return array<\Spryker\Zed\MultiFactorAuth\Business\Strategy\SendStrategyInterface>
-     */
-    protected function getCustomerCodeSenderStrategies(): array
-    {
-        return [
-            // ... other strategies
-            new YourMfaCodeSenderStrategy(),
-        ];
-    }
-}
-```
-
-## 4) Register the plugin
-
-Register the plugin in the dependency provider:
-
-**Pyz\Yves\MultiFactorAuth\MultiFactorAuthDependencyProvider.php**
+**src/Pyz/Yves/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
 ```php
 <?php
@@ -197,6 +178,30 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
         return [
             // ... other plugins
             new YourMfaTypePlugin(),
+        ];
+    }
+}
+```
+
+
+**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MultiFactorAuth;
+
+use Spryker\Zed\MultiFactorAuth\MultiFactorAuthDependencyProvider as SprykerMultiFactorAuthDependencyProvider;
+
+class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\MultiFactorAuthExtension\Dependency\Plugin\SendStrategyPluginInterface>
+     */
+    protected function getCustomerSendStrategyPlugins(): array
+    {
+        return [
+            new YourMfaCodeSenderStrategyPlugin(),
         ];
     }
 }

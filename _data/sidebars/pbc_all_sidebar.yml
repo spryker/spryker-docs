@@ -26,10 +26,14 @@ entries:
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-chart-module.html
                   - title: Upgrade the Back Office to Bootstrap 5
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-back-office-to-bootstrap-5.html                    
-                  - title: Install Backoffice accessibility improvements
+                  - title: Install Back Office accessibility improvements
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-accessibility-improvements.html
                     include_versions:
                       - "202410.0"
+                      - "latest"
+                  - title: Install Back Office dropdown navigation
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html
+                    include_versions:
                       - "latest"
 
 
@@ -1946,8 +1950,17 @@ entries:
             url: /docs/pbc/all/multi-factor-authentication/install-multi-factor-authentication-feature.html
           - title: Install customer email Multi-Factor Authentication method
             url: /docs/pbc/all/multi-factor-authentication/install-customer-email-multi-factor-authentication-method.html
-          - title: Create Multi-Factor Authentication methods
-            url: /docs/pbc/all/multi-factor-authentication/create-multi-factor-authentication-methods.html                    
+          - title: Create MFA methods
+            url: /docs/pbc/all/multi-factor-authentication/create-multi-factor-authentication-methods.html          
+          - title: Manage using Glue API
+            url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/manage-multi-factor-authentication-using-glue-api.html      
+            nested:
+              - title: Retrieve MFA methods
+                url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/glue-api-retrieve-mfa-methods.html
+              - title: Activate and deactivate MFA
+                url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/glue-api-activate-and-deactivate-mfa.html
+              - title: Authenticate through MFA
+                url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/glue-api-authenticate-through-mfa.html                                                  
 
       - title: Offer Management
         url: /docs/pbc/all/offer-management/offer-management.html

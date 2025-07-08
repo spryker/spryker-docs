@@ -6,7 +6,7 @@ template: troubleshooting-guide-template
 originalArticleId: c234b12e-5260-4f86-97b4-44c7ef5c8dbf
 ---
 
-# Optimizing Session Handling for High-Traffic Pages
+## Optimizing Session Handling for High-Traffic Pages
 
 This guide outlines a common performance issue related to session handling on high-traffic websites and provides both immediate mitigation strategies and a long-term architectural solution.
 
@@ -18,7 +18,7 @@ A frequent performance bottleneck, especially under heavy crawler or bot traffic
 
 ### Core Issue
 
-By default, Spryker may initiate a session and apply a lock for every page request, including simple GET requests. This is primarily due to the on-page generation of CSRF tokens for forms (e.g., "Add to Cart" forms on a product page, newsletter sign-ups). The generation of this token is a session "write" operation.
+By default, Spryker may initiate a session and apply a lock for every page request, including simple GET requests. This is primarily due to the on-page generation of CSRF tokens for forms (for example, "Add to Cart" forms on a product page, newsletter sign-ups). The generation of this token is a session "write" operation.
 
 **Impact:** When crawlers or bots hit these pages, they trigger thousands of session write operations, leading to lock contention in Redis. This can degrade the performance and availability of the entire application. Globally disabling session locking for all GET requests is not a viable solution, as it would break critical CSRF security protections.
 

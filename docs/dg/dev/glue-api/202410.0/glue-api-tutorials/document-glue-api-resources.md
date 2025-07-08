@@ -73,10 +73,10 @@ Data models of requests and responses used in your REST API are described with t
 
 To generate a detailed and accurate OpenAPI specification, you can enrich the transfer object definitions with the following attributes in your `*.transfer.xml` files:
 
-*   `description`: A description of the property.
-*   `example`: An example value for the property.
-*   `restRequestParameter`: Defines if the property is required in the request. Possible values are `required`, `yes`, and `no`.
-*   `restResponseParameter`: Defines if the property is required in the response. Possible values are `required`, `yes`, and `no`.
+- `description`: A description of the property.
+- `example`: An example value for the property.
+- `restRequestParameter`: Defines if the property is required in the request. Possible values are `required`, `yes`, and `no`.
+- `restResponseParameter`: Defines if the property is required in the response. Possible values are `required`, `yes`, and `no`.
 
 If the `restRequestParameter` attribute is not present for a field, the default value is `no`. If `restResponseParameter` is not present, the default is `yes`.
 

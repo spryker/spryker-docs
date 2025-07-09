@@ -1,42 +1,49 @@
 ---
-title: Session Locking Issues
-description: Learn how to troubleshoot and resolve session locking issues in Spryker-based projects.
+title: Session locking issues
+description: Learn how to troubleshoot and resolve session locking issues in Spryker projects.
 last_updated: Jun 27, 2025
 template: troubleshooting-guide-template
 originalArticleId: c234b12e-5260-4f86-97b4-44c7ef5c8dbf
 ---
 
-## Optimizing Session Handling for High-Traffic Pages
+## Optimizing session handling for high-traffic pages
 
 This guide outlines a common performance issue related to session handling on high-traffic websites and provides both immediate mitigation strategies and a long-term architectural solution.
 
 **Note:** This guide applies specifically to the Yves (frontend) layer of Spryker-based projects and does not apply to Zed (backend).
 
-## The Problem: Session Locking on Read-Only GET Requests
+## Problem: Session locking on read-only GET requests
 
 A frequent performance bottleneck, especially under heavy crawler or bot traffic, is session contention in Redis.
 
-### Core Issue
+### Core issue
 
-By default, Spryker may initiate a session and apply a lock for every page request, including simple GET requests. This is primarily due to the on-page generation of CSRF tokens for forms (for example, "Add to Cart" forms on a product page, newsletter sign-ups). The generation of this token is a session "write" operation.
+By default, Spryker may initiate a session and apply a lock for every page request, including simple GET requests. This is primarily used for on-page generation of CSRF tokens for forms, such as add to cart form on a product details page or a newsletter sign-ups. The generation of this token is a session "write" operation.
 
-**Impact:** When crawlers or bots hit these pages, they trigger thousands of session write operations, leading to lock contention in Redis. This can degrade the performance and availability of the entire application. Globally disabling session locking for all GET requests is not a viable solution, as it would break critical CSRF security protections.
+When a crawler or bot hits such page, it triggers thousands of session write operations, leading to lock contention in Redis. This can degrade the performance and availability of the entire application. Globally disabling session locking for all GET requests is not a viable solution because this breaks critical CSRF security protections.
 
-## Immediate Mitigation: Exclude Safe URLs from Locking
+## Immediate mitigation: Exclude safe URLs from locking
 
-For pages that are genuinely read-only and contain no forms of any kind, you can disable session locking at the project level.
+For pages that are read-only and don't contain forms, you can disable session locking on the project level.
 
 ### Mechanism
 
 You can provide a list of URL patterns that should be excluded from the session locking mechanism.
 
-**Warning:** This tactic effectively disables CSRF protection for any matched URL. It must only be used for pages that do not handle any user POST requests or contain any forms. Applying this to a page with a form will create a security vulnerability.
+{% info_block warningBox %}
+
+This disables CSRF protection for any matched URL, so use it only for pages that don't handle any user POST requests or contain any forms. Applying this to a page with a form will create a security vulnerability.
+
+{% endinfo_block %}
+
 
 ### Implementation
 
 Extend `SessionRedisConfig` and override the `getSessionRedisLockingExcludedUrlPatterns()` method to return your array of URL regex patterns.
 
-#### Example: `Pyz\Yves\SessionRedis\SessionRedisConfig.php`
+Example:
+
+**Pyz\Yves\SessionRedis\SessionRedisConfig.php**
 
 ```php
 <?php
@@ -65,33 +72,27 @@ class SessionRedisConfig extends SprykerSessionRedisConfig
 }
 ```
 
-## Architectural Solution: Asynchronous Forms & Optimized Session Handling
+## Architectural folution: Asynchronous forms and optimized session handling
 
-The most robust solution involves two key parts: refactoring your pages to make GET requests truly read-only, and then configuring session handling to capitalize on this change.
+Refactor pages to ensure GET requests are read-only, then optimize session handling to leverage this architectural improvement.
 
-### Part A: Asynchronous Form Loading
+### Part A: Asynchronous form loading
 
 Refactor high-traffic pages to decouple the main view from form generation.
 
-#### Implementation Steps
+#### Implementation steps
 
-1. **Refactor Page Controllers:** Modify the primary controller action to remove all logic related to form creation. The initial HTML response should no longer contain a form.
-2. **Create a Form-Loading Endpoint:** Create a new, separate controller action whose only job is to generate the form and return its HTML.
-3. **Implement Client-Side Loading:** Use JavaScript on the main page to asynchronously call the new form-loading endpoint and inject the returned HTML into the DOM.
+1. Adjust the primary controller action to remove all logic related to form creation. The initial HTML response should no longer contain a form.
+2. Create a new, separate controller action that only generates the form and returns its HTML.
+3. Use JavaScript on the main page to asynchronously call the new form-loading endpoint and inject the returned HTML into the DOM.
 
-### Part B: Advanced Session Handling for Read-Only Requests
+### Part B: Advanced session handling for read-only requests
 
 After implementing async forms, your GET requests are now truly read-only. You can instruct the system to use a more performant session handler that only locks on write operations.
 
-#### Mechanism
+Create a custom session handler resolver that selects a handler based on the HTTP request method. In `\Spryker\Yves\SessionRedis\Resolver\SessionHandlerResolver::resolveConfigurableRedisLockingSessionHandler` configure `\Spryker\Shared\SessionRedis\Handler\SessionHandlerFactory::createSessionHandlerRedisWriteOnlyLocking()` to be used for GET requests. Example:
 
-Create a custom session handler resolver that selects a handler based on the HTTP request method.
-
-#### Implementation
-
-Utilize `\Spryker\Yves\SessionRedis\Resolver\SessionHandlerResolver::resolveConfigurableRedisLockingSessionHandler`. Inside this method, decide to use the `\Spryker\Shared\SessionRedis\Handler\SessionHandlerFactory::createSessionHandlerRedisWriteOnlyLocking()` for GET requests.
-
-#### Example: `Pyz\Yves\SessionRedis\Resolver\SessionHandlerResolver.php`
+**Pyz\Yves\SessionRedis\Resolver\SessionHandlerResolver.php**
 
 ```php
 <?php
@@ -123,8 +124,54 @@ class SessionHandlerResolver extends SprykerSessionHandlerResolver
 }
 ```
 
-### Combined Result
+### Combined result
 
-- **Bot Traffic (GET):** Crawlers hit your async pages, and the WriteOnlyLocking handler is used. Since no session write occurs, no Redis lock is created.
-- **Real User (GET):** The initial page load is fast and non-locking.
-- **Real User (POST/AJAX):** The subsequent AJAX call to fetch the form and any form submission will use the default, fully-locking handler, ensuring data integrity is preserved.
+| User Type   | Request Type     | Description                                                                                                         | Locking Behavior                 |
+|-------------|------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------|
+| Bot         | GET              | Crawlers hit async pages; uses WriteOnlyLocking handler. No session write, so no Redis lock is created.             | No lock                          |
+| Real user   | GET              | Initial page load is fast and does not involve locking.                                                             | Non-locking                      |
+| Real user   | POST / AJAX      | AJAX calls to fetch forms or submit data use the default fully-locking handler to ensure data integrity.            | Fully-locking (default handler)  |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

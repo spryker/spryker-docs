@@ -328,6 +328,9 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 ### 6) Import data
 
+
+Import the data in the following sections.
+
 #### Add infrastructural data
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -366,21 +369,16 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database that the configured infrastructural measurement units are added to the `spy_product_measurement_unit` table.
+Make sure that in the database that the configured infrastructural measurement units have been added to the `spy_product_measurement_unit` table.
 
 {% endinfo_block %}
 
-#### Import product measurement unit
+#### Import product measurement units
 
-{% info_block infoBox "Info" %}
+1. Prepare your data according to your requirements using our demo data:
 
-The following imported entities will be used as measurement units in the Spryker OS.
-
-{% endinfo_block %}
-
-Prepare your data according to your requirements using our demo data:
-
-**vendor/spryker/product-measurement-unit-data-import/data/import/product_measurement_unit.csv**
+<details>
+  <summary>vendor/spryker/product-measurement-unit-data-import/data/import/product_measurement_unit.csv</summary>
 
 ```yaml
 name,code,default_precision
@@ -434,13 +432,15 @@ measurement_units.standard.busl.name,BUSL,100
 measurement_units.standard.box.name,BOX,1
 ```
 
+</details>
+
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 |  name|  mandatory|string  |measurement_units.standard.cbme.name  | The glossary key that will be used for displaying. Each name needs glossary key definition for all configured locales. |
-|code|mandatory|unique, string|CBME|A unique identifier used by the Spryker OS to identify measurement units.|
+|code|mandatory|unique, string|CBME|A unique identifier used by Spryker to identify measurement units.|
 |default_precision|mandatory|integer, power of ten|100|A property that affects how detailed to render a float measurement unit. Affects visual only, not used in calculations.|
 
-Register the following plugin to enable data import:
+2. Register the following plugin to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -467,7 +467,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Import data:
+3. Import data:
 
 ```bash
 console data:import product-measurement-unit
@@ -475,19 +475,13 @@ console data:import product-measurement-unit
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database that the configured data are added to the `spy_product_measurement_unit` table.
+Make sure that in the database that the configured data has been added to the `spy_product_measurement_unit` table.
 
 {% endinfo_block %}
 
 #### Import product measurement base units
 
-{% info_block infoBox "Info" %}
-
-Imports data that defines the base measurement unit of each product abstract.
-
-{% endinfo_block %}
-
-Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/product-measurement-unit-data-import/data/import/product_measurement_base_unit.csv**
 
@@ -504,7 +498,7 @@ ITEM,218
 | code | ✓ | string | METR |  An existing measurement unit code that will be the base of measurement unit calculations for this product abstract. |
 |abstract_sku|mandatory|virtual-unique, string|215|An existing product abstract SKU. 1 product abstract can have only 1 base unit; multiple occurrences will override older ones.|
 
-Register the following plugin to enable data import:
+2. Register the following plugin to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -531,7 +525,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Import data:
+3. Import data:
 
 ```bash
 console data:import product-measurement-base-unit
@@ -539,17 +533,14 @@ console data:import product-measurement-base-unit
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database that the configured data are added to the `spy_product_measurement_base_unit` table.
+Make sure that in the database that the configured data has been added to the `spy_product_measurement_base_unit` table.
 
 {% endinfo_block %}
 
 #### Import product measurement sales units
 
-{% info_block infoBox "Info" %}
 
-Imports sales measurement unit definitions to product concretes.
-
-{% endinfo_block %}
+1. Prepare imports sales measurement unit definitions to product concretes using the demo data:
 
 ```yaml
 sales_unit_key,concrete_sku,code,conversion,precision,is_displayed,is_default
@@ -584,7 +575,7 @@ sales_unit_19,218_1232,ITEM,1,1,1,1
 |is_displayed|mandatory|integer|0|Controls if the sales unit can be displayed for customers.|
 |is_default|mandatory|integer|1|Controls if this sales unit is preferred as the default sales unit when offered for customers.<br>Takes no effect if is_displayed set as 0.<br>1 product concrete can have up to 1 default sales unit.|
 
-Register the following plugin:
+2. Register the following plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -611,7 +602,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Import data:
+3. Import data:
 
 ```bash
 console data:import product-measurement-sales-unit
@@ -619,22 +610,24 @@ console data:import product-measurement-sales-unit
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database that the configured data are added to the `spy_product_measurement_sales_unit` table.
+Make sure that in the database that the configured data has been added to the `spy_product_measurement_sales_unit` table.
 
 {% endinfo_block %}
 
 #### Import product measurement sales unit stores
 
-{% info_block infoBox "Info" %}
+{% info_block warningBox "Verification" %}
 
-Contains the Store configuration for each defined sales unit.<br>Proceed with this step even if you have only 1 Store.
+Do this step even if your project has only one store.
 
 {% endinfo_block %}
 
-Prepare your data according to your requirements using our demo data:
 
-**vendor/spryker/product-measurement-unit-data-import/data/import/product_measurement_sales_unit_store.csv**
+1. Prepare store configuration data for each defined sales unit using the demo data:
 
+<details>
+  <summary>vendor/spryker/product-measurement-unit-data-import/data/import/product_measurement_sales_unit_store.csv</summary>
+  
 ```yaml
 sales_unit_key,store_name
 sales_unit_1,DE
@@ -693,12 +686,14 @@ sales_unit_19,US
 sales_unit_19,AT
 ```
 
+</details>
+
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | sales_unit_key |mandatory  | string | sales_unit_1 |A reference used for the product measurement sales unit data import.  |
 |store_name|mandatory|string|DE|Contains the store name where the sales unit is available.|
 
-Register the following plugin:
+2. Register the following plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -725,7 +720,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Import data:
+3. Import data:
 
 ```bash
 console data:import product-measurement-sales-unit-store
@@ -738,6 +733,8 @@ Make sure that in the database that the configured data are added to the `spy_pr
 {% endinfo_block %}
 
 ### 7) Set up behavior
+
+Set up the behaviors in the following sections.
 
 #### Set up checkout workflow
 
@@ -779,7 +776,9 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 }
 ```
 
-**src/Pyz/Zed/Cart/CartDependencyProvider.php**
+<details>
+  <summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+
 
 ```php
 <?php
@@ -834,7 +833,11 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 }
 ```
 
-**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+</details>
+
+
+<details>
+  <summary>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -880,6 +883,9 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 }
 ```
 
+</details>
+
+
 **ProductPageSearchDependencyProvider.php**
 
 ```php
@@ -906,13 +912,18 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `<add to cart>` action works with measurement units by adding an item to cart with sales unit and checking if `QuoteTransfer.items[].quantitySalesUnit` record gets populated.
-
+Ensure that the `<add to cart>` action functions correctly with measurement units by adding an item to the cart with the sales unit and verifying that the `QuoteTransfer.items[].quantitySalesUnit` record is populated.
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Make sure that checkout workflow works with measurement unit by ordering item with sales unit and checking the `spy_sales_order_item` contains `quantity_base_measurement_unit_name`, `quantity_measurement_unit_name`, `quantity_measurement_unit_code`, `quantity_measurement_unit_precision` and `quantity_measurement_unit_conversion` fields populated.
+Order an item with sales unit. Make sure, in `spy_sales_order_item`, the following fields have been populated:
+
+- `quantity_base_measurement_unit_name`
+- `quantity_measurement_unit_name`
+- `quantity_measurement_unit_code`
+- `quantity_measurement_unit_precision`
+- `quantity_measurement_unit_conversion`
 
 {% endinfo_block %}
 
@@ -930,6 +941,8 @@ Make sure that every order item from the `SalesFacade::getOrderItems()` results 
 
 ## Install feature frontend
 
+Take the steps in the following sections to install the feature frontend.
+
 ### Prerequisites
 
 Install the following required features:
@@ -938,7 +951,6 @@ Install the following required features:
 | --- | --- |
 | Spryker Core E-commerce | 202410.0 |
 |Checkout| 202410.0 |
-|   |   |
 
 ### 1) Install the required modules
 
@@ -961,7 +973,7 @@ Make sure the following modules have been installed:
 
 ### 2) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
 
@@ -990,7 +1002,7 @@ cart.item.sales_unit.not_found,Sales unit is not found for product with SKU '%sk
 cart.item.sales_unit.not_found,Verkaufseinheit wird für Produkt mit SKU '%sku%' nicht gefunden.,de_DE
 ```
 
-Import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -998,17 +1010,17 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the database, the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
 ### 3) Set up widgets
 
-Register the following plugins to enable widgets:
+1. Register the following plugins to enable widgets:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductMeasurementUnitWidgetPlugin | Allows customers to select sales units for the product when adding to cart. |  | SprykerShop\Yves\ProductMeasurementUnitWidget\Plugin\ProductDetailPage |
+| ProductMeasurementUnitWidgetPlugin | Enables customers to select sales units for the product when adding to cart. |  | SprykerShop\Yves\ProductMeasurementUnitWidget\Plugin\ProductDetailPage |
 |QuantitySalesUnitWidgetPlugin|Displays selected sales unit information for products on the cart overview page.||SprykerShop\Yves\ProductMeasurementUnitWidget\Plugin\CartPage|
 
 
@@ -1044,7 +1056,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 | --- | --- |
 |Controls base unit => sales unit calculations. Applies product quantity restrictions on sales unit level. Offers recommendation when invalid quantity is selected. Maintains stock-based quantity and sales unit information for posting  |vendor/spryker-shop/product-measurement-unit-widget/src/SprykerShop/Yves/ProductMeasurementUnitWidget/Theme/default/components/molecules/measurement-quantity-selector/measurement-quantity-selector.ts  |
 
-Enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -1052,11 +1064,11 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following widgets were registered:
+Make sure the following widgets have registered:
 
 | MODULE | TEST |
 | --- | --- |
-| ProductMeasurementUnitWidgetPlugin | Go to the product detail page where the product has sales units and add a product to the cart with a sales unit. |
-| QuantitySalesUnitWidgetPlugin | Go to the cart overview page and see if the sales unit information appears for a product. |
+| ProductMeasurementUnitWidgetPlugin | On the product details page, add a product with sales unit to cart. |
+| QuantitySalesUnitWidgetPlugin | On cart overview page, make sure sales units are displayed.  |
 
 {% endinfo_block %}

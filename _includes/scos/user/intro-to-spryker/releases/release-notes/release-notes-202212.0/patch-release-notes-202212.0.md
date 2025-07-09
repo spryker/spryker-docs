@@ -2,7 +2,7 @@
 
 The patch release 202212.0-p2 includes the following changes:
 - Updated github actions to enable testing newer PHP versions (8.0 & 8.1).
-- Updated backoffice GUI base module to allow backoffice tables to have strict search on their columns (check this page [here](/docs/dg/dev/backend-development/zed-ui-tables/create-and-configure-zed-tables.html#configure-search-by-columns)).
+- Updated Back Office GUI base module to allow backoffice tables to have strict search on their columns (check this page [here](/docs/dg/dev/backend-development/zed-ui-tables/create-and-configure-zed-tables.html#configure-search-by-columns)).
 - Removed explicit usage of Devvm since it's a deprecated concept.
 
 ### GitHub release pages

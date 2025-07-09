@@ -8,8 +8,8 @@ This document describes the `product_offer_service.csv` file to configure the as
 
 ## Import file dependencies
 
-* [service.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service.csv.html)
-* [merchant_product_offer.csv](/docs/pbc/all/offer-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html)
+* [service.csv](/docs/pbc/all/service-point-management/latest/unified-commerce/import-and-export-data/import-file-details-service.csv.html)
+* [merchant_product_offer.csv](/docs/pbc/all/offer-management/latest/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html)
 
 
 

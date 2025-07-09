@@ -11,4 +11,4 @@ redirect_from:
 <!-- Must be moved to base shop after product offers are decoupled from MP @Valerii Pravoslavnyi -->
 
 
-{% include pbc/all/install-features/{{page.version}}/install-the-product-offer-shipment-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-offer-shipment-feature.md -->
+{% include pbc/all/install-features/latest/install-the-product-offer-shipment-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-offer-shipment-feature.md -->

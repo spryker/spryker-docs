@@ -9,7 +9,7 @@ This endpoint allows authenticating as a Back Office user.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-account-management-glue-api.html).
 
 ## Authenticate as a Back Office user
 
@@ -36,8 +36,8 @@ For detailed information on the modules that provide the API functionality and r
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
 | grant_type | password | &check; | Method through which the application can gain Access Tokens and by which you grant limited access to the resources to another entity without exposing credentials. |
-| username | String | &check; | Back Office user's username. You define it when [creating](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [editing users](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html). |
-| password | String | &check; | Back Office user's password. You define it when [creating](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [editing users](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html). |
+| username | String | &check; | Back Office user's username. You define it when [creating](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [editing users](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/edit-users.html). |
+| password | String | &check; | Back Office user's password. You define it when [creating](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [editing users](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/edit-users.html). |
 
 ### Response
 
@@ -69,4 +69,4 @@ For detailed information on the modules that provide the API functionality and r
 | unsupported_grant_type | The provided grant type is not supported. The grant type must be `password`. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).

@@ -1,6 +1,6 @@
 ---
 title: Spryker Data Export
-description: API documentation for dynamic-entity-availability-abstracts.
+description: Learn how to configure and extend Spryker's data export functionality for reporting, analytics, and system integration.
 last_updated: July 9, 2025
 layout: custom_new
 ---

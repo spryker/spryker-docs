@@ -1,7 +1,7 @@
 ---
 title: Endpoint Security
-description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: Mar 21, 2025
+description: Learn about endpoint security features and best practices for securing integration endpoints in Spryker, including authentication, IP whitelisting, HTTPS enforcement, and monitoring.
+last_updated: July 9, 2025
 layout: custom_new
 ---
 

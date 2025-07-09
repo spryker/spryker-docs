@@ -1,7 +1,7 @@
 ---
 title: Spryker GLUE API for Data Exchange
-description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: Mar 21, 2025
+description: Comprehensive guide to Spryker GLUE API, detailing its capabilities for seamless data exchange, integration, and customization using REST, GraphQL, and OData protocols.
+last_updated: July 9, 2025
 layout: custom_new
 nav_pr: 3.4
 ---

@@ -1,7 +1,7 @@
 ---
 title: Using Jenkins for Third Party Integrations
-description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: Mar 21, 2025
+description: Learn how to use Jenkins for automating data exchange tasks in Spryker, including importing, exporting, and triggering scheduled operations with third-party systems.
+last_updated: July 9, 2025
 layout: custom_new
 ---
 

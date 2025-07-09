@@ -1,7 +1,7 @@
 ---
 title: Creating a New Module
-description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: Mar 21, 2025
+description: Learn how to create a new module in Spryker to encapsulate functionality, improve scalability, and align with modular architecture standards.
+last_updated: July 9, 2025
 layout: custom_new
 ---
 

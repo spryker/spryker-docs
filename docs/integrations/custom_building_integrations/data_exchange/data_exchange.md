@@ -1,16 +1,8 @@
 ---
 title: Spryker Data Exchange
-description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: Mar 21, 2025
+description: Comprehensive guide on Spryker's data exchange methods, including APIs, middleware, and integrations for seamless e-commerce platform connectivity.
+last_updated: July 9, 2025
 layout: custom_new
-article_status: published
-nav_pr: 3.4
-tags: 
-  - ECO Module
-  - ACP
-  - API
-  - Custom Build
-  - Community Contribution
 ---
 
 Most e-commerce platforms require a way to exchange data. Whether you are updating products and prices from an external source or sending order data to update availability, these processes are part of a broader data exchange system.

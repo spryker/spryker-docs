@@ -1,8 +1,8 @@
 ---
 title: Orders data export
 description: This document shows how to export data from a Spryker shop to an external
-  system
-last_updated: '2025-07-07'
+  system for your third party integrations
+last_updated: July 9, 2025
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/exporting-data
 originalArticleId: 0a38b991-f10c-4f6c-90db-247a62cda2e7

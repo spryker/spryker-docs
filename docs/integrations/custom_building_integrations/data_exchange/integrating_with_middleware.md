@@ -1,7 +1,7 @@
 ---
 title: Integrating with Middleware
-description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: Mar 21, 2025
+description: Learn how to integrate external systems with Middleware to streamline data exchange, enhance scalability, and simplify maintenance for your core platform.
+last_updated: July 9, 2025
 layout: custom_new
 nav_pr: 3.4
 ---

@@ -1,16 +1,8 @@
 ---
 title: Integrating with Spryker OMS
-description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: Mar 21, 2025
+description: Learn how to integrate Spryker OMS with third-party systems using event-driven and API-driven approaches to manage order lifecycles effectively.
+last_updated: July 9, 2025
 layout: custom_new
-article_status: published
-nav_pr: 3.3
-tags: 
-  - ECO Module
-  - ACP
-  - API
-  - Custom Build
-  - Community Contribution
 ---
 
 OMS (Order Management System) in Spryker is a built-in workflow engine that manages the lifecycle of an order - from placement to delivery. It defines each step (e.g., payment, shipping, cancellation) as part of a process, with clear transitions and conditions.

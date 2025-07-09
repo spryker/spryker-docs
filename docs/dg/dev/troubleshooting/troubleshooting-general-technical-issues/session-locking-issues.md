@@ -129,7 +129,7 @@ class SessionHandlerResolver extends SprykerSessionHandlerResolver
 | User Type   | Request Type     | Description                                                                                                         | Locking Behavior                 |
 |-------------|------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------|
 | Bot         | GET              | Crawlers hit async pages; uses WriteOnlyLocking handler. No session write, so no Redis lock is created.             | No lock                          |
-| Real user   | GET              | Initial page load is fast and does not involve locking.                                                             | Non-locking                      |
+| Real user   | GET              | Initial page load is fast and does not involve locking.                                                             | No lock                   |
 | Real user   | POST / AJAX      | AJAX calls to fetch forms or submit data use the default fully-locking handler to ensure data integrity.            | Fully-locking (default handler)  |
 
 

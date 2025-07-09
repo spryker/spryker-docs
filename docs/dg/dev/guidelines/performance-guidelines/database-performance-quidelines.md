@@ -115,7 +115,7 @@ BatchEntityHooksInterface enables `postSave` hooks, which are similar to publish
 
 To ensure proper event handling during batch operations, the corresponding interface must be implemented for storage and search entities when used with `ActiveRecordBatchProcessorTrait` or `CascadeActiveRecordBatchProcessorTrait`. These traits don't automatically trigger P&S events for storage or search entities. Therefore, explicit implementation is required to handle such events correctly during batch processing.
 
-### Basic Usage Example
+### Usage example
 
 ```php
 class AbstractSpyProductOfferStorage extends BaseSpyProductOfferStorage implements BatchEntityHooksInterface
@@ -145,11 +145,52 @@ When saving the `SpyProductOfferStorage` entity using `ActiveRecordBatchProcesso
 
 ## Limitations and Suggestions
 
-Limitations and Recommendations
-1. **Entity ID Access**: The `ActiveRecordBatchProcessorTrait` does not return entity IDs after saving. If you need the ID, perform a separate database query.
+- Entity ID access: `ActiveRecordBatchProcessorTrait` doesn't return entity IDs after saving. If you need the ID, perform a separate database query.
 
-2. **Memory Usage**: The `$entityList` property stores entities in memory. To avoid memory issues, keep batch sizes reasonable and call `commit()` periodically.
+- Memory usage : The `$entityList` property stores entities in memory. To avoid memory issues, keep batch sizes reasonable and call `commit()` periodically.
 
-3. **Insert Limits**: The trait does not enforce a limit on the number of entities you can insert in one operation. However, databases have limits on payload size. Use sensible chunk sizes.
+- Insert limits : The trait doesn't enforce a limit on the number of entities you can insert in one operation. However, databases have limits on payload size. Use sensible chunk sizes.
 
-4. **Update Limits**: The default update limit is 200 entities per batch. This is defined by `ActiveRecordBatchProcessorTrait::UPDATE_CHUNK_SIZE`. You can override this limit by extending the trait in your `EntityManager`.
+- Update limits : The default update limit is 200 entities per batch. This is defined by `ActiveRecordBatchProcessorTrait::UPDATE_CHUNK_SIZE`. You can override this limit by extending the trait in your `EntityManager`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

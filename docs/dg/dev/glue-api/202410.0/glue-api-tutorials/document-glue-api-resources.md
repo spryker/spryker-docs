@@ -69,7 +69,7 @@ When the command completes, you can see a specification file generated in the di
 
 ## 3. Describe your REST API: Requests and responses
 
-Data models of requests and responses used in your REST API are described with the help of transfer objects. Such objects contain a list of fields for each request or response, their data type, and which of the fields are required. By default, the fields are not included in the specification automatically. To include them, you need to modify the XML schema definitions of the transfer objects.
+Data models of requests and responses used in REST API are described with the help of transfer objects. Such objects contain a list of fields for each request and response, their data type, and which of the fields are required. By default, the fields are not included in the specification. To include them, you need to modify the XML schema definitions of the transfer objects.
 
 To generate a detailed and accurate OpenAPI specification, you can enrich the transfer object definitions with the following attributes in your `*.transfer.xml` files:
 

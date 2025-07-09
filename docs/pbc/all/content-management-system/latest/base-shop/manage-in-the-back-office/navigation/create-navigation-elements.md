@@ -35,4 +35,8 @@ This opens the **Overview of Navigation Elements** page with a success message d
 | KEY | Unique identifier that will be used to reference the navigation element on the Storefront. |
 | ACTIVE | Defines if the navigation element will be active. Active navigation elements and their child nodes are displayed on Storefront.  |
 
-{% wistia 2iepfhl6fu 960 720 %}
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/navigation/create-navigation-elements.md/How+to+Configure+Navigation+in+Spryker+B2C-2iepfhl6fu.mp4" type="video/mp4">
+  </video>
+</figure>

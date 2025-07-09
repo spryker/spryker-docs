@@ -111,6 +111,7 @@ commonOptions = {
     /contorion.de\/[\.\w\-\/\?]+/,
     /www.contorion.de\/[\.\w\-\/\?]+/,
     /www.jwt.io\/[\.\w\-\/\?]+/,
+    /docs.adyen.com\/[\.\w\-\/\?]+/,
     /auth0.com\/[\.\w\-\/\?]+/,    
     /www.facebook.com\/[\.\w\-\/\?]+/
 

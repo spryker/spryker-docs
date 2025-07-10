@@ -134,7 +134,7 @@ In this example, EU region has DE and AT stores. US region has a US store. Dynam
 
 ![elasticsearch-indexes-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.md/elasticsearch-indexes-dms.png)
 
-- key-value store keys contain store as a part of the key name for Dynamic Multistore enabled and disabled modes.
+- Redis keys contain store as a part of the key name for Dynamic Multistore enabled and disabled modes.
 
 - When Dynamic Multistore is enabled, customers can switch between available stores for a region. When a customer changes a store, it's set to the `_store` query parameter. Using the query parameter, the store is added to session under the `current_store` key. It's used for fetching store-related data.
 

@@ -117,7 +117,7 @@ A facet search is executed using the category facet with the provided category n
 
 ## Configure facet filters
 
-The category facet is a special case and needs to be handled this way because a call needs to be made to the key-value store (Redis or Valkey) to retrieve the category node ID when a category detail page is requested.
+The category facet is a special case and needs to be handled this way because a call needs to be made to Redis to retrieve the category node ID when a category detail page is requested.
 
 Other than that, the `CatalogClient` operation can handle requests that contain other facet filters.
 

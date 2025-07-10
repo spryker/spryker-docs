@@ -28,9 +28,9 @@ Both abstract and concrete products have some attributes that are localized and 
 
 There are also several fields, such as `attribute_key_1` and `value_1`, which represent a non-localized product attribute and its value. Localized product attributes also contain locales as a suffix in the header of the CSV file. These product attributes are stored in JSON format in the database as key-value pairs.
 
-### Load Products Into the key-value store (Redis or Valkey) Data Store
+### Load Products Into the Redis Data Store
 
-To have this data available on the frontend, you must collect and export it to the key-value store (Redis or Valkey). Yves has no connection to the SQL database, and it retrieves the product information through the key-value store (Redis or Valkey) and Elasticsearch data stores.
+To have this data available on the frontend, you must collect and export it to Redis. Yves has no connection to the SQL database, and it retrieves the product information through the Redis and Elasticsearch data stores.
 T
 he export is done by the collectors. You can manually execute the export to the key-value data stores:
 
@@ -42,7 +42,7 @@ vendor/bin/console collector:storage:export
 
 When you have data in the key-value storage, you can display the product details in the frontend views.
 
-When requesting a page in frontend, the `Collector` module takes care of identifying the type of request (if it's a product details page or a category page) and retrieves necessary data from the key-value store (Redis or Valkey).
+When requesting a page in frontend, the `Collector` module takes care of identifying the type of request (if it's a product details page or a category page) and retrieves necessary data from Redis.
 
 It also takes care of routing the request to the correct controller action.
 
@@ -50,7 +50,7 @@ It also takes care of routing the request to the correct controller action.
 
  In Demoshop, when you request this page: `/en/canon-1200d-+-efs-1855mm-89`, the `StorageRouter` tries to find the route for this request. This is done in the `StorageRouter::match($pathInfo)` operation.
 
-The `UrlMatcher` gets the URL details for this request. It decodes the URL, generates a key, and tries to retrieve the value for this key from the key-value store (Redis or Valkey):
+The `UrlMatcher` gets the URL details for this request. It decodes the URL, generates a key, and tries to retrieve the value for this key from Redis:
 
 ```bash
 {"reference_key":"de.en_us.resource.product_abstract.89","type":"product_abstract"}
@@ -89,4 +89,4 @@ The process of importing products can happen only once to reimport every product
 ./setup -i
 ```
 
-After this, you have the data containing your changes imported in the SQL database and (Redis or Valkey) data store. The product details page also must display the new attribute.
+After this, you have the data containing your changes imported in the SQL database and Redis data store. The product details page also must display the new attribute.

@@ -120,7 +120,7 @@ Spryker supports PostgreSQL, MySQL, and MariaDB. When working with databases, it
 
 ## Rules for Publish and Synchronize
 
-P&S is a concept for transferring data from Zed database to Yves databases like (Redis or Valkey) and ES, This operation is separated into two isolated processes which call **Publish** and **Synchronize**. Publishing is a process to aggregating data and writing it to Database and Queue. Synchronization is a process to read an aggregated message from a queue and write it to external endpoints. The performance issues mostly come from **Publishing** part. Again we need to follow the best practices to increase the performance. Here you will find some of them:
+P&S is a concept for transferring data from Zed database to Yves databases like Redis and ES, This operation is separated into two isolated processes which call **Publish** and **Synchronize**. Publishing is a process to aggregating data and writing it to Database and Queue. Synchronization is a process to read an aggregated message from a queue and write it to external endpoints. The performance issues mostly come from **Publishing** part. Again we need to follow the best practices to increase the performance. Here you will find some of them:
 
 ### Single vs batch operation
 

@@ -90,7 +90,7 @@ The abstract products contain all the information about the product. The product
 
 ## Managing product information in a third-party product information management system
 
-Besides the Back Office, you can maintain product information in an external Product Information Management (PIM) system. The data from the PIM systems can be exported to Spryker. An import interface transforms the incoming product data into a Spryker specific data structure and persists it. After that, the data is exported to the key-value store (Redis or Valkey) and Elasticsearch. This way, the Storefront can access the relevant product data very fast. After the import was finished, you can access the products in the Spryker Back Office.
+Besides the Back Office, you can maintain product information in an external Product Information Management (PIM) system. The data from the PIM systems can be exported to Spryker. An import interface transforms the incoming product data into a Spryker specific data structure and persists it. After that, the data is exported to Redis and Elasticsearch. This way, the Storefront can access the relevant product data very fast. After the import was finished, you can access the products in the Spryker Back Office.
 
 ![Product information management](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product/product_information_management.png)
 

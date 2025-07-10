@@ -10,16 +10,16 @@ redirect_from:
 
 The key concept for rendering web pages with translated content very fast and with limited resource usage is using a key-value storage.
 
-Yves has no connection to Zed's SQL database and it fetches all dynamic data from a key-value storage(Redis or Valkey) and a search engine(Elasticsearch). This data contains translations but also product information, product categories, URL mappings, stock information, image paths.
+Yves has no connection to Zed's SQL database and it fetches all dynamic data from a key-value storage(Redis) and a search engine(Elasticsearch). This data contains translations but also product information, product categories, URL mappings, stock information, image paths.
 
-Accessing the key-value storage (Redis or Valkey) is faster than making a request to Zed's SQL database. Also, by limiting the connections to the SQL database, the performance of the entire application is optimized.
+Accessing the key-value storage (Redis) is faster than making a request to Zed's SQL database. Also, by limiting the connections to the SQL database, the performance of the entire application is optimized.
 
 The localized content is added by using Zed's Back Office user interface. For every configured locale, the Back Office user can add the corresponding resource such as translations or path to images. The changes are updated in the Zed's SQL database.
 
 The diagram bellow pictures the DB schema for the tables in which the translations are being stored.
 ![Database schema with translations stored](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Internationalization/Glossary/How+Translations+are+Managed/glossary_kv_and_db.png)
 
-When the web application is first installed, the data stored in the Zed's database is exported in the key-value storage (Redis or Valkey) used by Yves. To assure that the key-value storage is in sync with the data stored in the SQL database, Queue processes will consume translation events and publish the data to key -value storage (Redis). These events will be triggered when a translation is created, updated or deleted. There is also a command that can be used for triggering the events manually in case of data refreshment:
+When the web application is first installed, the data stored in the Zed's database is exported in the key-value storage (Redis) used by Yves. To assure that the key-value storage is in sync with the data stored in the SQL database, Queue processes will consume translation events and publish the data to key -value storage (Redis). These events will be triggered when a translation is created, updated or deleted. There is also a command that can be used for triggering the events manually in case of data refreshment:
 
 `console event:trigger -r translation`
 If you lost your storage data, you can sync the published data to storage by calling this command:

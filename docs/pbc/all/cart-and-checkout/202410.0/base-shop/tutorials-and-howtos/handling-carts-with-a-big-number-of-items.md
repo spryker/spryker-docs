@@ -47,7 +47,7 @@ Glue: Implement dedicated "lightweight" API endpoints for partial updates or hea
 
 While not every session request requires cart data, a big cart being part of a session leads to a slow session lookup and update.
 
-Storefront: Move cart data to separate key-value store (Redis or Valkey) entries, leaving only the key reference in the session.
+Storefront: Move cart data to separate Redis entries, leaving only the key reference in the session.
 
 ## Concurrency in shared carts
 

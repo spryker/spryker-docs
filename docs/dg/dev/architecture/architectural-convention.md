@@ -38,7 +38,7 @@ There are two types of directives:
 ## Applications
 
 Spryker uses application layers to enable the construction of the necessary application architecture for specific business requirements to provide a quick project start and long-term maintainability.
-- Backend applications, like Zed, Backend API, Backend Gateway, Backoffice, GlueBackend, MerchantPortal, Console, typically use the Zed-, Glue-, Client-, Service-, and Shared application layers.
+- Backend applications, like Zed, Backend API, Backend Gateway, Back Office, GlueBackend, MerchantPortal, Console, typically use the Zed-, Glue-, Client-, Service-, and Shared application layers.
 - Storefront applications, like Yves, Configurator, Glue, GlueStorefront, Console, typically use the Yves-, Glue-, Client-, Service-, and Shared application layers.
 
 ## Application layers

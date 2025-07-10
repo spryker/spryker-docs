@@ -735,11 +735,11 @@ Make sure that all the CMS entity changes performed manually in the Back Office 
 
 ### 5) Register XSS Protection Form plugin
 
-1. Enable the form plugin to add XSS protection options in Backoffice.
+1. Enable the form plugin to add XSS protection options in Back Office.
 
 | PLUGIN                             | SPECIFICATION                                                                                       | PREREQUISITES | NAMESPACE                                 |
 |------------------------------------|-----------------------------------------------------------------------------------------------------|---------------|-------------------------------------------|
-| SanitizeXssTypeExtensionFormPlugin | Registers options `allowed_attributes`, `allowed_html_tags`, `sanitize_xss` in Backoffice CMS forms | None          | Spryker\Zed\Gui\Communication\Plugin\Form |
+| SanitizeXssTypeExtensionFormPlugin | Registers options `allowed_attributes`, `allowed_html_tags`, `sanitize_xss` in Back Office CMS forms | None          | Spryker\Zed\Gui\Communication\Plugin\Form |
 
 **src/Pyz/Zed/Form/FormDependencyProvider.php**
 

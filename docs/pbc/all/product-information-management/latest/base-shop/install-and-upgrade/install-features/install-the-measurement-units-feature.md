@@ -269,10 +269,10 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductConcreteMeasurementUnitEventResourceRepositoryPlugin | Allows populating empty storage table with data. |  | Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Event |
-| ProductMeasurementUnitEventResourceRepositoryPlugin | Allows populating empty storage table with data. |  | Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Event |
-| ProductConcreteMeasurementUnitSynchronizationDataPlugin | Allows synchronizing the whole storage table content into Storage. |  | Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Synchronization |
-| ProductMeasurementUnitSynchronizationDataPlugin | Allows synchronizing the whole storage table content into Storage. |  | Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Synchronization |
+| ProductConcreteMeasurementUnitEventResourceRepositoryPlugin | Allows populating empty product concrete measurment unit storage table with data. |  | Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Event |
+| ProductMeasurementUnitEventResourceRepositoryPlugin | Allows populating empty product measurement unit storage table with data. |  | Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Event |
+| ProductConcreteMeasurementUnitSynchronizationDataPlugin | Allows synchronizing the whole product concrete measurement unit storage table content into Storage. |  | Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Synchronization |
+| ProductMeasurementUnitSynchronizationDataPlugin | Allows synchronizing the whole product measurement unit storage table content into Storage. |  | Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php**
 

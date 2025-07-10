@@ -101,7 +101,7 @@ Make sure that the changes were implemented successfully. For this purpose, trig
 
 {% endinfo_block %}
 
-### 3) Configure export to Redis
+### 3) Configure export to the key-value store (Redis or Valkey)
 
 {% info_block infoBox %}
 With this step, you will be able to publish prices on change (create, edit, delete to `spy_price_product_abstract_merchant_relationship_storage`, `spy_price_product_concrete_merchant_relationship_storage` and synchronize the data to Storage.
@@ -138,12 +138,12 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure when prices are exported, created, updated, or deleted manually in Zed UI, they are exported (or removed to Redis accordingly.
+Make sure when prices are exported, created, updated, or deleted manually in Zed UI, they are exported (or removed to the key-value store (Redis or Valkey) accordingly.
 
-| STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
-| --- | --- | --- |
-| Redis | Product Abstract Price | kv:price_product_abstract_merchant_relationship:de:1:1 |
-| Redis | Product Concrete Price | kv:price_product_concrete_merchant_relationship:de:1:1 |
+| STORAGE TYPE                      | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
+|-----------------------------------| --- | --- |
+| Key-value store (Redis or Valkey) | Product Abstract Price | kv:price_product_abstract_merchant_relationship:de:1:1 |
+| Key-value store (Redis or Valkey) | Product Concrete Price | kv:price_product_concrete_merchant_relationship:de:1:1 |
 
  {% endinfo_block %}
 
@@ -209,8 +209,8 @@ Make sure when prices are exported, created, updated, or deleted manually in Zed
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| PriceProductAbstractMerchantRelationSynchronizationDataPlugin | Can be executed to synchronize all `price_product_abstract_merchant_relationship` entries from the database to Redis. | None | Spryker\Zed\PriceProductMerchantRelationshipStorage\Communication\Plugin\Synchronization |
-| PriceProductConcreteMerchantRelationSynchronizationDataPlugin | Can be executed to synchronize all `price_product_concrete_merchant_relationship` entries from the database to Redis. | None | Spryker\Zed\PriceProductMerchantRelationshipStorage\Communication\Plugin\Synchronization |
+| PriceProductAbstractMerchantRelationSynchronizationDataPlugin | Can be executed to synchronize all `price_product_abstract_merchant_relationship` entries from the database to the key-value store (Redis or Valkey). | None | Spryker\Zed\PriceProductMerchantRelationshipStorage\Communication\Plugin\Synchronization |
+| PriceProductConcreteMerchantRelationSynchronizationDataPlugin | Can be executed to synchronize all `price_product_concrete_merchant_relationship` entries from the database to the key-value store (Redis or Valkey). | None | Spryker\Zed\PriceProductMerchantRelationshipStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -342,7 +342,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantRelationshipPriceDimensionConcreteWriterPlugin | Enables saving product concrete prices to the `spy_price_product_merchant_relationship` table. | Expects `PriceProductTransfer.priceDemnsion.idMerchantRelationshop`, otherwise skips element. | Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\PriceProduct |
 | MerchantRelationshipPriceProductDimensionExpanderStrategyPlugin | Sets `PriceProductTransfer.PriceDimension.idMerchantRelationship` and `PriceProductTransfer.PriceDimension.name`. | None | Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\PriceProduct |
 | MerchantRelationshipPriceProductFilterPlugin | Selects min prices from the MR prices available for the current customer (company business can be assigned for multiple MRs). | None |  Spryker\Service\PriceProductMerchantRelationship\Plugin\PriceProductExtension |
-| PriceProductMerchantRelationshipStorageDimensionPlugin | Adds MR prices to the list of available prices for the current customer when they are read from Redis. | None | Spryker\Client\PriceProductMerchantRelationshipStorage\Plugin\PriceProductStorageExtension |
+| PriceProductMerchantRelationshipStorageDimensionPlugin | Adds MR prices to the list of available prices for the current customer when they are read from the key-value store (Redis or Valkey). | None | Spryker\Client\PriceProductMerchantRelationshipStorage\Plugin\PriceProductStorageExtension |
 | MerchantRelationshipProductAbstractFormExpanderPlugin | Adds select control to PIM (abstract products) where an admin can choose Merchant Relationship on the Prices tab to manage prices for a concrete Merchant Relationship. | None | Spryker\Zed\PriceProductMerchantRelationshipGui\Communication\Plugin\ProductManagement |
 | MerchantRelationshipProductConcreteFormExpanderPlugin | Adds select control to PIM (product variants) where an admin can choose Merchant Relationship on the Prices tab to manage prices for a concrete Merchant Relationship. | None | Spryker\Zed\PriceProductMerchantRelationshipGui\Communication\Plugin\ProductManagement |
 
@@ -488,7 +488,7 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that there is the "Merchant Price Dimension" drop-down in the Back Office on the Product Abstract and Concrete variants edit page (on the Price &amp; Tax tab). When you select some Merchant Relationship, the current page should be reloaded and the prices table should display prices from the selected Merchant Relationship if they exist or an empty table should be displayed when they do not exist. Make sure that when you added/changed prices for some Merchant Relationship, they appear after submitting the form and reloading the page. Make sure that Redis keys are updated/created for this product and business units are assigned to the selected MR.
+Make sure that there is the "Merchant Price Dimension" drop-down in the Back Office on the Product Abstract and Concrete variants edit page (on the Price &amp; Tax tab). When you select some Merchant Relationship, the current page should be reloaded and the prices table should display prices from the selected Merchant Relationship if they exist or an empty table should be displayed when they do not exist. Make sure that when you added/changed prices for some Merchant Relationship, they appear after submitting the form and reloading the page. Make sure that key-value store (Redis or Valkey) keys are updated/created for this product and business units are assigned to the selected MR.
 
 {% endinfo_block %}
 

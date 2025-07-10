@@ -114,7 +114,7 @@ Generate a new translation cache for Zed:
 console translator:generate-cache
 ```
 
-### 4) Configure export to key-value storage (Redis or Valkey) and Elasticsearch
+### 4) Configure export to Redis and Elasticsearch
 
 Install the following plugins:
 
@@ -123,8 +123,8 @@ Install the following plugins:
 | Merchant\MerchantProductSearchWritePublisherPlugin           | Publishes the product by merchant IDs to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
 | MerchantProduct\MerchantProductSearchWritePublisherPlugin    | Publishes the product by merchant product abstract IDs to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
 | MerchantProductSearchPublisherTriggerPlugin               | Allows publishing or republishing  merchant product search data manually. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
-| MerchantUpdatePublisherPlugin                                | Publishes the product by merchant IDs to key-value storage (Redis or Valkey). |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant |
-| MerchantProductWritePublisherPlugin                          | Publishes the product by merchant product abstract IDs to key-value storage (Redis or Valkey). |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
+| MerchantUpdatePublisherPlugin                                | Publishes the product by merchant IDs to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant |
+| MerchantProductWritePublisherPlugin                          | Publishes the product by merchant product abstract IDs to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
 | MerchantProductPublisherTriggerPlugin                          | Allows publishing or republishing merchant product storage data manually. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher |
 
 <details><summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>

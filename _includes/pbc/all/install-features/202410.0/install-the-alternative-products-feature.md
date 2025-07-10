@@ -134,7 +134,7 @@ Make sure that the changes have been implemented successfully. For this purpose,
 
 {% endinfo_block %}
 
-### 3) Configure export to key-value storage (Redis or Valkey)
+### 3) Configure export to Redis
 
 {% info_block infoBox "Info" %}
 

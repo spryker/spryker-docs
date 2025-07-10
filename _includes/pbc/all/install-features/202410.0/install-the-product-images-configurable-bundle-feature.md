@@ -61,7 +61,7 @@ Make sure the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 2) Configure export to key-value storage (Redis or Valkey) and Elasticsearch
+### 2) Configure export to Redis and Elasticsearch
 
 This step will publish tables on change (create, edit) to the `spy_configurable_bundle_template_image_storage` and synchronize the data to Storage.
 
@@ -152,8 +152,8 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 {% info_block warningBox "Verification" %}
 
 1. Make sure that when you added some data to tables `spy_product_image_set`, `spy_product_image_set_to_product_image`, `spy_product_image` with `fk_resource_configurable_bundle_template` and run `console trigger:event -r configurable_bundle_template_image` command, the changes are reflected in the `spy_configurable_bundle_template_image_storage` table.
-2. Make sure that after step #4  or after `console sync:data configurable_bundle_template_image` command execution, the data s added to the `spy_configurable_bundle_template_image_storage` table and key-value storage (Redis or Valkey).
-3. Make sure that when a product image set with the `fk_resource_configurable_bundle_template` is created or edited through ORM, it's exported to key-value storage (Redis or Valkey) accordingly.
+2. Make sure that after step #4  or after `console sync:data configurable_bundle_template_image` command execution, the data s added to the `spy_configurable_bundle_template_image_storage` table and Redis.
+3. Make sure that when a product image set with the `fk_resource_configurable_bundle_template` is created or edited through ORM, it's exported to Redis accordingly.
 4. Ensure that Elasticsearch document has been expanded by images property.
 
 {% endinfo_block %}
@@ -161,7 +161,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |
 | Elasticsearch | `ConfigurableBundleTemplate` | `configurable_bundle_template:en_us:1` |
-| Redis or Valkey | `ConfigurableBundleTemplateImage` | `kv:configurable_bundle_template_image:1` |
+| Redis | `ConfigurableBundleTemplateImage` | `kv:configurable_bundle_template_image:1` |
 
 **Example expected data fragment for Elasticsearch**
 
@@ -186,7 +186,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-**Example expected data fragment for key-value storage (Redis or Valkey)**
+**Example expected data fragment for Redis**
 
 ```xml
 {
@@ -328,6 +328,6 @@ Make sure that `the spy_product_image`, `spy_product_image_set`, `spy_product_im
 
 Make sure that data is synced to the `spy_configurable_bundle_template_image_storage` table.
 
-Make sure that the latest data is present at Elasticsearch and key-value storage (Redis or Valkey) documents for configurable bundle templates.
+Make sure that the latest data is present at Elasticsearch and Redis documents for configurable bundle templates.
 
 {% endinfo_block %}

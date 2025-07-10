@@ -142,7 +142,7 @@ Ensure the following transfers have been created:
 
 {% endinfo_block %}
 
-### 3) Configure export to key-value storage (Redis or Valkey)
+### 3) Configure export to Redis
 
 Configure tables to be published to `spy_product_offer_shipment_type_storage` and synchronized to the Storage on create, edit, and delete changes:
 
@@ -236,7 +236,7 @@ class ProductOfferShipmentTypeStorageConfig extends SprykerProductOfferShipmentT
 | ProductOfferStoreProductOfferShipmentTypeWritePublisherPlugin | Publishes product offer shipment type data by `SpyProductOfferStore` events.                                |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferStore        |
 | ShipmentTypeProductOfferShipmentTypeWritePublisherPlugin      | Publishes product offer shipment type data by `SpyShipmentType` events.                                     |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType             |
 | ShipmentTypeStoreProductOfferShipmentTypeWritePublisherPlugin | Publishes product offer shipment type data by `SpyShipmentTypeStore` events.                                |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore        |
-| ProductOfferShipmentTypePublisherTriggerPlugin                | Allows to populate product offer shipment type storage table with data and trigger further export to key-value storage (Redis or Valkey). |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher                          |
+| ProductOfferShipmentTypePublisherTriggerPlugin                | Allows to populate product offer shipment type storage table with data and trigger further export to Redis. |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher                          |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -295,7 +295,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 | PLUGIN                                                          | SPECIFICATION                                                                            | PREREQUISITES | NAMESPACE                                                                        |
 |-----------------------------------------------------------------|------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------|
-| ProductOfferShipmentTypeSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the product offer shipment type storage table's content into key-value storage (Redis or Valkey). |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Synchronization |
+| ProductOfferShipmentTypeSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the product offer shipment type storage table's content into Redis. |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -336,9 +336,9 @@ Make sure that `product-offer-shipment-type` synchronization plugin works correc
 2. Run the `console sync:data -r product_offer_shipment_type` command.
 3. Make sure that, in your system, storage entries are displayed with the `kv:product_offer_shipment_type:{store}:{product_offer_reference}` mask.
 
-Make sure that when a product offer shipment type relation is created or edited through BAPI, it's exported to key-value storage (Redis or Valkey) accordingly.
+Make sure that when a product offer shipment type relation is created or edited through BAPI, it's exported to Redis accordingly.
 
-In key-value storage (Redis or Valkey), make sure data is represented in the following format:
+In Redis, make sure data is represented in the following format:
 
 ```json
 {

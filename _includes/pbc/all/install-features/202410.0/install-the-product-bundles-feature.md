@@ -140,9 +140,9 @@ Ensure that the changes have been implemented successfully by triggering the fol
 
 {% endinfo_block %}
 
-## 3) Configure export to key-value storage (Redis or Valkey) and Elasticsearch
+## 3) Configure export to Redis and Elasticsearch
 
-To configure export to key-value storage (Redis or Valkey) and Elasticsearch, follow the steps below:
+To configure export to Redis and Elasticsearch, follow the steps below:
 
 ### Set up event listeners
 
@@ -210,9 +210,9 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Ensure that, when a product bundle is created, updated, or deleted, it's exported to or removed from key-value storage (Redis or Valkey).
+Ensure that, when a product bundle is created, updated, or deleted, it's exported to or removed from Redis.
 
-Storage type: Redis or Valkey
+Storage type: Redis
 Target entity: Product Bundle
 
 Example expected data identifier: `kv:product_bundle:1`

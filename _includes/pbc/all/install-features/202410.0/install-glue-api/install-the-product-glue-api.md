@@ -128,7 +128,7 @@ console publish:trigger-events -r product_concrete
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following (Redis or Valkey) keys exist, and there is data in them:
+Ensure that the following Redis keys exist, and there is data in them:
 
 - `kv:product_abstract:{% raw %}{{{% endraw %}store_name{% raw %}}}{% endraw %}:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_abstract{% raw %}}}{% endraw %}`
 

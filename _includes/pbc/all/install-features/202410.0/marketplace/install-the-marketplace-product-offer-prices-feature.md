@@ -107,9 +107,9 @@ Generate a new translation cache for Zed:
 console translator:generate-cache
 ```
 
-### 4) Configure export to key-value storage (Redis or Valkey)
+### 4) Configure export to Redis
 
-To configure export to key-value storage (Redis or Valkey), take the steps in the following section:
+To configure export to Redis, take the steps in the following section:
 
 #### Set up event listeners
 
@@ -175,7 +175,7 @@ Configure message processors:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant product offers to sync with key-value storage (Redis or Valkey), and marks messages as failed in case of error. |   | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant product offers to sync with Redis storage, and marks messages as failed in case of error. |   | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -313,9 +313,9 @@ class PriceProductOfferStorageConfig extends SprykerPriceProductOfferStorageConf
 
 {% info_block warningBox "Verification" %}
 
-Make sure that after setting up the event listeners, `console sync:data product_concrete_product_offer_price` exports data from the `spy_product_concrete_product_offer_price_storage` table to key-value storage (Redis or Valkey).
+Make sure that after setting up the event listeners, `console sync:data product_concrete_product_offer_price` exports data from the `spy_product_concrete_product_offer_price_storage` table to Redis.
 
-Make sure that when the following entities get updated through the ORM, the corresponding (Redis or Valkey) keys have the correct values.
+Make sure that when the following entities get updated through the ORM, the corresponding Redis keys have the correct values.
 
 | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 |-|-|

@@ -391,7 +391,7 @@ class ConfigurableBundlePageSearchDependencyProvider extends SprykerConfigurable
 }
 ```
 
-### 5) Configure export to Redis and Elasticsearch
+### 5) Configure export to the key-value store (Redis or Valkey) and Elasticsearch
 
 This step publishes tables on change (create, edit) to `spy_configurable_bundle_template_storage` and synchronizes the data to Storage.
 
@@ -609,18 +609,18 @@ class ConfigurableBundlePageSearchConfig extends SprykerConfigurableBundlePageSe
 
 3. Run the `console sync:data configurable_bundle_template` command.
     Make sure the data has been exported as follows:
-    - from `spy_configurable_bundle_template_storage` table to Redis
+    - from `spy_configurable_bundle_template_storage` table to the key-value store (Redis or Valkey)
     - from `spy_configurable_bundle_template_page_search` table to Elasticsearch
 
 4. Create or edit a configurable bundle template or template slot through ORM.
-  Make sure it's exported to Redis or Elasticsearch accordingly.
+  Make sure it's exported to the key-value store (Redis or Valkey) or Elasticsearch accordingly.
 
-| STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
-| --- | --- | --- |
-| Redis | ConfigurableBundleTemplate | kv:configurable_bundle_template:1 |
-| Elasticsearch | ConfigurableBundleTemplate | configurable_bundle_template:en_us:1 |
+| STORAGE TYPE                      | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
+|-----------------------------------| --- | --- |
+| Key-value store (Redis or Valkey) | ConfigurableBundleTemplate | kv:configurable_bundle_template:1 |
+| Elasticsearch                     | ConfigurableBundleTemplate | configurable_bundle_template:en_us:1 |
 
-**Example expected data fragment for Redis**
+**Example expected data fragment for the key-value store (Redis or Valkey)**
 
 ```xml
 {

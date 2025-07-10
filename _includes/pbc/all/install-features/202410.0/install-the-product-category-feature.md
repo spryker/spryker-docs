@@ -140,7 +140,7 @@ Make sure that the following changes have been applied in the database.
 
 {% endinfo_block %}
 
-### 4) Configure export to key-value storage (Redis or Valkey)
+### 4) Configure export to Redis
 
 Configure tables to be published to the `spy_product_abstract_category_storage` and `spy_product_category_filter_storage` and synchronized to the Storage on create, edit, and delete changes:
 
@@ -346,12 +346,12 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-When a category product assignment is changed through ORM, make sure it's exported to key-value storage (Redis or Valkey).
+When a category product assignment is changed through ORM, make sure it's exported to Redis.
 
 | STORAGE TYPE | TARGET ENTITY           | EXAMPLE EXPECTED DATA IDENTIFIER     |
 |--------------|-------------------------|--------------------------------------|
-| Redis or Valkey        | ProductAbstractCategory | product_abstract_category:de:de_de:1 |
-| Redis or Valkey        | ProductCategoryFilter   | product_category_filter:8            |
+| Redis        | ProductAbstractCategory | product_abstract_category:de:de_de:1 |
+| Redis        | ProductCategoryFilter   | product_category_filter:8            |
 
 
 **An expected data fragment example: `product_abstract_category:de:de_de:1`**

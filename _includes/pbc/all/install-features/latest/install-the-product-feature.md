@@ -140,7 +140,7 @@ Make sure that, on the **Create a Product Attribute** page, a **mutliselect** in
 
 {% endinfo_block %}
 
-#### Configure export to Redis and Elasticsearch
+#### Configure export to the key-value store (Redis or Valkey) and Elasticsearch
 
 Add the configuration for adding products to cart from the catalog page:
 

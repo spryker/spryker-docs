@@ -1064,8 +1064,8 @@ Enable the following behaviors by registering the plugins:
 | SaveCustomerSessionSecurityPlugin                            | Extends security builder event dispatcher with a save customer session listener.               |                               | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\Security  |
 | ValidateCustomerSessionSecurityPlugin                        | Extends security service with a customer session validator listener.                           |                               | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\Security  |
 | LogoutInvalidatedCustomerFilterControllerEventHandlerPlugin  | Logs out an invalidated customer.                                                            |                               | SprykerShop\Yves\CustomerValidationPage\Plugin\ShopApplication  |
-| RedisCustomerSessionSaverPlugin                              | Saves a customer's session data to key-value storage (Redis or Valkey).                                              | Session data is stored in key-value storage (Redis or Valkey).  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage  |
-| RedisCustomerSessionValidatorPlugin                          | Validates a customer's session data in key-value storage (Redis or Valkey).                                          | Session data is stored in key-value storage (Redis or Valkey).  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage  |
+| RedisCustomerSessionSaverPlugin                              | Saves a customer's session data to Redis storage.                                              | Session data is stored in Redis.  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage  |
+| RedisCustomerSessionValidatorPlugin                          | Validates a customer's session data in Redis storage.                                          | Session data is stored in Redis.  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage  |
 | FileCustomerSessionSaverPlugin                               | Saves a customer's session data to a file.                                                     | Session data is stored in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage   |
 | FileCustomerSessionValidatorPlugin                           | Validates a customer's session data in a file.                                                 | Session data is stored in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage   |
 
@@ -1169,7 +1169,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 
 {% info_block warningBox "" %}
 
-Apply the following changes only if session data is stored in key-value storage (Redis or Valkey).
+Apply the following changes only if session data is stored in Redis.
 
 {% endinfo_block %}
 
@@ -1212,7 +1212,7 @@ class SessionCustomerValidationPageDependencyProvider extends SprykerSessionCust
 {% info_block warningBox "Verification" %}
 
 1. Log in as a customer.
-  Make sure that the following key-value storage (Redis or Valkey) key exists and contains the data: `{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}:customer:entity`.
+  Make sure that the following Redis key exists and contains the data: `{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}:customer:entity`.
 2. Change the session data to an invalid value.
   Make sure the customer has been logged out.
 

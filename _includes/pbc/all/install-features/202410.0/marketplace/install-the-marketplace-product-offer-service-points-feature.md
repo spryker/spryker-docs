@@ -49,6 +49,6 @@ class ProductOfferServicePointStorageDependencyProvider extends SprykerProductOf
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the only product offer service with active and approved merchant are published into key-value storage (Redis or Valkey).
+Make sure that the only product offer service with active and approved merchant are published into Redis.
 
 {% endinfo_block %}

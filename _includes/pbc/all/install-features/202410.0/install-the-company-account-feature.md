@@ -123,9 +123,9 @@ Make sure that the changes have been implemented successfully. For this purpose,
 
 {% endinfo_block %}
 
-### 3) Configure export to key-value storage (Redis or Valkey)
+### 3) Configure export to Redis
 
-Follow instructions in the following sections to configure export to key-value storage (Redis or Valkey).
+Follow instructions in the following sections to configure export to Redis.
 
 #### Set up event listeners
 
@@ -232,11 +232,11 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the corresponding company users' records are exported (or removed from key-value storage (Redis or Valkey)) when the company user is created, updated, or deleted, and the company status changes or the company is activated or deactivated.
+Make sure that the corresponding company users' records are exported (or removed from Redis) when the company user is created, updated, or deleted, and the company status changes or the company is activated or deactivated.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |
-| Redis or Valkey | Company User | kv:company_user:1 |
+| Redis | Company User | kv:company_user:1 |
 
 {% endinfo_block %}
 

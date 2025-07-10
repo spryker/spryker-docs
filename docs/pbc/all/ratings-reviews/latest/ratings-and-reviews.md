@@ -26,7 +26,13 @@ Drive sales by including user reviews and ratings. Reviews and ratings are a pro
 
 For more details about managing ratings and reviews, check the video:
 
-{% wistia efvyq9vfb8 720 480 %}
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/ratings-reviews/ratings-and-reviews.md/How+to+Manage+Ratings+and+Reviews+in+Spryker+B2C-efvyq9vfb8.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 ## Ratings & Reviews capabilities available in Spryker
 

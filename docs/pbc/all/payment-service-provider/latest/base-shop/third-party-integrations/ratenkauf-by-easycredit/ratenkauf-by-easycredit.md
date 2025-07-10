@@ -17,7 +17,7 @@ related:
 
 ## Partner Information
 
-[ABOUT RATENKAUF](https://www.easycredit-ratenkauf.de/)
+[ABOUT RATENKAUF](https://partner.easycredit.de/)
 
 Germany's easiest installment purchase solution ratenkauf by easyCredit's the first payment option to offer a simple and standardized solution for e-commerce and for the point of sale.
 

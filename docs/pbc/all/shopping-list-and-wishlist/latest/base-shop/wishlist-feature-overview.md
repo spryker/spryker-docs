@@ -108,7 +108,13 @@ Buyers can do the following actions using the Wishlists feature:
 
 For more details about wishlists, check the video:
 
-{% wistia g7hzsa9xw7 720 480 %}
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/shopping-list-and-wishlist/base-shop/wishlist-feature-overview.md/Wishlists-g7hzsa9xw7.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 
 ## Related Developer documents

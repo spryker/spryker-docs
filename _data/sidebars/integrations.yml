@@ -98,6 +98,20 @@ entries:
     - title: Data Exchange
       url: /docs/integrations/custom_building_integrations/data_exchange/data_exchange.html
       nested:
+      - title: Installing and Configure Data Exchange API
+        nested:
+        - title: Install the Data Exchange API
+          url: /docs/integrations/custom_building_integrations/data_exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api.html
+        - title: Install Data Exchange API + Inventory Management Feature
+          url: /docs/integrations/custom_building_integrations/data_exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api-inventory-management-feature.html
+        - title: Install the Data Exchange API + Category Management Feature
+          url: /docs/integrations/custom_building_integrations/data_exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api-category-management-feature.html
+        - title: Configure Data Exchange API
+          url: /docs/integrations/custom_building_integrations/data_exchange/configure-data-exchange-api.html
+        - title: Sending Requests with Data Exchange API
+          url: /docs/integrations/custom_building_integrations/data_exchange/sending-requests-with-data-exchange-api.html
+        - title: Create Post Plugins for Data Exchange API
+          url: /docs/integrations/custom_building_integrations/data_exchange/create-post-plugins-for-data-exchange-api.html
       - title: Spryker Data Import From S3 Bucket
         url: /docs/integrations/custom_building_integrations/data_exchange/data_import_from_s3_bucket.html
       - title: Data Export
@@ -124,12 +138,12 @@ entries:
       url: /docs/integrations/custom_building_integrations/creating_a_new_module.html
     - title: Integrating With Spryker Oms
       nested:
+      - title: Integrating with Spryker OMS
+        url: /docs/integrations/custom_building_integrations/integrating_with_spryker_oms/integrating_with_spryker_oms.html
       - title: Set up an order management system
         url: /docs/integrations/custom_building_integrations/integrating_with_spryker_oms/set-up-an-order-management-system.html
       - title: Creating an Order Management System
         url: /docs/integrations/custom_building_integrations/integrating_with_spryker_oms/creating_an_order_management_system.html
-      - title: Integrating with Spryker OMS
-        url: /docs/integrations/custom_building_integrations/integrating_with_spryker_oms/integrating_with_spryker_oms.html
     - title: Using Jenkins for Third Party Integrations
       url: /docs/integrations/custom_building_integrations/using_jenkins_for_third_party_integrations.html
     - title: Endpoint Security

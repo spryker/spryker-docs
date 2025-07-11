@@ -72,7 +72,13 @@ The feature has the following functional constraints which are going to be resol
 
 Check out this video tutorial on product groups:
 
-{% wistia r5l2kit2c1 720 480 %}
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/feature-overviews/product-groups-feature-overview.md/Product+Groups-r5l2kit2c1.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
 
 
 ## Related Developer documents

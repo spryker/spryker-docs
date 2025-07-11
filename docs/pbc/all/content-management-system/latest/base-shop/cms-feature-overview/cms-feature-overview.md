@@ -43,7 +43,12 @@ All the CMS elements are based on templates. They simplify the creation of simil
 
 </div>
 
-{% wistia lx0amx3m1b 960 720 %}
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/content-management-system/base-shop/cms-feature-overview/cms-feature-overview.md/CMS+Overview-lx0amx3m1b.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 ## Related Business User documents
 

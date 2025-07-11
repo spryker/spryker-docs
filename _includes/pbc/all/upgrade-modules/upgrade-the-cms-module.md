@@ -484,7 +484,7 @@ In this version, we have moved all CMS templates to the Shared layer instead of 
 
 ### CMS twig functions
 
-The `TwigCms` function has been improved to provide better speed and performance, it will only send a query to Redis when the translations are not available.
+The `TwigCms` function has been improved to provide better speed and performance, it will only send a query to key-value storage (Redis or Valkey) when the translations are not available.
 You can still work with the current version although upgrading is highly recommended.
 You can find it here: `src/Pyz/Yves/Cms/Plugin/TwigCms.php`.
 

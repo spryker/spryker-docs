@@ -380,8 +380,8 @@ Enable the following behaviors by registering the plugins:
 | SaveAgentSessionSecurityPlugin                                                | Extends security builder event dispatcher with  save session agent listener.                               |                                                      | SprykerShop\Yves\SessionAgentValidation\Plugin\Security |
 | ValidateAgentSessionSecurityPlugin                                            | Extends security service with agent session validator listener.                                           |                                                      | SprykerShop\Yves\SessionAgentValidation\Plugin\Security |
 | SessionAgentValidationSecurityAuthenticationListenerFactoryTypeExpanderPlugin | Expands security authentication listener factory types list with the agent's session validator factory type.  |                                                      | SprykerShop\Yves\SessionAgentValidation\Plugin\Security |
-| SessionRedisSessionAgentSaverPlugin                                           | Saves an agent's session data to the Redis storage.                                                              | Session data is stored in Redis.                          | Spryker\Yves\SessionRedis\Plugin\SessionAgentValidation |
-| SessionRedisSessionAgentValidatorPlugin                                       | Validates an agent's session data in the Redis storage.                                                          | Session data is stored in Redis.                          | Spryker\Yves\SessionRedis\Plugin\SessionAgentValidation |
+| SessionRedisSessionAgentSaverPlugin                                           | Saves an agent's session data to the key-value store (Redis or Valkey).                                                              | Session data is stored in the key-value store (Redis or Valkey).                          | Spryker\Yves\SessionRedis\Plugin\SessionAgentValidation |
+| SessionRedisSessionAgentValidatorPlugin                                       | Validates an agent's session data in the key-value store (Redis or Valkey).                                                          | Session data is stored in the key-value store (Redis or Valkey).                          | Spryker\Yves\SessionRedis\Plugin\SessionAgentValidation |
 | SessionFileSessionAgentSaverPlugin                                            | Saves an agent's session data to a file.                                                                     | Session data is stored in a file.                         | Spryker\Yves\SessionFile\Plugin\SessionAgentValidation  |
 | SessionFileSessionAgentValidatorPlugin                                        | Validates an agent's session data in a file.                                                                 | Session data is store in a file.                         | Spryker\Yves\SessionFile\Plugin\SessionAgentValidation  |
 
@@ -424,7 +424,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 
 {% info_block warningBox "" %}
 
-Apply the following changes only if session data is stored in Redis.
+Apply the following changes only if session data is stored in the key-value store (Redis or Valkey).
 
 {% endinfo_block %}
 
@@ -464,7 +464,7 @@ class SessionAgentValidationDependencyProvider extends SprykerSessionAgentValida
 {% info_block warningBox "Verification" %}
 
 1. Log in as an agent.
-2. Make sure the following Redis key exists and contains the data:
+2. Make sure the following key-value store (Redis or Valkey) key exists and contains the data:
    `{% raw %}{{{% endraw %}agent_id{% raw %}}}{% endraw %}:agent:entity`
 3. Change the session data to an invalid value.
 Make sure the agent has been logged out.
@@ -513,7 +513,7 @@ class SessionAgentValidationDependencyProvider extends SprykerSessionAgentValida
 {% info_block warningBox "Verification" %}
 
 1. Log in as an agent.
-2. Make sure the following Redis key exists and contains the data:
+2. Make sure the following key-value store (Redis or Valkey) key exists and contains the data:
    `{% raw %}{{{% endraw %}agent_id{% raw %}}}{% endraw %}:agent:entity`
 3. Change the session data to an invalid value.
 Make sure the agent has been logged out.

@@ -20,11 +20,11 @@ The [list of console commands](/docs/dg/dev/backend-development/console-commands
 
 ## Collector commands
 
-Collector commands are responsible for exporting the data in the SQL database to the frontend data storages (Redis and Elasticsearch):
+Collector commands are responsible for exporting the data in the SQL database to the frontend data storages (key-value store (Redis or Valkey) and Elasticsearch):
 
 - `collector:search:export`—exports data to the Elasticsearch storage.
 - `collector:search:update`—updates the data in the Elasticsearch storage.
-- `collector:storage:export`—exports data to Key-Value storage (Redis).
+- `collector:storage:export`—exports data to key-value storage (Redis or Valkey).
 
 ## Order Management System commands
 

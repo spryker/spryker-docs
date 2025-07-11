@@ -136,9 +136,9 @@ Generate a new translation cache for Zed:
 console translator:generate-cache
 ```
 
-### 4) Configure export to Redis and Elasticsearch
+### 4) Configure export to the key-value store (Redis or Valkey) and Elasticsearch
 
-To configure export to Redis and Elasticsearch, take the following steps:
+To configure export to the key-value store (Redis or Valkey) and Elasticsearch, take the following steps:
 
 #### Set up publisher plugins
 
@@ -316,7 +316,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 | PLUGIN                                            | SPECIFICATION                                                                                                    | PREREQUISITES | NAMESPACE                                              |
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|
-| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant product offers to sync with Redis storage and marks messages as failed in case of error. |               | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant product offers to sync with the key-value store (Redis or Valkey) and marks messages as failed in case of error. |               | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -476,10 +476,10 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 
 Make sure that after setting up the event listeners, the following commands do the following:
 
-- `console sync:data product_concrete_product_offers` exports data from the `spy_product_concrete_product_offers_storage` table to Redis.
-- `console sync:data product_offer` exports data from the `spy_product_offer_storage` table to Redis.
+- `console sync:data product_concrete_product_offers` exports data from the `spy_product_concrete_product_offers_storage` table to the key-value store (Redis or Valkey).
+- `console sync:data product_offer` exports data from the `spy_product_offer_storage` table to the key-value store (Redis or Valkey).
 
-Make sure that when the following entities get updated through the ORM, the corresponding Redis keys have the correct values.
+Make sure that when the following entities get updated through the ORM, the corresponding key-value store (Redis or Valkey) keys have the correct values.
 
 | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER                | EXAMPLE EXPECTED DATA FRAGMENT                                                                           |
 |---------------|-------------------------------------------------|----------------------------------------------------------------------------------------------------------|

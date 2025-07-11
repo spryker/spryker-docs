@@ -243,9 +243,9 @@ Make sure that the configured data has been added to the `spy_glossary` table in
 
 {% endinfo_block %}
 
-### 5) Configure export to Redis and Elasticsearch
+### 5) Configure export to the key-value store (Redis or Valkey) and Elasticsearch
 
-Configure export to Redis and Elasticsearch as follows.
+Configure export to the key-value store (Redis or Valkey) and Elasticsearch as follows.
 
 ### Set up event listeners
 
@@ -282,14 +282,14 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a product list is created, updated, or deleted, they are exported or removed to Redis and Elasticsearch accordingly.
+Make sure that when a product list is created, updated, or deleted, they are exported or removed to the key-value store (Redis or Valkey) and Elasticsearch accordingly.
 
-| STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
-| --- | --- | --- |
-| Redis | Product Abstract Product List | kv:product_abstract_product_lists:1 |
-| Redis | Product Concrete Product List | kv:product_concrete_product_list:1 |
-| Elasticsearch | Product Abstract | product_abstract:de:en_us:1 |
-| Elasticsearch | Product Concrete | product_concrete:de:en_us:1 |
+| STORAGE TYPE                      | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
+|-----------------------------------| --- | --- |
+| Key-value store (Redis or Valkey) | Product Abstract Product List | kv:product_abstract_product_lists:1 |
+| Key-value store (Redis or Valkey) | Product Concrete Product List | kv:product_concrete_product_list:1 |
+| Elasticsearch                     | Product Abstract | product_abstract:de:en_us:1 |
+| Elasticsearch                     | Product Concrete | product_concrete:de:en_us:1 |
 
 {% endinfo_block %}
 
@@ -346,8 +346,8 @@ Add the following plugins to your project:
 | ProductListDataLoaderPlugin |Loads product list data as payload for the publishing process.  | None|Spryker\Zed\ProductListSearch\Communication\Plugin\ProductPageSearch\DataLoader  |
 |ProductListDataLoadExpanderPlugin|Expands product page data with all its product lists for publishing based on the previously collected product information.|Product list data must be available in the product payload. Suggestion: use `ProductListDataLoaderPlugin` (the first plugin in the table).|Spryker\Zed\ProductListSearch\Communication\Plugin\ProductPageSearch\DataExpander|
 |ProductListMapExpanderPlugin|Maps product list data to the Elasticsearch document structure.|Product list data must be available. Suggestion: use `ProductListDataLoadExpanderPlugin` (see the preceding one).|`Spryker\Zed\ProductListSearch\Communication\Plugin\ProductPageSearch`|
-|ProductAbstractProductListSynchronizationDataPlugin|Can be executed to synchronize all product_abstract_product_list entries from the database to Redis.|None|Spryker\Zed\ProductListStorage\Communication\Plugin\Synchronization|
-|ProductConcreteProductListSynchronizationDataPlugin|Can be executed to synchronize all product_concrete_product_list entries from the database to Redis.|None|Spryker\Zed\ProductListStorage\Communication\Plugin\Synchronization|
+|ProductAbstractProductListSynchronizationDataPlugin|Can be executed to synchronize all product_abstract_product_list entries from the database to the key-value store (Redis or Valkey).|None|Spryker\Zed\ProductListStorage\Communication\Plugin\Synchronization|
+|ProductConcreteProductListSynchronizationDataPlugin|Can be executed to synchronize all product_concrete_product_list entries from the database to the key-value store (Redis or Valkey).|None|Spryker\Zed\ProductListStorage\Communication\Plugin\Synchronization|
 |ProductConcreteProductListPageDataExpanderPlugin|Expands `ProductConcretePageSearchTransfer` with product lists data and returns the modified object.|None|Spryker\Zed\ProductListSearch\Communication\Plugin\ProductPageSearch|
 |ProductConcreteProductListPageMapExpanderPlugin|Maps product list data related to concrete products to the Elasticsearch document structure.|Product list data must be available. Suggestion: use `ProductConcreteProductListPageDataExpanderPlugin` (see the preceding one).|Spryker\Zed\ProductListSearch\Communication\Plugin\ProductPageSearch|
 
@@ -802,7 +802,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that features that use Redis to read product data—for example, the product details page or product relations—don't show it when a product is restricted for the customer.
+Make sure that features that use the key-value store (Redis or Valkey) to read product data—for example, the product details page or product relations—don't show it when a product is restricted for the customer.
 
 {% endinfo_block %}
 

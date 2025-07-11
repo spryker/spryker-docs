@@ -137,9 +137,9 @@ Make sure that the following changes have been implemented in transfer objects:
 {% endinfo_block %}
 
 
-### 3) Configure export to Redis
+### 3) Configure export to the key-value store (Redis or Valkey)
 
-To configure export to Redis, follow steps in the subsections.
+To configure export to the key-value store (Redis or Valkey), follow steps in the subsections.
 
 #### Set up event listeners
 
@@ -235,7 +235,7 @@ Add the following plugins to your project:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| CategoryImageSynchronizationDataPlugin | Synchronizes all category image entries from the database to Redis. | None | Spryker\Zed\CategoryImageStorage\Communication\Plugin\Synchronization |
+| CategoryImageSynchronizationDataPlugin | Synchronizes all category image entries from the database to the key-value store (Redis or Valkey). | None | Spryker\Zed\CategoryImageStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -263,13 +263,13 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a category image is created, updated, or deleted, it's exported or removed from Redis accordingly.
+Make sure that when a category image is created, updated, or deleted, it's exported or removed from the key-value store (Redis or Valkey) accordingly.
 
 {% endinfo_block %}
 
-| STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
-| --- | --- | --- |
-| Redis | Category Image | `kv:category_image:en_us:1` |
+| STORAGE TYPE                      | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
+|-----------------------------------| --- | --- |
+| Key-value store (Redis or Valkey) | Category Image | `kv:category_image:en_us:1` |
 
 **An example of expected data fragment**
 

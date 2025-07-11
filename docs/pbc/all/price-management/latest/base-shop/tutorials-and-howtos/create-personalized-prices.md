@@ -141,8 +141,8 @@ The `ProductCollector` collects the product data. The `ProductCollector:collectI
 
 ## Display price to customers
 
-The `ProductResourceCreator` transforms the JSON containing product details stored in Redis into a more understandable format.
+The `ProductResourceCreator` transforms the JSON containing product details stored in the key-value store (Redis or Valkey) into a more understandable format.
 
-The price needs to be set according to the group that the customer belongs to when building the product using the data from Redis.
+The price needs to be set according to the group that the customer belongs to when building the product using the data from the key-value store (Redis or Valkey).
 
 A controller action that's called when a request on a product detail page is submitted lets you retrieve logged-in customer information by calling the `getUser()` method. Now that you know the ID of the group that the customer is a member of, you can set the price of the product according to the group.

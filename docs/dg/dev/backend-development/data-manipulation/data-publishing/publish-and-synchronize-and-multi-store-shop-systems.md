@@ -60,7 +60,7 @@ The following diagrams show:
 - Two different multi-store configurations: the first one is a database with multiple stores while the second one is a database with one store.
 - Store aware and global entities: ProductAbstract and URL.
 - Routing sync messages based on Store or QueuePool.
-- Updating Redis based on Store\Enviorment.
+- Updating key-value store (Redis or Valkey) based on Store\Enviorment.
 ![Spryker entities and multi-store](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Publish+and+Synchronization/Publish+and+Synchronize+and+Multi-Store+Shop+Systems/P%26S+with+multistore.png)
 
 ## How it Works

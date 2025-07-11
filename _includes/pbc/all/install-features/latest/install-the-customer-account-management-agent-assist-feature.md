@@ -229,7 +229,7 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 1. Log in as an agent.
 2. Log in as a customer.
 3. Ensure that the agent's session data in storage is created or updated:
-    - If session data is stored in Redis, ensure that the following Redis key exists and contains data:
+    - If session data is stored in the key-value store (Redis or Valkey), ensure that the following key-value store (Redis or Valkey) key exists and contains data:
       `{% raw %}{{{% endraw %}agent_id{% raw %}}}{% endraw %}:agent:entity`
     - If session data is stored in a file, ensure that a file in the following path exists and contains data:
       `data/session/session:agent:{% raw %}{{{% endraw %}agent_id{% raw %}}}{% endraw %}`
@@ -265,7 +265,7 @@ class AgentPageDependencyProvider extends SprykerAgentPageDependencyProvider
 1. Log in as an agent.
 2. Start impersonation session as a customer.
 3. Ensure that the customer's session data in storage is created or updated:
-   - If session data is stored in Redis, ensure that the following Redis key exists and contains data:
+   - If session data is stored in the key-value store (Redis or Valkey), ensure that the following key-value store (Redis or Valkey) key exists and contains data:
      `{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}:customer:entity`
    - If session data is stored in a file, ensure that a file in the following path exists and contains data:
      `data/session/session:customer:{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}`

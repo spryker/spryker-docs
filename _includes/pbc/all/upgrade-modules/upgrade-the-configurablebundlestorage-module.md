@@ -27,7 +27,7 @@ composer require spryker/configurable-bundle-storage:"^2.0.0" --update-with-depe
 TRUNCATE TABLE spy_configurable_bundle_template_storage
 ```
 
-3. Remove all keys from Redis:
+3. Remove all keys from key-value storage (Redis or Valkey):
 
 ```bash
 redis-cli --scan --pattern kv:configurable_bundle_template:'*' | xargs redis-cli unlink
@@ -45,7 +45,7 @@ console propel:install
 console transfer:generate
 ```
 
-6. Run the following command to get all data about configurable bundle templates from the database and publish them to Redis:
+6. Run the following command to get all data about configurable bundle templates from the database and publish them to key-value storage (Redis or Valkey):
 
 ```bash
 console event:trigger -r configurable_bundle_template

@@ -113,11 +113,11 @@ During this step, all the services in an updated state may still respond to requ
 
 In this step, the scripts in the `SPRYKER_HOOK_INSTALL` are run. By default, it's `vendor/bin/install -r EU/production --no-ansi -vvv`.
 
-The script runs all the propel database migrations, so the database is updated to V2. However, Search and Redis are not, as the synchronization was "paused".
+The script runs all the propel database migrations, so the database is updated to V2. However, Search and key-value store (Redis or Valkey) are not, as the synchronization was "paused".
 
 ![Database migrations](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/database-migration.jpg)
 
-From this point on, all the V1 services that are communicating with the database may respond to requests incorrectly. For each request, it depends on what data was migrated. For example, Glue V1 retrieves information about a product from Redis V1 and Search V1. Then Glue V1 makes a request to the database to put the product to cart. If the product still exists in the database, it will be added to cart. Otherwise, this request will result in an error.
+From this point on, all the V1 services that are communicating with the database may respond to requests incorrectly. For each request, it depends on what data was migrated. For example, Glue V1 retrieves information about a product from the key-value store (Redis or Valkey) V1 and Search V1. Then Glue V1 makes a request to the database to put the product to cart. If the product still exists in the database, it will be added to cart. Otherwise, this request will result in an error.
 
 At the end of this step, the following command re-enables the scheduler and sets up new jobs:
 
@@ -125,7 +125,7 @@ At the end of this step, the following command re-enables the scheduler and sets
 vendor/bin/console scheduler:setup -vvv --no-ansi
 ```
 
-The scheduler restarts queue workers and updates search and Redis.
+The scheduler restarts queue workers and updates search and key-value store (Redis or Valkey).
 
 
 <figure class="video_container">
@@ -134,7 +134,7 @@ The scheduler restarts queue workers and updates search and Redis.
   </video>
 </figure>
 
-Depending on the amount of data that needs to be processed, this process may take a while. While Redis and search are being updated, they may process requests incorrectly:
+Depending on the amount of data that needs to be processed, this process may take a while. While key-value store (Redis or Valkey) and search are being updated, they may process requests incorrectly:
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -146,7 +146,7 @@ Depending on the amount of data that needs to be processed, this process may tak
 
 In this step, services of V2 are deployed. In our example, Zed V2 and Glue V2.
 
-For the sake of simplicity, let's assume that Redis and search are done updating. The asterisks on the schema serve as a reminder that it may not be the case. It depends on the size of the migration.
+For the sake of simplicity, let's assume that key-value store (Redis or Valkey) and search are done updating. The asterisks on the schema serve as a reminder that it may not be the case. It depends on the size of the migration.
 
 ![Deploy Spryker services](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/deploy-spryker-services.jpg)
 

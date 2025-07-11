@@ -67,7 +67,7 @@ Frontend applications require de-normalized data in order to quickly be able to 
 
 Key-value storages work like a hash-tables where retrieval time is faster compared to the complicated joins and queries in a relational database. For example, to render a product detail page, the system needs several pieces of information like the product title, description, attributes, images, and prices. Instead of the execution of time-consuming queries in the SQL database, all the data is placed in a few entries in the storage and can be loaded by a single lookup.
 
-Redis is the default data storage in Spryker, but it can be easily replaced by other technologies, like MongoDB, Cassandra, or even a separate relational DB like PostgreSQL.
+Key-value storage (Redis or Valkey) are the default data storages in Spryker, but it can be easily replaced by other technologies, like MongoDB, Cassandra, or even a separate relational DB like PostgreSQL.
 
 ### Search
 

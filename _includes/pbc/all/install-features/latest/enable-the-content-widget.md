@@ -16,7 +16,7 @@ Integration of CMS widget consists of three main parts:
 2. Providing configuration in module shared directory so that Yves and Zed can read it.
 3. (Optionally) Providing CMS content function parameter mapper plugins.
 
-### Step 1: Registering twig function in Yves
+### 1. Registering twig function in Yves
 
 The CMS content widget is a twig function. Therefore, twig syntax rules apply and must be followed when including the inside content.
 For example, `{% raw %}{{{% endraw %} product(['012', '013', '321']) {% raw %}}}{% endraw %}` will include carousel component with three products.
@@ -26,7 +26,7 @@ where **key** is the function name you want to use in a template and **value** i
 
 To enable the feature for CMS blocks, you have to configure twig rendering plugin `\Spryker\Yves\CmsContentWidget\Plugin\CmsTwigContentRendererPlugin` and add it to `\Pyz\Yves\CmsBlock\CmsBlockDependencyProvider::getCmsBlockTwigContentRendererPlugin`. This will enable twig function rendering in CMS blocks.
 
-### Step 2: Providing CMS content widget configuration
+### 2. Providing CMS content widget configuration
 
 Some information needs to be shared between Yves and Zed. Therefore, the configuration plugin must be placed in a shared namespace.
 
@@ -40,7 +40,7 @@ The configuration provider requires implementation of the following methods:
 - `getAvailableTemplates` is the list of supported templates, it's a key value pair where key is the template identifier which is passed to function and value is a path to twig template.
 - `getUsageInformation` is a plain text usage information, displayed when rendering help pane below the content editor.
 
-### Step 3: Function mapping plugins - optional
+### 3. Function mapping plugins - optional
 
 When defining functions, you may want to accept "natural identifiers", such as "sku" for products or "set_key" for product sets. It is preferable that the content manager provides the identifiers instead of relying on surrogate keys. The problem arises when you need to read data from the Yves data store as the Yves data store uses "surrogate key/primary keys". Therefore, to read data, convert/map those natural identifiers to surrogate keys.
 
@@ -238,10 +238,6 @@ class YvesBootstrap
 ```
 -->
 
-### Version Check When Using the Widget for CMS Blocks
+### Version check when using the widget for CMS blocks
 
 If you use this widget for CMS Blocks, then check that you have proper versions of your modules as follows: `cms-block >= 1.2.0, cms-block-collector >= 1.1.0, cms-block-gui >= 1.1.0`.
-
-<!-- Last review date: Sep 20, 2017 -->
-
-[//]: # (by Denis Turkov)

@@ -2,18 +2,13 @@
 
 This page describes the Microsoft Azure Active Directory and how to install it.
 
-## General information
-
 Azure Active Directory is Microsoft's multi-tenant, cloud-based directory and identity management service. For an organization, Azure AD helps employees sign up to multiple services and access them anywhere over the cloud with a single set of login credentials.
-
 
 The [`SprykerEco.Oauth-Azure`](https://github.com/spryker-eco/oauth-azure) enables OAuth 2.0 authentication via Microsoft Azure Active Directory.
 
-## Integrating Azure Active Directory
-
 Follow the steps below to integrate Azure Active Directory.
 
-### Prerequisites
+## Prerequisites
 
 To start the feature integration:
 
@@ -27,7 +22,7 @@ To start the feature integration:
 
 2. [Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app).
 
-### 1) Install the required modules
+## 1) Install the required modules
 
 Install the required modules:
 
@@ -45,7 +40,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up the configuration
+## 2) Set up the configuration
 
 Using the data from your Microsoft Azure Active Directory account, configure OAuth Azure credentials:
 
@@ -65,7 +60,7 @@ $config[OauthAzureConstants::PATH_AUTHORIZE] = '/oauth2/v2.0/authorize';
 $config[OauthAzureConstants::PATH_TOKEN] = '/oauth2/v2.0/token';
 ```
 
-### 3) Set up transfer objects
+## 3) Set up transfer objects
 
 Generate transfer changes:
 
@@ -86,7 +81,7 @@ Make sure that the following changes have been applied in the transfer objec
 
 {% endinfo_block %}
 
-### 4) Set up behavior
+## 4) Set up behavior
 
 Activate the following plugins:
 

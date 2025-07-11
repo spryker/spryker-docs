@@ -1949,7 +1949,7 @@ entries:
           - title: Install the Multi-Factor Authentication feature
             url: /docs/pbc/all/multi-factor-authentication/install-multi-factor-authentication-feature.html
           - title: Install customer email Multi-Factor Authentication method
-            url: /docs/pbc/all/multi-factor-authentication/install-customer-email-multi-factor-authentication-method.html
+            url: /docs/pbc/all/multi-factor-authentication/install-email-multi-factor-authentication-method.html
           - title: Create MFA methods
             url: /docs/pbc/all/multi-factor-authentication/create-multi-factor-authentication-methods.html          
           - title: Manage using Glue API

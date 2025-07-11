@@ -1,8 +1,6 @@
 This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/dynamic-multistore-feature-overview.html) + the [Product](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) feature.
 
-## Install feature core
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -11,7 +9,7 @@ Install the required features:
 | Spryker Core | 202507.0 |
 | Product | 202507.0 |
 
-### Set up behavior
+## Set up behavior
 
 Register the following plugins:
 

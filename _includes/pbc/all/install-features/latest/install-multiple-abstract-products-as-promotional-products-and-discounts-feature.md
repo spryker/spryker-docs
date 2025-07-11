@@ -2,11 +2,7 @@
 
 This document describes how to add *multiple abstract products as promotional products* to the [Promotions & Discounts](/docs/pbc/all/discount-management/latest/base-shop/promotions-discounts-feature-overview.html) feature.
 
-## Install feature core
-
-Follow the steps below to install the feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -15,7 +11,7 @@ Install the required features:
 | Promotions & Discounts | 202507.0 | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) |
 | Spryker Cart | 202507.0 | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 
-### 1) Install the required modules
+## 1) Install the required modules
 
 Install the required modules using Composer:
 
@@ -33,7 +29,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up database schema and transfer objects
+## 2) Set up database schema and transfer objects
 
 Apply database changes and generate entity and transfer changes:
 
@@ -74,7 +70,7 @@ Ensure that the *ABSTRACT PRODUCT SKU(S)** field is displayed, and it accepts a 
 
 {% endinfo_block %}
 
-### 3) Add translations
+## 3) Add translations
 
 Append glossary according to your configuration:
 
@@ -97,7 +93,7 @@ Ensure that in the database the configured data are added to the `spy_glossary` 
 
 {% endinfo_block %}
 
-### 4) Add Zed translations
+## 4) Add Zed translations
 
 Generate a new translation cache for Zed:
 
@@ -115,7 +111,7 @@ Ensure that all labels and help tooltips in the **Discount** form has English an
 
 {% endinfo_block %}
 
-### 5) Set up behavior
+## 5) Set up behavior
 
 Set up the following behaviors:
 
@@ -160,7 +156,7 @@ Ensure that the plugin works correctly:
 
 {% endinfo_block %}
 
-### 4) Build Zed UI frontend
+## 6) Build Zed UI frontend
 
 Enable Javascript and CSS changes:
 

@@ -59,7 +59,12 @@ Compared to standard filters, dynamic filters and facets allow the creation of m
 
 Check out this video on managing categories:
 
-{% wistia g3l3c7xt93 960 720 %}
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/feature-overviews/category-management-feature-overview.md/Cat_theory_demo.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 ## Current constraints
 

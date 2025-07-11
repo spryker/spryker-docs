@@ -1,8 +1,6 @@
 This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/dynamic-multistore-feature-overview.html) + the [Availability Notification](/docs/pbc/all/warehouse-management-system/latest/base-shop/availability-notification-feature-overview.html) feature.
 
-## Install feature core
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -12,7 +10,7 @@ Install the required features:
 | Availability Notification | 202507.0 |
 
 
-### Set up configuration
+## Set up configuration
 
 Add the following configuration:
 
@@ -24,7 +22,6 @@ Add the following configuration:
 **config/Shared/config_default.php**
 
 ```php
-
 <?php
 
 use Spryker\Shared\AvailabilityNotification\AvailabilityNotificationConstants;
@@ -33,7 +30,6 @@ $config[AvailabilityNotificationConstants::REGION_TO_YVES_HOST_MAPPING] = [
     'EU' => getenv('SPRYKER_YVES_HOST_EU'),
     'US' => getenv('SPRYKER_YVES_HOST_US'),
 ];
-
 ```
 
 {% info_block warningBox "Verification" %}  

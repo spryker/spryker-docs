@@ -7,15 +7,13 @@ template: glue-api-storefront-guide-template
 
 This document describes how to authenticate through Multi-Factor Authentication (MFA) to send requests to protected resources.
 
-For the list of protected resources, see [Multi-Factor Authentication in Glue API](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication-in-glue-api.html).
-
 The email authentication method is used as an example. The endpoint supports all authentication methods implemented in your project.
 
 
 ## Installation
 
 - [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html)
-- [Install Customer Email Multi-Factor Authentication method](/docs/pbc/all/multi-factor-authentication/latest/install-customer-email-multi-factor-authentication-method.html)
+- [Install Customer Email Multi-Factor Authentication method](/docs/pbc/all/multi-factor-authentication/latest/install-email-multi-factor-authentication-method.html)
 
 
 ## Prerequisites

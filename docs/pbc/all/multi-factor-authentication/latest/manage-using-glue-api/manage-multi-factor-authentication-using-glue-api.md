@@ -9,7 +9,7 @@ related:
   - title: Install the Multi-Factor Authentication feature
     link: docs/pbc/all/multi-factor-authentication/page.version/install-multi-factor-authentication-feature.html
   - title: Install Customer Email Multi-Factor Authentication method
-    link: docs/pbc/all/multi-factor-authentication/page.version/install-customer-email-multi-factor-authentication-method.html
+    link: docs/pbc/all/multi-factor-authentication/page.version/install-email-multi-factor-authentication-method.html
   - title: Create Multi-Factor Authentication methods
     link: docs/pbc/all/multi-factor-authentication/page.version/create-multi-factor-authentication-methods.html
 ---
@@ -82,5 +82,5 @@ To learn more about MFA methods, see [Multi-Factor Authentication feature overvi
 The usual flow of using MFA is as follows:
 
 1. [Retrieve available MFA methods and check their status for your user](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-retrieve-mfa-methods.html)
-2. [Activate MFA for your user](/docs/pbc/all/multi-factor-authentication/latest/glue-api-activate-and-deactivate-mfa.html)
+2. [Activate MFA for your user](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-activate-and-deactivate-mfa.html)
 3. [Authenticate through MFA and send requests to protected resources](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-authenticate-through-mfa.html)

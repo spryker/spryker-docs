@@ -10,18 +10,18 @@ related:
     link: docs/dg/dev/architecture/conceptual-overview.html
 ---
 
-Spryker Commerce OS uses a key-value storage system for caching and data storage to provide high-performance data access. This system has traditionally been based on Redis, but Spryker now supports both Redis and Valkey as compatible key-value storage solutions.
+Spryker uses key-value storage for caching and data storage to provide high-performance data access. Redis and Valkey are supported as key-value storage systems.
 
 ## Key-value storage overview
 
-Key-value storage is a type of NoSQL database that stores data as key-value pairs. In Spryker, this storage system serves as:
+Key-value storage is a type of NoSQL database that stores data as key-value pairs. In Spryker, it's used as follows:
 
 - A client-side data source for localized content such as translations and region-specific data
 - A high-performance cache to reduce database queries and improve response times
 - Storage for session data and temporary data structures
-- A mechanism for data synchronization across distributed systems
+- A mechanism for data sync across distributed systems
 
-The key-value database keeps data in sync with the SQL database through the Publish & Synchronize system and supports replication for scalability.
+The key-value database keeps data in sync with the SQL database through the [Publish & Synchronize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html) system and supports replication for scalability.
 
 ## Redis vs Valkey
 
@@ -55,13 +55,9 @@ This naming convention is preserved to ensure backward compatibility and avoid b
 
 ## Benefits of Valkey
 
-### Performance Boost
+Performance boost: Valkey introduces advanced multi-threading capabilities. In our internal tests, we've observed up to 5x higher throughput for write operations with Valkey, alongside more stable latencies for other operations. This means data can be processed and served quicker, allowing your application to handle more simultaneous connections and deliver a faster experience, especially during peak traffic periods.
 
-Valkey introduces advanced multi-threading capabilities. In our internal tests, we've observed up to 5x higher throughput for write operations with Valkey, alongside more stable latencies for other operations. This means data can be processed and served quicker, allowing your application to handle more simultaneous connections and deliver a faster experience, especially during peak traffic periods.
-
-### Enhanced Scalability & Reliability
-
-With Valkey's improved cluster failover mechanisms and superior scaling capabilities, your Spryker platform will be even better equipped to support larger workloads and complex use cases as your business grows.
+Enhanced scalability and reliability: With Valkey's improved cluster failover mechanisms and superior scaling capabilities, your Spryker platform will be even better equipped to support larger workloads and complex use cases as your business grows.
 
 ### Improved Efficiency
 

@@ -43,6 +43,6 @@ We are committed to your **security and compliance**. Be aware of the following:
 
 ### What's Next
 
-We are actively working to make this feature fully self-service via the Support Portal. Soon, you’ll be able to configure exports, frequencies, and target tables directly.
+We are actively working to make this feature fully self-service via the Support Portal. Soon, you will be able to configure exports, frequencies, and target tables directly.
 
 For questions or changes to your export contact support. We are here to help!

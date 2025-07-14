@@ -65,8 +65,8 @@ entries:
 
     - title: Manage dependencies with Composer
       url: /docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
-    - title: Key-value store (Redis or Valkey) configuration
-      url: /docs/dg/dev/set-up-spryker-locally/redis-configuration.html
+    - title: Key-value store configuration
+      url: /docs/dg/dev/set-up-spryker-locally/key-value-store-configuration.html
     - title: Troubleshooting installation
       url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html
       nested:

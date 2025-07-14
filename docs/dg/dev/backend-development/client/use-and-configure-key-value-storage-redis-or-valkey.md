@@ -1,5 +1,5 @@
 ---
-title: Use and configure key-value storage (Redis or Valkey)
+title: "Use and configure key-value storage: Redis or Valkey"
 description: This document describes how key-value storage (Redis or Valkey) is used within Spryker; the current functionality can be extended according to your needs.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -19,7 +19,7 @@ This document describes how key-value storage (Redis or Valkey) is used within S
 
 Spryker supports both Redis and Valkey as key-value storage solutions. For detailed information about the differences, compatibility, and migration considerations, see [Key-value store architecture (Redis and Valkey)](/docs/dg/dev/architecture/redis-valkey-key-value-storage.html).
 
-## About key-value storage (Redis and Valkey)
+## About key-value storage
 
 **Redis** is an open-source, in-memory key-value data store that supports a large collection of data structures, including strings, hashes, lists, sets, and more. It provides high performance and flexibility for caching and data storage.
 

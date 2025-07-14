@@ -130,9 +130,9 @@ Database queries are the slowest parts of each application. They have different 
 
 Ensure that data fetched from the database is paginated. Failing to do so with large datasets may lead to out-of-memory errors.
 
-### Wildcards in the key-value store (Redis or Valkey)
+### Wildcards in the key-value store
 
-Avoid using wildcards (*) in the key-value store (Redis or Valkey), as they can significantly impact performance.
+Avoid using wildcards (*) in the key-value store, as they can significantly impact performance.
 
 ### RPC calls
 

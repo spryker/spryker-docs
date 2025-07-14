@@ -1,5 +1,5 @@
 ---
-title: Key-value store (Redis or Valkey) configuration
+title: Key-value store configuration
 description: In Spryker, key-value storage (Redis or Valkey) is used as the key-value storage and the session data storage.
 last_updated: Jun 19, 2025
 template: howto-guide-template
@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/redis-configruation
 originalArticleId: ea89b3d3-30a2-41b6-8af7-cbd890ff5d18
 redirect_from:
 - /docs/scos/dev/set-up-spryker-locally/redis-configuration.html
+- /docs/dg/dev/set-up-spryker-locally/redis-configuration
 related:
   - title: Install module structure and configuration
     link: docs/scos/dev/set-up-spryker-locally/install-module-structure-and-configuration.html

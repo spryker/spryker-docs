@@ -13,7 +13,7 @@ Install the following features:
 
 | NAME         | REQUIRED   | VERSION          | INTEGRATION  GUIDE                                                                                                                                          |
 |--------------|------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | &#9989;    | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | &#9989;    | 202410.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ## 1) Update the required modules
 

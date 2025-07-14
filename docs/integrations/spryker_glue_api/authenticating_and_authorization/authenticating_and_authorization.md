@@ -1,23 +1,8 @@
 ---
 title: Spryker API Authentication and Authorization
 description: Learn how to authenticate and authorize requests in the Spryker Backend API using OAuth 2.0.
-last_updated: Mar 21, 2025
+last_updated: July 9, 2025
 layout: custom_new
-article_status: published
-nav_pr: 3
-tags: 
-  - ECO Module
-  - ACP
-  - API
-  - Custom Build
-  - Community Contribution
-redirect_from:
-    - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/authentication-and-authorization.html
-    - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/authentication-and-authorization.html
-    - /docs/scos/dev/feature-integration-guides/202404.0/glue-api/glue-api-authentication-integration.html
-    - /docs/scos/dev/glue-api-guides/202204.0/decoupled-glue-infrastructure/authentication-and-authorization.html
-    - /docs/scos/dev/glue-api-guides/202404.0/authentication-and-authorization.html
-    - /docs/dg/dev/glue-api/202410.0/authentication-and-authorization.html
 ---
 
 
@@ -30,8 +15,8 @@ Spryker's Glue API uses the **OAuth 2.0** framework for authentication to secure
 
 For security, access tokens have a limited lifespan. The default lifetime is **8 hours** (28,800 seconds). When an access token is issued, the response also includes a **refresh token**.
 
-* **Access Token**: Used to authenticate requests to protected resources.
-* **Refresh Token**: When an access token expires, the refresh token can be exchanged for a new access token and a new refresh token. The default lifetime for a refresh token is **1 month** (2,628,000 seconds).
+- **Access Token**: Used to authenticate requests to protected resources.
+- **Refresh Token**: When an access token expires, the refresh token can be exchanged for a new access token and a new refresh token. The default lifetime for a refresh token is **1 month** (2,628,000 seconds).
 
 It is recommended to revoke refresh tokens when they are no longer needed or if they become compromised. A revoked token is immediately marked as expired and cannot be used to obtain a new access token.
 
@@ -41,6 +26,7 @@ It is recommended to revoke refresh tokens when they are no longer needed or if 
 To make a request to a protected resource, you must pass the access token in the `Authorization` header.
 
 **Example Request:**
+
 ```http
 GET /carts HTTP/1.1
 Host: mysprykershop.com:10001
@@ -52,6 +38,7 @@ Cache-Control: no-cache
 If the token is valid, the API will process the request. If authorization fails, the API returns a `401 Unauthorized` error with a code explaining the reason for the failure.
 
 **Example Error Response:**
+
 ```json
 {
     "errors": [
@@ -69,8 +56,8 @@ If the token is valid, the API will process the request. If authorization fails,
 
 Authentication grants access based on user type, and different endpoints may require different user roles. In the Spryker ecosystem, there is a distinction between the Storefront and Backend APIs.
 
-* **Storefront API**: Used to authenticate a **customer**.
-* **Backend API**: Used to authenticate a **user** (e.g., a company user or agent).
+- **Storefront API**: Used to authenticate a **customer**.
+- **Backend API**: Used to authenticate a **user** (e.g., a company user or agent).
 
 By default, you can authenticate as a customer, a company user, or an agent assist.
 

@@ -2,8 +2,6 @@
 title: Integrations Catalogue
 description: Catalogue of our integration vendors.
 last_updated: 7 April 2025
-layout: custom_new
-nav_pr: 4
 article_status: published
 ---
 

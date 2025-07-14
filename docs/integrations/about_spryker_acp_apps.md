@@ -17,7 +17,7 @@ tags:
 
 ## What Is the App Composition Platform (ACP)?
 
-As part of its Composable Commerce approach Spryker offers the App Composition Platform (ACP) to help the modern enterprise to build and deliver any digital business model at the lowest effort. 
+As part of its Composable Commerce approach Spryker offers the App Composition Platform (ACP) to help the modern enterprise to build and deliver any digital business model at the lowest effort.
 
 The App Composition Platform (ACP) is designed to help businesses easily connect, configure, and use third party services, all without the need for complex custom development. Whether you’re looking to integrate payments, tax management, search functionality, or marketing tools, ACP makes it possible to do so with minimal effort and maximum flexibility.
 
@@ -35,15 +35,17 @@ Ensure that your Spryker Commerce OS project is registered with ACP. Please chec
 Here’s how it works:
 <div class="content_indent">
 
-  1.  **Ensure ACP is enabled to your project:** Talk to your CSM for any additional action this may need.
-  2.   **Browse the App Catalog:** Explore a range of third party services and integrations available in the ACP catalog. Each app comes with an easy to understand description, helping you decide which one is right for your business needs.
-  3.   **Order the ACP App:** contact your CSM for the required ordering process. You can also proceed with activating the service of the respective provider and receive your credentials. 
-  4.   **Connect and Configure:** Once you’ve chosen an app and have your service credentials, simply click to connect. Spryker handles the technical setup, so you don’t need to worry about complex coding. We provide all the tools you need to configure the app to fit your specific requirements. Note: some applications may require the installation of specific modules. You can find those in the app information page. 
-  5.   **Seamless Integration:** After connecting the app, ACP ensures smooth integration with your Spryker platform, handling everything from API configurations to data syncing. Our secure infrastructure guarantees that everything works seamlessly and reliably.
-  6.   **Automatic Updates:** All apps on the platform are managed and maintained by Spryker. This means you’ll always have the latest features, security updates, and improvements without any extra effort on your part.
+1. **Ensure ACP is enabled to your project:** Talk to your CSM for any additional action this may need.
+2. **Browse the App Catalog:** Explore a range of third party services and integrations available in the ACP catalog. Each app comes with an easy to understand description, helping you decide which one is right for your business needs.
+3. **Order the ACP App:** contact your CSM for the required ordering process. You can also proceed with activating the service of the respective provider and receive your credentials.
+4. **Connect and Configure:** Once you’ve chosen an app and have your service credentials, simply click to connect. Spryker handles the technical setup, so you don’t need to worry about complex coding. We provide all the tools you need to configure the app to fit your specific requirements. Note: some applications may require the installation of specific modules. You can find those in the app information page.
+5. **Seamless Integration:** After connecting the app, ACP ensures smooth integration with your Spryker platform, handling everything from API configurations to data syncing. Our secure infrastructure guarantees that everything works seamlessly and reliably.
+6. **Automatic Updates:** All apps on the platform are managed and maintained by Spryker. This means you’ll always have the latest features, security updates, and improvements without any extra effort on your part.
 </div>
 
-## Key Benefits of ACP 
+
+## Key Benefits of ACP
+
 
 <div class="grid_container">
   <div class="content_card">

@@ -5,19 +5,19 @@ last_updated: July 9, 2025
 layout: custom_new
 ---
 
-OMS (Order Management System) in Spryker is a built-in workflow engine that manages the lifecycle of an order - from placement to delivery. It defines each step (e.g., payment, shipping, cancellation) as part of a process, with clear transitions and conditions.
+OMS (Order Management System) in Spryker is a built-in workflow engine that manages the lifecycle of an order - from placement to delivery. It defines each step (for example payment, shipping, cancellation) as part of a process, with clear transitions and conditions.
 
-For 3rd party integrations, you primarily use OMS in two ways:
+For third party integrations, you primarily use OMS in two ways:
 
 **Event-driven integration (OMS as the Source):**
 
-- OMS can be used to publish events (e.g., Order.Paid, Order.Shipped) when an order transitions to a specific state.
-- Your 3rd party integration can then subscribe to these events (e.g., via a message queue like RabbitMQ) to trigger actions in an external system (e.g., update ERP, notify logistics partner, send customer email).
+- OMS can be used to publish events (for example Order.Paid, Order.Shipped) when an order transitions to a specific state.
+- Your 3rd party integration can then subscribe to these events (for example via a message queue like RabbitMQ) to trigger actions in an external system (for example update ERP, notify logistics partner, send customer email).
 
 **API-Driven Integration (OMS as the Target):**
 
-- You can expose Glue API endpoints that trigger specific OMS commands or state transitions (e.g., set order status to shipped, initiate return).
-- This allows external systems (e.g., a Warehouse Management System, a Call Center application) to update the order status or trigger actions within Spryker's OMS.
+- You can expose Glue API endpoints that trigger specific OMS commands or state transitions (for example set order status to shipped, initiate return).
+- This allows external systems (for example a Warehouse Management System, a Call Center application) to update the order status or trigger actions within Spryker's OMS.
 - You can also extend the OMS process with custom states and transitions specifically designed for your 3rd party's workflow.
 
 **Setting up an Order Management System**

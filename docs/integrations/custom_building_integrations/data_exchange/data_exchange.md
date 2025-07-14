@@ -31,7 +31,7 @@ This guide outlines several recommended approaches to implement data exchange in
 
   <div class="cst_card">
     <div class="cst_card_title">GLUE API</div>
-    <div class="cst_card_desc">Spryker’s GLUE API is a built-in interface for synchronous data exchange via REST, GraphQL, or OData, and can be easily extended to support custom logic or additional entities.</div>
+    <div class="cst_card_desc">Spryker's GLUE API is a built-in interface for synchronous data exchange via REST, GraphQL, or OData, and can be easily extended to support custom logic or additional entities.</div>
     <a class="cst_card_button" href="community_contributions"> Find out More </a>
   </div>
 

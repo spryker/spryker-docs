@@ -13,13 +13,13 @@ tags:
   - Community Contribution
 ---
 
-<div class="content_box">Integrating third party services into a Spryker based project is a crucial part of extending and customizing your commerce solution to meet unique business needs. Whether you're connecting payment providers, logistics systems, marketing tools, or customer support platforms, Spryker offers a flexible and scalable architecture designed to support smooth integrations. In this article, we’ll explore the various methods available for integrating external systems with Spryker, from using APIs and middleware to leveraging Spryker's modular architecture.</div>
+<div class="content_box">Integrating third party services into a Spryker based project is a crucial part of extending and customizing your commerce solution to meet unique business needs. Whether you're connecting payment providers, logistics systems, marketing tools, or customer support platforms, Spryker offers a flexible and scalable architecture designed to support smooth integrations. In this article, we'll explore the various methods available for integrating external systems with Spryker, from using APIs and middleware to leveraging Spryker's modular architecture.</div>
 
-## What Are Spryker Integrations?
+## What Are Spryker Integrations
 
 Spryker integrations are connections between a Spryker based commerce system and external third party services or internal enterprise systems. These integrations allow Spryker to exchange data, trigger actions, and extend its functionality beyond the core platform to create a tailored and scalable commerce solution.
 
-Spryker’s modular architecture is built to support a wide range of integrations, whether you're connecting to payment gateways, ERP systems, CRMs, PIMs, shipping providers, or marketing tools. Integrations can range from simple REST API connections to complex, event driven data flows.
+Spryker's modular architecture is built to support a wide range of integrations, whether you're connecting to payment gateways, ERP systems, CRMs, PIMs, shipping providers, or marketing tools. Integrations can range from simple REST API connections to complex, event driven data flows.
 
 At their core, Spryker integrations are designed to be:
 
@@ -32,7 +32,7 @@ At their core, Spryker integrations are designed to be:
 - Customizable: Flexible enough to fit your unique business requirements.
 
 
-## Different Methods to Integrate with Spryker?
+## Different Methods to Integrate with Spryker
 
 Spryker has different methods of integrating third parties in to your Spryker project.
 
@@ -75,6 +75,6 @@ Spryker has different methods of integrating third parties in to your Spryker pr
  </div>
 
 
-## How do Spryker Integrations work?
+## How do Spryker Integrations Work
 
 Spryker integrations work by connecting external services to your Spryker project through modular, decoupled components. These can be built and used by any of the integration methods displayed above depending on your use case and needs.

@@ -14,10 +14,10 @@ Before diving into the development process, it's important to understand a few k
 
 - **Glue API:** The core of Spryker's API infrastructure.
 - **Storefront vs. Backend API:** Spryker distinguishes between two types of API applications:
-  - **Storefront API:** Designed for customer facing applications (e.g., mobile apps, single page applications). It has access to services like search and key value storage.
+  - **Storefront API:** Designed for customer facing applications (for example mobile apps, single page applications). It has access to services like search and key value storage.
   - **Backend API:** Intended for backend integrations and administrative tasks. It has more direct access to the database, broker, and other core services.
 - **Decoupled Glue API:** The latest version of the Glue API infrastructure, which offers improved flexibility and performance. When creating a new application, it's recommended to use the decoupled infrastructure.
-- **Modules and Resources:** Your API will be organized into modules, and each module can expose one or more resources (e.g., "products," "carts," "orders").
+- **Modules and Resources:** Your API will be organized into modules, and each module can expose one or more resources (for example "products," "carts," "orders").
 
 
 ### The Development Process
@@ -28,7 +28,7 @@ Creating a new API application in Spryker involves the following key steps:
 
 2. **Create a New Module:** You'll need to create a new module for your API. This module will contain all the code for your new API resources, including controllers, processors, and data transfer objects (DTOs).
 
-3. **Define Your Resources:** For each resource you want to expose through your API (e.g., a new "wishlists" resource), you'll need to define the corresponding routes, controllers, and business logic.
+3. **Define Your Resources:** For each resource you want to expose through your API (for example a new "wishlists" resource), you'll need to define the corresponding routes, controllers, and business logic.
 
 4. **Implement Business Logic:** This is where you'll write the code that handles the actual work of your API. This might involve retrieving data from the database, calling other services, or performing calculations.
 

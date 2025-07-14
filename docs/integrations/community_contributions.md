@@ -16,7 +16,7 @@ tags:
 Spryker thrives because of its powerful technology **and** the people who build on it. Discover how community-driven innovation can accelerate your next project.
 
 
-## What Are Community Contributions?
+## What Are Community Contributions
 
 Community contributions are open-source tools, extensions, or enhancements shared by developers, partners, and agencies across the Spryker ecosystem.
 
@@ -89,7 +89,7 @@ Look for tools by:
 **Start exploring now →** [Community Tools on CommerceQuest](https://commercequest.space/community-tools/)
 
 
-## Have a contribution?
+## Have a contribution
 
 Have you built something useful for Spryker?
 

@@ -6,7 +6,7 @@ layout: custom_new
 nav_pr: 3.4
 ---
 
-GLUE API is Spryker’s built-in API interface that supports a wide range of data exchange operations out of the box. You can easily extend it to support custom logic or additional entities as needed. It enables third-party systems and applications to communicate synchronously using REST API, GraphQL, or OData protocols.
+GLUE API is Spryker's built-in API interface that supports a wide range of data exchange operations out of the box. You can easily extend it to support custom logic or additional entities as needed. It enables third-party systems and applications to communicate synchronously using REST API, GraphQL, or OData protocols.
 
 The API is delivered with an API Gateway and built-in data mapping functionality.
 

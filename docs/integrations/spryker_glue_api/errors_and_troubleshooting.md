@@ -1,19 +1,11 @@
 ---
 title: Sprker API Errors and Troubleshooting
 description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: Mar 21, 2025
+last_updated: July 9, 2025
 layout: custom_new
-article_status: published
-nav_pr: 4
-tags: 
-  - ECO Module
-  - ACP
-  - API
-  - Custom Build
-  - Community Contribution
 ---
 
-Sometimes an API can return an error for various reasons, here are some generic steps that can help you debug and troubleshoot those errors. For more certain API endpoints please view the specific documentation for that endpoint , this will provide errors related to that API.
+Sometimes an API can return an error for various reasons, here are some generic steps that can help you debug and troubleshoot those errors. For more certain API endpoints view the specific documentation for that endpoint , this will provide errors related to that API.
 
 
 ## Analyze the HTTP Status Code
@@ -41,8 +33,8 @@ An unexpected error occurred on the server. These issues require checking server
 
 For 4xx errors, the response body contains a JSON object with specific error details.
 
-- **`detail`**: A human-readable message explaining the error (e.g., `"Invalid access token."`). This is the best place to start.
-- **`code`**: A numeric, application-specific error code (e.g., `"202"`). This code is essential for programmatic error handling and for looking up the precise issue in reference tables.
+- **detail**: A human-readable message explaining the error (for example `"Invalid access token."`). This is the best place to start.
+- **code**: A numeric, application-specific error code (for example `"202"`). This code is essential for programmatic error handling and for looking up the precise issue in reference tables.
 
 
 ## Correlate with the Request Context
@@ -87,4 +79,4 @@ A `404 Not Found` can be caused by more than a simple typo.
 
 ### Business Logic (`422`)
 
-Occurs when the request violates a business rule (e.g., trying to check out with an out-of-stock item). The specific numeric code in the error payload is key to understanding the exact issue.
+Occurs when the request violates a business rule (for example trying to check out with an out-of-stock item). The specific numeric code in the error payload is key to understanding the exact issue.

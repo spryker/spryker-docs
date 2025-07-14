@@ -57,7 +57,7 @@ If the token is valid, the API will process the request. If authorization fails,
 Authentication grants access based on user type, and different endpoints may require different user roles. In the Spryker ecosystem, there is a distinction between the Storefront and Backend APIs.
 
 - **Storefront API**: Used to authenticate a **customer**.
-- **Backend API**: Used to authenticate a **user** (e.g., a company user or agent).
+- **Backend API**: Used to authenticate a **user** (for example a company user or agent).
 
 By default, you can authenticate as a customer, a company user, or an agent assist.
 

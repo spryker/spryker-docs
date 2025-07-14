@@ -21,7 +21,7 @@ Spryker offers built-in support for Basic Auth on both REST and Glue APIs. You c
 
 ### IP Whitelisting
 
-Spryker allows you to set up IP allowlists at the web server (e.g., Nginx) or infrastructure level (e.g., AWS Security Groups, Cloudflare rules) to limit access to known, trusted sources.
+Spryker allows you to set up IP allowlists at the web server (for example Nginx) or infrastructure level (for example AWS Security Groups, Cloudflare rules) to limit access to known, trusted sources.
 
 <a class="fl_cont" href="/docs/scos/dev/operations/maintenance-mode.html">
   <div class="fl_icon">

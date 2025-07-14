@@ -15,32 +15,32 @@ tags:
 
 <div class="content_box">
 
-## What Is the App Composition Platform (ACP)?
+## What Is the App Composition Platform (ACP)
 
 As part of its Composable Commerce approach Spryker offers the App Composition Platform (ACP) to help the modern enterprise to build and deliver any digital business model at the lowest effort.
 
-The App Composition Platform (ACP) is designed to help businesses easily connect, configure, and use third party services, all without the need for complex custom development. Whether you’re looking to integrate payments, tax management, search functionality, or marketing tools, ACP makes it possible to do so with minimal effort and maximum flexibility.
+The App Composition Platform (ACP) is designed to help businesses easily connect, configure, and use third party services, all without the need for complex custom development. Whether you're looking to integrate payments, tax management, search functionality, or marketing tools, ACP makes it possible to do so with minimal effort and maximum flexibility.
 
-ACP enables a composable approach to digital commerce choosing the “best of breed” services for each part of your business. With ACP, you can add new capabilities quickly and easily, accelerating your time to market and keeping your platform flexible and scalable.
+ACP enables a composable approach to digital commerce choosing the 'best of breed' services for each part of your business. With ACP, you can add new capabilities quickly and easily, accelerating your time to market and keeping your platform flexible and scalable.
 </div>
 
 
-## How Does ACP Work?
+## How Does ACP Work
 
 Getting started with ACP is straightforward.
 
-Ensure that your Spryker Commerce OS project is registered with ACP. Please check it directly with your CSM.  Then simply head to the Apps section in your Back Office. There, you’ll find a variety of applications designed to enhance your commerce platform. With just a few clicks, you can connect a new service—like adding Stripe for global payments or Algolia for advanced search.
+Ensure that your Spryker Commerce OS project is registered with ACP. Check directly with your customer service manager if you are unsure.  Then simply head to the Apps section in your Back Office. There, you'll find a variety of applications designed to enhance your commerce platform. With just a few clicks, you can connect a new service—like adding Stripe for global payments or Algolia for advanced search.
 
 
-Here’s how it works:
+Here's how it works:
 <div class="content_indent">
 
 1. **Ensure ACP is enabled to your project:** Talk to your CSM for any additional action this may need.
 2. **Browse the App Catalog:** Explore a range of third party services and integrations available in the ACP catalog. Each app comes with an easy to understand description, helping you decide which one is right for your business needs.
 3. **Order the ACP App:** contact your CSM for the required ordering process. You can also proceed with activating the service of the respective provider and receive your credentials.
-4. **Connect and Configure:** Once you’ve chosen an app and have your service credentials, simply click to connect. Spryker handles the technical setup, so you don’t need to worry about complex coding. We provide all the tools you need to configure the app to fit your specific requirements. Note: some applications may require the installation of specific modules. You can find those in the app information page.
+4. **Connect and Configure:** Once you've chosen an app and have your service credentials, simply click to connect. Spryker handles the technical setup, so you don't need to worry about complex coding. We provide all the tools you need to configure the app to fit your specific requirements. Note: some applications may require the installation of specific modules. You can find those in the app information page.
 5. **Seamless Integration:** After connecting the app, ACP ensures smooth integration with your Spryker platform, handling everything from API configurations to data syncing. Our secure infrastructure guarantees that everything works seamlessly and reliably.
-6. **Automatic Updates:** All apps on the platform are managed and maintained by Spryker. This means you’ll always have the latest features, security updates, and improvements without any extra effort on your part.
+6. **Automatic Updates:** All apps on the platform are managed and maintained by Spryker. This means you'll always have the latest features, security updates, and improvements without any extra effort on your part.
 </div>
 
 
@@ -65,7 +65,7 @@ Here’s how it works:
     </div>
     <div class="content_column">
       <p class="content_title">Flexibility and Scalability</p>
-      <p class="content_text">As your business grows, ACP scales with you. You can easily swap out existing apps, add new ones, or configure different services to meet your changing needs, all without disrupting your entire platform. This flexibility ensures you’re always using the best tools for your business.</p>
+      <p class="content_text">As your business grows, ACP scales with you. You can easily swap out existing apps, add new ones, or configure different services to meet your changing needs, all without disrupting your entire platform. This flexibility ensures you're always using the best tools for your business.</p>
     </div>
   </div>
   <div class="content_card">
@@ -75,7 +75,7 @@ Here’s how it works:
     </div>
     <div class="content_column">
       <p class="content_title">Composable Architecture</p>
-      <p class="content_text">ACP leverages Spryker’s headless, API first architecture, which means you can integrate services with low code. This composable approach allows you to mix and match the best apps for each part of your business, giving you the freedom to create a solution that fits your unique needs.</p>
+      <p class="content_text">ACP leverages Spryker's headless, API first architecture, which means you can integrate services with low code. This composable approach allows you to mix and match the best apps for each part of your business, giving you the freedom to create a solution that fits your unique needs.</p>
     </div>
   </div>
   <div class="content_card">
@@ -85,15 +85,15 @@ Here’s how it works:
     </div>
     <div class="content_column">
       <p class="content_title">Security and Compliance</p>
-      <p class="content_text">With Spryker managing the backend infrastructure, you can trust that every app in ACP is fully vetted, secure, and compliant. We take care of the technical details so you don’t have to, from API security to compliance with the latest regulations.</p>
+      <p class="content_text">With Spryker managing the backend infrastructure, you can trust that every app in ACP is fully vetted, secure, and compliant. We take care of the technical details so you don't have to, from API security to compliance with the latest regulations.</p>
     </div>
   </div>
 </div>
 
 
-## Why Choose ACP?
+## Why Choose ACP
 
-Spryker’s App Composition Platform is built to make your business more agile, secure, and scalable. By allowing you to connect to a growing catalog of third party services without the need for complex coding, ACP empowers you to innovate faster and stay ahead of the competition. Whether you’re a business user looking for simplicity or a developer needing flexibility, ACP makes it easier than ever to enhance your platform and scale your digital commerce strategy.
+Spryker's App Composition Platform is built to make your business more agile, secure, and scalable. By allowing you to connect to a growing catalog of third party services without the need for complex coding, ACP empowers you to innovate faster and stay ahead of the competition. Whether you're a business user looking for simplicity or a developer needing flexibility, ACP makes it easier than ever to enhance your platform and scale your digital commerce strategy.
 
 
 ## ACP Apps

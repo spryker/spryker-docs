@@ -31,7 +31,7 @@ Spryker's Glue API framework offers two primary types of API applications, each 
     </div>
     <div class="content_column">
       <p class="content_title">REST API</p>
-      <p class="content_text">Spryker’s REST API (often just called the "Glue API") is designed for external-facing integrations — think headless commerce. It’s the API layer that powers web shops, mobile apps, marketplaces, and other client-facing systems..</p>
+      <p class="content_text">Spryker's REST API (often just called the Glue API) is designed for external facing integrations, think headless commerce. It's the API layer that powers web shops, mobile apps, marketplaces, and other client-facing systems..</p>
     </div>
   </div>
   <div class="content_card">
@@ -41,7 +41,7 @@ Spryker's Glue API framework offers two primary types of API applications, each 
     </div>
     <div class="content_column">
       <p class="content_title">Backend API (BAPI)</p>
-      <p class="content_text">Tailored for backend processes, administrative tools, or integrations with enterprise systems (e.g., ERP, CRM). A key advantage of BAPI is its direct access to Spryker's business logic layer (Facades), often leading to more performant backend operations.</p>
+      <p class="content_text">Tailored for backend processes, administrative tools, or integrations with enterprise systems (for example ERP, CRM). A key advantage of BAPI is its direct access to Spryker's business logic layer (Facades), often leading to more performant backend operations.</p>
     </div>
   </div>
 </div>
@@ -53,7 +53,7 @@ The Glue API empowers developers with a rich set of features:
 
 - Custom API Application Creation: Build distinct API applications tailored to specific domains or integration needs.
 - Resource Definition: Define resources (like products, orders, carts) that your API will expose.
-- Relationship Management: Establish relationships between resources to provide comprehensive data efficiently (e.g., parent-child or linked resources).
+- Relationship Management: Establish relationships between resources to provide comprehensive data efficiently (for example parent-child or linked resources).
 - Efficient Data Handling: Utilize built-in support for pagination, sorting, filtering, sparse fields (requesting only specific data fields), and configurable inclusion of related data to optimize API calls.
 - Robust Security: Secure your API endpoints using OAuth 2.0 and define granular access controls
 
@@ -65,7 +65,7 @@ Interacting with Spryker's Glue API as a client application involves understandi
 
 ### Endpoints & HTTPS Methods
 
-API interactions happen by sending HTTPS requests (GET, POST, PATCH, DELETE, etc.) to specific URLs. In Spryker, resource types are often derived from the request URL (e.g., `/carts` for cart resources, `/products/{sku}` for a specific product).  The API documentation for each Spryker resource will detail the available endpoints and supported HTTPS methods which you an find within the API reference section of our documentation.
+API interactions happen by sending HTTPS requests (GET, POST, PATCH, DELETE, etc.) to specific URLs. In Spryker, resource types are often derived from the request URL (for example `/carts` for cart resources, `/products/{sku}` for a specific product).  The API documentation for each Spryker resource will detail the available endpoints and supported HTTPS methods which you an find within the API reference section of our documentation.
 
 ### Headers
 
@@ -78,15 +78,15 @@ Key headers you'll commonly use with Spryker Glue API include:
 ### Request Parameters (especially with JSON:API)
 
 Spryker's Glue API leverages standardized parameters for efficient data interaction :
-- **Pagination:** Use `page[offset]` and `page[limit]` to retrieve data in manageable chunks (e.g., `?page[offset]=0&page[limit]=10`). These values are accessible within Spryker via `GlueRequestTransfer->getPagination()`.
+- **Pagination:** Use `page[offset]` and `page[limit]` to retrieve data in manageable chunks (for example `?page[offset]=0&page[limit]=10`). These values are accessible within Spryker via `GlueRequestTransfer->getPagination()`.
 - **Sorting:** Request data to be sorted using parameters like `?sort=attributeName` (ascending) or `?sort=-attributeName` (descending). Sorting parameters can be retrieved using `$glueRequestTransfer->getSortings()`.
 - **Filtering:** Narrow down results using filter parameters, often structured like `?filter[resourceName.fieldName]=value`. These are accessible via `$glueRequestTransfer->getFilters()`.
 - **Sparse Fields:** To receive only specific fields of a resource and reduce data transfer, use `?fields[resourceName]=attribute1,attribute2`. This is retrieved using `$glueRequestTransfer->getQueryFields()`.
-- **Including Related Resources:** Fetch related data in a single request using the include parameter (e.g., `?include=concrete-product-image-sets`).  The behavior of this included section can be configured in Spryker.  
+- **Including Related Resources:** Fetch related data in a single request using the include parameter (for example `?include=concrete-product-image-sets`).  The behavior of this included section can be configured in Spryker.  
 
 ### Understanding Spryker Glue API Responses
 
-- **Status Codes:** Standard HTTP status codes indicate the outcome (e.g., 200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 404 Not Found)
+- **Status Codes:** Standard HTTP status codes indicate the outcome (for example 200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 404 Not Found)
 - **Response Body:** The structure often follows the JSON:API convention.
   - The resources field in the GlueResponseTransfer typically contains an array of the primary data objects.
   - An included section may contain data for related resources if requested via the include parameter.
@@ -97,7 +97,7 @@ Spryker's Glue API leverages standardized parameters for efficient data interact
 ### Authentication with Spryker
 
 Spryker's Glue API primarily uses OAuth 2.0 for securing endpoints.
-Client applications typically send user credentials (username, password) to an authentication endpoint (e.g., `/token` for SAPI, or a separate `/token` resource for BAPI using Back Office user credentials ) to obtain an access token and a refresh token.
+Client applications typically send user credentials (username, password) to an authentication endpoint (for example `/token` for SAPI, or a separate `/token` resource for BAPI using Back Office user credentials ) to obtain an access token and a refresh token.
 This access token (Bearer token) must then be included in the Authorization header for subsequent requests to protected Spryker resources.
 If an invalid, expired, or no token is provided for a protected resource, the API will respond with a 401 Unauthorized status code.
 
@@ -125,7 +125,7 @@ The Glue API supports standardized ways to query and manipulate data, especially
 
 The Glue API is not just for consumption; it's a powerful platform for development and customization.
 
-### The Developer's Journey: What’s Involved in Using Glue API?
+### The Developers Journey: What's Involved in Using Glue API
 
 Developing with the Glue API involves a structured approach. At a high level, this journey includes:
 

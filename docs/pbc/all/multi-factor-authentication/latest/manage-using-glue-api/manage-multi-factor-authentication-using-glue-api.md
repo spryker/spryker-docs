@@ -33,7 +33,7 @@ By default, the following Glue API endpoints are protected by MFA:
 - checkout
 - order-payments
 
-To customize which endpoints are protected by MFA, see to [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html#configure-enabled-routes-and-forms).
+To customize which endpoints are protected by MFA, see to [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature#configure-protected-routes-and-forms-for-customers).
 
 ## MFA for customers
 

@@ -27,7 +27,7 @@ article_status: published
     .content-area {
         flex-grow: 1;
     }
-    
+
     /* Hide Mobile Toggle on Desktop */
     .mobile-filter-toggle {
         display: none;
@@ -170,7 +170,7 @@ article_status: published
     .tag.comm { background-color: #e6f4fe; color: #0090ff; text-transform:uppercase; }
 
     .author-info {
-       margin-top: auto; 
+       margin-top: auto;
        padding-top: 1rem;
        border-top: 1px solid #f3f4f6;
     }
@@ -245,8 +245,8 @@ article_status: published
       </div>
       <div class="cards" id="cardContainer"></div>
       <div class="cont_us">
-        <p class="cont_title">Can not find what you are looking for?</p> 
-        <p class="cont_subtext"> Get in touch to discuss further a solution that is perfect for you!</p> 
+        <p class="cont_title">Can not find what you are looking for?</p>
+        <p class="cont_subtext"> Get in touch to discuss further a solution that is perfect for you!</p>
         <button> contact us </button>
       </div>
   </main>

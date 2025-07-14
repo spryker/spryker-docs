@@ -90,10 +90,10 @@ All Redis commands used by Spryker, such as GET, SET, or MGET, work identically 
 
 ### Migration considerations
 
-* No application code changes required - Spryker applications function without modification.  
-* Configuration remains the same - Use the existing Redis configuration parameters.  
-* Data compatibility - You can load existing Redis data dumps into Valkey.  
-* Monitoring and tooling - Most Redis monitoring tools are compatible with Valkey.  
+- No application code changes required - Spryker applications function without modification.  
+- Configuration remains the same - Use the existing Redis configuration parameters.  
+- Data compatibility - You can load existing Redis data dumps into Valkey.  
+- Monitoring and tooling - Most Redis monitoring tools are compatible with Valkey.  
 
 
 

@@ -99,8 +99,8 @@ entries:
       nested:
       - title: Implement a client
         url: /docs/dg/dev/backend-development/client/implement-a-client.html
-      - title: Use and configure Redis or Valkey as a key-value storage
-        url: /docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage.html
+      - title: Use and configure Redis or Valkey as a key-value store
+        url: /docs/dg/dev/backend-development/client/use-and-configure-redis-or-valkey-as-a-key-value-store.html
 
     - title: Yves
       url: /docs/dg/dev/backend-development/yves/yves.html
@@ -1139,6 +1139,8 @@ entries:
       url: /docs/dg/dev/architecture/modules-and-application-layers.html
     - title: Architectural Convention
       url: /docs/dg/dev/architecture/architectural-convention.html
+    - title: "Key-value storage: Redis and Valkey"
+      url: /docs/dg/dev/architecture/key-value-storage-redis-and-valkey.html      
     - title: Module API
       url: /docs/dg/dev/architecture/module-api/module-api.html
       nested:

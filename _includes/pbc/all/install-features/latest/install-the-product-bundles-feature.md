@@ -212,7 +212,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 Ensure that, when a product bundle is created, updated, or deleted, it's exported to or removed from the key-value store (Redis or Valkey).
 
-Storage type: key-value store (Redis or Valkey)
+Storage type: Redis or Valkey
 Target entity: Product Bundle
 
 Example expected data identifier: `kv:product_bundle:1`

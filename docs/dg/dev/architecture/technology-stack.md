@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/architecture/technology-stack.html
 related:
   - title: Key-value storage - Redis and Valkey
-    link: docs/dg/dev/architecture/redis-valkey-key-value-storage.html
+    link: docs/dg/dev/architecture/key-value-storage-redis-valkey.html
   - title: Conceptual overview
     link: docs/dg/dev/architecture/conceptual-overview.html
   - title: Programming concepts

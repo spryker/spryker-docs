@@ -84,7 +84,6 @@ entries:
     - title: Sprker API Errors and Troubleshooting
       url: /docs/integrations/spryker_glue_api/errors_and_troubleshooting.html
     - title: Faqs And Support
-      url: /docs/integrations/spryker_glue_api/faqs_and_support/faq_and_support.html
       nested:
       - title: Resolving search engine friendly URLs
         url: /docs/integrations/spryker_glue_api/faqs_and_support/marketplace-glue-api-resolve-search-engine-friendly-urls.html

@@ -262,7 +262,7 @@ Make sure that the configured data in the database has been added to the `spy_gl
 {% endinfo_block %}
 
 
-### 5) Configure export to Redis
+### 5) Configure export to the key-value store (Redis or Valkey)
 
 This step publishes tables on change (create, edit, delete) to `spy_product_packaging_unit_storage` and synchronizes the data to Storage.
 

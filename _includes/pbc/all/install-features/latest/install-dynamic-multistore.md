@@ -692,9 +692,9 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-When a store's data is created, updated, or deleted, including local and country information, make sure it's correctly exported to or removed from Redis.
+When a store's data is created, updated, or deleted, including local and country information, make sure it's correctly exported to or removed from the key-value store, such as Redis or Valkey.
 
-Storage type: Redis
+Storage type: Redis or Valkey
 Target entity: Store
 
 Example expected data identifier: `kv:store:de`

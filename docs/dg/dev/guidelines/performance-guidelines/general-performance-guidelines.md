@@ -27,9 +27,9 @@ Spryker is a fast application by design. These guidelines explain how to optimiz
 ## Hosting recommendations
 
 - *CPU*: Spryker's execution time depends on the CPU of the server. In general, more CPU capacity supports faster response times and allows a higher load.
-- *Memory (Databases)*: Databases (Redis, Elasticsearch, and PostgreSQL) mainly consume RAM. When there is not enough RAM, you can face performance issues. The best amount of RAM depends on the amount of data that you have and needs to be measured from time to time.
+- *Memory (Databases)*: Databases (key-value storage (Redis or Valkey), Elasticsearch, and PostgreSQL) mainly consume RAM. When there is not enough RAM, you can face performance issues. The best amount of RAM depends on the amount of data that you have and needs to be measured from time to time.
 - *Memory (PHP)*: The amount of memory does not impact on the execution time of PHP, but to squeeze everything out of your server, you need to define the `pm.max_children` configuration value of PHP-FPM. The max amount of parallel processes must not be higher than the available memory divided by the maximum consumption per process.
-- *Latency*: You can see the highest speed of Spryker when Redis is installed on the same machine as the application, which helps to avoid latency. Redis has a blazing fast response time of 0.1 ms, but in cloud environments, you can often get additional 1-3ms of latency per `get()`. A caching mechanism that uses Spryker is described in the following sections of this document.
+- *Latency*: You can see the highest speed of Spryker when key-value storage (Redis or Valkey) is installed on the same machine as the application, which helps to avoid latency. Key-value storage (Redis or Valkey) has a blazing fast response time of 0.1 ms, but in cloud environments, you can often get additional 1-3ms of latency per `get()`. A caching mechanism that uses Spryker is described in the following sections of this document.
 
 ## Disable Xdebug
 
@@ -303,7 +303,7 @@ To configure this, update the configuration in `src/Pyz/Zed/Router/RouterConfig.
 
 Yves performs a high number of `get()` calls to Redis. If Redis is installed on the same machine, the expected time per `get()` is below 0.1 ms. However, if you run Spryker in a cloud environment, there is latency for each `get()` call to Redis. It can sum up to a few hundred milliseconds per request. To avoid this performance bottleneck, Spryker remembers all used `get()` calls per URL and performs a single `mget()` to retrieve all needed data in one call. This behavior is enabled by default.
 
-If you see a high number of `get()` calls in your monitoring, make sure that `StorageCacheEventDispatcherPlugin` is registered in `Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider`. This plugin is responsible for the persistence of the cache data in Redis. For more information about the Redis Mget cache, see [Use Redis as a KV Storage](/docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage.html#use-and-configure-redis-cache).
+If you see a high number of `get()` calls in your monitoring, make sure that `StorageCacheEventDispatcherPlugin` is registered in `Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider`. This plugin is responsible for the persistence of the cache data in Redis. For more information about the Redis Mget cache, see [Use Redis or Valkey as a KV Storage](/docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage.html#use-and-configure-redis-cache).
 
 ## ClassResolver optimizations
 

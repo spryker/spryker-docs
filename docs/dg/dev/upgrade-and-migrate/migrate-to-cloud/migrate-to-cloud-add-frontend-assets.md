@@ -25,9 +25,9 @@ To ensure the seamless transition to the new image URLs, execute an SQL update q
 - spy_category_image
 - Any other tables related to images
 
-## 4. Publish new URLs to Redis and Elasticsearch
+## 4. Publish new URLs to the key-value store (Redis or Valkey) and Elasticsearch
 
-Trigger the publish events for images. This process ensures that the image URLs are republished not only in Redis and Elasticsearch but also in the `_search` and `_storage` tables.
+Trigger the publish events for images. This process ensures that the image URLs are republished not only in the key-value store (Redis or Valkey) and Elasticsearch but also in the `_search` and `_storage` tables.
 
 Trigger the publish events:
 

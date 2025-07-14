@@ -870,7 +870,7 @@ The following services are supported:
 * key_value_store
 * kibana
 * mail_catcher
-* redis-gui
+* Key-value store (Redis or Valkey)-gui
 * scheduler
 * search
 * session

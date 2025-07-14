@@ -89,7 +89,7 @@ article_status: published
         background-color: white;
         padding: 0 1rem;
     }
-    
+
     .accordion-panel-content {
         padding: 1rem 0;
         display: flex;
@@ -113,7 +113,7 @@ article_status: published
         border: 1px solid #d1d5db;
         cursor: pointer;
     }
-   
+
     /* --- Card & Modal Styles --- */
     .cards {
        display: grid;
@@ -135,7 +135,7 @@ article_status: published
        display: flex;
        flex-direction: column;
     }
-   
+
     .card .logo {
        width: 100%;
        height: 150px;
@@ -165,7 +165,7 @@ article_status: published
        background-color: #e5e7eb;
        color: #374151;
     }
-   
+
     .tag.eco, .tag.acp, .tag.community { background-color: #d1fae5; color: #065f46; }
     .tag.comm { background-color: #e6f4fe; color: #0090ff; text-transform:uppercase; }
 
@@ -176,7 +176,7 @@ article_status: published
     }
 
     .author_name { font-size: 0.875rem; color: #6b7280; }
-   
+
     .modal { z-index:100; display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; }
     .modal-content { background: white; padding: 2rem; border-radius: 12px; max-width: 500px; width: 90%; position: relative; }
     .modal-content h2 { text-transform: capitalize; }
@@ -211,13 +211,13 @@ article_status: published
             cursor: pointer;
             margin-bottom: 1rem;
         }
-        
+
         .mobile-filter-panel {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.5s ease-in-out;
         }
-        
+
         .mobile-filter-toggle.active + .mobile-filter-panel {
             max-height: 1000px;
         }
@@ -296,7 +296,7 @@ article_status: published
             filterGroup.appendChild(panel);
             container.appendChild(filterGroup);
         }
-        
+
         function addAccordionFunctionality() {
             document.querySelectorAll('.accordion-header').forEach(header => {
                 header.addEventListener('click', () => {
@@ -326,13 +326,13 @@ article_status: published
             })
             .then(data => {
                 allPartners = data; // Directly use the flat array from JSON
-                
+
                 const cardContainer = document.getElementById('cardContainer');
                 const featuredContainer = document.getElementById('featuredContainer');
                 const featuredCardsContainer = document.getElementById('featuredCards');
                 const filtersContainer = document.getElementById('filtersContainer');
                 const nameSearchInput = document.getElementById('nameSearch');
-                
+
                 const featuredPartners = allPartners.filter(p => p.featured);
                 allPartners.sort((a, b) => a.Partner.localeCompare(b.Partner));
 
@@ -353,10 +353,10 @@ article_status: published
 
                 const authors = [...new Set(allPartners.map(p => p.Author).filter(Boolean))].sort();
                 createAccordionFilter(filtersContainer, 'Authors', authors, 'author', filterChangeHandler);
-                
+
                 addAccordionFunctionality();
                 addMobileToggleFunctionality();
-                
+
                 applyFiltersFromURL();
                 applyFilters();
             })
@@ -375,7 +375,7 @@ article_status: published
                 const card = document.createElement('div');
                 card.className = 'card';
                 card.onclick = () => openModal(partner);
-                
+
                 const methodTags = (partner.method || []).map(m => {
                     let tagClass = 'tag';
                     const lower_m = m.toLowerCase();
@@ -412,13 +412,13 @@ article_status: published
             } else {
                 modalNotice.style.display = 'none';
             }
-            
+
             document.getElementById('modalDescription').textContent = partner.Description;
             document.getElementById('modalTags').innerHTML = `
                 ${partner.category ? `<span class="tag">${partner.category}</span>` : ''}
                 ${(partner.method || []).map(m => `<span class="tag">${m}</span>`).join('')}
             `;
-            
+
             const docs = [];
             if (partner.ACP_Doc) docs.push(`<a href="${partner.ACP_Doc}" target="_blank">ACP Documentation</a>`);
             if (partner.Eco_Doc) docs.push(`<a href="${partner.Eco_Doc}" target="_blank">Eco Documentation</a>`);
@@ -431,7 +431,7 @@ article_status: published
         window.closeModal = function() {
             document.getElementById('modal').style.display = 'none';
         }
-        
+
         function applyFiltersFromURL() {
             const urlParams = new URLSearchParams(window.location.search);
             const searchTerm = urlParams.get('q');
@@ -455,7 +455,7 @@ article_status: published
         function applyFilters() {
             const getSelected = (name) => Array.from(document.querySelectorAll(`input[name="${name}"]:checked`)).map(cb => cb.value);
             const searchTerm = document.getElementById('nameSearch').value.toLowerCase().trim();
-            
+
             const selectedCategories = getSelected('category');
             const selectedMethods = getSelected('method');
             const selectedAuthors = getSelected('author');
@@ -472,7 +472,7 @@ article_status: published
             renderCards(filtered, document.getElementById('cardContainer'));
             updateURL();
         }
-        
+
         function updateURL() {
             const urlParams = new URLSearchParams();
             const searchTerm = document.getElementById('nameSearch').value.trim();

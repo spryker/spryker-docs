@@ -88,6 +88,8 @@ entries:
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/unable-to-bring-up-mutagen-compose-sidecar-service.html
       - title: Vendor folder synchronization error
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
+      - title: Session locking issues
+        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/session-locking-issues.html
 
   - title: Backend development
     url: /docs/dg/dev/backend-development/back-end-development.html

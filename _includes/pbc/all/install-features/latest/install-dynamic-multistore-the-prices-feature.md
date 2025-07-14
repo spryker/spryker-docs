@@ -1,8 +1,6 @@
 This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/dynamic-multistore-feature-overview.html) + the [Prices](/docs/pbc/all/price-management/latest/base-shop/prices-feature-overview/prices-feature-overview.html) feature.
 
-## Install feature core
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -11,7 +9,7 @@ Install the required features:
 | Spryker Core | 202507.0 |
 | Prices | 202507.0 |
 
-### 1) Set up configuration
+## 1) Set up configuration
 
 {% info_block warningBox "stores.php configuration" %}
 
@@ -23,7 +21,7 @@ The `Currency` module is responsible for extending store data and configuring it
 {% endinfo_block %}
 
 
-### 2) Set up the database schema and transfer objects
+## 2) Set up the database schema and transfer objects
 
 1. Adjust the schema definition, so entity changes trigger events:
 
@@ -82,7 +80,7 @@ Make sure you can add a currency to a store when editing a product in the Back O
 
 {% endinfo_block %}
 
-### 3) Configure export to the key-value store (Redis or Valkey)
+## 3) Configure export to the key-value store: Redis or Valkey
 
 1. Set up publisher plugins:
 
@@ -155,7 +153,7 @@ Example expected data fragment:
 
 
 
-### 4) Import data
+## 4) Import data
 
 Import locale, store, and country data:
 
@@ -283,7 +281,7 @@ Make sure that the currency store data has been added to the `spy_currency_store
 {% endinfo_block %}
 
 
-### 5) Set up behavior
+## 5) Set up behavior
 
 Register the following plugins:
 
@@ -424,7 +422,9 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
 {% endinfo_block %}
 
 
-**src/Pyz/Zed/StoreGui/StoreGuiDependencyProvider.php**
+
+<details>
+  <summary>src/Pyz/Zed/StoreGui/StoreGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -504,9 +504,10 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
 
 ```
 
+</summary>
+
 {% info_block warningBox "Verification" %}
 
-Steps:
 - Make sure that you can see the currency selection fields on the Store form.
 - Make sure that you can see the currency tabs and tables on the Store form.
 - Make sure that you can see the Currencies tab on the Store form.

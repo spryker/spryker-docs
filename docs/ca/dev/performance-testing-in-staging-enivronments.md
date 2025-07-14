@@ -141,6 +141,7 @@ docker/sdk boot deploy.dev.yml
 2. If the command you've run in the previous step returned any instructions, follow them.
 
 3. Build and start the instance:
+
 ```bash
 docker/sdk up
 ```
@@ -166,7 +167,7 @@ With the integrations done and the environment set up, you will need to create a
 
 These steps assume you are working from a local environment. If you are attempting to implement these changes to a production or staging environment, you will need to take separate steps to generate parity data between the load-testing tool and your cloud-based environment.
 
-##### Steps for using a cloud-hosted environment.
+##### Steps for using a cloud-hosted environment
 
 The Gatling test tool uses pre-seeded data which is used locally for both testing and generating the fixtures in the project's database. If you wish to test a production or a staging environment, there are several factors which need to be addressed.
 
@@ -178,7 +179,7 @@ The Gatling test tool uses pre-seeded data which is used locally for both testin
 
 Data used for Gatling's load testing can be found in **/load-test-tool-dir/tests/_data**. Any data that you generate from your cloud-hosted environment will need to be stored here.
 
-###### Setting up for basic authentication.
+###### Setting up for basic authentication
 
 If your environment is set for `BASIC AUTH` authentication and requires a user name and password before the site can be loaded, Gatling needs additional configuration. Found within **/load-test-tool-dir/resources/scenarios/spryker/**, two files control the HTTP protocol which is used by each test within the same directory. `GlueProtocol.scala` and `YvesProtocol.scala` each have a value (`httpProtocol`) which needs an additional argument to account for this authentication mode.
 
@@ -234,6 +235,7 @@ Because of these aforementioned issues, we recommended creating the test users y
 Once the users have been created, you will need to generate access tokens for each. This can be done using Glue with the `access-token` end point. You can review the [access-token](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html) documentation for further guidance, but below is a sample of the call to be made.
 
 Expected request body
+
 ```json
 {
   "data": {
@@ -247,6 +249,7 @@ Expected request body
 ```
 
 Sample call with CURL
+
 ```bash
 curl -X POST "http://glue.de.spryker.local/access-tokens" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"data\":{\"type\":\"access-tokens\",\"attributes\":{\"username\":\"emailgoeshere\",\"password\":\"passwordgoeshere\"}}}"
 ```
@@ -289,7 +292,7 @@ console queue:worker:start -s
 
 You should have the fixtures loaded into the databases and can now exit the CLI to install Gatling into the project.
 
-##### Alternative method to generate local fixtures.
+##### Alternative method to generate local fixtures
 
 Jenkins is the default scheduler which ships with Spryker. It is an automation service which helps to automate tasks within Spryker. If you would like an alternative way to generate fixtures for your local environment, Jenkins can be used to schedule the necessary tasks you need for the data preparation step.
 
@@ -324,6 +327,7 @@ From here, you can either add another build step to toggle the queue worker to r
 ```bash
 APPLICATION_STORE="DE" COMMAND="$PHP_BIN vendor/bin/console queue:worker:start -s " bash /usr/bin/spryker.sh
 ```
+
 ![workers](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/performance-testing-in-staging-enivronments.md/workers.png)
 
 4. Once the build steps have been added, you can `Save` to be taken to the project status page for the newly created job. As this is a job that you only need to run once and no schedule was set, you can select the `Build Now` option.
@@ -381,6 +385,7 @@ It is possible for you to run Gatling as a standalone package. Fixtures and data
 git clone git@github.com:spryker-sdk/load-testing.git
 cd load-testing
 ```
+
 2. Once you have navigated to the appropriate folder, you can run the installation script as follows:
 
 ```bash
@@ -463,6 +468,7 @@ Now, the new instance should appear in the navigation bar in *INSTANCES* section
 
 
 ##### Editing an instance
+
 For the already available instances, you can edit Yves URL and Glue URL. Instance names cannot be edited.
 
 To edit an instance:
@@ -475,6 +481,7 @@ To edit an instance:
 Now, the instance data is updated.
 
 ##### Deleting an instance
+
 To delete an instance:
 1. In the navigation bar, click **New instance**. The *Instance* page opens.
 2. Click the X sign next to the instance you want to delete:
@@ -492,8 +499,8 @@ To run a new load test:
 2. Select the instance you want to run the test for. See [Managing instances](#managing-instances) for information on how you can create and manage instances.
 3. In the *Test* field, select the test you want to run.
 4. In the *Type* field, select one of the test types:
-	- *Ramp*: Test type with the growing load (request per second), identifies a Peak Load capacity.
-	- *Steady*: Test type with the constant load, confirms reliance of a system under the Peak Load.
+- *Ramp*: Test type with the growing load (request per second), identifies a Peak Load capacity.
+- *Steady*: Test type with the constant load, confirms reliance of a system under the Peak Load.
 5. In the *Target RPS* field, set the test RPS (request per second) value.
 6. In the *Duration* field, set the test duration.
 7. Optional: In the *Description*, provide the test description.
@@ -573,12 +580,14 @@ This chart displays the active users during the simulation: total and per scenar
 
 "Active users" is neither "concurrent users" or "users arrival rate". It's a kind of mixed metric that serves for both open and closed workload models, and that represents "users who were active on the system under load at a given second".
 
-It's computed as:
-```
+It's computed as follows:
+
+```text
 (number of alive users at previous second)
 + (number of users that were started during this second)
 - (number of users that were terminated during the previous second)
 ```
+
 ![screenshot](https://github.com/spryker-sdk/load-testing/raw/master/docs/images/active-users-among-time.png)
 
 #### Response time distribution

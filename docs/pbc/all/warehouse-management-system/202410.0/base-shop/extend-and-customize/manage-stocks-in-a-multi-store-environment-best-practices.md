@@ -14,8 +14,8 @@ In a multi-store environment, you can manage relationships between warehouses, s
 
 {% info_block warningBox %}
 
-* With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview.html), this setup is only possible when stores belong to the different regions.
-* To enable this scenario for your project, a developer needs to configure it.
+- With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview.html), this setup is only possible when stores belong to the different regions.
+- To enable this scenario for your project, a developer needs to configure it.
 
 {% endinfo_block %}
 
@@ -31,8 +31,8 @@ This scenario is appropriate for big businesses managed from various locations, 
 
 {% info_block warningBox %}
 
-* With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview.html), this setup is only possible when stores belong to the different regions.
-* To enable this scenario for your project, a developer should configure it. For configuration details, see [implementation reference](#implementation-reference).
+- With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview.html), this setup is only possible when stores belong to the different regions.
+- To enable this scenario for your project, a developer should configure it. For configuration details, see [implementation reference](#implementation-reference).
 
 {% endinfo_block %}
 
@@ -48,9 +48,9 @@ This approach is appropriate for big businesses that can't have or don't need mu
 
 To implement this scenario, you need these three additional database tables:
 
-* `spy_oms_product_reservation_store` to store reservation requests from other stores.
-* `spy_oms_reservation_change_version` to store information about the time when the last reservation occurred.
-* `spy_oms_reservation_last_exported_version` to store historic information on the last time reservaions were exported to other stores.
+- `spy_oms_product_reservation_store` to store reservation requests from other stores.
+- `spy_oms_reservation_change_version` to store information about the time when the last reservation occurred.
+- `spy_oms_reservation_last_exported_version` to store historic information on the last time reservaions were exported to other stores.
 
 Also, there are plugins to help you implement synchronization of the reservations:
 

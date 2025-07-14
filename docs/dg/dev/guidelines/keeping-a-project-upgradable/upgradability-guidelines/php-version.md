@@ -155,7 +155,9 @@ To resolve the issue:
 
 
 ## Run only this checker
+
 To run only this checker, include `PHP_VERSION_CHECKER` into the checkers list. Example:
+
 ```bash
 vendor/bin/evaluator evaluate --checkers=PHP_VERSION_CHECKER
 ```

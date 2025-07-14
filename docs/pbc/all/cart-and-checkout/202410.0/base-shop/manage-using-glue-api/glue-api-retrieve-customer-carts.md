@@ -104,6 +104,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     }
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve multiple customer's carts</summary>
@@ -167,6 +168,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     }
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve customer's carts with their items included</summary>
@@ -459,6 +461,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve customer's carts with cart permission groups included</summary>
@@ -594,6 +597,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve customer's carts with the information on shared carts included</summary>
@@ -729,6 +733,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve customer's carts with shared carts and include information about company users they are shared with</summary>
@@ -832,6 +837,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve customer's carts with the cart rules included</summary>
@@ -962,6 +968,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve customer's carts with the information on vouchers included</summary>
@@ -1031,6 +1038,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve customer's carts withe the information on  promotional items included</summary>
@@ -1096,6 +1104,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve customer's carts with the information on the gift cards applied</summary>
@@ -1165,6 +1174,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve customer's carts and include information on items, concrete products, and product options</summary>
@@ -1417,6 +1427,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
+
 </details>
 
 <details><summary>Response sample: retrieve customer's carts with the information on product labels included</summary>
@@ -1575,6 +1586,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
+
 </details>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->

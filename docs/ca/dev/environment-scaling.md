@@ -9,9 +9,9 @@ Production environments, unlike staging environments, are equipped with auto-sca
 
 ## General considerations
 
-* While all production environments offer some form of automatic scaling by default, environments must be optimized for your work load. To do it, schedule a load test by creating a "Announce High Load/Traffic" case at the [support portal](https://support.spryker.com). Plan for at least three days of lead time.
-* Load tests are usually performed in rounds. After deploying a typical infrastructure configuration for the size of your project, we'll ask you to perform load testing. The results are analyzed and the environment is dialed in. This pattern is repeated until the environment is configured to support the expected load. For a good result, two to three rounds are needed.
-* We don't recomment load testing in live production environments because this can affect the experience of your visitors. Instead, book a production-like environment or upgrade one of your non-production environments to perform the tests.
+- While all production environments offer some form of automatic scaling by default, environments must be optimized for your work load. To do it, schedule a load test by creating a "Announce High Load/Traffic" case at the [support portal](https://support.spryker.com). Plan for at least three days of lead time.
+- Load tests are usually performed in rounds. After deploying a typical infrastructure configuration for the size of your project, we'll ask you to perform load testing. The results are analyzed and the environment is dialed in. This pattern is repeated until the environment is configured to support the expected load. For a good result, two to three rounds are needed.
+- We don't recomment load testing in live production environments because this can affect the experience of your visitors. Instead, book a production-like environment or upgrade one of your non-production environments to perform the tests.
 
 ## Cloud architecture
 
@@ -25,7 +25,7 @@ In vertical scaling, we are making something "bigger". In the checkout analogy, 
 
 In horizontal scaling, we are "adding more of the same" to a resource to balance out load across multiple processors. In the checkout analogy, horizontal scaling means opening another checkout line. We "deploy" another clerk so they can open up another checkout line, and the waiting customers can spread out over the two lines.
 
-The cloud infrastructure is set up in a way that provides horizontal autoscaling based on AWS native ECS Service Auto Scaling. Horizontal autoscaling is currently configured for Spryker services, such as Yves, Glue, Backoffice, BackGW, and BackAPI, and enables these services to horizontally scale based on load. This is guard-railed by a setting that determines the minimum, desired, and maximum numbers of members of a service scaling group. A load balancer in front of each service is responsible for distributing the load across these services.
+The cloud infrastructure is set up in a way that provides horizontal autoscaling based on AWS native ECS Service Auto Scaling. Horizontal autoscaling is currently configured for Spryker services, such as Yves, Glue, Back Office, BackGW, and BackAPI, and enables these services to horizontally scale based on load. This is guard-railed by a setting that determines the minimum, desired, and maximum numbers of members of a service scaling group. A load balancer in front of each service is responsible for distributing the load across these services.
 
 ### Step scaling
 

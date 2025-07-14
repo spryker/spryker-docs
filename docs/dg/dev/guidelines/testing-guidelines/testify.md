@@ -83,6 +83,6 @@ As you can see, this test is much smaller, easier to read, and better understand
 
 ## Next steps
 
-* [Set up an organization of your tests](/docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html).
-* [Create or enable a test helper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html).
-* Learn about the [console commands you can use to execute your tests](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html).
+- [Set up an organization of your tests](/docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html).
+- [Create or enable a test helper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html).
+- Learn about the [console commands you can use to execute your tests](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html).

@@ -24,9 +24,9 @@ Spryker supports only the cloud variants of the repositories listed below. To co
 
 Spryker supports the following version control systems:
 
-* [GitHub](https://github.com/)
-* [Bitbucket](https://bitbucket.org/)
-* [GitLab](https://gitlab.com/)
+- [GitHub](https://github.com/)
+- [Bitbucket](https://bitbucket.org/)
+- [GitLab](https://gitlab.com/)
 
 Spryker also supports all the Git repositories that support AWS CodeCommit push mirroring. Similar to the GitLab setup, you can configure all the commits from your version control system to be mirrored to Spryker and consumed by our pipelines to build and deploy your system.
 
@@ -97,13 +97,13 @@ Ensure that your BitBucket account has *Admin* permissions in the code repositor
 
 AWS CodeStar integrates via OAuth 2.0 and requires the following permissions:
 
-* Read your account information.
+- Read your account information.
 
-* Read your repositories and their pull requests.
+- Read your repositories and their pull requests.
 
-* Administer your repositories.
+- Administer your repositories.
 
-* Read and modify your repositories.
+- Read and modify your repositories.
 
 
 ### Retrieve a connection ARN
@@ -146,7 +146,7 @@ In the *Connections* pane, you can see the created connection and its ARN.
 
 ![connections](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Connecting+code+repository/connections.png)
 
-11. Provide the connection ARN via [support](https://spryker.force.com/support/s/).
+11. Provide the connection ARN via [support](https://support.spryker.com).
 
 We connect the repository shortly after you provide the details.
 
@@ -163,9 +163,9 @@ To avoid synchronization issues, do not push any changes to the CodeCommit repos
 ### Prerequisites
 
 1. Make sure your GitLab account has *Admin* permissions in the code repository.
-2. Request the following details via [support](https://spryker.force.com/support/s/):
-    * CodeCommit repository URL
-    * Username and password for HTTPS authorization in CodeCommit repository
+2. Request the following details via [support](https://support.spryker.com):
+- CodeCommit repository URL
+- Username and password for HTTPS authorization in CodeCommit repository
 
 A dedicated user will be created for this task. The user will only have the permissions to connect the repository.
 

@@ -25,8 +25,8 @@ Make sure to review [reference information](#reference-information-create-naviga
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific values overwrite the default values when the banner is rendered on a Storefront page with the [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html) selected.
-* If the fields are not filled out for a locale, the default values are displayed on a Storefront page with the locale selected.
+- Locale-specific values overwrite the default values when the banner is rendered on a Storefront page with the [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html) selected.
+- If the fields are not filled out for a locale, the default values are displayed on a Storefront page with the locale selected.
 
 {% endinfo_block %}
 
@@ -38,7 +38,7 @@ The following logic applies in a multi-language setup:
 To clear navigation selection on a tab, click **Clear locale**.
 
 
-## Reference information: Create navigation content items    
+## Reference information: Create navigation content items
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
@@ -48,5 +48,5 @@ To clear navigation selection on a tab, click **Clear locale**.
 
 ## Next steps
 
-* [Add content items to CMS pages and blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html).
-* [Edit content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/edit-content-items.html).
+- [Add content items to CMS pages and blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html).
+- [Edit content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/edit-content-items.html).

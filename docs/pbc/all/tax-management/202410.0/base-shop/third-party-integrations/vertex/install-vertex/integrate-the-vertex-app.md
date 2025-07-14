@@ -315,7 +315,7 @@ class ProductOfferStockDependencyProvider extends SprykerProductOfferStockDepend
 
 ```
 
-## 5. Optional: Configure custom seller and buyer countries.
+## 5. Optional: Configure custom seller and buyer countries
 
 If a user doesn't choose a country during the checkout Address step, the system automatically usse the first country listed in the selected Spryker store. The same rule applies to sellers, except that the country is taken from the first warehouse address of a product stock.
 
@@ -393,8 +393,9 @@ The following table reflects the mapping of the Spryker Quote and Order transfer
 | expenses.shipment.method.shipmentMethodKey | lineItems[].product.value | Depends on the selected shipment method. |
 | billingAddress     | lineItems[].customer.administrativeDestination |                                  |
 | expenses.sumPrice (either GROSS or NET depending on the selected mode)                       | lineItems[].extendedPrice |       |
-| expenses.sumDiscountAmountAggregation                                                        | lineItems[].discount.discountValue | Prices are converted from the Spryker's cent-based format to the Vertex decimal format. | | -  | lineItems[].discount.discountType  | Always `DiscountAmount`. Spryker stores discounts based on amount, so there is no need to use percentage-based discounts. |
-| priceMode| lineItems[].taxIncludedIndicator                                         | NET mode: false; GROSS mode: true. |
+| expenses.sumDiscountAmountAggregation             | lineItems[].discount.discountValue | Prices are converted from the Spryker's cent-based format to the Vertex decimal format. |
+| lineItems[].discount.discountType  | Always `DiscountAmount`. Spryker stores discounts based on amount, so there is no need to use percentage-based discounts.  | priceMode|
+| lineItems[].taxIncludedIndicator           |                              | NET mode: false; GROSS mode: true. |
 
 ### Location mapping
 
@@ -409,4 +410,22 @@ The following table reflects the mapping of the Spryker Quote and Order transfer
 
 
 ## Next step
+
 [Configure Vertex in the Back Office](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

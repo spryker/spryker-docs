@@ -10,9 +10,9 @@ redirect_from:
 This section contains guides on merchants in the Merchant Portal:
 
 
-* [Manage merchant account details and settings](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchant-account-details-and-settings.html)
-* [Manage merchant's performance data](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchants-performance-data.html)
-* [Edit merchant profiles](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/edit-merchant-profiles.html)
+- [Manage merchant account details and settings](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchant-account-details-and-settings.html)
+- [Manage merchant's performance data](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchants-performance-data.html)
+- [Edit merchant profiles](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/edit-merchant-profiles.html)
 
 
 {% include pbc/all/manage-in-the-merchant-portal/log-into-the-merchant-portal.md %} <!-- To edit, see /_includes/pbc/all/manage-in-the-merchant-portal/log-into-the-merchant-portal.md -->
@@ -21,6 +21,6 @@ This section contains guides on merchants in the Merchant Portal:
 
 ## Next steps
 
-* [Manage merchant account details and settings](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchant-account-details-and-settings.html)
-* [Manage merchant's performance data](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchants-performance-data.html)
-* [Edit merchant profiles](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/edit-merchant-profiles.html)
+- [Manage merchant account details and settings](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchant-account-details-and-settings.html)
+- [Manage merchant's performance data](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchants-performance-data.html)
+- [Edit merchant profiles](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/edit-merchant-profiles.html)

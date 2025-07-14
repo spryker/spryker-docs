@@ -18,16 +18,18 @@ Back Office users can manage the content of emails sent to customers through [CM
 
 
 ## Types of email templates
+
 There are two types of emails used to manage CMS Blocks as emails: CMS Block email template and the actual email template.
 
 
 ## CMS block email template
+
 *CMS Block email template* is a [Twig](/docs/scos/dev/sdk/twig-and-twigextension.html) file that defines the design and layout of CMS Block in a way suitable for using it as an email.
 The following CMS Block email templates are available by default:
 
-* HTML email template with header and footer.
-* Text email template with header and footer.
-* Empty email template.
+- HTML email template with header and footer.
+- Text email template with header and footer.
+- Empty email template.
 
 To learn how a Back Office User applies a CMS Block email template, see [Create email CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/create-email-cms-blocks.html).
 
@@ -35,27 +37,32 @@ A Developer can create more CMS Block email templates.
 
 
 ## Email template
+
 *Email Template* is a Twig file that defines the content of a system email sent to customers. You can edit the template by editing the assigned Email CMS Block in the Back Office.
 
 
 ### Naming of email CMS blocks
+
 Being a multi-purpose entity, CMS Blocks relies strongly on its naming when used as an email. The CMS Block name defines the email template it's assigned to.
 
 
 #### Template assignment
+
 When a developer creates an email template, inside the file, they enter the CMS Block's name, which is assigned to the template. If the name of an Email CMS Block changes, a developer must update it in the respective email template. For example, the `availability-notification-subscription--html` Email CMS Block is assigned to the [subscribed.html.twig](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/AvailabilityNotification/Presentation/Mail/subscribed.html.twig) default email template.
 
 
 #### Email format
+
 There are two email formats by default: HTML and pure text. The format of the [default email templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html) is identified by one of the respective tales in the name of an Email CMS Block: `--html` or `--text`. For example, Email CMS Blocks with the following names are assigned to the customer registration email template:
 
-* `customer-registration--html`
-* `customer-registration--text`
+- `customer-registration--html`
+- `customer-registration--text`
 
 The email format itself is defined on the code level, the tales serving as identifiers. If you create new email templates, you don't have to add them to their Email CMS Block names.
 
 
 ### Default email templates
+
 There is a number of email templates with the respective Email CMS Blocks available in the Demo Shops.
 
 The following table contains the list of the default email templates, their Email CMS Blocks, and their purpose.

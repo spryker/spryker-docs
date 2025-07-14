@@ -20,10 +20,10 @@ Amazon QuickSight is shipped with a default analysis that is used for the defaul
 1. In the Back Office, go to **Analytics**.
 2. On the **Analytics** page, click **Analyses**.
 3. Based on your business model, click on one of the following analyses:
-  * **B2B Analysis**
-  * **B2C Analysis**
-  * **B2B MP Analysis**
-  * **B2C MP Analysis**
+- **B2B Analysis**
+- **B2C Analysis**
+- **B2B MP Analysis**
+- **B2C MP Analysis**
 4. On the page of the analysis, click **File**>**Save as Analysis**.
 5. In the **Save a copy** window, enter an **Analysis name**.
 6. Click **SAVE**.
@@ -167,5 +167,5 @@ To publish and share a dashboard, follow the steps:
 ## Learn more
 
 In this guide, you've followed a typical user journey of creating, collaborating, and presenting data in a meaningful way. Now you can play around with these tools or learn more using the following materials:
-* [Amazon QuickSight - Getting Started](https://explore.skillbuilder.aws/learn/course/external/view/elearning/14908/getting-started-with-amazon-quicksight)
-* [Author Workshop](https://catalog.workshops.aws/quicksight/en-US/author-workshop)
+- [Amazon QuickSight - Getting Started](https://explore.skillbuilder.aws/learn/course/external/view/elearning/14908/getting-started-with-amazon-quicksight)
+- [Author Workshop](https://catalog.workshops.aws/quicksight/en-US/author-workshop)

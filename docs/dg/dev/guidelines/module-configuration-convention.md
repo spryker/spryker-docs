@@ -30,9 +30,9 @@ related:
 
 Environment configuration is changeable per environment, but the constant and its value is not changeable.
 
-* It's an interface, so the usage always points to the current repository => binds constant name => binds value.
-* Environment configuration is always in Shared layer, so it's accessible in any layer.
-* The constant key is uppercase, and its value is prefix `MODULE_NAME:` + key.
+- It's an interface, so the usage always points to the current repository => binds constant name => binds value.
+- Environment configuration is always in Shared layer, so it's accessible in any layer.
+- The constant key is uppercase, and its value is prefix `MODULE_NAME:` + key.
 
 ```php
 interface ModuleNameConstants
@@ -45,22 +45,22 @@ interface ModuleNameConstants
 
 Module configuration is extendable on project level. For the module configuration, the following applies:
 
-* It's always a class, so it supports extension for methods.
-* It or its parent has to extend AbstractBundleConfig of the corresponding layer.
-* Required values are defined in protected constants so it can be extended, but outside access is disabled.
-* Getter methods are introduced for constant access, so extended values are used on demand.
-* Protected constants are used via `static::` to support extension.
+- It's always a class, so it supports extension for methods.
+- It or its parent has to extend AbstractBundleConfig of the corresponding layer.
+- Required values are defined in protected constants so it can be extended, but outside access is disabled.
+- Getter methods are introduced for constant access, so extended values are used on demand.
+- Protected constants are used via `static::` to support extension.
 
 Module configuration is split into two categories:
 
-* **module layer configuration** - can be used only in the related application layer. It can be found in:
+- **module layer configuration** - can be used only in the related application layer. It can be found in:
 
-* * `/Zed/ModuleName/ModuleNameConfig.php`
-  * `/Yves/ModuleName/ModuleNameConfig.php`
-  * `/Client/ModuleName/ModuleNameConfig.php`
-  * `/Service/ModuleName/ModuleNameConfig.php`
+- - `/Zed/ModuleName/ModuleNameConfig.php`
+  - `/Yves/ModuleName/ModuleNameConfig.php`
+  - `/Client/ModuleName/ModuleNameConfig.php`
+  - `/Service/ModuleName/ModuleNameConfig.php`
 
-* **module shared configuration** - can be used across all application layers. It can be found in /Shared/ModuleName/ModuleNameConfig.php.
+- **module shared configuration** - can be used across all application layers. It can be found in /Shared/ModuleName/ModuleNameConfig.php.
 
 ```php
 class ModuleNameConfig extends AbstractBundleConfig
@@ -83,9 +83,9 @@ class ModuleNameConfig extends AbstractBundleConfig
 
 Module constants are not meant to be extended or changed, neither their value or name. For these constants, note the following:
 
-* They are located next to the module configuration.
-* They are public constants.
-* They can be accessed directly from layer code.
+- They are located next to the module configuration.
+- They are public constants.
+- They can be accessed directly from layer code.
 
 ```php
 class ModuleNameConfig extends AbstractBundleConfig
@@ -119,6 +119,7 @@ interface AnotherNameConstants
 ```
 
 **config/Shared/config_*.php**
+
 ```php
  $config[ModuleNameConstants::EXAMPLE_KEY] =
  $config[AnotherNameConstants::EXAMPLE_KEY] = 'some-shared-value';

@@ -25,12 +25,12 @@ Currently, we only support CSV as a format for file imports out of the box. Howe
 
 From this schema, you can easily identify the data columns you need for your import file. So the relevant fields to fill are:
 
-* name (spy_product_image_set)
-* external_url_large (spy_product_image)
-* external_url_small (spy_product_image)
-* fk_locale (spy_product_image_set)
-* fk_product (spy_product_image_set)
-* fk_product_abstract (spy_product_image_set)
+- name (spy_product_image_set)
+- external_url_large (spy_product_image)
+- external_url_small (spy_product_image)
+- fk_locale (spy_product_image_set)
+- fk_product (spy_product_image_set)
+- fk_product_abstract (spy_product_image_set)
 
 {% info_block infoBox "Info" %}
 
@@ -55,12 +55,12 @@ Since only CSV format is supported for import out of the box, we will start with
 
 Your CSV file for the product images import will contain the following header columns:
 
-* image_set_name
-* external_url_large
-* external_url_small
-* locale
-* concrete_sku
-* abstract_sku
+- image_set_name
+- external_url_large
+- external_url_small
+- locale
+- concrete_sku
+- abstract_sku
 
 Now, you can start to fill in some data into the new file. We recommend adding only a couple of entries to check after the first import run if all needed data is imported.
 
@@ -92,8 +92,8 @@ actions:
 
 where:
 
-* `data_entity` represents the name of your data importer;
-* `source` indicates the path to your `.csv` file with data to import.
+- `data_entity` represents the name of your data importer;
+- `source` indicates the path to your `.csv` file with data to import.
 
 ## Create a writer step
 
@@ -160,6 +160,7 @@ public function createProductImageImporter(DataImportConfigurationActionTransfer
 	return $dataImporter;
 }
 ```
+
 2. Add the new DataImporter in `DataImportBusinessFactory::getDataImporterByType()`:
 
 ```php
@@ -424,7 +425,7 @@ protected function updateOrCreateImageToImageSetRelation(SpyProductImageSet $ima
 }
 ```
 
-### 3. Fill the Execute Method:
+### 3. Fill the Execute Method
 
 ```php
 /**

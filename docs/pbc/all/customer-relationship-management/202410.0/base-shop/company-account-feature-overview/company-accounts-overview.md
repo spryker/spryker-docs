@@ -52,6 +52,7 @@ The company user contains all the information about the customer and has a one-t
 
 
 ## Company account on the Storefront
+
 Company users can perform the following actions on the Storefront:
 
 <details>
@@ -146,4 +147,5 @@ Company users can perform the following actions on the Storefront:
 
 
 ## See next
+
 [Business Units overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html)

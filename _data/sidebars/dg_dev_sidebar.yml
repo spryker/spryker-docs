@@ -838,6 +838,8 @@ entries:
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html
         - title: Upgrade to Angular 17
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html
+        - title: Upgrade to Angular 18
+          url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-18.html
 
     - title: Upgrade to Webpack v5
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
@@ -998,7 +1000,9 @@ entries:
     - title: Separate endpoint bootstraps
       url: /docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html
     - title: Services
-      url: /docs/dg/dev/integrate-and-configure/configure-services.html 
+      url: /docs/dg/dev/integrate-and-configure/configure-services.html
+    - title: Automated SVG sprite asset extraction
+      url: /docs/dg/dev/integrate-and-configure/integrate-automated-svg-sprite-extraction.html
     - title: Twig and TwigExtension
       url: /docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
 
@@ -1411,8 +1415,8 @@ entries:
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/router-generates-absolute-url-with-localhost.html
       - title: No data on the Storefront
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/no-data-on-the-storefront.html
-      - title: The spy_oms_transition_log table takes up too much space
-        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html
+      - title: Database tables take up too much space or have ID overflow
+        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/database-tables-take-up-too-much-space-or-have-id-overflow.html
 
     - title: Troubleshooting performance issues
       url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html

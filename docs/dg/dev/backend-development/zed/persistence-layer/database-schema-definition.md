@@ -71,18 +71,18 @@ The schema migration is a part of the `setup:install` call.
 
 The workflow can be described like this:
 
-* Collect the schema XML files from all bundles.
-* Merge schemas and copy them into one directory ( `src/Generated/Propel/DE/Schema` ).
-* Generation of entities and query objects.
-* Diff of the new and the existing schema.
-* Run migration.
+- Collect the schema XML files from all bundles.
+- Merge schemas and copy them into one directory ( `src/Generated/Propel/DE/Schema` ).
+- Generation of entities and query objects.
+- Diff of the new and the existing schema.
+- Run migration.
 
 ## Schema file merge
 
 Sometimes it's useful to add columns to a table that belongs to another module. Possible use cases are:
 
-* A core module wants to inject a foreign key into a table from another core module. This happens when the dependency direction is in contrast to the direction of the relation.
-* A project module wants to add a column to a table from a core module.
+- A core module wants to inject a foreign key into a table from another core module. This happens when the dependency direction is in contrast to the direction of the relation.
+- A project module wants to add a column to a table from a core module.
 
 When you add a column to a core table, this column must not be mandatory. Otherwise, the core classes, not knowing the mandatory fields, become unusable and, thus, have to be overwritten. This makes updating more difficult. In most cases, you need to avoid adding a column to a core table, as it can cause compatibility problems in the future.
 
@@ -99,11 +99,11 @@ Merging works like this:
 {% info_block infoBox "Changing attribute values" %}
 
 Note the following:
-* If one filename has one path: copy it to `src/Orm/Propel/DE/Schema`.
-* If one filename has more than one path: merge them.
- * Check if the database attributes name, package, and namespace are consistent; otherwise, throw an exception.
- * Merge XML by the name attribute on all levels.
- * Copy the merged XML to `src/Orm/Propel/DE/Schema`.
+- If one filename has one path: copy it to `src/Orm/Propel/DE/Schema`.
+- If one filename has more than one path: merge them.
+- Check if the database attributes name, package, and namespace are consistent; otherwise, throw an exception.
+- Merge XML by the name attribute on all levels.
+- Copy the merged XML to `src/Orm/Propel/DE/Schema`.
 
 {% endinfo_block %}
 
@@ -173,6 +173,7 @@ Functionality is available only with versions later than `202212.0`.
 Spryker allows migration to a specific version by using the `migrate-to-version` option with the `propel:migrate` command. The option defines the version to migrate the database to and expects value that can be taken from the `version` column in the `propel_migration` table.
 
 For example:
+
 ```bash
 vendor/bin/console propel:migrate --migrate-to-version=1622797441
 ```
@@ -188,7 +189,7 @@ vendor/bin/console propel:migration:check --last-version
 ## Related Spryks
 
 You can use the following definitions to generate related code:
-* `vendor/bin/console spryk:run AddZedPersistencePropelSchema`: Add Zed Persistence Propel Schema
-* `vendor/bin/console spryk:run AddZedPersistencePropelSchemaTable`: Add Zed Persistence Propel Schema Table
+- `vendor/bin/console spryk:run AddZedPersistencePropelSchema`: Add Zed Persistence Propel Schema
+- `vendor/bin/console spryk:run AddZedPersistencePropelSchemaTable`: Add Zed Persistence Propel Schema Table
 
 For details, see [Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks.html).

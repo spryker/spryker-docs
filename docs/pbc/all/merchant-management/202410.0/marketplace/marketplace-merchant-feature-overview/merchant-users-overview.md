@@ -23,8 +23,8 @@ To add merchant users for a merchant, the merchant must be created first. When t
 
 The merchant users concept follows certain rules:
 
-* Every merchant user has a unique email address in the system.
-* A merchant user belongs to one merchant, and the same merchant user can't be assigned to two or more merchants.
+- Every merchant user has a unique email address in the system.
+- A merchant user belongs to one merchant, and the same merchant user can't be assigned to two or more merchants.
 
 ## Merchant user statuses
 

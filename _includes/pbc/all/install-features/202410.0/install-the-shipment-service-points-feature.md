@@ -277,8 +277,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that you can include the `service-types` relation in the `shipment-types` resource requests:
-* `GET https://glue.mysprykershop.com/shipment-types?include=service-types`
-* `GET https://glue.mysprykershop.com/shipment-types/{{shipment-type-uuid}}?include=service-types`
+- `GET https://glue.mysprykershop.com/shipment-types?include=service-types`
+- `GET https://glue.mysprykershop.com/shipment-types/{{shipment-type-uuid}}?include=service-types`
 
 {% endinfo_block %}
 
@@ -382,6 +382,7 @@ Make sure that validation plugins work as expected:
   }
 }
 ```
+
 3. Check that the response contains information about the validation error.
 
 Make sure a service point address is set as a shipping address during checkout:
@@ -463,6 +464,7 @@ Make sure a service point address is set as a shipping address during checkout:
   }
 }
 ```
+
 3. In the database, check that `spy_sales_order_address` contains the service point address data for the created order.
 
 {% endinfo_block %}

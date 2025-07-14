@@ -97,16 +97,21 @@ commonOptions = {
     /www.jetbrains.com\/[\.\w\-\/\?]+/,
     /docs.spring.io\/[\.\w\-\/\?]+/,
     /redisdesktop.com\/[\.\w\-\/\?]+/,
-    /jwt.io\/[\.\w\-\/\?]+/,
     /developer.computop.com\/[\.\w\-\/\?]+/,
     /www.centralbank.cy\/[\.\w\-\/\?]+/,
+    /centralbank.cy\/[\.\w\-\/\?]+/,
     /www.mysql.com\/[\.\w\-\/\?]+/,
     /www.gnu.org\/[\.\w\-\/\?]+/,
     /algolia.com\/[\.\w\-\/\?]+/,
     /www.cursor.com\/[\.\w\-\/\?]+/,
     /mysql.com\/[\.\w\-\/\?]+/,
+    /www.centralbank.cy\/[\.\w\-\/\?]+/,
     /dev.mysql.com\/[\.\w\-\/\?]+/,        
     /jwt.io\/[\.\w\-\/\?]+/,
+    /contorion.de\/[\.\w\-\/\?]+/,
+    /www.contorion.de\/[\.\w\-\/\?]+/,
+    /www.jwt.io\/[\.\w\-\/\?]+/,
+    /docs.adyen.com\/[\.\w\-\/\?]+/,
     /auth0.com\/[\.\w\-\/\?]+/,    
     /www.facebook.com\/[\.\w\-\/\?]+/
 
@@ -164,7 +169,6 @@ task :check_pbc do
     /docs\/pbc\/\w+\/[\w-]+\/202403\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202311\.0\/.+/,
-    /docs\/pbc\/\w+\/[\w-]+\/202505\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202404\.0\/.+/
   ]
   run_htmlproofer_with_retry("./_site", options)

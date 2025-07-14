@@ -203,6 +203,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     }
 }
 ```
+
 </details>
 
 <details>
@@ -216,7 +217,7 @@ namespace Pyz\Glue\GlueStorefrontApiApplication;
 use Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider as SprykerGlueStorefrontApiApplicationDependencyProvider;
 use Spryker\Glue\OauthApi\Plugin\AccessTokenValidatorPlugin;
 use Spryker\Glue\OauthApi\Plugin\CustomerRequestBuilderPlugin;
-use Spryker\Glue\OauthBackendApi\Plugin\GlueApplication\OauthBackendApiTokenResource;
+use Spryker\Glue\OauthApi\Plugin\GlueApplication\OauthApiTokenResource;
 
 class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefrontApiApplicationDependencyProvider
 {
@@ -246,11 +247,12 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
     protected function getResourcePlugins(): array
     {
         return [
-            new OauthBackendApiTokenResource(),
+            new OauthApiTokenResource(),
         ];
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
@@ -366,6 +368,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/OauthUserConnector/OauthUserConnectorDependencyProvider.php**
@@ -458,14 +461,17 @@ vendor/bin/console setup:init-db
 {% info_block warningBox "Verification" %}
 
 To verify that the Oauth client has been added to the `spy_oauth_client` table, run the SQL query:
+
 ```sql
 SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
 ```
+
 Make sure the output contains one record.
 
 
-* To verify that you can authenticate as a customer, send the request:
-```
+- To verify that you can authenticate as a customer, send the request:
+
+```http
 POST /token/ HTTP/1.1
 Host: glue-storefront.mysprykershop.com
 Content-Type: application/x-www-form-urlencoded
@@ -474,11 +480,13 @@ Content-Length: 66
 
 grant_type=password&username={customer_username}&password={customer_password}
 ```
+
 Make sure the output contains the 201 response with a valid token.
 
 
-* To verify that you can authenticate as a user, send the request:
-```
+- To verify that you can authenticate as a user, send the request:
+
+```http
 POST /token/ HTTP/1.1
 Host: glue-backend.mysprykershop.com
 Content-Type: application/x-www-form-urlencoded
@@ -487,6 +495,7 @@ Content-Length: 66
 
 grant_type=password&username={user_username}&password={user_password}
 ```
+
 Make sure the output contains the 201 response with a valid token and the user can assess protected resources.
 
 

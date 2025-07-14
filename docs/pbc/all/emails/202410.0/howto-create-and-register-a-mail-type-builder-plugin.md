@@ -120,6 +120,7 @@ In order to activate the mail functionality, follow these steps:
     $mailTransfer->setFooBar(new FooBarTransfer());
     $mailTransfer->setLocale('DE');
 ```
+
 Call `MailFacade::handleMail($mailTransfer)`.
 
 If everything is set up properly the mail will be sent.

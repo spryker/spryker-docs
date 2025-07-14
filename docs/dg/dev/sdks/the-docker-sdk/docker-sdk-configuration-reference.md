@@ -89,6 +89,7 @@ The environment variables defined in `environment:` are embedded into all applic
 To increase maximum upload size, update `deploy.*.yml` as follows:
 
 1. In Nginx configuration, update maximum request body size:
+
 ```yaml
 ...
 		applications:

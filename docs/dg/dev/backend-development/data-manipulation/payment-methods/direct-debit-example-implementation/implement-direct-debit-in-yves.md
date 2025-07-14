@@ -24,11 +24,13 @@ related:
 The first step of the Direct Debit payment method implementation is setting it up on Yves. This document provides step-by-step instructions on how to do that.
 
 ## Prerequisites
+
 Before proceeding with the first step, the form creation, add a new module on the project level in Yves—for example, the `PaymentMethods` module. If you haven't had any experience in creating a new module yet, see [Tutorial: Add a new module](/docs/dg/dev/backend-development/extend-spryker/create-modules.html).
 
 Create a `Form` folder in the module.
 
 ## Create a form
+
 The starting point is to create a form in Yves.
 
 To create a form, follow these steps.
@@ -315,7 +317,7 @@ class DirectDebitHandler
 
 To plug this payment handler into the checkout, add a plugin to the following folders:
 
-* the `Plugin/` folder:
+- the `Plugin/` folder:
 
 ```php
 <?php
@@ -347,7 +349,7 @@ class DirectDebitHandlerPlugin extends AbstractPlugin implements StepHandlerPlug
 }
 ```
 
-* the `Handler/` folder:
+- the `Handler/` folder:
 
 ```php
 <?php

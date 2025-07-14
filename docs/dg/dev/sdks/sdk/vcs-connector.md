@@ -12,6 +12,7 @@ VCS connector lets you use a different VCS system with a single command interfac
 To run a VCS, do the following:
 
 1. Run a task:
+
 ```shell
 spryker-sdk vcs:clone
 ```

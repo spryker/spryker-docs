@@ -12,8 +12,8 @@ To set up events that are executed after data import, you need to create a class
 
 ## Prerequisites  
 
-* [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html)
-* [Configure the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/configure-data-exchange-api.html)
+- [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html)
+- [Configure the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/configure-data-exchange-api.html)
 
 
 ## Create a post plugin to activate products
@@ -56,6 +56,7 @@ class CustomDynamicEntityPostCreatePlugin extends AbstractPlugin implements Dyna
 2. To register the plugin, add it to the `DynamicEntityDependencyProvider` in the module.
 
 **src/Pyz/Zed/DynamicEntity/DynamicEntityDependencyProvider.php**
+
 ```php
 <?php
 

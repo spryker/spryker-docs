@@ -15,5 +15,5 @@ There is no data on the Storefront.
 
 Use the following services to check the status of queues and jobs:
 
-* `https://queue.mysprykershop.com`
-* `https://scheduler.mysprykershop.com`
+- `https://queue.mysprykershop.com`
+- `https://scheduler.mysprykershop.com`

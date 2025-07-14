@@ -15,13 +15,13 @@ This endpoint allows managing items in carts of registered users by adding, chan
 ## Installation
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
-* [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
-* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
-* [Install the Merchant Offers Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
-* [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
-* [Install the Marketplace Product Offer Volume Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html
+- [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+- [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
+- [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
+- [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+- [Install the Merchant Offers Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
+- [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
+- [Install the Marketplace Product Offer Volume Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html
 
 
 
@@ -72,6 +72,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
+
 </details>
 
 
@@ -95,6 +96,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
+
 </details>
 
 <details>
@@ -113,6 +115,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
+
 </details>
 
 <details>
@@ -131,6 +134,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
+
 </details>
 
 <details>
@@ -156,6 +160,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
+
 </details>
 
 <details>
@@ -182,6 +187,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
+
 </details>
 
 <details>
@@ -201,6 +207,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
   }
 }
 ```
+
 </details>
 
 
@@ -221,6 +228,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
+
 </details>
 
 <details>
@@ -240,6 +248,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
+
 </details>
 
 
@@ -300,6 +309,7 @@ It is the responsibility of the API Client to track whether the selected items a
     }
 }
 ```
+
 </details>
 
 
@@ -440,7 +450,8 @@ It is the responsibility of the API Client to track whether the selected items a
         }
     ]
 }
-```    
+```
+
 </details>
 
 
@@ -543,6 +554,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -685,6 +697,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -726,7 +739,8 @@ It is the responsibility of the API Client to track whether the selected items a
         }
     }
 }
-```    
+```
+
 </details>
 
 
@@ -1004,7 +1018,8 @@ It is the responsibility of the API Client to track whether the selected items a
         }
     ]
 }
-```    
+```
+
 </details>
 
 <details>
@@ -1243,6 +1258,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 <details>
@@ -1408,6 +1424,7 @@ It is the responsibility of the API Client to track whether the selected items a
     }
 }
 ```
+
 </details>
 
 
@@ -1535,6 +1552,7 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
+
 </details>
 
 
@@ -1595,12 +1613,12 @@ It is the responsibility of the API Client to track whether the selected items a
 {% include pbc/all/glue-api-guides/{{page.version}}/product-offer-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md -->
 
 For the attributes of the included resources, see:
-* [Retrieving measurement units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
-* [Create a cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html)
-* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html)
-* [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
-* [Retrieving product offer prices](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
-* [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
+- [Retrieving measurement units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
+- [Create a cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html)
+- [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html)
+- [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
+- [Retrieving product offer prices](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
+- [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
 
 ## Change item quantity
 
@@ -1768,7 +1786,8 @@ Request sample: change item quantity
         }
     ]
 }
-```    
+```
+
 </details>
 
 For the attributes of the included resources, see [Glue API: Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html).

@@ -45,11 +45,11 @@ However, when publishing a navigation element as a content item on the Storefron
 A *navigation node* is a single item in a navigation element.
 
 The following node types are available by default:
-* Label: a piece of text.
-* Category: links to category pages.
-* CMS Page: links to CMS pages.
-* Link: links to internal pages like login or registration.
-* External URL: links to external URLs.
+- Label: a piece of text.
+- Category: links to category pages.
+- CMS Page: links to CMS pages.
+- Link: links to internal pages like login or registration.
+- External URL: links to external URLs.
 In the context of a navigation tree, there can be *child nodes* and *parent nodes*. A child node is a navigation node that is added to another navigation node. A parent node is a navigation node with one or more assigned child nodes.
 
 
@@ -77,8 +77,8 @@ To learn how a Back office user can define a navigation node design, see [Creati
 ## Navigation node validity period
 
 You can define the time period a navigation node is valid for:
-* When the validity period ends, the navigation node with its child stops being displayed on the Storefront.
-* When the validity period starts, the navigation node with its child is displayed on the Storefront.
+- When the validity period ends, the navigation node with its child stops being displayed on the Storefront.
+- When the validity period starts, the navigation node with its child is displayed on the Storefront.
 
 To learn how a product catalog manager can define a navigation node validity period, see [Creating a Navigation Node](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.html).
 
@@ -96,10 +96,10 @@ To learn how a marketing content manager can add content to the Storefront, see 
 
 A content item template defines how a content item is displayed on the Storefront. The following templates are shipped for the Navigation content item by default:
 
-* *Tree structure after the first level*—the first level of navigation nodes is displayed in a horizontal line. Holding the pointer over an element opens a menu, showing all the child nodes as a list.
-* *Inline navigation*—the first level of navigation nodes is displayed as a list. Child nodes are not displayed.
-* *List navigation*—the first level of navigation nodes is displayed as a list. Child nodes are not displayed.
-* *Tree structure*—all the levels of navigation nodes are displayed as a list.
+- *Tree structure after the first level*—the first level of navigation nodes is displayed in a horizontal line. Holding the pointer over an element opens a menu, showing all the child nodes as a list.
+- *Inline navigation*—the first level of navigation nodes is displayed as a list. Child nodes are not displayed.
+- *List navigation*—the first level of navigation nodes is displayed as a list. Child nodes are not displayed.
+- *Tree structure*—all the levels of navigation nodes are displayed as a list.
 
 
 <details><summary>"Tree structure after the first level" template representation*—Storefront</summary>

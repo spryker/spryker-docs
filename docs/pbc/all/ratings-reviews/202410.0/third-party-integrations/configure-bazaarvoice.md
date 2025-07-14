@@ -32,7 +32,7 @@ The following table explains where you can take the values for populating the fi
 
 | Field   |      Where can you get this information in the Bazaarvoice Portal      |
 |----------|:-------------:|
-| Client name | This is the instance's name you want to connect to Spryker. You can find your list of instances [here](https://portal.bazaarvoice.com/configurations/sitemanager/clientselector).|
+| Client name | This is the instance's name you want to connect to Spryker. You can find your list of instances in the  [client selector](https://portal.bazaarvoice.com/configurations/sitemanager/clientselector). |
 | Site ID | The Site ID can be found on [this page](https://config.portal.bazaarvoice.com/siteManager). Select the Site ID that matches the deployment zone you want to connect to your Spryker project.   |
 | API Key | Select one of your API keys from [this page](https://portal.bazaarvoice.com/developer-tools/api-keys). If your account does not contain any API key, watch the video below for the details on how to create one. |
 
@@ -75,7 +75,7 @@ This adds the Bazaarvoice app to your store. It usually takes Bazaarvoice a few 
 
 {% info_block infoBox "Info" %}
 
-You can do the administration work on the Bazaarvoice reviews from the [Bazaarvoice portal](https://portal.bazaarvoice.com/signin?ref=spryker-documentation). For example, you can approve individual reviews. See [Workbench overview](https://knowledge.bazaarvoice.com/wp-content/brandedge-pro-wb/en_US/basics/workbench_overview.html#log-in-to-workbench?ref=spryker-documentation) for details on how you can manage reviews from the Bazaarvoice portal.
+You can do the administration work on the Bazaarvoice reviews from the [Bazaarvoice portal](https://portal.bazaarvoice.com/signin?ref=spryker-documentation). For example, you can approve individual reviews. See [Workbench overview](https://docs.bazaarvoice.com/articles/ratings-reviews/workbench_overview) for details on how you can manage reviews from the Bazaarvoice portal.
 
 {% endinfo_block %}
 

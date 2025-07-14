@@ -18,8 +18,8 @@ A *shopping list* is a list of the items that shoppers buy or plan to buy freque
 A shopping list is always saved, disregarding if a company user logs out and logs in again—the list is still available. The shopping list does not reserve products on stock, so adding an item to the shopping list does not affect item availability. However, a company user can easily convert any shopping list into a shopping cart to proceed with the Checkout.
 There are two ways to create a shopping list:
 
-* Through a [shopping list widget](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/shopping-lists-feature-overview/shopping-list-widget-overview.html) in the header of the shop.
-* From the **Shopping Lists** page in the **My Account** menu. For more detailed instructions, see [Multiple and Shared Shopping Lists on the Storefront](#multiple-and-shared-shopping-lists-on-the-storefront).
+- Through a [shopping list widget](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/shopping-lists-feature-overview/shopping-list-widget-overview.html) in the header of the shop.
+- From the **Shopping Lists** page in the **My Account** menu. For more detailed instructions, see [Multiple and Shared Shopping Lists on the Storefront](#multiple-and-shared-shopping-lists-on-the-storefront).
 
 New items are added to shopping lists by clicking **Add to Shopping List** on the product details page.
 
@@ -35,13 +35,13 @@ The detailed information about managing shopping lists is represented in the [Mu
 
 ## Permissions management for shared shopping lists
 
-Users of companies with business units can **share** their shopping lists within the company business units. The shopping lists can either be shared with the entire business unit or its members. Company users can view shopping lists shared with them on **My Account&nbsp;<span aria-label="and then">></span> Shopping lists**. The shopping lists can be shared by clicking **Share** on this page as well. The **Share _[SHOPPING LIST NAME]_** page consists of two sections: **Business Units** and **Users**. Here, the shopping list owner can select either the entire business unit or individual users to share the shopping list with.
+Users of companies with business units can **share** their shopping lists within the company business units. The shopping lists can either be shared with the entire business unit or its members. Company users can view shopping lists shared with them on **My Account&nbsp;<span aria-label="and then">></span> Shopping lists**. The shopping lists can be shared by clicking **Share** on this page as well. The **Share *[SHOPPING LIST NAME]*** page consists of two sections: **Business Units** and **Users**. Here, the shopping list owner can select either the entire business unit or individual users to share the shopping list with.
 To view how to share shopping lists with business units or their members, see the [Multiple and Shared Shopping Lists on the Storefront](#multiple-and-shared-shopping-lists-on-the-storefront) section.
 
 Three types of shopping list access rights can be granted:
-* No access
-* Read only
-* Full access
+- No access
+- Read only
+- Full access
 
 ### No access
 
@@ -53,16 +53,16 @@ Three types of shopping list access rights can be granted:
 
 1. *Read a shopping list*. On the **Shopping List View** page, a user sees a shopping list name, owner, access level (Read only), number of users the shopping list is shared with, as well as the table of items with the following information:
 
-* Product image
-* Product name
-* SKU
-* Product attribute
-* Product options
-* Product comments (see [Shopping List Notes overview](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details)
-* Quantity
-* Item price
-* Availability
-* Actions: The **Add to Cart** button
+- Product image
+- Product name
+- SKU
+- Product attribute
+- Product options
+- Product comments (see [Shopping List Notes overview](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details)
+- Quantity
+- Item price
+- Availability
+- Actions: The **Add to Cart** button
 
 {% info_block infoBox %}
 
@@ -82,16 +82,16 @@ Alternative products are not shown for discontinued products because they can no
 *Full access* permissions allow the following:
 
 1. *Read a shopping list*. On the **Shopping List View** page, the user sees the name of the owner, access level (Full access), the number of users the shopping list is shared with, as well as the table of items with the following information:
-   * Product image
-   * Product name
-   * SKU
-   * Product attribute
-   * Product options
-   * Product notes (see [Shopping List Notes overview](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details)
-   * Quantity
-   * Item price
-   * Availability
-   * Actions: **Add to cart** icon, **Remove** button
+   - Product image
+   - Product name
+   - SKU
+   - Product attribute
+   - Product options
+   - Product notes (see [Shopping List Notes overview](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details)
+   - Quantity
+   - Item price
+   - Availability
+   - Actions: **Add to cart** icon, **Remove** button
 
 {% info_block infoBox %}
 
@@ -223,4 +223,4 @@ We do not support product options in Subtotal of the Shopping Lists. For example
 | [Integrate the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)  | [Upgrade the ShoppingListPage module](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglistpage-module.html) | [Manage shopping list items](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-shopping-list-items.html)   |
 | [Integrate the Shopping List + Agent Assist feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shopping-list-agent-assist-feature.html)| [Upgrade the ShoppingListWidget module](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglistwidget-module.html) | |
 | [Install the Shopping Lists + Quick Add to Cart feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-quick-add-to-cart-feature.html) | | |
-| [Integrate the Shopping Lists + Product Options feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-product-options-feature.html)
+| [Integrate the Shopping Lists + Product Options feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-product-options-feature.html) | | |

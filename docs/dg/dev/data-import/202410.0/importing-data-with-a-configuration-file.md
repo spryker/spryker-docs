@@ -21,8 +21,8 @@ To **import individual data**, you need to run `console data:import:{data_entity
 
 There are two ways of how you can **run import in bulk**:
 
-* Import all data specified in the default YML import configuration file.
-* Import data specified in a custom YML import configuration file.
+- Import all data specified in the default YML import configuration file.
+- Import data specified in a custom YML import configuration file.
 
 As you can see, for both of the import types you need a **data import YML configuration file**.  The .yml import configuration file defines the data importers that will be executed (`data_entity: {data_type_value_1}`), as well as indicates the path to a CSV file with the import data (`source: {source_value_1}`).
 
@@ -112,6 +112,7 @@ To run the import, you can use the following commands:
 | `console data:import {data_entity} --config=xxx/ccc/file-name.yml -t`, where `{data_entity}` is the `data_entity` in the [YML file with the combined product data](/docs/dg/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#yml-configuration-file-for-product-data-import), and `xxx/ccc/file-name.yml` is the location of the YML file. |The command triggers import of the specific `data_entity` from the YML file with the [combined product data](/docs/dg/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html).|Imports the specific data from the [combined product data import CSV file](/docs/dg/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#single-csv-file-for-combined-product-data-import). Location of the CSV file is specified in `source` of the `data_entity`.|
 
 ## Location of the YML and CSV files
+
 <a name="location-of-the-yml-and-csv-files"></a>
 
 When running the `console data:import` command, you tell the system to import CSV files from all the default YML import configuration files. The table below shows where those files reside in the Spryker Commerce OS by default, and where you can define their location on the project level.

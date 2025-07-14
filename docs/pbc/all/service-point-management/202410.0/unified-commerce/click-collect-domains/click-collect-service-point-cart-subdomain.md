@@ -104,16 +104,16 @@ class ProductOfferMerchantGroupKeyItemExpanderPlugin extends AbstractPlugin impl
     For these steps, assume you are creating offer1 and offer2 for product SKU123 and merchant MER123.
 2. On the Storefront, log in as a customer.
 3. Add a product to cart with the following configuration:
-  * Quantity: 1
-  * SKU: SKU123
-  * Merchant: MER123
-  * Offer: offer1
+- Quantity: 1
+- SKU: SKU123
+- Merchant: MER123
+- Offer: offer1
 
 4. Add the following product to cart:
-  * Quantity: 1
-  * SKU: SKU123
-  * Merchant: MER123
-  * Offer: offer2
+- Quantity: 1
+- SKU: SKU123
+- Merchant: MER123
+- Offer: offer2
 
 Make sure the cart item you've added in step 3 is updated to quantity 2. The number of items in cart remains 1.
 

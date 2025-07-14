@@ -5,13 +5,13 @@
 1. The general concept of `collectors`, and `collector queries` are enhanced to support multi-store.
 The following classes were altered to support the multi-store concept:
 
-* `AbstractCollector`
-* `AbstractDatabaseCollector`
-* `AbstractPdoCollector`
-* `AbstractPropelCollector`
-* `AbstractSearchPropelCollector`
-* `AbstractStoragePropelCollector`
-* `AbstractCollectorQuery`
+- `AbstractCollector`
+- `AbstractDatabaseCollector`
+- `AbstractPdoCollector`
+- `AbstractPropelCollector`
+- `AbstractSearchPropelCollector`
+- `AbstractStoragePropelCollector`
+- `AbstractCollectorQuery`
 
 ### Collector multi-store concept overview
 
@@ -74,8 +74,8 @@ It is important to add the condition to the `LEFT JOIN` section so the number of
 7. The deprecated `CollectorDependencyProvider::provideLocaleFacade()` is removed,  check your code if you have custom calls or dependencies.
 
 8. The following methods have internal changes,  check if you have customized them:
-* `AbstractTouchUpdater::bulkUpdate()`
-* `AbstractTouchUpdater::getCollectorKeyFromData()`
+- `AbstractTouchUpdater::bulkUpdate()`
+- `AbstractTouchUpdater::getCollectorKeyFromData()`
 
 You can find additional details on [Collector module release page](https://github.com/spryker/collector/releases).
 

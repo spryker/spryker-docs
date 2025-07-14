@@ -72,8 +72,7 @@ Download and install [OrbStack](https://orbstack.dev/download).
 
 
 To migrate from Docker Desktop to OrbStack, see [Migrate from Docker to OrbStack](https://docs.orbstack.dev/install#docker-migration).
-To run Docker Desktop and OrbStack side-by-side and switch between them, see [Side-by-side
-](https://docs.orbstack.dev/install#docker-context).
+To run Docker Desktop and OrbStack side-by-side and switch between them, see [Side-by-side](https://docs.orbstack.dev/install#docker-context).
 
 ## Install Mutagen for development mode
 
@@ -89,6 +88,6 @@ To choose an installation mode, see [Choose an installation mode](/docs/dg/dev/s
 
 If you've already selected an installation mode, follow one of the guides below:
 
-* [Install in Development mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html)
-* [Install in Demo mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
-* [Integrating Docker into existing projects](/docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html)
+- [Install in Development mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html)
+- [Install in Demo mode on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
+- [Integrating Docker into existing projects](/docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html)

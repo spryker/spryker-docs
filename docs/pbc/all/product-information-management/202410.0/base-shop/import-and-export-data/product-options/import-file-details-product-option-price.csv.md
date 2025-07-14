@@ -25,13 +25,14 @@ This document describes the `product_option_price.csv` file to configure Produc
 
 ## Import file parameters
 
-| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS AND COMMENTS | DESCRIPTION |
-| --- | --- | --- | --- | --- | --- |
-| product_option_sku | &check; | String |  |  SKU identifier of the Product Option.|
-| store | &check; | String |  | Name of the store that contains this product option. |
-| currency | &check; | String |  | Currency used with this product option. |
-| value_net |  | Integer |The original value is multiplied by 100, before stored in this field. | Net price value of the Product Option. |
-| value_gross |  | Integer | The original value is multiplied by 100, before stored in this field. | Gross price value of the Product Option. |
+| PARAMETER          | REQUIRED | TYPE    | REQUIREMENTS AND COMMENTS                                           | DESCRIPTION                            |
+|--------------------|----------|---------|---------------------------------------------------------------------|----------------------------------------|
+| product_option_sku | ✓        | String  | SKU identifier of the Product Option.                              |                                        |
+| store              | ✓        | String  | Name of the store that contains this product option.               |                                        |
+| currency           | ✓        | String  | Currency used with this product option.                            |                                        |
+| value_net          |          | Integer | The original value is multiplied by 100 before stored in this field. | Net price value of the Product Option. |
+| value_gross        |          | Integer | The original value is multiplied by 100 before stored in this field. | Gross price value of the Product Option. |
+
 
 
 ## Import template file and content example

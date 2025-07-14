@@ -18,16 +18,18 @@ related:
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
   - title: Web Profiler for Zed
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
+  - title: Integrate automated SVG sprite extraction
+    link: docs/dg/dev/integrate-and-configure/integrate-automated-svg-sprite-extraction.html    
 ---
 
 Spryker is a fast application by design. These guidelines explain how to optimize the server-side execution time.
 
 ## Hosting recommendations
 
-* *CPU*: Spryker's execution time depends on the CPU of the server. In general, more CPU capacity supports faster response times and allows a higher load.
-* *Memory (Databases)*: Databases (Redis, Elasticsearch, and PostgreSQL) mainly consume RAM. When there is not enough RAM, you can face performance issues. The best amount of RAM depends on the amount of data that you have and needs to be measured from time to time.
-* *Memory (PHP)*: The amount of memory does not impact on the execution time of PHP, but to squeeze everything out of your server, you need to define the `pm.max_children` configuration value of PHP-FPM. The max amount of parallel processes must not be higher than the available memory divided by the maximum consumption per process.
-* *Latency*: You can see the highest speed of Spryker when Redis is installed on the same machine as the application, which helps to avoid latency. Redis has a blazing fast response time of 0.1 ms, but in cloud environments, you can often get additional 1-3ms of latency per `get()`. A caching mechanism that uses Spryker is described in the following sections of this document.
+- *CPU*: Spryker's execution time depends on the CPU of the server. In general, more CPU capacity supports faster response times and allows a higher load.
+- *Memory (Databases)*: Databases (Redis, Elasticsearch, and PostgreSQL) mainly consume RAM. When there is not enough RAM, you can face performance issues. The best amount of RAM depends on the amount of data that you have and needs to be measured from time to time.
+- *Memory (PHP)*: The amount of memory does not impact on the execution time of PHP, but to squeeze everything out of your server, you need to define the `pm.max_children` configuration value of PHP-FPM. The max amount of parallel processes must not be higher than the available memory divided by the maximum consumption per process.
+- *Latency*: You can see the highest speed of Spryker when Redis is installed on the same machine as the application, which helps to avoid latency. Redis has a blazing fast response time of 0.1 ms, but in cloud environments, you can often get additional 1-3ms of latency per `get()`. A caching mechanism that uses Spryker is described in the following sections of this document.
 
 ## Disable Xdebug
 
@@ -49,7 +51,7 @@ Make sure that Opcache is activated and properly configured:
 | `opcache.max_accelerated_files` | Spryker and all the used open-source libraries contain a lot of PHP classes, so this value should be high (max is 100k).                                                                                                                                                              | ?          | 8192        |
 | `opcache.memory_consumption`    | To avoid an automatic reset of the Opcache, these values must be high enough. You can look into the PHP info (for exaample, in Zed, browse to `/maintenance/php-info`) to see the current usage. You can count the number of classes in your codebase to get an idea of a good value. | ?          |             |
 | `opcache.validate_timestamps`   | Boolean values that activate the check for the updated code. This check is time-consuming and must be disabled in production environments. However, you need to flush the cache during deployments—for example, by restarting PHP.                                                    | 0          | 1           |
-| `opcache.revalidate_freq`       | Configures the frequency of checks if enabled by the `validate_timestamps` configuration. *0* means *on every request*,  which is recommended for development environments if you want to program with activated Opcache.	0	0                                                         | 0          | 0           |
+| `opcache.revalidate_freq`       | Configures the frequency of checks if enabled by the `validate_timestamps` configuration. *0* means *on every request*,  which is recommended for development environments if you want to program with activated Opcache. 0 0                                                         | 0          | 0           |
 
 ```php
 zend_extension=opcache.so
@@ -78,7 +80,7 @@ You can also optimize the autoloader by enabling some options in `composer.json`
  "classmap-authoritative": true
 ```
 
-For more details about composer autoloader optimization, see the [autoloader documentation.](https://getcomposer.org/doc/articles/autoloader-optimization.md)
+For more details about composer autoloader optimization, see the [autoloader documentation](https://getcomposer.org/doc/articles/autoloader-optimization.md).
 
 ## Deactivate all debug functions and the Symfony toolbar
 
@@ -110,11 +112,11 @@ Publish & Sync process can work slower and generate hundreds of megabytes of `IN
 
 There are a few options to avoid this in production environments:
 
-* Disable event logs using one of the following:
-  * Set `EventConstants::LOG_FILE_PATH` to `null`.
-  * Set `EventConstants::LOGGER_ACTIVE` to `false` in the appropriate config files, like `config_default.php`.
-* Change the events log level in any config file, by setting `EventConstants::EVENT_LOGGER_LEVEL` to, for example, `\Monolog\Logger::WARNING` in newer (> 2.9.2) versions of `spryker/event`.
-* For versions up to `spryker/event:2.9.2`: Override `LoggerConfig::createStreamHandler` to change the [event logger level](https://github.com/spryker/event/blob/master/src/Spryker/Zed/Event/Business/Logger/LoggerConfig.php).
+- Disable event logs using one of the following:
+  - Set `EventConstants::LOG_FILE_PATH` to `null`.
+  - Set `EventConstants::LOGGER_ACTIVE` to `false` in the appropriate config files, like `config_default.php`.
+- Change the events log level in any config file, by setting `EventConstants::EVENT_LOGGER_LEVEL` to, for example, `\Monolog\Logger::WARNING` in newer (> 2.9.2) versions of `spryker/event`.
+- For versions up to `spryker/event:2.9.2`: Override `LoggerConfig::createStreamHandler` to change the [event logger level](https://github.com/spryker/event/blob/master/src/Spryker/Zed/Event/Business/Logger/LoggerConfig.php).
 
 ## Activate Twig compiler
 
@@ -172,6 +174,105 @@ For example, the `{% raw %}{{{% endraw %} data.foo.bar.firstName {% raw %}}}{% e
 
 Making calculations on the PHP side can help here a lot, as well as using `{% raw %}{{{% endraw %} set customer = data.foo.bar {% raw %}}}{% endraw %}` + `{% raw %}{{{% endraw %} customer.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} customer.lastName {% raw %}}}{% endraw %}`.
 
+## Twig template warmup during deployment
+
+Precompiling Twig templates can improve the performance of the first request, especially in production environments. This is helpful when scaling across multiple containers, where the first request may be slow due to on-demand compilation of all Twig templates.
+
+
+To activate the warmup, follow the steps:
+
+1. Add the following commands to your deployment script, such as `config/install/docker.yml`:
+
+```yaml
+    build-production:
+        twig-template-warmup-zed:
+            command: 'vendor/bin/console twig:template:warmer'
+
+        twig-template-warmup-yves:
+            command: 'vendor/bin/yves twig:template:warmer'
+```
+
+{% info_block warningBox "" %}
+Make sure that the command is executed after the `vendor/bin/console twig:cache:warmer` command.
+{% endinfo_block %}
+
+
+2. Register the following classes for the Zed command:
+
+**\Spryker\Zed\Console\ConsoleDependencyProvider**
+
+```php
+...
+use Spryker\Zed\Form\Communication\Plugin\Application\FormApplicationPlugin;
+use Spryker\Zed\Security\Communication\Plugin\Application\ConsoleSecurityApplicationPlugin;
+use Spryker\Zed\Twig\Communication\Console\TwigTemplateWarmerConsole;
+...
+
+    protected function getConsoleCommands(Container $container): array
+    {
+        return [
+            // other commands
+            new TwigTemplateWarmerConsole(),
+        ];
+    }
+    
+    public function getApplicationPlugins(Container $container): array
+    {
+        // other application plugins
+        $applicationPlugins[] = new ConsoleLocaleApplicationPlugin();
+        $applicationPlugins[] = new ConsoleSecurityApplicationPlugin();
+        $applicationPlugins[] = new TwigApplicationPlugin();
+        $applicationPlugins[] = new FormApplicationPlugin();
+
+        return $applicationPlugins;
+    }
+```
+
+3. Register the following classes for the Yves console context to allow Twig properly compile templates.
+
+**\Spryker\Yves\Console\ConsoleDependencyProvider**
+
+```php
+...
+use Spryker\Yves\Form\Plugin\Application\FormApplicationPlugin;
+use Spryker\Yves\Locale\Plugin\Application\ConsoleLocaleApplicationPlugin;
+use Spryker\Yves\Security\Plugin\Application\ConsoleSecurityApplicationPlugin;
+use Spryker\Yves\Session\Plugin\Application\ConsoleSessionApplicationPlugin;
+use Spryker\Yves\Twig\Plugin\Application\TwigApplicationPlugin;
+use Spryker\Yves\Twig\Plugin\Console\TwigTemplateWarmerConsole;
+use Spryker\Yves\Twig\Plugin\Console\TwigTemplateWarmingModeEventSubscriberPlugin;
+
+...
+
+    protected function getConsoleCommands(Container $container): array
+    {
+        return [
+            // other commands
+            new TwigTemplateWarmerConsole(),
+        ];
+    }
+
+    public function getApplicationPlugins(Container $container): array
+    {
+        // other application plugins
+        $applicationPlugins[] = new ConsoleLocaleApplicationPlugin();
+        $applicationPlugins[] = new ConsoleSecurityApplicationPlugin();
+        $applicationPlugins[] = new ConsoleSessionApplicationPlugin();
+        $applicationPlugins[] = new TwigApplicationPlugin();
+        $applicationPlugins[] = new FormApplicationPlugin();
+
+        return $applicationPlugins;
+    }
+
+    protected function getEventSubscriber(Container $container): array
+    {
+        return [
+            // other event subscribers
+            new TwigTemplateWarmingModeEventSubscriberPlugin(),
+        ];
+    }
+```
+
 ## Activate Zed navigation cache
 
 The navigation of Zed is defined in XML files that need to be parsed and merged. As it does not happen quite often, it's recommended to keep the cache activated at all times (even during development) and to run `vendor/bin/console navigation:build-cache` only when something has changed.
@@ -182,6 +283,7 @@ Zed navigation cache is activated by default:
 $config[\Spryker\Shared\ZedNavigation\ZedNavigationConstants::ZED_NAVIGATION_CACHE_ENABLED] = true;
 
 ```
+
 ## Enable Zed and Merchant Portal router caching
 
 Routing for ZED and the Merchant Portal can either be cached or generated on each request.
@@ -189,6 +291,7 @@ Routing for ZED and the Merchant Portal can either be cached or generated on eac
 For optimal performance, we recommend building routing cache once during deployment.
 
 To configure this, update the configuration in `src/Pyz/Zed/Router/RouterConfig.php`:
+
 ```php
    public function isRoutingCacheEnabled(): bool
     {
@@ -223,6 +326,7 @@ Additionally, you need to build the cache file during your deployment. Add `\Spr
 ```bash
 vendor/bin/console cache:class-resolver:build
 ```
+
 This command builds a cache file, which is used by the `ClassResolver`.
 
 ### Activate resolved instance cache
@@ -248,8 +352,8 @@ Split navigation significantly enhances performance for both ZED and the Merchan
 This feature is shipped by default but existing projects may need to install it using the following steps:
 For projects that began before this feature was introduced, the following steps should be taken:
 1. Install or update the following modules:
- - `spryker/merchant-portal-application:^1.4.0`
- - `spryker/zed-ui: ^3.1.0`
+- `spryker/merchant-portal-application:^1.4.0`
+- `spryker/zed-ui: ^3.1.0`
 
 2. Move merchant portal related navigation from `config/Zed/navigation.xml` to `config/Zed/navigation-main-merchant-portal.xml`.
 3. Rename `config/Zed/navigation-secondary.xml` to `config/Zed/navigation-secondary-merchant-portal.xml`.
@@ -339,6 +443,7 @@ For carts with big numbers of items, you can configure order items to be placed 
 2. Configure columns to be returned for each order item:
 
 **src/Pyz/Zed/Sales/SalesConfig.php**
+
 ```php
 <?php
 
@@ -370,6 +475,7 @@ The prior example uses the `OrderItemReference` column, which is provided by def
 To generate the `OrderItemReference` value, add `OrderItemReferenceExpanderPreSavePlugin` to the `getOrderItemExpanderPreSavePlugins()` method:
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+
 ```php
 use Spryker\Zed\SalesOms\Communication\Plugin\OrderItemReferenceExpanderPreSavePlugin;
 
@@ -431,4 +537,4 @@ Performance optimizations in the OMS availability check and order item reservati
 
 ## Performance profiling
 
-We constantly check the performance of Spryker by using profiling tools and work on optimizations whenever we see the need for it. We fix the performance issues as soon as possible when we see them or get informed about them. Therefore, whenever you see a performance issue feel free to [contact us](https://spryker.force.com/support/s/create-request-case), ideally with a performance profile that can look at.
+We constantly check the performance of Spryker by using profiling tools and work on optimizations whenever we see the need for it. We fix the performance issues as soon as possible when we see them or get informed about them. Therefore, whenever you see a performance issue feel free to [contact us](https://support.spryker.com), ideally with a performance profile that can look at.

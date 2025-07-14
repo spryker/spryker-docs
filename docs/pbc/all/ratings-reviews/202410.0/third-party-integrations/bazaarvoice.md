@@ -16,11 +16,11 @@ The [Bazaarvoice](https://www.bazaarvoice.com/?ref=spryker-documentation) app le
 
 {% wistia fhyuouxbpp 960 720 %}
 
-The Bazaarvoice service offers the following UGC: 
+The Bazaarvoice service offers the following UGC:
 
-- [Rating summaries](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#rating-summary?ref=spryker-documentation), or star ratings
-- [Product reviews](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#reviews?ref=spryker-documentation)  
-<!---- [Questions and answers](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#questions--answers)-->
+- [Rating summaries](https://docs.bazaarvoice.com/articles/ratings-reviews/display_integration/a/rating-summary?ref=spryker-documentation), or star ratings
+- [Product reviews](https://docs.bazaarvoice.com/articles/#!ratings-reviews/display_integration/a/reviews?ref=spryker-documentation)  
+<!---- [Questions and answers](hhttps://docs.bazaarvoice.com/articles/#!ratings-reviews/display_integration/a/questions--answers?ref=spryker-documentation)-->
 
 Bazaarvoice uses the content syndication approach, which means that stores using Bazaarvoice republish each others' content. For example, if a store within the Bazaarvoice's network has got a new product review, this review is shared across all other stores in the network that also have this product.
 
@@ -39,4 +39,5 @@ If you have Bazaarvoice integrated, the Spryker default the [Ratings and Reviews
 {% endinfo_block %}
 
 ## Next step
+
 [Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/{{page.version}}/third-party-integrations/integrate-bazaarvoice.html)

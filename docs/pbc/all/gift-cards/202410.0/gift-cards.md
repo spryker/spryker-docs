@@ -13,7 +13,7 @@ redirect_from:
   - /docs/pbc/all/gift-cards/202204.0/gift-cards.html
 ---
 
-The _Gift Cards_ capability lets you create a special product type with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout.
+The *Gift Cards* capability lets you create a special product type with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout.
 
 A gift card is a prepaid certificate which lets its owner purchase products for the gift card's value.
 

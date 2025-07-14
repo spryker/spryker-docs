@@ -9,8 +9,8 @@ This document describes the `shipment_type_service_type.csv` file to assign [shi
 
 ## Import file dependencies
 
-* [`service_type.csv`](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service-type.csv.html)
-* [`shipment-type.csv`](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html)
+- [`service_type.csv`](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service-type.csv.html)
+- [`shipment-type.csv`](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html)
 
 ## Import file parameters
 

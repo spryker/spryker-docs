@@ -527,6 +527,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 
@@ -642,6 +643,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 }
 ```
+
 </details>
 
 
@@ -848,9 +850,11 @@ console setup:init-db
 {% info_block warningBox "Verification" %}
 
 To verify that the OAuth client has been added to the `spy_oauth_client table`, run the SQL query:
+
 ```sql
 SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
 ```
+
 The output should contain one record.
 
 {% endinfo_block %}
@@ -966,7 +970,7 @@ Make sure the following applies:
 
 Verify that `OauthRefreshTokenReaderPlugin` and `OauthRefreshTokenRevokerPlugin` are set up:
 
-1. Send the request: `DELETE https://glue.mysprykershop.com/refresh-tokens/{% raw %}{{{% endraw %}refresh_token}`[.](#)
+1. Send the request: `DELETE https://glue.mysprykershop.com/refresh-tokens/{% raw %}{{{% endraw %}refresh_token}`.
 2. To check that the refresh token has been revoked, run the following SQL query:
 
 ```sql
@@ -1002,6 +1006,7 @@ Check that the `spy_oauth_refresh_token::revoked_at` values of all the records r
 To verify that `OauthRefreshTokenCheckerPlugin` is set up, send the following request with a revoked refresh token:
 
 `POST https://glue.mysprykershop.com/refresh-tokens`
+
 ```json
 {
     "data": {
@@ -1055,11 +1060,13 @@ To verify `AddressByCheckoutDataResourceRelationshipPlugin` is set up, send the 
 Make sure the following console commands are available:
 
 - Create a cache file for all existing scopes:
+
 ```bash
 console oauth:scope-collection-file:generate
 ```
 
 - Remove expired refresh tokens from the database:
+
 ```bash
 console oauth:refresh-token:remove-expired
 ```

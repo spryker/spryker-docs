@@ -3,12 +3,12 @@
 
 `CmsBlockStorage` version 2.0.0 introduces the following backward incompatible changes:
 
-* Introduced the `spy_cms_block_storage.cms_block_key` field to store the `cms_block` identifier.
-* Introduced the `mappings` parameter to synchronization behavior to support the ability to get data by block names.
-* Increased the minimum `spryker/cms-block` version in `composer.json`. See [Upgrade the CmsBlock module](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html#upgrading-from-version-2-to-version-3) for more details.
-* Removed `CmsBlockStorageClient::findBlockNamesByOptions()`.
-* Removed `CmsBlockStorageClientInterface::generateBlockNameKey()`.
-* Added return type as an array to `CmsBlockStorageClientInterface::findBlocksByNames()`.
+- Introduced the `spy_cms_block_storage.cms_block_key` field to store the `cms_block` identifier.
+- Introduced the `mappings` parameter to synchronization behavior to support the ability to get data by block names.
+- Increased the minimum `spryker/cms-block` version in `composer.json`. See [Upgrade the CmsBlock module](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html#upgrading-from-version-2-to-version-3) for more details.
+- Removed `CmsBlockStorageClient::findBlockNamesByOptions()`.
+- Removed `CmsBlockStorageClientInterface::generateBlockNameKey()`.
+- Added return type as an array to `CmsBlockStorageClientInterface::findBlocksByNames()`.
 
 *Estimated migration time: 1h*
 
@@ -75,7 +75,7 @@
 
     2. Add plugins in `src/Pyz/Client/CmsBlockStorage/CmsBlockStorageDependencyProvider.php`:
 
-    ```php        
+    ```php
     namespace Pyz\Client\CmsBlockStorage;
 
     use Spryker\Client\CmsBlockCategoryStorage\Plugin\CmsBlockStorage\CmsBlockCategoryCmsBlockStorageReaderPlugin;

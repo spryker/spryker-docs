@@ -14,10 +14,10 @@ redirect_from:
 To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Product Information Management PBC:
 
 
-* [Categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/categories-data-import.html)
-* [Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/products-data-import.html)
-* [Pricing](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/import-and-export-price-management-data.html)
-* [Stocks](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-stock.csv.html)
+- [Categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/categories-data-import.html)
+- [Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/products-data-import.html)
+- [Pricing](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/import-and-export-price-management-data.html)
+- [Stocks](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-stock.csv.html)
 
 Within the [Categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/categories-data-import.html) section, you will find all information about the data imports required to set up categories that can be used in your online store as well as whether they are active, searchable in the menu, etc.
 

@@ -1,6 +1,6 @@
 ---
 title: Decoupled Glue API
-description: Learn about the process of handling API requests through GlueStorefront and GlueBackoffice layers.
+description: Learn about the process of handling API requests through GlueStorefront and GlueBack Office layers.
 last_updated: Jul 11, 2023
 template: glue-api-storefront-guide-template
 redirect_from:
@@ -8,14 +8,14 @@ redirect_from:
 
 ---
 
-The Spryker Decoupled Glue API is a set of a few API applications like *Glue Storefront API (SAPI)* and *Glue Backend API (BAPI)* of the Spryker Commerce OS. Those applications are built to be used as a contract for accessing Storefront or Backoffice functionality through API. Those applications know how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
+The Spryker Decoupled Glue API is a set of a few API applications like *Glue Storefront API (SAPI)* and *Glue Backend API (BAPI)* of the Spryker Commerce OS. Those applications are built to be used as a contract for accessing Storefront or Back Office functionality through API. Those applications know how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
 
 ## Existing Glue Applications
 
 Out of the box, Spryker Commerce OS provides three API applications:
-* Old Glue API application that can be used as a fallback.
-* New Glue Storefront API (SAPI) that is a replacement for the old Glue and can be used for the same purpose.
-* Glue Backend API (BAPI) that can be used to provide API access for the Backoffice functionality directly without any additional RPC calls.
+- Old Glue API application that can be used as a fallback.
+- New Glue Storefront API (SAPI) that is a replacement for the old Glue and can be used for the same purpose.
+- Glue Backend API (BAPI) that can be used to provide API access for the Backoffice functionality directly without any additional RPC calls.
 
 ## Difference between Decoupled Glue Api and the old Glue API
 
@@ -36,6 +36,7 @@ With the current setup out of the box, we have an additional Glue Backend API (B
 For more details about the difference between SAPI and BAPI, refer to [Backend and storefront API module differences](/docs/dg/dev/glue-api/{{page.version}}/backend-and-storefront-api-module-differences.html).
 
 ### Authentication servers
+
 Current infrastructure lets you switch between different authentication servers. For example, this can be useful if you want to use Auth0 or any other server in addition to implemented servers.
 
 For more details and examples, see [Use authentication servers with Glue API](/docs/dg/dev/glue-api/{{page.version}}/use-authentication-servers-with-glue-api.html).
@@ -55,12 +56,12 @@ Decoupled Glue API infrastructure is implemented in the same layer of Spryker Co
 
 Logically, the Glue layer can be divided into separate parts:
 
-* **`GlueApplication` module**: The `GlueApplication` module provides a framework for constructing API resources and selecting a proper application. It intercepts all HTTP requests at resource URLs (for example, `http://mysprykershop.com/resource/1`), selects a proper application based on a bootstrap file, does content negotiation and selects applicable convention, and executes request flow. Also, this module is used for the fallback to the old Glue API.
-* **GlueStorefrontApiApplication module**: The `GlueStorefrontApiApplication` module is used for wiring everything related to the Glue Storefront API resources and route processing. All resources, routes, application plugins, and the rest of the required plugin stacks are wired into this module.
-* **GlueBackendApiApplication module**: The `GlueBackendApiApplication` module is used for wiring everything related to the Glue Backend API resources and route processing. All resources, routes, application plugins, and the rest of the required plugin stacks are wired into this module.
-* **Convention module**: Each convention module represents some specific convention and should include all required functionality to format API requests according to this convention. Out of the box, Spryker provides a `GlueJsonApiConvention` module that represents JSON:API convention.
-* **Resource modules**: A `Resource` module implements a separate resource or a set of resources for a specific application. The `Resource` module *must* be dedicated to a specific application but can use different conventions. Such a module handles requests to a particular resource and provides them with responses. In the process of doing so, the module can communicate with the Storage, Search, or Spryker Commerce OS (Zed through RPC call) for the Glue Storefront API application, or it can communicate with a Zed directly through Facades for the Glue Backend API application. The modules do not handle request semantics or rules. Their only task is to provide the necessary data in a `GlueResponseTransfer` object. All formatting and processing are done by the convention or selected application module.
-* **Relationship modules**: Such modules represent relationships between two different resources. Their task is to extend the response of one of the resources with data from related resources. Out of the box, these modules are only applicable for resources that are using JSON:API convention.
+- **`GlueApplication` module**: The `GlueApplication` module provides a framework for constructing API resources and selecting a proper application. It intercepts all HTTP requests at resource URLs (for example, `http://mysprykershop.com/resource/1`), selects a proper application based on a bootstrap file, does content negotiation and selects applicable convention, and executes request flow. Also, this module is used for the fallback to the old Glue API.
+- **GlueStorefrontApiApplication module**: The `GlueStorefrontApiApplication` module is used for wiring everything related to the Glue Storefront API resources and route processing. All resources, routes, application plugins, and the rest of the required plugin stacks are wired into this module.
+- **GlueBackendApiApplication module**: The `GlueBackendApiApplication` module is used for wiring everything related to the Glue Backend API resources and route processing. All resources, routes, application plugins, and the rest of the required plugin stacks are wired into this module.
+- **Convention module**: Each convention module represents some specific convention and should include all required functionality to format API requests according to this convention. Out of the box, Spryker provides a `GlueJsonApiConvention` module that represents JSON:API convention.
+- **Resource modules**: A `Resource` module implements a separate resource or a set of resources for a specific application. The `Resource` module *must* be dedicated to a specific application but can use different conventions. Such a module handles requests to a particular resource and provides them with responses. In the process of doing so, the module can communicate with the Storage, Search, or Spryker Commerce OS (Zed through RPC call) for the Glue Storefront API application, or it can communicate with a Zed directly through Facades for the Glue Backend API application. The modules do not handle request semantics or rules. Their only task is to provide the necessary data in a `GlueResponseTransfer` object. All formatting and processing are done by the convention or selected application module.
+- **Relationship modules**: Such modules represent relationships between two different resources. Their task is to extend the response of one of the resources with data from related resources. Out of the box, these modules are only applicable for resources that are using JSON:API convention.
 
 To be able to process API requests correctly, the `Resource` modules need to implement resource plugins that facilitate the routing of requests to the module. Such plugins need to be registered in the application they are related to. Also, plugins must implement a convention resource interface if must implement one.
 
@@ -89,9 +90,9 @@ At this stage, a bunch of plugin stacks are executed to prepare the request and 
 Routing tries to find required resources in two plugin stacks in the selected application dependency provider—for example, `\Pyz\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider::getResourcePlugins()` and `\Pyz\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider::getRouteProviderPlugins()`. If no route is found, `MissingResource` is selected and executed.
 
 For more details about creating a resource, see these documents:
-* [Create storefront resources](/docs/dg/dev/glue-api/{{page.version}}/routing/create-storefront-resources.html)
-* [Create backend resources](/docs/dg/dev/glue-api/{{page.version}}/routing/create-backend-resources.html)
-* [Create routes](/docs/dg/dev/glue-api/{{page.version}}/routing/create-routes.html)
+- [Create storefront resources](/docs/dg/dev/glue-api/{{page.version}}/routing/create-storefront-resources.html)
+- [Create backend resources](/docs/dg/dev/glue-api/{{page.version}}/routing/create-backend-resources.html)
+- [Create routes](/docs/dg/dev/glue-api/{{page.version}}/routing/create-routes.html)
 
 ## Resource modules
 
@@ -104,6 +105,7 @@ BAPI resources can use direct facade access through the dependency provider and 
 Resource modules have their own naming pattern to follow:
 - Storefront resources must use the simple `Api` suffix and resource name in plural—for example, `ProductsApi`.
 - Backend resources must use the `BackendApi` suffix and resource name in plural—for example, `ProductsBackendApi`.
+
 ### Module structure
 
 Recommended module structure:
@@ -218,15 +220,15 @@ This section provides a list of common HTTP statuses returned by Glue endpoints.
 For date formatting, [ISO-8601](https://www.iso.org/iso-8601-date-and-time-format.html) date/time format is used. For requests, any time zone is accepted; however, dates are stored and returned in UTC.
 
 Example:
-* request: `1985-07-01T01:22:11+02:00`
-* in storage and responses: `1985-06-30T23:22:11+00:00`
+- request: `1985-07-01T01:22:11+02:00`
+- in storage and responses: `1985-06-30T23:22:11+00:00`
 
 ## Request header
 
 | HEADER | SAMPLE VALUE | USED FOR | WHEN NOT PRESENT |
 | --- | --- | --- | --- |
 | Accept | application/vnd.api+json |Indicates the data format of the expected API response.  | 406 Not acceptable |
-| Content-Type | application/vnd.api+json; version=1.1 | 	Indicates the request content-type and resource version. | 415 Unsupported |
+| Content-Type | application/vnd.api+json; version=1.1 |  Indicates the request content-type and resource version. | 415 Unsupported |
 | Accept-Language | de;, en;q=0.5 | Indicates the desired language in which the content should be returned. |  |
 
 ## Response header

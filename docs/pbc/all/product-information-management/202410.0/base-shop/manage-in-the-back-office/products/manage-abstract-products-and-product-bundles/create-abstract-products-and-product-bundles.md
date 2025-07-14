@@ -45,8 +45,8 @@ Each section contains reference information. Make sure to look up the necessary 
 
 1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 2. Depending on the type of the product you want to create, select one of the following:
-    * Abstract product: click **Create Product**.
-    * Product bundle: click **Create Product Bundle**.
+    - Abstract product: click **Create Product**.
+    - Product bundle: click **Create Product Bundle**.
     This opens the **Create a Product** page.
 3. On the **General** tab, define general settings:
     1. For **STORE RELATION**, select one or more stores.
@@ -103,16 +103,16 @@ The default prices are displayed in the online store as a current price, while t
 
 {% info_block warningBox "Adding super attributes" %}
 
-* You can add super attributes to product variants only when creating an abstract product.
+- You can add super attributes to product variants only when creating an abstract product.
 
-* To be able to add product variants after creating an abstract product, add at least one super attribute.
+- To be able to add product variants after creating an abstract product, add at least one super attribute.
 
 {% endinfo_block %}  
 
 On the **Variants** tab, depending on the product type, do one of the following:
 
-* Product bundle: Click **Next >** and follow [Define meta information](#optional-define-meta-information).
-* Abstract product: Define product variants as follows:
+- Product bundle: Click **Next >** and follow [Define meta information](#optional-define-meta-information).
+- Abstract product: Define product variants as follows:
     1. Select one or more super attributes to create product variants from.
     2. In the field next to the super attribute you've selected, select one or more product attribute values.
     3. Repeat the previous step until you select at least one value for each selected super attribute.  
@@ -122,7 +122,7 @@ On the **Variants** tab, depending on the product type, do one of the following:
     <video width="100%" height="auto" controls>
     <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.md/defining-product-variants.mp4" type="video/mp4">
   </video>
-</figure>    
+</figure>
 
 ### Reference information: Define product variants
 
@@ -140,9 +140,9 @@ You can select as many super attributes as you need and define one or more value
 
 1. Click the **SEO** tab.
 2. Enter any of the following for needed locales:
-    * **TITLE**
-    * **KEYWORDS**
-    * **DESCRIPTION**
+    - **TITLE**
+    - **KEYWORDS**
+    - **DESCRIPTION**
 3. Click **Next >** and follow [Add images](#optional-add-images).
 
 ### Reference information: Define meta information
@@ -172,6 +172,6 @@ This opens the **Edit Product Abstract:{product SKU} page with a success message
 
 ## Next steps
 
-* [Add volume prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html)
-* [Add scheduled prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-in-the-back-office/add-scheduled-prices-to-abstract-products-and-product-bundles.html)
-* [Edit abstract products and product bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html)
+- [Add volume prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html)
+- [Add scheduled prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-in-the-back-office/add-scheduled-prices-to-abstract-products-and-product-bundles.html)
+- [Edit abstract products and product bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html)

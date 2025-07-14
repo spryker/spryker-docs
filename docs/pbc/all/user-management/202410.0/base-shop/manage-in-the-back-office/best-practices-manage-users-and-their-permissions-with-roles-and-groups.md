@@ -25,9 +25,9 @@ Even if you don't want to restrict access of a user, to create a user, you still
 
 To restrict or allow access to an area or action of the Back Office, you need the understand the following values:
 
-* Bundle
-* Controller
-* Action
+- Bundle
+- Controller
+- Action
 
 Bundle and controller are responsible for allowing and restricting access to areas, while action is responsible for allowing or restricting actions.
 

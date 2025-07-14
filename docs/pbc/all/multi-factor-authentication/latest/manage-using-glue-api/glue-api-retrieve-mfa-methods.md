@@ -14,7 +14,7 @@ The email authentication method is used as an example. The endpoint supports all
 ## Installation
 
 - [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html)
-- [Install Customer Email Multi-Factor Authentication method](/docs/pbc/all/multi-factor-authentication/latest/install-customer-email-multi-factor-authentication-method.html)
+- [Install Customer Email Multi-Factor Authentication method](/docs/pbc/all/multi-factor-authentication/latest/install-email-multi-factor-authentication-method.html)
 
 
 ## Retrieve MFA methods
@@ -84,7 +84,7 @@ Authorization: Bearer <access_token>
 
 ## Next step
 
-[Activate MFA](/docs/pbc/all/multi-factor-authentication/latest/glue-api-activate-and-deactivate-mfa.html)
+[Activate MFA](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-activate-and-deactivate-mfa.html)
 
 
 

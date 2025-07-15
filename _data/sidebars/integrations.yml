@@ -3,7 +3,7 @@ entries:
 - product: integrations
   nested:
   - title: Integrate with Spryker
-    url: /docs/integrations/Integration.html
+    url: /docs/integrations/integration.html
   - title: About Eco Modules
     url: /docs/integrations/what_are_spryker_eco_modules.html
   - title: About Spryker ACP Apps

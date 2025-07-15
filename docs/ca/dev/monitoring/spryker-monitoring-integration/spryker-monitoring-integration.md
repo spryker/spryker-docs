@@ -93,7 +93,7 @@ This section describes how to request and set up Spryker Monitoring Integration 
 
 ### Activate Spryker Monitoring Integration
 
-To request the Spryker Monitoring Integration for your environment(s), on [Support Portal](https://support.spryker.com/), create a Change Request with the following details:
+To request the Spryker Monitoring Integration for your environment, on [Support Portal](https://support.spryker.com/), create a Change Request with the following details:
 - Endpoint: The endpoint URL of your APM tool
 - Token: API token of the APM tool to configure the connection and communication with Spryker
 - Environment name

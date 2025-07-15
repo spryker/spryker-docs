@@ -1284,6 +1284,8 @@ entries:
 
       - title: General performance guidelines
         url: /docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
+      - title: Batch processing of Propel entities
+        url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html        
       - title: Architecture performance guidelines
         url: /docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
       - title: Frontend performance guidelines

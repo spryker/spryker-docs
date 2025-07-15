@@ -9,7 +9,7 @@ related:
 ---
 
 
-This guide explains how to use `ActiveRecordBatchProcessorTrait` and `CascadeActiveRecordBatchProcessorTrait` to optimize Propel entity persistence. These traits reduce database round trips, prevent the N+1 problem, and support efficient batch inserts and updates. You’ll also learn how to handle related entity persistence and post-save hooks using `BatchEntityPostSaveInterface` and `BatchEntityHooksInterface`.
+This guide explains how to use `ActiveRecordBatchProcessorTrait` and `CascadeActiveRecordBatchProcessorTrait` to optimize Propel entity persistence. These traits reduce database round trips, prevent the N+1 problem, and support efficient batch inserts and updates.
 
 
 
